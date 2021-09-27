@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI Radial Gauge
 
-This section explains the steps required to add the [.NET MAUI Radial Gauge](https://www.syncfusion.com/winui-controls/radial-gauge) control and its elements such as axis, range, pointer and annotation. This section covers only basic features needed to get started with Syncfusion radial gauge control.
+This section explains the steps required to add the `.NET MAUI Radial Gauge` control and its elements such as axis, range, pointer and annotation. This section covers only basic features needed to get started with Syncfusion radial gauge control.
 
 ## Creating an application with .NET MAUI Radial Gauge
 
@@ -40,7 +40,7 @@ this.Content = sfRadialGauge;
 
 ## Add axis to the radial gauge
 
-Axes contain a list of axis elements, where you can add any number of radial axes inside the gauge. You can specify the minimum and maximum values of axis using the [`Minimum`](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Gauges.GaugeAxis.html#Syncfusion_UI_Xaml_Gauges_GaugeAxis_Minimum) and [`Maximum`](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Gauges.GaugeAxis.html#Syncfusion_UI_Xaml_Gauges_GaugeAxis_Maximum) properties as demonstrated in the following code snippet.
+Axes contain a list of axis elements, where you can add any number of radial axes inside the gauge. You can specify the minimum and maximum values of axis using the `Minimum` and `Maximum` properties as demonstrated in the following code snippet.
 
 {% tabs %}
 
