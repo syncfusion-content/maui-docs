@@ -23,7 +23,7 @@ The following code example illustrates xmlns namespace for SfCartesianChart.
 
 {% highlight xaml %}
 
-xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
+      xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
 
 {% endhighlight %}
 
@@ -31,7 +31,7 @@ xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart
 
 {% highlight xaml %}
 
-xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"        
+      xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"        
 
 {% endhighlight %}
 
@@ -44,31 +44,30 @@ Following code example illustrates the initialization of SfChart with SfCartesia
 {% tabs %}
 {% highlight xaml %}
 
- <chart:SfChart Title="ChartArea" 
- SideBySideSeriesPlacement="True">
-   <chart:SfChart.ColorModel>
-      <chart:ChartColorModel Palette="Custom" CustomBrushes="{StaticResource Colors}"/>
-   </chart:SfChart.ColorModel>
-</chart:SfChart>
+      <chart:SfChart Title="ChartArea" SideBySideSeriesPlacement="True">
+         <chart:SfChart.ColorModel>
+            <chart:ChartColorModel Palette="Custom" CustomBrushes="{StaticResource Colors}"/>
+         </chart:SfChart.ColorModel>
+      </chart:SfChart>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfChart chart = new SfChart()
-{
-   ColorModel = new ChartColorModel()
-	{
-		Palette = ChartColorPalette.Custom,
-		   CustomBrushes = new ChartColorCollection()
-			{
-				Color.Yellow,
-				Color.Gray,
-				Color.Maroon
-			}
-	}	
-   . . .					
-};
+      SfChart chart = new SfChart()
+      {
+         ColorModel = new ChartColorModel()
+	      {
+		 Palette = ChartColorPalette.Custom,
+		 CustomBrushes = new ChartColorCollection()
+		 {
+		   Color.Yellow,
+		   Color.Gray,
+		   Color.Maroon
+		}
+	      }	
+          . . .					
+      };
 
 {% endhighlight %}
 {% endtabs %}
@@ -78,25 +77,22 @@ In SfCartesianChart ColorModel class not exposed, directly set Palette and Custo
 {% tabs %}
 {% highlight xaml %}
 
-<chart:SfCartesianChart EnableSideBySideSeriesPlacement="True"                            Palette="Custom" CustomBrushes="{Binding Colors}">
-   <chart:SfCartesianChart.Title>
-      <Label Text="ChartArea"/>
-   </chart:SfCartesianChart.Title>
-</chart:SfCartesianChart>
+      <chart:SfCartesianChart EnableSideBySideSeriesPlacement="True" Palette="Custom" CustomBrushes="{Binding Colors}">
+         <chart:SfCartesianChart.Title>
+            <Label Text="ChartArea"/>
+         </chart:SfCartesianChart.Title>
+      </chart:SfCartesianChart>
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfCartesianChart chart = new SfCartesianChart();
-
-chart.EnableSideBySideSeriesPlacement = true;
-
-chart.Palette = ChartColorPalette.Custom;
-
-chart.Title = new Label
-{
-   Text = "ChartArea"
-};
+      SfCartesianChart chart = new SfCartesianChart();
+      chart.EnableSideBySideSeriesPlacement = true;
+      chart.Palette = ChartColorPalette.Custom;
+      chart.Title = new Label
+      {
+         Text = "ChartArea"
+      };
 
 {% endhighlight %}
 {% endtabs %}
@@ -146,26 +142,19 @@ The following code example illustrates the usage of Legend in SfChart and SfCart
 {% tabs %}
 {% highlight xaml %}
 
-<syncfusion:SfChart>
-
-<syncfusion:SfChart.Legend>
-
-<syncfusion:ChartLegend DockPosition="Top"/>
-
-</syncfusion:SfChart.Legend>
-
-</syncfusion:SfChart>
+      <syncfusion:SfChart>
+         <syncfusion:SfChart.Legend>
+            <syncfusion:ChartLegend DockPosition="Top"/>
+         </syncfusion:SfChart.Legend>
+      </syncfusion:SfChart>
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfChart chart = new SfChart();
-
-ChartLegend legend = new ChartLegend();
-
-legend.DockPosition = ChartDock.Top; 
-
-chart.Legend = legend;
+      SfChart chart = new SfChart();
+      ChartLegend legend = new ChartLegend();
+      legend.DockPosition = ChartDock.Top; 
+      chart.Legend = legend;
 
 {% endhighlight %}
 {% endtabs %}
@@ -175,27 +164,20 @@ chart.Legend = legend;
 {% tabs %}
 {% highlight xaml %}
 
-<chart:SfCartesianChart>
-
-   <chart:SfCartesianChart.Legend>
-
-      <chart:ChartLegend Placement="Top"/>
-
-   </chart:SfCartesianChart.Legend>
-
-</chart:SfCartesianChart>
+      <chart:SfCartesianChart>
+         <chart:SfCartesianChart.Legend>
+            <chart:ChartLegend Placement="Top"/>
+         </chart:SfCartesianChart.Legend>
+      </chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfCartesianChart chart = new SfCartesianChart();
-
-ChartLegend legend = new ChartLegend();
-
-chart.Legend = legend;
-
-chart.Legend.Placement = Syncfusion.Maui.Core.LegendPlacement.Top;
+      SfCartesianChart chart = new SfCartesianChart();
+      ChartLegend legend = new ChartLegend();
+      chart.Legend = legend;
+      chart.Legend.Placement = Syncfusion.Maui.Core.LegendPlacement.Top;
           
 {% endhighlight %}
 {% endtabs %}
@@ -222,13 +204,13 @@ In SfCartesianChart, Axis can be an instance of NumericalAxis, DateTimeAxis, Cat
 
 {% highlight xaml %}
 
-<chart:SfChart.PrimaryAxis >
-	<chart:DateTimeAxis EdgeLabelsDrawingMode="Shift" ZoomFactor="0.7" ZoomPosition="0.4">
-      <chart:DateTimeAxis.Title>
-			<chart:ChartAxisTitle Text="Production across year"/>
-	   </chart:DateTimeAxis.Title>
-   </chart:DateTimeAxis>
-</chart:SfChart.PrimaryAxis>
+      <chart:SfChart.PrimaryAxis>
+	      <chart:DateTimeAxis EdgeLabelsDrawingMode="Shift" ZoomFactor="0.7" ZoomPosition="0.4">
+            <chart:DateTimeAxis.Title>
+		   <chart:ChartAxisTitle Text="Production across year"/>
+	         </chart:DateTimeAxis.Title>
+      </chart:DateTimeAxis>
+   </chart:SfChart.PrimaryAxis>
 
 {% endhighlight %} 
 
@@ -236,14 +218,14 @@ In SfCartesianChart, Axis can be an instance of NumericalAxis, DateTimeAxis, Cat
 
 {% highlight xaml %}
 
-<chart:SfCartesianChart.PrimaryAxis>
-   <chart:DateTimeAxis EdgeLabelsDrawingMode="Shift" ZoomFactor="0.7" ZoomPosition="0.4" >
-      <chart:DateTimeAxis.Title>
-         <chart:ChartAxisTitle Text="Production across year">
-         </chart:ChartAxisTitle>
-      </chart:DateTimeAxis.Title>
-   </chart:DateTimeAxis>
-</chart:SfCartesianChart.PrimaryAxis>
+      <chart:SfCartesianChart.PrimaryAxis>
+         <chart:DateTimeAxis EdgeLabelsDrawingMode="Shift" ZoomFactor="0.7" ZoomPosition="0.4" >
+            <chart:DateTimeAxis.Title>
+               <chart:ChartAxisTitle Text="Production across year">
+               </chart:ChartAxisTitle>
+            </chart:DateTimeAxis.Title>
+         </chart:DateTimeAxis>
+      </chart:SfCartesianChart.PrimaryAxis>
 
 ## Series
 
@@ -253,47 +235,36 @@ In both SfChart and SfCartestianChart, you can create the instance of required s
 
 {% highlight xaml %}
 
-<chart:SfChart>
-   <chart:SfChart.Series>
-      <chart:LineSeries ItemsSource="{Binding power}"
+      <chart:SfChart>
+         <chart:SfChart.Series>
+            <chart:LineSeries ItemsSource="{Binding power}"
                         XBindingPath="Year" YBindingPath="Sports" 
                         IsVisible="True" Color="Green"
                         SelectedDataPointIndex="2" SelectedDataPointColor="Red"
                         EnableTooltip="True">
 
-         <chart:LineSeries.YAxis>
-            <chart:NumericalAxis  Minimum="20 Maximum="50"/>
-         </chart:LineSeries.YAxis>
-      </chart:LineSeries>
-   </chart:SfChart.Series>
-</chart:SfChart>
+               <chart:LineSeries.YAxis>
+                  <chart:NumericalAxis  Minimum="20 Maximum="50"/>
+               </chart:LineSeries.YAxis>
+            </chart:LineSeries>
+         </chart:SfChart.Series>
+      </chart:SfChart>
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfChart chart = new SfChart();
-
-LineSeries lineseries = new LineSeries();
-
-lineseries.ItemsSource = viewmodel.power;
-
-lineseries.XBindingPath = "Year";
-
-lineseries.YBindingPath = "Sports";
-
-lineseries.IsVisible = true;
-
-lineseries.Color = Color.Green;
-
-lineseries.SelectedDataPointIndex = 2;
-
-lineseries.SelectedDataPointColor = Color.Red;
-
-lineseries.EnableTooltip = true;			
-
-lineseries.YAxis = new NumericalAxis() { Minimum = 20, Maximum = 50 };
-		
-chart.Series.Add(lineseries);
+      SfChart chart = new SfChart();
+      LineSeries lineseries = new LineSeries();
+      lineseries.ItemsSource = viewmodel.power;
+      lineseries.XBindingPath = "Year";
+      lineseries.YBindingPath = "Sports";
+      lineseries.IsVisible = true;
+      lineseries.Color = Color.Green;
+      lineseries.SelectedDataPointIndex = 2;
+      lineseries.SelectedDataPointColor = Color.Red;
+      lineseries.EnableTooltip = true;			
+      lineseries.YAxis = new NumericalAxis() { Minimum = 20, Maximum = 50 };		
+      chart.Series.Add(lineseries);
 {% endhighlight %}
 
 
@@ -302,9 +273,9 @@ chart.Series.Add(lineseries);
 {% tabs %}
 {% highlight xaml %}
 
-<chart:SfCartesianChart>
-   <chart:SfCartesianChart.Series>
-      <chart:LineSeries ShowTooltip="True"
+      <chart:SfCartesianChart>
+         <chart:SfCartesianChart.Series>
+            <chart:LineSeries ShowTooltip="True"
                         ShowDataLabels="True"
                         IsVisible ="True"
                         Background="Green"
@@ -313,40 +284,29 @@ chart.Series.Add(lineseries);
                         ItemsSource="{Binding Data}"
                         XBindingPath="Name" 
                         YBindingPath="Height">
-         <chart:LineSeries.YAxis>
-            <chart:NumericalAxis/>
-         </chart:LineSeries.YAxis>
-      </chart:LineSeries>
-   </chart:SfCartesianChart.Series>
-</chart:SfCartesianChart>
+               <chart:LineSeries.YAxis>
+                  <chart:NumericalAxis/>
+               </chart:LineSeries.YAxis>
+            </chart:LineSeries>
+         </chart:SfCartesianChart.Series>
+      </chart:SfCartesianChart>
 
 {% endhighlight %}
  
 {% highlight C# %}
 
-SfCartesianChart chart = new SfCartesianChart();
-
-LineSeries series = new LineSeries();
-
-series.ItemsSource = (new ViewModel()).Data;
-
-series.XBindingPath = "Name";
-
-series.YBindingPath = "Height";
-
-series.IsVisible  = true;
-
-series.ShowDataLabels = true;
-
-series.ShowTooltip = true;
-
-series.Background = Brush.Green;
-
-series.SelectedIndex = 2;
-            
-series.SelectionBrush = Brush.Blue;
-
-chart.Series.Add(series);
+      SfCartesianChart chart = new SfCartesianChart();
+      LineSeries series = new LineSeries();
+      series.ItemsSource = (new ViewModel()).Data;
+      series.XBindingPath = "Name";
+      series.YBindingPath = "Height";
+      series.IsVisible  = true;
+      series.ShowDataLabels = true;
+      series.ShowTooltip = true;
+      series.Background = Brush.Green;
+      series.SelectedIndex = 2;     
+      series.SelectionBrush = Brush.Blue;
+      chart.Series.Add(series);
 
 {% endhighlight %}
 {% endtabs %}
@@ -495,39 +455,39 @@ The Data Label are same as SfChart and you can define the Data Label inside the 
 {% tabs %}
 {% highlight xaml %}
 
-<chart:SfChart.Series>
-    <chart:ColumnSeries XBindingPath="XValue" 
+      <chart:SfChart.Series>
+         <chart:ColumnSeries XBindingPath="XValue" 
                         YBindingPath="YValue" 
                         ItemsSource="{Binding Data}">
-        <chart:ColumnSeries.DataMarker>
-            <chart:ChartDataMarker UseSeriesPalette="False" ShowLabel="True"/>
-            <chart:ChartDataMarker.LabelStyle>
-		         <chart:DataMarkerLabelStyle LabelPosition="Outer"/>
-	         </chart:ChartDataMarker.LabelStyle>
-        </chart:ColumnSeries.DataMarker>
-    </chart:ColumnSeries>
-</chart:SfChart.Series>
+            <chart:ColumnSeries.DataMarker>
+                  <chart:ChartDataMarker UseSeriesPalette="False" ShowLabel="True"/>
+                  <chart:ChartDataMarker.LabelStyle>
+		               <chart:DataMarkerLabelStyle LabelPosition="Outer"/>
+	               </chart:ChartDataMarker.LabelStyle>
+            </chart:ColumnSeries.DataMarker>
+         </chart:ColumnSeries>
+      </chart:SfChart.Series>
 
 {% endhighlight %}
 
 
 {% highlight C# %}
 
-ColumnSeries series = new ColumnSeries()
-{
-	XBindingPath = "XValue",
-	YBindingPath = "YValue",
-	ItemsSource = Data,
-	DataMarker = new ChartDataMarker()
-	{
-	   ShowLabel = true,
-		UseSeriesPalette = true,
-		LabelStyle = new DataMarkerLabelStyle
-		{
-			LabelPosition = DataMarkerLabelPosition.Outer,
-		}
-	}
-};
+      ColumnSeries series = new ColumnSeries()
+      {
+	      XBindingPath = "XValue",
+	      YBindingPath = "YValue",
+	      ItemsSource = Data,
+	      DataMarker = new ChartDataMarker()
+	      {
+	         ShowLabel = true,
+		      UseSeriesPalette = true,
+		      LabelStyle = new DataMarkerLabelStyle
+		      {
+			      LabelPosition = DataMarkerLabelPosition.Outer,
+		      }
+	      }
+      };
 
 {% endhighlight %}
 {% endtabs %}
@@ -537,34 +497,26 @@ ColumnSeries series = new ColumnSeries()
 {% tabs %}
 {% highlight xaml %}
 
-<chart:SfCartesianChart.Series >
+      <chart:SfCartesianChart.Series >
+         <chart:ColumnSeries ShowDataLabels="True">
+            <chart:ColumnSeries.DataLabelSettings>
+               <chart:CartesianDataLabelSettings UseSeriesPalette="False" LabelPlacement="Outer"/>
 
-   <chart:ColumnSeries ShowDataLabels="True">
-
-      <chart:ColumnSeries.DataLabelSettings>
-
-         <chart:CartesianDataLabelSettings UseSeriesPalette="False" LabelPlacement="Outer"/>
-
-      </chart:ColumnSeries.DataLabelSettings>
-
-   </chart:ColumnSeries>
-
-</chart:SfCartesianChart.Series>
+            </chart:ColumnSeries.DataLabelSettings>
+         </chart:ColumnSeries>
+      </chart:SfCartesianChart.Series>
 {% endhighlight %}
 
 
 {% highlight C# %}
 
-ColumnSeries series = new ColumnSeries();
-
-series.ShowDataLabels = true;
-           
-series.DataLabelSettings = new CartesianDataLabelSettings()
-{
-   UseSeriesPalette = false,
-
-   LabelPlacement = Placement.Outer  
-};
+      ColumnSeries series = new ColumnSeries();
+      series.ShowDataLabels = true;           
+      series.DataLabelSettings = new CartesianDataLabelSettings()
+      {
+         UseSeriesPalette = false,
+         LabelPlacement = Placement.Outer  
+      };
 
 {% endhighlight %}
 {% endtabs %}
@@ -593,29 +545,20 @@ The Zooming and Panning are achieved using the ChartZoomPanBehavior in SfCartesi
 {% tabs %}
 {% highlight xaml %}
 
-<chart:SfChart>
-
-	<chart:SfChart.ChartBehaviors>
-
-		<chart:ChartZoomPanBehavior EnableZooming="True" EnablePanning="True" ZoomMode="XY"/>
-
-	</chart:SfChart.ChartBehaviors>
-
-</chart:SfChart>
+      <chart:SfChart>
+	      <chart:SfChart.ChartBehaviors>
+		      <chart:ChartZoomPanBehavior EnableZooming="True" EnablePanning="True" ZoomMode="XY"/>
+	      </chart:SfChart.ChartBehaviors>
+      </chart:SfChart>
 
 {% highlight C# %}
 
-SfChart chart = new SfChart();
-
-ChartZoomPanBehavior zoomPanBehavior = new ChartZoomPanBehavior();
-
-zoomPanBehavior.EnableZooming = true;
-
-zoomPanBehavior.EnablePanning = true;
-
-zoomPanBehavior.ZoomMode = ZoomMode.XY;
-
-chart.ChartBehaviors.Add(zoomPanBehavior);
+      SfChart chart = new SfChart();
+      ChartZoomPanBehavior zoomPanBehavior = new ChartZoomPanBehavior();
+      zoomPanBehavior.EnableZooming = true;
+      zoomPanBehavior.EnablePanning = true;
+      zoomPanBehavior.ZoomMode = ZoomMode.XY;
+      chart.ChartBehaviors.Add(zoomPanBehavior);
 
 {% endhighlight %}
 {% endtabs %}
@@ -625,30 +568,22 @@ chart.ChartBehaviors.Add(zoomPanBehavior);
 {% tabs %}
 {% highlight xaml %}
 
-<chart:SfCartesianChart>
- ...
-   <chart:SfCartesianChart.ChartBehaviors>
-
-      <chart:ChartZoomPanBehavior EnablePinchZooming="True" EnablePanning="True" ZoomMode="XY"/>
-
-   </chart:SfCartesianChart.ChartBehaviors>
-            
-</chart:SfCartesianChart>
+      <chart:SfCartesianChart>
+         ...
+         <chart:SfCartesianChart.ChartBehaviors>
+            <chart:ChartZoomPanBehavior EnablePinchZooming="True" EnablePanning="True" ZoomMode="XY"/>
+         </chart:SfCartesianChart.ChartBehaviors>         
+      </chart:SfCartesianChart>
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfCartesianChart chart = new SfCartesianChart();
-
-ChartZoomPanBehavior zooming = new ChartZoomPanBehavior();
-   
-zooming.EnablePinchZooming = true;
-
-zooming.EnablePanning = true;
-
-zooming.ZoomMode = ZoomMode.XY;
-
-chart.ChartBehaviors.Add(zooming);
+      SfCartesianChart chart = new SfCartesianChart();
+      ChartZoomPanBehavior zooming = new ChartZoomPanBehavior();
+      zooming.EnablePinchZooming = true;
+      zooming.EnablePanning = true;
+      zooming.ZoomMode = ZoomMode.XY;
+      chart.ChartBehaviors.Add(zooming);
 
 {% endhighlight %}
 {% endtabs %}
