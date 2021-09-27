@@ -2,7 +2,7 @@
 layout: post
 title: Marker Pointer in .NET MAUI Radial Gauge control | Syncfusion
 description: Learn here all about Marker Pointer feature of Syncfusion .NET MAUI Radial Gauge control with image, text pointer support and more.
-platform:.NET MAUI
+platform: .NET MAUI
 control: SfRadialGauge
 documentation: ug
 ---
