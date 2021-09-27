@@ -36,21 +36,9 @@ The width of a tab is set to fit the text or image that it contains by setting t
              BackgroundColor="{DynamicResource SecondaryColor}">
     <ContentPage.Content>
         <tabView:SfTabView TabWidthMode="SizeToContent">
-                    <tabView:SfTabItem Header="Call">
-                        <tabView:SfTabItem.Content>
-                            <Grid BackgroundColor="Red" x:Name="AllContactsGrid" />
-                        </tabView:SfTabItem.Content>
-                    </tabView:SfTabItem>
-                    <tabView:SfTabItem Header="Favorites">
-                        <tabView:SfTabItem.Content>
-                            <Grid BackgroundColor="Green" x:Name="FavoritesGrid" />
-                        </tabView:SfTabItem.Content>
-                    </tabView:SfTabItem>
-                    <tabView:SfTabItem Header="Contacts">
-                        <tabView:SfTabItem.Content>
-                            <Grid BackgroundColor="Blue" x:Name="ContactsGrid" />
-                        </tabView:SfTabItem.Content>
-                    </tabView:SfTabItem>
+                    <tabView:SfTabItem Header="Call" />
+                    <tabView:SfTabItem Header="Favorites" />
+                    <tabView:SfTabItem Header="Contacts" />
         </tabView:SfTabView>
     </ContentPage.Content>
 </ContentPage>
@@ -70,25 +58,19 @@ namespace TabViewAutomationSample
 		{
 			InitializeComponent ();
             var tabView = new SfTabView();
-            Grid allContactsGrid = new Grid { BackgroundColor = Color.Red };
-            Grid favoritesGrid = new Grid { BackgroundColor = Color.Green };
-            Grid contactsGrid = new Grid { BackgroundColor = Color.Blue };
             var tabItems = new TabItemCollection
             {
                 new SfTabItem()
                 {
                     Header = "Calls",
-                    Content = allContactsGrid
                 },
                 new SfTabItem()
                 {
                     Header = "Favorites",
-                    Content = favoritesGrid
                 },
                 new SfTabItem()
                 {
                     Header = "Contacts",
-                    Content = contactsGrid
                 }
             };
 

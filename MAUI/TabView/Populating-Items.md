@@ -9,7 +9,7 @@ documentation: ug
 
 # Populating tab items
 
-Tab items can be configured in tab view through the `Items` property of `SfTabView`, which holds the collection of `SfTabItem` through `TabItemsCollection`.
+Tab items can be added to the control using the `Items` property of `SfTabView`.
 
 {% tabs %}
 
@@ -87,10 +87,6 @@ namespace TabViewAutomationSample
 {% endhighlight %}
 
 {% endtabs %}
-
-## Adding ListView in tab view
-
-## Binding data to list view
 
 Bind the items source of the `ListView`, and set the required appearance in its `ItemTemplate` property in which the list view can be hosted within the content region of tab item. 
 

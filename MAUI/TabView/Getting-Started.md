@@ -90,3 +90,88 @@ namespace GettingStarted
 {% endhighlight %}
 
 {% endtabs %}
+
+### How to add items in SfTabView
+
+Tab items can be added to the control using the `Items` property of `SfTabView`.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GettingStartedSample.MainPage"
+             xmlns:tabView="http://schemas.syncfusion.com/maui"
+             BackgroundColor="{DynamicResource SecondaryColor}">
+    <ContentPage.Content>
+          <tabView:SfTabView x:Name="tabView">
+                <tabView:SfTabView.Items>
+                    <tabView:SfTabItem Header="Item1">
+                        <tabView:SfTabItem.Content>
+                            <Grid BackgroundColor="Red" />
+                        </tabView:SfTabItem.Content>
+                    </tabView:SfTabItem>
+
+                    <tabView:SfTabItem Header="Item2">
+                        <tabView:SfTabItem.Content>
+                            <Grid BackgroundColor="Green"/>
+                        </tabView:SfTabItem.Content>
+                    </tabView:SfTabItem>
+
+                    <tabView:SfTabItem Header="Item3">
+                        <tabView:SfTabItem.Content>
+                            <Grid BackgroundColor="Blue"/>
+                        </tabView:SfTabItem.Content>
+                    </tabView:SfTabItem>
+                </tabView:SfTabView.Items>
+            </tabView:SfTabView>
+    </ContentPage.Content>
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+using Syncfusion.Maui.TabView;
+
+namespace TabViewAutomationSample
+{
+	public partial class TabView : ContentPage
+	{
+        SfTabView tabView;
+		public TabView ()
+		{
+			InitializeComponent ();
+            var tabView = new SfTabView();
+            Grid allContactsGrid = new Grid { BackgroundColor = Color.Red };
+            Grid favoritesGrid = new Grid { BackgroundColor = Color.Green };
+            Grid contactsGrid = new Grid { BackgroundColor = Color.Blue };
+            var tabItems = new TabItemCollection
+            {
+                new SfTabItem()
+                {
+                    Header = "Item1",
+                    Content = allContactsGrid
+                },
+                new SfTabItem()
+                {
+                    Header = "Item2",
+                    Content = favoritesGrid
+                },
+                new SfTabItem()
+                {
+                    Header = "Item3",
+                    Content = contactsGrid
+                }
+            };
+
+            tabView.Items = tabItems;
+            this.Content = tabView;
+		}
+	}
+}
+
+{% endhighlight %}
+
+{% endtabs %}
