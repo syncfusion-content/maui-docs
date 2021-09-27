@@ -2,7 +2,7 @@
 layout: post
 title: Animation in .NET MAUI Radial Gauge control | Syncfusion
 description: Learn here all about Animation feature of Syncfusion .NET MAUI Radial Gauge control with pointer animation support and more.
-platform: .NET MAUI
+platform: maui
 control: SfRadialGauge
 documentation: ug
 ---

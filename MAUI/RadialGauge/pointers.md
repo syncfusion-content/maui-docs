@@ -2,7 +2,7 @@
 layout: post
 title: Pointers in .NET MAUI Radial Gauge control | Syncfusion
 description: Learn here all about Pointers feature of Syncfusion .NET MAUI Radial Gauge control with multiple pointer support and more.
-platform: .NET MAUI
+platform: maui
 control: SfRadialGauge
 documentation: ug
 ---
