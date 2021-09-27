@@ -13,7 +13,7 @@ This section explains the steps required to configure the .NET MAUI Tab View con
 
 ## Adding SfTabView reference
 
-Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfTabView to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.TabView] and then install it.
+Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfTabView to your project, open the NuGet package manager in Visual Studio, search for `Syncfusion.Maui.TabView` and then install it.
 
 ## Create a simple Tab View
 
@@ -49,5 +49,5 @@ using Syncfusion.Maui.TabView;
 
 ## Populating tab items
 
-Tab items can be added to the Tab View through the [Items](https://npmci.syncfusion.com/maui/api/development/maui-tabview/api/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_Items) property of [SfTabView](https://npmci.syncfusion.com/maui/api/development/maui-tabview/api/Syncfusion.Maui.TabView.SfTabView.html), which holds the collection of [SfTabItem](https://npmci.syncfusion.com/maui/api/development/maui-tabview/api/Syncfusion.Maui.TabView.SfTabItem.html) through [TabItemsCollection](https://npmci.syncfusion.com/maui/api/development/maui-tabview/api/Syncfusion.Maui.TabView.TabItemCollection.html).
+Tab items can be added to the Tab View through the `Items` property of `SfTabView`, which holds the collection of `SfTabItem` through `TabItemsCollection`.
 
