@@ -17,13 +17,13 @@ The .NET MAUI Tab View provides two options that determine how the tab bar align
 
 Tab bar will be placed above the content region of the Tab View control.
 
-![Tab Bar Placement Top](images/tab-view/Tab-bar-Placement-Top.png) 
+![Tab Bar Placement Top](images/Tab-bar-Placement-Top.png) 
 
 ### Bottom
 
 Tab bar will be placed below the content region of the Tab View control. 
 
-![Tab Bar Placement Bottom](images/tab-view/Tab-bar-Placement-Bottom.png) 
+![Tab Bar Placement Bottom](images/Tab-bar-Placement-Bottom.png) 
 
 ## Customize the tab bar height
 
@@ -43,19 +43,19 @@ The .NET MAUI Tab View provides three options that determine how selection indic
 
 The indicator will be placed at the top of the selected tab.
 
-![Tab Image Position Top.](images/tab-view/Selection-Indicator-placement-Top.png) 
+![Tab Image Position Top.](images/Selection-Indicator-placement-Top.png) 
 
 ### Bottom
 
 The indicator will be placed at the bottom of the selected tab.
 
-![Tab Image Position Bottom.](images/tab-view/Selection-Indicator-placement-Bottom.png) 
+![Tab Image Position Bottom.](images/Selection-Indicator-placement-Bottom.png) 
 
 ### Fill
 
 The indicator will fill the selected tab.
 
-![Tab Image Position Fill.](images/tab-view/Selection-Indicator-placement-Fill.png) 
+![Tab Image Position Fill.](images/Selection-Indicator-placement-Fill.png) 
 
 ## Indicator Background
 

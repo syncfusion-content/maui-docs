@@ -38,13 +38,13 @@ N> Each tab item can be set with different image positions. Visual State Manager
 
 The image will be placed above the text vertically.
 
-![Tab Image Position Top](images/tab-view/Image-Position-Top.png) 
+![Tab Image Position Top](images/Image-Position-Top.png) 
 
 ### Bottom
 
 The image will be placed below the text vertically.
 
-![Tab Image Position Bottom](images/tab-view/Image-Position-Bottom.png) 
+![Tab Image Position Bottom](images/Image-Position-Bottom.png) 
 
 ### Left
 

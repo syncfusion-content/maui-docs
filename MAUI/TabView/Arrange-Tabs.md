@@ -17,10 +17,10 @@ The width of the tab is divided equally based on the available control width. Th
 
 N> This mode is recommended when the tab count is not more than 4. More tabs in this mode may appear with the text being trimmed.
 
-![Tab Width Mode Default](images/tab-view/Tab-Width-Mode-Default.png)
+![Tab Width Mode Default](images/Tab-Width-Mode-Default.png)
 
 ## Based on the text size
 
 The width of a tab is set to fit the text or image that it contains by setting the `TabWidthMode` as `Default`. Scroll is enabled in this mode to access the items that are outside the visible area.
 
-![Tab Width Mode Size to fit](images/tab-view/Tab-Width-Mode-SizeToFit.png) 
+![Tab Width Mode Size to fit](images/Tab-Width-Mode-SizeToFit.png) 
