@@ -47,7 +47,46 @@ using Syncfusion.Maui.TabView;
 
 {% endtabs %}
 
-## Populating tab items
+Set the control to content in `ContentPage`.
 
 Tab items can be added to the Tab View through the `Items` property of `SfTabView`, which holds the collection of `SfTabItem` through `TabItemsCollection`.
 
+{% tabs %}
+
+{% highlight xaml %}
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="TabViewMauiSample.MainPage"
+            xmlns:local="clr-namespace:TabViewMauiSample"
+            xmlns:tabView="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView"
+            BackgroundColor="{DynamicResource PageBackgroundColor}">
+    <ContentPage.Content> 
+        <tabView:SfTabView /> 
+    </ContentPage.Content>  
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+using Syncfusion.Maui.TabView;
+
+namespace GettingStarted  
+{  
+    public partial class MainPage : ContentPage                  
+    {   
+        private SfTabView tabView;   
+        public MainPage()   
+        {   
+            InitializeComponent();       
+            tabView = new SfTabView();   
+            this.Content = tabView;  
+        }  
+    }  
+}  
+
+{% endhighlight %}
+
+{% endtabs %}
