@@ -2,7 +2,7 @@
 layout: post
 title: Arrange Tabs in Tab bar customization in .NET MAUI Tab View | Syncfusion
 description: Learn here all about Tab View Header Customization support in Syncfusion .NET MAUI Tab View (SfTabView) control and more.
-platform: .NET MAUI
+platform: maui
 control: Tab View
 documentation: ug
 ---
