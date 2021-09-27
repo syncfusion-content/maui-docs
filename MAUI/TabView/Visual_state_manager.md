@@ -9,4 +9,4 @@ documentation: ug
 
 # Visual State Manager in MAUI TabView (SfTabView)
 
-When you have large number of tabs, by default, the scroller will be enabled to view the overflow of headers, if needed. It can be selected from the pop-up by setting the `OverflowMode` property of `SfTabView` to `DropDown`.
+Use the visual state manager to make changes to the .NET MAUI tab properties based on the visual states set from code. The applicable visual states are selected, normal, enable and disable.
