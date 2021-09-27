@@ -17,7 +17,7 @@ Tab items can be added to the control using the `Items` property of `SfTabView`.
 
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="GettingStartedSample.MainPage"
+             x:Class="TabViewMauiSample.MainPage"
              xmlns:tabView="http://schemas.syncfusion.com/maui"
              BackgroundColor="{DynamicResource SecondaryColor}">
     <ContentPage.Content>
@@ -47,7 +47,7 @@ Tab items can be added to the control using the `Items` property of `SfTabView`.
 
 using Syncfusion.Maui.TabView;
 
-namespace TabViewAutomationSample
+namespace TabViewMauiSample
 {
 	public partial class TabView : ContentPage
 	{
@@ -94,7 +94,7 @@ Bind the items source of the `ListView`, and set the required appearance in its 
 
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="GettingStartedSample.MainPage"
+             x:Class="TabViewMauiSample.MainPage"
              xmlns:tabView="http://schemas.syncfusion.com/maui"
              BackgroundColor="{DynamicResource SecondaryColor}">
     <ContentPage.Content>

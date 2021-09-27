@@ -60,7 +60,7 @@ The image will be placed to the right side of the text horizontally.
 
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="GettingStartedSample.MainPage"
+             x:Class="TabViewMauiSample.MainPage"
              xmlns:tabView="http://schemas.syncfusion.com/maui"
              BackgroundColor="{DynamicResource SecondaryColor}">
     <ContentPage.Content>
@@ -90,7 +90,7 @@ The image will be placed to the right side of the text horizontally.
 
 using Syncfusion.Maui.TabView;
 
-namespace TabViewAutomationSample
+namespace TabViewMauiSample
 {
 	public partial class TabView : ContentPage
 	{
