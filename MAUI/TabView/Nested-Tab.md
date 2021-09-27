@@ -1,7 +1,7 @@
 ---
 layout: post
 title: NestedTab in MAUI TabView control | Syncfusion
-description: Learn here all about NestedTab support in Syncfusion MAUI TabView (SfTabView) control and more.
+description: Learn about NestedTab support in Syncfusion MAUI TabView control and more.
 platform: maui
 control: TabView
 documentation: ug
