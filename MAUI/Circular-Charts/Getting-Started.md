@@ -35,9 +35,13 @@ This section explains how to populate the circular chart with data, title, data 
 {% highlight C# %}
 
 using Syncfusion.Maui.Charts;
+
 . . .
+
 public partial class MainWindow : ContentPage
+
 {
+
     public MainPage()
     {
         this.InitializeComponent();
@@ -57,7 +61,9 @@ Now, let us define a simple data model that represents a data point in chart.
 {% highlight c# %}
 
 public class Sales
+
 {
+
     public string Product { get; set; }
 
     public double SalesRate { get; set; }
@@ -119,6 +125,7 @@ N> Add namespace of `ViewModel` class to your XAML Page if you prefer to set `Bi
 {% highlight C# %} 
 
 ChartViewModel viewModel = new ChartViewModel();
+
 chart.BindingContext = viewModel;
 
 {% endhighlight %}
@@ -136,7 +143,9 @@ N> To plot the series, the [XBindingPath](https://npmci.syncfusion.com/maui/api/
 {% highlight xaml %}
 
 <chart:SfCircularChart>
+
 . . .
+
     <chart:SfCircularChart.Series>
         <chart:PieSeries ItemsSource="{Binding Data}" 
                          XBindingPath="Product" 
@@ -151,11 +160,15 @@ N> To plot the series, the [XBindingPath](https://npmci.syncfusion.com/maui/api/
 SfCircularChart chart = new SfCircularChart();
 
 ChartViewModel viewModel = new ChartViewModel();
+
 chart.BindingContext = viewModel;
 
 PieSeries series = new PieSeries();
+
 series.ItemsSource = viewModel.Data;
+
 series.XBindingPath = "Product";
+
 series.YBindingPath = "SalesRate";
 
 chart.Series.Add(series);
@@ -174,6 +187,7 @@ The title of the chart acts as the title to provide quick information to the use
 {% highlight xaml %}
 
 <chart:SfCircularChart>
+
     <chart:SfCircularChart.Title>
         <Label Text="PRODUCT SALES"/>
     </chart:SfCircularChart.Title>
@@ -215,8 +229,11 @@ The [ShowDataLabels](https://npmci.syncfusion.com/maui/api/development/maui-char
 {% highlight C# %}
 
 SfCircularChart chart = new SfCircularChart();
+
 . . .
+
 PieSeries series = new PieSeries();
+
 series.ShowDataLabels = true;
 
 chart.Series.Add(series);
@@ -234,6 +251,7 @@ The legend provides information about the data point displayed in the circular c
 {% highlight xaml %}
 
 <chart:SfCircularChart>
+
     . . .
     <chart:SfCircularChart.Legend>
         <chart:ChartLegend/>
@@ -261,7 +279,9 @@ Tooltips are used to show information about the segment, when mouse over on it. 
 {% highlight xaml %}
 
 <chart:SfCircularChart>
+
 . . .
+
     <chart:PieSeries ShowTooltip="True"/>
 </chart:SfCircularChart>
 
@@ -287,6 +307,7 @@ The following code example gives you the complete code of above configurations.
 {% highlight xaml %}
 
 <chart:SfCircularChart>
+
     <chart:SfCircularChart.Title>
         <Label Text="PRODUCT SALES"/>
     </chart:SfCircularChart.Title>
@@ -309,9 +330,13 @@ The following code example gives you the complete code of above configurations.
 {% highlight C# %}
 
 using Syncfusion.Maui.Charts;
+
 . . .
+
 public partial class MainPage : ContentPage
+
 {
+    
     public MainWindow()
     {
         SfCircularChart chart = new SfCircularChart();
