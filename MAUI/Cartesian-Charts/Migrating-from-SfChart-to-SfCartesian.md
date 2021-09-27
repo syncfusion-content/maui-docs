@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrating from SfChart to SfCartesianChart in MAUI
 
-SfCartesianChart supports different types of series and each type of chart represents a unique style of representing data with more user friendly and greater UI visualization. This section helps you to identify equivalent Chart features/ APIs in SfChart.
+SfCartesianChart supports different types of series and each type of chart represents a unique style of representing data with more user friendly and greater UI visualization. This section helps you to identify equivalent Chart features/ APIs in SfCartesianChart.
 
 ## Adding Reference
 
@@ -44,7 +44,8 @@ Following code example illustrates the initialization of SfChart with SfCartesia
 {% tabs %}
 {% highlight xaml %}
 
- <chart:SfChart Title="ChartArea" SideBySideSeriesPlacement="True">
+ <chart:SfChart Title="ChartArea" 
+ SideBySideSeriesPlacement="True">
    <chart:SfChart.ColorModel>
       <chart:ChartColorModel Palette="Custom" CustomBrushes="{StaticResource Colors}"/>
    </chart:SfChart.ColorModel>
@@ -175,9 +176,13 @@ chart.Legend = legend;
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
+
    <chart:SfCartesianChart.Legend>
+
       <chart:ChartLegend Placement="Top"/>
+
    </chart:SfCartesianChart.Legend>
+
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -647,3 +652,16 @@ chart.ChartBehaviors.Add(zooming);
 
 {% endhighlight %}
 {% endtabs %}
+
+<table>
+<tr>
+<th>
+Zooming and Panning (SfChart)</th><th>
+Zooming and Panning (SfCartesianChart)</th><th>
+Description</th></tr>
+<tr>
+<td>
+EnableZooming</td><td>
+EnablePinchZooming</td><td>
+Gets or sets a value indicating whether to allow zooming in chart. This is a bindable property.</td></tr>
+</table>
