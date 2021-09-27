@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Axis in .NET MAUI Radial Gauge control | Syncfusion
-description: Learn here all about Axis feature of Syncfusion .NET MAUI Radial Gauge(sfRadialGauge) control with custom support.
-platform: .NET MAUI 
+description: Learn here all about Axis feature of Syncfusion .NET MAUI Radial Gauge(SfRadialGauge) control with custom support.
+platform:.NET MAUI
 control: SfRadialGauge
 documentation: ug
 ---
@@ -45,7 +45,7 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![MAUI Radial Gauge Axis Range](images/axis/-radimauial-gauge-axis-range.png)
+![MAUI Radial Gauge Axis Range](images/axis/maui-radial-gauge-axis-range.png)
 
 ### Interval
 
