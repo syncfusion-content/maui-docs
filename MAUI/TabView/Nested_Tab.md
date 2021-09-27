@@ -11,16 +11,4 @@ documentation: ug
 
 Nested Tab items can be configured in tab view through the `Items` property of `SfTabView`, which holds the nested collection of `SfTabItem` through `TabItemsCollection`.
 
-{% tabs %}
-
-{% highlight xaml %}
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-{% endhighlight %}
-
-{% endtabs %}
-
 ![NestedTab Image](images/NestedTab/NestedTab.png)
