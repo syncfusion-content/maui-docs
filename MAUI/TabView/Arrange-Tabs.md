@@ -13,7 +13,7 @@ documentation: ug
 
 ## Fixed bar
 
-The width of the tab is splitted equally based on the available control width. This enables a fixed tab bar that won’t allow tab scrolling even it contains any number of tabs. This can be achieved by setting the `TabWidthMode` as `Default`.
+The width of the tab is divided equally based on the available control width. This enables a fixed tab bar that won’t allow tab scrolling even it contains any number of tabs. This can be achieved by setting the `TabWidthMode` as `Default`.
 
 N> This mode is recommended when the tab count is not more than 4. More tabs in this mode may appear with the text being trimmed.
 
