@@ -2,7 +2,7 @@
 layout: post
 title: About .NET MAUI TabView control | Syncfusion
 description: Learn here all about introduction of Syncfusion .NET MAUI Tab View (SfTabView) control, its elements and more.
-platform: .NET MAUI
+platform: maui
 control: Tab View
 documentation: ug
 ---
