@@ -39,13 +39,14 @@ This section explains how to populate the Cartesian chart with data, title, data
 using Syncfusion.Maui.Charts;
 
 namespace SfCartesianChart_GettingStarted
+
 {
+
     public partial class MainPage : ContentPage
     {
         public MainPage()
         {
-            InitializeComponent();
-            
+            InitializeComponent();           
             SfCartesianChart chart = new SfCartesianChart(); 
         }
     }   
@@ -81,7 +82,9 @@ Next, create a view model class and initialize a list of `Person` objects as fol
 {% highlight c# %}
 
 public class ViewModel  
+
 {
+    
     Data = new List<Person>()
     {
         new Person { Name = "David", Height = 170 },
