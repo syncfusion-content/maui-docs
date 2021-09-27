@@ -1,13 +1,13 @@
 ---
 layout: post
-title: customize tab bar in MAUI TabViewcontrol | Syncfusion
-description: Learn here all about Custom Header support in Syncfusion MAUI TabView(SfTabView) control and more.
-platform: MAUI
-control: TabView
+title: customize the tab bar in .NET MAUI Tab View control | Syncfusion
+description: Learn here all about Custom Header support in Syncfusion .NET MAUI Tab View(SfTabView) control and more.
+platform: .NET MAUI
+control: Tab View
 documentation: ug
 ---
 
-# Customize Tab bar in MAUI TabView(SfTabView)
+# Customize the tab bar in .NET MAUI Tab View(SfTabView)
 
 ## Tab Image Position
 
