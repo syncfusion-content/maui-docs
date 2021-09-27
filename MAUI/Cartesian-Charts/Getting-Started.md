@@ -82,8 +82,6 @@ Next, create a view model class and initialize a list of `Person` objects as fol
 
 public class ViewModel  
 {
-    var date = new DateTime(2021, 06, 01);
-
     Data = new List<Person>()
     {
         new Person { Name = "David", Height = 170 },
@@ -98,7 +96,7 @@ public class ViewModel
 
 {% endtabs %} 
 
-Set the `ViewModel` instance as the `BindingContext` of your page; this is done to bind properties of `ViewModel` to  the chart.
+Set the `ViewModel` instance as the `BindingContext` of your page, this is done to bind properties of `ViewModel` to  the chart.
  
 N> Add namespace of `ViewModel` class to your XAML Page if you prefer to set `BindingContext` in XAML.
 
@@ -164,7 +162,7 @@ chart.SecondaryAxis = secondaryAxis;
 
 Run the project and check if you get following output to make sure you have configured your project properly to add chart.
 
-![Initializing axis for MAUI Chart](Getting-Started_Images/MAUI_chart_initializied.png)
+![Initializing axis for MAUI Chart](Getting-Started_Images/MAUI_chart_initialized.png)
 
 ## Populate Chart with Data
 
@@ -208,24 +206,37 @@ N> You need to set [XBindingPath](https://npmci.syncfusion.com/maui/api/developm
 SfCartesianChart chart = new SfCartesianChart();
 
 // Initializing primary axis
+
 CategoryAxis primaryAxis = new CategoryAxis();
+
 primaryAxis.Title.Text = "Name";
+
 chart.PrimaryAxis = primaryAxis;
 
 //Initializing secondary Axis
+
 NumericalAxis secondaryAxis = new NumericalAxis();
+
 secondaryAxis.Title.Text = "Height(in cm)";
+
 chart.SecondaryAxis = secondaryAxis;
 
 //Initialize the two series for SfChart
+
 ColumnSeries series = new ColumnSeries();
+
 series.Label = "Heights";
+
 series.ShowDataLabels = true;
+
 series.ItemsSource = (new ViewModel()).Data;
+
 series.XBindingPath = "Name";
+
 series.YBindingPath = "Height";
 
 //Adding Series to the Chart Series Collection
+
 chart.Series.Add(series);
 
 {% endhighlight %}
@@ -241,11 +252,17 @@ The title of the chart provide quick information to the user about the data bein
 {% highlight xaml %}
 
 <Grid>
+
    <chart:SfCartesianChart>
+
         <chart:SfCartesianChart.Title>
+
             <Label Text="Height Comparison" />
+
         </chart:SfCartesianChart.Title> 
+
    </chart:SfCartesianChart>
+
 </Grid>
 
 {% endhighlight %}
@@ -253,9 +270,13 @@ The title of the chart provide quick information to the user about the data bein
 {% highlight C# %}
 
 SfCartesianChart chart = new SfCartesianChart();
+
 chart.Title = new Label
+
 {
+
    Text = "Height Comparison"
+
 };
 
 {% endhighlight %}
@@ -271,8 +292,11 @@ The [ShowDataLabels](https://npmci.syncfusion.com/maui/api/development/maui-char
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
+
     . . . 
+
     <chart:ColumnSeries ShowDataLabels="True">
+
     </chart:ColumnSeries>
 
 </chart:SfCartesianChart>
@@ -282,9 +306,13 @@ The [ShowDataLabels](https://npmci.syncfusion.com/maui/api/development/maui-char
 {% highlight C# %}
 
 SfCartesianChart chart = new SfCartesianChart();
+
 . . .
+
 ColumnSeries series = new ColumnSeries();
+
 series.ShowDataLabels = true;
+
 chart.Series.Add(series);
 
 {% endhighlight %}
@@ -300,11 +328,17 @@ The legend provides information about the data point displayed in the chart. The
 {% highlight xaml %}
 
 <chart:SfCartesianChart >
+
     . . .
+
     <chart:SfCartesianChart.Legend>
+
         <chart:ChartLegend/>
+
     </chart:SfCartesianChart.Legend>
+
     . . .
+
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -312,6 +346,7 @@ The legend provides information about the data point displayed in the chart. The
 {% highlight C# %}
 
 SfCartesianChart chart = new SfCartesianChart();
+
 chart.Legend = new ChartLegend (); 
 
 {% endhighlight %}
@@ -325,12 +360,19 @@ N> Additionally, set label for each series using the [Label](https://npmci.syncf
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
+
 . . .
+
     <chart:ColumnSeries Label="Heights"
+
                         ItemsSource="{Binding Data}"
+
                         XBindingPath="Name" 
+
                         YBindingPath="Height">
+
     </chart:ColumnSeries>
+
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -338,9 +380,13 @@ N> Additionally, set label for each series using the [Label](https://npmci.syncf
 {% highlight C# %}
 
 ColumnSeries series = new ColumnSeries (); 
+
 series.ItemsSource = (new ViewModel()).Data;
+
 series.XBindingPath = "Name"; 
+
 series.YBindingPath = "Height"; 
+
 series.Label = "Heights";
 
 {% endhighlight %}
@@ -356,7 +402,9 @@ Tooltips are used to show information about the segment, when hovers on the segm
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
+
 	...
+
     <chart:SfCartesianChart.Series>
         <chart:ColumnSeries ShowTooltip="True" ItemsSource="{Binding Data}" XBindingPath="Name" YBindingPath="Height"/>
     </chart:SfCartesianChart.Series>
@@ -488,4 +536,4 @@ namespace SfCartesianChart_GettingStarted
 
 The following chart is created as a result of the previous codes.
 
-![Getting started for MAUI Chart](Getting-Started_Images/WinUI_chart.png)
+![Getting started for MAUI Chart](Getting-Started_Images/MAUI_chart.png)
