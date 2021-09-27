@@ -12,7 +12,7 @@ A tab item consists of the following elements that can be customized.
 
 * **Header** - Holds the text of the tab item that is displayed in the tab bar.
 
-* **ImageSource** - The image to be displayed in the tabbar representing the tab item.
+* **ImageSource** - The image to be displayed in the tab bar representing the tab item.
 
 * **Content** - The assigned view will get displayed in the main area of the Tab View.
 
