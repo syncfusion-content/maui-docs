@@ -323,4 +323,4 @@ Bind the items source of the `ListView`, and set the required appearance in its 
 
 Similarly, content region for other tabs also can be configured.
 
-![LisViewImage](images/ListView.jpg)
+![LisViewImage](images/ListView.png)
