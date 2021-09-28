@@ -24,3 +24,63 @@ N> This mode is recommended when the tab count is not more than 4. More tabs in 
 The width of a tab is set to fit the text or image that it contains by setting the `TabWidthMode` as `Default`. Scroll is enabled in this mode to access the items that are outside the visible area.
 
 ![Tab Width Mode Size to fit](images/Tab-Width-Mode-SizeToFit.png) 
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TabViewMauiSample.MainPage"
+             xmlns:tabView="http://schemas.syncfusion.com/maui"
+             BackgroundColor="{DynamicResource SecondaryColor}">
+    <ContentPage.Content>
+        <tabView:SfTabView TabWidthMode="SizeToContent">
+                    <tabView:SfTabItem Header="Call" />
+                    <tabView:SfTabItem Header="Favorites" />
+                    <tabView:SfTabItem Header="Contacts" />
+        </tabView:SfTabView>
+    </ContentPage.Content>
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+using Syncfusion.Maui.TabView;
+
+namespace TabViewMauiSample
+{
+	public partial class TabView : ContentPage
+	{
+        SfTabView tabView;
+		public TabView ()
+		{
+			InitializeComponent ();
+            var tabView = new SfTabView();
+            var tabItems = new TabItemCollection
+            {
+                new SfTabItem()
+                {
+                    Header = "Calls",
+                },
+                new SfTabItem()
+                {
+                    Header = "Favorites",
+                },
+                new SfTabItem()
+                {
+                    Header = "Contacts",
+                }
+            };
+
+            tabView.TabWidthMode = TabWidthMode.SizeToContent;
+            tabView.Items = tabItems;
+            this.Content = tabView;
+		}
+	}
+}
+
+{% endhighlight %}
+
+{% endtabs %}
