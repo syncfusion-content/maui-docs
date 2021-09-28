@@ -44,7 +44,7 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![MAUI Radial Gauge Default Needle Pointer](images/needle-pointer/maui-radial-gauge-default-needle-pointer.png)
+![.NET MAUI Radial Gauge Default Needle Pointer](images/needle-pointer/maui-radial-gauge-default-needle-pointer.png)
 
 ## Needle customization
 
@@ -104,7 +104,7 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![MAUI Radial Gauge Needle Pointer Length](images/needle-pointer/maui-radial-gauge-needle-pointer-length.png)
+![.NET MAUI Radial Gauge Needle Pointer Length](images/needle-pointer/maui-radial-gauge-needle-pointer-length.png)
 
 ### Needle width customization
 
@@ -153,78 +153,7 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![MAUI Radial Gauge Custom Needle Width](images/needle-pointer/maui-radial-gauge-custom-needle-width.png)
-
-### Setting gradient brush to the needle
-
- The `NeedleFill` property of `Needle Pointer` is Brush type. So, it accepts gradient brushes by default as shown in below code
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<gauge:SfRadialGauge>
-    <gauge:SfRadialGauge.Axes>
-        <gauge:RadialAxis>
-            <gauge:RadialAxis.Pointers>
-                <gauge:NeedlePointer Value="65"
-                                     NeedleLengthUnit="Factor"
-                                     NeedleLength="0.8"
-                                     NeedleEndWidth="20"
-                                     KnobRadius="0.08">
-                    <gauge:NeedlePointer.NeedleFill>
-                        <LinearGradientBrush StartPoint="0,0.5"
-                                             EndPoint="1,0.5">
-                            <GradientStop Color="#FFFF6B78"
-                                          Offset="0" />
-                            <GradientStop Color="#FFFF6B78"
-                                          Offset="0.5" />
-                            <GradientStop Color="#FFE20A22"
-                                          Offset="0.5" />
-                            <GradientStop Color="#FFE20A22"
-                                          Offset="1" />
-                        </LinearGradientBrush>
-                    </gauge:NeedlePointer.NeedleFill>
-                </gauge:NeedlePointer>
-            </gauge:RadialAxis.Pointers>
-        </gauge:RadialAxis>
-    </gauge:SfRadialGauge.Axes>
-</gauge:SfRadialGauge>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-SfRadialGauge sfRadialGauge = new SfRadialGauge();
-
-RadialAxis radialAxis = new RadialAxis();
-sfRadialGauge.Axes.Add(radialAxis);
-
-NeedlePointer needlePointer = new NeedlePointer();
-needlePointer.Value = 65;
-needlePointer.NeedleLengthUnit = SizeUnit.Factor;
-needlePointer.NeedleLength = 0.8;
-needlePointer.NeedleEndWidth = 20;
-needlePointer.KnobRadius = 0.08;
-
-LinearGradientBrush linearGradientBrush = new LinearGradientBrush();
-linearGradientBrush.StartPoint = new Point(0, 0.5);
-linearGradientBrush.EndPoint = new Point(1, 0.5);
-linearGradientBrush.GradientStops.Add(new GradientStop { Offset = 0,  Color = Color.FromRgb(255, 107, 120) });
-linearGradientBrush.GradientStops.Add(new GradientStop { Offset = 0.5f, Color = Color.FromRgb(255, 107, 120) });
-linearGradientBrush.GradientStops.Add(new GradientStop { Offset = 0.5f, Color = Color.FromRgb(226, 10, 34) });
-linearGradientBrush.GradientStops.Add(new GradientStop { Offset = 1, Color = Color.FromRgb(226, 10, 34) });
-needlePointer.NeedleFill = linearGradientBrush;
-
-radialAxis.Pointers.Add(needlePointer);
-
-this.Content = sfRadialGauge;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![MAUI Radial Gauge Needle Pointer Gradient](images/needle-pointer/maui-radial-gauge-needle-pointer-gradient.png)
+![.NET MAUI Radial Gauge Custom Needle Width](images/needle-pointer/maui-radial-gauge-custom-needle-width.png)
 
 ## Knob customization
 
@@ -283,7 +212,7 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![MAUI Radial Gauge Knob Radius](images/needle-pointer/maui-radial-gauge-knob-radius.png)
+![.NET MAUI Radial Gauge Knob Radius](images/needle-pointer/maui-radial-gauge-knob-radius.png)
 
 If the `KnobSizeUnit` is set to factor, the factor value will be set to knob radius. The factor value ranges from 0 to 1. For example, if the needle length is set to 0.1, 10% of the radius value of axis will be set to knob radius. By default, the value of `KnobSizeUnit` is factor
 
@@ -336,7 +265,7 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![MAUI Radial Gauge Knob Stroke](images/needle-pointer/maui-radial-gauge-knob-stroke.png)
+![.NET MAUI Radial Gauge Knob Stroke](images/needle-pointer/maui-radial-gauge-knob-stroke.png)
 
 ## Tail customization
 
@@ -395,7 +324,7 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![MAUI Radial Gauge Tail Length in Pixel](images/needle-pointer/maui-radial-gauge-tail-length-in-pixel.png)
+![.NET MAUI Radial Gauge Tail Length in Pixel](images/needle-pointer/maui-radial-gauge-tail-length-in-pixel.png)
 
 ### Tail length in factor
 
@@ -438,7 +367,7 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![MAUI Radial Gauge Tail Length in Factor](images/needle-pointer/maui-radial-gauge-tail-length-in-factor.png)
+![.NET MAUI Radial Gauge Tail Length in Factor](images/needle-pointer/maui-radial-gauge-tail-length-in-factor.png)
 
 ### Tail width customization
 
@@ -481,74 +410,5 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![MAUI Radial Gauge Tail Width](images/needle-pointer/maui-radial-gauge-tail-width.png)
+![.NET MAUI Radial Gauge Tail Width](images/needle-pointer/maui-radial-gauge-tail-width.png)
 
-### Setting gradient brush to the tail
-
-The following code shows how to apply the gradient for the tail.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<gauge:SfRadialGauge>
-    <gauge:SfRadialGauge.Resources>
-        <LinearGradientBrush StartPoint="0,0.5"
-                             EndPoint="1,0.5" 
-                             x:Key="GradientBrush">
-            <GradientStop Color="#FFFF6B78"
-                          Offset="0" />
-            <GradientStop Color="#FFFF6B78"
-                          Offset="0.5" />
-            <GradientStop Color="#FFE20A22"
-                          Offset="0.5" />
-            <GradientStop Color="#FFE20A22"
-                          Offset="1" />
-        </LinearGradientBrush>
-    </gauge:SfRadialGauge.Resources>
-    <gauge:SfRadialGauge.Axes>
-        <gauge:RadialAxis>
-            <gauge:RadialAxis.Pointers>
-                <gauge:NeedlePointer Value="60"
-                                     TailLength="0.15"
-                                     TailWidth="12" NeedleEndWidth="12"
-                                     NeedleFill="{StaticResource GradientBrush}"
-                                     TailFill="{StaticResource GradientBrush}">
-                </gauge:NeedlePointer>
-            </gauge:RadialAxis.Pointers>
-        </gauge:RadialAxis>
-    </gauge:SfRadialGauge.Axes>
-</gauge:SfRadialGauge>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-SfRadialGauge sfRadialGauge = new SfRadialGauge();
-
-            RadialAxis radialAxis = new RadialAxis();
-            sfRadialGauge.Axes.Add(radialAxis);
-
-            NeedlePointer needlePointer = new NeedlePointer();
-            needlePointer.Value = 60;
-            needlePointer.TailLength = 0.15;
-            needlePointer.NeedleEndWidth = 12;
-            needlePointer.TailWidth = 12;
-            LinearGradientBrush linearGradientBrush = new LinearGradientBrush();
-            linearGradientBrush.StartPoint = new Point(0, 0.5);
-            linearGradientBrush.EndPoint = new Point(1, 0.5);
-            linearGradientBrush.GradientStops.Add(new GradientStop { Offset = 0, Color = Color.FromRgb(255, 107, 120) });
-            linearGradientBrush.GradientStops.Add(new GradientStop { Offset = 0.5f, Color = Color.FromRgb(255, 107, 120) });
-            linearGradientBrush.GradientStops.Add(new GradientStop { Offset = 0.5f, Color = Color.FromRgb(226, 10, 34) });
-            linearGradientBrush.GradientStops.Add(new GradientStop { Offset = 1, Color = Color.FromRgb(226, 10, 34) });
-            needlePointer.NeedleFill = linearGradientBrush;
-            needlePointer.TailFill = linearGradientBrush;
-            radialAxis.Pointers.Add(needlePointer);
-
-            this.Content = sfRadialGauge;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![MAUI Radial Gauge Tail Gradient](images/needle-pointer/maui-radial-gauge-tail-gradient.png)

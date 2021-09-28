@@ -9,7 +9,7 @@ documentation: ug
 
 # Annotation in .NET MAUI Radial Gauge
 
-`Radial axis` allows you to add multiple views such as text, icon and image etc., as an annotation to a specific point of interest in the radial gauge.
+Radial axis allows you to add multiple views such as text, icon and image etc., as an annotation to a specific point of interest in the radial gauge.
 
 The following properties are available in `Annotation` to customizes the position and alignment.
 
@@ -69,7 +69,7 @@ The following properties are available in `Annotation` to customizes the positio
 
 {% endtabs %}
 
-![MAUI Radial Gauge Annotation Position](images/annotation/maui-radial-gauge-annotation-position.png)
+![.NET MAUI Radial Gauge Annotation Position](images/annotation/maui-radial-gauge-annotation-position.png)
 
 ## Positioning annotation
 
@@ -134,7 +134,7 @@ The following example shows how to position the annotation using angle.
 
 {% endtabs %}
 
-![MAUI Radial Gauge Annotation Position with Angle](images/annotation/maui-radial-gauge-annotation-position-with-angle.png)
+![.NET MAUI Radial Gauge Annotation Position with Angle](images/annotation/maui-radial-gauge-annotation-position-with-angle.png)
 
 ### Positioning annotation using axis value
 
@@ -191,7 +191,7 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
 {% endtabs %}
 
-![MAUI Radial Gauge Annotation Position with Axis](images/annotation/maui-radial-gauge-annotation-position-with-axis.png)
+![.NET MAUI Radial Gauge Annotation Position with Axis](images/annotation/maui-radial-gauge-annotation-position-with-axis.png)
 
 `PositionFactor` is used to move the annotation from the center of axis to the edge of the axis. For example, when you specify the `PositionFactor` as 0.5, the annotation will be moved from the center towards the corresponding direction with the distance of half of the radius value of axis.
 
@@ -289,7 +289,7 @@ Annotations provide options to add any image over the gauge control with respect
 
 {% endtabs %}
 
-![MAUI Radial Gauge Image Annotation](images/annotation/maui-radial-gauge-image-annotation.png)
+![.NET MAUI Radial Gauge Image Annotation](images/annotation/maui-radial-gauge-image-annotation.png)
 
 ## Alignment of annotation
 
@@ -350,7 +350,7 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
 {% endtabs %}
 
-![MAUI Radial Gauge Annotation Horizontal Alignment](images/annotation/maui-radial-gauge-annotation-horizontal-alignment.png)
+![.NET MAUI Radial Gauge Annotation Horizontal Alignment](images/annotation/maui-radial-gauge-annotation-horizontal-alignment.png)
 
 The following code example demonstrates how to set `VerticalAlignment` for annotation,
 
@@ -406,4 +406,4 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
 {% endtabs %}
 
-![MAUI Radial Gauge Annotation Vertical Alignment](images/annotation/maui-radial-gauge-annotation-vertical-alignment.png)
+![.NET MAUI Radial Gauge Annotation Vertical Alignment](images/annotation/maui-radial-gauge-annotation-vertical-alignment.png)

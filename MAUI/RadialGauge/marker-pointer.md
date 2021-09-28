@@ -7,9 +7,9 @@ control: SfRadialGauge
 documentation: ug
 ---
 
-# Marker Pointer in MAUI Radial Gauge
+# Marker Pointer in .NET MAUI Radial Gauge
 
-Indicate current values by using different types of marker pointers. You can change the marker type using the `MarkerType` property.
+Indicate current values by using different types of marker pointers. You can change the marker shape type using the `MarkerType` property.
 
 {% tabs %}
 
@@ -44,9 +44,9 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![MAUI Radial Gauge Default Marker Pointer](images/marker-pointers/maui-radial-gauge-default-marker-pointer.png)
+![.NET MAUI Radial Gauge Default Marker Pointer](images/marker-pointers/maui-radial-gauge-default-marker-pointer.png)
 
-Gauge supports the following types of marker:
+Gauge supports the following types of shapes:
 
 * Circle
 * Diamond
@@ -54,7 +54,7 @@ Gauge supports the following types of marker:
 * Rectangle
 * Triangle
 
-![MAUI Radial Gauge Markers](images/marker-pointers/maui-radial-gauge-markers.png)
+![.NET MAUI Radial Gauge Markers](images/marker-pointers/maui-radial-gauge-markers.png)
 
 ## Marker customization
 
@@ -111,7 +111,7 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![MAUI Radial Gauge Custom Marker Pointer](images/marker-pointers/maui-radial-gauge-custom-marker-pointer.png)
+![.NET MAUI Radial Gauge Custom Marker Pointer](images/marker-pointers/maui-radial-gauge-custom-marker-pointer.png)
 
 ## Marker position customization
 
@@ -154,4 +154,4 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![MAUI Radial Gauge Marker Offset](images/marker-pointers/maui-radial-gauge-marker-offset.png)
+![.NET MAUI Radial Gauge Marker Offset](images/marker-pointers/maui-radial-gauge-marker-offset.png)

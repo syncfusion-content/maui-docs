@@ -13,11 +13,27 @@ This section explains the steps required to add the `.NET MAUI Radial Gauge` con
 
 ## Creating an application with .NET MAUI Radial Gauge
 
-1. Create a new .NET MAUI application in Visual Studio.
+1. Create a new .NET MAUI application in the Visual Studio.
 
 2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfRadialGauge to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Gauges] and then install it.
 
 3. Import the control namespace `Syncfusion.Maui.Gauges` in XAML or C# code.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+xmlns:gauge="clr-namespace:Syncfusion.Maui.Gauges;assembly=Syncfusion.Maui.Gauges"
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+using Syncfusion.Maui.Gauges;
+
+{% endhighlight %}
+
+{% endtabs %}
 
 4. Initialize the SfRadialGauge control
 
@@ -68,11 +84,11 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![MAUI Radial Gauge with Axis](images/getting-started/maui-radial-gauge-with-axis.png)
+![.NET MAUI Radial Gauge with Axis](images/getting-started/maui-radial-gauge-with-axis.png)
 
 ## Add range to the radial gauge
 
-Ranges contain a list of range elements, where you can add any number of ranges inside the axis. You can specify the start value, end value and background color for range using the [`StartValue`](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Gauges.GaugeRange.html#Syncfusion_UI_Xaml_Gauges_GaugeRange_StartValue), [`EndValue`](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Gauges.GaugeRange.html#Syncfusion_UI_Xaml_Gauges_GaugeRange_EndValue) and `Background` properties as demonstrated in the following code.   
+Ranges contain a list of range elements, where you can add any number of ranges inside the axis. You can specify the start value, end value and background color for range using the `StartValue`, `EndValue` and `Fill` properties as demonstrated in the following code.   
 
 {% tabs %}
 
@@ -131,11 +147,11 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![MAUI Radial Gauge with Range](images/getting-started/maui-radial-gauge-with-range.png)
+![.NET MAUI Radial Gauge with Range](images/getting-started/maui-radial-gauge-with-range.png)
 
 ## Add pointer to the radial gauge
 
-Pointers contains a list of pointer elements, where you can add any number of gauge pointers such as `NeedlePointer`, `RangePointer` and `MarkerPointer` inside the axis to indicate the value.
+Pointers contains a list of pointer elements, where you can add any number of gauge pointers such as `NeedlePointer`, `RangePointer` and `MarkerPointer` inside the axis to indicate the value using the `Value` property. 
 
 {% tabs %}
 
@@ -174,7 +190,7 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![MAUI Radial Gauge with Pointer](images/getting-started/maui-radial-gauge-with-pointer.png)
+![.NET MAUI Radial Gauge with Pointer](images/getting-started/maui-radial-gauge-with-pointer.png)
 
 ## Add annotation to the radial gauge
 

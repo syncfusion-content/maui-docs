@@ -9,13 +9,13 @@ documentation: ug
 
 # Axis in .NET MAUI Radial Gauge
 
-The `Radial axis` is a circular arc in which a set of values are displayed along a linear or custom scale based on the design requirements. Axis elements such as  labels, ticks and axis line can be easily customized with built-in properties.
+The `Radial Axis` is a circular arc in which a set of values are displayed along a linear or custom scale based on the design requirements. Axis elements such as  labels, ticks and axis line can be easily customized. 
 
 ## Axis customization
 
-### Setting axis minimum and maximum value
+### Setting axis minimum and maximum
 
-The `Minimum` and `Maximum` properties of an axis can be used to customize the axis value range.The default value of `Minimum` is 0 and the default value of `Maximum` is 100.
+The `Minimum` and `Maximum` properties of an axis can be used to customize the axis scale range. The default value of `Minimum` is 0 and `Maximum` is 100.
 
 {% tabs %}
 
@@ -45,11 +45,11 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![MAUI Radial Gauge Axis Range](images/axis/maui-radial-gauge-axis-range.png)
+![.NET MAUI Radial Gauge Axis Scale Range](images/axis/maui-radial-gauge-axis-range.png)
 
 ### Interval
 
-The interval between labels can be customized using the `Interval` property of axis.
+The interval between labels can be customized using the `Interval` property. By default auto-interval will be calculated based on available scale range and size. If you need to change the default interval, use this property. 
 
 {% tabs %}
 
@@ -77,7 +77,7 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![MAUI Radial Gauge Axis Label Interval](images/axis/maui-radial-gauge-axis-label-interval.png)
+![.NET MAUI Radial Gauge Axis Label Interval](images/axis/maui-radial-gauge-axis-label-interval.png)
 
 ### Angle customization
 
@@ -111,11 +111,11 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![MAUI Radial Gauge with Axis Angle](images/axis/maui-radial-gauge-with-axis-angle.png)
+![.NET MAUI Radial Gauge with Axis Angle](images/axis/maui-radial-gauge-with-axis-angle.png)
 
 ### Radius customization
 
-The radius of the radial axis can be customized using the `RadiusFactor` property. The default value of the `RadiusFactor` is 0.8. The value of `RadiusFactor` ranges from 0 to 1. For example, When the `RadiusFactor` value is 1, the full radius will be considered for rendering the axis and when the `RadiusFactor` value is 0.5, then half of the radius value will be considered for rendering the circle.
+The radius of the radial axis can be customized using the `RadiusFactor` property. The default value of the `RadiusFactor` is 0.8. The value of `RadiusFactor` ranges from 0 to 1. For example, When the `RadiusFactor` value is 1, the full radius will be considered for rendering the axis and when the `RadiusFactor` value is 0.5, then half of the radius value will be considered for rendering the axis circle.
 
 {% tabs %}
 
@@ -151,7 +151,7 @@ this.Content = sfRadialGauge;
 
 ### Positioning axis based on its angle
 
-The `CanScaleToFit` property of `radial gauge` allows to position the axis and its features based on the provided `StartAngle` and `EndAngle`. By default, the `CanScaleToFit` is true.
+The `CanScaleToFit` property of radial axis is used to fit the axis position on available size based on the provided `StartAngle` and `EndAngle`. By default, the `CanScaleToFit` is true.
 
 {% tabs %}
 
@@ -192,12 +192,12 @@ VerticalStackLayout layout = new VerticalStackLayout();
 
 {% endtabs %}
 
-![MAUI Radial Gauge Axis Fit to Scale](images/axis/maui-radial-gauge-with-axis-fit-to-scale.png)
+![.NET MAUI Radial Gauge Axis Fit to Scale](images/axis/maui-radial-gauge-with-axis-fit-to-scale.png)
 
 
 ### Axis label rotation
 
-The axis label can be rotated based on its current angle using the `CanRotateLabels` property of axis. The default value of `CanRotateLabels` is false.
+The axis label can be rotated based on its current angle using the `CanRotateLabels` property. The default value of `CanRotateLabels` is false.
 
 {% tabs %}
 
@@ -225,7 +225,7 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![MAUI Radial Gauge Axis Label Rotation](images/axis/maui-radial-gauge-axis-label-rotation.png)
+![.NET MAUI Radial Gauge Axis Label Rotation](images/axis/maui-radial-gauge-axis-label-rotation.png)
 
 ### Edge label customization
 
@@ -272,11 +272,11 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![MAUI Radial Gauge Axis Edge Label](images/axis/maui-radial-gauge-axis-edge-label.png)
+![.NET MAUI Radial Gauge Axis Edge Label](images/axis/maui-radial-gauge-axis-edge-label.png)
 
 ### Axis direction customization
 
-The direction of `Radial axis` can be customized by its `IsInversed` property. 
+The direction of radial axis can be customized by its `IsInversed` property. 
 
 When the `IsInversed` property is true, the axis can be placed in counter-clockwise direction. When the `IsInversed` property is set to false, the axis will be positioned in clockwise direction.
 
@@ -306,7 +306,7 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![MAUI Radial Gauge Axis Direction](images/axis/maui-radial-gauge-axis-direction.png)
+![.NET MAUI Radial Gauge Axis Direction](images/axis/maui-radial-gauge-axis-direction.png)
 
 ### Maximum number of labels per 100 logical pixels
 
@@ -338,7 +338,7 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![MAUI Radial Gauge Axis Maximum Labels](images/axis/maui-radial-gauge-axis-maximum-labels.png)
+![.NET MAUI Radial Gauge Axis Maximum Labels](images/axis/maui-radial-gauge-axis-maximum-labels.png)
 
 ## Axis line customization
 
@@ -384,11 +384,11 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
 {% endtabs %}
 
-![MAUI Radial Gauge Axis Line Width in Pixel](images/axis/maui-radial-gauge-axis-line-width-in-pixel.png)
+![.NET MAUI Radial Gauge Axis Line Width in Pixel](images/axis/maui-radial-gauge-axis-line-width-in-pixel.png)
 
 ### Axis line width in factor
 
-If the `ThicknessUnit` is set as a factor, the given factor value in the `Thickness` is multiplied by the axis radius. The value of the factor ranges from 0 to 1.
+If the `ThicknessUnit` is set to factor, the given factor value in the `Thickness` is multiplied by the axis radius. The value of the factor ranges from 0 to 1.
 
 {% tabs %}
 
@@ -461,65 +461,7 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![MAUI Radial Gauge Axis Line Stroke Color](images/axis/maui-radial-gauge-axis-line-stroke-color.png)
-
-Also, fill the linear brush to axis line using the `Fill` property of radial axis. 
-
-{% tabs %}
-
-{% highlight xaml %}
-
- <gauge:SfRadialGauge>
-            <gauge:SfRadialGauge.Axes>
-                <gauge:RadialAxis>
-                    <gauge:RadialAxis.AxisLineStyle>
-                        <gauge:RadialLineStyle ThicknessUnit="Factor" 
-                                               Thickness="0.1">
-                            <gauge:RadialLineStyle.Fill>
-                                <LinearGradientBrush StartPoint="0.5,0"
-                                                                     EndPoint="0.5,1">
-                                    <GradientStop Color="#CB7BDF"
-                                                                  Offset="0.25" />
-                                    <GradientStop Color="#77CB7EDF"
-                                                                  Offset="0.75" />
-                                </LinearGradientBrush>
-
-                            </gauge:RadialLineStyle.Fill>
-                        </gauge:RadialLineStyle>
-                    </gauge:RadialAxis.AxisLineStyle>
-                </gauge:RadialAxis>
-            </gauge:SfRadialGauge.Axes>
-        </gauge:SfRadialGauge>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-using GradientStop = Microsoft.Maui.Controls.GradientStop;
-
-..
-
- SfRadialGauge sfRadialGauge = new SfRadialGauge();
-
-            RadialAxis radialAxis = new RadialAxis();
-            radialAxis.AxisLineStyle.Thickness = 0.1;
-            radialAxis.AxisLineStyle.ThicknessUnit = SizeUnit.Factor;
-            LinearGradientBrush linearGradientBrush = new LinearGradientBrush();
-            linearGradientBrush.StartPoint = new Point(0.5, 0);
-            linearGradientBrush.EndPoint = new Point(0.5, 1);
-            linearGradientBrush.GradientStops.Add(new GradientStop(Colors.Red, 0.25f));
-            linearGradientBrush.GradientStops.Add(new GradientStop(Colors.Green, 0.75f));
-
-            radialAxis.AxisLineStyle.Fill = linearGradientBrush;
-            sfRadialGauge.Axes.Add(radialAxis);
-
-            this.Content = sfRadialGauge;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![MAUI Radial Gauge Axis Line Stroke Color](images/axis/maui-radial-gauge-axis-line-linear-stroke-color.png)
+![.NET MAUI Radial Gauge Axis Line Fill color](images/axis/maui-radial-gauge-axis-line-stroke-color.png)
 
 ### Setting gradient brush to axis line
 
@@ -574,7 +516,7 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
 {% endtabs %}
 
-![MAUI Radial Gauge Axis Gradient Line](images/axis/maui-radial-gauge-axis-gradient-line.png)
+![.NET MAUI Radial Gauge Axis Gradient Line](images/axis/maui-radial-gauge-axis-gradient-line.png)
 
 ### Axis line visibility
 
@@ -606,7 +548,7 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![MAUI Radial Gauge Axis Line Visibility](images/axis/maui-radial-gauge-axis-line-visibility.png)
+![.NET MAUI Radial Gauge Axis Line Visibility](images/axis/maui-radial-gauge-axis-line-visibility.png)
 
 ## Axis label customization
 
@@ -615,6 +557,7 @@ The axis labels can be customized using the following properties
 * `TextColor` – Allows to customize the color of the labels.
 * `FontAttributes` – Allows to specify the font attribute for labels.
 * `FontSize` – Allows to specify the font size for labels.
+* `FontFamily` – Allows to specify the various font families for labels.
 
 {% tabs %}
 
@@ -650,7 +593,7 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![MAUI Radial Gauge Axis Label Customization](images/axis/maui-radial-gauge-axis-label-customization.png)
+![.NET MAUI Radial Gauge Axis Label Customization](images/axis/maui-radial-gauge-axis-label-customization.png)
 
 ### Formatting axis label
 
@@ -684,7 +627,7 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![MAUI Radial Gauge Axis Label Format](images/axis/maui-radial-gauge-axis-label-format.png)
+![.NET MAUI Radial Gauge Axis Label Format](images/axis/maui-radial-gauge-axis-label-format.png)
 
 ### Label visibility
 
@@ -716,7 +659,7 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![MAUI Radial Gauge Axis Label Visibility](images/axis/maui-radial-gauge-axis-label-visibility.png)
+![.NET MAUI Radial Gauge Axis Label Visibility](images/axis/maui-radial-gauge-axis-label-visibility.png)
 
 ### Label placement
 
@@ -748,11 +691,11 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![MAUI Radial Gauge Axis Label Placement](images/axis/maui-radial-gauge-axis-label-placement.png)
+![.NET MAUI Radial Gauge Axis Label Placement](images/axis/maui-radial-gauge-axis-label-placement.png)
 
 ### Label position customization
 
-The `LabelOffset` property allows to adjust the distance between the axis line and the labels. The `OffsetUnit` property of axis allows to specify the label offset either in factor or pixels. By default, the value of the label offset is null.
+The `LabelOffset` property allows to adjust the distance between the axis line and the labels. The `OffsetUnit` property of axis allows to specify the label offset either in factor or pixels. By default, the value of the label offset is double.NaN.
 
 ### Label offset in pixel
 
@@ -786,7 +729,7 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![MAUI Radial Gauge Axis Label Offset in Pixel](images/axis/maui-radial-gauge-axis-label-offset-pixel.png)
+![.NET MAUI Radial Gauge Axis Label Offset in Pixel](images/axis/maui-radial-gauge-axis-label-offset-pixel.png)
 
 ### Label offset in factor
 
@@ -820,7 +763,7 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![MAUI Radial Gauge Axis Label Offset factor](images/axis/maui-radial-gauge-axis-label-offset-factor.png)
+![.NET MAUI Radial Gauge Axis Label Offset factor](images/axis/maui-radial-gauge-axis-label-offset-factor.png)
 
 N> The `OffsetUnit` property of axis is common for both the `TickOffset` and `LabelOffset`.
 
@@ -878,7 +821,7 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![MAUI Radial Gauge Axis Tick Length in Pixel](images/axis/maui-radial-gauge-axis-tick-length-in-pixel.png)
+![.NET MAUI Radial Gauge Axis Tick Length in Pixel](images/axis/maui-radial-gauge-axis-tick-length-in-pixel.png)
 
 ### Tick length in factor
 
@@ -923,7 +866,7 @@ this.Content = sfRadialGauge;
 
 ### Tick style customization
 
-The `Stroke`, `StrokeThickness` and `StrokeDashArray` properties allows you to customize the tick's as shown in the following code example.
+The `Stroke`, `StrokeThickness` and `StrokeDashArray` properties allows you to customize the axis tick as shown in the following code example.
 
 {% tabs %}
 
@@ -979,7 +922,7 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
 {% endtabs %}
 
-![MAUI Radial Gauge Customized Tick Lines](images/axis/maui-radial-gauge-customized-tick-lines.png)
+![.NET MAUI Radial Gauge Customized Tick Lines](images/axis/maui-radial-gauge-customized-tick-lines.png)
 
 ### Setting minor ticks count
 
@@ -1011,7 +954,7 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![MAUI Radial Gauge Minor Ticks Count](images/axis/maui-radial-gauge-minor-ticks-count.png)
+![.NET MAUI Radial Gauge Minor Ticks Count](images/axis/maui-radial-gauge-minor-ticks-count.png)
 
 ### Tick line visibility
 
@@ -1043,11 +986,11 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![MAUI Radial Gauge Tick Line Visibility](images/axis/maui-radial-gauge-tick-line-visibility.png)
+![.NET MAUI Radial Gauge Tick Line Visibility](images/axis/maui-radial-gauge-tick-line-visibility.png)
 
 ### Tick placement
 
-The `Radial axis` allows to position the ticks either inside or outside or center of the axis line using the `TickPosition` property. By default, ticks are positioned inside the axis line.
+The radial axis allows to position the ticks either inside or outside or center of the axis line using the `TickPosition` property. By default, ticks are positioned inside the axis line.
 
 {% tabs %}
 
@@ -1075,11 +1018,11 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![MAUI Radial Gauge Tick Placement](images/axis/maui-radial-gauge-tick-placement.png)
+![.NET MAUI Radial Gauge Tick Placement](images/axis/maui-radial-gauge-tick-placement.png)
 
 ### Tick position customization
 
-The ticks can be moved near or far to the axis line using the `TickOffset` property. The `OffsetUnit` property of axis allows to specify the `TickOffset` either in factor or pixels and the default value of `OffsetUnit` is Pixel and the default value of `TickOffset` is null.
+The ticks can be moved near or far to the axis line using the `TickOffset` property. The `OffsetUnit` property of axis allows to specify the `TickOffset` either in factor or pixels and the default value of `OffsetUnit` is Pixel and the default value of `TickOffset` is double.NaN.
 
 ### Tick offset in pixel
 
@@ -1111,7 +1054,7 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![MAUI Radial Gauge Axis Tick Offset in Pixel](images/axis/maui-radial-gauge-axis-tick-offset-pixel.png)
+![.NET MAUI Radial Gauge Axis Tick Offset in Pixel](images/axis/maui-radial-gauge-axis-tick-offset-pixel.png)
 
 ### Tick offset in factor
 
@@ -1145,7 +1088,7 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![MAUI Radial Gauge Axis Tick Offset Factor](images/axis/maui-radial-gauge-axis-tick-offset-factor.png)
+![.NET MAUI Radial Gauge Axis Tick Offset Factor](images/axis/maui-radial-gauge-axis-tick-offset-factor.png)
 
 N> The `OffsetUnit` property of axis is common for both the `TickOffset` and `LabelOffset`.
 
@@ -1266,7 +1209,7 @@ The `radial gauge` allows you to add n number of radial axis in its axes collect
 
 ## Custom scale range
 
-`radial gauge` allows you to define a custom scale range by extending the axis based on your business logic.
+The radial gauge allows you to define a custom scale range by extending the axis based on your business logic.
 
 {% tabs %}
 
@@ -1387,13 +1330,13 @@ public class RadialAxisExt : RadialAxis
 
 {% endtabs %}
 
-![MAUI Radial Gauge Custom Scale](images/axis/maui-radial-gauge-custom-scale.png)
+![.NET MAUI Radial Gauge Custom Scale](images/axis/maui-radial-gauge-custom-scale.png)
 
 ## Events
 
-### LabelPrepared
+### LabelCreated
 
-The `LabelCreated` event occurs each time a label is prepared for use. The following properties can be customized for each label in this event args:
+The `LabelCreated` event occurs each time a label is created for use. The following properties can be customized for each label in this event args:
 
 * `Text` – Allows to customize the text property of label.
 * `Style` - Allows to customize the text style.
@@ -1425,5 +1368,5 @@ The `LabelCreated` event occurs each time a label is prepared for use. The follo
 
 {% endtabs %}
 
-![MAUI Radial Gauge Axis Events](images/axis/maui-radial-gauge-axis-events.png)
+![.NET MAUI Radial Gauge Axis Events](images/axis/maui-radial-gauge-axis-events.png)
 

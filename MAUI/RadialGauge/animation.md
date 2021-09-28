@@ -166,7 +166,7 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
 ## Animation Easing
 
-The `AnimationEasing` property of pointer allows you to change the easing function. The default value `AnimationEasing` property is Linear.
+The `AnimationEasing` property of pointer allows you to use different type of easing function. The default value `AnimationEasing` property is `Linear`.
 
 {% tabs %}
 

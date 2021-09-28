@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Range in .NET MAUI Radial Gauge control | Syncfusion
+title: Radial Range in .NET MAUI Radial Gauge control | Syncfusion
 description: Learn here all about Range feature of Syncfusion .NET MAUI Radial Gauge control with customization support and more.
 platform: maui
 control: SfRadialGauge
 documentation: ug
 ---
 
-# Range in .NET MAUI Radial Gauge
+# Radial Range in the .NET MAUI Radial Gauge
 
-Gauge range is a visual element that helps to quickly visualize where a value falls on the axis.
+Radial range is a visual element that helps to quickly visualize where a value falls on the axis.
 
 ## Setting start and end value
 
-The start and end values of ranges are set using the `StartValue` and `EndValue` properties.
+The start and end values of range is set by `StartValue` and `EndValue` properties.
 
 {% tabs %}
 
@@ -50,7 +50,7 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
 {% endtabs %}
 
-![MAUI Radial Gauge Default Range](images/range/maui-radial-gauge-default-range.png)
+![.NET MAUI Radial Gauge Default Range](images/range/maui-radial-gauge-default-range.png)
 
 ## Range customization
 
@@ -109,7 +109,7 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![MAUI Radial Gauge Equal Range Width](images/range/maui-radial-gauge-equal-range-width.png)
+![.NET MAUI Radial Gauge Equal Range Width](images/range/maui-radial-gauge-equal-range-width.png)
 
 ### Different range width
 
@@ -154,11 +154,11 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![MAUI Radial Gauge Range Thickness](images/range/maui-radial-gauge-range-thickness.png)
+![.NET MAUI Radial Gauge Range Thickness](images/range/maui-radial-gauge-range-thickness.png)
 
 When the `WidthUnit` is set as pixels, the range will be rendered based on the provided pixel values in `StartWidth` and `EndWidth`
 
-If the `WidthUnit` is set as factor, the provided factor value in the start width and end width will be multiplied with the axis radius, respectively. The factor value ranges from 0 to 1.
+If the `WidthUnit` is set as factor, the provided factor value in the start width and end width will be multiplied with the axis radius, respectively and  calculated values assigned to the range width. The factor value ranges from 0 to 1.
 
 ### Setting gradient brush to the range
 
@@ -221,7 +221,7 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![MAUI Radial Gauge Range Gradient](images/range/maui-radial-gauge-range-gradient.png)
+![.NET MAUI Radial Gauge Range Gradient](images/range/maui-radial-gauge-range-gradient.png)
 
 ### Position customization
 
@@ -229,7 +229,7 @@ this.Content = sfRadialGauge;
 
 ### Range offset in pixel
 
-If the `OffsetUnit` is set as a pixels, the range will be moved based on the provided pixel value.
+If the `OffsetUnit` is set as a pixels, the range will be moved from axis line based on the provided pixel value.
 
 {% tabs %}
 
@@ -268,11 +268,11 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![MAUI Radial Gauge Range Offset in Pixel](images/range/maui-radial-gauge-range-offset-in-pixel.png)
+![.NET MAUI Radial Gauge Range Offset in Pixel](images/range/maui-radial-gauge-range-offset-in-pixel.png)
 
 ### Range offset in factor
 
-If the `OffsetUnit` is set as a factor, the provided factor value in the `RangeOffset` will be multiplied by the axis radius and the range will be moved to the corresponding value. The default value of `OffsetUnit` is Pixel.
+If the `OffsetUnit` is set as a factor, the provided factor value in the `RangeOffset` will be multiplied by the axis radius and the range will be moved from axis line to the corresponding position. The default value of `OffsetUnit` is Pixel.
 
 {% tabs %}
 
@@ -313,7 +313,7 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![MAUI Radial Gauge Range Offset in Factor](images/range/maui-radial-gauge-range-offset-in-factor.png)
+![.NET MAUI Radial Gauge Range Offset in Factor](images/range/maui-radial-gauge-range-offset-in-factor.png)
 
 ## Setting range color to axis elements
 
@@ -438,11 +438,11 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
 {% endtabs %}
 
-![MAUI Radial Gauge Range Color to Axis Element](images/range/maui-radial-gauge-range-color-to-axis-element.png)
+![.NET MAUI Radial Gauge Range Color to Axis Element](images/range/maui-radial-gauge-range-color-to-axis-element.png)
 
 ## Range label
 
-A text can be displayed on range using the `Label` property. The provided text can be customized using the `Foreground`, `FontSize`, `FontWeight`, `FontFamily` and `FontStyle` properties of [`range`](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Gauges.GaugeRange.html).
+A text can be displayed on range using the `Label` property. The provided text can be customized using `LabelStyle` property. 
 
 {% tabs %}
 
@@ -582,4 +582,4 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
 {% endtabs %}
 
-![MAUI Radial Gauge Range Label](images/range/maui-radial-gauge-range-label.png)
+![.NET MAUI Radial Gauge Range Label](images/range/maui-radial-gauge-range-label.png)

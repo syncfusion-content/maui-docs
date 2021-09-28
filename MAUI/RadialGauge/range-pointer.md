@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Range Pointer in .NET MAUI Radial Gauge control | Syncfusion
+title: Radial Range Pointer in .NET MAUI Radial Gauge control | Syncfusion
 description: Learn here all about Range Pointer feature of Syncfusion .NET MAUI Radial Gauge control with customization support.
 platform: maui
 control: SfRadialGauge
@@ -44,7 +44,7 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![MAUI Radial Gauge Default Range Pointer](images/range-pointer/maui-radial-gauge-default-range-pointer.png)
+![.NET MAUI Radial Gauge Default Range Pointer](images/range-pointer/maui-radial-gauge-default-range-pointer.png)
 
 The following properties are used to customize the range pointer:
 
@@ -95,13 +95,13 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![MAUI Radial Gauge Custom Range Pointer](images/range-pointer/maui-radial-gauge-custom-range-pointer.png)
+![.NET MAUI Radial Gauge Custom Range Pointer](images/range-pointer/maui-radial-gauge-custom-range-pointer.png)
 
  The default value of `WidthUnit` and `OffsetUnit` is `SizeUnit.Pixel`.
  
 ## Setting gradient brush to the pointer
 
- The `GradientStops` property of `range pointer` allows to specify the smooth color transition to pointer by specifying the different colors based on provided axis value.
+ The `GradientStops` property of range pointer allows to specify the smooth color transition to pointer by specifying the different colors based on provided axis value.
 
 {% tabs %}
 
@@ -155,11 +155,11 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![MAUI Radial Gauge Range Pointer Gradient](images/range-pointer/maui-radial-gauge-range-pointer-gradient.png)
+![.NET MAUI Radial Gauge Range Pointer Gradient](images/range-pointer/maui-radial-gauge-range-pointer-gradient.png)
 
 ## Corner style customization
 
- The `CornerStyle` property of `range pointer` specifies the corner type for pointer. The corners can be customized using the `BothFlat`, `BothCurve`, `StartCurve` and `EndCurve` options. The default value of this property is `BothFlat`.
+ The `CornerStyle` property of range pointer specifies the corner type for pointer. The corners can be customized using the `BothFlat`, `BothCurve`, `StartCurve` and `EndCurve` options. The default value of this property is `BothFlat`.
 
 {% tabs %}
 
@@ -196,7 +196,7 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![MAUI Radial Gauge Pointer Corner Style](images/range-pointer/maui-radial-gauge-pointer-corner-style.png)
+![.NET MAUI Radial Gauge Pointer Corner Style](images/range-pointer/maui-radial-gauge-pointer-corner-style.png)
 
 ## Position customization
 
@@ -243,7 +243,7 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![MAUI Radial Gauge Pointer Position](images/range-pointer/maui-radial-gauge-pointer-position.png)
+![.NET MAUI Radial Gauge Pointer Position](images/range-pointer/maui-radial-gauge-pointer-position.png)
 
 When you set the `OffsetUnit` as pixel, the pointer will be moved to the provided pixel value.
 

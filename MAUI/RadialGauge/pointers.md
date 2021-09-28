@@ -11,17 +11,17 @@ documentation: ug
 
  Pointer is used to indicate values on an axis. The radial gauge control has three types of pointers: 
 
-`Marker pointer`
-`Needle Pointer`
-`Range pointer`
+* `Marker pointer`
+* `Needle Pointer`
+* `Range pointer`
 
-All the pointers can be customized as needed. You can add multiple pointers to the gauge to point multiple values on the same scale. The value of the pointer is set using the `Value` property.
+All the pointers can be customized as needed. You can add multiple pointers to the gauge to point the multiple values on the same scale. The value of the pointer is set using the `Value` property.
 
-![MAUI Radial Gauge with Pointers](images/pointers/maui-radial-gauge-pointers.png)
+![.NET MAUI Radial Gauge with Pointers](images/pointers/maui-radial-gauge-pointers.png)
 
 ## Multiple pointers
 
-In addition to the default pointer, you can add n number of pointers to an axis by adding in the `Pointers` property.
+In addition to the default pointer, you can add `N` number of pointers to an axis by adding in the `Pointers` collection property.
 
 {% tabs %}
 
@@ -63,9 +63,9 @@ this.Content = sfRadialGauge;
 
 ![MAUI radial Gauge with Multiple Pointers](images/pointers/maui-radial-gauge-multiple-pointers.png)
 
-## Pointer dragging
+## Pointer interaction
 
-Pointers can be dragged over the scale value. It can be achieved by clicking and dragging the pointer. To enable or disable the pointer drag, use the `IsInteractive` property.
+Pointers can be dragged over the axis scale. It can be achieved by swipe or drag gestures. To enable or disable the pointer drag, use the `IsInteractive` property.
 
 {% tabs %}
 
@@ -116,7 +116,7 @@ this.Content = sfRadialGauge;
 
 `ValueChangeStarted` - Occurs whenever the pointer starts to drag.
 
-`ValueChanging` - Occurs before the current drag value gets updated as pointer value. The `Cancel` argument of `ValueChangingEventArgs` allows to restrict the update of current drag value as pointer value.
+`ValueChanging` - Occurs before the current drag value gets updated as pointer value. The `Cancel` argument of `ValueChangingEventArgs` allows to restrict the update of current drag value.
 
 `ValueChanged` - Occurs whenever the pointer value is changed while dragging.
 
