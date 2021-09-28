@@ -13,6 +13,14 @@ The advanced .NET Multi-platform App UI (MAUI) Tab View is a simple and intuitiv
 
 ## Key features
 
+* Nested tab support with different header placements.
+
+* Fixed and scrollable tab headers.
+
+* Image and text support for headers.
+
+## Usage
+
 * The .NET MAUI TabView can be used to optimize screen space usage when the application requires complex and huge layouts.
 
 * The .NET MAUI TabView contains a set of tab items that share the same space.
