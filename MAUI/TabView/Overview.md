@@ -7,7 +7,7 @@ control: Tab View
 documentation: ug
 ---
 
-# MAUI Tab View (SfTabView) Overview
+# .NET MAUI Tab View (SfTabView) Overview
 
 The advanced .NET Multi-platform App UI (MAUI) Tab View is a simple and intuitive interface for tab navigation in mobile and desktop applications, where users can explore and switch between different tabs.
 
