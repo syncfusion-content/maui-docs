@@ -15,7 +15,7 @@ This section explains the steps required to configure the .NET MAUI Tab View con
 
 Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfTabView to your project, open the NuGet package manager in Visual Studio, search for `Syncfusion.Maui.TabView` and then install it.
 
-## Registering handler
+## Register the handler
 
 Syncfusion.Maui.Core nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file register the handler for Syncfusion core.
 
