@@ -50,26 +50,84 @@ Use the visual state manager to make changes to the .NET MAUI tab properties bas
                 </Style>
             </Grid.Resources>
             <tabView:SfTabView>
-                    <tabView:SfTabItem Header="Call">
-                        <tabView:SfTabItem.Content>
-                            <Grid BackgroundColor="Red" x:Name="AllContactsGrid" />
-                        </tabView:SfTabItem.Content>
-                    </tabView:SfTabItem>
-                    <tabView:SfTabItem Header="Favorites">
-                        <tabView:SfTabItem.Content>
-                            <Grid BackgroundColor="Green" x:Name="FavoritesGrid" />
-                        </tabView:SfTabItem.Content>
-                    </tabView:SfTabItem>
-                    <tabView:SfTabItem Header="Contacts">
-                        <tabView:SfTabItem.Content>
-                            <Grid BackgroundColor="Blue" x:Name="ContactsGrid" />
-                        </tabView:SfTabItem.Content>
-                    </tabView:SfTabItem>
-            </tabView:SfTabView>
-        </Grid>
-    </ContentPage.Content>
-</ContentPage>
+                <tabView:SfTabItem Header="FAVOURITES">
+                    <tabView:SfTabItem.Content>
+                        <Grid>
+                            <Grid GridLayout.Row="1" VerticalOptions="End" HeightRequest="20">
+                                <Grid.Background>
+                                    <LinearGradientBrush EndPoint="0,1">
+                                        <GradientStop Color="Transparent" Offset="0.1" />
+                                        <GradientStop Color="#EAEAEA" Offset="0.8" />
+                                        <GradientStop Color="#E5E5E5" Offset="1.0" />
+                                    </LinearGradientBrush>
+                                </Grid.Background>
+                        </Grid>
+                        <ListView RowHeight="50">
+                            <ListView.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>James</x:String>
+                                    <x:String>Richard</x:String>
+                                    <x:String>Clara</x:String>
+                                    <x:String>Michael</x:String>
+                                    <x:String>Alex</x:String>
+                                    <x:String>Clara</x:String>
+                                </x:Array>
+                            </ListView.ItemsSource>
+                            <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Grid ColumnDefinitions="48,*,48,48" Margin="10,5">
+                                        <Image GridLayout.Column="0"
+                                                WidthRequest="35"
+                                                HeightRequest="35"
+                                                VerticalOptions="Center"
+                                                HorizontalOptions="Center"
+                                                Aspect="AspectFit"
+                                                Source="contact_image"/>
+                                        <Label GridLayout.Column="1"
+                                                VerticalOptions="Center"
+                                                HorizontalOptions="Start"
+                                                Margin="5,0"
+                                                TextColor="#666666"
+                                                FontSize="16"
+                                                Text="{Binding}"/>
+                                        <Image GridLayout.Column="2"
+                                                WidthRequest="35"
+                                                HeightRequest="35"
+                                                VerticalOptions="Center"
+                                                HorizontalOptions="Center"
+                                                Aspect="AspectFit"
+                                                Source="mail"/>
+                                        <Image GridLayout.Column="3"
+                                                WidthRequest="35"
+                                                HeightRequest="35"
+                                                VerticalOptions="Center"
+                                                HorizontalOptions="Center"
+                                                Aspect="AspectFit"
+                                                Source="call1"/>
+                                        </Grid>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </Grid>
+                </tabView:SfTabItem.Content>
+            </tabView:SfTabItem>
+            <tabView:SfTabItem Header="RECENTS">
+                <tabView:SfTabItem.Content>
+                    <Grid BackgroundColor="Green" x:Name="FavoritesGrid" />
+                </tabView:SfTabItem.Content>
+            </tabView:SfTabItem>
+            <tabView:SfTabItem Header="CONTACTS">
+                <tabView:SfTabItem.Content>
+                    <Grid BackgroundColor="Blue" x:Name="ContactsGrid" />
+                </tabView:SfTabItem.Content>
+            </tabView:SfTabItem>
+        </tabView:SfTabView>
+    </Grid>
+ </ContentPage.Content>
+ </ContentPage>
 
 {% endhighlight %}
 
-![Visual state manager](images/Visual_State_Manager.jpg) 
+![Visual state manager](images/Visual-state-manager.png) 
