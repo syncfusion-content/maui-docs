@@ -9,9 +9,9 @@ documentation: ug
 
 # Getting Started with .NET MAUI Charts (SfCircularChart)
 
-This section explains how to populate the circular chart with data, title, data labels, legend, and tooltips, as well as the essential aspects for getting started with the circular chart.
+This section explains how to populate the circular chart with data, a title, data labels, a legend, and tooltips, as well as the essential aspects for getting started with the circular chart.
 
-## Creating an application with .NET MAUI Chart
+## Creating an application using the .NET MAUI chart
 
 1. Create a new .NET MAUI application in Visual Studio.
 2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfCartesianChart to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Charts and then install it.
@@ -50,7 +50,7 @@ This section explains how to populate the circular chart with data, title, data 
 
 ## Register the handler
 
-Syncfusion.Maui.Core nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file register the handler for Syncfusion core.
+Syncfusion.Maui.Core nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
 
 {% highlight C# %}
 
@@ -83,9 +83,9 @@ Syncfusion.Maui.Core nuget is a dependent package for all Syncfusion controls of
 
 {% endtabs %}
 
-## Initialize View Model
+## Initialize view model
 
-Now, let us define a simple data model that represents a data point in chart.
+Now, let us define a simple data model that represents a data point in the chart.
 
 {% tabs %}  
 
@@ -130,7 +130,7 @@ Next, create a view model class and initialize a list of `Model` objects as foll
 
 Create a `ViewModel` instance and set it as the chart's `BindingContext`. This enables property binding from `ViewModel` class.
 
-N> Add namespace of `ViewModel` class to your XAML Page if you prefer to set `BindingContext` in XAML.
+N> Add namespace of `ViewModel` class to your XAML Page, if you prefer to set `BindingContext` in XAML.
 
 {% tabs %} 
 
@@ -159,9 +159,9 @@ N> Add namespace of `ViewModel` class to your XAML Page if you prefer to set `Bi
 
 {% endtabs %} 
 
-## Populate Chart with Data
+## Populate chart with data
 
-Adding `PieSeries` to the chart `Series` collection and binding `Data` to the series `ItemsSource` property from its `BindingContext` for creating our own Product Sales Pie chart.
+Adding `PieSeries` to the charts' `Series` collection and binding `Data` to the series `ItemsSource` property from its BindingContext to create our own Product Sales Pie chart.
 
 N> To plot the series, the `XBindingPath` and `YBindingPath` properties must be configured so that the chart may get values from the respective properties in the data model.
 
@@ -195,7 +195,7 @@ N> To plot the series, the `XBindingPath` and `YBindingPath` properties must be 
 
 {% endtabs %} 
 
-## Add Title
+## Add a title
 
 The title of the chart acts as the title to provide quick information to the user about the data being plotted in the chart. You can set title using the `Title` property of circular chart as follows.
 
@@ -224,7 +224,7 @@ The title of the chart acts as the title to provide quick information to the use
 
 {% endtabs %}  
 
-## Enable Data Labels
+## Enable the data labels
 
 The `ShowDataLabels` property of `CircularSeries` can be used to enable data labels to improve the readability of the circular chart. The label visibility is set to `False` by default.
 
@@ -251,7 +251,7 @@ The `ShowDataLabels` property of `CircularSeries` can be used to enable data lab
 
 {% endtabs %} 
 
-## Enable Legend
+## Enable a legend
 
 The legend provides information about the data point displayed in the circular chart. The `Legend` property of the chart was used to enable it.
 

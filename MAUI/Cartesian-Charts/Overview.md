@@ -19,6 +19,6 @@ The .NET MAUI chart provides a perfect way to visualize data with a high level o
 
 * Interactive zooming allows you to explore portions of large charts in more detail, with excellent performance.
 
-* Cartesian chart provides support for rendering multiple series at same time, with options to compare and visualize two different series simultaneously.
+* The Cartesian chart provides support for rendering multiple series at the same time, with options to compare and visualize two different series simultaneously.
 
 * User friendly customization support. Cartesian chart provides various options for you to customize chart features, axis, labels, legends, series, etc., and visualize them accordingly.
