@@ -35,7 +35,7 @@ This section explains how to populate the Cartesian chart with data, title, data
 {% highlight C# %}
 
     using Syncfusion.Maui.Charts;
-    namespace SfCartesianChart_GettingStarted
+    namespace ChartGettingStarted
     {
         public partial class MainPage : ContentPage
         {
@@ -48,6 +48,41 @@ This section explains how to populate the Cartesian chart with data, title, data
     }
 
 {% endhighlight %}
+
+{% endtabs %}
+
+## Register the handler
+
+Syncfusion.Maui.Core nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file register the handler for Syncfusion core.
+
+{% highlight C# %}
+
+    using Microsoft.Maui;
+    using Microsoft.Maui.Hosting;
+    using Microsoft.Maui.Controls.Compatibility;
+    using Microsoft.Maui.Controls.Hosting;
+    using Microsoft.Maui.Controls.Xaml;
+    using Syncfusion.Maui.Core.Hosting;
+
+    namespace ChartGettingStarted
+    {
+        public static class MauiProgram
+        {
+            public static MauiApp CreateMauiApp()
+            {
+                var builder = MauiApp.CreateBuilder();
+                builder
+                .UseMauiApp<App>()
+                .ConfigureSyncfusionCoreElement()
+                .ConfigureFonts(fonts =>
+                {
+                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                });
+
+                return builder.Build();
+            }
+        }
+    }
 
 {% endtabs %}
 
@@ -102,9 +137,9 @@ N> Add namespace of `ViewModel` class to your XAML Page if you prefer to set `Bi
     <ContentPage
         xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-        x:Class="SfCartesianChart_GettingStarted.MainPage"
+        x:Class="ChartGettingStarted.MainPage"
         xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
-        xmlns:model="clr-namespace:SfCartesianChart_ChartGettingStarted">
+        xmlns:model="clr-namespace:ChartGettingStarted">
 
         <ContentPage.BindingContext>
             <model:ViewModel></model:ViewModel>
@@ -208,7 +243,7 @@ N> You need to set `XBindingPath` and `YBindingPath` properties, so that chart w
 
     //Initialize the two series for SfChart
     ColumnSeries series = new ColumnSeries();
-    series.Label = "Heights";
+    series.Label = "Height";
     series.ShowDataLabels = true;
     series.ItemsSource = (new ViewModel()).Data;
     series.XBindingPath = "Name";
@@ -314,7 +349,7 @@ N> Additionally, set label for each series using the `Label` property of chart s
 
     <chart:SfCartesianChart>
         . . .
-        <chart:ColumnSeries Label="Heights"
+        <chart:ColumnSeries Label="Height"
                         ItemsSource="{Binding Data}"
                         XBindingPath="Name" 
                         YBindingPath="Height">
@@ -329,7 +364,7 @@ N> Additionally, set label for each series using the `Label` property of chart s
     series.ItemsSource = (new ViewModel()).Data;
     series.XBindingPath = "Name"; 
     series.YBindingPath = "Height"; 
-    series.Label = "Heights";
+    series.Label = "Height";
 
 {% endhighlight %}
 
@@ -374,9 +409,9 @@ The following code example gives you the complete code of above configurations.
     <ContentPage
         xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-        x:Class="SfCartesianChart_GettingStarted.MainPage"
+        x:Class="ChartGettingStarted.MainPage"
         xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
-        xmlns:model="clr-namespace:SfCartesianChart_ChartGettingStarted">
+        xmlns:model="clr-namespace:ChartGettingStarted">
 
         <ContentPage.BindingContext>
         <model:ViewModel></model:ViewModel>
@@ -411,7 +446,7 @@ The following code example gives you the complete code of above configurations.
 
                 <!--Initialize the series for chart-->
                     <chart:SfCartesianChart.Series>
-                        <chart:ColumnSeries Label="Heights" 
+                        <chart:ColumnSeries Label="Height" 
                                 ShowTooltip="True"
                                 ShowDataLabels="True"
                                 ItemsSource="{Binding Data}"
@@ -432,7 +467,7 @@ The following code example gives you the complete code of above configurations.
 {% highlight C# %}
 
     using Syncfusion.Maui.Charts;
-    namespace SfCartesianChart_GettingStarted
+    namespace ChartGettingStarted
     {
         public partial class MainPage : ContentPage
         {
@@ -440,6 +475,11 @@ The following code example gives you the complete code of above configurations.
             {
                 InitializeComponent();            
                 SfCartesianChart chart = new SfCartesianChart();
+
+                chart.Title = new Label
+                {
+                    Text = "Height Comparison"
+                };
 
                 // Initializing primary axis
                 CategoryAxis primaryAxis = new CategoryAxis();
@@ -454,7 +494,7 @@ The following code example gives you the complete code of above configurations.
                 //Initialize the two series for SfChart
                 ColumnSeries series = new ColumnSeries()
                 {
-                    Label = "Heights",
+                    Label = "Height",
                     ShowDataLabels = true,
                     ItemsSource = (new ViewModel()).Data,
                     XBindingPath = "Name",

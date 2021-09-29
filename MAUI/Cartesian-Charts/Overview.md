@@ -17,9 +17,7 @@ The .NET MAUI chart provides a perfect way to visualize data with a high level o
 
 * Allows you to map data from the specified path, by achieving data binding concept.
 
-* Interactive zooming can be done with touch mode enabled that allows you to explore portions of large charts in more detail, with excellent performance.
-
-* When you need more information about particular segment in a chart, a little mouse over on the series provides much more information by including tooltip behavior.
+* Interactive zooming allows you to explore portions of large charts in more detail, with excellent performance.
 
 * Cartesian chart provides support for rendering multiple series at same time, with options to compare and visualize two different series simultaneously.
 

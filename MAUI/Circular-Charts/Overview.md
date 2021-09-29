@@ -17,7 +17,7 @@ Syncfusion .NET MAUI Charts (SfCircularChart) is used to create the chart with b
 
 * User interaction - The circular chart selection, tooltips, and explode user interaction features significantly improves the end-user experience.
 
-* Legends - Display additional information about the data points of chart series, which can be wrapped or scrolled, if an item exceeds the available bounds.
+* Legends - Display additional information about the data points of chart series.
 
-* Dynamic update - Updates the chart dynamically or lazily with live data that changes over seconds or minutes like stock prices, temperature, speed, etc.
+* Dynamic update - Updates the chart dynamically or lazily with live data that changes over seconds or minutes.
 

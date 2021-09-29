@@ -48,6 +48,41 @@ This section explains how to populate the circular chart with data, title, data 
 
 {% endtabs %}
 
+## Register the handler
+
+Syncfusion.Maui.Core nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file register the handler for Syncfusion core.
+
+{% highlight C# %}
+
+    using Microsoft.Maui;
+    using Microsoft.Maui.Hosting;
+    using Microsoft.Maui.Controls.Compatibility;
+    using Microsoft.Maui.Controls.Hosting;
+    using Microsoft.Maui.Controls.Xaml;
+    using Syncfusion.Maui.Core.Hosting;
+
+    namespace ChartGettingStarted
+    {
+        public static class MauiProgram
+        {
+            public static MauiApp CreateMauiApp()
+            {
+                var builder = MauiApp.CreateBuilder();
+                builder
+                .UseMauiApp<App>()
+                .ConfigureSyncfusionCoreElement()
+                .ConfigureFonts(fonts =>
+                {
+                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                });
+
+                return builder.Build();
+            }
+        }
+    }
+
+{% endtabs %}
+
 ## Initialize View Model
 
 Now, let us define a simple data model that represents a data point in chart.
@@ -199,10 +234,7 @@ The `ShowDataLabels` property of `CircularSeries` can be used to enable data lab
 
     <chart:SfCircularChart>
         . . .
-        <chart:PieSeries ShowDataLabels="True"
-                     ItemsSource="{Binding Data}" 
-                     XBindingPath="Product" 
-                     YBindingPath="SalesRate"/>
+        <chart:PieSeries ShowDataLabels="True"/>
     </chart:SfCircularChart>
 
 {% endhighlight %}
