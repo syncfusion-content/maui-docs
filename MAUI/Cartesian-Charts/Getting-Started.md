@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Getting started with MAUI Chart control | Syncfusion
+title: Getting started with .NET MAUI Chart control | Syncfusion
 description: This section explains about the getting started with Syncfusion MAUI Chart (SfCartesianChart) control.
-platform: MAUI
+platform: .NET MAUI
 control: SfCartesianChart
 documentation: ug
 ---
 
-# Getting Started with MAUI Chart (SfCartesianChart)
+# Getting Started with .NET MAUI Chart (SfCartesianChart)
 
 This section explains how to populate the Cartesian chart with data, title, data labels, legend, and tooltips, as well as the essential aspects for getting started with the chart.
 
-## Creating an application with MAUI Chart
+## Creating an application with .NET MAUI Chart
 
 1. Create a new .NET MAUI application in Visual Studio.
 2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfCartesianChart to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Charts and then install it.
@@ -154,7 +154,7 @@ this.BindingContext = new ViewModel();
 
 Run the project and check if you get following output to make sure you have configured your project properly to add chart.
 
-![Initializing axis for MAUI Chart](Getting-Started_Images/MAUI_chart_initialized.png)
+![Initializing axis for .NET MAUI Chart](Getting-Started_Images/MAUI_chart_initialized.png)
 
 ## Populate Chart with Data
 
@@ -411,7 +411,8 @@ The following code example gives you the complete code of above configurations.
 
                 <!--Initialize the series for chart-->
                     <chart:SfCartesianChart.Series>
-                        <chart:ColumnSeries Label="Heights"                ShowTooltip="True"
+                        <chart:ColumnSeries Label="Heights" 
+                                ShowTooltip="True"
                                 ShowDataLabels="True"
                                 ItemsSource="{Binding Data}"
                                 XBindingPath="Name" 
@@ -477,4 +478,4 @@ The following code example gives you the complete code of above configurations.
 
 The following chart is created as a result of the previous codes.
 
-![Getting started for MAUI Chart](Getting-Started_Images/MAUI_chart.png)
+![Getting started for .NET MAUI Chart](Getting-Started_Images/MAUI_chart.png)
