@@ -9,9 +9,9 @@ documentation: ug
 
 # Getting Started with .NET MAUI Chart (SfCartesianChart)
 
-This section explains how to populate the Cartesian chart with data, title, data labels, legend, and tooltips, as well as the essential aspects for getting started with the chart.
+This section explains how to populate the Cartesian chart with data, a title, data labels, a legend, and tooltips, as well as the essential aspects for getting started with the chart.
 
-## Creating an application with .NET MAUI Chart
+## Creating an application with .NET MAUI chart
 
 1. Create a new .NET MAUI application in Visual Studio.
 2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfCartesianChart to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Charts and then install it.
@@ -53,7 +53,7 @@ This section explains how to populate the Cartesian chart with data, title, data
 
 ## Register the handler
 
-Syncfusion.Maui.Core nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file register the handler for Syncfusion core.
+Syncfusion.Maui.Core nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
 
 {% highlight C# %}
 
@@ -87,9 +87,9 @@ Syncfusion.Maui.Core nuget is a dependent package for all Syncfusion controls of
 
 {% endhighlight %} 
 
-## Initialize View Model
+## Initialize view model
 
-Now, let us define a simple data model that represents a data point in chart.
+Now, let us define a simple data model that represents a data point in the chart.
 
 {% tabs %}  
 
@@ -127,9 +127,9 @@ Next, create a view model class and initialize a list of `Person` objects as fol
 
 {% endtabs %} 
 
-Set the `ViewModel` instance as the `BindingContext` of your page, this is done to bind properties of `ViewModel` to  the chart.
+Set the `ViewModel` instance as the `BindingContext` of your page to bind `ViewModel` properties to the chart. 
  
-N> Add namespace of `ViewModel` class to your XAML Page if you prefer to set `BindingContext` in XAML.
+N> Add namespace of `ViewModel` class to your XAML Page, if you prefer to set `BindingContext` in XAML.
 
 {% tabs %} 
 
@@ -157,7 +157,7 @@ this.BindingContext = new ViewModel();
 
 {% endtabs %} 
 
-## Initialize Chart Axis
+## Initialize Chart axis
 
 `ChartAxis` is used to locate the data points inside the chart area. The `PrimaryAxis` and `SecondaryAxis` properties of the chart is used to initialize the axis for the chart.
 
@@ -188,15 +188,15 @@ this.BindingContext = new ViewModel();
 
 {% endtabs %} 
 
-Run the project and check if you get following output to make sure you have configured your project properly to add chart.
+Run the project and check if you get following output to make sure you have configured your project properly to add a chart.
 
-![Initializing axis for .NET MAUI Chart](Getting-Started_Images/MAUI_chart_initialized.png)
+![Initializing axis for .NET MAUI Chart](Getting-Started_Images/MAUI_chart_initialized.jpg)
 
-## Populate Chart with Data
+## Populate Chart with data
 
 As we are going to visualize the comparison of heights in the data model, add `ColumnSeries` to `Series` property of chart, and then bind the `Data` property of the above `ViewModel` to the `ColumnSeries.ItemsSource` as follows.
 
-N> You need to set `XBindingPath` and `YBindingPath` properties, so that chart would fetch values from the respective properties in the data model to plot the series.
+N> You need to set `XBindingPath` and `YBindingPath` properties so that chart will fetch values from the respective properties in the data model to plot the series. 
 
 {% tabs %}   
 
@@ -257,7 +257,7 @@ N> You need to set `XBindingPath` and `YBindingPath` properties, so that chart w
 
 {% endtabs %} 
 
-## Add Title
+## Add a title
 
 The title of the chart provide quick information to the user about the data being plotted in the chart. The `Title` property is used to set title for the chart as follows.
 
@@ -287,7 +287,7 @@ The title of the chart provide quick information to the user about the data bein
 
 {% endtabs %}  
 
-## Enable Data Labels
+## Enable the data labels
 
 The `ShowDataLabels` property of series can be used to enable the data labels to improve the readability of the chart. The label visibility is set to `False` by default.
 
@@ -315,7 +315,7 @@ The `ShowDataLabels` property of series can be used to enable the data labels to
 
 {% endtabs %}  
 
-## Enable Legend
+## Enable a legend
 
 The legend provides information about the data point displayed in the chart. The `Legend` property of the chart was used to enable it.
 
@@ -371,9 +371,9 @@ N> Additionally, set label for each series using the `Label` property of chart s
 
 {% endtabs %}  
 
-## Enable Tooltip
+## Enable tooltip
 
-Tooltips are used to show information about the segment, when hovers on the segment. Enable tooltip by setting series `ShowTooltip` property to true.
+Tooltips are used to show information about the segment, when a user hovers over a segment. Enable tooltip by setting series `ShowTooltip` property to true.
 
 {% tabs %} 
 
@@ -519,4 +519,4 @@ The following code example gives you the complete code of above configurations.
 
 The following chart is created as a result of the previous codes.
 
-![Getting started for .NET MAUI Chart](Getting-Started_Images/MAUI_chart.png)
+![Getting started for .NET MAUI Chart](Getting-Started_Images/MAUI_chart.jpg)
