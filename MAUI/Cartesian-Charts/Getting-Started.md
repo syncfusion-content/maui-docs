@@ -189,7 +189,7 @@ this.BindingContext = new ViewModel();
 
 Run the project and check if you get following output to make sure you have configured your project properly to add a chart.
 
-![Initializing axis for .NET MAUI Chart](Getting-Started_Images/MAUI_chart_initialized.png)
+![Initializing axis for .NET MAUI Chart](Getting-Started_Images/MAUI_chart_initialized.jpg)
 
 ## Populate Chart with data
 
@@ -518,4 +518,4 @@ The following code example gives you the complete code of above configurations.
 
 The following chart is created as a result of the previous codes.
 
-![Getting started for .NET MAUI Chart](Getting-Started_Images/MAUI_chart.png)
+![Getting started for .NET MAUI Chart](Getting-Started_Images/MAUI_chart.jpg)
