@@ -19,7 +19,5 @@ Syncfusion .NET MAUI Charts (SfCircularChart) is used to create the chart with b
 
 * Legends - Display additional information about the data points of chart series, which can be wrapped or scrolled, if an item exceeds the available bounds.
 
-* Multiple series - Circular chart provides support for rendering multiple pie or doughnut series at same time, with options to compare and visualize two different series simultaneously.
-
 * Dynamic update - Updates the chart dynamically or lazily with live data that changes over seconds or minutes like stock prices, temperature, speed, etc.
 

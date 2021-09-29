@@ -2,7 +2,7 @@
 layout: post
 title: Getting started with .NET MAUI Chart control | Syncfusion
 description: This section explains about the getting started with Syncfusion MAUI Chart (SfCartesianChart) control.
-platform: .NET MAUI
+platform: maui
 control: SfCartesianChart
 documentation: ug
 ---
@@ -160,7 +160,7 @@ Run the project and check if you get following output to make sure you have conf
 
 As we are going to visualize the comparison of heights in the data model, add [ColumnSeries](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.ColumnSeries.html?tabs=tabid-1) to [Series](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) property of chart, and then bind the `Data` property of the above `ViewModel` to the `ColumnSeries.ItemsSource` as follows.
 
-N> You need to set [XBindingPath](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_XBindingPath) and [YBindingPath](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.XYDataSeries.html#Syncfusion_Maui_Charts_XYDataSeries_YBindingPathProperty) properties, so that chart would fetch values from the respective properties in the data model to plot the series.
+N> You need to set [XBindingPath](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_XBindingPath) and [YBindingPath](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.XYDataSeries.html#Syncfusion_Maui_Charts_XYDataSeries_YBindingPath) properties, so that chart would fetch values from the respective properties in the data model to plot the series.
 
 {% tabs %}   
 
