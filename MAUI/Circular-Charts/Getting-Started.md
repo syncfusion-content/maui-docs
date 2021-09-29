@@ -16,7 +16,7 @@ This section explains how to populate the circular chart with data, title, data 
 1. Create a new .NET MAUI application in Visual Studio.
 2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfCartesianChart to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Charts and then install it.
 3. To initialize the control, import the Chart namespace.
-4. Initialize [SfCircularChart](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.SfCircularChart.html?tabs=tabid-1).
+4. Initialize `SfCircularChart`.
 
 {% tabs %} 
 
@@ -126,9 +126,9 @@ N> Add namespace of `ViewModel` class to your XAML Page if you prefer to set `Bi
 
 ## Populate Chart with Data
 
-Adding [PieSeries](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.PieSeries.html?tabs=tabid-1) to the chart [Series](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.SfCircularChart.html#Syncfusion_Maui_Charts_SfCircularChart_Series) collection and binding `Data` to the series [ItemsSource](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_ItemsSource) property from its `BindingContext` for creating our own Product Sales Pie chart.
+Adding `PieSeries` to the chart `Series` collection and binding `Data` to the series `ItemsSource` property from its `BindingContext` for creating our own Product Sales Pie chart.
 
-N> To plot the series, the [XBindingPath](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_XBindingPath) and [YBindingPath](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.CircularSeries.html#Syncfusion_Maui_Charts_CircularSeries_YBindingPath) properties must be configured so that the chart may get values from the respective properties in the data model.
+N> To plot the series, the `XBindingPath` and `YBindingPath` properties must be configured so that the chart may get values from the respective properties in the data model.
 
 {% tabs %}   
 
@@ -162,7 +162,7 @@ N> To plot the series, the [XBindingPath](https://npmci.syncfusion.com/maui/api/
 
 ## Add Title
 
-The title of the chart acts as the title to provide quick information to the user about the data being plotted in the chart. You can set title using the [Title](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Title) property of circular chart as follows.
+The title of the chart acts as the title to provide quick information to the user about the data being plotted in the chart. You can set title using the `Title` property of circular chart as follows.
 
 {% tabs %} 
 
@@ -191,7 +191,7 @@ The title of the chart acts as the title to provide quick information to the use
 
 ## Enable Data Labels
 
-The [ShowDataLabels](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_ShowDataLabels) property of [CircularSeries](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.CircularSeries.html) can be used to enable data labels to improve the readability of the circular chart. The label visibility is set to `False` by default.
+The `ShowDataLabels` property of `CircularSeries` can be used to enable data labels to improve the readability of the circular chart. The label visibility is set to `False` by default.
 
 {% tabs %} 
 
@@ -221,7 +221,7 @@ The [ShowDataLabels](https://npmci.syncfusion.com/maui/api/development/maui-char
 
 ## Enable Legend
 
-The legend provides information about the data point displayed in the circular chart. The [Legend](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Legend) property of the chart was used to enable it.
+The legend provides information about the data point displayed in the circular chart. The `Legend` property of the chart was used to enable it.
 
 {% tabs %} 
 
@@ -248,7 +248,7 @@ The legend provides information about the data point displayed in the circular c
 
 ## Enable Tooltip
 
-Tooltips are used to show information about the segment, when mouse over on it. Enable tooltip by setting series [ShowTooltip](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_ShowTooltip) property as true.
+Tooltips are used to show information about the segment, when mouse over on it. Enable tooltip by setting series `ShowTooltip` property as true.
 
 {% tabs %} 
 

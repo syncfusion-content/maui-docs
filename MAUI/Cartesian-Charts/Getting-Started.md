@@ -223,7 +223,7 @@ N> You need to set `XBindingPath` and `YBindingPath` properties, so that chart w
 
 ## Add Title
 
-The title of the chart provide quick information to the user about the data being plotted in the chart. The [Title](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Title) property is used to set title for the chart as follows.
+The title of the chart provide quick information to the user about the data being plotted in the chart. The `Title` property is used to set title for the chart as follows.
 
 {% tabs %} 
 
@@ -253,7 +253,7 @@ The title of the chart provide quick information to the user about the data bein
 
 ## Enable Data Labels
 
-The [ShowDataLabels](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_ShowDataLabels) property of series can be used to enable the data labels to improve the readability of the chart. The label visibility is set to `False` by default.
+The `ShowDataLabels` property of series can be used to enable the data labels to improve the readability of the chart. The label visibility is set to `False` by default.
 
 {% tabs %} 
 
@@ -281,7 +281,7 @@ The [ShowDataLabels](https://npmci.syncfusion.com/maui/api/development/maui-char
 
 ## Enable Legend
 
-The legend provides information about the data point displayed in the chart. The [Legend](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Legend) property of the chart was used to enable it.
+The legend provides information about the data point displayed in the chart. The `Legend` property of the chart was used to enable it.
 
 {% tabs %} 
 
@@ -306,7 +306,7 @@ The legend provides information about the data point displayed in the chart. The
 
 {% endtabs %}  
 
-N> Additionally, set label for each series using the [Label](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.CartesianSeries.html#Syncfusion_Maui_Charts_CartesianSeries_Label) property of chart series, which will be displayed in corresponding legend.
+N> Additionally, set label for each series using the `Label` property of chart series, which will be displayed in corresponding legend.
 
 {% tabs %} 
 
@@ -337,7 +337,7 @@ N> Additionally, set label for each series using the [Label](https://npmci.syncf
 
 ## Enable Tooltip
 
-Tooltips are used to show information about the segment, when hovers on the segment. Enable tooltip by setting series [ShowTooltip](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_ShowTooltip) property to true.
+Tooltips are used to show information about the segment, when hovers on the segment. Enable tooltip by setting series `ShowTooltip` property to true.
 
 {% tabs %} 
 
