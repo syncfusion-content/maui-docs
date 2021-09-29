@@ -11,6 +11,10 @@ documentation: ug
 
 Nested tab items can be configured in tab view through the `Items` property of `SfTabView`, which holds the nested collection of `SfTabItem` through `TabItemsCollection`.
 
+{% tabs %}
+
+{% highlight xaml %}
+
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TabViewMauiSample.MainPage"
@@ -110,5 +114,9 @@ Nested tab items can be configured in tab view through the `Items` property of `
         </Grid>
     </ContentPage.Content>
 </ContentPage>
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ![NestedTab](images/Nested-Tab.png)
