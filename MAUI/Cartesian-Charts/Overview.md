@@ -9,16 +9,16 @@ documentation: ug
 
 # .NET MAUI Chart Overview
 
-The .NET MAUI chart provides a perfect way to visualize data with a high level of user interactivity that focus on development, productivity and simplicity of use. Chart also provides a wide variety of charting features that can be used to visualize large quantities of data, flexibility of binding data and user customization. 
+The .NET MAUI chart provides a perfect way to visualize data with a high level of user involvement that focuses on development, productivity, and simplicity of use. Chart also provides a wide variety of charting features that can be used to visualize large quantities of data, as well as flexibility in data binding and user customization.
 
 ## Key features
 
-* Cartesian charts supports different types of series and each type of chart represents a unique style of representing data with more user friendly and greater UI visualization.
+* Cartesian charts support different types of series and each type of chart represents a unique style of representing data with more user friendly and greater UI visualization.
 
-* Allows you to map data from the specified path, by achieving data binding concept.
+* Allows you to map data from a specified path by achieving the data binding concept.
 
 * Interactive zooming allows you to explore portions of large charts in more detail, with excellent performance.
 
-* Cartesian chart provides support for rendering multiple series at same time, with options to compare and visualize two different series simultaneously.
+* The Cartesian chart provides support for rendering multiple series at the same time, with options to compare and visualize two different series simultaneously.
 
 * User friendly customization support. Cartesian chart provides various options for you to customize chart features, axis, labels, legends, series, etc., and visualize them accordingly.
