@@ -87,7 +87,7 @@ namespace GaugeMauiSample
     }
 }
 
-{% endtabs %}
+{% endhighlight %} 
 
 ## Add axis to the radial gauge
 

@@ -48,7 +48,7 @@ namespace TabViewMauiSample
     }
 }
 
-{% endtabs %}
+{% endhighlight %} 
 
 ## Create a simple Tab View
 
