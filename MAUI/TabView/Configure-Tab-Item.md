@@ -6,7 +6,7 @@ platform: maui
 control: Tab View
 documentation: ug
 ---
-# Configure and customize the appearance of Tab Item
+# Configure the appearance of Tab Item in .NET MAUI Tab View (SfTabView)
 
 A tab item consists of the following elements that can be customized.
 
