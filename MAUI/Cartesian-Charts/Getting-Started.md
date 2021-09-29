@@ -123,7 +123,7 @@ this.BindingContext = new ViewModel();
 
 ## Initialize Chart Axis
 
-[ChartAxis](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.ChartAxis.html) is used to locate the data points inside the chart area. The [PrimaryAxis](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_PrimaryAxis) and [SecondaryAxis](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_SecondaryAxis) properties of the chart is used to initialize the axis for the chart.
+`ChartAxis` is used to locate the data points inside the chart area. The `PrimaryAxis` and `SecondaryAxis` properties of the chart is used to initialize the axis for the chart.
 
 {% tabs %} 
 
@@ -158,9 +158,9 @@ Run the project and check if you get following output to make sure you have conf
 
 ## Populate Chart with Data
 
-As we are going to visualize the comparison of heights in the data model, add [ColumnSeries](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.ColumnSeries.html?tabs=tabid-1) to [Series](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) property of chart, and then bind the `Data` property of the above `ViewModel` to the `ColumnSeries.ItemsSource` as follows.
+As we are going to visualize the comparison of heights in the data model, add `ColumnSeries` to `Series` property of chart, and then bind the `Data` property of the above `ViewModel` to the `ColumnSeries.ItemsSource` as follows.
 
-N> You need to set [XBindingPath](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_XBindingPath) and [YBindingPath](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.XYDataSeries.html#Syncfusion_Maui_Charts_XYDataSeries_YBindingPath) properties, so that chart would fetch values from the respective properties in the data model to plot the series.
+N> You need to set `XBindingPath` and `YBindingPath` properties, so that chart would fetch values from the respective properties in the data model to plot the series.
 
 {% tabs %}   
 
