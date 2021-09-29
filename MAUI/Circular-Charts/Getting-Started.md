@@ -81,7 +81,7 @@ Syncfusion.Maui.Core nuget is a dependent package for all Syncfusion controls of
         }
     }
 
-{% endtabs %}
+{% endhighlight %} 
 
 ## Initialize View Model
 
