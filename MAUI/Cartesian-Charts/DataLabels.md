@@ -18,7 +18,7 @@ Each data label can be represented by the following:
 
 ## Enable Data Label 
 
-The [ShowDataLabels](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_ShowDataLabels) property of series is used to enable the data labels.
+The `ShowDataLabels` property of series is used to enable the data labels.
 
 {% tabs %}
 
@@ -57,7 +57,7 @@ chart.Series.Add(series);
 
 ## Alignment
 
-The alignment of data labels inside the series is defined by using the [BarAlignment](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.CartesianDataLabelSettings.html#Syncfusion_Maui_Charts_CartesianDataLabelSettings_BarAlignment) property. 
+The alignment of data labels inside the series is defined by using the `BarAlignment` property. 
 
 * `Top` - Positions the data label at the top edge point of a chart segment.
 * `Middle` - Positions the data label at the center point of a chart segment.
@@ -100,11 +100,11 @@ chart.Series.Add(series);
 
 Other than the above alignment options, Chart providing additional customization option to position the data labels. 
 
-The [LabelPlacement](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.ChartDataLabelSettings.html#Syncfusion_Maui_Charts_ChartDataLabelSettings_LabelPlacement) property is used to position the data labels at `Center`, `Inner` and `Outer` position of the actual data point position. By default, labels are positioned based on the series types for better readability.
+The `LabelPlacement` property is used to position the data labels at `Center`, `Inner` and `Outer` position of the actual data point position. By default, labels are positioned based on the series types for better readability.
 
 ## Applying Series Interior
 
-[UseSeriesPalette](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.ChartDataLabelSettings.html#Syncfusion_Maui_Charts_ChartDataLabelSettings_UseSeriesPalette) property is used to set the interior of the series to the data marker background. 
+`UseSeriesPalette` property is used to set the interior of the series to the data marker background. 
 
 {% tabs %}
 

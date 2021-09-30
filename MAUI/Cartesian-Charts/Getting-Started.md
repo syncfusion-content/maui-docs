@@ -16,7 +16,7 @@ This section explains how to populate the Cartesian chart with data, a title, da
 1. Create a new .NET MAUI application in Visual Studio.
 2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfCartesianChart to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Charts and then install it.
 3. To initialize the control, import the Chart namespace.
-4. Initialize [SfCartesianChart](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).
+4. Initialize `SfCartesianChart`.
 
 {% tabs %} 
 

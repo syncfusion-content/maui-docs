@@ -9,11 +9,11 @@ documentation: ug
 
 # Selection in .NET MAUI Chart (SfCartesianChart)
 
-Cartesian chart supports selection that allows to select a segment or series in the chart by using [ChartSelectionBehavior](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.ChartSelectionBehavior.html?tabs=tabid-1). 
+Cartesian chart supports selection that allows to select a segment or series in the chart by using `ChartSelectionBehavior`. 
 
 ## Enable Selection
 
-To enable the selection in chart, create an instance of [ChartSelectionBehavior](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.ChartSelectionBehavior.html?tabs=tabid-1) and add it to the `ChartBehaviors` collection of [SfCartesianChart](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1). And also need to set the [SelectionBrush](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_SelectionBrush) property to highlight the segment in the chart.
+To enable the selection in chart, create an instance of `ChartSelectionBehavior` and add it to the `ChartBehaviors` collection of `SfCartesianChart`. And also need to set the `SelectionBrush` property to highlight the segment in the chart.
 
 {% tabs %}
 
@@ -105,7 +105,7 @@ this.Content = chart;
 
 ## Selection Type
 
-Cartesian chart provides support to select single or None by using the [Type](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.ChartSelectionBehavior.html#Syncfusion_Maui_Charts_ChartSelectionBehavior_Type) property. [Type](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.ChartSelectionBehavior.html#Syncfusion_Maui_Charts_ChartSelectionBehavior_Type) property with `Point` value is used to select segment in a series and `None` is used for not to select any segment.
+Cartesian chart provides support to select single or None by using the `Type` property. `Type` property with `Point` value is used to select segment in a series and `None` is used for not to select any segment.
 
 {% tabs %}
 
@@ -152,7 +152,7 @@ this.Content = chart;
 
 ## Selection on initial rendering
 
-Cartesian chart provides support to select a point programmatically on a chart using the [SelectedIndex](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_SelectedIndex) property of series.
+Cartesian chart provides support to select a point programmatically on a chart using the `SelectedIndex` property of series.
 
 {% tabs %}
 
@@ -200,29 +200,29 @@ Cartesian chart provides support to select a point programmatically on a chart u
 
 ## Events
 
-The following selection events are available in the [SfCartesianChart](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).
+The following selection events are available in the `SfCartesianChart`.
 
 ### SelectionChanging
 
-The [SelectionChanging](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.ChartSelectionBehavior.html#Syncfusion_Maui_Charts_ChartSelectionBehavior_OnSelectionChanging_Syncfusion_Maui_Charts_SelectionChangingEventArgs_) event occurs before the data point is being selected. This is a cancelable event. This argument contains the following information.
+The `SelectionChanging` event occurs before the data point is being selected. This is a cancelable event. This argument contains the following information.
 
-* [SelectedSeries](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Charts.ChartSelectionChangingEventArgs.html#Syncfusion_UI_Xaml_Charts_ChartSelectionChangingEventArgs_SelectedSeries) - Gets the series of the selected data point.
-* [SelectedSegments](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Charts.ChartSelectionChangingEventArgs.html#Syncfusion_UI_Xaml_Charts_ChartSelectionChangingEventArgs_SelectedSegments) - Gets or sets the segments collection of the selected series.
-* [SelectedSegment](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Charts.ChartSelectionChangingEventArgs.html#Syncfusion_UI_Xaml_Charts_ChartSelectionChangingEventArgs_SelectedSegment) - Gets the segment of the selected data point.
-* [SelectedIndex](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Charts.ChartSelectionChangingEventArgs.html#Syncfusion_UI_Xaml_Charts_ChartSelectionChangingEventArgs_SelectedIndex) - Gets the selected data point index.
-* [PreviousSelectedIndex](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Charts.ChartSelectionChangingEventArgs.html#Syncfusion_UI_Xaml_Charts_ChartSelectionChangingEventArgs_PreviousSelectedIndex) - Gets the previous selected data point index.
-* [IsDataPointSelection](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Charts.ChartSelectionChangingEventArgs.html#Syncfusion_UI_Xaml_Charts_ChartSelectionChangingEventArgs_IsDataPointSelection) - Gets a value that indicates whether the selection is segment selection or series selection.
-* [Cancel](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Charts.ChartSelectionChangingEventArgs.html#Syncfusion_UI_Xaml_Charts_ChartSelectionChangingEventArgs_Cancel) - Gets or Sets a value that indicates whether the selection should be canceled.
+* `SelectedSeries` - Gets the series of the selected data point.
+* `SelectedSegments` - Gets or sets the segments collection of the selected series.
+* `SelectedSegment` - Gets the segment of the selected data point.
+* `SelectedIndex` - Gets the selected data point index.
+* `PreviousSelectedIndex` - Gets the previous selected data point index.
+* `IsDataPointSelection` - Gets a value that indicates whether the selection is segment selection or series selection.
+* `Cancel` - Gets or Sets a value that indicates whether the selection should be canceled.
 
 ### SelectionChanged
 
-The [SelectionChanged](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Charts.ChartBase.html#Syncfusion_UI_Xaml_Charts_ChartBase_SelectionChanged) event occurs after a data point has been selected. This argument contains the following information.
+The `SelectionChanged` event occurs after a data point has been selected. This argument contains the following information.
 
-* [SelectedSeries](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Charts.ChartSelectionChangedEventArgs.html#Syncfusion_UI_Xaml_Charts_ChartSelectionChangedEventArgs_SelectedSeries) - Gets the series of the selected data point.
-* [SelectedSegments](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Charts.ChartSelectionChangedEventArgs.html#Syncfusion_UI_Xaml_Charts_ChartSelectionChangedEventArgs_SelectedSegments) - Gets the segments collection of the selected series.
-* [SelectedSegment](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Charts.ChartSelectionChangedEventArgs.html#Syncfusion_UI_Xaml_Charts_ChartSelectionChangedEventArgs_SelectedSegment) - Gets the segment of the selected data point.
-* [SelectedIndex](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Charts.ChartSelectionChangedEventArgs.html#Syncfusion_UI_Xaml_Charts_ChartSelectionChangedEventArgs_SelectedIndex) - Gets the selected data point index.
-* [PreviousSelectedSeries](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Charts.ChartSelectionChangedEventArgs.html#Syncfusion_UI_Xaml_Charts_ChartSelectionChangedEventArgs_PreviousSelectedSeries) - Gets the previous selected series.
-* [PreviousSelectedSegment](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Charts.ChartSelectionChangedEventArgs.html#Syncfusion_UI_Xaml_Charts_ChartSelectionChangedEventArgs_PreviousSelectedSegment) - Gets the segment of previous selected data point.
-* [PreviousSelectedIndex](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Charts.ChartSelectionChangedEventArgs.html#Syncfusion_UI_Xaml_Charts_ChartSelectionChangedEventArgs_PreviousSelectedIndex) - Gets the previous selected data point index.
-* [IsDataPointSelection](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Charts.ChartSelectionChangedEventArgs.html#Syncfusion_UI_Xaml_Charts_ChartSelectionChangedEventArgs_IsDataPointSelection) - Gets a value that indicates whether the selection is segment selection or series selection.
+* `SelectedSeries` - Gets the series of the selected data point.
+* `SelectedSegments`) - Gets the segments collection of the selected series.
+* `SelectedSegment` - Gets the segment of the selected data point.
+* `SelectedIndex` - Gets the selected data point index.
+* `PreviousSelectedSeries` - Gets the previous selected series.
+* `PreviousSelectedSegment` - Gets the segment of previous selected data point.
+* `PreviousSelectedIndex`] - Gets the previous selected data point index.
+* `IsDataPointSelection` - Gets a value that indicates whether the selection is segment selection or series selection.

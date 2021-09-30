@@ -11,7 +11,7 @@ documentation: ug
 
 ## Line Chart
 
-Line chart is used to represent the data trends at equal intervals by connecting points on a plot with straight lines. To render a line chart, create an instance of [LineSeries](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.LineSeries.html?tabs=tabid-1), and add it to the [Series](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of [SfCartesianChart](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).
+Line chart is used to represent the data trends at equal intervals by connecting points on a plot with straight lines. To render a line chart, create an instance of `LineSeries`, and add it to the `Series` collection property of `SfCartesianChart`.
 
 {% tabs %}
 
@@ -70,7 +70,7 @@ this.Content = chart;
 
 ### Dashed line
 
-The [StrokeDashArray](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.LineSeries.html#Syncfusion_Maui_Charts_LineSeries_StrokeDashArray) property of [LineSeries](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.LineSeries.html?tabs=tabid-1) is used to render the line series with dashes. Odd value is considered as rendering size and even value is considered as gap.
+The `StrokeDashArray` property of `LineSeries` is used to render the line series with dashes. Odd value is considered as rendering size and even value is considered as gap.
 
 {% tabs %}
 
@@ -135,7 +135,7 @@ this.Content = chart;
 
 ## Spline Chart 
 
-The [SplineSeries](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.SplineSeries.html?tabs=tabid-1) resembles line series, but instead of connecting the data points with line segments, the data points are connected by smooth bezier curves.
+The `SplineSeries` resembles line series, but instead of connecting the data points with line segments, the data points are connected by smooth bezier curves.
 
 {% tabs %}
 
@@ -193,7 +193,7 @@ this.Content = chart;
 
 ### Spline rendering types
 
-The [Type](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.SplineSeries.html#Syncfusion_Maui_Charts_SplineSeries_Type) allows you to change the spline curve in series. By default, the value of [Type](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.SplineSeries.html#Syncfusion_Maui_Charts_SplineSeries_Type) is `Natural`.
+The `Type` allows you to change the spline curve in series. By default, the value of `Type` is `Natural`.
 
 The following types are used in SplineSeries:
 

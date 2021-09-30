@@ -9,7 +9,7 @@ documentation: ug
 
 # Column Chart in .NET MAUI Chart (SfCartesianChart)
 
-Column chart is used to plot discrete rectangles for the given data point values. To render a column chart, create an instance of [ColumnSeries](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.ColumnSeries.html?tabs=tabid-1), and add it to the [Series](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of [SfCartesianChart](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).
+Column chart is used to plot discrete rectangles for the given data point values. To render a column chart, create an instance of `ColumnSeries`, and add it to the `Series` collection property of `SfCartesianChart`.
 
 {% tabs %}
 
@@ -57,7 +57,7 @@ Column chart is used to plot discrete rectangles for the given data point values
 
 ## Spacing
 
-The [Spacing](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.ColumnSeries.html#Syncfusion_Maui_Charts_ColumnSeries_Spacing) property is used to change the spacing between two segments. The default value of spacing is 0, and the value ranges from 0 to 1. Here, 1 and 0 correspond to 100% and 0% of the available space, respectively.
+The `Spacing` property is used to change the spacing between two segments. The default value of spacing is 0, and the value ranges from 0 to 1. Here, 1 and 0 correspond to 100% and 0% of the available space, respectively.
 
 {% tabs %}
 

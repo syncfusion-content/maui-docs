@@ -9,13 +9,13 @@ documentation: ug
 
 # Zooming and Panning in .NET MAUI Chart (SfCartesianChart)
 
-[SfCartesianChart](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1) allows you to zoom the chart area with the help of the zoom feature. This behavior is mostly used to view the data point in the specific area, when there are large number of data points inside the chart.
+`SfCartesianChart` allows you to zoom the chart area with the help of the zoom feature. This behavior is mostly used to view the data point in the specific area, when there are large number of data points inside the chart.
 
 Zooming and panning provides you to take a close-up look of the data point plotted in the series
 
 ## Enable Zooming
 
-To enable the zooming and panning in the chart, create an instance of [ChartZoomPanBehavior](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.ChartZoomPanBehavior.html?tabs=tabid-1) and add it to the `ChartBehaviors` collection of [SfCartesianChart](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).
+To enable the zooming and panning in the chart, create an instance of `ChartZoomPanBehavior` and add it to the `ChartBehaviors` collection of `SfCartesianChart`.
 
 {% tabs %}
 
@@ -44,11 +44,11 @@ To enable the zooming and panning in the chart, create an instance of [ChartZoom
 
 ## Zooming the Chart Area
 
-Zooming the chart area can be achieved by pinch zooming, and also using the properties [ZoomFactor](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_ZoomFactor) and [ZoomPosition](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_ZoomPosition).
+Zooming the chart area can be achieved by pinch zooming, and also using the properties `ZoomFactor` and `ZoomPosition`.
 
 ### Pinch Zooming
 
-Pinch zooming is enable by using the [EnablePinchZooming](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.ChartZoomPanBehavior.html#Syncfusion_Maui_Charts_ChartZoomPanBehavior_EnablePinchZooming) property to `true` as shown in the below code snippet.
+Pinch zooming is enable by using the `EnablePinchZooming` property to `true` as shown in the below code snippet.
 
 {% tabs %}
 
@@ -81,7 +81,7 @@ Pinch zooming is enable by using the [EnablePinchZooming](https://npmci.syncfusi
 
 ### Zooming by setting ZoomFactor and ZoomPosition
 
-[ZoomFactor](hhttps://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_ZoomFactor) defines the percentage of visible range from the total range of axis values. [ZoomPosition](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_ZoomPosition) defines the position for ranges of values that need to be displayed as a result of [ZoomFactor](hhttps://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_ZoomFactor). 
+`ZoomFactor` defines the percentage of visible range from the total range of axis values. `ZoomPosition` defines the position for ranges of values that need to be displayed as a result of `ZoomFactor`. 
 
 {% tabs %}
 
@@ -112,7 +112,7 @@ Pinch zooming is enable by using the [EnablePinchZooming](https://npmci.syncfusi
 
 ## Zooming Mode
 
-The zooming can be done both horizontally and vertically. The zooming direction is defined by using the [ZoomMode](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.ChartZoomPanBehavior.html#Syncfusion_Maui_Charts_ChartZoomPanBehavior_ZoomMode) property.
+The zooming can be done both horizontally and vertically. The zooming direction is defined by using the `ZoomMode` property.
 
 Following code example illustrates how to restrict the chart to be zoomed only along horizontal axis.
 
@@ -177,7 +177,7 @@ chart.ChartBehaviors.Add(zooming);
 
 ## Enable Panning
 
-Panning feature allows moving the visible area of the chart when it is zoomed in. To enable panning, you have to set [EnablePanning](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.ChartZoomPanBehavior.html#Syncfusion_Maui_Charts_ChartZoomPanBehavior_EnablePanning) property to `true`.
+Panning feature allows moving the visible area of the chart when it is zoomed in. To enable panning, you have to set `EnablePanning` property to `true`.
 
 {% tabs %}
 

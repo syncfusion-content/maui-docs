@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Scatter Chart in .NET MAUI Chart control | Syncfusion
-description: Learn here all about the scatter chart and its features in Syncfusion WinUI Chart (SfCartesianChart) control.
+description: Learn here all about the scatter chart and its features in Syncfusion .NET MAUI Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
 documentation: ug
@@ -13,7 +13,7 @@ The scatter chart is similar to bubble chart, where each data point being repres
 
 ## Scatter Chart
 
-To render a scatter chart, create an instance of [ScatterSeries](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.ScatterSeries.html?tabs=tabid-1), and add it to the [Series](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of [SfCartesianChart](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1). The segment size can be defined by using the [Height](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.ScatterSeries.html#Syncfusion_Maui_Charts_ScatterSeries_Height) and [Width](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.ScatterSeries.html#Syncfusion_Maui_Charts_ScatterSeries_Width) properties.
+To render a scatter chart, create an instance of `ScatterSeries`, and add it to the `Series` collection property of `SfCartesianChart`. The segment size can be defined by using the `Height` and `Width` properties.
 
 {% tabs %}
 
