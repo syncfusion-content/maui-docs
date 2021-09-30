@@ -141,19 +141,19 @@ Tab items can be added to the control using the `Items` property of `SfTabView`.
     <ContentPage.Content>
           <tabView:SfTabView x:Name="tabView">
                 <tabView:SfTabView.Items>
-                    <tabView:SfTabItem Header="Item1">
+                    <tabView:SfTabItem Header="Call">
                         <tabView:SfTabItem.Content>
                             <Grid BackgroundColor="Red" />
                         </tabView:SfTabItem.Content>
                     </tabView:SfTabItem>
 
-                    <tabView:SfTabItem Header="Item2">
+                    <tabView:SfTabItem Header="Favorites">
                         <tabView:SfTabItem.Content>
                             <Grid BackgroundColor="Green"/>
                         </tabView:SfTabItem.Content>
                     </tabView:SfTabItem>
 
-                    <tabView:SfTabItem Header="Item3">
+                    <tabView:SfTabItem Header="Contacts">
                         <tabView:SfTabItem.Content>
                             <Grid BackgroundColor="Blue"/>
                         </tabView:SfTabItem.Content>
@@ -185,17 +185,17 @@ namespace TabViewMauiSample
             {
                 new SfTabItem()
                 {
-                    Header = "Item1",
+                    Header = "Call",
                     Content = allContactsGrid
                 },
                 new SfTabItem()
                 {
-                    Header = "Item2",
+                    Header = "Favorites",
                     Content = favoritesGrid
                 },
                 new SfTabItem()
                 {
-                    Header = "Item3",
+                    Header = "Contacts",
                     Content = contactsGrid
                 }
             };
@@ -209,3 +209,5 @@ namespace TabViewMauiSample
 {% endhighlight %}
 
 {% endtabs %}
+
+![Getting_Started](images/Getting_Started.png)

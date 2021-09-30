@@ -84,3 +84,5 @@ namespace TabViewMauiSample
 {% endhighlight %}
 
 {% endtabs %}
+
+![Getting_Started](images/Arrange_Tabs.png)

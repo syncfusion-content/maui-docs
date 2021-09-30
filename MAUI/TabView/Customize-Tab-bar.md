@@ -142,3 +142,5 @@ namespace TabViewMauiSample
 {% endhighlight %}
 
 {% endtabs %}
+
+![Indicator Placement](images/IndicatorPlacement.png) 

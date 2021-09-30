@@ -29,7 +29,7 @@ Nested Tab items can be configured in tab view through the `Items` property of `
                     <tabView:SfTabItem Header="Photos">
                         <tabView:SfTabItem.Content>
                             <Grid BackgroundColor="Blue">
-                                <tabView:SfTabView x:Name="tabView"
+                                <tabView:SfTabView x:Name="nestedTabView"
                                                     TabBarBackground="#FDF8F6"
                                                     TabWidthMode="Default"
                                                     TabBarPlacement="Bottom"
@@ -40,12 +40,7 @@ Nested Tab items can be configured in tab view through the `Items` property of `
                                             <tabView:SfTabItem Header="Camera">
                                                 <tabView:SfTabItem.Content>
                                                     <Grid BackgroundColor="Blue">
-                                                        <Image WidthRequest="35"
-                                                                HeightRequest="35"
-                                                                VerticalOptions="Center"
-                                                                HorizontalOptions="Center"
-                                                                Aspect="AspectFit"
-                                                                Source="camera"/>    
+                                                      ...  
                                                     </Grid>
                                                 </tabView:SfTabItem.Content>
                                             </tabView:SfTabItem>
@@ -53,12 +48,7 @@ Nested Tab items can be configured in tab view through the `Items` property of `
                                             <tabView:SfTabItem Header="Video">
                                                 <tabView:SfTabItem.Content>
                                                     <Grid BackgroundColor="Blue">
-                                                        <Image WidthRequest="35"
-                                                                HeightRequest="35"
-                                                                VerticalOptions="Center"
-                                                                HorizontalOptions="Center"
-                                                                Aspect="AspectFit"
-                                                                Source="video"/>    
+                                                       ...   
                                                     </Grid>
                                                 </tabView:SfTabItem.Content>
                                             </tabView:SfTabItem>
@@ -66,12 +56,7 @@ Nested Tab items can be configured in tab view through the `Items` property of `
                                             <tabView:SfTabItem Header="Screenshots">
                                                 <tabView:SfTabItem.Content>
                                                     <Grid BackgroundColor="Blue">
-                                                        <Image WidthRequest="35"
-                                                                HeightRequest="35"
-                                                                VerticalOptions="Center"
-                                                                HorizontalOptions="Center"
-                                                                Aspect="AspectFit"
-                                                                Source="screenshots"/>    
+                                                        ...   
                                                     </Grid>
                                                 </tabView:SfTabItem.Content>
                                             </tabView:SfTabItem>
@@ -79,12 +64,7 @@ Nested Tab items can be configured in tab view through the `Items` property of `
                                             <tabView:SfTabItem Header="Wallpaper">
                                                 <tabView:SfTabItem.Content>
                                                     <Grid BackgroundColor="Blue">
-                                                        <Image WidthRequest="35"
-                                                                HeightRequest="35"
-                                                                VerticalOptions="Center"
-                                                                HorizontalOptions="Center"
-                                                                Aspect="AspectFit"
-                                                                Source="wallpaper"/>    
+                                                       ...   
                                                     </Grid>
                                                 </tabView:SfTabItem.Content>
                                             </tabView:SfTabItem>
@@ -111,4 +91,4 @@ Nested Tab items can be configured in tab view through the `Items` property of `
     </ContentPage.Content>
 </ContentPage>
 
-![NestedTab](images/Nested-Tab.png)
+![NestedTab](images/Nested_Tab.png)
