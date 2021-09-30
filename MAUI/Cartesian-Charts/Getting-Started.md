@@ -374,7 +374,7 @@ N> Additionally, set label for each series using the `Label` property of chart s
 
 ## Enable tooltip
 
-Tooltips are used to show information about the segment, when a user hovers over a segment. Enable tooltip by setting series [ShowTooltip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html) property to true.
+Tooltips are used to show information about the segment, when a user hovers over a segment. Enable tooltip by setting series [ShowTooltip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_ShowTooltip) property to true.
 
 {% tabs %} 
 
