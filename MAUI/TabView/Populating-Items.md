@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Populating tab items in MAUI TabView control | Syncfusion
-description: Learn here all about the Populating tab items support in Syncfusion MAUI TabView (SfTabView) control and more.
+title: Populating tab items in .NET MAUI TabView control | Syncfusion
+description: Learn here all about the populating tab items support in Syncfusion MAUI TabView (SfTabView) control and more.
 platform: maui
 control: TabView
 documentation: ug
 ---
 
-# Populating tab items
+# Populating tab items to .NET MAUI Tab View (SfTabView)
 
 Tab items can be added to the control using the `Items` property of `SfTabView`.
 

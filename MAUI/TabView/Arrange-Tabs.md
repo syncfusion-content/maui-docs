@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Tab arrangement in .NET MAUI Tab View | Syncfusion
-description: Learn here all about Tab View Header Customization support in Syncfusion .NET MAUI Tab View (SfTabView) control and more.
+description: Learn here all about tab view header customization support in Syncfusion .NET MAUI Tab View (SfTabView) control and more.
 platform: maui
 control: Tab View
 documentation: ug
 ---
 
-# Arrange Tabs in Tab bar
+# Arrange tabs in .NET MAUI Tab View (SfTabView)
 
 .NET MAUI Tab View provides two modes that determine how the width of the tab is calculated on the tab bar while it gets populated. The options are `Default` and `SizeToContent` and can be achieved using `TabWidthMode` property.
 

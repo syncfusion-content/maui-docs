@@ -1,15 +1,19 @@
 ---
 layout: post
-title: NestedTab in MAUI TabView control | Syncfusion
-description: Learn here details about the NestedTab support with Syncfusion MAUI Tab View (SfTabView) control and code snippet.
+title: NestedTab in .NET MAUI TabView control | Syncfusion
+description: Learn here details about the nested tab support with Syncfusion MAUI Tab View (SfTabView) control and code snippet.
 platform: maui
 control: TabView
 documentation: ug
 ---
 
-# NestedTab in MAUI TabView (SfTabView)
+# Nested tab in .NET MAUI Tab View (SfTabView)
 
-Nested Tab items can be configured in tab view through the `Items` property of `SfTabView`, which holds the nested collection of `SfTabItem` through `TabItemsCollection`.
+Nested tab items can be configured in tab view through the `Items` property of `SfTabView`, which holds the nested collection of `SfTabItem` through `TabItemsCollection`.
+
+{% tabs %}
+
+{% highlight xaml %}
 
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -91,4 +95,8 @@ Nested Tab items can be configured in tab view through the `Items` property of `
     </ContentPage.Content>
 </ContentPage>
 
-![NestedTab](images/Nested_Tab.png)
+{% endhighlight %}
+
+{% endtabs %}
+
+![NestedTab](images/Nested-Tab.png)
