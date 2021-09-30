@@ -1066,7 +1066,7 @@ If the `OffsetUnit` is set as a factor, the provided factor value in the `TickOf
 
 <gauge:SfRadialGauge>
     <gauge:SfRadialGauge.Axes>
-        <gauge:RadialAxis TickOffset="0.5"
+        <gauge:RadialAxis TickOffset="0.1"
                           OffsetUnit="Factor" />
     </gauge:SfRadialGauge.Axes>
 </gauge:SfRadialGauge>
@@ -1078,7 +1078,7 @@ If the `OffsetUnit` is set as a factor, the provided factor value in the `TickOf
 SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
 RadialAxis radialAxis = new RadialAxis();
-radialAxis.TickOffset = 0.5;
+radialAxis.TickOffset = 0.1;
 radialAxis.OffsetUnit = SizeUnit.Factor;
 sfRadialGauge.Axes.Add(radialAxis);
 
@@ -1126,7 +1126,7 @@ The `radial gauge` allows you to add n number of radial axis in its axes collect
                             Maximum="100"
                             Interval="10"
                             MinorTicksPerInterval="5"
-                            RadiusFactor="0.95">
+                            RadiusFactor="0.63">
                     <gauge:RadialAxis.AxisLineStyle>
                         <gauge:RadialLineStyle Fill="#8f1502" Thickness="3"/>
                     </gauge:RadialAxis.AxisLineStyle>
@@ -1180,7 +1180,7 @@ The `radial gauge` allows you to add n number of radial axis in its axes collect
             outerRadialAxis.Maximum = 100;
             outerRadialAxis.Interval = 10;
             outerRadialAxis.MinorTicksPerInterval = 5;
-            outerRadialAxis.RadiusFactor = 0.95;
+            outerRadialAxis.RadiusFactor = 0.63;
             outerRadialAxis.MajorTickStyle.LengthUnit = SizeUnit.Factor;
             outerRadialAxis.MinorTickStyle.LengthUnit = SizeUnit.Factor;
 

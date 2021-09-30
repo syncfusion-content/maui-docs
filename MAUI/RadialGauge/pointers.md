@@ -112,6 +112,8 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
+![MAUI Radial Gauge Pointer Dragging](images/pointers/maui-radial-gauge-pointer-dragging.gif)
+
 ## Event
 
 `ValueChangeStarted` - Occurs whenever the pointer starts to drag.
