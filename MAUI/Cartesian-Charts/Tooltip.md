@@ -9,7 +9,7 @@ documentation: ug
 
 # Tooltip in .NET MAUI Chart (SfCartesianChart)
 
-Tooltip is used to display any information or metadata of the tapped segment. The Circular Chart provides tooltip support for all series. 
+Tooltip is used to display any information or metadata of the tapped segment. The Cartesian chart provides tooltip support for all series. 
 
 ## Define Tooltip
 
