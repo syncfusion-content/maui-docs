@@ -11,7 +11,7 @@ documentation: ug
 
 ## Pointer animation
 
-The `EnableAnimation` property of pointer allows to enable or disable animation for pointer.
+The `EnableAnimation` property of pointer allows you to enable or disable animation for pointer.
 
 {% tabs %}
 
@@ -87,7 +87,7 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
 ## Animation duration
 
-The `AnimationDuration` property of pointer allows to control the animation duration (in milliseconds). The default value of animation duration is 1000ms.
+The pointers `AnimationDuration` property allows you to control the animation duration (in milliseconds). The default value of animation duration is 1000ms.
 
 {% tabs %}
 
@@ -164,9 +164,9 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
 {% endtabs %}
 
-## Animation Easing
+## Animation easing
 
-The `AnimationEasing` property of pointer allows you to use different type of easing function. The default value `AnimationEasing` property is `Linear`.
+The `AnimationEasing` property of pointer allows you to use different type of easing function. The default value of `AnimationEasing` property is `Linear`.
 
 {% tabs %}
 
