@@ -9,7 +9,7 @@ documentation: ug
 
 # Pie Chart in .NET MAUI Chart (SfCircularChart)
 
-To render a `PieSeries` in circular chart, create an instance of the `PieSeries` and add it to the `Series` collection property of `SfCircularChart`.
+To render a [PieSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PieSeries.html) in circular chart, create an instance of the [PieSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PieSeries.html) and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html#Syncfusion_Maui_Charts_SfCircularChart_Series) collection property of [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CircularDataLabelSettings.html).
 
 {% tabs %}
 
@@ -43,7 +43,7 @@ To render a `PieSeries` in circular chart, create an instance of the `PieSeries`
 
 ## Circular Coefficient
 
-The rendering size of the `PieSeries` can be controlled using the `CircularCoefficient` property as shown in the following code sample.
+The rendering size of the [PieSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PieSeries.html) can be controlled using the [CircularCoefficient](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CircularSeries.html#Syncfusion_Maui_Charts_CircularSeries_CircularCoefficient) property as shown in the following code sample.
 
 {% tabs %}
 
@@ -79,7 +79,7 @@ The rendering size of the `PieSeries` can be controlled using the `CircularCoeff
 
 ## Semi Pie
 
-By using the `StartAngle` and `EndAngle` properties, you can draw pie series in different shapes such as semi-pie or quarter pie series.
+By using the [StartAngle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CircularSeries.html#Syncfusion_Maui_Charts_CircularSeries_StartAngle) and [EndAngle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CircularSeries.html#Syncfusion_Maui_Charts_CircularSeries_EndAngle) properties, you can draw pie series in different shapes such as semi-pie or quarter pie series.
 
 {% tabs %}
 
