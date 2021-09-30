@@ -42,9 +42,9 @@ To enable the zooming and panning in the chart, create an instance of `ChartZoom
 
 {% endtabs %}
 
-## Zooming the Chart Area
+## Zooming the Plot Area
 
-Zooming the chart area can be achieved by pinch zooming, and also using the properties `ZoomFactor` and `ZoomPosition`.
+Zooming the plot area can be achieved by pinch zooming, and also using the properties `ZoomFactor` and `ZoomPosition`.
 
 ### Pinch Zooming
 
