@@ -11,7 +11,7 @@ documentation: ug
 
 ## Major Grid Lines
 
-By default, major gridlines are automatically added to the [ChartAxis](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.ChartAxis.html) in its defined intervals. The visibility of the major gridlines can be controlled using the [ShowMajorGridLines](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_ShowMajorGridLines) property. The default value of [ShowMajorGridLines](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_ShowMajorGridLines) is true. 
+By default, major gridlines are automatically added to the `ChartAxis` in its defined intervals. The visibility of the major gridlines can be controlled using the `ShowMajorGridLines` property. The default value of `ShowMajorGridLines` is true. 
 
 {% tabs %}
 
@@ -48,7 +48,7 @@ By default, major gridlines are automatically added to the [ChartAxis](https://n
 
 ### Customization
 
-The [MajorGridLineStyle](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_MajorGridLineStyle) property in the chart axis is used to customize the appearance of major gridlines.
+The `MajorGridLineStyle` property in the chart axis is used to customize the appearance of major gridlines.
 
 {% tabs %}
 
@@ -93,7 +93,7 @@ The [MajorGridLineStyle](https://npmci.syncfusion.com/maui/api/development/maui-
 
 ## Minor Grid Lines
 
-Minor gridlines will be added automatically when the small tick lines is defined and using the [MinorTicksPerInterval](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.RangeAxisBase.html#Syncfusion_Maui_Charts_RangeAxisBase_MinorTicksPerInterval) property of chart axis.
+Minor gridlines will be added automatically when the small tick lines is defined and using the `MinorTicksPerInterval` property of chart axis.
 
 {% tabs %}
 
@@ -129,7 +129,7 @@ Minor gridlines will be added automatically when the small tick lines is defined
 
 ### Customization
 
-The [MinorGridLineStyle](https://npmci.syncfusion.com/maui/api/development/maui-charts/api/Syncfusion.Maui.Charts.RangeAxisBase.html#Syncfusion_Maui_Charts_RangeAxisBase_MinorGridLineStyle) property in the chart axis is used to customize the appearance of minor gridlines.
+The `MinorGridLineStyle` property in the chart axis is used to customize the appearance of minor gridlines.
 
 {% tabs %}
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Tooltip in .NET MAUI Chart (SfCartesianChart)
 
-Tooltip is used to display any information over segments. It appears at the data point position when the mouse hovers over any series segment. It is set to display the metadata of the hovered segment or data point.
+`SfCartesianChart` provides tooltip support for all series. It is used to show information about the segment, when you tap on the segment. 
 
 ## Define Tooltip
 
