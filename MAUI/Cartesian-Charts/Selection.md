@@ -9,11 +9,11 @@ documentation: ug
 
 # Selection in .NET MAUI Chart (SfCartesianChart)
 
-Cartesian chart supports selection that allows to select or highlight a segment in the chart by using `ChartSelectionBehavior`.
+Cartesian chart supports selection that allows to select or highlight a segment in the chart by using [ChartSelectionBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelectionBehavior.html).
 
 ## Enable Selection
 
-To enable the selection in chart, create an instance of `ChartSelectionBehavior` and add it to the `ChartBehaviors` collection of `SfCartesianChart`. And also need to set the `SelectionBrush` property to highlight the segment in the chart.
+To enable the selection in chart, create an instance of [ChartSelectionBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelectionBehavior.html) and add it to the [ChartBehaviors](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_ChartBehaviors) collection of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1). And also need to set the `SelectionBrush` property to highlight the segment in the chart.
 
 {% tabs %}
 
@@ -57,7 +57,7 @@ this.Content = chart;
 
 ## Selection Type
 
-The `Type` property allows users to set selection type of series, which includes `Point` and `None`. `Type` property with `Point` value is used to select segment in a series and `None` is used to set deselect state for all segments. 
+The [Type](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelectionBehavior.html#Syncfusion_Maui_Charts_ChartSelectionBehavior_Type) property allows users to set selection type of series, which includes [Point](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SelectionType.html#Syncfusion_Maui_Charts_SelectionType_Point) and [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SelectionType.html). [Type](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelectionBehavior.html#Syncfusion_Maui_Charts_ChartSelectionBehavior_Type) property with [Point](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SelectionType.html#Syncfusion_Maui_Charts_SelectionType_Point) value is used to select segment in a series and [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SelectionType.html) is used to set deselect state for all segments. 
 
 {% tabs %}
 
@@ -104,7 +104,7 @@ The `Type` property allows users to set selection type of series, which includes
 
 ## Selection on initial rendering
 
-Cartesian chart provides support to select a point programmatically on a chart using the `SelectedIndex` property of series.
+Cartesian chart provides support to select a point programmatically on a chart using the [SelectedIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_SelectedIndex) property of series.
 
 {% tabs %}
 
@@ -152,21 +152,23 @@ Cartesian chart provides support to select a point programmatically on a chart u
 
 ## Events
 
-The following selection events are available in the `SfCartesianChart`.
+The following selection events are available in the [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).
 
 ### SelectionChanging
 
-The `SelectionChanging` event occurs before the data point is being selected. This is a cancelable event. This argument contains the following information.
+The [SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_SelectionChanging) event occurs before the data point is being selected. This is a cancelable event. This argument contains the following information.
 
-* `CurrentIndex` - Gets the index of currently selected data point.
-* `PreviousIndex` - Gets the index of previously selected data point.
-* `Series` - Gets the selected series.
-* `Cancel` - Gets or sets a value indicating whether to continue the segment selection.
+* [CurrentIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SelectionEventArgs.html#Syncfusion_Maui_Charts_SelectionEventArgs_CurrentIndex) - Gets the index of currently selected data point.
+* [PreviousIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SelectionEventArgs.html#Syncfusion_Maui_Charts_SelectionEventArgs_PreviousIndex) - Gets the index of previously selected data point.
+* [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SelectionEventArgs.html#Syncfusion_Maui_Charts_SelectionEventArgs_Series) - Gets the selected series.
+* [Cancel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SelectionChangingEventArgs.html#Syncfusion_Maui_Charts_SelectionChangingEventArgs_Cancel) - Gets or sets a value indicating whether to continue the segment selection.
+
 
 ### SelectionChanged
 
-The `SelectionChanged` event occurs after a data point has been selected. This argument contains the following information.
+The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_SelectionChanged) event occurs after a data point has been selected. This argument contains the following information.
 
-* `CurrentIndex` - Gets the index of currently selected data point.
-* `PreviousIndex` - Gets the index of previously selected data point.
-* `Series` - Gets the selected series.
+* [CurrentIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SelectionEventArgs.html#Syncfusion_Maui_Charts_SelectionEventArgs_CurrentIndex) - Gets the index of currently selected data point.
+* [PreviousIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SelectionEventArgs.html#Syncfusion_Maui_Charts_SelectionEventArgs_PreviousIndex) - Gets the index of previously selected data point.
+* [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SelectionEventArgs.html#Syncfusion_Maui_Charts_SelectionEventArgs_Series) - Gets the selected series.
+
