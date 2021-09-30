@@ -70,7 +70,7 @@ Syncfusion.Maui.Core nuget is a dependent package for all Syncfusion controls of
                 var builder = MauiApp.CreateBuilder();
                 builder
                 .UseMauiApp<App>()
-                .ConfigureSyncfusionCoreElement()
+                .ConfigureSyncfusionCore()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");

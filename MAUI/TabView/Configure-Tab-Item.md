@@ -50,9 +50,13 @@ The image will be placed below the text vertically.
 
 The image will be placed before the text horizontally.
 
+![Tab Image Position Left](images/Image-Position-Left.png) 
+
 ### Right
 
 The image will be placed to the right side of the text horizontally.
+
+![Tab Image Position Right](images/Image-Position-Right.png) 
 
 {% tabs %}
 
