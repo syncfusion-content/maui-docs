@@ -9,7 +9,7 @@ documentation: ug
 
 # Selection in .NET MAUI Chart (SfCircularChart)
 
-Circular chart supports selection that allows to select a segment in a series or series itself by using `ChartSelectionBehavior`. 
+Circular chart supports selection that allows to select a segment in a series by using `ChartSelectionBehavior`. 
 
 ## Enable Selection
 
