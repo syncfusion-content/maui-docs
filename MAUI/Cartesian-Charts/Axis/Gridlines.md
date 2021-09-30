@@ -21,7 +21,7 @@ By default, major gridlines are automatically added to the `ChartAxis` in its de
 
         <chart:SfCartesianChart.PrimaryAxis>
             <chart:NumericalAxis.MajorGridLineStyle>
-                <chart:ChartLineStyle Stroke="Black" StrokeWidth="3"  />
+                <chart:ChartLineStyle Stroke="Black" />
             </chart:NumericalAxis.MajorGridLineStyle>
         </chart:SfCartesianChart.PrimaryAxis>
 
@@ -42,8 +42,6 @@ By default, major gridlines are automatically added to the `ChartAxis` in its de
     ChartLineStyle axisLineStyle = new ChartLineStyle();
 
     axisLineStyle.Stroke = Colors.Black;
-
-    axisLineStyle.StrokeWidth = 3;
 
     primaryAxis.MajorGridLineStyle = axisLineStyle;
 
