@@ -9,7 +9,7 @@ documentation: ug
 
 # Axis Title in MAUI Chart (SfCartesianChart)
 
-The `Title` property is used to set the title for the chart axis.
+The [Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_Title) property is used to set the title for the chart axis.
 
 {% tabs %}
 
@@ -54,7 +54,7 @@ The `Title` property is used to set the title for the chart axis.
 
 ## Customization
 
-The Title property in axis provides options to customize the text and font of axis title. Axis does not display title by default. The title can be customized using following properties,
+The [Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_Title) property in axis provides options to customize the text and font of axis title. Axis does not display title by default. The title can be customized using following properties,
 
 * `Background` - Gets or sets the background color of the labels.
 * `CornerRadius` - Gets or sets a value that defines the rounded corners for labels.
