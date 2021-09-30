@@ -57,7 +57,7 @@ this.Content = chart;
 
 ## Selection Type
 
-The `Type` property allows users to set selection type of series, which includes Point and None. Type property with Point value is used to select segment in a series and None is used to set deselect state for all segments. 
+The `Type` property allows users to set selection type of series, which includes `Point` and `None`. `Type` property with `Point` value is used to select segment in a series and `None` is used to set deselect state for all segments. 
 
 {% tabs %}
 
