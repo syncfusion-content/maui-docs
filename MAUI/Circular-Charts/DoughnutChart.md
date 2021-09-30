@@ -1,0 +1,112 @@
+---
+layout: post
+title: Doughnut chart in .NET MAUI Chart Chart control | Syncfusion
+description: Learn here all about doughnut chart and its features in Syncfusion .NET MAUI Chart Chart (SfCircularChart) control.
+platform: maui
+control: SfCircularChart
+documentation: ug
+---
+
+# Doughnut Chart in .NET MAUI Chart Chart (SfCircularChart)
+
+`DoughnutSeries` is similar to `PieSeries`. It is used to show the relationship between parts of data and whole data. To render a `DoughnutSeries` in circular chart, create an instance of the `DoughnutSeries` and add it to the `Series` collection property of `SfCircularChart`.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+    <chart:SfCircularChart>
+
+        <chart:SfCircularChart.Series>
+            <chart:DoughnutSeries ItemsSource="{Binding Data}" 
+                                XBindingPath="Product" 
+                                YBindingPath="SalesRate" />
+        </chart:SfCircularChart.Series>
+
+    </chart:SfCircularChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+    SfCircularChart chart = new SfCircularChart();
+
+    DoughnutSeries series = new DoughnutSeries();
+    series.XBindingPath = "Product";
+    series.YBindingPath = "SalesRate";
+
+    chart.Series.Add(series);
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## Doughnut Coefficient
+
+The `DoughnutCoefficient` property of doughnut series is used to define the inner circle.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+    <chart:SfCircularChart>
+
+        <chart:SfCircularChart.Series>
+            <chart:DoughnutSeries ItemsSource="{Binding Data}" DoughnutCoefficient="0.7" XBindingPath="Product" YBindingPath="SalesRate" />
+        </chart:SfCircularChart.Series>
+
+    </chart:SfCircularChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCircularChart chart = new SfCircularChart();
+
+    DoughnutSeries series = new DoughnutSeries();
+    series.XBindingPath = "Product";
+    series.YBindingPath = "SalesRate";
+    series.DoughnutCoefficient = 0.7;
+
+    chart.Series.Add(series);
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## Semi Doughnut
+
+By using the `StartAngle` and `EndAngle` properties, you can draw doughnut series in different shapes such as semi-doughnut or quarter doughnut series.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+    <chart:SfCircularChart>
+
+        <chart:SfCircularChart.Series>
+            <chart:DoughnutSeries StartAngle="180" EndAngle="360"
+                            ItemsSource="{Binding Data}"
+                            XBindingPath="Product" 
+                            YBindingPath="SalesRate" />
+        </chart:SfCircularChart.Series>
+
+    </chart:SfCircularChart>
+    
+{% endhighlight %}
+
+{% highlight c# %}
+
+    SfCircularChart chart = new SfCircularChart();
+
+    DoughnutSeries series = new DoughnutSeries();
+    series.XBindingPath = "Product";
+    series.YBindingPath = "SalesRate";
+    series.StartAngle = 180;
+    series.EndAngle = 360;
+
+    chart.Series.Add(series);
+
+{% endhighlight %}
+
+{% endtabs %}
