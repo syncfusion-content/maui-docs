@@ -137,3 +137,5 @@ namespace TabViewMauiSample
 {% endhighlight %}
 
 {% endtabs %}
+
+![Configure TabItem](images/Configure_TabItem.png) 
