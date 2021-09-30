@@ -55,6 +55,13 @@ chart.Series.Add(series);
 
 {% endtabs %}
 
+Data labels can be customized by using the `DataLabelSettings` property of chart series. For customizing, need to create an instance of `CartesianDataLabelSettings` and set to the `DataLabelSettings` property. Following properties are used to customize the data labels which are available in `CartesianDataLabelSettings`.
+
+* `BarAlignment` - Gets or sets the data label alignment top, middle or bottom.
+* `LabelPlacement` - Gets or sets the data label position inside, outside or default.
+* `LabelStyle` - Gets or sets the options for customizing the data labels. 
+* `UseSeriesPalette` - Gets or sets a value indicating whether the data label should reflect the series interior.
+
 ## Alignment
 
 The alignment of data labels inside the series is defined by using the `BarAlignment` property. 
@@ -69,40 +76,40 @@ N> This behavior varies based on the chart series type.
 
 {% highlight xaml %}
 
-<chart:SfCartesianChart>
-. . .
-<chart:ColumnSeries ShowDataLabels="True">
-    <chart:ColumnSeries.DataLabelSettings>
-        <chart:CartesianDataLabelSettings BarAlignment="Middle"/>
-    </chart:ColumnSeries.DataLabelSettings>
-</chart:ColumnSeries>
-</chart:SfCartesianChart>
+    <chart:SfCartesianChart>
+    . . .
+    <chart:ColumnSeries ShowDataLabels="True">
+        <chart:ColumnSeries.DataLabelSettings>
+            <chart:CartesianDataLabelSettings BarAlignment="Middle"/>
+        </chart:ColumnSeries.DataLabelSettings>
+    </chart:ColumnSeries>
+    </chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-SfCartesianChart chart = new SfCartesianChart();
-ColumnSeries series = new ColumnSeries();
-. . .
-series.DataLabelSettings = new CartesianDataLabelSettings()
-{
-    BarAlignment = Alignment.Middle,
-};
+    SfCartesianChart chart = new SfCartesianChart();
+    ColumnSeries series = new ColumnSeries();
+    . . .
+    series.DataLabelSettings = new CartesianDataLabelSettings()
+    {
+        BarAlignment = Alignment.Middle,
+    };
 
-chart.Series.Add(series);
+    chart.Series.Add(series);
 
 {% endhighlight %}
 
 {% endtabs %}
 
-## Position
+## LabelPlacement
 
 Other than the above alignment options, Chart providing additional customization option to position the data labels. 
 
 The `LabelPlacement` property is used to position the data labels at `Center`, `Inner` and `Outer` position of the actual data point position. By default, labels are positioned based on the series types for better readability.
 
-## Applying Series Interior
+## Applying Series Brush
 
 `UseSeriesPalette` property is used to set the interior of the series to the data marker background. 
 
