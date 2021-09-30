@@ -116,3 +116,5 @@ namespace TabViewMauiSample
 {% endtabs %}
 
 ![Getting_Started](images/Arrange_Tabs.png)
+
+N> View [sample](https://github.com/SyncfusionExamples/maui-tabview-samples/tree/main/TabViewWidthCustomization) in GitHub

@@ -151,3 +151,5 @@ namespace TabViewMauiSample
 {% endtabs %}
 
 ![Configure TabItem](images/Configure_TabItem.png) 
+
+N> View [sample](https://github.com/SyncfusionExamples/maui-tabview-samples/tree/main/ConfigureTabItem) in GitHub

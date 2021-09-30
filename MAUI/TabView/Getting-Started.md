@@ -211,3 +211,5 @@ namespace TabViewMauiSample
 {% endtabs %}
 
 ![Getting_Started](images/Getting_Started.png)
+
+N> View [sample](https://github.com/SyncfusionExamples/maui-tabview-samples/tree/main/TabViewGettingStarted) in GitHub

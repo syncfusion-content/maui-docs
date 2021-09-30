@@ -100,3 +100,5 @@ Nested tab items can be configured in tab view through the `Items` property of `
 {% endtabs %}
 
 ![NestedTab](images/Nested_Tab.png)
+
+N> View [sample](https://github.com/SyncfusionExamples/maui-tabview-samples/tree/main/NestedTabViewSample) in GitHub

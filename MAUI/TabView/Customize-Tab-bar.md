@@ -159,3 +159,5 @@ namespace TabViewMauiSample
 {% endtabs %}
 
 ![Indicator Placement](images/IndicatorPlacement.png) 
+
+N> View [sample](https://github.com/SyncfusionExamples/maui-tabview-samples/tree/main/TabBarCustomization) in GitHub

@@ -244,3 +244,5 @@ Bind the items source of the `ListView`, and set the required appearance in its 
 Similarly, content region for other tabs also can be configured.
 
 ![LisViewImage](images/ListView.png)
+
+N> View [sample](https://github.com/SyncfusionExamples/maui-tabview-samples/tree/main/PopulatingItemTabView) in GitHub
