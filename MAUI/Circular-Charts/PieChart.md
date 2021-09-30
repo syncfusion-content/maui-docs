@@ -88,7 +88,7 @@ By using the `StartAngle` and `EndAngle` properties, you can draw pie series in 
     <chart:SfCircularChart>
 
         <chart:SfCircularChart.Series>
-            <chart:PieSeries StartAngle="180" EndAngle="360" ItemsSource="{Binding Data}  XBindingPath="Product"  YBindingPath="SalesRate" ShowDataLabels="True"/>
+            <chart:PieSeries StartAngle="180" EndAngle="360" ItemsSource="{Binding Data}  XBindingPath="Product"  YBindingPath="SalesRate" />
         </chart:SfCircularChart.Series>
 
     </chart:SfCircularChart>

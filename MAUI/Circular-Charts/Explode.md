@@ -14,8 +14,6 @@ Exploding a segment is used to pull attention to a specific area of the circular
 * `ExplodeIndex` - Used to explode any specific segment.
 * `ExplodeRadius` - Used to define the explode distance.
 
-**Explode Index**
-
 {% tabs %}
 
 {% highlight xaml %}
@@ -46,6 +44,4 @@ chart.Series.Add(series);
 {% endhighlight %}
 
 {% endtabs %}
-
-N> By default `ExplodeRadius` value is zero. So you need to define `ExplodeRadius` value, when you set `ExplodeIndex`.
 

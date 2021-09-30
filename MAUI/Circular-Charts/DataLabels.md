@@ -48,51 +48,13 @@ Each data label can be represented by the following:
 
 {% endtabs %} 
 
-## LabelPlacement
+Data labels can be customized by using the `DataLabelSettings` property of chart series. For customizing, need to create an instance of `CircularDataLabelSettings` and set to the `DataLabelSettings` property. Following properties are used to customize the data labels which are available in `CircularDataLabelSettings`.
 
-`SfCircularChart` providing additional customization option to position the data label smartly based on series types using `LabelPlacement` property.
+* `ConnectorType` - Gets or sets the type of connector line to be drawn..
+* `LabelStyle` - Gets or sets the options for customizing the data labels. 
+* `UseSeriesPalette` - Gets or sets a value indicating whether the data label should reflect the series interior.
 
-The following are the values for this property:
-
-`Inner` - Data labels will be  placed inside over the CircularSeries.
-
-`Outer` - Data labels will be  placed just outside over the CircularSeries.
-
-
-{% tabs %}
-
-{% highlight xaml %}
-
-    <chart:SfCircularChart>
-    . . .
-    <chart:PieSeries ShowDataLabels="True">
-        <chart:PieSeries.DataLabelSettings>
-            <chart:CircularDataLabelSettings LabelPlacement="Outer" />
-        </chart:PieSeries.DataLabelSettings>
-    </chart:PieSeries>
-    . . .
-    </chart:SfCircularChart>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-    SfCircularChart chart = new SfCircularChart();
-    . . .
-    PieSeries series = new PieSeries();
-    series.ShowDataLabels = true;
-    series.DataLabelSettings = new CircularDataLabelSettings()
-    {
-        LabelPlacement = Placement.Outer
-    };
-
-    chart.Series.Add(series);
-
-{% endhighlight %}
-
-{% endtabs %}
-
-## Applying Series Interior
+## Applying Series Brush
 
 `UseSeriesPalette` property is used to set the interior of the series to the data label background. 
 
