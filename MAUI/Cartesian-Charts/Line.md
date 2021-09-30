@@ -76,22 +76,29 @@ The `StrokeDashArray` property of `LineSeries` is used to render the line series
 
 {% highlight xaml %}
 
-<chart:SfCartesianChart>
+    <chart:SfCartesianChart>
 
-    <chart:SfCartesianChart.PrimaryAxis>
-        <chart:CategoryAxis />
-    </chart:SfCartesianChart.PrimaryAxis>
+        <chart:SfCartesianChart.Resources>
+            <DoubleCollection x:Key="dashArray">
+                <x:Double>5</x:Double>
+                <x:Double>2</x:Double>
+            </DoubleCollection>
+        </chart:SfCartesianChart.Resources>
 
-    <chart:SfCartesianChart.SecondaryAxis>
-        <chart:NumericalAxis />
-    </chart:SfCartesianChart.SecondaryAxis>  
+        <chart:SfCartesianChart.PrimaryAxis>
+            <chart:CategoryAxis />
+        </chart:SfCartesianChart.PrimaryAxis>
 
-    <chart:SfCartesianChart.Series>
-        <chart:LineSeries XBindingPath="Demand" ItemsSource="{Binding Data}" YBindingPath="Year2010" />
-        <chart:LineSeries XBindingPath="Demand" ItemsSource="{Binding Data}" YBindingPath="Year2011" />
-    </chart:SfCartesianChart.Series>
+        <chart:SfCartesianChart.SecondaryAxis>
+            <chart:NumericalAxis />
+        </chart:SfCartesianChart.SecondaryAxis>  
 
-</chart:SfCartesianChart>
+        <chart:SfCartesianChart.Series>
+            <chart:LineSeries XBindingPath="Demand" ItemsSource="{Binding Data}" YBindingPath="Year2010" StrokeDashArray="{StaticResource dashArray}"/>
+            <chart:LineSeries XBindingPath="Demand" ItemsSource="{Binding Data}" YBindingPath="Year2011" StrokeDashArray="{StaticResource dashArray}"/>
+        </chart:SfCartesianChart.Series>
+
+    </chart:SfCartesianChart>
 
 {% endhighlight %}
 
