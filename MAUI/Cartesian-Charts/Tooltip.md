@@ -183,11 +183,6 @@ The `SfCartesianChart` provides support to customize the appearance of the toolt
                                 XBindingPath="Demand"
                                 YBindingPath="Year2010" 
                                 ShowTooltip="True"/>
-                    
-            <chart:ColumnSeries ItemsSource="{Binding Data}" TooltipTemplate="{StaticResource tooltipTemplate2}"
-                                XBindingPath="Demand"
-                                YBindingPath="Year2011"
-                                ShowTooltip="True"/>
         </chart:SfCartesianChart.Series>
 
     </chart:SfCartesianChart>
@@ -207,17 +202,7 @@ The `SfCartesianChart` provides support to customize the appearance of the toolt
         TooltipTemplate = chart.Resources["tooltipTemplate1"] as DataTemplate
     };
 
-    ColumnSeries series2 = new ColumnSeries()
-    {
-        ItemsSource = new ViewModel().Data,
-        XBindingPath = "Demand",
-        YBindingPath = "Year2011",
-        ShowTooltip = true,
-        TooltipTemplate = chart.Resources["tooltipTemplate2"] as DataTemplate
-    };
-
     chart.Series.Add(series1);
-    chart.Series.Add(series2);
     this.Content = chart;
         
 {% endhighlight %}
