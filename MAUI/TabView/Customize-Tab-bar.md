@@ -71,24 +71,30 @@ The background of the indicator can be customized using `IndicatorBackground` pr
              xmlns:tabView="http://schemas.syncfusion.com/maui"
              BackgroundColor="{DynamicResource SecondaryColor}">
     <ContentPage.Content>
-        <tabView:SfTabView TabBarPlacement="Top"
-                           IndicatorPlacement="Bottom"
+         <tabView:SfTabView TabBarPlacement="Bottom"
+                           IndicatorPlacement="Top"
                            IndicatorBackground="Blue">
-                    <tabView:SfTabItem Header="Call">
-                        <tabView:SfTabItem.Content>
-                            <Grid BackgroundColor="Red" x:Name="AllContactsGrid" />
-                        </tabView:SfTabItem.Content>
-                    </tabView:SfTabItem>
-                    <tabView:SfTabItem Header="Favorites">
-                        <tabView:SfTabItem.Content>
-                            <Grid BackgroundColor="Green" x:Name="FavoritesGrid" />
-                        </tabView:SfTabItem.Content>
-                    </tabView:SfTabItem>
-                    <tabView:SfTabItem Header="Contacts">
-                        <tabView:SfTabItem.Content>
-                            <Grid BackgroundColor="Blue" x:Name="ContactsGrid" />
-                        </tabView:SfTabItem.Content>
-                    </tabView:SfTabItem>
+            <tabView:SfTabItem Header="FAVORITES">
+                <tabView:SfTabItem.Content>
+                    <ListView RowHeight="50">
+                        ...
+                    </ListView>
+                </tabView:SfTabItem.Content>
+            </tabView:SfTabItem>
+            <tabView:SfTabItem Header="RECENTS">
+                <tabView:SfTabItem.Content>
+                    <ListView RowHeight="50">
+                       ...
+                    </ListView>
+                </tabView:SfTabItem.Content>
+            </tabView:SfTabItem>
+            <tabView:SfTabItem Header="CONTACTS">
+                <tabView:SfTabItem.Content>
+                    <ListView RowHeight="50">
+                        ...
+                    </ListView>
+                </tabView:SfTabItem.Content>
+            </tabView:SfTabItem>
         </tabView:SfTabView>
     </ContentPage.Content>
 </ContentPage>
@@ -115,18 +121,27 @@ namespace TabViewMauiSample
             {
                 new SfTabItem()
                 {
-                    Header = "Calls",
-                    Content = allContactsGrid
+                    Header = "FAVORITES",
+                    Content = new ListView()
+                    {
+                        //// code
+                    },
                 },
                 new SfTabItem()
                 {
-                    Header = "Favorites",
-                    Content = favoritesGrid
+                    Header = "RECENTS",
+                    Content = new ListView()
+                    {
+                        //// code
+                    },
                 },
                 new SfTabItem()
                 {
-                    Header = "Contacts",
-                    Content = contactsGrid
+                    Header = "CONTACTS",
+                    Content = new ListView()
+                    {
+                        //// code
+                    },
                 }
             };
 

@@ -35,10 +35,28 @@ The width of a tab is set to fit the text or image that it contains by setting t
              xmlns:tabView="http://schemas.syncfusion.com/maui"
              BackgroundColor="{DynamicResource SecondaryColor}">
     <ContentPage.Content>
-        <tabView:SfTabView TabWidthMode="SizeToContent">
-                    <tabView:SfTabItem Header="Call" />
-                    <tabView:SfTabItem Header="Favorites" />
-                    <tabView:SfTabItem Header="Contacts" />
+         <tabView:SfTabView TabWidthMode="SizeToContent">
+            <tabView:SfTabItem Header="Call">
+                <tabView:SfTabItem.Content>
+                    <ListView RowHeight="50">
+                        ...
+                    </ListView>
+                </tabView:SfTabItem.Content>
+            </tabView:SfTabItem>
+            <tabView:SfTabItem Header="Favorites">
+                <tabView:SfTabItem.Content>
+                    <ListView RowHeight="50">
+                       ...
+                    </ListView>
+                </tabView:SfTabItem.Content>
+            </tabView:SfTabItem>
+            <tabView:SfTabItem Header="Contacts">
+                <tabView:SfTabItem.Content>
+                    <ListView RowHeight="50">
+                       ...
+                    </ListView>
+                </tabView:SfTabItem.Content>
+            </tabView:SfTabItem>
         </tabView:SfTabView>
     </ContentPage.Content>
 </ContentPage>
@@ -63,14 +81,26 @@ namespace TabViewMauiSample
                 new SfTabItem()
                 {
                     Header = "Calls",
+                    Content = new ListView()
+                    {
+                        //// code
+                    },
                 },
                 new SfTabItem()
                 {
                     Header = "Favorites",
+                    Content = new ListView()
+                    {
+                        //// code
+                    },
                 },
                 new SfTabItem()
                 {
                     Header = "Contacts",
+                    Content = new ListView()
+                    {
+                        //// code
+                    },
                 }
             };
 

@@ -99,4 +99,4 @@ Nested tab items can be configured in tab view through the `Items` property of `
 
 {% endtabs %}
 
-![NestedTab](images/Nested-Tab.png)
+![NestedTab](images/Nested_Tab.png)
