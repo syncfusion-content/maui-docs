@@ -9,7 +9,7 @@ documentation: ug
 
 # Tooltip in .NET MAUI Chart (SfCartesianChart)
 
-`SfCartesianChart` provides tooltip support for all series. It is used to show information about the segment, when you tap on the segment. 
+Tooltip is used to display any information or metadata of the tapped segment. The Cartesian chart provides tooltip support for all series. 
 
 ## Define Tooltip
 
@@ -66,10 +66,13 @@ To define the tooltip in the series, set the `ShowTooltip` property to true. The
 
 The `ChartTooltipBehavior` is used to customize the tooltip. For customizing the tooltip, create an instance `ChartTooltipBehavior` and add it to the `ChartBehaviors` collection of `SfCartesianChart`. The following properties are used to customize the tooltip:
 
-* `Background` - Used to customize the fill and stroke of the tooltip.
-* `Duration` - Used to set the amount of time that the tooltip remains visible in milliseconds.
+* `Background` - Gets or sets the background color to the tooltip label.
+* `FontAttributes` - Gets or sets the font style for the label.
+* `FontFamily` - Gets or sets the font family name for the label.
+* `FontSize` - Gets or sets the font size for the label.
+* `Duration` - Gets or sets the duration of the tooltip text in seconds.
+* `Margin` - Gets or sets the margin of the label to customize the appearance of label.
 * `TextColor` - Used to set the color for the text of the label.
-* `Margin` - Used to set the margin of the label to customize the appearance of label.
 
 {% tabs %}
 
