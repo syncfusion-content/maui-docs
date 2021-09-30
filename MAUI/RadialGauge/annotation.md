@@ -11,13 +11,13 @@ documentation: ug
 
 Radial axis allows you to add multiple views such as text, icon and image etc., as an annotation to a specific point of interest in the radial gauge.
 
-The following properties are available in `Annotation` to customizes the position and alignment.
+The following properties are available in `Annotation` to customize the position and alignment.
 
 * `DirectionValue` –  Specifies the value that indicates the direction of the annotation based on `DirectionUnit` property. 
 
 * `DirectionUnit` – Specifies the value that indicates the direction of the annotation to be calculated on the basis of `Axis value` or `Angle`.
 
-* `PositionFactor` – Specifies the factor value(from 0 to 1) to adjusts the annotation distance from center point.
+* `PositionFactor` – Specifies the factor value (from 0 to 1) to adjust the annotation distance from the center point.
 
 * `HorizontalAlignment` – Specifies the horizontal alignment for positioning the annotation.
 
@@ -136,9 +136,9 @@ The following example shows how to position the annotation using angle.
 
 ![.NET MAUI Radial Gauge Annotation Position with Angle](images/annotation/maui-radial-gauge-annotation-position-with-angle.png)
 
-### Positioning annotation using axis value
+### Positioning annotation using the axis value
 
-The following example shows how to position the annotation using axis value.
+The following example shows how to position the annotation using the axis value.
 
 {% tabs %}
 
@@ -193,7 +193,7 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
 ![.NET MAUI Radial Gauge Annotation Position with Axis](images/annotation/maui-radial-gauge-annotation-position-with-axis.png)
 
-`PositionFactor` is used to move the annotation from the center of axis to the edge of the axis. For example, when you specify the `PositionFactor` as 0.5, the annotation will be moved from the center towards the corresponding direction with the distance of half of the radius value of axis.
+`PositionFactor` is used to move the annotation from the center of axis to the edge of the axis. For example, if you specify the `PositionFactor` as 0.5, the annotation will be moved from the center to the corresponding direction by half the radius value of the axis.
 
 By default, the value of `PositionFactor` is 0.
 

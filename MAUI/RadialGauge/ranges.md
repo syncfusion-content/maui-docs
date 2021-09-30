@@ -331,7 +331,7 @@ You can set range color to axis labels and ticks using the `UseRangeColorForAxis
                           StartAngle="270"
                           EndAngle="270"
                           UseRangeColorForAxis="True"
-                          RadiusFactor="0.95"
+                          RadiusFactor="0.65"
                           Interval="10"
                           ShowFirstLabel="False"
                           IsInversed="True"
@@ -388,7 +388,7 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
             radialAxis.StartAngle = 270;
             radialAxis.EndAngle = 270;
             radialAxis.UseRangeColorForAxis = true;
-            radialAxis.RadiusFactor = 0.95;
+            radialAxis.RadiusFactor = 0.65;
             radialAxis.Interval = 10;
             radialAxis.ShowFirstLabel = false;
             radialAxis.IsInversed = true;
