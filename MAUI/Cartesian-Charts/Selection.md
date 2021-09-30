@@ -59,8 +59,6 @@ this.Content = chart;
 
 The `Type` property allows users to set selection type of series, which includes Point and None. Type property with Point value is used to select segment in a series and None is used to set deselect state for all segments. 
 
-Cartesian chart provides support to select single or None by using the `Type` property. `Type` property with `Point` value is used to select segment in a series and `None` is used for not to select any segment.
-
 {% tabs %}
 
 {% highlight xaml %}
