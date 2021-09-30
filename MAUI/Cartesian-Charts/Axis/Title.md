@@ -9,7 +9,7 @@ documentation: ug
 
 # Axis Title in MAUI Chart (SfCartesianChart)
 
-The `Title` property is used to set the title for the chart axis. It accepts any `UIElement` as content of axis title. 
+The `Title` property is used to set the title for the chart axis.
 
 {% tabs %}
 
@@ -52,37 +52,17 @@ The `Title` property is used to set the title for the chart axis. It accepts any
 
 {% endtabs %}
 
-## Style
+## Label Customization 
 
-The `ChartAxisLabelStyle` property is used to provide style for the axis title.
+The `ChartAxisLabelStyle` is used to customize the appearance of chart axis labels. The axis labels can be customized using following properties:
 
-{% tabs %}
+* `FontFamily` - used to change the font family for the axis label.
+* `FontAttributes` - used to change the font style for the axis label.
+* `FontSize` - used to change the font size for the axis label.
+* `LabelsPosition` - Used to set the position of the axis labels.
+* `LabelAlignment` - Used to align the label at the `Start`, `Center`, or `End`.
+* `MaxWidth` - Provides the maximum text width of the axis label and wraps into the next line when exceeds the maximum width.
+* `WrappedLabelAlignment` - Positions the wrapped text at the start, center, or end. The default value of the WrappedLabelAlignment property is Start.
 
-{% highlight xaml %}
 
-    <chart:SfCartesianChart>
-    . . .
-     <chart:CategoryAxis Title="Category">
-        <chart:CategoryAxis.LabelStyle>
-            <chart:ChartAxisLabelStyle FontFamily="Algerian" FontSize="13" TextColor="Blue"/>
-        </chart:CategoryAxis.LabelStyle>
-
-    </chart:SfCartesianChart>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-    SfCartesianChart chart = new SfCartesianChart();
-    . . .
-    CategoryAxis primaryAxis = new CategoryAxis();
-    primaryAxis.Title.Text = "Name";
-    chart.PrimaryAxis = primaryAxis;
-    chart.PrimaryAxis.LabelStyle.FontSize = 13;
-
-    chart.PrimaryAxis.LabelStyle.TextColor = Colors.Blue;
-
-{% endhighlight %}
-
-{% endtabs %}
 

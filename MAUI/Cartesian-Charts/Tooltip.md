@@ -64,7 +64,12 @@ To define the tooltip in the series, set the `ShowTooltip` property to true. The
 
 {% endtabs %}
 
-The `ChartTooltipBehavior`) is used to customize the tooltip. For customizing the tooltip, create an instance `ChartTooltipBehavior` and add it to the `ChartBehaviors` collection of `SfCartesianChart`. 
+The `ChartTooltipBehavior` is used to customize the tooltip. For customizing the tooltip, create an instance `ChartTooltipBehavior` and add it to the `ChartBehaviors` collection of `SfCartesianChart`. The following properties are used to customize the tooltip:
+
+* `Background` - Used to customize the fill and stroke of the tooltip.
+* `Duration` - Used to set the amount of time that the tooltip remains visible in milliseconds.
+* `TextColor` - Used to set the color for the text of the label.
+* `Margin` - Used to set the margin of the label to customize the appearance of label.
 
 {% tabs %}
 
@@ -89,8 +94,6 @@ The `ChartTooltipBehavior`) is used to customize the tooltip. For customizing th
 ## Duration
 
 The `Duration` property is used to specify the duration time in milliseconds for which tooltip will be displayed.
-
-N> By default, the tooltip will be displayed for 1000 milliseconds.
 
 {% tabs %}
 
@@ -146,6 +149,77 @@ N> By default, the tooltip will be displayed for 1000 milliseconds.
     chart.Series.Add(series2);
     this.Content = chart;
 
+{% endhighlight %}
+
+{% endtabs %}
+
+## Template
+
+The `SfCartesianChart` provides support to customize the appearance of the tooltip by using the `TooltipTemplate` property.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+    <chart:SfCartesianChart >
+        <chart:SfCartesianChart.Resources>
+            <DataTemplate x:Key="tooltipTemplate1">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="{Binding Item.Category}" TextColor="Black" FontAttributes="Bold" FontSize="12" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <Label Text=" : " TextColor="Black" FontAttributes="Bold" FontSize="12" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <Label Text="{Binding Item.Value}" TextColor="Black" FontAttributes="Bold" FontSize="12" HorizontalOptions="Center" VerticalOptions="Center"/>
+                </StackLayout>
+            </DataTemplate>
+            . . .
+                
+        </chart:SfCartesianChart.Resources>
+    . . .
+        <chart:SfCartesianChart.Behaviors>
+            <chart:ChartTooltipBehavior/>
+        </chart:SfCartesianChart.Behaviors>
+
+        <chart:SfCartesianChart.Series>
+            <chart:ColumnSeries ItemsSource="{Binding Data}" TooltipTemplate="{StaticResource tooltipTemplate1}"
+                                XBindingPath="Demand"
+                                YBindingPath="Year2010" 
+                                ShowTooltip="True"/>
+                    
+            <chart:ColumnSeries ItemsSource="{Binding Data}" TooltipTemplate="{StaticResource tooltipTemplate2}"
+                                XBindingPath="Demand"
+                                YBindingPath="Year2011"
+                                ShowTooltip="True"/>
+        </chart:SfCartesianChart.Series>
+
+    </chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+    SfCartesianChart chart = new SfCartesianChart();
+    . . .
+    ColumnSeries series1 = new ColumnSeries()
+    {
+        ItemsSource = new ViewModel().Data,
+        XBindingPath = "Demand",
+        YBindingPath = "Year2010",
+        ShowTooltip = true,
+        TooltipTemplate = chart.Resources["tooltipTemplate1"] as DataTemplate
+    };
+
+    ColumnSeries series2 = new ColumnSeries()
+    {
+        ItemsSource = new ViewModel().Data,
+        XBindingPath = "Demand",
+        YBindingPath = "Year2011",
+        ShowTooltip = true,
+        TooltipTemplate = chart.Resources["tooltipTemplate2"] as DataTemplate
+    };
+
+    chart.Series.Add(series1);
+    chart.Series.Add(series2);
+    this.Content = chart;
+        
 {% endhighlight %}
 
 {% endtabs %}

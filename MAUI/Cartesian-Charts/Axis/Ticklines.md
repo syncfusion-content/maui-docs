@@ -58,15 +58,16 @@ Both major and minor tick lines can be customized by using the `MajorTickStyle` 
 
     <chart:SfCartesianChart>
     . . .
-    <chart:SfCartesianChart.Resources>
-        <Style TargetType="Line" x:Key="lineStyle">
-            <Setter Property="StrokeThickness" Value="1"/>
-            <Setter Property="Stroke" Value="Red"/>
-        </Style>
-    </chart:SfCartesianChart.Resources>
-
     <chart:SfCartesianChart.PrimaryAxis>
-        <chart:NumericalAxis MinorTicksPerInterval="4" MinorTickStyle="{StaticResource lineStyle}"  MajorTickStyle="{StaticResource lineStyle}" />
+        <chart:NumericalAxis MinorTicksPerInterval="4" >
+            <chart:NumericalAxis.MajorTickStyle>
+                <chart:ChartAxisTickStyle Stroke="Red" StrokeWidth="1"/>
+            </chart:NumericalAxis.MajorTickStyle>
+            
+            <chart:NumericalAxis.MinorTickStyle>
+                <chart:ChartAxisTickStyle Stroke="Red" StrokeWidth="1"/>
+            </chart:NumericalAxis.MinorTickStyle>
+        </chart:NumericalAxis>
     </chart:SfCartesianChart.PrimaryAxis>
 
     <chart:SfCartesianChart.SecondaryAxis>
@@ -81,14 +82,15 @@ Both major and minor tick lines can be customized by using the `MajorTickStyle` 
 
     SfCartesianChart chart = new SfCartesianChart();
     . . .
-    chart.PrimaryAxis = new NumericalAxis()
-    {
-        MinorTicksPerInterval = 4,
-        MajorTickStyle = chart.Resources["lineStyle"] as Style,
-        MinorTickStyle = chart.Resources["lineStyle"] as Style 
-    };
+    NumericalAxis numerical = new NumericalAxis();
+    numerical.MajorTickStyle.StrokeWidth = 1;
+    numerical.MajorTickStyle.Stroke = Colors.Red;
+    numerical.MinorTicksPerInterval = 4;
+    numerical.MinorTickStyle.StrokeWidth = 1;
+    numerical.MinorTickStyle.Stroke = Colors.Red;
+    chart.PrimaryAxis = numerical;
 
-chart.SecondaryAxis = new NumericalAxis();
+    chart.SecondaryAxis = new NumericalAxis();
 
 {% endhighlight %}
 

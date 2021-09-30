@@ -284,7 +284,7 @@ In `DateTimeAxis`, intervals can be customized by using the `Interval` and `Inte
     <chart:SfCartesianChart>
         . . .
         <chart:SfCartesianChart.PrimaryAxis>
-            <chart:DateTimeAxis Minimum="2021/05/1" Maximum="2021/11/01"/>
+            <chart:DateTimeAxis Minimum="2021/05/10" Maximum="2021/11/01"/>
         </chart:SfCartesianChart.PrimaryAxis>
 
     </chart:SfCartesianChart>

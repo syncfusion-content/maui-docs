@@ -20,7 +20,9 @@ By default, major gridlines are automatically added to the `ChartAxis` in its de
     <chart:SfCartesianChart>
 
         <chart:SfCartesianChart.PrimaryAxis>
-            <chart:NumericalAxis ShowMajorGridLines="False"/>
+            <chart:NumericalAxis.MajorGridLineStyle>
+                <chart:ChartLineStyle Stroke="Black" StrokeWidth="3"  />
+            </chart:NumericalAxis.MajorGridLineStyle>
         </chart:SfCartesianChart.PrimaryAxis>
 
         <chart:SfCartesianChart.SecondaryAxis>
@@ -35,10 +37,17 @@ By default, major gridlines are automatically added to the `ChartAxis` in its de
 
     SfCartesianChart chart = new SfCartesianChart();
     . . .
-    chart.PrimaryAxis = new NumericalAxis()
-    {
-        ShowMajorGridLines = false
-    };
+    NumericalAxis primaryAxis = new NumericalAxis();
+
+    ChartLineStyle axisLineStyle = new ChartLineStyle();
+
+    axisLineStyle.Stroke = Colors.Black;
+
+    axisLineStyle.StrokeWidth = 3;
+
+    primaryAxis.MajorGridLineStyle = axisLineStyle;
+
+    chart.PrimaryAxis = primaryAxis;
 
     chart.SecondaryAxis = new NumericalAxis();
 
@@ -56,16 +65,10 @@ The `MajorGridLineStyle` property in the chart axis is used to customize the app
 
     <chart:SfCartesianChart>
     . . .
-    <chart:SfCartesianChart.Resources>
-        <Style TargetType="Line" x:Key="lineStyle">
-            <Setter Property="StrokeThickness" Value="2"/>
-            <Setter Property="Stroke" Value="Black"/>
-            <Setter Property="StrokeDashArray" Value="3,3"/>
-        </Style>
-    </chart:SfCartesianChart.Resources>
-    . . .
     <chart:SfCartesianChart.PrimaryAxis>
-        <chart:NumericalAxis MajorGridLineStyle="{StaticResource lineStyle}"/>
+        <chart:NumericalAxis.MajorGridLineStyle>
+            <chart:ChartLineStyle Stroke="Black" StrokeWidth="3" />
+        </chart:NumericalAxis.MajorGridLineStyle>
     </chart:SfCartesianChart.PrimaryAxis>
 
     <chart:SfCartesianChart.SecondaryAxis>
@@ -80,11 +83,13 @@ The `MajorGridLineStyle` property in the chart axis is used to customize the app
 
     SfCartesianChart chart = new SfCartesianChart();
     . . .
-    chart.PrimaryAxis = new NumericalAxis()
-    {
-        MajorGridLineStyle = chart.Resources["lineStyle"] as Style 
-    };
-
+    NumericalAxis primaryAxis = new NumericalAxis();
+    ChartLineStyle axisLineStyle = new ChartLineStyle();
+    axisLineStyle.Stroke = Colors.Black;
+    axisLineStyle.StrokeWidth = 3;
+    primaryAxis.MajorGridLineStyle = axisLineStyle;
+    chart.PrimaryAxis = primaryAxis;
+    
     chart.SecondaryAxis = new NumericalAxis();
 
 {% endhighlight %}
@@ -137,20 +142,15 @@ The `MinorGridLineStyle` property in the chart axis is used to customize the app
 
     <chart:SfCartesianChart>
     . . .
-    <chart:SfCartesianChart.Resources>
-        <Style TargetType="Line" x:Key="lineStyle">
-            <Setter Property="StrokeThickness" Value="0.8"/>
-            <Setter Property="Stroke" Value="Black"/>
-            <Setter Property="StrokeDashArray" Value="3,3"/>
-        </Style>
-    </chart:SfCartesianChart.Resources>
 
     <chart:SfCartesianChart.PrimaryAxis>
         <chart:NumericalAxis/>
     </chart:SfCartesianChart.PrimaryAxis>
 
     <chart:SfCartesianChart.SecondaryAxis>
-        <chart:NumericalAxis MinorTicksPerInterval="3" MinorGridLineStyle="{StaticResource lineStyle}"/>
+         <chart:NumericalAxis.MinorGridLineStyle>
+            <chart:ChartLineStyle Stroke="Black" StrokeWidth="0.8"  />
+        </chart:NumericalAxis.MinorGridLineStyle>
     </chart:SfCartesianChart.SecondaryAxis>
     . . .
     </chart:SfCartesianChart>
@@ -161,12 +161,13 @@ The `MinorGridLineStyle` property in the chart axis is used to customize the app
 
     SfCartesianChart chart = new SfCartesianChart();
     chart.PrimaryAxis = new NumericalAxis();
-    chart.SecondaryAxis = new NumericalAxis()
-    {
-        MinorTicksPerInterval = 3,
-        MinorGridLineStyle = chart.Resources["lineStyle"] as Style 
-    };
-    . . .
+
+    NumericalAxis secondaryAxis = new NumericalAxis();
+    ChartLineStyle axisLineStyle = new ChartLineStyle();
+    axisLineStyle.Stroke = Colors.Black;
+    axisLineStyle.StrokeWidth = 0.8;
+    secondaryAxis.MinorGridLineStyle = axisLineStyle;
+    chart.SecondaryAxis = secondaryAxis;
 
 {% endhighlight %}
 

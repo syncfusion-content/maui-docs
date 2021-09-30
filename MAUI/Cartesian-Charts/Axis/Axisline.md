@@ -19,16 +19,12 @@ Cartesian chart axis provides support to customize the style of axis line by def
 
     <chart:SfCartesianChart>
     . . .
-    <chart:SfCartesianChart.Resources>
-        <Style TargetType="Line" x:Key="lineStyle">
-            <Setter Property="StrokeThickness" Value="2"/>
-            <Setter Property="Stroke" Value="Red"/>
-            <Setter Property="StrokeDashArray" Value="6,2,3"/>
-        </Style>
-    </chart:SfCartesianChart.Resources>
-    . . .
     <chart:SfCartesianChart.PrimaryAxis>
-        <chart:NumericalAxis AxisLineStyle="{StaticResource lineStyle}" />
+        <chart:NumericalAxis >
+            <chart:NumericalAxis.AxisLineStyle>
+                <chart:ChartLineStyle StrokeWidth ="10" Stroke="Red"/>
+            </chart:NumericalAxis.AxisLineStyle>
+        </chart:NumericalAxis>
     </chart:SfCartesianChart.PrimaryAxis>
 
     </chart:SfCartesianChart>
@@ -39,10 +35,17 @@ Cartesian chart axis provides support to customize the style of axis line by def
 
     SfCartesianChart chart = new SfCartesianChart();
     . . .
-    chart.PrimaryAxis = new NumericalAxis()
-    {
-        AxisLineStyle = chart.Resources["lineStyle"] as Style 
-    };
+    NumericalAxis primaryAxis = new NumericalAxis();
+
+    ChartLineStyle axisLineStyle = new ChartLineStyle();
+
+    axisLineStyle.Stroke = Colors.Red;
+
+    axisLineStyle.StrokeWidth = 10;
+
+    primaryAxis.AxisLineStyle = axisLineStyle;
+
+    chart.PrimaryAxis = primaryAxis;
 
 {% endhighlight %}
 
@@ -56,25 +59,39 @@ The padding to the axis line is defined by using the `AxisLineOffset` property.
 
 {% highlight xaml %}
 
-<chart:SfCartesianChart>
-. . .
-<chart:SfCartesianChart.PrimaryAxis>
-    <chart:NumericalAxis AxisLineOffset="25" AxisLineStyle="{StaticResource lineStyle}"/>
-</chart:SfCartesianChart.PrimaryAxis>
+    <chart:SfCartesianChart>
+    . . .
+    <chart:SfCartesianChart.PrimaryAxis>
+        <chart:NumericalAxis AxisLineOffset="25">
+            <chart:NumericalAxis.AxisLineStyle>
 
-</chart:SfCartesianChart>
+                <chart:ChartLineStyle StrokeWidth ="10" Stroke="Red"/>
+
+            </chart:NumericalAxis.AxisLineStyle>
+        </chart:NumericalAxis>
+    </chart:SfCartesianChart.PrimaryAxis>
+
+    </chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-SfCartesianChart chart = new SfCartesianChart();
-. . .
-chart.PrimaryAxis = new NumericalAxis()
-{
-    AxisLineOffset = 25
-    AxisLineStyle = chart.Resources["lineStyle"] as Style
-};
+    SfCartesianChart chart = new SfCartesianChart();
+    . . .
+    NumericalAxis primaryAxis = new NumericalAxis();
+
+    primaryAxis.AxisLineOffset = 25;
+
+    ChartLineStyle axisLineStyle = new ChartLineStyle();
+
+    axisLineStyle.Stroke = Colors.Red;
+
+    axisLineStyle.StrokeWidth = 10;
+
+    primaryAxis.AxisLineStyle = axisLineStyle;
+
+    chart.PrimaryAxis = primaryAxis;
 
 {% endhighlight %}
 

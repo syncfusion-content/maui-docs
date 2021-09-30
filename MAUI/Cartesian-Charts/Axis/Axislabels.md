@@ -44,7 +44,7 @@ The `LabelRotation` property is used to define the angle for the label content.
 
 ## Edge Labels Drawing Mode
 
-Chart axis provides support to customize the rendering position of the edge labels using the `EdgeLabelsDrawingMode` property. `EdgeLabelsDrawingMode` property default value is `Center`.
+Chart axis provides support to customize the rendering position of the edge labels using the `EdgeLabelsDrawingMode` property. `EdgeLabelsDrawingMode` property default value is `Shift`.
 
 | Action | Description |
 |--|--|
@@ -60,7 +60,7 @@ Chart axis provides support to customize the rendering position of the edge labe
     <chart:SfCartesianChart>
     . . .
         <chart:SfCartesianChart.PrimaryAxis>
-            <chart:DateTimeAxis EdgeLabelsDrawingMode="Shift"/>
+            <chart:DateTimeAxis EdgeLabelsDrawingMode="Center"/>
         </chart:SfCartesianChart.PrimaryAxis>
 
     </chart:SfCartesianChart>
@@ -73,7 +73,7 @@ Chart axis provides support to customize the rendering position of the edge labe
     . . . 
     chart.PrimaryAxis = new DateTimeAxis()
     {
-        EdgeLabelsDrawingMode = EdgeLabelsDrawingMode.Shift
+        EdgeLabelsDrawingMode = EdgeLabelsDrawingMode.Center
     };
 
 {% endhighlight %}
