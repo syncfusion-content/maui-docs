@@ -84,6 +84,7 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
 {% endtabs %}
 
+![MAUI Radial Gauge Animation](images/animation/maui-radial-gauge-animation.gif)
 
 ## Animation duration
 
@@ -164,9 +165,35 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
 {% endtabs %}
 
+![MAUI Radial Gauge Animation Duration](images/animation/maui-radial-gauge-animation-duration.gif)
+
 ## Animation easing
 
-The `AnimationEasing` property of pointer allows you to use different type of easing function. The default value of `AnimationEasing` property is `Linear`.
+The `AnimationEasing` property of pointer allows you to use below type of easing function in pointer animation. 
+
+* `Linear`
+
+* `SinOut`
+
+* `SinIn`
+
+* `SinInOut`
+
+* `CubicIn`
+
+* `CubicOut`
+
+* `CubicInOut`
+
+* `BounceOut`
+
+* `BounceIn`
+
+* `SpringIn`
+
+* `SpringOut`
+
+The default value of `AnimationEasing` property is `Linear`.
 
 {% tabs %}
 
