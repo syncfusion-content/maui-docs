@@ -52,17 +52,3 @@ The `Title` property is used to set the title for the chart axis.
 
 {% endtabs %}
 
-## Label Customization 
-
-The `ChartAxisLabelStyle` is used to customize the appearance of chart axis labels. The axis labels can be customized using following properties:
-
-* `FontFamily` - used to change the font family for the axis label.
-* `FontAttributes` - used to change the font style for the axis label.
-* `FontSize` - used to change the font size for the axis label.
-* `LabelsPosition` - Used to set the position of the axis labels.
-* `LabelAlignment` - Used to align the label at the `Start`, `Center`, or `End`.
-* `MaxWidth` - Provides the maximum text width of the axis label and wraps into the next line when exceeds the maximum width.
-* `WrappedLabelAlignment` - Positions the wrapped text at the start, center, or end. The default value of the WrappedLabelAlignment property is Start.
-
-
-
