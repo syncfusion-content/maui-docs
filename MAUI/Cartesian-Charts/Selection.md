@@ -158,23 +158,15 @@ The following selection events are available in the `SfCartesianChart`.
 
 The `SelectionChanging` event occurs before the data point is being selected. This is a cancelable event. This argument contains the following information.
 
-* `SelectedSeries` - Gets the series of the selected data point.
-* `SelectedSegments` - Gets or sets the segments collection of the selected series.
-* `SelectedSegment` - Gets the segment of the selected data point.
-* `SelectedIndex` - Gets the selected data point index.
-* `PreviousSelectedIndex` - Gets the previous selected data point index.
-* `IsDataPointSelection` - Gets a value that indicates whether the selection is segment selection or series selection.
-* `Cancel` - Gets or Sets a value that indicates whether the selection should be canceled.
+* `CurrentIndex` - Gets the index of currently selected data point.
+* `PreviousIndex` - Gets the index of previously selected data point.
+* `Series` - Gets the selected series.
+* `Cancel` - Gets or sets a value indicating whether to continue the segment selection.
 
 ### SelectionChanged
 
 The `SelectionChanged` event occurs after a data point has been selected. This argument contains the following information.
 
-* `SelectedSeries` - Gets the series of the selected data point.
-* `SelectedSegments`) - Gets the segments collection of the selected series.
-* `SelectedSegment` - Gets the segment of the selected data point.
-* `SelectedIndex` - Gets the selected data point index.
-* `PreviousSelectedSeries` - Gets the previous selected series.
-* `PreviousSelectedSegment` - Gets the segment of previous selected data point.
-* `PreviousSelectedIndex`] - Gets the previous selected data point index.
-* `IsDataPointSelection` - Gets a value that indicates whether the selection is segment selection or series selection.
+* `CurrentIndex` - Gets the index of currently selected data point.
+* `PreviousIndex` - Gets the index of previously selected data point.
+* `Series` - Gets the selected series.
