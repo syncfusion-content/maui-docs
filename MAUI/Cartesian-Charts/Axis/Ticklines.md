@@ -11,7 +11,7 @@ documentation: ug
 
 Tick lines are the small lines which is drawn on the axis line representing the axis labels. Tick lines will be drawn outside of the axis by default. 
 
-And also minor tick lines can be added to the axis by defining the `MinorTicksPerInterval` property. This property will add the minor tick lines to every interval based on value.
+And also minor tick lines can be added to the axis by defining the [MinorTicksPerInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RangeAxisBase.html#Syncfusion_Maui_Charts_RangeAxisBase_MinorTicksPerInterval) property. This property will add the minor tick lines to every interval based on value.
 
 N> For category axis, minor tick lines are not applicable. Since it is rendered based on index positions.
 
@@ -50,7 +50,7 @@ N> For category axis, minor tick lines are not applicable. Since it is rendered 
 
 ## Customization
 
-Both major and minor tick lines can be customized by using the `MajorTickStyle` and `MinorTickStyle` properties respectively. 
+Both major and minor tick lines can be customized by using the [MajorTickStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_MajorTickStyle) and [MinorTickStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RangeAxisBase.html#Syncfusion_Maui_Charts_RangeAxisBase_MinorTickStyle) properties respectively. 
 
 {% tabs %}
 
