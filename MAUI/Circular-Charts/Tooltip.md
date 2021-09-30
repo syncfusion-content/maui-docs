@@ -9,7 +9,7 @@ documentation: ug
 
 # Tooltip in .NET MAUI Chart (SfCircularChart)
 
-Tooltip is used to display any information or metadata of the tapped segment. The SfCartesianChart provides tooltip support for all series. 
+Tooltip is used to display any information or metadata of the tapped segment. The Circular Chart provides tooltip support for all series. 
 
 ## Define Tooltip
 
@@ -40,7 +40,7 @@ To define the tooltip in the chart, set the `ShowTooltip` property of series to 
 
 {% endtabs %}
 
-The `ChartTooltipBehavior` is used to customize the tooltip. For customizing the tooltip, create an instance `ChartTooltipBehavior` and add it to the `ChartBehaviors` collection of `SfCartesianChart`. The following properties are used to customize the tooltip:
+The `ChartTooltipBehavior` is used to customize the tooltip. For customizing the tooltip, create an instance `ChartTooltipBehavior` and add it to the `ChartBehaviors` collection of `SfCircularChart`. The following properties are used to customize the tooltip:
 
 * `Background` - Gets or sets the background color to the tooltip label.
 * `FontAttributes` - Gets or sets the font style for the label.
