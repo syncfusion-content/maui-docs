@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Axis in .NET MAUI Radial Gauge control | Syncfusion
-description: Learn here all about Axis feature of Syncfusion .NET MAUI Radial Gauge(SfRadialGauge) control with custom support.
+description: Learn here all about Axis feature of Syncfusion .NET MAUI Radial Gauge(SfRadialGauge) control using the custom support.
 platform: maui
 control: SfRadialGauge
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Axis in .NET MAUI Radial Gauge
 
-The `Radial Axis` is a circular arc in which a set of values are displayed along a linear or custom scale based on the design requirements. Axis elements such as  labels, ticks and axis line can be easily customized. 
+The `Radial Axis` is a circular arc in which a set of values are displayed along a linear or custom scale based on the design requirements. Axis elements such as labels, ticks and axis line can be easily customized. 
 
 ## Axis customization
 
@@ -49,7 +49,7 @@ this.Content = sfRadialGauge;
 
 ### Interval
 
-The interval between labels can be customized using the `Interval` property. By default auto-interval will be calculated based on available scale range and size. If you need to change the default interval, use this property. 
+The interval between labels can be customized using the `Interval` property. By default, auto-interval will be calculated based on available scale range and size. If you need to change the default interval, use this property. 
 
 {% tabs %}
 
@@ -234,7 +234,7 @@ The visibility of the first and last labels of an axis can be customized using t
 * `ShowFirstLabel` – Enables or disables the first label of the axis.
 * `ShowLastLabel` – Enables or disables the last label of the axis.
 
-The default value of both the `ShowFirstLabel` and the `ShowLastLabel` properties is true.
+The default value of both the `ShowFirstLabel` and `ShowLastLabel` properties is true.
 
 {% tabs %}
 
@@ -310,7 +310,7 @@ this.Content = sfRadialGauge;
 
 ### Maximum number of labels per 100 logical pixels
 
-By default, a maximum of three labels are displayed for each 100 logical pixels in an axis. The maximum number of labels that should present within 100 logical pixels length can be customized using the `MaximumLabelsCount` property of the axis. This property is applicable only for automatic range calculation and will not work if you set value for interval property of an axis.
+By default, a maximum of three labels are displayed for each 100 logical pixels in an axis. The maximum number of labels that should present within 100 logical pixels length can be customized using the `MaximumLabelsCount` property of the axis. This property is applicable only for automatic range calculation and will not work, if you set value for interval property of an axis.
 
 {% tabs %}
 
@@ -342,7 +342,7 @@ this.Content = sfRadialGauge;
 
 ## Axis line customization
 
-The radial axis line can be customized using the `AxisLineStyle` with following properties.
+The radial axis line can be customized using the `AxisLineStyle` with the following properties.
 
 * `Thickness` – Customizes the thickness of axis line.
 * `ThicknessUnit` – Allows to specify the thickness of the axis line either in pixel or factor. Its default value is `Pixel`.
@@ -425,7 +425,7 @@ If the `ThicknessUnit` is set to factor, the given factor value in the `Thicknes
 
 ### Setting axis line fill brush
 
-To fill the brush to axis line using the `Fill` property of radial axis. 
+To fill the brush to axis line using the `Fill` property of the radial axis. 
 
 {% tabs %}
 
@@ -465,7 +465,7 @@ this.Content = sfRadialGauge;
 
 ### Setting gradient brush to axis line
 
-The `GradientStops` property of radial axis allows to specify the gradient brush to the axis line by specifying the different colors based on provided axis value.
+The `GradientStops` property of radial axis allows you to specify the gradient brush to the axis line by specifying the different colors based on provided axis value.
 
 {% tabs %}
 
@@ -552,12 +552,12 @@ this.Content = sfRadialGauge;
 
 ## Axis label customization
 
-The axis labels can be customized using the following properties
+The axis labels can be customized using the following properties:
 
-* `TextColor` – Allows to customize the color of the labels.
-* `FontAttributes` – Allows to specify the font attribute for labels.
-* `FontSize` – Allows to specify the font size for labels.
-* `FontFamily` – Allows to specify the various font families for labels.
+* `TextColor` – Allows you to customize the color of the labels.
+* `FontAttributes` – Allows you to specify the font attribute for labels.
+* `FontSize` – Allows you to specify the font size for labels.
+* `FontFamily` – Allows you to specify the various font families for labels.
 
 {% tabs %}
 
@@ -597,9 +597,9 @@ this.Content = sfRadialGauge;
 
 ### Formatting axis label
 
-The following property of the axis allows to customize the axis label text.
+The following property of the axis allows you to customize the axis label text.
 
-* `LabelFormat` - Allows to customize the axis label with the globalized label format.
+* `LabelFormat` - Allows you to customize the axis label with the globalized label format.
 
 {% tabs %}
 
@@ -631,7 +631,7 @@ this.Content = sfRadialGauge;
 
 ### Label visibility
 
-The `ShowLabels` property of axis allows to enable or disable the visibility of labels. The default value of the property is true.
+The `ShowLabels` property of axis allows you to enable or disable the visibility of labels. The default value of the property is true.
 
 {% tabs %}
 
@@ -663,7 +663,7 @@ this.Content = sfRadialGauge;
 
 ### Label placement
 
-The radial axis allows to position the labels either inside or outside of the axis line using the `LabelPosition` property. By default, labels are positioned inside the axis line.
+The radial axis allows you to position the labels either inside or outside of the axis line using the `LabelPosition` property. By default, labels are positioned inside the axis line.
 
 {% tabs %}
 
@@ -769,21 +769,21 @@ N> The `OffsetUnit` property of axis is common for both the `TickOffset` and `La
 
 ## Tick customization
 
-The major and minor tick lines of an axis can be customized using the `MajorTickStyle` and `MinorTickStyle` with below properties.
+The major and minor tick lines of an axis can be customized using the `MajorTickStyle` and `MinorTickStyle` by the following properties.
 
 * `Length` – Specifics the length of ticks.
 
-* `LengthUnit` – Allows to specify the tick length either in pixels or factor. 
+* `LengthUnit` – Allows you to specify the tick length either in pixels or factor. 
 
-* `Stroke` – Allows to specify the color for tick line.
+* `Stroke` – Allows you to specify the color for tick line.
 
-* `StrokeThickness`– Allows to specify the width for tick line.
+* `StrokeThickness`– Allows you to specify the width for tick line.
 
-* `StrokeDashArray`– Allows to specify the dash array for tick line.
+* `StrokeDashArray`– Allows you to specify the dash array for tick line.
 
 ### Tick length in pixel
 
-If the `LengthUnit` is set as a pixel,  the tick lines will be rendered based on the pixel values given in `Length`.
+If the `LengthUnit` is set as a pixel, the tick lines will be rendered based on the pixel values given in `Length`.
 
 {% tabs %}
 
@@ -866,7 +866,7 @@ this.Content = sfRadialGauge;
 
 ### Tick style customization
 
-The `Stroke`, `StrokeThickness` and `StrokeDashArray` properties allows you to customize the axis tick as shown in the following code example.
+The `Stroke`, `StrokeThickness`, and `StrokeDashArray` properties allows you to customize the axis tick as shown in the following code example.
 
 {% tabs %}
 
@@ -926,7 +926,7 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
 ### Setting minor ticks count
 
-The major ticks are generated based on the `Interval` property. Like major ticks, the minor ticks are generated using the `MinorTicksPerInterval` property of axis.  By default, the count value of this property is 1.
+The major ticks are generated based on the `Interval` property. Like major ticks, the minor ticks are generated using the `MinorTicksPerInterval` property of axis. By default, the count value of this property is 1.
 
 {% tabs %}
 
@@ -990,7 +990,7 @@ this.Content = sfRadialGauge;
 
 ### Tick placement
 
-The radial axis allows to position the ticks either inside or outside or center of the axis line using the `TickPosition` property. By default, ticks are positioned inside the axis line.
+The radial axis allows you to position the ticks either inside or outside or center of the axis line using the `TickPosition` property. By default, ticks are positioned inside the axis line.
 
 {% tabs %}
 
@@ -1022,7 +1022,7 @@ this.Content = sfRadialGauge;
 
 ### Tick position customization
 
-The ticks can be moved near or far to the axis line using the `TickOffset` property. The `OffsetUnit` property of axis allows to specify the `TickOffset` either in factor or pixels and the default value of `OffsetUnit` is Pixel and the default value of `TickOffset` is double.NaN.
+The `OffsetUnit` property of axis allows you to specify the `TickOffset` either in factor or pixels and the default value of `OffsetUnit` and `TickOffset` is pixel and `double.NaN`.
 
 ### Tick offset in pixel
 
@@ -1336,10 +1336,10 @@ public class RadialAxisExt : RadialAxis
 
 ### LabelCreated
 
-The `LabelCreated` event occurs each time a label is created for use. The following properties can be customized for each label in this event args:
+The `LabelCreated` event is triggered each time a label is created for use. The following properties can be customized for each label in this event args:
 
-* `Text` – Allows to customize the text property of label.
-* `Style` - Allows to customize the text style.
+* `Text` – Allows you to customize the text property of label.
+* `Style` - Allows you to customize the text style.
 
 {% tabs %}
 
