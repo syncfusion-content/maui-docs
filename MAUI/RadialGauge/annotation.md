@@ -293,7 +293,7 @@ Annotations provide options to add any image over the gauge control with respect
 
 ## Alignment of annotation
 
-`Annotation` can be aligned to center, near and far using the `HorizontalAlignment` and `VerticalAlignment` properties of annotation.
+`Annotation` can be aligned to center, near and far using the `HorizontalAlignment` and `VerticalAlignment` properties of the annotation.
 
 The following code example demonstrates how to set the `HorizontalAlignment` for annotation
 
