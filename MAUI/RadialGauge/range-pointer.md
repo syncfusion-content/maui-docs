@@ -101,7 +101,7 @@ this.Content = sfRadialGauge;
  
 ## Setting gradient brush to the pointer
 
- The `GradientStops` property of range pointer allows to specify the smooth color transition to pointer by specifying the different colors based on provided axis value.
+ The `GradientStops` property of range pointer allows you to specify the smooth color transition to pointer by specifying the different colors based on provided axis value.
 
 {% tabs %}
 
@@ -159,7 +159,7 @@ this.Content = sfRadialGauge;
 
 ## Corner style customization
 
- The `CornerStyle` property of range pointer specifies the corner type for pointer. The corners can be customized using the `BothFlat`, `BothCurve`, `StartCurve` and `EndCurve` options. The default value of this property is `BothFlat`.
+The `CornerStyle` property of range pointer specifies the corner type for the pointer. The corners can be customized using the `BothFlat`, `BothCurve`, `StartCurve`, and `EndCurve` options. The default value of this property is `BothFlat`.
 
 {% tabs %}
 

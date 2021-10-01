@@ -9,9 +9,9 @@ documentation: ug
 
 # Getting Started with .NET MAUI Radial Gauge
 
-This section explains the steps required to add the `.NET MAUI Radial Gauge` control and its elements such as axis, range, pointer and annotation. This section covers only basic features needed to get started with Syncfusion radial gauge control.
+This section explains the steps required to add the `.NET MAUI Radial Gauge` control and its elements such as axis, range, pointer, and annotation. This section covers only basic features needed to get started with Syncfusion radial gauge control.
 
-## Creating an application with .NET MAUI Radial Gauge
+## Creating an application using the .NET MAUI Radial Gauge
 
 * Create a new .NET MAUI application in the Visual Studio.
 
@@ -91,7 +91,7 @@ namespace GaugeMauiSample
 
 ## Add axis to the radial gauge
 
-Axes contain a list of axis elements, where you can add any number of radial axes inside the gauge. You can specify the minimum and maximum values of axis using the `Minimum` and `Maximum` properties as demonstrated in the following code snippet.
+Axes contain a list of axis elements, to which you can add any number of radial axes inside the gauge. You can specify the minimum and maximum values of axis using the `Minimum` and `Maximum` properties as demonstrated in the following code sample.
 
 {% tabs %}
 
@@ -123,7 +123,7 @@ this.Content = sfRadialGauge;
 
 ## Add range to the radial gauge
 
-Ranges contain a list of range elements, where you can add any number of ranges inside the axis. You can specify the start value, end value and background color for range using the `StartValue`, `EndValue` and `Fill` properties as demonstrated in the following code.   
+Ranges contain a list of range elements, to which you can add any number of ranges inside the axis. You can specify the start value, end value, and background color for range using the `StartValue`, `EndValue`, and `Fill` properties as demonstrated in the following code sample.
 
 {% tabs %}
 
@@ -186,7 +186,7 @@ this.Content = sfRadialGauge;
 
 ## Add pointer to the radial gauge
 
-Pointers contains a list of pointer elements, where you can add any number of gauge pointers such as `NeedlePointer`, `RangePointer` and `MarkerPointer` inside the axis to indicate the value using the `Value` property. 
+You can add any number of views such as text or image as an annotation inside the axis. The position of annotation can be customized using the `DirectionUnit`, `DirectionValue`, and `PositionFactor` properties as demonstrated in the following code sample.
 
 {% tabs %}
 
