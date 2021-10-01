@@ -9,7 +9,7 @@ documentation: ug
 
 # Populating tab items to .NET MAUI Tab View (SfTabView)
 
-Tab items can be added to the control using the `Items` property of `SfTabView`.
+Tab items can be added to the control using the `Items`[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_Items] property of `SfTabView`[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html].
 
 {% tabs %}
 

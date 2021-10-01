@@ -1,4 +1,4 @@
----
+    ---
 layout: post
 title: customize the tab bar in .NET MAUI Tab View control | Syncfusion
 description: Learn here all about custom header support in Syncfusion .NET MAUI Tab View(SfTabView) control and more.
@@ -11,7 +11,7 @@ documentation: ug
 
 ## Tab Bar Placement
 
-The .NET MAUI Tab View provides two options that determine how the tab bar aligns relative to the tab content. The options are top and bottom. It can be done by using `TabBarPlacement` property.
+The .NET MAUI Tab View provides two options that determine how the tab bar aligns relative to the tab content. The options are top and bottom. It can be done by using `TabBarPlacement`[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.TabBarPlacement.html] property.
 
 ### Top
 
@@ -27,17 +27,17 @@ Tab bar will be placed below the content region of the Tab View control.
 
 ## Customize the tab bar height
 
-The height of the tab bar can be customized by setting the `TabBarHeight` property. The default height is 48.
+The height of the tab bar can be customized by setting the `TabBarHeight`[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabBarHeight] property. The default height is 48.
 
 N> It is recommended to set the TabBarHeight as 72 while displaying image and text with ImagePosition as either Top or Bottom.
 
 ## Customize the background
 
-The tab bar background can be customized using the `TabBarBackground` property which is of type `Brush`.
+The tab bar background can be customized using the `TabBarBackground`[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabBarBackground] property which is of type `Brush`.
 
 ## Indicator Placement
 
-The .NET MAUI Tab View provides three options that determine how selection indicator aligns relative to the tab header item. The options are top, bottom, and fill. This can be done by setting the `IndicatorPlacement` property of SfTabView.
+The .NET MAUI Tab View provides three options that determine how selection indicator aligns relative to the tab header item. The options are top, bottom, and fill. This can be done by setting the `IndicatorPlacement`[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.TabIndicatorPlacement.html] property of SfTabView.
 
 ### Top
 
@@ -59,7 +59,7 @@ The indicator will fill the selected tab.
 
 ## Indicator Background
 
-The background of the indicator can be customized using `IndicatorBackground` property of SfTabView.
+The background of the indicator can be customized using `IndicatorBackground`[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_IndicatorBackground] property of SfTabView.
 
 {% tabs %}
 

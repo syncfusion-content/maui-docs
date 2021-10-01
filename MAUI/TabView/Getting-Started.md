@@ -13,11 +13,11 @@ This section explains the steps required to configure the .NET MAUI Tab View con
 
 ## Adding SfTabView reference
 
-Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfTabView to your project, open the NuGet package manager in Visual Studio, search for `Syncfusion.Maui.TabView` and then install it.
+Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add `SfTabView`[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html?tabs=tabid-1] to your project, open the NuGet package manager in Visual Studio, search for `Syncfusion.Maui.TabView`[https://www.nuget.org/packages/Syncfusion.Maui.TabView/19.3.43-preview] and then install it.
 
 ## Register the handler
 
-Syncfusion.Maui.Core nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file register the handler for Syncfusion core.
+`Syncfusion.Maui.Core`[https://www.nuget.org/packages/Syncfusion.Maui.Core/19.3.43-preview] nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file register the handler for Syncfusion core.
 
 {% highlight C# %}
 
@@ -84,7 +84,7 @@ using Syncfusion.Maui.TabView;
 
 Set the control to content in `ContentPage`.
 
-Tab items can be added to the Tab View through the `Items` property of `SfTabView`, which holds the collection of `SfTabItem` through `TabItemsCollection`.
+Tab items can be added to the Tab View through the `Items`[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_ItemsProperty] property of `SfTabView`[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html], which holds the collection of `SfTabItem`[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html] through `TabItemsCollection`[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.TabItemCollection.html].
 
 {% tabs %}
 
@@ -127,7 +127,7 @@ namespace TabViewMauiSample
 
 ### How to add items in SfTabView
 
-Tab items can be added to the control using the `Items` property of `SfTabView`.
+Tab items can be added to the control using the `Items`[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_ItemsProperty] property of `SfTabView`[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html].
 
 {% tabs %}
 
