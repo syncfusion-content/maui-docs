@@ -57,6 +57,8 @@ The area chart is rendered by using a collection of line segments connected to f
 
 {% endtabs %}
 
+![Area chart type in MAUI Chart](Chart-types_images/MAUI_area_chart.png)
+
 ## Spline Area Chart
 
 The `SplineAreaSeries` connects a series of data points using smooth bezier line curves, with the underlying areas filled.
@@ -104,5 +106,7 @@ The `SplineAreaSeries` connects a series of data points using smooth bezier line
 {% endhighlight %}
 
 {% endtabs %}
+
+![Spline area chart type in MAUI Chart](Chart-types_images/MAUI_spline_area_chart.png)
 
 

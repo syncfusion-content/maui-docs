@@ -55,6 +55,8 @@ Column chart is used to plot discrete rectangles for the given data point values
 
 {% endtabs %}
 
+![Column chart type in MAUI Chart](Chart-Types_images/MAUI_column_chart.png)
+
 ## Spacing and Width
 
 The `Spacing` property is used to change the spacing between two segments. The default value of spacing is 0, and the value ranges from 0 to 1. Here, 1 and 0 correspond to 100% and 0% of the available space, respectively. 
@@ -76,7 +78,7 @@ The `Width` property is used to change the width of the rectangle. The default v
         </chart:SfCartesianChart.SecondaryAxis>  
 
         <chart:SfCartesianChart.Series>
-            <chart:ColumnSeries ItemsSource="{Binding Data}" XBindingPath="XValue" YBindingPath="YValue" Spacing="0.5" Width="0.6"/>
+            <chart:ColumnSeries ItemsSource="{Binding Data}" XBindingPath="XValue" YBindingPath="YValue" Spacing="0.5" Width="0.8"/>
         </chart:SfCartesianChart.Series>
 
     </chart:SfCartesianChart>
@@ -107,3 +109,4 @@ The `Width` property is used to change the width of the rectangle. The default v
 
 {% endtabs %}
 
+![Column segment spacing in MAUI Chart](Chart-Types_images/MAUI_column_chart_segment_spacing.png)
