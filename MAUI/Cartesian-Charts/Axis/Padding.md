@@ -7,11 +7,11 @@ control: SfCartesianChart
 documentation: ug
 ---
 
-# Axis Padding in .NET MAUI Chart
+# Axis Padding in .NET MAUI Chart (SfCartesianChart)
 
 ## PlotOffsetStart
 
-The [PlotOffsetStart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_PlotOffsetStart) property is used to provide padding to the axis at start position. The following code sample demonstrates the padding applied to Start position for both x and y-axes.
+The `PlotOffsetStart` property is used to provide padding to the axis at start position. The following code sample demonstrates the padding applied to Start position for both x and y-axes.
 
 {% tabs %}
 
@@ -51,7 +51,7 @@ The [PlotOffsetStart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts
 
 ## PlotOffsetEnd
 
-The [PlotOffsetEnd](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_PlotOffsetEnd) property is used to provide padding to the axis at end position. The following code sample demonstrates the padding applied to end position for both x and y-axes.
+The `PlotOffsetEnd` property is used to provide padding to the axis at end position. The following code sample demonstrates the padding applied to end position for both x and y-axes.
 
 {% tabs %}
 

@@ -7,14 +7,13 @@ control: SfCartesianChart
 documentation: ug
 ---
 
-# Scatter Chart in .NET MAUI Chart
+# Scatter Chart in .NET MAUI Charts (SfCartesianChart)
 
 The scatter chart is used to represent the each data point by a dot or circle with equal size.
 
 ## Scatter Chart
 
-To render a scatter chart, create an instance of [ScatterSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ScatterSeries.html?tabs=tabid-1), and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1)
-. The segment size can be defined by using the [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ScatterSeries.html#Syncfusion_Maui_Charts_ScatterSeries_Height) and [Width](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ScatterSeries.html#Syncfusion_Maui_Charts_ScatterSeries_Width) properties.
+To render a scatter chart, create an instance of `ScatterSeries`, and add it to the `Series` collection property of `SfCartesianChart`. The segment size can be defined by using the `Height` and `Width` properties.
 
 {% tabs %}
 
@@ -61,3 +60,5 @@ To render a scatter chart, create an instance of [ScatterSeries](https://help.sy
 {% endhighlight %}
 
 {% endtabs %}
+
+![Scatter chart type in MAUI Chart](Chart-types_images/maui_scatter_chart.jpg)

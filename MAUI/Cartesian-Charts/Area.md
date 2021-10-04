@@ -7,11 +7,11 @@ control: SfCartesianChart
 documentation: ug
 ---
 
-# Area Chart in .NET MAUI Chart
+# Area Chart in .NET MAUI Charts (SfCartesianChart)
 
 ## Area Chart
 
-The area chart is rendered by using a collection of line segments connected to form a closed loop area, filled with the specified color. To render a area chart, create an instance of [AreaSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.AreaSeries.html?tabs=tabid-1) and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of the chart.
+The area chart is rendered by using a collection of line segments connected to form a closed loop area, filled with the specified color. To render a area chart, create an instance of `AreaSeries` and add it to the `Series` collection property of the chart.
 
 {% tabs %}
 
@@ -57,9 +57,11 @@ The area chart is rendered by using a collection of line segments connected to f
 
 {% endtabs %}
 
+![Area chart type in MAUI Chart](Chart-types_images/maui_area_chart.png)
+
 ## Spline Area Chart
 
-The [SplineAreaSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SplineAreaSeries.html?tabs=tabid-1) connects a series of data points using smooth bezier line curves, with the underlying areas filled.
+The `SplineAreaSeries` connects a series of data points using smooth bezier line curves, with the underlying areas filled.
 
 {% tabs %}
 
@@ -104,5 +106,7 @@ The [SplineAreaSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chart
 {% endhighlight %}
 
 {% endtabs %}
+
+![Spline area chart type in MAUI Chart](Chart-types_images/maui_spline_area_chart.png)
 
 
