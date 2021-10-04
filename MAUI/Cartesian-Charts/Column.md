@@ -7,9 +7,9 @@ control: SfCartesianChart
 documentation: ug
 ---
 
-# Column Chart in .NET MAUI Chart (SfCartesianChart)
+# Column Chart in .NET MAUI Chart
 
-Column chart is used to plot discrete rectangles for the given data point values. To render a column chart, create an instance of `ColumnSeries`, and add it to the `Series` collection property of `SfCartesianChart`.
+Column chart is used to plot discrete rectangles for the given data point values. To render a column chart, create an instance of [ColumnSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ColumnSeries.html?tabs=tabid-1), and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).
 
 {% tabs %}
 
@@ -59,9 +59,9 @@ Column chart is used to plot discrete rectangles for the given data point values
 
 ## Spacing and Width
 
-The `Spacing` property is used to change the spacing between two segments. The default value of spacing is 0, and the value ranges from 0 to 1. Here, 1 and 0 correspond to 100% and 0% of the available space, respectively. 
+The [Spacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ColumnSeries.html#Syncfusion_Maui_Charts_ColumnSeries_Spacing) property is used to change the spacing between two segments. The default value of spacing is 0, and the value ranges from 0 to 1. Here, 1 and 0 correspond to 100% and 0% of the available space, respectively. 
 
-The `Width` property is used to change the width of the rectangle. The default value of the width is 0.8, and the value ranges from 0 to 1.
+The [Width](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ColumnSeries.html#Syncfusion_Maui_Charts_ColumnSeries_Width) property is used to change the width of the rectangle. The default value of the width is 0.8, and the value ranges from 0 to 1.
 
 {% tabs %}
 
@@ -78,7 +78,7 @@ The `Width` property is used to change the width of the rectangle. The default v
         </chart:SfCartesianChart.SecondaryAxis>  
 
         <chart:SfCartesianChart.Series>
-            <chart:ColumnSeries ItemsSource="{Binding Data}" XBindingPath="XValue" YBindingPath="YValue" Spacing="0.5" Width="0.8"/>
+            <chart:ColumnSeries ItemsSource="{Binding Data}" XBindingPath="XValue" YBindingPath="YValue" Spacing="0.5" Width="0.6"/>
         </chart:SfCartesianChart.Series>
 
     </chart:SfCartesianChart>

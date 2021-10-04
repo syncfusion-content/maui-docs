@@ -7,11 +7,12 @@ control: SfCartesianChart
 documentation: ug
 ---
 
-# Line Chart in .NET MAUI Chart (SfCartesianChart)
+# Line Chart in .NET MAUI Chart
 
 ## Line Chart
 
-Line chart is used to represent the data trends at equal intervals by connecting points on a plot with straight lines. To render a line chart, create an instance of `LineSeries`, and add it to the `Series` collection property of `SfCartesianChart`.
+Line chart is used to represent the data trends at equal intervals by connecting points on a plot with straight lines. To render a line chart, create an instance of [LineSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LineSeries.html?tabs=tabid-1), and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1)
+.
 
 {% tabs %}
 
@@ -72,28 +73,35 @@ this.Content = chart;
 
 ### Dashed line
 
-The `StrokeDashArray` property of `LineSeries` is used to render the line series with dashes. Odd value is considered as rendering size and even value is considered as gap.
+The [StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LineSeries.html#Syncfusion_Maui_Charts_LineSeries_StrokeDashArray) property of [LineSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LineSeries.html?tabs=tabid-1) is used to render the line series with dashes. Odd value is considered as rendering size and even value is considered as gap.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<chart:SfCartesianChart>
+    <chart:SfCartesianChart>
 
-    <chart:SfCartesianChart.PrimaryAxis>
-        <chart:CategoryAxis />
-    </chart:SfCartesianChart.PrimaryAxis>
+        <chart:SfCartesianChart.Resources>
+            <DoubleCollection x:Key="dashArray">
+                <x:Double>5</x:Double>
+                <x:Double>2</x:Double>
+            </DoubleCollection>
+        </chart:SfCartesianChart.Resources>
 
-    <chart:SfCartesianChart.SecondaryAxis>
-        <chart:NumericalAxis />
-    </chart:SfCartesianChart.SecondaryAxis>  
+        <chart:SfCartesianChart.PrimaryAxis>
+            <chart:CategoryAxis />
+        </chart:SfCartesianChart.PrimaryAxis>
 
-    <chart:SfCartesianChart.Series>
-        <chart:LineSeries XBindingPath="Demand" ItemsSource="{Binding Data}" YBindingPath="Year2010" />
-        <chart:LineSeries XBindingPath="Demand" ItemsSource="{Binding Data}" YBindingPath="Year2011" />
-    </chart:SfCartesianChart.Series>
+        <chart:SfCartesianChart.SecondaryAxis>
+            <chart:NumericalAxis />
+        </chart:SfCartesianChart.SecondaryAxis>  
 
-</chart:SfCartesianChart>
+        <chart:SfCartesianChart.Series>
+            <chart:LineSeries XBindingPath="Demand" ItemsSource="{Binding Data}" YBindingPath="Year2010" StrokeDashArray="{StaticResource dashArray}"/>
+            <chart:LineSeries XBindingPath="Demand" ItemsSource="{Binding Data}" YBindingPath="Year2011" StrokeDashArray="{StaticResource dashArray}"/>
+        </chart:SfCartesianChart.Series>
+
+    </chart:SfCartesianChart>
 
 {% endhighlight %}
 
@@ -139,7 +147,7 @@ this.Content = chart;
 
 ## Spline Chart 
 
-The `SplineSeries` resembles line series, but instead of connecting the data points with line segments, the data points are connected by smooth bezier curves.
+The [SplineSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SplineSeries.html?tabs=tabid-1) resembles line series, but instead of connecting the data points with line segments, the data points are connected by smooth bezier curves.
 
 {% tabs %}
 
@@ -199,7 +207,7 @@ this.Content = chart;
 
 ### Spline rendering types
 
-The `Type` property allows to change the rendering type of spline curve in series. The default value of `Type` is `Natural`.
+The [Type](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SplineSeries.html#Syncfusion_Maui_Charts_SplineSeries_Type) property allows to change the rendering type of spline curve in series. The default value of [Type](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SplineSeries.html#Syncfusion_Maui_Charts_SplineSeries_Type) is [Natural](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SplineType.html#Syncfusion_Maui_Charts_SplineType_Natural).
 
 The following types are used in SplineSeries:
 
