@@ -7,7 +7,7 @@ control: SfCircularChart
 documentation: ug
 ---
 
-# Getting Started with .NET MAUI Charts (SfCircularChart)
+# Getting Started with .NET MAUI Chart
 
 This section explains how to populate the circular chart with data, a title, data labels, a legend, and tooltips, as well as the essential aspects for getting started with the circular chart.
 

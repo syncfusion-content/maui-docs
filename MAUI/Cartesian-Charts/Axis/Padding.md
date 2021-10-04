@@ -7,7 +7,7 @@ control: SfCartesianChart
 documentation: ug
 ---
 
-# Axis Padding in .NET MAUI Chart (SfCartesianChart)
+# Axis Padding in .NET MAUI Chart
 
 ## PlotOffsetStart
 
