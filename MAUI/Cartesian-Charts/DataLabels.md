@@ -105,7 +105,7 @@ N> This behavior varies based on the chart series type.
 
 {% endtabs %}
 
-![Data label alignment in MAUI chart](DataLabel_images/maui_cartesian_hart_data_label_alignment.png)
+![Data label alignment in MAUI chart](DataLabel_images/maui_cartesian_chart_data_label_alignment.png)
 
 ## LabelPlacement
 
