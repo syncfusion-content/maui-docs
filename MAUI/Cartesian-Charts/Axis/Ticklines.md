@@ -7,7 +7,7 @@ control: SfCartesianChart
 documentation: ug
 ---
 
-# Tick Lines in .NET MAUI Chart (SfCartesianChart)
+# Tick Lines in .NET MAUI Chart
 
 Tick lines are the small lines which is drawn on the axis line representing the axis labels. Tick lines will be drawn outside of the axis by default. 
 

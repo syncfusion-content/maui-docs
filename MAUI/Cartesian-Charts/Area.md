@@ -7,7 +7,7 @@ control: SfCartesianChart
 documentation: ug
 ---
 
-# Area Chart in .NET MAUI Charts (SfCartesianChart)
+# Area Chart in .NET MAUI Chart
 
 ## Area Chart
 
