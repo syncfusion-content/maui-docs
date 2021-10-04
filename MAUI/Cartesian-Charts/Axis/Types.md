@@ -7,7 +7,7 @@ control: SfCartesianChart
 documentation: ug
 ---
 
-# Types of Axis in .NET MAUI Chart (SfCartesianChart)
+# Types of Axis in .NET MAUI Chart
 
 Cartesian chart supports the following types of chart axis.
 

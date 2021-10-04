@@ -7,7 +7,7 @@ control: SfCircularChart
 documentation: ug
 ---
 
-# Data Label in .NET MAUI Chart (SfCircularChart)
+# Data Label in .NET MAUI Chart
 
 Data labels are used to display values related to a chart segment. Values from data point(x, y) or other custom properties from a data source can be displayed. 
 

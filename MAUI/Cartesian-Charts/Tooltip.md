@@ -7,7 +7,7 @@ control: SfCartesianChart
 documentation: ug
 ---
 
-# Tooltip in .NET MAUI Chart (SfCartesianChart)
+# Tooltip in .NET MAUI Chart
 
 Tooltip is used to display any information or metadata of the tapped segment. The Cartesian chart provides tooltip support for all series. 
 

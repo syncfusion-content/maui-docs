@@ -7,7 +7,7 @@ control: SfCartesianChart
 documentation: ug
 ---
 
-# Scatter Chart in .NET MAUI Charts (SfCartesianChart)
+# Scatter Chart in .NET MAUI Chart
 
 The scatter chart is used to represent the each data point by a dot or circle with equal size.
 

@@ -7,7 +7,7 @@ control: SfCircularChart
 documentation: ug
 ---
 
-# Tooltip in .NET MAUI Chart (SfCircularChart)
+# Tooltip in .NET MAUI Chart
 
 Tooltip is used to display any information or metadata of the tapped segment. The Circular Chart provides tooltip support for all series. 
 

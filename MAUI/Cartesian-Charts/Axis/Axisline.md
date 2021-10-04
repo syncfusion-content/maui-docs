@@ -7,7 +7,7 @@ control: SfCartesianChart
 documentation: ug
 ---
 
-# Axis line in .NET MAUI Chart (SfCartesianChart)
+# Axis line in .NET MAUI Chart
 
 ## Customization
 
