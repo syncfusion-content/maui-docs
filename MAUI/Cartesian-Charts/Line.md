@@ -68,6 +68,8 @@ this.Content = chart;
 
 {% endtabs %}
 
+![Line Chart in MAUI](Chart-types_images/MAUI_line_chart.png)
+
 ### Dashed line
 
 The `StrokeDashArray` property of `LineSeries` is used to render the line series with dashes. Odd value is considered as rendering size and even value is considered as gap.
@@ -133,6 +135,8 @@ this.Content = chart;
 
 {% endtabs %}
 
+![Dashed line chart in MAUI](Chart-types_images/MAUI_dash_line_chart.png)
+
 ## Spline Chart 
 
 The `SplineSeries` resembles line series, but instead of connecting the data points with line segments, the data points are connected by smooth bezier curves.
@@ -191,6 +195,8 @@ this.Content = chart;
 
 {% endtabs %}
 
+![Spline chart type in MAUI Chart](Chart-types_images/MAUI_spline_chart.png)
+
 ### Spline rendering types
 
 The `Type` property allows to change the rendering type of spline curve in series. The default value of `Type` is `Natural`.
@@ -247,4 +253,6 @@ The following types are used in SplineSeries:
 {% endhighlight %}
 
 {% endtabs %}
+
+![Spline types chart in MAUI Chart](Chart-types_images/MAUI_spline_types_chart.png)
 

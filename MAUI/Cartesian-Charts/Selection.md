@@ -55,6 +55,8 @@ this.Content = chart;
 
 {% endtabs %}
 
+![Segment selection support in MAUI Chart](Selection_images/MAUI_chart_segment_selection.png)
+
 ## Selection Type
 
 The `Type` property allows users to set selection type of series, which includes `Point` and `None`. `Type` property with `Point` value is used to select segment in a series and `None` is used to set deselect state for all segments. 
@@ -149,6 +151,8 @@ Cartesian chart provides support to select a point programmatically on a chart u
 {% endhighlight %}
 
 {% endtabs %}
+
+![Initial selection rendering support in MAUI Chart](Selection_images/MAUI_chart_selected_index.png)
 
 ## Events
 

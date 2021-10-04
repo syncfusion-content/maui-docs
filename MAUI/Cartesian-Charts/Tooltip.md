@@ -64,6 +64,8 @@ To define the tooltip in the series, set the `ShowTooltip` property to true. The
 
 {% endtabs %}
 
+![Tooltip support in MAUI chart](Tooltip_images/MAUI_chart_tooltip.png)
+
 The `ChartTooltipBehavior` is used to customize the tooltip. For customizing the tooltip, create an instance `ChartTooltipBehavior` and add it to the `ChartBehaviors` collection of `SfCartesianChart`. The following properties are used to customize the tooltip:
 
 * `Background` - Used to customize the fill and stroke of the tooltip.
@@ -164,10 +166,10 @@ The `SfCartesianChart` provides support to customize the appearance of the toolt
     <chart:SfCartesianChart >
         <chart:SfCartesianChart.Resources>
             <DataTemplate x:Key="tooltipTemplate1">
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="{Binding Item.Category}" TextColor="Black" FontAttributes="Bold" FontSize="12" HorizontalOptions="Center" VerticalOptions="Center"/>
-                    <Label Text=" : " TextColor="Black" FontAttributes="Bold" FontSize="12" HorizontalOptions="Center" VerticalOptions="Center"/>
-                    <Label Text="{Binding Item.Value}" TextColor="Black" FontAttributes="Bold" FontSize="12" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <StackLayout Padding="3" Orientation="Horizontal">
+                    <Label Text="{Binding Item.Name}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" TextColor="#CCCCCC" FontAttributes="Bold" FontFamily="Helvetica" FontSize="12" Margin="3,0,3,0" />
+                    <Label Text=" : " VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" TextColor="#CCCCCC" FontAttributes="Bold" FontFamily="Helvetica" FontSize="12" Margin="3,0,3,0"/>
+                    <Label Text="{Binding Item.Height}" VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand" TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="0,0,3,0" FontSize="12"/>
                 </StackLayout>
             </DataTemplate>
             . . .
@@ -208,3 +210,5 @@ The `SfCartesianChart` provides support to customize the appearance of the toolt
 {% endhighlight %}
 
 {% endtabs %}
+
+![Tooltip template in MAUI Chart](Tooltip_images/MAUI_chart_tooltip_customization.png)

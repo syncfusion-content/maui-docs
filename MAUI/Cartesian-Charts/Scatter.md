@@ -60,3 +60,5 @@ To render a scatter chart, create an instance of `ScatterSeries`, and add it to 
 {% endhighlight %}
 
 {% endtabs %}
+
+![Scatter chart type in MAUI Chart](Chart-types_images/MAUI_scatter_chart.jpg)

@@ -62,6 +62,8 @@ Data labels can be customized by using the `DataLabelSettings` property of chart
 * `LabelStyle` - Gets or sets the options for customizing the data labels. 
 * `UseSeriesPalette` - Gets or sets a value indicating whether the data label should reflect the series interior.
 
+![Data label in MAUI chart](DataLabel_images/data_label_MAUI_chart.png) 
+
 ## Alignment
 
 The alignment of data labels inside the series is defined by using the `BarAlignment` property. 
@@ -102,6 +104,8 @@ N> This behavior varies based on the chart series type.
 {% endhighlight %}
 
 {% endtabs %}
+
+![Data label alignment in MAUI chart](DataLabel_images/MAUI_chart_data_label_alignment.png)
 
 ## LabelPlacement
 
@@ -144,3 +148,5 @@ The `LabelPlacement` property is used to position the data labels at `Center`, `
 {% endhighlight %}
 
 {% endtabs %}
+
+![Applying series interior for data label in MAUI chart](DataLabel_images/series_interior_for_data_label_MAUI_chart.png)

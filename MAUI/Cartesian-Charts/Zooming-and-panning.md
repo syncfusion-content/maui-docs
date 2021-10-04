@@ -110,6 +110,8 @@ Pinch zooming is enable by using the `EnablePinchZooming` property to `true` as 
 
 {% endtabs %}
 
+![Zooming support in MAUI Chart](Zooming-and-panning_images/MAUI_chart_zooming.png)
+
 ## Zooming Mode
 
 The zooming can be done both horizontally and vertically. The zooming direction is defined by using the `ZoomMode` property.
