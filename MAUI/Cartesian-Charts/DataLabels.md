@@ -149,4 +149,4 @@ The [LabelPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 
 {% endtabs %}
 
-![Applying series interior for data label in MAUI chart](DataLabel_images/maui_chart_data_label_with_series_interior.png)
+![Applying series interior for data label in MAUI chart](DataLabel_images/maui_chart_data_label_with_series_brush.png)
