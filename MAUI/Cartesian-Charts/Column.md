@@ -55,6 +55,8 @@ Column chart is used to plot discrete rectangles for the given data point values
 
 {% endtabs %}
 
+![Column chart type in MAUI Chart](Chart-Types_images/maui_column_chart.png)
+
 ## Spacing and Width
 
 The [Spacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ColumnSeries.html#Syncfusion_Maui_Charts_ColumnSeries_Spacing) property is used to change the spacing between two segments. The default value of spacing is 0, and the value ranges from 0 to 1. Here, 1 and 0 correspond to 100% and 0% of the available space, respectively. 
@@ -107,3 +109,4 @@ The [Width](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ColumnSer
 
 {% endtabs %}
 
+![Column segment spacing in MAUI Chart](Chart-Types_images/maui_column_chart_with_segment_spacing.png)
