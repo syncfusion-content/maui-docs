@@ -45,3 +45,4 @@ chart.Series.Add(series);
 
 {% endtabs %}
 
+![Exploding circular chart in MAUI chart](Explode_images/maui_chart_exploding.png)
