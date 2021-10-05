@@ -7,12 +7,12 @@ control: SfCircularChart
 documentation: ug
 ---
 
-# Explode segments in .NET MAUI Chart (SfCircularChart)
+# Explode segments in .NET MAUI Chart
 
 Exploding a segment is used to pull attention to a specific area of the circular chart. The following properties are used to explode the segments in the circular chart.
 
-* `ExplodeIndex` - Used to explode any specific segment.
-* `ExplodeRadius` - Used to define the explode distance.
+* [ExplodeIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PieSeries.html#Syncfusion_Maui_Charts_PieSeries_ExplodeIndex) - Used to explode any specific segment.
+* [ExplodeRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PieSeries.html#Syncfusion_Maui_Charts_PieSeries_ExplodeRadius) - Used to define the explode distance.
 
 {% tabs %}
 

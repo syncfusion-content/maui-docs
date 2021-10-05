@@ -1,13 +1,13 @@
 ---
 layout: post
-title: About .NET MAUI Chart Charts | Syncfusion
+title: About .NET MAUI Chart Control | Syncfusion
 description: Learn here all about introduction of Syncfusion .NET MAUI Chart(SfCircularChart) control with key features and more.
 platform: maui
 control: SfCircularChart
 documentation: ug
 ---
 
-# .NET MAUI Charts Overview (SfCircularChart)
+# .NET MAUI Chart Overview
 
 Syncfusion .NET MAUI Charts (SfCircularChart) is used to create the chart with beautiful and enhanced UI visualization of data that are used in high-quality .NET MAUI applications.
 

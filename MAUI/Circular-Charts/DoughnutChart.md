@@ -7,9 +7,9 @@ control: SfCircularChart
 documentation: ug
 ---
 
-# Doughnut Chart in .NET MAUI Chart Chart (SfCircularChart)
+# Doughnut Chart in .NET MAUI Chart Chart
 
-`DoughnutSeries` is similar to `PieSeries`. It is used to show the relationship between parts of data and whole data. To render a `DoughnutSeries` in circular chart, create an instance of the `DoughnutSeries` and add it to the `Series` collection property of `SfCircularChart`.
+[DoughnutSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DoughnutSeries.html) is similar to [PieSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PieSeries.html). It is used to show the relationship between parts of data and whole data. To render a [DoughnutSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DoughnutSeries.html) in circular chart, create an instance of the [DoughnutSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DoughnutSeries.html) and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html#Syncfusion_Maui_Charts_SfCircularChart_Series) collection property of [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html).
 
 {% tabs %}
 
@@ -43,7 +43,7 @@ documentation: ug
 
 ## Doughnut Coefficient
 
-The `DoughnutCoefficient` property of doughnut series is used to define the inner circle.
+The [DoughnutCoefficient](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DoughnutSeries.html#Syncfusion_Maui_Charts_DoughnutSeries_DoughnutCoefficient) property of doughnut series is used to define the inner circle.
 
 {% tabs %}
 
@@ -76,7 +76,7 @@ SfCircularChart chart = new SfCircularChart();
 
 ## Semi Doughnut
 
-By using the `StartAngle` and `EndAngle` properties, you can draw doughnut series in different shapes such as semi-doughnut or quarter doughnut series.
+By using the [StartAngle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CircularSeries.html#Syncfusion_Maui_Charts_CircularSeries_StartAngle) and [EndAngle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CircularSeries.html#Syncfusion_Maui_Charts_CircularSeries_EndAngle) properties, you can draw doughnut series in different shapes such as semi-doughnut or quarter doughnut series.
 
 {% tabs %}
 
