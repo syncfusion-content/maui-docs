@@ -110,6 +110,8 @@ Pinch zooming is enable by using the [EnablePinchZooming](https://help.syncfusio
 
 {% endtabs %}
 
+![Zooming support in MAUI Chart](Zooming-and-panning_images/maui_chart_zooming.png)
+
 ## Zooming Mode
 
 The zooming can be done both horizontally and vertically. The zooming direction is defined by using the [ZoomMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartZoomPanBehavior.html#Syncfusion_Maui_Charts_ChartZoomPanBehavior_ZoomMode) property.

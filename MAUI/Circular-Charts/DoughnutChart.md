@@ -41,6 +41,8 @@ documentation: ug
 
 {% endtabs %}
 
+![Doughnut chart type in MAUI Chart](Chart-Types_images/maui_doughnut_chart.png)
+
 ## Doughnut Coefficient
 
 The [DoughnutCoefficient](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DoughnutSeries.html#Syncfusion_Maui_Charts_DoughnutSeries_DoughnutCoefficient) property of doughnut series is used to define the inner circle.
@@ -73,6 +75,8 @@ SfCircularChart chart = new SfCircularChart();
 {% endhighlight %}
 
 {% endtabs %}
+
+![Doughnut chart with coefficient in MAUI Chart](Chart-Types_images/maui_doughnut_chart_doughnutcoefficient.png)
 
 ## Semi Doughnut
 
@@ -110,3 +114,5 @@ By using the [StartAngle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Ch
 {% endhighlight %}
 
 {% endtabs %}
+
+![Semi doughnut chart in MAUI Chart](Chart-Types_images/maui_semi_doughnut_chart.png)

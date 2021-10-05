@@ -57,6 +57,8 @@ The area chart is rendered by using a collection of line segments connected to f
 
 {% endtabs %}
 
+![Area chart type in MAUI Chart](Chart-types_images/maui_area_chart.png)
+
 ## Spline Area Chart
 
 The [SplineAreaSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SplineAreaSeries.html?tabs=tabid-1) connects a series of data points using smooth bezier line curves, with the underlying areas filled.
@@ -105,4 +107,5 @@ The [SplineAreaSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chart
 
 {% endtabs %}
 
+![Spline area chart type in MAUI Chart](Chart-types_images/maui_spline_area_chart.png)
 

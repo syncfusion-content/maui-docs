@@ -40,6 +40,8 @@ To define the tooltip in the chart, set the [ShowTooltip](https://help.syncfusio
 
 {% endtabs %}
 
+![Tooltip support in MAUI chart](Tooltip_images/maui_chart_tooltip.png)
+
 The [ChartTooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html) is used to customize the tooltip. For customizing the tooltip, create an instance [ChartTooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html) and add it to the [ChartBehaviors](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_ChartBehaviors) collection of [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html). The following properties are used to customize the tooltip:
 
 * [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html#Syncfusion_Maui_Charts_ChartTooltipBehavior_Background) - Gets or sets the background color to the tooltip label.
@@ -119,3 +121,4 @@ Circular chart provides support to customize the appearance of the tooltip by us
 
 {% endtabs %}
 
+![Tooltip template in MAUI Chart](Tooltip_images/maui_chart_tooltip_customization.png)
