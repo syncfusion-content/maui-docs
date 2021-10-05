@@ -60,11 +60,11 @@ Gauge supports the following types of shapes:
 
 The marker pointer can be customized using the following properties:
 
-* `Fill` – Allows to customize the marker color.
-* `MarkerHeight` – Allows to specify the marker height.
-* `MarkerWidth` – Allows to specify the marker width.
-* `Stroke` – Allows to specify the border color for the marker.
-* `BorderWidth` –  Allows to specify the border width of the marker.
+* `Fill` – Allows you to customize the marker color.
+* `MarkerHeight` – Allows you to specify the marker height.
+* `MarkerWidth` – Allows you to specify the marker width.
+* `Stroke` – Allows you to specify the border color for the marker.
+* `BorderWidth` –  Allows you to specify the border width of the marker.
 
 {% tabs %}
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Needle Pointer in .NET MAUI Radial Gauge control | Syncfusion
-description: Learn here all about Needle Pointer feature of Syncfusion .NET MAUI Radial Gauge control with customization support.
+description: Learn here all about Needle Pointer feature of Syncfusion .NET MAUI Radial Gauge control using the customization support.
 platform: maui
 control: SfRadialGauge
 documentation: ug
@@ -167,7 +167,7 @@ The knob can be customized using the following properties:
 
 * `KnobStroke` – Specifies the knob border color.
 
-* `KnobSizeUnit` – Allows to specify whether the value of knob radius and border width is in pixels or in factor.
+* `KnobSizeUnit` – Allows you to specify whether the value of knob radius and border width is in pixels or in factor.
 
 ### Knob radius customization
 
@@ -269,7 +269,7 @@ this.Content = sfRadialGauge;
 
 ## Tail customization
 
-The tail of the needle can be customized using the following properties,
+The tail of the needle can be customized using the following properties:
 
 * `TailLength` – Specifies the length of tail either in pixels or factor.
 

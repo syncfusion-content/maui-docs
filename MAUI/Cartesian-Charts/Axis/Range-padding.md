@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Range padding in .NET MAUI Chart control | Syncfusion
+title: Axis range padding in .NET MAUI Chart control | Syncfusion
 description: Learn here all about axis range padding and its types features of Syncfusion .NET MAUI Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
 documentation: ug
 ---
 
-# Range Padding in .NET MAUI Chart (SfCartesianChart)
+# Axis Range Padding in .NET MAUI Chart
 
-Range padding is used to apply the minimum and maximum extremes of chart axis range by using the `RangePadding` property. The `NumericalAxis` and `DateTimeAxis` have a `RangePadding` property that can be used to add padding to the range of the chart axis.
+Range padding is used to apply the minimum and maximum extremes of chart axis range by using the [RangePadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalAxis.html#Syncfusion_Maui_Charts_NumericalAxis_RangePadding) property. The [NumericalAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalAxis.html) and [DateTimeAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html) have a [RangePadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalAxis.html#Syncfusion_Maui_Charts_NumericalAxis_RangePadding) property that can be used to add padding to the range of the chart axis.
 
 ## Numerical Range Padding
 
-The `RangePadding` is used to set the numeric range for axis.
+The [RangePadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalAxis.html#Syncfusion_Maui_Charts_NumericalAxis_RangePadding) is used to set the numeric range for axis.
 
-The following types are available for `NumericalAxis` range padding:
+The following types are available for [NumericalAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalAxis.html) range padding:
 
 * `Additional` - The visible start and end range will be added with an additional interval. 
 * `None` - The visible range sets to exact minimum and maximum value of the items source.
@@ -27,7 +27,7 @@ The following types are available for `NumericalAxis` range padding:
 * `PrependInterval` - The visible start range will be prepended with an additional interval.
 * `AppendInterval` - The visible end range will be appended with an additional interval.
 
-By default, the `RangePadding` value for `PrimaryAxis` is `Auto` and for `SecondaryAxis` is `Round`.
+By default, the [RangePadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalAxis.html#Syncfusion_Maui_Charts_NumericalAxis_RangePadding) value for [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1) is `Auto` and for [SecondaryAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_SecondaryAxis) is `Round`.
 
 **Additional**
 
@@ -136,7 +136,7 @@ By default, the `RangePadding` value for `PrimaryAxis` is `Auto` and for `Second
 
 ## DateTime Range Padding
 
-The `RangePadding` types available in the `DateTimeAxis` are: 
+The [RangePadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalAxis.html#Syncfusion_Maui_Charts_NumericalAxis_RangePadding) types available in the [DateTimeAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html) are: 
 
 * `Auto` - Automatically chosen based on the orientation of the axis.
 * `Additional` - The visible start and end range will be added with an additional interval.

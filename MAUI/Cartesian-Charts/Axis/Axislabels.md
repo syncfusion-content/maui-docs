@@ -7,13 +7,13 @@ control: SfCartesianChart
 documentation: ug
 ---
 
-# Axis Labels in .NET MAUI Chart (SfCartesianChart)
+# Axis labels in .NET MAUI Chart
 
-Axis labels are used to show the units or measures or category value of axis to visualize the data user friendly. It will be generated based on the range and the values binded to `XBindingPath` or `YBindingPath` properties of series.
+Axis labels are used to show the units or measures or category value of axis to visualize the data user friendly. It will be generated based on the range and the values binded to [XBindingPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_XBindingPath) or [YBindingPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.XYDataSeries.html#Syncfusion_Maui_Charts_XYDataSeries_YBindingPath) properties of series.
 
 ## Label Rotation
 
-The `LabelRotation` property is used to define the angle for the label content.
+The [LabelRotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_LabelRotation) property is used to define the angle for the label content.
 
 {% tabs %}
 
@@ -44,7 +44,7 @@ The `LabelRotation` property is used to define the angle for the label content.
 
 ## Edge Labels Drawing Mode
 
-Chart axis provides support to customize the rendering position of the edge labels using the `EdgeLabelsDrawingMode` property. `EdgeLabelsDrawingMode` property default value is `Shift`.
+Chart axis provides support to customize the rendering position of the edge labels using the [EdgeLabelsDrawingMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_EdgeLabelsDrawingMode) property. [EdgeLabelsDrawingMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_EdgeLabelsDrawingMode) property default value is `Shift`.
 
 | Action | Description |
 |--|--|
@@ -82,11 +82,11 @@ Chart axis provides support to customize the rendering position of the edge labe
 
 ## Edge Labels Visibility
  
-The visibility of the edge labels of the axis can be controlled using the `EdgeLabelsVisibilityMode` property. The default value of `EdgeLabelsVisibilityMode` is `Default`, which displays the edge label based on auto interval calculations.
+The visibility of the edge labels of the axis can be controlled using the [EdgeLabelsVisibilityMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RangeAxisBase.html#Syncfusion_Maui_Charts_RangeAxisBase_EdgeLabelsVisibilityMode) property. The default value of [EdgeLabelsVisibilityMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RangeAxisBase.html#Syncfusion_Maui_Charts_RangeAxisBase_EdgeLabelsVisibilityMode) is `Default`, which displays the edge label based on auto interval calculations.
 
 **Always Visible**
 
-`AlwaysVisible` option in `EdgeLabelsVisibilityMode` is used to view the edge labels even in chart area zoomed state.
+`AlwaysVisible` option in [EdgeLabelsVisibilityMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RangeAxisBase.html#Syncfusion_Maui_Charts_RangeAxisBase_EdgeLabelsVisibilityMode) is used to view the edge labels even in chart area zoomed state.
 
 {% tabs %}
 

@@ -68,7 +68,7 @@ The following properties are used for the range customization:
 
 ### Equal range width
 
-Range width can be controlled by `StartWidth` and `EndWidth` properties of range.
+Range width can be controlled by `StartWidth` and `EndWidth` properties of the range.
 
 {% tabs %}
 
@@ -113,7 +113,7 @@ this.Content = sfRadialGauge;
 
 ### Different range width
 
-By setting different values to `StartWidth` and `EndWidth` property can create different width ranges. 
+By setting different values to `StartWidth` and `EndWidth` property, you can create different width ranges. 
 
 {% tabs %}
 
@@ -158,11 +158,11 @@ this.Content = sfRadialGauge;
 
 When the `WidthUnit` is set as pixels, the range will be rendered based on the provided pixel values in `StartWidth` and `EndWidth`
 
-If the `WidthUnit` is set as factor, the provided factor value in the start width and end width will be multiplied with the axis radius, respectively and  calculated values assigned to the range width. The factor value ranges from 0 to 1.
+If the `WidthUnit` is set as factor, the provided factor value in the start width and end width will be multiplied with the axis radius, respectively and calculated values assigned to the range width. The factor value ranges from 0 to 1.
 
 ### Setting gradient brush to the range
 
- The `GradientStops` property of `range` allows to specify the smooth color transition to pointer by specifying the different colors based on provided axis value.
+ The `GradientStops` property of `range` allows you to specify the smooth color transition to the pointer by specifying the different colors based on provided axis value.
 
 {% tabs %}
 
@@ -225,7 +225,7 @@ this.Content = sfRadialGauge;
 
 ### Position customization
 
- The range can be moved far or near to the axis line with using the `RangeOffset` property. The `OffsetUnit` property of range allows to specify the `RangeOffset` either in factor or pixels, and the default value of `OffsetUnit` is Pixel.
+The range can be moved far or near to the axis line by using the `RangeOffset` property. The `OffsetUnit` property of range allows you to specify the `RangeOffset` either in factor or pixels, and the default value of `OffsetUnit` is pixel.
 
 ### Range offset in pixel
 
@@ -317,7 +317,7 @@ this.Content = sfRadialGauge;
 
 ## Setting range color to axis elements
 
-You can set range color to axis labels and ticks using the `UseRangeColorForAxis` property of axis,
+You can set range color to axis labels and ticks using the `UseRangeColorForAxis` property of axis.
 
 {% tabs %}
 
