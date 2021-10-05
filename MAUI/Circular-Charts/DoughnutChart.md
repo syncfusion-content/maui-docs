@@ -76,7 +76,7 @@ SfCircularChart chart = new SfCircularChart();
 
 {% endtabs %}
 
-![Doughnut chart with circular coefficient in MAUI Chart](Chart-Types_images/maui_doughnut_chart_circularcoefficient.png)
+![Doughnut chart with coefficient in MAUI Chart](Chart-Types_images/maui_doughnut_chart_circularcoefficient.png)
 
 ## Semi Doughnut
 
