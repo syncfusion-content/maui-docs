@@ -55,7 +55,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Segment selection support in MAUI Chart](Selection_images/maui_cartesian_chart_segment_selection.png)
+![Segment selection support in MAUI Chart](Selection_images/maui_chart_segment_selection.png)
 
 ## Selection Type
 
@@ -152,7 +152,7 @@ Cartesian chart provides support to select a point programmatically on a chart u
 
 {% endtabs %}
 
-![Initial selection rendering support in MAUI Chart](Selection_images/maui_cartesian_chart_selection_with_index.png)
+![Initial selection rendering support in MAUI Chart](Selection_images/maui_chart_selection_with_index.png)
 
 ## Events
 

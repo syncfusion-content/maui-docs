@@ -110,7 +110,7 @@ Pinch zooming is enable by using the [EnablePinchZooming](https://help.syncfusio
 
 {% endtabs %}
 
-![Zooming support in MAUI Chart](Zooming-and-panning_images/maui_cartesian_chart_zooming.png)
+![Zooming support in MAUI Chart](Zooming-and-panning_images/maui_chart_zooming.png)
 
 ## Zooming Mode
 
