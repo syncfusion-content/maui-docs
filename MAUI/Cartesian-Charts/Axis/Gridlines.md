@@ -7,7 +7,7 @@ control: SfCartesianChart
 documentation: ug
 ---
 
-# Grid Lines in .NET MAUI Chart (SfCartesianChart)
+# Grid Lines in .NET MAUI Chart
 
 ## Major Grid Lines
 
