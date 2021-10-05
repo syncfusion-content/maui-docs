@@ -9,7 +9,7 @@ documentation: ug
 
 # Visual State Manager in .NET MAUI Tab View (SfTabView)
 
-Use the visual state manager to make changes to the .NET MAUI tab properties based on the visual states set from code. The applicable visual states are selected, normal, enable and disable.
+Use the visual state manager to change the .NET MAUI tab properties based on the visual states set from code. The applicable visual states are selected, normal, and disable.
 
 {% highlight xaml %}
 

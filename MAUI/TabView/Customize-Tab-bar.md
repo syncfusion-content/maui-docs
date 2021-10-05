@@ -1,17 +1,17 @@
 ---
 layout: post
-title: customize the tab bar in .NET MAUI Tab View control | Syncfusion
-description: Learn here all about custom header support in Syncfusion .NET MAUI Tab View(SfTabView) control and more.
+title: Customize the Tab Bar in .NET MAUI Tab View control | Syncfusion
+description: Learn here all about custom header support in Syncfusion .NET MAUI Tab View (SfTabView) control and more.
 platform: maui
 control: Tab View
 documentation: ug
 ---
 
-# Customize the tab bar in .NET MAUI Tab View(SfTabView)
+# Customize the Tab Bar in .NET MAUI Tab View (SfTabView)
 
-## Tab Bar Placement
+## Tab bar placement
 
-The .NET MAUI Tab View provides two options that determine how the tab bar aligns relative to the tab content. The options are top and bottom. It can be done by using `TabBarPlacement` property.
+The .NET MAUI Tab View provides two options for determining how the tab bar aligns relative to the tab content. The options are top and bottom. It can be done by using the `TabBarPlacement` property.
 
 ### Top
 
@@ -29,15 +29,15 @@ Tab bar will be placed below the content region of the Tab View control.
 
 The height of the tab bar can be customized by setting the `TabBarHeight` property. The default height is 48.
 
-N> It is recommended to set the TabBarHeight as 72 while displaying image and text with ImagePosition as either Top or Bottom.
+N> It is recommended to set the TabBarHeight as 72 while displaying the image and text with ImagePosition as either top or bottom.
 
 ## Customize the background
 
-The tab bar background can be customized using the `TabBarBackground` property which is of type `Brush`.
+The tab bar background can be customized using the `TabBarBackground` property, which is of type `Brush`.
 
-## Indicator Placement
+## Indicator placement
 
-The .NET MAUI Tab View provides three options that determine how selection indicator aligns relative to the tab header item. The options are top, bottom, and fill. This can be done by setting the `IndicatorPlacement` property of SfTabView.
+The .NET MAUI Tab View provides three options for determining how selection indicator aligns relative to the tab header item. The options are top, bottom, and fill. This can be done by setting the `IndicatorPlacement` property of SfTabView.
 
 ### Top
 
@@ -57,9 +57,9 @@ The indicator will fill the selected tab.
 
 ![Tab Image Position Fill.](images/Selection-Indicator-placement-Fill.png) 
 
-## Indicator Background
+## Indicator background
 
-The background of the indicator can be customized using `IndicatorBackground` property of SfTabView.
+The background of the indicator can be customized using the `IndicatorBackground` property of SfTabView.
 
 {% tabs %}
 

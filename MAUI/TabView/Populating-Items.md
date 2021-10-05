@@ -88,7 +88,7 @@ namespace TabViewMauiSample
 
 {% endtabs %}
 
-Bind the items source of the `ListView`, and set the required appearance in its `ItemTemplate` property in which the list view can be hosted within the content region of tab item. 
+Bind the items source of the `ListView`, and set the required appearance in its `ItemTemplate` property, in which the list view can be hosted within the content region of tab item. 
 
 {% highlight xaml %}
 

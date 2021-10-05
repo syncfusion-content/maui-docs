@@ -14,9 +14,9 @@ A tab item consists of the following elements that can be customized.
 
 * **ImageSource** - The image to be displayed in the tab bar representing the tab item.
 
-* **Content** - The assigned view will get displayed in the main area of the Tab View.
+* **Content** - The assigned view will get displayed in the main area of the tab view.
 
-* **ImagePosition** - Determines the Image text relation of the tab item.
+* **ImagePosition** - Determines the image text relation of the tab item.
 
 * **TextColor** - The text color of the tab item displayed in the tab bar.
 
@@ -28,9 +28,9 @@ A tab item consists of the following elements that can be customized.
 
 * **IsSelected** - Indicates whether the tab item is active or not.
 
-## Tab Image Position
+## Tab image position
 
-The .NET MAUI Tab View provides four options that determine how the image of the tab aligns relative to the text. The options are left, top, right and bottom. It can be achieved using the `ImagePosition` property of `SfTabItem` of type TabImagePosition.
+The .NET MAUI Tab View provides four options for determining how the image of the tab aligns relative to the text. The options are left, top, right, and bottom. It can be achieved using the `ImagePosition` property of `SfTabItem` of type TabImagePosition.
 
 N> Each tab item can be set with different image positions. Visual State Manager can be used to apply same value to all tabs.
 
@@ -50,9 +50,13 @@ The image will be placed below the text vertically.
 
 The image will be placed before the text horizontally.
 
+![Tab Image Position Left](images/Image-Position-Left.png) 
+
 ### Right
 
 The image will be placed to the right side of the text horizontally.
+
+![Tab Image Position Right](images/Image-Position-Right.png) 
 
 {% tabs %}
 
