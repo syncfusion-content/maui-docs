@@ -361,5 +361,5 @@ The following code example gives you the complete code of above configurations.
 
 {% endtabs %}
 
-![Pie chart in .NET MAUI Chart](Getting-Started_Images/MAUI_pie_chart.jpg)
+![Pie chart in .NET MAUI Chart](Getting-Started_Images/MAUI_pie_chart.png)
 
