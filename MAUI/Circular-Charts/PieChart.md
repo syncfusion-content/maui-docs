@@ -41,6 +41,8 @@ To render a [PieSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Char
 
 {% endtabs %}
 
+![Pie chart type in MAUI Chart](Chart-Types_images/maui_pie_chart.png)
+
 ## Circular Coefficient
 
 The rendering size of the [PieSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PieSeries.html) can be controlled using the [CircularCoefficient](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CircularSeries.html#Syncfusion_Maui_Charts_CircularSeries_CircularCoefficient) property as shown in the following code sample.
@@ -77,6 +79,8 @@ The rendering size of the [PieSeries](https://help.syncfusion.com/cr/maui/Syncfu
 
 {% endtabs %}
 
+![Pie chart with circular coefficient in MAUI Chart](Chart-Types_images/maui_pie_chart_circularcoefficient.png)
+
 ## Semi Pie
 
 By using the [StartAngle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CircularSeries.html#Syncfusion_Maui_Charts_CircularSeries_StartAngle) and [EndAngle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CircularSeries.html#Syncfusion_Maui_Charts_CircularSeries_EndAngle) properties, you can draw pie series in different shapes such as semi-pie or quarter pie series.
@@ -110,3 +114,5 @@ By using the [StartAngle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Ch
 {% endhighlight %}
 
 {% endtabs %}
+
+![Semi pie chart in MAUI Chart](Chart-Types_images/maui_semi_pie_chart.png)
