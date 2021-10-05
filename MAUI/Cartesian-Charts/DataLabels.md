@@ -62,6 +62,8 @@ Data labels can be customized by using the [DataLabelSettings](https://help.sync
 * [LabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartDataLabelSettings.html#Syncfusion_Maui_Charts_ChartDataLabelSettings_LabelStyle) - Gets or sets the options for customizing the data labels. 
 * [UseSeriesPalette](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartDataLabelSettings.html#Syncfusion_Maui_Charts_ChartDataLabelSettings_UseSeriesPalette) - Gets or sets a value indicating whether the data label should reflect the series interior.
 
+![Data label in MAUI chart](DataLabel_images/maui_chart_data_label.png) 
+
 ## Alignment
 
 The alignment of data labels inside the series is defined by using the [BarAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CartesianDataLabelSettings.html#Syncfusion_Maui_Charts_CartesianDataLabelSettings_BarAlignment) property. 
@@ -102,6 +104,8 @@ N> This behavior varies based on the chart series type.
 {% endhighlight %}
 
 {% endtabs %}
+
+![Data label alignment in MAUI chart](DataLabel_images/maui_chart_data_label_alignment.png)
 
 ## LabelPlacement
 
@@ -144,3 +148,5 @@ The [LabelPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 {% endhighlight %}
 
 {% endtabs %}
+
+![Applying series interior for data label in MAUI chart](DataLabel_images/maui_chart_data_label_with_series_brush.png)
