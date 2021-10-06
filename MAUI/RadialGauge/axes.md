@@ -13,6 +13,8 @@ The [`Radial Axis`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.R
 
 ## Axis customization
 
+This section will cover the axis customization options.
+
 ### Setting axis minimum and maximum
 
 The [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_Minimum) and [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_Maximum) properties of an axis can be used to customize the axis scale range. The default value of [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_Minimum) is 0 and [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_Maximum) is 100.
