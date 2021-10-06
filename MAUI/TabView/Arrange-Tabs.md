@@ -21,7 +21,7 @@ N> This mode is recommended when the tab count is not more than 4. More tabs in 
 
 ## Based on the text size
 
-The width of a tab is set to fit the text or image that it contains by setting the `TabWidthMode` as `Default`. Scroll is enabled in this mode to access the items that are outside the visible area.
+The width of a tab is set to fit the text or image that it contains by setting the `TabWidthMode` as `SizeToContent`. Scroll is enabled in this mode to access the items that are outside the visible area.
 
 ![Tab Width Mode Size to fit](images/Tab-Width-Mode-SizeToFit.png) 
 
