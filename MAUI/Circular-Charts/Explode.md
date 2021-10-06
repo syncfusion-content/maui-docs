@@ -7,7 +7,7 @@ control: SfCircularChart
 documentation: ug
 ---
 
-# Explode segments in .NET MAUI Chart (SfCircularChart)
+# Explode segments in .NET MAUI Chart
 
 Exploding a segment is used to pull attention to a specific area of the circular chart. The following properties are used to explode the segments in the circular chart.
 
@@ -45,3 +45,4 @@ chart.Series.Add(series);
 
 {% endtabs %}
 
+![Exploded doughnut chart in MAUI](Explode_images/maui_exploded_doughnut_chart.png)

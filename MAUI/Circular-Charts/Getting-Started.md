@@ -7,14 +7,14 @@ control: SfCircularChart
 documentation: ug
 ---
 
-# Getting Started with .NET MAUI Charts (SfCircularChart)
+# Getting Started with .NET MAUI Chart
 
 This section explains how to populate the circular chart with data, a title, data labels, a legend, and tooltips, as well as the essential aspects for getting started with the circular chart.
 
 ## Creating an application using the .NET MAUI chart
 
 1. Create a new .NET MAUI application in Visual Studio.
-2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfCartesianChart to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Charts and then install it.
+2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfCircularChart to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Charts and then install it.
 3. To initialize the control, import the Chart namespace.
 4. Initialize [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html).
 
@@ -361,5 +361,5 @@ The following code example gives you the complete code of above configurations.
 
 {% endtabs %}
 
-![Pie chart in .NET MAUI Chart](Getting-Started_Images/MAUI_pie_chart.jpg)
+![Pie chart in .NET MAUI Chart](Getting-Started_Images/MAUI_pie_chart.png)
 

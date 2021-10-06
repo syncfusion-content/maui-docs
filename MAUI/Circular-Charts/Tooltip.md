@@ -7,7 +7,7 @@ control: SfCircularChart
 documentation: ug
 ---
 
-# Tooltip in .NET MAUI Chart (SfCircularChart)
+# Tooltip in .NET MAUI Chart
 
 Tooltip is used to display any information or metadata of the tapped segment. The Circular Chart provides tooltip support for all series. 
 
@@ -39,6 +39,8 @@ To define the tooltip in the chart, set the [ShowTooltip](https://help.syncfusio
 {% endhighlight %}
 
 {% endtabs %}
+
+![Tooltip support in MAUI chart](Tooltip_images/maui_chart_tooltip.png)
 
 The [ChartTooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html) is used to customize the tooltip. For customizing the tooltip, create an instance [ChartTooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html) and add it to the [ChartBehaviors](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_ChartBehaviors) collection of [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html). The following properties are used to customize the tooltip:
 
@@ -119,3 +121,4 @@ Circular chart provides support to customize the appearance of the tooltip by us
 
 {% endtabs %}
 
+![Tooltip template in MAUI Chart](Tooltip_images/maui_chart_tooltip_customization.png)

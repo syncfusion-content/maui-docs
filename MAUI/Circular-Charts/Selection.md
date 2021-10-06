@@ -7,7 +7,7 @@ control: SfCircularChart
 documentation: ug
 ---
 
-# Selection in .NET MAUI Chart (SfCircularChart)
+# Selection in .NET MAUI Chart
 
 Circular chart supports selection that allows to select or highlight a segment in the chart by using [ChartSelectionBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelectionBehavior.html).
 
@@ -44,6 +44,8 @@ To enable the selection in chart, create an instance of [ChartSelectionBehavior]
 {% endhighlight %}
 
 {% endtabs %}
+
+![Segment selection support in MAUI Chart](Selection_images/maui_chart_segment_selection.png)
 
 ## Selection Type
 

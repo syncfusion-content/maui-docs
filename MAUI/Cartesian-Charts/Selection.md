@@ -7,7 +7,7 @@ control: SfCartesianChart
 documentation: ug
 ---
 
-# Selection in .NET MAUI Chart (SfCartesianChart)
+# Selection in .NET MAUI Chart
 
 Cartesian chart supports selection that allows to select or highlight a segment in the chart by using [ChartSelectionBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelectionBehavior.html).
 
@@ -54,6 +54,8 @@ this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %}
+
+![Segment selection support in MAUI Chart](Selection_images/maui_chart_segment_selection.png)
 
 ## Selection Type
 
@@ -150,6 +152,8 @@ Cartesian chart provides support to select a point programmatically on a chart u
 
 {% endtabs %}
 
+![Initial selection rendering support in MAUI Chart](Selection_images/maui_chart_selection_with_index.png)
+
 ## Events
 
 The following selection events are available in the [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).
@@ -162,7 +166,6 @@ The [SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Char
 * [PreviousIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SelectionEventArgs.html#Syncfusion_Maui_Charts_SelectionEventArgs_PreviousIndex) - Gets the index of previously selected data point.
 * [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SelectionEventArgs.html#Syncfusion_Maui_Charts_SelectionEventArgs_Series) - Gets the selected series.
 * [Cancel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SelectionChangingEventArgs.html#Syncfusion_Maui_Charts_SelectionChangingEventArgs_Cancel) - Gets or sets a value indicating whether to continue the segment selection.
-
 
 ### SelectionChanged
 

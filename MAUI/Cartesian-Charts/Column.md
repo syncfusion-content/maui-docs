@@ -7,7 +7,7 @@ control: SfCartesianChart
 documentation: ug
 ---
 
-# Column Chart in .NET MAUI Chart (SfCartesianChart)
+# Column Chart in .NET MAUI Chart
 
 Column chart is used to plot discrete rectangles for the given data point values. To render a column chart, create an instance of [ColumnSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ColumnSeries.html?tabs=tabid-1), and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).
 
@@ -54,6 +54,8 @@ Column chart is used to plot discrete rectangles for the given data point values
 {% endhighlight %}
 
 {% endtabs %}
+
+![Column chart type in MAUI Chart](Chart-Types_images/maui_column_chart.png)
 
 ## Spacing and Width
 
@@ -107,3 +109,4 @@ The [Width](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ColumnSer
 
 {% endtabs %}
 
+![Column segment spacing in MAUI Chart](Chart-Types_images/maui_column_chart_with_segment_spacing.png)

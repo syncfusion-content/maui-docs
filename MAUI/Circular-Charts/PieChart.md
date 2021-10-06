@@ -7,7 +7,7 @@ control: SfCircularChart
 documentation: ug
 ---
 
-# Pie Chart in .NET MAUI Chart (SfCircularChart)
+# Pie Chart in .NET MAUI Chart
 
 To render a [PieSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PieSeries.html) in circular chart, create an instance of the [PieSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PieSeries.html) and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html#Syncfusion_Maui_Charts_SfCircularChart_Series) collection property of [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CircularDataLabelSettings.html).
 
@@ -40,6 +40,8 @@ To render a [PieSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Char
 {% endhighlight %}
 
 {% endtabs %}
+
+![Pie chart type in MAUI Chart](Chart-Types_images/maui_pie_chart.png)
 
 ## Circular Coefficient
 
@@ -77,6 +79,8 @@ The rendering size of the [PieSeries](https://help.syncfusion.com/cr/maui/Syncfu
 
 {% endtabs %}
 
+![Pie chart with circular coefficient in MAUI Chart](Chart-Types_images/maui_pie_chart_circularcoefficient.png)
+
 ## Semi Pie
 
 By using the [StartAngle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CircularSeries.html#Syncfusion_Maui_Charts_CircularSeries_StartAngle) and [EndAngle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CircularSeries.html#Syncfusion_Maui_Charts_CircularSeries_EndAngle) properties, you can draw pie series in different shapes such as semi-pie or quarter pie series.
@@ -110,3 +114,5 @@ By using the [StartAngle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Ch
 {% endhighlight %}
 
 {% endtabs %}
+
+![Semi pie chart in MAUI Chart](Chart-Types_images/maui_semi_pie_chart.png)

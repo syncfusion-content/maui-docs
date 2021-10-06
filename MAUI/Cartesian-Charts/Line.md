@@ -7,7 +7,7 @@ control: SfCartesianChart
 documentation: ug
 ---
 
-# Line Chart in .NET MAUI Chart (SfCartesianChart)
+# Line Chart in .NET MAUI Chart
 
 ## Line Chart
 
@@ -68,6 +68,8 @@ this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %}
+
+![Line Chart in MAUI](Chart-types_images/maui_line_chart.png)
 
 ### Dashed line
 
@@ -141,6 +143,8 @@ this.Content = chart;
 
 {% endtabs %}
 
+![Dashed line chart in MAUI](Chart-types_images/maui_dashed_line_chart.png)
+
 ## Spline Chart 
 
 The [SplineSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SplineSeries.html?tabs=tabid-1) resembles line series, but instead of connecting the data points with line segments, the data points are connected by smooth bezier curves.
@@ -199,6 +203,8 @@ this.Content = chart;
 
 {% endtabs %}
 
+![Spline chart type in MAUI Chart](Chart-types_images/maui_spline_chart.png)
+
 ### Spline rendering types
 
 The [Type](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SplineSeries.html#Syncfusion_Maui_Charts_SplineSeries_Type) property allows to change the rendering type of spline curve in series. The default value of [Type](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SplineSeries.html#Syncfusion_Maui_Charts_SplineSeries_Type) is [Natural](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SplineType.html#Syncfusion_Maui_Charts_SplineType_Natural).
@@ -255,4 +261,6 @@ The following types are used in SplineSeries:
 {% endhighlight %}
 
 {% endtabs %}
+
+![Spline types chart in MAUI Chart](Chart-types_images/maui_spline_types_chart.png)
 
