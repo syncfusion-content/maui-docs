@@ -11,7 +11,7 @@ documentation: ug
 
 ## Pointer animation
 
-The `EnableAnimation` property of pointer allows to enable or disable animation for pointer.
+The `EnableAnimation` property of pointer allows you to enable or disable animation for pointer.
 
 {% tabs %}
 
@@ -84,10 +84,11 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
 {% endtabs %}
 
+![MAUI Radial Gauge Animation](images/animation/maui-radial-gauge-animation.gif)
 
 ## Animation duration
 
-The `AnimationDuration` property of pointer allows to control the animation duration (in milliseconds). The default value of animation duration is 1000ms.
+The pointers `AnimationDuration` property allows you to control the animation duration (in milliseconds). The default value of animation duration is 1000ms.
 
 {% tabs %}
 
@@ -164,9 +165,35 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
 {% endtabs %}
 
-## Animation Easing
+![MAUI Radial Gauge Animation Duration](images/animation/maui-radial-gauge-animation-duration.gif)
 
-The `AnimationEasing` property of pointer allows you to use different type of easing function. The default value `AnimationEasing` property is `Linear`.
+## Animation easing
+
+The `AnimationEasing` property of pointer allows you to use below type of easing function in pointer animation. 
+
+* `Linear`
+
+* `SinOut`
+
+* `SinIn`
+
+* `SinInOut`
+
+* `CubicIn`
+
+* `CubicOut`
+
+* `CubicInOut`
+
+* `BounceOut`
+
+* `BounceIn`
+
+* `SpringIn`
+
+* `SpringOut`
+
+The default value of `AnimationEasing` property is `Linear`.
 
 {% tabs %}
 

@@ -7,7 +7,7 @@ control: SfCartesianChart
 documentation: ug
 ---
 
-# Getting Started with .NET MAUI Chart (SfCartesianChart)
+# Getting Started with .NET MAUI Chart
 
 This section explains how to populate the Cartesian chart with data, a title, data labels, a legend, and tooltips, as well as the essential aspects for getting started with the chart.
 
@@ -16,7 +16,7 @@ This section explains how to populate the Cartesian chart with data, a title, da
 1. Create a new .NET MAUI application in Visual Studio.
 2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfCartesianChart to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Charts and then install it.
 3. To initialize the control, import the Chart namespace.
-4. Initialize [SfCartesianChart](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Charts.SfCartesianChart.html).
+4. Initialize [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).
 
 {% tabs %} 
 
@@ -159,7 +159,7 @@ this.BindingContext = new ViewModel();
 
 ## Initialize Chart axis
 
-`ChartAxis` is used to locate the data points inside the chart area. The `PrimaryAxis` and `SecondaryAxis` properties of the chart is used to initialize the axis for the chart.
+[ChartAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html) is used to locate the data points inside the chart area. The [PrimaryAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_PrimaryAxis) and [SecondaryAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_SecondaryAxis) properties of the chart is used to initialize the axis for the chart.
 
 {% tabs %} 
 
@@ -194,9 +194,10 @@ Run the project and check if you get following output to make sure you have conf
 
 ## Populate Chart with data
 
-As we are going to visualize the comparison of heights in the data model, add `ColumnSeries` to `Series` property of chart, and then bind the `Data` property of the above `ViewModel` to the `ColumnSeries.ItemsSource` as follows.
+As we are going to visualize the comparison of heights in the data model, add [ColumnSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ColumnSeries.html?tabs=tabid-1) to [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) property of chart, and then bind the `Data` property of the above `ViewModel` to the `ColumnSeries.ItemsSource` as follows.
 
-N> You need to set `XBindingPath` and `YBindingPath` properties so that chart will fetch values from the respective properties in the data model to plot the series. 
+N> You need to set [XBindingPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_XBindingPath) and [YBindingPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.XYDataSeries.html#Syncfusion_Maui_Charts_XYDataSeries_YBindingPath)
+ properties so that chart will fetch values from the respective properties in the data model to plot the series. 
 
 {% tabs %}   
 
@@ -259,7 +260,7 @@ N> You need to set `XBindingPath` and `YBindingPath` properties so that chart wi
 
 ## Add a title
 
-The title of the chart provide quick information to the user about the data being plotted in the chart. The `Title` property is used to set title for the chart as follows.
+The title of the chart provide quick information to the user about the data being plotted in the chart. The [Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Title) property is used to set title for the chart as follows.
 
 {% tabs %} 
 
@@ -289,7 +290,7 @@ The title of the chart provide quick information to the user about the data bein
 
 ## Enable the data labels
 
-The `ShowDataLabels` property of series can be used to enable the data labels to improve the readability of the chart. The label visibility is set to `False` by default.
+The [ShowDataLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_ShowDataLabels) property of series can be used to enable the data labels to improve the readability of the chart. The label visibility is set to `False` by default.
 
 {% tabs %} 
 
@@ -317,7 +318,7 @@ The `ShowDataLabels` property of series can be used to enable the data labels to
 
 ## Enable a legend
 
-The legend provides information about the data point displayed in the chart. The `Legend` property of the chart was used to enable it.
+The legend provides information about the data point displayed in the chart. The [Legend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Legend) property of the chart was used to enable it.
 
 {% tabs %} 
 
@@ -373,7 +374,7 @@ N> Additionally, set label for each series using the `Label` property of chart s
 
 ## Enable tooltip
 
-Tooltips are used to show information about the segment, when a user hovers over a segment. Enable tooltip by setting series `ShowTooltip` property to true.
+Tooltips are used to show information about the segment, when a user hovers over a segment. Enable tooltip by setting series [ShowTooltip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_ShowTooltip) property to true.
 
 {% tabs %} 
 

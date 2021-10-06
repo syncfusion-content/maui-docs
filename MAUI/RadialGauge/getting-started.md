@@ -13,11 +13,11 @@ This section explains the steps required to add the `.NET MAUI Radial Gauge` con
 
 ## Creating an application with .NET MAUI Radial Gauge
 
-1. Create a new .NET MAUI application in the Visual Studio.
+* Create a new .NET MAUI application in the Visual Studio.
 
-2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfRadialGauge to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Gauges] and then install it.
+* Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfRadialGauge to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Gauges] and then install it.
 
-3. Import the control namespace `Syncfusion.Maui.Gauges` in XAML or C# code.
+* Import the control namespace `Syncfusion.Maui.Gauges` in XAML or C# code.
 
 {% tabs %}
 
@@ -35,7 +35,7 @@ using Syncfusion.Maui.Gauges;
 
 {% endtabs %}
 
-4. Initialize the SfRadialGauge control
+* Initialize the SfRadialGauge control
 
 {% tabs %}
 
@@ -54,7 +54,7 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-5. Register the handler
+* Register the handler
 
 Syncfusion.Maui.Core nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file register the handler for Syncfusion core.
 
