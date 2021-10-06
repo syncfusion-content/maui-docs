@@ -11,7 +11,7 @@ documentation: ug
 
 ## Tab Bar Placement
 
-The .NET MAUI Tab View provides two options that determine how the tab bar aligns relative to the tab content. The options are top and bottom. It can be done by using `TabBarPlacement`[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.TabBarPlacement.html] property.
+The .NET MAUI Tab View provides two options that determine how the tab bar aligns relative to the tab content. The options are top and bottom. It can be done by using [TabBarPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.TabBarPlacement.html) property.
 
 ### Top
 
