@@ -9,13 +9,13 @@ documentation: ug
 
 # Arrange tabs in .NET MAUI Tab View (SfTabView)
 
-.NET MAUI Tab View provides two modes that determine how the width of the tab is calculated on the tab bar while it gets populated. The options are `Default` and `SizeToContent` and can be achieved using `TabWidthMode`[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.TabWidthMode.html] property.
+.NET MAUI Tab View provides two modes that determines how the width of the tab is calculated on the tab bar while it gets populated. The options are `Default` and `SizeToContent` and can be achieved using the `TabWidthMode`[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.TabWidthMode.html] property.
 
 ## Fixed bar
 
-The width of the tab is divided equally based on the available control width. This enables a fixed tab bar that won’t allow tab scrolling even it contains any number of tabs. This can be achieved by setting the `TabWidthMode` as `Default`.
+The width of the tab is divided equally based on the available control width. This enables a fixed tab bar that will not allow tab scrolling even it contains any number of tabs. This can be achieved by setting the `TabWidthMode` as `Default`.
 
-N> This mode is recommended when the tab count is not more than 4. More tabs in this mode may appear with the text being trimmed.
+N> This mode is recommended when the tab count is not more than four. More tabs in this mode may appear with the text being trimmed.
 
 ![Tab Width Mode Default](images/Tab-Width-Mode-Default.png)
 

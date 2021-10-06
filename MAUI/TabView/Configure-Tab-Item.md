@@ -14,9 +14,9 @@ A tab item consists of the following elements that can be customized.
 
 * **ImageSource** - The image to be displayed in the tab bar representing the tab item.
 
-* **Content** - The assigned view will get displayed in the main area of the Tab View.
+* **Content** - The assigned view will get displayed in the main area of the tab view.
 
-* **ImagePosition** - Determines the Image text relation of the tab item.
+* **ImagePosition** - Determines the image text relation of the tab item.
 
 * **TextColor** - The text color of the tab item displayed in the tab bar.
 
@@ -28,7 +28,7 @@ A tab item consists of the following elements that can be customized.
 
 * **IsSelected** - Indicates whether the tab item is active or not.
 
-## Tab Image Position
+## Tab image Position
 
 The .NET MAUI Tab View provides four options that determine how the image of the tab aligns relative to the text. The options are left, top, right and bottom. It can be achieved using the `ImagePosition`[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.TabImagePosition.html] property of `SfTabItem`[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html] of type TabImagePosition.
 

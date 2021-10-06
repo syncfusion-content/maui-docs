@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with .NET MAUI Tab View control | Syncfusion
-description: Learn here about getting started with Syncfusion .NET MAUI Tab View (SfTabView) control, its elements and more.
+description: Learn here all about getting started with Syncfusion .NET MAUI Tab View (SfTabView) control, its elements and more.
 platform: maui
 control: Tab View
 documentation: ug
@@ -11,13 +11,13 @@ documentation: ug
 
 This section explains the steps required to configure the .NET MAUI Tab View control and customize its elements.
 
-## Adding SfTabView reference
+## Adding a SfTabView reference
 
-Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add `SfTabView`[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html?tabs=tabid-1] to your project, open the NuGet package manager in Visual Studio, search for `Syncfusion.Maui.TabView`[https://www.nuget.org/packages/Syncfusion.Maui.TabView/] and then install it.
+Syncfusion .NET MAUI components are available in [Nuget.org](https://www.nuget.org/). To add `SfTabView`[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html?tabs=tabid-1] to your project, open the NuGet package manager in Visual Studio, search for `Syncfusion.Maui.TabView`[https://www.nuget.org/packages/Syncfusion.Maui.TabView/] and then install it.
 
 ## Register the handler
 
-`Syncfusion.Maui.Core`[https://www.nuget.org/packages/Syncfusion.Maui.Core/] nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file register the handler for Syncfusion core.
+`Syncfusion.Maui.Core`[https://www.nuget.org/packages/Syncfusion.Maui.Core/] NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
 
 {% highlight C# %}
 
@@ -52,7 +52,7 @@ namespace TabViewMauiSample
 
 ## Create a simple Tab View
 
-This section explains how to create a Tab View and configure it. The control can be configured entirely in C# code or by using XAML markup. The following screenshot illustrates the output of Tab View on iOS, Android and MacCatalyst.
+This section explains how to create a Tab View and configure it. The control can be configured entirely in C# code or by the XAML markup. The following screenshot illustrates the output of Tab View on iOS, Android, and MacCatalyst.
 
 ![TabViewImage](images/TabView.png)
 
@@ -60,11 +60,11 @@ This section explains how to create a Tab View and configure it. The control can
 
 Create a new .NET MAUI application in Visual Studio.
 
-### Adding SfTabView control
+### Adding a SfTabView control
 
-Add the nuget to the project as discussed in the above reference section.
+Add the NuGet to the project as discussed in the above reference section.
 
-Add the namespace as shown in the following code.
+Add the namespace as shown in the following code sample.
 
 {% tabs %}
 
@@ -84,7 +84,7 @@ using Syncfusion.Maui.TabView;
 
 Set the control to content in `ContentPage`.
 
-Tab items can be added to the Tab View through the `Items`[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_ItemsProperty] property of `SfTabView`[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html], which holds the collection of `SfTabItem`[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html] through `TabItemsCollection`[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.TabItemCollection.html].
+Tab items can be added to the Tab View using the `Items`[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_ItemsProperty] property of `SfTabView`[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html], which holds the collection of `SfTabItem`[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html] by `TabItemsCollection`[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.TabItemCollection.html].
 
 {% tabs %}
 
