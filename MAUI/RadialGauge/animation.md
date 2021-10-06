@@ -11,7 +11,7 @@ documentation: ug
 
 ## Pointer animation
 
-The `EnableAnimation` property of pointer allows you to enable or disable animation for pointer.
+The [`EnableAnimation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialPointer.html#Syncfusion_Maui_Gauges_RadialPointer_EnableAnimation) property of pointer allows you to enable or disable animation for pointer.
 
 {% tabs %}
 
@@ -88,7 +88,7 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
 ## Animation duration
 
-The pointers `AnimationDuration` property allows you to control the animation duration (in milliseconds). The default value of animation duration is 1000ms.
+The pointers [`AnimationDuration`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialPointer.html#Syncfusion_Maui_Gauges_RadialPointer_AnimationDuration) property allows you to control the animation duration (in milliseconds). The default value of animation duration is 1000ms.
 
 {% tabs %}
 
@@ -169,7 +169,7 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
 ## Animation easing
 
-The `AnimationEasing` property of pointer allows you to use below type of easing function in pointer animation. 
+The [`AnimationEasing`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialPointer.html#Syncfusion_Maui_Gauges_RadialPointer_AnimationEasing) property of pointer allows you to use below type of easing function in pointer animation. 
 
 * `Linear`
 
@@ -193,7 +193,7 @@ The `AnimationEasing` property of pointer allows you to use below type of easing
 
 * `SpringOut`
 
-The default value of `AnimationEasing` property is `Linear`.
+The default value of [`AnimationEasing`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialPointer.html#Syncfusion_Maui_Gauges_RadialPointer_AnimationEasing) property is `Linear`.
 
 {% tabs %}
 
