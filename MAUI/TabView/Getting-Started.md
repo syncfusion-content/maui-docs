@@ -52,7 +52,7 @@ namespace TabViewMauiSample
 
 ## Create a simple Tab View
 
-This section explains how to create a Tab View and configure it. The control can be configured entirely in C# code or by using XAML markup. The following screenshot illustrates the output of Tab View on iOS, Android and MacCatalyst.
+This section explains how to create a Tab View and configure it. The control can be configured entirely in C# code or by using XAML markup. The following screenshot illustrates the output of Tab View on Android platform.
 
 ![TabViewImage](images/TabView.png)
 
