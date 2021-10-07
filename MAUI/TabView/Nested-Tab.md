@@ -9,7 +9,7 @@ documentation: ug
 
 # Nested tab in .NET MAUI Tab View (SfTabView)
 
-Nested tab items can be configured in tab view through the `Items` property of `SfTabView`, which holds the nested collection of `SfTabItem` through `TabItemsCollection`.
+Nested tab items can be configured in tab view through the [Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_Items) property of [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html), which holds the nested collection of [SfTabItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html) through [TabItemsCollection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.TabItemCollection.html).
 
 {% tabs %}
 
@@ -33,7 +33,7 @@ Nested tab items can be configured in tab view through the `Items` property of `
                     <tabView:SfTabItem Header="Photos">
                         <tabView:SfTabItem.Content>
                             <Grid BackgroundColor="Blue">
-                                <tabView:SfTabView x:Name="tabView"
+                                <tabView:SfTabView x:Name="nestedTabView"
                                                     TabBarBackground="#FDF8F6"
                                                     TabWidthMode="Default"
                                                     TabBarPlacement="Bottom"
@@ -44,12 +44,7 @@ Nested tab items can be configured in tab view through the `Items` property of `
                                             <tabView:SfTabItem Header="Camera">
                                                 <tabView:SfTabItem.Content>
                                                     <Grid BackgroundColor="Blue">
-                                                        <Image WidthRequest="35"
-                                                                HeightRequest="35"
-                                                                VerticalOptions="Center"
-                                                                HorizontalOptions="Center"
-                                                                Aspect="AspectFit"
-                                                                Source="camera"/>    
+                                                      ...  
                                                     </Grid>
                                                 </tabView:SfTabItem.Content>
                                             </tabView:SfTabItem>
@@ -57,12 +52,7 @@ Nested tab items can be configured in tab view through the `Items` property of `
                                             <tabView:SfTabItem Header="Video">
                                                 <tabView:SfTabItem.Content>
                                                     <Grid BackgroundColor="Blue">
-                                                        <Image WidthRequest="35"
-                                                                HeightRequest="35"
-                                                                VerticalOptions="Center"
-                                                                HorizontalOptions="Center"
-                                                                Aspect="AspectFit"
-                                                                Source="video"/>    
+                                                       ...   
                                                     </Grid>
                                                 </tabView:SfTabItem.Content>
                                             </tabView:SfTabItem>
@@ -70,12 +60,7 @@ Nested tab items can be configured in tab view through the `Items` property of `
                                             <tabView:SfTabItem Header="Screenshots">
                                                 <tabView:SfTabItem.Content>
                                                     <Grid BackgroundColor="Blue">
-                                                        <Image WidthRequest="35"
-                                                                HeightRequest="35"
-                                                                VerticalOptions="Center"
-                                                                HorizontalOptions="Center"
-                                                                Aspect="AspectFit"
-                                                                Source="screenshots"/>    
+                                                        ...   
                                                     </Grid>
                                                 </tabView:SfTabItem.Content>
                                             </tabView:SfTabItem>
@@ -83,12 +68,7 @@ Nested tab items can be configured in tab view through the `Items` property of `
                                             <tabView:SfTabItem Header="Wallpaper">
                                                 <tabView:SfTabItem.Content>
                                                     <Grid BackgroundColor="Blue">
-                                                        <Image WidthRequest="35"
-                                                                HeightRequest="35"
-                                                                VerticalOptions="Center"
-                                                                HorizontalOptions="Center"
-                                                                Aspect="AspectFit"
-                                                                Source="wallpaper"/>    
+                                                       ...   
                                                     </Grid>
                                                 </tabView:SfTabItem.Content>
                                             </tabView:SfTabItem>
@@ -119,4 +99,6 @@ Nested tab items can be configured in tab view through the `Items` property of `
 
 {% endtabs %}
 
-![NestedTab](images/Nested-Tab.png)
+![NestedTab](images/Nested_Tab.png)
+
+N> View [sample](https://github.com/SyncfusionExamples/maui-tabview-samples/tree/main/NestedTabViewSample) in GitHub

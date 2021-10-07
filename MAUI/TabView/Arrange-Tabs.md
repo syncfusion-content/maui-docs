@@ -9,7 +9,7 @@ documentation: ug
 
 # Arrange tabs in .NET MAUI Tab View (SfTabView)
 
-.NET MAUI Tab View provides two modes that determine how the width of the tab is calculated on the tab bar while it gets populated. The options are `Default` and `SizeToContent` and can be achieved using `TabWidthMode` property.
+.NET MAUI Tab View provides two modes that determine how the width of the tab is calculated on the tab bar while it gets populated. The options are `Default` and `SizeToContent` and can be achieved using [TabWidthMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.TabWidthMode.html) property.
 
 ## Fixed bar
 
@@ -21,7 +21,7 @@ N> This mode is recommended when the tab count is not more than 4. More tabs in 
 
 ## Based on the text size
 
-The width of a tab is set to fit the text or image that it contains by setting the `TabWidthMode` as `Default`. Scroll is enabled in this mode to access the items that are outside the visible area.
+The width of a tab is set to fit the text or image that it contains by setting the `TabWidthMode` as `SizeToContent`. Scroll is enabled in this mode to access the items that are outside the visible area.
 
 ![Tab Width Mode Size to fit](images/Tab-Width-Mode-SizeToFit.png) 
 
@@ -35,10 +35,28 @@ The width of a tab is set to fit the text or image that it contains by setting t
              xmlns:tabView="http://schemas.syncfusion.com/maui"
              BackgroundColor="{DynamicResource SecondaryColor}">
     <ContentPage.Content>
-        <tabView:SfTabView TabWidthMode="SizeToContent">
-                    <tabView:SfTabItem Header="Call" />
-                    <tabView:SfTabItem Header="Favorites" />
-                    <tabView:SfTabItem Header="Contacts" />
+         <tabView:SfTabView TabWidthMode="SizeToContent">
+            <tabView:SfTabItem Header="Call">
+                <tabView:SfTabItem.Content>
+                    <ListView RowHeight="50">
+                        ...
+                    </ListView>
+                </tabView:SfTabItem.Content>
+            </tabView:SfTabItem>
+            <tabView:SfTabItem Header="Favorites">
+                <tabView:SfTabItem.Content>
+                    <ListView RowHeight="50">
+                       ...
+                    </ListView>
+                </tabView:SfTabItem.Content>
+            </tabView:SfTabItem>
+            <tabView:SfTabItem Header="Contacts">
+                <tabView:SfTabItem.Content>
+                    <ListView RowHeight="50">
+                       ...
+                    </ListView>
+                </tabView:SfTabItem.Content>
+            </tabView:SfTabItem>
         </tabView:SfTabView>
     </ContentPage.Content>
 </ContentPage>
@@ -63,14 +81,26 @@ namespace TabViewMauiSample
                 new SfTabItem()
                 {
                     Header = "Calls",
+                    Content = new ListView()
+                    {
+                        //// code
+                    },
                 },
                 new SfTabItem()
                 {
                     Header = "Favorites",
+                    Content = new ListView()
+                    {
+                        //// code
+                    },
                 },
                 new SfTabItem()
                 {
                     Header = "Contacts",
+                    Content = new ListView()
+                    {
+                        //// code
+                    },
                 }
             };
 
@@ -84,3 +114,7 @@ namespace TabViewMauiSample
 {% endhighlight %}
 
 {% endtabs %}
+
+![Getting_Started](images/Arrange_Tabs.png)
+
+N> View [sample](https://github.com/SyncfusionExamples/maui-tabview-samples/tree/main/TabViewWidthCustomization) in GitHub

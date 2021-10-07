@@ -30,7 +30,7 @@ A tab item consists of the following elements that can be customized.
 
 ## Tab Image Position
 
-The .NET MAUI Tab View provides four options that determine how the image of the tab aligns relative to the text. The options are left, top, right and bottom. It can be achieved using the `ImagePosition` property of `SfTabItem` of type TabImagePosition.
+The .NET MAUI Tab View provides four options that determine how the image of the tab aligns relative to the text. The options are left, top, right and bottom. It can be achieved using the [ImagePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.TabImagePosition.html) property of [SfTabItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html) of type TabImagePosition.
 
 N> Each tab item can be set with different image positions. Visual State Manager can be used to apply same value to all tabs.
 
@@ -69,21 +69,27 @@ The image will be placed to the right side of the text horizontally.
              BackgroundColor="{DynamicResource SecondaryColor}">
     <ContentPage.Content>
         <tabView:SfTabView>
-                    <tabView:SfTabItem Header="Call" TabImagePosition="Right">
-                        <tabView:SfTabItem.Content>
-                            <Grid BackgroundColor="Red" x:Name="AllContactsGrid" />
-                        </tabView:SfTabItem.Content>
-                    </tabView:SfTabItem>
-                    <tabView:SfTabItem Header="Favorites" TabImagePosition="Right">
-                        <tabView:SfTabItem.Content>
-                            <Grid BackgroundColor="Green" x:Name="FavoritesGrid" />
-                        </tabView:SfTabItem.Content>
-                    </tabView:SfTabItem>
-                    <tabView:SfTabItem Header="Contacts" TabImagePosition="Right">
-                        <tabView:SfTabItem.Content>
-                            <Grid BackgroundColor="Blue" x:Name="ContactsGrid" />
-                        </tabView:SfTabItem.Content>
-                    </tabView:SfTabItem>
+            <tabView:SfTabItem Header="Alexandar" ImageSource="alexandar" TabImagePosition="Left">
+                <tabView:SfTabItem.Content>
+                    <ListView RowHeight="50">
+                        ...
+                    </ListView>
+                </tabView:SfTabItem.Content>
+            </tabView:SfTabItem>
+            <tabView:SfTabItem Header="Gabriella" ImageSource="gabriella" TabImagePosition="Left">
+                <tabView:SfTabItem.Content>
+                    <ListView RowHeight="50">
+                       ...
+                    </ListView>
+                </tabView:SfTabItem.Content>
+            </tabView:SfTabItem>
+            <tabView:SfTabItem Header="Clara" ImageSource="clara" TabImagePosition="Left">
+                <tabView:SfTabItem.Content>
+                    <ListView RowHeight="50">
+                        ...
+                    </ListView>
+                </tabView:SfTabItem.Content>
+            </tabView:SfTabItem>
         </tabView:SfTabView>
     </ContentPage.Content>
 </ContentPage>
@@ -103,28 +109,34 @@ namespace TabViewMauiSample
 		{
 			InitializeComponent ();
             var tabView = new SfTabView();
-            Grid allContactsGrid = new Grid { BackgroundColor = Color.Red };
-            Grid favoritesGrid = new Grid { BackgroundColor = Color.Green };
-            Grid contactsGrid = new Grid { BackgroundColor = Color.Blue };
             var tabItems = new TabItemCollection
             {
                 new SfTabItem()
                 {
                     Header = "Calls",
-                    TabImagePosition = TabImagePosition.Right,
-                    Content = allContactsGrid
+                    TabImagePosition = TabImagePosition.Left,
+                    Content = new ListView()
+                    {
+                        //// code
+                    },
                 },
                 new SfTabItem()
                 {
                     Header = "Favorites",
-                    TabImagePosition = TabImagePosition.Right,
-                    Content = favoritesGrid
+                    TabImagePosition = TabImagePosition.Left,
+                    Content = new ListView()
+                    {
+                        //// code
+                    },
                 },
                 new SfTabItem()
                 {
                     Header = "Contacts",
-                    TabImagePosition = TabImagePosition.Right,
-                    Content = contactsGrid
+                    TabImagePosition = TabImagePosition.Left,
+                    Content = new ListView()
+                    {
+                        //// code
+                    },
                 }
             };
 
@@ -137,3 +149,7 @@ namespace TabViewMauiSample
 {% endhighlight %}
 
 {% endtabs %}
+
+![Configure TabItem](images/Configure_TabItem.png) 
+
+N> View [sample](https://github.com/SyncfusionExamples/maui-tabview-samples/tree/main/ConfigureTabItem) in GitHub

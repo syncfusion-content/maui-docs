@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI Radial Gauge
 
-This section explains the steps required to add the `.NET MAUI Radial Gauge` control and its elements such as axis, range, pointer, and annotation. This section covers only basic features needed to get started with Syncfusion radial gauge control.
+This section explains the steps required to add the [`.NET MAUI Radial Gauge`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfRadialGauge.html) control and its elements such as axis, range, pointer, and annotation. This section covers only basic features needed to get started with Syncfusion radial gauge control.
 
 ## Creating an application using the .NET MAUI Radial Gauge
 
@@ -54,7 +54,7 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-* Register the handler
+### Register the handler
 
 Syncfusion.Maui.Core nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file register the handler for Syncfusion core.
 
@@ -91,7 +91,7 @@ namespace GaugeMauiSample
 
 ## Add axis to the radial gauge
 
-Axes contain a list of axis elements, to which you can add any number of radial axes inside the gauge. You can specify the minimum and maximum values of axis using the `Minimum` and `Maximum` properties as demonstrated in the following code sample.
+Axes contain a list of axis elements, to which you can add any number of radial axes inside the gauge. You can specify the minimum and maximum values of axis using the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_Minimum) and [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_Maximum) properties as demonstrated in the following code sample.
 
 {% tabs %}
 
@@ -123,7 +123,7 @@ this.Content = sfRadialGauge;
 
 ## Add range to the radial gauge
 
-Ranges contain a list of range elements, to which you can add any number of ranges inside the axis. You can specify the start value, end value, and background color for range using the `StartValue`, `EndValue`, and `Fill` properties as demonstrated in the following code sample.
+Ranges contain a list of range elements, to which you can add any number of ranges inside the axis. You can specify the start value, end value, and background color for range using the [`StartValue`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialRange.html#Syncfusion_Maui_Gauges_RadialRange_StartValue), [`EndValue`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialRange.html#Syncfusion_Maui_Gauges_RadialRange_EndValue), and [`Fill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialRange.html#Syncfusion_Maui_Gauges_RadialRange_Fill) properties as demonstrated in the following code sample.
 
 {% tabs %}
 
@@ -186,7 +186,7 @@ this.Content = sfRadialGauge;
 
 ## Add pointer to the radial gauge
 
-You can add any number of views such as text or image as an annotation inside the axis. The position of annotation can be customized using the `DirectionUnit`, `DirectionValue`, and `PositionFactor` properties as demonstrated in the following code sample.
+You can add any number of views such as text or image as an annotation inside the axis. The position of annotation can be customized using the [`DirectionUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeAnnotation.html#Syncfusion_Maui_Gauges_GaugeAnnotation_DirectionUnit), [`DirectionValue`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeAnnotation.html#Syncfusion_Maui_Gauges_GaugeAnnotation_DirectionValue), and [`PositionFactor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeAnnotation.html#Syncfusion_Maui_Gauges_GaugeAnnotation_PositionFactor) properties as demonstrated in the following code sample.
 
 {% tabs %}
 
@@ -229,7 +229,7 @@ this.Content = sfRadialGauge;
 
 ## Add annotation to the radial gauge
 
-You can add any number of views such as text or image as an annotation inside the axis. The position of annotation can be customized using the `DirectionUnit` `DirectionValue` and `PositionFactor` properties as demonstrated in the following code.
+You can add any number of views such as text or image as an annotation inside the axis. The position of annotation can be customized using the [`DirectionUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeAnnotation.html#Syncfusion_Maui_Gauges_GaugeAnnotation_DirectionUnit) [`DirectionValue`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeAnnotation.html#Syncfusion_Maui_Gauges_GaugeAnnotation_DirectionValue) and [`PositionFactor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeAnnotation.html#Syncfusion_Maui_Gauges_GaugeAnnotation_PositionFactor) properties as demonstrated in the following code.
 
 {% tabs %}
 
