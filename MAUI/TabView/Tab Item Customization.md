@@ -20,7 +20,7 @@ Holds the text of the tab item that is displayed in the tab bar.
 
 {% highlight xaml %}
     <tabView:SfTabView>
-        <tabView:SfTabItem Header="Calls">
+        <tabView:SfTabItem Header="Item 1">
     </tabView:SfTabView>
 {% endhighlight %}
 
@@ -30,12 +30,14 @@ Holds the text of the tab item that is displayed in the tab bar.
     {
         new SfTabItem()
         {
-            Header = "Calls",
+            Header = "Item 1",
         }
     }
 {% endhighlight %}
 
 {% endtabs %}
+
+![Tab Item Header](images/Tab-Width-Mode-Default.png) 
 
 ### ImageSource 
 
@@ -45,7 +47,7 @@ The image to be displayed in the tab bar representing the tab item.
 
 {% highlight xaml %}
     <tabView:SfTabView>
-        <tabView:SfTabItem Header="Calls" ImageSource="alexandar">
+        <tabView:SfTabItem Header="Item 1" ImageSource="alexandar">
     </tabView:SfTabView>
 {% endhighlight %}
 
@@ -55,13 +57,16 @@ The image to be displayed in the tab bar representing the tab item.
     {
         new SfTabItem()
         {
-            Header = "Calls",
+            Header = "Item 1",
             ImageSource = "alexandar",
         }
     }
+
 {% endhighlight %}
 
 {% endtabs %}
+
+![Tab Item ImageSource](images/Image-Position-Left.png) 
 
 ### Content 
 
@@ -98,6 +103,8 @@ The assigned view will get displayed in the main area of the tab view.
 {% endhighlight %}
 
 {% endtabs %}
+
+![Tab Item ImageSource](images/TabItem_Content.png) 
 
 ## Image position options 
 
@@ -238,6 +245,8 @@ The text color of the tab item displayed in the tab bar.
 
 {% endtabs %}
 
+![Tab Image Position Right](images/Image-Position-Right.png) 
+
 ## Font Customization 
 
 This type of customization involves making changes to the looks of some font elements.
@@ -267,6 +276,8 @@ Font family of the tab item text displayed in the tab bar.
 
 {% endtabs %}
 
+![TabItem FontFamily](images/FontFamily.png) 
+
 ### FontAttribute
 
 The font style of the text of each tab item in the tab bar.
@@ -291,6 +302,8 @@ The font style of the text of each tab item in the tab bar.
 {% endhighlight %}
 
 {% endtabs %}
+
+![Tab Item FontAttribute](images/FontAttributes.png) 
 
 ### FontSize
 
@@ -317,6 +330,10 @@ The size of the text of each tab item in the tab bar.
 
 {% endtabs %}
 
+![Tab Item FontSize](images/FontSize.png) 
+
 ### IsSelected
 
 Indicates whether the tab item is active or not.
+
+N> View [sample](https://github.com/SyncfusionExamples/maui-tabview-samples/tree/main/TabViewCustomizationSample) in GitHub

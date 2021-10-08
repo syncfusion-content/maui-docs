@@ -129,6 +129,8 @@ The SolidColorBrush class defines the color property of `TabBarBackground`, whic
 
 {% endtabs %}
 
+![Tab Bar Solid Color Bottom](images/TabBarSolidColor.png) 
+
 ### Gradient Color 
 
 You can also customize the background with a linear gradient and radial gradient as like below example.
@@ -145,5 +147,7 @@ You can also customize the background with a linear gradient and radial gradient
     </tabView:SfTabView>
 {% endhighlight %}
 {% endtabs %}
+
+![Tab Bar Solid Color Bottom](images/TabBarGradientColor.png) 
 
 N> View [sample](https://github.com/SyncfusionExamples/maui-tabview-samples/tree/main/TabBarCustomization) in GitHub

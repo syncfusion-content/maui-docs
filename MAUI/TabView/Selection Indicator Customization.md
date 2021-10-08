@@ -107,3 +107,5 @@ You can also customize the background with a linear gradient and radial gradient
 {% endtabs %}
 
 ![Indicator Placement](images/Selection-Indicator-gradient-background.png) 
+
+N> View [sample](https://github.com/SyncfusionExamples/maui-tabview-samples/tree/main/TabBarCustomization) in GitHub
