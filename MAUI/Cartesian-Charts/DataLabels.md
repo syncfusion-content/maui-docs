@@ -25,14 +25,13 @@ The [ShowDataLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-. . .
-<chart:SfCartesianChart.Series>
-    <chart:ColumnSeries ItemsSource="{Binding Data}" 
-                     XBindingPath="Category"
-                     YBindingPath="Value" ShowDataLabels="True">
-    </chart:ColumnSeries>
-</chart:SfCartesianChart.Series>
-
+    . . .
+    <chart:SfCartesianChart.Series>
+        <chart:ColumnSeries ItemsSource="{Binding Data}" 
+                        XBindingPath="Category"
+                        YBindingPath="Value" ShowDataLabels="True">
+        </chart:ColumnSeries>
+    </chart:SfCartesianChart.Series>
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -78,28 +77,28 @@ N> This behavior varies based on the chart series type.
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
     . . .
     <chart:ColumnSeries ShowDataLabels="True">
         <chart:ColumnSeries.DataLabelSettings>
             <chart:CartesianDataLabelSettings BarAlignment="Middle"/>
         </chart:ColumnSeries.DataLabelSettings>
     </chart:ColumnSeries>
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    ColumnSeries series = new ColumnSeries();
-    . . .
-    series.DataLabelSettings = new CartesianDataLabelSettings()
-    {
-        BarAlignment = Alignment.Middle,
-    };
+SfCartesianChart chart = new SfCartesianChart();
+ColumnSeries series = new ColumnSeries();
+. . .
+series.DataLabelSettings = new CartesianDataLabelSettings()
+{
+    BarAlignment = Alignment.Middle,
+};
 
-    chart.Series.Add(series);
+chart.Series.Add(series);
 
 {% endhighlight %}
 
@@ -121,29 +120,28 @@ The [LabelPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
     . . .
     <chart:ColumnSeries ShowDataLabels="True">
         <chart:ColumnSeries.DataLabelSettings>
             <chart:CartesianDataLabelSettings  UseSeriesPalette="True"/>
         </chart:ColumnSeries.DataLabelSettings>
     </chart:ColumnSeries>
-
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    ColumnSeries series = new ColumnSeries();
-    . . .
-    series.DataLabelSettings = new CartesianDataLabelSettings()
-    {
-        UseSeriesPalette = true,
-    };
+SfCartesianChart chart = new SfCartesianChart();
+ColumnSeries series = new ColumnSeries();
+. . .
+series.DataLabelSettings = new CartesianDataLabelSettings()
+{
+    UseSeriesPalette = true,
+};
 
-    chart.Series.Add(series);
+chart.Series.Add(series);
 
 {% endhighlight %}
 

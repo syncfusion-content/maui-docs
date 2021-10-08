@@ -19,27 +19,27 @@ To enable the selection in chart, create an instance of [ChartSelectionBehavior]
 
 {% highlight xaml %}
 
-    <chart:SfCircularChart>
-        <chart:SfCircularChart.ChartBehaviors>
-            <chart:ChartSelectionBehavior />
-        </chart:SfCircularChart.ChartBehaviors>
-    <chart:SfCircularChart.Series>
-        <chart:PieSeries SelectionBrush="BlueViolet"/>
-    </chart:SfCircularChart.Series>
-    </chart:SfCircularChart>
+<chart:SfCircularChart>
+    <chart:SfCircularChart.ChartBehaviors>
+        <chart:ChartSelectionBehavior />
+    </chart:SfCircularChart.ChartBehaviors>
+<chart:SfCircularChart.Series>
+    <chart:PieSeries SelectionBrush="BlueViolet"/>
+</chart:SfCircularChart.Series>
+</chart:SfCircularChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCircularChart chart = new SfCircularChart();
+SfCircularChart chart = new SfCircularChart();
 
-    ChartSelectionBehavior selection = new ChartSelectionBehavior();
-    chart.ChartBehaviors.Add(selection);
+ChartSelectionBehavior selection = new ChartSelectionBehavior();
+chart.ChartBehaviors.Add(selection);
 
-    PieSeries series = new PieSeries();
-    series.SelectionBrush = Brush.BlueViolet;
-    chart.Series.Add(series);
+PieSeries series = new PieSeries();
+series.SelectionBrush = Brush.BlueViolet;
+chart.Series.Add(series);
 
 {% endhighlight %}
 
@@ -55,23 +55,23 @@ The [Type](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelec
 
 {% highlight xml %}
 
-    <chart:SfCircularChart>
-    . . .
-        <chart:SfCircularChart.ChartBehaviors>
-            <chart:ChartSelectionBehavior Type="Point"/>
-        </chart:SfCircularChart.ChartBehaviors>
+<chart:SfCircularChart>
+. . .
+    <chart:SfCircularChart.ChartBehaviors>
+        <chart:ChartSelectionBehavior Type="Point"/>
+    </chart:SfCircularChart.ChartBehaviors>
 
-    </chart:SfCircularChart>
+</chart:SfCircularChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCircularChart chart = new SfCircularChart();
-    . . .
-    ChartSelectionBehavior selection = new ChartSelectionBehavior();
-    selection.Type = SelectionType.Point;
-    chart.ChartBehaviors.Add(selection);
+SfCircularChart chart = new SfCircularChart();
+. . .
+ChartSelectionBehavior selection = new ChartSelectionBehavior();
+selection.Type = SelectionType.Point;
+chart.ChartBehaviors.Add(selection);
 
 {% endhighlight %}
 

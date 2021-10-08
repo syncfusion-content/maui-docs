@@ -24,25 +24,25 @@ Each data label can be represented by the following:
 
 {% highlight xaml %}
 
-    <chart:SfCircularChart>
-    . . .
-    <chart:PieSeries ShowDataLabels="True"
-                    ItemsSource="{Binding Data}"  
-                    XBindingPath="Product" 
-                    YBindingPath="SalesRate"/>
-    . . .
-    </chart:SfCircularChart>
+<chart:SfCircularChart>
+. . .
+<chart:PieSeries ShowDataLabels="True"
+                ItemsSource="{Binding Data}"  
+                XBindingPath="Product" 
+                YBindingPath="SalesRate"/>
+. . .
+</chart:SfCircularChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCircularChart chart = new SfCircularChart();
-    . . .
-    PieSeries series = new PieSeries();
-    series.ShowDataLabels = true;
-    . . .
-    chart.Series.Add(series);
+SfCircularChart chart = new SfCircularChart();
+. . .
+PieSeries series = new PieSeries();
+series.ShowDataLabels = true;
+. . .
+chart.Series.Add(series);
 
 {% endhighlight %}
 
@@ -64,30 +64,30 @@ Data labels can be customized by using the [DataLabelSettings](https://help.sync
 
 {% highlight xaml %}
 
-    <chart:SfCircularChart>
-    . . .
-    <chart:PieSeries ShowDataLabels="True">
-        <chart:PieSeries.DataLabelSettings>
-            <chart:CircularDataLabelSettings UseSeriesPalette="True"/>
-        </chart:PieSeries.DataLabelSettings>
-    </chart:PieSeries>
+<chart:SfCircularChart>
+. . .
+<chart:PieSeries ShowDataLabels="True">
+    <chart:PieSeries.DataLabelSettings>
+        <chart:CircularDataLabelSettings UseSeriesPalette="True"/>
+    </chart:PieSeries.DataLabelSettings>
+</chart:PieSeries>
 
-    </chart:SfCircularChart>
+</chart:SfCircularChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCircularChart chart = new SfCircularChart();
-    . . .
-    PieSeries series = new PieSeries();
-    series.ShowDataLabels = true;
-    series.DataLabelSettings = new CircularDataLabelSettings()
-    {
-        UseSeriesPalette = true,
-    };
+SfCircularChart chart = new SfCircularChart();
+. . .
+PieSeries series = new PieSeries();
+series.ShowDataLabels = true;
+series.DataLabelSettings = new CircularDataLabelSettings()
+{
+    UseSeriesPalette = true,
+};
 
-    chart.Series.Add(series);
+chart.Series.Add(series);
 
 {% endhighlight %}
 

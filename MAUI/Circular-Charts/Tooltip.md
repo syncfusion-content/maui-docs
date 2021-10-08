@@ -19,22 +19,21 @@ To define the tooltip in the chart, set the [ShowTooltip](https://help.syncfusio
 
 {% highlight xaml %}
 
-    <chart:SfCircularChart>
-    . . .
-        <chart:PieSeries ShowTooltip="True">
-        </chart:PieSeries>
-
-    </chart:SfCircularChart>
+<chart:SfCircularChart>
+. . .
+    <chart:PieSeries ShowTooltip="True">
+    </chart:PieSeries>
+</chart:SfCircularChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCircularChart chart = new SfCircularChart();
-    . . .
-    PieSeries series = new PieSeries();
-    series.ShowTooltip = true;
-    chart.Series.Add(series);
+SfCircularChart chart = new SfCircularChart();
+. . .
+PieSeries series = new PieSeries();
+series.ShowTooltip = true;
+chart.Series.Add(series);
 
 {% endhighlight %}
 
@@ -56,22 +55,22 @@ The [ChartTooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.C
 
 {% highlight xml %}
 
-    <chart:SfCircularChart>
-    . . .
-    <chart:SfCircularChart.ChartBehaviors>
-        <chart:ChartTooltipBehavior/>
-    </chart:SfCircularChart.ChartBehaviors>
+<chart:SfCircularChart>
+. . .
+<chart:SfCircularChart.ChartBehaviors>
+    <chart:ChartTooltipBehavior/>
+</chart:SfCircularChart.ChartBehaviors>
 
-    </chart:SfCircularChart>
+</chart:SfCircularChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCircularChart chart = new SfCircularChart();
-    . . .
-    ChartTooltipBehavior tooltip = new ChartTooltipBehavior();
-    chart.ChartBehaviors.Add(tooltip);
+SfCircularChart chart = new SfCircularChart();
+. . .
+ChartTooltipBehavior tooltip = new ChartTooltipBehavior();
+chart.ChartBehaviors.Add(tooltip);
 
 {% endhighlight %}
 
@@ -85,38 +84,38 @@ Circular chart provides support to customize the appearance of the tooltip by us
 
 {% highlight xaml %}
 
-    <chart:SfCircularChart>
+<chart:SfCircularChart>
     . . .
-        <chart:SfCircularChart.Resources>
-            <DataTemplate x:Key="tooltipTemplate">
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="{Binding Item.Product}" TextColor="Black" FontAttributes="Bold" FontSize="12" HorizontalOptions="Center" VerticalOptions="Center"/>
-                    <Label Text=" : " TextColor="Black" FontAttributes="Bold" FontSize="12" HorizontalOptions="Center" VerticalOptions="Center"/>
-                    <Label Text="{Binding Item.SalesRate}" TextColor="Black" FontAttributes="Bold" FontSize="12" HorizontalOptions="Center" VerticalOptions="Center"/>
-                </StackLayout>
-            </DataTemplate>
-        </chart:SfCircularChart.Resources>
+    <chart:SfCircularChart.Resources>
+        <DataTemplate x:Key="tooltipTemplate">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="{Binding Item.Product}" TextColor="Black" FontAttributes="Bold" FontSize="12" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <Label Text=" : " TextColor="Black" FontAttributes="Bold" FontSize="12" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <Label Text="{Binding Item.SalesRate}" TextColor="Black" FontAttributes="Bold" FontSize="12" HorizontalOptions="Center" VerticalOptions="Center"/>
+            </StackLayout>
+        </DataTemplate>
+    </chart:SfCircularChart.Resources>
 
-        <chart:SfCircularChart.Series>
-            <chart:PieSeries ShowTooltip="True"
-                    ItemsSource="{Binding Data}" 
-                    XBindingPath="Product" 
-                    YBindingPath="SalesRate"
-                    TooltipTemplate="{StaticResource tooltipTemplate}"/>
-        </chart:SfCircularChart.Series>
-        . . .
-    </chart:SfCircularChart>
+    <chart:SfCircularChart.Series>
+        <chart:PieSeries ShowTooltip="True"
+                ItemsSource="{Binding Data}" 
+                XBindingPath="Product" 
+                YBindingPath="SalesRate"
+                TooltipTemplate="{StaticResource tooltipTemplate}"/>
+    </chart:SfCircularChart.Series>
+    . . .
+</chart:SfCircularChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCircularChart chart = new SfCircularChart();
-    . . .
-    PieSeries series = new PieSeries();
-    series.ShowTooltip = true;
-    series.TooltipTemplate = chart.Resources["tooltipTemplate"] as DataTemplate;
-    . . .     
+SfCircularChart chart = new SfCircularChart();
+. . .
+PieSeries series = new PieSeries();
+series.ShowTooltip = true;
+series.TooltipTemplate = chart.Resources["tooltipTemplate"] as DataTemplate;
+. . .     
 {% endhighlight %}
 
 {% endtabs %}

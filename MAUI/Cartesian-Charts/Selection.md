@@ -19,17 +19,17 @@ To enable the selection in chart, create an instance of [ChartSelectionBehavior]
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-    . . .
-        <chart:SfCartesianChart.ChartBehaviors>
-            <chart:ChartSelectionBehavior />
-        </chart:SfCartesianChart.ChartBehaviors>
+<chart:SfCartesianChart>
+. . .
+    <chart:SfCartesianChart.ChartBehaviors>
+        <chart:ChartSelectionBehavior />
+    </chart:SfCartesianChart.ChartBehaviors>
 
-        <chart:ColumnSeries ItemsSource="{Binding Data}" 
-                            XBindingPath="Demand"
-                            YBindingPath="Year2010"
-                            SelectionBrush="Green"/>
-    </chart:SfCartesianChart>
+    <chart:ColumnSeries ItemsSource="{Binding Data}" 
+                        XBindingPath="Demand"
+                        YBindingPath="Year2010"
+                        SelectionBrush="Green"/>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
@@ -65,40 +65,40 @@ The [Type](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelec
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
     . . .
-        <chart:SfCartesianChart.ChartBehaviors>
-            <chart:ChartSelectionBehavior  Type="Point"/>
-        </chart:SfCartesianChart.ChartBehaviors>
+    <chart:SfCartesianChart.ChartBehaviors>
+        <chart:ChartSelectionBehavior  Type="Point"/>
+    </chart:SfCartesianChart.ChartBehaviors>
 
-        <chart:SfCartesianChart.Series>
-            <chart:ColumnSeries ItemsSource="{Binding Data}"  
-                                XBindingPath="Demand"
-                                YBindingPath="Year2010" 
-                                SelectionBrush="Green"/>
-        </chart:SfCartesianChart.Series>
+    <chart:SfCartesianChart.Series>
+        <chart:ColumnSeries ItemsSource="{Binding Data}"  
+                            XBindingPath="Demand"
+                            YBindingPath="Year2010" 
+                            SelectionBrush="Green"/>
+    </chart:SfCartesianChart.Series>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    . . .
-    ChartSelectionBehavior selection = new ChartSelectionBehavior();
-    selection.Type = SelectionType.Point;
-    chart.ChartBehaviors.Add(selection);
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+ChartSelectionBehavior selection = new ChartSelectionBehavior();
+selection.Type = SelectionType.Point;
+chart.ChartBehaviors.Add(selection);
 
-    ColumnSeries series = new ColumnSeries()
-    {
-        ItemsSource = new ViewModel().Data,
-        XBindingPath = "Demand",
-        YBindingPath = "Year2010",
-        SelectionBrush = Brush.Green
-    };
-    chart.Series.Add(series);
-    this.Content = chart;
+ColumnSeries series = new ColumnSeries()
+{
+    ItemsSource = new ViewModel().Data,
+    XBindingPath = "Demand",
+    YBindingPath = "Year2010",
+    SelectionBrush = Brush.Green
+};
+chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -112,41 +112,40 @@ Cartesian chart provides support to select a point programmatically on a chart u
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-    . . .
-        <chart:SfCartesianChart.ChartBehaviors>
-            <chart:ChartSelectionBehavior/>
-        </chart:SfCartesianChart.ChartBehaviors>
+<chart:SfCartesianChart>
+. . .
+    <chart:SfCartesianChart.ChartBehaviors>
+        <chart:ChartSelectionBehavior/>
+    </chart:SfCartesianChart.ChartBehaviors>
 
-        <chart:SfCartesianChart.Series>
-            <chart:ColumnSeries ItemsSource="{Binding Data}" 
-                                XBindingPath="Demand"
-                                YBindingPath="Year2010" 
-                                SelectionBrush="Green"
-                                SelectedIndex="3"/>
-        </chart:SfCartesianChart.Series>
-
-    </chart:SfCartesianChart>
+    <chart:SfCartesianChart.Series>
+        <chart:ColumnSeries ItemsSource="{Binding Data}" 
+                            XBindingPath="Demand"
+                            YBindingPath="Year2010" 
+                            SelectionBrush="Green"
+                            SelectedIndex="3"/>
+    </chart:SfCartesianChart.Series>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    . . .
-    ChartSelectionBehavior selection = new ChartSelectionBehavior();
-    chart.ChartBehaviors.Add(selection);
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+ChartSelectionBehavior selection = new ChartSelectionBehavior();
+chart.ChartBehaviors.Add(selection);
 
-    ColumnSeries series = new ColumnSeries()
-    {
-        ItemsSource = new ViewModel().Data,
-        XBindingPath = "Demand",
-        YBindingPath = "Year2010",
-        SelectionBrush = Brush.Green,
-        SelectedIndex = 3
-    };
-    chart.Series.Add(series);
-    this.Content = chart;
+ColumnSeries series = new ColumnSeries()
+{
+    ItemsSource = new ViewModel().Data,
+    XBindingPath = "Demand",
+    YBindingPath = "Year2010",
+    SelectionBrush = Brush.Green,
+    SelectedIndex = 3
+};
+chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
