@@ -22,13 +22,13 @@ This section explains how to populate the Cartesian chart with data, a title, da
 
 {% highlight xaml %}
 
-    <ContentPage
+<ContentPage
     . . .    
-        xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-        <Grid>
-            <chart:SfCartesianChart/>
-        </Grid>
-    </ContentPage>
+    xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
+    <Grid>
+        <chart:SfCartesianChart/>
+    </Grid>
+</ContentPage>
  
 {% endhighlight %}
 
