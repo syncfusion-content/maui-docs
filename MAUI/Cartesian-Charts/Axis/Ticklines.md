@@ -95,3 +95,5 @@ Both major and minor tick lines can be customized by using the [MajorTickStyle](
 {% endhighlight %}
 
 {% endtabs %}
+
+![Axis tick lines customization support in MAUI Chart](Axis_images/maui_chart_axis_tickline_customization.jpg)

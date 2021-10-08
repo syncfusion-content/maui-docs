@@ -52,6 +52,8 @@ The [Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis
 
 {% endtabs %}
 
+![Title support for ChartAxis in MAUI Chart](Axis_Images/maui_chart_axis_title.jpg)
+
 ## Customization
 
 The [Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_Title) property in axis provides options to customize the text and font of axis title. Axis does not display title by default. The title can be customized using following properties,

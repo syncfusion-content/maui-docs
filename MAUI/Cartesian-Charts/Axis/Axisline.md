@@ -22,7 +22,7 @@ Cartesian chart axis provides support to customize the style of axis line by def
     <chart:SfCartesianChart.PrimaryAxis>
         <chart:NumericalAxis >
             <chart:NumericalAxis.AxisLineStyle>
-                <chart:ChartLineStyle StrokeWidth ="10" Stroke="Red"/>
+                <chart:ChartLineStyle StrokeWidth ="2" Stroke="Red"/>
             </chart:NumericalAxis.AxisLineStyle>
         </chart:NumericalAxis>
     </chart:SfCartesianChart.PrimaryAxis>
@@ -41,7 +41,7 @@ Cartesian chart axis provides support to customize the style of axis line by def
 
     axisLineStyle.Stroke = Colors.Red;
 
-    axisLineStyle.StrokeWidth = 10;
+    axisLineStyle.StrokeWidth = 2;
 
     primaryAxis.AxisLineStyle = axisLineStyle;
 
@@ -50,6 +50,8 @@ Cartesian chart axis provides support to customize the style of axis line by def
 {% endhighlight %}
 
 {% endtabs %}
+
+![Axis line customization support in MAUI Chart](Axis_images/maui_chart_axis_linestyle.jpg)
 
 ## Offset
 
@@ -65,7 +67,7 @@ The padding to the axis line is defined by using the [AxisLineOffset](https://he
         <chart:NumericalAxis AxisLineOffset="25">
             <chart:NumericalAxis.AxisLineStyle>
 
-                <chart:ChartLineStyle StrokeWidth ="10" Stroke="Red"/>
+                <chart:ChartLineStyle StrokeWidth ="2" Stroke="Red"/>
 
             </chart:NumericalAxis.AxisLineStyle>
         </chart:NumericalAxis>
@@ -87,7 +89,7 @@ The padding to the axis line is defined by using the [AxisLineOffset](https://he
 
     axisLineStyle.Stroke = Colors.Red;
 
-    axisLineStyle.StrokeWidth = 10;
+    axisLineStyle.StrokeWidth = 2;
 
     primaryAxis.AxisLineStyle = axisLineStyle;
 
@@ -96,3 +98,5 @@ The padding to the axis line is defined by using the [AxisLineOffset](https://he
 {% endhighlight %}
 
 {% endtabs %}
+
+![Padding support for axis line in WinUI](Axis_images/maui_chart_axis_line_offset.jpg)

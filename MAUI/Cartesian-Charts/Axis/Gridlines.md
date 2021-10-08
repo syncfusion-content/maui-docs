@@ -20,9 +20,8 @@ By default, major gridlines are automatically added to the [ChartAxis](https://h
     <chart:SfCartesianChart>
 
         <chart:SfCartesianChart.PrimaryAxis>
-            <chart:NumericalAxis.MajorGridLineStyle>
-                <chart:ChartLineStyle Stroke="Black" />
-            </chart:NumericalAxis.MajorGridLineStyle>
+            <chart:NumericalAxis ShowMajorGridLines="False">
+            </chart:NumericalAxis>
         </chart:SfCartesianChart.PrimaryAxis>
 
         <chart:SfCartesianChart.SecondaryAxis>
@@ -39,11 +38,7 @@ By default, major gridlines are automatically added to the [ChartAxis](https://h
     . . .
     NumericalAxis primaryAxis = new NumericalAxis();
 
-    ChartLineStyle axisLineStyle = new ChartLineStyle();
-
-    axisLineStyle.Stroke = Colors.Black;
-
-    primaryAxis.MajorGridLineStyle = axisLineStyle;
+    primaryAxis.ShowMajorGridLines = false;
 
     chart.PrimaryAxis = primaryAxis;
 
@@ -52,6 +47,8 @@ By default, major gridlines are automatically added to the [ChartAxis](https://h
 {% endhighlight %}
 
 {% endtabs %}
+
+![Gridlines customization support in MAUI Chart](Axis_images/maui_chart_axis_show_major_gridline.jpg)
 
 ### Customization
 
@@ -63,10 +60,19 @@ The [MajorGridLineStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cha
 
     <chart:SfCartesianChart>
     . . .
+    <chart:SfCartesianChart.Resources>
+        <DoubleCollection x:Key="dashArray">
+            <x:Double>3</x:Double>
+            <x:Double>3</x:Double>
+        </DoubleCollection>
+    </chart:SfCartesianChart.Resources>
+    
     <chart:SfCartesianChart.PrimaryAxis>
-        <chart:NumericalAxis.MajorGridLineStyle>
-            <chart:ChartLineStyle Stroke="Black" StrokeWidth="3" />
-        </chart:NumericalAxis.MajorGridLineStyle>
+        <chart:NumericalAxis>
+            <chart:NumericalAxis.MajorGridLineStyle>
+                <chart:ChartLineStyle StrokeDashArray="{StaticResource dashArray}" Stroke="Black" StrokeWidth="2" />
+            </chart:NumericalAxis.MajorGridLineStyle>
+        <chart:NumericalAxis />
     </chart:SfCartesianChart.PrimaryAxis>
 
     <chart:SfCartesianChart.SecondaryAxis>
@@ -81,10 +87,16 @@ The [MajorGridLineStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cha
 
     SfCartesianChart chart = new SfCartesianChart();
     . . .
+
+    DoubleCollection doubleCollection = new DoubleCollection();
+    doubleCollection.Add(3);
+    doubleCollection.Add(3);
+
     NumericalAxis primaryAxis = new NumericalAxis();
     ChartLineStyle axisLineStyle = new ChartLineStyle();
     axisLineStyle.Stroke = Colors.Black;
-    axisLineStyle.StrokeWidth = 3;
+    axisLineStyle.StrokeWidth = 2;
+    axisLineStyle.StrokeDashArray = doubleCollection
     primaryAxis.MajorGridLineStyle = axisLineStyle;
     chart.PrimaryAxis = primaryAxis;
     
@@ -93,6 +105,8 @@ The [MajorGridLineStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cha
 {% endhighlight %}
 
 {% endtabs %}
+
+![Gridlines customization support in MAUI Chart](Axis_images/maui_chart_axis_major_linestyle.jpg)
 
 ## Minor Grid Lines
 
@@ -141,15 +155,24 @@ The [MinorGridLineStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cha
     <chart:SfCartesianChart>
     . . .
 
+    <chart:SfCartesianChart.Resources>
+        <DoubleCollection x:Key="dashArray">
+            <x:Double>3</x:Double>
+            <x:Double>3</x:Double>
+        </DoubleCollection>
+    </chart:SfCartesianChart.Resources>
+
     <chart:SfCartesianChart.PrimaryAxis>
         <chart:NumericalAxis/>
     </chart:SfCartesianChart.PrimaryAxis>
 
     <chart:SfCartesianChart.SecondaryAxis>
-         <chart:NumericalAxis.MinorGridLineStyle>
-            <chart:ChartLineStyle Stroke="Black" StrokeWidth="0.8"  />
-        </chart:NumericalAxis.MinorGridLineStyle>
-    </chart:SfCartesianChart.SecondaryAxis>
+        <chart:NumericalAxis ShowMinorGridLines="True">
+            <chart:NumericalAxis.MajorGridLineStyle>
+                <chart:ChartLineStyle StrokeDashArray="{StaticResource dashArray}" Stroke="Black" StrokeWidth="0.8"  />
+            </chart:NumericalAxis.MajorGridLineStyle>
+        </chart:NumericalAxis>
+        </chart:SfCartesianChart.SecondaryAxis>
     . . .
     </chart:SfCartesianChart>
 
@@ -160,13 +183,20 @@ The [MinorGridLineStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cha
     SfCartesianChart chart = new SfCartesianChart();
     chart.PrimaryAxis = new NumericalAxis();
 
+    DoubleCollection doubleCollection = new DoubleCollection();
+    doubleCollection.Add(3);
+    doubleCollection.Add(3);
+
     NumericalAxis secondaryAxis = new NumericalAxis();
     ChartLineStyle axisLineStyle = new ChartLineStyle();
     axisLineStyle.Stroke = Colors.Black;
     axisLineStyle.StrokeWidth = 0.8;
+    axisLineStyle.StrokeDashArray = doubleCollection
     secondaryAxis.MinorGridLineStyle = axisLineStyle;
     chart.SecondaryAxis = secondaryAxis;
 
 {% endhighlight %}
 
 {% endtabs %}
+
+![Gridlines customization support in MAUI Chart](Axis_Images/maui_chart_axis_minor_grid_linestyle.jpg)
