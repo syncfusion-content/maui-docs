@@ -20,43 +20,41 @@ To render a scatter chart, create an instance of [ScatterSeries](https://help.sy
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
+    <chart:SfCartesianChart.PrimaryAxis>
+        <chart:NumericalAxis />
+    </chart:SfCartesianChart.PrimaryAxis>
 
-        <chart:SfCartesianChart.PrimaryAxis>
-            <chart:NumericalAxis />
-        </chart:SfCartesianChart.PrimaryAxis>
-
-        <chart:SfCartesianChart.SecondaryAxis>
-            <chart:NumericalAxis />
-        </chart:SfCartesianChart.SecondaryAxis>  
-                    
-        <chart:SfCartesianChart.Series>
-            <chart:ScatterSeries Height="7" Width="7" ItemsSource="{Binding Data}" XBindingPath="XValue" YBindingPath="YValue"/>
-        </chart:SfCartesianChart.Series>
-
-    </chart:SfCartesianChart>
+    <chart:SfCartesianChart.SecondaryAxis>
+        <chart:NumericalAxis />
+    </chart:SfCartesianChart.SecondaryAxis>  
+                
+    <chart:SfCartesianChart.Series>
+        <chart:ScatterSeries Height="7" Width="7" ItemsSource="{Binding Data}" XBindingPath="XValue" YBindingPath="YValue"/>
+    </chart:SfCartesianChart.Series>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    NumericalAxis primaryAxis = new NumericalAxis();
-    chart.PrimaryAxis = primaryAxis;
-    NumericalAxis secondaryAxis = new NumericalAxis();
-    chart.SecondaryAxis = secondaryAxis;
+SfCartesianChart chart = new SfCartesianChart();
+NumericalAxis primaryAxis = new NumericalAxis();
+chart.PrimaryAxis = primaryAxis;
+NumericalAxis secondaryAxis = new NumericalAxis();
+chart.SecondaryAxis = secondaryAxis;
 
-    ScatterSeries series = new ScatterSeries()
-    {
-        ItemsSource = new ViewModel().Data,
-        XBindingPath = "XValue",
-        YBindingPath = "YValue",
-        Height = 7,
-        Width = 7,
-    };
+ScatterSeries series = new ScatterSeries()
+{
+    ItemsSource = new ViewModel().Data,
+    XBindingPath = "XValue",
+    YBindingPath = "YValue",
+    Height = 7,
+    Width = 7,
+};
 
-    chart.Series.Add(series);
-    this.Content = chart;
+chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 

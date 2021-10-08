@@ -86,30 +86,28 @@ By using the [StartAngle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Ch
 
 {% highlight xaml %}
 
-    <chart:SfCircularChart>
-
-        <chart:SfCircularChart.Series>
-            <chart:DoughnutSeries StartAngle="180" EndAngle="360"
-                            ItemsSource="{Binding Data}"
-                            XBindingPath="Product" 
-                            YBindingPath="SalesRate" />
-        </chart:SfCircularChart.Series>
-
-    </chart:SfCircularChart>
+<chart:SfCircularChart>
+    <chart:SfCircularChart.Series>
+        <chart:DoughnutSeries StartAngle="180" EndAngle="360"
+                        ItemsSource="{Binding Data}"
+                        XBindingPath="Product" 
+                        YBindingPath="SalesRate" />
+    </chart:SfCircularChart.Series>
+</chart:SfCircularChart>
     
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCircularChart chart = new SfCircularChart();
+SfCircularChart chart = new SfCircularChart();
 
-    DoughnutSeries series = new DoughnutSeries();
-    series.XBindingPath = "Product";
-    series.YBindingPath = "SalesRate";
-    series.StartAngle = 180;
-    series.EndAngle = 360;
+DoughnutSeries series = new DoughnutSeries();
+series.XBindingPath = "Product";
+series.YBindingPath = "SalesRate";
+series.StartAngle = 180;
+series.EndAngle = 360;
 
-    chart.Series.Add(series);
+chart.Series.Add(series);
 
 {% endhighlight %}
 

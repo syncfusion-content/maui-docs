@@ -19,24 +19,24 @@ The [LabelRotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.C
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-        . . .
-        <chart:SfCartesianChart.PrimaryAxis>
-            <chart:CategoryAxis LabelRotation="90"/>
-        </chart:SfCartesianChart.PrimaryAxis>
+<chart:SfCartesianChart>
+    . . .
+    <chart:SfCartesianChart.PrimaryAxis>
+        <chart:CategoryAxis LabelRotation="90"/>
+    </chart:SfCartesianChart.PrimaryAxis>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    . . .
-    chart.PrimaryAxis = new CategoryAxis()
-    {
-        LabelRotation = 90
-    };
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+chart.PrimaryAxis = new CategoryAxis()
+{
+    LabelRotation = 90
+};
 
 {% endhighlight %}
 
@@ -57,24 +57,24 @@ Chart axis provides support to customize the rendering position of the edge labe
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-    . . .
-        <chart:SfCartesianChart.PrimaryAxis>
-            <chart:DateTimeAxis EdgeLabelsDrawingMode="Center"/>
-        </chart:SfCartesianChart.PrimaryAxis>
+<chart:SfCartesianChart>
+. . .
+    <chart:SfCartesianChart.PrimaryAxis>
+        <chart:DateTimeAxis EdgeLabelsDrawingMode="Center"/>
+    </chart:SfCartesianChart.PrimaryAxis>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    . . . 
-    chart.PrimaryAxis = new DateTimeAxis()
-    {
-        EdgeLabelsDrawingMode = EdgeLabelsDrawingMode.Center
-    };
+SfCartesianChart chart = new SfCartesianChart();
+. . . 
+chart.PrimaryAxis = new DateTimeAxis()
+{
+    EdgeLabelsDrawingMode = EdgeLabelsDrawingMode.Center
+};
 
 {% endhighlight %}
 
@@ -92,24 +92,24 @@ The visibility of the edge labels of the axis can be controlled using the [EdgeL
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-        . . .
-        <chart:SfCartesianChart.PrimaryAxis>
-            <chart:NumericalAxis EdgeLabelsVisibilityMode="AlwaysVisible"/>
-        </chart:SfCartesianChart.PrimaryAxis>
+<chart:SfCartesianChart>
+    . . .
+    <chart:SfCartesianChart.PrimaryAxis>
+        <chart:NumericalAxis EdgeLabelsVisibilityMode="AlwaysVisible"/>
+    </chart:SfCartesianChart.PrimaryAxis>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    . . .
-    chart.PrimaryAxis = new NumericalAxis()
-    {
-        EdgeLabelsVisibilityMode = EdgeLabelsVisibilityMode.AlwaysVisible
-    };
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+chart.PrimaryAxis = new NumericalAxis()
+{
+    EdgeLabelsVisibilityMode = EdgeLabelsVisibilityMode.AlwaysVisible
+};
 
 {% endhighlight %}
 
@@ -123,24 +123,24 @@ The visibility of the edge labels of the axis can be controlled using the [EdgeL
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-    . . .
-        <chart:SfCartesianChart.PrimaryAxis>
-            <chart:NumericalAxis EdgeLabelsVisibilityMode="Visible"/>
-        </chart:SfCartesianChart.PrimaryAxis>
+<chart:SfCartesianChart>
+. . .
+    <chart:SfCartesianChart.PrimaryAxis>
+        <chart:NumericalAxis EdgeLabelsVisibilityMode="Visible"/>
+    </chart:SfCartesianChart.PrimaryAxis>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    . . .
-    chart.PrimaryAxis = new NumericalAxis()
-    {
-        EdgeLabelsVisibilityMode = EdgeLabelsVisibilityMode.Visible
-    };
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+chart.PrimaryAxis = new NumericalAxis()
+{
+    EdgeLabelsVisibilityMode = EdgeLabelsVisibilityMode.Visible
+};
 
 {% endhighlight %}
 

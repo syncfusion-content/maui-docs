@@ -18,26 +18,25 @@ Exploding a segment is used to pull attention to a specific area of the circular
 
 {% highlight xaml %}
 
-    <chart:SfCircularChart>
+<chart:SfCircularChart>
     . . .
-        <chart:PieSeries x:Name="PieSeries" ItemsSource="{Binding Data}" ExplodeIndex="2" ExplodeRadius="10" XBindingPath="Utilization" YBindingPath="ResponseTime" />
-
-    </chart:SfCircularChart>
+    <chart:PieSeries x:Name="PieSeries" ItemsSource="{Binding Data}" ExplodeIndex="2" ExplodeRadius="10" XBindingPath="Utilization" YBindingPath="ResponseTime" />
+</chart:SfCircularChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCircularChart chart = new SfCircularChart();
-    . . .
-    PieSeries series = new PieSeries()
-    {
-        ItemsSource = new ViewModel().Data,
-        XBindingPath = "Utilization",
-        YBindingPath = "ResponseTime",
-        ExplodeIndex = 2,
-        ExplodeRadius = 10
-    };
+SfCircularChart chart = new SfCircularChart();
+. . .
+PieSeries series = new PieSeries()
+{
+    ItemsSource = new ViewModel().Data,
+    XBindingPath = "Utilization",
+    YBindingPath = "ResponseTime",
+    ExplodeIndex = 2,
+    ExplodeRadius = 10
+};
 
 chart.Series.Add(series);
 

@@ -21,22 +21,22 @@ To enable the zooming and panning in the chart, create an instance of [ChartZoom
 
 {% highlight xml %}
 
-    <chart:SfCartesianChart>
-        ...
-    <chart:SfCartesianChart.ChartBehaviors>
-            <chart:ChartZoomPanBehavior />
-        </chart:SfCartesianChart.ChartBehaviors>
-    </chart:SfCartesianChart>
+<chart:SfCartesianChart>
+    ...
+<chart:SfCartesianChart.ChartBehaviors>
+        <chart:ChartZoomPanBehavior />
+    </chart:SfCartesianChart.ChartBehaviors>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    ...
-    ChartZoomPanBehavior zooming = new ChartZoomPanBehavior();
-    chart.ChartBehaviors.Add(zooming);
-    ...
+SfCartesianChart chart = new SfCartesianChart();
+...
+ChartZoomPanBehavior zooming = new ChartZoomPanBehavior();
+chart.ChartBehaviors.Add(zooming);
+...
 
 {% endhighlight %}
 
@@ -54,26 +54,26 @@ Pinch zooming is enable by using the [EnablePinchZooming](https://help.syncfusio
 
 {% highlight xml %}
 
-    <chart:SfCartesianChart>
-        <chart:SfCartesianChart.ChartBehaviors>
-            <chart:ChartZoomPanBehavior EnablePinchZooming="True"/>
-        </chart:SfCartesianChart.ChartBehaviors>
-        ...
-    </chart:SfCartesianChart>
+<chart:SfCartesianChart>
+    <chart:SfCartesianChart.ChartBehaviors>
+        <chart:ChartZoomPanBehavior EnablePinchZooming="True"/>
+    </chart:SfCartesianChart.ChartBehaviors>
+    ...
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    ...
-    ChartZoomPanBehavior zooming = new ChartZoomPanBehavior()
-    {
-        EnablePinchZooming = true
-    };
+SfCartesianChart chart = new SfCartesianChart();
+...
+ChartZoomPanBehavior zooming = new ChartZoomPanBehavior()
+{
+    EnablePinchZooming = true
+};
 
-    chart.ChartBehaviors.Add(zooming);
-    ...
+chart.ChartBehaviors.Add(zooming);
+...
 
 {% endhighlight %}
 
@@ -87,24 +87,24 @@ Pinch zooming is enable by using the [EnablePinchZooming](https://help.syncfusio
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-        <chart:SfCartesianChart.PrimaryAxis>
-            <chart:CategoryAxis ZoomFactor="0.3" ZoomPosition="0.5"/>
-        </chart:SfCartesianChart.PrimaryAxis>
-        ...
-    </chart:SfCartesianChart>
+<chart:SfCartesianChart>
+    <chart:SfCartesianChart.PrimaryAxis>
+        <chart:CategoryAxis ZoomFactor="0.3" ZoomPosition="0.5"/>
+    </chart:SfCartesianChart.PrimaryAxis>
+    ...
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    chart.PrimaryAxis = new CategoryAxis()
-    {
-        ZoomFactor = 0.3,
-        ZoomPosition = 0.5
-    };
-    ...
+SfCartesianChart chart = new SfCartesianChart();
+chart.PrimaryAxis = new CategoryAxis()
+{
+    ZoomFactor = 0.3,
+    ZoomPosition = 0.5
+};
+...
 
 {% endhighlight %}
 
@@ -122,26 +122,26 @@ Following code example illustrates how to restrict the chart to be zoomed only a
 
 {% highlight xml %}
 
-    <chart:SfCartesianChart>
-        <chart:SfCartesianChart.ChartBehaviors>
-            <chart:ChartZoomPanBehavior ZoomMode="X" />
-        </chart:SfCartesianChart.ChartBehaviors>
-        ...
-    </chart:SfCartesianChart>
+<chart:SfCartesianChart>
+    <chart:SfCartesianChart.ChartBehaviors>
+        <chart:ChartZoomPanBehavior ZoomMode="X" />
+    </chart:SfCartesianChart.ChartBehaviors>
+    ...
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    ...
-    ChartZoomPanBehavior zooming = new ChartZoomPanBehavior()
-    {
-        ZoomMode = ZoomMode.X
-    };
+SfCartesianChart chart = new SfCartesianChart();
+...
+ChartZoomPanBehavior zooming = new ChartZoomPanBehavior()
+{
+    ZoomMode = ZoomMode.X
+};
 
-    chart.ChartBehaviors.Add(zooming);
-    ...
+chart.ChartBehaviors.Add(zooming);
+...
 
 {% endhighlight %}
 

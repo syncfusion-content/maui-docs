@@ -15,38 +15,38 @@ The [Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-        . . .
-        <chart:SfCartesianChart.PrimaryAxis>
-            <chart:CategoryAxis>
-                <chart:CategoryAxis.Title>
-                    <chart:ChartAxisTitle Text="Category"/>
-                </chart:CategoryAxis.Title>
-            </chart:CategoryAxis>
-        </chart:SfCartesianChart.PrimaryAxis>
-        <chart:SfCartesianChart.SecondaryAxis>
-            <chart:NumericalAxis>
-                <chart:NumericalAxis.Title>
-                    <chart:ChartAxisTitle Text="Values"/>
-                </chart:NumericalAxis.Title>
-            </chart:NumericalAxis>
-        </chart:SfCartesianChart.SecondaryAxis>
+<chart:SfCartesianChart>
+    . . .
+    <chart:SfCartesianChart.PrimaryAxis>
+        <chart:CategoryAxis>
+            <chart:CategoryAxis.Title>
+                <chart:ChartAxisTitle Text="Category"/>
+            </chart:CategoryAxis.Title>
+        </chart:CategoryAxis>
+    </chart:SfCartesianChart.PrimaryAxis>
+    <chart:SfCartesianChart.SecondaryAxis>
+        <chart:NumericalAxis>
+            <chart:NumericalAxis.Title>
+                <chart:ChartAxisTitle Text="Values"/>
+            </chart:NumericalAxis.Title>
+        </chart:NumericalAxis>
+    </chart:SfCartesianChart.SecondaryAxis>
 
-    /chart:SfCartesianChart>
+/chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    . . .
-    CategoryAxis primaryAxis = new CategoryAxis();
-    primaryAxis.Title.Text = "Category";
-    chart.PrimaryAxis = primaryAxis;
-    
-    NumericalAxis secondaryAxis = new NumericalAxis();
-    secondaryAxis.Title.Text = "Values";
-    chart.SecondaryAxis = secondaryAxis;
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+CategoryAxis primaryAxis = new CategoryAxis();
+primaryAxis.Title.Text = "Category";
+chart.PrimaryAxis = primaryAxis;
+
+NumericalAxis secondaryAxis = new NumericalAxis();
+secondaryAxis.Title.Text = "Values";
+chart.SecondaryAxis = secondaryAxis;
 
 {% endhighlight %}
 

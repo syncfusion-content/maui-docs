@@ -22,28 +22,28 @@ This section explains how to populate the circular chart with data, a title, dat
 
 {% highlight xaml %}
 
-    <ContentPage   
-        . . .
-        xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
+<ContentPage   
+    . . .
+    xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
 
-        <chart:SfCircularChart/>
-    </ContentPage>
+    <chart:SfCircularChart/>
+</ContentPage>
  
 {% endhighlight %}
 
 {% highlight C# %}
 
-    using Syncfusion.Maui.Charts;
-    . . .
+using Syncfusion.Maui.Charts;
+. . .
 
-    public partial class MainWindow : ContentPage
+public partial class MainWindow : ContentPage
+{
+    public MainPage()
     {
-        public MainPage()
-        {
-            this.InitializeComponent();
-            SfCircularChart chart = new SfCircularChart();
-        }
-    }   
+        this.InitializeComponent();
+        SfCircularChart chart = new SfCircularChart();
+    }
+}   
 {% endhighlight %}
 
 {% endtabs %}
@@ -54,32 +54,32 @@ Syncfusion.Maui.Core nuget is a dependent package for all Syncfusion controls of
 
 {% highlight C# %}
 
-    using Microsoft.Maui;
-    using Microsoft.Maui.Hosting;
-    using Microsoft.Maui.Controls.Compatibility;
-    using Microsoft.Maui.Controls.Hosting;
-    using Microsoft.Maui.Controls.Xaml;
-    using Syncfusion.Maui.Core.Hosting;
+using Microsoft.Maui;
+using Microsoft.Maui.Hosting;
+using Microsoft.Maui.Controls.Compatibility;
+using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Controls.Xaml;
+using Syncfusion.Maui.Core.Hosting;
 
-    namespace ChartGettingStarted
+namespace ChartGettingStarted
+{
+    public static class MauiProgram
     {
-        public static class MauiProgram
+        public static MauiApp CreateMauiApp()
         {
-            public static MauiApp CreateMauiApp()
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
             {
-                var builder = MauiApp.CreateBuilder();
-                builder
-                .UseMauiApp<App>()
-                .ConfigureSyncfusionCore()
-                .ConfigureFonts(fonts =>
-                {
-                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                });
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
 
-                return builder.Build();
-            }
+            return builder.Build();
         }
     }
+}
 
 {% endhighlight %} 
 
@@ -91,11 +91,11 @@ Now, let us define a simple data model that represents a data point in the chart
 
 {% highlight c# %}
 
-    public class Sales
-    {
-        public string Product { get; set; }
-        public double SalesRate { get; set; }
-    }
+public class Sales
+{
+    public string Product { get; set; }
+    public double SalesRate { get; set; }
+}
 
 {% endhighlight %} 
 
@@ -107,22 +107,22 @@ Next, create a view model class and initialize a list of `Model` objects as foll
 
 {% highlight c# %}
 
-    public class ChartViewModel
-    {
-        public List<Sales> Data { get; set; }
+public class ChartViewModel
+{
+    public List<Sales> Data { get; set; }
 
-        public ChartViewModel()
+    public ChartViewModel()
+    {
+        Data = new List<Sales>()
         {
-            Data = new List<Sales>()
-            {
-                new Sales(){Product = "iPad", SalesRate = 25},
-                new Sales(){Product = "iPhone", SalesRate = 35},
-                new Sales(){Product = "MacBook", SalesRate = 15},
-                new Sales(){Product = "Mac", SalesRate = 5},
-                new Sales(){Product = "Others", SalesRate = 10},
-            };
-        }
+            new Sales(){Product = "iPad", SalesRate = 25},
+            new Sales(){Product = "iPhone", SalesRate = 35},
+            new Sales(){Product = "MacBook", SalesRate = 15},
+            new Sales(){Product = "Mac", SalesRate = 5},
+            new Sales(){Product = "Others", SalesRate = 10},
+        };
     }
+}
 
 {% endhighlight %} 
 
@@ -136,24 +136,24 @@ N> Add namespace of `ViewModel` class to your XAML Page, if you prefer to set `B
 
 {% highlight xaml %} 
 
-    <ContentPage
-        . . .
-        xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
-        xmlns:model="clr-namespace:ChartGettingStarted">
+<ContentPage
+    . . .
+    xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
+    xmlns:model="clr-namespace:ChartGettingStarted">
 
-        <chart:SfCircularChart>
-            <chart:SfCircularChart.BindingContext>
-            <model:ChartViewModel/>
-            </chart:SfCircularChart.BindingContext>
-        </chart:SfCircularChart>
-    </ContentPage>
+    <chart:SfCircularChart>
+        <chart:SfCircularChart.BindingContext>
+        <model:ChartViewModel/>
+        </chart:SfCircularChart.BindingContext>
+    </chart:SfCircularChart>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight C# %} 
 
-    ChartViewModel viewModel = new ChartViewModel();
-    chart.BindingContext = viewModel;
+ChartViewModel viewModel = new ChartViewModel();
+chart.BindingContext = viewModel;
 
 {% endhighlight %}
 
@@ -169,27 +169,27 @@ N> To plot the series, the [XBindingPath](https://help.syncfusion.com/cr/maui/Sy
 
 {% highlight xaml %}
 
-    <chart:SfCircularChart>
-        . . .
-        <chart:SfCircularChart.Series>
-            <chart:PieSeries ItemsSource="{Binding Data}" 
-                         XBindingPath="Product" 
-                         YBindingPath="SalesRate"/>
-        </chart:SfCircularChart.Series>
-    </chart:SfCircularChart>
+<chart:SfCircularChart>
+    . . .
+    <chart:SfCircularChart.Series>
+        <chart:PieSeries ItemsSource="{Binding Data}" 
+                        XBindingPath="Product" 
+                        YBindingPath="SalesRate"/>
+    </chart:SfCircularChart.Series>
+</chart:SfCircularChart>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SfCircularChart chart = new SfCircularChart();
-    ChartViewModel viewModel = new ChartViewModel();
-    chart.BindingContext = viewModel;
-    PieSeries series = new PieSeries();
-    series.ItemsSource = viewModel.Data;
-    series.XBindingPath = "Product";
-    series.YBindingPath = "SalesRate";
-    chart.Series.Add(series);
+SfCircularChart chart = new SfCircularChart();
+ChartViewModel viewModel = new ChartViewModel();
+chart.BindingContext = viewModel;
+PieSeries series = new PieSeries();
+series.ItemsSource = viewModel.Data;
+series.XBindingPath = "Product";
+series.YBindingPath = "SalesRate";
+chart.Series.Add(series);
 
 {% endhighlight %}
 
@@ -203,22 +203,22 @@ The title of the chart acts as the title to provide quick information to the use
 
 {% highlight xaml %}
 
-    <chart:SfCircularChart>
-        <chart:SfCircularChart.Title>
-            <Label Text="PRODUCT SALES"/>
-        </chart:SfCircularChart.Title>
-        . . .
-    </chart:SfCircularChart>
+<chart:SfCircularChart>
+    <chart:SfCircularChart.Title>
+        <Label Text="PRODUCT SALES"/>
+    </chart:SfCircularChart.Title>
+    . . .
+</chart:SfCircularChart>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SfCircularChart chart = new SfCircularChart();
-    chart.Title = new Label
-    {
-        Text = "PRODUCT SALES"
-    };
+SfCircularChart chart = new SfCircularChart();
+chart.Title = new Label
+{
+    Text = "PRODUCT SALES"
+};
 
 {% endhighlight %}
 
@@ -232,20 +232,20 @@ The [ShowDataLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 
 {% highlight xaml %}
 
-    <chart:SfCircularChart>
-        . . .
-        <chart:PieSeries ShowDataLabels="True"/>
-    </chart:SfCircularChart>
+<chart:SfCircularChart>
+    . . .
+    <chart:PieSeries ShowDataLabels="True"/>
+</chart:SfCircularChart>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SfCircularChart chart = new SfCircularChart();
-    . . .
-    PieSeries series = new PieSeries();
-    series.ShowDataLabels = true;
-    chart.Series.Add(series);
+SfCircularChart chart = new SfCircularChart();
+. . .
+PieSeries series = new PieSeries();
+series.ShowDataLabels = true;
+chart.Series.Add(series);
 
 {% endhighlight %}
 
@@ -259,20 +259,20 @@ The legend provides information about the data point displayed in the circular c
 
 {% highlight xaml %}
 
-    <chart:SfCircularChart>
-        . . .
-        <chart:SfCircularChart.Legend>
-        <chart:ChartLegend/>
-        </chart:SfCircularChart.Legend>
-    </chart:SfCircularChart>
+<chart:SfCircularChart>
+    . . .
+    <chart:SfCircularChart.Legend>
+    <chart:ChartLegend/>
+    </chart:SfCircularChart.Legend>
+</chart:SfCircularChart>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SfCircularChart chart = new SfCircularChart();
-    . . .
-    chart.Legend = new ChartLegend();
+SfCircularChart chart = new SfCircularChart();
+. . .
+chart.Legend = new ChartLegend();
 
 {% endhighlight %}
 
@@ -286,20 +286,20 @@ Tooltips are used to show information about the segment, when mouse over on it. 
 
 {% highlight xaml %}
 
-    <chart:SfCircularChart>
-        . . .
-        <chart:PieSeries ShowTooltip="True"/>
-    </chart:SfCircularChart>
+<chart:SfCircularChart>
+    . . .
+    <chart:PieSeries ShowTooltip="True"/>
+</chart:SfCircularChart>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SfCircularChart chart = new SfCircularChart();
-    . . .
-    PieSeries series = new PieSeries();
-    series.ShowTooltip = true;
-    chart.Series.Add(series);
+SfCircularChart chart = new SfCircularChart();
+. . .
+PieSeries series = new PieSeries();
+series.ShowTooltip = true;
+chart.Series.Add(series);
 
 {% endhighlight %}
 
@@ -311,51 +311,51 @@ The following code example gives you the complete code of above configurations.
 
 {% highlight xaml %}
 
-    <chart:SfCircularChart>
-        <chart:SfCircularChart.Title>
-            <Label Text="PRODUCT SALES"/>
-        </chart:SfCircularChart.Title>
-        <chart:SfCircularChart.BindingContext>
-            <model:ChartViewModel/>
-        </chart:SfCircularChart.BindingContext>
-        <chart:SfCircularChart.Legend>
-            <chart:ChartLegend/>
-        </chart:SfCircularChart.Legend>
-        <chart:SfCircularChart.Series>
-            <chart:PieSeries ItemsSource="{Binding Data}" ShowDataLabels="True" XBindingPath="Product" ShowTooltip="True" YBindingPath="SalesRate">
-            </chart:PieSeries>
-        </chart:SfCircularChart.Series>
-    </chart:SfCircularChart>
+<chart:SfCircularChart>
+    <chart:SfCircularChart.Title>
+        <Label Text="PRODUCT SALES"/>
+    </chart:SfCircularChart.Title>
+    <chart:SfCircularChart.BindingContext>
+        <model:ChartViewModel/>
+    </chart:SfCircularChart.BindingContext>
+    <chart:SfCircularChart.Legend>
+        <chart:ChartLegend/>
+    </chart:SfCircularChart.Legend>
+    <chart:SfCircularChart.Series>
+        <chart:PieSeries ItemsSource="{Binding Data}" ShowDataLabels="True" XBindingPath="Product" ShowTooltip="True" YBindingPath="SalesRate">
+        </chart:PieSeries>
+    </chart:SfCircularChart.Series>
+</chart:SfCircularChart>
  
 {% endhighlight %}
 
 {% highlight C# %}
 
-    using Syncfusion.Maui.Charts;
-    . . .
-    public partial class MainPage : ContentPage
-    {   
-        public MainWindow()
+using Syncfusion.Maui.Charts;
+. . .
+public partial class MainPage : ContentPage
+{   
+    public MainWindow()
+    {
+        SfCircularChart chart = new SfCircularChart();
+        chart.Title = new Label
         {
-            SfCircularChart chart = new SfCircularChart();
-            chart.Title = new Label
-            {
-                Text = "PRODUCT SALES"
-            };
-            chart.Legend = new ChartLegend();
-            ChartViewModel viewModel = new ChartViewModel();
-            chart.BindingContext = viewModel;
+            Text = "PRODUCT SALES"
+        };
+        chart.Legend = new ChartLegend();
+        ChartViewModel viewModel = new ChartViewModel();
+        chart.BindingContext = viewModel;
 
-            PieSeries series = new PieSeries();
-            series.ItemsSource = viewModel.Data;
-            series.XBindingPath = "Product";
-            series.YBindingPath = "SalesRate";
-            series.ShowTooltip = true;
-            series.ShowDataLabels = true;
-            chart.Series.Add(series);
-            this.Content = chart;
-        }
+        PieSeries series = new PieSeries();
+        series.ItemsSource = viewModel.Data;
+        series.XBindingPath = "Product";
+        series.YBindingPath = "SalesRate";
+        series.ShowTooltip = true;
+        series.ShowDataLabels = true;
+        chart.Series.Add(series);
+        this.Content = chart;
     }
+}
 
 {% endhighlight %}
 
