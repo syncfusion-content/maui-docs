@@ -17,37 +17,37 @@ By default, major gridlines are automatically added to the [ChartAxis](https://h
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
 
-        <chart:SfCartesianChart.PrimaryAxis>
-            <chart:NumericalAxis.MajorGridLineStyle>
-                <chart:ChartLineStyle Stroke="Black" />
-            </chart:NumericalAxis.MajorGridLineStyle>
-        </chart:SfCartesianChart.PrimaryAxis>
+    <chart:SfCartesianChart.PrimaryAxis>
+        <chart:NumericalAxis.MajorGridLineStyle>
+            <chart:ChartLineStyle Stroke="Black" />
+        </chart:NumericalAxis.MajorGridLineStyle>
+    </chart:SfCartesianChart.PrimaryAxis>
 
-        <chart:SfCartesianChart.SecondaryAxis>
-            <chart:NumericalAxis />
-        </chart:SfCartesianChart.SecondaryAxis>
-        . . .
-    </chart:SfCartesianChart>
+    <chart:SfCartesianChart.SecondaryAxis>
+        <chart:NumericalAxis />
+    </chart:SfCartesianChart.SecondaryAxis>
+    . . .
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    . . .
-    NumericalAxis primaryAxis = new NumericalAxis();
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+NumericalAxis primaryAxis = new NumericalAxis();
 
-    ChartLineStyle axisLineStyle = new ChartLineStyle();
+ChartLineStyle axisLineStyle = new ChartLineStyle();
 
-    axisLineStyle.Stroke = Colors.Black;
+axisLineStyle.Stroke = Colors.Black;
 
-    primaryAxis.MajorGridLineStyle = axisLineStyle;
+primaryAxis.MajorGridLineStyle = axisLineStyle;
 
-    chart.PrimaryAxis = primaryAxis;
+chart.PrimaryAxis = primaryAxis;
 
-    chart.SecondaryAxis = new NumericalAxis();
+chart.SecondaryAxis = new NumericalAxis();
 
 {% endhighlight %}
 
@@ -61,34 +61,34 @@ The [MajorGridLineStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cha
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-    . . .
-    <chart:SfCartesianChart.PrimaryAxis>
-        <chart:NumericalAxis.MajorGridLineStyle>
-            <chart:ChartLineStyle Stroke="Black" StrokeWidth="3" />
-        </chart:NumericalAxis.MajorGridLineStyle>
-    </chart:SfCartesianChart.PrimaryAxis>
+<chart:SfCartesianChart>
+. . .
+<chart:SfCartesianChart.PrimaryAxis>
+    <chart:NumericalAxis.MajorGridLineStyle>
+        <chart:ChartLineStyle Stroke="Black" StrokeWidth="3" />
+    </chart:NumericalAxis.MajorGridLineStyle>
+</chart:SfCartesianChart.PrimaryAxis>
 
-    <chart:SfCartesianChart.SecondaryAxis>
-        <chart:NumericalAxis />
-    </chart:SfCartesianChart.SecondaryAxis>
+<chart:SfCartesianChart.SecondaryAxis>
+    <chart:NumericalAxis />
+</chart:SfCartesianChart.SecondaryAxis>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    . . .
-    NumericalAxis primaryAxis = new NumericalAxis();
-    ChartLineStyle axisLineStyle = new ChartLineStyle();
-    axisLineStyle.Stroke = Colors.Black;
-    axisLineStyle.StrokeWidth = 3;
-    primaryAxis.MajorGridLineStyle = axisLineStyle;
-    chart.PrimaryAxis = primaryAxis;
-    
-    chart.SecondaryAxis = new NumericalAxis();
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+NumericalAxis primaryAxis = new NumericalAxis();
+ChartLineStyle axisLineStyle = new ChartLineStyle();
+axisLineStyle.Stroke = Colors.Black;
+axisLineStyle.StrokeWidth = 3;
+primaryAxis.MajorGridLineStyle = axisLineStyle;
+chart.PrimaryAxis = primaryAxis;
+
+chart.SecondaryAxis = new NumericalAxis();
 
 {% endhighlight %}
 
@@ -102,7 +102,7 @@ Minor gridlines will be added automatically when the small tick lines is defined
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
 
     <chart:SfCartesianChart.PrimaryAxis>
         <chart:NumericalAxis/>
@@ -112,19 +112,19 @@ Minor gridlines will be added automatically when the small tick lines is defined
         <chart:NumericalAxis MinorTicksPerInterval="3" />
     </chart:SfCartesianChart.SecondaryAxis>
     . . .
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    chart.PrimaryAxis = new NumericalAxis();
-    chart.SecondaryAxis = new NumericalAxis()
-    {
-        MinorTicksPerInterval = 3,
-    };
-    . . .
+SfCartesianChart chart = new SfCartesianChart();
+chart.PrimaryAxis = new NumericalAxis();
+chart.SecondaryAxis = new NumericalAxis()
+{
+    MinorTicksPerInterval = 3,
+};
+. . .
 
 {% endhighlight %}
 
@@ -138,34 +138,34 @@ The [MinorGridLineStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cha
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-    . . .
+<chart:SfCartesianChart>
+. . .
 
-    <chart:SfCartesianChart.PrimaryAxis>
-        <chart:NumericalAxis/>
-    </chart:SfCartesianChart.PrimaryAxis>
+<chart:SfCartesianChart.PrimaryAxis>
+    <chart:NumericalAxis/>
+</chart:SfCartesianChart.PrimaryAxis>
 
-    <chart:SfCartesianChart.SecondaryAxis>
-         <chart:NumericalAxis.MinorGridLineStyle>
-            <chart:ChartLineStyle Stroke="Black" StrokeWidth="0.8"  />
-        </chart:NumericalAxis.MinorGridLineStyle>
-    </chart:SfCartesianChart.SecondaryAxis>
-    . . .
-    </chart:SfCartesianChart>
+<chart:SfCartesianChart.SecondaryAxis>
+        <chart:NumericalAxis.MinorGridLineStyle>
+        <chart:ChartLineStyle Stroke="Black" StrokeWidth="0.8"  />
+    </chart:NumericalAxis.MinorGridLineStyle>
+</chart:SfCartesianChart.SecondaryAxis>
+. . .
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    chart.PrimaryAxis = new NumericalAxis();
+SfCartesianChart chart = new SfCartesianChart();
+chart.PrimaryAxis = new NumericalAxis();
 
-    NumericalAxis secondaryAxis = new NumericalAxis();
-    ChartLineStyle axisLineStyle = new ChartLineStyle();
-    axisLineStyle.Stroke = Colors.Black;
-    axisLineStyle.StrokeWidth = 0.8;
-    secondaryAxis.MinorGridLineStyle = axisLineStyle;
-    chart.SecondaryAxis = secondaryAxis;
+NumericalAxis secondaryAxis = new NumericalAxis();
+ChartLineStyle axisLineStyle = new ChartLineStyle();
+axisLineStyle.Stroke = Colors.Black;
+axisLineStyle.StrokeWidth = 0.8;
+secondaryAxis.MinorGridLineStyle = axisLineStyle;
+chart.SecondaryAxis = secondaryAxis;
 
 {% endhighlight %}
 
