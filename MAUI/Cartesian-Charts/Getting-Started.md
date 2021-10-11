@@ -296,21 +296,21 @@ The [ShowDataLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-        . . . 
-        <chart:ColumnSeries ShowDataLabels="True">
-        </chart:ColumnSeries>
-    </chart:SfCartesianChart>
+<chart:SfCartesianChart>
+    . . . 
+    <chart:ColumnSeries ShowDataLabels="True">
+    </chart:ColumnSeries>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SfCartesianChart chart = new SfCartesianChart()
-    . . .
-    ColumnSeries series = new ColumnSeries();
-    series.ShowDataLabels = true;
-    chart.Series.Add(series);
+SfCartesianChart chart = new SfCartesianChart()
+. . .
+ColumnSeries series = new ColumnSeries();
+series.ShowDataLabels = true;
+chart.Series.Add(series);
 
 {% endhighlight %}
 

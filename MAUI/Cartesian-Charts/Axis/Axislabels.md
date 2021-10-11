@@ -80,6 +80,8 @@ Chart axis provides support to customize the rendering position of the edge labe
 
 {% endtabs %}
 
+![Axis edge label positioning support in MAUI Chart](Axis_images/maui_chart_axis_edge_labels_drawing.jpg)
+
 ## Edge Labels Visibility
  
 The visibility of the edge labels of the axis can be controlled using the [EdgeLabelsVisibilityMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RangeAxisBase.html#Syncfusion_Maui_Charts_RangeAxisBase_EdgeLabelsVisibilityMode) property. The default value of [EdgeLabelsVisibilityMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RangeAxisBase.html#Syncfusion_Maui_Charts_RangeAxisBase_EdgeLabelsVisibilityMode) is `Default`, which displays the edge label based on auto interval calculations.

@@ -64,6 +64,8 @@ By default, the [RangePadding](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 
 {% endtabs %}
 
+![NumericalAxis range padding support in MAUI Chart](Axis_Images/maui_chart_axis_numerical-range-padding_additional.jpg)
+
 **None**
 
 {% tabs %}
@@ -99,6 +101,8 @@ By default, the [RangePadding](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 
 {% endtabs %}
 
+![NumericalAxis range padding none in MAUI Chart](Axis_Images/maui_chart_axis_numerical-range-padding_none.jpg)
+
 **Round**
 
 {% tabs %}
@@ -133,6 +137,8 @@ By default, the [RangePadding](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 {% endhighlight %}
 
 {% endtabs %}
+
+![NumericalAxis range padding round in MAUI Chart](Axis_Images/maui_chart_axis_numerical-range-padding_round.jpg)
 
 ## DateTime Range Padding
 
@@ -182,6 +188,8 @@ The [RangePadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Nu
 
 {% endtabs %}
 
+![DateTimeAxis range padding support in MAUI Chart](Axis_Images/maui_chart_axis_datetime-range-padding_additional.jpg)
+
 **None**
 
 {% tabs %}
@@ -216,6 +224,8 @@ The [RangePadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Nu
 {% endhighlight %}
 
 {% endtabs %}
+
+![DateTimeAxis range padding none in MAUI Chart](Axis_Images/maui_chart_axis_datetime-range-padding_none.jpg)
 
 **Round**
 
@@ -252,3 +262,4 @@ The [RangePadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Nu
 
 {% endtabs %}
 
+![DateTimeAxis range padding round in MAUI Chart](Axis_Images/maui_chart_axis_datetime-range-padding_round.jpg)

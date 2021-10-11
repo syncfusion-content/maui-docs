@@ -66,9 +66,7 @@ The padding to the axis line is defined by using the [AxisLineOffset](https://he
     <chart:SfCartesianChart.PrimaryAxis>
         <chart:NumericalAxis AxisLineOffset="25">
             <chart:NumericalAxis.AxisLineStyle>
-
                 <chart:ChartLineStyle StrokeWidth ="2" Stroke="Red"/>
-
             </chart:NumericalAxis.AxisLineStyle>
         </chart:NumericalAxis>
     </chart:SfCartesianChart.PrimaryAxis>
