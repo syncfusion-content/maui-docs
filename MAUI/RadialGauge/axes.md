@@ -9,13 +9,15 @@ documentation: ug
 
 # Axis in .NET MAUI Radial Gauge
 
-The `Radial Axis` is a circular arc in which a set of values are displayed along a linear or custom scale based on the design requirements. Axis elements such as labels, ticks and axis line can be easily customized. 
+The [`Radial Axis`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html?tabs=tabid-1) is a circular arc in which a set of values are displayed along a linear or custom scale based on the design requirements. Axis elements such as labels, ticks and axis line can be easily customized. 
 
 ## Axis customization
 
+This section will cover the axis customization options.
+
 ### Setting axis minimum and maximum
 
-The `Minimum` and `Maximum` properties of an axis can be used to customize the axis scale range. The default value of `Minimum` is 0 and `Maximum` is 100.
+The [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_Minimum) and [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_Maximum) properties of an axis can be used to customize the axis scale range. The default value of [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_Minimum) is 0 and [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_Maximum) is 100.
 
 {% tabs %}
 
@@ -49,7 +51,7 @@ this.Content = sfRadialGauge;
 
 ### Interval
 
-The interval between labels can be customized using the `Interval` property. By default, auto-interval will be calculated based on available scale range and size. If you need to change the default interval, use this property. 
+The interval between labels can be customized using the [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_Interval) property. By default, auto-interval will be calculated based on available scale range and size. If you need to change the default interval, use this property. 
 
 {% tabs %}
 
@@ -81,7 +83,7 @@ this.Content = sfRadialGauge;
 
 ### Angle customization
 
-The start and end angles of radial axis can be customized using the `StartAngle` and `EndAngle` properties.
+The start and end angles of radial axis can be customized using the [`StartAngle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_StartAngle) and [`EndAngle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_EndAngle) properties.
 
 {% tabs %}
 
@@ -115,7 +117,7 @@ this.Content = sfRadialGauge;
 
 ### Radius customization
 
-The radius of the radial axis can be customized using the `RadiusFactor` property. The default value of the `RadiusFactor` is 0.8. The value of `RadiusFactor` ranges from 0 to 1. For example, When the `RadiusFactor` value is 1, the full radius will be considered for rendering the axis and when the `RadiusFactor` value is 0.5, then half of the radius value will be considered for rendering the axis circle.
+The radius of the radial axis can be customized using the [`RadiusFactor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_RadiusFactor) property. The default value of the [`RadiusFactor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_RadiusFactor) is 0.8. The value of [`RadiusFactor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_RadiusFactor) ranges from 0 to 1. For example, When the [`RadiusFactor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_RadiusFactor) value is 1, the full radius will be considered for rendering the axis and when the [`RadiusFactor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_RadiusFactor) value is 0.5, then half of the radius value will be considered for rendering the axis circle.
 
 {% tabs %}
 
@@ -151,7 +153,7 @@ this.Content = sfRadialGauge;
 
 ### Positioning axis based on its angle
 
-The `CanScaleToFit` property of radial axis is used to fit the axis position on available size based on the provided `StartAngle` and `EndAngle`. By default, the `CanScaleToFit` is true.
+The [`CanScaleToFit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_CanScaleToFit) property of radial axis is used to fit the axis position on available size based on the provided [`StartAngle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_StartAngle) and [`EndAngle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_EndAngle). By default, the [`CanScaleToFit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_CanScaleToFit) is true.
 
 {% tabs %}
 
@@ -197,7 +199,7 @@ VerticalStackLayout layout = new VerticalStackLayout();
 
 ### Axis label rotation
 
-The axis label can be rotated based on its current angle using the `CanRotateLabels` property. The default value of `CanRotateLabels` is false.
+The axis label can be rotated based on its current angle using the [`CanRotateLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_CanRotateLabels) property. The default value of [`CanRotateLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_CanRotateLabels) is false.
 
 {% tabs %}
 
@@ -229,12 +231,12 @@ this.Content = sfRadialGauge;
 
 ### Edge label customization
 
-The visibility of the first and last labels of an axis can be customized using the `ShowFirstLabel` and `ShowLastLabel` properties. 
+The visibility of the first and last labels of an axis can be customized using the [`ShowFirstLabel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_ShowFirstLabel) and [`ShowLastLabel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_ShowLastLabel) properties. 
 
-* `ShowFirstLabel` – Enables or disables the first label of the axis.
-* `ShowLastLabel` – Enables or disables the last label of the axis.
+* [`ShowFirstLabel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_ShowFirstLabel) – Enables or disables the first label of the axis.
+* [`ShowLastLabel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_ShowLastLabel) – Enables or disables the last label of the axis.
 
-The default value of both the `ShowFirstLabel` and `ShowLastLabel` properties is true.
+The default value of both the [`ShowFirstLabel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_ShowFirstLabel) and [`ShowLastLabel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_ShowLastLabel) properties is true.
 
 {% tabs %}
 
@@ -276,9 +278,9 @@ this.Content = sfRadialGauge;
 
 ### Axis direction customization
 
-The direction of radial axis can be customized by its `IsInversed` property. 
+The direction of radial axis can be customized by its [`IsInversed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_IsInversed) property. 
 
-When the `IsInversed` property is true, the axis can be placed in counter-clockwise direction. When the `IsInversed` property is set to false, the axis will be positioned in clockwise direction.
+When the [`IsInversed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_IsInversed) property is true, the axis can be placed in counter-clockwise direction. When the [`IsInversed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_IsInversed) property is set to false, the axis will be positioned in clockwise direction.
 
 {% tabs %}
 
@@ -310,7 +312,7 @@ this.Content = sfRadialGauge;
 
 ### Maximum number of labels per 100 logical pixels
 
-By default, a maximum of three labels are displayed for each 100 logical pixels in an axis. The maximum number of labels that should present within 100 logical pixels length can be customized using the `MaximumLabelsCount` property of the axis. This property is applicable only for automatic range calculation and will not work, if you set value for interval property of an axis.
+By default, a maximum of three labels are displayed for each 100 logical pixels in an axis. The maximum number of labels that should present within 100 logical pixels length can be customized using the [`MaximumLabelsCount`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_MaximumLabelsCount) property of the axis. This property is applicable only for automatic range calculation and will not work, if you set value for interval property of an axis.
 
 {% tabs %}
 
@@ -342,16 +344,16 @@ this.Content = sfRadialGauge;
 
 ## Axis line customization
 
-The radial axis line can be customized using the `AxisLineStyle` with the following properties.
+The radial axis line can be customized using the [`AxisLineStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_AxisLineStyle) with the following properties.
 
-* `Thickness` – Customizes the thickness of axis line.
-* `ThicknessUnit` – Allows to specify the thickness of the axis line either in pixel or factor. Its default value is `Pixel`.
-* `Fill` – Customizes the color of the axis line.
-* `GradientStops` - Allows to apply the gradient brush for axis line.
+* [`Thickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialLineStyle.html#Syncfusion_Maui_Gauges_RadialLineStyle_Thickness) – Customizes the thickness of axis line.
+* [`ThicknessUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialLineStyle.html#Syncfusion_Maui_Gauges_RadialLineStyle_ThicknessUnit) – Allows to specify the thickness of the axis line either in pixel or factor. Its default value is [`Pixel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SizeUnit.html#Syncfusion_Maui_Gauges_SizeUnit_Pixel).
+* [`Fill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialLineStyle.html#Syncfusion_Maui_Gauges_RadialLineStyle_Fill) – Customizes the color of the axis line.
+* [`GradientStops`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialLineStyle.html#Syncfusion_Maui_Gauges_RadialLineStyle_GradientStops) - Allows to apply the gradient brush for axis line.
 
 ### Axis line width in pixel
 
-If the `ThicknessUnit` is set as a pixel, the axis line will be rendered based on the pixel values given in `Thickness`.
+If the [`ThicknessUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialLineStyle.html#Syncfusion_Maui_Gauges_RadialLineStyle_ThicknessUnit) is set as a pixel, the axis line will be rendered based on the pixel values given in [`Thickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialLineStyle.html#Syncfusion_Maui_Gauges_RadialLineStyle_Thickness).
 
 {% tabs %}
 
@@ -388,7 +390,7 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
 ### Axis line width in factor
 
-If the `ThicknessUnit` is set to factor, the given factor value in the `Thickness` is multiplied by the axis radius. The value of the factor ranges from 0 to 1.
+If the [`ThicknessUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialLineStyle.html#Syncfusion_Maui_Gauges_RadialLineStyle_ThicknessUnit) is set to factor, the given factor value in the [`Thickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialLineStyle.html#Syncfusion_Maui_Gauges_RadialLineStyle_Thickness) is multiplied by the axis radius. The value of the factor ranges from 0 to 1.
 
 {% tabs %}
 
@@ -425,7 +427,7 @@ If the `ThicknessUnit` is set to factor, the given factor value in the `Thicknes
 
 ### Setting axis line fill brush
 
-To fill the brush to axis line using the `Fill` property of the radial axis. 
+To fill the brush to axis line using the [`Fill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialLineStyle.html#Syncfusion_Maui_Gauges_RadialLineStyle_Fill) property of the radial axis. 
 
 {% tabs %}
 
@@ -465,7 +467,7 @@ this.Content = sfRadialGauge;
 
 ### Setting gradient brush to axis line
 
-The `GradientStops` property of radial axis allows you to specify the gradient brush to the axis line by specifying the different colors based on provided axis value.
+The [`GradientStops`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialLineStyle.html#Syncfusion_Maui_Gauges_RadialLineStyle_GradientStops) property of radial axis allows you to specify the gradient brush to the axis line by specifying the different colors based on provided axis value.
 
 {% tabs %}
 
@@ -520,7 +522,7 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
 ### Axis line visibility
 
-The visibility of the axis line can be customized using the `ShowAxisLine` property of axis. By default, this property is set to true.
+The visibility of the axis line can be customized using the [`ShowAxisLine`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_ShowAxisLine) property of axis. By default, this property is set to true.
 
 {% tabs %}
 
@@ -554,10 +556,10 @@ this.Content = sfRadialGauge;
 
 The axis labels can be customized using the following properties:
 
-* `TextColor` – Allows you to customize the color of the labels.
-* `FontAttributes` – Allows you to specify the font attribute for labels.
-* `FontSize` – Allows you to specify the font size for labels.
-* `FontFamily` – Allows you to specify the various font families for labels.
+* [`TextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeLabelStyle.html#Syncfusion_Maui_Gauges_GaugeLabelStyle_TextColor) – Allows you to customize the color of the labels.
+* [`FontAttributes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeLabelStyle.html#Syncfusion_Maui_Gauges_GaugeLabelStyle_FontAttributes) – Allows you to specify the font attribute for labels.
+* [`FontSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeLabelStyle.html#Syncfusion_Maui_Gauges_GaugeLabelStyle_FontSize) – Allows you to specify the font size for labels.
+* [`FontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeLabelStyle.html#Syncfusion_Maui_Gauges_GaugeLabelStyle_FontFamily) – Allows you to specify the various font families for labels.
 
 {% tabs %}
 
@@ -599,7 +601,7 @@ this.Content = sfRadialGauge;
 
 The following property of the axis allows you to customize the axis label text.
 
-* `LabelFormat` - Allows you to customize the axis label with the globalized label format.
+* [`LabelFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_LabelFormat) - Allows you to customize the axis label with the globalized label format.
 
 {% tabs %}
 
@@ -631,7 +633,7 @@ this.Content = sfRadialGauge;
 
 ### Label visibility
 
-The `ShowLabels` property of axis allows you to enable or disable the visibility of labels. The default value of the property is true.
+The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_ShowLabels) property of axis allows you to enable or disable the visibility of labels. The default value of the property is true.
 
 {% tabs %}
 
@@ -663,7 +665,7 @@ this.Content = sfRadialGauge;
 
 ### Label placement
 
-The radial axis allows you to position the labels either inside or outside of the axis line using the `LabelPosition` property. By default, labels are positioned inside the axis line.
+The radial axis allows you to position the labels either inside or outside of the axis line using the [`LabelPosition`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_LabelPosition) property. By default, labels are positioned inside the axis line.
 
 {% tabs %}
 
@@ -695,11 +697,11 @@ this.Content = sfRadialGauge;
 
 ### Label position customization
 
-The `LabelOffset` property allows to adjust the distance between the axis line and the labels. The `OffsetUnit` property of axis allows to specify the label offset either in factor or pixels. By default, the value of the label offset is double.NaN.
+The [`LabelOffset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_LabelOffset) property allows to adjust the distance between the axis line and the labels. The [`OffsetUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_OffsetUnit) property of axis allows to specify the label offset either in factor or pixels. By default, the value of the label offset is double.NaN.
 
 ### Label offset in pixel
 
-If the `OffsetUnit` is set as a pixel, the axis labels will be moved based on the pixel values given in `LabelOffset`.
+If the [`OffsetUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_OffsetUnit) is set as a pixel, the axis labels will be moved based on the pixel values given in [`LabelOffset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_LabelOffset).
 
 {% tabs %}
 
@@ -733,7 +735,7 @@ this.Content = sfRadialGauge;
 
 ### Label offset in factor
 
-If the `OffsetUnit` is set as a factor, then the provided factor value in the `LabelOffset` is multiplied by the axis radius. The factor value ranges from 0 to 1.
+If the [`OffsetUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_OffsetUnit) is set as a factor, then the provided factor value in the [`LabelOffset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_LabelOffset) is multiplied by the axis radius. The factor value ranges from 0 to 1.
 
 {% tabs %}
 
@@ -765,25 +767,25 @@ this.Content = sfRadialGauge;
 
 ![.NET MAUI Radial Gauge Axis Label Offset factor](images/axis/maui-radial-gauge-axis-label-offset-factor.png)
 
-N> The `OffsetUnit` property of axis is common for both the `TickOffset` and `LabelOffset`.
+N> The [`OffsetUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_OffsetUnit) property of axis is common for both the [`TickOffset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_TickOffset) and [`LabelOffset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_LabelOffset).
 
 ## Tick customization
 
-The major and minor tick lines of an axis can be customized using the `MajorTickStyle` and `MinorTickStyle` by the following properties.
+The major and minor tick lines of an axis can be customized using the [`MajorTickStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_MajorTickStyle) and [`MinorTickStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_MinorTickStyle) by the following properties.
 
-* `Length` – Specifics the length of ticks.
+* [`Length`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeTickStyle.html#Syncfusion_Maui_Gauges_GaugeTickStyle_Length) – Specifics the length of ticks.
 
-* `LengthUnit` – Allows you to specify the tick length either in pixels or factor. 
+* [`LengthUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialTickStyle.html#Syncfusion_Maui_Gauges_RadialTickStyle_LengthUnit) – Allows you to specify the tick length either in pixels or factor. 
 
-* `Stroke` – Allows you to specify the color for tick line.
+* [`Stroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeTickStyle.html#Syncfusion_Maui_Gauges_GaugeTickStyle_Stroke) – Allows you to specify the color for tick line.
 
-* `StrokeThickness`– Allows you to specify the width for tick line.
+* [`StrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeTickStyle.html#Syncfusion_Maui_Gauges_GaugeTickStyle_StrokeThickness)– Allows you to specify the width for tick line.
 
-* `StrokeDashArray`– Allows you to specify the dash array for tick line.
+* [`StrokeDashArray`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeTickStyle.html#Syncfusion_Maui_Gauges_GaugeTickStyle_StrokeDashArray) – Allows you to specify the dash array for tick line.
 
 ### Tick length in pixel
 
-If the `LengthUnit` is set as a pixel, the tick lines will be rendered based on the pixel values given in `Length`.
+If the [`LengthUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialTickStyle.html#Syncfusion_Maui_Gauges_RadialTickStyle_LengthUnit) is set as a pixel, the tick lines will be rendered based on the pixel values given in [`Length`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeTickStyle.html#Syncfusion_Maui_Gauges_GaugeTickStyle_Length).
 
 {% tabs %}
 
@@ -825,7 +827,7 @@ this.Content = sfRadialGauge;
 
 ### Tick length in factor
 
-If the `LengthUnit` is set as a factor, the provided factor value in the `Length` is multiplied by the axis radius, respectively. The factor value ranges from 0 to 1.
+If the [`LengthUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialTickStyle.html#Syncfusion_Maui_Gauges_RadialTickStyle_LengthUnit) is set as a factor, the provided factor value in the [`Length`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeTickStyle.html#Syncfusion_Maui_Gauges_GaugeTickStyle_Length) is multiplied by the axis radius, respectively. The factor value ranges from 0 to 1.
 
 {% tabs %}
 
@@ -866,7 +868,7 @@ this.Content = sfRadialGauge;
 
 ### Tick style customization
 
-The `Stroke`, `StrokeThickness`, and `StrokeDashArray` properties allows you to customize the axis tick as shown in the following code example.
+The [`Stroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeTickStyle.html#Syncfusion_Maui_Gauges_GaugeTickStyle_Stroke), [`StrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeTickStyle.html#Syncfusion_Maui_Gauges_GaugeTickStyle_StrokeThickness), and [`StrokeDashArray`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeTickStyle.html#Syncfusion_Maui_Gauges_GaugeTickStyle_StrokeDashArray) properties allows you to customize the axis tick as shown in the following code example.
 
 {% tabs %}
 
@@ -926,7 +928,7 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
 ### Setting minor ticks count
 
-The major ticks are generated based on the `Interval` property. Like major ticks, the minor ticks are generated using the `MinorTicksPerInterval` property of axis. By default, the count value of this property is 1.
+The major ticks are generated based on the [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_Interval) property. Like major ticks, the minor ticks are generated using the [`MinorTicksPerInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_MinorTicksPerInterval) property of axis. By default, the count value of this property is 1.
 
 {% tabs %}
 
@@ -958,7 +960,7 @@ this.Content = sfRadialGauge;
 
 ### Tick line visibility
 
-The `ShowTicks` property of the axis is used to enable or disable the visibility of both the major and the minor ticks of axis. The default value of this property is true.
+The [`ShowTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_ShowTicks) property of the axis is used to enable or disable the visibility of both the major and the minor ticks of axis. The default value of this property is true.
 
 {% tabs %}
 
@@ -990,7 +992,7 @@ this.Content = sfRadialGauge;
 
 ### Tick placement
 
-The radial axis allows you to position the ticks either inside or outside or center of the axis line using the `TickPosition` property. By default, ticks are positioned inside the axis line.
+The radial axis allows you to position the ticks either inside or outside or center of the axis line using the [`TickPosition`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_TickPosition) property. By default, ticks are positioned inside the axis line.
 
 {% tabs %}
 
@@ -1022,11 +1024,11 @@ this.Content = sfRadialGauge;
 
 ### Tick position customization
 
-The `OffsetUnit` property of axis allows you to specify the `TickOffset` either in factor or pixels and the default value of `OffsetUnit` and `TickOffset` is pixel and `double.NaN`.
+The [`OffsetUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_OffsetUnit) property of axis allows you to specify the [`TickOffset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_TickOffset) either in factor or pixels and the default value of [`OffsetUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_OffsetUnit) and [`TickOffset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_TickOffset) is pixel and `double.NaN`.
 
 ### Tick offset in pixel
 
-If the `OffsetUnit` is set as a pixel, the axis ticks will be moved based on the pixel values given in `TickOffset`.
+If the [`OffsetUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_OffsetUnit) is set as a pixel, the axis ticks will be moved based on the pixel values given in [`TickOffset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_TickOffset).
 
 {% tabs %}
 
@@ -1058,7 +1060,7 @@ this.Content = sfRadialGauge;
 
 ### Tick offset in factor
 
-If the `OffsetUnit` is set as a factor, the provided factor value in the `TickOffset` is multiplied by the axis radius. The factor value ranges from 0 to 1.
+If the [`OffsetUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_OffsetUnit) is set as a factor, the provided factor value in the [`TickOffset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_TickOffset) is multiplied by the axis radius. The factor value ranges from 0 to 1.
 
 {% tabs %}
 
@@ -1090,11 +1092,11 @@ this.Content = sfRadialGauge;
 
 ![.NET MAUI Radial Gauge Axis Tick Offset Factor](images/axis/maui-radial-gauge-axis-tick-offset-factor.png)
 
-N> The `OffsetUnit` property of axis is common for both the `TickOffset` and `LabelOffset`.
+N> The [`OffsetUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_OffsetUnit) property of axis is common for both the [`TickOffset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_TickOffset) and [`LabelOffset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_LabelOffset).
 
 ## Multiple axis
 
-The `radial gauge` allows you to add n number of radial axis in its axes collection. You can also customize individual axis added in the `Axes` collection.
+The [`radial gauge`](https://help.syncfusion.com/maui/radialgauge/overview) allows you to add n number of radial axis in its axes collection. You can also customize individual axis added in the [`Axes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfRadialGauge.html#Syncfusion_Maui_Gauges_SfRadialGauge_Axes) collection.
 
 {% tabs %}
 
@@ -1336,10 +1338,10 @@ public class RadialAxisExt : RadialAxis
 
 ### LabelCreated
 
-The `LabelCreated` event is triggered each time a label is created for use. The following properties can be customized for each label in this event args:
+The [`LabelCreated`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_LabelCreated) event is triggered each time a label is created for use. The following properties can be customized for each label in this event args:
 
-* `Text` – Allows you to customize the text property of label.
-* `Style` - Allows you to customize the text style.
+* [`Text`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LabelCreatedEventArgs.html#Syncfusion_Maui_Gauges_LabelCreatedEventArgs_Text) – Allows you to customize the text property of label.
+* [`Style`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LabelCreatedEventArgs.html#Syncfusion_Maui_Gauges_LabelCreatedEventArgs_Style) - Allows you to customize the text style.
 
 {% tabs %}
 

@@ -19,17 +19,17 @@ To enable the selection in chart, create an instance of [ChartSelectionBehavior]
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-    . . .
-        <chart:SfCartesianChart.ChartBehaviors>
-            <chart:ChartSelectionBehavior />
-        </chart:SfCartesianChart.ChartBehaviors>
+<chart:SfCartesianChart>
+. . .
+    <chart:SfCartesianChart.ChartBehaviors>
+        <chart:ChartSelectionBehavior />
+    </chart:SfCartesianChart.ChartBehaviors>
 
-        <chart:ColumnSeries ItemsSource="{Binding Data}" 
-                            XBindingPath="Demand"
-                            YBindingPath="Year2010"
-                            SelectionBrush="Green"/>
-    </chart:SfCartesianChart>
+    <chart:ColumnSeries ItemsSource="{Binding Data}" 
+                        XBindingPath="Demand"
+                        YBindingPath="Year2010"
+                        SelectionBrush="Green"/>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
@@ -55,6 +55,8 @@ this.Content = chart;
 
 {% endtabs %}
 
+![Segment selection support in MAUI Chart](Selection_images/maui_chart_segment_selection.png)
+
 ## Selection Type
 
 The [Type](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelectionBehavior.html#Syncfusion_Maui_Charts_ChartSelectionBehavior_Type) property allows users to set selection type of series, which includes [Point](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SelectionType.html#Syncfusion_Maui_Charts_SelectionType_Point) and [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SelectionType.html#Syncfusion_Maui_Charts_SelectionType_None). [Type](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelectionBehavior.html#Syncfusion_Maui_Charts_ChartSelectionBehavior_Type) property with [Point](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SelectionType.html#Syncfusion_Maui_Charts_SelectionType_Point) value is used to select segment in a series and [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SelectionType.html) is used to set deselect state for all segments. 
@@ -63,40 +65,40 @@ The [Type](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelec
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
     . . .
-        <chart:SfCartesianChart.ChartBehaviors>
-            <chart:ChartSelectionBehavior  Type="Point"/>
-        </chart:SfCartesianChart.ChartBehaviors>
+    <chart:SfCartesianChart.ChartBehaviors>
+        <chart:ChartSelectionBehavior  Type="Point"/>
+    </chart:SfCartesianChart.ChartBehaviors>
 
-        <chart:SfCartesianChart.Series>
-            <chart:ColumnSeries ItemsSource="{Binding Data}"  
-                                XBindingPath="Demand"
-                                YBindingPath="Year2010" 
-                                SelectionBrush="Green"/>
-        </chart:SfCartesianChart.Series>
+    <chart:SfCartesianChart.Series>
+        <chart:ColumnSeries ItemsSource="{Binding Data}"  
+                            XBindingPath="Demand"
+                            YBindingPath="Year2010" 
+                            SelectionBrush="Green"/>
+    </chart:SfCartesianChart.Series>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    . . .
-    ChartSelectionBehavior selection = new ChartSelectionBehavior();
-    selection.Type = SelectionType.Point;
-    chart.ChartBehaviors.Add(selection);
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+ChartSelectionBehavior selection = new ChartSelectionBehavior();
+selection.Type = SelectionType.Point;
+chart.ChartBehaviors.Add(selection);
 
-    ColumnSeries series = new ColumnSeries()
-    {
-        ItemsSource = new ViewModel().Data,
-        XBindingPath = "Demand",
-        YBindingPath = "Year2010",
-        SelectionBrush = Brush.Green
-    };
-    chart.Series.Add(series);
-    this.Content = chart;
+ColumnSeries series = new ColumnSeries()
+{
+    ItemsSource = new ViewModel().Data,
+    XBindingPath = "Demand",
+    YBindingPath = "Year2010",
+    SelectionBrush = Brush.Green
+};
+chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -110,45 +112,46 @@ Cartesian chart provides support to select a point programmatically on a chart u
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-    . . .
-        <chart:SfCartesianChart.ChartBehaviors>
-            <chart:ChartSelectionBehavior/>
-        </chart:SfCartesianChart.ChartBehaviors>
+<chart:SfCartesianChart>
+. . .
+    <chart:SfCartesianChart.ChartBehaviors>
+        <chart:ChartSelectionBehavior/>
+    </chart:SfCartesianChart.ChartBehaviors>
 
-        <chart:SfCartesianChart.Series>
-            <chart:ColumnSeries ItemsSource="{Binding Data}" 
-                                XBindingPath="Demand"
-                                YBindingPath="Year2010" 
-                                SelectionBrush="Green"
-                                SelectedIndex="3"/>
-        </chart:SfCartesianChart.Series>
-
-    </chart:SfCartesianChart>
+    <chart:SfCartesianChart.Series>
+        <chart:ColumnSeries ItemsSource="{Binding Data}" 
+                            XBindingPath="Demand"
+                            YBindingPath="Year2010" 
+                            SelectionBrush="Green"
+                            SelectedIndex="3"/>
+    </chart:SfCartesianChart.Series>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    . . .
-    ChartSelectionBehavior selection = new ChartSelectionBehavior();
-    chart.ChartBehaviors.Add(selection);
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+ChartSelectionBehavior selection = new ChartSelectionBehavior();
+chart.ChartBehaviors.Add(selection);
 
-    ColumnSeries series = new ColumnSeries()
-    {
-        ItemsSource = new ViewModel().Data,
-        XBindingPath = "Demand",
-        YBindingPath = "Year2010",
-        SelectionBrush = Brush.Green,
-        SelectedIndex = 3
-    };
-    chart.Series.Add(series);
-    this.Content = chart;
+ColumnSeries series = new ColumnSeries()
+{
+    ItemsSource = new ViewModel().Data,
+    XBindingPath = "Demand",
+    YBindingPath = "Year2010",
+    SelectionBrush = Brush.Green,
+    SelectedIndex = 3
+};
+chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
 {% endtabs %}
+
+![Initial selection rendering support in MAUI Chart](Selection_images/maui_chart_selection_with_index.png)
 
 ## Events
 
@@ -162,7 +165,6 @@ The [SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Char
 * [PreviousIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SelectionEventArgs.html#Syncfusion_Maui_Charts_SelectionEventArgs_PreviousIndex) - Gets the index of previously selected data point.
 * [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SelectionEventArgs.html#Syncfusion_Maui_Charts_SelectionEventArgs_Series) - Gets the selected series.
 * [Cancel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SelectionChangingEventArgs.html#Syncfusion_Maui_Charts_SelectionChangingEventArgs_Cancel) - Gets or sets a value indicating whether to continue the segment selection.
-
 
 ### SelectionChanged
 

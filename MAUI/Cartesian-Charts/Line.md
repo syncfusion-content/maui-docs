@@ -19,7 +19,6 @@ Line chart is used to represent the data trends at equal intervals by connecting
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-
     <chart:SfCartesianChart.PrimaryAxis>
         <chart:CategoryAxis />
     </chart:SfCartesianChart.PrimaryAxis>
@@ -32,7 +31,6 @@ Line chart is used to represent the data trends at equal intervals by connecting
         <chart:LineSeries XBindingPath="Demand" ItemsSource="{Binding Data}" YBindingPath="Year2010"/>
         <chart:LineSeries XBindingPath="Demand" ItemsSource="{Binding Data}" YBindingPath="Year2011"/>
     </chart:SfCartesianChart.Series>
-
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -69,6 +67,8 @@ this.Content = chart;
 
 {% endtabs %}
 
+![Line Chart in MAUI](Chart-types_images/maui_line_chart.png)
+
 ### Dashed line
 
 The [StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LineSeries.html#Syncfusion_Maui_Charts_LineSeries_StrokeDashArray) property of [LineSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LineSeries.html?tabs=tabid-1) is used to render the line series with dashes. Odd value is considered as rendering size and even value is considered as gap.
@@ -77,29 +77,27 @@ The [StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
+    <chart:SfCartesianChart.Resources>
+        <DoubleCollection x:Key="dashArray">
+            <x:Double>5</x:Double>
+            <x:Double>2</x:Double>
+        </DoubleCollection>
+    </chart:SfCartesianChart.Resources>
 
-        <chart:SfCartesianChart.Resources>
-            <DoubleCollection x:Key="dashArray">
-                <x:Double>5</x:Double>
-                <x:Double>2</x:Double>
-            </DoubleCollection>
-        </chart:SfCartesianChart.Resources>
+    <chart:SfCartesianChart.PrimaryAxis>
+        <chart:CategoryAxis />
+    </chart:SfCartesianChart.PrimaryAxis>
 
-        <chart:SfCartesianChart.PrimaryAxis>
-            <chart:CategoryAxis />
-        </chart:SfCartesianChart.PrimaryAxis>
+    <chart:SfCartesianChart.SecondaryAxis>
+        <chart:NumericalAxis />
+    </chart:SfCartesianChart.SecondaryAxis>  
 
-        <chart:SfCartesianChart.SecondaryAxis>
-            <chart:NumericalAxis />
-        </chart:SfCartesianChart.SecondaryAxis>  
-
-        <chart:SfCartesianChart.Series>
-            <chart:LineSeries XBindingPath="Demand" ItemsSource="{Binding Data}" YBindingPath="Year2010" StrokeDashArray="{StaticResource dashArray}"/>
-            <chart:LineSeries XBindingPath="Demand" ItemsSource="{Binding Data}" YBindingPath="Year2011" StrokeDashArray="{StaticResource dashArray}"/>
-        </chart:SfCartesianChart.Series>
-
-    </chart:SfCartesianChart>
+    <chart:SfCartesianChart.Series>
+        <chart:LineSeries XBindingPath="Demand" ItemsSource="{Binding Data}" YBindingPath="Year2010" StrokeDashArray="{StaticResource dashArray}"/>
+        <chart:LineSeries XBindingPath="Demand" ItemsSource="{Binding Data}" YBindingPath="Year2011" StrokeDashArray="{StaticResource dashArray}"/>
+    </chart:SfCartesianChart.Series>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
@@ -141,6 +139,8 @@ this.Content = chart;
 
 {% endtabs %}
 
+![Dashed line chart in MAUI](Chart-types_images/maui_dashed_line_chart.png)
+
 ## Spline Chart 
 
 The [SplineSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SplineSeries.html?tabs=tabid-1) resembles line series, but instead of connecting the data points with line segments, the data points are connected by smooth bezier curves.
@@ -150,7 +150,6 @@ The [SplineSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Sp
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-
     <chart:SfCartesianChart.PrimaryAxis>
         <chart:CategoryAxis />
     </chart:SfCartesianChart.PrimaryAxis>
@@ -163,7 +162,6 @@ The [SplineSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Sp
         <chart:SplineSeries XBindingPath="Demand" ItemsSource="{Binding Data}" YBindingPath="Year2010"/>
         <chart:SplineSeries XBindingPath="Demand" ItemsSource="{Binding Data}" YBindingPath="Year2011"/>
     </chart:SfCartesianChart.Series>
-
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -199,6 +197,8 @@ this.Content = chart;
 
 {% endtabs %}
 
+![Spline chart type in MAUI Chart](Chart-types_images/maui_spline_chart.png)
+
 ### Spline rendering types
 
 The [Type](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SplineSeries.html#Syncfusion_Maui_Charts_SplineSeries_Type) property allows to change the rendering type of spline curve in series. The default value of [Type](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SplineSeries.html#Syncfusion_Maui_Charts_SplineSeries_Type) is [Natural](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SplineType.html#Syncfusion_Maui_Charts_SplineType_Natural).
@@ -214,45 +214,45 @@ The following types are used in SplineSeries:
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
+    <chart:SfCartesianChart.PrimaryAxis>
+        <chart:CategoryAxis />
+    </chart:SfCartesianChart.PrimaryAxis>
 
-        <chart:SfCartesianChart.PrimaryAxis>
-            <chart:CategoryAxis />
-        </chart:SfCartesianChart.PrimaryAxis>
+    <chart:SfCartesianChart.SecondaryAxis>
+        <chart:NumericalAxis />
+    </chart:SfCartesianChart.SecondaryAxis>  
 
-        <chart:SfCartesianChart.SecondaryAxis>
-            <chart:NumericalAxis />
-        </chart:SfCartesianChart.SecondaryAxis>  
-
-        <chart:SfCartesianChart.Series>
-            <chart:SplineSeries XBindingPath="Demand" ItemsSource="{Binding Data}" YBindingPath="Year2010" Type="Cardinal"/>
-        </chart:SfCartesianChart.Series>
-
-    </chart:SfCartesianChart>
+    <chart:SfCartesianChart.Series>
+        <chart:SplineSeries XBindingPath="Demand" ItemsSource="{Binding Data}" YBindingPath="Year2010" Type="Cardinal"/>
+    </chart:SfCartesianChart.Series>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    CategoryAxis primaryAxis = new CategoryAxis();
-    chart.PrimaryAxis = primaryAxis;
-    NumericalAxis secondaryAxis = new NumericalAxis();
-    chart.SecondaryAxis = secondaryAxis;
+SfCartesianChart chart = new SfCartesianChart();
+CategoryAxis primaryAxis = new CategoryAxis();
+chart.PrimaryAxis = primaryAxis;
+NumericalAxis secondaryAxis = new NumericalAxis();
+chart.SecondaryAxis = secondaryAxis;
 
-    SplineSeries series = new SplineSeries()
-    {
-        ItemsSource = new ViewModel().Data,
-        XBindingPath = "Demand",
-        YBindingPath = "Year2010",
-        Type = SplineType.Cardinal
-    };
+SplineSeries series = new SplineSeries()
+{
+    ItemsSource = new ViewModel().Data,
+    XBindingPath = "Demand",
+    YBindingPath = "Year2010",
+    Type = SplineType.Cardinal
+};
 
-    chart.Series.Add(series);
+chart.Series.Add(series);
 
-    this.Content = chart;
+this.Content = chart;
 
 {% endhighlight %}
 
 {% endtabs %}
+
+![Spline types chart in MAUI Chart](Chart-types_images/maui_spline_types_chart.png)
 

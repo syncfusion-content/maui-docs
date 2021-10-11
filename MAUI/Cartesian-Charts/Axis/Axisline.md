@@ -17,7 +17,7 @@ Cartesian chart axis provides support to customize the style of axis line by def
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
     . . .
     <chart:SfCartesianChart.PrimaryAxis>
         <chart:NumericalAxis >
@@ -27,25 +27,25 @@ Cartesian chart axis provides support to customize the style of axis line by def
         </chart:NumericalAxis>
     </chart:SfCartesianChart.PrimaryAxis>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    . . .
-    NumericalAxis primaryAxis = new NumericalAxis();
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+NumericalAxis primaryAxis = new NumericalAxis();
 
-    ChartLineStyle axisLineStyle = new ChartLineStyle();
+ChartLineStyle axisLineStyle = new ChartLineStyle();
 
-    axisLineStyle.Stroke = Colors.Red;
+axisLineStyle.Stroke = Colors.Red;
 
-    axisLineStyle.StrokeWidth = 2;
+axisLineStyle.StrokeWidth = 2;
 
-    primaryAxis.AxisLineStyle = axisLineStyle;
+primaryAxis.AxisLineStyle = axisLineStyle;
 
-    chart.PrimaryAxis = primaryAxis;
+chart.PrimaryAxis = primaryAxis;
 
 {% endhighlight %}
 
@@ -61,7 +61,7 @@ The padding to the axis line is defined by using the [AxisLineOffset](https://he
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
     . . .
     <chart:SfCartesianChart.PrimaryAxis>
         <chart:NumericalAxis AxisLineOffset="25">
@@ -71,27 +71,27 @@ The padding to the axis line is defined by using the [AxisLineOffset](https://he
         </chart:NumericalAxis>
     </chart:SfCartesianChart.PrimaryAxis>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    . . .
-    NumericalAxis primaryAxis = new NumericalAxis();
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+NumericalAxis primaryAxis = new NumericalAxis();
 
-    primaryAxis.AxisLineOffset = 25;
+primaryAxis.AxisLineOffset = 25;
 
-    ChartLineStyle axisLineStyle = new ChartLineStyle();
+ChartLineStyle axisLineStyle = new ChartLineStyle();
 
-    axisLineStyle.Stroke = Colors.Red;
+axisLineStyle.Stroke = Colors.Red;
 
-    axisLineStyle.StrokeWidth = 2;
+axisLineStyle.StrokeWidth = 2;
 
-    primaryAxis.AxisLineStyle = axisLineStyle;
+primaryAxis.AxisLineStyle = axisLineStyle;
 
-    chart.PrimaryAxis = primaryAxis;
+chart.PrimaryAxis = primaryAxis;
 
 {% endhighlight %}
 

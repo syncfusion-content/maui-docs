@@ -35,25 +35,27 @@ Column chart is used to plot discrete rectangles for the given data point values
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    CategoryAxis primaryAxis = new CategoryAxis();
-    chart.PrimaryAxis = primaryAxis;
-    NumericalAxis secondaryAxis = new NumericalAxis();
-    chart.SecondaryAxis = secondaryAxis;
+SfCartesianChart chart = new SfCartesianChart();
+CategoryAxis primaryAxis = new CategoryAxis();
+chart.PrimaryAxis = primaryAxis;
+NumericalAxis secondaryAxis = new NumericalAxis();
+chart.SecondaryAxis = secondaryAxis;
 
-    ColumnSeries series = new ColumnSeries()
-    {
-        ItemsSource = new ViewModel().Data,
-        XBindingPath = "XValue",
-        YBindingPath = "YValue",
-    };
+ColumnSeries series = new ColumnSeries()
+{
+    ItemsSource = new ViewModel().Data,
+    XBindingPath = "XValue",
+    YBindingPath = "YValue",
+};
 
-    chart.Series.Add(series);
-    this.Content = chart;
+chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
 {% endtabs %}
+
+![Column chart type in MAUI Chart](Chart-Types_images/maui_column_chart.png)
 
 ## Spacing and Width
 
@@ -65,45 +67,46 @@ The [Width](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ColumnSer
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
 
-        <chart:SfCartesianChart.PrimaryAxis>
-            <chart:CategoryAxis />
-        </chart:SfCartesianChart.PrimaryAxis>
+    <chart:SfCartesianChart.PrimaryAxis>
+        <chart:CategoryAxis />
+    </chart:SfCartesianChart.PrimaryAxis>
 
-        <chart:SfCartesianChart.SecondaryAxis>
-            <chart:NumericalAxis />
-        </chart:SfCartesianChart.SecondaryAxis>  
+    <chart:SfCartesianChart.SecondaryAxis>
+        <chart:NumericalAxis />
+    </chart:SfCartesianChart.SecondaryAxis>  
 
-        <chart:SfCartesianChart.Series>
-            <chart:ColumnSeries ItemsSource="{Binding Data}" XBindingPath="XValue" YBindingPath="YValue" Spacing="0.5" Width="0.6"/>
-        </chart:SfCartesianChart.Series>
+    <chart:SfCartesianChart.Series>
+        <chart:ColumnSeries ItemsSource="{Binding Data}" XBindingPath="XValue" YBindingPath="YValue" Spacing="0.5" Width="0.6"/>
+    </chart:SfCartesianChart.Series>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    CategoryAxis primaryAxis = new CategoryAxis();
-    chart.PrimaryAxis = primaryAxis;
-    NumericalAxis secondaryAxis = new NumericalAxis();
-    chart.SecondaryAxis = secondaryAxis;
+SfCartesianChart chart = new SfCartesianChart();
+CategoryAxis primaryAxis = new CategoryAxis();
+chart.PrimaryAxis = primaryAxis;
+NumericalAxis secondaryAxis = new NumericalAxis();
+chart.SecondaryAxis = secondaryAxis;
 
-    ColumnSeries series = new ColumnSeries()
-    {
-        ItemsSource = new ViewModel().Data,
-        XBindingPath = "XValue",
-        YBindingPath = "YValue",
-        Spacing = 0.5,
-        Width = "0.6"
-    };
+ColumnSeries series = new ColumnSeries()
+{
+    ItemsSource = new ViewModel().Data,
+    XBindingPath = "XValue",
+    YBindingPath = "YValue",
+    Spacing = 0.5,
+    Width = "0.6"
+};
 
-    chart.Series.Add(series);
-    this.Content = chart;
+chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
 {% endtabs %}
 
+![Column segment spacing in MAUI Chart](Chart-Types_images/maui_column_chart_with_segment_spacing.png)

@@ -9,7 +9,7 @@ documentation: ug
 
 # Marker Pointer in .NET MAUI Radial Gauge
 
-Indicate current values by using different types of marker pointers. You can change the marker shape type using the `MarkerType` property.
+Indicate current values by using different types of marker pointers. You can change the marker shape type using the [`MarkerType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.MarkerPointer.html#Syncfusion_Maui_Gauges_MarkerPointer_MarkerType) property.
 
 {% tabs %}
 
@@ -60,11 +60,11 @@ Gauge supports the following types of shapes:
 
 The marker pointer can be customized using the following properties:
 
-* `Fill` – Allows you to customize the marker color.
-* `MarkerHeight` – Allows you to specify the marker height.
-* `MarkerWidth` – Allows you to specify the marker width.
-* `Stroke` – Allows you to specify the border color for the marker.
-* `BorderWidth` –  Allows you to specify the border width of the marker.
+* [`Fill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.MarkerPointer.html#Syncfusion_Maui_Gauges_MarkerPointer_Fill) – Allows you to customize the marker color.
+* [`MarkerHeight`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.MarkerPointer.html#Syncfusion_Maui_Gauges_MarkerPointer_MarkerHeight) – Allows you to specify the marker height.
+* [`MarkerWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.MarkerPointer.html#Syncfusion_Maui_Gauges_MarkerPointer_MarkerWidth) – Allows you to specify the marker width.
+* [`Stroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.MarkerPointer.html#Syncfusion_Maui_Gauges_MarkerPointer_Stroke) – Allows you to specify the border color for the marker.
+* [`BorderWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.MarkerPointer.html#Syncfusion_Maui_Gauges_MarkerPointer_BorderWidth) –  Allows you to specify the border width of the marker.
 
 {% tabs %}
 
@@ -115,9 +115,9 @@ this.Content = sfRadialGauge;
 
 ## Marker position customization
 
-The marker pointer can be moved near or far from its actual position using the `MarkerOffset` and `OffsetUnit` properties. 
+The marker pointer can be moved near or far from its actual position using the [`MarkerOffset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.MarkerPointer.html#Syncfusion_Maui_Gauges_MarkerPointer_MarkerOffset) and [`OffsetUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.MarkerPointer.html#Syncfusion_Maui_Gauges_MarkerPointer_OffsetUnit) properties. 
 
-When you set `OffsetUnit` to pixel, the marker pointer will be moved based on the pixel value. If you set `OffsetUnit` to factor, then provided factor will be multiplied with the axis radius value, and then the pointer will be moved to corresponding value. The default value of `OffsetUnit` is `SizeUnit.Pixel`.
+When you set [`OffsetUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.MarkerPointer.html#Syncfusion_Maui_Gauges_MarkerPointer_OffsetUnit) to pixel, the marker pointer will be moved based on the pixel value. If you set [`OffsetUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.MarkerPointer.html#Syncfusion_Maui_Gauges_MarkerPointer_OffsetUnit) to factor, then provided factor will be multiplied with the axis radius value, and then the pointer will be moved to corresponding value. The default value of [`OffsetUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.MarkerPointer.html#Syncfusion_Maui_Gauges_MarkerPointer_OffsetUnit) is [`SizeUnit.Pixel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SizeUnit.html#Syncfusion_Maui_Gauges_SizeUnit_Pixel).
 
 {% tabs %}
 

@@ -13,11 +13,11 @@ This section explains the steps required to configure the .NET MAUI Tab View con
 
 ## Adding SfTabView reference
 
-Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfTabView to your project, open the NuGet package manager in Visual Studio, search for `Syncfusion.Maui.TabView` and then install it.
+Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html?tabs=tabid-1) to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.TabView](https://www.nuget.org/packages/Syncfusion.Maui.TabView/) and then install it.
 
 ## Register the handler
 
-Syncfusion.Maui.Core nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file register the handler for Syncfusion core.
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file register the handler for Syncfusion core.
 
 {% highlight C# %}
 
@@ -52,7 +52,7 @@ namespace TabViewMauiSample
 
 ## Create a simple Tab View
 
-This section explains how to create a Tab View and configure it. The control can be configured entirely in C# code or by using XAML markup. The following screenshot illustrates the output of Tab View on iOS, Android and MacCatalyst.
+This section explains how to create a Tab View and configure it. The control can be configured entirely in C# code or by using XAML markup. The following screenshot illustrates the output of Tab View on Android platform.
 
 ![TabViewImage](images/TabView.png)
 
@@ -84,7 +84,7 @@ using Syncfusion.Maui.TabView;
 
 Set the control to content in `ContentPage`.
 
-Tab items can be added to the Tab View through the `Items` property of `SfTabView`, which holds the collection of `SfTabItem` through `TabItemsCollection`.
+Tab items can be added to the Tab View through the [Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_ItemsProperty) property of [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html), which holds the collection of [SfTabItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html) through [TabItemsCollection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.TabItemCollection.html).
 
 {% tabs %}
 
@@ -127,7 +127,7 @@ namespace TabViewMauiSample
 
 ### How to add items in SfTabView
 
-Tab items can be added to the control using the `Items` property of `SfTabView`.
+Tab items can be added to the control using the [Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_ItemsProperty) property of [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html).
 
 {% tabs %}
 
@@ -141,19 +141,19 @@ Tab items can be added to the control using the `Items` property of `SfTabView`.
     <ContentPage.Content>
           <tabView:SfTabView x:Name="tabView">
                 <tabView:SfTabView.Items>
-                    <tabView:SfTabItem Header="Item1">
+                    <tabView:SfTabItem Header="Call">
                         <tabView:SfTabItem.Content>
                             <Grid BackgroundColor="Red" />
                         </tabView:SfTabItem.Content>
                     </tabView:SfTabItem>
 
-                    <tabView:SfTabItem Header="Item2">
+                    <tabView:SfTabItem Header="Favorites">
                         <tabView:SfTabItem.Content>
                             <Grid BackgroundColor="Green"/>
                         </tabView:SfTabItem.Content>
                     </tabView:SfTabItem>
 
-                    <tabView:SfTabItem Header="Item3">
+                    <tabView:SfTabItem Header="Contacts">
                         <tabView:SfTabItem.Content>
                             <Grid BackgroundColor="Blue"/>
                         </tabView:SfTabItem.Content>
@@ -185,17 +185,17 @@ namespace TabViewMauiSample
             {
                 new SfTabItem()
                 {
-                    Header = "Item1",
+                    Header = "Call",
                     Content = allContactsGrid
                 },
                 new SfTabItem()
                 {
-                    Header = "Item2",
+                    Header = "Favorites",
                     Content = favoritesGrid
                 },
                 new SfTabItem()
                 {
-                    Header = "Item3",
+                    Header = "Contacts",
                     Content = contactsGrid
                 }
             };
@@ -209,3 +209,7 @@ namespace TabViewMauiSample
 {% endhighlight %}
 
 {% endtabs %}
+
+![Getting_Started](images/Getting_Started.png)
+
+N> View [sample](https://github.com/SyncfusionExamples/maui-tabview-samples/tree/main/TabViewGettingStarted) in GitHub

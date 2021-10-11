@@ -9,7 +9,7 @@ documentation: ug
 
 # Populating tab items to .NET MAUI Tab View (SfTabView)
 
-Tab items can be added to the control using the `Items` property of `SfTabView`.
+Tab items can be added to the control using the [Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_Items) property of [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html).
 
 {% tabs %}
 
@@ -185,50 +185,15 @@ Bind the items source of the `ListView`, and set the required appearance in its 
                     <ListView RowHeight="50">
                         <ListView.ItemsSource>
                             <x:Array Type="{x:Type x:String}">
-                            <x:String>James</x:String>
-                            <x:String>Richard</x:String>
-                            <x:String>Michael</x:String>
-                            <x:String>Alex</x:String>
-                            <x:String>Clara</x:String>
-                            <x:String>Steve</x:String>
-                            <x:String>James</x:String>
-                            <x:String>Alex</x:String>
-                            <x:String>James</x:String>
-                            <x:String>James</x:String>
-                            <x:String>Richard</x:String>
-                            <x:String>Michael</x:String>
-                            <x:String>Alex</x:String>
-                            <x:String>Clara</x:String>
-                            <x:String>Steve</x:String>
-                            <x:String>James</x:String>
-                            <x:String>Alex</x:String>
-                            <x:String>James</x:String>
+                                <x:String>James</x:String>
+                                ... 
                             </x:Array>
                         </ListView.ItemsSource>
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
                                     <Grid ColumnDefinitions="48,*,48" Margin="10,5">
-                                        <Image GridLayout.Column="0"
-                                            WidthRequest="35"
-                                            HeightRequest="35"
-                                            VerticalOptions="Center"
-                                            HorizontalOptions="Center"
-                                            Aspect="AspectFit"
-                                            Source="incoming"/>
-                                        <Label GridLayout.Column="1"
-                                            VerticalOptions="Center"
-                                            HorizontalOptions="Start"
-                                            TextColor="#666666"
-                                            FontSize="16"
-                                            Text="{Binding}"/>
-                                        <Image GridLayout.Column="2"
-                                            WidthRequest="40"
-                                            HeightRequest="40"
-                                            VerticalOptions="Center"
-                                            HorizontalOptions="Center"
-                                            Aspect="AspectFit"
-                                            Source="sim"/>
+                                        ...
                                     </Grid>
                                 </ViewCell>
                             </DataTemplate>
@@ -254,58 +219,13 @@ Bind the items source of the `ListView`, and set the required appearance in its 
                         <ListView.ItemsSource>
                             <x:Array Type="{x:Type x:String}">
                             <x:String>James</x:String>
-                            <x:String>Richard</x:String>
-                            <x:String>Michael</x:String>
-                            <x:String>Alex</x:String>
-                            <x:String>Clara</x:String>
-                            <x:String>Steve</x:String>
-                            <x:String>David</x:String>
-                            <x:String>Stephen</x:String>
-                            <x:String>James</x:String>
-                            <x:String>James</x:String>
-                            <x:String>Richard</x:String>
-                            <x:String>Michael</x:String>
-                            <x:String>Alex</x:String>
-                            <x:String>Clara</x:String>
-                            <x:String>Steve</x:String>
-                            <x:String>James</x:String>
-                            <x:String>Alex</x:String>
-                            <x:String>James</x:String>
+                            ...
                             </x:Array>
                         </ListView.ItemsSource>
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
-                                    <Grid ColumnDefinitions="48,*,48,48" Margin="10,5">
-                                        <Image GridLayout.Column="0"
-                                            WidthRequest="35"
-                                            HeightRequest="35"
-                                            VerticalOptions="Center"
-                                            HorizontalOptions="Center"
-                                            Aspect="AspectFit"
-                                            Source="contact_image"/>
-                                        <Label GridLayout.Column="1"
-                                            VerticalOptions="Center"
-                                            HorizontalOptions="Start"
-                                            Margin="5,0"
-                                            TextColor="#666666"
-                                            FontSize="16"
-                                            Text="{Binding}"/>
-                                        <Image GridLayout.Column="2"
-                                            WidthRequest="35"
-                                            HeightRequest="35"
-                                            VerticalOptions="Center"
-                                            HorizontalOptions="Center"
-                                            Aspect="AspectFit"
-                                            Source="mail"/>
-                                        <Image GridLayout.Column="3"
-                                            WidthRequest="35"
-                                            HeightRequest="35"
-                                            VerticalOptions="Center"
-                                            HorizontalOptions="Center"
-                                            Aspect="AspectFit"
-                                            Source="call1"/>
-                                    </Grid>
+                                    ...
                                 </ViewCell>
                             </DataTemplate>
                         </ListView.ItemTemplate>
@@ -324,3 +244,5 @@ Bind the items source of the `ListView`, and set the required appearance in its 
 Similarly, content region for other tabs also can be configured.
 
 ![LisViewImage](images/ListView.png)
+
+N> View [sample](https://github.com/SyncfusionExamples/maui-tabview-samples/tree/main/PopulatingItemTabView) in GitHub

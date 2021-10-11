@@ -13,7 +13,7 @@ Radial range is a visual element that helps to quickly visualize where a value f
 
 ## Setting start and end value
 
-The start and end values of range is set by `StartValue` and `EndValue` properties.
+The start and end values of range is set by [`StartValue`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialRange.html#Syncfusion_Maui_Gauges_RadialRange_StartValue) and [`EndValue`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialRange.html#Syncfusion_Maui_Gauges_RadialRange_EndValue) properties.
 
 {% tabs %}
 
@@ -56,19 +56,19 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
 The following properties are used for the range customization:
 
-* `Fill` – Specifies the color for the range.
+* [`Fill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialRange.html#Syncfusion_Maui_Gauges_RadialRange_Fill) – Specifies the color for the range.
 
-* `StartWidth`– Specifies the start width of the range either in pixels or factor.
+* [`StartWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialRange.html#Syncfusion_Maui_Gauges_RadialRange_StartWidth) – Specifies the start width of the range either in pixels or factor.
 
-* `EndWidth` – Specifies the end width of the range either in pixels or factor.
+* [`EndWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialRange.html#Syncfusion_Maui_Gauges_RadialRange_EndWidth) – Specifies the end width of the range either in pixels or factor.
 
-* `WidthUnit`– Specifies whether the start width and end width of the range are set in pixels or factor.
+* [`WidthUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialRange.html#Syncfusion_Maui_Gauges_RadialRange_WidthUnit) – Specifies whether the start width and end width of the range are set in pixels or factor.
 
-* `GradientStops` - Specifies the gradient for the range.
+* [`GradientStops`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialRange.html#Syncfusion_Maui_Gauges_RadialRange_GradientStops) - Specifies the gradient for the range.
 
 ### Equal range width
 
-Range width can be controlled by `StartWidth` and `EndWidth` properties of the range.
+Range width can be controlled by [`StartWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialRange.html#Syncfusion_Maui_Gauges_RadialRange_StartWidth) and [`EndWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialRange.html#Syncfusion_Maui_Gauges_RadialRange_EndWidth) properties of the range.
 
 {% tabs %}
 
@@ -113,7 +113,7 @@ this.Content = sfRadialGauge;
 
 ### Different range width
 
-By setting different values to `StartWidth` and `EndWidth` property, you can create different width ranges. 
+By setting different values to [`StartWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialRange.html#Syncfusion_Maui_Gauges_RadialRange_StartWidth) and [`EndWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialRange.html#Syncfusion_Maui_Gauges_RadialRange_EndWidth) property, you can create different width ranges. 
 
 {% tabs %}
 
@@ -156,13 +156,13 @@ this.Content = sfRadialGauge;
 
 ![.NET MAUI Radial Gauge Range Thickness](images/range/maui-radial-gauge-range-thickness.png)
 
-When the `WidthUnit` is set as pixels, the range will be rendered based on the provided pixel values in `StartWidth` and `EndWidth`
+When the [`WidthUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialRange.html#Syncfusion_Maui_Gauges_RadialRange_WidthUnit) is set as pixels, the range will be rendered based on the provided pixel values in [`StartWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialRange.html#Syncfusion_Maui_Gauges_RadialRange_StartWidth) and [`EndWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialRange.html#Syncfusion_Maui_Gauges_RadialRange_EndWidth)
 
-If the `WidthUnit` is set as factor, the provided factor value in the start width and end width will be multiplied with the axis radius, respectively and calculated values assigned to the range width. The factor value ranges from 0 to 1.
+If the [`WidthUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialRange.html#Syncfusion_Maui_Gauges_RadialRange_WidthUnit) is set as factor, the provided factor value in the start width and end width will be multiplied with the axis radius, respectively and calculated values assigned to the range width. The factor value ranges from 0 to 1.
 
 ### Setting gradient brush to the range
 
- The `GradientStops` property of `range` allows you to specify the smooth color transition to the pointer by specifying the different colors based on provided axis value.
+ The [`GradientStops`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialRange.html#Syncfusion_Maui_Gauges_RadialRange_GradientStops) property of [`range`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialRange.html) allows you to specify the smooth color transition to the pointer by specifying the different colors based on provided axis value.
 
 {% tabs %}
 
@@ -225,11 +225,11 @@ this.Content = sfRadialGauge;
 
 ### Position customization
 
-The range can be moved far or near to the axis line by using the `RangeOffset` property. The `OffsetUnit` property of range allows you to specify the `RangeOffset` either in factor or pixels, and the default value of `OffsetUnit` is pixel.
+The range can be moved far or near to the axis line by using the [`RangeOffset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialRange.html#Syncfusion_Maui_Gauges_RadialRange_RangeOffset) property. The [`OffsetUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialRange.html#Syncfusion_Maui_Gauges_RadialRange_OffsetUnit) property of range allows you to specify the [`RangeOffset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialRange.html#Syncfusion_Maui_Gauges_RadialRange_RangeOffset) either in factor or pixels, and the default value of [`OffsetUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialRange.html#Syncfusion_Maui_Gauges_RadialRange_OffsetUnit) is pixel.
 
 ### Range offset in pixel
 
-If the `OffsetUnit` is set as a pixels, the range will be moved from axis line based on the provided pixel value.
+If the [`OffsetUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialRange.html#Syncfusion_Maui_Gauges_RadialRange_OffsetUnit) is set as a pixels, the range will be moved from axis line based on the provided pixel value.
 
 {% tabs %}
 
@@ -272,7 +272,7 @@ this.Content = sfRadialGauge;
 
 ### Range offset in factor
 
-If the `OffsetUnit` is set as a factor, the provided factor value in the `RangeOffset` will be multiplied by the axis radius and the range will be moved from axis line to the corresponding position. The default value of `OffsetUnit` is Pixel.
+If the [`OffsetUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialRange.html#Syncfusion_Maui_Gauges_RadialRange_OffsetUnit) is set as a factor, the provided factor value in the [`RangeOffset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialRange.html#Syncfusion_Maui_Gauges_RadialRange_RangeOffset) will be multiplied by the axis radius and the range will be moved from axis line to the corresponding position. The default value of [`OffsetUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialRange.html#Syncfusion_Maui_Gauges_RadialRange_OffsetUnit) is Pixel.
 
 {% tabs %}
 
@@ -317,7 +317,7 @@ this.Content = sfRadialGauge;
 
 ## Setting range color to axis elements
 
-You can set range color to axis labels and ticks using the `UseRangeColorForAxis` property of axis.
+You can set range color to axis labels and ticks using the [`UseRangeColorForAxis`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_UseRangeColorForAxis) property of axis.
 
 {% tabs %}
 
@@ -442,7 +442,7 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
 ## Range label
 
-A text can be displayed on range using the `Label` property. The provided text can be customized using `LabelStyle` property. 
+A text can be displayed on range using the [`Label`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialRange.html#Syncfusion_Maui_Gauges_RadialRange_Label) property. The provided text can be customized using [`LabelStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialRange.html#Syncfusion_Maui_Gauges_RadialRange_LabelStyle) property. 
 
 {% tabs %}
 

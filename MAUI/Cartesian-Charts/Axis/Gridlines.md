@@ -17,32 +17,27 @@ By default, major gridlines are automatically added to the [ChartAxis](https://h
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-
-        <chart:SfCartesianChart.PrimaryAxis>
-            <chart:NumericalAxis ShowMajorGridLines="False">
-            </chart:NumericalAxis>
-        </chart:SfCartesianChart.PrimaryAxis>
-
-        <chart:SfCartesianChart.SecondaryAxis>
-            <chart:NumericalAxis />
-        </chart:SfCartesianChart.SecondaryAxis>
-        . . .
-    </chart:SfCartesianChart>
+<chart:SfCartesianChart>
+    <chart:SfCartesianChart.PrimaryAxis>
+        <chart:NumericalAxis ShowMajorGridLines="False" />
+    </chart:SfCartesianChart.PrimaryAxis>
+    <chart:SfCartesianChart.SecondaryAxis>
+        <chart:NumericalAxis />
+    </chart:SfCartesianChart.SecondaryAxis>
+    . . .
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    . . .
-    NumericalAxis primaryAxis = new NumericalAxis();
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+NumericalAxis primaryAxis = new NumericalAxis();
+ primaryAxis.ShowMajorGridLines = false;
+chart.PrimaryAxis = primaryAxis;
 
-    primaryAxis.ShowMajorGridLines = false;
-
-    chart.PrimaryAxis = primaryAxis;
-
-    chart.SecondaryAxis = new NumericalAxis();
+chart.SecondaryAxis = new NumericalAxis();
 
 {% endhighlight %}
 
@@ -57,8 +52,7 @@ The [MajorGridLineStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cha
 {% tabs %}
 
 {% highlight xaml %}
-
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
     . . .
     <chart:SfCartesianChart.Resources>
         <DoubleCollection x:Key="dashArray">
@@ -78,29 +72,27 @@ The [MajorGridLineStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cha
     <chart:SfCartesianChart.SecondaryAxis>
         <chart:NumericalAxis />
     </chart:SfCartesianChart.SecondaryAxis>
-
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
+SfCartesianChart chart = new SfCartesianChart();
     . . .
+DoubleCollection doubleCollection = new DoubleCollection();
+doubleCollection.Add(3);
+doubleCollection.Add(3);
 
-    DoubleCollection doubleCollection = new DoubleCollection();
-    doubleCollection.Add(3);
-    doubleCollection.Add(3);
+NumericalAxis primaryAxis = new NumericalAxis();
+ChartLineStyle axisLineStyle = new ChartLineStyle();
+axisLineStyle.Stroke = Colors.Black;
+axisLineStyle.StrokeWidth = 2;
+axisLineStyle.StrokeDashArray = doubleCollection
+primaryAxis.MajorGridLineStyle = axisLineStyle;
+chart.PrimaryAxis = primaryAxis;
 
-    NumericalAxis primaryAxis = new NumericalAxis();
-    ChartLineStyle axisLineStyle = new ChartLineStyle();
-    axisLineStyle.Stroke = Colors.Black;
-    axisLineStyle.StrokeWidth = 2;
-    axisLineStyle.StrokeDashArray = doubleCollection
-    primaryAxis.MajorGridLineStyle = axisLineStyle;
-    chart.PrimaryAxis = primaryAxis;
-    
-    chart.SecondaryAxis = new NumericalAxis();
+chart.SecondaryAxis = new NumericalAxis();
 
 {% endhighlight %}
 
@@ -116,8 +108,7 @@ Minor gridlines will be added automatically when the small tick lines is defined
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-
+<chart:SfCartesianChart>
     <chart:SfCartesianChart.PrimaryAxis>
         <chart:NumericalAxis/>
     </chart:SfCartesianChart.PrimaryAxis>
@@ -126,19 +117,19 @@ Minor gridlines will be added automatically when the small tick lines is defined
         <chart:NumericalAxis MinorTicksPerInterval="3" />
     </chart:SfCartesianChart.SecondaryAxis>
     . . .
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    chart.PrimaryAxis = new NumericalAxis();
-    chart.SecondaryAxis = new NumericalAxis()
-    {
-        MinorTicksPerInterval = 3,
-    };
-    . . .
+SfCartesianChart chart = new SfCartesianChart();
+chart.PrimaryAxis = new NumericalAxis();
+chart.SecondaryAxis = new NumericalAxis()
+{
+    MinorTicksPerInterval = 3,
+};
+. . .
 
 {% endhighlight %}
 
@@ -152,9 +143,8 @@ The [MinorGridLineStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cha
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
     . . .
-
     <chart:SfCartesianChart.Resources>
         <DoubleCollection x:Key="dashArray">
             <x:Double>3</x:Double>
@@ -172,28 +162,28 @@ The [MinorGridLineStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cha
                 <chart:ChartLineStyle StrokeDashArray="{StaticResource dashArray}" Stroke="Black" StrokeWidth="0.8"  />
             </chart:NumericalAxis.MajorGridLineStyle>
         </chart:NumericalAxis>
-        </chart:SfCartesianChart.SecondaryAxis>
+    </chart:SfCartesianChart.SecondaryAxis>
     . . .
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    chart.PrimaryAxis = new NumericalAxis();
+SfCartesianChart chart = new SfCartesianChart();
+chart.PrimaryAxis = new NumericalAxis();
 
-    DoubleCollection doubleCollection = new DoubleCollection();
-    doubleCollection.Add(3);
-    doubleCollection.Add(3);
+DoubleCollection doubleCollection = new DoubleCollection();
+doubleCollection.Add(3);
+doubleCollection.Add(3);
 
-    NumericalAxis secondaryAxis = new NumericalAxis();
-    ChartLineStyle axisLineStyle = new ChartLineStyle();
-    axisLineStyle.Stroke = Colors.Black;
-    axisLineStyle.StrokeWidth = 0.8;
-    axisLineStyle.StrokeDashArray = doubleCollection
-    secondaryAxis.MinorGridLineStyle = axisLineStyle;
-    chart.SecondaryAxis = secondaryAxis;
+NumericalAxis secondaryAxis = new NumericalAxis();
+ChartLineStyle axisLineStyle = new ChartLineStyle();
+axisLineStyle.Stroke = Colors.Black;
+axisLineStyle.StrokeWidth = 0.8;
+axisLineStyle.StrokeDashArray = doubleCollection
+secondaryAxis.MinorGridLineStyle = axisLineStyle;
+chart.SecondaryAxis = secondaryAxis;
 
 {% endhighlight %}
 

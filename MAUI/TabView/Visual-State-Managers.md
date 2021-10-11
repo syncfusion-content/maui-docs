@@ -131,3 +131,5 @@ Use the visual state manager to make changes to the .NET MAUI tab properties bas
 {% endhighlight %}
 
 ![Visual state manager](images/Visual-state-manager.png) 
+
+N> View [sample](https://github.com/SyncfusionExamples/maui-tabview-samples/tree/main/VisualStateManagerTabView) in GitHub

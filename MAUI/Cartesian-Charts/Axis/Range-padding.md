@@ -35,30 +35,30 @@ By default, the [RangePadding](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-    . . .
-        <chart:SfCartesianChart.PrimaryAxis>
-            <chart:NumericalAxis RangePadding="Additional"/>
-        </chart:SfCartesianChart.PrimaryAxis>
+<chart:SfCartesianChart>
+. . .
+    <chart:SfCartesianChart.PrimaryAxis>
+        <chart:NumericalAxis RangePadding="Additional"/>
+    </chart:SfCartesianChart.PrimaryAxis>
 
-        <chart:SfCartesianChart.SecondaryAxis>
-            <chart:NumericalAxis />
-        </chart:SfCartesianChart.SecondaryAxis>
-    . . .
-    </chart:SfCartesianChart>
+    <chart:SfCartesianChart.SecondaryAxis>
+        <chart:NumericalAxis />
+    </chart:SfCartesianChart.SecondaryAxis>
+. . .
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
+SfCartesianChart chart = new SfCartesianChart();
 
-    chart.PrimaryAxis = new NumericalAxis()
-    {
-        RangePadding = NumericalPadding.Additional,
-    };
+chart.PrimaryAxis = new NumericalAxis()
+{
+    RangePadding = NumericalPadding.Additional,
+};
 
-    chart.SecondaryAxis = new NumericalAxis();
+chart.SecondaryAxis = new NumericalAxis();
 
 {% endhighlight %}
 
@@ -72,30 +72,30 @@ By default, the [RangePadding](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-    . . .
-        <chart:SfCartesianChart.PrimaryAxis>
-            <chart:NumericalAxis RangePadding="None"/>
-        </chart:SfCartesianChart.PrimaryAxis>
+<chart:SfCartesianChart>
+. . .
+    <chart:SfCartesianChart.PrimaryAxis>
+        <chart:NumericalAxis RangePadding="None"/>
+    </chart:SfCartesianChart.PrimaryAxis>
 
-        <chart:SfCartesianChart.SecondaryAxis>
-            <chart:NumericalAxis />
-        </chart:SfCartesianChart.SecondaryAxis>
-    . . .
-    </chart:SfCartesianChart>
+    <chart:SfCartesianChart.SecondaryAxis>
+        <chart:NumericalAxis />
+    </chart:SfCartesianChart.SecondaryAxis>
+. . .
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
+SfCartesianChart chart = new SfCartesianChart();
 
-    chart.PrimaryAxis = new NumericalAxis()
-    {
-        RangePadding = NumericalPadding.None,
-    };
+chart.PrimaryAxis = new NumericalAxis()
+{
+    RangePadding = NumericalPadding.None,
+};
 
-    chart.SecondaryAxis = new NumericalAxis();
+chart.SecondaryAxis = new NumericalAxis();
 
 {% endhighlight %}
 
@@ -109,30 +109,30 @@ By default, the [RangePadding](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-    . . .
-        <chart:SfCartesianChart.PrimaryAxis>
-            <chart:NumericalAxis  RangePadding="Round"/>
-        </chart:SfCartesianChart.PrimaryAxis>
+<chart:SfCartesianChart>
+. . .
+    <chart:SfCartesianChart.PrimaryAxis>
+        <chart:NumericalAxis  RangePadding="Round"/>
+    </chart:SfCartesianChart.PrimaryAxis>
 
-        <chart:SfCartesianChart.SecondaryAxis>
-            <chart:NumericalAxis />
-        </chart:SfCartesianChart.SecondaryAxis>
-    . . .
-    </chart:SfCartesianChart>
+    <chart:SfCartesianChart.SecondaryAxis>
+        <chart:NumericalAxis />
+    </chart:SfCartesianChart.SecondaryAxis>
+. . .
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
+SfCartesianChart chart = new SfCartesianChart();
 
-    chart.PrimaryAxis = new NumericalAxis()
-    {
-        RangePadding = NumericalPadding.Round,
-    };
+chart.PrimaryAxis = new NumericalAxis()
+{
+    RangePadding = NumericalPadding.Round,
+};
 
-    chart.SecondaryAxis = new NumericalAxis();
+chart.SecondaryAxis = new NumericalAxis();
 
 {% endhighlight %}
 
@@ -159,30 +159,30 @@ The [RangePadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Nu
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-    . . .
-        <chart:SfCartesianChart.PrimaryAxis>
-            <chart:DateTimeAxis RangePadding="Additional"/>
-        </chart:SfCartesianChart.PrimaryAxis>
+<chart:SfCartesianChart>
+. . .
+    <chart:SfCartesianChart.PrimaryAxis>
+        <chart:DateTimeAxis RangePadding="Additional"/>
+    </chart:SfCartesianChart.PrimaryAxis>
 
-        <chart:SfCartesianChart.SecondaryAxis>
-            <chart:NumericalAxis />
-        </chart:SfCartesianChart.SecondaryAxis>
-    . . .
-    </chart:SfCartesianChart>
+    <chart:SfCartesianChart.SecondaryAxis>
+        <chart:NumericalAxis />
+    </chart:SfCartesianChart.SecondaryAxis>
+. . .
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
+SfCartesianChart chart = new SfCartesianChart();
 
-    chart.PrimaryAxis = new DateTimeAxis()
-    {
-        RangePadding = DateTimeRangePadding.Additional
-    };
+chart.PrimaryAxis = new DateTimeAxis()
+{
+    RangePadding = DateTimeRangePadding.Additional
+};
 
-    chart.SecondaryAxis = new NumericalAxis();
+chart.SecondaryAxis = new NumericalAxis();
 
 {% endhighlight %}
 
@@ -196,30 +196,30 @@ The [RangePadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Nu
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-    . . .
-        <chart:SfCartesianChart.PrimaryAxis>
-            <chart:DateTimeAxis RangePadding="None" />
-        </chart:SfCartesianChart.PrimaryAxis>
+<chart:SfCartesianChart>
+. . .
+    <chart:SfCartesianChart.PrimaryAxis>
+        <chart:DateTimeAxis RangePadding="None" />
+    </chart:SfCartesianChart.PrimaryAxis>
 
-        <chart:SfCartesianChart.SecondaryAxis>
-            <chart:NumericalAxis />
-        </chart:SfCartesianChart.SecondaryAxis>
-    . . .
-    </chart:SfCartesianChart>
+    <chart:SfCartesianChart.SecondaryAxis>
+        <chart:NumericalAxis />
+    </chart:SfCartesianChart.SecondaryAxis>
+. . .
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
+SfCartesianChart chart = new SfCartesianChart();
 
-    chart.PrimaryAxis = new DateTimeAxis()
-    {
-        RangePadding = DateTimeRangePadding.None
-    };
+chart.PrimaryAxis = new DateTimeAxis()
+{
+    RangePadding = DateTimeRangePadding.None
+};
 
-    chart.SecondaryAxis = new NumericalAxis();
+chart.SecondaryAxis = new NumericalAxis();
 
 {% endhighlight %}
 
@@ -233,30 +233,30 @@ The [RangePadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Nu
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-    . . .
-        <chart:SfCartesianChart.PrimaryAxis>
-            <chart:DateTimeAxis RangePadding="Round"/>
-        </chart:SfCartesianChart.PrimaryAxis>
+<chart:SfCartesianChart>
+. . .
+    <chart:SfCartesianChart.PrimaryAxis>
+        <chart:DateTimeAxis RangePadding="Round"/>
+    </chart:SfCartesianChart.PrimaryAxis>
 
-        <chart:SfCartesianChart.SecondaryAxis>
-            <chart:NumericalAxis />
-        </chart:SfCartesianChart.SecondaryAxis>
-    . . .
-    </chart:SfCartesianChart>
+    <chart:SfCartesianChart.SecondaryAxis>
+        <chart:NumericalAxis />
+    </chart:SfCartesianChart.SecondaryAxis>
+. . .
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
+SfCartesianChart chart = new SfCartesianChart();
 
-    chart.PrimaryAxis = new DateTimeAxis()
-    {
-        RangePadding = DateTimeRangePadding.Round
-    };
+chart.PrimaryAxis = new DateTimeAxis()
+{
+    RangePadding = DateTimeRangePadding.Round
+};
 
-    chart.SecondaryAxis = new NumericalAxis();
+chart.SecondaryAxis = new NumericalAxis();
 
 {% endhighlight %}
 

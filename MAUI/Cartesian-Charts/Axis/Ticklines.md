@@ -19,30 +19,30 @@ N> For category axis, minor tick lines are not applicable. Since it is rendered 
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-    . . .
-    <chart:SfCartesianChart.PrimaryAxis>
-        <chart:NumericalAxis MinorTicksPerInterval="4"/>
-    </chart:SfCartesianChart.PrimaryAxis>
+<chart:SfCartesianChart>
+. . .
+<chart:SfCartesianChart.PrimaryAxis>
+    <chart:NumericalAxis MinorTicksPerInterval="4"/>
+</chart:SfCartesianChart.PrimaryAxis>
 
-    <chart:SfCartesianChart.SecondaryAxis>
-        <chart:NumericalAxis />
-    </chart:SfCartesianChart.SecondaryAxis>
+<chart:SfCartesianChart.SecondaryAxis>
+    <chart:NumericalAxis />
+</chart:SfCartesianChart.SecondaryAxis>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    . . .
-    chart.PrimaryAxis = new NumericalAxis()
-    {
-        MinorTicksPerInterval = 4 
-    };
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+chart.PrimaryAxis = new NumericalAxis()
+{
+    MinorTicksPerInterval = 4 
+};
 
-    chart.SecondaryAxis = new NumericalAxis();
+chart.SecondaryAxis = new NumericalAxis();
 
 {% endhighlight %}
 
@@ -56,41 +56,41 @@ Both major and minor tick lines can be customized by using the [MajorTickStyle](
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-    . . .
-    <chart:SfCartesianChart.PrimaryAxis>
-        <chart:NumericalAxis MinorTicksPerInterval="4" >
-            <chart:NumericalAxis.MajorTickStyle>
-                <chart:ChartAxisTickStyle Stroke="Red" StrokeWidth="1"/>
-            </chart:NumericalAxis.MajorTickStyle>
-            
-            <chart:NumericalAxis.MinorTickStyle>
-                <chart:ChartAxisTickStyle Stroke="Red" StrokeWidth="1"/>
-            </chart:NumericalAxis.MinorTickStyle>
-        </chart:NumericalAxis>
-    </chart:SfCartesianChart.PrimaryAxis>
+<chart:SfCartesianChart>
+. . .
+<chart:SfCartesianChart.PrimaryAxis>
+    <chart:NumericalAxis MinorTicksPerInterval="4" >
+        <chart:NumericalAxis.MajorTickStyle>
+            <chart:ChartAxisTickStyle Stroke="Red" StrokeWidth="1"/>
+        </chart:NumericalAxis.MajorTickStyle>
+        
+        <chart:NumericalAxis.MinorTickStyle>
+            <chart:ChartAxisTickStyle Stroke="Red" StrokeWidth="1"/>
+        </chart:NumericalAxis.MinorTickStyle>
+    </chart:NumericalAxis>
+</chart:SfCartesianChart.PrimaryAxis>
 
-    <chart:SfCartesianChart.SecondaryAxis>
-        <chart:NumericalAxis />
-    </chart:SfCartesianChart.SecondaryAxis>
+<chart:SfCartesianChart.SecondaryAxis>
+    <chart:NumericalAxis />
+</chart:SfCartesianChart.SecondaryAxis>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    . . .
-    NumericalAxis numerical = new NumericalAxis();
-    numerical.MajorTickStyle.StrokeWidth = 1;
-    numerical.MajorTickStyle.Stroke = Colors.Red;
-    numerical.MinorTicksPerInterval = 4;
-    numerical.MinorTickStyle.StrokeWidth = 1;
-    numerical.MinorTickStyle.Stroke = Colors.Red;
-    chart.PrimaryAxis = numerical;
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+NumericalAxis numerical = new NumericalAxis();
+numerical.MajorTickStyle.StrokeWidth = 1;
+numerical.MajorTickStyle.Stroke = Colors.Red;
+numerical.MinorTicksPerInterval = 4;
+numerical.MinorTickStyle.StrokeWidth = 1;
+numerical.MinorTickStyle.Stroke = Colors.Red;
+chart.PrimaryAxis = numerical;
 
-    chart.SecondaryAxis = new NumericalAxis();
+chart.SecondaryAxis = new NumericalAxis();
 
 {% endhighlight %}
 
