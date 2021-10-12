@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customize the Tab Bar in .NET MAUI Tab View control | Syncfusion
+title: Customize the Tab Bar in .NET MAUI Tab View(SfTabView) control | Syncfusion
 description: Learn here all about custom header support in Syncfusion .NET MAUI Tab View(SfTabView) control and more.
 platform: maui
 control: Tab View
@@ -22,24 +22,6 @@ N> This mode is recommended when the tab count is not more than four. More tabs 
 {% tabs %}
 
 {% highlight xaml %}
-    <tabView:SfTabView TabWidthMode="SizeToContent">
-{% endhighlight %}
-
-{% highlight C# %}
-     tabView.TabWidthMode = TabWidthMode.SizeToContent;
-{% endhighlight %}
-
-{% endtabs %}
-
-![Tab Width Mode Size to fit](images/Tab-Width-Mode-SizeToFit.png) 
-
-### Based on the text size
-
-The width of a tab is set to fit the text or image that it contains by setting the `TabWidthMode` as `Default`. Scroll is enabled in this mode to access the items that are outside the visible area.
-
-{% tabs %}
-
-{% highlight xaml %}
     <tabView:SfTabView TabWidthMode="Default">
 {% endhighlight %}
 
@@ -50,6 +32,24 @@ The width of a tab is set to fit the text or image that it contains by setting t
 {% endtabs %}
 
 ![Tab Width Mode Default](images/Tab-Width-Mode-Default.png)
+
+### Based on the text size
+
+The width of a tab is set to fit the text or image that it contains by setting the `TabWidthMode` as `SizeToContent`. Scroll is enabled in this mode to access the items that are outside the visible area.
+
+{% tabs %}
+
+{% highlight xaml %}
+    <tabView:SfTabView TabWidthMode="SizeToContent">
+{% endhighlight %}
+
+{% highlight C# %}
+     tabView.TabWidthMode = TabWidthMode.SizeToContent;
+{% endhighlight %}
+
+{% endtabs %}
+
+![Tab Width Mode Size to fit](images/Tab-Width-Mode-SizeToFit.png) 
 
 ## Customize the tab bar height
 

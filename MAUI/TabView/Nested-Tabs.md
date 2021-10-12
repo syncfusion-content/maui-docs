@@ -97,6 +97,92 @@ Nested tab items can be configured in TabView using the `Items`[https://help.syn
 
 {% endhighlight %}
 
+{% highlight C# %}
+public partial class MainPage : ContentPage
+{
+    SfTabView tabView;
+    SfTabView nestedTabView;
+    public MainPage()
+    {
+        InitializeComponent();
+        tabView = new SfTabView();
+        nestedTabView = new SfTabView();
+        var tabItems = new TabItemCollection
+        {
+            new SfTabItem()
+            {
+                Header = "Photos",
+                Content = nestedTabView
+            },
+            new SfTabItem()
+            {
+                Header = "Collections",
+                Content = new ListView()
+                {
+                //// code
+                },
+            },
+            new SfTabItem()
+            {
+                Header = "Explore",
+                Content = new ListView()
+                {
+                //// code
+                },
+            }
+        };
+        var nestedTabItems = new TabItemCollection
+        {
+            new SfTabItem()
+            {
+                Header = "Camera",
+                Content = new ListView()
+                {
+                //// code
+                },
+            },
+            new SfTabItem()
+            {
+                Header = "Video",
+                Content = new ListView()
+                {
+                //// code
+                },
+            },
+            new SfTabItem()
+            {
+                Header = "Screenshots",
+                Content = new ListView()
+                {
+                //// code
+                },
+            },
+            new SfTabItem()
+            {
+                Header = "Wallpaper",
+                Content = new ListView()
+                {
+                //// code
+                },
+            }
+        };
+
+        tabView.Items = tabItems;
+        tabView.TabWidthMode = TabWidthMode.SizeToContent;
+        tabView.TabBarPlacement = TabBarPlacement.Top;
+        tabView.IndicatorPlacement = TabIndicatorPlacement.Top;
+        tabView.TabBarBackground = new SolidColorBrush(Color.FromArgb("#FDF8F6"));
+        tabView.IndicatorBackground = new SolidColorBrush(Color.FromArgb("#6200EE"));
+        nestedTabView.Items = nestedTabItems;
+        nestedTabView.TabBarPlacement = TabBarPlacement.Bottom;
+        nestedTabView.IndicatorPlacement = TabIndicatorPlacement.Top;
+        nestedTabView.TabBarBackground = new SolidColorBrush(Color.FromArgb("#FDF8F6"));
+        nestedTabView.IndicatorBackground = new SolidColorBrush(Color.FromArgb("#6200EE"));
+        this.Content = tabView;
+    }
+}
+
+{% endhighlight %}
 {% endtabs %}
 
 ![NestedTab](images/Nested_Tab.png)

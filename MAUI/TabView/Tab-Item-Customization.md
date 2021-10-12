@@ -10,7 +10,7 @@ documentation: ug
 
 A tab item consists of the following elements that can be customized.
 
-## Adding Image/Title/Content in Tab Item 
+## Adding image in tab item
 
 ### Header
 
@@ -218,7 +218,7 @@ The image will be placed to the right side of the text horizontally.
 
 {% endtabs %}
 
-![Tab Image Position Right](images/Image-Position-Right.png) 
+![Tab Image Text Color](images/Image-Position-Right.png) 
 
 ## Text Color Customization 
 
@@ -245,7 +245,7 @@ The text color of the tab item displayed in the tab bar.
 
 {% endtabs %}
 
-![Tab Image Position Right](images/Image-Position-Right.png) 
+![Tab Image TextColor](images/TextColor.png) 
 
 ## Font Customization 
 
@@ -331,9 +331,5 @@ The size of the text of each tab item in the tab bar.
 {% endtabs %}
 
 ![Tab Item FontSize](images/FontSize.png) 
-
-### IsSelected
-
-Indicates whether the tab item is active or not.
 
 N> View [sample](https://github.com/SyncfusionExamples/maui-tabview-samples/tree/main/TabViewCustomizationSample) in GitHub
