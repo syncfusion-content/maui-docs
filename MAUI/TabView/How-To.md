@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to programmatically select the tab in .NET MAUI Tab View | Syncfusion
+title: Programmatically select tab in .NET MAUI Tab View | Syncfusion
 description: Learn here all about select tab item programmatically in Syncfusion .NET MAUI Tab View(SfTabView) control and more.
 platform: maui
 control: Tab View
