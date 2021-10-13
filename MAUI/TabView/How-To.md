@@ -11,7 +11,7 @@ documentation: ug
 
 ## Programmatically select the tab item
 
-Using the [`SelectedIndex`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_SelectedIndex) property of SfTabView, we can programmatically select the tab item as like in the below code snippet.
+Using the [SelectedIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_SelectedIndex) property of SfTabView, we can programmatically select the tab item as like in the below code snippet.
 
 {% tabs %}
 

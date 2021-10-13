@@ -11,7 +11,7 @@ documentation: ug
 
 ## Tab Width options
 
-.NET MAUI Tab View provides two modes that determines how the width of the tab is calculated on the tab bar while it gets populated. The options are `Default` and `SizeToContent` and can be achieved using the `TabWidthMode`[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.TabWidthMode.html] property.
+.NET MAUI Tab View provides two modes that determines how the width of the tab is calculated on the tab bar while it gets populated. The options are `Default` and `SizeToContent` and can be achieved using the [TabWidthMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.TabWidthMode.html) property.
 
 ### Fixed bar
 
@@ -53,7 +53,7 @@ The width of a tab is set to fit the text or image that it contains by setting t
 
 ## Customize the tab bar height
 
-The height of the tab bar can be customized by setting the `TabBarHeight`[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabBarHeight] property. The default height is 48.
+The height of the tab bar can be customized by setting the [TabBarHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabBarHeight) property. The default height is 48.
 
 N> It is recommended to set the TabBarHeight as 72 while displaying the image and text with ImagePosition as either top or bottom.
 
@@ -71,7 +71,7 @@ N> It is recommended to set the TabBarHeight as 72 while displaying the image an
 
 ## Tab bar placement options 
 
-The .NET MAUI Tab View provides two options for determining how the tab bar aligns relative to the tab content. The options are top and bottom. It can be done by using the `TabBarPlacement`[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.TabBarPlacement.html] property.
+The .NET MAUI Tab View provides two options for determining how the tab bar aligns relative to the tab content. The options are top and bottom. It can be done by using the [TabBarPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.TabBarPlacement.html) property.
 
 ### Top
 
@@ -111,7 +111,7 @@ Tab bar will be placed below the content region of the Tab View control.
 
 ## Tab Bar background customization
 
-The tab bar background can be customized using the `TabBarBackground`[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabBarBackground] property, which is of type `Brush`.
+The tab bar background can be customized using the [TabBarBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabBarBackground) property, which is of type `Brush`.
 
 ### Solid Color 
 
