@@ -110,7 +110,7 @@ chart.PrimaryAxis = new CategoryAxis()
 
 {% endtabs %}
 
-![Zooming support in MAUI Chart](Zooming-and-panning_images/maui_chart_zooming.png)
+![Zooming support in MAUI Chart](Zooming-and-panning_images/maui_chart_zooming.jpg)
 
 ## Zooming Mode
 
