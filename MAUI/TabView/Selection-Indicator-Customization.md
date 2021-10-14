@@ -87,11 +87,11 @@ The SolidColorBrush class defines the color property of [IndicatorBackground](ht
 
 {% endtabs %}
 
-![Tab Image Position Top.](images/Selection-Indicator-background.png) 
+![Selection Indicator Background.](images/Selection-Indicator-background.png) 
 
 ### Gradient Color 
 
-You can also customize the background with a linear gradient and radial gradient as like below example.
+The background can be customized with a linear gradient and radial gradient as like below example.
 
 {% tabs %}
 {% highlight xaml %}
@@ -104,8 +104,30 @@ You can also customize the background with a linear gradient and radial gradient
         </tabView:SfTabView.IndicatorBackground>
     </tabView:SfTabView>
 {% endhighlight %}
+{% highlight C# %}
+Microsoft.Maui.Controls.GradientStop gra1 = new Microsoft.Maui.Controls.GradientStop()
+{
+    Color = Color.FromArgb("#009FFF"),
+    Offset = (float)0.1,
+};
+
+Microsoft.Maui.Controls.GradientStop gra2 = new Microsoft.Maui.Controls.GradientStop()
+{
+    Color = Color.FromArgb("#ec2F4B"),
+    Offset = (float)1.0,
+};
+LinearGradientBrush graBrush = new LinearGradientBrush()
+{
+    EndPoint = new Point(0, 1),
+    GradientStops = new GradientStopCollection() { gra1, gra2 }
+};
+
+SfTabView tabView = new SfTabView();
+tabView.IndicatorBackground = graBrush;
+
+{% endhighlight %}
 {% endtabs %}
 
-![Indicator Placement](images/Selection-Indicator-gradient-background.png) 
+![Selection Indicator Gradient](images/Selection-Indicator-gradient-background.png) 
 
 N> View [sample](https://github.com/SyncfusionExamples/maui-tabview-samples/tree/main/TabBarCustomization) in GitHub

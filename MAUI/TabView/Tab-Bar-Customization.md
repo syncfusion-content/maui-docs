@@ -146,6 +146,30 @@ The background can be customized with a linear gradient and radial gradient as l
         </tabView:SfTabView.TabBarBackground>
     </tabView:SfTabView>
 {% endhighlight %}
+
+
+{% highlight C# %}
+Microsoft.Maui.Controls.GradientStop gra1 = new Microsoft.Maui.Controls.GradientStop()
+{
+    Color = Color.FromArgb("#009FFF"),
+    Offset = (float)0.1,
+};
+
+Microsoft.Maui.Controls.GradientStop gra2 = new Microsoft.Maui.Controls.GradientStop()
+{
+    Color = Color.FromArgb("#ec2F4B"),
+    Offset = (float)1.0,
+};
+
+LinearGradientBrush graBrush = new LinearGradientBrush()
+{
+    EndPoint = new Point(0, 1),
+    GradientStops = new GradientStopCollection() { gra1, gra2 }
+};
+
+SfTabView tabView = new SfTabView();
+tabView.TabBarBackground = graBrush;
+{% endhighlight %}
 {% endtabs %}
 
 ![Tab Bar Gradient Color Bottom](images/TabBarGradientColor.png) 
