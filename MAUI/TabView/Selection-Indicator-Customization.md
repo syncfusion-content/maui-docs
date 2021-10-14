@@ -116,6 +116,7 @@ Microsoft.Maui.Controls.GradientStop gra2 = new Microsoft.Maui.Controls.Gradient
     Color = Color.FromArgb("#ec2F4B"),
     Offset = (float)1.0,
 };
+
 LinearGradientBrush graBrush = new LinearGradientBrush()
 {
     EndPoint = new Point(0, 1),

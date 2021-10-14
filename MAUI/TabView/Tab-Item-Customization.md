@@ -104,7 +104,7 @@ The assigned view will get displayed in the main area of the tab view.
 
 {% endtabs %}
 
-![Tab Item ImageSource](images/TabItem_Content.png) 
+![Tab Item Content](images/TabItem_Content.png) 
 
 ## Image position options 
 
@@ -218,7 +218,7 @@ The image will be placed to the right side of the text horizontally.
 
 {% endtabs %}
 
-![Tab Image Text Color](images/Image-Position-Right.png) 
+![Tab Image Position Right](images/Image-Position-Right.png) 
 
 ## Text Color Customization 
 
