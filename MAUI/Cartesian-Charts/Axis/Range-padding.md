@@ -64,6 +64,8 @@ chart.SecondaryAxis = new NumericalAxis();
 
 {% endtabs %}
 
+![NumericalAxis range padding support in MAUI Chart](Axis_Images/maui_chart_axis_numerical-range-padding_additional.jpg)
+
 **None**
 
 {% tabs %}
@@ -99,6 +101,8 @@ chart.SecondaryAxis = new NumericalAxis();
 
 {% endtabs %}
 
+![NumericalAxis range padding none in MAUI Chart](Axis_Images/maui_chart_axis_numerical-range-padding_none.jpg)
+
 **Round**
 
 {% tabs %}
@@ -133,6 +137,8 @@ chart.SecondaryAxis = new NumericalAxis();
 {% endhighlight %}
 
 {% endtabs %}
+
+![NumericalAxis range padding round in MAUI Chart](Axis_Images/maui_chart_axis_numerical-range-padding_round.jpg)
 
 ## DateTime Range Padding
 
@@ -182,6 +188,8 @@ chart.SecondaryAxis = new NumericalAxis();
 
 {% endtabs %}
 
+![DateTimeAxis range padding support in MAUI Chart](Axis_Images/maui_chart_axis_datetime-range-padding_additional.jpg)
+
 **None**
 
 {% tabs %}
@@ -216,6 +224,8 @@ chart.SecondaryAxis = new NumericalAxis();
 {% endhighlight %}
 
 {% endtabs %}
+
+![DateTimeAxis range padding none in MAUI Chart](Axis_Images/maui_chart_axis_datetime-range-padding_none.jpg)
 
 **Round**
 
@@ -252,3 +262,4 @@ chart.SecondaryAxis = new NumericalAxis();
 
 {% endtabs %}
 
+![DateTimeAxis range padding round in MAUI Chart](Axis_Images/maui_chart_axis_datetime-range-padding_round.jpg)

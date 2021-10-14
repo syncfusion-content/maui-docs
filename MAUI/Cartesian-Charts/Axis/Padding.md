@@ -49,6 +49,8 @@ PlotOffsetStart = 30
 
 {% endtabs %}
 
+![PlotOffsetStart support in MAUI Chart](Axis_images/maui_chart_axis_plot-offset-start.jpg)
+
 ## PlotOffsetEnd
 
 The [PlotOffsetEnd](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_PlotOffsetEnd) property is used to provide padding to the axis at end position. The following code sample demonstrates the padding applied to end position for both x and y-axes.
@@ -88,3 +90,5 @@ PlotOffsetEnd = 30
 {% endhighlight %}
 
 {% endtabs %}
+
+![PlotOffsetEnd support in MAUI Chart](Axis_images/maui_chart_axis_plot-offset-end.jpg)
