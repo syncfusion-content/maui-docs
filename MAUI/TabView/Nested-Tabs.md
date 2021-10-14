@@ -1,9 +1,9 @@
 ---
 layout: post
-title: NestedTab in .NET MAUI TabView control | Syncfusion
-description: Learn here about the nested tab support in Syncfusion MAUI Tab View (SfTabView) control and code sample.
+title: NestedTab in .NET MAUI Tab View (SfTabView) control | Syncfusion
+description: Learn here about the nested tab support in Syncfusion .NET MAUI Tab View (SfTabView) control and code sample.
 platform: maui
-control: TabView
+control: Tab View
 documentation: ug
 ---
 
@@ -119,7 +119,7 @@ public partial class MainPage : ContentPage
                 Header = "Collections",
                 Content = new ListView()
                 {
-                //// code
+                    //// code
                 },
             },
             new SfTabItem()
@@ -127,7 +127,7 @@ public partial class MainPage : ContentPage
                 Header = "Explore",
                 Content = new ListView()
                 {
-                //// code
+                    //// code
                 },
             }
         };
@@ -138,7 +138,7 @@ public partial class MainPage : ContentPage
                 Header = "Camera",
                 Content = new ListView()
                 {
-                //// code
+                    //// code
                 },
             },
             new SfTabItem()
@@ -146,7 +146,7 @@ public partial class MainPage : ContentPage
                 Header = "Video",
                 Content = new ListView()
                 {
-                //// code
+                    //// code
                 },
             },
             new SfTabItem()
@@ -154,7 +154,7 @@ public partial class MainPage : ContentPage
                 Header = "Screenshots",
                 Content = new ListView()
                 {
-                //// code
+                    //// code
                 },
             },
             new SfTabItem()
@@ -162,7 +162,7 @@ public partial class MainPage : ContentPage
                 Header = "Wallpaper",
                 Content = new ListView()
                 {
-                //// code
+                    //// code
                 },
             }
         };

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customize the Tab Bar in .NET MAUI Tab View(SfTabView) | Syncfusion
-description: Learn here all about custom header support in Syncfusion .NET MAUI Tab View(SfTabView) control and more.
+title: Customize the Tab Bar in .NET MAUI Tab View (SfTabView) | Syncfusion
+description: Learn here all about custom header support in Syncfusion .NET MAUI Tab View (SfTabView) control and more.
 platform: maui
 control: Tab View
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ## Tab Width options
 
-.NET MAUI Tab View provides two modes that determines how the width of the tab is calculated on the tab bar while it gets populated. The options are `Default` and `SizeToContent` and can be achieved using the [TabWidthMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.TabWidthMode.html) property.
+The .NET MAUI Tab View provides two modes that determines how the width of the tab is calculated on the tab bar while it gets populated. The options are `Default` and `SizeToContent` and can be achieved using the [TabWidthMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.TabWidthMode.html) property.
 
 ### Fixed bar
 
@@ -115,7 +115,7 @@ The tab bar background can be customized using the [TabBarBackground](https://he
 
 ### Solid Color 
 
-The SolidColorBrush class defines the color property of `TabBarBackground`, which represents the color of the tab bar background.
+The SolidColorBrush class defines the color property of [TabBarBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabBarBackground), which represents the color of the tab bar background.
 
 {% tabs %}
 
@@ -133,7 +133,7 @@ The SolidColorBrush class defines the color property of `TabBarBackground`, whic
 
 ### Gradient Color 
 
-You can also customize the background with a linear gradient and radial gradient as like below example.
+The background can be customized with a linear gradient and radial gradient as like below example.
 
 {% tabs %}
 {% highlight xaml %}
@@ -148,6 +148,6 @@ You can also customize the background with a linear gradient and radial gradient
 {% endhighlight %}
 {% endtabs %}
 
-![Tab Bar Solid Color Bottom](images/TabBarGradientColor.png) 
+![Tab Bar Gradient Color Bottom](images/TabBarGradientColor.png) 
 
 N> View [sample](https://github.com/SyncfusionExamples/maui-tabview-samples/tree/main/TabBarCustomization) in GitHub

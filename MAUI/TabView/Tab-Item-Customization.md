@@ -1,6 +1,6 @@
  ---
 layout: post
-title: Display Type in .NET MAUI Tab View control | Syncfusion
+title: Display Type in .NET MAUI Tab View (SfTabView) control | Syncfusion
 description: Learn here all about color and font customization in Syncfusion .NET MAUI Tab View (SfTabView) control.
 platform: maui
 control: Tab View
@@ -108,7 +108,7 @@ The assigned view will get displayed in the main area of the tab view.
 
 ## Image position options 
 
-The .NET MAUI Tab View provides four options that determine how the image of the tab aligns relative to the text. The options are left, top, right and bottom. It can be achieved using the [ImagePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.TabImagePosition.html) property of [SfTabItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html) of type TabImagePosition.
+The .NET MAUI Tab View provides four options that determine how the image of the tab aligns relative to the text. The options are left, top, right and bottom. It can be achieved using the [TabImagePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.TabImagePosition.html) property of [SfTabItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html) of type [TabImagePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.TabImagePosition.html).
 
 N> Each tab item can be set with different image positions. Visual State Manager can be used to apply same value to all tabs.
 

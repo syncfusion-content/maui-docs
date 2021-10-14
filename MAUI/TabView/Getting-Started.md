@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Tab View control | Syncfusion
+title: Getting Started with .NET MAUI Tab View (SfTabView) control | Syncfusion
 description: Learn here all about getting started with Syncfusion .NET MAUI Tab View (SfTabView) control, its elements and more.
 platform: maui
 control: Tab View
@@ -127,7 +127,7 @@ namespace TabViewMauiSample
 
 ## Populate Tab Items
 
-Tab items can be added to the control using the [`Items`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_ItemsProperty) property of [`SfTabView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html).
+Tab items can be added to the control using the [Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_ItemsProperty) property of [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html).
 
 {% tabs %}
 
@@ -145,20 +145,20 @@ Tab items can be added to the control using the [`Items`](https://help.syncfusio
                 <tabView:SfTabItem Header="Call">
                     <tabView:SfTabItem.Content>
                         <Grid BackgroundColor="Red" />
-                            </tabView:SfTabItem.Content>
-                        </tabView:SfTabItem>
+                    </tabView:SfTabItem.Content>
+                </tabView:SfTabItem>
 
-                        <tabView:SfTabItem Header="Favorites">
-                            <tabView:SfTabItem.Content>
-                                <Grid BackgroundColor="Green"/>
-                            </tabView:SfTabItem.Content>
-                        </tabView:SfTabItem>
+                <tabView:SfTabItem Header="Favorites">
+                    <tabView:SfTabItem.Content>
+                        <Grid BackgroundColor="Green"/>
+                    </tabView:SfTabItem.Content>
+                </tabView:SfTabItem>
 
-                        <tabView:SfTabItem Header="Contacts">
-                            <tabView:SfTabItem.Content>
-                                <Grid BackgroundColor="Blue"/>
-                            </tabView:SfTabItem.Content>
-                        </tabView:SfTabItem>
+                <tabView:SfTabItem Header="Contacts">
+                    <tabView:SfTabItem.Content>
+                        <Grid BackgroundColor="Blue"/>
+                    </tabView:SfTabItem.Content>
+                </tabView:SfTabItem>
             </tabView:SfTabView.Items>
         </tabView:SfTabView>
     </ContentPage.Content>  
