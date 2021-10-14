@@ -16,66 +16,12 @@ Using the [SelectedIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Ta
 {% tabs %}
 
 {% highlight xaml %}
-   <tabView:SfTabView x:Name="tabView" SelectedIndex="2">
-        <tabView:SfTabView.Items>
-            <tabView:SfTabItem x:Name="tab1" Header="ITEM 1">
-                ....
-            </tabView:SfTabItem>
-
-            <tabView:SfTabItem x:Name="tab2" Header="ITEM 2">
-                ....
-            </tabView:SfTabItem>
-
-            <tabView:SfTabItem x:Name="tab3" Header="ITEM 3">
-                ....
-            </tabView:SfTabItem>
-        </tabView:SfTabView.Items>
-    </tabView:SfTabView>
+   <tabView:SfTabView x:Name="tabView" SelectedIndex="2"/>
 {% endhighlight %}
 
 {% highlight C# %}
-public partial class TabView : ContentPage
-{
-    SfTabView tabView;
-	public TabView ()
-	{
-	    InitializeComponent ();
-        var tabView = new SfTabView();
-        var tabItems = new TabItemCollection
-        {
-            new SfTabItem()
-            {
-                Header = "ITEM 1",
-                Content = new ListView()
-                {
-                    //// code,
-                }
-            },
-            new SfTabItem()
-            {
-                Header = "ITEM 2",
-                Content = new ListView()
-                {
-                    //// code,
-                }
-            },
-            new SfTabItem()
-            {
-                Header = "ITEM 3",
-                Content = new ListView()
-                {
-                    //// code,
-                }
-            }
-        };
-
-        tabView.Items = tabItems;
-        tabView.SelectedIndex = 2;
-        this.Content = tabView;
-	}
-}
+    tabView.SelectedIndex = 2;
 {% endhighlight %}
-
 {% endtabs %}
 
 ![SelectedIndex in SfTabView](images/SelectedIndexTabView.png)
@@ -87,65 +33,12 @@ Indicates whether the tab item is active or not. This property can be used to ge
 {% tabs %}
 
 {% highlight xaml %}
-<tabView:SfTabView x:Name="tabView" SelectedIndex="1" SelectionChanged="Index_Changed"
-    <tabView:SfTabView.Items>
-        <tabView:SfTabItem x:Name="tab1" Header="ITEM 1">
-            ....
-        </tabView:SfTabItem>
-
-        <tabView:SfTabItem x:Name="tab2" Header="ITEM 2">
-            ....
-        </tabView:SfTabItem>
-
-        <tabView:SfTabItem x:Name="tab3" Header="ITEM 3">
-            ....
-        </tabView:SfTabItem>
-    </tabView:SfTabView.Items>
-</tabView:SfTabView>
+    <tabView:SfTabView x:Name="tabView" SelectionChanged="Index_Changed"/>
 {% endhighlight %}
 
 {% highlight C# %}
 
-public partial class TabView : ContentPage
-{
-    SfTabView tabView;
-	public TabView ()
-	{
-	    InitializeComponent ();
-        var tabView = new SfTabView();
-        var tabItems = new TabItemCollection
-        {
-            new SfTabItem()
-            {
-                Header = "ITEM 1",
-                Content = new ListView()
-                {
-                    //// code,
-                }
-            },
-            new SfTabItem()
-            {
-                Header = "ITEM 2",
-                Content = new ListView()
-                {
-                    //// code,
-                }
-            },
-            new SfTabItem()
-            {
-                Header = "ITEM 3",
-                Content = new ListView()
-                {
-                    //// code,
-                }
-            }
-        };
-
-        tabView.Items = tabItems;
-        tabView.SelectedIndex = 1;
-        this.Content = tabView;
-	}
-
+    tabView.SelectionChanged += Index_Changed;
     private void Index_Changed(object sender, TabSelectionChangedEventArgs e)
     {
         bool itemSelection = tab1.IsSelected;
@@ -154,7 +47,6 @@ public partial class TabView : ContentPage
             tab1.FontSize = 26;
         }
     }
-}
 
 {% endhighlight %}
 

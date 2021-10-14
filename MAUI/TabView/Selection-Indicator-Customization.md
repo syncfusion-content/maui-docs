@@ -73,7 +73,7 @@ The background of the indicator can be customized using the [IndicatorBackground
 
 ### Solid Color 
 
-The SolidColorBrush class defines the color property of `IndicatorBackground`, which represents the color of the selection indicator background.
+The SolidColorBrush class defines the color property of [IndicatorBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_IndicatorBackground), which represents the color of the selection indicator background.
 
 {% tabs %}
 
