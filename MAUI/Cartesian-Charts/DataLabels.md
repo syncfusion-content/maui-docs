@@ -124,7 +124,7 @@ The [LabelPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
     . . .
     <chart:ColumnSeries ShowDataLabels="True">
         <chart:ColumnSeries.DataLabelSettings>
-            <chart:CartesianDataLabelSettings  UseSeriesPalette="True"/>
+            <chart:CartesianDataLabelSettings  UseSeriesPalette="False"/>
         </chart:ColumnSeries.DataLabelSettings>
     </chart:ColumnSeries>
 </chart:SfCartesianChart>
@@ -138,7 +138,7 @@ ColumnSeries series = new ColumnSeries();
 . . .
 series.DataLabelSettings = new CartesianDataLabelSettings()
 {
-    UseSeriesPalette = true,
+    UseSeriesPalette = false,
 };
 
 chart.Series.Add(series);
