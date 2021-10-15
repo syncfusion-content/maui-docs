@@ -95,3 +95,5 @@ chart.SecondaryAxis = new NumericalAxis();
 {% endhighlight %}
 
 {% endtabs %}
+
+![Axis tick lines customization support in MAUI Chart](Axis_images/maui_chart_axis_tickline_customization.jpg)

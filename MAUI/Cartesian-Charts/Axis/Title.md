@@ -31,8 +31,7 @@ The [Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis
             </chart:NumericalAxis.Title>
         </chart:NumericalAxis>
     </chart:SfCartesianChart.SecondaryAxis>
-
-/chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
@@ -51,6 +50,8 @@ chart.SecondaryAxis = secondaryAxis;
 {% endhighlight %}
 
 {% endtabs %}
+
+![Title support for ChartAxis in MAUI Chart](Axis_Images/maui_chart_axis_title.jpg)
 
 ## Customization
 

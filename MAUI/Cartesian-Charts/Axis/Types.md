@@ -48,6 +48,8 @@ chart.SecondaryAxis = new NumericalAxis();
 
 {% endtabs %}
 
+![NumericalAxis interval support in MAUI Chart](Axis_Images/maui_chart_axis_types.jpg)
+
 ### Interval
 
 Axis interval can be customized by using the [Interval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CategoryAxis.html#Syncfusion_Maui_Charts_CategoryAxis_Interval) property. By default, interval will be calculated based on the minimum and maximum value of the provided data.
@@ -83,6 +85,8 @@ chart.SecondaryAxis = new NumericalAxis();
 {% endhighlight %}
 
 {% endtabs %}
+
+![NumericalAxis interval support in MAUI Chart](Axis_Images/maui_chart_numeric_axis_interval.jpg)
 
 ### Customizing the Range
 
@@ -141,6 +145,8 @@ chart.PrimaryAxis = new CategoryAxis();
 
 {% endtabs %}
 
+![CategoryAxis support in MAUI Chart](Axis_Images/maui_chart_category_axis.jpg)
+
 ### Label placement
 
 The [LabelPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CategoryAxis.html#Syncfusion_Maui_Charts_CategoryAxis_LabelPlacement) property in [CategoryAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CategoryAxis.html) is used to placed the axis labels based on ticks and between ticks. The default value of [LabelPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CategoryAxis.html#Syncfusion_Maui_Charts_CategoryAxis_LabelPlacement) is [OnTicks](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LabelPlacement.html#Syncfusion_Maui_Charts_LabelPlacement_OnTicks).
@@ -171,6 +177,8 @@ chart.PrimaryAxis = new CategoryAxis()
 {% endhighlight %}
 
 {% endtabs %}
+
+![Axis label placement support in MAUI Chart](Axis_Images/maui_chart_category_axis_labelPlacement.jpg)
 
 ### Interval
 
@@ -208,6 +216,8 @@ chart.SecondaryAxis = new NumericalAxis();
 
 {% endtabs %}
 
+![CategoryAxis interval support in MAUI Chart](Axis_Images/maui_chart_category_axis_interval.jpg)
+
 ## DateTime Axis
 
 [DateTimeAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html) is used to plot `DateTime` values. The [DateTimeAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html) is widely used to make financial charts in places like the Stock Market, where index plotting is done every day.
@@ -235,6 +245,8 @@ chart.PrimaryAxis = new DateTimeAxis();
 {% endhighlight %}
 
 {% endtabs %}
+
+![DateTimeCategoryAxis support in MAUI Chart](Axis_Images/maui_chart_datetime_axis.jpg)
 
 ### Interval
 
@@ -273,6 +285,8 @@ chart.SecondaryAxis = new NumericalAxis();
 
 {% endtabs %}
 
+![DateTimeAxis interval support in MAUI Chart](Axis_Images/maui_chart_datetime_axis_interval.jpg)
+
 ### Customizing the Range
 
 [Minimum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html#Syncfusion_Maui_Charts_DateTimeAxis_Minimum) and [Maximum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html#Syncfusion_Maui_Charts_DateTimeAxis_Maximum) properties behavior is same as in [NumericalAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalAxis.html) instead of setting numerical value, have to set date time values.
@@ -305,6 +319,8 @@ chart.PrimaryAxis = new DateTimeAxis()
 
 {% endtabs %}
 
+![DateTimeAxis range customization support in MAUI Chart](Axis_Images/maui_chart_datetime_axis_range.jpg)
+
 ## Inversed
 
 Axis can be inverted by using the [IsInversed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_IsInversed) property. The default value of this property is `False`.
@@ -333,6 +349,8 @@ this.Chart.SecondaryAxis.IsInversed = true;
 {% endhighlight %}
 
 {% endtabs %}
+
+![Inversed axis support in MAUI Chart](Axis_Images/maui_chart_axis_isInversed.jpg)
 
 ## Multiple Axes
 

@@ -296,11 +296,11 @@ The [ShowDataLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-        . . . 
-        <chart:ColumnSeries ShowDataLabels="True">
-        </chart:ColumnSeries>
-    </chart:SfCartesianChart>
+<chart:SfCartesianChart>
+    . . . 
+    <chart:ColumnSeries ShowDataLabels="True">
+    </chart:ColumnSeries>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
