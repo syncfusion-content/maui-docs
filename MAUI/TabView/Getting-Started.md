@@ -26,7 +26,7 @@ using Microsoft.Maui.Hosting;
 using Microsoft.Maui.Controls.Compatibility;
 using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Controls.Xaml;
-using Syncfusion.Maui.Core.Hosting;
+`using Syncfusion.Maui.Core.Hosting;`
 
 namespace TabViewMauiSample
 {
@@ -37,7 +37,7 @@ namespace TabViewMauiSample
             var builder = MauiApp.CreateBuilder();
             builder
             .UseMauiApp<App>()
-            .ConfigureSyncfusionCore()
+            .`ConfigureSyncfusionCore()`
             .ConfigureFonts(fonts =>
             {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -52,17 +52,13 @@ namespace TabViewMauiSample
 
 ## Create a simple Tab View
 
-This section explains how to create a Tab View and configure it. The control can be configured entirely in C# code or by the XAML markup. The following screenshot illustrates the output of Tab View on iOS, Android, and MacCatalyst.
-
-![TabViewImage](images/TabView.png)
+This section explains how to create a Tab View and configure it. The control can be configured entirely in C# code or by the XAML markup.
 
 ### Creating the project
 
 Create a new .NET MAUI application in Visual Studio 
 
 ### Adding a SfTabView control
-
-The following steps illustrates the TabView sample creation in MAUI.
 
 Step 1: Add the NuGet to the project as discussed in the above reference section. 
 
