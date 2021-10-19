@@ -115,7 +115,7 @@ The tab bar background can be customized using the [TabBarBackground](https://he
 
 ### Solid Color 
 
-The SolidColorBrush class defines the color property of [TabBarBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabBarBackground), which represents the color of the tab bar background.
+A solid color can be achieved by assigning the SolidColorBrush to the [TabBarBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabBarBackground), which represents the color of the tab bar background.
 
 {% tabs %}
 
