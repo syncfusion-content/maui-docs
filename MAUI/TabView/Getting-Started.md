@@ -90,7 +90,7 @@ Step 3: Set the control to content in `ContentPage`.
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             x:Class="TabViewMauiSample.MainPage"
-            xmlns:tabView="http://schemas.syncfusion.com/maui"
+            xmlns:tabView="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView"
             BackgroundColor="{DynamicResource PageBackgroundColor}">
     <ContentPage.Content> 
         <tabView:SfTabView /> 
@@ -133,7 +133,7 @@ Tab items can be added to the control using the [Items](https://help.syncfusion.
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             x:Class="TabViewMauiSample.MainPage"
-            xmlns:tabView="http://schemas.syncfusion.com/maui"
+            xmlns:tabView="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView"
             BackgroundColor="{DynamicResource PageBackgroundColor}">
     <ContentPage.Content> 
         <tabView:SfTabView x:Name="tabView">
