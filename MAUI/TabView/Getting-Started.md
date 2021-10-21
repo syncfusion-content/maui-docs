@@ -17,7 +17,7 @@ Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org
 
 ## Handler registration 
 
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
 
 {% highlight C# %}
 
@@ -26,7 +26,7 @@ using Microsoft.Maui.Hosting;
 using Microsoft.Maui.Controls.Compatibility;
 using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Controls.Xaml;
-using Syncfusion.Maui.Core.Hosting;
+`using Syncfusion.Maui.Core.Hosting;`
 
 namespace TabViewMauiSample
 {
@@ -37,7 +37,7 @@ namespace TabViewMauiSample
             var builder = MauiApp.CreateBuilder();
             builder
             .UseMauiApp<App>()
-            .ConfigureSyncfusionCore()
+            .`ConfigureSyncfusionCore()`
             .ConfigureFonts(fonts =>
             {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -52,17 +52,13 @@ namespace TabViewMauiSample
 
 ## Create a simple Tab View
 
-This section explains how to create a Tab View and configure it. The control can be configured entirely in C# code or by the XAML markup. The following screenshot illustrates the output of Tab View on iOS, Android, and MacCatalyst.
-
-![TabViewImage](images/TabView.png)
+This section explains how to create a Tab View and configure it. The control can be configured entirely in C# code or by the XAML markup.
 
 ### Creating the project
 
 Create a new .NET MAUI application in Visual Studio 
 
 ### Adding a SfTabView control
-
-The following steps illustrates the TabView sample creation in MAUI.
 
 Step 1: Add the NuGet to the project as discussed in the above reference section. 
 
@@ -94,7 +90,7 @@ Step 3: Set the control to content in `ContentPage`.
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             x:Class="TabViewMauiSample.MainPage"
-            xmlns:tabView="http://schemas.syncfusion.com/maui"
+            xmlns:tabView="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView"
             BackgroundColor="{DynamicResource PageBackgroundColor}">
     <ContentPage.Content> 
         <tabView:SfTabView /> 
@@ -137,7 +133,7 @@ Tab items can be added to the control using the [Items](https://help.syncfusion.
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             x:Class="TabViewMauiSample.MainPage"
-            xmlns:tabView="http://schemas.syncfusion.com/maui"
+            xmlns:tabView="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView"
             BackgroundColor="{DynamicResource PageBackgroundColor}">
     <ContentPage.Content> 
         <tabView:SfTabView x:Name="tabView">
