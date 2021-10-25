@@ -34,7 +34,7 @@ By default, major gridlines are automatically added to the [ChartAxis](https://h
 SfCartesianChart chart = new SfCartesianChart();
 . . .
 NumericalAxis primaryAxis = new NumericalAxis();
- primaryAxis.ShowMajorGridLines = false;
+primaryAxis.ShowMajorGridLines = false;
 chart.PrimaryAxis = primaryAxis;
 
 chart.SecondaryAxis = new NumericalAxis();
@@ -157,7 +157,7 @@ The [MinorGridLineStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cha
     </chart:SfCartesianChart.PrimaryAxis>
 
     <chart:SfCartesianChart.SecondaryAxis>
-        <chart:NumericalAxis ShowMinorGridLines="True">
+        <chart:NumericalAxis ShowMinorGridLines="True" MinorTicksPerInterval="2">
             <chart:NumericalAxis.MajorGridLineStyle>
                 <chart:ChartLineStyle StrokeDashArray="{StaticResource dashArray}" Stroke="Black" StrokeWidth="0.8"  />
             </chart:NumericalAxis.MajorGridLineStyle>
