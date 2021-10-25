@@ -16,7 +16,7 @@ Use the visual state manager to change the .NET MAUI tab properties based on the
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TabViewMauiSample.MainPage"
-             xmlns:tabView="http://schemas.syncfusion.com/maui"
+             xmlns:tabView="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView"
              BackgroundColor="{DynamicResource SecondaryColor}">
     <ContentPage.Content>
         <Grid>

@@ -18,7 +18,7 @@ Nested tab items can be configured in Tab View using the [Items](https://help.sy
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TabViewMauiSample.MainPage"
-             xmlns:tabView="http://schemas.syncfusion.com/maui"
+             xmlns:tabView="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView"
              BackgroundColor="{DynamicResource SecondaryColor}">
     <ContentPage.Content>
         <Grid>
