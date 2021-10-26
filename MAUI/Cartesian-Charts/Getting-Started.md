@@ -113,15 +113,20 @@ Next, create a view model class and initialize a list of `Person` objects as fol
 
 public class ViewModel  
 {
-    Data = new List<Person>()
+    public List<Person> Data { get; set; }      
+
+    public ViewModel()       
     {
-        new Person { Name = "David", Height = 170 },
-        new Person { Name = "Michael", Height = 96 },
-        new Person { Name = "Steve", Height = 65 },
-        new Person { Name = "Joel", Height = 182 },
-        new Person { Name = "Bob", Height = 134 }
-    };
-}   
+        Data = new List<Person>()
+        {
+            new Person { Name = "David", Height = 170 },
+            new Person { Name = "Michael", Height = 96 },
+            new Person { Name = "Steve", Height = 65 },
+            new Person { Name = "Joel", Height = 182 },
+            new Person { Name = "Bob", Height = 134 }
+        }; 
+    }
+ }
 
 {% endhighlight %} 
 
