@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Visual state manager in .NET MAUI TabView control | Syncfusion
-description: Learn here all about handling of visual state manager in Syncfusion MAUI TabView (SfTabView) control and more.
+title: Visual state manager in .NET MAUI Tab View (SfTabView) | Syncfusion
+description: Learn here all about handling of visual state manager in Syncfusion .NET MAUI Tab View (SfTabView) control and more.
 platform: MAUI
 control: TabView
 documentation: ug
@@ -9,14 +9,14 @@ documentation: ug
 
 # Visual State Manager in .NET MAUI Tab View (SfTabView)
 
-Use the visual state manager to make changes to the .NET MAUI tab properties based on the visual states set from code. The applicable visual states are selected, normal and disable.
+Use the visual state manager to change the .NET MAUI tab properties based on the visual states set from code. The applicable visual states are selected, normal, and disable.
 
 {% highlight xaml %}
 
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TabViewMauiSample.MainPage"
-             xmlns:tabView="http://schemas.syncfusion.com/maui"
+             xmlns:tabView="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView"
              BackgroundColor="{DynamicResource SecondaryColor}">
     <ContentPage.Content>
         <Grid>
