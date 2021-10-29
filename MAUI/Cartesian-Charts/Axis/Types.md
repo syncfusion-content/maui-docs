@@ -352,6 +352,30 @@ this.Chart.SecondaryAxis.IsInversed = true;
 
 ![Inversed axis support in MAUI Chart](Axis_Images/maui_chart_axis_isInversed.jpg)
 
+## Axis Visibility
+
+Axis visibility can be controlled using the [IsVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_IsVisible) property of axis. Default value of [IsVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_IsVisible) property is `True`.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCartesianChart.SecondaryAxis>
+    <chart:NumericalAxis IsVisible="False"/>
+</chart:SfCartesianChart.SecondaryAxis>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+chart.SecondaryAxis = new NumericalAxis() { IsVisible = false };
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ## Multiple Axes
 
 Cartesian charts provides support to arrange the multiple series inside the same chart area with specified x-axis and y-axis. There are two properties [XAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CartesianSeries.html#Syncfusion_Maui_Charts_CartesianSeries_XAxis) and [YAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CartesianSeries.html#Syncfusion_Maui_Charts_CartesianSeries_YAxis) in all the Cartesian series type, which is used to provide multiple axes support. These axes can be arranged in a stacking order or in a side by side pattern.
