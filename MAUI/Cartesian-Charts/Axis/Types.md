@@ -354,7 +354,7 @@ this.Chart.SecondaryAxis.IsInversed = true;
 
 ## Axis Visibility
 
-Axis visibility can be controlled using the [IsVisible]() property of axis. Default value of [IsVisible]() property is `True`.
+Axis visibility can be controlled using the [IsVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_IsVisible) property of axis. Default value of [IsVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_IsVisible) property is `True`.
 
 {% tabs %}
 
