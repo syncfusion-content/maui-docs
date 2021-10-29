@@ -88,7 +88,7 @@ NumericalAxis primaryAxis = new NumericalAxis();
 ChartLineStyle axisLineStyle = new ChartLineStyle();
 axisLineStyle.Stroke = Colors.Black;
 axisLineStyle.StrokeWidth = 2;
-axisLineStyle.StrokeDashArray = doubleCollection
+axisLineStyle.StrokeDashArray = doubleCollection;
 primaryAxis.MajorGridLineStyle = axisLineStyle;
 chart.PrimaryAxis = primaryAxis;
 
