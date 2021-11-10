@@ -17,39 +17,41 @@ Cartesian chart axis provides support to customize the style of axis line by def
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
     . . .
     <chart:SfCartesianChart.PrimaryAxis>
         <chart:NumericalAxis >
             <chart:NumericalAxis.AxisLineStyle>
-                <chart:ChartLineStyle StrokeWidth ="10" Stroke="Red"/>
+                <chart:ChartLineStyle StrokeWidth ="2" Stroke="Red"/>
             </chart:NumericalAxis.AxisLineStyle>
         </chart:NumericalAxis>
     </chart:SfCartesianChart.PrimaryAxis>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    . . .
-    NumericalAxis primaryAxis = new NumericalAxis();
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+NumericalAxis primaryAxis = new NumericalAxis();
 
-    ChartLineStyle axisLineStyle = new ChartLineStyle();
+ChartLineStyle axisLineStyle = new ChartLineStyle();
 
-    axisLineStyle.Stroke = Colors.Red;
+axisLineStyle.Stroke = Colors.Red;
 
-    axisLineStyle.StrokeWidth = 10;
+axisLineStyle.StrokeWidth = 2;
 
-    primaryAxis.AxisLineStyle = axisLineStyle;
+primaryAxis.AxisLineStyle = axisLineStyle;
 
-    chart.PrimaryAxis = primaryAxis;
+chart.PrimaryAxis = primaryAxis;
 
 {% endhighlight %}
 
 {% endtabs %}
+
+![Axis line customization support in MAUI Chart](Axis_images/maui_chart_axis_linestyle.jpg)
 
 ## Offset
 
@@ -59,40 +61,40 @@ The padding to the axis line is defined by using the [AxisLineOffset](https://he
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
     . . .
     <chart:SfCartesianChart.PrimaryAxis>
         <chart:NumericalAxis AxisLineOffset="25">
             <chart:NumericalAxis.AxisLineStyle>
-
-                <chart:ChartLineStyle StrokeWidth ="10" Stroke="Red"/>
-
+                <chart:ChartLineStyle StrokeWidth ="2" Stroke="Red"/>
             </chart:NumericalAxis.AxisLineStyle>
         </chart:NumericalAxis>
     </chart:SfCartesianChart.PrimaryAxis>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    . . .
-    NumericalAxis primaryAxis = new NumericalAxis();
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+NumericalAxis primaryAxis = new NumericalAxis();
 
-    primaryAxis.AxisLineOffset = 25;
+primaryAxis.AxisLineOffset = 25;
 
-    ChartLineStyle axisLineStyle = new ChartLineStyle();
+ChartLineStyle axisLineStyle = new ChartLineStyle();
 
-    axisLineStyle.Stroke = Colors.Red;
+axisLineStyle.Stroke = Colors.Red;
 
-    axisLineStyle.StrokeWidth = 10;
+axisLineStyle.StrokeWidth = 2;
 
-    primaryAxis.AxisLineStyle = axisLineStyle;
+primaryAxis.AxisLineStyle = axisLineStyle;
 
-    chart.PrimaryAxis = primaryAxis;
+chart.PrimaryAxis = primaryAxis;
 
 {% endhighlight %}
 
 {% endtabs %}
+
+![Padding support for axis line in WinUI](Axis_images/maui_chart_axis_line_offset.jpg)

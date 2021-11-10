@@ -25,14 +25,13 @@ The [ShowDataLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-. . .
-<chart:SfCartesianChart.Series>
-    <chart:ColumnSeries ItemsSource="{Binding Data}" 
-                     XBindingPath="Category"
-                     YBindingPath="Value" ShowDataLabels="True">
-    </chart:ColumnSeries>
-</chart:SfCartesianChart.Series>
-
+    . . .
+    <chart:SfCartesianChart.Series>
+        <chart:ColumnSeries ItemsSource="{Binding Data}" 
+                        XBindingPath="Category"
+                        YBindingPath="Value" ShowDataLabels="True">
+        </chart:ColumnSeries>
+    </chart:SfCartesianChart.Series>
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -62,7 +61,7 @@ Data labels can be customized by using the [DataLabelSettings](https://help.sync
 * [LabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartDataLabelSettings.html#Syncfusion_Maui_Charts_ChartDataLabelSettings_LabelStyle) - Gets or sets the options for customizing the data labels. 
 * [UseSeriesPalette](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartDataLabelSettings.html#Syncfusion_Maui_Charts_ChartDataLabelSettings_UseSeriesPalette) - Gets or sets a value indicating whether the data label should reflect the series interior.
 
-![Data label in MAUI chart](DataLabel_images/maui_chart_data_label.png) 
+![Data label in MAUI chart](DataLabel_images/maui_chart_data_label.jpg) 
 
 ## Alignment
 
@@ -78,28 +77,28 @@ N> This behavior varies based on the chart series type.
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
     . . .
     <chart:ColumnSeries ShowDataLabels="True">
         <chart:ColumnSeries.DataLabelSettings>
             <chart:CartesianDataLabelSettings BarAlignment="Middle"/>
         </chart:ColumnSeries.DataLabelSettings>
     </chart:ColumnSeries>
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    ColumnSeries series = new ColumnSeries();
-    . . .
-    series.DataLabelSettings = new CartesianDataLabelSettings()
-    {
-        BarAlignment = Alignment.Middle,
-    };
+SfCartesianChart chart = new SfCartesianChart();
+ColumnSeries series = new ColumnSeries();
+. . .
+series.DataLabelSettings = new CartesianDataLabelSettings()
+{
+    BarAlignment = Alignment.Middle,
+};
 
-    chart.Series.Add(series);
+chart.Series.Add(series);
 
 {% endhighlight %}
 
@@ -121,32 +120,31 @@ The [LabelPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
     . . .
     <chart:ColumnSeries ShowDataLabels="True">
         <chart:ColumnSeries.DataLabelSettings>
-            <chart:CartesianDataLabelSettings  UseSeriesPalette="True"/>
+            <chart:CartesianDataLabelSettings  UseSeriesPalette="False"/>
         </chart:ColumnSeries.DataLabelSettings>
     </chart:ColumnSeries>
-
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    ColumnSeries series = new ColumnSeries();
-    . . .
-    series.DataLabelSettings = new CartesianDataLabelSettings()
-    {
-        UseSeriesPalette = true,
-    };
+SfCartesianChart chart = new SfCartesianChart();
+ColumnSeries series = new ColumnSeries();
+. . .
+series.DataLabelSettings = new CartesianDataLabelSettings()
+{
+    UseSeriesPalette = false,
+};
 
-    chart.Series.Add(series);
+chart.Series.Add(series);
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Applying series interior for data label in MAUI chart](DataLabel_images/maui_chart_data_label_with_series_brush.png)
+![Applying series interior for data label in MAUI chart](DataLabel_images/maui_chart_data_label_with_series_brush.jpg)

@@ -23,30 +23,32 @@ Cartesian chart supports the following types of chart axis.
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-        . . .
-        <chart:SfCartesianChart.PrimaryAxis>
-            <chart:NumericalAxis/>
-        </chart:SfCartesianChart.PrimaryAxis>
-        <chart:SfCartesianChart.SecondaryAxis>
-            <chart:NumericalAxis/>
-        </chart:SfCartesianChart.SecondaryAxis>
+<chart:SfCartesianChart>
+    . . .
+    <chart:SfCartesianChart.PrimaryAxis>
+        <chart:NumericalAxis/>
+    </chart:SfCartesianChart.PrimaryAxis>
+    <chart:SfCartesianChart.SecondaryAxis>
+        <chart:NumericalAxis/>
+    </chart:SfCartesianChart.SecondaryAxis>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    . . .
-    chart.PrimaryAxis = new NumericalAxis();
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+chart.PrimaryAxis = new NumericalAxis();
 
-    chart.SecondaryAxis = new NumericalAxis();
+chart.SecondaryAxis = new NumericalAxis();
 
 {% endhighlight %}
 
 {% endtabs %}
+
+![NumericalAxis interval support in MAUI Chart](Axis_Images/maui_chart_axis_types.jpg)
 
 ### Interval
 
@@ -56,33 +58,35 @@ Axis interval can be customized by using the [Interval](https://help.syncfusion.
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-    . . .
-    <chart:SfCartesianChart.PrimaryAxis>
-        <chart:NumericalAxis Interval="10" />
-    </chart:SfCartesianChart.PrimaryAxis>
-    <chart:SfCartesianChart.SecondaryAxis>
-        <chart:NumericalAxis/>
-    </chart:SfCartesianChart.SecondaryAxis>
+<chart:SfCartesianChart>
+. . .
+<chart:SfCartesianChart.PrimaryAxis>
+    <chart:NumericalAxis Interval="10" />
+</chart:SfCartesianChart.PrimaryAxis>
+<chart:SfCartesianChart.SecondaryAxis>
+    <chart:NumericalAxis/>
+</chart:SfCartesianChart.SecondaryAxis>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    . . .
-    chart.PrimaryAxis = new NumericalAxis()
-    {
-        Interval = 10, 
-    };
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+chart.PrimaryAxis = new NumericalAxis()
+{
+    Interval = 10, 
+};
 
-    chart.SecondaryAxis = new NumericalAxis();
+chart.SecondaryAxis = new NumericalAxis();
 
 {% endhighlight %}
 
 {% endtabs %}
+
+![NumericalAxis interval support in MAUI Chart](Axis_Images/maui_chart_numeric_axis_interval.jpg)
 
 ### Customizing the Range
 
@@ -94,20 +98,20 @@ N> If  minimum or maximum value is set, the other value is calculated by default
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart.SecondaryAxis>
-        <chart:NumericalAxis Maximum="2750" Minimum="250" Interval="250"/>
-    </chart:SfCartesianChart.SecondaryAxis>
+<chart:SfCartesianChart.SecondaryAxis>
+    <chart:NumericalAxis Maximum="2750" Minimum="250" Interval="250"/>
+</chart:SfCartesianChart.SecondaryAxis>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    chart.SecondaryAxis = new NumericalAxis()
-    {
-        Maximum = 2750,
-        Minimum = 250,
-        Interval = 250
-    };
+chart.SecondaryAxis = new NumericalAxis()
+{
+    Maximum = 2750,
+    Minimum = 250,
+    Interval = 250
+};
 
 {% endhighlight %}
 
@@ -121,25 +125,27 @@ The [CategoryAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Ca
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-    . . .
-    <chart:SfCartesianChart.PrimaryAxis>
-        <chart:CategoryAxis/>
-    </chart:SfCartesianChart.PrimaryAxis>
+<chart:SfCartesianChart>
+. . .
+<chart:SfCartesianChart.PrimaryAxis>
+    <chart:CategoryAxis/>
+</chart:SfCartesianChart.PrimaryAxis>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    . . .
-    chart.PrimaryAxis = new CategoryAxis();
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+chart.PrimaryAxis = new CategoryAxis();
 
 {% endhighlight %}
 
 {% endtabs %}
+
+![CategoryAxis support in MAUI Chart](Axis_Images/maui_chart_category_axis.jpg)
 
 ### Label placement
 
@@ -149,28 +155,30 @@ The [LabelPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-        . . .
-        <chart:SfCartesianChart.PrimaryAxis>
-            <chart:CategoryAxis LabelPlacement="BetweenTicks"/>
-        </chart:SfCartesianChart.PrimaryAxis>
+<chart:SfCartesianChart>
+    . . .
+    <chart:SfCartesianChart.PrimaryAxis>
+        <chart:CategoryAxis LabelPlacement="BetweenTicks"/>
+    </chart:SfCartesianChart.PrimaryAxis>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    . . .
-    chart.PrimaryAxis = new CategoryAxis()
-    {
-        LabelPlacement = LabelPlacement.BetweenTicks
-    };
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+chart.PrimaryAxis = new CategoryAxis()
+{
+    LabelPlacement = LabelPlacement.BetweenTicks
+};
 
 {% endhighlight %}
 
 {% endtabs %}
+
+![Axis label placement support in MAUI Chart](Axis_Images/maui_chart_category_axis_labelPlacement.jpg)
 
 ### Interval
 
@@ -180,33 +188,35 @@ By default, the [CategoryAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-        . . .
-        <chart:SfCartesianChart.PrimaryAxis>
-            <chart:CategoryAxis Interval="2" />
-        </chart:SfCartesianChart.PrimaryAxis>
-        <chart:SfCartesianChart.SecondaryAxis>
-            <chart:NumericalAxis/>
-        </chart:SfCartesianChart.SecondaryAxis>
+<chart:SfCartesianChart>
+    . . .
+    <chart:SfCartesianChart.PrimaryAxis>
+        <chart:CategoryAxis Interval="2" />
+    </chart:SfCartesianChart.PrimaryAxis>
+    <chart:SfCartesianChart.SecondaryAxis>
+        <chart:NumericalAxis/>
+    </chart:SfCartesianChart.SecondaryAxis>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    . . .
-    chart.PrimaryAxis = new CategoryAxis()
-    {
-        Interval = 2, 
-    };
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+chart.PrimaryAxis = new CategoryAxis()
+{
+    Interval = 2, 
+};
 
 chart.SecondaryAxis = new NumericalAxis();
 
 {% endhighlight %}
 
 {% endtabs %}
+
+![CategoryAxis interval support in MAUI Chart](Axis_Images/maui_chart_category_axis_interval.jpg)
 
 ## DateTime Axis
 
@@ -216,25 +226,27 @@ chart.SecondaryAxis = new NumericalAxis();
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-        . . .
-        <chart:SfCartesianChart.PrimaryAxis>
-            <chart:DateTimeAxis/>
-        </chart:SfCartesianChart.PrimaryAxis>
+<chart:SfCartesianChart>
+    . . .
+    <chart:SfCartesianChart.PrimaryAxis>
+        <chart:DateTimeAxis/>
+    </chart:SfCartesianChart.PrimaryAxis>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    . . .
-    chart.PrimaryAxis = new DateTimeAxis();
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+chart.PrimaryAxis = new DateTimeAxis();
 
 {% endhighlight %}
 
 {% endtabs %}
+
+![DateTimeCategoryAxis support in MAUI Chart](Axis_Images/maui_chart_datetime_axis.jpg)
 
 ### Interval
 
@@ -244,34 +256,36 @@ In [DateTimeAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Dat
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-        . . .
-        <chart:SfCartesianChart.PrimaryAxis>
-            <chart:DateTimeAxis Interval="6" IntervalType="Months"/>
-        </chart:SfCartesianChart.PrimaryAxis>
-        <chart:SfCartesianChart.SecondaryAxis>
-            <chart:NumericalAxis/>
-        </chart:SfCartesianChart.SecondaryAxis>
+<chart:SfCartesianChart>
+    . . .
+    <chart:SfCartesianChart.PrimaryAxis>
+        <chart:DateTimeAxis Interval="6" IntervalType="Months"/>
+    </chart:SfCartesianChart.PrimaryAxis>
+    <chart:SfCartesianChart.SecondaryAxis>
+        <chart:NumericalAxis/>
+    </chart:SfCartesianChart.SecondaryAxis>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    . . .
-    chart.PrimaryAxis = new DateTimeAxis()
-    {
-        Interval = 6, 
-        IntervalType = DateTimeIntervalType.Months
-    };
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+chart.PrimaryAxis = new DateTimeAxis()
+{
+    Interval = 6, 
+    IntervalType = DateTimeIntervalType.Months
+};
 
-    chart.SecondaryAxis = new NumericalAxis();
+chart.SecondaryAxis = new NumericalAxis();
 
 {% endhighlight %}
 
 {% endtabs %}
+
+![DateTimeAxis interval support in MAUI Chart](Axis_Images/maui_chart_datetime_axis_interval.jpg)
 
 ### Customizing the Range
 
@@ -281,29 +295,31 @@ In [DateTimeAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Dat
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-        . . .
-        <chart:SfCartesianChart.PrimaryAxis>
-            <chart:DateTimeAxis Minimum="2021/05/10" Maximum="2021/11/01"/>
-        </chart:SfCartesianChart.PrimaryAxis>
+<chart:SfCartesianChart>
+    . . .
+    <chart:SfCartesianChart.PrimaryAxis>
+        <chart:DateTimeAxis Minimum="2021/05/10" Maximum="2021/11/01"/>
+    </chart:SfCartesianChart.PrimaryAxis>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    . . .
-    chart.PrimaryAxis = new DateTimeAxis()
-    {
-        Minimum = new DateTime(2021,05,10),
-        Maximum = new DateTime(2021,11,01),
-    };
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+chart.PrimaryAxis = new DateTimeAxis()
+{
+    Minimum = new DateTime(2021,05,10),
+    Maximum = new DateTime(2021,11,01),
+};
 
 {% endhighlight %}
 
 {% endtabs %}
+
+![DateTimeAxis range customization support in MAUI Chart](Axis_Images/maui_chart_datetime_axis_range.jpg)
 
 ## Inversed
 
@@ -313,22 +329,48 @@ Axis can be inverted by using the [IsInversed](https://help.syncfusion.com/cr/ma
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-        . . .
-        <chart:SfCartesianChart.SecondaryAxis>
-            <chart:NumericalAxis IsInversed="True"/>
-        </chart:SfCartesianChart.SecondaryAxis>
+<chart:SfCartesianChart>
+    . . .
+    <chart:SfCartesianChart.SecondaryAxis>
+        <chart:NumericalAxis IsInversed="True"/>
+    </chart:SfCartesianChart.SecondaryAxis>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    . . .
-    this.Chart.SecondaryAxis = new NumericalAxis();
-    this.Chart.SecondaryAxis.IsInversed = true;
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+this.Chart.SecondaryAxis = new NumericalAxis();
+this.Chart.SecondaryAxis.IsInversed = true;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Inversed axis support in MAUI Chart](Axis_Images/maui_chart_axis_isInversed.jpg)
+
+## Axis Visibility
+
+Axis visibility can be controlled using the [IsVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_IsVisible) property of axis. Default value of [IsVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_IsVisible) property is `True`.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCartesianChart.SecondaryAxis>
+    <chart:NumericalAxis IsVisible="False"/>
+</chart:SfCartesianChart.SecondaryAxis>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+chart.SecondaryAxis = new NumericalAxis() { IsVisible = false };
 
 {% endhighlight %}
 
@@ -344,25 +386,25 @@ By default, all the series are plotted based on primary and secondary axis.
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-        . . .
+<chart:SfCartesianChart>
+    . . .
+    <chart:SfCartesianChart.Series>
         <chart:SfCartesianChart.Series>
-            <chart:SfCartesianChart.Series>
-                <chart:ColumnSeries ItemsSource="{Binding Data1}" 
-                     XBindingPath="Date"
-                     YBindingPath="Value">
-                    <chart:ColumnSeries.XAxis>
-                            <chart:DateTimeAxis OpposedPosition="True" ShowMajorGridLines="False"/>
-                    </chart:ColumnSeries.XAxis>
-                    <chart:ColumnSeries.YAxis>
-                            <chart:NumericalAxis OpposedPosition="True" ShowMajorGridLines="False" />
-                    </chart:ColumnSeries.YAxis>
-                </chart:ColumnSeries>
-                <chart:SplineSeries ItemsSource="{Binding Data}" 
-                     XBindingPath="Date"
-                     YBindingPath="Value"/>
-        </chart:SfCartesianChart.Series>
-    </chart:SfCartesianChart>
+            <chart:ColumnSeries ItemsSource="{Binding Data1}" 
+                    XBindingPath="Date"
+                    YBindingPath="Value">
+                <chart:ColumnSeries.XAxis>
+                        <chart:DateTimeAxis OpposedPosition="True" ShowMajorGridLines="False"/>
+                </chart:ColumnSeries.XAxis>
+                <chart:ColumnSeries.YAxis>
+                        <chart:NumericalAxis OpposedPosition="True" ShowMajorGridLines="False" />
+                </chart:ColumnSeries.YAxis>
+            </chart:ColumnSeries>
+            <chart:SplineSeries ItemsSource="{Binding Data}" 
+                    XBindingPath="Date"
+                    YBindingPath="Value"/>
+    </chart:SfCartesianChart.Series>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 

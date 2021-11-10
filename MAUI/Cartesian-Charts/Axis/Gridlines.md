@@ -11,47 +11,39 @@ documentation: ug
 
 ## Major Grid Lines
 
-By default, major gridlines are automatically added to the [ChartAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html) in its defined intervals. The visibility of the major gridlines can be controlled using the [ShowMajorGridLines](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_ShowMajorGridLines) property. The default value of [ShowMajorGridLines](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_ShowMajorGridLines) is true. 
+By default, major gridlines are automatically added to the [ChartAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html) in its defined intervals. The visibility of the major gridlines can be controlled using the [ShowMajorGridLines](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_ShowMajorGridLines) property. The default value of [ShowMajorGridLines](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_ShowMajorGridLines) is `true`. 
 
 {% tabs %}
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-
-        <chart:SfCartesianChart.PrimaryAxis>
-            <chart:NumericalAxis.MajorGridLineStyle>
-                <chart:ChartLineStyle Stroke="Black" />
-            </chart:NumericalAxis.MajorGridLineStyle>
-        </chart:SfCartesianChart.PrimaryAxis>
-
-        <chart:SfCartesianChart.SecondaryAxis>
-            <chart:NumericalAxis />
-        </chart:SfCartesianChart.SecondaryAxis>
-        . . .
-    </chart:SfCartesianChart>
+<chart:SfCartesianChart>
+    <chart:SfCartesianChart.PrimaryAxis>
+        <chart:NumericalAxis ShowMajorGridLines="False" />
+    </chart:SfCartesianChart.PrimaryAxis>
+    <chart:SfCartesianChart.SecondaryAxis>
+        <chart:NumericalAxis />
+    </chart:SfCartesianChart.SecondaryAxis>
+    . . .
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    . . .
-    NumericalAxis primaryAxis = new NumericalAxis();
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+NumericalAxis primaryAxis = new NumericalAxis();
+primaryAxis.ShowMajorGridLines = false;
+chart.PrimaryAxis = primaryAxis;
 
-    ChartLineStyle axisLineStyle = new ChartLineStyle();
-
-    axisLineStyle.Stroke = Colors.Black;
-
-    primaryAxis.MajorGridLineStyle = axisLineStyle;
-
-    chart.PrimaryAxis = primaryAxis;
-
-    chart.SecondaryAxis = new NumericalAxis();
+chart.SecondaryAxis = new NumericalAxis();
 
 {% endhighlight %}
 
 {% endtabs %}
+
+![Gridlines customization support in MAUI Chart](Axis_images/maui_chart_axis_show_major_gridline.jpg)
 
 ### Customization
 
@@ -60,50 +52,63 @@ The [MajorGridLineStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cha
 {% tabs %}
 
 {% highlight xaml %}
-
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
     . . .
+    <chart:SfCartesianChart.Resources>
+        <DoubleCollection x:Key="dashArray">
+            <x:Double>3</x:Double>
+            <x:Double>3</x:Double>
+        </DoubleCollection>
+    </chart:SfCartesianChart.Resources>
+    
     <chart:SfCartesianChart.PrimaryAxis>
-        <chart:NumericalAxis.MajorGridLineStyle>
-            <chart:ChartLineStyle Stroke="Black" StrokeWidth="3" />
-        </chart:NumericalAxis.MajorGridLineStyle>
+        <chart:NumericalAxis>
+            <chart:NumericalAxis.MajorGridLineStyle>
+                <chart:ChartLineStyle StrokeDashArray="{StaticResource dashArray}" Stroke="Black" StrokeWidth="2" />
+            </chart:NumericalAxis.MajorGridLineStyle>
+        <chart:NumericalAxis />
     </chart:SfCartesianChart.PrimaryAxis>
 
     <chart:SfCartesianChart.SecondaryAxis>
         <chart:NumericalAxis />
     </chart:SfCartesianChart.SecondaryAxis>
-
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
+SfCartesianChart chart = new SfCartesianChart();
     . . .
-    NumericalAxis primaryAxis = new NumericalAxis();
-    ChartLineStyle axisLineStyle = new ChartLineStyle();
-    axisLineStyle.Stroke = Colors.Black;
-    axisLineStyle.StrokeWidth = 3;
-    primaryAxis.MajorGridLineStyle = axisLineStyle;
-    chart.PrimaryAxis = primaryAxis;
-    
-    chart.SecondaryAxis = new NumericalAxis();
+DoubleCollection doubleCollection = new DoubleCollection();
+doubleCollection.Add(3);
+doubleCollection.Add(3);
+
+NumericalAxis primaryAxis = new NumericalAxis();
+ChartLineStyle axisLineStyle = new ChartLineStyle();
+axisLineStyle.Stroke = Colors.Black;
+axisLineStyle.StrokeWidth = 2;
+axisLineStyle.StrokeDashArray = doubleCollection;
+primaryAxis.MajorGridLineStyle = axisLineStyle;
+chart.PrimaryAxis = primaryAxis;
+
+chart.SecondaryAxis = new NumericalAxis();
 
 {% endhighlight %}
 
 {% endtabs %}
 
+![Gridlines customization support in MAUI Chart](Axis_images/maui_chart_axis_major_linestyle.jpg)
+
 ## Minor Grid Lines
 
-Minor gridlines will be added automatically when the small tick lines is defined and using the [MinorTicksPerInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RangeAxisBase.html#Syncfusion_Maui_Charts_RangeAxisBase_MinorTicksPerInterval) property of chart axis.
+Minor gridlines will be added automatically when the small tick lines is defined and using the [MinorTicksPerInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RangeAxisBase.html#Syncfusion_Maui_Charts_RangeAxisBase_MinorTicksPerInterval) property of chart axis. The visibility of the minor gridlines can be controlled using the [ShowMinorGridLines](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RangeAxisBase.html#Syncfusion_Maui_Charts_RangeAxisBase_ShowMinorGridLines) property. The default value of [ShowMinorGridLines](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RangeAxisBase.html#Syncfusion_Maui_Charts_RangeAxisBase_ShowMinorGridLines) is `true`.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-
+<chart:SfCartesianChart>
     <chart:SfCartesianChart.PrimaryAxis>
         <chart:NumericalAxis/>
     </chart:SfCartesianChart.PrimaryAxis>
@@ -112,19 +117,19 @@ Minor gridlines will be added automatically when the small tick lines is defined
         <chart:NumericalAxis MinorTicksPerInterval="3" />
     </chart:SfCartesianChart.SecondaryAxis>
     . . .
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    chart.PrimaryAxis = new NumericalAxis();
-    chart.SecondaryAxis = new NumericalAxis()
-    {
-        MinorTicksPerInterval = 3,
-    };
-    . . .
+SfCartesianChart chart = new SfCartesianChart();
+chart.PrimaryAxis = new NumericalAxis();
+chart.SecondaryAxis = new NumericalAxis()
+{
+    MinorTicksPerInterval = 3,
+};
+. . .
 
 {% endhighlight %}
 
@@ -138,35 +143,50 @@ The [MinorGridLineStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cha
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
     . . .
+    <chart:SfCartesianChart.Resources>
+        <DoubleCollection x:Key="dashArray">
+            <x:Double>3</x:Double>
+            <x:Double>3</x:Double>
+        </DoubleCollection>
+    </chart:SfCartesianChart.Resources>
 
     <chart:SfCartesianChart.PrimaryAxis>
         <chart:NumericalAxis/>
     </chart:SfCartesianChart.PrimaryAxis>
 
     <chart:SfCartesianChart.SecondaryAxis>
-         <chart:NumericalAxis.MinorGridLineStyle>
-            <chart:ChartLineStyle Stroke="Black" StrokeWidth="0.8"  />
-        </chart:NumericalAxis.MinorGridLineStyle>
+        <chart:NumericalAxis ShowMinorGridLines="True" MinorTicksPerInterval="2">
+            <chart:NumericalAxis.MinorGridLineStyle>
+                <chart:ChartLineStyle StrokeDashArray="{StaticResource dashArray}" Stroke="Black" StrokeWidth="0.8"  />
+            </chart:NumericalAxis.MinorGridLineStyle>
+        </chart:NumericalAxis>
     </chart:SfCartesianChart.SecondaryAxis>
     . . .
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    chart.PrimaryAxis = new NumericalAxis();
+SfCartesianChart chart = new SfCartesianChart();
+chart.PrimaryAxis = new NumericalAxis();
 
-    NumericalAxis secondaryAxis = new NumericalAxis();
-    ChartLineStyle axisLineStyle = new ChartLineStyle();
-    axisLineStyle.Stroke = Colors.Black;
-    axisLineStyle.StrokeWidth = 0.8;
-    secondaryAxis.MinorGridLineStyle = axisLineStyle;
-    chart.SecondaryAxis = secondaryAxis;
+DoubleCollection doubleCollection = new DoubleCollection();
+doubleCollection.Add(3);
+doubleCollection.Add(3);
+
+NumericalAxis secondaryAxis = new NumericalAxis() { MinorTicksPerInterval = 2 };
+ChartLineStyle axisLineStyle = new ChartLineStyle();
+axisLineStyle.Stroke = Colors.Black;
+axisLineStyle.StrokeWidth = 0.8;
+axisLineStyle.StrokeDashArray = doubleCollection;
+secondaryAxis.MinorGridLineStyle = axisLineStyle;
+chart.SecondaryAxis = secondaryAxis;
 
 {% endhighlight %}
 
 {% endtabs %}
+
+![Gridlines customization support in MAUI Chart](Axis_Images/maui_chart_axis_minor_grid_linestyle.jpg)

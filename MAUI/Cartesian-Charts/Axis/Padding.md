@@ -17,37 +17,39 @@ The [PlotOffsetStart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-    . . .
-    <chart:SfCartesianChart.PrimaryAxis>
-        <chart:CategoryAxis PlotOffsetStart="30"/>
-    </chart:SfCartesianChart.PrimaryAxis>
+<chart:SfCartesianChart>
+. . .
+<chart:SfCartesianChart.PrimaryAxis>
+    <chart:CategoryAxis PlotOffsetStart="30"/>
+</chart:SfCartesianChart.PrimaryAxis>
 
-    <chart:SfCartesianChart.SecondaryAxis>
-        <chart:NumericalAxis PlotOffsetStart="30"/>
-    </chart:SfCartesianChart.SecondaryAxis>
+<chart:SfCartesianChart.SecondaryAxis>
+    <chart:NumericalAxis PlotOffsetStart="30"/>
+</chart:SfCartesianChart.SecondaryAxis>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    . . .
-    chart.PrimaryAxis = new CategoryAxis()
-    {
-    PlotOffsetStart = 30
-    };
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+chart.PrimaryAxis = new CategoryAxis()
+{
+PlotOffsetStart = 30
+};
 
-    chart.SecondaryAxis = new NumericalAxis()
-    {
-    PlotOffsetStart = 30
-    };
+chart.SecondaryAxis = new NumericalAxis()
+{
+PlotOffsetStart = 30
+};
 
 {% endhighlight %}
 
 {% endtabs %}
+
+![PlotOffsetStart support in MAUI Chart](Axis_images/maui_chart_axis_plot-offset-start.jpg)
 
 ## PlotOffsetEnd
 
@@ -57,7 +59,7 @@ The [PlotOffsetEnd](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.C
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
     . . .
     <chart:SfCartesianChart.PrimaryAxis>
         <chart:CategoryAxis PlotOffsetEnd="30"/>
@@ -67,24 +69,26 @@ The [PlotOffsetEnd](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.C
         <chart:NumericalAxis PlotOffsetEnd="30"/>
     </chart:SfCartesianChart.SecondaryAxis>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    . . .
-    chart.PrimaryAxis = new CategoryAxis()
-    {
-    PlotOffsetEnd = 30
-    };
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+chart.PrimaryAxis = new CategoryAxis()
+{
+PlotOffsetEnd = 30
+};
 
-    chart.SecondaryAxis = new NumericalAxis()
-    {
-    PlotOffsetEnd = 30
-    };
+chart.SecondaryAxis = new NumericalAxis()
+{
+PlotOffsetEnd = 30
+};
 
 {% endhighlight %}
 
 {% endtabs %}
+
+![PlotOffsetEnd support in MAUI Chart](Axis_images/maui_chart_axis_plot-offset-end.jpg)

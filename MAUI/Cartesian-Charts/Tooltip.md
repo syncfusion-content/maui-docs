@@ -19,46 +19,46 @@ To define the tooltip in the series, set the [ShowTooltip](https://help.syncfusi
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
     . . .
-        <chart:SfCartesianChart.Series>
-            <chart:ColumnSeries ItemsSource="{Binding Data}" 
-                                XBindingPath="Demand"
-                                YBindingPath="Year2010" 
-                                ShowTooltip="True"/>
+    <chart:SfCartesianChart.Series>
+        <chart:ColumnSeries ItemsSource="{Binding Data}" 
+                            XBindingPath="Demand"
+                            YBindingPath="Year2010" 
+                            ShowTooltip="True"/>
 
-            <chart:ColumnSeries ItemsSource="{Binding Data}" 
-                                XBindingPath="Demand"
-                                YBindingPath="Year2011"
-                                ShowTooltip="True"/>
-        </chart:SfCartesianChart.Series>
-    </chart:SfCartesianChart>
+        <chart:ColumnSeries ItemsSource="{Binding Data}" 
+                            XBindingPath="Demand"
+                            YBindingPath="Year2011"
+                            ShowTooltip="True"/>
+    </chart:SfCartesianChart.Series>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    . . .
-    ColumnSeries series1 = new ColumnSeries()
-    {
-        ItemsSource = new ViewModel().Data,
-        XBindingPath = "Demand",
-        YBindingPath = "Year2010",
-        ShowTooltip = true
-    };
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+ColumnSeries series1 = new ColumnSeries()
+{
+    ItemsSource = new ViewModel().Data,
+    XBindingPath = "Demand",
+    YBindingPath = "Year2010",
+    ShowTooltip = true
+};
 
-    ColumnSeries series2 = new ColumnSeries()
-    {
-        ItemsSource = new ViewModel().Data,
-        XBindingPath = "Demand",
-        YBindingPath = "Year2011",
-        ShowTooltip = true
-    };
+ColumnSeries series2 = new ColumnSeries()
+{
+    ItemsSource = new ViewModel().Data,
+    XBindingPath = "Demand",
+    YBindingPath = "Year2011",
+    ShowTooltip = true
+};
 
-    chart.Series.Add(series1);
-    chart.Series.Add(series2);
-    this.Content = chart;
+chart.Series.Add(series1);
+chart.Series.Add(series2);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -81,17 +81,17 @@ The [ChartTooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.C
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart.ChartBehaviors>
-        <chart:ChartTooltipBehavior/>
-    </chart:SfCartesianChart.ChartBehaviors>
+<chart:SfCartesianChart.ChartBehaviors>
+    <chart:ChartTooltipBehavior/>
+</chart:SfCartesianChart.ChartBehaviors>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    ChartTooltipBehavior behavior = new ChartTooltipBehavior();
-    chart.ChartBehaviors.Add(behavior);
+SfCartesianChart chart = new SfCartesianChart();
+ChartTooltipBehavior behavior = new ChartTooltipBehavior();
+chart.ChartBehaviors.Add(behavior);
 
 {% endhighlight %}
 
@@ -105,55 +105,54 @@ The [Duration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartT
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
+<chart:SfCartesianChart>
     . . .
-        <chart:SfCartesianChart.ChartBehaviors>
-            <chart:ChartTooltipBehavior Duration="5000"/>
-        </chart:SfCartesianChart.ChartBehaviors>
+    <chart:SfCartesianChart.ChartBehaviors>
+        <chart:ChartTooltipBehavior Duration="5000"/>
+    </chart:SfCartesianChart.ChartBehaviors>
 
-        <chart:SfCartesianChart.Series>
-            <chart:ColumnSeries ItemsSource="{Binding Data}" 
-                                XBindingPath="Demand"
-                                YBindingPath="Year2010" 
-                                ShowTooltip="True"/>
-                    
-            <chart:ColumnSeries ItemsSource="{Binding Data}" 
-                                XBindingPath="Demand"
-                                YBindingPath="Year2011"
-                                ShowTooltip="True"/>
-        </chart:SfCartesianChart.Series>
-
-    </chart:SfCartesianChart>
+    <chart:SfCartesianChart.Series>
+        <chart:ColumnSeries ItemsSource="{Binding Data}" 
+                            XBindingPath="Demand"
+                            YBindingPath="Year2010" 
+                            ShowTooltip="True"/>
+                
+        <chart:ColumnSeries ItemsSource="{Binding Data}" 
+                            XBindingPath="Demand"
+                            YBindingPath="Year2011"
+                            ShowTooltip="True"/>
+    </chart:SfCartesianChart.Series>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    . . .
-    ChartTooltipBehavior tooltipBehavior = new ChartTooltipBehavior();
-    tooltipBehavior.Duration = 5000;
-    chart.ChartBehaviors.Add(tooltipBehavior);
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+ChartTooltipBehavior tooltipBehavior = new ChartTooltipBehavior();
+tooltipBehavior.Duration = 5000;
+chart.ChartBehaviors.Add(tooltipBehavior);
 
-    ColumnSeries series1 = new ColumnSeries()
-    {
-        ItemsSource = new ViewModel().Data,
-        XBindingPath = "Demand",
-        YBindingPath = "Year2010",
-        ShowTooltip = true
-    };
+ColumnSeries series1 = new ColumnSeries()
+{
+    ItemsSource = new ViewModel().Data,
+    XBindingPath = "Demand",
+    YBindingPath = "Year2010",
+    ShowTooltip = true
+};
 
-    ColumnSeries series2 = new ColumnSeries()
-    {
-        ItemsSource = new ViewModel().Data,
-        XBindingPath = "Demand",
-        YBindingPath = "Year2011",
-        ShowTooltip = true
-    };
+ColumnSeries series2 = new ColumnSeries()
+{
+    ItemsSource = new ViewModel().Data,
+    XBindingPath = "Demand",
+    YBindingPath = "Year2011",
+    ShowTooltip = true
+};
 
-    chart.Series.Add(series1);
-    chart.Series.Add(series2);
-    this.Content = chart;
+chart.Series.Add(series1);
+chart.Series.Add(series2);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -167,49 +166,48 @@ The [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chart
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart >
-        <chart:SfCartesianChart.Resources>
-            <DataTemplate x:Key="tooltipTemplate1">
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="{Binding Item.Category}" TextColor="Black" FontAttributes="Bold" FontSize="12" HorizontalOptions="Center" VerticalOptions="Center"/>
-                    <Label Text=" : " TextColor="Black" FontAttributes="Bold" FontSize="12" HorizontalOptions="Center" VerticalOptions="Center"/>
-                    <Label Text="{Binding Item.Value}" TextColor="Black" FontAttributes="Bold" FontSize="12" HorizontalOptions="Center" VerticalOptions="Center"/>
-                </StackLayout>
-            </DataTemplate>
-            . . .
-                
-        </chart:SfCartesianChart.Resources>
+<chart:SfCartesianChart >
+    <chart:SfCartesianChart.Resources>
+        <DataTemplate x:Key="tooltipTemplate1">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="{Binding Item.Category}" TextColor="Black" FontAttributes="Bold" FontSize="12" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <Label Text=" : " TextColor="Black" FontAttributes="Bold" FontSize="12" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <Label Text="{Binding Item.Value}" TextColor="Black" FontAttributes="Bold" FontSize="12" HorizontalOptions="Center" VerticalOptions="Center"/>
+            </StackLayout>
+        </DataTemplate>
+        . . .          
+    </chart:SfCartesianChart.Resources>
     . . .
-        <chart:SfCartesianChart.Behaviors>
-            <chart:ChartTooltipBehavior/>
-        </chart:SfCartesianChart.Behaviors>
+    <chart:SfCartesianChart.Behaviors>
+        <chart:ChartTooltipBehavior/>
+    </chart:SfCartesianChart.Behaviors>
 
-        <chart:SfCartesianChart.Series>
-            <chart:ColumnSeries ItemsSource="{Binding Data}" TooltipTemplate="{StaticResource tooltipTemplate1}"
-                                XBindingPath="Demand"
-                                YBindingPath="Year2010" 
-                                ShowTooltip="True"/>
-        </chart:SfCartesianChart.Series>
+    <chart:SfCartesianChart.Series>
+        <chart:ColumnSeries ItemsSource="{Binding Data}" TooltipTemplate="{StaticResource tooltipTemplate1}"
+                            XBindingPath="Demand"
+                            YBindingPath="Year2010" 
+                            ShowTooltip="True"/>
+    </chart:SfCartesianChart.Series>
 
-    </chart:SfCartesianChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfCartesianChart chart = new SfCartesianChart();
-    . . .
-    ColumnSeries series1 = new ColumnSeries()
-    {
-        ItemsSource = new ViewModel().Data,
-        XBindingPath = "Demand",
-        YBindingPath = "Year2010",
-        ShowTooltip = true,
-        TooltipTemplate = chart.Resources["tooltipTemplate1"] as DataTemplate
-    };
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+ColumnSeries series1 = new ColumnSeries()
+{
+    ItemsSource = new ViewModel().Data,
+    XBindingPath = "Demand",
+    YBindingPath = "Year2010",
+    ShowTooltip = true,
+    TooltipTemplate = chart.Resources["tooltipTemplate1"] as DataTemplate
+};
 
-    chart.Series.Add(series1);
-    this.Content = chart;
+chart.Series.Add(series1);
+this.Content = chart;
         
 {% endhighlight %}
 

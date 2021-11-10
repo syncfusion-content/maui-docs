@@ -11,17 +11,17 @@ documentation: ug
 
  Pointer is used to indicate values on an axis. The radial gauge control has three types of pointers: 
 
-* `Marker pointer`
-* `Needle Pointer`
-* `Range pointer`
+* [`Marker pointer`](https://help.syncfusion.com/maui/radialgauge/marker-pointer)
+* [`Needle Pointer`](https://help.syncfusion.com/maui/radialgauge/needle-pointer)
+* [`Range pointer`](https://help.syncfusion.com/maui/radialgauge/range-pointer)
 
-All the pointers can be customized as needed. You can add multiple pointers to the gauge to point the multiple values on the same scale. The value of the pointer is set using the `Value` property.
+All the pointers can be customized as needed. You can add multiple pointers to the gauge to point the multiple values on the same scale. The value of the pointer is set using the [`Value`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialPointer.html#Syncfusion_Maui_Gauges_RadialPointer_Value) property.
 
 ![.NET MAUI Radial Gauge with Pointers](images/pointers/maui-radial-gauge-pointers.png)
 
 ## Multiple pointers
 
-In addition to the default pointer, you can add `N` number of pointers to an axis by adding in the `Pointers` collection property.
+In addition to the default pointer, you can add `N` number of pointers to an axis by adding in the [`Pointers`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_Pointers) collection property.
 
 {% tabs %}
 
@@ -65,7 +65,7 @@ this.Content = sfRadialGauge;
 
 ## Pointer interaction
 
-Pointers can be dragged over the axis scale. It can be achieved by swipe or drag gestures. To enable or disable the pointer drag, use the `IsInteractive` property.
+Pointers can be dragged over the axis scale. It can be achieved by swipe or drag gestures. To enable or disable the pointer drag, use the [`IsInteractive`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialPointer.html#Syncfusion_Maui_Gauges_RadialPointer_IsInteractive) property.
 
 {% tabs %}
 
@@ -116,13 +116,13 @@ this.Content = sfRadialGauge;
 
 ## Event
 
-`ValueChangeStarted` - Occurs whenever the pointer starts to drag.
+[`ValueChangeStarted`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialPointer.html#Syncfusion_Maui_Gauges_RadialPointer_ValueChangeStarted) - Occurs whenever the pointer starts to drag.
 
-`ValueChanging` - Occurs before the current drag value gets updated as pointer value. The `Cancel` argument of `ValueChangingEventArgs` allows to restrict the update of current drag value.
+[`ValueChanging`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialPointer.html#Syncfusion_Maui_Gauges_RadialPointer_ValueChanging) - Occurs before the current drag value gets updated as pointer value. The `Cancel` argument of `ValueChangingEventArgs` allows to restrict the update of current drag value.
 
-`ValueChanged` - Occurs whenever the pointer value is changed while dragging.
+[`ValueChanged`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialPointer.html#Syncfusion_Maui_Gauges_RadialPointer_ValueChanged) - Occurs whenever the pointer value is changed while dragging.
 
-`ValueChangeCompleted` - Occurs once the dragging of the pointer gets completed.
+[`ValueChangeCompleted`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialPointer.html#Syncfusion_Maui_Gauges_RadialPointer_ValueChangeCompleted) - Occurs once the dragging of the pointer gets completed.
 
 {% tabs %}
 
@@ -144,6 +144,22 @@ this.Content = sfRadialGauge;
 {% endhighlight %}
 
 {% highlight c# %}
+
+SfRadialGauge sfRadialGauge = new SfRadialGauge();
+
+            RadialAxis radialAxis = new RadialAxis();
+            sfRadialGauge.Axes.Add(radialAxis);
+
+            MarkerPointer markerPointer = new MarkerPointer();
+            markerPointer.Value = 30;
+            markerPointer.IsInteractive = true;
+            markerPointer.ValueChanging += MarkerPointer_ValueChanging;
+            markerPointer.ValueChanged += MarkerPointer_ValueChanged;
+            radialAxis.Pointers.Add(markerPointer);
+
+            this.Content = sfRadialGauge;
+
+...
 
 private void MarkerPointer_ValueChanging(object sender, ValueChangingEventArgs e)
 {
