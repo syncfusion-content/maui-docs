@@ -18,7 +18,7 @@ timestamps
 		     checkout scm
 			 
 			 def branchCommit = '"' + 'https://gitlab.syncfusion.com/api/v4/projects/' + env.projectId + '/merge_requests/' + env.MergeRequestId + '/changes'
-            String branchCommitDetails = bat returnStdout: true, script: 'curl -s --request GET --header PRIVATE-TOKEN:' + env.BuildAutomation_PrivateToken + " " + branchCommit
+            String branchCommitDetails = bat returnStdout: true, script: 'curl -H "Accept: application/vnd.github.v3+json" -u SyncfusionBuild:' + env.GithubBuildAutomation_PrivateToken + " " + branchCommit
 
             def ChangeFiles= branchCommitDetails.split('\n')[2];
             ChangeFiles = ChangeFiles.split('"new_path":')
@@ -40,7 +40,7 @@ timestamps
 		    }
 			 
 		   //Checkout the ug_spellchecker from development Source
-	  checkout([$class: 'GitSCM', branches: [[name: '*/development']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: 'ug_spellchecker']], submoduleCfg: [], userRemoteConfigs: [[credentialsId: env.gitlabCredentialId, url: 'https://gitlab.syncfusion.com/content/ug_spellchecker.git']]])
+	  checkout([$class: 'GitSCM', branches: [[name: '*/development']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: 'ug_spellchecker']], submoduleCfg: [], userRemoteConfigs: [[credentialsId: env.githubCredentialId, url: 'https://gitlab.syncfusion.com/content/ug_spellchecker.git']]])
 		 
 	  }
 	  
@@ -59,7 +59,7 @@ if(currentBuild.result != 'FAILURE')
 	{
 	    gitlabCommitStatus("Build")
 		{
-		bat 'powershell.exe -ExecutionPolicy ByPass -File '+env.WORKSPACE+"/ug_spellchecker/build.ps1 -Script "+env.WORKSPACE+"/ug_spellchecker/build.cake -Target build -Platform \""+platform+"\" -Targetbranch "+env.gitlabTargetBranch+" -Branch "+'"'+env.gitlabSourceBranch+'"'
+		bat 'powershell.exe -ExecutionPolicy ByPass -File '+env.WORKSPACE+"/ug_spellchecker/build.ps1 -Script "+env.WORKSPACE+"/ug_spellchecker/build.cake -Target build -Platform \""+platform+"\" -Targetbranch "+env.githubTargetBranch+" -Branch "+'"'+env.githubSourceBranch+'"'
 	 	}
 	 	
 	 	def files = findFiles(glob: '**/cireports/errorlogs/*.txt')
