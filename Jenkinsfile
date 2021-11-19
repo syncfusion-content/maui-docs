@@ -20,8 +20,7 @@ timestamps
 			 def branchCommit = '"' + 'https://api.github.com/repos/syncfusion-content/maui-docs/pulls/' + env.pullRequestId + '/files'
             String branchCommitDetails = bat returnStdout: true, script: 'curl -H "Accept: application/vnd.github.v3+json" -u SyncfusionBuild:' + env.GithubBuildAutomation_PrivateToken + " " + branchCommit
 
-            def ChangeFiles= branchCommitDetails.split('\n')[2];
-            ChangeFiles = ChangeFiles.split('"new_path":')
+            def ChangeFiles= branchCommitDetails.split('"filename": ');
 
             for (int i= 1; i < ChangeFiles.size();i++)
             {
