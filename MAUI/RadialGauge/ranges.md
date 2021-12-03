@@ -52,6 +52,60 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
 ![.NET MAUI Radial Gauge Default Range](images/range/maui-radial-gauge-default-range.png)
 
+N> In 360 degree radial axis, you can able to maintain the range in reverse order also by giving minimum value to EndValue and maximum value to StartValue. Without 360 degree radial axis, these values will get swap. 
+
+{% tabs %}
+
+{% highlight xaml %}
+
+  <gauge:SfRadialGauge x:Name="gauge">
+            <gauge:SfRadialGauge.Axes>
+                <gauge:RadialAxis x:Name="radialAxis"
+                                  StartAngle="270"
+                                  EndAngle="270"
+                                  Minimum="0"
+                                  Maximum="24"
+                                  Interval="6"
+                                  MinorTicksPerInterval="5"
+                                  ShowFirstLabel="False">
+
+                <gauge:RadialAxis.Ranges>
+                    <gauge:RadialRange StartValue="12" EndValue="6"/>
+                </gauge:RadialAxis.Ranges>
+                </gauge:RadialAxis>
+            </gauge:SfRadialGauge.Axes>
+        </gauge:SfRadialGauge>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfRadialGauge sfRadialGauge = new SfRadialGauge();
+
+            RadialAxis radialAxis = new RadialAxis();
+            radialAxis.StartAngle = 270;
+            radialAxis.EndAngle = 270;
+            radialAxis.Minimum = 0;
+            radialAxis.Maximum = 24;
+            radialAxis.Interval = 6;
+            radialAxis.MinorTicksPerInterval = 5;
+            radialAxis.ShowFirstLabel = false;
+            sfRadialGauge.Axes.Add(radialAxis);
+
+            RadialRange radialRange = new RadialRange();
+            radialRange.StartValue = 12;
+            radialRange.EndValue = 6;
+
+            radialAxis.Ranges.Add(radialRange);
+
+            this.Content = sfRadialGauge;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![.NET MAUI Radial Gauge Free Hand Range](images/range/maui-radial-gauge-free-hand-range.png)
+
 ## Range customization
 
 The following properties are used for the range customization:

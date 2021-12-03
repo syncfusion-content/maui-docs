@@ -15,6 +15,175 @@ The [`Radial Axis`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.R
 
 This section will cover the axis customization options.
 
+### Background content
+
+[`Radial axis`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html?tabs=tabid-1) allows you to add any visual contents as its background using the `BackgroundContent` property.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+ <gauge:SfRadialGauge x:Name="gauge">
+            <gauge:SfRadialGauge.Axes>
+                <gauge:RadialAxis x:Name="axis"
+                                          ShowAxisLine="False"
+                                          RadiusFactor="1"
+                                          CanRotateLabels="True"
+                                          TickOffset="0.32"
+                                          OffsetUnit="Factor"
+                                          LabelCreated="RadialAxis_LabelCreated"
+                                          StartAngle="270"
+                                          EndAngle="270"
+                                          LabelOffset="0.05"
+                                          Maximum="360"
+                                          Minimum="0"
+                                          Interval="30"
+                                          MinorTicksPerInterval="4">
+                    <gauge:RadialAxis.AxisLabelStyle>
+                        <gauge:GaugeLabelStyle TextColor="White" FontSize="11"/>
+                    </gauge:RadialAxis.AxisLabelStyle>
+                    <gauge:RadialAxis.MajorTickStyle>
+                        <gauge:RadialTickStyle Length="0.087" LengthUnit="Factor" 
+                                               Stroke="#FF949494" StrokeThickness="2.3"/>
+                    </gauge:RadialAxis.MajorTickStyle>
+                    <gauge:RadialAxis.MinorTickStyle>
+                        <gauge:RadialTickStyle Length="0.058" LengthUnit="Factor"
+                                               Stroke="#FF616161" StrokeThickness="1.6"/>
+                    </gauge:RadialAxis.MinorTickStyle>
+
+                    <gauge:RadialAxis.BackgroundContent>
+                        <Image  Source="axisbackground.png"/>
+                    </gauge:RadialAxis.BackgroundContent>
+
+                    <gauge:RadialAxis.Pointers>
+                        <gauge:MarkerPointer Value="90"
+                                                     Fill="#FFDF5F2D"
+                                                     EnableAnimation="True"
+                                                     AnimationDuration="1200"
+                                                      AnimationEasing="{x:Static Easing.SpringOut}"
+                                                     MarkerOffset="0.71"
+                                                     OffsetUnit="Factor"
+                                                     MarkerType="Triangle"
+                                                     MarkerHeight="10"
+                                                     MarkerWidth="15">
+                        </gauge:MarkerPointer>
+                    </gauge:RadialAxis.Pointers>
+
+                    <gauge:RadialAxis.Annotations>
+                        <gauge:GaugeAnnotation DirectionValue="270">
+                            <gauge:GaugeAnnotation.Content>
+                                <Label Text="90" TextColor="#FFDF5F2D"
+                                                   FontAttributes="Bold"
+                                                   FontSize="22" />
+                            </gauge:GaugeAnnotation.Content>
+                        </gauge:GaugeAnnotation>
+                    </gauge:RadialAxis.Annotations>
+                </gauge:RadialAxis>
+            </gauge:SfRadialGauge.Axes>
+        </gauge:SfRadialGauge>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfRadialGauge sfRadialGauge = new SfRadialGauge();
+
+            RadialAxis radialAxis = new RadialAxis();
+            radialAxis.ShowAxisLine = false;
+            radialAxis.RadiusFactor = 1;
+            radialAxis.CanRotateLabels = true;
+            radialAxis.TickOffset = 0.32;
+            radialAxis.OffsetUnit = SizeUnit.Factor;
+            radialAxis.LabelCreated += RadialAxis_LabelCreated;
+            radialAxis.StartAngle = 270;
+            radialAxis.EndAngle = 270;
+            radialAxis.LabelOffset = 0.05;
+            radialAxis.Maximum = 360;
+            radialAxis.Minimum = 0;
+            radialAxis.Interval = 30;
+            radialAxis.MinorTicksPerInterval = 4;
+            radialAxis.AxisLabelStyle = new GaugeLabelStyle()
+            {
+                TextColor = Colors.White,
+                FontSize = 11
+            };
+            radialAxis.MajorTickStyle = new RadialTickStyle()
+            {
+                Length = 0.087,
+                LengthUnit = SizeUnit.Factor,
+                Stroke = new SolidColorBrush(Color.FromHex("FF949494")),
+                StrokeThickness = 2.3
+            };
+            radialAxis.MinorTickStyle = new RadialTickStyle()
+            {
+                Length = 0.058,
+                LengthUnit = SizeUnit.Factor,
+                Stroke = new SolidColorBrush(Color.FromHex("FF616161")),
+                StrokeThickness = 2.3
+            };
+            Image image = new Image { Source = "axisbackground.png" };
+            radialAxis.BackgroundContent = image;
+            sfRadialGauge.Axes.Add(radialAxis);
+
+            MarkerPointer markerPointer = new MarkerPointer();
+            markerPointer.Value = 90;
+            markerPointer.Fill = new SolidColorBrush(Color.FromRgb(223, 95, 45));
+            markerPointer.EnableAnimation = true;
+            markerPointer.AnimationDuration = 1200;
+            markerPointer.MarkerOffset = 0.71;
+            markerPointer.OffsetUnit = SizeUnit.Factor;
+            markerPointer.MarkerType = MarkerType.Triangle;
+            markerPointer.MarkerHeight = 10;
+            markerPointer.MarkerWidth = 15;
+            radialAxis.Pointers.Add(markerPointer);
+
+            GaugeAnnotation gaugeAnnotation = new GaugeAnnotation();
+            gaugeAnnotation.DirectionValue = 270;
+            Label label = new Label();
+            label.Text = "90";
+            label.TextColor = Color.FromRgb(223, 95, 45);
+            label.FontAttributes = FontAttributes.Bold;
+            label.FontSize = 22;
+            gaugeAnnotation.Content = label;
+            radialAxis.Annotations.Add(gaugeAnnotation);
+
+            this.Content = sfRadialGauge;
+
+
+// Label prepared event.
+ private void RadialAxis_LabelCreated(object sender, LabelCreatedEventArgs e)
+        {
+            if (e.Text == "90")
+            {
+                e.Text = "E";
+            }
+            else if (e.Text == "360")
+            {
+                e.Text = string.Empty;
+            }
+            else
+            {
+                if (e.Text == "0")
+                {
+                    e.Text = "N";
+                }
+                else if (e.Text == "180")
+                {
+                    e.Text = "S";
+                }
+                else if (e.Text == "270")
+                {
+                    e.Text = "W";
+                }
+            }
+        }
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![.NET MAUI Radial Gauge Axis Background](images/axis/maui-radial-gauge-axis-background.png)
+
 ### Setting axis minimum and maximum
 
 The [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_Minimum) and [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_Maximum) properties of an axis can be used to customize the axis scale range. The default value of [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_Minimum) is 0 and [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_Maximum) is 100.
