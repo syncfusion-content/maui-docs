@@ -11,7 +11,7 @@ documentation: ug
 
 ## Initial animation
 
-The radial gauge allows all of its elements to be animated with `EnableLoadingAnimation` property. The default value for this property is false. The duration of the animation can be controlled by `AnimationDuration` property of the gauge.
+The radial gauge allows all of its elements to be animated using the `EnableLoadingAnimation` property. The default value for this property is false. The duration of the animation can be controlled by using the `AnimationDuration` property of the gauge.
 
 {% tabs %}
 

@@ -52,7 +52,7 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
 ![.NET MAUI Radial Gauge Default Range](images/range/maui-radial-gauge-default-range.png)
 
-N> In 360 degree radial axis, you can able to maintain the range in reverse order also by giving minimum value to EndValue and maximum value to StartValue. Without 360 degree radial axis, these values will get swap. 
+N> In a 360 degree radial axis, you can maintain the range in reverse order by giving minimum value to EndValue and maximum value to StartValue. These values will be swapped if there is no 360 degree radial axis.
 
 {% tabs %}
 
