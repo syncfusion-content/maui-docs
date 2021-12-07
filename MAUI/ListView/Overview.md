@@ -9,7 +9,7 @@ documentation: ug
 
 # Overview of .NET MAUI ListView (SfListView)
 
-The Syncfusion .NET MAUI ListView renders set of data items with maui views or custom templates. Data can be grouped, sorted, and filtered with ease.
+The Syncfusion .NET MAUI ListView renders set of data items with Maui views or custom templates. Data can be grouped, sorted, and filtered with ease.
 
 ## Key features
 
