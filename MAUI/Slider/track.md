@@ -62,17 +62,16 @@ namespace SliderGettingStarted
 
 You can change the active and inactive track height of the slider using the `ActiveSize` and `InactiveSize` properties of the `TrackStyle` class. The default value of the `ActiveSize` and the `InactiveSize` properties are `8.0` and `6.0` respectively.
 
-
 {% tabs %}
 
 {% highlight xaml %}
 
 <ContentPage>
-   <sliders:SfSlider>
-      <sliders:SfSlider.TrackStyle>
-         <sliders:SliderTrackStyle ActiveColor="#EE3F3F" InactiveColor="#F7B1AE" />
-      </sliders:SfSlider.TrackStyle>
-   </sliders:SfSlider>
+    <sliders:SfSlider>
+            <sliders:SfSlider.TrackStyle>
+                <sliders:SliderTrackStyle ActiveSize="10" InactiveSize="8" />
+            </sliders:SfSlider.TrackStyle>
+        </sliders:SfSlider>
  </ContentPage>
 
 {% endhighlight %}
