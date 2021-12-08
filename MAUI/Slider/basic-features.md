@@ -67,7 +67,6 @@ namespace SliderGettingStarted
 
 ![Slider date label](images/basic-features/date-labels.png)
 
-
 ## Handle ValueChanging, ValueChanged, ValueChangeStart, and ValueChangeEnd callbacks
 
 * ValueChangeStart -  Called when the user selecting a new value for the slider by tap/mouse down in the thumb.
