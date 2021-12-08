@@ -27,13 +27,13 @@ Location:
 
 <table>
 <tr>
-<td>Android, iOs, Mac Catalyst</td>
+<td>Android, iOS, Mac Catalyst</td>
 <td>Syncfusion.Maui.DataSource.dll<br/>Syncfusion.Maui.Core.dll<br/>Syncfusion.Maui.GridCommon.dll<br/>Syncfusion.Maui.ListView.dll<br/></td>
 </tr>
 <tr>
 </table>
 
-## Handler registeration
+## Handler registration
 
 To use this control inside an application must initialize the SfListView handler. 
 
