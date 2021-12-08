@@ -354,4 +354,4 @@ namespace SliderGettingStarted
 
 {% endtabs %}
 
-![Inverse slider](images/getting-started/label-format.png)
+![Slider label format](images/getting-started/label-format.png)
