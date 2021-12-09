@@ -2,8 +2,8 @@
 layout: post
 title: About .NET MAUI Scheduler control | Syncfusion
 description: Learn here all about introduction of Syncfusion .NET MAUI Scheduler(SfScheduler) control, its elements and more.
-platform: MAUI
-control: Scheduler
+platform: maui
+control: SfScheduler
 documentation: ug
 ---
 
