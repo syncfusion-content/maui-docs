@@ -446,3 +446,125 @@ chart.Series.Add(series2);
 {% endtabs %}
 
 In the above image, the [ColumnSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ColumnSeries.html?tabs=tabid-1) is plotted based on additional X & Y axes, and [SplineSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SplineSeries.html?tabs=tabid-1) is plotted based on the primary and secondary axes.
+
+## Axis Crossing
+
+Chart allows you to customize the origin, by default the axis will be rendered with(0,0) as origin in x and y-axes. Axis can be positioned anywhere in the chart area by using [CrossesAt]() property. This property specifies where the horizontal axis should intersect or cross the vertical axis or vice-versa. Default value of CrossesAt property is `double.NaN`.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCartesianChart>
+    
+    <chart:SfCartesianChart.PrimaryAxis>
+            <chart:NumericalAxis CrossesAt="0" Minimum="-8" Maximum="8" ShowMinorGridLines="False" />
+    </chart:SfCartesianChart.PrimaryAxis>
+
+    <chart:SfCartesianChart.SecondaryAxis>
+            <chart:NumericalAxis CrossesAt="0" Minimum="-8" Maximum="8"  ShowMinorGridLines="False" />
+    </chart:SfCartesianChart.SecondaryAxis>
+
+</chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCartesianChart chart = new SfCartesianChart();
+NumericalAxis primaryAxis = new NumericalAxis();
+primaryAxis.CrossesAt = 0;
+primaryAxis.Minimum = -8;
+primaryAxis.Maximum = 8;
+primaryAxis.ShowMajorGridLines = false;
+chart.PrimaryAxis = primaryAxis;
+NumericalAxis secondaryAxis = new NumericalAxis();
+secondaryAxis.CrossesAt = 0;
+secondaryAxis.Minimum = -8;
+secondaryAxis.Maximum = 8;
+secondaryAxis.ShowMajorGridLines = false;
+chart.SecondaryAxis = secondaryAxis;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Axis crossing support in MAUI Chart](Axis_Images/maui_chart_axis_crossing.png)
+
+### Positioning the axis elements while crossing
+
+[RenderNextToCrossingValue]() property is used to determine whether the crossing axis should be placed at crossing position or not. The default value of [RenderNextToCrossingValue]() property is true.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCartesianChart>
+    
+    <chart:SfCartesianChart.PrimaryAxis>
+            <chart:NumericalAxis CrossesAt="0" RenderNextToCrossingValue="False" />
+    </chart:SfCartesianChart.PrimaryAxis>
+
+    <chart:SfCartesianChart.SecondaryAxis>
+            <chart:NumericalAxis CrossesAt="0" />
+    </chart:SfCartesianChart.SecondaryAxis>
+
+</chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCartesianChart chart = new SfCartesianChart();
+NumericalAxis primaryAxis = new NumericalAxis();
+primaryAxis.CrossesAt = 0;
+primaryAxis.RenderNextToCrossingValue = false;
+chart.PrimaryAxis = primaryAxis;
+NumericalAxis secondaryAxis = new NumericalAxis();
+secondaryAxis.CrossesAt = 0;
+chart.SecondaryAxis = secondaryAxis;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![RenderNextToCrossingValue support in MAUI Chart](Axis_Images/maui_chart_axis_rendernexttocrossingvalue.png)
+
+### Crossing in date time axis
+
+For crossing in date time horizontal axis, date object should be provided as value for CrossesAt property of vertical axis.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCartesianChart>
+    
+    <chart:SfCartesianChart.PrimaryAxis>
+            <chart:DateTimeAxis CrossesAt="0" RenderNextToCrossingValue="False" />
+    </chart:SfCartesianChart.PrimaryAxis>
+
+    <chart:SfCartesianChart.SecondaryAxis>
+            <chart:NumericalAxis />
+    </chart:SfCartesianChart.SecondaryAxis>
+
+</chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCartesianChart chart = new SfCartesianChart();
+NumericalAxis primaryAxis = new NumericalAxis();
+primaryAxis.CrossesAt = 0;
+primaryAxis.RenderNextToCrossingValue = false;
+chart.PrimaryAxis = primaryAxis;
+NumericalAxis secondaryAxis = new NumericalAxis();
+secondaryAxis.CrossesAt = new DateTime(2021, 01, 01);;
+chart.SecondaryAxis = secondaryAxis;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![DateTimeAxis crossing support in MAUI Chart](Axis_Images/maui_chart_datetime_axis_crossing.png)
