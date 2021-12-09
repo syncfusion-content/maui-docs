@@ -15,8 +15,42 @@ This section provides a quick overview for getting started with the .NET Maui Li
 
 1. Create a new .NET MAUI application in Visual Studio.
 2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfListView to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.ListView and then install it.
-3. To initialize the control, import the ListView namespace.
-4. Initialize `SfListView`.
+3. Import the control namespace `Syncfusion.Maui.ListView` in XAML or C# code.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+xmlns:listView="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+using Syncfusion.Maui.ListView;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+4. Initialize the `SfListView` control.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<listView:SfListView />
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfListView listView = new SfListView();
+this.Content = SfListView;
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ## Register the handler
 
@@ -47,10 +81,6 @@ namespace GettingStarted
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                 });
 
-            builder.ConfigureMauiHandlers(handlers =>
-            {
-                handlers.AddHandler(typeof(ListViewItem), typeof(ListViewItemHandler));
-            });
             builder.ConfigureSyncfusionListView();
             return builder.Build();
         }
@@ -59,31 +89,7 @@ namespace GettingStarted
 {% endhighlight %} 
 {% endtabs %}
 
-## Create a Simple ListView 
-
-This section explains how to create a SfListView, and configure it. The .NET Maui ListView (SfListView) control can be configured entirely in C# code, or by using XAML markup.
- 
-![Maui listview]
-
-In this walk through, you will create a new application with the SfListView that includes the following topics:
-
-* [Creating the project](#creating-the-project) 
-* [Creating Data Model](#creating-data-model-for-the-listview) 
-* [Adding ListView in Maui](#adding-listview-in-Maui)     
-* [Binding data](#binding-data-to-listview) 
-* [Defining an ItemTemplate](#defining-an-itemtemplate)
-* [Layouts](#layouts)
-* [Sorting](#sorting) 
-* [Filtering](#filtering) 
-* [Grouping](#grouping) 
-* [Selection](#selection)
-* [Header and Footer](#header-and-footer)
-
-## Creating the Project
-
-Create a new .NET MAUI application in Visual Studio
-
-## Creating Data Model for the ListView
+## Creating data model for the ListView
 
 Create a data model to bind it to the control. 
 
@@ -168,42 +174,7 @@ public class BookInfoRepository
 {% endhighlight %}
 {% endtabs %}
 
-## Adding the ListView in Maui 
-
- 1. Import the SfListView control namespace Syncfusion.Maui.ListView.
- 2. Set the SfListView control to the ContentPage.
-
-{% tabs %}
-{% highlight xaml %}
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
-             xmlns:local="clr-namespace:GettingStarted;assembly=GettingStarted"
-             x:Class="GettingStarted.MainPage">
-  <syncfusion:SfListView x:Name="listView" />
-</ContentPage>
-{% endhighlight %}
-{% highlight c# %}
-using Microsoft.Maui.Controls;
-using Syncfusion.Maui.ListView;
-using System;
-
-namespace GettingStarted
-{
-    public class App : Application
-    {
-        SfListView listView;
-        public App()
-        {
-            listView = new SfListView();
-            MainPage = new ContentPage { Content = listView };
-        }
-    }
-} 
-{% endhighlight %}
-{% endtabs %}
-
-## Binding Data to the ListView
+## Binding data to the ListView
 
 To bind the data source of the SfListView, set the `SfListView.ItemsSource` property as shown as follows. You can bind the data source of the SfListView either from XAML or in code. 
 
@@ -247,7 +218,7 @@ listView.ItemsSource = viewModel.BookInfo;
             <RowDefinition Height="0.6*" />
             </Grid.RowDefinitions>
             <Label Text="{Binding BookName}" FontAttributes="Bold" TextColor="Teal" FontSize="21" />
-            <Label Grid.Row="1" Text="{Binding BookDescription}" TextColor="Teal" FontSize="15"/>
+            <Label GridLayout.Row="1" Text="{Binding BookDescription}" TextColor="Teal" FontSize="15"/>
         </Grid>
         </DataTemplate>
     </syncfusion:SfListView.ItemTemplate>
@@ -396,8 +367,8 @@ To filter the items based on the Title property of the underlying data by using 
      </Grid.RowDefinitions>
       <SearchBar x:Name="filterText" HeightRequest="40"
            Placeholder="Search here to filter"
-           TextChanged="OnFilterTextChanged" Grid.Row="0"/>
-      <syncfusion:SfListView x:Name="listView" Grid.Row="1" ItemsSource="{Binding BookInfo}"/>
+           TextChanged="OnFilterTextChanged" GridLayout.Row="0"/>
+      <syncfusion:SfListView x:Name="listView" GridLayout.Row="1" ItemsSource="{Binding BookInfo}"/>
     </Grid>
   </ContentPage>
 {% endhighlight %}
@@ -525,8 +496,8 @@ The header and footer can be handled either by scrollable, or sticky to the view
           <ColumnDefinition />
           <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <Image Grid.Column="0" Source="Edit.png" />
-        <Image Grid.Column="1" Source="Delete.png" />
+        <Image GridLayout.Column="0" Source="Edit.png" />
+        <Image GridLayout.Column="1" Source="Delete.png" />
       </Grid>
     </DataTemplate>
   </syncfusion:SfListView.FooterTemplate>
