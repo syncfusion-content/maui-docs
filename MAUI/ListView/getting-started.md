@@ -200,7 +200,7 @@ listView.ItemsSource = viewModel.BookInfo;
 {% endhighlight %}
 {% endtabs %}
 
-## Defining an itemtemplate
+## Defining an item template
  
  By defining the `SfListView.ItemTemplate` of the SfListView, a custom user interface(UI) can be achieved to display the data items. 
  
