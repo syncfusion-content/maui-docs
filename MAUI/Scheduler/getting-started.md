@@ -15,7 +15,7 @@ This section explains how to populate the appointments to the Scheduler as well 
 
 1. Create a new .NET MAUI application in Visual Studio.
 
-2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfScheduler to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Scheduler] and then install it.
+2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfScheduler to your project, open the NuGet package manager in Visual Studio, search for `Syncfusion.Maui.Scheduler` and then install it.
 
 3. To initialize the control, import the control namespace `Syncfusion.Maui.Scheduler` in XAML or C# code.
 
