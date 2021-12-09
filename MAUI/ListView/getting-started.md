@@ -89,7 +89,7 @@ namespace GettingStarted
 {% endhighlight %} 
 {% endtabs %}
 
-## Creating data model for the ListView
+## Creating data model for the listview
 
 Create a data model to bind it to the control. 
 
@@ -174,7 +174,7 @@ public class BookInfoRepository
 {% endhighlight %}
 {% endtabs %}
 
-## Binding data to the ListView
+## Binding data to the listview
 
 To bind the data source of the SfListView, set the `SfListView.ItemsSource` property as shown as follows. You can bind the data source of the SfListView either from XAML or in code. 
 
@@ -200,7 +200,7 @@ listView.ItemsSource = viewModel.BookInfo;
 {% endhighlight %}
 {% endtabs %}
 
-## Defining an ItemTemplate
+## Defining an itemtemplate
  
  By defining the `SfListView.ItemTemplate` of the SfListView, a custom user interface(UI) can be achieved to display the data items. 
  
