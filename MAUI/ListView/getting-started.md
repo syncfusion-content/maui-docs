@@ -54,7 +54,7 @@ this.Content = SfListView;
 
 ## Register the handler
 
-To use this control inside an application, you must initialize the SfListView handler.
+To use this control inside an application, you must initialize the `SfListView` handler.
 
 {% tabs %}
 {% highlight c# %}
@@ -136,7 +136,7 @@ public class BookInfo : INotifyPropertyChanged
 
 N> If you want your data model to respond to property changes, then implement `INotifyPropertyChanged` interface in your model class.
 
-Create a model repository class with BookInfo collection property initialized with required number of data objects in a new class file as shown in the following code example, and save it as BookInfoRepository.cs file:
+Create a model repository class with `BookInfo` collection property initialized with required number of data objects in a new class file as shown in the following code example, and save it as BookInfoRepository.cs file:
 
 {% tabs %}
 {% highlight c# %}
@@ -176,7 +176,7 @@ public class BookInfoRepository
 
 ## Binding data to the listview
 
-To bind the data source of the SfListView, set the `SfListView.ItemsSource` property as follows. You can bind the data source of the SfListView either from XAML or code.
+To bind the data source of the SfListView, set the `SfListView.ItemsSource` property as follows. You can bind the data source of the `SfListView` either from XAML or code.
 
 The following code example binds the previously created collection to the `SfListView.ItemsSource` property:
 
