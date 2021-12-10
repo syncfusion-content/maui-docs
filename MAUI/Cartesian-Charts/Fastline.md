@@ -64,7 +64,7 @@ this.Content = chart;
 
 ### Dashed line
 
-The [StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LineSeries.html#Syncfusion_Maui_Charts_LineSeries_StrokeDashArray) property of [LineSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LineSeries.html?tabs=tabid-1) is used to render the line series with dashes. Odd value is considered as rendering size and even value is considered as gap.
+The [StrokeDashArray]() property of [FastLineSeries]() is used to render the fast line series with dashes. Odd value is considered as rendering size and even value is considered as gap.
 
 {% tabs %}
 
@@ -87,7 +87,7 @@ The [StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts
     </chart:SfCartesianChart.SecondaryAxis>  
 
     <chart:SfCartesianChart.Series>
-        <chart:FastLineSeries XBindingPath="XValue" ItemsSource="{Binding Data}" YBindingPath="YValue" StrokeDashArray="{StaticResource dashArray}"/>
+        <chart:FastLineSeries ItemsSource="{Binding Data}" XBindingPath="XValue" YBindingPath="YValue" StrokeDashArray="{StaticResource dashArray}"/>
     </chart:SfCartesianChart.Series>
 </chart:SfCartesianChart>
 
