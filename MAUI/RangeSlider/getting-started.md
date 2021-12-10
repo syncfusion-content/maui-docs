@@ -137,40 +137,30 @@ Set the 'DateTime' values to the `Minimum`, `Maximum`, and `Value` properties to
 
 {% highlight xaml %}
 
-<ContentPage>
- <sliders:SfRangeSlider Minimum="2010-01-01" Maximum="2020-01-01" RangeStart="2012-01-01" RangeEnd="2018-01-01" ShowLabels="True">
+ <sliders:SfRangeSlider Minimum="2010-01-01"
+                        Maximum="2020-01-01" 
+                        RangeStart="2012-01-01" 
+                        RangeEnd="2018-01-01" 
+                        ShowLabels="True">
  </sliders:SfRangeSlider>
- </ContentPage>
+
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Sliders;
-
-namespace SliderGettingStarted
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfRangeSlider rangeSlider = new SfRangeSlider();
-			rangeSlider.Minimum = new DateTime(2010, 01, 01);
-			rangeSlider.Maximum = new DateTime(2020, 01, 01);
-			rangeSlider.RangeStart = new DateTime(2012, 01, 01);
-            rangeSlider.RangeEnd = new DateTime(2018, 01, 01);
-			rangeSlider.ShowLabels = true;
-			this.Content = rangeSlider;
-        }
-    }
-}
+        SfRangeSlider rangeSlider = new SfRangeSlider();
+		rangeSlider.Minimum = new DateTime(2010, 01, 01);
+		rangeSlider.Maximum = new DateTime(2020, 01, 01);
+		rangeSlider.RangeStart = new DateTime(2012, 01, 01);
+        rangeSlider.RangeEnd = new DateTime(2018, 01, 01);
+		rangeSlider.ShowLabels = true;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Slider date labels](images/getting-started/date-time-labels.png)
+![RangeSlider date labels](images/getting-started/date-time-labels.png)
 
 ## Enable ticks
 
@@ -180,25 +170,21 @@ The `ShowTicks` property enables ticks in the range slider, while the `MinorTick
 
 {% highlight xaml %}
 
-<ContentPage>
-  <sliders:SfRangeSlider Minimum="2010-01-01" Maximum="2020-01-01" RangeStart="2012-01-01" RangeEnd="2018-01-01" ShowLabels="True" ShowTicks="True" Interval="2" MinorTicksPerInterval="1">
+  <sliders:SfRangeSlider  Minimum="2010-01-01" 
+                          Maximum="2020-01-01" 
+                          RangeStart="2012-01-01" 
+                          RangeEnd="2018-01-01" 
+                          ShowLabels="True" 
+                          ShowTicks="True" 
+                          Interval="2" 
+                          MinorTicksPerInterval="1">
  </sliders:SfRangeSlider>
- </ContentPage>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Sliders;
-
-namespace SliderGettingStarted
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-          SfRangeSlider rangeSlider = new SfRangeSlider();
+            SfRangeSlider rangeSlider = new SfRangeSlider();
 			rangeSlider.Minimum = new DateTime(2010, 01, 01);
 			rangeSlider.Maximum = new DateTime(2020, 01, 01);
 			rangeSlider.RangeStart = new DateTime(2012, 01, 01);
@@ -207,27 +193,132 @@ namespace SliderGettingStarted
             rangeSlider.ShowTicks = true;
 			rangeSlider.Interval = 2;
 			rangeSlider.MinorTicksPerInterval = 1;
-			this.Content = rangeSlider;
-        }
-    }
-}
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Slider ticks](images/getting-started/ticks.png)
+![RangeSlider ticks](images/getting-started/ticks.png)
 
 ## Orientation
 
 The `Orientation` property allows you to show the range slider in both horizontal and vertical directions. The default value of the `Orientation` property is `Horizontal`.
 
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfRangeSlider Minimum="0" 
+                       Maximum="100" 
+                       RangeStart="20" 
+                       RangeEnd="80"
+                       Orientation="Vertical" 
+                       ShowLabels="True" 
+                       ShowTicks="True" 
+                       Interval="20" 
+                       MinorTicksPerInterval="1">
+ </sliders:SfRangeSlider>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfRangeSlider rangeSlider = new SfRangeSlider();
+			rangeSlider.Minimum = 0;
+            rangeSlider.Maximum = 100;
+            rangeSlider.RangeStart = 20;
+            rangeSlider.RangeEnd = 80;
+            rangeSlider.Orientation = SliderOrientation.Vertical;
+            rangeSlider.ShowLabels = true;
+            rangeSlider.ShowTicks = true;
+            rangeSlider.Interval = 20;
+            rangeSlider.MinorTicksPerInterval = 1;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![RangeSlider orientation](images/getting-started/orientation.png)
+
 ## Inverse the slider
 
 You can invert the range slider using the `IsInversed` property. The default value of the `IsInversed` property is `False`.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfRangeSlider Minimum="0" 
+                       Maximum="100" 
+                       RangeStart="20"
+                       RangeEnd="60"
+                       IsInversed="True" 
+                       ShowLabels="True"
+                       ShowTicks="True" 
+                       Interval="20" 
+                       MinorTicksPerInterval="1">
+ </sliders:SfRangeSlider>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfRangeSlider rangeSlider = new SfRangeSlider();
+			rangeSlider.Minimum = 0;
+            rangeSlider.Maximum = 100;
+            rangeSlider.RangeStart = 20;
+            rangeSlider.RangeEnd = 80;
+            rangeSlider.IsInversed = true;
+            rangeSlider.ShowLabels = true;
+            rangeSlider.ShowTicks = true;
+            rangeSlider.Interval = 20;
+            rangeSlider.MinorTicksPerInterval = 1;
+
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Inverse rangeslider](images/getting-started/slider-inverse.png)
 
 ## Add prefix/suffix to labels
 
 You can add prefix or suffix to the labels using the `NumberFormat` or `DateFormat` properties.
 
 N> The format type (numeric or date) of the range slider is determined based on the values specified in `Minimum`, `Maximum` properties.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfRangeSlider Minimum="0" 
+                       Maximum="100" 
+                       RangeStart="20" 
+                       RangeEnd="80"
+                       NumberFormat="$##" 
+                       ShowLabels="True" 
+                       ShowTicks="True" 
+                       Interval="20" 
+                       MinorTicksPerInterval="1">
+ </sliders:SfRangeSlider>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfRangeSlider rangeSlider = new SfRangeSlider();
+			rangeSlider.Minimum = 0;
+            rangeSlider.Maximum = 100;
+            rangeSlider.RangeStart = 20;
+            rangeSlider.RangeEnd = 80;
+            rangeSlider.ShowLabels = true;
+            rangeSlider.ShowTicks = true;
+            rangeSlider.Interval = 20;
+            rangeSlider.NumberFormat = "$##";
+            rangeSlider.MinorTicksPerInterval = 1;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![RangeSlider label format](images/getting-started/label-format.png)
