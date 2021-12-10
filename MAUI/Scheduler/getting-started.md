@@ -426,7 +426,7 @@ this.Scheduler.SelectedCellBackground = Brush.Orange;
 
 ## Today highlight brush
 
-You can customize the today highlight brush of Scheduler by using the `TodayHighlightBrush` property in Scheduler, which will highlight the today's circle and text in Scheduler view header and month cell.
+You can customize the today highlight brush of Scheduler by using the `TodayHighlightBrush` property in the `SfScheduler,` which will highlight the today's circle and text in Scheduler view header and month cell.
 
 {% tabs %}  
 {% highlight xaml %}
@@ -477,7 +477,7 @@ this.Scheduler.BackgroundColor = Colors.LightBlue;
 
 ## Show navigation arrow
 
-By Using the `ShowNavigationArrows` property of the SfScheduler, you can navigate to the previous or next views of the Scheduler. By default, the value `ShowNavigationArrows` is `true.`
+By Using the `ShowNavigationArrows` property of the `SfScheduler,` you can navigate to the previous or next views of the Scheduler. By default, the value `ShowNavigationArrows` is `true.`
 
 {% tabs %}  
 {% highlight xaml %}
@@ -494,7 +494,7 @@ this.Scheduler.ShowNavigationArrows = false;
 
 ## Show week number
 
-Display the week number of the year in all Scheduler views  of the SfScheduler by setting the `ShowWeekNumber` property as `true` and by default it is `false.` The Week numbers will be displayed based on the ISO standard.
+Display the week number of the year in all Scheduler views of the `SfScheduler` by setting the `ShowWeekNumber` property as `true` and by default it is `false.` The Week numbers will be displayed based on the ISO standard.
 
 {% tabs %}  
 {% highlight xaml %}
@@ -513,7 +513,7 @@ N> This property will not be applicable for the `SchedulerView` is `Timeline Mon
 
 ## Week number appearance
 
-You can customize the Week number text style of the Scheduler by using the `WeekNumberStyle` propertyand it allows you to customize the textStyle and the background color in the Week number of the `SfScheduler.`
+You can customize the Week number text style of the Scheduler by using the `WeekNumberStyle` property and it allows you to customize the `textStyle` and the `background` color in the Week number of the `SfScheduler.`
 
 {% tabs %}
 {% highlight c# %}  
