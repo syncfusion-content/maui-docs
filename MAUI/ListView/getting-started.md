@@ -9,12 +9,12 @@ documentation: ug
 
 # Getting Started with .NET Maui ListView (SfListView)
 
-This section provides a quick overview for getting started with the .NET Maui ListView (SfListView) for Maui. Walk through the entire process of creating the real world SfListView.
+This section provides a quick overview of how to get started with the .NET Maui ListView (SfListView) for Maui. Walk-through the entire process of creating the real world SfListView.
 
 ## Creating an application using the .NET MAUI ListView
 
 1. Create a new .NET MAUI application in Visual Studio.
-2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfListView to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.ListView and then install it.
+2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfListView to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.ListView and then install it.
 3. Import the control namespace `Syncfusion.Maui.ListView` in XAML or C# code.
 
 {% tabs %}
@@ -54,7 +54,7 @@ this.Content = SfListView;
 
 ## Register the handler
 
-To use this control inside an application must initialize the SfListView handler. 
+To use this control inside an application, you must initialize the SfListView handler.
 
 {% tabs %}
 {% highlight c# %}
@@ -93,7 +93,7 @@ namespace GettingStarted
 
 Create a data model to bind it to the control. 
 
-Create a simple data source as shown in the following code example in a new class file, and save it as BookInfo.cs file: 
+Create a simple data source in a new class file as shown in the following code example, and save it as BookInfo.cs file. 
 
 {% tabs %}
 {% highlight c# %}
@@ -160,13 +160,13 @@ public class BookInfoRepository
         bookInfo = new ObservableCollection<BookInfo>();
         bookInfo.Add(new BookInfo() { BookName = "Object-Oriented Programming in C#", BookDescription = "Object-oriented programming is a programming paradigm based on the concept of objects" });
         bookInfo.Add(new BookInfo() { BookName = "C# Code Contracts", BookDescription = "Code Contracts provide a way to convey code assumptions" });
-        bookInfo.Add(new BookInfo() { BookName = "Machine Learning Using C#", BookDescription = "You’ll learn several different approaches to applying machine learning" });
+        bookInfo.Add(new BookInfo() { BookName = "Machine Learning Using C#", BookDescription = "You will learn several different approaches to applying machine learning" });
         bookInfo.Add(new BookInfo() { BookName = "Neural Networks Using C#", BookDescription = "Neural networks are an exciting field of software development" });
         bookInfo.Add(new BookInfo() { BookName = "Visual Studio Code", BookDescription = "It is a powerful tool for editing code and serves for end-to-end programming" });
-        bookInfo.Add(new BookInfo() { BookName = "Android Programming", BookDescription = "It is provides a useful overview of the Android application life cycle" });
+        bookInfo.Add(new BookInfo() { BookName = "Android Programming", BookDescription = "It provides a useful overview of the Android application life cycle" });
         bookInfo.Add(new BookInfo() { BookName = "iOS Succinctly", BookDescription = "It is for developers looking to step into frightening world of iPhone" });
         bookInfo.Add(new BookInfo() { BookName = "Visual Studio 2015", BookDescription = "The new version of the widely-used integrated development environment" });
-        bookInfo.Add(new BookInfo() { BookName = "Xamarin.Forms", BookDescription = "Its creates mappings from its C# classes and controls directly" });
+        bookInfo.Add(new BookInfo() { BookName = "Xamarin.Forms", BookDescription = "It creates mappings from its C# classes and controls directly" });
         bookInfo.Add(new BookInfo() { BookName = "Windows Store Apps", BookDescription = "Windows Store apps present a radical shift in Windows development" });
     }
 }
@@ -176,9 +176,9 @@ public class BookInfoRepository
 
 ## Binding data to the listview
 
-To bind the data source of the SfListView, set the `SfListView.ItemsSource` property as shown as follows. You can bind the data source of the SfListView either from XAML or in code. 
+To bind the data source of the SfListView, set the `SfListView.ItemsSource` property as follows. You can bind the data source of the SfListView either from XAML or code.
 
-The following code example binds the collection created in previous step to the `SfListView.ItemsSource` property:
+The following code example binds the previously created collection to the `SfListView.ItemsSource` property:
 
 {% tabs %}
 {% highlight xaml %}
@@ -262,7 +262,7 @@ namespace GettingStarted
 
 ## Layouts
 
-SfListView supports different layouts such as linear layout and grid layout. The linear layout arranges the items in a single column, whereas the grid layout arranges the items in a predefined number of columns defined by the `SpanCount` property of `GridLayout`. 
+SfListView supports different layouts such as linear and grid layouts. The linear layout arranges the items in a single column, whereas the grid layout arranges the items in a predefined number of columns defined by the `SpanCount` property of `GridLayout`. 
 
 The `SfListView.ItemsLayout` property is used to define the layout of the SfListView. `LinearLayout` is default layout of this control.
 
@@ -285,7 +285,7 @@ listView.ItemsLayout = new GridLayout() { SpanCount = 3 };
 
 ## DataSource
 
-The `DataSource` gets the raw data and processes data operations such as sorting, filtering, and grouping in SfListView. The data source of the ListView is set by using the `ItemsSource` attribute.
+The `DataSource` gets raw data and performs data operations such as sorting, filtering, and grouping in SfListView. The data source of the ListView is set by using the `ItemsSource` attribute.
 
 {% tabs %}
 {% highlight xaml %}
@@ -311,15 +311,15 @@ The `DataSource` gets the raw data and processes data operations such as sorting
 
 ## Sorting
 
-The SfListView allows sorting on its data by using the `SfListView.DataSource.SortDescriptors` property. Create `SortDescriptor` for the property to be sorted, and add it into the `DataSource.SortDescriptors` collection.
+The SfListView allows you to sort its data by using the `SfListView.DataSource.SortDescriptors` property. Create a `SortDescriptor` for the property to be sorted, and add it to the `DataSource.SortDescriptors` collection.
 
-Refresh the view by calling `SfListView.RefreshView` method. 
+Refresh the view by calling the `SfListView.RefreshView` method.
 
 SortDescriptor object holds the following three properties:
 
- * `PropertyName`: Describes name of the sorted property.
- * `Direction`: Describes an object of type `ListSortDirection` defines the sorting direction.
- * `Comparer`: Describes a comparer to be applied when sorting takes place.
+ * `PropertyName`: Describes the name of the sorted property.
+ * `Direction`: Describes an object of type `ListSortDirection` that defines the sorting direction.
+ * `Comparer`: Describes a comparer that will be applied when sorting.
  
 {% tabs %}
 {% highlight xaml %}
@@ -353,7 +353,7 @@ SortDescriptor object holds the following three properties:
 
 ## Filtering
 
-The SfListView supports to filter the records in view by setting predicate to the `SfListView.DataSource.Filter` property. Call the `DataSource.RefreshFilter` method after assigning the Filter property for refreshing the view.
+The SfListView supports you to filter the records in view by setting predicate to the `SfListView.DataSource.Filter` property. Call the `DataSource.RefreshFilter` method after assigning the `Filter` property for refreshing the view.
 
 To filter the items based on the Title property of the underlying data by using `FilterContacts` method, follow the code example:
  
@@ -412,15 +412,15 @@ private bool FilterContacts(object obj)
 
 ## Grouping
 
-The SfListView allows displaying the items in a group using the `SfListView.DataSource.GroupDescriptors` property. Create `GroupDescriptor` for the property to be grouped, and add it in the `DataSource.GroupDescriptors` collection. 
+By using the `SfListView.DataSource.GroupDescriptors` property, the SfListView can display the items in a group. Create `GroupDescriptor` for the property to be grouped, and add it to the `DataSource.GroupDescriptors` collection.
 
 `GroupDescriptor` object holds the following properties:
 
- * `PropertyName`: Describes name of the property to be grouped.
+ * `PropertyName`: Describes the name of the property to be grouped.
  * `KeySelector`: Describes selector to return the group key.
- * `Comparer`: Describes comparer to be applied when sorting takes place.
+ * `Comparer`: Describes the comparer that will be applied when sorting.
 
-It also supports to stick the group header by enabling the `SfListView.IsStickyGroupHeader` property.
+It also supports you to stick the group header by enabling the `SfListView.IsStickyGroupHeader` property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -447,11 +447,11 @@ It also supports to stick the group header by enabling the `SfListView.IsStickyG
 
 ## Selection
 
-The SfListView allows selecting the item by setting the `SfListView.SelectionMode` property. Set the `SfListView.SelectionMode` property to single, multiple, and none based on the requirements. Informations about the selected item can be tracked using the `SfListView.SelectedItem` and `SfListView.SelectedItems` properties. It also allows changing the selection highlight color by using the `SfListView.SelectionBackgroundColor`.
+The SfListView allows selecting the item by setting the `SfListView.SelectionMode` property. Set the `SfListView.SelectionMode` property to single, multiple, and none based on the requirements. Information about the selected item can be tracked using the `SfListView.SelectedItem` and `SfListView.SelectedItems` properties. It also allows changing the selection highlight color by using the `SfListView.SelectionBackgroundColor`.
 
 The gesture type can be changed to select the item by setting the `SfListView.SelectionGesture` property. Set the `SfListView.SelectionGesture` property to Tap, DoubleTap, and Hold based on the requirements.
 
-The selection operations can be handled with the help of `SelectionChanging` and `SelectionChanged` events of the SfListView.
+The `SelectionChanging` and `SelectionChanged` events of the SfListView can be used to handle selection operations.
  
 {% tabs %}
 {% highlight xaml %}
@@ -473,7 +473,7 @@ listView.SelectionBackgroundColor = Colors.FromHex("#E4E4E4");
 
 The SfListView allows setting the header and footer to the user interface(UI) view by setting the DataTemplate to the `HeaderTemplate` and `FooterTemplate`.
 
-The header and footer can be handled either by scrollable, or sticky to the view by enabling or disabling the `IsStickyHeader` and `IsStickyFooter` properties.
+The header and footer can be handled as scrollable or sticky to the view by enabling or disabling the `IsStickyHeader` and `IsStickyFooter` properties.
  
 {% tabs %}
 {% highlight xaml %}
