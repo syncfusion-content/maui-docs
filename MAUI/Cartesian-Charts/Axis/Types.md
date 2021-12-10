@@ -568,3 +568,24 @@ chart.SecondaryAxis = secondaryAxis;
 {% endtabs %}
 
 ![DateTimeAxis crossing support in MAUI Chart](Axis_Images/maui_chart_datetime_axis_crossing.png)
+
+## Events
+
+### ActualRangeChanged
+
+The [`ActualRangeChanged`]() event is triggered when the actual range of the axis is changed. The argument contains the following information.
+
+* [`ActualMinimum`]() - used to get or set the actual minimum value of the axis.
+* [`ActualMaximum`]() - used to get or set the actual maximum value of the axis.
+* [`VisibleMinimum`]() - used to get or set the visible minimum value of the axis.
+* [`VisibleMaximum`]() - used to get or set the visible maximum value of the axis.
+
+N> Actual range and visible range are similar unless the range is changed by specifying the [`ZoomPosition`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_ZoomPosition) and [`ZoomFactor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_ZoomFactor) properties or zoom the chart interactively. Visible range is always the range which you see visually in the screen.
+
+### LabelCreated
+
+The [`LabelCreated`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_LabelCreated) event is triggered when the axis label is created. The argument contains the following information.
+
+* [`LabelContent`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisLabelEventArgs.html#Syncfusion_Maui_Charts_ChartAxisLabelEventArgs_LabelContent) - Used to get or set the text of axis label.
+* [`Position`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisLabelEventArgs.html#Syncfusion_Maui_Charts_ChartAxisLabelEventArgs_Position) - Used to get the position of label.
+* [`LabelStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisLabelEventArgs.html#Syncfusion_Maui_Charts_ChartAxisLabelEventArgs_LabelStyle) - Used to customize the appearance of axis labels.

@@ -140,5 +140,3 @@ chart.Series.Add(series);
 {% endhighlight %}
 
 {% endtabs %}
-
-![Smart Data label in MAUI chart]() 
