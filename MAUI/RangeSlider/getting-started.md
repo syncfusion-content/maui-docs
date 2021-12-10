@@ -118,6 +118,7 @@ namespace SliderGettingStarted
         {
             InitializeComponent();
             SfRangeSlider rangeSlider = new SfRangeSlider();
+            this.content = rangeSlider;
         }
     }
 }
@@ -126,13 +127,96 @@ namespace SliderGettingStarted
 
 {% endtabs %}
 
+![Initialize RangeSlider](images/getting-started/initialize-slider.png)
+
 ## Set date value
 
 Set the 'DateTime' values to the `Minimum`, `Maximum`, and `Value` properties to display date labels in the range slider.
 
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage>
+ <sliders:SfRangeSlider Minimum="2010-01-01" Maximum="2020-01-01" RangeStart="2012-01-01" RangeEnd="2018-01-01" ShowLabels="True">
+ </sliders:SfRangeSlider>
+ </ContentPage>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+using Syncfusion.Maui.Sliders;
+
+namespace SliderGettingStarted
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+            SfRangeSlider rangeSlider = new SfRangeSlider();
+			rangeSlider.Minimum = new DateTime(2010, 01, 01);
+			rangeSlider.Maximum = new DateTime(2020, 01, 01);
+			rangeSlider.RangeStart = new DateTime(2012, 01, 01);
+            rangeSlider.RangeEnd = new DateTime(2018, 01, 01);
+			rangeSlider.ShowLabels = true;
+			this.Content = rangeSlider;
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Slider date labels](images/getting-started/date-time-labels.png)
+
 ## Enable ticks
 
 The `ShowTicks` property enables ticks in the range slider, while the `MinorTicksPerInterval` property enables minor ticks between the major ticks.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage>
+  <sliders:SfRangeSlider Minimum="2010-01-01" Maximum="2020-01-01" RangeStart="2012-01-01" RangeEnd="2018-01-01" ShowLabels="True" ShowTicks="True" Interval="2" MinorTicksPerInterval="1">
+ </sliders:SfRangeSlider>
+ </ContentPage>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+using Syncfusion.Maui.Sliders;
+
+namespace SliderGettingStarted
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+          SfRangeSlider rangeSlider = new SfRangeSlider();
+			rangeSlider.Minimum = new DateTime(2010, 01, 01);
+			rangeSlider.Maximum = new DateTime(2020, 01, 01);
+			rangeSlider.RangeStart = new DateTime(2012, 01, 01);
+            rangeSlider.RangeEnd = new DateTime(2018, 01, 01);
+			rangeSlider.ShowLabels = true;
+            rangeSlider.ShowTicks = true;
+			rangeSlider.Interval = 2;
+			rangeSlider.MinorTicksPerInterval = 1;
+			this.Content = rangeSlider;
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Slider ticks](images/getting-started/ticks.png)
 
 ## Orientation
 
