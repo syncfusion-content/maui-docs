@@ -387,3 +387,153 @@ this.Scheduler.AppointmentsSource = viewModel.Events;
 
 {% endhighlight %}
 {% endtabs %}
+
+## Change first day of week
+
+The Scheduler provides an option to customize the first day of the week by using the `FirstDayOfWeek` property. By default, The Scheduler will be rendered with `Sunday` as the first day of the week.
+
+The following code shows the Scheduler with `Tuesday` as the first day of the week.
+
+{% tabs %}  
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" FirstDayOfWeek="Tuesday"/>
+
+{% endhighlight %}
+{% highlight c# %}
+
+this.Scheduler.FirstDayOfWeek = DayOfWeek.Tuesday;
+
+{% endhighlight %}  
+{% endtabs %}  
+
+## Cell selection background
+
+You can customize the selection view of Scheduler by using the `SelectedCellBackground` property in the `SfScheduler.`
+
+{% tabs %}  
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" SelectedCellBackground="Orange"/>
+
+{% endhighlight %}
+{% highlight c# %}
+
+this.Scheduler.SelectedCellBackground = Brush.Orange;
+
+{% endhighlight %}  
+{% endtabs %}  
+
+## Today highlight brush
+
+You can customize the today highlight brush of Scheduler by using the `TodayHighlightBrush` property in Scheduler, which will highlight the today's circle and text in Scheduler view header and month cell.
+
+{% tabs %}  
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" TodayHighlightBrush="Orange"/>
+
+{% endhighlight %}
+{% highlight c# %}
+
+this.Scheduler.TodayHighlightBrush = Brush.Orange;
+
+{% endhighlight %}  
+{% endtabs %} 
+
+## Cell border brush
+
+You can customize the vertical and horizontal line color of Scheduler by using the `CellBorderBrush` property in the `SfScheduler.`
+
+{% tabs %}  
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" CellBorderBrush="Orange"/>
+
+{% endhighlight %}
+{% highlight c# %}
+
+this.Scheduler.CellBorderBrush = Brush.Orange;
+
+{% endhighlight %}  
+{% endtabs %} 
+
+## Background color
+
+The Scheduler background color can be customized by using the `BackgroundColor` property in the `SfScheduler.`
+
+{% tabs %}  
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" BackgroundColor="LightBlue"/>
+
+{% endhighlight %}
+{% highlight c# %}
+
+this.Scheduler.BackgroundColor = Colors.LightBlue;
+
+{% endhighlight %}  
+{% endtabs %}
+
+## Show navigation arrow
+
+By Using the `ShowNavigationArrows` property of the SfScheduler, you can navigate to the previous or next views of the Scheduler. By default, the value `ShowNavigationArrows` is `true.`
+
+{% tabs %}  
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" ShowNavigationArrows="False"/>
+
+{% endhighlight %}
+{% highlight c# %}
+
+this.Scheduler.ShowNavigationArrows = false;
+
+{% endhighlight %}  
+{% endtabs %}
+
+## Show week number
+
+Display the week number of the year in all Scheduler views  of the SfScheduler by setting the `ShowWeekNumber` property as `true` and by default it is `false.` The Week numbers will be displayed based on the ISO standard.
+
+{% tabs %}  
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" ShowWeekNumber="True"/>
+
+{% endhighlight %}
+{% highlight c# %}
+
+this.Scheduler.ShowWeekNumber = true;
+
+{% endhighlight %}  
+{% endtabs %}
+
+N> This property will not be applicable for the `SchedulerView` is `Timeline Month.`
+
+## Week number appearance
+
+You can customize the Week number text style of the Scheduler by using the `WeekNumberStyle` propertyand it allows you to customize the textStyle and the background color in the Week number of the `SfScheduler.`
+
+{% tabs %}
+{% highlight c# %}  
+
+this.Scheduler.ShowWeekNumber = true;
+var schedulerTextStyle = new SchedulerTextStyle()
+{
+    TextColor = Colors.Red,
+    FontSize = 14
+};
+
+var schedulerWeekNumberStyle = new SchedulerWeekNumberStyle()
+{
+    Background = Brush.LightGreen,
+    TextStyle = schedulerTextStyle
+};
+
+this.Scheduler.WeekNumberStyle = schedulerWeekNumberStyle;
+
+{% endhighlight %}
+{% endtabs %}
+
+N> It is not applicable for the `SchedulerView` is `Timeline Month.` and it is applied only to when the `ShowWeekNumber` property is `enabled.`
