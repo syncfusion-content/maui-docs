@@ -492,6 +492,49 @@ this.Scheduler.ShowNavigationArrows = false;
 {% endhighlight %}  
 {% endtabs %}
 
+## SelectableDayPredicate(Blackout dates)
+
+The `SelectableDayPredicate` functions allows certain days for selection. Only the days that `SelectableDayPredicate` returns true will be selectable in the Scheduler.
+
+{% tabs %}
+{% highlight c# %}
+
+this.Scheduler.View = SchedulerView.TimelineWeek;
+this.Scheduler.SelectableDayPredicate = (date) =>
+{
+    if (date.DayOfWeek == DayOfWeek.Sunday || date.DayOfWeek == DayOfWeek.Saturday)
+    {
+        return false;
+    }
+
+    return true;
+};
+
+{% endhighlight %}
+{% endtabs %}
+
+### SelectableDayPredicate appearance
+
+You can customize the background color and text style for the selectable day predicate, by setting the `Background,` and `DisabledDateTextStyle` properties of `SfScheduler.`
+
+{% tabs %}
+{% highlight c# %}
+
+var disabledDateTextStyle = new SchedulerTextStyle()
+{
+    TextColor = Colors.Red,
+    FontSize = 12,
+};
+
+this.Scheduler.DisabledDateTextStyle = disabledDateTextStyle;
+this.Scheduler.DisabledDateBackground = Brush.Blue;
+
+{% endhighlight %}
+{% endtabs %}
+
+N>
+The `DisabledDateBackground` property is not applicable for month cells and view header cells.
+
 ## Show week number
 
 Display the week number of the year in all Scheduler views of the `SfScheduler` by setting the `ShowWeekNumber` property as `true` and by default it is `false.` The Week numbers will be displayed based on the ISO standard.

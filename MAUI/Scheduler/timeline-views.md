@@ -1,110 +1,113 @@
 ---
 layout: post
-title: Day and Week views in .NET MAUI Scheduler control | Syncfusion
-description: Learn here all about to customize the Day, Week and Workweek views settings and its appearance in Syncfusion .NET MAUI Scheduler (SfScheduler) control and more.
+title: Timeline Views in .NET MAUI Scheduler control | Syncfusion
+description: Learn here all about to customize the timeline day, timeline week, timeline workweek, timeline month views settings in Syncfusion .NET MAUI Scheduler (SfScheduler) control and more.
 platform: maui
 control: SfScheduler
 documentation: ug
 ---
 
-# Day and Week views in .NET MAUI Event Scheduler (SfScheduler)
+# Timeline Views in .NET MAUI Scheduler (SfScheduler)
 
-The `.NET MAUI Scheduler` provides the ability to display the day, week, workweek views, and the current day will be visible by default. The appointments on a specific day will be arranged in the respective timeslots based on their duration.
+The TimelineView displays the date inside the horizontal time axis with the desired count of each day. See the past or future dates by scrolling to the right or left. The appointments on a specific day will be arranged in the respective timeslots based on their duration.
 
-* **Day view:**: It displays a single day of the Scheduler.
+* **Timeline day view**: It displays a single day in the horizontal time axis of the Scheduler.
 
-* **Week view**: It displays all days of a week.
+* **Timeline week view**: It displays all days of a week in horizontal time axis. You can see the past or future dates by scrolling to right or left.
 
-* **Work week view**: It displays only the working days of a week. By default, Saturday and Sunday are not working days. You can customize it with any day of the week.
+* **Timeline work week view**: It displays only the working days of a week in horizontal axis. By default, Saturday and Sunday are not working days. You can customize it with any day of the week.
+
+* **Timeline month**: A horizontal axis displaying appointments across all days of a month is displayed, where each column represents a single day.
 
 ## Change time interval
 
-You can customize the time interval between the time slots in the day, week and workweek views by using the `TimeInterval` property of `DaysViewSettings.`
+You can customize the time interval between the time slots in the timeline day, timeline week, and timeline workweek views by using the `TimeInterval` property of `TimelineViewSettings.`
 
 {% tabs %}
 {% highlight c# %}
 
-this.Scheduler.DaysViewSettings.TimeInterval = new TimeSpan(2, 0, 0);
+this.Scheduler.View = SchedulerView.TimelineWeek;
+this.Scheduler.TimelineViewSettings.TimeInterval = new TimeSpan(2, 0, 0);
 
 {% endhighlight %}
 {% endtabs %}
 
 N> To modify the `TimeInterval` value (in minutes), change the time labels format by setting the `TimeRulerFormat` value to hh:mm.
 
-## Change time interval height
+## Change time interval width
 
-The Time interval height can be customized for each time slot cell of the day, week, and workweek view by using the `TimeIntervalHeight` property of `DaysViewSettings.`
+The Time interval width can be customized for each time slot cell of the timeline day, timeline week, timeline workweek, and timeline month views by using the `TimeIntervalWidth` property of `TimelineViewSettings.`
 
 {% tabs %}
 {% highlight xaml %}
 
 <scheduler:SfScheduler x:Name="Scheduler" 
-                       View="Week">
-    <scheduler:SfScheduler.DaysViewSettings>
-        <scheduler:SchedulerDaysViewSettings       
-                       TimeIntervalHeight="120"/>
-    </scheduler:SfScheduler.DaysViewSettings>
+                       View="TimelineWeek">
+    <scheduler:SfScheduler.TimelineViewSettings>
+        <scheduler:SchedulerTimelineViewSettings 
+                       TimeIntervalWidth="120" />
+    </scheduler:SfScheduler.TimelineViewSettings>
 </scheduler:SfScheduler>
 
 {% endhighlight %}
 {% highlight c# %}
 
-this.Scheduler.View = SchedulerView.Week;
-this.Scheduler.DaysViewSettings.TimeIntervalHeight = 120;
+this.Scheduler.View = SchedulerView.TimelineWeek;
+this.Scheduler.TimelineViewSettings.TimeIntervalWidth = 120;
 
 {% endhighlight %}
 {% endtabs %}
 
-## Flexible working days and working hours
+## Flexible working days
 
 By default, the `.NET MAUI Scheduler`, weekdays from Monday through Friday are considered working days. The days which are defined in this non-working days collection are considered as `non-working days.` Therefore, when the weekend days are set to hide from Scheduler.
 
-The `NonWorkingDays` property of `DaysViewSettings` can also be used to show only the nonworking days of the week.
+The `NonWorkingDays` property of `TimelineViewSettings` can also be used to show only the nonworking days of the week.
 
 {% tabs %}
 {% highlight xaml %}
 
 <scheduler:SfScheduler x:Name="Scheduler" 
-                       View="WorkWeek">
-    <scheduler:SfScheduler.DaysViewSettings>
-        <scheduler:SchedulerDaysViewSettings       
+                       View="TimelineWorkWeek">
+    <scheduler:SfScheduler.TimelineViewSettings>
+        <scheduler:SchedulerTimelineViewSettings 
                        NonWorkingDays="Monday,Wednesday" />
-    </scheduler:SfScheduler.DaysViewSettings>
+    </scheduler:SfScheduler.TimelineViewSettings>
 </scheduler:SfScheduler>
 
 {% endhighlight %}
 {% highlight c# %}
 
-this.Scheduler.View = SchedulerView.WorkWeek;
-this.Scheduler.DaysViewSettings.NonWorkingDays = SchedulerWeekDays.Monday | SchedulerWeekDays.Wednesday;
+this.Scheduler.View = SchedulerView.TimelineWorkWeek;
+this.Scheduler.TimelineViewSettings.NonWorkingDays = SchedulerWeekDays.Monday | SchedulerWeekDays.Wednesday;
 
 {% endhighlight %}
 {% endtabs %}
 
-N> The `workweek` view displays exactly the defined working days on Scheduler control, whereas other views displays all the days.
+N> The `Timeline workweek` view displays exactly the defined working days on Scheduler control, whereas other views displays all the days.
 
 ## Flexible working hours
 
-The default values for `StartHour` and `EndHour` are `0` and `24` respectively, to show all time slots for a day, week, or workweek view. You may set these properties to show only the required time periods in `DaysViewSettings.` You can set `StartHour` and `EndHour` in time duration to show the required time duration in minutes.
+The default values for `StartHour` and `EndHour` are `0` and `24` respectively, to show all time slots for a timeline day, timeline week, or timeline workweek view. You may set these properties to show only the required time periods in `TimelineViewSettings.` You can set `StartHour` and `EndHour` in time duration to show the required time duration in minutes.
 
 {% tabs %}
 {% highlight xaml %}
 
 <scheduler:SfScheduler x:Name="Scheduler" 
-                       View="Week">
-    <scheduler:SfScheduler.DaysViewSettings>
-        <scheduler:SchedulerDaysViewSettings       
+                       View="TimelineWeek">
+    <scheduler:SfScheduler.TimelineViewSettings>
+        <scheduler:SchedulerTimelineViewSettings 
                        StartHour="9"
                        EndHour="16" />
-    </scheduler:SfScheduler.DaysViewSettings>
+    </scheduler:SfScheduler.TimelineViewSettings>
 </scheduler:SfScheduler>
 
 {% endhighlight %}
 {% highlight c# %}
 
-this.Scheduler.View = SchedulerView.Week;
-this.Scheduler.DaysViewSettings.StartHour = 9;
-this.Scheduler.DaysViewSettings.EndHour = 16;
+this.Scheduler.View = SchedulerView.TimelineWeek;
+this.Scheduler.TimelineViewSettings.StartHour = 9;
+this.Scheduler.TimelineViewSettings.EndHour = 16;
 
 {% endhighlight %}
 {% endtabs %}
@@ -119,7 +122,7 @@ N>
 
 ## Special time regions
 
-You can restrict the user interaction such as selection and highlights specific regions of time day, week, and workweek views by adding the `TimeRegions` property of the `SfScheduler.` You need to set the `StartTime` and `EndTime` properties of `TimeRegions` to create a specialTimeRegion, you can use the `TimeZone` property to set the specific timezone for start and end time of `TimeRegions`. 
+You can restrict the user interaction such as selection and highlights specific regions of timeline day, timeline week, and timeline workweek views by adding the `TimeRegions` property of the `SfScheduler.` You need to set the `StartTime` and `EndTime` properties of `TimeRegions` to create a specialTimeRegion, you can use the `TimeZone` property to set the specific timezone for start and end time of `TimeRegions`. 
 
 N> If time region has both the text and icon then it will draw icon only.
 
@@ -130,8 +133,8 @@ You can enable or disable the touch interaction of TimeRegion using the `EnableP
 {% tabs %}
 {% highlight c# %}
 
-this.Scheduler.View = SchedulerView.Week;
-this.Scheduler.DaysViewSettings.TimeRegions = this.GetTimeRegion();
+this.Scheduler.View = SchedulerView.TimelineWeek;
+this.Scheduler.TimelineViewSettings.TimeRegions = this.GetTimeRegion();
 
 private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 {
@@ -164,8 +167,8 @@ The recurring time region on a daily, weekly, monthly, or yearly interval. The r
 {% tabs %}
 {% highlight c# %}
 
-this.Scheduler.View = SchedulerView.Week;
-this.Scheduler.DaysViewSettings.TimeRegions = this.GetTimeRegion();
+this.Scheduler.View = SchedulerView.TimelineWeek;
+this.Scheduler.TimelineViewSettings.TimeRegions = this.GetTimeRegion();
 
 private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 {
@@ -193,8 +196,8 @@ You can delete any of occurrence that is an exception from the recurrence patter
 {% tabs %}
 {% highlight c# %}
 
-this.Scheduler.View = SchedulerView.Week;
-this.Scheduler.DaysViewSettings.TimeRegions = this.GetTimeRegion();
+this.Scheduler.View = SchedulerView.TimelineWeek;
+this.Scheduler.TimelineViewSettings.TimeRegions = this.GetTimeRegion();
 
 private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 {
@@ -227,8 +230,8 @@ The specialTimeRegion background and text style can be customized by using the `
 {% tabs %}
 {% highlight c# %}
 
-this.Scheduler.View = SchedulerView.Week;
-this.Scheduler.DaysViewSettings.TimeRegions = this.GetTimeRegion();
+this.Scheduler.View = SchedulerView.TimelineWeek;
+this.Scheduler.TimelineViewSettings.TimeRegions = this.GetTimeRegion();
 
 private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 {
@@ -256,134 +259,135 @@ private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 {% endhighlight %}
 {% endtabs %}
 
-
 ## Full screen scheduler
 
-The .NET MAUI time interval height can be adjusted based on screen height by changing the value of `TimeIntervalHeight` property to `-1.` It will auto-fit to the screen height and width.
+The .NET MAUI time interval height can be adjusted based on screen height by changing the value of `TimeIntervalWidth` property to `-1.` It will auto-fit to the screen height and width.
 
 {% tabs %}
 {% highlight xaml %}
 
 <scheduler:SfScheduler x:Name="Scheduler" 
-                       View="Week">
-    <scheduler:SfScheduler.DaysViewSettings>
-        <scheduler:SchedulerDaysViewSettings 
-                       TimeIntervalHeight="-1"/>
-    </scheduler:SfScheduler.DaysViewSettings>
+                       View="TimelineWeek">
+    <scheduler:SfScheduler.TimelineViewSettings>
+        <scheduler:SchedulerTimelineViewSettings 
+                       TimeIntervalWidth="-1" />
+    </scheduler:SfScheduler.TimelineViewSettings>
 </scheduler:SfScheduler>
+
 
 {% endhighlight %}
 {% highlight c# %}
 
-this.Scheduler.View = SchedulerView.Week;
-this.Scheduler.DaysViewSettings.TimeIntervalHeight = -1;
+this.Scheduler.View = SchedulerView.TimelineWeek;
+this.Scheduler.TimelineViewSettings.TimeIntervalWidth = -1;
 
 {% endhighlight %}
 {% endtabs %}
+       
 
-## Change time ruler width
+## Change time ruler height
 
-The `TimeRulerWidth` property of `DaysViewSettings` can be used to customize the size of the time ruler view where the labels with the time are placed.
+The `TimeRulerHeight` property of `TimelineViewSettings` can be used to customize the size of the time ruler view where the labels with the time are placed.
 
 {% tabs %}
 {% highlight xaml %}
 
 <scheduler:SfScheduler x:Name="Scheduler" 
-                       View="Week">
-    <scheduler:SfScheduler.DaysViewSettings>
-        <scheduler:SchedulerDaysViewSettings 
-                       TimeRulerWidth = "120"/>
-    </scheduler:SfScheduler.DaysViewSettings>
+                       View="TimelineWeek">
+    <scheduler:SfScheduler.TimelineViewSettings>
+        <scheduler:SchedulerTimelineViewSettings 
+                       TimeRulerHeight="100" />
+    </scheduler:SfScheduler.TimelineViewSettings>
 </scheduler:SfScheduler>
 
 {% endhighlight %}
 {% highlight c# %}
 
-this.Scheduler.View = SchedulerView.Week;
-this.Scheduler.DaysViewSettings.TimeRulerWidth = 120;
+this.Scheduler.View = SchedulerView.TimelineWeek;
+this.Scheduler.TimelineViewSettings.TimeRulerHeight = 100;
 
 {% endhighlight %}
 {% endtabs %}
 
 ## Minimum appointment duration
 
-The `MinimumAppointmentDuration` property allows you to set an arbitrary height to appointments which have a minimum duration in the day, week, and workweek views so that the subject can be readable.
+The `MinimumAppointmentDuration` property allows you to set an arbitrary height to appointments which have a minimum duration in the timeline day, timeline week, and timeline workweek views so that the subject can be readable.
 
 {% tabs %}
 {% highlight xaml %}
 
 <scheduler:SfScheduler x:Name="Scheduler" 
-                       View="Week">
-    <scheduler:SfScheduler.DaysViewSettings>
-        <scheduler:SchedulerDaysViewSettings 
+                       View="TimelineWeek">
+    <scheduler:SfScheduler.TimelineViewSettings>
+        <scheduler:SchedulerTimelineViewSettings 
                        MinimumAppointmentDuration="0:30:0" />
-    </scheduler:SfScheduler.DaysViewSettings>
+    </scheduler:SfScheduler.TimelineViewSettings>
 </scheduler:SfScheduler>
 
 {% endhighlight %}
 {% highlight c# %}
 
-this.Scheduler.View = SchedulerView.Week;
-this.Scheduler.DaysViewSettings.MinimumAppointmentDuration = new TimeSpan(0, 30, 0);
+this.Scheduler.View = SchedulerView.TimelineWeek;
+this.Scheduler.TimelineViewSettings.MinimumAppointmentDuration = new TimeSpan(0, 30, 0);
 
 {% endhighlight %}
 {% endtabs %}
 
 N>
-*  The `MinimumAppointmentDuration` value will be set when an appointment duration value is lesser than `MinimumAppointmentDuration.`
-* The appointment duration value will be set when the appointment duration value is greater than the `MinimumAppointmentDuration.`
-*  The `TimeInterval` value will be set when the `MinimumAppointmentDuration` is greater than the `TimeInterval` with lesser appointment duration.
-* the all-day Appointment does not support `MinimumAppointmentDuration.`
+* The `MinimumAppointmentDuration` value will be set when an appointment duration value is lesser than `MinimumAppointmentDuration.`
+* Appointment duration value will be set when the appointment duration value is greater than `MinimumAppointmentDuration`.
+* The `TimeInterval` value will be set when the `MinimumAppointmentDuration` is greater than `TimeInterval` with lesser appointment duration.
+* The all-day Appointment does not support `MinimumAppointmentDuration.`
 
 ## View header text formatting
 
-You can customize the date and day format of SfScheduler ViewHeader by using the `DateFormat` and `DayFormat` properties of `DayViewSettings.`
+You can customize the date and day format of `SfScheduler` ViewHeader by using the `DateFormat` and `DayFormat` properties of `DayViewSettings.`
 
 {% tabs %}
 {% highlight c# %}
 
-this.Scheduler.View = SchedulerView.Week;
-this.Scheduler.DaysViewSettings.ViewHeaderSettings.DayFormat = "dddd";
-this.Scheduler.DaysViewSettings.ViewHeaderSettings.DateFormat = "dd";
+this.Scheduler.View = SchedulerView.TimelineWeek;
+this.Scheduler.TimelineViewSettings.ViewHeaderSettings.DayFormat = "dddd";
+this.Scheduler.TimelineViewSettings.ViewHeaderSettings.DateFormat = "MMMM dd";
 
 {% endhighlight %}
 {% endtabs %}
 
 ## View header text appearance
 
-You can customize the background color and text style for the labels mentioning the time, by setting the `Background,` `DateTextStyle,` and `DayTextStyle` properties of `DayViewSettings` in the Scheduler.
+You can customize the background color and text style for the labels mentioning the time, by setting the `Background,` `DateTextStyle,` and `DayTextStyle` properties of `TimelineViewSettings` in the Scheduler.
 
 {% tabs %}
 {% highlight c# %}
 
-this.Scheduler.View = SchedulerView.Week;
+this.Scheduler.View = SchedulerView.TimelineWeek;
 var dateTextStyle = new SchedulerTextStyle()
 {
     TextColor = Colors.Red,
     FontSize = 12,
 };
 
-this.Scheduler.DaysViewSettings.ViewHeaderSettings.DateTextStyle = dateTextStyle;
+this.Scheduler.TimelineViewSettings.ViewHeaderSettings.DateTextStyle = dateTextStyle;
 var dayTextStyle = new SchedulerTextStyle()
 {
     TextColor = Colors.Red,
     FontSize = 12,
 };
 
-this.Scheduler.DaysViewSettings.ViewHeaderSettings.DayTextStyle = dayTextStyle;
+this.Scheduler.TimelineViewSettings.ViewHeaderSettings.DayTextStyle = dayTextStyle;
 
 {% endhighlight %}
 {% endtabs %}
 
 ## Time text formatting
 
-You can Customize the format for the labels mentioning the time by setting the `TimeFormat` property of `DayViewSettings` in the Scheduler.
+You can customize the format for the labels mentioning the time by setting the `TimeFormat` property of `TimelineViewSettings` in the Scheduler.
 
 {% tabs %}
 {% highlight c# %}
 
-this.Scheduler.View = SchedulerView.Week;
-this.Scheduler.DaysViewSettings.TimeFormat = "hh:mm";
+this.Scheduler.View = SchedulerView.TimelineWeek;
+this.Scheduler.TimelineViewSettings.TimeFormat = "hh:mm";
 
 {% endhighlight %}
 {% endtabs %}
@@ -393,19 +397,19 @@ N>
 
 ## Time text appearance
 
-You can customize the background and text style for the labels mentioning the time, by setting the `Background,` and `TimeRulerTextStyle` property of `DayViewSettings` in the Scheduler.
+You can customize the background and text style for the labels mentioning the time, by setting the `Background,` and `TimeRulerTextStyle` properties of `TimelineViewSettings` in the Scheduler.
 
 {% tabs %}
 {% highlight c# %}
 
-this.Scheduler.View = SchedulerView.Week;
+this.Scheduler.View = SchedulerView.TimelineWeek;
 var timeRulerTextStyle = new SchedulerTextStyle()
 {
     TextColor = Colors.Red,
     FontSize = 12,
 };
 
-this.Scheduler.DaysViewSettings.TimeRulerTextStyle = timeRulerTextStyle;
+this.Scheduler.TimelineViewSettings.TimeRulerTextStyle = timeRulerTextStyle;
 
 {% endhighlight %}
 {% endtabs %}
