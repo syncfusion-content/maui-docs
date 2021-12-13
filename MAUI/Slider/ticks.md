@@ -251,6 +251,8 @@ namespace SliderGettingStarted
             slider.MinorTicksPerInterval = 1;
             slider.MinorTickStyle.ActiveSize = new Size(2, 10);
             slider.MinorTickStyle.InactiveSize = new Size(2, 10);
+            slider.MajorTickStyle.ActiveSize = new Size(2, 10);
+            slider.MajorTickStyle.InactiveSize = new Size(2, 10);
             this.Content = slider;
         }
     }
