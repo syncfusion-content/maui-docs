@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Timeline Views in .NET MAUI Scheduler control | Syncfusion
-description: Learn here all about to customize the timeline day, timeline week, timeline workweek, timeline month views settings in Syncfusion .NET MAUI Scheduler (SfScheduler) control and more.
+description: Learn here all about to customize the timeline views settings in Syncfusion .NET MAUI Scheduler (SfScheduler) control and more.
 platform: maui
 control: SfScheduler
 documentation: ug
