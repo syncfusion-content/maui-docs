@@ -54,7 +54,7 @@ You can change the active and inactive track height of the range slider using th
    <sliders:SfRangeSlider>
      <sliders:SfRangeSlider.TrackStyle>
         <sliders:SliderTrackStyle ActiveSize="10" InactiveSize="8" />
-    </sliders:SfRangeSlider.TrackStyle>
+     </sliders:SfRangeSlider.TrackStyle>
    </sliders:SfRangeSlider>
 
 {% endhighlight %}

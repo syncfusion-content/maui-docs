@@ -50,7 +50,7 @@ You can change the color of the thumb in the range slider using the `Color` prop
 {% highlight xaml %}
 
   <sliders:SfRangeSlider >
-       <sliders:SfRangeSlider.ThumbStyle>
+      <sliders:SfRangeSlider.ThumbStyle>
          <sliders:SliderThumbStyle Color="#EE3F3F" />
       </sliders:SfRangeSlider.ThumbStyle>
   </sliders:SfRangeSlider>
@@ -105,9 +105,9 @@ You can change the thumb stroke color while two thumbs are overlapping in the ra
 {% highlight xaml %}
 
   <sliders:SfRangeSlider >
-       <sliders:SfRangeSlider.ThumbStyle>
-                <sliders:SliderThumbStyle OverlapStrokeColor="#EE3F3F" />
-            </sliders:SfRangeSlider.ThumbStyle>
+     <sliders:SfRangeSlider.ThumbStyle>
+        <sliders:SliderThumbStyle OverlapStrokeColor="#EE3F3F" />
+     </sliders:SfRangeSlider.ThumbStyle>
   </sliders:SfRangeSlider>
 
 {% endhighlight %}

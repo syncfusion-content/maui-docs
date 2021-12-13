@@ -47,7 +47,8 @@ You can format or change the whole tooltip label text using the `ToolTipLabelCre
 
 {% highlight xaml %}
 
-     <sliders:SfRangeSlider ToolTipShape="Rectangular" ToolTipLabelCreated="OnTooltipLabelCreated">
+     <sliders:SfRangeSlider ToolTipShape="Rectangular" 
+                            ToolTipLabelCreated="OnTooltipLabelCreated">
      </sliders:SfRangeSlider>
 
 {% endhighlight %}
@@ -58,10 +59,10 @@ You can format or change the whole tooltip label text using the `ToolTipLabelCre
      rangeSlider.ToolTipShape = SliderToolTipShape.Rectangular;
      rangeSlider.ToolTipLabelCreated += OnTooltipLabelCreated;
    }
-    private void OnTooltipLabelCreated(object sender, SliderLabelCreatedEventArgs e)
-	{
+   private void OnTooltipLabelCreated(object sender, SliderLabelCreatedEventArgs e)
+   {
 		e.Text = "$" + e.Text;
-	}
+   }
 
 {% endhighlight %}
 

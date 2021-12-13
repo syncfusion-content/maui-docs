@@ -81,10 +81,10 @@ The inactive side of the range slider is between the `Minimum` value and the lef
 
     <sliders:SfRangeSlider Interval="0.2" 
                            ShowTicks="True">
-    <sliders:SfRangeSlider.MajorTickStyle>
-          <sliders:SliderTickStyle ActiveColor="#EE3F3F" 
-                                   InactiveColor="#F7B1AE"/>
-       </sliders:SfRangeSlider.MajorTickStyle>
+        <sliders:SfRangeSlider.MajorTickStyle>
+            <sliders:SliderTickStyle ActiveColor="#EE3F3F" 
+                                     InactiveColor="#F7B1AE" />
+        </sliders:SfRangeSlider.MajorTickStyle>
     </sliders:SfRangeSlider>
 
 {% endhighlight %}
@@ -118,9 +118,9 @@ The inactive side of the range slider is between the `Minimum` value and the lef
     <sliders:SfRangeSlider Interval="0.2" 
                            ShowTicks="True" 
                            MinorTicksPerInterval="1">
-   <sliders:SfRangeSlider.MinorTickStyle>
-           <sliders:SliderTickStyle ActiveColor="#EE3F3F" 
-                                    InactiveColor="#F7B1AE"/>
+        <sliders:SfRangeSlider.MinorTickStyle>
+            <sliders:SliderTickStyle ActiveColor="#EE3F3F" 
+                                     InactiveColor="#F7B1AE" />
         </sliders:SfRangeSlider.MinorTickStyle>
     </sliders:SfRangeSlider>
 
@@ -153,10 +153,11 @@ You can change the major and minor ticks size of the range slider using the `Act
                            ShowTicks="True" 
                            MinorTicksPerInterval="1">
         <sliders:SfRangeSlider.MinorTickStyle>
-          <sliders:SliderTickStyle ActiveSize="2,10" InactiveSize="2, 10"/>
+           <sliders:SliderTickStyle ActiveSize="2,10" InactiveSize="2, 10" />
         </sliders:SfRangeSlider.MinorTickStyle>
+
         <sliders:SfRangeSlider.MajorTickStyle>
-          <sliders:SliderTickStyle ActiveSize="2,15" InactiveSize="2, 15"/>
+           <sliders:SliderTickStyle ActiveSize="2,15" InactiveSize="2, 15" />
         </sliders:SfRangeSlider.MajorTickStyle>
     </sliders:SfRangeSlider>
 
@@ -189,10 +190,11 @@ You can adjust the space between track and ticks of the range slider using the `
 
     <sliders:SfRangeSlider Interval="0.2" ShowTicks="True" MinorTicksPerInterval="1">
             <sliders:SfRangeSlider.MinorTickStyle>
-                <sliders:SliderTickStyle Offset="5"/>
+               <sliders:SliderTickStyle Offset="5" />
             </sliders:SfRangeSlider.MinorTickStyle>
+
             <sliders:SfRangeSlider.MajorTickStyle>
-                <sliders:SliderTickStyle Offset="5"/>
+               <sliders:SliderTickStyle Offset="5" />
             </sliders:SfRangeSlider.MajorTickStyle>
     </sliders:SfRangeSlider>
 
