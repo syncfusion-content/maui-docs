@@ -91,7 +91,7 @@ namespace SliderGettingStarted
           	SfSlider slider = new SfSlider();
             slider.Minimum = new DateTime(2000, 01, 01);
             slider.Maximum = new DateTime(2005, 01, 01);
-            slider.Value = new DateTime(2002, 01, 01); ;
+            slider.Value = new DateTime(2002, 01, 01); 
             slider.Interval = 1;
             slider.DateIntervalType = SliderDateIntervalType.Years;
             slider.DateFormat = "yyyy";
@@ -118,7 +118,7 @@ You can move the thumb in discrete manner for numeric values using the `StepSize
 {% highlight xaml %}
 
 <ContentPage>
-    <sliders:SfSlider WidthRequest="400" Minimum="0" Maximum="10" Interval="2" StepSize="2" Value="6" ShowLabels="True" ShowTicks="True" ShowDividers="True">
+    <sliders:SfSlider Minimum="0" Maximum="10" Interval="2" StepSize="2" Value="6" ShowLabels="True" ShowTicks="True" ShowDividers="True">
     </sliders:SfSlider>
  </ContentPage>
 
