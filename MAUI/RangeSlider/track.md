@@ -19,6 +19,55 @@ The active side of the range slider is between start and end thumbs.
 
 The inactive side of the range slider is between the `Minimum` value and the left thumb, and the right thumb and the `Maximum` value.
 
+{% tabs %}
+
+{% highlight xaml %}
+
+   <sliders:SfRangeSlider>
+      <sliders:SfRangeSlider.TrackStyle>
+         <sliders:SliderTrackStyle ActiveColor="#EE3F3F" InactiveColor="#F7B1AE" />
+      </sliders:SfRangeSlider.TrackStyle>
+   </sliders:SfRangeSlider>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+    SfRangeSlider rangeSlider = new SfRangeSlider();
+	rangeSlider.TrackStyle.ActiveColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+	rangeSlider.TrackStyle.InactiveColor = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![RangeSlider track color](images/track/track-color.png)
+
 ## Track height
 
 You can change the active and inactive track height of the range slider using the `ActiveSize` and `InactiveSize` properties of the `TrackStyle` class. The default value of the `ActiveSize` and the `InactiveSize` properties are `8.0` and `6.0` respectively.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+   <sliders:SfRangeSlider>
+     <sliders:SfRangeSlider.TrackStyle>
+        <sliders:SliderTrackStyle ActiveSize="10" InactiveSize="8" />
+    </sliders:SfRangeSlider.TrackStyle>
+   </sliders:SfRangeSlider>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+    SfRangeSlider rangeSlider = new SfRangeSlider();
+	rangeSlider.TrackStyle.ActiveSize = 10;
+	rangeSlider.TrackStyle.InactiveSize = 8;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![RangeSlider track size](images/track/track-size.png)
+
