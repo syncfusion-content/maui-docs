@@ -292,4 +292,4 @@ You can add customized view to denote the current pointer value instead of in-bu
 
 ![.NET MAUI Radial Gauge Custom Marker Pointer](images/marker-pointers/maui-radial-gauge-marker-template-pointer.png)
 
-N> If you set MarkerTemplate and MarkerType in MarkerPointer means, MarkerTemplate will be first priority for pointer.
+N> If you set both MarkerTemplate and MarkerType in the MarkerPointer, MarkerTemplate will be first priority for pointer. 
