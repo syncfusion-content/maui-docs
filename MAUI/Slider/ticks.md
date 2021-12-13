@@ -66,7 +66,7 @@ It is used to represent the number of smaller ticks between two major ticks. For
 {% highlight xaml %}
 
 <ContentPage>
-    <sliders:SfSlider Minimum="0" Maximum="10" Interval="2" Value="6" ShowLabels="True" ShowTicks="True">
+    <sliders:SfSlider Minimum="0" Maximum="10" Interval="2" Value="6" ShowLabels="True" MinorTicksPerInterval = "1" ShowTicks="True">
     </sliders:SfSlider>
  </ContentPage>
 
@@ -251,6 +251,8 @@ namespace SliderGettingStarted
             slider.MinorTicksPerInterval = 1;
             slider.MinorTickStyle.ActiveSize = new Size(2, 10);
             slider.MinorTickStyle.InactiveSize = new Size(2, 10);
+            slider.MajorTickStyle.ActiveSize = new Size(2, 10);
+            slider.MajorTickStyle.InactiveSize = new Size(2, 10);
             this.Content = slider;
         }
     }
