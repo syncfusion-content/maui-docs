@@ -57,7 +57,7 @@ this.Scheduler.DaysViewSettings.TimeIntervalHeight = 120;
 
 ## Flexible working days and working hours
 
-By default, the `.NET MAUI Scheduler`, the weekdays from Monday through Friday are considered working days. The days which are defined in this non-working days collection are considered as `non-working days.` Therefore, when the weekend days are set to hide from Scheduler.
+By default, the `.NET MAUI Scheduler`, weekdays from Monday through Friday are considered working days. The days which are defined in this non-working days collection are considered as `non-working days.` Therefore, when the weekend days are set to hide from Scheduler.
 
 The `NonWorkingDays` property of `DaysViewSettings` can also be used to show only the nonworking days of the week.
 
