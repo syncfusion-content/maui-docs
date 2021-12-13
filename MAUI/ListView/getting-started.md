@@ -260,6 +260,10 @@ namespace GettingStarted
 {% endhighlight %}
 {% endtabs %}
 
+You can also download the entire source code of this demo [here](https://github.com/SyncfusionExamples/gettingstarted-listview-.net-maui).
+
+![.Net MAUi listview getting started](Images/GettingStarted_ItemTemplate.png)
+
 ## Layouts
 
 SfListView supports different layouts such as linear and grid layouts. The linear layout arranges the items in a single column, whereas the grid layout arranges the items in a predefined number of columns defined by the `SpanCount` property of `GridLayout`. 
@@ -282,6 +286,8 @@ The `SfListView.ItemsLayout` property is used to define the layout of the SfList
 listView.ItemsLayout = new GridLayout() { SpanCount = 3 };
 {% endhighlight%}
 {% endtabs %}
+
+![GridLayout](Images/GettingStarted_GridLayout.png)
 
 ## DataSource
 
@@ -445,6 +451,8 @@ It also supports you to stick the group header by enabling the `SfListView.IsSti
 {% endhighlight %}
 {% endtabs %}
 
+![Grouping](Images/GettingStarted_Grouping.png)
+
 ## Selection
 
 The SfListView allows selecting the item by setting the `SfListView.SelectionMode` property. Set the `SfListView.SelectionMode` property to single, multiple, and none based on the requirements. Information about the selected item can be tracked using the `SfListView.SelectedItem` and `SfListView.SelectedItems` properties. It also allows changing the selection highlight color by using the `SfListView.SelectionBackgroundColor`.
@@ -534,3 +542,4 @@ listView.FooterTemplate = new DataTemplate(() =>
 {% endhighlight %}
 {% endtabs %}
 
+![Header and Footer](Images/GettingStarted_Header_Footer.png)
