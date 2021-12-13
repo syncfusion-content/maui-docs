@@ -1,0 +1,411 @@
+---
+layout: post
+title: Day and Week views in .NET MAUI Scheduler control | Syncfusion
+description: Learn here all about to customize the Day, Week and Workweek views settings and its appearance in Syncfusion .NET MAUI Scheduler (SfScheduler) control and more.
+platform: maui
+control: SfScheduler
+documentation: ug
+---
+
+# Day and Week views in .NET MAUI Event Scheduler (SfScheduler)
+
+The `.NET MAUI Scheduler` provides the ability to display the day, week, workweek views, and the current day will be visible by default. The appointments on a specific day will be arranged in the respective timeslots based on their duration.
+
+* **Day view:**: It displays a single day of the Scheduler.
+
+* **Week view**: It displays all days of a week.
+
+* **Work week view**: It displays only the working days of a week. By default, Saturday and Sunday are not working days. You can customize it with any day of the week.
+
+## Change time interval
+
+You can customize the time interval between the time slots in all the timeslot views by using the `TimeInterval` property of `DaysViewSettings.`
+
+{% tabs %}
+{% highlight c# %}
+
+this.Scheduler.DaysViewSettings.TimeInterval = new TimeSpan(2, 0, 0);
+
+{% endhighlight %}
+{% endtabs %}
+
+N> To modify the `TimeInterval` value (in minutes), change the time labels format by setting the `TimeRulerFormat` value to hh:mm.
+
+## Change time interval height
+
+You can customize the time interval height for each time slot cell of the day, week, and workweek view by using the `TimeIntervalHeight` property of `DaysViewSettings.`
+
+{% tabs %}
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" 
+                       View="Week">
+    <scheduler:SfScheduler.DaysViewSettings>
+        <scheduler:SchedulerDaysViewSettings       
+                       TimeIntervalHeight="120"/>
+    </scheduler:SfScheduler.DaysViewSettings>
+</scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight c# %}
+
+this.Scheduler.View = SchedulerView.Week;
+this.Scheduler.DaysViewSettings.TimeIntervalHeight = 120;
+
+{% endhighlight %}
+{% endtabs %}
+
+## Flexible working days and working hours
+
+By default, the `.NET MAUI Scheduler`, the weekdays from Monday through Friday are considered working days. The days which are defined in this non-working days collection are considered as `non-working days.` Therefore, when the weekend days are set to hide from Scheduler.
+
+The `NonWorkingDays` property of `DaysViewSettings` can also be used to show only the nonworking days of the week.
+
+{% tabs %}
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" 
+                       View="Week">
+    <scheduler:SfScheduler.DaysViewSettings>
+        <scheduler:SchedulerDaysViewSettings       
+                       NonWorkingDays="Monday,Wednesday" />
+    </scheduler:SfScheduler.DaysViewSettings>
+</scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight c# %}
+
+this.Scheduler.View = SchedulerView.Week;
+this.Scheduler.DaysViewSettings.NonWorkingDays = SchedulerWeekDays.Monday | SchedulerWeekDays.Wednesday;
+
+{% endhighlight %}
+{% endtabs %}
+
+N> The `workweek` view displays exactly the defined working days on Scheduler control, whereas other views displays all the days.
+
+## Flexible working hours
+
+The default values for `StartHour` and `EndHour` are `0` and `24` respectively, to show all time slots for a day, week, or workweek view. You may set these properties to show only the required time periods in `DaysViewSettings.` You can set `StartHour` and `EndHour` in time duration to show the required time duration in minutes.
+
+{% tabs %}
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" 
+                       View="Week">
+    <scheduler:SfScheduler.DaysViewSettings>
+        <scheduler:SchedulerDaysViewSettings       
+                       StartHour="9"
+                       EndHour="16" />
+    </scheduler:SfScheduler.DaysViewSettings>
+</scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight c# %}
+
+this.Scheduler.View = SchedulerView.Week;
+this.Scheduler.DaysViewSettings.StartHour = 9;
+this.Scheduler.DaysViewSettings.EndHour = 16;
+
+{% endhighlight %}
+{% endtabs %}
+
+N>
+* The `NonWorkingDays` property will be applicable only for `workWeek` and `TimelineWorkWeek` views only, and not be applicable for the remaining views.
+* The Scheduler Appointments UI, which does not fall within the `StartHour` and `EndHour` will not be visible and if it falls partially, it will be clipped.
+* No need to specify the decimal point values for `StartHour` and `EndHour`, if you do not want to set the minutes.
+* The number of time slots will be calculated based on total minutes of a day and time interval (total minutes of a day ((start hour - end hour) * 60) / time interval).
+* If a custom timeInterval is given, then the number of time slots calculated based on the given `TimeInterval` should result in an integer value (total minutes % timeInterval = 0), otherwise the next immediate time interval that results in integer value when dividing total minutes of a day will be considered. For example, if TimeInterval=2 Hours 15 minutes and total minutes = 1440 (24 Hours per day), then the `TimeInterval` will be changed to ‘144’ (1440%144=0) by considering (total minutes % TimeInterval = 0), it will return integer value for time slots rendering.
+* If the custom `StartHour` and `EndHour` are given, then the number of time slots calculated based on given `StartHour` and `EndHour` should result in integer value, otherwise the next immediate `TimeInterval` will be considered until the result is integer value. For example, if the `StartHour` is 9 (09:00AM), `EndHour` is 18.25 (06:15 PM), `TimeInterval` is 30 minutes, and total minutes = 555 ((18.25-9)*60), then the `TimeInterval` will be changed to ’37 minutes’ (555%37=0) by considering (total minutes % timeInterval = 0) it will return the integer value for time slots rendering.
+
+## Special time regions
+
+You can restrict the user interaction such as selection and highlights specific regions of time day, week, and workweek views by adding the `TimeRegions` property of the `SfScheduler.` You need to set the `StartTime` and `EndTime` properties of `TimeRegions` to create a specialTimeRegion, you can use the `TimeZone` property to set the specific timezone for start and end time of `TimeRegions`. 
+
+N> If time region has both the text and icon then it will draw icon only.
+
+### Selection restriction in timeslots
+
+You can enable or disable the touch interaction of TimeRegion using the `EnablePointerInteraction` property of `TimeRegion.` By default, its value is `true.`
+
+{% tabs %}
+{% highlight c# %}
+
+this.Scheduler.View = SchedulerView.Week;
+this.Scheduler.DaysViewSettings.TimeRegions = this.GetTimeRegion();
+
+private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
+{
+    var timeRegions = new ObservableCollection<SchedulerTimeRegion>();
+    var timeRegion = new SchedulerTimeRegion()
+    {
+        StartTime = DateTime.Today.Date.AddHours(13),
+        EndTime = DateTime.Today.Date.AddHours(14),
+        Text = "Lunch",
+        EnablePointerInteraction = false,
+    };
+
+    timeRegions.Add(timeRegion);
+    return timeRegions;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+N> This property only restricts the interaction on region and it does not restrict the following:
+* The Programmatic selection (if the user updates the selected date value dynamically).
+* It does not clear the selection when the user selects the region and dynamically change the `EnablePointerInteraction` property to false.
+* It does not restrict appointment interaction when the appointment placed in the region.
+* It does not restrict the appointment rendering on a region, when the appointments are loaded from data services or added programmatically.
+
+### Recurring time region
+
+The recurring time region on a daily, weekly, monthly, or yearly interval. The recurring special time regions can be created by setting the `RecurrenceRule` property in `TimeRegion.`
+
+{% tabs %}
+{% highlight c# %}
+
+this.Scheduler.View = SchedulerView.Week;
+this.Scheduler.DaysViewSettings.TimeRegions = this.GetTimeRegion();
+
+private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
+{
+    var timeRegions = new ObservableCollection<SchedulerTimeRegion>();
+    var timeRegion = new SchedulerTimeRegion()
+    {
+        StartTime = DateTime.Today.Date.AddHours(13),
+        EndTime = DateTime.Today.Date.AddHours(14),
+        Text = "Lunch",
+        EnablePointerInteraction = false,
+        RecurrenceRule = "FREQ=DAILY;INTERVAL=1",
+    };
+
+    timeRegions.Add(timeRegion);
+    return timeRegions;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Recurrence exception dates
+
+You can delete any of occurrence that is an exception from the recurrence pattern time region by using the `RecurrenceExceptionDates` property of `TimeRegion.` The deleted occurrence date will be considered as a recurrence exception date.
+
+{% tabs %}
+{% highlight c# %}
+
+this.Scheduler.View = SchedulerView.Week;
+this.Scheduler.DaysViewSettings.TimeRegions = this.GetTimeRegion();
+
+private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
+{
+    var timeRegions = new ObservableCollection<SchedulerTimeRegion>();
+    var recurrenceExceptionDates = DateTime.Now.Date.AddDays(3);
+    var timeRegion = new SchedulerTimeRegion()
+    {
+        StartTime = DateTime.Today.Date.AddHours(13),
+        EndTime = DateTime.Today.Date.AddHours(14),
+        Text = "Lunch",
+        EnablePointerInteraction = false,
+        RecurrenceRule = "FREQ=DAILY;INTERVAL=1",
+        RecurrenceExceptionDates = new ObservableCollection<DateTime>()
+        {
+            recurrenceExceptionDates,
+        }
+    };
+
+    timeRegions.Add(timeRegion);
+    return timeRegions;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Special time region customization
+
+The specialTimeRegion background and text style can be customized by using the `Background` and `TextStyle` properties of `TimeRegion` that is used to customize the background color for time region background and text style for the text of the specialTimeRegion.
+
+{% tabs %}
+{% highlight c# %}
+
+this.Scheduler.View = SchedulerView.Week;
+this.Scheduler.DaysViewSettings.TimeRegions = this.GetTimeRegion();
+
+private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
+{
+    var textStyle = new SchedulerTextStyle()
+    {
+        TextColor = Colors.DarkBlue,
+        FontSize = 14,
+    };
+
+    var timeRegions = new ObservableCollection<SchedulerTimeRegion>();
+    var timeRegion = new SchedulerTimeRegion()
+    {
+        StartTime = DateTime.Today.Date.AddHours(13),
+        EndTime = DateTime.Today.Date.AddHours(14),
+        Text = "Lunch",
+        EnablePointerInteraction = false,
+        Background = Brush.Orange,
+        TextStyle = textStyle
+    };
+
+    timeRegions.Add(timeRegion);
+    return timeRegions;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+
+## Full screen scheduler
+
+The .NET MAUI time interval height can be adjusted based on screen height by changing the value of `TimeIntervalHeight` property to `-1.` It will auto-fit to the screen height and width.
+
+{% tabs %}
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" 
+                       View="Week">
+    <scheduler:SfScheduler.DaysViewSettings>
+        <scheduler:SchedulerDaysViewSettings 
+                       TimeIntervalHeight="-1"/>
+    </scheduler:SfScheduler.DaysViewSettings>
+</scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight c# %}
+
+this.Scheduler.View = SchedulerView.Week;
+this.Scheduler.DaysViewSettings.TimeIntervalHeight = -1;
+
+{% endhighlight %}
+{% endtabs %}
+
+## Change time ruler width
+
+The `TimeRulerWidth` property of `DaysViewSettings` can be used to customize the size of the time ruler view where the labels with the time are placed.
+
+{% tabs %}
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" 
+                       View="Week">
+    <scheduler:SfScheduler.DaysViewSettings>
+        <scheduler:SchedulerDaysViewSettings 
+                       TimeRulerWidth = "120"/>
+    </scheduler:SfScheduler.DaysViewSettings>
+</scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight c# %}
+
+this.Scheduler.View = SchedulerView.Week;
+this.Scheduler.DaysViewSettings.TimeRulerWidth = 120;
+
+{% endhighlight %}
+{% endtabs %}
+
+## Minimum appointment duration
+
+The `MinimumAppointmentDuration` property allows you to set an arbitrary height to appointments which have a minimum duration in the day, week, and workweek views so that the subject can be readable.
+
+{% tabs %}
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" 
+                       View="Week">
+    <scheduler:SfScheduler.DaysViewSettings>
+        <scheduler:SchedulerDaysViewSettings 
+                       MinimumAppointmentDuration="0:30:0" />
+    </scheduler:SfScheduler.DaysViewSettings>
+</scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight c# %}
+
+this.Scheduler.View = SchedulerView.Week;
+this.Scheduler.DaysViewSettings.MinimumAppointmentDuration = new TimeSpan(0, 30, 0);
+
+{% endhighlight %}
+{% endtabs %}
+
+N>
+*  The `MinimumAppointmentDuration` value will be set when an appointment duration value is lesser than `MinimumAppointmentDuration`.
+* The appointment duration value will be set when the appointment duration value is greater than the `MinimumAppointmentDuration`.
+*  The `TimeInterval` value will be set when the `MinimumAppointmentDuration` is greater than the `TimeInterval` with lesser appointment duration.
+* the all-day Appointment does not support `MinimumAppointmentDuration`.
+
+## View header text formatting
+
+You can customize the date and day format of SfScheduler ViewHeader by using the `DateFormat` and `DayFormat` properties of `DayViewSettings.`
+
+{% tabs %}
+{% highlight c# %}
+
+this.Scheduler.View = SchedulerView.Week;
+this.Scheduler.DaysViewSettings.ViewHeaderSettings.DayFormat = "dddd";
+this.Scheduler.DaysViewSettings.ViewHeaderSettings.DateFormat = "dd";
+
+{% endhighlight %}
+{% endtabs %}
+
+## View header text appearance
+
+You can customize the background color and text style for the labels mentioning the time, by setting the `Background,` `DateTextStyle,` and `DayTextStyle` properties of `DayViewSettings` in the Scheduler.
+
+{% tabs %}
+{% highlight c# %}
+
+this.Scheduler.View = SchedulerView.Week;
+var dateTextStyle = new SchedulerTextStyle()
+{
+    TextColor = Colors.Red,
+    FontSize = 12,
+};
+
+this.Scheduler.DaysViewSettings.ViewHeaderSettings.DateTextStyle = dateTextStyle;
+var dayTextStyle = new SchedulerTextStyle()
+{
+    TextColor = Colors.Red,
+    FontSize = 12,
+};
+
+this.Scheduler.DaysViewSettings.ViewHeaderSettings.DayTextStyle = dayTextStyle;
+
+{% endhighlight %}
+{% endtabs %}
+
+## Time text formatting
+
+You can Customize the format for the labels mentioning the time by setting the `TimeFormat` property of `DayViewSettings` in the Scheduler.
+
+{% tabs %}
+{% highlight c# %}
+
+this.Scheduler.View = SchedulerView.Week;
+this.Scheduler.DaysViewSettings.TimeFormat = "hh:mm";
+
+{% endhighlight %}
+{% endtabs %}
+
+N>
+* By default, the scheduler time text format is `hh:mm tt.`
+
+## Time text appearance
+
+You can customize the background and text style for the labels mentioning the time, by setting the `Background,` `TimeRulerTextStyle` property of `DayViewSettings` in the Scheduler.
+
+{% tabs %}
+{% highlight c# %}
+
+this.Scheduler.View = SchedulerView.Week;
+var timeRulerTextStyle = new SchedulerTextStyle()
+{
+    TextColor = Colors.Red,
+    FontSize = 12,
+};
+
+this.Scheduler.DaysViewSettings.TimeRulerTextStyle = timeRulerTextStyle;
+
+{% endhighlight %}
+{% endtabs %}

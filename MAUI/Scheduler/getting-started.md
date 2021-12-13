@@ -82,7 +82,7 @@ namespace GettingStarted
 
 ## Change different Scheduler Views
 
-The `.NET MAUI Scheduler` control provides eight different types of views to display dates and it can be assigned to the control by using the `View` property. By default, the control is assigned with the `Day` view. The current date will be displayed initially for all the Schedule views.
+The `.NET MAUI Scheduler` control provides eight different types of views to display dates and it can be assigned to the control by using the `View` property. The control is assigned to the `Day` view by default. The current date will be displayed initially for all the Scheduler views.
 
 {% tabs %}
 {% highlight xaml %}
@@ -390,7 +390,7 @@ this.Scheduler.AppointmentsSource = viewModel.Events;
 
 ## Change first day of week
 
-The Scheduler provides an option to customize the first day of the week by using the `FirstDayOfWeek` property. By default, The Scheduler will be rendered with `Sunday` as the first day of the week.
+The scheduler allows customization on the first day of the week with the FirstDayOfWeek property. The Scheduler will default to "Sunday" as the first day of the week.
 
 The following code shows the Scheduler with `Tuesday` as the first day of the week.
 

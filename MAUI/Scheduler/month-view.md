@@ -45,7 +45,7 @@ this.Scheduler.MonthViewSettings.AppointmentDisplayMode = SchedulerMonthAppointm
 
 ## Hide leading and trailing dates
 
-You can hide the previous and next month dates of a Scheduler month view by using the `ShowLeadingAndTrailingDates` property in the `MonthViewSettings` of the `SfScheduler.` By default, the `ShowLeadingAndTrailingDates` property is `true.`
+You can hide the previous and next month dates from a Scheduler month view by using the `ShowLeadingAndTrailingDates` property in the `MonthViewSettings` of the `SfScheduler.` The `ShowLeadingAndTrailingDates` property defaults to true.
 
 {% tabs %}  
 {% highlight xaml %}

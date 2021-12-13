@@ -13,9 +13,9 @@ The Syncfusion .NET MAUI Scheduler(SfScheduler) has eight different types of bui
 
 ## Key features
 
- *  **Built-in Views**: The .NET MAUI Scheduler provides a wide range of built-in view modes such as Day, Week, WorkWeek, Month, TimelineDay, TimelineWeek, TimelineWorkWeek, and TimelineMonth. These view modes allow you to display appointments across different days and months.
+ *  **Built-in Views**: The .NET MAUI Scheduler provides a wide range of built-in view modes including Day, Week, WorkWeek, Month, TimelineDay, TimelineWeek, TimelineWorkWeek, and TimelineMonth. These view modes allow you to display appointments across different days and months.
 
- * **Events**: Appointments contain information on events scheduled at specific times. In addition to default appointments, the users can use their own collections to connect a business entity to an appointment by mapping their fields such as start time, end time, subject, notes, and recurrence.
+ * **Events**: Appointments contain information about events scheduled at specific times. In addition to the default appointments, users can create their own collections that map various fields such as start time, end time, subject, notes, and recurrence to appointments.
 
  * **Recurrence Events**: Easily configure the recurring events on a daily, weekly, monthly, or yearly basis with optimized recurrence options. Also skip or change the occurrence of a recurring appointment.
 
@@ -23,18 +23,18 @@ The Syncfusion .NET MAUI Scheduler(SfScheduler) has eight different types of bui
 
  * **Timezone**: The display appointments can be created in various time zones in the system time zone. The appointment start and end times are also automatically adjusted and displayed based on the daylight savings time.
 
- * **Timeline month view**: Display appointments across the multiple days of a month on a horizontal axis where each column represents a single day.
+ * **Timeline month view**: The appointments will be displayed on a horizontal axis, with each column representing a day of the month.
 
- * **First day of the week**: Customize the first day of the week as needed. The default first day is Sunday.
+ * **First day of the week**: Customize the first day of the week as needed. It defaults to Sunday.
  
- * **Flexible working days**: Customize the workdays in a workweek so that the remaining days will be hidden from view.
+ * **Flexible working days**: The workdays in a workweek can be customized such that the remaining days are hidden.
 
- * **Min and Max date**: MinDate and MaxDate will limit the date range available on the Scheduler and prevent navigation beyond that range.
+ * **Min and Max date**: By setting MinDate and MaxDate, you can limit the date range available in the Scheduler and prevent navigation beyond that range.
 
- * **Special time regions(Blocking time intervals)**: Disable interactions and selections for specific time ranges. This is useful when you want to block user interaction during holidays or another special events and to highlight those time slots.
+ * **Special time regions(Blocking time intervals)**: Interactions and selections can be disabled for specific time ranges. This is useful when you want to block user interaction during holidays or another special events and to highlight those time slots.
 
- * **Blackout dates**: Disable any date in view of a scheduler to make it inactive. You can easily prevent the selection of weekends by disabling them.
+ * **Blackout dates**: You can disable any date in a scheduler to make it inactive. You can easily prevent the selection of weekends by disabling them.
 
- * **Hide leading and trailing dates**: Hide the previous month and next month dates in the scheduler to enhance the appearance.
+ * **Hide leading and trailing dates**: Hiding the previous and next month's dates will enhance the appearance of the scheduler.
 
- * **Custom start and end hours**: Display the event scheduler timeslot views with specific time durations by hiding the unwanted hours.
+ * **Custom start and end hours**: The event scheduler timeslot view can be displayed with specific time durations by hiding the unwanted hours.
