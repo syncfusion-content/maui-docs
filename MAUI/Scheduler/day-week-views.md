@@ -119,9 +119,7 @@ N>
 
 ## Special time regions
 
-You can restrict the user interaction such as selection and highlights specific regions of time day, week, and workweek views by adding the `TimeRegions` property of the `SfScheduler.` You need to set the `StartTime` and `EndTime` properties of `TimeRegions` to create a specialTimeRegion, you can use the `TimeZone` property to set the specific timezone for start and end time of `TimeRegions`. 
-
-N> If time region has both the text and icon then it will draw icon only.
+You can restrict the user interaction such as selection and highlights specific regions of day, week, and workweek views by adding the `TimeRegions` property of the `SfScheduler.` You need to set the `StartTime` and `EndTime` properties of `TimeRegions` to create a specialTimeRegion, you can use the `TimeZone` property to set the specific timezone for start and end time of `TimeRegions.` 
 
 ### Selection restriction in timeslots
 

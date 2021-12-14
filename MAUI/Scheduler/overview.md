@@ -19,7 +19,7 @@ The Syncfusion .NET MAUI Scheduler(SfScheduler) has eight different types of bui
 
  * **Recurrence Events**: Easily configure the recurring events on a daily, weekly, monthly, or yearly basis with optimized recurrence options. Also skip or change the occurrence of a recurring appointment.
 
- * **Appointment Mapping**: The .NET MAUI Scheduler Scheduler control supports to map any collection that implements the object interface to populate appointments.
+ * **Appointment Mapping**: The .NET MAUI Scheduler control supports to map any collection that implements the object interface to populate appointments.
 
  * **Timezone**: The display appointments can be created in various time zones in the system time zone. The appointment start and end times are also automatically adjusted and displayed based on the daylight savings time.
 

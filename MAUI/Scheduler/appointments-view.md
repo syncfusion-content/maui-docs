@@ -314,7 +314,7 @@ this.Scheduler.AppointmentsSource = appointment;
 
 ### Creating the business object recurrence appointment
 
-A recurrence appointment can be created in the business object class Meeting by adding mandatory fields `from,` `to,` and `recurrenceRule.`
+A recurrence appointment can be created in the business object class `Meeting` by adding mandatory fields `from,` `to,` and `recurrenceRule.`
 
 {% tabs %}
 {% highlight c# %}
@@ -585,7 +585,7 @@ The recurrence exception appointments and recurrence exception dates can be adde
 
 ### Delete occurrence from the recurrence pattern appointment or adding exception dates to recurrence pattern appointment
 
-You can delete an occurrence of the recurrence pattern appointment which is an exception by using the `RecurrenceExceptionDates` property of `AppointmentMapping`class which is used to map the exception dates to the scheduler recurrence appointment. The deleted occurrence date will be considered as a recurrence exception date.
+You can delete an occurrence of the recurrence pattern appointment which is an exception by using the `RecurrenceExceptionDates` property of `AppointmentMapping` class which is used to map the exception dates to the scheduler recurrence appointment. The deleted occurrence date will be considered as a recurrence exception date.
 To add the exception dates in the recurrence series of business object, add the `RecurrenceExceptionDates,` `EventName,` `From,` `To,` `Color,` `RecurrenceRule` properties to the business object class `Meeting.`
 
 {% tabs %}
@@ -676,7 +676,7 @@ N> Exception dates should be Universal Time Coordinates (UTC) time zone.
 
 ## Add an exception appointment to the recurrence pattern
 
-Also add an exception appointment which is changed or modified occurrence of the recurrence pattern appointment to the `AppointmentsSource` of Scheduler. To add the changed occurrence, ensure to set the `RecurrenceId` of that occurrence and add the date of that occurrence to `RecurrenceExceptionDates` of recurrence pattern appointment. The `RecurrenceId` of changed occurrence should hold the exact recurrence pattern appointment `Id` .Map the equivalent properties of `Id,` `RecurrenceId,` and `RecurrenceExceptionDates` properties from the business object to the `Id` and `RecurrenceExceptionDates` properties of `AppointmentMapping.`
+Also add an exception appointment which is changed or modified occurrence of the recurrence pattern appointment to the `AppointmentsSource` of Scheduler. To add the changed occurrence, ensure to set the `RecurrenceId` of that occurrence and add the date of that occurrence to `RecurrenceExceptionDates` of recurrence pattern appointment. The `RecurrenceId` of changed occurrence should hold the exact recurrence pattern appointment `Id.` Map the equivalent properties of `Id,` `RecurrenceId,` and `RecurrenceExceptionDates` properties from the business object to the `Id` and `RecurrenceExceptionDates` properties of `AppointmentMapping.`
 
 Add the created exception recurrence appointment to the SfScheduler `AppointmentsSource.`
 

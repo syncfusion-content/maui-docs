@@ -390,7 +390,7 @@ this.Scheduler.AppointmentsSource = viewModel.Events;
 
 ## Change first day of week
 
-The scheduler allows customization on the first day of the week with the FirstDayOfWeek property. The Scheduler will default to "Sunday" as the first day of the week.
+The scheduler allows customization on the first day of the week with the `FirstDayOfWeek` property. The Scheduler will default to "Sunday" as the first day of the week.
 
 The following code shows the Scheduler with `Tuesday` as the first day of the week.
 

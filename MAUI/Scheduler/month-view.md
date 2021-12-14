@@ -87,6 +87,11 @@ You can customize the month view header day text style, day format and backgroun
 {% tabs %}
 {% highlight c# %}
 
+var dayTextStyle = new SchedulerTextStyle()
+{
+    TextColor = Colors.DarkBlue,
+    FontSize = 14,
+};
 this.Scheduler.View = SchedulerView.Month;
 this.Scheduler.MonthViewSettings.ViewHeaderSettings.Background = Brush.LightSkyBlue;
 this.Scheduler.MonthViewSettings.ViewHeaderSettings.DayFormat = "dddd";

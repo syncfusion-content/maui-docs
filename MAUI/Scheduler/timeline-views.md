@@ -122,9 +122,7 @@ N>
 
 ## Special time regions
 
-You can restrict the user interaction such as selection and highlights specific regions of timeline day, timeline week, and timeline workweek views by adding the `TimeRegions` property of the `SfScheduler.` You need to set the `StartTime` and `EndTime` properties of `TimeRegions` to create a specialTimeRegion, you can use the `TimeZone` property to set the specific timezone for start and end time of `TimeRegions`. 
-
-N> If time region has both the text and icon then it will draw icon only.
+You can restrict the user interaction such as selection and highlights specific regions of timeline day, timeline week, and timeline workweek views by adding the `TimeRegions` property of the `SfScheduler.` You need to set the `StartTime` and `EndTime` properties of `TimeRegions` to create a specialTimeRegion, you can use the `TimeZone` property to set the specific timezone for start and end time of `TimeRegions.`
 
 ### Selection restriction in timeslots
 
@@ -261,7 +259,7 @@ private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 
 ## Full screen scheduler
 
-The .NET MAUI time interval height can be adjusted based on screen height by changing the value of `TimeIntervalWidth` property to `-1.` It will auto-fit to the screen height and width.
+The .NET MAUI time interval width can be adjusted based on screen width by changing the value of `TimeIntervalWidth` property to `-1.` It will auto-fit to the screen height and width.
 
 {% tabs %}
 {% highlight xaml %}
@@ -341,7 +339,7 @@ N>
 
 ## View header text formatting
 
-You can customize the date and day format of `SfScheduler` ViewHeader by using the `DateFormat` and `DayFormat` properties of `DayViewSettings.`
+You can customize the date and day format of `SfScheduler` ViewHeader by using the `DateFormat` and `DayFormat` properties of `TimelineViewSettings.`
 
 {% tabs %}
 {% highlight c# %}
