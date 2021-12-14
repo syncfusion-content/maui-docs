@@ -63,7 +63,7 @@ The `FastLineSeries` is a special kind of line series that can render a collecti
 
 ### Dashed fast line
 
-The `StrokeDashArray` property of `FastLineSeries` is used to render the line with dashes. Odd value is considered as rendering size and even value is considered as gap.
+The `StrokeDashArray` property of `FastLineSeries` is used to render the line with dashes. The odd value is considered as the rendering size, while the even value is considered as the gap.
 
 {% tabs %}
 
@@ -94,7 +94,7 @@ The `StrokeDashArray` property of `FastLineSeries` is used to render the line wi
 
 ### Anti-aliasing
 
-There might be some jagged lines at the edges. This is can be reduced using the `EnableAntiAliasing` property.
+There may be some jagged lines at the edges. This can be reduced by using the `EnableAntiAliasing` property.
 
 {% tabs %}
 
