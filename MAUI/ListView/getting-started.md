@@ -21,7 +21,7 @@ This section provides a quick overview of how to get started with the .NET Maui 
 
 {% highlight xaml %}
 
-xmlns:listView="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
+xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
 
 {% endhighlight %}
 
@@ -64,8 +64,6 @@ using Microsoft.Maui.Hosting;
 using Syncfusion.Maui.ListView;
 using Syncfusion.Maui.ListView.Handlers;
 using Syncfusion.Maui.ListView.Hosting;
-
-[assembly: XamlCompilationAttribute(XamlCompilationOptions.Compile)]
 
 namespace GettingStarted
 {
