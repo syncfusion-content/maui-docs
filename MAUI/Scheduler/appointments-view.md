@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Appointments in .NET MAUI Scheduler control | Syncfusion
-description: Learn here all about to plan, configure and manage all day, recurrence and spanning appointments in Syncfusion .NET MAUI Scheduler (SfScheduler) control and more.
+description: Learn here all about to plan, configure and manage all day, recurrence and spanning appointments in Syncfusion .NET MAUI Scheduler(SfScheduler) control.
 platform: maui
 control: SfScheduler
 documentation: ug
@@ -424,8 +424,8 @@ The `RRuleParser` method of the `.NET MAUI Scheduler` retrieves the recurrence p
 {% highlight c# %}
 
 var dateTime = DateTime.Today.AddHours(10);
-var rRule = "FREQ=DAILY;INTERVAL=1;COUNT=3";
-var recurrenceProperties = SchedulerRecurrenceManager.ParseRRule(rRule, dateTime);
+var recurrenceRule = "FREQ=DAILY;INTERVAL=1;COUNT=3";
+var recurrenceProperties = SchedulerRecurrenceManager.ParseRRule(recurrenceRule, dateTime);
 
 {% endhighlight %}
 {% endtabs%}
@@ -444,8 +444,8 @@ The `GetDateTimeOccurrences` method of `.NET MAUI Scheduler` retrieves the occur
 {% highlight c# %}
 
 var dateTime = DateTime.Today.AddHours(10);
-var rRule = "FREQ=DAILY;INTERVAL=1;COUNT=3";
-var dateCollection = SchedulerRecurrenceManager.GetDateTimeOccurrences(rRule, dateTime);
+var recurrenceRule = "FREQ=DAILY;INTERVAL=1;COUNT=3";
+var dateCollection = SchedulerRecurrenceManager.GetDateTimeOccurrences(recurrenceRule, dateTime);
 
 {% endhighlight %}
 {% endtabs%}
@@ -551,8 +551,8 @@ schedulerAppointment.RecurrenceExceptionDates = new ObservableCollection<DateTim
 //Adding the scheduler appointment to the scheduler appointment collection.
 appointment.Add(schedulerAppointment);
 
-// Creating an exception occurence appointment by changing the start time or end time. 
-// RecurrenceId is set to 1, so it will be the changed occurence for the above-created pattern appointment. 
+// Creating an exception occurrence appointment by changing the start time or end time. 
+// RecurrenceId is set to 1, so it will be the changed occurrence for the above-created pattern appointment. 
 var exceptionAppointment = new SchedulerAppointment()
 {
     Id = 2,
@@ -563,7 +563,7 @@ var exceptionAppointment = new SchedulerAppointment()
     RecurrenceId = 1
 };
 
-//Adding the exception occurence appointment to the scheduler appointment collection.
+//Adding the exception occurrence appointment to the scheduler appointment collection.
 appointment.Add(exceptionAppointment);
 
 //Adding the scheduler appointment collection to the AppointmentsSource of .NET MAUI Scheduler.
