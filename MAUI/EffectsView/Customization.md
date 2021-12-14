@@ -102,7 +102,6 @@ The [`InitialRippleFactor`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XF
 {% highlight xaml %} 
 
 <syncEffectsView:SfEffectsView InitialRippleFactor="0.1">
-    ...
 </syncEffectsView:SfEffectsView>
 
 {% endhighlight %}
@@ -153,16 +152,16 @@ var effectsView = new SfEffectsView
 
 ![ScaleFactor customization](Customization_images/EffectsView_Scale.gif)
 
-## HighlightColor
+## HighlightBackground
 
-The [`HighlightColor`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html#Syncfusion_XForms_EffectsView_SfEffectsView_HighlightColor) property of [`SfEffectsView`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html) is used to customize the color of highlight effect.
+The [`HighlightBackground`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html#Syncfusion_XForms_EffectsView_SfEffectsView_HighlightColor) property of [`SfEffectsView`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html) is used to customize the color of highlight effect.
 
 {% tabs %} 
 
 {% highlight xaml %} 
 
 <syncEffectsView:SfEffectsView
-     HighlightColor="#2196F3"
+     HighlightBackground="#2196F3"
      TouchDownEffects="Highlight">
  </syncEffectsView:SfEffectsView>
 
@@ -172,7 +171,7 @@ The [`HighlightColor`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.
 
 var effectsView = new SfEffectsView
 {
-    HighlightColor = Color.FromHex("#2196F3"),
+    effectsView.HighlightBackground = new SolidColorBrush(Colors.Aqua),
     TouchDownEffects = SfEffects.Highlight
 };
 
@@ -180,17 +179,17 @@ var effectsView = new SfEffectsView
 
 {% endtabs %}
 
-![Highlight Color customization](Customization_images/EffectsView_Highlight.png)
+![Highlight background customization](Customization_images/EffectsView_Highlight.png)
 
-## RippleColor
+## RippleBackground
 
-The [`RippleColor`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html#Syncfusion_XForms_EffectsView_SfEffectsView_RippleColor) property of [`SfEffectsView`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html) is used to customize the color of ripple.
+The [`RippleBackground`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html#Syncfusion_XForms_EffectsView_SfEffectsView_RippleColor) property of [`SfEffectsView`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html) is used to customize the color of ripple.
 
 {% tabs %} 
 
 {% highlight xaml %} 
 
-<syncEffectsView:SfEffectsView RippleColor="#2196F3">
+<syncEffectsView:SfEffectsView RippleBackground="#2196F3">
 </syncEffectsView:SfEffectsView>
 
 {% endhighlight %}
@@ -199,18 +198,18 @@ The [`RippleColor`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Eff
 
 var effectsView = new SfEffectsView
 {
-    RippleColor = Color.FromHex("#2196F3")
+    RippleBackground = new SolidColorBrush(Colors.Aqua)
 };
             
 {% endhighlight %}
 
 {% endtabs %}
 
-![Ripple Color customization](Customization_images/EffectsView_RippleColor.gif)
+![Ripple Background customization](Customization_images/EffectsView_RippleColor.gif)
 
-## SelectionColor
+## SelectionBackground
 
-The [`SelectionColor`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html#Syncfusion_XForms_EffectsView_SfEffectsView_SelectionColor) property of [`SfEffectsView`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html) is used to customize the color of selection effect.
+The [`SelectionBackground`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html#Syncfusion_XForms_EffectsView_SfEffectsView_SelectionColor) property of [`SfEffectsView`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html) is used to customize the color of selection effect.
 
 {% tabs %} 
 
@@ -218,7 +217,7 @@ The [`SelectionColor`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.
 
 <syncEffectsView:SfEffectsView
     LongPressEffects="Selection"
-    SelectionColor="#2196F3">
+    SelectionBackground="#2196F3">
 </syncEffectsView:SfEffectsView>
 
 {% endhighlight %}
@@ -228,14 +227,14 @@ The [`SelectionColor`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.
 var effectsView = new SfEffectsView
 {
     LongPressEffects = SfEffects.Selection,
-    SelectionColor = Color.FromHex("#2196F3")
+    SelectionBackground = new SolidColorBrush(Colors.Aqua)
 };
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Selection Color customization](Customization_images/EffectsView_Selection.png)
+![Selection Background customization](Customization_images/EffectsView_Selection.png)
 
 ## Angle
 

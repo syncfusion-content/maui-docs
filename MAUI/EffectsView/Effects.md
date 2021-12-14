@@ -21,7 +21,7 @@ The [`SfEffectsView`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.E
 
 <syncEffectsView:SfEffectsView
     TouchDownEffects="Highlight"
-    HighlightColor="#FF0000">
+    HighlightBackground="#FF0000">
 </syncEffectsView:SfEffectsView>
 
 {% endhighlight %}
@@ -31,7 +31,7 @@ The [`SfEffectsView`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.E
 var effectsView = new SfEffectsView
 {
     TouchDownEffects = SfEffects.Highlight,
-    HighlightColor = Color.FromHex("#FF0000")
+    HighlightBackground = new SolidColorBrush(Colors.Aqua)
 };
 
 {% endhighlight %}
@@ -109,7 +109,7 @@ var effectsView = new SfEffectsView
 
 <syncEffectsView:SfEffectsView
     LongPressEffects="Selection"
-    SelectionColor="#FF0000">
+    SelectionBackground="#FF0000">
 </syncEffectsView:SfEffectsView>
 
 {% endhighlight %}
@@ -119,7 +119,7 @@ var effectsView = new SfEffectsView
 var effectsView = new SfEffectsView
 {
     LongPressEffects = SfEffects.Selection,
-    SelectionColor = Color.FromHex("#FF0000")
+    SelectionBackground = new SolidColorBrush(Colors.Aqua)
 };
 
 {% endhighlight %}

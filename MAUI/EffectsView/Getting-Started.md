@@ -9,10 +9,6 @@ documentation: ug
 
 # Getting Started with .NET MAUI Effects View (SfEffectsView)
 
-This section explains the steps required to configure the SfEffectsView control.
-
-# Getting Started with .NET MAUI Effects View (SfEffectsView)
-
 This section explains the steps required to configure the .NET MAUI Effects View control and customize its elements.
 
 ## Adding a SfEffectsView reference
