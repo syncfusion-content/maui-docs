@@ -49,8 +49,7 @@ Enabling the [`IsSelected`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XF
 {% highlight xaml %} 
 
     <syncEffectsView:SfEffectsView
-    IsSelected="true"
-    LongPressEffects="Selection">
+    IsSelected="true">
     </syncEffectsView:SfEffectsView>
 
 {% endhighlight %}
@@ -60,7 +59,6 @@ Enabling the [`IsSelected`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XF
     var effectsView = new SfEffectsView
     {
     IsSelected = true,
-    LongPressEffects = SfEffects.Selection
     };
 
 {% endhighlight %}

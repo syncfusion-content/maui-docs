@@ -21,6 +21,4 @@ Badges are used to notify users of new or unread messages, notifications, or the
 
 **Animation**: Use animations for badge text.
 
-**Predefined symbols**: The Badge View control provides predefined notification symbols such as available, busy, away, and delete.
-
 ![Maui badge view overview](overview_images/overview.png)
