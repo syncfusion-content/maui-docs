@@ -67,7 +67,7 @@ this.Scheduler.MonthViewSettings.ShowLeadingAndTrailingDates = false;
 {% endhighlight %}  
 {% endtabs %}
 
-## View header DayFormat
+## Change day format of view header
 
 You can customize the day format of Scheduler view header by using the `DayFormat` property of `MonthViewSettings.`
 
@@ -80,7 +80,7 @@ this.Scheduler.MonthViewSettings.ViewHeaderSettings.DayFormat = "dddd";
 {% endhighlight %}  
 {% endtabs %}
 
-## View header appearance
+## Customize view header appearance
 
 You can customize the month view header day text style, day format and background color by using the `SchedulerTextStyle`, `DayFormat` and `background` of `ViewHeaderSettings` property of `MonthViewSettings` respectively.
 
@@ -100,7 +100,7 @@ this.Scheduler.MonthViewSettings.ViewHeaderSettings.DayTextStyle = dayTextStyle;
 {% endhighlight %}  
 {% endtabs %}
 
-## Month cell appearance
+## customize month cell appearance
 
 By using the `MonthCellStyle` property of `MonthViewSettings,` you can customize the month properties such as `Background,` `TodayBackground,` `TrailingMonthBackground,` `LeadingMonthBackground,` `TextStyle,` `TrailingMonthTextStyle,` and `LeadingMonthTextStyle` from the `MonthCellStyle.`
 

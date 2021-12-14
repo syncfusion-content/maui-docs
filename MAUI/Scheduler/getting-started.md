@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with .NET MAUI Scheduler control | Syncfusion
-description: Learn here all about getting started with Syncfusion .NET MAUI Scheduler(SfScheduler) control, its elements, and more.
+description: Learn here all about getting started with Syncfusion .NET MAUI Scheduler(SfScheduler) control, its basic features to schedule the events
 platform: maui
 control: SfScheduler
 documentation: ug
@@ -477,7 +477,7 @@ this.Scheduler.BackgroundColor = Colors.LightBlue;
 
 ## Show navigation arrow
 
-By Using the `ShowNavigationArrows` property of the `SfScheduler,` you can navigate to the previous or next views of the Scheduler. By default, the value `ShowNavigationArrows` is `true.`
+By Using the `ShowNavigationArrows` property of the `SfScheduler,` you can navigate to the previous or next views of the Scheduler. By default, the value `ShowNavigationArrows` is `true,` which displays the navigation icons and `Today` icon in the header view. It allows you to quickly navigate to today and previous or next views.
 
 {% tabs %}  
 {% highlight xaml %}
@@ -491,49 +491,6 @@ this.Scheduler.ShowNavigationArrows = false;
 
 {% endhighlight %}  
 {% endtabs %}
-
-## SelectableDayPredicate(Blackout dates)
-
-The `SelectableDayPredicate` functions allows certain days for selection. Only the days that `SelectableDayPredicate` returns true will be selectable in the Scheduler.
-
-{% tabs %}
-{% highlight c# %}
-
-this.Scheduler.View = SchedulerView.TimelineWeek;
-this.Scheduler.SelectableDayPredicate = (date) =>
-{
-    if (date.DayOfWeek == DayOfWeek.Sunday || date.DayOfWeek == DayOfWeek.Saturday)
-    {
-        return false;
-    }
-
-    return true;
-};
-
-{% endhighlight %}
-{% endtabs %}
-
-### SelectableDayPredicate appearance
-
-You can customize the background color and text style for the selectable day predicate, by setting the `Background,` and `DisabledDateTextStyle` properties of `SfScheduler.`
-
-{% tabs %}
-{% highlight c# %}
-
-var disabledDateTextStyle = new SchedulerTextStyle()
-{
-    TextColor = Colors.Red,
-    FontSize = 12,
-};
-
-this.Scheduler.DisabledDateTextStyle = disabledDateTextStyle;
-this.Scheduler.DisabledDateBackground = Brush.Blue;
-
-{% endhighlight %}
-{% endtabs %}
-
-N>
-The `DisabledDateBackground` property is not applicable for month cells and view header cells.
 
 ## Show week number
 
@@ -554,7 +511,7 @@ this.Scheduler.ShowWeekNumber = true;
 
 N> This property will not be applicable for the `SchedulerView` is `Timeline Month.`
 
-## Week number appearance
+## Customize the week number text style
 
 You can customize the Week number text style of the Scheduler by using the `WeekNumberStyle` property and it allows you to customize the `textStyle` and the `background` color in the Week number of the `SfScheduler.`
 

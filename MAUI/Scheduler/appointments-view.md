@@ -751,7 +751,7 @@ N>
 * The exception appointment should be a normal appointment and should not be created as recurring appointment, since its occurrence from the recurrence pattern.
 * The recurrenceExceptions should be in a Universal Time Coordinates (UTC) time zone.
 
-## Appointment appearance
+## Customize appointment text style
 
 You can customize the appointment text style by using the `AppointmentTextStyle` property of the Scheduler.
 

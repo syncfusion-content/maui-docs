@@ -9,7 +9,7 @@ documentation: ug
 
 # Timeline Views in .NET MAUI Scheduler (SfScheduler)
 
-The TimelineView displays the date inside the horizontal time axis with the desired count of each day. See the past or future dates by scrolling to the right or left. The appointments on a specific day will be arranged in the respective timeslots based on their duration.
+The timelineView displays the date inside the horizontal time axis with the desired count of each day. See the past or future dates by scrolling to the right or left. The appointments on a specific day will be arranged in the respective timeslots based on their duration.
 
 * **Timeline day view**: It displays a single day in the horizontal time axis of the Scheduler.
 
@@ -114,7 +114,6 @@ this.Scheduler.TimelineViewSettings.EndHour = 16;
 
 N>
 * The `NonWorkingDays` property will be applicable only for `workWeek` and `TimelineWorkWeek` views only, and not be applicable for the remaining views.
-* The Scheduler Appointments UI, which does not fall within the `StartHour` and `EndHour` will not be visible and if it falls partially, it will be clipped.
 * No need to specify the decimal point values for `StartHour` and `EndHour`, if you do not want to set the minutes.
 * The number of time slots will be calculated based on total minutes of a day and time interval (total minutes of a day ((start hour - end hour) * 60) / time interval).
 * If a custom timeInterval is given, then the number of time slots calculated based on the given `TimeInterval` should result in an integer value (total minutes % timeInterval = 0), otherwise the next immediate time interval that results in integer value when dividing total minutes of a day will be considered. For example, if TimeInterval=2 Hours 15 minutes and total minutes = 1440 (24 Hours per day), then the `TimeInterval` will be changed to ‘144’ (1440%144=0) by considering (total minutes % TimeInterval = 0), it will return integer value for time slots rendering.
@@ -221,7 +220,7 @@ private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 {% endhighlight %}
 {% endtabs %}
 
-### Special time region customization
+### Customize special time region appearance
 
 The specialTimeRegion background and text style can be customized by using the `Background` and `TextStyle` properties of `TimeRegion` that is used to customize the background color for time region background and text style for the text of the specialTimeRegion.
 
@@ -256,32 +255,6 @@ private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 
 {% endhighlight %}
 {% endtabs %}
-
-## Full screen scheduler
-
-The .NET MAUI time interval width can be adjusted based on screen width by changing the value of `TimeIntervalWidth` property to `-1.` It will auto-fit to the screen height and width.
-
-{% tabs %}
-{% highlight xaml %}
-
-<scheduler:SfScheduler x:Name="Scheduler" 
-                       View="TimelineWeek">
-    <scheduler:SfScheduler.TimelineViewSettings>
-        <scheduler:SchedulerTimelineViewSettings 
-                       TimeIntervalWidth="-1" />
-    </scheduler:SfScheduler.TimelineViewSettings>
-</scheduler:SfScheduler>
-
-
-{% endhighlight %}
-{% highlight c# %}
-
-this.Scheduler.View = SchedulerView.TimelineWeek;
-this.Scheduler.TimelineViewSettings.TimeIntervalWidth = -1;
-
-{% endhighlight %}
-{% endtabs %}
-       
 
 ## Change time ruler height
 
@@ -351,7 +324,7 @@ this.Scheduler.TimelineViewSettings.ViewHeaderSettings.DateFormat = "MMMM dd";
 {% endhighlight %}
 {% endtabs %}
 
-## View header text appearance
+## Customize view header text style
 
 You can customize the background color and text style for the labels mentioning the time, by setting the `Background,` `DateTextStyle,` and `DayTextStyle` properties of `TimelineViewSettings` in the Scheduler.
 
@@ -393,7 +366,7 @@ this.Scheduler.TimelineViewSettings.TimeFormat = "hh:mm";
 N>
 * By default, the scheduler time text format is `hh:mm tt.`
 
-## Time text appearance
+## Customize time ruler text style
 
 You can customize the background and text style for the labels mentioning the time, by setting the `Background,` and `TimeRulerTextStyle` properties of `TimelineViewSettings` in the Scheduler.
 
