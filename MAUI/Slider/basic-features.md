@@ -21,7 +21,7 @@ The maximum value that the user can select. The default value of `Maximum` prope
 
 ## Value
 
-It represents the value currently selected in the slider. The slider’s thumb is drawn corresponding to this value.
+It represents the value currently selected in the slider. The slider's thumb is drawn corresponding to this value.
 
 For date values, the slider does not have auto interval support. So, it is mandatory to set `Interval`, `DateIntervalType`, and `DateFormat` for date values.
 
