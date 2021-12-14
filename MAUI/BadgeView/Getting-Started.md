@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Syncfusion Badge View control for MAUI
-description: This section explains how to add SfBadgeView reference and initializing the control
+description: Learn here all about getting started with Syncfusion .NET MAUI Badge View (SfBadgeView) control and how to add SfBadgeView reference and initializing the control.
 platform: Maui
 control: SfBadgeView
 documentation: ug
@@ -13,7 +13,7 @@ This section explains the steps required to configure the .NET MAUI Badge View c
 
 ## Adding a SfBadgeView reference
 
-Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add [SfBadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html?tabs=tabid-1) to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and then install it.
+Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add [SfBadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1) to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and then install it.
 
 ## Handler registration 
 

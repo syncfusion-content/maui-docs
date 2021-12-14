@@ -9,7 +9,7 @@ documentation: ug
 
 ---
 
-# Overview
+# Overview of .NET MAUI Badge View (SfBadgeView)
 
 Badges are used to notify users of new or unread messages, notifications, or the status of something.
 

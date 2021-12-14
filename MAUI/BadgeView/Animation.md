@@ -2,14 +2,14 @@
 
 layout: post
 title: Badge animation with Syncfusion Badge View control for MAUI
-description: Learn how to set Syncfusion badge view animation in MAUI platform
+description: Learn here all about Animation support in Syncfusion .NET MAUI Badge View (SfBadgeView) control and more.
 platform: Maui
 control: SfBadgeView
 documentation: ug
 
 ---
 
-# Animation
+# Animation in .NET MAUI Badge View (SfBadgeView)
 
 You can enable or disable the animation of the badge text using `Scale` or `None` properties of   [`BadgeAnimation`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.BadgeView.BadgeSetting.html#Syncfusion_XForms_BadgeView_BadgeSetting_BadgeAnimation) property. You can see the animation when we change the badge text.
 

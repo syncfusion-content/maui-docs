@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Position customization of Syncfusion Badge view for Maui
-description: Learn how to set Syncfusion badge view position customization in Maui platform
+description: Learn here all about position customization in Syncfusion .NET MAUI Badge View (SfBadgeView) control and more.
 platform: Maui
 control: SfBadgeView
 documentation: ug
