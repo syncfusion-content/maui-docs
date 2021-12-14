@@ -458,11 +458,11 @@ Chart allows you to customize the origin, by default the axis will be rendered w
 <chart:SfCartesianChart>
     
     <chart:SfCartesianChart.PrimaryAxis>
-            <chart:NumericalAxis CrossesAt="0" Minimum="-8" Maximum="8" ShowMinorGridLines="False" />
+            <chart:NumericalAxis CrossesAt="0" Minimum="-8" Maximum="8" ShowMajorGridLines="False" />
     </chart:SfCartesianChart.PrimaryAxis>
 
     <chart:SfCartesianChart.SecondaryAxis>
-            <chart:NumericalAxis CrossesAt="0" Minimum="-8" Maximum="8"  ShowMinorGridLines="False" />
+            <chart:NumericalAxis CrossesAt="0" Minimum="-8" Maximum="8"  ShowMajorGridLines="False" />
     </chart:SfCartesianChart.SecondaryAxis>
 
 </chart:SfCartesianChart>
