@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Methods in Maui Effects View control | Syncfusion
-description: Learn here all about Methods support in Syncfusion Maui Effects View (SfEffectsView) control and more.
-platform: Maui
-control: SfEffectsView
+title: Methods in .NET MAUI Effects View control | Syncfusion
+description: Learn here all about Methods support in Syncfusion .NET MAUI Effects View (SfEffectsView) control and more.
+platform: maui
+control: Effects View
 documentation: ug
 ---
 
-# Methods in Maui Effects View (SfEffectsView)
+# Methods in .NET MAUI Effects View (SfEffectsView)
 
-You can add or remove effect programmatically using the [`ApplyEffects`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html#Syncfusion_XForms_EffectsView_SfEffectsView_ApplyEffects_Syncfusion_XForms_EffectsView_SfEffects_Syncfusion_XForms_EffectsView_RippleStartPosition_System_Nullable_System_Drawing_Point__System_Boolean_) or [`Reset`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html#Syncfusion_XForms_EffectsView_SfEffectsView_Reset) method.
+Effects can be applied and removed programmatically using the [`ApplyEffects`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html#Syncfusion_XForms_EffectsView_SfEffectsView_ApplyEffects_Syncfusion_XForms_EffectsView_SfEffects_Syncfusion_XForms_EffectsView_RippleStartPosition_System_Nullable_System_Drawing_Point__System_Boolean_) or [`Reset`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html#Syncfusion_XForms_EffectsView_SfEffectsView_Reset) method.
 
 ## ApplyEffects
 

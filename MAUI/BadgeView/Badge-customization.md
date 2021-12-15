@@ -3,8 +3,8 @@
 layout: post
 title: Customization of Syncfusion Badge View control for .NET MAUI
 description: This section explain font, border, Text customization in the Syncfusion SfBadgeView control in .NET MAUI platform
-platform: Maui
-control: SfBadgeView
+platform: maui
+control: Badge View
 documentation: ug
 
 ---

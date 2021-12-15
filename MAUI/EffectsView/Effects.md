@@ -1,13 +1,13 @@
 ---
 layout: post
-title: The .NET Maui Effects View control | Syncfusion
-description: Learn here all about Effects support in Syncfusion MAUI Effects View (SfEffectsView) control and more.
-platform: MAUI
-control: SfEffectsView
+title: The .NET MAUI Effects View control | Syncfusion
+description: Learn here all about Effects support in Syncfusion .NET MAUI Effects View (SfEffectsView) control and more.
+platform: maui
+control: Effects View
 documentation: ug
 ---
 
-# Effects in MAUI Effects View (SfEffectsView)
+# Effects in .NET MAUI Effects View (SfEffectsView)
 
 The [`SfEffectsView`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html) control provides modern effects such as highlight, ripple, selection, scaling, and rotation. This section explains about these effects.
 
@@ -38,7 +38,7 @@ var effectsView = new SfEffectsView
 
 {% endtabs %}
 
-![Highlight effect](Effects_images/EffectsView_Highlight.png)
+![.NET MAUI Effects View highlight effect](Effects_images/EffectsView_Highlight.png)
 
 ## Ripple
 
@@ -64,7 +64,7 @@ var effectsView = new SfEffectsView()
 
 {% endtabs %}
 
-![Ripple effect](Effects_images/EffectsView_Ripple.gif)
+![.NET MAUI Effects View ripple effect](Effects_images/EffectsView_Ripple.gif)
 
 ## Scale
 
@@ -97,7 +97,7 @@ var effectsView = new SfEffectsView
 
 {% endtabs %}
 
-![Scale effect](Effects_images/EffectsView_Scale.png)
+![.NET MAUI Effects View scale effect](Effects_images/EffectsView_Scale.png)
 
 ## Selection
 
@@ -126,7 +126,7 @@ var effectsView = new SfEffectsView
 
 {% endtabs %}
 
-![Selection effect](Effects_images/EffectsView_Selection.png)
+![.NET MAUI Effects View selection effect](Effects_images/EffectsView_Selection.png)
 
 ## Rotation
 

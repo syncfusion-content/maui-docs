@@ -3,8 +3,8 @@
 layout: post
 title: Overview of Syncfusion Badge View control for .NET MAUI
 description: This section explains the key features and quick overview about Syncfusion Badge view control for .NET MAUI
-platform: Maui
-control: SfBadgeView
+platform: maui
+control: Badge View
 documentation: ug
 
 ---

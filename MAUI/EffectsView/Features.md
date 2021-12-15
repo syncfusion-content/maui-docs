@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Features in MAUI Effects View control | Syncfusion
-description: Learn here all about Features support in Syncfusion MAUI Effects View (SfEffectsView) control and more.
-platform: MAUI
-control: SfEffectsView
+title: Features in .NET MAUI Effects View control | Syncfusion
+description: Learn here all about Features support in Syncfusion .NET MAUI Effects View (SfEffectsView) control and more.
+platform: maui
+control: Effects View
 documentation: ug
 ---
 
-# Features in MAUI Effects View (SfEffectsView)
+# Features in .NET MAUI Effects View (SfEffectsView)
 
 The [`SfEffectsView`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html) control provides the following additional features to enhance the effects:
 
@@ -38,7 +38,7 @@ By enabling the [`FadeOutRipple`](https://help.syncfusion.com/cr/xamarin/Syncfus
 
 {% endtabs %}
 
-![FadeOutRipple](Features_images/EffectsView_Fadeout_Ripple.gif)
+![.NET MAUI Effects View FadeOutRipple](Features_images/EffectsView_Fadeout_Ripple.gif)
 
 ## IsSelected
 
