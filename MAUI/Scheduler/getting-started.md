@@ -536,4 +536,4 @@ this.Scheduler.WeekNumberStyle = schedulerWeekNumberStyle;
 {% endhighlight %}
 {% endtabs %}
 
-N> It is not applicable for the `SchedulerView` is `Timeline Month.` and it is applied only to when the `ShowWeekNumber` property is `enabled.`
+N> It is not applicable if the `View` is `Timeline Month` and it is applied only when the `ShowWeekNumber` property is `enabled.`
