@@ -1,17 +1,17 @@
 ---
 
 layout: post
-title: Customization of Syncfusion Badge View control for MAUI
-description: This section explain font, border, Text customization in the Syncfusion SfBadgeView control in MAUI platform
+title: Customization of Syncfusion Badge View control for .NET MAUI
+description: This section explain font, border, Text customization in the Syncfusion SfBadgeView control in .NET MAUI platform
 platform: Maui
 control: SfBadgeView
 documentation: ug
 
 ---
 
-# Badge Customization in Maui Badge View (SfBadgeView)
+# Badge Customization in .NET MAUI Badge View (SfBadgeView)
 
-The [`BadgeSettings`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.BadgeView.SfBadgeView.html#Syncfusion_XForms_BadgeView_SfBadgeView_BadgeSettings) property helps you customize the basic look and feel of the badge view. 
+The [`BadgeSettings`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.BadgeView.SfBadgeView.html#Syncfusion_XForms_BadgeView_SfBadgeView_BadgeSettings) property helps to customize the basic look and feel of the badge view. 
 [`BadgeSettings`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.BadgeView.SfBadgeView.html#Syncfusion_XForms_BadgeView_SfBadgeView_BadgeSettings) contains the sub elements such as badge types, positions and colors. You can customize the background color, text color, border color, width, offset, and font attributes.
 
 ## Font customization
@@ -56,7 +56,7 @@ Content = sfBadgeView;
 
 {% endtabs %}
 
-![Xamarin BadgeView Font Customization](badge-customization_images/font_customization.png)
+![.NET MAUI BadgeView Font Customization](badge-customization_images/font_customization.png)
 
 ## Border customization
 
@@ -98,7 +98,7 @@ Content = sfBadgeView;
 
 {% endtabs %}
 
-![Maui BadgeView stroke Customization](badge-customization_images/stroke_customization.png)
+![.NET MAUI BadgeView stroke Customization](badge-customization_images/stroke_customization.png)
 
 ## Text customization
 
@@ -140,11 +140,11 @@ Content = sfBadgeView;
 
 {% endtabs %}
 
-![Maui BadgeView Text Customization](badge-customization_images/text_customization.png)
+![.NET MAUI BadgeView Text Customization](badge-customization_images/text_customization.png)
 
 ## Predefined styles
 
-You can change the colors of the badge using the [`BadgeType`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.BadgeView.BadgeSetting.html#Syncfusion_XForms_BadgeView_BadgeSetting_BadgeType) property. The badge supports the following eight different essential colors for various situations:
+The colors of the badge can be customized using the [`BadgeType`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.BadgeView.BadgeSetting.html#Syncfusion_XForms_BadgeView_BadgeSetting_BadgeType) property. The badge supports the following eight different essential colors for various situations:
 
  * Dark
  * Error
@@ -191,11 +191,11 @@ Content = sfBadgeView;
 
 {% endtabs %}
 
-![Maui BadgeView Types](badge-customization_images/badge_type.png)
+![.NET MAUI BadgeView Types](badge-customization_images/badge_type.png)
 
 ## Badge background customization
 
-Set the [`BadgeType`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.BadgeView.BadgeSetting.html#Syncfusion_XForms_BadgeView_BadgeSetting_BadgeType) to `None`. You can customize the color of the badge view using the [`Background`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.BadgeView.BadgeSetting.html#Syncfusion_XForms_BadgeView_BadgeSetting_BackgroundColor) property.
+Other than the predefined styles, the color of the badge can be customized using the [`BadgeType`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.BadgeView.BadgeSetting.html#Syncfusion_XForms_BadgeView_BadgeSetting_BadgeType) property which has to be set as `None`. Then the color of the badge view can be set using the [`Background`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.BadgeView.BadgeSetting.html#Syncfusion_XForms_BadgeView_BadgeSetting_BackgroundColor) property.
 
 {% tabs %}
 
@@ -233,7 +233,7 @@ Content = sfBadgeView;
 
 {% endtabs %}
 
-![Maui BadgeView Background](badge-customization_images/background_customization.png)
+![.NET MAUI BadgeView Background](badge-customization_images/background_customization.png)
 
 ## Setting corner radius of the badge
 
@@ -274,5 +274,5 @@ Content = sfBadgeView;
 
 {% endtabs %}
 
-![Maui BadgeView Corner Radius](badge-customization_images/corner_radius.png)
+![.NET MAUI BadgeView Corner Radius](badge-customization_images/corner_radius.png)
 

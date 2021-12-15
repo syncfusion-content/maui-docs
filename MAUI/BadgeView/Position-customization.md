@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Position customization of Syncfusion Badge view for Maui
+title: Position customization of Syncfusion Badge view for .NET MAUI
 description: Learn here all about position customization in Syncfusion .NET MAUI Badge View (SfBadgeView) control and more.
 platform: Maui
 control: SfBadgeView
@@ -9,7 +9,7 @@ documentation: ug
 
 # Position customization
 
-The default position of notification is `TopRight`. You can change the position to the `TopLeft`, `BottomLeft`, and `BottomRight` using the [`BadgePosition`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.BadgeView.BadgeSetting.html#Syncfusion_XForms_BadgeView_BadgeSetting_BadgePosition) properties. 
+The default position of notification is `TopRight`. The position can be customized as `TopLeft`, `BottomLeft`, and `BottomRight` using the [`BadgePosition`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.BadgeView.BadgeSetting.html#Syncfusion_XForms_BadgeView_BadgeSetting_BadgePosition) properties. 
 
 {% tabs %}
 
@@ -46,11 +46,11 @@ Content = sfBadgeView;
 
 {% endtabs %}
 
-![Maui BadgeView Badge Position](badge-position_images/badgeposition.png)
+![.NET MAUI Badge View Badge Position](badge-position_images/badgeposition.png)
 
 ## Setting badge offset
 
-You can adjust the badge text using the [`Offset`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.BadgeView.BadgeSetting.html#Syncfusion_XForms_BadgeView_BadgeSetting_Offset) property.
+The badge text x,y position can be adjusted using the [`Offset`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.BadgeView.BadgeSetting.html#Syncfusion_XForms_BadgeView_BadgeSetting_Offset) property.
 
 {% tabs %}
 
@@ -89,4 +89,4 @@ Content = sfBadgeView;
 
 {% endtabs %}
 
-![Maui BadgeView Badge Offset](badge-position_images/badgeoffset.png)
+![.NET MAUI Badge View Badge Offset](badge-position_images/badgeoffset.png)

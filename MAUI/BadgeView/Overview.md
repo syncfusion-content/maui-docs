@@ -1,8 +1,8 @@
 ---
 
 layout: post
-title: Overview of Syncfusion Badge View control for Maui
-description: This section explains the key features and quick overview about Syncfusion Badge view control for Maui
+title: Overview of Syncfusion Badge View control for .NET MAUI
+description: This section explains the key features and quick overview about Syncfusion Badge view control for .NET MAUI
 platform: Maui
 control: SfBadgeView
 documentation: ug
@@ -21,4 +21,4 @@ Badges are used to notify users of new or unread messages, notifications, or the
 
 **Animation**: Use animations for badge text.
 
-![Maui badge view overview](overview_images/overview.png)
+![.NET MAUI Badge View overview](overview_images/overview.png)
