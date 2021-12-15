@@ -296,7 +296,7 @@ The `DataSource` gets raw data and performs data operations such as sorting, fil
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
-             xmlns:data="clr-namespace:Syncfusion.Maui.DataSource;assembly=Syncfusion.Maui.DataSource"             
+             xmlns:data="clr-namespace:Syncfusion.DataSource;assembly=Syncfusion.Maui.DataSource"             
              xmlns:local="clr-namespace:GettingStarted;assembly=GettingStarted"
              x:Class="GettingStarted.MainPage">             
              
@@ -330,7 +330,7 @@ SortDescriptor object holds the following three properties:
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
-             xmlns:data="clr-namespace:Syncfusion.Maui.DataSource;assembly=Syncfusion.Maui.DataSource"            
+             xmlns:data="clr-namespace:Syncfusion.DataSource;assembly=Syncfusion.Maui.DataSource"            
              xmlns:local="clr-namespace:GettingStarted;assembly=GettingStarted"
              x:Class="GettingStarted.MainPage">             
              
@@ -429,7 +429,7 @@ It also supports you to stick the group header by enabling the `SfListView.IsSti
 {% tabs %}
 {% highlight xaml %}
 <ContentPage  xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
-              xmlns:data="clr-namespace:Syncfusion.Maui.DataSource;assembly=Syncfusion.Maui.DataSource">
+              xmlns:data="clr-namespace:Syncfusion.DataSource;assembly=Syncfusion.Maui.DataSource">
   <syncfusion:SfListView x:Name="listView">
     <syncfusion:SfListView.DataSource>
       <data:DataSource>
