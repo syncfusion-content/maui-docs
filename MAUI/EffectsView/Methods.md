@@ -16,7 +16,7 @@ Effects can be applied and removed programmatically using the [`ApplyEffects`](h
 The [`ApplyEffects`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html#Syncfusion_XForms_EffectsView_SfEffectsView_ApplyEffects_Syncfusion_XForms_EffectsView_SfEffects_Syncfusion_XForms_EffectsView_RippleStartPosition_System_Nullable_System_Drawing_Point__System_Boolean_) method is used to trigger the effects rendering with or without repetition. The following are the optional parameters to be passed:
 
 * `effects` - [`SfEffects`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffects.html) to be applied. By default, `SfEffects.Ripple` will be applied.
-* `rippleStartPosition` - [`RippleStartPosition`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.RippleStartPosition.html) can be left, top, right, bottom,top left,top right,bottom left,bottom right or default. By default, ripple starts from the center.
+* `rippleStartPosition` - [`RippleStartPosition`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.RippleStartPosition.html) can be left, top, right, bottom, top left, top right, bottom left, bottom right or default. By default, ripple starts from the center.
 * `rippleStartPoint` - point at which ripple animation starts. The default value is null.
 * `repeat` - bool value used to set whether to repeat the applied effect. The default value is false. Only `SfEffects.Ripple` can be repeated.
 

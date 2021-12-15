@@ -52,7 +52,7 @@ The Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget
 
 {% endhighlight %}
 
-## Adding namespace
+## Adding a namespace
 
 Add the following namespace.
 
@@ -72,7 +72,7 @@ Add the following namespace.
 
 {% endtabs %}
 
-## Initializing Badge View
+## Initializing a badge view
 
 Create an instance for the Badge View control, and add it as content.
 
@@ -97,7 +97,7 @@ this.Content = sfBadgeView;
 
 {% endtabs %}
 
-## Adding badge text
+## Adding a badge text
 
 Add text to Badge View using the [`BadgeText`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.BadgeView.SfBadgeView.html#Syncfusion_XForms_BadgeView_SfBadgeView_BadgeText) property.
 
@@ -125,7 +125,7 @@ this.Content = sfBadgeView;
 
 {% endtabs %}
 
-## Adding content
+## Adding a content
 
 An Image, button, or label or any view can be added to the Badge View using the [`Content`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.BadgeView.SfBadgeView.html) property.
 

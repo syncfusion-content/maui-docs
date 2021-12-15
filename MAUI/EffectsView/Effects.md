@@ -68,7 +68,7 @@ var effectsView = new SfEffectsView()
 
 ## Scale
 
-`SfEffects.Scale` is a smooth transition on the size of the [`SfEffectsView.Content`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html) from actual size to the size calculated based on [`ScaleFactor`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html#Syncfusion_XForms_EffectsView_SfEffectsView_ScaleFactor) in pixels.
+`SfEffects.Scale` is a smooth transition on the size of the [`SfEffectsView.Content`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html) from its actual size to the size calculated based on [`ScaleFactor`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html#Syncfusion_XForms_EffectsView_SfEffectsView_ScaleFactor) in pixels.
 
 {% tabs %} 
 
@@ -231,7 +231,7 @@ var effectsView = new SfEffectsView()
 
 {% endtabs %}
 
-### Highlight, ripple and selection
+### Highlight, ripple, and selection
 
 {% tabs %} 
 

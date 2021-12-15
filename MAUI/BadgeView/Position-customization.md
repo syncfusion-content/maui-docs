@@ -15,12 +15,12 @@ The default position of notification is `TopRight`. The position can be customiz
 
 {% highlight xaml %}
 
- <badge:SfBadgeView BadgeText="NEW" HorizontalOptions="Center" VerticalOptions="Center">
+ <badge:SfBadgeView BadgeText="NEW" HorizontalOptions="Center" WidthRequest="120" HeightRequest="60" VerticalOptions="Center">
         <badge:SfBadgeView.Content>
-            <Button Text="Primary" WidthRequest="120" HeightRequest="60"/>
+            <Button Text="Primary" BackgroundColor="#d6d8d7" TextColor="Black"  WidthRequest="120"  HeightRequest="60"/>
         </badge:SfBadgeView.Content>
         <badge:SfBadgeView.BadgeSettings>
-            <badge:BadgeSetting   Position="TopRight"/>
+            <badge:BadgeSettings   Position="TopRight"/>
         </badge:SfBadgeView.BadgeSettings>
 </badge:SfBadgeView>
 
@@ -29,12 +29,16 @@ The default position of notification is `TopRight`. The position can be customiz
 {% highlight c# %}
 
 SfBadgeView sfBadgeView = new SfBadgeView();
+sfBadgeView.WidthRequest = 120;
+sfBadgeView.HeightRequest = 60;
 sfBadgeView.HorizontalOptions = LayoutOptions.Center;
 sfBadgeView.VerticalOptions = LayoutOptions.Center;
 sfBadgeView.BadgeText = "NEW";
 Button button = new Button();
 button.Text = "Primary";
 button.WidthRequest = 120;
+button.TextColor = Colors.Black;
+button.BackgroundColor = Color.FromRgba(214, 216, 215, 255);
 button.HeightRequest = 60;
 sfBadgeView.Content = button;
 BadgeSettings badgeSetting = new BadgeSettings();
@@ -48,7 +52,7 @@ Content = sfBadgeView;
 
 ![.NET MAUI Badge View Badge Position](badge-position_images/badgeposition.png)
 
-## Setting badge offset
+## Setting a badge offset
 
 The badge text x,y position can be adjusted using the [`Offset`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.BadgeView.BadgeSetting.html#Syncfusion_XForms_BadgeView_BadgeSetting_Offset) property.
 
@@ -56,12 +60,12 @@ The badge text x,y position can be adjusted using the [`Offset`](https://help.sy
 
 {% highlight xaml %}
 
-  <badge:SfBadgeView BadgeText="8" HorizontalOptions="Center" VerticalOptions="Center">
+  <badge:SfBadgeView BadgeText="8" HeightRequest="70" WidthRequest="60" HorizontalOptions="Center" VerticalOptions="Center">
         <badge:SfBadgeView.Content>
             <Image Source="BadgeImage9.png" HeightRequest="70" WidthRequest="60"/>
         </badge:SfBadgeView.Content>
         <badge:SfBadgeView.BadgeSettings>
-            <badge:BadgeSetting Type="Success" Offset="-5,-10" Position="BottomRight"/>
+            <badge:BadgeSettings Type="Success" Offset="-5,-10" Position="BottomRight"/>
         </badge:SfBadgeView.BadgeSettings>
 </badge:SfBadgeView>
 
@@ -70,6 +74,8 @@ The badge text x,y position can be adjusted using the [`Offset`](https://help.sy
 {% highlight c# %}
 
 SfBadgeView sfBadgeView = new SfBadgeView();
+sfBadgeView.WidthRequest = 70;
+sfBadgeView.HeightRequest = 60;
 sfBadgeView.HorizontalOptions = LayoutOptions.Center;
 sfBadgeView.VerticalOptions = LayoutOptions.Center;
 sfBadgeView.BadgeText = "8";
