@@ -19,7 +19,7 @@ This section explains how to populate the appointments to the Scheduler as well 
 
 3. To initialize the control, import the control namespace `Syncfusion.Maui.Scheduler` in XAML or C# code.
 
-4. Initialize `SfScheduler`
+4. Initialize `SfScheduler.`
 
 {% tabs %}
 {% highlight xaml %}
@@ -188,7 +188,7 @@ public class SchedulerViewModel
     private List<string> subjectCollection;
 
     /// <summary>
-    /// The notes Collection.
+    /// The notes collection.
     /// </summary>
     private List<string> noteCollection;
 
@@ -283,7 +283,7 @@ public class SchedulerViewModel
     }
 
     /// <summary>
-    /// Method for get timing range.
+    /// Method to get timing range.
     /// </summary>
     /// <returns>return time collection</returns>
     private List<Point> GettingTimeRanges()
@@ -409,7 +409,7 @@ this.Scheduler.FirstDayOfWeek = DayOfWeek.Tuesday;
 
 ## Cell selection background
 
-You can customize the selection view of Scheduler by using the `SelectedCellBackground` property in the `SfScheduler.`
+The selection view of Scheduler can be customized by using the `SelectedCellBackground` property in the `SfScheduler.`
 
 {% tabs %}  
 {% highlight xaml %}
@@ -426,7 +426,7 @@ this.Scheduler.SelectedCellBackground = Brush.Orange;
 
 ## Today highlight brush
 
-You can customize the today highlight brush of Scheduler by using the `TodayHighlightBrush` property in the `SfScheduler,` which will highlight the today's circle and text in Scheduler view header and month cell.
+The today highlight brush of Scheduler can be customized by using the `TodayHighlightBrush` property in the `SfScheduler,` which will highlight the today's circle and text in Scheduler view header and month cell.
 
 {% tabs %}  
 {% highlight xaml %}
@@ -443,7 +443,7 @@ this.Scheduler.TodayHighlightBrush = Brush.Orange;
 
 ## Cell border brush
 
-You can customize the vertical and horizontal line color of Scheduler by using the `CellBorderBrush` property in the `SfScheduler.`
+The vertical and horizontal line color of the Scheduler can be customized by using the `CellBorderBrush` property in the `SfScheduler.`
 
 {% tabs %}  
 {% highlight xaml %}
@@ -477,7 +477,7 @@ this.Scheduler.BackgroundColor = Colors.LightBlue;
 
 ## Show navigation arrow
 
-By Using the `ShowNavigationArrows` property of the `SfScheduler,` you can navigate to the previous or next views of the Scheduler. By default, the value `ShowNavigationArrows` is `true,` which displays the navigation icons and `Today` icon in the header view. It allows you to quickly navigate to today and previous or next views.
+By Using the `ShowNavigationArrows` property of the `SfScheduler,` you can navigate to the previous or next views of the Scheduler. By default, the value `ShowNavigationArrows` is `true,` which displays the navigation icons and `Today` button in the header view. It allows to quickly navigate to today and previous or next views.
 
 {% tabs %}  
 {% highlight xaml %}
@@ -513,7 +513,7 @@ N> This property will not be applicable for the `SchedulerView` is `Timeline Mon
 
 ## Customize the week number text style
 
-You can customize the Week number text style of the Scheduler by using the `WeekNumberStyle` property and it allows you to customize the `textStyle` and the `background` color in the Week number of the `SfScheduler.`
+The Week number text style of the Scheduler can be customized by using the `WeekNumberStyle` property and it allows to customize the `TextStyle` and the `Background` color in the Week number of the `SfScheduler.`
 
 {% tabs %}
 {% highlight c# %}  
@@ -536,4 +536,4 @@ this.Scheduler.WeekNumberStyle = schedulerWeekNumberStyle;
 {% endhighlight %}
 {% endtabs %}
 
-N> It is not applicable for the `SchedulerView` is `Timeline Month.` and it is applied only to when the `ShowWeekNumber` property is `enabled.`
+N> It is not applicable if the `View` is `Timeline Month` and it is applied only when the `ShowWeekNumber` property is `enabled.`

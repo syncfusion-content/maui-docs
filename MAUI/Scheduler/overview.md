@@ -9,11 +9,11 @@ documentation: ug
 
 # Overview of .NET MAUI Scheduler (SfScheduler)
 
-The Syncfusion .NET MAUI Scheduler(SfScheduler) has eight different types of built-in configurable view modes that provides all the common scheduling functionalities to display appointments in different views and allows users to create and manage appointments efficiently. It exposes user interface for custom working days and hours and basic operations such as viewing daily/all day/spanned appointments, date navigation, selection, and Data binding to different sources.
+The Syncfusion .NET MAUI Scheduler (SfScheduler) has eight different types of built-in configurable view modes that provides all the common scheduling functionalities to display appointments in different views, and allows users to create and manage appointments efficiently. It exposes user interface for custom working days and hours, and basic operations such as viewing daily/all day/spanned appointments, date navigation, selection, and Data binding to different sources.
 
 ## Key features
 
- *  **Built-in Views**: The .NET MAUI Scheduler provides a wide range of built-in view modes including Day, Week, WorkWeek, Month, TimelineDay, TimelineWeek, TimelineWorkWeek, and TimelineMonth. These view modes allow you to display appointments across different days and months.
+ *  **Built-in Views**: The .NET MAUI Scheduler provides a wide range of built-in view modes including Day, Week, WorkWeek, Month, TimelineDay, TimelineWeek, TimelineWorkWeek, and TimelineMonth. These view modes allows to display appointments across different days and months.
 
  * **Events**: Appointments contain information about events scheduled at specific times. In addition to the default appointments, users can create their own collections that map various fields such as start time, end time, subject, notes, and recurrence to appointments.
 
@@ -31,9 +31,9 @@ The Syncfusion .NET MAUI Scheduler(SfScheduler) has eight different types of bui
 
  * **Minimum and maximum date time**: By setting `MinimumDateTime` and `MaximumDateTime` properties, you can limit the date range available in the Scheduler and prevent navigation beyond that range.
 
- * **Special time regions(Blocking time intervals)**: Interactions and selections can be disabled for specific time ranges. This is useful when you want to block user interaction during holidays or another special events and to highlight those time slots in day, week, workweek, timeline day, timeline week, and timeline workweek.
+ * **Special time regions(Blocking time intervals)**: Interactions and selections can be disabled for specific time ranges. This is useful when the user interaction has to be blocked during holidays or another special events, and to highlight those time slots in day, week, workweek, timeline day, timeline week, and timeline workweek.
 
- * **Selectable day predicate(Blackout dates)**: You can disable any date in a scheduler to make it inactive. You can easily prevent the selection of weekends and holidays by disabling them.
+ * **Selectable day predicate(Blackout dates)**: Any date can be disabled in a scheduler to make it inactive. The selection of weekends and holidays can be easily prevented by disabling them.
 
  * **Hide leading and trailing dates**: Hiding the previous and next month's dates will enhance the appearance of the scheduler.
 

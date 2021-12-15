@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Appointments in .NET MAUI Scheduler control | Syncfusion
-description: Learn here all about to plan, configure and manage all day, recurrence and spanning appointments in Syncfusion .NET MAUI Scheduler(SfScheduler) control.
+description: Learn here all about how to plan, configure and manage all day, recurrence and spanning appointments in Syncfusion .NET MAUI Scheduler (SfScheduler) control.
 platform: maui
 control: SfScheduler
 documentation: ug
@@ -47,7 +47,7 @@ N>
 
 ## Scheduler appointment source and Mapping
 
-The .NET MAUI Scheduler supports collection that implements the `object` interface can be bound to populate appointments. You can map the properties of the business object to `SchedulerAppointment` by configuring the `AppointmentMapping` property.
+The .NET MAUI Scheduler supports collection that implements the object interface that can be bound to populate appointments. The properties of the business `object` can be mapped to `SchedulerAppointment` by configuring the `AppointmentMapping` property.
 
 <table>
 <tr><th>Property Name</th><th>Description</th></tr>
@@ -168,7 +168,7 @@ this.Scheduler.AppointmentsSource = Meetings;
 
 ## Spanned appointments
 
-The spanned appointment is one which lasts longer than 24 hours. The spanned appointment does not block out timeslots in Scheduler, but it will render in All-Day appointment panel exclusively.
+The spanned appointment is the one which lasts longer than 24 hours. The spanned appointment does not block out timeslots in the Scheduler, but it will render in all-day appointment panel exclusively.
 
 {%tabs %}
 {% highlight xaml %}
@@ -461,7 +461,7 @@ The Recurrence pattern appointments can be deleted or changed by handling except
 
 ### Recurrence exception dates
 
-By adding exception dates to the recurring appointment, you can remove any occurrence appointment that is an exception from the recurrence pattern.
+By adding exception dates to the recurring appointment, any occurrence appointment can be removed that is an exception from the recurrence pattern.
 
 ### Recurrence exception appointment
 
@@ -473,7 +473,7 @@ The Recurrence exception appointments and recurrence exception dates can be adde
 
 ### Delete occurrence from recurrence pattern appointment or adding exception dates to recurrence pattern appointment
 
-You can delete an occurrence of the recurrence pattern appointment which is an exception by using the `RecurrenceExceptionDates` property of `SchedulerAppointment.` The deleted occurrence date will be considered as recurrence exception date.
+An occurrence of the recurrence pattern appointment which is an exception can be deleted by using the `RecurrenceExceptionDates` property of `SchedulerAppointment.` The deleted occurrence date will be considered as recurrence exception date.
 
 {%tabs %}
 {% highlight xaml %}
@@ -585,7 +585,7 @@ The recurrence exception appointments and recurrence exception dates can be adde
 
 ### Delete occurrence from the recurrence pattern appointment or adding exception dates to recurrence pattern appointment
 
-You can delete an occurrence of the recurrence pattern appointment which is an exception by using the `RecurrenceExceptionDates` property of `AppointmentMapping` class which is used to map the exception dates to the scheduler recurrence appointment. The deleted occurrence date will be considered as a recurrence exception date.
+An occurrence of the recurrence pattern appointment which is an exception can be deleted by using the `RecurrenceExceptionDates` property of `AppointmentMapping` class which is used to map the exception dates to the scheduler recurrence appointment. The deleted occurrence date will be considered as a recurrence exception date.
 To add the exception dates in the recurrence series of business object, add the `RecurrenceExceptionDates,` `EventName,` `From,` `To,` `Color,` `RecurrenceRule` properties to the business object class `Meeting.`
 
 {% tabs %}
@@ -753,7 +753,7 @@ N>
 
 ## Customize appointment text style
 
-You can customize the appointment text style by using the `AppointmentTextStyle` property of the Scheduler.
+The appointment text style can be customized by using the `AppointmentTextStyle` property of the Scheduler.
 
 {%tabs %}
 {% highlight xaml %}
