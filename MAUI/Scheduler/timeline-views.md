@@ -256,6 +256,54 @@ private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 {% endhighlight %}
 {% endtabs %}
 
+## Show current time indicator
+
+You can show or hide the current time indicator in timeline day, timeline week, and timeline workweek views of `SfScheduler` by using the `ShowCurrentTimeIndicator` property of `TimelineViewSettings,` and by default, its `true.`
+
+{% tabs %}
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" 
+                       View="TimelineWeek">
+    <scheduler:SfScheduler.TimelineViewSettings>
+            <scheduler:SchedulerTimelineViewSettings 
+                       ShowCurrentTimeIndicator="False"/>
+    </scheduler:SfScheduler.TimelineViewSettings>
+</scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight c# %}
+
+this.Scheduler.View = SchedulerView.TimelineWeek;
+this.Scheduler.TimelineViewSettings.ShowCurrentTimeIndicator = false;
+
+{% endhighlight %}
+{% endtabs %}
+
+### Customize Current time indicator appearance
+
+The current time indicator can be customized by using the `CurrentTimeIndicatorBrush` property of `TimelineViewSettings` in the `SfScheduler.`
+
+<scheduler:SfScheduler x:Name="Scheduler" 
+                       View="TimelineWeek">
+    <scheduler:SfScheduler.TimelineViewSettings>
+            <scheduler:SchedulerTimelineViewSettings 
+                        CurrentTimeIndicatorBrush="Green" />
+    </scheduler:SfScheduler.TimelineViewSettings>
+</scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight c# %}
+
+this.Scheduler.View = SchedulerView.TimelineWeek;
+this.Scheduler.TimelineViewSettings.CurrentTimeIndicatorBrush = Brush.Green;
+
+{% endhighlight %}
+{% endtabs %}
+
+N>
+The current time indicator color is applied only when the`ShowCurrentTimeIndicator` property is enabled.
+
 ## Change time ruler height
 
 The `TimeRulerHeight` property of `TimelineViewSettings` can be used to customize the size of the time ruler view where the labels with the time are placed.
