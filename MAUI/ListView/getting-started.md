@@ -21,7 +21,7 @@ This section provides a quick overview of how to get started with the .NET Maui 
 
 {% highlight xaml %}
 
-xmlns:listView="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
+xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
 
 {% endhighlight %}
 
@@ -64,8 +64,6 @@ using Microsoft.Maui.Hosting;
 using Syncfusion.Maui.ListView;
 using Syncfusion.Maui.ListView.Handlers;
 using Syncfusion.Maui.ListView.Hosting;
-
-[assembly: XamlCompilationAttribute(XamlCompilationOptions.Compile)]
 
 namespace GettingStarted
 {
@@ -262,7 +260,7 @@ namespace GettingStarted
 
 You can also download the entire source code of this demo [here](https://github.com/SyncfusionExamples/gettingstarted-listview-.net-maui).
 
-![.Net MAUi listview getting started](Images/GettingStarted_ItemTemplate.png)
+![.Net MAUI ListView with ItemTemplate](Images/getting-started/maui-listview-with-item-template.jpg)
 
 ## Layouts
 
@@ -287,7 +285,7 @@ listView.ItemsLayout = new GridLayout() { SpanCount = 3 };
 {% endhighlight%}
 {% endtabs %}
 
-![GridLayout](Images/GettingStarted_GridLayout.png)
+![.Net MAUI ListView with GridLayout](Images/getting-started/maui-listview-with-grid-layout.jpg)
 
 ## DataSource
 
@@ -298,7 +296,7 @@ The `DataSource` gets raw data and performs data operations such as sorting, fil
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
-             xmlns:data="clr-namespace:Syncfusion.Maui.DataSource;assembly=Syncfusion.Maui.DataSource"             
+             xmlns:data="clr-namespace:Syncfusion.DataSource;assembly=Syncfusion.Maui.DataSource"             
              xmlns:local="clr-namespace:GettingStarted;assembly=GettingStarted"
              x:Class="GettingStarted.MainPage">             
              
@@ -332,7 +330,7 @@ SortDescriptor object holds the following three properties:
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
-             xmlns:data="clr-namespace:Syncfusion.Maui.DataSource;assembly=Syncfusion.Maui.DataSource"            
+             xmlns:data="clr-namespace:Syncfusion.DataSource;assembly=Syncfusion.Maui.DataSource"            
              xmlns:local="clr-namespace:GettingStarted;assembly=GettingStarted"
              x:Class="GettingStarted.MainPage">             
              
@@ -431,7 +429,7 @@ It also supports you to stick the group header by enabling the `SfListView.IsSti
 {% tabs %}
 {% highlight xaml %}
 <ContentPage  xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
-              xmlns:data="clr-namespace:Syncfusion.Maui.DataSource;assembly=Syncfusion.Maui.DataSource">
+              xmlns:data="clr-namespace:Syncfusion.DataSource;assembly=Syncfusion.Maui.DataSource">
   <syncfusion:SfListView x:Name="listView">
     <syncfusion:SfListView.DataSource>
       <data:DataSource>
@@ -451,7 +449,7 @@ It also supports you to stick the group header by enabling the `SfListView.IsSti
 {% endhighlight %}
 {% endtabs %}
 
-![Grouping](Images/GettingStarted_Grouping.png)
+![.Net MAUI ListView with Grouping](Images/getting-started/maui-listview-with-grouping.jpg)
 
 ## Selection
 
@@ -542,4 +540,4 @@ listView.FooterTemplate = new DataTemplate(() =>
 {% endhighlight %}
 {% endtabs %}
 
-![Header and Footer](Images/GettingStarted_Header_Footer.png)
+![.Net MAUI ListView with Header and Footer](Images/getting-started/maui-listview-with-header-and-footer.jpg)
