@@ -260,7 +260,7 @@ namespace GettingStarted
 
 You can also download the entire source code of this demo [here](https://github.com/SyncfusionExamples/gettingstarted-listview-.net-maui).
 
-![.Net MAUI ListView with ItemTemplate](Images/getting-started/maui-listview-with-item-template.png)
+![.Net MAUI ListView with ItemTemplate](Images/getting-started/maui-listview-with-item-template.jpg)
 
 ## Layouts
 
@@ -285,7 +285,7 @@ listView.ItemsLayout = new GridLayout() { SpanCount = 3 };
 {% endhighlight%}
 {% endtabs %}
 
-![.Net MAUI ListView with GridLayout](Images/getting-started/maui-listview-with-grid-layout.png)
+![.Net MAUI ListView with GridLayout](Images/getting-started/maui-listview-with-grid-layout.jpg)
 
 ## DataSource
 
@@ -449,7 +449,7 @@ It also supports you to stick the group header by enabling the `SfListView.IsSti
 {% endhighlight %}
 {% endtabs %}
 
-![.Net MAUI ListView with Grouping](Images/getting-started/maui-listview-with-grouping.png)
+![.Net MAUI ListView with Grouping](Images/getting-started/maui-listview-with-grouping.jpg)
 
 ## Selection
 
@@ -540,4 +540,4 @@ listView.FooterTemplate = new DataTemplate(() =>
 {% endhighlight %}
 {% endtabs %}
 
-![.Net MAUI ListView with Header and Footer](Images/getting-started/maui-listview-with-header-and-footer.png)
+![.Net MAUI ListView with Header and Footer](Images/getting-started/maui-listview-with-header-and-footer.jpg)
