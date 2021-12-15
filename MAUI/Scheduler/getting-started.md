@@ -1,0 +1,539 @@
+---
+layout: post
+title: Getting Started with .NET MAUI Scheduler control | Syncfusion
+description: Learn here all about getting started with Syncfusion .NET MAUI Scheduler(SfScheduler) control, its basic features to schedule the events
+platform: maui
+control: SfScheduler
+documentation: ug
+---
+
+# Getting Started with .NET MAUI Scheduler (SfScheduler)
+
+This section explains how to populate the appointments to the Scheduler as well as the essential aspects for getting started with the Scheduler and also provides a walk-through to configure the .NET MAUI Scheduler control in a real-time scenario.
+
+## Creating an application using the .NET MAUI Scheduler
+
+1. Create a new .NET MAUI application in Visual Studio.
+
+2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfScheduler to your project, open the NuGet package manager in Visual Studio, search for `Syncfusion.Maui.Scheduler` and then install it.
+
+3. To initialize the control, import the control namespace `Syncfusion.Maui.Scheduler` in XAML or C# code.
+
+4. Initialize `SfScheduler.`
+
+{% tabs %}
+{% highlight xaml %}
+
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler />
+</ContentPage>
+
+{% endhighlight %}
+{% highlight c# %}
+
+using Syncfusion.Maui.Scheduler;
+. . .
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfScheduler scheduler = new SfScheduler();
+        this.Content = scheduler;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Register the handler
+
+The `Syncfusion.Maui.Core` nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
+
+{% highlight C# %}
+
+namespace GettingStarted
+{
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+
+            builder.ConfigureSyncfusionCore();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                fonts.AddFont("Segoe-mdl2.ttf", "SegoeMDL2");
+            });
+
+            return builder.Build();
+        }
+    }
+}
+
+{% endhighlight %}
+
+## Change different Scheduler Views
+
+The `.NET MAUI Scheduler` control provides eight different types of views to display dates and it can be assigned to the control by using the `View` property. The control is assigned to the `Day` view by default. The current date will be displayed initially for all the Scheduler views.
+
+{% tabs %}
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" View="Day"/>
+
+{% endhighlight %}
+{% highlight c# %}
+
+this.Scheduler.View = SchedulerView.Day;
+
+{% endhighlight %}
+{% endtabs %}
+
+## Appointments
+
+The `.NET MAUI Scheduler` has a built-in capability to handle the appointment arrangement internally based on the `SchedulerAppointment` collections. Allocate the collection generated to the Appointments property.
+
+### Adding Appointments
+
+The `SchedulerAppointment` is a class that includes the specific scheduled appointment. It has some basic properties such as `StartTime`, `EndTime` `Subject`, and some additional information about the appointment can be added with `Notes`, `Location`, and `IsAllDay` properties.
+
+{% tabs %}
+{% highlight c# %}
+
+// Creating an instance for the scheduler appointment collection.
+var appointment = new ObservableCollection<SchedulerAppointment>();
+
+//Adding scheduler appointment in the schedule appointment collection. 
+appointment.Add(new SchedulerAppointment()
+{
+    StartTime = DateTime.Today.AddHours(9),
+    EndTime = DateTime.Today.AddHours(10),
+    Subject = "Client Meeting",
+    Location = "Hutchison road",
+});
+
+//Adding the scheduler appointment collection to the AppointmentsSource of .NET MAUI Scheduler.
+this.Scheduler.AppointmentsSource = appointment;
+
+{% endhighlight %}
+{% endtabs %}
+
+### Events/Appointments data mapping
+
+Map the custom appointments data to our scheduler.
+
+N> The CustomAppointment class should contain two DateTime fields and a string field as mandatory.
+
+Here are the steps to render meetings using the `.NET MAUI Scheduler` control with respective custom data properties created in a class `Meeting.`
+
+* [Creating custom class to map that objects with SchedulerAppointment](#creating-custom-class-to-map-that-objects-with-SchedulerAppointment)
+* [Create view model](#create-view-model)
+* [Mapping the data object to SchedulerAppointment](#mapping-the-data-object-to-SchedulerAppointment)
+* [Bind appointment source for Scheduler](#binding-appointment-source-for-Scheduler-control)
+
+### Creating custom class to map that object with appointment
+
+Create a custom class `Meeting` with mandatory fields `From,` `To,` and `EventName`.
+
+{% tabs %}
+{% highlight c# %}  
+
+/// <summary>    
+/// Represents the custom data properties.    
+/// </summary>    
+public class Meeting
+{
+    public DateTime From { get; set; }
+    public DateTime To { get; set; }
+    public bool IsAllDay { get; set; }
+    public string EventName { get; set; }
+    public string Notes { get; set; }
+    public TimeZoneInfo StartTimeZone { get; set; }
+    public TimeZoneInfo EndTimeZone { get; set; }
+    public Brush Background { get; set; }
+    public object RecurrenceId { get; set; }
+    public object Id { get; set; }
+    public string RecurrenceRule { get; set; }
+    public ObservableCollection<DateTime> RecurrenceExceptions { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+N> Inherit this class from the `INotifyPropertyChanged` for dynamic changes in custom data.
+
+### Create view model
+
+By setting `From` and `To` of Meeting class, schedule meetings for a specific day. Change the `Subject` and `Background` of the appointment using the `EventName` and `Background` properties. Define the list of custom appointments in a separate class of `ViewModel`.
+
+{% tabs %}
+{% highlight c# %}
+
+/// <summary>
+/// The data binding View Model.
+/// </summary>
+public class SchedulerViewModel
+{
+    /// <summary>
+    /// The subject collections.
+    /// </summary>
+    private List<string> subjectCollection;
+
+    /// <summary>
+    /// The notes collection.
+    /// </summary>
+    private List<string> noteCollection;
+
+    /// <summary>
+    /// The color collection
+    /// </summary>
+    private List<Brush> colorCollection;
+
+    /// <summary>
+    /// Initializes a new instance of the <see cref="SchedulerViewModel" /> class.
+    /// </summary>
+    public SchedulerViewModel()
+    {
+        this.CreateSubjectCollection();
+        this.CreateColorCollection();
+        this.CreateNoteCollection();
+        this.IntializeAppoitments();
+    }
+
+    /// <summary>
+    /// Gets or sets appointments.
+    /// </summary>
+    public ObservableCollection<Meeting> Events { get; set; }
+
+    /// <summary>
+    /// Method to create the note collection.
+    /// </summary>
+    private void CreateNoteCollection()
+    {
+        this.noteCollection = new List<string>();
+        this.noteCollection.Add("Consulting firm laws with business advisers");
+        this.noteCollection.Add("Execute Project Scope");
+        this.noteCollection.Add("Project Scope & Deliverables");
+        this.noteCollection.Add("Executive summary");
+        this.noteCollection.Add("Try to reduce the risks");
+        this.noteCollection.Add("Encourages the integration of mind, body, and spirit");
+        this.noteCollection.Add("Execute Project Scope");
+        this.noteCollection.Add("Project Scope & Deliverables");
+        this.noteCollection.Add("Executive summary");
+        this.noteCollection.Add("Try to reduce the risk");
+    }
+
+    /// <summary>
+    /// Method to initialize the appointments.
+    /// </summary>
+    private void IntializeAppoitments()
+    {
+        this.Events = new ObservableCollection<Meeting>();
+        Random randomTime = new Random();
+        List<Point> randomTimeCollection = this.GettingTimeRanges();
+
+        DateTime date;
+        DateTime dateFrom = DateTime.Now.AddDays(-50);
+        DateTime dateTo = DateTime.Now.AddDays(50);
+
+        for (date = dateFrom; date < dateTo; date = date.AddDays(1))
+        {
+            for (int additionalAppointmentIndex = 0; additionalAppointmentIndex < 1; additionalAppointmentIndex++)
+            {
+                var meeting = new Meeting();
+                int hour = randomTime.Next((int)randomTimeCollection[additionalAppointmentIndex].X, (int)randomTimeCollection[additionalAppointmentIndex].Y);
+                meeting.From = new DateTime(date.Year, date.Month, date.Day, hour, 0, 0);
+                meeting.To = meeting.From.AddHours(1);
+                meeting.EventName = this.subjectCollection[randomTime.Next(9)];
+                meeting.Background = this.colorCollection[randomTime.Next(10)];
+                meeting.IsAllDay = false;
+                meeting.Notes = this.noteCollection[randomTime.Next(10)];
+                meeting.StartTimeZone = TimeZoneInfo.Local;
+                meeting.EndTimeZone = TimeZoneInfo.Local;
+                this.Events.Add(meeting);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Method to create the subject collection.
+    /// </summary>
+    private void CreateSubjectCollection()
+    {
+        this.subjectCollection = new List<string>();
+        this.subjectCollection.Add("General Meeting");
+        this.subjectCollection.Add("Plan Execution");
+        this.subjectCollection.Add("Project Plan");
+        this.subjectCollection.Add("Consulting");
+        this.subjectCollection.Add("Performance Check");
+        this.subjectCollection.Add("Support");
+        this.subjectCollection.Add("Development Meeting");
+        this.subjectCollection.Add("Scrum");
+        this.subjectCollection.Add("Project Completion");
+        this.subjectCollection.Add("Release updates");
+        this.subjectCollection.Add("Performance Check");
+    }
+
+    /// <summary>
+    /// Method to get timing range.
+    /// </summary>
+    /// <returns>return time collection</returns>
+    private List<Point> GettingTimeRanges()
+    {
+        List<Point> randomTimeCollection = new List<Point>();
+        randomTimeCollection.Add(new Point(9, 11));
+        randomTimeCollection.Add(new Point(12, 14));
+        randomTimeCollection.Add(new Point(15, 17));
+
+        return randomTimeCollection;
+    }
+
+    /// <summary>
+    /// Method to create the color collection.
+    /// </summary>
+    private void CreateColorCollection()
+    {
+        this.colorCollection = new List<Brush>();
+
+        this.colorCollection.Add(new SolidColorBrush(Color.FromArgb("#FF8B1FA9")));
+        this.colorCollection.Add(new SolidColorBrush(Color.FromArgb("#FFD20100")));
+        this.colorCollection.Add(new SolidColorBrush(Color.FromArgb("#FFFC571D")));
+        this.colorCollection.Add(new SolidColorBrush(Color.FromArgb("#FF36B37B")));
+        this.colorCollection.Add(new SolidColorBrush(Color.FromArgb("#FF3D4FB5")));
+        this.colorCollection.Add(new SolidColorBrush(Color.FromArgb("#FFE47C73")));
+        this.colorCollection.Add(new SolidColorBrush(Color.FromArgb("#FF636363")));
+        this.colorCollection.Add(new SolidColorBrush(Color.FromArgb("#FF85461E")));
+        this.colorCollection.Add(new SolidColorBrush(Color.FromArgb("#FF0F8644")));
+        this.colorCollection.Add(new SolidColorBrush(Color.FromArgb("#FF01A1EF")));
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Mapping the data object to SchedulerAppointment
+Map those properties of the `Meeting` class with our `.NET MAUI Scheduler` control by using the `AppointmentMapping` property.
+
+{% tabs %}
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" 
+                       AppointmentsSource="{Binding Events}"
+                       View="Week" >
+    <scheduler:SfScheduler.AppointmentMapping>
+        <scheduler:SchedulerAppointmentMapping
+                Subject="EventName"
+                StartTime="From"
+                EndTime="To"
+                Background="Background"
+                IsAllDay="IsAllDay"
+                StartTimeZone="StartTimeZone"
+                EndTimeZone="EndTimeZone"
+                Id="Id"        
+                RecurrenceExceptionDates="RecurrenceExceptions"
+                RecurrenceRule="RecurrenceRule"
+                RecurrenceId="RecurrenceId"/>
+    </scheduler:SfScheduler.AppointmentMapping>
+</scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight c# %} 
+
+using Syncfusion.Maui.Scheduler;
+
+SchedulerAppointmentMapping appointmentMapping = new SchedulerAppointmentMapping();
+appointmentMapping.Subject = "EventName";
+appointmentMapping.StartTime = "From";
+appointmentMapping.EndTime = "To";
+appointmentMapping.Background = "Background";
+appointmentMapping.IsAllDay = "IsAllDay";
+appointmentMapping.StartTimeZone = "StartTimeZone";
+appointmentMapping.EndTimeZone = "EndTimeZone";
+appointmentMapping.Id = "Id";
+appointmentMapping.RecurrenceExceptionDates = "RecurrenceExceptions";
+appointmentMapping.RecurrenceRule = "RecurrenceRule";
+appointmentMapping.RecurrenceId = "RecurrenceId";
+this.Scheduler.AppointmentMapping = appointmentMapping;
+
+{% endhighlight %}
+{% endtabs %}
+
+### Bind appointment source for Scheduler
+Create meetings of type `ObservableCollection<Meeting>` and assign those appointments collection to the `AppointmentsSource` property of `SfScheduler`.
+
+{% tabs %}
+{% highlight xaml %}
+
+<schedule:SfScheduler
+                    AppointmentsSource="{Binding Events}">
+    <schedule:SfScheduler.BindingContext>
+        <local:SchedulerViewModel/>
+    </schedule:SfScheduler.BindingContext>
+</schedule:SfScheduler>
+
+{% endhighlight %}
+{% highlight c# %}
+
+var viewModel = new SchedulerDataBindingViewModel();
+this.Scheduler.AppointmentsSource = viewModel.Events;
+
+{% endhighlight %}
+{% endtabs %}
+
+## Change first day of week
+
+The scheduler allows customization on the first day of the week with the `FirstDayOfWeek` property. The Scheduler will default to "Sunday" as the first day of the week.
+
+The following code shows the Scheduler with `Tuesday` as the first day of the week.
+
+{% tabs %}  
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" FirstDayOfWeek="Tuesday"/>
+
+{% endhighlight %}
+{% highlight c# %}
+
+this.Scheduler.FirstDayOfWeek = DayOfWeek.Tuesday;
+
+{% endhighlight %}  
+{% endtabs %}  
+
+## Cell selection background
+
+The selection view of Scheduler can be customized by using the `SelectedCellBackground` property in the `SfScheduler.`
+
+{% tabs %}  
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" SelectedCellBackground="Orange"/>
+
+{% endhighlight %}
+{% highlight c# %}
+
+this.Scheduler.SelectedCellBackground = Brush.Orange;
+
+{% endhighlight %}  
+{% endtabs %}  
+
+## Today highlight brush
+
+The today highlight brush of Scheduler can be customized by using the `TodayHighlightBrush` property in the `SfScheduler,` which will highlight the today's circle and text in Scheduler view header and month cell.
+
+{% tabs %}  
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" TodayHighlightBrush="Orange"/>
+
+{% endhighlight %}
+{% highlight c# %}
+
+this.Scheduler.TodayHighlightBrush = Brush.Orange;
+
+{% endhighlight %}  
+{% endtabs %} 
+
+## Cell border brush
+
+The vertical and horizontal line color of the Scheduler can be customized by using the `CellBorderBrush` property in the `SfScheduler.`
+
+{% tabs %}  
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" CellBorderBrush="Orange"/>
+
+{% endhighlight %}
+{% highlight c# %}
+
+this.Scheduler.CellBorderBrush = Brush.Orange;
+
+{% endhighlight %}  
+{% endtabs %} 
+
+## Background color
+
+The Scheduler background color can be customized by using the `BackgroundColor` property in the `SfScheduler.`
+
+{% tabs %}  
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" BackgroundColor="LightBlue"/>
+
+{% endhighlight %}
+{% highlight c# %}
+
+this.Scheduler.BackgroundColor = Colors.LightBlue;
+
+{% endhighlight %}  
+{% endtabs %}
+
+## Show navigation arrow
+
+By Using the `ShowNavigationArrows` property of the `SfScheduler,` you can navigate to the previous or next views of the Scheduler. By default, the value `ShowNavigationArrows` is `true,` which displays the navigation icons and `Today` button in the header view. It allows to quickly navigate to today and previous or next views.
+
+{% tabs %}  
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" ShowNavigationArrows="False"/>
+
+{% endhighlight %}
+{% highlight c# %}
+
+this.Scheduler.ShowNavigationArrows = false;
+
+{% endhighlight %}  
+{% endtabs %}
+
+## Show week number
+
+Display the week number of the year in all Scheduler views of the `SfScheduler` by setting the `ShowWeekNumber` property as `true` and by default it is `false.` The Week numbers will be displayed based on the ISO standard.
+
+{% tabs %}  
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" ShowWeekNumber="True"/>
+
+{% endhighlight %}
+{% highlight c# %}
+
+this.Scheduler.ShowWeekNumber = true;
+
+{% endhighlight %}  
+{% endtabs %}
+
+N> This property will not be applicable for the `SchedulerView` is `Timeline Month.`
+
+## Customize the week number text style
+
+The Week number text style of the Scheduler can be customized by using the `WeekNumberStyle` property and it allows to customize the `TextStyle` and the `Background` color in the Week number of the `SfScheduler.`
+
+{% tabs %}
+{% highlight c# %}  
+
+this.Scheduler.ShowWeekNumber = true;
+var schedulerTextStyle = new SchedulerTextStyle()
+{
+    TextColor = Colors.Red,
+    FontSize = 14
+};
+
+var schedulerWeekNumberStyle = new SchedulerWeekNumberStyle()
+{
+    Background = Brush.LightGreen,
+    TextStyle = schedulerTextStyle
+};
+
+this.Scheduler.WeekNumberStyle = schedulerWeekNumberStyle;
+
+{% endhighlight %}
+{% endtabs %}
+
+N> It is not applicable for the `SchedulerView` is `Timeline Month.` and it is applied only to when the `ShowWeekNumber` property is `enabled.`
