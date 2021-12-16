@@ -13,41 +13,20 @@ This section helps to learn about how to add tooltip in the slider.
 
 ## Enable tooltip
 
-You can enable tooltip for the thumb by setting the `ToolTipShape` property to `SliderToolTipShape.Rectangular`. It is used to clearly indicate the current selection of the value during interaction. By default, tooltip text is formatted with either numberFormat or dateFormat. The default value of the `ToolTipShape` property is `SliderToolTipShape.None`.
+You can enable tooltip for the thumb by setting the `ToolTipShape` property to `SliderToolTipShape.Rectangle`. It is used to clearly indicate the current selection of the value during interaction. By default, tooltip text is formatted with either numberFormat or dateFormat. The default value of the `ToolTipShape` property is `SliderToolTipShape.None`.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage>
-     <sliders:SfSlider Minimum="0" Maximum="10" Interval="2" Value="6" ToolTipShape="Rectangular" ShowLabels="True">
-     </sliders:SfSlider>
- </ContentPage>
+  <sliders:SfSlider ToolTipShape="Rectangle" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Sliders;
-
-namespace SliderGettingStarted
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-          	SfSlider slider = new SfSlider();
-            slider.Minimum = 0;
-            slider.Maximum = 10;
-            slider.Value = 6;
-            slider.Interval = 2;
-            slider.ShowLabels = true;
-            slider.ToolTipShape = SliderToolTipShape.Rectangular;
-            this.Content = slider;
-        }
-    }
-}
+   SfSlider slider = new SfSlider();
+   slider.ToolTipShape = SliderToolTipShape.Rectangle;
 
 {% endhighlight %}
 
@@ -68,31 +47,23 @@ You can format or change the whole tooltip label text using the `ToolTipLabelCre
 
 {% highlight xaml %}
 
-<ContentPage>
-     <sliders:SfSlider Minimum="2" Maximum="10" Interval="2" ToolTipLabelCreated="OnTooltipLabelCreated" Value="6" ToolTipShape="Rectangular" ShowLabels="True">
-     </sliders:SfSlider>
- </ContentPage>
+  <sliders:SfSlider ToolTipLabelCreated="OnTooltipLabelCreated" 
+                    ToolTipShape="Rectangle">
+  </sliders:SfSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Sliders;
-
-namespace SliderGettingStarted
 {
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-        }
+   SfSlider slider = new SfSlider();
+   slider.ToolTipShape = SliderToolTipShape.Rectangle;
+   slider.ToolTipLabelCreated += OnTooltipLabelCreated;
+}
 
-        private void OnTooltipLabelCreated(object sender, SliderLabelCreatedEventArgs e)
-		{
-			e.Text = "$" + e.Text;
-		}
-    }
+private void OnTooltipLabelCreated(object sender, SliderLabelCreatedEventArgs e)
+{
+    e.Text = "$" + e.Text;
 }
 
 {% endhighlight %}
@@ -109,41 +80,23 @@ You can change the appearance of the tooltip text like color, stroke color, padd
 
 {% highlight xaml %}
 
-<ContentPage>
-   <sliders:SfSlider Minimum="2" Maximum="10" Interval="2" Value="6" ToolTipShape="Rectangular" ShowLabels="True">
+ <sliders:SfSlider ToolTipShape="Rectangle">
       <sliders:SfSlider.ToolTipStyle>
-         <sliders:SliderToolTipStyle Color="#F7B1AE" StrokeColor="#EE3F3F" StrokeWidth="2" />
+         <sliders:SliderToolTipStyle Color="#F7B1AE" 
+	                             StrokeColor="#EE3F3F" 
+				     StrokeWidth="2" />
       </sliders:SfSlider.ToolTipStyle>
-   </sliders:SfSlider>
- </ContentPage>
+ </sliders:SfSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Sliders;
-
-namespace SliderGettingStarted
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfSlider slider = new SfSlider();
-            slider.Minimum = 2;
-            slider.Maximum = 10;
-            slider.Value = 6;
-            slider.Interval = 2;
-            slider.ShowLabels = true;
-            slider.ToolTipShape = SliderToolTipShape.Rectangular;
-            slider.ToolTipStyle.Color = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
-            slider.ToolTipStyle.StrokeColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
-            slider.ToolTipStyle.StrokeWidth = 2;
-            this.Content = slider;
-        }
-    }
-}
+  SfSlider slider = new SfSlider();
+  slider.ToolTipShape = SliderToolTipShape.Rectangle;
+  slider.ToolTipStyle.Color = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
+  slider.ToolTipStyle.StrokeColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+  slider.ToolTipStyle.StrokeWidth = 2;
 
 {% endhighlight %}
 
