@@ -21,29 +21,29 @@ For example, if `Minimum` is 0.0 and `Maximum` is 10.0 and `Interval` is 2.0, th
 
 {% highlight xaml %}
 
-    <sliders:SfRangeSlider Minimum="0" 
-                           Maximum="10" 
-                           Interval="2"  
-                           RangeStart="2" 
-                           RangeEnd="8" 
-                           ShowLabels="True" 
-                           ShowTicks="True" 
-                           ShowDividers="True">
-    </sliders:SfRangeSlider>
+<sliders:SfRangeSlider Minimum="0" 
+                       Maximum="10" 
+                       Interval="2"  
+                       RangeStart="2" 
+                       RangeEnd="8" 
+                       ShowLabels="True" 
+                       ShowTicks="True" 
+                       ShowDividers="True">
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SfRangeSlider rangeSlider = new SfRangeSlider();
-    rangeSlider.Minimum = 0;
-    rangeSlider.Maximum = 10;
-    rangeSlider.RangeStart = 2;
-    rangeSlider.RangeEnd = 8;
-    rangeSlider.Interval = 2;
-    rangeSlider.ShowLabels = true;
-    rangeSlider.ShowTicks = true;
-    rangeSlider.ShowDividers = true;
+SfRangeSlider rangeSlider = new SfRangeSlider();
+rangeSlider.Minimum = 0;
+rangeSlider.Maximum = 10;
+rangeSlider.RangeStart = 2;
+rangeSlider.RangeEnd = 8;
+rangeSlider.Interval = 2;
+rangeSlider.ShowLabels = true;
+rangeSlider.ShowTicks = true;
+rangeSlider.ShowDividers = true;
          
 {% endhighlight %}
 
@@ -63,34 +63,34 @@ For example, if `Minimum` is `DateTime(2000, 01, 01)` and `Maximum` is `DateTime
 
 {% highlight xaml %}
 
-    <sliders:SfRangeSlider Minimum="2000-01-01" 
-                           Maximum="2005-01-01" 
-                           Interval="1" 
-                           RangeStart="2001-01-01" 
-                           RangeEnd="2004-01-01" 
-                           DateFormat="yyyy" 
-                           DateIntervalType="Years" 
-                           ShowLabels="True" 
-                           ShowTicks="True" 
-                           ShowDividers="True">
-    </sliders:SfRangeSlider>
+<sliders:SfRangeSlider Minimum="2000-01-01" 
+                       Maximum="2005-01-01" 
+                       Interval="1" 
+                       RangeStart="2001-01-01" 
+                       RangeEnd="2004-01-01" 
+                       DateFormat="yyyy" 
+                       DateIntervalType="Years" 
+                       ShowLabels="True" 
+                       ShowTicks="True" 
+                       ShowDividers="True">
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SfRangeSlider rangeSlider = new SfRangeSlider();
-    rangeSlider.Minimum = new DateTime(2000, 01, 01);
-    rangeSlider.Maximum = new DateTime(2005, 01, 01);
-    rangeSlider.RangeStart = new DateTime(2001, 01, 01); 
-    rangeSlider.RangeEnd = new DateTime(2004, 01, 01);            
-    rangeSlider.Interval = 1;
-    rangeSlider.DateIntervalType = SliderDateIntervalType.Years;
-    rangeSlider.DateFormat = "yyyy";
-    rangeSlider.ShowLabels = true;
-    rangeSlider.ShowTicks = true;
-    rangeSlider.ShowDividers = true;
-         
+SfRangeSlider rangeSlider = new SfRangeSlider();
+rangeSlider.Minimum = new DateTime(2000, 01, 01);
+rangeSlider.Maximum = new DateTime(2005, 01, 01);
+rangeSlider.RangeStart = new DateTime(2001, 01, 01); 
+rangeSlider.RangeEnd = new DateTime(2004, 01, 01);            
+rangeSlider.Interval = 1;
+rangeSlider.DateIntervalType = SliderDateIntervalType.Years;
+rangeSlider.DateFormat = "yyyy";
+rangeSlider.ShowLabels = true;
+rangeSlider.ShowTicks = true;
+rangeSlider.ShowDividers = true;
+        
 {% endhighlight %}
 
 {% endtabs %}
@@ -105,14 +105,14 @@ You can move the thumb in discrete manner for numeric values using the `StepSize
 
 {% highlight xaml %}
 
-    <sliders:SfRangeSlider StepSize="0.2" /> 
+ <sliders:SfRangeSlider StepSize="0.2" /> 
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SfRangeSlider rangeSlider = new SfRangeSlider();
-    rangeSlider.StepSize = 0.2;
+SfRangeSlider rangeSlider = new SfRangeSlider();
+rangeSlider.StepSize = 0.2;
          
 {% endhighlight %}
 
@@ -130,23 +130,23 @@ For example, if `Minimum` is DateTime(2015, 01, 01) and `Maximum` is DateTime(20
 
 {% highlight xaml %}
 
-    <sliders:SfRangeSlider Minimum="2000-01-01" 
-                           Maximum="2005-01-01" 
-                           RangeStart="2001-01-01"
-                           RangeEnd="2004-01-01"  
-                           StepDuration="1" >
-    </sliders:SfRangeSlider>
+<sliders:SfRangeSlider Minimum="2000-01-01" 
+                       Maximum="2005-01-01" 
+                       RangeStart="2001-01-01"
+                       RangeEnd="2004-01-01"  
+                       StepDuration="1" >
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SfRangeSlider rangeSlider = new SfRangeSlider();
-    rangeSlider.Minimum = new DateTime(2000, 01, 01);
-    rangeSlider.Maximum = new DateTime(2005, 01, 01);
-    rangeSlider.RangeStart = new DateTime(2001, 01, 01); 
-    rangeSlider.RangeEnd = new DateTime(2004, 01, 01);            
-    rangeSlider.StepDuration = new SliderStepDuration(years: 1);
+SfRangeSlider rangeSlider = new SfRangeSlider();
+rangeSlider.Minimum = new DateTime(2000, 01, 01);
+rangeSlider.Maximum = new DateTime(2005, 01, 01);
+rangeSlider.RangeStart = new DateTime(2001, 01, 01); 
+rangeSlider.RangeEnd = new DateTime(2004, 01, 01);            
+rangeSlider.StepDuration = new SliderStepDuration(years: 1);
          
 {% endhighlight %}
 

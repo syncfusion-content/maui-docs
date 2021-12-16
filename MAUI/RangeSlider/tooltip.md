@@ -19,14 +19,14 @@ You can enable tooltip for the thumb by setting the `ToolTipShape` property to `
 
 {% highlight xaml %}
 
-     <sliders:SfRangeSlider ToolTipShape="Rectangular"/>
+<sliders:SfRangeSlider ToolTipShape="Rectangular"/>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-     SfRangeSlider rangeSlider = new SfRangeSlider();
-     rangeSlider.ToolTipShape = SliderToolTipShape.Rectangular;
+SfRangeSlider rangeSlider = new SfRangeSlider();
+rangeSlider.ToolTipShape = SliderToolTipShape.Rectangular;
 
 {% endhighlight %}
 
@@ -47,22 +47,22 @@ You can format or change the whole tooltip label text using the `ToolTipLabelCre
 
 {% highlight xaml %}
 
-     <sliders:SfRangeSlider ToolTipShape="Rectangular" 
-                            ToolTipLabelCreated="OnTooltipLabelCreated">
-     </sliders:SfRangeSlider>
+<sliders:SfRangeSlider ToolTipShape="Rectangular" 
+                       ToolTipLabelCreated="OnTooltipLabelCreated">
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
-   {
-    	SfRangeSlider rangeSlider = new SfRangeSlider();
-     rangeSlider.ToolTipShape = SliderToolTipShape.Rectangular;
-     rangeSlider.ToolTipLabelCreated += OnTooltipLabelCreated;
-   }
-   private void OnTooltipLabelCreated(object sender, SliderLabelCreatedEventArgs e)
-   {
-		e.Text = "$" + e.Text;
-   }
+{
+    SfRangeSlider rangeSlider = new SfRangeSlider();
+    rangeSlider.ToolTipShape = SliderToolTipShape.Rectangular;
+    rangeSlider.ToolTipLabelCreated += OnTooltipLabelCreated;
+ }
+ private void OnTooltipLabelCreated(object sender, SliderLabelCreatedEventArgs e)
+ {
+     e.Text = "$" + e.Text;
+ }
 
 {% endhighlight %}
 
@@ -78,23 +78,23 @@ You can change the appearance of the tooltip text like color, stroke color, padd
 
 {% highlight xaml %}
 
-     <sliders:SfRangeSlider  ToolTipShape="Rectangular">
-       <sliders:SfRangeSlider.ToolTipStyle>
-          <sliders:SliderToolTipStyle Color="#F7B1AE" 
-                                      StrokeColor="#EE3F3F" 
-                                      StrokeWidth="2" />
-       </sliders:SfRangeSlider.ToolTipStyle>
-     </sliders:SfRangeSlider>
+ <sliders:SfRangeSlider  ToolTipShape="Rectangular">
+    <sliders:SfRangeSlider.ToolTipStyle>
+       <sliders:SliderToolTipStyle Color="#F7B1AE" 
+                                   StrokeColor="#EE3F3F" 
+                                   StrokeWidth="2" />
+    </sliders:SfRangeSlider.ToolTipStyle>
+ </sliders:SfRangeSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-     SfRangeSlider rangeSlider = new SfRangeSlider();
-     rangeSlider.ToolTipShape = SliderToolTipShape.Rectangular;
-     rangeSlider.ToolTipStyle.Color = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
-     rangeSlider.ToolTipStyle.StrokeColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
-     rangeSlider.ToolTipStyle.StrokeWidth = 2;
+ SfRangeSlider rangeSlider = new SfRangeSlider();
+ rangeSlider.ToolTipShape = SliderToolTipShape.Rectangular;
+ rangeSlider.ToolTipStyle.Color = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
+ rangeSlider.ToolTipStyle.StrokeColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+ rangeSlider.ToolTipStyle.StrokeWidth = 2;
 
 {% endhighlight %}
 

@@ -21,17 +21,17 @@ For example, if `Minimum` is 0.0 and `Maximum` is 10.0 and `Interval` is 2.0, th
 
 {% highlight xaml %}
 
-    <sliders:SfRangeSlider Interval="0.2"  
-                           ShowTicks="True">
-    </sliders:SfRangeSlider>
+<sliders:SfRangeSlider Interval="0.2"  
+                       ShowTicks="True">
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SfRangeSlider rangeSlider = new SfRangeSlider();
-	rangeSlider.Interval = 0.2;
-	rangeSlider.ShowTicks = true;
+SfRangeSlider rangeSlider = new SfRangeSlider();
+rangeSlider.Interval = 0.2;
+rangeSlider.ShowTicks = true;
 
 {% endhighlight %}
 
@@ -47,19 +47,19 @@ It is used to represent the number of smaller ticks between two major ticks. For
 
 {% highlight xaml %}
 
-    <sliders:SfRangeSlider  Interval="0.2" 
-                            MinorTicksPerInterval="1" 
-                            ShowTicks="True">
-    </sliders:SfRangeSlider>
+<sliders:SfRangeSlider Interval="0.2" 
+                       MinorTicksPerInterval="1" 
+                       ShowTicks="True">
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SfRangeSlider rangeSlider = new SfRangeSlider();
-	rangeSlider.Interval = 0.2;
-	rangeSlider.MinorTicksPerInterval = 1;
-	rangeSlider.ShowTicks = true;
+SfRangeSlider rangeSlider = new SfRangeSlider();
+rangeSlider.Interval = 0.2;
+rangeSlider.MinorTicksPerInterval = 1;
+rangeSlider.ShowTicks = true;
 
 {% endhighlight %}
 
@@ -79,23 +79,23 @@ The inactive side of the range slider is between the `Minimum` value and the lef
 
 {% highlight xaml %}
 
-    <sliders:SfRangeSlider Interval="0.2" 
-                           ShowTicks="True">
-        <sliders:SfRangeSlider.MajorTickStyle>
-            <sliders:SliderTickStyle ActiveColor="#EE3F3F" 
-                                     InactiveColor="#F7B1AE" />
-        </sliders:SfRangeSlider.MajorTickStyle>
-    </sliders:SfRangeSlider>
+<sliders:SfRangeSlider Interval="0.2" 
+                       ShowTicks="True">
+    <sliders:SfRangeSlider.MajorTickStyle>
+         <sliders:SliderTickStyle ActiveColor="#EE3F3F" 
+                                  InactiveColor="#F7B1AE" />
+    </sliders:SfRangeSlider.MajorTickStyle>
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SfRangeSlider rangeSlider = new SfRangeSlider();
-	rangeSlider.Interval = 0.2;
-	rangeSlider.ShowTicks = true;
-    rangeSlider.MajorTickStyle.ActiveColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
-    rangeSlider.MajorTickStyle.InactiveColor = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
+SfRangeSlider rangeSlider = new SfRangeSlider();
+rangeSlider.Interval = 0.2;
+rangeSlider.ShowTicks = true;
+rangeSlider.MajorTickStyle.ActiveColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+rangeSlider.MajorTickStyle.InactiveColor = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
 
 {% endhighlight %}
 
@@ -115,25 +115,25 @@ The inactive side of the range slider is between the `Minimum` value and the lef
 
 {% highlight xaml %}
 
-    <sliders:SfRangeSlider Interval="0.2" 
-                           ShowTicks="True" 
-                           MinorTicksPerInterval="1">
-        <sliders:SfRangeSlider.MinorTickStyle>
-            <sliders:SliderTickStyle ActiveColor="#EE3F3F" 
-                                     InactiveColor="#F7B1AE" />
-        </sliders:SfRangeSlider.MinorTickStyle>
-    </sliders:SfRangeSlider>
+<sliders:SfRangeSlider Interval="0.2" 
+                       ShowTicks="True" 
+                       MinorTicksPerInterval="1">
+    <sliders:SfRangeSlider.MinorTickStyle>
+         <sliders:SliderTickStyle ActiveColor="#EE3F3F" 
+                                  InactiveColor="#F7B1AE" />
+     </sliders:SfRangeSlider.MinorTickStyle>
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SfRangeSlider rangeSlider = new SfRangeSlider();
-	rangeSlider.Interval = 0.2;
-	rangeSlider.ShowTicks = true;
-    rangeSlider.MinorTicksPerInterval = 1;
-    rangeSlider.MinorTickStyle.ActiveColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
-    rangeSlider.MinorTickStyle.InactiveColor = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
+SfRangeSlider rangeSlider = new SfRangeSlider();
+rangeSlider.Interval = 0.2;
+rangeSlider.ShowTicks = true;
+rangeSlider.MinorTicksPerInterval = 1;
+rangeSlider.MinorTickStyle.ActiveColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+rangeSlider.MinorTickStyle.InactiveColor = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
 
 {% endhighlight %}
 
@@ -149,30 +149,29 @@ You can change the major and minor ticks size of the range slider using the `Act
 
 {% highlight xaml %}
 
-    <sliders:SfRangeSlider Interval="0.2" 
-                           ShowTicks="True" 
-                           MinorTicksPerInterval="1">
-        <sliders:SfRangeSlider.MinorTickStyle>
-           <sliders:SliderTickStyle ActiveSize="2,10" InactiveSize="2, 10" />
-        </sliders:SfRangeSlider.MinorTickStyle>
-
-        <sliders:SfRangeSlider.MajorTickStyle>
-           <sliders:SliderTickStyle ActiveSize="2,15" InactiveSize="2, 15" />
-        </sliders:SfRangeSlider.MajorTickStyle>
-    </sliders:SfRangeSlider>
+<sliders:SfRangeSlider Interval="0.2" 
+                       ShowTicks="True" 
+                       MinorTicksPerInterval="1">
+    <sliders:SfRangeSlider.MinorTickStyle>
+       <sliders:SliderTickStyle ActiveSize="2,10" InactiveSize="2, 10" />
+    </sliders:SfRangeSlider.MinorTickStyle>
+    <sliders:SfRangeSlider.MajorTickStyle>
+        <sliders:SliderTickStyle ActiveSize="2,15" InactiveSize="2, 15" />
+    </sliders:SfRangeSlider.MajorTickStyle>
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SfRangeSlider rangeSlider = new SfRangeSlider();
-    rangeSlider.Interval = 0.2;
-    rangeSlider.ShowTicks = true;
-    rangeSlider.MinorTicksPerInterval = 1;
-    rangeSlider.MinorTickStyle.ActiveSize = new Size(2, 10);
-    rangeSlider.MinorTickStyle.InactiveSize = new Size(2, 10);
-    rangeSlider.MajorTickStyle.ActiveSize = new Size(2, 15);
-    rangeSlider.MajorTickStyle.InactiveSize = new Size(2, 15);
+SfRangeSlider rangeSlider = new SfRangeSlider();
+rangeSlider.Interval = 0.2;
+rangeSlider.ShowTicks = true;
+rangeSlider.MinorTicksPerInterval = 1;
+rangeSlider.MinorTickStyle.ActiveSize = new Size(2, 10);
+rangeSlider.MinorTickStyle.InactiveSize = new Size(2, 10);
+rangeSlider.MajorTickStyle.ActiveSize = new Size(2, 15);
+rangeSlider.MajorTickStyle.InactiveSize = new Size(2, 15);
 
 {% endhighlight %}
 
@@ -188,26 +187,25 @@ You can adjust the space between track and ticks of the range slider using the `
 
 {% highlight xaml %}
 
-    <sliders:SfRangeSlider Interval="0.2" ShowTicks="True" MinorTicksPerInterval="1">
-            <sliders:SfRangeSlider.MinorTickStyle>
-               <sliders:SliderTickStyle Offset="5" />
-            </sliders:SfRangeSlider.MinorTickStyle>
-
-            <sliders:SfRangeSlider.MajorTickStyle>
-               <sliders:SliderTickStyle Offset="5" />
-            </sliders:SfRangeSlider.MajorTickStyle>
-    </sliders:SfRangeSlider>
+<sliders:SfRangeSlider Interval="0.2" ShowTicks="True" MinorTicksPerInterval="1">
+   <sliders:SfRangeSlider.MinorTickStyle>
+       <sliders:SliderTickStyle Offset="5" />
+    </sliders:SfRangeSlider.MinorTickStyle>
+    <sliders:SfRangeSlider.MajorTickStyle>
+       <sliders:SliderTickStyle Offset="5" />
+    </sliders:SfRangeSlider.MajorTickStyle>
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SfRangeSlider rangeSlider = new SfRangeSlider();
-	rangeSlider.Interval = 0.2;
-	rangeSlider.ShowTicks = true;
-    rangeSlider.MinorTicksPerInterval = 1;
-    rangeSlider.MinorTickStyle.Offset = 5;
-    rangeSlider.MajorTickStyle.Offset = 5;
+SfRangeSlider rangeSlider = new SfRangeSlider();
+rangeSlider.Interval = 0.2;
+rangeSlider.ShowTicks = true;
+rangeSlider.MinorTicksPerInterval = 1;
+rangeSlider.MinorTickStyle.Offset = 5;
+rangeSlider.MajorTickStyle.Offset = 5;
 
 {% endhighlight %}
 
