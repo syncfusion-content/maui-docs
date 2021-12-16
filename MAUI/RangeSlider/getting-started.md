@@ -137,24 +137,23 @@ Set the 'DateTime' values to the `Minimum`, `Maximum`, and `Value` properties to
 
 {% highlight xaml %}
 
- <sliders:SfRangeSlider Minimum="2010-01-01"
-                        Maximum="2020-01-01" 
-                        RangeStart="2012-01-01" 
-                        RangeEnd="2018-01-01" 
-                        ShowLabels="True">
- </sliders:SfRangeSlider>
-
+<sliders:SfRangeSlider Minimum="2010-01-01"
+                       Maximum="2020-01-01" 
+                       RangeStart="2012-01-01" 
+                       RangeEnd="2018-01-01" 
+                       ShowLabels="True">
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SfRangeSlider rangeSlider = new SfRangeSlider();
-	rangeSlider.Minimum = new DateTime(2010, 01, 01);
-	rangeSlider.Maximum = new DateTime(2020, 01, 01);
-	rangeSlider.RangeStart = new DateTime(2012, 01, 01);
-    rangeSlider.RangeEnd = new DateTime(2018, 01, 01);
-	rangeSlider.ShowLabels = true;
+SfRangeSlider rangeSlider = new SfRangeSlider();
+rangeSlider.Minimum = new DateTime(2010, 01, 01);
+rangeSlider.Maximum = new DateTime(2020, 01, 01);
+rangeSlider.RangeStart = new DateTime(2012, 01, 01);
+rangeSlider.RangeEnd = new DateTime(2018, 01, 01);
+rangeSlider.ShowLabels = true;
 
 {% endhighlight %}
 
@@ -170,27 +169,27 @@ The `ShowTicks` property enables ticks in the range slider, while the `MinorTick
 
 {% highlight xaml %}
 
-  <sliders:SfRangeSlider  Minimum="2010-01-01" 
-                          Maximum="2020-01-01" 
-                          RangeStart="2012-01-01" 
-                          RangeEnd="2018-01-01" 
-                          ShowTicks="True" 
-                          Interval="2" 
-                          MinorTicksPerInterval="1">
+<sliders:SfRangeSlider  Minimum="2010-01-01" 
+                        Maximum="2020-01-01" 
+                        RangeStart="2012-01-01" 
+                        RangeEnd="2018-01-01" 
+                        ShowTicks="True" 
+                        Interval="2" 
+                        MinorTicksPerInterval="1">
  </sliders:SfRangeSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SfRangeSlider rangeSlider = new SfRangeSlider();
-	rangeSlider.Minimum = new DateTime(2010, 01, 01);
-	rangeSlider.Maximum = new DateTime(2020, 01, 01);
-	rangeSlider.RangeStart = new DateTime(2012, 01, 01);
-    rangeSlider.RangeEnd = new DateTime(2018, 01, 01);
-    rangeSlider.ShowTicks = true;
-	rangeSlider.Interval = 2;
-	rangeSlider.MinorTicksPerInterval = 1;
+SfRangeSlider rangeSlider = new SfRangeSlider();
+rangeSlider.Minimum = new DateTime(2010, 01, 01);
+rangeSlider.Maximum = new DateTime(2020, 01, 01);
+rangeSlider.RangeStart = new DateTime(2012, 01, 01);
+rangeSlider.RangeEnd = new DateTime(2018, 01, 01);
+rangeSlider.ShowTicks = true;
+rangeSlider.Interval = 2;
+rangeSlider.MinorTicksPerInterval = 1;
 
 {% endhighlight %}
 
@@ -212,8 +211,8 @@ The `Orientation` property allows you to show the range slider in both horizonta
 
 {% highlight C# %}
 
-    SfRangeSlider rangeSlider = new SfRangeSlider();
-    rangeSlider.Orientation = SliderOrientation.Vertical;
+SfRangeSlider rangeSlider = new SfRangeSlider();
+rangeSlider.Orientation = SliderOrientation.Vertical;
 
 {% endhighlight %}
 
@@ -235,8 +234,8 @@ You can invert the range slider using the `IsInversed` property. The default val
 
 {% highlight C# %}
 
-    SfRangeSlider rangeSlider = new SfRangeSlider();
-    rangeSlider.IsInversed = true;
+SfRangeSlider rangeSlider = new SfRangeSlider();
+rangeSlider.IsInversed = true;
 
 {% endhighlight %}
 
@@ -262,21 +261,21 @@ N> The format type (numeric or date) of the range slider is determined based on 
                        ShowLabels="True" 
                        ShowTicks="True" 
                        Interval="20">
- </sliders:SfRangeSlider>
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SfRangeSlider rangeSlider = new SfRangeSlider();
-	rangeSlider.Minimum = 0;
-    rangeSlider.Maximum = 100;
-    rangeSlider.RangeStart = 20;
-    rangeSlider.RangeEnd = 80;
-    rangeSlider.ShowLabels = true;
-    rangeSlider.ShowTicks = true;
-    rangeSlider.Interval = 20;
-    rangeSlider.NumberFormat = "$##";
+SfRangeSlider rangeSlider = new SfRangeSlider();
+rangeSlider.Minimum = 0;
+rangeSlider.Maximum = 100;
+rangeSlider.RangeStart = 20;
+rangeSlider.RangeEnd = 80;
+rangeSlider.ShowLabels = true;
+rangeSlider.ShowTicks = true;
+rangeSlider.Interval = 20;
+rangeSlider.NumberFormat = "$##";
 
 {% endhighlight %}
 

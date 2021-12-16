@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Track in .NET MAUI Slider control | Syncfusion
-description: Learn here all about adding the track feature of .NET MAUI Slider (SfSlider) control and more.
+description: Learn here all about adding and customizing the slider track in .NET MAUI Slider (SfSlider) control and more.
 platform: maui
 control: SfSlider
 documentation: ug
@@ -23,34 +23,19 @@ The inactive side of the slider is between the thumb and the `Maximum` value.
 
 {% highlight xaml %}
 
-<ContentPage>
-   <sliders:SfSlider>
-      <sliders:SfSlider.TrackStyle>
-         <sliders:SliderTrackStyle ActiveColor="#EE3F3F" InactiveColor="#F7B1AE" />
-      </sliders:SfSlider.TrackStyle>
-   </sliders:SfSlider>
- </ContentPage>
+<sliders:SfSlider>
+  <sliders:SfSlider.TrackStyle>
+     <sliders:SliderTrackStyle ActiveColor="#EE3F3F" InactiveColor="#F7B1AE" />
+  </sliders:SfSlider.TrackStyle>
+</sliders:SfSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Sliders;
-
-namespace SliderGettingStarted
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-          	SfSlider slider = new SfSlider();
-			slider.TrackStyle.ActiveColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
-			slider.TrackStyle.InactiveColor = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
-			this.Content = slider;
-        }
-    }
-}
+SfSlider slider = new SfSlider();
+slider.TrackStyle.ActiveColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+slider.TrackStyle.InactiveColor = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
 
 {% endhighlight %}
 
@@ -66,34 +51,19 @@ You can change the active and inactive track height of the slider using the `Act
 
 {% highlight xaml %}
 
-<ContentPage>
-    <sliders:SfSlider>
-            <sliders:SfSlider.TrackStyle>
-                <sliders:SliderTrackStyle ActiveSize="10" InactiveSize="8" />
-            </sliders:SfSlider.TrackStyle>
-        </sliders:SfSlider>
- </ContentPage>
+<sliders:SfSlider>
+   <sliders:SfSlider.TrackStyle>
+       <sliders:SliderTrackStyle ActiveSize="10" InactiveSize="8" />
+   </sliders:SfSlider.TrackStyle>
+</sliders:SfSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Sliders;
-
-namespace SliderGettingStarted
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-          	SfSlider slider = new SfSlider();
-			slider.TrackStyle.ActiveSize = 10;
-			slider.TrackStyle.InactiveSize = 8;
-			this.Content = slider;
-        }
-    }
-}
+SfSlider slider = new SfSlider();
+slider.TrackStyle.ActiveSize = 10;
+slider.TrackStyle.InactiveSize = 8;
 
 {% endhighlight %}
 

@@ -21,36 +21,27 @@ For example, if `Minimum` is 0.0 and `Maximum` is 10.0 and `Interval` is 2.0, th
 
 {% highlight xaml %}
 
-<ContentPage>
-    <sliders:SfSlider Minimum="0" Maximum="10" Interval="2" Value="6" ShowLabels="True" ShowTicks="True" ShowDividers="True">
-    </sliders:SfSlider>
- </ContentPage>
+<sliders:SfSlider Minimum="0" 
+                  Maximum="10" 
+                  Interval="2" 
+                  Value="6" 
+                  ShowLabels="True" 
+                  ShowTicks="True" 
+                  ShowDividers="True">
+</sliders:SfSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Sliders;
-
-namespace SliderGettingStarted
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-          	SfSlider slider = new SfSlider();
-            slider.Minimum = 0;
-            slider.Maximum = 10;
-            slider.Value = 6;
-            slider.Interval = 2;
-            slider.ShowLabels = true;
-            slider.ShowTicks = true;
-            slider.ShowDividers = true;
-            this.Content = slider;
-        }
-    }
-}
+SfSlider slider = new SfSlider();
+slider.Minimum = 0;
+slider.Maximum = 10;
+slider.Value = 6;
+slider.Interval = 2;
+slider.ShowLabels = true;
+slider.ShowTicks = true;
+slider.ShowDividers = true;
 
 {% endhighlight %}
 
@@ -70,38 +61,27 @@ For example, if `Minimum` is `DateTime(2000, 01, 01)` and `Maximum` is `DateTime
 
 {% highlight xaml %}
 
-<ContentPage>
-    <sliders:SfSlider Minimum="2000-01-01" Maximum="2005-01-01" Interval="1" Value="2002-01-01" DateFormat="yyyy" DateIntervalType="Years" ShowLabels="True" ShowTicks="True" ShowDividers="True">
-    </sliders:SfSlider>
- </ContentPage>
+<sliders:SfSlider Minimum="2000-01-01" 
+                  Maximum="2005-01-01" 
+                  Interval="1" 
+                  Value="2002-01-01" 
+                  DateFormat="yyyy" 
+                  DateIntervalType="Years" 
+                  ShowLabels="True">
+</sliders:SfSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Sliders;
-
-namespace SliderGettingStarted
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-          	SfSlider slider = new SfSlider();
-            slider.Minimum = new DateTime(2000, 01, 01);
-            slider.Maximum = new DateTime(2005, 01, 01);
-            slider.Value = new DateTime(2002, 01, 01); 
-            slider.Interval = 1;
-            slider.DateIntervalType = SliderDateIntervalType.Years;
-            slider.DateFormat = "yyyy";
-            slider.ShowLabels = true;
-            slider.ShowTicks = true;
-            slider.ShowDividers = true;
-            this.Content = slider;
-        }
-    }
-}
+SfSlider slider = new SfSlider();
+slider.Minimum = new DateTime(2000, 01, 01);
+slider.Maximum = new DateTime(2005, 01, 01);
+slider.Value = new DateTime(2002, 01, 01); 
+slider.Interval = 1;
+slider.DateIntervalType = SliderDateIntervalType.Years;
+slider.DateFormat = "yyyy";
+slider.ShowLabels = true;
 
 {% endhighlight %}
 
@@ -117,37 +97,14 @@ You can move the thumb in discrete manner for numeric values using the `StepSize
 
 {% highlight xaml %}
 
-<ContentPage>
-    <sliders:SfSlider Minimum="0" Maximum="10" Interval="2" StepSize="2" Value="6" ShowLabels="True" ShowTicks="True" ShowDividers="True">
-    </sliders:SfSlider>
- </ContentPage>
+  <sliders:SfSlider StepSize="0.2" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Sliders;
-
-namespace SliderGettingStarted
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-          	 SfSlider slider = new SfSlider();
-            slider.Minimum = 0;
-            slider.Maximum = 10;
-            slider.Value = 6;
-            slider.Interval = 2;
-            slider.StepSize = 2;
-            slider.ShowLabels = true;
-            slider.ShowTicks = true;
-            slider.ShowDividers = true;
-            this.Content = slider;
-        }
-    }
-}
+SfSlider slider = new SfSlider();
+slider.StepSize = 0.2;
 
 {% endhighlight %}
 
@@ -165,39 +122,23 @@ For example, if `Minimum` is DateTime(2015, 01, 01) and `Maximum` is DateTime(20
 
 {% highlight xaml %}
 
-<ContentPage>
-     <sliders:SfSlider Minimum="2000-01-01" Maximum="2005-01-01" Interval="1" StepDuration="1" Value="2002-01-01" DateFormat="yyyy" DateIntervalType="Years" ShowLabels="True" ShowTicks="True" ShowDividers="True">
-     </sliders:SfSlider>
- </ContentPage>
+ <sliders:SfSlider Minimum="2000-01-01" 
+                   Maximum="2005-01-01" 
+                   Value="2002-01-01"
+                   StepDuration="1"  
+                   DateIntervalType="Years" >
+</sliders:SfSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Sliders;
-
-namespace SliderGettingStarted
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-          	 SfSlider slider = new SfSlider();
-            slider.Minimum = new DateTime();
-            slider.Maximum = new DateTime(2005, 01, 01);
-            slider.Value = new DateTime(2002, 01, 01); ;
-            slider.Interval = 1;
-            slider.DateIntervalType = SliderDateIntervalType.Years;
-            slider.DateFormat = "yyyy";
-            slider.StepDuration = new SliderStepDuration(years: 1);
-            slider.ShowLabels = true;
-            slider.ShowTicks = true;
-            slider.ShowDividers = true;
-            this.Content = slider;
-        }
-    }
-}
+SfSlider slider = new SfSlider();
+slider.Minimum = new DateTime(2000, 01, 01);
+slider.Maximum = new DateTime(2005, 01, 01);
+slider.Value = new DateTime(2002, 01, 01); ;
+slider.DateIntervalType = SliderDateIntervalType.Years;
+slider.StepDuration = new SliderStepDuration(years: 1);
 
 {% endhighlight %}
 
