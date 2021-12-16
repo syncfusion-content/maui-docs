@@ -21,35 +21,17 @@ For example, if `Minimum` is 0.0 and `Maximum` is 10.0 and `Interval` is 2.0, th
 
 {% highlight xaml %}
 
-<ContentPage>
-    <sliders:SfSlider Minimum="0" Maximum="10" Interval="2" Value="6" ShowLabels="True" ShowTicks="True">
-    </sliders:SfSlider>
- </ContentPage>
+  <sliders:SfSlider Interval="0.2" 
+                    ShowTicks="True">
+  </sliders:SfSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Sliders;
-
-namespace SliderGettingStarted
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-          	SfSlider slider = new SfSlider();
-            slider.Minimum = 0;
-			slider.Maximum = 10;
-			slider.Value = 6;
-			slider.Interval = 2;
-			slider.ShowLabels = true;
-			slider.ShowTicks = true;
-            this.Content = slider;
-        }
-    }
-}
+   SfSlider slider = new SfSlider();
+   slider.Interval = 0.2;
+   slider.ShowTicks = true;
 
 {% endhighlight %}
 
@@ -65,10 +47,11 @@ It is used to represent the number of smaller ticks between two major ticks. For
 
 {% highlight xaml %}
 
-<ContentPage>
-    <sliders:SfSlider Minimum="0" Maximum="10" Interval="2" Value="6" ShowLabels="True" MinorTicksPerInterval = "1" ShowTicks="True">
-    </sliders:SfSlider>
- </ContentPage>
+  <sliders:SfSlider Interval="0.2" 
+                    ShowLabels="True" 
+		    MinorTicksPerInterval="1" 
+		    ShowTicks="True">
+  </sliders:SfSlider>
 
 {% endhighlight %}
 
@@ -76,25 +59,10 @@ It is used to represent the number of smaller ticks between two major ticks. For
 
 using Syncfusion.Maui.Sliders;
 
-namespace SliderGettingStarted
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-          	SfSlider slider = new SfSlider();
-            slider.Minimum = 0;
-			slider.Maximum = 10;
-			slider.Value = 6;
-			slider.Interval = 2;
-			slider.MinorTicksPerInterval = 1;
-			slider.ShowLabels = true;
-			slider.ShowTicks = true;
-            this.Content = slider;
-        }
-    }
-}
+   SfSlider slider = new SfSlider();
+   slider.Interval = 0.2;
+   slider.MinorTicksPerInterval = 1;
+   slider.ShowTicks = true;
 
 {% endhighlight %}
 
@@ -114,40 +82,23 @@ The inactive side of the slider is between the thumb and the `Maximum` value.
 
 {% highlight xaml %}
 
-<ContentPage>
-    <sliders:SfSlider Minimum="0" Maximum="10" Interval="2" Value="6" ShowLabels="True" ShowTicks="True">
-       <sliders:SfSlider.MajorTickStyle>
-          <sliders:SliderTickStyle ActiveColor="#EE3F3F" InactiveColor="#F7B1AE"/>
-       </sliders:SfSlider.MajorTickStyle>
-    </sliders:SfSlider>
- </ContentPage>
+ <sliders:SfSlider Interval="0.2" 
+                   ShowTicks="True">
+     <sliders:SfSlider.MajorTickStyle>
+        <sliders:SliderTickStyle ActiveColor="#EE3F3F" 
+	                         InactiveColor="#F7B1AE"/>
+     </sliders:SfSlider.MajorTickStyle>
+ </sliders:SfSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Sliders;
-
-namespace SliderGettingStarted
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-          	 SfSlider slider = new SfSlider();
-            slider.Minimum = 0;
-            slider.Maximum = 10;
-            slider.Value = 6;
-            slider.Interval = 2;
-            slider.ShowLabels = true;
-            slider.ShowTicks = true;
-            slider.MajorTickStyle.ActiveColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
-            slider.MajorTickStyle.InactiveColor = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
-            this.Content = slider;
-        }
-    }
-}
+   SfSlider slider = new SfSlider();
+   slider.Interval = 0.2;
+   slider.ShowTicks = true;
+   slider.MajorTickStyle.ActiveColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+   slider.MajorTickStyle.InactiveColor = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
 
 {% endhighlight %}
 
@@ -167,41 +118,25 @@ The inactive side of the slider is between the thumb and the `Maximum` value.
 
 {% highlight xaml %}
 
-<ContentPage>
-    <sliders:SfSlider WidthRequest="400" Minimum="0" Maximum="10" Interval="2" Value="6" ShowLabels="True" ShowTicks="True" MinorTicksPerInterval="1">
+  <sliders:SfSlider Interval="0.2" 
+                    ShowTicks="True" 
+		    MinorTicksPerInterval="1">
         <sliders:SfSlider.MinorTickStyle>
-           <sliders:SliderTickStyle ActiveColor="#EE3F3F" InactiveColor="#F7B1AE"/>
+           <sliders:SliderTickStyle ActiveColor="#EE3F3F" 
+	                            InactiveColor="#F7B1AE"/>
         </sliders:SfSlider.MinorTickStyle>
-    </sliders:SfSlider> 
- </ContentPage>
+  </sliders:SfSlider> 
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Sliders;
-
-namespace SliderGettingStarted
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-          	SfSlider slider = new SfSlider();
-            slider.Minimum = 0;
-            slider.Maximum = 10;
-            slider.Value = 6;
-            slider.Interval = 2;
-            slider.ShowLabels = true;
-            slider.ShowTicks = true;
-            slider.MinorTicksPerInterval = 1;
-            slider.MinorTickStyle.ActiveColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
-            slider.MinorTickStyle.InactiveColor = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
-            this.Content = slider;
-        }
-    }
-}
+  SfSlider slider = new SfSlider();
+  slider.Interval = 0.2;
+  slider.ShowTicks = true;
+  slider.MinorTicksPerInterval = 1;
+  slider.MinorTickStyle.ActiveColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+  slider.MinorTickStyle.InactiveColor = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
 
 {% endhighlight %}
 
@@ -217,47 +152,30 @@ You can change the major and minor ticks size of the slider using the `ActiveSiz
 
 {% highlight xaml %}
 
-<ContentPage>
-     <sliders:SfSlider Minimum="0" Maximum="10" Interval="2" Value="6" ShowLabels="True" ShowTicks="True" MinorTicksPerInterval="1">
+   <sliders:SfSlider Interval="0.2" ShowTicks="True" MinorTicksPerInterval="1">
         <sliders:SfSlider.MinorTickStyle>
-          <sliders:SliderTickStyle ActiveSize="2,10" InactiveSize="2, 10"/>
+            <sliders:SliderTickStyle ActiveSize="2,10" 
+	                           InactiveSize="2, 10"/>
         </sliders:SfSlider.MinorTickStyle>
         <sliders:SfSlider.MajorTickStyle>
-          <sliders:SliderTickStyle ActiveSize="2,10" InactiveSize="2, 10"/>
+            <sliders:SliderTickStyle ActiveSize="2,15" 
+	                           InactiveSize="2, 15"/>
         </sliders:SfSlider.MajorTickStyle>
-     </sliders:SfSlider>
- </ContentPage>
+   </sliders:SfSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Sliders;
-
-namespace SliderGettingStarted
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfSlider slider = new SfSlider();
-            slider.Minimum = 0;
-            slider.Maximum = 10;
-            slider.Value = 6;
-            slider.Interval = 2;
-            slider.ShowLabels = true;
-            slider.ShowTicks = true;
-            slider.MinorTicksPerInterval = 1;
-            slider.MinorTickStyle.ActiveSize = new Size(2, 10);
-            slider.MinorTickStyle.InactiveSize = new Size(2, 10);
-            slider.MajorTickStyle.ActiveSize = new Size(2, 10);
-            slider.MajorTickStyle.InactiveSize = new Size(2, 10);
-            this.Content = slider;
-        }
-    }
-}
-
+   SfSlider slider = new SfSlider();
+   slider.Interval = 0.2;
+   slider.ShowTicks = true;
+   slider.MinorTicksPerInterval = 1;
+   slider.MinorTickStyle.ActiveSize = new Size(2, 10);
+   slider.MinorTickStyle.InactiveSize = new Size(2, 10);
+   slider.MajorTickStyle.ActiveSize = new Size(2, 15);
+   slider.MajorTickStyle.InactiveSize = new Size(2, 15);
+	    
 {% endhighlight %}
 
 {% endtabs %}
@@ -272,44 +190,27 @@ You can adjust the space between track and ticks of the slider using the `Offset
 
 {% highlight xaml %}
 
-<ContentPage>
-      <sliders:SfSlider Minimum="0" Maximum="10" Interval="2" Value="6" ShowLabels="True" ShowTicks="True" MinorTicksPerInterval="1">
-            <sliders:SfSlider.MinorTickStyle>
-                <sliders:SliderTickStyle Offset="5"/>
-            </sliders:SfSlider.MinorTickStyle>
-            <sliders:SfSlider.MajorTickStyle>
-                <sliders:SliderTickStyle Offset="5"/>
-            </sliders:SfSlider.MajorTickStyle>
-      </sliders:SfSlider>
- </ContentPage>
+  <sliders:SfSlider Interval="0.2"  
+                    ShowTicks="True" 
+		    MinorTicksPerInterval="1">
+       <sliders:SfSlider.MinorTickStyle>
+          <sliders:SliderTickStyle Offset="5"/>
+       </sliders:SfSlider.MinorTickStyle>
+       <sliders:SfSlider.MajorTickStyle>
+          <sliders:SliderTickStyle Offset="6"/>
+        </sliders:SfSlider.MajorTickStyle>
+   </sliders:SfSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Sliders;
-
-namespace SliderGettingStarted
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfSlider slider = new SfSlider();
-            slider.Minimum = 0;
-            slider.Maximum = 10;
-            slider.Value = 6;
-            slider.Interval = 2;
-            slider.ShowLabels = true;
-            slider.ShowTicks = true;
-            slider.MinorTicksPerInterval = 1;
-            slider.MinorTickStyle.Offset = 5;
-            slider.MajorTickStyle.Offset = 5;
-            this.Content = slider;
-        }
-    }
-}
+   SfSlider slider = new SfSlider();
+   slider.Interval = 0.2;
+   slider.ShowTicks = true;
+   slider.MinorTicksPerInterval = 1;
+   slider.MinorTickStyle.Offset = 5;
+   slider.MajorTickStyle.Offset = 6;
 
 {% endhighlight %}
 
