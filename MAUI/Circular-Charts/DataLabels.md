@@ -94,3 +94,63 @@ chart.Series.Add(series);
 {% endtabs %}
 
 ![Applying series interior for data label in MAUI chart](DataLabel_images/maui_chart_datalabels_useseriespalette.png)
+
+## Smart Labels
+
+This feature is used to arrange the data labels smartly and avoid the intersection when there is overlapping of labels. The property [SmartLabelAlignment]() in CircularSeries is used to arrange the data marker labels smartly. By default, it is Shift.
+
+If the [`LabelPlacement`]() is [`Placement.Inner`]() and the [`SmartLabelAlignment`]) is [`SmartLabelAlignment.Shift`](), the overlapped labels will shift to outside the slices and arrange smartly. If the [`labelPosition`]() is [`Placement.Inner`]() and the [`SmartLabelAlignment`]) is [`SmartLabelAlignment.Hide`](), the overlapped labels will be hidden.
+
+If the [`LabelPlacement`]() is [`Placement.Outer`]() and the [`SmartLabelAlignment`]) is [`SmartLabelAlignment.Shift`](), the overlapped labels arrange smartly. If the [`LabelPlacement`]() is [`Placement.Outer`]() and the [`SmartLabelAlignment`]) is [`SmartLabelAlignment.Hide`](), the overlapped labels will be hidden.
+
+If the [`SmartLabelAlignment`]) is [`SmartLabelAlignment.None`](), then the overlapped labels will be visible irrespective of [`LabelPlacement`]().
+
+When the [`SmartLabelAlignment`]) is [`SmartLabelAlignment.Shift`](), and if the data label goes out of the chart area, then the labels got trimmed based on the available size. The values of the [`SmartLabelAlignment`]) are listed below:
+
+* [`SmartLabelAlignment.Hide`]() - hides the intersected data labels.
+* [`SmartLabelAlignment.None`]() - intersected data labels will be visible.
+* [`SmartLabelAlignment.Shift`]() - smartly arranges the overlapped data labels.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCircularChart>
+. . .
+<chart:PieSeries ShowDataLabels="True">
+    <chart:PieSeries.DataLabelSettings>
+                <chart:CircularDataLabelSettings LabelPlacement="Outer" ConnectorType="Curve" UseSeriesPalette="False">
+                    <chart:CircularDataLabelSettings.LabelStyle>
+                        <chart:ChartDataLabelStyle Margin="0"/>
+                    </chart:CircularDataLabelSettings.LabelStyle>
+                </chart:CircularDataLabelSettings>
+    </chart:PieSeries.DataLabelSettings>
+</chart:PieSeries>
+
+</chart:SfCircularChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCircularChart chart = new SfCircularChart();
+. . .
+PieSeries series = new PieSeries();
+series.ShowDataLabels = true;
+var dataLabelSettings = new CircularDataLabelSettings()
+{
+	LabelPlacement = Placement.Outer,
+	ConnectorType = ConnectorType.Curve,
+	UseSeriesPalette = false
+};
+
+dataLabelSettings.LabelStyle = new ChartDataLabelStyle() { Margin = 0 };
+series.DataLabelSettings = dataLabelSettings;
+
+chart.Series.Add(series);
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Smart data label feature in MAUI chart](DataLabel_images/maui_chart_smart_datalabel.png)

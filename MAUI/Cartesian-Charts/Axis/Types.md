@@ -446,3 +446,146 @@ chart.Series.Add(series2);
 {% endtabs %}
 
 In the above image, the [ColumnSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ColumnSeries.html?tabs=tabid-1) is plotted based on additional X & Y axes, and [SplineSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SplineSeries.html?tabs=tabid-1) is plotted based on the primary and secondary axes.
+
+## Axis Crossing
+
+The chart allows you to customize the origin, by default the axis will be rendered with (0,0) as the origin in x and y-axes. An axis can be positioned anywhere in the chart area by using the [CrossesAt]() property. his property specifies where the horizontal axis intersects or crosses the vertical axis, and vice versa. The default value of the CrossesAt property is `double.NaN`.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCartesianChart>
+    
+    <chart:SfCartesianChart.PrimaryAxis>
+            <chart:NumericalAxis CrossesAt="0" Minimum="-8" Maximum="8" ShowMajorGridLines="False" />
+    </chart:SfCartesianChart.PrimaryAxis>
+
+    <chart:SfCartesianChart.SecondaryAxis>
+            <chart:NumericalAxis CrossesAt="0" Minimum="-8" Maximum="8"  ShowMajorGridLines="False" />
+    </chart:SfCartesianChart.SecondaryAxis>
+
+</chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCartesianChart chart = new SfCartesianChart();
+NumericalAxis primaryAxis = new NumericalAxis();
+primaryAxis.CrossesAt = 0;
+primaryAxis.Minimum = -8;
+primaryAxis.Maximum = 8;
+primaryAxis.ShowMajorGridLines = false;
+chart.PrimaryAxis = primaryAxis;
+NumericalAxis secondaryAxis = new NumericalAxis();
+secondaryAxis.CrossesAt = 0;
+secondaryAxis.Minimum = -8;
+secondaryAxis.Maximum = 8;
+secondaryAxis.ShowMajorGridLines = false;
+chart.SecondaryAxis = secondaryAxis;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Axis crossing support in MAUI Chart](Axis_Images/maui_chart_axis_crossing.png)
+
+### Positioning the axis elements while crossing
+
+The [RenderNextToCrossingValue]() property is used to determine whether the crossing axis should be placed at crossing position or not. The default value of [RenderNextToCrossingValue]() property is true.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCartesianChart>
+    
+    <chart:SfCartesianChart.PrimaryAxis>
+            <chart:NumericalAxis CrossesAt="0" RenderNextToCrossingValue="False" />
+    </chart:SfCartesianChart.PrimaryAxis>
+
+    <chart:SfCartesianChart.SecondaryAxis>
+            <chart:NumericalAxis CrossesAt="0" />
+    </chart:SfCartesianChart.SecondaryAxis>
+
+</chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCartesianChart chart = new SfCartesianChart();
+NumericalAxis primaryAxis = new NumericalAxis();
+primaryAxis.CrossesAt = 0;
+primaryAxis.RenderNextToCrossingValue = false;
+chart.PrimaryAxis = primaryAxis;
+NumericalAxis secondaryAxis = new NumericalAxis();
+secondaryAxis.CrossesAt = 0;
+chart.SecondaryAxis = secondaryAxis;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![RenderNextToCrossingValue support in MAUI Chart](Axis_Images/maui_chart_axis_rendernexttocrossingvalue.png)
+
+### Crossing the date-time axis
+
+For the crossing in date time horizontal axis, date object should be provided as value for CrossesAt property of vertical axis.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCartesianChart>
+    
+    <chart:SfCartesianChart.PrimaryAxis>
+            <chart:DateTimeAxis CrossesAt="0" RenderNextToCrossingValue="False" />
+    </chart:SfCartesianChart.PrimaryAxis>
+
+    <chart:SfCartesianChart.SecondaryAxis>
+            <chart:NumericalAxis />
+    </chart:SfCartesianChart.SecondaryAxis>
+
+</chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCartesianChart chart = new SfCartesianChart();
+NumericalAxis primaryAxis = new NumericalAxis();
+primaryAxis.CrossesAt = 0;
+primaryAxis.RenderNextToCrossingValue = false;
+chart.PrimaryAxis = primaryAxis;
+NumericalAxis secondaryAxis = new NumericalAxis();
+secondaryAxis.CrossesAt = new DateTime(2021, 01, 01);;
+chart.SecondaryAxis = secondaryAxis;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![DateTimeAxis crossing support in MAUI Chart](Axis_Images/maui_chart_datetime_axis_crossing.png)
+
+## Events
+
+### ActualRangeChanged
+
+The [`ActualRangeChanged`]() event is triggered when the actual range of the axis is changed. The argument contains the following information:
+
+* [`ActualMinimum`]() - used to get or set the actual minimum value of the axis.
+* [`ActualMaximum`]() - used to get or set the actual maximum value of the axis.
+* [`VisibleMinimum`]() - used to get or set the visible minimum value of the axis.
+* [`VisibleMaximum`]() - used to get or set the visible maximum value of the axis.
+
+N> The actual range and visible range are similar unless the range is changed by specifying the [`ZoomPosition`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_ZoomPosition) and [`ZoomFactor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_ZoomFactor) properties or zooming the chart interactively. The visible range is always the range that you can see visually on the screen.
+
+### LabelCreated
+
+The [`LabelCreated`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_LabelCreated) event is triggered when the axis label is created. The argument contains the following information:
+
+* [`LabelContent`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisLabelEventArgs.html#Syncfusion_Maui_Charts_ChartAxisLabelEventArgs_LabelContent) - Used to get or set the text of axis label.
+* [`Position`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisLabelEventArgs.html#Syncfusion_Maui_Charts_ChartAxisLabelEventArgs_Position) - Used to get the position of label.
+* [`LabelStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisLabelEventArgs.html#Syncfusion_Maui_Charts_ChartAxisLabelEventArgs_LabelStyle) - Used to customize the appearance of axis labels.
