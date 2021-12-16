@@ -55,15 +55,15 @@ namespace SliderGettingStarted
         {
             InitializeComponent();
             SfSlider slider = new SfSlider();
-			slider.Minimum = new DateTime(2010, 01, 01);
-			slider.Maximum = new DateTime(2020, 01, 01);
-			slider.Value = new DateTime(2014, 01, 01);
-			slider.ShowLabels = true;
-			slider.ShowTicks = true;
-			slider.Interval = 2;
-			slider.DateIntervalType = SliderDateIntervalType.Years;
-			slider.DateFormat = "yyyy";
-			this.Content = slider;
+	    slider.Minimum = new DateTime(2010, 01, 01);
+	    slider.Maximum = new DateTime(2020, 01, 01);
+	    slider.Value = new DateTime(2014, 01, 01);
+	    slider.ShowLabels = true;
+	    slider.ShowTicks = true;
+	    slider.Interval = 2;
+	    slider.DateIntervalType = SliderDateIntervalType.Years;
+	    slider.DateFormat = "yyyy";
+	    this.Content = slider;
         }
     }
 }
@@ -106,20 +106,20 @@ namespace SliderGettingStarted
         }
 
         private void OnValueChangeStart(object sender, SliderValueChangeStartEventArgs e)
-		{
-		}
+	{
+	}
 
-		private void OnValueChanged(object sender, SliderValueChangedEventArgs e) 
-		{
-		}
+	private void OnValueChanged(object sender, SliderValueChangedEventArgs e) 
+	{
+	}
 
-		private void OnValueChanging(object sender, SliderValueChangingEventArgs e)
-		{
-		}
+	private void OnValueChanging(object sender, SliderValueChangingEventArgs e)
+	{
+	}
 
-		private void OnValueChangeEnd(object sender, SliderValueChangeEndEventArgs e)
-		{
-		}
+	private void OnValueChangeEnd(object sender, SliderValueChangeEndEventArgs e)
+	{
+	}
     }
 }
 
