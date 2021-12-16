@@ -155,3 +155,141 @@ this.Content = sfRadialGauge;
 {% endtabs %}
 
 ![.NET MAUI Radial Gauge Marker Offset](images/marker-pointers/maui-radial-gauge-marker-offset.png)
+
+## Custom marker pointer
+
+You can add customized view to denote the current pointer value instead of in-built marker shape. It can be achieved by setting the `MarkerTemplate` property.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+ <ContentPage.Resources>
+            <DataTemplate x:Key="dataTemplate1">
+                <Grid HeightRequest="{Binding MarkerHeight}"
+                      WidthRequest="{Binding MarkerWidth}" >
+                    <Ellipse  Fill="{Binding Fill}"
+                              Stroke="{Binding Stroke}"
+                              StrokeThickness="1" />
+                    <Label FontFamily="FontGaugeIcons" 
+                           Text="&#xe701;" TextColor="White"
+                           FontSize="14"
+                           HorizontalOptions="Center"
+                           HorizontalTextAlignment="Center"
+                           VerticalOptions="Center"
+                           VerticalTextAlignment="Center"/>
+                </Grid>
+            </DataTemplate>
+
+            <DataTemplate x:Key="dataTemplate2">
+                <Grid HeightRequest="{Binding MarkerHeight}" 
+                      WidthRequest="{Binding MarkerWidth}" >
+                    <Ellipse  Fill="{Binding Fill}"
+                              Stroke="{Binding Stroke}"
+                              StrokeThickness="1" />
+                    <Label FontFamily="FontGaugeIcons"  
+                           Text="&#xe700;" TextColor="White"
+                           FontSize="14"
+                           HorizontalOptions="Center"
+                           HorizontalTextAlignment="Center"
+                           VerticalOptions="Center"
+                           VerticalTextAlignment="Center"/>
+                </Grid>
+            </DataTemplate>
+            
+        </ContentPage.Resources>
+        <gauge:SfRadialGauge x:Name="gauge">
+            <gauge:SfRadialGauge.Axes>
+                <gauge:RadialAxis x:Name="radialAxis"
+                                  StartAngle="270"
+                                  EndAngle="270"
+                                  Minimum="0"
+                                  Maximum="24"
+                                  Interval="6"
+                                  MinorTicksPerInterval="5"
+                                  ShowFirstLabel="False">
+                    <gauge:RadialAxis.AxisLineStyle>
+                        <gauge:RadialLineStyle Fill="#e1f5fe" Thickness="0.03" ThicknessUnit="Factor"/>
+                    </gauge:RadialAxis.AxisLineStyle>
+
+                    <gauge:RadialAxis.MajorTickStyle>
+                        <gauge:RadialTickStyle StrokeThickness="2"/>
+                    </gauge:RadialAxis.MajorTickStyle>
+
+                    <gauge:RadialAxis.Pointers>
+                        <gauge:MarkerPointer x:Name="startPointer"
+                                             Value="20"
+                                             IsInteractive="True"
+                                             Fill="#2194f3"
+                                             MarkerHeight="30"
+                                             MarkerWidth="30"
+                                             MarkerTemplate="{StaticResource dataTemplate1}"/>
+                        <gauge:MarkerPointer x:Name="endPointer"
+                                             IsInteractive="True"
+                                             Value="6"
+                                             MarkerHeight="30"
+                                             MarkerWidth="30"
+                                             Fill="#2194f3"
+                                             Stroke="LightGray"
+                                             MarkerTemplate="{StaticResource dataTemplate2}"/>
+                    </gauge:RadialAxis.Pointers>
+
+                </gauge:RadialAxis>
+            </gauge:SfRadialGauge.Axes>
+        </gauge:SfRadialGauge>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+ SfRadialGauge sfRadialGauge = new SfRadialGauge();
+
+            RadialAxis radialAxis = new RadialAxis();
+            radialAxis.StartAngle = 270;
+            radialAxis.EndAngle = 270;
+            radialAxis.Minimum = 0;
+            radialAxis.Maximum = 24;
+            radialAxis.Interval = 6;
+            radialAxis.MinorTicksPerInterval = 5;
+            radialAxis.ShowFirstLabel = false;
+            sfRadialGauge.Axes.Add(radialAxis);
+
+            radialAxis.AxisLineStyle = new RadialLineStyle()
+            {
+                Fill=new SolidColorBrush(Color.FromHex("e1f5fe")),
+                Thickness=0.03,
+                ThicknessUnit=SizeUnit.Factor
+            };
+
+            radialAxis.MajorTickStyle = new RadialTickStyle()
+            {
+                StrokeThickness=2
+            };
+
+            MarkerPointer markerPointer = new MarkerPointer();
+            markerPointer.Value = 20;
+            markerPointer.IsInteractive = true;
+            markerPointer.Fill = new SolidColorBrush(Color.FromHex("2194f3"));
+            markerPointer.MarkerHeight = 30;
+            markerPointer.MarkerWidth = 30;
+            markerPointer.MarkerTemplate = this.Resources["dataTemplate1"] as DataTemplate;
+            radialAxis.Pointers.Add(markerPointer);
+
+            markerPointer = new MarkerPointer();
+            markerPointer.Value = 6;
+            markerPointer.IsInteractive = true;
+            markerPointer.Fill = new SolidColorBrush(Color.FromHex("2194f3"));
+            markerPointer.MarkerHeight = 30;
+            markerPointer.MarkerWidth = 30;
+            markerPointer.MarkerTemplate = this.Resources["dataTemplate2"] as DataTemplate;
+            radialAxis.Pointers.Add(markerPointer);
+
+            this.Content = sfRadialGauge;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![.NET MAUI Radial Gauge Custom Marker Pointer](images/marker-pointers/maui-radial-gauge-marker-template-pointer.png)
+
+N> If you set both MarkerTemplate and MarkerType in the MarkerPointer, MarkerTemplate will be first priority for pointer. 

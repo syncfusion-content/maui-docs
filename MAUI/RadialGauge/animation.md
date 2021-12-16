@@ -9,6 +9,78 @@ documentation: ug
 
 # Animation in .NET MAUI Radial Gauge
 
+## Initial animation
+
+The radial gauge allows all of its elements to be animated using the `EnableLoadingAnimation` property. The default value for this property is false. The duration of the animation can be controlled by using the `AnimationDuration` property of the gauge.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+  <gauge:SfRadialGauge x:Name="gauge">
+            <gauge:SfRadialGauge.Axes>
+                <gauge:RadialAxis EnableLoadingAnimation="True" Maximum="150">
+                    <gauge:RadialAxis.Pointers>
+                        <gauge:NeedlePointer Value="90"
+                                     NeedleStartWidth="0"
+                                     NeedleEndWidth="15"
+                                     KnobRadius="0.09">
+                        </gauge:NeedlePointer>
+                    </gauge:RadialAxis.Pointers>
+                    <gauge:RadialAxis.Ranges>
+                        <gauge:RadialRange StartValue="0" EndValue="50" Fill="Green"/>
+                        <gauge:RadialRange StartValue="50" EndValue="100" Fill="Orange"/>
+                        <gauge:RadialRange StartValue="100" EndValue="150" Fill="Red"/>
+                    </gauge:RadialAxis.Ranges>
+                </gauge:RadialAxis>
+            </gauge:SfRadialGauge.Axes>
+        </gauge:SfRadialGauge>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+ SfRadialGauge sfRadialGauge = new SfRadialGauge();
+
+            RadialAxis radialAxis = new RadialAxis();
+            radialAxis.Maximum = 150;
+            radialAxis.EnableLoadingAnimation = true;
+            sfRadialGauge.Axes.Add(radialAxis);
+
+            NeedlePointer needlePointer = new NeedlePointer();
+            needlePointer.Value = 90;
+            needlePointer.NeedleStartWidth = 0;
+            needlePointer.NeedleEndWidth = 15;
+            needlePointer.KnobRadius = 0.09;
+            radialAxis.Pointers.Add(needlePointer);
+
+            RadialRange radialRange = new RadialRange();
+            radialRange.StartValue = 0;
+            radialRange.EndValue = 50;
+            radialRange.Fill = new SolidColorBrush(Colors.Green);
+            radialAxis.Ranges.Add(radialRange);
+
+            radialRange = new RadialRange();
+            radialRange.StartValue = 50;
+            radialRange.EndValue = 100;
+            radialRange.Fill = new SolidColorBrush(Colors.Orange);
+            radialAxis.Ranges.Add(radialRange);
+
+            radialRange = new RadialRange();
+            radialRange.StartValue = 100;
+            radialRange.EndValue = 150;
+            radialRange.Fill = new SolidColorBrush(Colors.Red);
+            radialAxis.Ranges.Add(radialRange);
+
+            this.Content = sfRadialGauge;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![MAUI Radial Gauge Loading Animation](images/animation/maui-radial-gauge-loading-animation.gif)
+
+
 ## Pointer animation
 
 The [`EnableAnimation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialPointer.html#Syncfusion_Maui_Gauges_RadialPointer_EnableAnimation) property of pointer allows you to enable or disable animation for pointer.

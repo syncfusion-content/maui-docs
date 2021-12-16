@@ -114,6 +114,62 @@ this.Content = sfRadialGauge;
 
 ![MAUI Radial Gauge Pointer Dragging](images/pointers/maui-radial-gauge-pointer-dragging.gif)
 
+## Step frequency
+
+The `StepFrequency` property is used to specify the interval between snap points while dragging the pointer.
+
+For example, if the value of `StepFrequency` is 20, the pointer will not move continuously while dragging; instead, it will update in terms of 20.
+
+N> To work with the `StepFrequency` value, enable pointer interaction support.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+ <gauge:SfRadialGauge x:Name="gauge">
+            <gauge:SfRadialGauge.Axes>
+                <gauge:RadialAxis ShowTicks="False">
+                    <gauge:RadialAxis.AxisLineStyle>
+                        <gauge:RadialLineStyle Thickness="30" Fill="CornflowerBlue"/>
+                    </gauge:RadialAxis.AxisLineStyle>
+                    <gauge:RadialAxis.Pointers>
+                        <gauge:MarkerPointer Value="30"
+                                             IsInteractive="True"
+                                             StepFrequency="5"
+                                             MarkerOffset="-30"
+                                             Fill="Indigo" />
+                    </gauge:RadialAxis.Pointers>
+                </gauge:RadialAxis>
+            </gauge:SfRadialGauge.Axes>
+        </gauge:SfRadialGauge>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+ SfRadialGauge sfRadialGauge = new SfRadialGauge();
+
+            RadialAxis radialAxis = new RadialAxis();
+            radialAxis.ShowTicks = false;
+            radialAxis.AxisLineStyle.Fill = new SolidColorBrush(Colors.CornflowerBlue);
+            radialAxis.AxisLineStyle.Thickness = 30;
+            sfRadialGauge.Axes.Add(radialAxis);
+
+            MarkerPointer markerPointer = new MarkerPointer();
+            markerPointer.Value = 30;
+            markerPointer.IsInteractive = true;
+            markerPointer.StepFrequency = 5;
+            markerPointer.Fill = new SolidColorBrush(Colors.Indigo);
+            markerPointer.MarkerOffset = -30;
+            radialAxis.Pointers.Add(markerPointer);
+
+            this.Content = sfRadialGauge;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+
 ## Event
 
 [`ValueChangeStarted`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialPointer.html#Syncfusion_Maui_Gauges_RadialPointer_ValueChangeStarted) - Occurs whenever the pointer starts to drag.
