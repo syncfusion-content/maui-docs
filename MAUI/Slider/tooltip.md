@@ -19,35 +19,14 @@ You can enable tooltip for the thumb by setting the `ToolTipShape` property to `
 
 {% highlight xaml %}
 
-<ContentPage>
-     <sliders:SfSlider Minimum="0" Maximum="10" Interval="2" Value="6" ToolTipShape="Rectangular" ShowLabels="True">
-     </sliders:SfSlider>
- </ContentPage>
+  <sliders:SfSlider ToolTipShape="Rectangular" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Sliders;
-
-namespace SliderGettingStarted
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-          	SfSlider slider = new SfSlider();
-            slider.Minimum = 0;
-            slider.Maximum = 10;
-            slider.Value = 6;
-            slider.Interval = 2;
-            slider.ShowLabels = true;
-            slider.ToolTipShape = SliderToolTipShape.Rectangular;
-            this.Content = slider;
-        }
-    }
-}
+   SfSlider slider = new SfSlider();
+   slider.ToolTipShape = SliderToolTipShape.Rectangular;
 
 {% endhighlight %}
 
