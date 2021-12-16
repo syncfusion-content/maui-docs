@@ -7,9 +7,13 @@ control: SfScheduler
 documentation: ug
 ---
 
-# Date Navigations in .NET MAUI Scheduler 
+# Date Navigations and Restrictions in .NET MAUI Scheduler
 
-## Programmatic date navigation
+## Date Navigations
+
+The `.NET MAUI Scheduler` control provides the option to navigate the dates either programmatically or by using gestures and it is applicable to the all Scheduler views.
+
+### Programmatic date navigation
 
 By using the `DisplayDate` property of SfScheduler, programmatically navigate dates in scheduler.
 
@@ -31,7 +35,7 @@ this.Scheduler.DisplayDate = DateTime.Today.AddMonths(-1).AddHours(9);
 N> 
 When navigating before a minimum date, the date will be reset to the scheduler minimum date, and when navigating beyond a maximum date, the date will be reset to the scheduler maximum date.
 
-## Programmatic date selection
+### Programmatic date selection
 
 You can programmatically select the dates in scheduler by using the `SelectedDate` property of SfScheduler.
 
@@ -52,11 +56,11 @@ this.Scheduler.SelectedDate = DateTime.Today.AddHours(9);
 
 N> It is not possible to use the `SelectedDate` to select before minimum display date time and beyond maximum display date time.
 
-## Programmatically change to adjacent dates
+### Programmatically change to adjacent dates
 
 The next and previous views can be accessed through swiping the control from right to left and left to right. With SfScheduler, the view can be changed programmatically as well.
 
-### Forward
+#### Forward
 
 The Scheduler allows you to view the next immediate date using the `Forward` method. If the scheduler view is month, it moves on to the next month, similarly for week and day views it moves on to the next day.
 
@@ -87,7 +91,7 @@ private void OnButtonClicked(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-### Backward
+#### Backward
 
 The Scheduler allows you to view the previous immediate date using the `Backward` method. If the scheduler view is month, it moves on to the previous month, similarly for week and day views it moves on to the previous day.
 
@@ -118,7 +122,7 @@ private void OnButtonClicked(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-## Allowed views
+### Allowed views
 
 The SfScheduler allows you to quickly switch between the different scheduler views using the `AllowedViews` property. These views will display as a button in the scheduler header.
 There will be more icons available for all platforms as this UI will be responsive.
@@ -142,3 +146,102 @@ this.Scheduler.AllowedViews = SchedulerViews.Day | SchedulerViews.Week | Schedul
 
 N>
 The SfScheduler `view` will be restricted based on the  `AllowedViews.` For example, the `AllowedViews` given as `Day,` `Week,` `WorkWeek,` and if the `View` given as `Month,` this will be reset to AllowedViews first value.
+
+## Date Restrictions
+
+In .NET MAUI Scheduler, you can restrict the available dates to a range of dates using the properties `MinimumDateTime` and `MaximumDateTime.` It is applicable to the all Scheduler views.
+
+### Change minimum display date and time
+
+The minimum date time will restrict backward navigation of date selections as well as the ability to swipe the views beyond the minimum date range. Any dates that appear before the minimum date will be disabled. The default value of `MinimumDateTime` is `DateTime.MinValue.`
+
+{% tabs %}
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" 
+                       View="Week">
+</scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight c# %}
+
+this.Scheduler.MinimumDateTime = DateTime.Today.AddMonths(-3).AddHours(9);
+
+{% endhighlight %}
+{% endtabs %}
+
+### Change maximum display date and time
+
+The maximum date time will restrict forward navigation of date selections as well as the ability to swipe the views beyond the maximum date range. Any dates that appear after the maximum date will be disabled. The default value of `MaximumDateTime` is `DateTime.MaxValue .`
+
+{% tabs %}
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" 
+                       View="Week">
+</scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight c# %}
+
+this.Scheduler.MaximumDateTime = DateTime.Today.AddMonths(3).AddHours(12);
+
+{% endhighlight %}
+{% endtabs %}
+
+### Selectable day predicate(Blackout dates)
+
+The `SelectableDayPredicate` functions allows certain days for selection. Only the days that `SelectableDayPredicate` returns true will be selectable in the Scheduler.
+
+{% tabs %}
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" 
+                       View="Week">
+</scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight c# %}
+
+this.Scheduler.SelectableDayPredicate = (date) =>
+{
+    if (date.DayOfWeek == DayOfWeek.Sunday || date.DayOfWeek == DayOfWeek.Saturday)
+    {
+        return false;
+    }
+
+    return true;
+};
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Customize the minimum date time, maximum date time and selectable day predicate appearance
+
+You can customize the background color and text style for the minimum date time, maximum date time, and selectable day predicate, by setting the `Background,` and `DisabledDateTextStyle` properties of `SfScheduler.`
+
+{% tabs %}
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" 
+                       View="Week">
+</scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight c# %}
+
+var disabledDateTextStyle = new SchedulerTextStyle()
+{
+    TextColor = Colors.Red,
+    FontSize = 12,
+};
+
+this.Scheduler.DisabledDateTextStyle = disabledDateTextStyle;
+this.Scheduler.DisabledDateBackground = Brush.LightSkyBlue;
+
+{% endhighlight %}
+{% endtabs %}
+
+N>
+* The `DisabledDateTextStyle` and `DisabledDateBackground` properties will be applicable for the following properties such as `MinimumDateTime,` `MaximumDateTime,` and `SelectableDayPredicate` of the `SfScheduler.`
+* The `DisabledDateBackground` property is not applicable for month cells and view header cells.
