@@ -11,7 +11,7 @@ documentation: ug
 
 ## Fast Line Chart
 
-The [FastLineSeries]() is a special kind of line series that can render a collection with huge number of datapoints. To render a fast line chart, create an instance of [FastLineSeries](), and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1). 
+The [FastLineSeries]() is a special kind of line series that can render a collection with large number of datapoints. To render a fast line chart, create an instance of [FastLineSeries](), and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1). 
 
 {% tabs %}
 
