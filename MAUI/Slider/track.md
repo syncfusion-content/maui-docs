@@ -33,9 +33,9 @@ The inactive side of the slider is between the thumb and the `Maximum` value.
 
 {% highlight C# %}
 
-  SfSlider slider = new SfSlider();
-  slider.TrackStyle.ActiveColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
-  slider.TrackStyle.InactiveColor = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
+SfSlider slider = new SfSlider();
+slider.TrackStyle.ActiveColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+slider.TrackStyle.InactiveColor = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
 
 {% endhighlight %}
 
@@ -51,11 +51,11 @@ You can change the active and inactive track height of the slider using the `Act
 
 {% highlight xaml %}
 
- <sliders:SfSlider>
-     <sliders:SfSlider.TrackStyle>
-          <sliders:SliderTrackStyle ActiveSize="10" InactiveSize="8" />
-      </sliders:SfSlider.TrackStyle>
- </sliders:SfSlider>
+<sliders:SfSlider>
+   <sliders:SfSlider.TrackStyle>
+       <sliders:SliderTrackStyle ActiveSize="10" InactiveSize="8" />
+   </sliders:SfSlider.TrackStyle>
+</sliders:SfSlider>
 
 {% endhighlight %}
 
