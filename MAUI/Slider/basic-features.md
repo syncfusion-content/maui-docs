@@ -32,14 +32,9 @@ For date values, the slider does not have auto interval support. So, it is manda
 <ContentPage>
     <sliders:SfSlider Minimum="2010-01-01" 
 		      Maximum="2020-01-01" 
-		      Value="2014-01-01" 
-		      ShowLabels="True" 
-		      ShowTicks="True" 
-		      Interval="2" 
-		      DateIntervalType="Years" 
-		      DateFormat="yyyy">
+		      Value="2014-01-01">
     </sliders:SfSlider>
- </ContentPage>
+</ContentPage>
 
 {% endhighlight %}
 
@@ -58,11 +53,6 @@ namespace SliderGettingStarted
 	    slider.Minimum = new DateTime(2010, 01, 01);
 	    slider.Maximum = new DateTime(2020, 01, 01);
 	    slider.Value = new DateTime(2014, 01, 01);
-	    slider.ShowLabels = true;
-	    slider.ShowTicks = true;
-	    slider.Interval = 2;
-	    slider.DateIntervalType = SliderDateIntervalType.Years;
-	    slider.DateFormat = "yyyy";
 	    this.Content = slider;
         }
     }
@@ -86,9 +76,15 @@ namespace SliderGettingStarted
 {% highlight xaml %}
 
 <ContentPage>
-    <sliders:SfSlider Minimum="2010-01-01" Maximum="2020-01-01" Value="2014-01-01" ValueChangeStart="OnValueChangeStart" ValueChanging="OnValueChanging" ValueChanged="OnValueChanged" ValueChangeEnd="OnValueChangeEnd" ShowLabels="True" ShowTicks="True" Interval="2" DateIntervalType="Years" DateFormat="yyyy">
+    <sliders:SfSlider Minimum="2010-01-01" 
+		      Maximum="2020-01-01" 
+		      Value="2014-01-01" 
+		      ValueChangeStart="OnValueChangeStart" 
+		      ValueChanging="OnValueChanging" 
+		      ValueChanged="OnValueChanged" 
+		      ValueChangeEnd="OnValueChangeEnd">
     </sliders:SfSlider>
- </ContentPage>
+</ContentPage>
 
 {% endhighlight %}
 
