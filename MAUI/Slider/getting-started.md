@@ -137,12 +137,10 @@ Set the 'DateTime' values to the `Minimum`, `Maximum`, and `Value` properties to
 
 {% highlight xaml %}
 
-<ContentPage>
  <sliders:SfSlider Minimum="2010-01-01" 
 		   Maximum="2020-01-01" 
 		   Value="2014-01-01">
  </sliders:SfSlider>
- </ContentPage>
 
 {% endhighlight %}
 
@@ -167,15 +165,14 @@ The `ShowTicks` property enables ticks in the slider, while the `MinorTicksPerIn
 
 {% highlight xaml %}
 
-<ContentPage>
-  <sliders:SfSlider Minimum="2010-01-01" 
+ <sliders:SfSlider Minimum="2010-01-01" 
 		    Maximum="2020-01-01" 
 		    Value="2014-01-01" 
 		    ShowTicks="True" 
 		    Interval="2" 
 		    MinorTicksPerInterval="1">
-  </sliders:SfSlider>
- </ContentPage>
+ </sliders:SfSlider>
+
 
 {% endhighlight %}
 
@@ -205,7 +202,7 @@ The `Orientation` property allows you to show the slider in both horizontal and 
 
 {% highlight xaml %}
 
-  <sliders:SfSlider Orientation="Vertical" />
+ <sliders:SfSlider Orientation="Vertical" />
 
 {% endhighlight %}
 
@@ -228,7 +225,7 @@ You can invert the slider using the `IsInversed` property. The default value of 
 
 {% highlight xaml %}
 
-  <sliders:SfSlider IsInversed="True" />
+ <sliders:SfSlider IsInversed="True" />
 
 {% endhighlight %}
 
@@ -253,13 +250,13 @@ N> The format type (numeric or date) of the slider is determined based on the va
 
 {% highlight xaml %}
 
-  <sliders:SfSlider Minimum="20" 
+ <sliders:SfSlider Minimum="20" 
 		    Maximum="100" 
 		    Value="60" 
 		    NumberFormat="$##" 
 		    ShowLabels="True" 
 		    Interval="20">
-  </sliders:SfSlider>
+ </sliders:SfSlider>
 
 {% endhighlight %}
 
