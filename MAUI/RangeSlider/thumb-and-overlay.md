@@ -22,18 +22,18 @@ You can change the size of the thumb in the range slider using the `Radius` prop
 
 {% highlight xaml %}
 
-  <sliders:SfRangeSlider >
-      <sliders:SfRangeSlider.ThumbStyle>
-         <sliders:SliderThumbStyle Radius="15" />
-      </sliders:SfRangeSlider.ThumbStyle>
-  </sliders:SfRangeSlider>
+<sliders:SfRangeSlider >
+   <sliders:SfRangeSlider.ThumbStyle>
+       <sliders:SliderThumbStyle Radius="15" />
+   </sliders:SfRangeSlider.ThumbStyle>
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SfRangeSlider rangeSlider = new SfRangeSlider();
-    rangeSlider.ThumbStyle.Radius = 15;
+SfRangeSlider rangeSlider = new SfRangeSlider();
+rangeSlider.ThumbStyle.Radius = 15;
         
 {% endhighlight %}
 
@@ -49,18 +49,18 @@ You can change the color of the thumb in the range slider using the `Color` prop
 
 {% highlight xaml %}
 
-  <sliders:SfRangeSlider >
-      <sliders:SfRangeSlider.ThumbStyle>
-         <sliders:SliderThumbStyle Color="#EE3F3F" />
-      </sliders:SfRangeSlider.ThumbStyle>
-  </sliders:SfRangeSlider>
+<sliders:SfRangeSlider >
+   <sliders:SfRangeSlider.ThumbStyle>
+       <sliders:SliderThumbStyle Color="#EE3F3F" />
+   </sliders:SfRangeSlider.ThumbStyle>
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SfRangeSlider rangeSlider = new SfRangeSlider();
-    rangeSlider.ThumbStyle.Color = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+SfRangeSlider rangeSlider = new SfRangeSlider();
+rangeSlider.ThumbStyle.Color = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
         
 {% endhighlight %}
 
@@ -76,19 +76,19 @@ You can change the thumb stroke width using the `StrokeWidth` property and thumb
 
 {% highlight xaml %}
 
-  <sliders:SfRangeSlider >
-      <sliders:SfRangeSlider.ThumbStyle>
-         <sliders:SliderThumbStyle StrokeWidth="2" StrokeColor="#EE3F3F" />
-      </sliders:SfRangeSlider.ThumbStyle>
-  </sliders:SfRangeSlider>
+<sliders:SfRangeSlider >
+   <sliders:SfRangeSlider.ThumbStyle>
+       <sliders:SliderThumbStyle StrokeWidth="2" StrokeColor="#EE3F3F" />
+   </sliders:SfRangeSlider.ThumbStyle>
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SfRangeSlider rangeSlider = new SfRangeSlider();
-    rangeSlider.ThumbStyle.StrokeColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
-    rangeSlider.ThumbStyle.StrokeWidth = 2;
+SfRangeSlider rangeSlider = new SfRangeSlider();
+rangeSlider.ThumbStyle.StrokeColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+rangeSlider.ThumbStyle.StrokeWidth = 2;
         
 {% endhighlight %}
 
@@ -104,18 +104,18 @@ You can change the thumb stroke color while two thumbs are overlapping in the ra
 
 {% highlight xaml %}
 
-  <sliders:SfRangeSlider >
-     <sliders:SfRangeSlider.ThumbStyle>
-        <sliders:SliderThumbStyle OverlapStrokeColor="#EE3F3F" />
-     </sliders:SfRangeSlider.ThumbStyle>
-  </sliders:SfRangeSlider>
+<sliders:SfRangeSlider >
+  <sliders:SfRangeSlider.ThumbStyle>
+      <sliders:SliderThumbStyle OverlapStrokeColor="#EE3F3F" />
+  </sliders:SfRangeSlider.ThumbStyle>
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SfRangeSlider rangeSlider = new SfRangeSlider();
-    rangeSlider.ThumbStyle.OverlapStrokeColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+SfRangeSlider rangeSlider = new SfRangeSlider();
+rangeSlider.ThumbStyle.OverlapStrokeColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
         
 {% endhighlight %}
 
@@ -131,18 +131,18 @@ You can change the size of the thumb overlay in the range slider using the `Radi
 
 {% highlight xaml %}
 
-  <sliders:SfRangeSlider >
-      <sliders:SfRangeSlider.ThumbOverlayStyle>
-        <sliders:SliderThumbOverlayStyle Radius="30"/>
-     </sliders:SfRangeSlider.ThumbOverlayStyle>
-  </sliders:SfRangeSlider>
+<sliders:SfRangeSlider >
+   <sliders:SfRangeSlider.ThumbOverlayStyle>
+      <sliders:SliderThumbOverlayStyle Radius="30"/>
+   </sliders:SfRangeSlider.ThumbOverlayStyle>
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SfRangeSlider rangeSlider = new SfRangeSlider();
-    rangeSlider.ThumbOverlayStyle.Radius = 30;
+SfRangeSlider rangeSlider = new SfRangeSlider();
+rangeSlider.ThumbOverlayStyle.Radius = 30;
         
 {% endhighlight %}
 
@@ -158,18 +158,18 @@ You can change the color of the thumb overlay in the range slider using the `Col
 
 {% highlight xaml %}
 
-  <sliders:SfRangeSlider >
-      <sliders:SfRangeSlider.ThumbOverlayStyle>
-          <sliders:SliderThumbOverlayStyle Color="#F7C8DB"/>
-       </sliders:SfRangeSlider.ThumbOverlayStyle>
-  </sliders:SfRangeSlider>
+<sliders:SfRangeSlider >
+   <sliders:SfRangeSlider.ThumbOverlayStyle>
+      <sliders:SliderThumbOverlayStyle Color="#F7C8DB"/>
+   </sliders:SfRangeSlider.ThumbOverlayStyle>
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SfRangeSlider rangeSlider = new SfRangeSlider();
-    rangeSlider.ThumbOverlayStyle.Color = new SolidColorBrush(Color.FromArgb("#F7C8DB"));
+SfRangeSlider rangeSlider = new SfRangeSlider();
+rangeSlider.ThumbOverlayStyle.Color = new SolidColorBrush(Color.FromArgb("#F7C8DB"));
         
 {% endhighlight %}
 
