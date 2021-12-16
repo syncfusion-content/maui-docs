@@ -29,37 +29,21 @@ For date values, the range slider does not have auto interval support. So, it is
 
 {% highlight xaml %}
 
-<ContentPage>
-    <sliders:SfRangeSlider Minimum="2010-01-01" Maximum="2020-01-01" RangeStart="2012-01-01" RangeEnd="2018-01-01" ShowLabels="True" ShowTicks="True" Interval="2" DateIntervalType="Years" DateFormat="yyyy">
-    </sliders:SfRangeSlider>
- </ContentPage>
+  <sliders:SfRangeSlider Minimum="2010-01-01" 
+                         Maximum="2020-01-01" 
+                         RangeStart="2012-01-01" 
+                         RangeEnd="2018-01-01" >
+  </sliders:SfRangeSlider>
  
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Sliders;
-
-namespace SliderGettingStarted
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            SfRangeSlider rangeSlider = new SfRangeSlider();
-            rangeSlider.Minimum = new DateTime(2010, 01, 01);
-            rangeSlider.Maximum = new DateTime(2020, 01, 01);
-            rangeSlider.RangeStart = new DateTime(2012, 01, 01);
-            rangeSlider.RangeEnd = new DateTime(2018, 01, 01);
-            rangeSlider.ShowLabels = true;
-            rangeSlider.ShowTicks = true;
-            rangeSlider.Interval = 2;
-            rangeSlider.DateIntervalType = SliderDateIntervalType.Years;
-            rangeSlider.DateFormat = "yyyy";
-            this.Content = rangeSlider;
-        }
-    }
-}
+ SfRangeSlider rangeSlider = new SfRangeSlider();
+ rangeSlider.Minimum = new DateTime(2010, 01, 01);
+ rangeSlider.Maximum = new DateTime(2020, 01, 01);
+ rangeSlider.RangeStart = new DateTime(2012, 01, 01);
+ rangeSlider.RangeEnd = new DateTime(2018, 01, 01);
 
 {% endhighlight %}
 
@@ -78,42 +62,42 @@ namespace SliderGettingStarted
 
 {% highlight xaml %}
 
-<ContentPage>
-    <sliders:SfSlider Minimum="2010-01-01" Maximum="2020-01-01" RangeStart="2012-01-01" RangeEnd="2018-01-01" ValueChangeStart="OnValueChangeStart" ValueChanging="OnValueChanging" ValueChanged="OnValueChanged" ValueChangeEnd="OnValueChangeEnd" ShowLabels="True" ShowTicks="True" Interval="2" DateIntervalType="Years" DateFormat="yyyy">
-    </sliders:SfSlider>
- </ContentPage>
+  <sliders:SfSlider Minimum="2010-01-01" 
+                    Maximum="2020-01-01" 
+                    RangeStart="2012-01-01" 
+                    RangeEnd="2018-01-01" 
+                    ValueChangeStart="OnValueChangeStart" 
+                    ValueChanging="OnValueChanging" 
+                    ValueChanged="OnValueChanged" 
+                    ValueChangeEnd="OnValueChangeEnd">
+  </sliders:SfSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Sliders;
-
-namespace SliderGettingStarted
 {
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-        }
+   SfRangeSlider rangeSlider = new SfRangeSlider();
+   rangeSlider.ValueChangeStart += OnValueChanged;
+   rangeSlider.ValueChanging += OnValueChanged;
+   rangeSlider.ValueChanged += OnValueChanged;
+   rangeSlider.ValueChangeEnd += OnValueChanged;
+}
 
-        private void OnValueChangeStart(object sender, RangeSliderValueChangeStartEventArgs e)
-        {
-        }
+private void OnValueChangeStart(object sender, RangeSliderValueChangeStartEventArgs e)
+{
+}
 
-        private void OnValueChanging(object sender, RangeSliderValueChangingEventArgs e)
-        {
-        }
+private void OnValueChanging(object sender, RangeSliderValueChangingEventArgs e)
+{
+}
 
-        private void OnValueChanged(object sender, RangeSliderValueChangedEventArgs e)
-        {
-        }
+private void OnValueChanged(object sender, RangeSliderValueChangedEventArgs e)
+{
+}
 
-        private void OnValueChangeEnd(object sender, RangeSliderValueChangeEndEventArgs e)
-        {
-        }
-    }
+private void OnValueChangeEnd(object sender, RangeSliderValueChangeEndEventArgs e)
+{
 }
 
 {% endhighlight %}
