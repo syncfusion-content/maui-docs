@@ -23,20 +23,34 @@ The inactive side of the slider is between the thumb and the `Maximum` value.
 
 {% highlight xaml %}
 
- <sliders:SfSlider>
+<ContentPage>
+   <sliders:SfSlider>
       <sliders:SfSlider.TrackStyle>
-          <sliders:SliderTrackStyle ActiveColor="#EE3F3F" 
-	                            InactiveColor="#F7B1AE" />
+         <sliders:SliderTrackStyle ActiveColor="#EE3F3F" InactiveColor="#F7B1AE" />
       </sliders:SfSlider.TrackStyle>
- </sliders:SfSlider>
+   </sliders:SfSlider>
+ </ContentPage>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-  SfSlider slider = new SfSlider();
-  slider.TrackStyle.ActiveColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
-  slider.TrackStyle.InactiveColor = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
+using Syncfusion.Maui.Sliders;
+
+namespace SliderGettingStarted
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+          	SfSlider slider = new SfSlider();
+			slider.TrackStyle.ActiveColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+			slider.TrackStyle.InactiveColor = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
+			this.Content = slider;
+        }
+    }
+}
 
 {% endhighlight %}
 
@@ -52,20 +66,34 @@ You can change the active and inactive track height of the slider using the `Act
 
 {% highlight xaml %}
 
-  <sliders:SfSlider>
-      <sliders:SfSlider.TrackStyle>
-          <sliders:SliderTrackStyle ActiveSize="10" 
-	                            InactiveSize="8" />
-       </sliders:SfSlider.TrackStyle>
-  </sliders:SfSlider>
+<ContentPage>
+    <sliders:SfSlider>
+            <sliders:SfSlider.TrackStyle>
+                <sliders:SliderTrackStyle ActiveSize="10" InactiveSize="8" />
+            </sliders:SfSlider.TrackStyle>
+        </sliders:SfSlider>
+ </ContentPage>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-  SfSlider slider = new SfSlider();
-  slider.TrackStyle.ActiveSize = 10;
-  slider.TrackStyle.InactiveSize = 8;
+using Syncfusion.Maui.Sliders;
+
+namespace SliderGettingStarted
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+          	SfSlider slider = new SfSlider();
+			slider.TrackStyle.ActiveSize = 10;
+			slider.TrackStyle.InactiveSize = 8;
+			this.Content = slider;
+        }
+    }
+}
 
 {% endhighlight %}
 
