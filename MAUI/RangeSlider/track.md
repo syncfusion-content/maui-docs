@@ -23,19 +23,19 @@ The inactive side of the range slider is between the `Minimum` value and the lef
 
 {% highlight xaml %}
 
-   <sliders:SfRangeSlider>
-      <sliders:SfRangeSlider.TrackStyle>
-         <sliders:SliderTrackStyle ActiveColor="#EE3F3F" InactiveColor="#F7B1AE" />
-      </sliders:SfRangeSlider.TrackStyle>
-   </sliders:SfRangeSlider>
+<sliders:SfRangeSlider>
+  <sliders:SfRangeSlider.TrackStyle>
+      <sliders:SliderTrackStyle ActiveColor="#EE3F3F" InactiveColor="#F7B1AE" />
+  </sliders:SfRangeSlider.TrackStyle>
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SfRangeSlider rangeSlider = new SfRangeSlider();
-	rangeSlider.TrackStyle.ActiveColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
-	rangeSlider.TrackStyle.InactiveColor = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
+SfRangeSlider rangeSlider = new SfRangeSlider();
+rangeSlider.TrackStyle.ActiveColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+rangeSlider.TrackStyle.InactiveColor = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
 
 {% endhighlight %}
 
@@ -51,19 +51,19 @@ You can change the active and inactive track height of the range slider using th
 
 {% highlight xaml %}
 
-   <sliders:SfRangeSlider>
-     <sliders:SfRangeSlider.TrackStyle>
-        <sliders:SliderTrackStyle ActiveSize="10" InactiveSize="8" />
-     </sliders:SfRangeSlider.TrackStyle>
-   </sliders:SfRangeSlider>
+<sliders:SfRangeSlider>
+   <sliders:SfRangeSlider.TrackStyle>
+      <sliders:SliderTrackStyle ActiveSize="10" InactiveSize="8" />
+   </sliders:SfRangeSlider.TrackStyle>
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SfRangeSlider rangeSlider = new SfRangeSlider();
-	rangeSlider.TrackStyle.ActiveSize = 10;
-	rangeSlider.TrackStyle.InactiveSize = 8;
+SfRangeSlider rangeSlider = new SfRangeSlider();
+rangeSlider.TrackStyle.ActiveSize = 10;
+rangeSlider.TrackStyle.InactiveSize = 8;
 
 {% endhighlight %}
 
