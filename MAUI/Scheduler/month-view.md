@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Month View in .NET MAUI Scheduler control | Syncfusion
-description: Learn here all about to customize the appearance and change the date format for month view in Syncfusion .NET MAUI Scheduler (SfScheduler) control and more.
+description: Learn here all about how to customize the appearance and change the date format for month view in Syncfusion .NET MAUI Scheduler (SfScheduler) control and more.
 platform: maui
 control: SfScheduler
 documentation: ug
@@ -9,13 +9,13 @@ documentation: ug
 
 # Month View in .NET MAUI Scheduler (SfScheduler)
 
-By default, the Month view displays the entire days of a particular month and current month initially. The current date color is differentiated from other dates of the current month, and also the color differentiation for dates will be applicable for previous and next month dates.
+By default, the Month view displays the entire days of a particular month and current month initially. The current date color is differentiated from other dates of the current month, and also the color differentiation for dates will be applicable for the previous and next month dates.
 
-By default, when you try to create an appointment through Month view, it is considered as created for an entire day.
+By default, when an appointment is tried to create through Month view, it is considered to be created for an entire day.
 
 ## Appointment display mode
 
-You can handle the scheduler month view appointment display by using the `AppointmentDisplayMode` property of `MonthViewSettings`. By default, `AppointmentDisplayMode` is set to `Text,` using the `AppointmentDisplayMode.` 
+The scheduler month view appointment display can be handled by using the `AppointmentDisplayMode` property of `MonthViewSettings.` By default, `AppointmentDisplayMode` is set to `Text,` using the `AppointmentDisplayMode.` 
 
 You can set the month view appointments display as follows.
 
@@ -45,7 +45,7 @@ this.Scheduler.MonthViewSettings.AppointmentDisplayMode = SchedulerMonthAppointm
 
 ## Hide leading and trailing dates
 
-You can hide the previous and next month dates from a Scheduler month view by using the `ShowLeadingAndTrailingDates` property in the `MonthViewSettings` of the `SfScheduler.` The `ShowLeadingAndTrailingDates` property defaults to true.
+The previous and next month dates from a Scheduler month view can be hidden by using the `ShowLeadingAndTrailingDates` property in the `MonthViewSettings` of the `SfScheduler.` The `ShowLeadingAndTrailingDates` property defaults to `true.`
 
 {% tabs %}  
 {% highlight xaml %}
@@ -69,7 +69,7 @@ this.Scheduler.MonthViewSettings.ShowLeadingAndTrailingDates = false;
 
 ## Change day format of view header
 
-You can customize the day format of Scheduler view header by using the `DayFormat` property of `MonthViewSettings.`
+Customize the day format of Scheduler view header by using the `DayFormat` property of `MonthViewSettings.`
 
 {% tabs %}
 {% highlight c# %}
@@ -82,7 +82,7 @@ this.Scheduler.MonthViewSettings.ViewHeaderSettings.DayFormat = "dddd";
 
 ## Customize view header appearance
 
-You can customize the month view header day text style, day format and background color by using the `SchedulerTextStyle`, `DayFormat` and `background` of `ViewHeaderSettings` property of `MonthViewSettings` respectively.
+Customize the month view header day text style, day format and background color by using the `SchedulerTextStyle,` `DayFormat` and `Background` of `ViewHeaderSettings` property of `MonthViewSettings` respectively.
 
 {% tabs %}
 {% highlight c# %}
@@ -102,7 +102,7 @@ this.Scheduler.MonthViewSettings.ViewHeaderSettings.DayTextStyle = dayTextStyle;
 
 ## customize month cell appearance
 
-By using the `MonthCellStyle` property of `MonthViewSettings,` you can customize the month properties such as `Background,` `TodayBackground,` `TrailingMonthBackground,` `LeadingMonthBackground,` `TextStyle,` `TrailingMonthTextStyle,` and `LeadingMonthTextStyle` from the `MonthCellStyle.`
+By using the `MonthCellStyle` property of `MonthViewSettings,` the month properties such as `Background,` `TodayBackground,` `TrailingMonthBackground,` `LeadingMonthBackground,` `TextStyle,` `TrailingMonthTextStyle,` and `LeadingMonthTextStyle` can be customized.
 
 {% tabs %}
 {% highlight c# %}

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Timeline Views in .NET MAUI Scheduler control | Syncfusion
-description: Learn here all about to customize the timeline views settings in Syncfusion .NET MAUI Scheduler (SfScheduler) control and more.
+description: Learn here all about how to customize the timeline views settings in Syncfusion .NET MAUI Scheduler (SfScheduler) control and more.
 platform: maui
 control: SfScheduler
 documentation: ug
@@ -13,7 +13,7 @@ The timelineView displays the date inside the horizontal time axis with the desi
 
 * **Timeline day view**: It displays a single day in the horizontal time axis of the Scheduler.
 
-* **Timeline week view**: It displays all days of a week in horizontal time axis. You can see the past or future dates by scrolling to right or left.
+* **Timeline week view**: It displays all the days of a week in horizontal time axis. The past or future dates can be viewed by scrolling to right or left.
 
 * **Timeline work week view**: It displays only the working days of a week in horizontal axis. By default, Saturday and Sunday are not working days. You can customize it with any day of the week.
 
@@ -21,7 +21,7 @@ The timelineView displays the date inside the horizontal time axis with the desi
 
 ## Change time interval
 
-You can customize the time interval between the time slots in the timeline day, timeline week, and timeline workweek views by using the `TimeInterval` property of `TimelineViewSettings.`
+The time interval between the time slots in the timeline day, timeline week, and timeline workweek views can be customized by using the `TimeInterval` property of `TimelineViewSettings.`
 
 {% tabs %}
 {% highlight c# %}
@@ -60,7 +60,7 @@ this.Scheduler.TimelineViewSettings.TimeIntervalWidth = 120;
 
 ## Flexible working days
 
-By default, the `.NET MAUI Scheduler`, weekdays from Monday through Friday are considered working days. The days which are defined in this non-working days collection are considered as `non-working days.` Therefore, when the weekend days are set to hide from Scheduler.
+By default, the `.NET MAUI Scheduler` considers the weekdays from Monday to Friday as working days. The days which are defined in this non-working days collection are considered as `non-working days.` Therefore, the weekend days are set to hide from the Scheduler.
 
 The `NonWorkingDays` property of `TimelineViewSettings` can also be used to show only the nonworking days of the week.
 
@@ -88,7 +88,7 @@ N> The `Timeline workweek` view displays exactly the defined working days on Sch
 
 ## Flexible working hours
 
-The default values for `StartHour` and `EndHour` are `0` and `24` respectively, to show all time slots for a timeline day, timeline week, or timeline workweek view. You may set these properties to show only the required time periods in `TimelineViewSettings.` You can set `StartHour` and `EndHour` in time duration to show the required time duration in minutes.
+The default values for `StartHour` and `EndHour` are `0` and `24` respectively, to show all the time slots for a timeline day, timeline week, or timeline workweek view. You may set these properties to show only the required time periods in `TimelineViewSettings.` You can set `StartHour` and `EndHour` in the time duration to show the required time duration in minutes.
 
 {% tabs %}
 {% highlight xaml %}
@@ -117,11 +117,11 @@ N>
 * No need to specify the decimal point values for `StartHour` and `EndHour`, if you do not want to set the minutes.
 * The number of time slots will be calculated based on total minutes of a day and time interval (total minutes of a day ((start hour - end hour) * 60) / time interval).
 * If a custom timeInterval is given, then the number of time slots calculated based on the given `TimeInterval` should result in an integer value (total minutes % timeInterval = 0), otherwise the next immediate time interval that results in integer value when dividing total minutes of a day will be considered. For example, if TimeInterval=2 Hours 15 minutes and total minutes = 1440 (24 Hours per day), then the `TimeInterval` will be changed to ‘144’ (1440%144=0) by considering (total minutes % TimeInterval = 0), it will return integer value for time slots rendering.
-* If the custom `StartHour` and `EndHour` are given, then the number of time slots calculated based on given `StartHour` and `EndHour` should result in integer value, otherwise the next immediate `TimeInterval` will be considered until the result is integer value. For example, if the `StartHour` is 9 (09:00AM), `EndHour` is 18.25 (06:15 PM), `TimeInterval` is 30 minutes, and total minutes = 555 ((18.25-9)*60), then the `TimeInterval` will be changed to ’37 minutes’ (555%37=0) by considering (total minutes % timeInterval = 0) it will return the integer value for time slots rendering.
+* If the custom `StartHour` and `EndHour` are given, then the number of time slots calculated based on the given `StartHour` and `EndHour` should result in integer value, otherwise the next immediate `TimeInterval` will be considered until the result is integer value. For example, if the `StartHour` is 9 (09:00AM), `EndHour` is 18.25 (06:15 PM), `TimeInterval` is 30 minutes, and total minutes = 555 ((18.25-9)*60), then the `TimeInterval` will be changed to ’37 minutes’ (555%37=0) by considering (total minutes % timeInterval = 0) it will return the integer value for time slots rendering.
 
 ## Special time regions
 
-You can restrict the user interaction such as selection and highlights specific regions of timeline day, timeline week, and timeline workweek views by adding the `TimeRegions` property of the `SfScheduler.` You need to set the `StartTime` and `EndTime` properties of `TimeRegions` to create a specialTimeRegion, you can use the `TimeZone` property to set the specific timezone for start and end time of `TimeRegions.`
+The user interaction such as selection and highlights specific regions of timeline day, timeline week, and timeline workweek views can be restricted by adding the `TimeRegions` property of the `TimelineViewSettings` in the `SfScheduler.` You need to set the `StartTime` and `EndTime` properties of `TimeRegions` to create a specialTimeRegion, you can use the TimeZone property to set the specific timezone for start and end time of `TimeRegions.`
 
 ### Selection restriction in timeslots
 
@@ -188,7 +188,7 @@ private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 
 ### Recurrence exception dates
 
-You can delete any of occurrence that is an exception from the recurrence pattern time region by using the `RecurrenceExceptionDates` property of `TimeRegion.` The deleted occurrence date will be considered as a recurrence exception date.
+Any occurrence that is an exception from the recurrence pattern time region can be deleted by using the `RecurrenceExceptionDates` property of `TimeRegion.` The deleted occurrence date will be considered as a recurrence exception date.
 
 {% tabs %}
 {% highlight c# %}
@@ -282,7 +282,7 @@ this.Scheduler.TimelineViewSettings.TimeRulerHeight = 100;
 
 ## Minimum appointment duration
 
-The `MinimumAppointmentDuration` property allows you to set an arbitrary height to appointments which have a minimum duration in the timeline day, timeline week, and timeline workweek views so that the subject can be readable.
+The `MinimumAppointmentDuration` property allows to set an arbitrary height to appointments which have a minimum duration in the timeline day, timeline week, and timeline workweek views so that the subject can be readable.
 
 {% tabs %}
 {% highlight xaml %}
@@ -308,11 +308,11 @@ N>
 * The `MinimumAppointmentDuration` value will be set when an appointment duration value is lesser than `MinimumAppointmentDuration.`
 * Appointment duration value will be set when the appointment duration value is greater than `MinimumAppointmentDuration`.
 * The `TimeInterval` value will be set when the `MinimumAppointmentDuration` is greater than `TimeInterval` with lesser appointment duration.
-* The all-day Appointment does not support `MinimumAppointmentDuration.`
+* The all-day appointment does not support `MinimumAppointmentDuration.`
 
 ## View header text formatting
 
-You can customize the date and day format of `SfScheduler` ViewHeader by using the `DateFormat` and `DayFormat` properties of `TimelineViewSettings.`
+The date and day format of SfScheduler view header can be customized by using the `DateFormat` and `DayFormat` properties of `TimelineViewSettings.`
 
 {% tabs %}
 {% highlight c# %}
@@ -326,7 +326,7 @@ this.Scheduler.TimelineViewSettings.ViewHeaderSettings.DateFormat = "MMMM dd";
 
 ## Customize view header text style
 
-You can customize the background color and text style for the labels mentioning the time, by setting the `Background,` `DateTextStyle,` and `DayTextStyle` properties of `TimelineViewSettings` in the Scheduler.
+The background color and text style for the labels mentioning the time can be customized, by setting the `Background,` `DateTextStyle,` and `DayTextStyle` properties of `TimelineViewSettings` in the Scheduler.
 
 {% tabs %}
 {% highlight c# %}
@@ -352,7 +352,7 @@ this.Scheduler.TimelineViewSettings.ViewHeaderSettings.DayTextStyle = dayTextSty
 
 ## Time text formatting
 
-You can customize the format for the labels mentioning the time by setting the `TimeFormat` property of `TimelineViewSettings` in the Scheduler.
+The format for the labels mentioning the time can be customized by setting the `TimeFormat` property of `TimelineViewSettings` in the Scheduler.
 
 {% tabs %}
 {% highlight c# %}
@@ -368,7 +368,7 @@ N>
 
 ## Customize time ruler text style
 
-You can customize the background and text style for the labels mentioning the time, by setting the `Background,` and `TimeRulerTextStyle` properties of `TimelineViewSettings` in the Scheduler.
+The background and text style for the labels mentioning the time can be customized, by setting the `Background,` and `TimeRulerTextStyle` properties of `TimelineViewSettings` in the Scheduler.
 
 {% tabs %}
 {% highlight c# %}
