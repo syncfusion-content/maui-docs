@@ -1,17 +1,20 @@
 ---
 layout: post
-title: Date Navigations in .NET MAUI Scheduler control | Syncfusion
-description: Learn here all about Date Navigations feature of Syncfusion .NET MAUI Scheduler (SfScheduler) control and more.
+title: Date navigations and restriction in .NET MAUI Scheduler control | Syncfusion
+description: Learn here all about Date navigations and restriction feature of Syncfusion .NET MAUI Scheduler (SfScheduler) control and more.
 platform: maui
 control: SfScheduler
 documentation: ug
 ---
 
-# Date Navigations and Restrictions in .NET MAUI Scheduler
+# Date navigations and restrictions in .NET MAUI Scheduler
 
-## Date Navigations
+## Date navigations
 
-The `.NET MAUI Scheduler` control provides the option to navigate the dates either programmatically or by using gestures and it is applicable to the all Scheduler views.
+The `.NET MAUI Scheduler` control provides the option to navigate the dates either programmatically or by using navigation using `forward` and `backward` buttons and it is applicable to the all Scheduler views.
+
+N> 
+Touch gesture is not working as facing issue in [framework](https://github.com/dotnet/maui/issues/3561) 
 
 ### Programmatic date navigation
 
@@ -147,7 +150,7 @@ this.Scheduler.AllowedViews = SchedulerViews.Day | SchedulerViews.Week | Schedul
 N>
 The SfScheduler `view` will be restricted based on the  `AllowedViews.` For example, the `AllowedViews` given as `Day,` `Week,` `WorkWeek,` and if the `View` given as `Month,` this will be reset to AllowedViews first value.
 
-## Date Restrictions
+## Date restrictions
 
 In .NET MAUI Scheduler, you can restrict the available dates to a range of dates using the properties `MinimumDateTime` and `MaximumDateTime.` It is applicable to the all Scheduler views.
 
