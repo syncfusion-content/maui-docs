@@ -146,10 +146,10 @@ Set the 'DateTime' values to the `Minimum`, `Maximum`, and `Value` properties to
 
 {% highlight C# %}
 
-   SfSlider slider = new SfSlider();
-   slider.Minimum = new DateTime(2010, 01, 01);
-   slider.Maximum = new DateTime(2020, 01, 01);
-   slider.Value = new DateTime(2014, 01, 01);
+SfSlider slider = new SfSlider();
+slider.Minimum = new DateTime(2010, 01, 01);
+slider.Maximum = new DateTime(2020, 01, 01);
+slider.Value = new DateTime(2014, 01, 01);
 
 {% endhighlight %}
 
@@ -165,28 +165,26 @@ The `ShowTicks` property enables ticks in the slider, while the `MinorTicksPerIn
 
 {% highlight xaml %}
 
- <sliders:SfSlider Minimum="2010-01-01" 
+<sliders:SfSlider   Minimum="2010-01-01" 
 		    Maximum="2020-01-01" 
 		    Value="2014-01-01" 
 		    ShowTicks="True" 
 		    Interval="2" 
 		    MinorTicksPerInterval="1">
- </sliders:SfSlider>
+</sliders:SfSlider>
 
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Sliders;
-
-  SfSlider slider = new SfSlider();
-  slider.Minimum = new DateTime(2010, 01, 01);
-  slider.Maximum = new DateTime(2020, 01, 01);
-  slider.Value = new DateTime(2014, 01, 01);
-  slider.ShowTicks = true;
-  slider.Interval = 2;
-  slider.MinorTicksPerInterval = 1;
+SfSlider slider = new SfSlider();
+slider.Minimum = new DateTime(2010, 01, 01);
+slider.Maximum = new DateTime(2020, 01, 01);
+slider.Value = new DateTime(2014, 01, 01);
+slider.ShowTicks = true;
+slider.Interval = 2;
+slider.MinorTicksPerInterval = 1;
 
 {% endhighlight %}
 
@@ -208,8 +206,8 @@ The `Orientation` property allows you to show the slider in both horizontal and 
 
 {% highlight C# %}
 
-   SfSlider slider = new SfSlider();
-   slider.Orientation = SliderOrientation.Vertical;
+SfSlider slider = new SfSlider();
+slider.Orientation = SliderOrientation.Vertical;
 
 {% endhighlight %}
 
@@ -231,8 +229,8 @@ You can invert the slider using the `IsInversed` property. The default value of 
 
 {% highlight C# %}
 
-   SfSlider slider = new SfSlider();
-   slider.IsInversed = true;
+SfSlider slider = new SfSlider();
+slider.IsInversed = true;
 
 {% endhighlight %}
 
@@ -250,25 +248,25 @@ N> The format type (numeric or date) of the slider is determined based on the va
 
 {% highlight xaml %}
 
- <sliders:SfSlider Minimum="20" 
+<sliders:SfSlider   Minimum="20" 
 		    Maximum="100" 
 		    Value="60" 
 		    NumberFormat="$##" 
 		    ShowLabels="True" 
 		    Interval="20">
- </sliders:SfSlider>
+</sliders:SfSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-   SfSlider slider = new SfSlider();
-   slider.Minimum = 20;
-   slider.Maximum = 100;
-   slider.Value = 60;
-   slider.ShowLabels = true;
-   slider.Interval = 20;
-   slider.NumberFormat = "$##";
+ SfSlider slider = new SfSlider();
+ slider.Minimum = 20;
+ slider.Maximum = 100;
+ slider.Value = 60;
+ slider.ShowLabels = true;
+ slider.Interval = 20;
+ slider.NumberFormat = "$##";
 
 {% endhighlight %}
 
