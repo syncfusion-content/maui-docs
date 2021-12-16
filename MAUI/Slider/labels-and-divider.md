@@ -19,17 +19,17 @@ The `ShowLabels` property is used to render the labels on given interval. The de
 
 {% highlight xaml %}
 
- <sliders:SfSlider Interval="0.2"
-                     ShowLabels="True">
- </sliders:SfSlider>
+<sliders:SfSlider Interval="0.2"
+                  ShowLabels="True">
+</sliders:SfSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-  SfSlider slider = new SfSlider();
-  slider.Interval = 0.2;
-  slider.ShowLabels = true;
+SfSlider slider = new SfSlider();
+slider.Interval = 0.2;
+slider.ShowLabels = true;
 
 {% endhighlight %}
 
@@ -45,25 +45,25 @@ The `NumberFormat` property is used to format the numeric labels. The default va
 
 {% highlight xaml %}
 
-  <sliders:SfSlider Minimum="2" 
-                    Maximum="10"
-		    Value="6"
-		    Interval="2"  
-		    NumberFormat="$##" 
-		    ShowLabels="True">
-  </sliders:SfSlider>
+<sliders:SfSlider Minimum="2" 
+                  Maximum="10"
+                  Value="6"
+		  Interval="2"  
+		  NumberFormat="$##" 
+		  ShowLabels="True">
+</sliders:SfSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-   SfSlider slider = new SfSlider();
-   slider.Minimum = 2;
-   slider.Maximum = 10;
-   slider.Value = 6;
-   slider.Interval = 2;
-   slider.NumberFormat = "$##";
-   slider.ShowLabels = true;
+SfSlider slider = new SfSlider();
+slider.Minimum = 2;
+slider.Maximum = 10;
+slider.Value = 6;
+slider.Interval = 2;
+slider.NumberFormat = "$##";
+slider.ShowLabels = true;
 
 {% endhighlight %}
 
@@ -79,28 +79,28 @@ The `DateFormat` property is used to format the date labels. It is mandatory for
 
 {% highlight xaml %}
 
-  <sliders:SfSlider Minimum="2000-01-01T09:00:00" 
-                    Maximum="2000-01-01T17:00:00" 
-		    Value="2000-01-01T13:00:00" 
-		    ShowLabels="True"  
-		    DateIntervalType="Hours" 
-		    Interval="2" 
-		    DateFormat="h tt">
-  </sliders:SfSlider>
+<sliders:SfSlider Minimum="2000-01-01T09:00:00" 
+                  Maximum="2000-01-01T17:00:00" 
+                  Value="2000-01-01T13:00:00" 
+          	  ShowLabels="True"  
+		  DateIntervalType="Hours" 
+		  Interval="2" 
+		  DateFormat="h tt">
+</sliders:SfSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-   SfSlider slider = new SfSlider();
-   slider.Minimum = new DateTime(2000, 01, 01, 09, 00, 00);
-   slider.Maximum = new DateTime(2000, 01, 01, 17, 00, 00);
-   slider.Value = new DateTime(2000, 01, 01, 13, 00, 00);
-   slider.Interval = 2;
-   slider.DateIntervalType = SliderDateIntervalType.Hours;
-   slider.DateFormat = "h tt";
-   slider.ShowLabels = true;
-	    
+SfSlider slider = new SfSlider();
+slider.Minimum = new DateTime(2000, 01, 01, 09, 00, 00);
+slider.Maximum = new DateTime(2000, 01, 01, 17, 00, 00);
+slider.Value = new DateTime(2000, 01, 01, 13, 00, 00);
+slider.Interval = 2;
+slider.DateIntervalType = SliderDateIntervalType.Hours;
+slider.DateFormat = "h tt";
+slider.ShowLabels = true;
+    
 {% endhighlight %}
 
 {% endtabs %}
@@ -115,27 +115,27 @@ The `LabelsPlacement` property is used to place the labels either between the ma
 
 {% highlight xaml %}
 
- <sliders:SfSlider Minimum="0" 
-                   Maximum="10"
-		   Value="6"
-		   Interval="2"  
-		   LabelsPlacement="BetweenTicks" 
-		   ShowLabels="True" 
-		   ShowTicks="True">
-  </sliders:SfSlider>
+<sliders:SfSlider Minimum="0" 
+                  Maximum="10"
+                  Value="6"
+		  Interval="2"  
+		  LabelsPlacement="BetweenTicks" 
+		  ShowLabels="True" 
+		  ShowTicks="True">
+</sliders:SfSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-   SfSlider slider = new SfSlider();
-   slider.Minimum = 0;
-   slider.Maximum = 10;
-   slider.Value = 6;
-   slider.Interval = 2;
-   slider.LabelsPlacement = SliderLabelsPlacement.BetweenTicks;
-   slider.ShowLabels = true;
-   slider.ShowTicks = true;
+SfSlider slider = new SfSlider();
+slider.Minimum = 0;
+slider.Maximum = 10;
+slider.Value = 6;
+slider.Interval = 2;
+slider.LabelsPlacement = SliderLabelsPlacement.BetweenTicks;
+slider.ShowLabels = true;
+slider.ShowTicks = true;
 
 {% endhighlight %}
 
@@ -154,13 +154,13 @@ You can format or change the whole numeric or date label text using the `LabelCr
 
 {% highlight xaml %}
 
-  <sliders:SfSlider Minimum="2" 
-                    Maximum="10" 
-		    Value="6" 
-		    Interval="2" 	           
-	            LabelCreated="OnLabelCreated" 
-		    ShowLabels="True">
-   </sliders:SfSlider>
+<sliders:SfSlider Minimum="2" 
+                  Maximum="10" 
+                  Value="6" 
+		  Interval="2" 	           
+	          LabelCreated="OnLabelCreated" 
+		  ShowLabels="True">
+</sliders:SfSlider>
 
 {% endhighlight %}
 
@@ -199,32 +199,32 @@ The inactive side of the slider is between the thumb and the `Maximum` value.
 
 {% highlight xaml %}
 
-  <sliders:SfSlider Interval="0.2"  
-		    ShowLabels="True">
-        <sliders:SfSlider.LabelStyle>
-           <sliders:SliderLabelStyle ActiveTextColor="#EE3F3F" 
-	                             InactiveTextColor="#F7B1AE" 
-				     ActiveFontAttributes="Italic" 
-				     InactiveFontAttributes="Italic" 
-				     ActiveFontSize="16" 
-				     InactiveFontSize="16" />
-        </sliders:SfSlider.LabelStyle>
-    </sliders:SfSlider>
+<sliders:SfSlider Interval="0.2"  
+                  ShowLabels="True">
+    <sliders:SfSlider.LabelStyle>
+         <sliders:SliderLabelStyle ActiveTextColor="#EE3F3F" 
+                                   InactiveTextColor="#F7B1AE" 
+	             		   ActiveFontAttributes="Italic" 
+				   InactiveFontAttributes="Italic" 
+				   ActiveFontSize="16" 
+				   InactiveFontSize="16" />
+    </sliders:SfSlider.LabelStyle>
+</sliders:SfSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-   SfSlider slider = new SfSlider();
-   slider.Interval = 0.2;
-   slider.ShowLabels = true;
-   slider.ShowTicks = true;
-   slider.LabelStyle.ActiveTextColor = Color.FromArgb("#EE3F3F");
-   slider.LabelStyle.InactiveTextColor = Color.FromArgb("#F7B1AE");
-   slider.LabelStyle.ActiveFontSize = 16;
-   slider.LabelStyle.InactiveFontSize = 16;
-   slider.LabelStyle.ActiveFontAttributes = FontAttributes.Italic;
-   slider.LabelStyle.InactiveFontAttributes = FontAttributes.Italic;
+SfSlider slider = new SfSlider();
+slider.Interval = 0.2;
+slider.ShowLabels = true;
+slider.ShowTicks = true;
+slider.LabelStyle.ActiveTextColor = Color.FromArgb("#EE3F3F");
+slider.LabelStyle.InactiveTextColor = Color.FromArgb("#F7B1AE");
+slider.LabelStyle.ActiveFontSize = 16;
+slider.LabelStyle.InactiveFontSize = 16;
+slider.LabelStyle.ActiveFontAttributes = FontAttributes.Italic;
+slider.LabelStyle.InactiveFontAttributes = FontAttributes.Italic;
 
 {% endhighlight %}
 
@@ -240,23 +240,22 @@ You can adjust the space between ticks and labels of the slider using the `Offse
 
 {% highlight xaml %}
 
- <sliders:SfSlider Interval="0.2" 
-                   ShowLabels="True">
-       <sliders:SfSlider.LabelStyle>
-          <sliders:SliderLabelStyle Offset="10" />
-        </sliders:SfSlider.LabelStyle>
-  </sliders:SfSlider>
+<sliders:SfSlider Interval="0.2" 
+                  ShowLabels="True">
+    <sliders:SfSlider.LabelStyle>
+        <sliders:SliderLabelStyle Offset="10" />
+     </sliders:SfSlider.LabelStyle>
+</sliders:SfSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-   SfSlider slider = new SfSlider();
-   slider.Interval = 0.2;
-   slider.ShowLabels = true;
-   slider.ShowTicks = true;
-   slider.LabelStyle.Offset = 10;
-
+SfSlider slider = new SfSlider();
+slider.Interval = 0.2;
+slider.ShowLabels = true;
+slider.ShowTicks = true;
+slider.LabelStyle.Offset = 10;
 
 {% endhighlight %}
 
@@ -274,17 +273,17 @@ For example, if `Minimum` is 0.0 and `Maximum` is 10.0 and `Interval` is 2.0, th
 
 {% highlight xaml %}
 
- <sliders:SfSlider Interval="0.2" 
-                   ShowDividers="True">
- </sliders:SfSlider>
+<sliders:SfSlider Interval="0.2" 
+                  ShowDividers="True">
+</sliders:SfSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-  SfSlider slider = new SfSlider();
-  slider.Interval = 0.2;
-  slider.ShowDividers = true;
+SfSlider slider = new SfSlider();
+slider.Interval = 0.2;
+slider.ShowDividers = true;
 
 {% endhighlight %}
 
@@ -300,23 +299,23 @@ You can change the active and inactive divider radius of the slider using the `A
 
 {% highlight xaml %}
 
-  <sliders:SfSlider Interval="0.2" 
-                    ShowDividers="True">
-       <sliders:SfSlider.DividerStyle>
-           <sliders:SliderDividerStyle ActiveRadius="7" 
-	                               InactiveRadius="7" />
-       </sliders:SfSlider.DividerStyle>
-  </sliders:SfSlider>
+<sliders:SfSlider Interval="0.2" 
+                  ShowDividers="True">
+    <sliders:SfSlider.DividerStyle>
+         <sliders:SliderDividerStyle ActiveRadius="7" 
+                                     InactiveRadius="7" />
+    </sliders:SfSlider.DividerStyle>
+</sliders:SfSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SfSlider slider = new SfSlider();
-    slider.Interval = 0.2;
-    slider.ShowDividers = true;
-    slider.DividerStyle.ActiveRadius = 7;
-    slider.DividerStyle.InactiveRadius = 7;
+SfSlider slider = new SfSlider();
+slider.Interval = 0.2;
+slider.ShowDividers = true;
+slider.DividerStyle.ActiveRadius = 7;
+slider.DividerStyle.InactiveRadius = 7;
 
 {% endhighlight %}
 
@@ -334,31 +333,31 @@ Also, you can change the active and inactive divider stroke color of the slider 
 
 {% highlight xaml %}
 
-  <sliders:SfSlider Interval="0.2" 
-                    ShowDividers="True">
-        <sliders:SfSlider.DividerStyle>
-             <sliders:SliderDividerStyle ActiveRadius="7" 
-	                                 InactiveRadius="7" 
-					 ActiveStrokeWidth="2" 
-					 InactiveStrokeWidth="2" 
-					 ActiveStrokeColor="#EE3F3F" 
-					 InactiveStrokeColor="#F7B1AE"/>
-         </sliders:SfSlider.DividerStyle>
-  </sliders:SfSlider>
+<sliders:SfSlider Interval="0.2" 
+                  ShowDividers="True">
+    <sliders:SfSlider.DividerStyle>
+         <sliders:SliderDividerStyle ActiveRadius="7" 
+                                     InactiveRadius="7" 
+            			     ActiveStrokeWidth="2" 
+				     InactiveStrokeWidth="2" 
+				     ActiveStrokeColor="#EE3F3F" 
+				     InactiveStrokeColor="#F7B1AE"/>
+     </sliders:SfSlider.DividerStyle>
+</sliders:SfSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-   SfSlider slider = new SfSlider();
-   slider.Interval = 0.2;
-   slider.ShowDividers = true;
-   slider.DividerStyle.ActiveRadius = 7;
-   slider.DividerStyle.InactiveRadius = 7;
-   slider.DividerStyle.ActiveStrokeColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
-   slider.DividerStyle.InactiveStrokeColor = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
-   slider.DividerStyle.ActiveStrokeWidth = 2;
-   slider.DividerStyle.InactiveStrokeWidth = 2;
+SfSlider slider = new SfSlider();
+slider.Interval = 0.2;
+slider.ShowDividers = true;
+slider.DividerStyle.ActiveRadius = 7;
+slider.DividerStyle.InactiveRadius = 7;
+slider.DividerStyle.ActiveStrokeColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+slider.DividerStyle.InactiveStrokeColor = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
+slider.DividerStyle.ActiveStrokeWidth = 2;
+slider.DividerStyle.InactiveStrokeWidth = 2;
 
 {% endhighlight %}
 
@@ -374,27 +373,27 @@ You can change the active and inactive divider color of the slider using the `Ac
 
 {% highlight xaml %}
 
-  <sliders:SfSlider Interval="0.2" 
-                    ShowDividers="True">
-      <sliders:SfSlider.DividerStyle>
-          <sliders:SliderDividerStyle ActiveRadius="7" 
-	                              InactiveRadius="7" 
-				      ActiveColor="#EE3F3F" 
-				      InactiveColor="#F7B1AE"/>
+<sliders:SfSlider Interval="0.2" 
+                  ShowDividers="True">
+    <sliders:SfSlider.DividerStyle>
+       <sliders:SliderDividerStyle ActiveRadius="7" 
+                                   InactiveRadius="7" 
+				   ActiveColor="#EE3F3F" 
+				   InactiveColor="#F7B1AE"/>
       </sliders:SfSlider.DividerStyle>
-  </sliders:SfSlider>
+</sliders:SfSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-   SfSlider slider = new SfSlider();
-   slider.Interval = 0.2;
-   slider.ShowDividers = true;
-   slider.DividerStyle.ActiveRadius = 7;
-   slider.DividerStyle.InactiveRadius = 7;
-   slider.DividerStyle.ActiveColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
-   slider.DividerStyle.InactiveColor = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
+SfSlider slider = new SfSlider();
+slider.Interval = 0.2;
+slider.ShowDividers = true;
+slider.DividerStyle.ActiveRadius = 7;
+slider.DividerStyle.InactiveRadius = 7;
+slider.DividerStyle.ActiveColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+slider.DividerStyle.InactiveColor = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
 
 {% endhighlight %}
 
