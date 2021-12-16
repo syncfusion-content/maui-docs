@@ -25,8 +25,8 @@ You can enable tooltip for the thumb by setting the `ToolTipShape` property to `
 
 {% highlight C# %}
 
-   SfSlider slider = new SfSlider();
-   slider.ToolTipShape = SliderToolTipShape.Rectangle;
+SfSlider slider = new SfSlider();
+slider.ToolTipShape = SliderToolTipShape.Rectangle;
 
 {% endhighlight %}
 
@@ -47,9 +47,9 @@ You can format or change the whole tooltip label text using the `ToolTipLabelCre
 
 {% highlight xaml %}
 
-  <sliders:SfSlider ToolTipLabelCreated="OnTooltipLabelCreated" 
-                    ToolTipShape="Rectangle">
-  </sliders:SfSlider>
+<sliders:SfSlider ToolTipLabelCreated="OnTooltipLabelCreated" 
+                  ToolTipShape="Rectangle">
+</sliders:SfSlider>
 
 {% endhighlight %}
 
@@ -80,23 +80,23 @@ You can change the appearance of the tooltip text like color, stroke color, padd
 
 {% highlight xaml %}
 
- <sliders:SfSlider ToolTipShape="Rectangle">
-      <sliders:SfSlider.ToolTipStyle>
-         <sliders:SliderToolTipStyle Color="#F7B1AE" 
-	                             StrokeColor="#EE3F3F" 
-				     StrokeWidth="2" />
-      </sliders:SfSlider.ToolTipStyle>
- </sliders:SfSlider>
+<sliders:SfSlider ToolTipShape="Rectangle">
+   <sliders:SfSlider.ToolTipStyle>
+      <sliders:SliderToolTipStyle Color="#F7B1AE" 
+                                  StrokeColor="#EE3F3F" 
+				  StrokeWidth="2" />
+    </sliders:SfSlider.ToolTipStyle>
+</sliders:SfSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-  SfSlider slider = new SfSlider();
-  slider.ToolTipShape = SliderToolTipShape.Rectangle;
-  slider.ToolTipStyle.Color = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
-  slider.ToolTipStyle.StrokeColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
-  slider.ToolTipStyle.StrokeWidth = 2;
+SfSlider slider = new SfSlider();
+slider.ToolTipShape = SliderToolTipShape.Rectangle;
+slider.ToolTipStyle.Color = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
+slider.ToolTipStyle.StrokeColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+slider.ToolTipStyle.StrokeWidth = 2;
 
 {% endhighlight %}
 
