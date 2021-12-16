@@ -29,37 +29,19 @@ For date values, the slider does not have auto interval support. So, it is manda
 
 {% highlight xaml %}
 
-<ContentPage>
-    <sliders:SfSlider Minimum="2010-01-01" Maximum="2020-01-01" Value="2014-01-01" ShowLabels="True" ShowTicks="True" Interval="2" DateIntervalType="Years" DateFormat="yyyy">
-    </sliders:SfSlider>
- </ContentPage>
+  <sliders:SfSlider Minimum="2010-01-01" 
+		      Maximum="2020-01-01" 
+		      Value="2014-01-01">
+  </sliders:SfSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Sliders;
-
-namespace SliderGettingStarted
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfSlider slider = new SfSlider();
-			slider.Minimum = new DateTime(2010, 01, 01);
-			slider.Maximum = new DateTime(2020, 01, 01);
-			slider.Value = new DateTime(2014, 01, 01);
-			slider.ShowLabels = true;
-			slider.ShowTicks = true;
-			slider.Interval = 2;
-			slider.DateIntervalType = SliderDateIntervalType.Years;
-			slider.DateFormat = "yyyy";
-			this.Content = slider;
-        }
-    }
-}
+  SfSlider slider = new SfSlider();
+  slider.Minimum = new DateTime(2010, 01, 01);
+  slider.Maximum = new DateTime(2020, 01, 01);
+  slider.Value = new DateTime(2014, 01, 01);
 
 {% endhighlight %}
 
@@ -78,42 +60,40 @@ namespace SliderGettingStarted
 
 {% highlight xaml %}
 
-<ContentPage>
-    <sliders:SfSlider Minimum="2010-01-01" Maximum="2020-01-01" Value="2014-01-01" ValueChangeStart="OnValueChangeStart" ValueChanging="OnValueChanging" ValueChanged="OnValueChanged" ValueChangeEnd="OnValueChangeEnd" ShowLabels="True" ShowTicks="True" Interval="2" DateIntervalType="Years" DateFormat="yyyy">
-    </sliders:SfSlider>
- </ContentPage>
+ <sliders:SfSlider Minimum="2010-01-01" 
+		   Maximum="2020-01-01" 
+		   Value="2014-01-01" 
+	           ValueChangeStart="OnValueChangeStart" 
+	 	   ValueChanging="OnValueChanging" 
+		   ValueChanged="OnValueChanged" 
+		   ValueChangeEnd="OnValueChangeEnd">
+  </sliders:SfSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Sliders;
-
-namespace SliderGettingStarted
 {
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-        }
+   SfSlider slider = new SfSlider();
+   slider.ValueChangeStart += OnValueChanged;
+   slider.ValueChanging += OnValueChanged;
+   slider.ValueChanged += OnValueChanged;
+   slider.ValueChangeEnd += OnValueChanged;
+}
 
-        private void OnValueChangeStart(object sender, SliderValueChangeStartEventArgs e)
-		{
-		}
+private void OnValueChangeStart(object sender, SliderValueChangeStartEventArgs e)
+{
+}
 
-		private void OnValueChanged(object sender, SliderValueChangedEventArgs e) 
-		{
-		}
+private void OnValueChanging(object sender, SliderValueChangingEventArgs e)
+{
+}
 
-		private void OnValueChanging(object sender, SliderValueChangingEventArgs e)
-		{
-		}
-
-		private void OnValueChangeEnd(object sender, SliderValueChangeEndEventArgs e)
-		{
-		}
-    }
+private void OnValueChanged(object sender, SliderValueChangedEventArgs e) 
+{
+}
+private void OnValueChangeEnd(object sender, SliderValueChangeEndEventArgs e)
+{
 }
 
 {% endhighlight %}
