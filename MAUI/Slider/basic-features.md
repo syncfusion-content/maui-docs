@@ -30,7 +30,14 @@ For date values, the slider does not have auto interval support. So, it is manda
 {% highlight xaml %}
 
 <ContentPage>
-    <sliders:SfSlider Minimum="2010-01-01" Maximum="2020-01-01" Value="2014-01-01" ShowLabels="True" ShowTicks="True" Interval="2" DateIntervalType="Years" DateFormat="yyyy">
+    <sliders:SfSlider Minimum="2010-01-01" 
+		      Maximum="2020-01-01" 
+		      Value="2014-01-01" 
+		      ShowLabels="True" 
+		      ShowTicks="True" 
+		      Interval="2" 
+		      DateIntervalType="Years" 
+		      DateFormat="yyyy">
     </sliders:SfSlider>
  </ContentPage>
 
