@@ -138,7 +138,9 @@ Set the 'DateTime' values to the `Minimum`, `Maximum`, and `Value` properties to
 {% highlight xaml %}
 
 <ContentPage>
- <sliders:SfSlider Minimum="2010-01-01" Maximum="2020-01-01" Value="2014-01-01" ShowLabels="True">
+ <sliders:SfSlider Minimum="2010-01-01" 
+		   Maximum="2020-01-01" 
+		   Value="2014-01-01">
  </sliders:SfSlider>
  </ContentPage>
 
@@ -146,24 +148,10 @@ Set the 'DateTime' values to the `Minimum`, `Maximum`, and `Value` properties to
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Sliders;
-
-namespace SliderGettingStarted
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfSlider slider = new SfSlider();
-			slider.Minimum = new DateTime(2010, 01, 01);
-			slider.Maximum = new DateTime(2020, 01, 01);
-			slider.Value = new DateTime(2014, 01, 01);
-			slider.ShowLabels = true;
-			this.Content = slider;
-        }
-    }
-}
+   SfSlider slider = new SfSlider();
+   slider.Minimum = new DateTime(2010, 01, 01);
+   slider.Maximum = new DateTime(2020, 01, 01);
+   slider.Value = new DateTime(2014, 01, 01);
 
 {% endhighlight %}
 
@@ -180,7 +168,12 @@ The `ShowTicks` property enables ticks in the slider, while the `MinorTicksPerIn
 {% highlight xaml %}
 
 <ContentPage>
-  <sliders:SfSlider Minimum="2010-01-01" Maximum="2020-01-01" Value="2014-01-01" ShowLabels="True" ShowTicks="True" Interval="2" MinorTicksPerInterval="1">
+  <sliders:SfSlider Minimum="2010-01-01" 
+		    Maximum="2020-01-01" 
+		    Value="2014-01-01" 
+		    ShowTicks="True" 
+		    Interval="2" 
+		    MinorTicksPerInterval="1">
   </sliders:SfSlider>
  </ContentPage>
 
@@ -190,25 +183,13 @@ The `ShowTicks` property enables ticks in the slider, while the `MinorTicksPerIn
 
 using Syncfusion.Maui.Sliders;
 
-namespace SliderGettingStarted
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-          	SfSlider slider = new SfSlider();
-			slider.Minimum = new DateTime(2010, 01, 01);
-			slider.Maximum = new DateTime(2020, 01, 01);
-			slider.Value = new DateTime(2014, 01, 01);
-			slider.ShowLabels = true;
-			slider.ShowTicks = true;
-			slider.Interval = 2;
-			slider.MinorTicksPerInterval = 1;
-			this.Content = slider;
-        }
-    }
-}
+  SfSlider slider = new SfSlider();
+  slider.Minimum = new DateTime(2010, 01, 01);
+  slider.Maximum = new DateTime(2020, 01, 01);
+  slider.Value = new DateTime(2014, 01, 01);
+  slider.ShowTicks = true;
+  slider.Interval = 2;
+  slider.MinorTicksPerInterval = 1;
 
 {% endhighlight %}
 
@@ -224,37 +205,14 @@ The `Orientation` property allows you to show the slider in both horizontal and 
 
 {% highlight xaml %}
 
-<ContentPage>
-    <sliders:SfSlider Minimum="0" Maximum="100" Value="40" Orientation="Vertical" ShowLabels="True" ShowTicks="True" Interval="20" MinorTicksPerInterval="1">
-    </sliders:SfSlider>
- </ContentPage>
+  <sliders:SfSlider Orientation="Vertical" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Sliders;
-
-namespace SliderGettingStarted
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfSlider slider = new SfSlider();
-            slider.Minimum = 0;
-            slider.Maximum = 100;
-            slider.Value = 40;
-            slider.Orientation = SliderOrientation.Vertical;
-            slider.ShowLabels = true;
-            slider.ShowTicks = true;
-            slider.Interval = 20;
-            slider.MinorTicksPerInterval = 1;
-            this.Content = slider;
-        }
-    }
-}
+   SfSlider slider = new SfSlider();
+   slider.Orientation = SliderOrientation.Vertical;
 
 {% endhighlight %}
 
@@ -270,37 +228,14 @@ You can invert the slider using the `IsInversed` property. The default value of 
 
 {% highlight xaml %}
 
-<ContentPage>
-     <sliders:SfSlider Minimum="0" Maximum="100" Value="40" IsInversed="True" ShowLabels="True" ShowTicks="True" Interval="20" MinorTicksPerInterval="1">
-     </sliders:SfSlider>
- </ContentPage>
+  <sliders:SfSlider IsInversed="True" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Sliders;
-
-namespace SliderGettingStarted
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfSlider slider = new SfSlider();
-            slider.Minimum = 0;
-            slider.Maximum = 100;
-            slider.Value = 40;
-            slider.IsInversed = true;
-            slider.ShowLabels = true;
-            slider.ShowTicks = true;
-            slider.Interval = 20;
-            slider.MinorTicksPerInterval = 1;
-            this.Content = slider;
-        }
-    }
-}
+   SfSlider slider = new SfSlider();
+   slider.IsInversed = true;
 
 {% endhighlight %}
 
@@ -318,37 +253,25 @@ N> The format type (numeric or date) of the slider is determined based on the va
 
 {% highlight xaml %}
 
-<ContentPage>
-    <sliders:SfSlider Minimum="20" Maximum="100" Value="60" NumberFormat="$##" ShowLabels="True" ShowTicks="True" Interval="20" MinorTicksPerInterval="1">
-    </sliders:SfSlider>
- </ContentPage>
+  <sliders:SfSlider Minimum="20" 
+		    Maximum="100" 
+		    Value="60" 
+		    NumberFormat="$##" 
+		    ShowLabels="True" 
+		    Interval="20">
+  </sliders:SfSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Sliders;
-
-namespace SliderGettingStarted
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfSlider slider = new SfSlider();
-            slider.Minimum = 20;
-            slider.Maximum = 100;
-            slider.Value = 60;
-            slider.ShowLabels = true;
-            slider.ShowTicks = true;
-            slider.Interval = 20;
-            slider.NumberFormat = "$##";
-            slider.MinorTicksPerInterval = 1;
-            this.Content = slider;
-        }
-    }
-}
+   SfSlider slider = new SfSlider();
+   slider.Minimum = 20;
+   slider.Maximum = 100;
+   slider.Value = 60;
+   slider.ShowLabels = true;
+   slider.Interval = 20;
+   slider.NumberFormat = "$##";
 
 {% endhighlight %}
 
