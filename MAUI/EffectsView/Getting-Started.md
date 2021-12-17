@@ -119,6 +119,3 @@ Step 3: Set the control to content in `ContentPage`.
 {% endtabs %}
 
 ![EffectsView Initialization](Getting-Started_images/RippleEffect.gif)
-
-You can find the complete getting started sample from this [link.](https://github.com/SyncfusionExamples/Getting-started-of-SfEffectsView-in-Xamarin.Forms)
-
