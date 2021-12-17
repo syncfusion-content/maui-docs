@@ -62,7 +62,7 @@ The font can be customized using the `FontSize`, `FontAttributes`, and `FontFami
 
 {% endtabs %}
 
-![.NET MAUI BadgeView Font Customization](badge-customization_images/font_customization.png)
+![.NET MAUI Badge View Font Customization](badge-customization_images/font_customization.png)
 
 ## Border customization
 
@@ -108,7 +108,7 @@ The border color and border width of the badge view can be customized using the 
 
 {% endtabs %}
 
-![.NET MAUI BadgeView stroke Customization](badge-customization_images/stroke_customization.png)
+![.NET MAUI Badge View stroke Customization](badge-customization_images/stroke_customization.png)
 
 ## Text customization
 
@@ -154,7 +154,7 @@ Content = sfBadgeView;
 
 {% endtabs %}
 
-![.NET MAUI BadgeView Text Customization](badge-customization_images/text_customization.png)
+![.NET MAUI Badge View Text Customization](badge-customization_images/text_customization.png)
 
 ## Predefined styles
 
@@ -206,7 +206,7 @@ The colors of the badge can be customized using the `BadgeType` property. The ba
 
 {% endtabs %}
 
-![.NET MAUI BadgeView Types](badge-customization_images/badge_type.png)
+![.NET MAUI Badge View Types](badge-customization_images/badge_type.png)
 
 ## Badge background customization
 
@@ -251,7 +251,7 @@ Content = sfBadgeView;
 
 {% endtabs %}
 
-![.NET MAUI BadgeView Background](badge-customization_images/background_customization.png)
+![.NET MAUI Badge View Background](badge-customization_images/background_customization.png)
 
 ## Setting corner radius of the badge
 
@@ -296,5 +296,5 @@ Content = sfBadgeView;
 
 {% endtabs %}
 
-![.NET MAUI BadgeView Corner Radius](badge-customization_images/corner_radius.png)
+![.NET MAUI Badge View Corner Radius](badge-customization_images/corner_radius.png)
 

@@ -54,4 +54,4 @@ Content = sfBadgeView;
 
 {% endtabs %}
 
-![.NET Maui BadgeView Font Customization](animation_images/maui-badge-view-animation.gif)
+![.NET Maui Badge View Font Customization](animation_images/maui-badge-view-animation.gif)
