@@ -37,7 +37,8 @@ Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org
             var builder = MauiApp.CreateBuilder();
             builder
             .UseMauiApp<App>()
-            .`ConfigureSyncfusionCore()`
+ .`ConfigureSyncfusionCore()`
+ 
             .ConfigureFonts(fonts =>
             {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");

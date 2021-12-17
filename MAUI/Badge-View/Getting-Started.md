@@ -26,7 +26,8 @@ The Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget
     using Microsoft.Maui.Controls.Compatibility;
     using Microsoft.Maui.Controls.Hosting;
     using Microsoft.Maui.Controls.Xaml;
-   `using Syncfusion.Maui.Core.Hosting;`
+    
+`using Syncfusion.Maui.Core.Hosting;`
 
     namespace EffectsViewMauiSample
     {
@@ -37,7 +38,8 @@ The Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget
             var builder = MauiApp.CreateBuilder();
             builder
             .UseMauiApp<App>()
-            .`ConfigureSyncfusionCore()`
+ .`ConfigureSyncfusionCore()`
+ 
             .ConfigureFonts(fonts =>
             {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -99,7 +101,7 @@ this.Content = sfBadgeView;
 
 ## Adding a badge text
 
-Add text to Badge View using the `BadgeText` property.
+Add text to Badge View using the [`BadgeText`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html#Syncfusion_Maui_Core_SfBadgeView_BadgeText) property.
 
 {% tabs %}
 
@@ -127,7 +129,7 @@ this.Content = sfBadgeView;
 
 ## Adding a content
 
-An Image, button, or label or any view can be added to the Badge View using the `Content` property.
+An Image, button, or label or any view can be added to the Badge View using the [`Content`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html#Syncfusion_Maui_Core_SfBadgeView_Content) property.
 
 {% tabs %}
 
