@@ -117,7 +117,7 @@ namespace SliderGettingStarted
 
 ## Enable labels
 
-The `ShowLabels` property enables label in rangeslider that renders on given interval.
+The `ShowLabels` property enables label in range slider that renders on given interval.
 
 {% tabs %}
 
