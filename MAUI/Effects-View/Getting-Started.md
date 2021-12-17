@@ -116,6 +116,4 @@ Step 3: Set the control to content in `ContentPage`.
 
 {% endtabs %}
 
-{% endtabs %}
-
 ![Effects View Initialization](Getting-Started_images/RippleEffect.gif)
