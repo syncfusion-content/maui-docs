@@ -13,43 +13,38 @@ This section provides a quick overview of how to get started with the .NET Maui 
 
 ## Creating an application using the .NET MAUI ListView
 
-1. Create a new .NET MAUI application in Visual Studio.
-2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfListView to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.ListView and then install it.
-3. Import the control namespace `Syncfusion.Maui.ListView` in XAML or C# code.
-
+ 1. Create a new .NET MAUI application in Visual Studio.
+ 2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfListView to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.ListView and then install it.
+ 3. Import the control namespace `Syncfusion.Maui.ListView` in XAML or C# code.
+ 4. Initialize the `SfListView` control.
+ 
 {% tabs %}
-
 {% highlight xaml %}
 
-xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
+<ContentPage   
+    . . .
+    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
+
+    <syncfusion:SfListView />
+</ContentPage>
 
 {% endhighlight %}
-
 {% highlight c# %}
 
 using Syncfusion.Maui.ListView;
+. . .
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfListView listView = new SfListView();
+        this.Content = listView;
+    }
+}
 
 {% endhighlight %}
-
-{% endtabs %}
-
-4. Initialize the `SfListView` control.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<listView:SfListView />
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-SfListView listView = new SfListView();
-this.Content = SfListView;
-
-{% endhighlight %}
-
 {% endtabs %}
 
 ## Register the handler
