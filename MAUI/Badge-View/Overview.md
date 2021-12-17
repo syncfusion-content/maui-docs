@@ -15,10 +15,10 @@ Badges are used to notify users of new or unread messages, notifications, or the
 
 ## Key features
 
-**Position** : Position the badge text around the badge content.
+* **Position** : Position the badge text around the badge content.
 
-**Predefined styles**: Customize the badge background with predefined colors.
+* **Predefined styles** : Customize the badge background with predefined colors.
 
-**Animation**: Use animations for badge text.
+* **Animation** : Use animations for badge text.
 
 ![.NET MAUI Badge View overview](overview_images/overview.png)
