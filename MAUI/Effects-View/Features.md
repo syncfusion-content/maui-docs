@@ -13,7 +13,7 @@ The [`SfEffectsView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.S
 
 ## FadeOutRipple
 
-By enabling the [`FadeOutRipple`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_FadeOutRipple) property of [`SfEffectsView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html), the growable circle will lose its opacity to 0 on growing.
+By enabling the [`FadeOutRipple`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_FadeOutRipple) property of [`SfEffectsView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html), the expandable circle will lose its opacity to 0 on growing.
 
 {% tabs %} 
 
