@@ -52,7 +52,7 @@ Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org
 
 {% endhighlight %} 
 
-# Create a simple Effects View
+## Create a simple Effects View
 
 This section explains how to create a Effects View and configure it. The control can be configured entirely in C# code or by the XAML markup.
 
@@ -116,9 +116,4 @@ Step 3: Set the control to content in `ContentPage`.
 
 {% endtabs %}
 
-{% endtabs %}
-
-![EffectsView Initialization](Getting-Started_images/RippleEffect.gif)
-
-You can find the complete getting started sample from this [link.](https://github.com/SyncfusionExamples/Getting-started-of-SfEffectsView-in-Xamarin.Forms)
-
+![Effects View Initialization](Getting-Started_images/RippleEffect.gif)
