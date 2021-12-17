@@ -54,7 +54,7 @@ N> It is mandatory to specify the `PropertyName` of `SortDescriptor`.
 
 ## Custom sorting
 
-Sort the items based on the custom logic and it can be applied to either `SfListView.DataSource.SortComparerproperty` or `SortDescriptor.Comparer`, which is added into the `DataSource.SortDescriptors` collection.
+Sort the items based on the custom logic and it can be applied to either `SfListView.DataSource.SortComparer` property or `SortDescriptor.Comparer`, which is added into the `DataSource.SortDescriptors` collection.
 
 N> If the `PropertyName` in the `SortDescriptor` and `GroupDescriptor` are same, then the `GroupResult` will be passed as parameters for the `SortDescriptor.Comparer`. Otherwise, data objects are passed. To sort the data items alone, set the different `PropertyName` in both the `SortDescriptor` and the `GroupDescriptor` properties.
 
