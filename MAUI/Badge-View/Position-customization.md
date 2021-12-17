@@ -9,7 +9,7 @@ documentation: ug
 
 # Position customization
 
-The default position of notification is `TopRight`. The position can be customized as `TopLeft`, `BottomLeft`, and `BottomRight` using the [`BadgePosition`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.BadgeView.BadgeSetting.html#Syncfusion_XForms_BadgeView_BadgeSetting_BadgePosition) properties. 
+The default position of notification is `TopRight`. The position can be customized as `TopLeft`, `BottomLeft`, and `BottomRight` using the `BadgePosition` properties. 
 
 {% tabs %}
 
@@ -54,7 +54,7 @@ Content = sfBadgeView;
 
 ## Setting a badge offset
 
-The badge text x,y position can be adjusted using the [`Offset`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.BadgeView.BadgeSetting.html#Syncfusion_XForms_BadgeView_BadgeSetting_Offset) property.
+The badge text x,y position can be adjusted using the `Offset` property.
 
 {% tabs %}
 
