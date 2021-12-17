@@ -87,12 +87,12 @@ The `.NET MAUI Scheduler` control provides eight different types of views to dis
 {% tabs %}
 {% highlight xaml %}
 
-<scheduler:SfScheduler x:Name="Scheduler" View="Day"/>
+<scheduler:SfScheduler x:Name="Scheduler" View="Month"/>
 
 {% endhighlight %}
 {% highlight c# %}
 
-this.Scheduler.View = SchedulerView.Day;
+this.Scheduler.View = SchedulerView.Month;
 
 {% endhighlight %}
 {% endtabs %}
