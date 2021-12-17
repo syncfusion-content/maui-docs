@@ -9,21 +9,21 @@ documentation: ug
 
 # Sorting in .NET MAUI ListView (SfListView)
 
-The `SfListView` supports sorting the data either in ascending or descending order by using `DataSource.SortDescriptors` property and by using the custom logic.
+The `SfListView` supports sorting the data either in ascending or descending order by using the `DataSource.SortDescriptors` property and custom logic.
 
-N> When `ItemsSource` changed for ListView, `DataSource.SortDescriptors` will be cleared by default. You need to add `DataSource.SortDescriptors` again after changing `ItemsSource` if you want to retain sorting in listview.
+N> When the `ItemsSource` is changed for a ListView, `DataSource.SortDescriptors` will be cleared by default. You need to add `DataSource.SortDescriptors` again after changing the `ItemsSource`, if you want to retain sorting in the listview.
 
 N> To sort the newly added listview items at runtime, set the `SfListView.DataSource.LiveDataUpdateMode` to `LiveDataUpdateMode.AllowDataShaping`. 
 
 ## Programmatic sorting
 
-Sorting the data by creating the `SortDescriptor` with required property name and direction and adding it into the `DataSource.SortDescriptors` property.
+Sorting the data by creating a `SortDescriptor` with the required property name and direction and adding it into the `DataSource.SortDescriptors` property.
 
 `SortDescriptor` object holds the following three properties:
 
 * `PropertyName`: Describes the name of the sorted property.
 * `Direction`: Describes an object of type `ListSortDirection` that defines the sorting direction.
-* `Comparer`: Describes the comparer to be applied when sorting take place.
+* `Comparer`: Describes the comparer to be applied when sorting takes place.
 
 {% tabs %}
 {% highlight xaml %}
@@ -54,9 +54,9 @@ N> It is mandatory to specify the `PropertyName` of `SortDescriptor`.
 
 ## Custom sorting
 
-Sort the items based on the custom logic and it can be applied to either `SfListView.DataSource.SortComparer`property or `SortDescriptor.Comparer` which is added into the `DataSource.SortDescriptors` collection.
+Sort the items based on the custom logic and it can be applied to either `SfListView.DataSource.SortComparerproperty` or `SortDescriptor.Comparer`, which is added into the `DataSource.SortDescriptors` collection.
 
-N> If the `PropertyName` in the `SortDescriptor` and `GroupDescriptor` are same then, `GroupResult` will be passed as parameters for the `SortDescriptor.Comparer`. Otherwise data objects are passed. To sort the data items alone, set the different `PropertyName` in both `SortDescriptor` and `GroupDescriptor` properties.
+N> If the `PropertyName` in the `SortDescriptor` and `GroupDescriptor` are same, then the `GroupResult` will be passed as parameters for the `SortDescriptor.Comparer`. Otherwise, data objects are passed. To sort the data items alone, set the different `PropertyName` in both the `SortDescriptor` and the `GroupDescriptor` properties.
 
 {% tabs %}
 {% highlight xaml %}
@@ -185,11 +185,11 @@ private void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
 
 ## Sort the items along with grouping
  
-The `SfListView` allows sorting the items along with grouping by adding the `DataSource.GroupDescriptors` and the `DataSource.SortDescriptors` with required property name. 
+The `SfListView` allows sorting and grouping the items by adding the `DataSource.GroupDescriptors` and the `DataSource.SortDescriptors` with required property name.
 
 ## Sorting with grouping by year
 
-Sorting the items along with grouping by using `KeySelector` based on retuning the year value of the date-time property.
+Sorting and grouping the items by using `KeySelector` based on retuning the year value of the date-time property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -244,7 +244,7 @@ this.listView.DataSource.SortDescriptors.Add(new SortDescriptor()
 
 ## Sorting with grouping by month and year
 
-Sorting the items along with grouping by using `KeySelector` based on returning the month and year value of the date-time property.
+Sorting and grouping the items by using `KeySelector` based on returning the month and year value of the date-time property.
 
 {% tabs %}
 {% highlight xaml %}
