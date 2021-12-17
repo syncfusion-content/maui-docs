@@ -97,14 +97,16 @@ You can move the thumb in discrete manner for numeric values using the `StepSize
 
 {% highlight xaml %}
 
-  <sliders:SfSlider StepSize="0.2" />
+  <sliders:SfSlider Minimum="0" Maximum="10" StepSize="2" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
 SfSlider slider = new SfSlider();
-slider.StepSize = 0.2;
+slider.Minimum = 0;
+slider.Maximum = 10;
+slider.StepSize = 2;
 
 {% endhighlight %}
 

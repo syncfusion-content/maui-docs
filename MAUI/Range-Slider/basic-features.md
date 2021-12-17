@@ -32,7 +32,8 @@ For date values, the range slider does not have auto interval support. So, it is
 <rangeslider:SfRangeSlider Minimum="2010-01-01" 
                        Maximum="2020-01-01" 
                        RangeStart="2012-01-01" 
-                       RangeEnd="2018-01-01" >
+                       RangeEnd="2018-01-01" 
+                       ShowLabels="True">
 </rangeslider:SfRangeSlider>
  
 {% endhighlight %}
@@ -44,6 +45,7 @@ For date values, the range slider does not have auto interval support. So, it is
  rangeSlider.Maximum = new DateTime(2020, 01, 01);
  rangeSlider.RangeStart = new DateTime(2012, 01, 01);
  rangeSlider.RangeEnd = new DateTime(2018, 01, 01);
+ rangeSlider.ShowLabels = true;
 
 {% endhighlight %}
 

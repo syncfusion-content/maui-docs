@@ -19,8 +19,11 @@ The `ShowLabels` property is used to render the labels on given interval. The de
 
 {% highlight xaml %}
 
-<sliders:SfSlider Interval="0.2"
-                  ShowLabels="True">
+<sliders:SfSlider Minimum="0" 
+                  Maximum="10"
+                  Interval="2"
+                  ShowLabels="True"
+                  ShowTicks="True">
 </sliders:SfSlider>
 
 {% endhighlight %}
@@ -50,7 +53,8 @@ The `NumberFormat` property is used to format the numeric labels. The default va
                   Value="6"
 		  Interval="2"  
 		  NumberFormat="$##" 
-		  ShowLabels="True">
+		  ShowLabels="True"
+            ShowTicks="True">
 </sliders:SfSlider>
 
 {% endhighlight %}
@@ -168,7 +172,7 @@ You can format or change the whole numeric or date label text using the `LabelCr
 
 {
    SfSlider slider = new SfSlider();
-   slider.Minimum = 0;
+   slider.Minimum = 2;
    slider.Maximum = 10;
    slider.Value = 6;
    slider.Interval = 2;
@@ -199,7 +203,10 @@ The inactive side of the slider is between the thumb and the `Maximum` value.
 
 {% highlight xaml %}
 
-<sliders:SfSlider Interval="0.2"  
+<sliders:SfSlider Minimum="2" 
+                  Maximum="10" 
+                  Interval="2" 
+                  ShowTicks="True"  
                   ShowLabels="True">
     <sliders:SfSlider.LabelStyle>
          <sliders:SliderLabelStyle ActiveTextColor="#EE3F3F" 
@@ -216,7 +223,9 @@ The inactive side of the slider is between the thumb and the `Maximum` value.
 {% highlight C# %}
 
 SfSlider slider = new SfSlider();
-slider.Interval = 0.2;
+slider.Minimum = 2;
+slider.Maximum = 10;
+slider.Interval = 2;
 slider.ShowLabels = true;
 slider.ShowTicks = true;
 slider.LabelStyle.ActiveTextColor = Color.FromArgb("#EE3F3F");
@@ -240,7 +249,9 @@ You can adjust the space between ticks and labels of the slider using the `Offse
 
 {% highlight xaml %}
 
-<sliders:SfSlider Interval="0.2" 
+<sliders:SfSlider Minimum="2" 
+                  Maximum="10" 
+                  Interval="2" 
                   ShowLabels="True">
     <sliders:SfSlider.LabelStyle>
         <sliders:SliderLabelStyle Offset="10" />
@@ -252,7 +263,9 @@ You can adjust the space between ticks and labels of the slider using the `Offse
 {% highlight C# %}
 
 SfSlider slider = new SfSlider();
-slider.Interval = 0.2;
+slider.Minimum = 2;
+slider.Maximum = 10;
+slider.Interval = 2;
 slider.ShowLabels = true;
 slider.ShowTicks = true;
 slider.LabelStyle.Offset = 10;
