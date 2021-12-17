@@ -45,7 +45,7 @@ N>
 * In the Scheduler, every appointment can be arranged based on its start time and duration for normal appointments in a day, week, and workweek view.
 *  Whenever a timeline is viewed, the appointments (all day, span, and normal) are ordered and rendered based on the appointment start time and time duration of the appointment. This is followed by `IsSpanned,` `IsAllDay,` and normal appointments.
 
-## Scheduler appointment source and Mapping
+## Scheduler appointment source mapping
 
 The .NET MAUI Scheduler supports collection that implements the object interface that can be bound to populate appointments. The properties of the business `object` can be mapped to `SchedulerAppointment` by configuring the `AppointmentMapping` property.
 
