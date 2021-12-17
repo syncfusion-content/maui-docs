@@ -105,7 +105,16 @@ You can move the thumb in discrete manner for numeric values using the `StepSize
 
 {% highlight xaml %}
 
- <rangeslider:SfRangeSlider StepSize="2" /> 
+ <rangeslider:SfRangeSlider StepSize="2"
+                            Minimum="0" 
+                            Maximum="10" 
+                            Interval="2"  
+                            RangeStart="2" 
+                            RangeEnd="8" 
+                            ShowLabels="True" 
+                            ShowTicks="True" 
+                            ShowDividers="True"> 
+</rangeslider:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -113,6 +122,14 @@ You can move the thumb in discrete manner for numeric values using the `StepSize
 
 SfRangeSlider rangeSlider = new SfRangeSlider();
 rangeSlider.StepSize = 2;
+rangeSlider.Minimum = 0;
+rangeSlider.Maximum = 10;
+rangeSlider.RangeStart = 2;
+rangeSlider.RangeEnd = 8;
+rangeSlider.Interval = 2;
+rangeSlider.ShowLabels = true;
+rangeSlider.ShowTicks = true;
+rangeSlider.ShowDividers = true;
          
 {% endhighlight %}
 
