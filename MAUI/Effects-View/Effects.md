@@ -9,11 +9,11 @@ documentation: ug
 
 # Effects in .NET MAUI Effects View (SfEffectsView)
 
-The [`SfEffectsView`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html) control provides modern effects such as highlight, ripple, selection, scaling, and rotation. This section explains about these effects.
+The `SfEffectsView` control provides modern effects such as highlight, ripple, selection, scaling, and rotation. This section explains about these effects.
 
 ## Highlight
 
-`SfEffects.Highlight` is a smooth transition on the background color of [`SfEffectsView`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html).
+`SfEffects.Highlight` is a smooth transition on the background color of `SfEffectsView`
 
 {% tabs %} 
 
@@ -42,7 +42,7 @@ var effectsView = new SfEffectsView
 
 ## Ripple
 
-The `SfEffects.Ripple` is a expandable circle, which is initially placed on the tapped location, and it grows till the whole layout is filled. `SfEffects.Ripple` is rendered based on [`InitialRippleFactor`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html#Syncfusion_XForms_EffectsView_SfEffectsView_InitialRippleFactor).
+The `SfEffects.Ripple` is a expandable circle, which is initially placed on the tapped location, and it grows till the whole layout is filled. `SfEffects.Ripple` is rendered based on `InitialRippleFactor`.
 
 {% tabs %} 
 
@@ -68,7 +68,7 @@ var effectsView = new SfEffectsView()
 
 ## Scale
 
-`SfEffects.Scale` is a smooth transition on the size of the [`SfEffectsView.Content`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html) from its actual size to the size calculated based on [`ScaleFactor`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html#Syncfusion_XForms_EffectsView_SfEffectsView_ScaleFactor) in pixels.
+`SfEffects.Scale` is a smooth transition on the size of the `SfEffectsView.Content` from its actual size to the size calculated based on `ScaleFactor` in pixels.
 
 {% tabs %} 
 
@@ -101,7 +101,7 @@ var effectsView = new SfEffectsView
 
 ## Selection
 
-`SfEffects.Selection` is a smooth color transition to indicate whether the [`SfEffectsView`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html) state is selected or not.
+`SfEffects.Selection` is a smooth color transition to indicate whether the `SfEffectsView` state is selected or not.
 
 {% tabs %} 
 
@@ -130,7 +130,7 @@ var effectsView = new SfEffectsView
 
 ## Rotation
 
-`SfEffects.Rotation` provides a circular movement to [`SfEffectsView`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html) around the center of the [`SfEffectsView`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html) based on the specified [`Angle`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html#Syncfusion_XForms_EffectsView_SfEffectsView_Angle).
+`SfEffects.Rotation` provides a circular movement to `SfEffectsView` around the center of the `SfEffectsView` based on the specified `Angle`.
 
 {% tabs %} 
 
@@ -157,7 +157,7 @@ var effectsView = new SfEffectsView
 
 ## Combinations
 
-The [`SfEffectsView`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html) control provides support to apply multiple [`SfEffects`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffects.html) in combination. The following are some valid combinations of [`SfEffects`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffects.html):
+The `SfEffectsView` control provides support to apply multiple `SfEffects` in combination. The following are some valid combinations of `SfEffects`:
 
 ### Highlight and ripple
 

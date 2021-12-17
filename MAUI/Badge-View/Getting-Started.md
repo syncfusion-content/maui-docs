@@ -99,7 +99,7 @@ this.Content = sfBadgeView;
 
 ## Adding a badge text
 
-Add text to Badge View using the [`BadgeText`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.BadgeView.SfBadgeView.html#Syncfusion_XForms_BadgeView_SfBadgeView_BadgeText) property.
+Add text to Badge View using the `BadgeText` property.
 
 {% tabs %}
 
@@ -127,7 +127,7 @@ this.Content = sfBadgeView;
 
 ## Adding a content
 
-An Image, button, or label or any view can be added to the Badge View using the [`Content`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.BadgeView.SfBadgeView.html) property.
+An Image, button, or label or any view can be added to the Badge View using the `Content` property.
 
 {% tabs %}
 
@@ -200,5 +200,4 @@ The following screenshot illustrates the result of the above code.
 
 ![.NET MAUI Badge View getting started](getting-started_images/Badgeview.png) 
 
-You can find the complete getting started sample from this [`link`](https://github.com/SyncfusionExamples/Getting-started-xamarin-badge-view).
 

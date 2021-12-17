@@ -11,7 +11,7 @@ documentation: ug
 
 ## AnimationCompleted event
 
-The [`AnimationCompleted`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html) event occurs when the rendered effects have been completed.
+The `AnimationCompleted` event occurs when the rendered effects have been completed.
 
 {% tabs %} 
 
@@ -51,13 +51,13 @@ The [`AnimationCompleted`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XFo
 
 {% endtabs %}
 
-N> When the effects are rendered on direct interaction, the [`AnimationCompleted`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html) event occurs on touch up, and when it is applied programmatically, it is triggered immediately on completion of effects.
+N> When the effects are rendered on direct interaction, the `AnimationCompleted` event occurs on touch up, and when it is applied programmatically, it is triggered immediately on completion of effects.
 
-N> The [`AnimationCompleted`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html) event is not applicable for `SfEffects.Selection`.
+N> The `AnimationCompleted` event is not applicable for `SfEffects.Selection`.
 
 ## SelectionChanged event
 
-The [`SelectionChanged`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html) event occurs when [`SfEffectsView`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html) is selected or unselected.
+The `SelectionChanged` event occurs when `SfEffectsView` is selected or unselected.
 
 {% tabs %} 
 
@@ -101,4 +101,4 @@ public partial class MainPage : ContentPage
 
 {% endtabs %}
 
-N> The [`SelectionChanged`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html) event triggers both on rendering `SfEffects.Selection` by direct interaction and on changing the [`IsSelected`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html#Syncfusion_XForms_EffectsView_SfEffectsView_IsSelected) property of [`SfEffectsView`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html).
+N> The `SelectionChanged` event triggers both on rendering `SfEffects.Selection` by direct interaction and on changing the `IsSelected` property of `SfEffectsView`.

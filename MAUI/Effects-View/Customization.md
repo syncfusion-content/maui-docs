@@ -9,11 +9,11 @@ documentation: ug
 
 # Customization in .NET MAUI Effects View (SfEffectsView)
 
-The [`SfEffectsView`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html) control provides support to customize the animation duration, color, and more. This section explains how to customize the effects view control.
+The `SfEffectsView` control provides support to customize the animation duration, color, and more. This section explains how to customize the effects view control.
 
 ## RippleAnimationDuration
 
-The [`RippleAnimationDuration`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html#Syncfusion_XForms_EffectsView_SfEffectsView_RippleAnimationDuration) property of [`SfEffectsView`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html) is used to customize the duration of ripple animation.
+The `RippleAnimationDuration` property of `SfEffectsView` is used to customize the duration of ripple animation.
 
 {% tabs %} 
 
@@ -37,7 +37,7 @@ var effectsView = new SfEffectsView()
 
 ## ScaleAnimationDuration
 
-The [`ScaleAnimationDuration`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html#Syncfusion_XForms_EffectsView_SfEffectsView_ScaleAnimationDuration) property of [`SfEffectsView`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html) is used to customize the duration of scale animation.
+The `ScaleAnimationDuration` property of `SfEffectsView` is used to customize the duration of scale animation.
 
 {% tabs %} 
 
@@ -66,7 +66,7 @@ var effectsView = new SfEffectsView()
 
 ## RotationAnimationDuration
 
-The [`RotationAnimationDuration`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html#Syncfusion_XForms_EffectsView_SfEffectsView_RotationAnimationDuration) property of [`SfEffectsView`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html) is used to customize the duration of rotation animation.
+The `RotationAnimationDuration` property of `SfEffectsView` is used to customize the duration of rotation animation.
 
 {% tabs %} 
 
@@ -95,7 +95,7 @@ var effectsView = new SfEffectsView()
 
 ## InitialRippleFactor
 
-The [`InitialRippleFactor`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html#Syncfusion_XForms_EffectsView_SfEffectsView_InitialRippleFactor) property of [`SfEffectsView`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html) is used to customize the radius of the ripple when ripple animation starts.
+The `InitialRippleFactor` property of `SfEffectsView` is used to customize the radius of the ripple when ripple animation starts.
 
 {% tabs %} 
 
@@ -121,7 +121,7 @@ var effectsView = new SfEffectsView
 
 ## ScaleFactor
 
-The [`ScaleFactor`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html#Syncfusion_XForms_EffectsView_SfEffectsView_ScaleFactor) property of [`SfEffectsView`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html) is used to customize the scale of the view.
+The `ScaleFactor` property of `SfEffectsView` is used to customize the scale of the view.
 
 {% tabs %} 
 
@@ -154,7 +154,7 @@ var effectsView = new SfEffectsView
 
 ## HighlightBackground
 
-The [`HighlightBackground`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html#Syncfusion_XForms_EffectsView_SfEffectsView_HighlightColor) property of [`SfEffectsView`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html) is used to customize the color of highlight effect.
+The `HighlightBackground` property of `SfEffectsView` is used to customize the color of highlight effect.
 
 {% tabs %} 
 
@@ -183,7 +183,7 @@ var effectsView = new SfEffectsView
 
 ## RippleBackground
 
-The [`RippleBackground`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html#Syncfusion_XForms_EffectsView_SfEffectsView_RippleColor) property of [`SfEffectsView`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html) is used to customize the color of ripple.
+The `RippleBackground` property of `SfEffectsView` is used to customize the color of ripple.
 
 {% tabs %} 
 
@@ -209,7 +209,7 @@ var effectsView = new SfEffectsView
 
 ## SelectionBackground
 
-The [`SelectionBackground`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html#Syncfusion_XForms_EffectsView_SfEffectsView_SelectionColor) property of [`SfEffectsView`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html) is used to customize the color of selection effect.
+The `SelectionBackground`property of `SfEffectsView` is used to customize the color of selection effect.
 
 {% tabs %} 
 
@@ -238,7 +238,7 @@ var effectsView = new SfEffectsView
 
 ## Angle
 
-The [`Angle`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html#Syncfusion_XForms_EffectsView_SfEffectsView_Angle) property of [`SfEffectsView`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html) is used to customize the rotation angle.
+The `Angle` property of `SfEffectsView` is used to customize the rotation angle.
 
 {% tabs %} 
 
