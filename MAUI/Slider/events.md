@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Events in.NET MAUI Slider control | Syncfusion 
-description: Learn here all about adding the events of Syncfusion .NET MAUI Slider (SfSlider) control and more.
+description: Learn here all about adding and customizing through events of Syncfusion .NET MAUI Slider (SfSlider) control and more.
 platform: maui
 control: SfSlider
 documentation: ug
 ---
 
-# Events in .NET MAUI Range Slider (SfRangeSlider)
+# Events in .NET MAUI Slider (SfSlider)
 
-This section explains about how to add the events for range slider.
+This section explains about how to add the events for slider.
 
 ## Handle ValueChanging, ValueChanged, ValueChangeStart, and ValueChangeEnd callbacks
 
