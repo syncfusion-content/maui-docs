@@ -106,6 +106,11 @@ The `.NET MAUI Scheduler` has a built-in capability to handle the appointment ar
 The `SchedulerAppointment` is a class that includes the specific scheduled appointment. It has some basic properties such as `StartTime`, `EndTime` `Subject`, and some additional information about the appointment can be added with `Notes`, `Location`, and `IsAllDay` properties.
 
 {% tabs %}
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" />
+
+{% endhighlight %}
 {% highlight c# %}
 
 // Creating an instance for the scheduler appointment collection.
@@ -511,11 +516,16 @@ this.Scheduler.ShowWeekNumber = true;
 
 N> This property will not be applicable for the `SchedulerView` is `Timeline Month.`
 
-## Customize the week number text style
+### Customize the week number text style
 
 The Week number text style of the Scheduler can be customized by using the `WeekNumberStyle` property and it allows to customize the `TextStyle` and the `Background` color in the Week number of the `SfScheduler.`
 
-{% tabs %}
+{% tabs %}  
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" ShowWeekNumber="True"/>
+
+{% endhighlight %}
 {% highlight c# %}  
 
 this.Scheduler.ShowWeekNumber = true;

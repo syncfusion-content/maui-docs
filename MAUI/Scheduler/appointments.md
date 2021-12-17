@@ -30,7 +30,7 @@ var appointment = new ObservableCollection<SchedulerAppointment>();
 appointment.Add(new SchedulerAppointment()
 {
     StartTime = DateTime.Today.AddHours(9),
-    EndTime = DateTime.Today.AddHours(10),
+    EndTime = DateTime.Today.AddHours(11),
     Subject = "Client Meeting",
     Location = "Hutchison road",
 });

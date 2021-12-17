@@ -24,6 +24,13 @@ The timelineView displays the date inside the horizontal time axis with the desi
 The time interval between the time slots in the timeline day, timeline week, and timeline workweek views can be customized by using the `TimeInterval` property of `TimelineViewSettings.`
 
 {% tabs %}
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" 
+                       View="TimelineWeek">
+</scheduler:SfScheduler>
+
+{% endhighlight %}
 {% highlight c# %}
 
 this.Scheduler.View = SchedulerView.TimelineWeek;
@@ -128,6 +135,13 @@ The user interaction such as selection and highlights specific regions of timeli
 You can enable or disable the touch interaction of TimeRegion using the `EnablePointerInteraction` property of `TimeRegion.` By default, its value is `true.`
 
 {% tabs %}
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" 
+                       View="TimelineWeek">
+</scheduler:SfScheduler>
+
+{% endhighlight %}
 {% highlight c# %}
 
 this.Scheduler.View = SchedulerView.TimelineWeek;
@@ -162,6 +176,13 @@ N> This property only restricts the interaction on region and it does not restri
 The recurring time region on a daily, weekly, monthly, or yearly interval. The recurring special time regions can be created by setting the `RecurrenceRule` property in `TimeRegion.`
 
 {% tabs %}
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" 
+                       View="TimelineWeek">
+</scheduler:SfScheduler>
+
+{% endhighlight %}
 {% highlight c# %}
 
 this.Scheduler.View = SchedulerView.TimelineWeek;
@@ -191,6 +212,13 @@ private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 Any occurrence that is an exception from the recurrence pattern time region can be deleted by using the `RecurrenceExceptionDates` property of `TimeRegion.` The deleted occurrence date will be considered as a recurrence exception date.
 
 {% tabs %}
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" 
+                       View="TimelineWeek">
+</scheduler:SfScheduler>
+
+{% endhighlight %}
 {% highlight c# %}
 
 this.Scheduler.View = SchedulerView.TimelineWeek;
@@ -225,6 +253,13 @@ private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 The specialTimeRegion background and text style can be customized by using the `Background` and `TextStyle` properties of `TimeRegion` that is used to customize the background color for time region background and text style for the text of the specialTimeRegion.
 
 {% tabs %}
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" 
+                       View="TimelineWeek">
+</scheduler:SfScheduler>
+
+{% endhighlight %}
 {% highlight c# %}
 
 this.Scheduler.View = SchedulerView.TimelineWeek;
@@ -363,6 +398,13 @@ N>
 The date and day format of SfScheduler view header can be customized by using the `DateFormat` and `DayFormat` properties of `TimelineViewSettings.`
 
 {% tabs %}
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" 
+                       View="TimelineWeek">
+</scheduler:SfScheduler>
+
+{% endhighlight %}
 {% highlight c# %}
 
 this.Scheduler.View = SchedulerView.TimelineWeek;
@@ -372,11 +414,18 @@ this.Scheduler.TimelineViewSettings.ViewHeaderSettings.DateFormat = "MMMM dd";
 {% endhighlight %}
 {% endtabs %}
 
-## Customize view header text style
+### Customize view header text style
 
 The background color and text style for the labels mentioning the time can be customized, by setting the `Background,` `DateTextStyle,` and `DayTextStyle` properties of `TimelineViewSettings` in the Scheduler.
 
 {% tabs %}
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" 
+                       View="TimelineWeek">
+</scheduler:SfScheduler>
+
+{% endhighlight %}
 {% highlight c# %}
 
 this.Scheduler.View = SchedulerView.TimelineWeek;
@@ -403,6 +452,13 @@ this.Scheduler.TimelineViewSettings.ViewHeaderSettings.DayTextStyle = dayTextSty
 The format for the labels mentioning the time can be customized by setting the `TimeFormat` property of `TimelineViewSettings` in the Scheduler.
 
 {% tabs %}
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" 
+                       View="TimelineWeek">
+</scheduler:SfScheduler>
+
+{% endhighlight %}
 {% highlight c# %}
 
 this.Scheduler.View = SchedulerView.TimelineWeek;
@@ -414,11 +470,18 @@ this.Scheduler.TimelineViewSettings.TimeFormat = "hh:mm";
 N>
 * By default, the scheduler time text format is `hh:mm tt.`
 
-## Customize time ruler text style
+### Customize time ruler text style
 
 The background and text style for the labels mentioning the time can be customized, by setting the `Background,` and `TimeRulerTextStyle` properties of `TimelineViewSettings` in the Scheduler.
 
 {% tabs %}
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" 
+                       View="TimelineWeek">
+</scheduler:SfScheduler>
+
+{% endhighlight %}
 {% highlight c# %}
 
 this.Scheduler.View = SchedulerView.TimelineWeek;
