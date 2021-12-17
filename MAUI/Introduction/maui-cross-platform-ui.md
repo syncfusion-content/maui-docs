@@ -58,18 +58,12 @@ You can find the platforms supported by each .NET MAUI control as below.
 		Yes<br/>
 		</td>
 		<td>
-		No<br/>
-		</td>
-		<td>
-		No<br/>
+		Yes<br/>
 		</td>
 	</tr>
 	<tr>
 		<td>
 			<a href="/maui/circular-charts/overview">Circular Charts</a><br/>
-		</td>
-		<td>
-		Yes<br/>
 		</td>
 		<td>
 		Yes<br/>
@@ -98,10 +92,7 @@ You can find the platforms supported by each .NET MAUI control as below.
 		Yes<br/>
 		</td>
 		<td>
-		No<br/>
-		</td>
-		<td>
-		No<br/>
+		Yes<br/>
 		</td>
 	</tr>
 	<tr>
@@ -121,10 +112,7 @@ You can find the platforms supported by each .NET MAUI control as below.
 		Yes<br/>
 		</td>
 		<td>
-		No<br/>
-		</td>
-		<td>
-		No<br/>
+		Yes<br/>
 		</td>
 	</tr>
     <tr>
@@ -144,10 +132,7 @@ You can find the platforms supported by each .NET MAUI control as below.
 		Yes<br/>
 		</td>
 		<td>
-		No<br/>
-		</td>
-		<td>
-		No<br/>
+		Underway<br/>
 		</td>
 	</tr>
 	<tr>
@@ -167,10 +152,7 @@ You can find the platforms supported by each .NET MAUI control as below.
 		Yes<br/>
 		</td>
 		<td>
-		No<br/>
-		</td>
-		<td>
-		No<br/>
+		Yes<br/>
 		</td>
 	</tr>
 	<tr>
@@ -187,10 +169,7 @@ You can find the platforms supported by each .NET MAUI control as below.
 		Yes<br/>
 		</td>
 		<td>
-		No<br/>
-		</td>
-		<td>
-		No<br/>
+		Yes<br/>
 		</td>
 	</tr>
     <tr>
@@ -212,9 +191,6 @@ You can find the platforms supported by each .NET MAUI control as below.
 		<td>
 		Yes<br/>
 		</td>
-		<td>
-		No<br/>
-		</td>
 	</tr>	
     <tr>
 	    <td rowspan="1" valign="top">
@@ -233,10 +209,7 @@ You can find the platforms supported by each .NET MAUI control as below.
 		Yes<br/>
 		</td>
 		<td>
-		No<br/>
-		</td>
-		<td>
-		No<br/>
+		Yes<br/>
 		</td>
 	</tr>	
     <tr>  
@@ -257,9 +230,6 @@ You can find the platforms supported by each .NET MAUI control as below.
 		</td>
 		<td>
 		Yes<br/>
-		</td>
-		<td>
-		No<br/>
 		</td>
 	</tr>	
 </table>
