@@ -9,11 +9,11 @@ documentation: ug
 
 # Features in .NET MAUI Effects View (SfEffectsView)
 
-The `SfEffectsView` control provides the following additional features to enhance the effects:
+The [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html) control provides the following additional features to enhance the effects:
 
 ## FadeOutRipple
 
-By enabling the `FadeOutRipple` property of `SfEffectsView`, the growable circle will lose its opacity to 0 on growing.
+By enabling the [FadeOutRipple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_FadeOutRipple) property of [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html), the expandable circle will lose its opacity to 0 on growing.
 
 {% tabs %} 
 
@@ -42,7 +42,7 @@ By enabling the `FadeOutRipple` property of `SfEffectsView`, the growable circle
 
 ## IsSelected
 
-Enabling the `IsSelected` property of `SfEffectsView` sets the view state as selected.
+Enabling the [IsSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_IsSelected) property of [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html) sets the view state as selected.
 
 {% tabs %} 
 
@@ -67,7 +67,7 @@ Enabling the `IsSelected` property of `SfEffectsView` sets the view state as sel
 
 ## ShouldIgnoreTouches
 
-Enabling the `ShouldIgnoreTouches` property of `SfEffectsView` cancels the direct interaction of the `SfEffectsView`.
+Enabling the [ShouldIgnoreTouches](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_ShouldIgnoreTouches) property of [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html) cancels the direct interaction of the [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html).
 
 {% tabs %} 
 

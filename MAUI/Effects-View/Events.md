@@ -11,7 +11,7 @@ documentation: ug
 
 ## AnimationCompleted event
 
-The `AnimationCompleted` event occurs when the rendered effects have been completed.
+The [AnimationCompleted](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_AnimationCompleted) event occurs when the rendered effects have been completed.
 
 {% tabs %} 
 
@@ -51,13 +51,13 @@ The `AnimationCompleted` event occurs when the rendered effects have been comple
 
 {% endtabs %}
 
-N> When the effects are rendered on direct interaction, the `AnimationCompleted` event occurs on touch up, and when it is applied programmatically, it is triggered immediately on completion of effects.
+N> When the effects are rendered on direct interaction, the [AnimationCompleted](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_AnimationCompleted) event occurs on touch up, and when it is applied programmatically, it is triggered immediately on completion of effects.
 
-N> The `AnimationCompleted` event is not applicable for `SfEffects.Selection`.
+N> The [AnimationCompleted](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_AnimationCompleted) event is not applicable for [SfEffects.Selection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffects.html#Syncfusion_Maui_Core_SfEffects_Selection).
 
 ## SelectionChanged event
 
-The `SelectionChanged` event occurs when `SfEffectsView` is selected or unselected.
+The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_SelectionChanged) event occurs when [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html) is selected or unselected.
 
 {% tabs %} 
 
@@ -101,4 +101,4 @@ public partial class MainPage : ContentPage
 
 {% endtabs %}
 
-N> The `SelectionChanged` event triggers both on rendering `SfEffects.Selection` by direct interaction and on changing the `IsSelected` property of `SfEffectsView`.
+N> The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_SelectionChanged) event triggers both on rendering [SfEffects.Selection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffects.html#Syncfusion_Maui_Core_SfEffects_Selection) by direct interaction and on changing the [IsSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_IsSelected) property of [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html).
