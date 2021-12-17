@@ -13,7 +13,7 @@ Effects can be set on different interactions. This section explains how to set e
 
 ## TouchDownEffects
 
-The [`TouchDownEffects`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html#Syncfusion_XForms_EffectsView_SfEffectsView_TouchDownEffects) property of [`SfEffectsView`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html) is used to render the effects in touch-down interaction.
+The `TouchDownEffects` property of `SfEffectsView` is used to render the effects in touch-down interaction.
 
 {% tabs %} 
 
@@ -37,7 +37,7 @@ var effectsView = new SfEffectsView
 
 ## LongPressEffects
 
-The [`LongPressEffects`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html#Syncfusion_XForms_EffectsView_SfEffectsView_LongPressEffects) property of [`SfEffectsView`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html) is used to render the effects in long-press interaction.
+The `LongPressEffects` property of `SfEffectsView` is used to render the effects in long-press interaction.
 
 {% tabs %} 
 
@@ -61,7 +61,7 @@ var effectsView = new SfEffectsView
 
 ## TouchUpEffects
 
-The [`TouchUpEffects`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html#Syncfusion_XForms_EffectsView_SfEffectsView_TouchUpEffects) property of [`SfEffectsView`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html) is used to render the effects in touch-up interaction.
+The `TouchUpEffects`property of `SfEffectsView` is used to render the effects in touch-up interaction.
 
 {% tabs %} 
 

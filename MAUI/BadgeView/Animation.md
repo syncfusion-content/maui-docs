@@ -54,4 +54,4 @@ Content = sfBadgeView;
 
 {% endtabs %}
 
-![.NET Maui BadgeView Font Customization](animation_images/xamarin.forms-badge-view-animation.gif)
+![.NET Maui BadgeView Font Customization](animation_images/maui-badge-view-animation.gif)
