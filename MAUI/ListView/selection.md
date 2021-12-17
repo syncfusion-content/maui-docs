@@ -266,30 +266,6 @@ listView.SelectionBackgroundColor = Colors.Khaki;
 {% endhighlight %}
 {% endtabs %}
 
-### Programmatic animation
-
-The `SfListView` allows programmatic animation in selection at runtime by using the virtual method `AnimateSelectedItem` of `SelectionController` class.
-
-{% tabs %}
-{% highlight c# %}
-listView.SelectionController = new SelectionControllerExt(listView);
-
-public class SelectionControllerExt : SelectionController
-{
-   public SelectionControllerExt(SfListView listView) : base(listView)
-   {
-   }
-   
-   protected override void AnimateSelectedItem(ListViewItem selectedListViewItem)
-   {
-      base.AnimateSelectedItem(selectedListViewItem);
-      selectedListViewItem.Opacity = 0;
-      selectedListViewItem.FadeTo(1, 3000, Easing.SinInOut);
-   }
-}
-{% endhighlight %}
-{% endtabs %}
-
 ## Events
 
 ### SelectionChanging event
