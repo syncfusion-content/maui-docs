@@ -109,6 +109,9 @@ N> Inherit this class from the `INotifyPropertyChanged` for dynamic changes in c
 
 The `AppointmentMapping` property of the `Meeting` class maps those properties to the `.NET MAUI Scheduler` control.
 
+{% tabs %}
+{% highlight xaml %}
+
 <scheduler:SfScheduler x:Name="Scheduler" 
                        View="Week" >
     <scheduler:SfScheduler.AppointmentMapping>
@@ -170,7 +173,7 @@ this.Scheduler.AppointmentsSource = Meetings;
 
 The spanned appointment is the one which lasts longer than 24 hours. The spanned appointment does not block out timeslots in the Scheduler, but it will render in all-day appointment panel exclusively.
 
-{%tabs %}
+{% tabs %}
 {% highlight xaml %}
 
 <scheduler:SfScheduler x:Name="Scheduler" 
@@ -214,7 +217,7 @@ this.Scheduler.AppointmentsSource = Meetings;
 
 Appointments that are scheduled for a whole day are known as All-Day Appointments. The `IsAllDay` property of the `SchedulerAppointment` can be used to set this property. Appointments that last for a full 24 hours (exact 24 hours) will be considered as all-day appointments without setting the `IsAllDay` property.
 
-{%tabs %}
+{% tabs %}
 {% highlight xaml %}
 
 <scheduler:SfScheduler x:Name="Scheduler" 
@@ -280,7 +283,7 @@ Based on the value of the `RecurrenceRule` property, recurrence appointments in 
 
 A recurrence rule for `.NET MAUI Scheduler` is used to populate the recurring appointment collection in a specific pattern. The `SchedulerAppointment` supports setting the RRULE directly to its `RecurrenceRule` property.
 
-{%tabs %}
+{% tabs %}
 {% highlight xaml %}
 
 <scheduler:SfScheduler x:Name="Scheduler" 
@@ -345,7 +348,7 @@ Inherit this class from the `INotifyPropertyChanged` for dynamic changes in cust
 
 The `AppointmentMapping` property of the `Meeting` class maps those properties to the  scheduler appointment of the `.NET MAUI Scheduler` control.
 
-{%tabs %}
+{% tabs %}
 {% highlight xaml %}
 
 <scheduler:SfScheduler x:Name="Scheduler"
@@ -475,7 +478,7 @@ The Recurrence exception appointments and recurrence exception dates can be adde
 
 An occurrence of the recurrence pattern appointment which is an exception can be deleted by using the `RecurrenceExceptionDates` property of `SchedulerAppointment.` The deleted occurrence date will be considered as recurrence exception date.
 
-{%tabs %}
+{% tabs %}
 {% highlight xaml %}
 
 <scheduler:SfScheduler x:Name="Scheduler" 
@@ -518,7 +521,7 @@ this.Scheduler.AppointmentsSource = appointment;
 
 Also add an exception appointment which is changed or modified occurrence of the recurrence pattern appointment to the `AppointmentsSource` of Scheduler. To add a changed occurrence, ensure to set the `RecurrenceId` of that occurrence and add the date of that occurrence to the `RecurrenceExceptionDates` of recurrence pattern appointment. The `RecurrenceId` of changed occurrence should hold the exact recurrence pattern appointment `Id.`
 
-{%tabs %}
+{% tabs %}
 {% highlight xaml %}
 
 <scheduler:SfScheduler x:Name="Scheduler" 
@@ -617,7 +620,7 @@ N> Inherit this class from the `INotifyPropertyChanged` for dynamic changes in c
 
 The property `RecurrenceExceptionDates` should map with the business object class of `AppointmentMapping` class to map the exception dates to the scheduled appointment.
 
-{%tabs %}
+{% tabs %}
 {% highlight xaml %}
 
 <scheduler:SfScheduler x:Name="Scheduler" 
@@ -680,7 +683,7 @@ Also add an exception appointment which is changed or modified occurrence of the
 
 Add the created exception recurrence appointment to the SfScheduler `AppointmentsSource.`
 
-{%tabs %}
+{% tabs %}
 {% highlight xaml %}
 
 <scheduler:SfScheduler x:Name="Scheduler" 
@@ -755,7 +758,7 @@ N>
 
 The appointment text style can be customized by using the `AppointmentTextStyle` property of the Scheduler.
 
-{%tabs %}
+{% tabs %}
 {% highlight xaml %}
 
 <scheduler:SfScheduler x:Name="Scheduler" 
