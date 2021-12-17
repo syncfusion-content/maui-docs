@@ -21,9 +21,9 @@ For example, if `Minimum` is 0.0 and `Maximum` is 10.0 and `Interval` is 2.0, th
 
 {% highlight xaml %}
 
-<sliders:SfRangeSlider Interval="0.2"  
-                       ShowTicks="True">
-</sliders:SfRangeSlider>
+<rangeslider:SfRangeSlider Interval="0.2"  
+                           ShowTicks="True">
+</rangeslider:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -47,10 +47,10 @@ It is used to represent the number of smaller ticks between two major ticks. For
 
 {% highlight xaml %}
 
-<sliders:SfRangeSlider Interval="0.2" 
-                       MinorTicksPerInterval="1" 
-                       ShowTicks="True">
-</sliders:SfRangeSlider>
+<rangeslider:SfRangeSlider Interval="0.2" 
+                           MinorTicksPerInterval="1" 
+                           ShowTicks="True">
+</rangeslider:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -79,13 +79,13 @@ The inactive side of the range slider is between the `Minimum` value and the lef
 
 {% highlight xaml %}
 
-<sliders:SfRangeSlider Interval="0.2" 
-                       ShowTicks="True">
-    <sliders:SfRangeSlider.MajorTickStyle>
-         <sliders:SliderTickStyle ActiveColor="#EE3F3F" 
-                                  InactiveColor="#F7B1AE" />
-    </sliders:SfRangeSlider.MajorTickStyle>
-</sliders:SfRangeSlider>
+<rangeslider:SfRangeSlider Interval="0.2" 
+                          ShowTicks="True">
+    <rangeslider:SfRangeSlider.MajorTickStyle>
+         <rangeslider:SliderTickStyle ActiveColor="#EE3F3F" 
+                                     InactiveColor="#F7B1AE" />
+    </rangeslider:SfRangeSlider.MajorTickStyle>
+</rangeslider:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -115,14 +115,14 @@ The inactive side of the range slider is between the `Minimum` value and the lef
 
 {% highlight xaml %}
 
-<sliders:SfRangeSlider Interval="0.2" 
-                       ShowTicks="True" 
-                       MinorTicksPerInterval="1">
-    <sliders:SfRangeSlider.MinorTickStyle>
-         <sliders:SliderTickStyle ActiveColor="#EE3F3F" 
+<rangeslider:SfRangeSlider Interval="0.2" 
+                           ShowTicks="True" 
+                           MinorTicksPerInterval="1">
+    <rangeslider:SfRangeSlider.MinorTickStyle>
+         <rangeslider:SliderTickStyle ActiveColor="#EE3F3F" 
                                   InactiveColor="#F7B1AE" />
-     </sliders:SfRangeSlider.MinorTickStyle>
-</sliders:SfRangeSlider>
+     </rangeslider:SfRangeSlider.MinorTickStyle>
+</rangeslider:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -149,16 +149,16 @@ You can change the major and minor ticks size of the range slider using the `Act
 
 {% highlight xaml %}
 
-<sliders:SfRangeSlider Interval="0.2" 
-                       ShowTicks="True" 
-                       MinorTicksPerInterval="1">
-    <sliders:SfRangeSlider.MinorTickStyle>
-       <sliders:SliderTickStyle ActiveSize="2,10" InactiveSize="2, 10" />
-    </sliders:SfRangeSlider.MinorTickStyle>
-    <sliders:SfRangeSlider.MajorTickStyle>
-        <sliders:SliderTickStyle ActiveSize="2,15" InactiveSize="2, 15" />
-    </sliders:SfRangeSlider.MajorTickStyle>
-</sliders:SfRangeSlider>
+<rangeslider:SfRangeSlider Interval="0.2" 
+                           ShowTicks="True" 
+                           MinorTicksPerInterval="1">
+    <rangeslider:SfRangeSlider.MinorTickStyle>
+       <rangeslider:SliderTickStyle ActiveSize="2,10" InactiveSize="2, 10" />
+    </rangeslider:SfRangeSlider.MinorTickStyle>
+    <rangeslider:SfRangeSlider.MajorTickStyle>
+        <rangeslider:SliderTickStyle ActiveSize="2,15" InactiveSize="2, 15" />
+    </rangeslider:SfRangeSlider.MajorTickStyle>
+</rangeslider:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -187,14 +187,14 @@ You can adjust the space between track and ticks of the range slider using the `
 
 {% highlight xaml %}
 
-<sliders:SfRangeSlider Interval="0.2" ShowTicks="True" MinorTicksPerInterval="1">
-   <sliders:SfRangeSlider.MinorTickStyle>
-       <sliders:SliderTickStyle Offset="5" />
-    </sliders:SfRangeSlider.MinorTickStyle>
-    <sliders:SfRangeSlider.MajorTickStyle>
-       <sliders:SliderTickStyle Offset="5" />
-    </sliders:SfRangeSlider.MajorTickStyle>
-</sliders:SfRangeSlider>
+<rangeslider:SfRangeSlider Interval="0.2" ShowTicks="True" MinorTicksPerInterval="1">
+   <rangeslider:SfRangeSlider.MinorTickStyle>
+       <rangeslider:SliderTickStyle Offset="5" />
+    </rangeslider:SfRangeSlider.MinorTickStyle>
+    <rangeslider:SfRangeSlider.MajorTickStyle>
+       <rangeslider:SliderTickStyle Offset="5" />
+    </rangeslider:SfRangeSlider.MajorTickStyle>
+</rangeslider:SfRangeSlider>
 
 {% endhighlight %}
 
