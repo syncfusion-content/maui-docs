@@ -11,13 +11,13 @@ documentation: ug
 
 # Badge Customization in .NET MAUI Badge View (SfBadgeView)
 
-The `BadgeSettings` property helps you to customize the basic look and feel of the badge view. 
+The [`BadgeSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html#Syncfusion_Maui_Core_SfBadgeView_BadgeSettings) property helps you to customize the basic look and feel of the badge view. 
 
-`BadgeSettings` contains the sub-elements such as badge types, positions and colors. You can customize the background color, text color, border color, width, offset, and font attributes.
+[`BadgeSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html) contains the sub-elements such as badge types, positions and colors. You can customize the background color, text color, border color, width, offset, and font attributes.
 
 ## Font customization
 
-The font can be customized using the `FontSize`, `FontAttributes`, and `FontFamily` properties.
+The font can be customized using the [`FontSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_FontSizeProperty), [`FontAttributes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_FontAttributesProperty), and [`FontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_FontFamilyProperty)properties.
 
 {% tabs %}
 
@@ -66,7 +66,7 @@ The font can be customized using the `FontSize`, `FontAttributes`, and `FontFami
 
 ## Border customization
 
-The border color and border width of the badge view can be customized using the `Stroke` and `BorderWidth` properties, respectively.
+The border color and border width of the badge view can be customized using the [`Stroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_StrokeProperty) and [`BorderWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_BorderWidthProperty) properties, respectively.
 
 {% tabs %}
 
@@ -112,7 +112,7 @@ The border color and border width of the badge view can be customized using the 
 
 ## Text customization
 
-The text color and margin of badge view can be changed using the `TextColor` and `TextPadding` properties, respectively.
+The text color and margin of badge view can be changed using the [`TextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_TextColorProperty) and [`TextPadding`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_TextPaddingProperty) properties, respectively.
 
 {% tabs %}
 
@@ -158,7 +158,7 @@ Content = sfBadgeView;
 
 ## Predefined styles
 
-The colors of the badge can be customized using the `BadgeType` property. The badge supports the following eight different essential colors for various situations:
+The colors of the badge can be customized using the [`BadgeType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeType.html) property. The badge supports the following eight different essential colors for various situations:
 
  * Dark
  * Error
@@ -210,7 +210,7 @@ The colors of the badge can be customized using the `BadgeType` property. The ba
 
 ## Badge background customization
 
-Other than the predefined styles, the color of the badge can be customized using the `BadgeType` property which has to be set as `None`. Then the color of the badge view can be set using the `Background` property.
+Other than the predefined styles, the color of the badge can be customized using the [`BadgeType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeType.html) property which has to be set as [`None`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeType.html#Syncfusion_Maui_Core_BadgeType_None). Then the color of the badge view can be set using the [`Background`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_Background) property.
 
 {% tabs %}
 
@@ -255,7 +255,7 @@ Content = sfBadgeView;
 
 ## Setting corner radius of the badge
 
-The `CornerRadius` property is used to reduce the radius of the corners.
+The [`CornerRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_CornerRadius) property is used to reduce the radius of the corners.
 
 {% tabs %}
 
