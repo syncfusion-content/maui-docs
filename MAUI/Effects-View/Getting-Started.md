@@ -26,7 +26,7 @@ Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org
     using Microsoft.Maui.Controls.Compatibility;
     using Microsoft.Maui.Controls.Hosting;
     using Microsoft.Maui.Controls.Xaml;
-  `using Syncfusion.Maui.Core.Hosting;`
+   `using Syncfusion.Maui.Core.Hosting;`
 
     namespace EffectsViewMauiSample
     {
