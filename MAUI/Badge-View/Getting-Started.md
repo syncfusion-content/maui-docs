@@ -200,5 +200,4 @@ The following screenshot illustrates the result of the above code.
 
 ![.NET MAUI Badge View getting started](getting-started_images/Badgeview.png) 
 
-You can find the complete getting started sample from this `link`.
 
