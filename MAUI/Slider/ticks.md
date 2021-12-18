@@ -47,7 +47,9 @@ It is used to represent the number of smaller ticks between two major ticks. For
 
 {% highlight xaml %}
 
-<sliders:SfSlider Interval="0.2" 
+<sliders:SfSlider Minimum="0"
+                  Maximum="10"
+                  Interval="2" 
                   ShowLabels="True" 
                   MinorTicksPerInterval="1" 
 		  ShowTicks="True">
@@ -58,7 +60,9 @@ It is used to represent the number of smaller ticks between two major ticks. For
 {% highlight C# %}
 
 SfSlider slider = new SfSlider();
-slider.Interval = 0.2;
+slider.Minimum = 0;
+slider.Maximum = 10;
+slider.Interval = 2;
 slider.MinorTicksPerInterval = 1;
 slider.ShowTicks = true;
 
@@ -116,7 +120,9 @@ The inactive side of the slider is between the thumb and the `Maximum` value.
 
 {% highlight xaml %}
 
-<sliders:SfSlider Interval="0.2" 
+<sliders:SfSlider Minimum="0" 
+                  Maximum="10"
+                  Interval="2" 
                   ShowTicks="True" 
                   MinorTicksPerInterval="1">
      <sliders:SfSlider.MinorTickStyle>
@@ -130,7 +136,9 @@ The inactive side of the slider is between the thumb and the `Maximum` value.
 {% highlight C# %}
 
 SfSlider slider = new SfSlider();
-slider.Interval = 0.2;
+slider.Minimum = 0;
+slider.Maximum = 10;
+slider.Interval = 2;
 slider.ShowTicks = true;
 slider.MinorTicksPerInterval = 1;
 slider.MinorTickStyle.ActiveColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));

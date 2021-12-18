@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Labels and Dividers in .NET MAUI Slider control | Syncfusion
-description: Learn here all about the Labels and Dividers feature of .NET MAUI Slider (SfSlider) control and more.
+title: Labels in .NET MAUI Slider control | Syncfusion
+description: Learn here all about the Labels feature of .NET MAUI Slider (SfSlider) control and more.
 platform: maui
 control: SfSlider
 documentation: ug
 ---
 
-# Labels and Dividers in .NET MAUI Slider (SfSlider)
+# Labels in .NET MAUI Slider (SfSlider)
 
-This section explains about how to add the labels and dividers in the slider.
+This section explains about how to add the labels in the slider.
 
 ## Show labels
 
@@ -19,8 +19,11 @@ The `ShowLabels` property is used to render the labels on given interval. The de
 
 {% highlight xaml %}
 
-<sliders:SfSlider Interval="0.2"
-                  ShowLabels="True">
+<sliders:SfSlider Minimum="0" 
+                  Maximum="10"
+                  Interval="2"
+                  ShowLabels="True"
+                  ShowTicks="True">
 </sliders:SfSlider>
 
 {% endhighlight %}
@@ -50,7 +53,8 @@ The `NumberFormat` property is used to format the numeric labels. The default va
                   Value="6"
 		  Interval="2"  
 		  NumberFormat="$##" 
-		  ShowLabels="True">
+		  ShowLabels="True"
+            ShowTicks="True">
 </sliders:SfSlider>
 
 {% endhighlight %}
@@ -168,7 +172,7 @@ You can format or change the whole numeric or date label text using the `LabelCr
 
 {
    SfSlider slider = new SfSlider();
-   slider.Minimum = 0;
+   slider.Minimum = 2;
    slider.Maximum = 10;
    slider.Value = 6;
    slider.Interval = 2;
@@ -199,7 +203,10 @@ The inactive side of the slider is between the thumb and the `Maximum` value.
 
 {% highlight xaml %}
 
-<sliders:SfSlider Interval="0.2"  
+<sliders:SfSlider Minimum="2" 
+                  Maximum="10" 
+                  Interval="2" 
+                  ShowTicks="True"  
                   ShowLabels="True">
     <sliders:SfSlider.LabelStyle>
          <sliders:SliderLabelStyle ActiveTextColor="#EE3F3F" 
@@ -216,7 +223,9 @@ The inactive side of the slider is between the thumb and the `Maximum` value.
 {% highlight C# %}
 
 SfSlider slider = new SfSlider();
-slider.Interval = 0.2;
+slider.Minimum = 2;
+slider.Maximum = 10;
+slider.Interval = 2;
 slider.ShowLabels = true;
 slider.ShowTicks = true;
 slider.LabelStyle.ActiveTextColor = Color.FromArgb("#EE3F3F");
@@ -240,7 +249,9 @@ You can adjust the space between ticks and labels of the slider using the `Offse
 
 {% highlight xaml %}
 
-<sliders:SfSlider Interval="0.2" 
+<sliders:SfSlider Minimum="2" 
+                  Maximum="10" 
+                  Interval="2" 
                   ShowLabels="True">
     <sliders:SfSlider.LabelStyle>
         <sliders:SliderLabelStyle Offset="10" />
@@ -252,7 +263,9 @@ You can adjust the space between ticks and labels of the slider using the `Offse
 {% highlight C# %}
 
 SfSlider slider = new SfSlider();
-slider.Interval = 0.2;
+slider.Minimum = 2;
+slider.Maximum = 10;
+slider.Interval = 2;
 slider.ShowLabels = true;
 slider.ShowTicks = true;
 slider.LabelStyle.Offset = 10;
@@ -262,141 +275,3 @@ slider.LabelStyle.Offset = 10;
 {% endtabs %}
 
 ![Slider label offset](images/labels-and-dividers/label-offset.png)
-
-## Show dividers
-
-The `ShowDividers` property is used to render the dividers on the track. The default value of the `ShowDividers` property is `False`. It is a shape which is used to represent the major interval points of the track.
-
-For example, if `Minimum` is 0.0 and `Maximum` is 10.0 and `Interval` is 2.0, the slider will render the dividers at 0.0, 2.0, 4.0 and so on.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<sliders:SfSlider Interval="0.2" 
-                  ShowDividers="True">
-</sliders:SfSlider>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfSlider slider = new SfSlider();
-slider.Interval = 0.2;
-slider.ShowDividers = true;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Slider divider](images/labels-and-dividers/divider.png)
-
-## Divider radius
-
-You can change the active and inactive divider radius of the slider using the `ActiveRadius` and the `InactiveRadius` properties of the `DividerStyle` class.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<sliders:SfSlider Interval="0.2" 
-                  ShowDividers="True">
-    <sliders:SfSlider.DividerStyle>
-         <sliders:SliderDividerStyle ActiveRadius="7" 
-                                     InactiveRadius="7" />
-    </sliders:SfSlider.DividerStyle>
-</sliders:SfSlider>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfSlider slider = new SfSlider();
-slider.Interval = 0.2;
-slider.ShowDividers = true;
-slider.DividerStyle.ActiveRadius = 7;
-slider.DividerStyle.InactiveRadius = 7;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Slider divider radius](images/labels-and-dividers/divider-radius.png)
-
-## Divider stroke width and stroke color
-
-You can change the active and inactive divider stroke width of the slider using the `ActiveStrokeWidth` and the `InactiveStrokeWidth` properties of the `DividerStyle` class.
-
-Also, you can change the active and inactive divider stroke color of the slider using the `ActiveStrokeColor` and the `InactiveStrokeColor` properties of the `DividerStyle` class.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<sliders:SfSlider Interval="0.2" 
-                  ShowDividers="True">
-    <sliders:SfSlider.DividerStyle>
-         <sliders:SliderDividerStyle ActiveRadius="7" 
-                                     InactiveRadius="7" 
-            			     ActiveStrokeWidth="2" 
-				     InactiveStrokeWidth="2" 
-				     ActiveStrokeColor="#EE3F3F" 
-				     InactiveStrokeColor="#F7B1AE"/>
-     </sliders:SfSlider.DividerStyle>
-</sliders:SfSlider>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfSlider slider = new SfSlider();
-slider.Interval = 0.2;
-slider.ShowDividers = true;
-slider.DividerStyle.ActiveRadius = 7;
-slider.DividerStyle.InactiveRadius = 7;
-slider.DividerStyle.ActiveStrokeColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
-slider.DividerStyle.InactiveStrokeColor = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
-slider.DividerStyle.ActiveStrokeWidth = 2;
-slider.DividerStyle.InactiveStrokeWidth = 2;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Slider divider stroke color](images/labels-and-dividers/divider-stroke-color.png)
-
-## Divider color
-
-You can change the active and inactive divider color of the slider using the `ActiveColor` and `InactiveColor` properties of the `DividerStyle` class.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<sliders:SfSlider Interval="0.2" 
-                  ShowDividers="True">
-    <sliders:SfSlider.DividerStyle>
-       <sliders:SliderDividerStyle ActiveRadius="7" 
-                                   InactiveRadius="7" 
-				   ActiveColor="#EE3F3F" 
-				   InactiveColor="#F7B1AE"/>
-      </sliders:SfSlider.DividerStyle>
-</sliders:SfSlider>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfSlider slider = new SfSlider();
-slider.Interval = 0.2;
-slider.ShowDividers = true;
-slider.DividerStyle.ActiveRadius = 7;
-slider.DividerStyle.InactiveRadius = 7;
-slider.DividerStyle.ActiveColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
-slider.DividerStyle.InactiveColor = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Slider divider color](images/labels-and-dividers/divider-color.png)

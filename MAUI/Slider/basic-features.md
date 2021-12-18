@@ -31,7 +31,9 @@ For date values, the slider does not have auto interval support. So, it is manda
 
 <sliders:SfSlider Minimum="2010-01-01" 
                   Maximum="2020-01-01" 
-	          Value="2014-01-01">
+	          Value="2014-01-01"
+			  ShowTicks="True"
+			  ShowLabel="True">
 </sliders:SfSlider>
 
 {% endhighlight %}
@@ -42,6 +44,8 @@ SfSlider slider = new SfSlider();
 slider.Minimum = new DateTime(2010, 01, 01);
 slider.Maximum = new DateTime(2020, 01, 01);
 slider.Value = new DateTime(2014, 01, 01);
+slider.ShowTicks = true;
+slider.ShowLabel = true;
 
 {% endhighlight %}
 
@@ -49,53 +53,3 @@ slider.Value = new DateTime(2014, 01, 01);
 
 ![Slider date label](images/basic-features/date-labels.png)
 
-## Handle ValueChanging, ValueChanged, ValueChangeStart, and ValueChangeEnd callbacks
-
-* ValueChangeStart -  Called when the user selecting a new value for the slider by tap/mouse down in the thumb.
-* ValueChanging - Called when the user is selecting a new value for the slider by dragging the thumb.
-* ValueChanged - Called when the user completed selecting a new value.
-* ValueChangeEnd - Called when the user stopped interacting with slider by tap/mouse up the thumb.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<sliders:SfSlider  Minimum="2010-01-01" 
-  	           Maximum="2020-01-01" 
-		   Value="2014-01-01" 
-	           ValueChangeStart="OnValueChangeStart" 
-	 	   ValueChanging="OnValueChanging" 
-		   ValueChanged="OnValueChanged" 
-		   ValueChangeEnd="OnValueChangeEnd">
-</sliders:SfSlider>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-{
-   SfSlider slider = new SfSlider();
-   slider.ValueChangeStart += OnValueChanged;
-   slider.ValueChanging += OnValueChanged;
-   slider.ValueChanged += OnValueChanged;
-   slider.ValueChangeEnd += OnValueChanged;
-}
-
-private void OnValueChangeStart(object sender, SliderValueChangeStartEventArgs e)
-{
-}
-
-private void OnValueChanging(object sender, SliderValueChangingEventArgs e)
-{
-}
-
-private void OnValueChanged(object sender, SliderValueChangedEventArgs e) 
-{
-}
-private void OnValueChangeEnd(object sender, SliderValueChangeEndEventArgs e)
-{
-}
-
-{% endhighlight %}
-
-{% endtabs %}

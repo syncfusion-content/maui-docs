@@ -19,7 +19,7 @@ You can enable tooltip for the thumb by setting the `ToolTipShape` property to `
 
 {% highlight xaml %}
 
-<sliders:SfRangeSlider ToolTipShape="Rectangular"/>
+<rangeslider:SfRangeSlider ToolTipShape="Rectangular"/>
 
 {% endhighlight %}
 
@@ -47,9 +47,9 @@ You can format or change the whole tooltip label text using the `ToolTipLabelCre
 
 {% highlight xaml %}
 
-<sliders:SfRangeSlider ToolTipShape="Rectangular" 
-                       ToolTipLabelCreated="OnTooltipLabelCreated">
-</sliders:SfRangeSlider>
+<rangeslider:SfRangeSlider ToolTipShape="Rectangular" 
+                           ToolTipLabelCreated="OnTooltipLabelCreated">
+</rangeslider:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -78,13 +78,13 @@ You can change the appearance of the tooltip text like color, stroke color, padd
 
 {% highlight xaml %}
 
- <sliders:SfRangeSlider  ToolTipShape="Rectangular">
-    <sliders:SfRangeSlider.ToolTipStyle>
-       <sliders:SliderToolTipStyle Color="#F7B1AE" 
-                                   StrokeColor="#EE3F3F" 
-                                   StrokeWidth="2" />
-    </sliders:SfRangeSlider.ToolTipStyle>
- </sliders:SfRangeSlider>
+ <rangeslider:SfRangeSlider  ToolTipShape="Rectangular">
+    <rangeslider:SfRangeSlider.ToolTipStyle>
+       <rangeslider:SliderToolTipStyle Color="#F7B1AE" 
+                                       StrokeColor="#EE3F3F" 
+                                       StrokeWidth="2" />
+    </rangeslider:SfRangeSlider.ToolTipStyle>
+ </rangeslider:SfRangeSlider>
 
 {% endhighlight %}
 
