@@ -98,7 +98,7 @@ rangeSlider.ThumbStyle.StrokeThickness = 2;
 
 ## Thumb overlapping stroke color
 
-You can change the thumb stroke color while two thumbs are overlapping in the range slider using the `OverlapStrokeColor` property of the `ThumbStyle` class.
+You can change the thumb stroke color while two thumbs are overlapping in the range slider using the `OverlapStroke` property of the `ThumbStyle` class.
 
 {% tabs %}
 
@@ -115,7 +115,7 @@ You can change the thumb stroke color while two thumbs are overlapping in the ra
 {% highlight C# %}
 
 SfRangeSlider rangeSlider = new SfRangeSlider();
-rangeSlider.ThumbStyle.OverlapStrokeColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+rangeSlider.ThumbStyle.OverlapStroke = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
         
 {% endhighlight %}
 
