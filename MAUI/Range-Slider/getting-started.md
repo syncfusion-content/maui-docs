@@ -76,7 +76,7 @@ using Syncfusion.Maui.Sliders;
 
 ## Initialize range slider
 
-Import the `SfRangeSlider` namespace and initialize the range slider as shown below.
+Import the [`SfRangeSlider`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSlider.html) namespace and initialize the range slider as shown below.
 
 {% tabs %}
 
@@ -96,7 +96,7 @@ Import the `SfRangeSlider` namespace and initialize the range slider as shown be
 
 using Syncfusion.Maui.Sliders;
 
-namespace SliderGettingStarted
+namespace RangeSlider
 {
     public partial class MainPage : ContentPage
     {
@@ -117,7 +117,7 @@ namespace SliderGettingStarted
 
 ## Enable labels
 
-The `ShowLabels` property enables label in range slider that renders on given interval.
+The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ShowLabels) property enables label in range slider that renders on given interval.
 
 {% tabs %}
 
@@ -151,7 +151,7 @@ rangeSlider.Interval = 2;
 
 ## Enable ticks
 
-The `ShowTicks` property enables ticks in the range slider, while the `MinorTicksPerInterval` property enables minor ticks between the major ticks.
+The [`ShowTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ShowTicks) property enables ticks in the range slider, while the [`MinorTicksPerInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MinorTicksPerInterval) property enables minor ticks between the major ticks.
 
 {% tabs %}
 
@@ -189,7 +189,7 @@ rangeSlider.MinorTicksPerInterval = 1;
 
 ## Orientation
 
-The `Orientation` property allows you to show the range slider in both horizontal and vertical directions. The default value of the `Orientation` property is `Horizontal`.
+The [`Orientation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Orientation) property allows you to show the range slider in both horizontal and vertical directions. The default value of the [`Orientation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Orientation) property is `Horizontal`.
 
 {% tabs %}
 
@@ -228,7 +228,7 @@ rangeSlider.MinorTicksPerInterval = 1;
 
 ## Inverse the slider
 
-You can invert the range slider using the `IsInversed` property. The default value of the `IsInversed` property is `False`.
+You can invert the range slider using the [`IsInversed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_IsInversed) property. The default value of the [`IsInversed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_IsInversed) property is `False`.
 
 {% tabs %}
 
@@ -268,7 +268,7 @@ rangeSlider.MinorTicksPerInterval = 1;
 
 ## Set date value
 
-Set the 'DateTime' values to the `Minimum`, `Maximum`, and `Value` properties to display date labels in the range slider.
+Set the 'DateTime' values to the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Minimum), [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Maximum), and [`Range values`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSlider.html#Syncfusion_Maui_Sliders_SfRangeSlider_RangeStart) properties to display date labels in the range slider.
 
 {% tabs %}
 
@@ -304,9 +304,9 @@ rangeSlider.Interval = 2;
 
 ## Formatting labels
 
-You can add prefix or suffix to the labels using the `NumberFormat` or `DateFormat` properties.
+You can add prefix or suffix to the labels using the [`NumberFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_NumberFormat) or [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DateFormat) properties.
 
-N> The format type (numeric or date) of the range slider is determined based on the values specified in `Minimum`, `Maximum` properties.
+N> The format type (numeric or date) of the range slider is determined based on the values specified in [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Minimum), [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Maximum) properties.
 
 {% tabs %}
 
