@@ -13,7 +13,7 @@ This section helps to learn about how to customize the track in the slider.
 
 ## Track color
 
-You can change the active and inactive track color of the slider using the `ActiveColor` and `InactiveColor` properties of the `TrackStyle` class.
+You can change the active and inactive track color of the slider using the `ActiveFill` and `InactiveFill` properties of the `TrackStyle` class.
 
 The active side of the slider is between the `Minimum` value and the thumb.
 
@@ -25,7 +25,7 @@ The inactive side of the slider is between the thumb and the `Maximum` value.
 
 <sliders:SfSlider>
   <sliders:SfSlider.TrackStyle>
-     <sliders:SliderTrackStyle ActiveColor="#EE3F3F" InactiveColor="#F7B1AE" />
+     <sliders:SliderTrackStyle ActiveFill="#EE3F3F" InactiveFill="#F7B1AE" />
   </sliders:SfSlider.TrackStyle>
 </sliders:SfSlider>
 
@@ -34,8 +34,8 @@ The inactive side of the slider is between the thumb and the `Maximum` value.
 {% highlight C# %}
 
 SfSlider slider = new SfSlider();
-slider.TrackStyle.ActiveColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
-slider.TrackStyle.InactiveColor = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
+slider.TrackStyle.ActiveFill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+slider.TrackStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
 
 {% endhighlight %}
 
