@@ -9,7 +9,7 @@ documentation: ug
 
 # .NET MAUI Slider Overview
 
-The Syncfusion .NET MAUI Slider (SfSlider) is a highly interactive UI control, allowing users to select a single value from a range of values. It provides rich features, such as numeric and date values, labels, ticks, dividers, and tooltip.
+The Syncfusion .NET MAUI Slider ([SfSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html)) is a highly interactive UI control, allowing users to select a single value from a range of values. It provides rich features, such as numeric and date values, labels, ticks, dividers, and tooltip.
 
 ## Key features
 
