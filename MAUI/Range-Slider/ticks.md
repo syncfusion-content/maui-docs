@@ -69,7 +69,7 @@ rangeSlider.ShowTicks = true;
 
 ## Major ticks color
 
-You can change the active and inactive major ticks color of the range slider using the `ActiveColor` and `InactiveColor` properties of the `MajorTickStyle` class.
+You can change the active and inactive major ticks color of the range slider using the `ActiveFill` and `InactiveFill` properties of the `MajorTickStyle` class.
 
 The active side of the range slider is between start and end thumbs.
 
@@ -82,8 +82,8 @@ The inactive side of the range slider is between the `Minimum` value and the lef
 <sliders:SfRangeSlider Interval="0.2" 
                        ShowTicks="True">
     <sliders:SfRangeSlider.MajorTickStyle>
-         <sliders:SliderTickStyle ActiveColor="#EE3F3F" 
-                                  InactiveColor="#F7B1AE" />
+         <sliders:SliderTickStyle ActiveFill="#EE3F3F" 
+                                  InactiveFill="#F7B1AE" />
     </sliders:SfRangeSlider.MajorTickStyle>
 </sliders:SfRangeSlider>
 
@@ -94,8 +94,8 @@ The inactive side of the range slider is between the `Minimum` value and the lef
 SfRangeSlider rangeSlider = new SfRangeSlider();
 rangeSlider.Interval = 0.2;
 rangeSlider.ShowTicks = true;
-rangeSlider.MajorTickStyle.ActiveColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
-rangeSlider.MajorTickStyle.InactiveColor = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
+rangeSlider.MajorTickStyle.ActiveFill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+rangeSlider.MajorTickStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
 
 {% endhighlight %}
 
@@ -105,7 +105,7 @@ rangeSlider.MajorTickStyle.InactiveColor = new SolidColorBrush(Color.FromArgb("#
 
 ## Minor ticks color
 
-You can change the active and inactive minor ticks color of the range slider using the `ActiveColor` and `InactiveColor` properties of the `MinorTickStyle` class.
+You can change the active and inactive minor ticks color of the range slider using the `ActiveFill` and `InactiveFill` properties of the `MinorTickStyle` class.
 
 The active side of the range slider is between start and end thumbs.
 
@@ -119,8 +119,8 @@ The inactive side of the range slider is between the `Minimum` value and the lef
                        ShowTicks="True" 
                        MinorTicksPerInterval="1">
     <sliders:SfRangeSlider.MinorTickStyle>
-         <sliders:SliderTickStyle ActiveColor="#EE3F3F" 
-                                  InactiveColor="#F7B1AE" />
+         <sliders:SliderTickStyle ActiveFill="#EE3F3F" 
+                                  InactiveFill="#F7B1AE" />
      </sliders:SfRangeSlider.MinorTickStyle>
 </sliders:SfRangeSlider>
 
@@ -132,8 +132,8 @@ SfRangeSlider rangeSlider = new SfRangeSlider();
 rangeSlider.Interval = 0.2;
 rangeSlider.ShowTicks = true;
 rangeSlider.MinorTicksPerInterval = 1;
-rangeSlider.MinorTickStyle.ActiveColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
-rangeSlider.MinorTickStyle.InactiveColor = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
+rangeSlider.MinorTickStyle.ActiveFill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+rangeSlider.MinorTickStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
 
 {% endhighlight %}
 

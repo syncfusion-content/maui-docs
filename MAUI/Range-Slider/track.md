@@ -13,7 +13,7 @@ This section helps to learn about how to customize the track in the range slider
 
 ## Track color
 
-You can change the active and inactive track color of the range slider using the `ActiveColor` and `InactiveColor` properties of the `TrackStyle` class.
+You can change the active and inactive track color of the range slider using the `ActiveFill` and `InactiveFill` properties of the `TrackStyle` class.
 
 The active side of the range slider is between start and end thumbs.
 
@@ -25,7 +25,7 @@ The inactive side of the range slider is between the `Minimum` value and the lef
 
 <sliders:SfRangeSlider>
   <sliders:SfRangeSlider.TrackStyle>
-      <sliders:SliderTrackStyle ActiveColor="#EE3F3F" InactiveColor="#F7B1AE" />
+      <sliders:SliderTrackStyle ActiveFill="#EE3F3F" InactiveFill="#F7B1AE" />
   </sliders:SfRangeSlider.TrackStyle>
 </sliders:SfRangeSlider>
 
@@ -34,8 +34,8 @@ The inactive side of the range slider is between the `Minimum` value and the lef
 {% highlight C# %}
 
 SfRangeSlider rangeSlider = new SfRangeSlider();
-rangeSlider.TrackStyle.ActiveColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
-rangeSlider.TrackStyle.InactiveColor = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
+rangeSlider.TrackStyle.ActiveFill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+rangeSlider.TrackStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
 
 {% endhighlight %}
 
