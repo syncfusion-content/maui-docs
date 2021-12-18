@@ -43,7 +43,7 @@ slider.ThumbStyle.Radius = 15;
 
 ## Thumb color
 
-You can change the color of the thumb in the slider using the `Color` property of the `ThumbStyle` class.
+You can change the color of the thumb in the slider using the `Fill` property of the `ThumbStyle` class.
 
 {% tabs %}
 
@@ -51,7 +51,7 @@ You can change the color of the thumb in the slider using the `Color` property o
 
 <sliders:SfSlider>
    <sliders:SfSlider.ThumbStyle>
-       <sliders:SliderThumbStyle Color="#EE3F3F" />
+       <sliders:SliderThumbStyle Fill="#EE3F3F" />
    </sliders:SfSlider.ThumbStyle>
 </sliders:SfSlider>
 
@@ -60,7 +60,7 @@ You can change the color of the thumb in the slider using the `Color` property o
 {% highlight C# %}
 
 SfSlider slider = new SfSlider();
-slider.ThumbStyle.Color = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+slider.ThumbStyle.Fill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
 
 {% endhighlight %}
 
@@ -70,7 +70,7 @@ slider.ThumbStyle.Color = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
 
 ## Thumb stroke width and stroke color
 
-You can change the thumb stroke width using the `StrokeWidth` property and thumb stroke color using the `StrokeColor` property of the `ThumbStyle` class.
+You can change the thumb stroke width using the `StrokeThickness` property and thumb stroke color using the `Stroke` property of the `ThumbStyle` class.
 
 {% tabs %}
 
@@ -78,8 +78,8 @@ You can change the thumb stroke width using the `StrokeWidth` property and thumb
 
 <sliders:SfSlider>
     <sliders:SfSlider.ThumbStyle>
-        <sliders:SliderThumbStyle StrokeColor="#EE3F3F" 
-                                  StrokeWidth="2"/>
+        <sliders:SliderThumbStyle Stroke="#EE3F3F" 
+                                  StrokeThickness="2"/>
     </sliders:SfSlider.ThumbStyle>
 </sliders:SfSlider>
 
@@ -88,8 +88,8 @@ You can change the thumb stroke width using the `StrokeWidth` property and thumb
 {% highlight C# %}
 
 SfSlider slider = new SfSlider();
-slider.ThumbStyle.StrokeColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
-slider.ThumbStyle.StrokeWidth = 2;
+slider.ThumbStyle.Stroke = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+slider.ThumbStyle.StrokeThickness = 2;
 
 {% endhighlight %}
 
@@ -126,7 +126,7 @@ slider.ThumbOverlayStyle.Radius = 26;
 
 ## Thumb overlay color
 
-You can change the color of the thumb overlay in the slider using the `Color` property of the `ThumbOverlayStyle` class.
+You can change the color of the thumb overlay in the slider using the `Fill` property of the `ThumbOverlayStyle` class.
 
 {% tabs %}
 
@@ -134,7 +134,7 @@ You can change the color of the thumb overlay in the slider using the `Color` pr
 
 <sliders:SfSlider>
    <sliders:SfSlider.ThumbOverlayStyle>
-       <sliders:SliderThumbOverlayStyle Color="#F7C8DB"/>
+       <sliders:SliderThumbOverlayStyle Fill="#F7C8DB"/>
    </sliders:SfSlider.ThumbOverlayStyle>
 </sliders:SfSlider>
 
@@ -143,7 +143,7 @@ You can change the color of the thumb overlay in the slider using the `Color` pr
 {% highlight C# %}
 
 SfSlider slider = new SfSlider();
-slider.ThumbOverlayStyle.Color = new SolidColorBrush(Color.FromArgb("#F7C8DB")); 
+slider.ThumbOverlayStyle.Fill = new SolidColorBrush(Color.FromArgb("#F7C8DB")); 
 
 {% endhighlight %}
 

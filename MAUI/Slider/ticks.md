@@ -70,7 +70,7 @@ slider.ShowTicks = true;
 
 ## Major ticks color
 
-You can change the active and inactive major ticks color of the slider using the `ActiveColor` and `InactiveColor` properties of the `MajorTickStyle` class.
+You can change the active and inactive major ticks color of the slider using the `ActiveFill` and `InactiveFill` properties of the `MajorTickStyle` class.
 
 The active side of the slider is between the `Minimum` value and the thumb.
 
@@ -83,8 +83,8 @@ The inactive side of the slider is between the thumb and the `Maximum` value.
 <sliders:SfSlider Interval="0.2" 
                   ShowTicks="True">
    <sliders:SfSlider.MajorTickStyle>
-      <sliders:SliderTickStyle ActiveColor="#EE3F3F" 
-                               InactiveColor="#F7B1AE"/>
+      <sliders:SliderTickStyle ActiveFill="#EE3F3F" 
+                               InactiveFill="#F7B1AE"/>
     </sliders:SfSlider.MajorTickStyle>
 </sliders:SfSlider>
 
@@ -95,8 +95,8 @@ The inactive side of the slider is between the thumb and the `Maximum` value.
 SfSlider slider = new SfSlider();
 slider.Interval = 0.2;
 slider.ShowTicks = true;
-slider.MajorTickStyle.ActiveColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
-slider.MajorTickStyle.InactiveColor = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
+slider.MajorTickStyle.ActiveFill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+slider.MajorTickStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
 
 {% endhighlight %}
 
@@ -106,7 +106,7 @@ slider.MajorTickStyle.InactiveColor = new SolidColorBrush(Color.FromArgb("#F7B1A
 
 ## Minor ticks color
 
-You can change the active and inactive minor ticks color of the slider using the `ActiveColor` and `InactiveColor` properties of the `MinorTickStyle` class.
+You can change the active and inactive minor ticks color of the slider using the `ActiveFill` and `InactiveFill` properties of the `MinorTickStyle` class.
 
 The active side of the slider is between the `Minimum` value and the thumb.
 
@@ -120,8 +120,8 @@ The inactive side of the slider is between the thumb and the `Maximum` value.
                   ShowTicks="True" 
                   MinorTicksPerInterval="1">
      <sliders:SfSlider.MinorTickStyle>
-        <sliders:SliderTickStyle ActiveColor="#EE3F3F" 
-                                 InactiveColor="#F7B1AE"/>
+        <sliders:SliderTickStyle ActiveFill="#EE3F3F" 
+                                 InactiveFill="#F7B1AE"/>
       </sliders:SfSlider.MinorTickStyle>
 </sliders:SfSlider> 
 
@@ -133,8 +133,8 @@ SfSlider slider = new SfSlider();
 slider.Interval = 0.2;
 slider.ShowTicks = true;
 slider.MinorTicksPerInterval = 1;
-slider.MinorTickStyle.ActiveColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
-slider.MinorTickStyle.InactiveColor = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
+slider.MinorTickStyle.ActiveFill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+slider.MinorTickStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
 
 {% endhighlight %}
 

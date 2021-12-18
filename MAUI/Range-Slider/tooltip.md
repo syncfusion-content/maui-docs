@@ -19,14 +19,14 @@ You can enable tooltip for the thumb by setting the `ToolTipShape` property to `
 
 {% highlight xaml %}
 
-<sliders:SfRangeSlider ToolTipShape="Rectangular"/>
+<sliders:SfRangeSlider ToolTipShape="Rectangle"/>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
 SfRangeSlider rangeSlider = new SfRangeSlider();
-rangeSlider.ToolTipShape = SliderToolTipShape.Rectangular;
+rangeSlider.ToolTipShape = SliderToolTipShape.Rectangle;
 
 {% endhighlight %}
 
@@ -47,7 +47,7 @@ You can format or change the whole tooltip label text using the `ToolTipLabelCre
 
 {% highlight xaml %}
 
-<sliders:SfRangeSlider ToolTipShape="Rectangular" 
+<sliders:SfRangeSlider ToolTipShape="Rectangle" 
                        ToolTipLabelCreated="OnTooltipLabelCreated">
 </sliders:SfRangeSlider>
 
@@ -56,7 +56,7 @@ You can format or change the whole tooltip label text using the `ToolTipLabelCre
 {% highlight C# %}
 {
     SfRangeSlider rangeSlider = new SfRangeSlider();
-    rangeSlider.ToolTipShape = SliderToolTipShape.Rectangular;
+    rangeSlider.ToolTipShape = SliderToolTipShape.Rectangle;
     rangeSlider.ToolTipLabelCreated += OnTooltipLabelCreated;
  }
  private void OnTooltipLabelCreated(object sender, SliderLabelCreatedEventArgs e)
@@ -78,7 +78,7 @@ You can change the appearance of the tooltip text like color, stroke color, padd
 
 {% highlight xaml %}
 
- <sliders:SfRangeSlider  ToolTipShape="Rectangular">
+ <sliders:SfRangeSlider  ToolTipShape="Rectangle">
     <sliders:SfRangeSlider.ToolTipStyle>
        <sliders:SliderToolTipStyle Color="#F7B1AE" 
                                    StrokeColor="#EE3F3F" 
@@ -91,7 +91,7 @@ You can change the appearance of the tooltip text like color, stroke color, padd
 {% highlight C# %}
 
  SfRangeSlider rangeSlider = new SfRangeSlider();
- rangeSlider.ToolTipShape = SliderToolTipShape.Rectangular;
+ rangeSlider.ToolTipShape = SliderToolTipShape.Rectangle;
  rangeSlider.ToolTipStyle.Color = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
  rangeSlider.ToolTipStyle.StrokeColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
  rangeSlider.ToolTipStyle.StrokeWidth = 2;

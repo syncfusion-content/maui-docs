@@ -331,9 +331,9 @@ rangeSlider.DividerStyle.InactiveRadius = 7;
 
 ## Divider stroke width and stroke color
 
-You can change the active and inactive divider stroke width of the range slider using the `ActiveStrokeWidth` and the `InactiveStrokeWidth` properties of the `DividerStyle` class.
+You can change the active and inactive divider stroke width of the range slider using the `ActiveStrokeThickness` and the `InactiveStrokeThickness` properties of the `DividerStyle` class.
 
-Also, you can change the active and inactive divider stroke color of the range slider using the `ActiveStrokeColor` and the `InactiveStrokeColor` properties of the `DividerStyle` class.
+Also, you can change the active and inactive divider stroke color of the range slider using the `ActiveStroke` and the `InactiveStroke` properties of the `DividerStyle` class.
 
 {% tabs %}
 
@@ -348,10 +348,10 @@ Also, you can change the active and inactive divider stroke color of the range s
    <sliders:SfRangeSlider.DividerStyle>
         <sliders:SliderDividerStyle ActiveRadius="7" 
                                     InactiveRadius="7" 
-                                    ActiveStrokeWidth="2" 
-                                    InactiveStrokeWidth="2" 
-                                    ActiveStrokeColor="#EE3F3F" 
-                                    InactiveStrokeColor="#F7B1AE"/>
+                                    ActiveStrokeThickness="2" 
+                                    InactiveStrokeThickness="2" 
+                                    ActiveStroke="#EE3F3F" 
+                                    InactiveStroke="#F7B1AE"/>
    </sliders:SfRangeSlider.DividerStyle>
 </sliders:SfRangeSlider>
 
@@ -364,10 +364,10 @@ rangeSlider.Interval = 0.2;
 rangeSlider.ShowDividers = true;
 rangeSlider.DividerStyle.ActiveRadius = 7;
 rangeSlider.DividerStyle.InactiveRadius = 7;
-rangeSlider.DividerStyle.ActiveStrokeColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
-rangeSlider.DividerStyle.InactiveStrokeColor = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
-rangeSlider.DividerStyle.ActiveStrokeWidth = 2;
-rangeSlider.DividerStyle.InactiveStrokeWidth = 2;
+rangeSlider.DividerStyle.ActiveStroke = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+rangeSlider.DividerStyle.InactiveStroke = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
+rangeSlider.DividerStyle.ActiveStrokeThickness = 2;
+rangeSlider.DividerStyle.InactiveStrokeThickness = 2;
 
 {% endhighlight %}
 
@@ -377,7 +377,7 @@ rangeSlider.DividerStyle.InactiveStrokeWidth = 2;
 
 ## Divider color
 
-You can change the active and inactive divider color of the range slider using the `ActiveColor` and `InactiveColor` properties of the `DividerStyle` class.
+You can change the active and inactive divider color of the range slider using the `ActiveFill` and `InactiveFill` properties of the `DividerStyle` class.
 
 {% tabs %}
 
@@ -392,8 +392,8 @@ You can change the active and inactive divider color of the range slider using t
     <sliders:SfRangeSlider.DividerStyle>
         <sliders:SliderDividerStyle ActiveRadius="7" 
                                     InactiveRadius="7" 
-                                    ActiveColor="#EE3F3F" 
-                                    InactiveColor="#F7B1AE"/>
+                                    ActiveFill="#EE3F3F" 
+                                    InactiveFill="#F7B1AE"/>
      </sliders:SfRangeSlider.DividerStyle>
 </sliders:SfRangeSlider>
 
@@ -406,8 +406,8 @@ rangeSlider.Interval = 0.2;
 rangeSlider.ShowDividers = true;
 rangeSlider.DividerStyle.ActiveRadius = 7;
 rangeSlider.DividerStyle.InactiveRadius = 7;
-rangeSlider.DividerStyle.ActiveColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
-rangeSlider.DividerStyle.InactiveColor = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
+rangeSlider.DividerStyle.ActiveFill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+rangeSlider.DividerStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
 
 {% endhighlight %}
 
