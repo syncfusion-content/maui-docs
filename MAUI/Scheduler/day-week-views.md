@@ -311,7 +311,7 @@ this.Scheduler.DaysViewSettings.ShowCurrentTimeIndicator = false;
 {% endhighlight %}
 {% endtabs %}
 
-### Customize Current time indicator appearance
+### Customize current time indicator appearance
 
 The current time indicator can be customized by using the `CurrentTimeIndicatorBrush` property of `DaysViewSettings` in the `SfScheduler.`
 

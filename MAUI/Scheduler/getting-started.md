@@ -80,7 +80,7 @@ namespace GettingStarted
 
 {% endhighlight %}
 
-## Change different Scheduler Views
+## Change different scheduler views
 
 The `.NET MAUI Scheduler` control provides eight different types of views to display dates and it can be assigned to the control by using the `View` property. The control is assigned to the `Day` view by default. The current date will be displayed initially for all the Scheduler views.
 
@@ -101,7 +101,7 @@ this.Scheduler.View = SchedulerView.Month;
 
 The `.NET MAUI Scheduler` has a built-in capability to handle the appointment arrangement internally based on the `SchedulerAppointment` collections. Allocate the collection generated to the Appointments property.
 
-### Adding Appointments
+### Adding appointments
 
 The `SchedulerAppointment` is a class that includes the specific scheduled appointment. It has some basic properties such as `StartTime`, `EndTime` `Subject`, and some additional information about the appointment can be added with `Notes`, `Location`, and `IsAllDay` properties.
 
@@ -324,7 +324,7 @@ public class SchedulerViewModel
 {% endhighlight %}
 {% endtabs %}
 
-### Mapping the data object to SchedulerAppointment
+### Mapping the data object to scheduler appointment
 Map those properties of the `Meeting` class with our `.NET MAUI Scheduler` control by using the `AppointmentMapping` property.
 
 {% tabs %}
@@ -371,7 +371,7 @@ this.Scheduler.AppointmentMapping = appointmentMapping;
 {% endhighlight %}
 {% endtabs %}
 
-### Bind appointment source for Scheduler
+### Bind appointment source for scheduler
 Create meetings of type `ObservableCollection<Meeting>` and assign those appointments collection to the `AppointmentsSource` property of `SfScheduler`.
 
 {% tabs %}

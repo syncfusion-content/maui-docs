@@ -11,7 +11,7 @@ documentation: ug
 
 Localization is the process of translating the application resources into different language for the specific cultures. The `SfScheduler` can be localized by adding `resource` file. 
 
-## Set Current UI Culture to the Application
+## Setting CurrentUICulture to the application
 
 Application culture can be changed by setting `CurrentUICulture.` in `App.xaml.cs` file.
 
@@ -38,7 +38,7 @@ public partial class App : Application
 N>
 The required `resx` files with `Build Action` as `EmbeddedResource` (File name should contain culture code) into the `Resources` folder.
 
-## Localize at Sample Level
+## Localize application level
 
 To localize the `Scheduler` based on `CurrentUICulture` using `resource` files, follow the below steps.
 

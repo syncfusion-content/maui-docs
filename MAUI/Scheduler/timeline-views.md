@@ -315,7 +315,7 @@ this.Scheduler.TimelineViewSettings.ShowCurrentTimeIndicator = false;
 {% endhighlight %}
 {% endtabs %}
 
-### Customize Current time indicator appearance
+### Customize current time indicator appearance
 
 The current time indicator can be customized by using the `CurrentTimeIndicatorBrush` property of `TimelineViewSettings` in the `SfScheduler.`
 

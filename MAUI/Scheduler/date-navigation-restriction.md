@@ -7,9 +7,9 @@ control: SfScheduler
 documentation: ug
 ---
 
-# Date navigations and restrictions in .NET MAUI Scheduler
+# Date navigation and restriction in .NET MAUI Scheduler
 
-## Date navigations
+## Date navigation
 
 The `.NET MAUI Scheduler` control allows to navigate through dates either programmatically or by using the `forward` and `backward` buttons, and it is applicable to all the Scheduler views.
 
@@ -189,7 +189,7 @@ this.Scheduler.MaximumDateTime = DateTime.Today.AddMonths(3).AddHours(12);
 {% endhighlight %}
 {% endtabs %}
 
-### Selectable day predicate(Blackout dates)
+### Selectable day predicate (Blackout dates)
 
 The `SelectableDayPredicate` functions allows certain days for selection. Only the days that `SelectableDayPredicate` returns true will be selectable in the Scheduler.
 
@@ -216,7 +216,7 @@ this.Scheduler.SelectableDayPredicate = (date) =>
 {% endhighlight %}
 {% endtabs %}
 
-#### Customize the minimum date time, maximum date time and selectable day predicate appearance
+#### Customizing the disabled date and time appearance
 
 You can customize the background color and text style for the minimum date time, maximum date time, and selectable day predicate, by setting the `Background,` and `DisabledDateTextStyle` properties of `SfScheduler.`
 

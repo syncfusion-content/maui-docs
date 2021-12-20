@@ -146,6 +146,9 @@ private void OnSchedulerSelectionChanged(object sender, SchedulerSelectionChange
 {% endhighlight %}
 {% endtabs %}
 
+N>
+The `Tapped` event is triggered first, followed by 'selection-changed' event will be performed.
+
 ## ViewChanged
 
 The `ViewChanged` event is used to notify when the current view of scheduler is changed, that is when the view is swiped to previous or next view, and when the scheduler view is switched to another scheduler view.
@@ -181,3 +184,6 @@ private void OnSchedulerViewChanged(object sender, SchedulerViewChangedEventArgs
 
 {% endhighlight %}
 {% endtabs %}
+
+N>
+Whenever a scheduler view is changed, the `SelectableDayPredicate` function must be called to decide whether the cell is selectable or not in the `SfScheduler.`
