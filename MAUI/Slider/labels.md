@@ -59,7 +59,7 @@ The [`NumberFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders
 		  Interval="2"  
 		  NumberFormat="$##" 
 		  ShowLabels="True"
-            ShowTicks="True">
+                  ShowTicks="True">
 </sliders:SfSlider>
 
 {% endhighlight %}
