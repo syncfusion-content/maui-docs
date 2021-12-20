@@ -23,8 +23,7 @@ For example, if [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider ShowTicks="True">
-</rangeslider:SfRangeSlider>
+<rangeslider:SfRangeSlider ShowTicks="True" />
 
 {% endhighlight %}
 
@@ -129,10 +128,10 @@ The inactive side of the range slider is between the [`Minimum`](https://help.sy
 {% highlight xaml %}
 
 <rangeslider:SfRangeSlider Interval="0.2" 
-                          ShowTicks="True">
+                           ShowTicks="True">
     <rangeslider:SfRangeSlider.MajorTickStyle>
          <rangeslider:SliderTickStyle ActiveFill="#EE3F3F" 
-                                     InactiveFill="#F7B1AE" />
+                                      InactiveFill="#F7B1AE" />
     </rangeslider:SfRangeSlider.MajorTickStyle>
 </rangeslider:SfRangeSlider>
 
@@ -169,7 +168,7 @@ The inactive side of the range slider is between the [`Minimum`](https://help.sy
                            MinorTicksPerInterval="1">
     <rangeslider:SfRangeSlider.MinorTickStyle>
          <rangeslider:SliderTickStyle ActiveFill="#EE3F3F" 
-                                  InactiveFill="#F7B1AE" />
+                                      InactiveFill="#F7B1AE" />
      </rangeslider:SfRangeSlider.MinorTickStyle>
 </rangeslider:SfRangeSlider>
 
@@ -236,7 +235,9 @@ You can adjust the space between track and ticks of the range slider using the [
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider Interval="0.2" ShowTicks="True" MinorTicksPerInterval="1">
+<rangeslider:SfRangeSlider Interval="0.2"
+                           ShowTicks="True" 
+                           MinorTicksPerInterval="1">
    <rangeslider:SfRangeSlider.MinorTickStyle>
        <rangeslider:SliderTickStyle Offset="5" />
     </rangeslider:SfRangeSlider.MinorTickStyle>
