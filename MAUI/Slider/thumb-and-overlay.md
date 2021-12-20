@@ -16,44 +16,24 @@ This section helps to learn about how to customize the thumb and thumb overlay i
 
 ## Thumb size
 
-You can change the size of the thumb in the slider using the `Radius` property of the `ThumbStyle` class. The default value of the `Radius` property is `10.0`.
+You can change the size of the thumb in the slider using the [`Radius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html#Syncfusion_Maui_Sliders_SliderThumbStyle_Radius) property of the [`ThumbStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html) class. The default value of the [`Radius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html#Syncfusion_Maui_Sliders_SliderThumbStyle_Radius)  property is `10.0`.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage>
-  <sliders:SfSlider Minimum="2" Maximum="10" Interval="2" Value="6" ShowLabels="True">
-      <sliders:SfSlider.ThumbStyle>
-         <sliders:SliderThumbStyle Radius="15" />
-      </sliders:SfSlider.ThumbStyle>
-  </sliders:SfSlider>
- </ContentPage>
+<sliders:SfSlider>
+    <sliders:SfSlider.ThumbStyle>
+        <sliders:SliderThumbStyle Radius="15" />
+     </sliders:SfSlider.ThumbStyle>
+</sliders:SfSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Sliders;
-
-namespace SliderGettingStarted
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-          	SfSlider slider = new SfSlider();
-            slider.Minimum = 2;
-            slider.Maximum = 10;
-            slider.Value = 6;
-            slider.Interval = 2;
-            slider.ShowLabels = true;
-            slider.ThumbStyle.Radius = 15;
-            this.Content = slider;
-        }
-    }
-}
+SfSlider slider = new SfSlider();
+slider.ThumbStyle.Radius = 15;
 
 {% endhighlight %}
 
@@ -63,44 +43,24 @@ namespace SliderGettingStarted
 
 ## Thumb color
 
-You can change the color of the thumb in the slider using the `Color` property of the `ThumbStyle` class.
+You can change the color of the thumb in the slider using the [`Fill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html#Syncfusion_Maui_Sliders_SliderThumbStyle_Fill) property of the [`ThumbStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html) class.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage>
-   <sliders:SfSlider Minimum="2" Maximum="10" Interval="2" Value="6" ShowLabels="True">
-      <sliders:SfSlider.ThumbStyle>
-         <sliders:SliderThumbStyle Color="#EE3F3F" />
-      </sliders:SfSlider.ThumbStyle>
-   </sliders:SfSlider>
- </ContentPage>
+<sliders:SfSlider>
+   <sliders:SfSlider.ThumbStyle>
+       <sliders:SliderThumbStyle Fill="#EE3F3F" />
+   </sliders:SfSlider.ThumbStyle>
+</sliders:SfSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Sliders;
-
-namespace SliderGettingStarted
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-          	SfSlider slider = new SfSlider();
-            slider.Minimum = 2;
-            slider.Maximum = 10;
-            slider.Value = 6;
-            slider.Interval = 2;
-            slider.ShowLabels = true;
-            slider.ThumbStyle.Color = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
-            this.Content = slider;
-        }
-    }
-}
+SfSlider slider = new SfSlider();
+slider.ThumbStyle.Fill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
 
 {% endhighlight %}
 
@@ -108,47 +68,28 @@ namespace SliderGettingStarted
 
 ![Slider thumb color](images/thumb-and-thumb-overlay/thumb-color.png)
 
-## Thumb stroke width and stroke color
+## Thumb stroke thickness and stroke
 
-You can change the thumb stroke width using the `StrokeWidth` property and thumb stroke color using the `StrokeColor` property of the `ThumbStyle` class.
+You can change the thumb stroke width using the [`StrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html#Syncfusion_Maui_Sliders_SliderThumbStyle_StrokeThickness) property and thumb stroke color using the [`Stroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html#Syncfusion_Maui_Sliders_SliderThumbStyle_Stroke) property of the [`ThumbStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html) class.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage>
-   <sliders:SfSlider Minimum="2" Maximum="10" Interval="2" Value="6" ShowLabels="True">
-      <sliders:SfSlider.ThumbStyle>
-         <sliders:SliderThumbStyle StrokeColor="#EE3F3F" StrokeWidth="2"/>
-      </sliders:SfSlider.ThumbStyle>
-   </sliders:SfSlider>
- </ContentPage>
+<sliders:SfSlider>
+    <sliders:SfSlider.ThumbStyle>
+        <sliders:SliderThumbStyle Stroke="#EE3F3F" 
+                                  StrokeThickness="2"/>
+    </sliders:SfSlider.ThumbStyle>
+</sliders:SfSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Sliders;
-
-namespace SliderGettingStarted
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfSlider slider = new SfSlider();
-            slider.Minimum = 2;
-            slider.Maximum = 10;
-            slider.Value = 6;
-            slider.Interval = 2;
-            slider.ShowLabels = true;
-            slider.ThumbStyle.StrokeColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
-            slider.ThumbStyle.StrokeWidth = 2;
-            this.Content = slider;
-        }
-    }
-}
+SfSlider slider = new SfSlider();
+slider.ThumbStyle.Stroke = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+slider.ThumbStyle.StrokeThickness = 2;
 
 {% endhighlight %}
 
@@ -158,44 +99,24 @@ namespace SliderGettingStarted
 
 ## Thumb overlay size
 
-You can change the size of the thumb overlay in the slider using the `Radius` property of the `ThumbOverlayStyle` class. The default value of the `Radius` property is `24.0`.
+You can change the size of the thumb overlay in the slider using the [`Radius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbOverlayStyle.html#Syncfusion_Maui_Sliders_SliderThumbOverlayStyle_Radius) property of the [`ThumbOverlayStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbOverlayStyle.html) class. The default value of the [`Radius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbOverlayStyle.html#Syncfusion_Maui_Sliders_SliderThumbOverlayStyle_Radius)  property is `24.0`.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage>
-   <sliders:SfSlider Minimum="2" Maximum="10" Interval="2" Value="6" ShowLabels="True">
-     <sliders:SfSlider.ThumbOverlayStyle>
-        <sliders:SliderThumbOverlayStyle Radius="26"/>
-     </sliders:SfSlider.ThumbOverlayStyle>
-   </sliders:SfSlider>
- </ContentPage>
+<sliders:SfSlider>
+   <sliders:SfSlider.ThumbOverlayStyle>
+      <sliders:SliderThumbOverlayStyle Radius="26"/>
+   </sliders:SfSlider.ThumbOverlayStyle>
+</sliders:SfSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Sliders;
-
-namespace SliderGettingStarted
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfSlider slider = new SfSlider();
-            slider.Minimum = 2;
-            slider.Maximum = 10;
-            slider.Value = 6;
-            slider.Interval = 2;
-            slider.ShowLabels = true;
-            slider.ThumbOverlayStyle.Radius = 26;
-            this.Content = slider;
-        }
-    }
-}
+SfSlider slider = new SfSlider();
+slider.ThumbOverlayStyle.Radius = 26;
 
 {% endhighlight %}
 
@@ -205,44 +126,24 @@ namespace SliderGettingStarted
 
 ## Thumb overlay color
 
-You can change the color of the thumb overlay in the slider using the `Color` property of the `ThumbOverlayStyle` class.
+You can change the color of the thumb overlay in the slider using the [`Fill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbOverlayStyle.html#Syncfusion_Maui_Sliders_SliderThumbOverlayStyle_Fill) property of the [`ThumbOverlayStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbOverlayStyle.html) class.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage>
-   <sliders:SfSlider Minimum="2" Maximum="10" Interval="2" Value="6" ShowLabels="True">
-       <sliders:SfSlider.ThumbOverlayStyle>
-          <sliders:SliderThumbOverlayStyle Color="#F7C8DB"/>
-       </sliders:SfSlider.ThumbOverlayStyle>
-   </sliders:SfSlider>
- </ContentPage>
+<sliders:SfSlider>
+   <sliders:SfSlider.ThumbOverlayStyle>
+       <sliders:SliderThumbOverlayStyle Fill="#F7C8DB"/>
+   </sliders:SfSlider.ThumbOverlayStyle>
+</sliders:SfSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.Sliders;
-
-namespace SliderGettingStarted
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfSlider slider = new SfSlider();
-            slider.Minimum = 2;
-            slider.Maximum = 10;
-            slider.Value = 6;
-            slider.Interval = 2;
-            slider.ShowLabels = true;
-            slider.ThumbOverlayStyle.Color = new SolidColorBrush(Color.FromArgb("#F7C8DB")); ;
-            this.Content = slider;
-        }
-    }
-}
+SfSlider slider = new SfSlider();
+slider.ThumbOverlayStyle.Fill = new SolidColorBrush(Color.FromArgb("#F7C8DB")); 
 
 {% endhighlight %}
 
