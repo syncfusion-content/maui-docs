@@ -179,7 +179,7 @@ rangeSlider.StepDuration = new SliderStepDuration(years: 1);
 
 ## Interval Selection
 
-You can drag thumbs only in intervall when [EnableIntervalSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSlider.html#Syncfusion_Maui_Sliders_SfRangeSlider_EnableIntervalSelection) is true.
+You can drag thumbs only in interval when [EnableIntervalSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSlider.html#Syncfusion_Maui_Sliders_SfRangeSlider_EnableIntervalSelection) is true.
 If true, both the thumbs can be only moved on the slider Interval.
 
 {% tabs %}

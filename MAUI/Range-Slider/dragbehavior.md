@@ -9,7 +9,7 @@ documentation: ug
 
 # DragBehavior in .NET MAUI Range Slider (SfRangeSlider)
 
-This section helps to learn about thumb dragbehavior in the range slider.
+This section helps to learn about thumb drag behavior in the range slider.
 
 ## OnThumb
 
