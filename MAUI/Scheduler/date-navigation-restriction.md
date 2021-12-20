@@ -147,7 +147,7 @@ this.Scheduler.AllowedViews = SchedulerViews.Day | SchedulerViews.Week | Schedul
 {% endhighlight %}
 {% endtabs %}
 
-## Date restrictions
+## Date restriction
 
 In .NET MAUI Scheduler, you can restrict the available dates to a range of dates using the properties `MinimumDateTime,` `MaximumDateTime` and `SelectableDayPredicate.` It is applicable to all the Scheduler views.
 
