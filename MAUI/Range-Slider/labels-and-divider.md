@@ -13,7 +13,7 @@ This section explains about how to add the labels and dividers in the range slid
 
 ## Show labels
 
-The `ShowLabels` property is used to render the labels on given interval. The default value of `ShowLabels property is `False`.
+The `ShowLabels` property is used to render the labels on given interval. The default value of `ShowLabels` property is `False`.
 
 {% tabs %}
 
