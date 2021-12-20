@@ -116,11 +116,11 @@ this.Content = sfRadialGauge;
 
 ## Step frequency
 
-The `StepFrequency` property is used to specify the interval between snap points while dragging the pointer.
+The [`StepFrequency`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialPointer.html#Syncfusion_Maui_Gauges_RadialPointer_StepFrequency) property is used to specify the interval between snap points while dragging the pointer.
 
-For example, if the value of `StepFrequency` is 20, the pointer will not move continuously while dragging; instead, it will update in terms of 20.
+For example, if the value of [`StepFrequency`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialPointer.html#Syncfusion_Maui_Gauges_RadialPointer_StepFrequency) is 20, the pointer will not move continuously while dragging; instead, it will update in terms of 20.
 
-N> To work with the `StepFrequency` value, enable pointer interaction support.
+N> To work with the [`StepFrequency`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialPointer.html#Syncfusion_Maui_Gauges_RadialPointer_StepFrequency) value, enable pointer interaction support.
 
 {% tabs %}
 

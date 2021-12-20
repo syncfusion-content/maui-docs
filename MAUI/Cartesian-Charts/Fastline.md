@@ -11,7 +11,7 @@ documentation: ug
 
 ## Fast Line Chart
 
-The [FastLineSeries]() is a special kind of line series that can render a collection with large number of datapoints. To render a fast line chart, create an instance of [FastLineSeries](), and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1). 
+The [FastLineSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.FastLineSeries.html?tabs=tabid-1) is a special kind of line series that can render a collection with large number of datapoints. To render a fast line chart, create an instance of [FastLineSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.FastLineSeries.html?tabs=tabid-1), and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1). 
 
 {% tabs %}
 
@@ -59,7 +59,7 @@ this.Content = chart;
 
 ### Dashed line
 
-The [StrokeDashArray]() property of [FastLineSeries]() is used to render the line with dashes. The odd value is considered as the rendering size, while the even value is considered as the gap.
+The [StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.FastLineSeries.html#Syncfusion_Maui_Charts_FastLineSeries_StrokeDashArray) property of [FastLineSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.FastLineSeries.html?tabs=tabid-1) is used to render the line with dashes. The odd value is considered as the rendering size, while the even value is considered as the gap.
 
 {% tabs %}
 
