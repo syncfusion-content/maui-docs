@@ -19,7 +19,7 @@ The Syncfusion .NET MAUI ListView renders set of data items using Maui views or 
 
  * Supports dynamic selection of UI for each item using the `DataTemplateSelector`.
 
- * AutoFit items based on the content of `ItemTemplate`.
+ * AutoFit items based on the content of [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate).
 
  * Supports both linear and grid layouts.
 

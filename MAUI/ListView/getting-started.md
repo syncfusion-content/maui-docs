@@ -16,7 +16,7 @@ This section provides a quick overview of how to get started with the .NET Maui 
  1. Create a new .NET MAUI application in Visual Studio.
  2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfListView to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.ListView and then install it.
  3. Import the control namespace `Syncfusion.Maui.ListView` in XAML or C# code.
- 4. Initialize the `SfListView` control.
+ 4. Initialize the [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.html) control.
  
 {% tabs %}
 {% highlight xaml %}
@@ -127,7 +127,7 @@ public class BookInfo : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-N> If you want your data model to respond to property changes, then implement `INotifyPropertyChanged` interface in your model class.
+N> If you want your data model to respond to property changes, then implement [INotifyPropertyChanged](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=net-6.0) interface in your model class.
 
 Create a model repository class with `BookInfo` collection property initialized with required number of data objects in a new class file as shown in the following code example, and save it as BookInfoRepository.cs file:
 
