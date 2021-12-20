@@ -114,7 +114,7 @@ this.Scheduler.MonthViewSettings.ViewHeaderSettings.DayTextStyle = dayTextStyle;
 {% endhighlight %}  
 {% endtabs %}
 
-## customize month cell appearance
+## Customize month cell appearance
 
 By using the `MonthCellStyle` property of `MonthViewSettings,` the month properties such as `Background,` `TodayBackground,` `TrailingMonthBackground,` `LeadingMonthBackground,` `TextStyle,` `TrailingMonthTextStyle,` and `LeadingMonthTextStyle` can be customized.
 
