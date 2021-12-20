@@ -11,14 +11,14 @@ documentation: ug
 
 ## Date navigations
 
-The `.NET MAUI Scheduler` control provides the option to navigate the dates either programmatically or by using navigation using `forward` and `backward` buttons and it is applicable to the all Scheduler views.
+The `.NET MAUI Scheduler` control allows to navigate through dates either programmatically or by using the `forward` and `backward` buttons, and it is applicable to all the Scheduler views.
 
 N> 
-Touch gesture is not working as facing issue in [framework](https://github.com/dotnet/maui/issues/3561) 
+Touch gesture is not working, as framework is facing an [issue](https://github.com/dotnet/maui/issues/3561) 
 
 ### Programmatic date navigation
 
-By using the `DisplayDate` property of SfScheduler, programmatically navigate dates in scheduler.
+The `DisplayDate` property of `SfScheduler` programmatically navigates the dates in scheduler.
 
 {% tabs %}
 {% highlight xaml %}
@@ -65,7 +65,7 @@ The next and previous views can be accessed through swiping the control from rig
 
 #### Forward
 
-The Scheduler allows you to view the next immediate date using the `Forward` method. If the scheduler view is month, it moves on to the next month, similarly for week and day views it moves on to the next day.
+The Scheduler allows to view the next immediate date using the `Forward` method. If the scheduler view is month, it moves on to the next month, similarly for week and day views it moves on to the next day.
 
 {% tabs %}
 {% highlight xaml %}
@@ -96,7 +96,7 @@ private void OnButtonClicked(object sender, EventArgs e)
 
 #### Backward
 
-The Scheduler allows you to view the previous immediate date using the `Backward` method. If the scheduler view is month, it moves on to the previous month, similarly for week and day views it moves on to the previous day.
+The Scheduler allows to view the previous immediate date using the `Backward` method. If the scheduler view is month, it moves on to the previous month, similarly for week and day views it moves on to the previous day.
 
 {% tabs %}
 {% highlight xaml %}
@@ -127,7 +127,7 @@ private void OnButtonClicked(object sender, EventArgs e)
 
 ### Allowed views
 
-The SfScheduler allows you to quickly switch between the different scheduler views using the `AllowedViews` property. These views will display as a button in the scheduler header.
+The SfScheduler allows to quickly switch between the different scheduler views using the `AllowedViews` property. These views will display as a button in the scheduler header.
 There will be more icons available for all platforms as this UI will be responsive.
 
 The default value of `AllowedViews` property is `SchedulerViews.Default.`
@@ -147,12 +147,9 @@ this.Scheduler.AllowedViews = SchedulerViews.Day | SchedulerViews.Week | Schedul
 {% endhighlight %}
 {% endtabs %}
 
-N>
-The SfScheduler `view` will be restricted based on the  `AllowedViews.` For example, the `AllowedViews` given as `Day,` `Week,` `WorkWeek,` and if the `View` given as `Month,` this will be reset to AllowedViews first value.
-
 ## Date restrictions
 
-In .NET MAUI Scheduler, you can restrict the available dates to a range of dates using the properties `MinimumDateTime` and `MaximumDateTime.` It is applicable to the all Scheduler views.
+In .NET MAUI Scheduler, you can restrict the available dates to a range of dates using the properties `MinimumDateTime,` `MaximumDateTime` and `SelectableDayPredicate.` It is applicable to all the Scheduler views.
 
 ### Change minimum display date and time
 

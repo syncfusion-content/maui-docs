@@ -36,7 +36,7 @@ public partial class App : Application
 {% endtabs %}
 
 N>
-The required `resx` files with `Build Action` as `EmbeddedResource` (File name should contains culture code) into the `Resources` folder.
+The required `resx` files with `Build Action` as `EmbeddedResource` (File name should contain culture code) into the `Resources` folder.
 
 ## Localize at Sample Level
 
@@ -50,6 +50,6 @@ To localize the `Scheduler` based on `CurrentUICulture` using `resource` files, 
 
    4. In Add New Item wizard, select the Resource File option and name the filename as `SfScheduler.<culture name>.resx.` For example, give the name as `SfScheduler.fr-FR.resx` for French culture.
 
-   5. The culture name that indicates the name of language and country.
+   5. The culture name indicates the name of the language and country.
 
    6. Add the Name/Value pair in Resource Designer of `SfScheduler.fr-FR.resx` file and change its corresponding value to corresponding culture.

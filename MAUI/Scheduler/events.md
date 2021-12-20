@@ -13,7 +13,7 @@ The Scheduler supports the `Tapped,` `DoubleTapped,` `LongPressed,` `SelectionCh
 
 ## Tapped
 
-A `Tapped` event occurs each time a scheduler view is tapped. 
+A `Tapped` event occurs, each time a scheduler view is tapped.
 Below is a list of the arguments:
 
 * `Sender`: This contains the `SfScheduler` object.
@@ -52,7 +52,7 @@ Whenever the `SfScheduler` elements are double-tapped onto the view, the `Double
 
 * `Sender`: This contains the `SfScheduler` object.
 
-* `DoubleTapped`: this double tapped action performed on an Scheduler element can be found in the `SchedulerDoubleTappedEventArgs`, you can see details about the double-tapped dates, appointments, and elements.
+* `DoubleTapped`: This double tapped action performed on a Scheduler element can be found in the SchedulerDoubleTappedEventArgs, and you can see the details about the double-tapped dates, appointments, and elements.
 
     * `Appointments`: Returns the double-tapped appointments.
     * `Date` : Returns the double-tapped date.
@@ -86,7 +86,7 @@ Whenever the `SfScheduler` elements are long-pressed onto the view, the `LongPre
 
 * `Sender`: This contains the `SfScheduler` object.
 
-* `LongPressed`: this long-pressed action performed on an Scheduler element can be found in the `SchedulerLongPressedEventArgs`, you can see details about the long-pressed dates, appointments, and elements.
+* `LongPressed`: This long-pressed action performed on a Scheduler element can be found in the SchedulerLongPressedEventArgs, and you can see details about the long-pressed dates, appointments, and elements.
 
     * `Appointments`: Returns the long-pressed appointments.
     * `Date` : Returns the long-pressed date.
@@ -120,7 +120,7 @@ The `SelectionChanged` event is used to notify when the cell selection is change
 
 * `Sender`: This contains the `SfScheduler` object.
 
-* `SelectionChanged`: The selection-changed date when the selection changed action performed on element available in the `SchedulerSelectionChangedEventArgs.`
+* `SelectionChanged`: The selection is changed when the selection-changed action is performed on the element available in the `SchedulerSelectionChangedEventArgs.`
 
     * `NewValue`: Returns the new selected date.
     * `OldValue` : Returns the old selected date.
@@ -148,11 +148,11 @@ private void OnSchedulerSelectionChanged(object sender, SchedulerSelectionChange
 
 ## ViewChanged
 
-The `ViewChanged` event is used to notify when the current view of scheduler changed, that is view swiped to previous or next view, scheduler view switched to another scheduler view.
+The `ViewChanged` event is used to notify when the current view of scheduler is changed, that is when the view is swiped to previous or next view, and when the scheduler view is switched to another scheduler view.
 
 * `Sender`: This contains the `SfScheduler` object.
 
-* `ViewChanged`:  The scheduler current view visible dates available in the `SchedulerViewChangedEventArgs` when scheduler visible dates or view changed.
+* `ViewChanged`: The scheduler current view visible dates are available in the `SchedulerViewChangedEventArgs` when the scheduler visible dates or view is changed.
 
     * `NewVisibleDates`: Returns the new visible date range of the view.
     * `OldVisibleDates` : Returns the old visible date range of the view.
