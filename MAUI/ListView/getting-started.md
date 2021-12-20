@@ -169,7 +169,7 @@ public class BookInfoRepository
 
 ## Binding data to the listview
 
-To bind the data source of the SfListView, set the `SfListView.ItemsSource` property as follows. You can bind the data source of the `SfListView` either from XAML or code.
+To bind the data source of the SfListView, set the [SfListView.ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsSource) property as follows. You can bind the data source of the `SfListView` either from XAML or code.
 
 The following code example binds the previously created collection to the `SfListView.ItemsSource` property:
 
@@ -195,7 +195,7 @@ listView.ItemsSource = viewModel.BookInfo;
 
 ## Defining an item template
  
- By defining the `SfListView.ItemTemplate` of the SfListView, a custom user interface(UI) can be achieved to display the data items. 
+ By defining the [SfListView.ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate) of the SfListView, a custom user interface(UI) can be achieved to display the data items. 
  
 {% tabs %}
 {% highlight xaml %}
@@ -259,9 +259,9 @@ You can also download the entire source code of this demo [here](https://github.
 
 ## Layouts
 
-SfListView supports different layouts such as linear and grid layouts. The linear layout arranges the items in a single column, whereas the grid layout arranges the items in a predefined number of columns defined by the `SpanCount` property of `GridLayout`. 
+SfListView supports different layouts such as linear and grid layouts. The linear layout arranges the items in a single column, whereas the grid layout arranges the items in a predefined number of columns defined by the [SpanCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.GridLayout.html#Syncfusion_Maui_ListView_GridLayout_SpanCount) property of [GridLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.GridLayout.html). 
 
-The `SfListView.ItemsLayout` property is used to define the layout of the SfListView. `LinearLayout` is default layout of this control.
+The [SfListView.ItemsLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsLayout) property is used to define the layout of the SfListView. [LinearLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.LinearLayout.html) is default layout of this control.
 
 {% tabs %}
 {% highlight xaml %}
@@ -284,7 +284,7 @@ listView.ItemsLayout = new GridLayout() { SpanCount = 3 };
 
 ## DataSource
 
-The `DataSource` gets raw data and performs data operations such as sorting, filtering, and grouping in SfListView. The data source of the ListView is set by using the `ItemsSource` attribute.
+The [DataSource](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.DataSource.html) gets raw data and performs data operations such as sorting, filtering, and grouping in SfListView. The data source of the ListView is set by using the `ItemsSource` attribute.
 
 {% tabs %}
 {% highlight xaml %}
@@ -310,15 +310,15 @@ The `DataSource` gets raw data and performs data operations such as sorting, fil
 
 ## Sorting
 
-The SfListView allows you to sort its data by using the `SfListView.DataSource.SortDescriptors` property. Create a `SortDescriptor` for the property to be sorted, and add it to the `DataSource.SortDescriptors` collection.
+The SfListView allows you to sort its data by using the [SfListView.DataSource.SortDescriptors](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.DataSource.html#Syncfusion_DataSource_DataSource_SortDescriptors) property. Create a [SortDescriptor](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.SortDescriptor.html) for the property to be sorted, and add it to the `DataSource.SortDescriptors` collection.
 
-Refresh the view by calling the `SfListView.RefreshView` method.
+Refresh the view by calling the [SfListView.RefreshView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_RefreshView) method.
 
 SortDescriptor object holds the following three properties:
 
- * `PropertyName`: Describes the name of the sorted property.
- * `Direction`: Describes an object of type `ListSortDirection` that defines the sorting direction.
- * `Comparer`: Describes a comparer that will be applied when sorting.
+ * [PropertyName](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.SortDescriptor.html#Syncfusion_DataSource_SortDescriptor_PropertyName): Describes the name of the sorted property.
+ * [Direction](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.SortDescriptor.html#Syncfusion_DataSource_SortDescriptor_Direction): Describes an object of type [ListSortDirection](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.ListSortDirection.html) that defines the sorting direction.
+ * [Comparer](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.SortDescriptor.html#Syncfusion_DataSource_SortDescriptor_Comparer): Describes a comparer that will be applied when sorting.
  
 {% tabs %}
 {% highlight xaml %}
@@ -352,7 +352,7 @@ SortDescriptor object holds the following three properties:
 
 ## Filtering
 
-The SfListView supports you to filter the records in view by setting predicate to the `SfListView.DataSource.Filter` property. Call the `DataSource.RefreshFilter` method after assigning the `Filter` property for refreshing the view.
+The SfListView supports you to filter the records in view by setting predicate to the [SfListView.DataSource.Filter](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.DataSource.html#Syncfusion_DataSource_DataSource_Filter) property. Call the [DataSource.RefreshFilter](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.DataSource.html#Syncfusion_DataSource_DataSource_RefreshFilter) method after assigning the `Filter` property for refreshing the view.
 
 To filter the items based on the Title property of the underlying data by using `FilterContacts` method, follow the code example:
  
@@ -411,15 +411,15 @@ private bool FilterContacts(object obj)
 
 ## Grouping
 
-By using the `SfListView.DataSource.GroupDescriptors` property, the SfListView can display the items in a group. Create `GroupDescriptor` for the property to be grouped, and add it to the `DataSource.GroupDescriptors` collection.
+By using the [SfListView.DataSource.GroupDescriptors](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.DataSource.html#Syncfusion_DataSource_DataSource_GroupDescriptors) property, the SfListView can display the items in a group. Create [GroupDescriptor](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.GroupDescriptor.html) for the property to be grouped, and add it to the `DataSource.GroupDescriptors` collection.
 
 `GroupDescriptor` object holds the following properties:
 
- * `PropertyName`: Describes the name of the property to be grouped.
- * `KeySelector`: Describes selector to return the group key.
- * `Comparer`: Describes the comparer that will be applied when sorting.
+ * [PropertyName](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.GroupDescriptor.html#Syncfusion_DataSource_GroupDescriptor_PropertyName): Describes the name of the property to be grouped.
+ * [KeySelector](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.GroupDescriptor.html#Syncfusion_DataSource_GroupDescriptor_KeySelector): Describes selector to return the group key.
+ * [Comparer](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.GroupDescriptor.html#Syncfusion_DataSource_GroupDescriptor_Comparer): Describes the comparer that will be applied when sorting.
 
-It also supports you to stick the group header by enabling the `SfListView.IsStickyGroupHeader` property.
+It also supports you to stick the group header by enabling the [SfListView.IsStickyGroupHeader](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_IsStickyGroupHeader) property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -448,11 +448,11 @@ It also supports you to stick the group header by enabling the `SfListView.IsSti
 
 ## Selection
 
-The SfListView allows selecting the item by setting the `SfListView.SelectionMode` property. Set the `SfListView.SelectionMode` property to single, multiple, and none based on the requirements. Information about the selected item can be tracked using the `SfListView.SelectedItem` and `SfListView.SelectedItems` properties. It also allows changing the selection highlight color by using the `SfListView.SelectionBackgroundColor`.
+The SfListView allows selecting the item by setting the [SfListView.SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionMode) property. Set the `SfListView.SelectionMode` property to single, multiple, and none based on the requirements. Information about the selected item can be tracked using the [SfListView.SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectedItem) and [SfListView.SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectedItems) properties. It also allows changing the selection highlight color by using the [SfListView.SelectionBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionBackground).
 
-The gesture type can be changed to select the item by setting the `SfListView.SelectionGesture` property. Set the `SfListView.SelectionGesture` property to Tap, DoubleTap, and Hold based on the requirements.
+The gesture type can be changed to select the item by setting the [SfListView.SelectionGesture](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionGesture) property. Set the `SfListView.SelectionGesture` property to Tap, DoubleTap, and Hold based on the requirements.
 
-The `SelectionChanging` and `SelectionChanged` events of the SfListView can be used to handle selection operations.
+The [SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionChanging) and [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionChanged) events of the SfListView can be used to handle selection operations.
  
 {% tabs %}
 {% highlight xaml %}
@@ -472,9 +472,9 @@ listView.SelectionBackgroundColor = Colors.FromHex("#E4E4E4");
 
 ## Header and Footer
 
-The SfListView allows setting the header and footer to the user interface(UI) view by setting the DataTemplate to the `HeaderTemplate` and `FooterTemplate`.
+The SfListView allows setting the header and footer to the user interface(UI) view by setting the DataTemplate to the [HeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_HeaderTemplate) and [FooterTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_FooterTemplate).
 
-The header and footer can be handled as scrollable or sticky to the view by enabling or disabling the `IsStickyHeader` and `IsStickyFooter` properties.
+The header and footer can be handled as scrollable or sticky to the view by enabling or disabling the [IsStickyHeader](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_IsStickyHeader) and [IsStickyFooter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_IsStickyFooter) properties.
  
 {% tabs %}
 {% highlight xaml %}
