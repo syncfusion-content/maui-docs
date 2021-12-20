@@ -120,6 +120,10 @@ public class CustomSortComparer : IComparer<object>
 {% endhighlight %}
 {% endtabs %}
 
+You can download the entire sample code from the [github](https://github.com/SyncfusionExamples/custom-sorting-.net-maui-listview).
+
+![MAUI ListView custom sorting](Images/sorting/maui-listview-custom-sorting.jpg)
+
 ## Sort the items on header tapped
 
 To apply the sorting when tapping the header, handle the `ItemTapped` event of the `SfListView`.
@@ -242,6 +246,10 @@ this.listView.DataSource.SortDescriptors.Add(new SortDescriptor()
 {% endhighlight %}
 {% endtabs %}
 
+The following screenshot shows the output when items are sorted by year. Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/sorting-and-grouping-.net-maui-listview)
+
+![MAUI ListView sorting with grouping by year](Images/sorting/maui-listview-sorting-with-grouping-by-year.jpg)
+
 ## Sorting with grouping by month and year
 
 Sorting and grouping the items by using `KeySelector` based on returning the month and year value of the date-time property.
@@ -291,6 +299,10 @@ public partial class MainPage : ContentPage
 }
 {% endhighlight %}
 {% endtabs %}
+
+The following screenshot shows the output when items are sorted by month and year.
+
+![MAUI ListView sorting with grouping by year](Images/sorting/maui-listview-sorting-with-grouping-by-year.jpg)
 
 
 
