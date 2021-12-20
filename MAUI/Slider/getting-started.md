@@ -195,8 +195,8 @@ The [`Orientation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.
 
 {% highlight xaml %}
 
-<sliders:SfSlider    Orientation="Vertical"
-            Minimum="0" 
+<sliders:SfSlider   Orientation="Vertical"
+                    Minimum="0" 
 		    Maximum="10" 
 		    Value="6" 
 		    ShowLabels="True"  
@@ -233,8 +233,8 @@ You can invert the slider using the [`IsInversed`](https://help.syncfusion.com/c
 
 {% highlight xaml %}
 
-<sliders:SfSlider    IsInversed="True"
-            Minimum="0" 
+<sliders:SfSlider   IsInversed="True"
+                    Minimum="0" 
 		    Maximum="10" 
 		    Value="6" 
 		    ShowLabels="True"  
@@ -274,7 +274,7 @@ Set the 'DateTime' values to the [`Minimum`](https://help.syncfusion.com/cr/maui
 <sliders:SfSlider   Minimum="2010-01-01" 
 		    Maximum="2020-01-01" 
 		    Value="2014-01-01" 
-            ShowLabels="True"
+                    ShowLabels="True"
 		    ShowTicks="True" 
 		    Interval="2" 
 		    MinorTicksPerInterval="1">
@@ -313,8 +313,8 @@ N> The format type (numeric or date) of the slider is determined based on the va
 		    Maximum="100" 
 		    Value="60" 
 		    NumberFormat="$##" 
-            ShowTicks="True"
-            MinorTicksPerInterval="1"
+                    ShowTicks="True"
+                    MinorTicksPerInterval="1"
 		    ShowLabels="True" 
 		    Interval="20">
 </sliders:SfSlider>

@@ -32,8 +32,8 @@ For date values, the slider does not have auto interval support. So, it is manda
 <sliders:SfSlider Minimum="2010-01-01" 
                   Maximum="2020-01-01" 
 	          Value="2014-01-01"
-			  ShowTicks="True"
-			  ShowLabel="True">
+	          ShowTicks="True"
+	          ShowLabel="True">
 </sliders:SfSlider>
 
 {% endhighlight %}

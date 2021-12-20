@@ -102,12 +102,12 @@ You can move the thumb in discrete manner for numeric values using the [`StepSiz
 {% highlight xaml %}
 
   <sliders:SfSlider Minimum="0" 
-                  Maximum="10" 
-                  Value="6"
-                  StepSize="2" 
-                  ShowLabels="True"
-                  ShowTicks="True" 
-                  ShowDividers="True" />
+                    Maximum="10" 
+                    Value="6"
+                    StepSize="2" 
+                    ShowLabels="True"
+                    ShowTicks="True" 
+                    ShowDividers="True" />
 
 {% endhighlight %}
 
