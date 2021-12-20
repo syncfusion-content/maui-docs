@@ -34,43 +34,7 @@ slider.ToolTipShape = SliderToolTipShape.Rectangle;
 
 ![Slider tooltip](images/tooltip/tooltip.png)
 
-## Tooltip text format
-
-By default it is formatted based on [`NumberFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_NumberFormat)  property and [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DateFormat) property based on whether it is date type [`SfSlider`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html) or numeric [`SfSlider`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html).
-
-You can format or change the whole tooltip label text using the [`ToolTipLabelCreated`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ToolTipLabelCreated) event. The [`SliderLabelCreatedEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelCreatedEventArgs.html) contains the following parameters,
-
-* Text – Change the format of the tooltip text using the [`Text`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelCreatedEventArgs.html#Syncfusion_Maui_Sliders_SliderLabelCreatedEventArgs_Text) property.
-* Style – Change the appearance of the tooltip text like color, stroke color, and padding using the [`Style`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelCreatedEventArgs.html#Syncfusion_Maui_Sliders_SliderLabelCreatedEventArgs_Style) property.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<sliders:SfSlider ToolTipLabelCreated="OnTooltipLabelCreated" 
-                  ToolTipShape="Rectangle">
-</sliders:SfSlider>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-{
-   SfSlider slider = new SfSlider();
-   slider.ToolTipShape = SliderToolTipShape.Rectangle;
-   slider.ToolTipLabelCreated += OnTooltipLabelCreated;
-}
-
-private void OnTooltipLabelCreated(object sender, SliderLabelCreatedEventArgs e)
-{
-    e.Text = "$" + e.Text;
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Slider custom tooltip](images/tooltip/custom-tooltip.png)
+N> Learn how to customize tooltip text format through [Events](https://help.syncfusion.com/maui/slider/events)
 
 ## Tooltip label style
 

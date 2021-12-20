@@ -21,6 +21,7 @@ The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.S
 
 <sliders:SfSlider Minimum="0" 
                   Maximum="10"
+                  Value="6"
                   Interval="2"
                   ShowLabels="True"
                   ShowTicks="True">
@@ -111,6 +112,8 @@ slider.ShowLabels = true;
 
 ![Slider date format](images/labels-and-dividers/date-format.png)
 
+N> Refer how to customize label style through [Events](https://help.syncfusion.com/maui/slider/events)
+
 ## Label placement
 
 The [`LabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_LabelsPlacement) property is used to place the labels either between the major ticks or on the major ticks. The default value of the [`LabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_LabelsPlacement) property is [`SliderLabelsPlacement.OnTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelsPlacement.html#Syncfusion_Maui_Sliders_SliderLabelsPlacement_OnTicks).
@@ -147,49 +150,6 @@ slider.ShowTicks = true;
 
 ![Slider label placement](images/labels-and-dividers/label-placement.png)
 
-## Customize label text
-
-You can format or change the whole numeric or date label text using the [`LabelCreated`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_LabelCreated) event. The [`SliderLabelCreatedEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelCreatedEventArgs.html) contains the following parameters,
-
-* Text – Customize the text color using the [`Text`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelCreatedEventArgs.html#Syncfusion_Maui_Sliders_SliderLabelCreatedEventArgs_Style) parameter.
-* Style – Formats the text color, font size, font family, offset using the [`Style`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelCreatedEventArgs.html#Syncfusion_Maui_Sliders_SliderLabelCreatedEventArgs_Style) parameter.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<sliders:SfSlider Minimum="2" 
-                  Maximum="10" 
-                  Value="6" 
-		  Interval="2" 	           
-	          LabelCreated="OnLabelCreated" 
-		  ShowLabels="True">
-</sliders:SfSlider>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-{
-   SfSlider slider = new SfSlider();
-   slider.Minimum = 2;
-   slider.Maximum = 10;
-   slider.Value = 6;
-   slider.Interval = 2;
-   slider.ShowLabels = true;
-   sfslider.LabelCreated += OnLabelCreated;
- }
-
- private void OnLabelCreated(object sender, SliderLabelCreatedEventArgs e)
- {
-   e.Text = "$" + e.Text;
- }
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Slider custom label](images/labels-and-dividers/custom-label.png)
 
 ## Label style
 

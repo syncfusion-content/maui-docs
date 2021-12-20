@@ -152,51 +152,7 @@ rangeSlider.ShowTicks = true;
 
 ![RangeSlider label placement](images/labels-and-dividers/label-placement.png)
 
-## Customize label text
-
-You can format or change the whole numeric or date label text using the [`LabelCreated`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_LabelCreated) event. The [`SliderLabelCreatedEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelCreatedEventArgs.html) contains the following parameters,
-
-* Text – Customize the text color using the [`Text`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelCreatedEventArgs.html#Syncfusion_Maui_Sliders_SliderLabelCreatedEventArgs_Style) parameter.
-* Style – Formats the text color, font size, font family, offset using the [`Style`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelCreatedEventArgs.html#Syncfusion_Maui_Sliders_SliderLabelCreatedEventArgs_Style) parameter.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<rangeslider:SfRangeSlider Minimum="0" 
-                           Maximum="10" 
-                           Interval="2" 
-                           RangeStart="2" 
-                           RangeEnd="8"
-                           LabelCreated="OnLabelCreated"   
-                           ShowLabels="True" 
-                           ShowTicks="True">
-</rangeslider:SfRangeSlider>
-
-{% endhighlight %}
-
-{% highlight C# %}
-{
-   SfRangeSlider rangeSlider = new SfRangeSlider();
-   rangeSlider.Minimum = 0;
-   rangeSlider.Maximum = 10;
-   rangeSlider.RangeStart = 2;
-   rangeSlider.RangeEnd = 8;
-   rangeSlider.Interval = 2;
-   rangeSlider.ShowLabels = true;
-   rangeSlider.ShowTicks = true;
-   rangeSlider.LabelCreated += OnLabelCreated;
-}
-private void OnLabelCreated(object sender, SliderLabelCreatedEventArgs e)
-{
-	e.Text = "$" + e.Text;
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![RangeSlider custom label](images/labels-and-dividers/custom-label.png)
+N> Learn how to customize label text format through [Events](https://help.syncfusion.com/maui/range-slider/events)
 
 ## Label style
 

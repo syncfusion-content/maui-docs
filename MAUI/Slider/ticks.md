@@ -17,6 +17,28 @@ You can enable the major ticks on the track. It is a shape which is used to repr
 
 For example, if [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Minimum) is 0.0 and [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Maximum) is 10.0 and [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Interval) is 2.0, the slider will render the major ticks at 0.0, 2.0, 4.0 and so on.
 
+### Without Interval
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfSlider ShowTicks="True" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfSlider slider = new SfSlider();
+slider.ShowTicks = true;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Slider ticks](images/ticks/show-ticks-without-interval.png)
+
+### With Interval
 {% tabs %}
 
 {% highlight xaml %}
@@ -43,6 +65,7 @@ slider.ShowTicks = true;
 
 It is used to represent the number of smaller ticks between two major ticks. For example, if[`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Minimum) is 0.0 and [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Maximum) is 10.0 and [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Interval) is 2.0, the slider will render the major ticks at 0.0, 2.0, 4.0 and so on. If [`MinorTicksPerInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MinorTicksPerInterval) is 1, then smaller ticks will be rendered on 1.0 and 3.0 and so on. The default value of [`MinorTicksPerInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MinorTicksPerInterval) property is Zero.
 
+### Without Interval
 
 {% tabs %}
 
@@ -50,6 +73,39 @@ It is used to represent the number of smaller ticks between two major ticks. For
 
 <sliders:SfSlider Minimum="0"
                   Maximum="10"
+                  Value="6"
+                  ShowLabels="True" 
+                  MinorTicksPerInterval="3" 
+		  ShowTicks="True">
+</sliders:SfSlider>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfSlider slider = new SfSlider();
+slider.Minimum = 0;
+slider.Maximum = 10;
+slider.Interval = 2;
+slider.MinorTicksPerInterval = 1;
+slider.ShowTicks = true;
+slider.ShowLabels = true;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Slider minor ticks](images/ticks/show-minorticks-without-interval.png)
+
+### With Interval
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfSlider Minimum="0"
+                  Maximum="10"
+                  Value="6"
                   Interval="2" 
                   ShowLabels="True" 
                   MinorTicksPerInterval="1" 
@@ -66,6 +122,7 @@ slider.Maximum = 10;
 slider.Interval = 2;
 slider.MinorTicksPerInterval = 1;
 slider.ShowTicks = true;
+slider.ShowLabels = true;
 
 {% endhighlight %}
 
@@ -124,7 +181,8 @@ The inactive side of the slider is between the thumb and the [`Maximum`](https:/
 <sliders:SfSlider Minimum="0" 
                   Maximum="10"
                   Interval="2" 
-                  ShowTicks="True" 
+                  ShowTicks="True"
+                  ShowLabels="True" 
                   MinorTicksPerInterval="1">
      <sliders:SfSlider.MinorTickStyle>
         <sliders:SliderTickStyle ActiveFill="#EE3F3F" 
@@ -141,6 +199,7 @@ slider.Minimum = 0;
 slider.Maximum = 10;
 slider.Interval = 2;
 slider.ShowTicks = true;
+slider.ShowLabels = true;
 slider.MinorTicksPerInterval = 1;
 slider.MinorTickStyle.ActiveFill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
 slider.MinorTickStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F7B1AE"));

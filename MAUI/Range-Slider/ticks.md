@@ -17,6 +17,30 @@ You can enable the major ticks on the track. It is a shape which is used to repr
 
 For example, if [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Minimum) is 0.0 and [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Maximum) is 10.0 and [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Interval) is 2.0, the range slider will render the major ticks at 0.0, 2.0, 4.0 and so on.
 
+### Without interval
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<rangeslider:SfRangeSlider ShowTicks="True">
+</rangeslider:SfRangeSlider>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfRangeSlider rangeSlider = new SfRangeSlider();
+rangeSlider.ShowTicks = true;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![RangeSlider ticks](images/ticks/show-ticks-without-interval.png)
+
+### With interval
+
 {% tabs %}
 
 {% highlight xaml %}
@@ -43,6 +67,31 @@ rangeSlider.ShowTicks = true;
 
 It is used to represent the number of smaller ticks between two major ticks. For example, if [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Minimum) is 0.0 and [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Maximum) is 10.0 and [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Interval) is 2.0, the range slider will render the major ticks at 0.0, 2.0, 4.0 and so on. If [`MinorTicksPerInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MinorTicksPerInterval) is 1, then smaller ticks will be rendered on 1.0 and 3.0 and so on. The default value of [`MinorTicksPerInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MinorTicksPerInterval) property is Zero.
 
+### Without interval
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<rangeslider:SfRangeSlider MinorTicksPerInterval="3" 
+                           ShowTicks="True">
+</rangeslider:SfRangeSlider>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfRangeSlider rangeSlider = new SfRangeSlider();
+rangeSlider.MinorTicksPerInterval = 1;
+rangeSlider.ShowTicks = true;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![RangeSlider minor ticks](images/ticks/show-minorticks-without-interval.png)
+
+### With interval
 {% tabs %}
 
 {% highlight xaml %}

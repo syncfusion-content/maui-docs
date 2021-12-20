@@ -151,7 +151,10 @@ For example, if [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
                            Maximum="2005-01-01" 
                            RangeStart="2001-01-01"
                            RangeEnd="2004-01-01"  
-                           StepDuration="1" >
+                           StepDuration="1"
+                           ShowLabels="True" 
+                           ShowTicks="True" 
+                           ShowDividers="True" >
 </rangeslider:SfRangeSlider>
 
 {% endhighlight %}
@@ -162,7 +165,10 @@ SfRangeSlider rangeSlider = new SfRangeSlider();
 rangeSlider.Minimum = new DateTime(2000, 01, 01);
 rangeSlider.Maximum = new DateTime(2005, 01, 01);
 rangeSlider.RangeStart = new DateTime(2001, 01, 01); 
-rangeSlider.RangeEnd = new DateTime(2004, 01, 01);            
+rangeSlider.RangeEnd = new DateTime(2004, 01, 01);     
+rangeSlider.ShowLables = true;
+rangeSlider.ShowTicks = true;      
+rangeSlider.ShowDividers = true;    
 rangeSlider.StepDuration = new SliderStepDuration(years: 1);
          
 {% endhighlight %}
@@ -170,3 +176,41 @@ rangeSlider.StepDuration = new SliderStepDuration(years: 1);
 {% endtabs %}
 
 ![RangeSlider date discrete mode](images/interval/step-duration.gif)
+
+## Interval Selection
+
+You can drag thumbs only in intervall when [EnableIntervalSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSlider.html#Syncfusion_Maui_Sliders_SfRangeSlider_EnableIntervalSelection) is true.
+If true, both the thumbs can be only moved on the slider Interval.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<rangeslider:SfRangeSlider Minimum="0" 
+                           Maximum="10"
+                           Interval="2" 
+                           RangeStart="2"
+                           RangeEnd="8"
+                           ShowTicks="True"
+                           ShowLabels="True"
+                           EnableIntervalSelection="True" >
+</rangeslider:SfRangeSlider>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfRangeSlider rangeSlider = new SfRangeSlider();
+rangeSlider.Minimum = 0;
+rangeSlider.Maximum = 0;
+rangeSlider.RangeStart = 2; 
+rangeSlider.RangeEnd = 8;        
+rangeSlider.ShowLables = true;
+rangeSlider.ShowTicks = true;    
+rangeSlider.EnableIntervalSelection = true;
+         
+{% endhighlight %}
+
+{% endtabs %}
+
+![RangeSlider EnableIntervalSelection](images/interval/enableintervalselection.gif)
