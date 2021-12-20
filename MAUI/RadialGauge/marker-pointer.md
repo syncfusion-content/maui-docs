@@ -158,7 +158,7 @@ this.Content = sfRadialGauge;
 
 ## Custom marker pointer
 
-You can add customized view to denote the current pointer value instead of in-built marker shape. It can be achieved by setting the `MarkerTemplate` property.
+You can add customized view to denote the current pointer value instead of in-built marker shape. It can be achieved by setting the [`MarkerTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.MarkerPointer.html#Syncfusion_Maui_Gauges_MarkerPointer_MarkerTemplate) property.
 
 {% tabs %}
 
@@ -292,4 +292,4 @@ You can add customized view to denote the current pointer value instead of in-bu
 
 ![.NET MAUI Radial Gauge Custom Marker Pointer](images/marker-pointers/maui-radial-gauge-marker-template-pointer.png)
 
-N> If you set both MarkerTemplate and MarkerType in the MarkerPointer, MarkerTemplate will be first priority for pointer. 
+N> If you set both [`MarkerTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.MarkerPointer.html#Syncfusion_Maui_Gauges_MarkerPointer_MarkerTemplate) and [`MarkerType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.MarkerPointer.html#Syncfusion_Maui_Gauges_MarkerPointer_MarkerType) in the [`MarkerPointer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.MarkerPointer.html), [`MarkerTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.MarkerPointer.html#Syncfusion_Maui_Gauges_MarkerPointer_MarkerTemplate) will be first priority for pointer. 
