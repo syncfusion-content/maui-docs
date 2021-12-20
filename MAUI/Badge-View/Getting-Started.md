@@ -101,7 +101,7 @@ this.Content = sfBadgeView;
 
 ## Adding a badge text
 
-Add text to Badge View using the [`BadgeText`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html#Syncfusion_Maui_Core_SfBadgeView_BadgeText) property.
+Add text to Badge View using the [BadgeText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html#Syncfusion_Maui_Core_SfBadgeView_BadgeText) property.
 
 {% tabs %}
 
@@ -129,7 +129,7 @@ this.Content = sfBadgeView;
 
 ## Adding a content
 
-An Image, button, or label or any view can be added to the Badge View using the [`Content`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html#Syncfusion_Maui_Core_SfBadgeView_Content) property.
+An Image, button, or label or any view can be added to the Badge View using the [Content](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html#Syncfusion_Maui_Core_SfBadgeView_Content) property.
 
 {% tabs %}
 

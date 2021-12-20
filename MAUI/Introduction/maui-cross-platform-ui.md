@@ -96,9 +96,9 @@ You can find the platforms supported by each .NET MAUI control as below.
 		</td>
 	</tr>
 	<tr>
-	    <td rowspan=1" valign="top">
+	    <td rowspan="1" valign="top">
 			NAVIGATION<br/>
-		</td>	
+		</td>
 		<td>
 			<a href="/maui/tabview/overview">Tab View</a><br/>
 		</td>

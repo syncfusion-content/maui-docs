@@ -9,7 +9,7 @@ documentation: ug
 
 # Position customization
 
-The default position of notification is [`TopRight`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgePosition.html#Syncfusion_Maui_Core_BadgePosition_TopRight). The position can be customized as [`TopLeft`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgePosition.html#Syncfusion_Maui_Core_BadgePosition_TopLeft), `BottomLeft`, and [`BottomRight`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgePosition.html#Syncfusion_Maui_Core_BadgePosition_BottomRight) using the [`BadgePosition`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgePosition.html) properties. 
+The default position of notification is [TopRight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgePosition.html#Syncfusion_Maui_Core_BadgePosition_TopRight). The position can be customized as [TopLeft](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgePosition.html#Syncfusion_Maui_Core_BadgePosition_TopLeft), `BottomLeft`, and [BottomRight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgePosition.html#Syncfusion_Maui_Core_BadgePosition_BottomRight) using the [BadgePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgePosition.html) properties. 
 
 {% tabs %}
 
@@ -54,7 +54,7 @@ Content = sfBadgeView;
 
 ## Setting a badge offset
 
-The badge text x,y position can be adjusted using the [`Offset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_Offset) property.
+The badge text x,y position can be adjusted using the [Offset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_Offset) property.
 
 {% tabs %}
 
