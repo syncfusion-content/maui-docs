@@ -32,7 +32,11 @@ The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.S
 {% highlight C# %}
 
 SfSlider slider = new SfSlider();
-slider.Interval = 0.2;
+slider.Minimum = 2;
+slider.Maximum = 10;
+slider.Value = 6;
+slider.Interval = 2;
+slider.ShowTicks = true;
 slider.ShowLabels = true;
 
 {% endhighlight %}
