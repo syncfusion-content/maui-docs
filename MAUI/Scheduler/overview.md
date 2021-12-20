@@ -29,7 +29,7 @@ The Syncfusion .NET MAUI Scheduler (SfScheduler) has eight different types of bu
  
  * **Flexible working days**: The workdays in a workweek can be customized such that the nonworking days are hidden.
 
- * **Minimum and maximum date time**: By setting `MinimumDateTime` and `MaximumDateTime` properties, you can limit the date range available in the Scheduler and prevent navigation beyond that range.
+ * **Minimum and maximum date time**: By setting [MinimumDateTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_MinimumDateTime) and [MaximumDateTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_MaximumDateTime) properties, you can limit the date range available in the Scheduler and prevent navigation beyond that range.
 
  * **Special time regions (Blocking time intervals)**: Interactions and selections can be disabled for specific time ranges. This is useful when the user interaction has to be blocked during holidays or another special events, and to highlight those time slots in day, week, workweek, timeline day, timeline week, and timeline workweek.
 
