@@ -39,6 +39,7 @@ slider.ShowTicks = true;
 ![Slider ticks](images/ticks/show-ticks-without-interval.png)
 
 ### With Interval
+
 {% tabs %}
 
 {% highlight xaml %}
@@ -218,7 +219,9 @@ You can change the major and minor ticks size of the slider using the [`ActiveSi
 
 {% highlight xaml %}
 
-<sliders:SfSlider Interval="0.2" ShowTicks="True" MinorTicksPerInterval="1">
+<sliders:SfSlider Interval="0.2" 
+                  ShowTicks="True" 
+		  MinorTicksPerInterval="1">
      <sliders:SfSlider.MinorTickStyle>
          <sliders:SliderTickStyle ActiveSize="2,10" 
                                   InactiveSize="2, 10"/>
