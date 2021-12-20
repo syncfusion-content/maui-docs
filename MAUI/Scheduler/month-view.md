@@ -71,7 +71,14 @@ this.Scheduler.MonthViewSettings.ShowLeadingAndTrailingDates = false;
 
 Customize the day format of Scheduler view header by using the `DayFormat` property of `MonthViewSettings.`
 
-{% tabs %}
+{% tabs %}  
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" 
+                       View="Month">
+</scheduler:SfScheduler>
+
+{% endhighlight %}
 {% highlight c# %}
 
 this.Scheduler.View = SchedulerView.Month;
@@ -84,7 +91,14 @@ this.Scheduler.MonthViewSettings.ViewHeaderSettings.DayFormat = "dddd";
 
 Customize the month view header day text style, day format and background color by using the `SchedulerTextStyle,` `DayFormat` and `Background` of `ViewHeaderSettings` property of `MonthViewSettings` respectively.
 
-{% tabs %}
+{% tabs %}  
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" 
+                       View="Month">
+</scheduler:SfScheduler>
+
+{% endhighlight %}
 {% highlight c# %}
 
 var dayTextStyle = new SchedulerTextStyle()
@@ -104,7 +118,14 @@ this.Scheduler.MonthViewSettings.ViewHeaderSettings.DayTextStyle = dayTextStyle;
 
 By using the `MonthCellStyle` property of `MonthViewSettings,` the month properties such as `Background,` `TodayBackground,` `TrailingMonthBackground,` `LeadingMonthBackground,` `TextStyle,` `TrailingMonthTextStyle,` and `LeadingMonthTextStyle` can be customized.
 
-{% tabs %}
+{% tabs %}  
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" 
+                       View="Month">
+</scheduler:SfScheduler>
+
+{% endhighlight %}
 {% highlight c# %}
 
 this.Scheduler.View = SchedulerView.Month;

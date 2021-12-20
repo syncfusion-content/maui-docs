@@ -22,6 +22,12 @@ The `.NET MAUI Scheduler` provides the ability to display the day, week, workwee
 The time interval between the time slots in the day, week and workweek views can be customized by using the `TimeInterval` property of `DaysViewSettings.`
 
 {% tabs %}
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler">
+</scheduler:SfScheduler>
+
+{% endhighlight %}
 {% highlight c# %}
 
 this.Scheduler.DaysViewSettings.TimeInterval = new TimeSpan(2, 0, 0);
@@ -55,7 +61,7 @@ this.Scheduler.DaysViewSettings.TimeIntervalHeight = 120;
 {% endhighlight %}
 {% endtabs %}
 
-## Flexible working days and working hours
+## Flexible working days
 
 By default, the `.NET MAUI Scheduler` considers the weekdays from Monday to Friday as working days. The days which are defined in this non-working days collection are considered as `non-working days.` Therefore, the weekend days are set to hide from the Scheduler.
 
@@ -125,6 +131,13 @@ The user interaction such as selection and highlights specific regions of day, w
 Enable or disable the touch interaction of TimeRegion using the `EnablePointerInteraction` property of `TimeRegion.` By default, its value is `true.`
 
 {% tabs %}
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler"
+                       View="Week">
+</scheduler:SfScheduler>
+
+{% endhighlight %}
 {% highlight c# %}
 
 this.Scheduler.View = SchedulerView.Week;
@@ -159,6 +172,13 @@ N> This property only restricts the interaction on region and it does not restri
 The recurring time region on a daily, weekly, monthly, or yearly interval. The recurring special time regions can be created by setting the `RecurrenceRule` property in `TimeRegion.`
 
 {% tabs %}
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler"
+                       View="Week">
+</scheduler:SfScheduler>
+
+{% endhighlight %}
 {% highlight c# %}
 
 this.Scheduler.View = SchedulerView.Week;
@@ -188,6 +208,13 @@ private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 Any of occurrence that is an exception from the recurrence pattern time region can be deleted by using the `RecurrenceExceptionDates` property of `TimeRegion.` The deleted occurrence date will be considered as a recurrence exception date.
 
 {% tabs %}
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler"
+                       View="Week">
+</scheduler:SfScheduler>
+
+{% endhighlight %}
 {% highlight c# %}
 
 this.Scheduler.View = SchedulerView.Week;
@@ -222,6 +249,13 @@ private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 The specialTimeRegion background and text style can be customized by using the `Background` and `TextStyle` properties of `TimeRegion.` It is used to customize the background color for time region background and text style for the text of the specialTimeRegion.
 
 {% tabs %}
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler"
+                       View="Week">
+</scheduler:SfScheduler>
+
+{% endhighlight %}
 {% highlight c# %}
 
 this.Scheduler.View = SchedulerView.Week;
@@ -252,6 +286,54 @@ private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 
 {% endhighlight %}
 {% endtabs %}
+
+## Show current time indicator
+
+You can show or hide the current time indicator in day, week, and workweek views of `SfScheduler` by using the `ShowCurrentTimeIndicator` property of `DaysViewSettings,` and by default, its `true.`
+
+{% tabs %}
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" 
+                       View="Week">
+    <scheduler:SfScheduler.DaysViewSettings>
+        <scheduler:SchedulerDaysViewSettings 
+                       ShowCurrentTimeIndicator="False"/>
+    </scheduler:SfScheduler.DaysViewSettings>
+</scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight c# %}
+
+this.Scheduler.View = SchedulerView.Week;
+this.Scheduler.DaysViewSettings.ShowCurrentTimeIndicator = false;
+
+{% endhighlight %}
+{% endtabs %}
+
+### Customize current time indicator appearance
+
+The current time indicator can be customized by using the `CurrentTimeIndicatorBrush` property of `DaysViewSettings` in the `SfScheduler.`
+
+<scheduler:SfScheduler x:Name="Scheduler" 
+                       View="Week">
+    <scheduler:SfScheduler.DaysViewSettings>
+        <scheduler:SchedulerDaysViewSettings 
+                       CurrentTimeIndicatorBrush="Blue"/>
+    </scheduler:SfScheduler.DaysViewSettings>
+</scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight c# %}
+
+this.Scheduler.View = SchedulerView.Week;
+this.Scheduler.DaysViewSettings.CurrentTimeIndicatorBrush = Brush.Blue;
+
+{% endhighlight %}
+{% endtabs %}
+
+N>
+The current time indicator color is applied only when the`ShowCurrentTimeIndicator` property is enabled.
 
 ## Change time ruler width
 
@@ -312,6 +394,13 @@ N>
 The date and day format of SfScheduler ViewHeader can be customized by using the `DateFormat` and `DayFormat` properties of `DayViewSettings.`
 
 {% tabs %}
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler"
+                       View="Week">
+</scheduler:SfScheduler>
+
+{% endhighlight %}
 {% highlight c# %}
 
 this.Scheduler.View = SchedulerView.Week;
@@ -321,11 +410,18 @@ this.Scheduler.DaysViewSettings.ViewHeaderSettings.DateFormat = "dd";
 {% endhighlight %}
 {% endtabs %}
 
-## Customize view header text style
+### Customize view header text style
 
 The background color and text style for the labels mentioning the time can be customized, by setting the `Background,` `DateTextStyle,` and `DayTextStyle` properties of `DayViewSettings` in the Scheduler.
 
 {% tabs %}
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler"
+                       View="Week">
+</scheduler:SfScheduler>
+
+{% endhighlight %}
 {% highlight c# %}
 
 this.Scheduler.View = SchedulerView.Week;
@@ -352,6 +448,13 @@ this.Scheduler.DaysViewSettings.ViewHeaderSettings.DayTextStyle = dayTextStyle;
 The format for the labels mentioning the time can be customized by setting the `TimeFormat` property of `DayViewSettings` in the Scheduler.
 
 {% tabs %}
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler"
+                       View="Week">
+</scheduler:SfScheduler>
+
+{% endhighlight %}
 {% highlight c# %}
 
 this.Scheduler.View = SchedulerView.Week;
@@ -363,11 +466,18 @@ this.Scheduler.DaysViewSettings.TimeFormat = "hh:mm";
 N>
 * By default, the scheduler time text format is `hh:mm tt.`
 
-## Customize time ruler text style
+### Customize time ruler text style
 
 The background and text style for the labels mentioning the time can be customized, by setting the `Background,` and `TimeRulerTextStyle` property of `DayViewSettings` in the Scheduler.
 
 {% tabs %}
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler"
+                       View="Week">
+</scheduler:SfScheduler>
+
+{% endhighlight %}
 {% highlight c# %}
 
 this.Scheduler.View = SchedulerView.Week;
