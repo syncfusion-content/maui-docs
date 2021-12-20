@@ -386,6 +386,11 @@ By default, all the series are plotted based on primary and secondary axis.
 
 {% highlight xaml %}
 
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
+
 <chart:SfCartesianChart>
     . . .
     <chart:SfCartesianChart.Series>
@@ -394,10 +399,10 @@ By default, all the series are plotted based on primary and secondary axis.
                     XBindingPath="Date"
                     YBindingPath="Value">
                 <chart:ColumnSeries.XAxis>
-                        <chart:DateTimeAxis OpposedPosition="True" ShowMajorGridLines="False"/>
+                        <chart:DateTimeAxis CrossesAt="{x:Static sys:Double.MaxValue}" ShowMajorGridLines="False"/>
                 </chart:ColumnSeries.XAxis>
                 <chart:ColumnSeries.YAxis>
-                        <chart:NumericalAxis OpposedPosition="True" ShowMajorGridLines="False" />
+                        <chart:NumericalAxis CrossesAt="{x:Static sys:Double.MaxValue}" ShowMajorGridLines="False" />
                 </chart:ColumnSeries.YAxis>
             </chart:ColumnSeries>
             <chart:SplineSeries ItemsSource="{Binding Data}" 
@@ -405,6 +410,8 @@ By default, all the series are plotted based on primary and secondary axis.
                     YBindingPath="Value"/>
     </chart:SfCartesianChart.Series>
 </chart:SfCartesianChart>
+
+</ContentPage>
 
 {% endhighlight %}
 
@@ -429,12 +436,12 @@ SplineSeries series2 = new SplineSeries()
 
 series1.XAxis = new DateTimeAxis()
 {
-    OpposedPosition = true,
+    CrossesAt = double.MaxValue,
     ShowMajorGridLines = false
 };
 series1.YAxis = new NumericalAxis()
 {
-    OpposedPosition = true,
+    CrossesAt = double.MaxValue,
     ShowMajorGridLines = false
 };
 
