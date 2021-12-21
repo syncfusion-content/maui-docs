@@ -248,7 +248,7 @@ this.listView.DataSource.SortDescriptors.Add(new SortDescriptor()
 
 The following screenshot shows the output when items are sorted by year. Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/sorting-and-grouping-.net-maui-listview)
 
-![MAUI ListView sorting with grouping by year](Images/sorting/maui-listview-sorting-with-grouping-by-year.jpg)
+![MAUI ListView sorting with grouping by year](Images/sorting/maui-listview-with-grouping-by-year.jpg)
 
 ## Sorting with grouping by month and year
 
@@ -302,8 +302,4 @@ public partial class MainPage : ContentPage
 
 The following screenshot shows the output when items are sorted by month and year.
 
-![MAUI ListView sorting with grouping by year](Images/sorting/maui-listview-sorting-with-grouping-by-year.jpg)
-
-
-
-
+![MAUI ListView sorting with grouping by month and year](Images/sorting/maui-listview-sorting-with-grouping-by-year.jpg)
