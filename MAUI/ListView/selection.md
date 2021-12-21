@@ -13,7 +13,7 @@ This section explains how to perform selection and its related operations in the
 
 ## UI selection
 
-The .NET MAUI ListView (SfListView) allows selecting items either programmatically or touch interactions by setting the `SfListView.SelectionMode` property value to other than `None`. The control has different selection modes to perform selection operations listed as follows:
+The .NET MAUI ListView (SfListView) allows you to select items either programmatically or touch interactions by setting the `SfListView.SelectionMode` property value something other than `None`. The control has different selection modes to perform selection operations listed as follows:
 
  * `None`: Allows disabling selection.
  * `Single`: Allows selecting single item only. When clicking the selected item, selection will not be cleared. This is the default value for `SelectionMode`.
@@ -97,14 +97,14 @@ listView.SelectAll();
 {% endhighlight %}
 {% endtabs %}
 
-N> When programmatically select an item, then the selection related `events` will not be triggered. It triggers only on UI interactions.
-However, get the notification from the SelectedItems collection changed event, which will be triggered when add an item at runtime.
+N>When you programmatically select an item, then the selection related `events` are not be triggered. It triggers only by UI interactions.
+However, get the notification from the SelectedItems collection changed event, which will be triggered when you add an item at runtime.
 
 ## Selected items
 
 ### Get selected items
 
-The `SfListView` gets all the selected items through the `SfListView.SelectedItems` property  and gets the single item by using the `SfListView.SelectedItem` property.
+The `SfListView` gets all the selected items using the `SfListView.SelectedItems` property and gets the single item by using the `SfListView.SelectedItem` property.
 
 ### Clear selected items
 
@@ -118,13 +118,13 @@ listView.SelectedItems.Clear();
 
 ### CurrentItem vs SelectedItem
 
-The `SfListView` gets the selected item by using the `SfListView.SelectedItem` and `SfListView.CurrentItem` properties. Both `SfListView.SelectedItem` and `SfListView.CurrentItem` returns the same data object when selecting single item. When selecting more than one item, the `SfListView.SelectedItem` property returns the first selected item, and the `SfListView.CurrentItem` property returns the last selected item.
+The `SfListView` gets the selected item by using the `SfListView.SelectedItem` and `SfListView.CurrentItem` properties. Both `SfListView.SelectedItem` and `SfListView.CurrentItem` return the same data object when selecting a single item. When selecting more than one item, the `SfListView.SelectedItem` property returns the first selected item, and the `SfListView.CurrentItem` property returns the last selected item.
 
 W> If you select an item when `SfListView.SelectionMode` is `None` or if you select multiple items when `SfListView.SelectionMode` is `Single`, exception will be thrown.
 
 ## Selected item customization 
 
-The .NET MAUI ListView (SfListView) supports customizing the selection background color for the selected items by using the `SfListView.SelectedItemTemplate` if the background color is set to view loaded in the `SfListView.ItemTemplate`.
+The .NET MAUI ListView (SfListView) supports customizing the selection background color for the selected items by using the `SfListView.SelectedItemTemplate`, if the background color is set to view loaded in the `SfListView.ItemTemplate`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -174,7 +174,7 @@ The .NET MAUI ListView (SfListView) supports customizing the selection backgroun
 
 ### Show checked circle on selected items 
 
-To customize the appearance of the selected item or items by using the appearance of `SfListView.SelectedItemTemplate`. The following customizations should give an idea to customize the appearance of selected items in the control.
+To customize the appearance of the selected item or items, use the appearance of `SfListView.SelectedItemTemplate`. The following customizations should give you an idea to customize the appearance of selected items in the control.
 
 {% tabs %}
 {% highlight xaml %}
@@ -254,15 +254,15 @@ listView.SelectedItemTemplate = new DataTemplate(() =>
 
 ### Selection background
 
-The `SfListView` allows changing the selection background color for the selected items by using the `SfListView.SelectionBackgroundColor` property. You can also change the selection background color at runtime.
+The `SfListView` allows you to change the selection background color for the selected items by using the `SfListView.SelectionBackground` property.
 
 {% tabs %}
 {% highlight c# %}
  <syncfusion:SfListView x:Name="listView"
-                        SelectionBackgroundColor="Khaki"/>
+                        SelectionBackground="Khaki"/>
 {% endhighlight %}
 {% highlight c# %}
-listView.SelectionBackgroundColor = Colors.Khaki;
+listView.SelectionBackground = Colors.Khaki;
 {% endhighlight %}
 {% endtabs %}
 
@@ -270,7 +270,7 @@ listView.SelectionBackgroundColor = Colors.Khaki;
 
 ### SelectionChanging event
 
-The `SelectionChanging` event is raised while selecting an item at the execution time. `ItemSelectionChangingEventArgs` has the following members which provides the information for `SelectionChanging` event:
+The `SelectionChanging` event is triggered when an item is selected at the execution time. `ItemSelectionChangingEventArgs` contains the following members, which provide the information for `SelectionChanging` event:
 
  * `AddedItems`: Gets collection of the underlying data objects where the selection is going to be processed.
  * `RemovedItems`: Gets collection of the underlying data objects where the selection is going to be removed.
@@ -295,12 +295,12 @@ private void ListView_SelectionChanging(object sender, ItemSelectionChangingEven
 
 ### SelectionChanged event
 
-The `SelectionChanged` event will occur once selection process has been completed for the selected item in the `SfListView`. `ItemSelectionChangedEventArgs` has the following members which, provides information for `SelectionChanged` event:
+The `SelectionChanged` event will occur once selection process has been completed for the selected item in the `SfListView`. `ItemSelectionChangedEventArgs` contains the following members, which provides information for `SelectionChanged` event:
 
  * `AddedItems`: Gets collection of the underlying data objects where the selection has been processed.
  * `RemovedItems`: Gets collection of the underlying data objects where the selection has been removed.
 
- The `SelectionChanged` event used for the following use cases:
+The `SelectionChanged` event is used for the following use cases:
  
   * Clears all the selected item.
   * Removes the particular selected item.
@@ -323,7 +323,7 @@ N> `SelectionChanging` and `SelectionChanged` events will be triggered only on U
 
 ### SelectionChangedCommand
 
-The `SelectionChangedCommand` will be triggered when the selection is changed and passing the `SelectionChangedCommandParameter` as parameter. The default value of `SelectionChangedCommandParameter` is `Null`. If `SelectionChangedCommandParameter` is not defined then `ItemSelectionChangedEventArgs` will be passed as argument.
+The `SelectionChangedCommand` will be triggered when the selection is changed and the `SelectionChangedCommandParameter` is passed as a parameter.The default value of `SelectionChangedCommandParameter` is `Null`. If `SelectionChangedCommandParameter` is not defined then `ItemSelectionChangedEventArgs` will be passed as argument.
 
 {% tabs %}
 {% highlight xaml %}
@@ -364,15 +364,15 @@ public class CommandViewModel
 
 ## Key navigation
 
-The `AllowKeyNavigation` property enables navigation through keyboard buttons. When the `AllowKeyNavigation` property is `true`, navigation gets enabled. Otherwise, set to `false`. 
+The `AllowKeyNavigation` property enables navigation using the keyboard buttons. When the `AllowKeyNavigation` property is `true`, navigation gets enabled. Otherwise, set to `false`. 
 
 ### FocusBorderColor
 
-`FocusBorderColor` used to set the border color for the current focused item. The default color is `Color.Transparent`.
+`FocusBorderColor` is used to set the border color for the current focused item. The default color is `Color.Transparent`.
 
 ### FocusBorderThickness
 
-`FocusBorderThickness` used to set the border thickness for the current focused item. The default thickness is `0`.
+`FocusBorderThickness` is used to set the border thickness for the current focused item. The default thickness is `0`.
 
 ## How to
 
@@ -400,9 +400,9 @@ public partial class MainPage : ContentPage
 
 ### Automatically scroll to bring a selected item into the view
 
-To bring the `SfListView.SelectedItem` automatically into the view when it changed at runtime by calling the `ScrollToRowIndex` method.  
+To bring the `SfListView.SelectedItem` automatically into the view when it changes at runtime by calling the `ScrollToRowIndex` method.  
 
-In linear layout, you can get the row index of `SfListView.SelectedItem` and resolve if header and group header are used. 
+In linear layout, you can get the row index of `SfListView.SelectedItem` and determine whether or not header and group header are used. 
 
 {% tabs %}
 {% highlight c# %}
@@ -454,7 +454,7 @@ public partial class MainPage : ContentPage
 
 ### Display selection when ItemTemplate contains image
 
-When `ItemTemplate` contains only image, then the selection color will not be visible in the view when select an image. To see selection, add any layout such as `Grid` or `StackLayout` above the image, and set margin or padding to it.
+When `ItemTemplate` contains only images, then the selection color will not be visible in the view when an image is selected. To see selection, add any layout such as `Grid` or `StackLayout` above the image, and set margin or padding to it.
 
 {% tabs %}
 {% highlight xaml %}
@@ -500,4 +500,3 @@ public partial class MainPage : ContentPage
 
 * When a grid is loaded inside the `ItemTemplate` with background color, the `SelectionBackgroundColor` will not display. Because, it overlaps the `SelectionBackgroundColor`. In this case, set the background color for the ListView instead of `ItemTemplate`.
 * When the `SfListView` contains duplicated items in the collection, only the first item whose instance was created initially will be selected or deselected.
-                                                                                                                                                                                                                                                                                                                                                                                                              
