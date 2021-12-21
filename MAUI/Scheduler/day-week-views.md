@@ -39,7 +39,7 @@ N> To modify the `TimeInterval` value (in minutes), change the time labels forma
 
 ## Change time interval height
 
-The time interval height can be customized for each time slot cell of the day, week, and workweek view by using the `TimeIntervalHeight` property of [DaysViewSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDaysViewSettings.html).
+The time interval height can be customized for each time slot cell of the day, week, and workweek view by using the [TimeIntervalHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDaysViewSettings.html#Syncfusion_Maui_Scheduler_SchedulerDaysViewSettings_TimeIntervalHeight) property of [DaysViewSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDaysViewSettings.html).
 
 {% tabs %}
 {% highlight xaml %}
