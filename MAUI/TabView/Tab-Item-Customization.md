@@ -388,7 +388,6 @@ The [BadgeSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.
     badgeSetting.FontAttributes = FontAttributes.Bold;
     badgeSetting.FontSize = 15;
     badgeSetting.FontFamily = "serif";
-    sfBadgeView.BadgeSettings = badgeSetting;
 
     var tabItems = new TabItemCollection
     {
