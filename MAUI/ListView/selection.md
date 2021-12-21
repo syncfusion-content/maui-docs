@@ -13,14 +13,14 @@ This section explains how to perform selection and its related operations in the
 
 ## UI selection
 
-The .NET MAUI ListView (SfListView) allows you to select items either programmatically or touch interactions by setting the `SfListView.SelectionMode` property value something other than `None`. The control has different selection modes to perform selection operations listed as follows:
+The .NET MAUI ListView (SfListView) allows you to select items either programmatically or touch interactions by setting the [SfListView.SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionMode) property value something other than `None`. The control has different selection modes to perform selection operations listed as follows:
 
- * `None`: Allows disabling selection.
- * `Single`: Allows selecting single item only. When clicking the selected item, selection will not be cleared. This is the default value for `SelectionMode`.
- * `SingleDeselect`: Allows selecting single item only. When clicking the selected item, selection gets cleared.
- * `Multiple`: Allows selecting more than one item. Selection is not cleared when selecting more than one items. When clicking the selected item, selection gets cleared.
+ * [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SelectionMode.html#Syncfusion_Maui_ListView_SelectionMode_None): Allows disabling selection.
+ * [Single](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SelectionMode.html#Syncfusion_Maui_ListView_SelectionMode_Single): Allows selecting single item only. When clicking the selected item, selection will not be cleared. This is the default value for `SelectionMode`.
+ * [SingleDeselect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SelectionMode.html#Syncfusion_Maui_ListView_SelectionMode_SingleDeselect): Allows selecting single item only. When clicking the selected item, selection gets cleared.
+ * [Multiple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SelectionMode.html#Syncfusion_Maui_ListView_SelectionMode_Multiple): Allows selecting more than one item. Selection is not cleared when selecting more than one items. When clicking the selected item, selection gets cleared.
 
-The `SfListView` allows selecting items on different gestures such as tap, double tap, and hold by setting the `SfListView.SelectionGesture`. The default value for the `SelectionGesture` is `TouchGesture.Tap`.
+The `SfListView` allows selecting items on different gestures such as tap, double tap, and hold by setting the [SfListView.SelectionGesture](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionGesture). The default value for the `SelectionGesture` is [TouchGesture.Tap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.TouchGesture.html#Syncfusion_Maui_ListView_TouchGesture_Tap).
 
 {% tabs %}
 {% highlight xaml %}
@@ -36,7 +36,7 @@ listView.SelectionGesture = TouchGesture.Hold;
 
 ## Programmatic selection
 
-When the `SfListView.SelectionMode` is other than `None`, the item or items in the `SfListView` can be selected from the code by setting the `SfListView.SelectedItem`, or adding items to the `SfListView.SelectedItems` property based on the `SelectionMode`.
+When the [SfListView.SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionMode) is other than `None`, the item or items in the `SfListView` can be selected from the code by setting the [SfListView.SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectedItem), or adding items to the [SfListView.SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectedItems) property based on the `SelectionMode`.
 
 When the selection mode is `Single`, programmatically select an item by setting the underlying object to the `SfListView.SelectedItem` property. 
 
@@ -89,7 +89,7 @@ N> The `SfListView.SelectedItems` property type is a type of ObservableCollectio
 {% endhighlight %}
 {% endtabs %}
 
-All items of the `SfListView` can be selected using the `SelectAll` method.
+All items of the `SfListView` can be selected using the [SelectAll](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectAll) method.
 
 {% tabs %}
 {% highlight c# %} 
@@ -104,7 +104,7 @@ However, get the notification from the SelectedItems collection changed event, w
 
 ### Get selected items
 
-The `SfListView` gets all the selected items using the `SfListView.SelectedItems` property and gets the single item by using the `SfListView.SelectedItem` property.
+The `SfListView` gets all the selected items using the [SfListView.SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectedItems) property and gets the single item by using the [SfListView.SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectedItem) property.
 
 ### Clear selected items
 
@@ -118,13 +118,13 @@ listView.SelectedItems.Clear();
 
 ### CurrentItem vs SelectedItem
 
-The `SfListView` gets the selected item by using the `SfListView.SelectedItem` and `SfListView.CurrentItem` properties. Both `SfListView.SelectedItem` and `SfListView.CurrentItem` return the same data object when selecting a single item. When selecting more than one item, the `SfListView.SelectedItem` property returns the first selected item, and the `SfListView.CurrentItem` property returns the last selected item.
+The `SfListView` gets the selected item by using the [SfListView.SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectedItem) and [SfListView.CurrentItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_CurrentItem) properties. Both `SfListView.SelectedItem` and `SfListView.CurrentItem` return the same data object when selecting a single item. When selecting more than one item, the `SfListView.SelectedItem` property returns the first selected item, and the `SfListView.CurrentItem` property returns the last selected item.
 
-W> If you select an item when `SfListView.SelectionMode` is `None` or if you select multiple items when `SfListView.SelectionMode` is `Single`, exception will be thrown.
+W> If you select an item when [SfListView.SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionMode) is `None` or if you select multiple items when `SfListView.SelectionMode` is `Single`, exception will be thrown.
 
 ## Selected item customization 
 
-The .NET MAUI ListView (SfListView) supports customizing the selection background color for the selected items by using the `SfListView.SelectedItemTemplate`, if the background color is set to view loaded in the `SfListView.ItemTemplate`.
+The .NET MAUI ListView (SfListView) supports customizing the selection background color for the selected items by using the [SfListView.SelectedItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectedItemTemplate), if the background color is set to view loaded in the [SfListView.ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate).
 
 {% tabs %}
 {% highlight xaml %}
@@ -174,7 +174,7 @@ The .NET MAUI ListView (SfListView) supports customizing the selection backgroun
 
 ### Show checked circle on selected items 
 
-To customize the appearance of the selected item or items, use the appearance of `SfListView.SelectedItemTemplate`. The following customizations should give you an idea to customize the appearance of selected items in the control.
+To customize the appearance of the selected item or items, use the appearance of [SfListView.SelectedItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectedItemTemplate). The following customizations should give you an idea to customize the appearance of selected items in the control.
 
 {% tabs %}
 {% highlight xaml %}
@@ -254,7 +254,7 @@ listView.SelectedItemTemplate = new DataTemplate(() =>
 
 ### Selection background
 
-The `SfListView` allows you to change the selection background color for the selected items by using the `SfListView.SelectionBackground` property.
+The `SfListView` allows you to change the selection background color for the selected items by using the [SfListView.SelectionBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionBackground) property.
 
 {% tabs %}
 {% highlight c# %}
@@ -270,10 +270,10 @@ listView.SelectionBackground = Colors.Khaki;
 
 ### SelectionChanging event
 
-The `SelectionChanging` event is triggered when an item is selected at the execution time. `ItemSelectionChangingEventArgs` contains the following members, which provide the information for `SelectionChanging` event:
+The [SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionChanging) event is triggered when an item is selected at the execution time. [ItemSelectionChangingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemSelectionChangingEventArgs.html) contains the following members, which provide the information for `SelectionChanging` event:
 
- * `AddedItems`: Gets collection of the underlying data objects where the selection is going to be processed.
- * `RemovedItems`: Gets collection of the underlying data objects where the selection is going to be removed.
+ * [AddedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemSelectionChangingEventArgs.html#Syncfusion_Maui_ListView_ItemSelectionChangingEventArgs_AddedItems): Gets collection of the underlying data objects where the selection is going to be processed.
+ * [RemovedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemSelectionChangingEventArgs.html#Syncfusion_Maui_ListView_ItemSelectionChangingEventArgs_RemovedItems): Gets collection of the underlying data objects where the selection is going to be removed.
 
 You can cancel the selection process within this event by setting the `ItemSelectionChangingEventArgs.Cancel` property to `true`.
 
@@ -295,10 +295,10 @@ private void ListView_SelectionChanging(object sender, ItemSelectionChangingEven
 
 ### SelectionChanged event
 
-The `SelectionChanged` event will occur once selection process has been completed for the selected item in the `SfListView`. `ItemSelectionChangedEventArgs` contains the following members, which provides information for `SelectionChanged` event:
+The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionChanged) event will occur once selection process has been completed for the selected item in the `SfListView`. [ItemSelectionChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemSelectionChangedEventArgs.html) contains the following members, which provides information for `SelectionChanged` event:
 
- * `AddedItems`: Gets collection of the underlying data objects where the selection has been processed.
- * `RemovedItems`: Gets collection of the underlying data objects where the selection has been removed.
+ * [AddedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemSelectionChangedEventArgs.html#Syncfusion_Maui_ListView_ItemSelectionChangedEventArgs_AddedItems): Gets collection of the underlying data objects where the selection has been processed.
+ * [RemovedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemSelectionChangedEventArgs.html#Syncfusion_Maui_ListView_ItemSelectionChangedEventArgs_RemovedItems): Gets collection of the underlying data objects where the selection has been removed.
 
 The `SelectionChanged` event is used for the following use cases:
  
@@ -317,13 +317,13 @@ private void ListView_OnSelectionChanged(object sender, ItemSelectionChangedEven
 {% endhighlight %}
 {% endtabs %}
 
-N> `SelectionChanging` and `SelectionChanged` events will be triggered only on UI interactions.
+N> [SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionChanging) and [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionChanged) events will be triggered only on UI interactions.
 
 ## Commands
 
 ### SelectionChangedCommand
 
-The `SelectionChangedCommand` will be triggered when the selection is changed and the `SelectionChangedCommandParameter` is passed as a parameter.The default value of `SelectionChangedCommandParameter` is `Null`. If `SelectionChangedCommandParameter` is not defined then `ItemSelectionChangedEventArgs` will be passed as argument.
+The [SelectionChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionChangedCommand) will be triggered when the selection is changed and the [SelectionChangedCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionChangedCommandParameterProperty) is passed as a parameter.The default value of `SelectionChangedCommandParameter` is `Null`. If `SelectionChangedCommandParameter` is not defined then `ItemSelectionChangedEventArgs` will be passed as argument.
 
 {% tabs %}
 {% highlight xaml %}
@@ -362,23 +362,11 @@ public class CommandViewModel
 {% endhighlight %}
 {% endtabs %}
 
-## Key navigation
-
-The `AllowKeyNavigation` property enables navigation using the keyboard buttons. When the `AllowKeyNavigation` property is `true`, navigation gets enabled. Otherwise, set to `false`. 
-
-### FocusBorderColor
-
-`FocusBorderColor` is used to set the border color for the current focused item. The default color is `Color.Transparent`.
-
-### FocusBorderThickness
-
-`FocusBorderThickness` is used to set the border thickness for the current focused item. The default thickness is `0`.
-
 ## How to
 
 ### Disable selection on particular item 
 
-The selection of a particular set of items can be disabled based on the `SfListView.SelectedItems` of the underlying collections. 
+The selection of a particular set of items can be disabled based on the [SfListView.SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectedItems) of the underlying collections. 
 
 {% tabs %}
 {% highlight c# %}
@@ -400,7 +388,7 @@ public partial class MainPage : ContentPage
 
 ### Automatically scroll to bring a selected item into the view
 
-To bring the `SfListView.SelectedItem` automatically into the view when it changes at runtime by calling the `ScrollToRowIndex` method.  
+To bring the [SfListView.SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectedItem) automatically into the view when it changes at runtime by calling the [ScrollToRowIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewLayout.html#Syncfusion_Maui_ListView_ListViewLayout_ScrollToRowIndex_System_Int32_Microsoft_Maui_Controls_ScrollToPosition_System_Boolean_) method.  
 
 In linear layout, you can get the row index of `SfListView.SelectedItem` and determine whether or not header and group header are used. 
 
@@ -430,7 +418,7 @@ public partial class MainPage : ContentPage
 
 ### Gets the index of selected item
 
-When performing selection, you can get the index of the selected item by using the `SelectionChanged` event from the `DataSource.DisplayItems`. 
+When performing selection, you can get the index of the selected item by using the [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionChanged) event from the [DataSource.DisplayItems](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.DisplayItems.html). 
 
 {% tabs %}
 {% highlight c# %}
@@ -454,7 +442,7 @@ public partial class MainPage : ContentPage
 
 ### Display selection when ItemTemplate contains image
 
-When `ItemTemplate` contains only images, then the selection color will not be visible in the view when an image is selected. To see selection, add any layout such as `Grid` or `StackLayout` above the image, and set margin or padding to it.
+When [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate) contains only images, then the selection color will not be visible in the view when an image is selected. To see selection, add any layout such as `Grid` or `StackLayout` above the image, and set margin or padding to it.
 
 {% tabs %}
 {% highlight xaml %}
@@ -498,5 +486,5 @@ public partial class MainPage : ContentPage
 
 ## Limitation
 
-* When a grid is loaded inside the `ItemTemplate` with background color, the `SelectionBackgroundColor` will not display. Because, it overlaps the `SelectionBackgroundColor`. In this case, set the background color for the ListView instead of `ItemTemplate`.
+* When a grid is loaded inside the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate) with background color, the [SelectionBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionBackground) will not display. Because, it overlaps the `SelectionBackground`. In this case, set the background color for the ListView instead of `ItemTemplate`.
 * When the `SfListView` contains duplicated items in the collection, only the first item whose instance was created initially will be selected or deselected.
