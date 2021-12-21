@@ -21,7 +21,7 @@ The timelineView displays the date inside the horizontal time axis with the desi
 
 ## Change time interval
 
-The time interval between the time slots in the timeline day, timeline week, and timeline workweek views can be customized by using the `TimeInterval` property of `TimelineViewSettings.`
+The time interval between the time slots in the timeline day, timeline week, and timeline workweek views can be customized by using the [TimeInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotViewSettings.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotViewSettings_TimeInterval) property of [TimelineViewSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineViewSettings.html).
 
 {% tabs %}
 {% highlight xaml %}
@@ -43,7 +43,7 @@ N> To modify the `TimeInterval` value (in minutes), change the time labels forma
 
 ## Change time interval width
 
-The Time interval width can be customized for each time slot cell of the timeline day, timeline week, timeline workweek, and timeline month views by using the `TimeIntervalWidth` property of `TimelineViewSettings.`
+The Time interval width can be customized for each time slot cell of the timeline day, timeline week, timeline workweek, and timeline month views by using the [TimeIntervalWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineViewSettings.html#Syncfusion_Maui_Scheduler_SchedulerTimelineViewSettings_TimeIntervalWidth) property of [TimelineViewSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineViewSettings.html).
 
 {% tabs %}
 {% highlight xaml %}
@@ -67,9 +67,9 @@ this.Scheduler.TimelineViewSettings.TimeIntervalWidth = 120;
 
 ## Flexible working days
 
-By default, the `.NET MAUI Scheduler` considers the weekdays from Monday to Friday as working days. The days which are defined in this non-working days collection are considered as `non-working days.` Therefore, the weekend days are set to hide from the Scheduler.
+By default, the [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) considers the weekdays from Monday to Friday as working days. The days which are defined in this non-working days collection are considered as `non-working days.` Therefore, the weekend days are set to hide from the Scheduler.
 
-The `NonWorkingDays` property of `TimelineViewSettings` can also be used to show only the nonworking days of the week.
+The [NonWorkingDays](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotViewSettings.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotViewSettings_NonWorkingDays) property of [TimelineViewSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineViewSettings.html) can also be used to show only the nonworking days of the week.
 
 {% tabs %}
 {% highlight xaml %}
@@ -95,7 +95,7 @@ N> The `Timeline workweek` view displays exactly the defined working days on Sch
 
 ## Flexible working hours
 
-The default values for `StartHour` and `EndHour` are `0` and `24` respectively, to show all the time slots for a timeline day, timeline week, or timeline workweek view. You may set these properties to show only the required time periods in `TimelineViewSettings.` You can set `StartHour` and `EndHour` in the time duration to show the required time duration in minutes.
+The default values for [StartHour](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotViewSettings.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotViewSettings_StartHour) and [EndHour](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotViewSettings.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotViewSettings_EndHour) are `0` and `24` respectively, to show all the time slots for a timeline day, timeline week, or timeline workweek view. You may set these properties to show only the required time periods in [TimelineViewSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineViewSettings.html). You can set `StartHour` and `EndHour` in the time duration to show the required time duration in minutes.
 
 {% tabs %}
 {% highlight xaml %}
@@ -128,11 +128,11 @@ N>
 
 ## Special time regions
 
-The user interaction such as selection and highlights specific regions of timeline day, timeline week, and timeline workweek views can be restricted by adding the `TimeRegions` property of the `TimelineViewSettings` in the `SfScheduler.` You need to set the `StartTime` and `EndTime` properties of `TimeRegions` to create a specialTimeRegion, you can use the TimeZone property to set the specific timezone for start and end time of `TimeRegions.`
+The user interaction such as selection and highlights specific regions of timeline day, timeline week, and timeline workweek views can be restricted by adding the [TimeRegions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotViewSettings.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotViewSettings_TimeRegions) property of the [TimelineViewSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineViewSettings.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html). You need to set the [StartTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_StartTime) and [EndTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_EndTime) properties of `TimeRegions` to create a specialTimeRegion, you can use the [TimeZone](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeRegion.html#Syncfusion_Maui_Scheduler_SchedulerTimeRegion_TimeZone) property to set the specific timezone for start and end time of `TimeRegions.`
 
 ### Selection restriction in timeslots
 
-You can enable or disable the touch interaction of TimeRegion using the `EnablePointerInteraction` property of `TimeRegion.` By default, its value is `true.`
+You can enable or disable the touch interaction of TimeRegion using the [EnablePointerInteraction](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeRegion.html#Syncfusion_Maui_Scheduler_SchedulerTimeRegion_EnablePointerInteraction) property of [TimeRegion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotViewSettings.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotViewSettings_TimeRegions). By default, its value is `true.`
 
 {% tabs %}
 {% highlight xaml %}
@@ -173,7 +173,7 @@ N> This property only restricts the interaction on region and it does not restri
 
 ### Recurring time region
 
-The recurring time region on a daily, weekly, monthly, or yearly interval. The recurring special time regions can be created by setting the `RecurrenceRule` property in `TimeRegion.`
+The recurring time region on a daily, weekly, monthly, or yearly interval. The recurring special time regions can be created by setting the [RecurrenceRule](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_RecurrenceRule) property in [TimeRegion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotViewSettings.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotViewSettings_TimeRegions).
 
 {% tabs %}
 {% highlight xaml %}
@@ -209,7 +209,7 @@ private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 
 ### Recurrence exception dates
 
-Any occurrence that is an exception from the recurrence pattern time region can be deleted by using the `RecurrenceExceptionDates` property of `TimeRegion.` The deleted occurrence date will be considered as a recurrence exception date.
+Any occurrence that is an exception from the recurrence pattern time region can be deleted by using the [RecurrenceExceptionDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_RecurrenceExceptionDates) property of [TimeRegion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotViewSettings.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotViewSettings_TimeRegions). The deleted occurrence date will be considered as a recurrence exception date.
 
 {% tabs %}
 {% highlight xaml %}
@@ -250,7 +250,7 @@ private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 
 ### Customize special time region appearance
 
-The specialTimeRegion background and text style can be customized by using the `Background` and `TextStyle` properties of `TimeRegion` that is used to customize the background color for time region background and text style for the text of the specialTimeRegion.
+The specialTimeRegion background and text style can be customized by using the [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_Background) and [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeRegion.html#Syncfusion_Maui_Scheduler_SchedulerTimeRegion_TextStyle) properties of [TimeRegion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotViewSettings.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotViewSettings_TimeRegions) that is used to customize the background color for time region background and text style for the text of the specialTimeRegion.
 
 {% tabs %}
 {% highlight xaml %}
@@ -293,7 +293,7 @@ private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 
 ## Show current time indicator
 
-You can show or hide the current time indicator in timeline day, timeline week, and timeline workweek views of `SfScheduler` by using the `ShowCurrentTimeIndicator` property of `TimelineViewSettings,` and by default, its `true.`
+You can show or hide the current time indicator in timeline day, timeline week, and timeline workweek views of [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) by using the [ShowCurrentTimeIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotViewSettings.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotViewSettings_ShowCurrentTimeIndicator) property of [TimelineViewSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineViewSettings.html), and by default, its `true.`
 
 {% tabs %}
 {% highlight xaml %}
@@ -317,7 +317,7 @@ this.Scheduler.TimelineViewSettings.ShowCurrentTimeIndicator = false;
 
 ### Customize current time indicator appearance
 
-The current time indicator can be customized by using the `CurrentTimeIndicatorBrush` property of `TimelineViewSettings` in the `SfScheduler.`
+The current time indicator can be customized by using the [CurrentTimeIndicatorBrush](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotViewSettings.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotViewSettings_CurrentTimeIndicatorBrush) property of [TimelineViewSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineViewSettings.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
 <scheduler:SfScheduler x:Name="Scheduler" 
                        View="TimelineWeek">
@@ -341,7 +341,7 @@ The current time indicator color is applied only when the`ShowCurrentTimeIndicat
 
 ## Change time ruler height
 
-The `TimeRulerHeight` property of `TimelineViewSettings` can be used to customize the size of the time ruler view where the labels with the time are placed.
+The [TimeRulerHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineViewSettings.html#Syncfusion_Maui_Scheduler_SchedulerTimelineViewSettings_TimeRulerHeight) property of [TimelineViewSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineViewSettings.html) can be used to customize the size of the time ruler view where the labels with the time are placed.
 
 {% tabs %}
 {% highlight xaml %}
@@ -365,7 +365,7 @@ this.Scheduler.TimelineViewSettings.TimeRulerHeight = 100;
 
 ## Minimum appointment duration
 
-The `MinimumAppointmentDuration` property allows to set an arbitrary height to appointments which have a minimum duration in the timeline day, timeline week, and timeline workweek views so that the subject can be readable.
+The [MinimumAppointmentDuration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotViewSettings.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotViewSettings_MinimumAppointmentDuration) property allows to set an arbitrary height to appointments which have a minimum duration in the timeline day, timeline week, and timeline workweek views so that the subject can be readable.
 
 {% tabs %}
 {% highlight xaml %}
@@ -395,7 +395,7 @@ N>
 
 ## View header text formatting
 
-The date and day format of SfScheduler view header can be customized by using the `DateFormat` and `DayFormat` properties of `TimelineViewSettings.`
+The date and day format of SfScheduler view header can be customized by using the [DateFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViewHeaderSettings.html#Syncfusion_Maui_Scheduler_SchedulerViewHeaderSettings_DateFormat) and [DayFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViewHeaderSettings.html#Syncfusion_Maui_Scheduler_SchedulerViewHeaderSettings_DayFormat) properties of [TimelineViewSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineViewSettings.html).
 
 {% tabs %}
 {% highlight xaml %}
@@ -416,7 +416,7 @@ this.Scheduler.TimelineViewSettings.ViewHeaderSettings.DateFormat = "MMMM dd";
 
 ### Customize view header text style
 
-The background color and text style for the labels mentioning the time can be customized, by setting the `Background,` `DateTextStyle,` and `DayTextStyle` properties of `TimelineViewSettings` in the Scheduler.
+The background color and text style for the labels mentioning the time can be customized, by setting the [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderSettingsBase.html#Syncfusion_Maui_Scheduler_SchedulerHeaderSettingsBase_Background), [DateTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViewHeaderSettings.html#Syncfusion_Maui_Scheduler_SchedulerViewHeaderSettings_DateTextStyle), and [DayTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViewHeaderSettings.html#Syncfusion_Maui_Scheduler_SchedulerViewHeaderSettings_DayTextStyle) properties of [TimelineViewSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineViewSettings.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
 {% tabs %}
 {% highlight xaml %}
@@ -443,13 +443,14 @@ var dayTextStyle = new SchedulerTextStyle()
 };
 
 this.Scheduler.TimelineViewSettings.ViewHeaderSettings.DayTextStyle = dayTextStyle;
+this.Scheduler.TimelineViewSettings.ViewHeaderSettings.Background = Brush.LightGreen;
 
 {% endhighlight %}
 {% endtabs %}
 
 ## Time text formatting
 
-The format for the labels mentioning the time can be customized by setting the `TimeFormat` property of `TimelineViewSettings` in the Scheduler.
+The format for the labels mentioning the time can be customized by setting the [TimeFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotViewSettings.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotViewSettings_TimeFormat) property of [TimelineViewSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineViewSettings.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
 {% tabs %}
 {% highlight xaml %}
@@ -472,7 +473,7 @@ N>
 
 ### Customize time ruler text style
 
-The background and text style for the labels mentioning the time can be customized, by setting the `Background,` and `TimeRulerTextStyle` properties of `TimelineViewSettings` in the Scheduler.
+The text style for the labels mentioning the time can be customized, by setting the [TimeRulerTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotViewSettings.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotViewSettings_TimeRulerTextStyle) properties of [TimelineViewSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineViewSettings.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
 {% tabs %}
 {% highlight xaml %}
