@@ -125,12 +125,12 @@ The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.S
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider  Minimum="0" 
-                        Maximum="10" 
-                        RangeStart="2" 
-                        RangeEnd="8" 
-                        ShowLabel="True" 
-                        Interval="2">
+<rangeslider:SfRangeSlider Minimum="0" 
+                           Maximum="10" 
+                           RangeStart="2" 
+                           RangeEnd="8" 
+                           ShowLabel="True" 
+                           Interval="2">
 </rangeslider:SfRangeSlider>
 
 {% endhighlight %}
@@ -160,13 +160,13 @@ The [`ShowTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.Sl
 {% highlight xaml %}
 
 <rangeslider:SfRangeSlider  ShowTicks="True" 
-                        Minimum="0" 
-                        Maximum="10" 
-                        RangeStart="2" 
-                        RangeEnd="8"                       
-                        Interval="2" 
-                        ShowLabels="True"
-                        MinorTicksPerInterval="1">
+                            Minimum="0" 
+                            Maximum="10" 
+                            RangeStart="2" 
+                            RangeEnd="8"                       
+                            Interval="2" 
+                            ShowLabels="True"
+                            MinorTicksPerInterval="1">
 </rangeslider:SfRangeSlider>
 
 {% endhighlight %}
@@ -198,13 +198,13 @@ The [`Orientation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.
 {% highlight xaml %}
 
 <rangeslider:SfRangeSlider  Orientation="Vertical"
-                        Minimum="0" 
-                        Maximum="10" 
-                        RangeStart="2" 
-                        RangeEnd="8" 
-                        ShowTicks="True" 
-                        Interval="2" 
-                        MinorTicksPerInterval="1">
+                            Minimum="0" 
+                            Maximum="10" 
+                            RangeStart="2" 
+                            RangeEnd="8" 
+                            ShowTicks="True" 
+                            Interval="2" 
+                            MinorTicksPerInterval="1">
 </rangeslider:SfRangeSlider>
 
 {% endhighlight %}
@@ -237,14 +237,14 @@ You can invert the range slider using the [`IsInversed`](https://help.syncfusion
 {% highlight xaml %}
 
 <rangeslider:SfRangeSlider  IsInversed="True"
-                        Orientation="Vertical"
-                        Minimum="0" 
-                        Maximum="10" 
-                        RangeStart="2" 
-                        RangeEnd="8" 
-                        ShowTicks="True" 
-                        Interval="2" 
-                        MinorTicksPerInterval="1">
+                            Orientation="Vertical"
+                            Minimum="0" 
+                            Maximum="10" 
+                            RangeStart="2" 
+                            RangeEnd="8" 
+                            ShowTicks="True" 
+                            Interval="2" 
+                            MinorTicksPerInterval="1">
 </rangeslider:SfRangeSlider>
 
 {% endhighlight %}
@@ -277,12 +277,12 @@ Set the 'DateTime' values to the [`Minimum`](https://help.syncfusion.com/cr/maui
 {% highlight xaml %}
 
 <rangeslider:SfRangeSlider Minimum="2010-01-01"
-                       Maximum="2020-01-01" 
-                       RangeStart="2012-01-01" 
-                       RangeEnd="2018-01-01" 
-                       ShowLabels="True" 
-                       ShowTicks="True"
-                       Interval="2">
+                           Maximum="2020-01-01" 
+                           RangeStart="2012-01-01" 
+                           RangeEnd="2018-01-01" 
+                           ShowLabels="True" 
+                           ShowTicks="True"
+                           Interval="2">
 </rangeslider:SfRangeSlider>
 
 {% endhighlight %}
@@ -315,13 +315,13 @@ N> The format type (numeric or date) of the range slider is determined based on 
 {% highlight xaml %}
 
 <rangeslider:SfRangeSlider Minimum="20" 
-                       Maximum="100" 
-                       RangeStart="20" 
-                       RangeEnd="80"
-                       NumberFormat="$##" 
-                       ShowLabels="True" 
-                       ShowTicks="True" 
-                       Interval="20">
+                           Maximum="100" 
+                           RangeStart="20" 
+                           RangeEnd="80"
+                           NumberFormat="$##" 
+                           ShowLabels="True" 
+                           ShowTicks="True" 
+                           Interval="20">
 </rangeslider:SfRangeSlider>
 
 {% endhighlight %}
