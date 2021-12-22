@@ -128,10 +128,10 @@ The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.S
 {% highlight xaml %}
 
 <sliders:SfSlider Minimum="0" 
-		          Maximum="10" 
-		          Value="6" 
-		          ShowLabels="True" 
-		          Interval="2">
+		  Maximum="10" 
+		  Value="6" 
+		  ShowLabels="True" 
+		  Interval="2">
 </sliders:SfSlider>
 
 
@@ -161,12 +161,12 @@ The [`ShowTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.Sl
 {% highlight xaml %}
 
 <sliders:SfSlider Minimum="0" 
-		          Maximum="10" 
-		          Value="6" 
-		          ShowLabels="True"  
-		          ShowTicks="True" 
-		          Interval="2" 
-		          MinorTicksPerInterval="1">
+		  Maximum="10" 
+		  Value="6" 
+		  ShowLabels="True"  
+		  ShowTicks="True" 
+		  Interval="2" 
+		  MinorTicksPerInterval="1">
 </sliders:SfSlider>
 
 
@@ -199,12 +199,12 @@ The [`Orientation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.
 
 <sliders:SfSlider  Orientation="Vertical"
                    Minimum="0" 
-		           Maximum="10" 
-		           Value="6" 
-		           ShowLabels="True"  
-		           ShowTicks="True" 
-		           Interval="2" 
-		           MinorTicksPerInterval="1">
+		   Maximum="10" 
+		   Value="6" 
+		   ShowLabels="True"  
+		   ShowTicks="True" 
+		   Interval="2" 
+		   MinorTicksPerInterval="1">
 </sliders:SfSlider>
 
 {% endhighlight %}
@@ -237,12 +237,12 @@ You can invert the slider using the [`IsInversed`](https://help.syncfusion.com/c
 
 <sliders:SfSlider IsInversed="True"
                   Minimum="0" 
-		          Maximum="10" 
-		          Value="6" 
-		          ShowLabels="True"  
-		          ShowTicks="True" 
-		          Interval="2" 
-		          MinorTicksPerInterval="1">
+		  Maximum="10" 
+		  Value="6" 
+		  ShowLabels="True"  
+		  ShowTicks="True" 
+		  Interval="2" 
+		  MinorTicksPerInterval="1">
 </sliders:SfSlider>
 
 {% endhighlight %}
@@ -274,12 +274,12 @@ Set the 'DateTime' values to the [`Minimum`](https://help.syncfusion.com/cr/maui
 {% highlight xaml %}
 
 <sliders:SfSlider Minimum="2010-01-01" 
-		          Maximum="2020-01-01" 
-		          Value="2014-01-01" 
+		  Maximum="2020-01-01" 
+		  Value="2014-01-01" 
                   ShowLabels="True"
-		          ShowTicks="True" 
-		          Interval="2" 
-		          MinorTicksPerInterval="1">
+		  ShowTicks="True" 
+		  Interval="2" 
+		  MinorTicksPerInterval="1">
 </sliders:SfSlider>
 
 {% endhighlight %}
@@ -312,13 +312,13 @@ N> The format type (numeric or date) of the slider is determined based on the va
 {% highlight xaml %}
 
 <sliders:SfSlider Minimum="20" 
-		          Maximum="100" 
-		          Value="60" 
-		          NumberFormat="$##" 
+		  Maximum="100" 
+		  Value="60" 
+		  NumberFormat="$##" 
                   ShowTicks="True"
                   MinorTicksPerInterval="1"
-		          ShowLabels="True" 
-		          Interval="20">
+		  ShowLabels="True" 
+		  Interval="20">
 </sliders:SfSlider>
 
 {% endhighlight %}
