@@ -9,9 +9,9 @@ documentation: ug
 
 # Appointments in .NET MAUI Scheduler (SfScheduler)
 
-The .NET MAUI Scheduler control has the capability to deal with appointment arrangements internally by using `AppointmentsSource.` In the scheduler, you can create normal, all-day appointments, spanned appointments, recurring appointments, and recurrence exception dates appointments.
+The .NET MAUI Scheduler control has the capability to deal with appointment arrangements internally by using [AppointmentsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentsSource). In the scheduler, you can create normal, all-day appointments, spanned appointments, recurring appointments, and recurrence exception dates appointments.
 
-The `SchedulerAppointment` is a class that corresponds to a specific scheduled appointment. It has some basic properties such as `StartTime,` `EndTime,` and `Subject.` Additional information like `Notes,` `Location,` and `IsAllDay` can be added.
+The [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html) is a class that corresponds to a specific scheduled appointment. It has some basic properties such as [StartTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_StartTime), [EndTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_EndTime), and [Subject](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_Subject). Additional information like [Notes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_Notes), [Location](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_Location), and [IsAllDay](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_IsAllDay) can be added.
 
 {%tabs %}
 {% highlight xaml %}
@@ -30,7 +30,7 @@ var appointment = new ObservableCollection<SchedulerAppointment>();
 appointment.Add(new SchedulerAppointment()
 {
     StartTime = DateTime.Today.AddHours(9),
-    EndTime = DateTime.Today.AddHours(10),
+    EndTime = DateTime.Today.AddHours(11),
     Subject = "Client Meeting",
     Location = "Hutchison road",
 });
@@ -45,38 +45,38 @@ N>
 * In the Scheduler, every appointment can be arranged based on its start time and duration for normal appointments in a day, week, and workweek view.
 *  Whenever a timeline is viewed, the appointments (all day, span, and normal) are ordered and rendered based on the appointment start time and time duration of the appointment. This is followed by `IsSpanned,` `IsAllDay,` and normal appointments.
 
-## Scheduler appointment source and Mapping
+## Scheduler appointment source mapping
 
-The .NET MAUI Scheduler supports collection that implements the object interface that can be bound to populate appointments. The properties of the business `object` can be mapped to `SchedulerAppointment` by configuring the `AppointmentMapping` property.
+The .NET MAUI Scheduler supports collection that implements the object interface that can be bound to populate appointments. The properties of the business `object` can be mapped to [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html) by configuring the [AppointmentMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html) property.
 
 <table>
 <tr><th>Property Name</th><th>Description</th></tr>
-<tr><td>StartTime</td>
-<td>This property maps the property name of a business object class to the property name of `StartTime` in `SchedulerAppointment.`</td></tr>
-<tr><td>EndTime </td>
-<td>This property maps the property name of a business object class to the property name of `EndTime` in `SchedulerAppointment.`</td></tr>
-<tr><td>StartTimeZone</td>
-<td>This property maps the property name of a business object class to the property name of `StartTimeZone` in `SchedulerAppointment.`</td></tr>
-<tr><td>EndTimeZone</td>
-<td>This property maps the property name of a business object class to the property name of `EndTimeZone` in `SchedulerAppointment.`</td></tr>
-<tr><td>Subject</td>
-<td>This property maps the property name of a business object class to the property name of `Subject` in `SchedulerAppointment.`</td></tr>
-<tr><td>Id</td>
-<td>This property maps the property name of a business object class to the property name of `Id` in `SchedulerAppointment.`</td></tr>
-<tr><td>Background</td>
-<td>This property maps the property name of a business object class to the property name of `Background` in `SchedulerAppointment.`</td></tr>
-<tr><td>IsAllDay</td>
-<td>This property maps the property name of a business object class to the property name of `IsAllDay` in `SchedulerAppointment.`</td></tr>
-<tr><td>RecurrenceRule</td>
-<td>This property maps the property name of a business object class to the property name of `RecurrenceRule` in `SchedulerAppointment.`</td></tr>
-<tr><td>RecurrenceId</td>
-<td>This property maps the property name of a business object class to the property name of `RecurrenceId` in `SchedulerAppointment.`</td></tr>
-<tr><td>Notes</td>
-<td>This property maps the property name of a business object class to the property name of `Notes` in `SchedulerAppointment.`</td></tr>
-<tr><td>Location</td>
-<td>This property maps the property name of a business object class to the property name of `Location` in `SchedulerAppointment.`</td></tr>
-<tr><td>RecurrenceExceptionDates</td>
-<td>This property maps the property name of a business object class to the property name of `RecurrenceExceptionDates` in `SchedulerAppointment.`</td></tr>
+<tr><td>{{'[StartTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_StartTime)'| markdownify }}</td>
+<td>This property maps the property name of a business object class to the property name of StartTime in SchedulerAppointment.</td></tr>
+<tr><td>{{'[EndTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_EndTime)'| markdownify }} </td>
+<td>This property maps the property name of a business object class to the property name of EndTime in SchedulerAppointment.</td></tr>
+<tr><td>{{'[StartTimeZone](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_StartTimeZone)'| markdownify }}</td>
+<td>This property maps the property name of a business object class to the property name of StartTimeZone in SchedulerAppointment.</td></tr>
+<tr><td>{{'[EndTimeZone](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_EndTimeZone)'| markdownify }}</td>
+<td>This property maps the property name of a business object class to the property name of EndTimeZone in SchedulerAppointment.</td></tr>
+<tr><td>{{'[Subject](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_Subject)'| markdownify }}</td>
+<td>This property maps the property name of a business object class to the property name of Subject in SchedulerAppointment.</td></tr>
+<tr><td>{{'[Id](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_Id)'| markdownify }}</td>
+<td>This property maps the property name of a business object class to the property name of Id in SchedulerAppointment.</td></tr>
+<tr><td>{{'[Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_Background)'| markdownify }}</td>
+<td>This property maps the property name of a business object class to the property name of Background in SchedulerAppointment.</td></tr>
+<tr><td>{{'[IsAllDay](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_IsAllDay)'| markdownify }}</td>
+<td>This property maps the property name of a business object class to the property name of IsAllDay in SchedulerAppointment.</td></tr>
+<tr><td>{{'[RecurrenceRule](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_RecurrenceRule)'| markdownify }}</td>
+<td>This property maps the property name of a business object class to the property name of RecurrenceRule in SchedulerAppointment.</td></tr>
+<tr><td>{{'[RecurrenceId](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_RecurrenceId)'| markdownify }}</td>
+<td>This property maps the property name of a business object class to the property name of RecurrenceId in SchedulerAppointment.</td></tr>
+<tr><td>{{'[Notes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_Notes)'| markdownify }}</td>
+<td>This property maps the property name of a business object class to the property name of Notes in SchedulerAppointment.</td></tr>
+<tr><td>{{'[Location](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_Location)'| markdownify }}</td>
+<td>This property maps the property name of a business object class to the property name of Location in SchedulerAppointment.</td></tr>
+<tr><td>{{'[RecurrenceExceptionDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_RecurrenceExceptionDates)'| markdownify }}</td>
+<td>This property maps the property name of a business object class to the property name of RecurrenceExceptionDates in SchedulerAppointment.</td></tr>
 </table>
 
 N> The business object class should contain two date time fields as mandatory.
@@ -107,7 +107,7 @@ public class Meeting
 
 N> Inherit this class from the `INotifyPropertyChanged` for dynamic changes in custom data.
 
-The `AppointmentMapping` property of the `Meeting` class maps those properties to the `.NET MAUI Scheduler` control.
+The [AppointmentMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html) property of the `Meeting` class maps those properties to the `.NET MAUI Scheduler` control.
 
 {% tabs %}
 {% highlight xaml %}
@@ -144,7 +144,7 @@ this.Scheduler.AppointmentMapping = appointmentMapping;
 {% endhighlight %}
 {% endtabs %}
 
-Create meetings of type `ObservableCollection<Meeting>` and assign those appointments collection to the `AppointmentsSource` property of the `SfScheduler.`
+Create meetings of type `ObservableCollection<Meeting>` and assign those appointments collection to the [AppointmentsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentsSource) property of the `SfScheduler.`
 
 {% tabs %}
 {% highlight c# %}
@@ -215,7 +215,7 @@ this.Scheduler.AppointmentsSource = Meetings;
 
 ## All day appointments
 
-Appointments that are scheduled for a whole day are known as All-Day Appointments. The `IsAllDay` property of the `SchedulerAppointment` can be used to set this property. Appointments that last for a full 24 hours (exact 24 hours) will be considered as all-day appointments without setting the `IsAllDay` property.
+Appointments that are scheduled for a whole day are known as All-Day Appointments. The [IsAllDay](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_IsAllDay) property of the [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html) can be used to set this property. Appointments that last for a full 24 hours (exact 24 hours) will be considered as all-day appointments without setting the `IsAllDay` property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -251,11 +251,11 @@ For example: From 12/13/2021 12:00AM to 12/14/2021 12:00AM.
 
 ## Recurrence appointment
 
-The recurring events on a daily, weekly, monthly, or yearly basis with optimized recurrence options. The Recurring appointments can be created by setting the `RecurrenceRule` property in the `SchedulerAppointment.`
+The recurring events on a daily, weekly, monthly, or yearly basis with optimized recurrence options. The Recurring appointments can be created by setting the [RecurrenceRule](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_RecurrenceRule) property in the [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html).
 
 ### Recurrence rule
 
-A `RecurrenceRule` consists of a string value (RRULE) that contains the details of the daily, weekly, monthly, or yearly recurrence appointments. Also includes the number of times it should be repeated, the duration of the interval, and the time period to be allotted for rendering an appointment.
+A [RecurrenceRule](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_RecurrenceRule) consists of a string value (RRULE) that contains the details of the daily, weekly, monthly, or yearly recurrence appointments. Also includes the number of times it should be repeated, the duration of the interval, and the time period to be allotted for rendering an appointment.
 Based on the value of the `RecurrenceRule` property, recurrence appointments in the `SfScheduler` are rendered with the respective time period.
 
 <table>
@@ -281,7 +281,7 @@ Based on the value of the `RecurrenceRule` property, recurrence appointments in 
 
 ### Adding recurrence appointment
 
-A recurrence rule for `.NET MAUI Scheduler` is used to populate the recurring appointment collection in a specific pattern. The `SchedulerAppointment` supports setting the RRULE directly to its `RecurrenceRule` property.
+A recurrence rule for `.NET MAUI Scheduler` is used to populate the recurring appointment collection in a specific pattern. The [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html) supports setting the RRULE directly to its [RecurrenceRule](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_RecurrenceRule) property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -346,7 +346,7 @@ public class Meeting
 N> 
 Inherit this class from the `INotifyPropertyChanged` for dynamic changes in custom data.
 
-The `AppointmentMapping` property of the `Meeting` class maps those properties to the  scheduler appointment of the `.NET MAUI Scheduler` control.
+The [AppointmentMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html) property of the `Meeting` class maps those properties to the  scheduler appointment of the `.NET MAUI Scheduler` control.
 
 {% tabs %}
 {% highlight xaml %}
@@ -390,7 +390,7 @@ this.Scheduler.AppointmentMapping = appointmentMapping;
 {% endhighlight %}
 {% endtabs %}
 
-The `RecurrenceRule` class of the `Meeting` class can be used to schedule recurring meetings for daily, weekly, monthly, or yearly intervals. Then create appointments collection `Meetings` of type `ObservableCollection <Meeting>` and assign those appointments collection `Meetings` to the `AppointmentsSource` property, which is of type object.
+The [RecurrenceRule](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_RecurrenceRule) class of the `Meeting` class can be used to schedule recurring meetings for daily, weekly, monthly, or yearly intervals. Then create appointments collection `Meetings` of type `ObservableCollection <Meeting>` and assign those appointments collection `Meetings` to the [AppointmentsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentsSource) property, which is of type object.
 
 {% tabs %}
 {% highlight c# %}
@@ -421,7 +421,7 @@ this.Scheduler.AppointmentsSource = Meetings;
 
 ### How to get the recurrence editor field values from RRULE?
 
-The `RRuleParser` method of the `.NET MAUI Scheduler` retrieves the recurrence properties from the `RRULE.`
+The [RRuleParser](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRecurrenceManager.html#Syncfusion_Maui_Scheduler_SchedulerRecurrenceManager_ParseRRule_System_String_System_DateTime_) method of the `.NET MAUI Scheduler` retrieves the recurrence properties from the [RRULE](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRecurrenceManager.html#Syncfusion_Maui_Scheduler_SchedulerRecurrenceManager_GenerateRRule_Syncfusion_Maui_Scheduler_SchedulerRecurrenceInfo_System_DateTime_System_DateTime_).
 
 {% tabs %}
 {% highlight c# %}
@@ -441,7 +441,7 @@ recurrenceProperties.RecurrenceRange = SchedulerRecurrenceRange.Count;
 
 ### How to get the recurrence dates from RRULE?
 
-The `GetDateTimeOccurrences` method of `.NET MAUI Scheduler` retrieves the occurrences date-time list from the `RRULE.`
+The [GetDateTimeOccurrences](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRecurrenceManager.html#Syncfusion_Maui_Scheduler_SchedulerRecurrenceManager_GetDateTimeOccurrences_System_String_System_DateTime_System_Nullable_System_DateTime__System_Nullable_System_DateTime__System_Nullable_System_DateTime__) method of `.NET MAUI Scheduler` retrieves the occurrences date-time list from the `RRULE.`
 
 {% tabs %}
 {% highlight c# %}
@@ -468,15 +468,15 @@ By adding exception dates to the recurring appointment, any occurrence appointme
 
 ### Recurrence exception appointment
 
-Any appointment that differs from the recurrence pattern can be changed by adding this appointment in the `AppointmentsSource` of the `.NET MAUI Scheduler.`
+Any appointment that differs from the recurrence pattern can be changed by adding this appointment in the [AppointmentsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentsSource) of the `.NET MAUI Scheduler.`
 
 ### Creating the recurrence exceptions for scheduler appointment
 
-The Recurrence exception appointments and recurrence exception dates can be added to `SchedulerAppointment` or removed by using its `RecurrenceExceptionDates` property.
+The Recurrence exception appointments and recurrence exception dates can be added to [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html) or removed by using its [RecurrenceExceptionDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_RecurrenceExceptionDates) property.
 
 ### Delete occurrence from recurrence pattern appointment or adding exception dates to recurrence pattern appointment
 
-An occurrence of the recurrence pattern appointment which is an exception can be deleted by using the `RecurrenceExceptionDates` property of `SchedulerAppointment.` The deleted occurrence date will be considered as recurrence exception date.
+An occurrence of the recurrence pattern appointment which is an exception can be deleted by using the [RecurrenceExceptionDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_RecurrenceExceptionDates) property of [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html). The deleted occurrence date will be considered as recurrence exception date.
 
 {% tabs %}
 {% highlight xaml %}
@@ -519,7 +519,7 @@ this.Scheduler.AppointmentsSource = appointment;
 
 ### Add exception appointment to the recurrence pattern
 
-Also add an exception appointment which is changed or modified occurrence of the recurrence pattern appointment to the `AppointmentsSource` of Scheduler. To add a changed occurrence, ensure to set the `RecurrenceId` of that occurrence and add the date of that occurrence to the `RecurrenceExceptionDates` of recurrence pattern appointment. The `RecurrenceId` of changed occurrence should hold the exact recurrence pattern appointment `Id.`
+Also add an exception appointment which is changed or modified occurrence of the recurrence pattern appointment to the [AppointmentsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentsSource) of [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html). To add a changed occurrence, ensure to set the [RecurrenceId](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_RecurrenceId) of that occurrence and add the date of that occurrence to the [RecurrenceExceptionDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_RecurrenceExceptionDates) of recurrence pattern appointment. The [RecurrenceId](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_RecurrenceId) of changed occurrence should hold the exact recurrence pattern appointment [Id](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_Id).
 
 {% tabs %}
 {% highlight xaml %}
@@ -584,11 +584,11 @@ N>
 
 ### Create recurrence exceptions for business object
 
-The recurrence exception appointments and recurrence exception dates can be added to business object or removed them from business object, a business object class `Meeting` can be created with mandatory fields `RecurrenceExceptionDates` and `RecurrenceId.`
+The recurrence exception appointments and recurrence exception dates can be added to business object or removed them from business object, a business object class `Meeting` can be created with mandatory fields [RecurrenceExceptionDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentMapping_RecurrenceExceptionDates) and [RecurrenceId](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentMapping_RecurrenceId).
 
 ### Delete occurrence from the recurrence pattern appointment or adding exception dates to recurrence pattern appointment
 
-An occurrence of the recurrence pattern appointment which is an exception can be deleted by using the `RecurrenceExceptionDates` property of `AppointmentMapping` class which is used to map the exception dates to the scheduler recurrence appointment. The deleted occurrence date will be considered as a recurrence exception date.
+An occurrence of the recurrence pattern appointment which is an exception can be deleted by using the [RecurrenceExceptionDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentMapping_RecurrenceExceptionDates) property of [AppointmentMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html) class which is used to map the exception dates to the scheduler recurrence appointment. The deleted occurrence date will be considered as a recurrence exception date.
 To add the exception dates in the recurrence series of business object, add the `RecurrenceExceptionDates,` `EventName,` `From,` `To,` `Color,` `RecurrenceRule` properties to the business object class `Meeting.`
 
 {% tabs %}
@@ -679,7 +679,7 @@ N> Exception dates should be Universal Time Coordinates (UTC) time zone.
 
 ## Add an exception appointment to the recurrence pattern
 
-Also add an exception appointment which is changed or modified occurrence of the recurrence pattern appointment to the `AppointmentsSource` of Scheduler. To add the changed occurrence, ensure to set the `RecurrenceId` of that occurrence and add the date of that occurrence to `RecurrenceExceptionDates` of recurrence pattern appointment. The `RecurrenceId` of changed occurrence should hold the exact recurrence pattern appointment `Id.` Map the equivalent properties of `Id,` `RecurrenceId,` and `RecurrenceExceptionDates` properties from the business object to the `Id` and `RecurrenceExceptionDates` properties of `AppointmentMapping.`
+Also add an exception appointment which is changed or modified occurrence of the recurrence pattern appointment to the [AppointmentsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentsSource) of [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html). To add the changed occurrence, ensure to set the [RecurrenceId](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentMapping_RecurrenceId) of that occurrence and add the date of that occurrence to [RecurrenceExceptionDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentMapping_RecurrenceExceptionDates) of recurrence pattern appointment. The [RecurrenceId](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentMapping_RecurrenceId) of changed occurrence should hold the exact recurrence pattern appointment [Id](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentMapping_Id). Map the equivalent properties of `Id,` `RecurrenceId,` and `RecurrenceExceptionDates` properties from the business object to the [Id](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentMapping_Id) and [RecurrenceExceptionDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentMapping_RecurrenceExceptionDates) properties of [AppointmentMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html).
 
 Add the created exception recurrence appointment to the SfScheduler `AppointmentsSource.`
 
@@ -756,7 +756,7 @@ N>
 
 ## Customize appointment text style
 
-The appointment text style can be customized by using the `AppointmentTextStyle` property of the Scheduler.
+The appointment text style can be customized by using the [AppointmentTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentTextStyle) property of the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
 {% tabs %}
 {% highlight xaml %}
