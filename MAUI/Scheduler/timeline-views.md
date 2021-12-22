@@ -319,6 +319,9 @@ this.Scheduler.TimelineViewSettings.ShowCurrentTimeIndicator = false;
 
 The current time indicator can be customized by using the [CurrentTimeIndicatorBrush](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotViewSettings.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotViewSettings_CurrentTimeIndicatorBrush) property of [TimelineViewSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineViewSettings.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
+{% tabs %}
+{% highlight xaml %}
+
 <scheduler:SfScheduler x:Name="Scheduler" 
                        View="TimelineWeek">
     <scheduler:SfScheduler.TimelineViewSettings>
