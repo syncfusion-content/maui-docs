@@ -289,7 +289,7 @@ Set the 'DateTime' values to the [`Minimum`](https://help.syncfusion.com/cr/maui
 SfSlider slider = new SfSlider();
 slider.Minimum = new DateTime(2010, 01, 01);
 slider.Maximum = new DateTime(2020, 01, 01);
-slider.Value = new DateTime(2014, 01, 01);
+slider.Value = new DateTime(2014, 02, 01);
 slider.ShowLabels = true;
 slider.ShowTicks = true;
 slider.Interval = 2;
