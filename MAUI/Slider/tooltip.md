@@ -34,6 +34,8 @@ slider.ToolTipShape = SliderToolTipShape.Rectangle;
 
 ![Slider tooltip](images/tooltip/tooltip.png)
 
+N> Learn how to customize tooltip text format from Events section.
+
 ## Tooltip label style
 
 You can change the appearance of the tooltip text like color, stroke color, padding around the text using the [`ToolTipStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ToolTipStyle) property.

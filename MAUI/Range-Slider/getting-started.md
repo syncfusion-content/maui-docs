@@ -13,11 +13,13 @@ This section explains the steps required to add the range slider control and its
 
 ## Creating an application with .NET MAUI
 
-1. Create a new .NET MAUI application in Visual Studio.
+Create a new .NET MAUI application in Visual Studio.
 
  ![Create MAUI Application](images/getting-started/create-project.png)
 
-2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfRangeSlider to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Sliders and then install it.
+## Adding SfRangeSlider reference
+
+Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfRangeSlider to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Sliders and then install it.
 
  ![Create MAUI Application](images/getting-started/nuget-installation.png)
 
