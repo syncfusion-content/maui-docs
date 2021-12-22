@@ -9,11 +9,11 @@ documentation: ug
 
 # Layouts in .NET MAUI ListView (SfListView)
 
-The `SfListView` supports different layouts such as linear layout and grid layout. The `SfListView.ItemsLayout` property is used to define the layout.
+The `SfListView` supports different layouts such as linear and grid layouts. The [SfListView.ItemsLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsLayout) property is used to define the layout.
 
 ## Linear Layout
 
-Linear layout arrange items in a single column. Initialize the `LinearLayout`, and assign it to the `SfListView.ItemsLayout` property to load the `SfListView` in linear layout. It is the default layout.
+Items in a single column are arranged in a linear layout arrange. Initialize the [LinearLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.LinearLayout.html), and assign it to the [SfListView.ItemsLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsLayout) property to load the `SfListView` in linear layout. It is the default layout.
 
 {% tabs %}
 {% highlight xaml %}
@@ -34,9 +34,9 @@ listView.ItemsLayout = new LinearLayout();
 
 ## Grid Layout
 
-Grid layout arrange items in a predefined number of columns. Initialize the `GridLayout`, and assign it to the `SfListView.ItemsLayout` property to load the `SfListView` in grid layout. 
+The grid layout arranges items in a predefined number of columns. Initialize the [GridLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.GridLayout.html), and assign it to the [SfListView.ItemsLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsLayout) property to load the `SfListView` in grid layout. 
 
-The number of columns can be defined by using the `SpanCount` property of `GridLayout`. Default `SpanCount` is `2`.
+The number of columns can be defined by using the `SpanCount` property of `GridLayout`. The default `SpanCount` is `2`.
 
 In `Horizontal` orientation, `SpanCount` defines the number of rows.
 
@@ -59,7 +59,7 @@ listView.ItemsLayout = new GridLayout() { SpanCount = 2 };
 
 ## Change span count based on screen size
 
-In the `SfListView`, the `GridLayout` allows changing the `SpanCount` based on the view size of application with orientation in either portrait or landscape mode.
+In the `SfListView`, the [GridLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.GridLayout.html) allows you to change the `SpanCount` based on the view size of application with orientation in either portrait or landscape mode.
 
 {% tabs %}
 {% highlight c# %}
