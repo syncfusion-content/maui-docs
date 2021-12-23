@@ -257,7 +257,7 @@ listView.SelectedItemTemplate = new DataTemplate(() =>
 The `SfListView` allows you to change the selection background color for the selected items by using the [SfListView.SelectionBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionBackground) property.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight xaml %}
  <syncfusion:SfListView x:Name="listView"
                         SelectionBackground="Khaki"/>
 {% endhighlight %}
@@ -407,8 +407,6 @@ public partial class MainPage : ContentPage
     if (e.PropertyName == "SelectedItem")
     {
        var selectedItemIndex = listView.DataSource.DisplayItems.IndexOf(listView.SelectedItem);
-       selectedItemIndex += (listView.HeaderTemplate != null && !listView.IsStickyHeader || !listView.IsStickyGroupHeader) ? 1 : 0;
-       selectedItemIndex -= (listView.GroupHeaderTemplate != null && listView.IsStickyGroupHeader) ? 1 : 0;
        (listView.LayoutManager as LinearLayout).ScrollToRowIndex(selectedItemIndex);
     }
   }
