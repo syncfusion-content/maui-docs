@@ -1171,8 +1171,8 @@ appointments.Add(new ScheduleAppointment()
     Subject = "Meeting",
     StartTime = DateTime.Now,
     EndTime = DateTime.Now.AddHours(1),
-    StartTimeZone = TimeZoneInfo.FindSystemTimeZoneById("India Standard Time")
-    EndTimeZone = TimeZoneInfo.FindSystemTimeZoneById("India Standard Time")
+    StartTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Asia/Kolkata")
+    EndTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Asia/Kolkata")
 });		  
 {% endhighlight %}
 {% endtabs %}
@@ -1192,10 +1192,10 @@ Set the specific time zone to schedule using the [TimeZone](https://help.syncfus
 
 {% tabs %}
 {% highlight xaml %}
-<scheduler:SfScheduler x:Name="scheduler" TimeZone="India Standard Time"/>
+<scheduler:SfScheduler x:Name="scheduler" TimeZone="Asia/Kolkata"/>
 
 {% endhighlight %}
 {% highlight c#%}
-this.scheduler.TimeZone = TimeZoneInfo.FindSystemTimeZoneById("India Standard Time");
+this.scheduler.TimeZone = TimeZoneInfo.FindSystemTimeZoneById("Asia/Kolkata");
 {% endhighlight %}
 {% endtabs %}
