@@ -152,7 +152,7 @@ rangeSlider.ShowTicks = true;
 
 ![RangeSlider label placement](images/labels-and-dividers/label-placement.png)
 
-N> Learn how to customize label text format from Events section.
+N> Learn how to customize label text format using [Events](https://help.syncfusion.com/maui/range-slider/events).
 
 ## Label style
 

@@ -34,7 +34,7 @@ rangeSlider.ToolTipShape = SliderToolTipShape.Rectangle;
 
 ![RangeSlider tooltip](images/tooltip/tooltip.png)
 
-N> Learn how to customize tooltip text format from Events section.
+N> Learn how to customize tooltip text format using [Events](https://help.syncfusion.com/maui/slider/events).
 
 ## Tooltip label style
 
