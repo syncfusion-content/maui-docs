@@ -13,27 +13,28 @@ This section explains about how to add the numeric and date range slider.
 
 ## Minimum
 
-The minimum value that the user can select. The default value of `Minimum` property is 0.0 and it must be less than the `Maximum` value.
+The minimum value that the user can select. The default value of [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Minimum) property is 0.0 and it must be less than the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Maximum) value.
 
 ## Maximum
 
-The maximum value that the user can select. The default value of `Maximum` property is 1.5 and it must be greater than the `Minimum` value.
+The maximum value that the user can select. The default value of [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Maximum) property is 1.5 and it must be greater than the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Minimum) value.
 
 ## Range values
 
-It represents the values currently selected in the range slider. The range slider’s thumb is drawn corresponding to this `RangeStart` and `RangeEnd` values.
+It represents the values currently selected in the range slider. The range slider’s thumb is drawn corresponding to this [`RangeStart`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSlider.html#Syncfusion_Maui_Sliders_SfRangeSlider_RangeStart) and [`RangeEnd`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSlider.html#Syncfusion_Maui_Sliders_SfRangeSlider_RangeEnd) values.
 
-For date values, the range slider does not have auto interval support. So, it is mandatory to set `Interval`, `DateIntervalType`, and `DateFormat` for date values.
+For date values, the range slider does not have auto interval support. So, it is mandatory to set [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html?tabs=tabid-1#Syncfusion_Maui_Sliders_SliderBase_Interval), [`DateIntervalType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DateIntervalType), and [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DateFormat) for date values.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<sliders:SfRangeSlider Minimum="2010-01-01" 
-                       Maximum="2020-01-01" 
-                       RangeStart="2012-01-01" 
-                       RangeEnd="2018-01-01" >
- </sliders:SfRangeSlider>
+<rangeslider:SfRangeSlider Minimum="2010-01-01" 
+                           Maximum="2020-01-01" 
+                           RangeStart="2012-01-01" 
+                           RangeEnd="2018-01-01" 
+                           ShowLabels="True">
+</rangeslider:SfRangeSlider>
  
 {% endhighlight %}
 
@@ -44,6 +45,7 @@ For date values, the range slider does not have auto interval support. So, it is
  rangeSlider.Maximum = new DateTime(2020, 01, 01);
  rangeSlider.RangeStart = new DateTime(2012, 01, 01);
  rangeSlider.RangeEnd = new DateTime(2018, 01, 01);
+ rangeSlider.ShowLabels = true;
 
 {% endhighlight %}
 
@@ -51,55 +53,3 @@ For date values, the range slider does not have auto interval support. So, it is
 
 ![RangeSlider date label](images/basic-features/date-labels.png)
 
-## Handle ValueChanging, ValueChanged, ValueChangeStart, and ValueChangeEnd callbacks
-
-* ValueChangeStart -  Called when the user selecting a new value for the slider by tap/mouse down in the thumb.
-* ValueChanging - Called when the user is selecting a new value for the slider by dragging the thumb.
-* ValueChanged - Called when the user completed selecting a new value.
-* ValueChangeEnd - Called when the user stopped interacting with slider by tap/mouse up the thumb.
-
-{% tabs %}
-
-{% highlight xaml %}
-
- <sliders:SfSlider Minimum="2010-01-01" 
-                   Maximum="2020-01-01" 
-                   RangeStart="2012-01-01" 
-                   RangeEnd="2018-01-01" 
-                   ValueChangeStart="OnValueChangeStart" 
-                   ValueChanging="OnValueChanging" 
-                   ValueChanged="OnValueChanged" 
-                   ValueChangeEnd="OnValueChangeEnd">
- </sliders:SfSlider>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-{
-   SfRangeSlider rangeSlider = new SfRangeSlider();
-   rangeSlider.ValueChangeStart += OnValueChanged;
-   rangeSlider.ValueChanging += OnValueChanged;
-   rangeSlider.ValueChanged += OnValueChanged;
-   rangeSlider.ValueChangeEnd += OnValueChanged;
-}
-
-private void OnValueChangeStart(object sender, RangeSliderValueChangeStartEventArgs e)
-{
-}
-
-private void OnValueChanging(object sender, RangeSliderValueChangingEventArgs e)
-{
-}
-
-private void OnValueChanged(object sender, RangeSliderValueChangedEventArgs e)
-{
-}
-
-private void OnValueChangeEnd(object sender, RangeSliderValueChangeEndEventArgs e)
-{
-}
-
-{% endhighlight %}
-
-{% endtabs %}
