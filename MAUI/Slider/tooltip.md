@@ -34,7 +34,7 @@ slider.ToolTipShape = SliderToolTipShape.Rectangle;
 
 ![Slider tooltip](images/tooltip/tooltip.png)
 
-N> Learn how to customize tooltip text format using [Events](https://help.syncfusion.com/maui/slider/events).
+N> Refer [here](https://help.syncfusion.com/maui/slider/events) to customize tooltip text format through slider events.
 
 ## Tooltip label style
 

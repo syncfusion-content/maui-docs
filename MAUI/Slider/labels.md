@@ -152,7 +152,7 @@ slider.ShowTicks = true;
 
 ![Slider label placement](images/labels-and-dividers/label-placement.png)
 
-N> Learn how to customize label text format using [Events](https://help.syncfusion.com/maui/slider/events).
+N> Refer [here](https://help.syncfusion.com/maui/slider/events) to customize the label text format through slider events.
 
 ## Label style
 

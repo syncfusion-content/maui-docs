@@ -7,7 +7,7 @@ control: SfRangeSlider
 documentation: ug
 ---
 
-# Thumb and Thumb Overlay in .NET MAUI Range Slider (SfRangeSlider)
+# Thumb and Overlay in .NET MAUI Range Slider (SfRangeSlider)
 
 This section helps to learn about how to customize the thumb and thumb overlay in the range slider.
 
