@@ -7,7 +7,7 @@ control: SfSlider
 documentation: ug
 ---
 
-# Thumb and Thumb Overlay in .NET MAUI Slider (SfSlider)
+# Thumb and Overlay in .NET MAUI Slider (SfSlider)
 
 This section helps to learn about how to customize the thumb and thumb overlay in the slider.
 
