@@ -38,6 +38,8 @@ private void ListView_QueryItemSize(object sender, Syncfusion.Maui.ListView.Quer
 {% endhighlight %}
 {% endtabs %}
 
+![MAUI ListView QueryItemSize](Images/item-size-customization/maui-listview-query-item-size.jpg)
+
 ## AutoFit the items based on the content
 
 The `SfListView` allows dynamically adjusting size of items based on the content loaded in the [SfListView.ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate) by defining the [SfListView.AutoFitMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_AutoFitMode) property.
@@ -68,6 +70,8 @@ listView.AutoFitMode = AutoFitMode.Height;
 {% endhighlight %}
 {% endtabs %}
 
+![MAUI ListView Height](Images/item-size-customization/maui-listview-height.jpg)
+
 ### AutoFitMode as DynamicHeight
 
 AutoFit considers height of the item when `SfListView.Orientation` is set to `Vertical`. When `SfListView.Orientation` is set to `Horizontal`, it considers width of the item. The `SfListView.GridLayout` autofits all the items in a row and takes the maximum item height of the row and applies to all other items in the row.
@@ -85,6 +89,8 @@ AutoFit considers height of the item when `SfListView.Orientation` is set to `Ve
 listView.AutoFitMode = AutoFitMode.DynamicHeight; 
 {% endhighlight %}
 {% endtabs %}
+
+![MAUI ListView DynamicHeight](Images/item-size-customization/maui-listview-dynamic-height.jpg)
 
 ## Updating the list-view item size based on font at runtime
 
@@ -196,6 +202,8 @@ namespace SfListViewSample
 }       
 {% endhighlight %}
 {% endtabs %}
+
+![MAUI ListView Height](Images/item-size-customization/maui-listview-update-header-and-footer-size-based-on-font.jpg)
 
 ## Load images with autofit mode
 
