@@ -34,6 +34,8 @@ listView.SelectionGesture = TouchGesture.Hold;
 {% endhighlight %}
 {% endtabs %}
 
+![MAUI ListView UI selection](Images/selection/maui-listview-ui-selection.jpg)
+
 ## Programmatic selection
 
 When the [SfListView.SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionMode) is other than `None`, the item or items in the `SfListView` can be selected from the code by setting the [SfListView.SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectedItem), or adding items to the [SfListView.SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectedItems) property based on the `SelectionMode`.
@@ -172,6 +174,8 @@ The .NET MAUI ListView (SfListView) supports customizing the selection backgroun
 {% endhighlight %}
 {% endtabs %}
 
+![MAUI ListView selected item customization](Images/selection/maui-listview-selected-item-customization.jpg)
+
 ### Show checked circle on selected items 
 
 To customize the appearance of the selected item or items, use the appearance of [SfListView.SelectedItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectedItemTemplate). The following customizations should give you an idea to customize the appearance of selected items in the control.
@@ -250,6 +254,8 @@ listView.SelectedItemTemplate = new DataTemplate(() =>
 {% endhighlight %}
 {% endtabs %}
 
+![MAUI ListView show checked circle on selected items](Images/selection/maui-listview-show-checked-cirecle-on-selected-items.jpg)
+
 ## Selected item style
 
 ### Selection background
@@ -265,6 +271,8 @@ The `SfListView` allows you to change the selection background color for the sel
 listView.SelectionBackground = Colors.Khaki;
 {% endhighlight %}
 {% endtabs %}
+
+![MAUI ListView selection background](Images/selection/maui-listview-selection-background.jpg)
 
 ## Events
 
@@ -386,6 +394,8 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
+![MAUI ListView disable selection on particular item](Images/selection/maui-listview-disable-selection-on-particular-item.jpg)
+
 ### Automatically scroll to bring a selected item into the view
 
 To bring the [SfListView.SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectedItem) automatically into the view when it changes at runtime by calling the [ScrollToRowIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewLayout.html#Syncfusion_Maui_ListView_ListViewLayout_ScrollToRowIndex_System_Int32_Microsoft_Maui_Controls_ScrollToPosition_System_Boolean_) method.  
@@ -414,6 +424,8 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
+![MAUI ListView automatically scroll to bring a selected item into the view](Images/selection/maui-listview-automatically-scroll-to-bring-a-selected-item.jpg)
+
 ### Gets the index of selected item
 
 When performing selection, you can get the index of the selected item by using the [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionChanged) event from the [DataSource.DisplayItems](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.DisplayItems.html). 
@@ -437,6 +449,8 @@ public partial class MainPage : ContentPage
 }
 {% endhighlight %}
 {% endtabs %}
+
+![MAUI ListView gets the index of selected item](Images/selection/maui-listview-index-of-selected-item.jpg)
 
 ### Display selection when ItemTemplate contains image
 
