@@ -32,6 +32,9 @@ listView.ItemsLayout = new LinearLayout();
 {% endhighlight%}
 {% endtabs %}
 
+![MAUI ListView linear layout](Images/layouts/maui-listview-linear-layout.jpg)
+
+
 ## Grid Layout
 
 The grid layout arranges items in a predefined number of columns. Initialize the [GridLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.GridLayout.html), and assign it to the [SfListView.ItemsLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsLayout) property to load the `SfListView` in grid layout. 
@@ -57,6 +60,9 @@ listView.ItemsLayout = new GridLayout() { SpanCount = 2 };
 {% endhighlight%}
 {% endtabs %}
 
+![MAUI ListView grid layout](Images/layouts/maui-listview-grid-layout.jpg)
+
+
 ## Change span count based on screen size
 
 In the `SfListView`, the [GridLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.GridLayout.html) allows you to change the `SpanCount` based on the view size of application with orientation in either portrait or landscape mode.
@@ -65,17 +71,16 @@ In the `SfListView`, the [GridLayout](https://help.syncfusion.com/cr/maui/Syncfu
 {% highlight c# %}
 public partial class GridLayoutPage : ContentPage
 {
-  protected override void OnSizeAllocated(double width, double height) 
-  { 
-    base.OnSizeAllocated(width, height); 
- 
-    if (width > 0 && pageWidth != width) 
-    {       
-        var size = Application.Current.MainPage.Width / listView.ItemSize; 
-        gridLayout.SpanCount = (int)size; 
-        listView.LayoutManager = gridLayout; 
-     } 
-  }
+  this.PropertyChanged += GridLayoutPage_PropertyChanged;
+   private void GridLayoutPage_PropertyChanged(object sender, PropertyChangedEventArgs e)
+   {
+      if (e.PropertyName == "Width")
+       {
+          var size = Application.Current.MainPage.Width / listView.ItemSize;
+          gridLayout.SpanCount = (int)size;
+          listView.ItemsLayout = gridLayout;
+       }
+    }     
 }
 {% endhighlight %}
 {% endtabs %}
