@@ -74,7 +74,7 @@ listView.AutoFitMode = AutoFitMode.Height;
 
 ### AutoFitMode as DynamicHeight
 
-AutoFit considers height of the item when `SfListView.Orientation` is set to `Vertical`. When `SfListView.Orientation` is set to `Horizontal`, it considers width of the item. The `SfListView.GridLayout` autofits all the items in a row and takes the maximum item height of the row and applies to all other items in the row.
+AutoFit considers height of the item when `SfListView.Orientation` is set to `Vertical`. When `SfListView.Orientation` is set to `Horizontal`, it considers width of the item. The `SfListView.GridLayout` autofit all the items in a row and takes the maximum item height of the row and applies to all other items in the row.
 
 {% tabs %}
 {% highlight xaml %}
