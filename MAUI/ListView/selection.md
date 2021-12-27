@@ -73,12 +73,23 @@ public class SelectionViewModel : INotifyPropertyChanged
     private async void GenerateSource()
     {
         var random = new Random();
+        for (int i = 0; i < SongsNames.Count(); i++)
+        {
+            var info = new MusicInfo()
+            {
+                SongTitle = SongsNames[i],
+                SongAuther = SongAuthers[i],
+                SongSize = random.Next(50, 600).ToString() + "." + random.Next(1, 10) / 2 + "KB",
+                SongThumbnail = ImageSource.FromResource("ListViewMaui.Images.SongThumbnail.png"),
+            };
+            musicInfo.Add(info);
+        }
         SelectedItems.Add(MusicInfo[0]);
     }
 }
 
-listView.SelectedItems.Add (viewModel.Items [4]);
-listView.SelectedItems.Add (viewModel.Items[5]);
+listView.SelectedItems.Add (viewModel.MusicInfo [4]);
+listView.SelectedItems.Add (viewModel.MusicInfo[5]);
 {% endhighlight %}
 {% endtabs %}
 
@@ -400,7 +411,7 @@ public partial class MainPage : ContentPage
 
 To bring the [SfListView.SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectedItem) automatically into the view when it changes at runtime by calling the [ScrollToRowIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewLayout.html#Syncfusion_Maui_ListView_ListViewLayout_ScrollToRowIndex_System_Int32_Microsoft_Maui_Controls_ScrollToPosition_System_Boolean_) method.  
 
-In linear layout, you can get the row index of `SfListView.SelectedItem` and determine whether or not header and group header are used. 
+In linear layout, you can get the row index of `SfListView.SelectedItem` and  resolve if header and group header are used.
 
 {% tabs %}
 {% highlight c# %}
@@ -417,6 +428,8 @@ public partial class MainPage : ContentPage
     if (e.PropertyName == "SelectedItem")
     {
        var selectedItemIndex = listView.DataSource.DisplayItems.IndexOf(listView.SelectedItem);
+       selectedItemIndex += (listView.HeaderTemplate != null && !listView.IsStickyHeader || !listView.IsStickyGroupHeader) ? 1 : 0;
+       selectedItemIndex -= (listView.GroupHeaderTemplate != null && listView.IsStickyGroupHeader) ? 1 : 0;
        (listView.LayoutManager as LinearLayout).ScrollToRowIndex(selectedItemIndex);
     }
   }
@@ -449,8 +462,6 @@ public partial class MainPage : ContentPage
 }
 {% endhighlight %}
 {% endtabs %}
-
-![MAUI ListView gets the index of selected item](Images/selection/maui-listview-index-of-selected-item.jpg)
 
 ### Display selection when ItemTemplate contains image
 
