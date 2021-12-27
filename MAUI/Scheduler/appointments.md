@@ -804,3 +804,26 @@ this.Scheduler.AppointmentTextStyle = appointmentTextStyle;
 
 {% endhighlight %}  
 {% endtabs %}
+
+## Appointment selection background
+
+The selection view of appointment can be customized by using the [SelectedAppointmentBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_SelectedAppointmentBackground) property in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
+
+{% tabs %}  
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" SelectedAppointmentBackground="Orange"/>
+
+{% endhighlight %}
+{% highlight c# %}
+
+this.Scheduler.SelectedCellBackground = Brush.Orange;
+
+{% endhighlight %}  
+{% endtabs %}
+
+N>
+
+[View scheduler appointment sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/GettingStarted)
+
+[View business object sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/BusinessObject)
