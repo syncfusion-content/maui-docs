@@ -870,9 +870,11 @@ appointments.Add(new SchedulerAppointment()
     Subject = "Meeting",
     StartTime = DateTime.Now,
     EndTime = DateTime.Now.AddHours(1),
-    StartTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Asia/Kolkata")
+    StartTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Asia/Kolkata"),
     EndTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Asia/Kolkata")
 });	
+
+this.Scheduler.AppointmentsSource = appointments;
 
 {% endhighlight %}
 {% endtabs %}
