@@ -11,7 +11,7 @@ documentation: ug
 
 # Time Zone in MAUI Scheduler (SfScheduler)
 
-The [MAUI Scheduler](https://www.syncfusion.com/maui-controls/maui-scheduler) allows to create appointments in various time zones and display them in the respective time zone or any other time zone. Use the time zone in the following four different ways:
+The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) allows to create appointments in various time zones and display them in the respective time zone or any other time zone. Use the time zone in the following four different ways:
 
 * Create appointments in different time zones.
 * Display appointments based on the client’s time zone.
