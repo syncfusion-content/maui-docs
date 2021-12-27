@@ -1,15 +1,13 @@
 ---
-
 layout: post
 title: Time Zone in .NET MAUI Scheduler control | Syncfusion
 description: Learn here all about Time Zone support in Syncfusion MAUI Scheduler (SfScheduler) control, it's elements and more.
 platform: maui
 control: SfScheduler
 documentation: ug
-
 ---
 
-# Time Zone in MAUI Scheduler (SfScheduler)
+# Time Zone in .NET MAUI Scheduler (SfScheduler)
 
 The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) allows to create appointments in various time zones and display them in the respective time zone or any other time zone. Use the time zone in the following four different ways:
 
@@ -874,7 +872,7 @@ appointments.Add(new SchedulerAppointment()
     EndTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Asia/Kolkata")
 });	
 
-this.Scheduler.AppointmentsSource = appointments;
+this.scheduler.AppointmentsSource = appointments;
 
 {% endhighlight %}
 {% endtabs %}
