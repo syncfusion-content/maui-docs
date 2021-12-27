@@ -895,7 +895,7 @@ Set the specific time zone to schedule using the [TimeZone](https://help.syncfus
 {% tabs %}
 {% highlight xaml %}
 
-<scheduler:SfScheduler x:Name="scheduler" TimeZone="{Binding timeZoneInfo}"/>
+<scheduler:SfScheduler x:Name="scheduler" TimeZone="{Binding SchedulerTimeZoneInfo}"/>
 
 {% endhighlight %}
 {% highlight c#%}
@@ -904,10 +904,10 @@ public class SchedulerViewModel
 {
     public SchedulerViewModel()
     {
-        this.timeZoneInfo = TimeZoneInfo.FindSystemTimeZoneById("Australia/Brisbane");
+        this.SchedulerTimeZoneInfo = TimeZoneInfo.FindSystemTimeZoneById("Australia/Brisbane");
     }
 
-    public TimeZoneInfo timeZoneInfo { get; set; }
+    public TimeZoneInfo SchedulerTimeZoneInfo { get; set; }
 }
 
 {% endhighlight %}
