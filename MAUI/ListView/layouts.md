@@ -13,13 +13,13 @@ The `SfListView` supports different layouts such as linear and grid layouts. The
 
 ## Linear Layout
 
-Items in a single column are arranged in a linear layout arrange. Initialize the [LinearLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.LinearLayout.html), and assign it to the [SfListView.ItemsLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsLayout) property to load the `SfListView` in linear layout. It is the default layout.
+The linear layout arranges the items linearly in a single column vertically or a single row horizontally. Initialize the [LinearLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.LinearLayout.html), and assign it to the [SfListView.ItemsLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsLayout) property to load the `SfListView` in linear layout. It is the default layout.
 
 {% tabs %}
 {% highlight xaml %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
   <syncfusion:SfListView x:Name="listView" 
-                    ItemsSource="{Binding GalleryInfo}"
+                    ItemsSource="{Binding CategoryInfo}"
                     ItemSize="100">
       <syncfusion:SfListView.ItemsLayout>
         <syncfusion:LinearLayout />
