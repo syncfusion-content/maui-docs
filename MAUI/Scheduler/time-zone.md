@@ -10,7 +10,9 @@ documentation: ug
 ---
 
 # Time Zone in MAUI Scheduler (SfScheduler)
+
 The [MAUI Scheduler](https://www.syncfusion.com/maui-controls/maui-scheduler) allows to create appointments in various time zones and display them in the respective time zone or any other time zone. Use the time zone in the following four different ways:
+
 * Create appointments in different time zones.
 * Display appointments based on the client’s time zone.
 * Display appointments based on scheduler time zone.
@@ -849,12 +851,19 @@ UTC + 14:00
 </table>
 
 ## Create appointments in different time zones
-Create appointments at different time zones using the [StartTimeZone](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_StartTimeZone) and [EndTimeZone](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_EndTimeZone) properties of [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html). An appointment’s start time and end time are calculated based on the given time zone information for the start time and end time. Set different time zones to the StartTimeZone and EndTimeZone properties.
 
-Use the [StartTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_StartTime) and [EndTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_EndTime) properties of SchedulerAppointment to get the exact start time and end time of an appointment. By using the [ActualStartTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_ActualStartTime) and [ActualEndTime](Syncfusion_Maui_Scheduler_SchedulerAppointment_ActualEndTime) properties, get the exact appointment rendering time.
+Create appointments at different time zones using the [StartTimeZone](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_StartTimeZone) and [EndTimeZone](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_EndTimeZone) properties of [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html). An appointment’s start time and end time are calculated based on the given time zone information for the start time and end time. Set different time zones to the `StartTimeZone` and `EndTimeZone` properties.
 
-{% tabs %}	
+Use the [StartTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_StartTime) and [EndTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_EndTime) properties of `SchedulerAppointment` to get the exact start time and end time of an appointment. By using the [ActualStartTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_ActualStartTime) and [ActualEndTime](Syncfusion_Maui_Scheduler_SchedulerAppointment_ActualEndTime) properties, get the exact appointment rendering time.
+
+{% tabs %}
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="scheduler" />
+
+{% endhighlight %}
 {% highlight c# %}
+
 var appointments = new ObservableCollection<SchedulerAppointment>();
 appointments.Add(new SchedulerAppointment()
 {
@@ -863,7 +872,8 @@ appointments.Add(new SchedulerAppointment()
     EndTime = DateTime.Now.AddHours(1),
     StartTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Asia/Kolkata")
     EndTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Asia/Kolkata")
-});		  
+});	
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -875,9 +885,11 @@ appointments.Add(new SchedulerAppointment()
 * Use [TimeZone](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_TimeZone) for custom appointments by mapping the [StartTimeZone](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentMapping_StartTimeZone) and [EndTimeZone](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentMapping_EndTimeZone) custom properties of [AppointmentMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html).
 
 ## Display Appointments based on client’s  time zone
-Display the appointments based on the client’s local time zone in scheduler. For example, consider a scenario that you are in North Carolina and you want to set up a meeting at 10 A.M. on North Carolina time. You have colleagues in London and Chennai, and they also need to participate. The time for this meeting will be 3 P.M. (15:00) in London and 5.30 A.M. in Chennai. When each view your Scheduler, you need to see the appointment displayed relative to your local time zones 5.30 A.M., 10 A.M., and 3 P.M., respectively. It can be achieved by setting schedule time zone to default (it will consider your device’s local time zone as schedule time zone) and appointment’s time zone to `Eastern Standard Time (North Carolina)` [as you are in North Carolina and it's time zone is Eastern Standard Time].
+
+Display the appointments based on the client’s local time zone in scheduler. For example, consider a scenario that you are in North Carolina and you want to set up a meeting at 10 A.M. on North Carolina time. You have colleagues in London and Chennai, and they also need to participate. The time for this meeting will be 3 P.M. (15:00) in London and 5.30 A.M. in Chennai. When each view your Scheduler, you need to see the appointment displayed relative to your local time zones 5.30 A.M., 10 A.M., and 3 P.M., respectively. It can be achieved by setting schedule time zone to default (it will consider your device’s local time zone as schedule time zone) and appointment’s time zone to `North Carolina` region [as you are in North Carolina and it's time zone is Eastern Standard Time].
 
 ## Display appointments based on Scheduler time zone
+
 Set the specific time zone to schedule using the [TimeZone](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_TimeZone) property of scheduler. On this scenario, the appointments will be displayed in UTC time when the `StartTimeZone` and `EndTimeZone` properties of `SchedulerAppointment` are set to null. The appointments will be displayed in UTC time based on the given scheduler time zone.
 
 {% tabs %}
