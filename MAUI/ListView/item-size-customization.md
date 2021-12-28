@@ -105,25 +105,31 @@ listView.AutoFitMode = AutoFitMode.DynamicHeight;
         <RowDefinition Height="*"/>
     </Grid.RowDefinitions>
     <Button Text="Modify FontSize" Clicked="Button_Clicked"/>
-    <syncfusion:SfListView x:Name="listView" 
-                ItemsSource="{Binding Items}"
+    <syncfusion:SfListView x:Name="listView"  
+                ItemSpacing="2"
+                GridLayout.Row="1"
+                ItemsSource="{Binding Items}" 
                 BackgroundColor="#FFE8E8EC"
                 AutoFitMode="DynamicHeight"
                 ItemSize="60">
         <syncfusion:SfListView.ItemTemplate>
             <DataTemplate>
                 <Grid x:Name="grid" RowSpacing="1">
-                    <Label LineBreakMode="NoWrap"
-                    TextColor="#474747"
-                    FontSize="{Binding BindingContext.FontSize, Source={x:Reference Name=listView}}"
-                    Text="{Binding ContactName}">
-                    </Label>
-                    <Label Grid.Row="1" 
+                    <Grid Grid.Column="0">
+                        <Image HeightRequest="45" Margin="5,0,0,0" WidthRequest="45" Source="{Binding ContactImage}" VerticalOptions="Center" HorizontalOptions="Center" />
+                    </Grid>
+                    <Grid Grid.Column="1" RowSpacing="1" Padding="5" VerticalOptions="Center">
+                        <Label LineBreakMode="NoWrap"
+                            TextColor="#474747"
+                            FontSize="{Binding BindingContext.FontSize, Source={x:Reference Name=listView}}"
+                            Text="{Binding ContactName}">
+                        </Label>
+                        <Label Grid.Row="1" 
                              FontSize="13"
                              TextColor="#474747"
                              LineBreakMode="NoWrap"
-                             Text="{Binding ContactNumber}">
-
+                             Text="{Binding CallTime}"/>
+                    </Grid>
                 </Grid>
             </DataTemplate>
         </syncfusion:SfListView.ItemTemplate>
@@ -156,7 +162,7 @@ private void Button_Clicked(object sender, EventArgs e)
     <Button Text="Change FontSize" Command="{Binding ResizeHeaderFooterCommand}" CommandParameter="{x:Reference listView}"/>
     <syncfusion:SfListView x:Name="listView" 
                 ItemsSource="{Binding Contacts}"
-                BackgroundColor="#FFE8E8EC"
+                BackgroundColor="White"
                 AutoFitMode="Height">
                 <syncfusion:SfListView.HeaderTemplate>
                     <DataTemplate>
@@ -172,8 +178,8 @@ private void Button_Clicked(object sender, EventArgs e)
                     <DataTemplate>
                         <ViewCell>
                             <Grid >
-                                <Label Text="Contacts Count" FontSize="{Binding BindingContext.FontSize, Source={x:Reference listView}}"/>
-                                <Label Text="{Binding Contacts.Count}" FontSize="{Binding BindingContext.FontSize, Source={x:Reference listView}}"/>
+                                <Label Text="{Binding contactsinfo.Count}" HorizontalOptions="Start" TextColor="Black" Grid.Column="1" FontSize="{Binding BindingContext.FontSize, Source={x:Reference listView}}"/>
+                                <Label Grid.Column="0" HorizontalOptions="End" Text="Contacts Count" TextColor="Black" FontSize="{Binding BindingContext.FontSize, Source={x:Reference listView}}"/>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
