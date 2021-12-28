@@ -41,6 +41,8 @@ this.Scheduler.AppointmentsSource = appointment;
 {% endhighlight %}
 {% endtabs %}
 
+![scheduler-appointment-in-maui-scheduler](images/appointments/scheduler-appointment-in-maui-scheduler.png)
+
 N> 
 * In the Scheduler, every appointment can be arranged based on its start time and duration for normal appointments in a day, week, and workweek view.
 *  Whenever a timeline is viewed, the appointments (all day, span, and normal) are ordered and rendered based on the appointment start time and time duration of the appointment. This is followed by `IsSpanned,` `IsAllDay,` and normal appointments.
@@ -171,6 +173,8 @@ this.Scheduler.AppointmentsSource = Meetings;
 {% endhighlight %}
 {% endtabs%}
 
+![business-appointment-event-in-maui-scheduler](images/appointments/business-appointment-event-in-maui-scheduler.png)
+
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/BusinessObject)
 
 ## Spanned appointments
@@ -217,6 +221,8 @@ this.Scheduler.AppointmentsSource = Meetings;
 {% endhighlight %}
 {% endtabs%}
 
+![spanned-appointment-in-maui-scheduler](images/appointments/spanned-appointment-in-maui-scheduler.png)
+
 ## All day appointments
 
 Appointments that are scheduled for a whole day are known as All-Day Appointments. The [IsAllDay](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_IsAllDay) property of the [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html) can be used to set this property. Appointments that last for a full 24 hours (exact 24 hours) will be considered as all-day appointments without setting the `IsAllDay` property.
@@ -249,6 +255,8 @@ this.Scheduler.AppointmentsSource = appointment;
 
 {% endhighlight %}
 {% endtabs%}
+
+![all-day-appointment-in-maui-scheduler](images/appointments/all-day-appointment-in-maui-scheduler.png)
 
 N> 
 For example: From 12/13/2021 12:00AM to 12/14/2021 12:00AM.
@@ -318,6 +326,8 @@ this.Scheduler.AppointmentsSource = appointment;
 
 {% endhighlight %}
 {% endtabs%}
+
+![recurrence-scheduler-appointment-in-maui-scheduler](images/appointments/recurrence-scheduler-appointment-in-maui-scheduler.png)
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/RecurringAppointment/SchedulerAppointment)
 
@@ -425,6 +435,8 @@ this.Scheduler.AppointmentsSource = Meetings;
 {% endhighlight %}
 {% endtabs%}
 
+![business-object-recurring-appointment-in-maui-scheduler](images/appointments/business-object-recurring-appointment-in-maui-scheduler.png)
+
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/RecurringAppointment/BusinessObject)
 
 ### How to get the recurrence editor field values from RRULE?
@@ -525,6 +537,8 @@ this.Scheduler.AppointmentsSource = appointment;
 {% endhighlight %}
 {% endtabs %}
 
+![adding-exception-dates-to-recurrence-pattern-scheduler-appointment-in-maui-scheduler](images/appointments/adding-exception-dates-to-recurrence-pattern-scheduler-appointment-in-maui-scheduler.png)
+
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/RecursiveExceptionAppointment/SchedulerAppointment)
 
 ### Add exception appointment to the recurrence pattern
@@ -584,6 +598,8 @@ this.Scheduler.AppointmentsSource = appointment;
 
 {% endhighlight %}
 {% endtabs %}
+
+![adding-exception-to-the-recurrence-pattern-scheduler-appointment-in-maui-scheduler](images/appointments/adding-exception-to-the-recurrence-pattern-scheduler-appointment-in-maui-scheduler.png)
 
 N>
 * The `RecurrenceId` of an exception appointment and the `Id` of its pattern appointment should have the same value.
@@ -686,6 +702,8 @@ this.Scheduler.AppointmentsSource = Meetings;
 
 {% endhighlight %}
 {% endtabs %}
+
+![adding-exception-dates-to-recurrence-pattern-custom-appointment-in-maui-scheduler](images/appointments/adding-exception-dates-to-recurrence-pattern-custom-appointment-in-maui-scheduler.png)
 
 N> Exception dates should be Universal Time Coordinates (UTC) time zone.
 
@@ -804,6 +822,8 @@ this.Scheduler.AppointmentTextStyle = appointmentTextStyle;
 
 {% endhighlight %}  
 {% endtabs %}
+
+![customize-appointment-text-style-appearence-in-maui-scheduler](images/appointments/customize-appointment-text-style-appearence-in-maui-scheduler.png)
 
 ## Appointment selection background
 

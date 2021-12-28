@@ -46,10 +46,20 @@ To localize the `Scheduler` based on `CurrentUICulture` using `resource` files, 
 
    2. Add the default resource file of `Scheduler` into `Resources` folder.
 
+   ![addition-of-default-resource-file-of-maui-Scheduler-into-resources-folder](images/localization/addition-of-default-resource-file-of-maui-Scheduler-into-resources-folder.png)
+
    3. Right-click on the `Resources` folder, select `Add` and then `NewItem.`
 
    4. In Add New Item wizard, select the Resource File option and name the filename as `SfScheduler.<culture name>.resx.` For example, give the name as `SfScheduler.fr-FR.resx` for French culture.
 
    5. The culture name indicates the name of the language and country.
 
-   6. Add the Name/Value pair in Resource Designer of `SfScheduler.fr-FR.resx` file and change its corresponding value to corresponding culture.
+   ![shows-the-name-of-resource-file-to-be-added-for-maui-scheduler](images/localization/shows-the-name-of-resource-file-to-be-added-for-maui-scheduler.png)
+
+   6. Now, select `Add` option to add the resource file in **Resources** folder.
+
+   ![shows-the-added-resource-file-for-french-language-in-maui-scheduler](images/localization/shows-the-added-resource-file-for-french-language-in-maui-scheduler.png)
+
+   7. Add the Name/Value pair in Resource Designer of `SfScheduler.fr-FR.resx` file and change its corresponding value to corresponding culture.
+
+   ![shows-the-added-resource-file-name-value-pair-in-the-resource-designer-in-maui-scheduler](images/localization/shows-the-added-resource-file-name-value-pair-in-the-resource-designer-in-maui-scheduler.png)
