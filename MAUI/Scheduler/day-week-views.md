@@ -35,6 +35,8 @@ this.Scheduler.DaysViewSettings.TimeInterval = new TimeSpan(2, 0, 0);
 {% endhighlight %}
 {% endtabs %}
 
+![change-time-interval-in-maui-scheduler](images/day-week-views/change-time-interval-in-maui-scheduler.png)
+
 N> To modify the `TimeInterval` value (in minutes), change the time labels format by setting the `TimeRulerFormat` value to hh:mm.
 
 ## Change time interval height
@@ -60,6 +62,8 @@ this.Scheduler.DaysViewSettings.TimeIntervalHeight = 120;
 
 {% endhighlight %}
 {% endtabs %}
+
+![change-time-interval-height-in-maui-scheduler](images/day-week-views/change-time-interval-height-in-maui-scheduler.png)
 
 ## Flexible working days
 
@@ -89,6 +93,8 @@ this.Scheduler.DaysViewSettings.NonWorkingDays = SchedulerWeekDays.Monday | Sche
 
 N> The `workweek` view displays exactly the defined working days on Scheduler control, whereas other views displays all the days.
 
+![flexible-working-days-in-maui-scheduler](images/day-week-views/flexible-working-days-in-maui-scheduler.png)
+
 ## Flexible working hours
 
 The default values for [StartHour](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotViewSettings.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotViewSettings_StartHour) and [EndHour](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotViewSettings.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotViewSettings_EndHour) are `0` and `24` respectively, to show all the time slots for a day, week, or workweek view. These properties may be set to show only the required time periods in [DaysViewSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDaysViewSettings.html). The `StartHour` and `EndHour` in time duration can be set to show the required time duration in minutes.
@@ -115,6 +121,8 @@ this.Scheduler.DaysViewSettings.EndHour = 16;
 {% endhighlight %}
 {% endtabs %}
 
+![flexible-working-hours-in-maui-scheduler](images/day-week-views/flexible-working-hours-in-maui-scheduler.png)
+
 N>
 * The `NonWorkingDays` property will be applicable only for `workweek` and `Timeline workweek` views only. It is not applicable for the remaining views.
 * No need to specify the decimal point values for `StartHour` and `EndHour`, if you do not want to set the minutes.
@@ -122,9 +130,13 @@ N>
 * If a custom timeInterval is given, then the number of time slots calculated based on the given `TimeInterval` should result in an integer value (total minutes % timeInterval = 0), otherwise the next immediate time interval that results in integer value when dividing total minutes of a day will be considered. For example, if TimeInterval=2 Hours 15 minutes and total minutes = 1440 (24 Hours per day), then the `TimeInterval` will be changed to ‘144’ (1440%144=0) by considering (total minutes % TimeInterval = 0), it will return integer value for time slots rendering.
 * If the custom `StartHour` and `EndHour` are given, then the number of time slots calculated based on the given `StartHour` and `EndHour` should result in integer value, otherwise the next immediate `TimeInterval` will be considered until the result is integer value. For example, if the `StartHour` is 9 (09:00AM), `EndHour` is 18.25 (06:15 PM), `TimeInterval` is 30 minutes, and total minutes = 555 ((18.25-9)*60), then the `TimeInterval` will be changed to ’37 minutes’ (555%37=0) by considering (total minutes % timeInterval = 0) it will return the integer value for time slots rendering.
 
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/HighlightWorkingHour)
+
 ## Special time regions
 
 The user interaction such as selection and highlights specific regions of day, week, and workweek views can be restricted by adding the [TimeRegions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotViewSettings.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotViewSettings_TimeRegions) property of the [DaysViewSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDaysViewSettings.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html). Set the [StartTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_StartTime) and [EndTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_EndTime) properties of `TimeRegions` to create a specialTimeRegion. Use the [TimeZone](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeRegion.html#Syncfusion_Maui_Scheduler_SchedulerTimeRegion_TimeZone) property to set the specific timezone for start and end time of `TimeRegions.`
+
+![special-time-region-in-timeslots-views-in-maui-scheduler](images/day-week-views/special-time-region-in-timeslots-views-in-maui-scheduler.png)
 
 ### Selection restriction in timeslots
 
@@ -160,6 +172,8 @@ private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 
 {% endhighlight %}
 {% endtabs %}
+
+![time-region-selection-restriction-in-timeslots-views-in-scheduler](images/day-week-views/time-region-selection-restriction-in-timeslots-views-in-scheduler.png)
 
 N> This property only restricts the interaction on region and it does not restrict the following:
 * The Programmatic selection (if the user updates the selected date value dynamically).
@@ -203,6 +217,10 @@ private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 {% endhighlight %}
 {% endtabs %}
 
+![recurring-time-region-selection-restriction-in-timeslots-views-in-maui-scheduler](images/day-week-views/recurring-time-region-selection-restriction-in-timeslots-views-in-maui-scheduler.png)
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/HighlightNonWorkingHour)
+
 ### Recurrence exception dates
 
 Any of occurrence that is an exception from the recurrence pattern time region can be deleted by using the [RecurrenceExceptionDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_RecurrenceExceptionDates) property of [TimeRegion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeRegion.html). The deleted occurrence date will be considered as a recurrence exception date.
@@ -243,6 +261,8 @@ private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 
 {% endhighlight %}
 {% endtabs %}
+
+![recurring-exception-time-region-selection-restriction-in-timeslots-views-in-maui-scheduler](images/day-week-views/recurring-exception-time-region-selection-restriction-in-timeslots-views-in-maui-scheduler.png)
 
 ### Customize special time region appearance
 
@@ -287,6 +307,8 @@ private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 {% endhighlight %}
 {% endtabs %}
 
+![time-region-appearence-customization-in-timeslots-views-in-maui-scheduler](images/day-week-views/time-region-appearence-customization-in-timeslots-views-in-maui-scheduler.png)
+
 ## Show current time indicator
 
 You can show or hide the current time indicator in day, week, and workweek views of [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) by using the [ShowCurrentTimeIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotViewSettings.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotViewSettings_ShowCurrentTimeIndicator) property of [DaysViewSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDaysViewSettings.html), and by default, its `true.`
@@ -310,6 +332,8 @@ this.Scheduler.DaysViewSettings.ShowCurrentTimeIndicator = false;
 
 {% endhighlight %}
 {% endtabs %}
+
+![show-or-hide-current-time-indicator-in-timeslots-views-in-maui-scheduler](images/day-week-views/show-or-hide-current-time-indicator-in-timeslots-views-in-maui-scheduler.png)
 
 ### Customize current time indicator appearance
 
@@ -362,6 +386,8 @@ this.Scheduler.DaysViewSettings.TimeRulerWidth = 120;
 {% endhighlight %}
 {% endtabs %}
 
+![change-time-ruler-width-in-maui-scheduler](images/day-week-views/change-time-ruler-width-in-maui-scheduler.png)
+
 ## Minimum appointment duration
 
 The [MinimumAppointmentDuration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotViewSettings.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotViewSettings_MinimumAppointmentDuration) property allows to set an arbitrary height to appointments which have a minimum duration in the day, week, and workweek views so that the subject can be readable.
@@ -386,11 +412,19 @@ this.Scheduler.DaysViewSettings.MinimumAppointmentDuration = new TimeSpan(0, 30,
 {% endhighlight %}
 {% endtabs %}
 
+![change-minimum-appointment-duration-in-maui-scheduler](images/day-week-views/change-minimum-appointment-duration-in-maui-scheduler.png)
+
 N>
 *  The `MinimumAppointmentDuration` value will be set when an appointment duration value is lesser than `MinimumAppointmentDuration.`
 * The appointment duration value will be set when the appointment duration value is greater than the `MinimumAppointmentDuration.`
 *  The `TimeInterval` value will be set when the `MinimumAppointmentDuration` is greater than the `TimeInterval` with lesser appointment duration.
 * The all-day appointment does not support `MinimumAppointmentDuration.`
+
+N>
+
+[View scheduler appointment sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/GettingStarted)
+
+[View business object sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/BusinessObject)
 
 ## View header text formatting
 
@@ -412,6 +446,8 @@ this.Scheduler.DaysViewSettings.ViewHeaderSettings.DateFormat = "dd";
 
 {% endhighlight %}
 {% endtabs %}
+
+![change-view-header-text-formatting-in-maui-scheduler](images/day-week-views/change-view-header-text-formatting-in-maui-scheduler.png)
 
 ### Customize view header text style
 
@@ -447,6 +483,8 @@ this.Scheduler.DaysViewSettings.ViewHeaderSettings.Background = Brush.LightGreen
 {% endhighlight %}
 {% endtabs %}
 
+![customize-view-header-text-style-in-maui-scheduler](images/day-week-views/customize-view-header-text-style-in-maui-scheduler.png)
+
 ## Time text formatting
 
 The format for the labels mentioning the time can be customized by setting the [TimeFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotViewSettings.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotViewSettings_TimeFormat) property of [DayViewSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDaysViewSettings.html) in the Scheduler.
@@ -466,6 +504,8 @@ this.Scheduler.DaysViewSettings.TimeFormat = "hh:mm";
 
 {% endhighlight %}
 {% endtabs %}
+
+![change-time-ruler-text-formatting-in-maui-scheduler](images/day-week-views/change-time-ruler-text-formatting-in-maui-scheduler.png)
 
 N>
 * By default, the scheduler time text format is `hh:mm tt.`
@@ -495,3 +535,5 @@ this.Scheduler.DaysViewSettings.TimeRulerTextStyle = timeRulerTextStyle;
 
 {% endhighlight %}
 {% endtabs %}
+
+![customize-time-ruler-text-style-in-maui-scheduler](images/day-week-views/customize-time-ruler-text-style-in-maui-scheduler.png)

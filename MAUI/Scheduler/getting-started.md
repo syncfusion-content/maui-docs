@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI Scheduler (SfScheduler)
 
-This section explains how to populate the appointments to the Scheduler as well as the essential aspects for getting started with the Scheduler and also provides a walk-through to configure the .NET MAUI Scheduler control in a real-time scenario.
+This section explains how to populate the appointments to the Scheduler as well as the essential aspects for getting started with the Scheduler and also provides a walk-through to configure the [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) control in a real-time scenario.
 
 ## Creating an application using the .NET MAUI Scheduler
 
@@ -97,6 +97,8 @@ this.Scheduler.View = SchedulerView.Month;
 {% endhighlight %}
 {% endtabs %}
 
+![change-different-scheduler-views-in-maui-scheduler](images/getting-started/change-different-scheduler-views-in-maui-scheduler.png)
+
 ## Appointments
 
 The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) has a built-in capability to handle the appointment arrangement internally based on the [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html) collections. Allocate the collection generated to the Appointments property.
@@ -120,7 +122,7 @@ var appointment = new ObservableCollection<SchedulerAppointment>();
 appointment.Add(new SchedulerAppointment()
 {
     StartTime = DateTime.Today.AddHours(9),
-    EndTime = DateTime.Today.AddHours(10),
+    EndTime = DateTime.Today.AddHours(11),
     Subject = "Client Meeting",
     Location = "Hutchison road",
 });
@@ -130,6 +132,10 @@ this.Scheduler.AppointmentsSource = appointment;
 
 {% endhighlight %}
 {% endtabs %}
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/GettingStarted)
+
+![adding-scheduler-appointments-in-maui-scheduler](images/getting-started/adding-scheduler-appointments-in-maui-scheduler.png)
 
 ### Events/Appointments data mapping
 
@@ -393,6 +399,8 @@ this.Scheduler.AppointmentsSource = viewModel.Events;
 {% endhighlight %}
 {% endtabs %}
 
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/BusinessObject)
+
 ## Change first day of week
 
 The scheduler allows customization on the first day of the week with the [FirstDayOfWeek](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_FirstDayOfWeek) property. The Scheduler will default to `Sunday` as the first day of the week.
@@ -412,6 +420,8 @@ this.Scheduler.FirstDayOfWeek = DayOfWeek.Tuesday;
 {% endhighlight %}  
 {% endtabs %}  
 
+![change-first-day-of-week-in-maui-scheduler](images/getting-started/change-first-day-of-week-in-maui-scheduler.png)
+
 ## Cell selection background
 
 The selection view of Scheduler can be customized by using the [SelectedCellBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_SelectedCellBackground) property in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
@@ -428,6 +438,8 @@ this.Scheduler.SelectedCellBackground = Brush.Orange;
 
 {% endhighlight %}  
 {% endtabs %}  
+
+![change-cell-selection-background-in-maui-scheduler](images/getting-started/change-cell-selection-background-in-maui-scheduler.png)
 
 ## Today highlight brush
 
@@ -446,6 +458,8 @@ this.Scheduler.TodayHighlightBrush = Brush.Orange;
 {% endhighlight %}  
 {% endtabs %} 
 
+![change-today-highlight-brush-in-maui-scheduler](images/getting-started/change-today-highlight-brush-in-maui-scheduler.png)
+
 ## Cell border brush
 
 The vertical and horizontal line color of the Scheduler can be customized by using the [CellBorderBrush](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_CellBorderBrush) property in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
@@ -462,6 +476,8 @@ this.Scheduler.CellBorderBrush = Brush.Orange;
 
 {% endhighlight %}  
 {% endtabs %} 
+
+![change-cell-border-brush-in-maui-scheduler](images/getting-started/change-cell-border-brush-in-maui-scheduler.png)
 
 ## Background color
 
@@ -497,6 +513,8 @@ this.Scheduler.ShowNavigationArrows = false;
 {% endhighlight %}  
 {% endtabs %}
 
+![show-or-hide-navigation-arrow-in-maui-scheduler](images/getting-started/show-or-hide-navigation-arrow-in-maui-scheduler.png)
+
 ## Show week number
 
 Display the week number of the year in all Scheduler views of the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) by setting the [ShowWeekNumber](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_ShowWeekNumber) property as `true` and by default it is `false.` The Week numbers will be displayed based on the ISO standard.
@@ -515,6 +533,8 @@ this.Scheduler.ShowWeekNumber = true;
 {% endtabs %}
 
 N> This property will not be applicable for the `SchedulerView` is `Timeline Month.`
+
+![show-week-number-in-maui-scheduler](images/getting-started/show-week-number-in-maui-scheduler.png)
 
 ### Customize the week number text style
 
@@ -547,3 +567,5 @@ this.Scheduler.WeekNumberStyle = schedulerWeekNumberStyle;
 {% endtabs %}
 
 N> It is not applicable if the `View` is `Timeline Month` and it is applied only when the `ShowWeekNumber` property is `enabled.`
+
+![customize-the-week-number-text-style-in-maui-scheduler](images/getting-started/customize-the-week-number-text-style-in-maui-scheduler.png)
