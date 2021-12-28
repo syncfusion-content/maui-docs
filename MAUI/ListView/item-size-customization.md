@@ -82,7 +82,7 @@ AutoFit considers height of the item when `SfListView.Orientation` is set to `Ve
   <syncfusion:SfListView x:Name="listView" 
                     ItemSize="200"
                     AutoFitMode="DynamicHeight"
-                    ItemsSource="{Binding BookInfo}" />
+                    ItemsSource="{Binding ContactsInfo}" />
 </ContentPage>
 {% endhighlight %}
 {% highlight c# %}
@@ -118,6 +118,12 @@ listView.AutoFitMode = AutoFitMode.DynamicHeight;
                     FontSize="{Binding BindingContext.FontSize, Source={x:Reference Name=listView}}"
                     Text="{Binding ContactName}">
                     </Label>
+                    <Label Grid.Row="1" 
+                             FontSize="13"
+                             TextColor="#474747"
+                             LineBreakMode="NoWrap"
+                             Text="{Binding ContactNumber}">
+
                 </Grid>
             </DataTemplate>
         </syncfusion:SfListView.ItemTemplate>
@@ -132,6 +138,8 @@ private void Button_Clicked(object sender, EventArgs e)
 }
 {% endhighlight %}
 {% endtabs %}
+
+![MAUI ListView update item size based on font at runtime](Images/item-size-customization/maui-listview-item-size-based-on-font-at-runtime.jpg)
 
 ## Updating the Header and Footer height based on font at runtime
 
@@ -203,7 +211,7 @@ namespace SfListViewSample
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI ListView Height](Images/item-size-customization/maui-listview-update-header-and-footer-size-based-on-font.jpg)
+![MAUI ListView update header and footer size based on font at runtime](Images/item-size-customization/maui-listview-update-header-and-footer-size-based-on-font.jpg)
 
 ## Load images with autofit mode
 
