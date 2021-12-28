@@ -11,12 +11,12 @@ documentation: ug
 
 The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) allows to create appointments in various time zones and display them in the respective time zone or any other time zone. Use the time zone in the following four different ways:
 
-* Create appointments in different time zones.
+* Create appointments in different time zone.
 * Display appointments based on the client’s time zone.
 * Display appointments based on scheduler time zone.
 * Display appointments at the same time everywhere regardless of client’s time zone.
 
-The following Time Zone's respective countries are added to cover all the time zone regions. Use any of the time zones from the following list for scheduler time zone.
+The following Time Zone's of the respective countries are added to cover all the time zone regions. Use any of the time zones from the following list for scheduler time zone.
 <table>
 <tr>
 <th>Region</th>
@@ -848,7 +848,7 @@ UTC + 14:00
 </tr>
 </table>
 
-## Create appointments in different time zones
+## Create appointments in different time zone
 
 Create appointments at different time zones using the [StartTimeZone](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_StartTimeZone) and [EndTimeZone](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_EndTimeZone) properties of [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html). An appointment’s start time and end time are calculated based on the given time zone information for the start time and end time. Set different time zones to the `StartTimeZone` and `EndTimeZone` properties.
 
@@ -879,7 +879,7 @@ this.scheduler.AppointmentsSource = appointments;
 
 >**NOTE**
 * If the recurring appointment is converted to another time zone, then the whole sequence will be recalculated according to the new time zone information.
-* If an all-day appointment is created, it's start time and end time will be set to 12 A.M. and 12 A.M. by default, so time zone is not applicable for all-day appointments.
+* If an all-day appointment is created, it's start time and end time will be set to 12 A.M. by default, so time zone is not applicable for all-day appointments.
 * Scheduler supports daylight saving time.
 * The time zone support is applicable for custom appointments too, so map the corresponding property.
 * Use [TimeZone](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_TimeZone) for custom appointments by mapping the [StartTimeZone](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentMapping_StartTimeZone) and [EndTimeZone](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentMapping_EndTimeZone) custom properties of [AppointmentMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html).
