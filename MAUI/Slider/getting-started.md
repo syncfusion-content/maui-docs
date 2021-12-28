@@ -11,46 +11,18 @@ documentation: ug
 
 This section explains the steps required to add the slider control and its elements such as numeric and date values, ticks, labels and tooltip. This section covers only basic features needed to know to get started with Syncfusion Slider.
 
-## Creating an application with .NET MAUI Slider
+## Creating an application with .NET MAUI
 
-1. Create a new .NET MAUI application in Visual Studio.
-2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfSlider to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Sliders and then install it.
-3. To initialize the control, import the Slider namespace.
-4. Initialize SfSlider.
+Create a new .NET MAUI application in Visual Studio.
 
-{% tabs %}
+ ![Create MAUI Application](images/getting-started/create-project.png)
 
-{% highlight xaml %}
+## Adding SfSlider reference
 
-<ContentPage
-    . . .
-    xmlns:slider="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders">
-    <Grid>
-        <slider:SfSlider/>
-    </Grid>
-</ContentPage>
+ Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfSlider to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Sliders and then install it.
 
-{% endhighlight %}
+ ![Create MAUI Application](images/getting-started/nuget-installation.png)
 
-{% highlight C# %}
-
-using Syncfusion.Maui.Sliders;
-
-namespace SliderGettingStarted
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfSlider slider = new SfSlider();
-        }
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
 
 ## Register the handler
 
@@ -88,9 +60,27 @@ namespace SliderGettingStarted
 
 {% endhighlight %}
 
+## Import the Slider namespace
+
+{% tabs %}
+
+{% highlight xaml %}
+
+    xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders">
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+using Syncfusion.Maui.Sliders;
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ## Initialize slider
 
-Import the `SfSlider` namespace and initialize the slider as shown below.
+Import the [`SfSlider`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html) namespace and initialize the slider as shown below.
 
 {% tabs %}
 
@@ -98,9 +88,9 @@ Import the `SfSlider` namespace and initialize the slider as shown below.
 
 <ContentPage
     . . .
-    xmlns:slider="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders">
+    xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders">
     <Grid>
-        <slider:SfSlider />
+        <sliders:SfSlider />
     </Grid>
 </ContentPage>
 
@@ -129,48 +119,19 @@ namespace SliderGettingStarted
 
 ![Initialize slider](images/getting-started/initialize-slider.png)
 
-## Set date value
+## Enable labels
 
-Set the 'DateTime' values to the `Minimum`, `Maximum`, and `Value` properties to display date labels in the slider.
-
-{% tabs %}
-
-{% highlight xaml %}
-
- <sliders:SfSlider Minimum="2010-01-01" 
-		   Maximum="2020-01-01" 
-		   Value="2014-01-01">
- </sliders:SfSlider>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfSlider slider = new SfSlider();
-slider.Minimum = new DateTime(2010, 01, 01);
-slider.Maximum = new DateTime(2020, 01, 01);
-slider.Value = new DateTime(2014, 01, 01);
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Slider date labels](images/getting-started/date-time-labels.png)
-
-## Enable ticks
-
-The `ShowTicks` property enables ticks in the slider, while the `MinorTicksPerInterval` property enables minor ticks between the major ticks.
+The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ShowLabels) property enables label in slider that renders on given interval.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<sliders:SfSlider   Minimum="2010-01-01" 
-		    Maximum="2020-01-01" 
-		    Value="2014-01-01" 
-		    ShowTicks="True" 
-		    Interval="2" 
-		    MinorTicksPerInterval="1">
+<sliders:SfSlider Minimum="0" 
+		  Maximum="10" 
+		  Value="6" 
+		  ShowLabels="True" 
+		  Interval="2">
 </sliders:SfSlider>
 
 
@@ -179,11 +140,47 @@ The `ShowTicks` property enables ticks in the slider, while the `MinorTicksPerIn
 {% highlight C# %}
 
 SfSlider slider = new SfSlider();
-slider.Minimum = new DateTime(2010, 01, 01);
-slider.Maximum = new DateTime(2020, 01, 01);
-slider.Value = new DateTime(2014, 01, 01);
-slider.ShowTicks = true;
+slider.Minimum = 20;
+slider.Maximum = 100;
+slider.Value = 60;
+slider.ShowLabels = true;
 slider.Interval = 2;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Slider labels](images/getting-started/labels.png)
+
+## Enable ticks
+
+The [`ShowTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ShowTicks) property enables ticks in the slider, while the [`MinorTicksPerInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MinorTicksPerInterval) property enables minor ticks between the major ticks.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfSlider Minimum="0" 
+		  Maximum="10" 
+		  Value="6" 
+		  ShowLabels="True"  
+		  ShowTicks="True" 
+		  Interval="2" 
+		  MinorTicksPerInterval="1">
+</sliders:SfSlider>
+
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfSlider slider = new SfSlider();
+slider.Minimum = 20;
+slider.Maximum = 100;
+slider.Value = 60;
+slider.ShowLabels = true;
+slider.Interval = 2;
+slider.ShowTicks = true;
 slider.MinorTicksPerInterval = 1;
 
 {% endhighlight %}
@@ -194,13 +191,21 @@ slider.MinorTicksPerInterval = 1;
 
 ## Orientation
 
-The `Orientation` property allows you to show the slider in both horizontal and vertical directions. The default value of the `Orientation` property is `Horizontal`.
+The [`Orientation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Orientation) property allows you to show the slider in both horizontal and vertical directions. The default value of the [`Orientation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Orientation) property is `Horizontal`.
 
 {% tabs %}
 
 {% highlight xaml %}
 
- <sliders:SfSlider Orientation="Vertical" />
+<sliders:SfSlider  Orientation="Vertical"
+                   Minimum="0" 
+		   Maximum="10" 
+		   Value="6" 
+		   ShowLabels="True"  
+		   ShowTicks="True" 
+		   Interval="2" 
+		   MinorTicksPerInterval="1">
+</sliders:SfSlider>
 
 {% endhighlight %}
 
@@ -208,6 +213,13 @@ The `Orientation` property allows you to show the slider in both horizontal and 
 
 SfSlider slider = new SfSlider();
 slider.Orientation = SliderOrientation.Vertical;
+slider.Minimum = 20;
+slider.Maximum = 100;
+slider.Value = 60;
+slider.ShowLabels = true;
+slider.Interval = 2;
+slider.ShowTicks = true;
+slider.MinorTicksPerInterval = 1;
 
 {% endhighlight %}
 
@@ -217,13 +229,21 @@ slider.Orientation = SliderOrientation.Vertical;
 
 ## Inverse the slider
 
-You can invert the slider using the `IsInversed` property. The default value of the `IsInversed` property is `False`.
+You can invert the slider using the [`IsInversed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_IsInversed) property. The default value of the [`IsInversed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_IsInversed) property is `False`.
 
 {% tabs %}
 
 {% highlight xaml %}
 
- <sliders:SfSlider IsInversed="True" />
+<sliders:SfSlider IsInversed="True"
+                  Minimum="0" 
+		  Maximum="10" 
+		  Value="6" 
+		  ShowLabels="True"  
+		  ShowTicks="True" 
+		  Interval="2" 
+		  MinorTicksPerInterval="1">
+</sliders:SfSlider>
 
 {% endhighlight %}
 
@@ -231,6 +251,13 @@ You can invert the slider using the `IsInversed` property. The default value of 
 
 SfSlider slider = new SfSlider();
 slider.IsInversed = true;
+slider.Minimum = 20;
+slider.Maximum = 100;
+slider.Value = 60;
+slider.ShowLabels = true;
+slider.Interval = 2;
+slider.ShowTicks = true;
+slider.MinorTicksPerInterval = 1;
 
 {% endhighlight %}
 
@@ -238,22 +265,60 @@ slider.IsInversed = true;
 
 ![Inverse slider](images/getting-started/slider-inverse.png)
 
-## Add prefix/suffix to labels
+## Set date value
 
-You can add prefix or suffix to the labels using the `NumberFormat` or `DateFormat` properties.
-
-N> The format type (numeric or date) of the slider is determined based on the values specified in `Minimum`, `Maximum` properties.
+Set the 'DateTime' values to the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Minimum), [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Maximum), and [`Value`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html#Syncfusion_Maui_Sliders_SfSlider_Value) properties to display date labels in the slider.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<sliders:SfSlider   Minimum="20" 
-		    Maximum="100" 
-		    Value="60" 
-		    NumberFormat="$##" 
-		    ShowLabels="True" 
-		    Interval="20">
+<sliders:SfSlider Minimum="2010-01-01" 
+		  Maximum="2020-01-01" 
+		  Value="2014-01-01" 
+                  ShowLabels="True"
+		  ShowTicks="True" 
+		  Interval="2" 
+		  MinorTicksPerInterval="1">
+</sliders:SfSlider>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfSlider slider = new SfSlider();
+slider.Minimum = new DateTime(2010, 01, 01);
+slider.Maximum = new DateTime(2020, 01, 01);
+slider.Value = new DateTime(2014, 02, 01);
+slider.ShowLabels = true;
+slider.ShowTicks = true;
+slider.Interval = 2;
+slider.MinorTicksPerInterval = 1;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Slider date labels](images/getting-started/date-time-labels.png)
+
+## Formatting labels
+
+You can add prefix or suffix to the labels using the [`NumberFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_NumberFormat) or [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DateFormat) properties.
+
+N> The format type (numeric or date) of the slider is determined based on the values specified in [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Minimum), [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Maximum) properties.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfSlider Minimum="20" 
+		  Maximum="100" 
+		  Value="60" 
+		  NumberFormat="$##" 
+                  ShowTicks="True"
+                  MinorTicksPerInterval="1"
+		  ShowLabels="True" 
+		  Interval="20">
 </sliders:SfSlider>
 
 {% endhighlight %}

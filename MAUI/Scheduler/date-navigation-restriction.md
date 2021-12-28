@@ -11,14 +11,14 @@ documentation: ug
 
 ## Date navigation
 
-The `.NET MAUI Scheduler` control allows to navigate through dates either programmatically or by using the `forward` and `backward` buttons, and it is applicable to all the Scheduler views.
+The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) control allows to navigate through dates either programmatically or by using the [forward](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_Forward) and [backward](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_Backward) buttons, and it is applicable to all the Scheduler views.
 
 N> 
 Touch gesture is not working, as framework is facing an [issue](https://github.com/dotnet/maui/issues/3561) 
 
 ### Programmatic date navigation
 
-The `DisplayDate` property of `SfScheduler` programmatically navigates the dates in scheduler.
+The [DisplayDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_DisplayDate) property of [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) programmatically navigates the dates in scheduler.
 
 {% tabs %}
 {% highlight xaml %}
@@ -40,7 +40,7 @@ When navigating before a minimum date, the date will be reset to the scheduler m
 
 ### Programmatic date selection
 
-You can programmatically select the dates in scheduler by using the `SelectedDate` property of SfScheduler.
+You can programmatically select the dates in scheduler by using the [SelectedDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_SelectedDate) property of [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
 {% tabs %}
 {% highlight xaml %}
@@ -65,7 +65,7 @@ The next and previous views can be accessed through swiping the control from rig
 
 #### Forward
 
-The Scheduler allows to view the next immediate date using the `Forward` method. If the scheduler view is month, it moves on to the next month, similarly for week and day views it moves on to the next day.
+The [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) allows to view the next immediate date using the [Forward](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_Forward) method. If the scheduler view is month, it moves on to the next month, similarly for week and day views it moves on to the next day.
 
 {% tabs %}
 {% highlight xaml %}
@@ -96,7 +96,7 @@ private void OnButtonClicked(object sender, EventArgs e)
 
 #### Backward
 
-The Scheduler allows to view the previous immediate date using the `Backward` method. If the scheduler view is month, it moves on to the previous month, similarly for week and day views it moves on to the previous day.
+The [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) allows to view the previous immediate date using the [Backward](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_Backward) method. If the scheduler view is month, it moves on to the previous month, similarly for week and day views it moves on to the previous day.
 
 {% tabs %}
 {% highlight xaml %}
@@ -127,10 +127,10 @@ private void OnButtonClicked(object sender, EventArgs e)
 
 ### Allowed views
 
-The SfScheduler allows to quickly switch between the different scheduler views using the `AllowedViews` property. These views will display as a button in the scheduler header.
+The [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) allows to quickly switch between the different scheduler views using the [AllowedViews](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AllowedViews) property. These views will display as a button in the scheduler header.
 There will be more icons available for all platforms as this UI will be responsive.
 
-The default value of `AllowedViews` property is `SchedulerViews.Default.`
+The default value of [AllowedViews](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AllowedViews) property is [SchedulerViews.Default](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViews.html#Syncfusion_Maui_Scheduler_SchedulerViews_Default).
 
 {% tabs %}
 {% highlight xaml %}
@@ -149,11 +149,11 @@ this.Scheduler.AllowedViews = SchedulerViews.Day | SchedulerViews.Week | Schedul
 
 ## Date restriction
 
-In .NET MAUI Scheduler, you can restrict the available dates to a range of dates using the properties `MinimumDateTime,` `MaximumDateTime` and `SelectableDayPredicate.` It is applicable to all the Scheduler views.
+In [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html), you can restrict the available dates to a range of dates using the properties [MinimumDateTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_MinimumDateTime), [MaximumDateTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_MaximumDateTime) and [SelectableDayPredicate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_SelectableDayPredicate). It is applicable to all the Scheduler views.
 
 ### Change minimum display date and time
 
-The minimum date time will restrict backward navigation of date selections as well as the ability to swipe the views beyond the minimum date range. Any dates that appear before the minimum date will be disabled. The default value of `MinimumDateTime` is `DateTime.MinValue.`
+The minimum date time will restrict backward navigation of date selections as well as the ability to swipe the views beyond the minimum date range. Any dates that appear before the minimum date will be disabled. The default value of [MinimumDateTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_MinimumDateTime) is `DateTime.MinValue.`
 
 {% tabs %}
 {% highlight xaml %}
@@ -172,7 +172,7 @@ this.Scheduler.MinimumDateTime = DateTime.Today.AddMonths(-3).AddHours(9);
 
 ### Change maximum display date and time
 
-The maximum date time will restrict forward navigation of date selections as well as the ability to swipe the views beyond the maximum date range. Any dates that appear after the maximum date will be disabled. The default value of `MaximumDateTime` is `DateTime.MaxValue .`
+The maximum date time will restrict forward navigation of date selections as well as the ability to swipe the views beyond the maximum date range. Any dates that appear after the maximum date will be disabled. The default value of [MaximumDateTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_MaximumDateTime) is `DateTime.MaxValue .`
 
 {% tabs %}
 {% highlight xaml %}
@@ -191,7 +191,7 @@ this.Scheduler.MaximumDateTime = DateTime.Today.AddMonths(3).AddHours(12);
 
 ### Selectable day predicate (Blackout dates)
 
-The `SelectableDayPredicate` functions allows certain days for selection. Only the days that `SelectableDayPredicate` returns true will be selectable in the Scheduler.
+The [SelectableDayPredicate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_SelectableDayPredicate) functions allows certain days for selection. Only the days that `SelectableDayPredicate` returns true will be selectable in the Scheduler.
 
 {% tabs %}
 {% highlight xaml %}
@@ -218,7 +218,7 @@ this.Scheduler.SelectableDayPredicate = (date) =>
 
 #### Customizing the disabled date and time appearance
 
-You can customize the background color and text style for the minimum date time, maximum date time, and selectable day predicate, by setting the `Background,` and `DisabledDateTextStyle` properties of `SfScheduler.`
+You can customize the background color and text style for the minimum date time, maximum date time, and selectable day predicate, by setting the [DisabledDateBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_DisabledDateBackground), and [DisabledDateTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_DisabledDateTextStyle) properties of [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
 {% tabs %}
 {% highlight xaml %}

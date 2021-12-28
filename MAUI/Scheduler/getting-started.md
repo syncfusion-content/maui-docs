@@ -9,13 +9,13 @@ documentation: ug
 
 # Getting Started with .NET MAUI Scheduler (SfScheduler)
 
-This section explains how to populate the appointments to the Scheduler as well as the essential aspects for getting started with the Scheduler and also provides a walk-through to configure the .NET MAUI Scheduler control in a real-time scenario.
+This section explains how to populate the appointments to the Scheduler as well as the essential aspects for getting started with the Scheduler and also provides a walk-through to configure the [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) control in a real-time scenario.
 
 ## Creating an application using the .NET MAUI Scheduler
 
 1. Create a new .NET MAUI application in Visual Studio.
 
-2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfScheduler to your project, open the NuGet package manager in Visual Studio, search for `Syncfusion.Maui.Scheduler` and then install it.
+2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfScheduler to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Scheduler](https://www.nuget.org/packages/Syncfusion.Maui.Scheduler) and then install it.
 
 3. To initialize the control, import the control namespace `Syncfusion.Maui.Scheduler` in XAML or C# code.
 
@@ -82,7 +82,7 @@ namespace GettingStarted
 
 ## Change different scheduler views
 
-The `.NET MAUI Scheduler` control provides eight different types of views to display dates and it can be assigned to the control by using the `View` property. The control is assigned to the `Day` view by default. The current date will be displayed initially for all the Scheduler views.
+The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) control provides eight different types of views to display dates and it can be assigned to the control by using the [View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_View) property. The control is assigned to the [Day](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerView.html#Syncfusion_Maui_Scheduler_SchedulerView_Day) view by default. The current date will be displayed initially for all the Scheduler views.
 
 {% tabs %}
 {% highlight xaml %}
@@ -99,11 +99,11 @@ this.Scheduler.View = SchedulerView.Month;
 
 ## Appointments
 
-The `.NET MAUI Scheduler` has a built-in capability to handle the appointment arrangement internally based on the `SchedulerAppointment` collections. Allocate the collection generated to the Appointments property.
+The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) has a built-in capability to handle the appointment arrangement internally based on the [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html) collections. Allocate the collection generated to the Appointments property.
 
 ### Adding appointments
 
-The `SchedulerAppointment` is a class that includes the specific scheduled appointment. It has some basic properties such as `StartTime`, `EndTime` `Subject`, and some additional information about the appointment can be added with `Notes`, `Location`, and `IsAllDay` properties.
+The [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html) is a class that includes the specific scheduled appointment. It has some basic properties such as [StartTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_StartTime), [EndTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_EndTime), [Subject](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentMapping_Subject), and some additional information about the appointment can be added with [Notes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentMapping_Notes), [Location](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentMapping_Location), and [IsAllDay](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentMapping_IsAllDay) properties.
 
 {% tabs %}
 {% highlight xaml %}
@@ -131,18 +131,20 @@ this.Scheduler.AppointmentsSource = appointment;
 {% endhighlight %}
 {% endtabs %}
 
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/GettingStarted)
+
 ### Events/Appointments data mapping
 
 Map the custom appointments data to our scheduler.
 
 N> The CustomAppointment class should contain two DateTime fields and a string field as mandatory.
 
-Here are the steps to render meetings using the `.NET MAUI Scheduler` control with respective custom data properties created in a class `Meeting.`
+Here are the steps to render meetings using the [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) control with respective custom data properties created in a class `Meeting.`
 
-* [Creating custom class to map that objects with SchedulerAppointment](#creating-custom-class-to-map-that-objects-with-SchedulerAppointment)
+* [Creating custom class to map that objects with appointment](#creating-custom-class-to-map-that-object-with-appointment)
 * [Create view model](#create-view-model)
-* [Mapping the data object to SchedulerAppointment](#mapping-the-data-object-to-SchedulerAppointment)
-* [Bind appointment source for Scheduler](#binding-appointment-source-for-Scheduler-control)
+* [Mapping the data object to SchedulerAppointment](#mapping-the-data-object-to-scheduler-appointment)
+* [Bind appointment source for Scheduler](#bind-appointment-source-for-scheduler)
 
 ### Creating custom class to map that object with appointment
 
@@ -177,7 +179,7 @@ N> Inherit this class from the `INotifyPropertyChanged` for dynamic changes in c
 
 ### Create view model
 
-By setting `From` and `To` of Meeting class, schedule meetings for a specific day. Change the `Subject` and `Background` of the appointment using the `EventName` and `Background` properties. Define the list of custom appointments in a separate class of `ViewModel`.
+By setting `From` and `To` of Meeting class, schedule meetings for a specific day. Change the `Subject` and `Background` of the appointment using the `EventName` and `Background` properties. Define the list of custom appointments in a separate class of `ViewModel.`
 
 {% tabs %}
 {% highlight c# %}
@@ -325,7 +327,7 @@ public class SchedulerViewModel
 {% endtabs %}
 
 ### Mapping the data object to scheduler appointment
-Map those properties of the `Meeting` class with our `.NET MAUI Scheduler` control by using the `AppointmentMapping` property.
+Map those properties of the `Meeting` class with our [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) control by using the [AppointmentMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html) property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -372,7 +374,7 @@ this.Scheduler.AppointmentMapping = appointmentMapping;
 {% endtabs %}
 
 ### Bind appointment source for scheduler
-Create meetings of type `ObservableCollection<Meeting>` and assign those appointments collection to the `AppointmentsSource` property of `SfScheduler`.
+Create meetings of type `ObservableCollection<Meeting>` and assign those appointments collection to the [AppointmentsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentsSource) property of [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
 {% tabs %}
 {% highlight xaml %}
@@ -393,9 +395,11 @@ this.Scheduler.AppointmentsSource = viewModel.Events;
 {% endhighlight %}
 {% endtabs %}
 
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/BusinessObject)
+
 ## Change first day of week
 
-The scheduler allows customization on the first day of the week with the `FirstDayOfWeek` property. The Scheduler will default to "Sunday" as the first day of the week.
+The scheduler allows customization on the first day of the week with the [FirstDayOfWeek](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_FirstDayOfWeek) property. The Scheduler will default to `Sunday` as the first day of the week.
 
 The following code shows the Scheduler with `Tuesday` as the first day of the week.
 
@@ -414,7 +418,7 @@ this.Scheduler.FirstDayOfWeek = DayOfWeek.Tuesday;
 
 ## Cell selection background
 
-The selection view of Scheduler can be customized by using the `SelectedCellBackground` property in the `SfScheduler.`
+The selection view of Scheduler can be customized by using the [SelectedCellBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_SelectedCellBackground) property in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
 {% tabs %}  
 {% highlight xaml %}
@@ -431,7 +435,7 @@ this.Scheduler.SelectedCellBackground = Brush.Orange;
 
 ## Today highlight brush
 
-The today highlight brush of Scheduler can be customized by using the `TodayHighlightBrush` property in the `SfScheduler,` which will highlight the today's circle and text in Scheduler view header and month cell.
+The today highlight brush of Scheduler can be customized by using the [TodayHighlightBrush](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_TodayHighlightBrush) property in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html), which will highlight the today's circle and text in Scheduler view header and month cell.
 
 {% tabs %}  
 {% highlight xaml %}
@@ -448,7 +452,7 @@ this.Scheduler.TodayHighlightBrush = Brush.Orange;
 
 ## Cell border brush
 
-The vertical and horizontal line color of the Scheduler can be customized by using the `CellBorderBrush` property in the `SfScheduler.`
+The vertical and horizontal line color of the Scheduler can be customized by using the [CellBorderBrush](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_CellBorderBrush) property in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
 {% tabs %}  
 {% highlight xaml %}
@@ -465,7 +469,7 @@ this.Scheduler.CellBorderBrush = Brush.Orange;
 
 ## Background color
 
-The Scheduler background color can be customized by using the `BackgroundColor` property in the `SfScheduler.`
+The Scheduler background color can be customized by using the `BackgroundColor` property in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
 {% tabs %}  
 {% highlight xaml %}
@@ -482,7 +486,7 @@ this.Scheduler.BackgroundColor = Colors.LightBlue;
 
 ## Show navigation arrow
 
-By Using the `ShowNavigationArrows` property of the `SfScheduler,` you can navigate to the previous or next views of the Scheduler. By default, the value `ShowNavigationArrows` is `true,` which displays the navigation icons and `Today` button in the header view. It allows to quickly navigate to today and previous or next views.
+By Using the [ShowNavigationArrows](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_ShowNavigationArrows) property of the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html), you can navigate to the previous or next views of the Scheduler. By default, the value `ShowNavigationArrows` is `true,` which displays the navigation icons and `Today` button in the header view. It allows to quickly navigate to today and previous or next views.
 
 {% tabs %}  
 {% highlight xaml %}
@@ -499,7 +503,7 @@ this.Scheduler.ShowNavigationArrows = false;
 
 ## Show week number
 
-Display the week number of the year in all Scheduler views of the `SfScheduler` by setting the `ShowWeekNumber` property as `true` and by default it is `false.` The Week numbers will be displayed based on the ISO standard.
+Display the week number of the year in all Scheduler views of the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) by setting the [ShowWeekNumber](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_ShowWeekNumber) property as `true` and by default it is `false.` The Week numbers will be displayed based on the ISO standard.
 
 {% tabs %}  
 {% highlight xaml %}
@@ -518,7 +522,7 @@ N> This property will not be applicable for the `SchedulerView` is `Timeline Mon
 
 ### Customize the week number text style
 
-The Week number text style of the Scheduler can be customized by using the `WeekNumberStyle` property and it allows to customize the `TextStyle` and the `Background` color in the Week number of the `SfScheduler.`
+The Week number text style of the Scheduler can be customized by using the [WeekNumberStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_WeekNumberStyle) property and it allows to customize the [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerWeekNumberStyle.html#Syncfusion_Maui_Scheduler_SchedulerWeekNumberStyle_TextStyle) and the [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerWeekNumberStyle.html#Syncfusion_Maui_Scheduler_SchedulerWeekNumberStyle_Background) color in the Week number of the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
 {% tabs %}  
 {% highlight xaml %}

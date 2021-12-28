@@ -7,7 +7,7 @@ control: SfRangeSlider
 documentation: ug
 ---
 
-# Thumb and Thumb Overlay in .NET MAUI Range Slider (SfRangeSlider)
+# Thumb and Overlay in .NET MAUI Range Slider (SfRangeSlider)
 
 This section helps to learn about how to customize the thumb and thumb overlay in the range slider.
 
@@ -16,17 +16,17 @@ This section helps to learn about how to customize the thumb and thumb overlay i
 
 ## Thumb size
 
-You can change the size of the thumb in the range slider using the `Radius` property of the `ThumbStyle` class. The default value of the `Radius` property is `10.0`.
+You can change the size of the thumb in the range slider using the [`Radius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html#Syncfusion_Maui_Sliders_SliderThumbStyle_Radius)  property of the [`ThumbStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html) class. The default value of the [`Radius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html#Syncfusion_Maui_Sliders_SliderThumbStyle_Radius) property is `10.0`.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<sliders:SfRangeSlider >
-   <sliders:SfRangeSlider.ThumbStyle>
-       <sliders:SliderThumbStyle Radius="15" />
-   </sliders:SfRangeSlider.ThumbStyle>
-</sliders:SfRangeSlider>
+<rangeslider:SfRangeSlider >
+   <rangeslider:SfRangeSlider.ThumbStyle>
+       <rangeslider:SliderThumbStyle Radius="15" />
+   </rangeslider:SfRangeSlider.ThumbStyle>
+</rangeslider:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -43,17 +43,17 @@ rangeSlider.ThumbStyle.Radius = 15;
 
 ## Thumb color
 
-You can change the color of the thumb in the range slider using the `Fill` property of the `ThumbStyle` class.
+You can change the color of the thumb in the range slider using the [`Fill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html#Syncfusion_Maui_Sliders_SliderThumbStyle_Fill) property of the [`ThumbStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html) class.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<sliders:SfRangeSlider >
-   <sliders:SfRangeSlider.ThumbStyle>
-       <sliders:SliderThumbStyle Fill="#EE3F3F" />
-   </sliders:SfRangeSlider.ThumbStyle>
-</sliders:SfRangeSlider>
+<rangeslider:SfRangeSlider >
+   <rangeslider:SfRangeSlider.ThumbStyle>
+       <rangeslider:SliderThumbStyle Fill="#EE3F3F" />
+   </rangeslider:SfRangeSlider.ThumbStyle>
+</rangeslider:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -68,19 +68,19 @@ rangeSlider.ThumbStyle.Fill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
 
 ![RangeSlider thumb color](images/thumb-and-thumb-overlay/thumb-color.png)
 
-## Thumb stroke width and stroke color
+## Thumb stroke thickness and stroke
 
-You can change the thumb stroke width using the `StrokeThickness` property and thumb stroke color using the `Stroke` property of the `ThumbStyle` class.
+You can change the thumb stroke width using the [`StrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html#Syncfusion_Maui_Sliders_SliderThumbStyle_StrokeThickness) property and thumb stroke color using the [`Stroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html#Syncfusion_Maui_Sliders_SliderThumbStyle_Stroke) property of the [`ThumbStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html) class.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<sliders:SfRangeSlider >
-   <sliders:SfRangeSlider.ThumbStyle>
-       <sliders:SliderThumbStyle StrokeThickness="2" Stroke="#EE3F3F" />
-   </sliders:SfRangeSlider.ThumbStyle>
-</sliders:SfRangeSlider>
+<rangeslider:SfRangeSlider >
+   <rangeslider:SfRangeSlider.ThumbStyle>
+       <rangeslider:SliderThumbStyle StrokeThickness="2" Stroke="#EE3F3F" />
+   </rangeslider:SfRangeSlider.ThumbStyle>
+</rangeslider:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -98,17 +98,17 @@ rangeSlider.ThumbStyle.StrokeThickness = 2;
 
 ## Thumb overlapping stroke color
 
-You can change the thumb stroke color while two thumbs are overlapping in the range slider using the `OverlapStroke` property of the `ThumbStyle` class.
+You can change the thumb stroke color while two thumbs are overlapping in the range slider using the [`OverlapStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html#Syncfusion_Maui_Sliders_SliderThumbStyle_OverlapStroke) property of the [`ThumbStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html) class.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<sliders:SfRangeSlider >
-  <sliders:SfRangeSlider.ThumbStyle>
-      <sliders:SliderThumbStyle OverlapStroke="#EE3F3F" />
-  </sliders:SfRangeSlider.ThumbStyle>
-</sliders:SfRangeSlider>
+<rangeslider:SfRangeSlider >
+  <rangeslider:SfRangeSlider.ThumbStyle>
+      <rangeslider:SliderThumbStyle OverlapStroke="#EE3F3F" />
+  </rangeslider:SfRangeSlider.ThumbStyle>
+</rangeslider:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -125,17 +125,17 @@ rangeSlider.ThumbStyle.OverlapStroke = new SolidColorBrush(Color.FromArgb("#EE3F
 
 ## Thumb overlay size
 
-You can change the size of the thumb overlay in the range slider using the `Radius` property of the `ThumbOverlayStyle` class. The default value of the `Radius` property is `24.0`.
+You can change the size of the thumb overlay in the range slider using the [`Radius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbOverlayStyle.html#Syncfusion_Maui_Sliders_SliderThumbOverlayStyle_Radius) property of the [`ThumbOverlayStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbOverlayStyle.html) class. The default value of the [`Radius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbOverlayStyle.html#Syncfusion_Maui_Sliders_SliderThumbOverlayStyle_Radius) property is `24.0`.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<sliders:SfRangeSlider >
-   <sliders:SfRangeSlider.ThumbOverlayStyle>
-      <sliders:SliderThumbOverlayStyle Radius="30"/>
-   </sliders:SfRangeSlider.ThumbOverlayStyle>
-</sliders:SfRangeSlider>
+<rangeslider:SfRangeSlider >
+   <rangeslider:SfRangeSlider.ThumbOverlayStyle>
+      <rangeslider:SliderThumbOverlayStyle Radius="30"/>
+   </rangeslider:SfRangeSlider.ThumbOverlayStyle>
+</rangeslider:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -152,17 +152,17 @@ rangeSlider.ThumbOverlayStyle.Radius = 30;
 
 ## Thumb overlay color
 
-You can change the color of the thumb overlay in the range slider using the `Fill` property of the `ThumbOverlayStyle` class.
+You can change the color of the thumb overlay in the range slider using the [`Fill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbOverlayStyle.html#Syncfusion_Maui_Sliders_SliderThumbOverlayStyle_Fill) property of the [`ThumbOverlayStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbOverlayStyle.html) class.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<sliders:SfRangeSlider >
-   <sliders:SfRangeSlider.ThumbOverlayStyle>
-      <sliders:SliderThumbOverlayStyle Fill="#F7C8DB"/>
-   </sliders:SfRangeSlider.ThumbOverlayStyle>
-</sliders:SfRangeSlider>
+<rangeslider:SfRangeSlider >
+   <rangeslider:SfRangeSlider.ThumbOverlayStyle>
+      <rangeslider:SliderThumbOverlayStyle Fill="#F7C8DB"/>
+   </rangeslider:SfRangeSlider.ThumbOverlayStyle>
+</rangeslider:SfRangeSlider>
 
 {% endhighlight %}
 

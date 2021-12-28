@@ -9,20 +9,20 @@ documentation: ug
 
 # Events in .NET MAUI Scheduler (SfScheduler)
 
-The Scheduler supports the `Tapped,` `DoubleTapped,` `LongPressed,` `SelectionChanged,` and `ViewChanged` events to interact with .NET MAUI Scheduler 
+The Scheduler supports the `Tapped,` `DoubleTapped,` `LongPressed,` `SelectionChanged,` and `ViewChanged` events to interact with [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html). 
 
 ## Tapped
 
-A `Tapped` event occurs, each time a scheduler view is tapped.
+A [Tapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_Tapped) event occurs, each time a scheduler view is tapped.
 Below is a list of the arguments:
 
 * `Sender`: This contains the `SfScheduler` object.
 
-* `Tapped`: The tapped action performed on an Scheduler element can be found in the `SchedulerTappedEventArgs`, you can see details about the tapped dates, appointments, and elements.
+* `Tapped`: The tapped action performed on an Scheduler element can be found in the [SchedulerTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTappedEventArgs.html), you can see details about the tapped dates, appointments, and elements.
 
-    * `Appointments`: Returns the selected appointments.
-    * `Date` : Returns the selected date.
-    * `Element` : Returns the `Scheduler` element tapped.
+    * [Appointments](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerInteractionEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerInteractionEventArgs_Appointments): Returns the selected appointments.
+    * [Date](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerInteractionEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerInteractionEventArgs_Date) : Returns the selected date.
+    * [Element](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerInteractionEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerInteractionEventArgs_Element) : Returns the `Scheduler` element tapped.
 
 {% tabs %}
 {% highlight xaml %}
@@ -46,17 +46,23 @@ private void OnSchedulerTapped(object sender, SchedulerTappedEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
+N>
+
+[View scheduler appointment sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/GettingStarted)
+
+[View business object sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/BusinessObject)
+
 ## DoubleTapped
 
-Whenever the `SfScheduler` elements are double-tapped onto the view, the `DoubleTapped` event occurs. Below is a list of the arguments:
+Whenever the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) elements are double-tapped onto the view, the [DoubleTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_DoubleTapped) event occurs. Below is a list of the arguments:
 
 * `Sender`: This contains the `SfScheduler` object.
 
-* `DoubleTapped`: This double tapped action performed on a Scheduler element can be found in the SchedulerDoubleTappedEventArgs, and you can see the details about the double-tapped dates, appointments, and elements.
+* `DoubleTapped`: This double tapped action performed on a Scheduler element can be found in the [SchedulerDoubleTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDoubleTappedEventArgs.html), and you can see the details about the double-tapped dates, appointments, and elements.
 
-    * `Appointments`: Returns the double-tapped appointments.
-    * `Date` : Returns the double-tapped date.
-    * `Element` : Returns the double-tapped `Scheduler` element.
+    * [Appointments](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerInteractionEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerInteractionEventArgs_Appointments): Returns the double-tapped appointments.
+    * [Date](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerInteractionEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerInteractionEventArgs_Date) : Returns the double-tapped date.
+    * [Element](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerInteractionEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerInteractionEventArgs_Element) : Returns the double-tapped `Scheduler` element.
 
 {% tabs %}
 {% highlight xaml %}
@@ -80,17 +86,23 @@ private void OnSchedulerDoubleTapped(object sender, SchedulerDoubleTappedEventAr
 {% endhighlight %}
 {% endtabs %}
 
+N>
+
+[View scheduler appointment sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/GettingStarted)
+
+[View business object sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/BusinessObject)
+
 ## LongPressed
 
-Whenever the `SfScheduler` elements are long-pressed onto the view, the `LongPressed` event occurs. Below is a list of the arguments:
+Whenever the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) elements are long-pressed onto the view, the [LongPressed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_LongPressed) event occurs. Below is a list of the arguments:
 
 * `Sender`: This contains the `SfScheduler` object.
 
-* `LongPressed`: This long-pressed action performed on a Scheduler element can be found in the SchedulerLongPressedEventArgs, and you can see details about the long-pressed dates, appointments, and elements.
+* `LongPressed`: This long-pressed action performed on a Scheduler element can be found in the [SchedulerLongPressedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerLongPressedEventArgs.html), and you can see details about the long-pressed dates, appointments, and elements.
 
-    * `Appointments`: Returns the long-pressed appointments.
-    * `Date` : Returns the long-pressed date.
-    * `Element` : Returns the long-pressed `Scheduler` element.
+    * [Appointments](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerInteractionEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerInteractionEventArgs_Appointments): Returns the long-pressed appointments.
+    * [Date](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerInteractionEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerInteractionEventArgs_Date) : Returns the long-pressed date.
+    * [Element](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerInteractionEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerInteractionEventArgs_Element) : Returns the long-pressed `Scheduler` element.
 
 {% tabs %}
 {% highlight xaml %}
@@ -114,16 +126,22 @@ private void OnSchedulerLongPressed(object sender, SchedulerLongPressedEventArgs
 {% endhighlight %}
 {% endtabs %}
 
+N>
+
+[View scheduler appointment sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/GettingStarted)
+
+[View business object sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/BusinessObject)
+
 ## SelectionChanged
 
-The `SelectionChanged` event is used to notify when the cell selection is changed onto the view in the `SfScheduler.`
+The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_SelectionChanged) event is used to notify when the cell selection is changed onto the view in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
 * `Sender`: This contains the `SfScheduler` object.
 
-* `SelectionChanged`: The selection is changed when the selection-changed action is performed on the element available in the `SchedulerSelectionChangedEventArgs.`
+* `SelectionChanged`: The selection is changed when the selection-changed action is performed on the element available in the [SchedulerSelectionChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerSelectionChangedEventArgs.html).
 
-    * `NewValue`: Returns the new selected date.
-    * `OldValue` : Returns the old selected date.
+    * [NewValue`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerSelectionChangedEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerSelectionChangedEventArgs_NewValue): Returns the new selected date.
+    * [OldValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerSelectionChangedEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerSelectionChangedEventArgs_OldValue) : Returns the old selected date.
 
 {% tabs %}
 {% highlight xaml %}
@@ -151,16 +169,16 @@ The `Tapped` event is triggered first, followed by 'selection-changed' event wil
 
 ## ViewChanged
 
-The `ViewChanged` event is used to notify when the current view of scheduler is changed, that is when the view is swiped to previous or next view, and when the scheduler view is switched to another scheduler view.
+The [ViewChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_ViewChanged) event is used to notify when the current view of scheduler is changed, that is when the view is swiped to previous or next view, and when the scheduler view is switched to another scheduler view.
 
 * `Sender`: This contains the `SfScheduler` object.
 
-* `ViewChanged`: The scheduler current view visible dates are available in the `SchedulerViewChangedEventArgs` when the scheduler visible dates or view is changed.
+* `ViewChanged`: The scheduler current view visible dates are available in the [SchedulerViewChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViewChangedEventArgs.html) when the scheduler visible dates or view is changed.
 
-    * `NewVisibleDates`: Returns the new visible date range of the view.
-    * `OldVisibleDates` : Returns the old visible date range of the view.
-    * `NewView`: Returns the new scheduler view. 
-    * `OldView` : Returns the old scheduler view.
+    * [NewVisibleDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViewChangedEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerViewChangedEventArgs_NewVisibleDates): Returns the new visible date range of the view.
+    * [OldVisibleDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViewChangedEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerViewChangedEventArgs_OldVisibleDates) : Returns the old visible date range of the view.
+    * [NewView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViewChangedEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerViewChangedEventArgs_NewView): Returns the new scheduler view. 
+    * [OldView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViewChangedEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerViewChangedEventArgs_OldView) : Returns the old scheduler view.
 
 {% tabs %}
 {% highlight xaml %}
