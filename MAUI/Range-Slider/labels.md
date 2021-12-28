@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Labels in .NET MAUI Range Slider control | Syncfusion
-description: Learn here all about the Labels and Dividers feature of .NET MAUI Range Slider (SfRangeSlider) control and more.
+description: Learn here all about the Labels and its customization feature of .NET MAUI Range Slider (SfRangeSlider) control and more.
 platform: maui
 control: SfRangeSlider
 documentation: ug
@@ -152,7 +152,7 @@ rangeSlider.ShowTicks = true;
 
 ![RangeSlider label placement](images/labels-and-dividers/label-placement.png)
 
-N> Learn how to customize label text format from Events section.
+N> Refer [here](https://help.syncfusion.com/maui/range-slider/events) to customize label text format through range slider events.
 
 ## Label style
 

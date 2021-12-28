@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI Scheduler (SfScheduler)
 
-This section explains how to populate the appointments to the Scheduler as well as the essential aspects for getting started with the Scheduler and also provides a walk-through to configure the .NET MAUI Scheduler control in a real-time scenario.
+This section explains how to populate the appointments to the Scheduler as well as the essential aspects for getting started with the Scheduler and also provides a walk-through to configure the [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) control in a real-time scenario.
 
 ## Creating an application using the .NET MAUI Scheduler
 
@@ -130,6 +130,8 @@ this.Scheduler.AppointmentsSource = appointment;
 
 {% endhighlight %}
 {% endtabs %}
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/GettingStarted)
 
 ### Events/Appointments data mapping
 
@@ -392,6 +394,8 @@ this.Scheduler.AppointmentsSource = viewModel.Events;
 
 {% endhighlight %}
 {% endtabs %}
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/BusinessObject)
 
 ## Change first day of week
 
