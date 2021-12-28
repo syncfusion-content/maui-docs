@@ -173,7 +173,7 @@ private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 {% endhighlight %}
 {% endtabs %}
 
-![time-region-selection-restriction-in-timeslots-views-in-scheduler](images/day-week-views/time-region-selection-restriction-in-timeslots-views-in-scheduler.png)
+![time-region-selection-restriction-in-timeslots-views-in-maui-scheduler](images/day-week-views/time-region-selection-restriction-in-timeslots-views-in-maui-scheduler.png)
 
 N> This property only restricts the interaction on region and it does not restrict the following:
 * The Programmatic selection (if the user updates the selected date value dynamically).
