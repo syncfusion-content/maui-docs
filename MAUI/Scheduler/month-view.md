@@ -43,6 +43,8 @@ this.Scheduler.MonthViewSettings.AppointmentDisplayMode = SchedulerMonthAppointm
 {% endhighlight %}  
 {% endtabs %}
 
+![change-appointment-display-mode-in-maui-scheduler](images/month-view/change-appointment-display-mode-in-maui-scheduler.png)
+
 N>
 
 [View scheduler appointment sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/GettingStarted)
@@ -73,6 +75,8 @@ this.Scheduler.MonthViewSettings.ShowLeadingAndTrailingDates = false;
 {% endhighlight %}  
 {% endtabs %}
 
+![show-or-hide-leading-and-trailing-days-appearence-customization-in-maui-scheduler](images/month-view/show-or-hide-leading-and-trailing-days-appearence-customization-in-maui-scheduler.png)
+
 ## Change day format of view header
 
 Customize the day format of Scheduler view header by using the [DayFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViewHeaderSettings.html#Syncfusion_Maui_Scheduler_SchedulerViewHeaderSettings_DayFormat) property of [ViewHeaderSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthViewSettings.html#Syncfusion_Maui_Scheduler_SchedulerMonthViewSettings_ViewHeaderSettings) in [MonthViewSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthViewSettings.html).
@@ -92,6 +96,8 @@ this.Scheduler.MonthViewSettings.ViewHeaderSettings.DayFormat = "dddd";
 
 {% endhighlight %}  
 {% endtabs %}
+
+![change-day-text-format-of-month-view-header-in-maui-scheduler](images/month-view/change-day-text-format-of-month-view-header-in-maui-scheduler.png)
 
 ## Customize view header appearance
 
@@ -119,6 +125,8 @@ this.Scheduler.MonthViewSettings.ViewHeaderSettings.DayTextStyle = dayTextStyle;
 
 {% endhighlight %}  
 {% endtabs %}
+
+![customize-day-text-format-appearence-of-month-view-header-in-maui-scheduler](images/month-view/customize-day-text-format-appearence-of-month-view-header-in-maui-scheduler.png)
 
 ## Customize month cell appearance
 
@@ -168,3 +176,5 @@ this.Scheduler.MonthViewSettings.MonthCellStyle = monthCellStyle;
 
 {% endhighlight %}  
 {% endtabs %}
+
+![customize-month-cell-appearance-in-maui-scheduler](images/month-view/customize-month-cell-appearance-in-maui-scheduler.png)
