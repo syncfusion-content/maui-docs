@@ -17,7 +17,7 @@ This section will cover the axis customization options.
 
 ### Background content
 
-[`Radial axis`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html?tabs=tabid-1) allows you to add any visual contents as its background using the `BackgroundContent` property.
+[`Radial axis`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html?tabs=tabid-1) allows you to add any visual contents as its background using the [`BackgroundContent`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_BackgroundContent) property.
 
 {% tabs %}
 

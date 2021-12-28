@@ -13,7 +13,7 @@ This section helps to learn about how to add tooltip in the slider.
 
 ## Enable tooltip
 
-You can enable tooltip for the thumb by setting the `ToolTipShape` property to `SliderToolTipShape.Rectangle`. It is used to clearly indicate the current selection of the value during interaction. By default, tooltip text is formatted with either numberFormat or dateFormat. The default value of the `ToolTipShape` property is `SliderToolTipShape.None`.
+You can enable tooltip for the thumb by setting the [`ToolTipShape`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ToolTipShape) property to [`SliderToolTipShape.Rectangle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderToolTipShape.html#Syncfusion_Maui_Sliders_SliderToolTipShape_Rectangle). It is used to clearly indicate the current selection of the value during interaction. By default, tooltip text is formatted with either numberFormat or dateFormat. The default value of the [`ToolTipShape`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ToolTipShape) property is [`SliderToolTipShape.None`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderToolTipShape.html#Syncfusion_Maui_Sliders_SliderToolTipShape_None). 
 
 {% tabs %}
 
@@ -34,47 +34,11 @@ slider.ToolTipShape = SliderToolTipShape.Rectangle;
 
 ![Slider tooltip](images/tooltip/tooltip.png)
 
-## Tooltip text format
-
-By default it is formatted based on `NumberFormat` property and `DateFormat` property based on whether it is date type `SfSlider` or numeric `SfSlider`.
-
-You can format or change the whole tooltip label text using the `ToolTipLabelCreated` event. The `SliderLabelCreatedEventArgs` contains the following parameters,
-
-* Text – Change the format of the tooltip text using the `Text` property.
-* Style – Change the appearance of the tooltip text like color, stroke color, and padding using the `Style` property.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<sliders:SfSlider ToolTipLabelCreated="OnTooltipLabelCreated" 
-                  ToolTipShape="Rectangle">
-</sliders:SfSlider>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-{
-   SfSlider slider = new SfSlider();
-   slider.ToolTipShape = SliderToolTipShape.Rectangle;
-   slider.ToolTipLabelCreated += OnTooltipLabelCreated;
-}
-
-private void OnTooltipLabelCreated(object sender, SliderLabelCreatedEventArgs e)
-{
-    e.Text = "$" + e.Text;
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Slider custom tooltip](images/tooltip/custom-tooltip.png)
+N> Refer [here](https://help.syncfusion.com/maui/slider/events) to customize tooltip text format through slider events.
 
 ## Tooltip label style
 
-You can change the appearance of the tooltip text like color, stroke color, padding around the text using the `ToolTipStyle` property.
+You can change the appearance of the tooltip text like color, stroke color, padding around the text using the [`ToolTipStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ToolTipStyle) property.
 
 {% tabs %}
 
