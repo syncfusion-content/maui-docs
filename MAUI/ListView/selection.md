@@ -25,6 +25,7 @@ The `SfListView` allows selecting items on different gestures such as tap, doubl
 {% tabs %}
 {% highlight xaml %}
  <syncfusion:SfListView x:Name="listView"
+                        ItemsSource="{Binding MusicInfo}"
                         SelectionMode="Multiple"
                         SelectionGesture="Hold"/>
 {% endhighlight %}                     
@@ -58,11 +59,18 @@ When the selection mode is `Multiple`, programmatically select more than one ite
 public class SelectionViewModel : INotifyPropertyChanged
 {
     private ObservableCollection<object> selectedItems;
+    private ObservableCollection<MusicInfo> musicInfo;
 
     public SelectionViewModel()
     {
         GenerateSource();
         SelectedItems = new ObservableCollection<object>();
+    }
+
+    public ObservableCollection<MusicInfo> MusicInfo
+    {
+        get { return musicInfo; }
+        set { this.musicInfo = value; }
     }
 
     public ObservableCollection<object> SelectedItems
@@ -97,7 +105,7 @@ N> The `SfListView.SelectedItems` property type is a type of ObservableCollectio
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfListView x:Name="listView" SelectedItems="{Binding SelectedItems}">
+<syncfusion:SfListView x:Name="listView" ItemsSource="{Binding MusicInfo}" SelectedItems="{Binding SelectedItems}">
 </syncfusion:SfListView>
 {% endhighlight %}
 {% endtabs %}
@@ -142,7 +150,7 @@ The .NET MAUI ListView (SfListView) supports customizing the selection backgroun
 {% tabs %}
 {% highlight xaml %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
-  <syncfusion:SfListView x:Name="listView">
+  <syncfusion:SfListView x:Name="listView" ItemsSource="{Binding MusicInfo}">
    <syncfusion:SfListView.SelectedItemTemplate>
     <DataTemplate>
      <Grid x:Name="grid" BackgroundColor="RoyalBlue">
@@ -194,7 +202,7 @@ To customize the appearance of the selected item or items, use the appearance of
 {% tabs %}
 {% highlight xaml %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
-  <syncfusion:SfListView x:Name="listView">
+  <syncfusion:SfListView x:Name="listView" ItemsSource="{Binding MusicInfo}">
    <syncfusion:SfListView.SelectedItemTemplate>
     <DataTemplate>
      <Grid x:Name="grid">
@@ -275,7 +283,8 @@ The `SfListView` allows you to change the selection background color for the sel
 
 {% tabs %}
 {% highlight xaml %}
- <syncfusion:SfListView x:Name="listView"
+ <syncfusion:SfListView x:Name="listView" 
+                        ItemsSource="{Binding MusicInfo}"
                         SelectionBackground="Khaki"/>
 {% endhighlight %}
 {% highlight c# %}
