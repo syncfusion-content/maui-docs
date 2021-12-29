@@ -28,7 +28,7 @@ Sorting the data by creating a [SortDescriptor](https://help.syncfusion.com/cr/m
 {% tabs %}
 {% highlight xaml %}
 <ContentPage  xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
-               xmlns:data="clr-namespace:Syncfusion.DataSource;assembly=Syncfusion.Maui.DataSource" >
+               xmlns:data="clr-namespace:Syncfusion.Maui.DataSource;assembly=Syncfusion.Maui.DataSource" >
   <syncfusion:SfListView x:Name="listView">
             <syncfusion:SfListView.DataSource>
                 <data:DataSource>
@@ -61,7 +61,7 @@ N> If the `PropertyName` in the [SortDescriptor](https://help.syncfusion.com/cr/
 {% tabs %}
 {% highlight xaml %}
 <ContentPage  xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
-               xmlns:data="clr-namespace:Syncfusion.DataSource;assembly=Syncfusion.Maui.DataSource">
+               xmlns:data="clr-namespace:Syncfusion.Maui.DataSource;assembly=Syncfusion.Maui.DataSource">
   <ContentPage.Resources>
     <ResourceDictionary>
       <local:CustomSortComparer x:Key="CustomSortComparer" />
@@ -131,7 +131,7 @@ To apply the sorting when tapping the header, handle the [ItemTapped](https://he
 {% tabs %}
 {% highlight xaml %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
-               xmlns:data="clr-namespace:Syncfusion.DataSource;assembly=Syncfusion.Maui.DataSource">
+               xmlns:data="clr-namespace:Syncfusion.Maui.DataSource;assembly=Syncfusion.Maui.DataSource">
   <syncfusion:SfListView x:Name="listView" ItemSize="60"
                         ItemsSource="{Binding customerDetails}" 
                         ItemTapped="ListView_ItemTapped" 
@@ -198,7 +198,7 @@ Sorting and grouping the items by using [KeySelector](https://help.syncfusion.co
 {% tabs %}
 {% highlight xaml %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
-               xmlns:data="clr-namespace:Syncfusion.DataSource;assembly=Syncfusion.Maui.DataSource">
+               xmlns:data="clr-namespace:Syncfusion.Maui.DataSource;assembly=Syncfusion.Maui.DataSource">
   <ContentPage.Content>
     <syncfusion:SfListView x:Name="listView" ItemsSource="{Binding Items}" ItemSize="50">
       <syncfusion:SfListView.GroupHeaderTemplate>
@@ -257,7 +257,7 @@ Sorting and grouping the items by using `KeySelector` based on returning the mon
 {% tabs %}
 {% highlight xaml %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
-              xmlns:data="clr-namespace:Syncfusion.DataSource;assembly=Syncfusion.Maui.DataSource">
+              xmlns:data="clr-namespace:Syncfusion.Maui.DataSource;assembly=Syncfusion.Maui.DataSource">
   <ContentPage.Content>
     <syncfusion:SfListView x:Name="listView">
       <syncfusion:SfListView.DataSource>
