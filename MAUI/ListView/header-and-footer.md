@@ -13,7 +13,7 @@ This section explains how to define and customize the header and footer in the S
 
 ## Header and footer customization
 
-The [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.html) allows you add and customize appearance of the header and footer by setting the [SfListView.HeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_HeaderTemplate) and [SfListView.FooterTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_FooterTemplate) properties.
+The [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.html) allows you to add and customize appearance of the header and footer by setting the [SfListView.HeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_HeaderTemplate) and [SfListView.FooterTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_FooterTemplate) properties.
 
 {% tabs %}
 {% highlight xaml %}
@@ -101,12 +101,15 @@ The `StickyFooterPosition` property has two options:
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfListView x:Name="listView" ItemsSource="{Binding CategoryInfo}" StickyFooterPosition="Body"/>          
+<syncfusion:SfListView x:Name="listView" ItemsSource="{Binding CategoryInfo}" IsStickyFooter="True" StickyFooterPosition="Body"/>          
 {% endhighlight %}
 {% highlight c# %}
+listView.IsStickyFooter = true;
 listView.StickyFooterPosition = FooterPosition.Body;
 {% endhighlight %}
 {% endtabs %}
+
+N> This API is applicable when `IsStickyFooter` is enabled.
 
 ![MAUI ListView sticky footer position](Images/header-and-footer/maui-listview-sticky-footer-position.jpg)
 
