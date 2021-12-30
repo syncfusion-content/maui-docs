@@ -38,7 +38,7 @@ N> Refer [here](https://help.syncfusion.com/maui/slider/events) to customize too
 
 ## Tooltip label style
 
-You can change the appearance of the tooltip text like color, stroke color, padding around the text using the [`ToolTipStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ToolTipStyle) property.
+You can change the appearance of the tooltip text like fill, stroke, padding around the text using the [`ToolTipStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ToolTipStyle) property.
 
 {% tabs %}
 
@@ -46,9 +46,9 @@ You can change the appearance of the tooltip text like color, stroke color, padd
 
 <sliders:SfSlider ToolTipShape="Rectangle">
    <sliders:SfSlider.ToolTipStyle>
-      <sliders:SliderToolTipStyle Color="#F7B1AE" 
-                                  StrokeColor="#EE3F3F" 
-				  StrokeWidth="2" />
+      <sliders:SliderToolTipStyle Fill="#F7B1AE" 
+                                  Stroke="#EE3F3F" 
+				  StrokeThickness="2" />
     </sliders:SfSlider.ToolTipStyle>
 </sliders:SfSlider>
 
@@ -58,9 +58,9 @@ You can change the appearance of the tooltip text like color, stroke color, padd
 
 SfSlider slider = new SfSlider();
 slider.ToolTipShape = SliderToolTipShape.Rectangle;
-slider.ToolTipStyle.Color = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
-slider.ToolTipStyle.StrokeColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
-slider.ToolTipStyle.StrokeWidth = 2;
+slider.ToolTipStyle.Fill = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
+slider.ToolTipStyle.Stroke = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+slider.ToolTipStyle.StrokeThickness = 2;
 
 {% endhighlight %}
 
