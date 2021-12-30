@@ -142,7 +142,7 @@ The inactive side of the range slider is between the [`Minimum`](https://help.sy
 SfRangeSlider rangeSlider = new SfRangeSlider();
 rangeSlider.Interval = 0.2;
 rangeSlider.ShowTicks = true;
-rangeSlider.MajorTickStyle.ActiveColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+rangeSlider.MajorTickStyle.ActiveFill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
 rangeSlider.MajorTickStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
 
 {% endhighlight %}
