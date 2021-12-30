@@ -13,7 +13,7 @@ This section explains how to define and customize the header and footer in the S
 
 ## Header and footer customization
 
-The 'SfListView' allows adding and customizing appearance of the header and footer by setting the `SfListView.HeaderTemplate` and `SfListView.FooterTemplate` properties.
+The [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.html) allows you add and customize appearance of the header and footer by setting the [SfListView.HeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_HeaderTemplate) and [SfListView.FooterTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_FooterTemplate) properties.
 
 {% tabs %}
 {% highlight xaml %}
@@ -59,11 +59,11 @@ listView.HeaderTemplate = new DataTemplate(() =>
 
 ## Header and footer items appearance
 
-The `SfListView` allows customizing size of the header and footer items by setting the `SfListView.HeaderSize` and SfListView.FooterSize` properties. The default value is 40. These properties can be customized at runtime.
+The [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.html) allows you to customize the size of the header and footer items by setting the [SfListView.HeaderSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_HeaderSize) and [SfListView.FooterSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_FooterSize) properties. The default value is 40. These properties can be customized at runtime.
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfListView x:Name="listView" HeaderSize="70" FooterSize="60" />
+<syncfusion:SfListView x:Name="listView" ItemsSource="{Binding BookInfo}" HeaderSize="70" FooterSize="60" />
 {% endhighlight %}
 {% highlight c# %}
 listView.HeaderSize = 70;
@@ -75,11 +75,11 @@ N> For vertical orientation, the header and footer size are considered as height
 
 ## Sticky header and footer
 
-The `SfListView` allows sticking the header and footer items to view by enabling the `SfListView.IsStickyHeader` and `SfListView.IsStickyFooter` properties. If the `SfListView.IsStickyHeader` is `true`, the header item will stick to the top of the view. If the `SfListView.IsStickyFooter` is `true`, the footer item will stick to the bottom of the view.
+The `SfListView` allows you to stick the header and footer items to view by enabling the [SfListView.IsStickyHeader](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_IsStickyHeader) and [SfListView.IsStickyFooter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_IsStickyFooter) properties. If the `SfListView.IsStickyHeader` is `true`, the header item will stick to the top of the view. If the `SfListView.IsStickyFooter` is `true`, the footer item will stick to the bottom of the view.
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfListView x:Name="listView" IsStickyHeader="True" 
+<syncfusion:SfListView x:Name="listView" ItemsSource="{Binding BookInfo}" IsStickyHeader="True" 
                      IsStickyFooter="True" />          
 {% endhighlight %}
 {% highlight c# %}
@@ -88,29 +88,33 @@ listView.IsStickyFooter = true;
 {% endhighlight %}
 {% endtabs %}
 
+![MAUI ListView linear layout](Images/header-and-footer/maui-listview-sticky-header-and-footer.jpg)
+
 ## Sticky footer position
 
-The `SfListView` allows to position the footer item by using the `StickyFooterPosition` property. 
+The `SfListView` allows you to position the footer item by using the [StickyFooterPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_StickyFooterPosition) property.
 
 The `StickyFooterPosition` property has two options:
 
-* `Body`: The footer item will be positioned inside the body of the ListView when the items are less than the view size.
-* `Default`: The footer item will be positioned at the bottom of the ListView.
+* [Body](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewFooterPosition.html#Syncfusion_Maui_ListView_ListViewFooterPosition_Body): The footer item will be positioned inside the body of the ListView when the items are less than the view size.
+* [Default](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewFooterPosition.html#Syncfusion_Maui_ListView_ListViewFooterPosition_Default): The footer item will be positioned at the bottom of the ListView.
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfListView x:Name="listView" StickyFooterPosition="Body"/>          
+<syncfusion:SfListView x:Name="listView" ItemsSource="{Binding CategoryInfo}" StickyFooterPosition="Body"/>          
 {% endhighlight %}
 {% highlight c# %}
 listView.StickyFooterPosition = FooterPosition.Body;
 {% endhighlight %}
 {% endtabs %}
 
+![MAUI ListView sticky footer position](Images/header-and-footer/maui-listview-sticky-footer-position.jpg)
+
 ## How to
 
 ### TabView appearance using listview header
 
-The `SfListView` allows performing tab view structure by customizing the `HeaderTemplate` to load any view.
+The `SfListView` allows you to perform tab view structure by customizing the [HeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_HeaderTemplate) to load any view.
 
 {% tabs %}
 {% highlight xaml %}
@@ -133,8 +137,8 @@ The `SfListView` allows performing tab view structure by customizing the `Header
                                     <RowDefinition Height="*" />
                                     <RowDefinition Height="*" />
                                 </Grid.RowDefinitions>
-                                <Label Grid.Row="0" Text="{Binding BookName}" FontAttributes="Bold" TextColor="Teal" FontSize="21" />
-                                <Label Grid.Row="1" Text="{Binding BookDescription}" TextColor="Teal" FontSize="15"/>
+                                <Label Grid.Row="0" Text="{Binding BookName}" FontAttributes="Bold" TextColor="Black" FontSize="14" />
+                                <Label Grid.Row="1" Text="{Binding BookDescription}" TextColor="Black" FontSize="12"/>
                             </Grid>
                             <StackLayout Grid.Row="1" BackgroundColor="#E4E4E4" HeightRequest="1"/>
                         </Grid>
@@ -144,7 +148,7 @@ The `SfListView` allows performing tab view structure by customizing the `Header
         </ResourceDictionary>
     </ContentPage.Resources>
     <syncfusion:SfListView x:Name="listView" IsStickyHeader="True" IsStickyFooter="True"
-                               HeaderSize="80" FooterSize="60" SelectionBackgroundColor="LightBlue" 
+                               HeaderSize="80" FooterSize="60" SelectionBackground="LightBlue" 
                                ItemSize="90" SelectionMode="Single" ItemTemplate="{StaticResource template}">
         <syncfusion:SfListView.HeaderTemplate>
             <DataTemplate>
@@ -325,98 +329,4 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-### Header and footer in vertical mode when listview in horizontal mode
-
-By customizing the `SfListView`, layout the header and footer items in `Vertical` mode with listview items in `Horizontal` mode.
-
-{% tabs %}
-{% highlight xaml %}
-
-<ContentPage >
-
-    <ContentPage.BindingContext>
-        <local:ListViewAutoFitContentViewModel x:Name="ViewModel"/>
-    </ContentPage.BindingContext>
-   
-    <local:SfListViewExt x:Name="listView" ItemSize="180" GroupHeaderSize="80"
-                         ItemSpacing="2" Orientation="Horizontal"
-                         ItemsSource="{Binding BookInfo}"
-                         SelectionMode="None"
-                         IsStickyGroupHeader="False"
-                         SelectionBackgroundColor="#d3d3d3">
-        <local:SfListViewExt.ItemTemplate>
-                <DataTemplate>
-                    <Grid RowSpacing="0">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="1" />
-                        </Grid.RowDefinitions>
-                        <Grid Grid.Row="0" RowSpacing="0" Padding="5,10,5,5">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto" />
-                                <ColumnDefinition Width="Auto" />
-                            </Grid.ColumnDefinitions>
-                            <StackLayout Padding="10,0,0,0" Orientation="Vertical" Grid.Column="1">
-                                <Label Text="{Binding BookName}" FontAttributes="Bold" FontSize="18" TextColor="#474747" VerticalTextAlignment="Center"/>
-                                <Label Text="By Syncfusion Software" FontSize="12" TextColor="#474747" VerticalTextAlignment="Center"/>
-                                <Label Text="Published on: March 22, 2017" FontSize="12" TextColor="#474747" VerticalTextAlignment="Center"/>
-                            </StackLayout>
-                        </Grid>
-                        <StackLayout Padding="5,10,0,5" Grid.Row="1" Orientation="Vertical">
-                            <Label Text="Description" FontSize="15" FontAttributes="Bold"  TextColor="#474747" VerticalTextAlignment="Center"/>
-                            <Label Text="{Binding BookDescription}" TextColor="#474747" FontSize="14" VerticalTextAlignment="Center"/>
-                        </StackLayout>
-                        <BoxView Grid.Row="2" HeightRequest="1" BackgroundColor="#474747" />
-                    </Grid>
-                </DataTemplate>
-            </local:SfListViewExt.ItemTemplate>
-        </local:SfListViewExt>
-</ContentPage> 
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-public class SfListViewExt : SfListView
-{
-    Grid headerGrid;
-    Grid footerGrid;
-
-    public SfListViewExt()
-    {
-        headerGrid = new Grid();
-        headerGrid.BackgroundColor = Color.Teal;
-        Label headerLabel = new Label();
-        headerLabel.Text = "Header Item";
-        headerLabel.FontSize = 18;
-        headerLabel.TextColor = Color.White;
-        headerLabel.HorizontalOptions = LayoutOptions.Center;
-        headerLabel.VerticalOptions = LayoutOptions.Center;
-        headerGrid.Children.Add(headerLabel);
-
-        footerGrid = new Grid();
-        footerGrid.BackgroundColor = Color.Teal;
-        Label footerLabel = new Label();
-        footerLabel.Text = "Footer Item";
-        footerLabel.FontSize = 18;
-        footerLabel.TextColor = Color.White;
-        footerLabel.HorizontalOptions = LayoutOptions.Center;
-        footerLabel.VerticalOptions = LayoutOptions.Center;
-        footerGrid.Children.Add(footerLabel);
-
-        this.Children.Add(headerGrid);
-        this.Children.Add(footerGrid);
-    }
-
-    protected override void LayoutChildren(double x, double y, double width, double height)
-    {
-        headerGrid.Layout(new Rectangle(0, 0, width, 70));
-        footerGrid.Layout(new Rectangle(0, height - 70, width, 70));
-        base.LayoutChildren(0, 70, width, height);
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
+![MAUI ListView linear layout](Images/header-and-footer/maui-listview-tabview-appearence-using-listview-header.jpg)
