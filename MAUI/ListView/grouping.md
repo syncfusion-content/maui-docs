@@ -650,7 +650,7 @@ To stick the group header to view, enable the property [SfListView.IsStickyGroup
 
 I> If the sticky group header is enabled and `AutoFitMode` is `Height`, the panning experience will not be smooth and item's layout will not work as expected. To make panning experience smooth, set the same size for all group header items by handling the `QueryItemSize` event.
 
-N> When the `IsStickyGroupHeader` is set to `true`, the `IsStickyHeader` property will be changed to `true` because the header item cannot be scrolled. When the [IsStickyHeader](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_IsStickyHeader) is set to `false`, if `IsStickyGroupHeade`r is set to `true`, it will be changed to false because the group header item cannot be sticky.
+N> When the `IsStickyGroupHeader` is set to `true`, the `IsStickyHeader` property will be changed to `true` because the header item cannot be scrolled. When the [IsStickyHeader](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_IsStickyHeader) is set to `false`, if `IsStickyGroupHeader` is set to `true`, it will be changed to false because the group header item cannot be sticky.
 
 {% tabs %}
 {% highlight xaml %}
@@ -853,7 +853,7 @@ ListView supports selecting each group and items in the group like a checkBox se
                         <ColumnDefinition Width="Auto" />
                    </Grid.ColumnDefinitions>
                    <Label Text="{Binding Key}" Grid.Column="1" VerticalTextAlignment="Center"/>
-                   <Image Grid.Column="2" IsVisible="{Binding SelectionMode, Source={x:Reference listView}}" 
+                   <Image Grid.Column="2" Opacity="{Binding SelectionMode, Source={x:Reference listView}, Converter={StaticResource opacityConverter}}" 
                            HorizontalOptions="Center" VerticalOptions="Center"
                            Source="{Binding ., Converter={StaticResource GroupingSelectionConverter}, ConverterParameter={x:Reference listView}}">
                         <Image.GestureRecognizers>
@@ -884,7 +884,7 @@ listView.GroupHeaderTemplate = new DataTemplate(() =>
 
   Binding bind = new Binding("SelectionMode");
   bind.Source = listView;
-  image.SetBinding(Image.IsVisibleProperty, bind);
+  image.SetBinding(Image.OpacityProperty, bind);
 
   var tapped = new TapGestureRecognizer();
   tapped.Tapped += Image_Tapped;
