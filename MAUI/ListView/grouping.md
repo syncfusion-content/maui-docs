@@ -9,29 +9,29 @@ documentation: ug
 
 # Grouping in .NET MAUI ListView (SfListView)
 
-A group represents a collection of items belongs to a category. When grouping is applied, the data is organized into different groups based on key values. Each group is identified by its `Key`, by which you can get the underlying data in the group.
+A group is a collection of items that belong to a specific category. When grouping is applied, the data is organized into different groups based on key values. Each group is identified by its [Key](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.Extensions.GroupResult.html#Syncfusion_DataSource_Extensions_GroupResult_Key), which allows you to access the underlying data in the group.
 
-N> When ItemsSource changed for ListView, `DataSource.GroupDescriptors` will be cleared by default. You need to add `DataSource.GroupDescriptors` again after changing ItemsSource if you want to retain grouping in listview.
+N> When the ItemsSource is changed for a ListView, [DataSource.GroupDescriptors](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.DataSource.html#Syncfusion_DataSource_DataSource_GroupDescriptors) will be cleared by default. If you want to retain grouping in the listview, you need to add `DataSource.GroupDescriptors` again after changing the ItemsSource.
 
-N> To update grouping for the newly added listview items at runtime, set the `listView.DataSource.LiveDataUpdateMode` to `LiveDataUpdateMode.AllowDataShaping`. To learn more details about the `LiveDataUpdateMode`, refer to `here`.
+N> To update grouping for the newly added listview items at runtime, set the [listView.DataSource.LiveDataUpdateMode](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.LiveDataUpdateMode.html) to [LiveDataUpdateMode.AllowDataShaping](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.LiveDataUpdateMode.html#Syncfusion_DataSource_LiveDataUpdateMode_AllowDataShaping). 
 
 ## Programmatic grouping
 
-The SfListView allows programmatic grouping by defining the `GroupDescriptor` object, and adding it into the `DataSource.GroupDescriptors` collection. The `GroupDescriptor` object holds the following properties:
+The SfListView allows programmatic grouping by defining the [GroupDescriptor](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.GroupDescriptor.html) object, and adding it into the [DataSource.GroupDescriptors](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.DataSource.html#Syncfusion_DataSource_DataSource_GroupDescriptors) collection. The `GroupDescriptor` object holds the following properties:
 
-* `PropertyName`: Describes the name of the property to be grouped.
-* `KeySelector`: Describes selector to return the group key.
-* `Comparer`: Describes comparer to be applied in when sorting take place.
+* [PropertyName](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.GroupDescriptor.html#Syncfusion_DataSource_GroupDescriptor_PropertyName): Describes the name of the property to be grouped.
+* [KeySelector](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.GroupDescriptor.html#Syncfusion_DataSource_GroupDescriptor_KeySelector): Describes selector to return the group key.
+* [Comparer](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.GroupDescriptor.html#Syncfusion_DataSource_GroupDescriptor_Comparer): Describes comparer to be applied when sorting takes place.
 
 {% tabs %}
 {% highlight xaml %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
              xmlns:data="clr-namespace:Syncfusion.Maui.DataSource;assembly=Syncfusion.Maui.DataSource" >
-  <syncfusion:SfListView x:Name="listView">
+  <syncfusion:SfListView x:Name="listView" ItemsSource="{Binding ContactsInfo}">
     <syncfusion:SfListView.DataSource>
       <data:DataSource>
         <data:DataSource.GroupDescriptors>
-          <data:GroupDescriptor PropertyName="BookName"/>
+          <data:GroupDescriptor PropertyName="ContactName"/>
         </data:DataSource.GroupDescriptors>
       </data:DataSource>
     </syncfusion:SfListView.DataSource>
@@ -48,11 +48,11 @@ listView.DataSource.GroupDescriptors.Add(new GroupDescriptor()
 
 ## Custom grouping
 
-ListView supports grouping the items based on custom logic for each `GroupDescriptor` by using `KeySelector`. Below topics explains how to achieve different custom grouping use cases with code examples,  
+ListView supports grouping the items based on custom logic for each [GroupDescriptor](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.GroupDescriptor.html) by using [KeySelector](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.GroupDescriptor.html#Syncfusion_DataSource_GroupDescriptor_KeySelector). The following topics explain how to achieve different custom grouping use cases with code examples.
 
 ### Grouping based on first character
 
-The SfListView supports grouping the items based on first character of the value assigned to the property name in `GroupDescriptor` by using `KeySelector`.  
+The SfListView supports grouping the items based on first character of the value assigned to the property name in [GroupDescriptor](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.GroupDescriptor.html) by using [KeySelector](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.GroupDescriptor.html#Syncfusion_DataSource_GroupDescriptor_KeySelector).  
 
 {% tabs %}
 {% highlight c# %}
@@ -71,9 +71,11 @@ listView.DataSource.GroupDescriptors.Add(new GroupDescriptor()
 
 The following screenshot shows the output when grouping based on first character.
 
+![MAUI ListView Grouping based on first character](Images/grouping/maui-listview-grouping-based-on-first-character.jpg)
+
 ### Grouping based on more than one property in the data object
 
-Group the items by binding multiple properties to the property name of `GroupDescriptor` by using `KeySelector` in which the group header items can be created with multiple data model object effectively.
+Group the items by binding multiple properties to the property name of `GroupDescriptor` by using `KeySelector`, in which the group header items can be created with multiple data model object effectively.
 
 {% tabs %}
 {% highlight c# %}
@@ -91,9 +93,11 @@ listView.DataSource.GroupDescriptors.Add(new GroupDescriptor()
 
 The following screenshot shows the output when grouping based on more than one property .
 
-### Grouping by ignoring case sensitivity
+![MAUI ListView Grouping based on more than one property](Images/grouping/maui-listview-grouping-based-on-more-than-one-property.jpg)
 
-Grouping the items by ignoring case sensitive by using the `KeySelector` property in the `GroupDescriptor`. While returning the `KeySelector`, convert the required property name in the data model to group either as Upper or Lower case. The items will be grouped based on the `KeySelector` with returned case sensitive.
+### Grouping by ignoring case-sensitivity
+
+Grouping the items by ignoring case sensitive by using the `KeySelector` property in the `GroupDescriptor`. While returning the `KeySelector`, convert the required property name in the data model to group either as Upper or Lower case. The items will be grouped based on the `KeySelector` with returned case-sensitive.
 
 {% tabs %}
 {% highlight c# %}
@@ -110,12 +114,15 @@ listView.DataSource.GroupDescriptors.Add(new GroupDescriptor()
 
 The following screenshot shows grouping by ignoring case sensitivity. 
 
+![MAUI ListView Grouping by ignoring case sensitivity](Images/grouping/maui-listview-grouping-by-ignoring-case-sensitivity.jpg)
+
 ## Sorting the groups
 
 ListView sorts the groups using default sorting logic of List.
 
 ### Custom sorting of groups
-The SfListView supports sorting the groups based on custom logic applied to either `SfListView.DataSource.GroupComparer` property or `GroupDescriptor.Comparer` added to the `DataSource.GroupDescriptors` collection.
+
+The SfListView allows you to sort the groups based on custom logic applied to either the [SfListView.DataSource.GroupComparer](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.DataSource.html#Syncfusion_DataSource_DataSource_GroupComparer) property or [GroupDescriptor.Comparer](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.GroupDescriptor.html#Syncfusion_DataSource_GroupDescriptor_Comparer) added to the `DataSource.GroupDescriptors` collection.
 
 In custom group comparer, all the items present in a group compares each other based on the items count to each group sorted accordingly.
 
@@ -168,7 +175,7 @@ public class CustomGroupComparer : IComparer<GroupResult>
 
 ### Sorting the items within group
 
-Group the items of underlying collection along with sorting by adding the `DataSource.GroupDescriptors` and the `DataSource.SortDescriptors` with required properties.
+Add [DataSource.GroupDescriptors](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.DataSource.html#Syncfusion_DataSource_DataSource_GroupDescriptors) and [DataSource.SortDescriptors](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.DataSource.html#Syncfusion_DataSource_DataSource_SortDescriptors) with required properties to group and sort the items of the underlying collection.
 
 {% tabs %}
 {% highlight c# %}
@@ -194,13 +201,13 @@ public GroupingPage()
 
 ### Aggregate summary
 
-For each group, display the sum of values of the property from model object in the `SfListView.GroupHeaderTemplate` by using converter. 
+For each group, display the sum of the values of the property from the model object in the [SfListView.GroupHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupHeaderTemplate) by using converter.
 
 {% tabs %}
 {% highlight xaml %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
              xmlns:data="clr-namespace:Syncfusion.Maui.DataSource;assembly=Syncfusion.Maui.DataSource" >
-  <syncfusion:SfListView x:Name="listView">
+  <syncfusion:SfListView x:Name="listView" ItemsSource="{Binding contactsinfo}">
       <syncfusion:SfListView.GroupHeaderTemplate>
                     <DataTemplate x:Name="GroupHeaderTemplate"  x:Key="GroupHeaderTemplate">
                         <ViewCell>
@@ -262,17 +269,19 @@ listView.GroupHeaderTemplate = new DataTemplate(() =>
 {% endhighlight %}
 {% endtabs %}
 
-The following screenshot shows grouping by sum of property value. 
+The following screenshot shows grouping by property value sum.
+
+![MAUI ListView aggregate summary](Images/grouping/maui-listview-aggregate-summary.jpg)
 
 ### Displaying items count
 
-The total number of items in each group will be displayed in the group header by binding the `Count` property in the `SfListView.GroupHeaderTemplate`.
+The total number of items in each group will be displayed in the group header by binding the [Count](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.Extensions.GroupResult.html#Syncfusion_DataSource_Extensions_GroupResult_Count) property in the [SfListView.GroupHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupHeaderTemplate).
 
 {% tabs %}
 {% highlight xaml %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
              xmlns:data="clr-namespace:Syncfusion.Maui.DataSource;assembly=Syncfusion.Maui.DataSource">
- <syncfusion:SfListView>
+ <syncfusion:SfListView x:Name="listView" ItemsSource="{Binding EmployeeInfo}">
   <syncfusion:SfListView.GroupHeaderTemplate>
     <DataTemplate>
      <Grid BackgroundColor="#E4E4E4">
@@ -336,9 +345,11 @@ listView.GroupHeaderTemplate = new DataTemplate(() =>
  
 The following screenshot shows the output when displaying items count at group header. 
 
+![MAUI ListView displaying items count](Images/grouping/maui-listview-displaying-items-count.jpg)
+
 ## Multi-level grouping
 
-The SfListView supports multiple level grouping by adding multiple `GroupDescriptor` objects into the `DataSource.GroupDescriptors` collection. The grouped items will be displayed in hierarchical structure by customizing the `SfListView.GroupHeaderTemplate` property. In the `GroupHeaderTemplate`, set the `Padding` property to the custom view to arrange the group header items and sub-group header items in the hierarchical structure. 
+The SfListView supports multiple level grouping by adding multiple [GroupDescriptor](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.GroupDescriptor.html) objects to the [DataSource.GroupDescriptors](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.DataSource.html#Syncfusion_DataSource_DataSource_GroupDescriptors) collection. The grouped items will be displayed in a hierarchical structure by customizing the [SfListView.GroupHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupHeaderTemplate) property. In the `GroupHeaderTemplate`, set the `Padding` property to the custom view to arrange the group header items and sub-group header items in the hierarchical structure.
 
 N> Multi-level grouping is only applicable for `LinearLayout` in the SfListView.
 
@@ -433,11 +444,13 @@ public class GroupHeaderConverter : IValueConverter
 {% endhighlight %}
 {% endtabs %}
 
-The following screenshot shows the output for multi-level grouping. 
+The following screenshot shows the output for multi-level grouping.
+
+![MAUI ListView multi level grouping](Images/grouping/maui-listview-multi-grouping.jpg)
 
 ## Group expand and collapse
 
-By default, the groups will be in expanded state in the SfListView. You can expand or collapse the group at runtime by setting the `SfListView.AllowGroupExpandCollapse` to `true`. So, when tapping the group header, the group gets collapse if the group is in expand state and vice-versa. 
+By default, the groups will be in expanded state in the SfListView. You can expand or collapse the group at runtime by setting the [SfListView.AllowGroupExpandCollapse](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_AllowGroupExpandCollapse) to `true`. So, when tapping the group header, the group collapses if it is in the expand state and vice-versa.
 
 {% tabs %}
 {% highlight xaml %}
@@ -451,11 +464,13 @@ listView.AllowGroupExpandCollapse = true;
 
 The following screenshot shows the output when the groups are collapsed.
 
+![MAUI ListView allow group expand and collapse](Images/grouping/maui-listview-allow-group-expand-collapse.jpg)
+
 ### Programmatic expand and collapse
 
 #### Expand or collapse all the groups
 
-Expand or collapse all the groups programmatically at runtime by using the `SfListView.ExpandAll` method and `SfListView.CollapseAll` method.
+Expand or collapse all the groups programmatically at runtime by using the [SfListView.ExpandAll](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ExpandAll) and [SfListView.CollapseAll](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_CollapseAll) methods.
 
 {% tabs %}
 {% highlight c# %}
@@ -466,7 +481,7 @@ listView.CollapseAll();
 
 #### Expand or collapse a specific group
 
-Expand or collapse a specific group by using the `SfListView.ExpandGroup` method and `SfListView.CollapseGroup` method.
+Expand or collapse a specific group by using the [SfListView.ExpandGroup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ExpandGroup_Syncfusion_DataSource_Extensions_GroupResult_) and [SfListView.CollapseGroup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_CollapseGroup_Syncfusion_DataSource_Extensions_GroupResult_) methods.
 
 {% tabs %}
 {% highlight c# %}
@@ -478,7 +493,7 @@ listView.CollapseGroup(group);
 
 #### Expand or collapse all groups by default
 
-Expand or collapse all the groups by default using the `SfListView.Loaded` event.
+Expand or collapse all the groups by default using the [SfListView.Loaded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_Loaded) event.
 
 {% tabs %}
 {% highlight c# %}
@@ -494,7 +509,7 @@ private void ListView_Loaded(object sender, ListViewLoadedEventArgs e)
 
 ### Keeping only one group in expanded state
 
-To keep any one specific group alone in the expanded state, use the `SfListView.GroupExpanding` event. The particular selected group can be get from `GroupExpandCollapseChangingEventArgs`, by which you can compare and collapse all other groups, and expand the particular selected group. 
+To keep any one specific group alone in the expanded state, use the [SfListView.GroupExpanding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupExpanding) event. The particular selected group can be obtained from [GroupExpandCollapseChangingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.GroupExpandCollapseChangingEventArgs.html), which allows you to compare and collapse all other groups while expanding the particular selected group.
 
 {% tabs %}
 {% highlight c# %}
@@ -520,19 +535,21 @@ private void ListView_GroupExpanding(object sender, GroupExpandCollapseChangingE
 {% endhighlight %}
 {% endtabs %}
 
-The following screenshot shows the output when one group in expanded state.
+The following screenshot shows the output when one group is expanded state.
+
+![MAUI ListView keep only one group in expanded state](Images/grouping/maui-listview-only-one-group-in-expand-state.jpg)
 
 ### Expand groups while grouping
 
-You can expand all the groups while grouping by setting the `DataSource.AutoExpandGroups` to `true`. So, when grouping any item, all the groups will be automatically expanded.
+You can expand all the groups while grouping by setting the [DataSource.AutoExpandGroups](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.DataSource.html#Syncfusion_DataSource_DataSource_AutoExpandGroups) to `true`. So, when grouping any item, all the groups will be automatically expanded.
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfListView x:Name="listView"> 
+<syncfusion:SfListView x:Name="listView" ItemsSource="{Binding contactsinfo}"> 
     <syncfusion:SfListView.DataSource> 
         <data:DataSource AutoExpandGroups="true"> 
             <data:DataSource.GroupDescriptors> 
-                <data:GroupDescriptor PropertyName="BookName"/> 
+                <data:GroupDescriptor PropertyName="ContactName"/> 
             </data:DataSource.GroupDescriptors> 
         </data:DataSource> 
     </syncfusion:SfListView.DataSource> 
@@ -547,14 +564,14 @@ listView.DataSource.AutoExpandGroups = true;
 
 ### GroupExpanding Event
 
-The `SfListView.GroupExpanding` event occurs when the group is being expanded.
+The [SfListView.GroupExpanding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupExpanding) event occurs when the group is expanded.
  
-The `GroupExpandCollapseChangingEventArgs` of the `GroupExpanding` event provides the information about the expanding group and it has the following members:
+The [GroupExpandCollapseChangingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.GroupExpandCollapseChangingEventArgs.html) of the `GroupExpanding` event provides information about the expanding group, which has the following members:
 
-`Groups`: Gets a list of groups being expanded.
-`Cancel`: Decides whether to cancel the group expansion or not.
+[Groups](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.GroupExpandCollapseChangingEventArgs.html#Syncfusion_Maui_ListView_GroupExpandCollapseChangingEventArgs_Groups): Gets a list of groups that are being expanded.
+[Cancel](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.canceleventargs.cancel?view=net-6.0#System_ComponentModel_CancelEventArgs_Cancel): Decides whether to cancel the group expansion or not.
 
-The `GroupExpanding` event used for the following use case.
+The `GroupExpanding` event is used in the following use case.
 
 * Keeps any one specific group in the expanded state by comparing and collapsing all other groups.
 
@@ -582,20 +599,20 @@ private void ListView_GroupExpanding(object sender, GroupExpandCollapseChangingE
 
 ### GroupExpanded Event
 
-The `SfListView.GroupExpanded` event occurs after expanding the group.
+The [SfListView.GroupExpanded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupExpanded) event occurs after expanding the group.
 
-The `GroupExpandCollapseChangedEventArgs` of the `GroupExpanded` event provides the information about the expanded group and it has the following member:
+The [GroupExpandCollapseChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.GroupExpandCollapseChangedEventArgs.html) of the `GroupExpanded` event provides information about the expanded group, which has the following member:
 
-`Groups`: Gets a list of expanded groups.
+[Groups](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.GroupExpandCollapseChangedEventArgs.html#Syncfusion_Maui_ListView_GroupExpandCollapseChangedEventArgs_Groups): Gets a list of expanded groups.
 
 ### GroupCollapsing Event 
 
-The `SfListView.GroupCollapsing` event occurs when the group is being collapsed.
+The [SfListView.GroupCollapsing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupCollapsing) event occurs when the group is collapsed
 
-The `GroupExpandCollapseChangingEventArgs` of the `GroupCollapsing` event provides the information about the collapsing group and it contains the following members:
+The [GroupExpandCollapseChangingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.GroupExpandCollapseChangingEventArgs.html) of the `GroupCollapsing` event provides information about the collapsing group, which contains the following members:
 
-`Groups`: Gets a list of groups being collapsed.
-`Cancel`: Decides whether to cancel the group collapsing or not.
+[Groups](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.GroupExpandCollapseChangingEventArgs.html#Syncfusion_Maui_ListView_GroupExpandCollapseChangingEventArgs_Groups): Gets a list of groups that are being collapsed.
+[Cancel](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.canceleventargs.cancel?view=net-6.0#System_ComponentModel_CancelEventArgs_Cancel): Decides whether to cancel the group collapsing or not.
 
 You can cancel the group is being collapsed by setting the `GroupExpandCollapseChangingEventArgs.Cancel` to `true`.
 
@@ -621,19 +638,19 @@ private void ListView_GroupCollapsing(object sender, GroupExpandCollapseChanging
 
 ### GroupCollapsed Event
  
-The `SfListView.GroupCollapsed` event occurs after the group is collapsed.
+The [SfListView.GroupCollapsed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupCollapsed) event occurs after the group is collapsed.
  
-The `GroupExpandCollapseChangedEventArgs` of the `GroupCollapsed` event provides the information about collapsed group and it contains the following member.
+The [GroupExpandCollapseChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.GroupExpandCollapseChangedEventArgs.html) of the `GroupCollapsed` event provides information about collapsed group, which contains the following member.
 
 `Groups`: Gets a list of collapsed groups.
 
 ## Stick group header
 
-To stick the group header to view, enable the property `SfListView.IsStickyGroupHeader`. If `IsStickyGroupHeader` is `true`, the corresponding group header will be in view until the last item of the group goes out of view, and sticky group header will move when another group header leads while scrolling.
+To stick the group header to view, enable the property [SfListView.IsStickyGroupHeader](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_IsStickyGroupHeader). If `IsStickyGroupHeader` is set to `true`, the corresponding group header will be in view until the last item of the group goes out of view, and sticky group header will move when another group header leads while scrolling.
 
-I> If sticky group header is enabled and `AutoFitMode` is `Height`, the panning experience will not be smooth or item's layout will not work as expected. To make the panning experience smooth, set the same size for all group header items by handling the `QueryItemSize` event.
+I> If the sticky group header is enabled and `AutoFitMode` is `Height`, the panning experience will not be smooth and item's layout will not work as expected. To make panning experience smooth, set the same size for all group header items by handling the `QueryItemSize` event.
 
-N> When the `IsStickyGroupHeader` is set to `true`, the `IsStickyHeader` property will be changed to `true` because the header item can not be scrolled. When the `IsStickyHeader` is set to `false`, if `IsStickyGroupHeader` is `true` then it will be changed to `false` because the group header item cannot be sticky.
+N> When the `IsStickyGroupHeader` is set to `true`, the `IsStickyHeader` property will be changed to `true` because the header item cannot be scrolled. When the [IsStickyHeader](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_IsStickyHeader) is set to `false`, if `IsStickyGroupHeade`r is set to `true`, it will be changed to false because the group header item cannot be sticky.
 
 {% tabs %}
 {% highlight xaml %}
@@ -645,20 +662,18 @@ listView.IsStickyGroupHeader = true;
 {% endhighlight %}
 {% endtabs %}
 
-The following screenshot illustrates the output when the group headers are sticky.
-
 ## Group header customization
 
 ### Appearance customization
 
-The User Interface (UI) for the group header items can be customized by using the `SfListView.GroupHeaderTemplate` property.
+The User Interface (UI) for the group header items can be customized by using the [SfListView.GroupHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupHeaderTemplate) property.
 
-To customize the view for group header items and binding the `Key` to it, follow the code example.
+To customize the view for group header items and bind the [Key](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.Extensions.GroupResult.html#Syncfusion_DataSource_Extensions_GroupResult_Key) to it, follow the code example.
 
 {% tabs %}
 {% highlight xaml %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
- <syncfusion:SfListView x:Name="listView">
+ <syncfusion:SfListView x:Name="listView" ItemsSource="{Binding ContactsInfo}">
   <syncfusion:SfListView.GroupHeaderTemplate>
     <DataTemplate>
       <ViewCell>
@@ -695,11 +710,13 @@ listView.GroupHeaderTemplate = new DataTemplate(() =>
 {% endhighlight %}
 {% endtabs %}
 
-The following screenshot shows the output when the groups header appearance customized by key.
+The following screenshot shows the output when the groups header appearance is customized by key.
+
+![MAUI ListView appearence customization](Images/grouping/listview-maui-appearence-customization.jpg)
 
 ### Expand and collapse icon in group header
 
-Expand and collapse the group when tapping icon in the group header item by customizing the `SfListView.GroupHeaderTemplate` with the help of converter.
+Expand and collapse the group when tapping icon in the group header item by customizing the [SfListView.GroupHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupHeaderTemplate) with the help of converter.
 
 {% tabs %}
 {% highlight xaml %}
@@ -776,7 +793,7 @@ listView.GroupHeaderTemplate = new DataTemplate(() =>
 {% endhighlight %}
 {% endtabs %}
 
-You can switch the expand or collapse group icon based on `IsExpand` property using the converter.
+You can switch the expand or collapse group icon based on [IsExpand](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.Extensions.GroupResult.html#Syncfusion_DataSource_Extensions_GroupResult_IsExpand) property using the converter.
 
 {% tabs %}
 {% highlight c# %}
@@ -800,13 +817,15 @@ public class BoolToImageConverter : IValueConverter
 
 The following screenshot shows the output when grouping with expand collapse icon in group header. 
 
+![MAUI ListView expand and collapse icon in group header](Images/grouping/maui-listview-expand-and-collapse-icon.jpg)
+
 ### Height customization
 
-The size of the group header items can be customized by setting the `SfListView.GroupHeaderSize` property. The default value of this property is `40`. This property responds to runtime changes.
+The size of the group header items can be customized by setting the [SfListView.GroupHeaderSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupHeaderSize) property. The default value of this property is `40`. This property responds to runtime changes.
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfListView x:Name="listView" GroupHeaderSize="60" />
+<syncfusion:SfListView x:Name="listView" ItemsSource="{Binding ContactsInfo}" GroupHeaderSize="60" />
 {% endhighlight %}
 {% highlight c# %}
 listView.GroupHeaderSize = 60;
@@ -817,12 +836,12 @@ N> For Vertical orientation, the group header size is considered as height and f
 
 ### CheckBox in group header
 
-ListView supports selecting each group and items in the group like a checkBox selection by customizing the `SfListView.GroupHeaderTemplate` and the `ItemTemplate` respectively. The checkbox state will be update by using converter.
+ListView supports selecting each group and items in the group like a checkBox selection by customizing the [SfListView.GroupHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupHeaderTemplate) and the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate) respectively. The checkbox state will be updated by using converter.
 
 {% tabs %}
 {% highlight xaml %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
-  <syncfusion:SfListView>
+  <syncfusion:SfListView x:Name="listView" ItemsSource="{Binding ContactsInfo}">
     <syncfusion:SfListView.GroupHeaderTemplate>
         <DataTemplate>
             <ViewCell>
@@ -879,7 +898,7 @@ listView.GroupHeaderTemplate = new DataTemplate(() =>
 {% endhighlight %} 
 {% endtabs %}
 
-The checkBox state in the `GroupHeaderTemplate` will be updated whenever items select and deselect by using converter.
+The checkBox state in the `GroupHeaderTemplate` will be updated whenever items are selected and deselected by using converter.
 
 {% tabs %}
 {% highlight c# %}
@@ -921,7 +940,7 @@ public object Convert(object value, Type targetType, object parameter, CultureIn
 {% endhighlight %}
 {% endtabs %}
 
-To select and deselect all the items of group by tap the checkbox in the group header, follow the code example.
+Follow the code example to select and deselect all the group items by tapping the checkbox in the group header.
 
 {% tabs %}
 {% highlight c# %}
@@ -956,12 +975,13 @@ private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
 
 private void RefreshGroupHeader(GroupResult group)
 {
-    foreach (var item in this.listView.GetVisualContainer().Children)
+    foreach (var item in this.ListView.GetVisualContainer().Children)
     {
-      if (item.BindingContext == group)
-       {
-         item.BindingContext = null;
-         (item as GroupHeaderItem).Content.BindingContext = null;
+        if (item is ListViewGroupHeaderItem && 
+            (item as ListViewGroupHeaderItem)!.BindingContext == group)
+        {
+            (item as ListViewGroupHeaderItem).BindingContext = null;
+            (item as ListViewGroupHeaderItem).Content.BindingContext = null;
         }
     }
 }        
@@ -970,9 +990,11 @@ private void RefreshGroupHeader(GroupResult group)
 
 The following screenshot shows the output when checking items in group header. 
 
+![MAUI ListView checkbox in group header](Images/grouping/maui-listview-checkbox-in-group-header.jpg)
+
 ### Changing group header appearance when expanding
 
-Change the `SfListView.GroupHeaderTemplate` appearance like `BackgroundColor` of view while expanding the particular group with the help of Converter.   
+You can change the [SfListView.GroupHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupHeaderTemplate) appearance like `BackgroundColor` of view while expanding the particular group using the Converter. 
 
 {% tabs %}
 {% highlight xaml %}
@@ -1032,7 +1054,7 @@ listView.GroupHeaderTemplate = new DataTemplate(() =>
  { 
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture) 
     { 
-      return (bool)value == true ? Color.FromHex("#E4E4E4") : Color.FromHex("#ADD8E6"); 
+      return (bool)value == true ? Colors.Gray : Colors.LightGray;
     } 
  
     public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture) 
@@ -1043,13 +1065,15 @@ listView.GroupHeaderTemplate = new DataTemplate(() =>
 {% endhighlight %}
 {% endtabs %}
 
-The following screenshot shows the output when group header appearance changed by expanding. 
+The following screenshot shows the output when group header appearance is changed by expanding. 
 
 N> The binding context for `GroupHeaderTemplate` is `GroupResult`. 
 
+![MAUI ListView changing group header appearence when expanding](Images/grouping/maui-listview-changing-group-header-appearence-when-expanding.jpg)
+
 ### Providing Indentation for GroupHeader items
 
-ListView allows you to provide space between the group header items by using the `Margin` property of parent view in the `GroupHeaderTemplate` property. For example, in the following code snippet, StackLayout is considered as parent view and spacing is provided by setting its margin.
+ListView allows you to provide space between the group header items by using the [Margin](https://docs.microsoft.com/en-us/dotnet/api/xamarin.forms.view.margin?view=xamarin-forms#Xamarin_Forms_View_Margin) property of parent view in the [GroupHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupHeaderTemplate) property. For example, in the following code snippet, StackLayout is considered as parent view and spacing is provided by setting its margin.
 
 {% tabs %}
 {% highlight xaml %}
@@ -1066,12 +1090,11 @@ ListView allows you to provide space between the group header items by using the
 {% endhighlight %}
 {% endtabs %}
 
-
 ## How To 
 
 ### Allow to select only one item in a group at a time
 
-To select only one item in a group at a time, use the `ItemSelectionChangingEventArgs` event. If more than one item in the same group gets selected, already selected item will be removed from `ListView.SelectedItems`. 
+To select only one item in a group at a time, use the [ItemSelectionChangingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemSelectionChangingEventArgs.html) event. If more than one item in the same group gets selected, already selected item will be removed from `ListView.SelectedItems`. 
 
 {% tabs %}
 {% highlight c# %}
@@ -1133,9 +1156,11 @@ if (selectedItems.Count > 0)
 
 The following screenshot shows the output when only one item in a group gets selected. 
 
+![MAUI ListView Allow to select only one item in a group at a time](Images/grouping/maui-listview-allow-to-select-only-one-group-at-a-time.jpg)
+
 ### Add an item at the specific index in a group
 
-The SfListView allows adding an item at the specific index in a group by finding the group with the help of `Key` value of the group.
+The SfListView allows adding an item at the specific index in a group by finding the group with the help of [Key](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.Extensions.GroupResult.html#Syncfusion_DataSource_Extensions_GroupResult_Key) value of the group.
 
 {% tabs %}
 {% highlight c# %}
@@ -1170,7 +1195,7 @@ internal void GetGroupResult(object ItemData)
 {% endhighlight %}
 {% endtabs %}
 
-To add item at  specific index in a group, follow the code example
+To add item at specific index in a group, follow the code example
 
 {% tabs %}
 {% highlight c# %}
@@ -1204,4 +1229,6 @@ internal void InsertItemInGroup(List<object> items, object Item, int InsertAt)
 {% endhighlight %}
 {% endtabs %}
 
-The following screenshot shows the output when item added at specified index. 
+The following screenshot shows the output when an item is added at the specified index.
+
+![MAUI ListView add an item at the specific index in a group](Images/grouping/maui-listview-add-an-item-at-the-specific-index.jpg)
