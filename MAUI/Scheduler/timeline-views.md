@@ -307,13 +307,13 @@ private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 
 ## Full screen scheduler
 
-The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) time interval width can be adjusted based on screen width by changing the value of [TimeIntervalWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineViewSettings.html#Syncfusion_Maui_Scheduler_SchedulerTimelineViewSettings_TimeIntervalWidth) property of [TimelineViewSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineViewSettings.html) to `-1.` It will auto-fit the timeline day, timeline week and timeline work week views to the screen width
+The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) time interval width can be adjusted based on screen width by changing the [TimeIntervalWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineViewSettings.html#Syncfusion_Maui_Scheduler_SchedulerTimelineViewSettings_TimeIntervalWidth) property of [TimelineViewSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineViewSettings.html) to `-1.` It will auto-fit the timeline day, timeline week and timeline work week views to the screen width.
 
 {% tabs %}
 {% highlight xaml %}
 
 <scheduler:SfScheduler x:Name="Scheduler" 
-                       View="TimelineWeek">
+                       View="TimelineDay">
     <scheduler:SfScheduler.TimelineViewSettings>
         <scheduler:SchedulerTimelineViewSettings 
                        TimeIntervalWidth="-1" />
@@ -323,7 +323,7 @@ The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sc
 {% endhighlight %}
 {% highlight c# %}
 
-this.Scheduler.View = SchedulerView.TimelineWeek;
+this.Scheduler.View = SchedulerView.TimelineDay;
 this.Scheduler.TimelineViewSettings.TimeIntervalWidth = -1;
 
 {% endhighlight %}

@@ -837,7 +837,7 @@ The selection view of appointment can be customized by using the [SelectedAppoin
 {% endhighlight %}
 {% highlight c# %}
 
-this.Scheduler.SelectedCellBackground = Brush.Orange;
+this.Scheduler.SelectedAppointmentBackground = Brush.Orange;
 
 {% endhighlight %}  
 {% endtabs %}
