@@ -305,6 +305,30 @@ private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 
 ![customize-time-region-appearance-in-maui-scheduler](images/timeline-views/customize-time-region-appearance-in-maui-scheduler.png)
 
+## Full screen scheduler
+
+The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) time interval width can be adjusted based on screen width by changing the [TimeIntervalWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineViewSettings.html#Syncfusion_Maui_Scheduler_SchedulerTimelineViewSettings_TimeIntervalWidth) property of [TimelineViewSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineViewSettings.html) to `-1.` It will auto-fit the timeline day, timeline week and timeline work week views to the screen width.
+
+{% tabs %}
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" 
+                       View="TimelineDay">
+    <scheduler:SfScheduler.TimelineViewSettings>
+        <scheduler:SchedulerTimelineViewSettings 
+                       TimeIntervalWidth="-1" />
+    </scheduler:SfScheduler.TimelineViewSettings>
+</scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight c# %}
+
+this.Scheduler.View = SchedulerView.TimelineDay;
+this.Scheduler.TimelineViewSettings.TimeIntervalWidth = -1;
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Show current time indicator
 
 You can show or hide the current time indicator in timeline day, timeline week, and timeline workweek views of [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) by using the [ShowCurrentTimeIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotViewSettings.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotViewSettings_ShowCurrentTimeIndicator) property of [TimelineViewSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineViewSettings.html), and by default, its `true.`

@@ -309,6 +309,30 @@ private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 
 ![time-region-appearence-customization-in-timeslots-views-in-maui-scheduler](images/day-week-views/time-region-appearence-customization-in-timeslots-views-in-maui-scheduler.png)
 
+## Full screen scheduler
+
+The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) time interval height can be adjusted based on screen height by changing the [TimeIntervalHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDaysViewSettings.html#Syncfusion_Maui_Scheduler_SchedulerDaysViewSettings_TimeIntervalHeight) property of [DaysViewSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDaysViewSettings.html) to `-1.` It will auto-fit the day, week and work week views to the screen height.
+
+{% tabs %}
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" 
+                       View="Week">
+    <scheduler:SfScheduler.DaysViewSettings>
+        <scheduler:SchedulerDaysViewSettings 
+                       TimeIntervalHeight="-1"/>
+    </scheduler:SfScheduler.DaysViewSettings>
+</scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight c# %}
+
+this.Scheduler.View = SchedulerView.Week;
+this.Scheduler.DaysViewSettings.TimeIntervalHeight = -1;
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Show current time indicator
 
 You can show or hide the current time indicator in day, week, and workweek views of [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) by using the [ShowCurrentTimeIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotViewSettings.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotViewSettings_ShowCurrentTimeIndicator) property of [DaysViewSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDaysViewSettings.html), and by default, its `true.`
@@ -332,8 +356,6 @@ this.Scheduler.DaysViewSettings.ShowCurrentTimeIndicator = false;
 
 {% endhighlight %}
 {% endtabs %}
-
-![show-or-hide-current-time-indicator-in-timeslots-views-in-maui-scheduler](images/day-week-views/show-or-hide-current-time-indicator-in-timeslots-views-in-maui-scheduler.png)
 
 ### Customize current time indicator appearance
 
