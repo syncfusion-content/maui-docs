@@ -83,6 +83,7 @@ private bool FilterContacts(object obj)
 Download the entire source code from GitHub [here]()
 
 The following screenshot shows the output rendered when the items are filtered:
+![MAUI ListView Filtering](Images/filtering/maui-listview-filter.png)
 
 
 
@@ -154,4 +155,6 @@ private void DataSource_FilterChanged(object sender, NotifyCollectionChangedEven
 {% endhighlight %}
 {% endtabs %}
 
+The following screenshot shows the output rendered when the filtered items are sorted:
+![MAUI ListView Sorting Filtered Items](Images/filtering/maui-listview-sortfilter.png)
 
