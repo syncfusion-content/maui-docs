@@ -329,6 +329,8 @@ this.Scheduler.TimelineViewSettings.TimeIntervalWidth = -1;
 {% endhighlight %}
 {% endtabs %}
 
+![full-screen-scheduler-in-timeline-views-in-maui-scheduler](images/timeline-views/full-screen-scheduler-in-timeline-views-in-maui-scheduler.png)
+
 ## Show current time indicator
 
 You can show or hide the current time indicator in timeline day, timeline week, and timeline workweek views of [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) by using the [ShowCurrentTimeIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotViewSettings.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotViewSettings_ShowCurrentTimeIndicator) property of [TimelineViewSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineViewSettings.html), and by default, its `true.`
@@ -376,6 +378,8 @@ this.Scheduler.TimelineViewSettings.CurrentTimeIndicatorBrush = Brush.Green;
 
 {% endhighlight %}
 {% endtabs %}
+
+![customize-current-time-indicator-appearance-in-timeline-views-in-maui-scheduler](images/timeline-views/customize-current-time-indicator-appearance-in-timeline-views-in-maui-scheduler.png)
 
 N>
 The current time indicator color is applied only when the`ShowCurrentTimeIndicator` property is enabled.
