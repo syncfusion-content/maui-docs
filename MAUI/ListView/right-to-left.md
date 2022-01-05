@@ -25,8 +25,6 @@ listView.FlowDirection = FlowDirection.RightToLeft;
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI ListView with right to left](SfListView_images/SfListView-Right-To-Left.png)
-
 ## Limitation
 
 * ListView item does not arrange from right to left direction in `Horizontal` orientation, when the [AutoFitMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_AutoFitMode) is `Height` or `DynamicHeight`.
