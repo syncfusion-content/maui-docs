@@ -187,9 +187,10 @@ public partial class MainPage : ContentPage
 
     private void ChangeItemsSource_Clicked(object sender, EventArgs e)
     {
-        var viewModel = new ContactsViewModel();
+        var viewModel = listView.BindingContext as ContactsViewModel();
+        var ScrollY = scrollView.ScollY;
         listView.ItemsSource = viewModel.EmployeeInfo;
-        listView.ScrollTo(scrollView.ScrollY);
+        listView.ScrollTo(ScrollY,true);
     }
 }
 
