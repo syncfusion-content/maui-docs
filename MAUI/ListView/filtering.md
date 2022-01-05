@@ -80,8 +80,6 @@ private bool FilterContacts(object obj)
 {% endhighlight %}
 {% endtabs %}
 
-Download the entire source code from GitHub [here]()
-
 The following screenshot shows the output rendered when the items are filtered:
 ![MAUI ListView Filtering](Images/filtering/maui-listview-filter.png)
 
