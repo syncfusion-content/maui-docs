@@ -30,7 +30,7 @@ The `FilterContacts` method filters the data contains the filter text value. Ass
       <SearchBar x:Name="filterText" HeightRequest="40"
            Placeholder="Search here to filter"
            TextChanged="OnFilterTextChanged" Grid.Row="0"/>
-      <syncfusion:SfListView x:Name="listView" Grid.Row="1" ItemSize="60" ItemsSource="{Binding customerDetails}"/>
+      <syncfusion:SfListView x:Name="listView" Grid.Row="1" ItemSize="60" ItemsSource="{Binding Items}"/>
   </Grid>
 </ContentPage>
 {% endhighlight %}
@@ -41,7 +41,7 @@ var searchBar = new SearchBar() { Placeholder = "Search here to filter" };
 searchBar.TextChanged += OnFilterTextChanged;
 
 var listView = new SfListView();
-listView.ItemsSource = viewModel.customerDetails;
+listView.ItemsSource = viewModel.Items;
 listView.ItemSize = 60;
 
 grid.Children.Add(searchBar);
@@ -70,9 +70,9 @@ private bool FilterContacts(object obj)
   if (searchBar == null || searchBar.Text == null)
      return true;
 
-  var contacts = obj as Contacts;
-  if (contacts.ContactName.ToLower().Contains(searchBar.Text.ToLower())
-       || contacts.ContactName.ToLower().Contains(searchBar.Text.ToLower()))
+  var taskInfo = obj as TaskInfo;
+            return (taskInfo.Title.ToLower().Contains(searchBar.Text.ToLower())
+                || taskInfo.Description.ToLower().Contains(searchBar.Text.ToLower()));
       return true;
   else
       return false;
@@ -96,9 +96,9 @@ private bool FilterContacts(object obj)
   if (searchBar == null || searchBar.Text == null)
      return true;
 
-  var contacts = obj as Contacts;
-  if (contacts.ContactName.ToLower().Contains(searchBar.Text.ToLower())
-      || contacts.ContactNumber.ToLower().Contains(searchBar.Text.ToLower()))
+  var taskInfo = obj as TaskInfo;
+      return (taskInfo.Title.ToLower().Contains(searchBar.Text.ToLower())
+                || taskInfo.Description.ToLower().Contains(searchBar.Text.ToLower()));
       return true;
   else
       return false;
@@ -116,12 +116,12 @@ listView.DataSource.FilterChanged += DataSource_FilterChanged;
 ...
 private void DataSource_FilterChanged(object sender, NotifyCollectionChangedEventArgs e)
 {
-  //Contacts is model class 
-  ObservableCollection<Contacts> contacts = new ObservableCollection<Contacts>();
+   //TaskInfo is model class 
+ ObservableCollection<TaskInfo> taskInfo = new ObservableCollection<TaskInfo>();
   // Get the filtered items
   var items = (sender as DataSource).DisplayItems;
-  foreach (var item in items)
-      contacts.Add(item as Contacts);
+  foreach (TaskInfo item in items)
+     taskInfo.Add(item as TaskInfo);
 }
 {% endhighlight %}
 {% endtabs %}
@@ -146,7 +146,7 @@ The order of the filtered items can be rearranged in the `FilterChanged` event b
 private void DataSource_FilterChanged(object sender, NotifyCollectionChangedEventArgs e)
 {
   listView.Clear();
-  listView.DataSource.SortDescriptors.Add(new SortDescriptor { PropertyName = "ContactName", 
+  listView.DataSource.SortDescriptors.Add(new SortDescriptor { PropertyName = "Title", 
                                                                Direction = ListSortDirection.Ascending });
   listView.RefreshView();
 }
