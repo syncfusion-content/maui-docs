@@ -13,7 +13,7 @@ This section explains how to filter the data and its related operations in the S
 
 ## Programmatic filtering
 
-The [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html) supports data filtering by setting the [SfListView.DataSource.Filter](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.DataSource.html#Syncfusion_DataSource_DataSource_Filter) property. You have to call the [SfListView.DataSource.RefreshFilter()](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.DataSource.html#Syncfusion_DataSource_DataSource_RefreshFilter) method after assigning the `Filter` property for refreshing the view.
+The [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html) supports data filtering by setting the [SfListView.DataSource.Filter](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.DataSource.html#Syncfusion_DataSource_DataSource_Filter) property. You have to call the [SfListView.DataSource.RefreshFilter](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.DataSource.html#Syncfusion_DataSource_DataSource_RefreshFilter) method after assigning the `Filter` property for refreshing the view.
 
 The [FilterChanged](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.DataSource.html#Syncfusion_DataSource_DataSource_FilterChanged) event is raised once filtering is applied to the SfListView.
 
@@ -21,7 +21,7 @@ The `FilterContacts` method filters the data contains the filter text value. Ass
 
 {% tabs %}
 {% highlight xaml %}
-<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms">
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
  <Grid>
 	 <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
@@ -81,7 +81,7 @@ private bool FilterContacts(object obj)
 {% endtabs %}
 
 The following screenshot shows the output rendered when the items are filtered:
-![MAUI ListView Filtering](Images/filtering/maui-listview-filter.png)
+![MAUI ListView Filtering](Images/filtering/maui-listview-filtering-items.png)
 
 
 
@@ -154,5 +154,5 @@ private void DataSource_FilterChanged(object sender, NotifyCollectionChangedEven
 {% endtabs %}
 
 The following screenshot shows the output rendered when the filtered items are sorted:
-![MAUI ListView Sorting Filtered Items](Images/filtering/maui-listview-sortfilter.png)
+![MAUI ListView Sorting Filtered Items](Images/filtering/maui-listview-sorting-filtered-items.png)
 
