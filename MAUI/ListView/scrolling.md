@@ -17,7 +17,7 @@ This section explains how to perform scrolling and its related operations in the
 
 The `SfListView` allows programmatically scrolling based on the index by using the [ScrollToRowIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewLayout.html#Syncfusion_Maui_ListView_ListViewLayout_ScrollToRowIndex_System_Int32_Microsoft_Maui_Controls_ScrollToPosition_System_Boolean_) method for both linear and grid layouts. It also enables and disables the scrolling animation when changing the view. By default, the scrolling will be animated.
 
-You can set position of item in view while scrolling by passing `ScrollToPosition` to `ScrollToRowIndex` method. Below are four different types of positions:
+You can set position of an item in view while scrolling by passing `ScrollToPosition` to `ScrollToRowIndex` method. The following are four different types of positions:
 
 * `MakeVisible`: Scrolls a specific item to make visible in the view. If the item is already in view, scrolling will not occur.
 * `Start`: Scrolls a specific item to be positioned at the begin of the view.
@@ -52,7 +52,7 @@ listView.ItemsLayout.ScrollToRowIndex(index, true);
 ### Limitations
 
  * When [AutoFitMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_AutoFitMode) is `Height` or grouping is enabled, the scroll animation will be disabled by default in Android and iOS platforms. 
- * If the [ScrollToRowIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewLayout.html#Syncfusion_Maui_ListView_ListViewLayout_ScrollToRowIndex_System_Int32_Microsoft_Maui_Controls_ScrollToPosition_System_Boolean_) method is called when loading the `SfListView`, set `disableAnimation` to `true` to scroll to the appropriate row index, or else view does not scrolled in Android.
+ * If the [ScrollToRowIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewLayout.html#Syncfusion_Maui_ListView_ListViewLayout_ScrollToRowIndex_System_Int32_Microsoft_Maui_Controls_ScrollToPosition_System_Boolean_) method is called on loading the `SfListView`, set `disableAnimation` to `true` to scroll to the appropriate row index, or else the view does not scroll in Android.
  * If the `ScrollToRowIndex` method is applied to a particular item index while the item is in Grouping or `AutoFitMode`, the particular item will get displayed in view but not in the exact position when the `ScrollToPosition` property is set as `MakeVisible` or `Center` for first time.
 * The programmatic scrolling is not supported when the `QueryItemSize` event is handled.
 
@@ -99,7 +99,7 @@ private void ListView_ScrollStateChanged(object sender, ScrollStateChangedEventA
 
 ## Identify when end of the list is reached on scrolling
 
-The `SfListView` allows notifying when scrolling using the [Changed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridCommon.ScrollAxis.ScrollAxisBase.html#Syncfusion_Maui_GridCommon_ScrollAxis_ScrollAxisBase_Changed) event of [ScrollAxisBase](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridCommon.ScrollAxis.ScrollAxisBase.html) in [VisualContainer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.VisualContainer.html) of the `SfListView`. By using this event, you can find whether reached the last item in the list in the `SfListView` based on the [LastBodyVisibleLineIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridCommon.ScrollAxis.ScrollAxisBase.html#Syncfusion_Maui_GridCommon_ScrollAxis_ScrollAxisBase_LastBodyVisibleLineIndex) property and underlying collection count.
+The `SfListView` can be notified when scrolling using the [Changed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridCommon.ScrollAxis.ScrollAxisBase.html#Syncfusion_Maui_GridCommon_ScrollAxis_ScrollAxisBase_Changed) event of [ScrollAxisBase](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridCommon.ScrollAxis.ScrollAxisBase.html) in [VisualContainer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.VisualContainer.html) of the `SfListView`. By using this event, you can find whether you have reached the last item in the list in the `SfListView` based on the [LastBodyVisibleLineIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridCommon.ScrollAxis.ScrollAxisBase.html#Syncfusion_Maui_GridCommon_ScrollAxis_ScrollAxisBase_LastBodyVisibleLineIndex) property and underlying collection count.
 
 {% tabs %}
 {% highlight c# %}
@@ -170,7 +170,7 @@ The `SfListView` have scrolled to top automatically when changing the `ItemsSour
 
 For `Horizontal` orientation, use the `ScrollX` value of `ListViewScrollView`.
 
- By using [Reflection](https://docs.microsoft.com/en-us/dotnet/api/system.reflection?redirectedfrom=MSDN&view=net-5.0), get the value of `ScrollOwner` from `VisualContainer` and use it.
+By using [Reflection](https://docs.microsoft.com/en-us/dotnet/api/system.reflection?redirectedfrom=MSDN&view=net-5.0), get the value of `ScrollOwner` from `VisualContainer` and use it.
 
 {% tabs %}
 {% highlight c# %}
@@ -216,7 +216,7 @@ public partial class MainPage : ContentPage
 
 ## How to handle the recycle of the ListView Items
 
-By default, the `SfListview` reuses items on scrolling and source collection change. You can skip the reusing while scrolling by setting the [CachingStrategy](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.CachingStrategy.html) property to [CreateNewTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.CachingStrategy.html#Syncfusion_Maui_ListView_CachingStrategy_CreateNewTemplate) for the ListView. It creates a new element for every data in the ItemsSource. The default value is [RecycleTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.CachingStrategy.html#Syncfusion_Maui_ListView_CachingStrategy_RecycleTemplate) where the data template gets reused while the data object associated with the listview item gets changed.
+By default, the `SfListview` reuses items on scrolling and changing the source collection. You can skip the reusing while scrolling by setting the [CachingStrategy](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.CachingStrategy.html) property to [CreateNewTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.CachingStrategy.html#Syncfusion_Maui_ListView_CachingStrategy_CreateNewTemplate) for the ListView. It creates a new element for every data in the ItemsSource. The default value is [RecycleTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.CachingStrategy.html#Syncfusion_Maui_ListView_CachingStrategy_RecycleTemplate) where the data template gets reused while the data object associated with the listview item gets changed.
 
 {% tabs %}
 {% highlight xaml %}
@@ -227,7 +227,7 @@ listView.CachingStrategy = CachingStrategy.CreateNewTemplate;
 {% endhighlight %}
 {% endtabs %}
 
-You can skip the reusing of list items on the `ItemsSourcePropertyChanged` by setting the [ItemsSourceChangeCachingStrategy](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemsSourceChangeCachingStrategy.html) property to [ClearItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemsSourceChangeCachingStrategy.html#Syncfusion_Maui_ListView_ItemsSourceChangeCachingStrategy_ClearItems) for the ListView. Here, the existing ListView items will be cleared and create a new list of items when the `ItemsSource` changed. The default value is [RecycleItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemsSourceChangeCachingStrategy.html#Syncfusion_Maui_ListView_ItemsSourceChangeCachingStrategy_RecycleItems) where the listView items will be recycled in the `ItemsSource` changes.
+You can skip the reusing of list items on the `ItemsSourcePropertyChanged` by setting the [ItemsSourceChangeCachingStrategy](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemsSourceChangeCachingStrategy.html) property to [ClearItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemsSourceChangeCachingStrategy.html#Syncfusion_Maui_ListView_ItemsSourceChangeCachingStrategy_ClearItems) for the ListView. Here, the existing ListView items will be cleared and create a new list of items when the `ItemsSource` is changed. The default value is [RecycleItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemsSourceChangeCachingStrategy.html#Syncfusion_Maui_ListView_ItemsSourceChangeCachingStrategy_RecycleItems) where the listView items will be recycled in the `ItemsSource` changes.
 
 {% tabs %}
 {% highlight xaml %}
