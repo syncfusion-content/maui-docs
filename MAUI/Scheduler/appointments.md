@@ -842,6 +842,8 @@ this.Scheduler.SelectedAppointmentBackground = Brush.Orange;
 {% endhighlight %}  
 {% endtabs %}
 
+![appointment-selection-background-in-maui-scheduler](images/appointments/appointment-selection-background-in-maui-scheduler.png)
+
 N>
 * [View scheduler appointment sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/GettingStarted)
 * [View business object sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/BusinessObject)
