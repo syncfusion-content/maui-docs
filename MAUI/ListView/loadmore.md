@@ -8,14 +8,14 @@ documentation: ug
 ---
 # Load More in .NET MAUI ListView (SfListView)
 
-The `SfListView` enables `Load More` view by setting the [SfListView.LoadMoreOption](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LoadMoreOption) and [SfListView.LoadMoreCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LoadMoreCommand) properties. This can be displayed either on the top or bottom of the view by setting the [SfListView.LoadMorePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LoadMorePosition) property. This view will be displayed when reaching the end of the list when the `LoadMorePosition` is `End`. This provides an option to add the items at runtime. If the `SfListView.LoadMorePosition` property is set as `Start`, the items will be loaded only by using the `LoadMoreOption.Manual` mode.
+The `SfListView` enables `Load More` view by setting the [SfListView.LoadMoreOption](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LoadMoreOption) and [SfListView.LoadMoreCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LoadMoreCommand) properties. This can be displayed either on the top or bottom of the view by setting the [SfListView.LoadMorePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LoadMorePosition) property. This view will be displayed when reaching the end of the list when the `LoadMorePosition` is set to `End`. This provides an option to add the items at runtime. If the `SfListView.LoadMorePosition` property is set as `Start`, the items will be loaded only by using the `LoadMoreOption.Manual` mode.
 
 The `SfListView.LoadMoreOption` property contains the following four different modes of operations:
 
  * [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.LoadMoreOption.html#Syncfusion_Maui_ListView_LoadMoreOption_None): Disables the load more button. This is the default value.
  * [Manual](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.LoadMoreOption.html#Syncfusion_Maui_ListView_LoadMoreOption_Manual): Displays the load more button when reaching the end of the list and execute `SfListView.LoadMoreCommand` when tapping the button.
  * [Auto](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.LoadMoreOption.html#Syncfusion_Maui_ListView_LoadMoreOption_Auto): Automatically execute the `SfListView.LoadMoreCommand` when reaching end of the list.
- * [AutoOnScroll](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.LoadMoreOption.html#Syncfusion_Maui_ListView_LoadMoreOption_AutoOnScroll): Executes `SfListView.LoadMoreCommand` when users interact with listview and reach to the end of list.
+ * [AutoOnScroll](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.LoadMoreOption.html#Syncfusion_Maui_ListView_LoadMoreOption_AutoOnScroll): Executes `SfListView.LoadMoreCommand` when users interact with the listview and reach the end of list.
 
 The `SfListView.LoadMorePosition` property has two positions:
 
@@ -26,7 +26,7 @@ The `SfListView.LoadMorePosition` property has two positions:
 
 ## Load more automatically
 
-To automatically load more items using the [SfListView.LoadMoreCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LoadMoreCommand) and [SfListView.LoadMoreCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LoadMoreCommandParameter) when reaching end of the list, set the [SfListView.LoadMoreOption](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.LoadMoreOption.html#Syncfusion_Maui_ListView_LoadMoreOption_Auto) property as `Auto`.
+Set the [SfListView.LoadMoreOption](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.LoadMoreOption.html#Syncfusion_Maui_ListView_LoadMoreOption_Auto) property as `Auto` to automatically load more items using the [SfListView.LoadMoreCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LoadMoreCommand) and [SfListView.LoadMoreCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LoadMoreCommandParameter) when reaching end of the list.
 
 {% tabs %}
 {% highlight xaml %}
@@ -84,7 +84,7 @@ private void AddProducts(int index, int count)
 
 ## Load more manually
 
-To load more items manually using the `SfListView.LoadMoreCommand`and `SfListView.LoadMoreCommandParameter` when tapping the load more button at end of the list, set the `SfListView.LoadMoreOption` property as `Manual`.
+Set the `SfListView.LoadMoreOption` property as Manual to load more items manually using the `SfListView.LoadMoreCommand` and `SfListView.LoadMoreCommandParameter` when tapping the load more button at end of the list.
 
 {% tabs %}
 {% highlight xaml %}
@@ -179,7 +179,7 @@ private bool CanLoadMoreItems(object obj)
     return true;
 }
 /// <summary>
-/// The Execute method is called based on the return value of the CanExecute method. If CanExecute returns false, the Execute method will not be executed.
+/// The `Execute` method is called based on the return value of the `CanExecute` method. If `CanExecute` returns false, the `Execute` method will not be executed.
 /// </summary>
 /// <param name="obj">ListView is passed as default parameter.</param>
 private async void LoadMoreItems(object obj)
@@ -218,7 +218,7 @@ private void AddProducts(int index, int count)
 
 The [SfListView.LoadMoreIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewLoadMoreIndicator.html) will be displayed when loading more items in the list.
 
-By using the [SfListView.IsBusy](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_IsBusy) property, you can interchange the visibility of the button and busy indicator when creating the load more view. You can set the value of the `SfListView.IsBusy` property to `true` before adding items to the list and set it to `false`, after adding the items. You can also bind the `IsBusy` property through ViewModel.
+By using the [SfListView.IsBusy](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_IsBusy) property, you can interchange the visibility of the button and busy indicator when creating the load more view. You can set the value of the `SfListView.IsBusy` property to `true` before adding items to the list and set it to `false`, after adding the items. You can also bind the `IsBusy` property using ViewModel.
 
 {% tabs %}
 {% highlight c# %}
@@ -297,7 +297,7 @@ listView.LoadMoreTemplate = new DataTemplate(() =>
 {% endhighlight %}
 {% endtabs %}
 
-### Loading Indicator
+### Loading indicator
 
 To customize the loading indicator, add the custom UI in the [SfListView.LoadMoreTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LoadMoreTemplate) property.
 
@@ -448,7 +448,7 @@ listView.LoadMoreTemplate = new DataTemplate(() =>
 
 To disable the `Load More` view, return the `CanExecute`method of the `SfListView.LoadMoreCommand` to `false`.
 
-If you reach maximum count (for example, totalItems = 22) in the list, follow the code example to disable the `Load More` view.
+If you reach maximum number of items in the list (for example, totalItems = 22), use the following code example to disable the`Load More` view.
 
 {% tabs %}
 {% highlight c# %}
@@ -477,15 +477,15 @@ private bool CanLoadMoreItems(object obj)
 ## Limitations
 
 * Must set minimum delay for `LoadMore` in Execute method.
-* SfListView does not support to set `Manual` in [SfListView.LoadMoreOption](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LoadMoreOption) when [SfListView.Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_Orientation) is `Horizontal`.
+* SfListView does not support you to set `Manual` in [SfListView.LoadMoreOption](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LoadMoreOption) when [SfListView.Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_Orientation) is `Horizontal`.
 * SfListView supports to set `Auto` and `AutoOnScroll` in `SfListView.LoadMoreOption` only when `SfListView.LoadMorePosition` is set to `End`.
-* Handle [LoadMoreCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LoadMoreCommand) execution by implementing `CanExecute` predicate of command. 
+* Handle [LoadMoreCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LoadMoreCommand) execution by implementing command `CanExecute` predicate. 
 
 ## How to
 
 ### Load more on infinite scroll 
 
-The `SfListView` allows adding more items infinite times either manually or automatically. 
+The `SfListView` allows adding more items infinite times,either manually or automatically. 
 
 {% tabs %}
 {% highlight c# %}
@@ -529,9 +529,9 @@ public class LoadMoreViewModel:INotifyPropertyChanged
 {% endtabs %}
 
 
-### Load more items automatically from up direction
+### Load more items automatically from the top
 
-The `SfListView` allows loading more items automatically when reaching top of the list by showing the busy indicator by loading in the [HeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_HeaderTemplate).
+The `SfListView` allows loading more items automatically when reaching the top of the list by showing the busy indicator by loading in the [HeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_HeaderTemplate).
 
 {% tabs %}
 {% highlight xaml %}
@@ -648,11 +648,11 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-Download the entire source code from GitHub [here]()
+Download the entire source code from GitHub [here]().
 
-### Load more items manually from up direction
+### Load more items manually from the top
 
-The `SfListView` allows loading more items when tapping the button loaded in the `HeaderTemplate` when reaching top of the list and shows the busy indicator till the items are added into the collection.
+The `SfListView` allows loading more items when tapping the button loaded in the `HeaderTemplate` when reaching the top of the list and shows the busy indicator until the items are added to the collection.
 
 {% tabs %}
 {% highlight xaml %}
@@ -771,10 +771,10 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-Download the entire source code from GitHub [here]()
+Download the entire source code from GitHub [here]().
 
 
-### How to disable LoadMoreCommand execution when ListView is Empty?
+### How to disable LoadMoreCommand execution when the ListView is Empty?
 
 You can skip the load more action by checking the underlying collection count in the execute method.
 
@@ -819,5 +819,5 @@ private void AddProducts(int index, int count)
 }
 {% endhighlight %}
 
-Download the GitHub sample from GitHub [here]()
+Download the GitHub sample from GitHub [here]().
                                                                                             
