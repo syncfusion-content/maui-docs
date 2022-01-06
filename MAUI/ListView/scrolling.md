@@ -187,7 +187,7 @@ public partial class MainPage : ContentPage
 
     private void ChangeItemsSource_Clicked(object sender, EventArgs e)
     {
-        var viewModel = listView.BindingContext as ContactsViewModel();
+        var viewModel = listView.BindingContext as ContactsViewModel;
         var ScrollY = scrollView.ScollY;
         listView.ItemsSource = viewModel.EmployeeInfo;
         listView.ScrollTo(ScrollY,true);
