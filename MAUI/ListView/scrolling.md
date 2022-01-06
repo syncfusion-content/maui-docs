@@ -62,7 +62,8 @@ The `SfListView` will load all of its items by setting the [IsScrollingEnabled](
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfListView x:Name="listView" IsScrollingEnabled="False" />
+<syncfusion:SfListView x:Name="listView" 
+			IsScrollingEnabled="False" />
 {% endhighlight %}
 {% highlight c# %}
 listView.IsScrollingEnabled = false; 
@@ -159,7 +160,7 @@ public partial class MainPage : ContentPage
     {
         InitializeComponent();
         visualContainer = listView.GetVisualContainer();
-	}
+    }
 }
 {% endhighlight %}
 {% endtabs %}
@@ -221,7 +222,8 @@ By default, the `SfListview` reuses items on scrolling and changing the source c
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfListView x:Name="listView" CachingStrategy="CreateNewTemplate" />
+<syncfusion:SfListView x:Name="listView" 
+                      	CachingStrategy="CreateNewTemplate" />
 {% endhighlight %}
 {% highlight c# %}
 listView.CachingStrategy = CachingStrategy.CreateNewTemplate; 
@@ -232,7 +234,8 @@ You can skip the reusing of list items on the `ItemsSourcePropertyChanged` by se
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfListView x:Name="listView" ItemsSourceChangeCachingStrategy="ClearItems" />
+<syncfusion:SfListView x:Name="listView" 
+			ItemsSourceChangeCachingStrategy="ClearItems" />
 {% endhighlight %}
 {% highlight c# %}
 listView.ItemsSourceChangeCachingStrategy = ItemsSourceChangeCachingStrategy.ClearItems;
