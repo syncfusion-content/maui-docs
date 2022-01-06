@@ -9,7 +9,7 @@ documentation: ug
 
 # Right To Left in .NET MAUI ListView (SfListView)
 
-`SfListView` supports to change the flow of text to the right-to-left direction by setting the `FlowDirection` to `RightToLeft` in both `Vertical` and `Horizontal` orientations. ListView supports RTL when device's flow direction is changed.
+`SfListView` supports changing the flow of text to the right-to-left direction by setting the `FlowDirection` to `RightToLeft` in both `Vertical` and `Horizontal` orientations. ListView supports RTL when the flow direction of the device is changed.
 
 {% tabs %}
 {% highlight xaml %}
