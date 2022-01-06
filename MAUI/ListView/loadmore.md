@@ -6,7 +6,7 @@ platform: MAUI
 control: SfListView
 documentation: ug
 ---
-# Load More in Xamarin ListView (SfListView)
+# Load More in .NET MAUI ListView (SfListView)
 
 The `SfListView` enables `Load More` view by setting the [SfListView.LoadMoreOption](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LoadMoreOption) and [SfListView.LoadMoreCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LoadMoreCommand) properties. This can be displayed either on the top or bottom of the view by setting the [SfListView.LoadMorePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LoadMorePosition) property. This view will be displayed when reaching the end of the list when the `LoadMorePosition` is `End`. This provides an option to add the items at runtime. If the `SfListView.LoadMorePosition` property is set as `Start`, the items will be loaded only by using the `LoadMoreOption.Manual` mode.
 
@@ -55,7 +55,7 @@ private bool CanLoadMoreItems(object obj)
 
 private async void LoadMoreItems(object obj)
 {
-    var listView = obj as Syncfusion.ListView.XForms.SfListView;
+    var listView = obj as Syncfusion.Maui.ListView.SfListView;
     listView.IsBusy = true;
     await Task.Delay(2500);
     var index = Products.Count;
@@ -113,7 +113,7 @@ private bool CanLoadMoreItems(object obj)
 
 private async void LoadMoreItems(object obj)
 {
-    var listView = obj as Syncfusion.ListView.XForms.SfListView;
+    var listView = obj as Syncfusion.Maui.ListView.SfListView;
     listView.IsBusy = true;
     await Task.Delay(2500);
     var index = Products.Count;
@@ -224,7 +224,7 @@ By using the [SfListView.IsBusy](https://help.syncfusion.com/cr/maui/Syncfusion.
 {% highlight c# %}
 private async void LoadMoreItems(object obj)
 {
-    var listView = obj as Syncfusion.ListView.XForms.SfListView;
+    var listView = obj as Syncfusion.Maui.ListView.SfListView;
     listView.IsBusy = true;
     await Task.Delay(2500);
     var index = Products.Count;
@@ -635,7 +635,7 @@ public partial class MainPage : ContentPage
     ViewModel.IndicatorIsVisible = false;
   }
 
-  private void ListView_Loaded(object sender, Syncfusion.ListView.XForms.ListViewLoadedEventArgs e)
+  private void ListView_Loaded(object sender, Syncfusion.Maui.ListView.ListViewLoadedEventArgs e)
   {
     //To avoid loading items initially when page loaded.
     if (!isScrolled)
@@ -648,7 +648,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/load-more-automatic-up-direction-listview-xamarin)
+Download the entire source code from GitHub [here]()
 
 ### Load more items manually from up direction
 
