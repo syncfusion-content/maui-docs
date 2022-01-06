@@ -23,9 +23,9 @@ The `FilterContacts` method filters the data contains the filter text value. Ass
 {% highlight xaml %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
  <Grid>
-	 <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
+   <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
    </Grid.RowDefinitions>
       <SearchBar x:Name="filterText" HeightRequest="40"
            Placeholder="Search here to filter"
@@ -146,8 +146,10 @@ The order of the filtered items can be rearranged in the `FilterChanged` event b
 private void DataSource_FilterChanged(object sender, NotifyCollectionChangedEventArgs e)
 {
   listView.Clear();
-  listView.DataSource.SortDescriptors.Add(new SortDescriptor { PropertyName = "Title", 
-                                                               Direction = ListSortDirection.Ascending });
+  listView.DataSource.SortDescriptors.Add(
+  new SortDescriptor { 
+  PropertyName = "Title", 
+  Direction = ListSortDirection.Ascending });
   listView.RefreshView();
 }
 {% endhighlight %}
