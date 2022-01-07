@@ -25,7 +25,7 @@ listView.FlowDirection = FlowDirection.RightToLeft;
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI ListView with right to left](Images/right-to-left/maui-listview-right-to-left.png)
+![MAUI ListView with right to left](Images/right-to-left/maui-listview-right-to-left.jpg)
 
 ## Limitation
 
