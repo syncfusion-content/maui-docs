@@ -237,6 +237,11 @@ private async void LoadMoreItems(object obj)
 
 Items can be loaded either on the top or bottom of the view.
 
+![.NET MAUI listview with load more on scrolling at bottom](Images/load-more/maui-listview-loadmore-items-on-end.gif)
+
+![.NET MAUI listview with load more on scrolling at top](Images/load-more/maui-listview-loadmore-items-on-start.gif)
+
+
 ## Load more view customization
 
 The SfListView allows customizing User Interface(UI) of `Load More` view.
@@ -536,14 +541,18 @@ The `SfListView` allows loading more items automatically when reaching the top o
 {% tabs %}
 {% highlight xaml %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
-   <syncfusion:SfListView x:Name="ListView" IsBusy="True" 
+   <syncfusion:SfListView x:Name="ListView" 
+                        IsBusy="True" 
                         ItemsSource="{Binding Messages}" 
                         AutoFitMode="Height">
         <syncfusion:SfListView.HeaderTemplate>
             <DataTemplate>
             <ViewCell>
                 <Grid>
-                <syncfusion:LoadMoreIndicator Color="Red" IsRunning="True" IsVisible="{Binding IndicatorIsVisible}"/>
+                <syncfusion:ListViewLoadMoreIndicator 
+                Color="Blue" 
+                IsRunning="True" 
+                IsVisible="{Binding IndicatorIsVisible}"/>
                 </Grid>
             </ViewCell>
             </DataTemplate>
@@ -565,9 +574,9 @@ public partial class MainPage : ContentPage
     ListView.HeaderTemplate = new DataTemplate(() =>
     {
       var grid = new Grid();
-      var loadMoreIndicator = new LoadMoreIndicator()
+      var loadMoreIndicator = new ListViewLoadMoreIndicator()
       {
-        Color = Color.Red,
+        Color = Color.Blue,
         IsRunning = true
       };
       loadMoreIndicator.SetBinding(LoadMoreIndicator.IsVisibleProperty, new Binding("IndicatorIsVisible"));
@@ -631,7 +640,7 @@ public partial class MainPage : ContentPage
     var header = (ListView.HeaderTemplate != null && !ListView.IsStickyHeader) ? 1 : 0;
     var totalItems = firstItemIndex + header;
     //Need to scroll back to previous position else the ScrollViewer moves to top of the list.
-    ListView.LayoutManager.ScrollToRowIndex(totalItems, true);
+    ListView.ItemsLayout.ScrollToRowIndex(totalItems, true);
     ViewModel.IndicatorIsVisible = false;
   }
 
@@ -639,7 +648,7 @@ public partial class MainPage : ContentPage
   {
     //To avoid loading items initially when page loaded.
     if (!isScrolled)
-      (ListView.LayoutManager as LinearLayout).ScrollToRowIndex(ViewModel.Messages.Count - 1, true);
+      (ListView.ItemsLayout as LinearLayout).ScrollToRowIndex(ViewModel.Messages.Count - 1, true);
     headerItem = visualContainer.Children.FirstOrDefault(obj => obj.GetType() == typeof(HeaderItem)) as HeaderItem;
     headerItem.PropertyChanged += HeaderItem_PropertyChanged;
     isScrolled = true;
@@ -648,7 +657,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-Download the entire source code from GitHub [here]().
+![.NET MAUI ListView with Auto Load More](Images/load-more/maui-listview-auto-load-more-on-top.png)
 
 ### Load more items manually from the top
 
@@ -657,7 +666,8 @@ The `SfListView` allows loading more items when tapping the button loaded in the
 {% tabs %}
 {% highlight xaml %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
-<syncfusion:SfListView x:Name="ListView"  IsBusy="True"
+<syncfusion:SfListView x:Name="ListView" 
+                       IsBusy="True"
                        ItemTemplate="{StaticResource MessageTemplateSelector}" 
                        ItemsSource="{Binding Messages}"
                        ItemSize="100">
@@ -669,7 +679,7 @@ The `SfListView` allows loading more items when tapping the button loaded in the
             <Button Text="Load More" Clicked="Button_Clicked" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
             </Button>
           </Grid>
-          <syncfusion:LoadMoreIndicator Color="Red" IsRunning="True" IsVisible="{Binding IndicatorIsVisible}"/>
+          <syncfusion:ListViewLoadMoreIndicator Color="Blue" IsRunning="True" IsVisible="{Binding IndicatorIsVisible}"/>
         </Grid>
       </ViewCell>
     </DataTemplate>
@@ -702,9 +712,9 @@ public partial class MainPage : ContentPage
       loadMore.Clicked += Button_Clicked;
       grid.Children.Add(loadMore);
       var grid1 = new Grid();
-      var loadMoreIndicator = new LoadMoreIndicator()
+      var loadMoreIndicator = new ListViewLoadMoreIndicator()
       {
-        Color = Color.Red,
+        Color = Color.Blue,
         IsRunning = true
       };
       loadMoreIndicator.SetBinding(LoadMoreIndicator.IsVisibleProperty, new Binding("IndicatorIsVisible"));
@@ -737,7 +747,7 @@ public partial class MainPage : ContentPage
 
   private void ListView_Loaded(object sender, Syncfusion.Maui.ListView.ListViewLoadedEventArgs e)
   {
-    (ListView.LayoutManager as LinearLayout).ScrollToRowIndex(ViewModel.Messages.Count - 1, true);
+    (ListView.ItemsLayout as LinearLayout).ScrollToRowIndex(ViewModel.Messages.Count - 1, true);
   }
 
   private async void Button_Clicked(object sender, EventArgs e)
@@ -763,7 +773,7 @@ public partial class MainPage : ContentPage
     var header = (ListView.HeaderTemplate != null && !ListView.IsStickyHeader) ? 1 : 0;
     var totalItems = firstItemIndex + header;
     //Need to scroll back to previous position else the ScrollViewer moves to top of the list.
-    ListView.LayoutManager.ScrollToRowIndex(totalItems, true);
+    ListView.ItemsLayout.ScrollToRowIndex(totalItems, true);
     ViewModel.GridIsVisible = true;
     ViewModel.IndicatorIsVisible = false;
   }
@@ -771,8 +781,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-Download the entire source code from GitHub [here]().
-
+![.NET MAUI ListView with Manual Load More](Images/load-more/maui-listview-manual-loadmore-on-top.png)
 
 ### How to disable LoadMoreCommand execution when the ListView is Empty?
 
@@ -818,6 +827,4 @@ private void AddProducts(int index, int count)
     }
 }
 {% endhighlight %}
-
-Download the GitHub sample from GitHub [here]().
                                                                                             
