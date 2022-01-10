@@ -178,7 +178,7 @@ public class ContactInfo_NestedListView
 {% endhighlight %}
 {% endtabs %}
 
-## Binding command of Button inside the ItemTemplate of .Net Maui ListView to ViewModel Command?
+## Binding command of Button inside the ItemTemplate of .NET MAUI ListView to ViewModel Command?
 
 You can bind command of `Button` inside `ItemTemplate` to the command in ViewModel by specifying `Source` property with its root element as reference to execute the binded property of type command.
 
