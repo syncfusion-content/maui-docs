@@ -39,6 +39,8 @@ The `FilterContacts` method filters the data contains the filter text value. Ass
 {% endhighlight %}
 {% highlight c# %}
 var grid = new Grid();
+grid.RowDefinitions.Add(new RowDefinition());
+grid.RowDefinitions.Add(new RowDefinition());
 
 var searchBar = new SearchBar() { Placeholder = "Search here to filter" };
 searchBar.TextChanged += OnFilterTextChanged;
@@ -49,6 +51,8 @@ listView.ItemSize = 60;
 
 grid.Children.Add(searchBar);
 grid.Children.Add(listView);
+grid.SetRow(searchBar, 0);
+grid.SetRow(listView, 1);
 
 {% endhighlight %}
 {% endtabs %}
