@@ -614,6 +614,8 @@ You can also get the reference of element bound as parameter by using command pa
     frame.HasShadow = true;
     frame.Margin = 5;
     var grid = new Grid();
+    grid.RowDefinitions.Add(new RowDefinition());
+    grid.RowDefinitions.Add(new RowDefinition());
     grid.Padding = 5;
     var button = new Button();
     Binding binding = new Binding();
@@ -623,13 +625,15 @@ You can also get the reference of element bound as parameter by using command pa
     button.BackgroundColor = Colors.Transparent;
     button.FontAttributes = FontAttributes.Bold;
     button.FontSize = 19;
-    var label = new Label();
+    var label = new Label{ TextColor = Colors.Black };
     Binding bind = new Binding();
     bind.Path = "BookDescription";
     label.SetBinding(Label.TextProperty, bind);
     label.FontSize = 15;
     grid.Children.Add(button);
     grid.Children.Add(label);
+    grid.SetRow(button, 0);
+    grid.SetRow(label, 1);
     frame.Content = grid;
     return frame;
  });
