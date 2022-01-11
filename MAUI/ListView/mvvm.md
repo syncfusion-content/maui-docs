@@ -13,7 +13,7 @@ documentation: ug
 
 ### Tap command
 
-The [TapCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_TapCommand) will be triggered whenever tapping the item and passing the [ItemTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemTappedEventArgs.html) as parameter.
+The [TapCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_TapCommand) will be triggered when you tap the item and pass the [ItemTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemTappedEventArgs.html) as a parameter.
 
 {% tabs %}
 {% highlight c# %}
@@ -47,7 +47,7 @@ public class CommandViewModel
 
 ### LongPress command
 
-The [LongPressCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LongPressCommand) will be triggered whenever long pressing the item and passing the [ItemLongPressEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemLongPressEventArgs.html) as parameter.
+The [LongPressCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LongPressCommand) will be triggered when you long press the item and pass the [ItemLongPressEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemLongPressEventArgs.html) as a parameter.
 
 {% tabs %}
 {% highlight c# %}
@@ -79,7 +79,7 @@ public class CommandViewModel
 {% endhighlight %}
 {% endtabs %}
 
-N> When Command is binded to `ItemTemplate`, it must also define `Source` property with its root element as reference. Only then it executes the property in the ViewModel of type Command.
+N> When a command is bound to `ItemTemplate`, it must also define `Source` property with its root element as reference. The property in the ViewModel of type Command is only then it executed.
 
 ## Event to command
 
@@ -119,9 +119,9 @@ public class ContactsViewModel
 {% endhighlight %}
 {% endtabs %}
 
-## Binding command of inner ListView to Model Command?
+## Binding command of inner ListView to Model Command
 
-You can bind command of `Button` inside `ItemTemplate` to the command in Model by specifying `Source` property with its root element as reference to execute the binded property of type command.
+You can bind a command for a `Button` inside `ItemTemplate` to the command in Model by specifying `Source` property with its root element as reference to execute the binded property of type command.
 
 {% tabs %}
 {% highlight xaml %}
@@ -178,7 +178,7 @@ public class ContactInfo_NestedListView
 {% endhighlight %}
 {% endtabs %}
 
-## Binding command of Button inside the ItemTemplate of .NET MAUI ListView to ViewModel Command?
+## Binding command of Button inside the ItemTemplate of .NET MAUI ListView to ViewModel Command
 
 You can bind command of `Button` inside `ItemTemplate` to the command in ViewModel by specifying `Source` property with its root element as reference to execute the binded property of type command.
 
@@ -225,7 +225,7 @@ namespace ListViewSample
 
 ### Binding ItemsSource
 
-`SfListView` support to bind the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsSource) property to populate the list view items from view model.
+`SfListView` allows you to bind the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsSource) property to populate the list view items from view model.
 
 {% tabs %}
 {% highlight xaml %}
@@ -290,7 +290,7 @@ public class BookInfoRepository : INotifyPropertyChanged
 
 ### Binding SelectedItem
 
-`SfListView` support to select the items through binding the [SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectedItem) property from view model by implementing the `INotifyPropertyChanged` interface that gives the call back notification to UI.
+`SfListView` supports selecting the items by binding the [SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectedItem) property from the ViewModel by implementing the `INotifyPropertyChanged` interface, which gives the call back notification to the UI.
 
 {% tabs %}
 {% highlight xaml %}
@@ -328,7 +328,7 @@ public class BookInfoRepository : INotifyPropertyChanged
 
 ### Binding SelectedItems
 
-`sfListView` support to select multiple items through binding the [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectedItems) property from view model with ObservableCollection<object> type. Set the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionMode) property as `Multiple`.
+`sfListView` supports selecting multiple items by binding the [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectedItems) property from the ViewModel with ObservableCollection type. Set the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionMode) property as `Multiple`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -379,7 +379,7 @@ public class BookInfoRepository : INotifyPropertyChanged
 
 ### Binding SelectionChanged event
 
-In `SfListView`, the [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionChanged) event is raised once the selection process has been completed. MVVM for the `SelectionChanged` event can be achieved by binding through the event to command converter. 
+In `SfListView`, the [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionChanged) event is raised once the selection process has been completed. MVVM for the `SelectionChanged` event can be achieved by binding the event to command converter. 
 
 {% tabs %}
 {% highlight xaml %}
@@ -431,7 +431,7 @@ public class BookInfoRepository : INotifyPropertyChanged
 
 ### Binding SelectionChanging event
 
-In ListView, the [SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionChanging) event will be raised when selecting an item at the execution time. MVVM for the `SelectionChanging` event can be achieved by binding through the event to command converter.
+In ListView, the [SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionChanging) event will be raised when selecting an item at the execution time. MVVM for the `SelectionChanging` event can be achieved by binding the event to command converter.
 
 {% tabs %}
 {% highlight xaml %}
@@ -486,7 +486,7 @@ N> Similarly, you can bind the [ItemTapped](https://help.syncfusion.com/cr/maui/
 
 ### Handling ItemTapped action
 
-`SfListView` supports binding the [TapCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_TapCommand) property with the item taped action from view model, where you can write navigation or any other action code in the execution. When defining the command, [ItemTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemTappedEventArgs.html) will be passed as command parameter which has item information in execution. 
+`SfListView` supports binding the [TapCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_TapCommand) property with the item taped action from the ViewModel, where you can write navigation or any other action code in the execution. When defining the command, [ItemTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemTappedEventArgs.html) will be passed as command parameter that contains item information during execution. 
 
 You can define the command parameter for `TapCommand` using [TappedCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_TapCommandParameter), where you can get the element reference passed in view model.
 
@@ -535,9 +535,9 @@ public class BookInfoRepository : INotifyPropertyChanged
 
 ### Handling ItemLongPress action
 
-`SfListView` supports binding the [LongPressCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LongPressCommand) property with the item holding action from view model, where you can write navigation or any other action code in the execution. When defining the command, [ItemLongPressEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemLongPressEventArgs.html) will be passed as command parameter which has item information in execution. 
+`SfListView` supports binding the [LongPressCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LongPressCommand) property with the item holding action from the ViewModel, where you can write navigation or any other action code in the execution. When defining the command, [ItemLongPressEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemLongPressEventArgs.html) will be passed as command parameter that contains item information in execution.
 
-You can define the command parameter for the `LongPressCommand` using [LongPressCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LongPressCommandParameter), where you can get the element reference passed in view model.
+You can define the command parameter for the `LongPressCommand` using [LongPressCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LongPressCommandParameter), where you can get the element reference passed in ViewModel.
 
 {% tabs %}
 {% highlight xaml %}
@@ -582,7 +582,7 @@ public class BookInfoRepository : INotifyPropertyChanged
 
 ### Binding button command
 
-The contents loaded in the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate) can be bound from the view model using their commands or gestures, where you can customize the loaded content or any other action code needed in the call back. You will get the `BindingContext` of [ListViewItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewItem.html) as the parameter in execution when defining the command button. 
+The contents loaded in the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate) can be bound from the ViewModel using their commands or gestures, where you can customize the loaded content or any other action code needed in the call back. When defining the command button, you will get the `BindingContext` of [ListViewItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewItem.html) as the parameter in execution. 
 
 You can also get the reference of element bound as parameter by using command parameter of loaded elements.
 
