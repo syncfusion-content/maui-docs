@@ -225,7 +225,7 @@ namespace ListViewSample
 
 ### Binding ItemsSource
 
-`SfListView` allows you to bind the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsSource) property to populate the list view items from view model.
+`SfListView` allows you to bind the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsSource) property to populate the list view items from ViewModel.
 
 {% tabs %}
 {% highlight xaml %}
@@ -488,7 +488,7 @@ N> Similarly, you can bind the [ItemTapped](https://help.syncfusion.com/cr/maui/
 
 `SfListView` supports binding the [TapCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_TapCommand) property with the item taped action from the ViewModel, where you can write navigation or any other action code in the execution. When defining the command, [ItemTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemTappedEventArgs.html) will be passed as command parameter that contains item information during execution. 
 
-You can define the command parameter for `TapCommand` using [TappedCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_TapCommandParameter), where you can get the element reference passed in view model.
+You can define the command parameter for `TapCommand` using [TappedCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_TapCommandParameter), where you can get the element reference passed in ViewModel.
 
 {% tabs %}
 {% highlight xaml %}
@@ -667,9 +667,9 @@ public class BookInfoRepository : INotifyPropertyChanged
 
 ### Processing LoadMore
 
-`SfListView` supports binding the [LoadMoreOption](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LoadMoreOption), [LoadMoreCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LoadMoreCommand), and [IsBusy](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_IsBusy) properties from view model to load more number of items at runtime. `LoadMoreOption` enables load more manually or automatically the items when loading the items at runtime. `LoadMoreCommand` executes to load the items form view model. The `IsBusy` property notifies that the items are populating from view model to show or hide the load more view. 
+`SfListView` supports binding the [LoadMoreOption](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LoadMoreOption), [LoadMoreCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LoadMoreCommand), and [IsBusy](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_IsBusy) properties from ViewModel to load more number of items at runtime. `LoadMoreOption` enables load more manually or automatically the items when loading the items at runtime. `LoadMoreCommand` executes to load the items form ViewModel. The `IsBusy` property notifies that the items are populating from ViewModel to show or hide the load more view. 
 
-The `IsBusy` property in view model shows the busy indicator when populating the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsSource).
+The `IsBusy` property in ViewModel shows the busy indicator when populating the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsSource).
 
 {% tabs %}
 {% highlight xaml %}
