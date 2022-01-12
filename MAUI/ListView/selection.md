@@ -186,8 +186,11 @@ The .NET MAUI ListView (SfListView) supports customizing the selection backgroun
     HasShadow = true,
   };
   grid.Children.Add(songTitle);
-  grid.Children.Add(songAuthor, 0, 1);
-  grid.Children.Add(frame, 0, 2);
+  grid.Children.Add(songAuthor);
+  grid.Children.Add(frame);
+  grid.SetRow(songTitle, 0);
+  grid.SetRow(songAuthor, 1);
+  grid.SetRow(frame, 2);
   return grid;
 });
 {% endhighlight %}

@@ -315,14 +315,20 @@ public partial class MainPage : ContentPage
         stackLayout.HeightRequest = 1;
         stackLayout.BackgroundColor = Color.Gray;
 
-        gridView.Children.Add(contactName, 0, 0);
-        gridView.Children.Add(contactNumber, 0, 1);
+        gridView.Children.Add(contactName);
+        gridView.Children.Add(contactNumber);
+        gridView.SetRow(contactName, 0);
+        gridView.SetRow(contactNumber, 1);
 
         grid.Children.Add(contactImage);
-        grid.Children.Add(gridView, 1, 0);
+        grid.Children.Add(gridView);
+        grid.SetColumn(contactImage, 0);
+        grid.SetColumn(gridView, 1);
 
         gridView.Children.Add(grid);
-        gridView.Children.Add(stackLayout, 0, 1);
+        gridView.Children.Add(stackLayout);
+        gridView.SetRow(grid, 0);
+        gridView.SetRow(stackLayout, 1);
 
         return gridView;
     }
