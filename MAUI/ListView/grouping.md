@@ -231,6 +231,8 @@ For each group, display the sum of the values of the property from the model obj
 listView.GroupHeaderTemplate = new DataTemplate(() =>
 {
    var grid = new Grid();
+   grid.ColumnDefinitions.Add(new ColumnDefinition());
+   grid.ColumnDefinitions.Add(new ColumnDefinition());
 
    var label1 = new Label();
    label1.SetBinding(Label.TextProperty, new Binding("Key"));
@@ -241,7 +243,9 @@ listView.GroupHeaderTemplate = new DataTemplate(() =>
    label2.SetBinding(Label.TextProperty,binding);
 
    grid.Children.Add(label1);
-   grid.Children.Add(label2, 1, 0);
+   grid.Children.Add(label2);
+   grid.SetColumn(label1, 0);
+   grid.SetColumn(label2, 1);
 
    return grid;
  });
@@ -309,6 +313,8 @@ The total number of items in each group will be displayed in the group header by
 listView.GroupHeaderTemplate = new DataTemplate(() => 
 {
   var grid = new Grid();
+  grid.ColumnDefinitions.Add(new ColumnDefinition());
+  grid.ColumnDefinitions.Add(new ColumnDefinition());
 
   var stack1 = new StackLayout()
   {
@@ -337,7 +343,9 @@ listView.GroupHeaderTemplate = new DataTemplate(() =>
   var countlabel2 = new Label() { Text="Item's" , TextColor=Color.Black};
 
   grid.Children.Add(stack1);
-  grid.Children.Add(stack2, 1, 0);
+  grid.Children.Add(stack2);
+  grid.SetColumn(stack1, 0);
+  grid.SetColumn(stack2, 1);
   return grid;
 });
 {% endhighlight %}
@@ -786,8 +794,10 @@ listView.GroupHeaderTemplate = new DataTemplate(() =>
   
     label.SetBinding(Label.TextProperty, new Binding("Key"));
   
-    grid.Children.Add(image, 0, 0);
-    grid.Children.Add(label, 1, 0);
+    grid.Children.Add(image);
+    grid.Children.Add(label);
+    grid.SetColumn(image, 0);
+    grid.SetColumn(label, 1);
     return grid;
 });
 {% endhighlight %}
@@ -872,6 +882,8 @@ ListView supports selecting each group and items in the group like a checkBox se
 listView.GroupHeaderTemplate = new DataTemplate(() => 
 {
   var grid = new Grid();
+  grid.ColumnDefinitions.Add(new ColumnDefinition());
+  grid.ColumnDefinitions.Add(new ColumnDefinition());
 
   var label = new Label() { VerticalTextAlignment=TextAlignment.Center};
   label.SetBinding(Label.TextProperty, new Binding("Key"));
@@ -891,7 +903,9 @@ listView.GroupHeaderTemplate = new DataTemplate(() =>
   image.GestureRecognizers.Add(tapped);
                
   grid.Children.Add(label);
-  grid.Children.Add(image, 2, 0);
+  grid.Children.Add(image);
+  grid.SetColumn(label, 1);
+  grid.SetColumn(image, 2);
                 
   return grid;
 });
