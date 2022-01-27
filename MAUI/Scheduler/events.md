@@ -46,6 +46,10 @@ private void OnSchedulerTapped(object sender, SchedulerTappedEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
+N>
+* [View scheduler appointment sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/GettingStarted)
+* [View business object sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/BusinessObject)
+
 ## DoubleTapped
 
 Whenever the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) elements are double-tapped onto the view, the [DoubleTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_DoubleTapped) event occurs. Below is a list of the arguments:
@@ -80,6 +84,10 @@ private void OnSchedulerDoubleTapped(object sender, SchedulerDoubleTappedEventAr
 {% endhighlight %}
 {% endtabs %}
 
+N>
+* [View scheduler appointment sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/GettingStarted)
+* [View business object sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/BusinessObject)
+
 ## LongPressed
 
 Whenever the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) elements are long-pressed onto the view, the [LongPressed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_LongPressed) event occurs. Below is a list of the arguments:
@@ -113,6 +121,10 @@ private void OnSchedulerLongPressed(object sender, SchedulerLongPressedEventArgs
 
 {% endhighlight %}
 {% endtabs %}
+
+N>
+* [View scheduler appointment sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/GettingStarted)
+* [View business object sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/BusinessObject)
 
 ## SelectionChanged
 

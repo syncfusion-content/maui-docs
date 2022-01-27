@@ -41,9 +41,13 @@ this.Scheduler.AppointmentsSource = appointment;
 {% endhighlight %}
 {% endtabs %}
 
+![scheduler-appointment-in-maui-scheduler](images/appointments/scheduler-appointment-in-maui-scheduler.png)
+
 N> 
 * In the Scheduler, every appointment can be arranged based on its start time and duration for normal appointments in a day, week, and workweek view.
 *  Whenever a timeline is viewed, the appointments (all day, span, and normal) are ordered and rendered based on the appointment start time and time duration of the appointment. This is followed by `IsSpanned,` `IsAllDay,` and normal appointments.
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/GettingStarted)
 
 ## Scheduler appointment source mapping
 
@@ -169,6 +173,10 @@ this.Scheduler.AppointmentsSource = Meetings;
 {% endhighlight %}
 {% endtabs%}
 
+![business-appointment-event-in-maui-scheduler](images/appointments/business-appointment-event-in-maui-scheduler.png)
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/BusinessObject)
+
 ## Spanned appointments
 
 The spanned appointment is the one which lasts longer than 24 hours. The spanned appointment does not block out timeslots in the Scheduler, but it will render in all-day appointment panel exclusively.
@@ -213,6 +221,8 @@ this.Scheduler.AppointmentsSource = Meetings;
 {% endhighlight %}
 {% endtabs%}
 
+![spanned-appointment-in-maui-scheduler](images/appointments/spanned-appointment-in-maui-scheduler.png)
+
 ## All day appointments
 
 Appointments that are scheduled for a whole day are known as All-Day Appointments. The [IsAllDay](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_IsAllDay) property of the [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html) can be used to set this property. Appointments that last for a full 24 hours (exact 24 hours) will be considered as all-day appointments without setting the `IsAllDay` property.
@@ -245,6 +255,8 @@ this.Scheduler.AppointmentsSource = appointment;
 
 {% endhighlight %}
 {% endtabs%}
+
+![all-day-appointment-in-maui-scheduler](images/appointments/all-day-appointment-in-maui-scheduler.png)
 
 N> 
 For example: From 12/13/2021 12:00AM to 12/14/2021 12:00AM.
@@ -314,6 +326,10 @@ this.Scheduler.AppointmentsSource = appointment;
 
 {% endhighlight %}
 {% endtabs%}
+
+![recurrence-scheduler-appointment-in-maui-scheduler](images/appointments/recurrence-scheduler-appointment-in-maui-scheduler.png)
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/RecurringAppointment/SchedulerAppointment)
 
 ### Creating the business object recurrence appointment
 
@@ -419,6 +435,10 @@ this.Scheduler.AppointmentsSource = Meetings;
 {% endhighlight %}
 {% endtabs%}
 
+![business-object-recurring-appointment-in-maui-scheduler](images/appointments/business-object-recurring-appointment-in-maui-scheduler.png)
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/RecurringAppointment/BusinessObject)
+
 ### How to get the recurrence editor field values from RRULE?
 
 The [RRuleParser](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRecurrenceManager.html#Syncfusion_Maui_Scheduler_SchedulerRecurrenceManager_ParseRRule_System_String_System_DateTime_) method of the `.NET MAUI Scheduler` retrieves the recurrence properties from the [RRULE](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRecurrenceManager.html#Syncfusion_Maui_Scheduler_SchedulerRecurrenceManager_GenerateRRule_Syncfusion_Maui_Scheduler_SchedulerRecurrenceInfo_System_DateTime_System_DateTime_).
@@ -517,6 +537,10 @@ this.Scheduler.AppointmentsSource = appointment;
 {% endhighlight %}
 {% endtabs %}
 
+![adding-exception-dates-to-recurrence-pattern-scheduler-appointment-in-maui-scheduler](images/appointments/adding-exception-dates-to-recurrence-pattern-scheduler-appointment-in-maui-scheduler.png)
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/RecursiveExceptionAppointment/SchedulerAppointment)
+
 ### Add exception appointment to the recurrence pattern
 
 Also add an exception appointment which is changed or modified occurrence of the recurrence pattern appointment to the [AppointmentsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentsSource) of [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html). To add a changed occurrence, ensure to set the [RecurrenceId](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_RecurrenceId) of that occurrence and add the date of that occurrence to the [RecurrenceExceptionDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_RecurrenceExceptionDates) of recurrence pattern appointment. The [RecurrenceId](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_RecurrenceId) of changed occurrence should hold the exact recurrence pattern appointment [Id](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_Id).
@@ -575,12 +599,16 @@ this.Scheduler.AppointmentsSource = appointment;
 {% endhighlight %}
 {% endtabs %}
 
+![adding-exception-to-the-recurrence-pattern-scheduler-appointment-in-maui-scheduler](images/appointments/adding-exception-to-the-recurrence-pattern-scheduler-appointment-in-maui-scheduler.png)
+
 N>
 * The `RecurrenceId` of an exception appointment and the `Id` of its pattern appointment should have the same value.
 * The Exception recurrence appointment does not have the `RecurrenceRule,` so for an exception appointment, it will be reset to `empty.`
 * The exception appointment should have a different `Id` with original pattern appointment `Id.`
 * The exception appointment should be a normal appointment and should not be created as a recurring appointment, since its occurrence is from a recurrence pattern.
 * The `RecurrenceExceptionDates` should be in a Universal Time Coordinates (UTC) time zone.
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/RecursiveExceptionAppointment/SchedulerAppointment)
 
 ### Create recurrence exceptions for business object
 
@@ -675,7 +703,11 @@ this.Scheduler.AppointmentsSource = Meetings;
 {% endhighlight %}
 {% endtabs %}
 
+![adding-exception-dates-to-recurrence-pattern-custom-appointment-in-maui-scheduler](images/appointments/adding-exception-dates-to-recurrence-pattern-custom-appointment-in-maui-scheduler.png)
+
 N> Exception dates should be Universal Time Coordinates (UTC) time zone.
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/RecursiveExceptionAppointment/BusinessObject)
 
 ## Add an exception appointment to the recurrence pattern
 
@@ -754,6 +786,8 @@ N>
 * The exception appointment should be a normal appointment and should not be created as recurring appointment, since its occurrence from the recurrence pattern.
 * The recurrenceExceptions should be in a Universal Time Coordinates (UTC) time zone.
 
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/RecursiveExceptionAppointment/BusinessObject)
+
 ## Customize appointment text style
 
 The appointment text style can be customized by using the [AppointmentTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentTextStyle) property of the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
@@ -788,3 +822,28 @@ this.Scheduler.AppointmentTextStyle = appointmentTextStyle;
 
 {% endhighlight %}  
 {% endtabs %}
+
+![customize-appointment-text-style-appearence-in-maui-scheduler](images/appointments/customize-appointment-text-style-appearence-in-maui-scheduler.png)
+
+## Appointment selection background
+
+The selection view of appointment can be customized by using the [SelectedAppointmentBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_SelectedAppointmentBackground) property in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
+
+{% tabs %}  
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" SelectedAppointmentBackground="Orange"/>
+
+{% endhighlight %}
+{% highlight c# %}
+
+this.Scheduler.SelectedAppointmentBackground = Brush.Orange;
+
+{% endhighlight %}  
+{% endtabs %}
+
+![appointment-selection-background-in-maui-scheduler](images/appointments/appointment-selection-background-in-maui-scheduler.png)
+
+N>
+* [View scheduler appointment sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/GettingStarted)
+* [View business object sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/BusinessObject)

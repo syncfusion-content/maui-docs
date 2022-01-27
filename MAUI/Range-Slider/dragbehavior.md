@@ -7,7 +7,7 @@ control: SfRangeSlider
 documentation: ug
 ---
 
-# DragBehavior in .NET MAUI Range Slider (SfRangeSlider)
+# Thumb DragBehavior in .NET MAUI Range Slider (SfRangeSlider)
 
 This section helps to learn about thumb drag behavior in the range slider.
 
@@ -20,10 +20,10 @@ When the [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slid
 {% highlight xaml %}
 
 <rangeslider:SfRangeSlider Minimum="0" 
-                       Maximum="100" 
-                       ShowTicks="True"
-                       ShowLabels="True"
-                       DragBehavior="OnThumb">
+                           Maximum="100" 
+                           ShowTicks="True"
+                           ShowLabels="True"
+                           DragBehavior="OnThumb">
 </rangeslider:SfRangeSlider>
 
 {% endhighlight %}
@@ -52,10 +52,10 @@ When the [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slid
 {% highlight xaml %}
 
 <rangeslider:SfRangeSlider Minimum="0" 
-                       Maximum="100" 
-                       ShowTicks="True"
-                       ShowLabels="True"
-                       DragBehavior="BetweenThumbs">
+                           Maximum="100" 
+                           ShowTicks="True"
+                           ShowLabels="True"
+                           DragBehavior="BetweenThumbs">
 </rangeslider:SfRangeSlider>
 
 {% endhighlight %}
@@ -84,10 +84,10 @@ When the  [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sli
 {% highlight xaml %}
 
 <rangeslider:SfRangeSlider Minimum="0" 
-                       Maximum="100" 
-                       ShowTicks="True"
-                       ShowLabels="True"
-                       DragBehavior="Both">
+                           Maximum="100" 
+                           ShowTicks="True"
+                           ShowLabels="True"
+                           DragBehavior="Both">
 </rangeslider:SfRangeSlider>
 
 {% endhighlight %}

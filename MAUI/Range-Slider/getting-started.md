@@ -13,11 +13,13 @@ This section explains the steps required to add the range slider control and its
 
 ## Creating an application with .NET MAUI
 
-1. Create a new .NET MAUI application in Visual Studio.
+Create a new .NET MAUI application in Visual Studio.
 
  ![Create MAUI Application](images/getting-started/create-project.png)
 
-2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfRangeSlider to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Sliders and then install it.
+## Adding SfRangeSlider reference
+
+Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfRangeSlider to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Sliders and then install it.
 
  ![Create MAUI Application](images/getting-started/nuget-installation.png)
 
@@ -123,12 +125,12 @@ The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.S
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider  Minimum="0" 
-                        Maximum="10" 
-                        RangeStart="2" 
-                        RangeEnd="8" 
-                        ShowLabel="True" 
-                        Interval="2">
+<rangeslider:SfRangeSlider Minimum="0" 
+                           Maximum="10" 
+                           RangeStart="2" 
+                           RangeEnd="8" 
+                           ShowLabel="True" 
+                           Interval="2">
 </rangeslider:SfRangeSlider>
 
 {% endhighlight %}
@@ -158,13 +160,13 @@ The [`ShowTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.Sl
 {% highlight xaml %}
 
 <rangeslider:SfRangeSlider  ShowTicks="True" 
-                        Minimum="0" 
-                        Maximum="10" 
-                        RangeStart="2" 
-                        RangeEnd="8"                       
-                        Interval="2" 
-                        ShowLabels="True"
-                        MinorTicksPerInterval="1">
+                            Minimum="0" 
+                            Maximum="10" 
+                            RangeStart="2" 
+                            RangeEnd="8"                       
+                            Interval="2" 
+                            ShowLabels="True"
+                            MinorTicksPerInterval="1">
 </rangeslider:SfRangeSlider>
 
 {% endhighlight %}
@@ -196,13 +198,13 @@ The [`Orientation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.
 {% highlight xaml %}
 
 <rangeslider:SfRangeSlider  Orientation="Vertical"
-                        Minimum="0" 
-                        Maximum="10" 
-                        RangeStart="2" 
-                        RangeEnd="8" 
-                        ShowTicks="True" 
-                        Interval="2" 
-                        MinorTicksPerInterval="1">
+                            Minimum="0" 
+                            Maximum="10" 
+                            RangeStart="2" 
+                            RangeEnd="8" 
+                            ShowTicks="True" 
+                            Interval="2" 
+                            MinorTicksPerInterval="1">
 </rangeslider:SfRangeSlider>
 
 {% endhighlight %}
@@ -235,14 +237,14 @@ You can invert the range slider using the [`IsInversed`](https://help.syncfusion
 {% highlight xaml %}
 
 <rangeslider:SfRangeSlider  IsInversed="True"
-                        Orientation="Vertical"
-                        Minimum="0" 
-                        Maximum="10" 
-                        RangeStart="2" 
-                        RangeEnd="8" 
-                        ShowTicks="True" 
-                        Interval="2" 
-                        MinorTicksPerInterval="1">
+                            Orientation="Vertical"
+                            Minimum="0" 
+                            Maximum="10" 
+                            RangeStart="2" 
+                            RangeEnd="8" 
+                            ShowTicks="True" 
+                            Interval="2" 
+                            MinorTicksPerInterval="1">
 </rangeslider:SfRangeSlider>
 
 {% endhighlight %}
@@ -275,12 +277,12 @@ Set the 'DateTime' values to the [`Minimum`](https://help.syncfusion.com/cr/maui
 {% highlight xaml %}
 
 <rangeslider:SfRangeSlider Minimum="2010-01-01"
-                       Maximum="2020-01-01" 
-                       RangeStart="2012-01-01" 
-                       RangeEnd="2018-01-01" 
-                       ShowLabels="True" 
-                       ShowTicks="True"
-                       Interval="2">
+                           Maximum="2020-01-01" 
+                           RangeStart="2012-01-01" 
+                           RangeEnd="2018-01-01" 
+                           ShowLabels="True" 
+                           ShowTicks="True"
+                           Interval="2">
 </rangeslider:SfRangeSlider>
 
 {% endhighlight %}
@@ -313,13 +315,13 @@ N> The format type (numeric or date) of the range slider is determined based on 
 {% highlight xaml %}
 
 <rangeslider:SfRangeSlider Minimum="20" 
-                       Maximum="100" 
-                       RangeStart="20" 
-                       RangeEnd="80"
-                       NumberFormat="$##" 
-                       ShowLabels="True" 
-                       ShowTicks="True" 
-                       Interval="20">
+                           Maximum="100" 
+                           RangeStart="20" 
+                           RangeEnd="80"
+                           NumberFormat="$##" 
+                           ShowLabels="True" 
+                           ShowTicks="True" 
+                           Interval="20">
 </rangeslider:SfRangeSlider>
 
 {% endhighlight %}

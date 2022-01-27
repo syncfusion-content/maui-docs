@@ -236,13 +236,17 @@ namespace GettingStarted
             listView.ItemsSource = viewModel.BookInfo;
             listView.ItemTemplate = new DataTemplate(() => {
                 var grid = new Grid();
+                grid.RowDefinitions.Add(new RowDefinition());
+                grid.RowDefinitions.Add(new RowDefinition());
                 var bookName = new Label { FontAttributes = FontAttributes.Bold, BackgroundColor = Colors.Teal, FontSize = 21 };
                 bookName.SetBinding(Label.TextProperty, new Binding("BookName"));
                 var bookDescription = new Label { BackgroundColor = Colors.Teal, FontSize = 15 };
                 bookDescription.SetBinding(Label.TextProperty, new Binding("BookDescription"));
 
                 grid.Children.Add(bookName);
-                grid.Children.Add(bookDescription, 1, 0);
+                grid.Children.Add(bookDescription);
+                grid.SetRow(bookName, 0);
+                grid.SetRow(bookDescription, 1);
 
                 return grid;
             });
@@ -291,7 +295,7 @@ The [DataSource](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.DataS
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
-             xmlns:data="clr-namespace:Syncfusion.DataSource;assembly=Syncfusion.Maui.DataSource"             
+             xmlns:data="clr-namespace:Syncfusion.Maui.DataSource;assembly=Syncfusion.Maui.DataSource"             
              xmlns:local="clr-namespace:GettingStarted;assembly=GettingStarted"
              x:Class="GettingStarted.MainPage">             
              
@@ -325,7 +329,7 @@ SortDescriptor object holds the following three properties:
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
-             xmlns:data="clr-namespace:Syncfusion.DataSource;assembly=Syncfusion.Maui.DataSource"            
+             xmlns:data="clr-namespace:Syncfusion.Maui.DataSource;assembly=Syncfusion.Maui.DataSource"            
              xmlns:local="clr-namespace:GettingStarted;assembly=GettingStarted"
              x:Class="GettingStarted.MainPage">             
              
@@ -373,6 +377,8 @@ To filter the items based on the Title property of the underlying data by using 
 {% endhighlight %}
 {% highlight c# %}
 var grid = new Grid();
+grid.RowDefinitions.Add(new RowDefinition());
+grid.RowDefinitions.Add(new RowDefinition());
 var viewModel = new BookInfoRepository ();
 
 var searchBar = new SearchBar() { Placeholder = "Search here to filter" };
@@ -382,7 +388,9 @@ listView = new SfListView();
 listView.ItemsSource = viewModel.BookInfo;
 
 grid.Children.Add(searchBar);
-grid.Children.Add(listView, 0, 1);
+grid.Children.Add(listView);
+grid.SetRow(searchBar, 0);
+grid.SetRow(listView, 1);
 ...
 private void OnFilterTextChanged(object sender, TextChangedEventArgs e)
 {
@@ -424,7 +432,7 @@ It also supports you to stick the group header by enabling the [SfListView.IsSti
 {% tabs %}
 {% highlight xaml %}
 <ContentPage  xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
-              xmlns:data="clr-namespace:Syncfusion.DataSource;assembly=Syncfusion.Maui.DataSource">
+              xmlns:data="clr-namespace:Syncfusion.Maui.DataSource;assembly=Syncfusion.Maui.DataSource">
   <syncfusion:SfListView x:Name="listView">
     <syncfusion:SfListView.DataSource>
       <data:DataSource>
@@ -513,6 +521,8 @@ listView.IsStickyFooter = true;
 listView.HeaderTemplate = new DataTemplate(() =>
 {
   var grid = new Grid();
+  grid.ColumnDefinitions.Add(new ColumnDefinition());
+  grid.ColumnDefinitions.Add(new ColumnDefinition());
   grid.BackgroundColor = Color.FromHex("#4CA1FE");
   var headerLabel = new Label { BackgroundColor = Colors.White, FontSize = 18,
                                 FontAttributes = FontAttributes.Bold };
@@ -523,13 +533,17 @@ listView.HeaderTemplate = new DataTemplate(() =>
 listView.FooterTemplate = new DataTemplate(() =>
 {
   var grid = new Grid();
+  grid.ColumnDefinitions.Add(new ColumnDefinition());
+  grid.ColumnDefinitions.Add(new ColumnDefinition());
   grid.BackgroundColor = Colors.FromHex("#DC595F");
   var editImage = new Image();
   editImage.Source = "Edit.png";
   var deleteImage = new Image();
   deleteImage.Source = "Delete.png";
   grid.Children.Add(editImage);
-  grid.Children.Add(deleteImage, 0, 1);
+  grid.Children.Add(deleteImage);
+  grid.SetColumn(editImage, 0);
+  grid.SetColumn(deleteImage, 1);
   return grid;
 });
 {% endhighlight %}

@@ -34,11 +34,11 @@ rangeSlider.ToolTipShape = SliderToolTipShape.Rectangle;
 
 ![RangeSlider tooltip](images/tooltip/tooltip.png)
 
-
+N> Refer [here](https://help.syncfusion.com/maui/range-slider/events) to customize tooltip text format through range slider events.
 
 ## Tooltip label style
 
-You can change the appearance of the tooltip text like color, stroke color, padding around the text using the [`ToolTipStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ToolTipStyle) property.
+You can change the appearance of the tooltip text like fill, stroke, padding around the text using the [`ToolTipStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ToolTipStyle) property.
 
 {% tabs %}
 
@@ -46,9 +46,9 @@ You can change the appearance of the tooltip text like color, stroke color, padd
 
  <rangeslider:SfRangeSlider  ToolTipShape="Rectangle">
     <rangeslider:SfRangeSlider.ToolTipStyle>
-       <rangeslider:SliderToolTipStyle Color="#F7B1AE" 
-                                       StrokeColor="#EE3F3F" 
-                                       StrokeWidth="2" />
+       <rangeslider:SliderToolTipStyle Fill="#F7B1AE" 
+                                       Stroke="#EE3F3F" 
+                                       StrokeThickness="2" />
     </rangeslider:SfRangeSlider.ToolTipStyle>
  </rangeslider:SfRangeSlider>
 
@@ -58,9 +58,9 @@ You can change the appearance of the tooltip text like color, stroke color, padd
 
  SfRangeSlider rangeSlider = new SfRangeSlider();
  rangeSlider.ToolTipShape = SliderToolTipShape.Rectangle;
- rangeSlider.ToolTipStyle.Color = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
- rangeSlider.ToolTipStyle.StrokeColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
- rangeSlider.ToolTipStyle.StrokeWidth = 2;
+ rangeSlider.ToolTipStyle.Fill = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
+ rangeSlider.ToolTipStyle.Stroke = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+ rangeSlider.ToolTipStyle.StrokeThickness = 2;
 
 {% endhighlight %}
 

@@ -101,7 +101,7 @@ rangeSlider.Interval = 0.2;
 rangeSlider.ShowDividers = true;
 rangeSlider.DividerStyle.ActiveRadius = 7;
 rangeSlider.DividerStyle.InactiveRadius = 7;
-rangeSlider.DividerStyle.ActiveStrokeColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+rangeSlider.DividerStyle.ActiveStroke = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
 rangeSlider.DividerStyle.InactiveStroke = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
 rangeSlider.DividerStyle.ActiveStrokeThickness = 2;
 rangeSlider.DividerStyle.InactiveStrokeThickness = 2;
@@ -139,7 +139,7 @@ rangeSlider.Interval = 0.2;
 rangeSlider.ShowDividers = true;
 rangeSlider.DividerStyle.ActiveRadius = 7;
 rangeSlider.DividerStyle.InactiveRadius = 7;
-rangeSlider.DividerStyle.ActiveColor = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+rangeSlider.DividerStyle.ActiveFill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
 rangeSlider.DividerStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
 
 {% endhighlight %}

@@ -13,11 +13,13 @@ This section explains the steps required to add the slider control and its eleme
 
 ## Creating an application with .NET MAUI
 
-1. Create a new .NET MAUI application in Visual Studio.
+Create a new .NET MAUI application in Visual Studio.
 
  ![Create MAUI Application](images/getting-started/create-project.png)
 
-2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfSlider to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Sliders and then install it.
+## Adding SfSlider reference
+
+ Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfSlider to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Sliders and then install it.
 
  ![Create MAUI Application](images/getting-started/nuget-installation.png)
 
@@ -125,11 +127,11 @@ The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.S
 
 {% highlight xaml %}
 
-<sliders:SfSlider   Minimum="0" 
-		    Maximum="10" 
-		    Value="6" 
-		    ShowLabels="True" 
-		    Interval="2">
+<sliders:SfSlider Minimum="0" 
+		  Maximum="10" 
+		  Value="6" 
+		  ShowLabels="True" 
+		  Interval="2">
 </sliders:SfSlider>
 
 
@@ -158,13 +160,13 @@ The [`ShowTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.Sl
 
 {% highlight xaml %}
 
-<sliders:SfSlider   Minimum="0" 
-		    Maximum="10" 
-		    Value="6" 
-		    ShowLabels="True"  
-		    ShowTicks="True" 
-		    Interval="2" 
-		    MinorTicksPerInterval="1">
+<sliders:SfSlider Minimum="0" 
+		  Maximum="10" 
+		  Value="6" 
+		  ShowLabels="True"  
+		  ShowTicks="True" 
+		  Interval="2" 
+		  MinorTicksPerInterval="1">
 </sliders:SfSlider>
 
 
@@ -195,14 +197,14 @@ The [`Orientation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.
 
 {% highlight xaml %}
 
-<sliders:SfSlider   Orientation="Vertical"
-                    Minimum="0" 
-		    Maximum="10" 
-		    Value="6" 
-		    ShowLabels="True"  
-		    ShowTicks="True" 
-		    Interval="2" 
-		    MinorTicksPerInterval="1">
+<sliders:SfSlider  Orientation="Vertical"
+                   Minimum="0" 
+		   Maximum="10" 
+		   Value="6" 
+		   ShowLabels="True"  
+		   ShowTicks="True" 
+		   Interval="2" 
+		   MinorTicksPerInterval="1">
 </sliders:SfSlider>
 
 {% endhighlight %}
@@ -233,14 +235,14 @@ You can invert the slider using the [`IsInversed`](https://help.syncfusion.com/c
 
 {% highlight xaml %}
 
-<sliders:SfSlider   IsInversed="True"
-                    Minimum="0" 
-		    Maximum="10" 
-		    Value="6" 
-		    ShowLabels="True"  
-		    ShowTicks="True" 
-		    Interval="2" 
-		    MinorTicksPerInterval="1">
+<sliders:SfSlider IsInversed="True"
+                  Minimum="0" 
+		  Maximum="10" 
+		  Value="6" 
+		  ShowLabels="True"  
+		  ShowTicks="True" 
+		  Interval="2" 
+		  MinorTicksPerInterval="1">
 </sliders:SfSlider>
 
 {% endhighlight %}
@@ -271,13 +273,13 @@ Set the 'DateTime' values to the [`Minimum`](https://help.syncfusion.com/cr/maui
 
 {% highlight xaml %}
 
-<sliders:SfSlider   Minimum="2010-01-01" 
-		    Maximum="2020-01-01" 
-		    Value="2014-01-01" 
-                    ShowLabels="True"
-		    ShowTicks="True" 
-		    Interval="2" 
-		    MinorTicksPerInterval="1">
+<sliders:SfSlider Minimum="2010-01-01" 
+		  Maximum="2020-01-01" 
+		  Value="2014-01-01" 
+                  ShowLabels="True"
+		  ShowTicks="True" 
+		  Interval="2" 
+		  MinorTicksPerInterval="1">
 </sliders:SfSlider>
 
 {% endhighlight %}
@@ -287,7 +289,7 @@ Set the 'DateTime' values to the [`Minimum`](https://help.syncfusion.com/cr/maui
 SfSlider slider = new SfSlider();
 slider.Minimum = new DateTime(2010, 01, 01);
 slider.Maximum = new DateTime(2020, 01, 01);
-slider.Value = new DateTime(2014, 01, 01);
+slider.Value = new DateTime(2014, 02, 01);
 slider.ShowLabels = true;
 slider.ShowTicks = true;
 slider.Interval = 2;
@@ -309,14 +311,14 @@ N> The format type (numeric or date) of the slider is determined based on the va
 
 {% highlight xaml %}
 
-<sliders:SfSlider   Minimum="20" 
-		    Maximum="100" 
-		    Value="60" 
-		    NumberFormat="$##" 
-                    ShowTicks="True"
-                    MinorTicksPerInterval="1"
-		    ShowLabels="True" 
-		    Interval="20">
+<sliders:SfSlider Minimum="20" 
+		  Maximum="100" 
+		  Value="60" 
+		  NumberFormat="$##" 
+                  ShowTicks="True"
+                  MinorTicksPerInterval="1"
+		  ShowLabels="True" 
+		  Interval="20">
 </sliders:SfSlider>
 
 {% endhighlight %}

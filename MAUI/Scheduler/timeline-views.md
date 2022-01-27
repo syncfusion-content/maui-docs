@@ -39,6 +39,8 @@ this.Scheduler.TimelineViewSettings.TimeInterval = new TimeSpan(2, 0, 0);
 {% endhighlight %}
 {% endtabs %}
 
+![change-time-interval-in-maui-scheduler](images/timeline-views/change-time-interval-in-maui-scheduler.png)
+
 N> To modify the `TimeInterval` value (in minutes), change the time labels format by setting the `TimeRulerFormat` value to hh:mm.
 
 ## Change time interval width
@@ -64,6 +66,8 @@ this.Scheduler.TimelineViewSettings.TimeIntervalWidth = 120;
 
 {% endhighlight %}
 {% endtabs %}
+
+![change-time-interval-width-in-maui-scheduler](images/timeline-views/change-time-interval-width-in-maui-scheduler.png)
 
 ## Flexible working days
 
@@ -119,6 +123,8 @@ this.Scheduler.TimelineViewSettings.EndHour = 16;
 {% endhighlight %}
 {% endtabs %}
 
+![flexible-working-hours-in-maui-scheduler](images/timeline-views/flexible-working-hours-in-maui-scheduler.png)
+
 N>
 * The `NonWorkingDays` property will be applicable only for `workWeek` and `TimelineWorkWeek` views only, and not be applicable for the remaining views.
 * No need to specify the decimal point values for `StartHour` and `EndHour`, if you do not want to set the minutes.
@@ -126,9 +132,13 @@ N>
 * If a custom timeInterval is given, then the number of time slots calculated based on the given `TimeInterval` should result in an integer value (total minutes % timeInterval = 0), otherwise the next immediate time interval that results in integer value when dividing total minutes of a day will be considered. For example, if TimeInterval=2 Hours 15 minutes and total minutes = 1440 (24 Hours per day), then the `TimeInterval` will be changed to ‘144’ (1440%144=0) by considering (total minutes % TimeInterval = 0), it will return integer value for time slots rendering.
 * If the custom `StartHour` and `EndHour` are given, then the number of time slots calculated based on the given `StartHour` and `EndHour` should result in integer value, otherwise the next immediate `TimeInterval` will be considered until the result is integer value. For example, if the `StartHour` is 9 (09:00AM), `EndHour` is 18.25 (06:15 PM), `TimeInterval` is 30 minutes, and total minutes = 555 ((18.25-9)*60), then the `TimeInterval` will be changed to ’37 minutes’ (555%37=0) by considering (total minutes % timeInterval = 0) it will return the integer value for time slots rendering.
 
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/HighlightWorkingHour)
+
 ## Special time regions
 
 The user interaction such as selection and highlights specific regions of timeline day, timeline week, and timeline workweek views can be restricted by adding the [TimeRegions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotViewSettings.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotViewSettings_TimeRegions) property of the [TimelineViewSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineViewSettings.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html). You need to set the [StartTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_StartTime) and [EndTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_EndTime) properties of `TimeRegions` to create a specialTimeRegion, you can use the [TimeZone](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeRegion.html#Syncfusion_Maui_Scheduler_SchedulerTimeRegion_TimeZone) property to set the specific timezone for start and end time of `TimeRegions.`
+
+![special-time-region-in-maui-scheduler](images/timeline-views/special-time-region-in-maui-scheduler.png)
 
 ### Selection restriction in timeslots
 
@@ -206,6 +216,8 @@ private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 
 {% endhighlight %}
 {% endtabs %}
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/HighlightNonWorkingHour)
 
 ### Recurrence exception dates
 
@@ -291,6 +303,34 @@ private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 {% endhighlight %}
 {% endtabs %}
 
+![customize-time-region-appearance-in-maui-scheduler](images/timeline-views/customize-time-region-appearance-in-maui-scheduler.png)
+
+## Full screen scheduler
+
+The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) time interval width can be adjusted based on screen width by changing the [TimeIntervalWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineViewSettings.html#Syncfusion_Maui_Scheduler_SchedulerTimelineViewSettings_TimeIntervalWidth) property of [TimelineViewSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineViewSettings.html) to `-1.` It will auto-fit the timeline day, timeline week and timeline work week views to the screen width.
+
+{% tabs %}
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" 
+                       View="TimelineDay">
+    <scheduler:SfScheduler.TimelineViewSettings>
+        <scheduler:SchedulerTimelineViewSettings 
+                       TimeIntervalWidth="-1" />
+    </scheduler:SfScheduler.TimelineViewSettings>
+</scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight c# %}
+
+this.Scheduler.View = SchedulerView.TimelineDay;
+this.Scheduler.TimelineViewSettings.TimeIntervalWidth = -1;
+
+{% endhighlight %}
+{% endtabs %}
+
+![full-screen-scheduler-in-timeline-views-in-maui-scheduler](images/timeline-views/full-screen-scheduler-in-timeline-views-in-maui-scheduler.png)
+
 ## Show current time indicator
 
 You can show or hide the current time indicator in timeline day, timeline week, and timeline workweek views of [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) by using the [ShowCurrentTimeIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotViewSettings.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotViewSettings_ShowCurrentTimeIndicator) property of [TimelineViewSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineViewSettings.html), and by default, its `true.`
@@ -339,6 +379,8 @@ this.Scheduler.TimelineViewSettings.CurrentTimeIndicatorBrush = Brush.Green;
 {% endhighlight %}
 {% endtabs %}
 
+![customize-current-time-indicator-appearance-in-timeline-views-in-maui-scheduler](images/timeline-views/customize-current-time-indicator-appearance-in-timeline-views-in-maui-scheduler.png)
+
 N>
 The current time indicator color is applied only when the`ShowCurrentTimeIndicator` property is enabled.
 
@@ -366,6 +408,8 @@ this.Scheduler.TimelineViewSettings.TimeRulerHeight = 100;
 {% endhighlight %}
 {% endtabs %}
 
+![change-time-ruler-height-in-maui-scheduler](images/timeline-views/change-time-ruler-height-in-maui-scheduler.png)
+
 ## Minimum appointment duration
 
 The [MinimumAppointmentDuration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotViewSettings.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotViewSettings_MinimumAppointmentDuration) property allows to set an arbitrary height to appointments which have a minimum duration in the timeline day, timeline week, and timeline workweek views so that the subject can be readable.
@@ -390,11 +434,17 @@ this.Scheduler.TimelineViewSettings.MinimumAppointmentDuration = new TimeSpan(0,
 {% endhighlight %}
 {% endtabs %}
 
+![minimum-appointment-duration-in-maui-scheduler](images/timeline-views/minimum-appointment-duration-in-maui-scheduler.png)
+
 N>
 * The `MinimumAppointmentDuration` value will be set when an appointment duration value is lesser than `MinimumAppointmentDuration.`
 * Appointment duration value will be set when the appointment duration value is greater than `MinimumAppointmentDuration`.
 * The `TimeInterval` value will be set when the `MinimumAppointmentDuration` is greater than `TimeInterval` with lesser appointment duration.
 * The all-day appointment does not support `MinimumAppointmentDuration.`
+
+N>
+* [View scheduler appointment sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/GettingStarted)
+* [View business object sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/BusinessObject)
 
 ## View header text formatting
 
@@ -416,6 +466,8 @@ this.Scheduler.TimelineViewSettings.ViewHeaderSettings.DateFormat = "MMMM dd";
 
 {% endhighlight %}
 {% endtabs %}
+
+![change-view-header-text-formatting-in-maui-scheduler](images/timeline-views/change-view-header-text-formatting-in-maui-scheduler.png)
 
 ### Customize view header text style
 
@@ -451,6 +503,8 @@ this.Scheduler.TimelineViewSettings.ViewHeaderSettings.Background = Brush.LightG
 {% endhighlight %}
 {% endtabs %}
 
+![customize-view-header-text-style-in-maui-scheduler](images/timeline-views/customize-view-header-text-style-in-maui-scheduler.png)
+
 ## Time text formatting
 
 The format for the labels mentioning the time can be customized by setting the [TimeFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotViewSettings.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotViewSettings_TimeFormat) property of [TimelineViewSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineViewSettings.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
@@ -470,6 +524,8 @@ this.Scheduler.TimelineViewSettings.TimeFormat = "hh:mm";
 
 {% endhighlight %}
 {% endtabs %}
+
+![change-time-ruler-text-formatting-in-.net-maui-scheduler](images/timeline-views/change-time-ruler-text-formatting-in-.net-maui-scheduler.png)
 
 N>
 * By default, the scheduler time text format is `hh:mm tt.`
@@ -499,3 +555,5 @@ this.Scheduler.TimelineViewSettings.TimeRulerTextStyle = timeRulerTextStyle;
 
 {% endhighlight %}
 {% endtabs %}
+
+![customize-time-ruler-text-style-in-maui-scheduler](images/timeline-views/customize-time-ruler-text-style-in-maui-scheduler.png)

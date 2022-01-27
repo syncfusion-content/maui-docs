@@ -30,10 +30,10 @@ For date values, the range slider does not have auto interval support. So, it is
 {% highlight xaml %}
 
 <rangeslider:SfRangeSlider Minimum="2010-01-01" 
-                       Maximum="2020-01-01" 
-                       RangeStart="2012-01-01" 
-                       RangeEnd="2018-01-01" 
-                       ShowLabels="True">
+                           Maximum="2020-01-01" 
+                           RangeStart="2012-01-01" 
+                           RangeEnd="2018-01-01" 
+                           ShowLabels="True">
 </rangeslider:SfRangeSlider>
  
 {% endhighlight %}
