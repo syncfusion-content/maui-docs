@@ -333,14 +333,12 @@ The size of the text of each tab item in the tab bar.
 
 ![Tab Item FontSize](images/FontSize.png)
 
-
 ## Badge Support
 
-In SfTabItem the badges are used to notify users of new or unread messages, notifications, or the status of something.
+In SfTabItem, the badges are used to notify users of new or unread messages, notifications, or the status of something.
 
-### Badge Text
-
-Add text to Badge View using the [BadgeText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_BadgeText) property in the SfTabItem.
+### Badge text
+By using the [BadgeText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_BadgeText) property in the SfTabItem, you can add text to badge view.
 
 {% tabs %}
 
@@ -363,42 +361,47 @@ Add text to Badge View using the [BadgeText](https://help.syncfusion.com/cr/maui
 
 {% endtabs %}
 
-### Badge Settings
+### Badge settings
 
 The [BadgeSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_BadgeSettings) property helps you to customize the basic look and feel of the badge view in the SfTabItem. 
 
-[BadgeSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_BadgeSettings) contains the sub-elements such as badge types, positions and colors. You can customize the background color, text color, border color, width, offset, and font attributes.
+[BadgeSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_BadgeSettings) contains the sub-elements such as badge types, positions, and colors. You can customize the background color, text color, border color, width, offset, and font attributes.
 
 {% tabs %}
 
 {% highlight xaml %}
     <tabView:SfTabView>
         <tabView:SfTabItem BadgeText="Inbox">
-            <tabView:SfTabItem.BadgeSettings>
-                <tabView:SfTabItem:BadgeSettings FontSize="15" FontAttributes="Bold" FontFamily="serif">
-                </tabView:SfTabItem:BadgeSettings>
-            </badge:SfBadgeView.BadgeSettings>
+            <tabView:SfTabItem.BadgeSettings FontSize="15" FontAttributes="Bold" FontFamily="serif">
+            </tabView:SfTabItem.BadgeSettings>
         </tabView:SfTabItem>
     </tabView:SfTabView>
 {% endhighlight %}
 
 {% highlight C# %}
-    var tabView = new SfTabView();
-    BadgeSettings badgeSetting = new BadgeSettings();
-    badgeSetting.FontAttributes = FontAttributes.Bold;
-    badgeSetting.FontSize = 15;
-    badgeSetting.FontFamily = "serif";
 
-    var tabItems = new TabItemCollection
+    var tabView = new SfTabView();
+            BadgeSettings badgeSetting = new BadgeSettings();
+            badgeSetting.FontAttributes = FontAttributes.Bold;
+            badgeSetting.FontSize = 15;
+            badgeSetting.FontFamily = "serif";
+
+            var tabItems = new TabItemCollection
     {
         new SfTabItem()
         {
+            Header="TabItem",
             BadgeText = "Inbox",
             BadgeSettings = badgeSetting,
         }
-    }
+    };
+            tabView.Items = tabItems;
+            
 {% endhighlight %}
 
 {% endtabs %}
 
-N> View [sample](https://github.com/SyncfusionExamples/maui-tabview-samples/tree/main/TabViewCustomizationSample) in GitHub
+![Tabview BadgeSupport](images/TabItem_badge.png) 
+
+N> View [sample](https://github.com/SyncfusionExamples/maui-tabview-samples/tree/main/TabViewCustomizationSample) in GitHub.
+
