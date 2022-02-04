@@ -79,22 +79,101 @@ You can change the state of the slider to disabled by setting `false` to the `Is
 
 {% highlight xaml %}
 
-<sliders:SfSlider>
-   <sliders:SfSlider.TrackStyle>
-       <sliders:SliderTrackStyle ActiveSize="10" InactiveSize="8" />
-   </sliders:SfSlider.TrackStyle>
-</sliders:SfSlider>
+<ContentPage.Resources>
+    <Style TargetType="sliders:SfSlider">
+        <Setter Property="Interval" Value="0.25" />
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup>
+                    <VisualState x:Name="Default">
+                        <VisualState.Setters>
+                            <Setter Property="TrackStyle">
+                                <Setter.Value>
+                                    <sliders:SliderTrackStyle ActiveSize="8" 
+                                                                  InactiveSize="6" 
+                                                                  ActiveFill="#EE3F3F" 
+                                                                  InactiveFill="#F7B1AE"/>
+                                </Setter.Value>
+                            </Setter>
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="TrackStyle">
+                                <Setter.Value>
+                                    <sliders:SliderTrackStyle ActiveSize="10" 
+                                                                  InactiveSize="8"
+                                                                  ActiveFill="Grey" 
+                                                                  InactiveFill="LightGrey" />
+                                </Setter.Value>
+                            </Setter>
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+</ContentPage.Resources>
+<ContentPage.Content>
+    <VerticalStackLayout Padding="10">
+        <Label Text="Enabled Slider" Padding="0,10"/>
+        <sliders:SfSlider/>
+        <Label Text="Disabled Slider" Padding="0,10"/>
+        <sliders:SfSlider IsEnabled="False"/>
+    </VerticalStackLayout>
+</ContentPage.Content>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfSlider slider = new SfSlider();
-slider.TrackStyle.ActiveSize = 10;
-slider.TrackStyle.InactiveSize = 8;
+VerticalStackLayout stackLayout = new VerticalStackLayout();
+SfSlider defaultSlider = new SfSlider();
+SfSlider disabledSlider = new SfSlider { IsEnabled = false };
+
+VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
+VisualStateGroup commonStateGroup = new VisualStateGroup();
+// Default State.
+VisualState defaultState = new VisualState { Name = "Default" };
+defaultState.Setters.Add(new Setter
+{
+    Property = SfSlider.TrackStyleProperty,
+    Value = new SliderTrackStyle
+    {
+        ActiveFill = Color.FromArgb("#EE3F3F"),
+        InactiveFill = Color.FromArgb("#F7B1AE"),
+        ActiveSize = 8,
+        InactiveSize = 6,
+    }
+});
+// Disabled State.
+VisualState disabledState = new VisualState { Name = "Disabled" };
+disabledState.Setters.Add(new Setter
+{
+    Property = SfSlider.TrackStyleProperty,
+    Value = new SliderTrackStyle
+    {
+        ActiveFill = Colors.Grey,
+        InactiveFill = Colors.LightGrey,
+        ActiveSize = 10,
+        InactiveSize = 8,
+    }
+});
+
+commonStateGroup.States.Add(defaultState);
+commonStateGroup.States.Add(disabledState);
+visualStateGroupList.Add(commonStateGroup);
+VisualStateManager.SetVisualStateGroups(defaultSlider, visualStateGroupList);
+VisualStateManager.SetVisualStateGroups(disabledSlider, visualStateGroupList);
+
+stackLayout.Children.Add(new Label() { Text = "Default Slider", Padding = new Thickness(0, 10) });
+stackLayout.Children.Add(defaultSlider);
+stackLayout.Children.Add(new Label() { Text = "Disabled Slider", Padding = new Thickness(0, 10) });
+stackLayout.Children.Add(disabledSlider);
+this.Content = stackLayout;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Slider track disabled state](images/track/track-size.png)
+![Slider track disabled state](images/track/track-disabled.png)
