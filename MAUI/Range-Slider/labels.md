@@ -243,3 +243,39 @@ rangeSlider.LabelStyle.Offset = 10;
 {% endtabs %}
 
 ![RangeSlider label offset](images/labels-and-dividers/label-offset.png)
+
+## Disabled labels
+
+You can change the state of the range slider to disabled by setting `false` to the `IsEnabled` property. Using the Visual State Manager (VSM), You can customize the range slider labels properties based on the visual states. The applicable visual states are enabled(default) and disabled.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<rangeslider:SfRangeSlider Interval="0.2" 
+                           ShowDividers="True">
+    <rangeslider:SfRangeSlider.DividerStyle>
+        <rangeslider:SliderDividerStyle ActiveRadius="7" 
+                                        InactiveRadius="7" 
+                                        ActiveFill="#EE3F3F" 
+                                        InactiveFill="#F7B1AE"/>
+     </rangeslider:SfRangeSlider.DividerStyle>
+</rangeslider:SfRangeSlider>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfRangeSlider rangeSlider = new SfRangeSlider();
+rangeSlider.Interval = 0.2;
+rangeSlider.ShowDividers = true;
+rangeSlider.DividerStyle.ActiveRadius = 7;
+rangeSlider.DividerStyle.InactiveRadius = 7;
+rangeSlider.DividerStyle.ActiveFill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+rangeSlider.DividerStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![RangeSlider label disabled state](images/labels-and-dividers/divider-color.png)

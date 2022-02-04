@@ -286,3 +286,31 @@ slider.MajorTickStyle.Offset = 6;
 {% endtabs %}
 
 ![Slider tick offset](images/ticks/tick-offset.png)
+
+## Disabled ticks
+
+You can change the state of the slider to disabled by setting `false` to the `IsEnabled` property. Using the Visual State Manager (VSM), you can customize the slider’s major and minor tick properties based on the visual states. The applicable visual states are enabled(default) and disabled.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfSlider>
+   <sliders:SfSlider.TrackStyle>
+       <sliders:SliderTrackStyle ActiveSize="10" InactiveSize="8" />
+   </sliders:SfSlider.TrackStyle>
+</sliders:SfSlider>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfSlider slider = new SfSlider();
+slider.TrackStyle.ActiveSize = 10;
+slider.TrackStyle.InactiveSize = 8;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Slider ticks disabled state](images/track/track-size.png)

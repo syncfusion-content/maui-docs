@@ -148,3 +148,31 @@ slider.DividerStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F7B1AE")
 {% endtabs %}
 
 ![Slider divider color](images/labels-and-dividers/divider-color.png)
+
+## Disabled divider
+
+You can change the state of the slider to disabled by setting `false` to the `IsEnabled` property. Using the Visual State Manager (VSM), you can customize the slider divider properties based on the visual states. The applicable visual states are enabled(default) and disabled.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfSlider>
+   <sliders:SfSlider.TrackStyle>
+       <sliders:SliderTrackStyle ActiveSize="10" InactiveSize="8" />
+   </sliders:SfSlider.TrackStyle>
+</sliders:SfSlider>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfSlider slider = new SfSlider();
+slider.TrackStyle.ActiveSize = 10;
+slider.TrackStyle.InactiveSize = 8;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Slider divider disabled state](images/track/track-size.png)
