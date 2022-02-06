@@ -114,6 +114,7 @@ You can change the state of the range slider to disabled by setting `false` to t
         </Setter>
     </Style>
 </ContentPage.Resources>
+
 <ContentPage.Content>
     <VerticalStackLayout>
         <Label Text="Enabled Range Slider" Padding="0,10"/>

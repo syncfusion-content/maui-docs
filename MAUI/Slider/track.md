@@ -114,8 +114,9 @@ You can change the state of the slider to disabled by setting `false` to the `Is
         </Setter>
     </Style>
 </ContentPage.Resources>
+
 <ContentPage.Content>
-    <VerticalStackLayout Padding="10">
+    <VerticalStackLayout>
         <Label Text="Enabled Slider" Padding="0,10"/>
         <sliders:SfSlider/>
         <Label Text="Disabled Slider" Padding="0,10"/>

@@ -185,30 +185,102 @@ You can change the state of the range slider to disabled by setting `false` to t
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider Interval="0.2" 
-                           ShowDividers="True">
-    <rangeslider:SfRangeSlider.DividerStyle>
-        <rangeslider:SliderDividerStyle ActiveRadius="7" 
-                                        InactiveRadius="7" 
-                                        ActiveFill="#EE3F3F" 
-                                        InactiveFill="#F7B1AE"/>
-     </rangeslider:SfRangeSlider.DividerStyle>
-</rangeslider:SfRangeSlider>
+<ContentPage.Resources>
+    <Style TargetType="sliders:SfRangeSlider">
+        <Setter Property="Interval" Value="0.25" />
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup>
+                    <VisualState x:Name="Default">
+                        <VisualState.Setters>
+                            <Setter Property="ThumbStyle">
+                                <Setter.Value>
+                                    <sliders:SliderThumbStyle Radius = "13"
+                                                                  Fill="Red"
+                                                                  Stroke="Yellow"
+                                                                  StrokeThickness="3"/>
+                                </Setter.Value>
+                            </Setter>
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="ThumbStyle">
+                                <Setter.Value>
+                                    <sliders:SliderThumbStyle Radius = "13"
+                                                                  Fill="Grey"
+                                                                  Stroke="LightGrey"
+                                                                  StrokeThickness="3"/>
+                                </Setter.Value>
+                            </Setter>
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+</ContentPage.Resources>
+
+<ContentPage.Content>
+    <VerticalStackLayout>
+        <Label Text="Enabled Range Slider" Padding="0,10"/>
+        <sliders:SfRangeSlider/>
+        <Label Text="Disabled Range Slider" Padding="0,10"/>
+        <sliders:SfRangeSlider IsEnabled="False"/>
+    </VerticalStackLayout>
+</ContentPage.Content>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfRangeSlider rangeSlider = new SfRangeSlider();
-rangeSlider.Interval = 0.2;
-rangeSlider.ShowDividers = true;
-rangeSlider.DividerStyle.ActiveRadius = 7;
-rangeSlider.DividerStyle.InactiveRadius = 7;
-rangeSlider.DividerStyle.ActiveFill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
-rangeSlider.DividerStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
+VerticalStackLayout stackLayout = new VerticalStackLayout();
+SfRangeSlider defaultRangeSlider = new SfRangeSlider();
+SfRangeSlider disabledRangeSlider = new SfRangeSlider { IsEnabled = false };
+
+VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
+VisualStateGroup commonStateGroup = new VisualStateGroup();
+// Default State.
+VisualState defaultState = new VisualState { Name = "Default" };
+defaultState.Setters.Add(new Setter
+{
+    Property = SfRangeSlider.ThumbStyleProperty,
+    Value = new SliderThumbStyle
+    {
+        Radius = 13,
+        Fill = Colors.Red,
+        Stroke = Colors.Yellow,
+        StrokeThickness = 3,
+    }
+});
+// Disabled State.
+VisualState disabledState = new VisualState { Name = "Disabled" };
+disabledState.Setters.Add(new Setter
+{
+    Property = SfRangeSlider.ThumbStyleProperty,
+    Value = new SliderThumbStyle
+    {
+        Radius = 13,
+        Fill = Colors.Grey,
+        Stroke = Colors.LightGrey,
+        StrokeThickness = 3,
+    }
+});
+
+commonStateGroup.States.Add(defaultState);
+commonStateGroup.States.Add(disabledState);
+visualStateGroupList.Add(commonStateGroup);
+VisualStateManager.SetVisualStateGroups(defaultRangeSlider, visualStateGroupList);
+VisualStateManager.SetVisualStateGroups(disabledRangeSlider, visualStateGroupList);
+
+stackLayout.Children.Add(new Label() { Text = "Default Range Slider", Padding = new Thickness(0, 10) });
+stackLayout.Children.Add(defaultRangeSlider);
+stackLayout.Children.Add(new Label() { Text = "Disabled Range Slider", Padding = new Thickness(0, 10) });
+stackLayout.Children.Add(disabledRangeSlider);
+this.Content = stackLayout;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![RangeSlider thumb disabled state](images/labels-and-dividers/divider-color.png)
+![RangeSlider thumb disabled state](images/thumb-and-thumb-overlay/thumb-disabled.png)
