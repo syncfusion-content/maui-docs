@@ -148,3 +148,113 @@ slider.DividerStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F7B1AE")
 {% endtabs %}
 
 ![Slider divider color](images/labels-and-dividers/divider-color.png)
+
+## Disabled divider
+
+You can change the state of the slider to disabled by setting `false` to the `IsEnabled` property. Using the Visual State Manager (VSM), you can customize the slider divider properties based on the visual states. The applicable visual states are enabled(default) and disabled.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage.Resources>
+    <Style TargetType="sliders:SfSlider">
+        <Setter Property="Interval" Value="0.25" />
+        <Setter Property="ShowDividers" Value="True" />
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup>
+                    <VisualState x:Name="Default">
+                        <VisualState.Setters>
+                            <Setter Property="DividerStyle">
+                                <Setter.Value>
+                                    <sliders:SliderDividerStyle ActiveFill = "#F7B1AE"
+                                                                    InactiveFill="#EE3F3F"
+                                                                    ActiveRadius="5"
+                                                                    InactiveRadius="4"/>
+                                </Setter.Value>
+                            </Setter>
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="DividerStyle">
+                                <Setter.Value>
+                                    <sliders:SliderDividerStyle ActiveFill = "grey"
+                                                                    InactiveFill="LightGrey"
+                                                                    ActiveRadius="5"
+                                                                    InactiveRadius="4"/>
+                                </Setter.Value>
+                            </Setter>
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+</ContentPage.Resources>
+
+
+<ContentPage.Content>
+    <VerticalStackLayout>
+        <Label Text="Enabled Slider" Padding="0,10"/>
+        <sliders:SfSlider/>
+        <Label Text="Disabled Slider" Padding="0,10"/>
+        <sliders:SfSlider IsEnabled="False"/>
+    </VerticalStackLayout>
+</ContentPage.Content>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+VerticalStackLayout stackLayout = new VerticalStackLayout();
+SfSlider defaultSlider = new SfSlider { Interval = 0.25, ShowDividers = true };
+SfSlider disabledSlider = new SfSlider { IsEnabled = false, Interval = 0.25, ShowDividers = true };
+
+VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
+VisualStateGroup commonStateGroup = new VisualStateGroup();
+// Default State.
+VisualState defaultState = new VisualState { Name = "Default" };
+defaultState.Setters.Add(new Setter
+{
+    Property = SfSlider.DividerStyleProperty,
+    Value = new SliderDividerStyle
+    {
+        ActiveFill = Color.FromArgb("#F7B1AE"),
+        InactiveFill = Color.FromArgb("#EE3F3F"),
+        ActiveRadius = 5,
+        InactiveRadius = 4,
+    }
+});
+// Disabled State.
+VisualState disabledState = new VisualState { Name = "Disabled" };
+disabledState.Setters.Add(new Setter
+{
+    Property = SfSlider.DividerStyleProperty,
+    Value = new SliderDividerStyle
+    {
+        ActiveFill = Colors.Grey,
+        InactiveFill = Colors.LightGrey,
+        ActiveRadius = 5,
+        InactiveRadius = 4,
+    }
+});
+
+commonStateGroup.States.Add(defaultState);
+commonStateGroup.States.Add(disabledState);
+visualStateGroupList.Add(commonStateGroup);
+VisualStateManager.SetVisualStateGroups(defaultSlider, visualStateGroupList);
+VisualStateManager.SetVisualStateGroups(disabledSlider, visualStateGroupList);
+
+stackLayout.Children.Add(new Label() { Text = "Default Slider", Padding = new Thickness(0, 10) });
+stackLayout.Children.Add(defaultSlider);
+stackLayout.Children.Add(new Label() { Text = "Disabled Slider", Padding = new Thickness(0, 10) });
+stackLayout.Children.Add(disabledSlider);
+this.Content = stackLayout;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Slider divider disabled state](images/labels-and-dividers/divider-disabled.png)
