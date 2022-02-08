@@ -24,7 +24,7 @@ The Knowledge Base section contains responses to some of the most frequently ask
 
 Similar to the Knowledge Base, the Forum section also contains responses to questions of other customers asked in the past.
 
-## Support and feedback
+## Support and feedback Test
 
 If you are unable to find the information that you are looking for in the self-help resources mentioned above, please contact us by creating a [support ticket](https://www.syncfusion.com/support/directtrac/incidents).
 
