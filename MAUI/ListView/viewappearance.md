@@ -852,7 +852,7 @@ public class ViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-N> When both `SfBusyIndicator` and `SfListView` loaded with same row and column, you need to set `InputTransparent` as `True` to `SfBusyindicator` in order to pass touch interaction to `SfListView` in iOS platform.
+N> When both `SfBusyIndicator` and `SfListView` loaded with same row and column, you need to set `InputTransparent` as `True` to `SfBusyIndicator` in order to pass touch interaction to `SfListView` in iOS platform.
 
 ## show busy indicator on list view items
 
