@@ -9,26 +9,26 @@ documentation: ug
 
 # Appearance in .NET MAUI ListView (SfListView)
 
-The `SfListView` allows customizing appearance of the underlying data, and provides different functionalities to the end-user.
+The `SfListView` allows customizing the appearance of the underlying data, and provides different functionalities to the end-user.
 
 ## Item template
 
-A template can be used to present the data in a way that makes sense for the application by using different controls. `SfListView` allows customizing appearance of view by setting the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate) property.
+A template can be used to present the data in a way that makes sense for the application by using different controls. `SfListView` allows customizing the appearance of the view by setting the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate) property.
 
 ## Data template selector
 
-The `SfListView` allows customizing appearance of each item with different templates based on specific constraints by using the `DataTemplateSelector`. You can choose a `DataTemplate` for each item at runtime based on the value of data-bound property using `DataTemplateSelector`.
+The `SfListView` allows customizing the appearance of each item with different templates based on specific constraints by using the `DataTemplateSelector`. You can choose a `DataTemplate` for each item at runtime based on the value of data-bound property using `DataTemplateSelector`.
 
-Here, an [ItemsCacheLimit](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewLayout.html#Syncfusion_Maui_ListView_ListViewLayout_ItemsCacheLimit) property maintains number of items reusing in the view. This cache limit is used to create and reuse the [ListViewItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewItem.html) if different templates are used in `DataTemplateSelector` for better scrolling performance. Based on this value, `SfListView` creates number of `ListViewItem` for different templates in the view if new template is created while scrolling, and reuses it if same template is used for improving the scrolling performance.
+Here, an [ItemsCacheLimit](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewLayout.html#Syncfusion_Maui_ListView_ListViewLayout_ItemsCacheLimit) property is used to maintain the number of items that can be reused in the view. This cache limit is used to create and reuse the [ListViewItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewItem.html) if different templates are used in `DataTemplateSelector` for better scrolling performance. Based on this value,. Based on this value, `SfListView` creates a number of `ListViewItem` for different templates in the view, if a new template is created while scrolling, and reuses them, if the same template is used to improve the scrolling performance.
 
 ### Create a data template selector
 
-Create custom class that inherits from `DataTemplateSelector`, and override the `OnSelectTemplate` method to return the `DataTemplate` for that item. At runtime, the SfListView invokes the `OnSelectTemplate` method for each item and passes the data object as parameter.
+Create a custom class that inherits from `DataTemplateSelector`, and override the `OnSelectTemplate` method to return the `DataTemplate` for that item. At runtime, the SfListView invokes the `OnSelectTemplate` method for each item and passes the data object as parameter.
 
 {% tabs %}
 {% highlight c# %}
 
-class MyDataTemplateSelector : Xamarin.Forms.DataTemplateSelector
+class MyDataTemplateSelector : DataTemplateSelector
 {
 
    private readonly DataTemplate incomingDataTemplate;
@@ -55,14 +55,14 @@ class MyDataTemplateSelector : Xamarin.Forms.DataTemplateSelector
 
 ### Applying the data template selector
 
-Assign custom `DataTemplateSelector` to the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate) of the `SfListView` either in XAML or C#.
+Assign custom `DataTemplateSelector` to the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate) of the `SfListView` in XAML or C#.
 
 {% tabs %}
 {% highlight xaml %}
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DataTemplateSelector.MainPage"
-             xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
              xmlns:local="clr-namespace:DataTemplateSelector;assembly=DataTemplateSelector">
   <ContentPage.Resources>
     <ResourceDictionary>
@@ -115,7 +115,7 @@ The `SfListView` allows you to layout the items like `TabView` in the horizontal
 
 {% tabs %}
 {% highlight xaml %}
-<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms">
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
     <ContentPage.Content>
         <Grid x:Name="GridView">
             <Label Text="Tap image to expand"/>
@@ -181,9 +181,9 @@ public partial class MainPage : ContentPage
 
     }
 
-    private void list_ItemTapped(object sender, Syncfusion.ListView.XForms.ItemTappedEventArgs e)
+    private void ListView_ItemTapped(object sender, Syncfusion.Maui.ListView.ItemTappedEventArgs e)
     {
-        GridView.BindingContext = e.ItemData;
+            GridView.BindingContext = e.ItemData;
     }
 }
 {% endhighlight %}
@@ -191,13 +191,13 @@ public partial class MainPage : ContentPage
 
 ## Horizontal list inside vertical list
 
-The `SfListView` allows you to layout the items in horizontal list inside the vertical list. You can load the nested `SfListView` by customizing the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate) of outer `SfListView`. 
+The `SfListView` allows you to layout the items in a horizontal list within a vertical list. You can load the nested `SfListView` by customizing the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate) of outer `SfListView`. 
 
-You should define the size for each inner `SfListView` or set the [AutoFitMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_AutoFitModeProperty) of inner SfListView as `Height`, and define the [ItemSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemSize) for outer `SfListView`.
+You should either define the size for each inner `SfListView` or set the [AutoFitMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_AutoFitModeProperty) of the inner SfListView to `Height`, and define the [ItemSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemSize) for outer `SfListView`.
 
 {% tabs %}
 {% highlight xaml %}
-<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms">
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
   <ContentPage.BindingContext>
     <local:ListViewModel x:Name="viewModel"/>
   </ContentPage.BindingContext>
@@ -232,7 +232,7 @@ public partial class MainPage : ContentPage
 
         var grid = new Grid();
         var label1 = new Label();
-        label.SetBinding(Label.TextProperty, new Binding("Label"));
+        label1.SetBinding(Label.TextProperty, new Binding("Label"));
         var listView = new SfListView();
         listView.ItemsSource = OuterList;
         listView.ItemSize = 100;
@@ -241,7 +241,7 @@ public partial class MainPage : ContentPage
             var InnerListView = new SfListView();
             InnerListView.ItemSize = 100;
             InnerListView.ItemsSource = InnerList;
-            InnerListView.Orientation = Orientation.Horizontal;
+            InnerListView.Orientation = ItemsLayoutOrientation.Horizontal;
             listView.ItemTemplate = new DataTemplate(() =>
             {
                 var grid1 = new Grid();
@@ -289,7 +289,7 @@ listView.ItemSpacing = new Thickness(5, 0, 0, 0)
 
 ## Alternate row styling
 
-The `SfListView` allows applying alternate row styling for items by finding the index of the underlying object using `IValueConverter`.
+The `SfListView` allows applying alternate row styling for items by using the `IValueConverter` to find the index of the underlying object.
 
 {% tabs %}
 {% highlight xaml %}
@@ -361,7 +361,7 @@ public class IndexToColorConverter : IValueConverter
 
 ## Rounded corner on items
 
-The `SfListView` allows customizing the item appearance like rounded corner by using the `Frame` layout in the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate) property. By defining the `CornerRadius` property of frame layout, you can perform the rounded corner for items. 
+The `SfListView` allows customizing the item appearance, such as rounded corners, by using the `Frame` layout in the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate) property. By defining the `CornerRadius` property of frame layout, you can perform rounded corner for items. 
 
 {% tabs %}
 {% highlight xaml %}
@@ -420,7 +420,7 @@ public partial class MainPage : ContentPage
 
 The `SfListView` allows customizing the item appearance like shadow effect for items by setting the shadow property of frame as true in [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate) property.
 
-N> Define the frame within any view inside `ItemTemplate` with around some margin. 
+N> Define the frame within any view inside `ItemTemplate` with some margin around it. 
 
 {% tabs %}
 {% highlight xaml %}
@@ -485,7 +485,7 @@ public partial class MainPage : ContentPage
 
 ## ListViewItem customization
 
-The `SfListView` allows customizing the [ListViewItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewItem.html) based on the [ItemType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemType.html). To customize the Header, Footer, GroupHeader, LoadMore, and ListViewItem follow the code example.
+The `SfListView` allows customizing the [ListViewItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewItem.html) based on the [ItemType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemType.html). Follow the code example to customize the Header, Footer, GroupHeader, LoadMore, and ListViewItem.
 
 {% tabs %}
 {% highlight c# %}
@@ -795,11 +795,11 @@ internal class SfListViewAccordionBehavior : Behavior<ContentPage>
 {% endhighlight %}
 {% endtabs %}
 
-The `IsVisible` model property which is bound to the second template will be enabled when tapping the item and disabled when tapping again the same item.
+The `IsVisible` model property, which is bound to the second template, will be enabled when the item is tapped and disabled when the item is tapped again.
 
-## show busy indicator on list view
+## Show busy indicator on list view
 
-The `SfListView` allows displaying the `SfBusyIndicator` when loading the bounded items. The busy indicator can be enabled and disabled by using `IsBusy` property.
+The `SfListView` allows displaying the `SfBusyIndicator` when loading the bounded items. The busy indicator can be enabled and disabled by using the `IsBusy` property.
 
 Create a `IsLoading` boolean property in view model and bind it to the `IsBusy` property. By setting the value to `IsLoading` property, the busy indicator will be enabled and disabled into the view till the items loaded in the `SfListView`.
 
@@ -852,11 +852,11 @@ public class ViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-N> When both `SfBusyIndicator` and `SfListView` loaded with same row and column, you need to set `InputTransparent` as `True` to `SfBusyIndicator` in order to pass touch interaction to `SfListView` in iOS platform.
+N> When both `SfBusyIndicator` and `SfListView` are loaded with the same row and column, you need to set `InputTransparent` as `True` to `SfBusyIndicator` in order to pass touch interaction to `SfListView` in the iOS platform.
 
-## show busy indicator on list view items
+## Show busy indicator on list view items
 
-The `SfListView` allows displaying an activity indicator for an item when its data is being loaded in the background. To perform this, load both `ActivityIndicator` and a `Button` in the same row of a `Grid` element inside the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate) of the `SfListView`. The busy indicator and button can be enabled and disabled by using properties `IsButtonVisible` and `IsIndicatorVisible` respectively in the model class.
+The `SfListView` allows displaying an activity indicator for an item when its data is being loaded in the background. To perform this, load both `ActivityIndicator` and a `Button` in the same row of a `Grid` element inside the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate) of the `SfListView`. The busy indicator and button can be enabled and disabled by using the `IsButtonVisible` and `IsIndicatorVisible` properties respectively in the model class.
 
 {% tabs %}
 {% highlight c# %}
@@ -933,7 +933,7 @@ public class BookInfo : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-Disable the visibility of Description and `ActivityIndicator` initially while adding items into collection.
+Initially, disable the visibility of description and  `ActivityIndicator` when adding items to a collection.
 
 {% tabs %}
 {% highlight c# %}
@@ -1001,7 +1001,7 @@ Bind the bool values for the `IsVisible` properties to switch between indicator 
 {% endhighlight %}
 {% endtabs %}
 
-In the `Clicked` event of the Button, get the row data from its `BindingContext` and alter the bool values accordingly.
+In the `Clicked` event of the button, get the row data from its `BindingContext` and alter the bool values accordingly.
 
 {% tabs %}
 {% highlight c# %}
@@ -1096,7 +1096,7 @@ public partial class MainPage : ContentPage
 
 ## Item animation on appearing
 
-The `SfListView` supports animating the items by using an [OnItemAppearing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewItem.html#Syncfusion_Maui_ListView_ListViewItem_OnItemAppearing) virtual method. It is raised when the items appearing in the view on scrolling, loading, and navigating from one page to another page. To apply the animation effect for items, follow the steps:
+The `SfListView` supports animating the items by using an [OnItemAppearing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewItem.html#Syncfusion_Maui_ListView_ListViewItem_OnItemAppearing) virtual method. It is raised when the items appearing in the view on scrolling, loading, and navigating from one page to another page. To apply the animation effect for items, follow these steps:
 
 ### Extension of ItemGenerator
 
