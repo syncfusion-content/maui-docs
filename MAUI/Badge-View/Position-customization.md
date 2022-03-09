@@ -50,11 +50,11 @@ Content = sfBadgeView;
 
 {% endtabs %}
 
-![.NET MAUI Badge View Badge Position](badge-position_images/badgeposition.png)
+![.NET MAUI Badge View Badge Position](badge-position_images/net_maui_badge_view_position.png)
 
 ## Setting a badge offset
 
-The badge text x,y position can be adjusted using the [Offset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_Offset) property.
+The badge view x,y position can be adjusted using the [Offset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_Offset) property.
 
 {% tabs %}
 
@@ -95,4 +95,4 @@ Content = sfBadgeView;
 
 {% endtabs %}
 
-![.NET MAUI Badge View Badge Offset](badge-position_images/badgeoffset.png)
+![.NET MAUI Badge View Badge Offset](badge-position_images/net_maui_badge_view_offset.png)
