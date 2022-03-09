@@ -200,6 +200,6 @@ The following code sample gives you the complete code for Badge View with badge 
 
 The following screenshot illustrates the result of the above code.
 
-![.NET MAUI Badge View getting started](getting-started_images/net_maui_badge_view_getting_started.png) 
+![.NET MAUI Badge View Getting Started](getting-started_images/net_maui_badge_view_getting_started.png) 
 
 

@@ -21,4 +21,4 @@ Badges are used to notify users of new or unread messages, notifications, or the
 
 * **Animation** : Use animations for badge text.
 
-![.NET MAUI Badge View overview](overview_images/net_maui_badge_view_overview.png)
+![.NET MAUI Badge View Overview](overview_images/net_maui_badge_view_overview.png)

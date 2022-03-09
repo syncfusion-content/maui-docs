@@ -108,7 +108,7 @@ The border color and border width of the badge view can be customized using the 
 
 {% endtabs %}
 
-![.NET MAUI Badge View stroke Customization](badge-customization_images/net_maui_badge_notifications_stroke_customization.png)
+![.NET MAUI Badge View Stroke Customization](badge-customization_images/net_maui_badge_notifications_stroke_customization.png)
 
 ## Text customization
 
