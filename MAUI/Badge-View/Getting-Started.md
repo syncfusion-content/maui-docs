@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI Badge View (SfBadgeView)
 
-This section explains the steps required to configure the .NET MAUI Badge View control and customize its elements.
+This section explains the steps required to configure the .NET MAUI Badge View control for .NET MAUI Badge Notifications and customize its elements.
 
 ## Adding a SfBadgeView reference
 
@@ -56,7 +56,7 @@ The Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget
 
 ## Adding a namespace
 
-Add the following namespace.
+Add the following namespace to add .NET MAUI Badge Notifications.
 
 {% tabs %}
 
@@ -99,7 +99,7 @@ this.Content = sfBadgeView;
 
 {% endtabs %}
 
-## Adding a badge text
+## Adding a badge notification text
 
 Add text to Badge View using the [BadgeText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html#Syncfusion_Maui_Core_SfBadgeView_BadgeText) property.
 
@@ -160,7 +160,7 @@ Content = sfBadgeView;
  
 {% endtabs %}
 
-The following code sample gives you the complete code for Badge View with badge types and text.
+The following code sample gives you the complete code for Badge View with badge notification types and text.
 
 {% tabs %}
 
