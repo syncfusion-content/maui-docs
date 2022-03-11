@@ -64,7 +64,6 @@ listView.DataSource.GroupDescriptors.Add(new GroupDescriptor()
     var item = (obj1 as Contacts);
     return item.ContactName[0].ToString();
   }
-  Comparer = new CustomGroupComparer()
 });
 {% endhighlight %}
 {% endtabs %}
