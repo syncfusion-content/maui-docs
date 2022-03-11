@@ -96,6 +96,8 @@ public class MainPageCs : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
+![MAUI ListView Data Template Selector](Images/appearance/maui-listview-applying-the-data-template-selector.jpg)
+
 ## Horizontal ListView
 
 The SfListView allows you to layout every item in the [SfListView.ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsSource) property either in `Vertical` or `Horizontal` orientation by setting the [SfListView.Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_Orientation). The default orientation is `Vertical`.
@@ -105,9 +107,11 @@ The SfListView allows you to layout every item in the [SfListView.ItemsSource](h
 <syncfusion:SfListView x:Name="listView" Orientation="Horizontal" />
 {% endhighlight %}
 {% highlight c# %}
-listView.Orientation = Orientation.Horizontal;
+listView.Orientation = ItemsLayoutOrientation.Horizontal;
 {% endhighlight %}
 {% endtabs %}
+
+![MAUI Horizontal ListView](Images/appearance/maui-listview-horizontal-view.gif)
 
 ### Navigate across views (like TabView)
 
@@ -189,6 +193,8 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
+![MAUI ListView Navigate across views](Images/appearance/maui-listview-navigate-across-views.jpg)
+
 ## Horizontal list inside vertical list
 
 The `SfListView` allows you to layout the items in a horizontal list within a vertical list. You can load the nested `SfListView` by customizing the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate) of outer `SfListView`. 
@@ -261,6 +267,8 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
+![MAUI ListView Horizontal list inside the vertical list](Images/appearance/maui-listview-horizontal-list-inside-vertical-list.jpg)
+
 ## Item size
 
 The `SfListView` allows customizing the size of items by setting the [ItemSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemSize) property. The default value of this property is `48d`. This property can be customized at runtime.
@@ -287,13 +295,15 @@ listView.ItemSpacing = new Thickness(5, 0, 0, 0)
 {% endhighlight %}
 {% endtabs %}
 
+![MAUI ListView Item Spacing](Images/appearance/maui-listview-item-spacing.jpg)
+
 ## Alternate row styling
 
 The `SfListView` allows applying alternate row styling for items by using the `IValueConverter` to find the index of the underlying object.
 
 {% tabs %}
 {% highlight xaml %}
-<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms">
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
     <ContentPage.Resources>
         <ResourceDictionary>
             <local:IndexToColorConverter x:Key="IndexToColorConverter"/>
@@ -359,13 +369,15 @@ public class IndexToColorConverter : IValueConverter
 }
 {% endhighlight %}
 
+![MAUI ListView Alternate row styling](Images/appearance/maui-listview-alternate-row-styling.jpg)
+
 ## Rounded corner on items
 
 The `SfListView` allows customizing the item appearance, such as rounded corners, by using the `Frame` layout in the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate) property. By defining the `CornerRadius` property of frame layout, you can perform rounded corner for items. 
 
 {% tabs %}
 {% highlight xaml %}
-<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms">
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
     <ContentPage.Content>
         <syncfusion:SfListView x:Name="listView" ItemSize="60" ItemsSource="{Binding customerDetails}">
             <syncfusion:SfListView.ItemTemplate>
@@ -416,6 +428,8 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
+![MAUI ListView Rounded corner on items](Images/appearance/maui-listview-rounded-corner-on-items.jpg)
+
 ## Drop shadow effect on items
 
 The `SfListView` allows customizing the item appearance like shadow effect for items by setting the shadow property of frame as true in [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate) property.
@@ -424,7 +438,7 @@ N> Define the frame within any view inside `ItemTemplate` with some margin aroun
 
 {% tabs %}
 {% highlight xaml %}
-<ContentPage  xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms">
+<ContentPage  xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
     <ContentPage.Content>
         <syncfusion:SfListView x:Name="listView" ItemSize="60" ItemsSource="{Binding customerDetails}">
             <syncfusion:SfListView.ItemTemplate>
@@ -482,6 +496,8 @@ public partial class MainPage : ContentPage
 }
 {% endhighlight %}
 {% endtabs %}
+
+![MAUI ListView Drop shadow effect on items](Images/appearance/maui-listview-drop-shadow-effects-on-items.jpg)
 
 ## ListViewItem customization
 
@@ -547,7 +563,7 @@ public class HeaderItemExt : HeaderItem
     protected override void OnItemAppearing()
     {
         base.OnItemAppearing();
-        this.BackgroundColor = Color.Yellow;
+        this.BackgroundColor = Colors.Yellow;
     }
 }
 {% endhighlight %}
@@ -569,7 +585,7 @@ public class FooterItemExt : FooterItem
     protected override void OnItemAppearing()
     {
         base.OnItemAppearing();
-        this.BackgroundColor = Color.Yellow;
+        this.BackgroundColor = Colors.Yellow;
     }
 }
 {% endhighlight %}
@@ -591,7 +607,7 @@ public class GroupHeaderItemExt : GroupHeaderItem
     protected override void OnItemAppearing()
     {
         base.OnItemAppearing();
-        this.BackgroundColor = Color.Yellow;
+        this.BackgroundColor = Colors.Yellow;
     }
 }
 {% endhighlight %}
@@ -613,7 +629,7 @@ public class LoadMoreItemExt : LoadMoreItem
     protected override void OnItemAppearing()
     {
         base.OnItemAppearing();
-        this.BackgroundColor = Color.Yellow;
+        this.BackgroundColor = Colors.Yellow;
     }
 }
 {% endhighlight %}
@@ -635,7 +651,7 @@ public class ListViewItemExt : ListViewItem
     protected override void OnItemAppearing()
     {
         base.OnItemAppearing();
-        this.BackgroundColor = Color.Yellow;
+        this.BackgroundColor = Colors.Yellow;
     }
 }
 {% endhighlight %}
@@ -648,13 +664,13 @@ The `SfListView` supports accordion view to display a list of items. Each item c
 {% tabs %}
 {% highlight xaml %}
 
-<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms">
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
   <ContentPage.Behaviors>
     <local:SfListViewAccordionBehavior />
   </ContentPage.Behaviors>
   <ContentPage.Content>
     <Grid x:Name="mainGrid" BackgroundColor="#F0F0F0" Padding="4">
-      <syncfusion:SfListView x:Name="listView" AutoFitMode="DynamicHeight" SelectionMode ="None" IsScrollBarVisible="False" ItemSpacing="0">
+      <syncfusion:SfListView x:Name="listView" AutoFitMode="DynamicHeight" SelectionMode ="None"  ItemSpacing="0">
         <syncfusion:SfListView.ItemTemplate>
           <DataTemplate>
             <ViewCell>
@@ -740,7 +756,7 @@ internal class SfListViewAccordionBehavior : Behavior<ContentPage>
     #region Fields
 
     private Contact tappedItem;
-    private Syncfusion.ListView.XForms.SfListView listview;
+    private SfListView listview;
     private AccordionViewModel AccordionViewModel;
 
     #endregion
@@ -757,7 +773,7 @@ internal class SfListViewAccordionBehavior : Behavior<ContentPage>
 
     protected override void OnAttachedTo(ContentPage bindable)
     {
-        listview = bindable.FindByName<Syncfusion.ListView.XForms.SfListView>("listView");
+        listview = bindable.FindByName<SfListView>("listView");
         listview.ItemsSource = AccordionViewModel.ContactsInfo;
         listview.ItemTapped += ListView_ItemTapped;
     }
@@ -765,8 +781,7 @@ internal class SfListViewAccordionBehavior : Behavior<ContentPage>
     #endregion
 
     #region Private Methods
-    using Syncfusion.ListView.XForms.Control.Helpers;
-    private void ListView_ItemTapped(object sender, Syncfusion.ListView.XForms.ItemTappedEventArgs e)
+    private void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
     {
         var tappedItemData = obj as Contact;
         if (tappedItem != null && tappedItem.IsVisible)
@@ -797,302 +812,7 @@ internal class SfListViewAccordionBehavior : Behavior<ContentPage>
 
 The `IsVisible` model property, which is bound to the second template, will be enabled when the item is tapped and disabled when the item is tapped again.
 
-## Show busy indicator on list view
-
-The `SfListView` allows displaying the `SfBusyIndicator` when loading the bounded items. The busy indicator can be enabled and disabled by using the `IsBusy` property.
-
-Create a `IsLoading` boolean property in view model and bind it to the `IsBusy` property. By setting the value to `IsLoading` property, the busy indicator will be enabled and disabled into the view till the items loaded in the `SfListView`.
-
-{% tabs %}
-{% highlight xaml %}
-<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
-             xmlns:busyIndicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms">
-    <Grid>
-        <syncfusion:SfListView x:Name="listView" 
-                             ItemsSource="{Binding ContactInfo}" 
-                             AutoFitMode="Height">
-        </syncfusion:SfListView>
-        <busyIndicator:SfBusyIndicator x:Name="busyIndicator" InputTransparent="True"
-                                       AnimationType="SingleCircle" 
-                                       IsBusy="{Binding IsLoading, Mode=TwoWay}" 
-                                       TextColor="Magenta"
-                                       ViewBoxWidth="50"
-                                       ViewBoxHeight="50"/>
-    </Grid>
-</ContentPage>
-{% endhighlight %}
-
-{% highlight c# %}
-public class ViewModel : INotifyPropertyChanged
-{
-    private bool isLoading = false;
-
-    public bool IsLoading
-    {
-        get { return isLoading; }
-        set
-        {
-            this.isLoading = value;
-            OnPropertyChanged("IsLoading");
-        }
-    }
-
-    private async void GenerateItems()
-    {
-        IsLoading = true;
-        await Task.Delay(5000);
-        for (int i = 0; i < 30; i++)
-        {
-            var contact = new Model(CustomerNames[i], ContactNumber[i]);
-            ContactInfo.Add(contact);
-        }
-        IsLoading = false;
-    }
-}
-{% endhighlight %}
-{% endtabs %}
-
-N> When both `SfBusyIndicator` and `SfListView` are loaded with the same row and column, you need to set `InputTransparent` as `True` to `SfBusyIndicator` in order to pass touch interaction to `SfListView` in the iOS platform.
-
-## Show busy indicator on list view items
-
-The `SfListView` allows displaying an activity indicator for an item when its data is being loaded in the background. To perform this, load both `ActivityIndicator` and a `Button` in the same row of a `Grid` element inside the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate) of the `SfListView`. The busy indicator and button can be enabled and disabled by using the `IsButtonVisible` and `IsIndicatorVisible` properties respectively in the model class.
-
-{% tabs %}
-{% highlight c# %}
-public class BookInfo : INotifyPropertyChanged
-{
-    private string bookName;
-    private string bookDescription;
-    public bool isDescriptionVisible;
-    public bool isButtonVisible;
-    public bool isIndicatorVisible;
-
-    public BookInfo()
-    {
-    }
-
-    public string BookName
-    {
-        get { return bookName; }
-        set
-        {
-            bookName = value;
-            OnPropertyChanged("BookName");
-        }
-    }
-
-    public bool IsDescriptionVisible
-    {
-        get { return isDescriptionVisible; }
-        set
-        {
-            isDescriptionVisible = value;
-            OnPropertyChanged("IsDescriptionVisible");
-        }
-    }
-
-    public string BookDescription
-    {
-        get { return bookDescription; }
-        set
-        {
-            bookDescription = value;
-            OnPropertyChanged("BookDescription");
-        }
-    }
-
-    public bool IsButtonVisible
-    {
-        get { return isButtonVisible; }
-        set
-        {
-            isButtonVisible = value;
-            OnPropertyChanged("IsButtonVisible");
-        }
-    }
-
-    public bool IsIndicatorVisible
-    {
-        get { return isIndicatorVisible; }
-        set
-        {
-            isIndicatorVisible = value;
-            OnPropertyChanged("IsIndicatorVisible");
-        }
-    }
-
-    public event PropertyChangedEventHandler PropertyChanged;
-
-    public void OnPropertyChanged(string name)
-    {
-        if (this.PropertyChanged != null)
-            this.PropertyChanged(this, new PropertyChangedEventArgs(name));
-    }
-}
-{% endhighlight %}
-{% endtabs %}
-
-Initially, disable the visibility of description and  `ActivityIndicator` when adding items to a collection.
-
-{% tabs %}
-{% highlight c# %}
-public class BookInfoRepository : INotifyPropertyChanged
-{
-    private ObservableCollection<BookInfo> newBookInfo;
-    public event PropertyChangedEventHandler PropertyChanged;
-
-    public ObservableCollection<BookInfo> NewBookInfo
-    {
-        get { return newBookInfo; }
-        set { this.newBookInfo = value; }
-    }
-
-    public void OnPropertyChanged(string name)
-    {
-        if (this.PropertyChanged != null)
-            this.PropertyChanged(this, new PropertyChangedEventArgs(name));
-    }
-
-    public BookInfoRepository()
-    {
-        GenerateNewBookInfo();
-    }
-
-    private void GenerateNewBookInfo()
-    {
-        NewBookInfo = new ObservableCollection<BookInfo>();
-        NewBookInfo.Add(new BookInfo() { BookName = "Machine Learning Using C#", BookDescription = "You’ll learn several different approaches to applying machine learning", IsIndicatorVisible = false, IsButtonVisible = true, IsDescriptionVisible = false });
-        NewBookInfo.Add(new BookInfo() { BookName = "Object-Oriented Programming in C#", BookDescription = "Object-oriented programming is the de facto programming paradigm", IsIndicatorVisible = false, IsButtonVisible = true, IsDescriptionVisible = false });
-        NewBookInfo.Add(new BookInfo() { BookName = "C# Code Contracts", BookDescription = "Code Contracts provide a way to convey code assumptions", IsIndicatorVisible = false, IsButtonVisible = true, IsDescriptionVisible = false });
-    }
-}
-{% endhighlight %}
-{% endtabs %}
-
-Bind the bool values for the `IsVisible` properties to switch between indicator and button while loading the description.
-
-{% tabs %}
-{% highlight xaml %}
-
-<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms">  
-    <ContentPage.BindingContext>
-        <local:BookInfoRepository x:Name="ViewModel" />
-    </ContentPage.BindingContext>
-    <sync:SfListView x:Name="listView" AutoFitMode="Height" BackgroundColor="#d3d3d3" SelectionMode="None" ItemsSource="{Binding NewBookInfo}">
-        <sync:SfListView.ItemTemplate>
-            <DataTemplate>
-                <Frame HasShadow="True" Margin="5,5,5,0">
-                <Grid Padding="5">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*" />
-                        <RowDefinition Height="2*" />
-                    </Grid.RowDefinitions>
-                    <Label Text="{Binding BookName}" FontAttributes="Bold" FontSize="19" />
-                    <Button Grid.Row="1" Clicked="Button_Clicked" Text="Load Description" IsVisible="{Binding IsButtonVisible}" HorizontalOptions="Center" VerticalOptions="Center"/>
-                    <Label Grid.Row="1" Text="{Binding BookDescription}" FontSize="15" IsVisible="{Binding IsDescriptionVisible}" />
-                    <ActivityIndicator Grid.Row="1" IsEnabled="True" IsRunning="True" IsVisible="{Binding IsIndicatorVisible}" />
-                </Grid>
-                </Frame>
-            </DataTemplate>
-        </sync:SfListView.ItemTemplate>
-    </sync:SfListView>
-</ContentPage>
-{% endhighlight %}
-{% endtabs %}
-
-In the `Clicked` event of the button, get the row data from its `BindingContext` and alter the bool values accordingly.
-
-{% tabs %}
-{% highlight c# %}
-
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-    }
-
-    private async void Button_Clicked(object sender, EventArgs e)
-    {
-        var model = ((sender as Button).BindingContext as BookInfo);
-        model.IsIndicatorVisible = true;
-        model.IsButtonVisible = false;
-        await Task.Delay(2000);
-        model.IsDescriptionVisible = true;
-        model.IsIndicatorVisible = false;
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Show busy indicator on list view items using toggle switch
-
-The `SfListView` allows to display `ActivityIndicator` for an item when loading its data in the background. To do this, load both `ActivityIndicator` and a toggle switch in the same row of a `Grid` element inside the `ItemTemplate` of `SfListView`. The busy indicator and toggle switch can be enabled and disabled by using the `IsButtonVisible` and `IsIndicatorVisible` properties respectively in the model class. The `ActivityIndicator` remains visible when the toggle switch is enabled. 
-
-{% tabs %}
-{% highlight xaml %}
-<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms">
-    <ContentPage.BindingContext>
-        <local:ContactInfoRepository x:Name="ViewModel" />
-    </ContentPage.BindingContext>
-    <syncfusion:SfListView x:Name="listView" AutoFitMode="Height" BackgroundColor="#d3d3d3" SelectionMode="None" ItemsSource="{Binding NewContactInfo}">
-        <syncfusion:SfListView.ItemTemplate>
-            <DataTemplate>
-                <Frame HasShadow="True" Margin="5,5,5,0">
-                <Grid Padding="5">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*" />
-                        <RowDefinition Height="*" />
-                    </Grid.RowDefinitions>
-                    <Label Text="{Binding ContactName}" FontAttributes="Bold" FontSize="19" />
-                  <Switch Grid.Row="1" Grid.Column="1" IsVisible="{Binding IsButtonVisible}" IsToggled="{Binding IsChecked}" Toggled="Switch_Toggled"/>
-
-                  <Label Grid.Row="1" Text="{Binding ContactNo}" FontSize="15" IsVisible="{Binding IsDescriptionVisible}" />
-                    <ActivityIndicator Grid.Row="1" IsEnabled="True" IsRunning="True" IsVisible="{Binding IsIndicatorVisible}" />
-                </Grid>
-                </Frame>
-            </DataTemplate>
-        </syncfusion:SfListView.ItemTemplate>
-    </syncfusion:SfListView>
-</ContentPage>
-{% endhighlight %}
-{% endtabs %}
-
-In the `Toggled` event of the switch, get the row data from its `BindingContext` and alter the Bool values accordingly. 
-
-{% tabs %}
-{% highlight c# %}
-public partial class MainPage : ContentPage
-{
-  private Random random = new Random();
-  public MainPage()
-  {
-     InitializeComponent();
-  }
-
-  private async void Switch_Toggled(object sender, ToggledEventArgs e)
-  {
-    var model = ((sender as Switch).BindingContext as ContactInfo);
-    if (model.IsChecked == true)
-    {
-        model.ContactNo = random.Next(100, 400).ToString() + "-" + random.Next(500, 800).ToString() + "-" + random.Next(1000, 2000).ToString();
-        model.IsDescriptionVisible = false;
-        model.IsIndicatorVisible = true;
-        await Task.Delay(2000);
-        model.IsDescriptionVisible = true;
-        model.IsIndicatorVisible = false;
-        model.IsChecked = false;
-    }
-    else
-    {
-        model.IsIndicatorVisible = false;
-    }
-  }
-}
-{% endhighlight %}
-{% endtabs %}
+![MAUI ListView Accordion view](Images/appearance/maui-listview-accordion-view.jpg)
 
 ## Item animation on appearing
 
@@ -1169,12 +889,15 @@ public class ListViewItemExt : ListViewItem
 
 Here `FadeTo` animation is applied for [ListViewItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewItem.html), when comes in the view. 
 
+![MAUI ListView Extension of Listview Item](Images/appearance/maui-listview-extension-of-listviewitem.gif)
+
 ### Right to left(RTL)
 
 `SfListView` supports to change the flow of text to the right-to-left direction by setting the `FlowDirection` property. 
+
 {% tabs %}
 {% highlight xaml %}
-<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms">
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
   <syncfusion:SfListView x:Name="listView"
                  ItemsSource="{Binding Products}"
                  FlowDirection="RightToLeft"/>
@@ -1185,22 +908,7 @@ this.FlowDirection = FlowDirection.RightToLeft;
 {% endhighlight %}
 {% endtabs %}
 
-In UWP platform, the `ScrollView` is not changed when RTL is enabled (framework issue). To overcome this issue, set the `FlowDirection` property in constructor of `MainPage` in UWP renderer as demonstrated in the following code example.
-
-{% tabs %}
-{% highlight c# %}
-public MainPage()
-{
-    …
-    SfListViewRenderer.Init();
-    this.FlowDirection = FlowDirection.RightToLeft;
-    LoadApplication (new App ());
-    …
-}
-{% endhighlight %} 
-{% endtabs %}
-
-N> When a label is loaded in the `ItemTemplate`, the right-to-left direction is not applied due to the framework issue. It has been reported to the Xamarin team; for more details about this, refer to this [link](https://github.com/xamarin/Xamarin.Forms/issues/3611). To overcome this issue, set the `HorizontalOptions` to `StartAndExpand` in Label.
+![MAUI ListView Right to Left](Images/appearance/maui-listview-right-to-left.jpg)
 
 ### Limitations
 
