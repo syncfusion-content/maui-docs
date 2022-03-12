@@ -68,7 +68,7 @@ The [ItemTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.Sf
 
 ### ItemDoubleTapped event
 
-The [ItemDoubleTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemDoubleTapped)has the following members which provides information for the `ItemDoubleTapped` event:
+The [ItemDoubleTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemDoubleTapped) has the following members which provides information for the `ItemDoubleTapped` event:
 
  * [ItemType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemDoubleTappedEventArgs.html#Syncfusion_Maui_ListView_ItemDoubleTappedEventArgs_ItemType): It gets the type of double tapped item.
  * [ItemData](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemDoubleTappedEventArgs.html#Syncfusion_Maui_ListView_ItemDoubleTappedEventArgs_ItemData): The underlying data associated with the double tapped item as its arguments.
