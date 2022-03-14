@@ -480,6 +480,33 @@ this.Scheduler.TimelineView.ViewHeaderSettings.DateFormat = "MMMM dd";
 
 ![change-view-header-text-formatting-in-maui-scheduler](images/timeline-views/change-view-header-text-formatting-in-maui-scheduler.png)
 
+### View header height
+
+The height of the ViewHeader can be customized by setting the `Height` property of `ViewHeaderSettings` in `TimelineView.`
+
+{% tabs %}
+{% highlight xaml %}
+
+ <scheduler:SfScheduler x:Name="Scheduler" 
+                        View="TimelineWeek">
+    <scheduler:SfScheduler.TimelineView>
+        <scheduler:SchedulerTimelineView>
+            <scheduler:SchedulerTimelineView.ViewHeaderSettings>
+                <scheduler:SchedulerViewHeaderSettings Height="100" />
+            </scheduler:SchedulerTimelineView.ViewHeaderSettings>
+        </scheduler:SchedulerTimelineView>
+    </scheduler:SfScheduler.TimelineView>
+ </scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight c# %}
+
+this.Scheduler.View = SchedulerView.TimelineWeek;
+this.Scheduler.TimelineView.ViewHeaderSettings.Height = 100;
+
+{% endhighlight %}
+{% endtabs %}
+
 ### Customize view header text style
 
 The background color and text style for the labels mentioning the time can be customized, by setting the `Background,` `DateTextStyle,` and `DayTextStyle` properties of `TimelineView.`

@@ -105,6 +105,33 @@ this.Scheduler.MonthView.ViewHeaderSettings.DayFormat = "dddd";
 
 ![change-day-text-format-of-month-view-header-in-maui-scheduler](images/month-view/change-day-text-format-of-month-view-header-in-maui-scheduler.png)
 
+### View header height
+
+The height of the ViewHeader can be customized by setting the `Height` property of `ViewHeaderSettings` in `MonthView.`
+
+{% tabs %}
+{% highlight xaml %}
+
+ <scheduler:SfScheduler x:Name="Scheduler" 
+                        View="Month">
+    <scheduler:SfScheduler.MonthView>
+        <scheduler:SchedulerMonthView>
+            <scheduler:SchedulerMonthView.ViewHeaderSettings>
+                <scheduler:SchedulerViewHeaderSettings Height="100" />
+            </scheduler:SchedulerMonthView.ViewHeaderSettings>
+        </scheduler:SchedulerMonthView>
+    </scheduler:SfScheduler.MonthView>
+ </scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight c# %}
+
+this.Scheduler.View = SchedulerView.Month;
+this.Scheduler.MonthView.ViewHeaderSettings.Height = 100;
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Customize view header appearance
 
 Customize the month view header day text style, day format and background color by using the `DayTextStyle,` `DayFormat` and `Background` of `ViewHeaderSettings` properties of `MonthView` respectively.

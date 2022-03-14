@@ -486,6 +486,32 @@ this.Scheduler.DaysView.ViewHeaderSettings.DateFormat = "dd";
 
 ![change-view-header-text-formatting-in-maui-scheduler](images/day-week-views/change-view-header-text-formatting-in-maui-scheduler.png)
 
+### View header height
+
+The height of the ViewHeader in a day, week, and work week views can be customized by setting the `Height` property of `ViewHeaderSettings` in `DaysView.`
+
+{% tabs %}
+{% highlight xaml %}
+
+ <scheduler:SfScheduler x:Name="Scheduler" 
+                        View="Week">
+    <scheduler:SfScheduler.DaysView>
+        <scheduler:SchedulerDaysView>
+            <scheduler:SchedulerDaysView.ViewHeaderSettings>
+                    <scheduler:SchedulerViewHeaderSettings Height="100" />
+            </scheduler:SchedulerDaysView.ViewHeaderSettings>
+    </scheduler:SchedulerDaysView>
+</scheduler:SfScheduler.DaysView>
+
+{% endhighlight %}
+{% highlight c# %}
+
+this.Scheduler.View = SchedulerView.Week;
+this.Scheduler.DaysView.ViewHeaderSettings.Height = 100;
+
+{% endhighlight %}
+{% endtabs %}
+
 ### Customize view header text style
 
 The background color and text style for the labels mentioning the time can be customized, by setting the `Background,` `DateTextStyle,` and `DayTextStyle` properties of `DaysView` in the Scheduler.
