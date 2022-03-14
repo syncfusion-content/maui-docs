@@ -194,8 +194,8 @@ The .NET MAUI ListView (SfListView) has been built from the ground up with an op
     * If the `SfListView` loads inside the `ScrollView`, the size should be defined.
  * Avoid changing the cell layout based on the `BindingContext`. This incurs large layout and initialization costs.
  * Implement a model class inherited with `INotifyPropertyChanged` interface to notify the property changes at runtime.
-
- ## Scrolling ListView without virtualization
+ 
+## Scrolling ListView without virtualization
 
 The `SfListView` allows you to scroll by loading the entire collection of items inside the ScrollView and defining the total extend of its container to `HeightRequest` in the[Loaded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_Loaded) event.
 
