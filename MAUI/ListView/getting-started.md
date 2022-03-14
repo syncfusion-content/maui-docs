@@ -11,7 +11,7 @@ documentation: ug
 
 This section provides a quick overview of how to get started with the .NET Maui ListView (SfListView) for Maui. Walk-through the entire process of creating the real world SfListView.
 
-N> MAUI ListView is now available for iOS, Android, and MacCatalyst.
+N> MAUI ListView is now only available for Android, iOS and MacCatalyst platforms. Currently its not supported in WinUI platform. It will be available in 2022 Volume 1 release.
 
 ## Creating an application using the .NET MAUI ListView
 
