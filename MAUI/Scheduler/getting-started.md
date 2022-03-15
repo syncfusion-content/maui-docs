@@ -383,8 +383,8 @@ Create meetings of type `ObservableCollection<Meeting>` and assign those appoint
 {% tabs %}
 {% highlight xaml %}
 
-<schedule:SfScheduler
-                    AppointmentsSource="{Binding Events}">
+<schedule:SfScheduler x:Name="Scheduler"
+                      AppointmentsSource="{Binding Events}">
     <schedule:SfScheduler.BindingContext>
         <local:SchedulerViewModel/>
     </schedule:SfScheduler.BindingContext>
