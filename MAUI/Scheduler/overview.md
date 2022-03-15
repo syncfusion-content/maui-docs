@@ -61,4 +61,4 @@ The Syncfusion .NET MAUI Scheduler (SfScheduler) has eight different types of bu
 
  ![flexible-working-hours-in-maui-scheduler](images/overview/flexible-working-hours-in-maui-scheduler.png)
 
- * **Windows and Maccatalyst layouts**: The mouse hovering effect is now applied to all scheduler elements.
+ * **Windows and Mac Catalyst layouts**: The mouse hovering effect is now applied to all scheduler elements.
