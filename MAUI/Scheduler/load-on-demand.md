@@ -121,7 +121,15 @@ The `ShowBusyIndicator` property can be used to start and stop the loading indic
 {% tabs %}
 {% highlight xaml %}
 
- {% include relative code-snippet/load-on-demand.xaml %}
+ <scheduler:SfScheduler x:Name="Scheduler" 
+                        View="Week"
+                        AppointmentsSource="{Binding Events}"
+                        ShowBusyIndicator="{Binding ShowBusyIndicator}"
+                        QueryAppointmentsCommand="{Binding QueryAppointmentsCommand}">
+    <scheduler:SfScheduler.BindingContext>
+        <local:LoadOnDemandViewModel/>
+    </scheduler:SfScheduler.BindingContext>
+ </scheduler:SfScheduler>
 
 {% endhighlight %}
 {% highlight ViewModel %}
