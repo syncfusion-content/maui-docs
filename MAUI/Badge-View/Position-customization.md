@@ -50,7 +50,7 @@ Content = sfBadgeView;
 
 {% endtabs %}
 
-![.NET MAUI Badge View Badge Position](badge-position_images/badgeposition.png)
+![.NET MAUI Badge View Badge Position](badge-position_images/net_maui_badge_view_position.png)
 
 ## Setting a badge offset
 
@@ -95,4 +95,4 @@ Content = sfBadgeView;
 
 {% endtabs %}
 
-![.NET MAUI Badge View Badge Offset](badge-position_images/badgeoffset.png)
+![.NET MAUI Badge View Badge Offset](badge-position_images/net_maui_badge_view_offset.png)
