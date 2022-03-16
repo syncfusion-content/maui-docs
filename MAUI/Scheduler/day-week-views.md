@@ -512,7 +512,7 @@ this.Scheduler.DaysView.ViewHeaderSettings.Height = 100;
 {% endhighlight %}
 {% endtabs %}
 
-### Customize view header text style
+### Customize view header appearance using text style
 
 The background color and text style for the labels mentioning the time can be customized, by setting the `Background,` `DateTextStyle,` and `DayTextStyle` properties of `DaysView` in the Scheduler.
 

@@ -125,6 +125,29 @@ private void OnButtonClicked(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
+### Allow view navigation
+
+You can quickly navigate to the respective day or timeline day view by a tap on the month cell or view header of the following scheduler views such as a week, work week, month, agenda, timeline week, timeline work week, and timeline month views by using the `AllowViewNavigation` property of the `SfScheduler.`
+
+{% tabs %}
+{% highlight xaml %}
+
+ <scheduler:SfScheduler x:Name="Scheduler" 
+                        AllowViewNavigation="True">
+ </scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight c#%}
+
+this.Scheduler.AllowViewNavigation = true;
+
+{% endhighlight %}
+{% endtabs %}
+
+N>
+* The default value of `AllowViewNavigation` is `false.`
+* The `AllowViewNavigation` is not applicable for the `day` and `timeline day` views.
+
 ### Allowed views
 
 The [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) allows to quickly switch between the different scheduler views using the [AllowedViews](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AllowedViews) property. These views will display as a button in the scheduler header.

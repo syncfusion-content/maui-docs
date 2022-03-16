@@ -268,3 +268,29 @@ this.Scheduler.ShowBusyIndicator = true;
 N>  
 * You might start and stop the animation before and after the appointments loaded, when using the `QueryAppointments,` or `QueryAppointmentsCommand.` 
 * When `QueryAppointments` or `QueryAppointmentsCommand` are not used, and show busy indicator is enabled, the busy indicator will be stopped once the appointment is rendered.
+
+## Busy indicator appearance
+
+You can customize the busy indicator appearance by using the `BusyIndicatorTemplate` property of `SfScheduler.`
+
+{% tabs %}
+{% highlight xaml %}
+
+ <scheduler:SfScheduler x:Name="Scheduler" 
+                        View="Week"
+                        ShowBusyIndicator="True">
+    <scheduler:SfScheduler.BusyIndicatorTemplate>
+        <DataTemplate>
+            <Grid Background="LightGray" Opacity="0.2">
+                <Label Text="Loading..." HorizontalOptions="Center" VerticalOptions="Center" TextColor="Blue"/>
+            </Grid>
+        </DataTemplate>
+    </scheduler:SfScheduler.BusyIndicatorTemplate>
+ </scheduler:SfScheduler>
+
+{% endhighlight %}
+{% endtabs %}
+
+N>
+* The `BusyIndicatorTemplate` is applicable to only, when `ShowBusyIndicator` property is enabled.
+* The `BusyIndicatorTemplate` is also applicable for `QueryAppointments` and `QueryAppointmentsCommand` of the `SfScheduler.`

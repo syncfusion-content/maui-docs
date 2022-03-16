@@ -126,3 +126,73 @@ You can customize the header appearance of scheduler by using the `HeaderTemplat
 
 {% endhighlight %}
 {% endtabs %}
+
+### Customize header appearance using DataTemplateSelector
+
+You can customize the header appearance of scheduler by using the `HeaderTemplate` property of `HeaderView.` The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler header by using the `HeaderTemplate.` It lets to choose a different data template for each header, customizing the appearance of a particular header based on certain conditions.
+
+{% tabs %}
+{% highlight xaml %}
+
+ <Grid>
+    <Grid.Resources>
+        <DataTemplate x:Key="todayDatesTemplate">
+            <Grid Background = "LightBlue" >
+                <Label x:Name="label" HorizontalOptions="Center" VerticalOptions="Center">
+                    <Label.Text>
+                        <MultiBinding StringFormat = "{}{0:MMM dd, yyyy} - {1:MMM dd, yyyy}" >
+                            <Binding Path="StartDate" />
+                            <Binding Path = "EndDate" />
+                        </MultiBinding >
+                    </Label.Text >
+                </Label >
+                <Label  HorizontalOptions="Center" VerticalOptions="End" Text="{Binding Text}" TextColor="Red" />
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="normaldatesTemplate">
+            <Grid Background = "LightGreen" >
+                <Label x:Name="label" HorizontalOptions="Center" VerticalOptions="Center">
+                    <Label.Text>
+                        <MultiBinding StringFormat = "{}{0:MMM dd, yyyy} - {1:MMM dd, yyyy}" >
+                            <Binding Path="StartDate" />
+                            <Binding Path = "EndDate" />
+                        </MultiBinding >
+                    </Label.Text >
+                </Label>
+                <Label  HorizontalOptions="Center" VerticalOptions="End" Text="{Binding Text}" TextColor="Orange" />
+            </Grid>
+        </DataTemplate>
+        <local:HeaderTemplateSelector x:Key="headerTemplateSelector" TodayDatesTemplate="{StaticResource todayDatesTemplate}"  NormaldatesTemplate="{StaticResource normaldatesTemplate}" />
+    </Grid.Resources>
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                           View="Week">
+        <scheduler:SfScheduler.HeaderView>
+            <scheduler:SchedulerHeaderView HeaderTemplate = "{StaticResource headerTemplateSelector}" />
+        </scheduler:SfScheduler.HeaderView>
+    </scheduler:SfScheduler>
+ </Grid>
+
+{% endhighlight %}
+{% highlight c# tabtitle="HeaderTemplateSelector.cs" %}
+
+public class HeaderTemplateSelector : DataTemplateSelector
+{
+    public HeaderTemplateSelector()
+    {
+    }
+    public DataTemplate TodayDatesTemplate { get; set; }
+    public DataTemplate NormaldatesTemplate { get; set; }
+    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+    {
+        var headerDetails = item as SchedulerHeaderDetails;
+        if (headerDetails != null)
+        {
+            if (headerDetails.StartDate.Date <= DateTime.Now.Date && headerDetails.EndDate >= DateTime.Now.Date)
+                return TodayDatesTemplate;
+        }
+        return NormaldatesTemplate;
+    }
+}
+
+{% endhighlight %}  
+{% endtabs %}
