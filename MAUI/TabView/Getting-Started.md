@@ -348,7 +348,7 @@ namespace ItemTemplateSample;
 
 ### Header item template
 
-By defining the HeaderItemTemplate of the SfTabView, a custom user interface(UI) can be achieved to display the tab header data items.
+By defining the `HeaderItemTemplate` of the SfTabView, a custom user interface(UI) can be achieved to display the tab header data items.
 
 {% tabs %}
 
@@ -397,7 +397,7 @@ namespace ItemTemplateSample;
 
 ### Content item template
 
-By defining the ContentItemTemplate of the SfTabView, a custom user interface(UI) can be achieved to display the tab content data items.
+By defining the `ContentItemTemplate` of the SfTabView, a custom user interface(UI) can be achieved to display the tab content data items.
 
 {% tabs %}
 
