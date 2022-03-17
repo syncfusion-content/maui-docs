@@ -310,7 +310,7 @@ private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 
 ### Customize special time region appearance using DataTemplate
 
-You can customize the header appearance by using the `TimeRegionTemplate` property of `TimelineView` in the `SfScheduler.`
+You can customize the time region appearance by using the `TimeRegionTemplate` property of `TimelineView` in the `SfScheduler.`
 
 {% tabs %}
 {% highlight xaml %}
@@ -357,7 +357,7 @@ private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 
 ### Customize special time region appearance using DataTemplateSelector
 
-You can customize the time region appearance of scheduler by using the `TimeRegionTemplate` property of `TimelineView.` The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler time region by using the `TimeRegionTemplate.` It lets to choose a different data template for each header, customizing the appearance of a particular time region based on certain conditions.
+You can customize the time region appearance by using the `TimeRegionTemplate` property of `TimelineView` in the `SfScheduler.` The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler time region by using the `TimeRegionTemplate.` It lets to choose a different data template for each time region, customizing the appearance of a particular time region based on certain conditions.
 
 {% tabs %}
 {% highlight xaml %}

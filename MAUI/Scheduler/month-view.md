@@ -200,7 +200,7 @@ You can customize the view header appearance by using the `ViewHeaderTemplate` p
 
 ### Customize view header appearance using DataTemplateSelector
 
-You can customize the view header appearance of scheduler by using the `ViewHeaderTemplate` property of `MonthView.` The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler view header by using the `ViewHeaderTemplate.` It lets to choose a different data template for each header, customizing the appearance of a particular view header based on certain conditions.
+You can customize the view header appearance by using the `ViewHeaderTemplate` property of `MonthView` in the `SfScheduler.` The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler view header by using the `ViewHeaderTemplate.` It lets to choose a different data template for each view header, customizing the appearance of a particular view header based on certain conditions.
 
 {% tabs %}
 {% highlight xaml %}

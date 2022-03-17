@@ -246,7 +246,7 @@ N> The `QueryAppointmentsCommand` will be raised if any one of the following act
 
 ## Show busy indicator
 
-The `Scheduler` supports showing the busy indicator by using the `ShowBusyIndicator` property. The default value is set to `false.` If the value is set to `true` and visible dates are changed then the busy indicator will be loaded on view.
+The `Scheduler` supports to show the busy indicator view by using the `ShowBusyIndicator` property of the `SfScheduler.` The default value is set to `false.` If the value is set to `true` and visible dates are changed then the busy indicator will be loaded on view.
 
 {% tabs %}
 {% highlight xaml %}
@@ -293,4 +293,4 @@ You can customize the busy indicator appearance by using the `BusyIndicatorTempl
 
 N>
 * The `BusyIndicatorTemplate` is applicable to only, when `ShowBusyIndicator` property is enabled.
-* The `BusyIndicatorTemplate` is also applicable for `QueryAppointments` and `QueryAppointmentsCommand` of the `SfScheduler.`
+* The `BusyIndicatorTemplate` is also applicable for `QueryAppointments` and `QueryAppointmentsCommand` properties of the `SfScheduler.`

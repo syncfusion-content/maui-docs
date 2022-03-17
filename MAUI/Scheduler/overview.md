@@ -31,7 +31,7 @@ The Syncfusion .NET MAUI Scheduler (SfScheduler) has eight different types of bu
 
  * **Timezone**: The display appointments can be created in various time zones in the system time zone. The appointment start and end times are also automatically adjusted and displayed based on the daylight savings time.
 
- * **Agenda view**: The agenda view displays a list of scheduled appointments grouped by week, between set minimum and maximum dates. Each header style can be customized from the format of the date and time to the date and time formats.
+ * **Agenda view**: The agenda view displays a list of scheduled appointments grouped by week, between set minimum and maximum dates. You can customize everything from the date and time formats to the styling of each header.
 
  * **Timeline month view**: The appointments will be displayed on a horizontal axis, with each column representing a day of the month.
 

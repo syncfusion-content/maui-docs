@@ -41,7 +41,7 @@ appointments.Add(new SchedulerAppointment()
     RecurrenceRule = "FREQ=DAILY;INTERVAL=1",
     Background = Brush.Orange,
 });
-// Adding scheduler appointment in the scheduler appointment collection.
+// Adding scheduler appointment into the AppointmentsSource.
 this.Scheduler.AppointmentsSource = appointments;
 // Creating the text style for the appointments.
 var appointmentTextStyle = new SchedulerTextStyle()
@@ -184,7 +184,7 @@ this.Scheduler.AgendaView.MonthHeaderSettings.Background = Brush.LightGreen;
 
 ### Customize Month header appearance using DataTemplate
 
-You can customize the header appearance of scheduler by using the `MonthHeaderTemplate` property of `AgendaView.`
+You can customize the month header appearance of scheduler by using the `MonthHeaderTemplate` property of `AgendaView.`
 
 {% tabs %}
 {% highlight xaml %}

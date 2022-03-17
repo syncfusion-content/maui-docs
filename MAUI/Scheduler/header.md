@@ -63,7 +63,7 @@ this.Scheduler.HeaderView.TextFormat = "MMM yy";
 
 The header can be customized by using the `HeaderView` property of the `SfScheduler.`
 
-### Customize header appearance using Style
+### Customize header appearance using text style
 
 You can style the background color, and textStyle by using the properties such as `Background,` and `TextStyle` properties of `HeaderView.`
 
@@ -96,7 +96,7 @@ this.Scheduler.HeaderView.Background = Brush.LightGreen;
 
 ### Customize header appearance using DataTemplate
 
-You can customize the header appearance of scheduler by using the `HeaderTemplate` property of `HeaderView.`
+You can customize the header appearance by using the `HeaderTemplate` property of `HeaderView` in the `SfScheduler.` 
 
 {% tabs %}
 {% highlight xaml %}
@@ -129,7 +129,7 @@ You can customize the header appearance of scheduler by using the `HeaderTemplat
 
 ### Customize header appearance using DataTemplateSelector
 
-You can customize the header appearance of scheduler by using the `HeaderTemplate` property of `HeaderView.` The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler header by using the `HeaderTemplate.` It lets to choose a different data template for each header, customizing the appearance of a particular header based on certain conditions.
+You can customize the header appearance by using the `HeaderTemplate` property of `HeaderView` in the `SfScheduler.` The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler header by using the `HeaderTemplate.` It lets to choose a different data template for each header, customizing the appearance of a particular header based on certain conditions.
 
 {% tabs %}
 {% highlight xaml %}
