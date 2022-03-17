@@ -441,6 +441,12 @@ By defining the ContentItemTemplate of the SfTabView, a custom user interface(UI
 		    
 			return nameLabel;
 		});
+        tabView.ContentItemTemplate = new DataTemplate(() =>
+		{
+			var nameLabel = new Label { TextColor=Colors.Black };
+			nameLabel.SetBinding(Label.TextProperty, "Name");
+			return nameLabel;
+		});
 		this.Content = tabView;
     }
   }
