@@ -900,7 +900,7 @@ You can customize the appointment appearance by using the `AppointmentTemplate` 
 
  this.Scheduler.AllowedViews = SchedulerViews.Day | SchedulerViews.Week | SchedulerViews.WorkWeek | SchedulerViews.Month | SchedulerViews.Agenda | SchedulerViews.TimelineDay | SchedulerViews.TimelineWeek | SchedulerViews.TimelineWorkWeek | SchedulerViews.TimelineMonth;
 var appointments = new ObservableCollection<SchedulerAppointment>();
-for (int startdate = -30; startdate < 30; startdate++)
+for (int startDate = -30; startDate < 30; startDate++)
 {
     for (int i = 0; i < 1; i++)
     {
@@ -908,8 +908,8 @@ for (int startdate = -30; startdate < 30; startdate++)
         {
             appointments.Add(new SchedulerAppointment()
             {
-                StartTime = DateTime.Now.Date.AddDays(startdate).AddHours(j),
-                EndTime = DateTime.Now.Date.AddDays(startdate).AddHours(j + 1),
+                StartTime = DateTime.Now.Date.AddDays(startDate).AddHours(j),
+                EndTime = DateTime.Now.Date.AddDays(startDate).AddHours(j + 1),
                 Subject = j.ToString(),
             });
         }
