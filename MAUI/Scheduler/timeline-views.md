@@ -263,7 +263,7 @@ private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 {% endhighlight %}
 {% endtabs %}
 
-### Customize special time region appearance
+### Customize special time region appearance using style
 
 The specialTimeRegion background and text style can be customized by using the [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_Background) and [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeRegion.html#Syncfusion_Maui_Scheduler_SchedulerTimeRegion_TextStyle) properties of `TimeRegion` that is used to customize the background color for time region background and text style for the text of the specialTimeRegion.
 
@@ -307,6 +307,138 @@ private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 {% endtabs %}
 
 ![customize-time-region-appearance-in-maui-scheduler](images/timeline-views/customize-time-region-appearance-in-maui-scheduler.png)
+
+### Customize special time region appearance using DataTemplate
+
+You can customize the header appearance by using the `TimeRegionTemplate` property of `TimelineView` in the `SfScheduler.`
+
+{% tabs %}
+{% highlight xaml %}
+
+ <scheduler:SfScheduler x:Name="Scheduler" 
+                        View="TimelineWeek">
+    <scheduler:SfScheduler.TimelineView>
+        <scheduler:SchedulerTimelineView>
+            <scheduler:SchedulerTimelineView.TimeRegionTemplate>
+                <DataTemplate>
+                    <Grid Background="lightBlue" >
+                        <Label HorizontalOptions="Center" TextColor="Red" VerticalOptions="Center" Text="{Binding Text}" />
+                    </Grid>
+                </DataTemplate>
+            </scheduler:SchedulerTimelineView.TimeRegionTemplate>
+        </scheduler:SchedulerTimelineView>
+    </scheduler:SfScheduler.TimelineView>
+ </scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight c# %}
+
+this.Scheduler.View = SchedulerView.TimelineWeek;
+this.Scheduler.TimelineView.TimeRegions = this.GetTimeRegion();
+
+private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
+{
+    var timeRegions = new ObservableCollection<SchedulerTimeRegion>();
+    var timeRegion = new SchedulerTimeRegion()
+    {
+        StartTime = DateTime.Today.Date.AddHours(13),
+        EndTime = DateTime.Today.Date.AddHours(14),
+        Text = "Lunch",
+        EnablePointerInteraction = false,
+        Background = Brush.Orange,
+    };
+
+    timeRegions.Add(timeRegion);
+    return timeRegions;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Customize special time region appearance using DataTemplateSelector
+
+You can customize the time region appearance of scheduler by using the `TimeRegionTemplate` property of `TimelineView.` The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler time region by using the `TimeRegionTemplate.` It lets to choose a different data template for each header, customizing the appearance of a particular time region based on certain conditions.
+
+{% tabs %}
+{% highlight xaml %}
+
+<Grid>
+    <Grid.Resources>
+        <DataTemplate x:Key="timeRegiontemplate">
+            <Grid Background = "LightCyan" Opacity="0.5">
+                <Label x:Name="label" HorizontalOptions="Center" TextColor="Red" Text="{Binding Text}" VerticalOptions="Center" />
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="timeRegiontemplate1">
+            <Grid Background = "Lightgreen" Opacity="0.5">
+                <Label x:Name="label" HorizontalOptions="Center" TextColor="Orange" Text="{Binding Text}" VerticalOptions="Center" />
+            </Grid>
+        </DataTemplate>
+        <local:TimeRegionTemplateSelector x:Key="timeRegionTemplateSelector"  TimeRegionsTemplate="{StaticResource timeRegiontemplate}"  TimeRegionsTemplate1="{StaticResource timeRegiontemplate1}" />
+    </Grid.Resources>
+     <scheduler:SfScheduler x:Name="Scheduler" 
+                            View="TimelineWeek">
+        <scheduler:SfScheduler.TimelineView>
+            <scheduler:SchedulerTimelineView TimeRegionTemplate = "{StaticResource timeRegionTemplateSelector}"/>
+        </scheduler:SfScheduler.TimelineView>
+    </scheduler:SfScheduler>
+</Grid>
+
+{% endhighlight %}
+{% highlight c# tabtitle="TimeRegionTemplateSelector.cs" %}
+
+public class TimeRegionTemplateSelector : DataTemplateSelector
+{
+    public TimeRegionTemplateSelector()
+    {
+    }
+    public DataTemplate TimeRegionsTemplate { get; set; }
+    public DataTemplate TimeRegionsTemplate1 { get; set; }
+    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+    {
+        var timeRegionDetails = item as SchedulerTimeRegion;
+        if (timeRegionDetails.EnablePointerInteraction)
+            return TimeRegionsTemplate;
+        return TimeRegionsTemplate1;
+    }
+}
+
+{% endhighlight %}  
+{% highlight c# %}
+
+this.Scheduler.View = SchedulerView.TimelineWeek;
+this.Scheduler.TimelineView.TimeRegions = this.GetTimeRegion();
+
+private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
+{
+    var timeRegions = new ObservableCollection<SchedulerTimeRegion>();
+    var timeRegion = new SchedulerTimeRegion()
+    {
+        StartTime = DateTime.Today.Date.AddHours(13),
+        EndTime = DateTime.Today.Date.AddHours(14),
+        Text = "Lunch",
+        RecurrenceRule = "FREQ=DAILY;INTERVAL=1",
+        EnablePointerInteraction = true,
+    };
+    var timeRegion1 = new SchedulerTimeRegion()
+    {
+        StartTime = DateTime.Today.Date.AddHours(17),
+        EndTime = DateTime.Today.Date.AddHours(18),
+        Text = "Break",
+        RecurrenceRule = "FREQ=DAILY;INTERVAL=1",
+        Background = Brush.Red,
+        EnablePointerInteraction = false,
+    };
+    timeRegions.Add(timeRegion);
+    timeRegions.Add(timeRegion1);
+    return timeRegions;
+}
+
+{% endhighlight %} 
+{% endtabs %}
+
+N>
+* The BindingContext of the `TimeRegionTemplate` is the `SchedulerTimeRegion.`
 
 ## Full screen scheduler
 
@@ -507,7 +639,7 @@ this.Scheduler.TimelineView.ViewHeaderSettings.Height = 100;
 {% endhighlight %}
 {% endtabs %}
 
-### Customize view header text style
+### Customize view header appearance using text style
 
 The background color and text style for the labels mentioning the time can be customized, by setting the `Background,` `DateTextStyle,` and `DayTextStyle` properties of `TimelineView.`
 
@@ -549,6 +681,51 @@ this.Scheduler.TimelineView.ViewHeaderSettings.Background = Brush.LightGreen;
 {% endtabs %}
 
 ![customize-view-header-text-style-in-maui-scheduler](images/timeline-views/customize-view-header-text-style-in-maui-scheduler.png)
+
+### Customize view header appearance using DataTemplate
+
+You can customize the view header appearance by using the `ViewHeaderTemplate` property of `TimelineView` in the `SfScheduler.`
+
+{% tabs %}  
+{% highlight xaml %}    
+
+ <scheduler:SfScheduler x:Name="Scheduler" 
+                        View="TimelineWeek">
+    <scheduler:SfScheduler.TimelineView>
+        <scheduler:SchedulerTimelineView>
+            <scheduler:SchedulerTimelineView.ViewHeaderTemplate>
+                <DataTemplate>
+                    <Grid x:Name="grid" Background="lightBlue" >
+                        <Label x:Name="label" HorizontalOptions="Start" VerticalOptions="Center"  TextColor="Red" >
+                            <Label.Text>
+                                <MultiBinding StringFormat = "{}{0:dd} {1:ddd}" >
+                                    <Binding />
+                                    <Binding />
+                                </MultiBinding >
+                            </Label.Text >
+                            <Label.Triggers >
+                                <DataTrigger TargetType="Label" Binding="{Binding}" Value="{x:Static system:DateTime.Today}">
+                                    <Setter TargetName = "label" Property="TextColor" Value="Orange"/>
+                                </DataTrigger>
+                            </Label.Triggers>
+                        </Label>
+                        <Grid.Triggers>
+                            <DataTrigger TargetType = "Grid" Binding="{Binding}" Value="{x:Static system:DateTime.Today}">
+                                <Setter TargetName = "grid" Property="Background" Value="LightGreen"/>
+                            </DataTrigger>
+                        </Grid.Triggers>
+                    </Grid>
+                </DataTemplate>
+            </scheduler:SchedulerTimelineView.ViewHeaderTemplate>
+        </scheduler:SchedulerTimelineView>
+    </scheduler:SfScheduler.TimelineView>
+ </scheduler:SfScheduler>
+
+{% endhighlight %}
+{% endtabs %}
+
+N>
+* The BindingContext of the `ViewHeaderTemplate` is the`DateTime.` The `SelectableDayPredicate,` `MinimumDateTime,` and `MaximumDateTime` properties of date and time values can be used directly in the data template selector.
 
 ## Time text formatting
 

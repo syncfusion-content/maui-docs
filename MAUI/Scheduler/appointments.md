@@ -81,6 +81,8 @@ The .NET MAUI Scheduler supports collection that implements the object interface
 <td>This property maps the property name of a business object class to the property name of Location in SchedulerAppointment.</td></tr>
 <tr><td>{{'[RecurrenceExceptionDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_RecurrenceExceptionDates)'| markdownify }}</td>
 <td>This property maps the property name of a business object class to the property name of RecurrenceExceptionDates in SchedulerAppointment.</td></tr>
+<tr><td>IsReadOnly</td>
+<td>This property maps the property name of a business object class to the property name of IsReadOnly in SchedulerAppointment.</td></tr>
 </table>
 
 N> The business object class should contain two date time fields as mandatory.
@@ -260,6 +262,40 @@ this.Scheduler.AppointmentsSource = appointment;
 
 N> 
 For example: From 12/13/2021 12:00AM to 12/14/2021 12:00AM.
+
+## Read only appointment
+
+A read-only appointment can be created with `IsReadOnly` property of the `SchedulerAppointment.` This property restricts the user's ability to edit and delete.
+
+{% tabs %}
+{% highlight xaml %}
+
+ <scheduler:SfScheduler x:Name="Scheduler" 
+                        View="Week">
+ </scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight c# %}
+
+this.Scheduler.View = SchedulerView.Week;
+// Creating an instance for the scheduler appointment collection.
+var appointment = new ObservableCollection<SchedulerAppointment>();
+
+//Adding scheduler appointment in the scheduler appointment collection. 
+appointment.Add(new SchedulerAppointment()
+{
+    StartTime = DateTime.Today.AddHours(9),
+    EndTime = DateTime.Today.AddHours(10),
+    Subject = "Client Meeting",
+    Background = Brush.Orange,
+    IsReadOnly = true,
+});
+
+//Adding the scheduler appointment collection to the AppointmentsSource of .NET MAUI Scheduler.
+this.Scheduler.AppointmentsSource = appointment;
+
+{% endhighlight %}
+{% endtabs%}
 
 ## Recurrence appointment
 
@@ -788,7 +824,11 @@ N>
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/RecursiveExceptionAppointment/BusinessObject)
 
-## Customize appointment text style
+## Appointment appearance
+
+The appointment customization can be achieved by using the `TextStyle` and `DateTemplate` in the `SfScheduler.`
+
+### Customize appointment appearance using text style
 
 The appointment text style can be customized by using the [AppointmentTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentTextStyle) property of the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
@@ -824,6 +864,65 @@ this.Scheduler.AppointmentTextStyle = appointmentTextStyle;
 {% endtabs %}
 
 ![customize-appointment-text-style-appearence-in-maui-scheduler](images/appointments/customize-appointment-text-style-appearence-in-maui-scheduler.png)
+
+### Customize appointment appearance using DataTemplate
+
+You can customize the appointment appearance by using the `AppointmentTemplate` properties of `DaysView,` `TimelineView,` and `MonthView` in the `SfScheduler.`
+
+{% tabs %}
+{% highlight xaml %}
+
+ <Grid>
+    <Grid.Resources>
+        <DataTemplate x:Key="appointmentTemplate">
+            <Grid Background="{Binding Background}">
+                <Label Text="{Binding Subject}" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" FontFamily="Bold"/>
+            </Grid>
+        </DataTemplate>
+    </Grid.Resources>
+    <scheduler:SfScheduler  x:Name="Scheduler" 
+                            View="Week"
+                            AllowedViews="Day,Week,WorkWeek,Month,Agenda,TimelineDay,TimelineWeek,TimelineWorkWeek,TimelineMonth">
+        <scheduler:SfScheduler.DaysView>
+            <scheduler:SchedulerDaysView AppointmentTemplate="{StaticResource appointmentTemplate}"/>
+        </scheduler:SfScheduler.DaysView>
+        <scheduler:SfScheduler.TimelineView>
+            <scheduler:SchedulerTimelineView AppointmentTemplate="{StaticResource appointmentTemplate}"/>
+        </scheduler:SfScheduler.TimelineView>
+        <scheduler:SfScheduler.MonthView>
+            <scheduler:SchedulerMonthView AppointmentTemplate="{StaticResource appointmentTemplate}"/>
+        </scheduler:SfScheduler.MonthView>
+    </scheduler:SfScheduler>
+ </Grid>
+
+{% tabs %}
+{% highlight c# %}
+
+ this.Scheduler.AllowedViews = SchedulerViews.Day | SchedulerViews.Week | SchedulerViews.WorkWeek | SchedulerViews.Month | SchedulerViews.Agenda | SchedulerViews.TimelineDay | SchedulerViews.TimelineWeek | SchedulerViews.TimelineWorkWeek | SchedulerViews.TimelineMonth;
+var appointments = new ObservableCollection<SchedulerAppointment>();
+for (int startdate = -30; startdate < 30; startdate++)
+{
+    for (int i = 0; i < 1; i++)
+    {
+        for (int j = 0; j < 7; j++)
+        {
+            appointments.Add(new SchedulerAppointment()
+            {
+                StartTime = DateTime.Now.Date.AddDays(startdate).AddHours(j),
+                EndTime = DateTime.Now.Date.AddDays(startdate).AddHours(j + 1),
+                Subject = j.ToString(),
+            });
+        }
+    }
+}
+this.Scheduler.AppointmentsSource = appointments;
+
+{% endhighlight %}  
+{% endtabs %}
+
+N>
+* By default, the `SchedulerAppointment` is set as the `BindingContext` for `AppointmentTemplate` for both `SchedulerAppointment` and custom data object in `AppointmentsSource.`
+* The Custom data object can be bound in `AppointmentTemplate` by using `SchedulerAppointment.Data.`
 
 ## Appointment selection background
 

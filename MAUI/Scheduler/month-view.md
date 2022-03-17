@@ -13,6 +13,10 @@ By default, the Month view displays the entire days of a particular month and cu
 
 By default, when an appointment is tried to create through Month view, it is considered to be created for an entire day.
 
+N> The appointment views for each month cells will be updated depends on the month cells height. While resizing the layout, the following actions would be performed,
+* If the appointment views overlaps with month cell dates or do not fit into the month cell height then the appointment view is changed from `AppointmentDisplayMode.Text` to `AppointmentDisplayMode.Indicator` view.
+* If the indicator views overlaps with month cell dates, then the indicator view is changed from `AppointmentDisplayMode.Indicator` to `AppointmentDisplayMode.None.`
+
 ## Appointment display mode
 
 The scheduler month view appointment display can be handled by using the `AppointmentDisplayMode` property of `MonthView.` By default, `AppointmentDisplayMode` is set to `Text,` using the `AppointmentDisplayMode.` 
@@ -132,7 +136,7 @@ this.Scheduler.MonthView.ViewHeaderSettings.Height = 100;
 {% endhighlight %}
 {% endtabs %}
 
-## Customize view header appearance
+### Customize view header appearance using text style
 
 Customize the month view header day text style, day format and background color by using the `DayTextStyle,` `DayFormat` and `Background` of `ViewHeaderSettings` properties of `MonthView` respectively.
 
@@ -169,7 +173,87 @@ this.Scheduler.MonthView.ViewHeaderSettings.DayTextStyle = dayTextStyle;
 
 ![customize-day-text-format-appearence-of-month-view-header-in-maui-scheduler](images/month-view/customize-day-text-format-appearence-of-month-view-header-in-maui-scheduler.png)
 
-## Customize month cell appearance
+### Customize view header appearance using DataTemplate
+
+You can customize the view header appearance by using the `ViewHeaderTemplate` property of `MonthView` in the `SfScheduler.`
+
+{% tabs %}  
+{% highlight xaml %}    
+
+ <scheduler:SfScheduler x:Name="Scheduler" 
+                        View="Month">
+    <scheduler:SfScheduler.MonthView>
+        <scheduler:SchedulerMonthView>
+            <scheduler:SchedulerMonthView.ViewHeaderTemplate>
+                <DataTemplate>
+                    <Grid Background = "lightBlue" >
+                        <Label x:Name="label" HorizontalOptions="Center" VerticalOptions="Center" Text="{Binding StringFormat='{0:ddd}'}" TextColor="Red" />
+                    </Grid>
+                </DataTemplate>
+            </scheduler:SchedulerMonthView.ViewHeaderTemplate>
+        </scheduler:SchedulerMonthView>
+    </scheduler:SfScheduler.MonthView>
+ </scheduler:SfScheduler>
+
+{% endhighlight %}
+{% endtabs %}
+
+### Customize view header appearance using DataTemplateSelector
+
+You can customize the view header appearance of scheduler by using the `ViewHeaderTemplate` property of `MonthView.` The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler view header by using the `ViewHeaderTemplate.` It lets to choose a different data template for each header, customizing the appearance of a particular view header based on certain conditions.
+
+{% tabs %}
+{% highlight xaml %}
+
+ <Grid>
+    <Grid.Resources>
+        <DataTemplate x:Key="normaldatesTemplate">
+            <Grid Background = "lightBlue">
+                <Label x:Name="label" HorizontalOptions="Center" VerticalOptions="Center" Text="{Binding StringFormat='{0:ddd}'}"  TextColor="Red" />
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="todayDatesTemplate">
+            <Grid Background = "LightGreen" >
+                <Label x:Name="label" HorizontalOptions="Center" VerticalOptions="Center" Text="{Binding StringFormat='{0:ddd}'}"  TextColor="Orange" />
+            </Grid>
+        </DataTemplate>
+        <local:MonthViewHeaderTemplateSelector x:Key="monthViewHeaderTemplateSelector"  TodayDatesTemplate="{StaticResource todayDatesTemplate}"  NormaldatesTemplate="{StaticResource normaldatesTemplate}" />
+    </Grid.Resources>
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                           View="Month">
+        <scheduler:SfScheduler.MonthView>
+            <scheduler:SchedulerMonthView ViewHeaderTemplate = "{StaticResource monthViewHeaderTemplateSelector}"/>
+        </scheduler:SfScheduler.MonthView>
+    </scheduler:SfScheduler>
+ </Grid>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MonthViewHeaderTemplateSelector.cs" %}
+
+public class MonthViewHeaderTemplateSelector : DataTemplateSelector
+{
+    public MonthViewHeaderTemplateSelector()
+    {
+    }
+    public DataTemplate TodayDatesTemplate { get; set; }
+    public DataTemplate NormaldatesTemplate { get; set; }
+    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+    {
+        var viewHeaderDetails = (DateTime)item;
+        if (viewHeaderDetails.Date.Month == DateTime.Today.Month)
+            return TodayDatesTemplate;
+        return NormaldatesTemplate;
+    }
+}
+
+{% endhighlight %}  
+{% endtabs %}
+
+## Month cell appearance
+
+The month cell can be customized by using the `MonthView` property of the `SfScheduler.`
+
+### Customize month cell appearance using text style
 
 By using the `CellStyle` property of `MonthView,` the month properties such as `Background,` `TodayBackground,` `TrailingMonthBackground,` `LeadingMonthBackground,` `TextStyle,` `TrailingMonthTextStyle,` and `LeadingMonthTextStyle` can be customized.
 
@@ -219,3 +303,31 @@ this.Scheduler.MonthView.CellStyle = monthCellStyle;
 {% endtabs %}
 
 ![customize-month-cell-appearance-in-maui-scheduler](images/month-view/customize-month-cell-appearance-in-maui-scheduler.png)
+
+### Customize month cell appearance using DataTemplate
+
+You can customize the month cell appearance by using the `CellTemplate` property of `MonthView` in the `SfScheduler.`
+
+{% tabs %}
+{% highlight xaml %}
+
+ <scheduler:SfScheduler x:Name="Scheduler" 
+                        View="Month">
+    <scheduler:SfScheduler.MonthView>
+        <scheduler:SchedulerMonthView>
+            <scheduler:SchedulerMonthView.CellTemplate>
+                <DataTemplate>
+                    <Border Background = "BlueViolet">
+                        <Label HorizontalTextAlignment="Center" TextColor="White" Text="{Binding DateTime.Day}"/>
+                    </Border>
+                </DataTemplate>
+            </scheduler:SchedulerMonthView.CellTemplate>
+        </scheduler:SchedulerMonthView>
+    </scheduler:SfScheduler.MonthView>
+ </scheduler:SfScheduler>
+
+{% endhighlight %}
+{% endtabs %}
+
+N>
+* The BindingContext of the `CellTemplate` is the `SchedulerMonthCellDetails.`
