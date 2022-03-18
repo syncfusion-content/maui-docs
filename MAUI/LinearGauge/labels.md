@@ -11,7 +11,7 @@ documentation: ug
 
 The default style of axis labels is as follows.
 
-![Initialize linear gauge for axis](images/getting-started/default_linear_gauge.png)
+![Initialize linear gauge for axis](images/getting-started/default_linear_gauge.PNG)
 
 ## Customize label styles
 
