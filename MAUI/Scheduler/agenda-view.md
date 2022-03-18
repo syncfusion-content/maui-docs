@@ -9,11 +9,38 @@ documentation: ug
 
 # Agenda view in .NET MAUI Scheduler (SfScheduler)
 
-The agenda view displays a list of scheduled appointments grouped by week, between set minimum and maximum dates, with the appointments from the current date displayed by default. When the `AppointmentsSource` property of `SfScheduler` is null, the agenda view will show only the month, week, and date headers.
+The agenda view displays the events or appointments (normal appointments, all-day appointments, recurring appointments, and span appointments) in chronological order, grouped by date between the minimum and maximum dates and the current date displayed by default. When the `AppointmentsSource` property of `SfScheduler` is `null,` the agenda view will show only the month, week, and date headers.
 
 A agenda view displays different UI for mobile and desktop, for mobile it displays the month header, the week header, and the date header however for desktop, it displays the appointment only.
 
 N> When the desktop view width is less than 600, the scheduler will display the mobile agenda UI on the desktop.
+
+{% tabs %}
+{% highlight xaml %}
+
+ <scheduler:SfScheduler x:Name="Scheduler" 
+                        View="Agenda">
+ </scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight c# %}
+
+this.Scheduler.View = SchedulerView.Agenda;
+// Creating an instance for the scheduler appointment collection.
+var appointments = new ObservableCollection<SchedulerAppointment>();
+// Adding scheduler appointment in the scheduler appointment collection.
+appointments.Add(new SchedulerAppointment()
+{
+    Subject = "Meeting",
+    StartTime = DateTime.Now,
+    EndTime = DateTime.Now.AddHours(1),
+    Background = Brush.Orange,
+});
+// Adding scheduler appointment into the AppointmentsSource.
+this.Scheduler.AppointmentsSource = appointments;
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Appointment text customization
 
@@ -57,7 +84,7 @@ this.Scheduler.AppointmentTextStyle = appointmentTextStyle;
 
 ## Day header customization
 
-The day header can be customized by using the `DayHeaderSettings` property of `AgendaView` in the `SfScheduler.`
+The agenda day header view can be customized by using the `DayHeaderSettings` property of `AgendaView` in the `SfScheduler.`
 
 You can style the day format, day text style, date text style, and background color by using the properties such as `DayFormat,` `DayTextStyle,` `DateTextStyle,` and `Background` properties of `DayHeaderSettings.`
 
@@ -98,7 +125,7 @@ N> The default value of `DayFormat` is `MMM, ddd.`
 
 ## Week header customization
 
-The week header can be customized by using the `WeekHeaderSettings` property of `AgendaView` in the `SfScheduler.`
+The agenda week header view can be customized by using the `WeekHeaderSettings` property of `AgendaView` in the `SfScheduler.`
 
 You can style the date format, height, text style, and background color by using the properties such as `DateFormat,` `Height,` `TextStyle,` and `Background` properties of `WeekHeaderSettings.`
 
@@ -142,7 +169,7 @@ N>
 
 ## Month header customization
 
-The month header can be customized by using the `MonthHeaderSettings` property of `AgendaView` in the `SfScheduler.`
+The agenda month header view can be customized by using the `MonthHeaderSettings` property of `AgendaView` in the `SfScheduler.`
 
 ### Customize Month header appearance using Style
 

@@ -48,7 +48,18 @@ private async void OnSchedulerQueryAppointments(object sender, SchedulerQueryApp
 {
     this.Scheduler.ShowBusyIndicator = true;
     await Task.Delay(1500);
-    this.Scheduler.AppointmentsSource = this.GenerateSchedulerAppointments(e.VisibleDates);
+    var appCollection = this.GenerateSchedulerAppointments(e.VisibleDates);
+    if (this.Scheduler.View != SchedulerView.Agenda)
+    {
+        this.Scheduler.AppointmentsSource = appCollection;
+    }
+    else
+    {
+        foreach (var app in appCollection)
+        {
+            ((ObservableCollection<SchedulerAppointment>)this.Scheduler.AppointmentsSource).Add(app);
+        }
+    }
     this.Scheduler.ShowBusyIndicator = false;
 }
 
@@ -109,6 +120,8 @@ private ObservableCollection<SchedulerAppointment> GenerateSchedulerAppointments
 N> The `QueryAppointments` event will be raised if any one of the following action is performed,
 * Once the `ViewChanged` event is raised, the `QueryAppointments` will be raised.
 * If an appointment has been added or removed in the current visible dates, then the `QueryAppointments` event will not be triggered. Because the appointments for that visible date are already loaded.
+* In the scheduler agenda view, the `QueryAppointments` event is used to load more appointments when the new month is loaded on view, whereas the new month appointments are added in scheduler `AppointmentsSource.`
+* Other than agenda view, the scheduler `AppointmentsSource` can be reset for a new visible date range to improve appointment loading performance.
 
 ### QueryAppointments command
 
@@ -243,6 +256,8 @@ public class LoadOnDemandViewModel : INotifyPropertyChanged
 N> The `QueryAppointmentsCommand` will be raised if any one of the following action is performed,
 * Once the `ViewChanged` event is raised, the `QueryAppointmentsCommand` will be raised.
 * If an appointment has been added or removed in the current time visible date, then the `QueryAppointments` command will not be triggered. Because the appointments for that visible date are already loaded.
+* In the scheduler agenda view, the `QueryAppointments` event is used to load more appointments when the new month is loaded on view, whereas the new month appointments are added in scheduler `AppointmentsSource.`
+* Other than agenda view, the scheduler `AppointmentsSource` can be reset for a new visible date range to improve appointment loading performance.
 
 ## Show busy indicator
 
