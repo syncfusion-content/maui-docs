@@ -93,7 +93,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Customize size of widget pointer](images/widget-pointer/content_alignment.png)
+![Customize size of content pointer](images/content-pointer/content_alignment.png)
 
 ## Change the position
 
