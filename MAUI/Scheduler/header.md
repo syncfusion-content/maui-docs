@@ -107,8 +107,8 @@ You can customize the header appearance by using the `HeaderTemplate` property o
         <scheduler:SchedulerHeaderView>
             <scheduler:SchedulerHeaderView.HeaderTemplate>
                 <DataTemplate>
-                    <Grid Background = "LightBlue">
-                        <Label x:Name="label" HorizontalOptions="Center" VerticalOptions="Center">
+                    <Grid Background = "LightGreen">
+                        <Label x:Name="label" TextColor="DarkBlue" HorizontalOptions="Center" VerticalOptions="Center">
                             <Label.Text>
                                 <MultiBinding StringFormat = "{}{0:MMM dd, yyyy} - {1:MMM dd, yyyy}">
                                     <Binding Path="StartDate" />

@@ -186,8 +186,8 @@ You can customize the view header appearance by using the `ViewHeaderTemplate` p
         <scheduler:SchedulerMonthView>
             <scheduler:SchedulerMonthView.ViewHeaderTemplate>
                 <DataTemplate>
-                    <Grid Background = "lightBlue" >
-                        <Label x:Name="label" HorizontalOptions="Center" VerticalOptions="Center" Text="{Binding StringFormat='{0:ddd}'}" TextColor="Red" />
+                    <Grid Background = "BlueViolet" >
+                        <Label x:Name="label" HorizontalOptions="Center" VerticalOptions="Center" Text="{Binding StringFormat='{0:ddd}'}" TextColor="White" FontSize="Subtitle" FontFamily="Bold" />
                     </Grid>
                 </DataTemplate>
             </scheduler:SchedulerMonthView.ViewHeaderTemplate>

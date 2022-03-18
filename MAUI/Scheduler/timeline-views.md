@@ -321,8 +321,8 @@ You can customize the time region appearance by using the `TimeRegionTemplate` p
         <scheduler:SchedulerTimelineView>
             <scheduler:SchedulerTimelineView.TimeRegionTemplate>
                 <DataTemplate>
-                    <Grid Background="lightBlue" >
-                        <Label HorizontalOptions="Center" TextColor="Red" VerticalOptions="Center" Text="{Binding Text}" />
+                    <Grid Background="BlueViolet" >
+                        <Label HorizontalOptions="Center" TextColor="White" VerticalOptions="Center" Text="{Binding Text}" />
                     </Grid>
                 </DataTemplate>
             </scheduler:SchedulerTimelineView.TimeRegionTemplate>
@@ -695,8 +695,8 @@ You can customize the view header appearance by using the `ViewHeaderTemplate` p
         <scheduler:SchedulerTimelineView>
             <scheduler:SchedulerTimelineView.ViewHeaderTemplate>
                 <DataTemplate>
-                    <Grid x:Name="grid" Background="lightBlue" >
-                        <Label x:Name="label" HorizontalOptions="Start" VerticalOptions="Center"  TextColor="Red" >
+                    <Grid x:Name="grid" Background="BlueViolet" >
+                        <Label x:Name="label" HorizontalOptions="Start" VerticalOptions="Center"  TextColor="White" >
                             <Label.Text>
                                 <MultiBinding StringFormat = "{}{0:dd} {1:ddd}" >
                                     <Binding />

@@ -171,7 +171,7 @@ this.Scheduler.View = SchedulerView.Agenda;
 var textStyle = new SchedulerTextStyle()
 {
     TextColor = Colors.Red,
-    FontSize = 12,
+    FontSize = 25,
 };
 
 this.Scheduler.AgendaView.MonthHeaderSettings.DateFormat = "MMM yyy";
@@ -196,7 +196,7 @@ You can customize the month header appearance of scheduler by using the `MonthHe
             <scheduler:SchedulerAgendaView.MonthHeaderTemplate>
                 <DataTemplate>
                     <Grid>
-                        <Label x:Name="label" HorizontalOptions="Center" Background="LightGreen" VerticalOptions="Center" TextColor="Black" FontSize="16"  Text="{Binding StringFormat='{0:MMMM yyyy}'}" />
+                        <Label x:Name="label" HorizontalOptions="Center" Background="LightGreen" VerticalOptions="Center" TextColor="Black" FontSize="25"  Text="{Binding StringFormat='{0:MMMM yyyy}'}" />
                     </Grid>
                 </DataTemplate>
             </scheduler:SchedulerAgendaView.MonthHeaderTemplate>

@@ -875,13 +875,13 @@ You can customize the appointment appearance by using the `AppointmentTemplate` 
  <Grid>
     <Grid.Resources>
         <DataTemplate x:Key="appointmentTemplate">
-            <Grid Background="{Binding Background}">
+            <Grid Background="BlueViolet">
                 <Label Text="{Binding Subject}" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" FontFamily="Bold"/>
             </Grid>
         </DataTemplate>
     </Grid.Resources>
     <scheduler:SfScheduler  x:Name="Scheduler" 
-                            View="Week"
+                            View="Day"
                             AllowedViews="Day,Week,WorkWeek,Month,Agenda,TimelineDay,TimelineWeek,TimelineWorkWeek,TimelineMonth">
         <scheduler:SfScheduler.DaysView>
             <scheduler:SchedulerDaysView AppointmentTemplate="{StaticResource appointmentTemplate}"/>
@@ -898,23 +898,14 @@ You can customize the appointment appearance by using the `AppointmentTemplate` 
 {% tabs %}
 {% highlight c# %}
 
- this.Scheduler.AllowedViews = SchedulerViews.Day | SchedulerViews.Week | SchedulerViews.WorkWeek | SchedulerViews.Month | SchedulerViews.Agenda | SchedulerViews.TimelineDay | SchedulerViews.TimelineWeek | SchedulerViews.TimelineWorkWeek | SchedulerViews.TimelineMonth;
+this.Scheduler.AllowedViews = SchedulerViews.Day | SchedulerViews.Week | SchedulerViews.WorkWeek | SchedulerViews.Month | SchedulerViews.Agenda | SchedulerViews.TimelineDay | SchedulerViews.TimelineWeek | SchedulerViews.TimelineWorkWeek | SchedulerViews.TimelineMonth;
 var appointments = new ObservableCollection<SchedulerAppointment>();
-for (int startDate = -30; startDate < 30; startDate++)
+appointments.Add(new SchedulerAppointment()
 {
-    for (int i = 0; i < 1; i++)
-    {
-        for (int j = 0; j < 7; j++)
-        {
-            appointments.Add(new SchedulerAppointment()
-            {
-                StartTime = DateTime.Now.Date.AddDays(startDate).AddHours(j),
-                EndTime = DateTime.Now.Date.AddDays(startDate).AddHours(j + 1),
-                Subject = j.ToString(),
-            });
-        }
-    }
-}
+    Subject = "meeting",
+    StartTime = DateTime.Now,
+    EndTime = DateTime.Now.AddHours(1),
+});
 this.Scheduler.AppointmentsSource = appointments;
 
 {% endhighlight %}  

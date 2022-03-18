@@ -327,8 +327,8 @@ You can customize the time region appearance by using the `TimeRegionTemplate` p
         <scheduler:SchedulerDaysView>
             <scheduler:SchedulerDaysView.TimeRegionTemplate>
                 <DataTemplate>
-                    <Grid Background="lightBlue" >
-                        <Label x:Name="label" HorizontalOptions="Center" TextColor="Red" VerticalOptions="Center" Text="{Binding Text}" />
+                    <Grid Background="BlueViolet" >
+                        <Label x:Name="label" HorizontalOptions="Center" FontSize="10" TextColor="Yellow" VerticalOptions="Center" Text="{Binding Text}" />
                     </Grid>
                 </DataTemplate>
             </scheduler:SchedulerDaysView.TimeRegionTemplate>
@@ -695,29 +695,29 @@ You can customize the view header appearance by using the `ViewHeaderTemplate` p
 {% highlight xaml %}
 
  <scheduler:SfScheduler x:Name="Scheduler" 
-                        View="Week">
+                        View="WorkWeek">
     <scheduler:SfScheduler.DaysView>
         <scheduler:SchedulerDaysView>
             <scheduler:SchedulerDaysView.ViewHeaderTemplate>
                 <DataTemplate>
-                    <StackLayout x:Name="stackLayout" Orientation="Vertical" Background="lightBlue">
-                        <Label x:Name="label" HorizontalOptions="Center"  VerticalOptions="Center" Text="{Binding StringFormat='{0:dd}'}"  TextColor="Red" >
+                    <StackLayout x:Name="stackLayout" Orientation="Vertical" Background="BlueViolet">
+                        <Label x:Name="label" HorizontalOptions="Center"  VerticalOptions="Center" Text="{Binding StringFormat='{0:dd}'}" FontSize="Small" FontFamily="Bold" TextColor="White" >
                             <Label.Triggers>
                                 <DataTrigger TargetType = "Label" Binding="{Binding}" Value="{x:Static system:DateTime.Today}">
                                     <Setter TargetName = "label" Property="TextColor" Value="Orange"/>
                                 </DataTrigger>
                             </Label.Triggers>
-                            </Label>
-                            <Label x:Name="label1" HorizontalOptions="Center"  VerticalOptions="Center" Text="{Binding StringFormat='{0:ddd}'}"  TextColor="Red" >
-                                <Label.Triggers>
-                                    <DataTrigger TargetType = "Label" Binding="{Binding}" Value="{x:Static system:DateTime.Today}">
-                                        <Setter TargetName = "label1" Property="TextColor" Value="Orange"/>
-                                    </DataTrigger>
-                                </Label.Triggers>
-                            </Label>
+                        </Label>
+                        <Label x:Name="label1" HorizontalOptions="Center"  VerticalOptions="Center" Text="{Binding StringFormat='{0:ddd}'}"  FontSize="Small" FontFamily="Bold" TextColor="White">
+                            <Label.Triggers>
+                                <DataTrigger TargetType = "Label" Binding="{Binding}" Value="{x:Static system:DateTime.Today}">
+                                    <Setter TargetName = "label1" Property="TextColor" Value="Orange"/>
+                                </DataTrigger>
+                            </Label.Triggers>
+                        </Label>
                         <StackLayout.Triggers>
                             <DataTrigger TargetType = "StackLayout" Binding="{Binding}" Value="{x:Static system:DateTime.Today}">
-                                <Setter TargetName = "stackLayout" Property="Background" Value="LightGreen"/>
+                                <Setter TargetName = "stackLayout" Property="Background" Value="BlueViolet"/>
                             </DataTrigger>
                         </StackLayout.Triggers>
                     </StackLayout>
