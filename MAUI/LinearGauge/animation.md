@@ -33,7 +33,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Animate axis in linear gauge](images/animation/animation_axis_range/animation_axis.gif)
+![Animate axis in linear gauge](images/animation/animation_axis.gif)
 
 ## Animate range
 
@@ -57,7 +57,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Animate range in linear gauge](images/animation/animation_axis_range/animation_range.gif)
+![Animate range in linear gauge](images/animation/animation_range.gif)
 
 ## Pointer animation
 
@@ -65,8 +65,8 @@ The animation behavior is common for all the three pointers in Linear Gauge - sh
 
 All the above three pointers have the below properties for animation. 
 
-*  [`EnableAnimation`]() - Enable or disable the animation for pointer. The default value is `false`
-*  [`AnimationDuration`]() - Sets the animation duration. The default value is 1000
+*  [`EnableAnimation`]() - Enable or disable the animation for pointer. The default value is `false`.
+*  [`AnimationDuration`]() - Sets the animation duration. The default value is 1000.
 *  [`AnimationEasing`]() - Sets the animation type. 
 
 The [`AnimationEasing`]() supports the below animations. The default animation type is `Easing.Linear`.
@@ -157,7 +157,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Animate marker pointer in linear gauge](images/animation/shape-pointer/cubicout.gif)
+![Animate marker pointer in linear gauge](images/animation/bounceout.gif)
 
 
 

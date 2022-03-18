@@ -91,7 +91,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Drag offset
 
-The [`DragOffset`]() property is used to specify the outer dragging offset for pointer. This value helps to drag the pointer when pointer pressed near to pointer. 
+The [`DragOffset`]() property is used to specify the outer dragging offset for pointer. This value helps to drag the pointer when pointer pressed near to pointer. The default value of [`DragOffset`]() is 15d.
 
 For example, if the value of [`DragOffset`]() is 20, the pointer will be dragged while interact with pointer around 20 pixel. 
 
