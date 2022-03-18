@@ -40,7 +40,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Initialize linear gauge for bar pointer](images/bar-pointer/default_bar_pointer.png)
+![Initialize linear gauge for bar pointer](images/bar-pointer/default_bar_pointer.PNG)
 
 ## Customize bar pointer thickness
 
@@ -72,7 +72,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Change the bar pointer thickness](images/bar-pointer/bar_thickness.png)
+![Change the bar pointer thickness](images/bar-pointer/bar_thickness.PNG)
 
 ## Customize edge style
 
@@ -109,7 +109,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Change the bar pointer edge style](images/bar-pointer/edge_style.png)
+![Change the bar pointer edge style](images/bar-pointer/edge_style.PNG)
 
 ## Customize the position
 
@@ -141,7 +141,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Customize linear gauge for bar pointer position](images/bar-pointer/bar_pointer_change_position.png)
+![Customize linear gauge for bar pointer position](images/bar-pointer/bar_pointer_change_position.PNG)
 
 ## Customize the offset
 
@@ -174,7 +174,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Customize linear gauge bar pointer offset](images/bar-pointer/bar_pointer_offset.png)
+![Customize linear gauge bar pointer offset](images/bar-pointer/bar_pointer_offset.PNG)
 
 ## Change the color of bar pointer 
 
@@ -206,7 +206,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Apply color to bar pointer](images/bar-pointer/bar_color.png)
+![Apply color to bar pointer](images/bar-pointer/bar_color.PNG)
 
 ## Apply gradient
 
@@ -250,7 +250,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Apply radial gradient to bar pointer](images/bar-pointer/gradient_bar.png)
+![Apply radial gradient to bar pointer](images/bar-pointer/gradient_bar.PNG)
 
 ## Child support
 
