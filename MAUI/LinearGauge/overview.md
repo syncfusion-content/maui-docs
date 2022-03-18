@@ -24,3 +24,5 @@ Syncfusion .NET MAUI Linear Gauge is a data visualization control to display d
 * **Animation** - Animate the gauge elements in a visually appealing way, when they are load, or when their values are changed.
 * **Interaction** - The shape and content marker pointers in the Linear Gauge can be moved from one value to another by swiping or drag gestures.
 
+
+N> You can get the samples in the [GitHub](https://github.com/syncfusion/maui-demos) link
