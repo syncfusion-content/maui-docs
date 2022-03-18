@@ -87,7 +87,7 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
 {% endtabs %}
 
-![.NET MAUI Radial Gauge Content Pointer](images/marker-pointers/maui-radial-gauge-content-pointer.png)
+![.NET MAUI Radial Gauge Content Pointer](images/marker-pointers/maui-radial-gauge-content-pointer.PNG)
 
 ## Position customization
 
@@ -172,5 +172,5 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
 {% endtabs %}
 
-![.NET MAUI Radial Gauge Content Pointer](images/marker-pointers/maui-radial-gauge-content-pointer_offset.png)
+![.NET MAUI Radial Gauge Content Pointer](images/marker-pointers/maui-radial-gauge-content-pointer_offset.PNG)
 

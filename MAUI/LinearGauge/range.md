@@ -37,7 +37,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Initialize linear gauge for range](images/gauge-range/default-range.png)
+![Initialize linear gauge for range](images/gauge-range/default-range.PNG)
 
 ## Customize range shape 
 
@@ -70,7 +70,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Draw linear gauge concave range](images/gauge-range/range-convex.png)
+![Draw linear gauge concave range](images/gauge-range/range-convex.PNG)
 
 For concave shape, override [`UpdateMidRangePath`]() method and curve for mid shape. 
 
@@ -111,7 +111,7 @@ public class LinearRangeExt : LinearRange
 
 {% endtabs %}
 
-![Draw linear gauge concave range](images/gauge-range/range-concave.png)
+![Draw linear gauge concave range](images/gauge-range/range-concave.PNG)
 
 ## Customize color of a range
 
@@ -142,7 +142,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Set linear gauge range color](images/gauge-range/color_range.png)
+![Set linear gauge range color](images/gauge-range/color_range.PNG)
 
 ## Apply gradient to a range
 
@@ -182,7 +182,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Apply gradient to linear guage range](images/gauge-range/radial_gardient_range.png)
+![Apply gradient to linear guage range](images/gauge-range/radial_gardient_range.PNG)
 
 
 ## Customize range position
@@ -214,7 +214,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Position the linear gauge range](images/gauge-range/range_position.png)
+![Position the linear gauge range](images/gauge-range/range_position.PNG)
 
 ## Setting range color to axis element
 
@@ -265,7 +265,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Set range color to axis element](images/gauge-range/range_userangeforaxis.png)
+![Set range color to axis element](images/gauge-range/range_userangeforaxis.PNG)
 
 ## Add multiple ranges
 
@@ -312,7 +312,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Add multiple ranges in a linear gauge](images/gauge-range/multiple_ranges.png)
+![Add multiple ranges in a linear gauge](images/gauge-range/multiple_ranges.PNG)
 
 ## Range child content support
 
@@ -401,4 +401,4 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Child support for linear gauge range](images/gauge-range/range_child_support.png)
+![Child support for linear gauge range](images/gauge-range/range_child_support.PNG)

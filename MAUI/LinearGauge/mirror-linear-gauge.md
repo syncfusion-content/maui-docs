@@ -29,10 +29,10 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Mirror linear gauge](images/mirrored/mirrored.png)
+![Mirror linear gauge](images/mirrored/mirrored.PNG)
 
 ## Comparison for the mirrored and normal gauge
 
 The following screenshot provides a comparison for the mirrored and normal Linear Gauge. 
 
-![Mirrored linear gauge comparsion](images/mirrored/mirror_comparison.png)
+![Mirrored linear gauge comparsion](images/mirrored/mirror_comparison.PNG)

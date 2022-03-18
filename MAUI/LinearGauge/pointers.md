@@ -17,7 +17,7 @@ The pointer is used to indicate values on a scale. The Linear Gauge control has 
 
 All the pointers can be customized as needed. You can add multiple pointers to the gauge to point multiple values on the same scale. The value of the pointer is set using the Value property.
 
-![Pointer in linear gauge](images/pointers/pointers.png)
+![Pointer in linear gauge](images/pointers/pointers.PNG)
 
 ## Interaction with pointers
 

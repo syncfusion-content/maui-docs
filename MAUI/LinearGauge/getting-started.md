@@ -116,7 +116,7 @@ Ranges contains a list of range elements, to which you can add any number of ran
 
 {% endtabs %}
 
-![.NET MAUI Linear Gauge with Range](images/getting-started/maui-linear-gauge-with-range.png)
+![.NET MAUI Linear Gauge with Range](images/getting-started/maui-linear-gauge-with-range.PNG)
 
 ## Add pointer to the linear gauge
 
@@ -171,7 +171,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![.NET MAUI Linear Gauge with Pointer](images/getting-started/maui-linear-gauge-with-pointer.png)
+![.NET MAUI Linear Gauge with Pointer](images/getting-started/maui-linear-gauge-with-pointer.PNG)
 
 The following code example gives you the complete code of above configurations.
 
@@ -228,4 +228,4 @@ The following code example gives you the complete code of above configurations.
 
 {% endtabs %}
 
-![.NET MAUI Linear Gauge](images/getting-started/maui-linear-gauge.png)
+![.NET MAUI Linear Gauge](images/getting-started/maui-linear-gauge.PNG)

@@ -11,7 +11,7 @@ documentation: ug
 
 The default style of axis ticks is as follows.
 
-![Initialize linear gauge for axis](images/getting-started/default_linear_gauge.png)
+![Initialize linear gauge for axis](images/getting-started/default_linear_gauge.PNG)
 
 ## Customize tick style
 
@@ -68,7 +68,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Customize the linear gauge axis tick style](images/axis-ticks/axis-tick-style.png)
+![Customize the linear gauge axis tick style](images/axis-ticks/axis-tick-style.PNG)
 
 ## Customize minor tick interval
 
@@ -92,7 +92,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Customize linear gauge ticks per interval](images/axis-ticks/minor-ticks-per-interval.png)
+![Customize linear gauge ticks per interval](images/axis-ticks/minor-ticks-per-interval.PNG)
 
 ## Change tick visibility
 
@@ -116,7 +116,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Customize linear gauge ticks visibility](images/axis-ticks/linear-gauge-tick-visibility.png)
+![Customize linear gauge ticks visibility](images/axis-ticks/linear-gauge-tick-visibility.PNG)
 
 ## Customize tick position
 
@@ -144,7 +144,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Set linear gauge tick position](images/axis-labels/label-placement.png)
+![Set linear gauge tick position](images/axis-labels/label-placement.PNG)
 
 
 ## Customize tick offset
@@ -169,5 +169,5 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Customize linear gauge ticks offset from axis](images/axis-ticks/customize-tick-offset.png)
+![Customize linear gauge ticks offset from axis](images/axis-ticks/customize-tick-offset.PNG)
 

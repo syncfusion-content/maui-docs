@@ -44,7 +44,7 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![.NET MAUI Radial Gauge Default Shape Pointer](images/marker-pointers/maui-radial-gauge-default-marker-pointer.png)
+![.NET MAUI Radial Gauge Default Shape Pointer](images/marker-pointers/maui-radial-gauge-default-marker-pointer.PNG)
 
 Gauge supports the following types of shapes:
 
@@ -54,7 +54,7 @@ Gauge supports the following types of shapes:
 * Rectangle
 * Triangle
 
-![.NET MAUI Radial Gauge Markers](images/marker-pointers/maui-radial-gauge-markers.png)
+![.NET MAUI Radial Gauge Markers](images/marker-pointers/maui-radial-gauge-markers.PNG)
 
 ## Shape customization
 
@@ -114,7 +114,7 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
 {% endtabs %}
 
-![.NET MAUI Radial Gauge Custom Shape Pointer](images/marker-pointers/maui-radial-gauge-custom-marker-pointer.png)
+![.NET MAUI Radial Gauge Custom Shape Pointer](images/marker-pointers/maui-radial-gauge-custom-marker-pointer.PNG)
 
 ## Shadow support
 
@@ -155,7 +155,7 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
 {% endtabs %}
 
-![Change shape pointer elevation](images/marker-pointer/pointer_shadow.png)
+![Change shape pointer elevation](images/marker-pointer/pointer_shadow.PNG)
 
 ## Shape pointer overlay
 
@@ -198,7 +198,7 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
 {% endtabs %}
 
-![Change shape pointer overlay](images/marker-pointer/pointer_overlay.png)
+![Change shape pointer overlay](images/marker-pointer/pointer_overlay.PNG)
 
 ## Marker position customization
 
@@ -241,4 +241,4 @@ this.Content = sfRadialGauge;
 
 {% endtabs %}
 
-![.NET MAUI Radial Gauge Shape Offset](images/marker-pointers/maui-radial-gauge-marker-offset.png)
+![.NET MAUI Radial Gauge Shape Offset](images/marker-pointers/maui-radial-gauge-marker-offset.PNG)

@@ -33,7 +33,7 @@ this.Content = gauge;
 
 {% endtabs %}
 
-![Initialize linear gauge for axis](images/getting-started/default_linear_gauge.png)
+![Initialize linear gauge for axis](images/getting-started/default_linear_gauge.PNG)
 
 ## Customize minimum and maximum axis values
 
@@ -58,7 +58,7 @@ this.Content = gauge;
 
 {% endtabs %}
 
-![Update linear gauge for axis scale](images/axis/minmax_axis_linear_gauge.png)
+![Update linear gauge for axis scale](images/axis/minmax_axis_linear_gauge.PNG)
 
 ## Customize scale orientation
 
@@ -84,7 +84,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Update orientation for axis scale](images/axis/linear_gauge_orientation.png)
+![Update orientation for axis scale](images/axis/linear_gauge_orientation.PNG)
 
 ## Customize axis track style
 
@@ -121,7 +121,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Change axis track thickness in linear gauge](images/axis/axis_thickness.png)
+![Change axis track thickness in linear gauge](images/axis/axis_thickness.PNG)
 
 ## Apply solid color
 
@@ -149,7 +149,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Apply color to axis in linear guage](images/axis/axis_solid_color.png)
+![Apply color to axis in linear guage](images/axis/axis_solid_color.PNG)
 
 ## Apply gradient
 
@@ -185,7 +185,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Apply color to axis in linear guage](images/axis/axis_gradient.png)
+![Apply color to axis in linear guage](images/axis/axis_gradient.PNG)
 
 ## Customize corners
 
@@ -214,7 +214,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Change axis track edge style](images/axis/axis_corner_style.png)
+![Change axis track edge style](images/axis/axis_corner_style.PNG)
 
 Also [`CornerRadius`]() allows to set custom corner style for linear scale. 
 
@@ -241,7 +241,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Change axis track edge style](images/axis/axis_corner_radius.png)
+![Change axis track edge style](images/axis/axis_corner_radius.PNG)
 
 N> If you set both [`CornerStyle`]() and [`CornerRadius`]() in the [`LineStyle`](), [`CornerStyle`]() will be first priority for scale. 
 
@@ -271,7 +271,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 You can see that the axis values are displayed from 100 to 0 as the axis track is inversed.
 
-![Inverse linear gauge for axis](images/axis/axis_inversed.png)
+![Inverse linear gauge for axis](images/axis/axis_inversed.PNG)
 
 ## Change axis track visibility
 
@@ -296,7 +296,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Hide linear gauge axis track](images/axis/hide_axis_track.png)
+![Hide linear gauge axis track](images/axis/hide_axis_track.PNG)
 
 ## Customize axis values
 
@@ -359,4 +359,4 @@ public class LinearGauge : SfLinearGauge
 
 {% endtabs %}
 
-![Custom axis track](images/axis/custom_axis.png)
+![Custom axis track](images/axis/custom_axis.PNG)

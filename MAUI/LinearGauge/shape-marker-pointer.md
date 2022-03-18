@@ -44,7 +44,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Initialize linear gauge for shape pointer](images/shape-pointer/default_shape_pointer.png)
+![Initialize linear gauge for shape pointer](images/shape-pointer/default_shape_pointer.PNG)
 
 ## Change the size
 
@@ -77,7 +77,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Set size of linear gauge shape pointer](images/shape-pointer/shape_pointer_size.png)
+![Set size of linear gauge shape pointer](images/shape-pointer/shape_pointer_size.PNG)
 
 ## Customize color
 
@@ -109,7 +109,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Change shape pointer color](images/shape-pointer/shape_pointer_color.png)
+![Change shape pointer color](images/shape-pointer/shape_pointer_color.PNG)
 
 ## Customize the border
 
@@ -142,7 +142,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Customize shape pointer border](images/shape-pointer/shape_border.png)
+![Customize shape pointer border](images/shape-pointer/shape_border.PNG)
 
 ## Shadow support
 
@@ -175,7 +175,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Change shape pointer elevation](images/shape-pointer/pointer_shadow.png)
+![Change shape pointer elevation](images/shape-pointer/pointer_shadow.PNG)
 
 ## Change marker alignment
 
@@ -209,7 +209,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Change shape pointer alignment](images/shape-pointer/shape_marker_alignment.png)
+![Change shape pointer alignment](images/shape-pointer/shape_marker_alignment.PNG)
 
 ## Customize position
 
@@ -243,7 +243,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Change shape pointer position](images/shape-pointer/shape_pointer_position.png)
+![Change shape pointer position](images/shape-pointer/shape_pointer_position.PNG)
 
 ## Customize offset
 
@@ -273,5 +273,5 @@ In addition to position the shape pointer, it is also possible to change the off
 
 {% endtabs %}
 
-![Customize linear gauge bar pointer offset](images/shape-pointer/shape_pointer_offset.png)
+![Customize linear gauge bar pointer offset](images/shape-pointer/shape_pointer_offset.PNG)
 

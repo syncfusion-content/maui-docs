@@ -40,7 +40,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Initialize linear gauge for content pointer](images/content-pointer/default_content_pointer.png)
+![Initialize linear gauge for content pointer](images/content-pointer/default_content_pointer.PNG)
 
 ## Change marker alignment
 
@@ -93,7 +93,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Customize size of content pointer](images/content-pointer/content_alignment.png)
+![Customize size of content pointer](images/content-pointer/content_alignment.PNG)
 
 ## Change the position
 
@@ -146,7 +146,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Change content pointer position](images/content-pointer/content_pointer_position.png)
+![Change content pointer position](images/content-pointer/content_pointer_position.PNG)
 
 ## Change the offset
 
@@ -199,4 +199,4 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Customize linear gauge bar pointer offset](images/content-pointer/content_pointer_offset.png)
+![Customize linear gauge bar pointer offset](images/content-pointer/content_pointer_offset.PNG)

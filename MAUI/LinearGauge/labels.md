@@ -48,7 +48,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Customize linear gauge axis label style](images/axis-labels/customize_label_style.png)
+![Customize linear gauge axis label style](images/axis-labels/customize_label_style.PNG)
 
 ## Change visibility
 
@@ -74,7 +74,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Change visibility](images/axis-labels/axis_label_visibility.png)
+![Change visibility](images/axis-labels/axis_label_visibility.PNG)
 
 ## Customize interval between labels
 
@@ -100,7 +100,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Set label interval in axis track](images/axis-labels/axis_label_interval.png)
+![Set label interval in axis track](images/axis-labels/axis_label_interval.PNG)
 
 ## Change label position
 
@@ -127,7 +127,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Set linear gauge label position](images/axis-labels/label-placement.png)
+![Set linear gauge label position](images/axis-labels/label-placement.PNG)
 
 ## Change label offset
 
@@ -151,7 +151,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Set linear gauge label offset](images/axis-labels/label_offset.png)
+![Set linear gauge label offset](images/axis-labels/label_offset.PNG)
 
 ##  Customize maximum number of visible labels
 
@@ -175,7 +175,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Set maximum number of labels in axis track](images/axis-labels/axis_maximum_labels.png)
+![Set maximum number of labels in axis track](images/axis-labels/axis_maximum_labels.PNG)
 
 ## Customize label text
 
@@ -211,7 +211,7 @@ private void Gauge_LabelCreated(object sender, LabelCreatedEventArgs e)
 
 {% endtabs %}
 
-![Customize Label Text in axis track](images/axis-labels/custom_label_text.png)
+![Customize Label Text in axis track](images/axis-labels/custom_label_text.PNG)
 
 ## Label format
 
@@ -236,4 +236,4 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Customize Label Format in Axis Label](images/axis-labels/axis_label_number_format.png)
+![Customize Label Format in Axis Label](images/axis-labels/axis_label_number_format.PNG)
