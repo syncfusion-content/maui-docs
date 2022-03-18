@@ -13,7 +13,7 @@ All Linear Gauge elements such as axis along with ticks and labels, range, bar p
 
 ## Animate axis
 
-The [`EnableAxisAnimation`]() and [`AnimationDuration`]() properties in [`SfLinearGauge`]() is used to  animate the axis track along with the ticks and labels. The axis will have a fade-in with opacity animation when this [`EnableAxisAnimation`]() is set to true. By default, the [`EnableAxisAnimation`]() is set to false. 
+The [`EnableAxisAnimation`]() and [`AnimationDuration`]() properties in [`SfLinearGauge`]() is used to animate the scale along with the ticks and labels. The scale will have a fade-in with opacity animation when this [`EnableAxisAnimation`]() is set to true. By default, the [`EnableAxisAnimation`]() is set to false. 
 
 {% tabs %}
 
@@ -37,7 +37,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Animate range
 
-The [`EnableRangeAnimation`]() and [`AnimationDuration`]() properties in [`SfLinearGauge`]() is used to  animate the axis track along with the ticks and labels. The range will be have a fade-in with opacity animation when this [`EnableRangeAnimation`]() is set to true. By default, the [`EnableRangeAnimation`]() is set to false. 
+The [`EnableRangeAnimation`]() and [`AnimationDuration`]() properties in [`SfLinearGauge`]() is used to  animate the scale along with the ticks and labels. The range will be have a fade-in with opacity animation when this [`EnableRangeAnimation`]() is set to true. By default, the [`EnableRangeAnimation`]() is set to false. 
 
 {% tabs %}
 
@@ -103,7 +103,7 @@ The below code example demonstrates updating the animation for bar pointer.
 
  <gauge:SfLinearGauge>
                 <gauge:SfLinearGauge.MarkerPointers>
-                    <gauge:LinearShapePointer Value="70" EnableAnimation="True"/>
+                    <gauge:BarPointer Value="70" EnableAnimation="True"/>
                 </gauge:SfLinearGauge.MarkerPointers>
             </gauge:SfLinearGauge>
 
@@ -111,13 +111,13 @@ The below code example demonstrates updating the animation for bar pointer.
 
 {% highlight c# %}
 
-SfLinearGauge gauge = new SfLinearGauge();
-		gauge.MarkerPointers.Add(new LinearShapePointer()
-		{
-			Value = 70,
-			EnableAnimation = true,
-		});
-		this.Content = gauge;
+ SfLinearGauge gauge = new SfLinearGauge();
+        gauge.BarPointers.Add(new BarPointer()
+        {
+            Value = 70,
+            EnableAnimation = true,
+        });
+	this.Content = gauge;
 
 {% endhighlight %}
 

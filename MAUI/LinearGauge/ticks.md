@@ -120,7 +120,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Customize tick position
 
-The linear axis allows to position the ticks either inside or outside the axis track using the [`tickPosition`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/tickPosition.html) property. By default, ticks are positioned inside the axis track.
+The linear axis allows to position the ticks either inside or outside the axis track using the [`TickPosition`]() property. By default, ticks are positioned inside the axis track.
 
 
 {% tabs %}

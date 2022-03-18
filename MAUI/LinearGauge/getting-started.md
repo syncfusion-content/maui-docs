@@ -58,7 +58,7 @@ this.Content = gauge;
 
 Syncfusion.Maui.Core nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file register the handler for Syncfusion core.
 
-{% highlight C# %}
+{% highlight c# tabtitle="~/MauiProgram.cs" hl_lines="17" %}
 
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;

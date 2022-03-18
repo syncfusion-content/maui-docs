@@ -97,7 +97,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Change the position
 
-By default, the shape pointer is positioned `Outside` the axis. This position can be changed by the [`Position`]() property of pointer. It is possible to position the shape pointer `Inside`, `Cross`, or `Outside` the axis. The following code sample demonstrates how to change the shape pointer position to `Cross` the axis. 
+By default, the shape pointer is positioned `Outside` the scale. This position can be changed by the [`Position`]() property of pointer. It is possible to position the shape pointer `Inside`, `Cross`, or `Outside` the axis. The following code sample demonstrates how to change the shape pointer position to `Cross` the scale. 
 
 {% tabs %}
 

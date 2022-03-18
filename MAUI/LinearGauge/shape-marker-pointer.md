@@ -54,7 +54,7 @@ The size of the marker pointer can be changed by the [`ShapeHeight`]() and [`Sha
 
 {% highlight xaml %}
 
-<gauge:SfLinearGauge x:Name="gauge">
+<gauge:SfLinearGauge>
                 <gauge:SfLinearGauge.MarkerPointers>
                     <gauge:LinearShapePointer Value="50" ShapeHeight="25" ShapeWidth="25"/>
                 </gauge:SfLinearGauge.MarkerPointers>

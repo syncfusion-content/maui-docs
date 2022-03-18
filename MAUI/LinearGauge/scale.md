@@ -195,7 +195,7 @@ The [`CornerStyle`]() property of [`LineStyle`]() specifies the corner type for 
 
 {% highlight xaml %}
 
- <gauge:SfLinearGauge x:Name="gauge">
+ <gauge:SfLinearGauge>
                 <gauge:SfLinearGauge.LineStyle>
                     <gauge:LinearLineStyle Thickness="20" CornerStyle="BothCurve"/>
                 </gauge:SfLinearGauge.LineStyle>
@@ -222,7 +222,7 @@ Also [`CornerRadius`]() allows to set custom corner style for linear scale.
 
 {% highlight xaml %}
 
- <gauge:SfLinearGauge x:Name="gauge">
+ <gauge:SfLinearGauge>
                  <gauge:SfLinearGauge.LineStyle>
                     <gauge:LinearLineStyle Thickness="20" CornerRadius="0,10,0,10"/>
                 </gauge:SfLinearGauge.LineStyle>

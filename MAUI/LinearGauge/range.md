@@ -47,12 +47,11 @@ A Linear Gauge range has three values to draw a range - [`StartValue`](), and [`
 
 {% highlight xaml %}
 
- <gauge:SfLinearGauge>
+          <gauge:SfLinearGauge>
                 <gauge:SfLinearGauge.Ranges>
                     <gauge:LinearRange StartWidth="70" MidWidth="20" EndWidth="70"/>
                 </gauge:SfLinearGauge.Ranges>
             </gauge:SfLinearGauge>
-
 
 {% endhighlight %}
 
