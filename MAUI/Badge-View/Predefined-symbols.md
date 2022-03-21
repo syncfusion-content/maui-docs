@@ -11,7 +11,7 @@ documentation: ug
 
 # Predefined symbols in .NET MAUI Badge View (SfBadgeView)
 
-You can change the badge icon using the `Icon` property. Badge icons will be visible when you do not set the badge text. The badge supports the following types of `Icon`
+The badge icon has changed using the `Icon` property. Badge icons will be visible when you do not set the badge text. The badge supports the following types of `Icon`
 
 * Add
 * Available
