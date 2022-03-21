@@ -22,11 +22,37 @@ You can change the size of the thumb in the range selector using the [`Radius`](
 
 {% highlight xaml %}
 
-<rangeselector:SfRangeSelector>
-   <rangeselector:SfRangeSelector.ThumbStyle>
-       <rangeselector:SliderThumbStyle Radius="15" />
-   </rangeselector:SfRangeSelector.ThumbStyle>
-</rangeselector:SfRangeSelector>
+<ContentPage 
+             ...
+             xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
+             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
+             xmlns:local="clr-namespace:SliderTestbedSample.RangeSelector">
+    <ContentPage.BindingContext>
+        <local:ViewModel />
+    </ContentPage.BindingContext>
+    <rangeselector:SfRangeSelector>
+        <rangeselector:SfRangeSelector.ThumbStyle>
+            <rangeselector:SliderThumbStyle Radius="15" />
+        </rangeselector:SfRangeSelector.ThumbStyle>
+        <chart:SfCartesianChart>
+            <chart:SfCartesianChart.XAxes>
+               <chart:DateTimeAxis IsVisible="False"
+                                   ShowMajorGridLines="False" />
+            </chart:SfCartesianChart.XAxes>
+            <chart:SfCartesianChart.YAxes>
+               <chart:NumericalAxis IsVisible="False"
+                                    ShowMajorGridLines="False" />
+            </chart:SfCartesianChart.YAxes>
+            <chart:SfCartesianChart.Series>
+               <chart:SplineAreaSeries ItemsSource="{Binding Source}"
+                                       XBindingPath="X"
+                                       YBindingPath="Y"
+                                       Fill="Blue">
+               </chart:SplineAreaSeries>
+            </chart:SfCartesianChart.Series>
+        </chart:SfCartesianChart>
+    </rangeselector:SfRangeSelector>
+</ContentPage>
 
 {% endhighlight %}
 
@@ -34,6 +60,16 @@ You can change the size of the thumb in the range selector using the [`Radius`](
 
 SfRangeSelector rangeSelector = new SfRangeSelector();
 rangeSelector.ThumbStyle.Radius = 15;
+SfCartesianChart chart = new SfCartesianChart();
+DateTimeAxis primaryAxis = new DateTimeAxis();
+chart.XAxes = primaryAxis;
+NumericalAxis secondaryAxis = new NumericalAxis();
+chart.YAxes = secondaryAxis;
+SplineAreaSeries series = new SplineAreaSeries();
+series.ItemsSource = (new ViewModel()).Source;
+series.XBindingPath = "X";
+series.YBindingPath = "Y";
+rangeSelector.Content = chart;
         
 {% endhighlight %}
 
@@ -49,11 +85,37 @@ You can change the color of the thumb in the range selector using the [`Fill`](h
 
 {% highlight xaml %}
 
-<rangeselector:SfRangeSelector>
-   <rangeselector:SfRangeSelector.ThumbStyle>
-       <rangeselector:SliderThumbStyle Fill="#EE3F3F" />
-   </rangeselector:SfRangeSelector.ThumbStyle>
-</rangeselector:SfRangeSelector>
+<ContentPage 
+             ...
+             xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
+             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
+             xmlns:local="clr-namespace:SliderTestbedSample.RangeSelector">
+    <ContentPage.BindingContext>
+        <local:ViewModel />
+    </ContentPage.BindingContext>
+    <rangeselector:SfRangeSelector>
+        <rangeselector:SfRangeSelector.ThumbStyle>
+            <rangeselector:SliderThumbStyle Fill="#EE3F3F" />
+        </rangeselector:SfRangeSelector.ThumbStyle>
+        <chart:SfCartesianChart>
+            <chart:SfCartesianChart.XAxes>
+               <chart:DateTimeAxis IsVisible="False"
+                                   ShowMajorGridLines="False" />
+            </chart:SfCartesianChart.XAxes>
+            <chart:SfCartesianChart.YAxes>
+               <chart:NumericalAxis IsVisible="False"
+                                    ShowMajorGridLines="False" />
+            </chart:SfCartesianChart.YAxes>
+            <chart:SfCartesianChart.Series>
+               <chart:SplineAreaSeries ItemsSource="{Binding Source}"
+                                       XBindingPath="X"
+                                       YBindingPath="Y"
+                                       Fill="Blue">
+               </chart:SplineAreaSeries>
+            </chart:SfCartesianChart.Series>
+        </chart:SfCartesianChart>
+    </rangeselector:SfRangeSelector>
+</ContentPage>
 
 {% endhighlight %}
 
@@ -61,6 +123,16 @@ You can change the color of the thumb in the range selector using the [`Fill`](h
 
 SfRangeSelector rangeSelector = new SfRangeSelector();
 rangeSelector.ThumbStyle.Fill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+SfCartesianChart chart = new SfCartesianChart();
+DateTimeAxis primaryAxis = new DateTimeAxis();
+chart.XAxes = primaryAxis;
+NumericalAxis secondaryAxis = new NumericalAxis();
+chart.YAxes = secondaryAxis;
+SplineAreaSeries series = new SplineAreaSeries();
+series.ItemsSource = (new ViewModel()).Source;
+series.XBindingPath = "X";
+series.YBindingPath = "Y";
+rangeSelector.Content = chart;
         
 {% endhighlight %}
 
@@ -76,11 +148,37 @@ You can change the thumb stroke width using the [`StrokeThickness`](https://help
 
 {% highlight xaml %}
 
-<rangeselector:SfRangeSelector>
-   <rangeselector:SfRangeSelector.ThumbStyle>
-       <rangeselector:SliderThumbStyle StrokeThickness="2" Stroke="#EE3F3F" />
-   </rangeselector:SfRangeSelector.ThumbStyle>
-</rangeselector:SfRangeSelector>
+<ContentPage 
+             ...
+             xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
+             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
+             xmlns:local="clr-namespace:SliderTestbedSample.RangeSelector">
+    <ContentPage.BindingContext>
+        <local:ViewModel />
+    </ContentPage.BindingContext>
+    <rangeselector:SfRangeSelector>
+        <rangeselector:SfRangeSelector.ThumbStyle>
+            <rangeselector:SliderThumbStyle StrokeThickness="2" Stroke="#EE3F3F" />
+        </rangeselector:SfRangeSelector.ThumbStyle>
+        <chart:SfCartesianChart>
+            <chart:SfCartesianChart.XAxes>
+               <chart:DateTimeAxis IsVisible="False"
+                                   ShowMajorGridLines="False" />
+            </chart:SfCartesianChart.XAxes>
+            <chart:SfCartesianChart.YAxes>
+               <chart:NumericalAxis IsVisible="False"
+                                    ShowMajorGridLines="False" />
+            </chart:SfCartesianChart.YAxes>
+            <chart:SfCartesianChart.Series>
+               <chart:SplineAreaSeries ItemsSource="{Binding Source}"
+                                       XBindingPath="X"
+                                       YBindingPath="Y"
+                                       Fill="Blue">
+               </chart:SplineAreaSeries>
+            </chart:SfCartesianChart.Series>
+        </chart:SfCartesianChart>
+    </rangeselector:SfRangeSelector>
+</ContentPage>
 
 {% endhighlight %}
 
@@ -89,6 +187,16 @@ You can change the thumb stroke width using the [`StrokeThickness`](https://help
 SfRangeSelector rangeSelector = new SfRangeSelector();
 rangeSelector.ThumbStyle.Stroke = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
 rangeSelector.ThumbStyle.StrokeThickness = 2;
+SfCartesianChart chart = new SfCartesianChart();
+DateTimeAxis primaryAxis = new DateTimeAxis();
+chart.XAxes = primaryAxis;
+NumericalAxis secondaryAxis = new NumericalAxis();
+chart.YAxes = secondaryAxis;
+SplineAreaSeries series = new SplineAreaSeries();
+series.ItemsSource = (new ViewModel()).Source;
+series.XBindingPath = "X";
+series.YBindingPath = "Y";
+rangeSelector.Content = chart;
         
 {% endhighlight %}
 
@@ -104,11 +212,37 @@ You can change the thumb stroke color while two thumbs are overlapping in the ra
 
 {% highlight xaml %}
 
-<rangeselector:SfRangeSelector>
-  <rangeselector:SfRangeSelector.ThumbStyle>
-      <rangeselector:SliderThumbStyle OverlapStroke="#EE3F3F" />
-  </rangeselector:SfRangeSelector.ThumbStyle>
-</rangeselector:SfRangeSelector>
+<ContentPage 
+             ...
+             xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
+             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
+             xmlns:local="clr-namespace:SliderTestbedSample.RangeSelector">
+    <ContentPage.BindingContext>
+        <local:ViewModel />
+    </ContentPage.BindingContext>
+    <rangeselector:SfRangeSelector>
+        <rangeselector:SfRangeSelector.ThumbStyle>
+            <rangeselector:SliderThumbStyle OverlapStroke="#EE3F3F" />
+        </rangeselector:SfRangeSelector.ThumbStyle>
+        <chart:SfCartesianChart>
+            <chart:SfCartesianChart.XAxes>
+               <chart:DateTimeAxis IsVisible="False"
+                                   ShowMajorGridLines="False" />
+            </chart:SfCartesianChart.XAxes>
+            <chart:SfCartesianChart.YAxes>
+               <chart:NumericalAxis IsVisible="False"
+                                    ShowMajorGridLines="False" />
+            </chart:SfCartesianChart.YAxes>
+            <chart:SfCartesianChart.Series>
+               <chart:SplineAreaSeries ItemsSource="{Binding Source}"
+                                       XBindingPath="X"
+                                       YBindingPath="Y"
+                                       Fill="Blue">
+               </chart:SplineAreaSeries>
+            </chart:SfCartesianChart.Series>
+        </chart:SfCartesianChart>
+    </rangeselector:SfRangeSelector>
+</ContentPage>
 
 {% endhighlight %}
 
@@ -116,6 +250,16 @@ You can change the thumb stroke color while two thumbs are overlapping in the ra
 
 SfRangeSelector rangeSelector = new SfRangeSelector();
 rangeSelector.ThumbStyle.OverlapStroke = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+SfCartesianChart chart = new SfCartesianChart();
+DateTimeAxis primaryAxis = new DateTimeAxis();
+chart.XAxes = primaryAxis;
+NumericalAxis secondaryAxis = new NumericalAxis();
+chart.YAxes = secondaryAxis;
+SplineAreaSeries series = new SplineAreaSeries();
+series.ItemsSource = (new ViewModel()).Source;
+series.XBindingPath = "X";
+series.YBindingPath = "Y";
+rangeSelector.Content = chart;
         
 {% endhighlight %}
 
@@ -131,11 +275,37 @@ You can change the size of the thumb overlay in the range selector using the [`R
 
 {% highlight xaml %}
 
-<rangeselector:SfRangeSelector>
-   <rangeselector:SfRangeSelector.ThumbOverlayStyle>
-      <rangeselector:SliderThumbOverlayStyle Radius="30"/>
-   </rangeselector:SfRangeSelector.ThumbOverlayStyle>
-</rangeselector:SfRangeSelector>
+<ContentPage 
+             ...
+             xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
+             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
+             xmlns:local="clr-namespace:SliderTestbedSample.RangeSelector">
+    <ContentPage.BindingContext>
+        <local:ViewModel />
+    </ContentPage.BindingContext>
+    <rangeselector:SfRangeSelector>
+        <rangeselector:SfRangeSelector.ThumbStyle>
+            <rangeselector:SliderThumbStyle Radius="30" />
+        </rangeselector:SfRangeSelector.ThumbStyle>
+        <chart:SfCartesianChart>
+            <chart:SfCartesianChart.XAxes>
+               <chart:DateTimeAxis IsVisible="False"
+                                   ShowMajorGridLines="False" />
+            </chart:SfCartesianChart.XAxes>
+            <chart:SfCartesianChart.YAxes>
+               <chart:NumericalAxis IsVisible="False"
+                                    ShowMajorGridLines="False" />
+            </chart:SfCartesianChart.YAxes>
+            <chart:SfCartesianChart.Series>
+               <chart:SplineAreaSeries ItemsSource="{Binding Source}"
+                                       XBindingPath="X"
+                                       YBindingPath="Y"
+                                       Fill="Blue">
+               </chart:SplineAreaSeries>
+            </chart:SfCartesianChart.Series>
+        </chart:SfCartesianChart>
+    </rangeselector:SfRangeSelector>
+</ContentPage>
 
 {% endhighlight %}
 
@@ -143,6 +313,16 @@ You can change the size of the thumb overlay in the range selector using the [`R
 
 SfRangeSelector rangeSelector = new SfRangeSelector();
 rangeSelector.ThumbOverlayStyle.Radius = 30;
+SfCartesianChart chart = new SfCartesianChart();
+DateTimeAxis primaryAxis = new DateTimeAxis();
+chart.XAxes = primaryAxis;
+NumericalAxis secondaryAxis = new NumericalAxis();
+chart.YAxes = secondaryAxis;
+SplineAreaSeries series = new SplineAreaSeries();
+series.ItemsSource = (new ViewModel()).Source;
+series.XBindingPath = "X";
+series.YBindingPath = "Y";
+rangeSelector.Content = chart;
         
 {% endhighlight %}
 
@@ -158,11 +338,37 @@ You can change the color of the thumb overlay in the range selector using the [`
 
 {% highlight xaml %}
 
-<rangeselector:SfRangeSelector >
-   <rangeselector:SfRangeSelector.ThumbOverlayStyle>
-      <rangeselector:SliderThumbOverlayStyle Fill="#F7C8DB"/>
-   </rangeselector:SfRangeSelector.ThumbOverlayStyle>
-</rangeselector:SfRangeSelector>
+<ContentPage 
+             ...
+             xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
+             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
+             xmlns:local="clr-namespace:SliderTestbedSample.RangeSelector">
+    <ContentPage.BindingContext>
+        <local:ViewModel />
+    </ContentPage.BindingContext>
+    <rangeselector:SfRangeSelector>
+        <rangeselector:SfRangeSelector.ThumbStyle>
+            <rangeselector:SliderThumbStyle Fill="#F7C8DB" />
+        </rangeselector:SfRangeSelector.ThumbStyle>
+        <chart:SfCartesianChart>
+            <chart:SfCartesianChart.XAxes>
+               <chart:DateTimeAxis IsVisible="False"
+                                   ShowMajorGridLines="False" />
+            </chart:SfCartesianChart.XAxes>
+            <chart:SfCartesianChart.YAxes>
+               <chart:NumericalAxis IsVisible="False"
+                                    ShowMajorGridLines="False" />
+            </chart:SfCartesianChart.YAxes>
+            <chart:SfCartesianChart.Series>
+               <chart:SplineAreaSeries ItemsSource="{Binding Source}"
+                                       XBindingPath="X"
+                                       YBindingPath="Y"
+                                       Fill="Blue">
+               </chart:SplineAreaSeries>
+            </chart:SfCartesianChart.Series>
+        </chart:SfCartesianChart>
+    </rangeselector:SfRangeSelector>
+</ContentPage>
 
 {% endhighlight %}
 
@@ -170,6 +376,16 @@ You can change the color of the thumb overlay in the range selector using the [`
 
 SfRangeSelector rangeSelector = new SfRangeSelector();
 rangeSelector.ThumbOverlayStyle.Fill = new SolidColorBrush(Color.FromArgb("#F7C8DB"));
+SfCartesianChart chart = new SfCartesianChart();
+DateTimeAxis primaryAxis = new DateTimeAxis();
+chart.XAxes = primaryAxis;
+NumericalAxis secondaryAxis = new NumericalAxis();
+chart.YAxes = secondaryAxis;
+SplineAreaSeries series = new SplineAreaSeries();
+series.ItemsSource = (new ViewModel()).Source;
+series.XBindingPath = "X";
+series.YBindingPath = "Y";
+rangeSelector.Content = chart;
         
 {% endhighlight %}
 

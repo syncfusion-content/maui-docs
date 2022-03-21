@@ -24,9 +24,9 @@ Create a new .NET MAUI application in Visual Studio.
  ![Create MAUI Application](images/getting-started/nuget-installation.png)
 
 
-## Register the handler
+## Handler registration
 
-Syncfusion.Maui.Core nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
+In the MauiProgram.cs file, register the handler for Syncfusion core
 
 {% highlight C# %}
 
