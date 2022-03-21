@@ -7,6 +7,8 @@ control: SfBarcodeGenerator
 documentation: ug
 ---
 
+# Two-dimensional symbology in .NET MAUI Barcodes (SfBarcodeGenerator)
+
 Two dimensional Barcode is a way to represent information by using the two-dimensional approach. It is similar to one dimensional Barcode, but can represent more data per unit area. The barcode generator control supports the following two dimensional symbology:
 
 * `QR Code`

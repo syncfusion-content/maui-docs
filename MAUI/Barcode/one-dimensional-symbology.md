@@ -7,6 +7,8 @@ control: SfBarcodeGenerator
 documentation: ug
 ---
 
+# One-dimensional symbology in .NET MAUI Barcodes (SfBarcodeGenerator)
+
 The one-dimensional barcode represents the data by varying the widths and spacings of the parallel lines. These barcode types are also known as linear barcode types. The Syncfusion .NET MAUI barcode generator supports the following one-dimensional barcode types:
 
 * `Codabar`

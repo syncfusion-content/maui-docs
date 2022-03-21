@@ -7,6 +7,8 @@ control: SfBarcodeGenerator
 documentation: ug
 ---
 
+# Customization in .NET MAUI Barcodes (SfBarcodeGenerator)
+
 ## Text customization
 
 ### Displaying input value
@@ -200,15 +202,15 @@ Below code snippet shows the one dimensional barcode without the `Module` proper
 
 {% highlight xaml %}
 
-            <barcode:SfBarcodeGenerator Value="123456789" 
-                                        HeightRequest="150"
-                                        WidthRequest="240" 
-                                        ShowText="True" 
-                                        BackgroundColor="LightCyan" Margin="50,20">
-                <barcode:SfBarcodeGenerator.Symbology>
-                    <barcode:Codabar />
-                </barcode:SfBarcodeGenerator.Symbology>
-            </barcode:SfBarcodeGenerator>
+        <barcode:SfBarcodeGenerator Value="123456789" 
+                                    HeightRequest="150"
+                                    WidthRequest="240" 
+                                    ShowText="True" 
+                                    BackgroundColor="LightCyan" Margin="50,20">
+            <barcode:SfBarcodeGenerator.Symbology>
+                <barcode:Codabar />
+            </barcode:SfBarcodeGenerator.Symbology>
+        </barcode:SfBarcodeGenerator>
 
 {% endhighlight %}
 
@@ -237,7 +239,7 @@ The following code snippet shows the two dimensional barcode with `Module` prope
 
 {% tabs %}
 
-{% highlight xaml hl_lines="7" %}
+{% highlight xaml hl_lines="6" %}
 
             <barcode:SfBarcodeGenerator Value="123456789" 
                                         HeightRequest="150"
