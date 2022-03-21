@@ -265,7 +265,7 @@ For example: From 12/13/2021 12:00AM to 12/14/2021 12:00AM.
 
 ## Read only appointment
 
-A read-only appointment can be created with `IsReadOnly` property of the `SchedulerAppointment.` This property restricts the user's ability to edit and delete.
+A read-only appointment can be created with `IsReadOnly` property of the `SchedulerAppointment.` If you enable this property, user will not be able to perform edit, and delete operations.
 
 {% tabs %}
 {% highlight xaml %}
@@ -824,7 +824,7 @@ N>
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/RecursiveExceptionAppointment/BusinessObject)
 
-## Appointment appearance
+## Appointment customization
 
 The appointment customization can be achieved by using the `TextStyle` and `DateTemplate` in the `SfScheduler.`
 
@@ -916,6 +916,87 @@ this.Scheduler.AppointmentsSource = appointments;
 N>
 * By default, the `SchedulerAppointment` is set as the `BindingContext` for `AppointmentTemplate` for both `SchedulerAppointment` and custom data object in `AppointmentsSource.`
 * The Custom data object can be bound in `AppointmentTemplate` by using `SchedulerAppointment.Data.`
+
+### Customize appointment appearance using DataTemplateSelector
+
+You can customize the appointment appearance by using the `AppointmentTemplate` property of `DaysView` in the `SfScheduler.` The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler appointment appearance by using the `AppointmentTemplate.` It lets to choose a different data template for each appointment, customizing the appearance of a particular appointment based on certain conditions.
+
+{% tabs %}
+{% highlight xaml %}
+
+<Grid>
+    <Grid.Resources>
+        <DataTemplate x:Key="normalDateTemplate">
+            <Grid Background="LightGreen">
+                <Label x:Name="label" HorizontalOptions="Center"  VerticalOptions="Center" TextColor="Black" FontSize="12"  Text="{Binding Subject}" />
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="todayDateTemplate">
+            <Grid Background="BlueViolet">
+                <Label x:Name="label" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White" FontSize="12"  Text="{Binding Subject}" />
+            </Grid>
+        </DataTemplate>
+        <local:AppointmentTemplateSelector x:Key="appointmentTemplateSelector" TodayDateTemplate="{StaticResource todayDateTemplate}" NormalDateTemplate="{StaticResource normalDateTemplate}"/>
+    </Grid.Resources>
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                           View="Week" >
+        <scheduler:SfScheduler.DaysView>
+            <scheduler:SchedulerDaysView AppointmentTemplate="{StaticResource appointmentTemplateSelector}" />
+        </scheduler:SfScheduler.DaysView>
+        <scheduler:SfScheduler.TimelineView>
+            <scheduler:SchedulerTimelineView AppointmentTemplate="{StaticResource appointmentTemplateSelector}" />
+        </scheduler:SfScheduler.TimelineView>
+        <scheduler:SfScheduler.MonthView>
+            <scheduler:SchedulerMonthView AppointmentTemplate="{StaticResource appointmentTemplateSelector}" />
+        </scheduler:SfScheduler.MonthView>
+    </scheduler:SfScheduler>
+ </Grid>
+
+{% endhighlight %}
+{% highlight c# tabtitle="AppointmentTemplateSelector.cs" %}
+
+public class AppointmentTemplateSelector : DataTemplateSelector
+{
+    public AppointmentTemplateSelector()
+    {
+    }
+    public DataTemplate NormalDateTemplate { get; set; }
+    public DataTemplate TodayDateTemplate { get; set; }
+    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+    {
+        var schedulerAppointment = item as SchedulerAppointment;
+        if (schedulerAppointment.ActualStartTime.Date == DateTime.Today.Date)
+            return TodayDateTemplate;
+        else
+            return NormalDateTemplate;
+    }
+}
+
+{% endhighlight %}  
+{% highlight c# %}
+
+this.Scheduler.View = SchedulerView.Week;
+var appointments = new ObservableCollection<SchedulerAppointment>();
+appointments.Add(new SchedulerAppointment()
+{
+    Subject = "Meeting",
+    StartTime = DateTime.Today.Date.AddHours(9),
+    EndTime = DateTime.Today.Date.AddHours(10),
+});
+appointments.Add(new SchedulerAppointment()
+{
+    Subject = "Project plan",
+    StartTime = DateTime.Today.Date.AddDays(1).AddHours(10),
+    EndTime = DateTime.Today.Date.AddDays(1).AddHours(11),
+});
+this.Scheduler.AppointmentsSource = appointments;
+
+{% endhighlight %} 
+{% endtabs %}
+
+N>
+* The `BindingContext` for `AppointmentTemplate` for both `SchedulerAppointment` and `SchedulerAppointment.Data` in `AppointmentsSource.`
+* The data template selector is experiencing more performance issues, when creating template views and there is a delay in loading.
 
 ## Appointment selection background
 

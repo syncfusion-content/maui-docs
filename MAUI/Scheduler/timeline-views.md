@@ -441,6 +441,7 @@ private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 
 N>
 * The BindingContext of the `TimeRegionTemplate` is the `SchedulerTimeRegion.`
+* The data template selector is experiencing more performance issues, when creating template views and there is a delay in loading.
 
 ## Full screen scheduler
 
@@ -732,6 +733,81 @@ You can customize the view header appearance by using the `ViewHeaderTemplate` p
 
 N>
 * The BindingContext of the `ViewHeaderTemplate` is the`DateTime.` The `SelectableDayPredicate,` `MinimumDateTime,` and `MaximumDateTime` properties of date and time values can be used directly in the data template selector.
+
+### Customize view header appearance using DataTemplateSelector
+
+You can customize the view header appearance by using the `ViewHeaderTemplate` property of `TimelineView` in the `SfScheduler.` The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler view header by using the `ViewHeaderTemplate.` It lets to choose a different data template for each view header, customizing the appearance of a particular view header based on certain conditions.
+
+{% tabs %}
+{% highlight xaml %}
+
+<Grid>
+    <Grid.Resources>
+        <DataTemplate x:Key="normalDateTemplate">
+            <Grid x:Name="grid" Background="BlueViolet" >
+                <Label x:Name="label" HorizontalOptions="Start" VerticalOptions="Center"  TextColor="White" >
+                    <Label.Text>
+                        <MultiBinding StringFormat = "{}{0:dd} {1:ddd}" >
+                            <Binding />
+                            <Binding />
+                        </MultiBinding >
+                    </Label.Text >
+                </Label>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="todayDateTemplate">
+            <Grid x:Name="grid" Background="BlueViolet" >
+                <Label x:Name="label" HorizontalOptions="Start" VerticalOptions="Center"  TextColor="Yellow" >
+                    <Label.Text>
+                        <MultiBinding StringFormat = "{}{0:dd} {1:ddd}" >
+                            <Binding />
+                            <Binding />
+                        </MultiBinding >
+                    </Label.Text >
+                </Label>
+            </Grid>
+        </DataTemplate>
+        <local:ViewHeaderTemplateSelector x:Key="viewHeaderTemplateSelector" TodayDateTemplate="{StaticResource todayDateTemplate}" NormalDateTemplate="{StaticResource normalDateTemplate}"/>
+    </Grid.Resources>
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                           View="TimelineWeek" >
+        <scheduler:SfScheduler.TimelineView>
+            <scheduler:SchedulerTimelineView ViewHeaderTemplate="{StaticResource viewHeaderTemplateSelector}" />
+        </scheduler:SfScheduler.TimelineView>
+    </scheduler:SfScheduler>
+ </Grid>
+ 
+{% endhighlight %}
+{% highlight c# tabtitle="ViewHeaderTemplateSelector.cs" %}
+
+public class ViewHeaderTemplateSelector : DataTemplateSelector
+{
+    public ViewHeaderTemplateSelector()
+    {
+    }
+    public DataTemplate NormalDateTemplate { get; set; }
+    public DataTemplate TodayDateTemplate { get; set; }
+    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+    {
+        var dateTime = (DateTime)item;
+        if (dateTime.Date == DateTime.Today.Date)
+            return TodayDateTemplate;
+        else
+            return NormalDateTemplate;
+    }
+}
+
+{% endhighlight %}  
+{% highlight c# %}
+
+this.Scheduler.View = SchedulerView.TimelineWeek;
+
+{% endhighlight %} 
+{% endtabs %}
+
+N>
+* The BindingContext of the `ViewHeaderTemplate` is the`DateTime.` The `SelectableDayPredicate,` `MinimumDateTime,` and `MaximumDateTime` properties of date and time values can be used directly in the data template selector.
+* The data template selector is experiencing more performance issues, when creating template views and there is a delay in loading.
 
 ## Time text formatting
 

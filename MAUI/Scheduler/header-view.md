@@ -35,8 +35,6 @@ this.Scheduler.HeaderView.Height = 100;
 {% endhighlight %}  
 {% endtabs %}
 
-![customize-header-height-in-maui-scheduler](images/header-view/customize-header-height-in-maui-scheduler.png)
-
 ## Header date format
 
 The header date format can be customized by using the `TextFormat` property of the `SfScheduler.` By default, the header text format is `MMMM yyyy.`
@@ -61,9 +59,7 @@ this.Scheduler.HeaderView.TextFormat = "MMM yy";
 {% endhighlight %}
 {% endtabs %}
 
-![customize-header-date-format-in-maui-scheduler](images/header-view/customize-header-date-format-in-maui-scheduler.png)
-
-## Header appearance
+## Header customization
 
 The header can be customized by using the `HeaderView` property of the `SfScheduler.`
 
@@ -98,8 +94,6 @@ this.Scheduler.HeaderView.Background = Brush.LightGreen;
 {% endhighlight %}  
 {% endtabs %}
 
-![customize-header-appearance-using-text-style-in-maui-scheduler](images/header-view/customize-header-appearance-using-text-style-in-maui-scheduler.png)
-
 ### Customize header appearance using DataTemplate
 
 You can customize the header appearance by using the `HeaderTemplate` property of `HeaderView` in the `SfScheduler.` 
@@ -132,8 +126,6 @@ You can customize the header appearance by using the `HeaderTemplate` property o
 
 {% endhighlight %}
 {% endtabs %}
-
-![customize-header-appearance-using-template-in-maui-scheduler](images/header-view/customize-header-appearance-using-template-in-maui-scheduler.png)
 
 ### Customize header appearance using DataTemplateSelector
 
@@ -204,3 +196,6 @@ public class HeaderTemplateSelector : DataTemplateSelector
 
 {% endhighlight %}  
 {% endtabs %}
+
+N>
+* The data template selector is experiencing more performance issues, when creating template views and there is a delay in loading.
