@@ -300,7 +300,7 @@ Content = sfBadgeView;
 
 ## Alignment of badge
 
-You can align the badge view using the Center, Start, and End properties of BadgeAlignment property.
+Align the badge view using the Center, Start, and End properties of `BadgeAlignment` property.
 
 {% tabs %}
 
