@@ -9,7 +9,7 @@ documentation: ug
 
 # Animation in .NET MAUI Linear Gauge (SfLinearGauge)
 
-All Linear Gauge elements such as axis along with ticks and labels, range, bar pointer, shape marker pointer and content marker pointer can be animated separately. 
+All Linear Gauge elements including the axis, ticks and labels, range, bar pointer, shape marker pointer, and content marker pointer, can be animated separately. 
 
 ## Animate axis
 
@@ -37,7 +37,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Animate range
 
-The [`EnableRangeAnimation`]() and [`AnimationDuration`]() properties in [`SfLinearGauge`]() is used to  animate the scale along with the ticks and labels. The range will be have a fade-in with opacity animation when this [`EnableRangeAnimation`]() is set to true. By default, the [`EnableRangeAnimation`]() is set to false. 
+The [`EnableRangeAnimation`]() and [`AnimationDuration`]() properties in [`SfLinearGauge`]() is used to animate the scale along with the ticks and labels. The range will have a fade-in with opacity animation when this [`EnableRangeAnimation`]() is set to true. By default, the [`EnableRangeAnimation`]() is set to false.
 
 {% tabs %}
 
@@ -61,15 +61,15 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Pointer animation
 
-The animation behavior is common for all the three pointers in Linear Gauge - shape, content and bar pointer. 
+The animation behavior is common for all the three pointers in Linear Gauge - shape, content, and bar pointer.
 
-All the above three pointers have the below properties for animation. 
+All the above three pointers have the following properties for the animation:
 
 *  [`EnableAnimation`]() - Enable or disable the animation for pointer. The default value is `false`.
 *  [`AnimationDuration`]() - Sets the animation duration. The default value is 1000.
 *  [`AnimationEasing`]() - Sets the animation type. 
 
-The [`AnimationEasing`]() supports the below animations. The default animation type is `Easing.Linear`.
+The [`AnimationEasing`]() supports the following animations. The default animation type is `Easing.Linear`.
 
 * `Linear`
 
@@ -95,7 +95,7 @@ The [`AnimationEasing`]() supports the below animations. The default animation t
 
 ### Animate bar pointer
 
-The below code example demonstrates updating the animation for bar pointer.
+The following code example demonstrates how to update the animation for bar pointer.
 
 {% tabs %}
 
@@ -125,7 +125,9 @@ The below code example demonstrates updating the animation for bar pointer.
 
 ### Animate marker pointers (Shape and Content Pointers)
 
-Both the shape and content marker pointers will have the same set of properties and behave similarly for animation. So we have demonstrated the [`LinearShapePointer`]() only but the same is applicable for [`LinearContentPointer`]() too. 
+Both the shape and content marker pointers will have the same set of properties and behave similarly for animation. 
+
+So, demonstrated the [`LinearShapePointer`]() only but the same is applicable for [`LinearContentPointer`]() too. 
 
 ### Marker pointer with `SpringOut` animation
 

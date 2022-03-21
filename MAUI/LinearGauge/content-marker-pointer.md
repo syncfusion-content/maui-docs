@@ -9,7 +9,7 @@ documentation: ug
 
 # Content Marker Pointer in .NET MAUI Linear Gauge (SfLinearGauge)
 
-The [`LinearContentPointer`]() in [`SfLinearGauge`]() allows to use any .NET MAUI content as marker pointer. The following code sample uses a [`Image`]() as marker pointer.
+The [`LinearContentPointer`]() in [`SfLinearGauge`]() allows you to use any .NET MAUI content as a marker pointer. The following code sample uses a `Image` as a marker pointer.
 
 {% tabs %}
 
@@ -150,7 +150,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Change the offset
 
-In addition to position the content marker pointer, it is also possible to change the offset of the shape pointer. The [`OffsetX`]() and [`OffsetY`]() are the distance from the axis. The cross positioned elements will not get affected by the [`OffsetX`]() and [`OffsetY`]() values. The following code sample demonstrates how to change the offset value of the shape pointer. 
+In addition to position the content marker pointer, it is also possible to change the offset of the shape pointer. The [`OffsetX`]() and [`OffsetY`]() are the distance from the axis. The cross-positioned elements will not get affected by the [`OffsetX`]() and [`OffsetY`]() values. The following code sample demonstrates how to change the offset value of the shape pointer. 
 
 {% tabs %}
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Bar Pointer in .NET MAUI Linear Gauge (SfLinearGauge)
 
-A bar pointer is an accenting line or shaded background that can be placed on a Linear Gauge to mark any current value in the axis track. The bar pointers always start from the minimum value of the axis and end with the specified value. So the [`Value`]() property is a required parameter for creating a bar pointer.
+A bar pointer is an accenting line or shaded background that can be placed on a Linear Gauge to mark any current value in the axis track. The bar pointers always start from the minimum value of the axis and end with the specified value. So, the [`Value`]() property is a required parameter for creating a bar pointer.
 
 ## Default bar pointer
 
@@ -44,7 +44,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Customize bar pointer thickness
 
-The thickness can be changed by the [`PointerSize`]() property of the bar pointer. The following code sample demonstrates the same. 
+The thickness can be changed using the [`PointerSize`]() property of the bar pointer. The following code sample demonstrates the same. 
 
 {% tabs %}
 
@@ -76,7 +76,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Customize edge style
 
-The edge style can be changed with the [`CornerStyle`]() property of the bar pointer. The edge style can be any of the `StartCurve`, `EndCurve`, `BothCurve`, and `BothFlat` options.The default value is `BothFlat`.
+The edge style can be changed using the [`CornerStyle`]() property of the bar pointer. The edge style can be any of the `StartCurve`, `EndCurve`, `BothCurve`, and `BothFlat` options. The default value is `BothFlat`.
 
 {% tabs %}
 
@@ -145,7 +145,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Customize the offset
 
-In addition to position the bar pointer, it is also possible to change the offset of the bar pointer. The [`Offset`]() is the distance from the axis and the cross positioned elements will not get affected by the [`Offset`]() value. The following  code sample demonstrates how to change the offset value of the bar pointer. 
+In addition to position the bar pointer, it is also possible to change the offset of the bar pointer. The [`Offset`]() value is the distance from the axis and it has no effect on cross-positioned elements. The following  code sample demonstrates how to change the offset value of the bar pointer. 
 
 {% tabs %}
 
@@ -254,7 +254,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Child support
 
-By using [`Child`]() property of bar pointer, you can provide a child for bar pointer. The child content is used to add any UI content like text or images, inside the bar pointer to improve readability.
+By using the [`Child`]() property of bar pointer, you can provide a child for the bar pointer. To improve readability, the child content is used to add any UI content, such as text or images, inside the bar pointer.
 
 {% tabs %}
 
