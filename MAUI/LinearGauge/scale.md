@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Axis in .NET MAUI Linear Gauge control | Syncfusion
-description: Learn here all about adding and customizing Axis of Syncfusion .NET MAUI Linear Gauge (SfLinearGauge) control and more.
+title: Scale in .NET MAUI Linear Gauge control | Syncfusion
+description: Learn here all about adding and customizing scale of Syncfusion .NET MAUI Linear Gauge (SfLinearGauge) control and more.
 platform: maui
 control: SfLinearGauge
 
 documentation: ug
 ---
 
-# Axis in .NET MAUI Linear Gauge (SfLinearGauge)
+# Scale in .NET MAUI Linear Gauge (SfLinearGauge)
 
-The Linear Gauge axis is a scale where a set of values can be plotted. An axis can be customized by changing the thickness, color and edge styles. Axis elements such as labels and ticks can also be easily customized and you can also inverse the axis.
+The Linear Gauge scale on which a set of values can be plotted. An scale can be customized by changing the thickness, color, and edge styles. Scale elements such as labels and ticks can also be easily customized and scale can be inversed.
 
-## Default axis
+## Default scale
 
-By default axis will have the [`Minimum`]() axis value as 0 and the [`Maximum`]() axis value as 100. Without any changes the default axis of the Linear Gauge will be displayed as follows. 
+By default, scale will have the [`Minimum`]() scale value as 0 and the [`Maximum`]() scale value as 100. Without any changes, the default scale of the Linear Gauge will be displayed as follows.
 
 {% tabs %}
 
@@ -35,9 +35,9 @@ this.Content = gauge;
 
 ![Initialize linear gauge for axis](images/getting-started/default_linear_gauge.PNG)
 
-## Customize minimum and maximum axis values
+## Customize minimum and maximum scale values
 
-The [`Minimum`]() and [`Maximum`]() properties of a Linear Gauge can be used to customize the axis values. In the below code snippet the axis is customized to have the [`Minimum`]() value of -50 to [`Maximum`]() value of 50. The axis values are displayed by the labels. Customizing these label styles are further explained in next topics.  
+The [`Minimum`]() and [`Maximum`]() properties of a Linear Gauge can be used to customize the scale values. In the following code sample, the scale is customized to have the [`Minimum`]() value of -50 to [`Maximum`]() value of 50. The scale values are displayed by the labels. Customizing these label styles are further explained in next topics.  
 
 {% tabs %}
 
@@ -64,7 +64,7 @@ this.Content = gauge;
 
 The orientation of linear scale can be customized by using the [`Orientation`]() property of linear gauge.
 
-When the Orientation property is Vertical, the axis will be rendered in bottom-to-top direction.
+When the Orientation property is Vertical, the scale will be rendered in bottom-to-top direction.
 
 {% tabs %}
 
@@ -86,17 +86,17 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ![Update orientation for axis scale](images/axis/linear_gauge_orientation.PNG)
 
-## Customize axis track style
+## Customize scale track style
 
-The linear axis track can be customized using the [`LineStyle`]() property. The [`LineStyle`]() has the following properties.
+The linear scale track can be customized using the [`LineStyle`]() property. The [`LineStyle`]() has the following properties.
 
-* [`Thickness`]() – Customizes the thickness of the axis track.
-* [`Fill`]() – Customizes the color of the axis track with a solid color.
-* [`GradientStops`]() - Customizes the color of the axis track with a gradient.
-* [`CornerRadius`]() - Customizes the axis track edge corners.
-* [`CornerStyle`]() - Customizes the axis track edge style as flat or curve.
+* [`Thickness`]() – Customizes the thickness of the scale track.
+* [`Fill`]() – Customizes the color of the scale track with a solid color.
+* [`GradientStops`]() - Customizes the color of the scale track with a gradient.
+* [`CornerRadius`]() - Customizes the scale track edge corners.
+* [`CornerStyle`]() - Customizes the scale track edge style as flat or curve.
 
-The following code sample demonstrates how to customize the [`Thickness`]() and [`Fill`]() properties.
+The following code sample demonstrates how to customize the [`Thickness`]() and [`Fill`]() properties:
 
 {% tabs %}
 
@@ -125,7 +125,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Apply solid color
 
-The below code snippet sets solid colors to the axis track.
+The following code sample sets solid colors to the gauge track.
 
 {% tabs %}
 
@@ -153,9 +153,9 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Apply gradient
 
-The [`Fill`]() property of [`LineStyle`]() allows to set a solid color, while the [`GradientStops`]() property of [`LineStyle`]() allows to apply linear-gradient to axis track.
+The [`Fill`]() property of [`LineStyle`]() allows to set a solid color, while the [`GradientStops`]() property of [`LineStyle`]() allows to apply linear-gradient to scale track.
 
-The following code sample sets gradient colors to the axis track.
+The following code sample sets gradient colors to the scale track.
 
 {% tabs %}
 
@@ -189,7 +189,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Customize corners
 
-The [`CornerStyle`]() property of [`LineStyle`]() specifies the corner type for the axis track. The corners can be customized with `BothFlat`, `BothCurve`, `StartCurve`, and `EndCurve` options. The default value of this property is `BothFlat`.
+The [`CornerStyle`]() property of [`LineStyle`]() specifies the corner type for the scale track. The corners can be customized with `BothFlat`, `BothCurve`, `StartCurve`, and `EndCurve` options. The default value of this property is `BothFlat`.
 
 {% tabs %}
 
@@ -245,10 +245,10 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 N> If you set both [`CornerStyle`]() and [`CornerRadius`]() in the [`LineStyle`](), [`CornerStyle`]() will be first priority for scale. 
 
-## Inverse the axis
+## Inverse the scale
 
-The direction of linear gauge axis can be customized by the [`IsInversed`]() property.
-When the [`IsInversed`]() property is true, the axis can be placed in an inverse direction. The default value of the [`IsInversed`]() property is false.
+The direction of linear gauge scale can be customized by the [`IsInversed`]() property.
+When the [`IsInversed`]() property is true, the scale can be placed in an inverse direction. The default value of the [`IsInversed`]() property is false.
 
 {% tabs %}
 
@@ -269,13 +269,13 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-You can see that the axis values are displayed from 100 to 0 as the axis track is inversed.
+You can see that the scale values are displayed from 100 to 0 as the scale track is inversed.
 
 ![Inverse linear gauge for axis](images/axis/axis_inversed.PNG)
 
-## Change axis track visibility
+## Change scale track visibility
 
-You can hide the axis track by setting the [`ShowLine`]() property to false. The default value of this property is true.
+You can hide the scale track by setting the [`ShowLine`]() property to false. The default value of this property is true.
 
 {% tabs %}
 
@@ -298,9 +298,9 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ![Hide linear gauge axis track](images/axis/hide_axis_track.PNG)
 
-## Customize axis values
+## Customize scale values
 
-Linear gauge allows you to display a set of values along with a custom axis based on your business logic by using the [`GenerateVisibleLabels`](),[`ValueToFactor`]() and [`FactorToValue`]() callbacks.
+Linear gauge allows you to display a set of values along with a custom scale based on your business logic by using the [`GenerateVisibleLabels`](),[`ValueToFactor`](), and [`FactorToValue`]() callbacks.
 
 {% tabs %}
 

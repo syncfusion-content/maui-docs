@@ -179,7 +179,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Change marker alignment
 
-The marker pointer alignment can be changed by the [`Alignment`]() property of [`LinearShapePointer`]().The available marker pointer alignments are `Start`, `End`, and `Center`.
+The marker pointer alignment can be changed by the [`Alignment`]() property of [`LinearShapePointer`](). The available marker pointer alignments are `Start`, `End`, and `Center`.
 
 {% tabs %}
 
@@ -213,7 +213,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Customize position
 
-By default, the shape pointer is positioned `Outside` the axis. This position can be changed by the [`Position`]() property of pointer. It is possible to position the shape pointer `Inside`, `Cross`, or `Outside` the scale. The following code sample demonstrates how to change the shape pointer position to inside the axis.  
+By default, the shape pointer is positioned `Outside` the scale. This position can be changed by the [`Position`]() property of pointer. It is possible to position the shape pointer `Inside`, `Cross`, or `Outside` the scale. The following code sample demonstrates how to change the shape pointer position to inside the scale.  
 
 {% tabs %}
 
@@ -247,7 +247,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Customize offset
 
-In addition to position the shape pointer, it is also possible to change the offset of the shape pointer. The [`OffsetX`]() and [`OffsetY`]() are the distance from the axis and the cross positioned elements will not get affected by the [`OffsetX`]() and [`OffsetY`]() values. The following code sample demonstrates how to change the [`OffsetX`]() and [`OffsetY`]() values of the shape pointer. 
+In addition to position the shape pointer, it is also possible to change the offset of the shape pointer. The [`OffsetX`]() and [`OffsetY`]() are the distance from the scale and the cross positioned elements will not get affected by the [`OffsetX`]() and [`OffsetY`]() values. The following code sample demonstrates how to change the [`OffsetX`]() and [`OffsetY`]() values of the shape pointer. 
 
 {% tabs %}
 

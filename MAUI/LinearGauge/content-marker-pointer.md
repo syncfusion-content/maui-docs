@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Content Marker Pointer in .NET MAUI Linear Gauge control | Syncfusion
-description: Learn here all about adding and customizing Content Marker Pointer of Syncfusion .NET MAUI Linear Gauge (SfLinearGauge) control and more.
+description: Learn here all about Content Pointer feature of the Syncfusion .NET MAUI Linear Gauge control, including image, text pointer support and more.
 platform: maui
 control: SfLinearGauge
 documentation: ug
@@ -97,7 +97,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Change the position
 
-By default, the shape pointer is positioned `Outside` the scale. This position can be changed by the [`Position`]() property of pointer. It is possible to position the shape pointer `Inside`, `Cross`, or `Outside` the axis. The following code sample demonstrates how to change the shape pointer position to `Cross` the scale. 
+By default, the shape pointer is positioned `Outside` the scale. This position can be changed by the [`Position`]() property of pointer. It is possible to position the shape pointer `Inside`, `Cross`, or `Outside` the scale. The following code sample demonstrates how to change the shape pointer position to `Cross` the scale. 
 
 {% tabs %}
 
@@ -150,7 +150,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Change the offset
 
-In addition to position the content marker pointer, it is also possible to change the offset of the shape pointer. The [`OffsetX`]() and [`OffsetY`]() are the distance from the axis. The cross-positioned elements will not get affected by the [`OffsetX`]() and [`OffsetY`]() values. The following code sample demonstrates how to change the offset value of the shape pointer. 
+In addition to position the content marker pointer, it is also possible to change the offset of the shape pointer. The [`OffsetX`]() and [`OffsetY`]() are the distance from the scale. The cross-positioned elements will not get affected by the [`OffsetX`]() and [`OffsetY`]() values. The following code sample demonstrates how to change the offset value of the shape pointer. 
 
 {% tabs %}
 

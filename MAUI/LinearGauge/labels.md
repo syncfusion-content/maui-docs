@@ -9,13 +9,13 @@ documentation: ug
 
 # Labels in .NET MAUI Linear Gauge (SfLinearGauge)
 
-The default style of axis labels is as follows.
+The default style of gauge labels is as follows.
 
 ![Initialize linear gauge for axis](images/getting-started/default_linear_gauge.PNG)
 
 ## Customize label styles
 
-Axis labels can be customized using the [`LabelStyle`]() property of [`SfLinearGauge`](). The [`LabelStyle`]() property has the following properties to customize the axis labels.
+Scale labels can be customized using the [`LabelStyle`]() property of [`SfLinearGauge`](). The [`LabelStyle`]() property has the following properties to customize the scale labels.
 
 * `TextColor` – Allows to customize the color of the labels.
 * `FontFamily` – Allows to specify the font family for labels.
@@ -52,7 +52,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Change visibility
 
-The [`ShowLabels`]() property of [`SfLinearGauge`]() allows you to show or hide the visibility of axis labels. The default value of this property is true.
+The [`ShowLabels`]() property of [`SfLinearGauge`]() allows you to show or hide the visibility of scale labels. The default value of this property is true.
 
 {% tabs %}
 
@@ -104,7 +104,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Change label position
 
-The linear axis allows to position the labels either `Inside` or `Outside` the axis track using the [`LabelPosition`]() property. By default, labels are positioned `Inside` the axis track.
+The linear gauge allows to position the labels either `Inside` or `Outside` the gauge track using the [`LabelPosition`]() property. By default, labels are positioned `Inside` the gauge track.
 
 {% tabs %}
 
@@ -155,7 +155,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ##  Customize maximum number of visible labels
 
-By default, a maximum of three labels is displayed for every 100 logical pixels in an axis. The maximum number of labels that should present within 100 logical pixels length can be customized using the [`MaximumLabelsCount`]() property of the axis. 
+By default, a maximum of three labels is displayed for every 100 logical pixels in an scale. The maximum number of labels that should present within 100 logical pixels length can be customized using the [`MaximumLabelsCount`]() property of the scale. 
 
 {% tabs %}
 

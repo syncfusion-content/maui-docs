@@ -15,13 +15,13 @@ The pointer is used to indicate values on a scale. The Linear Gauge control has 
 [`Shape Pointer`]()
 [`Content pointer`]()
 
-All the pointers can be customized as needed. You can add multiple pointers to the gauge to point multiple values on the same scale. The value of the pointer is set using the Value property.
+All the pointers can be customized as needed. You can add multiple pointers to the gauge to point multiple values on the same scale. The value of the pointer is set using the [`Value`]() property.
 
 ![Pointer in linear gauge](images/pointers/pointers.PNG)
 
 ## Interaction with pointers
 
-The following code sample demonstrates how to update simple marker pointer value based on swipe or drag gestures.
+The following code sample demonstrates how to update a simple marker pointer value based on swipe or drag gestures.
 
 {% tabs %}
 
@@ -93,9 +93,9 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 The [`DragOffset`]() property is used to specify the outer dragging offset for pointer. When the pointer is pressed close to the pointer, this value helps in dragging the pointer. The default value of [`DragOffset`]() is 15d.
 
-For example, if the value of [`DragOffset`]() is 20, the pointer will be dragged while interact with pointer around 20 pixel. 
+For example, if the value of [`DragOffset`]() is 20, the pointer will be dragged while interacting with that pointer around 20 pixels.	
 
-If the value of [`DragOffset`]() is 0, the pointer will be dragged while interact with exact pointer bounds alone. 
+If the value of [`DragOffset`]() is 0, the pointer will be dragged while interacting with exact pointer bounds alone.
 
 N> To work with the [`DragOffset`]() value, enable pointer interaction support.
 

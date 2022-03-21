@@ -9,7 +9,7 @@ documentation: ug
 
 # Ticks in .NET MAUI Linear Gauge (SfLinearGauge)
 
-The default style of axis ticks is as follows.
+The default style of scale ticks is as follows.
 
 ![Initialize linear gauge for axis](images/getting-started/default_linear_gauge.PNG)
 
@@ -72,7 +72,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Customize minor tick interval
 
-The major ticks are generated based on the [`Interval`]() property which is documented in `Customize the interval between labels` topic. The minor ticks are calculated using the [`MinorTicksPerInterval`]() property of [`SfLinearGauge`](). By default, the value of this property is 1.
+The major ticks are generated based on the [`Interval`]() property, which is documented in `Customize the interval between labels` topic. The minor ticks are calculated using the [`MinorTicksPerInterval`]() property of [`SfLinearGauge`](). By default, the value of this property is 1.
 
 {% tabs %}
 
@@ -96,7 +96,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Change tick visibility
 
-The [`ShowTicks`]() property of the axis is used to enable or disable the visibility of both the major and the minor ticks. The default value of this property is true.
+The [`ShowTicks`]() property of the scale is used to enable or disable the visibility of both the major and the minor ticks. The default value of this property is true.
 
 {% tabs %}
 
@@ -120,7 +120,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Customize tick position
 
-The linear axis allows to position the ticks either inside or outside the axis track using the [`TickPosition`]() property. By default, ticks are positioned inside the axis track.
+The linear scale allows to position the ticks either inside or outside the scale track using the [`TickPosition`]() property. By default, ticks are positioned inside the scale track.
 
 
 {% tabs %}
@@ -149,7 +149,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Customize tick offset
 
-The ticks can be moved near or far to the axis line using the [`TickOffset`]() property. The default value of tick offset is double.NaN. While setting offset for the ticks, the axis labels are also moved along with the ticks.
+The ticks can be moved near or far to the scale line using the [`TickOffset`]() property. The default value of tick offset is double.NaN. While setting offset for the ticks, the scale labels are also moved along with the ticks.
 
 {% tabs %}
 

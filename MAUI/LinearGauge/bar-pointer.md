@@ -9,7 +9,7 @@ documentation: ug
 
 # Bar Pointer in .NET MAUI Linear Gauge (SfLinearGauge)
 
-A bar pointer is an accenting line or shaded background that can be placed on a Linear Gauge to mark any current value in the axis track. The bar pointers always start from the minimum value of the axis and end with the specified value. So, the [`Value`]() property is a required parameter for creating a bar pointer.
+A bar pointer is an accenting line or shaded background that can be placed on a Linear Gauge to mark any current value in the scale track. The bar pointers always start from the minimum value of the scale and end with the specified value. So, the [`Value`]() property is a required parameter for creating a bar pointer.
 
 ## Default bar pointer
 
@@ -113,7 +113,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Customize the position
 
-By default, the bar pointer is positioned cross to the axis. This position can be changed by the [`Position`]() property of a pointer. It is possible to position the bar pointer `Inside`, `Cross`, or `Outside` the axis. The following code sample demonstrates how to change the bar pointer position to inside the axis.
+By default, the bar pointer is positioned cross to the scale. This position can be changed by the [`Position`]() property of a pointer. It is possible to position the bar pointer `Inside`, `Cross`, or `Outside` the scale. The following code sample demonstrates how to change the bar pointer position to inside the scale.
 
 {% tabs %}
 
@@ -145,7 +145,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Customize the offset
 
-In addition to position the bar pointer, it is also possible to change the offset of the bar pointer. The [`Offset`]() value is the distance from the axis and it has no effect on cross-positioned elements. The following  code sample demonstrates how to change the offset value of the bar pointer. 
+In addition to position the bar pointer, it is also possible to change the offset of the bar pointer. The [`Offset`]() value is the distance from the scale and it has no effect on cross-positioned elements. The following  code sample demonstrates how to change the offset value of the bar pointer. 
 
 {% tabs %}
 

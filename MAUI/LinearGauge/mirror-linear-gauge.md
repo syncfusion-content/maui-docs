@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mirror in .NET MAUI Linear Gauge control | Syncfusion
-description: Learn here about mirroring the Syncfusion .NET MAUI Linear Gauge (SfLinearGauge) control with IsMirrored property
+description: Learn how to use the IsMirrored property to mirror the Syncfusion.NET MAUI Linear Gauge (SfLinearGauge) control.
 platform: maui
 control: SfLinearGauge
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Mirrored in .NET MAUI Linear Gauge (SfLinearGauge)
 
-The [`IsMirrored`]() property in [`SfLinearGauge`]() mirrors all the Gauge elements in the `SfLinearGauge`. The following code sample demonstrates how to setting the [`IsMirrored`]() property.
+The [`IsMirrored`]() property in [`SfLinearGauge`]() mirrors all the Gauge elements in the `SfLinearGauge`. The following code sample demonstrates how to set the [`IsMirrored`]() property.
 
 {% tabs %}
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Content Pointer in .NET MAUI Radial Gauge control | Syncfusion
-description: Learn here all about Content Pointer feature of Syncfusion .NET MAUI Radial Gauge control with image, text pointer support and more.
+description: Learn here all about Content Pointer feature of the Syncfusion .NET MAUI Radial Gauge control, including image, text pointer support and more.
 platform: maui
 control: SfRadialGauge
 documentation: ug
@@ -93,7 +93,7 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
 The content pointer can be moved near or far from its actual position using the [`Offset`]() and [`OffsetUnit`]() properties.
 
-When you set [`OffsetUnit`]() to logical pixel, then the content pointer will be moved based on the logical pixel value. If you set [`OffsetUnit`]() to factor, then provided factor will be multiplied with the axis radius value, and then the pointer will be moved to corresponding value. The default value of [`OffsetUnit`]() is [`SizeUnit.Pixel`]().
+When you set [`OffsetUnit`]() to logical pixel, the content pointer is moved based on the logical pixel value. If you set [`OffsetUnit`]() to factor, then provided factor will be multiplied by the axis radius value, and then the pointer will be moved to the corresponding value. The default value of [`OffsetUnit`]() is `SizeUnit.Pixel`.
 
 {% tabs %}
 

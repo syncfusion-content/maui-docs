@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI Linear Gauge
 
-This section explains the steps required to add the [`.NET MAUI Linear Gauge`]() control and its elements such as axis, range, and pointer. This section covers only basic features needed to get started with Syncfusion linear gauge control.
+This section explains the steps required to add the [`.NET MAUI Linear Gauge`]() control and its elements such as scale, range, and pointer. This section covers only basic features needed to get started with Syncfusion linear gauge control.
 
 ## Creating an application using the .NET MAUI Linear Gauge
 

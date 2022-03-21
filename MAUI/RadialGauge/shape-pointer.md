@@ -64,10 +64,10 @@ The shape pointer can be customized using the following properties:
 * [`ShapeHeight`]() – Allows you to specify the shape height.
 * [`ShapeWidth`]() – Allows you to specify the shape width.
 * [`Stroke`]() – Allows you to specify the border color for the shape.
-* [`BorderWidth`]() –  Allows you to specify the border width of the shape.
-* [`HasShadow`]() –  Allows you to specify the shadow of the shape.
-* [`OverlayFill`]() –  Allows you to specify the color for dragging overlay for the shape.
-* [`OverlayRadius`]() –  Allows you to specify the radius for dragging overlay for the shape.
+* [`BorderWidth`]() – Allows you to specify the border width of the shape.
+* [`HasShadow`]() – Allows you to specify the shadow of the shape.
+* [`OverlayFill`]() – Allows you to specify the color for the shapes' dragging overlay.
+* [`OverlayRadius`]() – Allows you to specify the radius for the shapes' dragging overlay.
 
 {% tabs %}
 
@@ -159,7 +159,7 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
 ## Shape pointer overlay
 
-The shape pointer overlay rendered around the shape when the shape pointer is dragged. When [`IsInteractive`]() property of pointer is set as true and while dragging the marker, the overlay will come around the marker pointer.
+The shape pointer overlay is rendered around the shape when the shape pointer is dragged. When [`IsInteractive`]() property of pointer is set to true and the marker is dragged, the overlay will come around the marker pointer.
 
 {% tabs %}
 
@@ -204,7 +204,7 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
 The marker pointer can be moved near or far from its actual position using the [`Offset`]() and [`OffsetUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.MarkerPointer.html#Syncfusion_Maui_Gauges_MarkerPointer_OffsetUnit) properties. 
 
-When you set [`OffsetUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.MarkerPointer.html#Syncfusion_Maui_Gauges_MarkerPointer_OffsetUnit) to pixel, the marker pointer will be moved based on the pixel value. If you set [`OffsetUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.MarkerPointer.html#Syncfusion_Maui_Gauges_MarkerPointer_OffsetUnit) to factor, then provided factor will be multiplied with the axis radius value, and then the pointer will be moved to corresponding value. The default value of [`OffsetUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.MarkerPointer.html#Syncfusion_Maui_Gauges_MarkerPointer_OffsetUnit) is [`SizeUnit.Pixel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SizeUnit.html#Syncfusion_Maui_Gauges_SizeUnit_Pixel).
+When you set [`OffsetUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.MarkerPointer.html#Syncfusion_Maui_Gauges_MarkerPointer_OffsetUnit) to pixel, the marker pointer will be moved based on the pixel value. If you set [`OffsetUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.MarkerPointer.html#Syncfusion_Maui_Gauges_MarkerPointer_OffsetUnit) to factor, then provided factor will be multiplied by the scale radius value, and then the pointer will be moved to corresponding value. The default value of [`OffsetUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.MarkerPointer.html#Syncfusion_Maui_Gauges_MarkerPointer_OffsetUnit) is [`SizeUnit.Pixel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SizeUnit.html#Syncfusion_Maui_Gauges_SizeUnit_Pixel).
 
 {% tabs %}
 
