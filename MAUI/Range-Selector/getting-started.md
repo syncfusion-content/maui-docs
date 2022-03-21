@@ -23,9 +23,9 @@ Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.o
 
  ![Create MAUI Application](images/getting-started/nuget-installation.png)
 
-## Register the handler
+## Handler registration
 
-Syncfusion.Maui.Core nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
+In the MauiProgram.cs file, register the handler for Syncfusion core
 
 {% highlight C# %}
 
@@ -76,7 +76,7 @@ using Syncfusion.Maui.Sliders;
 
 {% endtabs %}
 
-## Initialize range selector
+## Initialize Range Selector
 
 Import the [`SfRangeSelector`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSelector.html) namespace and initialize the range selector as shown below.
 
@@ -117,7 +117,7 @@ namespace RangeSelector
 
 ![Initialize RangeSelector](images/getting-started/initialize-slider.png)
 
-## Adding content to range selector
+## Adding content to Range Selector
 
 The [`Content`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ShowLabels) property adding the content to the range selector.
 
@@ -127,16 +127,16 @@ The [`Content`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.Slid
 
 <ContentPage 
              ...
-             xmlns:rangesliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
+             xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
              xmlns:local="clr-namespace:SliderTestbedSample.RangeSelector">
     <ContentPage.BindingContext>
         <local:ViewModel />
     </ContentPage.BindingContext>
-    <rangesliders:SfRangeSelector Minimum="10"
-                                  Maximum="20"
-                                  RangeStart="13"
-                                  RangeEnd="17">
+    <rangeselector:SfRangeSelector Minimum="10"
+                                   Maximum="20"
+                                   RangeStart="13"
+                                   RangeEnd="17">
             <chart:SfCartesianChart>
                 <chart:SfCartesianChart.XAxes>
                     <chart:DateTimeAxis IsVisible="False"
@@ -154,7 +154,7 @@ The [`Content`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.Slid
                     </chart:SplineAreaSeries>
                 </chart:SfCartesianChart.Series>
             </chart:SfCartesianChart>
-        </rangesliders:SfRangeSelector>
+        </rangeselector:SfRangeSelector>
 </ContentPage>
 
 {% endhighlight %}
@@ -252,7 +252,7 @@ rangeSelector.MinorTicksPerInterval = 1;
 
 ![RangeSelector ticks](images/getting-started/ticks.png)
 
-## Inverse the range selector
+## Inverse the Range Selector
 
 You can invert the range selector using the [`IsInversed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_IsInversed) property. The default value of the [`IsInversed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_IsInversed) property is `False`.
 
