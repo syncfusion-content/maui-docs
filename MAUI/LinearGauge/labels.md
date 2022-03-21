@@ -78,7 +78,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Customize interval between labels
 
-The [`Interval`]() between labels can be customized using the [`Interval`]() property of [`SfLinearGauge`](). The major ticks are generated based on this interval property.
+The [`Interval`]() between labels can be customized using the [`Interval`]() property of [`SfLinearGauge`](). The major ticks are generated based on this [`Interval`]() property.
 
 {% tabs %}
 
