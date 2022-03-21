@@ -136,6 +136,8 @@ this.Scheduler.MonthView.ViewHeaderSettings.Height = 100;
 {% endhighlight %}
 {% endtabs %}
 
+![customize-view-header-height-in-month-view-in-maui-scheduler](images/month-view/customize-view-header-height-in-month-view-in-maui-scheduler.png)
+
 ### Customize view header appearance using text style
 
 Customize the month view header day text style, day format and background color by using the `DayTextStyle,` `DayFormat` and `Background` of `ViewHeaderSettings` properties of `MonthView` respectively.
@@ -197,6 +199,8 @@ You can customize the view header appearance by using the `ViewHeaderTemplate` p
 
 {% endhighlight %}
 {% endtabs %}
+
+![customize-view-header-appearance-using-template-in-month-view-in-maui-scheduler](images/month-view/customize-view-header-appearance-using-template-in-month-view-in-maui-scheduler.png)
 
 ### Customize view header appearance using DataTemplateSelector
 
@@ -328,6 +332,8 @@ You can customize the month cell appearance by using the `CellTemplate` property
 
 {% endhighlight %}
 {% endtabs %}
+
+![customize-month-cell-appearance-using-template-in-month-view-in-maui-scheduler](images/month-view/customize-month-cell-appearance-using-template-in-month-view-in-maui-scheduler.png)
 
 N>
 * The BindingContext of the `CellTemplate` is the `SchedulerMonthCellDetails.`

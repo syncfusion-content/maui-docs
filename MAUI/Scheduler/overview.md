@@ -33,6 +33,8 @@ The Syncfusion .NET MAUI Scheduler (SfScheduler) has eight different types of bu
 
  * **Agenda view**: The agenda view displays a list of scheduled appointments grouped by week, between set minimum and maximum dates. You can customize everything from the date and time formats to the styling of each header.
 
+ ![agenda-view-events-in-maui-scheduler](images/overview/agenda-view-events-in-maui-scheduler.png)
+
  * **Timeline month view**: The appointments will be displayed on a horizontal axis, with each column representing a day of the month.
 
  ![timeline-month-view-in-maui-scheduler](images/overview/timeline-month-view-in-maui-scheduler.png)

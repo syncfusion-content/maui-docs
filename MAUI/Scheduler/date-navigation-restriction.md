@@ -144,6 +144,8 @@ this.Scheduler.AllowViewNavigation = true;
 {% endhighlight %}
 {% endtabs %}
 
+![allow-view-navigation-in-maui-scheduler](images/date-navigation-restriction/allow-view-navigation-in-maui-scheduler.gif)
+
 N>
 * The default value of `AllowViewNavigation` is `false.`
 * The `AllowViewNavigation` is not applicable for the `day` and `timeline day` views.

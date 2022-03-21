@@ -42,6 +42,8 @@ this.Scheduler.AppointmentsSource = appointments;
 {% endhighlight %}
 {% endtabs %}
 
+![agenda-view-in-maui-scheduler](images/agenda-view/agenda-view-in-maui-scheduler.png)
+
 ## Appointment text customization
 
 The appointment text style can be customized by using the `AppointmentTextStyle` property of the `SfScheduler.`
@@ -73,7 +75,7 @@ this.Scheduler.AppointmentsSource = appointments;
 // Creating the text style for the appointments.
 var appointmentTextStyle = new SchedulerTextStyle()
 {
-    TextColor = Colors.White,
+    TextColor = Colors.Yellow,
     FontSize = 12,
 };
 // Setting the text style for the appointments.
@@ -81,6 +83,8 @@ this.Scheduler.AppointmentTextStyle = appointmentTextStyle;
 
 {% endhighlight %}
 {% endtabs %}
+
+![appointment-text-appearence-customization-in-maui-scheduler](images/agenda-view/appointment-text-appearence-customization-in-maui-scheduler.png)
 
 ## Day header customization
 
@@ -120,6 +124,8 @@ this.Scheduler.AgendaView.DayHeaderSettings.Background = Brush.LightGreen;
 
 {% endhighlight %}
 {% endtabs %}
+
+![day-header-appearence-text-style-customization-in-maui-scheduler](images/agenda-view/day-header-appearence-text-style-customization-in-maui-scheduler.png)
 
 N> The default value of `DayFormat` is `MMM, ddd.`
 
@@ -162,6 +168,8 @@ this.Scheduler.AgendaView.WeekHeaderSettings.Background = Brush.LightGreen;
 
 {% endhighlight %}
 {% endtabs %}
+
+![week-header-appearence-text-style-customization-in-maui-scheduler](images/agenda-view/week-header-appearence-text-style-customization-in-maui-scheduler.png)
 
 N> 
 * The default value of `DateFormat,` and `Height` are `MMM dd,` and `30` respectively.
@@ -209,6 +217,8 @@ this.Scheduler.AgendaView.MonthHeaderSettings.Background = Brush.LightGreen;
 {% endhighlight %}
 {% endtabs %}
 
+![month-header-appearence-text-style-customization-in-maui-scheduler](images/agenda-view/month-header-appearence-text-style-customization-in-maui-scheduler.png)
+
 ### Customize Month header appearance using DataTemplate
 
 You can customize the month header appearance of scheduler by using the `MonthHeaderTemplate` property of `AgendaView.`
@@ -234,6 +244,8 @@ You can customize the month header appearance of scheduler by using the `MonthHe
 {% endhighlight %}
 {% endtabs %}
 
-N> 
+![month-header-appearence-template-customization-in-maui-scheduler](images/agenda-view/month-header-appearence-template-customization-in-maui-scheduler.png)
+
+N>
 * The default value of `DateFormat,` and `Height` are `MMMM yyyy,` and `150` respectively.
 * For desktop UI, The agenda view displays the appointment only.

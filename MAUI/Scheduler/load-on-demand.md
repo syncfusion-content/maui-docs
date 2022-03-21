@@ -11,6 +11,8 @@ documentation: ug
 
 The Scheduler provides the capability to display an interactive view when the view is changed, or swipe between the views, and also to load appointments on-demand with a loading indicator, thereby improving loading performance when there are appointments range for multiple years.
 
+![load-appointment-on-demand-view-in-all-scheduler-views-in-maui-scheduler](images/load-on-demand/load-appointment-on-demand-view-in-all-scheduler-views-in-maui-scheduler.gif)
+
 ## Load appointments on demand
 
 It allows you to load appointments on-demand for the visible dates. The `ShowBusyIndicator` property can be used to start and stop the loading indicator animation before and after appointments are loaded.
