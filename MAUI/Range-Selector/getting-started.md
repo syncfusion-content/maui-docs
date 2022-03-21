@@ -134,9 +134,9 @@ The [`Content`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.Slid
         <local:ViewModel />
     </ContentPage.BindingContext>
     <rangesliders:SfRangeSelector Minimum="10"
-                                 Maximum="20"
-                                 RangeStart="13"
-                                 RangeEnd="17">
+                                  Maximum="20"
+                                  RangeStart="13"
+                                  RangeEnd="17">
             <chart:SfCartesianChart>
                 <chart:SfCartesianChart.XAxes>
                     <chart:DateTimeAxis IsVisible="False"
