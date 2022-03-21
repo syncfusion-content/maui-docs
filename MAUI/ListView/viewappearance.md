@@ -889,6 +889,8 @@ public class ListViewItemExt : ListViewItem
 
 Here `FadeTo` animation is applied for [ListViewItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewItem.html), when comes in the view. 
 
+![MAUI Extension of ListViewItem](Images/appearance/maui-listview-extension-of-listview-item.gif)
+
 ### Right to left(RTL)
 
 `SfListView` supports to change the flow of text to the right-to-left direction by setting the `FlowDirection` property. 
