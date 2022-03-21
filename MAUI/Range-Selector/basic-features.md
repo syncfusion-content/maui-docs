@@ -7,7 +7,7 @@ control: SfRangeSelector
 documentation: ug
 ---
 
-# Basic features  in .NET MAUI Range Selector (SfRangeSelector, SfDateTimeRangeSelector)
+# Basic features  in .NET MAUI Range Selector (SfRangeSelector)
 
 This section explains about how to add the numeric and date range selector.
 
@@ -42,10 +42,10 @@ You can show numeric values in the range selector by setting double values to th
         <local:ViewModel />
     </ContentPage.BindingContext>
     <rangesliders:SfRangeSelector Minimum="10"
-                                 Maximum="20"
-                                 RangeStart="13"
-                                 RangeEnd="17"
-                                 ShowLabels="True">
+                                  Maximum="20"
+                                  RangeStart="13"
+                                  RangeEnd="17"
+                                  ShowLabels="True">
             <chart:SfCartesianChart>
                 <chart:SfCartesianChart.XAxes>
                     <chart:DateTimeAxis IsVisible="False"
