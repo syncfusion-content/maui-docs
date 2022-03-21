@@ -331,3 +331,63 @@ You can customize the month cell appearance by using the `CellTemplate` property
 
 N>
 * The BindingContext of the `CellTemplate` is the `SchedulerMonthCellDetails.`
+
+### Customize month cell appearance using DataTemplateSelector
+
+You can customize the month cell appearance by using the `CellTemplate` property of `MonthView` in the `SfScheduler.` The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler month cells by using the `CellTemplate.` It lets to choose a different data template for each month cells, customizing the appearance of a particular month cell based on certain conditions.
+
+{% tabs %}
+{% highlight xaml %}
+
+<Grid>
+    <Grid.Resources>
+        <DataTemplate x:Key="normalDateTemplate">
+            <Border Background = "BlueViolet">
+                <Label HorizontalTextAlignment="Center" TextColor="White" Text="{Binding DateTime.Day}"/>
+            </Border>
+        </DataTemplate>
+        <DataTemplate x:Key="todayDateTemplate">
+            <Border Background = "BlueViolet">
+                <Label HorizontalTextAlignment="Center" TextColor="Yellow" Text="{Binding DateTime.Day}"/>
+            </Border>
+        </DataTemplate>
+        <local:MonthCellTemplateSelector x:Key="monthCellTemplateSelector" TodayDateTemplate="{StaticResource todayDateTemplate}" NormalDateTemplate="{StaticResource normalDateTemplate}"/>
+    </Grid.Resources>
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                           View="Month" >
+        <scheduler:SfScheduler.MonthView>
+            <scheduler:SchedulerMonthView CellTemplate="{StaticResource monthCellTemplateSelector}" />
+        </scheduler:SfScheduler.MonthView>
+    </scheduler:SfScheduler>
+ </Grid>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MonthCellTemplateSelector.cs" %}
+
+public class MonthCellTemplateSelector : DataTemplateSelector
+{
+    public MonthCellTemplateSelector()
+    {
+    }
+    public DataTemplate NormalDateTemplate { get; set; }
+    public DataTemplate TodayDateTemplate { get; set; }
+    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+    {
+        var monthCellDetails = item as SchedulerMonthCellDetails;
+        if (monthCellDetails.DateTime.Date == DateTime.Today.Date)
+            return TodayDateTemplate;
+        else
+            return NormalDateTemplate;
+    }
+}
+
+{% endhighlight %}  
+{% highlight c# %}
+
+this.Scheduler.View = SchedulerView.Month;
+
+{% endhighlight %} 
+{% endtabs %}
+
+N>
+* The BindingContext of the `CellTemplate` is the `SchedulerMonthCellDetails.`

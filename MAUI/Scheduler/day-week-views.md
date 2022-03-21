@@ -733,6 +733,68 @@ You can customize the view header appearance by using the `ViewHeaderTemplate` p
 N>
 * The BindingContext of the `ViewHeaderTemplate` is the`DateTime.` The `SelectableDayPredicate,` `MinimumDateTime,` and `MaximumDateTime` properties of date and time values can be used directly in the data template selector.
 
+### Customize view header appearance using DataTemplateSelector
+
+You can customize the view header appearance by using the `ViewHeaderTemplate` property of `DaysView` in the `SfScheduler.` The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler view header by using the `ViewHeaderTemplate.` It lets to choose a different data template for each view header, customizing the appearance of a particular view header based on certain conditions.
+
+{% tabs %}
+{% highlight xaml %}
+
+ <Grid>
+    <Grid.Resources>
+        <DataTemplate x:Key="normalDateTemplate">
+            <StackLayout x:Name="stackLayout" Orientation="Vertical" Background="BlueViolet">
+                <Label x:Name="label" HorizontalOptions="Center"  VerticalOptions="Center" Text="{Binding StringFormat='{0:dd}'}" FontSize="Small" FontFamily="Bold" TextColor="White" />
+                <Label x:Name="label1" HorizontalOptions="Center"  VerticalOptions="Center" Text="{Binding StringFormat='{0:ddd}'}"  FontSize="Small" FontFamily="Bold" TextColor="White"/>
+            </StackLayout>
+        </DataTemplate>
+        <DataTemplate x:Key="todayDateTemplate">
+            <StackLayout x:Name="stackLayout" Orientation="Vertical" Background="BlueViolet">
+                <Label x:Name="label" HorizontalOptions="Center"  VerticalOptions="Center" Text="{Binding StringFormat='{0:dd}'}" FontSize="Small" FontFamily="Bold" TextColor="Yellow" />
+                <Label x:Name="label1" HorizontalOptions="Center"  VerticalOptions="Center" Text="{Binding StringFormat='{0:ddd}'}"  FontSize="Small" FontFamily="Bold" TextColor="Yellow"/>
+            </StackLayout>
+        </DataTemplate>
+        <local:ViewHeaderTemplateSelector x:Key="viewHeaderTemplateSelector" TodayDateTemplate="{StaticResource todayDateTemplate}" NormalDateTemplate="{StaticResource normalDateTemplate}"/>
+    </Grid.Resources>
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                           View="Week" >
+        <scheduler:SfScheduler.DaysView>
+            <scheduler:SchedulerDaysView ViewHeaderTemplate="{StaticResource viewHeaderTemplateSelector}" />
+        </scheduler:SfScheduler.DaysView>
+    </scheduler:SfScheduler>
+ </Grid>
+
+{% endhighlight %}
+{% highlight c# tabtitle="ViewHeaderTemplateSelector.cs" %}
+
+public class ViewHeaderTemplateSelector : DataTemplateSelector
+{
+    public ViewHeaderTemplateSelector()
+    {
+    }
+    public DataTemplate NormalDateTemplate { get; set; }
+    public DataTemplate TodayDateTemplate { get; set; }
+    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+    {
+        var dateTime = (DateTime)item;
+        if (dateTime.Date == DateTime.Today.Date)
+            return TodayDateTemplate;
+        else
+            return NormalDateTemplate;
+    }
+}
+
+{% endhighlight %}  
+{% highlight c# %}
+
+this.Scheduler.View = SchedulerView.Week;
+
+{% endhighlight %} 
+{% endtabs %}
+
+N>
+* The BindingContext of the `ViewHeaderTemplate` is the`DateTime.` The `SelectableDayPredicate,` `MinimumDateTime,` and `MaximumDateTime` properties of date and time values can be used directly in the data template selector.
+
 
 ## Time text formatting
 

@@ -59,7 +59,7 @@ this.Scheduler.HeaderView.TextFormat = "MMM yy";
 {% endhighlight %}
 {% endtabs %}
 
-## Header appearance
+## Header customization
 
 The header can be customized by using the `HeaderView` property of the `SfScheduler.`
 
