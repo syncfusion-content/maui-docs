@@ -42,6 +42,8 @@ this.Scheduler.AppointmentsSource = appointments;
 {% endhighlight %}
 {% endtabs %}
 
+![agenda-view-in-maui-scheduler](images/agenda-view/agenda-view-in-maui-scheduler.png)
+
 ## Month header customization
 
 The agenda month header view can be customized by using the `MonthHeaderSettings` property of `AgendaView` in the `SfScheduler.`
@@ -84,6 +86,8 @@ this.Scheduler.AgendaView.MonthHeaderSettings.Background = Brush.LightGreen;
 {% endhighlight %}
 {% endtabs %}
 
+![month-header-appearence-text-style-customization-in-maui-scheduler](images/agenda-view/month-header-appearence-text-style-customization-in-maui-scheduler.png)
+
 ### Customize month header appearance using DataTemplate
 
 You can customize the month header appearance of scheduler by using the `MonthHeaderTemplate` property of `AgendaView.`
@@ -108,6 +112,8 @@ You can customize the month header appearance of scheduler by using the `MonthHe
 
 {% endhighlight %}
 {% endtabs %}
+
+![month-header-appearence-template-customization-in-maui-scheduler](images/agenda-view/month-header-appearence-template-customization-in-maui-scheduler.png)
 
 N> 
 * The default value of `DateFormat,` and `Height` are `MMMM yyyy,` and `150` respectively.
@@ -215,6 +221,8 @@ this.Scheduler.AgendaView.WeekHeaderSettings.Background = Brush.LightGreen;
 {% endhighlight %}
 {% endtabs %}
 
+![week-header-appearence-text-style-customization-in-maui-scheduler](images/agenda-view/week-header-appearence-text-style-customization-in-maui-scheduler.png)
+
 N> 
 * The default value of `DateFormat,` and `Height` are `MMM dd,` and `30` respectively.
 * For desktop UI, The agenda view displays the appointment only.
@@ -258,6 +266,8 @@ this.Scheduler.AgendaView.DayHeaderSettings.Background = Brush.LightGreen;
 {% endhighlight %}
 {% endtabs %}
 
+![day-header-appearence-text-style-customization-in-maui-scheduler](images/agenda-view/day-header-appearence-text-style-customization-in-maui-scheduler.png)
+
 N> The default value of `DayFormat` is `MMM, ddd.`
 
 ## Appointment text customization
@@ -299,3 +309,5 @@ this.Scheduler.AppointmentTextStyle = appointmentTextStyle;
 
 {% endhighlight %}
 {% endtabs %}
+
+![appointment-text-appearence-customization-in-maui-scheduler](images/agenda-view/appointment-text-appearence-customization-in-maui-scheduler.png)
