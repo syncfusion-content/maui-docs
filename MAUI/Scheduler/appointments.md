@@ -994,6 +994,7 @@ this.Scheduler.AppointmentsSource = appointments;
 
 N>
 * The `BindingContext` for `AppointmentTemplate` for both `SchedulerAppointment` and `SchedulerAppointment.Data` in `AppointmentsSource.`
+* The data template selector is experiencing more performance issues, when creating template views and there is a delay in loading.
 
 ## Appointment selection background
 

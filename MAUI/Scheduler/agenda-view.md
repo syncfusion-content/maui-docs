@@ -115,28 +115,65 @@ N>
 
 ### Customize month header appearance using DataTemplateSelector
 
-You can customize the time region appearance by using the `TimeRegionTemplate` property of `DaysView` in the `SfScheduler.` The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler time region by using the `TimeRegionTemplate.` It lets to choose a different data template for each time region, customizing the appearance of a particular time region based on certain conditions.
+You can customize the month header appearance by using the `MonthHeaderTemplate` property of `AgendaView` in the `SfScheduler.` The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to month header by using the `MonthHeaderTemplate.` It lets to choose a different data template for each month header, customizing the appearance of a particular month header based on certain conditions.
 
 {% tabs %}
 {% highlight xaml %}
 
-
+<Grid>
+    <Grid.Resources>
+        <DataTemplate x:Key="todayDateTemplate">
+            <Grid>
+                <Label x:Name="label" HorizontalOptions="Center" Background="BlueViolet" VerticalOptions="Center" TextColor="Yellow" FontSize="25"  Text="{Binding StringFormat='{0:MMMM yyyy}'}" />
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="normalDateTemplate">
+            <Grid>
+                <Label x:Name="label" HorizontalOptions="Center" Background="BlueViolet" VerticalOptions="Center" TextColor="White" FontSize="25"  Text="{Binding StringFormat='{0:MMMM yyyy}'}" />
+            </Grid>
+        </DataTemplate>
+        <local:AgendaViewTemplateSelector x:Key="agendaViewTemplateSelector" TodayDateTemplate="{StaticResource todayDateTemplate}" NormalDateTemplate="{StaticResource normalDateTemplate}"/>
+    </Grid.Resources>
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                           View="Agenda" >
+        <scheduler:SfScheduler.AgendaView>
+            <scheduler:SchedulerAgendaView MonthHeaderTemplate="{StaticResource agendaViewTemplateSelector}" />
+        </scheduler:SfScheduler.AgendaView>
+    </scheduler:SfScheduler>
+ </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="TimeRegionTemplateSelector.cs" %}
+{% highlight c# tabtitle="AgendaViewTemplateSelector.cs" %}
 
-
+public class AgendaViewTemplateSelector : DataTemplateSelector
+{
+    public AgendaViewTemplateSelector()
+    {
+    }
+    public DataTemplate NormalDateTemplate { get; set; }
+    public DataTemplate TodayDateTemplate { get; set; }
+    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+    {
+        var dateTime = (DateTime)item;
+        if (dateTime.Month == DateTime.Today.Month)
+            return TodayDateTemplate;
+        else
+            return NormalDateTemplate;
+    }
+}
 
 {% endhighlight %}  
 {% highlight c# %}
 
-
+this.Scheduler.View = SchedulerView.Agenda;
 
 {% endhighlight %} 
 {% endtabs %}
 
 N>
-* The BindingContext of the `TimeRegionTemplate` is the `SchedulerTimeRegion.`
+* The default value of `DateFormat,` and `Height` are `MMMM yyyy,` and `150` respectively.
+* For desktop UI, The agenda view displays the appointment only.
+* The data template selector is experiencing more performance issues, when creating template views and there is a delay in loading.
 
 ## Week header customization
 

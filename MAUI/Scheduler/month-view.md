@@ -249,6 +249,9 @@ public class MonthViewHeaderTemplateSelector : DataTemplateSelector
 {% endhighlight %}  
 {% endtabs %}
 
+N>
+* The data template selector is experiencing more performance issues, when creating template views and there is a delay in loading.
+
 ## Month cell appearance
 
 The month cell can be customized by using the `MonthView` property of the `SfScheduler.`
@@ -391,3 +394,4 @@ this.Scheduler.View = SchedulerView.Month;
 
 N>
 * The BindingContext of the `CellTemplate` is the `SchedulerMonthCellDetails.`
+* The data template selector is experiencing more performance issues, when creating template views and there is a delay in loading.
