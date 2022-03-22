@@ -173,7 +173,7 @@ this.Scheduler.View = SchedulerView.Agenda;
 N>
 * The default value for `DateFormat` and `Height` are `MMMM yyyy` and `150,` respectively.
 * For desktop UI, The agenda view displays the appointment only.
-* The data template selector is experiencing more performance issues, when creating template views and there is a delay in loading.
+* When using data template selector, performance issues occur as the conversion template views take time within the framework.
 
 ## Week header customization
 

@@ -250,7 +250,7 @@ public class MonthViewHeaderTemplateSelector : DataTemplateSelector
 {% endtabs %}
 
 N>
-* The data template selector is experiencing more performance issues, when creating template views and there is a delay in loading.
+* When using data template selector, performance issues occur as the conversion template views take time within the framework.
 
 ## Month cell appearance
 
@@ -394,4 +394,4 @@ this.Scheduler.View = SchedulerView.Month;
 
 N>
 * The BindingContext of the `CellTemplate` is the `SchedulerMonthCellDetails.`
-* The data template selector is experiencing more performance issues, when creating template views and there is a delay in loading.
+* When using data template selector, performance issues occur as the conversion template views take time within the framework.

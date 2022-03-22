@@ -198,4 +198,4 @@ public class HeaderTemplateSelector : DataTemplateSelector
 {% endtabs %}
 
 N>
-* The data template selector is experiencing more performance issues, when creating template views and there is a delay in loading.
+* When using data template selector, performance issues occur as the conversion template views take time within the framework.
