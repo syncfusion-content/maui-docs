@@ -26,32 +26,12 @@ The inactive side of the range selector is between the [`Minimum`](https://help.
 <ContentPage 
              ...
              xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
-             xmlns:local="clr-namespace:SliderTestbedSample.RangeSelector">
-    <ContentPage.BindingContext>
-        <local:ViewModel />
-    </ContentPage.BindingContext>
+             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
     <rangeselector:SfRangeSelector>
         <rangeselector:SfRangeSelector.TrackStyle>
             <rangeselector:SliderTrackStyle ActiveFill="#EE3F3F" InactiveFill="#F7B1AE" />
         </rangeselector:SfRangeSelector.TrackStyle>
-        <chart:SfCartesianChart>
-            <chart:SfCartesianChart.XAxes>
-                <chart:DateTimeAxis IsVisible="False"
-                                    ShowMajorGridLines="False" />
-            </chart:SfCartesianChart.XAxes>
-            <chart:SfCartesianChart.YAxes>
-                <chart:NumericalAxis IsVisible="False"
-                                     ShowMajorGridLines="False" />
-            </chart:SfCartesianChart.YAxes>
-            <chart:SfCartesianChart.Series>
-                <chart:SplineAreaSeries ItemsSource="{Binding Source}"
-                                        XBindingPath="X"
-                                        YBindingPath="Y"
-                                        Fill="Blue">
-                </chart:SplineAreaSeries>
-            </chart:SfCartesianChart.Series>
-        </chart:SfCartesianChart>
+        <chart:SfCartesianChart />
     </rangeselector:SfRangeSelector>
 </ContentPage>
 
@@ -63,14 +43,6 @@ SfRangeSelector rangeSelector = new SfRangeSelector();
 rangeSelector.TrackStyle.ActiveFill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
 rangeSelector.TrackStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
 SfCartesianChart chart = new SfCartesianChart();
-DateTimeAxis primaryAxis = new DateTimeAxis();
-chart.XAxes = primaryAxis;
-NumericalAxis secondaryAxis = new NumericalAxis();
-chart.YAxes = secondaryAxis;
-SplineAreaSeries series = new SplineAreaSeries();
-series.ItemsSource = (new ViewModel()).Source;
-series.XBindingPath = "X";
-series.YBindingPath = "Y";
 rangeSelector.Content = chart;
 
 {% endhighlight %}
@@ -90,32 +62,12 @@ You can change the active and inactive track height of the range selector using 
 <ContentPage 
              ...
              xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
-             xmlns:local="clr-namespace:SliderTestbedSample.RangeSelector">
-    <ContentPage.BindingContext>
-        <local:ViewModel />
-    </ContentPage.BindingContext>
+             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
     <rangeselector:SfRangeSelector>
         <rangeselector:SfRangeSelector.TrackStyle>
             <rangeselector:SliderTrackStyle ActiveSize="10" InactiveSize="8" />
         </rangeselector:SfRangeSelector.TrackStyle>
-        <chart:SfCartesianChart>
-            <chart:SfCartesianChart.XAxes>
-                <chart:DateTimeAxis IsVisible="False"
-                                    ShowMajorGridLines="False" />
-            </chart:SfCartesianChart.XAxes>
-            <chart:SfCartesianChart.YAxes>
-                <chart:NumericalAxis IsVisible="False"
-                                     ShowMajorGridLines="False" />
-            </chart:SfCartesianChart.YAxes>
-            <chart:SfCartesianChart.Series>
-                <chart:SplineAreaSeries ItemsSource="{Binding Source}"
-                                        XBindingPath="X"
-                                        YBindingPath="Y"
-                                        Fill="Blue">
-                </chart:SplineAreaSeries>
-            </chart:SfCartesianChart.Series>
-        </chart:SfCartesianChart>
+        <chart:SfCartesianChart />
     </rangeselector:SfRangeSelector>
 </ContentPage>
 
@@ -127,14 +79,6 @@ SfRangeSelector rangeSelector = new SfRangeSelector();
 rangeSelector.TrackStyle.ActiveSize = 10;
 rangeSelector.TrackStyle.InactiveSize = 8;
 SfCartesianChart chart = new SfCartesianChart();
-DateTimeAxis primaryAxis = new DateTimeAxis();
-chart.XAxes = primaryAxis;
-NumericalAxis secondaryAxis = new NumericalAxis();
-chart.YAxes = secondaryAxis;
-SplineAreaSeries series = new SplineAreaSeries();
-series.ItemsSource = (new ViewModel()).Source;
-series.XBindingPath = "X";
-series.YBindingPath = "Y";
 rangeSelector.Content = chart;
 
 {% endhighlight %}
