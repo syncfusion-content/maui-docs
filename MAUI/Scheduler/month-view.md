@@ -200,7 +200,7 @@ You can customize the view header appearance by using the `ViewHeaderTemplate` p
 
 ### Customize view header appearance using DataTemplateSelector
 
-You can customize the view header appearance by using the `ViewHeaderTemplate` property of `MonthView` in the `SfScheduler.` The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler view header by using the `ViewHeaderTemplate.` It lets to choose a different data template for each view header, customizing the appearance of a particular view header based on certain conditions.
+You can customize the view header appearance by using the `ViewHeaderTemplate` property of `MonthView` in the `SfScheduler.` The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler view header by using the `ViewHeaderTemplate.` It allows you to choose a different data template for each view header, as well as customize the appearance of a particular view header based on certain conditions.
 
 {% tabs %}
 {% highlight xaml %}
@@ -337,7 +337,7 @@ N>
 
 ### Customize month cell appearance using DataTemplateSelector
 
-You can customize the month cell appearance by using the `CellTemplate` property of `MonthView` in the `SfScheduler.` The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler month cells by using the `CellTemplate.` It lets to choose a different data template for each month cells, customizing the appearance of a particular month cell based on certain conditions.
+You can customize the month cell appearance by using the `CellTemplate` property of `MonthView` in the `SfScheduler.` The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler month cells by using the `CellTemplate.` It allows you to choose a different data template for each month cell, as well as customize the appearance of a particular month cell based on certain conditions.
 
 {% tabs %}
 {% highlight xaml %}

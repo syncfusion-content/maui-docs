@@ -917,7 +917,7 @@ N>
 
 ### Customize appointment appearance using DataTemplateSelector
 
-You can customize the appointment appearance by using the `AppointmentTemplate` property of `DaysView` in the `SfScheduler.` The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler appointment appearance by using the `AppointmentTemplate.` It allows you to choose a different data template for each appointment, as well as to customize the appearance of a particular appointment based on certain conditions.
+You can customize the appointment appearance by using the `AppointmentTemplate` property of `DaysView,` `TimelineView,` and `MonthView` in the `SfScheduler.` The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler appointment appearance by using the `AppointmentTemplate.` It allows you to choose a different data template for each appointment, as well as to customize the appearance of a particular appointment based on certain conditions.
 
 {% tabs %}
 {% highlight xaml %}

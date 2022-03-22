@@ -357,7 +357,7 @@ private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 
 ### Customize special time region appearance using DataTemplateSelector
 
-You can customize the time region appearance by using the `TimeRegionTemplate` property of `TimelineView` in the `SfScheduler.` The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler time region by using the `TimeRegionTemplate.` It lets to choose a different data template for each time region, customizing the appearance of a particular time region based on certain conditions.
+You can customize the time region appearance by using the `TimeRegionTemplate` property of `TimelineView` in the `SfScheduler.` The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler time region by using the `TimeRegionTemplate.` It allows you to choose a different data template for each time region, as well as customize the appearance of a particular time region based on certain conditions.
 
 {% tabs %}
 {% highlight xaml %}
@@ -730,7 +730,7 @@ N>
 
 ### Customize view header appearance using DataTemplateSelector
 
-You can customize the view header appearance by using the `ViewHeaderTemplate` property of `TimelineView` in the `SfScheduler.` The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler view header by using the `ViewHeaderTemplate.` It lets to choose a different data template for each view header, customizing the appearance of a particular view header based on certain conditions.
+You can customize the view header appearance by using the `ViewHeaderTemplate` property of `TimelineView` in the `SfScheduler.` The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler view header by using the `ViewHeaderTemplate.` It allows you to choose a different data template for each view header, as well as customize the appearance of a particular view header based on certain conditions.
 
 {% tabs %}
 {% highlight xaml %}

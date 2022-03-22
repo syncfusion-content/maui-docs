@@ -216,7 +216,7 @@ this.Scheduler.AgendaView.WeekHeaderSettings.Background = Brush.LightGreen;
 {% endtabs %}
 
 N> 
-* The default value of `DateFormat,` and `Height` are `MMM dd,` and `30` respectively.
+* The default value for `DateFormat,` and `Height` are `MMM dd,` and `30` respectively.
 * For desktop UI, The agenda view displays the appointment only.
 
 ## Day header customization

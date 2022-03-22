@@ -60,5 +60,3 @@ The Syncfusion .NET MAUI Scheduler (SfScheduler) has eight different types of bu
  * **Custom start and end hours**: The event scheduler timeslot view can be displayed with specific time durations by hiding the unwanted hours.
 
  ![flexible-working-hours-in-maui-scheduler](images/overview/flexible-working-hours-in-maui-scheduler.png)
-
- * **Windows and Mac Catalyst layouts**: The mouse hovering effect is now applied to all scheduler elements.
