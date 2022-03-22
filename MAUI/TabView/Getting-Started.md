@@ -216,9 +216,9 @@ N> View [sample](https://github.com/SyncfusionExamples/maui-tabview-samples/tree
 
 Items can be added to the control using the `ItemsSource` property of [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html).
 
-Using ItemsSource, objects of any class can be given as items for SfTabView. The views corresponding to the objects can be set using the HeaderItemTemplate for the header items and ContentItemTemplate for the content. 
+Objects of any class can be given as items for `SfTabView` by using `ItemsSource`. The views corresponding to the objects can be set using the `HeaderItemTemplate` for the header items and `ContentItemTemplate` for the content.
 
-Create a model class with TabItems collection property initialized with required number of data objects   as shown in the following code example.
+Create a model class using the TabItems collection property that is initialized with the required number of data objects, as shown in the following code example.
 
 {% tabs %}
 
@@ -296,7 +296,7 @@ Create a model class with TabItems collection property initialized with required
 
 {% endtabs %}
 
-The following code example binds the collection to the SfTabView.ItemsSource property.
+The following code example binds the collection to the `ItemsSource` property of `SfTabView`.
 
 {% tabs %}
 
@@ -348,7 +348,7 @@ namespace ItemTemplateSample;
 
 ### Header item template
 
-By defining the `HeaderItemTemplate` of the SfTabView, a custom user interface(UI) can be achieved to display the tab header data items.
+By defining the `HeaderItemTemplate` of the `SfTabView`, a custom user interface(UI) can be achieved to display the tab header data items.
 
 {% tabs %}
 
@@ -397,7 +397,7 @@ namespace ItemTemplateSample;
 
 ### Content item template
 
-By defining the `ContentItemTemplate` of the SfTabView, a custom user interface(UI) can be achieved to display the tab content data items.
+By defining the `ContentItemTemplate` of the `SfTabView`, a custom user interface(UI) can be achieved to display the tab content data items.
 
 {% tabs %}
 
