@@ -265,7 +265,7 @@ For example: From 12/13/2021 12:00AM to 12/14/2021 12:00AM.
 
 ## Read only appointment
 
-A read-only appointment can be created with `IsReadOnly` property of the `SchedulerAppointment.` If you enable this property, user will not be able to perform edit, and delete operations.
+A read-only appointment can be created with `IsReadOnly` property of the `SchedulerAppointment.` If you enable this property, the user will be unable to perform edit and delete operations.
 
 {% tabs %}
 {% highlight xaml %}
@@ -917,7 +917,7 @@ N>
 
 ### Customize appointment appearance using DataTemplateSelector
 
-You can customize the appointment appearance by using the `AppointmentTemplate` property of `DaysView` in the `SfScheduler.` The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler appointment appearance by using the `AppointmentTemplate.` It lets to choose a different data template for each appointment, customizing the appearance of a particular appointment based on certain conditions.
+You can customize the appointment appearance by using the `AppointmentTemplate` property of `DaysView` in the `SfScheduler.` The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler appointment appearance by using the `AppointmentTemplate.` It allows you to choose a different data template for each appointment, as well as to customize the appearance of a particular appointment based on certain conditions.
 
 {% tabs %}
 {% highlight xaml %}

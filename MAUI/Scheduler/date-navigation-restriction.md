@@ -127,7 +127,7 @@ private void OnButtonClicked(object sender, EventArgs e)
 
 ### Allow view navigation
 
-You can quickly navigate to the respective day or timeline day view by a tap on the month cell or view header of the following scheduler views such as a week, work week, month, agenda, timeline week, timeline work week, and timeline month views by using the `AllowViewNavigation` property of the `SfScheduler.`
+By using the `AllowViewNavigation` property of the `SfScheduler,` you can quickly navigate to the respective day or timeline day view by tapping on the month cell or view header of the following scheduler views: week, work week, month, agenda, timeline week, timeline work week, and timeline month views.
 
 {% tabs %}
 {% highlight xaml %}

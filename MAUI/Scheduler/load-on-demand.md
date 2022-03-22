@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Load appointments on demand in .NET MAUI Scheduler | Syncfusion
-description: Learn here all about to load appointments on demand from visible dates in Syncfusion .NET MAUI Scheduler (SfScheduler) control, its elements, and more. 
+description: Learn here all about how to load appointments on demand from visible dates in Syncfusion .NET MAUI Scheduler (SfScheduler) control, its elements, and more.
 platform: maui
 control: SfScheduler
 documentation: ug
@@ -15,20 +15,20 @@ The Scheduler provides the capability to display an interactive view when the vi
 
 It allows you to load appointments on-demand for the visible dates. The `ShowBusyIndicator` property can be used to start and stop the loading indicator animation before and after appointments are loaded.
 
-These can be achieved in two ways,
+These can be achieved in two ways:
 
 * QueryAppointments event
 * QueryAppointments command
 
 ### QueryAppointments event
 
-This event occurs after the view of the scheduler or the visible dates are changed and also allows `AppointmentsSource` for the visible dates to be loaded in on-demand. Below is a list of the arguments
+This event occurs when the view of the scheduler or the visible dates are changed, and it also allows the `AppointmentsSource` for the visible dates to be loaded in on-demand. The following is a list of the arguments:
 
 * `Sender`: This contains the `SfScheduler` object.
 
-* `SchedulerQueryAppointmentsEventArgs`: This event will be performed on the view of the scheduler or the visible dates are changed, and you can see the details about the VisibleDates.
+* `SchedulerQueryAppointmentsEventArgs`: This event will be performed on the view of the scheduler or when the visible dates are changed, and you can see the details about the VisibleDates.
 
-    * `VisibleDates`: Gets the current visible dates of scheduler that is used to load the appointments to the `AppointmentsSource` on demand which is used to reduce the appointment fetching performance to render in current visible dates from large data source.
+    * `VisibleDates`: Gets the current visible dates of scheduler that is used to load the appointments to the `AppointmentsSource` on demand which is used to reduce the appointment fetching performance to render in current visible dates from a large data source.
 
 {% tabs %}
 {% highlight xaml %}
@@ -117,19 +117,19 @@ private ObservableCollection<SchedulerAppointment> GenerateSchedulerAppointments
 {% endhighlight %}
 {% endtabs %}
 
-N> The `QueryAppointments` event will be raised if any one of the following action is performed,
-* Once the `ViewChanged` event is raised, the `QueryAppointments` will be raised.
+N> The QueryAppointments event will be triggered, if any one of the following actions is performed.,
+* Once the `ViewChanged` event is triggered, the `QueryAppointments` will be triggered.
 * If an appointment has been added or removed in the current visible dates, then the `QueryAppointments` event will not be triggered. Because the appointments for that visible date are already loaded.
 * In the scheduler agenda view, the `QueryAppointments` event is used to load more appointments when the new month is loaded on view, whereas the new month appointments are added in scheduler `AppointmentsSource.`
 * Other than agenda view, the scheduler `AppointmentsSource` can be reset for a new visible date range to improve appointment loading performance.
 
 ### QueryAppointments command
 
-The Scheduler notifies the `QueryAppointmentsCommand,` when the view of the scheduler or the visible dates are changed. Get a visible dates from the `SchedulerQueryAppointmentsEventArgs.` The default value for this `ICommand` is null. The `SchedulerQueryAppointmentsEventArgs` passed as a command parameter.
+The Scheduler notifies the `QueryAppointmentsCommand,` when the view of the scheduler or the visible dates are changed. Get a list of visible dates from the `SchedulerQueryAppointmentsEventArgs.` The default value for this `ICommand` is `null.` The `SchedulerQueryAppointmentsEventArgs` was passed as a command parameter.
 
 A ViewModel class should implement a command and handle it by the `CanExecute` and `Execute` methods to handle on-demand loading. In execute method, perform the following operations.
 
-The `ShowBusyIndicator` property can be used to start and stop the loading indicator animation before and after appointments are loaded into the `AppointmentsSource` of the `SfScheduler.`
+The `ShowBusyIndicator` property can be used to start and stop the loading indicator animation, before and after appointments are loaded into the `AppointmentsSource` of the `SfScheduler.`
 
 {% tabs %}
 {% highlight xaml %}
@@ -261,7 +261,7 @@ N> The `QueryAppointmentsCommand` will be raised if any one of the following act
 
 ## Show busy indicator
 
-The `Scheduler` supports to show the busy indicator view by using the `ShowBusyIndicator` property of the `SfScheduler.` The default value is set to `false.` If the value is set to `true` and visible dates are changed then the busy indicator will be loaded on view.
+The `Scheduler` supports to show the busy indicator view by using the `ShowBusyIndicator` property of the `SfScheduler.` The default value is set to `false.` If the value is set to `true` and visible dates are changed, then the busy indicator will be loaded on view.
 
 {% tabs %}
 {% highlight xaml %}
@@ -281,7 +281,7 @@ this.Scheduler.ShowBusyIndicator = true;
 {% endtabs %}
 
 N>  
-* You might start and stop the animation before and after the appointments loaded, when using the `QueryAppointments,` or `QueryAppointmentsCommand.` 
+* When using the `QueryAppointments` or `QueryAppointmentsCommand,` you can start and stop the animation before and after the appointments load.
 * When `QueryAppointments` or `QueryAppointmentsCommand` are not used, and show busy indicator is enabled, the busy indicator will be stopped once the appointment is rendered.
 
 ## Busy indicator appearance

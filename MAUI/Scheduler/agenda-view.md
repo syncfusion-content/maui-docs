@@ -11,7 +11,7 @@ documentation: ug
 
 The agenda view displays the events or appointments (normal appointments, all-day appointments, recurring appointments, and span appointments) in chronological order, grouped by date between the minimum and maximum dates and the current date displayed by default. When the `AppointmentsSource` property of `SfScheduler` is `null`, the agenda view will show only the month, week, and date headers for mobile view and responsive UI, and for desktop UI it will display only the date header of display date.
 
-A agenda view displays different UI for mobile and desktop, for mobile it displays the month header, the week header, and the date header however for desktop, it displays the appointment only.
+A agenda view displays different UI for mobile and desktop, for mobile it displays the month header, the week header, and the date header, whereas for desktop, it displays the appointment only.
 
 N> When the desktop view width is less than 600, the scheduler will display the mobile agenda UI on the desktop.
 
@@ -110,12 +110,12 @@ You can customize the month header appearance of scheduler by using the `MonthHe
 {% endtabs %}
 
 N> 
-* The default value of `DateFormat,` and `Height` are `MMMM yyyy,` and `150` respectively.
+* The default values for `DateFormat` and `Height` are `MMMM yyyy` and `150,` respectively.
 * For desktop UI, The agenda view displays the appointment only.
 
 ### Customize month header appearance using DataTemplateSelector
 
-You can customize the month header appearance by using the `MonthHeaderTemplate` property of `AgendaView` in the `SfScheduler.` The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to month header by using the `MonthHeaderTemplate.` It lets to choose a different data template for each month header, customizing the appearance of a particular month header based on certain conditions.
+You can customize the month header appearance by using the `MonthHeaderTemplate` property of `AgendaView` in the `SfScheduler.` The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to month header by using the `MonthHeaderTemplate.` It allows you to choose a different data template for each month header, as well as customize the appearance of a particular month header based on certain conditions.
 
 {% tabs %}
 {% highlight xaml %}
@@ -171,7 +171,7 @@ this.Scheduler.View = SchedulerView.Agenda;
 {% endtabs %}
 
 N>
-* The default value of `DateFormat,` and `Height` are `MMMM yyyy,` and `150` respectively.
+* The default value for `DateFormat` and `Height` are `MMMM yyyy` and `150,` respectively.
 * For desktop UI, The agenda view displays the appointment only.
 * The data template selector is experiencing more performance issues, when creating template views and there is a delay in loading.
 
