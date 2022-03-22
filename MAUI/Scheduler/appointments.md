@@ -265,7 +265,7 @@ For example: From 12/13/2021 12:00AM to 12/14/2021 12:00AM.
 
 ## Read only appointment
 
-A read-only appointment can be created with `IsReadOnly` property of the `SchedulerAppointment.` If you enable this property, the user will be unable to perform edit and delete operations.
+A read-only appointment can be created with `IsReadOnly` property of the `SchedulerAppointment.`
 
 {% tabs %}
 {% highlight xaml %}
@@ -996,7 +996,7 @@ this.Scheduler.AppointmentsSource = appointments;
 
 N>
 * The `BindingContext` for `AppointmentTemplate` for both `SchedulerAppointment` and `SchedulerAppointment.Data` in `AppointmentsSource.`
-* The data template selector is experiencing more performance issues, when creating template views and there is a delay in loading.
+* When using data template selector, performance issues occur as the conversion template views take time within the framework.
 
 ## Appointment selection background
 

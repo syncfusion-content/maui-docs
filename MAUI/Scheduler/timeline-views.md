@@ -441,7 +441,7 @@ private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 
 N>
 * The BindingContext of the `TimeRegionTemplate` is the `SchedulerTimeRegion.`
-* The data template selector is experiencing more performance issues, when creating template views and there is a delay in loading.
+* When using data template selector, performance issues occur as the conversion template views take time within the framework.
 
 ## Full screen scheduler
 
@@ -807,7 +807,7 @@ this.Scheduler.View = SchedulerView.TimelineWeek;
 
 N>
 * The BindingContext of the `ViewHeaderTemplate` is the`DateTime.` The `SelectableDayPredicate,` `MinimumDateTime,` and `MaximumDateTime` properties of date and time values can be used directly in the data template selector.
-* The data template selector is experiencing more performance issues, when creating template views and there is a delay in loading.
+* When using data template selector, performance issues occur as the conversion template views take time within the framework.
 
 ## Time text formatting
 
