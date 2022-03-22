@@ -24,11 +24,7 @@ For example, if [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 <ContentPage 
              ...
              xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
-             xmlns:local="clr-namespace:SliderTestbedSample.RangeSelector">
-    <ContentPage.BindingContext>
-        <local:ViewModel />
-    </ContentPage.BindingContext>
+             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
     <rangeselector:SfRangeSelector Minimum="0" 
                                    Maximum="10" 
                                    Interval="2"  
@@ -37,23 +33,7 @@ For example, if [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
                                    ShowLabels="True" 
                                    ShowTicks="True" 
                                    ShowDividers="True">
-        <chart:SfCartesianChart>
-            <chart:SfCartesianChart.XAxes>
-               <chart:DateTimeAxis IsVisible="False"
-                                   ShowMajorGridLines="False" />
-            </chart:SfCartesianChart.XAxes>
-            <chart:SfCartesianChart.YAxes>
-               <chart:NumericalAxis IsVisible="False"
-                                    ShowMajorGridLines="False" />
-            </chart:SfCartesianChart.YAxes>
-            <chart:SfCartesianChart.Series>
-               <chart:SplineAreaSeries ItemsSource="{Binding Source}"
-                                       XBindingPath="X"
-                                       YBindingPath="Y"
-                                       Fill="Blue">
-               </chart:SplineAreaSeries>
-            </chart:SfCartesianChart.Series>
-        </chart:SfCartesianChart>
+        <chart:SfCartesianChart />
     </rangeselector:SfRangeSelector>
 </ContentPage>
 
@@ -71,14 +51,6 @@ rangeSelector.ShowLabels = true;
 rangeSelector.ShowTicks = true;
 rangeSelector.ShowDividers = true;
 SfCartesianChart chart = new SfCartesianChart();
-DateTimeAxis primaryAxis = new DateTimeAxis();
-chart.XAxes = primaryAxis;
-NumericalAxis secondaryAxis = new NumericalAxis();
-chart.YAxes = secondaryAxis;
-SplineAreaSeries series = new SplineAreaSeries();
-series.ItemsSource = (new ViewModel()).Source;
-series.XBindingPath = "X";
-series.YBindingPath = "Y";
 rangeSelector.Content = chart;
          
 {% endhighlight %}
@@ -102,11 +74,7 @@ For example, if [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 <ContentPage 
              ...
              xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
-             xmlns:local="clr-namespace:SliderTestbedSample.RangeSelector">
-    <ContentPage.BindingContext>
-        <local:ViewModel />
-    </ContentPage.BindingContext>
+             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
     <rangeselector:SfDateTimeRangeSelector Minimum="2000-01-01" 
                                            Maximum="2005-01-01" 
                                            Interval="1" 
@@ -117,23 +85,7 @@ For example, if [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
                                            ShowLabels="True" 
                                            ShowTicks="True" 
                                            ShowDividers="True">
-        <chart:SfCartesianChart>
-            <chart:SfCartesianChart.XAxes>
-               <chart:DateTimeAxis IsVisible="False"
-                                   ShowMajorGridLines="False" />
-            </chart:SfCartesianChart.XAxes>
-            <chart:SfCartesianChart.YAxes>
-               <chart:NumericalAxis IsVisible="False"
-                                    ShowMajorGridLines="False" />
-            </chart:SfCartesianChart.YAxes>
-            <chart:SfCartesianChart.Series>
-               <chart:SplineAreaSeries ItemsSource="{Binding Source}"
-                                       XBindingPath="X"
-                                       YBindingPath="Y"
-                                       Fill="Blue">
-               </chart:SplineAreaSeries>
-            </chart:SfCartesianChart.Series>
-        </chart:SfCartesianChart>
+        <chart:SfCartesianChart />
     </rangeselector:SfDateTimeRangeSelector>
 </ContentPage>
 
@@ -153,14 +105,6 @@ rangeSelector.ShowLabels = true;
 rangeSelector.ShowTicks = true;
 rangeSelector.ShowDividers = true;
 SfCartesianChart chart = new SfCartesianChart();
-DateTimeAxis primaryAxis = new DateTimeAxis();
-chart.XAxes = primaryAxis;
-NumericalAxis secondaryAxis = new NumericalAxis();
-chart.YAxes = secondaryAxis;
-SplineAreaSeries series = new SplineAreaSeries();
-series.ItemsSource = (new ViewModel()).Source;
-series.XBindingPath = "X";
-series.YBindingPath = "Y";
 rangeSelector.Content = chart;
         
 {% endhighlight %}
@@ -180,11 +124,7 @@ You can move the thumb in discrete manner for numeric values using the [`StepSiz
 <ContentPage 
              ...
              xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
-             xmlns:local="clr-namespace:SliderTestbedSample.RangeSelector">
-    <ContentPage.BindingContext>
-        <local:ViewModel />
-    </ContentPage.BindingContext>
+             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
     <rangeselector:SfRangeSelector StepSize="2"
                                    Minimum="0" 
                                    Maximum="10" 
@@ -194,23 +134,7 @@ You can move the thumb in discrete manner for numeric values using the [`StepSiz
                                    ShowLabels="True" 
                                    ShowTicks="True" 
                                    ShowDividers="True">
-        <chart:SfCartesianChart>
-            <chart:SfCartesianChart.XAxes>
-               <chart:DateTimeAxis IsVisible="False"
-                                   ShowMajorGridLines="False" />
-            </chart:SfCartesianChart.XAxes>
-            <chart:SfCartesianChart.YAxes>
-               <chart:NumericalAxis IsVisible="False"
-                                    ShowMajorGridLines="False" />
-            </chart:SfCartesianChart.YAxes>
-            <chart:SfCartesianChart.Series>
-               <chart:SplineAreaSeries ItemsSource="{Binding Source}"
-                                       XBindingPath="X"
-                                       YBindingPath="Y"
-                                       Fill="Blue">
-               </chart:SplineAreaSeries>
-            </chart:SfCartesianChart.Series>
-        </chart:SfCartesianChart>
+        <chart:SfCartesianChart />
     </rangeselector:SfRangeSelector>
 </ContentPage>
 
@@ -229,14 +153,6 @@ rangeSelector.ShowLabels = true;
 rangeSelector.ShowTicks = true;
 rangeSelector.ShowDividers = true;
 SfCartesianChart chart = new SfCartesianChart();
-DateTimeAxis primaryAxis = new DateTimeAxis();
-chart.XAxes = primaryAxis;
-NumericalAxis secondaryAxis = new NumericalAxis();
-chart.YAxes = secondaryAxis;
-SplineAreaSeries series = new SplineAreaSeries();
-series.ItemsSource = (new ViewModel()).Source;
-series.XBindingPath = "X";
-series.YBindingPath = "Y";
 rangeSelector.Content = chart;
          
 {% endhighlight %}
@@ -258,11 +174,7 @@ For example, if [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 <ContentPage 
              ...
              xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
-             xmlns:local="clr-namespace:SliderTestbedSample.RangeSelector">
-    <ContentPage.BindingContext>
-        <local:ViewModel />
-    </ContentPage.BindingContext>
+             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
     <rangeselector:SfDateTimeRangeSelector Minimum="2000-01-01" 
                                            Maximum="2005-01-01" 
                                            RangeStart="2001-01-01"
@@ -271,23 +183,7 @@ For example, if [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
                                            ShowLabels="True" 
                                            ShowTicks="True" 
                                            ShowDividers="True">
-        <chart:SfCartesianChart>
-            <chart:SfCartesianChart.XAxes>
-               <chart:DateTimeAxis IsVisible="False"
-                                   ShowMajorGridLines="False" />
-            </chart:SfCartesianChart.XAxes>
-            <chart:SfCartesianChart.YAxes>
-               <chart:NumericalAxis IsVisible="False"
-                                    ShowMajorGridLines="False" />
-            </chart:SfCartesianChart.YAxes>
-            <chart:SfCartesianChart.Series>
-               <chart:SplineAreaSeries ItemsSource="{Binding Source}"
-                                       XBindingPath="X"
-                                       YBindingPath="Y"
-                                       Fill="Blue">
-               </chart:SplineAreaSeries>
-            </chart:SfCartesianChart.Series>
-        </chart:SfCartesianChart>
+        <chart:SfCartesianChart />
     </rangeselector:SfDateTimeRangeSelector>
 </ContentPage>
 
@@ -333,11 +229,7 @@ If true, both the thumbs can be only moved on the selector Interval.
 <ContentPage 
              ...
              xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
-             xmlns:local="clr-namespace:SliderTestbedSample.RangeSelector">
-    <ContentPage.BindingContext>
-        <local:ViewModel />
-    </ContentPage.BindingContext>
+             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
     <rangeselector:SfRangeSelector Minimum="0" 
                                    Maximum="10"
                                    Interval="2" 
@@ -346,23 +238,7 @@ If true, both the thumbs can be only moved on the selector Interval.
                                    ShowTicks="True"
                                    ShowLabels="True"
                                    EnableIntervalSelection="True">
-        <chart:SfCartesianChart>
-            <chart:SfCartesianChart.XAxes>
-               <chart:DateTimeAxis IsVisible="False"
-                                   ShowMajorGridLines="False" />
-            </chart:SfCartesianChart.XAxes>
-            <chart:SfCartesianChart.YAxes>
-               <chart:NumericalAxis IsVisible="False"
-                                    ShowMajorGridLines="False" />
-            </chart:SfCartesianChart.YAxes>
-            <chart:SfCartesianChart.Series>
-               <chart:SplineAreaSeries ItemsSource="{Binding Source}"
-                                       XBindingPath="X"
-                                       YBindingPath="Y"
-                                       Fill="Blue">
-               </chart:SplineAreaSeries>
-            </chart:SfCartesianChart.Series>
-        </chart:SfCartesianChart>
+        <chart:SfCartesianChart />
     </rangeselector:SfRangeSelector>
 </ContentPage>
 
@@ -379,14 +255,6 @@ rangeSelector.ShowLables = true;
 rangeSelector.ShowTicks = true;    
 rangeSelector.EnableIntervalSelection = true;
 SfCartesianChart chart = new SfCartesianChart();
-DateTimeAxis primaryAxis = new DateTimeAxis();
-chart.XAxes = primaryAxis;
-NumericalAxis secondaryAxis = new NumericalAxis();
-chart.YAxes = secondaryAxis;
-SplineAreaSeries series = new SplineAreaSeries();
-series.ItemsSource = (new ViewModel()).Source;
-series.XBindingPath = "X";
-series.YBindingPath = "Y";
 rangeSelector.Content = chart;
          
 {% endhighlight %}

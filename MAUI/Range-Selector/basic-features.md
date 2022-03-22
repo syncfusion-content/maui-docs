@@ -36,33 +36,13 @@ You can show numeric values in the range selector by setting double values to th
 <ContentPage 
              ...
              xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
-             xmlns:local="clr-namespace:SliderTestbedSample.RangeSelector">
-    <ContentPage.BindingContext>
-        <local:ViewModel />
-    </ContentPage.BindingContext>
+             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
     <rangeselector:SfRangeSelector Minimum="10"
                                    Maximum="20"
                                    RangeStart="13"
                                    RangeEnd="17"
                                    ShowLabels="True">
-        <chart:SfCartesianChart>
-            <chart:SfCartesianChart.XAxes>
-                <chart:DateTimeAxis IsVisible="False"
-                                    ShowMajorGridLines="False" />
-            </chart:SfCartesianChart.XAxes>
-            <chart:SfCartesianChart.YAxes>
-                <chart:NumericalAxis IsVisible="False"
-                                     ShowMajorGridLines="False" />
-            </chart:SfCartesianChart.YAxes>
-            <chart:SfCartesianChart.Series>
-                <chart:SplineAreaSeries ItemsSource="{Binding Source}"
-                                        XBindingPath="X"
-                                        YBindingPath="Y"
-                                        Fill="Blue">
-                </chart:SplineAreaSeries>
-            </chart:SfCartesianChart.Series>
-        </chart:SfCartesianChart>
+        <chart:SfCartesianChart />
     </rangeselector:SfRangeSelector>
 </ContentPage>
  
@@ -77,14 +57,6 @@ rangeSelector.RangeStart = 13;
 rangeSelector.RangeEnd = 17;
 rangeSelector.ShowLabels = true;
 SfCartesianChart chart = new SfCartesianChart();
-DateTimeAxis primaryAxis = new DateTimeAxis();
-chart.XAxes = primaryAxis;
-NumericalAxis secondaryAxis = new NumericalAxis();
-chart.YAxes = secondaryAxis;
-SplineAreaSeries series = new SplineAreaSeries();
-series.ItemsSource = (new ViewModel()).Source;
-series.XBindingPath = "X";
-series.YBindingPath = "Y";
 rangeSelector.Content = chart;
 
 {% endhighlight %}
@@ -104,34 +76,14 @@ You can show date values in the range selector by setting double values to the M
 <ContentPage 
              ...
              xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
-             xmlns:local="clr-namespace:SliderTestbedSample.RangeSelector">
-    <ContentPage.BindingContext>
-        <local:ViewModel />
-    </ContentPage.BindingContext>
+             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
     <rangeselector:SfDateTimeRangeSelector Minimum="2010-01-01" 
                                            Maximum="2020-01-01" 
                                            RangeStart="2012-01-01" 
                                            RangeEnd="2018-01-01" 
                                            ShowLabels="True">
-        <chart:SfCartesianChart>
-            <chart:SfCartesianChart.XAxes>
-                <chart:DateTimeAxis IsVisible="False"
-                                    ShowMajorGridLines="False" />
-            </chart:SfCartesianChart.XAxes>
-            <chart:SfCartesianChart.YAxes>
-                <chart:NumericalAxis IsVisible="False"
-                                     ShowMajorGridLines="False" />
-            </chart:SfCartesianChart.YAxes>
-            <chart:SfCartesianChart.Series>
-                <chart:SplineAreaSeries ItemsSource="{Binding Source}"
-                                        XBindingPath="X"
-                                        YBindingPath="Y"
-                                        Fill="Blue">
-                </chart:SplineAreaSeries>
-            </chart:SfCartesianChart.Series>
-        </chart:SfCartesianChart>
-    </rangeselector:SfRangeSelector>
+        <chart:SfCartesianChart />
+    </rangeselector:SfDateTimeRangeSelector>
 </ContentPage>
  
 {% endhighlight %}
@@ -145,14 +97,6 @@ rangeselector.RangeStart = new DateTime(2012, 01, 01);
 rangeselector.RangeEnd = new DateTime(2018, 01, 01);
 rangeselector.ShowLabels = true;
 SfCartesianChart chart = new SfCartesianChart();
-DateTimeAxis primaryAxis = new DateTimeAxis();
-chart.XAxes = primaryAxis;
-NumericalAxis secondaryAxis = new NumericalAxis();
-chart.YAxes = secondaryAxis;
-SplineAreaSeries series = new SplineAreaSeries();
-series.ItemsSource = (new ViewModel()).Source;
-series.XBindingPath = "X";
-series.YBindingPath = "Y";
 rangeSelector.Content = chart;
 
 {% endhighlight %}

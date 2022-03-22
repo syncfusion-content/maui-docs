@@ -26,29 +26,9 @@ For example, if [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 <ContentPage 
              ...
              xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
-             xmlns:local="clr-namespace:SliderTestbedSample.RangeSelector">
-    <ContentPage.BindingContext>
-        <local:ViewModel />
-    </ContentPage.BindingContext>
+             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
     <rangeselector:SfRangeSelector ShowTicks="True">
-        <chart:SfCartesianChart>
-            <chart:SfCartesianChart.XAxes>
-               <chart:DateTimeAxis IsVisible="False"
-                                   ShowMajorGridLines="False" />
-            </chart:SfCartesianChart.XAxes>
-            <chart:SfCartesianChart.YAxes>
-               <chart:NumericalAxis IsVisible="False"
-                                    ShowMajorGridLines="False" />
-            </chart:SfCartesianChart.YAxes>
-            <chart:SfCartesianChart.Series>
-               <chart:SplineAreaSeries ItemsSource="{Binding Source}"
-                                       XBindingPath="X"
-                                       YBindingPath="Y"
-                                       Fill="Blue">
-               </chart:SplineAreaSeries>
-            </chart:SfCartesianChart.Series>
-        </chart:SfCartesianChart>
+        <chart:SfCartesianChart />
     </rangeselector:SfRangeSelector>
 </ContentPage>
 
@@ -59,14 +39,6 @@ For example, if [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 SfRangeSelector rangeSelector = new SfRangeSelector();
 rangeSelector.ShowTicks = true;
 SfCartesianChart chart = new SfCartesianChart();
-DateTimeAxis primaryAxis = new DateTimeAxis();
-chart.XAxes = primaryAxis;
-NumericalAxis secondaryAxis = new NumericalAxis();
-chart.YAxes = secondaryAxis;
-SplineAreaSeries series = new SplineAreaSeries();
-series.ItemsSource = (new ViewModel()).Source;
-series.XBindingPath = "X";
-series.YBindingPath = "Y";
 rangeSelector.Content = chart;
 
 {% endhighlight %}
@@ -84,30 +56,10 @@ rangeSelector.Content = chart;
 <ContentPage 
              ...
              xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
-             xmlns:local="clr-namespace:SliderTestbedSample.RangeSelector">
-    <ContentPage.BindingContext>
-        <local:ViewModel />
-    </ContentPage.BindingContext>
+             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
     <rangeselector:SfRangeSelector Interval="0.2"  
                                    ShowTicks="True">
-        <chart:SfCartesianChart>
-            <chart:SfCartesianChart.XAxes>
-               <chart:DateTimeAxis IsVisible="False"
-                                   ShowMajorGridLines="False" />
-            </chart:SfCartesianChart.XAxes>
-            <chart:SfCartesianChart.YAxes>
-               <chart:NumericalAxis IsVisible="False"
-                                    ShowMajorGridLines="False" />
-            </chart:SfCartesianChart.YAxes>
-            <chart:SfCartesianChart.Series>
-               <chart:SplineAreaSeries ItemsSource="{Binding Source}"
-                                       XBindingPath="X"
-                                       YBindingPath="Y"
-                                       Fill="Blue">
-               </chart:SplineAreaSeries>
-            </chart:SfCartesianChart.Series>
-        </chart:SfCartesianChart>
+        <chart:SfCartesianChart />
     </rangeselector:SfRangeSelector>
 </ContentPage>
 
@@ -119,14 +71,6 @@ SfRangeSelector rangeSelector = new SfRangeSelector();
 rangeSelector.Interval = 0.2;
 rangeSelector.ShowTicks = true;
 SfCartesianChart chart = new SfCartesianChart();
-DateTimeAxis primaryAxis = new DateTimeAxis();
-chart.XAxes = primaryAxis;
-NumericalAxis secondaryAxis = new NumericalAxis();
-chart.YAxes = secondaryAxis;
-SplineAreaSeries series = new SplineAreaSeries();
-series.ItemsSource = (new ViewModel()).Source;
-series.XBindingPath = "X";
-series.YBindingPath = "Y";
 rangeSelector.Content = chart;
 
 {% endhighlight %}
@@ -148,30 +92,10 @@ It is used to represent the number of smaller ticks between two major ticks. For
 <ContentPage 
              ...
              xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
-             xmlns:local="clr-namespace:SliderTestbedSample.RangeSelector">
-    <ContentPage.BindingContext>
-        <local:ViewModel />
-    </ContentPage.BindingContext>
+             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
     <rangeselector:SfRangeSelector MinorTicksPerInterval="3"
                                    ShowTicks="True">
-        <chart:SfCartesianChart>
-            <chart:SfCartesianChart.XAxes>
-               <chart:DateTimeAxis IsVisible="False"
-                                   ShowMajorGridLines="False" />
-            </chart:SfCartesianChart.XAxes>
-            <chart:SfCartesianChart.YAxes>
-               <chart:NumericalAxis IsVisible="False"
-                                    ShowMajorGridLines="False" />
-            </chart:SfCartesianChart.YAxes>
-            <chart:SfCartesianChart.Series>
-               <chart:SplineAreaSeries ItemsSource="{Binding Source}"
-                                       XBindingPath="X"
-                                       YBindingPath="Y"
-                                       Fill="Blue">
-               </chart:SplineAreaSeries>
-            </chart:SfCartesianChart.Series>
-        </chart:SfCartesianChart>
+        <chart:SfCartesianChart />
     </rangeselector:SfRangeSelector>
 </ContentPage>
 
@@ -183,14 +107,6 @@ SfRangeSelector rangeSelector = new SfRangeSelector();
 rangeSelector.MinorTicksPerInterval = 1;
 rangeSelector.ShowTicks = true;
 SfCartesianChart chart = new SfCartesianChart();
-DateTimeAxis primaryAxis = new DateTimeAxis();
-chart.XAxes = primaryAxis;
-NumericalAxis secondaryAxis = new NumericalAxis();
-chart.YAxes = secondaryAxis;
-SplineAreaSeries series = new SplineAreaSeries();
-series.ItemsSource = (new ViewModel()).Source;
-series.XBindingPath = "X";
-series.YBindingPath = "Y";
 rangeSelector.Content = chart;
 
 {% endhighlight %}
@@ -207,31 +123,11 @@ rangeSelector.Content = chart;
 <ContentPage 
              ...
              xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
-             xmlns:local="clr-namespace:SliderTestbedSample.RangeSelector">
-    <ContentPage.BindingContext>
-        <local:ViewModel />
-    </ContentPage.BindingContext>
+             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
     <rangeselector:SfRangeSelector Interval="0.2"
                                    MinorTicksPerInterval="1"
                                    ShowTicks="True">
-        <chart:SfCartesianChart>
-            <chart:SfCartesianChart.XAxes>
-               <chart:DateTimeAxis IsVisible="False"
-                                   ShowMajorGridLines="False" />
-            </chart:SfCartesianChart.XAxes>
-            <chart:SfCartesianChart.YAxes>
-               <chart:NumericalAxis IsVisible="False"
-                                    ShowMajorGridLines="False" />
-            </chart:SfCartesianChart.YAxes>
-            <chart:SfCartesianChart.Series>
-               <chart:SplineAreaSeries ItemsSource="{Binding Source}"
-                                       XBindingPath="X"
-                                       YBindingPath="Y"
-                                       Fill="Blue">
-               </chart:SplineAreaSeries>
-            </chart:SfCartesianChart.Series>
-        </chart:SfCartesianChart>
+        <chart:SfCartesianChart />
     </rangeselector:SfRangeSelector>
 </ContentPage>
 
@@ -244,14 +140,6 @@ rangeSelector.Interval = 0.2;
 rangeSelector.MinorTicksPerInterval = 1;
 rangeSelector.ShowTicks = true;
 SfCartesianChart chart = new SfCartesianChart();
-DateTimeAxis primaryAxis = new DateTimeAxis();
-chart.XAxes = primaryAxis;
-NumericalAxis secondaryAxis = new NumericalAxis();
-chart.YAxes = secondaryAxis;
-SplineAreaSeries series = new SplineAreaSeries();
-series.ItemsSource = (new ViewModel()).Source;
-series.XBindingPath = "X";
-series.YBindingPath = "Y";
 rangeSelector.Content = chart;
 
 {% endhighlight %}
@@ -275,34 +163,14 @@ The inactive side of the range selector is between the [`Minimum`](https://help.
 <ContentPage 
              ...
              xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
-             xmlns:local="clr-namespace:SliderTestbedSample.RangeSelector">
-    <ContentPage.BindingContext>
-        <local:ViewModel />
-    </ContentPage.BindingContext>
+             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
     <rangeselector:SfRangeSelector Interval="0.2"
                                    ShowTicks="True">
         <rangeselector:SfRangeSelector.MajorTickStyle>
             <rangeselector:SliderTickStyle ActiveFill="#EE3F3F" 
                                            InactiveFill="#F7B1AE" />
         </rangeselector:SfRangeSelector.MajorTickStyle>
-        <chart:SfCartesianChart>
-            <chart:SfCartesianChart.XAxes>
-               <chart:DateTimeAxis IsVisible="False"
-                                   ShowMajorGridLines="False" />
-            </chart:SfCartesianChart.XAxes>
-            <chart:SfCartesianChart.YAxes>
-               <chart:NumericalAxis IsVisible="False"
-                                    ShowMajorGridLines="False" />
-            </chart:SfCartesianChart.YAxes>
-            <chart:SfCartesianChart.Series>
-               <chart:SplineAreaSeries ItemsSource="{Binding Source}"
-                                       XBindingPath="X"
-                                       YBindingPath="Y"
-                                       Fill="Blue">
-               </chart:SplineAreaSeries>
-            </chart:SfCartesianChart.Series>
-        </chart:SfCartesianChart>
+        <chart:SfCartesianChart />
     </rangeselector:SfRangeSelector>
 </ContentPage>
 
@@ -316,14 +184,6 @@ rangeSelector.ShowTicks = true;
 rangeSelector.MajorTickStyle.ActiveFill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
 rangeSelector.MajorTickStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
 SfCartesianChart chart = new SfCartesianChart();
-DateTimeAxis primaryAxis = new DateTimeAxis();
-chart.XAxes = primaryAxis;
-NumericalAxis secondaryAxis = new NumericalAxis();
-chart.YAxes = secondaryAxis;
-SplineAreaSeries series = new SplineAreaSeries();
-series.ItemsSource = (new ViewModel()).Source;
-series.XBindingPath = "X";
-series.YBindingPath = "Y";
 rangeSelector.Content = chart;
 
 {% endhighlight %}
@@ -347,11 +207,7 @@ The inactive side of the range selector is between the [`Minimum`](https://help.
 <ContentPage 
              ...
              xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
-             xmlns:local="clr-namespace:SliderTestbedSample.RangeSelector">
-    <ContentPage.BindingContext>
-        <local:ViewModel />
-    </ContentPage.BindingContext>
+             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
     <rangeselector:SfRangeSelector Interval="0.2"
                                    ShowTicks="True" 
                                    MinorTicksPerInterval="1">
@@ -359,23 +215,7 @@ The inactive side of the range selector is between the [`Minimum`](https://help.
             <rangeselector:SliderTickStyle ActiveFill="#EE3F3F" 
                                            InactiveFill="#F7B1AE" />
         </rangeselector:SfRangeSelector.MinorTickStyle>
-        <chart:SfCartesianChart>
-            <chart:SfCartesianChart.XAxes>
-               <chart:DateTimeAxis IsVisible="False"
-                                   ShowMajorGridLines="False" />
-            </chart:SfCartesianChart.XAxes>
-            <chart:SfCartesianChart.YAxes>
-               <chart:NumericalAxis IsVisible="False"
-                                    ShowMajorGridLines="False" />
-            </chart:SfCartesianChart.YAxes>
-            <chart:SfCartesianChart.Series>
-               <chart:SplineAreaSeries ItemsSource="{Binding Source}"
-                                       XBindingPath="X"
-                                       YBindingPath="Y"
-                                       Fill="Blue">
-               </chart:SplineAreaSeries>
-            </chart:SfCartesianChart.Series>
-        </chart:SfCartesianChart>
+        <chart:SfCartesianChart />
     </rangeselector:SfRangeSelector>
 </ContentPage>
 
@@ -390,14 +230,6 @@ rangeSelector.MinorTicksPerInterval = 1;
 rangeSelector.MinorTickStyle.ActiveFill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
 rangeSelector.MinorTickStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
 SfCartesianChart chart = new SfCartesianChart();
-DateTimeAxis primaryAxis = new DateTimeAxis();
-chart.XAxes = primaryAxis;
-NumericalAxis secondaryAxis = new NumericalAxis();
-chart.YAxes = secondaryAxis;
-SplineAreaSeries series = new SplineAreaSeries();
-series.ItemsSource = (new ViewModel()).Source;
-series.XBindingPath = "X";
-series.YBindingPath = "Y";
 rangeSelector.Content = chart;
 
 {% endhighlight %}
@@ -417,11 +249,7 @@ You can change the major and minor ticks size of the range selector using the [`
 <ContentPage 
              ...
              xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
-             xmlns:local="clr-namespace:SliderTestbedSample.RangeSelector">
-    <ContentPage.BindingContext>
-        <local:ViewModel />
-    </ContentPage.BindingContext>
+             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
     <rangeselector:SfRangeSelector Interval="0.2"
                                    ShowTicks="True" 
                                    MinorTicksPerInterval="1">
@@ -435,23 +263,7 @@ You can change the major and minor ticks size of the range selector using the [`
             <rangeselector:SliderTickStyle ActiveFill="#EE3F3F" 
                                            InactiveFill="#F7B1AE" />
         </rangeselector:SfRangeSelector.MinorTickStyle>
-        <chart:SfCartesianChart>
-            <chart:SfCartesianChart.XAxes>
-               <chart:DateTimeAxis IsVisible="False"
-                                   ShowMajorGridLines="False" />
-            </chart:SfCartesianChart.XAxes>
-            <chart:SfCartesianChart.YAxes>
-               <chart:NumericalAxis IsVisible="False"
-                                    ShowMajorGridLines="False" />
-            </chart:SfCartesianChart.YAxes>
-            <chart:SfCartesianChart.Series>
-               <chart:SplineAreaSeries ItemsSource="{Binding Source}"
-                                       XBindingPath="X"
-                                       YBindingPath="Y"
-                                       Fill="Blue">
-               </chart:SplineAreaSeries>
-            </chart:SfCartesianChart.Series>
-        </chart:SfCartesianChart>
+        <chart:SfCartesianChart />
     </rangeselector:SfRangeSelector>
 </ContentPage>
 
@@ -468,14 +280,6 @@ rangeSelector.MinorTickStyle.InactiveSize = new Size(2, 10);
 rangeSelector.MajorTickStyle.ActiveSize = new Size(2, 15);
 rangeSelector.MajorTickStyle.InactiveSize = new Size(2, 15);
 SfCartesianChart chart = new SfCartesianChart();
-DateTimeAxis primaryAxis = new DateTimeAxis();
-chart.XAxes = primaryAxis;
-NumericalAxis secondaryAxis = new NumericalAxis();
-chart.YAxes = secondaryAxis;
-SplineAreaSeries series = new SplineAreaSeries();
-series.ItemsSource = (new ViewModel()).Source;
-series.XBindingPath = "X";
-series.YBindingPath = "Y";
 rangeSelector.Content = chart;
 
 {% endhighlight %}
@@ -495,11 +299,7 @@ You can adjust the space between track and ticks of the range selector using the
 <ContentPage 
              ...
              xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
-             xmlns:local="clr-namespace:SliderTestbedSample.RangeSelector">
-    <ContentPage.BindingContext>
-        <local:ViewModel />
-    </ContentPage.BindingContext>
+             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
     <rangeselector:SfRangeSelector Interval="0.2"
                                    ShowTicks="True" 
                                    MinorTicksPerInterval="1">
@@ -513,23 +313,7 @@ You can adjust the space between track and ticks of the range selector using the
             <rangeselector:SliderTickStyle ActiveFill="#EE3F3F" 
                                            InactiveFill="#F7B1AE" />
         </rangeselector:SfRangeSelector.MinorTickStyle>
-        <chart:SfCartesianChart>
-            <chart:SfCartesianChart.XAxes>
-               <chart:DateTimeAxis IsVisible="False"
-                                   ShowMajorGridLines="False" />
-            </chart:SfCartesianChart.XAxes>
-            <chart:SfCartesianChart.YAxes>
-               <chart:NumericalAxis IsVisible="False"
-                                    ShowMajorGridLines="False" />
-            </chart:SfCartesianChart.YAxes>
-            <chart:SfCartesianChart.Series>
-               <chart:SplineAreaSeries ItemsSource="{Binding Source}"
-                                       XBindingPath="X"
-                                       YBindingPath="Y"
-                                       Fill="Blue">
-               </chart:SplineAreaSeries>
-            </chart:SfCartesianChart.Series>
-        </chart:SfCartesianChart>
+        <chart:SfCartesianChart />
     </rangeselector:SfRangeSelector>
 </ContentPage>
 
@@ -544,14 +328,6 @@ rangeSelector.MinorTicksPerInterval = 1;
 rangeSelector.MinorTickStyle.Offset = 5;
 rangeSelector.MajorTickStyle.Offset = 5;
 SfCartesianChart chart = new SfCartesianChart();
-DateTimeAxis primaryAxis = new DateTimeAxis();
-chart.XAxes = primaryAxis;
-NumericalAxis secondaryAxis = new NumericalAxis();
-chart.YAxes = secondaryAxis;
-SplineAreaSeries series = new SplineAreaSeries();
-series.ItemsSource = (new ViewModel()).Source;
-series.XBindingPath = "X";
-series.YBindingPath = "Y";
 rangeSelector.Content = chart;
 
 {% endhighlight %}

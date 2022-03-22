@@ -188,13 +188,19 @@ The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.S
 
 {% highlight xaml %}
 
-<rangeselector:SfRangeSelector Minimum="0" 
-                               Maximum="10" 
-                               RangeStart="2" 
-                               RangeEnd="8" 
-                               ShowLabel="True" 
-                               Interval="2">
-</rangeselector:SfRangeSelector>
+<ContentPage 
+             ...
+             xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
+             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
+    <rangeselector:SfRangeSelector Minimum="0" 
+                                   Maximum="10" 
+                                   RangeStart="2" 
+                                   RangeEnd="8" 
+                                   ShowLabel="True" 
+                                   Interval="2">
+        <chart:SfCartesianChart />
+    </rangeselector:SfRangeSelector>
+</ContentPage>
 
 {% endhighlight %}
 
@@ -207,6 +213,8 @@ rangeSelector.RangeStart = 2;
 rangeSelector.RangeEnd = 8;
 rangeSelector.ShowLabel = true;
 rangeSelector.Interval = 2;
+SfCartesianChart chart = new SfCartesianChart();
+rangeSelector.Content = chart;
 
 {% endhighlight %}
 
@@ -222,15 +230,21 @@ The [`ShowTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.Sl
 
 {% highlight xaml %}
 
-<rangeselector:SfRangeSelector ShowTicks="True" 
-                               Minimum="0" 
-                               Maximum="10" 
-                               RangeStart="2" 
-                               RangeEnd="8"                       
-                               Interval="2" 
-                               ShowLabels="True"
-                               MinorTicksPerInterval="1">
-</rangeselector:SfRangeSelector>
+<ContentPage 
+             ...
+             xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
+             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
+    <rangeselector:SfRangeSelector ShowTicks="True" 
+                                   Minimum="0" 
+                                   Maximum="10" 
+                                   RangeStart="2" 
+                                   RangeEnd="8"                       
+                                   Interval="2" 
+                                   ShowLabels="True"
+                                   MinorTicksPerInterval="1">
+        <chart:SfCartesianChart />
+    </rangeselector:SfRangeSelector>
+</ContentPage>
 
 {% endhighlight %}
 
@@ -245,6 +259,8 @@ rangeSelector.ShowLabels = true;
 rangeSelector.ShowTicks = true;
 rangeSelector.Interval = 2;
 rangeSelector.MinorTicksPerInterval = 1;
+SfCartesianChart chart = new SfCartesianChart();
+rangeSelector.Content = chart;
 
 {% endhighlight %}
 
@@ -260,15 +276,21 @@ You can invert the range selector using the [`IsInversed`](https://help.syncfusi
 
 {% highlight xaml %}
 
-<rangeselector:SfRangeSelector IsInversed="True"
-                               Minimum="0" 
-                               Maximum="10" 
-                               RangeStart="2" 
-                               RangeEnd="8" 
-                               ShowTicks="True" 
-                               Interval="2" 
-                               MinorTicksPerInterval="1">
-</rangeselector:SfRangeSelector>
+<ContentPage 
+             ...
+             xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
+             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
+    <rangeselector:SfRangeSelector IsInversed="True"
+                                   Minimum="0" 
+                                   Maximum="10" 
+                                   RangeStart="2" 
+                                   RangeEnd="8" 
+                                   ShowTicks="True" 
+                                   Interval="2" 
+                                   MinorTicksPerInterval="1">
+        <chart:SfCartesianChart />
+    </rangeselector:SfRangeSelector>
+</ContentPage>
 
 {% endhighlight %}
 
@@ -284,6 +306,8 @@ rangeSelector.ShowLabels = true;
 rangeSelector.ShowTicks = true;
 rangeSelector.Interval = 2;
 rangeSelector.MinorTicksPerInterval = 1;
+SfCartesianChart chart = new SfCartesianChart();
+rangeSelector.Content = chart;
 
 {% endhighlight %}
 
@@ -301,15 +325,21 @@ N> The format type (numeric or date) of the range selector is determined based o
 
 {% highlight xaml %}
 
-<rangeselector:SfRangeSelector Minimum="20" 
-                               Maximum="100" 
-                               RangeStart="20" 
-                               RangeEnd="80"
-                               NumberFormat="$##" 
-                               ShowLabels="True" 
-                               ShowTicks="True" 
-                               Interval="20">
-</rangeselector:SfRangeSelector>
+<ContentPage 
+             ...
+             xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
+             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
+    <rangeselector:SfRangeSelector Minimum="20" 
+                                   Maximum="100" 
+                                   RangeStart="20" 
+                                   RangeEnd="80"
+                                   NumberFormat="$##" 
+                                   ShowLabels="True" 
+                                   ShowTicks="True" 
+                                   Interval="20">
+        <chart:SfCartesianChart />
+    </rangeselector:SfRangeSelector>
+</ContentPage> 
 
 {% endhighlight %}
 
@@ -324,6 +354,8 @@ rangeSelector.ShowLabels = true;
 rangeSelector.ShowTicks = true;
 rangeSelector.Interval = 20;
 rangeSelector.NumberFormat = "$##";
+SfCartesianChart chart = new SfCartesianChart();
+rangeSelector.Content = chart;
 
 {% endhighlight %}
 
