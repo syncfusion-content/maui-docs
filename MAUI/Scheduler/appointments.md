@@ -911,6 +911,8 @@ this.Scheduler.AppointmentsSource = appointments;
 {% endhighlight %}  
 {% endtabs %}
 
+![customize-appointment-template-appearance-in-maui-scheduler](images/appointments/customize-appointment-template-appearance-in-maui-scheduler.png)
+
 N>
 * By default, the `SchedulerAppointment` is set as the `BindingContext` for `AppointmentTemplate` for both `SchedulerAppointment` and custom data object in `AppointmentsSource.`
 * The Custom data object can be bound in `AppointmentTemplate` by using `SchedulerAppointment.Data.`
