@@ -56,9 +56,9 @@ The [`NumberFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders
 <sliders:SfSlider Minimum="2" 
                   Maximum="10"
                   Value="6"
-		  Interval="2"  
-		  NumberFormat="$##" 
-		  ShowLabels="True"
+		          Interval="2"  
+		          NumberFormat="$##" 
+		          ShowLabels="True"
                   ShowTicks="True">
 </sliders:SfSlider>
 
@@ -82,20 +82,20 @@ slider.ShowLabels = true;
 
 ## Date format
 
-The [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DateFormat) property is used to format the date labels. It is mandatory for date [`SfSlider`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html). For date values, the slider does not have auto interval support. So, it is mandatory to set [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Interval), [`DateIntervalType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DateIntervalType), and [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DateFormat) for date values. The default value of [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DateFormat) property is `yyyy`.
+The [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DateFormat) property is used to format the date labels. It is mandatory for date [`SfDateTimeSlider`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html). For date values, the slider does not have auto interval support. So, it is mandatory to set [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Interval), [`IntervalType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DateIntervalType), and [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DateFormat) for date values. The default value of [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DateFormat) property is `yyyy`.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<sliders:SfSlider Minimum="2000-01-01T09:00:00" 
-                  Maximum="2000-01-01T17:00:00" 
-                  Value="2000-01-01T13:00:00" 
-          	  ShowLabels="True"  
-		  DateIntervalType="Hours" 
-		  Interval="2" 
-		  DateFormat="h tt">
-</sliders:SfSlider>
+<sliders:SfDateTimeSlider Minimum="2000-01-01T09:00:00" 
+                          Maximum="2000-01-01T17:00:00" 
+                          Value="2000-01-01T13:00:00" 
+          	              ShowLabels="True"  
+		                  IntervalType="Hours" 
+		                  Interval="2" 
+		                  DateFormat="h tt">
+</sliders:SfDateTimeSlider>
 
 {% endhighlight %}
 
@@ -106,7 +106,7 @@ slider.Minimum = new DateTime(2000, 01, 01, 09, 00, 00);
 slider.Maximum = new DateTime(2000, 01, 01, 17, 00, 00);
 slider.Value = new DateTime(2000, 01, 01, 13, 00, 00);
 slider.Interval = 2;
-slider.DateIntervalType = SliderDateIntervalType.Hours;
+slider.IntervalType = SliderDateIntervalType.Hours;
 slider.DateFormat = "h tt";
 slider.ShowLabels = true;
     
@@ -127,10 +127,10 @@ The [`LabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slid
 <sliders:SfSlider Minimum="0" 
                   Maximum="10"
                   Value="6"
-		  Interval="2"  
-		  LabelsPlacement="BetweenTicks" 
-		  ShowLabels="True" 
-		  ShowTicks="True">
+		          Interval="2"  
+		          LabelsPlacement="BetweenTicks" 
+		          ShowLabels="True" 
+		          ShowTicks="True">
 </sliders:SfSlider>
 
 {% endhighlight %}
@@ -174,10 +174,10 @@ The inactive side of the slider is between the thumb and the [`Maximum`](https:/
     <sliders:SfSlider.LabelStyle>
          <sliders:SliderLabelStyle ActiveTextColor="#EE3F3F" 
                                    InactiveTextColor="#F7B1AE" 
-	             		   ActiveFontAttributes="Italic" 
-				   InactiveFontAttributes="Italic" 
-				   ActiveFontSize="16" 
-				   InactiveFontSize="16" />
+	             		           ActiveFontAttributes="Italic" 
+				                   InactiveFontAttributes="Italic" 
+				                   ActiveFontSize="16" 
+				                   InactiveFontSize="16" />
     </sliders:SfSlider.LabelStyle>
 </sliders:SfSlider>
 

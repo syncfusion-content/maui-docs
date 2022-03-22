@@ -111,7 +111,7 @@ The [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.S
                                            RangeEnd="2000-01-01T15:00:00" 
                                            ShowLabels="True" 
                                            ShowTicks="True" 
-                                           DateIntervalType="Hours" 
+                                           IntervalType="Hours" 
                                            Interval="2" 
                                            DateFormat="h tt"
                                            ShowTicks="True">
@@ -129,7 +129,7 @@ rangeSelector.Maximum = new DateTime(2000, 01, 01, 17, 00, 00);
 rangeSelector.RangeStart = new DateTime(2000, 01, 01, 11, 00, 00);
 rangeSelector.RangeEnd = new DateTime(2000, 01, 01, 15, 00, 00);
 rangeSelector.Interval = 2;
-rangeSelector.DateIntervalType = SliderDateIntervalType.Hours;
+rangeSelector.IntervalType = SliderDateIntervalType.Hours;
 rangeSelector.DateFormat = "h tt";
 rangeSelector.ShowLabels = true;
 rangeSelector.ShowTicks = true;

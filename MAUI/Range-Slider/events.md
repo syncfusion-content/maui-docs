@@ -23,13 +23,13 @@ This section explains about how to add the events for range slider.
 {% highlight xaml %}
 
  <rangeslider:SfRangeSlider Minimum="2010-01-01" 
-                       Maximum="2020-01-01" 
-                       RangeStart="2012-01-01" 
-                       RangeEnd="2018-01-01" 
-                       ValueChangeStart="OnValueChangeStart" 
-                       ValueChanging="OnValueChanging" 
-                       ValueChanged="OnValueChanged" 
-                       ValueChangeEnd="OnValueChangeEnd">
+                            Maximum="2020-01-01" 
+                            RangeStart="2012-01-01" 
+                            RangeEnd="2018-01-01" 
+                            ValueChangeStart="OnValueChangeStart" 
+                            ValueChanging="OnValueChanging" 
+                            ValueChanged="OnValueChanged" 
+                            ValueChangeEnd="OnValueChangeEnd">
 </rangeslider:SfRangeSlider>
 
 {% endhighlight %}
@@ -44,7 +44,7 @@ This section explains about how to add the events for range slider.
    rangeSlider.ValueChangeEnd += OnValueChanged;
 }
 
-private void OnValueChangeStart(object sender, RangeSliderValueChangeStartEventArgs e)
+private void OnValueChangeStart(object sender, EventArgs e)
 {
 }
 
@@ -56,7 +56,7 @@ private void OnValueChanged(object sender, RangeSliderValueChangedEventArgs e)
 {
 }
 
-private void OnValueChangeEnd(object sender, RangeSliderValueChangeEndEventArgs e)
+private void OnValueChangeEnd(object sender, EventArgs e)
 {
 }
 
@@ -114,7 +114,7 @@ private void OnLabelCreated(object sender, SliderLabelCreatedEventArgs e)
 
 By default it is formatted based on [`NumberFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_NumberFormat)  property and [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DateFormat) property based on whether it is date type [`SfRangeSlider`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSlider.html) or numeric [`SfRangeSlider`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSlider.html).
 
-You can format or change the whole tooltip label text using the [`ToolTipLabelCreated`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ToolTipLabelCreated) event. The [`SliderLabelCreatedEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelCreatedEventArgs.html) contains the following parameters,
+You can format or change the whole tooltip label text using the [`TooltipLabelCreated`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ToolTipLabelCreated) event. The [`SliderTooltipLabelCreatedEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelCreatedEventArgs.html) contains the following parameters,
 
 * Text – Change the format of the tooltip text using the [`Text`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelCreatedEventArgs.html#Syncfusion_Maui_Sliders_SliderLabelCreatedEventArgs_Text) property.
 * Style – Change the appearance of the tooltip text like color, stroke color, and padding using the [`Style`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelCreatedEventArgs.html#Syncfusion_Maui_Sliders_SliderLabelCreatedEventArgs_Style) property.
@@ -123,8 +123,10 @@ You can format or change the whole tooltip label text using the [`ToolTipLabelCr
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider ToolTipShape="Rectangle"
-                           ToolTipLabelCreated="OnTooltipLabelCreated">
+<rangeslider:SfRangeSlider>
+   <rangeslider:SfRangeSlider.Tooltip>
+      <rangeslider:SliderTooltip TooltipLabelCreated="OnTooltipLabelCreated"/>
+   </rangeslider:SfRangeSlider.Tooltip>
 </rangeslider:SfRangeSlider>
 
 {% endhighlight %}
@@ -132,10 +134,9 @@ You can format or change the whole tooltip label text using the [`ToolTipLabelCr
 {% highlight C# %}
 {
     SfRangeSlider rangeSlider = new SfRangeSlider();
-    rangeSlider.ToolTipShape = SliderToolTipShape.Rectangle;
-    rangeSlider.ToolTipLabelCreated += OnTooltipLabelCreated;
+    rangeSlider.TooltipLabelCreated += OnTooltipLabelCreated;
  }
- private void OnTooltipLabelCreated(object sender, SliderLabelCreatedEventArgs e)
+ private void OnTooltipLabelCreated(object sender, SliderTooltipLabelCreatedEventArgs e)
  {
      e.Text = "$" + e.Text;
  }

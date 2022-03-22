@@ -77,7 +77,7 @@ It is used to represent the number of smaller ticks between two major ticks. For
                   Value="6"
                   ShowLabels="True" 
                   MinorTicksPerInterval="3" 
-		  ShowTicks="True">
+		          ShowTicks="True">
 </sliders:SfSlider>
 
 {% endhighlight %}
@@ -110,7 +110,7 @@ slider.ShowLabels = true;
                   Interval="2" 
                   ShowLabels="True" 
                   MinorTicksPerInterval="1" 
-		  ShowTicks="True">
+		          ShowTicks="True">
 </sliders:SfSlider>
 
 {% endhighlight %}
