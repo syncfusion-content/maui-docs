@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Header in .NET MAUI Scheduler control | Syncfusion
-description: Learn here all about to customize header height, date format and appearance of Syncfusion .NET MAUI Scheduler (SfScheduler) control and more. 
+description: Learn here all about how to customize header height, date format, and appearance of Syncfusion .NET MAUI Scheduler (SfScheduler) control and more. 
 platform: maui
 control: SfScheduler
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Header in .NET MAUI Scheduler (SfScheduler)
 
-You can learn about SfScheduler's header height, date format, and appearance support of the SfScheduler.
+You can learn about `SfScheduler's` header height, date format, and appearance support.
 
 ## Customize header height in scheduler
 
@@ -69,7 +69,7 @@ The header can be customized by using the `HeaderView` property of the `SfSchedu
 
 ### Customize header appearance using text style
 
-You can style the background color, and textStyle by using the properties such as `Background,` and `TextStyle` properties of `HeaderView.`
+You can style the background color and textStyle by using the properties such as `Background` and `TextStyle` properties of `HeaderView.`
 
 {% tabs %}
 {% highlight xaml %}
@@ -137,7 +137,7 @@ You can customize the header appearance by using the `HeaderTemplate` property o
 
 ### Customize header appearance using DataTemplateSelector
 
-You can customize the header appearance by using the `HeaderTemplate` property of `HeaderView` in the `SfScheduler.` The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler header by using the `HeaderTemplate.` It lets to choose a different data template for each header, customizing the appearance of a particular header based on certain conditions.
+You can customize the header appearance by using the `HeaderTemplate` property of `HeaderView` in the `SfScheduler.` The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler header by using the `HeaderTemplate.` It allows you to choose a different data template for each header, as well as to customize the appearance of a particular header based on certain conditions.
 
 {% tabs %}
 {% highlight xaml %}
