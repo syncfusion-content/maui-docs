@@ -15,7 +15,7 @@ This section explains the steps required to add the `.NET MAUI Linear Gauge` con
 
 * Create a new .NET MAUI application in the Visual Studio.
 
-* Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfLinearGauge to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Gauges], and then install it.
+* Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfLinearGauge to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Gauges], and [Syncfusion.Maui.Core] then install that.
 
 * Import the control namespace `Syncfusion.Maui.Gauges` in XAML or C# code.
 
@@ -179,7 +179,7 @@ The following code example gives you the complete code of above configurations.
 
 {% highlight xaml %}
 
-  <gauge:SfLinearGauge>
+  <gauge:SfLinearGauge x:Name="gauge" >
                 <gauge:SfLinearGauge.Ranges>
                     <gauge:LinearRange/>
                 </gauge:SfLinearGauge.Ranges>
