@@ -355,6 +355,8 @@ private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 {% endhighlight %}
 {% endtabs %}
 
+![time-region-appearence-template-customization-in-timeslots-views-in-maui-scheduler](images/timeline-views/time-region-appearence-template-customization-in-timeslots-views-in-maui-scheduler.png)
+
 ### Customize special time region appearance using DataTemplateSelector
 
 You can customize the time region appearance by using the `TimeRegionTemplate` property of `TimelineView` in the `SfScheduler.` The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler time region by using the `TimeRegionTemplate.` It allows you to choose a different data template for each time region, as well as customize the appearance of a particular time region based on certain conditions.
@@ -640,6 +642,8 @@ this.Scheduler.TimelineView.ViewHeaderSettings.Height = 100;
 {% endhighlight %}
 {% endtabs %}
 
+![customize-view-header-height-in-timeslot-views-in-maui-scheduler](images/timeline-views/customize-view-header-height-in-timeslot-views-in-maui-scheduler.png)
+
 ### Customize view header appearance using text style
 
 The background color and text style for the labels mentioning the time can be customized, by setting the `Background,` `DateTextStyle,` and `DayTextStyle` properties of `TimelineView.`
@@ -724,6 +728,8 @@ You can customize the view header appearance by using the `ViewHeaderTemplate` p
 
 {% endhighlight %}
 {% endtabs %}
+
+![customize-view-header-appearance-using-template-in-timeslot-view-in-maui-scheduler](images/timeline-views/customize-view-header-appearance-using-template-in-timeslot-view-in-maui-scheduler.png)
 
 N>
 * The BindingContext of the `ViewHeaderTemplate` is the`DateTime.` The `SelectableDayPredicate,` `MinimumDateTime,` and `MaximumDateTime` properties of date and time values can be used directly in the data template selector.
