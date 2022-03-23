@@ -46,7 +46,7 @@ rangeSelector.Content = chart;
 
 ![RangeSelector tooltip](images/tooltip/tooltip.png)
 
-N> Refer [here](https://help.syncfusion.com/maui/range-selector/events) to customize tooltip text format through range selector events.
+N> Refer [here](https://help.syncfusion.com/maui/range-slider/events) to customize tooltip text format through range selector events.
 
 ## Tooltip label style
 
