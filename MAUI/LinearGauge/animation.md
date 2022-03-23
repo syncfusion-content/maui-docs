@@ -13,7 +13,7 @@ All Linear Gauge elements including the scale, ticks and labels, range, bar poin
 
 ## Animate axis
 
-The [`EnableAxisAnimation`]() and [`AnimationDuration`]() properties in [`SfLinearGauge`]() is used to animate the scale along with the ticks and labels. The scale will have a fade-in with opacity animation when this [`EnableAxisAnimation`]() is set to true. By default, the [`EnableAxisAnimation`]() is set to false. 
+The `EnableAxisAnimation` and `AnimationDuration` properties in `SfLinearGauge` is used to animate the scale along with the ticks and labels. The scale will have a fade-in with opacity animation when this `EnableAxisAnimation` is set to true. By default, the `EnableAxisAnimation` is set to false. 
 
 {% tabs %}
 
@@ -37,7 +37,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Animate range
 
-The [`EnableRangeAnimation`]() and [`AnimationDuration`]() properties in [`SfLinearGauge`]() is used to animate the scale along with the ticks and labels. The range will have a fade-in with opacity animation when this [`EnableRangeAnimation`]() is set to true. By default, the [`EnableRangeAnimation`]() is set to false.
+The `EnableRangeAnimation` and `AnimationDuration` properties in `SfLinearGauge` is used to animate the scale along with the ticks and labels. The range will have a fade-in with opacity animation when this `EnableRangeAnimation` is set to true. By default, the `EnableRangeAnimation` is set to false.
 
 {% tabs %}
 
@@ -65,11 +65,11 @@ The animation behavior is common for all the three pointers in Linear Gauge - sh
 
 All the above three pointers have the following properties for the animation:
 
-*  [`EnableAnimation`]() - Enable or disable the animation for pointer. The default value is `false`.
-*  [`AnimationDuration`]() - Sets the animation duration. The default value is 1000.
-*  [`AnimationEasing`]() - Sets the animation type. 
+*  `EnableAnimation` - Enable or disable the animation for pointer. The default value is `false`.
+*  `AnimationDuration` - Sets the animation duration. The default value is 1000.
+*  `AnimationEasing` - Sets the animation type. 
 
-The [`AnimationEasing`]() supports the following animations. The default animation type is `Easing.Linear`.
+The `AnimationEasing` supports the following animations. The default animation type is `Easing.Linear`.
 
 * `Linear`
 
@@ -127,7 +127,7 @@ The following code example demonstrates how to update the animation for bar poin
 
 Both the shape and content marker pointers will have the same set of properties and behave similarly for animation. 
 
-So, demonstrated the [`LinearShapePointer`]() only but the same is applicable for [`LinearContentPointer`]() too. 
+So, demonstrated the `LinearShapePointer` only but the same is applicable for `LinearContentPointer` too. 
 
 ### Marker pointer with `SpringOut` animation
 

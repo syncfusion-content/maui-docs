@@ -11,11 +11,11 @@ documentation: ug
 
 The pointer is used to indicate values on a scale. The Linear Gauge control has three types of pointers:
 
-[`Bar pointer`]()
-[`Shape Pointer`]()
-[`Content pointer`]()
+`Bar pointer`
+`Shape Pointer`
+`Content pointer`
 
-All the pointers can be customized as needed. You can add multiple pointers to the gauge to point multiple values on the same scale. The value of the pointer is set using the [`Value`]() property.
+All the pointers can be customized as needed. You can add multiple pointers to the gauge to point multiple values on the same scale. The value of the pointer is set using the `Value` property.
 
 ![Pointer in linear gauge](images/pointers/pointers.PNG)
 
@@ -54,11 +54,11 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Step frequency
 
-The [`StepFrequency`]() property is used to specify the interval between snap points while dragging the pointer.
+The `StepFrequency` property is used to specify the interval between snap points while dragging the pointer.
 
-For example, if the value of [`StepFrequency`]() is 20, the pointer will not move continuously while dragging; instead, it will update in terms of 20.
+For example, if the value of `StepFrequency` is 20, the pointer will not move continuously while dragging; instead, it will update in terms of 20.
 
-N> To work with the [`StepFrequency`]() value, enable pointer interaction support.
+N> To work with the `StepFrequency` value, enable pointer interaction support.
 
 {% tabs %}
 
@@ -91,13 +91,13 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Drag offset
 
-The [`DragOffset`]() property is used to specify the outer dragging offset for pointer. When the pointer is pressed close to the pointer, this value helps in dragging the pointer. The default value of [`DragOffset`]() is 15d.
+The `DragOffset` property is used to specify the outer dragging offset for pointer. When the pointer is pressed close to the pointer, this value helps in dragging the pointer. The default value of `DragOffset` is 15d.
 
-For example, if the value of [`DragOffset`]() is 20, the pointer will be dragged while interacting with that pointer around 20 pixels.	
+For example, if the value of `DragOffset` is 20, the pointer will be dragged while interacting with that pointer around 20 pixels.	
 
-If the value of [`DragOffset`]() is 0, the pointer will be dragged while interacting with exact pointer bounds alone.
+If the value of `DragOffset` is 0, the pointer will be dragged while interacting with exact pointer bounds alone.
 
-N> To work with the [`DragOffset`]() value, enable pointer interaction support.
+N> To work with the `DragOffset` value, enable pointer interaction support.
 
 {% tabs %}
 
@@ -131,13 +131,13 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Event
 
-[`ValueChangeStarted`]() - Occurs whenever the pointer starts to drag.
+`ValueChangeStarted` - Occurs whenever the pointer starts to drag.
 
-[`ValueChanging`]() - Occurs before the current drag value gets updated as pointer value. The `Cancel` argument of `ValueChangingEventArgs` allows to restrict the update of current drag value.
+`ValueChanging` - Occurs before the current drag value gets updated as pointer value. The `Cancel` argument of `ValueChangingEventArgs` allows to restrict the update of current drag value.
 
-[`ValueChanged`]() - Occurs whenever the pointer value is changed while dragging.
+`ValueChanged` - Occurs whenever the pointer value is changed while dragging.
 
-[`ValueChangeCompleted`]() - Occurs once the dragging of the pointer gets completed.
+`ValueChangeCompleted` - Occurs once the dragging of the pointer gets completed.
 
 {% tabs %}
 

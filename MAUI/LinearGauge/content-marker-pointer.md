@@ -9,7 +9,7 @@ documentation: ug
 
 # Content Marker Pointer in .NET MAUI Linear Gauge (SfLinearGauge)
 
-The [`LinearContentPointer`]() in [`SfLinearGauge`]() allows you to use any .NET MAUI content as a marker pointer. The following code sample uses a `Image` as a marker pointer.
+The `LinearContentPointer` in `SfLinearGauge` allows you to use any .NET MAUI content as a marker pointer. The following code sample uses a `Image` as a marker pointer.
 
 {% tabs %}
 
@@ -44,7 +44,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Change marker alignment
 
-The content marker pointer's alignment can be changed by the [`Alignment`]() property of [`LinearContentPointer`](). The available marker positions are `Start`, `End`, and `Center`. 
+The content marker pointer's alignment can be changed by the `Alignment` property of `LinearContentPointer`. The available marker positions are `Start`, `End`, and `Center`. 
 
 {% tabs %}
 
@@ -97,7 +97,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Change the position
 
-By default, the shape pointer is positioned `Outside` the scale. This position can be changed by the [`Position`]() property of pointer. It is possible to position the shape pointer `Inside`, `Cross`, or `Outside` the scale. The following code sample demonstrates how to change the shape pointer position to `Cross` the scale. 
+By default, the shape pointer is positioned `Outside` the scale. This position can be changed by the `Position` property of pointer. It is possible to position the shape pointer `Inside`, `Cross`, or `Outside` the scale. The following code sample demonstrates how to change the shape pointer position to `Cross` the scale. 
 
 {% tabs %}
 
@@ -150,7 +150,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Change the offset
 
-In addition to position the content marker pointer, it is also possible to change the offset of the shape pointer. The [`OffsetX`]() and [`OffsetY`]() are the distance from the scale. The cross-positioned elements will not get affected by the [`OffsetX`]() and [`OffsetY`]() values. The following code sample demonstrates how to change the offset value of the shape pointer. 
+In addition to position the content marker pointer, it is also possible to change the offset of the shape pointer. The `OffsetX` and `OffsetY` are the distance from the scale. The cross-positioned elements will not get affected by the `OffsetX` and `OffsetY` values. The following code sample demonstrates how to change the offset value of the shape pointer. 
 
 {% tabs %}
 

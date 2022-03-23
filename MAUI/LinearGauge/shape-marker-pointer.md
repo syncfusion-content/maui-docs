@@ -9,7 +9,7 @@ documentation: ug
 
 # Shape Marker Pointer in .NET MAUI Linear Gauge (SfLinearGauge)
 
-The [`LinearShapePointer`]() in [`SfLinearGauge`]() have the following pre-defined shapes to mark a specific value. The default shape pointer is `InvertedTriangle`. 
+The `LinearShapePointer` in `SfLinearGauge` have the following pre-defined shapes to mark a specific value. The default shape pointer is `InvertedTriangle`. 
 
 1. `Triangle`
 2. `Inverted Triangle`
@@ -48,7 +48,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Change the size
 
-The size of the marker pointer can be changed by the [`ShapeHeight`]() and [`ShapeWidth`]() properties of [`LinearShapePointer`](). The following code sample demonstrates how to change the size of a shape pointer.
+The size of the marker pointer can be changed by the `ShapeHeight` and `ShapeWidth` properties of `LinearShapePointer`. The following code sample demonstrates how to change the size of a shape pointer.
 
 {% tabs %}
 
@@ -81,7 +81,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Customize color
 
-The color of the shape pointer can be changed by the [`Fill`]() property. The following code example demonstrates the same.
+The color of the shape pointer can be changed by the `Fill` property. The following code example demonstrates the same.
 
 {% tabs %}
 
@@ -113,7 +113,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Customize the border
 
-The border can be customized by the [`Stroke`]() and [`StrokeThickness`]() properties of the [`LinearShapePointer`]().
+The border can be customized by the `Stroke` and `StrokeThickness` properties of the `LinearShapePointer`.
 
 {% tabs %}
 
@@ -146,7 +146,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Shadow support
 
-The shadow can be applied by the [`HasShadow`]() property.
+The shadow can be applied by the `HasShadow` property.
 
 {% tabs %}
 
@@ -179,7 +179,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Change marker alignment
 
-The marker pointer alignment can be changed by the [`Alignment`]() property of [`LinearShapePointer`](). The available marker pointer alignments are `Start`, `End`, and `Center`.
+The marker pointer alignment can be changed by the `Alignment` property of `LinearShapePointer`. The available marker pointer alignments are `Start`, `End`, and `Center`.
 
 {% tabs %}
 
@@ -213,7 +213,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Customize position
 
-By default, the shape pointer is positioned `Outside` the scale. This position can be changed by the [`Position`]() property of pointer. It is possible to position the shape pointer `Inside`, `Cross`, or `Outside` the scale. The following code sample demonstrates how to change the shape pointer position to inside the scale.  
+By default, the shape pointer is positioned `Outside` the scale. This position can be changed by the `Position` property of pointer. It is possible to position the shape pointer `Inside`, `Cross`, or `Outside` the scale. The following code sample demonstrates how to change the shape pointer position to inside the scale.  
 
 {% tabs %}
 
@@ -247,7 +247,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Customize offset
 
-In addition to position the shape pointer, it is also possible to change the offset of the shape pointer. The [`OffsetX`]() and [`OffsetY`]() are the distance from the scale and the cross positioned elements will not get affected by the [`OffsetX`]() and [`OffsetY`]() values. The following code sample demonstrates how to change the [`OffsetX`]() and [`OffsetY`]() values of the shape pointer. 
+In addition to position the shape pointer, it is also possible to change the offset of the shape pointer. The `OffsetX` and `OffsetY` are the distance from the scale and the cross positioned elements will not get affected by the `OffsetX` and `OffsetY` values. The following code sample demonstrates how to change the `OffsetX` and `OffsetY` values of the shape pointer. 
 
 {% tabs %}
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Mirrored in .NET MAUI Linear Gauge (SfLinearGauge)
 
-The [`IsMirrored`]() property in [`SfLinearGauge`]() mirrors all the Gauge elements in the `SfLinearGauge`. The following code sample demonstrates how to set the [`IsMirrored`]() property.
+The `IsMirrored` property in `SfLinearGauge` mirrors all the Gauge elements in the `SfLinearGauge`. The following code sample demonstrates how to set the `IsMirrored` property.
 
 {% tabs %}
 

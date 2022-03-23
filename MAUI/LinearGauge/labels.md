@@ -15,7 +15,7 @@ The default style of gauge labels is as follows.
 
 ## Customize label styles
 
-Scale labels can be customized using the [`LabelStyle`]() property of [`SfLinearGauge`](). The [`LabelStyle`]() property has the following properties to customize the scale labels.
+Scale labels can be customized using the `LabelStyle` property of `SfLinearGauge`. The `LabelStyle` property has the following properties to customize the scale labels.
 
 * `TextColor` – Allows to customize the color of the labels.
 * `FontFamily` – Allows to specify the font family for labels.
@@ -52,7 +52,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Change visibility
 
-The [`ShowLabels`]() property of [`SfLinearGauge`]() allows you to show or hide the visibility of scale labels. The default value of this property is true.
+The `ShowLabels` property of `SfLinearGauge` allows you to show or hide the visibility of scale labels. The default value of this property is true.
 
 {% tabs %}
 
@@ -78,7 +78,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Customize interval between labels
 
-The [`Interval`]() between labels can be customized using the [`Interval`]() property of [`SfLinearGauge`](). The major ticks are generated based on this [`Interval`]() property.
+The `Interval` between labels can be customized using the `Interval` property of `SfLinearGauge`. The major ticks are generated based on this `Interval` property.
 
 {% tabs %}
 
@@ -104,7 +104,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Change label position
 
-The linear gauge allows to position the labels either `Inside` or `Outside` the gauge track using the [`LabelPosition`]() property. By default, labels are positioned `Inside` the gauge track.
+The linear gauge allows to position the labels either `Inside` or `Outside` the gauge track using the `LabelPosition` property. By default, labels are positioned `Inside` the gauge track.
 
 {% tabs %}
 
@@ -131,7 +131,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Change label offset
 
-The [`LabelOffset`]() property allows you to adjust the distance between the tick-end and the labels. 
+The `LabelOffset` property allows you to adjust the distance between the tick-end and the labels. 
 
 {% tabs %}
 
@@ -155,7 +155,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ##  Customize maximum number of visible labels
 
-By default, a maximum of three labels is displayed for every 100 logical pixels in an scale. The maximum number of labels that should present within 100 logical pixels length can be customized using the [`MaximumLabelsCount`]() property of the scale. 
+By default, a maximum of three labels is displayed for every 100 logical pixels in an scale. The maximum number of labels that should present within 100 logical pixels length can be customized using the `MaximumLabelsCount` property of the scale. 
 
 {% tabs %}
 
@@ -179,7 +179,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Customize label text
 
-You can format or change the whole numeric label text using the [`LabelCreated`]() event.
+You can format or change the whole numeric label text using the `LabelCreated` event.
 
 {% tabs %}
 
@@ -215,7 +215,7 @@ private void Gauge_LabelCreated(object sender, LabelCreatedEventArgs e)
 
 ## Label format
 
-The [`LabelFormat`]() property is used to format the numeric labels. The default value of this property is null.
+The `LabelFormat` property is used to format the numeric labels. The default value of this property is null.
 
 {% tabs %}
 

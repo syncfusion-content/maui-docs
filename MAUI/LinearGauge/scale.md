@@ -14,7 +14,7 @@ The Linear Gauge scale on which a set of values can be plotted. An scale can be 
 
 ## Default scale
 
-By default, scale will have the [`Minimum`]() scale value as 0 and the [`Maximum`]() scale value as 100. Without any changes, the default scale of the Linear Gauge will be displayed as follows.
+By default, scale will have the `Minimum` scale value as 0 and the `Maximum` scale value as 100. Without any changes, the default scale of the Linear Gauge will be displayed as follows.
 
 {% tabs %}
 
@@ -37,7 +37,7 @@ this.Content = gauge;
 
 ## Customize minimum and maximum scale values
 
-The [`Minimum`]() and [`Maximum`]() properties of a Linear Gauge can be used to customize the scale values. In the following code sample, the scale is customized to have the [`Minimum`]() value of -50 to [`Maximum`]() value of 50. The scale values are displayed by the labels. Customizing these label styles are further explained in next topics.  
+The `Minimum` and `Maximum` properties of a Linear Gauge can be used to customize the scale values. In the following code sample, the scale is customized to have the `Minimum` value of -50 to `Maximum` value of 50. The scale values are displayed by the labels. Customizing these label styles are further explained in next topics.  
 
 {% tabs %}
 
@@ -62,7 +62,7 @@ this.Content = gauge;
 
 ## Customize scale orientation
 
-The orientation of linear scale can be customized by using the [`Orientation`]() property of linear gauge.
+The orientation of linear scale can be customized by using the `Orientation` property of linear gauge.
 
 When the Orientation property is Vertical, the scale will be rendered in bottom-to-top direction.
 
@@ -88,15 +88,15 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Customize scale track style
 
-The linear scale track can be customized using the [`LineStyle`]() property. The [`LineStyle`]() has the following properties.
+The linear scale track can be customized using the `LineStyle` property. The `LineStyle` has the following properties.
 
-* [`Thickness`]() – Customizes the thickness of the scale track.
-* [`Fill`]() – Customizes the color of the scale track with a solid color.
-* [`GradientStops`]() - Customizes the color of the scale track with a gradient.
-* [`CornerRadius`]() - Customizes the scale track edge corners.
-* [`CornerStyle`]() - Customizes the scale track edge style as flat or curve.
+* `Thickness` – Customizes the thickness of the scale track.
+* `Fill` – Customizes the color of the scale track with a solid color.
+* `GradientStops` - Customizes the color of the scale track with a gradient.
+* `CornerRadius` - Customizes the scale track edge corners.
+* `CornerStyle` - Customizes the scale track edge style as flat or curve.
 
-The following code sample demonstrates how to customize the [`Thickness`]() and [`Fill`]() properties:
+The following code sample demonstrates how to customize the `Thickness` and `Fill` properties:
 
 {% tabs %}
 
@@ -153,7 +153,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Apply gradient
 
-The [`Fill`]() property of [`LineStyle`]() allows to set a solid color, while the [`GradientStops`]() property of [`LineStyle`]() allows to apply linear-gradient to scale track.
+The `Fill` property of `LineStyle` allows to set a solid color, while the `GradientStops` property of `LineStyle` allows to apply linear-gradient to scale track.
 
 The following code sample sets gradient colors to the scale track.
 
@@ -189,7 +189,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Customize corners
 
-The [`CornerStyle`]() property of [`LineStyle`]() specifies the corner type for the scale track. The corners can be customized with `BothFlat`, `BothCurve`, `StartCurve`, and `EndCurve` options. The default value of this property is `BothFlat`.
+The `CornerStyle` property of `LineStyle` specifies the corner type for the scale track. The corners can be customized with `BothFlat`, `BothCurve`, `StartCurve`, and `EndCurve` options. The default value of this property is `BothFlat`.
 
 {% tabs %}
 
@@ -216,7 +216,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ![Change axis track edge style](images/axis/axis_corner_style.PNG)
 
-Also [`CornerRadius`]() allows to set custom corner style for linear scale. 
+Also `CornerRadius` allows to set custom corner style for linear scale. 
 
 {% tabs %}
 
@@ -243,12 +243,12 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ![Change axis track edge style](images/axis/axis_corner_radius.PNG)
 
-N> If you set both [`CornerStyle`]() and [`CornerRadius`]() in the [`LineStyle`](), [`CornerStyle`]() will be first priority for scale. 
+N> If you set both `CornerStyle` and `CornerRadius` in the `LineStyle`, `CornerStyle` will be first priority for scale. 
 
 ## Inverse the scale
 
-The direction of linear gauge scale can be customized by the [`IsInversed`]() property.
-When the [`IsInversed`]() property is true, the scale can be placed in an inverse direction. The default value of the [`IsInversed`]() property is false.
+The direction of linear gauge scale can be customized by the `IsInversed` property.
+When the `IsInversed` property is true, the scale can be placed in an inverse direction. The default value of the `IsInversed` property is false.
 
 {% tabs %}
 
@@ -275,7 +275,7 @@ You can see that the scale values are displayed from 100 to 0 as the scale track
 
 ## Change scale track visibility
 
-You can hide the scale track by setting the [`ShowLine`]() property to false. The default value of this property is true.
+You can hide the scale track by setting the `ShowLine` property to false. The default value of this property is true.
 
 {% tabs %}
 
@@ -300,7 +300,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Customize scale values
 
-Linear gauge allows you to display a set of values along with a custom scale based on your business logic by using the [`GenerateVisibleLabels`](),[`ValueToFactor`](), and [`FactorToValue`]() callbacks.
+Linear gauge allows you to display a set of values along with a custom scale based on your business logic by using the `GenerateVisibleLabels`,`ValueToFactor`, and `FactorToValue` callbacks.
 
 {% tabs %}
 

@@ -15,11 +15,11 @@ The default style of scale ticks is as follows.
 
 ## Customize tick style
 
-There are two types of ticks in the .NET MAUI Linear Gauge namely major and minor ticks. In the above image, the larger ticks are major ticks and the ticks between the major ticks are minor ticks. The major and minor tick of a [`SfLinearGauge`]() can be customized using the [`MajorTickStyle`]() and [`MinorTickStyle`]() properties. The following properties can be customized for both the major and the minor ticks:
-* [`Stroke`]() – Allows to customize the tick color.
-* [`StrokeThickness`]() – Allows to customize the thickness of ticks.
-* [`Length`]() – Specifics the length of ticks.
-* [`StrokeDashArray`]() – Specifics the dash array of ticks.
+There are two types of ticks in the .NET MAUI Linear Gauge namely major and minor ticks. In the above image, the larger ticks are major ticks and the ticks between the major ticks are minor ticks. The major and minor tick of a `SfLinearGauge` can be customized using the `MajorTickStyle` and `MinorTickStyle` properties. The following properties can be customized for both the major and the minor ticks:
+* `Stroke` – Allows to customize the tick color.
+* `StrokeThickness` – Allows to customize the thickness of ticks.
+* `Length` – Specifics the length of ticks.
+* `StrokeDashArray` – Specifics the dash array of ticks.
 
 {% tabs %}
 
@@ -72,7 +72,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Customize minor tick interval
 
-The major ticks are generated based on the [`Interval`]() property, which is documented in `Customize the interval between labels` topic. The minor ticks are calculated using the [`MinorTicksPerInterval`]() property of [`SfLinearGauge`](). By default, the value of this property is 1.
+The major ticks are generated based on the `Interval` property, which is documented in `Customize the interval between labels` topic. The minor ticks are calculated using the `MinorTicksPerInterval` property of `SfLinearGauge`. By default, the value of this property is 1.
 
 {% tabs %}
 
@@ -96,7 +96,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Change tick visibility
 
-The [`ShowTicks`]() property of the scale is used to enable or disable the visibility of both the major and the minor ticks. The default value of this property is true.
+The `ShowTicks` property of the scale is used to enable or disable the visibility of both the major and the minor ticks. The default value of this property is true.
 
 {% tabs %}
 
@@ -120,7 +120,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Customize tick position
 
-The linear scale allows to position the ticks either inside or outside the scale track using the [`TickPosition`]() property. By default, ticks are positioned inside the scale track.
+The linear scale allows to position the ticks either inside or outside the scale track using the `TickPosition` property. By default, ticks are positioned inside the scale track.
 
 
 {% tabs %}
@@ -149,7 +149,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Customize tick offset
 
-The ticks can be moved near or far to the scale line using the [`TickOffset`]() property. The default value of tick offset is double.NaN. While setting offset for the ticks, the scale labels are also moved along with the ticks.
+The ticks can be moved near or far to the scale line using the `TickOffset` property. The default value of tick offset is double.NaN. While setting offset for the ticks, the scale labels are also moved along with the ticks.
 
 {% tabs %}
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Shape Pointer in .NET MAUI Radial Gauge
 
-Indicate current values by using different types of shape pointers. You can change the shape type using the [`ShapeType`]() property.
+Indicate current values by using different types of shape pointers. You can change the shape type using the `ShapeType` property.
 
 {% tabs %}
 
@@ -60,14 +60,14 @@ Gauge supports the following types of shapes:
 
 The shape pointer can be customized using the following properties:
 
-* [`Fill`]() – Allows you to customize the shape color.
-* [`ShapeHeight`]() – Allows you to specify the shape height.
-* [`ShapeWidth`]() – Allows you to specify the shape width.
-* [`Stroke`]() – Allows you to specify the border color for the shape.
-* [`BorderWidth`]() – Allows you to specify the border width of the shape.
-* [`HasShadow`]() – Allows you to specify the shadow of the shape.
-* [`OverlayFill`]() – Allows you to specify the color for the shapes' dragging overlay.
-* [`OverlayRadius`]() – Allows you to specify the radius for the shapes' dragging overlay.
+* `Fill` – Allows you to customize the shape color.
+* `ShapeHeight` – Allows you to specify the shape height.
+* `ShapeWidth` – Allows you to specify the shape width.
+* `Stroke` – Allows you to specify the border color for the shape.
+* `BorderWidth` – Allows you to specify the border width of the shape.
+* `HasShadow` – Allows you to specify the shadow of the shape.
+* `OverlayFill` – Allows you to specify the color for the shapes' dragging overlay.
+* `OverlayRadius` – Allows you to specify the radius for the shapes' dragging overlay.
 
 {% tabs %}
 
@@ -118,7 +118,7 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
 ## Shadow support
 
-The shadow can be applied by the [`HasShadow`]() property.
+The shadow can be applied by the `HasShadow` property.
 
 {% tabs %}
 
@@ -159,7 +159,7 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
 ## Shape pointer overlay
 
-The shape pointer overlay is rendered around the shape when the shape pointer is dragged. When [`IsInteractive`]() property of pointer is set to true and the marker is dragged, the overlay will come around the marker pointer.
+The shape pointer overlay is rendered around the shape when the shape pointer is dragged. When `IsInteractive` property of pointer is set to true and the marker is dragged, the overlay will come around the marker pointer.
 
 {% tabs %}
 
@@ -202,7 +202,7 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
 ## Marker position customization
 
-The marker pointer can be moved near or far from its actual position using the [`Offset`]() and [`OffsetUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.MarkerPointer.html#Syncfusion_Maui_Gauges_MarkerPointer_OffsetUnit) properties. 
+The marker pointer can be moved near or far from its actual position using the `Offset` and [`OffsetUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.MarkerPointer.html#Syncfusion_Maui_Gauges_MarkerPointer_OffsetUnit) properties. 
 
 When you set [`OffsetUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.MarkerPointer.html#Syncfusion_Maui_Gauges_MarkerPointer_OffsetUnit) to pixel, the marker pointer will be moved based on the pixel value. If you set [`OffsetUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.MarkerPointer.html#Syncfusion_Maui_Gauges_MarkerPointer_OffsetUnit) to factor, then provided factor will be multiplied by the scale radius value, and then the pointer will be moved to corresponding value. The default value of [`OffsetUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.MarkerPointer.html#Syncfusion_Maui_Gauges_MarkerPointer_OffsetUnit) is [`SizeUnit.Pixel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SizeUnit.html#Syncfusion_Maui_Gauges_SizeUnit_Pixel).
 

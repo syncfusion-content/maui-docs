@@ -9,7 +9,7 @@ documentation: ug
 
 # Content Pointers in .NET MAUI Radial Gauge
 
-The [`ContentPointer`]() in [`SfRadialGauge`]() allows to use any .NET MAUI content as pointer. The following code sample uses a [`Ellipse`]() and [`Label`]() as content pointer.
+The `ContentPointer` in [`SfRadialGauge`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfRadialGauge.html) allows to use any .NET MAUI content as pointer. The following code sample uses a `Ellipse` and `Label` as content pointer.
 
 {% tabs %}
 
@@ -91,9 +91,9 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
 ## Position customization
 
-The content pointer can be moved near or far from its actual position using the [`Offset`]() and [`OffsetUnit`]() properties.
+The content pointer can be moved near or far from its actual position using the `Offset` and [`OffsetUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.MarkerPointer.html#Syncfusion_Maui_Gauges_MarkerPointer_OffsetUnitProperty) properties.
 
-When you set [`OffsetUnit`]() to logical pixel, the content pointer is moved based on the logical pixel value. If you set [`OffsetUnit`]() to factor, then provided factor will be multiplied by the axis radius value, and then the pointer will be moved to the corresponding value. The default value of [`OffsetUnit`]() is `SizeUnit.Pixel`.
+When you set [`OffsetUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.MarkerPointer.html#Syncfusion_Maui_Gauges_MarkerPointer_OffsetUnitProperty) to logical pixel, the content pointer is moved based on the logical pixel value. If you set [`OffsetUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.MarkerPointer.html#Syncfusion_Maui_Gauges_MarkerPointer_OffsetUnitProperty) to factor, then provided factor will be multiplied by the axis radius value, and then the pointer will be moved to the corresponding value. The default value of [`OffsetUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.MarkerPointer.html#Syncfusion_Maui_Gauges_MarkerPointer_OffsetUnitProperty) is `SizeUnit.Pixel`.
 
 {% tabs %}
 

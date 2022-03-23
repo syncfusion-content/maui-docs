@@ -11,7 +11,8 @@ documentation: ug
 
  Pointer is used to indicate values on an axis. The radial gauge control has three types of pointers: 
 
-* [`Marker pointer`](https://help.syncfusion.com/maui/radialgauge/marker-pointer)
+* `Shape pointer`
+* `Content pointer`
 * [`Needle Pointer`](https://help.syncfusion.com/maui/radialgauge/needle-pointer)
 * [`Range pointer`](https://help.syncfusion.com/maui/radialgauge/range-pointer)
 
@@ -32,7 +33,7 @@ In addition to the default pointer, you can add `N` number of pointers to an axi
         <gauge:RadialAxis>
             <gauge:RadialAxis.Pointers>
                 <gauge:RangePointer Value="30" />
-                <gauge:MarkerPointer Value="70" />
+                <gauge:ShapePointer Value="70" />
                 <gauge:NeedlePointer Value="60" />
             </gauge:RadialAxis.Pointers>
         </gauge:RadialAxis>
@@ -48,7 +49,7 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
 RadialAxis radialAxis = new RadialAxis();
 RangePointer rangePointer = new RangePointer { Value = 30 };
 radialAxis.Pointers.Add(rangePointer);
-MarkerPointer markerPointer = new MarkerPointer { Value = 70 };
+ShapePointer markerPointer = new ShapePointer { Value = 70 };
 radialAxis.Pointers.Add(markerPointer);
 NeedlePointer needlePointer = new NeedlePointer { Value = 60 };
 radialAxis.Pointers.Add(needlePointer);
@@ -78,9 +79,9 @@ Pointers can be dragged over the axis scale. It can be achieved by swipe or drag
                         <gauge:RadialLineStyle Thickness="30" Fill="CornflowerBlue"/>
                     </gauge:RadialAxis.AxisLineStyle>
                     <gauge:RadialAxis.Pointers>
-                        <gauge:MarkerPointer Value="30"
+                        <gauge:ShapePointer Value="30"
                                      IsInteractive="True"
-                                     MarkerOffset="-30"
+                                     Offset="-30"
                                      Fill="Indigo" />
                     </gauge:RadialAxis.Pointers>
                 </gauge:RadialAxis>
@@ -99,11 +100,11 @@ Pointers can be dragged over the axis scale. It can be achieved by swipe or drag
             radialAxis.AxisLineStyle.Thickness = 30;
             sfRadialGauge.Axes.Add(radialAxis);
 
-            MarkerPointer markerPointer = new MarkerPointer();
+            ShapePointer markerPointer = new ShapePointer();
             markerPointer.Value = 30;
             markerPointer.IsInteractive = true;
             markerPointer.Fill = new SolidColorBrush(Colors.Indigo);
-            markerPointer.MarkerOffset = -30;
+            markerPointer.Offset = -30;
             radialAxis.Pointers.Add(markerPointer);
 
 this.Content = sfRadialGauge;
@@ -133,10 +134,10 @@ N> To work with the [`StepFrequency`](https://help.syncfusion.com/cr/maui/Syncfu
                         <gauge:RadialLineStyle Thickness="30" Fill="CornflowerBlue"/>
                     </gauge:RadialAxis.AxisLineStyle>
                     <gauge:RadialAxis.Pointers>
-                        <gauge:MarkerPointer Value="30"
+                        <gauge:ShapePointer Value="30"
                                              IsInteractive="True"
                                              StepFrequency="5"
-                                             MarkerOffset="-30"
+                                             Offset="-30"
                                              Fill="Indigo" />
                     </gauge:RadialAxis.Pointers>
                 </gauge:RadialAxis>
@@ -155,12 +156,12 @@ N> To work with the [`StepFrequency`](https://help.syncfusion.com/cr/maui/Syncfu
             radialAxis.AxisLineStyle.Thickness = 30;
             sfRadialGauge.Axes.Add(radialAxis);
 
-            MarkerPointer markerPointer = new MarkerPointer();
+            ShapePointer markerPointer = new ShapePointer();
             markerPointer.Value = 30;
             markerPointer.IsInteractive = true;
             markerPointer.StepFrequency = 5;
             markerPointer.Fill = new SolidColorBrush(Colors.Indigo);
-            markerPointer.MarkerOffset = -30;
+            markerPointer.Offset = -30;
             radialAxis.Pointers.Add(markerPointer);
 
             this.Content = sfRadialGauge;
@@ -188,7 +189,7 @@ N> To work with the [`StepFrequency`](https://help.syncfusion.com/cr/maui/Syncfu
     <gauge:SfRadialGauge.Axes>
         <gauge:RadialAxis>
             <gauge:RadialAxis.Pointers>
-                <gauge:MarkerPointer Value="30"
+                <gauge:ShapePointer Value="30"
                                      IsInteractive="True"
                                      ValueChanging="MarkerPointer_ValueChanging"
                                      ValueChanged="MarkerPointer_ValueChanged"/>
@@ -206,7 +207,7 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
             RadialAxis radialAxis = new RadialAxis();
             sfRadialGauge.Axes.Add(radialAxis);
 
-            MarkerPointer markerPointer = new MarkerPointer();
+            ShapePointer markerPointer = new ShapePointer();
             markerPointer.Value = 30;
             markerPointer.IsInteractive = true;
             markerPointer.ValueChanging += MarkerPointer_ValueChanging;
