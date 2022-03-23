@@ -11,7 +11,7 @@ documentation: ug
 
 This section explains about how to add the events for range selector.
 
-## Handle ValueChanging, ValueChanged, ValueChangeStart, and ValueChangeEnd callbacks
+## Handle callbacks
 
 * [ValueChangeStart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSlider.html#Syncfusion_Maui_Sliders_SfRangeSlider_ValueChangeStart) -  Called when the user selecting a new value for the selector by tap/mouse down in the thumb.
 * [ValueChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSlider.html#Syncfusion_Maui_Sliders_SfRangeSlider_ValueChanging) - Called when the user is selecting a new value for the selector by dragging the thumb.
