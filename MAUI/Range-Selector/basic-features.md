@@ -25,7 +25,7 @@ It represents the values currently selected in the range slider. The range slide
 
 For date values, the range selector does not have auto interval support. So, it is mandatory to set [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html?tabs=tabid-1#Syncfusion_Maui_Sliders_SliderBase_Interval), [`IntervalType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DateIntervalType), and [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DateFormat) for date values.
 
-## Numeric Range selector
+## Numeric Range Selector
 
 You can show numeric values in the range selector by setting double values to the Minimum, Maximum, RangeStart, and RangeEnd properties.
 
@@ -65,7 +65,7 @@ rangeSelector.Content = chart;
 
 ![RangeSelector date label](images/basic-features/date-labels.png)
 
-## Date Range selector
+## Date Range Selector
 
 You can show date values in the range selector by setting double values to the Minimum, Maximum, RangeStart, and RangeEnd properties.
 
