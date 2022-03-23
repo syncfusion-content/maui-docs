@@ -66,7 +66,7 @@ This section will cover the axis customization options.
                                                      ShapeType="Triangle"
                                                      ShapeHeight="10"
                                                      ShapeWidth="15">
-                        </gauge:MarkerPointer>
+                        </gauge:ShapePointer>
                     </gauge:RadialAxis.Pointers>
 
                     <gauge:RadialAxis.Annotations>
