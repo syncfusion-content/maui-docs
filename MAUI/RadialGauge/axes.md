@@ -56,17 +56,17 @@ This section will cover the axis customization options.
                     </gauge:RadialAxis.BackgroundContent>
 
                     <gauge:RadialAxis.Pointers>
-                        <gauge:MarkerPointer Value="90"
+                        <gauge:ShapePointer Value="90"
                                                      Fill="#FFDF5F2D"
                                                      EnableAnimation="True"
                                                      AnimationDuration="1200"
                                                       AnimationEasing="{x:Static Easing.SpringOut}"
-                                                     MarkerOffset="0.71"
+                                                     Offset="0.71"
                                                      OffsetUnit="Factor"
-                                                     MarkerType="Triangle"
-                                                     MarkerHeight="10"
-                                                     MarkerWidth="15">
-                        </gauge:MarkerPointer>
+                                                     ShapeType="Triangle"
+                                                     ShapeHeight="10"
+                                                     ShapeWidth="15">
+                        </gauge:ShapePointer>
                     </gauge:RadialAxis.Pointers>
 
                     <gauge:RadialAxis.Annotations>
@@ -125,16 +125,16 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
             radialAxis.BackgroundContent = image;
             sfRadialGauge.Axes.Add(radialAxis);
 
-            MarkerPointer markerPointer = new MarkerPointer();
+            ShapePointer markerPointer = new ShapePointer();
             markerPointer.Value = 90;
             markerPointer.Fill = new SolidColorBrush(Color.FromRgb(223, 95, 45));
             markerPointer.EnableAnimation = true;
             markerPointer.AnimationDuration = 1200;
-            markerPointer.MarkerOffset = 0.71;
+            markerPointer.Offset = 0.71;
             markerPointer.OffsetUnit = SizeUnit.Factor;
-            markerPointer.MarkerType = MarkerType.Triangle;
-            markerPointer.MarkerHeight = 10;
-            markerPointer.MarkerWidth = 15;
+            markerPointer.ShapeType = MarkerType.Triangle;
+            markerPointer.ShapeHeight = 10;
+            markerPointer.ShapeWidth = 15;
             radialAxis.Pointers.Add(markerPointer);
 
             GaugeAnnotation gaugeAnnotation = new GaugeAnnotation();
