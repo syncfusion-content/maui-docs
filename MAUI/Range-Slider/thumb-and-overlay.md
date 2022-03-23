@@ -22,7 +22,7 @@ You can change the size of the thumb in the range slider using the [`Radius`](ht
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider >
+<rangeslider:SfRangeSlider>
    <rangeslider:SfRangeSlider.ThumbStyle>
        <rangeslider:SliderThumbStyle Radius="15" />
    </rangeslider:SfRangeSlider.ThumbStyle>
@@ -49,7 +49,7 @@ You can change the color of the thumb in the range slider using the [`Fill`](htt
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider >
+<rangeslider:SfRangeSlider>
    <rangeslider:SfRangeSlider.ThumbStyle>
        <rangeslider:SliderThumbStyle Fill="#EE3F3F" />
    </rangeslider:SfRangeSlider.ThumbStyle>
@@ -76,7 +76,7 @@ You can change the thumb stroke width using the [`StrokeThickness`](https://help
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider >
+<rangeslider:SfRangeSlider>
    <rangeslider:SfRangeSlider.ThumbStyle>
        <rangeslider:SliderThumbStyle StrokeThickness="2" Stroke="#EE3F3F" />
    </rangeslider:SfRangeSlider.ThumbStyle>
@@ -104,7 +104,7 @@ You can change the thumb stroke color while two thumbs are overlapping in the ra
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider >
+<rangeslider:SfRangeSlider>
   <rangeslider:SfRangeSlider.ThumbStyle>
       <rangeslider:SliderThumbStyle OverlapStroke="#EE3F3F" />
   </rangeslider:SfRangeSlider.ThumbStyle>
@@ -131,7 +131,7 @@ You can change the size of the thumb overlay in the range slider using the [`Rad
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider >
+<rangeslider:SfRangeSlider>
    <rangeslider:SfRangeSlider.ThumbOverlayStyle>
       <rangeslider:SliderThumbOverlayStyle Radius="30"/>
    </rangeslider:SfRangeSlider.ThumbOverlayStyle>
@@ -158,7 +158,7 @@ You can change the color of the thumb overlay in the range slider using the [`Fi
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider >
+<rangeslider:SfRangeSlider>
    <rangeslider:SfRangeSlider.ThumbOverlayStyle>
       <rangeslider:SliderThumbOverlayStyle Fill="#F7C8DB"/>
    </rangeslider:SfRangeSlider.ThumbOverlayStyle>

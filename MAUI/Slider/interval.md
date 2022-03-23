@@ -51,26 +51,26 @@ slider.ShowDividers = true;
 
 ## Date interval
 
-The type of date interval. It can be years to seconds. It is mandatory for date [`SfSlider`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html?tabs=tabid-1). The default value of  [`DateIntervalType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DateIntervalType) property is `DateTime.Year`.
+The type of date interval. It can be years to seconds. It is mandatory for date [`SfDateTimeSlider`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html?tabs=tabid-1). The default value of  [`IntervalType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DateIntervalType) property is `DateTime.Year`.
 
-For date values, the slider does not have auto interval support. So, it is mandatory to set [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Interval), [`DateIntervalType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DateIntervalType), and [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DateFormat) for date values.
+For date values, the slider does not have auto interval support. So, it is mandatory to set [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Interval), [`IntervalType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DateIntervalType), and [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DateFormat) for date values.
 
-For example, if [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Minimum) is `DateTime(2000, 01, 01)` and [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Maximum) is `DateTime(2005, 01, 01)` and [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Interval) is `1`, [`DateIntervalType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DateIntervalType) is [`SliderDateIntervalType.years`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDateIntervalType.html#Syncfusion_Maui_Sliders_SliderDateIntervalType_Years), [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DateFormat) is `yyyy` then the slider will render the labels, major ticks, and dividers at 2000, 2001, 2002 and so on.
+For example, if [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Minimum) is `DateTime(2000, 01, 01)` and [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Maximum) is `DateTime(2005, 01, 01)` and [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Interval) is `1`, [`IntervalType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DateIntervalType) is [`SliderDateIntervalType.years`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDateIntervalType.html#Syncfusion_Maui_Sliders_SliderDateIntervalType_Years), [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DateFormat) is `yyyy` then the slider will render the labels, major ticks, and dividers at 2000, 2001, 2002 and so on.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<sliders:SfSlider Minimum="2000-01-01" 
-                  Maximum="2005-01-01" 
-                  Interval="1" 
-                  Value="2002-01-01" 
-                  DateFormat="yyyy" 
-                  DateIntervalType="Years" 
-                  ShowLabels="True"
-                  ShowTicks="True" 
-                  ShowDividers="True">
-</sliders:SfSlider>
+<sliders:SfDateTimeSlider Minimum="2000-01-01" 
+                          Maximum="2005-01-01" 
+                          Interval="1" 
+                          Value="2002-01-01" 
+                          DateFormat="yyyy" 
+                          IntervalType="Years" 
+                          ShowLabels="True"
+                          ShowTicks="True" 
+                          ShowDividers="True">
+</sliders:SfDateTimeSlider>
 
 {% endhighlight %}
 
@@ -81,7 +81,7 @@ slider.Minimum = new DateTime(2000, 01, 01);
 slider.Maximum = new DateTime(2005, 01, 01);
 slider.Value = new DateTime(2002, 01, 01); 
 slider.Interval = 1;
-slider.DateIntervalType = SliderDateIntervalType.Years;
+slider.IntervalType = SliderDateIntervalType.Years;
 slider.DateFormat = "yyyy";
 slider.ShowLabels = true;
 slider.ShowTicks = true;
@@ -139,22 +139,22 @@ For example, if if [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 
 {% highlight xaml %}
 
- <sliders:SfSlider Minimum="2000-01-01" 
-                   Maximum="2005-01-01" 
-                   Value="2002-01-01"
-                   StepDuration="1"  
-                   DateIntervalType="Years" >
-</sliders:SfSlider>
+ <sliders:SfDateTimeSlider Minimum="2000-01-01" 
+                           Maximum="2005-01-01" 
+                           Value="2002-01-01"
+                           StepDuration="1"  
+                           IntervalType="Years" >
+</sliders:SfDateTimeSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfSlider slider = new SfSlider();
+SfDateTimeSlider slider = new SfDateTimeSlider();
 slider.Minimum = new DateTime(2000, 01, 01);
 slider.Maximum = new DateTime(2005, 01, 01);
 slider.Value = new DateTime(2002, 01, 01); ;
-slider.DateIntervalType = SliderDateIntervalType.Years;
+slider.IntervalType = SliderDateIntervalType.Years;
 slider.StepDuration = new SliderStepDuration(years: 1);
 
 {% endhighlight %}

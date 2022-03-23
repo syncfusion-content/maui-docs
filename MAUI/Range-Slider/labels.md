@@ -79,23 +79,23 @@ rangeSlider.ShowTicks = true;
 
 ## Date format
 
-The [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DateFormat) property is used to format the date labels. It is mandatory for date [`SfRangeSlider`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSlider.html). For date values, the slider does not have auto interval support. So, it is mandatory to set [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Interval), [`DateIntervalType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DateIntervalType), and [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DateFormat) for date values. The default value of [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DateFormat) property is `yyyy`.
+The [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DateFormat) property is used to format the date labels. It is mandatory for date [`SfDateTimeRangeSlider`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSlider.html). For date values, the slider does not have auto interval support. So, it is mandatory to set [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Interval), [`IntervalType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DateIntervalType), and [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DateFormat) for date values. The default value of [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DateFormat) property is `yyyy`.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider Minimum="2000-01-01T09:00:00" 
-                           Maximum="2000-01-01T17:00:00" 
-                           RangeStart="2000-01-01T11:00:00" 
-                           RangeEnd="2000-01-01T15:00:00" 
-                           ShowLabels="True" 
-                           ShowTicks="True" 
-                           DateIntervalType="Hours" 
-                           Interval="2" 
-                           DateFormat="h tt"
-                           ShowTicks="True">
-</rangeslider:SfRangeSlider>
+<rangeslider:SfDateTimeRangeSlider Minimum="2000-01-01T09:00:00" 
+                                   Maximum="2000-01-01T17:00:00" 
+                                   RangeStart="2000-01-01T11:00:00" 
+                                   RangeEnd="2000-01-01T15:00:00" 
+                                   ShowLabels="True" 
+                                   ShowTicks="True" 
+                                   IntervalType="Hours" 
+                                   Interval="2" 
+                                   DateFormat="h tt"
+                                   ShowTicks="True">
+</rangeslider:SfDateTimeRangeSlider>
 
 {% endhighlight %}
 
