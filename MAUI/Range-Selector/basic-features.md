@@ -63,7 +63,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector date label](images/basic-features/date-labels.png)
+![RangeSelector date label](images/basic-features/rangeselector-basic.png)
 
 ## Date Range Selector
 
