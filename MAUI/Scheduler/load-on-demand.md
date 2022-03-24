@@ -147,7 +147,7 @@ The `ShowBusyIndicator` property can be used to start and stop the loading indic
  </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight ViewModel %}
+{% highlight c# tabtitle="ViewModel.cs" %}
 
 public class LoadOnDemandViewModel : INotifyPropertyChanged
 {
