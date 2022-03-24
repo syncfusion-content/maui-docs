@@ -131,7 +131,7 @@ The horizontal alignment of the text can be controlled by `TextAlignment` proper
                                    HeightRequest="150"
                                    WidthRequest="240" 
                                    ShowText="True" 
-                                   TextAlignment="End">
+                                   TextAlignment="End"/>
 
 {% endhighlight %}
 
