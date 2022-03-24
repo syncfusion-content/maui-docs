@@ -15,7 +15,7 @@ The Syncfusion .NET MAUI Radial Barcode Generator is a data visualization contro
 
 ![.NET MAUI Barcode Genrator Control](images/overview/maui-two-dimensional-barcode.png)
 
-## Key Features
+## Key features
 
 * **One-dimensional barcodes** - Barcode Generator supports different one-dimensional barcode symbologies such as `Code128`, `EAN8`, `EAN13`, `UPC-A`, `UPC-E`, `Code39`, `Code39 Extended`, `Code93`, and `Codabar`.
 * **Two-dimensional barcode** - Barcode Generator supports popular `QR code` and `Data Matrix`.
