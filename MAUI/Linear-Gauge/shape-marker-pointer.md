@@ -56,7 +56,8 @@ The size of the marker pointer can be changed by the `ShapeHeight` and `ShapeWid
 
 <gauge:SfLinearGauge>
                 <gauge:SfLinearGauge.MarkerPointers>
-                    <gauge:LinearShapePointer Value="50" ShapeHeight="25" ShapeWidth="25"/>
+                    <gauge:LinearShapePointer Value="50" ShapeHeight="25" 
+                                              ShapeWidth="25"/>
                 </gauge:SfLinearGauge.MarkerPointers>
             </gauge:SfLinearGauge>
 
@@ -121,7 +122,9 @@ The border can be customized by the `Stroke` and `StrokeThickness` properties of
 
 <gauge:SfLinearGauge>
                 <gauge:SfLinearGauge.MarkerPointers>
-                    <gauge:LinearShapePointer Value="50" StrokeThickness="2" Stroke="Red"/>
+                    <gauge:LinearShapePointer Value="50" 
+                                              StrokeThickness="2" 
+                                              Stroke="Red"/>
                 </gauge:SfLinearGauge.MarkerPointers>
             </gauge:SfLinearGauge>
 
@@ -154,7 +157,8 @@ The shadow can be applied by the `HasShadow` property.
 
 <gauge:SfLinearGauge>
                 <gauge:SfLinearGauge.MarkerPointers>
-                    <gauge:LinearShapePointer Value="50" ShapeType="Circle" HasShadow="True"/>
+                    <gauge:LinearShapePointer Value="50" ShapeType="Circle" 
+                                              HasShadow="True"/>
                 </gauge:SfLinearGauge.MarkerPointers>
             </gauge:SfLinearGauge>
 
@@ -187,7 +191,8 @@ The marker pointer alignment can be changed by the `Alignment` property of `Line
 
  <gauge:SfLinearGauge>
                 <gauge:SfLinearGauge.MarkerPointers>
-                    <gauge:LinearShapePointer Value="50" ShapeType="Rectangle" Alignment="End" OffsetY="-5"/>
+                    <gauge:LinearShapePointer Value="50" ShapeType="Rectangle" 
+                                              Alignment="End" OffsetY="-5"/>
                 </gauge:SfLinearGauge.MarkerPointers>
             </gauge:SfLinearGauge>
 
@@ -221,7 +226,8 @@ By default, the shape pointer is positioned `Outside` the scale. This position c
 
 <gauge:SfLinearGauge>
                 <gauge:SfLinearGauge.MarkerPointers>
-                    <gauge:LinearShapePointer Value="50" ShapeType="Circle" Position="Cross" Fill="Blue"/>
+                    <gauge:LinearShapePointer Value="50" ShapeType="Circle" 
+                                              Position="Cross" Fill="Blue"/>
                 </gauge:SfLinearGauge.MarkerPointers>
             </gauge:SfLinearGauge>
 
@@ -255,7 +261,8 @@ In addition to position the shape pointer, it is also possible to change the off
 
  <gauge:SfLinearGauge>
                 <gauge:SfLinearGauge.MarkerPointers>
-                    <gauge:LinearShapePointer Value="50" ShapeType="Triangle" Position="Inside" OffsetY="25"/>
+                    <gauge:LinearShapePointer Value="50" ShapeType="Triangle" 
+                                              Position="Inside" OffsetY="25"/>
                 </gauge:SfLinearGauge.MarkerPointers>
             </gauge:SfLinearGauge>
 

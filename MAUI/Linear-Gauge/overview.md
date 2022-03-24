@@ -11,7 +11,7 @@ documentation: ug
 
 Syncfusion .NET MAUI Linear Gauge is a data visualization control to display data on a linear scale. Use this control to craft high-quality mobile app user interfaces.
 
-![Overview .NET MAUI linear gauge](images/basic_elements.PNG)
+![Overview .NET MAUI linear gauge](images/getting-started/maui-linear-gauge.PNG)
 
 ## Key Features
 
