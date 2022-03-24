@@ -70,7 +70,7 @@ Low - it recovers the data up to 7%
 Medium - it recovers the data up to 15%
 Quartile - it recovers the data up to 25%
 High - it recovers the data up to 30%
-Auto - it calculates error corection level automatically.
+Auto - it calculates error correction level automatically.
 
 {% tabs %}
 

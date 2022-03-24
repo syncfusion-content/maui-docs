@@ -19,7 +19,7 @@ The Syncfusion .NET MAUI components are available in [nuget.org](https://www.nug
 
 Syncfusion.Maui.Core nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file register the handler for Syncfusion core.
 
-{% highlight C# %}
+{% highlight C# hl_lines="17" %}
 
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
