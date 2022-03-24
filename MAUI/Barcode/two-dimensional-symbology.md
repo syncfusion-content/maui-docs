@@ -70,7 +70,7 @@ Low - it recovers the data up to 7%
 Medium - it recovers the data up to 15%
 Quartile - it recovers the data up to 25%
 High - it recovers the data up to 30%
-Auto - it calculates error correction level automatically.
+Auto - it calculates error correction level automatically based on `InputMode` and `CodeVersion`.
 
 {% tabs %}
 
@@ -118,7 +118,7 @@ The `InputMode` property allows you to select a specific set of input characters
 Numeric - supports from 0 to 9
 AlphaNumeric - supports 0 to 9, A to Z, space, $, %, *, +, -,., /, :
 Binary - supports Shift JIS characters.
-Auto - it calculates input mode automatically.
+Auto - it calculates input mode automatically based on `CodeVersion` and `ErrorCorrectionLevel`.
 
 {% tabs %}
 
