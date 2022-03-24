@@ -23,9 +23,6 @@ You can enable tooltip for the thumb by setting the [`Tooltip`](https://help.syn
              ...
              xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-    <ContentPage.BindingContext>
-        <local:ViewModel />
-    </ContentPage.BindingContext>
     <rangeselector:SfRangeSelector>
          <rangeselector:SfRangeSelector.Tooltip>
             <rangeselector:SliderTooltip />
@@ -49,7 +46,7 @@ rangeSelector.Content = chart;
 
 ![RangeSelector tooltip](images/tooltip/tooltip.png)
 
-N> Refer [here](https://help.syncfusion.com/maui/range-selector/events) to customize tooltip text format through range selector events.
+N> Refer [here](https://help.syncfusion.com/maui/range-slider/events) to customize tooltip text format through range selector events.
 
 ## Tooltip label style
 

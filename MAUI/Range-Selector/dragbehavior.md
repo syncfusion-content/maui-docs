@@ -23,11 +23,11 @@ When the [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slid
              ...
              xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-    <ContentPage.BindingContext>
-        <local:ViewModel />
-    </ContentPage.BindingContext>
     <rangeselector:SfRangeSelector Minimum="0" 
-                                   Maximum="100" 
+                                   Maximum="100"
+                                   RangeStart="25"
+                                   RangeEnd="75"
+                                   Interval="25" 
                                    ShowTicks="True"
                                    ShowLabels="True"
                                    DragBehavior="OnThumb">
@@ -41,7 +41,10 @@ When the [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slid
 
 SfRangeSelector rangeSelector = new SfRangeSelector();
 rangeSelector.Minimum = 0;
-rangeSelector.Maximum = 100; 
+rangeSelector.Maximum = 100;
+rangeSelector.RangeStart = 25;
+rangeSelector.RangeEnd = 75;
+rangeSelector.Interval = 25; 
 rangeSelector.ShowTicks = true;
 rangeSelector.ShowLabels = true;  
 rangeSelector.DragBehavior = SliderDragBehavior.OnThumb;
@@ -67,7 +70,10 @@ When the [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slid
              xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
     <rangeselector:SfRangeSelector Minimum="0" 
-                                   Maximum="100" 
+                                   Maximum="100"
+                                   RangeStart="25"
+                                   RangeEnd="75"
+                                   Interval="25" 
                                    ShowTicks="True"
                                    ShowLabels="True"
                                    DragBehavior="BetweenThumbs">
@@ -81,7 +87,10 @@ When the [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slid
 
 SfRangeSelector rangeSelector = new SfRangeSelector();
 rangeSelector.Minimum = 0;
-rangeSelector.Maximum = 100; 
+rangeSelector.Maximum = 100;
+rangeSelector.RangeStart = 25;
+rangeSelector.RangeEnd = 75;
+rangeSelector.Interval = 25; 
 rangeSelector.ShowTicks = true;
 rangeSelector.ShowLabels = true;   
 rangeSelector.DragBehavior = SliderDragBehavior.BetweenThumbs;
@@ -106,11 +115,11 @@ When the  [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sli
              ...
              xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-    <ContentPage.BindingContext>
-        <local:ViewModel />
-    </ContentPage.BindingContext>
     <rangeselector:SfRangeSelector Minimum="0" 
-                                   Maximum="100" 
+                                   Maximum="100"
+                                   RangeStart="25"
+                                   RangeEnd="75"
+                                   Interval="25" 
                                    ShowTicks="True"
                                    ShowLabels="True"
                                    DragBehavior="Both">
@@ -124,7 +133,10 @@ When the  [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sli
 
 SfRangeSelector rangeSelector = new SfRangeSelector();
 rangeSelector.Minimum = 0;
-rangeSelector.Maximum = 100; 
+rangeSelector.Maximum = 100;
+rangeSelector.RangeStart = 25;
+rangeSelector.RangeEnd = 75;
+rangeSelector.Interval = 25; 
 rangeSelector.ShowTicks = true; 
 rangeSelector.ShowLabels = true;  
 rangeSelector.DragBehavior = SliderDragBehavior.Both;

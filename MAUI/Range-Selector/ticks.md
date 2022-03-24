@@ -259,10 +259,6 @@ You can change the major and minor ticks size of the range selector using the [`
         <rangeselector:SfRangeSelector.MajorTickStyle>
             <rangeselector:SliderTickStyle ActiveSize="2,15" InactiveSize="2, 15" />
         </rangeselector:SfRangeSelector.MajorTickStyle>
-        <rangeselector:SfRangeSelector.MinorTickStyle>
-            <rangeselector:SliderTickStyle ActiveFill="#EE3F3F" 
-                                           InactiveFill="#F7B1AE" />
-        </rangeselector:SfRangeSelector.MinorTickStyle>
         <chart:SfCartesianChart />
     </rangeselector:SfRangeSelector>
 </ContentPage>
@@ -309,10 +305,6 @@ You can adjust the space between track and ticks of the range selector using the
         <rangeselector:SfRangeSelector.MajorTickStyle>
             <rangeselector:SliderTickStyle Offset="5" />
         </rangeselector:SfRangeSelector.MajorTickStyle>
-        <rangeselector:SfRangeSelector.MinorTickStyle>
-            <rangeselector:SliderTickStyle ActiveFill="#EE3F3F" 
-                                           InactiveFill="#F7B1AE" />
-        </rangeselector:SfRangeSelector.MinorTickStyle>
         <chart:SfCartesianChart />
     </rangeselector:SfRangeSelector>
 </ContentPage>
