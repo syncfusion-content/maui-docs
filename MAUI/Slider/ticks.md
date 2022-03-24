@@ -87,8 +87,9 @@ It is used to represent the number of smaller ticks between two major ticks. For
 SfSlider slider = new SfSlider();
 slider.Minimum = 0;
 slider.Maximum = 10;
+slider.Value = 6;
 slider.Interval = 2;
-slider.MinorTicksPerInterval = 1;
+slider.MinorTicksPerInterval = 3;
 slider.ShowTicks = true;
 slider.ShowLabels = true;
 
@@ -120,6 +121,7 @@ slider.ShowLabels = true;
 SfSlider slider = new SfSlider();
 slider.Minimum = 0;
 slider.Maximum = 10;
+slider.Value = 6;
 slider.Interval = 2;
 slider.MinorTicksPerInterval = 1;
 slider.ShowTicks = true;
@@ -181,7 +183,8 @@ The inactive side of the slider is between the thumb and the [`Maximum`](https:/
 
 <sliders:SfSlider Minimum="0" 
                   Maximum="10"
-                  Interval="2" 
+                  Interval="2"
+                  Value="6" 
                   ShowTicks="True"
                   ShowLabels="True" 
                   MinorTicksPerInterval="1">
@@ -198,6 +201,7 @@ The inactive side of the slider is between the thumb and the [`Maximum`](https:/
 SfSlider slider = new SfSlider();
 slider.Minimum = 0;
 slider.Maximum = 10;
+slider.Value = 6;
 slider.Interval = 2;
 slider.ShowTicks = true;
 slider.ShowLabels = true;
@@ -221,7 +225,7 @@ You can change the major and minor ticks size of the slider using the [`ActiveSi
 
 <sliders:SfSlider Interval="0.2" 
                   ShowTicks="True" 
-		  MinorTicksPerInterval="1">
+		          MinorTicksPerInterval="1">
      <sliders:SfSlider.MinorTickStyle>
          <sliders:SliderTickStyle ActiveSize="2,10" 
                                   InactiveSize="2, 10"/>

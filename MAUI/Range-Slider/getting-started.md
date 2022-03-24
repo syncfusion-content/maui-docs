@@ -58,24 +58,6 @@ namespace Slider
 
 {% endhighlight %}
 
-## Import the Range Slider namespace
-
-{% tabs %}
-
-{% highlight xaml %}
-
-    xmlns:rangeslider="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders">
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-using Syncfusion.Maui.Sliders;
-
-{% endhighlight %}
-
-{% endtabs %}
-
 ## Initialize range slider
 
 Import the [`SfRangeSlider`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSlider.html) namespace and initialize the range slider as shown below.
@@ -119,7 +101,7 @@ namespace RangeSlider
 
 ## Enable labels
 
-The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ShowLabels) property enables label in range slider that renders on given interval.
+The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ShowLabels) property enables the labels which renders on given interval.
 
 {% tabs %}
 
@@ -153,7 +135,7 @@ rangeSlider.Interval = 2;
 
 ## Enable ticks
 
-The [`ShowTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ShowTicks) property enables ticks in the range slider, while the [`MinorTicksPerInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MinorTicksPerInterval) property enables minor ticks between the major ticks.
+The [`ShowTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ShowTicks) property enables the ticks in the range selector, while the [`MinorTicksPerInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MinorTicksPerInterval) property enables the minor ticks between the major ticks.
 
 {% tabs %}
 
@@ -242,7 +224,8 @@ You can invert the range slider using the [`IsInversed`](https://help.syncfusion
                             Maximum="10" 
                             RangeStart="2" 
                             RangeEnd="8" 
-                            ShowTicks="True" 
+                            ShowTicks="True"
+                            ShowLablels="True" 
                             Interval="2" 
                             MinorTicksPerInterval="1">
 </rangeslider:SfRangeSlider>
@@ -276,20 +259,20 @@ Set the 'DateTime' values to the [`Minimum`](https://help.syncfusion.com/cr/maui
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider Minimum="2010-01-01"
-                           Maximum="2020-01-01" 
-                           RangeStart="2012-01-01" 
-                           RangeEnd="2018-01-01" 
-                           ShowLabels="True" 
-                           ShowTicks="True"
-                           Interval="2">
-</rangeslider:SfRangeSlider>
+<rangeslider:SfDateTimeRangeSlider Minimum="2010-01-01"
+                                   Maximum="2020-01-01" 
+                                   RangeStart="2012-01-01" 
+                                   RangeEnd="2018-01-01" 
+                                   ShowLabels="True" 
+                                   ShowTicks="True"
+                                   Interval="2">
+</rangeslider:SfDateTimeRangeSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfRangeSlider rangeSlider = new SfRangeSlider();
+SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider();
 rangeSlider.Minimum = new DateTime(2010, 01, 01);
 rangeSlider.Maximum = new DateTime(2020, 01, 01);
 rangeSlider.RangeStart = new DateTime(2012, 01, 01);

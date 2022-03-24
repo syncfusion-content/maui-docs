@@ -58,24 +58,6 @@ namespace RangeSelector
 
 {% endhighlight %}
 
-## Import the Range Selector namespace
-
-{% tabs %}
-
-{% highlight xaml %}
-
-    xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders">
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-using Syncfusion.Maui.Sliders;
-
-{% endhighlight %}
-
-{% endtabs %}
-
 ## Initialize Range Selector
 
 Import the [`SfRangeSelector`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSelector.html) namespace and initialize the range selector as shown below.
@@ -119,7 +101,7 @@ namespace RangeSelector
 
 ## Adding content to Range Selector
 
-The [`Content`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ShowLabels) property adding the content to the range selector.
+The [`Content`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ShowLabels) property will add the content to the range selector.
 
 {% tabs %}
 
@@ -149,8 +131,7 @@ The [`Content`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.Slid
                 <chart:SfCartesianChart.Series>
                     <chart:SplineAreaSeries ItemsSource="{Binding Source}"
                                             XBindingPath="X"
-                                            YBindingPath="Y"
-                                            Fill="Blue">
+                                            YBindingPath="Y">
                     </chart:SplineAreaSeries>
                 </chart:SfCartesianChart.Series>
             </chart:SfCartesianChart>
@@ -182,7 +163,7 @@ rangeSelector.Content = chart;
 
 ## Enable labels
 
-The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ShowLabels) property enables label in range selector that renders on given interval.
+The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ShowLabels) property enables the labels which renders on given interval.
 
 {% tabs %}
 
@@ -224,7 +205,7 @@ rangeSelector.Content = chart;
 
 ## Enable ticks
 
-The [`ShowTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ShowTicks) property enables ticks in the range selector, while the [`MinorTicksPerInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MinorTicksPerInterval) property enables minor ticks between the major ticks.
+The [`ShowTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ShowTicks) property enables the ticks in the range selector, while the [`MinorTicksPerInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MinorTicksPerInterval) property enables the minor ticks between the major ticks.
 
 {% tabs %}
 
@@ -286,7 +267,8 @@ You can invert the range selector using the [`IsInversed`](https://help.syncfusi
                                    RangeStart="2" 
                                    RangeEnd="8" 
                                    ShowTicks="True" 
-                                   Interval="2" 
+                                   Interval="2"
+                                   ShowLabels="True" 
                                    MinorTicksPerInterval="1">
         <chart:SfCartesianChart />
     </rangeselector:SfRangeSelector>
@@ -331,7 +313,7 @@ N> The format type (numeric or date) of the range selector is determined based o
              xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
     <rangeselector:SfRangeSelector Minimum="20" 
                                    Maximum="100" 
-                                   RangeStart="20" 
+                                   RangeStart="40" 
                                    RangeEnd="80"
                                    NumberFormat="$##" 
                                    ShowLabels="True" 
@@ -348,7 +330,7 @@ N> The format type (numeric or date) of the range selector is determined based o
 SfRangeSelector rangeSelector = new SfRangeSelector();
 rangeSelector.Minimum = 20;
 rangeSelector.Maximum = 100;
-rangeSelector.RangeStart = 20;
+rangeSelector.RangeStart = 40;
 rangeSelector.RangeEnd = 80;
 rangeSelector.ShowLabels = true;
 rangeSelector.ShowTicks = true;

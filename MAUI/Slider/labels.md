@@ -126,7 +126,7 @@ The [`LabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slid
 
 <sliders:SfSlider Minimum="0" 
                   Maximum="10"
-                  Value="6"
+                  Value="5"
 		          Interval="2"  
 		          LabelsPlacement="BetweenTicks" 
 		          ShowLabels="True" 
@@ -140,7 +140,7 @@ The [`LabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slid
 SfSlider slider = new SfSlider();
 slider.Minimum = 0;
 slider.Maximum = 10;
-slider.Value = 6;
+slider.Value = 5;
 slider.Interval = 2;
 slider.LabelsPlacement = SliderLabelsPlacement.BetweenTicks;
 slider.ShowLabels = true;
@@ -167,7 +167,8 @@ The inactive side of the slider is between the thumb and the [`Maximum`](https:/
 {% highlight xaml %}
 
 <sliders:SfSlider Minimum="2" 
-                  Maximum="10" 
+                  Maximum="10"
+                  Value="6" 
                   Interval="2" 
                   ShowTicks="True"  
                   ShowLabels="True">
@@ -188,6 +189,7 @@ The inactive side of the slider is between the thumb and the [`Maximum`](https:/
 SfSlider slider = new SfSlider();
 slider.Minimum = 2;
 slider.Maximum = 10;
+slider.Value = 6;
 slider.Interval = 2;
 slider.ShowLabels = true;
 slider.ShowTicks = true;
@@ -213,7 +215,8 @@ You can adjust the space between ticks and labels of the slider using the [`Offs
 {% highlight xaml %}
 
 <sliders:SfSlider Minimum="2" 
-                  Maximum="10" 
+                  Maximum="10"
+                  Value="6" 
                   Interval="2" 
                   ShowTicks="True"
                   ShowLabels="True">
@@ -229,6 +232,7 @@ You can adjust the space between ticks and labels of the slider using the [`Offs
 SfSlider slider = new SfSlider();
 slider.Minimum = 2;
 slider.Maximum = 10;
+slider.Value = 6;
 slider.Interval = 2;
 slider.ShowLabels = true;
 slider.ShowTicks = true;

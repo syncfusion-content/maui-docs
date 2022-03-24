@@ -168,9 +168,9 @@ You can change the size of the thumb overlay in the range selector using the [`R
              xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
     <rangeselector:SfRangeSelector>
-        <rangeselector:SfRangeSelector.ThumbStyle>
-            <rangeselector:SliderThumbStyle Radius="30" />
-        </rangeselector:SfRangeSelector.ThumbStyle>
+        <rangeselector:SfRangeSelector.ThumbOverlayStyle>
+            <rangeselector:SliderThumbOverlayStyle Radius="30" />
+        </rangeselector:SfRangeSelector.ThumbOverlayStyle>
         <chart:SfCartesianChart />
     </rangeselector:SfRangeSelector>
 </ContentPage>
@@ -203,9 +203,9 @@ You can change the color of the thumb overlay in the range selector using the [`
              xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
     <rangeselector:SfRangeSelector>
-        <rangeselector:SfRangeSelector.ThumbStyle>
-            <rangeselector:SliderThumbStyle Fill="#F7C8DB" />
-        </rangeselector:SfRangeSelector.ThumbStyle>
+        <rangeselector:SfRangeSelector.ThumbOverlayStyle>
+            <rangeselector:SliderThumbOverlayStyle Fill="#F7C8DB" />
+        </rangeselector:SfRangeSelector.ThumbOverlayStyle>
         <chart:SfCartesianChart />
     </rangeselector:SfRangeSelector>
 </ContentPage>

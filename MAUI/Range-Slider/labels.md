@@ -20,7 +20,9 @@ The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.S
 {% highlight xaml %}
 
 <rangeslider:SfRangeSlider Minimum="0" 
-                           Maximum="10" 
+                           Maximum="10"
+                           RangeStart="2"
+                           RangeEnd="8" 
                            Interval="2" 
                            ShowLabels="True"
                            ShowTicks="True">
@@ -33,6 +35,8 @@ The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.S
 SfRangeSlider rangeSlider = new SfRangeSlider();
 rangeSlider.Minimum = 0;
 rangeSlider.Maximum = 10;
+rangeSlider.RangeStart = 2;
+rangeSlider.RangeEnd = 8;
 rangeSlider.Interval = 2;
 rangeSlider.ShowLabels = true;
 rangeSlider.ShowTicks = true;
@@ -52,7 +56,9 @@ The [`NumberFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders
 {% highlight xaml %}
 
 <rangeslider:SfRangeSlider Minimum="0" 
-                           Maximum="10" 
+                           Maximum="10"
+                           RangeStart="2"
+                           RangeEnd="8" 
                            Interval="2" 
                            NumberFormat="$##" 
                            ShowLabels="True"
@@ -66,6 +72,8 @@ The [`NumberFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders
 SfRangeSlider rangeSlider = new SfRangeSlider();
 rangeSlider.Minimum = 0;
 rangeSlider.Maximum = 10;
+rangeSlider.RangeStart = 2;
+rangeSlider.RangeEnd = 8;
 rangeSlider.Interval = 2;
 rangeSlider.NumberFormat = "$##";
 rangeSlider.ShowLabels = true;
@@ -89,8 +97,7 @@ The [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.S
                                    Maximum="2000-01-01T17:00:00" 
                                    RangeStart="2000-01-01T11:00:00" 
                                    RangeEnd="2000-01-01T15:00:00" 
-                                   ShowLabels="True" 
-                                   ShowTicks="True" 
+                                   ShowLabels="True"
                                    IntervalType="Hours" 
                                    Interval="2" 
                                    DateFormat="h tt"
@@ -101,7 +108,7 @@ The [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.S
 
 {% highlight C# %}
 
-SfRangeSlider rangeSlider = new SfRangeSlider();
+SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider();
 rangeSlider.Minimum = new DateTime(2000, 01, 01, 09, 00, 00);
 rangeSlider.Maximum = new DateTime(2000, 01, 01, 17, 00, 00);
 rangeSlider.RangeStart = new DateTime(2000, 01, 01, 11, 00, 00);
@@ -127,7 +134,9 @@ The [`LabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slid
 {% highlight xaml %}
 
 <rangeslider:SfRangeSlider Minimum="0" 
-                           Maximum="10" 
+                           Maximum="10"
+                           RangeStart="2"
+                           RangeEnd="8" 
                            Interval="2" 
                            LabelsPlacement="BetweenTicks"  
                            ShowLabels="True" 
@@ -141,6 +150,8 @@ The [`LabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slid
 SfRangeSlider rangeSlider = new SfRangeSlider();
 rangeSlider.Minimum = 0;
 rangeSlider.Maximum = 10;
+rangeSlider.RangeStart = 2;
+rangeSlider.RangeEnd = 8;
 rangeSlider.Interval = 2;
 rangeSlider.LabelsPlacement = SliderLabelsPlacement.BetweenTicks;
 rangeSlider.ShowLabels = true;
@@ -218,6 +229,8 @@ You can adjust the space between ticks and labels of the range slider using the 
 
 <rangeslider:SfRangeSlider Minimum="0"
                            Maximum="10"
+                           RangeStart="2"
+                           RangeEnd="8"
                            Interval="2" 
                            ShowLabels="True" 
                            ShowTicks="True">
@@ -233,6 +246,8 @@ You can adjust the space between ticks and labels of the range slider using the 
 SfRangeSlider rangeSlider = new SfRangeSlider();
 rangeSlider.Minimum = 0;
 rangeSlider.Maximum = 10;
+rangeSlider.RangeStart = 2;
+rangeSlider.RangeEnd = 8;
 rangeSlider.Interval = 2;
 rangeSlider.ShowLabels = true;
 rangeSlider.ShowTicks = true;
