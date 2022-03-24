@@ -29,7 +29,8 @@ The following code sample demonstrates how to update a simple marker pointer val
 
 <gauge:SfLinearGauge >
                 <gauge:SfLinearGauge.MarkerPointers>
-                    <gauge:LinearShapePointer Value="70" IsInteractive="True" Fill="Blue"/>
+                    <gauge:LinearShapePointer Value="70" IsInteractive="True" 
+                                              Fill="Blue"/>
                 </gauge:SfLinearGauge.MarkerPointers>
             </gauge:SfLinearGauge>
 
@@ -144,13 +145,13 @@ SfLinearGauge gauge = new SfLinearGauge();
 {% highlight xaml %}
 
 <gauge:SfLinearGauge >
-                <gauge:SfLinearGauge.MarkerPointers>
-                    <gauge:LinearShapePointer Value="70" IsInteractive="True" 
-                                              ValueChanging="LinearShapePointer_ValueChanging"
-                                              ValueChanged="LinearShapePointer_ValueChanged"
-                                              Fill="Blue"/>
-                </gauge:SfLinearGauge.MarkerPointers>
-            </gauge:SfLinearGauge>
+   <gauge:SfLinearGauge.MarkerPointers>
+      <gauge:LinearShapePointer Value="70" IsInteractive="True" 
+                                ValueChanging="LinearShapePointer_ValueChanging"
+                                ValueChanged="LinearShapePointer_ValueChanged"
+                                Fill="Blue"/>
+   </gauge:SfLinearGauge.MarkerPointers>
+</gauge:SfLinearGauge>
 
 {% endhighlight %}
 

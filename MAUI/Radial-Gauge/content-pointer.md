@@ -24,12 +24,17 @@ The `ContentPointer` in [`SfRadialGauge`](https://help.syncfusion.com/cr/maui/Sy
                                     <Grid HeightRequest="37" WidthRequest="37" >
                                         <RoundRectangle  Fill="White"
                                                          CornerRadius="8"
-                                                         Stroke="Black" StrokeThickness="2" />
+                                                         Stroke="Black" 
+                                                         StrokeThickness="2"/>
                                         <VerticalStackLayout>
-                                            <Image Source="sun.png" HeightRequest="20" WidthRequest="20"
+                                            <Image Source="sun.png" 
+                                                   HeightRequest="20" 
+                                                   WidthRequest="20"
                                                    HorizontalOptions="Center"/>
-                                            <Label Text="45°F" HorizontalOptions="Center"
-                                                   TextColor="Black" FontAttributes="Bold"
+                                            <Label Text="45°F" 
+                                                   HorizontalOptions="Center"
+                                                   TextColor="Black" 
+                                                   FontAttributes="Bold"
                                                    FontSize="10"/>
                                         </VerticalStackLayout>
                                     </Grid>
@@ -108,12 +113,17 @@ When you set [`OffsetUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
                                     <Grid HeightRequest="37" WidthRequest="37" >
                                         <RoundRectangle  Fill="White"
                                                          CornerRadius="8"
-                                                         Stroke="Black" StrokeThickness="2" />
+                                                         Stroke="Black" 
+                                                      StrokeThickness="2" />
                                         <VerticalStackLayout>
-                                            <Image Source="sun.png" HeightRequest="20" WidthRequest="20"
+                                            <Image Source="sun.png" 
+                                                   HeightRequest="20" 
+                                                   WidthRequest="20"
                                                    HorizontalOptions="Center"/>
-                                            <Label Text="45°F" HorizontalOptions="Center"
-                                                   TextColor="Black" FontAttributes="Bold"
+                                            <Label Text="45°F" 
+                                                   HorizontalOptions="Center"
+                                                   TextColor="Black" 
+                                                   FontAttributes="Bold"
                                                    FontSize="10"/>
                                         </VerticalStackLayout>
                                     </Grid>

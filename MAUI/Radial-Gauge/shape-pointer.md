@@ -126,7 +126,8 @@ The shadow can be applied by the `HasShadow` property.
                 <gauge:SfRadialGauge.Axes>
                     <gauge:RadialAxis>
                         <gauge:RadialAxis.Pointers>
-                            <gauge:ShapePointer Value="60" ShapeType="Circle" HasShadow="True"/>
+                            <gauge:ShapePointer Value="60" ShapeType="Circle" 
+                                                HasShadow="True"/>
                         </gauge:RadialAxis.Pointers>
                     </gauge:RadialAxis>
                 </gauge:SfRadialGauge.Axes>
@@ -173,7 +174,8 @@ The shape pointer overlay can be customized using the following properties:
                     <gauge:RadialAxis>
                         <gauge:RadialAxis.Pointers>
                             <gauge:ShapePointer Value="60" ShapeType="Circle" 
-                                                IsInteractive="True" OverlayRadius="20"/>
+                                                IsInteractive="True" 
+                                                OverlayRadius="20"/>
                         </gauge:RadialAxis.Pointers>
                     </gauge:RadialAxis>
                 </gauge:SfRadialGauge.Axes>

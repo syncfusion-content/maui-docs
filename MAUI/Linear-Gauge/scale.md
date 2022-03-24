@@ -197,7 +197,8 @@ The `CornerStyle` property of `LineStyle` specifies the corner type for the scal
 
  <gauge:SfLinearGauge>
                 <gauge:SfLinearGauge.LineStyle>
-                    <gauge:LinearLineStyle Thickness="20" CornerStyle="BothCurve"/>
+                    <gauge:LinearLineStyle Thickness="20" 
+                                           CornerStyle="BothCurve"/>
                 </gauge:SfLinearGauge.LineStyle>
             </gauge:SfLinearGauge>
 
@@ -224,7 +225,8 @@ Also `CornerRadius` allows to set custom corner style for linear scale.
 
  <gauge:SfLinearGauge>
                  <gauge:SfLinearGauge.LineStyle>
-                    <gauge:LinearLineStyle Thickness="20" CornerRadius="0,10,0,10"/>
+                    <gauge:LinearLineStyle Thickness="20" 
+                                           CornerRadius="0,10,0,10"/>
                 </gauge:SfLinearGauge.LineStyle>
             </gauge:SfLinearGauge>
 

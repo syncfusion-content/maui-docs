@@ -86,7 +86,8 @@ The edge style can be changed using the `CornerStyle` property of the bar pointe
                 <gauge:SfLinearGauge.BarPointers>
                     <gauge:BarPointer Value="50" PointerSize="10" 
                                       Offset="5"
-                                      Position="Outside" CornerStyle="BothCurve"/>
+                                      Position="Outside" 
+                                      CornerStyle="BothCurve"/>
                 </gauge:SfLinearGauge.BarPointers>
             </gauge:SfLinearGauge>
 
@@ -222,7 +223,8 @@ The gradient can be applied by using the `GradientStops` property of bar pointer
                                       CornerStyle="BothCurve" Value="70">
                         <gauge:BarPointer.GradientStops>
                             <gauge:GaugeGradientStop Value="0" Color="Green"/>
-                            <gauge:GaugeGradientStop Value="35" Color="#ff0074E3"/>
+                            <gauge:GaugeGradientStop Value="35" 
+                                                     Color="#ff0074E3"/>
                         </gauge:BarPointer.GradientStops>
                     </gauge:BarPointer>
                 </gauge:SfLinearGauge.BarPointers>
@@ -233,18 +235,18 @@ The gradient can be applied by using the `GradientStops` property of bar pointer
 {% highlight c# %}
 
 SfLinearGauge gauge = new SfLinearGauge();
-		ObservableCollection<GaugeGradientStop> gradientStops = new ObservableCollection<GaugeGradientStop>();
-		gradientStops.Add(new GaugeGradientStop() { Value = 0, Color = Colors.Green });
-		gradientStops.Add(new GaugeGradientStop() { Value = 35, Color = Color.FromArgb("#ff0074E3") });
-		gauge.BarPointers.Add(new BarPointer()
-		{
-			Value = 70,
-			Position = GaugeElementPosition.Outside,
-			Offset = 5,
-			CornerStyle = CornerStyle.BothCurve,
-			GradientStops = gradientStops
-		});
-		this.Content = gauge;
+ObservableCollection<GaugeGradientStop> gradientStops = new ObservableCollection<GaugeGradientStop>();
+gradientStops.Add(new GaugeGradientStop() { Value = 0, Color = Colors.Green });
+gradientStops.Add(new GaugeGradientStop() { Value = 35, Color = Color.FromArgb("#ff0074E3") });
+gauge.BarPointers.Add(new BarPointer()
+{
+	Value = 70,
+	Position = GaugeElementPosition.Outside,
+	Offset = 5,
+	CornerStyle = CornerStyle.BothCurve,
+	GradientStops = gradientStops
+});
+this.Content = gauge;
 
 {% endhighlight %}
 
@@ -262,12 +264,15 @@ By using the `Child` property of bar pointer, you can provide a child for the ba
 
 <gauge:SfLinearGauge ShowLabels="False" ShowTicks="False">
                 <gauge:SfLinearGauge.LineStyle>
-                    <gauge:LinearLineStyle CornerStyle="BothCurve" Thickness="30"/>
+                    <gauge:LinearLineStyle CornerStyle="BothCurve" 
+                                           Thickness="30"/>
                 </gauge:SfLinearGauge.LineStyle>
                 <gauge:SfLinearGauge.BarPointers>
-                    <gauge:BarPointer CornerStyle="BothCurve" Value="50" PointerSize="30">
+                    <gauge:BarPointer CornerStyle="BothCurve" Value="50" 
+                                      PointerSize="30">
                         <gauge:BarPointer.Child>
-                            <Label Text="50%" Margin="0,0,10,0" HorizontalOptions="End"
+                            <Label Text="50%" Margin="0,0,10,0" 
+                                   HorizontalOptions="End"
                                    TextColor="White" VerticalOptions="Center"/>
                         </gauge:BarPointer.Child>
                     </gauge:BarPointer>

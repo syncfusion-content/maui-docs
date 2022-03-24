@@ -134,7 +134,8 @@ Pointers contain a list of pointer elements, in which you can add any number of 
 
                     <gauge:LinearContentPointer Value="80">
                         <gauge:LinearContentPointer.Content>
-                            <Image Source="pin.png" HeightRequest="20" WidthRequest="20"/>
+                            <Image Source="pin.png" HeightRequest="20" 
+                                   WidthRequest="20"/>
                         </gauge:LinearContentPointer.Content>
                     </gauge:LinearContentPointer>
                 </gauge:SfLinearGauge.MarkerPointers>
@@ -189,7 +190,8 @@ The following code example gives you the complete code of above configurations.
 
                     <gauge:LinearContentPointer Value="80">
                         <gauge:LinearContentPointer.Content>
-                            <Image Source="pin.png" HeightRequest="20" WidthRequest="20"/>
+                            <Image Source="pin.png" HeightRequest="20" 
+                                   WidthRequest="20"/>
                         </gauge:LinearContentPointer.Content>
                     </gauge:LinearContentPointer>
                 </gauge:SfLinearGauge.MarkerPointers>

@@ -29,7 +29,8 @@ Scale labels can be customized using the `LabelStyle` property of `SfLinearGauge
  <gauge:SfLinearGauge>
                 <gauge:SfLinearGauge.LabelStyle>
                     <gauge:GaugeLabelStyle FontAttributes="Bold" FontSize="15" 
-                                           TextColor="Red" FontFamily="TimesNewRoman"/>
+                                           TextColor="Red" 
+                                           FontFamily="TimesNewRoman"/>
                 </gauge:SfLinearGauge.LabelStyle>
             </gauge:SfLinearGauge>
 
