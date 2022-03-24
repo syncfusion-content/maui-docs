@@ -132,7 +132,7 @@ You can find the platforms supported by each .NET MAUI control as below.
 		Yes<br/>
 		</td>
 		<td>
-		Underway<br/>
+		Yes<br/>
 		</td>
 	</tr>
 	<tr>
@@ -238,7 +238,7 @@ You can find the platforms supported by each .NET MAUI file-format library as be
 
 | Control           | Android | iOS  | Mac Catalyst | WinUI |
 |-------------------|---------|------|--------------|-------|
-| [Excel](https://help.syncfusion.com/file-formats/xlsio/overview)             | Yes     | Yes  | Underway | Yes  |
-| [PDF](https://help.syncfusion.com/file-formats/pdf/overview)               | Yes     | Yes  | Underway | Yes  |
-| [Word](https://help.syncfusion.com/file-formats/docio/overview)              | Yes     | Yes  | Underway | Yes  |
-| [PowerPoint](https://help.syncfusion.com/file-formats/presentation/overview)        | Yes     | Yes  | Underway | Yes  |
+| [Excel](https://help.syncfusion.com/file-formats/xlsio/overview)             | Yes     | Yes  | Yes | Yes  |
+| [PDF](https://help.syncfusion.com/file-formats/pdf/overview)               | Yes     | Yes  | Yes | Yes  |
+| [Word](https://help.syncfusion.com/file-formats/docio/overview)              | Yes     | Yes  | Yes | Yes  |
+| [PowerPoint](https://help.syncfusion.com/file-formats/presentation/overview)        | Yes     | Yes  | Yes | Yes  |
