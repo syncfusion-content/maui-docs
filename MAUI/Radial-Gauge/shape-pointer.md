@@ -54,7 +54,7 @@ Gauge supports the following types of shapes:
 * Rectangle
 * Triangle
 
-![.NET MAUI Radial Gauge Markers](images/marker-pointers/maui-radial-gauge-markers.PNG)
+![.NET MAUI Radial Gauge Markers](images/marker-pointers/maui-radial-gauge-markers.png)
 
 ## Shape customization
 
@@ -153,7 +153,7 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
 {% endtabs %}
 
-![Change shape pointer elevation](images/marker-pointer/pointer-shadow.PNG)
+![Change shape pointer elevation](images/marker-pointers/pointer-shadow.PNG)
 
 ## Shape pointer overlay
 
@@ -201,7 +201,7 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
 {% endtabs %}
 
-![Change shape pointer overlay](images/marker-pointer/pointer-overlay.PNG)
+![Change shape pointer overlay](images/marker-pointers/pointer-overlay.PNG)
 
 ## Marker position customization
 
