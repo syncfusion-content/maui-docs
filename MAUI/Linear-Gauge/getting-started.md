@@ -232,4 +232,4 @@ The following code example gives you the complete code of above configurations.
 
 ![.NET MAUI Linear Gauge](images/getting-started/maui-linear-gauge.PNG)
 
-N> View [`sample`](https://github.com/SyncfusionExamples/https://github.com/SyncfusionExamples/MAUI-Linear-Gauge-Getting-started-) in GitHub
+N> View [`sample`](https://github.com/SyncfusionExamples/MAUI-Linear-Gauge-Getting-started-) in GitHub
