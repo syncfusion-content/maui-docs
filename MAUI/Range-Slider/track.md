@@ -71,3 +71,110 @@ rangeSlider.TrackStyle.InactiveSize = 8;
 
 ![RangeSlider track size](images/track/track-size.png)
 
+## Disabled track
+
+You can change the state of the range slider to disabled by setting `false` to the `IsEnabled` property. Using the Visual State Manager (VSM), you can customize the range slider track properties based on the visual states. The applicable visual states are enabled(default) and disabled.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage.Resources>
+    <Style TargetType="sliders:SfRangeSlider">
+        <Setter Property="Interval" Value="0.25" />
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup>
+                    <VisualState x:Name="Default">
+                        <VisualState.Setters>
+                            <Setter Property="TrackStyle">
+                                <Setter.Value>
+                                    <sliders:SliderTrackStyle ActiveSize="8" 
+                                                                  InactiveSize="6" 
+                                                                  ActiveFill="#EE3F3F" 
+                                                                  InactiveFill="#F7B1AE"/>
+                                </Setter.Value>
+                            </Setter>
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="TrackStyle">
+                                <Setter.Value>
+                                    <sliders:SliderTrackStyle ActiveSize="10" 
+                                                                  InactiveSize="8"
+                                                                  ActiveFill="Grey" 
+                                                                  InactiveFill="LightGrey" />
+                                </Setter.Value>
+                            </Setter>
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+</ContentPage.Resources>
+
+<ContentPage.Content>
+    <VerticalStackLayout>
+        <Label Text="Enabled Range Slider" Padding="0,10"/>
+        <sliders:SfSlider/>
+        <Label Text="Disabled Range Slider" Padding="0,10"/>
+        <sliders:SfSlider IsEnabled="False"/>
+    </VerticalStackLayout>
+</ContentPage.Content>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+VerticalStackLayout stackLayout = new VerticalStackLayout();
+SfRangeSlider defaultRangeSlider = new SfRangeSlider();
+SfRangeSlider disabledRangeSlider = new SfRangeSlider { IsEnabled = false };
+
+VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
+VisualStateGroup commonStateGroup = new VisualStateGroup();
+// Default State.
+VisualState defaultState = new VisualState { Name = "Default" };
+defaultState.Setters.Add(new Setter
+{
+    Property = SfRangeSlider.TrackStyleProperty,
+    Value = new SliderTrackStyle
+    {
+        ActiveFill = Color.FromArgb("#EE3F3F"),
+        InactiveFill = Color.FromArgb("#F7B1AE"),
+        ActiveSize = 8,
+        InactiveSize = 6,
+    }
+});
+// Disabled State.
+VisualState disabledState = new VisualState { Name = "Disabled" };
+disabledState.Setters.Add(new Setter
+{
+    Property = SfRangeSlider.TrackStyleProperty,
+    Value = new SliderTrackStyle
+    {
+        ActiveFill = Colors.Grey,
+        InactiveFill = Colors.LightGrey,
+        ActiveSize = 10,
+        InactiveSize = 8,
+    }
+});
+
+commonStateGroup.States.Add(defaultState);
+commonStateGroup.States.Add(disabledState);
+visualStateGroupList.Add(commonStateGroup);
+VisualStateManager.SetVisualStateGroups(defaultRangeSlider, visualStateGroupList);
+VisualStateManager.SetVisualStateGroups(disabledRangeSlider, visualStateGroupList);
+
+stackLayout.Children.Add(new Label() { Text = "Default Range Slider", Padding = new Thickness(0, 10) });
+stackLayout.Children.Add(defaultRangeSlider);
+stackLayout.Children.Add(new Label() { Text = "Disabled Range Slider", Padding = new Thickness(0, 10) });
+stackLayout.Children.Add(disabledRangeSlider);
+this.Content = stackLayout;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![RangeSlider track disabled state](images/track/track-disabled.png)

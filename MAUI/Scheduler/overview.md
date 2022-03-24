@@ -15,7 +15,7 @@ The Syncfusion .NET MAUI Scheduler (SfScheduler) has eight different types of bu
 
 ## Key features
 
- *  **Built-in views**: The .NET MAUI Scheduler provides a wide range of built-in view modes including Day, Week, WorkWeek, Month, TimelineDay, TimelineWeek, TimelineWorkWeek, and TimelineMonth. These view modes allows to display appointments across different days and months.
+ *  **Built-in views**: The .NET MAUI Scheduler provides a wide range of built-in view modes including Day, Week, WorkWeek, Month, Agenda, TimelineDay, TimelineWeek, TimelineWorkWeek, and TimelineMonth. These view modes allows to display appointments across different days and months.
 
  ![built-in-views-in-maui-scheduler](images/overview/built-in-views-in-maui-scheduler.png)
 
@@ -30,6 +30,10 @@ The Syncfusion .NET MAUI Scheduler (SfScheduler) has eight different types of bu
  * **Appointment mapping**: The .NET MAUI Scheduler control supports to map any custom object to populate appointments or events.
 
  * **Timezone**: The display appointments can be created in various time zones in the system time zone. The appointment start and end times are also automatically adjusted and displayed based on the daylight savings time.
+
+ * **Agenda view**: The agenda view displays a list of scheduled appointments grouped by week, between set minimum and maximum dates. You can customize everything from the date and time formats to the styling of each header.
+
+ ![agenda-view-events-in-maui-scheduler](images/overview/agenda-view-events-in-maui-scheduler.png)
 
  * **Timeline month view**: The appointments will be displayed on a horizontal axis, with each column representing a day of the month.
 

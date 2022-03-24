@@ -211,3 +211,249 @@ namespace TabViewMauiSample
 ![Getting_Started](images/Getting_Started.png)
 
 N> View [sample](https://github.com/SyncfusionExamples/maui-tabview-samples/tree/main/TabViewGettingStarted) in GitHub
+
+## Populate ItemsSource
+
+Items can be added to the control using the `ItemsSource` property of [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html).
+
+Objects of any class can be given as items for `SfTabView` by using `ItemsSource`. The views corresponding to the objects can be set using the `HeaderItemTemplate` for the header items and `ContentItemTemplate` for the content.
+
+Create a model class using the TabItems collection property that is initialized with the required number of data objects, as shown in the following code example.
+
+{% tabs %}
+
+{% highlight C# %}
+
+    public class Model: INotifyPropertyChanged
+    {
+
+    public event PropertyChangedEventHandler PropertyChanged;
+
+    protected void OnPropertyChanged(string propertyName)
+    {
+        var handler = PropertyChanged;
+        if (handler != null)
+            handler(this, new PropertyChangedEventArgs(propertyName));
+    }
+
+    private string name;
+
+    public string Name
+    {
+        get { return name; }
+        set
+        {
+            name = value;
+            OnPropertyChanged("Name");
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+{% tabs %}
+
+{% highlight C# %}
+
+ public class TabItemsSourceViewModel:INotifyPropertyChanged
+    {
+    public event PropertyChangedEventHandler PropertyChanged;
+
+    protected void OnPropertyChanged(string propertyName)
+    {
+        var handler = PropertyChanged;
+        if (handler != null)
+            handler(this, new PropertyChangedEventArgs(propertyName));
+    }
+
+    private ObservableCollection<Model> tabItems;
+    public ObservableCollection<Model> TabItems
+    {
+        get { return tabItems; }
+        set
+        {
+            tabItems = value;
+            OnPropertyChanged("TabItems");
+        }
+    }
+        public TabItemsSourceViewModel()
+        {
+            TabItems = new ObservableCollection<Model>();
+            TabItems.Add(new Model() { Name = "Alexandar" });
+            TabItems.Add(new Model() { Name = "Gabriella" });
+            TabItems.Add(new Model() { Name = "Clara"});
+            TabItems.Add(new Model() { Name = "Tye" });
+            TabItems.Add(new Model() { Name = "Nora" });
+            TabItems.Add(new Model() { Name = "Sebastian" });
+           
+        }
+
+  }
+
+{% endhighlight %}
+
+{% endtabs %}
+
+The following code example binds the collection to the `ItemsSource` property of `SfTabView`.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ItemTemplateSample.MainPage"
+             xmlns:local="clr-namespace:ItemTemplateSample"
+             xmlns:tabView="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView"
+             BackgroundColor="{DynamicResource SecondaryColor}" >
+
+    <ContentPage.BindingContext>
+    <local:TabItemsSourceViewModel />
+     </ContentPage.BindingContext>
+     <tabView:SfTabView ItemsSource="{Binding TabItems}" >
+     </tabView:SfTabView>
+
+    </ContentPage>
+
+  
+{% endhighlight %}
+
+{% highlight C# %}
+
+using Syncfusion.Maui.TabView;
+
+namespace ItemTemplateSample;
+
+    public partial class MainPage : ContentPage
+    {
+	TabItemsSourceViewModel model;
+    SfTabView tabView;
+	public MainPage()
+	{
+		InitializeComponent();
+		model = new TabItemsSourceViewModel();
+		this.BindingContext = model;
+		tabView = new SfTabView();
+        tabView.ItemsSource = model.TabItems;
+		this.Content = tabView;
+    } 
+
+    }
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Header item template
+
+By defining the `HeaderItemTemplate` of the `SfTabView`, a custom user interface(UI) can be achieved to display the tab header data items.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+    <tabView:SfTabView ItemsSource="{Binding TabItems}" >
+        <tabView:SfTabView.HeaderItemTemplate>
+                <DataTemplate >
+                    <Label  Padding="5,10,10,10"  Text="{Binding Name}"/>
+                 </DataTemplate>
+            </tabView:SfTabView.HeaderItemTemplate>
+    </tabView:SfTabView>
+    
+{% endhighlight %}
+
+{% highlight C# %}
+
+namespace ItemTemplateSample;
+
+    public partial class MainPage : ContentPage
+    {
+	
+    TabItemsSourceViewModel model;
+    SfTabView tabView;
+	public MainPage()
+	{
+		InitializeComponent();
+		model = new TabItemsSourceViewModel();
+		this.BindingContext = model;
+		tabView = new SfTabView();
+		tabView.ItemsSource = model.TabItems;
+		tabView.HeaderItemTemplate = new DataTemplate(() =>
+		{
+			var nameLabel = new Label { Padding = new Thickness("5,10,10,10")};
+            nameLabel.SetBinding(Label.TextProperty, "Name");
+		    
+			return nameLabel;
+		});
+		this.Content = tabView;
+    }
+  }
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Content item template
+
+By defining the `ContentItemTemplate` of the `SfTabView`, a custom user interface(UI) can be achieved to display the tab content data items.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+    <tabView:SfTabView ItemsSource="{Binding TabItems}" >
+        <tabView:SfTabView.HeaderItemTemplate>
+                <DataTemplate >
+                    <Label  Padding="5,10,10,10"  Text="{Binding Name}"/>
+                 </DataTemplate>
+            </tabView:SfTabView.HeaderItemTemplate>
+             <tabView:SfTabView.ContentItemTemplate>
+                <DataTemplate>
+                     <Label TextColor="Black"  Text="{Binding Name}" />
+               </DataTemplate>
+        </tabView:SfTabView.ContentItemTemplate>
+    </tabView:SfTabView>
+    
+{% endhighlight %}
+
+{% highlight C# %}
+
+    namespace ItemTemplateSample;
+
+    public partial class MainPage : ContentPage
+    {
+	
+    TabItemsSourceViewModel model;
+    SfTabView tabView;
+	public MainPage()
+	{
+		InitializeComponent();
+		model = new TabItemsSourceViewModel();
+		this.BindingContext = model;
+		tabView = new SfTabView();
+		tabView.ItemsSource = model.TabItems;
+		tabView.HeaderItemTemplate = new DataTemplate(() =>
+		{
+			var nameLabel = new Label { Padding = new Thickness("5,10,10,10")};
+            nameLabel.SetBinding(Label.TextProperty, "Name");
+		    
+			return nameLabel;
+		});
+        tabView.ContentItemTemplate = new DataTemplate(() =>
+		{
+			var nameLabel = new Label { TextColor=Colors.Black };
+			nameLabel.SetBinding(Label.TextProperty, "Name");
+			return nameLabel;
+		});
+		this.Content = tabView;
+    }
+  }
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Item Template](images/ItemTemplate.png)
+

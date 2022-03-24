@@ -150,3 +150,112 @@ slider.ThumbOverlayStyle.Fill = new SolidColorBrush(Color.FromArgb("#F7C8DB"));
 {% endtabs %}
 
 ![Slider thumb overlay color](images/thumb-and-thumb-overlay/thumb-overlay-color.png)
+
+## Disabled thumb
+
+You can change the state of the slider to disabled by setting `false` to the `IsEnabled` property. Using the Visual State Manager (VSM), you can customize the slider thumb properties based on the visual states. The applicable visual states are enabled(default) and disabled.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage.Resources>
+    <Style TargetType="sliders:SfSlider">
+        <Setter Property="Interval" Value="0.25" />
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup>
+                    <VisualState x:Name="Default">
+                        <VisualState.Setters>
+                            <Setter Property="ThumbStyle">
+                                <Setter.Value>
+                                    <sliders:SliderThumbStyle Radius = "13"
+                                                                  Fill="Red"
+                                                                  Stroke="Yellow"
+                                                                  StrokeThickness="3"/>
+                                </Setter.Value>
+                            </Setter>
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="ThumbStyle">
+                                <Setter.Value>
+                                    <sliders:SliderThumbStyle Radius = "13"
+                                                                  Fill="Grey"
+                                                                  Stroke="LightGrey"
+                                                                  StrokeThickness="3"/>
+                                </Setter.Value>
+                            </Setter>
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+</ContentPage.Resources>
+
+
+<ContentPage.Content>
+    <VerticalStackLayout>
+        <Label Text="Enabled Slider" Padding="0,10"/>
+        <sliders:SfSlider/>
+        <Label Text="Disabled Slider" Padding="0,10"/>
+        <sliders:SfSlider IsEnabled="False"/>
+    </VerticalStackLayout>
+</ContentPage.Content>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+VerticalStackLayout stackLayout = new VerticalStackLayout();
+SfSlider defaultSlider = new SfSlider();
+SfSlider disabledSlider = new SfSlider { IsEnabled = false };
+
+VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
+VisualStateGroup commonStateGroup = new VisualStateGroup();
+// Default State.
+VisualState defaultState = new VisualState { Name = "Default" };
+defaultState.Setters.Add(new Setter
+{
+    Property = SfSlider.ThumbStyleProperty,
+    Value = new SliderThumbStyle
+    {
+        Radius = 13,
+        Fill = Colors.Red,
+        Stroke = Colors.Yellow,
+        StrokeThickness = 3,
+    }
+});
+// Disabled State.
+VisualState disabledState = new VisualState { Name = "Disabled" };
+disabledState.Setters.Add(new Setter
+{
+    Property = SfSlider.ThumbStyleProperty,
+    Value = new SliderThumbStyle
+    {
+        Radius = 13,
+        Fill = Colors.Grey,
+        Stroke = Colors.LightGrey,
+        StrokeThickness = 3,
+    }
+});
+
+commonStateGroup.States.Add(defaultState);
+commonStateGroup.States.Add(disabledState);
+visualStateGroupList.Add(commonStateGroup);
+VisualStateManager.SetVisualStateGroups(defaultSlider, visualStateGroupList);
+VisualStateManager.SetVisualStateGroups(disabledSlider, visualStateGroupList);
+
+stackLayout.Children.Add(new Label() { Text = "Default Slider", Padding = new Thickness(0, 10) });
+stackLayout.Children.Add(defaultSlider);
+stackLayout.Children.Add(new Label() { Text = "Disabled Slider", Padding = new Thickness(0, 10) });
+stackLayout.Children.Add(disabledSlider);
+this.Content = stackLayout;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Slider thumb disabled state](images/thumb-and-thumb-overlay/thumb-disabled.png)
