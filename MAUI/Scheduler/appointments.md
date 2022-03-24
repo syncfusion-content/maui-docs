@@ -840,9 +840,6 @@ The appointment text style can be customized by using the [AppointmentTextStyle]
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
 {% highlight c# %}
 
 var appointments = new ObservableCollection<SchedulerAppointment>();
@@ -895,7 +892,7 @@ You can customize the appointment appearance by using the `AppointmentTemplate` 
     </scheduler:SfScheduler>
  </Grid>
 
-{% tabs %}
+{% endhighlight %}
 {% highlight c# %}
 
 this.Scheduler.AllowedViews = SchedulerViews.Day | SchedulerViews.Week | SchedulerViews.WorkWeek | SchedulerViews.Month | SchedulerViews.Agenda | SchedulerViews.TimelineDay | SchedulerViews.TimelineWeek | SchedulerViews.TimelineWorkWeek | SchedulerViews.TimelineMonth;
