@@ -66,8 +66,6 @@ The shape pointer can be customized using the following properties:
 * `Stroke` – Allows you to specify the border color for the shape.
 * `BorderWidth` – Allows you to specify the border width of the shape.
 * `HasShadow` – Allows you to specify the shadow of the shape.
-* `OverlayFill` – Allows you to specify the color for the shapes' dragging overlay.
-* `OverlayRadius` – Allows you to specify the radius for the shapes' dragging overlay.
 
 {% tabs %}
 
@@ -155,11 +153,16 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
 {% endtabs %}
 
-![Change shape pointer elevation](images/marker-pointer/pointer_shadow.PNG)
+![Change shape pointer elevation](images/marker-pointer/pointer-shadow.PNG)
 
 ## Shape pointer overlay
 
 The shape pointer overlay is rendered around the shape when the shape pointer is dragged. When `IsInteractive` property of pointer is set to true and the marker is dragged, the overlay will come around the marker pointer.
+
+The shape pointer overlay can be customized using the following properties:
+
+* `OverlayFill` – Allows you to specify the color for the shapes' dragging overlay.
+* `OverlayRadius` – Allows you to specify the radius for the shapes' dragging overlay.
 
 {% tabs %}
 
@@ -198,7 +201,7 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
 {% endtabs %}
 
-![Change shape pointer overlay](images/marker-pointer/pointer_overlay.PNG)
+![Change shape pointer overlay](images/marker-pointer/pointer-overlay.PNG)
 
 ## Marker position customization
 
