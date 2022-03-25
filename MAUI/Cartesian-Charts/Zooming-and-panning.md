@@ -15,7 +15,7 @@ Zooming and panning provides you to take a close-up look of the data point plott
 
 ## Enable Zooming
 
-To enable the zooming and panning in the chart, create an instance of [ChartZoomPanBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartZoomPanBehavior.html?tabs=tabid-1) and add it to the [ChartBehaviors](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_ChartBehaviors) collection of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).
+To enable the zooming and panning in the chart, create an instance of [ChartZoomPanBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartZoomPanBehavior.html?tabs=tabid-1) and add it to the [ZoomPanBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_ChartBehaviors) collection of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).
 
 {% tabs %}
 
@@ -35,7 +35,7 @@ To enable the zooming and panning in the chart, create an instance of [ChartZoom
 SfCartesianChart chart = new SfCartesianChart();
 ...
 ChartZoomPanBehavior zooming = new ChartZoomPanBehavior();
-chart.ChartBehaviors.Add(zooming);
+chart.ZoomPanBehavior = zooming;
 ...
 
 {% endhighlight %}
@@ -198,7 +198,7 @@ Panning feature allows moving the visible area of the chart when it is zoomed in
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-ChartZoomPanBehavior zooming = new ChartZoomPanBehavior();
+ChartZoomPanBehavior zooming = new ChartZoomPanBehavior()
 {
     EnablePanning = true
 };
