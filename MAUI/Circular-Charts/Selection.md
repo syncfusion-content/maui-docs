@@ -20,9 +20,9 @@ To enable the selection in chart, create an instance of [ChartSelectionBehavior]
 {% highlight xaml %}
 
 <chart:SfCircularChart>
-    <chart:SfCircularChart.ChartBehaviors>
+    <chart:SfCircularChart.SelectionBehavior>
         <chart:ChartSelectionBehavior />
-    </chart:SfCircularChart.ChartBehaviors>
+    </chart:SfCircularChart.SelectionBehavior>
 <chart:SfCircularChart.Series>
     <chart:PieSeries SelectionBrush="BlueViolet"/>
 </chart:SfCircularChart.Series>
@@ -35,7 +35,7 @@ To enable the selection in chart, create an instance of [ChartSelectionBehavior]
 SfCircularChart chart = new SfCircularChart();
 
 ChartSelectionBehavior selection = new ChartSelectionBehavior();
-chart.ChartBehaviors.Add(selection);
+chart.SelectionBehavior = selection;
 
 PieSeries series = new PieSeries();
 series.SelectionBrush = Brush.BlueViolet;
@@ -51,31 +51,6 @@ chart.Series.Add(series);
 
 The [Type](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelectionBehavior.html#Syncfusion_Maui_Charts_ChartSelectionBehavior_Type) property allows users to set selection type of series, which includes [Point](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SelectionType.html#Syncfusion_Maui_Charts_SelectionType_Point) and [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SelectionType.html#Syncfusion_Maui_Charts_SelectionType_None). [Type](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelectionBehavior.html#Syncfusion_Maui_Charts_ChartSelectionBehavior_Type) property with [Point](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SelectionType.html#Syncfusion_Maui_Charts_SelectionType_Point) value is used to select segment in a series and [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SelectionType.html#Syncfusion_Maui_Charts_SelectionType_None) is used to set deselect state for all segments. 
 
-{% tabs %}
-
-{% highlight xml %}
-
-<chart:SfCircularChart>
-. . .
-    <chart:SfCircularChart.ChartBehaviors>
-        <chart:ChartSelectionBehavior Type="Point"/>
-    </chart:SfCircularChart.ChartBehaviors>
-
-</chart:SfCircularChart>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-SfCircularChart chart = new SfCircularChart();
-. . .
-ChartSelectionBehavior selection = new ChartSelectionBehavior();
-selection.Type = SelectionType.Point;
-chart.ChartBehaviors.Add(selection);
-
-{% endhighlight %}
-
-{% endtabs %}
 
 ## Events
 

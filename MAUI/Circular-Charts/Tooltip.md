@@ -13,7 +13,7 @@ Tooltip is used to display any information or metadata of the tapped segment. Th
 
 ## Define Tooltip
 
-To define the tooltip in the chart, set the [ShowTooltip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_ShowTooltip) property of series to true. The default value of [ShowTooltip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_ShowTooltip) property is false.
+To define the tooltip in the chart, set the [EnableTooltip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_ShowTooltip) property of series to true. The default value of [ShowTooltip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_ShowTooltip) property is false.
 
 {% tabs %}
 
@@ -21,7 +21,7 @@ To define the tooltip in the chart, set the [ShowTooltip](https://help.syncfusio
 
 <chart:SfCircularChart>
 . . .
-    <chart:PieSeries ShowTooltip="True">
+    <chart:PieSeries EnableTooltip="True">
     </chart:PieSeries>
 </chart:SfCircularChart>
 
@@ -32,7 +32,7 @@ To define the tooltip in the chart, set the [ShowTooltip](https://help.syncfusio
 SfCircularChart chart = new SfCircularChart();
 . . .
 PieSeries series = new PieSeries();
-series.ShowTooltip = true;
+series.EnableTooltip = true;
 chart.Series.Add(series);
 
 {% endhighlight %}
@@ -57,9 +57,9 @@ The [ChartTooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.C
 
 <chart:SfCircularChart>
 . . .
-<chart:SfCircularChart.ChartBehaviors>
+<chart:SfCircularChart.TooltipBehavior>
     <chart:ChartTooltipBehavior/>
-</chart:SfCircularChart.ChartBehaviors>
+</chart:SfCircularChart.TooltipBehavior>
 
 </chart:SfCircularChart>
 
@@ -69,8 +69,7 @@ The [ChartTooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.C
 
 SfCircularChart chart = new SfCircularChart();
 . . .
-ChartTooltipBehavior tooltip = new ChartTooltipBehavior();
-chart.ChartBehaviors.Add(tooltip);
+chart.TooltipBehavior = new ChartTooltipBehavior();
 
 {% endhighlight %}
 
@@ -97,7 +96,7 @@ Circular chart provides support to customize the appearance of the tooltip by us
     </chart:SfCircularChart.Resources>
 
     <chart:SfCircularChart.Series>
-        <chart:PieSeries ShowTooltip="True"
+        <chart:PieSeries EnableTooltip="True"
                 ItemsSource="{Binding Data}" 
                 XBindingPath="Product" 
                 YBindingPath="SalesRate"
@@ -113,7 +112,7 @@ Circular chart provides support to customize the appearance of the tooltip by us
 SfCircularChart chart = new SfCircularChart();
 . . .
 PieSeries series = new PieSeries();
-series.ShowTooltip = true;
+series.EnableTooltip = true;
 series.TooltipTemplate = chart.Resources["tooltipTemplate"] as DataTemplate;
 . . .     
 {% endhighlight %}

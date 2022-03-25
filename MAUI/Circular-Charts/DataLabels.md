@@ -139,7 +139,7 @@ PieSeries series = new PieSeries();
 series.ShowDataLabels = true;
 var dataLabelSettings = new CircularDataLabelSettings()
 {
-	LabelPlacement = Placement.Outer,
+	LabelPlacement = DataLabelPlacement.Outer,
 	ConnectorType = ConnectorType.Curve,
 	UseSeriesPalette = false
 };

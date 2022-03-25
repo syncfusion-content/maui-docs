@@ -41,9 +41,9 @@ chart.Series.Add(series);
 
 ![Doughnut chart type in MAUI Chart](Chart-Types_images/maui_doughnut_chart.png)
 
-## Doughnut Coefficient
+## Inner Radius
 
-The [DoughnutCoefficient](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DoughnutSeries.html#Syncfusion_Maui_Charts_DoughnutSeries_DoughnutCoefficient) property of doughnut series is used to define the inner circle.
+The [InnerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DoughnutSeries.html#Syncfusion_Maui_Charts_DoughnutSeries_DoughnutCoefficient) property of doughnut series is used to define the inner circle.
 
 {% tabs %}
 
@@ -51,7 +51,7 @@ The [DoughnutCoefficient](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Ch
 
 <chart:SfCircularChart>
     <chart:SfCircularChart.Series>
-        <chart:DoughnutSeries ItemsSource="{Binding Data}" DoughnutCoefficient="0.7" XBindingPath="Product" YBindingPath="SalesRate" />
+        <chart:DoughnutSeries ItemsSource="{Binding Data}" InnerRadius="0.7" XBindingPath="Product" YBindingPath="SalesRate" />
     </chart:SfCircularChart.Series>
 </chart:SfCircularChart>
 
@@ -63,7 +63,7 @@ SfCircularChart chart = new SfCircularChart();
 DoughnutSeries series = new DoughnutSeries();
 series.XBindingPath = "Product";
 series.YBindingPath = "SalesRate";
-series.DoughnutCoefficient = 0.7;
+series.InnerRadius = 0.7;
 
 chart.Series.Add(series);
 
