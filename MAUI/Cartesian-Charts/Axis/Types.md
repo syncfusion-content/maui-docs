@@ -409,17 +409,18 @@ By default, all the series are plotted based on primary and secondary axis.
 <chart:SfCartesianChart>
     . . .
 	<chart:SfCartesianChart.XAxes>
-                    <chart:DateTimeAxis Name="XAxis" CrossesAt="Double.MaxValue" ShowMajorGridLines="False" />
+                    <chart:DateTimeAxis Name="series_XAxis" ShowMajorGridLines="False" />
                 </chart:SfCartesianChart.XAxes>
                 <chart:SfCartesianChart.YAxes>
-                    <chart:NumericalAxis Name="YAxis" CrossesAt="Double.MaxValue" ShowMajorGridLines="False" />
+					<chart:NumericalAxis ShowMajorGridLines="False" />
+                    <chart:NumericalAxis Name="series_YAxis" CrossesAt="{Static x:Double.MaxValue}" ShowMajorGridLines="False" />
     <chart:SfCartesianChart.Series>
         <chart:SfCartesianChart.Series>
             <chart:ColumnSeries ItemsSource="{Binding Data1}" 
                     XBindingPath="Date"
                     YBindingPath="Value"
-					XAxisName ="XAxis"
-					YAxisName="YAxis">
+					XAxisName ="series_XAxis"
+					YAxisName="series_YAxis">
             </chart:ColumnSeries>
             <chart:SplineSeries ItemsSource="{Binding Data}" 
                     XBindingPath="Date"
@@ -452,21 +453,22 @@ SplineSeries series2 = new SplineSeries()
 
 DateTimeAxis primaryAxis = new DateTimeAxis()
 {
-    CrossesAt = double.MaxValue,
     ShowMajorGridLines = false
 };
-primaryAxis.Name = "XAxis";
+primaryAxis.Name = "series_XAxis";
 chart.XAxes.Add(primaryAxis);
-series1.XAxisName = "XAxis";
+series1.XAxisName = "series_YAxis";
 
 NumericalAxis secondaryAxis = new NumericalAxis()
 {
     CrossesAt = double.MaxValue,
     ShowMajorGridLines = false
 };
-secondaryAxis.Name = "YAxis";
+secondaryAxis.Name = "series_YAxis";
 chart.YAxes.Add(secondaryAxis);
-series1.YAxisName = "YAxis";
+NumericalAxis secondaryAxis1 = new NumericalAxis();
+chart.YAxes.Add(secondaryAxis1);
+series1.YAxisName = "series_YAxis";
 
 
 chart.Series.Add(series1);
