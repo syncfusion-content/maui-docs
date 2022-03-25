@@ -1,6 +1,6 @@
 ---
 layout: post
-title: One-dimensional symbology in .NET MAUI Barcodes (SfBarcodeGenerator) | Syncfusion
+title: one-dimensional symbology in .NET MAUI Barcodes (SfBarcodeGenerator) | Syncfusion
 description: Learn here all about one dimensional symbology of Syncfusion .NET MAUI Barcodes(SfBarcodeGenerator) control with key features and more.
 platform: maui
 control: SfBarcodeGenerator
@@ -27,7 +27,7 @@ The one-dimensional barcode represents the data by varying the widths and spacin
 ## Codabar
 
 * `Codabar` is a discrete numeric symbology that is used in libraries, blood banks and a variety of other information processing applications.
-* Encodes only numeric characters and some special characters like dash (-), colon (:), slash (/), plus (+).
+* Encodes only numeric characters and some special characters such as dash (-), colon (:), slash (/), and plus (+).
 * Each character has three bars and four spaces.
 * Uses characters of A, B, C, D as start and stop characters.
 
@@ -62,10 +62,10 @@ The one-dimensional barcode represents the data by varying the widths and spacin
 
 ## Code39
 
-`Code 39` is a discrete, variable-length symbology that encodes alphanumeric characters into a series of bars. A special start / stop character is placed at the beginning and ending of each barcode. Code 39 is self-checking, a check digit is not usually required for common use. For certain cases, applications requiring an extremely high level of accuracy of the checksum digit might be added.
+`Code 39` is a discrete, variable-length symbology that encodes alphanumeric characters into a series of bars. Each barcode begins and ends with a special start and stop characters. Code 39 is self-checking, a check digit is not usually required for common use. For certain cases, applications requiring an extremely high level of accuracy of the checksum digit might be added.
 
 * Allows character set of digits (0-9), upper case alphabets (A-Z), and symbols like space, minus (-), plus (+), period (.), dollar sign ($), slash (/), and percent (%).
-* Each character is encoded with 5 bars and 4 spaces where 3 are wide and 6 are narrow.
+* Each character is encoded with five bars and four spaces where three are wide and six are narrow.
 
 {% tabs %}
 
@@ -135,9 +135,9 @@ As like `Code39`, the `Code39 Extended` supports the `EnableCheckSum` property.
 
 ## Code93
 
-`Code93` is designed to complement and enhance `Code39`. It represents the complete ASCII character set by using a combination of 2 characters. It is a continuous, variable-length symbology and produces a denser code.
+`Code93` is designed to complement and enhance `Code39`. It represents the complete ASCII character set by using a combination of 2 characters. It is a continuous, variable-length symbology that produces a denser code.
 
-* Encodes character set of uppercase alphabets (A-Z), digits (0-9), and special characters such as asterisk (*), dash (-), dollar ($), percent (%), Space, dot (.), slash (/), plus (+) and so on.
+* Encodes character set of upper case alphabets (A-Z), digits (0-9), and special characters such as asterisk (*), dash (-), dollar ($), percent (%), Space, dot (.), slash (/), plus (+) and so on.
 * The asterisk (*) is not a true encoding character, but it is the start and stop symbol for `Code93` Symbology.
 
 {% tabs %}
@@ -171,7 +171,7 @@ As like `Code39`, the `Code39 Extended` supports the `EnableCheckSum` property.
 
 ## Code128
 
-`Code 128` is a highly efficient, high-density linear barcode symbology that allows the encoding of alphanumeric data. It is capable of encoding full ASCII character set and extended character sets. This symbology contains the checksum digit for verification and the barcode can also be verified character-by-character for the parity of each data byte.
+`Code 128` is a highly efficient, high-density linear barcode symbology that allows the encoding of alphanumeric data. It is capable of encoding full ASCII character sets and extended character sets. This symbology contains the checksum digit for verification and the barcode can also be verified character-by-character for the parity of each data byte.
 
 The `Code128` symbology encodes the input symbols supported by `Code128A`, `Code128B`, `Code128C`. The default symbology type of barcode generator is `Code128`.
 
@@ -206,7 +206,7 @@ The `Code128` symbology encodes the input symbols supported by `Code128A`, `Code
 
 ## Code128A
 
-`Code128A` (or Chars Set A) includes all the standard upper case U.S. alphanumeric keyboard characters and punctuation characters together with the control characters, (characters with ASCII values from 0 to 95 inclusive), and seven special characters.
+`Code128A` (or Chars Set A) includes all the standard upper case U.S. alphanumeric keyboard characters and punctuation characters, as well as the control characters (characters with ASCII values from 0 to 95 inclusive) and seven special characters.
 
 {% tabs %}
 
@@ -239,7 +239,7 @@ The `Code128` symbology encodes the input symbols supported by `Code128A`, `Code
 
 ## Code128B
 
-`Code128B` (or Chars Set B) includes all the standard upper case alphanumeric keyboard characters and punctuation characters together with lower case alphabetic characters (characters with ASCII values from 32 to 127 inclusive), and seven special characters.
+`Code128B` (or Chars Set B) includes all the standard upper case alphanumeric keyboard characters and punctuation characters, as well as the lower case alphabetic characters (characters with ASCII values from 32 to 127 inclusive) and seven special characters.
 
 {% tabs %}
 
