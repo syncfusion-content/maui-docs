@@ -303,7 +303,7 @@ The `Code128` symbology encodes the input symbols supported by `Code128A`, `Code
 
 ![.NET MAUI Barcode Generator Code128C Symbology](images/one-dimensional-symbology/maui-code128c-symbology.png)
 
-### Code 128 Special characters
+### Code 128 special characters
 
 The last seven characters of Code Sets A and B (character values 96 - 102) and the last three characters of Code Set C (character values 100 - 102) are special non-data characters with no ASCII character equivalents that have a particular significance to the Barcode reading device.
 
