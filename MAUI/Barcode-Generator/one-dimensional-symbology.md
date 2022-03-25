@@ -1,6 +1,6 @@
 ---
 layout: post
-title: one-dimensional symbology in .NET MAUI Barcodes (SfBarcodeGenerator) | Syncfusion
+title: one-dimensional symbology in .NET MAUI Barcode Generator control | Syncfusion
 description: Learn here all about one dimensional symbology of Syncfusion .NET MAUI Barcodes(SfBarcodeGenerator) control with key features and more.
 platform: maui
 control: SfBarcodeGenerator
