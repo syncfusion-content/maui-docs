@@ -19,13 +19,13 @@ The [PlotOffsetStart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts
 
 <chart:SfCartesianChart>
 . . .
-<chart:SfCartesianChart.PrimaryAxis>
+<chart:SfCartesianChart.XAxes>
     <chart:CategoryAxis PlotOffsetStart="30"/>
-</chart:SfCartesianChart.PrimaryAxis>
+</chart:SfCartesianChart.XAxes>
 
-<chart:SfCartesianChart.SecondaryAxis>
+<chart:SfCartesianChart.YAxes>
     <chart:NumericalAxis PlotOffsetStart="30"/>
-</chart:SfCartesianChart.SecondaryAxis>
+</chart:SfCartesianChart.YAxes>
 
 </chart:SfCartesianChart>
 
@@ -35,15 +35,17 @@ The [PlotOffsetStart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts
 
 SfCartesianChart chart = new SfCartesianChart();
 . . .
-chart.PrimaryAxis = new CategoryAxis()
+CategoryAxis primaryAxis = new CategoryAxis()
 {
 PlotOffsetStart = 30
 };
+chart.XAxes.Add(primaryAxis);
 
-chart.SecondaryAxis = new NumericalAxis()
+NumericalAxis secondaryAxis = new NumericalAxis()
 {
 PlotOffsetStart = 30
 };
+chart.YAxes.Add(secondaryAxis);
 
 {% endhighlight %}
 
@@ -61,13 +63,13 @@ The [PlotOffsetEnd](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.C
 
 <chart:SfCartesianChart>
     . . .
-    <chart:SfCartesianChart.PrimaryAxis>
+    <chart:SfCartesianChart.XAxes>
         <chart:CategoryAxis PlotOffsetEnd="30"/>
-    </chart:SfCartesianChart.PrimaryAxis>
+    </chart:SfCartesianChart.XAxes>
 
-    <chart:SfCartesianChart.SecondaryAxis>
+    <chart:SfCartesianChart.YAxes>
         <chart:NumericalAxis PlotOffsetEnd="30"/>
-    </chart:SfCartesianChart.SecondaryAxis>
+    </chart:SfCartesianChart.YAxes>
 
 </chart:SfCartesianChart>
 
@@ -77,15 +79,17 @@ The [PlotOffsetEnd](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.C
 
 SfCartesianChart chart = new SfCartesianChart();
 . . .
-chart.PrimaryAxis = new CategoryAxis()
+CategoryAxis primaryAxis = new CategoryAxis()
 {
 PlotOffsetEnd = 30
 };
+chart.XAxes.Add(primaryAxis);
 
-chart.SecondaryAxis = new NumericalAxis()
+NumericalAxis secondaryAxis = new NumericalAxis()
 {
 PlotOffsetEnd = 30
 };
+chart.YAxes.Add(secondaryAxis);
 
 {% endhighlight %}
 
