@@ -23,11 +23,13 @@ The inactive side of the range slider is between the [`Minimum`](https://help.sy
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider>
-  <rangeslider:SfRangeSlider.TrackStyle>
-      <rangeslider:SliderTrackStyle ActiveFill="#EE3F3F" InactiveFill="#F7B1AE" />
-  </rangeslider:SfRangeSlider.TrackStyle>
-</rangeslider:SfRangeSlider>
+<sliders:SfRangeSlider>
+  
+  <sliders:SfRangeSlider.TrackStyle>
+      <sliders:SliderTrackStyle ActiveFill="#EE3F3F" InactiveFill="#F7B1AE" />
+  </sliders:SfRangeSlider.TrackStyle>
+
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -51,11 +53,13 @@ You can change the active and inactive track height of the range slider using th
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider>
-   <rangeslider:SfRangeSlider.TrackStyle>
-      <rangeslider:SliderTrackStyle ActiveSize="10" InactiveSize="8" />
-   </rangeslider:SfRangeSlider.TrackStyle>
-</rangeslider:SfRangeSlider>
+<sliders:SfRangeSlider>
+   
+   <sliders:SfRangeSlider.TrackStyle>
+      <sliders:SliderTrackStyle ActiveSize="10" InactiveSize="8" />
+   </sliders:SfRangeSlider.TrackStyle>
+
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
