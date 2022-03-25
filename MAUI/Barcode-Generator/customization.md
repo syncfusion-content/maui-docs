@@ -13,7 +13,7 @@ documentation: ug
 
 ### Displaying input value
 
-The provided input value of the barcode can be displayed by enabling its `ShowText` property. By default, the `ShowText` is false.
+The provided input value of the barcode can be displayed by enabling the `ShowText` property. By default, the `ShowText` is false.
 
 {% tabs %}
 
@@ -43,7 +43,7 @@ The provided input value of the barcode can be displayed by enabling its `ShowTe
 
 ### Text style customization
 
-The style of the text can be customized with the `TextStyle` property of the barcode generator.
+The style of the text can be customized using the `TextStyle` property of the barcode generator.
 
 {% tabs %}
 
@@ -88,7 +88,7 @@ The style of the text can be customized with the `TextStyle` property of the bar
 
 ### Text spacing
 
-The space between the text and the barcode can be controlled by the `TextSpacing` property of barcode generator. By default, the value of `TextSpacing` is 2.
+The space between the text and the barcode can be controlled by using the `TextSpacing` property of the barcode generator. By default, the value of `TextSpacing` is 2.
 
 {% tabs %}
 
@@ -121,7 +121,7 @@ The space between the text and the barcode can be controlled by the `TextSpacing
 
 ### Horizontal text alignment
 
-The horizontal alignment of the text can be controlled by `TextAlignment` property of barcode generator. The displayed value can be positioned at `Start`, `Center` or `End` of the control. The default value of `TextAlignment` property is center.
+The horizontal alignment of the text can be controlled by using the `TextAlignment` property of the barcode generator. The displayed value can be positioned at `Start`, `Center`, or `End` of the control. The default value of `TextAlignment` property is center.
 
 {% tabs %}
 
@@ -155,11 +155,11 @@ The horizontal alignment of the text can be controlled by `TextAlignment` proper
 
 ### Bar width customization
 
-Both the one dimensional and the two dimensional symbology support the `Module` property. The property is used to define the size of the smallest line or dot of the barcode.
+Both the one-dimensional and the two-dimensional symbology support the `Module` property. This property is used to define the size of the smallest line or dot of the barcode.
 
-For one dimensional barcode, if this property is not set, the size of the smallest bar line is determined depending on the width available.
+If this property is not set for one-dimensional barcode, the size of the smallest bar line is determined based on the width available.
 
-The following code snippet shows the one dimensional barcode with `Module` property,
+The following code sample shows the one-dimensional barcode with the `Module` property,
 
 {% tabs %}
 
@@ -196,7 +196,7 @@ The following code snippet shows the one dimensional barcode with `Module` prope
 
 N> In the image above, the smallest bar line width is 1 logical pixel.
 
-Below code snippet shows the one dimensional barcode without the `Module` property,
+The following code sample shows the one-dimensional barcode without the `Module` property.
 
 {% tabs %}
 
@@ -231,11 +231,11 @@ Below code snippet shows the one dimensional barcode without the `Module` proper
 
 ![.NET MAUI Barcode Generator Barcode Without Module](images/customization/maui-barcode-without-module.png)
 
-N>  In the image above, the smallest bar line width is calculated on the basis of the available width as a result of the total computed inputs(0’s and 1’s) divided by the available width.
+N> In the image above, the smallest bar line width is calculated on the basis of the available width as a result of the total computed inputs(0’s and 1’s) divided by the available width.
 
-For two dimensional barcode , if the `Module` property is not set, the size of smallest dot is calculated based on the minimum of available width or height.
+If the `Module` property is not set for two-dimensional barcode, the size of smallest dot is calculated based on the minimum of available width or height.
 
-The following code snippet shows the two dimensional barcode with `Module` property,
+The following code sample shows the two-dimensional barcode with the `Module` property,
 
 {% tabs %}
 
@@ -268,7 +268,7 @@ The following code snippet shows the two dimensional barcode with `Module` prope
 
 ![.NET MAUI Barcode Generator QR Code Width Customization](images/customization/maui-qrcode-width-customization.png)
 
-Below code snippet shows the two dimensional barcode without the `Module` property,
+The following code sample shows the two-dimensional barcode without the `Module` property,
 
 {% tabs %}
 
@@ -303,7 +303,7 @@ Below code snippet shows the two dimensional barcode without the `Module` proper
 
 ### Bar color customization
 
-The bar color of the barcode can be customized by using its `ForegroundColor` property as like the following code snippet,
+The bar color of the barcode can be customized by using the `ForegroundColor` property as shown in the following code sample.
 
 {% tabs %}
 
@@ -334,7 +334,7 @@ The bar color of the barcode can be customized by using its `ForegroundColor` pr
 
 ### Background color customization
 
-The background color of barcode can be customized with the `BackgroundColor` property of barcode generator as like the below code snippet,
+The background color of barcode can be customized by using the `BackgroundColor` property as shown in the following code sample.
 
 {% tabs %}
 

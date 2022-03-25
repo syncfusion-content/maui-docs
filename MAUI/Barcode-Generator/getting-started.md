@@ -13,11 +13,11 @@ This section explains the steps required to add the [`.NET MAUI Barcode Generato
 
 ## Adding a SfBarcodeGenerator reference
 
-The Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfBarcodeGenerator to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Barcode] and then install it.
+The Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfBarcodeGenerator to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Barcode] and then install it.
 
 ### Register the handler
 
-Syncfusion.Maui.Core nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file register the handler for Syncfusion core.
+Syncfusion.Maui.Core nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
 
 {% highlight C# hl_lines="17" %}
 
@@ -74,14 +74,14 @@ Add the following namespace to add .NET MAUI Badge Notifications.
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight xaml hl_lines="1" %}
 
 <barcode:SfBarcodeGenerator Value="http://www.syncfusion.com" 
                             HeightRequest="150"/>
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight c# hl_lines="1" %}
 
 SfBarcodeGenerator barcode = new SfBarcodeGenerator();
 barcode.HeightRequest = 150;
@@ -98,7 +98,7 @@ N> The default symbology of SfBarcodeGenerator is `Code128`.
 
 ## Initialize QR Code symbology
 
-You can set the required symbology type to the barcode generator based on input value by initializing the `Symbology` property. In the following code snippet, the QR code is set as the barcode symbology.
+You can set the required symbology type to the barcode generator based on input value by initializing the `Symbology` property. In the following code sample, the QR code is set as the barcode symbology.
 
 {% tabs %}
 
@@ -131,7 +131,7 @@ this.Content = barcode;
 
 ## Display input value
 
-The provided input value can be displayed below the barcode by enabling the `ShowText` property of barcode as like the following code snippet,
+The provided input value can be displayed below the barcode by enabling the ShowText property of barcode as shown in the following code sample.
 
 {% tabs %}
 
