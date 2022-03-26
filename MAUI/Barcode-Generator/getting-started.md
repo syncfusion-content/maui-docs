@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI Barcode Generator
 
-This section explains the steps required to add the [`.NET MAUI Barcode Generator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfBarcodeGenerator.html) control. This section explains the steps required to add the barcode and set its symbology. This section covers only basic features needed to get started with Syncfusion barcode generator control.
+This section explains the steps required to add the `.NET MAUI Barcode Generator` control. This section explains the steps required to add the barcode and set its symbology. This section covers only basic features needed to get started with Syncfusion barcode generator control.
 
 ## Adding a SfBarcodeGenerator reference
 
@@ -52,7 +52,7 @@ namespace GaugeMauiSample
 
 ## Adding a namespace
 
-Add the following namespace to add .NET MAUI Badge Notifications.
+Add the following namespace to add .NET MAUI Barcode Generator.
 
 {% tabs %}
 

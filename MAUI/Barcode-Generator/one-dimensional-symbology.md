@@ -1,6 +1,6 @@
 ---
 layout: post
-title: one-dimensional symbology in .NET MAUI Barcodes (SfBarcodeGenerator) | Syncfusion
+title: 1D symbology in .NET MAUI Barcodes (SfBarcodeGenerator) | Syncfusion
 description: Learn here all about one dimensional symbology of Syncfusion .NET MAUI Barcodes(SfBarcodeGenerator) control with key features and more.
 platform: maui
 control: SfBarcodeGenerator
@@ -303,7 +303,7 @@ The `Code128` symbology encodes the input symbols supported by `Code128A`, `Code
 
 ![.NET MAUI Barcode Generator Code128C Symbology](images/one-dimensional-symbology/maui-code128c-symbology.png)
 
-### Code 128 Special characters
+### Code 128 special characters
 
 The last seven characters of Code Sets A and B (character values 96 - 102) and the last three characters of Code Set C (character values 100 - 102) are special non-data characters with no ASCII character equivalents that have a particular significance to the Barcode reading device.
 
@@ -379,7 +379,7 @@ As like `UPC-A`, the `UPC-E` symbology supports only numeric character. It is a 
 
 ## EAN-13
 
-`EAN-13`, based on the `UPC-A` standard. As like `UPC-A`, it supports only the numeric character. It encodes the 12 digits of input data with the check digit at its end.
+The `EAN-13`  standard is based on the `UPC-A` standard.. As like `UPC-A`, it supports only the numeric character. It encodes the 12 digits of input data with the check digit at its end.
 
 * This difference between the `UPCA` and `EAN13` is that number system used in the `EAN13` is 2 digits ranges from 00 to 99 whereas the number system used in `UPCA` is single digits range from 0 to 9.
 
@@ -447,4 +447,4 @@ As like `EAN13` and `UPCE`, it encodes 7 digits of numeric data with the check d
 
 ![.NET MAUI Barcode Generator EAN-8 Symbology](images/one-dimensional-symbology/maui-ean8-symbology.png)
 
-All the one dimensional symbology supports the `Module` property. The property is used to define the size of the smallest line or dot of the barcode. If this property is not set, the size of the smallest line of the barcode is calculated based on the available size and total number of bars for the provided input value.
+All the one-dimensional symbology supports the `Module` property. This property is used to define the size of the smallest line or dot of the barcode. If this property is not set, the size of the smallest line of the barcode is calculated based on the available size and total number of bars for the provided input value.
