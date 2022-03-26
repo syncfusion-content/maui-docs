@@ -9,7 +9,7 @@ documentation: ug
 
 # Events in .NET MAUI Range Selector (SfRangeSelector)
 
-This section explains about how to add the events for range selector.
+This section explains about how to add the events for Range Selector.
 
 ## Handle callbacks
 
@@ -24,18 +24,23 @@ This section explains about how to add the events for range selector.
 
 <ContentPage 
              ...
-             xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-   <rangeselector:SfDateTimeRangeSelector Minimum="2010-01-01" 
-                                          Maximum="2020-01-01" 
-                                          RangeStart="2012-01-01" 
-                                          RangeEnd="2018-01-01" 
-                                          ValueChangeStart="OnValueChangeStart" 
-                                          ValueChanging="OnValueChanging" 
-                                          ValueChanged="OnValueChanged" 
-                                          ValueChangeEnd="OnValueChangeEnd">
-      <chart:SfCartesianChart />
-   </rangeselector:SfRangeSelector>
+             xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
+             xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
+   
+   <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
+                                    Maximum="2020-01-01" 
+                                    RangeStart="2012-01-01" 
+                                    RangeEnd="2018-01-01" 
+                                    ValueChangeStart="OnValueChangeStart" 
+                                    ValueChanging="OnValueChanging" 
+                                    ValueChanged="OnValueChanged" 
+                                    ValueChangeEnd="OnValueChangeEnd">
+      
+      <charts:SfCartesianChart>
+            ...
+      </charts:SfCartesianChart>
+   
+   </sliders:SfRangeSelector>
 </ContentPage>
 
 {% endhighlight %}
@@ -85,18 +90,23 @@ You can format or change the whole numeric or date label text using the [`LabelC
 
 <ContentPage 
              ...
-             xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-      <rangeselector:SfRangeSelector Minimum="0" 
+             xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
+             xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
+
+      <sliders:SfRangeSelector Minimum="2" 
                                Maximum="10" 
-                               Interval="2" 
-                               RangeStart="2" 
+                               RangeStart="4" 
                                RangeEnd="8"
-                               LabelCreated="OnLabelCreated"   
-                               ShowLabels="True" 
-                               ShowTicks="True">
-            <chart:SfCartesianChart />
-      </rangeselector:SfRangeSelector>
+                               Interval="2"
+                               ShowLabels="True"
+                               ShowTicks="True" 
+                               LabelCreated="OnLabelCreated">
+
+         <charts:SfCartesianChart>
+            ...
+         </charts:SfCartesianChart>
+
+      </sliders:SfRangeSelector>
 </ContentPage>
 
 {% endhighlight %}
@@ -105,9 +115,9 @@ You can format or change the whole numeric or date label text using the [`LabelC
 
 {
    SfRangeSelector rangeSelector = new SfRangeSelector();
-   rangeSelector.Minimum = 0;
+   rangeSelector.Minimum = 2;
    rangeSelector.Maximum = 10;
-   rangeSelector.RangeStart = 2;
+   rangeSelector.RangeStart = 4;
    rangeSelector.RangeEnd = 8;
    rangeSelector.Interval = 2;
    rangeSelector.ShowLabels = true;
@@ -125,7 +135,7 @@ private void OnLabelCreated(object sender, SliderLabelCreatedEventArgs e)
 
 {% endtabs %}
 
-![RangeSelector custom label](images/labels-and-dividers/custom-label.png)
+![RangeSelector custom label](images/labels-and-dividers/number-format.png)
 
 ## Tooltip text format
 
@@ -142,14 +152,20 @@ You can format or change the whole tooltip label text using the [`ToolTipLabelCr
 
 <ContentPage 
              ...
-             xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-   <rangeselector:SfRangeSelector>
-      <rangeselector:SfRangeSelector.Tooltip>
-         <rangeselector:SliderTooltip TooltipLabelCreated="OnTooltipLabelCreated" />
-      </rangeselector:SfRangeSelector.Tooltip>
-      <chart:SfCartesianChart />
-   </rangeselector:SfRangeSelector>
+             xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
+             xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
+   
+   <sliders:SfRangeSelector>
+      
+      <sliders:SfRangeSelector.Tooltip>
+         <sliders:SliderTooltip TooltipLabelCreated="OnTooltipLabelCreated" />
+      </sliders:SfRangeSelector.Tooltip>
+      
+      <charts:SfCartesianChart>
+            ...
+      </charts:SfCartesianChart>
+   
+   </sliders:SfRangeSelector>
 </ContentPage>
 
 {% endhighlight %}

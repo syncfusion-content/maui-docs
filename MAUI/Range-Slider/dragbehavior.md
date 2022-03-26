@@ -19,15 +19,15 @@ When the [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slid
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider Minimum="0" 
-                           Maximum="100"
-                           RangeStart="25"
-                           RangeEnd="75"
-                           Interval="25" 
-                           ShowTicks="True"
-                           ShowLabels="True"
-                           DragBehavior="OnThumb">
-</rangeslider:SfRangeSlider>
+<sliders:SfRangeSlider Minimum="0" 
+                       Maximum="100"
+                       RangeStart="25"
+                       RangeEnd="75"
+                       Interval="25" 
+                       ShowTicks="True"
+                       ShowLabels="True"
+                       DragBehavior="OnThumb">
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -57,15 +57,15 @@ When the [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slid
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider Minimum="0" 
-                           Maximum="100"
-                           RangeStart="25"
-                           RangeEnd="75"
-                           Interval="25" 
-                           ShowTicks="True"
-                           ShowLabels="True"
-                           DragBehavior="BetweenThumbs">
-</rangeslider:SfRangeSlider>
+<sliders:SfRangeSlider Minimum="0" 
+                       Maximum="100"
+                       RangeStart="25"
+                       RangeEnd="75"
+                       Interval="25" 
+                       ShowTicks="True"
+                       ShowLabels="True"
+                       DragBehavior="BetweenThumbs">
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -95,15 +95,15 @@ When the  [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sli
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider Minimum="0" 
-                           Maximum="100"
-                           RangeStart="25"
-                           RangeEnd="75"
-                           Interval="25" 
-                           ShowTicks="True"
-                           ShowLabels="True"
-                           DragBehavior="Both">
-</rangeslider:SfRangeSlider>
+<sliders:SfRangeSlider Minimum="0" 
+                       Maximum="100"
+                       RangeStart="25"
+                       RangeEnd="75"
+                       Interval="25" 
+                       ShowTicks="True"
+                       ShowLabels="True"
+                       DragBehavior="Both">
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 

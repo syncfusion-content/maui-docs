@@ -9,7 +9,7 @@ documentation: ug
 
 # Tooltip in .NET MAUI Range Selector (SfRangeSelector)
 
-This section helps to learn about how to add tooltip in the range selector.
+This section helps to learn about how to add tooltip in the Range Selector.
 
 ## Enable tooltip
 
@@ -21,14 +21,20 @@ You can enable tooltip for the thumb by setting the [`Tooltip`](https://help.syn
 
 <ContentPage 
              ...
-             xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-    <rangeselector:SfRangeSelector>
-         <rangeselector:SfRangeSelector.Tooltip>
-            <rangeselector:SliderTooltip />
-         </rangeselector:SfRangeSelector.Tooltip>
-      <chart:SfCartesianChart />
-    </rangeselector:SfRangeSelector>
+             xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
+             xmlns:chartS="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
+    
+    <sliders:SfRangeSelector>
+         
+         <sliders:SfRangeSelector.Tooltip>
+            <sliders:SliderTooltip />
+         </sliders:SfRangeSelector.Tooltip>
+     
+     <charts:SfCartesianChart>
+         ...
+     </charts:SfCartesianChart>
+    
+    </sliders:SfRangeSelector>
 </ContentPage>
 
 {% endhighlight %}
@@ -46,7 +52,7 @@ rangeSelector.Content = chart;
 
 ![RangeSelector tooltip](images/tooltip/tooltip.png)
 
-N> Refer [here](https://help.syncfusion.com/maui/range-slider/events) to customize tooltip text format through range selector events.
+N> Refer [here](https://help.syncfusion.com/maui/range-slider/events) to customize tooltip text format through Range Selector events.
 
 ## Tooltip label style
 
@@ -58,16 +64,23 @@ You can change the appearance of the tooltip text like fill, stroke, padding aro
 
 <ContentPage 
              ...
-             xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-    <rangeselector:SfRangeSelector>
-         <rangeselector:SfRangeSelector.Tooltip>
-            <rangeselector:SliderTooltip Fill="#F7B1AE" 
-                                         Stroke="#EE3F3F" 
-                                         StrokeThickness="2" />
-         </rangeselector:SfRangeSelector.Tooltip>
-        <chart:SfCartesianChart />
-    </rangeselector:SfRangeSelector>
+             xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
+             xmlns:chartS="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
+    
+    <sliders:SfRangeSelector>
+         
+         <sliders:SfRangeSelector.Tooltip>
+            <sliders:SliderTooltip Fill="#F7B1AE" 
+                                   Stroke="#EE3F3F" 
+                                   StrokeThickness="2" />
+        
+         </sliders:SfRangeSelector.Tooltip>
+        
+        <charts:SfCartesianChart>
+            ...
+        </charts:SfCartesianChart>
+    
+    </sliders:SfRangeSelector>
 </ContentPage>
 
 {% endhighlight %}

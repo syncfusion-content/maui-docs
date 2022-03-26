@@ -22,15 +22,15 @@ This section explains about how to add the events for range slider.
 
 {% highlight xaml %}
 
- <rangeslider:SfRangeSlider Minimum="2010-01-01" 
-                            Maximum="2020-01-01" 
-                            RangeStart="2012-01-01" 
-                            RangeEnd="2018-01-01" 
-                            ValueChangeStart="OnValueChangeStart" 
-                            ValueChanging="OnValueChanging" 
-                            ValueChanged="OnValueChanged" 
-                            ValueChangeEnd="OnValueChangeEnd">
-</rangeslider:SfRangeSlider>
+ <sliders:SfRangeSlider Minimum="2010-01-01" 
+                        Maximum="2020-01-01" 
+                        RangeStart="2012-01-01" 
+                        RangeEnd="2018-01-01" 
+                        ValueChangeStart="OnValueChangeStart" 
+                        ValueChanging="OnValueChanging" 
+                        ValueChanged="OnValueChanged" 
+                        ValueChangeEnd="OnValueChangeEnd">
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -75,15 +75,15 @@ You can format or change the whole numeric or date label text using the [`LabelC
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider Minimum="0" 
-                           Maximum="10" 
-                           Interval="2" 
-                           RangeStart="2" 
-                           RangeEnd="8"
-                           LabelCreated="OnLabelCreated"   
-                           ShowLabels="True" 
-                           ShowTicks="True">
-</rangeslider:SfRangeSlider>
+<sliders:SfRangeSlider Minimum="0" 
+                       Maximum="10" 
+                       RangeStart="2" 
+                       RangeEnd="8"
+                       Interval="2"   
+                       ShowLabels="True" 
+                       ShowTicks="True" 
+                       LabelCreated="OnLabelCreated">
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -123,11 +123,13 @@ You can format or change the whole tooltip label text using the [`TooltipLabelCr
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider>
-   <rangeslider:SfRangeSlider.Tooltip>
-      <rangeslider:SliderTooltip TooltipLabelCreated="OnTooltipLabelCreated"/>
-   </rangeslider:SfRangeSlider.Tooltip>
-</rangeslider:SfRangeSlider>
+<sliders:SfRangeSlider>
+
+   <sliders:SfRangeSlider.Tooltip>
+      <sliders:SliderTooltip TooltipLabelCreated="OnTooltipLabelCreated"/>
+   </sliders:SfRangeSlider.Tooltip>
+
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 

@@ -19,14 +19,14 @@ The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.S
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider Minimum="0" 
-                           Maximum="10"
-                           RangeStart="2"
-                           RangeEnd="8" 
-                           Interval="2" 
-                           ShowLabels="True"
-                           ShowTicks="True">
-</rangeslider:SfRangeSlider>
+<sliders:SfRangeSlider Minimum="0" 
+                       Maximum="10"
+                       RangeStart="2"
+                       RangeEnd="8" 
+                       Interval="2" 
+                       ShowLabels="True"
+                       ShowTicks="True">
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -55,15 +55,15 @@ The [`NumberFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider Minimum="0" 
-                           Maximum="10"
-                           RangeStart="2"
-                           RangeEnd="8" 
-                           Interval="2" 
-                           NumberFormat="$##" 
-                           ShowLabels="True"
-                           ShowTicks="True">
-</rangeslider:SfRangeSlider>
+<sliders:SfRangeSlider Minimum="0" 
+                       Maximum="10"
+                       RangeStart="2"
+                       RangeEnd="8" 
+                       Interval="2" 
+                       NumberFormat="$#" 
+                       ShowLabels="True"
+                       ShowTicks="True">
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -75,7 +75,7 @@ rangeSlider.Maximum = 10;
 rangeSlider.RangeStart = 2;
 rangeSlider.RangeEnd = 8;
 rangeSlider.Interval = 2;
-rangeSlider.NumberFormat = "$##";
+rangeSlider.NumberFormat = "$#";
 rangeSlider.ShowLabels = true;
 rangeSlider.ShowTicks = true;
 
@@ -93,16 +93,16 @@ The [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.S
 
 {% highlight xaml %}
 
-<rangeslider:SfDateTimeRangeSlider Minimum="2000-01-01T09:00:00" 
-                                   Maximum="2000-01-01T17:00:00" 
-                                   RangeStart="2000-01-01T11:00:00" 
-                                   RangeEnd="2000-01-01T15:00:00" 
-                                   ShowLabels="True"
-                                   IntervalType="Hours" 
-                                   Interval="2" 
-                                   DateFormat="h tt"
-                                   ShowTicks="True">
-</rangeslider:SfDateTimeRangeSlider>
+<sliders:SfDateTimeRangeSlider Minimum="2000-01-01T09:00:00" 
+                               Maximum="2000-01-01T17:00:00" 
+                               RangeStart="2000-01-01T11:00:00" 
+                               RangeEnd="2000-01-01T15:00:00" 
+                               Interval="2"
+                               IntervalType="Hours"
+                               ShowLabels="True"  
+                               DateFormat="h tt"
+                               ShowTicks="True">
+</sliders:SfDateTimeRangeSlider>
 
 {% endhighlight %}
 
@@ -133,15 +133,15 @@ The [`LabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slid
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider Minimum="0" 
-                           Maximum="10"
-                           RangeStart="2"
-                           RangeEnd="8" 
-                           Interval="2" 
-                           LabelsPlacement="BetweenTicks"  
-                           ShowLabels="True" 
-                           ShowTicks="True">
-</rangeslider:SfRangeSlider>
+<sliders:SfRangeSlider Minimum="0" 
+                       Maximum="10"
+                       RangeStart="2"
+                       RangeEnd="8" 
+                       Interval="2" 
+                       LabelsPlacement="BetweenTicks"  
+                       ShowLabels="True" 
+                       ShowTicks="True">
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -177,22 +177,23 @@ The inactive side of the range slider is between the [`Minimum`](https://help.sy
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider Minimum="2" 
-                           Maximum="10" 
-                           Interval="2" 
-                           RangeStart="2" 
-                           RangeEnd="6" 
-                           ShowLabels="True" 
-                           ShowTicks="True">
-<rangeslider:SfRangeSlider.LabelStyle>
-    <rangeslider:SliderLabelStyle ActiveTextColor="#EE3F3F" 
+<sliders:SfRangeSlider Minimum="2" 
+                       Maximum="10" 
+                       Interval="2" 
+                       RangeStart="2" 
+                       RangeEnd="6" 
+                       ShowLabels="True" 
+                       ShowTicks="True">
+
+    <sliders:SfRangeSlider.LabelStyle>
+        <sliders:SliderLabelStyle ActiveTextColor="#EE3F3F" 
                                   InactiveTextColor="#F7B1AE" 
                                   ActiveFontAttributes="Italic" 
                                   InactiveFontAttributes="Italic" 
                                   ActiveFontSize="16" 
                                   InactiveFontSize="16" />
-     </rangeslider:SfRangeSlider.LabelStyle>
-</rangeslider:SfRangeSlider>
+    </sliders:SfRangeSlider.LabelStyle>
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -227,17 +228,19 @@ You can adjust the space between ticks and labels of the range slider using the 
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider Minimum="0"
-                           Maximum="10"
-                           RangeStart="2"
-                           RangeEnd="8"
-                           Interval="2" 
-                           ShowLabels="True" 
-                           ShowTicks="True">
-  <rangeslider:SfRangeSlider.LabelStyle>
-    <rangeslider:SliderLabelStyle Offset="10" />
-  </rangeslider:SfRangeSlider.LabelStyle>
-</rangeslider:SfRangeSlider>
+<sliders:SfRangeSlider Minimum="0"
+                       Maximum="10"
+                       RangeStart="2"
+                       RangeEnd="8"
+                       Interval="2" 
+                       ShowLabels="True" 
+                       ShowTicks="True">
+  
+  <sliders:SfRangeSlider.LabelStyle>
+    <sliders:SliderLabelStyle Offset="10" />
+  </sliders:SfRangeSlider.LabelStyle>
+
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
