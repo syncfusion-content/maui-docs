@@ -41,9 +41,9 @@ chart.Series.Add(series);
 
 ![Doughnut chart type in MAUI Chart](Chart-Types_images/maui_doughnut_chart.png)
 
-## Inner Radius
+## Doughnut Coefficient
 
-The [InnerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DoughnutSeries.html#Syncfusion_Maui_Charts_DoughnutSeries_DoughnutCoefficient) property of doughnut series is used to define the inner circle.
+The [DoughnutCoefficient](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DoughnutSeries.html#Syncfusion_Maui_Charts_DoughnutSeries_DoughnutCoefficient) property of doughnut series is used to define the inner circle.
 
 {% tabs %}
 

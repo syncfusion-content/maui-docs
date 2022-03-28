@@ -43,7 +43,7 @@ chart.Series.Add(series);
 
 ## Circular Coefficient
 
-The rendering size of the [PieSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PieSeries.html) can be controlled using the [Radius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CircularSeries.html#Syncfusion_Maui_Charts_CircularSeries_CircularCoefficient) property as shown in the following code sample.
+The rendering size of the [PieSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PieSeries.html) can be controlled using the [CircularCoefficient](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CircularSeries.html#Syncfusion_Maui_Charts_CircularSeries_CircularCoefficient) property as shown in the following code sample.
 
 {% tabs %}
 

@@ -280,7 +280,7 @@ chart.Legend = new ChartLegend();
 
 ## Enable Tooltip
 
-Tooltips are used to show information about the segment, when mouse over on it. Enable tooltip by setting series [EnableTooltip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_ShowTooltip) property as true.
+Tooltips are used to show information about the segment, when mouse over on it. Enable tooltip by setting series [ShowTooltip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_ShowTooltip) property as true.
 
 {% tabs %} 
 
