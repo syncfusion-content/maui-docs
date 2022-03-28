@@ -590,6 +590,54 @@ N>
 * [View scheduler appointment sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/GettingStarted)
 * [View business object sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/BusinessObject)
 
+## Customize more appointments indicator appearance in all day panel
+
+You can customize the default appearance of more appointments indicator in an all-day panel by using the `MoreAppointmentsTemplate` property of `DaysView` in the `SfScheduler.`
+
+{% tabs %}
+{% highlight xaml %}
+
+  <scheduler:SfScheduler x:Name="Scheduler" View="Week">
+        <scheduler:SfScheduler.DaysView>
+            <scheduler:SchedulerDaysView>
+                <scheduler:SchedulerDaysView.MoreAppointmentsTemplate>
+                    <DataTemplate>
+                        <StackLayout Background="#EAEAEA" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                            <Label Text="{Binding}" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
+                            </Label>
+                        </StackLayout>
+                    </DataTemplate>
+                </scheduler:SchedulerDaysView.MoreAppointmentsTemplate>
+            </scheduler:SchedulerDaysView>
+        </scheduler:SfScheduler.DaysView>
+   </scheduler:SfScheduler>
+   
+{% endhighlight %}
+{% highlight c# %}
+
+this.Scheduler.View = SchedulerView.Week;
+// Creating an instance for the scheduler appointment collection.
+var appointments = new ObservableCollection<SchedulerAppointment>();
+for (int i = 1; i <= 5; i++)
+{
+    //Adding scheduler appointment in the scheduler appointment collection. 
+    appointments.Add(new SchedulerAppointment()
+    {
+        StartTime = DateTime.Today.AddHours(9),
+        EndTime = DateTime.Today.AddHours(11),
+        Subject = "Client Meeting",
+        Location = "Hutchison road",
+        Background = Brush.Orange,
+        IsAllDay = true
+    });
+}
+
+//Adding the scheduler appointment collection to the AppointmentsSource of .NET MAUI Scheduler.
+this.Scheduler.AppointmentsSource = appointments;
+
+{% endhighlight %}
+{% endtabs %}
+
 ## View header text formatting
 
 The date and day format of SfScheduler ViewHeader can be customized by using the `DateFormat` and `DayFormat` properties of `DaysView.`
