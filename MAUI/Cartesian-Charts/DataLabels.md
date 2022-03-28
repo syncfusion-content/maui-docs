@@ -63,7 +63,7 @@ Data labels can be customized by using the [DataLabelSettings](https://help.sync
 
 ![Data label in MAUI chart](DataLabel_images/maui_chart_data_label.jpg) 
 
-## Alignment
+## Data Label Alignment
 
 The alignment of data labels inside the series is defined by using the [BarAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CartesianDataLabelSettings.html#Syncfusion_Maui_Charts_CartesianDataLabelSettings_BarAlignment) property. 
 
