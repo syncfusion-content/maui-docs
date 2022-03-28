@@ -916,5 +916,5 @@ this.FlowDirection = FlowDirection.RightToLeft;
 
 ## See also 
 
-[How to change selected image in .NET MAUI ListView (SfListView)](https://www.syncfusion.com/kb/13080/)
+[How to change selected image in .NET MAUI ListView (SfListView)](https://www.syncfusion.com/kb/13080/)																	
 [How to apply alternate item background in .NET MAUI ListView (SfListView)](https://www.syncfusion.com/kb/13079/)
