@@ -9,7 +9,7 @@ documentation: ug
 
 # Thumb DragBehavior in .NET MAUI Range Selector (SfRangeSelector)
 
-This section helps to learn about thumb drag behavior in the range selector.
+This section helps to learn about thumb drag behavior in the Range Selector.
 
 ## OnThumb
 
@@ -21,18 +21,23 @@ When the [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slid
 
 <ContentPage 
              ...
-             xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-    <rangeselector:SfRangeSelector Minimum="0" 
-                                   Maximum="100"
-                                   RangeStart="25"
-                                   RangeEnd="75"
-                                   Interval="25" 
-                                   ShowTicks="True"
-                                   ShowLabels="True"
-                                   DragBehavior="OnThumb">
-        <chart:SfCartesianChart />
-    </rangeselector:SfRangeSelector>
+             xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
+             xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
+
+    <sliders:SfRangeSelector Minimum="0" 
+                             Maximum="100"
+                             RangeStart="25"
+                             RangeEnd="75"
+                             Interval="25" 
+                             ShowTicks="True"
+                             ShowLabels="True"
+                             DragBehavior="OnThumb">
+        
+        <charts:SfCartesianChart>
+            ...
+        </charts:SfCartesianChart>
+
+    </sliders:SfRangeSelector>
 </ContentPage>
 
 {% endhighlight %}
@@ -59,7 +64,7 @@ rangeSelector.Content = chart;
 
 ## BetweenThumbs
 
-When the [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSlider.html?tabs=tabid-1#Syncfusion_Maui_Sliders_SfRangeSlider_DragBehavior) is set to [BetweenThumbs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDragBehavior.html#Syncfusion_Maui_Sliders_SliderDragBehavior_BetweenThumbs), both the thumbs can be moved at same time without changing the range between the start and end thumbs. We had considered this behavior without the range selector thumb radius. Its not possible to move the individual thumb when setting this behavior.
+When the [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSlider.html?tabs=tabid-1#Syncfusion_Maui_Sliders_SfRangeSlider_DragBehavior) is set to [BetweenThumbs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDragBehavior.html#Syncfusion_Maui_Sliders_SliderDragBehavior_BetweenThumbs), both the thumbs can be moved at same time without changing the range between the start and end thumbs. We had considered this behavior without the Range Selector thumb radius. Its not possible to move the individual thumb when setting this behavior.
 
 {% tabs %}
 
@@ -67,18 +72,23 @@ When the [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slid
 
 <ContentPage 
              ...
-             xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-    <rangeselector:SfRangeSelector Minimum="0" 
-                                   Maximum="100"
-                                   RangeStart="25"
-                                   RangeEnd="75"
-                                   Interval="25" 
-                                   ShowTicks="True"
-                                   ShowLabels="True"
-                                   DragBehavior="BetweenThumbs">
-        <chart:SfCartesianChart />
-    </rangeselector:SfRangeSelector>
+             xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
+             xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
+
+    <sliders:SfRangeSelector Minimum="0" 
+                             Maximum="100"
+                             RangeStart="25"
+                             RangeEnd="75"
+                             Interval="25" 
+                             ShowTicks="True"
+                             ShowLabels="True"
+                             DragBehavior="BetweenThumbs">
+
+        <charts:SfCartesianChart>
+            ...
+        </charts:SfCartesianChart>
+
+    </sliders:SfRangeSelector>
 </ContentPage>
 
 {% endhighlight %}
@@ -113,18 +123,23 @@ When the  [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sli
 
 <ContentPage 
              ...
-             xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-    <rangeselector:SfRangeSelector Minimum="0" 
-                                   Maximum="100"
-                                   RangeStart="25"
-                                   RangeEnd="75"
-                                   Interval="25" 
-                                   ShowTicks="True"
-                                   ShowLabels="True"
-                                   DragBehavior="Both">
-        <chart:SfCartesianChart />
-    </rangeselector:SfRangeSelector>
+             xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
+             xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
+
+    <sliders:SfRangeSelector Minimum="0" 
+                             Maximum="100"
+                             RangeStart="25"
+                             RangeEnd="75"
+                             Interval="25" 
+                             ShowTicks="True"
+                             ShowLabels="True"
+                             DragBehavior="Both">
+
+        <charts:SfCartesianChart>
+            ...
+        </charts:SfCartesianChart>
+
+    </sliders:SfRangeSelector>
 </ContentPage>
 
 {% endhighlight %}

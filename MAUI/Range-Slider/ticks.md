@@ -23,7 +23,7 @@ For example, if [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider ShowTicks="True" />
+<sliders:SfRangeSlider ShowTicks="True" />
 
 {% endhighlight %}
 
@@ -44,9 +44,9 @@ rangeSlider.ShowTicks = true;
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider Interval="0.2"  
-                           ShowTicks="True">
-</rangeslider:SfRangeSlider>
+<sliders:SfRangeSlider Interval="0.2"  
+                       ShowTicks="True">
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -72,9 +72,9 @@ It is used to represent the number of smaller ticks between two major ticks. For
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider MinorTicksPerInterval="3" 
-                           ShowTicks="True">
-</rangeslider:SfRangeSlider>
+<sliders:SfRangeSlider MinorTicksPerInterval="3" 
+                       ShowTicks="True">
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -95,10 +95,10 @@ rangeSlider.ShowTicks = true;
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider Interval="0.2" 
-                           MinorTicksPerInterval="1" 
-                           ShowTicks="True">
-</rangeslider:SfRangeSlider>
+<sliders:SfRangeSlider Interval="0.2" 
+                       MinorTicksPerInterval="1" 
+                       ShowTicks="True">
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -127,13 +127,15 @@ The inactive side of the range slider is between the [`Minimum`](https://help.sy
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider Interval="0.2" 
-                           ShowTicks="True">
-    <rangeslider:SfRangeSlider.MajorTickStyle>
-         <rangeslider:SliderTickStyle ActiveFill="#EE3F3F" 
-                                      InactiveFill="#F7B1AE" />
-    </rangeslider:SfRangeSlider.MajorTickStyle>
-</rangeslider:SfRangeSlider>
+<sliders:SfRangeSlider Interval="0.2" 
+                       ShowTicks="True">
+    
+    <sliders:SfRangeSlider.MajorTickStyle>
+         <sliders:SliderTickStyle ActiveFill="#EE3F3F" 
+                                  InactiveFill="#F7B1AE" />
+    </sliders:SfRangeSlider.MajorTickStyle>
+
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -163,14 +165,16 @@ The inactive side of the range slider is between the [`Minimum`](https://help.sy
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider Interval="0.2" 
-                           ShowTicks="True" 
-                           MinorTicksPerInterval="1">
-    <rangeslider:SfRangeSlider.MinorTickStyle>
-         <rangeslider:SliderTickStyle ActiveFill="#EE3F3F" 
-                                      InactiveFill="#F7B1AE" />
-     </rangeslider:SfRangeSlider.MinorTickStyle>
-</rangeslider:SfRangeSlider>
+<sliders:SfRangeSlider Interval="0.2" 
+                       ShowTicks="True" 
+                       MinorTicksPerInterval="1">
+    
+    <sliders:SfRangeSlider.MinorTickStyle>
+         <sliders:SliderTickStyle ActiveFill="#EE3F3F" 
+                                  InactiveFill="#F7B1AE" />
+     </sliders:SfRangeSlider.MinorTickStyle>
+
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -197,16 +201,19 @@ You can change the major and minor ticks size of the range slider using the [`Ac
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider Interval="0.2" 
-                           ShowTicks="True" 
-                           MinorTicksPerInterval="1">
-    <rangeslider:SfRangeSlider.MinorTickStyle>
-       <rangeslider:SliderTickStyle ActiveSize="2,10" InactiveSize="2, 10" />
-    </rangeslider:SfRangeSlider.MinorTickStyle>
-    <rangeslider:SfRangeSlider.MajorTickStyle>
-        <rangeslider:SliderTickStyle ActiveSize="2,15" InactiveSize="2, 15" />
-    </rangeslider:SfRangeSlider.MajorTickStyle>
-</rangeslider:SfRangeSlider>
+<sliders:SfRangeSlider Interval="0.2" 
+                       ShowTicks="True" 
+                       MinorTicksPerInterval="1">
+    
+    <sliders:SfRangeSlider.MinorTickStyle>
+       <sliders:SliderTickStyle ActiveSize="2,10" InactiveSize="2, 10" />
+    </sliders:SfRangeSlider.MinorTickStyle>
+    
+    <sliders:SfRangeSlider.MajorTickStyle>
+        <sliders:SliderTickStyle ActiveSize="2,15" InactiveSize="2, 15" />
+    </sliders:SfRangeSlider.MajorTickStyle>
+
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -235,16 +242,18 @@ You can adjust the space between track and ticks of the range slider using the [
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider Interval="0.2"
-                           ShowTicks="True" 
-                           MinorTicksPerInterval="1">
-   <rangeslider:SfRangeSlider.MinorTickStyle>
-       <rangeslider:SliderTickStyle Offset="5" />
-    </rangeslider:SfRangeSlider.MinorTickStyle>
-    <rangeslider:SfRangeSlider.MajorTickStyle>
-       <rangeslider:SliderTickStyle Offset="5" />
-    </rangeslider:SfRangeSlider.MajorTickStyle>
-</rangeslider:SfRangeSlider>
+<sliders:SfRangeSlider Interval="0.2"
+                       ShowTicks="True" 
+                       MinorTicksPerInterval="1">
+   
+    <sliders:SfRangeSlider.MinorTickStyle>
+       <sliders:SliderTickStyle Offset="5" />
+    </sliders:SfRangeSlider.MinorTickStyle>
+   
+    <sliders:SfRangeSlider.MajorTickStyle>
+       <sliders:SliderTickStyle Offset="5" />
+    </sliders:SfRangeSlider.MajorTickStyle>
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 

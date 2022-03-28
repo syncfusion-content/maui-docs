@@ -9,7 +9,7 @@ documentation: ug
 
 # Labels in .NET MAUI Range Selector (SfRangeSelector)
 
-This section explains about how to add the labels in the range selector.
+This section explains about how to add the labels in the Range Selector.
 
 ## Show labels
 
@@ -21,17 +21,22 @@ The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.S
 
 <ContentPage 
              ...
-             xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-    <rangeselector:SfRangeSelector Minimum="0" 
-                                   Maximum="10"
-                                   RangeStart="2"
-                                   RangeEnd="8" 
-                                   Interval="2" 
-                                   ShowLabels="True"
-                                   ShowTicks="True">
-        <chart:SfCartesianChart />
-    </rangeselector:SfRangeSelector>
+             xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
+             xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
+
+    <sliders:SfRangeSelector Minimum="0" 
+                             Maximum="10"
+                             RangeStart="2"
+                             RangeEnd="8" 
+                             Interval="2" 
+                             ShowLabels="True"
+                             ShowTicks="True">
+
+        <charts:SfCartesianChart>
+            ...
+        </charts:SfCartesianChart>
+
+    </sliders:SfRangeSelector>
 </ContentPage>
 
 {% endhighlight %}
@@ -65,18 +70,23 @@ The [`NumberFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders
 
 <ContentPage 
              ...
-             xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-    <rangeselector:SfRangeSelector Minimum="0" 
-                                   Maximum="10"
-                                   RangeStart="2"
-                                   RangeEnd="8" 
-                                   Interval="2"
-                                   NumberFormat="$##" 
-                                   ShowLabels="True"
-                                   ShowTicks="True">
-        <chart:SfCartesianChart />
-    </rangeselector:SfRangeSelector>
+             xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
+             xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
+
+    <sliders:SfRangeSelector Minimum="0" 
+                             Maximum="10"
+                             RangeStart="2"
+                             RangeEnd="8" 
+                             Interval="2"
+                             NumberFormat="$#" 
+                             ShowLabels="True"
+                             ShowTicks="True">
+
+        <charts:SfCartesianChart>
+            ...
+        </charts:SfCartesianChart>
+    
+    </sliders:SfRangeSelector>
 </ContentPage>
 
 {% endhighlight %}
@@ -111,20 +121,25 @@ The [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.S
 
 <ContentPage 
              ...
-             xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-    <rangeselector:SfDateTimeRangeSelector Minimum="2000-01-01T09:00:00" 
-                                           Maximum="2000-01-01T17:00:00" 
-                                           RangeStart="2000-01-01T11:00:00" 
-                                           RangeEnd="2000-01-01T15:00:00" 
-                                           ShowLabels="True" 
-                                           ShowTicks="True" 
-                                           IntervalType="Hours" 
-                                           Interval="2" 
-                                           DateFormat="h tt"
-                                           ShowTicks="True">
-        <chart:SfCartesianChart />
-    </rangeselector:SfDateTimeRangeSelector>
+             xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
+             xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
+
+    <sliders:SfDateTimeRangeSelector Minimum="2000-01-01T09:00:00" 
+                                     Maximum="2000-01-01T17:00:00" 
+                                     RangeStart="2000-01-01T11:00:00" 
+                                     RangeEnd="2000-01-01T15:00:00" 
+                                     ShowLabels="True" 
+                                     ShowTicks="True" 
+                                     IntervalType="Hours" 
+                                     Interval="2" 
+                                     DateFormat="h tt"
+                                     ShowTicks="True">
+
+        <charts:SfCartesianChart>
+            ...
+        </charts:SfCartesianChart>
+
+    </sliders:SfDateTimeRangeSelector>
 </ContentPage>
 
 {% endhighlight %}
@@ -160,18 +175,23 @@ The [`LabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slid
 
 <ContentPage 
              ...
-             xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-    <rangeselector:SfRangeSelector Minimum="0" 
-                                   Maximum="10" 
-                                   Interval="2"
-                                   RangeStart="2"
-                                   RangeEnd="8" 
-                                   LabelsPlacement="BetweenTicks"  
-                                   ShowLabels="True" 
-                                   ShowTicks="True">
-        <chart:SfCartesianChart />
-    </rangeselector:SfRangeSelector>
+             xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
+             xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
+
+    <sliders:SfRangeSelector Minimum="0" 
+                             Maximum="10" 
+                             Interval="2"
+                             RangeStart="2"
+                             RangeEnd="8" 
+                             LabelsPlacement="BetweenTicks"  
+                             ShowLabels="True" 
+                             ShowTicks="True">
+
+        <charts:SfCartesianChart>
+            ...
+        </charts:SfCartesianChart>
+
+    </sliders:SfRangeSelector>
 </ContentPage>
 
 {% endhighlight %}
@@ -200,11 +220,11 @@ N> Refer [here](https://help.syncfusion.com/maui/range-slider/events) to customi
 
 ## Label style
 
-You can change the active and inactive label appearance of the range selector using the [`ActiveTextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_ActiveTextColor), [`ActiveFontSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_ActiveFontSize), [`ActiveFontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_ActiveFontFamily), [`ActiveFontAttributes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_ActiveFontAttributes), [`InactiveTextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_InactiveTextColor), [`InactiveFontSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_InactiveFontSize), [`InactiveFontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_InactiveFontFamily), [`InactiveFontAttributes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_InactiveFontAttributes) and [`Offset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_Offset)  properties of the [`LabelStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html) class.
+You can change the active and inactive label appearance of the Range Selector using the [`ActiveTextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_ActiveTextColor), [`ActiveFontSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_ActiveFontSize), [`ActiveFontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_ActiveFontFamily), [`ActiveFontAttributes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_ActiveFontAttributes), [`InactiveTextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_InactiveTextColor), [`InactiveFontSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_InactiveFontSize), [`InactiveFontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_InactiveFontFamily), [`InactiveFontAttributes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_InactiveFontAttributes) and [`Offset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_Offset)  properties of the [`LabelStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html) class.
 
-The active side of the range selector is between start and end thumbs.
+The active side of the Range Selector is between start and end thumbs.
 
-The inactive side of the range selector is between the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Minimum) value and the left thumb, and the right thumb and the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Maximum) value.
+The inactive side of the Range Selector is between the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Minimum) value and the left thumb, and the right thumb and the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Maximum) value.
 
 {% tabs %}
 
@@ -212,25 +232,31 @@ The inactive side of the range selector is between the [`Minimum`](https://help.
 
 <ContentPage 
              ...
-             xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-    <rangeselector:SfRangeSelector Minimum="2" 
-                                   Maximum="10" 
-                                   Interval="2" 
-                                   RangeStart="2" 
-                                   RangeEnd="6" 
-                                   ShowLabels="True" 
-                                   ShowTicks="True">
-        <rangeselector:SfRangeSelector.LabelStyle>
-            <rangeselector:SliderLabelStyle ActiveTextColor="#EE3F3F" 
-                                            InactiveTextColor="#F7B1AE" 
-                                            ActiveFontAttributes="Italic" 
-                                            InactiveFontAttributes="Italic" 
-                                            ActiveFontSize="16" 
-                                            InactiveFontSize="16" />
-            </rangeselector:SfRangeSelector.LabelStyle>
-        <chart:SfCartesianChart />
-    </rangeselector:SfRangeSelector>
+             xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
+             xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
+
+    <sliders:SfRangeSelector Minimum="2" 
+                             Maximum="10" 
+                             RangeStart="2" 
+                             RangeEnd="6"
+                             Interval="2"  
+                             ShowLabels="True" 
+                             ShowTicks="True">
+
+        <sliders:SfRangeSelector.LabelStyle>
+            <sliders:SliderLabelStyle ActiveTextColor="#EE3F3F" 
+                                      InactiveTextColor="#F7B1AE" 
+                                      ActiveFontAttributes="Italic" 
+                                      InactiveFontAttributes="Italic" 
+                                      ActiveFontSize="16" 
+                                      InactiveFontSize="16" />
+            </sliders:SfRangeSelector.LabelStyle>
+
+        <charts:SfCartesianChart>
+            ...
+        </charts:SfCartesianChart>
+
+    </sliders:SfRangeSelector>
 </ContentPage>
 
 {% endhighlight %}
@@ -262,7 +288,7 @@ rangeSelector.Content = chart;
 
 ## Label offset
 
-You can adjust the space between ticks and labels of the range selector using the [`Offset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_OffsetProperty) property. The default value of the [`Offset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_Offset) property is 5.0 when [`ShowTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ShowTicks) enabled, otherwise it is `15.0` by default.
+You can adjust the space between ticks and labels of the Range Selector using the [`Offset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_OffsetProperty) property. The default value of the [`Offset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_Offset) property is 5.0 when [`ShowTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ShowTicks) enabled, otherwise it is `15.0` by default.
 
 {% tabs %}
 
@@ -270,20 +296,26 @@ You can adjust the space between ticks and labels of the range selector using th
 
 <ContentPage 
              ...
-             xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-    <rangeselector:SfRangeSelector Minimum="0"
-                                   Maximum="10"
-                                   Interval="2"
-                                   RangeStart="2"
-                                   RangeEnd="8" 
-                                   ShowLabels="True" 
-                                   ShowTicks="True">
-        <rangeselector:SfRangeSelector.LabelStyle>
-            <rangeselector:SliderLabelStyle Offset="10" />
-        </rangeselector:SfRangeSelector.LabelStyle>
-        <chart:SfCartesianChart />
-    </rangeselector:SfRangeSelector>
+             xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
+             xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
+    
+    <sliders:SfRangeSelector Minimum="0"
+                             Maximum="10"
+                             RangeStart="2"
+                             RangeEnd="8"
+                             Interval="2" 
+                             ShowLabels="True" 
+                             ShowTicks="True">
+        
+        <sliders:SfRangeSelector.LabelStyle>
+            <sliders:SliderLabelStyle Offset="10" />
+        </sliders:SfRangeSelector.LabelStyle>
+        
+        <charts:SfCartesianChart>
+            ...
+        </charts:SfCartesianChart>
+    
+    </sliders:SfRangeSelector>
 </ContentPage>
 
 {% endhighlight %}

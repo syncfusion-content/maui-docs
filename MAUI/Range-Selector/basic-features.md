@@ -9,7 +9,7 @@ documentation: ug
 
 # Basic features  in .NET MAUI Range Selector (SfRangeSelector)
 
-This section explains about how to add the numeric and date range selector.
+This section explains about how to add the numeric and date Range Selector.
 
 ## Minimum
 
@@ -17,17 +17,17 @@ The minimum value that the user can select. The default value of [`Minimum`](htt
 
 ## Maximum
 
-The maximum value that the user can select. The default value of [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Maximum) property is 1.5 and it must be greater than the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Minimum) value.
+The maximum value that the user can select. The default value of [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Maximum) property is 1.0 and it must be greater than the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Minimum) value.
 
 ## Range values
 
-It represents the values currently selected in the range slider. The range slider’s thumb is drawn corresponding to this [`RangeStart`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSlider.html#Syncfusion_Maui_Sliders_SfRangeSlider_RangeStart) and [`RangeEnd`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSlider.html#Syncfusion_Maui_Sliders_SfRangeSlider_RangeEnd) values.
+It represents the values currently selected in the Range Selector. The Range Selector’s thumb is drawn corresponding to this [`RangeStart`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSlider.html#Syncfusion_Maui_Sliders_SfRangeSlider_RangeStart) and [`RangeEnd`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSlider.html#Syncfusion_Maui_Sliders_SfRangeSlider_RangeEnd) values.
 
-For date values, the range selector does not have auto interval support. So, it is mandatory to set [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html?tabs=tabid-1#Syncfusion_Maui_Sliders_SliderBase_Interval), [`IntervalType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DateIntervalType), and [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DateFormat) for date values.
+For date values, the Range Selector does not have auto interval support. So, it is mandatory to set [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html?tabs=tabid-1#Syncfusion_Maui_Sliders_SliderBase_Interval), [`IntervalType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DateIntervalType), and [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DateFormat) for date values.
 
 ## Numeric Range Selector
 
-You can show numeric values in the range selector by setting double values to the Minimum, Maximum, RangeStart, and RangeEnd properties.
+You can show numeric values in the Range Selector by setting double values to the Minimum, Maximum, RangeStart, and RangeEnd properties.
 
 {% tabs %}
 
@@ -35,15 +35,20 @@ You can show numeric values in the range selector by setting double values to th
 
 <ContentPage 
              ...
-             xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-    <rangeselector:SfRangeSelector Minimum="10"
-                                   Maximum="20"
-                                   RangeStart="13"
-                                   RangeEnd="17"
-                                   ShowLabels="True">
-        <chart:SfCartesianChart />
-    </rangeselector:SfRangeSelector>
+             xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
+             xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
+
+    <sliders:SfRangeSelector Minimum="10"
+                             Maximum="20"
+                             RangeStart="13"
+                             RangeEnd="17"
+                             ShowLabels="True">
+
+        <charts:SfCartesianChart>
+            ...
+        </charts:SfCartesianChart>
+
+    </sliders:SfRangeSelector>
 </ContentPage>
  
 {% endhighlight %}
@@ -67,7 +72,7 @@ rangeSelector.Content = chart;
 
 ## Date Range Selector
 
-You can show date values in the range selector by setting double values to the Minimum, Maximum, RangeStart, and RangeEnd properties.
+You can show date values in the Range Selector by setting double values to the Minimum, Maximum, RangeStart, and RangeEnd properties.
 
 {% tabs %}
 
@@ -75,15 +80,20 @@ You can show date values in the range selector by setting double values to the M
 
 <ContentPage 
              ...
-             xmlns:rangeselector="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-    <rangeselector:SfDateTimeRangeSelector Minimum="2010-01-01" 
-                                           Maximum="2020-01-01" 
-                                           RangeStart="2012-01-01" 
-                                           RangeEnd="2018-01-01" 
-                                           ShowLabels="True">
-        <chart:SfCartesianChart />
-    </rangeselector:SfDateTimeRangeSelector>
+             xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
+             xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
+
+    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
+                                     Maximum="2020-01-01" 
+                                     RangeStart="2012-01-01" 
+                                     RangeEnd="2018-01-01" 
+                                     ShowLabels="True">
+        
+        <charts:SfCartesianChart>
+            ...
+        </charts:SfCartesianChart>
+    
+    </sliders:SfDateTimeRangeSelector>
 </ContentPage>
  
 {% endhighlight %}

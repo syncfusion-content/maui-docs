@@ -19,11 +19,13 @@ You can enable tooltip for the thumb by setting the [`ToolTipShape`](https://hel
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider>
-   <rangeslider:SfRangeSlider.Tooltip>
-      <rangeslider:SliderTooltip />
-   </rangeslider:SfRangeSlider.Tooltip>
-</rangeslider:SfRangeSlider>
+<sliders:SfRangeSlider>
+   
+   <sliders:SfRangeSlider.Tooltip>
+      <sliders:SliderTooltip />
+   </sliders:SfRangeSlider.Tooltip>
+
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -48,13 +50,15 @@ You can change the appearance of the tooltip text like fill, stroke, padding aro
 
 {% highlight xaml %}
 
- <rangeslider:SfRangeSlider>
-    <rangeslider:SfRangeSlider.Tooltip>
-       <rangeslider:SliderTooltip Fill="#F7B1AE" 
-                                  Stroke="#EE3F3F" 
-                                  StrokeThickness="2" />
-    </rangeslider:SfRangeSlider.Tooltip>
- </rangeslider:SfRangeSlider>
+ <sliders:SfRangeSlider>
+    
+    <sliders:SfRangeSlider.Tooltip>
+       <sliders:SliderTooltip Fill="#F7B1AE" 
+                              Stroke="#EE3F3F" 
+                              StrokeThickness="2" />
+    </sliders:SfRangeSlider.Tooltip>
+ 
+ </sliders:SfRangeSlider>
 
 {% endhighlight %}
 
