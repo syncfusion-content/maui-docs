@@ -872,7 +872,7 @@ You can customize the appointment appearance by using the `AppointmentTemplate` 
  <Grid>
     <Grid.Resources>
         <DataTemplate x:Key="appointmentTemplate">
-            <Grid Background="BlueViolet">
+            <Grid Background="MediumPurple">
                 <Label Text="{Binding Subject}" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" FontFamily="Bold"/>
             </Grid>
         </DataTemplate>
@@ -929,7 +929,7 @@ You can customize the appointment appearance by using the `AppointmentTemplate` 
             </Grid>
         </DataTemplate>
         <DataTemplate x:Key="todayDateTemplate">
-            <Grid Background="BlueViolet">
+            <Grid Background="MediumPurple">
                 <Label x:Name="label" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White" FontSize="12"  Text="{Binding Subject}" />
             </Grid>
         </DataTemplate>
