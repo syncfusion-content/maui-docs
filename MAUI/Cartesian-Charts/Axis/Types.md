@@ -409,11 +409,12 @@ By default, all the series are plotted based on primary and secondary axis.
 <chart:SfCartesianChart>
     . . .
 	<chart:SfCartesianChart.XAxes>
-                    <chart:DateTimeAxis ShowMajorGridLines="False" />
-                </chart:SfCartesianChart.XAxes>
-                <chart:SfCartesianChart.YAxes>
-					<chart:NumericalAxis ShowMajorGridLines="False" />
-                    <chart:NumericalAxis Name="series_YAxis" CrossesAt="{Static x:Double.MaxValue}" ShowMajorGridLines="False" />
+		<chart:DateTimeAxis ShowMajorGridLines="False" />
+	</chart:SfCartesianChart.XAxes>
+	<chart:SfCartesianChart.YAxes>
+		<chart:NumericalAxis ShowMajorGridLines="False" />
+		<chart:NumericalAxis Name="series_YAxis" CrossesAt="{Static x:Double.MaxValue}" ShowMajorGridLines="False" />
+	</chart:SfCartesianChart.YAxes>
     <chart:SfCartesianChart.Series>
         <chart:SfCartesianChart.Series>
             <chart:ColumnSeries ItemsSource="{Binding Data1}" 
