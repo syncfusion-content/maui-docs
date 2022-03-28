@@ -640,7 +640,7 @@ this.Scheduler.AppointmentsSource = appointments;
 
 ## Customize the appearance of all-day appointments in the all-day panel
 
-You can customize the appointment appearance by using the `AppointmentTemplate` properties of `DaysView` in the `SfScheduler.`
+You can customize the all-day appointment appearance by using the `AllDayAppointmentTemplate` property of `DaysView` in the `SfScheduler.`
 
 {% tabs %}
 {% highlight xaml %}
