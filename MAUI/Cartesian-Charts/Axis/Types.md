@@ -409,7 +409,7 @@ By default, all the series are plotted based on primary and secondary axis.
 <chart:SfCartesianChart>
     . . .
 	<chart:SfCartesianChart.XAxes>
-                    <chart:DateTimeAxis Name="series_XAxis" ShowMajorGridLines="False" />
+                    <chart:DateTimeAxis ShowMajorGridLines="False" />
                 </chart:SfCartesianChart.XAxes>
                 <chart:SfCartesianChart.YAxes>
 					<chart:NumericalAxis ShowMajorGridLines="False" />
@@ -419,7 +419,6 @@ By default, all the series are plotted based on primary and secondary axis.
             <chart:ColumnSeries ItemsSource="{Binding Data1}" 
                     XBindingPath="Date"
                     YBindingPath="Value"
-					XAxisName ="series_XAxis"
 					YAxisName="series_YAxis">
             </chart:ColumnSeries>
             <chart:SplineSeries ItemsSource="{Binding Data}" 
@@ -455,9 +454,7 @@ DateTimeAxis primaryAxis = new DateTimeAxis()
 {
     ShowMajorGridLines = false
 };
-primaryAxis.Name = "series_XAxis";
 chart.XAxes.Add(primaryAxis);
-series1.XAxisName = "series_YAxis";
 
 NumericalAxis secondaryAxis = new NumericalAxis()
 {
