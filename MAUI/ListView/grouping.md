@@ -1246,3 +1246,7 @@ internal void InsertItemInGroup(List<object> items, object Item, int InsertAt)
 The following screenshot shows the output when an item is added at the specified index.
 
 ![MAUI ListView add an item at the specific index in a group](Images/grouping/maui-listview-add-an-item-at-the-specific-index.jpg)
+
+## See also 
+
+[How to create a grouped ListView in .NET MAUI (SfListView)](https://www.syncfusion.com/kb/13069/)
