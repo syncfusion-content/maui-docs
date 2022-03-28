@@ -590,7 +590,54 @@ N>
 * [View scheduler appointment sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/GettingStarted)
 * [View business object sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/BusinessObject)
 
-## Customize the appearance of more appointments indicator in the all-day panel
+## Customize the appearance of all-day appointments using DataTemplate in the all-day panel
+
+You can customize the all-day appointment appearance by using the `AllDayAppointmentTemplate` property of `DaysView` in the `SfScheduler.`
+
+{% tabs %}
+{% highlight xaml %}
+
+ <scheduler:SfScheduler x:Name="Scheduler" View="Week">
+    <scheduler:SfScheduler.DaysView>
+        <scheduler:SchedulerDaysView>
+            <scheduler:SchedulerDaysView.AllDayAppointmentTemplate>
+                <DataTemplate>
+                    <Grid Background="MediumPurple">
+                        <Label Text="{Binding Subject}" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" FontSize="12" FontFamily="Bold"/>
+                    </Grid>
+                </DataTemplate>
+            </scheduler:SchedulerDaysView.AllDayAppointmentTemplate>
+        </scheduler:SchedulerDaysView>
+    </scheduler:SfScheduler.DaysView>
+ </scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight c# %}
+
+this.Scheduler.View = SchedulerView.Week;
+// Creating an instance for the scheduler appointment collection.
+var appointments = new ObservableCollection<SchedulerAppointment>();
+
+for (int i = 1; i <= 5; i++)
+{
+    //Adding scheduler appointment in the scheduler appointment collection. 
+    appointments.Add(new SchedulerAppointment()
+    {
+        StartTime = DateTime.Today.AddHours(9),
+        EndTime = DateTime.Today.AddHours(11),
+        Subject = "Client Meeting",
+        Location = "Hutchison road",
+        IsAllDay = true
+    });
+}
+
+//Adding the scheduler appointment collection to the AppointmentsSource of .NET MAUI Scheduler.
+this.Scheduler.AppointmentsSource = appointments;
+
+{% endhighlight %}
+{% endtabs %}
+
+## Customize the appearance of more appointments indicator using DataTemplate in the all-day panel
 
 You can customize the default appearance of more appointments indicator in an all-day panel by using the `MoreAppointmentsTemplate` property of `DaysView` in the `SfScheduler.`
 
@@ -628,53 +675,6 @@ for (int i = 1; i <= 5; i++)
         Subject = "Client Meeting",
         Location = "Hutchison road",
         Background = Brush.Orange,
-        IsAllDay = true
-    });
-}
-
-//Adding the scheduler appointment collection to the AppointmentsSource of .NET MAUI Scheduler.
-this.Scheduler.AppointmentsSource = appointments;
-
-{% endhighlight %}
-{% endtabs %}
-
-## Customize the appearance of all-day appointments in the all-day panel
-
-You can customize the all-day appointment appearance by using the `AllDayAppointmentTemplate` property of `DaysView` in the `SfScheduler.`
-
-{% tabs %}
-{% highlight xaml %}
-
- <scheduler:SfScheduler x:Name="Scheduler" View="Week">
-    <scheduler:SfScheduler.DaysView>
-        <scheduler:SchedulerDaysView>
-            <scheduler:SchedulerDaysView.AllDayAppointmentTemplate>
-                <DataTemplate>
-                    <Grid Background="MediumPurple">
-                        <Label Text="{Binding Subject}" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" FontSize="12" FontFamily="Bold"/>
-                    </Grid>
-                </DataTemplate>
-            </scheduler:SchedulerDaysView.AllDayAppointmentTemplate>
-        </scheduler:SchedulerDaysView>
-    </scheduler:SfScheduler.DaysView>
- </scheduler:SfScheduler>
-
-{% endhighlight %}
-{% highlight c# %}
-
-this.Scheduler.View = SchedulerView.Week;
-// Creating an instance for the scheduler appointment collection.
-var appointments = new ObservableCollection<SchedulerAppointment>();
-
-for (int i = 1; i <= 5; i++)
-{
-    //Adding scheduler appointment in the scheduler appointment collection. 
-    appointments.Add(new SchedulerAppointment()
-    {
-        StartTime = DateTime.Today.AddHours(9),
-        EndTime = DateTime.Today.AddHours(11),
-        Subject = "Client Meeting",
-        Location = "Hutchison road",
         IsAllDay = true
     });
 }
