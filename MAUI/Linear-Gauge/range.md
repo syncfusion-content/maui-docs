@@ -41,7 +41,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Customize range shape 
 
-A Linear Gauge range has three values to draw a range - `StartValue`, and `EndValue`.These values indicate where the range falls in the axis. In addition to this values, the shape of the range can be customized by `StartWidth`, `MidWidth` and `EndWidth` properties. To draw a line or rectangle, just `StartValue`, `StartWidth`, `EndValue` and `EndWidth` are enough - as like the above code snippet in `Default Linear Gauge Range` topic. But to draw a concave and convex like shapes, `MidWidth` property is needed. The below code snippet demonstrates how to bring a convex shape for a range.
+A Linear Gauge range has two values to draw a range - `StartValue`, and `EndValue`.These values indicate where the range falls in the axis. In addition to this values, the shape of the range can be customized by `StartWidth`, `MidWidth` and `EndWidth` properties. To draw a line or rectangle, just `StartValue`, `StartWidth`, `EndValue` and `EndWidth` are enough - as like the above code snippet in `Default Linear Gauge Range` topic. But to draw a concave and convex like shapes, `MidWidth` property is needed. The below code snippet demonstrates how to bring a convex shape for a range.
 
 {% tabs %}
 

@@ -327,7 +327,7 @@ You can customize the time region appearance by using the `TimeRegionTemplate` p
         <scheduler:SchedulerDaysView>
             <scheduler:SchedulerDaysView.TimeRegionTemplate>
                 <DataTemplate>
-                    <Grid Background="BlueViolet" >
+                    <Grid Background="MediumPurple" >
                         <Label x:Name="label" HorizontalOptions="Center" FontSize="10" TextColor="Yellow" VerticalOptions="Center" Text="{Binding Text}" />
                     </Grid>
                 </DataTemplate>
@@ -590,6 +590,101 @@ N>
 * [View scheduler appointment sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/GettingStarted)
 * [View business object sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/BusinessObject)
 
+## Customize the appearance of all-day appointments using DataTemplate in the all-day panel
+
+You can customize the all-day appointment appearance by using the `AllDayAppointmentTemplate` property of `DaysView` in the `SfScheduler.`
+
+{% tabs %}
+{% highlight xaml %}
+
+ <scheduler:SfScheduler x:Name="Scheduler" View="Week">
+    <scheduler:SfScheduler.DaysView>
+        <scheduler:SchedulerDaysView>
+            <scheduler:SchedulerDaysView.AllDayAppointmentTemplate>
+                <DataTemplate>
+                    <Grid Background="MediumPurple">
+                        <Label Text="{Binding Subject}" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" FontSize="12" FontFamily="Bold"/>
+                    </Grid>
+                </DataTemplate>
+            </scheduler:SchedulerDaysView.AllDayAppointmentTemplate>
+        </scheduler:SchedulerDaysView>
+    </scheduler:SfScheduler.DaysView>
+ </scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight c# %}
+
+this.Scheduler.View = SchedulerView.Week;
+// Creating an instance for the scheduler appointment collection.
+var appointments = new ObservableCollection<SchedulerAppointment>();
+
+for (int i = 1; i <= 5; i++)
+{
+    //Adding scheduler appointment in the scheduler appointment collection. 
+    appointments.Add(new SchedulerAppointment()
+    {
+        StartTime = DateTime.Today.AddHours(9),
+        EndTime = DateTime.Today.AddHours(11),
+        Subject = "Client Meeting",
+        Location = "Hutchison road",
+        IsAllDay = true
+    });
+}
+
+//Adding the scheduler appointment collection to the AppointmentsSource of .NET MAUI Scheduler.
+this.Scheduler.AppointmentsSource = appointments;
+
+{% endhighlight %}
+{% endtabs %}
+
+## Customize the appearance of more appointments indicator using DataTemplate in the all-day panel
+
+You can customize the default appearance of more appointments indicator in an all-day panel by using the `MoreAppointmentsTemplate` property of `DaysView` in the `SfScheduler.`
+
+{% tabs %}
+{% highlight xaml %}
+
+  <scheduler:SfScheduler x:Name="Scheduler" View="Week">
+        <scheduler:SfScheduler.DaysView>
+            <scheduler:SchedulerDaysView>
+                <scheduler:SchedulerDaysView.MoreAppointmentsTemplate>
+                    <DataTemplate>
+                        <StackLayout Background="#EAEAEA" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                            <Label Text="{Binding}" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
+                            </Label>
+                        </StackLayout>
+                    </DataTemplate>
+                </scheduler:SchedulerDaysView.MoreAppointmentsTemplate>
+            </scheduler:SchedulerDaysView>
+        </scheduler:SfScheduler.DaysView>
+   </scheduler:SfScheduler>
+   
+{% endhighlight %}
+{% highlight c# %}
+
+this.Scheduler.View = SchedulerView.Week;
+// Creating an instance for the scheduler appointment collection.
+var appointments = new ObservableCollection<SchedulerAppointment>();
+for (int i = 1; i <= 5; i++)
+{
+    //Adding scheduler appointment in the scheduler appointment collection. 
+    appointments.Add(new SchedulerAppointment()
+    {
+        StartTime = DateTime.Today.AddHours(9),
+        EndTime = DateTime.Today.AddHours(11),
+        Subject = "Client Meeting",
+        Location = "Hutchison road",
+        Background = Brush.Orange,
+        IsAllDay = true
+    });
+}
+
+//Adding the scheduler appointment collection to the AppointmentsSource of .NET MAUI Scheduler.
+this.Scheduler.AppointmentsSource = appointments;
+
+{% endhighlight %}
+{% endtabs %}
+
 ## View header text formatting
 
 The date and day format of SfScheduler ViewHeader can be customized by using the `DateFormat` and `DayFormat` properties of `DaysView.`
@@ -705,7 +800,7 @@ You can customize the view header appearance by using the `ViewHeaderTemplate` p
         <scheduler:SchedulerDaysView>
             <scheduler:SchedulerDaysView.ViewHeaderTemplate>
                 <DataTemplate>
-                    <StackLayout x:Name="stackLayout" Orientation="Vertical" Background="BlueViolet">
+                    <StackLayout x:Name="stackLayout" Orientation="Vertical" Background="MediumPurple">
                         <Label x:Name="label" HorizontalOptions="Center"  VerticalOptions="Center" Text="{Binding StringFormat='{0:dd}'}" FontSize="Small" FontFamily="Bold" TextColor="White" >
                             <Label.Triggers>
                                 <DataTrigger TargetType = "Label" Binding="{Binding}" Value="{x:Static system:DateTime.Today}">
@@ -722,7 +817,7 @@ You can customize the view header appearance by using the `ViewHeaderTemplate` p
                         </Label>
                         <StackLayout.Triggers>
                             <DataTrigger TargetType = "StackLayout" Binding="{Binding}" Value="{x:Static system:DateTime.Today}">
-                                <Setter TargetName = "stackLayout" Property="Background" Value="BlueViolet"/>
+                                <Setter TargetName = "stackLayout" Property="Background" Value="MediumPurple"/>
                             </DataTrigger>
                         </StackLayout.Triggers>
                     </StackLayout>
@@ -750,13 +845,13 @@ You can customize the view header appearance by using the `ViewHeaderTemplate` p
  <Grid>
     <Grid.Resources>
         <DataTemplate x:Key="normalDateTemplate">
-            <StackLayout x:Name="stackLayout" Orientation="Vertical" Background="BlueViolet">
+            <StackLayout x:Name="stackLayout" Orientation="Vertical" Background="MediumPurple">
                 <Label x:Name="label" HorizontalOptions="Center"  VerticalOptions="Center" Text="{Binding StringFormat='{0:dd}'}" FontSize="Small" FontFamily="Bold" TextColor="White" />
                 <Label x:Name="label1" HorizontalOptions="Center"  VerticalOptions="Center" Text="{Binding StringFormat='{0:ddd}'}"  FontSize="Small" FontFamily="Bold" TextColor="White"/>
             </StackLayout>
         </DataTemplate>
         <DataTemplate x:Key="todayDateTemplate">
-            <StackLayout x:Name="stackLayout" Orientation="Vertical" Background="BlueViolet">
+            <StackLayout x:Name="stackLayout" Orientation="Vertical" Background="MediumPurple">
                 <Label x:Name="label" HorizontalOptions="Center"  VerticalOptions="Center" Text="{Binding StringFormat='{0:dd}'}" FontSize="Small" FontFamily="Bold" TextColor="Yellow" />
                 <Label x:Name="label1" HorizontalOptions="Center"  VerticalOptions="Center" Text="{Binding StringFormat='{0:ddd}'}"  FontSize="Small" FontFamily="Bold" TextColor="Yellow"/>
             </StackLayout>

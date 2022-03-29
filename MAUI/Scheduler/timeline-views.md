@@ -321,7 +321,7 @@ You can customize the time region appearance by using the `TimeRegionTemplate` p
         <scheduler:SchedulerTimelineView>
             <scheduler:SchedulerTimelineView.TimeRegionTemplate>
                 <DataTemplate>
-                    <Grid Background="BlueViolet" >
+                    <Grid Background="MediumPurple" >
                         <Label HorizontalOptions="Center" TextColor="White" VerticalOptions="Center" Text="{Binding Text}" />
                     </Grid>
                 </DataTemplate>
@@ -700,7 +700,7 @@ You can customize the view header appearance by using the `ViewHeaderTemplate` p
         <scheduler:SchedulerTimelineView>
             <scheduler:SchedulerTimelineView.ViewHeaderTemplate>
                 <DataTemplate>
-                    <Grid x:Name="grid" Background="BlueViolet" >
+                    <Grid x:Name="grid" Background="MediumPurple" >
                         <Label x:Name="label" HorizontalOptions="Start" VerticalOptions="Center"  TextColor="White" >
                             <Label.Text>
                                 <MultiBinding StringFormat = "{}{0:dd} {1:ddd}" >
@@ -744,7 +744,7 @@ You can customize the view header appearance by using the `ViewHeaderTemplate` p
 <Grid>
     <Grid.Resources>
         <DataTemplate x:Key="normalDateTemplate">
-            <Grid x:Name="grid" Background="BlueViolet" >
+            <Grid x:Name="grid" Background="MediumPurple" >
                 <Label x:Name="label" HorizontalOptions="Start" VerticalOptions="Center"  TextColor="White" >
                     <Label.Text>
                         <MultiBinding StringFormat = "{}{0:dd} {1:ddd}" >
@@ -756,7 +756,7 @@ You can customize the view header appearance by using the `ViewHeaderTemplate` p
             </Grid>
         </DataTemplate>
         <DataTemplate x:Key="todayDateTemplate">
-            <Grid x:Name="grid" Background="BlueViolet" >
+            <Grid x:Name="grid" Background="MediumPurple" >
                 <Label x:Name="label" HorizontalOptions="Start" VerticalOptions="Center"  TextColor="Yellow" >
                     <Label.Text>
                         <MultiBinding StringFormat = "{}{0:dd} {1:ddd}" >
