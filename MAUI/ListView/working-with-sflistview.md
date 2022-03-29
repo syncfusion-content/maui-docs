@@ -327,3 +327,7 @@ private bool FilterDepartures(object obj)
 }
 {% endhighlight %}
 {% endtabs %}
+
+## See also
+
+[How to set the font size for .NET MAUI ListView (SfListView)](https://www.syncfusion.com/kb/13081/)

@@ -523,3 +523,7 @@ public partial class MainPage : ContentPage
 
 * When a grid is loaded inside the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate) with background color, the [SelectionBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionBackground) will not display. Because, it overlaps the `SelectionBackground`. In this case, set the background color for the ListView instead of `ItemTemplate`.
 * When the `SfListView` contains duplicated items in the collection, only the first item whose instance was created initially will be selected or deselected.
+
+## See also 
+
+[How to change selected image in .NET MAUI ListView (SfListView)](https://www.syncfusion.com/kb/13080/)

@@ -263,4 +263,8 @@ private void ListView_Loaded(object sender, Syncfusion.Maui.ListView.ListViewLoa
 ## Limitations
 
  * Defines the size of the image when loading an image in the [SfListView.ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate). Because it does not return the actual measured size when measuring the item before layout.
- * Avoids `SfListView` inside the `SfListView`, if `SfListView.AutoFitMode` is `Height` or `DynamicHeight`. Because the inner `SfListView` does not return the actual measured size when measuring before layout the item.                                                                                                                                                              
+ * Avoids `SfListView` inside the `SfListView`, if `SfListView.AutoFitMode` is `Height` or `DynamicHeight`. Because the inner `SfListView` does not return the actual measured size when measuring before layout the item.                 
+
+## See also 
+
+[How to create an expandable ListView (SfListView) in .NET MAUI](https://www.syncfusion.com/kb/13078/)                                                                                                                                             
