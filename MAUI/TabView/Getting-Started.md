@@ -260,7 +260,7 @@ The following code example binds the collection to the `ItemsSource` property of
 
 ### Header item template
 
-By defining the `HeaderItemTemplate` of the SfTabView, a custom user interface(UI) can be achieved to display the tab header data items.
+By defining the `HeaderItemTemplate` of the `SfTabView`, a custom user interface(UI) can be achieved to display the tab header data items.
 
 {% tabs %}
 
