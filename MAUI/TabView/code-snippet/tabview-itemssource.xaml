@@ -1,0 +1,12 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ItemTemplateSample.MainPage"
+             xmlns:local="clr-namespace:ItemTemplateSample"
+             xmlns:tabView="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView"
+             BackgroundColor="{DynamicResource SecondaryColor}" >
+    <ContentPage.BindingContext>
+        <local:TabItemsSourceViewModel />
+    </ContentPage.BindingContext>
+    <tabView:SfTabView ItemsSource="{Binding TabItems}" >
+    </tabView:SfTabView>
+</ContentPage>

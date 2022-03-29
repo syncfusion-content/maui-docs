@@ -1,0 +1,8 @@
+<tabView:SfTabView ItemsSource="{Binding TabItems}" >
+        <tabView:SfTabView.HeaderItemTemplate>
+                <DataTemplate >
+                    <Label  Padding="5,10,10,10"  Text="{Binding Name}"/>
+                 </DataTemplate>
+         </tabView:SfTabView.HeaderItemTemplate>
+</tabView:SfTabView>
+    

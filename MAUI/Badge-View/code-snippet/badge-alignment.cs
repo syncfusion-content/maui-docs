@@ -1,0 +1,19 @@
+SfBadgeView sfBadgeView = new SfBadgeView();
+sfBadgeView.HorizontalOptions = LayoutOptions.Center;
+sfBadgeView.VerticalOptions = LayoutOptions.Center;
+sfBadgeView.BadgeText = "20";
+Label label = new Label();
+label.Text = "CENTER";
+label.HeightRequest = 60;
+label.WidthRequest = 100;
+label.BackgroundColor = Colors.LightGray;
+label.HorizontalTextAlignment = TextAlignment.Center;
+label.VerticalTextAlignment = TextAlignment.Center;
+label.TextColor = Colors.Black;
+sfBadgeView.Content = label;
+BadgeSettings badgeSetting = new BadgeSettings();
+badgeSetting.BadgeAlignment = BadgeAlignment.Center;
+badgeSetting.CornerRadius = 0;
+sfBadgeView.BadgeSettings = badgeSetting;
+Content = sfBadgeView;
+    

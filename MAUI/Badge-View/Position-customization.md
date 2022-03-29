@@ -13,38 +13,15 @@ The default position of notification is [`TopRight`](https://help.syncfusion.com
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight xaml hl_lines="6" %}
 
- <badge:SfBadgeView BadgeText="NEW" HorizontalOptions="Center" WidthRequest="120" HeightRequest="60" VerticalOptions="Center">
-        <badge:SfBadgeView.Content>
-            <Button Text="Primary" BackgroundColor="#d6d8d7" TextColor="Black"  WidthRequest="120"  HeightRequest="60"/>
-        </badge:SfBadgeView.Content>
-        <badge:SfBadgeView.BadgeSettings>
-            <badge:BadgeSettings   Position="TopRight"/>
-        </badge:SfBadgeView.BadgeSettings>
-</badge:SfBadgeView>
+ {% include_relative code-snippet/badge-position.xaml %}
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight c# hl_lines="15" %}
 
-SfBadgeView sfBadgeView = new SfBadgeView();
-sfBadgeView.WidthRequest = 120;
-sfBadgeView.HeightRequest = 60;
-sfBadgeView.HorizontalOptions = LayoutOptions.Center;
-sfBadgeView.VerticalOptions = LayoutOptions.Center;
-sfBadgeView.BadgeText = "NEW";
-Button button = new Button();
-button.Text = "Primary";
-button.WidthRequest = 120;
-button.TextColor = Colors.Black;
-button.BackgroundColor = Color.FromRgba(214, 216, 215, 255);
-button.HeightRequest = 60;
-sfBadgeView.Content = button;
-BadgeSettings badgeSetting = new BadgeSettings();
-badgeSetting.Position = BadgePosition.TopRight;
-sfBadgeView.BadgeSettings = badgeSetting;
-Content = sfBadgeView;
+{% include_relative code-snippet/badge-position.cs %}
     
 {% endhighlight %}
 
