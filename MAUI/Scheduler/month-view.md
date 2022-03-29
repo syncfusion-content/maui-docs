@@ -51,7 +51,6 @@ this.Scheduler.MonthView.AppointmentDisplayMode = SchedulerMonthAppointmentDispl
 
 N>
 * [View scheduler appointment sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/GettingStarted)
-
 * [View business object sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/BusinessObject)
 
 ## Hide leading and trailing dates
