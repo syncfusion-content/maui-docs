@@ -25,12 +25,12 @@ Cartesian chart supports the following types of chart axis.
 
 <chart:SfCartesianChart>
     . . .
-    <chart:SfCartesianChart.PrimaryAxis>
+    <chart:SfCartesianChart.XAxes>
         <chart:NumericalAxis/>
-    </chart:SfCartesianChart.PrimaryAxis>
-    <chart:SfCartesianChart.SecondaryAxis>
+    </chart:SfCartesianChart.XAxes>
+    <chart:SfCartesianChart.YAxes>
         <chart:NumericalAxis/>
-    </chart:SfCartesianChart.SecondaryAxis>
+    </chart:SfCartesianChart.YAxes>
 
 </chart:SfCartesianChart>
 
@@ -40,9 +40,11 @@ Cartesian chart supports the following types of chart axis.
 
 SfCartesianChart chart = new SfCartesianChart();
 . . .
-chart.PrimaryAxis = new NumericalAxis();
+NumericalAxis primaryAxis = new NumericalAxis();
+chart.XAxes.Add(primaryAxis);
 
-chart.SecondaryAxis = new NumericalAxis();
+NumericalAxis secondaryAxis = new NumericalAxis();
+chart.YAxes.Add(secondaryAxis);
 
 {% endhighlight %}
 
@@ -60,12 +62,12 @@ Axis interval can be customized by using the [Interval](https://help.syncfusion.
 
 <chart:SfCartesianChart>
 . . .
-<chart:SfCartesianChart.PrimaryAxis>
+<chart:SfCartesianChart.XAxes>
     <chart:NumericalAxis Interval="10" />
-</chart:SfCartesianChart.PrimaryAxis>
-<chart:SfCartesianChart.SecondaryAxis>
+</chart:SfCartesianChart.XAxes>
+<chart:SfCartesianChart.YAxes>
     <chart:NumericalAxis/>
-</chart:SfCartesianChart.SecondaryAxis>
+</chart:SfCartesianChart.YAxes>
 
 </chart:SfCartesianChart>
 
@@ -75,12 +77,14 @@ Axis interval can be customized by using the [Interval](https://help.syncfusion.
 
 SfCartesianChart chart = new SfCartesianChart();
 . . .
-chart.PrimaryAxis = new NumericalAxis()
+NumericalAxis primaryAxis = new NumericalAxis()
 {
     Interval = 10, 
 };
+chart.XAxes.Add(primaryAxis);
 
-chart.SecondaryAxis = new NumericalAxis();
+NumericalAxis secondaryAxis = new NumericalAxis();
+chart.YAxes.Add(secondaryAxis);
 
 {% endhighlight %}
 
@@ -98,20 +102,21 @@ N> If  minimum or maximum value is set, the other value is calculated by default
 
 {% highlight xaml %}
 
-<chart:SfCartesianChart.SecondaryAxis>
+<chart:SfCartesianChart.YAxes>
     <chart:NumericalAxis Maximum="2750" Minimum="250" Interval="250"/>
-</chart:SfCartesianChart.SecondaryAxis>
+</chart:SfCartesianChart.YAxes>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-chart.SecondaryAxis = new NumericalAxis()
+NumericalAxis secondaryAxis = new NumericalAxis()
 {
     Maximum = 2750,
     Minimum = 250,
     Interval = 250
 };
+chart.YAxes.Add(secondaryAxis);
 
 {% endhighlight %}
 
@@ -127,9 +132,9 @@ The [CategoryAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Ca
 
 <chart:SfCartesianChart>
 . . .
-<chart:SfCartesianChart.PrimaryAxis>
+<chart:SfCartesianChart.XAxes>
     <chart:CategoryAxis/>
-</chart:SfCartesianChart.PrimaryAxis>
+</chart:SfCartesianChart.XAxes>
 
 </chart:SfCartesianChart>
 
@@ -139,7 +144,8 @@ The [CategoryAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Ca
 
 SfCartesianChart chart = new SfCartesianChart();
 . . .
-chart.PrimaryAxis = new CategoryAxis();
+CategoryAxis primaryAxis = new CategoryAxis();
+chart.XAxes.Add(primaryAxis);
 
 {% endhighlight %}
 
@@ -157,9 +163,9 @@ The [LabelPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 
 <chart:SfCartesianChart>
     . . .
-    <chart:SfCartesianChart.PrimaryAxis>
+    <chart:SfCartesianChart.XAxes>
         <chart:CategoryAxis LabelPlacement="BetweenTicks"/>
-    </chart:SfCartesianChart.PrimaryAxis>
+    </chart:SfCartesianChart.XAxes>
 
 </chart:SfCartesianChart>
 
@@ -169,10 +175,11 @@ The [LabelPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 
 SfCartesianChart chart = new SfCartesianChart();
 . . .
-chart.PrimaryAxis = new CategoryAxis()
+CategoryAxis primaryAxis = new CategoryAxis()
 {
     LabelPlacement = LabelPlacement.BetweenTicks
 };
+chart.XAxes.Add(primaryAxis);
 
 {% endhighlight %}
 
@@ -190,12 +197,12 @@ By default, the [CategoryAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 
 <chart:SfCartesianChart>
     . . .
-    <chart:SfCartesianChart.PrimaryAxis>
+    <chart:SfCartesianChart.XAxes>
         <chart:CategoryAxis Interval="2" />
-    </chart:SfCartesianChart.PrimaryAxis>
-    <chart:SfCartesianChart.SecondaryAxis>
+    </chart:SfCartesianChart.XAxes>
+    <chart:SfCartesianChart.YAxes>
         <chart:NumericalAxis/>
-    </chart:SfCartesianChart.SecondaryAxis>
+    </chart:SfCartesianChart.YAxes>
 
 </chart:SfCartesianChart>
 
@@ -205,12 +212,14 @@ By default, the [CategoryAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 
 SfCartesianChart chart = new SfCartesianChart();
 . . .
-chart.PrimaryAxis = new CategoryAxis()
+CategoryAxis primaryAxis = new CategoryAxis()
 {
     Interval = 2, 
 };
+chart.XAxes.Add(primaryAxis);
 
-chart.SecondaryAxis = new NumericalAxis();
+NumericalAxis secondaryAxis = new NumericalAxis();
+chart.YAxes.Add(secondaryAxis);
 
 {% endhighlight %}
 
@@ -228,9 +237,9 @@ chart.SecondaryAxis = new NumericalAxis();
 
 <chart:SfCartesianChart>
     . . .
-    <chart:SfCartesianChart.PrimaryAxis>
+    <chart:SfCartesianChart.XAxes>
         <chart:DateTimeAxis/>
-    </chart:SfCartesianChart.PrimaryAxis>
+    </chart:SfCartesianChart.XAxes>
 
 </chart:SfCartesianChart>
 
@@ -240,7 +249,8 @@ chart.SecondaryAxis = new NumericalAxis();
 
 SfCartesianChart chart = new SfCartesianChart();
 . . .
-chart.PrimaryAxis = new DateTimeAxis();
+DateTimeAxis primaryAxis = new DateTimeAxis();
+chart.XAxes.Add(primaryAxis);
 
 {% endhighlight %}
 
@@ -258,12 +268,12 @@ In [DateTimeAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Dat
 
 <chart:SfCartesianChart>
     . . .
-    <chart:SfCartesianChart.PrimaryAxis>
+    <chart:SfCartesianChart.XAxes>
         <chart:DateTimeAxis Interval="6" IntervalType="Months"/>
-    </chart:SfCartesianChart.PrimaryAxis>
-    <chart:SfCartesianChart.SecondaryAxis>
+    </chart:SfCartesianChart.XAxes>
+    <chart:SfCartesianChart.YAxes>
         <chart:NumericalAxis/>
-    </chart:SfCartesianChart.SecondaryAxis>
+    </chart:SfCartesianChart.YAxes>
 
 </chart:SfCartesianChart>
 
@@ -273,13 +283,15 @@ In [DateTimeAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Dat
 
 SfCartesianChart chart = new SfCartesianChart();
 . . .
-chart.PrimaryAxis = new DateTimeAxis()
+DateTimeAxis primaryAxis = new DateTimeAxis()
 {
     Interval = 6, 
     IntervalType = DateTimeIntervalType.Months
 };
+chart.XAxes.Add(primaryAxis);
 
-chart.SecondaryAxis = new NumericalAxis();
+NumericalAxis secondaryAxis = new NumericalAxis();
+chart.YAxes.Add(secondaryAxis);
 
 {% endhighlight %}
 
@@ -297,9 +309,9 @@ chart.SecondaryAxis = new NumericalAxis();
 
 <chart:SfCartesianChart>
     . . .
-    <chart:SfCartesianChart.PrimaryAxis>
+    <chart:SfCartesianChart.XAxes>
         <chart:DateTimeAxis Minimum="2021/05/10" Maximum="2021/11/01"/>
-    </chart:SfCartesianChart.PrimaryAxis>
+    </chart:SfCartesianChart.XAxes>
 
 </chart:SfCartesianChart>
 
@@ -309,11 +321,12 @@ chart.SecondaryAxis = new NumericalAxis();
 
 SfCartesianChart chart = new SfCartesianChart();
 . . .
-chart.PrimaryAxis = new DateTimeAxis()
+DateTimeAxis primaryAxis = new DateTimeAxis()
 {
     Minimum = new DateTime(2021,05,10),
     Maximum = new DateTime(2021,11,01),
 };
+chart.XAxes.Add(primaryAxis);
 
 {% endhighlight %}
 
@@ -331,9 +344,9 @@ Axis can be inverted by using the [IsInversed](https://help.syncfusion.com/cr/ma
 
 <chart:SfCartesianChart>
     . . .
-    <chart:SfCartesianChart.SecondaryAxis>
+    <chart:SfCartesianChart.YAxes>
         <chart:NumericalAxis IsInversed="True"/>
-    </chart:SfCartesianChart.SecondaryAxis>
+    </chart:SfCartesianChart.YAxes>
 
 </chart:SfCartesianChart>
 
@@ -343,8 +356,9 @@ Axis can be inverted by using the [IsInversed](https://help.syncfusion.com/cr/ma
 
 SfCartesianChart chart = new SfCartesianChart();
 . . .
-this.Chart.SecondaryAxis = new NumericalAxis();
-this.Chart.SecondaryAxis.IsInversed = true;
+NumericalAxis secondaryAxis = new NumericalAxis();
+secondaryAxis.IsInversed = true;
+chart.YAxes.Add(secondaryAxis);
 
 {% endhighlight %}
 
@@ -360,9 +374,9 @@ Axis visibility can be controlled using the [IsVisible](https://help.syncfusion.
 
 {% highlight xaml %}
 
-<chart:SfCartesianChart.SecondaryAxis>
+<chart:SfCartesianChart.YAxes>
     <chart:NumericalAxis IsVisible="False"/>
-</chart:SfCartesianChart.SecondaryAxis>
+</chart:SfCartesianChart.YAxes>
 
 {% endhighlight %}
 
@@ -370,7 +384,8 @@ Axis visibility can be controlled using the [IsVisible](https://help.syncfusion.
 
 SfCartesianChart chart = new SfCartesianChart();
 . . .
-chart.SecondaryAxis = new NumericalAxis() { IsVisible = false };
+NumericalAxis secondaryAxis = new NumericalAxis() { IsVisible = false };
+chart.YAxes.Add(secondaryAxis);
 
 {% endhighlight %}
 
@@ -393,17 +408,19 @@ By default, all the series are plotted based on primary and secondary axis.
 
 <chart:SfCartesianChart>
     . . .
+	<chart:SfCartesianChart.XAxes>
+		<chart:DateTimeAxis ShowMajorGridLines="False" />
+	</chart:SfCartesianChart.XAxes>
+	<chart:SfCartesianChart.YAxes>
+		<chart:NumericalAxis ShowMajorGridLines="False" />
+		<chart:NumericalAxis Name="series_YAxis" CrossesAt="{Static x:Double.MaxValue}" ShowMajorGridLines="False" />
+	</chart:SfCartesianChart.YAxes>
     <chart:SfCartesianChart.Series>
         <chart:SfCartesianChart.Series>
             <chart:ColumnSeries ItemsSource="{Binding Data1}" 
                     XBindingPath="Date"
-                    YBindingPath="Value">
-                <chart:ColumnSeries.XAxis>
-                        <chart:DateTimeAxis CrossesAt="{x:Static sys:Double.MaxValue}" ShowMajorGridLines="False"/>
-                </chart:ColumnSeries.XAxis>
-                <chart:ColumnSeries.YAxis>
-                        <chart:NumericalAxis CrossesAt="{x:Static sys:Double.MaxValue}" ShowMajorGridLines="False" />
-                </chart:ColumnSeries.YAxis>
+                    YBindingPath="Value"
+					YAxisName="series_YAxis">
             </chart:ColumnSeries>
             <chart:SplineSeries ItemsSource="{Binding Data}" 
                     XBindingPath="Date"
@@ -434,16 +451,23 @@ SplineSeries series2 = new SplineSeries()
     YBindingPath = "Year2011",
 };
 
-series1.XAxis = new DateTimeAxis()
+DateTimeAxis primaryAxis = new DateTimeAxis()
+{
+    ShowMajorGridLines = false
+};
+chart.XAxes.Add(primaryAxis);
+
+NumericalAxis secondaryAxis = new NumericalAxis()
 {
     CrossesAt = double.MaxValue,
     ShowMajorGridLines = false
 };
-series1.YAxis = new NumericalAxis()
-{
-    CrossesAt = double.MaxValue,
-    ShowMajorGridLines = false
-};
+secondaryAxis.Name = "series_YAxis";
+chart.YAxes.Add(secondaryAxis);
+NumericalAxis secondaryAxis1 = new NumericalAxis();
+chart.YAxes.Add(secondaryAxis1);
+series1.YAxisName = "series_YAxis";
+
 
 chart.Series.Add(series1);
 chart.Series.Add(series2);
@@ -464,13 +488,13 @@ The chart allows you to customize the origin, by default the axis will be render
 
 <chart:SfCartesianChart>
     
-    <chart:SfCartesianChart.PrimaryAxis>
+    <chart:SfCartesianChart.XAxes>
             <chart:NumericalAxis CrossesAt="0" Minimum="-8" Maximum="8" ShowMajorGridLines="False" />
-    </chart:SfCartesianChart.PrimaryAxis>
+    </chart:SfCartesianChart.XAxes>
 
-    <chart:SfCartesianChart.SecondaryAxis>
+    <chart:SfCartesianChart.YAxes>
             <chart:NumericalAxis CrossesAt="0" Minimum="-8" Maximum="8"  ShowMajorGridLines="False" />
-    </chart:SfCartesianChart.SecondaryAxis>
+    </chart:SfCartesianChart.YAxes>
 
 </chart:SfCartesianChart>
 
@@ -484,13 +508,13 @@ primaryAxis.CrossesAt = 0;
 primaryAxis.Minimum = -8;
 primaryAxis.Maximum = 8;
 primaryAxis.ShowMajorGridLines = false;
-chart.PrimaryAxis = primaryAxis;
+chart.XAxes.Add(primaryAxis);
 NumericalAxis secondaryAxis = new NumericalAxis();
 secondaryAxis.CrossesAt = 0;
 secondaryAxis.Minimum = -8;
 secondaryAxis.Maximum = 8;
 secondaryAxis.ShowMajorGridLines = false;
-chart.SecondaryAxis = secondaryAxis;
+chart.YAxes.Add(secondaryAxis);
 
 {% endhighlight %}
 
@@ -508,13 +532,13 @@ The [RenderNextToCrossingValue](https://help.syncfusion.com/cr/maui/Syncfusion.M
 
 <chart:SfCartesianChart>
     
-    <chart:SfCartesianChart.PrimaryAxis>
+    <chart:SfCartesianChart.XAxes>
             <chart:NumericalAxis CrossesAt="0" RenderNextToCrossingValue="False" />
-    </chart:SfCartesianChart.PrimaryAxis>
+    </chart:SfCartesianChart.XAxes>
 
-    <chart:SfCartesianChart.SecondaryAxis>
+    <chart:SfCartesianChart.YAxes>
             <chart:NumericalAxis CrossesAt="0" />
-    </chart:SfCartesianChart.SecondaryAxis>
+    </chart:SfCartesianChart.YAxes>
 
 </chart:SfCartesianChart>
 
@@ -526,10 +550,10 @@ SfCartesianChart chart = new SfCartesianChart();
 NumericalAxis primaryAxis = new NumericalAxis();
 primaryAxis.CrossesAt = 0;
 primaryAxis.RenderNextToCrossingValue = false;
-chart.PrimaryAxis = primaryAxis;
+chart.XAxes.Add(primaryAxis);
 NumericalAxis secondaryAxis = new NumericalAxis();
 secondaryAxis.CrossesAt = 0;
-chart.SecondaryAxis = secondaryAxis;
+chart.YAxes.Add(secondaryAxis);
 
 {% endhighlight %}
 
@@ -547,13 +571,13 @@ For the crossing in date time horizontal axis, date object should be provided as
 
 <chart:SfCartesianChart>
     
-    <chart:SfCartesianChart.PrimaryAxis>
+    <chart:SfCartesianChart.XAxes>
             <chart:DateTimeAxis />
-    </chart:SfCartesianChart.PrimaryAxis>
+    </chart:SfCartesianChart.XAxes>
 
-    <chart:SfCartesianChart.SecondaryAxis>
+    <chart:SfCartesianChart.yAxes>
             <chart:NumericalAxis />
-    </chart:SfCartesianChart.SecondaryAxis>
+    </chart:SfCartesianChart.yAxes>
 
 </chart:SfCartesianChart>
 
@@ -563,10 +587,10 @@ For the crossing in date time horizontal axis, date object should be provided as
 
 SfCartesianChart chart = new SfCartesianChart();
 NumericalAxis primaryAxis = new NumericalAxis();
-chart.PrimaryAxis = primaryAxis;
+chart.XAxes.Add(primaryAxis);
 NumericalAxis secondaryAxis = new NumericalAxis();
 secondaryAxis.CrossesAt = new DateTime(2021, 01, 01);;
-chart.SecondaryAxis = secondaryAxis;
+chart.YAxes.Add(secondaryAxis);
 
 {% endhighlight %}
 

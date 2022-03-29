@@ -95,7 +95,7 @@ ColumnSeries series = new ColumnSeries();
 . . .
 series.DataLabelSettings = new CartesianDataLabelSettings()
 {
-    BarAlignment = Alignment.Middle,
+    BarAlignment = DataLabelAlignment.Middle,
 };
 
 chart.Series.Add(series);

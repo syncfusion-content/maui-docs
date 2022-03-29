@@ -54,7 +54,7 @@ The rendering size of the [PieSeries](https://help.syncfusion.com/cr/maui/Syncfu
         <chart:PieSeries ItemsSource="{Binding Data}" 
                         XBindingPath="Product" 
                         YBindingPath="SalesRate"
-                        CircularCoefficient = "0.9"/>
+                        Radius = "0.9"/>
     </chart:SfCircularChart.Series>            
 </chart:SfCircularChart>
 
@@ -67,7 +67,7 @@ SfCircularChart chart = new SfCircularChart();
 PieSeries series = new PieSeries();
 series.XBindingPath = "Product";
 series.YBindingPath = "SalesRate";
-series.CircularCoefficient = 0.9;
+series.Radius = 0.9;
 
 chart.Series.Add(series);
 
@@ -87,7 +87,7 @@ By using the [StartAngle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Ch
 
 <chart:SfCircularChart>
     <chart:SfCircularChart.Series>
-        <chart:PieSeries StartAngle="180" EndAngle="360" ItemsSource="{Binding Data}  XBindingPath="Product"  YBindingPath="SalesRate" />
+        <chart:PieSeries StartAngle="180" EndAngle="360" ItemsSource="{Binding Data}"  XBindingPath="Product"  YBindingPath="SalesRate" />
     </chart:SfCircularChart.Series>
 </chart:SfCircularChart>
 

@@ -18,12 +18,12 @@ By default, major gridlines are automatically added to the [ChartAxis](https://h
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    <chart:SfCartesianChart.PrimaryAxis>
+    <chart:SfCartesianChart.XAxes>
         <chart:NumericalAxis ShowMajorGridLines="False" />
-    </chart:SfCartesianChart.PrimaryAxis>
-    <chart:SfCartesianChart.SecondaryAxis>
+    </chart:SfCartesianChart.XAxes>
+    <chart:SfCartesianChart.YAxes>
         <chart:NumericalAxis />
-    </chart:SfCartesianChart.SecondaryAxis>
+    </chart:SfCartesianChart.YAxes>
     . . .
 </chart:SfCartesianChart>
 
@@ -35,9 +35,10 @@ SfCartesianChart chart = new SfCartesianChart();
 . . .
 NumericalAxis primaryAxis = new NumericalAxis();
 primaryAxis.ShowMajorGridLines = false;
-chart.PrimaryAxis = primaryAxis;
+chart.XAxes.Add(primaryAxis);
 
-chart.SecondaryAxis = new NumericalAxis();
+NumericalAxis secondaryAxis = new NumericalAxis();
+chart.YAxes.Add(secondaryAxis);
 
 {% endhighlight %}
 
@@ -61,17 +62,17 @@ The [MajorGridLineStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cha
         </DoubleCollection>
     </chart:SfCartesianChart.Resources>
     
-    <chart:SfCartesianChart.PrimaryAxis>
+    <chart:SfCartesianChart.XAxes>
         <chart:NumericalAxis>
             <chart:NumericalAxis.MajorGridLineStyle>
                 <chart:ChartLineStyle StrokeDashArray="{StaticResource dashArray}" Stroke="Black" StrokeWidth="2" />
             </chart:NumericalAxis.MajorGridLineStyle>
-        <chart:NumericalAxis />
-    </chart:SfCartesianChart.PrimaryAxis>
+        </chart:NumericalAxis>
+    </chart:SfCartesianChart.XAxes>
 
-    <chart:SfCartesianChart.SecondaryAxis>
+    <chart:SfCartesianChart.YAxes>
         <chart:NumericalAxis />
-    </chart:SfCartesianChart.SecondaryAxis>
+    </chart:SfCartesianChart.YAxes>
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -90,9 +91,10 @@ axisLineStyle.Stroke = Colors.Black;
 axisLineStyle.StrokeWidth = 2;
 axisLineStyle.StrokeDashArray = doubleCollection;
 primaryAxis.MajorGridLineStyle = axisLineStyle;
-chart.PrimaryAxis = primaryAxis;
+chart.XAxes.Add(primaryAxis);
 
-chart.SecondaryAxis = new NumericalAxis();
+NumericalAxis secondaryAxis = new NumericalAxis();
+chart.YAxes.Add(secondaryAxis);
 
 {% endhighlight %}
 
@@ -109,13 +111,13 @@ Minor gridlines will be added automatically when the small tick lines is defined
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    <chart:SfCartesianChart.PrimaryAxis>
+    <chart:SfCartesianChart.XAxes>
         <chart:NumericalAxis/>
-    </chart:SfCartesianChart.PrimaryAxis>
+    </chart:SfCartesianChart.XAxes>
 
-    <chart:SfCartesianChart.SecondaryAxis>
+    <chart:SfCartesianChart.YAxes>
         <chart:NumericalAxis MinorTicksPerInterval="3" />
-    </chart:SfCartesianChart.SecondaryAxis>
+    </chart:SfCartesianChart.YAxes>
     . . .
 </chart:SfCartesianChart>
 
@@ -124,11 +126,13 @@ Minor gridlines will be added automatically when the small tick lines is defined
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-chart.PrimaryAxis = new NumericalAxis();
+NumericalAxis primaryAxis = new NumericalAxis();
+chart.XAxes.Add(primaryAxis);
 chart.SecondaryAxis = new NumericalAxis()
 {
     MinorTicksPerInterval = 3,
 };
+chart.YAxes.Add(secondaryAxis);
 . . .
 
 {% endhighlight %}
@@ -152,17 +156,17 @@ The [MinorGridLineStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cha
         </DoubleCollection>
     </chart:SfCartesianChart.Resources>
 
-    <chart:SfCartesianChart.PrimaryAxis>
+    <chart:SfCartesianChart.XAxes>
         <chart:NumericalAxis/>
-    </chart:SfCartesianChart.PrimaryAxis>
+    </chart:SfCartesianChart.XAxes>
 
-    <chart:SfCartesianChart.SecondaryAxis>
+    <chart:SfCartesianChart.YAxes>
         <chart:NumericalAxis ShowMinorGridLines="True" MinorTicksPerInterval="2">
             <chart:NumericalAxis.MinorGridLineStyle>
                 <chart:ChartLineStyle StrokeDashArray="{StaticResource dashArray}" Stroke="Black" StrokeWidth="0.8"  />
             </chart:NumericalAxis.MinorGridLineStyle>
         </chart:NumericalAxis>
-    </chart:SfCartesianChart.SecondaryAxis>
+    </chart:SfCartesianChart.YAxes>
     . . .
 </chart:SfCartesianChart>
 
@@ -171,7 +175,8 @@ The [MinorGridLineStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cha
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-chart.PrimaryAxis = new NumericalAxis();
+NumericalAxis primaryAxis = new NumericalAxis();
+chart.XAxes.Add(primaryAxis);
 
 DoubleCollection doubleCollection = new DoubleCollection();
 doubleCollection.Add(3);
@@ -183,7 +188,7 @@ axisLineStyle.Stroke = Colors.Black;
 axisLineStyle.StrokeWidth = 0.8;
 axisLineStyle.StrokeDashArray = doubleCollection;
 secondaryAxis.MinorGridLineStyle = axisLineStyle;
-chart.SecondaryAxis = secondaryAxis;
+chart.YAxes.Add(secondaryAxis);
 
 {% endhighlight %}
 
