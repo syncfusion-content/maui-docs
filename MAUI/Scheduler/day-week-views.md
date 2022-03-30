@@ -503,7 +503,7 @@ this.Scheduler.DaysView.ShowCurrentTimeIndicator = false;
 {% endhighlight %}
 {% endtabs %}
 
-### Customize current time indicator appearance
+#### Customize current time indicator appearance
 
 The current time indicator can be customized by using the `CurrentTimeIndicatorBrush` property of `DaysView` in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
@@ -911,7 +911,7 @@ N>
 * When using data template selector, performance issues occur as the conversion template views take time within the framework.
 
 
-## Time text formatting
+## Time ruler text formatting
 
 The format for the labels mentioning the time can be customized by setting the `TimeFormat` property of `DaysView` in the Scheduler.
 
@@ -939,7 +939,7 @@ this.Scheduler.DaysView.TimeFormat = "hh:mm";
 N>
 * By default, the scheduler time text format is `hh:mm tt.`
 
-### Customize time ruler text style
+#### Customize time ruler text style
 
 The text style for the labels mentioning the time can be customized, by setting the `TimeRulerTextStyle` property of `DaysView` in the Scheduler.
 

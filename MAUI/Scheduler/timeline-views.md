@@ -312,7 +312,7 @@ private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 
 ![customize-time-region-appearance-in-maui-scheduler](images/timeline-views/customize-time-region-appearance-in-maui-scheduler.png)
 
-##### Customize special time region appearance using DataTemplate
+#### Customize special time region appearance using DataTemplate
 
 You can customize the time region appearance by using the `TimeRegionTemplate` property of `TimelineView` in the `SfScheduler.`
 
@@ -497,7 +497,7 @@ this.Scheduler.TimelineView.ShowCurrentTimeIndicator = false;
 {% endhighlight %}
 {% endtabs %}
 
-### Customize current time indicator appearance
+#### Customize current time indicator appearance
 
 The current time indicator can be customized by using the `CurrentTimeIndicatorBrush` property of `TimelineView` in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
@@ -849,7 +849,7 @@ this.Scheduler.TimelineView.TimeFormat = "hh:mm";
 N>
 * By default, the scheduler time text format is `hh:mm tt.`
 
-### Customize time ruler text style
+#### Customize time ruler text style
 
 The text style for the labels mentioning the time can be customized, by setting the `TimeRulerTextStyle` properties of `TimelineView` in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
