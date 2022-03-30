@@ -51,7 +51,6 @@ this.Scheduler.MonthView.AppointmentDisplayMode = SchedulerMonthAppointmentDispl
 
 N>
 * [View scheduler appointment sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/GettingStarted)
-
 * [View business object sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/BusinessObject)
 
 ## Hide leading and trailing dates
@@ -188,7 +187,7 @@ You can customize the view header appearance by using the `ViewHeaderTemplate` p
         <scheduler:SchedulerMonthView>
             <scheduler:SchedulerMonthView.ViewHeaderTemplate>
                 <DataTemplate>
-                    <Grid Background = "BlueViolet" >
+                    <Grid Background = "MediumPurple" >
                         <Label x:Name="label" HorizontalOptions="Center" VerticalOptions="Center" Text="{Binding StringFormat='{0:ddd}'}" TextColor="White" FontSize="Subtitle" FontFamily="Bold" />
                     </Grid>
                 </DataTemplate>
@@ -324,7 +323,7 @@ You can customize the month cell appearance by using the `CellTemplate` property
         <scheduler:SchedulerMonthView>
             <scheduler:SchedulerMonthView.CellTemplate>
                 <DataTemplate>
-                    <Border Background = "BlueViolet">
+                    <Border Background = "MediumPurple">
                         <Label HorizontalTextAlignment="Center" TextColor="White" Text="{Binding DateTime.Day}"/>
                     </Border>
                 </DataTemplate>
@@ -351,12 +350,12 @@ You can customize the month cell appearance by using the `CellTemplate` property
 <Grid>
     <Grid.Resources>
         <DataTemplate x:Key="normalDateTemplate">
-            <Border Background = "BlueViolet">
+            <Border Background = "MediumPurple">
                 <Label HorizontalTextAlignment="Center" TextColor="White" Text="{Binding DateTime.Day}"/>
             </Border>
         </DataTemplate>
         <DataTemplate x:Key="todayDateTemplate">
-            <Border Background = "BlueViolet">
+            <Border Background = "MediumPurple">
                 <Label HorizontalTextAlignment="Center" TextColor="Yellow" Text="{Binding DateTime.Day}"/>
             </Border>
         </DataTemplate>

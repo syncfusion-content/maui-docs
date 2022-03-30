@@ -21,9 +21,9 @@ For example, if [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider Interval="0.2" 
-                           ShowDividers="True">
-</rangeslider:SfRangeSlider>
+<sliders:SfRangeSlider Interval="0.2" 
+                       ShowDividers="True">
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -47,12 +47,14 @@ You can change the active and inactive divider radius of the range slider using 
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider Interval="0.2" 
-                           ShowDividers="True">
-   <rangeslider:SfRangeSlider.DividerStyle>
-      <rangeslider:SliderDividerStyle ActiveRadius="7" InactiveRadius="7" />
-   </rangeslider:SfRangeSlider.DividerStyle>
-</rangeslider:SfRangeSlider>
+<sliders:SfRangeSlider Interval="0.2" 
+                       ShowDividers="True">
+   
+   <sliders:SfRangeSlider.DividerStyle>
+      <sliders:SliderDividerStyle ActiveRadius="7" InactiveRadius="7" />
+   </sliders:SfRangeSlider.DividerStyle>
+
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -80,16 +82,18 @@ Also, you can change the active and inactive divider stroke color of the range s
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider Interval="0.2" 
-                           ShowDividers="True">
-   <rangeslider:SfRangeSlider.DividerStyle>
-        <rangeslider:SliderDividerStyle ActiveRadius="7" 
-                                        InactiveRadius="7" 
-                                        ActiveStrokeThickness="2" 
-                                        InactiveStrokeThickness="2" 
-                                        ActiveStroke="#EE3F3F" 
-                                        InactiveStroke="#F7B1AE"/>
-   </rangeslider:SfRangeSlider.DividerStyle>
+<sliders:SfRangeSlider Interval="0.2" 
+                       ShowDividers="True">
+   
+   <sliders:SfRangeSlider.DividerStyle>
+        <sliders:SliderDividerStyle ActiveRadius="7" 
+                                    InactiveRadius="7" 
+                                    ActiveStrokeThickness="2" 
+                                    InactiveStrokeThickness="2" 
+                                    ActiveStroke="#EE3F3F" 
+                                    InactiveStroke="#F7B1AE"/>
+   </sliders:SfRangeSlider.DividerStyle>
+
 </rangeslider:SfRangeSlider>
 
 {% endhighlight %}
@@ -120,15 +124,17 @@ You can change the active and inactive divider color of the range slider using t
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider Interval="0.2" 
-                           ShowDividers="True">
-    <rangeslider:SfRangeSlider.DividerStyle>
-        <rangeslider:SliderDividerStyle ActiveRadius="7" 
-                                        InactiveRadius="7" 
-                                        ActiveFill="#EE3F3F" 
-                                        InactiveFill="#F7B1AE"/>
-     </rangeslider:SfRangeSlider.DividerStyle>
-</rangeslider:SfRangeSlider>
+<sliders:SfRangeSlider Interval="0.2" 
+                       ShowDividers="True">
+    
+    <sliders:SfRangeSlider.DividerStyle>
+        <sliders:SliderDividerStyle ActiveRadius="7" 
+                                    InactiveRadius="7" 
+                                    ActiveFill="#EE3F3F" 
+                                    InactiveFill="#F7B1AE"/>
+     </sliders:SfRangeSlider.DividerStyle>
+
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 

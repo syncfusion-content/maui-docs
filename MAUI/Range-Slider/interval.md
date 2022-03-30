@@ -21,15 +21,15 @@ For example, if [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider Minimum="0" 
-                           Maximum="10" 
-                           Interval="2"  
-                           RangeStart="2" 
-                           RangeEnd="8" 
-                           ShowLabels="True" 
-                           ShowTicks="True" 
-                           ShowDividers="True">
-</rangeslider:SfRangeSlider>
+<sliders:SfRangeSlider Minimum="0" 
+                       Maximum="10" 
+                       RangeStart="2" 
+                       RangeEnd="8"
+                       Interval="2" 
+                       ShowLabels="True" 
+                       ShowTicks="True" 
+                       ShowDividers="True">
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -63,17 +63,17 @@ For example, if [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 
 {% highlight xaml %}
 
-<rangeslider:SfDateTimeRangeSlider Minimum="2000-01-01" 
-                                   Maximum="2005-01-01" 
-                                   Interval="1" 
-                                   RangeStart="2001-01-01" 
-                                   RangeEnd="2004-01-01" 
-                                   DateFormat="yyyy" 
-                                   IntervalType="Years" 
-                                   ShowLabels="True" 
-                                   ShowTicks="True" 
-                                   ShowDividers="True">
-</rangeslider:SfDateTimeRangeSlider>
+<sliders:SfDateTimeRangeSlider Minimum="2000-01-01" 
+                               Maximum="2005-01-01" 
+                               RangeStart="2001-01-01" 
+                               RangeEnd="2004-01-01"
+                               Interval="1" 
+                               IntervalType="Years"
+                               DateFormat="yyyy" 
+                               ShowLabels="True" 
+                               ShowTicks="True" 
+                               ShowDividers="True">
+</sliders:SfDateTimeRangeSlider>
 
 {% endhighlight %}
 
@@ -105,16 +105,16 @@ You can move the thumb in discrete manner for numeric values using the [`StepSiz
 
 {% highlight xaml %}
 
- <rangeslider:SfRangeSlider StepSize="2"
-                            Minimum="0" 
-                            Maximum="10" 
-                            Interval="2"  
-                            RangeStart="2" 
-                            RangeEnd="8" 
-                            ShowLabels="True" 
-                            ShowTicks="True" 
-                            ShowDividers="True"> 
-</rangeslider:SfRangeSlider>
+ <sliders:SfRangeSlider Minimum="0" 
+                        Maximum="10" 
+                        RangeStart="2" 
+                        RangeEnd="8"
+                        Interval="2"
+                        StepSize="2" 
+                        ShowLabels="True" 
+                        ShowTicks="True" 
+                        ShowDividers="True"> 
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -147,15 +147,15 @@ For example, if [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider Minimum="2000-01-01" 
-                           Maximum="2005-01-01" 
-                           RangeStart="2001-01-01"
-                           RangeEnd="2004-01-01"  
-                           StepDuration="1"
-                           ShowLabels="True" 
-                           ShowTicks="True" 
-                           ShowDividers="True" >
-</rangeslider:SfRangeSlider>
+<sliders:SfRangeSlider Minimum="2000-01-01" 
+                       Maximum="2005-01-01" 
+                       RangeStart="2001-01-01"
+                       RangeEnd="2004-01-01"  
+                       StepDuration="1"
+                       ShowLabels="True" 
+                       ShowTicks="True" 
+                       ShowDividers="True" >
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -186,15 +186,15 @@ If true, both the thumbs can be only moved on the slider Interval.
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider Minimum="0" 
-                           Maximum="10"
-                           Interval="2" 
-                           RangeStart="2"
-                           RangeEnd="8"
-                           ShowTicks="True"
-                           ShowLabels="True"
-                           EnableIntervalSelection="True" >
-</rangeslider:SfRangeSlider>
+<sliders:SfRangeSlider Minimum="0" 
+                       Maximum="10"
+                       RangeStart="2"
+                       RangeEnd="8"
+                       Interval="2"
+                       ShowTicks="True"
+                       ShowLabels="True"
+                       EnableIntervalSelection="True" >
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -202,9 +202,10 @@ If true, both the thumbs can be only moved on the slider Interval.
 
 SfRangeSlider rangeSlider = new SfRangeSlider();
 rangeSlider.Minimum = 0;
-rangeSlider.Maximum = 0;
+rangeSlider.Maximum = 10;
 rangeSlider.RangeStart = 2; 
-rangeSlider.RangeEnd = 8;        
+rangeSlider.RangeEnd = 8;
+rangeSlider.Interval = 2;        
 rangeSlider.ShowLables = true;
 rangeSlider.ShowTicks = true;    
 rangeSlider.EnableIntervalSelection = true;

@@ -288,7 +288,7 @@ Tooltips are used to show information about the segment, when mouse over on it. 
 
 <chart:SfCircularChart>
     . . .
-    <chart:PieSeries ShowTooltip="True"/>
+    <chart:PieSeries EnableTooltip="True"/>
 </chart:SfCircularChart>
 
 {% endhighlight %}
@@ -298,7 +298,7 @@ Tooltips are used to show information about the segment, when mouse over on it. 
 SfCircularChart chart = new SfCircularChart();
 . . .
 PieSeries series = new PieSeries();
-series.ShowTooltip = true;
+series.EnableTooltip = true;
 chart.Series.Add(series);
 
 {% endhighlight %}
@@ -322,7 +322,7 @@ The following code example gives you the complete code of above configurations.
         <chart:ChartLegend/>
     </chart:SfCircularChart.Legend>
     <chart:SfCircularChart.Series>
-        <chart:PieSeries ItemsSource="{Binding Data}" ShowDataLabels="True" XBindingPath="Product" ShowTooltip="True" YBindingPath="SalesRate">
+        <chart:PieSeries ItemsSource="{Binding Data}" ShowDataLabels="True" XBindingPath="Product" EnableTooltip="True" YBindingPath="SalesRate">
         </chart:PieSeries>
     </chart:SfCircularChart.Series>
 </chart:SfCircularChart>
@@ -350,7 +350,7 @@ public partial class MainPage : ContentPage
         series.ItemsSource = viewModel.Data;
         series.XBindingPath = "Product";
         series.YBindingPath = "SalesRate";
-        series.ShowTooltip = true;
+        series.EnableTooltip = true;
         series.ShowDataLabels = true;
         chart.Series.Add(series);
         this.Content = chart;

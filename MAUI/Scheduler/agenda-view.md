@@ -130,12 +130,12 @@ You can customize the month header appearance by using the `MonthHeaderTemplate`
     <Grid.Resources>
         <DataTemplate x:Key="todayDateTemplate">
             <Grid>
-                <Label x:Name="label" HorizontalOptions="Center" Background="BlueViolet" VerticalOptions="Center" TextColor="Yellow" FontSize="25"  Text="{Binding StringFormat='{0:MMMM yyyy}'}" />
+                <Label x:Name="label" HorizontalOptions="Center" Background="MediumPurple" VerticalOptions="Center" TextColor="Yellow" FontSize="25"  Text="{Binding StringFormat='{0:MMMM yyyy}'}" />
             </Grid>
         </DataTemplate>
         <DataTemplate x:Key="normalDateTemplate">
             <Grid>
-                <Label x:Name="label" HorizontalOptions="Center" Background="BlueViolet" VerticalOptions="Center" TextColor="White" FontSize="25"  Text="{Binding StringFormat='{0:MMMM yyyy}'}" />
+                <Label x:Name="label" HorizontalOptions="Center" Background="MediumPurple" VerticalOptions="Center" TextColor="White" FontSize="25"  Text="{Binding StringFormat='{0:MMMM yyyy}'}" />
             </Grid>
         </DataTemplate>
         <local:AgendaViewTemplateSelector x:Key="agendaViewTemplateSelector" TodayDateTemplate="{StaticResource todayDateTemplate}" NormalDateTemplate="{StaticResource normalDateTemplate}"/>
