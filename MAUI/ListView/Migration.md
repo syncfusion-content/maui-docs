@@ -1,13 +1,13 @@
 ---
 layout : post
 title : Migrating from Xamarin SfListView to .NET MAUI SfListView | Syncfusion 
-description : Learn here all about Migrating from Xamarin ListView to .NET MAUI ListView
+description : Learn here all about Migrating from Xamarin SfListView to .NET MAUI SfListView
 platform : MAUI
 control : SfListView
 documentation : ug
 ---  
 
-# Migrating from Xamarin ListView to .NET MAUI ListView 
+# Migrating from Xamarin SfListView to .NET MAUI SfListView 
 
 The .NET MAUI ListView control is used to present lists of data in a vertical or horizontal orientation with different layouts virtually. It supports essential features such as selection, template selectors, horizontal and vertical orientation, load more, autofitting items, and more. The control also supports sorting, grouping, and filtering with optimization for working with large amounts of data.
 
@@ -35,7 +35,7 @@ xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Mau
 {% endhighlight %} 
 
 
-The following tables shows the API comparision between Xamarin SfListView and .NET MAUI ListView,
+The following tables shows the API comparison between Xamarin SfListView and .NET MAUI SfListView.
 
 Properties
 <table> 
@@ -84,7 +84,7 @@ Classes
 <tr> 
 <td>{{'[FooterPosition](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.FooterPosition.html)'| markdownify}}</td>
 <td>{{'[ListViewFooterPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewFooterItem.html)'| markdownify }}</td>
-<td>Defines the position of the footer when IsSticyFooter is enabled.</td></tr> 
+<td>Defines the position of the footer when IsStickyFooter is enabled.</td></tr> 
 <tr>
 <td>{{'[GroupHeader](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.GroupHeaderItem.html)'| markdownify}}</td>
 <td>{{'[ListViewHGroupHeader](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewGroupHeaderItem.html)'| markdownify }}</td>
