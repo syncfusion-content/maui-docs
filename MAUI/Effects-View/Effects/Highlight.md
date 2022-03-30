@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The .NET MAUI Effects View control | Syncfusion
+title: The .NET MAUI Highlight Effects | Effects View control | Syncfusion
 description: Learn here all about highlight effect support in Syncfusion .NET MAUI Effects View (SfEffectsView) control and more.
 platform: maui
 control: Effects View
@@ -34,4 +34,4 @@ var effectsView = new SfEffectsView
 
 {% endtabs %}
 
-![.NET MAUI Effects View highlight effect](Effects_images/EffectsView_Highlight.png)
+![.NET MAUI highlight effect](Effects_images/net_maui_highlight_effect.png)
