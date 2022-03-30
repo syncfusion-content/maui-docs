@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The .NET MAUI Rotate Animation Effects | Effects View control | Syncfusion
+title: The .NET MAUI Rotate Animation | Effects View control | Syncfusion
 description: Learn here all about rotation effect support in Syncfusion .NET MAUI Effects View (SfEffectsView) control and more.
 platform: maui
 control: Effects View
@@ -33,3 +33,5 @@ var effectsView = new SfEffectsView
 {% endhighlight %}
 
 {% endtabs %}
+
+![.NET MAUI rotate animation](Effects_images/net_maui_rotate_animation.gif)
