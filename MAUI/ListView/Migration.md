@@ -13,10 +13,10 @@ The .NET MAUI ListView control is used to present lists of data in a vertical or
 
 ## Adding Reference 
 
-SfListView Assembly Name : Syncfusion.SfListView.XForms
+SfListView Assembly Name : Syncfusion.SfListView.XForms         
 SfListView Namespace Name : Syncfusion.Listview.XForms
 
-SfListView Assembly Name : Syncfusion.Maui.ListView
+SfListView Assembly Name : Syncfusion.Maui.ListView             
 SfListView Namespace Name : Syncfusion.Maui.ListView
 
 
@@ -24,13 +24,13 @@ The following code example shows xmlns namespace for both Xamarin SfListView and
 
 ### Xamarin SfListView
 
-{% highlight xaml%} 
+{% highlight xaml%}        
 xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
 {% endhighlight %} 
 
 ### .NET MAUI SfListView
 
-{% highlight xaml %} 
+{% highlight xaml %}       
 xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView" 
 {% endhighlight %} 
 
