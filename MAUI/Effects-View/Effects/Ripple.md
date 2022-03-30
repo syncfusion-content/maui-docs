@@ -31,4 +31,4 @@ var effectsView = new SfEffectsView()
 
 {% endtabs %}
 
-![.NET MAUI ripple effect](Effects_images/net_maui_ripple_effect.gif)
+![.net maui ripple effect](Effects_images/net_maui_ripple_effect.gif)

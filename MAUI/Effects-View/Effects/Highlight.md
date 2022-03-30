@@ -34,4 +34,4 @@ var effectsView = new SfEffectsView
 
 {% endtabs %}
 
-![.NET MAUI highlight effect](Effects_images/net_maui_highlight_effect.png)
+![.net maui highlight effect](Effects_images/net_maui_highlight_effect.png)

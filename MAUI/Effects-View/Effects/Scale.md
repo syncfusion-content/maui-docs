@@ -38,4 +38,4 @@ var effectsView = new SfEffectsView
 
 {% endtabs %}
 
-![.NET MAUI scale animation](Effects_images/net_maui_scale_animation.png)
+![.net maui scale animation](Effects_images/net_maui_scale_animation.png)
