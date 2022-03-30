@@ -34,4 +34,4 @@ var effectsView = new SfEffectsView
 
 {% endtabs %}
 
-![.NET MAUI rotate animation](Effects_images/net_maui_rotate_animation.gif)
+![.NET MAUI rotation animation](Effects_images/net_maui_rotation_animation.gif)
