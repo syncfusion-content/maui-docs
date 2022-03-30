@@ -44,11 +44,11 @@ this.Scheduler.AppointmentsSource = appointments;
 
 ![agenda-view-in-maui-scheduler](images/agenda-view/agenda-view-in-maui-scheduler.png)
 
-## Month header customization
+## Month header appearance customization
 
 The agenda month header view can be customized by using the `MonthHeaderSettings` property of `AgendaView` in the `SfScheduler.`
 
-### Customize month header appearance using style
+#### Customize month header appearance using style
 
 You can style the date format, height, text style, and background color by using the properties such as `DateFormat,` `Height,` `TextStyle,` and `Background` properties of `MonthHeaderSettings.`
 
@@ -88,7 +88,7 @@ this.Scheduler.AgendaView.MonthHeaderSettings.Background = Brush.LightGreen;
 
 ![month-header-appearence-text-style-customization-in-maui-scheduler](images/agenda-view/month-header-appearence-text-style-customization-in-maui-scheduler.png)
 
-### Customize month header appearance using DataTemplate
+#### Customize month header appearance using DataTemplate
 
 You can customize the month header appearance of scheduler by using the `MonthHeaderTemplate` property of `AgendaView.`
 
@@ -119,7 +119,7 @@ N>
 * The default values for `DateFormat` and `Height` are `MMMM yyyy` and `150,` respectively.
 * For desktop UI, The agenda view displays the appointment only.
 
-### Customize month header appearance using DataTemplateSelector
+#### Customize month header appearance using DataTemplateSelector
 
 You can customize the month header appearance by using the `MonthHeaderTemplate` property of `AgendaView` in the `SfScheduler.` The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to month header by using the `MonthHeaderTemplate.` It allows you to choose a different data template for each month header, as well as customize the appearance of a particular month header based on certain conditions.
 
@@ -181,7 +181,7 @@ N>
 * For desktop UI, The agenda view displays the appointment only.
 * When using data template selector, performance issues occur as the conversion template views take time within the framework.
 
-## Week header customization
+## Week header appearance customization
 
 The agenda week header view can be customized by using the `WeekHeaderSettings` property of `AgendaView` in the `SfScheduler.`
 
@@ -227,7 +227,7 @@ N>
 * The default value for `DateFormat,` and `Height` are `MMM dd,` and `30` respectively.
 * For desktop UI, The agenda view displays the appointment only.
 
-## Day header customization
+## Day header appearance customization
 
 The agenda day header view can be customized by using the `DayHeaderSettings` property of `AgendaView` in the `SfScheduler.`
 
@@ -270,7 +270,7 @@ this.Scheduler.AgendaView.DayHeaderSettings.Background = Brush.LightGreen;
 
 N> The default value of `DayFormat` is `MMM, ddd.`
 
-## Appointment text customization
+## Appointment text appearance customization
 
 The appointment text style can be customized by using the `AppointmentTextStyle` property of the `SfScheduler.`
 

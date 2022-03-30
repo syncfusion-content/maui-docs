@@ -824,11 +824,11 @@ N>
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/RecursiveExceptionAppointment/BusinessObject)
 
-## Appointment customization
+## Appointment appearance customization
 
-The appointment customization can be achieved by using the `TextStyle` and `DateTemplate` in the `SfScheduler.`
+The appointment appearance customization can be achieved by using the `TextStyle` and `AppointmentTemplate` properties in the `SfScheduler.`
 
-### Customize appointment appearance using text style
+#### Customize appointment appearance using text style
 
 The appointment text style can be customized by using the [AppointmentTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentTextStyle) property of the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
@@ -862,7 +862,7 @@ this.Scheduler.AppointmentTextStyle = appointmentTextStyle;
 
 ![customize-appointment-text-style-appearence-in-maui-scheduler](images/appointments/customize-appointment-text-style-appearence-in-maui-scheduler.png)
 
-### Customize appointment appearance using DataTemplate
+#### Customize appointment appearance using DataTemplate
 
 You can customize the appointment appearance by using the `AppointmentTemplate` properties of `DaysView,` `TimelineView,` and `MonthView` in the `SfScheduler.`
 
@@ -914,7 +914,7 @@ N>
 * By default, the `SchedulerAppointment` is set as the `BindingContext` for `AppointmentTemplate` for both `SchedulerAppointment` and custom data object in `AppointmentsSource.`
 * The Custom data object can be bound in `AppointmentTemplate` by using `SchedulerAppointment.Data.`
 
-### Customize appointment appearance using DataTemplateSelector
+#### Customize appointment appearance using DataTemplateSelector
 
 You can customize the appointment appearance by using the `AppointmentTemplate` property of `DaysView,` `TimelineView,` and `MonthView` in the `SfScheduler.` The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler appointment appearance by using the `AppointmentTemplate.` It allows you to choose a different data template for each appointment, as well as to customize the appearance of a particular appointment based on certain conditions.
 

@@ -63,11 +63,11 @@ this.Scheduler.HeaderView.TextFormat = "MMM yy";
 
 ![customize-header-date-format-in-maui-scheduler](images/header-view/customize-header-date-format-in-maui-scheduler.png)
 
-## Header customization
+## Header appearance customization
 
 The header can be customized by using the `HeaderView` property of the `SfScheduler.`
 
-### Customize header appearance using text style
+#### Customize header appearance using text style
 
 You can style the background color and textStyle by using the properties such as `Background` and `TextStyle` properties of `HeaderView.`
 
@@ -100,7 +100,7 @@ this.Scheduler.HeaderView.Background = Brush.LightGreen;
 
 ![customize-header-appearance-using-text-style-in-maui-scheduler](images/header-view/customize-header-appearance-using-text-style-in-maui-scheduler.png)
 
-### Customize header appearance using DataTemplate
+#### Customize header appearance using DataTemplate
 
 You can customize the header appearance by using the `HeaderTemplate` property of `HeaderView` in the `SfScheduler.` 
 
@@ -135,7 +135,7 @@ You can customize the header appearance by using the `HeaderTemplate` property o
 
 ![customize-header-appearance-using-template-in-maui-scheduler](images/header-view/customize-header-appearance-using-template-in-maui-scheduler.png)
 
-### Customize header appearance using DataTemplateSelector
+#### Customize header appearance using DataTemplateSelector
 
 You can customize the header appearance by using the `HeaderTemplate` property of `HeaderView` in the `SfScheduler.` The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler header by using the `HeaderTemplate.` It allows you to choose a different data template for each header, as well as to customize the appearance of a particular header based on certain conditions.
 

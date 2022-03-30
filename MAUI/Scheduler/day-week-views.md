@@ -269,7 +269,11 @@ private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 
 ![recurring-exception-time-region-selection-restriction-in-timeslots-views-in-maui-scheduler](images/day-week-views/recurring-exception-time-region-selection-restriction-in-timeslots-views-in-maui-scheduler.png)
 
-### Customize special time region appearance using style
+### Customize special time region appearance
+
+The special time region appearance customization can be achieved by using the `TextStyle` and `TimeRegionTemplate` properties of `DaysView` in the `SfScheduler.`
+
+#### Customize special time region appearance using style
 
 The specialTimeRegion background and text style can be customized by using the [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_Background) and [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeRegion.html#Syncfusion_Maui_Scheduler_SchedulerTimeRegion_TextStyle) properties of `TimeRegion.` It is used to customize the background color for time region background and text style for the text of the specialTimeRegion.
 
@@ -314,7 +318,7 @@ private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 
 ![time-region-appearence-customization-in-timeslots-views-in-maui-scheduler](images/day-week-views/time-region-appearence-customization-in-timeslots-views-in-maui-scheduler.png)
 
-### Customize special time region appearance using DataTemplate
+#### Customize special time region appearance using DataTemplate
 
 You can customize the time region appearance by using the `TimeRegionTemplate` property of `DaysView` in the `SfScheduler.`
 
@@ -363,7 +367,7 @@ private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 
 ![time-region-appearence-template-customization-in-timeslots-views-in-maui-scheduler](images/day-week-views/time-region-appearence-template-customization-in-timeslots-views-in-maui-scheduler.png)
 
-### Customize special time region appearance using DataTemplateSelector
+#### Customize special time region appearance using DataTemplateSelector
 
 You can customize the time region appearance by using the `TimeRegionTemplate` property of `DaysView` in the `SfScheduler.` The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler time region by using the `TimeRegionTemplate.` It allows you to choose a different data template for each time region, as well as customize the appearance of a particular time region based on certain conditions.
 
@@ -685,7 +689,11 @@ this.Scheduler.AppointmentsSource = appointments;
 {% endhighlight %}
 {% endtabs %}
 
-## View header text formatting
+## View header
+
+You can customize the default appearance of view header in a day, week, and work week views by setting the `DateFormat,` `DayFormat`, `Background,` `DateTextStyle,` `DayTextStyle,` `Height,` and `ViewHeaderTemplate` properties of `DaysView` in the `SfScheduler.`
+
+### View header text formatting
 
 The date and day format of SfScheduler ViewHeader can be customized by using the `DateFormat` and `DayFormat` properties of `DaysView.`
 
@@ -744,7 +752,11 @@ this.Scheduler.DaysView.ViewHeaderSettings.Height = 100;
 
 ![customize-view-header-height-in-timeslot-views-in-maui-scheduler](images/day-week-views/customize-view-header-height-in-timeslot-views-in-maui-scheduler.png)
 
-### Customize view header appearance using text style
+### Customize view header appearance
+
+The view header appearance customization can be achieved by using the `TextStyle` and `ViewHeaderTemplate` properties of `DaysView` in the `SfScheduler.`
+
+#### Customize view header appearance using text style
 
 The background color and text style for the labels mentioning the time can be customized, by setting the `Background,` `DateTextStyle,` and `DayTextStyle` properties of `DaysView` in the Scheduler.
 
@@ -787,7 +799,7 @@ this.Scheduler.DaysView.ViewHeaderSettings.Background = Brush.LightGreen;
 
 ![customize-view-header-text-style-in-maui-scheduler](images/day-week-views/customize-view-header-text-style-in-maui-scheduler.png)
 
-### Customize view header appearance using DataTemplate
+#### Customize view header appearance using DataTemplate
 
 You can customize the view header appearance by using the `ViewHeaderTemplate` property of `DaysView` in the `SfScheduler.`
 
@@ -835,7 +847,7 @@ You can customize the view header appearance by using the `ViewHeaderTemplate` p
 N>
 * The BindingContext of the `ViewHeaderTemplate` is the`DateTime.` The `SelectableDayPredicate,` `MinimumDateTime,` and `MaximumDateTime` properties of date and time values can be used directly in the data template selector.
 
-### Customize view header appearance using DataTemplateSelector
+#### Customize view header appearance using DataTemplateSelector
 
 You can customize the view header appearance by using the `ViewHeaderTemplate` property of `DaysView` in the `SfScheduler.` The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler view header by using the `ViewHeaderTemplate.` It allows you to choose a different data template for each view header, as well as customize the appearance of a particular view header based on certain conditions.
 
