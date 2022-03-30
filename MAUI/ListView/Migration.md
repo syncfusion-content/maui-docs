@@ -38,6 +38,7 @@ xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Mau
 The following tables shows the API comparison between Xamarin SfListView and .NET MAUI SfListView.
 
 Properties
+
 <table> 
 <tr>
 <th>Xamarin SfListView</th>
@@ -57,7 +58,7 @@ Properties
 <td>Gets or sets the selection background color for the selected item.</td></tr>
 </table> 
 
-Events 
+Events
 
 <table>
 <tr>
@@ -93,6 +94,14 @@ Classes
 <td>{{[HeaderItem](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.HeaderItem.html)'| markdownify }}</td>
 <td>{{[ListViewHeaderItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewHeaderItem.html)'| markdownify }}</td>
 <td>Represents the header item of data in the SfListView control.</td></tr>
+<tr> 
+<td>{{'[LoadMoreIndicator](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.LoadMoreIndicator.html)'| markdownify }}</td>
+<td>{{'[ListViewLoadMoreIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewLoadMoreIndicator.html)"| markdownify }}</td>
+<td>A loading indicator which will be displayed when loading more items into the list view is in progress.</td></tr>
+<tr>
+<td>{{'[LoadMoreItem](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.LoadMoreItem.html)'| markdownify }}</td>
+<td>{{'[ListViewLoadMoreItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewLoadMoreItem.html)'| markdownify }}</td>
+<td>Represents the load more item in a SfListView control.</td></tr>
 <tr>
 <td>{{'[LayoutBase](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.LayoutBase.html)'| markdownify }}</td>
 <td>{{'[ListViewLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewLayout.html)'| markdownify }}</td>
