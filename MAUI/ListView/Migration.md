@@ -13,27 +13,40 @@ The .NET MAUI ListView control is used to present lists of data in a vertical or
 
 ## Adding Reference 
 
-SfListView Assembly Name : Syncfusion.SfListView.XForms         
-SfListView Namespace Name : Syncfusion.Listview.XForms
+Assembly Name :
+<table>
+<tr>
+<th>Xamarin SfListView</th>
+<th>.NET MAUI SfListView</th></tr>
+<tr>
+<td>Syncfusion.SfListView.XForms</td>
+<td>Syncfusion.Maui.ListView</td></tr>
+</table>
 
-SfListView Assembly Name : Syncfusion.Maui.ListView             
-SfListView Namespace Name : Syncfusion.Maui.ListView
-
-
-The following code example shows xmlns namespace for both Xamarin SfListView and .NET MAUI SfListView control.
-
-### Xamarin SfListView
-
-{% highlight xaml%}        
-xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
-{% endhighlight %} 
-
-### .NET MAUI SfListView
-
-{% highlight xaml %}       
-xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView" 
-{% endhighlight %} 
-
+Namespaces :
+<table>
+<tr>
+<th>Xamarin SfListView</th>
+<th>.NET MAUI SfListView</th></tr>
+<tr>
+<td>Syncfusion.ListView.XForms</td>
+<td>Syncfusion.Maui.ListView</td></tr>
+<tr>
+<td>Syncfusion.ListView.XForms.Control.Helpers</td>
+<td>Syncfusion.Maui.ListView.Helpers</td></tr>
+<tr>
+<td>Syncfusion.Core.XForms</td>
+<td>Syncfusion.Maui.Core</td></tr>
+<tr>
+<td>Syncfusion.ListView.XForms</td>
+<td>Syncfusion.Maui.Core.Converters</td></tr>
+<tr>
+<td>Syncfusion.DataSource</td>
+<td>Syncfusion.Maui.DataSource</td></tr>
+<tr>
+<td>Syncfusion.DataSource.Extensions</td>
+<td>Syncfusion.Maui.DataSource.Extensions</td></tr>
+</table>
 
 The following tables shows the API comparison between Xamarin SfListView and .NET MAUI SfListView.
 
@@ -58,6 +71,23 @@ Properties
 <td>Gets or sets the selection background color for the selected item.</td></tr>
 </table> 
 
+Enums
+
+<table>
+<tr>
+<th>Enum</th>
+<th>Xamarin SfListView</th>
+<th>.NET MAUI SfListView</th></tr>
+<tr>
+<td>LoadMorePosition</td>
+<td>Top,<br/>Bottom</td>
+<td>Start,<br/>End</td></tr>
+<tr>
+<td>TouchGesture</td>
+<td>Hold</td>
+<td>LongPress</td></tr>
+</table>
+
 Events
 
 <table>
@@ -66,8 +96,8 @@ Events
 <th>.NET MAUI SfListView</th>
 <th>Description</th></tr>
 <tr>
-<td>{{[ItemHolding](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.SfListView.html#Syncfusion_ListView_XForms_SfListView_ItemHolding)'| markdownify}}</td>
-<td>{{[ItemLongPress](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemLongPress)'| markdownify}}</td>
+<td>{{'[ItemHolding](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.SfListView.html#Syncfusion_ListView_XForms_SfListView_ItemHolding)'| markdownify}}</td>
+<td>{{'[ItemLongPress](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemLongPress)'| markdownify}}</td>
 <td>Occurs when an item is long pressed.</td></tr>
 </table> 
 
@@ -91,9 +121,13 @@ Classes
 <td>{{'[ListViewGroupHeader](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewGroupHeaderItem.html)'| markdownify }}</td>
 <td>Represents the group header item in a SfListView control.</td></tr>
 <tr>
-<td>{{[HeaderItem](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.HeaderItem.html)'| markdownify }}</td>
-<td>{{[ListViewHeaderItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewHeaderItem.html)'| markdownify }}</td>
+<td>{{'[HeaderItem](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.HeaderItem.html)'| markdownify }}</td>
+<td>{{'[ListViewHeaderItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewHeaderItem.html)'| markdownify }}</td>
 <td>Represents the header item of data in the SfListView control.</td></tr>
+<tr>
+<td>{{'[ItemHoldingEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.ItemHoldingEventArgs.html)'| markdownify }}</td>
+<td>{{'[ItemLongPressEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemLongPressEventArgs.html)'| markdownify }}</td>
+<td>Provides data for ItemLongPress event.</td></tr> 
 <tr> 
 <td>{{'[LoadMoreIndicator](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.LoadMoreIndicator.html)'| markdownify }}</td>
 <td>{{'[ListViewLoadMoreIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewLoadMoreIndicator.html)'| markdownify }}</td>
