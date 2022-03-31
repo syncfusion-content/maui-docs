@@ -22,7 +22,7 @@ These can be achieved in two ways:
 * QueryAppointments event
 * QueryAppointments command
 
-#### QueryAppointments event
+### QueryAppointments event
 
 This event occurs when the view of the scheduler or the visible dates are changed, and it also allows the `AppointmentsSource` for the visible dates to be loaded in on-demand. The following is a list of the arguments:
 
@@ -125,7 +125,7 @@ N> The QueryAppointments event will be triggered, if any one of the following ac
 * In the scheduler agenda view, the `QueryAppointments` event is used to load more appointments when the new month is loaded on view, whereas the new month appointments are added in scheduler `AppointmentsSource.`
 * Other than agenda view, the scheduler `AppointmentsSource` can be reset for a new visible date range to improve appointment loading performance.
 
-#### QueryAppointments command
+### QueryAppointments command
 
 The Scheduler notifies the `QueryAppointmentsCommand,` when the view of the scheduler or the visible dates are changed. Get a list of visible dates from the `SchedulerQueryAppointmentsEventArgs.` The default value for this `ICommand` is `null.` The `SchedulerQueryAppointmentsEventArgs` was passed as a command parameter.
 
@@ -286,7 +286,7 @@ N>
 * When using the `QueryAppointments` or `QueryAppointmentsCommand,` you can start and stop the animation before and after the appointments load.
 * When `QueryAppointments` or `QueryAppointmentsCommand` are not used, and show busy indicator is enabled, the busy indicator will be stopped once the appointment is rendered.
 
-#### Busy indicator appearance
+## Busy indicator appearance
 
 You can customize the busy indicator appearance by using the `BusyIndicatorTemplate` property of `SfScheduler.`
 
