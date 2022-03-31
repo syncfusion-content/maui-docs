@@ -89,7 +89,7 @@ The following states will be notified using the [ListViewScrollState](https://he
 listView.ScrollStateChanged += ListView_ScrollStateChanged;
 private void ListView_ScrollStateChanged(object sender, ScrollStateChangedEventArgs e)
 {
-   if (e.ScrollState == ListViewScrollState..Idle)
+   if (e.ScrollState == ListViewScrollState.Idle)
    {
       DisplayAlert("ScrollState", "Scrolling has stopped", "OK");
    }
