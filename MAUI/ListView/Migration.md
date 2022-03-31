@@ -64,7 +64,7 @@ Properties
 <tr>
 <td>{{'[HoldCommandParameter](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.SfListView.html#Syncfusion_ListView_XForms_SfListView_HoldCommandParameter)'| markdownify }}</td>
 <td>{{'[LongPressCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LongPressCommandParameter)'| markdownify }}</td>
-<td>Gets or sets the parameter for LongPressCommand</td></tr>
+<td>Gets or sets the parameter for LongPressCommand.</td></tr>
 <tr>
 <td>{{'[SelectionBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.SfListView.html#Syncfusion_ListView_XForms_SfListView_SelectionBackgroundColor)' | markdownify }}</td>
 <td>{{'[SelectionBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionBackground)'| markdownify }}</td>
@@ -77,15 +77,18 @@ Enums
 <tr>
 <th>Enum</th>
 <th>Xamarin SfListView</th>
-<th>.NET MAUI SfListView</th></tr>
+<th>.NET MAUI SfListView</th>
+<th>Description</th></tr>
 <tr>
 <td>LoadMorePosition</td>
 <td>Top,<br/>Bottom</td>
-<td>Start,<br/>End</td></tr>
+<td>Start,<br/>End</td>
+<td>Gets or sets the position which determines where the load more item should be positioned.</td></tr>
 <tr>
 <td>TouchGesture</td>
 <td>Hold</td>
-<td>LongPress</td></tr>
+<td>LongPress</td>
+<td>Describes the possible values of touch operation. These values are used when updating selection in the SfListView control.</td></tr>
 </table>
 
 Events
