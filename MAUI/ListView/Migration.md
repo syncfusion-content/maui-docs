@@ -83,7 +83,7 @@ Enums
 <td>LoadMorePosition</td>
 <td>Top,<br/>Bottom</td>
 <td>Start,<br/>End</td>
-<td>Gets or sets the position which determines where the load more item should be positioned.</td></tr>
+<td>Defines position for the load more support of SfListView.</td></tr>
 <tr>
 <td>TouchGesture</td>
 <td>Hold</td>
@@ -99,8 +99,8 @@ Events
 <th>.NET MAUI SfListView</th>
 <th>Description</th></tr>
 <tr>
-<td>{{'[ItemHolding](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.SfListView.html#Syncfusion_ListView_XForms_SfListView_ItemHolding)'| markdownify}}</td>
-<td>{{'[ItemLongPress](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemLongPress)'| markdownify}}</td>
+<td>{{'[ItemHolding](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.SfListView.html#Syncfusion_ListView_XForms_SfListView_ItemHolding)'| markdownify }}</td>
+<td>{{'[ItemLongPress](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemLongPress)'| markdownify }}</td>
 <td>Occurs when an item is long pressed.</td></tr>
 </table> 
 
