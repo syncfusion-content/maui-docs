@@ -79,7 +79,11 @@ this.Scheduler.MonthView.ShowLeadingAndTrailingDates = false;
 
 ![show-or-hide-leading-and-trailing-days-appearence-customization-in-maui-scheduler](images/month-view/show-or-hide-leading-and-trailing-days-appearence-customization-in-maui-scheduler.png)
 
-## Change day format of view header
+## View header
+
+You can customize the default appearance of view header in a month view by setting the `DayFormat,` `DayTextStyle,` `Background,` `Height,` and `ViewHeaderTemplate` properties of `MonthView` in the `SfScheduler.`
+
+### Change day format of view header
 
 Customize the day format of Scheduler view header by using the `DayFormat` property of `ViewHeaderSettings` in `MonthView.`
 
@@ -137,7 +141,11 @@ this.Scheduler.MonthView.ViewHeaderSettings.Height = 100;
 
 ![customize-view-header-height-in-month-view-in-maui-scheduler](images/month-view/customize-view-header-height-in-month-view-in-maui-scheduler.png)
 
-### Customize view header appearance using text style
+### Customize view header appearance
+
+The view header appearance customization can be achieved by using the `TextStyle` and `ViewHeaderTemplate` properties of `MonthView` in the `SfScheduler.`
+
+#### Customize view header appearance using text style
 
 Customize the month view header day text style, day format and background color by using the `DayTextStyle,` `DayFormat` and `Background` of `ViewHeaderSettings` properties of `MonthView` respectively.
 
@@ -174,7 +182,7 @@ this.Scheduler.MonthView.ViewHeaderSettings.DayTextStyle = dayTextStyle;
 
 ![customize-day-text-format-appearence-of-month-view-header-in-maui-scheduler](images/month-view/customize-day-text-format-appearence-of-month-view-header-in-maui-scheduler.png)
 
-### Customize view header appearance using DataTemplate
+#### Customize view header appearance using DataTemplate
 
 You can customize the view header appearance by using the `ViewHeaderTemplate` property of `MonthView` in the `SfScheduler.`
 
@@ -201,7 +209,7 @@ You can customize the view header appearance by using the `ViewHeaderTemplate` p
 
 ![customize-view-header-appearance-using-template-in-month-view-in-maui-scheduler](images/month-view/customize-view-header-appearance-using-template-in-month-view-in-maui-scheduler.png)
 
-### Customize view header appearance using DataTemplateSelector
+#### Customize view header appearance using DataTemplateSelector
 
 You can customize the view header appearance by using the `ViewHeaderTemplate` property of `MonthView` in the `SfScheduler.` The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler view header by using the `ViewHeaderTemplate.` It allows you to choose a different data template for each view header, as well as customize the appearance of a particular view header based on certain conditions.
 
@@ -257,9 +265,9 @@ N>
 
 ## Month cell appearance
 
-The month cell can be customized by using the `MonthView` property of the `SfScheduler.`
+The month cell appearance can be customized by using the  `CellStyle,` and `CellTemplate` properties of `MonthView` in the `SfScheduler.`
 
-### Customize month cell appearance using text style
+#### Customize month cell appearance using text style
 
 By using the `CellStyle` property of `MonthView,` the month properties such as `Background,` `TodayBackground,` `TrailingMonthBackground,` `LeadingMonthBackground,` `TextStyle,` `TrailingMonthTextStyle,` and `LeadingMonthTextStyle` can be customized.
 
@@ -310,7 +318,7 @@ this.Scheduler.MonthView.CellStyle = monthCellStyle;
 
 ![customize-month-cell-appearance-in-maui-scheduler](images/month-view/customize-month-cell-appearance-in-maui-scheduler.png)
 
-### Customize month cell appearance using DataTemplate
+#### Customize month cell appearance using DataTemplate
 
 You can customize the month cell appearance by using the `CellTemplate` property of `MonthView` in the `SfScheduler.`
 
@@ -340,7 +348,7 @@ You can customize the month cell appearance by using the `CellTemplate` property
 N>
 * The BindingContext of the `CellTemplate` is the `SchedulerMonthCellDetails.`
 
-### Customize month cell appearance using DataTemplateSelector
+#### Customize month cell appearance using DataTemplateSelector
 
 You can customize the month cell appearance by using the `CellTemplate` property of `MonthView` in the `SfScheduler.` The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler month cells by using the `CellTemplate.` It allows you to choose a different data template for each month cell, as well as customize the appearance of a particular month cell based on certain conditions.
 
