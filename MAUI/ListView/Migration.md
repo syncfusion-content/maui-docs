@@ -13,7 +13,7 @@ The .NET MAUI ListView control is used to present lists of data in a vertical or
 
 ## Adding Reference 
 
-Assembly Name :
+Assembly Name 
 <table>
 <tr>
 <th>Xamarin SfListView</th>
@@ -23,7 +23,7 @@ Assembly Name :
 <td>Syncfusion.Maui.ListView</td></tr>
 </table>
 
-Namespaces :
+Namespaces 
 <table>
 <tr>
 <th>Xamarin SfListView</th>
@@ -35,12 +35,6 @@ Namespaces :
 <td>Syncfusion.ListView.XForms.Control.Helpers</td>
 <td>Syncfusion.Maui.ListView.Helpers</td></tr>
 <tr>
-<td>Syncfusion.Core.XForms</td>
-<td>Syncfusion.Maui.Core</td></tr>
-<tr>
-<td>Syncfusion.ListView.XForms</td>
-<td>Syncfusion.Maui.Core.Converters</td></tr>
-<tr>
 <td>Syncfusion.DataSource</td>
 <td>Syncfusion.Maui.DataSource</td></tr>
 <tr>
@@ -48,7 +42,7 @@ Namespaces :
 <td>Syncfusion.Maui.DataSource.Extensions</td></tr>
 </table>
 
-The following tables shows the API comparison between Xamarin SfListView and .NET MAUI SfListView.
+The following tables shows the API changes between Xamarin SfListView and .NET MAUI SfListView.
 
 Properties
 
@@ -143,4 +137,8 @@ Classes
 <td>{{'[LayoutBase](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.LayoutBase.html)'| markdownify }}</td>
 <td>{{'[ListViewLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewLayout.html)'| markdownify }}</td>
 <td>Defines the base for the layouts.</td></tr>
+<tr>
+<td>Syncfusion.ListView.XForms.Helpers.InverseBoolConverter</td>
+<td>Syncfusion.Maui.Core.Converters.InvertedBoolConverter</td>
+<td>Converter to reverse the boolean value.</td></tr>
 </table>
