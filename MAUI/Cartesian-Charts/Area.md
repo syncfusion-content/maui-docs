@@ -19,13 +19,13 @@ The area chart is rendered by using a collection of line segments connected to f
 
 <chart:SfCartesianChart>
     
-    <chart:SfCartesianChart.XAxes>
+    <chart:SfCartesianChart.PrimaryAxis>
         <chart:CategoryAxis />
-    </chart:SfCartesianChart.XAxes>
+    </chart:SfCartesianChart.PrimaryAxis>
 
-    <chart:SfCartesianChart.YAxes>
+    <chart:SfCartesianChart.SecondaryAxis>
         <chart:NumericalAxis />
-    </chart:SfCartesianChart.YAxes>   
+    </chart:SfCartesianChart.SecondaryAxis>   
 
     <chart:SfCartesianChart.Series>
         <chart:AreaSeries ItemsSource="{Binding Data}" XBindingPath="Demand" YBindingPath="Year2010"/>  
@@ -39,9 +39,9 @@ The area chart is rendered by using a collection of line segments connected to f
 
 SfCartesianChart chart = new SfCartesianChart();
 CategoryAxis primaryAxis = new CategoryAxis();
-chart.XAxes.Add(primaryAxis);
+chart.PrimaryAxis = primaryAxis;
 NumericalAxis secondaryAxis = new NumericalAxis();
-chart.YAxes.Add(secondaryAxis);
+chart.SecondaryAxis = secondaryAxis;
 
 AreaSeries series = new AreaSeries()
 {
@@ -69,13 +69,13 @@ The [SplineAreaSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chart
 
 <chart:SfCartesianChart>
 
-    <chart:SfCartesianChart.XAxes>
+    <chart:SfCartesianChart.PrimaryAxis>
         <chart:CategoryAxis />
-    </chart:SfCartesianChart.XAxes>
+    </chart:SfCartesianChart.PrimaryAxis>
 
-    <chart:SfCartesianChart.YAxes>
+    <chart:SfCartesianChart.SecondaryAxis>
         <chart:NumericalAxis />
-    </chart:SfCartesianChart.YAxes>
+    </chart:SfCartesianChart.SecondaryAxis>
             
     <chart:SfCartesianChart.Series>
         <chart:SplineAreaSeries ItemsSource="{Binding Data}" XBindingPath="Demand" YBindingPath="Year2010"/>  
@@ -89,9 +89,9 @@ The [SplineAreaSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chart
 
 SfCartesianChart chart = new SfCartesianChart();
 CategoryAxis primaryAxis = new CategoryAxis();
-chart.XAxes.Add(primaryAxis);
+chart.PrimaryAxis = primaryAxis;
 NumericalAxis secondaryAxis = new NumericalAxis();
-chart.YAxes.Add(secondaryAxis);
+chart.SecondaryAxis = secondaryAxis;
 
 SplineAreaSeries series = new SplineAreaSeries()
 {

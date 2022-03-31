@@ -18,13 +18,13 @@ The [FastLineSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    <chart:SfCartesianChart.XAxes>
+    <chart:SfCartesianChart.PrimaryAxis>
         <chart:DateTimeAxis />
-    </chart:SfCartesianChart.XAxes>
+    </chart:SfCartesianChart.PrimaryAxis>
 
-    <chart:SfCartesianChart.YAxes>
+    <chart:SfCartesianChart.SecondaryAxis>
         <chart:NumericalAxis />
-    </chart:SfCartesianChart.YAxes>  
+    </chart:SfCartesianChart.SecondaryAxis>  
                 
     <chart:SfCartesianChart.Series>
         <chart:FastLineSeries ItemsSource="{Binding Data}" XBindingPath="XValue" YBindingPath="YValue"/>
@@ -37,9 +37,9 @@ The [FastLineSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 
 SfCartesianChart chart = new SfCartesianChart();
 DateTimeAxis primaryAxis = new DateTimeAxis();
-chart.XAxes.Add(primaryAxis);
+chart.PrimaryAxis = primaryAxis;
 NumericalAxis secondaryAxis = new NumericalAxis();
-chart.YAxes.Add(secondaryAxis);
+chart.SecondaryAxis = secondaryAxis;
 
 FastLineSeries series = new FastLineSeries()
 {
@@ -73,13 +73,13 @@ The [StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts
         </DoubleCollection>
     </chart:SfCartesianChart.Resources>
 
-    <chart:SfCartesianChart.XAxes>
+    <chart:SfCartesianChart.PrimaryAxis>
         <chart:chart:DateTimeAxis />
-    </chart:SfCartesianChart.XAxes>
+    </chart:SfCartesianChart.PrimaryAxis>
 
-    <chart:SfCartesianChart.YAxes>
+    <chart:SfCartesianChart.SecondaryAxis>
         <chart:NumericalAxis />
-    </chart:SfCartesianChart.YAxes>  
+    </chart:SfCartesianChart.SecondaryAxis>  
 
     <chart:SfCartesianChart.Series>
         <chart:FastLineSeries ItemsSource="{Binding Data}" XBindingPath="XValue" YBindingPath="YValue" StrokeDashArray="{StaticResource dashArray}"/>
@@ -92,9 +92,9 @@ The [StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts
 
 SfCartesianChart chart = new SfCartesianChart();
 DateTimeAxis primaryAxis = new DateTimeAxis();
-chart.XAxes.Add(primaryAxis);
+chart.PrimaryAxis = primaryAxis;
 NumericalAxis secondaryAxis = new NumericalAxis();
-chart.YAxes.Add(secondaryAxis);
+chart.SecondaryAxis = secondaryAxis;
 
 DoubleCollection doubleCollection = new DoubleCollection();
 doubleCollection.Add(5);

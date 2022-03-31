@@ -21,13 +21,13 @@ N> For category axis, minor tick lines are not applicable. Since it is rendered 
 
 <chart:SfCartesianChart>
 . . .
-<chart:SfCartesianChart.XAxes>
+<chart:SfCartesianChart.PrimaryAxis>
     <chart:NumericalAxis MinorTicksPerInterval="4"/>
-</chart:SfCartesianChart.XAxes>
+</chart:SfCartesianChart.PrimaryAxis>
 
-<chart:SfCartesianChart.YAxes>
+<chart:SfCartesianChart.SecondaryAxis>
     <chart:NumericalAxis />
-</chart:SfCartesianChart.YAxes>
+</chart:SfCartesianChart.SecondaryAxis>
 
 </chart:SfCartesianChart>
 
@@ -37,14 +37,12 @@ N> For category axis, minor tick lines are not applicable. Since it is rendered 
 
 SfCartesianChart chart = new SfCartesianChart();
 . . .
-NumericalAxis primaryAxis = new NumericalAxis()
+chart.PrimaryAxis = new NumericalAxis()
 {
     MinorTicksPerInterval = 4 
 };
-chart.XAxes.Add(primaryAxis);
 
-NumericalAxis secondaryAxis = new NumericalAxis();
-chart.YAxes.Add(secondaryAxis);
+chart.SecondaryAxis = new NumericalAxis();
 
 {% endhighlight %}
 
@@ -60,7 +58,7 @@ Both major and minor tick lines can be customized by using the [MajorTickStyle](
 
 <chart:SfCartesianChart>
 . . .
-<chart:SfCartesianChart.XAxes>
+<chart:SfCartesianChart.PrimaryAxis>
     <chart:NumericalAxis MinorTicksPerInterval="4">
         <chart:NumericalAxis.MajorTickStyle>
             <chart:ChartAxisTickStyle Stroke="Red" StrokeWidth="1" TickSize="10"/>
@@ -70,11 +68,11 @@ Both major and minor tick lines can be customized by using the [MajorTickStyle](
             <chart:ChartAxisTickStyle Stroke="Red" StrokeWidth="1"/>
         </chart:NumericalAxis.MinorTickStyle>
     </chart:NumericalAxis>
-</chart:SfCartesianChart.XAxes>
+</chart:SfCartesianChart.PrimaryAxis>
 
-<chart:SfCartesianChart.YAxes>
+<chart:SfCartesianChart.SecondaryAxis>
     <chart:NumericalAxis />
-</chart:SfCartesianChart.YAxes>
+</chart:SfCartesianChart.SecondaryAxis>
 
 </chart:SfCartesianChart>
 
@@ -90,10 +88,9 @@ numerical.MajorTickStyle.Stroke = Colors.Red;
 numerical.MinorTicksPerInterval = 4;
 numerical.MinorTickStyle.StrokeWidth = 1;
 numerical.MinorTickStyle.Stroke = Colors.Red;
-chart.XAxes.Add(numerical);
+chart.PrimaryAxis = numerical;
 
-NumericalAxis secondaryAxis = new NumericalAxis();
-chart.YAxes.Add(secondaryAxis);
+chart.SecondaryAxis = new NumericalAxis();
 
 {% endhighlight %}
 

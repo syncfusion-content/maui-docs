@@ -14,23 +14,23 @@ The scatter chart is used to represent the each data point by a dot or circle wi
 ## Scatter Chart
 
 To render a scatter chart, create an instance of [ScatterSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ScatterSeries.html?tabs=tabid-1), and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1)
-. The segment size can be defined by using the [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ScatterSeries.html#Syncfusion_Maui_Charts_ScatterSeries_Height) and [Width](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ScatterSeries.html#Syncfusion_Maui_Charts_ScatterSeries_Width) properties.
+. The segment size can be defined by using the [PointHeight]() and [PointWidth]() properties.
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    <chart:SfCartesianChart.XAxes>
+    <chart:SfCartesianChart.PrimaryAxis>
         <chart:NumericalAxis />
-    </chart:SfCartesianChart.XAxes>
+    </chart:SfCartesianChart.PrimaryAxis>
 
-    <chart:SfCartesianChart.YAxes>
+    <chart:SfCartesianChart.SecondaryAxis>
         <chart:NumericalAxis />
-    </chart:SfCartesianChart.YAxes>  
+    </chart:SfCartesianChart.SecondaryAxis>  
                 
     <chart:SfCartesianChart.Series>
-        <chart:ScatterSeries PointHeight="7" PointWidth="7" ItemsSource="{Binding Data}" XBindingPath="XValue" YBindingPath="YValue"/>
+        <chart:ScatterSeries Height="7" Width="7" ItemsSource="{Binding Data}" XBindingPath="XValue" YBindingPath="YValue"/>
     </chart:SfCartesianChart.Series>
 </chart:SfCartesianChart>
 
@@ -40,17 +40,17 @@ To render a scatter chart, create an instance of [ScatterSeries](https://help.sy
 
 SfCartesianChart chart = new SfCartesianChart();
 NumericalAxis primaryAxis = new NumericalAxis();
-chart.XAxes.Add(primaryAxis);
+chart.PrimaryAxis = primaryAxis;
 NumericalAxis secondaryAxis = new NumericalAxis();
-chart.YAxes.Add(secondaryAxis);
+chart.SecondaryAxis = secondaryAxis;
 
 ScatterSeries series = new ScatterSeries()
 {
     ItemsSource = new ViewModel().Data,
     XBindingPath = "XValue",
     YBindingPath = "YValue",
-    PointHeight = 7,
-    PointWidth = 7,
+    Height = 7,
+    Width = 7,
 };
 
 chart.Series.Add(series);

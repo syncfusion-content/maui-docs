@@ -914,7 +914,3 @@ this.FlowDirection = FlowDirection.RightToLeft;
 
 * `SfListView` does not support the right-to-left(RTL) direction when `SfListView.Orientation` is `Horizontal`.
 
-## See also 
-
-[How to change selected image in .NET MAUI ListView (SfListView)](https://www.syncfusion.com/kb/13080/)                                                         
-[How to apply alternate item background in .NET MAUI ListView (SfListView)](https://www.syncfusion.com/kb/13079/)

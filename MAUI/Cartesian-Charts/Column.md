@@ -17,13 +17,13 @@ Column chart is used to plot discrete rectangles for the given data point values
 
 <chart:SfCartesianChart>
 
-    <chart:SfCartesianChart.XAxes>
+    <chart:SfCartesianChart.PrimaryAxis>
         <chart:CategoryAxis />
-    </chart:SfCartesianChart.XAxes>
+    </chart:SfCartesianChart.PrimaryAxis>
 
-    <chart:SfCartesianChart.YAxes>
+    <chart:SfCartesianChart.SecondaryAxis>
         <chart:NumericalAxis />
-    </chart:SfCartesianChart.YAxes>   
+    </chart:SfCartesianChart.SecondaryAxis>   
 
     <chart:SfCartesianChart.Series>
         <chart:ColumnSeries ItemsSource="{Binding Data}" XBindingPath="XValue" YBindingPath="YValue"/>
@@ -37,9 +37,9 @@ Column chart is used to plot discrete rectangles for the given data point values
 
 SfCartesianChart chart = new SfCartesianChart();
 CategoryAxis primaryAxis = new CategoryAxis();
-chart.XAxes.Add(primaryAxis);
+chart.PrimaryAxis = primaryAxis;
 NumericalAxis secondaryAxis = new NumericalAxis();
-chart.YAxes.Add(secondaryAxis);
+chart.SecondaryAxis = secondaryAxis;
 
 ColumnSeries series = new ColumnSeries()
 {
@@ -69,13 +69,13 @@ The [Width](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ColumnSer
 
 <chart:SfCartesianChart>
 
-    <chart:SfCartesianChart.XAxes>
+    <chart:SfCartesianChart.PrimaryAxis>
         <chart:CategoryAxis />
-    </chart:SfCartesianChart.XAxes>
+    </chart:SfCartesianChart.PrimaryAxis>
 
-    <chart:SfCartesianChart.YAxes>
+    <chart:SfCartesianChart.SecondaryAxis>
         <chart:NumericalAxis />
-    </chart:SfCartesianChart.YAxes>  
+    </chart:SfCartesianChart.SecondaryAxis>  
 
     <chart:SfCartesianChart.Series>
         <chart:ColumnSeries ItemsSource="{Binding Data}" XBindingPath="XValue" YBindingPath="YValue" Spacing="0.5" Width="0.6"/>
@@ -89,9 +89,9 @@ The [Width](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ColumnSer
 
 SfCartesianChart chart = new SfCartesianChart();
 CategoryAxis primaryAxis = new CategoryAxis();
-chart.XAxes.Add(primaryAxis);
+chart.PrimaryAxis = primaryAxis;
 NumericalAxis secondaryAxis = new NumericalAxis();
-chart.YAxes.Add(secondaryAxis);
+chart.SecondaryAxis = secondaryAxis;
 
 ColumnSeries series = new ColumnSeries()
 {
@@ -99,7 +99,7 @@ ColumnSeries series = new ColumnSeries()
     XBindingPath = "XValue",
     YBindingPath = "YValue",
     Spacing = 0.5,
-    Width = 0.6
+    Width = "0.6"
 };
 
 chart.Series.Add(series);

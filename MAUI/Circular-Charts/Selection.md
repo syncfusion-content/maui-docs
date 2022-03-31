@@ -13,16 +13,16 @@ Circular chart supports selection that allows to select or highlight a segment i
 
 ## Enable Selection
 
-To enable the selection in chart, create an instance of [ChartSelectionBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelectionBehavior.html) and add it to the [ChartBehaviors](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_ChartBehaviors) collection of circular chart. And also need to set the `SelectionBrush` property to highlight the segment in the series.
+To enable the selection in chart, create an instance of [ChartSelectionBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelectionBehavior.html) and set it to the [SelectionBehavior]() property of circular chart. And also need to set the `SelectionBrush` property to highlight the segment in the series.
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <chart:SfCircularChart>
-    <chart:SfCircularChart.SelectionBehavior>
+    <chart:SfCircularChart.ChartBehaviors>
         <chart:ChartSelectionBehavior />
-    </chart:SfCircularChart.SelectionBehavior>
+    </chart:SfCircularChart.ChartBehaviors>
 <chart:SfCircularChart.Series>
     <chart:PieSeries SelectionBrush="BlueViolet"/>
 </chart:SfCircularChart.Series>
@@ -35,7 +35,7 @@ To enable the selection in chart, create an instance of [ChartSelectionBehavior]
 SfCircularChart chart = new SfCircularChart();
 
 ChartSelectionBehavior selection = new ChartSelectionBehavior();
-chart.SelectionBehavior = selection;
+chart.ChartBehaviors.Add(selection);
 
 PieSeries series = new PieSeries();
 series.SelectionBrush = Brush.BlueViolet;
@@ -46,6 +46,36 @@ chart.Series.Add(series);
 {% endtabs %}
 
 ![Segment selection support in MAUI Chart](Selection_images/maui_chart_segment_selection.png)
+
+## Selection Type
+
+The [Type](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelectionBehavior.html#Syncfusion_Maui_Charts_ChartSelectionBehavior_Type) property allows users to set selection type of series, which includes [Point](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SelectionType.html#Syncfusion_Maui_Charts_SelectionType_Point) and [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SelectionType.html#Syncfusion_Maui_Charts_SelectionType_None). [Type](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelectionBehavior.html#Syncfusion_Maui_Charts_ChartSelectionBehavior_Type) property with [Point](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SelectionType.html#Syncfusion_Maui_Charts_SelectionType_Point) value is used to select segment in a series and [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SelectionType.html#Syncfusion_Maui_Charts_SelectionType_None) is used to set deselect state for all segments. 
+
+{% tabs %}
+
+{% highlight xml %}
+
+<chart:SfCircularChart>
+. . .
+    <chart:SfCircularChart.ChartBehaviors>
+        <chart:ChartSelectionBehavior Type="Point"/>
+    </chart:SfCircularChart.ChartBehaviors>
+
+</chart:SfCircularChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCircularChart chart = new SfCircularChart();
+. . .
+ChartSelectionBehavior selection = new ChartSelectionBehavior();
+selection.Type = SelectionType.Point;
+chart.ChartBehaviors.Add(selection);
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ## Events
 

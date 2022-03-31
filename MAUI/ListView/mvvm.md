@@ -766,6 +766,4 @@ public class ViewModel:INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-## See also 
-
-[How to filter the items in .NET MAUI ListView (SfListView) using MVVM](https://www.syncfusion.com/kb/13060/ )                                                                                                            
+                                                                                                                      
