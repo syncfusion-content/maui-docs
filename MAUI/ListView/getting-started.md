@@ -274,7 +274,7 @@ The [SfListView.ItemsLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
                    ItemsSource="{Binding BookInfo}"
                    ItemSize="100">
     <syncfusion:SfListView.ItemsLayout>
-      <syncfusion:GridLayout SpanCount="3" />
+      <syncfusion:GridLayout SpanCount="2" />
     </syncfusion:SfListView.ItemsLayout>
   </syncfusion:SfListView>
 </ContentPage>
