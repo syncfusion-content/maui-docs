@@ -138,7 +138,7 @@ Classes
 <td>{{'[ListViewLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewLayout.html)'| markdownify }}</td>
 <td>Defines the base for the layouts.</td></tr>
 <tr>
-<td>Syncfusion.ListView.XForms.Helpers.InverseBoolConverter</td>
-<td>Syncfusion.Maui.Core.Converters.InvertedBoolConverter</td>
+<td>{{'[Syncfusion.ListView.XForms.Helpers.InverseBoolConverter](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.Helpers.InverseBoolConverter.html)'| markdownify }}</td>
+<td>{{'[Syncfusion.Maui.Core.Converters.InvertedBoolConverter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Converters.InvertedBoolConverter.html)'| markdownify }}</td>
 <td>Converter to reverse the boolean value.</td></tr>
 </table>
