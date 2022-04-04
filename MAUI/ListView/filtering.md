@@ -20,7 +20,7 @@ The [FilterChanged](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.Da
 The `FilterContacts` method filters the data contains the filter text value. Assign the `FilterContacts` method to the `SfListView.DataSource.Filter` predicate to filter the `ContactName`. To apply filtering in the SfListView, follow the code example:
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle= "MainPage.xaml" hl_lines="10" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
  <Grid>
     <Grid.RowDefinitions>
@@ -37,7 +37,7 @@ The `FilterContacts` method filters the data contains the filter text value. Ass
   </Grid>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# tabtitle= "MainPage.cs" hl_lines="6" %}
 var grid = new Grid();
 grid.RowDefinitions.Add(new RowDefinition());
 grid.RowDefinitions.Add(new RowDefinition());
@@ -60,7 +60,7 @@ grid.SetRow(listView, 1);
 The following code example illustrates how to filter the data using `FilterContacts` method in the ViewModel:
 
 {% tabs %}
-{% highlight c# %}
+{% highlight c# tabtitle= "ViewModel.cs" hl_lines="7 12 13 14 15 16 17 18 19 20 21 22 23" %}
 SearchBar searchBar = null;
 private void OnFilterTextChanged(object sender, TextChangedEventArgs e)
 {
@@ -97,7 +97,7 @@ The following screenshot shows the output rendered when the items are filtered:
 The [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html) allows filtering the items based on multiple criteria. The following code example explains how to  filter the data using multiple properties:
 
 {% tabs %}
-{% highlight c# %}
+{% highlight c# tabtitle= "MainPage.cs" hl_lines="7 8" %}
 private bool FilterContacts(object obj)
 {
   if (searchBar == null || searchBar.Text == null)
@@ -118,7 +118,7 @@ private bool FilterContacts(object obj)
 You can get filtered items from the view and modify it in the [SfListView.DataSource.FilterChanged](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.DataSource.html#Syncfusion_DataSource_DataSource_FilterChanged) event. When filter is applied, the filtered items are available in the [SfListView.DataSource.DisplayItems](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.DataSource.html#Syncfusion_DataSource_DataSource_DisplayItems).
 
 {% tabs %}
-{% highlight c# %}
+{% highlight c# tabtitle= "MainPage.cs" hl_lines="8" %}
 listView.DataSource.FilterChanged += DataSource_FilterChanged;
 ...
 private void DataSource_FilterChanged(object sender, NotifyCollectionChangedEventArgs e)
@@ -138,7 +138,7 @@ private void DataSource_FilterChanged(object sender, NotifyCollectionChangedEven
 The SfListView allows clearing the filters by setting the [DataSource.Filter](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.DataSource.html#Syncfusion_DataSource_DataSource_Filter) to null, and call the [DataSource.RefreshFilter](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.DataSource.html#Syncfusion_DataSource_DataSource_RefreshFilter) method.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight c# tabtitle= "MainPage.cs"%}
 listView.DataSource.Filter = null;
 listView.DataSource.RefreshFilter();
 {% endhighlight %}
@@ -149,7 +149,7 @@ listView.DataSource.RefreshFilter();
 The order of the filtered items can be rearranged in the `FilterChanged` event by adding [SortDescriptor](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.SortDescriptor.html). To sort the filtered items, follow the code example:
 
 {% tabs %}
-{% highlight c# %}
+{% highlight c# tabtitle= "MainPage.cs" %}
 private void DataSource_FilterChanged(object sender, NotifyCollectionChangedEventArgs e)
 {
   listView.Clear();
