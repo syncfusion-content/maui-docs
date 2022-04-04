@@ -21,9 +21,9 @@ The [LabelRotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.C
 
 <chart:SfCartesianChart>
     . . .
-    <chart:SfCartesianChart.PrimaryAxis>
+    <chart:SfCartesianChart.XAxes>
         <chart:CategoryAxis LabelRotation="90"/>
-    </chart:SfCartesianChart.PrimaryAxis>
+    </chart:SfCartesianChart.XAxes>
 
 </chart:SfCartesianChart>
 
@@ -33,10 +33,11 @@ The [LabelRotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.C
 
 SfCartesianChart chart = new SfCartesianChart();
 . . .
-chart.PrimaryAxis = new CategoryAxis()
+CategoryAxis primaryAxis = new CategoryAxis()
 {
     LabelRotation = 90
 };
+chart.XAxes.Add(primaryAxis);
 
 {% endhighlight %}
 
@@ -75,9 +76,9 @@ Chart axis provides support to customize the rendering position of the edge labe
 
 <chart:SfCartesianChart>
 . . .
-    <chart:SfCartesianChart.PrimaryAxis>
+    <chart:SfCartesianChart.XAxes>
         <chart:DateTimeAxis EdgeLabelsDrawingMode="Center"/>
-    </chart:SfCartesianChart.PrimaryAxis>
+    </chart:SfCartesianChart.XAxes>
 
 </chart:SfCartesianChart>
 
@@ -87,10 +88,11 @@ Chart axis provides support to customize the rendering position of the edge labe
 
 SfCartesianChart chart = new SfCartesianChart();
 . . . 
-chart.PrimaryAxis = new DateTimeAxis()
+DateTimeAxis primaryAxis = new DateTimeAxis()
 {
     EdgeLabelsDrawingMode = EdgeLabelsDrawingMode.Center
 };
+chart.XAxes.Add(primaryAxis);
 
 {% endhighlight %}
 
@@ -112,9 +114,9 @@ The visibility of the edge labels of the axis can be controlled using the [EdgeL
 
 <chart:SfCartesianChart>
     . . .
-    <chart:SfCartesianChart.PrimaryAxis>
+    <chart:SfCartesianChart.XAxes>
         <chart:NumericalAxis EdgeLabelsVisibilityMode="AlwaysVisible"/>
-    </chart:SfCartesianChart.PrimaryAxis>
+    </chart:SfCartesianChart.XAxes>
 
 </chart:SfCartesianChart>
 
@@ -124,10 +126,11 @@ The visibility of the edge labels of the axis can be controlled using the [EdgeL
 
 SfCartesianChart chart = new SfCartesianChart();
 . . .
-chart.PrimaryAxis = new NumericalAxis()
+NumericalAxis primaryAxis = new NumericalAxis()
 {
     EdgeLabelsVisibilityMode = EdgeLabelsVisibilityMode.AlwaysVisible
 };
+chart.XAxes.Add(primaryAxis);
 
 {% endhighlight %}
 
@@ -143,9 +146,9 @@ chart.PrimaryAxis = new NumericalAxis()
 
 <chart:SfCartesianChart>
 . . .
-    <chart:SfCartesianChart.PrimaryAxis>
+    <chart:SfCartesianChart.XAxes>
         <chart:NumericalAxis EdgeLabelsVisibilityMode="Visible"/>
-    </chart:SfCartesianChart.PrimaryAxis>
+    </chart:SfCartesianChart.XAxes>
 
 </chart:SfCartesianChart>
 
@@ -155,10 +158,11 @@ chart.PrimaryAxis = new NumericalAxis()
 
 SfCartesianChart chart = new SfCartesianChart();
 . . .
-chart.PrimaryAxis = new NumericalAxis()
+NumericalAxis primaryAxis = new NumericalAxis()
 {
     EdgeLabelsVisibilityMode = EdgeLabelsVisibilityMode.Visible
 };
+chart.XAxes.Add(primaryAxis);
 
 {% endhighlight %}
 

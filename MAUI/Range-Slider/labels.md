@@ -19,12 +19,14 @@ The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.S
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider Minimum="0" 
-                           Maximum="10" 
-                           Interval="2" 
-                           ShowLabels="True"
-                           ShowTicks="True">
-</rangeslider:SfRangeSlider>
+<sliders:SfRangeSlider Minimum="0" 
+                       Maximum="10"
+                       RangeStart="2"
+                       RangeEnd="8" 
+                       Interval="2" 
+                       ShowLabels="True"
+                       ShowTicks="True">
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -33,6 +35,8 @@ The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.S
 SfRangeSlider rangeSlider = new SfRangeSlider();
 rangeSlider.Minimum = 0;
 rangeSlider.Maximum = 10;
+rangeSlider.RangeStart = 2;
+rangeSlider.RangeEnd = 8;
 rangeSlider.Interval = 2;
 rangeSlider.ShowLabels = true;
 rangeSlider.ShowTicks = true;
@@ -51,13 +55,15 @@ The [`NumberFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider Minimum="0" 
-                           Maximum="10" 
-                           Interval="2" 
-                           NumberFormat="$##" 
-                           ShowLabels="True"
-                           ShowTicks="True">
-</rangeslider:SfRangeSlider>
+<sliders:SfRangeSlider Minimum="0" 
+                       Maximum="10"
+                       RangeStart="2"
+                       RangeEnd="8" 
+                       Interval="2" 
+                       NumberFormat="$#" 
+                       ShowLabels="True"
+                       ShowTicks="True">
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -66,8 +72,10 @@ The [`NumberFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders
 SfRangeSlider rangeSlider = new SfRangeSlider();
 rangeSlider.Minimum = 0;
 rangeSlider.Maximum = 10;
+rangeSlider.RangeStart = 2;
+rangeSlider.RangeEnd = 8;
 rangeSlider.Interval = 2;
-rangeSlider.NumberFormat = "$##";
+rangeSlider.NumberFormat = "$#";
 rangeSlider.ShowLabels = true;
 rangeSlider.ShowTicks = true;
 
@@ -79,29 +87,28 @@ rangeSlider.ShowTicks = true;
 
 ## Date format
 
-The [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DateFormat) property is used to format the date labels. It is mandatory for date [`SfRangeSlider`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSlider.html). For date values, the slider does not have auto interval support. So, it is mandatory to set [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Interval), [`DateIntervalType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DateIntervalType), and [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DateFormat) for date values. The default value of [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DateFormat) property is `yyyy`.
+The [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DateFormat) property is used to format the date labels. It is mandatory for date [`SfDateTimeRangeSlider`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSlider.html). For date values, the slider does not have auto interval support. So, it is mandatory to set [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Interval), [`IntervalType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DateIntervalType), and [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DateFormat) for date values. The default value of [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DateFormat) property is `yyyy`.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider Minimum="2000-01-01T09:00:00" 
-                           Maximum="2000-01-01T17:00:00" 
-                           RangeStart="2000-01-01T11:00:00" 
-                           RangeEnd="2000-01-01T15:00:00" 
-                           ShowLabels="True" 
-                           ShowTicks="True" 
-                           DateIntervalType="Hours" 
-                           Interval="2" 
-                           DateFormat="h tt"
-                           ShowTicks="True">
-</rangeslider:SfRangeSlider>
+<sliders:SfDateTimeRangeSlider Minimum="2000-01-01T09:00:00" 
+                               Maximum="2000-01-01T17:00:00" 
+                               RangeStart="2000-01-01T11:00:00" 
+                               RangeEnd="2000-01-01T15:00:00" 
+                               Interval="2"
+                               IntervalType="Hours"
+                               ShowLabels="True"  
+                               DateFormat="h tt"
+                               ShowTicks="True">
+</sliders:SfDateTimeRangeSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfRangeSlider rangeSlider = new SfRangeSlider();
+SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider();
 rangeSlider.Minimum = new DateTime(2000, 01, 01, 09, 00, 00);
 rangeSlider.Maximum = new DateTime(2000, 01, 01, 17, 00, 00);
 rangeSlider.RangeStart = new DateTime(2000, 01, 01, 11, 00, 00);
@@ -126,13 +133,15 @@ The [`LabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slid
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider Minimum="0" 
-                           Maximum="10" 
-                           Interval="2" 
-                           LabelsPlacement="BetweenTicks"  
-                           ShowLabels="True" 
-                           ShowTicks="True">
-</rangeslider:SfRangeSlider>
+<sliders:SfRangeSlider Minimum="0" 
+                       Maximum="10"
+                       RangeStart="2"
+                       RangeEnd="8" 
+                       Interval="2" 
+                       LabelsPlacement="BetweenTicks"  
+                       ShowLabels="True" 
+                       ShowTicks="True">
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -141,6 +150,8 @@ The [`LabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slid
 SfRangeSlider rangeSlider = new SfRangeSlider();
 rangeSlider.Minimum = 0;
 rangeSlider.Maximum = 10;
+rangeSlider.RangeStart = 2;
+rangeSlider.RangeEnd = 8;
 rangeSlider.Interval = 2;
 rangeSlider.LabelsPlacement = SliderLabelsPlacement.BetweenTicks;
 rangeSlider.ShowLabels = true;
@@ -166,22 +177,23 @@ The inactive side of the range slider is between the [`Minimum`](https://help.sy
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider Minimum="2" 
-                           Maximum="10" 
-                           Interval="2" 
-                           RangeStart="2" 
-                           RangeEnd="6" 
-                           ShowLabels="True" 
-                           ShowTicks="True">
-<rangeslider:SfRangeSlider.LabelStyle>
-    <rangeslider:SliderLabelStyle ActiveTextColor="#EE3F3F" 
+<sliders:SfRangeSlider Minimum="2" 
+                       Maximum="10" 
+                       Interval="2" 
+                       RangeStart="2" 
+                       RangeEnd="6" 
+                       ShowLabels="True" 
+                       ShowTicks="True">
+
+    <sliders:SfRangeSlider.LabelStyle>
+        <sliders:SliderLabelStyle ActiveTextColor="#EE3F3F" 
                                   InactiveTextColor="#F7B1AE" 
                                   ActiveFontAttributes="Italic" 
                                   InactiveFontAttributes="Italic" 
                                   ActiveFontSize="16" 
                                   InactiveFontSize="16" />
-     </rangeslider:SfRangeSlider.LabelStyle>
-</rangeslider:SfRangeSlider>
+    </sliders:SfRangeSlider.LabelStyle>
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -216,15 +228,19 @@ You can adjust the space between ticks and labels of the range slider using the 
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider Minimum="0"
-                           Maximum="10"
-                           Interval="2" 
-                           ShowLabels="True" 
-                           ShowTicks="True">
-  <rangeslider:SfRangeSlider.LabelStyle>
-    <rangeslider:SliderLabelStyle Offset="10" />
-  </rangeslider:SfRangeSlider.LabelStyle>
-</rangeslider:SfRangeSlider>
+<sliders:SfRangeSlider Minimum="0"
+                       Maximum="10"
+                       RangeStart="2"
+                       RangeEnd="8"
+                       Interval="2" 
+                       ShowLabels="True" 
+                       ShowTicks="True">
+  
+  <sliders:SfRangeSlider.LabelStyle>
+    <sliders:SliderLabelStyle Offset="10" />
+  </sliders:SfRangeSlider.LabelStyle>
+
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -233,6 +249,8 @@ You can adjust the space between ticks and labels of the range slider using the 
 SfRangeSlider rangeSlider = new SfRangeSlider();
 rangeSlider.Minimum = 0;
 rangeSlider.Maximum = 10;
+rangeSlider.RangeStart = 2;
+rangeSlider.RangeEnd = 8;
 rangeSlider.Interval = 2;
 rangeSlider.ShowLabels = true;
 rangeSlider.ShowTicks = true;
@@ -243,3 +261,119 @@ rangeSlider.LabelStyle.Offset = 10;
 {% endtabs %}
 
 ![RangeSlider label offset](images/labels-and-dividers/label-offset.png)
+
+## Disabled labels
+
+You can change the state of the range slider to disabled by setting `false` to the `IsEnabled` property. Using the Visual State Manager (VSM), You can customize the range slider labels properties based on the visual states. The applicable visual states are enabled(default) and disabled.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage.Resources>
+    <Style TargetType="sliders:SfRangeSlider">
+        <Setter Property="Interval" Value="0.25" />
+        <Setter Property="ShowTicks" Value="True" />
+        <Setter Property="ShowLabels" Value="True" />
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup>
+                    <VisualState x:Name="Default">
+                        <VisualState.Setters>
+                            <Setter Property="LabelStyle">
+                                <Setter.Value>
+                                    <sliders:SliderLabelStyle ActiveTextColor = "#EE3F3F"
+                                                                  InactiveTextColor="#F7B1AE"
+                                                                  ActiveFontSize="16"
+                                                                  InactiveFontSize="14"
+                                                                  ActiveFontAttributes="Bold"
+                                                                  InactiveFontAttributes="Italic"/>
+                                </Setter.Value>
+                            </Setter>
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="LabelStyle">
+                                <Setter.Value>
+                                    <sliders:SliderLabelStyle ActiveTextColor = "Grey"
+                                                                  InactiveTextColor="LightGrey"
+                                                                  ActiveFontSize="14"
+                                                                  InactiveFontSize="16"
+                                                                  ActiveFontAttributes="Italic"
+                                                                  InactiveFontAttributes="Bold"/>
+                                </Setter.Value>
+                            </Setter>
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+</ContentPage.Resources>
+
+<ContentPage.Content>
+    <VerticalStackLayout>
+        <Label Text="Enabled Range Slider" Padding="0,10"/>
+        <sliders:SfRangeSlider/>
+        <Label Text="Disabled Range Slider" Padding="0,10"/>
+        <sliders:SfRangeSlider IsEnabled="False"/>
+    </VerticalStackLayout>
+</ContentPage.Content>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+VerticalStackLayout stackLayout = new VerticalStackLayout();
+SfRangeSlider defaultRangeSlider = new SfRangeSlider { Interval = 0.25, ShowTicks = true, ShowLabels = true };
+SfRangeSlider disabledRangeSlider = new SfRangeSlider { IsEnabled = false, Interval = 0.25, ShowTicks = true, ShowLabels = true };
+
+VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
+VisualStateGroup commonStateGroup = new VisualStateGroup();
+// Default State.
+VisualState defaultState = new VisualState { Name = "Default" };
+defaultState.Setters.Add(new Setter
+{
+    Property = SfRangeSlider.LabelStyleProperty,
+    Value = new SliderLabelStyle
+    {
+        ActiveFontSize = 16,
+        InactiveFontSize = 14,
+        ActiveTextColor = Color.FromArgb("#EE3F3F"),
+        InactiveTextColor = Color.FromArgb("#F7B1AE"),
+        ActiveFontAttributes = FontAttributes.Bold,
+    }
+});
+// Disabled State.
+VisualState disabledState = new VisualState { Name = "Disabled" };
+disabledState.Setters.Add(new Setter
+{
+    Property = SfRangeSlider.LabelStyleProperty,
+    Value = new SliderLabelStyle
+    {
+        ActiveFontSize = 16,
+        InactiveFontSize = 14,
+        ActiveTextColor = Color.FromArgb("#EE3F3F"),
+        InactiveTextColor = Color.FromArgb("#F7B1AE"),
+        ActiveFontAttributes = FontAttributes.Bold,
+    }
+});
+
+commonStateGroup.States.Add(defaultState);
+commonStateGroup.States.Add(disabledState);
+visualStateGroupList.Add(commonStateGroup);
+VisualStateManager.SetVisualStateGroups(defaultRangeSlider, visualStateGroupList);
+VisualStateManager.SetVisualStateGroups(disabledRangeSlider, visualStateGroupList);
+
+stackLayout.Children.Add(new Label() { Text = "Default Range Slider", Padding = new Thickness(0, 10) });
+stackLayout.Children.Add(defaultRangeSlider);
+stackLayout.Children.Add(new Label() { Text = "Disabled Range Slider", Padding = new Thickness(0, 10) });
+stackLayout.Children.Add(disabledRangeSlider);
+this.Content = stackLayout;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![RangeSlider label disabled state](images/labels-and-dividers/labels-disabled.png)

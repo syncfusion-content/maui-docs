@@ -19,13 +19,13 @@ Line chart is used to represent the data trends at equal intervals by connecting
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    <chart:SfCartesianChart.PrimaryAxis>
+    <chart:SfCartesianChart.XAxes>
         <chart:CategoryAxis />
-    </chart:SfCartesianChart.PrimaryAxis>
+    </chart:SfCartesianChart.XAxes>
 
-    <chart:SfCartesianChart.SecondaryAxis>
+    <chart:SfCartesianChart.YAxes>
         <chart:NumericalAxis />
-    </chart:SfCartesianChart.SecondaryAxis>  
+    </chart:SfCartesianChart.YAxes>  
 
     <chart:SfCartesianChart.Series>
         <chart:LineSeries XBindingPath="Demand" ItemsSource="{Binding Data}" YBindingPath="Year2010"/>
@@ -39,9 +39,9 @@ Line chart is used to represent the data trends at equal intervals by connecting
 
 SfCartesianChart chart = new SfCartesianChart();
 CategoryAxis primaryAxis = new CategoryAxis();
-chart.PrimaryAxis = primaryAxis;
+chart.XAxes.Add(primaryAxis);
 NumericalAxis secondaryAxis = new NumericalAxis();
-chart.SecondaryAxis = secondaryAxis;
+chart.YAxes.Add(secondaryAxis);
 
 LineSeries series1 = new LineSeries()
 {
@@ -85,13 +85,13 @@ The [StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts
         </DoubleCollection>
     </chart:SfCartesianChart.Resources>
 
-    <chart:SfCartesianChart.PrimaryAxis>
+    <chart:SfCartesianChart.XAxes>
         <chart:CategoryAxis />
-    </chart:SfCartesianChart.PrimaryAxis>
+    </chart:SfCartesianChart.XAxes>
 
-    <chart:SfCartesianChart.SecondaryAxis>
+    <chart:SfCartesianChart.YAxes>
         <chart:NumericalAxis />
-    </chart:SfCartesianChart.SecondaryAxis>  
+    </chart:SfCartesianChart.YAxes>  
 
     <chart:SfCartesianChart.Series>
         <chart:LineSeries XBindingPath="Demand" ItemsSource="{Binding Data}" YBindingPath="Year2010" StrokeDashArray="{StaticResource dashArray}"/>
@@ -105,9 +105,9 @@ The [StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts
 
 SfCartesianChart chart = new SfCartesianChart();
 CategoryAxis primaryAxis = new CategoryAxis();
-chart.PrimaryAxis = primaryAxis;
+chart.XAxes.Add(primaryAxis);
 NumericalAxis secondaryAxis = new NumericalAxis();
-chart.SecondaryAxis = secondaryAxis;
+chart.YAxes.Add(secondaryAxis);
 
 DoubleCollection doubleCollection = new DoubleCollection();
 doubleCollection.Add(5);
@@ -150,13 +150,13 @@ The [SplineSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Sp
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    <chart:SfCartesianChart.PrimaryAxis>
+    <chart:SfCartesianChart.XAxes>
         <chart:CategoryAxis />
-    </chart:SfCartesianChart.PrimaryAxis>
+    </chart:SfCartesianChart.XAxes>
 
-    <chart:SfCartesianChart.SecondaryAxis>
+    <chart:SfCartesianChart.YAxes>
         <chart:NumericalAxis />
-    </chart:SfCartesianChart.SecondaryAxis>  
+    </chart:SfCartesianChart.YAxes>  
 
     <chart:SfCartesianChart.Series>
         <chart:SplineSeries XBindingPath="Demand" ItemsSource="{Binding Data}" YBindingPath="Year2010"/>
@@ -170,9 +170,9 @@ The [SplineSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Sp
 
 SfCartesianChart chart = new SfCartesianChart();
 CategoryAxis primaryAxis = new CategoryAxis();
-chart.PrimaryAxis = primaryAxis;
+chart.XAxes.Add(primaryAxis);
 NumericalAxis secondaryAxis = new NumericalAxis();
-chart.SecondaryAxis = secondaryAxis;
+chart.YAxes.Add(secondaryAxis);
 
 SplineSeries series1 = new SplineSeries()
 {
@@ -215,13 +215,13 @@ The following types are used in SplineSeries:
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    <chart:SfCartesianChart.PrimaryAxis>
+    <chart:SfCartesianChart.XAxes>
         <chart:CategoryAxis />
-    </chart:SfCartesianChart.PrimaryAxis>
+    </chart:SfCartesianChart.XAxes>
 
-    <chart:SfCartesianChart.SecondaryAxis>
+    <chart:SfCartesianChart.YAxes>
         <chart:NumericalAxis />
-    </chart:SfCartesianChart.SecondaryAxis>  
+    </chart:SfCartesianChart.YAxes>  
 
     <chart:SfCartesianChart.Series>
         <chart:SplineSeries XBindingPath="Demand" ItemsSource="{Binding Data}" YBindingPath="Year2010" Type="Cardinal"/>
@@ -234,9 +234,9 @@ The following types are used in SplineSeries:
 
 SfCartesianChart chart = new SfCartesianChart();
 CategoryAxis primaryAxis = new CategoryAxis();
-chart.PrimaryAxis = primaryAxis;
+chart.XAxes.Add(primaryAxis);
 NumericalAxis secondaryAxis = new NumericalAxis();
-chart.SecondaryAxis = secondaryAxis;
+chart.YAxes.Add(secondaryAxis);
 
 SplineSeries series = new SplineSeries()
 {

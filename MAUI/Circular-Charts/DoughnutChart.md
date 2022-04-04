@@ -51,7 +51,7 @@ The [DoughnutCoefficient](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Ch
 
 <chart:SfCircularChart>
     <chart:SfCircularChart.Series>
-        <chart:DoughnutSeries ItemsSource="{Binding Data}" DoughnutCoefficient="0.7" XBindingPath="Product" YBindingPath="SalesRate" />
+        <chart:DoughnutSeries ItemsSource="{Binding Data}" InnerRadius="0.7" XBindingPath="Product" YBindingPath="SalesRate" />
     </chart:SfCircularChart.Series>
 </chart:SfCircularChart>
 
@@ -63,7 +63,7 @@ SfCircularChart chart = new SfCircularChart();
 DoughnutSeries series = new DoughnutSeries();
 series.XBindingPath = "Product";
 series.YBindingPath = "SalesRate";
-series.DoughnutCoefficient = 0.7;
+series.InnerRadius = 0.7;
 
 chart.Series.Add(series);
 

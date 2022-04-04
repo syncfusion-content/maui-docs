@@ -22,11 +22,13 @@ You can change the size of the thumb in the range slider using the [`Radius`](ht
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider >
-   <rangeslider:SfRangeSlider.ThumbStyle>
-       <rangeslider:SliderThumbStyle Radius="15" />
-   </rangeslider:SfRangeSlider.ThumbStyle>
-</rangeslider:SfRangeSlider>
+<sliders:SfRangeSlider>
+   
+   <sliders:SfRangeSlider.ThumbStyle>
+       <sliders:SliderThumbStyle Radius="15" />
+   </sliders:SfRangeSlider.ThumbStyle>
+
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -49,11 +51,13 @@ You can change the color of the thumb in the range slider using the [`Fill`](htt
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider >
-   <rangeslider:SfRangeSlider.ThumbStyle>
-       <rangeslider:SliderThumbStyle Fill="#EE3F3F" />
-   </rangeslider:SfRangeSlider.ThumbStyle>
-</rangeslider:SfRangeSlider>
+<sliders:SfRangeSlider>
+   
+   <sliders:SfRangeSlider.ThumbStyle>
+       <sliders:SliderThumbStyle Fill="#EE3F3F" />
+   </sliders:SfRangeSlider.ThumbStyle>
+
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -76,11 +80,13 @@ You can change the thumb stroke width using the [`StrokeThickness`](https://help
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider >
-   <rangeslider:SfRangeSlider.ThumbStyle>
-       <rangeslider:SliderThumbStyle StrokeThickness="2" Stroke="#EE3F3F" />
-   </rangeslider:SfRangeSlider.ThumbStyle>
-</rangeslider:SfRangeSlider>
+<sliders:SfRangeSlider>
+   
+   <sliders:SfRangeSlider.ThumbStyle>
+       <sliders:SliderThumbStyle StrokeThickness="2" Stroke="#EE3F3F" />
+   </sliders:SfRangeSlider.ThumbStyle>
+
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -104,11 +110,13 @@ You can change the thumb stroke color while two thumbs are overlapping in the ra
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider >
-  <rangeslider:SfRangeSlider.ThumbStyle>
-      <rangeslider:SliderThumbStyle OverlapStroke="#EE3F3F" />
-  </rangeslider:SfRangeSlider.ThumbStyle>
-</rangeslider:SfRangeSlider>
+<sliders:SfRangeSlider>
+  
+  <sliders:SfRangeSlider.ThumbStyle>
+      <sliders:SliderThumbStyle OverlapStroke="#EE3F3F" />
+  </sliders:SfRangeSlider.ThumbStyle>
+
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -131,11 +139,13 @@ You can change the size of the thumb overlay in the range slider using the [`Rad
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider >
-   <rangeslider:SfRangeSlider.ThumbOverlayStyle>
-      <rangeslider:SliderThumbOverlayStyle Radius="30"/>
-   </rangeslider:SfRangeSlider.ThumbOverlayStyle>
-</rangeslider:SfRangeSlider>
+<sliders:SfRangeSlider>
+   
+   <sliders:SfRangeSlider.ThumbOverlayStyle>
+      <sliders:SliderThumbOverlayStyle Radius="30"/>
+   </sliders:SfRangeSlider.ThumbOverlayStyle>
+
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -158,11 +168,13 @@ You can change the color of the thumb overlay in the range slider using the [`Fi
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider >
-   <rangeslider:SfRangeSlider.ThumbOverlayStyle>
-      <rangeslider:SliderThumbOverlayStyle Fill="#F7C8DB"/>
-   </rangeslider:SfRangeSlider.ThumbOverlayStyle>
-</rangeslider:SfRangeSlider>
+<sliders:SfRangeSlider>
+   
+   <sliders:SfRangeSlider.ThumbOverlayStyle>
+      <sliders:SliderThumbOverlayStyle Fill="#F7C8DB"/>
+   </sliders:SfRangeSlider.ThumbOverlayStyle>
+
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -176,3 +188,111 @@ rangeSlider.ThumbOverlayStyle.Fill = new SolidColorBrush(Color.FromArgb("#F7C8DB
 {% endtabs %}
 
 ![RangeSlider thumb overlay color](images/thumb-and-thumb-overlay/thumb-overlay-color.png)
+
+## Disabled thumb
+
+You can change the state of the range slider to disabled by setting `false` to the `IsEnabled` property. Using the Visual State Manager (VSM), you can customize the range slider thumb properties based on the visual states. The applicable visual states are enabled(default) and disabled.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage.Resources>
+    <Style TargetType="sliders:SfRangeSlider">
+        <Setter Property="Interval" Value="0.25" />
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup>
+                    <VisualState x:Name="Default">
+                        <VisualState.Setters>
+                            <Setter Property="ThumbStyle">
+                                <Setter.Value>
+                                    <sliders:SliderThumbStyle Radius = "13"
+                                                                  Fill="Red"
+                                                                  Stroke="Yellow"
+                                                                  StrokeThickness="3"/>
+                                </Setter.Value>
+                            </Setter>
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="ThumbStyle">
+                                <Setter.Value>
+                                    <sliders:SliderThumbStyle Radius = "13"
+                                                                  Fill="Grey"
+                                                                  Stroke="LightGrey"
+                                                                  StrokeThickness="3"/>
+                                </Setter.Value>
+                            </Setter>
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+</ContentPage.Resources>
+
+<ContentPage.Content>
+    <VerticalStackLayout>
+        <Label Text="Enabled Range Slider" Padding="0,10"/>
+        <sliders:SfRangeSlider/>
+        <Label Text="Disabled Range Slider" Padding="0,10"/>
+        <sliders:SfRangeSlider IsEnabled="False"/>
+    </VerticalStackLayout>
+</ContentPage.Content>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+VerticalStackLayout stackLayout = new VerticalStackLayout();
+SfRangeSlider defaultRangeSlider = new SfRangeSlider();
+SfRangeSlider disabledRangeSlider = new SfRangeSlider { IsEnabled = false };
+
+VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
+VisualStateGroup commonStateGroup = new VisualStateGroup();
+// Default State.
+VisualState defaultState = new VisualState { Name = "Default" };
+defaultState.Setters.Add(new Setter
+{
+    Property = SfRangeSlider.ThumbStyleProperty,
+    Value = new SliderThumbStyle
+    {
+        Radius = 13,
+        Fill = Colors.Red,
+        Stroke = Colors.Yellow,
+        StrokeThickness = 3,
+    }
+});
+// Disabled State.
+VisualState disabledState = new VisualState { Name = "Disabled" };
+disabledState.Setters.Add(new Setter
+{
+    Property = SfRangeSlider.ThumbStyleProperty,
+    Value = new SliderThumbStyle
+    {
+        Radius = 13,
+        Fill = Colors.Grey,
+        Stroke = Colors.LightGrey,
+        StrokeThickness = 3,
+    }
+});
+
+commonStateGroup.States.Add(defaultState);
+commonStateGroup.States.Add(disabledState);
+visualStateGroupList.Add(commonStateGroup);
+VisualStateManager.SetVisualStateGroups(defaultRangeSlider, visualStateGroupList);
+VisualStateManager.SetVisualStateGroups(disabledRangeSlider, visualStateGroupList);
+
+stackLayout.Children.Add(new Label() { Text = "Default Range Slider", Padding = new Thickness(0, 10) });
+stackLayout.Children.Add(defaultRangeSlider);
+stackLayout.Children.Add(new Label() { Text = "Disabled Range Slider", Padding = new Thickness(0, 10) });
+stackLayout.Children.Add(disabledRangeSlider);
+this.Content = stackLayout;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![RangeSlider thumb disabled state](images/thumb-and-thumb-overlay/thumb-disabled.png)

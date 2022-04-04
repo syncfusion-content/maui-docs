@@ -77,7 +77,7 @@ It is used to represent the number of smaller ticks between two major ticks. For
                   Value="6"
                   ShowLabels="True" 
                   MinorTicksPerInterval="3" 
-		  ShowTicks="True">
+		          ShowTicks="True">
 </sliders:SfSlider>
 
 {% endhighlight %}
@@ -87,8 +87,9 @@ It is used to represent the number of smaller ticks between two major ticks. For
 SfSlider slider = new SfSlider();
 slider.Minimum = 0;
 slider.Maximum = 10;
+slider.Value = 6;
 slider.Interval = 2;
-slider.MinorTicksPerInterval = 1;
+slider.MinorTicksPerInterval = 3;
 slider.ShowTicks = true;
 slider.ShowLabels = true;
 
@@ -110,7 +111,7 @@ slider.ShowLabels = true;
                   Interval="2" 
                   ShowLabels="True" 
                   MinorTicksPerInterval="1" 
-		  ShowTicks="True">
+		          ShowTicks="True">
 </sliders:SfSlider>
 
 {% endhighlight %}
@@ -120,6 +121,7 @@ slider.ShowLabels = true;
 SfSlider slider = new SfSlider();
 slider.Minimum = 0;
 slider.Maximum = 10;
+slider.Value = 6;
 slider.Interval = 2;
 slider.MinorTicksPerInterval = 1;
 slider.ShowTicks = true;
@@ -181,7 +183,8 @@ The inactive side of the slider is between the thumb and the [`Maximum`](https:/
 
 <sliders:SfSlider Minimum="0" 
                   Maximum="10"
-                  Interval="2" 
+                  Interval="2"
+                  Value="6" 
                   ShowTicks="True"
                   ShowLabels="True" 
                   MinorTicksPerInterval="1">
@@ -198,6 +201,7 @@ The inactive side of the slider is between the thumb and the [`Maximum`](https:/
 SfSlider slider = new SfSlider();
 slider.Minimum = 0;
 slider.Maximum = 10;
+slider.Value = 6;
 slider.Interval = 2;
 slider.ShowTicks = true;
 slider.ShowLabels = true;
@@ -221,7 +225,7 @@ You can change the major and minor ticks size of the slider using the [`ActiveSi
 
 <sliders:SfSlider Interval="0.2" 
                   ShowTicks="True" 
-		  MinorTicksPerInterval="1">
+		          MinorTicksPerInterval="1">
      <sliders:SfSlider.MinorTickStyle>
          <sliders:SliderTickStyle ActiveSize="2,10" 
                                   InactiveSize="2, 10"/>
@@ -286,3 +290,151 @@ slider.MajorTickStyle.Offset = 6;
 {% endtabs %}
 
 ![Slider tick offset](images/ticks/tick-offset.png)
+
+## Disabled ticks
+
+You can change the state of the slider to disabled by setting `false` to the `IsEnabled` property. Using the Visual State Manager (VSM), you can customize the slider’s major and minor tick properties based on the visual states. The applicable visual states are enabled(default) and disabled.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage.Resources>
+    <Style TargetType="sliders:SfSlider">
+        <Setter Property="Interval" Value="0.25" />
+        <Setter Property="ShowTicks" Value="True" />
+        <Setter Property="MinorTicksPerInterval" Value="2" />
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup>
+                    <VisualState x:Name="Default">
+                        <VisualState.Setters>
+                            <Setter Property="MajorTickStyle">
+                                <Setter.Value>
+                                    <sliders:SliderTickStyle ActiveSize = "3, 10" 
+                                                                 InactiveSize = "3, 10"
+                                                                 ActiveFill = "#EE3F3F"
+                                                                 InactiveFill = "#F7B1AE" />
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="MinorTickStyle">
+                                <Setter.Value>
+                                    <sliders:SliderTickStyle ActiveSize = "3, 6" 
+                                                                 InactiveSize = "3, 6"
+                                                                  ActiveFill = "#EE3F3F"
+                                                                 InactiveFill = "#F7B1AE" />
+                                </Setter.Value>
+                            </Setter>
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="MajorTickStyle">
+                                <Setter.Value>
+                                    <sliders:SliderTickStyle ActiveSize="3,10" 
+                                                                 InactiveSize="3, 10"
+                                                                 ActiveFill="Grey" 
+                                                                 InactiveFill="LightGrey" />
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="MinorTickStyle">
+                                <Setter.Value>
+                                    <sliders:SliderTickStyle ActiveSize ="3,6" 
+                                                                 InactiveSize="3, 6"
+                                                                 ActiveFill="Grey" 
+                                                                 InactiveFill="LightGrey" />
+                                </Setter.Value>
+                            </Setter>
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+</ContentPage.Resources>
+
+<ContentPage.Content>
+    <VerticalStackLayout Padding="10">
+        <Label Text="Enabled Slider" Padding="0,10"/>
+        <sliders:SfSlider/>
+        <Label Text="Disabled Slider" Padding="0,10"/>
+        <sliders:SfSlider IsEnabled="False"/>
+    </VerticalStackLayout>
+</ContentPage.Content>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+VerticalStackLayout stackLayout = new VerticalStackLayout();
+SfSlider defaultSlider = new SfSlider { Interval = 0.25, ShowTicks = true, MinorTicksPerInterval = 2 };
+SfSlider disabledSlider = new SfSlider { IsEnabled = false, Interval = 0.25, ShowTicks = true, MinorTicksPerInterval = 2 };
+
+VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
+VisualStateGroup commonStateGroup = new VisualStateGroup();
+// Default State.
+VisualState defaultState = new VisualState { Name = "Default" };
+defaultState.Setters.Add(new Setter
+{
+    Property = SfSlider.MajorTickStyleProperty,
+    Value = new SliderTickStyle
+    {
+        ActiveSize = new Size(3, 10),
+        InactiveSize = new Size(3, 10),
+        ActiveFill = Color.FromArgb("#EE3F3F"),
+        InactiveFill = Color.FromArgb("#F7B1AE"),
+    }
+});
+defaultState.Setters.Add(new Setter
+{
+    Property = SfSlider.MinorTickStyleProperty,
+    Value = new SliderTickStyle
+    {
+        ActiveSize = new Size(3, 6),
+        InactiveSize = new Size(3, 6),
+        ActiveFill = Color.FromArgb("#EE3F3F"),
+        InactiveFill = Color.FromArgb("#F7B1AE"),
+    }
+});
+// Disabled State.
+VisualState disabledState = new VisualState { Name = "Disabled" };
+disabledState.Setters.Add(new Setter
+{
+    Property = SfSlider.MajorTickStyleProperty,
+    Value = new SliderTickStyle
+    {
+        ActiveSize = new Size(3, 10),
+        InactiveSize = new Size(3, 10),
+        ActiveFill = Colors.Grey,
+        InactiveFill = Colors.LightGrey,
+    }
+});
+disabledState.Setters.Add(new Setter
+{
+    Property = SfSlider.MinorTickStyleProperty,
+    Value = new SliderTickStyle
+    {
+        ActiveSize = new Size(3, 6),
+        InactiveSize = new Size(3, 6),
+        ActiveFill = Colors.Grey,
+        InactiveFill = Colors.LightGrey,
+    }
+});
+
+commonStateGroup.States.Add(defaultState);
+commonStateGroup.States.Add(disabledState);
+visualStateGroupList.Add(commonStateGroup);
+VisualStateManager.SetVisualStateGroups(defaultSlider, visualStateGroupList);
+VisualStateManager.SetVisualStateGroups(disabledSlider, visualStateGroupList);
+
+stackLayout.Children.Add(new Label() { Text = "Default Slider", Padding = new Thickness(0, 10) });
+stackLayout.Children.Add(defaultSlider);
+stackLayout.Children.Add(new Label() { Text = "Disabled Slider", Padding = new Thickness(0, 10) });
+stackLayout.Children.Add(disabledSlider);
+this.Content = stackLayout;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Slider ticks disabled state](images/ticks/ticks-disabled.png)

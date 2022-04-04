@@ -17,20 +17,20 @@ The [Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis
 
 <chart:SfCartesianChart>
     . . .
-    <chart:SfCartesianChart.PrimaryAxis>
+    <chart:SfCartesianChart.XAxes>
         <chart:CategoryAxis>
             <chart:CategoryAxis.Title>
                 <chart:ChartAxisTitle Text="Category"/>
             </chart:CategoryAxis.Title>
         </chart:CategoryAxis>
-    </chart:SfCartesianChart.PrimaryAxis>
-    <chart:SfCartesianChart.SecondaryAxis>
+    </chart:SfCartesianChart.XAxes>
+    <chart:SfCartesianChart.YAxes>
         <chart:NumericalAxis>
             <chart:NumericalAxis.Title>
                 <chart:ChartAxisTitle Text="Values"/>
             </chart:NumericalAxis.Title>
         </chart:NumericalAxis>
-    </chart:SfCartesianChart.SecondaryAxis>
+    </chart:SfCartesianChart.YAxes>
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -40,12 +40,14 @@ The [Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis
 SfCartesianChart chart = new SfCartesianChart();
 . . .
 CategoryAxis primaryAxis = new CategoryAxis();
+primaryAxis.Title = new ChartAxisTitle();
 primaryAxis.Title.Text = "Category";
-chart.PrimaryAxis = primaryAxis;
+chart.XAxes.Add(primaryAxis);
 
 NumericalAxis secondaryAxis = new NumericalAxis();
+secondaryAxis.Title = new ChartAxisTitle();
 secondaryAxis.Title.Text = "Values";
-chart.SecondaryAxis = secondaryAxis;
+chart.YAxes.Add(secondaryAxis);
 
 {% endhighlight %}
 

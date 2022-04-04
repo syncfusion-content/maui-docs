@@ -79,7 +79,7 @@ The `SfListView` allows you to stick the header and footer items to view by enab
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfListView x:Name="listView" ItemsSource="{Binding BookInfo}" IsStickyHeader="True" IsStickyFooter="True" />          
+<syncfusion:SfListView x:Name="listView" ItemsSource="{Binding CategoryInfo}" IsStickyHeader="True" IsStickyFooter="True" />          
 {% endhighlight %}
 {% highlight c# %}
 listView.IsStickyHeader = true;

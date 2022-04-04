@@ -165,3 +165,6 @@ private void DataSource_FilterChanged(object sender, NotifyCollectionChangedEven
 The following screenshot shows the output rendered when the filtered items are sorted:
 ![MAUI ListView Sorting Filtered Items](Images/filtering/maui-listview-sorting-filtered-items.png)
 
+## See also
+
+[How to filter the items in .NET MAUI ListView (SfListview) using MVVM](https://www.syncfusion.com/kb/13060/)

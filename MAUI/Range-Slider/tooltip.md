@@ -19,14 +19,20 @@ You can enable tooltip for the thumb by setting the [`ToolTipShape`](https://hel
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider ToolTipShape="Rectangle"/>
+<sliders:SfRangeSlider>
+   
+   <sliders:SfRangeSlider.Tooltip>
+      <sliders:SliderTooltip />
+   </sliders:SfRangeSlider.Tooltip>
+
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
 SfRangeSlider rangeSlider = new SfRangeSlider();
-rangeSlider.ToolTipShape = SliderToolTipShape.Rectangle;
+rangeSlider.Tooltip = new SliderTooltip();
 
 {% endhighlight %}
 
@@ -44,23 +50,24 @@ You can change the appearance of the tooltip text like fill, stroke, padding aro
 
 {% highlight xaml %}
 
- <rangeslider:SfRangeSlider  ToolTipShape="Rectangle">
-    <rangeslider:SfRangeSlider.ToolTipStyle>
-       <rangeslider:SliderToolTipStyle Fill="#F7B1AE" 
-                                       Stroke="#EE3F3F" 
-                                       StrokeThickness="2" />
-    </rangeslider:SfRangeSlider.ToolTipStyle>
- </rangeslider:SfRangeSlider>
+ <sliders:SfRangeSlider>
+    
+    <sliders:SfRangeSlider.Tooltip>
+       <sliders:SliderTooltip Fill="#F7B1AE" 
+                              Stroke="#EE3F3F" 
+                              StrokeThickness="2" />
+    </sliders:SfRangeSlider.Tooltip>
+ 
+ </sliders:SfRangeSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
  SfRangeSlider rangeSlider = new SfRangeSlider();
- rangeSlider.ToolTipShape = SliderToolTipShape.Rectangle;
- rangeSlider.ToolTipStyle.Fill = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
- rangeSlider.ToolTipStyle.Stroke = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
- rangeSlider.ToolTipStyle.StrokeThickness = 2;
+ rangeSlider.Tooltip.Fill = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
+ rangeSlider.Tooltip.Stroke = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+ rangeSlider.Tooltip.StrokeThickness = 2;
 
 {% endhighlight %}
 

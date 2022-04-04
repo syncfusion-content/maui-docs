@@ -21,9 +21,9 @@ For example, if [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider Interval="0.2" 
-                           ShowDividers="True">
-</rangeslider:SfRangeSlider>
+<sliders:SfRangeSlider Interval="0.2" 
+                       ShowDividers="True">
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -47,12 +47,14 @@ You can change the active and inactive divider radius of the range slider using 
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider Interval="0.2" 
-                           ShowDividers="True">
-   <rangeslider:SfRangeSlider.DividerStyle>
-      <rangeslider:SliderDividerStyle ActiveRadius="7" InactiveRadius="7" />
-   </rangeslider:SfRangeSlider.DividerStyle>
-</rangeslider:SfRangeSlider>
+<sliders:SfRangeSlider Interval="0.2" 
+                       ShowDividers="True">
+   
+   <sliders:SfRangeSlider.DividerStyle>
+      <sliders:SliderDividerStyle ActiveRadius="7" InactiveRadius="7" />
+   </sliders:SfRangeSlider.DividerStyle>
+
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -80,16 +82,18 @@ Also, you can change the active and inactive divider stroke color of the range s
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider Interval="0.2" 
-                           ShowDividers="True">
-   <rangeslider:SfRangeSlider.DividerStyle>
-        <rangeslider:SliderDividerStyle ActiveRadius="7" 
-                                        InactiveRadius="7" 
-                                        ActiveStrokeThickness="2" 
-                                        InactiveStrokeThickness="2" 
-                                        ActiveStroke="#EE3F3F" 
-                                        InactiveStroke="#F7B1AE"/>
-   </rangeslider:SfRangeSlider.DividerStyle>
+<sliders:SfRangeSlider Interval="0.2" 
+                       ShowDividers="True">
+   
+   <sliders:SfRangeSlider.DividerStyle>
+        <sliders:SliderDividerStyle ActiveRadius="7" 
+                                    InactiveRadius="7" 
+                                    ActiveStrokeThickness="2" 
+                                    InactiveStrokeThickness="2" 
+                                    ActiveStroke="#EE3F3F" 
+                                    InactiveStroke="#F7B1AE"/>
+   </sliders:SfRangeSlider.DividerStyle>
+
 </rangeslider:SfRangeSlider>
 
 {% endhighlight %}
@@ -120,15 +124,17 @@ You can change the active and inactive divider color of the range slider using t
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider Interval="0.2" 
-                           ShowDividers="True">
-    <rangeslider:SfRangeSlider.DividerStyle>
-        <rangeslider:SliderDividerStyle ActiveRadius="7" 
-                                        InactiveRadius="7" 
-                                        ActiveFill="#EE3F3F" 
-                                        InactiveFill="#F7B1AE"/>
-     </rangeslider:SfRangeSlider.DividerStyle>
-</rangeslider:SfRangeSlider>
+<sliders:SfRangeSlider Interval="0.2" 
+                       ShowDividers="True">
+    
+    <sliders:SfRangeSlider.DividerStyle>
+        <sliders:SliderDividerStyle ActiveRadius="7" 
+                                    InactiveRadius="7" 
+                                    ActiveFill="#EE3F3F" 
+                                    InactiveFill="#F7B1AE"/>
+     </sliders:SfRangeSlider.DividerStyle>
+
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -147,3 +153,113 @@ rangeSlider.DividerStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F7B
 {% endtabs %}
 
 ![RangeSlider divider color](images/labels-and-dividers/divider-color.png)
+
+## Disabled divider
+
+You can change the state of the range slider to disabled by setting `false` to the `IsEnabled` property. Using the Visual State Manager (VSM), you can customize the range slider divider properties based on the visual states. The applicable visual states are enabled(default) and disabled.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage.Resources>
+    <Style TargetType="sliders:SfRangeSlider">
+        <Setter Property="Interval" Value="0.25" />
+        <Setter Property="ShowDividers" Value="True" />
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup>
+                    <VisualState x:Name="Default">
+                        <VisualState.Setters>
+                            <Setter Property="DividerStyle">
+                                <Setter.Value>
+                                    <sliders:SliderDividerStyle ActiveFill = "#F7B1AE"
+                                                                    InactiveFill="#EE3F3F"
+                                                                    ActiveRadius="5"
+                                                                    InactiveRadius="4"/>
+                                </Setter.Value>
+                            </Setter>
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="DividerStyle">
+                                <Setter.Value>
+                                    <sliders:SliderDividerStyle ActiveFill = "grey"
+                                                                    InactiveFill="LightGrey"
+                                                                    ActiveRadius="5"
+                                                                    InactiveRadius="4"/>
+                                </Setter.Value>
+                            </Setter>
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+</ContentPage.Resources>
+
+
+<ContentPage.Content>
+    <VerticalStackLayout>
+        <Label Text="Enabled Range Slider" Padding="0,10"/>
+        <sliders:SfRangeSlider/>
+        <Label Text="Disabled Range Slider" Padding="0,10"/>
+        <sliders:SfRangeSlider IsEnabled="False"/>
+    </VerticalStackLayout>
+</ContentPage.Content>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+VerticalStackLayout stackLayout = new VerticalStackLayout();
+SfRangeSlider defaultRangeSlider = new SfRangeSlider { Interval = 0.25, ShowDividers = true };
+SfRangeSlider disabledRangeSlider = new SfRangeSlider { IsEnabled = false, Interval = 0.25, ShowDividers = true };
+
+VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
+VisualStateGroup commonStateGroup = new VisualStateGroup();
+// Default State.
+VisualState defaultState = new VisualState { Name = "Default" };
+defaultState.Setters.Add(new Setter
+{
+    Property = SfRangeSlider.DividerStyleProperty,
+    Value = new SliderDividerStyle
+    {
+        ActiveFill = Color.FromArgb("#F7B1AE"),
+        InactiveFill = Color.FromArgb("#EE3F3F"),
+        ActiveRadius = 5,
+        InactiveRadius = 4,
+    }
+});
+// Disabled State.
+VisualState disabledState = new VisualState { Name = "Disabled" };
+disabledState.Setters.Add(new Setter
+{
+    Property = SfRangeSlider.DividerStyleProperty,
+    Value = new SliderDividerStyle
+    {
+        ActiveFill = Colors.Grey,
+        InactiveFill = Colors.LightGrey,
+        ActiveRadius = 5,
+        InactiveRadius = 4,
+    }
+});
+
+commonStateGroup.States.Add(defaultState);
+commonStateGroup.States.Add(disabledState);
+visualStateGroupList.Add(commonStateGroup);
+VisualStateManager.SetVisualStateGroups(defaultRangeSlider, visualStateGroupList);
+VisualStateManager.SetVisualStateGroups(disabledRangeSlider, visualStateGroupList);
+
+stackLayout.Children.Add(new Label() { Text = "Default Range Slider", Padding = new Thickness(0, 10) });
+stackLayout.Children.Add(defaultRangeSlider);
+stackLayout.Children.Add(new Label() { Text = "Disabled Range Slider", Padding = new Thickness(0, 10) });
+stackLayout.Children.Add(disabledRangeSlider);
+this.Content = stackLayout;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![RangeSlider divider disabled state](images/labels-and-dividers/divider-disabled.png)

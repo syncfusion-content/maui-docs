@@ -298,3 +298,49 @@ Content = sfBadgeView;
 
 ![.NET MAUI Badge View Corner Radius](badge-customization_images/net_maui_badge_notifications_corner_radius.png)
 
+## Alignment of badge
+
+Align the badge view using the Center, Start, and End properties of `BadgeAlignment` property.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+   <badge:SfBadgeView BadgeText="20" HorizontalOptions="Center" VerticalOptions="Center" >
+        <badge:SfBadgeView.Content>
+            <Label Text="CENTER" BackgroundColor="LightGray" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                   WidthRequest="100" HeightRequest="60" TextColor="Black" />
+        </badge:SfBadgeView.Content>
+        <badge:SfBadgeView.BadgeSettings>
+            <badge:BadgeSettings BadgeAlignment="Center" CornerRadius="0"/>
+        </badge:SfBadgeView.BadgeSettings>
+</badge:SfBadgeView>    
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+ SfBadgeView sfBadgeView = new SfBadgeView();
+		sfBadgeView.HorizontalOptions = LayoutOptions.Center;
+		sfBadgeView.VerticalOptions = LayoutOptions.Center;
+		sfBadgeView.BadgeText = "20";
+		Label label = new Label();
+		label.Text = "CENTER";
+		label.HeightRequest = 60;
+		label.WidthRequest = 100;
+		label.BackgroundColor = Colors.LightGray;
+		label.HorizontalTextAlignment = TextAlignment.Center;
+		label.VerticalTextAlignment = TextAlignment.Center;
+		label.TextColor = Colors.Black;
+		sfBadgeView.Content = label;
+		BadgeSettings badgeSetting = new BadgeSettings();
+		badgeSetting.BadgeAlignment = BadgeAlignment.Center;
+		badgeSetting.CornerRadius = 0;
+		sfBadgeView.BadgeSettings = badgeSetting;
+		Content = sfBadgeView;
+    
+{% endhighlight %}
+
+{% endtabs %}
+
+![BadgeView Alignment](badge-customization_images/badge_alignment.png)

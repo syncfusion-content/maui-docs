@@ -81,6 +81,8 @@ The .NET MAUI Scheduler supports collection that implements the object interface
 <td>This property maps the property name of a business object class to the property name of Location in SchedulerAppointment.</td></tr>
 <tr><td>{{'[RecurrenceExceptionDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_RecurrenceExceptionDates)'| markdownify }}</td>
 <td>This property maps the property name of a business object class to the property name of RecurrenceExceptionDates in SchedulerAppointment.</td></tr>
+<tr><td>IsReadOnly</td>
+<td>This property maps the property name of a business object class to the property name of IsReadOnly in SchedulerAppointment.</td></tr>
 </table>
 
 N> The business object class should contain two date time fields as mandatory.
@@ -261,6 +263,40 @@ this.Scheduler.AppointmentsSource = appointment;
 N> 
 For example: From 12/13/2021 12:00AM to 12/14/2021 12:00AM.
 
+## Read only appointment
+
+A read-only appointment can be created with `IsReadOnly` property of the `SchedulerAppointment.`
+
+{% tabs %}
+{% highlight xaml %}
+
+ <scheduler:SfScheduler x:Name="Scheduler" 
+                        View="Week">
+ </scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight c# %}
+
+this.Scheduler.View = SchedulerView.Week;
+// Creating an instance for the scheduler appointment collection.
+var appointment = new ObservableCollection<SchedulerAppointment>();
+
+//Adding scheduler appointment in the scheduler appointment collection. 
+appointment.Add(new SchedulerAppointment()
+{
+    StartTime = DateTime.Today.AddHours(9),
+    EndTime = DateTime.Today.AddHours(10),
+    Subject = "Client Meeting",
+    Background = Brush.Orange,
+    IsReadOnly = true,
+});
+
+//Adding the scheduler appointment collection to the AppointmentsSource of .NET MAUI Scheduler.
+this.Scheduler.AppointmentsSource = appointment;
+
+{% endhighlight %}
+{% endtabs%}
+
 ## Recurrence appointment
 
 The recurring events on a daily, weekly, monthly, or yearly basis with optimized recurrence options. The Recurring appointments can be created by setting the [RecurrenceRule](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_RecurrenceRule) property in the [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html).
@@ -291,7 +327,7 @@ Based on the value of the `RecurrenceRule` property, recurrence appointments in 
 <td>This property is used to store the index value of the week. For example, while creating the monthly appointment in second week of the month, the index value of the second week (2) is stored in BYSETPOS. Example:FREQ=MONTHLY;BYDAY=MO;BYSETPOS=2;UNTIL=20200725</td></tr>
 </table>
 
-### Adding recurrence appointment
+### Creating the scheduler recurrence appointment
 
 A recurrence rule for `.NET MAUI Scheduler` is used to populate the recurring appointment collection in a specific pattern. The [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html) supports setting the RRULE directly to its [RecurrenceRule](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_RecurrenceRule) property.
 
@@ -439,7 +475,7 @@ this.Scheduler.AppointmentsSource = Meetings;
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/RecurringAppointment/BusinessObject)
 
-### How to get the recurrence editor field values from RRULE?
+#### How to get the recurrence editor field values from RRULE?
 
 The [RRuleParser](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRecurrenceManager.html#Syncfusion_Maui_Scheduler_SchedulerRecurrenceManager_ParseRRule_System_String_System_DateTime_) method of the `.NET MAUI Scheduler` retrieves the recurrence properties from the [RRULE](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRecurrenceManager.html#Syncfusion_Maui_Scheduler_SchedulerRecurrenceManager_GenerateRRule_Syncfusion_Maui_Scheduler_SchedulerRecurrenceInfo_System_DateTime_System_DateTime_).
 
@@ -459,7 +495,7 @@ recurrenceProperties.Interval = 1;
 recurrenceProperties.RecurrenceCount = 3;
 recurrenceProperties.RecurrenceRange = SchedulerRecurrenceRange.Count;
 
-### How to get the recurrence dates from RRULE?
+#### How to get the recurrence dates from RRULE?
 
 The [GetDateTimeOccurrences](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRecurrenceManager.html#Syncfusion_Maui_Scheduler_SchedulerRecurrenceManager_GetDateTimeOccurrences_System_String_System_DateTime_System_Nullable_System_DateTime__System_Nullable_System_DateTime__System_Nullable_System_DateTime__) method of `.NET MAUI Scheduler` retrieves the occurrences date-time list from the `RRULE.`
 
@@ -482,11 +518,11 @@ var date3 = 12/16/2021 10:00:00 AM;
 
 The Recurrence pattern appointments can be deleted or changed by handling exception dates and exception appointments.
 
-### Recurrence exception dates
+#### Recurrence exception dates
 
 By adding exception dates to the recurring appointment, any occurrence appointment can be removed that is an exception from the recurrence pattern.
 
-### Recurrence exception appointment
+#### Recurrence exception appointment
 
 Any appointment that differs from the recurrence pattern can be changed by adding this appointment in the [AppointmentsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentsSource) of the `.NET MAUI Scheduler.`
 
@@ -494,7 +530,7 @@ Any appointment that differs from the recurrence pattern can be changed by addin
 
 The Recurrence exception appointments and recurrence exception dates can be added to [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html) or removed by using its [RecurrenceExceptionDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_RecurrenceExceptionDates) property.
 
-### Delete occurrence from recurrence pattern appointment or adding exception dates to recurrence pattern appointment
+#### Delete occurrence from recurrence pattern appointment or adding exception dates to recurrence pattern for scheduler appointment
 
 An occurrence of the recurrence pattern appointment which is an exception can be deleted by using the [RecurrenceExceptionDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_RecurrenceExceptionDates) property of [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html). The deleted occurrence date will be considered as recurrence exception date.
 
@@ -541,7 +577,7 @@ this.Scheduler.AppointmentsSource = appointment;
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/RecursiveExceptionAppointment/SchedulerAppointment)
 
-### Add exception appointment to the recurrence pattern
+#### Add exception appointment to the recurrence pattern for scheduler appointment
 
 Also add an exception appointment which is changed or modified occurrence of the recurrence pattern appointment to the [AppointmentsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentsSource) of [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html). To add a changed occurrence, ensure to set the [RecurrenceId](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_RecurrenceId) of that occurrence and add the date of that occurrence to the [RecurrenceExceptionDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_RecurrenceExceptionDates) of recurrence pattern appointment. The [RecurrenceId](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_RecurrenceId) of changed occurrence should hold the exact recurrence pattern appointment [Id](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_Id).
 
@@ -610,11 +646,11 @@ N>
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/RecursiveExceptionAppointment/SchedulerAppointment)
 
-### Create recurrence exceptions for business object
+### Create the recurrence exceptions for business object
 
 The recurrence exception appointments and recurrence exception dates can be added to business object or removed them from business object, a business object class `Meeting` can be created with mandatory fields [RecurrenceExceptionDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentMapping_RecurrenceExceptionDates) and [RecurrenceId](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentMapping_RecurrenceId).
 
-### Delete occurrence from the recurrence pattern appointment or adding exception dates to recurrence pattern appointment
+#### Delete occurrence from the recurrence pattern appointment or adding exception dates to recurrence pattern for business object
 
 An occurrence of the recurrence pattern appointment which is an exception can be deleted by using the [RecurrenceExceptionDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentMapping_RecurrenceExceptionDates) property of [AppointmentMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html) class which is used to map the exception dates to the scheduler recurrence appointment. The deleted occurrence date will be considered as a recurrence exception date.
 To add the exception dates in the recurrence series of business object, add the `RecurrenceExceptionDates,` `EventName,` `From,` `To,` `Color,` `RecurrenceRule` properties to the business object class `Meeting.`
@@ -709,7 +745,7 @@ N> Exception dates should be Universal Time Coordinates (UTC) time zone.
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/RecursiveExceptionAppointment/BusinessObject)
 
-## Add an exception appointment to the recurrence pattern
+#### Add an exception appointment to the recurrence pattern for business object
 
 Also add an exception appointment which is changed or modified occurrence of the recurrence pattern appointment to the [AppointmentsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentsSource) of [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html). To add the changed occurrence, ensure to set the [RecurrenceId](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentMapping_RecurrenceId) of that occurrence and add the date of that occurrence to [RecurrenceExceptionDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentMapping_RecurrenceExceptionDates) of recurrence pattern appointment. The [RecurrenceId](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentMapping_RecurrenceId) of changed occurrence should hold the exact recurrence pattern appointment [Id](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentMapping_Id). Map the equivalent properties of `Id,` `RecurrenceId,` and `RecurrenceExceptionDates` properties from the business object to the [Id](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentMapping_Id) and [RecurrenceExceptionDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentMapping_RecurrenceExceptionDates) properties of [AppointmentMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html).
 
@@ -788,7 +824,11 @@ N>
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/RecursiveExceptionAppointment/BusinessObject)
 
-## Customize appointment text style
+## Appointment appearance customization
+
+The appointment appearance customization can be achieved by using the `TextStyle` and `AppointmentTemplate` properties in the `SfScheduler.`
+
+#### Customize appointment appearance using text style
 
 The appointment text style can be customized by using the [AppointmentTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentTextStyle) property of the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
@@ -800,9 +840,6 @@ The appointment text style can be customized by using the [AppointmentTextStyle]
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
 {% highlight c# %}
 
 var appointments = new ObservableCollection<SchedulerAppointment>();
@@ -824,6 +861,139 @@ this.Scheduler.AppointmentTextStyle = appointmentTextStyle;
 {% endtabs %}
 
 ![customize-appointment-text-style-appearence-in-maui-scheduler](images/appointments/customize-appointment-text-style-appearence-in-maui-scheduler.png)
+
+#### Customize appointment appearance using DataTemplate
+
+You can customize the appointment appearance by using the `AppointmentTemplate` properties of `DaysView,` `TimelineView,` and `MonthView` in the `SfScheduler.`
+
+{% tabs %}
+{% highlight xaml %}
+
+ <Grid>
+    <Grid.Resources>
+        <DataTemplate x:Key="appointmentTemplate">
+            <Grid Background="MediumPurple">
+                <Label Text="{Binding Subject}" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" FontFamily="Bold"/>
+            </Grid>
+        </DataTemplate>
+    </Grid.Resources>
+    <scheduler:SfScheduler  x:Name="Scheduler" 
+                            View="Day"
+                            AllowedViews="Day,Week,WorkWeek,Month,Agenda,TimelineDay,TimelineWeek,TimelineWorkWeek,TimelineMonth">
+        <scheduler:SfScheduler.DaysView>
+            <scheduler:SchedulerDaysView AppointmentTemplate="{StaticResource appointmentTemplate}"/>
+        </scheduler:SfScheduler.DaysView>
+        <scheduler:SfScheduler.TimelineView>
+            <scheduler:SchedulerTimelineView AppointmentTemplate="{StaticResource appointmentTemplate}"/>
+        </scheduler:SfScheduler.TimelineView>
+        <scheduler:SfScheduler.MonthView>
+            <scheduler:SchedulerMonthView AppointmentTemplate="{StaticResource appointmentTemplate}"/>
+        </scheduler:SfScheduler.MonthView>
+    </scheduler:SfScheduler>
+ </Grid>
+
+{% endhighlight %}
+{% highlight c# %}
+
+this.Scheduler.AllowedViews = SchedulerViews.Day | SchedulerViews.Week | SchedulerViews.WorkWeek | SchedulerViews.Month | SchedulerViews.Agenda | SchedulerViews.TimelineDay | SchedulerViews.TimelineWeek | SchedulerViews.TimelineWorkWeek | SchedulerViews.TimelineMonth;
+var appointments = new ObservableCollection<SchedulerAppointment>();
+appointments.Add(new SchedulerAppointment()
+{
+    Subject = "meeting",
+    StartTime = DateTime.Now,
+    EndTime = DateTime.Now.AddHours(1),
+});
+this.Scheduler.AppointmentsSource = appointments;
+
+{% endhighlight %}  
+{% endtabs %}
+
+![customize-appointment-template-appearance-in-maui-scheduler](images/appointments/customize-appointment-template-appearance-in-maui-scheduler.png)
+
+N>
+* By default, the `SchedulerAppointment` is set as the `BindingContext` for `AppointmentTemplate` for both `SchedulerAppointment` and custom data object in `AppointmentsSource.`
+* The Custom data object can be bound in `AppointmentTemplate` by using `SchedulerAppointment.Data.`
+
+#### Customize appointment appearance using DataTemplateSelector
+
+You can customize the appointment appearance by using the `AppointmentTemplate` property of `DaysView,` `TimelineView,` and `MonthView` in the `SfScheduler.` The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler appointment appearance by using the `AppointmentTemplate.` It allows you to choose a different data template for each appointment, as well as to customize the appearance of a particular appointment based on certain conditions.
+
+{% tabs %}
+{% highlight xaml %}
+
+<Grid>
+    <Grid.Resources>
+        <DataTemplate x:Key="normalDateTemplate">
+            <Grid Background="LightGreen">
+                <Label x:Name="label" HorizontalOptions="Center"  VerticalOptions="Center" TextColor="Black" FontSize="12"  Text="{Binding Subject}" />
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="todayDateTemplate">
+            <Grid Background="MediumPurple">
+                <Label x:Name="label" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White" FontSize="12"  Text="{Binding Subject}" />
+            </Grid>
+        </DataTemplate>
+        <local:AppointmentTemplateSelector x:Key="appointmentTemplateSelector" TodayDateTemplate="{StaticResource todayDateTemplate}" NormalDateTemplate="{StaticResource normalDateTemplate}"/>
+    </Grid.Resources>
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                           View="Week" >
+        <scheduler:SfScheduler.DaysView>
+            <scheduler:SchedulerDaysView AppointmentTemplate="{StaticResource appointmentTemplateSelector}" />
+        </scheduler:SfScheduler.DaysView>
+        <scheduler:SfScheduler.TimelineView>
+            <scheduler:SchedulerTimelineView AppointmentTemplate="{StaticResource appointmentTemplateSelector}" />
+        </scheduler:SfScheduler.TimelineView>
+        <scheduler:SfScheduler.MonthView>
+            <scheduler:SchedulerMonthView AppointmentTemplate="{StaticResource appointmentTemplateSelector}" />
+        </scheduler:SfScheduler.MonthView>
+    </scheduler:SfScheduler>
+ </Grid>
+
+{% endhighlight %}
+{% highlight c# tabtitle="AppointmentTemplateSelector.cs" %}
+
+public class AppointmentTemplateSelector : DataTemplateSelector
+{
+    public AppointmentTemplateSelector()
+    {
+    }
+    public DataTemplate NormalDateTemplate { get; set; }
+    public DataTemplate TodayDateTemplate { get; set; }
+    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+    {
+        var schedulerAppointment = item as SchedulerAppointment;
+        if (schedulerAppointment.ActualStartTime.Date == DateTime.Today.Date)
+            return TodayDateTemplate;
+        else
+            return NormalDateTemplate;
+    }
+}
+
+{% endhighlight %}  
+{% highlight c# %}
+
+this.Scheduler.View = SchedulerView.Week;
+var appointments = new ObservableCollection<SchedulerAppointment>();
+appointments.Add(new SchedulerAppointment()
+{
+    Subject = "Meeting",
+    StartTime = DateTime.Today.Date.AddHours(9),
+    EndTime = DateTime.Today.Date.AddHours(10),
+});
+appointments.Add(new SchedulerAppointment()
+{
+    Subject = "Project plan",
+    StartTime = DateTime.Today.Date.AddDays(1).AddHours(10),
+    EndTime = DateTime.Today.Date.AddDays(1).AddHours(11),
+});
+this.Scheduler.AppointmentsSource = appointments;
+
+{% endhighlight %} 
+{% endtabs %}
+
+N>
+* The `BindingContext` for `AppointmentTemplate` for both `SchedulerAppointment` and `SchedulerAppointment.Data` in `AppointmentsSource.`
+* When using data template selector, performance issues occur as the conversion template views take time within the framework.
 
 ## Appointment selection background
 

@@ -23,7 +23,7 @@ For example, if [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider ShowTicks="True" />
+<sliders:SfRangeSlider ShowTicks="True" />
 
 {% endhighlight %}
 
@@ -44,9 +44,9 @@ rangeSlider.ShowTicks = true;
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider Interval="0.2"  
-                           ShowTicks="True">
-</rangeslider:SfRangeSlider>
+<sliders:SfRangeSlider Interval="0.2"  
+                       ShowTicks="True">
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -72,9 +72,9 @@ It is used to represent the number of smaller ticks between two major ticks. For
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider MinorTicksPerInterval="3" 
-                           ShowTicks="True">
-</rangeslider:SfRangeSlider>
+<sliders:SfRangeSlider MinorTicksPerInterval="3" 
+                       ShowTicks="True">
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -95,10 +95,10 @@ rangeSlider.ShowTicks = true;
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider Interval="0.2" 
-                           MinorTicksPerInterval="1" 
-                           ShowTicks="True">
-</rangeslider:SfRangeSlider>
+<sliders:SfRangeSlider Interval="0.2" 
+                       MinorTicksPerInterval="1" 
+                       ShowTicks="True">
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -127,13 +127,15 @@ The inactive side of the range slider is between the [`Minimum`](https://help.sy
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider Interval="0.2" 
-                           ShowTicks="True">
-    <rangeslider:SfRangeSlider.MajorTickStyle>
-         <rangeslider:SliderTickStyle ActiveFill="#EE3F3F" 
-                                      InactiveFill="#F7B1AE" />
-    </rangeslider:SfRangeSlider.MajorTickStyle>
-</rangeslider:SfRangeSlider>
+<sliders:SfRangeSlider Interval="0.2" 
+                       ShowTicks="True">
+    
+    <sliders:SfRangeSlider.MajorTickStyle>
+         <sliders:SliderTickStyle ActiveFill="#EE3F3F" 
+                                  InactiveFill="#F7B1AE" />
+    </sliders:SfRangeSlider.MajorTickStyle>
+
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -163,14 +165,16 @@ The inactive side of the range slider is between the [`Minimum`](https://help.sy
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider Interval="0.2" 
-                           ShowTicks="True" 
-                           MinorTicksPerInterval="1">
-    <rangeslider:SfRangeSlider.MinorTickStyle>
-         <rangeslider:SliderTickStyle ActiveFill="#EE3F3F" 
-                                      InactiveFill="#F7B1AE" />
-     </rangeslider:SfRangeSlider.MinorTickStyle>
-</rangeslider:SfRangeSlider>
+<sliders:SfRangeSlider Interval="0.2" 
+                       ShowTicks="True" 
+                       MinorTicksPerInterval="1">
+    
+    <sliders:SfRangeSlider.MinorTickStyle>
+         <sliders:SliderTickStyle ActiveFill="#EE3F3F" 
+                                  InactiveFill="#F7B1AE" />
+     </sliders:SfRangeSlider.MinorTickStyle>
+
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -197,16 +201,19 @@ You can change the major and minor ticks size of the range slider using the [`Ac
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider Interval="0.2" 
-                           ShowTicks="True" 
-                           MinorTicksPerInterval="1">
-    <rangeslider:SfRangeSlider.MinorTickStyle>
-       <rangeslider:SliderTickStyle ActiveSize="2,10" InactiveSize="2, 10" />
-    </rangeslider:SfRangeSlider.MinorTickStyle>
-    <rangeslider:SfRangeSlider.MajorTickStyle>
-        <rangeslider:SliderTickStyle ActiveSize="2,15" InactiveSize="2, 15" />
-    </rangeslider:SfRangeSlider.MajorTickStyle>
-</rangeslider:SfRangeSlider>
+<sliders:SfRangeSlider Interval="0.2" 
+                       ShowTicks="True" 
+                       MinorTicksPerInterval="1">
+    
+    <sliders:SfRangeSlider.MinorTickStyle>
+       <sliders:SliderTickStyle ActiveSize="2,10" InactiveSize="2, 10" />
+    </sliders:SfRangeSlider.MinorTickStyle>
+    
+    <sliders:SfRangeSlider.MajorTickStyle>
+        <sliders:SliderTickStyle ActiveSize="2,15" InactiveSize="2, 15" />
+    </sliders:SfRangeSlider.MajorTickStyle>
+
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -235,16 +242,18 @@ You can adjust the space between track and ticks of the range slider using the [
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider Interval="0.2"
-                           ShowTicks="True" 
-                           MinorTicksPerInterval="1">
-   <rangeslider:SfRangeSlider.MinorTickStyle>
-       <rangeslider:SliderTickStyle Offset="5" />
-    </rangeslider:SfRangeSlider.MinorTickStyle>
-    <rangeslider:SfRangeSlider.MajorTickStyle>
-       <rangeslider:SliderTickStyle Offset="5" />
-    </rangeslider:SfRangeSlider.MajorTickStyle>
-</rangeslider:SfRangeSlider>
+<sliders:SfRangeSlider Interval="0.2"
+                       ShowTicks="True" 
+                       MinorTicksPerInterval="1">
+   
+    <sliders:SfRangeSlider.MinorTickStyle>
+       <sliders:SliderTickStyle Offset="5" />
+    </sliders:SfRangeSlider.MinorTickStyle>
+   
+    <sliders:SfRangeSlider.MajorTickStyle>
+       <sliders:SliderTickStyle Offset="5" />
+    </sliders:SfRangeSlider.MajorTickStyle>
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -263,3 +272,150 @@ rangeSlider.MajorTickStyle.Offset = 5;
 
 ![RangeSlider tick offset](images/ticks/tick-offset.png)
 
+## Disabled ticks
+
+You can change the state of the range slider to disabled by setting `false` to the `IsEnabled` property. Using the Visual State Manager (VSM), you can customize the range slider’s major and minor tick properties based on the visual states. The applicable visual states are enabled(default) and disabled.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage.Resources>
+    <Style TargetType="sliders:SfRangeSlider">
+        <Setter Property="Interval" Value="0.25" />
+        <Setter Property="ShowTicks" Value="True" />
+        <Setter Property="MinorTicksPerInterval" Value="2" />
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup>
+                    <VisualState x:Name="Default">
+                        <VisualState.Setters>
+                            <Setter Property="MajorTickStyle">
+                                <Setter.Value>
+                                    <sliders:SliderTickStyle ActiveSize = "3, 10" 
+                                                                 InactiveSize = "3, 10"
+                                                                 ActiveFill = "#EE3F3F"
+                                                                 InactiveFill = "#F7B1AE" />
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="MinorTickStyle">
+                                <Setter.Value>
+                                    <sliders:SliderTickStyle ActiveSize = "3, 6" 
+                                                                 InactiveSize = "3, 6"
+                                                                  ActiveFill = "#EE3F3F"
+                                                                 InactiveFill = "#F7B1AE" />
+                                </Setter.Value>
+                            </Setter>
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="MajorTickStyle">
+                                <Setter.Value>
+                                    <sliders:SliderTickStyle ActiveSize="3,10" 
+                                                                 InactiveSize="3, 10"
+                                                                 ActiveFill="Grey" 
+                                                                 InactiveFill="LightGrey" />
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="MinorTickStyle">
+                                <Setter.Value>
+                                    <sliders:SliderTickStyle ActiveSize ="3,6" 
+                                                                 InactiveSize="3, 6"
+                                                                 ActiveFill="Grey" 
+                                                                 InactiveFill="LightGrey" />
+                                </Setter.Value>
+                            </Setter>
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+</ContentPage.Resources>
+
+<ContentPage.Content>
+    <VerticalStackLayout>
+        <Label Text="Enabled Range Slider" Padding="0,10"/>
+        <sliders:SfRangeSlider/>
+        <Label Text="Disabled Range Slider" Padding="0,10"/>
+        <sliders:SfRangeSlider IsEnabled="False"/>
+    </VerticalStackLayout>
+</ContentPage.Content>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+VerticalStackLayout stackLayout = new VerticalStackLayout();
+SfRangeSlider defaultRangeSlider = new SfRangeSlider { Interval = 0.25, ShowTicks = true, MinorTicksPerInterval = 2 };
+SfRangeSlider disabledRangeSlider = new SfRangeSlider { IsEnabled = false, Interval = 0.25, ShowTicks = true, MinorTicksPerInterval = 2 };
+
+VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
+VisualStateGroup commonStateGroup = new VisualStateGroup();
+// Default State.
+VisualState defaultState = new VisualState { Name = "Default" };
+defaultState.Setters.Add(new Setter
+{
+    Property = SfRangeSlider.MajorTickStyleProperty,
+    Value = new SliderTickStyle
+    {
+        ActiveSize = new Size(3, 10),
+        InactiveSize = new Size(3, 10),
+        ActiveFill = Color.FromArgb("#EE3F3F"),
+        InactiveFill = Color.FromArgb("#F7B1AE"),
+    }
+});
+defaultState.Setters.Add(new Setter
+{
+    Property = SfRangeSlider.MinorTickStyleProperty,
+    Value = new SliderTickStyle
+    {
+        ActiveSize = new Size(3, 6),
+        InactiveSize = new Size(3, 6),
+        ActiveFill = Color.FromArgb("#EE3F3F"),
+        InactiveFill = Color.FromArgb("#F7B1AE"),
+    }
+});
+// Disabled State.
+VisualState disabledState = new VisualState { Name = "Disabled" };
+disabledState.Setters.Add(new Setter
+{
+    Property = SfRangeSlider.MajorTickStyleProperty,
+    Value = new SliderTickStyle
+    {
+        ActiveSize = new Size(3, 10),
+        InactiveSize = new Size(3, 10),
+        ActiveFill = Colors.Grey,
+        InactiveFill = Colors.LightGrey,
+    }
+});
+disabledState.Setters.Add(new Setter
+{
+    Property = SfRangeSlider.MinorTickStyleProperty,
+    Value = new SliderTickStyle
+    {
+        ActiveSize = new Size(3, 6),
+        InactiveSize = new Size(3, 6),
+        ActiveFill = Colors.Grey,
+        InactiveFill = Colors.LightGrey,
+    }
+});
+
+commonStateGroup.States.Add(defaultState);
+commonStateGroup.States.Add(disabledState);
+visualStateGroupList.Add(commonStateGroup);
+VisualStateManager.SetVisualStateGroups(defaultRangeSlider, visualStateGroupList);
+VisualStateManager.SetVisualStateGroups(disabledRangeSlider, visualStateGroupList);
+
+stackLayout.Children.Add(new Label() { Text = "Default Range Slider", Padding = new Thickness(0, 10) });
+stackLayout.Children.Add(defaultRangeSlider);
+stackLayout.Children.Add(new Label() { Text = "Disabled Range Slider", Padding = new Thickness(0, 10) });
+stackLayout.Children.Add(disabledRangeSlider);
+this.Content = stackLayout;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![RangeSlider ticks disabled state](images/ticks/ticks-disabled.png)

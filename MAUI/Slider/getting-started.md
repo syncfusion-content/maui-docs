@@ -24,9 +24,9 @@ Create a new .NET MAUI application in Visual Studio.
  ![Create MAUI Application](images/getting-started/nuget-installation.png)
 
 
-## Register the handler
+## Handler registration
 
-Syncfusion.Maui.Core nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
+In the MauiProgram.cs file, register the handler for Syncfusion core
 
 {% highlight C# %}
 
@@ -59,24 +59,6 @@ namespace SliderGettingStarted
 
 
 {% endhighlight %}
-
-## Import the Slider namespace
-
-{% tabs %}
-
-{% highlight xaml %}
-
-    xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders">
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-using Syncfusion.Maui.Sliders;
-
-{% endhighlight %}
-
-{% endtabs %}
 
 ## Initialize slider
 
@@ -121,17 +103,17 @@ namespace SliderGettingStarted
 
 ## Enable labels
 
-The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ShowLabels) property enables label in slider that renders on given interval.
+The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ShowLabels) property enables the labels which renders on given interval.
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <sliders:SfSlider Minimum="0" 
-		  Maximum="10" 
-		  Value="6" 
-		  ShowLabels="True" 
-		  Interval="2">
+		          Maximum="10" 
+		          Value="6" 
+		          ShowLabels="True" 
+		          Interval="2">
 </sliders:SfSlider>
 
 
@@ -154,19 +136,19 @@ slider.Interval = 2;
 
 ## Enable ticks
 
-The [`ShowTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ShowTicks) property enables ticks in the slider, while the [`MinorTicksPerInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MinorTicksPerInterval) property enables minor ticks between the major ticks.
+The [`ShowTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ShowTicks) property enables the ticks in the range selector, while the [`MinorTicksPerInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MinorTicksPerInterval) property enables the minor ticks between the major ticks.
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <sliders:SfSlider Minimum="0" 
-		  Maximum="10" 
-		  Value="6" 
-		  ShowLabels="True"  
-		  ShowTicks="True" 
-		  Interval="2" 
-		  MinorTicksPerInterval="1">
+		          Maximum="10" 
+		          Value="6" 
+		          ShowLabels="True"  
+		          ShowTicks="True" 
+		          Interval="2" 
+		          MinorTicksPerInterval="1">
 </sliders:SfSlider>
 
 
@@ -197,14 +179,14 @@ The [`Orientation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.
 
 {% highlight xaml %}
 
-<sliders:SfSlider  Orientation="Vertical"
-                   Minimum="0" 
-		   Maximum="10" 
-		   Value="6" 
-		   ShowLabels="True"  
-		   ShowTicks="True" 
-		   Interval="2" 
-		   MinorTicksPerInterval="1">
+<sliders:SfSlider Orientation="Vertical"
+                  Minimum="0" 
+		          Maximum="10" 
+		          Value="6" 
+		          ShowLabels="True"  
+		          ShowTicks="True" 
+		          Interval="2" 
+		          MinorTicksPerInterval="1">
 </sliders:SfSlider>
 
 {% endhighlight %}
@@ -237,12 +219,12 @@ You can invert the slider using the [`IsInversed`](https://help.syncfusion.com/c
 
 <sliders:SfSlider IsInversed="True"
                   Minimum="0" 
-		  Maximum="10" 
-		  Value="6" 
-		  ShowLabels="True"  
-		  ShowTicks="True" 
-		  Interval="2" 
-		  MinorTicksPerInterval="1">
+		          Maximum="10" 
+		          Value="6" 
+		          ShowLabels="True"  
+		          ShowTicks="True" 
+		          Interval="2" 
+		          MinorTicksPerInterval="1">
 </sliders:SfSlider>
 
 {% endhighlight %}
@@ -273,20 +255,20 @@ Set the 'DateTime' values to the [`Minimum`](https://help.syncfusion.com/cr/maui
 
 {% highlight xaml %}
 
-<sliders:SfSlider Minimum="2010-01-01" 
-		  Maximum="2020-01-01" 
-		  Value="2014-01-01" 
-                  ShowLabels="True"
-		  ShowTicks="True" 
-		  Interval="2" 
-		  MinorTicksPerInterval="1">
-</sliders:SfSlider>
+<sliders:SfDateTimeSlider Minimum="2010-01-01" 
+		                  Maximum="2020-01-01" 
+		                  Value="2014-01-01" 
+                          ShowLabels="True"
+		                  ShowTicks="True" 
+		                  Interval="2" 
+		                  MinorTicksPerInterval="1">
+</sliders:SfDateTimeSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfSlider slider = new SfSlider();
+SfDateTimeSlider slider = new SfDateTimeSlider();
 slider.Minimum = new DateTime(2010, 01, 01);
 slider.Maximum = new DateTime(2020, 01, 01);
 slider.Value = new DateTime(2014, 02, 01);
@@ -312,13 +294,13 @@ N> The format type (numeric or date) of the slider is determined based on the va
 {% highlight xaml %}
 
 <sliders:SfSlider Minimum="20" 
-		  Maximum="100" 
-		  Value="60" 
-		  NumberFormat="$##" 
+		          Maximum="100" 
+		          Value="60" 
+		          NumberFormat="$##" 
                   ShowTicks="True"
                   MinorTicksPerInterval="1"
-		  ShowLabels="True" 
-		  Interval="20">
+		          ShowLabels="True" 
+		          Interval="20">
 </sliders:SfSlider>
 
 {% endhighlight %}

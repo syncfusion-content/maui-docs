@@ -19,12 +19,15 @@ When the [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slid
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider Minimum="0" 
-                           Maximum="100" 
-                           ShowTicks="True"
-                           ShowLabels="True"
-                           DragBehavior="OnThumb">
-</rangeslider:SfRangeSlider>
+<sliders:SfRangeSlider Minimum="0" 
+                       Maximum="100"
+                       RangeStart="25"
+                       RangeEnd="75"
+                       Interval="25" 
+                       ShowTicks="True"
+                       ShowLabels="True"
+                       DragBehavior="OnThumb">
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -32,7 +35,10 @@ When the [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slid
 
 SfRangeSlider rangeSlider = new SfRangeSlider();
 rangeSlider.Minimum = 0;
-rangeSlider.Maximum = 100; 
+rangeSlider.Maximum = 100;
+rangeSlider.RangeStart = 25;
+rangeSlider.RangeEnd = 75;
+rangeSlider.Interval = 25; 
 rangeSlider.ShowTicks = true;
 rangeSlider.ShowLabels = true;  
 rangeSlider.DragBehavior = SliderDragBehavior.OnThumb;
@@ -51,12 +57,15 @@ When the [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slid
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider Minimum="0" 
-                           Maximum="100" 
-                           ShowTicks="True"
-                           ShowLabels="True"
-                           DragBehavior="BetweenThumbs">
-</rangeslider:SfRangeSlider>
+<sliders:SfRangeSlider Minimum="0" 
+                       Maximum="100"
+                       RangeStart="25"
+                       RangeEnd="75"
+                       Interval="25" 
+                       ShowTicks="True"
+                       ShowLabels="True"
+                       DragBehavior="BetweenThumbs">
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -64,7 +73,10 @@ When the [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slid
 
 SfRangeSlider rangeSlider = new SfRangeSlider();
 rangeSlider.Minimum = 0;
-rangeSlider.Maximum = 100; 
+rangeSlider.Maximum = 100;
+rangeSlider.RangeStart = 25;
+rangeSlider.RangeEnd = 75;
+rangeSlider.Interval = 25; 
 rangeSlider.ShowTicks = true;
 rangeSlider.ShowLabels = true;   
 rangeSlider.DragBehavior = SliderDragBehavior.BetweenThumbs;
@@ -83,12 +95,15 @@ When the  [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sli
 
 {% highlight xaml %}
 
-<rangeslider:SfRangeSlider Minimum="0" 
-                           Maximum="100" 
-                           ShowTicks="True"
-                           ShowLabels="True"
-                           DragBehavior="Both">
-</rangeslider:SfRangeSlider>
+<sliders:SfRangeSlider Minimum="0" 
+                       Maximum="100"
+                       RangeStart="25"
+                       RangeEnd="75"
+                       Interval="25" 
+                       ShowTicks="True"
+                       ShowLabels="True"
+                       DragBehavior="Both">
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
@@ -96,7 +111,10 @@ When the  [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sli
 
 SfRangeSlider rangeSlider = new SfRangeSlider();
 rangeSlider.Minimum = 0;
-rangeSlider.Maximum = 100; 
+rangeSlider.Maximum = 100;
+rangeSlider.RangeStart = 25;
+rangeSlider.RangeEnd = 75;
+rangeSlider.Interval = 25; 
 rangeSlider.ShowTicks = true; 
 rangeSlider.ShowLabels = true;  
 rangeSlider.DragBehavior = SliderDragBehavior.Both;

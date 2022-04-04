@@ -171,12 +171,12 @@ this.BindingContext = new ViewModel();
 {% highlight xaml %} 
 
 <chart:SfCartesianChart>                            
-    <chart:SfCartesianChart.PrimaryAxis>
+    <chart:SfCartesianChart.XAxes>
         <chart:CategoryAxis/>
-    </chart:SfCartesianChart.PrimaryAxis>
-    <chart:SfCartesianChart.SecondaryAxis>
+    </chart:SfCartesianChart.XAxes>
+    <chart:SfCartesianChart.YAxes>
         <chart:NumericalAxis/>
-    </chart:SfCartesianChart.SecondaryAxis>                       
+    </chart:SfCartesianChart.YAxes>                       
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -185,9 +185,9 @@ this.BindingContext = new ViewModel();
 
     SfCartesianChart chart = new SfCartesianChart();
     CategoryAxis primaryAxis = new CategoryAxis();
-    chart.PrimaryAxis = primaryAxis;
+    chart.XAxes.Add(primaryAxis);
     NumericalAxis secondaryAxis = new NumericalAxis();
-    chart.SecondaryAxis = secondaryAxis;
+    chart.YAxes.Add(secondaryAxis);
 
 {% endhighlight %}
 
@@ -209,20 +209,20 @@ N> You need to set [XBindingPath](https://help.syncfusion.com/cr/maui/Syncfusion
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    <chart:SfCartesianChart.PrimaryAxis>
+    <chart:SfCartesianChart.XAxes>
         <chart:CategoryAxis>
             <chart:CategoryAxis.Title>
                 <chart:ChartAxisTitle Text="Name" />
             </chart:CategoryAxis.Title>
         </chart:CategoryAxis>
-    </chart:SfCartesianChart.PrimaryAxis>
-    <chart:SfCartesianChart.SecondaryAxis>
+    </chart:SfCartesianChart.XAxes>
+    <chart:SfCartesianChart.YAxes>
         <chart:NumericalAxis>
             <chart:NumericalAxis.Title>
                 <chart:ChartAxisTitle Text="Height(in cm)" />
             </chart:NumericalAxis.Title>
         </chart:NumericalAxis>
-    </chart:SfCartesianChart.SecondaryAxis>
+    </chart:SfCartesianChart.YAxes>
 
     <chart:SfCartesianChart.Series>
         <chart:ColumnSeries ItemsSource="{Binding Data}" 
@@ -241,12 +241,12 @@ SfCartesianChart chart = new SfCartesianChart();
 // Initializing primary axis
 CategoryAxis primaryAxis = new CategoryAxis();
 primaryAxis.Title.Text = "Name";
-chart.PrimaryAxis = primaryAxis;
+chart.XAxes.Add(primaryAxis);
 
 //Initializing secondary Axis
 NumericalAxis secondaryAxis = new NumericalAxis();
 secondaryAxis.Title.Text = "Height(in cm)";
-chart.SecondaryAxis = secondaryAxis;
+chart.YAxes.Add(secondaryAxis);
 
 //Initialize the two series for SfChart
 ColumnSeries series = new ColumnSeries();
@@ -388,7 +388,7 @@ Tooltips are used to show information about the segment, when a user hovers over
 <chart:SfCartesianChart>
     ...
     <chart:SfCartesianChart.Series>
-        <chart:ColumnSeries ShowTooltip="True" ItemsSource="{Binding Data}" XBindingPath="Name" YBindingPath="Height"/>
+        <chart:ColumnSeries EnableTooltip="True" ItemsSource="{Binding Data}" XBindingPath="Name" YBindingPath="Height"/>
     </chart:SfCartesianChart.Series>
     ...
 </chart:SfCartesianChart> 
@@ -401,7 +401,7 @@ ColumnSeries series = new ColumnSeries();
 series.ItemsSource = (new ViewModel()).Data;
 series.XBindingPath = "Name";          
 series.YBindingPath = "Height";
-series.ShowTooltip = true;
+series.EnableTooltip = true;
 
 {% endhighlight %}
 
@@ -435,26 +435,26 @@ The following code example gives you the complete code of above configurations.
                     <chart:ChartLegend/>
                 </chart:SfCartesianChart.Legend>
     
-                <chart:SfCartesianChart.PrimaryAxis>
+                <chart:SfCartesianChart.XAxes>
                     <chart:CategoryAxis>
                         <chart:CategoryAxis.Title>
                             <chart:ChartAxisTitle Text="Name"/>
                         </chart:CategoryAxis.Title>
                     </chart:CategoryAxis>
-                </chart:SfCartesianChart.PrimaryAxis>
+                </chart:SfCartesianChart.XAxes>
 
-                <chart:SfCartesianChart.SecondaryAxis>
+                <chart:SfCartesianChart.YAxes>
                     <chart:NumericalAxis>
                         <chart:NumericalAxis.Title>
                             <chart:ChartAxisTitle Text="Height(in cm)"/>
                         </chart:NumericalAxis.Title>
                     </chart:NumericalAxis>
-                </chart:SfCartesianChart.SecondaryAxis>
+                </chart:SfCartesianChart.YAxes>
 
             <!--Initialize the series for chart-->
                 <chart:SfCartesianChart.Series>
                     <chart:ColumnSeries Label="Height" 
-                            ShowTooltip="True"
+                            EnableTooltip="True"
                             ShowDataLabels="True"
                             ItemsSource="{Binding Data}"
                             XBindingPath="Name" 
@@ -491,12 +491,12 @@ namespace ChartGettingStarted
             // Initializing primary axis
             CategoryAxis primaryAxis = new CategoryAxis();
             primaryAxis.Title.Text = "Name";
-            chart.PrimaryAxis = primaryAxis;
+            chart.XAxes.Add(primaryAxis);
 
             //Initializing secondary Axis
             NumericalAxis secondaryAxis = new NumericalAxis();
             secondaryAxis.Title.Text = "Height(in cm)";
-            chart.SecondaryAxis = secondaryAxis;
+            chart.YAxes.Add(secondaryAxis);
 
             //Initialize the two series for SfChart
             ColumnSeries series = new ColumnSeries()
@@ -508,7 +508,7 @@ namespace ChartGettingStarted
                 YBindingPath = "Height",
                 DataLabelSettings = new CartesianDataLabelSettings
                 {
-                    LabelPlacement = Placement.Inner
+                    LabelPlacement = DataLabelPlacement.Inner
                 }              
             };  
 

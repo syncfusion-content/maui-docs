@@ -42,9 +42,26 @@ You can find the platforms supported by each .NET MAUI control as below.
 		</th>
 	</tr>
 	<tr>
-		<td rowspan="3" valign="top">
+		<td rowspan="5" valign="top">
 			DATA VISUALIZATION<br/>
 		</td>
+		<td>
+			<a href="/maui/barcode-generator/overview">Barcode Generator</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
+	<tr>
 		<td>
 			<a href="/maui/cartesian-charts/overview">Cartesian Charts</a><br/>
 		</td>
@@ -80,7 +97,24 @@ You can find the platforms supported by each .NET MAUI control as below.
 	</tr>
 	<tr>
 		<td>
-			<a href="/maui/radialgauge/overview">Radial Gauge</a><br/>
+			<a href="/maui/linear-gauge/overview">Linear Gauge</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="/maui/radial-gauge/overview">Radial Gauge</a><br/>
 		</td>
 		<td>
 		Yes<br/>
@@ -132,15 +166,15 @@ You can find the platforms supported by each .NET MAUI control as below.
 		Yes<br/>
 		</td>
 		<td>
-		Underway<br/>
+		Yes<br/>
 		</td>
 	</tr>
 	<tr>
-	    <td rowspan="2" valign="top">
-			EDITORS<br/>
+	    <td rowspan="3" valign="top">
+			SLIDERS<br/>
 		</td>	
 		<td>
-			<a href="/maui/slider/overview">Slider</a><br/>
+			<a href="/maui/range-selector/overview">Range Selector</a><br/>
 		</td>
 		<td>
 		Yes<br/>
@@ -158,6 +192,23 @@ You can find the platforms supported by each .NET MAUI control as below.
 	<tr>
 		<td>
 			<a href="/maui/range-slider/overview">Range Slider</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="/maui/slider/overview">Slider</a><br/>
 		</td>
 		<td>
 		Yes<br/>
@@ -238,7 +289,7 @@ You can find the platforms supported by each .NET MAUI file-format library as be
 
 | Control           | Android | iOS  | Mac Catalyst | WinUI |
 |-------------------|---------|------|--------------|-------|
-| [Excel](https://help.syncfusion.com/file-formats/xlsio/overview)             | Yes     | Yes  | Underway | Yes  |
-| [PDF](https://help.syncfusion.com/file-formats/pdf/overview)               | Yes     | Yes  | Underway | Yes  |
-| [Word](https://help.syncfusion.com/file-formats/docio/overview)              | Yes     | Yes  | Underway | Yes  |
-| [PowerPoint](https://help.syncfusion.com/file-formats/presentation/overview)        | Yes     | Yes  | Underway | Yes  |
+| [Excel](https://help.syncfusion.com/file-formats/xlsio/overview)             | Yes     | Yes  | Yes | Yes  |
+| [PDF](https://help.syncfusion.com/file-formats/pdf/overview)               | Yes     | Yes  | Yes | Yes  |
+| [Word](https://help.syncfusion.com/file-formats/docio/overview)              | Yes     | Yes  | Yes | Yes  |
+| [PowerPoint](https://help.syncfusion.com/file-formats/presentation/overview)        | Yes     | Yes  | Yes | Yes  |
