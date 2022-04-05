@@ -81,7 +81,7 @@ The .NET MAUI Scheduler supports collection that implements the object interface
 <td>This property maps the property name of a business object class to the property name of Location in SchedulerAppointment.</td></tr>
 <tr><td>{{'[RecurrenceExceptionDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_RecurrenceExceptionDates)'| markdownify }}</td>
 <td>This property maps the property name of a business object class to the property name of RecurrenceExceptionDates in SchedulerAppointment.</td></tr>
-<tr><td>IsReadOnly</td>
+<tr><td>{{'[IsReadOnly](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_IsReadOnly)'| markdownify}}</td>
 <td>This property maps the property name of a business object class to the property name of IsReadOnly in SchedulerAppointment.</td></tr>
 </table>
 
@@ -265,7 +265,7 @@ For example: From 12/13/2021 12:00AM to 12/14/2021 12:00AM.
 
 ## Read only appointment
 
-A read-only appointment can be created with `IsReadOnly` property of the `SchedulerAppointment.`
+A read-only appointment can be created with [IsReadOnly](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_IsReadOnly) property of the [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html).
 
 {% tabs %}
 {% highlight xaml %}
@@ -864,7 +864,7 @@ this.Scheduler.AppointmentTextStyle = appointmentTextStyle;
 
 #### Customize appointment appearance using DataTemplate
 
-You can customize the appointment appearance by using the `AppointmentTemplate` properties of `DaysView,` `TimelineView,` and `MonthView` in the `SfScheduler.`
+You can customize the appointment appearance by using the [AppointmentTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_AppointmentTemplate) properties of [DaysView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDaysView.html), [TimelineView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineView.html), and [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
 {% tabs %}
 {% highlight xaml %}
@@ -916,7 +916,7 @@ N>
 
 #### Customize appointment appearance using DataTemplateSelector
 
-You can customize the appointment appearance by using the `AppointmentTemplate` property of `DaysView,` `TimelineView,` and `MonthView` in the `SfScheduler.` The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler appointment appearance by using the `AppointmentTemplate.` It allows you to choose a different data template for each appointment, as well as to customize the appearance of a particular appointment based on certain conditions.
+You can customize the appointment appearance by using the [AppointmentTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_AppointmentTemplate) property of [DaysView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDaysView.html), [TimelineView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineView.html), and [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html). The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler appointment appearance by using the `AppointmentTemplate.` It allows you to choose a different data template for each appointment, as well as to customize the appearance of a particular appointment based on certain conditions.
 
 {% tabs %}
 {% highlight xaml %}

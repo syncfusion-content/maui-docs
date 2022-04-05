@@ -13,7 +13,7 @@ You can learn about `SfScheduler's` header height, date format, and appearance s
 
 ## Customize header height in scheduler
 
-You can customize the default `Height` property of the `HeaderView` in the `SfScheduler.` By default, the header height is `50.`
+You can customize the default [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderSettingsBase.html#Syncfusion_Maui_Scheduler_SchedulerHeaderSettingsBase_Height) property of the [HeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderView.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html). By default, the header height is `50.`
 
 {% tabs %}  
 {% highlight xaml %}
@@ -39,7 +39,7 @@ this.Scheduler.HeaderView.Height = 100;
 
 ## Header date format
 
-The header date format can be customized by using the `TextFormat` property of the `SfScheduler.` By default, the header text format is `MMMM yyyy.`
+The header date format can be customized by using the [TextFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderView.html#Syncfusion_Maui_Scheduler_SchedulerHeaderView_TextFormat) property of the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html). By default, the header text format is `MMMM yyyy.`
 
 {% tabs %}  
 {% highlight xaml %}
@@ -65,11 +65,11 @@ this.Scheduler.HeaderView.TextFormat = "MMM yy";
 
 ## Header appearance customization
 
-The header can be customized by using the `HeaderView` property of the `SfScheduler.`
+The header can be customized by using the [HeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderView.html) property of the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
 #### Customize header appearance using text style
 
-You can style the background color and textStyle by using the properties such as `Background` and `TextStyle` properties of `HeaderView.`
+You can style the background color and textStyle by using the properties such as [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderSettingsBase.html#Syncfusion_Maui_Scheduler_SchedulerHeaderSettingsBase_Background) and [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderView.html#Syncfusion_Maui_Scheduler_SchedulerHeaderView_TextStyle) properties of [HeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderView.html).
 
 {% tabs %}
 {% highlight xaml %}
@@ -102,7 +102,7 @@ this.Scheduler.HeaderView.Background = Brush.LightGreen;
 
 #### Customize header appearance using DataTemplate
 
-You can customize the header appearance by using the `HeaderTemplate` property of `HeaderView` in the `SfScheduler.` 
+You can customize the header appearance by using the [HeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderView.html#Syncfusion_Maui_Scheduler_SchedulerHeaderView_HeaderTemplate) property of [HeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderView.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html). 
 
 {% tabs %}
 {% highlight xaml %}
@@ -137,7 +137,7 @@ You can customize the header appearance by using the `HeaderTemplate` property o
 
 #### Customize header appearance using DataTemplateSelector
 
-You can customize the header appearance by using the `HeaderTemplate` property of `HeaderView` in the `SfScheduler.` The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler header by using the `HeaderTemplate.` It allows you to choose a different data template for each header, as well as to customize the appearance of a particular header based on certain conditions.
+You can customize the header appearance by using the [HeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderView.html#Syncfusion_Maui_Scheduler_SchedulerHeaderView_HeaderTemplate) property of [HeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderView.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html). The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler header by using the `HeaderTemplate.` It allows you to choose a different data template for each header, as well as to customize the appearance of a particular header based on certain conditions.
 
 {% tabs %}
 {% highlight xaml %}
