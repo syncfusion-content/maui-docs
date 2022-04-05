@@ -15,7 +15,7 @@ The Scheduler provides the capability to display an interactive view when the vi
 
 ## Load appointments on demand
 
-It allows you to load appointments on-demand for the visible dates. The `ShowBusyIndicator` property can be used to start and stop the loading indicator animation before and after appointments are loaded.
+It allows you to load appointments on-demand for the visible dates. The [ShowBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_ShowBusyIndicator) property can be used to start and stop the loading indicator animation before and after appointments are loaded.
 
 These can be achieved in two ways:
 
@@ -24,13 +24,13 @@ These can be achieved in two ways:
 
 ### QueryAppointments event
 
-This event occurs when the view of the scheduler or the visible dates are changed, and it also allows the `AppointmentsSource` for the visible dates to be loaded in on-demand. The following is a list of the arguments:
+This [QueryAppointments](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_QueryAppointments) event occurs when the view of the scheduler or the visible dates are changed, and it also allows the [AppointmentsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentsSource) for the visible dates to be loaded in on-demand. The following is a list of the arguments:
 
 * `Sender`: This contains the `SfScheduler` object.
 
-* `SchedulerQueryAppointmentsEventArgs`: This event will be performed on the view of the scheduler or when the visible dates are changed, and you can see the details about the VisibleDates.
+* [SchedulerQueryAppointmentsEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerQueryAppointmentsEventArgs.html): This event will be performed on the view of the scheduler or when the visible dates are changed, and you can see the details about the VisibleDates.
 
-    * `VisibleDates`: Gets the current visible dates of scheduler that is used to load the appointments to the `AppointmentsSource` on demand which is used to reduce the appointment fetching performance to render in current visible dates from a large data source.
+    * [VisibleDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerQueryAppointmentsEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerQueryAppointmentsEventArgs_VisibleDates): Gets the current visible dates of scheduler that is used to load the appointments to the `AppointmentsSource` on demand which is used to reduce the appointment fetching performance to render in current visible dates from a large data source.
 
 {% tabs %}
 {% highlight xaml %}
@@ -127,11 +127,11 @@ N> The QueryAppointments event will be triggered, if any one of the following ac
 
 ### QueryAppointments command
 
-The Scheduler notifies the `QueryAppointmentsCommand,` when the view of the scheduler or the visible dates are changed. Get a list of visible dates from the `SchedulerQueryAppointmentsEventArgs.` The default value for this `ICommand` is `null.` The `SchedulerQueryAppointmentsEventArgs` was passed as a command parameter.
+The Scheduler notifies the [QueryAppointmentsCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_QueryAppointmentsCommand), when the view of the scheduler or the visible dates are changed. Get a list of visible dates from the [SchedulerQueryAppointmentsEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerQueryAppointmentsEventArgs.html). The default value for this `ICommand` is `null.` The `SchedulerQueryAppointmentsEventArgs` was passed as a command parameter.
 
 A ViewModel class should implement a command and handle it by the `CanExecute` and `Execute` methods to handle on-demand loading. In execute method, perform the following operations.
 
-The `ShowBusyIndicator` property can be used to start and stop the loading indicator animation, before and after appointments are loaded into the `AppointmentsSource` of the `SfScheduler.`
+The [ShowBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_ShowBusyIndicator) property can be used to start and stop the loading indicator animation, before and after appointments are loaded into the [AppointmentsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentsSource) of the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
 {% tabs %}
 {% highlight xaml %}
@@ -263,7 +263,7 @@ N> The `QueryAppointmentsCommand` will be raised if any one of the following act
 
 ## Show busy indicator
 
-The `Scheduler` supports to show the busy indicator view by using the `ShowBusyIndicator` property of the `SfScheduler.` The default value is set to `false.` If the value is set to `true` and visible dates are changed, then the busy indicator will be loaded on view.
+The `Scheduler` supports to show the busy indicator view by using the [ShowBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_ShowBusyIndicator) property of the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html). The default value is set to `false.` If the value is set to `true` and visible dates are changed, then the busy indicator will be loaded on view.
 
 {% tabs %}
 {% highlight xaml %}
@@ -288,7 +288,7 @@ N>
 
 ## Busy indicator appearance
 
-You can customize the busy indicator appearance by using the `BusyIndicatorTemplate` property of `SfScheduler.`
+You can customize the busy indicator appearance by using the [BusyIndicatorTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_BusyIndicatorTemplate) property of [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
 {% tabs %}
 {% highlight xaml %}
