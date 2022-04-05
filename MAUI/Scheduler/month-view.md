@@ -85,7 +85,7 @@ You can customize the default appearance of view header in a month view by setti
 
 ### Change day format of view header
 
-Customize the day format of Scheduler view header by using the `DayFormat` property of `ViewHeaderSettings` in [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html).
+Customize the day format of Scheduler view header by using the [DayFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViewHeaderSettings.html#Syncfusion_Maui_Scheduler_SchedulerViewHeaderSettings_DayFormat) property of [ViewHeaderSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_ViewHeaderSettings) in [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html).
 
 {% tabs %}  
 {% highlight xaml %}
