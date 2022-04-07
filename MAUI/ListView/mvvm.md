@@ -16,7 +16,7 @@ documentation: ug
 The [TapCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_TapCommand) will be triggered when you tap the item and pass the [ItemTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemTappedEventArgs.html) as a parameter.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight c# tabtitle= "CommandViewModel.cs" hl_lines="18 19 20 21 22" %}
 
 listView.TapCommand = viewModel.TappedCommand;
 
@@ -50,7 +50,7 @@ public class CommandViewModel
 The [LongPressCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LongPressCommand) will be triggered when you long press the item and pass the [ItemLongPressEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemLongPressEventArgs.html) as a parameter.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight c# tabtitle= "CommandViewModel.cs" hl_lines="18 19 20 21 22" %}
 
 listView.LongPressCommand = viewModel.LongPressCommand;
 
@@ -86,7 +86,7 @@ N> When a command is bound to `ItemTemplate`, it must also define `Source` prope
 The ListView event can be converted into commands using `Behaviors`. To achieve this, create a command in the ViewModel class and associate it to the ListView event using `Behaviors`.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle= "MainPage.xaml" hl_lines="3 4 5 6" %}
 <listView:SfListView x:Name="listView"
      ItemsSource="{Binding contactsinfo}">
     <listView:SfListView.Behaviors>
@@ -95,7 +95,7 @@ The ListView event can be converted into commands using `Behaviors`. To achieve 
     </listView:SfListView.Behaviors>
 </listView:SfListView>
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# tabtitle= "ContactsViewModel.cs" hl_lines="13" %}
 public class ContactsViewModel
 {
     public Command<ItemSelectionChangedEventArgs> selectionChangedCommand;
@@ -124,7 +124,7 @@ public class ContactsViewModel
 You can bind a command for a `Button` inside `ItemTemplate` to the command in Model by specifying `Source` property with its root element as reference to execute the binded property of type command.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle= "MainPage.xaml" hl_lines="7" %}
 <listView:SfListView x:Name="listView" ItemsSource="{Binding ContactInfo}">
      <listView:SfListView.ItemTemplate>
         <DataTemplate>
@@ -154,7 +154,7 @@ You can bind a command for a `Button` inside `ItemTemplate` to the command in Mo
 </listView:SfListView>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# tabtitle= "ContactInfo_NestedListView" %}
 
 public class ContactInfo_NestedListView
 {
@@ -183,7 +183,7 @@ public class ContactInfo_NestedListView
 You can bind command of `Button` inside `ItemTemplate` to the command in ViewModel by specifying `Source` property with its root element as reference to execute the binded property of type command.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle= "MainPage.xaml" hl_lines="6 7 8" %}
 <Syncfusion:SfListView x:Name="listView" ItemsSource="{Binding contactsinfo}" >
     <Syncfusion:SfListView.ItemTemplate>
         <DataTemplate>
@@ -198,7 +198,7 @@ You can bind command of `Button` inside `ItemTemplate` to the command in ViewMod
     </Syncfusion:SfListView.ItemTemplate>
 </Syncfusion:SfListView>
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# tabtitle= "ContactsViewModel" %}
 namespace ListViewSample 
 {
     public class ContactsViewModel : INotifyPropertyChanged
@@ -228,7 +228,7 @@ namespace ListViewSample
 `SfListView` allows you to bind the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsSource) property to populate the list view items from ViewModel.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle= "MainPage.xaml" hl_lines="7 8 9 11 12" %}
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -249,8 +249,7 @@ listView.SetBinding(SfListView.ItemsSourceProperty, new Binding("BookInfoCollect
 
 
 {% tabs %}
-{% highlight c# %}
-//ViewModel.cs
+{% highlight c# tabtitle= "ViewModel.cs" %}
 public class BookInfoRepository : INotifyPropertyChanged
 {
     private ObservableCollection<BookInfo> bookInfoCollection;
@@ -293,7 +292,7 @@ public class BookInfoRepository : INotifyPropertyChanged
 `SfListView` supports selecting the items by binding the [SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectedItem) property from the ViewModel by implementing the `INotifyPropertyChanged` interface, which gives the call back notification to the UI.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle= "MainPage.xaml" hl_lines="2" %}
 <syncfusion:SfListView x:Name="listView" 
                        SelectedItem="{Binding SelectedItem}"
                        ItemsSource="{Binding BookInfoCollection}"/>
@@ -304,8 +303,7 @@ listView.SetBinding(SfListView.SelectedItemProperty, new Binding("SelectedItem",
 {% endtabs %}
 
 {% tabs %}
-{% highlight c# %}
-//ViewModel.cs
+{% highlight c# tabtitle= "ViewModel.cs" hl_lines="15" %}
 public class BookInfoRepository : INotifyPropertyChanged
 {
     private object selectedItem;
@@ -331,21 +329,20 @@ public class BookInfoRepository : INotifyPropertyChanged
 `sfListView` supports selecting multiple items by binding the [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectedItems) property from the ViewModel with ObservableCollection type. Set the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionMode) property as `Multiple`.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle= "MainPage.xaml" hl_lines="2 3"%}
 <syncfusion:SfListView x:Name="listView"
                         SelectionMode="Multiple"
                         SelectedItems="{Binding SelectedItems}"
                         ItemsSource="{Binding BookInfoCollection}"/>
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# tabtitle= "MainPage.cs" %}
 listView.SelectionMode = SelectionMode.Multiple;
 listView.SetBinding(SfListView.SelectedItemsProperty, new Binding("SelectedItems", BindingMode.TwoWay));
 {% endhighlight %}
 {% endtabs %}
 
 {% tabs %}
-{% highlight c# %}
-//ViewModel.cs
+{% highlight c# tabtitle= "ViewModel.cs" hl_lines="24 25 26" %}
 public class BookInfoRepository : INotifyPropertyChanged
 {
     public event PropertyChangedEventHandler PropertyChanged;
@@ -382,7 +379,7 @@ public class BookInfoRepository : INotifyPropertyChanged
 In `SfListView`, the [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionChanged) event is raised once the selection process has been completed. MVVM for the `SelectionChanged` event can be achieved by binding the event to command converter. 
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle= "MainPage.xaml" hl_lines="3 4 5 6 7" %}
 <syncfusion:SfListView x:Name="listView" 
                        ItemsSource="{Binding BookInfoCollection}">
     <syncfusion:SfListView.Behaviors>
@@ -395,8 +392,8 @@ In `SfListView`, the [SelectionChanged](https://help.syncfusion.com/cr/maui/Sync
 {% endtabs %}
 
 {% tabs %}
-{% highlight c# %}
-//ViewModel.cs
+{% highlight c# tabtitle= "ViewModel.cs" hl_lines="23 24 25 26 27 28" %}
+
 public class BookInfoRepository : INotifyPropertyChanged
 {
     private Command<ItemSelectionChangedEventArgs> selectedItem;
@@ -434,7 +431,7 @@ public class BookInfoRepository : INotifyPropertyChanged
 In ListView, the [SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionChanging) event will be raised when selecting an item at the execution time. MVVM for the `SelectionChanging` event can be achieved by binding the event to command converter.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle= "MainPage.xaml" hl_lines="3 4 5 6 7"%}
 <syncfusion:SfListView x:Name="listView" 
                        ItemsSource="{Binding BookInfoCollection}">
     <syncfusion:SfListView.Behaviors>
@@ -447,8 +444,7 @@ In ListView, the [SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfus
 {% endtabs %}
 
 {% tabs %}
-{% highlight c# %}
-//ViewModel.cs
+{% highlight c# tabtitle= "ViewModel.cs" hl_lines="23 24 25 26 27 28" %}
 public class BookInfoRepository : INotifyPropertyChanged
 {
     private Command<ItemSelectionChangingEventArgs> selectedItem;
@@ -491,7 +487,7 @@ N> Similarly, you can bind the [ItemTapped](https://help.syncfusion.com/cr/maui/
 You can define the command parameter for `TapCommand` using [TappedCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_TapCommandParameter), where you can get the element reference passed in ViewModel.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle= "MainPage.xaml" hl_lines="2"%}
 <syncfusion:SfListView x:Name="listView" 
                     TapCommand="{Binding TapCommand}"
                     ItemsSource="{Binding BookInfoCollection}"/>
@@ -502,8 +498,7 @@ listView.SetBinding(SfListView.TapCommandProperty, new Binding("TapCommand", Bin
 {% endtabs %}
 
 {% tabs %}
-{% highlight c# %}
-//ViewModel.cs
+{% highlight c# tabtitle= "ViewModel.cs" hl_lines="20 21 22 23 24 25 26" %}
 public class BookInfoRepository : INotifyPropertyChanged
 {
     private Command tapCommand;
@@ -540,19 +535,18 @@ public class BookInfoRepository : INotifyPropertyChanged
 You can define the command parameter for the `LongPressCommand` using [LongPressCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LongPressCommandParameter), where you can get the element reference passed in ViewModel.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle= "MainPage.xaml"hl_lines="2" %}
 <syncfusion:SfListView x:Name="listView"                     
                        LongPressCommand="{Binding LongPressCommand}"
                        ItemsSource="{Binding BookInfoCollection}"/>
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# tabtitle= "MainPage.cs" %}
 listView.SetBinding(SfListView.LongPressCommandProperty, new Binding("LongPressCommand", BindingMode.OneWay));
 {% endhighlight %}
 {% endtabs %}
 
 {% tabs %}
-{% highlight c# %}
-//ViewModel.cs
+{% highlight c# tabtitle= "ViewModel.cs" %}
 public class BookInfoRepository : INotifyPropertyChanged
 {
     private Command longPressCommand;
@@ -587,7 +581,7 @@ The contents loaded in the [ItemTemplate](https://help.syncfusion.com/cr/maui/Sy
 You can also get the reference of element bound as parameter by using command parameter of loaded elements.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle= "MainPage.cs" hl_lines="2 12 13" %}
 <syncfusion:SfListView x:Name="listView" AutoFitMode="Height"
                 SelectedItem="{Binding SelectedItem}"                      
                 ItemsSource="{Binding BookInfoCollection}">
@@ -607,7 +601,7 @@ You can also get the reference of element bound as parameter by using command pa
     </syncfusion:SfListView.ItemTemplate>
 </syncfusion:SfListView>
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# tabtitle= "MainPage.cs" hl_lines="10 111 12 13 14 15 16 17" %}
  listView.ItemTemplate = new DataTemplate(() =>
  {
     var frame = new Frame();
@@ -641,7 +635,7 @@ You can also get the reference of element bound as parameter by using command pa
 {% endtabs %}
 
 {% tabs %}
-{% highlight c# %}
+{% highlight c# tabtitle= "BookInfoRepository.cs" hl_lines="19 20 21 22 23" %}
 public class BookInfoRepository : INotifyPropertyChanged
 {
     private Command backgroundColorCommand;
@@ -676,7 +670,7 @@ public class BookInfoRepository : INotifyPropertyChanged
 The `IsBusy` property in ViewModel shows the busy indicator when populating the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsSource).
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle= "MainPage.xaml" hl_lines="2 3 4 5" %}
 <syncfusion:SfListView x:Name="listView"                            
                         LoadMoreOption="Auto"
                         LoadMoreCommand="{Binding LoadMoreItemsCommand}"
@@ -684,7 +678,7 @@ The `IsBusy` property in ViewModel shows the busy indicator when populating the 
                         IsBusy="{Binding IsBusy}"
                         ItemsSource="{Binding BookInfoCollection}">
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# tabtitle="MainPage.cs" %}
 listView.LoadMoreOption = LoadMoreOption.Auto;
 listView.SetBinding(SfListView.LoadMoreCommandProperty, new Binding("LoadMoreItemsCommand", BindingMode.OneWay));
 listView.LoadMoreCommandParameter = listView;
@@ -693,7 +687,7 @@ listView.SetBinding(SfListView.IsBusyProperty, new Binding("IsBusy", BindingMode
 {% endtabs %}
 
 {% tabs %}
-{% highlight c# %}
+{% highlight c# tabtitle= "ViewModel" %}
 public class ViewModel:INotifyPropertyChanged
 {
     private bool isBusy;
@@ -768,4 +762,4 @@ public class ViewModel:INotifyPropertyChanged
 
 ## See also 
 
-[How to filter the items in .NET MAUI ListView (SfListView) using MVVM](https://www.syncfusion.com/kb/13060/ )                                                                                                            
+[How to filter the items in .NET MAUI ListView (SfListView) using MVVM](https://www.syncfusion.com/kb/13060/)                                                                                                            
