@@ -9,7 +9,7 @@ documentation: ug
 
 # Agenda view in .NET MAUI Scheduler (SfScheduler)
 
-The agenda view displays the events or appointments (normal appointments, all-day appointments, recurring appointments, and span appointments) in chronological order, grouped by date between the minimum and maximum dates and the current date displayed by default. When the `AppointmentsSource` property of `SfScheduler` is `null`, the agenda view will show only the month, week, and date headers for mobile view and responsive UI, and for desktop UI it will display only the date header of display date.
+The agenda view displays the events or appointments (normal appointments, all-day appointments, recurring appointments, and span appointments) in chronological order, grouped by date between the minimum and maximum dates and the current date displayed by default. When the [AppointmentsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentsSource) property of [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) is `null`, the agenda view will show only the month, week, and date headers for mobile view and responsive UI, and for desktop UI it will display only the date header of display date.
 
 A agenda view displays different UI for mobile and desktop, for mobile it displays the month header, the week header, and the date header, whereas for desktop, it displays the appointment only.
 
@@ -44,13 +44,13 @@ this.Scheduler.AppointmentsSource = appointments;
 
 ![agenda-view-in-maui-scheduler](images/agenda-view/agenda-view-in-maui-scheduler.png)
 
-## Month header customization
+## Month header appearance customization
 
-The agenda month header view can be customized by using the `MonthHeaderSettings` property of `AgendaView` in the `SfScheduler.`
+The agenda month header view can be customized by using the [MonthHeaderSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAgendaView.html#Syncfusion_Maui_Scheduler_SchedulerAgendaView_MonthHeaderSettings) property of [AgendaView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAgendaView.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
-### Customize month header appearance using style
+#### Customize month header appearance using style
 
-You can style the date format, height, text style, and background color by using the properties such as `DateFormat,` `Height,` `TextStyle,` and `Background` properties of `MonthHeaderSettings.`
+You can style the date format, height, text style, and background color by using the properties such as [DateFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthHeaderSettings.html#Syncfusion_Maui_Scheduler_SchedulerMonthHeaderSettings_DateFormat), [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthHeaderSettings.html#Syncfusion_Maui_Scheduler_SchedulerMonthHeaderSettings_Height), [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthHeaderSettings.html#Syncfusion_Maui_Scheduler_SchedulerMonthHeaderSettings_TextStyle), and [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthHeaderSettings.html#Syncfusion_Maui_Scheduler_SchedulerMonthHeaderSettings_Background) properties of [MonthHeaderSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAgendaView.html#Syncfusion_Maui_Scheduler_SchedulerAgendaView_MonthHeaderSettings).
 
 {% tabs %}
 {% highlight xaml %}
@@ -88,9 +88,9 @@ this.Scheduler.AgendaView.MonthHeaderSettings.Background = Brush.LightGreen;
 
 ![month-header-appearence-text-style-customization-in-maui-scheduler](images/agenda-view/month-header-appearence-text-style-customization-in-maui-scheduler.png)
 
-### Customize month header appearance using DataTemplate
+#### Customize month header appearance using DataTemplate
 
-You can customize the month header appearance of scheduler by using the `MonthHeaderTemplate` property of `AgendaView.`
+You can customize the month header appearance of scheduler by using the [MonthHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAgendaView.html#Syncfusion_Maui_Scheduler_SchedulerAgendaView_MonthHeaderTemplate) property of [AgendaView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAgendaView.html).
 
 {% tabs %}
 {% highlight xaml %}
@@ -119,9 +119,9 @@ N>
 * The default values for `DateFormat` and `Height` are `MMMM yyyy` and `150,` respectively.
 * For desktop UI, The agenda view displays the appointment only.
 
-### Customize month header appearance using DataTemplateSelector
+#### Customize month header appearance using DataTemplateSelector
 
-You can customize the month header appearance by using the `MonthHeaderTemplate` property of `AgendaView` in the `SfScheduler.` The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to month header by using the `MonthHeaderTemplate.` It allows you to choose a different data template for each month header, as well as customize the appearance of a particular month header based on certain conditions.
+You can customize the month header appearance by using the [MonthHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAgendaView.html#Syncfusion_Maui_Scheduler_SchedulerAgendaView_MonthHeaderTemplate) property of [AgendaView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAgendaView.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html). The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to month header by using the `MonthHeaderTemplate.` It allows you to choose a different data template for each month header, as well as customize the appearance of a particular month header based on certain conditions.
 
 {% tabs %}
 {% highlight xaml %}
@@ -181,11 +181,11 @@ N>
 * For desktop UI, The agenda view displays the appointment only.
 * When using data template selector, performance issues occur as the conversion template views take time within the framework.
 
-## Week header customization
+## Week header appearance customization
 
-The agenda week header view can be customized by using the `WeekHeaderSettings` property of `AgendaView` in the `SfScheduler.`
+The agenda week header view can be customized by using the [WeekHeaderSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAgendaView.html#Syncfusion_Maui_Scheduler_SchedulerAgendaView_WeekHeaderSettings) property of [AgendaView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAgendaView.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
-You can style the date format, height, text style, and background color by using the properties such as `DateFormat,` `Height,` `TextStyle,` and `Background` properties of `WeekHeaderSettings.`
+You can style the date format, height, text style, and background color by using the properties such as [DateFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerWeekHeaderSettings.html#Syncfusion_Maui_Scheduler_SchedulerWeekHeaderSettings_DateFormat), [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerWeekHeaderSettings.html#Syncfusion_Maui_Scheduler_SchedulerWeekHeaderSettings_Height), [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerWeekHeaderSettings.html#Syncfusion_Maui_Scheduler_SchedulerWeekHeaderSettings_TextStyle), and [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerWeekHeaderSettings.html#Syncfusion_Maui_Scheduler_SchedulerWeekHeaderSettings_Background) properties of [WeekHeaderSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAgendaView.html#Syncfusion_Maui_Scheduler_SchedulerAgendaView_WeekHeaderSettings).
 
 {% tabs %}
 {% highlight xaml %}
@@ -227,11 +227,11 @@ N>
 * The default value for `DateFormat,` and `Height` are `MMM dd,` and `30` respectively.
 * For desktop UI, The agenda view displays the appointment only.
 
-## Day header customization
+## Day header appearance customization
 
-The agenda day header view can be customized by using the `DayHeaderSettings` property of `AgendaView` in the `SfScheduler.`
+The agenda day header view can be customized by using the [DayHeaderSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAgendaView.html#Syncfusion_Maui_Scheduler_SchedulerAgendaView_DayHeaderSettings) property of [AgendaView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAgendaView.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
-You can style the day format, day text style, date text style, and background color by using the properties such as `DayFormat,` `DayTextStyle,` `DateTextStyle,` and `Background` properties of `DayHeaderSettings.`
+You can style the day format, day text style, date text style, and background color by using the properties such as [DayFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDayHeaderSettings.html#Syncfusion_Maui_Scheduler_SchedulerDayHeaderSettings_DayFormat), [DayTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDayHeaderSettings.html#Syncfusion_Maui_Scheduler_SchedulerDayHeaderSettings_DayTextStyle), [DateTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDayHeaderSettings.html#Syncfusion_Maui_Scheduler_SchedulerDayHeaderSettings_DateTextStyle), and [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDayHeaderSettings.html#Syncfusion_Maui_Scheduler_SchedulerDayHeaderSettings_Background) properties of [DayHeaderSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAgendaView.html#Syncfusion_Maui_Scheduler_SchedulerAgendaView_DayHeaderSettings).
 
 {% tabs %}
 {% highlight xaml %}
@@ -270,9 +270,9 @@ this.Scheduler.AgendaView.DayHeaderSettings.Background = Brush.LightGreen;
 
 N> The default value of `DayFormat` is `MMM, ddd.`
 
-## Appointment text customization
+## Appointment text appearance customization
 
-The appointment text style can be customized by using the `AppointmentTextStyle` property of the `SfScheduler.`
+The appointment text style can be customized by using the [AppointmentTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentTextStyle) property of the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
 {% tabs %}
 {% highlight xaml %}

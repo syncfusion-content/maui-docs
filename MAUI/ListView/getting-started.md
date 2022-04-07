@@ -11,6 +11,8 @@ documentation: ug
 
 This section provides a quick overview of how to get started with the .NET Maui ListView (SfListView) for Maui. Walk-through the entire process of creating the real world SfListView.
 
+N> MAUI ListView is now only available for `Android`, `iOS`, and `MacCatalyst` platforms. It is currently not supported in the `WinUI` platform. It will be available in the 2022 Volume 1 release.
+
 ## Creating an application using the .NET MAUI ListView
 
  1. Create a new .NET MAUI application in Visual Studio.
@@ -488,25 +490,20 @@ The header and footer can be handled as scrollable or sticky to the view by enab
 {% highlight xaml %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
 <syncfusion:SfListView x:Name="listView"
-                 ItemsSource="{Binding InboxInfo}"
+                 ItemsSource="{Binding BookInfo}"
                  IsStickyHeader="true"
                  IsStickyFooter="true">
   <syncfusion:SfListView.HeaderTemplate>
     <DataTemplate>
       <Grid BackgroundColor="#4CA1FE" HeightRequest="45">
-        <Label Text="Inbox" FontAttributes="Bold" FontSize="18" TextColor="White" />
+        <Label Text="Header Item" FontAttributes="Bold" FontSize="18" TextColor="White" />
       </Grid>
     </DataTemplate>
   </syncfusion:SfListView.HeaderTemplate>
   <syncfusion:SfListView.FooterTemplate>
     <DataTemplate>
       <Grid BackgroundColor="#DC595F">
-        <Grid.ColumnDefinitions>
-          <ColumnDefinition />
-          <ColumnDefinition />
-        </Grid.ColumnDefinitions>
-        <Image GridLayout.Column="0" Source="Edit.png" />
-        <Image GridLayout.Column="1" Source="Delete.png" />
+        <Label Text="Footer Item" FontAttributes="Bold" FontSize="18" TextColor="White" />
       </Grid>
     </DataTemplate>
   </syncfusion:SfListView.FooterTemplate>
@@ -515,18 +512,17 @@ The header and footer can be handled as scrollable or sticky to the view by enab
 {% endhighlight %}
 {% highlight c# %}
 ViewModel viewModel = new ViewModel ();
-listView.ItemsSource = viewModel.InboxInfo; 
+listView.ItemsSource = viewModel.BookInfo; 
 listView.IsStickyHeader = true;
 listView.IsStickyFooter = true;
 listView.HeaderTemplate = new DataTemplate(() =>
 {
   var grid = new Grid();
   grid.ColumnDefinitions.Add(new ColumnDefinition());
-  grid.ColumnDefinitions.Add(new ColumnDefinition());
   grid.BackgroundColor = Color.FromHex("#4CA1FE");
   var headerLabel = new Label { BackgroundColor = Colors.White, FontSize = 18,
                                 FontAttributes = FontAttributes.Bold };
-  headerLabel.Text = "Inbox";
+  headerLabel.Text = "Header Item";
   grid.Children.Add(headerLabel);
   return grid;
 });
@@ -534,16 +530,11 @@ listView.FooterTemplate = new DataTemplate(() =>
 {
   var grid = new Grid();
   grid.ColumnDefinitions.Add(new ColumnDefinition());
-  grid.ColumnDefinitions.Add(new ColumnDefinition());
   grid.BackgroundColor = Colors.FromHex("#DC595F");
-  var editImage = new Image();
-  editImage.Source = "Edit.png";
-  var deleteImage = new Image();
-  deleteImage.Source = "Delete.png";
-  grid.Children.Add(editImage);
-  grid.Children.Add(deleteImage);
-  grid.SetColumn(editImage, 0);
-  grid.SetColumn(deleteImage, 1);
+  var footerLabel = new Label { BackgroundColor = Colors.White, FontSize = 18,
+                                FontAttributes = FontAttributes.Bold };
+  footerLabel.Text = "Footer Item";
+  grid.Children.Add(footerLabel);
   return grid;
 });
 {% endhighlight %}

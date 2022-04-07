@@ -78,8 +78,7 @@ private bool FilterContacts(object obj)
      return true;
 
   var taskInfo = obj as TaskInfo;
-            return (taskInfo.Title.ToLower().Contains(searchBar.Text.ToLower())
-                || taskInfo.Description.ToLower().Contains(searchBar.Text.ToLower()));
+   if (taskInfo.Title.ToLower().Contains(searchBar.Text.ToLower()) || taskInfo.Description.ToLower().Contains(searchBar.Text.ToLower()))
       return true;
   else
       return false;
@@ -104,8 +103,7 @@ private bool FilterContacts(object obj)
      return true;
 
   var taskInfo = obj as TaskInfo;
-      return (taskInfo.Title.ToLower().Contains(searchBar.Text.ToLower())
-                || taskInfo.Description.ToLower().Contains(searchBar.Text.ToLower()));
+  if (taskInfo.Title.ToLower().Contains(searchBar.Text.ToLower()) || taskInfo.Description.ToLower().Contains(searchBar.Text.ToLower()))
       return true;
   else
       return false;
