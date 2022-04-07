@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migrate from Xamarin SfListView | Syncfusion 
+title: Migrate from Xamarin SfListView to .NET MAUI SfListView | Syncfusion 
 description: Learn here all about Migrating from Syncfusion Xamarin ListView to Syncfusion .NET MAUI ListView control and more.
 platform: MAUI
 control: SfListView
