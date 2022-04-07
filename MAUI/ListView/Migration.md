@@ -9,9 +9,9 @@ documentation: ug
 
 # Migrating from Xamarin SfListView to .NET MAUI SfListView 
 
-To migrate easier from Xamarin SfListView to .NET MAUI SfListView, we have kept the most of APIs same from Xamarin SfListView in MAUI SfListView. But, we have renamed the some of the APIs to maintain the consistency of API naming in MAUI SfListView. You can get the details of the APIs which are changed in MAUI SfListView from Xamarin SfListView in below,
+To migrate easier from Xamarin SfListView to .NET MAUI SfListView, we kept most of the APIs from Xamarin SfListView in MAUI SfListView. However, to maintain the consistency of API naming in MAUI SfListView, we renamed some of the APIs. The APIs that have been changed in MAUI SfListView from Xamarin SfListView are detailed as follows.
 
-##Assembly Name 
+## Assembly Name 
 
 <table>
 <tr>
@@ -22,7 +22,7 @@ To migrate easier from Xamarin SfListView to .NET MAUI SfListView, we have kept 
 <td>Syncfusion.Maui.ListView</td></tr>
 </table>
 
-##Namespaces 
+## Namespaces 
 
 <table>
 <tr>
@@ -42,7 +42,7 @@ To migrate easier from Xamarin SfListView to .NET MAUI SfListView, we have kept 
 <td>Syncfusion.Maui.DataSource.Extensions</td></tr>
 </table>
 
-##Properties
+## Properties
 
 <table> 
 <tr>
@@ -63,7 +63,7 @@ To migrate easier from Xamarin SfListView to .NET MAUI SfListView, we have kept 
 <td>Gets or sets the selection background color for the selected item.</td></tr>
 </table> 
 
-##Enums
+## Enums
 
 <table>
 <tr>
@@ -83,7 +83,7 @@ To migrate easier from Xamarin SfListView to .NET MAUI SfListView, we have kept 
 <td>Describes the possible values of touch operation. These values are used when updating selection in the SfListView control.</td></tr>
 </table>
 
-##Events
+## Events
 
 <table>
 <tr>
@@ -96,7 +96,7 @@ To migrate easier from Xamarin SfListView to .NET MAUI SfListView, we have kept 
 <td>Occurs when an item is long pressed.</td></tr>
 </table> 
 
-##Classes 
+## Classes 
 
 <table>
 <tr>
