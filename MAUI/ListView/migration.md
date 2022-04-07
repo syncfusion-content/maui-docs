@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrating from Xamarin SfListView to .NET MAUI SfListView 
 
-To migrate easier from Xamarin SfListView to .NET MAUI SfListView, we kept most of the APIs from Xamarin SfListView in MAUI SfListView. However, to maintain the consistency of API naming in MAUI SfListView, we renamed some of the APIs. The APIs that have been changed in MAUI SfListView from Xamarin SfListView are detailed as follows.
+To migrate easier from [Xamarin SfListView](https://www.syncfusion.com/xamarin-ui-controls/xamarin-listview) to [.NET MAUI SfListView](https://www.syncfusion.com/maui-controls/maui-listview), we kept most of the APIs from Xamarin SfListView in MAUI SfListView. However, to maintain the consistency of API naming in MAUI SfListView, we renamed some of the APIs. The APIs that have been changed in MAUI SfListView from Xamarin SfListView are detailed as follows.
 
 ## Assembly Name 
 
@@ -139,4 +139,10 @@ To migrate easier from Xamarin SfListView to .NET MAUI SfListView, we kept most 
 <td>{{'[Syncfusion.ListView.XForms.Helpers.InverseBoolConverter](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.Helpers.InverseBoolConverter.html)'| markdownify }}</td>
 <td>{{'[Syncfusion.Maui.Core.Converters.InvertedBoolConverter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Converters.InvertedBoolConverter.html)'| markdownify }}</td>
 <td>Converter to reverse the boolean value.</td></tr>
-</table>
+</table> 
+
+## Upcoming features
+
+  * Item reordering
+  * Pull to refresh
+  * Swiping
