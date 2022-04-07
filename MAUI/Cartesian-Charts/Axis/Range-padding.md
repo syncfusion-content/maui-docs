@@ -27,7 +27,7 @@ The following types are available for [NumericalAxis](https://help.syncfusion.co
 * `PrependInterval` - The visible start range will be prepended with an additional interval.
 * `AppendInterval` - The visible end range will be appended with an additional interval.
 
-By default, the [RangePadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalAxis.html#Syncfusion_Maui_Charts_NumericalAxis_RangePadding) value for [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1) is `Auto` and for [SecondaryAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_SecondaryAxis) is `Round`.
+By default, the [RangePadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalAxis.html#Syncfusion_Maui_Charts_NumericalAxis_RangePadding) value for [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1) is `Auto`.
 
 **Additional**
 
@@ -246,13 +246,13 @@ chart.YAxes.Add(secondaryAxis);
 
 <chart:SfCartesianChart>
 . . .
-    <chart:SfCartesianChart.PrimaryAxis>
-        <chart:DateTimeAxis RangePadding="Round"/>
-    </chart:SfCartesianChart.PrimaryAxis>
-
     <chart:SfCartesianChart.XAxes>
-        <chart:NumericalAxis />
+        <chart:DateTimeAxis RangePadding="Round"/>
     </chart:SfCartesianChart.XAxes>
+
+    <chart:SfCartesianChart.YAxes>
+        <chart:NumericalAxis />
+    </chart:SfCartesianChart.YAxes>
 . . .
 </chart:SfCartesianChart>
 
