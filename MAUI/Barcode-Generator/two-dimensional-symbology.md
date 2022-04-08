@@ -11,12 +11,12 @@ documentation: ug
 
 Two-dimensional barcode is a way to represent information by using the two-dimensional approach. It is similar to one-dimensional barcode, but it can represent more data per unit area. The barcode generator control supports the following two-dimensional symbology:
 
-* `QR Code`
-* `Data Matrix`
+* [`QR Code`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.QRCode.html)
+* [`Data Matrix`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.DataMatrix.html)
 
 ## QR Code
 
-A `QR Code` is a two-dimensional barcode that consists of a grid of dark and light dots or blocks that form a square. The data encoded in the barcode can be numeric, alphanumeric, or Shift JIS characters.
+A [`QR Code`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.QRCode.html) is a two-dimensional barcode that consists of a grid of dark and light dots or blocks that form a square. The data encoded in the barcode can be numeric, alphanumeric, or Shift JIS characters.
 
 * The QR Code uses versions from 1 to 40. Version 1 measures 21 modules x 21 modules, Version 2 measures 25 modules x 25 modules, and so on. The number of modules increases in steps of 4 modules per side up to Version 40, which measures 177 modules x 177 modules.
 * Each version has its own capacity. By default, the barcode control automatically sets the version according to the length of the input text.
@@ -55,22 +55,22 @@ A `QR Code` is a two-dimensional barcode that consists of a grid of dark and lig
 
 The data that can be stored in the QR code depends upon the following property:
 
-* `Error correction level`
-* `QR code version`
-* `Input mode`
+* [`Error correction level`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.ErrorCorrectionLevel.html)
+* [`QR code version`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.QRCodeVersion.html)
+* [`Input mode`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.QRCode.html#Syncfusion_Maui_Barcode_QRCode_InputMode)
 
-As like one dimensional symbology, the two dimensional symbology also supports the `Module` property.
+As like one dimensional symbology, the two dimensional symbology also supports the [`Module`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.SymbologyBase.html#Syncfusion_Maui_Barcode_SymbologyBase_Module) property.
 The property is used to define the size of the smallest line or dot of the barcode. If this property is not set, the size of the smallest dot of the barcode is calculated based on the available size.
 
 ### Error correction level
 
-The `ErrorCorrectionLevel` property employs error correction to generate a series of error correction code words that are added to the data code word sequence in order to enable the symbol to withstand damage without loss of data. By default, its value is set as `Auto`.
+The [`ErrorCorrectionLevel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.ErrorCorrectionLevel.html) property employs error correction to generate a series of error correction code words that are added to the data code word sequence in order to enable the symbol to withstand damage without loss of data. By default, its value is set as [`Auto`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.ErrorCorrectionLevel.html#Syncfusion_Maui_Barcode_ErrorCorrectionLevel_Auto).
 
 Low - it recovers the data up to 7%.
 Medium - it recovers the data up to 15%.
 Quartile - it recovers the data up to 25%.
 High - it recovers the data up to 30%.
-Auto - it calculates error correction level automatically based on `InputMode` and `CodeVersion`.
+Auto - it calculates error correction level automatically based on [`InputMode`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.QRCode.html#Syncfusion_Maui_Barcode_QRCode_InputMode) and [`CodeVersion`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.QRCode.html#Syncfusion_Maui_Barcode_QRCode_CodeVersion).
 
 {% tabs %}
 
@@ -113,12 +113,12 @@ The data can be read from the damaged image based on the error correction level.
 
 ### Input mode
 
-The `InputMode` property allows you to select a specific set of input characters. You can select the most suitable input mode. By default, its value is set as `Auto`.
+The [`InputMode`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.QRCode.html#Syncfusion_Maui_Barcode_QRCode_InputMode) property allows you to select a specific set of input characters. You can select the most suitable input mode. By default, its value is set as [`Auto`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.QRInputMode.html#Syncfusion_Maui_Barcode_QRInputMode_Auto).
 
 Numeric - supports from 0 to 9.
 AlphaNumeric - supports 0 to 9, A to Z, space, $, %, *, +, -,., /, :.
 Binary - supports Shift JIS characters.
-Auto - it calculates input mode automatically based on `CodeVersion` and `ErrorCorrectionLevel`.
+Auto - it calculates input mode automatically based on [`CodeVersion`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.QRCode.html#Syncfusion_Maui_Barcode_QRCode_CodeVersion) and [`ErrorCorrectionLevel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.ErrorCorrectionLevel.html).
 
 {% tabs %}
 
@@ -157,7 +157,7 @@ Auto - it calculates input mode automatically based on `CodeVersion` and `ErrorC
 
 ### QR code version
 
-The `CodeVersion` property allows you to set various types of version for QR code from QRVersion enumeration. By default, its value is set as auto.
+The [`CodeVersion`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.QRCode.html#Syncfusion_Maui_Barcode_QRCode_CodeVersion) property allows you to set various types of version for QR code from QRVersion enumeration. By default, its value is set as auto.
 
 The QR Code uses version from 1 to 40. Version 1 measures 21 modules x 21 modules, Version 2 measures 25 modules x 25 modules, and so on.
 
@@ -200,7 +200,7 @@ The number of modules increases in steps of 4 modules per side up to Version 40,
 
 ## Data Matrix
 
-`Data Matrix` barcode is a two dimensional barcode that consists of a grid of dark and light dots or blocks forming a square or rectangular symbol. The data encoded in the barcode can either be numbers or alphanumeric characters. They are widely used in printed media such as labels and letters. You can read it easily with the help of a barcode reader and mobile phones.
+[`Data Matrix`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.DataMatrix.html) barcode is a two dimensional barcode that consists of a grid of dark and light dots or blocks forming a square or rectangular symbol. The data encoded in the barcode can either be numbers or alphanumeric characters. They are widely used in printed media such as labels and letters. You can read it easily with the help of a barcode reader and mobile phones.
 
 {% tabs %}
 
@@ -243,30 +243,30 @@ Type - Data Matrix supports the following data types:
 * Alpha Numeric
 * Byte
 
-The `Size` depends upon the length and data type of provided input values.
+The [`Size`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.DataMatrix.html#Syncfusion_Maui_Barcode_DataMatrix_Size) depends upon the length and data type of provided input values.
 
 ### Encoding methods
 
-Data Matrix supports following `Encoding` types:
+Data Matrix supports following [`Encoding`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.DataMatrix.html#Syncfusion_Maui_Barcode_DataMatrix_Encoding) types:
 
 * Auto
 * ASCII
 * ASCIINumeric
 * Base256
 
-By default, the encoding types is `Auto`.
+By default, the encoding types is [`Auto`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.DataMatrixEncoding.html#Syncfusion_Maui_Barcode_DataMatrixEncoding_Auto).
 
-When the encoding type is `ASCII`, the code word will be calculated as like follows,
+When the encoding type is [`ASCII`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.DataMatrixEncoding.html#Syncfusion_Maui_Barcode_DataMatrixEncoding_ASCII), the code word will be calculated as like follows,
 
 Code word = ASCII value + 1.
 
 The ASCII value ranges from 0 to 127.
 
-When the encoding type is `Base256`, then the first code word is calculated with the value 235, and the second code value is calculated with the ASCII value - 127.
+When the encoding type is [`Base256`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.DataMatrixEncoding.html#Syncfusion_Maui_Barcode_DataMatrixEncoding_Base256), then the first code word is calculated with the value 235, and the second code value is calculated with the ASCII value - 127.
 
-The `Base256` value ranges from 128 to 255.
+The [`Base256`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.DataMatrixEncoding.html#Syncfusion_Maui_Barcode_DataMatrixEncoding_Base256) value ranges from 128 to 255.
 
-When the encoding type is `ASCIINumeric`, then the code word will be calculated as follows.
+When the encoding type is [`ASCIINumeric`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.DataMatrixEncoding.html#Syncfusion_Maui_Barcode_DataMatrixEncoding_ASCIINumeric), then the code word will be calculated as follows.
 
 Code word = numerical value pair + 130.
 

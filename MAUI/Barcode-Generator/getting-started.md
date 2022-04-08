@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI Barcode Generator
 
-This section explains the steps required to add the `.NET MAUI Barcode Generator` control. This section explains the steps required to add the barcode and set its symbology. This section covers only basic features needed to get started with Syncfusion barcode generator control.
+This section explains the steps required to add the [`.NET MAUI Barcode Generator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.html) control. This section explains the steps required to add the barcode and set its symbology. This section covers only basic features needed to get started with Syncfusion barcode generator control.
 
 ## Adding a SfBarcodeGenerator reference
 
@@ -94,11 +94,11 @@ this.Content = barcode;
 
 ![.NET MAUI Barcode Generator Intialize Barcode](images/getting-started/maui-intialize-barcode.png)
 
-N> The default symbology of SfBarcodeGenerator is `Code128`.
+N> The default symbology of SfBarcodeGenerator is [`Code128`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.html).
 
 ## Initialize QR Code symbology
 
-You can set the required symbology type to the barcode generator based on input value by initializing the `Symbology` property. In the following code sample, the QR code is set as the barcode symbology.
+You can set the required symbology type to the barcode generator based on input value by initializing the [`Symbology`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.SfBarcodeGenerator.html#Syncfusion_Maui_Barcode_SfBarcodeGenerator_Symbology) property. In the following code sample, the QR code is set as the barcode symbology.
 
 {% tabs %}
 
