@@ -9,7 +9,7 @@ documentation: ug
 
 # Missing Features from Xamarin.Forms
 
-* Data Marker support for chart series.
+* Data marker support for chart series.
 
 
 ### Support and feedback

@@ -19,10 +19,10 @@ documentation: ug
 * Suspend and resume notification
 * Range style customization for ChartAxis
 * Event or method to notify the axis label click
-* Align the axi labels and tick inside the series clip rect
+* Align the axis labels and tick inside the series clip rect
 * Axis label wrapping support
 * Axis labels draws multiple lines using /n
-* Logarithamic axis 
+* Logarithmic axis 
 * DateTime category axis
 * Arrange category axis labels based on series values
 * Legend title support
