@@ -9,9 +9,8 @@ documentation: ug
 
 # Known issues in .NET MAUI.
 
-* 
-* 
-* 
+* Due to framework bindable layout issue, legend not added dynamically in view. 
+* When the edge drawing mode is set to centre, the label on the chart axis will be clipped. 
 
 ### Support and feedback
 
