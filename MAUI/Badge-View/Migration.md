@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migrating from Xamarin SfBadgeView to .NET MAUI SfBadgeView | Syncfusion 
+title: Migrating from Xamarin to .NET MAUI SfBadgeView | Syncfusion 
 description: Learn here all about Migrating from Syncfusion Xamarin BadgeView to Syncfusion .NET MAUI BadgeView control and more.
 platform: MAUI
 control: SfBadgeView
