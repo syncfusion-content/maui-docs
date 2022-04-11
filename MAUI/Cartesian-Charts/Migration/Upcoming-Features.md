@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migration from Xamarin to .NET MAUI Chart control | Syncfusion
+title: Upcoming features in .NET MAUI Chart control | Syncfusion
 description: This section explains about the list of upcoming features in the .NET MAUI Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
