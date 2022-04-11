@@ -9,7 +9,7 @@ documentation: ug
 
 # Bar Pointer in .NET MAUI Linear Gauge (SfLinearGauge)
 
-A bar pointer is an accenting line or shaded background that can be placed on a Linear Gauge to mark any current value in the scale track. The bar pointers always start from the minimum value of the scale and end with the specified value. So, the `Value` property is a required parameter for creating a bar pointer.
+A bar pointer is an accenting line or shaded background that can be placed on a Linear Gauge to mark any current value in the scale track. The bar pointers always start from the minimum value of the scale and end with the specified value. So, the [`Value`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearPointer.html#Syncfusion_Maui_Gauges_LinearPointer_Value) property is a required parameter for creating a bar pointer.
 
 ## Default bar pointer
 
@@ -44,7 +44,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Customize bar pointer thickness
 
-The thickness can be changed using the `PointerSize` property of the bar pointer. The following code sample demonstrates the same. 
+The thickness can be changed using the [`PointerSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.BarPointer.html#Syncfusion_Maui_Gauges_BarPointer_PointerSize) property of the bar pointer. The following code sample demonstrates the same. 
 
 {% tabs %}
 
@@ -76,7 +76,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Customize edge style
 
-The edge style can be changed using the `CornerStyle` property of the bar pointer. The edge style can be any of the `StartCurve`, `EndCurve`, `BothCurve`, and `BothFlat` options. The default value is `BothFlat`.
+The edge style can be changed using the [`CornerStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.BarPointer.html#Syncfusion_Maui_Gauges_BarPointer_CornerStyle) property of the bar pointer. The edge style can be any of the [`StartCurve`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.CornerStyle.html#Syncfusion_Maui_Gauges_CornerStyle_StartCurve), [`EndCurve`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.CornerStyle.html#Syncfusion_Maui_Gauges_CornerStyle_EndCurve), [`BothCurve`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.CornerStyle.html#Syncfusion_Maui_Gauges_CornerStyle_BothCurve), and [`BothFlat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.CornerStyle.html#Syncfusion_Maui_Gauges_CornerStyle_BothFlat) options. The default value is [`BothFlat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.CornerStyle.html#Syncfusion_Maui_Gauges_CornerStyle_BothFlat).
 
 {% tabs %}
 
@@ -114,7 +114,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Customize the position
 
-By default, the bar pointer is positioned cross to the scale. This position can be changed by the `Position` property of a pointer. It is possible to position the bar pointer `Inside`, `Cross`, or `Outside` the scale. The following code sample demonstrates how to change the bar pointer position to inside the scale.
+By default, the bar pointer is positioned cross to the scale. This position can be changed by the [`Position`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearPointer.html#Syncfusion_Maui_Gauges_LinearPointer_Position) property of a pointer. It is possible to position the bar pointer [`Inside`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeElementPosition.html#Syncfusion_Maui_Gauges_GaugeElementPosition_Inside), [`Cross`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeElementPosition.html#Syncfusion_Maui_Gauges_GaugeElementPosition_Cross), or [`Outside`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeElementPosition.html#Syncfusion_Maui_Gauges_GaugeElementPosition_Outside) the scale. The following code sample demonstrates how to change the bar pointer position to inside the scale.
 
 {% tabs %}
 
@@ -146,7 +146,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Customize the offset
 
-In addition to position the bar pointer, it is also possible to change the offset of the bar pointer. The `Offset` value is the distance from the scale and it has no effect on cross-positioned elements. The following  code sample demonstrates how to change the offset value of the bar pointer. 
+In addition to position the bar pointer, it is also possible to change the offset of the bar pointer. The [`Offset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.BarPointer.html#Syncfusion_Maui_Gauges_BarPointer_Offset) value is the distance from the scale and it has no effect on cross-positioned elements. The following  code sample demonstrates how to change the offset value of the bar pointer. 
 
 {% tabs %}
 
@@ -179,7 +179,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Change the color of bar pointer 
 
-The color of the bar pointer can be changed by the `Fill` property. The following code sample demonstrates the same. 
+The color of the bar pointer can be changed by the [`Fill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.BarPointer.html#Syncfusion_Maui_Gauges_BarPointer_Fill) property. The following code sample demonstrates the same. 
 
 {% tabs %}
 
@@ -211,7 +211,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Apply gradient
 
-The gradient can be applied by using the `GradientStops` property of bar pointer. The following code sample demonstrates how to apply a gradient to the bar pointer.
+The gradient can be applied by using the [`GradientStops`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.BarPointer.html#Syncfusion_Maui_Gauges_BarPointer_GradientStops) property of bar pointer. The following code sample demonstrates how to apply a gradient to the bar pointer.
 
 {% tabs %}
 
@@ -256,7 +256,7 @@ this.Content = gauge;
 
 ## Child support
 
-By using the `Child` property of bar pointer, you can provide a child for the bar pointer. To improve readability, the child content is used to add any UI content, such as text or images, inside the bar pointer.
+By using the [`Child`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.BarPointer.html#Syncfusion_Maui_Gauges_BarPointer_Child) property of bar pointer, you can provide a child for the bar pointer. To improve readability, the child content is used to add any UI content, such as text or images, inside the bar pointer.
 
 {% tabs %}
 

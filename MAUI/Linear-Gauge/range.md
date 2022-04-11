@@ -41,7 +41,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Customize range shape 
 
-A Linear Gauge range has two values to draw a range - `StartValue`, and `EndValue`.These values indicate where the range falls in the axis. In addition to this values, the shape of the range can be customized by `StartWidth`, `MidWidth` and `EndWidth` properties. To draw a line or rectangle, just `StartValue`, `StartWidth`, `EndValue` and `EndWidth` are enough - as like the above code snippet in `Default Linear Gauge Range` topic. But to draw a concave and convex like shapes, `MidWidth` property is needed. The below code snippet demonstrates how to bring a convex shape for a range.
+A Linear Gauge range has two values to draw a range - [`StartValue`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearRange.html#Syncfusion_Maui_Gauges_LinearRange_StartValue), and [`EndValue`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearRange.html#Syncfusion_Maui_Gauges_LinearRange_EndValue).These values indicate where the range falls in the axis. In addition to this values, the shape of the range can be customized by [`StartWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearRange.html#Syncfusion_Maui_Gauges_LinearRange_StartWidth), [`MidWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearRange.html#Syncfusion_Maui_Gauges_LinearRange_MidWidth) and [`EndWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearRange.html#Syncfusion_Maui_Gauges_LinearRange_EndWidth) properties. To draw a line or rectangle, just [`StartValue`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearRange.html#Syncfusion_Maui_Gauges_LinearRange_StartValue), [`StartWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearRange.html#Syncfusion_Maui_Gauges_LinearRange_StartWidth), [`EndValue`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearRange.html#Syncfusion_Maui_Gauges_LinearRange_EndValue) and [`EndWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearRange.html#Syncfusion_Maui_Gauges_LinearRange_EndWidth) are enough - as like the above code snippet in `Default Linear Gauge Range` topic. But to draw a concave and convex like shapes, [`MidWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearRange.html#Syncfusion_Maui_Gauges_LinearRange_MidWidth) property is needed. The below code snippet demonstrates how to bring a convex shape for a range.
 
 {% tabs %}
 
@@ -73,7 +73,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ![Draw linear gauge concave range](images/gauge-range/range-convex.PNG)
 
-For concave shape, override `UpdateMidRangePath` method and curve for mid shape. 
+For concave shape, override [`UpdateMidRangePath`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearRange.html#Syncfusion_Maui_Gauges_LinearRange_UpdateMidRangePath_Microsoft_Maui_Graphics_PathF_Microsoft_Maui_Graphics_PointF_Microsoft_Maui_Graphics_PointF_Microsoft_Maui_Graphics_PointF_) method and curve for mid shape. 
 
 {% tabs %}
 
@@ -117,7 +117,7 @@ public class LinearRangeExt : LinearRange
 
 ## Customize color of a range
 
-The color of a range can be changed by setting the `Fill` property of a range. The below code example demonstrates changing the color property of the range.
+The color of a range can be changed by setting the [`Fill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearRange.html#Syncfusion_Maui_Gauges_LinearRange_Fill) property of a range. The below code example demonstrates changing the color property of the range.
 
 {% tabs %}
 
@@ -148,7 +148,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Apply gradient to a range
 
-The gradient can be applied by using the `GradientStops` property of a range. The below code example demonstrates applying a gradient to the range.
+The gradient can be applied by using the [`GradientStops`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearRange.html#Syncfusion_Maui_Gauges_LinearRange_GradientStops) property of a range. The below code example demonstrates applying a gradient to the range.
 
 {% tabs %}
 
@@ -189,7 +189,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Customize range position
 
-It is possible to position the ranges `Inside`, `Cross`, and `Outside` the axis. By default, the range will be positioned `Outside` the axis. The `Position` property of the range is used to position the range. The below code snippet demonstrates the same.
+It is possible to position the ranges [`Inside`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeElementPosition.html#Syncfusion_Maui_Gauges_GaugeElementPosition_Inside), [`Cross`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeElementPosition.html#Syncfusion_Maui_Gauges_GaugeElementPosition_Cross), and [`Outside`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeElementPosition.html#Syncfusion_Maui_Gauges_GaugeElementPosition_Outside) the axis. By default, the range will be positioned [`Outside`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeElementPosition.html#Syncfusion_Maui_Gauges_GaugeElementPosition_Outside) the axis. The [`Position`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearRange.html#Syncfusion_Maui_Gauges_LinearRange_Position) property of the range is used to position the range. The below code snippet demonstrates the same.
 
 {% tabs %}
 
@@ -220,7 +220,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Setting range color to axis element
 
-You can set range color to axis elements using the `UseRangeColorForAxis` property of axis.
+You can set range color to axis elements using the [`UseRangeColorForAxis`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_UseRangeColorForAxis) property of axis.
 
 {% tabs %}
 
@@ -324,7 +324,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Range child content support
 
-Range allows you to add any content as its child using the `Child` property.
+Range allows you to add any content as its child using the [`Child`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearRange.html#Syncfusion_Maui_Gauges_LinearRange_Child) property.
 
 {% tabs %}
 

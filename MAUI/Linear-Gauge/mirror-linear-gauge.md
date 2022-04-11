@@ -9,7 +9,7 @@ documentation: ug
 
 # Mirrored in .NET MAUI Linear Gauge (SfLinearGauge)
 
-The `IsMirrored` property in `SfLinearGauge` mirrors all the Gauge elements in the `SfLinearGauge`. The following code sample demonstrates how to set the `IsMirrored` property.
+The [`IsMirrored`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_IsMirrored) property in [`SfLinearGauge`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html?tabs=tabid-1) mirrors all the Gauge elements in the [`SfLinearGauge`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html?tabs=tabid-1). The following code sample demonstrates how to set the [`IsMirrored`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_IsMirrored) property.
 
 {% tabs %}
 
