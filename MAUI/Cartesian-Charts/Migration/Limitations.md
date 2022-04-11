@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Migration from Xamarin to .NET MAUI Chart control | Syncfusion
-description: This section explains about the limitations of .NET MAUI.
+description: This section explains about the list of limitations in the .NET MAUI Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
 documentation: ug

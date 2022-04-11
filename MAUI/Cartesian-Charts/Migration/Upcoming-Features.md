@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Migration from Xamarin to .NET MAUI Chart control | Syncfusion
-description: This section explains about the upcoming features of .NET MAUI.
+description: This section explains about the list of upcoming features in the .NET MAUI Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
 documentation: ug
@@ -72,7 +72,7 @@ documentation: ug
 ### Zooming
 
 * Selection zooming support
-* Directional zoooming
+* Directional zooming
 * Support to set the maximum zoom level
 * Event for zooming and panning
 

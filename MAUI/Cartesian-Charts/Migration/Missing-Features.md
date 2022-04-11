@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Migration from Xamarin to .NET MAUI Chart control | Syncfusion
-description: This section explains about the missing features of .NET MAUI from Xamarin.
+description: This section explains about the list of missing features in the .NET MAUI Chart (SfCartesianChart) control from Xamarin.
 platform: maui
 control: SfCartesianChart
 documentation: ug
@@ -16,5 +16,5 @@ documentation: ug
 
 ### Support and feedback
 
-If you need an alternate solution for the above mentioned missing features, we will try to achieve your requirements by customising the chart, please contact us by creating a [support ticket](https://www.syncfusion.com/support/directtrac/incidents).
+If you need an alternate solution for the above mentioned missing features, we will try to achieve your requirements by customizing the chart, please contact us by creating a [support ticket](https://www.syncfusion.com/support/directtrac/incidents).
 Do not see what you need? Please request it in our [feedback portal](https://www.syncfusion.com/feedback/maui).
