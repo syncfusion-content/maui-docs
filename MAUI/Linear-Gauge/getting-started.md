@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI Linear Gauge
 
-This section explains the steps required to add the [`.NET MAUI Linear Gauge`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html?tabs=tabid-1#Syncfusion_Maui_Gauges_SfLinearGauge_IsMirrored) control and its elements such as scale, range, and pointer. This section covers only basic features needed to get started with Syncfusion linear gauge control.
+This section explains the steps required to add the [`.NET MAUI Linear Gauge`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html?tabs=tabid-1) control and its elements such as scale, range, and pointer. This section covers only basic features needed to get started with Syncfusion linear gauge control.
 
 ## Creating an application using the .NET MAUI Linear Gauge
 
@@ -17,7 +17,7 @@ This section explains the steps required to add the [`.NET MAUI Linear Gauge`](h
 
 * Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfLinearGauge to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Gauges], and [Syncfusion.Maui.Core] then install that.
 
-* Import the control namespace [`Syncfusion.Maui.Gauges`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.html) in XAML or C# code.
+* Import the control namespace `Syncfusion.Maui.Gauges` in XAML or C# code.
 
 {% tabs %}
 
