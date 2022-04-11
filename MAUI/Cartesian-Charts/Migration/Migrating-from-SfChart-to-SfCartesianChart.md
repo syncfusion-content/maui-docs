@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrating from SfChart to SfCartesianChart
 
-This section explains how to migrate the Xamarin SfChart to MAUI SfCartesianChart control. and this section helps you to identify equivalent Chart features/ APIs in SfCartesianChart.
+This section explains how to migrate the Xamarin SfChart to MAUI SfCartesianChart control. And this section helps you to identify equivalent Chart features/ APIs in SfCartesianChart.
 
 ## Adding Reference
 
@@ -383,51 +383,52 @@ Mostly the same code are used to initialize the chart series in both SfChart and
    <chart:SfChart.PrimaryAxis>
         <chart:CategoryAxis>
             <chart:CategoryAxis.Title>
-                  <chart:ChartAxisTitle Text="Name" />
+                  <chart:ChartAxisTitle Text="Name"/>
             </chart:CategoryAxis.Title>
-         </chart:CategoryAxis>
+        </chart:CategoryAxis>
    </chart:SfChart.PrimaryAxis>
 
    <chart:SfChart.SecondaryAxis>
-       <chart:NumericalAxis>
-           <chart:NumericalAxis.Title>
-                 <chart:ChartAxisTitle Text="Height (in cm)"/>
-          </chart:NumericalAxis.Title>      
-      </chart:NumericalAxis>   
-     </chart:SfChart.SecondaryAxis>
+        <chart:NumericalAxis>
+            <chart:NumericalAxis.Title>
+                  <chart:ChartAxisTitle Text="Height (in cm)"/>
+            </chart:NumericalAxis.Title>      
+        </chart:NumericalAxis>   
+   </chart:SfChart.SecondaryAxis>
     
-    <chart:SfChart.Series>
-         <chart:ColumnSeries ItemsSource="{Binding Data}" XBindingPath="Name" YBindingPath="Height">
+   <chart:SfChart.Series>
+         <chart:ColumnSeries ItemsSource="{Binding Data}" 
+                             XBindingPath="Name" 
+                             YBindingPath="Height">
 		 </chart:ColumnSeries>
-    </chart:SfChart.Series>
+   </chart:SfChart.Series>
  </chart:SfChart>
-
 </td>
 
 <td>
 <chart:SfCartesianChart>
-    <chart:SfCartesianChart.XAxes>
+   <chart:SfCartesianChart.XAxes>
         <chart:CategoryAxis>
             <chart:CategoryAxis.Title>
-                <chart:ChartAxisTitle Text="Name" />
+                  <chart:ChartAxisTitle Text="Name" />
             </chart:CategoryAxis.Title>
         </chart:CategoryAxis>
-    </chart:SfCartesianChart.XAxes>
+   </chart:SfCartesianChart.XAxes>
 
-    <chart:SfCartesianChart.YAxes>
+   <chart:SfCartesianChart.YAxes>
         <chart:NumericalAxis>
             <chart:NumericalAxis.Title>
-                <chart:ChartAxisTitle Text="Height(in cm)" />
+                  <chart:ChartAxisTitle Text="Height(in cm)" />
             </chart:NumericalAxis.Title>
         </chart:NumericalAxis>
-    </chart:SfCartesianChart.YAxes>
+   </chart:SfCartesianChart.YAxes>
 
-    <chart:SfCartesianChart.Series>
-        <chart:ColumnSeries ItemsSource="{Binding Data}" 
+   <chart:SfCartesianChart.Series>
+         <chart:ColumnSeries ItemsSource="{Binding Data}" 
                             XBindingPath="Name" 
                             YBindingPath="Height">
-        </chart:ColumnSeries>
-    </chart:SfCartesianChart.Series>
+         </chart:ColumnSeries>
+   </chart:SfCartesianChart.Series>
 </chart:SfCartesianChart>
 </td>
 </tr>
@@ -914,7 +915,7 @@ The following table illustrates the API comparison between SfChart and SfCartesi
 <td>OffsetX</td>
 <td>-</td>
 </tr>
-tr>
+<tr>
 <td>OffsetY</td>
 <td>-</td>
 </tr>
@@ -931,7 +932,9 @@ tr>
 <td>
 <chart:SfChart>  
      . . .
-    <chart:ColumnSeries>
+    <chart:ColumnSeries ItemsSource="{Binding Data}" 
+                        XBindingPath="Category"
+                        YBindingPath="Value">
 	    <chart:ColumnSeries.DataMarker>
 	        <chart:ChartDataMarker/>
 	    </chart:ColumnSeries.DataMarker>
@@ -944,7 +947,8 @@ tr>
     <chart:SfCartesianChart.Series>
         <chart:ColumnSeries ItemsSource="{Binding Data}" 
                         XBindingPath="Category"
-                        YBindingPath="Value" ShowDataLabels="True">
+                        YBindingPath="Value" 
+                        ShowDataLabels="True">
         </chart:ColumnSeries>
     </chart:SfCartesianChart.Series>
 </chart:SfCartesianChart>
@@ -985,9 +989,9 @@ tr>
    </chart:SfCartesianChart.TooltipBehavior>
 
    <chart:ColumnSeries ItemsSource="{Binding Data}" 
-                        XBindingPath="Demand"
-                        YBindingPath="Year2010"
-                        EnableTooltip="True"/>
+                       XBindingPath="Demand"
+                       YBindingPath="Year2010"
+                       EnableTooltip="True"/>
 </chart:SfCartesianChart>
 </td>
 </tr>
@@ -1010,7 +1014,12 @@ To Customize the tooltip appearance, create an instance of the `ChartTooltipBeha
             <local:ChartSelectionBehavior/>
     </chart:SfChart.ChartBehaviors>
 
-    <chart:ColumnSeries EnableDataPointSelection="True" SelectedDataPointIndex="2" SelectedDataPointColor="Red" ItemsSource ="{Binding Data}" />
+    <chart:ColumnSeries EnableDataPointSelection="True" 
+            SelectedDataPointIndex="2" 
+            SelectedDataPointColor="Red" 
+            ItemsSource ="{Binding Data}" 
+            XBindingPath="Demand" 
+            YBindingPath="Year2010" />
 </chart:SfChart>
 </td>
 <td>
@@ -1020,7 +1029,11 @@ To Customize the tooltip appearance, create an instance of the `ChartTooltipBeha
         <chart:ChartSelectionBehavior />
     </chart:SfCartesianChart.SelectionBehavior>
 
-    <chart:ColumnSeries SelectionBrush="Green" ItemsSource="{Binding Data}" XBindingPath="Demand" YBindingPath="Year2010" />
+    <chart:ColumnSeries SelectionBrush="Green" 
+            SelectedIndex="2"
+            ItemsSource="{Binding Data}" 
+            XBindingPath="Demand" 
+            YBindingPath="Year2010" />
 </chart:SfCartesianChart>
 </td>
 </tr>
