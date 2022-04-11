@@ -1,6 +1,6 @@
 ---
 layout: post
-title: two-dimensional symbology in .NET MAUI Barcodes (SfBarcodeGenerator) | Syncfusion
+title: two-dimensional symbology in .NET MAUI Barcodes | Syncfusion
 description: Learn here all about two dimensional symbology of Syncfusion .NET MAUI Barcodes(SfBarcodeGenerator) control with key features and more.
 platform: maui
 control: SfBarcodeGenerator
@@ -233,7 +233,7 @@ The number of modules increases in steps of 4 modules per side up to Version 40,
 
 ![.NET MAUI Barcode Generator Data Matrix Symbology](images/two-dimensional-symbology/maui-data-matrix.png)
 
-### Data matrix format
+### Data Matrix format
 
 Length - Data Matrix can store up to 2335 alphanumeric characters or 3116 numbers from the ASCII range.
 
