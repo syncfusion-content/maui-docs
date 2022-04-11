@@ -9,10 +9,9 @@ documentation: ug
 
 # Known issues in .NET MAUI.
 
-* Due to framework bindable layout issue, legend not added dynamically in view. 
-* When the edge drawing mode is set to centre, the label on the chart axis will be clipped. 
-
-### Support and feedback
-
-If you are unable to find the information that you are looking for in the self-help resources mentioned above, please contact us by creating a [support ticket](https://www.syncfusion.com/support/directtrac/incidents).
-Do not see what you need? Please request it in our [feedback portal](https://www.syncfusion.com/feedback/maui).
+* The legend item was not dynamically added.
+* While resizing the window, the chart size is not dynamically updated.
+* Axis label rotation does not work for all angles.
+* The title position was incorrect for a category axis with an inversed position.
+* Axis range and series are not updated properly when dynamically removing or inserting the axis collection.
+* Axis minor gridlines are not visible unless major gridlines are enabled.
