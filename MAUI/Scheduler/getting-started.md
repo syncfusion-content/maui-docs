@@ -32,7 +32,7 @@ This section explains how to populate the appointments to the Scheduler as well 
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" hl_lines="2 10 11" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="2 10 11" %}
 
 using Syncfusion.Maui.Scheduler;
 . . .
@@ -93,7 +93,7 @@ The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sc
 <scheduler:SfScheduler x:Name="Scheduler" View="Month"/>
 
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" %}
 
 this.Scheduler.View = SchedulerView.Month;
 
@@ -116,7 +116,7 @@ The [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.S
 <scheduler:SfScheduler x:Name="Scheduler" />
 
 {% endhighlight %}
-{% highlight c# tabtitle ="MainPage.xaml" hl_lines="15" %}
+{% highlight c# tabtitle ="MainPage.xaml.cs" hl_lines="15" %}
 
 // Creating an instance for the scheduler appointment collection.
 var appointment = new ObservableCollection<SchedulerAppointment>();
@@ -360,7 +360,7 @@ Map those properties of the `Meeting` class with our [.NET MAUI Scheduler](https
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" hl_lines="2" %} 
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="2 4 16" %} 
 
 using Syncfusion.Maui.Scheduler;
 
@@ -396,7 +396,7 @@ Create meetings of type `ObservableCollection<Meeting>` and assign those appoint
 </schedule:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" hl_lines="3" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="3" %}
 
 var viewModel = new SchedulerDataBindingViewModel();
 this.Scheduler.AppointmentsSource = viewModel.Events;
@@ -418,7 +418,7 @@ The following code shows the Scheduler with `Tuesday` as the first day of the we
 <scheduler:SfScheduler x:Name="Scheduler" FirstDayOfWeek="Tuesday"/>
 
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" %}
 
 this.Scheduler.FirstDayOfWeek = DayOfWeek.Tuesday;
 
@@ -437,7 +437,7 @@ The selection view of Scheduler can be customized by using the [SelectedCellBack
 <scheduler:SfScheduler x:Name="Scheduler" SelectedCellBackground="Orange"/>
 
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" %}
 
 this.Scheduler.SelectedCellBackground = Brush.Orange;
 
@@ -456,7 +456,7 @@ The today highlight brush of Scheduler can be customized by using the [TodayHigh
 <scheduler:SfScheduler x:Name="Scheduler" TodayHighlightBrush="Orange"/>
 
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" %}
 
 this.Scheduler.TodayHighlightBrush = Brush.Orange;
 
@@ -475,7 +475,7 @@ The vertical and horizontal line color of the Scheduler can be customized by usi
 <scheduler:SfScheduler x:Name="Scheduler" CellBorderBrush="Orange"/>
 
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" %}
 
 this.Scheduler.CellBorderBrush = Brush.Orange;
 
@@ -494,7 +494,7 @@ The Scheduler background color can be customized by using the `BackgroundColor` 
 <scheduler:SfScheduler x:Name="Scheduler" BackgroundColor="LightBlue"/>
 
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" %}
 
 this.Scheduler.BackgroundColor = Colors.LightBlue;
 
@@ -511,7 +511,7 @@ By Using the [ShowNavigationArrows](https://help.syncfusion.com/cr/maui/Syncfusi
 <scheduler:SfScheduler x:Name="Scheduler" ShowNavigationArrows="False"/>
 
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" %}
 
 this.Scheduler.ShowNavigationArrows = false;
 
@@ -530,7 +530,7 @@ Display the week number of the year in all Scheduler views of the [SfScheduler](
 <scheduler:SfScheduler x:Name="Scheduler" ShowWeekNumber="True"/>
 
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" %}
 
 this.Scheduler.ShowWeekNumber = true;
 
@@ -551,7 +551,7 @@ The Week number text style of the Scheduler can be customized by using the [Week
 <scheduler:SfScheduler x:Name="Scheduler" ShowWeekNumber="True"/>
 
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" hl_lines="2 15" %}  
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="2 15" %}  
 
 this.Scheduler.ShowWeekNumber = true;
 var schedulerTextStyle = new SchedulerTextStyle()

@@ -16,14 +16,12 @@ A agenda view displays different UI for mobile and desktop, for mobile it displa
 N> When the desktop view width is less than 600, the scheduler will display the mobile agenda UI on the desktop.
 
 {% tabs %}
-{% highlight xaml tabtitle ="MainPage.xaml" hl_lines="3" %}
+{% highlight xaml tabtitle ="MainPage.xaml" hl_lines="2" %}
 
- <scheduler:SfScheduler x:Name="Scheduler" 
-                        View="Agenda">
- </scheduler:SfScheduler>
+{% include_relative code-snippet/agendaview.xaml %}
 
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" hl_lines="2 14" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="2 14" %}
 
 this.Scheduler.View = SchedulerView.Agenda;
 // Creating an instance for the scheduler appointment collection.
@@ -69,7 +67,7 @@ You can style the date format, height, text style, and background color by using
  </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" hl_lines="9 10 11 12" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="9 10 11 12" %}
 
 this.Scheduler.View = SchedulerView.Agenda;
 var textStyle = new SchedulerTextStyle()
@@ -169,7 +167,7 @@ public class AgendaViewTemplateSelector : DataTemplateSelector
 }
 
 {% endhighlight %}  
-{% highlight c# tabtitle= "MainPage.cs" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" %}
 
 this.Scheduler.View = SchedulerView.Agenda;
 
@@ -204,7 +202,7 @@ You can style the date format, height, text style, and background color by using
  </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" hl_lines="9 10 11 12" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="9 10 11 12" %}
 
 this.Scheduler.View = SchedulerView.Agenda;
 var textStyle = new SchedulerTextStyle()
@@ -249,7 +247,7 @@ You can style the day format, day text style, date text style, and background co
  </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" hl_lines="9 10 11 12" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="9 10 11 12" %}
 
 this.Scheduler.View = SchedulerView.Agenda;
 var textStyle = new SchedulerTextStyle()
@@ -277,12 +275,10 @@ The appointment text style can be customized by using the [AppointmentTextStyle]
 {% tabs %}
 {% highlight xaml tabtitle ="MainPage.xaml" %}
 
- <scheduler:SfScheduler x:Name="Scheduler" 
-                        View="Agenda">
- </scheduler:SfScheduler>
+{% include_relative code-snippet/agendaview.xaml %}
 
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" hl_lines="15 23" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="15 23" %}
 
 this.Scheduler.View = SchedulerView.Agenda;
 // Creating an instance for the scheduler appointment collection.

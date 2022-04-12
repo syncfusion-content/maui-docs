@@ -39,7 +39,7 @@ You can set the month view appointments display as follows.
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" hl_lines="3" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="3" %}
 
 this.Scheduler.View = SchedulerView.Month;
 this.Scheduler.MonthView.AppointmentDisplayMode = SchedulerMonthAppointmentDisplayMode.Indicator;
@@ -69,7 +69,7 @@ The previous and next month dates from a Scheduler month view can be hidden by u
  </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" hl_lines="3" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="3" %}
 
 this.Scheduler.View = SchedulerView.Month;
 this.Scheduler.MonthView.ShowLeadingAndTrailingDates = false;
@@ -102,7 +102,7 @@ Customize the day format of Scheduler view header by using the [DayFormat](https
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" hl_lines="3" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="3" %}
 
 this.Scheduler.View = SchedulerView.Month;
 this.Scheduler.MonthView.ViewHeaderSettings.DayFormat = "dddd";
@@ -131,7 +131,7 @@ The height of the ViewHeader can be customized by setting the [Height](https://h
  </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" hl_lines="3" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="3" %}
 
 this.Scheduler.View = SchedulerView.Month;
 this.Scheduler.MonthView.ViewHeaderSettings.Height = 100;
@@ -165,7 +165,7 @@ Customize the month view header day text style, day format and background color 
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" hl_lines="8 9 10" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="8 9 10" %}
 
 var dayTextStyle = new SchedulerTextStyle()
 {
@@ -279,7 +279,7 @@ By using the [CellStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sch
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" hl_lines="32" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="32" %}
 
 this.Scheduler.View = SchedulerView.Month;
 var textStyle = new SchedulerTextStyle()
@@ -398,7 +398,7 @@ public class MonthCellTemplateSelector : DataTemplateSelector
 }
 
 {% endhighlight %}  
-{% highlight c# tabtitle= "MainPage.cs" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" %}
 
 this.Scheduler.View = SchedulerView.Month;
 

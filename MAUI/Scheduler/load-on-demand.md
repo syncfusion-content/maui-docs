@@ -41,7 +41,7 @@ This [QueryAppointments](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sch
  </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" hl_lines="3" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="3" %}
 
 this.Scheduler.View = SchedulerView.Week;
 this.Scheduler.QueryAppointments += OnSchedulerQueryAppointments;
@@ -134,7 +134,7 @@ A ViewModel class should implement a command and handle it by the `CanExecute` a
 The [ShowBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_ShowBusyIndicator) property can be used to start and stop the loading indicator animation, before and after appointments are loaded into the [AppointmentsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentsSource) of the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
 {% tabs %}
-{% highlight xaml tabtitle ="MainPage.xaml" hl_lines="4 5 6" %}
+{% highlight xaml tabtitle ="MainPage.xaml" hl_lines="4 5 6 8" %}
 
  <scheduler:SfScheduler x:Name="Scheduler" 
                         View="Week"
@@ -147,7 +147,7 @@ The [ShowBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sche
  </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel.cs" %}
+{% highlight c# tabtitle="LoadOnDemandViewModel.cs" %}
 
 public class LoadOnDemandViewModel : INotifyPropertyChanged
 {
@@ -274,7 +274,7 @@ The `Scheduler` supports to show the busy indicator view by using the [ShowBusyI
  </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" hl_lines="3" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="3" %}
 
 this.Scheduler.View = SchedulerView.Week;
 this.Scheduler.ShowBusyIndicator = true;

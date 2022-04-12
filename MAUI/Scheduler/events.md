@@ -32,7 +32,7 @@ Below is a list of the arguments:
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" hl_lines="2" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="2" %}
 
 this.Scheduler.Tapped += this.OnSchedulerTapped;
 
@@ -70,7 +70,7 @@ Whenever the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.S
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" hl_lines="2" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="2" %}
 
 this.Scheduler.DoubleTapped += this.OnSchedulerDoubleTapped;
 
@@ -108,7 +108,7 @@ Whenever the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.S
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" hl_lines="2" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="2" %}
 
 this.Scheduler.LongPressed += this.OnSchedulerLongPressed;
 
@@ -145,7 +145,7 @@ The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sched
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" hl_lines="2" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="2" %}
 
 this.Scheduler.SelectionChanged += this.OnSchedulerSelectionChanged;
 
@@ -182,7 +182,7 @@ The [ViewChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" hl_lines="2" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="2" %}
 
 this.Scheduler.ViewChanged += this.OnSchedulerViewChanged;
 

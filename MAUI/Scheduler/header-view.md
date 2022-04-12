@@ -28,7 +28,7 @@ You can customize the default [Height](https://help.syncfusion.com/cr/maui/Syncf
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" hl_lines="3" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="3" %}
 
 this.Scheduler.View = SchedulerView.Week;
 this.Scheduler.HeaderView.Height = 100;
@@ -55,7 +55,7 @@ The header date format can be customized by using the [TextFormat](https://help.
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" hl_lines="3" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="3" %}
 
 this.Scheduler.View = SchedulerView.Week;
 this.Scheduler.HeaderView.TextFormat = "MMM yy";
@@ -86,7 +86,7 @@ You can style the background color and textStyle by using the properties such as
  </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" hl_lines="9 10" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="9 10" %}
 
 var textStyle = new SchedulerTextStyle()
 {

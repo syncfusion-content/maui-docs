@@ -860,7 +860,7 @@ Use the [StartTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Schedule
 <scheduler:SfScheduler x:Name="scheduler" />
 
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" hl_lines="8 9 12" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="8 9 12" %}
 
 var appointments = new ObservableCollection<SchedulerAppointment>();
 appointments.Add(new SchedulerAppointment()
@@ -913,7 +913,7 @@ public class SchedulerViewModel
 }
 
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" hl_lines="2" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="2" %}
 
 this.scheduler.TimeZone = TimeZoneInfo.FindSystemTimeZoneById("Australia/Brisbane");
 
