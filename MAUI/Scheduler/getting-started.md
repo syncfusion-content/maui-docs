@@ -22,7 +22,7 @@ This section explains how to populate the appointments to the Scheduler as well 
 4. Initialize `SfScheduler.`
 
 {% tabs %}
-{% highlight xaml tabtitle ="MainPage.xaml" hl_lines="4 6" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4 6" %}
 
 <ContentPage   
     . . .
@@ -32,7 +32,7 @@ This section explains how to populate the appointments to the Scheduler as well 
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="2 10 11" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2 10 11" %}
 
 using Syncfusion.Maui.Scheduler;
 . . .
@@ -55,7 +55,7 @@ public partial class MainPage : ContentPage
 The `Syncfusion.Maui.Core` nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
 
 {% tabs %}
-{% highlight C# tabtitle= "MauiProgram.cs" hl_lines="2 11" %}
+{% highlight C# tabtitle="MauiProgram.cs" hl_lines="2 11" %}
 
 using Syncfusion.Maui.Core.Hosting;
 namespace GettingStarted
@@ -88,12 +88,12 @@ namespace GettingStarted
 The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) control provides nine different types of views to display dates and it can be assigned to the control by using the [View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_View) property. The control is assigned to the [Day](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerView.html#Syncfusion_Maui_Scheduler_SchedulerView_Day) view by default. The current date will be displayed initially for all the Scheduler views.
 
 {% tabs %}
-{% highlight xaml tabtitle ="MainPage.xaml" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
 <scheduler:SfScheduler x:Name="Scheduler" View="Month"/>
 
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 this.Scheduler.View = SchedulerView.Month;
 
@@ -111,12 +111,12 @@ The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sc
 The [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html) is a class that includes the specific scheduled appointment. It has some basic properties such as [StartTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_StartTime), [EndTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_EndTime), [Subject](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentMapping_Subject), and some additional information about the appointment can be added with [Notes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentMapping_Notes), [Location](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentMapping_Location), and [IsAllDay](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentMapping_IsAllDay) properties.
 
 {% tabs %}
-{% highlight xaml tabtitle ="MainPage.xaml" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
 <scheduler:SfScheduler x:Name="Scheduler" />
 
 {% endhighlight %}
-{% highlight c# tabtitle ="MainPage.xaml.cs" hl_lines="15" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="15" %}
 
 // Creating an instance for the scheduler appointment collection.
 var appointment = new ObservableCollection<SchedulerAppointment>();
@@ -158,7 +158,7 @@ Here are the steps to render meetings using the [.NET MAUI Scheduler](https://he
 Create a custom class `Meeting` with mandatory fields `From,` `To,` and `EventName`.
 
 {% tabs %}
-{% highlight c# tabtitle= "Meeting.cs" %}
+{% highlight c# tabtitle="Meeting.cs" %}
 
 /// <summary>    
 /// Represents the custom data properties.    
@@ -189,7 +189,7 @@ N> Inherit this class from the `INotifyPropertyChanged` for dynamic changes in c
 By setting `From` and `To` of Meeting class, schedule meetings for a specific day. Change the `Subject` and `Background` of the appointment using the `EventName` and `Background` properties. Define the list of custom appointments in a separate class of `ViewModel.`
 
 {% tabs %}
-{% highlight c# tabtitle= "SchedulerViewModel.cs" %}
+{% highlight c# tabtitle="SchedulerViewModel.cs" %}
 
 /// <summary>
 /// The data binding View Model.
@@ -338,7 +338,7 @@ public class SchedulerViewModel
 Map those properties of the `Meeting` class with our [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) control by using the [AppointmentMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html) property.
 
 {% tabs %}
-{% highlight xaml tabtitle ="MainPage.xaml" hl_lines="3 5 6 7 8 9 10 11 12 13 14 15 16 17 18" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 5 6 7 8 9 10 11 12 13 14 15 16 17 18" %}
 
 <scheduler:SfScheduler x:Name="Scheduler" 
                        AppointmentsSource="{Binding Events}"
@@ -360,7 +360,7 @@ Map those properties of the `Meeting` class with our [.NET MAUI Scheduler](https
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="2 4 16" %} 
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2 4 16" %} 
 
 using Syncfusion.Maui.Scheduler;
 
@@ -386,7 +386,7 @@ this.Scheduler.AppointmentMapping = appointmentMapping;
 Create meetings of type `ObservableCollection<Meeting>` and assign those appointments collection to the [AppointmentsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentsSource) property of [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
 {% tabs %}
-{% highlight xaml tabtitle ="MainPage.xaml" hl_lines="3 5" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 5" %}
 
 <schedule:SfScheduler x:Name="Scheduler"
                       AppointmentsSource="{Binding Events}">
@@ -396,7 +396,7 @@ Create meetings of type `ObservableCollection<Meeting>` and assign those appoint
 </schedule:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="3" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3" %}
 
 var viewModel = new SchedulerDataBindingViewModel();
 this.Scheduler.AppointmentsSource = viewModel.Events;
@@ -413,12 +413,12 @@ The scheduler allows customization on the first day of the week with the [FirstD
 The following code shows the Scheduler with `Tuesday` as the first day of the week.
 
 {% tabs %}  
-{% highlight xaml tabtitle ="MainPage.xaml" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
 <scheduler:SfScheduler x:Name="Scheduler" FirstDayOfWeek="Tuesday"/>
 
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 this.Scheduler.FirstDayOfWeek = DayOfWeek.Tuesday;
 
@@ -432,12 +432,12 @@ this.Scheduler.FirstDayOfWeek = DayOfWeek.Tuesday;
 The selection view of Scheduler can be customized by using the [SelectedCellBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_SelectedCellBackground) property in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
 {% tabs %}  
-{% highlight xaml tabtitle ="MainPage.xaml" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
 <scheduler:SfScheduler x:Name="Scheduler" SelectedCellBackground="Orange"/>
 
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 this.Scheduler.SelectedCellBackground = Brush.Orange;
 
@@ -451,12 +451,12 @@ this.Scheduler.SelectedCellBackground = Brush.Orange;
 The today highlight brush of Scheduler can be customized by using the [TodayHighlightBrush](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_TodayHighlightBrush) property in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html), which will highlight the today's circle and text in Scheduler view header and month cell.
 
 {% tabs %}  
-{% highlight xaml tabtitle ="MainPage.xaml" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
 <scheduler:SfScheduler x:Name="Scheduler" TodayHighlightBrush="Orange"/>
 
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 this.Scheduler.TodayHighlightBrush = Brush.Orange;
 
@@ -470,12 +470,12 @@ this.Scheduler.TodayHighlightBrush = Brush.Orange;
 The vertical and horizontal line color of the Scheduler can be customized by using the [CellBorderBrush](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_CellBorderBrush) property in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
 {% tabs %}  
-{% highlight xaml tabtitle ="MainPage.xaml" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
 <scheduler:SfScheduler x:Name="Scheduler" CellBorderBrush="Orange"/>
 
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 this.Scheduler.CellBorderBrush = Brush.Orange;
 
@@ -489,12 +489,12 @@ this.Scheduler.CellBorderBrush = Brush.Orange;
 The Scheduler background color can be customized by using the `BackgroundColor` property in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
 {% tabs %}  
-{% highlight xaml tabtitle ="MainPage.xaml" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
 <scheduler:SfScheduler x:Name="Scheduler" BackgroundColor="LightBlue"/>
 
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 this.Scheduler.BackgroundColor = Colors.LightBlue;
 
@@ -506,12 +506,12 @@ this.Scheduler.BackgroundColor = Colors.LightBlue;
 By Using the [ShowNavigationArrows](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_ShowNavigationArrows) property of the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html), you can navigate to the previous or next views of the Scheduler. By default, the value `ShowNavigationArrows` is `true,` which displays the navigation icons and `Today` button in the header view. It allows to quickly navigate to today and previous or next views.
 
 {% tabs %}  
-{% highlight xaml tabtitle ="MainPage.xaml" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
 <scheduler:SfScheduler x:Name="Scheduler" ShowNavigationArrows="False"/>
 
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 this.Scheduler.ShowNavigationArrows = false;
 
@@ -525,12 +525,12 @@ this.Scheduler.ShowNavigationArrows = false;
 Display the week number of the year in all Scheduler views of the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) by setting the [ShowWeekNumber](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_ShowWeekNumber) property as `true` and by default it is `false.` The Week numbers will be displayed based on the ISO standard.
 
 {% tabs %}  
-{% highlight xaml tabtitle ="MainPage.xaml" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
 <scheduler:SfScheduler x:Name="Scheduler" ShowWeekNumber="True"/>
 
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 this.Scheduler.ShowWeekNumber = true;
 
@@ -546,12 +546,12 @@ N> This property will not be applicable for the `SchedulerView` is `Timeline Mon
 The Week number text style of the Scheduler can be customized by using the [WeekNumberStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_WeekNumberStyle) property and it allows to customize the [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerWeekNumberStyle.html#Syncfusion_Maui_Scheduler_SchedulerWeekNumberStyle_TextStyle) and the [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerWeekNumberStyle.html#Syncfusion_Maui_Scheduler_SchedulerWeekNumberStyle_Background) color in the Week number of the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
 {% tabs %}  
-{% highlight xaml tabtitle ="MainPage.xaml" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
 <scheduler:SfScheduler x:Name="Scheduler" ShowWeekNumber="True"/>
 
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="2 15" %}  
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2 15" %}  
 
 this.Scheduler.ShowWeekNumber = true;
 var schedulerTextStyle = new SchedulerTextStyle()
