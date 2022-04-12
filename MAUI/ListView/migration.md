@@ -72,12 +72,12 @@ To migrate easier from [Xamarin SfListView](https://www.syncfusion.com/xamarin-u
 <th>.NET MAUI SfListView</th>
 <th>Description</th></tr>
 <tr>
-<td>LoadMorePosition</td>
+<td>{{'[LoadMorePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.LoadMorePosition.html)'| markdownify }}</td>
 <td>Top,<br/>Bottom</td>
 <td>Start,<br/>End</td>
 <td>Defines position for the load more support of SfListView.</td></tr>
 <tr>
-<td>TouchGesture</td>
+<td>{{'[TouchGesture](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.TouchGesture.html)'| markdownify }}</td>
 <td>Hold</td>
 <td>LongPress</td>
 <td>Describes the possible values of touch operation. These values are used when updating selection in the SfListView control.</td></tr>
@@ -136,8 +136,8 @@ To migrate easier from [Xamarin SfListView](https://www.syncfusion.com/xamarin-u
 <td>{{'[ListViewLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewLayout.html)'| markdownify }}</td>
 <td>Defines the base for the layouts.</td></tr>
 <tr>
-<td>{{'[Syncfusion.ListView.XForms.Helpers.InverseBoolConverter](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.Helpers.InverseBoolConverter.html)'| markdownify }}</td>
-<td>{{'[Syncfusion.Maui.Core.Converters.InvertedBoolConverter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Converters.InvertedBoolConverter.html)'| markdownify }}</td>
+<td>{{'[InverseBoolConverter](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.Helpers.InverseBoolConverter.html)'| markdownify }}</td>
+<td>{{'[InvertedBoolConverter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Converters.InvertedBoolConverter.html)'| markdownify }}</td>
 <td>Converter to reverse the boolean value.</td></tr>
 </table> 
 
