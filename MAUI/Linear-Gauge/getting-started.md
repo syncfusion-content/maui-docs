@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI Linear Gauge
 
-This section explains the steps required to add the `.NET MAUI Linear Gauge` control and its elements such as scale, range, and pointer. This section covers only basic features needed to get started with Syncfusion linear gauge control.
+This section explains the steps required to add the [`.NET MAUI Linear Gauge`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html?tabs=tabid-1) control and its elements such as scale, range, and pointer. This section covers only basic features needed to get started with Syncfusion linear gauge control.
 
 ## Creating an application using the .NET MAUI Linear Gauge
 
@@ -91,7 +91,7 @@ namespace GaugeMauiSample
 
 ## Add range to the linear gauge
 
-Ranges contain a list of range elements, to which you can add any number of ranges inside the scale. You can specify the start value, end value, and background color for range using the `StartValue`, `EndValue`, and `Fill` properties as shown in the following code sample.
+Ranges contain a list of range elements, to which you can add any number of ranges inside the scale. You can specify the start value, end value, and background color for range using the [`StartValue`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearRange.html#Syncfusion_Maui_Gauges_LinearRange_StartValue), [`EndValue`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearRange.html#Syncfusion_Maui_Gauges_LinearRange_EndValue), and [`Fill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearRange.html#Syncfusion_Maui_Gauges_LinearRange_Fill) properties as shown in the following code sample.
 
 {% tabs %}
 
@@ -120,7 +120,7 @@ Ranges contain a list of range elements, to which you can add any number of rang
 
 ## Add pointer to the linear gauge
 
-Pointers contain a list of pointer elements, in which you can add any number of gauge pointers such as `BarPointer`, `ShapePointer`, and `ContentPointer` inside the scale to indicate the value.
+Pointers contain a list of pointer elements, in which you can add any number of gauge pointers such as [`BarPointer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.BarPointer.html), [`ShapePointer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.ShapePointer.html), and [`ContentPointer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.ContentPointer.html) inside the scale to indicate the value.
 
 {% tabs %}
 
