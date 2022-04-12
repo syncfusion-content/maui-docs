@@ -855,12 +855,12 @@ Create appointments at different time zones using the [StartTimeZone](https://he
 Use the [StartTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_StartTime) and [EndTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_EndTime) properties of `SchedulerAppointment` to get the exact start time and end time of an appointment. By using the [ActualStartTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_ActualStartTime) and [ActualEndTime](Syncfusion_Maui_Scheduler_SchedulerAppointment_ActualEndTime) properties, get the exact appointment rendering time.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
 <scheduler:SfScheduler x:Name="scheduler" />
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="8 9 12" %}
 
 var appointments = new ObservableCollection<SchedulerAppointment>();
 appointments.Add(new SchedulerAppointment()
@@ -893,12 +893,14 @@ Display the appointments based on the client’s local time zone in scheduler. F
 Set the specific time zone to schedule using the [TimeZone](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_TimeZone) property of scheduler. On this scenario, the appointments will be displayed in UTC time when the `StartTimeZone` and `EndTimeZone` properties of `SchedulerAppointment` are set to null. The appointments will be displayed in UTC time based on the given scheduler time zone.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
 
-<scheduler:SfScheduler x:Name="scheduler" TimeZone="{Binding SchedulerTimeZoneInfo}"/>
+<scheduler:SfScheduler x:Name="scheduler" 
+                       TimeZone="{Binding SchedulerTimeZoneInfo}">
+</scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c#%}
+{% highlight c# tabtitle="SchedulerViewModel.cs" hl_lines="6"%}
 
 public class SchedulerViewModel
 {
@@ -911,7 +913,7 @@ public class SchedulerViewModel
 }
 
 {% endhighlight %}
-{% highlight c#%}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
 
 this.scheduler.TimeZone = TimeZoneInfo.FindSystemTimeZoneById("Australia/Brisbane");
 

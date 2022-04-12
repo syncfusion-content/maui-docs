@@ -16,18 +16,19 @@ You can learn about `SfScheduler's` header height, date format, and appearance s
 You can customize the default [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderSettingsBase.html#Syncfusion_Maui_Scheduler_SchedulerHeaderSettingsBase_Height) property of the [HeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderView.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html). By default, the header height is `50.`
 
 {% tabs %}  
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
 
 <scheduler:SfScheduler x:Name="Scheduler" 
                        View="Week">
     <scheduler:SfScheduler.HeaderView>
-        <scheduler:SchedulerHeaderView Height="100">
+        <scheduler:SchedulerHeaderView 
+                       Height="100">
         </scheduler:SchedulerHeaderView>
     </scheduler:SfScheduler.HeaderView>
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3" %}
 
 this.Scheduler.View = SchedulerView.Week;
 this.Scheduler.HeaderView.Height = 100;
@@ -42,18 +43,19 @@ this.Scheduler.HeaderView.Height = 100;
 The header date format can be customized by using the [TextFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderView.html#Syncfusion_Maui_Scheduler_SchedulerHeaderView_TextFormat) property of the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html). By default, the header text format is `MMMM yyyy.`
 
 {% tabs %}  
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
 
 <scheduler:SfScheduler x:Name="Scheduler" 
                        View="Week">
     <scheduler:SfScheduler.HeaderView>
-        <scheduler:SchedulerHeaderView TextFormat="MMM yy">
+        <scheduler:SchedulerHeaderView 
+                       TextFormat="MMM yy">
         </scheduler:SchedulerHeaderView>
     </scheduler:SfScheduler.HeaderView>
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3" %}
 
 this.Scheduler.View = SchedulerView.Week;
 this.Scheduler.HeaderView.TextFormat = "MMM yy";
@@ -72,18 +74,19 @@ The header can be customized by using the [HeaderView](https://help.syncfusion.c
 You can style the background color and textStyle by using the properties such as [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderSettingsBase.html#Syncfusion_Maui_Scheduler_SchedulerHeaderSettingsBase_Background) and [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderView.html#Syncfusion_Maui_Scheduler_SchedulerHeaderView_TextStyle) properties of [HeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderView.html).
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
 
  <scheduler:SfScheduler x:Name="Scheduler" 
                         View="Week">
     <scheduler:SfScheduler.HeaderView>
-        <scheduler:SchedulerHeaderView Background="LightGreen">
+        <scheduler:SchedulerHeaderView 
+                        Background="LightGreen">
         </scheduler:SchedulerHeaderView>
     </scheduler:SfScheduler.HeaderView>
  </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9 10" %}
 
 var textStyle = new SchedulerTextStyle()
 {
@@ -105,7 +108,7 @@ this.Scheduler.HeaderView.Background = Brush.LightGreen;
 You can customize the header appearance by using the [HeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderView.html#Syncfusion_Maui_Scheduler_SchedulerHeaderView_HeaderTemplate) property of [HeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderView.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html). 
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6 7 8 9 10 11 12 13 14 15 16 17 18 19 20" %}
 
   <scheduler:SfScheduler x:Name="Scheduler" 
                          View="Week">
@@ -140,7 +143,7 @@ You can customize the header appearance by using the [HeaderTemplate](https://he
 You can customize the header appearance by using the [HeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderView.html#Syncfusion_Maui_Scheduler_SchedulerHeaderView_HeaderTemplate) property of [HeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderView.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html). The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler header by using the `HeaderTemplate.` It allows you to choose a different data template for each header, as well as to customize the appearance of a particular header based on certain conditions.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="35" %}
 
  <Grid>
     <Grid.Resources>
@@ -153,7 +156,7 @@ You can customize the header appearance by using the [HeaderTemplate](https://he
                             <Binding Path = "EndDate" />
                         </MultiBinding >
                     </Label.Text >
-                </Label >
+                </Label>
                 <Label  HorizontalOptions="Center" VerticalOptions="End" Text="{Binding Text}" TextColor="Red" />
             </Grid>
         </DataTemplate>

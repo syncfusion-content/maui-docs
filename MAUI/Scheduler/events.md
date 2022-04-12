@@ -25,14 +25,14 @@ Below is a list of the arguments:
     * [Element](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerInteractionEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerInteractionEventArgs_Element) : Returns the `Scheduler` element tapped.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
 
 <scheduler:SfScheduler x:Name="Scheduler" 
                        Tapped="OnSchedulerTapped" >
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c#%}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
 
 this.Scheduler.Tapped += this.OnSchedulerTapped;
 
@@ -63,14 +63,14 @@ Whenever the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.S
     * [Element](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerInteractionEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerInteractionEventArgs_Element) : Returns the double-tapped `Scheduler` element.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
 
 <scheduler:SfScheduler x:Name="Scheduler" 
                        DoubleTapped="OnSchedulerDoubleTapped" >
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c#%}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
 
 this.Scheduler.DoubleTapped += this.OnSchedulerDoubleTapped;
 
@@ -101,14 +101,14 @@ Whenever the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.S
     * [Element](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerInteractionEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerInteractionEventArgs_Element) : Returns the long-pressed `Scheduler` element.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
 
 <scheduler:SfScheduler x:Name="Scheduler" 
                        LongPressed="OnSchedulerLongPressed" >
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c#%}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
 
 this.Scheduler.LongPressed += this.OnSchedulerLongPressed;
 
@@ -138,14 +138,14 @@ The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sched
     * [OldValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerSelectionChangedEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerSelectionChangedEventArgs_OldValue) : Returns the old selected date.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
 
 <scheduler:SfScheduler x:Name="Scheduler" 
                        SelectionChanged="OnSchedulerSelectionChanged" >
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c#%}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
 
 this.Scheduler.SelectionChanged += this.OnSchedulerSelectionChanged;
 
@@ -175,14 +175,14 @@ The [ViewChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.
     * [OldView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViewChangedEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerViewChangedEventArgs_OldView) : Returns the old scheduler view.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
 
 <scheduler:SfScheduler x:Name="Scheduler" 
                        ViewChanged="OnSchedulerViewChanged" >
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c#%}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
 
 this.Scheduler.ViewChanged += this.OnSchedulerViewChanged;
 
