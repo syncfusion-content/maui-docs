@@ -99,7 +99,7 @@ namespace GettingStarted
 
 ## Adding content to Range Selector
 
-The [`Content`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ShowLabels) property will add the content to the Range Selector. You can add any control within the Range Selector with this property. In most cases the [Charts](https://www.syncfusion.com/maui-controls/maui-charts) will be added as a content.
+The [`Content`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSelector.html#Syncfusion_Maui_Sliders_SfRangeSelector_Content) property will add the content to the Range Selector. You can add any control within the Range Selector with this property. In most cases the [Charts](https://www.syncfusion.com/maui-controls/maui-charts) will be added as a content.
 
 {% tabs %}
 
@@ -324,7 +324,7 @@ rangeSelector.Content = chart;
 
 ## Formatting labels
 
-You can add prefix or suffix to the labels using the [`NumberFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_NumberFormat) or [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DateFormat) properties.
+You can add prefix or suffix to the labels using the [`NumberFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_NumberFormat) or [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.DateTimeRangeSliderBase.html#Syncfusion_Maui_Sliders_DateTimeRangeSliderBase_DateFormat) properties.
 
 {% tabs %}
 
