@@ -13,7 +13,7 @@ documentation: ug
 
 ### Displaying input value
 
-The provided input value of the barcode can be displayed by enabling the `ShowText` property. By default, the `ShowText` is false.
+The provided input value of the barcode can be displayed by enabling the [`ShowText`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.SfBarcodeGenerator.html#Syncfusion_Maui_Barcode_SfBarcodeGenerator_ShowText) property. By default, the [`ShowText`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.SfBarcodeGenerator.html#Syncfusion_Maui_Barcode_SfBarcodeGenerator_ShowText) is false.
 
 {% tabs %}
 
@@ -43,7 +43,7 @@ The provided input value of the barcode can be displayed by enabling the `ShowTe
 
 ### Text style customization
 
-The style of the text can be customized using the `TextStyle` property of the barcode generator.
+The style of the text can be customized using the [`TextStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.SfBarcodeGenerator.html#Syncfusion_Maui_Barcode_SfBarcodeGenerator_TextStyle) property of the barcode generator.
 
 {% tabs %}
 
@@ -88,7 +88,7 @@ The style of the text can be customized using the `TextStyle` property of the ba
 
 ### Text spacing
 
-The space between the text and the barcode can be controlled by using the `TextSpacing` property of the barcode generator. By default, the value of `TextSpacing` is 2.
+The space between the text and the barcode can be controlled by using the [`TextSpacing`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.SfBarcodeGenerator.html#Syncfusion_Maui_Barcode_SfBarcodeGenerator_TextSpacing) property of the barcode generator. By default, the value of [`TextSpacing`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.SfBarcodeGenerator.html#Syncfusion_Maui_Barcode_SfBarcodeGenerator_TextSpacing) is 2.
 
 {% tabs %}
 
@@ -121,7 +121,7 @@ The space between the text and the barcode can be controlled by using the `TextS
 
 ### Horizontal text alignment
 
-The horizontal alignment of the text can be controlled by using the `TextAlignment` property of the barcode generator. The displayed value can be positioned at `Start`, `Center`, or `End` of the control. The default value of `TextAlignment` property is center.
+The horizontal alignment of the text can be controlled by using the [`TextAlignment`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.SfBarcodeGenerator.html#Syncfusion_Maui_Barcode_SfBarcodeGenerator_TextAlignment) property of the barcode generator. The displayed value can be positioned at `Start`, `Center`, or `End` of the control. The default value of [`TextAlignment`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.SfBarcodeGenerator.html#Syncfusion_Maui_Barcode_SfBarcodeGenerator_TextAlignment) property is center.
 
 {% tabs %}
 
@@ -155,11 +155,11 @@ The horizontal alignment of the text can be controlled by using the `TextAlignme
 
 ### Bar width customization
 
-Both the one-dimensional and the two-dimensional symbology support the `Module` property. This property is used to define the size of the smallest line or dot of the barcode.
+Both the one-dimensional and the two-dimensional symbology support the [`Module`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.SymbologyBase.html#Syncfusion_Maui_Barcode_SymbologyBase_Module) property. This property is used to define the size of the smallest line or dot of the barcode.
 
 If this property is not set for one-dimensional barcode, the size of the smallest bar line is determined based on the width available.
 
-The following code sample shows the one-dimensional barcode with the `Module` property,
+The following code sample shows the one-dimensional barcode with the [`Module`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.SymbologyBase.html#Syncfusion_Maui_Barcode_SymbologyBase_Module) property,
 
 {% tabs %}
 
@@ -196,7 +196,7 @@ The following code sample shows the one-dimensional barcode with the `Module` pr
 
 N> In the image above, the smallest bar line width is 1 logical pixel.
 
-The following code sample shows the one-dimensional barcode without the `Module` property.
+The following code sample shows the one-dimensional barcode without the [`Module`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.SymbologyBase.html#Syncfusion_Maui_Barcode_SymbologyBase_Module) property.
 
 {% tabs %}
 
@@ -233,9 +233,9 @@ The following code sample shows the one-dimensional barcode without the `Module`
 
 N> In the image above, the smallest bar line width is calculated on the basis of the available width as a result of the total computed inputs(0’s and 1’s) divided by the available width.
 
-If the `Module` property is not set for two-dimensional barcode, the size of smallest dot is calculated based on the minimum of available width or height.
+If the [`Module`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.SymbologyBase.html#Syncfusion_Maui_Barcode_SymbologyBase_Module) property is not set for two-dimensional barcode, the size of smallest dot is calculated based on the minimum of available width or height.
 
-The following code sample shows the two-dimensional barcode with the `Module` property,
+The following code sample shows the two-dimensional barcode with the [`Module`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.SymbologyBase.html#Syncfusion_Maui_Barcode_SymbologyBase_Module) property,
 
 {% tabs %}
 
@@ -268,7 +268,7 @@ The following code sample shows the two-dimensional barcode with the `Module` pr
 
 ![.NET MAUI Barcode Generator QR Code Width Customization](images/customization/maui-qrcode-width-customization.png)
 
-The following code sample shows the two-dimensional barcode without the `Module` property,
+The following code sample shows the two-dimensional barcode without the [`Module`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.SymbologyBase.html#Syncfusion_Maui_Barcode_SymbologyBase_Module) property,
 
 {% tabs %}
 
@@ -303,7 +303,7 @@ The following code sample shows the two-dimensional barcode without the `Module`
 
 ### Bar color customization
 
-The bar color of the barcode can be customized by using the `ForegroundColor` property as shown in the following code sample.
+The bar color of the barcode can be customized by using the [`ForegroundColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.SfBarcodeGenerator.html#Syncfusion_Maui_Barcode_SfBarcodeGenerator_ForegroundColor) property as shown in the following code sample.
 
 {% tabs %}
 
