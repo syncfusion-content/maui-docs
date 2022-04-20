@@ -99,7 +99,7 @@ To migrate easier from [Xamarin SfRangeSlider](https://www.syncfusion.com/xamari
 <td>{{'[SliderTickStyle.InactiveFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_InactiveFill)'| markdownify }}</td>
 <td>Gets or sets the brush for the inactive ticks in the SfSlider.</td></tr>
 <tr>
-<td>{{'[SliderTickStyle.InactiveFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_ActiveFill)'| markdownify }}</td>
+<td>{{'[SliderTickStyle.ActiveFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_ActiveFill)'| markdownify }}</td>
 <td>Gets or sets the brush for the active ticks in the SfSlider.</td></tr>
 </table> 
 

@@ -11,7 +11,7 @@ documentation: ug
 
 To migrate easier from [Xamarin SfRangeSlider](https://www.syncfusion.com/xamarin-ui-controls/xamarin-range-slider) to [.NET MAUI SfRangeSlider](https://www.syncfusion.com/maui-controls/maui-range-slider), we kept most of the APIs from Xamarin SfRangeSlider in MAUI SfRangeSlider. However, to maintain the consistency of API naming in MAUI SfRangeSlider, we renamed some of the APIs. The APIs that have been changed in MAUI SfRangeSlider from Xamarin SfRangeSlider are detailed as follows.
 
-In our .NET MAUI SfRangeSlider, we don’t have an API name [ShowRange](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_AllowDragRange), by default we will show two thumbs. If you wish to use the single thumb, check the [Migration from Xamarin.Forms SfRangeSlider to .NET MAUI SfRangeSlider](https://help.syncfusion.com/maui/slider/migration).
+In our .NET MAUI SfRangeSlider, we don’t have an API name [ShowRange](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_AllowDragRange), by default we will show two thumbs. If you wish to use the single thumb, check the [Migration from Xamarin.Forms SfRangeSlider to .NET MAUI SfSlider](https://help.syncfusion.com/maui/slider/migration).
 
 ## Assembly Name 
 
@@ -101,7 +101,7 @@ In our .NET MAUI SfRangeSlider, we don’t have an API name [ShowRange](https://
 <td>{{'[SliderTickStyle.InactiveFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_InactiveFill)'| markdownify }}</td>
 <td>Gets or sets the brush for the inactive ticks in the SfSlider.</td></tr>
 <tr>
-<td>{{'[SliderTickStyle.InactiveFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_ActiveFill)'| markdownify }}</td>
+<td>{{'[SliderTickStyle.ActiveFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_ActiveFill)'| markdownify }}</td>
 <td>Gets or sets the brush for the active ticks in the SfSlider.</td></tr>
 </table> 
 
