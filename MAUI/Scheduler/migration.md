@@ -100,7 +100,7 @@ To migrate easier from [Xamarin SfSchedule](https://www.syncfusion.com/xamarin-u
 <tr>
 <td>{{'[MaxDisplayDate](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_MaxDisplayDate)' | markdownify }}</td>
 <td>{{'[MaximumDateTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_MaximumDateTime)'| markdownify }}</td>
-<td>Gets or sets the maximun display date to restrict the visible dates in the SfScheduler.</td></tr>
+<td>Gets or sets the maximum display date to restrict the visible dates in the SfScheduler.</td></tr>
 
 <tr>
 <td>{{'[MinDisplayDate](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_MinDisplayDate)' | markdownify }}</td>
@@ -277,7 +277,7 @@ To migrate easier from [Xamarin SfSchedule](https://www.syncfusion.com/xamarin-u
 
 <td>{{'[HeaderStyle](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.HeaderStyle.html)'| markdownify }}</td>
 <td>{{'[SchedulerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderView.html)'| markdownify }}</td>
-<td> Represents a class which is used to customize all the properties of header settings of the sfscheduler.</td></tr> 
+<td> Represents a class which is used to customize all the properties of header settings of the SfScheduler.</td></tr> 
 <tr> 
 
 <td>{{'[MonthViewCellStyle](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.MonthViewCellStyle.html)'| markdownify }}</td>
@@ -292,7 +292,7 @@ To migrate easier from [Xamarin SfSchedule](https://www.syncfusion.com/xamarin-u
 
 <td>{{'[NonAccessibleBlock](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.NonAccessibleBlock.html)'| markdownify }}</td>
 <td>{{'[SchedulerTimeRegion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeRegion.html)'| markdownify }}</td>
-<td>Defines the timeregion in the scheduler.</td></tr>
+<td>Defines the time region in the scheduler.</td></tr>
 
 <tr>
 <td>{{'[RecurrenceProperties](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.RecurrenceProperties.html)'| markdownify }}</td>
@@ -327,7 +327,7 @@ To migrate easier from [Xamarin SfSchedule](https://www.syncfusion.com/xamarin-u
 <tr>
 <td>{{'[ViewHeaderStyle](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ViewHeaderStyle.html)'| markdownify }}</td>
 <td>{{'[ViewHeaderSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViewHeaderSettings.html)'| markdownify }}</td>
-<td>Represents a class which is used to customize all the properties of view header in the sfscheduler.</td></tr>
+<td>Represents a class which is used to customize all the properties of view header in the SfScheduler.</td></tr>
 
 <tr>
 <td>{{'[ViewHeaderTappedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ViewHeaderTappedEventArgs.html)'| markdownify }}</td>
