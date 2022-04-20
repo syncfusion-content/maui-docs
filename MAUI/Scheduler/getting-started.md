@@ -22,7 +22,7 @@ This section explains how to populate the appointments to the Scheduler as well 
 4. Initialize `SfScheduler.`
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4 6" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 5" %}
 
 <ContentPage   
     . . .
@@ -32,7 +32,7 @@ This section explains how to populate the appointments to the Scheduler as well 
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2 10 11" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 10" %}
 
 using Syncfusion.Maui.Scheduler;
 . . .
@@ -55,7 +55,7 @@ public partial class MainPage : ContentPage
 The `Syncfusion.Maui.Core` nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
 
 {% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="2 11" %}
+{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
 
 using Syncfusion.Maui.Core.Hosting;
 namespace GettingStarted
@@ -116,7 +116,7 @@ The [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.S
 <scheduler:SfScheduler x:Name="Scheduler" />
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="15" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="14" %}
 
 // Creating an instance for the scheduler appointment collection.
 var appointment = new ObservableCollection<SchedulerAppointment>();
@@ -338,7 +338,7 @@ public class SchedulerViewModel
 Map those properties of the `Meeting` class with our [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) control by using the [AppointmentMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html) property.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 5 6 7 8 9 10 11 12 13 14 15 16 17 18" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2 4 5 6 7 8 9 10 11 12 13 14 15 16 17" %}
 
 <scheduler:SfScheduler x:Name="Scheduler" 
                        AppointmentsSource="{Binding Events}"
@@ -360,7 +360,7 @@ Map those properties of the `Meeting` class with our [.NET MAUI Scheduler](https
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2 4 16" %} 
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 3 15" %} 
 
 using Syncfusion.Maui.Scheduler;
 
@@ -386,7 +386,7 @@ this.Scheduler.AppointmentMapping = appointmentMapping;
 Create meetings of type `ObservableCollection<Meeting>` and assign those appointments collection to the [AppointmentsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentsSource) property of [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 5" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2 4" %}
 
 <schedule:SfScheduler x:Name="Scheduler"
                       AppointmentsSource="{Binding Events}">
@@ -396,7 +396,7 @@ Create meetings of type `ObservableCollection<Meeting>` and assign those appoint
 </schedule:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
 
 var viewModel = new SchedulerDataBindingViewModel();
 this.Scheduler.AppointmentsSource = viewModel.Events;
@@ -551,7 +551,7 @@ The Week number text style of the Scheduler can be customized by using the [Week
 <scheduler:SfScheduler x:Name="Scheduler" ShowWeekNumber="True"/>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2 15" %}  
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 14" %}  
 
 this.Scheduler.ShowWeekNumber = true;
 var schedulerTextStyle = new SchedulerTextStyle()

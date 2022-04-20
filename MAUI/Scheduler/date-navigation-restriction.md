@@ -26,7 +26,7 @@ The [DisplayDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.
 {% include_relative code-snippet/weekview.xaml %}
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
 
 this.Scheduler.DisplayDate = DateTime.Today.AddMonths(-1).AddHours(9);
 
@@ -46,7 +46,7 @@ You can programmatically select the dates in scheduler by using the [SelectedDat
 {% include_relative code-snippet/weekview.xaml %}
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
 
 this.Scheduler.SelectedDate = DateTime.Today.AddHours(9);
 
@@ -78,7 +78,7 @@ The [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2 6" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 5" %}
 
 this.button.Clicked += OnButtonClicked;
 
@@ -109,7 +109,7 @@ The [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2 6" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 5" %}
 
 this.button.Clicked += OnButtonClicked;
 
@@ -126,14 +126,14 @@ private void OnButtonClicked(object sender, EventArgs e)
 By using the [AllowViewNavigation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AllowViewNavigation) property of the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html), you can quickly navigate to the respective day or timeline day view by tapping on the month cell or view header of the following scheduler views: week, work week, month, agenda, timeline week, timeline work week, and timeline month views.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3"%}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2"%}
 
  <scheduler:SfScheduler x:Name="Scheduler" 
                         AllowViewNavigation="True">
  </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
 
 this.Scheduler.AllowViewNavigation = true;
 
@@ -154,14 +154,14 @@ There will be more icons available for all platforms as this UI will be responsi
 The default value of [AllowedViews](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AllowedViews) property is [SchedulerViews.Default](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViews.html#Syncfusion_Maui_Scheduler_SchedulerViews_Default).
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
 <scheduler:SfScheduler x:Name="Scheduler" 
                        AllowedViews="Day,Week,WorkWeek,Month,TimelineDay,TimelineWeek,TimelineWorkWeek,TimelineMonth" >
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
 
 this.Scheduler.AllowedViews = SchedulerViews.Day | SchedulerViews.Week | SchedulerViews.WorkWeek | SchedulerViews.Month | SchedulerViews.TimelineDay | SchedulerViews.TimelineWeek | SchedulerViews.TimelineWorkWeek | SchedulerViews.TimelineMonth;
 
@@ -182,7 +182,7 @@ The minimum date time will restrict backward navigation of date selections as we
 {% include_relative code-snippet/weekview.xaml %}
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
 
 this.Scheduler.MinimumDateTime = DateTime.Today.AddMonths(-3).AddHours(9);
 
@@ -199,7 +199,7 @@ The maximum date time will restrict forward navigation of date selections as wel
 {% include_relative code-snippet/weekview.xaml %}
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
 
 this.Scheduler.MaximumDateTime = DateTime.Today.AddMonths(3).AddHours(12);
 
@@ -241,7 +241,7 @@ You can customize the background color and text style for the minimum date time,
 {% include_relative code-snippet/weekview.xaml %}
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="8 9" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="7 8" %}
 
 var disabledDateTextStyle = new SchedulerTextStyle()
 {

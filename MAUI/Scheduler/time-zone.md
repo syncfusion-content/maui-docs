@@ -860,7 +860,7 @@ Use the [StartTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Schedule
 <scheduler:SfScheduler x:Name="scheduler" />
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="8 9 12" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="7 8 11" %}
 
 var appointments = new ObservableCollection<SchedulerAppointment>();
 appointments.Add(new SchedulerAppointment()
@@ -893,14 +893,14 @@ Display the appointments based on the client’s local time zone in scheduler. F
 Set the specific time zone to schedule using the [TimeZone](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_TimeZone) property of scheduler. On this scenario, the appointments will be displayed in UTC time when the `StartTimeZone` and `EndTimeZone` properties of `SchedulerAppointment` are set to null. The appointments will be displayed in UTC time based on the given scheduler time zone.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
 <scheduler:SfScheduler x:Name="scheduler" 
                        TimeZone="{Binding SchedulerTimeZoneInfo}">
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle="SchedulerViewModel.cs" hl_lines="6"%}
+{% highlight c# tabtitle="SchedulerViewModel.cs" hl_lines="5"%}
 
 public class SchedulerViewModel
 {
@@ -913,7 +913,7 @@ public class SchedulerViewModel
 }
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
 
 this.scheduler.TimeZone = TimeZoneInfo.FindSystemTimeZoneById("Australia/Brisbane");
 
