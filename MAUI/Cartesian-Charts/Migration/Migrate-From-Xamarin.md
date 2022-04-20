@@ -326,25 +326,12 @@ namespace ChartGettingStarted
 
 {% endhighlight %} 
 
-The following table illustrates the API comparison for chart,
+The following table illustrates the alter API comparison for chart,
 
 <table>
 <tr>
 <th>Xamarin</th>
 <th>MAUI</th>
-</tr>
-<tr>
-<td>Title</td>
-<td>Title</td>
-</tr>
-<tr>
-<td>Legend</td>
-<td>Legend</td>
-</tr>
-
-<tr>
-<td>Series</td>
-<td>Series</td>
 </tr>
 <tr>
 <td>PrimaryAxis</td>
@@ -361,10 +348,6 @@ The following table illustrates the API comparison for chart,
 <tr>
 <td>-</td>
 <td>IsTransposed</td>
-</tr>
-<tr>
-<td>EnableTooltip</td>
-<td>EnableTooltip</td>
 </tr>
 <tr>
 <td>ColorModel</td>
@@ -387,6 +370,9 @@ Mostly the same code are used to initialize the chart series in both SfChart and
 </tr>
 <tr>
 <td>
+
+{% highlight xaml %}
+
 <chart:SfChart>
    <chart:SfChart.PrimaryAxis>
         <chart:CategoryAxis>
@@ -411,9 +397,14 @@ Mostly the same code are used to initialize the chart series in both SfChart and
 		 </chart:ColumnSeries>
    </chart:SfChart.Series>
  </chart:SfChart>
+
+{% endhighlight %} 
+
 </td>
 
 <td>
+{% highlight xaml %}
+
 <chart:SfCartesianChart>
    <chart:SfCartesianChart.XAxes>
         <chart:CategoryAxis>
@@ -438,24 +429,18 @@ Mostly the same code are used to initialize the chart series in both SfChart and
          </chart:ColumnSeries>
    </chart:SfCartesianChart.Series>
 </chart:SfCartesianChart>
+
+{% endhighlight %} 
 </td>
 </tr>
 </table>
 
-The following table illustrates the API comparison for series,
+The following table illustrates the alter API comparison for series,
 
 <table>
 <tr>
 <th>Xamarin</th>
 <th>MAUI</th>
-</tr>
-<tr>
-<td>ItemsSource</td>
-<td>ItemsSource</td>
-</tr>
-<tr>
-<td>XBindingPath</td>
-<td>XBindingPath</td>
 </tr>
 <tr>
 <td>Color</td>
@@ -466,44 +451,12 @@ The following table illustrates the API comparison for series,
 <td>PaletteBrushes</td>
 </tr>
 <tr>
-<td>IsVisible</td>
-<td>IsVisible</td>
-</tr>
-<tr>
-<td>Opacity</td>
-<td>Opacity</td>
-</tr>
-<tr>
-<td>EnableAnimation</td>
-<td>EnableAnimation</td>
-</tr>
-<tr>
-<td>EnableTooltip</td>
-<td>EnableTooltip</td>
-</tr>
-<tr>
-<td>TooltipTemplate</td>
-<td>TooltipTemplate</td>
-</tr>
-<tr>
 <td>SelectedDataPointColor</td>
 <td>SelectionBrush</td>
 </tr>
 <tr>
-<td>SelectedIndex</td>
-<td>SelectedIndex</td>
-</tr>
-<tr>
 <td>DataMarker</td>
 <td>ShowDataLabels, DataLabelSettings</td>
-</tr>
-<tr>
-<td>LegendIcon</td>
-<td>LegendIcon</td>
-</tr>
-<tr>
-<td>IsVisibleOnLegend</td>
-<td>IsVisibleOnLegend</td>
 </tr>
 <tr>
 <td>-</td>
@@ -525,6 +478,8 @@ The following table illustrates the API comparison for series,
 </tr>
 <tr>
 <td>
+{% highlight xaml %}
+
 <chart:SfChart>  
     <chart:SfChart.PrimaryAxis>
 	     <chart:NumericalAxis/>
@@ -534,8 +489,12 @@ The following table illustrates the API comparison for series,
 	     <chart:NumericalAxis/>
     </chart:SfChart.SecondaryAxis>
 </chart:SfChart>
+
+{% endhighlight %} 
 </td>
 <td>
+{% highlight xaml %}
+
 <chart:SfCartesianChart>                            
     <chart:SfCartesianChart.XAxes>
         <chart:NumericalAxis/>
@@ -545,11 +504,13 @@ The following table illustrates the API comparison for series,
         <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>                       
 </chart:SfCartesianChart>
+
+{% endhighlight %} 
 </td>
 </tr>
 </table>
 
-The following table illustrates the API comparison for `ChartAxis` class,
+The following table illustrates the alter API comparison for `ChartAxis` class,
 
 <table>
 <tr>
@@ -557,92 +518,12 @@ The following table illustrates the API comparison for `ChartAxis` class,
 <th>MAUI</th>
 </tr>
 <tr>
-<td>IsVisible</td>
-<td>IsVisible</td>
-</tr>
-<tr>
-<td>PlotOffsetStart</td>
-<td>PlotOffsetStart</td>
-</tr>
-<tr>
-<td>PlotOffsetEnd</td>
-<td>PlotOffsetEnd</td>
-</tr>
-<tr>
-<td>AxisLineOffset</td>
-<td>AxisLineOffset</td>
-</tr>
-<tr>
 <td>LabelRotationAngle</td>
 <td>LabelRotation</td>
 </tr>
 <tr>
-<td>LabelStyle</td>
-<td>LabelStyle</td>
-</tr>
-<tr>
-<td>AxisLineStyle</td>
-<td>AxisLineStyle</td>
-</tr>
-<tr>
-<td>CrossesAt</td>
-<td>CrossesAt</td>
-</tr>
-<tr>
-<td>RenderNextToCrossingValue</td>
-<td>RenderNextToCrossingValue</td>
-</tr>
-<tr>
 <td>-</td>
 <td>CrossAxisName</td>
-</tr>
-<tr>
-<td>Name</td>
-<td>Name</td>
-</tr>
-<tr>
-<td>Title</td>
-<td>Title</td>
-</tr>
-<tr>
-<td>IsInversed</td>
-<td>IsInversed</td>
-</tr>
-<tr>
-<td>EdgeLabelsDrawingMode</td>
-<td>EdgeLabelsDrawingMode</td>
-</tr>
-<tr>
-<td>MajorGridLineStyle</td>
-<td>MajorGridLineStyle</td>
-</tr>
-<tr>
-<td>MajorTickStyle</td>
-<td>MajorTickStyle</td>
-</tr>
-<tr>
-<td>ZoomPosition</td>
-<td>ZoomPosition</td>
-</tr>
-<tr>
-<td>ZoomFactor</td>
-<td>ZoomFactor</td>
-</tr>
-<tr>
-<td>ShowMajorGridLines</td>
-<td>ShowMajorGridLines</td>
-</tr>
-<tr>
-<td>EnableAutoIntervalOnZooming</td>
-<td>EnableAutoIntervalOnZooming</td>
-</tr>
-<tr>
-<td>LabelCreated</td>
-<td>LabelCreated</td>
-</tr>
-<tr>
-<td>ActualRangeChanged</td>
-<td>ActualRangeChanged</td>
 </tr>
 <tr>
 <td>LabelClicked</td>
@@ -714,20 +595,12 @@ The following table illustrates the API comparison for `ChartAxis` class,
 </tr>
 </table>
 
-The following table illustrates the API comparison for `CategoryAxis` class,
+The following table illustrates the alter API comparison for `CategoryAxis` class,
 
 <table>
 <tr>
 <th>Xamarin</th>
 <th>MAUI</th>
-</tr>
-<tr>
-<td>LabelPlacement</td>
-<td>LabelPlacement</td>
-</tr>
-<tr>
-<td>Interval</td>
-<td>Interval</td>
 </tr>
 <tr>
 <td>StripLines</td>
@@ -747,53 +620,17 @@ The following table illustrates the API comparison for `NumericalAxis` class,
 <th>MAUI</th>
 </tr>
 <tr>
-<td>Interval</td>
-<td>Interval</td>
-</tr>
-<tr>
-<td>Minimum</td>
-<td>Minimum</td>
-</tr>
-<tr>
-<td>Maximum</td>
-<td>Maximum</td>
-</tr>
-<tr>
-<td>RangePadding</td>
-<td>RangePadding</td>
-</tr>
-<tr>
 <td>StripLines</td>
 <td>-</td>
 </tr>
 </table>
 
-The following table illustrates the API comparison for `DateTimeAxis` class,
+The following table illustrates the alter API comparison for `DateTimeAxis` class,
 
 <table>
 <tr>
 <th>Xamarin</th>
 <th>MAUI</th>
-</tr>
-<tr>
-<td>Interval</td>
-<td>Interval</td>
-</tr>
-<tr>
-<td>IntervalType</td>
-<td>IntervalType</td>
-</tr>
-<tr>
-<td>Minimum</td>
-<td>Minimum</td>
-</tr>
-<tr>
-<td>Maximum</td>
-<td>Maximum</td>
-</tr>
-<tr>
-<td>RangePadding</td>
-<td>RangePadding</td>
 </tr>
 <tr>
 <td>StripLines</td>
@@ -816,18 +653,26 @@ The following code example shows how to enable legend in chart.
 </tr>
 <tr>
 <td>
+{% highlight xaml %}
+
 <chart:SfChart>
     <chart:SfChart.Legend>
 		<chart:ChartLegend/>
 	</chart:SfChart.Legend>
 </chart:SfChart>
+
+{% endhighlight %} 
 </td>
 <td>
+{% highlight xaml %}
+
 <chart:SfCartesianChart>
     <chart:SfCartesianChart.Legend>
 		<chart:ChartLegend/>
 	</chart:SfCartesianChart.Legend>
 </chart:SfCartesianChart>
+
+{% endhighlight %} 
 </td>
 </tr>
 </table>
@@ -938,6 +783,8 @@ The following table illustrates the API comparison between SfChart and SfCartesi
 </tr>
 <tr>
 <td>
+{% highlight xaml %}
+
 <chart:SfChart>  
      . . .
     <chart:ColumnSeries ItemsSource="{Binding Data}" 
@@ -948,8 +795,12 @@ The following table illustrates the API comparison between SfChart and SfCartesi
 	    </chart:ColumnSeries.DataMarker>
     </chart:ColumnSeries>
 </chart:SfChart>
+
+{% endhighlight %} 
 </td>
 <td>
+{% highlight xaml %}
+
 <chart:SfCartesianChart>
     . . .
     <chart:SfCartesianChart.Series>
@@ -960,6 +811,8 @@ The following table illustrates the API comparison between SfChart and SfCartesi
         </chart:ColumnSeries>
     </chart:SfCartesianChart.Series>
 </chart:SfCartesianChart>
+
+{% endhighlight %} 
 </td>
 </tr>
 </table>
@@ -975,6 +828,8 @@ The following table illustrates the API comparison between SfChart and SfCartesi
 </tr>
 <tr>
 <td>
+{% highlight xaml %}
+
 <chart:SfChart>
 . . . 
     <chart:SfChart.ChartBehaviors>
@@ -987,8 +842,13 @@ The following table illustrates the API comparison between SfChart and SfCartesi
                         YBindingPath="Year2010"
                         EnableTooltip="True"/>
 </chart:SfChart>
+
+{% endhighlight %} 
+
 </td>
 <td>
+{% highlight xaml %}
+
 <chart:SfCartesianChart>
 . . .
    <chart:SfCartesianChart.TooltipBehavior>
@@ -1001,6 +861,8 @@ The following table illustrates the API comparison between SfChart and SfCartesi
                        YBindingPath="Year2010"
                        EnableTooltip="True"/>
 </chart:SfCartesianChart>
+
+{% endhighlight %} 
 </td>
 </tr>
 </table>
@@ -1016,6 +878,8 @@ To Customize the tooltip appearance, create an instance of the `ChartTooltipBeha
 </tr>
 <tr>
 <td>
+{% highlight xaml %}
+
 <chart:SfChart>
 ...
 	<chart:SfChart.ChartBehaviors>
@@ -1029,8 +893,13 @@ To Customize the tooltip appearance, create an instance of the `ChartTooltipBeha
             XBindingPath="Demand" 
             YBindingPath="Year2010" />
 </chart:SfChart>
+
+{% endhighlight %} 
 </td>
 <td>
+
+{% highlight xaml %}
+
 <chart:SfCartesianChart>
 . . .
     <chart:SfCartesianChart.SelectionBehavior>
@@ -1043,6 +912,8 @@ To Customize the tooltip appearance, create an instance of the `ChartTooltipBeha
             XBindingPath="Demand" 
             YBindingPath="Year2010" />
 </chart:SfCartesianChart>
+
+{% endhighlight %} 
 </td>
 </tr>
 </table>
@@ -1059,18 +930,26 @@ Create an instance of the `ChartSelectionBehavior` class and add it to the  `Cha
 </tr>
 <tr>
 <td>
+{% highlight xaml %}
+
 <chart:SfChart>
 	<chart:SfChart.ChartBehaviors>
 		<chart:ChartZoomPanBehavior EnableZooming="True"/>
 	</chart:SfChart.ChartBehaviors>
 </chart:SfChart>
+
+{% endhighlight %} 
 </td>
 <td>
+{% highlight xaml %}
+
 <chart:SfCartesianChart>
     <chart:SfCartesianChart.ZoomPanBehavior>
         <chart:ChartZoomPanBehavior EnablePinchZooming="True"/>
     </chart:SfCartesianChart.ZoomPanBehavior>
 </chart:SfCartesianChart>
+
+{% endhighlight %} 
 </td>
 </tr>
 </table>
