@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrating from Xamarin SfEffectsView to .NET MAUI SfEffectsView 
 
-To migrate easier from Xamarin SfEffectsView to .NET MAUI SfEffectsView, we have kept the most of APIs same from Xamarin SfEffectsView in MAUI SfEffectsView. But, we have renamed the some of the APIs to maintain the consistency of API naming in MAUI SfEffectsView. You can get the details of the APIs which are changed in MAUI SfEffectsView from Xamarin SfEffectsView in below,
+To migrate easier from Xamarin SfEffectsView to .NET MAUI SfEffectsView, we kept most of the APIs from Xamarin SfEffectsView in MAUI SfEffectsView. However, to maintain the consistency of API naming in MAUI SfEffectsView, we renamed some of the APIs. The APIs that have been changed in MAUI SfEffectsView from Xamarin SfEffectsView are detailed as follows.
 
 ##Assembly Name 
 
