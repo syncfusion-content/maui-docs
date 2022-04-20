@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrating from Xamarin SfBadgeView to .NET MAUI SfBadgeView 
 
-To migrate easier from Xamarin SfBadgeView to .NET MAUI SfBadgeView, we have kept the most of APIs same from Xamarin SfBadgeView in MAUI SfBadgeView. But, we have renamed the some of the APIs to maintain the consistency of API naming in MAUI SfBadgeView. You can get the details of the APIs which are changed in MAUI SfBadgeView from Xamarin SfBadgeView in below,
+To migrate easier from Xamarin SfBadgeView to .NET MAUI SfBadgeView, we kept most of the APIs from Xamarin SfBadgeView in MAUI SfBadgeView. However, to maintain the consistency of API naming in MAUI SfBadgeView, we renamed some of the APIs. The APIs that have been changed in MAUI SfBadgeView from Xamarin SfBadgeView are detailed as follows.
 
 ##Assembly Name 
 
