@@ -545,7 +545,7 @@ The ContentPointer in SfRadialGauge allows to use any .NET MAUI content as point
 </tr>
 </table>
 
-The below code example, explains how to initialize content pointer .Net MAUI SfRadialGauge. Content pointer feature is not applicable in Xamarin SfCircularGauge.
+The below code example, explains how to initialize content pointer .NET MAUI SfRadialGauge. Content pointer feature is not applicable in Xamarin SfCircularGauge.
 
 {% tabs %}
 
