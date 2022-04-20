@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Missing Features .NET MAUI Chart control from Xamarin| Syncfusion
-description: This section explains about the list of missing features in the .NET MAUI Chart (SfCartesianChart) control from Xamarin.
+title: Unsupported Features .NET MAUI Chart control from Xamarin| Syncfusion
+description: This section explains about the list of unsupported features in the .NET MAUI Chart (SfCartesianChart) control from Xamarin.
 platform: maui
 control: SfCartesianChart
 documentation: ug
 ---
 
-# Missing Features from Xamarin.Forms
+# Unsupported Features from Xamarin.Forms
 
 * Data marker support for chart series.
 * Data label created event support was not provided in series, instead of that event you can use the `DrawDataLabel` override method in `ChartSeries` class.
