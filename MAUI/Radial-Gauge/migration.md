@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migrate from Xamarin SfCircularGauge to .NET MAUI SfRadialGauge | Syncfusion 
+title: Migrate from Xamarin to .NET MAUI Radial Gauge | Syncfusion 
 description: Learn here all about Migrating from Syncfusion Xamarin SfCircularGauge to Syncfusion .NET MAUI SfRadialGauge control and more.
 platform: MAUI
 control: SfRadialGauge
@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrate from Xamarin.Forms SfCircularGauge to .NET MAUI SfRadialGauge
 
-To migrate easier from [Xamarin SfCircularGauge](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.SfCircularGauge.html) to [.NET MAUI SfRadialGauge](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfRadialGauge.html), we kept most of the APIs from Xamarin SfCircularGauge in MAUI SfRadialGauge. However, to maintain the consistency of API naming in .Net MAUI SfRadialGauge, we renamed some of the APIs. The APIs that have been changed in MAUI SfRadialGauge from Xamarin SfCircularGauge are detailed as follows.
+To migrate easier from [Xamarin SfCircularGauge](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.SfCircularGauge.html) to [.NET MAUI SfRadialGauge](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfRadialGauge.html), we kept most of the APIs from Xamarin SfCircularGauge in MAUI SfRadialGauge. However, to maintain the consistency of API naming in .NET MAUI SfRadialGauge, we renamed some of the APIs. The APIs that have been changed in MAUI SfRadialGauge from Xamarin SfCircularGauge are detailed as follows.
 
 ## Adding Reference
 
@@ -166,7 +166,7 @@ this.Content = sfRadialGauge;
 </tr>
 </table>
 
-The below code example, explains how to intialize axis in Xamarin SfCircularGauge and .Net MAUI SfRadialGauge.
+The below code example, explains how to initialize axis in Xamarin SfCircularGauge and .NET MAUI SfRadialGauge.
 
 <table>
 <tr>
@@ -275,7 +275,7 @@ this.Content = sfRadialGauge;
 </tr>
 </table>
 
-The below code example, explains how to intialize range in Xamarin SfCircularGauge and .Net MAUI SfRadialGauge.
+The below code example, explains how to initialize range in Xamarin SfCircularGauge and .NET MAUI SfRadialGauge.
 
 <table>
 <tr>
@@ -376,7 +376,7 @@ this.Content = sfRadialGauge;
 
 ## Pointers
 
-In Xamarin SfCircularGauge and .Net MAUI SfRadialGauge, pointers can be classified as mentioned in below table.
+In Xamarin SfCircularGauge and .NET MAUI SfRadialGauge, pointers can be classified as mentioned in below table.
 
 <table>
 <tr>
@@ -400,7 +400,7 @@ In Xamarin SfCircularGauge and .Net MAUI SfRadialGauge, pointers can be classifi
 </tr>
 </table>
 
-N> In .Net MAUI SfRadialGauge [MarkerPointer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.MarkerPointer.html) have been divided into two types. They are [ShapePointer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.ShapePointer.html) and [ContentPointer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.ContentPointer.html).
+N> In .NET MAUI SfRadialGauge [MarkerPointer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.MarkerPointer.html) have been divided into two types. They are [ShapePointer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.ShapePointer.html) and [ContentPointer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.ContentPointer.html).
 
 ### Marker pointer
 
@@ -431,7 +431,7 @@ N> In .Net MAUI SfRadialGauge [MarkerPointer](https://help.syncfusion.com/cr/mau
 </tr>
 </table>
 
-The below code example, explains how to intialize marker pointer in Xamarin SfCircularGauge and .Net MAUI SfRadialGauge.
+The below code example, explains how to initialize marker pointer in Xamarin SfCircularGauge and .NET MAUI SfRadialGauge.
 
 <table>
 <tr>
@@ -545,7 +545,7 @@ The ContentPointer in SfRadialGauge allows to use any .NET MAUI content as point
 </tr>
 </table>
 
-The below code example, explains how to intialize content pointer .Net MAUI SfRadialGauge. Content pointer feature is not applicable in Xamarin SfCircularGauge.
+The below code example, explains how to initialize content pointer .Net MAUI SfRadialGauge. Content pointer feature is not applicable in Xamarin SfCircularGauge.
 
 {% tabs %}
 
@@ -665,7 +665,7 @@ this.Content = sfRadialGauge;
 </tr>
 </table>
 
-The below code example, explains how to intialize needle pointer in Xamarin SfCircularGauge and .Net MAUI SfRadialGauge.
+The below code example, explains how to initialize needle pointer in Xamarin SfCircularGauge and .NET MAUI SfRadialGauge.
 
 <table>
 <tr>
@@ -784,7 +784,7 @@ this.Content = sfRadialGauge;
 </tr>
 </table>
 
-The below code example, explains how to intialize range pointer in Xamarin SfCircularGauge and .Net MAUI SfRadialGauge.
+The below code example, explains how to initialize range pointer in Xamarin SfCircularGauge and .NET MAUI SfRadialGauge.
 
 <table>
 <tr>
@@ -901,7 +901,7 @@ this.Content = sfRadialGauge;
 </tr>
 </table>
 
-The below code example, explains how to intialize range pointer in Xamarin SfCircularGauge and .Net MAUI SfRadialGauge.
+The below code example, explains how to initialize range pointer in Xamarin SfCircularGauge and .NET MAUI SfRadialGauge.
 
 <table>
 <tr>
