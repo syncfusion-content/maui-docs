@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migrate from Xamarin SfBarcode to .NET MAUI SfBarcodeGenerator | Syncfusion 
+title: Migrate from Xamarin to .NET MAUI Barcode Generator | Syncfusion
 description: Learn here all about Migrating from Syncfusion Xamarin SfBarcode to Syncfusion .NET MAUI SfBarcodeGenerator control and more.
 platform: MAUI
 control: SfBarcodeGenerator
@@ -85,7 +85,7 @@ SfBarcodeGenerator barcode = new SfBarcodeGenerator();
 </td></tr>
 </table>
 
-## Intialize Symbology
+## Initialize Symbology
 
 <table>
 <tr>
@@ -130,7 +130,7 @@ SfBarcodeGenerator barcode = new SfBarcodeGenerator();
 <td>It is used to configure the DataMatrix barcode.</td></tr>
 </table>
 
-The below code example, explains how to intialize symbology and customize symbology settings in Xamarin SfBarcode and .Net MAUI SfBarcodeGenerator.
+The below code example, explains how to initialize symbology and customize symbology settings in Xamarin SfBarcode and .NET MAUI SfBarcodeGenerator.
 
 <table>
 <tr>
@@ -251,9 +251,9 @@ this.Content = barcode;
 
 ## Barcode customization
 
-The below code example explains how to customize barcode and text in Xamarin SfBarcode and .Net MAUI SfBarcodeGenerator.
+The below code example explains how to customize barcode and text in Xamarin SfBarcode and .NET MAUI SfBarcodeGenerator.
 
-In .Net MAUI SfBarcodeGenerator text customization is achieved by the text style property of barcode generator as like below.
+In .NET MAUI SfBarcodeGenerator text customization is achieved by the text style property of barcode generator as like below.
 
 <table>
 <tr>
