@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrating from Xamarin SfTabView to .NET MAUI SfTabView 
 
-To migrate easier from Xamarin SfTabView to .NET MAUI SfTabView, we have kept the most of APIs same from Xamarin SfTabView in MAUI SfTabView. But, we have renamed the some of the APIs to maintain the consistency of API naming in MAUI SfListView. You can get the details of the APIs which are changed in MAUI SfTabView from Xamarin SfTabView in below,
+To migrate easier from Xamarin SfTabView to .NET MAUI SfTabView, we kept most of the APIs from Xamarin SfTabView in MAUI SfTabView. However, to maintain the consistency of API naming in MAUI SfTabView, we renamed some of the APIs. The APIs that have been changed in MAUI SfTabView from Xamarin SfTabView are detailed as follows.
 
 ##Assembly Name 
 
