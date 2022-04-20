@@ -1,22 +1,24 @@
 ---
 layout: post
-title: Migrate from Xamarin SfRangeSlider to .NET MAUI SfSlider | Syncfusion 
-description: Learn here all about Migrating from Syncfusion Xamarin RangeSlider to Syncfusion .NET MAUI Slider control and more.
+title: Migrate from Xamarin SfRangeSlider to .NET MAUI SfRangeSlider | Syncfusion 
+description: Learn here all about Migrating from Syncfusion Xamarin RangeSlider to Syncfusion .NET MAUI RangeSlider control and more.
 platform: MAUI
-control: SfSlider
+control: SfRangeSlider
 documentation: ug
 ---  
 
-# Migrate from Xamarin.Forms SfRangeSlider to .NET MAUI SfSlider 
+# Migrate from Xamarin.Forms SfRangeSlider to .NET MAUI SfRangeSlider 
 
-To migrate easier from [Xamarin SfRangeSlider](https://www.syncfusion.com/xamarin-ui-controls/xamarin-range-slider) to [.NET MAUI SfSlider](https://www.syncfusion.com/maui-controls/maui-slider), we kept most of the APIs from Xamarin SfRangeSlider in MAUI SfSlider. However, to maintain the consistency of API naming in MAUI SfSlider, we renamed some of the APIs. The APIs that have been changed in MAUI SfSlider from Xamarin SfRangeSlider are detailed as follows.
+To migrate easier from [Xamarin SfRangeSlider](https://www.syncfusion.com/xamarin-ui-controls/xamarin-range-slider) to [.NET MAUI SfRangeSlider](https://www.syncfusion.com/maui-controls/maui-range-slider), we kept most of the APIs from Xamarin SfRangeSlider in MAUI SfRangeSlider. However, to maintain the consistency of API naming in MAUI SfRangeSlider, we renamed some of the APIs. The APIs that have been changed in MAUI SfRangeSlider from Xamarin SfRangeSlider are detailed as follows.
+
+In our .NET MAUI SfRangeSlider, we don’t have an API name [ShowRange](Pastethehttplinkhere), by default we will show two thumbs. If you wish to use the single thumb, check the [migration link from Xamarin SfRangeSlider to .NET MAUI SfSlider](https://help.syncfusion.com/maui/slider/migration).
 
 ## Assembly Name 
 
 <table>
 <tr>
 <th>Xamarin SfRangeSlider</th>
-<th>.NET MAUI SfSlider</th></tr>
+<th>.NET MAUI SfRangeSlider</th></tr>
 <tr>
 <td>Syncfusion.SfRangeSlider.XForms</td>
 <td>Syncfusion.Maui.Sliders</td></tr>
@@ -27,7 +29,7 @@ To migrate easier from [Xamarin SfRangeSlider](https://www.syncfusion.com/xamari
 <table>
 <tr>
 <th>Xamarin SfRangeSlider</th>
-<th>.NET MAUI SfSlider</th></tr>
+<th>.NET MAUI SfRangeSlider</th></tr>
 <tr>
 <td>Syncfusion.ListView.XForms</td>
 <td>Syncfusion.Maui.Sliders</td></tr>
@@ -40,24 +42,24 @@ To migrate easier from [Xamarin SfRangeSlider](https://www.syncfusion.com/xamari
 <table> 
 <tr>
 <th>Xamarin SfRangeSlider</th>
-<th>.NET MAUI SfSlider</th>
+<th>.NET MAUI SfRangeSlider</th>
 <th>Description</th></tr>
 <tr>
 <td>{{'[TrackColor](Pastethehttplinkhere)'| markdownify }}</td>
 <td>{{'[SliderTrackStyle.InactiveFill](Pastethehttplinkhere)'| markdownify }}</td>
-<td>Gets or sets the brush for the inactive track in the SfSlider.</td></tr>
+<td>Gets or sets the brush for the inactive track in the SfRangeSlider.</td></tr>
 <tr>
 <td>{{'[TrackSelectionColor](Pastethehttplinkhere)'| markdownify }}</td>
 <td>{{'[SliderTrackStyle.ActiveFill](Pastethehttplinkhere)'| markdownify }}</td>
-<td>Gets or sets the brush for the active track in the SfSlider.</td></tr>
+<td>Gets or sets the brush for the active track in the SfRangeSlider.</td></tr>
 <tr>
 <td>{{'[TrackThickness](Pastethehttplinkhere)'| markdownify }}</td>
 <td>{{'[SliderTrackStyle.InactiveSize](Pastethehttplinkhere)'| markdownify }}</td>
-<td>Gets or sets the size for the inactive track in the SfSlider.</td></tr>
+<td>Gets or sets the size for the inactive track in the SfRangeSlider.</td></tr>
 <tr>
 <td>{{'[TrackSelectionThickness](Pastethehttplinkhere)'| markdownify }}</td>
 <td>{{'[SliderTrackStyle.ActiveSize](Pastethehttplinkhere)'| markdownify }}</td>
-<td>Gets or sets the size for the active track in the SfSlider.</td></tr>
+<td>Gets or sets the size for the active track in the SfRangeSlider.</td></tr>
 </table> 
 
 ### Thumb
@@ -65,106 +67,133 @@ To migrate easier from [Xamarin SfRangeSlider](https://www.syncfusion.com/xamari
 <table> 
 <tr>
 <th>Xamarin SfRangeSlider</th>
-<th>.NET MAUI SfSlider</th>
+<th>.NET MAUI SfRangeSlider</th>
 <th>Description</th></tr>
 <tr>
 <td>{{'[ThumbSize](Pastethehttplinkhere)'| markdownify }}</td>
-<td>{{'[SliderTrackStyle.InactiveFill](Pastethehttplinkhere)'| markdownify }}</td>
-<td>Gets or sets the brush for the inactive track in the SfSlider.</td></tr>
+<td>{{'[SliderThumbStyle.Radius](Pastethehttplinkhere)'| markdownify }}</td>
+<td>Gets or sets the radius for the thumb in the SfRangeSlider.</td></tr>
 <tr>
-<td>{{'[TrackSelectionColor](Pastethehttplinkhere)'| markdownify }}</td>
-<td>{{'[SliderTrackStyle.ActiveFill](Pastethehttplinkhere)'| markdownify }}</td>
-<td>Gets or sets the brush for the active track in the SfSlider.</td></tr>
+<td>{{'[KnobColor](Pastethehttplinkhere)'| markdownify }}</td>
+<td>{{'[SliderThumbStyle.Fill](Pastethehttplinkhere)'| markdownify }}</td>
+<td>Gets or sets the color for the thumb in the SfRangeSlider.</td></tr>
 <tr>
-<td>{{'[TrackThickness](Pastethehttplinkhere)'| markdownify }}</td>
-<td>{{'[SliderTrackStyle.InactiveSize](Pastethehttplinkhere)'| markdownify }}</td>
-<td>Gets or sets the size for the inactive track in the SfSlider.</td></tr>
+<td>{{'[ThumbBorderColor](Pastethehttplinkhere)'| markdownify }}</td>
+<td>{{'[SliderThumbStyle.Stroke](Pastethehttplinkhere)'| markdownify }}</td>
+<td>Gets or sets the stroke color for the thumb in the SfRangeSlider.</td></tr>
 <tr>
-<td>{{'[TrackSelectionThickness](Pastethehttplinkhere)'| markdownify }}</td>
-<td>{{'[SliderTrackStyle.ActiveSize](Pastethehttplinkhere)'| markdownify }}</td>
-<td>Gets or sets the size for the active track in the SfSlider.</td></tr>
+<td>{{'[ThumbBorderThickness](Pastethehttplinkhere)'| markdownify }}</td>
+<td>{{'[SliderThumbStyle.StrokeThickness](Pastethehttplinkhere)'| markdownify }}</td>
+<td>Gets or sets the stroke value for the thumb in the SfRangeSlider.</td></tr>
 </table> 
 
-## Enums
+### Ticks
 
-<table>
+<table> 
 <tr>
-<th>Enum</th>
 <th>Xamarin SfRangeSlider</th>
-<th>.NET MAUI SfSlider</th>
+<th>.NET MAUI SfRangeSlider</th>
 <th>Description</th></tr>
 <tr>
-<td>{{'[LoadMorePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.LoadMorePosition.html)'| markdownify }}</td>
-<td>Top,<br/>Bottom</td>
-<td>Start,<br/>End</td>
-<td>Defines position for the load more support of SfRangeSlider.</td></tr>
+<td>{{'[TickColor](Pastethehttplinkhere)'| markdownify }}</td>
+<td>{{'[SliderTickStyle.Fill](Pastethehttplinkhere)'| markdownify }}</td>
+<td>Gets or sets the color for the thumb in the SfRangeSlider.</td></tr>
+</table> 
+
+### Labels
+
+<table> 
 <tr>
-<td>{{'[TouchGesture](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.TouchGesture.html)'| markdownify }}</td>
-<td>Hold</td>
-<td>LongPress</td>
-<td>Describes the possible values of touch operation. These values are used when updating selection in the SfRangeSlider control.</td></tr>
-</table>
+<th>Xamarin SfRangeSlider</th>
+<th>.NET MAUI SfRangeSlider</th>
+<th>Description</th></tr>
+<tr>
+<td>{{'[AllowDragRange](Pastethehttplinkhere)'| markdownify }}</td>
+<td>{{'[ShowLabels](Pastethehttplinkhere)'| markdownify }}</td>
+<td>Gets or sets a value indicating whether to show or hide the labels.</td></tr>
+<tr>
+<td rowspan="2" valign="center">
+			{{'[LabelColor](Pastethehttplinkhere)'| markdownify }}<br/>
+		</td>
+<td>{{'[SliderLabelStyle.ActiveTextColor](Pastethehttplinkhere)'| markdownify }}</td>
+<td>Gets or sets the color for the active labels in the SfRangeSlider.</td></tr>
+<tr>
+<td>{{'[SliderLabelStyle.InactiveTextColor](Pastethehttplinkhere)'| markdownify }}</td>
+<td>Gets or sets the color for the inactive labels in the SfRangeSlider.</td></tr>
+<tr>
+<tr>
+<td rowspan="2" valign="center">
+			{{'[FontFamily](Pastethehttplinkhere)'| markdownify }}<br/>
+		</td>
+<td>{{'[SliderLabelStyle.InactiveFontFamily](Pastethehttplinkhere)'| markdownify }}</td>
+<td>Gets or sets the font family for the inactive labels in the SfRangeSlider.</td></tr>
+<tr>
+<td>{{'[SliderLabelStyle.ActiveFontFamily](Pastethehttplinkhere)'| markdownify }}</td>
+<td>Gets or sets the font family for the active labels in the SfRangeSlider.</td></tr>
+<tr>
+<tr>
+<td rowspan="2" valign="center">
+			{{'[FontAttribute](Pastethehttplinkhere)'| markdownify }}<br/>
+		</td>
+<td>{{'[SliderLabelStyle.InactiveFontAttributes](Pastethehttplinkhere)'| markdownify }}</td>
+<td>Gets or sets the font attributes for the inactive labels in the SfRangeSlider.</td></tr>
+<tr>
+<td>{{'[SliderLabelStyle.ActiveFontAttributes](Pastethehttplinkhere)'| markdownify }}</td>
+<td>Gets or sets the font attributes for the active labels in the SfRangeSlider.</td></tr>
+<tr>
+<tr>
+<td rowspan="2" valign="center">
+			{{'[FontSize](Pastethehttplinkhere)'| markdownify }}<br/>
+		</td>
+<td>{{'[SliderLabelStyle.InactiveFontSize](Pastethehttplinkhere)'| markdownify }}</td>
+<td>Gets or sets the size for the inactive fonts in the SfRangeSlider.</td></tr>
+<tr>
+<td>{{'[SliderLabelStyle.ActiveFontSize](Pastethehttplinkhere)'| markdownify }}</td>
+<td>Gets or sets the size for the active fonts in the SfRangeSlider.</td></tr>
+<tr>
+<td>{{'[LabelFormat](Pastethehttplinkhere)'| markdownify }}</td>
+<td>{{'[NumberFormat](Pastethehttplinkhere)'| markdownify }}</td>
+<td>Gets or sets the value to format the label text.</td></tr>
+</table> 
+
+### Tooltip
+
+<table> 
+<tr>
+<th>Xamarin SfRangeSlider</th>
+<th>.NET MAUI SfRangeSlider</th>
+<th>Description</th></tr>
+<tr>
+<td>{{'[TooltipBackgroundColor](Pastethehttplinkhere)'| markdownify }}</td>
+<td>{{'[SliderTooltip.Fill](Pastethehttplinkhere)'| markdownify }}</td>
+<td>Gets or sets the brush for the tooltip in the SfRangeSlider.</td></tr>
+<tr>
+<td>{{'[TooltipTextColor](Pastethehttplinkhere)'| markdownify }}</td>
+<td>{{'[SliderTooltip.TextColor](Pastethehttplinkhere)'| markdownify }}</td>
+<td>Gets or sets the color for the tooltip text in the SfRangeSlider.</td></tr>
+<tr>
+<td>{{'[TooltipPrecision](Pastethehttplinkhere)'| markdownify }}</td>
+<td>{{'[SliderTooltip.NumberFormat](Pastethehttplinkhere)'| markdownify }}</td>
+<td>Gets or sets the value to format the label text in the SfRangeSlider.</td></tr>
+</table> 
 
 ## Events
 
 <table>
 <tr>
 <th>Xamarin SfRangeSlider</th>
-<th>.NET MAUI SfSlider</th>
+<th>.NET MAUI SfRangeSlider</th>
 <th>Description</th></tr>
 <tr>
-<td>{{'[ItemHolding](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.SfRangeSlider.html#Syncfusion_ListView_XForms_SfListView_ItemHolding)'| markdownify }}</td>
-<td>{{'[ItemLongPress](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfRangeSlider.html#Syncfusion_Maui_ListView_SfListView_ItemLongPress)'| markdownify }}</td>
-<td>Occurs when an item is long pressed.</td></tr>
+<td>{{'[DragStarted](Pastethehttplinkhere)'| markdownify }}</td>
+<td>{{'[ValueChangeStart](Pastethehttplinkhere)'| markdownify }}</td>
+<td>Occurs when the user is selecting a new value for the Slider by tap/mouse down in the thumb.</td></tr>
+<tr>
+<td>{{'[RangeChanging](Pastethehttplinkhere)'| markdownify }}</td>
+<td>{{'[ValueChanging](Pastethehttplinkhere)'| markdownify }}</td>
+<td>Occurs when the user is selecting a new value for the Range Slider by dragging any one of the thumbs.</td></tr>
+<tr>
+<td>{{'[DragCompleted](Pastethehttplinkhere)'| markdownify }}</td>
+<td>{{'[ValueChangeEnd](Pastethehttplinkhere)'| markdownify }}</td>
+<td>Occurs when the user completed selecting a new value for the Slider by tap/mouse down in the thumb.</td></tr>
 </table> 
-
-## Classes 
-
-<table>
-<tr>
-<th>Xamarin SfRangeSlider</th>
-<th>.NET MAUI SfSlider</th>
-<th>Description</th></tr>
-<tr>
-<td>{{'[FooterItem](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.FooterItem.html)'| markdownify}}</td>
-<td>{{'[ListViewFooterItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewFooterItem.html)'| markdownify }}</td>
-<td>Represents the footer item of data in the SfRangeSlider control.</td></tr>
-<tr> 
-<td>{{'[FooterPosition](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.FooterPosition.html)'| markdownify }}</td>
-<td>{{'[ListViewFooterPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewFooterItem.html)'| markdownify }}</td>
-<td>Defines the position of the footer when IsStickyFooter is enabled.</td></tr> 
-<tr>
-<td>{{'[GroupHeader](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.GroupHeaderItem.html)'| markdownify}}</td>
-<td>{{'[ListViewGroupHeader](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewGroupHeaderItem.html)'| markdownify }}</td>
-<td>Represents the group header item in a SfRangeSlider control.</td></tr>
-<tr>
-<td>{{'[HeaderItem](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.HeaderItem.html)'| markdownify }}</td>
-<td>{{'[ListViewHeaderItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewHeaderItem.html)'| markdownify }}</td>
-<td>Represents the header item of data in the SfRangeSlider control.</td></tr>
-<tr>
-<td>{{'[ItemHoldingEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.ItemHoldingEventArgs.html)'| markdownify }}</td>
-<td>{{'[ItemLongPressEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemLongPressEventArgs.html)'| markdownify }}</td>
-<td>Provides data for ItemLongPress event.</td></tr> 
-<tr> 
-<td>{{'[LoadMoreIndicator](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.LoadMoreIndicator.html)'| markdownify }}</td>
-<td>{{'[ListViewLoadMoreIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewLoadMoreIndicator.html)'| markdownify }}</td>
-<td>A loading indicator which will be displayed when loading more items into the list view is in progress.</td></tr>
-<tr>
-<td>{{'[LoadMoreItem](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.LoadMoreItem.html)'| markdownify }}</td>
-<td>{{'[ListViewLoadMoreItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewLoadMoreItem.html)'| markdownify }}</td>
-<td>Represents the load more item in a SfRangeSlider control.</td></tr>
-<tr>
-<td>{{'[LayoutBase](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.LayoutBase.html)'| markdownify }}</td>
-<td>{{'[ListViewLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewLayout.html)'| markdownify }}</td>
-<td>Defines the base for the layouts.</td></tr>
-<tr>
-<td>{{'[InverseBoolConverter](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.Helpers.InverseBoolConverter.html)'| markdownify }}</td>
-<td>{{'[InvertedBoolConverter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Converters.InvertedBoolConverter.html)'| markdownify }}</td>
-<td>Converter to reverse the boolean value.</td></tr>
-</table> 
-
-## Upcoming features
-
-  * Item reordering
-  * Pull to refresh
-  * Swiping
