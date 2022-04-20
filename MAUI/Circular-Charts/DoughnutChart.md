@@ -43,7 +43,7 @@ chart.Series.Add(series);
 
 ## Inner Radius
 
-The [InnerRadius]() property of doughnut series is used to define the inner circle.
+The [InnerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DoughnutSeries.html#Syncfusion_Maui_Charts_DoughnutSeries_InnerRadius) property of doughnut series is used to define the inner circle.
 
 {% tabs %}
 
