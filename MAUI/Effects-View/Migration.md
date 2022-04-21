@@ -11,7 +11,7 @@ documentation: ug
 
 To migrate easier from Xamarin SfEffectsView to .NET MAUI SfEffectsView, we kept most of the APIs from Xamarin SfEffectsView in MAUI SfEffectsView. However, to maintain the consistency of API naming in MAUI SfEffectsView, we renamed some of the APIs. The APIs that have been changed in MAUI SfEffectsView from Xamarin SfEffectsView are detailed as follows.
 
-##Assembly Name 
+## Assembly Name 
 
 <table>
 <tr>
@@ -22,7 +22,7 @@ To migrate easier from Xamarin SfEffectsView to .NET MAUI SfEffectsView, we kept
 <td>Syncfusion.Maui.Core</td></tr>
 </table>
 
-##Namespaces 
+## Namespaces 
 
 <table>
 <tr>
@@ -33,7 +33,7 @@ To migrate easier from Xamarin SfEffectsView to .NET MAUI SfEffectsView, we kept
 <td>Syncfusion.Maui.Core</td></tr>
 </table>
 
-##Properties
+## Properties
 
 <table> 
 <tr>
@@ -58,7 +58,7 @@ To migrate easier from Xamarin SfEffectsView to .NET MAUI SfEffectsView, we kept
 <td>Gets or sets the color applied when the view is on selected state.</td></tr>
 </table> 
 
-##Enums
+## Enums
 
 <table>
 <tr>
