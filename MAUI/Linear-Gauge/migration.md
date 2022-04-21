@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migrate from Xamarin SfLinearGauge to .NET MAUI SfLinearGauge | Syncfusion 
+title: Migrate from Xamarin to .NET MAUI SfLinearGauge | Syncfusion 
 description: Learn here all about Migrating from Syncfusion Xamarin SfLinearGauge to Syncfusion .NET MAUI SfLinearGauge control and more.
 platform: MAUI
 control: SfLinearGauge
@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrate from Xamarin.Forms SfLinearGauge to .NET MAUI SfLinearGauge
 
-To migrate easier from [Xamarin SfLinearGauge](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.SfLinearGauge.html) to [.NET MAUI SfLinearGauge](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html), we kept most of the APIs from Xamarin SfLinearGauge in .NET MAUI SfLinearGauge. However, to maintain the consistency of API naming in .Net MAUI SfLinearGauge, we renamed some of the APIs. The APIs that have been changed in MAUI SfLinearGauge from Xamarin SfLinearGauge are detailed as follows.
+To migrate easier from [Xamarin SfLinearGauge](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.SfLinearGauge.html) to [.NET MAUI SfLinearGauge](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html), we kept most of the APIs from Xamarin SfLinearGauge in .NET MAUI SfLinearGauge. However, to maintain the consistency of API naming in .NET MAUI SfLinearGauge, we renamed some of the APIs. The APIs that have been changed in MAUI SfLinearGauge from Xamarin SfLinearGauge are detailed as follows.
 
 ## Adding Reference
 
@@ -129,7 +129,7 @@ this.Content = linearGauge;
 </tr>
 </table>
 
-The below code example, explains how to intialize axis in Xamarin SfLinearGauge and .Net MAUI SfLinearGauge.
+The below code example, explains how to initialize axis in Xamarin SfLinearGauge and .NET MAUI SfLinearGauge.
 
 <table>
 <tr>
@@ -232,7 +232,7 @@ this.Content = gauge;
 </tr>
 </table>
 
-The below code example, explains how to intialize range in Xamarin SfLinearGauge and .Net MAUI SfLinearGauge.
+The below code example, explains how to initialize range in Xamarin SfLinearGauge and .NET MAUI SfLinearGauge.
 
 <table>
 <tr>
@@ -361,7 +361,7 @@ this.Content = gauge;
 
 ## Pointers
 
-In Xamarin SfLinearGauge and .Net MAUI SfLinearGauge, pointers can be classified as mentioned in below table.
+In Xamarin SfLinearGauge and .NET MAUI SfLinearGauge, pointers can be classified as mentioned in below table.
 
 <table>
 <tr>
@@ -380,7 +380,7 @@ In Xamarin SfLinearGauge and .Net MAUI SfLinearGauge, pointers can be classified
 </tr>
 </table>
 
-N> In .Net MAUI SfLinearGauge [SymbolPointer](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.SymbolPointer.html) have been divided into two types. They are [LinearShapePointer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearShapePointer.html) and [LinearContentPointer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearContentPointer.html).
+N> In .NET MAUI SfLinearGauge [SymbolPointer](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.SymbolPointer.html) have been divided into two types. They are [LinearShapePointer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearShapePointer.html) and [LinearContentPointer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearContentPointer.html).
 
 ### Bar pointer
 
@@ -406,7 +406,7 @@ N> In .Net MAUI SfLinearGauge [SymbolPointer](https://help.syncfusion.com/cr/xam
 </tr>
 </table>
 
-The below code example, explains how to intialize bar pointer in Xamarin SfLinearGauge and .Net MAUI SfLinearGauge.
+The below code example, explains how to initialize bar pointer in Xamarin SfLinearGauge and .NET MAUI SfLinearGauge.
 
 <table>
 <tr>
@@ -546,7 +546,7 @@ this.Content = gauge;
 </tr>
 </table>
 
-The below code example, explains how to intialize shape pointer in Xamarin SfLinearGauge and .Net MAUI SfLinearGauge.
+The below code example, explains how to initialize shape pointer in Xamarin SfLinearGauge and .NET MAUI SfLinearGauge.
 
 <table>
 <tr>
@@ -709,7 +709,7 @@ The ContentPointer in .NET MAUI SfLinearGauge allows to use any .NET MAUI conten
 </tr>
 </table>
 
-The below code example, explains how to intialize content pointer .Net MAUI SfLinearGauge. Content pointer feature is not applicable in Xamarin SfLinearGauge.
+The below code example, explains how to initialize content pointer .NET MAUI SfLinearGauge. Content pointer feature is not applicable in Xamarin SfLinearGauge.
 
 {% tabs %}
 
