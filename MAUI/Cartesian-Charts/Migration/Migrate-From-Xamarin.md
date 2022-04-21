@@ -7,18 +7,16 @@ control: SfCartesianChart
 documentation: ug
 ---
 
-# Migrate from Xamarin.Forms
+# Migrate from Xamarin.Forms SfChart to .NET MAUI SfCartesianChart
 
-.NET MAUI is a comprehensive collection of .NET MAUI components for building modern Mobile and Desktop applications. And .NET MAUI unifies Android, iOS, macOS, and Windows APIs into a single API that allows a write-once run-anywhere developer experience, while additionally providing deep access to every aspect of each native platform.
+We kept most of the APIs from Xamarin [SfChart](https://www.syncfusion.com/xamarin-ui-controls/xamarin-charts) in MAUI [SfCartesianChart](https://www.syncfusion.com/maui-controls/maui-charts) to make migration easier. However, we renamed some APIs in.NET MAUI SfCartesianChart to keep consistency in API names. The APIs that have changed from Xamarin SfChart to MAUI SfCartesianChart are detailed as follows.
 
-This section explains how to migrate the Xamarin [SfChart](https://www.syncfusion.com/xamarin-ui-controls/xamarin-charts) to .NET MAUI [SfCartesianChart](https://www.syncfusion.com/maui-controls/maui-charts) control. And this section helps you to identify equivalent Chart features/ APIs in SfCartesianChart.
-
-## Assembly Name 
+## Assembly Reference 
 
 <table>
 <tr>
-<th>Xamarin SfChart</th>
-<th>.NET MAUI SfCartesianChart</th></tr>
+<th>Xamarin</th>
+<th>.NET MAUI</th></tr>
 <tr>
 <td>Syncfusion.SfChart.XForms</td>
 <td>Syncfusion.Maui.Charts</td></tr>
@@ -27,16 +25,47 @@ This section explains how to migrate the Xamarin [SfChart](https://www.syncfusio
 
 To initialize the control, import the Chart namespace and Initialize [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1) as per the following code snippet. 
 
+<table>
+<tr>
+<th>Xamarin</th>
+<th>.NET MAUI</th></tr>
+<tr>
+<td>
+{% tabs %} 
+{% highlight xaml %}
+<ContentPage
+    . . .
+    xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms">
+
+        <chart:SfChart/>
+
+</ContentPage>
+{% endhighlight %}
+
+{% highlight C# %}
+using Syncfusion.SfChart.XForms;
+...
+
+ SfChart chart = new SfChart(); 
+ this.Content = chart;
+
+{% endhighlight %}
+{% endtabs %}
+</td>
+<td>
+
 {% tabs %} 
 
 {% highlight xaml %}
+
+{% endhighlight %}
 
 <ContentPage
     . . .    
     xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-    <Grid>
+   
         <chart:SfCartesianChart/>
-    </Grid>
+   
 </ContentPage>
  
 {% endhighlight %}
@@ -44,329 +73,59 @@ To initialize the control, import the Chart namespace and Initialize [SfCartesia
 {% highlight C# %}
 
 using Syncfusion.Maui.Charts;
-namespace ChartGettingStarted
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();           
-            SfCartesianChart chart = new SfCartesianChart(); 
-        }
-    }   
-}
+. . .
+SfCartesianChart chart = new SfCartesianChart(); 
+this.Content = chart; 
 
 {% endhighlight %}
 
 {% endtabs %}
+</td>
 
-## Code snippet
+</tr>
+</table>
 
-### SfChart
-
-Following code example illustrates the initialization of SfChart.
-
-{% tabs %} 
-
-{% highlight xaml %}
-
-<ContentPage xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
-             xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:local="clr-namespace: ChartGettingStarted;assembly=ChartGettingStarted"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ChartGettingStarted.ChartSample">
-
-  <chart:SfChart x:Name="Chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-
-    <chart:SfChart.BindingContext>
-      <local:ViewModel/>
-    </chart:SfChart.BindingContext>
-
-    <chart:SfChart.Legend>
-      <chart:ChartLegend />
-    </chart:SfChart.Legend>
-
-    <chart:SfChart.Title>
-      <chart:ChartTitle Text="Chart"/>
-    </chart:SfChart.Title>
-
-    <chart:SfChart.PrimaryAxis>
-      <chart:CategoryAxis>
-        <chart:CategoryAxis.Title>
-          <chart:ChartAxisTitle Text="Name"/>
-        </chart:CategoryAxis.Title>
-      </chart:CategoryAxis>
-    </chart:SfChart.PrimaryAxis>
-
-    <chart:SfChart.SecondaryAxis>
-      <chart:NumericalAxis>
-        <chart:NumericalAxis.Title>
-          <chart:ChartAxisTitle Text="Height (in cm)"/>
-        </chart:NumericalAxis.Title>
-      </chart:NumericalAxis>
-    </chart:SfChart.SecondaryAxis>
-
-    <chart:SfChart.Series>
-      <chart:ColumnSeries ItemsSource="{Binding Data}" Label="Heights" XBindingPath="Name" YBindingPath="Height" EnableTooltip="True">
-        <chart:ColumnSeries.DataMarker>
-          <chart:ChartDataMarker/>
-        </chart:ColumnSeries.DataMarker>
-      </chart:ColumnSeries>
-    </chart:SfChart.Series>
-  </chart:SfChart>
-
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-
-using Syncfusion.SfChart.XForms;
-
-namespace ChartGettingStarted
-{
-    public partial class ChartSample : ContentPage
-    {
-        public ChartSample()
-        {
-            InitializeComponent();
-            SfChart chart = new SfChart();
-            chart.Title.Text = "Chart";
-
-            ViewModel viewmodel = new ViewModel()
-            chart.BindingContext = viewmodel;
-
-            //Initializing primary axis
-            CategoryAxis primaryAxis = new CategoryAxis();
-            primaryAxis.Title.Text = "Name";
-            chart.PrimaryAxis = primaryAxis;
-
-            //Initializing secondary Axis
-            NumericalAxis secondaryAxis = new NumericalAxis();
-            secondaryAxis.Title.Text = "Height (in cm)";
-            chart.SecondaryAxis = secondaryAxis;
-
-            //Initializing column series
-            ColumnSeries series = new ColumnSeries();
-            series.ItemsSource = viewModel.Data;
-            series.XBindingPath = "Name";
-            series.YBindingPath = "Height";
-            series.Label = "Heights";
-
-            series.DataMarker = new ChartDataMarker();
-            series.EnableTooltip = true;
-            chart.Legend = new ChartLegend();
-
-            chart.Series.Add(series);
-            this.Content = chart;
-
-        }
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
-### SfCartesianChart
-
-Following code example illustrates the initialization of SfCartesianChart that is equivalent to the above SfChart code example.
-
-{% tabs %} 
-
-{% highlight xaml %}
-
-<ContentPage
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="ChartGettingStarted.MainPage"
-    xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
-    xmlns:local="clr-namespace:ChartGettingStarted">
-
-    <ContentPage.BindingContext>
-    <local:ViewModel></local:ViewModel>
-    </ContentPage.BindingContext>
-
-    <ContentPage.Content>
-        <Grid>
-            <chart:SfCartesianChart>
-                <chart:SfCartesianChart.Title>
-                    <Label Text="Height Comparison"/>
-                </chart:SfCartesianChart.Title>
-
-                <chart:SfCartesianChart.Legend>
-                    <chart:ChartLegend/>
-                </chart:SfCartesianChart.Legend>
-    
-                <chart:SfCartesianChart.XAxes>
-                    <chart:CategoryAxis>
-                        <chart:CategoryAxis.Title>
-                            <chart:ChartAxisTitle Text="Name"/>
-                        </chart:CategoryAxis.Title>
-                    </chart:CategoryAxis>
-                </chart:SfCartesianChart.XAxes>
-
-                <chart:SfCartesianChart.YAxes>
-                    <chart:NumericalAxis>
-                        <chart:NumericalAxis.Title>
-                            <chart:ChartAxisTitle Text="Height(in cm)"/>
-                        </chart:NumericalAxis.Title>
-                    </chart:NumericalAxis>
-                </chart:SfCartesianChart.YAxes>
-
-            <!--Initialize the series for chart-->
-                <chart:SfCartesianChart.Series>
-                    <chart:ColumnSeries Label="Height" 
-                            EnableTooltip="True"
-                            ShowDataLabels="True"
-                            ItemsSource="{Binding Data}"
-                            XBindingPath="Name" 
-                            YBindingPath="Height">
-                        <chart:ColumnSeries.DataLabelSettings>
-                            <chart:CartesianDataLabelSettings LabelPlacement="Inner"/>
-                        </chart:ColumnSeries.DataLabelSettings>
-                    </chart:ColumnSeries>
-                </chart:SfCartesianChart.Series>
-            </chart:SfCartesianChart>
-        </Grid>
-    </ContentPage.Content>
-</ContentPage>
- 
-{% endhighlight %}
-
-{% highlight C# %}
-
-using Syncfusion.Maui.Charts;
-namespace ChartGettingStarted
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();            
-            SfCartesianChart chart = new SfCartesianChart();
-            ViewModel viewmodel = new ViewModel()
-            chart.BindingContext = viewmodel;
-
-            chart.Title = new Label
-            {
-                Text = "Height Comparison"
-            };
-
-            // Initializing primary axis
-            CategoryAxis primaryAxis = new CategoryAxis();
-            primaryAxis.Title.Text = "Name";
-            chart.XAxes.Add(primaryAxis);
-
-            //Initializing secondary Axis
-            NumericalAxis secondaryAxis = new NumericalAxis();
-            secondaryAxis.Title.Text = "Height(in cm)";
-            chart.YAxes.Add(secondaryAxis);
-
-            //Initialize the series for Chart
-            ColumnSeries series = new ColumnSeries()
-            {
-                Label = "Height",
-                ShowDataLabels = true,
-                ItemsSource = viewmodel.Data,
-                XBindingPath = "Name",
-                YBindingPath = "Height",
-                DataLabelSettings = new CartesianDataLabelSettings
-                {
-                    LabelPlacement = DataLabelPlacement.Inner
-                }              
-            };  
-
-            //Adding Series to the Chart Series Collection
-            chart.Series.Add(series);
-            this.Content = chart;
-        }
-    }   
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
-
-### Register the handler
-
-You must register the handler to deploy the SfCartesianChart, otherwise application throws exception. Syncfusion.Maui.Core nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
-
-{% highlight C# %}
-
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
-using Syncfusion.Maui.Core.Hosting;
-
-namespace ChartGettingStarted
-{
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureSyncfusionCore()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-            return builder.Build();
-        }
-    }
-}
-
-
-{% endhighlight %} 
-
-The following table illustrates the alter API comparison for chart,
+## Series
 
 <table>
 <tr>
+<tr>
 <th>Xamarin</th>
-<th>MAUI</th>
+<th>.NET MAUI</th></tr>
 </tr>
 <tr>
-<td>PrimaryAxis</td>
-<td>XAxes</td>
-</tr>
-<tr>
-<td>SecondaryAxis</td>
-<td>YAxes</td>
-</tr>
-<tr>
-<td>SideBySideSeriesPlacement</td>
-<td>EnableSideBySideSeriesPlacement</td>
-</tr>
-<tr>
-<td>-</td>
-<td>IsTransposed</td>
+<td>Color</td>
+<td>Fill</td>
 </tr>
 <tr>
 <td>ColorModel</td>
 <td>PaletteBrushes</td>
 </tr>
 <tr>
-<td>ChartBehaviors</td>
-<td>TooltipBehavior, SelectionBehavior, ZoomPanBehavior</td>
+<td>SelectedDataPointColor</td>
+<td>SelectionBrush</td>
+</tr>
+<tr>
+<td>DataMarker</td>
+<td>ShowDataLabels, DataLabelSettings</td>
+</tr>
+<tr>
+<td>-</td>
+<td>XRange</td>
+</tr>
+<tr>
+<td>-</td>
+<td>YRange</td>
 </tr>
 </table>
 
-## Series
-
-Mostly the same code are used to initialize the chart series in both SfChart and SfCartesianChart. You can create the instance of required series in SfChart as in the following code example.
+The below code example, explains how to initialize series in Xamarin SfChart and .NET MAUI SfCartesianChart.
 
 <table>
 <tr>
+<tr>
 <th>Xamarin</th>
-<th>MAUI</th>
+<th>.NET MAUI</th></tr>
 </tr>
 <tr>
 <td>
@@ -435,87 +194,12 @@ Mostly the same code are used to initialize the chart series in both SfChart and
 </tr>
 </table>
 
-The following table illustrates the alter API comparison for series,
-
-<table>
-<tr>
-<th>Xamarin</th>
-<th>MAUI</th>
-</tr>
-<tr>
-<td>Color</td>
-<td>Fill</td>
-</tr>
-<tr>
-<td>ColorModel</td>
-<td>PaletteBrushes</td>
-</tr>
-<tr>
-<td>SelectedDataPointColor</td>
-<td>SelectionBrush</td>
-</tr>
-<tr>
-<td>DataMarker</td>
-<td>ShowDataLabels, DataLabelSettings</td>
-</tr>
-<tr>
-<td>-</td>
-<td>XRange</td>
-</tr>
-<tr>
-<td>-</td>
-<td>YRange</td>
-</tr>
-</table>
-
-
 ## Axis
 
 <table>
 <tr>
 <th>Xamarin</th>
-<th>MAUI</th>
-</tr>
-<tr>
-<td>
-{% highlight xaml %}
-
-<chart:SfChart>  
-    <chart:SfChart.PrimaryAxis>
-	     <chart:NumericalAxis/>
-    </chart:SfChart.PrimaryAxis>
-
-    <chart:SfChart.SecondaryAxis>
-	     <chart:NumericalAxis/>
-    </chart:SfChart.SecondaryAxis>
-</chart:SfChart>
-
-{% endhighlight %} 
-</td>
-<td>
-{% highlight xaml %}
-
-<chart:SfCartesianChart>                            
-    <chart:SfCartesianChart.XAxes>
-        <chart:NumericalAxis/>
-    </chart:SfCartesianChart.XAxes>
-    
-    <chart:SfCartesianChart.YAxes>
-        <chart:NumericalAxis/>
-    </chart:SfCartesianChart.YAxes>                       
-</chart:SfCartesianChart>
-
-{% endhighlight %} 
-</td>
-</tr>
-</table>
-
-The following table illustrates the alter API comparison for `ChartAxis` class,
-
-<table>
-<tr>
-<th>Xamarin</th>
-<th>MAUI</th>
+<th>.NET MAUI</th>
 </tr>
 <tr>
 <td>LabelRotationAngle</td>
@@ -595,70 +279,24 @@ The following table illustrates the alter API comparison for `ChartAxis` class,
 </tr>
 </table>
 
-The following table illustrates the alter API comparison for `CategoryAxis` class,
+The below code example, explains how to initialize axis in Xamarin SfChart and .NET MAUI SfCartesianChart.
 
 <table>
 <tr>
 <th>Xamarin</th>
-<th>MAUI</th>
-</tr>
-<tr>
-<td>StripLines</td>
-<td>-</td>
-</tr>
-<tr>
-<td>ArrangeByIndex</td>
-<td>-</td>
-</tr>
-</table>
-
-The following table illustrates the API comparison for `NumericalAxis` class,
-
-<table>
-<tr>
-<th>Xamarin</th>
-<th>MAUI</th>
-</tr>
-<tr>
-<td>StripLines</td>
-<td>-</td>
-</tr>
-</table>
-
-The following table illustrates the alter API comparison for `DateTimeAxis` class,
-
-<table>
-<tr>
-<th>Xamarin</th>
-<th>MAUI</th>
-</tr>
-<tr>
-<td>StripLines</td>
-<td>-</td>
-</tr>
-<tr>
-<td>AutoScrollingDeltaType</td>
-<td>-</td>
-</tr>
-</table>
-
-## Legend
-
-The following code example shows how to enable legend in chart.
-
-<table>
-<tr>
-<th>Xamarin</th>
-<th>MAUI</th>
-</tr>
+<th>.NET MAUI</th></tr>
 <tr>
 <td>
 {% highlight xaml %}
 
-<chart:SfChart>
-    <chart:SfChart.Legend>
-		<chart:ChartLegend/>
-	</chart:SfChart.Legend>
+<chart:SfChart>  
+    <chart:SfChart.PrimaryAxis>
+	     <chart:NumericalAxis/>
+    </chart:SfChart.PrimaryAxis>
+
+    <chart:SfChart.SecondaryAxis>
+	     <chart:NumericalAxis/>
+    </chart:SfChart.SecondaryAxis>
 </chart:SfChart>
 
 {% endhighlight %} 
@@ -666,10 +304,14 @@ The following code example shows how to enable legend in chart.
 <td>
 {% highlight xaml %}
 
-<chart:SfCartesianChart>
-    <chart:SfCartesianChart.Legend>
-		<chart:ChartLegend/>
-	</chart:SfCartesianChart.Legend>
+<chart:SfCartesianChart>                            
+    <chart:SfCartesianChart.XAxes>
+        <chart:NumericalAxis/>
+    </chart:SfCartesianChart.XAxes>
+    
+    <chart:SfCartesianChart.YAxes>
+        <chart:NumericalAxis/>
+    </chart:SfCartesianChart.YAxes>                       
 </chart:SfCartesianChart>
 
 {% endhighlight %} 
@@ -677,12 +319,12 @@ The following code example shows how to enable legend in chart.
 </tr>
 </table>
 
-The following table illustrates the API comparison between SfChart and SfCartesianChart.
+## Legend
 
 <table>
 <tr>
 <th>Xamarin</th>
-<th>MAUI</th>
+<th>.NET MAUI</th>
 </tr>
 <tr>
 <td>ToggleSeriesVisibility</td>
@@ -771,6 +413,39 @@ The following table illustrates the API comparison between SfChart and SfCartesi
 <tr>
 <td>OffsetY</td>
 <td>-</td>
+</tr>
+</table>
+
+The following code example shows how to enable legend in chart.
+
+<table>
+<tr>
+<th>Xamarin</th>
+<th>.NET MAUI</th>
+</tr>
+<tr>
+<td>
+{% highlight xaml %}
+
+<chart:SfChart>
+    <chart:SfChart.Legend>
+		<chart:ChartLegend/>
+	</chart:SfChart.Legend>
+</chart:SfChart>
+
+{% endhighlight %} 
+</td>
+<td>
+{% highlight xaml %}
+
+<chart:SfCartesianChart>
+    <chart:SfCartesianChart.Legend>
+		<chart:ChartLegend/>
+	</chart:SfCartesianChart.Legend>
+</chart:SfCartesianChart>
+
+{% endhighlight %} 
+</td>
 </tr>
 </table>
 
