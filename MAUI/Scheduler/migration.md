@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migrate from Xamarin.Forms SfSchedule to .NET MAUI SfScheduler | Syncfusion 
+title: Migrate from Xamarin SfSchedule to .NET MAUI SfScheduler | Syncfusion 
 description: Learn here all about Migrating from Syncfusion Xamarin Schedule to Syncfusion .NET MAUI Scheduler control and more.
 platform: MAUI
 control: SfScheduler
@@ -585,34 +585,34 @@ To migrate easier from [Xamarin SfSchedule](https://www.syncfusion.com/xamarin-u
 <th>Description</th></tr>
 
 <tr>
-<td>{{'[AppointmentDisplayMode]()'| markdownify }}</td>
-<td>{{'[AppointmentDisplayMode]()'| markdownify }}</td>
-<td>Specifies the displaying mode for appointment in month view.</td></tr>
+<td>{{'[AppointmentDisplayMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.MonthViewSettings.html#Syncfusion_SfSchedule_XForms_MonthViewSettings_AppointmentDisplayMode)'| markdownify }}</td>
+<td>{{'[AppointmentDisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_AppointmentDisplayMode)'| markdownify }}</td>
+<td>Gets or sets a value which defines the appointment display mode for the month cell in SfScheduler..</td></tr>
 
 <tr>
-<td>{{'[BlackoutDates]()'| markdownify }}</td>
-<td>{{'[SelectableDayPredicate]()'| markdownify }} (From Scheduler)</td>
-<td>Specifies the displaying mode for appointment in month view.</td></tr>
+<td>{{'[BlackoutDates](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.MonthViewSettings.html#Syncfusion_SfSchedule_XForms_MonthViewSettings_BlackoutDates)'| markdownify }}</td>
+<td>{{'[SelectableDayPredicate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_SelectableDayPredicate)'| markdownify }} (From Scheduler)</td>
+<td>Gets or sets the view rendering to decide whether scheduler view date time should be selectable or not.</td></tr>
 
 <tr>
-<td>{{'[ShowWeekNumber]()'| markdownify }}</td>
-<td>{{'[ShowWeekNumber]()'| markdownify }} (From Scheduler)</td>
-<td>Specifies the displaying mode for appointment in month view.</td></tr>
+<td>{{'[ShowWeekNumber](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.MonthViewSettings.html#Syncfusion_SfSchedule_XForms_MonthViewSettings_ShowWeekNumber)'| markdownify }}</td>
+<td>{{'[ShowWeekNumber](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_ShowWeekNumber)'| markdownify }} (From Scheduler)</td>
+<td>Gets or sets a value indicating whether to displays the week number of the year in the SfScheduler.</td></tr>
 
 <tr>
-<td>{{'[WeekNumberStyle]()'| markdownify }}</td>
-<td>{{'[WeekNumberStyle]()'| markdownify }} (From Scheduler)</td>
-<td>Specifies the displaying mode for appointment in month view.</td></tr>
+<td>{{'[WeekNumberStyle](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.MonthViewSettings.html#Syncfusion_SfSchedule_XForms_MonthViewSettings_WeekNumberStyle)'| markdownify }}</td>
+<td>{{'[WeekNumberStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_WeekNumberStyle)'| markdownify }} (From Scheduler)</td>
+<td>Gets or sets the style of the week number, that used to customize the background, text color, font, font size, font family and font attributes.</td></tr>
 
 <tr>
-<td>{{'[TodayBackground]()'| markdownify }}</td>
-<td>{{'[TodayHighlightBrush]()'| markdownify }} (From Scheduler)</td>
-<td>Specifies the displaying mode for appointment in month view.</td></tr>
+<td>{{'[TodayBackground](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.MonthViewSettings.html#Syncfusion_SfSchedule_XForms_MonthViewSettings_TodayBackground)'| markdownify }}</td>
+<td>{{'[TodayHighlightBrush](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_TodayHighlightBrush)'| markdownify }} (From Scheduler)</td>
+<td>Gets or sets the color that describes the today highlight color value.</td></tr>
 
 <tr>
-<td>{{'[MonthCellTemplate]()'| markdownify }}</td>
-<td>{{'[CellTemplate]()'| markdownify }}</td>
-<td>Specifies the displaying mode for appointment in month view.</td></tr>
+<td>{{'[MonthCellTemplate](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.MonthViewSettings.html#Syncfusion_SfSchedule_XForms_MonthViewSettings_MonthCellTemplate)'| markdownify }}</td>
+<td>{{'[CellTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_CellTemplate)'| markdownify }}</td>
+<td>Gets or sets the month cell template or template selector.</td></tr>
  </table> 
 
 <table>
