@@ -454,7 +454,7 @@ The following code example shows how to enable legend in chart.
 <table>
 <tr>
 <th>Xamarin</th>
-<th>MAUI</th>
+<th>.NET MAUI</th>
 </tr>
 <tr>
 <td>
@@ -499,7 +499,7 @@ The following code example shows how to enable legend in chart.
 <table>
 <tr>
 <th>Xamarin</th>
-<th>MAUI</th>
+<th>.NET MAUI</th>
 </tr>
 <tr>
 <td>
@@ -549,7 +549,7 @@ To Customize the tooltip appearance, create an instance of the `ChartTooltipBeha
 <table>
 <tr>
 <th>Xamarin</th>
-<th>MAUI</th>
+<th>.NET MAUI</th>
 </tr>
 <tr>
 <td>
@@ -600,8 +600,8 @@ Create an instance of the `ChartSelectionBehavior` class and add it to the  `Cha
 
 <table>
 <tr>
-<th>Xamarin Zooming</th>
-<th>MAUI Zooming</th>
+<th>Xamarin</th>
+<th>.NET MAUI</th>
 </tr>
 <tr>
 <td>
