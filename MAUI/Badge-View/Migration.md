@@ -11,7 +11,7 @@ documentation: ug
 
 To migrate easier from Xamarin SfBadgeView to .NET MAUI SfBadgeView, we kept most of the APIs from Xamarin SfBadgeView in MAUI SfBadgeView. However, to maintain the consistency of API naming in MAUI SfBadgeView, we renamed some of the APIs. The APIs that have been changed in MAUI SfBadgeView from Xamarin SfBadgeView are detailed as follows.
 
-##Assembly Name 
+## Assembly Name 
 
 <table>
 <tr>
@@ -22,7 +22,7 @@ To migrate easier from Xamarin SfBadgeView to .NET MAUI SfBadgeView, we kept mos
 <td>Syncfusion.Maui.Core</td></tr>
 </table>
 
-##Namespaces 
+## Namespaces 
 
 <table>
 <tr>
@@ -33,7 +33,7 @@ To migrate easier from Xamarin SfBadgeView to .NET MAUI SfBadgeView, we kept mos
 <td>Syncfusion.Maui.Core</td></tr>
 </table>
 
-##Properties
+## Properties
 
 <table> 
 <tr>
@@ -66,7 +66,7 @@ To migrate easier from Xamarin SfBadgeView to .NET MAUI SfBadgeView, we kept mos
 <td>Gets or sets the type of the badge.</td></tr>
 </table> 
 
-##Enums
+## Enums
 
 <table>
 <tr>
@@ -81,7 +81,7 @@ To migrate easier from Xamarin SfBadgeView to .NET MAUI SfBadgeView, we kept mos
 <td>Defines the position of the badge over the badge view control.</td></tr>
 </table>
 
-##Classes 
+## Classes 
 
 <table>
 <tr>
