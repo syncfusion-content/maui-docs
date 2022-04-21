@@ -28,7 +28,7 @@ You can set the month view appointments display as follows.
 * [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthAppointmentDisplayMode.html#Syncfusion_Maui_Scheduler_SchedulerMonthAppointmentDisplayMode_Text):  Appointment subject will be displayed in the month cell.
 
 {% tabs %}  
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
 
 <scheduler:SfScheduler x:Name="Scheduler" 
                        View="Month">
@@ -39,7 +39,7 @@ You can set the month view appointments display as follows.
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
 
 this.Scheduler.View = SchedulerView.Month;
 this.Scheduler.MonthView.AppointmentDisplayMode = SchedulerMonthAppointmentDisplayMode.Indicator;
@@ -58,7 +58,7 @@ N>
 The previous and next month dates from a Scheduler month view can be hidden by using the [ShowLeadingAndTrailingDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_ShowLeadingAndTrailingDates) property in the [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html). The `ShowLeadingAndTrailingDates` property defaults to `true.`
 
 {% tabs %}  
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
 
  <scheduler:SfScheduler x:Name="Scheduler" 
                         View="Month">
@@ -69,7 +69,7 @@ The previous and next month dates from a Scheduler month view can be hidden by u
  </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
 
 this.Scheduler.View = SchedulerView.Month;
 this.Scheduler.MonthView.ShowLeadingAndTrailingDates = false;
@@ -88,7 +88,7 @@ You can customize the default appearance of view header in a month view by setti
 Customize the day format of Scheduler view header by using the [DayFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViewHeaderSettings.html#Syncfusion_Maui_Scheduler_SchedulerViewHeaderSettings_DayFormat) property of [ViewHeaderSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_ViewHeaderSettings) in [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html).
 
 {% tabs %}  
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
 
 <scheduler:SfScheduler x:Name="Scheduler" 
                        View="Month">
@@ -102,7 +102,7 @@ Customize the day format of Scheduler view header by using the [DayFormat](https
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
 
 this.Scheduler.View = SchedulerView.Month;
 this.Scheduler.MonthView.ViewHeaderSettings.DayFormat = "dddd";
@@ -117,7 +117,7 @@ this.Scheduler.MonthView.ViewHeaderSettings.DayFormat = "dddd";
 The height of the ViewHeader can be customized by setting the [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderSettingsBase.html#Syncfusion_Maui_Scheduler_SchedulerHeaderSettingsBase_Height) property of [ViewHeaderSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_ViewHeaderSettings) in [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html).
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
 
  <scheduler:SfScheduler x:Name="Scheduler" 
                         View="Month">
@@ -131,7 +131,7 @@ The height of the ViewHeader can be customized by setting the [Height](https://h
  </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
 
 this.Scheduler.View = SchedulerView.Month;
 this.Scheduler.MonthView.ViewHeaderSettings.Height = 100;
@@ -150,7 +150,7 @@ The view header appearance customization can be achieved by using the `TextStyle
 Customize the month view header day text style, day format and background color by using the [DayTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViewHeaderSettings.html#Syncfusion_Maui_Scheduler_SchedulerViewHeaderSettings_DayTextStyle), [DayFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViewHeaderSettings.html#Syncfusion_Maui_Scheduler_SchedulerViewHeaderSettings_DayFormat) and [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderSettingsBase.html#Syncfusion_Maui_Scheduler_SchedulerHeaderSettingsBase_Background) of [ViewHeaderSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_ViewHeaderSettings) properties of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) respectively.
 
 {% tabs %}  
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6 7" %}
 
  <scheduler:SfScheduler x:Name="Scheduler" 
                         View="Month">
@@ -165,7 +165,7 @@ Customize the month view header day text style, day format and background color 
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="7 8 9" %}
 
 var dayTextStyle = new SchedulerTextStyle()
 {
@@ -187,7 +187,7 @@ this.Scheduler.MonthView.ViewHeaderSettings.DayTextStyle = dayTextStyle;
 You can customize the view header appearance by using the [ViewHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_ViewHeaderTemplate) property of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
 {% tabs %}  
-{% highlight xaml %}    
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5 6 7 8 9 10 11" %}    
 
  <scheduler:SfScheduler x:Name="Scheduler" 
                         View="Month">
@@ -214,7 +214,7 @@ You can customize the view header appearance by using the [ViewHeaderTemplate](h
 You can customize the view header appearance by using the [ViewHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_ViewHeaderTemplate) property of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html). The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler view header by using the `ViewHeaderTemplate.` It allows you to choose a different data template for each view header, as well as customize the appearance of a particular view header based on certain conditions.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
  <Grid>
     <Grid.Resources>
@@ -272,14 +272,14 @@ The month cell appearance can be customized by using the  [CellStyle](https://he
 By using the [CellStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_CellStyle) property of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html), the month properties such as [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthCellStyle.html#Syncfusion_Maui_Scheduler_SchedulerMonthCellStyle_Background), [TodayBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthCellStyle.html#Syncfusion_Maui_Scheduler_SchedulerMonthCellStyle_TodayBackground), [TrailingMonthBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthCellStyle.html#Syncfusion_Maui_Scheduler_SchedulerMonthCellStyle_TrailingMonthBackground), [LeadingMonthBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthCellStyle.html#Syncfusion_Maui_Scheduler_SchedulerMonthCellStyle_LeadingMonthBackground), [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthCellStyle.html#Syncfusion_Maui_Scheduler_SchedulerMonthCellStyle_TextStyle), [TrailingMonthTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthCellStyle.html#Syncfusion_Maui_Scheduler_SchedulerMonthCellStyle_TrailingMonthTextStyle), and [LeadingMonthTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthCellStyle.html#Syncfusion_Maui_Scheduler_SchedulerMonthCellStyle_LeadingMonthTextStyle) can be customized.
 
 {% tabs %}  
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
 <scheduler:SfScheduler x:Name="Scheduler" 
                        View="Month">
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="31" %}
 
 this.Scheduler.View = SchedulerView.Month;
 var textStyle = new SchedulerTextStyle()
@@ -323,7 +323,7 @@ this.Scheduler.MonthView.CellStyle = monthCellStyle;
 You can customize the month cell appearance by using the [CellTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_CellTemplate) property of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5 6 7 8 9 10 11" %}
 
  <scheduler:SfScheduler x:Name="Scheduler" 
                         View="Month">
@@ -331,9 +331,9 @@ You can customize the month cell appearance by using the [CellTemplate](https://
         <scheduler:SchedulerMonthView>
             <scheduler:SchedulerMonthView.CellTemplate>
                 <DataTemplate>
-                    <Border Background = "MediumPurple">
+                    <Grid Background = "MediumPurple">
                         <Label HorizontalTextAlignment="Center" TextColor="White" Text="{Binding DateTime.Day}"/>
-                    </Border>
+                    </Grid>
                 </DataTemplate>
             </scheduler:SchedulerMonthView.CellTemplate>
         </scheduler:SchedulerMonthView>
@@ -353,19 +353,19 @@ N>
 You can customize the month cell appearance by using the [CellTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_CellTemplate) property of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html). The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler month cells by using the `CellTemplate.` It allows you to choose a different data template for each month cell, as well as customize the appearance of a particular month cell based on certain conditions.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="18" %}
 
 <Grid>
     <Grid.Resources>
         <DataTemplate x:Key="normalDateTemplate">
-            <Border Background = "MediumPurple">
+            <Grid Background = "MediumPurple">
                 <Label HorizontalTextAlignment="Center" TextColor="White" Text="{Binding DateTime.Day}"/>
-            </Border>
+            </Grid>
         </DataTemplate>
         <DataTemplate x:Key="todayDateTemplate">
-            <Border Background = "MediumPurple">
+            <Grid Background = "MediumPurple">
                 <Label HorizontalTextAlignment="Center" TextColor="Yellow" Text="{Binding DateTime.Day}"/>
-            </Border>
+            </Grid>
         </DataTemplate>
         <local:MonthCellTemplateSelector x:Key="monthCellTemplateSelector" TodayDateTemplate="{StaticResource todayDateTemplate}" NormalDateTemplate="{StaticResource normalDateTemplate}"/>
     </Grid.Resources>
@@ -398,7 +398,7 @@ public class MonthCellTemplateSelector : DataTemplateSelector
 }
 
 {% endhighlight %}  
-{% highlight c# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 this.Scheduler.View = SchedulerView.Month;
 
