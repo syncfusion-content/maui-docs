@@ -171,6 +171,7 @@ To migrate easier from [Xamarin SfSchedule](https://www.syncfusion.com/xamarin-u
 
 ## Properties
 
+### SfSchedule
 <table> 
 <tr>
 <th>Xamarin SfSchedule</th>
@@ -302,7 +303,7 @@ To migrate easier from [Xamarin SfSchedule](https://www.syncfusion.com/xamarin-u
 
 </table> 
 
-## SchedulerAppointment
+### SchedulerAppointment
 
 <table>
 <tr>
@@ -392,7 +393,7 @@ To migrate easier from [Xamarin SfSchedule](https://www.syncfusion.com/xamarin-u
 
 </table> 
 
-## SchedulerAppointmentMapping
+### SchedulerAppointmentMapping
 
 <table>
 <tr>
@@ -467,116 +468,7 @@ To migrate easier from [Xamarin SfSchedule](https://www.syncfusion.com/xamarin-u
 
  </table> 
 
-## Enums
-
-<table>
-<tr>
-<th>Xamarin SfSchedule</th>
-<th>.NET MAUI SfScheduler</th>
-<th>Description</th></tr>
-
-<tr>
-<td>{{'[AppointmentDisplayMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.AppointmentDisplayMode.html)'| markdownify }}</td>
-<td>{{'[SchedulerMonthAppointmentDisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthAppointmentDisplayMode.html)'| markdownify }}</td>
-<td>Specifies the displaying mode for appointment in month view.</td></tr>
-
-<tr>
-<td>{{'[RecurrenceRange](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.RecurrenceRange.html)'| markdownify }}</td>
-<td>{{'[SchedulerRecurrenceRange](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRecurrenceRange.html)'| markdownify }}</td>
-<td>Specifies the type of recurrence date range.</td></tr>
-
-<tr>
-<td>{{'[RecurrenceType](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.RecurrenceType.html)'| markdownify }}</td>
-<td>{{'[SchedulerRecurrenceType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRecurrenceType.html)'| markdownify }}</td>
-<td>Specifies the type of recurrence in the appointment.</td></tr>
-
-<tr>
-<td>{{'[ScheduleView](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ScheduleView.html)'| markdownify }}</td>
-<td>{{'[SchedulerView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerView.html)'| markdownify }}</td>
-<td>Defines the view for the SfScheduler.</td></tr>
-
-</table> 
-
-## Events
-
-<table>
-<tr>
-<th>Xamarin SfSchedule</th>
-<th>.NET MAUI SfScheduler</th>
-<th>Description</th></tr>
-<tr>
-<td>{{'[CellDoubleTapped](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_CellDoubleTapped)'| markdownify }}</td>
-<td>{{'[DoubleTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_DoubleTapped)'| markdownify }}</td>
-<td>Occurs when an item is double tapped.</td></tr>
-
-<tr>
-<td>{{'[CellTapped](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_CellTapped)'| markdownify }}</td>
-<td>{{'[Tapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_Tapped)'| markdownify }}</td>
-<td>Occurs when an item is tapped.</td></tr>
-
-<tr>
-<td>{{'[CellLongPressed](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_CellLongPressed)'| markdownify }}</td>
-<td>{{'[LongPressed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_LongPressed)'| markdownify }}</td>
-<td>Occurs when an item is long pressed.</td></tr>
-
-<tr>
-<td>{{'[HeaderTapped](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_HeaderTapped)'| markdownify }}</td>
-<td>{{'[Tapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_Tapped)'| markdownify }}</td>
-<td>Occurs when header item is tapped.</td></tr>
-
-<tr>
-<td>{{'[ViewHeaderTapped](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_ViewHeaderTapped)'| markdownify }}</td>
-<td>{{'[Tapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_Tapped)'| markdownify }}</td>
-<td>Occurs when view header item is tapped.</td></tr>
-
-<tr>
-<td>{{'[VisibleDatesChangedEvent](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_VisibleDatesChangedEvent)'| markdownify }}</td>
-<td>{{'[ViewChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_ViewChanged)'| markdownify }}</td>
-<td>Occurs when view changed.</td></tr>
-
-</table> 
-
-## Methods
-<table>
-<tr>
-<th>Xamarin SfSchedule</th>
-<th>.NET MAUI SfScheduler</th>
-<th>Description</th></tr>
-<tr>
-
-<tr>
-<td>{{'[Backward](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_Backward)'| markdownify}}</td>
-<td>{{'[Backward](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_Backward)'| markdownify }}</td>
-<td>Move to previous view which displays previous view dates.</td></tr>
-
-<tr>
-<td>{{'[Forward](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_Forward)'| markdownify}}</td>
-<td>{{'[Forward](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_Forward)'| markdownify }}</td>
-<td>Move to next view which displays next view dates.</td></tr>
-
-<tr>
-<td>{{'[GetVisibleAppointments](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_GetVisibleAppointments_System_DateTime_System_Nullable_System_DateTime__)'| markdownify}}</td>
-<td>{{'[GetOccurrenceAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRecurrenceManager.html#Syncfusion_Maui_Scheduler_SchedulerRecurrenceManager_GetOccurrenceAppointment_Syncfusion_Maui_Scheduler_SfScheduler_System_Object_System_DateTime_)'| markdownify }}</td>
-<td>Returns the occurrence appointment for the given pattern appointment at the specified date. If there is no appointment occurring on the date specified, null is returned.</td></tr>
-
-<tr>
-<td>{{'[GetRecurrenceDateTimeCollection](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_GetRecurrenceDateTimeCollection_System_String_System_DateTime_System_Nullable_System_DateTime__System_Nullable_System_DateTime__)'| markdownify}}</td>
-<td>{{'[GetDateTimeOccurrences](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRecurrenceManager.html#Syncfusion_Maui_Scheduler_SchedulerRecurrenceManager_GetDateTimeOccurrences_System_String_System_DateTime_System_Nullable_System_DateTime__System_Nullable_System_DateTime__System_Nullable_System_DateTime__)'| markdownify }}</td>
-<td>Method to get date time collection at which the recurrence appointment will occur.</td></tr>
-
-<tr>
-<td>{{'[RRuleGenerator](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_RRuleGenerator_Syncfusion_SfSchedule_XForms_RecurrenceProperties_System_DateTime_System_DateTime_)'| markdownify}}</td>
-<td>{{'[GenerateRRule](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRecurrenceManager.html#Syncfusion_Maui_Scheduler_SchedulerRecurrenceManager_GenerateRRule_Syncfusion_Maui_Scheduler_SchedulerRecurrenceInfo_System_DateTime_System_DateTime_)'| markdownify }}</td>
-<td>Method to generates the recurrence rule based on the given recurrence properties, the start date and end date of the recurrence appointments.</td></tr>
-
-<tr>
-<td>{{'[RRuleParser](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_RRuleParser_System_String_System_DateTime_)'| markdownify}}</td>
-<td>{{'[ParseRRule](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRecurrenceManager.html#Syncfusion_Maui_Scheduler_SchedulerRecurrenceManager_ParseRRule_System_String_System_DateTime_)'| markdownify }}</td>
-<td>Returns the recurrence properties based on the given recurrence rule and the recurrence start date.</td></tr>
-</table> 
-
-
-## MonthView
+### MonthView
 
 <table>
 <tr>
@@ -632,7 +524,7 @@ To migrate easier from [Xamarin SfSchedule](https://www.syncfusion.com/xamarin-u
 <td>Gets or sets a view header day format of the SfScheduler.</td></tr>
  </table> 
 
-## DayView
+### DayView
 
 <table>
 <tr>
@@ -694,7 +586,7 @@ To migrate easier from [Xamarin SfSchedule](https://www.syncfusion.com/xamarin-u
 
  </table> 
 
-## TimelineView
+### TimelineView
 
 <table>
 <tr>
@@ -761,8 +653,7 @@ To migrate easier from [Xamarin SfSchedule](https://www.syncfusion.com/xamarin-u
 <td>Gets or sets a view header date format of the SfScheduler.</td></tr>
  </table> 
 
-
-## SchedulerTimeRegion
+### SchedulerTimeRegion
 
 <table>
 <tr>
@@ -802,7 +693,103 @@ To migrate easier from [Xamarin SfSchedule](https://www.syncfusion.com/xamarin-u
 
 </table> 
 
-## AppointmentTextStyle
+### HeaderView
+
+<table>
+<tr>
+<th>Xamarin SfSchedule <br/> (HeaderStyle)</th>
+<th>.NET MAUI SfScheduler <br/> (HeaderView)</th>
+<th>Description</th></tr> 
+
+<tr>
+<td>{{'[BackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.HeaderStyle.html#Syncfusion_SfSchedule_XForms_HeaderStyle_BackgroundColor)'| markdownify }}</td>
+<td>{{'[Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderSettingsBase.html#Syncfusion_Maui_Scheduler_SchedulerHeaderSettingsBase_Background)'| markdownify }} </td>
+<td>Gets or sets the header background to customize the default background of the header in the scheduler.</td></tr>
+
+<tr>
+<td>{{'[TextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.HeaderStyle.html#Syncfusion_SfSchedule_XForms_HeaderStyle_TextColor)'| markdownify }}</td>
+<td>{{'[TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTextStyle.html#Syncfusion_Maui_Scheduler_SchedulerTextStyle_TextColor)'| markdownify }} </td>
+<td>Gets or sets the text color for the scheduler.</td></tr>
+
+<tr>
+<td>{{'[FontFamily](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.HeaderStyle.html#Syncfusion_SfSchedule_XForms_HeaderStyle_FontFamily)'| markdownify }}</td>
+<td>{{'[FontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTextStyle.html#Syncfusion_Maui_Scheduler_SchedulerTextStyle_FontFamily)'| markdownify }} </td>
+<td>Gets or sets the string, that represents font family of the SfScheduler.</td></tr>
+
+<tr>
+<td>{{'[FontSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.HeaderStyle.html#Syncfusion_SfSchedule_XForms_HeaderStyle_FontSize)'| markdownify }}</td>
+<td>{{'[FontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTextStyle.html#Syncfusion_Maui_Scheduler_SchedulerTextStyle_FontSize)'| markdownify }} </td>
+<td>Gets or sets the double value that represents size of the SfScheduler.</td></tr>
+
+<tr>
+<td>{{'[FontAttributes](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.HeaderStyle.html#Syncfusion_SfSchedule_XForms_HeaderStyle_FontAttributes)'| markdownify }}</td>
+<td>{{'[FontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTextStyle.html#Syncfusion_Maui_Scheduler_SchedulerTextStyle_FontAttributes)'| markdownify }} </td>
+<td>Gets or sets the FontAttributes of the SfScheduler.</td></tr>
+
+</table> 
+
+### ViewHeaderSettings
+
+<table>
+<tr>
+<th>Xamarin SfSchedule <br/> (ViewHeaderStyle)</th>
+<th>.NET MAUI SfScheduler <br/> (ViewHeaderSettings)</th>
+<th>Description</th></tr> 
+
+<tr>
+<td>{{'[CurrentDayTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ViewHeaderStyle.html#Syncfusion_SfSchedule_XForms_ViewHeaderStyle_CurrentDayTextColor)'| markdownify }}, <br/> {{'[CurrentDateTextColor]()'| markdownify }}</td>
+<td>{{'[TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTextStyle.html#Syncfusion_Maui_Scheduler_SchedulerTextStyle_TextColor)'| markdownify }} (From TodayTextStyle of Scheduler) </td>
+<td>Gets or sets the current day text color for the scheduler.</td></tr>
+
+<tr>
+<td>{{'[BackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ViewHeaderStyle.html#Syncfusion_SfSchedule_XForms_ViewHeaderStyle_BackgroundColor)'| markdownify }}</td>
+<td>{{'[Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderSettingsBase.html#Syncfusion_Maui_Scheduler_SchedulerHeaderSettingsBase_Background)'| markdownify }} </td>
+<td>Gets or sets the view header background to customize the default background of the header in the scheduler.</td></tr>
+
+<tr>
+<td>{{'[DayTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ViewHeaderStyle.html#Syncfusion_SfSchedule_XForms_ViewHeaderStyle_DayTextColor)'| markdownify }}</td>
+<td>{{'[TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTextStyle.html#Syncfusion_Maui_Scheduler_SchedulerTextStyle_TextColor)'| markdownify }} (From DayTextStyle) </td>
+<td>Gets or sets the day text color for the scheduler.</td></tr>
+
+<tr>
+<td>{{'[DateTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ViewHeaderStyle.html#Syncfusion_SfSchedule_XForms_ViewHeaderStyle_DateTextColor)'| markdownify }}</td>
+<td>{{'[TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTextStyle.html#Syncfusion_Maui_Scheduler_SchedulerTextStyle_TextColor)'| markdownify }} (From DateTextStyle)</td>
+<td>Gets or sets the date text color for the scheduler.</td></tr>
+
+<tr>
+<td>{{'[DayFontFamily](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ViewHeaderStyle.html#Syncfusion_SfSchedule_XForms_ViewHeaderStyle_DayFontFamily)'| markdownify }}</td>
+<td>{{'[FontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTextStyle.html#Syncfusion_Maui_Scheduler_SchedulerTextStyle_FontFamily)'| markdownify }} (From DayTextStyle)</td>
+<td>Gets or sets the string, that represents font family of the SfScheduler.</td></tr>
+
+<tr>
+<td>{{'[DateFontFamily](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ViewHeaderStyle.html#Syncfusion_SfSchedule_XForms_ViewHeaderStyle_DateFontFamily)'| markdownify }}</td>
+<td>{{'[FontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTextStyle.html#Syncfusion_Maui_Scheduler_SchedulerTextStyle_FontFamily)'| markdownify }} (From DateTextStyle)</td>
+<td>Gets or sets the string, that represents font family of the SfScheduler.</td></tr>
+
+<tr>
+<td>{{'[DayFontSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ViewHeaderStyle.html#Syncfusion_SfSchedule_XForms_ViewHeaderStyle_DayFontSize)'| markdownify }}</td>
+<td>{{'[FontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTextStyle.html#Syncfusion_Maui_Scheduler_SchedulerTextStyle_FontSize)'| markdownify }} (From DayTextStyle) </td>
+<td>Gets or sets the double value that represents size of the SfScheduler.</td></tr>
+
+<tr>
+<td>{{'[DateFontSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ViewHeaderStyle.html#Syncfusion_SfSchedule_XForms_ViewHeaderStyle_DayFontSize)'| markdownify }}</td>
+<td>{{'[FontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTextStyle.html#Syncfusion_Maui_Scheduler_SchedulerTextStyle_FontSize)'| markdownify }} (From DateTextStyle) </td>
+<td>Gets or sets the double value that represents size of the SfScheduler.</td></tr>
+
+<tr>
+<td>{{'[DayFontAttributes](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ViewHeaderStyle.html#Syncfusion_SfSchedule_XForms_ViewHeaderStyle_DayFontAttributes)'| markdownify }}</td>
+<td>{{'[FontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTextStyle.html#Syncfusion_Maui_Scheduler_SchedulerTextStyle_FontAttributes)'| markdownify }} (From DayTextStyle) </td>
+<td>Gets or sets the FontAttributes of the SfScheduler.</td></tr>
+
+<tr>
+<td>{{'[DateFontAttributes](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ViewHeaderStyle.html#Syncfusion_SfSchedule_XForms_ViewHeaderStyle_DateFontAttributes)'| markdownify }}</td>
+<td>{{'[FontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTextStyle.html#Syncfusion_Maui_Scheduler_SchedulerTextStyle_FontAttributes)'| markdownify }} (From DateTextStyle) </td>
+<td>Gets or sets the FontAttributes of the SfScheduler.</td></tr>
+
+</table> 
+
+
+### AppointmentTextStyle
 
 <table>
 <tr>
@@ -832,7 +819,7 @@ To migrate easier from [Xamarin SfSchedule](https://www.syncfusion.com/xamarin-u
 
 </table> 
 
-## CellStyle
+### CellStyle
 
 <table>
 <tr>
@@ -897,102 +884,7 @@ To migrate easier from [Xamarin SfSchedule](https://www.syncfusion.com/xamarin-u
 
 </table> 
 
-## HeaderView
-
-<table>
-<tr>
-<th>Xamarin SfSchedule <br/> (HeaderStyle)</th>
-<th>.NET MAUI SfScheduler <br/> (HeaderView)</th>
-<th>Description</th></tr> 
-
-<tr>
-<td>{{'[BackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.HeaderStyle.html#Syncfusion_SfSchedule_XForms_HeaderStyle_BackgroundColor)'| markdownify }}</td>
-<td>{{'[Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderSettingsBase.html#Syncfusion_Maui_Scheduler_SchedulerHeaderSettingsBase_Background)'| markdownify }} </td>
-<td>Gets or sets the header background to customize the default background of the header in the scheduler.</td></tr>
-
-<tr>
-<td>{{'[TextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.HeaderStyle.html#Syncfusion_SfSchedule_XForms_HeaderStyle_TextColor)'| markdownify }}</td>
-<td>{{'[TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTextStyle.html#Syncfusion_Maui_Scheduler_SchedulerTextStyle_TextColor)'| markdownify }} </td>
-<td>Gets or sets the text color for the scheduler.</td></tr>
-
-<tr>
-<td>{{'[FontFamily](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.HeaderStyle.html#Syncfusion_SfSchedule_XForms_HeaderStyle_FontFamily)'| markdownify }}</td>
-<td>{{'[FontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTextStyle.html#Syncfusion_Maui_Scheduler_SchedulerTextStyle_FontFamily)'| markdownify }} </td>
-<td>Gets or sets the string, that represents font family of the SfScheduler.</td></tr>
-
-<tr>
-<td>{{'[FontSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.HeaderStyle.html#Syncfusion_SfSchedule_XForms_HeaderStyle_FontSize)'| markdownify }}</td>
-<td>{{'[FontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTextStyle.html#Syncfusion_Maui_Scheduler_SchedulerTextStyle_FontSize)'| markdownify }} </td>
-<td>Gets or sets the double value that represents size of the SfScheduler.</td></tr>
-
-<tr>
-<td>{{'[FontAttributes](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.HeaderStyle.html#Syncfusion_SfSchedule_XForms_HeaderStyle_FontAttributes)'| markdownify }}</td>
-<td>{{'[FontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTextStyle.html#Syncfusion_Maui_Scheduler_SchedulerTextStyle_FontAttributes)'| markdownify }} </td>
-<td>Gets or sets the FontAttributes of the SfScheduler.</td></tr>
-
-</table> 
-
-## ViewHeaderSettings
-
-<table>
-<tr>
-<th>Xamarin SfSchedule <br/> (ViewHeaderStyle)</th>
-<th>.NET MAUI SfScheduler <br/> (ViewHeaderSettings)</th>
-<th>Description</th></tr> 
-
-<tr>
-<td>{{'[CurrentDayTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ViewHeaderStyle.html#Syncfusion_SfSchedule_XForms_ViewHeaderStyle_CurrentDayTextColor)'| markdownify }}, <br/> {{'[CurrentDateTextColor]()'| markdownify }}</td>
-<td>{{'[TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTextStyle.html#Syncfusion_Maui_Scheduler_SchedulerTextStyle_TextColor)'| markdownify }} (From TodayTextStyle of Scheduler) </td>
-<td>Gets or sets the current day text color for the scheduler.</td></tr>
-
-<tr>
-<td>{{'[BackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ViewHeaderStyle.html#Syncfusion_SfSchedule_XForms_ViewHeaderStyle_BackgroundColor)'| markdownify }}</td>
-<td>{{'[Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderSettingsBase.html#Syncfusion_Maui_Scheduler_SchedulerHeaderSettingsBase_Background)'| markdownify }} </td>
-<td>Gets or sets the view header background to customize the default background of the header in the scheduler.</td></tr>
-
-<tr>
-<td>{{'[DayTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ViewHeaderStyle.html#Syncfusion_SfSchedule_XForms_ViewHeaderStyle_DayTextColor)'| markdownify }}</td>
-<td>{{'[TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTextStyle.html#Syncfusion_Maui_Scheduler_SchedulerTextStyle_TextColor)'| markdownify }} (From DayTextStyle) </td>
-<td>Gets or sets the day text color for the scheduler.</td></tr>
-
-<tr>
-<td>{{'[DateTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ViewHeaderStyle.html#Syncfusion_SfSchedule_XForms_ViewHeaderStyle_DateTextColor)'| markdownify }}</td>
-<td>{{'[TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTextStyle.html#Syncfusion_Maui_Scheduler_SchedulerTextStyle_TextColor)'| markdownify }} (From DateTextStyle)</td>
-<td>Gets or sets the date text color for the scheduler.</td></tr>
-
-<tr>
-<td>{{'[DayFontFamily](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ViewHeaderStyle.html#Syncfusion_SfSchedule_XForms_ViewHeaderStyle_DayFontFamily)'| markdownify }}</td>
-<td>{{'[FontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTextStyle.html#Syncfusion_Maui_Scheduler_SchedulerTextStyle_FontFamily)'| markdownify }} (From DayTextStyle)</td>
-<td>Gets or sets the string, that represents font family of the SfScheduler.</td></tr>
-
-<tr>
-<td>{{'[DateFontFamily](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ViewHeaderStyle.html#Syncfusion_SfSchedule_XForms_ViewHeaderStyle_DateFontFamily)'| markdownify }}</td>
-<td>{{'[FontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTextStyle.html#Syncfusion_Maui_Scheduler_SchedulerTextStyle_FontFamily)'| markdownify }} (From DateTextStyle)</td>
-<td>Gets or sets the string, that represents font family of the SfScheduler.</td></tr>
-
-<tr>
-<td>{{'[DayFontSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ViewHeaderStyle.html#Syncfusion_SfSchedule_XForms_ViewHeaderStyle_DayFontSize)'| markdownify }}</td>
-<td>{{'[FontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTextStyle.html#Syncfusion_Maui_Scheduler_SchedulerTextStyle_FontSize)'| markdownify }} (From DayTextStyle) </td>
-<td>Gets or sets the double value that represents size of the SfScheduler.</td></tr>
-
-<tr>
-<td>{{'[DateFontSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ViewHeaderStyle.html#Syncfusion_SfSchedule_XForms_ViewHeaderStyle_DayFontSize)'| markdownify }}</td>
-<td>{{'[FontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTextStyle.html#Syncfusion_Maui_Scheduler_SchedulerTextStyle_FontSize)'| markdownify }} (From DateTextStyle) </td>
-<td>Gets or sets the double value that represents size of the SfScheduler.</td></tr>
-
-<tr>
-<td>{{'[DayFontAttributes](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ViewHeaderStyle.html#Syncfusion_SfSchedule_XForms_ViewHeaderStyle_DayFontAttributes)'| markdownify }}</td>
-<td>{{'[FontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTextStyle.html#Syncfusion_Maui_Scheduler_SchedulerTextStyle_FontAttributes)'| markdownify }} (From DayTextStyle) </td>
-<td>Gets or sets the FontAttributes of the SfScheduler.</td></tr>
-
-<tr>
-<td>{{'[DateFontAttributes](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ViewHeaderStyle.html#Syncfusion_SfSchedule_XForms_ViewHeaderStyle_DateFontAttributes)'| markdownify }}</td>
-<td>{{'[FontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTextStyle.html#Syncfusion_Maui_Scheduler_SchedulerTextStyle_FontAttributes)'| markdownify }} (From DateTextStyle) </td>
-<td>Gets or sets the FontAttributes of the SfScheduler.</td></tr>
-
-</table> 
-
-## WeekNumberStyle
+### WeekNumberStyle
 
 <table>
 <tr>
@@ -1003,7 +895,7 @@ To migrate easier from [Xamarin SfSchedule](https://www.syncfusion.com/xamarin-u
 <tr>
 <td>{{'[TextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.WeekNumberStyle.html#Syncfusion_SfSchedule_XForms_WeekNumberStyle_TextColor)'| markdownify }}</td>
 <td>{{'[TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTextStyle.html#Syncfusion_Maui_Scheduler_SchedulerTextStyle_TextColor)'| markdownify }} </td>
-<td>https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTextStyle.html#Syncfusion_Maui_Scheduler_SchedulerTextStyle_TextColor.</td></tr>
+<td>Gets or sets the text color for the scheduler.</td></tr>
 
 <tr>
 <td>{{'[FontFamily](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.WeekNumberStyle.html#Syncfusion_SfSchedule_XForms_WeekNumberStyle_FontFamily)'| markdownify }}</td>
@@ -1020,4 +912,112 @@ To migrate easier from [Xamarin SfSchedule](https://www.syncfusion.com/xamarin-u
 <td>{{'[FontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTextStyle.html#Syncfusion_Maui_Scheduler_SchedulerTextStyle_FontAttributes)'| markdownify }} </td>
 <td>Gets or sets the FontAttributes of the SfScheduler.</td></tr>
 
+</table> 
+
+## Enums
+
+<table>
+<tr>
+<th>Xamarin SfSchedule</th>
+<th>.NET MAUI SfScheduler</th>
+<th>Description</th></tr>
+
+<tr>
+<td>{{'[AppointmentDisplayMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.AppointmentDisplayMode.html)'| markdownify }}</td>
+<td>{{'[SchedulerMonthAppointmentDisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthAppointmentDisplayMode.html)'| markdownify }}</td>
+<td>Specifies the displaying mode for appointment in month view.</td></tr>
+
+<tr>
+<td>{{'[RecurrenceRange](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.RecurrenceRange.html)'| markdownify }}</td>
+<td>{{'[SchedulerRecurrenceRange](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRecurrenceRange.html)'| markdownify }}</td>
+<td>Specifies the type of recurrence date range.</td></tr>
+
+<tr>
+<td>{{'[RecurrenceType](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.RecurrenceType.html)'| markdownify }}</td>
+<td>{{'[SchedulerRecurrenceType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRecurrenceType.html)'| markdownify }}</td>
+<td>Specifies the type of recurrence in the appointment.</td></tr>
+
+<tr>
+<td>{{'[ScheduleView](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ScheduleView.html)'| markdownify }}</td>
+<td>{{'[SchedulerView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerView.html)'| markdownify }}</td>
+<td>Defines the view for the SfScheduler.</td></tr>
+
+</table> 
+
+## Events
+
+<table>
+<tr>
+<th>Xamarin SfSchedule</th>
+<th>.NET MAUI SfScheduler</th>
+<th>Description</th></tr>
+<tr>
+<td>{{'[CellDoubleTapped](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_CellDoubleTapped)'| markdownify }}</td>
+<td>{{'[DoubleTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_DoubleTapped)'| markdownify }}</td>
+<td>Occurs when an item is double tapped.</td></tr>
+
+<tr>
+<td>{{'[CellTapped](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_CellTapped)'| markdownify }}</td>
+<td>{{'[Tapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_Tapped)'| markdownify }}</td>
+<td>Occurs when an item is tapped.</td></tr>
+
+<tr>
+<td>{{'[CellLongPressed](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_CellLongPressed)'| markdownify }}</td>
+<td>{{'[LongPressed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_LongPressed)'| markdownify }}</td>
+<td>Occurs when an item is long pressed.</td></tr>
+
+<tr>
+<td>{{'[HeaderTapped](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_HeaderTapped)'| markdownify }}</td>
+<td>{{'[Tapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_Tapped)'| markdownify }}</td>
+<td>Occurs when header item is tapped.</td></tr>
+
+<tr>
+<td>{{'[ViewHeaderTapped](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_ViewHeaderTapped)'| markdownify }}</td>
+<td>{{'[Tapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_Tapped)'| markdownify }}</td>
+<td>Occurs when view header item is tapped.</td></tr>
+
+<tr>
+<td>{{'[VisibleDatesChangedEvent](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_VisibleDatesChangedEvent)'| markdownify }}</td>
+<td>{{'[ViewChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_ViewChanged)'| markdownify }}</td>
+<td>Occurs when view changed.</td></tr>
+</table> 
+
+## Methods
+
+<table>
+<tr>
+<th>Xamarin SfSchedule</th>
+<th>.NET MAUI SfScheduler</th>
+<th>Description</th></tr>
+<tr>
+
+<tr>
+<td>{{'[Backward](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_Backward)'| markdownify}}</td>
+<td>{{'[Backward](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_Backward)'| markdownify }}</td>
+<td>Move to previous view which displays previous view dates.</td></tr>
+
+<tr>
+<td>{{'[Forward](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_Forward)'| markdownify}}</td>
+<td>{{'[Forward](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_Forward)'| markdownify }}</td>
+<td>Move to next view which displays next view dates.</td></tr>
+
+<tr>
+<td>{{'[GetVisibleAppointments](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_GetVisibleAppointments_System_DateTime_System_Nullable_System_DateTime__)'| markdownify}}</td>
+<td>{{'[GetOccurrenceAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRecurrenceManager.html#Syncfusion_Maui_Scheduler_SchedulerRecurrenceManager_GetOccurrenceAppointment_Syncfusion_Maui_Scheduler_SfScheduler_System_Object_System_DateTime_)'| markdownify }}</td>
+<td>Returns the occurrence appointment for the given pattern appointment at the specified date. If there is no appointment occurring on the date specified, null is returned.</td></tr>
+
+<tr>
+<td>{{'[GetRecurrenceDateTimeCollection](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_GetRecurrenceDateTimeCollection_System_String_System_DateTime_System_Nullable_System_DateTime__System_Nullable_System_DateTime__)'| markdownify}}</td>
+<td>{{'[GetDateTimeOccurrences](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRecurrenceManager.html#Syncfusion_Maui_Scheduler_SchedulerRecurrenceManager_GetDateTimeOccurrences_System_String_System_DateTime_System_Nullable_System_DateTime__System_Nullable_System_DateTime__System_Nullable_System_DateTime__)'| markdownify }}</td>
+<td>Method to get date time collection at which the recurrence appointment will occur.</td></tr>
+
+<tr>
+<td>{{'[RRuleGenerator](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_RRuleGenerator_Syncfusion_SfSchedule_XForms_RecurrenceProperties_System_DateTime_System_DateTime_)'| markdownify}}</td>
+<td>{{'[GenerateRRule](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRecurrenceManager.html#Syncfusion_Maui_Scheduler_SchedulerRecurrenceManager_GenerateRRule_Syncfusion_Maui_Scheduler_SchedulerRecurrenceInfo_System_DateTime_System_DateTime_)'| markdownify }}</td>
+<td>Method to generates the recurrence rule based on the given recurrence properties, the start date and end date of the recurrence appointments.</td></tr>
+
+<tr>
+<td>{{'[RRuleParser](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_RRuleParser_System_String_System_DateTime_)'| markdownify}}</td>
+<td>{{'[ParseRRule](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRecurrenceManager.html#Syncfusion_Maui_Scheduler_SchedulerRecurrenceManager_ParseRRule_System_String_System_DateTime_)'| markdownify }}</td>
+<td>Returns the recurrence properties based on the given recurrence rule and the recurrence start date.</td></tr>
 </table> 
