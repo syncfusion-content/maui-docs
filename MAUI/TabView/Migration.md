@@ -11,7 +11,7 @@ documentation: ug
 
 To migrate easier from Xamarin SfTabView to .NET MAUI SfTabView, we kept most of the APIs from Xamarin SfTabView in MAUI SfTabView. However, to maintain the consistency of API naming in MAUI SfTabView, we renamed some of the APIs. The APIs that have been changed in MAUI SfTabView from Xamarin SfTabView are detailed as follows.
 
-##Assembly Name 
+## Assembly Name 
 
 <table>
 <tr>
@@ -22,7 +22,7 @@ To migrate easier from Xamarin SfTabView to .NET MAUI SfTabView, we kept most of
 <td>Syncfusion.Maui.TabView</td></tr>
 </table>
 
-##Namespaces 
+## Namespaces 
 
 <table>
 <tr>
@@ -33,7 +33,7 @@ To migrate easier from Xamarin SfTabView to .NET MAUI SfTabView, we kept most of
 <td>Syncfusion.Maui.TabView</td></tr>
 </table>
 
-##Properties
+## Properties
 
 <table> 
 <tr>
@@ -82,7 +82,7 @@ To migrate easier from Xamarin SfTabView to .NET MAUI SfTabView, we kept most of
 <td>Gets or sets the text for the tab header.</td></tr>
 </table> 
 
-##Enums
+## Enums
 
 <table>
 <tr>
@@ -97,7 +97,7 @@ To migrate easier from Xamarin SfTabView to .NET MAUI SfTabView, we kept most of
 <td>Defines the width of each tab.</td></tr>
 </table>
 
-##Classes 
+## Classes 
 
 <table>
 <tr>
