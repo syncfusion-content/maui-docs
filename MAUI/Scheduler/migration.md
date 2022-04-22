@@ -1289,16 +1289,10 @@ To migrate easier from [Xamarin SfSchedule](https://www.syncfusion.com/xamarin-u
 
 ## Upcoming Features
 
-* Appointment Drag and Drop.
-* TimeIndicatorStyle 
 * Resource view support.
-* CellDoubleTappedCommand
-* CellLongPressedCommand
-* CellTappedCommand
-* VisibleDatesChangedCommand
-* MonthNavigationDirection
-* DaysCount support in TimelineView
-* SuspendAppointmentUpdate
-* ResourceIds support in SchedulerAppointment.
-* SchedulerAppointment text color and mapping support.
-* ResourceIdsMapping
+* Days count support in timeslot views.
+* Month view navigation direction support.
+* Command support for Tapped, Double Tapped, Long Pressed and VisibleDatesChanged.
+* Support to change text color for each scheduler appointment.
+* Suspend and resume for appointment update.
+* Appointment Drag and Drop.
