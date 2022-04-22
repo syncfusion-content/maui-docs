@@ -1292,7 +1292,7 @@ To migrate easier from [Xamarin SfSchedule](https://www.syncfusion.com/xamarin-u
 * Resource view support.
 * Days count support in timeslot views.
 * Month view navigation direction support.
-* Command support for Tapped, Double Tapped, Long Pressed and VisibleDatesChanged.
+* Command support for Tapped, DoubleTapped, LongPressed and ViewChanged events.
 * Support to change text color for each scheduler appointment.
 * Suspend and resume for appointment update.
 * Appointment Drag and Drop.
