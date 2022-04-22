@@ -1,27 +1,15 @@
 ---
 layout: post
-title: Migration from Xamarin to .NET MAUI Chart control | Syncfusion
-description: This section explains about the major features available in the .NET MAUI Chart (SfCartesianChart) control.
+title: Migrate from Xamarin to .NET MAUI Chart control | Syncfusion
+description: Learn here all about migration from Syncfusion Xamarin SfChart to .NET MAUI Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
 documentation: ug
 ---
 
-# Migrate from Xamarin.Forms SfChart to .NET MAUI SfCartesianChart
+# Migrate Xamarin SfChart to .NET MAUI SfCartesianChart
 
 We kept most of the APIs from Xamarin [SfChart](https://www.syncfusion.com/xamarin-ui-controls/xamarin-charts) in MAUI [SfCartesianChart](https://www.syncfusion.com/maui-controls/maui-charts) to make migration easier. However, we renamed some APIs in.NET MAUI SfCartesianChart to keep consistency in API names. The APIs that have changed from Xamarin SfChart to MAUI SfCartesianChart are detailed as follows.
-
-## Assembly Reference 
-
-<table>
-<tr>
-<th>Xamarin</th>
-<th>.NET MAUI</th></tr>
-<tr>
-<td>Syncfusion.SfChart.XForms</td>
-<td>Syncfusion.Maui.Charts</td></tr>
-</table>
-
 
 To initialize the control, import the Chart namespace and Initialize [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1) as per the following code snippet. 
 
@@ -631,7 +619,7 @@ Create an instance of the `ChartSelectionBehavior` class and add it to the  `Cha
 
 The zooming and panning are achieved using the `ChartZoomPanBehavior` in SfChart and SfCartesianChart as per the above code example.
 
-### Support and feedback
+## Support and feedback
 
 If you are unable to find the information that you are looking for in the self-help resources mentioned above, please contact us by creating a [support ticket](https://www.syncfusion.com/support/directtrac/incidents).
 Do not see what you need? Please request it in our [feedback portal](https://www.syncfusion.com/feedback/maui).
