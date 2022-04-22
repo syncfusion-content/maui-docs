@@ -11,17 +11,6 @@ documentation: ug
 
 To migrate easier from Xamarin SfTabView to .NET MAUI SfTabView, we kept most of the APIs from Xamarin SfTabView in MAUI SfTabView. However, to maintain the consistency of API naming in MAUI SfTabView, we renamed some of the APIs. The APIs that have been changed in MAUI SfTabView from Xamarin SfTabView are detailed as follows.
 
-## Assembly Name 
-
-<table>
-<tr>
-<th>Xamarin SfTabView</th>
-<th>.NET MAUI SfTabView</th></tr>
-<tr>
-<td>Syncfusion.SfTabView.XForms</td>
-<td>Syncfusion.Maui.TabView</td></tr>
-</table>
-
 ## Namespaces 
 
 <table>

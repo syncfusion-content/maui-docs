@@ -11,17 +11,6 @@ documentation: ug
 
 To migrate easier from Xamarin SfEffectsView to .NET MAUI SfEffectsView, we kept most of the APIs from Xamarin SfEffectsView in MAUI SfEffectsView. However, to maintain the consistency of API naming in MAUI SfEffectsView, we renamed some of the APIs. The APIs that have been changed in MAUI SfEffectsView from Xamarin SfEffectsView are detailed as follows.
 
-## Assembly Name 
-
-<table>
-<tr>
-<th>Xamarin SfEffectsView</th>
-<th>.NET MAUI SfEffectsView</th></tr>
-<tr>
-<td>Syncfusion.Core.XForms</td>
-<td>Syncfusion.Maui.Core</td></tr>
-</table>
-
 ## Namespaces 
 
 <table>
