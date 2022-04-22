@@ -1300,5 +1300,5 @@ To migrate easier from [Xamarin SfSchedule](https://www.syncfusion.com/xamarin-u
 * DaysCount support in TimelineView
 * SuspendAppointmentUpdate
 * ResourceIds support in SchedulerAppointment.
-* TextColorMapping - Appointment text color and mapping support.
+* SchedulerAppointment text color and mapping support.
 * ResourceIdsMapping
