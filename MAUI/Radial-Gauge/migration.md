@@ -9,9 +9,9 @@ documentation: ug
 
 # Migrate from Xamarin.Forms SfCircularGauge to .NET MAUI SfRadialGauge
 
-To migrate easier from [Xamarin SfCircularGauge](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.SfCircularGauge.html) to [.NET MAUI SfRadialGauge](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfRadialGauge.html), we kept most of the APIs from Xamarin SfCircularGauge in MAUI SfRadialGauge. However, to maintain the consistency of API naming in .NET MAUI SfRadialGauge, we renamed some of the APIs. The APIs that have been changed in MAUI SfRadialGauge from Xamarin SfCircularGauge are detailed as follows.
+To make the migration from the [Xamarin SfCircularGauge](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.SfCircularGauge.html) to [.NET MAUI SfRadialGauge](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfRadialGauge.html) easier, we kept most of the APIs from the Xamarin SfCircularGauge in the.NET MAUI SfRadialGauge. However, to maintain the consistency of API naming in the.NET MAUI SfRadialGauge, we renamed some of the APIs. Please find the difference in the below topics.
 
-## Adding Reference
+## Import namespace
 
 <table>
 <tr>
