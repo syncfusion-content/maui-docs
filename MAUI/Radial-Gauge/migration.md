@@ -541,7 +541,7 @@ The ContentPointer in SfRadialGauge allows to use any .NET MAUI content as point
 <tr>
 <td> - </td>
 <td>{{'[Content](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.ContentPointer.html#Syncfusion_Maui_Gauges_ContentPointer_Content)'| markdownify }}</td>
-<td>Gets or sets a value that specifies the shape height in logical pixels.</td>
+<td>Gets or sets the content of a ContentPointer.</td>
 </tr>
 </table>
 
