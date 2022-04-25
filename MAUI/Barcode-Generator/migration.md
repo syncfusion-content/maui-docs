@@ -11,16 +11,7 @@ documentation: ug
 
 To make the migration from the [Xamarin SfBarcode](https://www.syncfusion.com/xamarin-ui-controls/xamarin-barcode) to [.NET MAUI SfBarcodeGenerator](https://www.syncfusion.com/maui-controls/maui-barcodes) easier, we kept most of the APIs from the Xamarin SfBarcode in the.NET MAUI SfBarcodeGenerator. However, to maintain the consistency of API naming in the.NET MAUI SfBarcodeGenerator, we renamed some of the APIs. Please find the difference in the below topics.
 
-## Import namespace
-
-<table>
-<tr>
-<th>Xamarin SfBarcode</th>
-<th>.NET MAUI SfBarcodeGenerator</th></tr>
-<tr>
-<td>Syncfusion.SfBarcode.XForms</td>
-<td>Syncfusion.Maui.Barcode</td></tr>
-</table>
+## Initialize control
 
 To initialize the control, import the Barcode namespace and Initialize SfBarcodeGenerator as per the following code snippet.
 

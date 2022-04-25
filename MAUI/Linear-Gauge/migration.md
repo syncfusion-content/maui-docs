@@ -11,16 +11,7 @@ documentation: ug
 
 To make the migration from the [Xamarin SfLinearGauge](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.SfLinearGauge.html) to the [.NET MAUI SfLinearGauge](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html) easier, we kept most of the similar APIs from the Xamarin [SfLinearGauge](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.SfLinearGauge.html) in the.NET MAUI [SfLinearGauge](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html). We have also restructured the APIs by considering various use cases and maintaining API consistency. Please find the difference in the below topics.
 
-## Import namespace
-
-<table>
-<tr>
-<th>Xamarin SfLinearGauge</th>
-<th>.NET MAUI SfLinearGauge</th></tr>
-<tr>
-<td>Syncfusion.SfGauge.XForms</td>
-<td>Syncfusion.Maui.Gauges</td></tr>
-</table>
+## Initialize control
 
 To initialize the control, import the gauge namespace and Initialize SfLinearGauge as per the following code snippet.
 

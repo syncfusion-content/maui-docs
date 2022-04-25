@@ -11,16 +11,7 @@ documentation: ug
 
 To make the migration from the [Xamarin SfCircularGauge](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.SfCircularGauge.html) to [.NET MAUI SfRadialGauge](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfRadialGauge.html) easier, we kept most of the APIs from the Xamarin SfCircularGauge in the.NET MAUI SfRadialGauge. However, to maintain the consistency of API naming in the.NET MAUI SfRadialGauge, we renamed some of the APIs. Please find the difference in the below topics.
 
-## Import namespace
-
-<table>
-<tr>
-<th>Xamarin SfCircularGauge</th>
-<th>.NET MAUI SfRadialGauge</th></tr>
-<tr>
-<td>Syncfusion.SfGauge.XForms</td>
-<td>Syncfusion.Maui.Gauges</td></tr>
-</table>
+## Initialize control
 
 To initialize the control, import the gauge namespace and Initialize SfRadialGauge as per the following code snippet.
 
