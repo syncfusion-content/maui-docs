@@ -1248,7 +1248,6 @@ To migrate easier from [Xamarin SfSchedule](https://www.syncfusion.com/xamarin-u
 <th>Xamarin SfSchedule</th>
 <th>.NET MAUI SfScheduler</th>
 <th>Description</th></tr>
-<tr>
 
 <tr>
 <td>{{'[Backward](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_Backward)'| markdownify}}</td>
