@@ -9,18 +9,9 @@ documentation: ug
 
 # Migrate from Xamarin.Forms SfBarcode to .NET MAUI SfBarcodeGenerator
 
-To migrate easier from [Xamarin SfBarcode](https://www.syncfusion.com/xamarin-ui-controls/xamarin-barcode) to [.NET MAUI SfBarcodeGenerator](https://www.syncfusion.com/maui-controls/maui-barcodes), we kept most of the APIs from Xamarin SfBarcode in MAUI SfBarcodeGenerator. However, to maintain the consistency of API naming in MAUI SfBarcodeGenerator, we renamed some of the APIs. The APIs that have been changed in MAUI SfBarcodeGenerator from Xamarin SfBarcode are detailed as follows.
+To make the migration from the [Xamarin SfBarcode](https://www.syncfusion.com/xamarin-ui-controls/xamarin-barcode) to [.NET MAUI SfBarcodeGenerator](https://www.syncfusion.com/maui-controls/maui-barcodes) easier, we kept most of the APIs from the Xamarin SfBarcode in the.NET MAUI SfBarcodeGenerator. However, to maintain the consistency of API naming in the.NET MAUI SfBarcodeGenerator, we renamed some of the APIs. Please find the difference in the below topics.
 
-## Adding Reference
-
-<table>
-<tr>
-<th>Xamarin SfBarcode</th>
-<th>.NET MAUI SfBarcodeGenerator</th></tr>
-<tr>
-<td>Syncfusion.SfBarcode.XForms</td>
-<td>Syncfusion.Maui.Barcode</td></tr>
-</table>
+## Initialize control
 
 To initialize the control, import the Barcode namespace and Initialize SfBarcodeGenerator as per the following code snippet.
 
@@ -76,7 +67,7 @@ xmlns:barcode="clr-namespace:Syncfusion.Maui.Barcode;assembly=Syncfusion.Maui.Ba
 using Syncfusion.Maui.Barcode;
 …
 
-SfBarcodeGenerator barcode = new SfBarcodeGenerator(); 
+SfBarcodeGenerator barcode = new SfBarcodeGenerator();
 ...
 
 {% endhighlight %}
@@ -142,8 +133,8 @@ The below code example, explains how to initialize symbology and customize symbo
 
 {% highlight xaml %}
 
-<syncfusion:SfBarcode BackgroundColor="Gray"
-                      Text="http://www.syncfusion.com"
+<syncfusion:SfBarcode Text="http://www.syncfusion.com"
+                      BackgroundColor="Gray"
                       Symbology="QRCode">
 
     <syncfusion:SfBarcode.SymbologySettings>
@@ -181,10 +172,8 @@ this.Content = barcode;
 {% highlight xaml %}
 
 <barcode:SfBarcodeGenerator Value="http://www.syncfusion.com"
-                            HeightRequest="150" 
-                            WidthRequest="230" 
                             ShowText="True"
-                            BackgroundColor="LightCyan">
+                            BackgroundColor="Gray">
 
     <barcode:SfBarcodeGenerator.Symbology>
         <barcode:QRCode Module="2"
@@ -200,10 +189,8 @@ this.Content = barcode;
 {% highlight C# %}
 
  SfBarcodeGenerator barcode = new SfBarcodeGenerator();
- barcode.HeightRequest = 150;
- barcode.WidthRequest = 230;
  barcode.Value = "http://www.syncfusion.com";
- barcode.BackgroundColor = Colors.LightCyan;
+ barcode.BackgroundColor = Colors.Gray;
  barcode.ShowText = true;
  barcode.Symbology = new QRCode() 
  { 
@@ -265,8 +252,7 @@ In .NET MAUI SfBarcodeGenerator text customization is achieved by the text style
 
 {% highlight xaml %}
 
- <syncfusion:SfBarcode BackgroundColor="Gray"
-                       Text="1234567" 
+ <syncfusion:SfBarcode Text="123456789" 
                        Symbology="Code128A"
                        DarkBarColor="Blue"
                        LightBarColor="Red"
@@ -284,7 +270,6 @@ In .NET MAUI SfBarcodeGenerator text customization is achieved by the text style
 {% highlight C# %}
 
 SfBarcode barcode = new SfBarcode(); 
-barcode.BackgroundColor = Color.Gray; 
 barcode.Text = "123456789"; 
 barcode.Symbology = BarcodeSymbolType.Code128A;
 barcode.LightBarColor = Color.Red;
@@ -308,11 +293,6 @@ this.Content = barcode;
 {% highlight xaml %}
 
 <barcode:SfBarcodeGenerator Value="123456789"
-                            HeightRequest="150" 
-                            WidthRequest="230" 
-                            ShowText="True"
-                            BackgroundColor="LightCyan"
-                            ForegroundColor="Purple"
                             TextSpacing="25"
                             TextAlignment="Center">
 
@@ -321,9 +301,7 @@ this.Content = barcode;
     </barcode:SfBarcodeGenerator.Symbology>
 
     <barcode:SfBarcodeGenerator.TextStyle>
-        <barcode:BarcodeTextStyle FontAttributes="Italic
-                                  FontSize="16" 
-                                  FontFamily="Times" 
+        <barcode:BarcodeTextStyle FontSize="16"
                                   TextColor="Red"/>
     </barcode:SfBarcodeGenerator.TextStyle>
 
@@ -334,22 +312,15 @@ this.Content = barcode;
 {% highlight C# %}
 
 SfBarcodeGenerator barcode = new SfBarcodeGenerator();
-barcode.HeightRequest = 150;
-barcode.WidthRequest = 230;
 barcode.Value = "123456789";
-barcode.BackgroundColor = Colors.LightCyan;
-barcode.ForegroundColor = Colors.Purple;
-barcode.ShowText = true;
 barcode.TextAlignment = TextAlignment.End;
 barcode.TextSpacing = 25;
 barcode.TextStyle = new BarcodeTextStyle()
 {
-    FontAttributes = FontAttributes.Italic,
-    FontFamily = "Time",
     FontSize = 16,
     TextColor = Colors.Red
 };
-    
+
 barcode.Symbology = new Code128A() { Module = 2 };
 this.Content = barcode;
 
