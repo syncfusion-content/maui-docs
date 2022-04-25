@@ -23,7 +23,7 @@ SfChart
 SfCartesianChart </br>
 SfCircularChart </br>
 SfFunnelChart (Upcoming) </br>
-SfPolorChart (Upcoming) </br>
+SfPolarChart (Upcoming) </br>
 SfPyramidChart (Upcoming) </br>
 </td>
 </tr>
@@ -35,7 +35,7 @@ Check the [link]() for chart API changes.
 
 ### Chart 
 
-* Plot area customisation. 
+* Plot area customization. 
 * Chart area watermark support.
 * Trackball interaction support. 
 * Crosshair interaction support. 
