@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrate from Xamarin.Forms SfLinearGauge to .NET MAUI SfLinearGauge
 
-To make the migration from the [Xamarin SfLinearGauge](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.SfLinearGauge.html) to [.NET MAUI SfLinearGauge](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html) easier, we kept most of the APIs from the Xamarin SfLinearGauge in the.NET MAUI SfLinearGauge. However, to maintain the consistency of API naming in the.NET MAUI SfLinearGauge, we renamed some of the APIs. Please find the difference in the below topics.
+To make the migration from the [Xamarin SfLinearGauge](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.SfLinearGauge.html) to the [.NET MAUI SfLinearGauge](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html) easier, we kept most of the similar APIs from the Xamarin [SfLinearGauge](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.SfLinearGauge.html) in the.NET MAUI [SfLinearGauge](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html). We have also restructured the APIs by considering various use cases and maintaining API consistency. Please find the difference in the below topics.
 
 ## Import namespace
 
