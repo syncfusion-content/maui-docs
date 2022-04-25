@@ -7,7 +7,7 @@ control: SfCartesianChart
 documentation: ug
 ---
 
-# Migrate Xamarin SfChart to .NET MAUI SfCartesianChart
+# Migrate from Xamarin.Forms SfChart to .NET MAUI SfCartesianChart
 
 We kept most of the APIs from Xamarin [SfChart](https://www.syncfusion.com/xamarin-ui-controls/xamarin-charts) in MAUI [SfCartesianChart](https://www.syncfusion.com/maui-controls/maui-charts) to make migration easier. However, we renamed some APIs in.NET MAUI SfCartesianChart to keep consistency in API names. The APIs that have changed from Xamarin SfChart to MAUI SfCartesianChart are detailed as follows.
 
