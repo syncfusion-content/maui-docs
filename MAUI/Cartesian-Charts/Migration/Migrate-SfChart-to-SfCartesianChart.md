@@ -46,8 +46,6 @@ using Syncfusion.SfChart.XForms;
 
 {% highlight xaml %}
 
-{% endhighlight %}
-
 <ContentPage
     . . .    
     xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
@@ -70,115 +68,6 @@ this.Content = chart;
 {% endtabs %}
 </td>
 
-</tr>
-</table>
-
-## Series
-
-<table>
-<tr>
-<tr>
-<th>Xamarin</th>
-<th>.NET MAUI</th></tr>
-</tr>
-<tr>
-<td>Color</td>
-<td>Fill</td>
-</tr>
-<tr>
-<td>ColorModel</td>
-<td>PaletteBrushes</td>
-</tr>
-<tr>
-<td>SelectedDataPointColor</td>
-<td>SelectionBrush</td>
-</tr>
-<tr>
-<td>DataMarker</td>
-<td>ShowDataLabels, DataLabelSettings</td>
-</tr>
-<tr>
-<td>-</td>
-<td>XRange</td>
-</tr>
-<tr>
-<td>-</td>
-<td>YRange</td>
-</tr>
-</table>
-
-The below code example, explains how to initialize series in Xamarin SfChart and .NET MAUI SfCartesianChart.
-
-<table>
-<tr>
-<tr>
-<th>Xamarin</th>
-<th>.NET MAUI</th></tr>
-</tr>
-<tr>
-<td>
-
-{% highlight xaml %}
-
-<chart:SfChart>
-   <chart:SfChart.PrimaryAxis>
-        <chart:CategoryAxis>
-            <chart:CategoryAxis.Title>
-                  <chart:ChartAxisTitle Text="Name"/>
-            </chart:CategoryAxis.Title>
-        </chart:CategoryAxis>
-   </chart:SfChart.PrimaryAxis>
-
-   <chart:SfChart.SecondaryAxis>
-        <chart:NumericalAxis>
-            <chart:NumericalAxis.Title>
-                  <chart:ChartAxisTitle Text="Height (in cm)"/>
-            </chart:NumericalAxis.Title>      
-        </chart:NumericalAxis>   
-   </chart:SfChart.SecondaryAxis>
-    
-   <chart:SfChart.Series>
-         <chart:ColumnSeries ItemsSource="{Binding Data}" 
-                             XBindingPath="Name" 
-                             YBindingPath="Height">
-		 </chart:ColumnSeries>
-   </chart:SfChart.Series>
- </chart:SfChart>
-
-{% endhighlight %} 
-
-</td>
-
-<td>
-{% highlight xaml %}
-
-<chart:SfCartesianChart>
-   <chart:SfCartesianChart.XAxes>
-        <chart:CategoryAxis>
-            <chart:CategoryAxis.Title>
-                  <chart:ChartAxisTitle Text="Name" />
-            </chart:CategoryAxis.Title>
-        </chart:CategoryAxis>
-   </chart:SfCartesianChart.XAxes>
-
-   <chart:SfCartesianChart.YAxes>
-        <chart:NumericalAxis>
-            <chart:NumericalAxis.Title>
-                  <chart:ChartAxisTitle Text="Height(in cm)" />
-            </chart:NumericalAxis.Title>
-        </chart:NumericalAxis>
-   </chart:SfCartesianChart.YAxes>
-
-   <chart:SfCartesianChart.Series>
-         <chart:ColumnSeries ItemsSource="{Binding Data}" 
-                            XBindingPath="Name" 
-                            YBindingPath="Height">
-         </chart:ColumnSeries>
-   </chart:SfCartesianChart.Series>
-</chart:SfCartesianChart>
-
-{% endhighlight %} 
-</td>
 </tr>
 </table>
 
@@ -275,6 +164,8 @@ The below code example, explains how to initialize axis in Xamarin SfChart and .
 <th>.NET MAUI</th></tr>
 <tr>
 <td>
+
+{% tabs %}
 {% highlight xaml %}
 
 <chart:SfChart>  
@@ -288,8 +179,22 @@ The below code example, explains how to initialize axis in Xamarin SfChart and .
 </chart:SfChart>
 
 {% endhighlight %} 
+{% highlight C# %}
+SfChart chart = new SfChart();
+
+CategoryAxis primaryAxis = new CategoryAxis();
+chart.PrimaryAxis = primaryAxis;
+
+NumericalAxis secondaryAxis  =  new NumericalAxis  ();
+chart.SecondaryAxis = secondaryAxis;
+
+this.Content = chart;
+{% endhighlight %}
+
+{% endtabs %}
 </td>
 <td>
+{% tabs %}
 {% highlight xaml %}
 
 <chart:SfCartesianChart>                            
@@ -303,6 +208,127 @@ The below code example, explains how to initialize axis in Xamarin SfChart and .
 </chart:SfCartesianChart>
 
 {% endhighlight %} 
+{% highlight C# %}
+SfCartesianChart chart = new SfCartesianChart();
+CategoryAxis primaryAxis = new CategoryAxis();
+chart.XAxes.Add(primaryAxis);
+NumericalAxis secondaryAxis = new NumericalAxis();
+chart.YAxes.Add(secondaryAxis);
+
+this.Content = chart;
+{% endhighlight %}
+
+{% endtabs %}
+</td>
+</tr>
+</table>
+
+## Series
+
+<table>
+<tr>
+<tr>
+<th>Xamarin</th>
+<th>.NET MAUI</th></tr>
+</tr>
+<tr>
+<td>Color</td>
+<td>Fill</td>
+</tr>
+<tr>
+<td>ColorModel</td>
+<td>PaletteBrushes</td>
+</tr>
+<tr>
+<td>SelectedDataPointColor</td>
+<td>SelectionBrush</td>
+</tr>
+<tr>
+<td>DataMarker</td>
+<td>ShowDataLabels, DataLabelSettings</td>
+</tr>
+<tr>
+<td>-</td>
+<td>XRange</td>
+</tr>
+<tr>
+<td>-</td>
+<td>YRange</td>
+</tr>
+</table>
+
+The below code example, explains how to initialize series in Xamarin SfChart and .NET MAUI SfCartesianChart.
+
+<table>
+<tr>
+<tr>
+<th>Xamarin</th>
+<th>.NET MAUI</th></tr>
+</tr>
+<tr>
+<td>
+{% tabs %} 
+
+{% highlight xaml %}
+
+<chart:SfChart>
+. . .
+   <chart:SfChart.Series>
+         <chart:ColumnSeries ItemsSource="{Binding Data}" 
+                             XBindingPath="Name" 
+                             YBindingPath="Height">
+		 </chart:ColumnSeries>
+   </chart:SfChart.Series>
+ </chart:SfChart>
+
+{% endhighlight %} 
+{% highlight C# %}
+SfChart chart = new SfChart();
+. . .
+
+ColumnSeries series = new ColumnSeries();
+series.SetBinding(ChartSeries.ItemsSourceProperty, "Data");
+series.XBindingPath = "Name";
+series.YBindingPath = "Height";
+chart.Series.Add(series);
+this.Content = chart;
+{% endhighlight %}
+
+{% endtabs %}
+
+</td>
+
+<td>
+
+{% tabs %} 
+{% highlight xaml %}
+
+<chart:SfCartesianChart>
+. . .
+   <chart:SfCartesianChart.Series>
+         <chart:ColumnSeries ItemsSource="{Binding Data}" 
+                            XBindingPath="Name" 
+                            YBindingPath="Height">
+         </chart:ColumnSeries>
+   </chart:SfCartesianChart.Series>
+</chart:SfCartesianChart>
+
+{% endhighlight %} 
+{% highlight C# %}
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+ColumnSeries series = new ColumnSeries();
+series.Label = "Height";
+series.ShowDataLabels = true;
+series.ItemsSource = (new ViewModel()).Data;
+series.XBindingPath = "Name";
+series.YBindingPath = "Height";
+
+chart.Series.Add(series);
+this.Content = chart;
+{% endhighlight %}
+
+{% endtabs %}
 </td>
 </tr>
 </table>
@@ -413,6 +439,7 @@ The following code example shows how to enable legend in chart.
 </tr>
 <tr>
 <td>
+{% tabs %} 
 {% highlight xaml %}
 
 <chart:SfChart>
@@ -422,8 +449,16 @@ The following code example shows how to enable legend in chart.
 </chart:SfChart>
 
 {% endhighlight %} 
+{% highlight C# %}
+SfChart chart = new SfChart();
+. . .
+chart.Legend = new ChartLegend ();
+{% endhighlight %}
+
+{% endtabs %}
 </td>
 <td>
+{% tabs %} 
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
@@ -433,6 +468,15 @@ The following code example shows how to enable legend in chart.
 </chart:SfCartesianChart>
 
 {% endhighlight %} 
+
+{% highlight C# %}
+
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+chart.Legend = new ChartLegend ();
+{% endhighlight %}
+
+{% endtabs %}
 </td>
 </tr>
 </table>
@@ -446,6 +490,7 @@ The following code example shows how to enable legend in chart.
 </tr>
 <tr>
 <td>
+{% tabs %} 
 {% highlight xaml %}
 
 <chart:SfChart>  
@@ -459,9 +504,19 @@ The following code example shows how to enable legend in chart.
     </chart:ColumnSeries>
 </chart:SfChart>
 
-{% endhighlight %} 
+{% endhighlight %}
+{% highlight C# %}
+ColumnSeries series = new ColumnSeries();
+. . .
+series.DataMarker = new ChartDataMarker();
+
+chart.Series.Add(series);
+{% endhighlight %}
+
+{% endtabs %} 
 </td>
 <td>
+{% tabs %} 
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
@@ -476,13 +531,19 @@ The following code example shows how to enable legend in chart.
 </chart:SfCartesianChart>
 
 {% endhighlight %} 
+{% highlight C# %}
+ColumnSeries series = new ColumnSeries();
+. . .
+series.ShowDataLabels = true;
+chart.Series.Add(series);
+{% endhighlight %}
+
+{% endtabs %}
 </td>
 </tr>
 </table>
 
-## Interactive features
-
-### Tooltip
+## Tooltip
 
 <table>
 <tr>
@@ -491,6 +552,7 @@ The following code example shows how to enable legend in chart.
 </tr>
 <tr>
 <td>
+{% tabs %} 
 {% highlight xaml %}
 
 <chart:SfChart>
@@ -508,8 +570,19 @@ The following code example shows how to enable legend in chart.
 
 {% endhighlight %} 
 
+{% highlight C# %}
+ColumnSeries series = new ColumnSeries();
+. . .
+series.EnableTooltip = true;
+
+chart.Series.Add(series);
+{% endhighlight %}
+
+{% endtabs %}
+
 </td>
 <td>
+{% tabs %} 
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
@@ -526,13 +599,21 @@ The following code example shows how to enable legend in chart.
 </chart:SfCartesianChart>
 
 {% endhighlight %} 
+{% highlight C# %}
+ColumnSeries series = new ColumnSeries();
+. . .
+series.EnableTooltip = true;
+chart.Series.Add(series);
+{% endhighlight %}
+
+{% endtabs %}
 </td>
 </tr>
 </table>
 
 To Customize the tooltip appearance, create an instance of the `ChartTooltipBehavior` class and add it to the  `ChartBehaviors` collection of `SfChart`. For `SfCartesianChart`, you can directly set the `ChartTooltipBehavior` instance to the [TooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_TooltipBehavior) property as per the above code snippet.
 
-### Selection
+## Selection
 
 <table>
 <tr>
@@ -541,6 +622,7 @@ To Customize the tooltip appearance, create an instance of the `ChartTooltipBeha
 </tr>
 <tr>
 <td>
+{% tabs %} 
 {% highlight xaml %}
 
 <chart:SfChart>
@@ -558,9 +640,17 @@ To Customize the tooltip appearance, create an instance of the `ChartTooltipBeha
 </chart:SfChart>
 
 {% endhighlight %} 
+{% highlight C# %}
+ColumnSeries series = new ColumnSeries();
+. . .
+columnSeries.EnableDataPointSelection = true;
+
+chart.Series.Add(series);
+{% endhighlight %}
+{% endtabs %}
 </td>
 <td>
-
+{% tabs %} 
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
@@ -577,6 +667,14 @@ To Customize the tooltip appearance, create an instance of the `ChartTooltipBeha
 </chart:SfCartesianChart>
 
 {% endhighlight %} 
+{% highlight C# %}
+ColumnSeries series = new ColumnSeries();
+. . .
+series.SelectionBrush = Brush.Green;
+chart.Series.Add(series);
+{% endhighlight %}
+
+{% endtabs %}
 </td>
 </tr>
 </table>
@@ -584,7 +682,7 @@ To Customize the tooltip appearance, create an instance of the `ChartTooltipBeha
 Create an instance of the `ChartSelectionBehavior` class and add it to the  `ChartBehaviors` collection of `SfChart`. For `SfCartesianChart`, you can directly set the `ChartSelectionBehavior` instance to the [SelectionBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_SelectionBehaviorr) property as per the above code snippet.
 
 
-### Zooming and Panning
+## Zooming and Panning
 
 <table>
 <tr>
@@ -593,6 +691,7 @@ Create an instance of the `ChartSelectionBehavior` class and add it to the  `Cha
 </tr>
 <tr>
 <td>
+{% tabs %} 
 {% highlight xaml %}
 
 <chart:SfChart>
@@ -602,8 +701,16 @@ Create an instance of the `ChartSelectionBehavior` class and add it to the  `Cha
 </chart:SfChart>
 
 {% endhighlight %} 
+{% highlight C# %}
+ChartZoomPanBehavior zoomPanBehavior = new ChartZoomPanBehavior();
+
+chart.ChartBehaviors.Add(zoomPanBehavior);
+{% endhighlight %}
+
+{% endtabs %}
 </td>
 <td>
+{% tabs %} 
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
@@ -613,6 +720,12 @@ Create an instance of the `ChartSelectionBehavior` class and add it to the  `Cha
 </chart:SfCartesianChart>
 
 {% endhighlight %} 
+{% highlight C# %}
+ChartZoomPanBehavior zooming = new ChartZoomPanBehavior();
+chart.ZoomPanBehavior = zooming;
+{% endhighlight %}
+
+{% endtabs %}
 </td>
 </tr>
 </table>
