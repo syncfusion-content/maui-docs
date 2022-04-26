@@ -20,16 +20,16 @@ We do not have to rewrite the entire code for .NET MAUI Charts while using Xamar
 SfChart
 </td>
 <td>
-SfCartesianChart </br>
-SfCircularChart </br>
-SfFunnelChart (Upcoming) </br>
-SfPolarChart (Upcoming) </br>
-SfPyramidChart (Upcoming) </br>
+<br> SfCartesianChart </br>
+<br> SfCircularChart </br>
+<br> SfFunnelChart (Upcoming) </br>
+<br> SfPolarChart (Upcoming) </br>
+<br> SfPyramidChart (Upcoming) </br>
 </td>
 </tr>
 </table>
 
-Check [here]() for API changes. 
+For more details, please check [here]() for API changes. 
 
 ## Upcoming Features in .NET MAUI
 
