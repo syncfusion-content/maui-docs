@@ -26,10 +26,9 @@ To initialize the control, import the gauge namespace and Initialize SfRadialGau
 {% highlight xaml %}
 
 <ContentPage
-    . . .
-    xmlns:gauge="clr-namespace:Syncfusion.SfGauge.XForms;assembly=Syncfusion.SfGauge.XForms">
+xmlns:gauge="clr-namespace:Syncfusion.SfGauge.XForms;assembly=Syncfusion.SfGauge.XForms">
 
-        <gauge:SfCircularGauge/>
+    <gauge:SfCircularGauge/>
 
 </ContentPage>
 
@@ -53,10 +52,10 @@ this.Content = circularGauge;
 
 {% highlight xaml %}
 
-<ContentPage …
+<ContentPage
 xmlns:gauge="clr-namespace:Syncfusion.Maui.Gauges;assembly=Syncfusion.Maui.Gauges">
 
-<gauge:SfRadialGauge />
+    <gauge:SfRadialGauge />
 
 </ContentPage>
 
@@ -149,11 +148,6 @@ this.Content = sfRadialGauge;
 <td>{{'[UseRangeColorForLabels](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.Scale.html#Syncfusion_SfGauge_XForms_Scale_UseRangeColorForLabels)'| markdownify }}</td>
 <td>{{'[UseRangeColorForAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_UseRangeColorForAxis)'| markdownify }}</td>
 <td>Gets or sets a value indicating whether to use the range color for axis elements such as labels and ticks.</td>
-</tr>
-<tr>
-<td>{{'[Pointer](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.Pointer.html)'| markdownify }}</td>
-<td>{{'[RadialPointer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialPointer.html)'| markdownify }}</td>
-<td>Defines the core behavior of SfRadialGauge pointers and provides a base for derived classes.</td>
 </tr>
 </table>
 
@@ -376,8 +370,8 @@ In Xamarin SfCircularGauge and .NET MAUI SfRadialGauge, pointers can be classifi
 <th>Description</th></tr>
 <tr>
 <td>{{'[MarkerPointer](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.MarkerPointer.html)'| markdownify }}</td>
-<td>{{'[ShapePointer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.ShapePointer.html)'| markdownify }} and {{'[ContentPointer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.ContentPointer.html)'| markdownify }}</td>
-<td>Represents the pointer that is used to indicate the value with any visual content and with built-in shape.</td>
+<td>Divided into {{'[ShapePointer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.ShapePointer.html)'| markdownify }} and {{'[ContentPointer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.ContentPointer.html)'| markdownify }}</td>
+<td>Represents the pointer that is used to indicate the value with any visual content or with built-in shapes.</td>
 </tr>
 <tr>
 <td>{{'[NeedlePointer](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.NeedlePointer.html)'| markdownify }}</td>
@@ -402,22 +396,22 @@ N> In .NET MAUI SfRadialGauge [MarkerPointer](https://help.syncfusion.com/cr/mau
 <th>Description</th></tr>
 <tr>
 <td>{{'[MarkerHeight](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.MarkerPointer.html#Syncfusion_SfGauge_XForms_MarkerPointer_MarkerHeight)'| markdownify }}</td>
-<td>{{'[ShapeHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.ShapePointer.html#Syncfusion_Maui_Gauges_ShapePointer_ShapeHeight)'| markdownify }}</td>
+<td>{{'[ShapeHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.ShapePointer.html#Syncfusion_Maui_Gauges_ShapePointer_ShapeHeight)'| markdownify }} in {{'[ShapePointer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.ShapePointer.html)'| markdownify }} class</td>
 <td>Gets or sets a value that specifies the shape height in logical pixels.</td>
 </tr>
 <tr>
 <td>{{'[MarkerWidth](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.MarkerPointer.html#Syncfusion_SfGauge_XForms_MarkerPointer_MarkerWidth)'| markdownify }}</td>
-<td>{{'[ShapeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.ShapePointer.html#Syncfusion_Maui_Gauges_ShapePointer_ShapeWidth)'| markdownify }}</td>
+<td>{{'[ShapeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.ShapePointer.html#Syncfusion_Maui_Gauges_ShapePointer_ShapeWidth)'| markdownify }} in {{'[ShapePointer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.ShapePointer.html)'| markdownify }} class</td>
 <td>Gets or sets a value that specifies the shape width in logical pixels.</td>
 </tr>
 <tr>
 <td>{{'[MarkerShape](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.MarkerPointer.html#Syncfusion_SfGauge_XForms_MarkerPointer_MarkerShape)'| markdownify }}</td>
-<td>{{'[ShapeType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.ShapePointer.html#Syncfusion_Maui_Gauges_ShapePointer_ShapeType)'| markdownify }}</td>
+<td>{{'[ShapeType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.ShapePointer.html#Syncfusion_Maui_Gauges_ShapePointer_ShapeType)'| markdownify }} in {{'[ShapePointer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.ShapePointer.html)'| markdownify }} class</td>
 <td>Gets or sets a value that specifies the shape type for the pointer.</td>
 </tr>
 <tr>
 <td>{{'[EnableDragging](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.MarkerPointer.html#Syncfusion_SfGauge_XForms_MarkerPointer_EnableDragging)'| markdownify }}</td>
-<td>{{'[IsInteractive](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialPointer.html#Syncfusion_Maui_Gauges_RadialPointer_IsInteractive)'| markdownify }}</td>
+<td>{{'[IsInteractive](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialPointer.html#Syncfusion_Maui_Gauges_RadialPointer_IsInteractive)'| markdownify }} in {{'[ShapePointer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.ShapePointer.html)'| markdownify }} class</td>
 <td>Gets or sets a value that allowing pointer value change through interaction.</td>
 </tr>
 </table>
@@ -523,7 +517,7 @@ this.Content = sfRadialGauge;
 
 ### Content pointer
 
-The ContentPointer in SfRadialGauge allows to use any .NET MAUI content as pointer.
+The ContentPointer in SfRadialGauge allows to use any content or image or text as a pointer. In Xamarin, you can add an image as a pointer through the [ImageSource](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.MarkerPointer.html#Syncfusion_SfGauge_XForms_MarkerPointer_ImageSource) property, and in MAUI, you can directly add an image control as a pointer in the content pointer.
 <table>
 <tr>
 <th>Xamarin SfCircularGauge</th>
@@ -536,7 +530,7 @@ The ContentPointer in SfRadialGauge allows to use any .NET MAUI content as point
 </tr>
 </table>
 
-The below code example, explains how to initialize content pointer .NET MAUI SfRadialGauge. Content pointer feature is not applicable in Xamarin SfCircularGauge.
+The below code example, explains how to initialize content pointer .NET MAUI SfRadialGauge. Content pointer feature is not applicable in the Xamarin SfCircularGauge.
 
 {% tabs %}
 
@@ -870,6 +864,8 @@ this.Content = sfRadialGauge;
 
 ## Annotation
 
+Annotations in Xamarin can only be set for circular gauge and cannot be defined for axis/scale. However, with .NET MAUI, you can set annotations on each axis.
+
 <table>
 <tr>
 <th>Xamarin SfCircularGauge</th>
@@ -882,8 +878,8 @@ this.Content = sfRadialGauge;
 </tr>
 <tr>
 <td>{{'[Angle](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.GaugeAnnotation.html#Syncfusion_SfGauge_XForms_GaugeAnnotation_Angle)'| markdownify }}</td>
-<td>{{'[DirectionValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeAnnotation.html#Syncfusion_Maui_Gauges_GaugeAnnotation_DirectionValue)'| markdownify }}</td>
-<td>Gets or sets the value to adjusts the annotation distance from center.</td>
+<td>{{'[DirectionValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeAnnotation.html#Syncfusion_Maui_Gauges_GaugeAnnotation_DirectionValue)'| markdownify }} and {{'[DirectionUnit](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeAnnotation.html#Syncfusion_Maui_Gauges_GaugeAnnotation_DirectionUnit)'| markdownify }} is Angle.</td>
+<td>Gets or sets the value to adjusts the annotation distance from center. You can specify value either in axis value or angle using the {{'[DirectionUnit](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeAnnotation.html#Syncfusion_Maui_Gauges_GaugeAnnotation_DirectionUnit)'| markdownify }} property.</td>
 </tr>
 <tr>
 <td>{{'[Offset](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.GaugeAnnotation.html#Syncfusion_SfGauge_XForms_GaugeAnnotation_Offset)'| markdownify }}</td>
@@ -906,30 +902,13 @@ The below code example, explains how to initialize range pointer in Xamarin SfCi
 
 <gauge:SfCircularGauge>
     <gauge:SfCircularGauge.Scales>
-        <gauge:Scale  ShowLabels="False"
-                      ShowTicks="False"
-                      RimThickness="30"
-                      RadiusFactor="1"
-                      StartAngle="90"
-                      SweepAngle="360"
-                      StartValue="0"
-                      EndValue="100">
-            <gauge:Scale.Pointers>
-                <gauge:RangePointer Value="80"
-                                    Offset="1"
-                                    Thickness="30"
-                                    RangeCap="Both"
-                                    Color="DeepSkyBlue"/>
-            </gauge:Scale.Pointers>
-        </gauge:Scale>
+        <gauge:Scale/> 
     </gauge:SfCircularGauge.Scales>
     <gauge:SfCircularGauge.Annotations>
         <gauge:GaugeAnnotation>
             <gauge:GaugeAnnotation.View>
                 <Label Text="128 GB" 
-                       TextColor="Black" 
-                       FontSize="20"
-                       FontAttributes="Bold"/>
+                       FontSize="20" />
             </gauge:GaugeAnnotation.View>
         </gauge:GaugeAnnotation>
     </gauge:SfCircularGauge.Annotations>
@@ -943,34 +922,16 @@ SfCircularGauge gauge = new SfCircularGauge();
 
 ObservableCollection<Scale> scales = new ObservableCollection<Scale>();
 Scale scale = new Scale();
-scale.ShowLabels = false;
-scale.ShowTicks = false;
-scale.RimThickness = 30;
-scale.RadiusFactor = 1;
-scale.StartAngle = 90;
-scale.SweepAngle = 360;
-scale.StartValue = 0;
-scale.EndValue = 100;
 scales.Add(scale);
-
-RangePointer pointer = new RangePointer();
-pointer.Value = 80;
-pointer.Offset = 1;
-pointer.Thickness = 30;
-pointer.RangeCap = RangeCap.Both;
-pointer.Color = Color.DeepSkyBlue;
-scale.Pointers.Add(pointer);
+gauge.Scales = scales;
 
 GaugeAnnotation annotation = new GaugeAnnotation();
 Label label = new Label();
 label.Text = "128 GB";
 label.FontSize = 20;
-label.FontAttributes = FontAttributes.Bold;
-label.TextColor = Color.Black;
 annotation.View = label;
 gauge.Annotations.Add(annotation);
 
-gauge.Scales = scales;
 this.Content = gauge;
 
 {% endhighlight %}
@@ -984,28 +945,11 @@ this.Content = gauge;
 
 <gauge:SfRadialGauge>
     <gauge:SfRadialGauge.Axes>
-        <gauge:RadialAxis ShowLabels="False"
-                          ShowTicks="False"
-                          StartAngle="90"
-                          EndAngle="90"
-                          Minimum="0"
-                          Maximum="100">
-            <gauge:RadialAxis.AxisLineStyle>
-                <gauge:RadialLineStyle Thickness="30"/>
-            </gauge:RadialAxis.AxisLineStyle>
-            <gauge:RadialAxis.Pointers>
-                <gauge:RangePointer Value="80"
-                                    Fill="DeepSkyBlue"
-                                    CornerStyle="BothCurve"
-                                    PointerWidth="30"/>
-            </gauge:RadialAxis.Pointers>
+        <gauge:RadialAxis>
             <gauge:RadialAxis.Annotations>
-                <gauge:GaugeAnnotation DirectionValue="90"
-                                       PositionFactor="0">
+                <gauge:GaugeAnnotation>
                     <gauge:GaugeAnnotation.Content>
                         <Label Text="256 GB"
-                               TextColor="Black"
-                               FontAttributes="Bold"
                                FontSize="20" />
                     </gauge:GaugeAnnotation.Content>
                 </gauge:GaugeAnnotation>
@@ -1022,33 +966,12 @@ this.Content = gauge;
 SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
 RadialAxis radialAxis = new RadialAxis();
-radialAxis.ShowLabels = false;
-radialAxis.ShowTicks = false;
-radialAxis.StartAngle = 90;
-radialAxis.EndAngle = 90;
-radialAxis.Minimum = 0;
-radialAxis.Maximum = 100;
-radialAxis.AxisLineStyle = new RadialLineStyle()
-{
-    Thickness = 30,
-};
 sfRadialGauge.Axes.Add(radialAxis);
 
-RangePointer rangePointer = new RangePointer();
-rangePointer.Value = 80;
-rangePointer.Fill = new SolidColorBrush(Colors.DeepSkyBlue);
-rangePointer.CornerStyle = CornerStyle.BothCurve;
-rangePointer.PointerWidth = 30;
-radialAxis.Pointers.Add(rangePointer);
-
 GaugeAnnotation gaugeAnnotation = new GaugeAnnotation();
-gaugeAnnotation.DirectionValue = 90;
-gaugeAnnotation.PositionFactor = 0;
 gaugeAnnotation.Content = new Label
 {
     Text = "128 GB",
-    TextColor = Colors.Black,
-    FontAttributes = FontAttributes.Bold,
     FontSize = 20
 };
 radialAxis.Annotations.Add(gaugeAnnotation);

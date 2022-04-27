@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migrate from Xamarin SfSchedule to .NET MAUI SfScheduler | Syncfusion 
+title: Migrate from Xamarin SfSchedule to .NET MAUI SfScheduler
 description: Learn here all about Migrating from Syncfusion Xamarin Schedule to Syncfusion .NET MAUI Scheduler control and more.
 platform: MAUI
 control: SfScheduler
@@ -9,18 +9,7 @@ documentation: ug
 
 # Migrate from Xamarin.Forms SfSchedule to .NET MAUI SfScheduler 
 
-To migrate easier from [Xamarin SfSchedule](https://www.syncfusion.com/xamarin-ui-controls/xamarin-scheduler) to [.NET MAUI SfScheduler](https://www.syncfusion.com/maui-controls/maui-scheduler), we kept most of the APIs from Xamarin SfSchedule in MAUI SfScheduler. However, to maintain the consistency of API naming in MAUI SfScheduler, we renamed some of the APIs. The APIs that have been changed in MAUI SfScheduler from Xamarin SfSchedule are detailed as follows.
-
-## Assembly Name 
-
-<table>
-<tr>
-<th>Xamarin SfSchedule</th>
-<th>.NET MAUI SfScheduler</th></tr>
-<tr>
-<td>Syncfusion.SfSchedule.XForms</td>
-<td>Syncfusion.Maui.Scheduler</td></tr>
-</table>
+To make the migration from the Xamarin [Xamarin SfSchedule](https://www.syncfusion.com/xamarin-ui-controls/xamarin-scheduler) to the [.NET MAUI SfScheduler](https://www.syncfusion.com/maui-controls/maui-scheduler) easier, we kept most of the similar APIs from the Xamarin SfScheduler in the.NET MAUI SfScheduler. We have also restructured the APIs by considering various use cases and maintaining API consistency. Please find the difference in the below topics.
 
 ## Namespaces 
 
@@ -31,9 +20,6 @@ To migrate easier from [Xamarin SfSchedule](https://www.syncfusion.com/xamarin-u
 <tr>
 <td>Syncfusion.SfSchedule.XForms</td>
 <td>Syncfusion.Maui.Scheduler</td></tr>
-<tr>
-<td>Syncfusion.SfSchedule.XForms.ScheduleHelper</td>
-<td>Syncfusion.Maui.Scheduler.SchedulerRecurrenceManager</td></tr>
 </table>
 
 ## Classes 
@@ -364,7 +350,7 @@ To migrate easier from [Xamarin SfSchedule](https://www.syncfusion.com/xamarin-u
 
 <tr>
 <td>{{'[ShowAppointmentsInline](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_ShowAppointmentsInline)' | markdownify }}</td>
-<td>{{'[AgendaView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AgendaView)'| markdownify }}</td>
+<td> You can use {{'[AgendaView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AgendaView)'| markdownify }} instead of InlineView in the scheduler.</td>
 <td>Gets or sets properties which allows to customize the agenda view of the SfScheduler.</td></tr>
 
 <tr>
@@ -629,7 +615,7 @@ To migrate easier from [Xamarin SfSchedule](https://www.syncfusion.com/xamarin-u
 
 <tr>
 <td>{{'[ShowAgendaView](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.MonthViewSettings.html#Syncfusion_SfSchedule_XForms_MonthViewSettings_ShowAgendaView)' | markdownify }}</td>
-<td>{{'[AgendaView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AgendaView)'| markdownify }}</td>
+<td>You can use {{'[AgendaView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AgendaView)'| markdownify }} instead of agenda view in the month view of the scheduler.</td>
 <td>Gets or sets properties which allows to customize the agenda view of the SfScheduler.</td></tr>
 
 <tr>
@@ -1248,7 +1234,6 @@ To migrate easier from [Xamarin SfSchedule](https://www.syncfusion.com/xamarin-u
 <th>Xamarin SfSchedule</th>
 <th>.NET MAUI SfScheduler</th>
 <th>Description</th></tr>
-<tr>
 
 <tr>
 <td>{{'[Backward](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_Backward)'| markdownify}}</td>
