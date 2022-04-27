@@ -15,7 +15,7 @@ This section explains about how to add the dividers in the slider.
 
 The [`ShowDividers`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ShowDividers) property is used to render the dividers on the track. The default value of the [`ShowDividers`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ShowDividers) property is `False`. It is a shape which is used to represent the major interval points of the track.
 
-For example, if [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Minimum) is 0.0 and [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Minimum) is 10.0 and [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Interval) is 2.0, the slider will render the dividers at 0.0, 2.0, 4.0 and so on.
+For example, if [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html#Syncfusion_Maui_Sliders_SfSlider_Minimum) is 0.0 and [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html#Syncfusion_Maui_Sliders_SfSlider_Maximum) is 10.0 and [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Interval) is 2.0, the slider will render the dividers at 0.0, 2.0, 4.0 and so on.
 
 {% tabs %}
 
@@ -86,10 +86,10 @@ Also, you can change the active and inactive divider stroke color of the slider 
     <sliders:SfSlider.DividerStyle>
          <sliders:SliderDividerStyle ActiveRadius="7" 
                                      InactiveRadius="7" 
-            			     ActiveStrokeThickness="2" 
-				     InactiveStrokeThickness="2" 
-				     ActiveStroke="#EE3F3F" 
-				     InactiveStroke="#F7B1AE"/>
+            			             ActiveStrokeThickness="2" 
+				                     InactiveStrokeThickness="2" 
+				                     ActiveStroke="#EE3F3F" 
+				                     InactiveStroke="#F7B1AE"/>
      </sliders:SfSlider.DividerStyle>
 </sliders:SfSlider>
 
@@ -126,8 +126,8 @@ You can change the active and inactive divider color of the slider using the [`A
     <sliders:SfSlider.DividerStyle>
        <sliders:SliderDividerStyle ActiveRadius="7" 
                                    InactiveRadius="7" 
-				   ActiveFill="#EE3F3F" 
-				   InactiveFill="#F7B1AE"/>
+				                   ActiveFill="#EE3F3F" 
+				                   InactiveFill="#F7B1AE"/>
       </sliders:SfSlider.DividerStyle>
 </sliders:SfSlider>
 

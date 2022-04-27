@@ -15,12 +15,12 @@ The default style of gauge labels is as follows.
 
 ## Customize label styles
 
-Scale labels can be customized using the `LabelStyle` property of `SfLinearGauge`. The `LabelStyle` property has the following properties to customize the scale labels.
+Scale labels can be customized using the [`LabelStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_LabelStyle) property of [`SfLinearGauge`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html). The [`LabelStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_LabelStyle) property has the following properties to customize the scale labels.
 
-* `TextColor` – Allows to customize the color of the labels.
-* `FontFamily` – Allows to specify the font family for labels.
-* `FontAttributes` – Allows to specify the font weight for labels.
-* `FontSize` – Allows to specify the font size for labels.
+* [`TextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeLabelStyle.html#Syncfusion_Maui_Gauges_GaugeLabelStyle_TextColor) – Allows to customize the color of the labels.
+* [`FontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeLabelStyle.html#Syncfusion_Maui_Gauges_GaugeLabelStyle_FontFamily) – Allows to specify the font family for labels.
+* [`FontAttributes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeLabelStyle.html#Syncfusion_Maui_Gauges_GaugeLabelStyle_FontAttributes) – Allows to specify the font weight for labels.
+* [`FontSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeLabelStyle.html#Syncfusion_Maui_Gauges_GaugeLabelStyle_FontSize) – Allows to specify the font size for labels.
 
 {% tabs %}
 
@@ -53,7 +53,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Change visibility
 
-The `ShowLabels` property of `SfLinearGauge` allows you to show or hide the visibility of scale labels. The default value of this property is true.
+The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_ShowLabels) property of [`SfLinearGauge`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html) allows you to show or hide the visibility of scale labels. The default value of this property is true.
 
 {% tabs %}
 
@@ -79,7 +79,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Customize interval between labels
 
-The `Interval` between labels can be customized using the `Interval` property of `SfLinearGauge`. The major ticks are generated based on this `Interval` property.
+The [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_Interval) between labels can be customized using the [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_Interval) property of [`SfLinearGauge`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html?tabs=tabid-1). The major ticks are generated based on this [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_Interval) property.
 
 {% tabs %}
 
@@ -105,7 +105,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Change label position
 
-The linear gauge allows to position the labels either `Inside` or `Outside` the gauge track using the `LabelPosition` property. By default, labels are positioned `Inside` the gauge track.
+The linear gauge allows to position the labels either [`Inside`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeLabelsPosition.html#Syncfusion_Maui_Gauges_GaugeLabelsPosition_Inside) or [`Outside`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeLabelsPosition.html#Syncfusion_Maui_Gauges_GaugeLabelsPosition_Outside) the gauge track using the [`LabelPosition`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_LabelPosition) property. By default, labels are positioned [`Inside`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeLabelsPosition.html#Syncfusion_Maui_Gauges_GaugeLabelsPosition_Inside) the gauge track.
 
 {% tabs %}
 
@@ -132,7 +132,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Change label offset
 
-The `LabelOffset` property allows you to adjust the distance between the tick-end and the labels. 
+The [`LabelOffset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_LabelOffset) property allows you to adjust the distance between the tick-end and the labels. 
 
 {% tabs %}
 
@@ -156,7 +156,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ##  Customize maximum number of visible labels
 
-By default, a maximum of three labels is displayed for every 100 logical pixels in an scale. The maximum number of labels that should present within 100 logical pixels length can be customized using the `MaximumLabelsCount` property of the scale. 
+By default, a maximum of three labels is displayed for every 100 logical pixels in an scale. The maximum number of labels that should present within 100 logical pixels length can be customized using the [`MaximumLabelsCount`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_MaximumLabelsCount) property of the scale. 
 
 {% tabs %}
 
@@ -180,7 +180,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Customize label text
 
-You can format or change the whole numeric label text using the `LabelCreated` event.
+You can format or change the whole numeric label text using the [`LabelCreated`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_LabelCreated) event.
 
 {% tabs %}
 
@@ -216,7 +216,7 @@ private void Gauge_LabelCreated(object sender, LabelCreatedEventArgs e)
 
 ## Label format
 
-The `LabelFormat` property is used to format the numeric labels. The default value of this property is null.
+The [`LabelFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_LabelFormat) property is used to format the numeric labels. The default value of this property is null.
 
 {% tabs %}
 

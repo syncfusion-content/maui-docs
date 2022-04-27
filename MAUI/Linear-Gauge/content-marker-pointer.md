@@ -9,7 +9,7 @@ documentation: ug
 
 # Content Marker Pointer in .NET MAUI Linear Gauge (SfLinearGauge)
 
-The `LinearContentPointer` in `SfLinearGauge` allows you to use any .NET MAUI content as a marker pointer. The following code sample uses a `Image` as a marker pointer.
+The [`LinearContentPointer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearContentPointer.html) in [`SfLinearGauge`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html) allows you to use any .NET MAUI content as a marker pointer. The following code sample uses a `Image` as a marker pointer.
 
 {% tabs %}
 
@@ -45,7 +45,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Change marker alignment
 
-The content marker pointer's alignment can be changed by the `Alignment` property of `LinearContentPointer`. The available marker positions are `Start`, `End`, and `Center`. 
+The content marker pointer's alignment can be changed by the [`Alignment`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearMarkerPointer.html#Syncfusion_Maui_Gauges_LinearMarkerPointer_Alignment) property of [`LinearContentPointer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearContentPointer.html). The available marker positions are [`Start`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeAlignment.html#Syncfusion_Maui_Gauges_GaugeAlignment_Start), [`End`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeAlignment.html#Syncfusion_Maui_Gauges_GaugeAlignment_End), and [`Center`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeAlignment.html#Syncfusion_Maui_Gauges_GaugeAlignment_Center). 
 
 {% tabs %}
 
@@ -99,7 +99,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Change the position
 
-By default, the shape pointer is positioned `Outside` the scale. This position can be changed by the `Position` property of pointer. It is possible to position the shape pointer `Inside`, `Cross`, or `Outside` the scale. The following code sample demonstrates how to change the shape pointer position to `Cross` the scale. 
+By default, the shape pointer is positioned [`Outside`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeElementPosition.html#Syncfusion_Maui_Gauges_GaugeElementPosition_Outside) the scale. This position can be changed by the [`Position`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearPointer.html#Syncfusion_Maui_Gauges_LinearPointer_Position) property of pointer. It is possible to position the shape pointer [`Inside`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeElementPosition.html#Syncfusion_Maui_Gauges_GaugeElementPosition_Inside), [`Cross`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeElementPosition.html#Syncfusion_Maui_Gauges_GaugeElementPosition_Cross), or [`Outside`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeElementPosition.html#Syncfusion_Maui_Gauges_GaugeElementPosition_Outside) the scale. The following code sample demonstrates how to change the shape pointer position to [`Cross`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeElementPosition.html#Syncfusion_Maui_Gauges_GaugeElementPosition_Cross) the scale. 
 
 {% tabs %}
 
@@ -153,7 +153,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Change the offset
 
-In addition to position the content marker pointer, it is also possible to change the offset of the shape pointer. The `OffsetX` and `OffsetY` are the distance from the scale. The cross-positioned elements will not get affected by the `OffsetX` and `OffsetY` values. The following code sample demonstrates how to change the offset value of the shape pointer. 
+In addition to position the content marker pointer, it is also possible to change the offset of the shape pointer. The [`OffsetX`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearMarkerPointer.html#Syncfusion_Maui_Gauges_LinearMarkerPointer_OffsetX) and [`OffsetY`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearMarkerPointer.html#Syncfusion_Maui_Gauges_LinearMarkerPointer_OffsetY) are the distance from the scale. The cross-positioned elements will not get affected by the [`OffsetX`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearMarkerPointer.html#Syncfusion_Maui_Gauges_LinearMarkerPointer_OffsetX) and [`OffsetY`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearMarkerPointer.html#Syncfusion_Maui_Gauges_LinearMarkerPointer_OffsetY) values. The following code sample demonstrates how to change the offset value of the shape pointer. 
 
 {% tabs %}
 
