@@ -24,7 +24,7 @@ The `SfListView.QueryItemSize` event provides the following properties in their 
  * [Handled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.QueryItemSizeEventArgs.html#Syncfusion_Maui_ListView_QueryItemSizeEventArgs_Handled): Decides whether the specified size can be set to the item or not. The default value is `false`. When this property is not set, the decided size will not set to the item.
 
 {% tabs %}
-{% highlight c# tabtitle= "MainPage.cs" hl_lines="7" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="7" %}
 this.listView.QueryItemSize += ListView_QueryItemSize;
 
 private void ListView_QueryItemSize(object sender, Syncfusion.Maui.ListView.QueryItemSizeEventArgs e)
@@ -65,7 +65,7 @@ AutoFit considers height of the item when [SfListView.Orientation](https://help.
                     ItemsSource="{Binding BookInfo}" />
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" %}
 listView.AutoFitMode = AutoFitMode.Height; 
 {% endhighlight %}
 {% endtabs %}
@@ -85,7 +85,7 @@ AutoFit considers height of the item when `SfListView.Orientation` is set to `Ve
                     ItemsSource="{Binding ContactsInfo}" />
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" %}
 listView.AutoFitMode = AutoFitMode.DynamicHeight; 
 {% endhighlight %}
 {% endtabs %}
@@ -137,7 +137,7 @@ listView.AutoFitMode = AutoFitMode.DynamicHeight;
 </Grid>              
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" hl_lines="3" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="3" %}
 private void Button_Clicked(object sender, EventArgs e)
 {
     ViewModel.FontSize += 25;
@@ -248,7 +248,7 @@ By default, the image is not loaded with the actual size in `AutoFitMode` becaus
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" hl_lines="6" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="6" %}
 private void ListView_Loaded(object sender, Syncfusion.Maui.ListView.ListViewLoadedEventArgs e)
 {
     Device.BeginInvokeOnMainThread(async() =>

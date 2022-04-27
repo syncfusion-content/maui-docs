@@ -27,7 +27,7 @@ The linear layout arranges the items linearly in a single column vertically or a
   </syncfusion:SfListView>
 </ContentPage>
 {% endhighlight%}
-{% highlight c# tabtitle= "MainPage.cs" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" %}
 listView.ItemsLayout = new LinearLayout();
 {% endhighlight%}
 {% endtabs %}
@@ -55,7 +55,7 @@ In `Horizontal` orientation, `SpanCount` defines the number of rows.
   </syncfusion:SfListView>
 </ContentPage>
 {% endhighlight%}
-{% highlight c# tabtitle= "MainPage.cs" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" %}
 listView.ItemsLayout = new GridLayout() { SpanCount = 2 };
 {% endhighlight%}
 {% endtabs %}

@@ -16,7 +16,7 @@ documentation: ug
 The [Loaded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_Loaded) event is triggered when the `SfListView` is loading in view for the first time.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.cs"%}
+{% highlight c# tabtitle="MainPage.xaml.cs"%}
 
 listView.Loaded += ListView_Loaded;
 
@@ -43,7 +43,7 @@ The [ItemTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.Sf
  * [Position](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemTappedEventArgs.html#Syncfusion_Maui_ListView_ItemTappedEventArgs_Position): Gets the touch position in the tapped item.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 listView.ItemTapped += ListView_ItemTapped;
 
@@ -75,7 +75,7 @@ The [ItemDoubleTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListV
  * [Position](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemDoubleTappedEventArgs.html#Syncfusion_Maui_ListView_ItemDoubleTappedEventArgs_Position): Gets the touch position in the double tapped item.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 listView.ItemDoubleTapped += ListView_ItemDoubleTapped;
 
@@ -105,7 +105,7 @@ The [ItemLongPress](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView
  * [Position](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemLongPressEventArgs.html#Syncfusion_Maui_ListView_ItemLongPressEventArgs_Position): Gets the touch position in the holding item.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 listView.ItemLongPress += ListView_ItemLongPress;
 
@@ -131,7 +131,7 @@ The [ItemAppearing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView
 * [ItemData](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemAppearingEventArgs.html#Syncfusion_Maui_ListView_ItemAppearingEventArgs_ItemData): The underlying data associated with the appearing item.
 
 {% tabs %}
-{% highlight c# tabtitle= "MainPage.cs" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" %}
 
 listView.ItemAppearing += listView_ItemAppearing;
 
@@ -160,7 +160,7 @@ The [ItemDisappearing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListV
 * [ItemData](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemDisappearingEventArgs.html#Syncfusion_Maui_ListView_ItemDisappearingEventArgs_ItemData): The underlying data associated with the disappearing item.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 listView.ItemDisappearing += listView_ItemDisappearing;
 
@@ -205,7 +205,7 @@ The `SfListView` allows you to scroll by loading the entire collection of items 
    <sync:SfListView x:Name="listView" ItemsSource="{Binding BookInfo}" Loaded="listView_Loaded"/>
 </ScrollView>
 {% endhighlight %}
-{% highlight C# tabtitle="MainPage.cs" %}
+{% highlight C# tabtitle="MainPage.xaml.cs" %}
 using Syncfusion.ListView.Control.Helpers;
 public partial class MainPage : ContentPage
 { 
@@ -233,7 +233,7 @@ When `SfListView` is in [AutoFitMode](https://help.syncfusion.com/cr/maui/Syncfu
    <sync:SfListView x:Name="listView" AutoFitMode="Height" ItemsSource="{Binding BookInfo}" Loaded="listView_Loaded"/>
 </ScrollView>
 {% endhighlight %}
-{% highlight C# tabtitle="MainPage.cs" %}
+{% highlight C# tabtitle="MainPage.xaml.cs" %}
 using Syncfusion.ListView.Control.Helpers;
 public partial class MainPage : ContentPage
 {
@@ -296,7 +296,7 @@ You can refresh the view by using the [RefreshView](https://help.syncfusion.com/
 To filter the listview items based on the item selection in another listview, use the [SfListView.DataSource.Filter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.DataSource.html#Syncfusion_Maui_DataSource_DataSource_Filter) property.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.cs" hl_lines="6" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="6" %}
 private void ItemTapped(Syncfusion.Maui.ListView.ItemTappedEventArgs e)
 {
     tappedPinedInfo = e.ItemData as PinnedInfo;

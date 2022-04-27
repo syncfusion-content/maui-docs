@@ -40,7 +40,7 @@ Sorting the data by creating a [SortDescriptor](https://help.syncfusion.com/cr/m
   </syncfusion:SfListView>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" hl_lines="3 4" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="3 4" %}
 listView.DataSource.SortDescriptors.Add(new SortDescriptor()
 {
   PropertyName = "ContactName",
@@ -78,7 +78,7 @@ N> If the `PropertyName` in the [SortDescriptor](https://help.syncfusion.com/cr/
   </syncfusion:SfListView>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" hl_lines="3" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="3" %}
 listView.DataSource.SortDescriptors.Add(new SortDescriptor()
 {
   Comparer = new CustomSortComparer()
@@ -150,7 +150,7 @@ To apply the sorting when tapping the header, handle the [ItemTapped](https://he
   </syncfusion:SfListView>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" hl_lines="4" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="4" %}
 listView = new SfListView();
 listView.ItemsSource = viewModel.customerDetails;
 listView.ItemSize = 60;
@@ -170,7 +170,7 @@ listView.HeaderTemplate = new DataTemplate(() =>
 When the `ItemTapped` event is raised for the Header, add the [SortDescriptor](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.SortDescriptor.html) and refresh the view.
 
 {% tabs %}
-{% highlight c# tabtitle= "MainPage.cs" hl_lines="7 8 9 10 11" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="7 8 9 10 11" %}
 private void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
 {
   //Applying sorting to the underlying data when the header item is tapped.
@@ -212,7 +212,7 @@ Sorting and grouping the items by using [KeySelector](https://help.syncfusion.co
   </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" hl_lines="20 21 22 23" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="20 21 22 23" %}
 var listView = new SfListView();
 listView.ItemSize = 50;
 listView.ItemsSource = viewModel.Items;
@@ -274,7 +274,7 @@ Sorting and grouping the items by using `KeySelector` based on returning the mon
   </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c#tabtitle= "MainPage.cs" hl_lines="9 10 11 12 13" %}
+{% highlight c#tabtitle= "MainPage.xaml.cs" hl_lines="9 10 11 12 13" %}
 public partial class MainPage : ContentPage
 {
    public MainPage()

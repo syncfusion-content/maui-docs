@@ -34,7 +34,7 @@ The [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ht
     </syncfusion:SfListView>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" hl_lines="4 5 6 7 8 9 10 11 12 13 14" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="4 5 6 7 8 9 10 11 12 13 14" %}
 viewModel = new ViewModel ();
 listView = new SfListView();
 listView.ItemsSource = viewModel.BookInfo;
@@ -65,7 +65,7 @@ The [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ht
 {% highlight xaml tabtitle= "MainPage.xaml" %}
 <syncfusion:SfListView x:Name="listView" ItemsSource="{Binding BookInfo}" HeaderSize="70" FooterSize="60" />
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" %}
 listView.HeaderSize = 70;
 listView.FooterSize = 60;
 {% endhighlight %}
@@ -81,7 +81,7 @@ The `SfListView` allows you to stick the header and footer items to view by enab
 {% highlight xaml tabtitle= "MainPage.xaml" %}
 <syncfusion:SfListView x:Name="listView" ItemsSource="{Binding BookInfo}" IsStickyHeader="True" IsStickyFooter="True" />          
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" %}
 listView.IsStickyHeader = true;
 listView.IsStickyFooter = true;
 {% endhighlight %}
@@ -102,7 +102,7 @@ The `StickyFooterPosition` property has two options:
 {% highlight xaml tabtitle= "MainPage.xaml" %}
 <syncfusion:SfListView x:Name="listView" ItemsSource="{Binding CategoryInfo}" IsStickyFooter="True" StickyFooterPosition="Body"/>          
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" %}
 listView.IsStickyFooter = true;
 listView.StickyFooterPosition = FooterPosition.Body;
 {% endhighlight %}
@@ -196,7 +196,7 @@ The `SfListView` allows you to perform tab view structure by customizing the [He
 </ContentPage>
 {% endhighlight %}
 
-{% highlight c# tabtitle= "MainPage.cs" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" %}
 public partial class MainPage : ContentPage
 {
     BookInfoRepository viewModel = new BookInfoRepository();

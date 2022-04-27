@@ -11,6 +11,8 @@ documentation: ug
 
 This section provides a quick overview of how to get started with the .NET Maui ListView (SfListView) for Maui. Walk-through the entire process of creating the real world SfListView.
 
+N> MAUI ListView is now only available for `Android`, `iOS`, and `MacCatalyst` platforms. It is currently not supported in the `WinUI` platform. It will be available in the 2022 Volume 1 release.
+
 ## Creating an application using the .NET MAUI ListView
 
  1. Create a new .NET MAUI application in Visual Studio.
@@ -29,7 +31,7 @@ This section provides a quick overview of how to get started with the .NET Maui 
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" %}
 
 using Syncfusion.Maui.ListView;
 . . .
@@ -187,7 +189,7 @@ The following code example binds the previously created collection to the `SfLis
                    ItemsSource="{Binding BookInfo}" />
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle= "BookInfoRepository" hl_lines="2" %}
+{% highlight c# tabtitle= "BookInfoRepository.cs" hl_lines="2" %}
 BookInfoRepository viewModel = new BookInfoRepository ();
 listView.ItemsSource = viewModel.BookInfo; 
 {% endhighlight %}
@@ -218,7 +220,7 @@ listView.ItemsSource = viewModel.BookInfo;
   </syncfusion:SfListView>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle= "App.cs" hl_lines="15" %}
+{% highlight c# tabtitle= "App.xaml.cs" hl_lines="15" %}
 using Microsoft.Maui.Controls;
 using Syncfusion.Maui.ListView;
 using System;
@@ -279,7 +281,7 @@ The [SfListView.ItemsLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
   </syncfusion:SfListView>
 </ContentPage>
 {% endhighlight%}
-{% highlight c# tabtitle= "MainPage.cs"  hl_lines="1" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" %}
 listView.ItemsLayout = new GridLayout() { SpanCount = 3 };
 {% endhighlight%}
 {% endtabs %}
@@ -303,7 +305,7 @@ The [DataSource](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.DataS
   </syncfusion:SfListView>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" hl_lines="2 3 4" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="2 3 4" %}
  SfListView listView = new SfListView();
  DataSource dataSource = new DataSource();
  dataSource.Source = ViewModel.BookInfo;
@@ -344,7 +346,7 @@ SortDescriptor object holds the following three properties:
   </syncfusion:SfListView>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" %}
  listView.DataSource.SortDescriptors.Add(new SortDescriptor()
  {
    PropertyName = "BookName",
@@ -375,7 +377,7 @@ To filter the items based on the Title property of the underlying data by using 
     </Grid>
   </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" hl_lines="22 23" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="22 23" %}
 var grid = new Grid();
 grid.RowDefinitions.Add(new RowDefinition());
 grid.RowDefinitions.Add(new RowDefinition());
@@ -444,7 +446,7 @@ It also supports you to stick the group header by enabling the [SfListView.IsSti
   </syncfusion:SfListView>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
  listView.DataSource.GroupDescriptors.Add(new GroupDescriptor()
  {
    PropertyName = "BookName",
@@ -471,7 +473,7 @@ The [SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.List
                  SelectionBackgroundColor="#E4E4E4"/>}
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" %}
 listView.SelectionMode = SelectionMode.Single;
 listView.SelectionGesture = TouchGesture.Tap;
 listView.SelectionBackgroundColor = Colors.FromHex("#E4E4E4");
@@ -488,19 +490,20 @@ The header and footer can be handled as scrollable or sticky to the view by enab
 {% highlight xaml tabtitle= "MainPage.xaml" hl_lines="4 5 6 13" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
 <syncfusion:SfListView x:Name="listView"
-                 ItemsSource="{Binding InboxInfo}"
+                 ItemsSource="{Binding BookInfo}"
                  IsStickyHeader="true"
                  IsStickyFooter="true">
   <syncfusion:SfListView.HeaderTemplate>
     <DataTemplate>
       <Grid BackgroundColor="#4CA1FE" HeightRequest="45">
-        <Label Text="Inbox" FontAttributes="Bold" FontSize="18" TextColor="White" />
+        <Label Text="Header Item" FontAttributes="Bold" FontSize="18" TextColor="White" />
       </Grid>
     </DataTemplate>
   </syncfusion:SfListView.HeaderTemplate>
   <syncfusion:SfListView.FooterTemplate>
     <DataTemplate>
       <Grid BackgroundColor="#DC595F">
+        <Label Text="Footer Item" FontAttributes="Bold" FontSize="18" TextColor="White" />
         <Grid.ColumnDefinitions>
           <ColumnDefinition />
           <ColumnDefinition />
@@ -513,9 +516,9 @@ The header and footer can be handled as scrollable or sticky to the view by enab
   </syncfusion:SfListView>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" hl_lines="3 4 5 17" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="3 4 5 17" %}
 ViewModel viewModel = new ViewModel ();
-listView.ItemsSource = viewModel.InboxInfo; 
+listView.ItemsSource = viewModel.BookInfo; 
 listView.IsStickyHeader = true;
 listView.IsStickyFooter = true;
 listView.HeaderTemplate = new DataTemplate(() =>
@@ -526,7 +529,7 @@ listView.HeaderTemplate = new DataTemplate(() =>
   grid.BackgroundColor = Color.FromHex("#4CA1FE");
   var headerLabel = new Label { BackgroundColor = Colors.White, FontSize = 18,
                                 FontAttributes = FontAttributes.Bold };
-  headerLabel.Text = "Inbox";
+  headerLabel.Text = "Header Item";
   grid.Children.Add(headerLabel);
   return grid;
 });
@@ -536,14 +539,10 @@ listView.FooterTemplate = new DataTemplate(() =>
   grid.ColumnDefinitions.Add(new ColumnDefinition());
   grid.ColumnDefinitions.Add(new ColumnDefinition());
   grid.BackgroundColor = Colors.FromHex("#DC595F");
-  var editImage = new Image();
-  editImage.Source = "Edit.png";
-  var deleteImage = new Image();
-  deleteImage.Source = "Delete.png";
-  grid.Children.Add(editImage);
-  grid.Children.Add(deleteImage);
-  grid.SetColumn(editImage, 0);
-  grid.SetColumn(deleteImage, 1);
+  var footerLabel = new Label { BackgroundColor = Colors.White, FontSize = 18,
+                                FontAttributes = FontAttributes.Bold };
+  footerLabel.Text = "Footer Item";
+  grid.Children.Add(footerLabel);
   return grid;
 });
 {% endhighlight %}

@@ -20,7 +20,7 @@ documentation: ug
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" %}
 listView.FlowDirection = FlowDirection.RightToLeft;
 {% endhighlight %}
 {% endtabs %}

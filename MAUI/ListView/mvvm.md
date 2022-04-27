@@ -335,7 +335,7 @@ public class BookInfoRepository : INotifyPropertyChanged
                         SelectedItems="{Binding SelectedItems}"
                         ItemsSource="{Binding BookInfoCollection}"/>
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" %}
 listView.SelectionMode = SelectionMode.Multiple;
 listView.SetBinding(SfListView.SelectedItemsProperty, new Binding("SelectedItems", BindingMode.TwoWay));
 {% endhighlight %}
@@ -540,7 +540,7 @@ You can define the command parameter for the `LongPressCommand` using [LongPress
                        LongPressCommand="{Binding LongPressCommand}"
                        ItemsSource="{Binding BookInfoCollection}"/>
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" %}
 listView.SetBinding(SfListView.LongPressCommandProperty, new Binding("LongPressCommand", BindingMode.OneWay));
 {% endhighlight %}
 {% endtabs %}
@@ -581,7 +581,7 @@ The contents loaded in the [ItemTemplate](https://help.syncfusion.com/cr/maui/Sy
 You can also get the reference of element bound as parameter by using command parameter of loaded elements.
 
 {% tabs %}
-{% highlight xaml tabtitle= "MainPage.cs" hl_lines="2 12 13" %}
+{% highlight xaml tabtitle= "MainPage.xaml.cs" hl_lines="2 12 13" %}
 <syncfusion:SfListView x:Name="listView" AutoFitMode="Height"
                 SelectedItem="{Binding SelectedItem}"                      
                 ItemsSource="{Binding BookInfoCollection}">
@@ -601,7 +601,7 @@ You can also get the reference of element bound as parameter by using command pa
     </syncfusion:SfListView.ItemTemplate>
 </syncfusion:SfListView>
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" hl_lines="10 111 12 13 14 15 16 17" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="10 11 12 13 14 15 16 17" %}
  listView.ItemTemplate = new DataTemplate(() =>
  {
     var frame = new Frame();
@@ -678,7 +678,7 @@ The `IsBusy` property in ViewModel shows the busy indicator when populating the 
                         IsBusy="{Binding IsBusy}"
                         ItemsSource="{Binding BookInfoCollection}">
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 listView.LoadMoreOption = LoadMoreOption.Auto;
 listView.SetBinding(SfListView.LoadMoreCommandProperty, new Binding("LoadMoreItemsCommand", BindingMode.OneWay));
 listView.LoadMoreCommandParameter = listView;

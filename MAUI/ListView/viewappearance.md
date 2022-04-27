@@ -118,7 +118,7 @@ listView.Orientation = ItemsLayoutOrientation.Horizontal;
 The `SfListView` allows you to layout the items like `TabView` in the horizontal direction by setting the [Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_Orientation) property as `Horizontal` using the [ItemTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTapped) event. It brings any desired view above the horizontal list as follows.
 
 {% tabs %}
-{% highlight xaml tabtitle= "MainPage.cs" hl_lines="10" %}
+{% highlight xaml tabtitle= "MainPage.xaml.cs" hl_lines="10" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
     <ContentPage.Content>
         <Grid x:Name="GridView">
@@ -143,7 +143,7 @@ The `SfListView` allows you to layout the items like `TabView` in the horizontal
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 public partial class MainPage : ContentPage
 {
     public MainPage()
@@ -229,7 +229,7 @@ You should either define the size for each inner `SfListView` or set the [AutoFi
     </Grid>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" hl_lines="10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28" %}
 public partial class MainPage : ContentPage
 {
     public MainPage()
@@ -323,7 +323,7 @@ The `SfListView` allows applying alternate row styling for items by using the `I
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.cs" hl_lines="13 18" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="13 18" %}
 public partial class MainPage : ContentPage
 {
     public MainPage()
@@ -395,7 +395,7 @@ The `SfListView` allows customizing the item appearance, such as rounded corners
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.cs" hl_lines="12 13" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="12 13" %}
 public partial class MainPage : ContentPage
 {
     public MainPage()
@@ -458,7 +458,7 @@ N> Define the frame within any view inside `ItemTemplate` with some margin aroun
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.cs" hl_lines="14 18" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="14 18" %}
 public partial class MainPage : ContentPage
 {
     public MainPage()
@@ -504,7 +504,7 @@ public partial class MainPage : ContentPage
 The `SfListView` allows customizing the [ListViewItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewItem.html) based on the [ItemType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemType.html). Follow the code example to customize the Header, Footer, GroupHeader, LoadMore, and ListViewItem.
 
 {% tabs %}
-{% highlight c# tabtitle= "MainPage.cs" hl_lines="6" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="6" %}
 public partial class MainPage : ContentPage
 {
     public MainPage()
@@ -846,7 +846,7 @@ public class ItemGeneratorExt : ItemGenerator
 Initialize and assign ItemGenerator extension to ListView
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 public partial class MainPage : ContentPage
 {
