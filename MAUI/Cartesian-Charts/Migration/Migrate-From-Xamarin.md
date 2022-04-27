@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrate from Xamarin.Forms SfChart to .NET MAUI SfCartesianChart
 
-We do not have to rewrite the entire code for .NET MAUI Charts while using Xamarin SfChart. However, a minor code change is required. In addition, we have divided SfChart into five chart control in .NET MAUI for a better user experience and understanding.
+You do not have to rewrite the entire code for .NET MAUI Charts when using Xamarin SfChart. However, a minor code change is required. In addition, SfChart has been divided into five chart controls in .NET MAUI for a better user experience and understanding.
 
 <table>
 <tr>
@@ -20,11 +20,11 @@ We do not have to rewrite the entire code for .NET MAUI Charts while using Xamar
 SfChart
 </td>
 <td>
-SfCartesianChart </br>
-SfCircularChart </br>
-SfFunnelChart (Upcoming) </br>
-SfPolarChart (Upcoming) </br>
-SfPyramidChart (Upcoming) </br>
+<div> SfCartesianChart </div>
+<div> SfCircularChart </div>
+<div> SfFunnelChart (Upcoming) </div>
+<div> SfPolarChart (Upcoming) </div>
+<div> SfPyramidChart (Upcoming) </div>
 </td>
 </tr>
 </table>
@@ -33,19 +33,19 @@ Check [here]() for API changes.
 
 ## Upcoming Features in .NET MAUI
 
-### Chart 
+**Chart** 
 
-* Plot area customization. 
-* Chart area watermark support.
-* Trackball interaction support. 
-* Crosshair interaction support. 
-* Chart exporting as image or stream. 
-* Chart localization support. 
-* Annotation support. 
-* Suspend and resume notice. 
+* Customize the appearance of the chart plot area.. 
+* Watermarker support at the plot area of the chart.
+* Support for trackball interactions. 
+* Support for crosshair interactions. 
+* Exporting support for a chart as an image or a stream. 
+* Support for chart localization. 
+* Support for annotations. 
+* Suspend and resume notification support. 
 * Technical indicators for charts.
 
-### Series
+**Series**
 
 * Listen property change support for series.
 * Get data point index based on value.
@@ -54,7 +54,7 @@ Check [here]() for API changes.
 * Suspend and resume notification.
 * Trendlines support for continuous series. 
 
-### Axis
+**Axis**
 
 * Logarithmic axis support.
 * DateTime category axis support.
@@ -68,7 +68,7 @@ Check [here]() for API changes.
 * Support to set the maximum labels count for chart axis.
 * Support to extent size between Axis title and axis label.
 
-### Legend 
+**Legend** 
 
 * Title for legend. 
 * Support to enable or disable the legend icon visibility.
@@ -79,21 +79,21 @@ Check [here]() for API changes.
 * Event or method to notify the legend click and the creation of a legend item.
 * DataTemplate support for legend.
 
-### Data label
+**Data label**
 
 * Data marker support for line series.
 * DataTemplate support for data label.
 * Connector lines and its customization.
 
-### Tooltip
+**Tooltip**
 
 * Hide and Show method for tooltip.
 
-### Selection
+**Selection**
 
 * Series selection support.
 
-### Zooming
+**Zooming**
 
 * Selection zooming support.
 * Directional zooming.

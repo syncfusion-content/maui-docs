@@ -7,9 +7,9 @@ control: SfCartesianChart
 documentation: ug
 ---
 
-# Migrate from Xamarin.Forms SfChart to .NET MAUI SfCartesianChart
+# Chart API Migration
 
-We kept most of the APIs from Xamarin [SfChart](https://www.syncfusion.com/xamarin-ui-controls/xamarin-charts) in MAUI [SfCartesianChart](https://www.syncfusion.com/maui-controls/maui-charts) to make migration easier. However, we renamed some APIs in.NET MAUI SfCartesianChart to keep consistency in API names. The APIs that have changed from Xamarin SfChart to MAUI SfCartesianChart are detailed as follows.
+We kept most of the APIs from Xamarin [SfChart](https://www.syncfusion.com/xamarin-ui-controls/xamarin-charts) in MAUI [SfCartesianChart](https://www.syncfusion.com/maui-controls/maui-charts) to make migration easier. However, we renamed some APIs in.NET MAUI [SfCartesianChart](https://www.syncfusion.com/maui-controls/maui-charts) to keep consistency in API names. The APIs that have changed from Xamarin SfChart to MAUI SfCartesianChart are detailed as follows.
 
 To initialize the control, import the Chart namespace and Initialize [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1) as per the following code snippet. 
 
@@ -156,7 +156,7 @@ this.Content = chart;
 </tr>
 </table>
 
-The below code example, explains how to initialize axis in Xamarin SfChart and .NET MAUI SfCartesianChart.
+The below code example explains how to migrate the axis of Xamarin SfChart to.NET MAUI SfCartesianChart.
 
 <table>
 <tr>
@@ -247,17 +247,9 @@ this.Content = chart;
 <td>DataMarker</td>
 <td>ShowDataLabels, DataLabelSettings</td>
 </tr>
-<tr>
-<td>-</td>
-<td>XRange</td>
-</tr>
-<tr>
-<td>-</td>
-<td>YRange</td>
-</tr>
 </table>
 
-The below code example, explains how to initialize series in Xamarin SfChart and .NET MAUI SfCartesianChart.
+The below code example explains how to migrate the series of Xamarin SfCharts to the.NET MAUI SfCartesianChart.
 
 <table>
 <tr>
@@ -574,8 +566,14 @@ chart.Series.Add(series);
 ColumnSeries series = new ColumnSeries();
 . . .
 series.EnableTooltip = true;
-
 chart.Series.Add(series);
+
+ChartTooltipBehavior tool = new ChartTooltipBehavior();
+tool.BackgroundColor = Color.Blue;
+tool.TextColor = Color.White;
+tool.Margin = new Thickness(5, 5, 5, 5);
+chart.ChartBehaviors.Add(tool);
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -604,6 +602,13 @@ ColumnSeries series = new ColumnSeries();
 . . .
 series.EnableTooltip = true;
 chart.Series.Add(series);
+
+ChartTooltipBehavior tooltip = new ChartTooltipBehavior();
+tooltip.BackgroundColor = Color.Blue;
+tooltip.TextColor = Color.White;
+tooltip.Margin = new Thickness(5, 5, 5, 5);
+chart.TooltipBehavior = tooltip;
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -628,7 +633,7 @@ To Customize the tooltip appearance, create an instance of the `ChartTooltipBeha
 <chart:SfChart>
 ...
 	<chart:SfChart.ChartBehaviors>
-            <local:ChartSelectionBehavior/>
+            <chart:ChartSelectionBehavior/>
     </chart:SfChart.ChartBehaviors>
 
     <chart:ColumnSeries EnableDataPointSelection="True" 
@@ -646,6 +651,9 @@ ColumnSeries series = new ColumnSeries();
 columnSeries.EnableDataPointSelection = true;
 
 chart.Series.Add(series);
+ChartSelectionBehavior selectionBehavior = new ChartSelectionBehavior();
+
+chart.ChartBehaviors.Add(selectionBehavior);
 {% endhighlight %}
 {% endtabs %}
 </td>
@@ -671,6 +679,7 @@ chart.Series.Add(series);
 ColumnSeries series = new ColumnSeries();
 . . .
 series.SelectionBrush = Brush.Green;
+chart.SelectionBehavior = new ChartSelectionBehavior();
 chart.Series.Add(series);
 {% endhighlight %}
 
