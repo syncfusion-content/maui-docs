@@ -29,7 +29,7 @@ SfChart
 </tr>
 </table>
 
-Check [here]() for API changes. 
+For more details, please check [here]() for API changes. 
 
 ## Upcoming Features in .NET MAUI
 
