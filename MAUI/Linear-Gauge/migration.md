@@ -26,7 +26,6 @@ To initialize the control, import the gauge namespace and Initialize SfLinearGau
 {% highlight xaml %}
 
 <ContentPage
-    . . .
     xmlns:gauge="clr-namespace:Syncfusion.SfGauge.XForms;assembly=Syncfusion.SfGauge.XForms">
 
         <gauge:SfLinearGauge/>
@@ -53,10 +52,10 @@ this.Content = linearGauge;
 
 {% highlight xaml %}
 
-<ContentPage …
-xmlns:gauge="clr-namespace:Syncfusion.Maui.Gauges;assembly=Syncfusion.Maui.Gauges">
+<ContentPage
+    xmlns:gauge="clr-namespace:Syncfusion.Maui.Gauges;assembly=Syncfusion.Maui.Gauges">
 
-<gauge:SfLinearGauge />
+        <gauge:SfLinearGauge/>
 
 </ContentPage>
 
@@ -65,7 +64,7 @@ xmlns:gauge="clr-namespace:Syncfusion.Maui.Gauges;assembly=Syncfusion.Maui.Gauge
 {% highlight C# %}
 
 using Syncfusion.Maui.Gauges;
-…
+...
 
 SfLinearGauge linearGauge = new SfLinearGauge();
 this.Content = linearGauge;
@@ -77,6 +76,9 @@ this.Content = linearGauge;
 </table>
 
 ## Scale
+
+In the .NET MAUI linear gauge, we do not expose APIs for adding [scale](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.LinearScale.html) objects and their collections, like in the Xamarin linear gauge. You can add scale element settings such as axis line, ticks, labels, ranges, and pointers directly to the linear gauge. 
+Also, for creating multiple scales in the .NET MAUI, you can use multiple linear gauge objects. Since control measures are based on their inner elements. 
 
 <table>
 <tr>
@@ -183,7 +185,6 @@ this.Content = linearGauge;
                      Interval="10">
     <gauge:SfLinearGauge.LineStyle>
         <gauge:LinearLineStyle Thickness="20"
-                               Fill="Blue"
                                CornerStyle="BothCurve"/>
     </gauge:SfLinearGauge.LineStyle>
 </gauge:SfLinearGauge>
@@ -221,6 +222,11 @@ this.Content = gauge;
 <td>{{'[Fill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearRange.html#Syncfusion_Maui_Gauges_LinearRange_Fill)'| markdownify }}</td>
 <td>Gets or sets the brush that paints the interior area of the range.</td>
 </tr>
+<tr>
+<td>{{'[Offset](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.LinearRange.html#Syncfusion_SfGauge_XForms_LinearRange_Offset)'| markdownify }}</td>
+<td>{{'[Position](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearRange.html#Syncfusion_Maui_Gauges_LinearRange_Position)'| markdownify }}</td>
+<td>Gets or sets the value that indicates the position of the range inside, or cross, or outside the axis line.</td>
+</tr>
 </table>
 
 The below code example, explains how to initialize range in Xamarin SfLinearGauge and .NET MAUI SfLinearGauge.
@@ -237,22 +243,11 @@ The below code example, explains how to initialize range in Xamarin SfLinearGaug
 
 <gauge:SfLinearGauge>
     <gauge:SfLinearGauge.Scales>
-        <gauge:LinearScale ScaleBarColor="#e0e0e0" 
-                           LabelColor="#424242" 
-                           Interval="5" 
-                           MinorTicksPerInterval ="0">
+        <gauge:LinearScale >
             <gauge:LinearScale.Ranges>
                 <gauge:LinearRange StartValue="0" 
                                    EndValue="33" 
                                    Color="#ffF45656"
-                                   Offset="-40"/>
-                <gauge:LinearRange StartValue="33" 
-                                   EndValue="66" 
-                                   Color="#ffFFC93E"
-                                   Offset="-40"/>
-                <gauge:LinearRange StartValue="66" 
-                                   EndValue="100" 
-                                   Color="#ff0DC9AB"
                                    Offset="-40"/>
             </gauge:LinearScale.Ranges>
         </gauge:LinearScale>
@@ -266,11 +261,6 @@ The below code example, explains how to initialize range in Xamarin SfLinearGaug
 SfLinearGauge linearGauge = new SfLinearGauge();
 
 LinearScale linearScale = new LinearScale();
-linearScale.ScaleBarColor = Color.FromHex("#e0e0e0");
-linearScale.LabelFontSize = 14;
-linearScale.LabelColor = Color.FromHex("#424242");
-linearScale.Interval = 5;
-linearScale.MinorTicksPerInterval = 0;
 
 LinearRange linearRange = new LinearRange();
 linearRange.StartValue = 0;
@@ -278,19 +268,6 @@ linearRange.EndValue = 33;
 linearRange.Offset = -40;
 linearRange.Color = Color.FromHex("#ffF45656");
 linearScale.Ranges.Add(linearRange);
-
-LinearRange linearRange1 = new LinearRange();
-linearRange1.StartValue = 33;
-linearRange1.EndValue = 66;
-linearRange1.Offset = -40;
-linearRange1.Color = Color.FromHex("#ffFFC93E");
-linearScale.Ranges.Add(linearRange1);
-
-LinearRange linearRange2 = new LinearRange();
-linearRange2.StartValue = 66;
-linearRange2.EndValue = 100;
-linearRange2.Offset = -40;
-linearRange2.Color = Color.FromHex("#ff0DC9AB");
 
 linearScale.Ranges.Add(linearRange2);
 linearGauge.Scales.Add(linearScale);
@@ -305,14 +282,10 @@ this.Content = linearGauge;
 
 {% highlight xaml %}
 
-<gauge:SfLinearGauge x:Name="gauge">
+<gauge:SfLinearGauge>
     <gauge:SfLinearGauge.Ranges>
         <gauge:LinearRange StartValue="0" EndValue="33" 
                                    Fill="#ffF45656" Position="Cross"/>
-        <gauge:LinearRange StartValue="33" EndValue="66" 
-                                   Fill="#ffFFC93E" Position="Cross"/>
-        <gauge:LinearRange StartValue="66" EndValue="100" 
-                                   Fill="#ff0DC9AB" Position="Cross"/>
     </gauge:SfLinearGauge.Ranges>
 </gauge:SfLinearGauge>
 
@@ -328,20 +301,6 @@ gauge.Ranges.Add(new LinearRange()
     Fill = new SolidColorBrush(Color.FromArgb("ffF45656")),
     Position = GaugeElementPosition.Outside
 });
-gauge.Ranges.Add(new LinearRange()
-{
-    StartValue = 33,
-    EndValue = 66,
-    Fill = new SolidColorBrush(Color.FromArgb("ffFFC93E")),
-    Position = GaugeElementPosition.Outside
-});
-gauge.Ranges.Add(new LinearRange()
-{
-    StartValue = 66,
-    EndValue = 100,
-    Fill = new SolidColorBrush(Color.FromArgb("ff0DC9AB")),
-    Position = GaugeElementPosition.Outside
-});
 this.Content = gauge;
 
 {% endhighlight %}
@@ -352,7 +311,7 @@ this.Content = gauge;
 
 ## Pointers
 
-In Xamarin SfLinearGauge and .NET MAUI SfLinearGauge, pointers can be classified as mentioned in below table.
+In Xamarin SfLinearGauge and .NET MAUI SfLinearGauge, pointers can be classified as mentioned in below table. 
 
 <table>
 <tr>
@@ -366,10 +325,12 @@ In Xamarin SfLinearGauge and .NET MAUI SfLinearGauge, pointers can be classified
 </tr>
 <tr>
 <td>{{'[SymbolPointer](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.SymbolPointer.html)'| markdownify }}</td>
-<td>{{'[LinearShapePointer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearShapePointer.html)'| markdownify }} and {{'[LinearContentPointer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearContentPointer.html)'| markdownify }}</td>
-<td>Represents the pointer that is used to indicate the value with any visual content and with built-in shape.</td>
+<td>Divided into {{'[LinearShapePointer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearShapePointer.html)'| markdownify }} and {{'[LinearContentPointer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearContentPointer.html)'| markdownify }}</td>
+<td>Represents the pointer that is used to indicate the value with any visual content or with built-in shapes.</td>
 </tr>
 </table>
+
+Also, in the .NET MAUI, bar pointer can be added to the [BarPointers](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_BarPointers) collection, and a shape and content pointer can be added to the [MarkerPointers](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_MarkerPointers) collection.
 
 N> In .NET MAUI SfLinearGauge [SymbolPointer](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.SymbolPointer.html) have been divided into two types. They are [LinearShapePointer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearShapePointer.html) and [LinearContentPointer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearContentPointer.html).
 
@@ -411,19 +372,9 @@ The below code example, explains how to initialize bar pointer in Xamarin SfLine
 
 <gauge:SfLinearGauge>
     <gauge:SfLinearGauge.Scales>
-        <gauge:LinearScale ScaleBarColor="#e0e9f9" 
-                           LabelColor="#424242" 
-                           ScaleBarSize = "20"
-                           LabelFontSize ="14"
-                           MinorTicksPerInterval ="0">
-            <gauge:LinearScale.MajorTickSettings>
-                <gauge:LinearTickSettings Thickness="1" 
-                                          Color ="#9E9E9E"
-                                          Length = "10"/>
-            </gauge:LinearScale.MajorTickSettings>
+        <gauge:LinearScale >
             <gauge:LinearScale.Pointers>
                 <gauge:BarPointer  Value="75" 
-                                   EnableAnimation = "false"
                                    Color = "#36d1dc" />
             </gauge:LinearScale.Pointers>
         </gauge:LinearScale>
@@ -437,18 +388,9 @@ The below code example, explains how to initialize bar pointer in Xamarin SfLine
 SfLinearGauge linearGauge = new SfLinearGauge();
 
 LinearScale linearScale = new LinearScale();
-linearScale.ScaleBarColor = Color.FromHex("#e0e9f9");
-linearScale.LabelColor = Color.FromHex("#424242");
-linearScale.ScaleBarSize = 20;
-linearScale.LabelFontSize = 14;
-linearScale.MinorTicksPerInterval = 0;
-linearScale.MajorTickSettings.Color = Color.FromHex("#9E9E9E");
-linearScale.MajorTickSettings.Thickness = 1;
-linearScale.MajorTickSettings.Length = 10;
 
 BarPointer barPointer = new BarPointer();
 barPointer.Value = 75;
-barPointer.EnableAnimation = false;
 barPointer.Color = Color.FromHex("#36d1dc");
 
 linearScale.Pointers.Add(barPointer);
@@ -464,25 +406,10 @@ this.Content = linearGauge;
 
 {% highlight xaml %}
 
-<gauge:SfLinearGauge MinorTicksPerInterval="0"
-                     Interval="10">
-    <gauge:SfLinearGauge.LineStyle>
-        <gauge:LinearLineStyle Fill="#e0e9f9"
-                               Thickness="20"/>
-    </gauge:SfLinearGauge.LineStyle>
-    <gauge:SfLinearGauge.LabelStyle>
-        <gauge:GaugeLabelStyle FontSize="14" 
-                               TextColor="#424242"/>
-    </gauge:SfLinearGauge.LabelStyle>
-    <gauge:SfLinearGauge.MajorTickStyle>
-        <gauge:LinearTickStyle Length="10" 
-                               Stroke="#9E9E9E" 
-                               StrokeThickness="1" />
-    </gauge:SfLinearGauge.MajorTickStyle>
+<gauge:SfLinearGauge>
     <gauge:SfLinearGauge.BarPointers>
         <gauge:BarPointer Value="75" 
                           PointerSize="10"
-                          EnableAnimation="False" 
                           Fill="#36d1dc"/>
     </gauge:SfLinearGauge.BarPointers>
 </gauge:SfLinearGauge>
@@ -492,21 +419,11 @@ this.Content = linearGauge;
 {% highlight C# %}
 
 SfLinearGauge gauge = new SfLinearGauge();
-gauge.MinorTicksPerInterval = 0;
-gauge.Interval = 10;
-gauge.LineStyle.Fill = Color.FromHex("#e0e9f9");
-gauge.LineStyle.Thickness = 20;
-gauge.LabelStyle.FontSize = 14;
-gauge.LabelStyle.TextColor = Color.FromHex("#424242");
-gauge.MajorTickStyle.Length = 10;
-gauge.MajorTickStyle.Stroke = Color.FromHex("#9E9E9E");
-gauge.MajorTickStyle.StrokeThickness = 1;
 
 gauge.BarPointers.Add(new BarPointer
 {
     Value =75,
     PointerSize=10,
-    EnableAnimation=false,
     Fill = Color.FromHex("#36d1dc"),
 });
 
@@ -518,7 +435,7 @@ this.Content = gauge;
 </td></tr>
 </table>
 
-### Shape pointer
+### Symbol pointer
 
 <table>
 <tr>
@@ -527,13 +444,17 @@ this.Content = gauge;
 <th>Description</th></tr>
 <tr>
 <td>{{'[MarkerShape](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.SymbolPointer.html#Syncfusion_SfGauge_XForms_SymbolPointer_MarkerShape)'| markdownify }}</td>
-<td>{{'[ShapeType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearShapePointer.html#Syncfusion_Maui_Gauges_LinearShapePointer_ShapeType)'| markdownify }}</td>
+<td>{{'[ShapeType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearShapePointer.html#Syncfusion_Maui_Gauges_LinearShapePointer_ShapeType)'| markdownify }} in {{'[LinearShapePointer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearShapePointer.html)'| markdownify }} class</td>
 <td>Gets or sets a value that specifies the default shape type of the pointer.</td>
-</tr>
+</tr> 
 <tr>
 <td>{{'[Color](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.LinearPointer.html#Syncfusion_SfGauge_XForms_LinearPointer_Color)'| markdownify }}</td>
-<td>{{'[Fill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearShapePointer.html#Syncfusion_Maui_Gauges_LinearShapePointer_Fill)'| markdownify }}</td>
+<td>{{'[Fill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearShapePointer.html#Syncfusion_Maui_Gauges_LinearShapePointer_Fill)'| markdownify }} in {{'[LinearShapePointer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearShapePointer.html)'| markdownify }}</td>
 <td>Gets or sets a value that indicates the brush used to paint the pointer interior.</td>
+</tr>
+<td>{{'[SymbolPointerPosition](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.SymbolPointer.html#Syncfusion_SfGauge_XForms_SymbolPointer_SymbolPointerPosition)'| markdownify }}</td>
+<td>{{'[Alignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearMarkerPointer.html#Syncfusion_Maui_Gauges_LinearMarkerPointer_Alignment)'| markdownify }} in {{'[LinearShapePointer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearShapePointer.html)'| markdownify }}</td>
+<td>Gets or sets the placement (start, center or end) of the marker pointer relative to its position.</td>
 </tr>
 </table>
 
@@ -551,22 +472,9 @@ The below code example, explains how to initialize shape pointer in Xamarin SfLi
 
 <gauge:SfLinearGauge>
     <gauge:SfLinearGauge.Scales>
-        <gauge:LinearScale ScaleBarColor="#e0e9f9" 
-                           LabelColor="#424242" 
-                           ScaleBarSize = "20"
-                           LabelFontSize ="14"
-                           MinorTicksPerInterval ="0">
-            <gauge:LinearScale.MajorTickSettings>
-                <gauge:LinearTickSettings Thickness="1" 
-                                          Color ="#9E9E9E" 
-                                          Length = "10"/>
-            </gauge:LinearScale.MajorTickSettings>
+        <gauge:LinearScale>
             <gauge:LinearScale.Pointers>
-                <gauge:BarPointer  Value="75" 
-                                   EnableAnimation = "false" 
-                                   Color = "#36d1dc" />
                 <gauge:SymbolPointer Value ="30" 
-                                     EnableAnimation ="False"
                                      Color= "#5b86e5"/>
             </gauge:LinearScale.Pointers>
         </gauge:LinearScale>
@@ -578,25 +486,9 @@ The below code example, explains how to initialize shape pointer in Xamarin SfLi
 {% highlight C# %}
 
 SfLinearGauge linearGauge = new SfLinearGauge();
-LinearScale linearScale = new LinearScale();
-linearScale.ScaleBarColor = Color.FromHex("#e0e9f9");
-linearScale.LabelColor = Color.FromHex("#424242");
-linearScale.ScaleBarSize = 20;
-linearScale.LabelFontSize = 14;
-linearScale.MinorTicksPerInterval = 0;
-linearScale.MajorTickSettings.Color = Color.FromHex("#9E9E9E");
-linearScale.MajorTickSettings.Thickness = 1;
-linearScale.MajorTickSettings.Length = 10;
-
-BarPointer barPointer = new BarPointer();
-barPointer.Value = 75;
-barPointer.EnableAnimation = false;
-barPointer.Color = Color.FromHex("#36d1dc");
-linearScale.Pointers.Add(barPointer);
 
 SymbolPointer symbolPointer = new SymbolPointer();
 symbolPointer.Value = 30;
-symbolPointer.EnableAnimation = false;
 symbolPointer.Color = Color.FromHex("#5b86e5");
 linearScale.Pointers.Add(symbolPointer);
 
@@ -612,32 +504,11 @@ this.Content = linearGauge;
 
 {% highlight xaml %}
 
-<gauge:SfLinearGauge MinorTicksPerInterval="0"
-                     Interval="10">
-    <gauge:SfLinearGauge.LineStyle>
-        <gauge:LinearLineStyle Fill="#e0e9f9"
-                               Thickness="20"/>
-    </gauge:SfLinearGauge.LineStyle>
-    <gauge:SfLinearGauge.LabelStyle>
-        <gauge:GaugeLabelStyle FontSize="14" 
-                               TextColor="#424242"/>
-    </gauge:SfLinearGauge.LabelStyle>
-    <gauge:SfLinearGauge.MajorTickStyle>
-        <gauge:LinearTickStyle Length="10" 
-                               Stroke="#9E9E9E" 
-                               StrokeThickness="1" />
-    </gauge:SfLinearGauge.MajorTickStyle>
-    <gauge:SfLinearGauge.BarPointers>
-        <gauge:BarPointer Value="75" 
-                          PointerSize="10"
-                          EnableAnimation="False"
-                          Fill="#36d1dc"/>
-    </gauge:SfLinearGauge.BarPointers>
+<gauge:SfLinearGauge>
     <gauge:SfLinearGauge.MarkerPointers>
         <gauge:LinearShapePointer Value="30"
                                   Fill="#5b86e5"
                                   ShapeType="Triangle"
-                                  EnableAnimation="False"
                                   Position="Inside"/>
     </gauge:SfLinearGauge.MarkerPointers>
 </gauge:SfLinearGauge>
@@ -650,28 +521,9 @@ SfLinearGauge gauge = new SfLinearGauge();
 gauge.MinorTicksPerInterval = 0;
 gauge.Interval = 10;
 
-gauge.LineStyle.Fill = Color.FromHex("#e0e9f9");
-gauge.LineStyle.Thickness = 20;
-
-gauge.LabelStyle.FontSize = 14;
-gauge.LabelStyle.TextColor = Color.FromHex("#424242");
-
-gauge.MajorTickStyle.Length = 10;
-gauge.MajorTickStyle.Stroke = Color.FromHex("#9E9E9E");
-gauge.MajorTickStyle.StrokeThickness = 1;
-
-gauge.BarPointers.Add(new BarPointer
-{
-    Value =75,
-    PointerSize=10,
-    EnableAnimation=false,
-    Fill = Color.FromHex("#36d1dc"),
-});
-
 gauge.MarkerPointers.Add(new LinearShapePointer
 {
     Value = 30,
-    EnableAnimation = false,
     Fill = Color.FromHex("#5b86e5"),
     ShapeType = ShapeType.Triangle,
     Position = GaugeElementPosition.Inside
@@ -686,8 +538,8 @@ this.Content = gauge;
 </table>
 
 ### Content pointer
+The ContentPointer in the .NET MAUI SfLinearGauge allows to use any content or image or text as a pointer. In Xamarin, you can add an image as a pointer through the [ImageSource](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.SymbolPointer.html#Syncfusion_SfGauge_XForms_SymbolPointer_ImageSource) property, and in MAUI, you can directly add an image control as a pointer in the content pointer.
 
-The ContentPointer in .NET MAUI SfLinearGauge allows to use any .NET MAUI content as pointer.
 <table>
 <tr>
 <th>Xamarin SfLinearGauge</th>
@@ -752,4 +604,7 @@ this.Content = gauge;
 
 {% endtabs %}
 
-N> In .NET MAUI SfLinearGauge there is no support for annotation like Xamarin SfLinearGauge. So, you can use the content pointer as annotation in .NET MAUI SfLinearGauge.
+## Unsupported feature
+
+The [Annotation](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.LinearGaugeAnnotation.html) feature cannot be supported in the MAUI SfLinearGauge, since this feature requirement can be met using the [content pointer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearContentPointer.html#Syncfusion_Maui_Gauges_LinearContentPointer_Content) support itself. So, you can use the content pointer as an annotation in.NET MAUI SfLinearGauge.
+
