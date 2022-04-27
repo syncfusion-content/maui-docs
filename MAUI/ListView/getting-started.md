@@ -54,12 +54,10 @@ public partial class MainPage : ContentPage
 To use this control inside an application, you must initialize the `SfListView` handler.
 
 {% tabs %}
-{% highlight c# tabtitle= "MauiProgram.cs" hl_lines="5 22" %}
+{% highlight c# tabtitle= "MauiProgram.cs" hl_lines="4 20" %}
 using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Controls.Xaml;
 using Microsoft.Maui.Hosting;
-using Syncfusion.Maui.ListView;
-using Syncfusion.Maui.ListView.Handlers;
 using Syncfusion.Maui.ListView.Hosting;
 
 namespace GettingStarted
@@ -134,7 +132,7 @@ N> If you want your data model to respond to property changes, then implement [I
 Create a model repository class with `BookInfo` collection property initialized with required number of data objects in a new class file as shown in the following code example, and save it as BookInfoRepository.cs file:
 
 {% tabs %}
-{% highlight c# tabtitle= "BookInfoRepository" %}
+{% highlight c# tabtitle= "BookInfoRepository.cs" %}
 public class BookInfoRepository
 {
     private ObservableCollection<BookInfo> bookInfo;
@@ -504,12 +502,6 @@ The header and footer can be handled as scrollable or sticky to the view by enab
     <DataTemplate>
       <Grid BackgroundColor="#DC595F">
         <Label Text="Footer Item" FontAttributes="Bold" FontSize="18" TextColor="White" />
-        <Grid.ColumnDefinitions>
-          <ColumnDefinition />
-          <ColumnDefinition />
-        </Grid.ColumnDefinitions>
-        <Image GridLayout.Column="0" Source="Edit.png" />
-        <Image GridLayout.Column="1" Source="Delete.png" />
       </Grid>
     </DataTemplate>
   </syncfusion:SfListView.FooterTemplate>
@@ -525,7 +517,6 @@ listView.HeaderTemplate = new DataTemplate(() =>
 {
   var grid = new Grid();
   grid.ColumnDefinitions.Add(new ColumnDefinition());
-  grid.ColumnDefinitions.Add(new ColumnDefinition());
   grid.BackgroundColor = Color.FromHex("#4CA1FE");
   var headerLabel = new Label { BackgroundColor = Colors.White, FontSize = 18,
                                 FontAttributes = FontAttributes.Bold };
@@ -536,7 +527,6 @@ listView.HeaderTemplate = new DataTemplate(() =>
 listView.FooterTemplate = new DataTemplate(() =>
 {
   var grid = new Grid();
-  grid.ColumnDefinitions.Add(new ColumnDefinition());
   grid.ColumnDefinitions.Add(new ColumnDefinition());
   grid.BackgroundColor = Colors.FromHex("#DC595F");
   var footerLabel = new Label { BackgroundColor = Colors.White, FontSize = 18,

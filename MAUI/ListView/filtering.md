@@ -60,7 +60,7 @@ grid.SetRow(listView, 1);
 The following code example illustrates how to filter the data using `FilterContacts` method in the ViewModel:
 
 {% tabs %}
-{% highlight c# tabtitle= "ViewModel.cs" hl_lines="7 12 13 14 15 16 17 18 19 20 21 22 23" %}
+{% highlight c# tabtitle= "ViewModel.cs" hl_lines="7 12 13 14 15 16 17 18 19 20 21 22" %}
 SearchBar searchBar = null;
 private void OnFilterTextChanged(object sender, TextChangedEventArgs e)
 {
@@ -96,7 +96,7 @@ The following screenshot shows the output rendered when the items are filtered:
 The [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html) allows filtering the items based on multiple criteria. The following code example explains how to  filter the data using multiple properties:
 
 {% tabs %}
-{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="7 8" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="7" %}
 private bool FilterContacts(object obj)
 {
   if (searchBar == null || searchBar.Text == null)
