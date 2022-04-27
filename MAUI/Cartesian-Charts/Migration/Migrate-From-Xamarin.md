@@ -70,20 +70,19 @@ Check [here]() for API changes.
 
 **Legend** 
 
-* Title for legend. 
+* Title support for legend. 
 * Support to enable or disable the legend icon visibility.
-* Legend wrap support.
-* Legend items floating support.
+* Legend items wrap and floating support.
 * Maximum width support for Legend.
 * Individual legend items based on the data point count.
 * Event or method to notify the legend click and the creation of a legend item.
-* DataTemplate support for legend.
+* DataTemplate support for legend items.
 
 **Data label**
 
-* Data marker support for line series.
-* DataTemplate support for data label.
-* Connector lines and its customization.
+* Marker symbols support for continuous series.
+* DataTemplate support for data labels.
+* Connector lines and its customization support.
 
 **Tooltip**
 
@@ -91,7 +90,7 @@ Check [here]() for API changes.
 
 **Selection**
 
-* Series selection support.
+* Series selection and cluster selection support.
 
 **Zooming**
 
