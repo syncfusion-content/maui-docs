@@ -9,11 +9,11 @@ documentation: ug
 
 # Migrate from Xamarin.Forms SfLinearGauge to .NET MAUI SfLinearGauge
 
-To make the migration from the [Xamarin SfLinearGauge](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.SfLinearGauge.html) to the [.NET MAUI SfLinearGauge](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html) easier, we kept most of the similar APIs from the Xamarin [SfLinearGauge](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.SfLinearGauge.html) in the.NET MAUI [SfLinearGauge](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html). We have also restructured the APIs by considering various use cases and maintaining API consistency. Please find the difference in the below topics.
+To make the migration from the [Xamarin SfLinearGauge](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.SfLinearGauge.html) to the [.NET MAUI SfLinearGauge](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html) easier, most of the similar APIs from the Xamarin [SfLinearGauge](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.SfLinearGauge.html) were kept in the.NET MAUI [SfLinearGauge](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html). Also, the APIs has been restructured by considering various use cases and maintaining API consistency. Please find the difference in the following topics.
 
 ## Initialize control
 
-To initialize the control, import the gauge namespace and Initialize SfLinearGauge as per the following code snippet.
+To initialize the control, import the gauge namespace and initialize SfLinearGauge as shown in the following code sample.
 
 <table>
 <tr>
@@ -98,12 +98,12 @@ Also, for creating multiple scales in the .NET MAUI, you can use multiple linear
 <tr>
 <td>{{'[ScalePosition](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.LinearScale.html#Syncfusion_SfGauge_XForms_LinearScale_ScalePosition)'| markdownify }}</td>
 <td>{{'[IsInversed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_IsInversed)'| markdownify }}</td>
-<td>Gets or sets a value indicating whether inverts the axis from right to left for a horizontal linear gauge or top to bottom for a vertical linear gauge.</td>
+<td>Gets or sets a value indicating whether it inverts the axis from right to left for a horizontal linear gauge or top to bottom for a vertical linear gauge.</td>
 </tr>
 <tr>
 <td>{{'[OpposedPosition](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.LinearScale.html#Syncfusion_SfGauge_XForms_LinearScale_OpposedPosition)'| markdownify }}</td>
 <td>{{'[IsMirrored](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_IsMirrored)'| markdownify }}</td>
-<td>Gets or sets a value indicating whether to mirror the linear gauge.</td>
+<td>Gets or sets a value indicating whether the linear gauge should be mirrored.</td>
 </tr>
 <tr>
 <td>{{'[MajorTickSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.LinearScale.html#Syncfusion_SfGauge_XForms_LinearScale_MajorTickSettings)'| markdownify }}</td>
@@ -122,7 +122,7 @@ Also, for creating multiple scales in the .NET MAUI, you can use multiple linear
 </tr>
 </table>
 
-The below code example, explains how to initialize axis in Xamarin SfLinearGauge and .NET MAUI SfLinearGauge.
+The following code example explains how to initialize the axis in Xamarin SfLinearGauge and .NET MAUI SfLinearGauge.
 
 <table>
 <tr>
@@ -229,7 +229,7 @@ this.Content = gauge;
 </tr>
 </table>
 
-The below code example, explains how to initialize range in Xamarin SfLinearGauge and .NET MAUI SfLinearGauge.
+The following code example explains how to initialize the range in Xamarin SfLinearGauge and .NET MAUI SfLinearGauge.
 
 <table>
 <tr>
@@ -311,7 +311,7 @@ this.Content = gauge;
 
 ## Pointers
 
-In Xamarin SfLinearGauge and .NET MAUI SfLinearGauge, pointers can be classified as mentioned in below table. 
+In Xamarin SfLinearGauge and .NET MAUI SfLinearGauge, pointers can be classified as mentioned in the following table.
 
 <table>
 <tr>
@@ -321,18 +321,18 @@ In Xamarin SfLinearGauge and .NET MAUI SfLinearGauge, pointers can be classified
 <tr>
 <td>{{'[BarPointer](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.BarPointer.html)'| markdownify }}</td>
 <td>{{'[BarPointer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.BarPointer.html)'| markdownify }}</td>
-<td>Create the pointer to indicate the value with needle or arrow shape.</td>
+<td>Create the pointer to indicate the value with a needle or arrow shape.</td>
 </tr>
 <tr>
 <td>{{'[SymbolPointer](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.SymbolPointer.html)'| markdownify }}</td>
 <td>Divided into {{'[LinearShapePointer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearShapePointer.html)'| markdownify }} and {{'[LinearContentPointer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearContentPointer.html)'| markdownify }}</td>
-<td>Represents the pointer that is used to indicate the value with any visual content or with built-in shapes.</td>
+<td>Represents the pointer that is used to indicate the value with any visual content or with a built-in shapes.</td>
 </tr>
 </table>
 
 Also, in the .NET MAUI, bar pointer can be added to the [BarPointers](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_BarPointers) collection, and a shape and content pointer can be added to the [MarkerPointers](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_MarkerPointers) collection.
 
-N> In .NET MAUI SfLinearGauge [SymbolPointer](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.SymbolPointer.html) have been divided into two types. They are [LinearShapePointer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearShapePointer.html) and [LinearContentPointer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearContentPointer.html).
+N> In .NET MAUI SfLinearGauge [SymbolPointer](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.SymbolPointer.html) has been divided into two types. They are [LinearShapePointer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearShapePointer.html) and [LinearContentPointer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearContentPointer.html).
 
 ### Bar pointer
 
@@ -354,11 +354,11 @@ N> In .NET MAUI SfLinearGauge [SymbolPointer](https://help.syncfusion.com/cr/xam
 <tr>
 <td>{{'[Thickness](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.LinearPointer.html#Syncfusion_SfGauge_XForms_LinearPointer_Thickness)'| markdownify }}</td>
 <td>{{'[PointerSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.BarPointer.html#Syncfusion_Maui_Gauges_BarPointer_PointerSize)'| markdownify }}</td>
-<td>Gets or sets the value that specifies the height of BarPointer for a horizontal linear gauge, or to the width of BarPointer for a vertical linear gauge.</td>
+<td>Gets or sets the value that specifies the height of BarPointer for a horizontal linear gauge, or the width of BarPointer for a vertical linear gauge.</td>
 </tr>
 </table>
 
-The below code example, explains how to initialize bar pointer in Xamarin SfLinearGauge and .NET MAUI SfLinearGauge.
+The following code example, explains how to initialize the bar pointer in Xamarin SfLinearGauge and .NET MAUI SfLinearGauge.
 
 <table>
 <tr>
@@ -458,7 +458,7 @@ this.Content = gauge;
 </tr>
 </table>
 
-The below code example, explains how to initialize shape pointer in Xamarin SfLinearGauge and .NET MAUI SfLinearGauge.
+The following code example, explains how to initialize the shape pointer in Xamarin SfLinearGauge and .NET MAUI SfLinearGauge.
 
 <table>
 <tr>
@@ -538,7 +538,8 @@ this.Content = gauge;
 </table>
 
 ### Content pointer
-The ContentPointer in the .NET MAUI SfLinearGauge allows to use any content or image or text as a pointer. In Xamarin, you can add an image as a pointer through the [ImageSource](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.SymbolPointer.html#Syncfusion_SfGauge_XForms_SymbolPointer_ImageSource) property, and in MAUI, you can directly add an image control as a pointer in the content pointer.
+
+The ContentPointer in the .NET MAUI SfLinearGauge allows using of any content or image or text as a pointer. In Xamarin, you can add an image as a pointer through the [ImageSource](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.SymbolPointer.html#Syncfusion_SfGauge_XForms_SymbolPointer_ImageSource) property, and in MAUI, you can directly add an image control as a pointer in the content pointer.
 
 <table>
 <tr>
@@ -552,7 +553,7 @@ The ContentPointer in the .NET MAUI SfLinearGauge allows to use any content or i
 </tr>
 </table>
 
-The below code example, explains how to initialize content pointer .NET MAUI SfLinearGauge. Content pointer feature is not applicable in Xamarin SfLinearGauge.
+The following code example, explains how to initialize content pointer .NET MAUI SfLinearGauge. The content pointer feature is not applicable in Xamarin SfLinearGauge.
 
 {% tabs %}
 
