@@ -9,7 +9,7 @@ documentation: ug
 
 # API migration from Xamarin.Forms SfChart
 
-We kept most of the APIs from Xamarin [SfChart](https://www.syncfusion.com/xamarin-ui-controls/xamarin-charts) in MAUI [SfCartesianChart](https://www.syncfusion.com/maui-controls/maui-charts) to make migration easier. However, we renamed some APIs in.NET MAUI [SfCartesianChart](https://www.syncfusion.com/maui-controls/maui-charts) to keep consistency in API names. The APIs that have changed from Xamarin SfChart to MAUI SfCartesianChart are detailed as follows.
+To make the migration from the Xamarin [SfChart](https://www.syncfusion.com/xamarin-ui-controls/xamarin-charts) to .NET MAUI [SfCartesianChart](https://www.syncfusion.com/maui-controls/maui-charts) easier, we kept most of the APIs from the Xamarin [SfChart](https://www.syncfusion.com/xamarin-ui-controls/xamarin-charts) in the .NET MAUI [SfCartesianChart](https://www.syncfusion.com/maui-controls/maui-charts). However, to maintain the consistency of API naming in the .NET MAUI [SfCartesianChart](https://www.syncfusion.com/maui-controls/maui-charts), we renamed some of the APIs. Please find the difference in the below topics.
 
 To initialize the control, import the Chart namespace and Initialize [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1) as per the following code snippet. 
 

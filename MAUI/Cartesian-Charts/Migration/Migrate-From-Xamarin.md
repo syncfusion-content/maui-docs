@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrate from Xamarin.Forms SfChart to .NET MAUI SfCartesianChart
 
-You do not have to rewrite the entire code for .NET MAUI Charts when using Xamarin SfChart. However, a minor code change is required. In addition, SfChart has been divided into five chart controls in .NET MAUI for a better user experience and understanding.
+The Cartesian Chart was created from the scratch using the upgraded APIs and performance of the .NET MAUI graphics library and framework layouts. However, a minor code change is required. In addition, we have divided SfChart into five chart controls in .NET MAUI for a better user experience and understanding.
 
 <table>
 <tr>
@@ -29,7 +29,7 @@ SfChart
 </tr>
 </table>
 
-For more details, please check [here]() for API changes. 
+To make the migration easier, we kept the majority of the APIs from the Xamarin SfChart in the .NET MAUI [SfCartesianChart](https://www.syncfusion.com/maui-controls/maui-charts). Currently, most of the features have been added in the [SfCartesianChart](https://www.syncfusion.com/maui-controls/maui-charts), but only a few are pending in the .NET MAUI along with some limitations. Please refer to the details below and the API migration information available [here]().
 
 ## Upcoming Features in .NET MAUI
 
