@@ -9,9 +9,9 @@ documentation: ug
 
 # Migrate from Xamarin.Forms SfRangeSlider to .NET MAUI SfRangeSlider 
 
-To migrate easier from [Xamarin SfRangeSlider](https://www.syncfusion.com/xamarin-ui-controls/xamarin-range-slider) to [.NET MAUI SfRangeSlider](https://www.syncfusion.com/maui-controls/maui-range-slider), we kept most of the APIs from Xamarin SfRangeSlider in MAUI SfRangeSlider. However, to maintain the consistency of API naming in MAUI SfRangeSlider, we renamed some of the APIs. The APIs that have been changed in MAUI SfRangeSlider from Xamarin SfRangeSlider are detailed as follows.
+To migrate easier from [Xamarin SfRangeSlider](https://www.syncfusion.com/xamarin-ui-controls/xamarin-range-slider) to [.NET MAUI SfRangeSlider](https://www.syncfusion.com/maui-controls/maui-range-slider), most of the APIs from Xamarin SfRangeSlider were kept in MAUI SfRangeSlider. However, to maintain the consistency of API naming in MAUI SfRangeSlider, some of the APIs have been renamed. The APIs that have been changed in MAUI SfRangeSlider from Xamarin SfRangeSlider are detailed as follows.
 
-In our .NET MAUI SfRangeSlider, we don’t have an API name [ShowRange](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_AllowDragRange), by default we will show two thumbs. If you wish to use the single thumb, check the `Migration from Xamarin.Forms SfRangeSlider to .NET MAUI SfSlider`.
+In our .NET MAUI SfRangeSlider, you don't have an API name [ShowRange](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_AllowDragRange). By default, you will show two thumbs. If you wish to use the single thumb, check the `Migration from Xamarin.Forms SfRangeSlider to .NET MAUI SfSlider`.
 
 ## Assembly Name 
 
@@ -31,7 +31,7 @@ In our .NET MAUI SfRangeSlider, we don’t have an API name [ShowRange](https://
 <th>Xamarin SfRangeSlider</th>
 <th>.NET MAUI SfRangeSlider</th></tr>
 <tr>
-<td>Syncfusion.ListView.XForms</td>
+<td>Syncfusion.SfRangeSlider.XForms</td>
 <td>Syncfusion.Maui.Sliders</td></tr>
 </table>
 
@@ -189,13 +189,13 @@ In our .NET MAUI SfRangeSlider, we don’t have an API name [ShowRange](https://
 <tr>
 <td>{{'[DragStarted](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_DragStarted)'| markdownify }}</td>
 <td>{{'[ValueChangeStart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ValueChangeStart)'| markdownify }}</td>
-<td>Occurs when the user is selecting a new value for the Slider by tap/mouse down in the thumb.</td></tr>
+<td>Occurs when the user selects a new value for the Slider by tapping/mouse down on the thumb.</td></tr>
 <tr>
 <td>{{'[RangeChanging](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_RangeChanging)'| markdownify }}</td>
 <td>{{'[ValueChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSlider.html#Syncfusion_Maui_Sliders_SfRangeSlider_ValueChanging)'| markdownify }}</td>
-<td>Occurs when the user is selecting a new value for the Range Slider by dragging any one of the thumbs.</td></tr>
+<td>Occurs when the user selects a new value for the Range Slider by dragging any one of the thumbs.</td></tr>
 <tr>
 <td>{{'[DragCompleted](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_DragCompleted)'| markdownify }}</td>
 <td>{{'[ValueChangeEnd](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ValueChangeEnd)'| markdownify }}</td>
-<td>Occurs when the user completed selecting a new value for the Slider by tap/mouse down in the thumb.</td></tr>
+<td>Occurs when the user completes selecting a new value for the Slider by tapping/mouse down on the thumb.</td></tr>
 </table> 
