@@ -53,7 +53,7 @@ To migrate easier from [Xamarin SfDateTimeRangeNavigator](https://help.syncfusio
 <tr>
 <td>{{'[Intervals](https://help.syncfusion.com/cr/xamarin/Syncfusion.RangeNavigator.XForms.SfDateTimeRangeNavigator.html#Syncfusion_RangeNavigator_XForms_SfDateTimeRangeNavigator_Intervals)'| markdownify }}</td>
 <td>{{'[IntervalType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.DateTimeRangeSliderBase.html#Syncfusion_Maui_Sliders_DateTimeRangeSliderBase_IntervalType)'| markdownify }}</td>
-<td>Gets or sets the type of the date interval. By default it will be Years.</td></tr>
+<td>Gets or sets the type of the date interval. By default, it will be Years.</td></tr>
 <tr>
 <td>{{'[OverlayColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.RangeNavigator.XForms.SfDateTimeRangeNavigator.html#Syncfusion_RangeNavigator_XForms_SfDateTimeRangeNavigator_OverlayColor)'| markdownify }}</td>
 <td>{{'[InactiveRegionFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSelector.html#Syncfusion_Maui_Sliders_SfDateTimeRangeSelector_InactiveRegionFill)'| markdownify }}</td>
@@ -230,9 +230,9 @@ To migrate easier from [Xamarin SfDateTimeRangeNavigator](https://help.syncfusio
 <tr>
 <td>{{'[MinorScaleLabelsCreated](https://help.syncfusion.com/cr/xamarin/Syncfusion.RangeNavigator.XForms.SfDateTimeRangeNavigator.html#Syncfusion_RangeNavigator_XForms_SfDateTimeRangeNavigator_MinorScaleLabelsCreated)'| markdownify }}</td>
 <td>{{'[LabelCreated](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_LabelCreated)'| markdownify }}</td>
-<td>Occurs when a slider label is created. It is used to format or change the label text.</td></tr>
+<td>It occurs when a label is created. It is used to format or change the label text.</td></tr>
 <tr>
 <td>{{'[RangeChanged](https://help.syncfusion.com/cr/xamarin/Syncfusion.RangeNavigator.XForms.SfDateTimeRangeNavigator.html#Syncfusion_RangeNavigator_XForms_SfDateTimeRangeNavigator_RangeChanged)'| markdownify }}</td>
 <td>{{'[ValueChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSelector.html#Syncfusion_Maui_Sliders_SfDateTimeRangeSelector_ValueChanged)'| markdownify }}</td>
-<td>Occurs when the user is done selecting a new value for the DateTime Range Selector.</td></tr>
+<td>It occurs when the user is done selecting a new value for the DateTime Range Selector.</td></tr>
 </table> 
