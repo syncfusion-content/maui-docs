@@ -11,8 +11,6 @@ documentation: ug
 
 This section provides a quick overview of how to get started with the .NET Maui ListView (SfListView) for Maui. Walk-through the entire process of creating the real world SfListView.
 
-N> MAUI ListView is now only available for `Android`, `iOS`, and `MacCatalyst` platforms. It is currently not supported in the `WinUI` platform. It will be available in the 2022 Volume 1 release.
-
 ## Creating an application using the .NET MAUI ListView
 
  1. Create a new .NET MAUI application in Visual Studio.
@@ -21,7 +19,7 @@ N> MAUI ListView is now only available for `Android`, `iOS`, and `MacCatalyst` p
  4. Initialize the [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.html) control.
  
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle ="MainPage.xaml" %}
 
 <ContentPage   
     . . .
@@ -31,7 +29,7 @@ N> MAUI ListView is now only available for `Android`, `iOS`, and `MacCatalyst` p
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" %}
 
 using Syncfusion.Maui.ListView;
 . . .
@@ -54,12 +52,10 @@ public partial class MainPage : ContentPage
 To use this control inside an application, you must initialize the `SfListView` handler.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight c# tabtitle= "MauiProgram.cs" hl_lines="4 20" %}
 using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Controls.Xaml;
 using Microsoft.Maui.Hosting;
-using Syncfusion.Maui.ListView;
-using Syncfusion.Maui.ListView.Handlers;
 using Syncfusion.Maui.ListView.Hosting;
 
 namespace GettingStarted
@@ -91,7 +87,7 @@ Create a data model to bind it to the control.
 Create a simple data source in a new class file as shown in the following code example, and save it as BookInfo.cs file. 
 
 {% tabs %}
-{% highlight c# %}
+{% highlight c# tabtitle= "BookInfo.cs" %}
 public class BookInfo : INotifyPropertyChanged
 {
     private string bookName;
@@ -134,7 +130,7 @@ N> If you want your data model to respond to property changes, then implement [I
 Create a model repository class with `BookInfo` collection property initialized with required number of data objects in a new class file as shown in the following code example, and save it as BookInfoRepository.cs file:
 
 {% tabs %}
-{% highlight c# %}
+{% highlight c# tabtitle= "BookInfoRepository.cs" %}
 public class BookInfoRepository
 {
     private ObservableCollection<BookInfo> bookInfo;
@@ -176,7 +172,7 @@ To bind the data source of the SfListView, set the [SfListView.ItemsSource](http
 The following code example binds the previously created collection to the `SfListView.ItemsSource` property:
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle= "MainPage.xaml" hl_lines="10" %}
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
@@ -189,7 +185,7 @@ The following code example binds the previously created collection to the `SfLis
                    ItemsSource="{Binding BookInfo}" />
 </ContentPage>
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# tabtitle= "BookInfoRepository.cs" hl_lines="2" %}
 BookInfoRepository viewModel = new BookInfoRepository ();
 listView.ItemsSource = viewModel.BookInfo; 
 {% endhighlight %}
@@ -200,7 +196,7 @@ listView.ItemsSource = viewModel.BookInfo;
  By defining the [SfListView.ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate) of the SfListView, a custom user interface(UI) can be achieved to display the data items. 
  
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle= "MainPage.xaml" hl_lines="5" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
   <syncfusion:SfListView x:Name="listView" 
                    ItemsSource="{Binding BookInfo}"
@@ -220,7 +216,7 @@ listView.ItemsSource = viewModel.BookInfo;
   </syncfusion:SfListView>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# tabtitle= "App.xaml.cs" hl_lines="15" %}
 using Microsoft.Maui.Controls;
 using Syncfusion.Maui.ListView;
 using System;
@@ -270,18 +266,18 @@ SfListView supports different layouts such as linear and grid layouts. The linea
 The [SfListView.ItemsLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsLayout) property is used to define the layout of the SfListView. [LinearLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.LinearLayout.html) is default layout of this control.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle= "MainPage.xaml" hl_lines="5" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
  <syncfusion:SfListView x:Name="listView" 
                    ItemsSource="{Binding BookInfo}"
                    ItemSize="100">
     <syncfusion:SfListView.ItemsLayout>
-      <syncfusion:GridLayout SpanCount="3" />
+      <syncfusion:GridLayout SpanCount="2" />
     </syncfusion:SfListView.ItemsLayout>
   </syncfusion:SfListView>
 </ContentPage>
 {% endhighlight%}
-{% highlight c# %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" %}
 listView.ItemsLayout = new GridLayout() { SpanCount = 3 };
 {% endhighlight%}
 {% endtabs %}
@@ -293,7 +289,7 @@ listView.ItemsLayout = new GridLayout() { SpanCount = 3 };
 The [DataSource](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.DataSource.html) gets raw data and performs data operations such as sorting, filtering, and grouping in SfListView. The data source of the ListView is set by using the `ItemsSource` attribute.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle= "MainPage.xaml" hl_lines="7" %}
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
@@ -305,7 +301,7 @@ The [DataSource](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.DataS
   </syncfusion:SfListView>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="2 3 4" %}
  SfListView listView = new SfListView();
  DataSource dataSource = new DataSource();
  dataSource.Source = ViewModel.BookInfo;
@@ -327,7 +323,7 @@ SortDescriptor object holds the following three properties:
  * [Comparer](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.SortDescriptor.html#Syncfusion_DataSource_SortDescriptor_Comparer): Describes a comparer that will be applied when sorting.
  
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle= "MainPage.xaml" hl_lines="12" %}
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
@@ -346,7 +342,7 @@ SortDescriptor object holds the following three properties:
   </syncfusion:SfListView>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" %}
  listView.DataSource.SortDescriptors.Add(new SortDescriptor()
  {
    PropertyName = "BookName",
@@ -363,7 +359,7 @@ The SfListView supports you to filter the records in view by setting predicate t
 To filter the items based on the Title property of the underlying data by using `FilterContacts` method, follow the code example:
  
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle= "MainPage.xaml" hl_lines="9" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
     <Grid>
 	 <Grid.RowDefinitions>
@@ -377,7 +373,7 @@ To filter the items based on the Title property of the underlying data by using 
     </Grid>
   </ContentPage>
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="22 23" %}
 var grid = new Grid();
 grid.RowDefinitions.Add(new RowDefinition());
 grid.RowDefinitions.Add(new RowDefinition());
@@ -432,7 +428,7 @@ By using the [SfListView.DataSource.GroupDescriptors](https://help.syncfusion.co
 It also supports you to stick the group header by enabling the [SfListView.IsStickyGroupHeader](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_IsStickyGroupHeader) property.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle= "MainPage.xaml" hl_lines="6 7 8" %}
 <ContentPage  xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
               xmlns:data="clr-namespace:Syncfusion.Maui.DataSource;assembly=Syncfusion.Maui.DataSource">
   <syncfusion:SfListView x:Name="listView">
@@ -446,7 +442,7 @@ It also supports you to stick the group header by enabling the [SfListView.IsSti
   </syncfusion:SfListView>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
  listView.DataSource.GroupDescriptors.Add(new GroupDescriptor()
  {
    PropertyName = "BookName",
@@ -465,7 +461,7 @@ The gesture type can be changed to select the item by setting the [SfListView.Se
 The [SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionChanging) and [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionChanged) events of the SfListView can be used to handle selection operations.
  
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle= "MainPage.xaml" hl_lines="3 4 5" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
   <syncfusion:SfListView x:Name="listView" 
                  SelectionMode="Single"
@@ -473,7 +469,7 @@ The [SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.List
                  SelectionBackgroundColor="#E4E4E4"/>}
 </ContentPage>
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" %}
 listView.SelectionMode = SelectionMode.Single;
 listView.SelectionGesture = TouchGesture.Tap;
 listView.SelectionBackgroundColor = Colors.FromHex("#E4E4E4");
@@ -487,7 +483,7 @@ The SfListView allows setting the header and footer to the user interface(UI) vi
 The header and footer can be handled as scrollable or sticky to the view by enabling or disabling the [IsStickyHeader](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_IsStickyHeader) and [IsStickyFooter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_IsStickyFooter) properties.
  
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle= "MainPage.xaml" hl_lines="4 5 6 13" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
 <syncfusion:SfListView x:Name="listView"
                  ItemsSource="{Binding BookInfo}"
@@ -510,7 +506,7 @@ The header and footer can be handled as scrollable or sticky to the view by enab
   </syncfusion:SfListView>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="3 4 5 17" %}
 ViewModel viewModel = new ViewModel ();
 listView.ItemsSource = viewModel.BookInfo; 
 listView.IsStickyHeader = true;

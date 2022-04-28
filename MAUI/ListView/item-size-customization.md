@@ -24,7 +24,7 @@ The `SfListView.QueryItemSize` event provides the following properties in their 
  * [Handled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.QueryItemSizeEventArgs.html#Syncfusion_Maui_ListView_QueryItemSizeEventArgs_Handled): Decides whether the specified size can be set to the item or not. The default value is `false`. When this property is not set, the decided size will not set to the item.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="7" %}
 this.listView.QueryItemSize += ListView_QueryItemSize;
 
 private void ListView_QueryItemSize(object sender, Syncfusion.Maui.ListView.QueryItemSizeEventArgs e)
@@ -57,7 +57,7 @@ The control contains the following three types of `AutoFitMode`:
 AutoFit considers height of the item when [SfListView.Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_Orientation) is set to `Vertical`. When `SfListView.Orientation` is set to `Horizontal`, it considers width of the item. The [SfListView.GridLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.GridLayout.html) AutoFits all the items in a row and takes the maximum item height of the row and applies to all other items in the row.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle= "MainPage.xaml" hl_lines="4" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
   <syncfusion:SfListView x:Name="listView" 
                     ItemSize="200"
@@ -65,7 +65,7 @@ AutoFit considers height of the item when [SfListView.Orientation](https://help.
                     ItemsSource="{Binding BookInfo}" />
 </ContentPage>
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" %}
 listView.AutoFitMode = AutoFitMode.Height; 
 {% endhighlight %}
 {% endtabs %}
@@ -77,7 +77,7 @@ listView.AutoFitMode = AutoFitMode.Height;
 AutoFit considers height of the item when `SfListView.Orientation` is set to `Vertical`. When `SfListView.Orientation` is set to `Horizontal`, it considers width of the item. The `SfListView.GridLayout` autofit all the items in a row and takes the maximum item height of the row and applies to all other items in the row.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle= "MainPage.xaml" hl_lines="4" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
   <syncfusion:SfListView x:Name="listView" 
                     ItemSize="200"
@@ -85,7 +85,7 @@ AutoFit considers height of the item when `SfListView.Orientation` is set to `Ve
                     ItemsSource="{Binding ContactsInfo}" />
 </ContentPage>
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" %}
 listView.AutoFitMode = AutoFitMode.DynamicHeight; 
 {% endhighlight %}
 {% endtabs %}
@@ -97,7 +97,7 @@ listView.AutoFitMode = AutoFitMode.DynamicHeight;
 .NET MAUI ListView (SfListView) allows you to resize the item size based on the change in font size of the label element at runtime when `SfListView.AutoFitMode` is [DynamicHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.AutoFitMode.html#Syncfusion_Maui_ListView_AutoFitMode_DynamicHeight).
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle= "MainPage.xaml" hl_lines="7 13" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">       
  <Grid>
     <Grid.RowDefinitions>
@@ -137,7 +137,7 @@ listView.AutoFitMode = AutoFitMode.DynamicHeight;
 </Grid>              
 </ContentPage>
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="3" %}
 private void Button_Clicked(object sender, EventArgs e)
 {
     ViewModel.FontSize += 25;
@@ -152,7 +152,7 @@ private void Button_Clicked(object sender, EventArgs e)
 `SfListView` allows you to resize the `Header` and `Footer` item sizes based on the change in font size of the label element at runtime by calling [RefreshItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_RefreshItem_System_Int32_System_Int32_System_Boolean_) method asynchronously when `SfListView.AutoFitMode` is set to `Height`.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle= "MainPage.xaml" hl_lines="11 17 26 27" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">       
  <Grid>
     <Grid.RowDefinitions>
@@ -187,7 +187,7 @@ private void Button_Clicked(object sender, EventArgs e)
     </syncfusion:SfListView>                
 </ContentPage>
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# tabtitle= "ContactsViewModel.cs" hl_lines="10 11 12 13 14 15 16 17 18 19 20 21 22 23 24" %}
 namespace SfListViewSample
 {
     public class ContactsViewModel : INotifyPropertyChanged
@@ -224,7 +224,7 @@ namespace SfListViewSample
 By default, the image is not loaded with the actual size in `AutoFitMode` because it measures the size before the layout. As a result, the size of the child view changes cannot be found from the parent view. It is a known issue with `ListView`, but it can be fixed by calling the `RefreshItem` method in the `Loaded` event of `ListView`.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle= "MainPage.xaml" hl_lines="5 7" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
     <ContentPage.Content>
         <Grid>
@@ -248,7 +248,7 @@ By default, the image is not loaded with the actual size in `AutoFitMode` becaus
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="6" %}
 private void ListView_Loaded(object sender, Syncfusion.Maui.ListView.ListViewLoadedEventArgs e)
 {
     Device.BeginInvokeOnMainThread(async() =>
