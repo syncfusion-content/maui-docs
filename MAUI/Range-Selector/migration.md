@@ -64,7 +64,7 @@ To migrate easier from [Xamarin SfDateTimeRangeNavigator](https://help.syncfusio
 			{{'[ThumbStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ThumbStyle)'| markdownify }}<br/>
 		</td>
 <td rowspan="2" valign="center">
-			{{Gets or sets a value to customize the appearance of the thumb shape.}}<br/>
+			Gets or sets a value to customize the appearance of the thumb shape.<br/>
 		</td></tr>
 <tr>
 <td>{{'[RightThumbStyle](https://help.syncfusion.com/cr/xamarin/Syncfusion.RangeNavigator.XForms.SfDateTimeRangeNavigator.html#Syncfusion_RangeNavigator_XForms_SfDateTimeRangeNavigator_RightThumbStyle)'| markdownify }}</td></tr>
@@ -74,7 +74,7 @@ To migrate easier from [Xamarin SfDateTimeRangeNavigator](https://help.syncfusio
 			{{'[Tooltip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Tooltip)'| markdownify }}<br/>
 		</td>
 <td rowspan="2" valign="center">
-			{{Gets or sets a value to customize the appearance of the tooltip shape.}}<br/>
+			Gets or sets a value to customize the appearance of the tooltip shape.<br/>
 		</td></tr>
 <tr>
 <td>{{'[RightTooltipStyle](https://help.syncfusion.com/cr/xamarin/Syncfusion.RangeNavigator.XForms.SfDateTimeRangeNavigator.html#Syncfusion_RangeNavigator_XForms_SfDateTimeRangeNavigator_RightTooltipStyle)'| markdownify }}</td></tr>
@@ -93,7 +93,7 @@ To migrate easier from [Xamarin SfDateTimeRangeNavigator](https://help.syncfusio
 			{{'[SliderThumbStyle.Radius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html#Syncfusion_Maui_Sliders_SliderThumbStyle_Radius)'| markdownify }}<br/>
 		</td>
 <td rowspan="2" valign="center">
-			{{Gets or sets the radius for the thumb.}}<br/>
+			Gets or sets the radius for the thumb.<br/>
 		</td></tr>
 <tr>
 <td>{{'[ThumbStyle.Height](https://help.syncfusion.com/cr/xamarin/Syncfusion.RangeNavigator.XForms.ThumbStyle.html#Syncfusion_RangeNavigator_XForms_ThumbStyle_Height)'| markdownify }}</td></tr>
