@@ -9,11 +9,11 @@ documentation: ug
 
 # Migrate from Xamarin.Forms SfCircularGauge to .NET MAUI SfRadialGauge
 
-To make the migration from the [Xamarin SfCircularGauge](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.SfCircularGauge.html) to [.NET MAUI SfRadialGauge](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfRadialGauge.html) easier, we kept most of the APIs from the Xamarin SfCircularGauge in the.NET MAUI SfRadialGauge. However, to maintain the consistency of API naming in the.NET MAUI SfRadialGauge, we renamed some of the APIs. Please find the difference in the below topics.
+To make the migration from the [Xamarin SfCircularGauge](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.SfCircularGauge.html) to [.NET MAUI SfRadialGauge](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfRadialGauge.html) easier, most of the APIs from the Xamarin SfCircularGauge were kept in the.NET MAUI SfRadialGauge. However, to maintain the consistency of API naming in the.NET MAUI SfRadialGauge, some of the APIs have been renamed. Please find the difference in the following topics.
 
 ## Initialize control
 
-To initialize the control, import the gauge namespace and Initialize SfRadialGauge as per the following code snippet.
+To initialize the control, import the gauge namespace and initialize SfRadialGauge as shown in the following code sample.
 
 <table>
 <tr>
@@ -117,12 +117,12 @@ this.Content = sfRadialGauge;
 <tr>
 <td>{{'[SweepAngle](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.Scale.html#Syncfusion_SfGauge_XForms_Scale_SweepAngle)'| markdownify }}</td>
 <td>{{'[EndAngle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_EndAngle)'| markdownify }}</td>
-<td>Gets or sets a value that specifies the EndAngle of axis.</td>
+<td>Gets or sets a value that specifies the EndAngle of the axis.</td>
 </tr>
 <tr>
 <td>{{'[EnableAutoAngle](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.Scale.html#Syncfusion_SfGauge_XForms_Scale_EnableAutoAngle)'| markdownify }}</td>
 <td>{{'[CanRotateLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_CanRotateLabels)'| markdownify }}</td>
-<td>Gets or sets a value indicating whether to rotate the labels.</td>
+<td>Gets or sets a value indicating whether to rotate the labels or not.</td>
 </tr>
 <tr>
 <td>{{'[MaximumLabels](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.Scale.html#Syncfusion_SfGauge_XForms_Scale_MaximumLabels)'| markdownify }}</td>
@@ -132,17 +132,17 @@ this.Content = sfRadialGauge;
 <tr>
 <td>{{'[Direction](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.Scale.html#Syncfusion_SfGauge_XForms_Scale_Direction)'| markdownify }}</td>
 <td>{{'[IsInversed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_IsInversed)'| markdownify }}</td>
-<td>Gets or sets a value indicating whether inverts the axis from right to left.</td>
+<td>Gets or sets a value indicating whether it inverts the axis from right to left.</td>
 </tr>
 <tr>
 <td>{{'[MajorTickSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.Scale.html#Syncfusion_SfGauge_XForms_Scale_MajorTickSettings)'| markdownify }}</td>
 <td>{{'[MajorTickStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_MajorTickStyle)'| markdownify }}</td>
-<td>Gets or sets RadialTickStyle, that used to customize major ticks.</td>
+<td>Gets or sets RadialTickStyle, which is used to customize major ticks.</td>
 </tr>
 <tr>
 <td>{{'[MinorTickSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.Scale.html#Syncfusion_SfGauge_XForms_Scale_MinorTickSettings)'| markdownify }}</td>
 <td>{{'[MinorTickStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_MinorTickStyle)'| markdownify }}</td>
-<td>Gets or sets RadialTickStyle, that used to customize minor ticks.</td>
+<td>Gets or sets RadialTickStyle, which is used to customize minor ticks.</td>
 </tr>
 <tr>
 <td>{{'[UseRangeColorForLabels](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.Scale.html#Syncfusion_SfGauge_XForms_Scale_UseRangeColorForLabels)'| markdownify }}</td>
@@ -151,7 +151,7 @@ this.Content = sfRadialGauge;
 </tr>
 </table>
 
-The below code example, explains how to initialize axis in Xamarin SfCircularGauge and .NET MAUI SfRadialGauge.
+The following code example, explains how to initialize the axis in Xamarin SfCircularGauge and .NET MAUI SfRadialGauge.
 
 <table>
 <tr>
@@ -246,7 +246,7 @@ this.Content = sfRadialGauge;
 <tr>
 <td>{{'[Range](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.Range.html)'| markdownify }}</td>
 <td>{{'[RadialRange](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialRange.html)'| markdownify }}</td>
-<td>Create the range to add color bar in the gauge. RadialRange is a visual that helps to quickly visualize where a value falls on the axis.</td>
+<td>Create the range to add a color bar in the gauge. RadialRange is a visual that helps to quickly visualize where a value falls on the axis.</td>
 </tr>
 <tr>
 <td>{{'[Offset](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.Range.html#Syncfusion_SfGauge_XForms_Range_Offset)'| markdownify }}</td>
@@ -256,11 +256,11 @@ this.Content = sfRadialGauge;
 <tr>
 <td>{{'[Color](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.Range.html#Syncfusion_SfGauge_XForms_Range_Color)'| markdownify }}</td>
 <td>{{'[Fill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialRange.html#Syncfusion_Maui_Gauges_RadialRange_Fill)'| markdownify }}</td>
-<td>Gets or sets the Color that paints the interior area of the range.</td>
+<td>Gets or sets the color that paints the interior area of the range.</td>
 </tr>
 </table>
 
-The below code example, explains how to initialize range in Xamarin SfCircularGauge and .NET MAUI SfRadialGauge.
+The following code example, explains how to initialize the range in Xamarin SfCircularGauge and .NET MAUI SfRadialGauge.
 
 <table>
 <tr>
@@ -361,7 +361,7 @@ this.Content = sfRadialGauge;
 
 ## Pointers
 
-In Xamarin SfCircularGauge and .NET MAUI SfRadialGauge, pointers can be classified as mentioned in below table.
+In Xamarin SfCircularGauge and .NET MAUI SfRadialGauge, pointers can be classified as mentioned in the following table.
 
 <table>
 <tr>
@@ -376,12 +376,12 @@ In Xamarin SfCircularGauge and .NET MAUI SfRadialGauge, pointers can be classifi
 <tr>
 <td>{{'[NeedlePointer](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.NeedlePointer.html)'| markdownify }}</td>
 <td>{{'[NeedlePointer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html)'| markdownify }}</td>
-<td>Create the pointer to indicate the value with needle or arrow shape.</td>
+<td>Create the pointer to indicate the value with a needle or arrow shape.</td>
 </tr>
 <tr>
 <td>{{'[RangePointer](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.RangePointer.html)'| markdownify }}</td>
 <td>{{'[RangePointer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RangePointer.html)'| markdownify }}</td>
-<td>Create the pointer to indicate the value with rounded range bar arc.</td>
+<td>Create the pointer to indicate the value with a rounded range bar arc.</td>
 </tr>
 </table>
 
@@ -412,11 +412,11 @@ N> In .NET MAUI SfRadialGauge [MarkerPointer](https://help.syncfusion.com/cr/mau
 <tr>
 <td>{{'[EnableDragging](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.MarkerPointer.html#Syncfusion_SfGauge_XForms_MarkerPointer_EnableDragging)'| markdownify }}</td>
 <td>{{'[IsInteractive](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialPointer.html#Syncfusion_Maui_Gauges_RadialPointer_IsInteractive)'| markdownify }} in {{'[ShapePointer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.ShapePointer.html)'| markdownify }} class</td>
-<td>Gets or sets a value that allowing pointer value change through interaction.</td>
+<td>Gets or sets a value that allows pointer value change by interaction.</td>
 </tr>
 </table>
 
-The below code example, explains how to initialize marker pointer in Xamarin SfCircularGauge and .NET MAUI SfRadialGauge.
+The following code example, explains how to initialize the marker pointer in Xamarin SfCircularGauge and .NET MAUI SfRadialGauge.
 
 <table>
 <tr>
@@ -517,7 +517,8 @@ this.Content = sfRadialGauge;
 
 ### Content pointer
 
-The ContentPointer in SfRadialGauge allows to use any content or image or text as a pointer. In Xamarin, you can add an image as a pointer through the [ImageSource](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.MarkerPointer.html#Syncfusion_SfGauge_XForms_MarkerPointer_ImageSource) property, and in MAUI, you can directly add an image control as a pointer in the content pointer.
+The ContentPointer in SfRadialGauge allows to using of any content or image or text as a pointer. In Xamarin, you can add an image as a pointer through the [ImageSource](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.MarkerPointer.html#Syncfusion_SfGauge_XForms_MarkerPointer_ImageSource) property, and in MAUI, you can directly add an image control as a pointer in the content pointer.
+
 <table>
 <tr>
 <th>Xamarin SfCircularGauge</th>
@@ -530,7 +531,7 @@ The ContentPointer in SfRadialGauge allows to use any content or image or text a
 </tr>
 </table>
 
-The below code example, explains how to initialize content pointer .NET MAUI SfRadialGauge. Content pointer feature is not applicable in the Xamarin SfCircularGauge.
+The following code example, explains how to initialize content pointer .NET MAUI SfRadialGauge. The content pointer feature is not applicable in the Xamarin SfCircularGauge.
 
 {% tabs %}
 
@@ -616,7 +617,7 @@ this.Content = sfRadialGauge;
 <tr>
 <td>{{'[KnobColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.NeedlePointer.html#Syncfusion_SfGauge_XForms_NeedlePointer_KnobColor)'| markdownify }}</td>
 <td>{{'[KnobFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_KnobFill)'| markdownify }}</td>
-<td>Gets or sets the Brush that paints the interior area of the knob.</td>
+<td>Gets or sets the brush that paints the interior area of the knob.</td>
 </tr>
 <tr>
 <td>{{'[KnobStrokeColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.NeedlePointer.html#Syncfusion_SfGauge_XForms_NeedlePointer_KnobStrokeColor)'| markdownify }}</td>
@@ -636,7 +637,7 @@ this.Content = sfRadialGauge;
 <tr>
 <td>{{'[TailColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.NeedlePointer.html#Syncfusion_SfGauge_XForms_NeedlePointer_TailColor)'| markdownify }}</td>
 <td>{{'[TailFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_TailFill)'| markdownify }}</td>
-<td>Gets or sets the Brush that paints the interior area of the tail shape.</td>
+<td>Gets or sets the brush that paints the interior area of the tail shape.</td>
 </tr>
 <tr>
 <td>{{'[TailLengthFactor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.NeedlePointer.html#Syncfusion_SfGauge_XForms_NeedlePointer_TailLengthFactor)'| markdownify }}</td>
@@ -646,11 +647,11 @@ this.Content = sfRadialGauge;
 <tr>
 <td>{{'[EnableDragging](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.NeedlePointer.html#Syncfusion_SfGauge_XForms_NeedlePointer_EnableDragging)'| markdownify }}</td>
 <td>{{'[IsInteractive](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialPointer.html#Syncfusion_Maui_Gauges_RadialPointer_IsInteractive)'| markdownify }}</td>
-<td>Gets or sets a value that allowing pointer value change through interaction.</td>
+<td>Gets or sets a value that allows pointer value change by interaction.</td>
 </tr>
 </table>
 
-The below code example, explains how to initialize needle pointer in Xamarin SfCircularGauge and .NET MAUI SfRadialGauge.
+The following code example explains how to initialize the needle pointer in Xamarin SfCircularGauge and .NET MAUI SfRadialGauge.
 
 <table>
 <tr>
@@ -755,12 +756,12 @@ this.Content = sfRadialGauge;
 <tr>
 <td>{{'[Offset](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.RangePointer.html#Syncfusion_SfGauge_XForms_RangePointer_Offset)'| markdownify }}</td>
 <td>{{'[PointerOffset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RangePointer.html#Syncfusion_Maui_Gauges_RangePointer_PointerOffset)'| markdownify }}</td>
-<td>Gets or sets the value that specifies the position value for pointer.</td>
+<td>Gets or sets the value that specifies the position value for the pointer.</td>
 </tr>
 <tr>
 <td>{{'[RangeCap](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.RangePointer.html#Syncfusion_SfGauge_XForms_RangePointer_RangeCap)'| markdownify }}</td>
 <td>{{'[CornerStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RangePointer.html#Syncfusion_Maui_Gauges_RangePointer_CornerStyle)'| markdownify }}</td>
-<td>Gets or sets the value that specifies the corner style of range pointer.</td>
+<td>Gets or sets the value that specifies the corner style of the range pointer.</td>
 </tr>
 <tr>
 <td>{{'[Thickness](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.RangePointer.html#Syncfusion_SfGauge_XForms_RangePointer_Thickness)'| markdownify }}</td>
@@ -769,7 +770,7 @@ this.Content = sfRadialGauge;
 </tr>
 </table>
 
-The below code example, explains how to initialize range pointer in Xamarin SfCircularGauge and .NET MAUI SfRadialGauge.
+The following code example explains how to initialize the range pointer in Xamarin SfCircularGauge and .NET MAUI SfRadialGauge.
 
 <table>
 <tr>
@@ -888,7 +889,7 @@ Annotations in Xamarin can only be set for circular gauge and cannot be defined 
 </tr>
 </table>
 
-The below code example, explains how to initialize range pointer in Xamarin SfCircularGauge and .NET MAUI SfRadialGauge.
+The following code example explains how to initialize the range pointer in Xamarin SfCircularGauge and .NET MAUI SfRadialGauge.
 
 <table>
 <tr>

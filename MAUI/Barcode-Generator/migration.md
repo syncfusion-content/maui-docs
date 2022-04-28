@@ -9,11 +9,11 @@ documentation: ug
 
 # Migrate from Xamarin.Forms SfBarcode to .NET MAUI SfBarcodeGenerator
 
-To make the migration from the [Xamarin SfBarcode](https://www.syncfusion.com/xamarin-ui-controls/xamarin-barcode) to [.NET MAUI SfBarcodeGenerator](https://www.syncfusion.com/maui-controls/maui-barcodes) easier, we kept most of the APIs from the Xamarin SfBarcode in the.NET MAUI SfBarcodeGenerator. However, to maintain the consistency of API naming in the.NET MAUI SfBarcodeGenerator, we renamed some of the APIs. Please find the difference in the below topics.
+To make the migration from the [Xamarin SfBarcode](https://www.syncfusion.com/xamarin-ui-controls/xamarin-barcode) to [.NET MAUI SfBarcodeGenerator](https://www.syncfusion.com/maui-controls/maui-barcodes) easier, most of the APIs from the Xamarin SfBarcode were kept in the.NET MAUI SfBarcodeGenerator. However, to maintain the consistency of API naming in the .NET MAUI SfBarcodeGenerator, some of the APIs have been renamed. Please find the difference in the following topics.
 
 ## Initialize control
 
-To initialize the control, import the Barcode namespace and Initialize SfBarcodeGenerator as per the following code snippet.
+To initialize the control, import the Barcode namespace and initialize SfBarcodeGenerator as shown in the following code sample.
 
 <table>
 <tr>
@@ -120,7 +120,7 @@ SfBarcodeGenerator barcode = new SfBarcodeGenerator();
 <td>It is used to configure the DataMatrix barcode.</td></tr>
 </table>
 
-The below code example, explains how to initialize symbology and customize symbology settings in Xamarin SfBarcode and .NET MAUI SfBarcodeGenerator.
+The following code example, explains how to initialize symbology and customize symbology settings in Xamarin SfBarcode and .NET MAUI SfBarcodeGenerator.
 
 <table>
 <tr>
@@ -212,7 +212,7 @@ this.Content = barcode;
 <tr>
 <td>{{'[Text](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfBarcode.XForms.SfBarcode.html#Syncfusion_SfBarcode_XForms_SfBarcode_Text)'| markdownify }}</td>
 <td>{{'[Value](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.SfBarcodeGenerator.html#Syncfusion_Maui_Barcode_SfBarcodeGenerator_Value)'| markdownify }}</td>
-<td>Gets or sets the value of the SfBarcodeGenerator to be rendered, which is displayed below the Barcode element when ShowText property is enabled.</td></tr>
+<td>Gets or sets the value of the SfBarcodeGenerator to be rendered, which is displayed below the Barcode element when the ShowText property is enabled.</td></tr>
 <tr>
 <td>{{'[TextGapHeight](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfBarcode.XForms.SfBarcode.html#Syncfusion_SfBarcode_XForms_SfBarcode_TextGapHeight)'| markdownify }}</td>
 <td>{{'[TextSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.SfBarcodeGenerator.html#Syncfusion_Maui_Barcode_SfBarcodeGenerator_TextSpacing)'| markdownify }}</td>
@@ -220,11 +220,11 @@ this.Content = barcode;
 <tr>
 <td>{{'[DarkBarColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfBarcode.XForms.SfBarcode.html#Syncfusion_SfBarcode_XForms_SfBarcode_DarkBarColor)' | markdownify }}</td>
 <td>{{'[ForegroundColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.SfBarcodeGenerator.html#Syncfusion_Maui_Barcode_SfBarcodeGenerator_ForegroundColor)'| markdownify }}</td>
-<td>Gets or sets the value that represents color of barcode elements.</td></tr>
+<td>Gets or sets the value that represents the color of barcode elements.</td></tr>
 <tr>
 <td>{{'[LightBarColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfBarcode.XForms.SfBarcode.html#Syncfusion_SfBarcode_XForms_SfBarcode_LightBarColor)' | markdownify }}</td>
 <td>BackgroundColor</td>
-<td>Gets or sets the value that represents background color of barcode elements.</td></tr>
+<td>Gets or sets the value that represents the background color of barcode elements.</td></tr>
 <tr>
 <td>{{'[Version](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfBarcode.XForms.QRBarcodeSettings.html#Syncfusion_SfBarcode_XForms_QRBarcodeSettings_Version)' | markdownify }}</td>
 <td>{{'[CodeVersion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.QRCode.html#Syncfusion_Maui_Barcode_QRCode_CodeVersion)'| markdownify }}</td>
@@ -233,9 +233,9 @@ this.Content = barcode;
 
 ## Barcode customization
 
-The below code example explains how to customize barcode and text in Xamarin SfBarcode and .NET MAUI SfBarcodeGenerator.
+The following code example explains how to customize barcode and text in Xamarin SfBarcode and .NET MAUI SfBarcodeGenerator.
 
-In .NET MAUI SfBarcodeGenerator text customization is achieved by the [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.SfBarcodeGenerator.html#Syncfusion_Maui_Barcode_SfBarcodeGenerator_TextStyle) property of barcode generator as like below code.
+In .NET MAUI SfBarcodeGenerator, text customization is achieved by using the [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.SfBarcodeGenerator.html#Syncfusion_Maui_Barcode_SfBarcodeGenerator_TextStyle) property of the barcode generator as follows.
 
 <table>
 <tr>
