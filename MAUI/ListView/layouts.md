@@ -68,7 +68,7 @@ listView.ItemsLayout = new GridLayout() { SpanCount = 2 };
 In the `SfListView`, the [GridLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.GridLayout.html) allows you to change the `SpanCount` based on the view size of application with orientation in either portrait or landscape mode.
 
 {% tabs %}
-{% highlight c# tabtitle= "GridLayoutPage.cs" hl_lines="8 9 10" %}
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="8 9 10" %}
 public partial class GridLayoutPage : ContentPage
 {
   this.PropertyChanged += GridLayoutPage_PropertyChanged;

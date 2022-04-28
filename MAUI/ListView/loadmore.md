@@ -492,7 +492,7 @@ private bool CanLoadMoreItems(object obj)
 The `SfListView` allows adding more items infinite times,either manually or automatically. 
 
 {% tabs %}
-{% highlight c# tabtitle= "LoadMoreViewModel.cs" %}
+{% highlight c# tabtitle= "ViewModel.cs" %}
 public class LoadMoreViewModel:INotifyPropertyChanged
 {
   public ObservableCollection<Product> Products { get; set; }

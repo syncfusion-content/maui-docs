@@ -26,7 +26,7 @@ Here, an [ItemsCacheLimit](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.L
 Create a custom class that inherits from `DataTemplateSelector`, and override the `OnSelectTemplate` method to return the `DataTemplate` for that item. At runtime, the SfListView invokes the `OnSelectTemplate` method for each item and passes the data object as parameter.
 
 {% tabs %}
-{% highlight c# tabtitle= "MyDataTemplateSelector" hl_lines="13 14 15 16 17 18 19" %}
+{% highlight c# tabtitle= "DataTemplateSelector.cs" hl_lines="13 14 15 16 17 18 19" %}
 
 class MyDataTemplateSelector : DataTemplateSelector
 {
@@ -78,10 +78,10 @@ Assign custom `DataTemplateSelector` to the [ItemTemplate](https://help.syncfusi
   </Grid>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPageCs.cs" hl_lines="11" %}
-public class MainPageCs : ContentPage
+{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="11" %}
+public class MainPage : ContentPage
 {
-   public MainPageCs()
+   public MainPage()
    {
       var viewModel = new MainPageViewModel();
       BindingContext = viewModel;
@@ -750,7 +750,7 @@ The `SfListView` supports accordion view to display a list of items. Each item c
 `Accordion` view can be displayed by defining two different ItemTemplates. The ItemTemplates can be enabled or disabled in the [ItemTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTapped) event.
 
 {% tabs %}
-{% highlight c# tabtitle="SfListViewAccordionBehavior.cs" hl_lines="33 34 35 36 37 38 39 40 41 42 43 44 45 46 47" %}
+{% highlight c# tabtitle="AccordionBehavior.cs" hl_lines="33 34 35 36 37 38 39 40 41 42 43 44 45 46 47" %}
 internal class SfListViewAccordionBehavior : Behavior<ContentPage>
 {
     #region Fields

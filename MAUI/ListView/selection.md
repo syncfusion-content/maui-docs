@@ -53,7 +53,7 @@ listView.SelectedItem = viewModel.Items[5];
 When the selection mode is `Multiple`, programmatically select more than one item by adding the underlying object to the `SfListView.SelectedItems` property. 
 
 {% tabs %}
-{% highlight c# tabtitle= "SelectionViewModel.cs" hl_lines="42 43" %} 
+{% highlight c# tabtitle= "ViewModel.cs" hl_lines="42 43" %} 
 
 //Perform multiple selection using selected items
 public class SelectionViewModel : INotifyPropertyChanged
@@ -369,7 +369,7 @@ The [SelectionChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle= "CommandViewModel.cs" hl_lines="12 13 14 15" %}
+{% highlight c# tabtitle= "ViewModel.cs" hl_lines="12 13 14 15" %}
 
 public class CommandViewModel
 {

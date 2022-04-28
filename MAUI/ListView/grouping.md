@@ -1063,7 +1063,7 @@ listView.GroupHeaderTemplate = new DataTemplate(() =>
  });
 {% endhighlight %}
 
-{% highlight c# tabtitle= "SelectionBoolToBackgroundColorConverter.cs" %}
+{% highlight c# tabtitle= "BoolToColorConverter.cs" %}
  public class SelectionBoolToBackgroundColorConverter : IValueConverter 
  { 
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture) 

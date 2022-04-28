@@ -154,7 +154,7 @@ You can bind a command for a `Button` inside `ItemTemplate` to the command in Mo
 </listView:SfListView>
 
 {% endhighlight %}
-{% highlight c# tabtitle= "ContactInfo_NestedListView" %}
+{% highlight c# tabtitle= "ContactInfo.cs" %}
 
 public class ContactInfo_NestedListView
 {
@@ -198,7 +198,7 @@ You can bind command of `Button` inside `ItemTemplate` to the command in ViewMod
     </Syncfusion:SfListView.ItemTemplate>
 </Syncfusion:SfListView>
 {% endhighlight %}
-{% highlight c# tabtitle= "ContactsViewModel" %}
+{% highlight c# tabtitle= "ViewModel.cs" %}
 namespace ListViewSample 
 {
     public class ContactsViewModel : INotifyPropertyChanged
@@ -687,7 +687,7 @@ listView.SetBinding(SfListView.IsBusyProperty, new Binding("IsBusy", BindingMode
 {% endtabs %}
 
 {% tabs %}
-{% highlight c# tabtitle= "ViewModel" %}
+{% highlight c# tabtitle= "ViewModel.cs" %}
 public class ViewModel:INotifyPropertyChanged
 {
     private bool isBusy;
