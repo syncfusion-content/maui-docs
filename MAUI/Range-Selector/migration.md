@@ -7,7 +7,7 @@ control: SfRangeSelector
 documentation: ug
 ---  
 
-# Migrate from Xamarin.Forms SfDateTimeRangeNavigator to .NET MAUI SfDateTimeRangeSelector 
+# Migrate from Xamarin.Forms Range Navigator to .NET MAUI Range Selector 
 
 To migrate easier from [Xamarin SfDateTimeRangeNavigator](https://help.syncfusion.com/cr/xamarin/Syncfusion.RangeNavigator.XForms.SfDateTimeRangeNavigator.html) to [.NET MAUI SfDateTimeRangeSelector](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSelector.html), most of the APIs from Xamarin SfDateTimeRangeNavigator were kept in MAUI SfDateTimeRangeSelector. However, to maintain the consistency of API naming in MAUI SfDateTimeRangeSelector, some of the APIs have been renamed. The APIs that have been changed in MAUI SfDateTimeRangeSelector from Xamarin SfDateTimeRangeNavigator are detailed as follows.
 
