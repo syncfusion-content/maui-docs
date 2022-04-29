@@ -444,6 +444,65 @@ this.Content = scheduler;
 
 </table> 
 
+The following code example, explains how to initialize the schedule in Xamarin SfSchedule and .NET MAUI SfScheduler.
+
+<table>
+<tr>
+<th>Xamarin SfSchedule</th>
+<th>.NET MAUI SfScheduler</th></tr>
+<tr>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<schedule:SfSchedule x:Name="schedule" ScheduleView="DayView" FirstDayOfWeek="3"/>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfSchedule schedule = new SfSchedule();
+schedule.ScheduleView = ScheduleView.DayView;
+schedule.FirstDayOfWeek = 3;
+this.Content = schedule;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler"
+                        View="Week"
+                        FirstDayOfWeek="Tuesday"
+                        ShowNavigationArrows="True"
+                        AllowedViews="Day,Week,WorkWeek,Month"
+                        AllowViewNavigation="True">
+</scheduler:SfScheduler>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfScheduler scheduler = new SfScheduler();
+
+scheduler.FirstDayOfWeek = DayOfWeek.Tuesday;
+scheduler.AllowedViews = SchedulerViews.Day | SchedulerViews.Week | SchedulerViews.WorkWeek | SchedulerViews.Month;
+scheduler.ShowNavigationArrows = true;
+scheduler.AllowViewNavigation = true;   
+
+this.Content = scheduler;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td></tr>
+</table>
+
 ### SchedulerAppointment
 
 <table>
