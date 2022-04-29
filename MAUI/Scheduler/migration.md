@@ -22,6 +22,70 @@ To make the migration from the Xamarin [Xamarin SfSchedule](https://www.syncfusi
 <td>Syncfusion.Maui.Scheduler</td></tr>
 </table>
 
+## Initialize control
+
+To initialize the control, import the scheduler namespace and initialize SfScheduler as shown in the following code sample.
+
+<table>
+<tr>
+<th>Xamarin SfSchedule</th>
+<th>.NET MAUI SfScheduler</th></tr>
+<tr>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage
+xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler/>
+
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+using Syncfusion.Maui.Scheduler;
+...
+
+SfScheduler scheduler = new SfScheduler ();
+this.Content = scheduler;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+</td>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage
+xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler />
+
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+using Syncfusion.Maui.Scheduler;
+…
+
+SfScheduler scheduler = new SfScheduler();
+this.Content = scheduler;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td></tr>
+</table>
+
 ## Classes 
 
 <table>
@@ -1281,3 +1345,10 @@ To make the migration from the Xamarin [Xamarin SfSchedule](https://www.syncfusi
 * Support to change text color for each scheduler appointment.
 * Suspend and resume for appointment update.
 * Appointment Drag and Drop.
+
+## Limitations for .NET MAUI.
+
+* Android 5.0 (API 21) or higher.
+* iOS 10 or higher.
+* macOS 10.13 or higher, using Mac Catalyst.
+* Windows 11 and Windows 10 version 1809 or higher, using [Windows UI Library (WinUI) 3](https://docs.microsoft.com/en-us/windows/apps/winui/winui3/).
