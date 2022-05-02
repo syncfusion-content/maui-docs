@@ -2333,13 +2333,6 @@ this.Scheduler.WeekNumberStyle = schedulerWeekNumberStyle;
 * Suspend and resume for appointment update.
 * Appointment Drag and Drop.
 
-## Limitations for .NET MAUI.
-
-* Android 5.0 (API 21) or higher.
-* iOS 10 or higher.
-* macOS 10.13 or higher, using Mac Catalyst.
-* Windows 11 and Windows 10 version 1809 or higher, using [Windows UI Library (WinUI) 3](https://docs.microsoft.com/en-us/windows/apps/winui/winui3/).
-
 ## Known issues in .NET MAUI Scheduler 
 
 * [Windows] Scheduler view swiping using the touch screen is not working.
