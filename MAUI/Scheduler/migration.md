@@ -1070,6 +1070,74 @@ this.Scheduler.AppointmentMapping = appointmentMapping;
 
 ### HeaderView
 
+The following code example, explains how to customize the appearance of the header in Xamarin SfSchedule and .NET MAUI SfScheduler.
+
+<table>
+<tr>
+<th>Xamarin SfSchedule</th>
+<th>.NET MAUI SfScheduler</th></tr>
+<tr>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<syncfusion:SfSchedule x:Name="schedule" >
+	<syncfusion:SfSchedule.HeaderStyle>
+		<syncfusion:HeaderStyle
+			BackgroundColor="#FADBD8" 
+			TextColor="Blue" 
+			FontSize="20"/>
+	</syncfusion:SfSchedule.HeaderStyle>
+</syncfusion:SfSchedule>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+HeaderStyle headerStyle = new HeaderStyle();
+headerStyle.BackgroundColor = Color.FromRgb(250, 219, 216);
+headerStyle.FontSize = "20";
+headerStyle.TextColor=Color.Blue;
+schedule.HeaderStyle = headerStyle;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" 
+                        View="Week">
+    <scheduler:SfScheduler.HeaderView>
+        <scheduler:SchedulerHeaderView 
+                        Background="LightGreen">
+        </scheduler:SchedulerHeaderView>
+    </scheduler:SfScheduler.HeaderView>
+ </scheduler:SfScheduler>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+var textStyle = new SchedulerTextStyle()
+{
+    TextColor = Colors.DarkBlue,
+    FontSize = 14,
+};
+
+this.Scheduler.HeaderView.TextStyle = textStyle;
+this.Scheduler.HeaderView.Background = Brush.LightGreen;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td></tr>
+</table>
+
 <table>
 <tr>
 <th>Xamarin SfSchedule <br/> (HeaderStyle)</th>
@@ -1104,6 +1172,89 @@ this.Scheduler.AppointmentMapping = appointmentMapping;
 </table> 
 
 ### ViewHeaderSettings
+
+The following code example, explains how to customize the appearance of the view header in Xamarin SfSchedule and .NET MAUI SfScheduler.
+
+<table>
+<tr>
+<th>Xamarin SfSchedule</th>
+<th>.NET MAUI SfScheduler</th></tr>
+<tr>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<schedule:SfSchedule x:Name="schedule">
+  <schedule:SfSchedule.ViewHeaderStyle>
+	<schedule:ViewHeaderStyle
+		BackgroundColor="#009688"
+		DayTextColor="#FFFFFF"
+		DateTextColor="#FFFFFF"
+		DayFontFamily="Arial"
+		DateFontFamily="Arial">
+	</schedule:ViewHeaderStyle>
+  </schedule:SfSchedule.ViewHeaderStyle>
+</schedule:SfSchedule>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+// Customize the schedule view header
+ViewHeaderStyle viewHeaderStyle = new ViewHeaderStyle();
+viewHeaderStyle.BackgroundColor = Color.FromHex("#009688");
+viewHeaderStyle.DayTextColor = Color.FromHex("#FFFFFF");
+viewHeaderStyle.DateTextColor = Color.FromHex("#FFFFFF");
+viewHeaderStyle.DayFontFamily = "Arial";
+viewHeaderStyle.DateFontFamily = "Arial";
+schedule.ViewHeaderStyle = viewHeaderStyle;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler">
+    <scheduler:SfScheduler.DaysView>
+        <scheduler:SchedulerDaysView>
+            <scheduler:SchedulerDaysView.ViewHeaderSettings>
+                <scheduler:SchedulerViewHeaderSettings Background="LightGreen" />
+            </scheduler:SchedulerDaysView.ViewHeaderSettings>
+        </scheduler:SchedulerDaysView>
+    </scheduler:SfScheduler.DaysView>
+</scheduler:SfScheduler>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+var dateTextStyle = new SchedulerTextStyle()
+{
+    TextColor = Colors.Red,
+    FontFamily = "Arial",
+};
+
+this.Scheduler.DaysView.ViewHeaderSettings.DateTextStyle = dateTextStyle;
+
+var dayTextStyle = new SchedulerTextStyle()
+{
+    TextColor = Colors.Red,
+    FontFamily = "Arial",
+};
+
+this.Scheduler.DaysView.ViewHeaderSettings.DayTextStyle = dayTextStyle;
+this.Scheduler.DaysView.ViewHeaderSettings.Background = Brush.LightGreen;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td></tr>
+</table>
 
 <table>
 <tr>
