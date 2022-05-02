@@ -806,7 +806,7 @@ The following code example explains how to configure the month view settings in 
 
 SfSchedule schedule = new SfSchedule();
 schedule.ScheduleView = ScheduleView.MonthView;
-MonthViewSettings monthViewSettings = new MonthLabelSettings();
+MonthViewSettings monthViewSettings = new MonthViewSettings();
 monthViewSettings.ShowWeekNumber = false;
 schedule.MonthViewSettings = monthViewSettings;
 this.Content = schedule;
