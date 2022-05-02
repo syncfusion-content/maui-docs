@@ -37,9 +37,9 @@ To initialize the control, import the scheduler namespace and initialize SfSched
 {% highlight xaml %}
 
 <ContentPage
-xmlns:scheduler="clr-namespace:Syncfusion.SfSchedule.XForms;assembly=Syncfusion.SfSchedule.XForms">
+xmlns:schedule="clr-namespace:Syncfusion.SfSchedule.XForms;assembly=Syncfusion.SfSchedule.XForms">
 
-    <scheduler:SfSchedule/>
+    <schedule:SfSchedule/>
 
 </ContentPage>
 
@@ -781,7 +781,7 @@ this.Content = scheduler;
 <td>Gets or sets a view header day format of the SfScheduler.</td></tr>
  </table> 
  
-The following code example, explains how to configure the month view settings in Xamarin SfSchedule and .NET MAUI SfScheduler.
+The following code example explains how to configure the month view settings in Xamarin SfSchedule and .NET MAUI SfScheduler.
 
 <table>
 <tr>
@@ -793,12 +793,9 @@ The following code example, explains how to configure the month view settings in
 
 {% highlight xaml %}
 
-<schedule:SfSchedule x:Name="schedule" ScheduleView="MontView">
+<schedule:SfSchedule x:Name="schedule" ScheduleView="MonthView">
     <schedule:SfSchedule.MonthViewSettings>
-        <schedule:MonthViewSettings
-		    AppointmentIndicatorCount = "2"
-		    ShowAgendaView = "true"
-            AppointmentDisplayMode="Appointment" >
+        <schedule:MonthViewSettings ShowWeekNumber="False">
         </schedule:MonthViewSettings>
     </schedule:SfSchedule.MonthViewSettings>
 </schedule>
@@ -809,10 +806,8 @@ The following code example, explains how to configure the month view settings in
 
 SfSchedule schedule = new SfSchedule();
 schedule.ScheduleView = ScheduleView.MonthView;
-MonthViewSettings monthViewSettings = new MonthViewSettings();
-monthViewSettings.AppointmentIndicatorCount = 2;
-monthViewSettings.ShowAgendaView = true;
-monthViewSettings.AppointmentDisplayMode = AppointmentDisplayMode.Appointment;
+MonthViewSettings monthViewSettings = new MonthLabelSettings();
+monthViewSettings.ShowWeekNumber = false;
 schedule.MonthViewSettings = monthViewSettings;
 this.Content = schedule;
 
@@ -826,11 +821,7 @@ this.Content = schedule;
 {% highlight xaml %}
 
 <scheduler:SfScheduler x:Name="Scheduler"
-                        View="MontView">
-    <scheduler:SfScheduler.MonthView>
-        <scheduler:SchedulerMonthView 
-                       AppointmentDisplayMode="Indicator"/>
-    </scheduler:SfScheduler.MonthView>						
+                        View="MontView" ShowWeekNumber="false">					
 </scheduler:SfScheduler>
 
 {% endhighlight %}
@@ -839,7 +830,7 @@ this.Content = schedule;
 
 SfScheduler Scheduler = new SfScheduler();
 
-this.Scheduler.MonthView.AppointmentDisplayMode = SchedulerMonthAppointmentDisplayMode.Indicator;  
+this.Scheduler.ShowWeekNumber = true;
 
 this.Content = Scheduler;
 
@@ -947,7 +938,7 @@ this.Content = Scheduler;
 
  </table> 
  
-The following code example, explains how to configure the day view settings in Xamarin SfSchedule and .NET MAUI SfScheduler.
+The following code example explains how to configure the day view settings in Xamarin SfSchedule and .NET MAUI SfScheduler.
 
 <table>
 <tr>
@@ -962,9 +953,9 @@ The following code example, explains how to configure the day view settings in X
 <schedule:SfSchedule x:Name="schedule" ScheduleView="DayView">
  <schedule:SfSchedule.DayViewSettings>
         <schedule:DayViewSettings 
-            WorkStartHour="11.5"
-            WorkEndHour="17.5"
-			TimeRulerSize="0">
+            StartHour="9"
+            EndHour="16"
+			ShowCurrentTimeIndicator="false">
         </schedule:DayViewSettings>
     </schedule:SfSchedule.DayViewSettings>
 </schedule>
@@ -975,10 +966,10 @@ The following code example, explains how to configure the day view settings in X
 
 SfSchedule schedule = new SfSchedule();
 schedule.Scheduleview = ScheduleView.DayView;
+schedule.ShowCurrentTimeIndicator = false;
 DayViewSettings dayViewSettings = new DayViewSettings();
-dayViewSettings.WorkStartHour = 11.5;
-dayViewSettings.WorkEndHour = 14.5;
-dayViewSettings.TimeRulerSize = 0;
+dayViewSettings.StartHour = 9;
+dayViewSettings.EndHour = 16;
 schedule.DayViewSettings = dayViewSettings;
 this.Content = schedule;
 
@@ -1102,7 +1093,7 @@ this.Content = Scheduler;
 <td>Gets or sets a view header date format of the SfScheduler.</td></tr>
  </table> 
  
-The following code example, explains how to configure the timeline view settings in Xamarin SfSchedule and .NET MAUI SfScheduler.
+The following code example explains how to configure the timeline view settings in Xamarin SfSchedule and .NET MAUI SfScheduler.
 
 <table>
 <tr>
