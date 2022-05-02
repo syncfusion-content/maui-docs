@@ -2344,5 +2344,5 @@ this.Scheduler.WeekNumberStyle = schedulerWeekNumberStyle;
 
 * [Windows] Scheduler view swiping using the touch screen is not working.
 * [Android] - Scheduler view swiping using the touch screen is not working in all timeline views.
-* The touch and mouse swipe are not working inside the shell page.
+* The touch and mouse swipe are not working inside the AppShell page.
 * `FlowDirection` property runtime change will not work.
