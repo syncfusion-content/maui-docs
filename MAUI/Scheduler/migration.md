@@ -1082,14 +1082,15 @@ The following code example, explains how to customize the appearance of the head
 
 {% highlight xaml %}
 
-<syncfusion:SfSchedule x:Name="schedule" >
-	<syncfusion:SfSchedule.HeaderStyle>
-		<syncfusion:HeaderStyle
-			BackgroundColor="#FADBD8" 
-			TextColor="Blue" 
-			FontSize="20"/>
-	</syncfusion:SfSchedule.HeaderStyle>
-</syncfusion:SfSchedule>
+<syncfusion:SfSchedule x:Name="Scheduler">
+    <syncfusion:SfSchedule.HeaderStyle>
+        <syncfusion:HeaderStyle 
+                        Background="Orange"
+                        TextColor="Blue"
+                        FontSize="20">
+        </syncfusion:HeaderStyle>
+    </syncfusion:SfSchedule.HeaderStyle>
+ </syncfusion:SfSchedule>
 
 {% endhighlight %}
 
@@ -1110,8 +1111,7 @@ schedule.HeaderStyle = headerStyle;
 
 {% highlight xaml %}
 
-<scheduler:SfScheduler x:Name="Scheduler" 
-                        View="Week">
+<scheduler:SfScheduler x:Name="Scheduler" View="Week">
     <scheduler:SfScheduler.HeaderView>
         <scheduler:SchedulerHeaderView 
                         Background="LightGreen">
@@ -1186,15 +1186,15 @@ The following code example, explains how to customize the appearance of the view
 {% highlight xaml %}
 
 <schedule:SfSchedule x:Name="schedule">
-  <schedule:SfSchedule.ViewHeaderStyle>
-	<schedule:ViewHeaderStyle
-		BackgroundColor="#009688"
-		DayTextColor="#FFFFFF"
-		DateTextColor="#FFFFFF"
-		DayFontFamily="Arial"
-		DateFontFamily="Arial">
-	</schedule:ViewHeaderStyle>
-  </schedule:SfSchedule.ViewHeaderStyle>
+<schedule:SfSchedule.ViewHeaderStyle>
+    <schedule:ViewHeaderStyle
+	    BackgroundColor="#009688"
+	    DayTextColor="#FFFFFF"
+	    DateTextColor="#FFFFFF"
+	    DayFontFamily="Arial"
+	    DateFontFamily="Arial">
+    </schedule:ViewHeaderStyle>
+</schedule:SfSchedule.ViewHeaderStyle>
 </schedule:SfSchedule>
 
 {% endhighlight %}
