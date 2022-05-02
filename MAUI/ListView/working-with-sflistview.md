@@ -131,7 +131,7 @@ The [ItemAppearing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView
 * [ItemData](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemAppearingEventArgs.html#Syncfusion_Maui_ListView_ItemAppearingEventArgs_ItemData): The underlying data associated with the appearing item.
 
 {% tabs %}
-{% highlight c# tabtitle= "MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 listView.ItemAppearing += listView_ItemAppearing;
 
@@ -205,7 +205,7 @@ The `SfListView` allows you to scroll by loading the entire collection of items 
    <sync:SfListView x:Name="listView" ItemsSource="{Binding BookInfo}" Loaded="listView_Loaded"/>
 </ScrollView>
 {% endhighlight %}
-{% highlight C# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 using Syncfusion.ListView.Control.Helpers;
 public partial class MainPage : ContentPage
 { 
@@ -233,7 +233,7 @@ When `SfListView` is in [AutoFitMode](https://help.syncfusion.com/cr/maui/Syncfu
    <sync:SfListView x:Name="listView" AutoFitMode="Height" ItemsSource="{Binding BookInfo}" Loaded="listView_Loaded"/>
 </ScrollView>
 {% endhighlight %}
-{% highlight C# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 using Syncfusion.ListView.Control.Helpers;
 public partial class MainPage : ContentPage
 {
