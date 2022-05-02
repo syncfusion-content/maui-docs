@@ -430,10 +430,10 @@ schedule.DataSource = appointmentCollection;
 {% highlight C# %}
 
 // Creating an instance for the scheduler appointment collection.
-var appointment = new ObservableCollection<SchedulerAppointment>();
+var schedulerAppointmentCollection = new ObservableCollection<SchedulerAppointment>();
 
 // Adding scheduler appointment in the schedule appointment collection. 
-appointment.Add(new SchedulerAppointment()
+schedulerAppointmentCollection.Add(new SchedulerAppointment()
 {
     StartTime = DateTime.Today.AddHours(9),
     EndTime = DateTime.Today.AddHours(11),
@@ -442,7 +442,7 @@ appointment.Add(new SchedulerAppointment()
 });
 
 // Adding the scheduler appointment collection to the AppointmentsSource of .NET MAUI Scheduler.
-this.Scheduler.AppointmentsSource = appointment;
+this.Scheduler.AppointmentsSource = schedulerAppointmentCollection;
 
 {% endhighlight %}
 
@@ -577,6 +577,30 @@ The following code example, explains how to map the custom appointments data in 
 
 {% highlight C# %}
 
+/// <summary>   
+/// Represents custom data properties.   
+/// </summary>   
+public class Meeting
+{
+	public string EventName { get; set; }
+	public DateTime From { get; set; }
+	public DateTime To { get; set; }
+	public Color color { get; set; }
+	public bool AllDay { get; set; }
+}
+
+// Creates meetings and stores in a collection.  
+public ObservableCollection<Meeting> Meetings = new ObservableCollection<Meeting>();
+Meeting meeting = new Meeting();
+meeting.From = DateTime.Today.AddHours(9);   
+meeting.To = (meeting.From.AddHours(1));
+meeting.EventName = eventNameCollection[randomTime.Next(9)];
+meeting.color = colorCollection[randomTime.Next(9)];
+Meetings.Add(meeting);
+
+// Adding the custom schedule appointment collection to the DataSource of Xamarin Schedule.
+schedule.DataSource = Meetings;
+
 ScheduleAppointmentMapping dataMapping = new ScheduleAppointmentMapping(); 
 dataMapping.ColorMapping = "color";  
 dataMapping.EndTimeMapping = "To";
@@ -594,8 +618,7 @@ schedule.AppointmentMapping = dataMapping;
 
 {% highlight xaml %}
 
-<scheduler:SfScheduler x:Name="Scheduler" 
-             >
+<scheduler:SfScheduler x:Name="Scheduler">
     <scheduler:SfScheduler.AppointmentMapping>
         <scheduler:SchedulerAppointmentMapping
                 StartTime="From"
@@ -610,6 +633,30 @@ schedule.AppointmentMapping = dataMapping;
 {% endhighlight %}
 
 {% highlight C# %}
+
+/// <summary>    
+/// Represents the custom data properties.    
+/// </summary>    
+public class Meeting
+{
+    public DateTime From { get; set; }
+    public DateTime To { get; set; }
+    public bool IsAllDay { get; set; }
+    public string EventName { get; set; }
+    public Brush Background { get; set; }
+}
+
+// Creates meetings and stores in a collection.  
+public ObservableCollection<Meeting> Meetings = new ObservableCollection<Meeting>();
+Meeting meeting = new Meeting();
+meeting.From = DateTime.Today.AddHours(9);   
+meeting.To = (meeting.From.AddHours(1));
+meeting.EventName = "Meeting";
+meeting.Background = Brush.Blue;
+Meetings.Add(meeting);
+
+// Adding the custom scheduler appointment collection to the AppointmentsSource of .NET MAUI Scheduler.
+this.Scheduler.AppointmentsSource = Meetings;
 
 SchedulerAppointmentMapping appointmentMapping = new SchedulerAppointmentMapping();
 appointmentMapping.Subject = "EventName";
