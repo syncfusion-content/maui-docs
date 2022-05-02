@@ -1736,6 +1736,101 @@ this.Scheduler.DaysView.ViewHeaderSettings.Background = Brush.LightGreen;
 
 ### AppointmentTextStyle
 
+The following code example explains how to customize the appearance of the appointment in Xamarin SfSchedule and .NET MAUI SfScheduler.
+
+<table>
+<tr>
+<th>Xamarin SfSchedule</th>
+<th>.NET MAUI SfScheduler</th></tr>
+<tr>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<schedule:SfSchedule x:Name="Schedule">
+    <schedule:SfSchedule.AppointmentStyle>
+        <schedule:AppointmentStyle
+             TextColor="#FFFFFF"
+             FontSize = "25"
+             FontAttributes = "Bold"
+             FontFamily = "Arial">
+        </schedule:AppointmentStyle>
+    </schedule:SfSchedule.AppointmentStyle>
+</schedule:SfSchedule>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+var appointments = new ObservableCollection<ScheduleAppointment>();
+appointments.Add(new ScheduleAppointment()
+{
+    Subject = "Planning",
+    StartTime = DateTime.Now.AddHours(1),
+    EndTime = DateTime.Now.AddHours(2),
+});
+this.Scheduler.DataSource = appointments;
+
+// Creating Appointment style
+AppointmentStyle appointmentStyle = new AppointmentStyle();
+appointmentStyle.TextColor = Color.Red;
+appointmentStyle.FontSize = 25;
+appointmentStyle.FontAttributes = FontAttributes.Bold;
+appointmentStyle.FontFamily = "Arial";
+
+// Setting Appointment Style
+schedule.AppointmentStyle = appointmentStyle;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<schedule:SfScheduler
+    x:Name="Scheduler">
+    <schedule:SfScheduler.AppointmentTextStyle>
+        <schedule:SchedulerTextStyle
+            TextColor="Orange"
+            FontFamily="Arial"
+            FontSize="12"
+            FontAttributes="Italic"/>
+    </schedule:SfScheduler.AppointmentTextStyle>
+</schedule:SfScheduler>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+var appointments = new ObservableCollection<SchedulerAppointment>();
+appointments.Add(new SchedulerAppointment()
+{
+    Subject = "meeting",
+    StartTime = DateTime.Now,
+    EndTime = DateTime.Now.AddHours(1),
+});
+this.Scheduler.AppointmentsSource = appointments;
+
+var appointmentTextStyle = new SchedulerTextStyle()
+{
+    TextColor = Colors.Red,
+    FontFamily ="Arial",
+    FontSize = 12,
+    FontAttributes = FontAttributes.Bold
+};
+
+this.Scheduler.AppointmentTextStyle = appointmentTextStyle;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td></tr>
+</table>
+
 <table>
 <tr>
 <th>Xamarin SfSchedule <br/> (AppointmentStyle)</th>
@@ -1790,6 +1885,117 @@ this.Scheduler.DaysView.ViewHeaderSettings.Background = Brush.LightGreen;
 </table> 
 
 ### CellStyle
+
+The following code example explains how to customize the appearance of the month cell in Xamarin SfSchedule and .NET MAUI SfScheduler.
+
+<table>
+<tr>
+<th>Xamarin SfSchedule</th>
+<th>.NET MAUI SfScheduler</th></tr>
+<tr>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<schedule:SfSchedule.MonthCellStyle>
+    <schedule:MonthViewCellStyle
+                BackgroundColor="#8282ff"
+                TextColor="Orange"
+                FontSize="20"
+                FontFamily = "Arial"
+                FontAttributes = "None"
+                NextMonthBackgroundColor="Gray"
+                NextMonthTextColor="Gray"
+                PreviousMonthBackgroundColor="White"
+                PreviousMonthTextColor="Gray"
+                TodayBackgroundColor="#f97272"
+                TodayTextColor="White">
+    </schedule:MonthViewCellStyle>
+</schedule:SfSchedule.MonthCellStyle>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+// MonthCell Appearance
+MonthViewCellStyle monthCellStyle = new MonthViewCellStyle();
+monthCellStyle.BackgroundColor = Color.FromHex("#8282ff");
+monthCellStyle.NextMonthBackgroundColor = Color.White;
+monthCellStyle.NextMonthTextColor = Color.Gray;
+monthCellStyle.PreviousMonthBackgroundColor = Color.White;
+monthCellStyle.PreviousMonthTextColor = Color.Gray;
+monthCellStyle.TextColor = Color.Orange;
+monthCellStyle.FontFamily = "Arial";
+monthCellStyle.FontSize = 20;
+monthCellStyle.FontAttributes = FontAttributes.None;
+monthCellStyle.TodayBackgroundColor = Color.FromHex("#f97272");
+monthCellStyle.TodayTextColor = Color.White;
+schedule.MonthCellStyle = monthCellStyle;
+{% endhighlight %}
+
+{% endtabs %}
+</td>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<schedule:SfScheduler
+    x:Name="Scheduler"
+    View="Month">
+    <schedule:SfScheduler.MonthView>
+        <schedule:SchedulerMonthView>
+                <schedule:SchedulerMonthView.CellStyle>
+                    <schedule:SchedulerMonthCellStyle TodayBackground="LightBlue"
+                                                      Background="Orange"
+                                                      LeadingMonthBackground="Brown"
+                                                      TrailingMonthBackground="Yellow"/>
+                </schedule:SchedulerMonthView.CellStyle>
+        </schedule:SchedulerMonthView>
+    </schedule:SfScheduler.MonthView>
+</schedule:SfScheduler>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+    var textStyle = new SchedulerTextStyle()
+    {
+        TextColor = Colors.DarkBlue,
+        FontSize = 14,
+    };
+
+    var leadingMonthTextStyle = new SchedulerTextStyle()
+    {
+        TextColor = Colors.Red,
+        FontSize = 14,
+    };
+
+    var trailingMonthTextStyle = new SchedulerTextStyle()
+    {
+        TextColor = Colors.Red,
+        FontSize = 14,
+    };
+
+    var monthCellStyle = new SchedulerMonthCellStyle()
+    {
+        Background = Brush.LightSkyBlue,
+        TodayBackground = Brush.LightBlue,
+        LeadingMonthBackground = Brush.LightGreen,
+        TrailingMonthBackground = Brush.LightYellow,
+        TextStyle = textStyle,
+        LeadingMonthTextStyle = leadingMonthTextStyle,
+        TrailingMonthTextStyle = trailingMonthTextStyle
+    };
+
+    this.Scheduler.MonthView.CellStyle = monthCellStyle;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td></tr>
+</table>
 
 <table>
 <tr>
@@ -1855,6 +2061,90 @@ this.Scheduler.DaysView.ViewHeaderSettings.Background = Brush.LightGreen;
 </table> 
 
 ### WeekNumberStyle
+
+The following code example explains how to customize the appearance of the cell in Xamarin SfSchedule and .NET MAUI SfScheduler.
+
+<table>
+<tr>
+<th>Xamarin SfSchedule</th>
+<th>.NET MAUI SfScheduler</th></tr>
+<tr>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<schedule:SfSchedule x:Name="Schedule">
+<schedule:SfSchedule.MonthViewSettings>
+    <schedule:MonthViewSettings>
+        <schedule:MonthViewSettings.WeekNumberStyle>
+            <schedule:WeekNumberStyle FontSize="10"
+                                        FontFamily="Arial"
+                                        FontAttributes="Bold"
+                                        TextColor="AliceBlue"
+                                        BackgroundColor="Red"/>
+        </schedule:MonthViewSettings.WeekNumberStyle>
+    </schedule:MonthViewSettings>
+</schedule:SfSchedule.MonthViewSettings>
+</schedule:SfSchedule>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+// creating new instance for WeekNumberStyle
+WeekNumberStyle weekNumberStyle = new WeekNumberStyle();
+weekNumberStyle.FontFamily = "Arial";
+weekNumberStyle.FontSize = 15;
+weekNumberStyle.FontAttributes = FontAttributes.None;
+weekNumberStyle.BackgroundColor = Color.Blue;
+weekNumberStyle.TextColor = Color.White;
+monthViewSettings.WeekNumberStyle = weekNumberStyle;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<schedule:SfScheduler
+    x:Name="Scheduler"
+    ShowWeekNumber="True"
+    View="Month">
+        <schedule:SfScheduler.WeekNumberStyle>
+            <schedule:SchedulerWeekNumberStyle Background="Red"/>
+        </schedule:SfScheduler.WeekNumberStyle>
+</schedule:SfScheduler>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+this.Scheduler.ShowWeekNumber = true;
+var schedulerTextStyle = new SchedulerTextStyle()
+{
+    TextColor = Colors.Red,
+    FontSize = 14,
+    FontFamily = "Arial",
+    FontAttributes = FontAttributes.Bold
+};
+
+var schedulerWeekNumberStyle = new SchedulerWeekNumberStyle()
+{
+    Background = Brush.LightGreen,
+    TextStyle = schedulerTextStyle
+};
+
+this.Scheduler.WeekNumberStyle = schedulerWeekNumberStyle;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td></tr>
+</table>
 
 <table>
 <tr>
@@ -2049,3 +2339,10 @@ this.Scheduler.DaysView.ViewHeaderSettings.Background = Brush.LightGreen;
 * iOS 10 or higher.
 * macOS 10.13 or higher, using Mac Catalyst.
 * Windows 11 and Windows 10 version 1809 or higher, using [Windows UI Library (WinUI) 3](https://docs.microsoft.com/en-us/windows/apps/winui/winui3/).
+
+## Known issues in .NET MAUI Scheduler 
+
+* [Windows] Scheduler view swiping using the touch screen is not working.
+* [Android] - Scheduler view swiping using the touch screen is not working in all timeline views.
+* The touch and mouse swipe are not working inside the shell page.
+* `FlowDirection` property runtime change will not work.
