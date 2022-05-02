@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Migration from Xamarin to .NET MAUI Chart control | Syncfusion
-description: This section explains about the features available in the .NET MAUI Chart (SfCartesianChart) control over Xamarin SfChart.
-platform: maui
+description: This section explains the features available in the .NET MAUI Chart (SfCartesianChart) control over Xamarin SfChart.
+platform: MAUI
 control: SfCartesianChart
 documentation: ug
 ---
 
 # Migrate from Xamarin.Forms SfChart to .NET MAUI SfCartesianChart
 
-The Cartesian Chart was created from the scratch using the upgraded APIs and performance of the .NET MAUI graphics library and framework layouts. However, a minor code change is required. In addition, we have divided SfChart into five chart controls in .NET MAUI for a better user experience and understanding.
+The Cartesian Chart was created from the scratch using the upgraded APIs and performance of the .NET MAUI graphics library and framework layouts. However, a minor code change is required. In addition, `SfChart` has been divided into five chart controls in .NET MAUI for a better user experience and understanding.
 
 <table>
 <tr>
@@ -29,7 +29,7 @@ SfChart
 </tr>
 </table>
 
-To make the migration easier, we kept the majority of the APIs from the Xamarin SfChart in the .NET MAUI [SfCartesianChart](https://www.syncfusion.com/maui-controls/maui-charts). Currently, most of the features have been added in the [SfCartesianChart](https://www.syncfusion.com/maui-controls/maui-charts), but only a few are pending in the .NET MAUI along with some limitations. Please refer to the details below and the API migration information available below.
+To make the migration easier, the majority of the APIs from the Xamarin SfChart were kept in the .NET MAUI [SfCartesianChart](https://www.syncfusion.com/maui-controls/maui-charts). Currently, most of the features have been added in the [SfCartesianChart](https://www.syncfusion.com/maui-controls/maui-charts), but only a few are pending in the .NET MAUI along with some limitations. Please refer to the following details and the API migration information available below.
 
 ## Upcoming Features in .NET MAUI
 
@@ -46,10 +46,10 @@ To make the migration easier, we kept the majority of the APIs from the Xamarin 
 
 **Series**
 
-* Listen property change support for series.
+* Listen to property change support for series.
 * Get data point index based on value.
 * Get data points by passing rect.
-* Notify event or method while series rendering.
+* Notify event or method when series are rendering.
 * Suspend and resume notification.
 * Trendlines support for continuous series. 
 
@@ -61,10 +61,10 @@ To make the migration easier, we kept the majority of the APIs from the Xamarin 
 * Range style customization.
 * Event or method to notify the axis label click.
 * Axis label wrapping support.
-* Axis labels draws multiple lines using /n.
+* Support for axis draw labels as multiple lines using /n.
 * Striplines for range base axis.
 * Arrange category axis labels based on series values.
-* Support to set the maximum labels count for chart axis.
+* Support setting the maximum labels count for the chart axis.
 * Support to extent size between Axis title and axis label.
 
 **Legend** 
@@ -79,7 +79,7 @@ To make the migration easier, we kept the majority of the APIs from the Xamarin 
 
 **Data label**
 
-* Marker symbols support for continuous series.
+* Support for marker symbols in continuous series.
 * DataTemplate support for data labels.
 * Connector lines and its customization support.
 
@@ -93,17 +93,16 @@ To make the migration easier, we kept the majority of the APIs from the Xamarin 
 
 **Zooming**
 
-* Selection zooming support.
-* Directional zooming.
-* Support to set the maximum zoom level.
+* Support for selection and directional zooming.
+* Support setting the maximum zoom level.
 * Event for zooming and panning.
 
 ## Unsupported Features from Xamarin.Forms
 
 * Only continuous series will support data marker symbols.
-* Data label created event support was not provided in series, instead of that event you can use the `DrawDataLabel` override method in `ChartSeries` class.
-* `OpposedPosition` property was not exposed in axis, instead of that you can move to axis opposed position by setting the `CrossesAt` value as `double.MaxValue`.
-* `RangeStyle` support was not provided in axis, instead of that you can use `DrawMajorTick`, `DrawMinorTick`, and `DrawGridLine` override methods provided in axis class. 
+* Data label created event support was not provided in series. Instead, you can use the `DrawDataLabel` override method in the `ChartSeries` class.
+* `OpposedPosition` property was not exposed in axis. Instead, you can move to the axis opposed position by setting the `CrossesAt` value as `double.MaxValue.`
+* `RangeStyle` support was not provided in the axis. Instead, you can use `DrawMajorTick,` `DrawMinorTick,` and `DrawGridLine` override methods provided in the axis class. 
 
 ## Known issues
 
@@ -112,11 +111,11 @@ To make the migration easier, we kept the majority of the APIs from the Xamarin 
 * Axis label rotation does not work for all angles.
 * The title position was incorrect for a category axis with an inversed position.
 * Axis range and series are not updated properly when dynamically removing or inserting the axis collection.
-* Axis minor gridlines are not visible unless major gridlines are enabled.
+* Axis minor grid lines are not visible unless major gridlines are enabled.
 
 ## API migration
 
-To initialize the control, import the Chart namespace and Initialize [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1) as per the following code snippet. 
+To initialize the control, import the Chart namespace and Initialize [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1) as shown in the following code sample. 
 
 <table>
 <tr>
@@ -261,7 +260,7 @@ this.Content = chart;
 </tr>
 </table>
 
-The below code example explains how to migrate the axis of Xamarin SfChart to .NET MAUI SfCartesianChart.
+The following code example explains how to migrate the axis of Xamarin `SfChart` to .NET MAUI `SfCartesianChart`.
 
 <table>
 <tr>
@@ -354,7 +353,7 @@ this.Content = chart;
 </tr>
 </table>
 
-The below code example explains how to migrate the series of Xamarin SfCharts to the .NET MAUI SfCartesianChart.
+The following code example explains how to migrate the series of Xamarin `SfCharts` to the .NET MAUI `SfCartesianChart`.
 
 <table>
 <tr>
@@ -721,7 +720,7 @@ chart.TooltipBehavior = tooltip;
 </tr>
 </table>
 
-To customize the tooltip appearance, create an instance of the `ChartTooltipBehavior` class and add it to the  `ChartBehaviors` collection of `SfChart`. For `SfCartesianChart`, you can directly set the `ChartTooltipBehavior` instance to the [TooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_TooltipBehavior) property as per the above code snippet.
+To customize the tooltip appearance, create an instance of the `ChartTooltipBehavior` class and add it to the `ChartBehaviors` collection of `SfChart.` For `SfCartesianChart,` you can directly set the `ChartTooltipBehavior` instance to the [TooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_TooltipBehavior) property, as shown in the above code sample.
 
 ### Selection
 
@@ -793,7 +792,7 @@ chart.Series.Add(series);
 </tr>
 </table>
 
-Create an instance of the `ChartSelectionBehavior` class and add it to the  `ChartBehaviors` collection of `SfChart`. For `SfCartesianChart`, you can directly set the `ChartSelectionBehavior` instance to the [SelectionBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_SelectionBehaviorr) property as per the above code snippet.
+Create an instance of the `ChartSelectionBehavior` class and add it to the  `ChartBehaviors` collection of `SfChart.` For `SfCartesianChart,` you can directly set the `ChartSelectionBehavior` instance to the [SelectionBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_SelectionBehaviorr) property, as shown in the above code sample.
 
 ### Zooming and Panning
 
@@ -843,4 +842,4 @@ chart.ZoomPanBehavior = zooming;
 </tr>
 </table>
 
-The zooming and panning are achieved using the `ChartZoomPanBehavior` in SfChart and SfCartesianChart as per the above code example.
+The zooming and panning are achieved using the `ChartZoomPanBehavior` in `SfChart` and `SfCartesianChart` as shown in the above code example.
