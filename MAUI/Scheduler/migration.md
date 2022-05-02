@@ -506,6 +506,74 @@ this.Content = scheduler;
 
 ### SchedulerAppointment
 
+The following code example explains how to create the scheduler appointments in Xamarin SfSchedule and .NET MAUI SfScheduler.
+
+<table>
+<tr>
+<th>Xamarin SfSchedule</th>
+<th>.NET MAUI SfScheduler</th></tr>
+<tr>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<schedule:SfSchedule x:Name="schedule"/>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+// Creating an instance for the schedule appointment collection.
+ScheduleAppointmentCollection appointmentCollection = new ScheduleAppointmentCollection();   
+
+// Creating new event   
+ScheduleAppointment clientMeeting = new ScheduleAppointment();   
+clientMeeting.StartTime = DateTime.Today.AddHours(9);   
+clientMeeting.EndTime = DateTime.Today.AddHours(11);   
+clientMeeting.Color = Color.Blue;   
+clientMeeting.Subject = "ClientMeeting";   
+appointmentCollection.Add(clientMeeting);  
+ 
+// Adding the schedule appointment collection to the DataSource of Xamarin Schedule.
+schedule.DataSource = appointmentCollection;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+// Creating an instance for the scheduler appointment collection.
+var schedulerAppointmentCollection = new ObservableCollection<SchedulerAppointment>();
+
+// Adding scheduler appointment in the schedule appointment collection. 
+schedulerAppointmentCollection.Add(new SchedulerAppointment()
+{
+    StartTime = DateTime.Today.AddHours(9),
+    EndTime = DateTime.Today.AddHours(11),
+    Subject = "Client Meeting",
+    Background = Brush.LightSkyBlue,
+});
+
+// Adding the scheduler appointment collection to the AppointmentsSource of .NET MAUI Scheduler.
+this.Scheduler.AppointmentsSource = schedulerAppointmentCollection;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td></tr>
+</table>
+
 <table>
 <tr>
 <th>Xamarin SfSchedule</th>
@@ -605,6 +673,129 @@ this.Content = scheduler;
 </table> 
 
 ### SchedulerAppointmentMapping
+
+The following code example explains how to map the custom appointments data in Xamarin SfSchedule and .NET MAUI SfScheduler.
+
+<table>
+<tr>
+<th>Xamarin SfSchedule</th>
+<th>.NET MAUI SfScheduler</th></tr>
+<tr>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<schedule:SfSchedule x:Name="schedule">
+    <schedule:SfSchedule.AppointmentMapping>
+        <schedule:SchedulerAppointmentMapping
+                StartTimeMapping="From"
+                EndTimeMapping="To"
+                SubjectMapping="EventName"
+                ColorMapping="color"
+                IsAllDayMapping="AllDay"
+               />
+    </schedule:SfSchedule.AppointmentMapping>
+</schedule:SfSchedule>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+/// <summary>   
+/// Represents custom data properties.   
+/// </summary>   
+public class Meeting
+{
+    public string EventName { get; set; }
+    public DateTime From { get; set; }
+    public DateTime To { get; set; }
+    public Color color { get; set; }
+    public bool AllDay { get; set; }
+}
+
+// Creates meetings and stores in a collection.  
+public ObservableCollection<Meeting> Meetings = new ObservableCollection<Meeting>();
+Meeting meeting = new Meeting();
+meeting.From = DateTime.Today.AddHours(9);   
+meeting.To = (meeting.From.AddHours(1));
+meeting.EventName = eventNameCollection[randomTime.Next(9)];
+meeting.color = colorCollection[randomTime.Next(9)];
+Meetings.Add(meeting);
+
+// Adding the custom schedule appointment collection to the DataSource of Xamarin Schedule.
+schedule.DataSource = Meetings;
+
+ScheduleAppointmentMapping dataMapping = new ScheduleAppointmentMapping(); 
+dataMapping.ColorMapping = "color";  
+dataMapping.EndTimeMapping = "To";
+dataMapping.StartTimeMapping = "From"; 
+dataMapping.SubjectMapping = "EventName";
+dataMapping.IsAllDayMapping = "AllDay";
+schedule.AppointmentMapping = dataMapping;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler">
+    <scheduler:SfScheduler.AppointmentMapping>
+        <scheduler:SchedulerAppointmentMapping
+                StartTime="From"
+                EndTime="To"
+                Subject="EventName"
+                Background="Background"
+                IsAllDay="IsAllDay"
+               />
+    </scheduler:SfScheduler.AppointmentMapping>
+</scheduler:SfScheduler>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+/// <summary>    
+/// Represents the custom data properties.    
+/// </summary>    
+public class Meeting
+{
+    public DateTime From { get; set; }
+    public DateTime To { get; set; }
+    public bool IsAllDay { get; set; }
+    public string EventName { get; set; }
+    public Brush Background { get; set; }
+}
+
+// Creates meetings and stores in a collection.  
+public ObservableCollection<Meeting> Meetings = new ObservableCollection<Meeting>();
+Meeting meeting = new Meeting();
+meeting.From = DateTime.Today.AddHours(9);   
+meeting.To = (meeting.From.AddHours(1));
+meeting.EventName = "Meeting";
+meeting.Background = Brush.Blue;
+Meetings.Add(meeting);
+
+// Adding the custom scheduler appointment collection to the AppointmentsSource of .NET MAUI Scheduler.
+this.Scheduler.AppointmentsSource = Meetings;
+
+SchedulerAppointmentMapping appointmentMapping = new SchedulerAppointmentMapping();
+appointmentMapping.Subject = "EventName";
+appointmentMapping.StartTime = "From";
+appointmentMapping.EndTime = "To";
+appointmentMapping.Background = "Background";
+appointmentMapping.IsAllDay = "IsAllDay";
+this.Scheduler.AppointmentMapping = appointmentMapping;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td></tr>
+</table>
 
 <table>
 <tr>
@@ -1003,6 +1194,74 @@ this.Content = scheduler;
 
 ### HeaderView
 
+The following code example explains how to customize the appearance of the header in Xamarin SfSchedule and .NET MAUI SfScheduler.
+
+<table>
+<tr>
+<th>Xamarin SfSchedule</th>
+<th>.NET MAUI SfScheduler</th></tr>
+<tr>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<schedule:SfSchedule x:Name="Scheduler">
+    <schedule:SfSchedule.HeaderStyle>
+        <schedule:HeaderStyle 
+                        Background="Orange"
+                        TextColor="Blue"
+                        FontSize="20">
+        </schedule:HeaderStyle>
+    </schedule:SfSchedule.HeaderStyle>
+ </schedule:SfSchedule>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+HeaderStyle headerStyle = new HeaderStyle();
+headerStyle.BackgroundColor = Color.FromRgb(250, 219, 216);
+headerStyle.FontSize = "20";
+headerStyle.TextColor=Color.Blue;
+schedule.HeaderStyle = headerStyle;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" View="Week">
+    <scheduler:SfScheduler.HeaderView>
+        <scheduler:SchedulerHeaderView 
+                        Background="LightGreen">
+        </scheduler:SchedulerHeaderView>
+    </scheduler:SfScheduler.HeaderView>
+ </scheduler:SfScheduler>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+var textStyle = new SchedulerTextStyle()
+{
+    TextColor = Colors.DarkBlue,
+    FontSize = 14,
+};
+
+this.Scheduler.HeaderView.TextStyle = textStyle;
+this.Scheduler.HeaderView.Background = Brush.LightGreen;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td></tr>
+</table>
+
 <table>
 <tr>
 <th>Xamarin SfSchedule <br/> (HeaderStyle)</th>
@@ -1037,6 +1296,89 @@ this.Content = scheduler;
 </table> 
 
 ### ViewHeaderSettings
+
+The following code example explains how to customize the appearance of the view header in Xamarin SfSchedule and .NET MAUI SfScheduler.
+
+<table>
+<tr>
+<th>Xamarin SfSchedule</th>
+<th>.NET MAUI SfScheduler</th></tr>
+<tr>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<schedule:SfSchedule x:Name="Schedule">
+    <schedule:SfSchedule.ViewHeaderStyle>
+        <schedule:ViewHeaderStyle
+             Background="LightGreen"
+             DayTextColor="#FFFFFF"
+             DateTextColor="#FFFFFF"
+             DayFontFamily="Arial"
+             DateFontFamily="Arial">
+        </schedule:ViewHeaderStyle>
+    </schedule:SfSchedule.ViewHeaderStyle>
+</schedule:SfSchedule>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+// Customize the schedule view header
+ViewHeaderStyle viewHeaderStyle = new ViewHeaderStyle();
+viewHeaderStyle.BackgroundColor = Color.FromHex("#009688");
+viewHeaderStyle.DayTextColor = Color.FromHex("#FFFFFF");
+viewHeaderStyle.DateTextColor = Color.FromHex("#FFFFFF");
+viewHeaderStyle.DayFontFamily = "Arial";
+viewHeaderStyle.DateFontFamily = "Arial";
+schedule.ViewHeaderStyle = viewHeaderStyle;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler">
+    <scheduler:SfScheduler.DaysView>
+        <scheduler:SchedulerDaysView>
+            <scheduler:SchedulerDaysView.ViewHeaderSettings>
+                <scheduler:SchedulerViewHeaderSettings Background="LightGreen" />
+            </scheduler:SchedulerDaysView.ViewHeaderSettings>
+        </scheduler:SchedulerDaysView>
+    </scheduler:SfScheduler.DaysView>
+</scheduler:SfScheduler>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+var dateTextStyle = new SchedulerTextStyle()
+{
+    TextColor = Colors.Red,
+    FontFamily = "Arial",
+};
+
+this.Scheduler.DaysView.ViewHeaderSettings.DateTextStyle = dateTextStyle;
+
+var dayTextStyle = new SchedulerTextStyle()
+{
+    TextColor = Colors.Red,
+    FontFamily = "Arial",
+};
+
+this.Scheduler.DaysView.ViewHeaderSettings.DayTextStyle = dayTextStyle;
+this.Scheduler.DaysView.ViewHeaderSettings.Background = Brush.LightGreen;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td></tr>
+</table>
 
 <table>
 <tr>
