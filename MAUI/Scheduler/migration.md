@@ -382,6 +382,74 @@ To make the migration from the Xamarin [Xamarin SfSchedule](https://www.syncfusi
 
 ### SchedulerAppointment
 
+The following code example, explains how to create the scheduler appointments in Xamarin SfSchedule and .NET MAUI SfScheduler.
+
+<table>
+<tr>
+<th>Xamarin SfSchedule</th>
+<th>.NET MAUI SfScheduler</th></tr>
+<tr>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<schedule:SfSchedule x:Name="schedule"/>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+// Creating an instance for the schedule appointment collection.
+ScheduleAppointmentCollection appointmentCollection = new ScheduleAppointmentCollection();   
+
+// Creating new event   
+ScheduleAppointment clientMeeting = new ScheduleAppointment();   
+clientMeeting.StartTime = DateTime.Today.AddHours(9);   
+clientMeeting.EndTime = DateTime.Today.AddHours(11);   
+clientMeeting.Color = Color.Blue;   
+clientMeeting.Subject = "ClientMeeting";   
+appointmentCollection.Add(clientMeeting);  
+ 
+// Adding the schedule appointment collection to the DataSource of Xamarin Schedule.
+schedule.DataSource = appointmentCollection;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+// Creating an instance for the scheduler appointment collection.
+var appointment = new ObservableCollection<SchedulerAppointment>();
+
+// Adding scheduler appointment in the schedule appointment collection. 
+appointment.Add(new SchedulerAppointment()
+{
+    StartTime = DateTime.Today.AddHours(9),
+    EndTime = DateTime.Today.AddHours(11),
+    Subject = "Client Meeting",
+    Background = Brush.LightSkyBlue,
+});
+
+// Adding the scheduler appointment collection to the AppointmentsSource of .NET MAUI Scheduler.
+this.Scheduler.AppointmentsSource = appointment;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td></tr>
+</table>
+
 <table>
 <tr>
 <th>Xamarin SfSchedule</th>
@@ -481,6 +549,81 @@ To make the migration from the Xamarin [Xamarin SfSchedule](https://www.syncfusi
 </table> 
 
 ### SchedulerAppointmentMapping
+
+The following code example, explains how to map the custom appointments data in Xamarin SfSchedule and .NET MAUI SfScheduler.
+
+<table>
+<tr>
+<th>Xamarin SfSchedule</th>
+<th>.NET MAUI SfScheduler</th></tr>
+<tr>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<syncfusion:SfSchedule x:Name="schedule">
+	<syncfusion:SfSchedule.AppointmentMapping>
+		<syncfusion:ScheduleAppointmentMapping
+			ColorMapping="color"
+			EndTimeMapping="To"
+			StartTimeMapping="From"
+			SubjectMapping="EventName" 
+			IsAllDayMapping="AllDay"/>
+	</syncfusion:SfSchedule.AppointmentMapping>
+</syncfusion:SfSchedule>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+ScheduleAppointmentMapping dataMapping = new ScheduleAppointmentMapping(); 
+dataMapping.ColorMapping = "color";  
+dataMapping.EndTimeMapping = "To";
+dataMapping.StartTimeMapping = "From"; 
+dataMapping.SubjectMapping = "EventName";
+dataMapping.IsAllDayMapping = "AllDay";
+schedule.AppointmentMapping = dataMapping;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" 
+             >
+    <scheduler:SfScheduler.AppointmentMapping>
+        <scheduler:SchedulerAppointmentMapping
+                StartTime="From"
+                EndTime="To"
+                Subject="EventName"
+                Background="Background"
+                IsAllDay="IsAllDay"
+               />
+    </scheduler:SfScheduler.AppointmentMapping>
+</scheduler:SfScheduler>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SchedulerAppointmentMapping appointmentMapping = new SchedulerAppointmentMapping();
+appointmentMapping.Subject = "EventName";
+appointmentMapping.StartTime = "From";
+appointmentMapping.EndTime = "To";
+appointmentMapping.Background = "Background";
+appointmentMapping.IsAllDay = "IsAllDay";
+this.Scheduler.AppointmentMapping = appointmentMapping;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td></tr>
+</table>
 
 <table>
 <tr>
