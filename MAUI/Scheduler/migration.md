@@ -563,14 +563,14 @@ The following code example, explains how to map the custom appointments data in 
 {% highlight xaml %}
 
 <syncfusion:SfSchedule x:Name="schedule">
-	<syncfusion:SfSchedule.AppointmentMapping>
-		<syncfusion:ScheduleAppointmentMapping
-			ColorMapping="color"
-			EndTimeMapping="To"
-			StartTimeMapping="From"
-			SubjectMapping="EventName" 
-			IsAllDayMapping="AllDay"/>
-	</syncfusion:SfSchedule.AppointmentMapping>
+<syncfusion:SfSchedule.AppointmentMapping>
+	<syncfusion:ScheduleAppointmentMapping
+		ColorMapping="color"
+		EndTimeMapping="To"
+		StartTimeMapping="From"
+		SubjectMapping="EventName" 
+		IsAllDayMapping="AllDay"/>
+</syncfusion:SfSchedule.AppointmentMapping>
 </syncfusion:SfSchedule>
 
 {% endhighlight %}
