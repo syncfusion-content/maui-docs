@@ -1941,9 +1941,20 @@ schedule.MonthCellStyle = monthCellStyle;
 
 {% highlight xaml %}
 
-<scheduler:SfScheduler x:Name="Scheduler" 
-                       View="Month">
-</scheduler:SfScheduler>
+<schedule:SfScheduler
+    x:Name="Scheduler"
+    View="Month">
+    <schedule:SfScheduler.MonthView>
+        <schedule:SchedulerMonthView>
+                <schedule:SchedulerMonthView.CellStyle>
+                    <schedule:SchedulerMonthCellStyle TodayBackground="LightBlue"
+                                                      Background="Orange"
+                                                      LeadingMonthBackground="Brown"
+                                                      TrailingMonthBackground="Yellow"/>
+                </schedule:SchedulerMonthView.CellStyle>
+        </schedule:SchedulerMonthView>
+    </schedule:SfScheduler.MonthView>
+</schedule:SfScheduler>
 
 {% endhighlight %}
 
