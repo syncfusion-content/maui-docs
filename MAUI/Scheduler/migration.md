@@ -382,7 +382,7 @@ To make the migration from the Xamarin [Xamarin SfSchedule](https://www.syncfusi
 
 ### SchedulerAppointment
 
-The following code example, explains how to create the scheduler appointments in Xamarin SfSchedule and .NET MAUI SfScheduler.
+The following code example explains how to create the scheduler appointments in Xamarin SfSchedule and .NET MAUI SfScheduler.
 
 <table>
 <tr>
@@ -550,7 +550,7 @@ this.Scheduler.AppointmentsSource = schedulerAppointmentCollection;
 
 ### SchedulerAppointmentMapping
 
-The following code example, explains how to map the custom appointments data in Xamarin SfSchedule and .NET MAUI SfScheduler.
+The following code example explains how to map the custom appointments data in Xamarin SfSchedule and .NET MAUI SfScheduler.
 
 <table>
 <tr>
@@ -562,17 +562,17 @@ The following code example, explains how to map the custom appointments data in 
 
 {% highlight xaml %}
 
-<syncfusion:SfSchedule x:Name="schedule">
-    <syncfusion:SfSchedule.AppointmentMapping>
-        <syncfusion:SchedulerAppointmentMapping
+<schedule:SfSchedule x:Name="schedule">
+    <schedule:SfSchedule.AppointmentMapping>
+        <schedule:SchedulerAppointmentMapping
                 StartTimeMapping="From"
                 EndTimeMapping="To"
                 SubjectMapping="EventName"
                 ColorMapping="color"
                 IsAllDayMapping="AllDay"
                />
-    </syncfusion:SfSchedule.AppointmentMapping>
-</syncfusion:SfSchedule>
+    </schedule:SfSchedule.AppointmentMapping>
+</schedule:SfSchedule>
 
 {% endhighlight %}
 
@@ -1070,7 +1070,7 @@ this.Scheduler.AppointmentMapping = appointmentMapping;
 
 ### HeaderView
 
-The following code example, explains how to customize the appearance of the header in Xamarin SfSchedule and .NET MAUI SfScheduler.
+The following code example explains how to customize the appearance of the header in Xamarin SfSchedule and .NET MAUI SfScheduler.
 
 <table>
 <tr>
@@ -1082,15 +1082,15 @@ The following code example, explains how to customize the appearance of the head
 
 {% highlight xaml %}
 
-<syncfusion:SfSchedule x:Name="Scheduler">
-    <syncfusion:SfSchedule.HeaderStyle>
-        <syncfusion:HeaderStyle 
+<schedule:SfSchedule x:Name="Scheduler">
+    <schedule:SfSchedule.HeaderStyle>
+        <schedule:HeaderStyle 
                         Background="Orange"
                         TextColor="Blue"
                         FontSize="20">
-        </syncfusion:HeaderStyle>
-    </syncfusion:SfSchedule.HeaderStyle>
- </syncfusion:SfSchedule>
+        </schedule:HeaderStyle>
+    </schedule:SfSchedule.HeaderStyle>
+ </schedule:SfSchedule>
 
 {% endhighlight %}
 
@@ -1173,7 +1173,7 @@ this.Scheduler.HeaderView.Background = Brush.LightGreen;
 
 ### ViewHeaderSettings
 
-The following code example, explains how to customize the appearance of the view header in Xamarin SfSchedule and .NET MAUI SfScheduler.
+The following code example explains how to customize the appearance of the view header in Xamarin SfSchedule and .NET MAUI SfScheduler.
 
 <table>
 <tr>
@@ -1185,16 +1185,16 @@ The following code example, explains how to customize the appearance of the view
 
 {% highlight xaml %}
 
-<schedule:SfSchedule x:Name="schedule">
-<schedule:SfSchedule.ViewHeaderStyle>
-    <schedule:ViewHeaderStyle
-	    BackgroundColor="#009688"
-	    DayTextColor="#FFFFFF"
-	    DateTextColor="#FFFFFF"
-	    DayFontFamily="Arial"
-	    DateFontFamily="Arial">
-    </schedule:ViewHeaderStyle>
-</schedule:SfSchedule.ViewHeaderStyle>
+<schedule:SfSchedule x:Name="Schedule">
+    <schedule:SfSchedule.ViewHeaderStyle>
+        <schedule:ViewHeaderStyle
+             Background="LightGreen"
+             DayTextColor="#FFFFFF"
+             DateTextColor="#FFFFFF"
+             DayFontFamily="Arial"
+             DateFontFamily="Arial">
+        </schedule:ViewHeaderStyle>
+    </schedule:SfSchedule.ViewHeaderStyle>
 </schedule:SfSchedule>
 
 {% endhighlight %}
