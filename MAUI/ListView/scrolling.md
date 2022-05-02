@@ -27,7 +27,7 @@ You can set position of an item in view while scrolling by passing `ScrollToPosi
 You can also scroll to specified data in `SfListView` using the [ScrollTo](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ScrollTo_System_Double_System_Boolean_) method.
 
 {% tabs %}
-{% highlight c# tabtitle= "MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 int index = listView.DataSource.DisplayItems.IndexOf(viewModel.BookInfo[2]); 
 // Programmatic scrolling based on the item index.
@@ -41,7 +41,7 @@ listView.ScrollTo(ViewModel.BookInfo[index], Microsoft.Maui.Controls.ScrollToPos
 N> If grouping is enabled, get the desired row index by passing the underlying data in the [DisplayItems.IndexOf](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.DisplayItems.html#Syncfusion_DataSource_DisplayItems_IndexOf_System_Object_) method.
 
 {% tabs %}
-{% highlight c# tabtitle= "MainPage.xaml.cs"  %}
+{% highlight c# tabtitle="MainPage.xaml.cs"  %}
 
 int index = listView.DataSource.DisplayItems.IndexOf(viewModel.BookInfo[2]); 
 listView.ItemsLayout.ScrollToRowIndex(index, true); 
@@ -61,11 +61,11 @@ listView.ItemsLayout.ScrollToRowIndex(index, true);
 The `SfListView` will load all of its items by setting the [IsScrollingEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_IsScrollingEnabled) property to `false`.
 
 {% tabs %}
-{% highlight xaml tabtitle= "MainPage.xaml" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 <syncfusion:SfListView x:Name="listView" 
 			IsScrollingEnabled="False" />
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 listView.IsScrollingEnabled = false; 
 {% endhighlight %}
 {% endtabs %}
@@ -84,7 +84,7 @@ The following states will be notified using the [ListViewScrollState](https://he
  * [Programmatic](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewScrollState.html#Syncfusion_Maui_ListView_ListViewScrollState_Programmatic): Specifies that scrolling is performed by using [ScrollTo](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ScrollTo_System_Double_System_Boolean_) or [ScrollToRowIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewLayout.html#Syncfusion_Maui_ListView_ListViewLayout_ScrollToRowIndex_System_Int32_Microsoft_Maui_Controls_ScrollToPosition_System_Boolean_) method.
 
 {% tabs %}
-{% highlight c# tabtitle= "MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 listView.ScrollStateChanged += ListView_ScrollStateChanged;
 private void ListView_ScrollStateChanged(object sender, ScrollStateChangedEventArgs e)
@@ -103,7 +103,7 @@ private void ListView_ScrollStateChanged(object sender, ScrollStateChangedEventA
 The `SfListView` can be notified when scrolling using the [Changed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridCommon.ScrollAxis.ScrollAxisBase.html#Syncfusion_Maui_GridCommon_ScrollAxis_ScrollAxisBase_Changed) event of [ScrollAxisBase](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridCommon.ScrollAxis.ScrollAxisBase.html) in [VisualContainer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.VisualContainer.html) of the `SfListView`. By using this event, you can find whether you have reached the last item in the list in the `SfListView` based on the [LastBodyVisibleLineIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridCommon.ScrollAxis.ScrollAxisBase.html#Syncfusion_Maui_GridCommon_ScrollAxis_ScrollAxisBase_LastBodyVisibleLineIndex) property and underlying collection count.
 
 {% tabs %}
-{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="19" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="19" %}
 using Syncfusion.Maui.ListView.Helpers;
 public partial class MainPage : ContentPage
 {
@@ -150,7 +150,7 @@ public partial class MainPage : ContentPage
 You can get the item elements to hold by a scrollable visual container using the [GetVisualContainer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.Helpers.SfListViewHelper.html#Syncfusion_Maui_ListView_Helpers_SfListViewHelper_GetVisualContainer_Syncfusion_Maui_ListView_SfListView_) method. It is a helper method of `SfListView` control.
 
 {% tabs %}
-{% highlight c# tabtitle= "MainPage.xaml.cs hl_lines="6" %}
+{% highlight c# tabtitle="MainPage.xaml.cs hl_lines="6" %}
 using Syncfusion.Maui.ListView.Helpers;
 public partial class MainPage : ContentPage
 {
@@ -174,7 +174,7 @@ For `Horizontal` orientation, use the `ScrollX` value of `ListViewScrollView`.
 By using [Reflection](https://docs.microsoft.com/en-us/dotnet/api/system.reflection?redirectedfrom=MSDN&view=net-5.0), get the value of `ScrollOwner` from `VisualContainer` and use it.
 
 {% tabs %}
-{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="15 17" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="15 17" %}
 using Syncfusion.Maui.ListView.Helpers;
 public partial class MainPage : ContentPage
 {
@@ -201,7 +201,7 @@ public partial class MainPage : ContentPage
 You can get the scroll view by using the [GetScrollView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.Helpers.SfListViewHelper.html#Syncfusion_Maui_ListView_Helpers_SfListViewHelper_GetScrollView_Syncfusion_Maui_ListView_SfListView_) method. It is a helper method to get the Syncfusion.Maui.ListView.ListViewScrollView class.
 
 {% tabs %}
-{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="9" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9" %}
 using Syncfusion.Maui.ListView.Helpers;
 public partial class MainPage : ContentPage
 {
@@ -221,11 +221,11 @@ public partial class MainPage : ContentPage
 By default, the `SfListview` reuses items on scrolling and changing the source collection. You can skip the reusing while scrolling by setting the [CachingStrategy](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.CachingStrategy.html) property to [CreateNewTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.CachingStrategy.html#Syncfusion_Maui_ListView_CachingStrategy_CreateNewTemplate) for the ListView. It creates a new element for every data in the ItemsSource. The default value is [RecycleTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.CachingStrategy.html#Syncfusion_Maui_ListView_CachingStrategy_RecycleTemplate) where the data template gets reused while the data object associated with the listview item gets changed.
 
 {% tabs %}
-{% highlight xaml tabtitle= "MainPage.xaml" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 <syncfusion:SfListView x:Name="listView" 
                       	CachingStrategy="CreateNewTemplate" />
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.xaml.cs"%}
+{% highlight c# tabtitle="MainPage.xaml.cs"%}
 listView.CachingStrategy = CachingStrategy.CreateNewTemplate; 
 {% endhighlight %}
 {% endtabs %}
@@ -233,11 +233,11 @@ listView.CachingStrategy = CachingStrategy.CreateNewTemplate;
 You can skip the reusing of list items on the `ItemsSourcePropertyChanged` by setting the [ItemsSourceChangeCachingStrategy](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemsSourceChangeCachingStrategy.html) property to [ClearItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemsSourceChangeCachingStrategy.html#Syncfusion_Maui_ListView_ItemsSourceChangeCachingStrategy_ClearItems) for the ListView. Here, the existing ListView items will be cleared and create a new list of items when the `ItemsSource` is changed. The default value is [RecycleItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemsSourceChangeCachingStrategy.html#Syncfusion_Maui_ListView_ItemsSourceChangeCachingStrategy_RecycleItems) where the listView items will be recycled in the `ItemsSource` changes.
 
 {% tabs %}
-{% highlight xaml tabtitle= "MainPage.xaml" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 <syncfusion:SfListView x:Name="listView" 
 			ItemsSourceChangeCachingStrategy="ClearItems" />
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.xaml.cs"%}
+{% highlight c# tabtitle="MainPage.xaml.cs"%}
 listView.ItemsSourceChangeCachingStrategy = ItemsSourceChangeCachingStrategy.ClearItems;
 {% endhighlight %}
 {% endtabs %}

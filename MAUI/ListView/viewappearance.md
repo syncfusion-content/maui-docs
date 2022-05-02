@@ -26,7 +26,7 @@ Here, an [ItemsCacheLimit](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.L
 Create a custom class that inherits from `DataTemplateSelector`, and override the `OnSelectTemplate` method to return the `DataTemplate` for that item. At runtime, the SfListView invokes the `OnSelectTemplate` method for each item and passes the data object as parameter.
 
 {% tabs %}
-{% highlight c# tabtitle= "DataTemplateSelector.cs" hl_lines="13 14 15 16 17 18 19" %}
+{% highlight c# tabtitle="DataTemplateSelector.cs" hl_lines="13 14 15 16 17 18 19" %}
 
 class MyDataTemplateSelector : DataTemplateSelector
 {
@@ -78,7 +78,7 @@ Assign custom `DataTemplateSelector` to the [ItemTemplate](https://help.syncfusi
   </Grid>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="11" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="11" %}
 public class MainPage : ContentPage
 {
    public MainPage()
@@ -118,7 +118,7 @@ listView.Orientation = ItemsLayoutOrientation.Horizontal;
 The `SfListView` allows you to layout the items like `TabView` in the horizontal direction by setting the [Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_Orientation) property as `Horizontal` using the [ItemTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTapped) event. It brings any desired view above the horizontal list as follows.
 
 {% tabs %}
-{% highlight xaml tabtitle= "MainPage.xaml.cs" hl_lines="10" %}
+{% highlight xaml tabtitle="MainPage.xaml.cs" hl_lines="10" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
     <ContentPage.Content>
         <Grid x:Name="GridView">
@@ -229,7 +229,7 @@ You should either define the size for each inner `SfListView` or set the [AutoFi
     </Grid>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28" %}
 public partial class MainPage : ContentPage
 {
     public MainPage()
@@ -376,7 +376,7 @@ public class IndexToColorConverter : IValueConverter
 The `SfListView` allows customizing the item appearance, such as rounded corners, by using the `Frame` layout in the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate) property. By defining the `CornerRadius` property of frame layout, you can perform rounded corner for items. 
 
 {% tabs %}
-{% highlight xaml tabtitle= "MainPage.xaml" hl_lines="6" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
     <ContentPage.Content>
         <syncfusion:SfListView x:Name="listView" ItemSize="60" ItemsSource="{Binding customerDetails}">
@@ -458,7 +458,7 @@ N> Define the frame within any view inside `ItemTemplate` with some margin aroun
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="14 18" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="14 18" %}
 public partial class MainPage : ContentPage
 {
     public MainPage()
@@ -504,7 +504,7 @@ public partial class MainPage : ContentPage
 The `SfListView` allows customizing the [ListViewItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewItem.html) based on the [ItemType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemType.html). Follow the code example to customize the Header, Footer, GroupHeader, LoadMore, and ListViewItem.
 
 {% tabs %}
-{% highlight c# tabtitle= "MainPage.xaml.cs" hl_lines="6" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="6" %}
 public partial class MainPage : ContentPage
 {
     public MainPage()
@@ -616,7 +616,7 @@ public class GroupHeaderItemExt : GroupHeaderItem
 ### Extension class for LoadMoreItem
 
 {% tabs %}
-{% highlight c# tabtitle= "LoadMoreItemExt.cs"%}
+{% highlight c# tabtitle="LoadMoreItemExt.cs"%}
 public class LoadMoreItemExt : LoadMoreItem
 {
     private SfListView listView;
