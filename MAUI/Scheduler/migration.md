@@ -1763,6 +1763,15 @@ The following code example explains how to customize the appearance of the appoi
 
 {% highlight C# %}
 
+var appointments = new ObservableCollection<ScheduleAppointment>();
+appointments.Add(new ScheduleAppointment()
+{
+    Subject = "Planning",
+    StartTime = DateTime.Now.AddHours(1),
+    EndTime = DateTime.Now.AddHours(2),
+});
+this.Scheduler.DataSource = appointments;
+
 // Creating Appointment style
 AppointmentStyle appointmentStyle = new AppointmentStyle();
 appointmentStyle.TextColor = Color.Red;
@@ -2035,6 +2044,71 @@ schedule.MonthCellStyle = monthCellStyle;
 
 ### WeekNumberStyle
 
+The following code example explains how to customize the appearance of the cell in Xamarin SfSchedule and .NET MAUI SfScheduler.
+
+<table>
+<tr>
+<th>Xamarin SfSchedule</th>
+<th>.NET MAUI SfScheduler</th></tr>
+<tr>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<schedule:SfSchedule x:Name="schedule"/>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+// creating new instance for WeekNumberStyle
+WeekNumberStyle weekNumberStyle = new WeekNumberStyle();
+weekNumberStyle.FontFamily = "Arial";
+weekNumberStyle.FontSize = 15;
+weekNumberStyle.FontAttributes = FontAttributes.None;
+weekNumberStyle.BackgroundColor = Color.Blue;
+weekNumberStyle.TextColor = Color.White;
+monthViewSettings.WeekNumberStyle = weekNumberStyle;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler" ShowWeekNumber="True"/>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+this.Scheduler.ShowWeekNumber = true;
+var schedulerTextStyle = new SchedulerTextStyle()
+{
+    TextColor = Colors.Red,
+    FontSize = 14,
+    FontFamily = "Arial",
+    FontAttributes = FontAttributes.Bold
+};
+
+var schedulerWeekNumberStyle = new SchedulerWeekNumberStyle()
+{
+    Background = Brush.LightGreen,
+    TextStyle = schedulerTextStyle
+};
+
+this.Scheduler.WeekNumberStyle = schedulerWeekNumberStyle;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td></tr>
+</table>
+
 <table>
 <tr>
 <th>Xamarin SfSchedule <br/> (WeekNumberStyle)</th>
@@ -2228,3 +2302,9 @@ schedule.MonthCellStyle = monthCellStyle;
 * iOS 10 or higher.
 * macOS 10.13 or higher, using Mac Catalyst.
 * Windows 11 and Windows 10 version 1809 or higher, using [Windows UI Library (WinUI) 3](https://docs.microsoft.com/en-us/windows/apps/winui/winui3/).
+
+## Known issues in .NET MAUI Scheduler 
+
+* [Windows] - Touch swiping does not work in the Scheduler view.
+* [Android] - In scheduler timeline views, swiping with the finger does not work.
+* Touch and mouse scheduler view swiping do not work within the shell page.
