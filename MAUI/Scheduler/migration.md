@@ -1748,15 +1748,15 @@ The following code example explains how to customize the appearance of the appoi
 
 {% highlight xaml %}
 
-<schedule:SfSchedule x:Name="schedule">
-		<schedule:SfSchedule.AppointmentStyle>
-			<schedule:AppointmentStyle
-				TextColor="Red"
-				FontSize = "25"
-				FontAttributes = "Bold"
-				FontFamily = "Arial">
-		</schedule:AppointmentStyle>
-	</schedule:SfSchedule.AppointmentStyle>
+<schedule:SfSchedule x:Name="Schedule">
+    <schedule:SfSchedule.AppointmentStyle>
+        <schedule:AppointmentStyle
+             TextColor="#FFFFFF"
+             FontSize = "25"
+             FontAttributes = "Bold"
+             FontFamily = "Arial">
+        </schedule:AppointmentStyle>
+    </schedule:SfSchedule.AppointmentStyle>
 </schedule:SfSchedule>
 
 {% endhighlight %}
