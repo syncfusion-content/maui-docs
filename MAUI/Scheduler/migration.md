@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrate from Xamarin.Forms SfSchedule to .NET MAUI SfScheduler 
 
-To make the migration from the Xamarin [Xamarin SfSchedule](https://www.syncfusion.com/xamarin-ui-controls/xamarin-scheduler) to the [.NET MAUI SfScheduler](https://www.syncfusion.com/maui-controls/maui-scheduler) easier, we kept most of the similar APIs from the Xamarin SfScheduler in the.NET MAUI SfScheduler. We have also restructured the APIs by considering various use cases and maintaining API consistency. Please find the difference in the below topics.
+To make the migration from the Xamarin [Xamarin SfSchedule](https://www.syncfusion.com/xamarin-ui-controls/xamarin-scheduler) to [.NET MAUI SfScheduler](https://www.syncfusion.com/maui-controls/maui-scheduler) easier, most of the APIs from the Xamarin SfSchedule were kept in the.NET MAUI SfScheduler. However, to maintain the consistency of API naming in the.NET MAUI SfScheduler, some of the APIs have been renamed. Please find the difference in the following topics.
 
 ## Namespaces 
 
@@ -39,7 +39,7 @@ To initialize the control, import the scheduler namespace and initialize SfSched
 <ContentPage
 xmlns:scheduler="clr-namespace:Syncfusion.SfSchedule.XForms;assembly=Syncfusion.SfSchedule.XForms">
 
-    <scheduler:SfScheduler/>
+    <scheduler:SfSchedule/>
 
 </ContentPage>
 
@@ -50,8 +50,8 @@ xmlns:scheduler="clr-namespace:Syncfusion.SfSchedule.XForms;assembly=Syncfusion.
 using Syncfusion.SfSchedule.XForms;
 ...
 
-SfScheduler scheduler = new SfScheduler ();
-this.Content = scheduler;
+SfSchedule schedule = new SfSchedule ();
+this.Content = schedule;
 
 {% endhighlight %}
 
@@ -264,7 +264,7 @@ this.Content = scheduler;
 
 ### SfSchedule
 
-The following code example, explains how to initialize the schedule in Xamarin SfSchedule and .NET MAUI SfScheduler.
+The following code example, explains how to initialize the properties of the schedule in Xamarin SfSchedule and .NET MAUI SfScheduler.
 
 <table>
 <tr>
