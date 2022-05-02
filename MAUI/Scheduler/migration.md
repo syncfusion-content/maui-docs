@@ -2099,7 +2099,14 @@ monthViewSettings.WeekNumberStyle = weekNumberStyle;
 
 {% highlight xaml %}
 
-<scheduler:SfScheduler x:Name="Scheduler" ShowWeekNumber="True"/>
+<schedule:SfScheduler
+    x:Name="Scheduler"
+    ShowWeekNumber="True"
+    View="Month">
+        <schedule:SfScheduler.WeekNumberStyle>
+            <schedule:SchedulerWeekNumberStyle Background="Red"/>
+        </schedule:SfScheduler.WeekNumberStyle>
+</schedule:SfScheduler>
 
 {% endhighlight %}
 
@@ -2324,6 +2331,7 @@ this.Scheduler.WeekNumberStyle = schedulerWeekNumberStyle;
 
 ## Known issues in .NET MAUI Scheduler 
 
-* [Windows] - Touch swiping does not work in the Scheduler view.
-* [Android] - In scheduler timeline views, swiping with the finger does not work.
-* Touch and mouse scheduler view swiping do not work within the shell page.
+* [Windows] Scheduler view swiping using the touch screen is not working.
+* [Android] - Scheduler view swiping using the touch screen is not working in all timeline views.
+* The touch and mouse swipe are not working inside the shell page.
+* `FlowDirection` property runtime change will not work.
