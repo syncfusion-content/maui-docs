@@ -1791,9 +1791,16 @@ schedule.AppointmentStyle = appointmentStyle;
 
 {% highlight xaml %}
 
-<scheduler:SfScheduler x:Name="Scheduler" 
-                       View="Week">
-</scheduler:SfScheduler>
+<schedule:SfScheduler
+    x:Name="Scheduler">
+    <schedule:SfScheduler.AppointmentTextStyle>
+        <schedule:SchedulerTextStyle
+            TextColor="Orange"
+            FontFamily="Arial"
+            FontSize="12"
+            FontAttributes="Italic"/>
+    </schedule:SfScheduler.AppointmentTextStyle>
+</schedule:SfScheduler>
 
 {% endhighlight %}
 
@@ -2056,7 +2063,19 @@ The following code example explains how to customize the appearance of the cell 
 
 {% highlight xaml %}
 
-<schedule:SfSchedule x:Name="schedule"/>
+<schedule:SfSchedule x:Name="Schedule">
+<schedule:SfSchedule.MonthViewSettings>
+    <schedule:MonthViewSettings>
+        <schedule:MonthViewSettings.WeekNumberStyle>
+            <schedule:WeekNumberStyle FontSize="10"
+                                        FontFamily="Arial"
+                                        FontAttributes="Bold"
+                                        TextColor="AliceBlue"
+                                        BackgroundColor="Red"/>
+        </schedule:MonthViewSettings.WeekNumberStyle>
+    </schedule:MonthViewSettings>
+</schedule:SfSchedule.MonthViewSettings>
+</schedule:SfSchedule>
 
 {% endhighlight %}
 
