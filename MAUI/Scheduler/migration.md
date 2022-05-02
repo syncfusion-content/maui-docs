@@ -781,7 +781,7 @@ this.Content = scheduler;
 <td>Gets or sets a view header day format of the SfScheduler.</td></tr>
  </table> 
  
-The following code example, explains how to initialize the properties of the Xamarin SfSchedule and .NET MAUI SfScheduler class.
+The following code example, explains how to configure the month view settings in Xamarin SfSchedule and .NET MAUI SfScheduler.
 
 <table>
 <tr>
@@ -947,7 +947,7 @@ this.Content = Scheduler;
 
  </table> 
  
-The following code example, explains how to initialize the properties of the Xamarin SfSchedule and .NET MAUI SfScheduler class.
+The following code example, explains how to configure the day view settings in Xamarin SfSchedule and .NET MAUI SfScheduler.
 
 <table>
 <tr>
@@ -1102,7 +1102,7 @@ this.Content = Scheduler;
 <td>Gets or sets a view header date format of the SfScheduler.</td></tr>
  </table> 
  
-The following code example, explains how to initialize the properties of the Xamarin SfSchedule and .NET MAUI SfScheduler class.
+The following code example, explains how to configure the timeline view settings in Xamarin SfSchedule and .NET MAUI SfScheduler.
 
 <table>
 <tr>
@@ -1213,7 +1213,7 @@ this.Content = Scheduler;
 
 </table> 
 
-The following code example, explains how to initialize the properties of the Xamarin SfSchedule and .NET MAUI SfScheduler class.
+The following code example, explains how to configure the special time regions in Xamarin SfSchedule and .NET MAUI SfScheduler.
 
 <table>
 <tr>
