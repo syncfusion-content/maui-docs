@@ -795,7 +795,7 @@ The following code example explains how to configure the month view settings in 
 
 <schedule:SfSchedule x:Name="schedule" ScheduleView="MonthView">
     <schedule:SfSchedule.MonthViewSettings>
-        <schedule:MonthViewSettings ShowWeekNumber="False">
+        <schedule:MonthViewSettings ShowWeekNumber="False" AppointmentDisplayMode="Appointment">
         </schedule:MonthViewSettings>
     </schedule:SfSchedule.MonthViewSettings>
 </schedule>
@@ -808,6 +808,7 @@ SfSchedule schedule = new SfSchedule();
 schedule.ScheduleView = ScheduleView.MonthView;
 MonthViewSettings monthViewSettings = new MonthViewSettings();
 monthViewSettings.ShowWeekNumber = false;
+monthViewSettings.AppointmentDisplayMode = AppointmentDisplayMode.Appointment;
 schedule.MonthViewSettings = monthViewSettings;
 this.Content = schedule;
 
@@ -821,7 +822,11 @@ this.Content = schedule;
 {% highlight xaml %}
 
 <scheduler:SfScheduler x:Name="Scheduler"
-                        View="MontView" ShowWeekNumber="false">					
+                        View="MontView" ShowWeekNumber="false">			
+    <scheduler:SfScheduler.MonthView>
+        <scheduler:SchedulerMonthView 
+                       AppointmentDisplayMode="Indicator"/>
+    </scheduler:SfScheduler.MonthView>						
 </scheduler:SfScheduler>
 
 {% endhighlight %}
@@ -831,6 +836,7 @@ this.Content = schedule;
 SfScheduler Scheduler = new SfScheduler();
 
 this.Scheduler.ShowWeekNumber = true;
+this.Scheduler.MonthView.AppointmentDisplayMode = SchedulerMonthAppointmentDisplayMode.Indicator;
 
 this.Content = Scheduler;
 
