@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrate from Xamarin.Forms SfSchedule to .NET MAUI SfScheduler 
 
-To make the migration from the Xamarin [Xamarin SfSchedule](https://www.syncfusion.com/xamarin-ui-controls/xamarin-scheduler) to the [.NET MAUI SfScheduler](https://www.syncfusion.com/maui-controls/maui-scheduler) easier, we kept most of the similar APIs from the Xamarin SfScheduler in the.NET MAUI SfScheduler. We have also restructured the APIs by considering various use cases and maintaining API consistency. Please find the difference in the below topics.
+To make the migration from the Xamarin [Xamarin SfSchedule](https://www.syncfusion.com/xamarin-ui-controls/xamarin-scheduler) to [.NET MAUI SfScheduler](https://www.syncfusion.com/maui-controls/maui-scheduler) easier, most of the APIs from the Xamarin SfSchedule were kept in the.NET MAUI SfScheduler. However, to maintain the consistency of API naming in the.NET MAUI SfScheduler, some of the APIs have been renamed. Please find the difference in the following topics.
 
 ## Namespaces 
 
@@ -20,6 +20,70 @@ To make the migration from the Xamarin [Xamarin SfSchedule](https://www.syncfusi
 <tr>
 <td>Syncfusion.SfSchedule.XForms</td>
 <td>Syncfusion.Maui.Scheduler</td></tr>
+</table>
+
+## Initialize control
+
+To initialize the control, import the scheduler namespace and initialize SfScheduler as shown in the following code sample.
+
+<table>
+<tr>
+<th>Xamarin SfSchedule</th>
+<th>.NET MAUI SfScheduler</th></tr>
+<tr>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage
+xmlns:scheduler="clr-namespace:Syncfusion.SfSchedule.XForms;assembly=Syncfusion.SfSchedule.XForms">
+
+    <scheduler:SfSchedule/>
+
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+using Syncfusion.SfSchedule.XForms;
+...
+
+SfSchedule schedule = new SfSchedule ();
+this.Content = schedule;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+</td>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage
+xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <scheduler:SfScheduler />
+
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+using Syncfusion.Maui.Scheduler;
+…
+
+SfScheduler scheduler = new SfScheduler();
+this.Content = scheduler;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td></tr>
 </table>
 
 ## Classes 
@@ -199,6 +263,66 @@ To make the migration from the Xamarin [Xamarin SfSchedule](https://www.syncfusi
 ## Properties
 
 ### SfSchedule
+
+The following code example, explains how to initialize the properties of the Xamarin SfSchedule and .NET MAUI SfScheduler class.
+
+<table>
+<tr>
+<th>Xamarin SfSchedule</th>
+<th>.NET MAUI SfScheduler</th></tr>
+<tr>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<schedule:SfSchedule x:Name="schedule" ScheduleView="DayView" FirstDayOfWeek="3"/>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfSchedule schedule = new SfSchedule();
+schedule.ScheduleView = ScheduleView.DayView;
+schedule.FirstDayOfWeek = 3;
+this.Content = schedule;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler"
+                        View="Week"
+                        FirstDayOfWeek="Tuesday"
+                        ShowNavigationArrows="True"
+                        AllowedViews="Day,Week,WorkWeek,Month"
+                        AllowViewNavigation="True">
+</scheduler:SfScheduler>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfScheduler scheduler = new SfScheduler();
+
+scheduler.FirstDayOfWeek = DayOfWeek.Tuesday;
+scheduler.AllowedViews = SchedulerViews.Day | SchedulerViews.Week | SchedulerViews.WorkWeek | SchedulerViews.Month;
+scheduler.ShowNavigationArrows = true;
+scheduler.AllowViewNavigation = true;   
+
+this.Content = scheduler;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td></tr>
+</table>
+
 <table> 
 <tr>
 <th>Xamarin SfSchedule</th>
@@ -1281,3 +1405,10 @@ To make the migration from the Xamarin [Xamarin SfSchedule](https://www.syncfusi
 * Support to change text color for each scheduler appointment.
 * Suspend and resume for appointment update.
 * Appointment Drag and Drop.
+
+## Limitations for .NET MAUI.
+
+* Android 5.0 (API 21) or higher.
+* iOS 10 or higher.
+* macOS 10.13 or higher, using Mac Catalyst.
+* Windows 11 and Windows 10 version 1809 or higher, using [Windows UI Library (WinUI) 3](https://docs.microsoft.com/en-us/windows/apps/winui/winui3/).
