@@ -264,7 +264,7 @@ this.Content = scheduler;
 
 ### SfSchedule
 
-The following code example, explains how to initialize the properties of the schedule in Xamarin SfSchedule and .NET MAUI SfScheduler.
+The following code example, explains how to initialize the properties of the Xamarin SfSchedule and .NET MAUI SfScheduler class.
 
 <table>
 <tr>
