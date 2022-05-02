@@ -837,11 +837,11 @@ this.Content = schedule;
 
 {% highlight C# %}
 
-SfScheduler scheduler = new SfScheduler();
+SfScheduler Scheduler = new SfScheduler();
 
 this.Scheduler.MonthView.AppointmentDisplayMode = SchedulerMonthAppointmentDisplayMode.Indicator;  
 
-this.Content = scheduler;
+this.Content = Scheduler;
 
 {% endhighlight %}
 
@@ -1005,14 +1005,14 @@ this.Content = schedule;
 
 {% highlight C# %}
 
-SfScheduler scheduler = new SfScheduler();
+SfScheduler Scheduler = new SfScheduler();
 this.Scheduler.View = SchedulerView.Day;
 
 this.Scheduler.DaysView.StartHour = 9;
 this.Scheduler.DaysView.EndHour = 16;
 this.Scheduler.DaysView.ShowCurrentTimeIndicator = false;
 
-this.Content = scheduler;
+this.Content = Scheduler;
 
 {% endhighlight %}
 
@@ -1158,14 +1158,14 @@ this.Content = schedule;
 
 {% highlight C# %}
 
-SfScheduler scheduler = new SfScheduler();
+SfScheduler Scheduler = new SfScheduler();
 this.Scheduler.View = SchedulerView.TimelineWeek;
 
 this.Scheduler.TimelineView.StartHour = 9;
 this.Scheduler.TimelineView.EndHour = 16;
 this.Scheduler.TimelineView.ShowCurrentTimeIndicator = false;
 
-this.Content = scheduler;
+this.Content = Scheduler;
 
 {% endhighlight %}
 
@@ -1211,6 +1211,92 @@ this.Content = scheduler;
 <td>{{'[EnablePointerInteraction](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeRegion.html#Syncfusion_Maui_Scheduler_SchedulerTimeRegion_EnablePointerInteraction)'| markdownify }} </td>
 <td>Gets or sets a value indicating whether this SchedulerTimeRegion is enable pointer interaction..</td></tr>
 
+</table> 
+
+The following code example, explains how to initialize the properties of the Xamarin SfSchedule and .NET MAUI SfScheduler class.
+
+<table>
+<tr>
+<th>Xamarin SfSchedule</th>
+<th>.NET MAUI SfScheduler</th></tr>
+<tr>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<schedule:SfSchedule x:Name="schedule" ScheduleView="TimelineView">
+    <schedule:SfSchedule.SpecialTimeRegions>
+        <schedule:TimeRegionSettings 
+            StartHour="12" 
+            EndHour="13" 
+            Text="Lunch"
+            CanEdit="False"
+            Color="#EAEAEA"
+            TextColor="Black"/>
+    </schedule:SfSchedule.SpecialTimeRegions>
+</schedule>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfSchedule schedule = new SfSchedule();
+ObservableCollection<TimeRegionSettings> specialTimeRegions = new ObservableCollection<TimeRegionSettings>();
+TimeRegionSettings timeRegionSettings = new TimeRegionSettings();
+timeRegionSettings.StartHour = 12;
+timeRegionSettings.EndHour = 13;
+timeRegionSettings.Text = "Lunch";
+timeRegionSettings.Color = Color.FromHex("#EAEAEA");
+timeRegionSettings.TextColor = Color.Black;
+timeRegionSettings.CanEdit = false;
+specialTimeRegions.Add(timeRegionSettings);
+schedule.SpecialTimeRegions = specialTimeRegions;
+this.Content = schedule;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<scheduler:SfScheduler x:Name="Scheduler"
+                        View="Week">				
+</scheduler:SfScheduler>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfScheduler Scheduler = new SfScheduler();
+this.Scheduler.View = SchedulerView.Week;
+
+this.Scheduler.DaysView.TimeRegions = this.GetTimeRegion();
+
+private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
+{
+    var timeRegions = new ObservableCollection<SchedulerTimeRegion>();
+    var timeRegion = new SchedulerTimeRegion()
+    {
+        StartTime = DateTime.Today.Date.AddHours(13),
+        EndTime = DateTime.Today.Date.AddHours(14),
+        Text = "Lunch",
+        EnablePointerInteraction = false,
+    };
+
+    timeRegions.Add(timeRegion);
+    return timeRegions;
+}
+
+this.Content = Scheduler;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td></tr>
 </table> 
 
 ### HeaderView
