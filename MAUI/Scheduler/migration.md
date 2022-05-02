@@ -276,7 +276,7 @@ The following code example, explains how to initialize the properties of the Xam
 
 {% highlight xaml %}
 
-<schedule:SfSchedule x:Name="schedule" ScheduleView="DayView" FirstDayOfWeek="3"/>
+<schedule:SfSchedule ScheduleView="DayView" FirstDayOfWeek="3"/>
 
 {% endhighlight %}
 
@@ -296,8 +296,7 @@ this.Content = schedule;
 
 {% highlight xaml %}
 
-<scheduler:SfScheduler x:Name="Scheduler"
-                        View="Week"
+<scheduler:SfScheduler  View="Week"
                         FirstDayOfWeek="Tuesday"
                         ShowNavigationArrows="True"
                         AllowedViews="Day,Week,WorkWeek,Month"
@@ -518,7 +517,7 @@ The following code example explains how to create the scheduler appointments in 
 
 {% highlight xaml %}
 
-<schedule:SfSchedule x:Name="schedule"/>
+<schedule:SfSchedule ScheduleView="MonthView"/>
 
 {% endhighlight %}
 
@@ -547,7 +546,7 @@ schedule.DataSource = appointmentCollection;
 
 {% highlight xaml %}
 
-<scheduler:SfScheduler x:Name="Scheduler" />
+<scheduler:SfScheduler View="MonthView"/>
 
 {% endhighlight %}
 
@@ -686,7 +685,7 @@ The following code example explains how to map the custom appointments data in X
 
 {% highlight xaml %}
 
-<schedule:SfSchedule x:Name="schedule">
+<schedule:SfSchedule>
     <schedule:SfSchedule.AppointmentMapping>
         <schedule:SchedulerAppointmentMapping
                 StartTimeMapping="From"
@@ -743,7 +742,7 @@ schedule.AppointmentMapping = dataMapping;
 
 {% highlight xaml %}
 
-<scheduler:SfScheduler x:Name="Scheduler">
+<scheduler:SfScheduler>
     <scheduler:SfScheduler.AppointmentMapping>
         <scheduler:SchedulerAppointmentMapping
                 StartTime="From"
@@ -894,7 +893,7 @@ The following code example explains how to configure the month view settings in 
 
 {% highlight xaml %}
 
-<schedule:SfSchedule x:Name="schedule" ScheduleView="MonthView">
+<schedule:SfSchedule ScheduleView="MonthView">
     <schedule:SfSchedule.MonthViewSettings>
         <schedule:MonthViewSettings ShowWeekNumber="False" AppointmentDisplayMode="Appointment">
         </schedule:MonthViewSettings>
@@ -922,11 +921,9 @@ this.Content = schedule;
 
 {% highlight xaml %}
 
-<scheduler:SfScheduler x:Name="Scheduler"
-                        View="MontView" ShowWeekNumber="false">			
+<scheduler:SfScheduler View="MontView" ShowWeekNumber="false">			
     <scheduler:SfScheduler.MonthView>
-        <scheduler:SchedulerMonthView 
-                       AppointmentDisplayMode="Indicator"/>
+        <scheduler:SchedulerMonthView AppointmentDisplayMode="Indicator"/>
     </scheduler:SfScheduler.MonthView>						
 </scheduler:SfScheduler>
 
@@ -1051,7 +1048,7 @@ The following code example explains how to configure the day view settings in Xa
 
 {% highlight xaml %}
 
-<schedule:SfSchedule x:Name="schedule" ScheduleView="DayView">
+<schedule:SfSchedule ScheduleView="DayView">
  <schedule:SfSchedule.DayViewSettings>
         <schedule:DayViewSettings 
             StartHour="9"
@@ -1083,8 +1080,7 @@ this.Content = schedule;
 
 {% highlight xaml %}
 
-<scheduler:SfScheduler x:Name="Scheduler"
-                        View="Day">
+<scheduler:SfScheduler View="Day">
     <scheduler:SfScheduler.DaysView>
         <scheduler:SchedulerDaysView       
                        StartHour="9"
@@ -1222,7 +1218,7 @@ The following code example explains how to configure the timeline view settings 
 
 {% highlight xaml %}
 
-<schedule:SfSchedule x:Name="schedule" ScheduleView="TimelineView">
+<schedule:SfSchedule ScheduleView="TimelineView">
    <schedule:SfSchedule.TimelineViewSettings>
         <schedule:TimelineViewSettings
             StartHour="09"
@@ -1252,8 +1248,7 @@ this.Content = schedule;
 
 {% highlight xaml %}
 
-<scheduler:SfScheduler x:Name="Scheduler"
-                        View="TimelineWeek">
+<scheduler:SfScheduler View="TimelineWeek">
     <scheduler:SfScheduler.TimelineView>
         <scheduler:SchedulerTimelineView       
                        StartHour="9"
@@ -1375,7 +1370,7 @@ The following code example, explains how to configure the special time regions i
 
 {% highlight xaml %}
 
-<schedule:SfSchedule x:Name="schedule" ScheduleView="TimelineView">
+<schedule:SfSchedule ScheduleView="TimelineView">
     <schedule:SfSchedule.SpecialTimeRegions>
         <schedule:TimeRegionSettings 
             StartHour="12" 
@@ -1413,8 +1408,7 @@ this.Content = schedule;
 
 {% highlight xaml %}
 
-<scheduler:SfScheduler x:Name="Scheduler"
-                        View="Week">				
+<scheduler:SfScheduler View="Week">				
 </scheduler:SfScheduler>
 
 {% endhighlight %}
@@ -1501,7 +1495,7 @@ The following code example explains how to customize the appearance of the heade
 
 {% highlight xaml %}
 
-<schedule:SfSchedule x:Name="Scheduler">
+<schedule:SfSchedule>
     <schedule:SfSchedule.HeaderStyle>
         <schedule:HeaderStyle 
                         Background="Orange"
@@ -1530,7 +1524,7 @@ schedule.HeaderStyle = headerStyle;
 
 {% highlight xaml %}
 
-<scheduler:SfScheduler x:Name="Scheduler" View="Week">
+<scheduler:SfScheduler View="Week">
     <scheduler:SfScheduler.HeaderView>
         <scheduler:SchedulerHeaderView 
                         Background="LightGreen">
@@ -1604,7 +1598,7 @@ The following code example explains how to customize the appearance of the view 
 
 {% highlight xaml %}
 
-<schedule:SfSchedule x:Name="Schedule">
+<schedule:SfSchedule>
     <schedule:SfSchedule.ViewHeaderStyle>
         <schedule:ViewHeaderStyle
              Background="LightGreen"
@@ -1638,7 +1632,7 @@ schedule.ViewHeaderStyle = viewHeaderStyle;
 
 {% highlight xaml %}
 
-<scheduler:SfScheduler x:Name="Scheduler">
+<scheduler:SfScheduler>
     <scheduler:SfScheduler.DaysView>
         <scheduler:SchedulerDaysView>
             <scheduler:SchedulerDaysView.ViewHeaderSettings>
@@ -1748,7 +1742,7 @@ The following code example explains how to customize the appearance of the appoi
 
 {% highlight xaml %}
 
-<schedule:SfSchedule x:Name="Schedule">
+<schedule:SfSchedule>
     <schedule:SfSchedule.AppointmentStyle>
         <schedule:AppointmentStyle
              TextColor="#FFFFFF"
@@ -1791,8 +1785,7 @@ schedule.AppointmentStyle = appointmentStyle;
 
 {% highlight xaml %}
 
-<schedule:SfScheduler
-    x:Name="Scheduler">
+<schedule:SfScheduler>
     <schedule:SfScheduler.AppointmentTextStyle>
         <schedule:SchedulerTextStyle
             TextColor="Orange"
@@ -1941,9 +1934,7 @@ schedule.MonthCellStyle = monthCellStyle;
 
 {% highlight xaml %}
 
-<schedule:SfScheduler
-    x:Name="Scheduler"
-    View="Month">
+<schedule:SfScheduler View="Month">
     <schedule:SfScheduler.MonthView>
         <schedule:SchedulerMonthView>
                 <schedule:SchedulerMonthView.CellStyle>
@@ -2074,7 +2065,7 @@ The following code example explains how to customize the appearance of the cell 
 
 {% highlight xaml %}
 
-<schedule:SfSchedule x:Name="Schedule">
+<schedule:SfSchedule>
 <schedule:SfSchedule.MonthViewSettings>
     <schedule:MonthViewSettings>
         <schedule:MonthViewSettings.WeekNumberStyle>
@@ -2111,7 +2102,6 @@ monthViewSettings.WeekNumberStyle = weekNumberStyle;
 {% highlight xaml %}
 
 <schedule:SfScheduler
-    x:Name="Scheduler"
     ShowWeekNumber="True"
     View="Month">
         <schedule:SfScheduler.WeekNumberStyle>
