@@ -511,14 +511,16 @@ The following code example explains how to create the scheduler appointments in 
 
 {% highlight xaml %}
 
-<schedule:SfSchedule ScheduleView="MonthView" DataSource="{Binding appointmentCollection}"/>
+<schedule:SfSchedule ScheduleView="MonthView" DataSource="{Binding AppointmentCollection}"/>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
+public ScheduleAppointmentCollection AppointmentCollection { get; set; }
+
 // Creating an instance for the schedule appointment collection.
-ScheduleAppointmentCollection appointmentCollection = new ScheduleAppointmentCollection();   
+this.AppointmentCollection = new ScheduleAppointmentCollection();   
 
 // Creating new event   
 ScheduleAppointment clientMeeting = new ScheduleAppointment();   
@@ -526,10 +528,10 @@ clientMeeting.StartTime = DateTime.Today.AddHours(9);
 clientMeeting.EndTime = DateTime.Today.AddHours(11);   
 clientMeeting.Color = Color.Blue;   
 clientMeeting.Subject = "ClientMeeting";   
-appointmentCollection.Add(clientMeeting);  
+AppointmentCollection.Add(clientMeeting);  
  
 // Adding the schedule appointment collection to the DataSource of Xamarin Schedule.
-schedule.DataSource = appointmentCollection;
+schedule.DataSource = AppointmentCollection;
 
 {% endhighlight %}
 
@@ -540,17 +542,19 @@ schedule.DataSource = appointmentCollection;
 
 {% highlight xaml %}
 
-<scheduler:SfScheduler View="MonthView" AppointmentsSource="{Binding schedulerAppointmentCollection}"/>
+<scheduler:SfScheduler View="MonthView" AppointmentsSource="{Binding SchedulerAppointmentCollection}"/>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
+public ScheduleAppointmentCollection SchedulerAppointmentCollection { get; set; }
+
 // Creating an instance for the scheduler appointment collection.
-var schedulerAppointmentCollection = new ObservableCollection<SchedulerAppointment>();
+this.SchedulerAppointmentCollection = new ObservableCollection<SchedulerAppointment>();
 
 // Adding scheduler appointment in the schedule appointment collection. 
-schedulerAppointmentCollection.Add(new SchedulerAppointment()
+SchedulerAppointmentCollection.Add(new SchedulerAppointment()
 {
     StartTime = DateTime.Today.AddHours(9),
     EndTime = DateTime.Today.AddHours(11),
@@ -559,7 +563,7 @@ schedulerAppointmentCollection.Add(new SchedulerAppointment()
 });
 
 // Adding the scheduler appointment collection to the AppointmentsSource of .NET MAUI Scheduler.
-this.Scheduler.AppointmentsSource = schedulerAppointmentCollection;
+this.Scheduler.AppointmentsSource = SchedulerAppointmentCollection;
 
 {% endhighlight %}
 
@@ -679,7 +683,7 @@ The following code example explains how to map the custom appointments data in X
 
 {% highlight xaml %}
 
-<schedule:SfSchedule>
+<schedule:SfSchedule DataSource="{Binding Meetings}">
     <schedule:SfSchedule.AppointmentMapping>
         <schedule:SchedulerAppointmentMapping
                 StartTimeMapping="From"
@@ -735,7 +739,7 @@ schedule.AppointmentMapping = dataMapping;
 
 {% highlight xaml %}
 
-<scheduler:SfScheduler>
+<scheduler:SfScheduler AppointmentsSource="{Binding Meetings}">
     <scheduler:SfScheduler.AppointmentMapping>
         <scheduler:SchedulerAppointmentMapping
                 StartTime="From"
