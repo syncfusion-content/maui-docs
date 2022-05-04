@@ -276,7 +276,8 @@ The following code example, explains how to initialize the properties of the Xam
 
 {% highlight xaml %}
 
-<schedule:SfSchedule ScheduleView="DayView" FirstDayOfWeek="3"/>
+<schedule:SfSchedule ScheduleView="DayView" 
+                     FirstDayOfWeek="3"/>
 
 {% endhighlight %}
 
@@ -297,10 +298,7 @@ this.Content = schedule;
 {% highlight xaml %}
 
 <scheduler:SfScheduler  View="Week"
-                        FirstDayOfWeek="Tuesday"
-                        ShowNavigationArrows="True"
-                        AllowedViews="Day,Week,WorkWeek,Month"
-                        AllowViewNavigation="True">
+                        FirstDayOfWeek="Tuesday">
 </scheduler:SfScheduler>
 
 {% endhighlight %}
@@ -308,12 +306,8 @@ this.Content = schedule;
 {% highlight C# %}
 
 SfScheduler scheduler = new SfScheduler();
-
+scheduler.View = ScheduleView.Week;
 scheduler.FirstDayOfWeek = DayOfWeek.Tuesday;
-scheduler.AllowedViews = SchedulerViews.Day | SchedulerViews.Week | SchedulerViews.WorkWeek | SchedulerViews.Month;
-scheduler.ShowNavigationArrows = true;
-scheduler.AllowViewNavigation = true;   
-
 this.Content = scheduler;
 
 {% endhighlight %}
@@ -489,7 +483,7 @@ this.Content = scheduler;
 <tr>
 <td>{{'[EnableNavigation](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_EnableNavigation)' | markdownify }}</td>
 <td>Nil</td>
-<td>The navigation is enabled by default.</td></tr>
+<td>Not supported.</td></tr>
 
 <tr>
 <td>{{'[TimeSlotBorderStrokeWidth](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_TimeZone)' | markdownify }}</td>
@@ -517,7 +511,7 @@ The following code example explains how to create the scheduler appointments in 
 
 {% highlight xaml %}
 
-<schedule:SfSchedule ScheduleView="MonthView"/>
+<schedule:SfSchedule ScheduleView="MonthView" DataSource="{Binding appointmentCollection}"/>
 
 {% endhighlight %}
 
@@ -546,7 +540,7 @@ schedule.DataSource = appointmentCollection;
 
 {% highlight xaml %}
 
-<scheduler:SfScheduler View="MonthView"/>
+<scheduler:SfScheduler View="MonthView" AppointmentsSource="{Binding schedulerAppointmentCollection}"/>
 
 {% endhighlight %}
 
@@ -692,8 +686,7 @@ The following code example explains how to map the custom appointments data in X
                 EndTimeMapping="To"
                 SubjectMapping="EventName"
                 ColorMapping="color"
-                IsAllDayMapping="AllDay"
-               />
+                IsAllDayMapping="AllDay"/>
     </schedule:SfSchedule.AppointmentMapping>
 </schedule:SfSchedule>
 
@@ -718,18 +711,18 @@ public ObservableCollection<Meeting> Meetings = new ObservableCollection<Meeting
 Meeting meeting = new Meeting();
 meeting.From = DateTime.Today.AddHours(9);   
 meeting.To = (meeting.From.AddHours(1));
-meeting.EventName = eventNameCollection[randomTime.Next(9)];
-meeting.color = colorCollection[randomTime.Next(9)];
+meeting.EventName = "Meeting";
+meeting.color = Color.Red;
 Meetings.Add(meeting);
 
 // Adding the custom schedule appointment collection to the DataSource of Xamarin Schedule.
 schedule.DataSource = Meetings;
 
 ScheduleAppointmentMapping dataMapping = new ScheduleAppointmentMapping(); 
-dataMapping.ColorMapping = "color";  
-dataMapping.EndTimeMapping = "To";
-dataMapping.StartTimeMapping = "From"; 
 dataMapping.SubjectMapping = "EventName";
+dataMapping.StartTimeMapping = "From"; 
+dataMapping.EndTimeMapping = "To";
+dataMapping.ColorMapping = "color";  
 dataMapping.IsAllDayMapping = "AllDay";
 schedule.AppointmentMapping = dataMapping;
 
@@ -749,8 +742,7 @@ schedule.AppointmentMapping = dataMapping;
                 EndTime="To"
                 Subject="EventName"
                 Background="Background"
-                IsAllDay="IsAllDay"
-               />
+                IsAllDay="IsAllDay"/>
     </scheduler:SfScheduler.AppointmentMapping>
 </scheduler:SfScheduler>
 
@@ -763,11 +755,11 @@ schedule.AppointmentMapping = dataMapping;
 /// </summary>    
 public class Meeting
 {
+    public string EventName { get; set; }
     public DateTime From { get; set; }
     public DateTime To { get; set; }
-    public bool IsAllDay { get; set; }
-    public string EventName { get; set; }
     public Brush Background { get; set; }
+    public bool IsAllDay { get; set; }
 }
 
 // Creates meetings and stores in a collection.  
@@ -906,11 +898,9 @@ The following code example explains how to configure the month view settings in 
 
 SfSchedule schedule = new SfSchedule();
 schedule.ScheduleView = ScheduleView.MonthView;
-MonthViewSettings monthViewSettings = new MonthViewSettings();
-monthViewSettings.ShowWeekNumber = false;
-monthViewSettings.AppointmentDisplayMode = AppointmentDisplayMode.Appointment;
-schedule.MonthViewSettings = monthViewSettings;
-this.Content = schedule;
+this.schedule.MonthViewSettings.ShowWeekNumber = false;
+this.schedule.MonthViewSettings.AppointmentDisplayMode = AppointmentDisplayMode.Appointment;
+this.Content = this.schedule;
 
 {% endhighlight %}
 
@@ -921,7 +911,8 @@ this.Content = schedule;
 
 {% highlight xaml %}
 
-<scheduler:SfScheduler View="MontView" ShowWeekNumber="false">			
+<scheduler:SfScheduler View="Month" 
+                       ShowWeekNumber="false">			
     <scheduler:SfScheduler.MonthView>
         <scheduler:SchedulerMonthView AppointmentDisplayMode="Indicator"/>
     </scheduler:SfScheduler.MonthView>						
@@ -932,11 +923,10 @@ this.Content = schedule;
 {% highlight C# %}
 
 SfScheduler Scheduler = new SfScheduler();
-
+this.Scheduler.View = SchedulerView.Month:
 this.Scheduler.ShowWeekNumber = true;
 this.Scheduler.MonthView.AppointmentDisplayMode = SchedulerMonthAppointmentDisplayMode.Indicator;
-
-this.Content = Scheduler;
+this.Content = this.Scheduler;
 
 {% endhighlight %}
 
@@ -1048,12 +1038,11 @@ The following code example explains how to configure the day view settings in Xa
 
 {% highlight xaml %}
 
-<schedule:SfSchedule ScheduleView="DayView">
+<schedule:SfSchedule ScheduleView="DayView" ShowCurrentTimeIndicator="false">
  <schedule:SfSchedule.DayViewSettings>
         <schedule:DayViewSettings 
             StartHour="9"
-            EndHour="16"
-			ShowCurrentTimeIndicator="false">
+            EndHour="16">
         </schedule:DayViewSettings>
     </schedule:SfSchedule.DayViewSettings>
 </schedule>
@@ -1063,13 +1052,11 @@ The following code example explains how to configure the day view settings in Xa
 {% highlight C# %}
 
 SfSchedule schedule = new SfSchedule();
-schedule.Scheduleview = ScheduleView.DayView;
-schedule.ShowCurrentTimeIndicator = false;
-DayViewSettings dayViewSettings = new DayViewSettings();
-dayViewSettings.StartHour = 9;
-dayViewSettings.EndHour = 16;
-schedule.DayViewSettings = dayViewSettings;
-this.Content = schedule;
+this.schedule.Scheduleview = ScheduleView.DayView;
+this.schedule.ShowCurrentTimeIndicator = false;
+this.schedule.DayViewSettings.StartHour = 9;
+this.schedule.DayViewSettings.EndHour = 16;
+this.Content = this.schedule;
 
 {% endhighlight %}
 
@@ -1095,12 +1082,10 @@ this.Content = schedule;
 
 SfScheduler Scheduler = new SfScheduler();
 this.Scheduler.View = SchedulerView.Day;
-
 this.Scheduler.DaysView.StartHour = 9;
 this.Scheduler.DaysView.EndHour = 16;
 this.Scheduler.DaysView.ShowCurrentTimeIndicator = false;
-
-this.Content = Scheduler;
+this.Content = this.Scheduler;
 
 {% endhighlight %}
 
@@ -1218,7 +1203,7 @@ The following code example explains how to configure the timeline view settings 
 
 {% highlight xaml %}
 
-<schedule:SfSchedule ScheduleView="TimelineView">
+<schedule:SfSchedule ScheduleView="TimelineView" ShowCurrentTimeIndicator="False">
    <schedule:SfSchedule.TimelineViewSettings>
         <schedule:TimelineViewSettings
             StartHour="09"
@@ -1232,12 +1217,11 @@ The following code example explains how to configure the timeline view settings 
 {% highlight C# %}
 
 SfSchedule schedule = new SfSchedule();
-schedule.SchedulerView = SchedulerView.TimelineView;
-TimelineViewSettings timelineViewSettings = new TimelineViewSettings();
-timelineViewSettings.StartHour = 09;
-timelineViewSettings.EndHour = 13;
-schedule.TimelineViewSettings = timelineViewSettings;
-this.Content = schedule;
+this.schedule.SchedulerView = SchedulerView.TimelineView;
+this.schedule.ShowCurrentTimeIndicator = false;
+this.schedule.TimelineViewSettings.StartHour = 09;
+this.schedule.TimelineViewSettings.EndHour = 13;
+this.Content = this.schedule;
 
 {% endhighlight %}
 
@@ -1263,11 +1247,9 @@ this.Content = schedule;
 
 SfScheduler Scheduler = new SfScheduler();
 this.Scheduler.View = SchedulerView.TimelineWeek;
-
 this.Scheduler.TimelineView.StartHour = 9;
 this.Scheduler.TimelineView.EndHour = 16;
 this.Scheduler.TimelineView.ShowCurrentTimeIndicator = false;
-
 this.Content = Scheduler;
 
 {% endhighlight %}
@@ -1417,7 +1399,6 @@ this.Content = schedule;
 
 SfScheduler Scheduler = new SfScheduler();
 this.Scheduler.View = SchedulerView.Week;
-
 this.Scheduler.DaysView.TimeRegions = this.GetTimeRegion();
 
 private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
@@ -1498,9 +1479,7 @@ The following code example explains how to customize the appearance of the heade
 <schedule:SfSchedule>
     <schedule:SfSchedule.HeaderStyle>
         <schedule:HeaderStyle 
-                        Background="Orange"
-                        TextColor="Blue"
-                        FontSize="20">
+                        Background="Orange">
         </schedule:HeaderStyle>
     </schedule:SfSchedule.HeaderStyle>
  </schedule:SfSchedule>
@@ -1891,21 +1870,17 @@ The following code example explains how to customize the appearance of the month
 
 {% highlight xaml %}
 
+<schedule:SfSchedule 
+                  ScheduleView="MonthView">
 <schedule:SfSchedule.MonthCellStyle>
     <schedule:MonthViewCellStyle
                 BackgroundColor="#8282ff"
-                TextColor="Orange"
-                FontSize="20"
-                FontFamily = "Arial"
-                FontAttributes = "None"
                 NextMonthBackgroundColor="Gray"
-                NextMonthTextColor="Gray"
                 PreviousMonthBackgroundColor="White"
-                PreviousMonthTextColor="Gray"
-                TodayBackgroundColor="#f97272"
-                TodayTextColor="White">
+                TodayBackgroundColor="#f97272">
     </schedule:MonthViewCellStyle>
 </schedule:SfSchedule.MonthCellStyle>
+<schedule:SfSchedule/>
 
 {% endhighlight %}
 
@@ -1915,15 +1890,8 @@ The following code example explains how to customize the appearance of the month
 MonthViewCellStyle monthCellStyle = new MonthViewCellStyle();
 monthCellStyle.BackgroundColor = Color.FromHex("#8282ff");
 monthCellStyle.NextMonthBackgroundColor = Color.White;
-monthCellStyle.NextMonthTextColor = Color.Gray;
 monthCellStyle.PreviousMonthBackgroundColor = Color.White;
-monthCellStyle.PreviousMonthTextColor = Color.Gray;
-monthCellStyle.TextColor = Color.Orange;
-monthCellStyle.FontFamily = "Arial";
-monthCellStyle.FontSize = 20;
-monthCellStyle.FontAttributes = FontAttributes.None;
 monthCellStyle.TodayBackgroundColor = Color.FromHex("#f97272");
-monthCellStyle.TodayTextColor = Color.White;
 schedule.MonthCellStyle = monthCellStyle;
 {% endhighlight %}
 
@@ -1951,35 +1919,13 @@ schedule.MonthCellStyle = monthCellStyle;
 
 {% highlight C# %}
 
-    var textStyle = new SchedulerTextStyle()
-    {
-        TextColor = Colors.DarkBlue,
-        FontSize = 14,
-    };
-
-    var leadingMonthTextStyle = new SchedulerTextStyle()
-    {
-        TextColor = Colors.Red,
-        FontSize = 14,
-    };
-
-    var trailingMonthTextStyle = new SchedulerTextStyle()
-    {
-        TextColor = Colors.Red,
-        FontSize = 14,
-    };
-
     var monthCellStyle = new SchedulerMonthCellStyle()
     {
         Background = Brush.LightSkyBlue,
         TodayBackground = Brush.LightBlue,
         LeadingMonthBackground = Brush.LightGreen,
         TrailingMonthBackground = Brush.LightYellow,
-        TextStyle = textStyle,
-        LeadingMonthTextStyle = leadingMonthTextStyle,
-        TrailingMonthTextStyle = trailingMonthTextStyle
     };
-
     this.Scheduler.MonthView.CellStyle = monthCellStyle;
 
 {% endhighlight %}
@@ -2067,13 +2013,9 @@ The following code example explains how to customize the appearance of the cell 
 
 <schedule:SfSchedule>
 <schedule:SfSchedule.MonthViewSettings>
-    <schedule:MonthViewSettings>
+    <schedule:MonthViewSettings ShowWeekNumber="true" >
         <schedule:MonthViewSettings.WeekNumberStyle>
-            <schedule:WeekNumberStyle FontSize="10"
-                                        FontFamily="Arial"
-                                        FontAttributes="Bold"
-                                        TextColor="AliceBlue"
-                                        BackgroundColor="Red"/>
+            <schedule:WeekNumberStyle BackgroundColor="Red"/>
         </schedule:MonthViewSettings.WeekNumberStyle>
     </schedule:MonthViewSettings>
 </schedule:SfSchedule.MonthViewSettings>
@@ -2105,7 +2047,8 @@ monthViewSettings.WeekNumberStyle = weekNumberStyle;
     ShowWeekNumber="True"
     View="Month">
         <schedule:SfScheduler.WeekNumberStyle>
-            <schedule:SchedulerWeekNumberStyle Background="Red"/>
+            <schedule:SchedulerWeekNumberStyle 
+                                    Background="Red"/>
         </schedule:SfScheduler.WeekNumberStyle>
 </schedule:SfScheduler>
 
