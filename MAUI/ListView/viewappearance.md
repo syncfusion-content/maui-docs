@@ -616,7 +616,7 @@ public class GroupHeaderItemExt : GroupHeaderItem
 ### Extension class for LoadMoreItem
 
 {% tabs %}
-{% highlight c# tabtitle="LoadMoreItemExt.cs"%}
+{% highlight c# tabtitle="LoadMoreItemExt.cs" %}
 public class LoadMoreItemExt : LoadMoreItem
 {
     private SfListView listView;

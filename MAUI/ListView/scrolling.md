@@ -150,7 +150,7 @@ public partial class MainPage : ContentPage
 You can get the item elements to hold by a scrollable visual container using the [GetVisualContainer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.Helpers.SfListViewHelper.html#Syncfusion_Maui_ListView_Helpers_SfListViewHelper_GetVisualContainer_Syncfusion_Maui_ListView_SfListView_) method. It is a helper method of `SfListView` control.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs hl_lines="6" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="6" %}
 using Syncfusion.Maui.ListView.Helpers;
 public partial class MainPage : ContentPage
 {
@@ -225,7 +225,7 @@ By default, the `SfListview` reuses items on scrolling and changing the source c
 <syncfusion:SfListView x:Name="listView" 
                       	CachingStrategy="CreateNewTemplate" />
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs"%}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 listView.CachingStrategy = CachingStrategy.CreateNewTemplate; 
 {% endhighlight %}
 {% endtabs %}
@@ -237,7 +237,7 @@ You can skip the reusing of list items on the `ItemsSourcePropertyChanged` by se
 <syncfusion:SfListView x:Name="listView" 
 			ItemsSourceChangeCachingStrategy="ClearItems" />
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs"%}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 listView.ItemsSourceChangeCachingStrategy = ItemsSourceChangeCachingStrategy.ClearItems;
 {% endhighlight %}
 {% endtabs %}
