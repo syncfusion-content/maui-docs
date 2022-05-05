@@ -1402,7 +1402,18 @@ this.Content = schedule;
 
 {% highlight xaml %}
 
-<scheduler:SfScheduler View="Week">				
+<scheduler:SfScheduler View="Week">
+    <scheduler:SfScheduler.DaysView>
+        <scheduler:SchedulerDaysView>
+            <scheduler:SchedulerDaysView.TimeRegions>
+                <scheduler:SchedulerTimeRegion  StartTime="{Binding StartTime}"
+                                                EndTime="{Binding EndTime}"
+                                                Text="Lunch"
+                                                EnablePointerInteraction="False"
+                                                Background="Gray"/>
+            </scheduler:SchedulerDaysView.TimeRegions>
+        </scheduler:SchedulerDaysView>
+    </scheduler:SfScheduler.DaysView>
 </scheduler:SfScheduler>
 
 {% endhighlight %}
@@ -1427,7 +1438,6 @@ private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
     timeRegions.Add(timeRegion);
     return timeRegions;
 }
-
 this.Content = scheduler;
 
 {% endhighlight %}
