@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrate from Xamarin.Forms SfChart to .NET MAUI SfCartesianChart
 
-The Cartesian Chart was created from the scratch using the upgraded APIs and performance of the .NET MAUI graphics library and framework layouts. However, a minor code change is required. In addition, `SfChart` has been divided into five chart controls in .NET MAUI for a better user experience and understanding.
+The Cartesian Chart was created from the scratch using the upgraded APIs and performance of the .NET MAUI graphics library and framework layouts. However, a minor code change is required. In addition, [`SfChart`](https://www.syncfusion.com/xamarin-ui-controls/xamarin-charts) has been divided into five chart controls in .NET MAUI for a better user experience and understanding.
 
 <table>
 <tr>
@@ -31,91 +31,9 @@ SfChart
 
 To make the migration easier, the majority of the APIs from the Xamarin SfChart were kept in the .NET MAUI [SfCartesianChart](https://www.syncfusion.com/maui-controls/maui-charts). Currently, most of the features have been added in the [SfCartesianChart](https://www.syncfusion.com/maui-controls/maui-charts), but only a few are pending in the .NET MAUI along with some limitations. Please refer to the following details and the API migration information available below.
 
-## Upcoming Features in .NET MAUI
-
-**Chart** 
-
-* Customize the appearance of the chart plot area.
-* Support for trackball interactions. 
-* Support for crosshair interactions. 
-* Exporting support for a chart as an image or a stream. 
-* Support for chart localization. 
-* Support for annotations. 
-* Suspend and resume notification support. 
-* Technical indicators for charts.
-
-**Series**
-
-* Listen to property change support for series.
-* Get data point index based on value.
-* Get data points by passing rect.
-* Notify event or method when series are rendering.
-* Suspend and resume notification.
-* Trendlines support for continuous series. 
-
-**Axis**
-
-* Logarithmic axis support.
-* DateTime category axis support.
-* Align the axis labels and tick inside the series clip rect.
-* Range style customization.
-* Event or method to notify the axis label click.
-* Axis label wrapping support.
-* Support for axis draw labels as multiple lines using /n.
-* Striplines for range base axis.
-* Arrange category axis labels based on series values.
-* Support setting the maximum labels count for the chart axis.
-* Support to extent size between Axis title and axis label.
-
-**Legend** 
-
-* Title support for legend. 
-* Support to enable or disable the legend icon visibility.
-* Legend items wrap and floating support.
-* Maximum width support for Legend.
-* Individual legend items based on the data point count.
-* Event or method to notify the legend click and the creation of a legend item.
-* DataTemplate support for legend items.
-
-**Data label**
-
-* Support for marker symbols in continuous series.
-* DataTemplate support for data labels.
-* Connector lines and its customization support.
-
-**Tooltip**
-
-* Hide and Show method for tooltip.
-
-**Selection**
-
-* Series selection and cluster selection support.
-
-**Zooming**
-
-* Support for selection and directional zooming.
-* Support setting the maximum zoom level.
-* Event for zooming and panning.
-
-## Unsupported Features from Xamarin.Forms
-
-* Only continuous series will support data marker symbols.
-* Data label created event support was not provided in series. Instead, you can use the `DrawDataLabel` override method in the `ChartSeries` class.
-* `OpposedPosition` property was not exposed in axis. Instead, you can move to the axis opposed position by setting the `CrossesAt` value as `double.MaxValue.`
-* `RangeStyle` support was not provided in the axis. Instead, you can use `DrawMajorTick,` `DrawMinorTick,` and `DrawGridLine` override methods provided in the axis class. 
-
-## Known issues
-
-* The legend item was not dynamically added.
-* While resizing the window, the chart size is not dynamically updated.
-* Axis label rotation does not work for all angles.
-* The title position was incorrect for a category axis with an inversed position.
-* Axis range and series are not updated properly when dynamically removing or inserting the axis collection.
-* Axis minor grid lines are not visible unless major gridlines are enabled.
-
 ## API migration
 
-To initialize the control, import the Chart namespace and Initialize [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1) as shown in the following code sample. 
+To initialize the control, import the Chart namespace and Initialize [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html) as shown in the following code sample. 
 
 <table>
 <tr>
@@ -175,6 +93,48 @@ this.Content = chart;
 </tr>
 </table>
 
+The following table illustrates the API migration for the chart.
+
+<table>
+<tr>
+<th>Xamarin</th>
+<th>.NET MAUI</th>
+</tr>
+<tr>
+<td>Title</td>
+<td>Title</td>
+</tr>
+<tr>
+<td>Legend</td>
+<td>Legend</td>
+</tr>
+
+<tr>
+<td>Series</td>
+<td>Series</td>
+</tr>
+<tr>
+<td>PrimaryAxis</td>
+<td>XAxes</td>
+</tr>
+<tr>
+<td>SecondaryAxis</td>
+<td>YAxes</td>
+</tr>
+<tr>
+<td>SideBySideSeriesPlacement</td>
+<td>EnableSideBySideSeriesPlacement</td>
+</tr>
+<tr>
+<td>ColorModel, CustomBrushes</td>
+<td>PaletteBrushes</td>
+</tr>
+<tr>
+<td>ChartBehaviors</td>
+<td>TooltipBehavior, SelectionBehavior, ZoomPanBehavior</td>
+</tr>
+</table>
+
 ### Axis
 
 <table>
@@ -187,80 +147,72 @@ this.Content = chart;
 <td>LabelRotation</td>
 </tr>
 <tr>
+<td>OpposedPosition</td>
+<td>CrossesAt</td>
+</tr>
+<tr>
 <td>-</td>
 <td>CrossAxisName</td>
 </tr>
 <tr>
 <td>LabelClicked</td>
-<td>-</td>
+<td>Upcoming</td>
 </tr>
 <tr>
 <td>VisibleMinimum</td>
-<td>-</td>
+<td>Upcoming</td>
 </tr>
 <tr>
 <td>VisibleMaximum</td>
-<td>-</td>
+<td>Upcoming</td>
 </tr>
 <tr>
 <td>VisibleLabels</td>
-<td>-</td>
+<td>Upcoming</td>
 </tr>
 <tr>
 <td>TickPosition</td>
-<td>-</td>
+<td>Upcoming</td>
 </tr>
 <tr>
 <td>MaximumLabels</td>
-<td>-</td>
+<td>Upcoming</td>
 </tr>
 <tr>
 <td>PlotOffset</td>
-<td>-</td>
+<td>Upcoming</td>
 </tr>
 <tr>
 <td>LabelsIntersectAction</td>
-<td>-</td>
+<td>Upcoming</td>
 </tr>
 <tr>
 <td>AutoScrollingMode</td>
-<td>-</td>
+<td>Upcoming</td>
 </tr>
 <tr>
 <td>LabelExtent</td>
-<td>-</td>
-</tr>
-<tr>
-<td>RangeStyles</td>
-<td>-</td>
-</tr>
-<tr>
-<td>OpposedPosition</td>
-<td>CrossesAt</td>
-</tr>
-<tr>
-<td>IsVertical</td>
-<td>-</td>
+<td>Upcoming</td>
 </tr>
 <tr>
 <td>ShowTrackballInfo</td>
-<td>-</td>
+<td>Upcoming</td>
 </tr>
 <tr>
 <td>TrackballLabelStyle</td>
-<td>-</td>
+<td>Upcoming</td>
 </tr>
 <tr>
 <td>AutoScrollingDelta</td>
-<td>-</td>
+<td>Upcoming</td>
 </tr>
 <tr>
 <td>TrackballLabelTemplate</td>
-<td>-</td>
+<td>Upcoming</td>
 </tr>
 </table>
 
-The following code example explains how to migrate the axis of Xamarin `SfChart` to .NET MAUI `SfCartesianChart`.
+The following code example explains how to migrate the axis of Xamarin [`SfChart`](https://help.syncfusion.com/xamarin/charts/overview) to .NET MAUI [`SfCartesianChart`](https://help.syncfusion.com/maui/cartesian-charts/overview).
 
 <table>
 <tr>
@@ -340,7 +292,7 @@ this.Content = chart;
 <td>Fill</td>
 </tr>
 <tr>
-<td>ColorModel</td>
+<td>ColorModel, CustomBrushes </td>
 <td>PaletteBrushes</td>
 </tr>
 <tr>
@@ -450,79 +402,79 @@ this.Content = chart;
 </tr>
 <tr>
 <td>Title</td>
-<td>-</td>
+<td>Upcoming </td>
 </tr>
 <tr>
 <td>Series</td>
-<td>-</td>
+<td>Upcoming </td>
 </tr>
 <tr>
 <td>BackgroundColor</td>
-<td>-</td>
+<td>Upcoming </td>
 </tr>
 <tr>
 <td>StrokeColor</td>
-<td>-</td>
+<td>Upcoming </td>
 </tr>
 <tr>
 <td>StrokeWidth</td>
-<td>-</td>
+<td>Upcoming </td>
 </tr>
 <tr>
 <td>StrokeDashArray</td>
-<td>-</td>
+<td>Upcoming </td>
 </tr>
 <tr>
 <td>CornerRadius</td>
-<td>-</td>
+<td>Upcoming</td>
 </tr>
 <tr>
 <td>Margin</td>
-<td>-</td>
+<td>Upcoming</td>
 </tr>
 <tr>
 <td>LabelStyle</td>
-<td>-</td>
+<td>Upcoming</td>
 </tr>
 <tr>
 <td>ItemTemplate</td>
-<td>-</td>
+<td>Upcoming</td>
 </tr>
 <tr>
 <td>OverflowMode</td>
-<td>-</td>
+<td>Upcoming</td>
 </tr>
 <tr>
 <td>MaxWidth</td>
-<td>-</td>
+<td>Upcoming</td>
 </tr>
 <tr>
 <td>Orientation</td>
-<td>-</td>
+<td>Upcoming</td>
 </tr>
 <tr>
 <td>IsIconVisible</td>
-<td>-</td>
+<td>Upcoming</td>
 </tr>
 <tr>
 <td>ItemMargin</td>
-<td>-</td>
+<td>Upcoming</td>
 </tr>
 <tr>
 <td>IconWidth</td>
-<td>-</td>
+<td>Upcoming</td>
 </tr>
 <tr>
 <td>IconHeight</td>
-<td>-</td>
+<td>Upcoming</td>
 </tr>
 <tr>
 <td>OffsetX</td>
-<td>-</td>
+<td>Upcoming</td>
 </tr>
 <tr>
 <td>OffsetY</td>
-<td>-</td>
+<td>Upcoming</td>
 </tr>
 </table>
 
@@ -720,7 +672,7 @@ chart.TooltipBehavior = tooltip;
 </tr>
 </table>
 
-To customize the tooltip appearance, create an instance of the `ChartTooltipBehavior` class and add it to the `ChartBehaviors` collection of `SfChart.` For `SfCartesianChart,` you can directly set the `ChartTooltipBehavior` instance to the [TooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_TooltipBehavior) property, as shown in the above code sample.
+To customize the tooltip appearance, create an instance of the [`ChartTooltipBehavior`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartTooltipBehavior.html) class and add it to the [`ChartBehaviors`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html#Syncfusion_SfChart_XForms_SfChart_ChartBehaviors) collection of [`SfChart`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html). For [`SfCartesianChart`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html), you can directly set the [`ChartTooltipBehavior`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html) instance to the [TooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_TooltipBehavior) property, as shown in the above code sample.
 
 ### Selection
 
@@ -792,7 +744,7 @@ chart.Series.Add(series);
 </tr>
 </table>
 
-Create an instance of the `ChartSelectionBehavior` class and add it to the  `ChartBehaviors` collection of `SfChart.` For `SfCartesianChart,` you can directly set the `ChartSelectionBehavior` instance to the [SelectionBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_SelectionBehaviorr) property, as shown in the above code sample.
+Create an instance of the [`ChartSelectionBehavior`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartSelectionBehavior.html) class and add it to the  [`ChartBehaviors`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html#Syncfusion_SfChart_XForms_SfChart_ChartBehaviors) collection of [`SfChart`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html). For [`SfCartesianChart`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html), you can directly set the [`ChartSelectionBehavior`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelectionBehavior.html) instance to the [SelectionBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_SelectionBehaviorr) property, as shown in the above code sample.
 
 ### Zooming and Panning
 
@@ -842,7 +794,90 @@ chart.ZoomPanBehavior = zooming;
 </tr>
 </table>
 
-The zooming and panning are achieved using the `ChartZoomPanBehavior` in `SfChart` and `SfCartesianChart` as shown in the above code example.
+The zooming and panning are achieved using the [`ChartZoomPanBehavior`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartZoomPanBehavior.html) in [`SfChart`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html) and [`SfCartesianChart`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html) as shown in the above code example.
+
+## Upcoming Features in .NET MAUI
+
+**Chart** 
+
+* Customize the appearance of the chart plot area.
+* Support for trackball interactions. 
+* Support for crosshair interactions. 
+* Exporting support for a chart as an image or a stream. 
+* Support for chart localization. 
+* Support for annotations. 
+* Suspend and resume notification support. 
+* Technical indicators for charts.
+
+**Series**
+
+* Listen to property change support for series.
+* Get data point index based on value.
+* Get data points by passing rect.
+* Notify event or method when series are rendering.
+* Suspend and resume notification.
+* Trendlines support for continuous series. 
+
+**Axis**
+
+* Logarithmic axis support.
+* DateTime category axis support.
+* Align the axis labels and tick inside the series clip rect.
+* Range style customization.
+* Event or method to notify the axis label click.
+* Axis label wrapping support.
+* Support for axis draw labels as multiple lines using /n.
+* Striplines for range base axis.
+* Arrange category axis labels based on series values.
+* Support setting the maximum labels count for the chart axis.
+* Support to extent size between Axis title and axis label.
+
+**Legend** 
+
+* Title support for legend. 
+* Support to enable or disable the legend icon visibility.
+* Legend items wrap and floating support.
+* Maximum width support for Legend.
+* Individual legend items based on the data point count.
+* Event or method to notify the legend click and the creation of a legend item.
+* DataTemplate support for legend items.
+
+**Data label**
+
+* Support for marker symbols in continuous series.
+* DataTemplate support for data labels.
+* Connector lines and its customization support.
+
+**Tooltip**
+
+* Hide and Show method for tooltip.
+
+**Selection**
+
+* Series selection and cluster selection support.
+
+**Zooming**
+
+* Support for selection and directional zooming.
+* Support setting the maximum zoom level.
+* Event for zooming and panning.
+
+## Unsupported Features from Xamarin.Forms
+
+* Only continuous series will support data marker symbols.
+* Data label created event support was not provided in series. Instead, you can use the [`DrawDataLabel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_DrawDataLabel_Microsoft_Maui_Graphics_ICanvas_Microsoft_Maui_Controls_Brush_System_String_Microsoft_Maui_Graphics_PointF_System_Int32_) override method in the [`ChartSeries`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html) class.
+* [`OpposedPosition`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartAxis.html#Syncfusion_SfChart_XForms_ChartAxis_OpposedPosition) property was not exposed in axis. Instead, you can move to the axis opposed position by setting the [`CrossesAt`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_CrossesAt) value as `double.MaxValue.`
+* [`RangeStyle`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartAxis.html#Syncfusion_SfChart_XForms_ChartAxis_RangeStyles) support was not provided in the axis. Instead, you can use [`DrawMajorTick`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_DrawMajorTick_Microsoft_Maui_Graphics_ICanvas_System_Double_Microsoft_Maui_Graphics_PointF_Microsoft_Maui_Graphics_PointF_), [`DrawMinorTick`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_DrawMinorTick_Microsoft_Maui_Graphics_ICanvas_System_Double_Microsoft_Maui_Graphics_PointF_Microsoft_Maui_Graphics_PointF_) and [`DrawGridLine`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_DrawGridLine_Microsoft_Maui_Graphics_ICanvas_System_Double_System_Single_System_Single_System_Single_System_Single_) override methods provided in the axis class.
+* In.NET MAUI, the [`ChartDataPoint`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartDataPoint.html#) model class was no longer available. Instead, create your own model.
+
+## Known issues
+
+* The legend item was not dynamically added.
+* While resizing the window, the chart size is not dynamically updated.
+* Axis label rotation does not work for all angles.
+* The title position was incorrect for a category axis with an inversed position.
+* Axis range and series are not updated properly when dynamically removing or inserting the axis collection.
+* Axis minor grid lines are not visible unless major gridlines are enabled.
 
 **Support and feedback**
 
