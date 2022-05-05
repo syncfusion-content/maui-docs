@@ -136,7 +136,7 @@ private void DataSource_FilterChanged(object sender, NotifyCollectionChangedEven
 The SfListView allows clearing the filters by setting the [DataSource.Filter](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.DataSource.html#Syncfusion_DataSource_DataSource_Filter) to null, and call the [DataSource.RefreshFilter](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.DataSource.html#Syncfusion_DataSource_DataSource_RefreshFilter) method.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs"%}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 listView.DataSource.Filter = null;
 listView.DataSource.RefreshFilter();
 {% endhighlight %}

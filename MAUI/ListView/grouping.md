@@ -492,7 +492,7 @@ listView.CollapseAll();
 Expand or collapse a specific group by using the [SfListView.ExpandGroup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ExpandGroup_Syncfusion_DataSource_Extensions_GroupResult_) and [SfListView.CollapseGroup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_CollapseGroup_Syncfusion_DataSource_Extensions_GroupResult_) methods.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs"%}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 var group = listView.DataSource.Groups[0];
 listView.ExpandGroup(group);
 listView.CollapseGroup(group);
@@ -504,7 +504,7 @@ listView.CollapseGroup(group);
 Expand or collapse all the groups by default using the [SfListView.Loaded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_Loaded) event.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs"%}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 listView.Loaded += ListView_Loaded;
   
 private void ListView_Loaded(object sender, ListViewLoadedEventArgs e)
@@ -727,7 +727,7 @@ The following screenshot shows the output when the groups header appearance is c
 Expand and collapse the group when tapping icon in the group header item by customizing the [SfListView.GroupHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupHeaderTemplate) with the help of converter.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl-lines="14"%}
+{% highlight xaml tabtitle="MainPage.xaml" hl-lines="14" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -957,7 +957,7 @@ public object Convert(object value, Type targetType, object parameter, CultureIn
 Follow the code example to select and deselect all the group items by tapping the checkbox in the group header.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs"%}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
 {
     var image = (sender as Image);
@@ -1040,7 +1040,7 @@ You can change the [SfListView.GroupHeaderTemplate](https://help.syncfusion.com/
  </syncfusion:SfListView> 
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9 10 11"%}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9 10 11" %}
 
 listView.DataSource.GroupDescriptors.Add(new GroupDescriptor()
  {

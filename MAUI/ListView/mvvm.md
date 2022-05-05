@@ -329,7 +329,7 @@ public class BookInfoRepository : INotifyPropertyChanged
 `sfListView` supports selecting multiple items by binding the [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectedItems) property from the ViewModel with ObservableCollection type. Set the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionMode) property as `Multiple`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2 3"%}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2 3" %}
 <syncfusion:SfListView x:Name="listView"
                         SelectionMode="Multiple"
                         SelectedItems="{Binding SelectedItems}"
@@ -431,7 +431,7 @@ public class BookInfoRepository : INotifyPropertyChanged
 In ListView, the [SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionChanging) event will be raised when selecting an item at the execution time. MVVM for the `SelectionChanging` event can be achieved by binding the event to command converter.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 4 5 6 7"%}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 4 5 6 7" %}
 <syncfusion:SfListView x:Name="listView" 
                        ItemsSource="{Binding BookInfoCollection}">
     <syncfusion:SfListView.Behaviors>
@@ -487,7 +487,7 @@ N> Similarly, you can bind the [ItemTapped](https://help.syncfusion.com/cr/maui/
 You can define the command parameter for `TapCommand` using [TappedCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_TapCommandParameter), where you can get the element reference passed in ViewModel.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2"%}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 <syncfusion:SfListView x:Name="listView" 
                     TapCommand="{Binding TapCommand}"
                     ItemsSource="{Binding BookInfoCollection}"/>
