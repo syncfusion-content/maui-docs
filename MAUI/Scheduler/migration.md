@@ -1420,6 +1420,9 @@ this.Content = schedule;
 
 {% highlight C# %}
 
+public DateTime StartTime { get; set; } = DateTime.Now.Date.AddHours(13);
+public DateTime EndTime { get; set; } = DateTime.Now.Date.AddHours(14);
+
 SfScheduler scheduler = new SfScheduler();
 scheduler.View = SchedulerView.Week;
 scheduler.DaysView.TimeRegions = this.GetTimeRegion();
