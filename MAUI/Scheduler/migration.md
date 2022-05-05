@@ -548,7 +548,7 @@ schedule.DataSource = AppointmentCollection;
 
 {% highlight C# %}
 
-public ScheduleAppointmentCollection SchedulerAppointmentCollection { get; set; }
+public ObservableCollection<SchedulerAppointment> SchedulerAppointmentCollection { get; set; }
 
 // Creating an instance for the scheduler appointment collection.
 this.SchedulerAppointmentCollection = new ObservableCollection<SchedulerAppointment>();
