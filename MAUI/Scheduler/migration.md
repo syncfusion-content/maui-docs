@@ -1737,7 +1737,7 @@ The following code example explains how to customize the appearance of the appoi
 
 {% highlight xaml %}
 
-<schedule:SfSchedule>
+<schedule:SfSchedule DataSource="{Binding AppointmentCollection}">
     <schedule:SfSchedule.AppointmentStyle>
         <schedule:AppointmentStyle
              TextColor="#FFFFFF"
@@ -1752,15 +1752,17 @@ The following code example explains how to customize the appearance of the appoi
 
 {% highlight C# %}
 
+public ScheduleAppointmentCollection AppointmentCollection { get; set; }
+
 SfSchedule schedule = new SfSchedule();
-var appointments = new ObservableCollection<ScheduleAppointment>();
-appointments.Add(new ScheduleAppointment()
+this.AppointmentCollection = new ScheduleAppointmentCollection();
+this.AppointmentCollection.Add(new ScheduleAppointment()
 {
     Subject = "Planning",
     StartTime = DateTime.Now.AddHours(1),
     EndTime = DateTime.Now.AddHours(2),
 });
-schedule.DataSource = appointments;
+schedule.DataSource = this.AppointmentCollection;
 
 // Creating Appointment style
 AppointmentStyle appointmentStyle = new AppointmentStyle();
@@ -1782,7 +1784,7 @@ this.Content = schedule;
 
 {% highlight xaml %}
 
-<schedule:SfScheduler>
+<schedule:SfScheduler AppointmentsSource="{Binding SchedulerAppointmentCollection}">
     <schedule:SfScheduler.AppointmentTextStyle>
         <schedule:SchedulerTextStyle
             TextColor="Orange"
@@ -1796,15 +1798,17 @@ this.Content = schedule;
 
 {% highlight C# %}
 
+public ObservableCollection<SchedulerAppointment> SchedulerAppointmentCollection { get; set; }
+
 SfScheduler scheduler = new SfScheduler();
-var appointments = new ObservableCollection<SchedulerAppointment>();
-appointments.Add(new SchedulerAppointment()
+this.SchedulerAppointmentCollection = new ObservableCollection<SchedulerAppointment>();
+this.SchedulerAppointmentCollection.Add(new SchedulerAppointment()
 {
     Subject = "meeting",
     StartTime = DateTime.Now,
     EndTime = DateTime.Now.AddHours(1),
 });
-scheduler.AppointmentsSource = appointments;
+scheduler.AppointmentsSource = this.SchedulerAppointmentCollection;
 
 var appointmentTextStyle = new SchedulerTextStyle()
 {
@@ -2091,13 +2095,11 @@ var schedulerTextStyle = new SchedulerTextStyle()
     FontFamily = "Arial",
     FontAttributes = FontAttributes.Bold
 };
-
 var schedulerWeekNumberStyle = new SchedulerWeekNumberStyle()
 {
     Background = Brush.LightGreen,
     TextStyle = schedulerTextStyle
 };
-
 scheduler.WeekNumberStyle = schedulerWeekNumberStyle;
 this.Content = scheduler;
 
