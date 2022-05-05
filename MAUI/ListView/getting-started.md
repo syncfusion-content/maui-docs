@@ -289,7 +289,7 @@ listView.ItemsLayout = new GridLayout() { SpanCount = 3 };
 The [DataSource](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.DataSource.html) gets raw data and performs data operations such as sorting, filtering, and grouping in SfListView. The data source of the ListView is set by using the `ItemsSource` attribute.
 
 {% tabs %}
-{% highlight xaml tabtitle= "MainPage.xaml" hl_lines="7" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="7" %}
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"

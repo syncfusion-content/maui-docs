@@ -16,7 +16,7 @@ documentation: ug
 The [Loaded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_Loaded) event is triggered when the `SfListView` is loading in view for the first time.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs"%}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 listView.Loaded += ListView_Loaded;
 
