@@ -1406,11 +1406,11 @@ this.Content = schedule;
         <scheduler:SchedulerDaysView>
             <scheduler:SchedulerDaysView.TimeRegions>
                 <scheduler:SchedulerTimeRegion 
-                        StartTime="{Binding StartTime}"
-                        EndTime="{Binding EndTime}"
-                        Text="Lunch"
-                        EnablePointerInteraction="False"
-                        Background="Gray"/>
+                    StartTime="{Binding StartTime}"
+                    EndTime="{Binding EndTime}"
+                    Text="Lunch"
+                    EnablePointerInteraction="False"
+                    Background="Gray"/>
             </scheduler:SchedulerDaysView.TimeRegions>
         </scheduler:SchedulerDaysView>
     </scheduler:SfScheduler.DaysView>
