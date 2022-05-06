@@ -220,7 +220,7 @@ The [SfListView.LoadMoreIndicator](https://help.syncfusion.com/cr/maui/Syncfusio
 By using the [SfListView.IsBusy](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_IsBusy) property, you can interchange the visibility of the button and busy indicator when creating the load more view. You can set the value of the `SfListView.IsBusy` property to `true` before adding items to the list and set it to `false`, after adding the items. You can also bind the `IsBusy` property using ViewModel.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs"  %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 private async void LoadMoreItems(object obj)
 {
     var listView = obj as Syncfusion.Maui.ListView.SfListView;
@@ -557,7 +557,7 @@ The `SfListView` allows loading more items automatically when reaching the top o
             </DataTemplate>
         </syncfusion:SfListView.HeaderTemplate>
     </syncfusion:SfListView>
-</ContentPage
+</ContentPage>
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 public partial class MainPage : ContentPage

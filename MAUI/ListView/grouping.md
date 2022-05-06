@@ -727,7 +727,7 @@ The following screenshot shows the output when the groups header appearance is c
 Expand and collapse the group when tapping icon in the group header item by customizing the [SfListView.GroupHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_GroupHeaderTemplate) with the help of converter.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl-lines="14" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="14" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
     <ContentPage.Resources>
         <ResourceDictionary>
