@@ -298,8 +298,7 @@ this.Content = schedule;
 {% highlight xaml %}
 
 <scheduler:SfScheduler  View="Week"
-                        FirstDayOfWeek="Tuesday">
-</scheduler:SfScheduler>
+                        FirstDayOfWeek="Tuesday"/>
 
 {% endhighlight %}
 
