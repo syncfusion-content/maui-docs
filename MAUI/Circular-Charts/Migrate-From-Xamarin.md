@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrate from Xamarin.Forms SfChart to .NET MAUI SfCircularChart
 
-The Circular Chart was created from the scratch using the upgraded APIs and performance of the .NET MAUI graphics library and framework layouts. However, a minor code change is required. In addition, `SfChart` has been divided into five chart controls in .NET MAUI for a better user experience and understanding.
+The Circular Chart was created from the scratch using the upgraded APIs and performance of the .NET MAUI graphics library and framework layouts. However, a minor code change is required. In addition, [`SfChart`](https://www.syncfusion.com/xamarin-ui-controls/xamarin-charts) has been divided into five chart controls in .NET MAUI for a better user experience and understanding.
 
 <table>
 <tr>
@@ -29,55 +29,7 @@ SfChart
 </tr>
 </table>
 
-To make the migration easier, the majority of the APIs from the Xamarin `SfChart` were kept in the .NET MAUI [SfCircularChart](https://www.syncfusion.com/maui-controls/maui-charts). Currently, most of the features have been added in the [SfCircularChart](https://www.syncfusion.com/maui-controls/maui-charts), but only a few are pending in the .NET MAUI along with some limitations. Please refer to the following details and the API migration information available below.
-
-## Upcoming Features in .NET MAUI
-
-**Chart** 
-
-* Customize the appearance of the chart plot area.
-* Exporting support for a chart as an image or a stream. 
-* Support for chart localization. 
-
-**Series**
-
-* Listen to property change support for series.
-* Get data point index based on value.
-* Notify event or method when series are rendering.
-* Suspend and resume notification.
-
-**Legend** 
-
-* Title support for legend. 
-* Support to enable or disable the legend icon visibility.
-* Legend items wrap and floating support.
-* Maximum width support for Legend.
-* Individual legend items based on the data point count.
-* Event or method to notify the legend click and the creation of a legend item.
-* DataTemplate support for legend items.
-
-**Data label**
-
-* DataTemplate support for data labels.
-* Connector lines customization support.
-
-**Tooltip**
-
-* Hide and Show method for tooltip.
-
-**Selection**
-
-* Series selection and cluster selection support.
-
-## Unsupported Features from Xamarin.Forms
-
-* Only continuous series will support data marker symbols.
-* Data label created event support was not provided in series. Instead, you can use the `DrawDataLabel` override method in the `ChartSeries` class.
-
-## Known issues
-
-* The legend item was not dynamically added.
-* While resizing the window, the chart size is not dynamically updated.
+To make the migration easier, the majority of the APIs from the Xamarin [`SfChart`](https://www.syncfusion.com/xamarin-ui-controls/xamarin-charts) were kept in the .NET MAUI [SfCircularChart](https://www.syncfusion.com/maui-controls/maui-charts). Currently, most of the features have been added in the [SfCircularChart](https://www.syncfusion.com/maui-controls/maui-charts), but only a few are pending in the .NET MAUI along with some limitations. Please refer to the following details and the API migration information available below.
 
 ## API migration
 
@@ -140,6 +92,22 @@ this.Content = chart;
 
 </tr>
 </table>
+The following table illustrates the API migration for the chart.
+
+<table>
+<tr>
+<th>Xamarin</th>
+<th>.NET MAUI</th>
+</tr>
+<tr>
+<td>ColorModel, CustomBrushes</td>
+<td>PaletteBrushes</td>
+</tr>
+<tr>
+<td>ChartBehaviors</td>
+<td>TooltipBehavior, SelectionBehavior, ZoomPanBehavior</td>
+</tr>
+</table>
 
 ### Series
 
@@ -167,7 +135,7 @@ this.Content = chart;
 </tr>
 </table>
 
-The following code example explains how to migrate the series of Xamarin `SfCharts` to the .NET MAUI `SfCircularChart`.
+The following code example explains how to migrate the series of Xamarin [`SfChart`](https://help.syncfusion.com/xamarin/charts/overview) to the .NET MAUI [`SfCircularChart`](https://help.syncfusion.com/maui/circular-charts/overview).
 
 <table>
 <tr>
@@ -406,7 +374,19 @@ chart.Legend = new ChartLegend();
     <chart:PieSeries ItemsSource ="{Binding Data}" XBindingPath="Expense"
 	YBindingPath="Value">
 	    <chart:PieSeries.DataMarker>
-	        <chart:ChartDataMarker/>
+	        <chart:ChartDataMarker ShowLabel="True">
+		        <chart:ChartDataMarker.LabelStyle>
+			        <chart:DataMarkerLabelStyle TextColor="Blue"
+										BorderColor="Red" 
+										BorderThickness="2"
+										BackgroundColor="Aqua"
+										Angle="315"
+										Margin="5"
+										FontSize="18"
+                                        FontAttributes="Italic"/>
+
+		        </chart:ChartDataMarker.LabelStyle>
+	        </chart:ChartDataMarker>
 	    </chart:PieSeries.DataMarker>
     </chart:PieSeries>
 </chart:SfChart>
@@ -416,6 +396,17 @@ chart.Legend = new ChartLegend();
 PieSeries series = new PieSeries();
 . . .
 series.DataMarker = new ChartDataMarker();
+series.DataMarker.ShowLabel = true;
+
+var style = new DataMarkerLabelStyle();
+style.TextColor = Color.Blue;
+style.BorderColor = Color.Red;
+style.BorderThickness = 2;
+style.BackgroundColor = Color.Aqua;
+style.Angle = 315;
+style.Margin = 5;
+style.FontSize = 18;
+series.DataMarker.LabelStyle = style;
 
 chart.Series.Add(series);
 {% endhighlight %}
@@ -429,7 +420,16 @@ chart.Series.Add(series);
 <chart:SfCircularChart>
     . . .
     <chart:PieSeries ShowDataLabels="True" ItemsSource ="{Binding Data}" XBindingPath="Expense"
-	YBindingPath="Value"/>
+	YBindingPath="Value">
+    <chart:PieSeries.DataLabelSettings>
+                        <chart:CircularDataLabelSettings>
+                            <chart:CircularDataLabelSettings.LabelStyle>
+                                <chart:ChartDataLabelStyle TextColor="Blue" Stroke="Red" StrokeWidth="2" Background="Aqua" Angle="315"
+										Margin="5" FontSize="18" FontAttributes="Italic"/>
+                            </chart:CircularDataLabelSettings.LabelStyle>
+                        </chart:CircularDataLabelSettings>
+                    </chart:PieSeries.DataLabelSettings>  
+    </chart:PieSeries>
 </chart:SfCircularChart>
 
 {% endhighlight %} 
@@ -439,6 +439,16 @@ SfCircularChart chart = new SfCircularChart();
 PieSeries series = new PieSeries();
 series.ShowDataLabels = true;
 . . .
+series.CircularDataLabelSettings = new CircularDataLabelSettings();
+var style = new ChartDataLabelStyle();
+style.TextColor = Color.Blue;
+style.Stroke = Color.Red;
+style.StrokeWidth = 2;
+style.Background = Color.Aqua;
+style.Angle = 315;
+style.Margin = 5;
+style.FontSize = 18;
+series.CartesianDataLabelSettings.LabelStyle = style;
 chart.Series.Add(series);
 {% endhighlight %}
 
@@ -529,7 +539,7 @@ chart.TooltipBehavior = tooltip;
 </tr>
 </table>
 
-To customize the tooltip appearance, create an instance of the `ChartTooltipBehavior` class and add it to the `ChartBehaviors` collection of `SfChart.` For `SfCircularChart,` you can directly set the `ChartTooltipBehavior` instance to the [TooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_TooltipBehavior) property, as shown in the above code sample.
+To customize the tooltip appearance, create an instance of the [`ChartTooltipBehavior`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartTooltipBehavior.html) class and add it to the [`ChartBehaviors`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html#Syncfusion_SfChart_XForms_SfChart_ChartBehaviors) collection of [`SfChart`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html). For [`SfCircularChart`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html), you can directly set the [`ChartTooltipBehavior`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html) instance to the [TooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_TooltipBehavior) property, as shown in the above code sample.
 
 ### Selection
 
@@ -603,7 +613,56 @@ chart.Series.Add(series);
 </tr>
 </table>
 
-Create an instance of the `ChartSelectionBehavior` class and add it to the  `ChartBehaviors` collection of `SfChart.` For `SfCircularChart,` you can directly set the `ChartSelectionBehavior` instance to the [SelectionBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_SelectionBehaviorr) property, as shown in the above code sample.
+Create an instance of the [`ChartSelectionBehavior`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartSelectionBehavior.html) class and add it to the  [`ChartBehaviors`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html#Syncfusion_SfChart_XForms_SfChart_ChartBehaviors) collection of [`SfChart`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html). For [`SfCircularChart`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html), you can directly set the [`ChartSelectionBehavior`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelectionBehavior.html) instance to the [SelectionBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_SelectionBehaviorr) property, as shown in the above code sample.
+
+## Upcoming Features in .NET MAUI
+
+**Chart** 
+
+* Customize the appearance of the chart plot area.
+* Exporting support for a chart as an image or a stream. 
+* Support for chart localization. 
+
+**Series**
+
+* Listen to property change support for series.
+* Get data point index based on value.
+* Notify event or method when series are rendering.
+* Suspend and resume notification.
+
+**Legend** 
+
+* Title support for legend. 
+* Support to enable or disable the legend icon visibility.
+* Legend items wrap and floating support.
+* Maximum width support for Legend.
+* Individual legend items based on the data point count.
+* Event or method to notify the legend click and the creation of a legend item.
+* DataTemplate support for legend items.
+
+**Data label**
+
+* DataTemplate support for data labels.
+* Connector lines customization support.
+
+**Tooltip**
+
+* Hide and Show method for tooltip.
+
+**Selection**
+
+* Series selection and cluster selection support.
+
+## Unsupported Features from Xamarin.Forms
+
+* Only continuous series will support data marker symbols.
+* Data label created event support was not provided in series. Instead, you can use the [`DrawDataLabel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_DrawDataLabel_Microsoft_Maui_Graphics_ICanvas_Microsoft_Maui_Controls_Brush_System_String_Microsoft_Maui_Graphics_PointF_System_Int32_) override method in the [`ChartSeries`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html) class.
+* In.NET MAUI, the [`ChartDataPoint`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartDataPoint.html#) model class was no longer available. Instead, create your own model.
+
+## Known issues
+
+* The legend item was not dynamically added.
+* While resizing the window, the chart size is not dynamically updated.
 
 **Support and feedback**
 

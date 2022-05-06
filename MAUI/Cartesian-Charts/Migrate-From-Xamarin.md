@@ -29,7 +29,7 @@ SfChart
 </tr>
 </table>
 
-To make the migration easier, the majority of the APIs from the Xamarin SfChart were kept in the .NET MAUI [SfCartesianChart](https://www.syncfusion.com/maui-controls/maui-charts). Currently, most of the features have been added in the [SfCartesianChart](https://www.syncfusion.com/maui-controls/maui-charts), but only a few are pending in the .NET MAUI along with some limitations. Please refer to the following details and the API migration information available below.
+To make the migration easier, the majority of the APIs from the Xamarin [`SfChart`](https://www.syncfusion.com/xamarin-ui-controls/xamarin-charts) were kept in the .NET MAUI [SfCartesianChart](https://www.syncfusion.com/maui-controls/maui-charts). Currently, most of the features have been added in the [SfCartesianChart](https://www.syncfusion.com/maui-controls/maui-charts), but only a few are pending in the .NET MAUI along with some limitations. Please refer to the following details and the API migration information available below.
 
 ## API migration
 
@@ -547,7 +547,19 @@ chart.Legend = new ChartLegend ();
                         XBindingPath="Category"
                         YBindingPath="Value">
 	    <chart:ColumnSeries.DataMarker>
-	        <chart:ChartDataMarker/>
+	        <chart:ChartDataMarker ShowLabel="True">
+		        <chart:ChartDataMarker.LabelStyle>
+			        <chart:DataMarkerLabelStyle TextColor="Blue"
+										BorderColor="Red" 
+										BorderThickness="2"
+										BackgroundColor="Aqua"
+										Angle="315"
+										Margin="5"
+										FontSize="18"
+                                        FontAttributes="Italic"/>
+
+		        </chart:ChartDataMarker.LabelStyle>
+	        </chart:ChartDataMarker>
 	    </chart:ColumnSeries.DataMarker>
     </chart:ColumnSeries>
 </chart:SfChart>
@@ -557,6 +569,17 @@ chart.Legend = new ChartLegend ();
 ColumnSeries series = new ColumnSeries();
 . . .
 series.DataMarker = new ChartDataMarker();
+series.DataMarker.ShowLabel = true;
+
+var style = new DataMarkerLabelStyle();
+style.TextColor = Color.Blue;
+style.BorderColor = Color.Red;
+style.BorderThickness = 2;
+style.BackgroundColor = Color.Aqua;
+style.Angle = 315;
+style.Margin = 5;
+style.FontSize = 18;
+series.DataMarker.LabelStyle = style;
 
 chart.Series.Add(series);
 {% endhighlight %}
@@ -574,6 +597,14 @@ chart.Series.Add(series);
                         XBindingPath="Category"
                         YBindingPath="Value" 
                         ShowDataLabels="True">
+                      <chart:ColumnSeries.DataLabelSettings>
+                        <chart:CartesianDataLabelSettings>
+                            <chart:CartesianDataLabelSettings.LabelStyle>
+                                <chart:ChartDataLabelStyle TextColor="Blue" Stroke="Red" StrokeWidth="2" Background="Aqua" Angle="315"
+										Margin="5" FontSize="18" FontAttributes="Italic"/>
+                            </chart:CartesianDataLabelSettings.LabelStyle>
+                        </chart:CartesianDataLabelSettings>
+                    </chart:ColumnSeries.DataLabelSettings>  
         </chart:ColumnSeries>
     </chart:SfCartesianChart.Series>
 </chart:SfCartesianChart>
@@ -583,6 +614,17 @@ chart.Series.Add(series);
 ColumnSeries series = new ColumnSeries();
 . . .
 series.ShowDataLabels = true;
+series.CartesianDataLabelSettings = new CartesianDataLabelSettings();
+var style = new ChartDataLabelStyle();
+style.TextColor = Color.Blue;
+style.Stroke = Color.Red;
+style.StrokeWidth = 2;
+style.Background = Color.Aqua;
+style.Angle = 315;
+style.Margin = 5;
+style.FontSize = 18;
+series.CartesianDataLabelSettings.LabelStyle = style;
+
 chart.Series.Add(series);
 {% endhighlight %}
 
