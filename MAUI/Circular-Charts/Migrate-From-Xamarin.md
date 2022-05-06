@@ -374,7 +374,19 @@ chart.Legend = new ChartLegend();
     <chart:PieSeries ItemsSource ="{Binding Data}" XBindingPath="Expense"
 	YBindingPath="Value">
 	    <chart:PieSeries.DataMarker>
-	        <chart:ChartDataMarker/>
+	        <chart:ChartDataMarker ShowLabel="True">
+		        <chart:ChartDataMarker.LabelStyle>
+			        <chart:DataMarkerLabelStyle TextColor="Blue"
+										BorderColor="Red" 
+										BorderThickness="2"
+										BackgroundColor="Aqua"
+										Angle="315"
+										Margin="5"
+										FontSize="18"
+                                        FontAttributes="Italic"/>
+
+		        </chart:ChartDataMarker.LabelStyle>
+	        </chart:ChartDataMarker>
 	    </chart:PieSeries.DataMarker>
     </chart:PieSeries>
 </chart:SfChart>
@@ -384,6 +396,17 @@ chart.Legend = new ChartLegend();
 PieSeries series = new PieSeries();
 . . .
 series.DataMarker = new ChartDataMarker();
+series.DataMarker.ShowLabel = true;
+
+var style = new DataMarkerLabelStyle();
+style.TextColor = Color.Blue;
+style.BorderColor = Color.Red;
+style.BorderThickness = 2;
+style.BackgroundColor = Color.Aqua;
+style.Angle = 315;
+style.Margin = 5;
+style.FontSize = 18;
+series.DataMarker.LabelStyle = style;
 
 chart.Series.Add(series);
 {% endhighlight %}
@@ -397,7 +420,16 @@ chart.Series.Add(series);
 <chart:SfCircularChart>
     . . .
     <chart:PieSeries ShowDataLabels="True" ItemsSource ="{Binding Data}" XBindingPath="Expense"
-	YBindingPath="Value"/>
+	YBindingPath="Value">
+    <chart:PieSeries.DataLabelSettings>
+                        <chart:CircularDataLabelSettings>
+                            <chart:CircularDataLabelSettings.LabelStyle>
+                                <chart:ChartDataLabelStyle TextColor="Blue" Stroke="Red" StrokeWidth="2" Background="Aqua" Angle="315"
+										Margin="5" FontSize="18" FontAttributes="Italic"/>
+                            </chart:CircularDataLabelSettings.LabelStyle>
+                        </chart:CircularDataLabelSettings>
+                    </chart:PieSeries.DataLabelSettings>  
+    </chart:PieSeries>
 </chart:SfCircularChart>
 
 {% endhighlight %} 
@@ -407,6 +439,16 @@ SfCircularChart chart = new SfCircularChart();
 PieSeries series = new PieSeries();
 series.ShowDataLabels = true;
 . . .
+series.CircularDataLabelSettings = new CircularDataLabelSettings();
+var style = new ChartDataLabelStyle();
+style.TextColor = Color.Blue;
+style.Stroke = Color.Red;
+style.StrokeWidth = 2;
+style.Background = Color.Aqua;
+style.Angle = 315;
+style.Margin = 5;
+style.FontSize = 18;
+series.CartesianDataLabelSettings.LabelStyle = style;
 chart.Series.Add(series);
 {% endhighlight %}
 
