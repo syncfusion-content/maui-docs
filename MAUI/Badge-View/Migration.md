@@ -11,17 +11,6 @@ documentation: ug
 
 To migrate easier from Xamarin SfBadgeView to .NET MAUI SfBadgeView, we kept most of the APIs from Xamarin SfBadgeView in MAUI SfBadgeView. However, to maintain the consistency of API naming in MAUI SfBadgeView, we renamed some of the APIs. The APIs that have been changed in MAUI SfBadgeView from Xamarin SfBadgeView are detailed as follows.
 
-## Namespaces 
-
-<table>
-<tr>
-<th>Xamarin SfBadgeView</th>
-<th>.NET MAUI SfBadgeView</th></tr>
-<tr>
-<td>Syncfusion.XForms.BadgeView</td>
-<td>Syncfusion.Maui.Core</td></tr>
-</table>
-
 ## Properties
 
 <table> 
