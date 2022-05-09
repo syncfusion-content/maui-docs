@@ -535,7 +535,7 @@ public class BookInfoRepository : INotifyPropertyChanged
 You can define the command parameter for the `LongPressCommand` using [LongPressCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LongPressCommandParameter), where you can get the element reference passed in ViewModel.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml"hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 <syncfusion:SfListView x:Name="listView"                     
                        LongPressCommand="{Binding LongPressCommand}"
                        ItemsSource="{Binding BookInfoCollection}"/>
