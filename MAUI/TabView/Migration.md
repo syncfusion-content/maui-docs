@@ -32,7 +32,7 @@ To migrate easier from Xamarin SfTabView to .NET MAUI SfTabView, we kept most of
 <tr>
 <td>{{'[Color](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.TabView.SelectionIndicatorSettings.html#Syncfusion_XForms_TabView_SelectionIndicatorSettings_Color)'| markdownify}}</td>
 <td>{{'[IndicatorBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_IndicatorBackground)'| markdownify}}</td>
-<td>Gets or sets a color that describes the selection indicator's background.</td></tr>
+<td>Gets or sets a brush that describes the selection indicator's background.</td></tr>
 <tr>
 <td>{{'[Position](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.TabView.SelectionIndicatorSettings.html#Syncfusion_XForms_TabView_SelectionIndicatorSettings_Position)'| markdownify}}</td>
 <td>{{'[IndicatorPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_IndicatorPlacement)'| markdownify}}</td>
@@ -40,7 +40,7 @@ To migrate easier from Xamarin SfTabView to .NET MAUI SfTabView, we kept most of
 <tr>
 <td>{{'[TabHeaderBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.TabView.SfTabView.html#Syncfusion_XForms_TabView_SfTabView_TabHeaderBackgroundColor)'| markdownify}}</td>
 <td>{{'[TabBarBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabBarBackground)'| markdownify}}</td>
-<td>Gets or sets a color that describes the tab header's background.</td></tr>
+<td>Gets or sets a brush that describes the tab header's background.</td></tr>
 <tr>
 <td>{{'[TabHeight](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.TabView.SfTabView.html#Syncfusion_XForms_TabView_SfTabView_TabHeight)'| markdownify}}</td>
 <td>{{'[TabBarHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabBarHeight)'| markdownify}}</td>

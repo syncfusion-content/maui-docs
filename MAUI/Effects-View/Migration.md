@@ -36,15 +36,15 @@ To migrate easier from Xamarin SfEffectsView to .NET MAUI SfEffectsView, we kept
 <tr>
 <td>{{'[HighlightColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html#Syncfusion_XForms_EffectsView_SfEffectsView_HighlightColor)'| markdownify }}</td>
 <td>{{'[HighlightBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_HighlightBackground)'| markdownify }}</td>
-<td>Gets or sets the color to highlight the effects view.</td></tr>
+<td>Gets or sets the brush to highlight the effects view.</td></tr>
 <tr>
 <td>{{'[RippleColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html#Syncfusion_XForms_EffectsView_SfEffectsView_RippleColor)' | markdownify }}</td>
 <td>{{'[RippleBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_RippleBackground)'| markdownify }}</td>
-<td>Gets or sets the color of the ripple.</td></tr>
+<td>Gets or sets the brush of the ripple.</td></tr>
 <tr>
 <td>{{'[SelectionColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html#Syncfusion_XForms_EffectsView_SfEffectsView_SelectionColor)' | markdownify }}</td>
 <td>{{'[SelectionBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_SelectionBackground)'| markdownify }}</td>
-<td>Gets or sets the color applied when the view is on selected state.</td></tr>
+<td>Gets or sets the brush applied when the view is on selected state.</td></tr>
 </table> 
 
 ## Enums
