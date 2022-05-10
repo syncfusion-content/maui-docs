@@ -309,7 +309,7 @@ The total number of items in each group will be displayed in the group header by
  </syncfusion:SfListView>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="25 26 27 28 29" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="26 27 28 29 30" %}
 listView.GroupHeaderTemplate = new DataTemplate(() => 
 {
   var grid = new Grid();

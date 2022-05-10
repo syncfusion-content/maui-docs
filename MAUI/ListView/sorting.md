@@ -196,7 +196,7 @@ The `SfListView` allows sorting and grouping the items by adding the [DataSource
 Sorting and grouping the items by using [KeySelector](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.GroupDescriptor.html#Syncfusion_DataSource_GroupDescriptor_KeySelector) based on retuning the year value of the date-time property.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="8" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
                xmlns:data="clr-namespace:Syncfusion.Maui.DataSource;assembly=Syncfusion.Maui.DataSource">
   <ContentPage.Content>

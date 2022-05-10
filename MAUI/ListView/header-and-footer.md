@@ -119,7 +119,7 @@ N> This API is applicable when `IsStickyFooter` is enabled.
 The `SfListView` allows you to perform tab view structure by customizing the [HeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_HeaderTemplate) to load any view.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
     <ContentPage.BindingContext>
         <local:BookInfoRepository />
