@@ -24,7 +24,7 @@ The `SfListView.QueryItemSize` event provides the following properties in their 
  * [Handled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.QueryItemSizeEventArgs.html#Syncfusion_Maui_ListView_QueryItemSizeEventArgs_Handled): Decides whether the specified size can be set to the item or not. The default value is `false`. When this property is not set, the decided size will not set to the item.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="7" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="7 8" %}
 this.listView.QueryItemSize += ListView_QueryItemSize;
 
 private void ListView_QueryItemSize(object sender, Syncfusion.Maui.ListView.QueryItemSizeEventArgs e)
