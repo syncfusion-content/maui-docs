@@ -369,7 +369,7 @@ The [SelectionChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="12 13 14 15" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="13 14 15 16 17" %}
 
 public class CommandViewModel
 {

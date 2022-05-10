@@ -303,7 +303,7 @@ listView.SetBinding(SfListView.SelectedItemProperty, new Binding("SelectedItem",
 {% endtabs %}
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="15" %}
+{% highlight c# tabtitle="ViewModel.cs" %}
 public class BookInfoRepository : INotifyPropertyChanged
 {
     private object selectedItem;
@@ -498,7 +498,7 @@ listView.SetBinding(SfListView.TapCommandProperty, new Binding("TapCommand", Bin
 {% endtabs %}
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="20 21 22 23 24 25 26" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="19 20 21 22 23 24 25" %}
 public class BookInfoRepository : INotifyPropertyChanged
 {
     private Command tapCommand;
@@ -546,7 +546,7 @@ listView.SetBinding(SfListView.LongPressCommandProperty, new Binding("LongPressC
 {% endtabs %}
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="19 20 21 22 23" %}
 public class BookInfoRepository : INotifyPropertyChanged
 {
     private Command longPressCommand;
@@ -581,7 +581,7 @@ The contents loaded in the [ItemTemplate](https://help.syncfusion.com/cr/maui/Sy
 You can also get the reference of element bound as parameter by using command parameter of loaded elements.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml.cs" hl_lines="2 12 13" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2 12 13" %}
 <syncfusion:SfListView x:Name="listView" AutoFitMode="Height"
                 SelectedItem="{Binding SelectedItem}"                      
                 ItemsSource="{Binding BookInfoCollection}">

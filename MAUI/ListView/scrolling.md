@@ -150,7 +150,7 @@ public partial class MainPage : ContentPage
 You can get the item elements to hold by a scrollable visual container using the [GetVisualContainer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.Helpers.SfListViewHelper.html#Syncfusion_Maui_ListView_Helpers_SfListViewHelper_GetVisualContainer_Syncfusion_Maui_ListView_SfListView_) method. It is a helper method of `SfListView` control.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="6" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9" %}
 using Syncfusion.Maui.ListView.Helpers;
 public partial class MainPage : ContentPage
 {
