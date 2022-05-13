@@ -9,7 +9,10 @@ documentation: ug
 
 # Migrate from Xamarin.Forms SfRangeSlider to .NET MAUI SfSlider 
 
-To migrate easier from [Xamarin SfRangeSlider](https://www.syncfusion.com/xamarin-ui-controls/xamarin-range-slider) to [.NET MAUI SfSlider](https://www.syncfusion.com/maui-controls/maui-slider), most of the APIs from Xamarin SfRangeSlider were kept in MAUI SfSlider. However, to maintain the consistency of API naming in MAUI SfSlider, some of the APIs have been renamed. The APIs that have been changed in MAUI SfSlider from Xamarin SfRangeSlider are detailed as follows.
+To migrate from the [Xamarin Range Slider](https://www.syncfusion.com/xamarin-ui-controls/xamarin-range-slider) control to MAUI, we can use the below 2 controls.
+
+* SfDateTimeSlider – For date-time scale
+* SfSlider – For numeric scale
 
 ## Namespaces 
 
