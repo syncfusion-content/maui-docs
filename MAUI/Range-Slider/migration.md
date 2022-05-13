@@ -13,17 +13,6 @@ To migrate easier from [Xamarin SfRangeSlider](https://www.syncfusion.com/xamari
 
 In our .NET MAUI SfRangeSlider, you don't have an API name [ShowRange](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_AllowDragRange). By default, you will show two thumbs. If you wish to use the single thumb, check the `Migration from Xamarin.Forms SfRangeSlider to .NET MAUI SfSlider`.
 
-## Assembly Name 
-
-<table>
-<tr>
-<th>Xamarin SfRangeSlider</th>
-<th>.NET MAUI SfRangeSlider</th></tr>
-<tr>
-<td>Syncfusion.SfRangeSlider.XForms</td>
-<td>Syncfusion.Maui.Sliders</td></tr>
-</table>
-
 ## Namespaces 
 
 <table>

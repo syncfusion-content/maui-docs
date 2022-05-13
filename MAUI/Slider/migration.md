@@ -11,17 +11,6 @@ documentation: ug
 
 To migrate easier from [Xamarin SfRangeSlider](https://www.syncfusion.com/xamarin-ui-controls/xamarin-range-slider) to [.NET MAUI SfSlider](https://www.syncfusion.com/maui-controls/maui-slider), most of the APIs from Xamarin SfRangeSlider were kept in MAUI SfSlider. However, to maintain the consistency of API naming in MAUI SfSlider, some of the APIs have been renamed. The APIs that have been changed in MAUI SfSlider from Xamarin SfRangeSlider are detailed as follows.
 
-## Assembly Name 
-
-<table>
-<tr>
-<th>Xamarin SfRangeSlider</th>
-<th>.NET MAUI SfSlider</th></tr>
-<tr>
-<td>Syncfusion.SfRangeSlider.XForms</td>
-<td>Syncfusion.Maui.Sliders</td></tr>
-</table>
-
 ## Namespaces 
 
 <table>
