@@ -911,7 +911,7 @@ ChartZoomPanBehavior zooming = new ChartZoomPanBehavior();
 
 **Data label**
 
-* Support for marker symbols in continuous series.
+* Only the line, area, and spline series have support for markers.
 * DataTemplate support for data labels.
 * Connector lines and its customization support.
 
