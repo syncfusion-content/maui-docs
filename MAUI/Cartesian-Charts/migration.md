@@ -319,9 +319,6 @@ The following code example explains how to migrate the series of Xamarin [SfChar
 <tr>
 <tr>
 <th>Xamarin</th>
-<th>.NET MAUI</th></tr>
-</tr>
-<tr>
 <td>
 {% tabs %} 
 
@@ -351,8 +348,10 @@ this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %}
-
 </td>
+</tr>
+<tr>
+<th>.NET MAUI</th>
 
 <td>
 
