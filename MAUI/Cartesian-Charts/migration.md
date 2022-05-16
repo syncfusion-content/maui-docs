@@ -14,7 +14,8 @@ The Cartesian Chart was created from the scratch using the upgraded APIs and per
 <table>
 <tr>
 <th>Xamarin</th>
-<th>.NET MAUI</th></tr>
+<th>.NET MAUI</th>
+</tr>
 <tr>
 <td>
 SfChart
@@ -22,9 +23,9 @@ SfChart
 <td>
 <div> SfCartesianChart </div>
 <div> SfCircularChart </div>
-<div> SfFunnelChart (Upcoming) </div>
-<div> SfPolarChart (Upcoming) </div>
-<div> SfPyramidChart (Upcoming) </div>
+<div> SfFunnelChart (_Upcoming_) </div>
+<div> SfPolarChart (_Upcoming_) </div>
+<div> SfPyramidChart (_Upcoming_) </div>
 </td>
 </tr>
 </table>
@@ -38,8 +39,7 @@ To initialize the control, import the Chart namespace and Initialize [SfCartesia
 <table>
 <tr>
 <th>Xamarin</th>
-<th>.NET MAUI</th></tr>
-<tr>
+</tr>
 <td>
 {% tabs %} 
 {% highlight xaml %}
@@ -62,8 +62,12 @@ using Syncfusion.SfChart.XForms;
 {% endhighlight %}
 {% endtabs %}
 </td>
-<td>
 
+<tr>
+<th>.NET MAUI</th>
+</tr>
+
+<td>
 {% tabs %} 
 
 {% highlight xaml %}
@@ -89,8 +93,6 @@ this.Content = chart;
 
 {% endtabs %}
 </td>
-
-</tr>
 </table>
 
 The following table illustrates the API migration for the chart.
@@ -156,59 +158,59 @@ The following table illustrates the API migration for the chart.
 </tr>
 <tr>
 <td>LabelClicked</td>
-<td>Upcoming</td>
+<td>_Upcoming_</td>
 </tr>
 <tr>
 <td>VisibleMinimum</td>
-<td>Upcoming</td>
+<td>_Upcoming_</td>
 </tr>
 <tr>
 <td>VisibleMaximum</td>
-<td>Upcoming</td>
+<td>_Upcoming_</td>
 </tr>
 <tr>
 <td>VisibleLabels</td>
-<td>Upcoming</td>
+<td>_Upcoming_</td>
 </tr>
 <tr>
 <td>TickPosition</td>
-<td>Upcoming</td>
+<td>_Upcoming_</td>
 </tr>
 <tr>
 <td>MaximumLabels</td>
-<td>Upcoming</td>
+<td>_Upcoming_</td>
 </tr>
 <tr>
 <td>PlotOffset</td>
-<td>Upcoming</td>
+<td>_Upcoming_</td>
 </tr>
 <tr>
 <td>LabelsIntersectAction</td>
-<td>Upcoming</td>
+<td>_Upcoming_</td>
 </tr>
 <tr>
 <td>AutoScrollingMode</td>
-<td>Upcoming</td>
+<td>_Upcoming_</td>
 </tr>
 <tr>
 <td>LabelExtent</td>
-<td>Upcoming</td>
+<td>_Upcoming_</td>
 </tr>
 <tr>
 <td>ShowTrackballInfo</td>
-<td>Upcoming</td>
+<td>_Upcoming_</td>
 </tr>
 <tr>
 <td>TrackballLabelStyle</td>
-<td>Upcoming</td>
+<td>_Upcoming_</td>
 </tr>
 <tr>
 <td>AutoScrollingDelta</td>
-<td>Upcoming</td>
+<td>_Upcoming_</td>
 </tr>
 <tr>
 <td>TrackballLabelTemplate</td>
-<td>Upcoming</td>
+<td>_Upcoming_</td>
 </tr>
 </table>
 
@@ -217,7 +219,7 @@ The following code example explains how to migrate the axis of Xamarin [SfChart]
 <table>
 <tr>
 <th>Xamarin</th>
-<th>.NET MAUI</th></tr>
+</tr>
 <tr>
 <td>
 
@@ -249,6 +251,12 @@ this.Content = chart;
 
 {% endtabs %}
 </td>
+</tr>
+
+<tr>
+<th>.NET MAUI</th>
+</tr>
+<tr>
 <td>
 {% tabs %}
 {% highlight xaml %}
@@ -402,79 +410,79 @@ this.Content = chart;
 </tr>
 <tr>
 <td>Title</td>
-<td>Upcoming </td>
+<td>_Upcoming_ </td>
 </tr>
 <tr>
 <td>Series</td>
-<td>Upcoming </td>
+<td>_Upcoming_ </td>
 </tr>
 <tr>
 <td>BackgroundColor</td>
-<td>Upcoming </td>
+<td>_Upcoming_ </td>
 </tr>
 <tr>
 <td>StrokeColor</td>
-<td>Upcoming </td>
+<td>_Upcoming_ </td>
 </tr>
 <tr>
 <td>StrokeWidth</td>
-<td>Upcoming </td>
+<td>_Upcoming_ </td>
 </tr>
 <tr>
 <td>StrokeDashArray</td>
-<td>Upcoming </td>
+<td>_Upcoming_ </td>
 </tr>
 <tr>
 <td>CornerRadius</td>
-<td>Upcoming</td>
+<td>_Upcoming_</td>
 </tr>
 <tr>
 <td>Margin</td>
-<td>Upcoming</td>
+<td>_Upcoming_</td>
 </tr>
 <tr>
 <td>LabelStyle</td>
-<td>Upcoming</td>
+<td>_Upcoming_</td>
 </tr>
 <tr>
 <td>ItemTemplate</td>
-<td>Upcoming</td>
+<td>_Upcoming_</td>
 </tr>
 <tr>
 <td>OverflowMode</td>
-<td>Upcoming</td>
+<td>_Upcoming_</td>
 </tr>
 <tr>
 <td>MaxWidth</td>
-<td>Upcoming</td>
+<td>_Upcoming_</td>
 </tr>
 <tr>
 <td>Orientation</td>
-<td>Upcoming</td>
+<td>_Upcoming_</td>
 </tr>
 <tr>
 <td>IsIconVisible</td>
-<td>Upcoming</td>
+<td>_Upcoming_</td>
 </tr>
 <tr>
 <td>ItemMargin</td>
-<td>Upcoming</td>
+<td>_Upcoming_</td>
 </tr>
 <tr>
 <td>IconWidth</td>
-<td>Upcoming</td>
+<td>_Upcoming_</td>
 </tr>
 <tr>
 <td>IconHeight</td>
-<td>Upcoming</td>
+<td>_Upcoming_</td>
 </tr>
 <tr>
 <td>OffsetX</td>
-<td>Upcoming</td>
+<td>_Upcoming_</td>
 </tr>
 <tr>
 <td>OffsetY</td>
-<td>Upcoming</td>
+<td>_Upcoming_</td>
 </tr>
 </table>
 
@@ -838,7 +846,7 @@ chart.ZoomPanBehavior = zooming;
 
 The zooming and panning are achieved using the [ChartZoomPanBehavior](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartZoomPanBehavior.html) in [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html) and [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html) as shown in the above code example.
 
-## Upcoming Features in .NET MAUI
+## Upcoming features in .NET MAUI
 
 **Chart** 
 

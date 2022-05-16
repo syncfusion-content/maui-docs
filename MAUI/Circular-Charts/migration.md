@@ -14,7 +14,8 @@ The Circular Chart was created from the scratch using the upgraded APIs and perf
 <table>
 <tr>
 <th>Xamarin</th>
-<th>.NET MAUI</th></tr>
+<th>.NET MAUI</th>
+</tr>
 <tr>
 <td>
 SfChart
@@ -229,79 +230,79 @@ this.Content = chart;
 </tr>
 <tr>
 <td>Title</td>
-<td>-</td>
+<td>_Upcoming_</td>
 </tr>
 <tr>
 <td>Series</td>
-<td>-</td>
+<td>_Upcoming_</td>
 </tr>
 <tr>
 <td>BackgroundColor</td>
-<td>-</td>
+<td>_Upcoming_</td>
 </tr>
 <tr>
 <td>StrokeColor</td>
-<td>-</td>
+<td>_Upcoming_</td>
 </tr>
 <tr>
 <td>StrokeWidth</td>
-<td>-</td>
+<td>_Upcoming_</td>
 </tr>
 <tr>
 <td>StrokeDashArray</td>
-<td>-</td>
+<td>_Upcoming_</td>
 </tr>
 <tr>
 <td>CornerRadius</td>
-<td>-</td>
+<td>_Upcoming_</td>
 </tr>
 <tr>
 <td>Margin</td>
-<td>-</td>
+<td>_Upcoming_</td>
 </tr>
 <tr>
 <td>LabelStyle</td>
-<td>-</td>
+<td>_Upcoming_</td>
 </tr>
 <tr>
 <td>ItemTemplate</td>
-<td>-</td>
+<td>_Upcoming_</td>
 </tr>
 <tr>
 <td>OverflowMode</td>
-<td>-</td>
+<td>_Upcoming_</td>
 </tr>
 <tr>
 <td>MaxWidth</td>
-<td>-</td>
+<td>_Upcoming_</td>
 </tr>
 <tr>
 <td>Orientation</td>
-<td>-</td>
+<td>_Upcoming_</td>
 </tr>
 <tr>
 <td>IsIconVisible</td>
-<td>-</td>
+<td>_Upcoming_</td>
 </tr>
 <tr>
 <td>ItemMargin</td>
-<td>-</td>
+<td>_Upcoming_</td>
 </tr>
 <tr>
 <td>IconWidth</td>
-<td>-</td>
+<td>_Upcoming_</td>
 </tr>
 <tr>
 <td>IconHeight</td>
-<td>-</td>
+<td>_Upcoming_</td>
 </tr>
 <tr>
 <td>OffsetX</td>
-<td>-</td>
+<td>_Upcoming_</td>
 </tr>
 <tr>
 <td>OffsetY</td>
-<td>-</td>
+<td>_Upcoming_</td>
 </tr>
 </table>
 
@@ -615,7 +616,7 @@ chart.Series.Add(series);
 
 Create an instance of the [ChartSelectionBehavior](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartSelectionBehavior.html) class and add it to the  [ChartBehaviors](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html#Syncfusion_SfChart_XForms_SfChart_ChartBehaviors) collection of [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html). For [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html), you can directly set the [ChartSelectionBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelectionBehavior.html) instance to the [SelectionBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_SelectionBehaviorr) property, as shown in the above code sample.
 
-## Upcoming Features in .NET MAUI
+## Upcoming features in .NET MAUI
 
 **Chart** 
 
@@ -649,13 +650,8 @@ Create an instance of the [ChartSelectionBehavior](https://help.syncfusion.com/c
 
 * Hide and Show method for tooltip.
 
-**Selection**
-
-* Series selection and cluster selection support.
-
 ## Unsupported Features from Xamarin.Forms
 
-* Only continuous series will support data marker symbols.
 * Data label created event support was not provided in series. Instead, you can use the [DrawDataLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_DrawDataLabel_Microsoft_Maui_Graphics_ICanvas_Microsoft_Maui_Controls_Brush_System_String_Microsoft_Maui_Graphics_PointF_System_Int32_) override method in the [ChartSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html) class.
 * In.NET MAUI, the [ChartDataPoint](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartDataPoint.html#) model class was no longer available. Instead, create your own model.
 
