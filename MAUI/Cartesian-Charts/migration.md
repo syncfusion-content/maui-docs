@@ -327,12 +327,10 @@ The following code example explains how to migrate the series of Xamarin [SfChar
 
 <chart:SfChart>
 . . .
-   <chart:SfChart.Series>
          <chart:ColumnSeries ItemsSource="{Binding Data}" 
                              XBindingPath="Name" 
                              YBindingPath="Height">
 		 </chart:ColumnSeries>
-   </chart:SfChart.Series>
  </chart:SfChart>
 
 {% endhighlight %} 
@@ -362,12 +360,10 @@ this.Content = chart;
 
 <chart:SfCartesianChart>
 . . .
-   <chart:SfCartesianChart.Series>
          <chart:ColumnSeries ItemsSource="{Binding Data}" 
                             XBindingPath="Name" 
                             YBindingPath="Height">
          </chart:ColumnSeries>
-   </chart:SfCartesianChart.Series>
 </chart:SfCartesianChart>
 
 {% endhighlight %} 
@@ -634,7 +630,6 @@ chart.Series.Add(series);
 
 <chart:SfCartesianChart>
     . . .
-    <chart:SfCartesianChart.Series>
         <chart:ColumnSeries ItemsSource="{Binding Data}" 
                         XBindingPath="Category"
                         YBindingPath="Value" 
@@ -648,7 +643,6 @@ chart.Series.Add(series);
                         </chart:CartesianDataLabelSettings>
                     </chart:ColumnSeries.DataLabelSettings>  
         </chart:ColumnSeries>
-    </chart:SfCartesianChart.Series>
 </chart:SfCartesianChart>
 
 {% endhighlight %} 
