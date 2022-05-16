@@ -318,7 +318,8 @@ The following code example explains how to migrate the series of Xamarin [SfChar
 <table>
 <tr>
 <tr>
-<th>Xamarin</th>
+<th>Xamarin</th></tr>
+<tr>
 <td>
 {% tabs %} 
 
@@ -352,7 +353,8 @@ this.Content = chart;
 </tr>
 <tr>
 <th>.NET MAUI</th>
-
+</tr>
+<tr>
 <td>
 
 {% tabs %} 
@@ -490,7 +492,6 @@ The following code example shows how to enable legend in chart.
 <table>
 <tr>
 <th>Xamarin</th>
-<th>.NET MAUI</th>
 </tr>
 <tr>
 <td>
@@ -512,6 +513,11 @@ chart.Legend = new ChartLegend ();
 
 {% endtabs %}
 </td>
+</tr>
+<tr>
+<th>.NET MAUI</th>
+</tr>
+<tr>
 <td>
 {% tabs %} 
 {% highlight xaml %}
@@ -542,6 +548,30 @@ chart.Legend = new ChartLegend ();
 <tr>
 <th>Xamarin</th>
 <th>.NET MAUI</th>
+</tr>
+<tr>
+<td>DataMarker</td>
+<td>DataLabelSettings</td>
+</tr>
+<tr>
+<td>BorderColor</td>
+<td>Stroke</td>
+</tr>
+<tr>
+<td>BorderThickness</td>
+<td>StrokeWidth</td>
+</tr>
+<tr>
+<td>BackgroundColor</td>
+<td>Background</td>
+</tr>
+</table>
+
+The following code snippet shows how to enable data labels for the series.
+
+<table>
+<tr>
+<th>Xamarin</th>
 </tr>
 <tr>
 <td>
@@ -593,6 +623,11 @@ chart.Series.Add(series);
 
 {% endtabs %} 
 </td>
+
+</tr>
+<th>.NET MAUI</th>
+</tr>
+<tr>
 <td>
 {% tabs %} 
 {% highlight xaml %}
@@ -642,10 +677,11 @@ chart.Series.Add(series);
 
 ### Tooltip
 
+To customize the tooltip appearance, create an instance of the [ChartTooltipBehavior](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartTooltipBehavior.html) class and add it to the [ChartBehaviors](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html#Syncfusion_SfChart_XForms_SfChart_ChartBehaviors) collection of [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html). For [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html), you can directly set the [ChartTooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html) instance to the [TooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_TooltipBehavior) property, as shown in the below code sample.
+
 <table>
 <tr>
 <th>Xamarin</th>
-<th>.NET MAUI</th>
 </tr>
 <tr>
 <td>
@@ -684,6 +720,12 @@ chart.ChartBehaviors.Add(tool);
 {% endtabs %}
 
 </td>
+</tr>
+
+<tr>
+<th>.NET MAUI</th>
+</tr>
+<tr>
 <td>
 {% tabs %} 
 {% highlight xaml %}
@@ -721,14 +763,13 @@ chart.TooltipBehavior = tooltip;
 </tr>
 </table>
 
-To customize the tooltip appearance, create an instance of the [ChartTooltipBehavior](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartTooltipBehavior.html) class and add it to the [ChartBehaviors](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html#Syncfusion_SfChart_XForms_SfChart_ChartBehaviors) collection of [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html). For [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html), you can directly set the [ChartTooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html) instance to the [TooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_TooltipBehavior) property, as shown in the above code sample.
-
 ### Selection
+
+Create an instance of the [ChartSelectionBehavior](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartSelectionBehavior.html) class and add it to the  [ChartBehaviors](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html#Syncfusion_SfChart_XForms_SfChart_ChartBehaviors) collection of [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html). For [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html), you can directly set the [ChartSelectionBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelectionBehavior.html) instance to the [SelectionBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_SelectionBehaviorr) property, as shown in the below code sample.
 
 <table>
 <tr>
 <th>Xamarin</th>
-<th>.NET MAUI</th>
 </tr>
 <tr>
 <td>
@@ -762,6 +803,11 @@ chart.ChartBehaviors.Add(selectionBehavior);
 {% endhighlight %}
 {% endtabs %}
 </td>
+</tr>
+<tr>
+<th>.NET MAUI</th>
+</tr>
+<tr>
 <td>
 {% tabs %} 
 {% highlight xaml %}
@@ -793,14 +839,13 @@ chart.Series.Add(series);
 </tr>
 </table>
 
-Create an instance of the [ChartSelectionBehavior](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartSelectionBehavior.html) class and add it to the  [ChartBehaviors](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html#Syncfusion_SfChart_XForms_SfChart_ChartBehaviors) collection of [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html). For [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html), you can directly set the [ChartSelectionBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelectionBehavior.html) instance to the [SelectionBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_SelectionBehaviorr) property, as shown in the above code sample.
-
 ### Zooming and Panning
+
+The zooming and panning are achieved using the [ChartZoomPanBehavior](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartZoomPanBehavior.html) in [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html) and [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html) as shown in the below code example.
 
 <table>
 <tr>
 <th>Xamarin</th>
-<th>.NET MAUI</th>
 </tr>
 <tr>
 <td>
@@ -822,6 +867,11 @@ chart.ChartBehaviors.Add(zoomPanBehavior);
 
 {% endtabs %}
 </td>
+</tr>
+<tr>
+<th>.NET MAUI</th>
+</tr>
+<tr>
 <td>
 {% tabs %} 
 {% highlight xaml %}
@@ -842,8 +892,6 @@ chart.ZoomPanBehavior = zooming;
 </td>
 </tr>
 </table>
-
-The zooming and panning are achieved using the [ChartZoomPanBehavior](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartZoomPanBehavior.html) in [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html) and [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html) as shown in the above code example.
 
 ## Upcoming features in .NET MAUI
 
