@@ -14,7 +14,8 @@ The Cartesian Chart was created from the scratch using the upgraded APIs and per
 <table>
 <tr>
 <th>Xamarin</th>
-<th>.NET MAUI</th></tr>
+<th>.NET MAUI</th>
+</tr>
 <tr>
 <td>
 SfChart
@@ -22,9 +23,9 @@ SfChart
 <td>
 <div> SfCartesianChart </div>
 <div> SfCircularChart </div>
-<div> SfFunnelChart (Upcoming) </div>
-<div> SfPolarChart (Upcoming) </div>
-<div> SfPyramidChart (Upcoming) </div>
+<div> SfFunnelChart (<em>Upcoming</em>) </div>
+<div> SfPolarChart (<em>Upcoming</em>) </div>
+<div> SfPyramidChart (<em>Upcoming</em>) </div>
 </td>
 </tr>
 </table>
@@ -38,8 +39,7 @@ To initialize the control, import the Chart namespace and Initialize [SfCartesia
 <table>
 <tr>
 <th>Xamarin</th>
-<th>.NET MAUI</th></tr>
-<tr>
+</tr>
 <td>
 {% tabs %} 
 {% highlight xaml %}
@@ -62,8 +62,12 @@ using Syncfusion.SfChart.XForms;
 {% endhighlight %}
 {% endtabs %}
 </td>
-<td>
 
+<tr>
+<th>.NET MAUI</th>
+</tr>
+
+<td>
 {% tabs %} 
 
 {% highlight xaml %}
@@ -89,8 +93,6 @@ this.Content = chart;
 
 {% endtabs %}
 </td>
-
-</tr>
 </table>
 
 The following table illustrates the API migration for the chart.
@@ -156,59 +158,59 @@ The following table illustrates the API migration for the chart.
 </tr>
 <tr>
 <td>LabelClicked</td>
-<td>Upcoming</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>VisibleMinimum</td>
-<td>Upcoming</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>VisibleMaximum</td>
-<td>Upcoming</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>VisibleLabels</td>
-<td>Upcoming</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>TickPosition</td>
-<td>Upcoming</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>MaximumLabels</td>
-<td>Upcoming</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>PlotOffset</td>
-<td>Upcoming</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>LabelsIntersectAction</td>
-<td>Upcoming</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>AutoScrollingMode</td>
-<td>Upcoming</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>LabelExtent</td>
-<td>Upcoming</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>ShowTrackballInfo</td>
-<td>Upcoming</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>TrackballLabelStyle</td>
-<td>Upcoming</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>AutoScrollingDelta</td>
-<td>Upcoming</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>TrackballLabelTemplate</td>
-<td>Upcoming</td>
+<td><em>Upcoming</em></td>
 </tr>
 </table>
 
@@ -217,7 +219,7 @@ The following code example explains how to migrate the axis of Xamarin [SfChart]
 <table>
 <tr>
 <th>Xamarin</th>
-<th>.NET MAUI</th></tr>
+</tr>
 <tr>
 <td>
 
@@ -249,6 +251,12 @@ this.Content = chart;
 
 {% endtabs %}
 </td>
+</tr>
+
+<tr>
+<th>.NET MAUI</th>
+</tr>
+<tr>
 <td>
 {% tabs %}
 {% highlight xaml %}
@@ -310,9 +318,7 @@ The following code example explains how to migrate the series of Xamarin [SfChar
 <table>
 <tr>
 <tr>
-<th>Xamarin</th>
-<th>.NET MAUI</th></tr>
-</tr>
+<th>Xamarin</th></tr>
 <tr>
 <td>
 {% tabs %} 
@@ -321,12 +327,10 @@ The following code example explains how to migrate the series of Xamarin [SfChar
 
 <chart:SfChart>
 . . .
-   <chart:SfChart.Series>
          <chart:ColumnSeries ItemsSource="{Binding Data}" 
                              XBindingPath="Name" 
                              YBindingPath="Height">
 		 </chart:ColumnSeries>
-   </chart:SfChart.Series>
  </chart:SfChart>
 
 {% endhighlight %} 
@@ -343,9 +347,12 @@ this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %}
-
 </td>
-
+</tr>
+<tr>
+<th>.NET MAUI</th>
+</tr>
+<tr>
 <td>
 
 {% tabs %} 
@@ -353,12 +360,10 @@ this.Content = chart;
 
 <chart:SfCartesianChart>
 . . .
-   <chart:SfCartesianChart.Series>
          <chart:ColumnSeries ItemsSource="{Binding Data}" 
                             XBindingPath="Name" 
                             YBindingPath="Height">
          </chart:ColumnSeries>
-   </chart:SfCartesianChart.Series>
 </chart:SfCartesianChart>
 
 {% endhighlight %} 
@@ -402,79 +407,79 @@ this.Content = chart;
 </tr>
 <tr>
 <td>Title</td>
-<td>Upcoming </td>
+<td><em>Upcoming</em> </td>
 </tr>
 <tr>
 <td>Series</td>
-<td>Upcoming </td>
+<td><em>Upcoming</em> </td>
 </tr>
 <tr>
 <td>BackgroundColor</td>
-<td>Upcoming </td>
+<td><em>Upcoming</em> </td>
 </tr>
 <tr>
 <td>StrokeColor</td>
-<td>Upcoming </td>
+<td><em>Upcoming</em> </td>
 </tr>
 <tr>
 <td>StrokeWidth</td>
-<td>Upcoming </td>
+<td><em>Upcoming</em> </td>
 </tr>
 <tr>
 <td>StrokeDashArray</td>
-<td>Upcoming </td>
+<td><em>Upcoming</em> </td>
 </tr>
 <tr>
 <td>CornerRadius</td>
-<td>Upcoming</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>Margin</td>
-<td>Upcoming</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>LabelStyle</td>
-<td>Upcoming</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>ItemTemplate</td>
-<td>Upcoming</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>OverflowMode</td>
-<td>Upcoming</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>MaxWidth</td>
-<td>Upcoming</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>Orientation</td>
-<td>Upcoming</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>IsIconVisible</td>
-<td>Upcoming</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>ItemMargin</td>
-<td>Upcoming</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>IconWidth</td>
-<td>Upcoming</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>IconHeight</td>
-<td>Upcoming</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>OffsetX</td>
-<td>Upcoming</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>OffsetY</td>
-<td>Upcoming</td>
+<td><em>Upcoming</em></td>
 </tr>
 </table>
 
@@ -483,7 +488,6 @@ The following code example shows how to enable legend in chart.
 <table>
 <tr>
 <th>Xamarin</th>
-<th>.NET MAUI</th>
 </tr>
 <tr>
 <td>
@@ -505,6 +509,11 @@ chart.Legend = new ChartLegend ();
 
 {% endtabs %}
 </td>
+</tr>
+<tr>
+<th>.NET MAUI</th>
+</tr>
+<tr>
 <td>
 {% tabs %} 
 {% highlight xaml %}
@@ -531,10 +540,11 @@ chart.Legend = new ChartLegend ();
 
 ### Data Label
 
+To customize the data label appearance, create an instance of the [ChartDataMarker](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartDataMarker.html) class and add it to the [DataMarker](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartSeries.html#Syncfusion_SfChart_XForms_ChartSeries_DataMarker) of [Series](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartSeries.html). For [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html), you can set the [CartesianDataLabelSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CartesianDataLabelSettings.html) instance to the [DataLabelSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CartesianSeries.html#Syncfusion_Maui_Charts_CartesianSeries_DataLabelSettings) property, as shown in the below code sample.
+
 <table>
 <tr>
 <th>Xamarin</th>
-<th>.NET MAUI</th>
 </tr>
 <tr>
 <td>
@@ -586,17 +596,20 @@ chart.Series.Add(series);
 
 {% endtabs %} 
 </td>
+
+</tr>
+<th>.NET MAUI</th>
+</tr>
+<tr>
 <td>
 {% tabs %} 
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
     . . .
-    <chart:SfCartesianChart.Series>
         <chart:ColumnSeries ItemsSource="{Binding Data}" 
                         XBindingPath="Category"
-                        YBindingPath="Value" 
-                        ShowDataLabels="True">
+                        YBindingPath="Value" **ShowDataLabels="True"** >
                       <chart:ColumnSeries.DataLabelSettings>
                         <chart:CartesianDataLabelSettings>
                             <chart:CartesianDataLabelSettings.LabelStyle>
@@ -606,14 +619,13 @@ chart.Series.Add(series);
                         </chart:CartesianDataLabelSettings>
                     </chart:ColumnSeries.DataLabelSettings>  
         </chart:ColumnSeries>
-    </chart:SfCartesianChart.Series>
 </chart:SfCartesianChart>
 
 {% endhighlight %} 
 {% highlight C# %}
 ColumnSeries series = new ColumnSeries();
 . . .
-series.ShowDataLabels = true;
+**series.ShowDataLabels = true;**
 series.CartesianDataLabelSettings = new CartesianDataLabelSettings();
 var style = new ChartDataLabelStyle();
 style.TextColor = Color.Blue;
@@ -635,10 +647,11 @@ chart.Series.Add(series);
 
 ### Tooltip
 
+To customize the tooltip appearance, create an instance of the [ChartTooltipBehavior](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartTooltipBehavior.html) class and add it to the [ChartBehaviors](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html#Syncfusion_SfChart_XForms_SfChart_ChartBehaviors) collection of [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html). For [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html), you can directly set the [ChartTooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html) instance to the [TooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_TooltipBehavior) property, as shown in the below code sample.
+
 <table>
 <tr>
 <th>Xamarin</th>
-<th>.NET MAUI</th>
 </tr>
 <tr>
 <td>
@@ -677,35 +690,41 @@ chart.ChartBehaviors.Add(tool);
 {% endtabs %}
 
 </td>
+</tr>
+
+<tr>
+<th>.NET MAUI</th>
+</tr>
+<tr>
 <td>
 {% tabs %} 
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
 . . .
-   <chart:SfCartesianChart.TooltipBehavior>
+   **<chart:SfCartesianChart.TooltipBehavior>**
         <chart:ChartTooltipBehavior Background="Blue" TextColor="White" 
               Margin="5" FontSize="15"/>
-   </chart:SfCartesianChart.TooltipBehavior>
+   **</chart:SfCartesianChart.TooltipBehavior>**
 
    <chart:ColumnSeries ItemsSource="{Binding Data}" 
                        XBindingPath="Demand"
                        YBindingPath="Year2010"
-                       EnableTooltip="True"/>
+                       **EnableTooltip="True"**/>
 </chart:SfCartesianChart>
 
 {% endhighlight %} 
 {% highlight C# %}
 ColumnSeries series = new ColumnSeries();
 . . .
-series.EnableTooltip = true;
+**series.EnableTooltip = true;**
 chart.Series.Add(series);
 
 ChartTooltipBehavior tooltip = new ChartTooltipBehavior();
 tooltip.BackgroundColor = Color.Blue;
 tooltip.TextColor = Color.White;
 tooltip.Margin = new Thickness(5, 5, 5, 5);
-chart.TooltipBehavior = tooltip;
+**chart.TooltipBehavior = tooltip;**
 
 {% endhighlight %}
 
@@ -714,14 +733,13 @@ chart.TooltipBehavior = tooltip;
 </tr>
 </table>
 
-To customize the tooltip appearance, create an instance of the [ChartTooltipBehavior](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartTooltipBehavior.html) class and add it to the [ChartBehaviors](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html#Syncfusion_SfChart_XForms_SfChart_ChartBehaviors) collection of [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html). For [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html), you can directly set the [ChartTooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html) instance to the [TooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_TooltipBehavior) property, as shown in the above code sample.
-
 ### Selection
+
+Create an instance of the [ChartSelectionBehavior](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartSelectionBehavior.html) class and add it to the  [ChartBehaviors](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html#Syncfusion_SfChart_XForms_SfChart_ChartBehaviors) collection of [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html). For [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html), you can directly set the [ChartSelectionBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelectionBehavior.html) instance to the [SelectionBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_SelectionBehaviorr) property, as shown in the below code sample.
 
 <table>
 <tr>
 <th>Xamarin</th>
-<th>.NET MAUI</th>
 </tr>
 <tr>
 <td>
@@ -755,15 +773,20 @@ chart.ChartBehaviors.Add(selectionBehavior);
 {% endhighlight %}
 {% endtabs %}
 </td>
+</tr>
+<tr>
+<th>.NET MAUI</th>
+</tr>
+<tr>
 <td>
 {% tabs %} 
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
 . . .
-    <chart:SfCartesianChart.SelectionBehavior>
+    **<chart:SfCartesianChart.SelectionBehavior>**
         <chart:ChartSelectionBehavior />
-    </chart:SfCartesianChart.SelectionBehavior>
+    **</chart:SfCartesianChart.SelectionBehavior>**
 
     <chart:ColumnSeries SelectionBrush="Green" 
             SelectedIndex="2"
@@ -777,7 +800,7 @@ chart.ChartBehaviors.Add(selectionBehavior);
 ColumnSeries series = new ColumnSeries();
 . . .
 series.SelectionBrush = Brush.Green;
-chart.SelectionBehavior = new ChartSelectionBehavior();
+**chart.SelectionBehavior = new ChartSelectionBehavior();**
 chart.Series.Add(series);
 {% endhighlight %}
 
@@ -786,14 +809,13 @@ chart.Series.Add(series);
 </tr>
 </table>
 
-Create an instance of the [ChartSelectionBehavior](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartSelectionBehavior.html) class and add it to the  [ChartBehaviors](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html#Syncfusion_SfChart_XForms_SfChart_ChartBehaviors) collection of [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html). For [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html), you can directly set the [ChartSelectionBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelectionBehavior.html) instance to the [SelectionBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_SelectionBehaviorr) property, as shown in the above code sample.
-
 ### Zooming and Panning
+
+The zooming and panning are achieved using the [ChartZoomPanBehavior](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartZoomPanBehavior.html) in [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html) and [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html) as shown in the below code example.
 
 <table>
 <tr>
 <th>Xamarin</th>
-<th>.NET MAUI</th>
 </tr>
 <tr>
 <td>
@@ -815,20 +837,25 @@ chart.ChartBehaviors.Add(zoomPanBehavior);
 
 {% endtabs %}
 </td>
+</tr>
+<tr>
+<th>.NET MAUI</th>
+</tr>
+<tr>
 <td>
 {% tabs %} 
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    <chart:SfCartesianChart.ZoomPanBehavior>
+    **<chart:SfCartesianChart.ZoomPanBehavior>**
         <chart:ChartZoomPanBehavior EnablePinchZooming="True"/>
-    </chart:SfCartesianChart.ZoomPanBehavior>
+    **</chart:SfCartesianChart.ZoomPanBehavior>**
 </chart:SfCartesianChart>
 
 {% endhighlight %} 
 {% highlight C# %}
 ChartZoomPanBehavior zooming = new ChartZoomPanBehavior();
-chart.ZoomPanBehavior = zooming;
+**chart.ZoomPanBehavior = zooming;**
 {% endhighlight %}
 
 {% endtabs %}
@@ -836,9 +863,7 @@ chart.ZoomPanBehavior = zooming;
 </tr>
 </table>
 
-The zooming and panning are achieved using the [ChartZoomPanBehavior](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartZoomPanBehavior.html) in [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html) and [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html) as shown in the above code example.
-
-## Upcoming Features in .NET MAUI
+## Upcoming features in .NET MAUI
 
 **Chart** 
 
@@ -904,7 +929,7 @@ The zooming and panning are achieved using the [ChartZoomPanBehavior](https://he
 * Support setting the maximum zoom level.
 * Event for zooming and panning.
 
-## Unsupported Features from Xamarin.Forms
+## Unsupported features from Xamarin.Forms
 
 * Only continuous series will support data marker symbols.
 * Data label created event support was not provided in series. Instead, you can use the [DrawDataLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_DrawDataLabel_Microsoft_Maui_Graphics_ICanvas_Microsoft_Maui_Controls_Brush_System_String_Microsoft_Maui_Graphics_PointF_System_Int32_) override method in the [ChartSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html) class.
