@@ -543,20 +543,20 @@ this.Content = schedule;
 
 {% highlight xaml %}
 
-<scheduler:SfScheduler View="MonthView" AppointmentsSource="{Binding SchedulerAppointments}"/>
+<scheduler:SfScheduler View="MonthView" AppointmentsSource="{Binding Appointments}"/>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-public ObservableCollection<SchedulerAppointment> SchedulerAppointments { get; set; }
+public ObservableCollection<SchedulerAppointment> Appointments { get; set; }
 
 SfScheduler scheduler = new SfScheduler();
 // Creating an instance for the scheduler appointment collection.
-this.SchedulerAppointments = new ObservableCollection<SchedulerAppointment>();
+this.Appointments = new ObservableCollection<SchedulerAppointment>();
 
 // Adding scheduler appointment in the schedule appointment collection. 
-SchedulerAppointments.Add(new SchedulerAppointment()
+Appointments.Add(new SchedulerAppointment()
 {
     StartTime = DateTime.Today.AddHours(9),
     EndTime = DateTime.Today.AddHours(11),
@@ -565,7 +565,7 @@ SchedulerAppointments.Add(new SchedulerAppointment()
 });
 
 // Adding the scheduler appointment collection to the AppointmentsSource of .NET MAUI Scheduler.
-scheduler.AppointmentsSource = SchedulerAppointments;
+scheduler.AppointmentsSource = Appointments;
 this.Content = scheduler;
 
 {% endhighlight %}
@@ -1797,7 +1797,7 @@ this.Content = schedule;
 
 {% highlight xaml %}
 
-<schedule:SfScheduler AppointmentsSource="{Binding SchedulerAppointments}">
+<schedule:SfScheduler AppointmentsSource="{Binding Appointments}">
     <schedule:SfScheduler.AppointmentTextStyle>
         <schedule:SchedulerTextStyle
             TextColor="Orange"
@@ -1811,17 +1811,17 @@ this.Content = schedule;
 
 {% highlight C# %}
 
-public ObservableCollection<SchedulerAppointment> SchedulerAppointments { get; set; }
+public ObservableCollection<SchedulerAppointment> Appointments { get; set; }
 
 SfScheduler scheduler = new SfScheduler();
-this.SchedulerAppointments = new ObservableCollection<SchedulerAppointment>();
-this.SchedulerAppointments.Add(new SchedulerAppointment()
+this.Appointments = new ObservableCollection<SchedulerAppointment>();
+this.Appointments.Add(new SchedulerAppointment()
 {
     Subject = "meeting",
     StartTime = DateTime.Now,
     EndTime = DateTime.Now.AddHours(1),
 });
-scheduler.AppointmentsSource = this.SchedulerAppointments;
+scheduler.AppointmentsSource = this.Appointments;
 
 var appointmentTextStyle = new SchedulerTextStyle()
 {
