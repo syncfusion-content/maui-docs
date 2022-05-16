@@ -106,3 +106,9 @@ To migrate easier from Xamarin SfTabView to .NET MAUI SfTabView, we kept most of
 <td>{{'[TabSelectionChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.TabSelectionChangedEventArgs.html)'| markdownify }}</td>
 <td>This class serves as an event data for the SelectionChanged event.</td></tr>
 </table>
+
+## Upcoming features
+
+  * Center button support.
+  * Drop-down mode.
+  * Visible header count.
