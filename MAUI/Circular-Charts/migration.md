@@ -154,12 +154,10 @@ The following code example explains how to migrate the series of Xamarin [SfChar
 
 <chart:SfChart>
 . . .
-   <chart:SfChart.Series>
          <chart:PieSeries ItemsSource="{Binding Data}" 
                         XBindingPath="Product" 
                         YBindingPath="SalesRate">
 		 </chart:PieSeries>
-   </chart:SfChart.Series>
  </chart:SfChart>
 
 {% endhighlight %} 
@@ -187,12 +185,9 @@ this.Content = chart;
 {% highlight xaml %}
 
 <chart:SfCircularChart>
-    . . .
-    <chart:SfCircularChart.Series>
         <chart:PieSeries ItemsSource="{Binding Data}" 
                         XBindingPath="Product" 
                         YBindingPath="SalesRate"/>
-    </chart:SfCircularChart.Series>
 </chart:SfCircularChart>
 
 {% endhighlight %} 
@@ -367,30 +362,7 @@ chart.Legend = new ChartLegend();
 
 ### Data Label
 
-<table>
-<tr>
-<th>Xamarin</th>
-<th>.NET MAUI</th>
-</tr>
-<tr>
-<td>DataMarker</td>
-<td>DataLabelSettings</td>
-</tr>
-<tr>
-<td>BorderColor</td>
-<td>Stroke</td>
-</tr>
-<tr>
-<td>BorderThickness</td>
-<td>StrokeWidth</td>
-</tr>
-<tr>
-<td>BackgroundColor</td>
-<td>Background</td>
-</tr>
-</table>
-
-The following code snippet shows how to enable data labels for the series.
+To customize the data label appearance, create an instance of the [ChartDataMarker](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartDataMarker.html) class and add it to the [DataMarker](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartSeries.html#Syncfusion_SfChart_XForms_ChartSeries_DataMarker) of [Series](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartSeries.html). For [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html), you can set the [CircularDataLabelSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CircularDataLabelSettings.html) instance to the [DataLabelSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CartesianSeries.html#Syncfusion_Maui_Charts_CartesianSeries_DataLabelSettings) property, as shown in the below code sample.
 
 <table>
 <tr>
@@ -455,7 +427,7 @@ chart.Series.Add(series);
 
 <chart:SfCircularChart>
     . . .
-    <chart:PieSeries ShowDataLabels="True" ItemsSource ="{Binding Data}" XBindingPath="Expense"
+    <chart:PieSeries **ShowDataLabels="True"** ItemsSource ="{Binding Data}" XBindingPath="Expense"
 	YBindingPath="Value">
     <chart:PieSeries.DataLabelSettings>
                         <chart:CircularDataLabelSettings>
@@ -473,7 +445,7 @@ chart.Series.Add(series);
 SfCircularChart chart = new SfCircularChart();
 . . .
 PieSeries series = new PieSeries();
-series.ShowDataLabels = true;
+series.**ShowDataLabels** = true;
 . . .
 series.CircularDataLabelSettings = new CircularDataLabelSettings();
 var style = new ChartDataLabelStyle();
@@ -484,7 +456,7 @@ style.Background = Color.Aqua;
 style.Angle = 315;
 style.Margin = 5;
 style.FontSize = 18;
-series.CartesianDataLabelSettings.LabelStyle = style;
+series.CircularDataLabelSettings.LabelStyle = style;
 chart.Series.Add(series);
 {% endhighlight %}
 
@@ -548,15 +520,15 @@ chart.ChartBehaviors.Add(tool);
 
 <chart:SfCircularChart>
 . . .
-   <chart:SfCircularChart.TooltipBehavior>
+   **<chart:SfCircularChart.TooltipBehavior>**
         <chart:ChartTooltipBehavior Background="Blue" TextColor="White" 
               Margin="5" FontSize="15"/>
-   </chart:SfCircularChart.TooltipBehavior>
+   **</chart:SfCircularChart.TooltipBehavior>**
 
    <chart:PieSeries ItemsSource="{Binding Data}" 
                        XBindingPath="Demand"
                        YBindingPath="Year2010"
-                       EnableTooltip="True"/>
+                       **EnableTooltip="True"**/>
 </chart:PieSeries>
 </chart:SfCircularChart>
 
@@ -564,14 +536,14 @@ chart.ChartBehaviors.Add(tool);
 {% highlight C# %}
 PieSeries series = new PieSeries();
 . . .
-series.EnableTooltip = true;
+**series.EnableTooltip = true;**
 chart.Series.Add(series);
 
 ChartTooltipBehavior tooltip = new ChartTooltipBehavior();
 tooltip.BackgroundColor = Color.Blue;
 tooltip.TextColor = Color.White;
 tooltip.Margin = new Thickness(5, 5, 5, 5);
-chart.TooltipBehavior = tooltip;
+**chart.TooltipBehavior = tooltip;**
 
 {% endhighlight %}
 
@@ -632,9 +604,9 @@ chart.ChartBehaviors.Add(selectionBehavior);
 
 <chart:SfCircularChart>
 . . .
-    <chart:SfCircularChart.SelectionBehavior>
-        <chart:ChartSelectionBehavior />
-    </chart:SfCircularChart.SelectionBehavior>
+    **<chart:SfCircularChart.SelectionBehavior>**
+        **<chart:ChartSelectionBehavior />**
+    **</chart:SfCircularChart.SelectionBehavior>**
 
     <chart:PieSeries SelectionBrush="Green" 
             SelectedIndex="2"
@@ -648,7 +620,7 @@ chart.ChartBehaviors.Add(selectionBehavior);
 PieSeries series = new PieSeries();
 . . .
 series.SelectionBrush = Brush.Green;
-chart.SelectionBehavior = new ChartSelectionBehavior();
+**chart.SelectionBehavior = new ChartSelectionBehavior();**
 chart.Series.Add(series);
 {% endhighlight %}
 
