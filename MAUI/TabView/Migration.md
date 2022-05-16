@@ -110,5 +110,5 @@ To migrate easier from Xamarin SfTabView to .NET MAUI SfTabView, we kept most of
 ## Upcoming features
 
   * Center button support.
-  * Drop-down mode
+  * Drop-down mode.
   * Visible header count.
