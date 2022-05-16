@@ -23,9 +23,9 @@ SfChart
 <td>
 <div> SfCartesianChart </div>
 <div> SfCircularChart </div>
-<div> SfFunnelChart (_Upcoming_) </div>
-<div> SfPolarChart (_Upcoming_) </div>
-<div> SfPyramidChart (_Upcoming_) </div>
+<div> SfFunnelChart (<em>Upcoming</em>) </div>
+<div> SfPolarChart (<em>Upcoming</em>) </div>
+<div> SfPyramidChart (<em>Upcoming</em>) </div>
 </td>
 </tr>
 </table>
@@ -158,59 +158,59 @@ The following table illustrates the API migration for the chart.
 </tr>
 <tr>
 <td>LabelClicked</td>
-<td>_Upcoming_</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>VisibleMinimum</td>
-<td>_Upcoming_</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>VisibleMaximum</td>
-<td>_Upcoming_</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>VisibleLabels</td>
-<td>_Upcoming_</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>TickPosition</td>
-<td>_Upcoming_</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>MaximumLabels</td>
-<td>_Upcoming_</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>PlotOffset</td>
-<td>_Upcoming_</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>LabelsIntersectAction</td>
-<td>_Upcoming_</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>AutoScrollingMode</td>
-<td>_Upcoming_</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>LabelExtent</td>
-<td>_Upcoming_</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>ShowTrackballInfo</td>
-<td>_Upcoming_</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>TrackballLabelStyle</td>
-<td>_Upcoming_</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>AutoScrollingDelta</td>
-<td>_Upcoming_</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>TrackballLabelTemplate</td>
-<td>_Upcoming_</td>
+<td><em>Upcoming</em></td>
 </tr>
 </table>
 
@@ -407,79 +407,79 @@ this.Content = chart;
 </tr>
 <tr>
 <td>Title</td>
-<td>_Upcoming_ </td>
+<td><em>Upcoming</em> </td>
 </tr>
 <tr>
 <td>Series</td>
-<td>_Upcoming_ </td>
+<td><em>Upcoming</em> </td>
 </tr>
 <tr>
 <td>BackgroundColor</td>
-<td>_Upcoming_ </td>
+<td><em>Upcoming</em> </td>
 </tr>
 <tr>
 <td>StrokeColor</td>
-<td>_Upcoming_ </td>
+<td><em>Upcoming</em> </td>
 </tr>
 <tr>
 <td>StrokeWidth</td>
-<td>_Upcoming_ </td>
+<td><em>Upcoming</em> </td>
 </tr>
 <tr>
 <td>StrokeDashArray</td>
-<td>_Upcoming_ </td>
+<td><em>Upcoming</em> </td>
 </tr>
 <tr>
 <td>CornerRadius</td>
-<td>_Upcoming_</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>Margin</td>
-<td>_Upcoming_</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>LabelStyle</td>
-<td>_Upcoming_</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>ItemTemplate</td>
-<td>_Upcoming_</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>OverflowMode</td>
-<td>_Upcoming_</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>MaxWidth</td>
-<td>_Upcoming_</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>Orientation</td>
-<td>_Upcoming_</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>IsIconVisible</td>
-<td>_Upcoming_</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>ItemMargin</td>
-<td>_Upcoming_</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>IconWidth</td>
-<td>_Upcoming_</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>IconHeight</td>
-<td>_Upcoming_</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>OffsetX</td>
-<td>_Upcoming_</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>OffsetY</td>
-<td>_Upcoming_</td>
+<td><em>Upcoming</em></td>
 </tr>
 </table>
 
