@@ -40,6 +40,7 @@ To initialize the control, import the Chart namespace and Initialize [SfCartesia
 <tr>
 <th>Xamarin</th>
 </tr>
+<tr>
 <td>
 {% tabs %} 
 {% highlight xaml %}
@@ -62,11 +63,11 @@ using Syncfusion.SfChart.XForms;
 {% endhighlight %}
 {% endtabs %}
 </td>
-
+</tr>
 <tr>
 <th>.NET MAUI</th>
 </tr>
-
+<tr>
 <td>
 {% tabs %} 
 
@@ -93,6 +94,7 @@ this.Content = chart;
 
 {% endtabs %}
 </td>
+</tr>
 </table>
 
 The following table illustrates the API migration for the chart.
@@ -317,7 +319,6 @@ The following code example explains how to migrate the series of Xamarin [SfChar
 
 <table>
 <tr>
-<tr>
 <th>Xamarin</th></tr>
 <tr>
 <td>
@@ -327,10 +328,10 @@ The following code example explains how to migrate the series of Xamarin [SfChar
 
 <chart:SfChart>
 . . .
-         <chart:ColumnSeries ItemsSource="{Binding Data}" 
-                             XBindingPath="Name" 
-                             YBindingPath="Height">
-		 </chart:ColumnSeries>
+    <chart:ColumnSeries ItemsSource="{Binding Data}" 
+    XBindingPath="Name" 
+    YBindingPath="Height">
+	</chart:ColumnSeries>
  </chart:SfChart>
 
 {% endhighlight %} 
@@ -359,11 +360,8 @@ this.Content = chart;
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-. . .
-         <chart:ColumnSeries ItemsSource="{Binding Data}" 
-                            XBindingPath="Name" 
-                            YBindingPath="Height">
-         </chart:ColumnSeries>
+<chart:ColumnSeries ItemsSource="{Binding Data}" XBindingPath="Name" YBindingPath="Height">
+</chart:ColumnSeries>
 </chart:SfCartesianChart>
 
 {% endhighlight %} 
@@ -559,15 +557,14 @@ To customize the data label appearance, create an instance of the [ChartDataMark
 	    <chart:ColumnSeries.DataMarker>
 	        <chart:ChartDataMarker ShowLabel="True">
 		        <chart:ChartDataMarker.LabelStyle>
-			        <chart:DataMarkerLabelStyle TextColor="Blue"
-										BorderColor="Red" 
-										BorderThickness="2"
-										BackgroundColor="Aqua"
-										Angle="315"
-										Margin="5"
-										FontSize="18"
-                                        FontAttributes="Italic"/>
-
+			        <chart:DataMarkerLabelStyle 
+                    TextColor="Blue" 
+                    BorderColor="Red" 
+                    BorderThickness="2" 
+                    BackgroundColor="Aqua" 
+                    Angle="315" 
+                    Margin="5" FontSize="18" 
+                    FontAttributes="Italic"/>
 		        </chart:ChartDataMarker.LabelStyle>
 	        </chart:ChartDataMarker>
 	    </chart:ColumnSeries.DataMarker>
@@ -598,6 +595,7 @@ chart.Series.Add(series);
 </td>
 
 </tr>
+<tr>
 <th>.NET MAUI</th>
 </tr>
 <tr>
@@ -607,25 +605,31 @@ chart.Series.Add(series);
 
 <chart:SfCartesianChart>
     . . .
-        <chart:ColumnSeries ItemsSource="{Binding Data}" 
-                        XBindingPath="Category"
-                        YBindingPath="Value" **ShowDataLabels="True"** >
-                      <chart:ColumnSeries.DataLabelSettings>
-                        <chart:CartesianDataLabelSettings>
-                            <chart:CartesianDataLabelSettings.LabelStyle>
-                                <chart:ChartDataLabelStyle TextColor="Blue" Stroke="Red" StrokeWidth="2" Background="Aqua" Angle="315"
-										Margin="5" FontSize="18" FontAttributes="Italic"/>
-                            </chart:CartesianDataLabelSettings.LabelStyle>
-                        </chart:CartesianDataLabelSettings>
-                    </chart:ColumnSeries.DataLabelSettings>  
-        </chart:ColumnSeries>
+    <chart:ColumnSeries ItemsSource="{Binding Data}" XBindingPath="Category" 
+    YBindingPath="Value" ShowDataLabels="True">
+        <chart:ColumnSeries.DataLabelSettings>
+            <chart:CartesianDataLabelSettings>
+                <chart:CartesianDataLabelSettings.LabelStyle>
+                    <chart:ChartDataLabelStyle 
+                    TextColor="Blue" 
+                    Stroke="Red" 
+                    StrokeWidth="2" 
+                    Background="Aqua" 
+                    Angle="315" 
+                    Margin="5" 
+                    FontSize="18" 
+                    FontAttributes="Italic"/>
+                </chart:CartesianDataLabelSettings.LabelStyle>
+            </chart:CartesianDataLabelSettings>
+        </chart:ColumnSeries.DataLabelSettings>  
+    </chart:ColumnSeries>
 </chart:SfCartesianChart>
 
 {% endhighlight %} 
 {% highlight C# %}
 ColumnSeries series = new ColumnSeries();
 . . .
-**series.ShowDataLabels = true;**
+series.ShowDataLabels = true;
 series.CartesianDataLabelSettings = new CartesianDataLabelSettings();
 var style = new ChartDataLabelStyle();
 style.TextColor = Color.Blue;
@@ -661,8 +665,11 @@ To customize the tooltip appearance, create an instance of the [ChartTooltipBeha
 <chart:SfChart>
 . . . 
     <chart:SfChart.ChartBehaviors>
-	      <chart:ChartTooltipBehavior BackgroundColor="Blue" TextColor="White" 
-               Margin="5" FontSize="15"/>
+	      <chart:ChartTooltipBehavior 
+          BackgroundColor="Blue" 
+          TextColor="White" 
+          Margin="5" 
+          FontSize="15"/>
     </chart:SfChart.ChartBehaviors>
     
     <chart:ColumnSeries ItemsSource="{Binding Data}" 
@@ -702,29 +709,32 @@ chart.ChartBehaviors.Add(tool);
 
 <chart:SfCartesianChart>
 . . .
-   **<chart:SfCartesianChart.TooltipBehavior>**
-        <chart:ChartTooltipBehavior Background="Blue" TextColor="White" 
-              Margin="5" FontSize="15"/>
-   **</chart:SfCartesianChart.TooltipBehavior>**
+   <chart:SfCartesianChart.TooltipBehavior>
+        <chart:ChartTooltipBehavior 
+        Background="Blue" 
+        TextColor="White" 
+        Margin="5" 
+        FontSize="15"/>
+   </chart:SfCartesianChart.TooltipBehavior>
 
    <chart:ColumnSeries ItemsSource="{Binding Data}" 
                        XBindingPath="Demand"
                        YBindingPath="Year2010"
-                       **EnableTooltip="True"**/>
+                       EnableTooltip="True"/>
 </chart:SfCartesianChart>
 
 {% endhighlight %} 
 {% highlight C# %}
 ColumnSeries series = new ColumnSeries();
 . . .
-**series.EnableTooltip = true;**
+series.EnableTooltip = true;
 chart.Series.Add(series);
 
 ChartTooltipBehavior tooltip = new ChartTooltipBehavior();
 tooltip.BackgroundColor = Color.Blue;
 tooltip.TextColor = Color.White;
 tooltip.Margin = new Thickness(5, 5, 5, 5);
-**chart.TooltipBehavior = tooltip;**
+chart.TooltipBehavior = tooltip;
 
 {% endhighlight %}
 
@@ -784,9 +794,9 @@ chart.ChartBehaviors.Add(selectionBehavior);
 
 <chart:SfCartesianChart>
 . . .
-    **<chart:SfCartesianChart.SelectionBehavior>**
+    <chart:SfCartesianChart.SelectionBehavior>
         <chart:ChartSelectionBehavior />
-    **</chart:SfCartesianChart.SelectionBehavior>**
+    </chart:SfCartesianChart.SelectionBehavior>
 
     <chart:ColumnSeries SelectionBrush="Green" 
             SelectedIndex="2"
@@ -800,7 +810,7 @@ chart.ChartBehaviors.Add(selectionBehavior);
 ColumnSeries series = new ColumnSeries();
 . . .
 series.SelectionBrush = Brush.Green;
-**chart.SelectionBehavior = new ChartSelectionBehavior();**
+chart.SelectionBehavior = new ChartSelectionBehavior();
 chart.Series.Add(series);
 {% endhighlight %}
 
@@ -847,15 +857,15 @@ chart.ChartBehaviors.Add(zoomPanBehavior);
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    **<chart:SfCartesianChart.ZoomPanBehavior>**
+    <chart:SfCartesianChart.ZoomPanBehavior>
         <chart:ChartZoomPanBehavior EnablePinchZooming="True"/>
-    **</chart:SfCartesianChart.ZoomPanBehavior>**
+    </chart:SfCartesianChart.ZoomPanBehavior>
 </chart:SfCartesianChart>
 
 {% endhighlight %} 
 {% highlight C# %}
 ChartZoomPanBehavior zooming = new ChartZoomPanBehavior();
-**chart.ZoomPanBehavior = zooming;**
+chart.ZoomPanBehavior = zooming;
 {% endhighlight %}
 
 {% endtabs %}
