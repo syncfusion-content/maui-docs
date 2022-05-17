@@ -64,6 +64,7 @@ using Syncfusion.SfChart.XForms;
 {% endtabs %}
 </td>
 </tr>
+<tr>
 <th>.NET MAUI</th></tr>
 <tr>
 <td>
@@ -143,7 +144,6 @@ The following code example explains how to migrate the series of Xamarin [SfChar
 
 <table>
 <tr>
-<tr>
 <th>Xamarin</th>
 </tr>
 <tr>
@@ -176,8 +176,8 @@ this.Content = chart;
 
 </td>
 </tr>
+<tr>
 <th>.NET MAUI</th></tr>
-</tr>
 <tr>
 <td>
 
@@ -310,7 +310,7 @@ The following code example shows how to enable legend in chart.
 
 <table>
 <tr>
-<th>Xamarin</th>
+<th>Xamarin</th></tr>
 <tr>
 <td>
 {% tabs %} 
@@ -332,6 +332,7 @@ chart.Legend = new ChartLegend ();
 {% endtabs %}
 </td>
 </tr>
+<tr>
 <th>.NET MAUI</th>
 </tr>
 <tr>
@@ -418,6 +419,7 @@ chart.Series.Add(series);
 {% endtabs %} 
 </td>
 </tr>
+<tr>
 <th>.NET MAUI</th>
 </tr>
 <tr>
@@ -511,6 +513,7 @@ chart.ChartBehaviors.Add(tool);
 
 </td>
 </tr>
+<tr>
 <th>.NET MAUI</th>
 </tr>
 <tr>
@@ -595,6 +598,7 @@ chart.ChartBehaviors.Add(selectionBehavior);
 {% endtabs %}
 </td>
 </tr>
+<tr>
 <th>.NET MAUI</th>
 </tr>
 <tr>

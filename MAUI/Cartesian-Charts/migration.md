@@ -40,6 +40,7 @@ To initialize the control, import the Chart namespace and Initialize [SfCartesia
 <tr>
 <th>Xamarin</th>
 </tr>
+<tr>
 <td>
 {% tabs %} 
 {% highlight xaml %}
@@ -62,11 +63,11 @@ using Syncfusion.SfChart.XForms;
 {% endhighlight %}
 {% endtabs %}
 </td>
-
+</tr>
 <tr>
 <th>.NET MAUI</th>
 </tr>
-
+<tr>
 <td>
 {% tabs %} 
 
@@ -93,6 +94,7 @@ this.Content = chart;
 
 {% endtabs %}
 </td>
+</tr>
 </table>
 
 The following table illustrates the API migration for the chart.
@@ -316,7 +318,6 @@ this.Content = chart;
 The following code example explains how to migrate the series of Xamarin [SfChart](https://help.syncfusion.com/xamarin/charts/overview) to .NET MAUI [SfCartesianChart](https://help.syncfusion.com/maui/cartesian-charts/overview).
 
 <table>
-<tr>
 <tr>
 <th>Xamarin</th></tr>
 <tr>
@@ -598,6 +599,7 @@ chart.Series.Add(series);
 </td>
 
 </tr>
+<tr>
 <th>.NET MAUI</th>
 </tr>
 <tr>
