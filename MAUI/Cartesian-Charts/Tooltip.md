@@ -21,17 +21,15 @@ To define the tooltip in the series, set the [EnableTooltip](https://help.syncfu
 
 <chart:SfCartesianChart>
     . . .
-    <chart:SfCartesianChart.Series>
-        <chart:ColumnSeries ItemsSource="{Binding Data}" 
-                            XBindingPath="Demand"
-                            YBindingPath="Year2010" 
-                            EnableTooltip="True"/>
+    <chart:ColumnSeries ItemsSource="{Binding Data}" 
+                        XBindingPath="Demand"
+                        YBindingPath="Year2010" 
+                        EnableTooltip="True"/>
 
-        <chart:ColumnSeries ItemsSource="{Binding Data}" 
-                            XBindingPath="Demand"
-                            YBindingPath="Year2011"
-                            EnableTooltip="True"/>
-    </chart:SfCartesianChart.Series>
+    <chart:ColumnSeries ItemsSource="{Binding Data}" 
+                        XBindingPath="Demand"
+                        YBindingPath="Year2011"
+                        EnableTooltip="True"/>
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -110,17 +108,15 @@ The [Duration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartT
         <chart:ChartTooltipBehavior Duration="5000"/>
     </chart:SfCartesianChart.TooltipBehavior>
 
-    <chart:SfCartesianChart.Series>
-        <chart:ColumnSeries ItemsSource="{Binding Data}" 
-                            XBindingPath="Demand"
-                            YBindingPath="Year2010" 
-                            EnableTooltip="True"/>
+    <chart:ColumnSeries ItemsSource="{Binding Data}" 
+                        XBindingPath="Demand"
+                        YBindingPath="Year2010" 
+                        EnableTooltip="True"/>
                 
-        <chart:ColumnSeries ItemsSource="{Binding Data}" 
-                            XBindingPath="Demand"
-                            YBindingPath="Year2011"
-                            EnableTooltip="True"/>
-    </chart:SfCartesianChart.Series>
+    <chart:ColumnSeries ItemsSource="{Binding Data}" 
+                        XBindingPath="Demand"
+                        YBindingPath="Year2011"
+                        EnableTooltip="True"/>
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -180,12 +176,10 @@ The [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chart
         <chart:ChartTooltipBehavior/>
     </chart:SfCartesianChart.TooltipBehavior>
 
-    <chart:SfCartesianChart.Series>
-        <chart:ColumnSeries ItemsSource="{Binding Data}" TooltipTemplate="{StaticResource tooltipTemplate1}"
+    <chart:ColumnSeries ItemsSource="{Binding Data}" TooltipTemplate="{StaticResource tooltipTemplate1}"
                             XBindingPath="Demand"
                             YBindingPath="Year2010" 
                             EnableTooltip="True"/>
-    </chart:SfCartesianChart.Series>
 
 </chart:SfCartesianChart>
 

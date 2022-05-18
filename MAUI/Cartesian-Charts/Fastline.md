@@ -13,6 +13,8 @@ documentation: ug
 
 The [FastLineSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.FastLineSeries.html?tabs=tabid-1) is a special kind of line series that can render a collection with large number of datapoints. To render a fast line chart, create an instance of [FastLineSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.FastLineSeries.html?tabs=tabid-1), and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1). 
 
+N> The cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) as its default content.
+
 {% tabs %}
 
 {% highlight xaml %}
@@ -26,9 +28,7 @@ The [FastLineSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
         <chart:NumericalAxis />
     </chart:SfCartesianChart.YAxes>  
                 
-    <chart:SfCartesianChart.Series>
-        <chart:FastLineSeries ItemsSource="{Binding Data}" XBindingPath="XValue" YBindingPath="YValue"/>
-    </chart:SfCartesianChart.Series>
+    <chart:FastLineSeries ItemsSource="{Binding Data}" XBindingPath="XValue" YBindingPath="YValue"/>
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -81,9 +81,7 @@ The [StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts
         <chart:NumericalAxis />
     </chart:SfCartesianChart.YAxes>  
 
-    <chart:SfCartesianChart.Series>
-        <chart:FastLineSeries ItemsSource="{Binding Data}" XBindingPath="XValue" YBindingPath="YValue" StrokeDashArray="{StaticResource dashArray}"/>
-    </chart:SfCartesianChart.Series>
+    <chart:FastLineSeries ItemsSource="{Binding Data}" XBindingPath="XValue" YBindingPath="YValue" StrokeDashArray="{StaticResource dashArray}"/>
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -130,9 +128,7 @@ There may be some jagged lines at the edges. This can be reduced by using the `E
 <chart:SfCartesianChart>
     .....
 
-    <chart:SfCartesianChart.Series>
-        <chart:FastLineSeries EnableAntiAliasing="True" ItemsSource="{Binding Data}" XBindingPath="XValue" YBindingPath="YValue"/>
-    </chart:SfCartesianChart.Series>
+    <chart:FastLineSeries EnableAntiAliasing="True" ItemsSource="{Binding Data}" XBindingPath="XValue" YBindingPath="YValue"/>
 </chart:SfCartesianChart>
 
 {% endhighlight %}

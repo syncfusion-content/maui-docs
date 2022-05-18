@@ -71,13 +71,11 @@ Cartesian chart provides support to select a point programmatically on a chart u
         <chart:ChartSelectionBehavior/>
     </chart:SfCartesianChart.SelectionBehavior>
 
-    <chart:SfCartesianChart.Series>
-        <chart:ColumnSeries ItemsSource="{Binding Data}" 
-                            XBindingPath="Demand"
-                            YBindingPath="Year2010" 
-                            SelectionBrush="Green"
-                            SelectedIndex="3"/>
-    </chart:SfCartesianChart.Series>
+    <chart:ColumnSeries ItemsSource="{Binding Data}" 
+                        XBindingPath="Demand"
+                        YBindingPath="Year2010" 
+                        SelectionBrush="Green"
+                        SelectedIndex="3"/>
 </chart:SfCartesianChart>
 
 {% endhighlight %}
