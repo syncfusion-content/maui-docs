@@ -415,17 +415,13 @@ By default, The 0th index value of XAxes and YAxes is used to plot all of the se
 		<chart:NumericalAxis ShowMajorGridLines="False" />
 		<chart:NumericalAxis Name="series_YAxis" CrossesAt="{Static x:Double.MaxValue}" ShowMajorGridLines="False" />
 	</chart:SfCartesianChart.YAxes>
-    <chart:SfCartesianChart.Series>
-        <chart:SfCartesianChart.Series>
-            <chart:ColumnSeries ItemsSource="{Binding Data1}" 
-                    XBindingPath="Date"
-                    YBindingPath="Value"
-					YAxisName="series_YAxis">
-            </chart:ColumnSeries>
-            <chart:SplineSeries ItemsSource="{Binding Data}" 
-                    XBindingPath="Date"
-                    YBindingPath="Value"/>
-    </chart:SfCartesianChart.Series>
+        <chart:ColumnSeries ItemsSource="{Binding Data1}" 
+            XBindingPath="Date"
+            YBindingPath="Value"
+			YAxisName="series_YAxis"/>
+        <chart:SplineSeries ItemsSource="{Binding Data}" 
+                XBindingPath="Date"
+                YBindingPath="Value"/>
 </chart:SfCartesianChart>
 
 </ContentPage>
