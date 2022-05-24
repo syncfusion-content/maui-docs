@@ -10,7 +10,7 @@ documentation: ug
 
 # Migrating from Xamarin to .NET MAUI in Syncfusion 
 
-To migrate easier from Xamarin to .NET MAUI, we kept most of the components name from the Xamarin were kept in the .NET MAUI. However, to maintain the consistency of component naming in the .NET MAUI, we renamed some of the components. Below are the components name with migration guidelines details.
+To migrate easier from Xamarin to .NET MAUI, we kept most of the components from the Xamarin were kept in the .NET MAUI. However, to maintain the consistency of component naming in the .NET MAUI, we renamed some of the components. Below are the components with migration guidelines details.
 
 <table>
 	<tr>
