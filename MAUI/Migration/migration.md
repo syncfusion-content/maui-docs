@@ -44,7 +44,9 @@ To migrate easier from Xamarin to .NET MAUI, we kept most of the components from
 		<td rowspan="1" valign="top">
 			<a href="https://help.syncfusion.com/maui/cartesian-charts/migration">SfCartesianChart</a><br/>
 		</td>
-		<td valign="top">
+	</tr>
+	<tr>
+		<td rowspan="1" valign="top">
 			<a href="https://help.syncfusion.com/maui/circular-charts/migration">SfCircularChart</a><br/>
 		</td>
 	</tr>
