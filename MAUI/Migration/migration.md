@@ -89,10 +89,14 @@ To migrate easier from Xamarin to .NET MAUI, we kept most of the components from
 		<td rowspan="1" valign="top">
 			<a href="https://help.syncfusion.com/maui/slider/migration">SfSlider</a><br/>
 		</td>
-		<td valign="top">
+	</tr>
+	<tr>
+	    <td valign="top">
 			<a href="https://help.syncfusion.com/maui/range-slider/migration">SfRangeSlider</a><br/>
 		</td>
-		<td valign="top">
+	</tr>
+	<tr>
+	    <td valign="top">
 			<a href="https://help.syncfusion.com/maui/range-selector/migration">SfRangeSelector</a><br/>
 		</td>
 	</tr>
