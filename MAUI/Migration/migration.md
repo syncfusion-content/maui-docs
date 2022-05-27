@@ -38,10 +38,10 @@ To migrate easier from Xamarin to .NET MAUI, we kept most of the components from
 		</td>
 	</tr>
 	<tr>
-	    <td rowspan="1" valign="center">
+	    <td rowspan="2" valign="center">
 			<a href="https://help.syncfusion.com/xamarin/charts/getting-started">SfChart</a><br/>
 		</td>
-		<td rowspan="2" valign="top">
+		<td rowspan="1" valign="top">
 			<a href="https://help.syncfusion.com/maui/cartesian-charts/migration">SfCartesianChart</a><br/>
 		</td>
 		<td valign="top">
@@ -81,10 +81,10 @@ To migrate easier from Xamarin to .NET MAUI, we kept most of the components from
 		</td>
 	</tr>
 	<tr>
-	    <td rowspan="1" valign="center">
+	    <td rowspan="3" valign="center">
 			<a href="https://help.syncfusion.com/xamarin/range-slider/getting-started">SfRangeSlider</a><br/>
 		</td>
-		<td rowspan="3" valign="top">
+		<td rowspan="1" valign="top">
 			<a href="https://help.syncfusion.com/maui/slider/migration">SfSlider</a><br/>
 		</td>
 		<td valign="top">
