@@ -476,7 +476,7 @@ We are working to deliver brand-new .NET MAUI controls that can be used in your 
 			<a href="https://help.syncfusion.com/xamarin/border/getting-started">SfBorder</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Obsolete. Use <a href="https://docs.microsoft.com/en-us/dotnet/maui/user-interface/controls/border"> Border</a><br/>.
+			Obsolete. Use <a href="https://docs.microsoft.com/en-us/dotnet/maui/user-interface/controls/border"> Border.</a><br/>
 		</td>
 	</tr>
 	<tr>
@@ -484,7 +484,7 @@ We are working to deliver brand-new .NET MAUI controls that can be used in your 
 			<a href="https://help.syncfusion.com/xamarin/gradient-view/getting-started">SfGradientView</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Obsolete. Use <a href="https://docs.microsoft.com/en-us/dotnet/maui/user-interface/brushes/gradient"> Gradients</a><br/>.
+			Obsolete. Use <a href="https://docs.microsoft.com/en-us/dotnet/maui/user-interface/brushes/gradient"> Gradients.</a><br/>
 		</td>
 	</tr>
 	<tr>
