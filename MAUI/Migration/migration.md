@@ -10,7 +10,7 @@ documentation: ug
 
 # Migrating from Xamarin to .NET MAUI in Syncfusion 
 
-To migrate easier from Xamarin to .NET MAUI, we kept most of the components from the Xamarin were kept in the .NET MAUI. Below are the components with migration guideline details.
+We are working to deliver brand-new .NET MAUI controls that can be used in your migrated .NET MAUI projects with minimal breaking changes. Every release we are delivering a set of controls, and over time we will deliver all the equivalents to our Xamarin.Forms offering. you can find the exclusive migration documents below for each control to replace it with your migrated .NET MAUI application.
 
 <table>
 	<tr>
@@ -75,7 +75,7 @@ To migrate easier from Xamarin to .NET MAUI, we kept most of the components from
 		</td>
 	</tr>
 	<tr>
-	    <td rowspan="3" valign="center">
+	    <td rowspan="2" valign="center">
 			<a href="https://help.syncfusion.com/xamarin/range-slider/getting-started">SfRangeSlider</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
@@ -85,11 +85,6 @@ To migrate easier from Xamarin to .NET MAUI, we kept most of the components from
 	<tr>
 	    <td valign="top">
 			<a href="https://help.syncfusion.com/maui/range-slider/migration">SfRangeSlider</a><br/>
-		</td>
-	</tr>
-	<tr>
-	    <td valign="top">
-			<a href="https://help.syncfusion.com/maui/range-selector/migration">SfRangeSelector</a><br/>
 		</td>
 	</tr>
 	<tr>
@@ -114,6 +109,14 @@ To migrate easier from Xamarin to .NET MAUI, we kept most of the components from
 		</td>
 		<td rowspan="1" valign="top">
 			<a href="https://help.syncfusion.com/maui/linear-gauge/migration">SfLinearGauge</a><br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/datetime-range-navigator/rangenavigator">SfDateTimeRangeNavigator</a><br/>
+		</td>
+	    <td valign="top">
+			<a href="https://help.syncfusion.com/maui/range-selector/migration">SfRangeSelector</a><br/>
 		</td>
 	</tr>
 	<tr>
