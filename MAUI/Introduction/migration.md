@@ -10,7 +10,7 @@ documentation: ug
 
 # Migrating from Xamarin to .NET MAUI in Syncfusion 
 
-We are working to deliver brand-new .NET MAUI controls that can be used in your migrated .NET MAUI projects with minimal breaking changes. Every release we are delivering a set of controls, and over time we will deliver all the equivalents to our Xamarin.Forms offering. you can find the exclusive migration documents below for each control to replace it with your migrated .NET MAUI application.
+Currently working on delivering brand-new .NET MAUI controls that can be used in your migrated .NET MAUI projects with minimal breaking changes. Every release delivers a set of controls, and over time will deliver all the equivalents to our Xamarin.Forms offering. Please find the following exclusive migration documents for each control to replace them with your migrated .NET MAUI application.
 
 <table>
 	<tr>
