@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Migrating from Xamarin to .NET MAUI in Syncfusion 
+# Migrate from Xamarin to .NET MAUI
 
 Currently working on delivering brand-new .NET MAUI controls that can be used in your migrated .NET MAUI projects with minimal breaking changes. Every release delivers a set of controls, and over time will deliver all the equivalents to our Xamarin.Forms offering. Please find the following exclusive migration documents for each control to replace them with your migrated .NET MAUI application.
 
@@ -209,7 +209,15 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 	</tr>
 	<tr>
 	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/progressbar/gettingstarted">SfProgressBar</a><br/>
+			<a href="https://help.syncfusion.com/xamarin/progressbar/gettingstarted">SfLinearProgressBar</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			Underway<br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/progressbar/gettingstarted">SfCircularProgressBar</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
 			Underway<br/>
@@ -476,7 +484,7 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 			<a href="https://help.syncfusion.com/xamarin/border/getting-started">SfBorder</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Obsolete. Use <a href="https://docs.microsoft.com/en-us/dotnet/maui/user-interface/controls/border"> Border.</a><br/>
+			Obsolete. Use <a href="https://docs.microsoft.com/en-us/dotnet/maui/user-interface/controls/border"> Border</a><br/>
 		</td>
 	</tr>
 	<tr>
@@ -484,12 +492,12 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 			<a href="https://help.syncfusion.com/xamarin/gradient-view/getting-started">SfGradientView</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Obsolete. Use <a href="https://docs.microsoft.com/en-us/dotnet/maui/user-interface/brushes/gradient"> Gradients.</a><br/>
+			Obsolete. Use <a href="https://docs.microsoft.com/en-us/dotnet/maui/user-interface/brushes/gradient"> Gradients</a><br/>
 		</td>
 	</tr>
 	<tr>
 	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/numeric-entry/getting-started">SfNumerictextBox</a><br/>
+			<a href="https://help.syncfusion.com/xamarin/numeric-entry/getting-started">SfNumericTextBox</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
 			Underway<br/>
