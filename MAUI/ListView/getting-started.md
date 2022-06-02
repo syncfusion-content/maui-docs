@@ -286,7 +286,7 @@ listView.ItemsLayout = new GridLayout() { SpanCount = 3 };
 
 ## DataSource
 
-The [DataSource](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.DataSource.html) gets raw data and performs data operations such as sorting, filtering, and grouping in SfListView. The data source of the ListView is set by using the `ItemsSource` attribute.
+The [DataSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.html) gets raw data and performs data operations such as sorting, filtering, and grouping in SfListView. The data source of the ListView is set by using the `ItemsSource` attribute.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="8" %}
@@ -312,15 +312,15 @@ The [DataSource](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.DataS
 
 ## Sorting
 
-The SfListView allows you to sort its data by using the [SfListView.DataSource.SortDescriptors](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.DataSource.html#Syncfusion_DataSource_DataSource_SortDescriptors) property. Create a [SortDescriptor](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.SortDescriptor.html) for the property to be sorted, and add it to the `DataSource.SortDescriptors` collection.
+The SfListView allows you to sort its data by using the [SfListView.DataSource.SortDescriptors](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.DataSource.html#Syncfusion_Maui_DataSource_DataSource_SortDescriptors) property. Create a [SortDescriptor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.SortDescriptor.html) for the property to be sorted, and add it to the `DataSource.SortDescriptors` collection.
 
 Refresh the view by calling the [SfListView.RefreshView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_RefreshView) method.
 
 SortDescriptor object holds the following three properties:
 
- * [PropertyName](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.SortDescriptor.html#Syncfusion_DataSource_SortDescriptor_PropertyName): Describes the name of the sorted property.
- * [Direction](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.SortDescriptor.html#Syncfusion_DataSource_SortDescriptor_Direction): Describes an object of type [ListSortDirection](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.ListSortDirection.html) that defines the sorting direction.
- * [Comparer](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.SortDescriptor.html#Syncfusion_DataSource_SortDescriptor_Comparer): Describes a comparer that will be applied when sorting.
+ * [PropertyName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.SortDescriptor.html#Syncfusion_Maui_DataSource_SortDescriptor_PropertyName): Describes the name of the sorted property.
+ * [Direction](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.SortDescriptor.html#Syncfusion_Maui_DataSource_SortDescriptor_Direction): Describes an object of type [ListSortDirection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.ListSortDirection.html) that defines the sorting direction.
+ * [Comparer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.SortDescriptor.html#Syncfusion_Maui_DataSource_SortDescriptor_Comparer): Describes a comparer that will be applied when sorting.
  
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="12" %}
@@ -354,7 +354,7 @@ SortDescriptor object holds the following three properties:
 
 ## Filtering
 
-The SfListView supports you to filter the records in view by setting predicate to the [SfListView.DataSource.Filter](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.DataSource.html#Syncfusion_DataSource_DataSource_Filter) property. Call the [DataSource.RefreshFilter](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.DataSource.html#Syncfusion_DataSource_DataSource_RefreshFilter) method after assigning the `Filter` property for refreshing the view.
+The SfListView supports you to filter the records in view by setting predicate to the [SfListView.DataSource.Filter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.DataSource.html#Syncfusion_Maui_DataSource_DataSource_Filter) property. Call the [DataSource.RefreshFilter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.DataSource.html#Syncfusion_Maui_DataSource_DataSource_RefreshFilter) method after assigning the `Filter` property for refreshing the view.
 
 To filter the items based on the Title property of the underlying data by using `FilterContacts` method, follow the code example:
  
@@ -417,13 +417,13 @@ private bool FilterContacts(object obj)
 
 ## Grouping
 
-By using the [SfListView.DataSource.GroupDescriptors](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.DataSource.html#Syncfusion_DataSource_DataSource_GroupDescriptors) property, the SfListView can display the items in a group. Create [GroupDescriptor](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.GroupDescriptor.html) for the property to be grouped, and add it to the `DataSource.GroupDescriptors` collection.
+By using the [SfListView.DataSource.GroupDescriptors](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.DataSource.html#Syncfusion_Maui_DataSource_DataSource_GroupDescriptors) property, the SfListView can display the items in a group. Create [GroupDescriptor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.GroupDescriptor.html) for the property to be grouped, and add it to the `DataSource.GroupDescriptors` collection.
 
 `GroupDescriptor` object holds the following properties:
 
- * [PropertyName](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.GroupDescriptor.html#Syncfusion_DataSource_GroupDescriptor_PropertyName): Describes the name of the property to be grouped.
- * [KeySelector](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.GroupDescriptor.html#Syncfusion_DataSource_GroupDescriptor_KeySelector): Describes selector to return the group key.
- * [Comparer](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.GroupDescriptor.html#Syncfusion_DataSource_GroupDescriptor_Comparer): Describes the comparer that will be applied when sorting.
+ * [PropertyName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.GroupDescriptor.html#Syncfusion_Maui_DataSource_GroupDescriptor_PropertyName): Describes the name of the property to be grouped.
+ * [KeySelector](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.GroupDescriptor.html#Syncfusion_Maui_DataSource_GroupDescriptor_KeySelector): Describes selector to return the group key.
+ * [Comparer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.GroupDescriptor.html#Syncfusion_Maui_DataSource_GroupDescriptor_Comparer): Describes the comparer that will be applied when sorting.
 
 It also supports you to stick the group header by enabling the [SfListView.IsStickyGroupHeader](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_IsStickyGroupHeader) property.
 
