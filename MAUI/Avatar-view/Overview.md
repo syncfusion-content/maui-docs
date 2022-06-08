@@ -17,7 +17,6 @@ The `SfAvatarView` control for .NET MAUI provides a graphical representation of 
 
 * Supports for adding image and initials.
 * Customizes the height, width, BorderColor, BackgroundColor, and CornerRadius of the view.
-* `AvatarCharacter`: Adds the default vector images.
 * `GroupView`: Supports to add maximum three custom images or initials in a single view.
 * Supports different types of visual styles. 
 * Supports `BadgeView`

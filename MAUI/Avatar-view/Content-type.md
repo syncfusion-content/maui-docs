@@ -19,8 +19,6 @@ The `SfAvatarView` control provides the following five different ways to display
 
 * `Custom` - Adds the user custom image in SfAvatarView.
 
-* `AvatarCharacter` - Sets the default image in SfAvatarView.
-
 * `Group` - Adds maximum three images or initials in a single `SfAvatarView`.
 
 ## Default
