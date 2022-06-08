@@ -13,50 +13,11 @@ documentation: ug
 
 The `SfAvatarView` control provides the following five different ways to display the view:
 
-* `Default` - Adds the default image when initializing without any other source such as image and group.
-
-* `AvatarName` - Set the initial value in SfAvatarView.
+* `Initials` - Set the initial value in SfAvatarView.
 
 * `Custom` - Adds the user custom image in SfAvatarView.
 
 * `Group` - Adds maximum three images or initials in a single `SfAvatarView`.
-
-## Default
-
-Automatic type avatar view is used for displaying the default vector image when initializing without the initials, custom, or group view types.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-    <sfavatar:SfAvatarView ContentType="Default"     
-                            VerticalOptions="Center"
-                            HorizontalOptions="Center"
-                            WidthRequest="50"
-                            HeightRequest="50"
-                            CornerRadius="25">
-    </sfavatar:SfAvatarView>
-	
-{% endhighlight %}
-
-{% highlight C# %}
-
-            Grid mainGrid = new Grid();       
-            SfAvatarView avatarview = new SfAvatarView();
-            avatarview.VerticalOptions = LayoutOptions.Center;
-            avatarview.HorizontalOptions = LayoutOptions.Center;
-            avatarview.WidthRequest = 50;
-            avatarview.HeightRequest = 50;
-            avatarview.CornerRadius = 25;
-            avatarview.ContentType = ContentType.Default;   
-            mainGrid.Children.Add(avatarview);
-            this.Content = mainGrid;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![ShadowImage](ContentTypeImages/CharacterAvatar.jpg)
 
 ## Initials 
 
