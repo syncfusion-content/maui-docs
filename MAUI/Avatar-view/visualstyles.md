@@ -18,7 +18,7 @@ The `SfAvatarView` control supports customization using the following built-in v
 
 ## Custom
 
-Custom type allows you to customize the control, where you can handle the size, colors, images, etc. of the control. Refer to this [documentation](https://help.syncfusion.com/maui/avatar-view/customization).
+Custom type allows you to customize the control, where you can handle the size, colors, images, etc. of the control. Refer to this Customization documentation in SfAvatarView
 
 N> The default visual type is custom.
 

@@ -122,7 +122,7 @@ The `DoubleCharacter` is used for displaying a two-characters text you have set 
 
 ## Custom image
 
-You can add a custom user image by setting the `ImageSource` property. Refer to this [`documentation`](https://help.syncfusion.com/maui/avatar-view/getting-started).
+You can add a custom user image by setting the `ImageSource` property. Refer to the Getting Started Documentation in SfAvatarView
 
 ## GroupView 
 
