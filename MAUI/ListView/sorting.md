@@ -78,10 +78,11 @@ N> If the `PropertyName` in the [SortDescriptor](https://help.syncfusion.com/cr/
   </syncfusion:SfListView>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3 4" %}
 listView.DataSource.SortDescriptors.Add(new SortDescriptor()
 {
-  Comparer = new CustomSortComparer()
+  Comparer = new CustomSortComparer(),
+  PropertyName="ContactName"
 });
 {% endhighlight %}
 {% endtabs %}
