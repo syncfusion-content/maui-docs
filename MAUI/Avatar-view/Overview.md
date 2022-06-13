@@ -11,7 +11,7 @@ documentation: ug
 
 The `SfAvatarView` control for .NET MAUI provides a graphical representation of user image that allows you to customize the view by adding image, background color, icon, text, etc.
 
-![.NET MAUI SfAvataraview overview.](OverviewImages/overview.png)
+![.NET MAUI SfAvataraview overview.](Overview_Images/overview.png)
 
 ## Key features
 

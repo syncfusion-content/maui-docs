@@ -77,7 +77,7 @@ The `SingleCharacter` is used for displaying the first character in the string y
 {% endhighlight %}
 {% endtabs %}
 
-![SingleCharacter](ContentTypeImages/Initial_Single_AvatarView.png)
+![SingleCharacter](ContentType_Images/Initial_Single_AvatarView.png)
 
 ### DoubleCharacter
 
@@ -118,7 +118,7 @@ The `DoubleCharacter` is used for displaying a two-characters text you have set 
 {% endhighlight %}
 {% endtabs %}
 
-![bordercolor](ContentTypeImages/Initial_Double_AvatarView.png)
+![bordercolor](ContentType_Images/Initial_Double_AvatarView.png)
 
 ## Custom image
 
@@ -246,7 +246,7 @@ Set the `InitialsMemberPath` for displaying the initials in the group view. For 
 {% endhighlight %}
 {% endtabs %}
 
-![GroupViewImage](ContentTypeImages/GroupView_SfAvatarView.png)
+![GroupViewImage](ContentType_Images/GroupView_SfAvatarView.png)
 
 ## Add initials only in GroupView
 
@@ -302,7 +302,7 @@ public partial class MainPage : ContentPage, INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![GroupView in ListView](ContentTypeImages/GroupView_Initilasalone.png)
+![GroupView in ListView](ContentType_Images/GroupView_Initilasalone.png)
 
 ## Add both image and initials in a GroupView
 
@@ -328,7 +328,7 @@ You have to set both the image and initials based on what should be added in the
 {% endtabs %}
 
 
-![GroupView in ListView](ContentTypeImages/GroupView_InitilalandImage.png)
+![GroupView in ListView](ContentType_Images/GroupView_InitilalandImage.png)
 
 ## Add GroupView using MVVM
 
@@ -466,6 +466,6 @@ Create model and view model for initializing and assigning a value for adding im
 {% endhighlight %}
 {% endtabs %}
 
-![GroupView in ListView](ContentTypeImages/GroupView_Listview.png)
+![GroupView in ListView](ContentType_Images/GroupView_Listview.png)
 
 

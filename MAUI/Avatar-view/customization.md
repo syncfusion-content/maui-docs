@@ -56,7 +56,7 @@ The border color is used for setting color to the border of SfAvatarView using t
 
 {% endtabs %}
 
-![AvatarControl Border Color](CustomizationImages/BorderColor_AvatarView.png)
+![AvatarControl Border Color](Customization_Images/BorderColor_AvatarView.png)
 
 ### Default background color
 
@@ -102,7 +102,7 @@ The background color for the SfAvatarView control can be set using the `AvatarCo
 
 {% endtabs %}
 
-![Default background color](CustomizationImages/Default_Background_AvatarView.png)
+![Default background color](Customization_Images/Default_Background_AvatarView.png)
 
 ### Automatic background color
 
@@ -156,7 +156,7 @@ The dark background color can be set using `DarkBackground` in the `AvatarColorM
 
 {% endtabs %}
 
-![Dark color](CustomizationImages/Dark_SfAvatarView.png)
+![Dark color](Customization_Images/Dark_SfAvatarView.png)
 
 #### Light color
 
@@ -201,7 +201,7 @@ The light background color can be set using `LightBackground` in the `AvatarColo
 
 {% endtabs %}
 
-![Light color](CustomizationImages/Light_SfAvatarView.png)
+![Light color](Customization_Images/Light_SfAvatarView.png)
 
 ### Gradients
 
@@ -259,7 +259,7 @@ You can also specify a range of colors using `LinearGradientBrush` in `Backgroun
 
 {% endtabs %}
 
-![SfAvatarView control with gradient](CustomizationImages/Gradient_SfAvatarView.png)
+![SfAvatarView control with gradient](Customization_Images/Gradient_SfAvatarView.png)
 
 ## Sizing
 
@@ -314,7 +314,7 @@ You can customize the thickness of the avatar view using the `BorderThickness` p
 
 {% endtabs %}
 
-![AvatarView Border width](CustomizationImages/BordeWidth_AvatarView.png)
+![AvatarView Border width](Customization_Images/BordeWidth_AvatarView.png)
 
 ### Corner radius
 
@@ -355,5 +355,5 @@ You can customize the corner radius of the avatar view using the `CornerRadius` 
 
 {% endtabs %}
 
-![SfAvatarView corner radius](CustomizationImages/CornerRadius_AvatarView.png)
+![SfAvatarView corner radius](Customization_Images/CornerRadius_AvatarView.png)
 

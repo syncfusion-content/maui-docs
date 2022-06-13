@@ -132,5 +132,5 @@ namespace AvatarViewGettingStarted
 
 The following screenshot illustrates the result of the above code.
 
-![.NET MAUI Avatar View Getting Started](GettingStartedImages/Getting_Started_Sample.png) 
+![.NET MAUI Avatar View Getting Started](GettingStarted_Images/Getting_Started_Sample.png) 
 

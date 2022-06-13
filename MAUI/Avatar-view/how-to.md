@@ -74,6 +74,6 @@ xmlns:badge="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
 
 {% endtabs %}
 
-![BadgeView support](HowToImages/BadgeView_AvatarView.jpg)
+![BadgeView support](HowTo_Images/BadgeView_AvatarView.jpg)
 
 To know more about `SfBadgeView` view, refer to this [documentation](https://help.syncfusion.com/maui/badge-view/getting-started).

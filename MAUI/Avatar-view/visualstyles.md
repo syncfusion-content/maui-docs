@@ -229,7 +229,7 @@ The following code sample demonstrates how to define visual style of circle Avat
 
 {% endtabs %}
 
-![SfAvatarView control with circle visual style](VisualStylesImages/VisualCircle_AvatarView.png)
+![SfAvatarView control with circle visual style](VisualStyles_Images/VisualCircle_AvatarView.png)
 
 ## Square
 
@@ -438,5 +438,5 @@ The following code sample demonstrates how to define visual style of square Avat
 {% endhighlight %}
 {% endtabs %}
 
-![SfAvatarView control with square visual style](VisualStylesImages/VisualSquare_AvatarView.png)
+![SfAvatarView control with square visual style](VisualStyles_Images/VisualSquare_AvatarView.png)
 
