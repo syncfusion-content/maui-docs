@@ -1,12 +1,12 @@
 ---
 layout: post
-title: IndicatorColor and  OverLayFill in .NET MAUI Busy Indicator control | Syncfusion
-description: Learn here all about Sizing support in Syncfusion .NET MAUI Busy Indicator (SfBusyIndicator) control and more.
+title: Indicator color and Background in .NET MAUI Busy Indicator control
+description: Learn here all about color support in Syncfusion .NET MAUI SfBusyIndicator control and more.
 platform: maui
 control: BusyIndicator
 documentation: ug
 ---
-# Indicator color and BackgroundColor in .NET MAUI Busy Indicator (SfBusyIndicator)
+# Indicator color and Background in .NET MAUI Busy Indicator (SfBusyIndicator)
 
 ## Indicator color in .NET MAUI BusyIndicator (SfBusyIndicator)
 
@@ -64,7 +64,7 @@ SfBusyIndicator provides option to set the color for indicator. This can be done
 
 ## Background color in .NET MAUI BusyIndicator (SfBusyIndicator)
 
-SfBusyIndicator provides option to set the BackgroundColor. This can be done using `OverlayFill` property. The property type is Brush, so can able set BackgroundColor as Gradients also.
+SfBusyIndicator provides option to set the BackgroundColor. This can be done using `OverlayFill` property.
 
 {% tabs %}
 
@@ -117,6 +117,8 @@ SfBusyIndicator provides option to set the BackgroundColor. This can be done usi
 {% endhighlight %}
 
 {% endtabs %}
+
+The `OverlayFill` property type is Brush, so can able set BackgroundColor as Gradients also.
 
 {% tabs %}
 
