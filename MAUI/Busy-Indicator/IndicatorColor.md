@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Indicator color and Background in .NET MAUI Busy Indicator control
+title: Indicator color and Background in .NET MAUI SfBusyIndicator
 description: Learn here all about color support in Syncfusion .NET MAUI SfBusyIndicator control and more.
 platform: maui
 control: BusyIndicator
 documentation: ug
 ---
-# Indicator color and Background in .NET MAUI Busy Indicator (SfBusyIndicator)
+# Indicator color and Background in .NET MAUI SfBusyIndicator
 
-## Indicator color in .NET MAUI BusyIndicator (SfBusyIndicator)
+## Indicator color in .NET MAUI BusyIndicator control (SfBusyIndicator)
 
 SfBusyIndicator provides option to set the color for indicator. This can be done using `IndicatorColor` property.
 
