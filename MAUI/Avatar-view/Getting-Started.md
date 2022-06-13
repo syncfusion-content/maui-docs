@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Syncfusion .NET MAUI AvatarView
-description: This section will explain how to initialize and use .NET MAUI SfAvataView control in simple way.
+description: This section will explain how to initialize and use the .NET MAUI SfAvatarView control in simple way.
 platform: maui
 control: SfAvatarView
 documentation: ug

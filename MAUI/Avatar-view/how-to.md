@@ -7,7 +7,7 @@ control: AvatarView
 documentation: ug
 ---
 
-# How to
+# How to use different states
 
 ## Set badge view to avatar
 

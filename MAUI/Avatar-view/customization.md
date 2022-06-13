@@ -7,7 +7,7 @@ control: AvatarView
 documentation: ug
 ---
 
-# Customization 
+# Customization in SfAvatarView
 
 ## Customization in .NET MAUI Avatar View(SfAvatarView)
 

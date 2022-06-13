@@ -7,7 +7,7 @@ control: SfAvatarView
 documentation: ug
 ---
 
-# Content Types
+# Content Types in SfAvatarView
 
 ## Avatar Types
 
