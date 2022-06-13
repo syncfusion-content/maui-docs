@@ -2,7 +2,7 @@
 layout: post
 title: Animation Type in .NET MAUI Busy Indicator control | Syncfusion
 description: Learn here all about Animation Type support in Syncfusion .NET MAUI Busy Indicator (SfBusyIndicator) control and more.
-platform: .NET MAUI
+platform: maui
 control: BusyIndicator
 documentation: ug
 ---
@@ -16,54 +16,44 @@ The `AnimationType` property for the SfBusyIndicator allows the users to set one
 
 {% highlight xaml %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    <?xml version="1.0" encoding="utf-8" ?>
+    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
              x:Class="BusyIndicatorSample.MainPage">
 
-    <ContentPage.Content>
-        <core:SfBusyIndicator x:Name="busyindicator"
-                              AnimationType="Cupertino"
-                              Title="Cupertino"
-                              IsRunning="True"
-							  TextColor="Blue"/>
-    </ContentPage.Content>
-</ContentPage>
-
+        <ContentPage.Content>
+            <core:SfBusyIndicator x:Name="busyIndicator"
+                                  IsRunning="True"
+                                  AnimationType="Cupertino" />
+        </ContentPage.Content>
+    </ContentPage>
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight C# %}
 
-using Syncfusion.Maui.Core;
-using Microsoft.Maui;
-using Microsoft.Maui.Controls;
+    using Syncfusion.Maui.Core;
+    using Microsoft.Maui;
+    using Microsoft.Maui.Controls;
 
-namespace BusyIndicatorSample
-{
-    public partial class MainPage : ContentPage
+    namespace BusyIndicatorSample
     {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfBusyIndicator busyIndicator = new SfBusyIndicator()
-            {
-                AnimationType = AnimationType.Cupertino,
-                Title = "Cupertino",
-                IsRunning = "true",
-                TextColor = Colors.Blue
-            };
-
+       public partial class MainPage : ContentPage
+       {
+           public MainPage()
+           {
+               InitializeComponent();
+               SfBusyIndicator busyIndicator = new SfBusyIndicator()
+               {
+                   IsRunning = true,
+                   AnimationType = AnimationType.Cupertino;
+               };
             this.Content = busyIndicator;
-        }
+            }
+       }
     }
-}
 
 {% endhighlight %}
 
 {% endtabs %}
-
-The following gif image contains the types of animation in BusyIndicator.
-
-![AnimationTypes](images/animationtypes.gif)

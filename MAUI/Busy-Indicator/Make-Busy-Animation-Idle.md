@@ -2,7 +2,7 @@
 layout: post
 title: Make Busy Animation Idle in .NET MAUI Busy Indicator | Syncfusion
 description: Learn here all about Make Busy Animation Idle support in Syncfusion .NET MAUI Busy Indicator (SfBusyIndicator) control and more.
-platform: .NET MAUI
+platform: maui
 control: BusyIndicator
 documentation: ug
 ---
@@ -16,54 +16,49 @@ SfBusyIndicator control provides support to determine whether an animation needs
 
 {% highlight xaml %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    <?xml version="1.0" encoding="utf-8" ?>
+    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
              x:Class="BusyIndicatorSample.MainPage">
 
-    <ContentPage.Content>
-        <core:SfBusyIndicator x:Name="busyindicator"
-                              AnimationType="Cupertino"
-                              Title="Cupertino"
-                              IsRunning="false"
-							  TextColor="Blue"/>
-    </ContentPage.Content>
-</ContentPage>
+        <ContentPage.Content>
+            <core:SfBusyIndicator x:Name="busyindicator"
+                                  AnimationType="Cupertino"
+                                  IsRunning="false" />
+        </ContentPage.Content>
+    </ContentPage>
 
 	
 {% endhighlight %}
 
 {% highlight c# %}
 
-using Syncfusion.Maui.Core;
-using Microsoft.Maui;
-using Microsoft.Maui.Controls;
+    using Syncfusion.Maui.Core;
+    using Microsoft.Maui;
+    using Microsoft.Maui.Controls;
 
-namespace BusyIndicatorSample
-{
-    public partial class MainPage : ContentPage
+    namespace BusyIndicatorSample
     {
-        public MainPage()
+        public partial class MainPage : ContentPage
         {
-            InitializeComponent();
-            SfBusyIndicator busyIndicator = new SfBusyIndicator()
+            public MainPage()
             {
-                AnimationType = AnimationType.Cupertino,
-                Title = "Cupertino",
-                IsRunning = "false",
-                TextColor = Colors.Blue
-            };
-
-            this.Content = busyIndicator;
+                InitializeComponent();
+                SfBusyIndicator busyIndicator = new SfBusyIndicator()
+                {
+                    AnimationType = AnimationType.Cupertino,                    
+                    IsRunning = "false"                    
+                };
+                this.Content = busyIndicator;
+            }
         }
     }
-}
 	
 {% endhighlight %}
 
 {% endtabs %}
 
-N> The default value is true.
+N>  The default value is false.
 
 

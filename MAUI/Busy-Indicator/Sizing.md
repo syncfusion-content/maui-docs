@@ -2,7 +2,7 @@
 layout: post
 title: Sizing in .NET MAUI Busy Indicator control | Syncfusion
 description: Learn here all about Sizing support in Syncfusion .NET MAUI Busy Indicator (SfBusyIndicator) control and more.
-platform: .NET MAUI
+platform: maui
 control: BusyIndicator
 documentation: ug
 ---
@@ -16,53 +16,48 @@ Drawing size can be customized in SfBusyIndicator. `SizeFactor` property can be 
 
 {% highlight xaml %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-             x:Class="BusyIndicatorSample.MainPage">
+    <?xml version="1.0" encoding="utf-8" ?>
+    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+                x:Class="BusyIndicatorSample.MainPage">
 
-    <ContentPage.Content>
-        <core:SfBusyIndicator x:Name="busyindicator"
-                              AnimationType="Cupertino"
-                              Title="Cupertino"
-							  SizeFactor="0.7"
-                              IsRunning="True"
-							  TextColor="Blue"/>
-    </ContentPage.Content>
-</ContentPage>
-	
+        <ContentPage.Content>
+            <core:SfBusyIndicator x:Name="busyindicator"
+                                  IsRunning="True"
+                                  AnimationType="Cupertino"
+                                  Title="Loading..."                            
+                                  SizeFactor="0.7"/>           
+        </ContentPage.Content>
+    </ContentPage>
+
 {% endhighlight %}
 
 {% highlight c# %}
 
-using Syncfusion.Maui.Core;
-using Microsoft.Maui;
-using Microsoft.Maui.Controls;
+    using Syncfusion.Maui.Core;
+    using Microsoft.Maui;
+    using Microsoft.Maui.Controls;
 
-namespace BusyIndicatorSample
-{
-    public partial class MainPage : ContentPage
+    namespace BusyIndicatorSample
     {
-        public MainPage()
+        public partial class MainPage : ContentPage
         {
-            InitializeComponent();
-            SfBusyIndicator busyIndicator = new SfBusyIndicator()
+            public MainPage()
             {
-                AnimationType = AnimationType.Cupertino,
-                Title = "Cupertino",
-                IsRunning = "true",
-                TextColor = Colors.Blue,
-				SizeFactor = 0.7;
-            };
-
-            this.Content = busyIndicator;
+                InitializeComponent();
+                SfBusyIndicator busyIndicator = new SfBusyIndicator()
+                {
+                    IsRunning = true,
+                    AnimationType = AnimationType.Cupertino,
+                    Title = "Loading...",
+                    SizeFactor = 0.7
+                };
+                this.Content = busyIndicator;
+            }
         }
     }
-}
 
 {% endhighlight %}
 
 {% endtabs %}
-
-![Height and width](images/heightand width.png)  

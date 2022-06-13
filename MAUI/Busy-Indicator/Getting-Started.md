@@ -13,9 +13,9 @@ documentation: ug
 
 This section explains you the steps to configure a SfBusyIndicator control in a real-time scenario and also provides a walk-through on some of the customization features available in SfBusyIndicator control.
 
-## Adding a SfEffectsView reference
+## Adding a SfBusyIndicator reference
 
-Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add [SfBusyIndicatorView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and then install it.
+Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add [SfBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and then install it.
 
 ## Handler registration 
 
@@ -28,9 +28,9 @@ Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org
     using Microsoft.Maui.Controls.Compatibility;
     using Microsoft.Maui.Controls.Hosting;
     using Microsoft.Maui.Controls.Xaml;
-   `using Syncfusion.Maui.Core.Hosting;`
+    `using Syncfusion.Maui.Core.Hosting`;
 
-    namespace EffectsViewMauiSample
+    namespace BusyIndicatorSample
     {
       public static class MauiProgram
       {
@@ -46,15 +46,13 @@ Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org
             });
 
             return builder.Build();
-         }
-       
+         }      
       }
-
     }     
 
 {% endhighlight %} 
 
-## Create a Simple BusyIndicator
+## Create a Simple SfBusyIndicator
 
 The SfBusyIndicator control is configured entirely in C# code or by using XAML markup. The following steps explain on how to create a SfBusyIndicator and configure its elements,
 
@@ -72,7 +70,7 @@ Step 2: Add the namespace as shown in the following code sample.
 	
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
     using Syncfusion.Maui.Core;
 
@@ -87,7 +85,8 @@ Step 3: Set the control to content in `ContentPage`.
 {% highlight xaml %}
 
     <ContentPage.Content> 
-         <core:SfBusyIndicator /> 
+         <core:SfBusyIndicator x:Name="busyIndicator"
+                               IsRunning = "True"/> 
     </ContentPage.Content>  
 
 
@@ -97,88 +96,74 @@ Step 3: Set the control to content in `ContentPage`.
 
     using Syncfusion.Maui.Core;
 
-    namespace EffectsViewMauiSample   
+    namespace BusyIndicatorSample   
     {  
-    public partial class MainPage : ContentPage                  
-    {   
-    
-       SfEffectsView effectsView;
-
-        public MainPage()   
+        public partial class MainPage : ContentPage                  
         {   
-            InitializeComponent();       
-            busyIndicator = new SfBusyIndicator(); 
-            this.Content = busyIndicator;  
-        }  
-    }  
-    
+           SfEffectsView effectsView;
+
+           public MainPage()   
+           {   
+               InitializeComponent();       
+               busyIndicator = new SfBusyIndicator(){IsRunning = true}; 
+               this.Content = busyIndicator;  
+           }  
+        }      
     }  
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Effects View Initialization](Getting-Started_images/RippleEffect.gif)
-
-
 ## Setting Animation Type
 
-SfBusyIndicator provides 15 predefined animation types like Ball, Battery, Globe and so on. User can select any one of the animation types using `AnimationType`property.
+SfBusyIndicator provide some predefined animation types like Cupertino, LinearMaterial, CircularMaterial. User can select any one of the animation types using `AnimationType` property.
 
-Following example depicts the battery type animation for SfBusyIndicator. 
+Following example depicts the Cupertino type animation for SfBusyIndicator. 
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    <?xml version="1.0" encoding="utf-8" ?>
+    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
              x:Class="BusyIndicatorSample.MainPage">
 
-    <ContentPage.Content>
-        <core:SfBusyIndicator x:Name="busyindicator"
-                              AnimationType="Cupertino"
-                              Title="Cupertino"
-                              IsRunning="True"
-							  TextColor="Blue"
-							  />
-    </ContentPage.Content>
-</ContentPage>
+        <ContentPage.Content>
+            <core:SfBusyIndicator x:Name="busyIndicator"
+                                  IsRunning="True"
+                                  AnimationType="Cupertino" />
+        </ContentPage.Content>
+    </ContentPage>
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight C# %}
 
-using Syncfusion.Maui.Core;
-using Microsoft.Maui;
-using Microsoft.Maui.Controls;
+    using Syncfusion.Maui.Core;
+    using Microsoft.Maui;
+    using Microsoft.Maui.Controls;
 
-namespace BusyIndicatorSample
-{
-    public partial class MainPage : ContentPage
+    namespace BusyIndicatorSample
     {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfBusyIndicator busyIndicator = new SfBusyIndicator()
-            {
-                AnimationType = AnimationType.Cupertino,
-                Title = "Cupertino",
-                IsRunning = "true",
-                TextColor = Colors.Blue
-            };
-
+       public partial class MainPage : ContentPage
+       {
+           public MainPage()
+           {
+               InitializeComponent();
+               SfBusyIndicator busyIndicator = new SfBusyIndicator()
+               {
+                   IsRunning = true,
+                   AnimationType = AnimationType.Cupertino;
+               };
             this.Content = busyIndicator;
-        }
+            }
+       }
     }
-}
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![OverView image for BusyIndicator](images/Busyindicator.png)
-
-You can find the complete getting started sample from this [link.](https://github.com/SyncfusionExamples/xamarin.forms-busyindicator)

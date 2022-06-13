@@ -2,7 +2,7 @@
 layout: post
 title: Migrating from Xamarin to .NET MAUI SfBusyIndicator | Syncfusion 
 description: Learn here all about Migrating from Syncfusion Xamarin BusyIndicator to Syncfusion .NET MAUI BusyIndicator control and more.
-platform: .NET MAUI
+platform: maui
 control: SfBusyIndicator
 documentation: ug
 ---  
@@ -30,23 +30,23 @@ To migrate easier from Xamarin SfBusyIndicator to .NET MAUI SfBusyIndicator, we 
 <th>.NET MAUI SfBusyIndicator</th>
 <th>Description</th></tr>
 <tr>
-<td>{{'[IsBusy](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfBusyIndicator.html#Syncfusion_XForms_EffectsView_SfEffectsView_AutoResetEffect)'| markdownify }}</td>
-<td>{{'[IsRunning](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfEffectsView_AutoResetEffects)'| markdownify }}</td>
+<td> IsBusy </td>
+<td>IsRunning</td>
 <td>Gets or sets a value indicating whether gets or sets the value of the IsBusy property in busy indicator. It determines whether the animation of indicator to be shown or not.</td></tr>
 <tr>
-<td>{{'[Duration](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfBusyIndicator.html#Syncfusion_XForms_EffectsView_SfEffectsView_HighlightColor)'| markdownify }}</td>
-<td>{{'[DurationFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfEffectsView_HighlightBackground)'| markdownify }}</td>
+<td>Duration</td>
+<td>DurationFactor</td>
 <td>Gets or sets the value of the Duration property. It used to change the speed of animation to finish a cycle.</td></tr>
 <tr>
-<td>{{'[ViewBoxWidth](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfBusyIndicator.html#Syncfusion_XForms_EffectsView_SfEffectsView_RippleColor)' | markdownify }{'[ViewBoxHeight](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfBusyIndicator.html#Syncfusion_XForms_EffectsView_SfEffectsView_RippleColor)' | markdownify }}</td>
-<td>{{'[SizeFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfEffectsView_RippleBackground)'| markdownify }}</td>
+<td>ViewBoxWidth ViewBoxHeight</td>
+<td>SizeFactor</td>
 <td>Gets or set the size factor of the indicator. This is not applicable for all animation types.</td></tr>
 <tr>
-<td>{{'[TextSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfBusyIndicator.html#Syncfusion_XForms_EffectsView_SfEffectsView_RippleColor)' | markdownify }}</td>
-<td>{{'[FontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfEffectsView_RippleBackground)'| markdownify }}</td>
-<td>Gets or sets the brush of the ripple.</td></tr>
-<tr>
-<td>{{'[OverlayColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfBusyIndicator.html#Syncfusion_XForms_EffectsView_SfEffectsView_SelectionColor)' | markdownify }}</td>
-<td>{{'[OverlayFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfEffectsView_SelectionBackground)'| markdownify }}</td>
+<td>OverlayColor</td>
+<td>OverlayFill</td>
 <td>Gets or sets the overlay fill brush</td></tr>
+<tr>
+<td>TextSize</td>
+<td>FontSize</td>
+<td>Gets or sets the font size of the title.</td></tr>
 </table> 
