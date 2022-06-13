@@ -62,9 +62,9 @@ SfBusyIndicator provides option to set the color for indicator. This can be done
 
 {% endtabs %}
 
-## Background color in .NET MAUI BusyIndicator (SfBusyIndicator)
+## Background in .NET MAUI BusyIndicator (SfBusyIndicator)
 
-SfBusyIndicator provides option to set the BackgroundColor. This can be done using `OverlayFill` property.
+SfBusyIndicator provides option to set the Background. This can be done using `OverlayFill` property.
 
 {% tabs %}
 
@@ -118,7 +118,7 @@ SfBusyIndicator provides option to set the BackgroundColor. This can be done usi
 
 {% endtabs %}
 
-The `OverlayFill` property type is Brush, so can able set BackgroundColor as Gradients also.
+The `OverlayFill` property type is Brush, so can able set Background as Gradients also.
 
 {% tabs %}
 
