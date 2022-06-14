@@ -57,3 +57,7 @@ The `AnimationType` property for the SfBusyIndicator allows the users to set one
 {% endhighlight %}
 
 {% endtabs %}
+
+The following image illustrates the animation type
+
+![Animation Types](Images/AnimationType/Animationtype.gif)

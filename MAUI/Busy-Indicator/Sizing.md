@@ -61,3 +61,7 @@ Drawing size can be customized in SfBusyIndicator. `SizeFactor` property can be 
 {% endhighlight %}
 
 {% endtabs %}
+
+The following screenshot illustrates the result of the above code.
+
+![Size Factor](Images/Sizing/Sizefactor.png)

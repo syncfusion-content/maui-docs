@@ -25,7 +25,7 @@ The `DurationFactor` property of SfBusyIndicator indicates timeline for completi
         <ContentPage.Content>
             <core:SfBusyIndicator x:Name="busyIndicator"
                                   IsRunning="True"
-                                  AnimationType="Cupertino"
+                                  AnimationType="CircularMaterial"
                                   DurationFactor="0.2" />
         </ContentPage.Content>
     </ContentPage>
@@ -48,7 +48,7 @@ The `DurationFactor` property of SfBusyIndicator indicates timeline for completi
                SfBusyIndicator busyIndicator = new SfBusyIndicator()
                {
                    IsRunning = true,
-                   AnimationType = AnimationType.Cupertino;
+                   AnimationType = AnimationType.CircularMaterial;
                    DurationFactor= 0.2
                };
                this.Content = busyIndicator;
@@ -59,6 +59,10 @@ The `DurationFactor` property of SfBusyIndicator indicates timeline for completi
 {% endhighlight %}
 
 {% endtabs %}
+
+The following screenshot illustrates the result of the above code.
+
+![Duration](Images/Duration/Duration.gif)
 
 
 
