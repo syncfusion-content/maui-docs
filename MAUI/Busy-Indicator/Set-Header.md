@@ -64,6 +64,10 @@ SfBusyIndicator provides option to set the text that indicates the information r
 
 {% endtabs %}
 
+The following screenshot illustrates the result of the above code.
+
+![Title](Images/SetHeader/Setheader.png)
+
 ## TitlePlacement
 
 SfBusyIndicator provides options to set the `Title` at the top or bottom of the Busy Indicator. The `Title` can be set using the `TitlePlacement` property. When the `Title` is not needed, set the `TitlePlacement` property of SfBusyIndicator to None.
@@ -110,6 +114,60 @@ SfBusyIndicator provides options to set the `Title` at the top or bottom of the 
                     Title = "Loading...",
                     TextColor = Colors.Red,
                     TitlePlacement = BusyIndicatorTitlePlacement.Top
+                };
+                this.Content = busyIndicator;
+            }
+        }
+    }
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## TextColor
+
+SfBusyIndicator provides options to change the color of the text. The color of the text can be changed using the `TextColor` property.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+    <?xml version="1.0" encoding="utf-8" ?>
+    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+                x:Class="BusyIndicatorSample.MainPage">
+
+        <ContentPage.Content>
+            <core:SfBusyIndicator x:Name="busyindicator"
+                                  IsRunning="True"
+                                  AnimationType="Cupertino"
+                                  Title="Loading..."
+                                  TextColor = "Red" />           
+        </ContentPage.Content>
+    </ContentPage>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+    using Syncfusion.Maui.Core;
+    using Microsoft.Maui;
+    using Microsoft.Maui.Controls;
+
+    namespace BusyIndicatorSample
+    {
+        public partial class MainPage : ContentPage
+        {
+            public MainPage()
+            {
+                InitializeComponent();
+                SfBusyIndicator busyIndicator = new SfBusyIndicator()
+                {
+                    IsRunning = true,
+                    AnimationType = AnimationType.Cupertino,
+                    Title = "Loading...",
+                    TextColor = Colors.Red
                 };
                 this.Content = busyIndicator;
             }
@@ -178,59 +236,11 @@ SfBusyIndicator provides options to set the space between the indicator and the 
 
 {% endtabs %}
 
-## TextColor
+The following screenshot illustrates the result of the above code.
 
-SfBusyIndicator provides options to change the color of the text. The color of the text can be changed using the `TextColor` property.
+![TitleSpacing](Images/SetHeader/Spacing.png)
 
-{% tabs %}
 
-{% highlight xaml %}
-
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-                x:Class="BusyIndicatorSample.MainPage">
-
-        <ContentPage.Content>
-            <core:SfBusyIndicator x:Name="busyindicator"
-                                  IsRunning="True"
-                                  AnimationType="Cupertino"
-                                  Title="Loading..."
-                                  TextColor = "Red" />           
-        </ContentPage.Content>
-    </ContentPage>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-    using Syncfusion.Maui.Core;
-    using Microsoft.Maui;
-    using Microsoft.Maui.Controls;
-
-    namespace BusyIndicatorSample
-    {
-        public partial class MainPage : ContentPage
-        {
-            public MainPage()
-            {
-                InitializeComponent();
-                SfBusyIndicator busyIndicator = new SfBusyIndicator()
-                {
-                    IsRunning = true,
-                    AnimationType = AnimationType.Cupertino,
-                    Title = "Loading...",
-                    TextColor = Colors.Red
-                };
-                this.Content = busyIndicator;
-            }
-        }
-    }
-
-{% endhighlight %}
-
-{% endtabs %}
 
 ## Font customization
 
@@ -292,3 +302,9 @@ SfBusyIndicator provides options to customize the title text.  The title text ca
 {% endhighlight %}
 
 {% endtabs %}
+
+The following screenshot illustrates the result of the above code.
+
+![FontCustomization](Images/SetHeader/Fontattributes(bold).png)
+
+![FontCustomization](Images/SetHeader/Fontattributes(italic).png)
