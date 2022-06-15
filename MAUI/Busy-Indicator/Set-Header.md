@@ -27,7 +27,7 @@ SfBusyIndicator provides option to set the text that indicates the information r
         <ContentPage.Content>
             <core:SfBusyIndicator x:Name="busyindicator"
                                   IsRunning="True"
-                                  AnimationType="Cupertino"
+                                  AnimationType="CircularMaterial"
                                   Title="Loading..." />
         </ContentPage.Content>
     </ContentPage>
@@ -51,7 +51,7 @@ SfBusyIndicator provides option to set the text that indicates the information r
                 SfBusyIndicator busyIndicator = new SfBusyIndicator()
                 {
                     IsRunning = true,
-                    AnimationType = AnimationType.Cupertino,
+                    AnimationType = AnimationType.CircularMaterial,
                     Title = "Loading...",
                 };
                 this.Content = busyIndicator;
@@ -67,6 +67,65 @@ SfBusyIndicator provides option to set the text that indicates the information r
 The following screenshot illustrates the result of the above code.
 
 ![Title](Images/SetHeader/Setheader.png)
+
+## TextColor
+
+SfBusyIndicator provides options to change the color of the text. The color of the text can be changed using the `TextColor` property.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+    <?xml version="1.0" encoding="utf-8" ?>
+    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+                x:Class="BusyIndicatorSample.MainPage">
+
+        <ContentPage.Content>
+            <core:SfBusyIndicator x:Name="busyindicator"
+                                  IsRunning="True"
+                                  AnimationType="CircularMaterial"
+                                  Title="Loading..."
+                                  TextColor = "Red" />           
+        </ContentPage.Content>
+    </ContentPage>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+    using Syncfusion.Maui.Core;
+    using Microsoft.Maui;
+    using Microsoft.Maui.Controls;
+
+    namespace BusyIndicatorSample
+    {
+        public partial class MainPage : ContentPage
+        {
+            public MainPage()
+            {
+                InitializeComponent();
+                SfBusyIndicator busyIndicator = new SfBusyIndicator()
+                {
+                    IsRunning = true,
+                    AnimationType = AnimationType.CircularMaterial,
+                    Title = "Loading...",
+                    TextColor = Colors.Red
+                };
+                this.Content = busyIndicator;
+            }
+        }
+    }
+
+{% endhighlight %}
+
+{% endtabs %}
+
+The following screenshot illustrates the result of the above code.
+
+![Title Color](Images/SetHeader/TitleColor.png)
+
 
 ## TitlePlacement
 
@@ -85,7 +144,7 @@ SfBusyIndicator provides options to set the `Title` at the top or bottom of the 
         <ContentPage.Content>
             <core:SfBusyIndicator x:Name="busyindicator"
                                   IsRunning="True"
-                                  AnimationType="Cupertino"
+                                  AnimationType="CircularMaterial"
                                   Title="Loading..."
                                   TextColor = "Red" 
                                   TitlePlacement="Top"/>           
@@ -110,7 +169,7 @@ SfBusyIndicator provides options to set the `Title` at the top or bottom of the 
                 SfBusyIndicator busyIndicator = new SfBusyIndicator()
                 {
                     IsRunning = true,
-                    AnimationType = AnimationType.Cupertino,
+                    AnimationType = AnimationType.CircularMaterial,
                     Title = "Loading...",
                     TextColor = Colors.Red,
                     TitlePlacement = BusyIndicatorTitlePlacement.Top
@@ -124,59 +183,10 @@ SfBusyIndicator provides options to set the `Title` at the top or bottom of the 
 
 {% endtabs %}
 
-## TextColor
+The following screenshot illustrates the result of the above code.
 
-SfBusyIndicator provides options to change the color of the text. The color of the text can be changed using the `TextColor` property.
+![Title Placement](Images/SetHeader/TitlePlacement.png)
 
-{% tabs %}
-
-{% highlight xaml %}
-
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-                x:Class="BusyIndicatorSample.MainPage">
-
-        <ContentPage.Content>
-            <core:SfBusyIndicator x:Name="busyindicator"
-                                  IsRunning="True"
-                                  AnimationType="Cupertino"
-                                  Title="Loading..."
-                                  TextColor = "Red" />           
-        </ContentPage.Content>
-    </ContentPage>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-    using Syncfusion.Maui.Core;
-    using Microsoft.Maui;
-    using Microsoft.Maui.Controls;
-
-    namespace BusyIndicatorSample
-    {
-        public partial class MainPage : ContentPage
-        {
-            public MainPage()
-            {
-                InitializeComponent();
-                SfBusyIndicator busyIndicator = new SfBusyIndicator()
-                {
-                    IsRunning = true,
-                    AnimationType = AnimationType.Cupertino,
-                    Title = "Loading...",
-                    TextColor = Colors.Red
-                };
-                this.Content = busyIndicator;
-            }
-        }
-    }
-
-{% endhighlight %}
-
-{% endtabs %}
 
 ## TitleSpacing
 
@@ -195,7 +205,7 @@ SfBusyIndicator provides options to set the space between the indicator and the 
         <ContentPage.Content>
             <core:SfBusyIndicator x:Name="busyindicator"
                                   IsRunning="True"
-                                  AnimationType="Cupertino"
+                                  AnimationType="CircularMaterial"
                                   Title="Loading..."
                                   TextColor = "Red" 
                                   TitlePlacement="Top"
@@ -221,7 +231,7 @@ SfBusyIndicator provides options to set the space between the indicator and the 
                 SfBusyIndicator busyIndicator = new SfBusyIndicator()
                 {
                     IsRunning = true,
-                    AnimationType = AnimationType.Cupertino,
+                    AnimationType = AnimationType.CircularMaterial,
                     Title = "Loading...",
                     TextColor = Colors.Red,
                     TitlePlacement = BusyIndicatorTitlePlacement.Top,
@@ -260,7 +270,7 @@ SfBusyIndicator provides options to customize the title text.  The title text ca
         <ContentPage.Content>
             <core:SfBusyIndicator x:Name="busyindicator"
                                   IsRunning="True"
-                                  AnimationType="Cupertino"
+                                  AnimationType="CircularMaterial"
                                   Title="Loading..."
                                   TextColor = "Red" 
                                   FontSize = "16"
@@ -287,7 +297,7 @@ SfBusyIndicator provides options to customize the title text.  The title text ca
                 SfBusyIndicator busyIndicator = new SfBusyIndicator()
                 {
                     IsRunning = true,
-                    AnimationType = AnimationType.Cupertino,
+                    AnimationType = AnimationType.CircularMaterial,
                     Title = "Loading...",
                     TextColor = Colors.Red,
                     FontSize = 16,
@@ -307,4 +317,3 @@ The following screenshot illustrates the result of the above code.
 
 ![FontCustomization](Images/SetHeader/Fontattributes(bold).png)
 
-![FontCustomization](Images/SetHeader/Fontattributes(italic).png)

@@ -10,7 +10,7 @@ documentation: ug
 
 ## Animation Type in .NET MAUI BusyIndicator (SfBusyIndicator)
 
-The `AnimationType` property for the SfBusyIndicator allows the users to set one of the animations from the built-in animations. The different types of animations are `Cupertino`, `CircularMaterial`, `LinearMaterial`.
+The `AnimationType` property for the SfBusyIndicator allows the users to set one of the animations from the built-in animations. The different types of animations are `CircularMaterial`, `LinearMaterial`, `Cupertino`.
 
 {% tabs %}
 
@@ -25,7 +25,7 @@ The `AnimationType` property for the SfBusyIndicator allows the users to set one
         <ContentPage.Content>
             <core:SfBusyIndicator x:Name="busyIndicator"
                                   IsRunning="True"
-                                  AnimationType="Cupertino" />
+                                  AnimationType="CircularMaterial" />
         </ContentPage.Content>
     </ContentPage>
 
@@ -47,7 +47,7 @@ The `AnimationType` property for the SfBusyIndicator allows the users to set one
                SfBusyIndicator busyIndicator = new SfBusyIndicator()
                {
                    IsRunning = true,
-                   AnimationType = AnimationType.Cupertino;
+                   AnimationType = AnimationType.CircularMaterial;
                };
             this.Content = busyIndicator;
             }
@@ -58,6 +58,6 @@ The `AnimationType` property for the SfBusyIndicator allows the users to set one
 
 {% endtabs %}
 
-The following image illustrates the animation type
+The following gif image contains the types of animation in BusyIndicator.
 
 ![Animation Types](Images/AnimationType/Animationtype.gif)

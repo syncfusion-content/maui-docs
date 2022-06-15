@@ -25,7 +25,7 @@ Drawing size can be customized in SfBusyIndicator. `SizeFactor` property can be 
         <ContentPage.Content>
             <core:SfBusyIndicator x:Name="busyindicator"
                                   IsRunning="True"
-                                  AnimationType="Cupertino"
+                                  AnimationType="CircularMaterial"
                                   Title="Loading..."                            
                                   SizeFactor="0.7"/>           
         </ContentPage.Content>
@@ -49,7 +49,7 @@ Drawing size can be customized in SfBusyIndicator. `SizeFactor` property can be 
                 SfBusyIndicator busyIndicator = new SfBusyIndicator()
                 {
                     IsRunning = true,
-                    AnimationType = AnimationType.Cupertino,
+                    AnimationType = AnimationType.CircularMaterial,
                     Title = "Loading...",
                     SizeFactor = 0.7
                 };

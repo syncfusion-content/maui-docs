@@ -134,7 +134,7 @@ Following example depicts the Cupertino type animation for SfBusyIndicator.
         <ContentPage.Content>
             <core:SfBusyIndicator x:Name="busyIndicator"
                                   IsRunning="True"
-                                  AnimationType="Cupertino" />
+                                  AnimationType="CircularMaterial" />
         </ContentPage.Content>
     </ContentPage>
 
@@ -156,7 +156,7 @@ Following example depicts the Cupertino type animation for SfBusyIndicator.
                SfBusyIndicator busyIndicator = new SfBusyIndicator()
                {
                    IsRunning = true,
-                   AnimationType = AnimationType.Cupertino;
+                   AnimationType = AnimationType.CircularMaterial;
                };
             this.Content = busyIndicator;
             }

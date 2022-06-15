@@ -24,7 +24,7 @@ SfBusyIndicator control provides support to determine whether an animation needs
 
         <ContentPage.Content>
             <core:SfBusyIndicator x:Name="busyindicator"
-                                  AnimationType="Cupertino"
+                                  AnimationType="CircularMaterial"
                                   IsRunning="false" />
         </ContentPage.Content>
     </ContentPage>
@@ -47,7 +47,7 @@ SfBusyIndicator control provides support to determine whether an animation needs
                 InitializeComponent();
                 SfBusyIndicator busyIndicator = new SfBusyIndicator()
                 {
-                    AnimationType = AnimationType.Cupertino,                    
+                    AnimationType = AnimationType.CircularMaterial,                    
                     IsRunning = "false"                    
                 };
                 this.Content = busyIndicator;

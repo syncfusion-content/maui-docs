@@ -25,7 +25,7 @@ SfBusyIndicator provides option to set the color for indicator. This can be done
         <ContentPage.Content>
             <core:SfBusyIndicator x:Name="busyindicator"
                                   IsRunning="True"
-                                  AnimationType="Cupertino"
+                                  AnimationType="CircularMaterial"
                                   Title="Loading..."
                                   IndicatorColor="Red"/>           
         </ContentPage.Content>
@@ -49,7 +49,7 @@ SfBusyIndicator provides option to set the color for indicator. This can be done
                 SfBusyIndicator busyIndicator = new SfBusyIndicator()
                 {
                     IsRunning = true,
-                    AnimationType = AnimationType.Cupertino,
+                    AnimationType = AnimationType.CircularMaterial,
                     Title = "Loading...",
                     IndicatorColor = Colors.Red
                 };
@@ -62,9 +62,7 @@ SfBusyIndicator provides option to set the color for indicator. This can be done
 
 {% endtabs %}
 
-The following screenshot illustrates the result of the above code.
 
-![Indicator color](Images/IndicatorColor/Indicatorcolor.png)
 
 ## Background in .NET MAUI BusyIndicator (SfBusyIndicator)
 
@@ -83,7 +81,7 @@ SfBusyIndicator provides option to set the Background. This can be done using `O
         <ContentPage.Content>
             <core:SfBusyIndicator x:Name="busyindicator"
                                   IsRunning="True"
-                                  AnimationType="Cupertino"
+                                  AnimationType="CircularMaterial"
                                   Title="Loading..."
                                   IndicatorColor="Red"
                                   OverlayFill = "Yellow"/>           
@@ -108,7 +106,7 @@ SfBusyIndicator provides option to set the Background. This can be done using `O
                 SfBusyIndicator busyIndicator = new SfBusyIndicator()
                 {
                     IsRunning = true,
-                    AnimationType = AnimationType.Cupertino,
+                    AnimationType = AnimationType.CircularMaterial,
                     Title = "Loading...",
                     IndicatorColor = Colors.Red,
                     OverlayFill = Colors.Yellow
@@ -122,9 +120,6 @@ SfBusyIndicator provides option to set the Background. This can be done using `O
 
 {% endtabs %}
 
-The following screenshot illustrates the result of the above code.
-
-![Background](Images/IndicatorColor/Backgroundcolor.png)
 
 The `OverlayFill` property type is Brush, so can able set Background as Gradients also.
 
@@ -140,6 +135,7 @@ The `OverlayFill` property type is Brush, so can able set Background as Gradient
 
         <ContentPage.Content>
            <core:SfBusyIndicator IsRunning="True" 
+                                 AnimationType = "CircularMaterial"
                                  IndicatorColor="#e64c93" 
                                  Title="Loading...">
                 <core:SfBusyIndicator.OverlayFill>
@@ -172,7 +168,7 @@ The `OverlayFill` property type is Brush, so can able set Background as Gradient
                 SfBusyIndicator busyIndicator = new SfBusyIndicator()
                 {
                     IsRunning = true,
-                    AnimationType = AnimationType.Cupertino,
+                    AnimationType = AnimationType.CircularMaterial,
                     Title = "Loading...",
                     IndicatorColor = Colors.Red,
                     OverlayFill = new RadialGradientBrush()
