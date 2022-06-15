@@ -11,7 +11,7 @@ documentation: ug
 
 ## Avatar Types
 
-The `SfAvatarView` control provides the following five different ways to display the view:
+The `SfAvatarView` control provides the following three different ways to display the view:
 
 * `Initials` - Set the initial value in SfAvatarView.
 
@@ -206,7 +206,6 @@ Set the `InitialsMemberPath` for displaying the initials in the group view. For 
                           VerticalOptions="Center"
                           HorizontalOptions="Center"
                           GroupSource="{Binding CollectionImage}"
-                          InitialsMemberPath="Name"
                           BackgroundColorMemberPath="Colors"
                           ImageSourceMemberPath="ImageSource"
                           WidthRequest="50"
@@ -234,7 +233,6 @@ Set the `InitialsMemberPath` for displaying the initials in the group view. For 
             avatarview.CornerRadius = 25;
             avatarview.ContentType = ContentType.Group;
             avatarview.GroupSource = emp.CollectionImage;
-            avatarview.InitialsMemberPath = "Name";
             avatarview.ImageSourceMemberPath = "ImageSource";
             avatarview.BackgroundColorMemberPath = "Colors";
             this.BindingContext = emp;
@@ -260,16 +258,17 @@ You can set the initials only in the group view by setting the `InitialsMemberPa
         <local:EmployeeViewMdoel/>
 </ContentPage.BindingContext>
 
-   <sfavatar:SfAvatarView ContentType="Group"                  
+    <sfavatar:SfAvatarView ContentType="Group"                         
                           VerticalOptions="Center"
                           HorizontalOptions="Center"
                           GroupSource="{Binding CollectionImage}"
-                          InitialsMemberPath="Name"
                           BackgroundColorMemberPath="Colors"
+                          ImageSourceMemberPath="ImageSource"
+                          InitialsMemberPath="Name"
                           WidthRequest="50"
                           HeightRequest="50"
                           CornerRadius="25">
-                </sfavatar:SfAvatarView>
+    </sfavatar:SfAvatarView>
 
 {% endhighlight %}
 
@@ -292,6 +291,7 @@ public partial class MainPage : ContentPage, INotifyPropertyChanged
             avatarview.ContentType = ContentType.Group;
             avatarview.GroupSource = emp.CollectionImage;
             avatarview.InitialsMemberPath = "Name";
+			avatarview.ImageSourceMemberPath = "ImageSource";
             avatarview.BackgroundColorMemberPath = "Colors";
             this.BindingContext = emp;
             mainGrid.Children.Add(avatarview);
@@ -329,143 +329,4 @@ You have to set both the image and initials based on what should be added in the
 
 
 ![GroupView in ListView](ContentType_Images/GroupView_InitilalandImage.png)
-
-## Add GroupView using MVVM
-
-Create model and view model for initializing and assigning a value for adding image or initials in the `SfAvatarView`. The following code sample demonstrates how to use the `GroupView` property using MVVM pattern.
-
-{% tabs %}
-{% highlight c# %}
-
-//Model.cs
-   public class Model
-    {      
-        public string Name { get; set; }
-
-        public string Images { get; set; }
-    }
-
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
-{% highlight c# %}
-
-//ViewModel.cs
- public class AvatarViewModel
-    {
-       
-        /// <summary>
-        /// Gets or sets the value for PeopleCollection field.
-        /// </summary>
-        public ObservableCollection<Model> PeopleCollection { get; set; }
-
-        /// <summary>
-        /// Gets oe sets the value for the group view collections.
-        /// </summary>
-        public ObservableCollection<Model> GroupViewCollection { get; set; }
-
-        /// <summary>
-        /// AvatarViewModel
-        /// </summary>
-        /// <param name="count">Count value</param>
-        public AvatarViewModel(int count)
-        {
-            PopulateModel();
-            PopulatePeopleCollection(count);
-        }
-
-        /// <summary>
-        /// Static count value.
-        /// </summary>
-        static int staticcount = 0;
-
-        /// <summary>
-        /// Change the collections for each group.
-        /// </summary>
-        /// <param name="count">count value</param>
-        private void PopulatePeopleCollection(int count)
-        {
-            PeopleCollection = new ObservableCollection<Model>();
-            for (int i = 0; i < count; i++)
-            {
-                while (true)
-                {
-                    if (GroupViewCollection.Count <= staticcount)
-                        staticcount = 0;
-                    var person = GroupViewCollection[staticcount++];
-                    if (!PeopleCollection.Contains(person))
-                    {
-                        PeopleCollection.Add(person);
-                        break;
-                    }
-                }
-            }
-
-        }
-
-        /// <summary>
-        /// To add the name and images.
-        /// </summary>
-        private void PopulateModel()
-        {
-            GroupViewCollection = new ObservableCollection<Model>();
-            GroupViewCollection.Add(new Model() { Name = "Adriana", Images = "Adriana.png" });
-            GroupViewCollection.Add(new Model() { Name = "Aiden", Images = "Aiden.png" });
-            GroupViewCollection.Add(new Model() { Name = "Alexander" });
-            GroupViewCollection.Add(new Model() { Name = "Arianna", Images = "Arianna.png" });
-            GroupViewCollection.Add(new Model() { Name = "Clara", Images = "Clara.png" });
-            GroupViewCollection.Add(new Model() { Name = "Daleyza", Images = "Daleyza.png" });
-            GroupViewCollection.Add(new Model() { Name = "Ellie", Images = "Ellie.png" });
-            GroupViewCollection.Add(new Model() { Name = "Finley" });
-            GroupViewCollection.Add(new Model() { Name = "Jackson", Images = "Jackson.png" });
-            GroupViewCollection.Add(new Model() { Name = "Jayden" });
-            GroupViewCollection.Add(new Model() { Name = "Kaylee", Images = "Kaylee.png" });
-            GroupViewCollection.Add(new Model() { Name = "Lucy" });
-
-        }
-    }
-
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
-{% highlight xaml %}
-
-<!--MainPage.Xaml-->
-
-   <sfavatarview:SfAvatarView ContentType="Group"
-                              Margin="5,0,0,0"
-                              HorizontalOptions="Center"
-                              HeightRequest="50"
-                              WidthRequest="50"
-                              CornerRadius="25"
-                              VerticalOptions="Center"
-                              GroupSource="{Binding PeopleCollection}"
-                              ImageSourceMemberPath="Images"
-                              InitialsMemberPath="Name">
-     </sfavatarview:SfAvatarView>
-
-{% endhighlight %}
-{% highlight c# %}
-
-//MainPage.Xaml.cs
-            avm = new AvatarViewModel();
-            SfAvatarView avatarview = new SfAvatarView();
-            avatarview.VerticalOptions = LayoutOptions.Center;
-            avatarview.HorizontalOptions = LayoutOptions.Center;
-            avatarview.WidthRequest = 50;
-            avatarview.HeightRequest = 50;
-            avatarview.CornerRadius = 25;
-            avatarview.ContentType = ContentType.Group;
-            avatarview.GroupSource = avm.PeopleCollection;
-            avatarview.InitialsMemberPath = "Name";
-            avatarview.BackgroundColorMemberPath = "Colors";
-            mainGrid.Children.Add(avatarview);
-
-{% endhighlight %}
-{% endtabs %}
-
-![GroupView in ListView](ContentType_Images/GroupView_Listview.png)
-
 
