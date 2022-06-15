@@ -64,9 +64,9 @@ SfBusyIndicator provides option to set the color for indicator. This can be done
 
 
 
-## Background in .NET MAUI BusyIndicator (SfBusyIndicator)
+## Overlay Background in .NET MAUI BusyIndicator (SfBusyIndicator)
 
-SfBusyIndicator provides option to set the Background. This can be done using `OverlayFill` property.
+SfBusyIndicator provides option to set the overlay background. This can be done using `OverlayFill` property.
 
 {% tabs %}
 
@@ -84,7 +84,7 @@ SfBusyIndicator provides option to set the Background. This can be done using `O
                                   AnimationType="CircularMaterial"
                                   Title="Loading..."
                                   IndicatorColor="Red"
-                                  OverlayFill = "Yellow"/>           
+                                  OverlayFill = "DarkViolet""/>           
         </ContentPage.Content>
     </ContentPage>
 
@@ -109,7 +109,7 @@ SfBusyIndicator provides option to set the Background. This can be done using `O
                     AnimationType = AnimationType.CircularMaterial,
                     Title = "Loading...",
                     IndicatorColor = Colors.Red,
-                    OverlayFill = Colors.Yellow
+                    OverlayFill = Colors.DarkViolet
                 };
                 this.Content = busyIndicator;
             }
@@ -121,7 +121,7 @@ SfBusyIndicator provides option to set the Background. This can be done using `O
 {% endtabs %}
 
 
-The `OverlayFill` property type is Brush, so can able set Background as Gradients also.
+The `OverlayFill` property type is `Brush`, so can able set Gradients as background.
 
 {% tabs %}
 
@@ -170,7 +170,7 @@ The `OverlayFill` property type is Brush, so can able set Background as Gradient
                     IsRunning = true,
                     AnimationType = AnimationType.CircularMaterial,
                     Title = "Loading...",
-                    IndicatorColor = Colors.Red,
+                    IndicatorColor = Colors.Pink,
                     OverlayFill = new RadialGradientBrush()
 			                    {
 				                    GradientStops = new GradientStopCollection() 
@@ -193,5 +193,5 @@ The `OverlayFill` property type is Brush, so can able set Background as Gradient
 
 The following screenshot illustrates the indicator color and background of SfBusyIndicator.
 
-![Background and Indicator](Images/IndicatorColor/Indicator_Background.png)
+![IndicatorColor and OverlayFill](Images/IndicatorColor/Indicator_Background.png)
 

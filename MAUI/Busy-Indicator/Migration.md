@@ -18,7 +18,7 @@ To migrate easier from Xamarin SfBusyIndicator to .NET MAUI SfBusyIndicator, we 
 <th>Xamarin SfBusyIndicator</th>
 <th>.NET MAUI SfBusyIndicator</th></tr>
 <tr>
-<td>Syncfusion.XForms.EffectsView</td>
+<td>Syncfusion.SfBusyIndicator.XForms</td>
 <td>Syncfusion.Maui.Core</td></tr>
 </table>
 

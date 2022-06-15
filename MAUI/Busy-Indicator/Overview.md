@@ -7,14 +7,14 @@ control: BusyIndicator
 documentation: ug
 ---
 
-# .NET MAUI Effects View (SfEffectsView) Overview
+# .NET MAUI BusyIndicator (SfBusyIndicator) Overview
 
-The Essential .NET MAUI BusyIndicator control includes built-in animations that can be displayed within your applications. It can be used to indicate busy status during app loading, data processing, etc.
+The Busy Indicator control for .NET MAUI provides an indication of the app loading, data processing etc. It can be customized in terms of Indicator size, color, speed and more.
 
 ## Key features
 
-* Provides built-in busy indicator animations
-* Supports to show/hide busy indicator.
-* Displays busy text with animation.
-* Provides simple and easy options to size the control.
-* Provides option to adjust the animation speed.
+* Comes with three different animation types [Circular Material, Linear Material and Cupertino].
+* Supports customizing the indicator color, and overlay background.
+* The animation duration can be customized.
+* Size of the indicator can be customized.
+* Supports displaying a title with font customizations.

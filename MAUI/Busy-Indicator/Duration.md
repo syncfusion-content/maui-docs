@@ -62,7 +62,7 @@ The `DurationFactor` property of SfBusyIndicator indicates timeline for completi
 
 The following screenshot illustrates the result of the above code.
 
-![Duration](Images/Duration/Duration.gif)
+![Animation Duration](Images/Duration/Duration.gif)
 
 
 

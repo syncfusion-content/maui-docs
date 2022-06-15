@@ -119,7 +119,7 @@ Step 3: Set the control to content in `ContentPage`.
 
 SfBusyIndicator provide some predefined animation types like Cupertino, LinearMaterial, CircularMaterial. User can select any one of the animation types using `AnimationType` property.
 
-Following example depicts the Cupertino type animation for SfBusyIndicator. 
+Following example depicts the CircularMaterial type animation for SfBusyIndicator. 
 
 {% tabs %}
 

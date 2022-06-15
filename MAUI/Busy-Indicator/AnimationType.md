@@ -60,4 +60,4 @@ The `AnimationType` property for the SfBusyIndicator allows the users to set one
 
 The following gif image contains the types of animation in BusyIndicator.
 
-![Animation Types](Images/AnimationType/Animationtype.gif)
+![Animation Types](Images/AnimationType/AnimationType.gif)
