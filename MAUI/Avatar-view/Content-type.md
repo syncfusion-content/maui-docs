@@ -302,7 +302,7 @@ public partial class MainPage : ContentPage, INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![GroupView in ListView](ContentType_Images/GroupView_Initilasalone.png)
+![GroupView in Initials Only](ContentType_Images/GroupView_Initilasalone.png)
 
 ## Add both image and initials in a GroupView
 
@@ -328,5 +328,5 @@ You have to set both the image and initials based on what should be added in the
 {% endtabs %}
 
 
-![GroupView in ListView](ContentType_Images/GroupView_InitilalandImage.png)
+![GroupView for both image and initials](ContentType_Images/GroupView_InitilalandImage.png)
 
