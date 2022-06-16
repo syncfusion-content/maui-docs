@@ -170,18 +170,18 @@ The `OverlayFill` property type is `Brush`, so can able set Gradients as backgro
                     IsRunning = true,
                     AnimationType = AnimationType.CircularMaterial,
                     Title = "Loading...",
-                    IndicatorColor = Colors.Pink,
+                    IndicatorColor = Color.FromArgb("#e64c93"),
                     OverlayFill = new RadialGradientBrush()
-			                    {
-				                    GradientStops = new GradientStopCollection() 
-				                    {
-				                    	new GradientStop(){Color= Colors.LightBlue,Offset= 0.1f},
-				                    	new GradientStop() { Color = Colors.Green, Offset = 1.0f }
-				                    }
-			                    }
-                    
+                    {
+                        GradientStops = new GradientStopCollection()
+                                            {
+                                                new GradientStop(){Color= Color.FromArgb("#44e64c93"),Offset= 0.1f},
+                                                new GradientStop(){ Color = Color.FromArgb("#AA9d40db"), Offset = 1.0f }
+                                            }
+                    }
+
                 };
-                
+
                 this.Content = busyIndicator;
             }
         }
