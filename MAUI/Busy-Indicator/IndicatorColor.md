@@ -6,7 +6,7 @@ platform: maui
 control: BusyIndicator
 documentation: ug
 ---
-# Indicator color and Background in .NET MAUI Busy Indicator control
+# Indicator color and Background in .NET MAUI Busy Indicator
 
 ## Indicator color in SfBusyIndicator 
 
