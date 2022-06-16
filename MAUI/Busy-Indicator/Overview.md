@@ -7,7 +7,7 @@ control: BusyIndicator
 documentation: ug
 ---
 
-# .NET MAUI BusyIndicator (SfBusyIndicator) Overview
+# .NET MAUI Busy Indicator (SfBusyIndicator) Overview
 
 The Busy Indicator control for .NET MAUI provides an indication of the app loading, data processing etc. It can be customized in terms of Indicator size, color, speed and more.
 

@@ -8,7 +8,7 @@ documentation: ug
 ---
 # Sizing in .NET MAUI Busy Indicator (SfBusyIndicator)
 
-## Sizing in .NET MAUI BusyIndicator (SfBusyIndicator)
+## Sizing in SfBusyIndicator
 
 Drawing size can be customized in SfBusyIndicator.  `SizeFactor` property can be used to set height and width of the Indicator.  Its default value is 0.5 and  range between 0 to 1.
 

@@ -6,9 +6,9 @@ platform: maui
 control: BusyIndicator
 documentation: ug
 ---
-# Indicator color and Background in .NET MAUI BusyIndicator control
+# Indicator color and Background in .NET MAUI Busy Indicator (SfBusyIndicator)
 
-## Indicator color in .NET MAUI Busy Indicator (SfBusyIndicator) control 
+## Indicator color in SfBusyIndicator 
 
 SfBusyIndicator provides option to set the color for indicator. This can be done using `IndicatorColor` property.
 
@@ -64,7 +64,7 @@ SfBusyIndicator provides option to set the color for indicator. This can be done
 
 
 
-## Overlay Background in .NET MAUI BusyIndicator (SfBusyIndicator)
+## Overlay Background in SfBusyIndicator
 
 SfBusyIndicator provides option to set the overlay background. This can be done using `OverlayFill` property.
 

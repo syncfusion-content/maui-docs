@@ -8,7 +8,7 @@ documentation: ug
 ---
 # Animation Duration in .NET MAUI Busy Indicator (SfBusyIndicator)
 
-## Animation Duration in .NET MAUI BusyIndicator (SfBusyIndicator)
+## Animation Duration in SfBusyIndicator
 
 The `DurationFactor` property of SfBusyIndicator indicates timeline for completing one animation cycle. Setting smaller duration value accelerates animation speed.
 

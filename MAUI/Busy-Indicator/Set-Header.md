@@ -8,7 +8,9 @@ documentation: ug
 ---
 # Set Header in .NET MAUI Busy Indicator (SfBusyIndicator)
 
-## Set Header in .NET MAUI Busy Indicator  (SfBusyIndicator)
+## Set Header in SfBusyIndicator
+
+The Syncfusion Busy Indicator provides a feature to display a title with font customizations
 
 ## Title
 

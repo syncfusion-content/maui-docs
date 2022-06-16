@@ -8,7 +8,7 @@ documentation: ug
 ---
 # Make Busy Animation Idle in .NET MAUI Busy Indicator (SfBusyIndicator)
 
-## Make Busy Animation Idle in .NET MAUI BusyIndicator(SfBusyIndicator)
+## Make Busy Animation Idle in SfBusyIndicator
 
 SfBusyIndicator control provides support to determine whether an animation needs to be executed or not. Setting the `IsRunning` property to false will stop the animation and removes the control from view.
 
