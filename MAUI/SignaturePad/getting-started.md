@@ -85,7 +85,7 @@ namespace SignaturePadGettingStarted
         public MainPage()
         {
             InitializeComponent();
-            // Creating an Signature Pad control.
+            // Creating a SignaturePad control.
             SfSignaturePad signaturePad = new SfSignaturePad();
             this.content = signaturePad;
         }
@@ -95,8 +95,6 @@ namespace SignaturePadGettingStarted
 {% endhighlight %}
 
 {% endtabs %}
-
-![Initialize signaturePad](images/getting-started/initialize-signaturePad.png)
 
 ## Customize signature stroke color
 
@@ -179,8 +177,6 @@ private void OnSaveButtonClicked(object? sender, EventArgs e)
 
 {% endtabs %}
 
-![SignaturePad to image](images/getting-started/to-image-source.png)
-
 ## Clear the existing signature in SignaturePad
 
 You can clear the signature drawn in the SignaturePad using the `Clear()` method as show in the below code snippet.
@@ -209,8 +205,6 @@ private void OnClearButtonClicked(object? sender, EventArgs e)
 {% endhighlight %}
 
 {% endtabs %}
-
-![SignaturePad clear](images/getting-started/clear-signature.png)
 
 ## Events
 
