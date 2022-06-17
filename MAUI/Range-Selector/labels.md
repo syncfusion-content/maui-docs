@@ -218,6 +218,59 @@ rangeSelector.Content = chart;
 
 N> Refer [here](https://help.syncfusion.com/maui/range-slider/events) to customize label text format through range slider events.
 
+## Edge labels placement
+
+The `EdgeLabelsPlacement` property is used to move the first and last label either inside the track bounds or on the intervals. The default value of the `EdgeLabelsPlacement` property is `SliderEdgeLabelPlacement.Default`.
+
+If the `TrackExtent` > 0 and `EdgeLabelsPlacement` is `SliderEdgeLabelsPlacement.Inside`, the labels get placed inside the extended track edges. 
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage 
+             ...
+             xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
+             xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
+
+    <sliders:SfRangeSelector Minimum="0" 
+                             Maximum="10" 
+                             Interval="2"
+                             RangeStart="2"
+                             RangeEnd="8" 
+                             EdgeLabelsPlacement="Inside" 
+                             ShowLabels="True" 
+                             ShowTicks="True">
+
+        <charts:SfCartesianChart>
+            ...
+        </charts:SfCartesianChart>
+
+    </sliders:SfRangeSelector>
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfRangeSelector rangeSelector = new SfRangeSelector();
+rangeSelector.Minimum = 0;
+rangeSelector.Maximum = 10;
+rangeSelector.RangeStart = 2;
+rangeSelector.RangeEnd = 8;
+rangeSelector.Interval = 2;
+rangeSelector.EdgeLabelsPlacement = SliderEdgeLabelsPlacement.Inside;
+rangeSelector.ShowLabels = true;
+rangeSelector.ShowTicks = true;
+SfCartesianChart chart = new SfCartesianChart();
+rangeSelector.Content = chart;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![RangeSelector edge label placement](images/labels-and-dividers/edge-labels-placement.gif)
+
 ## Label style
 
 You can change the active and inactive label appearance of the Range Selector using the [`ActiveTextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_ActiveTextColor), [`ActiveFontSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_ActiveFontSize), [`ActiveFontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_ActiveFontFamily), [`ActiveFontAttributes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_ActiveFontAttributes), [`InactiveTextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_InactiveTextColor), [`InactiveFontSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_InactiveFontSize), [`InactiveFontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_InactiveFontFamily), [`InactiveFontAttributes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_InactiveFontAttributes) and [`Offset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_Offset)  properties of the [`LabelStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html) class.
