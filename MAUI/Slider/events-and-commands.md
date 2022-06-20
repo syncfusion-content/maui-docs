@@ -1,17 +1,19 @@
 ---
 layout: post
-title: Events in.NET MAUI Slider control | Syncfusion 
-description: Learn here all about adding and customizing through events of Syncfusion .NET MAUI Slider (SfSlider) control and more.
+title: Events and Commands in.NET MAUI Slider control | Syncfusion 
+description: Learn here all about adding and customizing through events and commands of Syncfusion .NET MAUI Slider (SfSlider) control and more.
 platform: maui
 control: SfSlider
 documentation: ug
 ---
 
-# Events in .NET MAUI Slider (SfSlider)
+# Events and Commands in .NET MAUI Slider (SfSlider)
 
-This section explains about how to add the events for slider.
+This section explains about how to add the events and commands for slider.
 
-## Handle callbacks
+## Events
+
+### Handle callbacks
 
 * [ValueChangeStart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ValueChangeStart) -  Called when the user selecting a new value for the slider by tap/mouse down in the thumb.
 * [ValueChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html#Syncfusion_Maui_Sliders_SfSlider_ValueChanging) - Called when the user is selecting a new value for the slider by dragging the thumb.
@@ -66,7 +68,7 @@ private void OnValueChangeEnd(object sender, EventArgs e)
 {% endtabs %}
 
 
-## Customize label text
+### Customize label text
 
 You can format or change the whole numeric or date label text using the [`LabelCreated`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_LabelCreated) event. The [`SliderLabelCreatedEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelCreatedEventArgs.html) contains the following parameters,
 
@@ -96,7 +98,7 @@ You can format or change the whole numeric or date label text using the [`LabelC
    slider.Value = 6;
    slider.Interval = 2;
    slider.ShowLabels = true;
-   sfslider.LabelCreated += OnLabelCreated;
+   slider.LabelCreated += OnLabelCreated;
  }
 
  private void OnLabelCreated(object sender, SliderLabelCreatedEventArgs e)
@@ -111,7 +113,7 @@ You can format or change the whole numeric or date label text using the [`LabelC
 ![Slider custom label](images/labels-and-dividers/custom-label.png)
 
 
-## Tooltip text format
+### Tooltip text format
 
 By default it is formatted based on [`NumberFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html#Syncfusion_Maui_Sliders_SfSlider_NumberFormat)  property and [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeSlider_DateFormat) property based on whether it is date type [`SfDateTimeSlider`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html) or numeric [`SfSlider`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html).
 
@@ -150,3 +152,180 @@ private void OnTooltipLabelCreated(object sender, SliderTooltipLabelCreatedEvent
 
 ![Slider custom tooltip](images/tooltip/custom-tooltip.png)
 
+## Commands and its parameter
+
+### Drag started command
+
+The `DragStartedCommand` will be executed when the user started moving the thumb.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage.BindingContext>
+    <local:ViewModel x:Name="viewModel" />
+</ContentPage.BindingContext>
+
+<ContentPage.Content>
+    <sliders:SfSlider DragStartedCommand="{Binding DragStartedCommand}" />
+</ContentPage.Content>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfSlider slider = new SfSlider()
+{
+    DragStartedCommand = viewModel.DragStartedCommand
+};
+
+public class ViewModel
+{
+    public ICommand DragStartedCommand { get; }
+
+    public ViewModel()
+    {
+        DragStartedCommand = new Command(DragStarted);
+    }
+
+    private void DragStarted(object obj)
+    {
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Drag started command parameter
+
+The `DragStartedCommandParameter` will be executed when the user started moving the thumb.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage.BindingContext>
+    <local:ViewModel x:Name="viewModel" />
+</ContentPage.BindingContext>
+
+<ContentPage.Content>
+    <sliders:SfSlider DragStartedCommand="{Binding DragStartedCommand}"
+                      DragStartedCommandParameter="1" />
+</ContentPage.Content>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfSlider slider = new SfSlider()
+{
+    DragStartedCommand = viewModel.DragStartedCommand,
+    DragStartedCommandParameter = "1"
+};
+
+public class ViewModel
+{
+    public ICommand DragStartedCommand { get; }
+
+    public ViewModel()
+    {
+        DragStartedCommand = new Command<string>(DragStarted);
+    }
+
+    private void DragStarted(string value)
+    {
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Drag completed command
+
+The `DragCompletedCommand` will be executed when the user completed moving the thumb.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage.BindingContext>
+    <local:ViewModel x:Name="viewModel" />
+</ContentPage.BindingContext>
+
+<ContentPage.Content>
+    <sliders:SfSlider DragCompletedCommand="{Binding DragCompletedCommand}" />
+</ContentPage.Content>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfSlider slider = new SfSlider()
+{
+    DragCompletedCommand = viewModel.DragCompletedCommand
+};
+
+public class ViewModel
+{
+    public ICommand DragCompletedCommand { get; }
+
+    public ViewModel()
+    {
+        DragCompletedCommand = new Command(DragCompleted);
+    }
+
+    private void DragCompleted(object obj)
+    {
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Drag completed command parameter
+
+The `DragCompletedCommandParameter` will be executed when the user completed moving the thumb.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage.BindingContext>
+    <local:ViewModel x:Name="viewModel" />
+</ContentPage.BindingContext>
+
+<ContentPage.Content>
+    <sliders:SfSlider DragCompletedCommand="{Binding DragCompletedCommand}"
+                      DragCompletedCommandParameter="1" />
+</ContentPage.Content>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfSlider slider = new SfSlider()
+{
+    DragCompletedCommand = viewModel.DragCompletedCommand,
+    DragCompletedCommandParameter = "1"
+};
+
+public class ViewModel
+{
+    public ICommand DragCompletedCommand { get; }
+
+    public ViewModel()
+    {
+        DragCompletedCommand = new Command<string>(DragCompleted);
+    }
+
+    private void DragCompleted(string value)
+    {
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
