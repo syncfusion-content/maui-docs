@@ -71,6 +71,29 @@ slider.TrackStyle.InactiveSize = 8;
 
 ![Slider track size](images/track/track-size.png)
 
+## Track extent
+
+You can extend the track at edges using the `TrackExtent` property. The default value is `0.0` and it should be in pixels.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfSlider TrackExtent="10" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfSlider slider = new SfSlider();
+slider.TrackExtent = 10;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Slider track extent](images/track/track-extent.png)
+
 ## Disabled track
 
 You can change the state of the slider to disabled by setting `false` to the `IsEnabled` property. Using the Visual State Manager (VSM), you can customize the slider track properties based on the visual states. The applicable visual states are enabled(default) and disabled.

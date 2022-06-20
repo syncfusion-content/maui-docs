@@ -75,6 +75,29 @@ rangeSlider.TrackStyle.InactiveSize = 8;
 
 ![RangeSlider track size](images/track/track-size.png)
 
+## Track extent
+
+You can extend the track at edges using the `TrackExtent` property. The default value is `0.0` and it should be in pixels.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfRangeSlider TrackExtent="10" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfRangeSlider rangeSlider = new SfRangeSlider();
+rangeSlider.TrackExtent = 10;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![RangeSlider track extent](images/track/track-extent.png)
+
 ## Disabled track
 
 You can change the state of the range slider to disabled by setting `false` to the `IsEnabled` property. Using the Visual State Manager (VSM), you can customize the range slider track properties based on the visual states. The applicable visual states are enabled(default) and disabled.

@@ -98,3 +98,40 @@ rangeSelector.Content = chart;
 {% endtabs %}
 
 ![RangeSelector track size](images/track/track-size.png)
+
+## Track extent
+
+You can extend the track at edges using the `TrackExtent` property. The default value is `0.0` and it should be in pixels.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage 
+             ...
+             xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
+             xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
+    
+    <sliders:SfRangeSelector TrackExtent="10" />
+        
+        <charts:SfCartesianChart>
+            ...
+        </charts:SfCartesianChart>
+    
+    </sliders:SfRangeSelector>
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfRangeSelector rangeSelector = new SfRangeSelector();
+rangeSelector.TrackExtent = 10;
+SfCartesianChart chart = new SfCartesianChart();
+rangeSelector.Content = chart;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![RangeSelector track extent](images/track/track-extent.png)
