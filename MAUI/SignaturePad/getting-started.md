@@ -42,7 +42,6 @@ namespace SignaturePadGettingStarted
             var builder = MauiApp.CreateBuilder();
             builder
             .UseMauiApp<App>()
-            .ConfigureSyncfusionCore()
             .ConfigureSyncfusionSignaturePad()
             .ConfigureFonts(fonts =>
             {
@@ -224,7 +223,10 @@ This event will be triggered when we starts drawing in the signature pad. With t
 
 {% highlight C# %}
 
-SfSignaturePad signaturePad = new SfSignaturePad() {  DrawStarted += OnDrawStarted };
+SfSignaturePad signaturePad = new SfSignaturePad()
+{ 
+    DrawStarted += OnDrawStarted
+};
 private void OnDrawStarted(object? sender, CancelEventArgs e)
 {
     e.Cancel = false;
@@ -248,7 +250,10 @@ This event will be triggered when we completed drawing in the signature pad.
 
 {% highlight C# %}
 
-SfSignaturePad signaturePad = new SfSignaturePad() {  DrawCompleted += OnDrawCompleted };
+SfSignaturePad signaturePad = new SfSignaturePad()
+{
+    DrawCompleted += OnDrawCompleted
+};
 private void OnDrawCompleted(object? sender, EventArgs e)
 {
 }
