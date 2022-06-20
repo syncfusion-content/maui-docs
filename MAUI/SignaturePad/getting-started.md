@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with .NET MAUI Signature Pad control | Syncfusion
-description: Learn here about getting started with .NET MAUI Signature Pad (SfSignaturePad) control, its elements, and more.
+title: Getting started with .NET MAUI SignaturePad control | Syncfusion
+description: Learn here about getting started with .NET MAUI SignaturePad (SfSignaturePad) control, its elements, and more.
 platform: maui
 control: SfSignaturePad
 documentation: ug
@@ -26,7 +26,7 @@ Create a new .NET MAUI application in Visual Studio.
 
 ## Handler registration
 
-In the MauiProgram.cs file, register the handler for Syncfusion core
+In the MauiProgram.cs file, register the handler for Syncfusion SignaturePad
 
 {% highlight C# %}
 
@@ -57,7 +57,7 @@ namespace SignaturePadGettingStarted
 
 ## Initialize signature pad
 
-Import the `SfSignaturePad` namespace and initialize the signature pad as shown below.
+Import the `SfSignaturePad` namespace and initialize the SignaturePad as shown below.
 
 {% tabs %}
 
@@ -211,7 +211,7 @@ private void OnClearButtonClicked(object? sender, EventArgs e)
 
 ### DrawStarted
 
-This event will be triggered when we starts drawing in the signature pad. With this, `CancelEventArgs` will be passed. You can restrict the draw start action by setting `e.cancel` as `true`.
+This event will be triggered when we starts drawing in the SignaturePad. With this, `CancelEventArgs` will be passed. You can restrict the draw start action by setting `e.cancel` as `true`.
 
 {% tabs %}
 
@@ -238,7 +238,7 @@ private void OnDrawStarted(object? sender, CancelEventArgs e)
 
 ### DrawCompleted
 
-This event will be triggered when we completed drawing in the signature pad.
+This event will be triggered when we completed drawing in the SignaturePad.
 
 {% tabs %}
 
