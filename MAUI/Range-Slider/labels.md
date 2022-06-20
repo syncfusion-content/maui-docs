@@ -175,15 +175,14 @@ If the `TrackExtent` > 0 and `EdgeLabelsPlacement` is `SliderEdgeLabelsPlacement
 
 {% highlight xaml %}
 
-<sliders:SfRangeSlider Minimum="0" 
+<sliders:SfRangeSlider Minimum="0"
                        Maximum="10"
                        RangeStart="2"
-                       RangeEnd="8" 
-                       Interval="2" 
-                       EdgeLabelsPlacement="Inside" 
-                       ShowLabels="True" 
-                       ShowTicks="True">
-</sliders:SfRangeSlider>
+                       RangeEnd="8"
+                       Interval="2"
+                       EdgeLabelsPlacement="Inside"
+                       ShowLabels="True"
+                       ShowTicks="True" />
 
 {% endhighlight %}
 
