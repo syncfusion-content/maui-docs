@@ -11,13 +11,14 @@ documentation: ug
 
 ## Avatar Types
 
-The `SfAvatarView` control provides the following three different ways to display the view:
+The `SfAvatarView` control allows you to display the view in three different ways:
 
-* `Initials` - Set the initial value in SfAvatarView.
+* `Initials` - Displays the initial in the view.
 
-* `Custom` - Adds the user custom image in SfAvatarView.
+* `Custom` - Displays a custom image in the view.
 
-* `Group` - Adds maximum three images or initials in a single `SfAvatarView`.
+* `Group` - Displays a maximum of three images or initials in a single view.
+
 
 ## Initials 
 

@@ -58,7 +58,7 @@ The Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget
 
 ## Adding a namespace
 
-Add the following namespace to add .NET MAUI AvatarView.
+Add the following namespace to add .NET MAUI Avatar View.
 
 {% tabs %}
 
@@ -78,7 +78,7 @@ Add the following namespace to add .NET MAUI AvatarView.
 
 ### Adding the SfAvatarView control as the content of ContentPage
 
-You can add a custom image for displaying in SfAvatarView using the `ImageSource` property.
+You can add a custom image for displaying in `SfAvatarView` using the `ImageSource` property.
 
 {% tabs %}
 {% highlight xaml %}
