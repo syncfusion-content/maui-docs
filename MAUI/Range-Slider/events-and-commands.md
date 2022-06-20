@@ -173,7 +173,7 @@ The `DragStartedCommand` will be executed when the user started moving the thumb
 
 {% highlight C# %}
 
-SfRangeSlider slider = new SfRangeSlider()
+SfRangeSlider rangeSlider = new SfRangeSlider()
 {
     DragStartedCommand = viewModel.DragStartedCommand
 };
@@ -217,7 +217,7 @@ The `DragStartedCommandParameter` will be executed when the user started moving 
 
 {% highlight C# %}
 
-SfRangeSlider slider = new SfRangeSlider()
+SfRangeSlider rangeSlider = new SfRangeSlider()
 {
     DragStartedCommand = viewModel.DragStartedCommand,
     DragStartedCommandParameter = "1"
@@ -261,7 +261,7 @@ The `DragCompletedCommand` will be executed when the user completed moving the t
 
 {% highlight C# %}
 
-SfRangeSlider slider = new SfRangeSlider()
+SfRangeSlider rangeSlider = new SfRangeSlider()
 {
     DragCompletedCommand = viewModel.DragCompletedCommand
 };
@@ -305,7 +305,7 @@ The `DragCompletedCommandParameter` will be executed when the user completed mov
 
 {% highlight C# %}
 
-SfRangeSlider slider = new SfRangeSlider()
+SfRangeSlider rangeSlider = new SfRangeSlider()
 {
     DragCompletedCommand = viewModel.DragCompletedCommand,
     DragCompletedCommandParameter = "1"
