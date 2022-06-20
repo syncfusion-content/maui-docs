@@ -96,6 +96,8 @@ namespace SignaturePadGettingStarted
 
 {% endtabs %}
 
+![SignaturePad default](images/getting-started/default.jpg)
+
 ## Customize signature stroke color
 
 You can customize the stroke color of the SignaturePad control by using the `StrokeColor` property. The default stroke color is `Colors.Black`.
@@ -119,7 +121,7 @@ SfSignaturePad signaturePad = new SfSignaturePad()
 
 {% endtabs %}
 
-![SignaturePad stroke color](images/getting-started/stroke-color.png)
+![SignaturePad stroke color](images/getting-started/stroke-color.jpg)
 
 ## Customize signature stroke thickness
 
@@ -130,7 +132,7 @@ The thickness of the stroke drawn can be customized by setting the `MinimumStrok
 {% highlight xaml %}
 
 <signaturePad:SfSignaturePad MinimumStrokeThickness="1"
-                             MaximumStrokeThickness="8" />
+                             MaximumStrokeThickness="6" />
 
 {% endhighlight %}
 
@@ -139,18 +141,18 @@ The thickness of the stroke drawn can be customized by setting the `MinimumStrok
 SfSignaturePad signaturePad = new SfSignaturePad()
 {
     MinimumStrokeThickness = 1,
-    MaximumStrokeThickness = 8,
+    MaximumStrokeThickness = 6,
 };
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![SignaturePad stroke thickness](images/getting-started/stroke-thickness.png)
+![SignaturePad stroke thickness](images/getting-started/stroke-thickness.jpg)
 
 ## Save signature as image
 
-You can save the signature drawn in the SignaturePad as an image source using the `ToImageSource()` method which can further be synchronized with your devices and documents that need your signature.
+You can save the signature drawn in the SignaturePad as an [`ImageSource`](https://docs.microsoft.com/en-us/dotnet/api/xamarin.forms.imagesource?view=xamarin-forms) using the `ToImageSource()` method which can further be synchronized with your devices and documents that need your signature.
 
 {% tabs %}
 
