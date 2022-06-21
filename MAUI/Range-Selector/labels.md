@@ -218,6 +218,63 @@ rangeSelector.Content = chart;
 
 N> Refer [here](https://help.syncfusion.com/maui/range-slider/events) to customize label text format through range slider events.
 
+## Edge labels placement
+
+The `EdgeLabelsPlacement` property is used to move the first and last label either inside the track bounds or based on the intervals. The default value of the `EdgeLabelsPlacement` property is `SliderEdgeLabelPlacement.Default`.
+
+If the `TrackExtent` > 0 and `EdgeLabelsPlacement` is `SliderEdgeLabelsPlacement.Inside`, the labels get placed inside the extended track edges. 
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage 
+             ...
+             xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
+             xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
+
+    <sliders:SfDateTimeRangeSelector Minimum="2002-01-07"
+                                     Maximum="2002-01-13"
+                                     RangeStart="2002-01-09"
+                                     RangeEnd="2002-01-11"
+                                     Interval="1"
+                                     IntervalType="Days"
+                                     DateFormat="ddd" 
+                                     EdgeLabelsPlacement="Inside" 
+                                     ShowLabels="True" 
+                                     ShowTicks="True">
+
+        <charts:SfCartesianChart>
+            ...
+        </charts:SfCartesianChart>
+
+    </sliders:SfRangeSelector>
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
+rangeSelector.Minimum = new DateTime(2002, 01, 07);
+rangeSelector.Maximum = new DateTime(2002, 01, 13);
+rangeSelector.RangeStart = new DateTime(2002, 01, 09);
+rangeSelector.RangeEnd = new DateTime(2002, 01, 11);
+rangeSelector.Interval = 1;
+rangeSelector.IntervalType = SliderDateIntervalType.Days;
+rangeSelector.DateFormat = "ddd";
+rangeSelector.EdgeLabelsPlacement = SliderEdgeLabelsPlacement.Inside;
+rangeSelector.ShowLabels = true;
+rangeSelector.ShowTicks = true;
+SfCartesianChart chart = new SfCartesianChart();
+rangeSelector.Content = chart;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![RangeSelector edge label placement](images/labels-and-dividers/edge-labels-placement.gif)
+
 ## Label style
 
 You can change the active and inactive label appearance of the Range Selector using the [`ActiveTextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_ActiveTextColor), [`ActiveFontSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_ActiveFontSize), [`ActiveFontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_ActiveFontFamily), [`ActiveFontAttributes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_ActiveFontAttributes), [`InactiveTextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_InactiveTextColor), [`InactiveFontSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_InactiveFontSize), [`InactiveFontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_InactiveFontFamily), [`InactiveFontAttributes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_InactiveFontAttributes) and [`Offset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_Offset)  properties of the [`LabelStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html) class.
