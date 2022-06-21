@@ -35,9 +35,9 @@ You can change the size of the thumb in the slider using the [`Radius`](https://
 {% highlight C# %}
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
-slider.Minimum = new Date(2010, 01, 01);
-slider.Maximum = new Date(2020, 01, 01);
-slider.value = new Date(2014, 01, 01);
+slider.Minimum = new DateTime(2010, 01, 01);
+slider.Maximum = new DateTime(2020, 01, 01);
+slider.value = new DateTime(2014, 01, 01);
 slider.ThumbStyle.Radius = 15;
 
 {% endhighlight %}
@@ -67,9 +67,9 @@ You can change the color of the thumb in the slider using the [`Fill`](https://h
 {% highlight C# %}
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
-slider.Minimum = new Date(2010, 01, 01);
-slider.Maximum = new Date(2020, 01, 01);
-slider.value = new Date(2014, 01, 01);
+slider.Minimum = new DateTime(2010, 01, 01);
+slider.Maximum = new DateTime(2020, 01, 01);
+slider.value = new DateTime(2014, 01, 01);
 slider.ThumbStyle.Fill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
 
 {% endhighlight %}
@@ -100,9 +100,9 @@ You can change the thumb stroke width using the [`StrokeThickness`](https://help
 {% highlight C# %}
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
-slider.Minimum = new Date(2010, 01, 01);
-slider.Maximum = new Date(2020, 01, 01);
-slider.value = new Date(2014, 01, 01);
+slider.Minimum = new DateTime(2010, 01, 01);
+slider.Maximum = new DateTime(2020, 01, 01);
+slider.value = new DateTime(2014, 01, 01);
 slider.ThumbStyle.Stroke = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
 slider.ThumbStyle.StrokeThickness = 2;
 
@@ -133,9 +133,9 @@ You can change the size of the thumb overlay in the slider using the [`Radius`](
 {% highlight C# %}
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
-slider.Minimum = new Date(2010, 01, 01);
-slider.Maximum = new Date(2020, 01, 01);
-slider.value = new Date(2014, 01, 01);
+slider.Minimum = new DateTime(2010, 01, 01);
+slider.Maximum = new DateTime(2020, 01, 01);
+slider.value = new DateTime(2014, 01, 01);
 slider.ThumbOverlayStyle.Radius = 26;
 
 {% endhighlight %}
@@ -165,9 +165,9 @@ You can change the color of the thumb overlay in the slider using the [`Fill`](h
 {% highlight C# %}
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
-slider.Minimum = new Date(2010, 01, 01);
-slider.Maximum = new Date(2020, 01, 01);
-slider.value = new Date(2014, 01, 01);
+slider.Minimum = new DateTime(2010, 01, 01);
+slider.Maximum = new DateTime(2020, 01, 01);
+slider.value = new DateTime(2014, 01, 01);
 slider.ThumbOverlayStyle.Fill = new SolidColorBrush(Color.FromArgb("#F7C8DB")); 
 
 {% endhighlight %}

@@ -92,9 +92,9 @@ namespace SliderGettingStarted
         {
             InitializeComponent();
             SfDateTimeSlider slider = new SfDateTimeSlider();
-            slider.Minimum = new Date(2010, 01, 01);
-            slider.Maximum = new Date(2020, 01, 01);
-            slider.value = new Date(2014, 01, 01);
+            slider.Minimum = new DateTime(2010, 01, 01);
+            slider.Maximum = new DateTime(2020, 01, 01);
+            slider.value = new DateTime(2014, 01, 01);
             this.content = slider;
         }
     }
@@ -127,9 +127,9 @@ The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.S
 {% highlight C# %}
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
-slider.Minimum = new Date(2010, 01, 01);
-slider.Maximum = new Date(2020, 01, 01);
-slider.value = new Date(2014, 01, 01);
+slider.Minimum = new DateTime(2010, 01, 01);
+slider.Maximum = new DateTime(2020, 01, 01);
+slider.value = new DateTime(2014, 01, 01);
 slider.ShowLabels = true;
 slider.Interval = 2;
 
@@ -161,9 +161,9 @@ The [`ShowTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.Sl
 {% highlight C# %}
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
-slider.Minimum = new Date(2010, 01, 01);
-slider.Maximum = new Date(2020, 01, 01);
-slider.value = new Date(2014, 01, 01);
+slider.Minimum = new DateTime(2010, 01, 01);
+slider.Maximum = new DateTime(2020, 01, 01);
+slider.value = new DateTime(2014, 01, 01);
 slider.ShowLabels = true;
 slider.Interval = 2;
 slider.ShowTicks = true;
@@ -199,9 +199,9 @@ The [`Orientation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
 slider.Orientation = SliderOrientation.Vertical;
-slider.Minimum = new Date(2010, 01, 01);
-slider.Maximum = new Date(2020, 01, 01);
-slider.value = new Date(2014, 01, 01);
+slider.Minimum = new DateTime(2010, 01, 01);
+slider.Maximum = new DateTime(2020, 01, 01);
+slider.value = new DateTime(2014, 01, 01);
 slider.ShowLabels = true;
 slider.Interval = 2;
 slider.ShowTicks = true;
@@ -236,9 +236,9 @@ You can invert the slider using the [`IsInversed`](https://help.syncfusion.com/c
 {% highlight C# %}
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
-slider.Minimum = new Date(2010, 01, 01);
-slider.Maximum = new Date(2020, 01, 01);
-slider.value = new Date(2014, 01, 01);
+slider.Minimum = new DateTime(2010, 01, 01);
+slider.Maximum = new DateTime(2020, 01, 01);
+slider.value = new DateTime(2014, 01, 01);
 slider.IsInversed = true;
 slider.ShowLabels = true;
 slider.Interval = 2;
@@ -274,9 +274,9 @@ You can add prefix or suffix to the labels using the [`NumberFormat`](https://he
 {% highlight C# %}
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
-slider.Minimum = new Date(2010, 01, 01);
-slider.Maximum = new Date(2020, 01, 01);
-slider.value = new Date(2014, 01, 01);
+slider.Minimum = new DateTime(2010, 01, 01);
+slider.Maximum = new DateTime(2020, 01, 01);
+slider.value = new DateTime(2014, 01, 01);
 slider.ShowLabels = true;
 slider.Interval = 2;
 slider.NumberFormat = "MMM dd";
