@@ -39,9 +39,9 @@ This section explains about how to add the events and commands for date-time sli
 
 {
    SfDateTimeSlider slider = new SfDateTimeSlider();
-   slider.Minimum = new Date(2010, 01, 01);
-   slider.Maximum = new Date(2020, 01, 01);
-   slider.value = new Date(2014, 01, 01);
+   slider.Minimum = new DateTime(2010, 01, 01);
+   slider.Maximum = new DateTime(2020, 01, 01);
+   slider.value = new DateTime(2014, 01, 01);
    slider.ValueChangeStart += OnValueChanged;
    slider.ValueChanging += OnValueChanged;
    slider.ValueChanged += OnValueChanged;
@@ -92,9 +92,9 @@ You can format or change the whole numeric or date label text using the [`LabelC
 {% highlight C# %}
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
-   slider.Minimum = new Date(2010, 01, 01);
-   slider.Maximum = new Date(2020, 01, 01);
-   slider.value = new Date(2014, 01, 01);
+   slider.Minimum = new DateTime(2010, 01, 01);
+   slider.Maximum = new DateTime(2020, 01, 01);
+   slider.value = new DateTime(2014, 01, 01);
    slider.Interval = 2;
    slider.ShowLabels = true;
    slider.LabelCreated += OnLabelCreated;
@@ -139,9 +139,9 @@ You can format or change the whole tooltip label text using the [`TooltipLabelCr
 {% highlight C# %}
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
-   slider.Minimum = new Date(2010, 01, 01);
-   slider.Maximum = new Date(2020, 01, 01);
-   slider.value = new Date(2014, 01, 01);
+   slider.Minimum = new DateTime(2010, 01, 01);
+   slider.Maximum = new DateTime(2020, 01, 01);
+   slider.value = new DateTime(2014, 01, 01);
    slider.TooltipLabelCreated += OnTooltipLabelCreated;
  }
 
@@ -183,9 +183,9 @@ The `DragStartedCommand` will be executed when the user started moving the thumb
 
 SfDateTimeSlider slider = new SfDateTimeSlider()
 {
-    Minimum = new Date(2010, 01, 01),
-   Maximum = new Date(2020, 01, 01),
-   value = new Date(2014, 01, 01),
+    Minimum = new DateTime(2010, 01, 01),
+   Maximum = new DateTime(2020, 01, 01),
+   value = new DateTime(2014, 01, 01),
     DragStartedCommand = viewModel.DragStartedCommand,
 };
 
@@ -233,9 +233,9 @@ The `DragStartedCommandParameter` will be executed when the user started moving 
 
 SfDateTimeSlider slider = new SfDateTimeSlider()
 {
-    Minimum = new Date(2010, 01, 01),
-    Maximum = new Date(2020, 01, 01),
-    value = new Date(2014, 01, 01),
+    Minimum = new DateTime(2010, 01, 01),
+    Maximum = new DateTime(2020, 01, 01),
+    value = new DateTime(2014, 01, 01),
     DragStartedCommand = viewModel.DragStartedCommand,
     DragStartedCommandParameter = "1"
 };
@@ -283,9 +283,9 @@ The `DragCompletedCommand` will be executed when the user completed moving the t
 
 SfDateTimeSlider slider = new SfDateTimeSlider()
 {
-    Minimum = new Date(2010, 01, 01),
-   Maximum = new Date(2020, 01, 01),
-   value = new Date(2014, 01, 01),
+    Minimum = new DateTime(2010, 01, 01),
+   Maximum = new DateTime(2020, 01, 01),
+   value = new DateTime(2014, 01, 01),
     DragCompletedCommand = viewModel.DragCompletedCommand
 };
 
@@ -333,9 +333,9 @@ The `DragCompletedCommandParameter` will be executed when the user completed mov
 
 SfDateTimeSlider slider = new SfDateTimeSlider()
 {
-    Minimum = new Date(2010, 01, 01),
-   Maximum = new Date(2020, 01, 01),
-   value = new Date(2014, 01, 01),
+    Minimum = new DateTime(2010, 01, 01),
+   Maximum = new DateTime(2020, 01, 01),
+   value = new DateTime(2014, 01, 01),
     DragCompletedCommand = viewModel.DragCompletedCommand,
     DragCompletedCommandParameter = "1"
 };
