@@ -260,14 +260,14 @@ dataGrid.Columns.Add (countryColumn);
 
 ## Sorting
 
-The SfDataGrid allows sorting on its data by setting the `SfDataGrid.AllowSorting` property to true.
+In SfDataGrid sorting can be done on its data by setting the `SfDataGrid.SortingMode` property to single,multiple or none.
  
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid AllowSorting="True" />
+<syncfusion:SfDataGrid SortingMode="Single" />
 {% endhighlight %}
 {% highlight c# %}
-dataGrid.AllowSorting = true; 
+dataGrid.SortingMode=DataGridSortingMode.Single; 
 {% endhighlight %}
 {% endtabs %}
 
@@ -275,16 +275,16 @@ Run the application and touch the header cell to sort the data and the following
  
 
 
-Sorting can also be configured by adding the column to the `SfDataGrid.SortColumnDescriptions` collection as follows.
+Sorting can also be configured by adding the column to the `SfDataGrid.SortColumnDescription` collection as follows.
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid.SortColumnDescriptions>
+<syncfusion:SfDataGrid.SortColumnDescription>
     <syncfusion:SortColumnDescription ColumnName="CustomerID" />
-</syncfusion:SfDataGrid.SortColumnDescriptions> 
+</syncfusion:SfDataGrid.SortColumnDescription> 
 {% endhighlight %}
 {% highlight c# %}
-dataGrid.SortColumnDescriptions.Add (new SortColumnDescription () { ColumnName = "CustomerID" });
+dataGrid.SortColumnDescription.Add (new SortColumnDescription () { ColumnName = "CustomerID" });
 {% endhighlight %}
 {% endtabs %}
 
