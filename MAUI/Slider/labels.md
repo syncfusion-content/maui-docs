@@ -191,37 +191,6 @@ slider.ShowTicks = true;
 
 {% endtabs %}
 
-code snippet for `DateTime` slider,
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<sliders:SfDateTimeSlider Minimum="2010-01-01" 
-                          Maximum="2020-01-01" 
-                          Value="2014-01-01" 
-                          Interval="2"
-                          EdgeLabelsPlacement="Inside"
-                          ShowLabels="True"
-                          ShowTicks="True" />
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfDateTimeSlider slider = new SfDateTimeSlider();
-slider.Minimum = new Date(2010, 01, 01);
-slider.Maximum = new Date(2020, 01, 01);
-slider.value = new Date(2014, 01, 01);
-slider.Interval = 2;
-slider.EdgeLabelsPlacement = SliderEdgeLabelsPlacement.Inside;
-slider.ShowLabels = true;
-slider.ShowTicks = true;
-
-{% endhighlight %}
-
-{% endtabs %}
-
 ![Slider edge labels placement](images/labels-and-dividers/edge-labels-placement.gif)
 
 ## Label style
@@ -274,50 +243,6 @@ slider.LabelStyle.InactiveFontAttributes = FontAttributes.Italic;
 
 {% endtabs %}
 
-code snippet for `DateTime` slider,
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<sliders:SfDateTimeSlider Minimum="2010-01-01" 
-                          Maximum="2020-01-01" 
-                          Value="2014-01-01" 
-                  Interval="2" 
-                  ShowTicks="True"  
-                  ShowLabels="True">
-    <sliders:SfDateTimeSlider.LabelStyle>
-         <sliders:SliderLabelStyle ActiveTextColor="#EE3F3F" 
-                                   InactiveTextColor="#F7B1AE" 
-	             		           ActiveFontAttributes="Italic" 
-				                   InactiveFontAttributes="Italic" 
-				                   ActiveFontSize="16" 
-				                   InactiveFontSize="16" />
-    </sliders:SfDateTimeSlider.LabelStyle>
-</sliders:SfDateTimeSlider>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfDateTimeSlider slider = new SfDateTimeSlider();
-slider.Minimum = new Date(2010, 01, 01);
-slider.Maximum = new Date(2020, 01, 01);
-slider.value = new Date(2014, 01, 01);
-slider.Interval = 2;
-slider.ShowLabels = true;
-slider.ShowTicks = true;
-slider.LabelStyle.ActiveTextColor = Color.FromArgb("#EE3F3F");
-slider.LabelStyle.InactiveTextColor = Color.FromArgb("#F7B1AE");
-slider.LabelStyle.ActiveFontSize = 16;
-slider.LabelStyle.InactiveFontSize = 16;
-slider.LabelStyle.ActiveFontAttributes = FontAttributes.Italic;
-slider.LabelStyle.InactiveFontAttributes = FontAttributes.Italic;
-
-{% endhighlight %}
-
-{% endtabs %}
-
 ![Slider label style](images/labels-and-dividers/label-style.png)
 
 ## Label offset
@@ -347,40 +272,6 @@ SfSlider slider = new SfSlider();
 slider.Minimum = 2;
 slider.Maximum = 10;
 slider.Value = 6;
-slider.Interval = 2;
-slider.ShowLabels = true;
-slider.ShowTicks = true;
-slider.LabelStyle.Offset = 10;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-code snippet for `DateTime` slider,
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<sliders:SfDateTimeSlider Minimum="2010-01-01" 
-                          Maximum="2020-01-01" 
-                          Value="2014-01-01" 
-                  Interval="2" 
-                  ShowTicks="True"
-                  ShowLabels="True">
-    <sliders:SfDateTimeSlider.LabelStyle>
-        <sliders:SliderLabelStyle Offset="10" />
-     </sliders:SfDateTimeSlider.LabelStyle>
-</sliders:SfDateTimeSlider>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfDateTimeSlider slider = new SfDateTimeSlider();
-slider.Minimum = new Date(2010, 01, 01);
-slider.Maximum = new Date(2020, 01, 01);
-slider.value = new Date(2014, 01, 01);
 slider.Interval = 2;
 slider.ShowLabels = true;
 slider.ShowTicks = true;

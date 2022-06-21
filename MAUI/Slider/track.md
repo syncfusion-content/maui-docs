@@ -41,35 +41,6 @@ slider.TrackStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
 
 {% endtabs %}
 
-code snippet for `DateTime` slider,
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<sliders:SfDateTimeSlider Minimum="2010-01-01" 
-                          Maximum="2020-01-01" 
-                          Value="2014-01-01">
-  <sliders:SfDateTimeSlider.TrackStyle>
-     <sliders:SliderTrackStyle ActiveFill="#EE3F3F" InactiveFill="#F7B1AE" />
-  </sliders:SfDateTimeSlider.TrackStyle>
-</sliders:SfDateTimeSlider>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfDateTimeSlider slider = new SfDateTimeSlider();
-slider.Minimum = new Date(2010, 01, 01);
-slider.Maximum = new Date(2020, 01, 01);
-slider.value = new Date(2014, 01, 01);
-slider.TrackStyle.ActiveFill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
-slider.TrackStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
-
-{% endhighlight %}
-
-{% endtabs %}
-
 ![Slider track color](images/track/track-color.png)
 
 ## Track height
@@ -98,67 +69,11 @@ slider.TrackStyle.InactiveSize = 8;
 
 {% endtabs %}
 
-code snippet for `DateTime` slider,
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<sliders:SfDateTimeSlider Minimum="2010-01-01" 
-                          Maximum="2020-01-01" 
-                          Value="2014-01-01">
-   <sliders:SfDateTimeSlider.TrackStyle>
-       <sliders:SliderTrackStyle ActiveSize="10" InactiveSize="8" />
-   </sliders:SfDateTimeSlider.TrackStyle>
-</sliders:SfDateTimeSlider>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfDateTimeSlider slider = new SfDateTimeSlider();
-slider.Minimum = new Date(2010, 01, 01);
-slider.Maximum = new Date(2020, 01, 01);
-slider.value = new Date(2014, 01, 01);
-slider.TrackStyle.ActiveSize = 10;
-slider.TrackStyle.InactiveSize = 8;
-
-{% endhighlight %}
-
-{% endtabs %}
-
 ![Slider track size](images/track/track-size.png)
 
 ## Track extent
 
 You can extend the track at edges using the `TrackExtent` property. The default value is `0.0` and it should be in pixels.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<sliders:SfSlider Interval="0.2"
-                  MinorTicksPerInterval="1"
-                  ShowTicks="True"
-                  ShowLabels="True"
-                  TrackExtent="10" />
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfSlider slider = new SfSlider();
-slider.Interval = 0.2;
-slider.MinorTicksPerInterval = 1;
-slider.ShowLabels = true;
-slider.ShowTicks = true;
-slider.TrackExtent = 10;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-code snippet for `DateTime` slider,
 
 {% tabs %}
 
