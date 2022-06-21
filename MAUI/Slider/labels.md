@@ -156,7 +156,7 @@ N> Refer [here](https://help.syncfusion.com/maui/slider/events) to customize the
 
 ## Edge labels placement
 
-The `EdgeLabelsPlacement` property is used to move the first and last label either inside the track bounds or on the intervals. The default value of the `EdgeLabelsPlacement` property is `SliderEdgeLabelPlacement.Default`.
+The `EdgeLabelsPlacement` property is used to move the first and last label either inside the track bounds or based on the intervals. The default value of the `EdgeLabelsPlacement` property is `SliderEdgeLabelPlacement.Default`.
 
 If the `TrackExtent` > 0 and `EdgeLabelsPlacement` is `SliderEdgeLabelsPlacement.Inside`, the labels get placed inside the extended track edges. 
 
