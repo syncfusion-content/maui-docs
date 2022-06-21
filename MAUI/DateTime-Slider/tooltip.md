@@ -32,9 +32,9 @@ You can enable tooltip for the thumb by setting the [`Tooltip`](https://help.syn
 {% highlight C# %}
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
-slider.Minimum = new Date(2010, 01, 01);
-slider.Maximum = new Date(2020, 01, 01);
-slider.value = new Date(2014, 01, 01);
+slider.Minimum = new DateTime(2010, 01, 01);
+slider.Maximum = new DateTime(2020, 01, 01);
+slider.value = new DateTime(2014, 01, 01);
 slider.Tooltip = new SliderTooltip();
 
 {% endhighlight %}
@@ -68,9 +68,9 @@ You can change the appearance of the tooltip text like fill, stroke, padding aro
 {% highlight C# %}
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
-slider.Minimum = new Date(2010, 01, 01);
-slider.Maximum = new Date(2020, 01, 01);
-slider.value = new Date(2014, 01, 01);
+slider.Minimum = new DateTime(2010, 01, 01);
+slider.Maximum = new DateTime(2020, 01, 01);
+slider.value = new DateTime(2014, 01, 01);
 slider.Tooltip.Fill = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
 slider.Tooltip.Stroke = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
 slider.Tooltip.StrokeThickness = 2;

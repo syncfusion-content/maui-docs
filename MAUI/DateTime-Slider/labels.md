@@ -32,9 +32,9 @@ The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.S
 {% highlight C# %}
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
-slider.Minimum = new Date(2010, 01, 01);
-slider.Maximum = new Date(2020, 01, 01);
-slider.value = new Date(2014, 01, 01);
+slider.Minimum = new DateTime(2010, 01, 01);
+slider.Maximum = new DateTime(2020, 01, 01);
+slider.value = new DateTime(2014, 01, 01);
 slider.Interval = 2;
 slider.ShowTicks = true;
 slider.ShowLabels = true;
@@ -103,9 +103,9 @@ The [`LabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slid
 {% highlight C# %}
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
-slider.Minimum = new Date(2010, 01, 01);
-slider.Maximum = new Date(2020, 01, 01);
-slider.value = new Date(2014, 01, 01);
+slider.Minimum = new DateTime(2010, 01, 01);
+slider.Maximum = new DateTime(2020, 01, 01);
+slider.value = new DateTime(2014, 01, 01);
 slider.Interval = 2;
 slider.LabelsPlacement = SliderLabelsPlacement.BetweenTicks;
 slider.ShowLabels = true;
@@ -142,9 +142,9 @@ If the `TrackExtent` > 0 and `EdgeLabelsPlacement` is `SliderEdgeLabelsPlacement
 {% highlight C# %}
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
-slider.Minimum = new Date(2010, 01, 01);
-slider.Maximum = new Date(2020, 01, 01);
-slider.value = new Date(2014, 01, 01);
+slider.Minimum = new DateTime(2010, 01, 01);
+slider.Maximum = new DateTime(2020, 01, 01);
+slider.value = new DateTime(2014, 01, 01);
 slider.Interval = 2;
 slider.EdgeLabelsPlacement = SliderEdgeLabelsPlacement.Inside;
 slider.ShowLabels = true;
@@ -189,9 +189,9 @@ The inactive side of the slider is between the thumb and the [`Maximum`](https:/
 {% highlight C# %}
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
-slider.Minimum = new Date(2010, 01, 01);
-slider.Maximum = new Date(2020, 01, 01);
-slider.value = new Date(2014, 01, 01);
+slider.Minimum = new DateTime(2010, 01, 01);
+slider.Maximum = new DateTime(2020, 01, 01);
+slider.value = new DateTime(2014, 01, 01);
 slider.Interval = 2;
 slider.ShowLabels = true;
 slider.ShowTicks = true;
@@ -232,9 +232,9 @@ You can adjust the space between ticks and labels of the slider using the [`Offs
 {% highlight C# %}
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
-slider.Minimum = new Date(2010, 01, 01);
-slider.Maximum = new Date(2020, 01, 01);
-slider.value = new Date(2014, 01, 01);
+slider.Minimum = new DateTime(2010, 01, 01);
+slider.Maximum = new DateTime(2020, 01, 01);
+slider.value = new DateTime(2014, 01, 01);
 slider.Interval = 2;
 slider.ShowLabels = true;
 slider.ShowTicks = true;

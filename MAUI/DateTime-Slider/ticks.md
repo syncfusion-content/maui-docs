@@ -33,9 +33,9 @@ For example, if [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 {% highlight C# %}
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
-slider.Minimum = new Date(2010, 01, 01);
-slider.Maximum = new Date(2020, 01, 01);
-slider.value = new Date(2014, 01, 01);
+slider.Minimum = new DateTime(2010, 01, 01);
+slider.Maximum = new DateTime(2020, 01, 01);
+slider.value = new DateTime(2014, 01, 01);
 slider.ShowTicks = true;
 
 {% endhighlight %}
@@ -62,9 +62,9 @@ slider.ShowTicks = true;
 {% highlight C# %}
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
-slider.Minimum = new Date(2010, 01, 01);
-slider.Maximum = new Date(2020, 01, 01);
-slider.value = new Date(2014, 01, 01);
+slider.Minimum = new DateTime(2010, 01, 01);
+slider.Maximum = new DateTime(2020, 01, 01);
+slider.value = new DateTime(2014, 01, 01);
 slider.Interval = 0.2;
 slider.ShowTicks = true;
 
@@ -97,9 +97,9 @@ It is used to represent the number of smaller ticks between two major ticks. For
 {% highlight C# %}
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
-slider.Minimum = new Date(2010, 01, 01);
-slider.Maximum = new Date(2020, 01, 01);
-slider.value = new Date(2014, 01, 01);
+slider.Minimum = new DateTime(2010, 01, 01);
+slider.Maximum = new DateTime(2020, 01, 01);
+slider.value = new DateTime(2014, 01, 01);
 slider.Interval = 2;
 slider.MinorTicksPerInterval = 3;
 slider.ShowTicks = true;
@@ -131,9 +131,9 @@ slider.ShowLabels = true;
 {% highlight C# %}
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
-slider.Minimum = new Date(2010, 01, 01);
-slider.Maximum = new Date(2020, 01, 01);
-slider.value = new Date(2014, 01, 01);
+slider.Minimum = new DateTime(2010, 01, 01);
+slider.Maximum = new DateTime(2020, 01, 01);
+slider.value = new DateTime(2014, 01, 01);
 slider.Interval = 2;
 slider.MinorTicksPerInterval = 1;
 slider.ShowTicks = true;
@@ -173,9 +173,9 @@ The inactive side of the slider is between the thumb and the [`Maximum`](https:/
 {% highlight C# %}
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
-slider.Minimum = new Date(2010, 01, 01);
-slider.Maximum = new Date(2020, 01, 01);
-slider.value = new Date(2014, 01, 01);
+slider.Minimum = new DateTime(2010, 01, 01);
+slider.Maximum = new DateTime(2020, 01, 01);
+slider.value = new DateTime(2014, 01, 01);
 slider.Interval = 2;
 slider.ShowTicks = true;
 slider.MajorTickStyle.ActiveFill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
@@ -213,9 +213,9 @@ The inactive side of the slider is between the thumb and the [`Maximum`](https:/
 {% highlight C# %}
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
-slider.Minimum = new Date(2010, 01, 01);
-slider.Maximum = new Date(2020, 01, 01);
-slider.value = new Date(2014, 01, 01);
+slider.Minimum = new DateTime(2010, 01, 01);
+slider.Maximum = new DateTime(2020, 01, 01);
+slider.value = new DateTime(2014, 01, 01);
 slider.Interval = 2;
 slider.ShowTicks = true;
 slider.ShowLabels = true;
@@ -258,9 +258,9 @@ You can change the major and minor ticks size of the slider using the [`ActiveSi
 {% highlight C# %}
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
-slider.Minimum = new Date(2010, 01, 01);
-slider.Maximum = new Date(2020, 01, 01);
-slider.value = new Date(2014, 01, 01);
+slider.Minimum = new DateTime(2010, 01, 01);
+slider.Maximum = new DateTime(2020, 01, 01);
+slider.value = new DateTime(2014, 01, 01);
 slider.Interval = 2;
 slider.ShowTicks = true;
 slider.MinorTicksPerInterval = 1;
@@ -302,9 +302,9 @@ You can adjust the space between track and ticks of the slider using the [`Offse
 {% highlight C# %}
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
-slider.Minimum = new Date(2010, 01, 01);
-slider.Maximum = new Date(2020, 01, 01);
-slider.value = new Date(2014, 01, 01);
+slider.Minimum = new DateTime(2010, 01, 01);
+slider.Maximum = new DateTime(2020, 01, 01);
+slider.value = new DateTime(2014, 01, 01);
 slider.Interval = 2;
 slider.ShowTicks = true;
 slider.MinorTicksPerInterval = 1;
