@@ -17,20 +17,50 @@ The [`ShowDividers`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders
 
 For example, if [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html#Syncfusion_Maui_Sliders_SfSlider_Minimum) is 0.0 and [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html#Syncfusion_Maui_Sliders_SfSlider_Maximum) is 10.0 and [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Interval) is 2.0, the slider will render the dividers at 0.0, 2.0, 4.0 and so on.
 
+Code snippet for `Numeric` Slider,
+
 {% tabs %}
 
 {% highlight xaml %}
 
-<sliders:SfSlider Interval="0.2" 
-                  ShowDividers="True">
-</sliders:SfSlider>
+<sliders:SfSlider Interval="0.2"
+                  ShowDividers="True" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfSlider slider = new SfSlider();
-slider.Interval = 0.2;
+SfSlider slider = new SfSlider()
+{
+    Interval = 0.2,
+    ShowDividers = true,
+};
+
+{% endhighlight %}
+
+{% endtabs %}
+
+Code snippet for `DateTime` Slider,
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfDateTimeSlider Minimum="2010-01-01"
+                          Maximum="2018-01-01"
+                          Value="2014-01-01"
+                          Interval="2"
+                          ShowDividers="True" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfDateTimeSlider slider = new SfDateTimeSlider();
+slider.Minimum = new DateTime(2010, 01, 01);
+slider.Maximum = new DateTime(2018, 01, 01);
+slider.Value = new DateTime(2014, 01, 01);
+slider.Interval = 2;
 slider.ShowDividers = true;
 
 {% endhighlight %}
@@ -42,6 +72,8 @@ slider.ShowDividers = true;
 ## Divider radius
 
 You can change the active and inactive divider radius of the slider using the [`ActiveRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDividerStyle.html#Syncfusion_Maui_Sliders_SliderDividerStyle_ActiveRadius) and the [`InactiveRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDividerStyle.html#Syncfusion_Maui_Sliders_SliderDividerStyle_InactiveRadius) properties of the [`DividerStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDividerStyle.html) class.
+
+Code snippet for `Numeric` Slider,
 
 {% tabs %}
 
@@ -61,6 +93,42 @@ You can change the active and inactive divider radius of the slider using the [`
 
 SfSlider slider = new SfSlider();
 slider.Interval = 0.2;
+slider.ShowDividers = true;
+slider.DividerStyle.ActiveRadius = 7;
+slider.DividerStyle.InactiveRadius = 7;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+Code snippet for `DateTime` Slider,
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfDateTimeSlider Minimum="2010-01-01"
+                          Maximum="2018-01-01"
+                          Value="2014-01-01"
+                          Interval="2"
+                          ShowDividers="True">
+
+    <sliders:SfDateTimeSlider.DividerStyle>
+        <sliders:SliderDividerStyle ActiveRadius="7"
+                                    InactiveRadius="7" />
+    </sliders:SfDateTimeSlider.DividerStyle>
+
+</sliders:SfDateTimeSlider>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfDateTimeSlider slider = new SfDateTimeSlider();
+slider.Minimum = new DateTime(2010, 01, 01);
+slider.Maximum = new DateTime(2018, 01, 01);
+slider.Value = new DateTime(2014, 01, 01);
+slider.Interval = 2;
 slider.ShowDividers = true;
 slider.DividerStyle.ActiveRadius = 7;
 slider.DividerStyle.InactiveRadius = 7;
@@ -111,6 +179,50 @@ slider.DividerStyle.InactiveStrokeThickness = 2;
 
 {% endtabs %}
 
+Code snippet for `DateTime` Slider,
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfDateTimeSlider Minimum="2010-01-01"
+                          Maximum="2018-01-01"
+                          Value="2014-01-01"
+                          Interval="2"
+                          ShowDividers="True">
+
+    <sliders:SfSlider.DividerStyle>
+         <sliders:SliderDividerStyle ActiveRadius="7" 
+                                     InactiveRadius="7" 
+            			             ActiveStrokeThickness="2" 
+				                     InactiveStrokeThickness="2" 
+				                     ActiveStroke="#EE3F3F" 
+				                     InactiveStroke="#F7B1AE"/>
+     </sliders:SfSlider.DividerStyle>
+
+</sliders:SfDateTimeSlider>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfDateTimeSlider slider = new SfDateTimeSlider();
+slider.Minimum = new DateTime(2010, 01, 01);
+slider.Maximum = new DateTime(2018, 01, 01);
+slider.Value = new DateTime(2014, 01, 01);
+slider.Interval = 2;
+slider.ShowDividers = true;
+slider.DividerStyle.ActiveRadius = 7;
+slider.DividerStyle.InactiveRadius = 7;
+slider.DividerStyle.ActiveStroke = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+slider.DividerStyle.InactiveStroke = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
+slider.DividerStyle.ActiveStrokeThickness = 2;
+slider.DividerStyle.InactiveStrokeThickness = 2;
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ![Slider divider stroke color](images/labels-and-dividers/divider-stroke-color.png)
 
 ## Divider color
@@ -137,6 +249,46 @@ You can change the active and inactive divider color of the slider using the [`A
 
 SfSlider slider = new SfSlider();
 slider.Interval = 0.2;
+slider.ShowDividers = true;
+slider.DividerStyle.ActiveRadius = 7;
+slider.DividerStyle.InactiveRadius = 7;
+slider.DividerStyle.ActiveFill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+slider.DividerStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
+
+{% endhighlight %}
+
+{% endtabs %}
+
+Code snippet for `DateTime` Slider,
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfDateTimeSlider Minimum="2010-01-01"
+                          Maximum="2018-01-01"
+                          Value="2014-01-01"
+                          Interval="2"
+                          ShowDividers="True">
+
+    <sliders:SfSlider.DividerStyle>
+       <sliders:SliderDividerStyle ActiveRadius="7" 
+                                   InactiveRadius="7" 
+				                   ActiveFill="#EE3F3F" 
+				                   InactiveFill="#F7B1AE"/>
+      </sliders:SfSlider.DividerStyle>
+
+</sliders:SfDateTimeSlider>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfDateTimeSlider slider = new SfDateTimeSlider();
+slider.Minimum = new DateTime(2010, 01, 01);
+slider.Maximum = new DateTime(2018, 01, 01);
+slider.Value = new DateTime(2014, 01, 01);
+slider.Interval = 2;
 slider.ShowDividers = true;
 slider.DividerStyle.ActiveRadius = 7;
 slider.DividerStyle.InactiveRadius = 7;

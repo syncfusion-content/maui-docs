@@ -36,6 +36,34 @@ slider.Tooltip = new SliderTooltip();
 
 {% endtabs %}
 
+code snippet for `DateTime` slider,
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfDateTimeSlider Minimum="2010-01-01" 
+                          Maximum="2020-01-01" 
+                          Value="2014-01-01">
+  <sliders:SfDateTimeSlider.Tooltip>
+    <sliders:SliderTooltip />
+  </sliders:SfDateTimeSlider.Tooltip>
+</sliders:SfDateTimeSlider>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfDateTimeSlider slider = new SfDateTimeSlider();
+slider.Minimum = new Date(2010, 01, 01);
+slider.Maximum = new Date(2020, 01, 01);
+slider.value = new Date(2014, 01, 01);
+slider.Tooltip = new SliderTooltip();
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ![Slider tooltip](images/tooltip/tooltip.png)
 
 N> Refer [here](https://help.syncfusion.com/maui/slider/events) to customize tooltip text format through slider events.
@@ -61,6 +89,38 @@ You can change the appearance of the tooltip text like fill, stroke, padding aro
 {% highlight C# %}
 
 SfSlider slider = new SfSlider();
+slider.Tooltip.Fill = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
+slider.Tooltip.Stroke = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+slider.Tooltip.StrokeThickness = 2;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+code snippet for `DateTime` slider,
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfDateTimeSlider Minimum="2010-01-01" 
+                          Maximum="2020-01-01" 
+                          Value="2014-01-01">
+  <sliders:SfDateTimeSlider.Tooltip>
+    <sliders:SliderTooltip Fill="#F7B1AE" 
+                           Stroke="#EE3F3F" 
+				                   StrokeThickness="2" />
+  </sliders:SfDateTimeSlider.Tooltip>
+</sliders:SfDateTimeSlider>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfDateTimeSlider slider = new SfDateTimeSlider();
+slider.Minimum = new Date(2010, 01, 01);
+slider.Maximum = new Date(2020, 01, 01);
+slider.value = new Date(2014, 01, 01);
 slider.Tooltip.Fill = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
 slider.Tooltip.Stroke = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
 slider.Tooltip.StrokeThickness = 2;

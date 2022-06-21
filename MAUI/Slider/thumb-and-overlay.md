@@ -39,6 +39,34 @@ slider.ThumbStyle.Radius = 15;
 
 {% endtabs %}
 
+code snippet for `DateTime` slider,
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfDateTimeSlider Minimum="2010-01-01" 
+                          Maximum="2020-01-01" 
+                          Value="2014-01-01">
+    <sliders:SfDateTimeSlider.ThumbStyle>
+        <sliders:SliderThumbStyle Radius="15" />
+     </sliders:SfDateTimeSlider.ThumbStyle>
+</sliders:SfDateTimeSlider>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfDateTimeSlider slider = new SfDateTimeSlider();
+slider.Minimum = new Date(2010, 01, 01);
+slider.Maximum = new Date(2020, 01, 01);
+slider.value = new Date(2014, 01, 01);
+slider.ThumbStyle.Radius = 15;
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ![Slider thumb size](images/thumb-and-thumb-overlay/thumb-radius.png)
 
 ## Thumb color
@@ -60,6 +88,34 @@ You can change the color of the thumb in the slider using the [`Fill`](https://h
 {% highlight C# %}
 
 SfSlider slider = new SfSlider();
+slider.ThumbStyle.Fill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+
+{% endhighlight %}
+
+{% endtabs %}
+
+code snippet for `DateTime` slider,
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfDateTimeSlider Minimum="2010-01-01" 
+                          Maximum="2020-01-01" 
+                          Value="2014-01-01">
+   <sliders:SfDateTimeSlider.ThumbStyle>
+       <sliders:SliderThumbStyle Fill="#EE3F3F" />
+   </sliders:SfDateTimeSlider.ThumbStyle>
+</sliders:SfDateTimeSlider>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfDateTimeSlider slider = new SfDateTimeSlider();
+slider.Minimum = new Date(2010, 01, 01);
+slider.Maximum = new Date(2020, 01, 01);
+slider.value = new Date(2014, 01, 01);
 slider.ThumbStyle.Fill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
 
 {% endhighlight %}
@@ -95,6 +151,36 @@ slider.ThumbStyle.StrokeThickness = 2;
 
 {% endtabs %}
 
+code snippet for `DateTime` slider,
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfDateTimeSlider Minimum="2010-01-01" 
+                          Maximum="2020-01-01" 
+                          Value="2014-01-01">
+    <sliders:SfDateTimeSlider.ThumbStyle>
+        <sliders:SliderThumbStyle Stroke="#EE3F3F" 
+                                  StrokeThickness="2"/>
+    </sliders:SfDateTimeSlider.ThumbStyle>
+</sliders:SfDateTimeSlider>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfDateTimeSlider slider = new SfDateTimeSlider();
+slider.Minimum = new Date(2010, 01, 01);
+slider.Maximum = new Date(2020, 01, 01);
+slider.value = new Date(2014, 01, 01);
+slider.ThumbStyle.Stroke = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+slider.ThumbStyle.StrokeThickness = 2;
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ![Slider thumb stroke color](images/thumb-and-thumb-overlay/thumb-stroke-color.png)
 
 ## Thumb overlay size
@@ -122,6 +208,34 @@ slider.ThumbOverlayStyle.Radius = 26;
 
 {% endtabs %}
 
+code snippet for `DateTime` slider,
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfDateTimeSlider Minimum="2010-01-01" 
+                          Maximum="2020-01-01" 
+                          Value="2014-01-01">
+   <sliders:SfDateTimeSlider.ThumbOverlayStyle>
+      <sliders:SliderThumbOverlayStyle Radius="26"/>
+   </sliders:SfDateTimeSlider.ThumbOverlayStyle>
+</sliders:SfDateTimeSlider>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfDateTimeSlider slider = new SfDateTimeSlider();
+slider.Minimum = new Date(2010, 01, 01);
+slider.Maximum = new Date(2020, 01, 01);
+slider.value = new Date(2014, 01, 01);
+slider.ThumbOverlayStyle.Radius = 26;
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ![Slider thumb overlay size](images/thumb-and-thumb-overlay/thumb-overlay-radius.png)
 
 ## Thumb overlay color
@@ -143,6 +257,34 @@ You can change the color of the thumb overlay in the slider using the [`Fill`](h
 {% highlight C# %}
 
 SfSlider slider = new SfSlider();
+slider.ThumbOverlayStyle.Fill = new SolidColorBrush(Color.FromArgb("#F7C8DB")); 
+
+{% endhighlight %}
+
+{% endtabs %}
+
+code snippet for `DateTime` slider,
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfDateTimeSlider Minimum="2010-01-01" 
+                          Maximum="2020-01-01" 
+                          Value="2014-01-01">
+   <sliders:SfDateTimeSlider.ThumbOverlayStyle>
+       <sliders:SliderThumbOverlayStyle Fill="#F7C8DB"/>
+   </sliders:SfDateTimeSlider.ThumbOverlayStyle>
+</sliders:SfDateTimeSlider>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfDateTimeSlider slider = new SfDateTimeSlider();
+slider.Minimum = new Date(2010, 01, 01);
+slider.Maximum = new Date(2020, 01, 01);
+slider.value = new Date(2014, 01, 01);
 slider.ThumbOverlayStyle.Fill = new SolidColorBrush(Color.FromArgb("#F7C8DB")); 
 
 {% endhighlight %}

@@ -25,16 +25,44 @@ It represents the value currently selected in the slider. The slider's thumb is 
 
 For date values, the slider does not have auto interval support. So, it is mandatory to set [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html?tabs=tabid-1#Syncfusion_Maui_Sliders_SliderBase_Interval), [`IntervalType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeSlider_IntervalType), and [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeSlider_DateFormat) for date values.
 
+Code snippet for `Numeric` Slider,
+
 {% tabs %}
 
 {% highlight xaml %}
 
-<sliders:SfDateTimeSlider Minimum="2010-01-01" 
-                          Maximum="2020-01-01" 
-	                      Value="2014-01-01"
-	                      ShowTicks="True"
-	                      ShowLabel="True">
-</sliders:SfDateTimeSlider>
+<sliders:SfSlider Minimum="-20"
+                  Maximum="20"
+                  Value="0"
+                  ShowTicks="True"
+                  ShowLabels="True" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfSlider slider = new SfSlider();
+slider.Minimum = -20;
+slider.Maximum = 20;
+slider.Value = 0;
+slider.ShowTicks = true;
+slider.ShowLabels = true;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+Code snippet for `DateTime` Slider,
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfDateTimeSlider Minimum="2010-01-01"
+                          Maximum="2020-01-01"
+                          Value="2014-01-01"
+                          ShowTicks="True"
+                          ShowLabels="True" />
 
 {% endhighlight %}
 
@@ -45,7 +73,7 @@ slider.Minimum = new DateTime(2010, 01, 01);
 slider.Maximum = new DateTime(2020, 01, 01);
 slider.Value = new DateTime(2014, 01, 01);
 slider.ShowTicks = true;
-slider.ShowLabel = true;
+slider.ShowLabels = true;
 
 {% endhighlight %}
 

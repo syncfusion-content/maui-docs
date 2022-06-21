@@ -24,6 +24,49 @@ This section explains about how to add the events and commands for slider.
 
 {% highlight xaml %}
 
+<sliders:SfSlider ValueChangeStart="OnValueChangeStart" 
+	 	          ValueChanging="OnValueChanging" 
+		          ValueChanged="OnValueChanged" 
+		          ValueChangeEnd="OnValueChangeEnd">
+</sliders:SfSlider>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+{
+   SfSlider slider = new SfSlider();
+   slider.ValueChangeStart += OnValueChanged;
+   slider.ValueChanging += OnValueChanged;
+   slider.ValueChanged += OnValueChanged;
+   slider.ValueChangeEnd += OnValueChanged;
+}
+
+private void OnValueChangeStart(object sender, EventArgs e)
+{
+}
+
+private void OnValueChanging(object sender, SliderValueChangingEventArgs e)
+{
+}
+
+private void OnValueChanged(object sender, SliderValueChangedEventArgs e) 
+{
+}
+private void OnValueChangeEnd(object sender, EventArgs e)
+{
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+code snippet for `DateTime` slider,
+
+{% tabs %}
+
+{% highlight xaml %}
+
 <sliders:SfDateTimeSlider  Minimum="2010-01-01" 
   	                        Maximum="2020-01-01" 
 		                     Value="2014-01-01" 
@@ -110,6 +153,42 @@ You can format or change the whole numeric or date label text using the [`LabelC
 
 {% endtabs %}
 
+code snippet for `DateTime` slider,
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfDateTimeSlider Minimum="2010-01-01" 
+  	                      Maximum="2020-01-01" 
+		                  Value="2014-01-01" 
+	                      Interval="2" 	           
+	                      LabelCreated="OnLabelCreated" 
+		                  ShowLabels="True">
+</sliders:SfDateTimeSlider>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfDateTimeSlider slider = new SfDateTimeSlider();
+   slider.Minimum = new Date(2010, 01, 01);
+   slider.Maximum = new Date(2020, 01, 01);
+   slider.value = new Date(2014, 01, 01);
+   slider.Interval = 2;
+   slider.ShowLabels = true;
+   slider.LabelCreated += OnLabelCreated;
+ }
+
+ private void OnLabelCreated(object sender, SliderLabelCreatedEventArgs e)
+ {
+   e.Text = "$" + e.Text;
+ }
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ![Slider custom label](images/labels-and-dividers/custom-label.png)
 
 
@@ -150,6 +229,42 @@ private void OnTooltipLabelCreated(object sender, SliderTooltipLabelCreatedEvent
 
 {% endtabs %}
 
+code snippet for `DateTime` slider,
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfDateTimeSlider Minimum="2010-01-01" 
+  	                      Maximum="2020-01-01" 
+		                  Value="2014-01-01">
+
+    <slider:SfDateTimeSlider.Tooltip>
+      <slider:SliderTooltip TooltipLabelCreated="OnTooltipLabelCreated"/>
+   </slider:SfDateTimeSlider.Tooltip>
+
+</sliders:SfDateTimeSlider>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfDateTimeSlider slider = new SfDateTimeSlider();
+   slider.Minimum = new Date(2010, 01, 01);
+   slider.Maximum = new Date(2020, 01, 01);
+   slider.value = new Date(2014, 01, 01);
+   slider.TooltipLabelCreated += OnTooltipLabelCreated;
+ }
+
+private void OnTooltipLabelCreated(object sender, SliderTooltipLabelCreatedEventArgs e)
+{
+    e.Text = "$" + e.Text;
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ![Slider custom tooltip](images/tooltip/custom-tooltip.png)
 
 ## Commands and its parameter
@@ -177,6 +292,53 @@ The `DragStartedCommand` will be executed when the user started moving the thumb
 SfSlider slider = new SfSlider()
 {
     DragStartedCommand = viewModel.DragStartedCommand
+};
+
+public class ViewModel
+{
+    public ICommand DragStartedCommand { get; }
+
+    public ViewModel()
+    {
+        DragStartedCommand = new Command(DragStarted);
+    }
+
+    private void DragStarted(object obj)
+    {
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+code snippet for `DateTime` slider,
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage.BindingContext>
+    <local:ViewModel x:Name="viewModel" />
+</ContentPage.BindingContext>
+
+<ContentPage.Content>
+    <sliders:SfDateTimeSlider Minimum="2010-01-01" 
+                          Maximum="2020-01-01" 
+                          Value="2014-01-01"
+                          DragStartedCommand="{Binding DragStartedCommand}" />
+</ContentPage.Content>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfDateTimeSlider slider = new SfDateTimeSlider()
+{
+    Minimum = new Date(2010, 01, 01),
+   Maximum = new Date(2020, 01, 01),
+   value = new Date(2014, 01, 01),
+    DragStartedCommand = viewModel.DragStartedCommand,
 };
 
 public class ViewModel
@@ -242,6 +404,55 @@ public class ViewModel
 
 {% endtabs %}
 
+code snippet for `DateTime` slider,
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage.BindingContext>
+    <local:ViewModel x:Name="viewModel" />
+</ContentPage.BindingContext>
+
+<ContentPage.Content>
+    <sliders:SfDateTimeSlider Minimum="2010-01-01" 
+                          Maximum="2020-01-01" 
+                          Value="2014-01-01"
+                          DragStartedCommand="{Binding DragStartedCommand}"
+                      DragStartedCommandParameter="1" />
+</ContentPage.Content>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfDateTimeSlider slider = new SfDateTimeSlider()
+{
+    Minimum = new Date(2010, 01, 01),
+    Maximum = new Date(2020, 01, 01),
+    value = new Date(2014, 01, 01),
+    DragStartedCommand = viewModel.DragStartedCommand,
+    DragStartedCommandParameter = "1"
+};
+
+public class ViewModel
+{
+    public ICommand DragStartedCommand { get; }
+
+    public ViewModel()
+    {
+        DragStartedCommand = new Command<string>(DragStarted);
+    }
+
+    private void DragStarted(string value)
+    {
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ### Drag completed command
 
 The `DragCompletedCommand` will be executed when the user completed moving the thumb.
@@ -264,6 +475,53 @@ The `DragCompletedCommand` will be executed when the user completed moving the t
 
 SfSlider slider = new SfSlider()
 {
+    DragCompletedCommand = viewModel.DragCompletedCommand
+};
+
+public class ViewModel
+{
+    public ICommand DragCompletedCommand { get; }
+
+    public ViewModel()
+    {
+        DragCompletedCommand = new Command(DragCompleted);
+    }
+
+    private void DragCompleted(object obj)
+    {
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+code snippet for `DateTime` slider,
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage.BindingContext>
+    <local:ViewModel x:Name="viewModel" />
+</ContentPage.BindingContext>
+
+<ContentPage.Content>
+    <sliders:SfDateTimeSlider Minimum="2010-01-01" 
+                          Maximum="2020-01-01" 
+                          Value="2014-01-01"
+                          DragCompletedCommand="{Binding DragCompletedCommand}" />
+</ContentPage.Content>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfDateTimeSlider slider = new SfDateTimeSlider()
+{
+    Minimum = new Date(2010, 01, 01),
+   Maximum = new Date(2020, 01, 01),
+   value = new Date(2014, 01, 01),
     DragCompletedCommand = viewModel.DragCompletedCommand
 };
 
@@ -308,6 +566,55 @@ The `DragCompletedCommandParameter` will be executed when the user completed mov
 
 SfSlider slider = new SfSlider()
 {
+    DragCompletedCommand = viewModel.DragCompletedCommand,
+    DragCompletedCommandParameter = "1"
+};
+
+public class ViewModel
+{
+    public ICommand DragCompletedCommand { get; }
+
+    public ViewModel()
+    {
+        DragCompletedCommand = new Command<string>(DragCompleted);
+    }
+
+    private void DragCompleted(string value)
+    {
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+code snippet for `DateTime` slider,
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage.BindingContext>
+    <local:ViewModel x:Name="viewModel" />
+</ContentPage.BindingContext>
+
+<ContentPage.Content>
+    <sliders:SfDateTimeSlider Minimum="2010-01-01" 
+                          Maximum="2020-01-01" 
+                          Value="2014-01-01"
+                          DragCompletedCommand="{Binding DragCompletedCommand}"
+                      DragCompletedCommandParameter="1" />
+</ContentPage.Content>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfDateTimeSlider slider = new SfDateTimeSlider()
+{
+    Minimum = new Date(2010, 01, 01),
+   Maximum = new Date(2020, 01, 01),
+   value = new Date(2014, 01, 01),
     DragCompletedCommand = viewModel.DragCompletedCommand,
     DragCompletedCommandParameter = "1"
 };

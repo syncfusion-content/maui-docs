@@ -36,6 +36,31 @@ slider.ShowTicks = true;
 
 {% endtabs %}
 
+code snippet for `DateTime` slider,
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfDateTimeSlider Minimum="2010-01-01" 
+                          Maximum="2020-01-01" 
+                          Value="2014-01-01" 
+                          ShowTicks="True" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfDateTimeSlider slider = new SfDateTimeSlider();
+slider.Minimum = new Date(2010, 01, 01);
+slider.Maximum = new Date(2020, 01, 01);
+slider.value = new Date(2014, 01, 01);
+slider.ShowTicks = true;
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ![Slider ticks](images/ticks/show-ticks-without-interval.png)
 
 ### With Interval
@@ -53,6 +78,34 @@ slider.ShowTicks = true;
 {% highlight C# %}
 
 SfSlider slider = new SfSlider();
+slider.Interval = 0.2;
+slider.ShowTicks = true;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+code snippet for `DateTime` slider,
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfDateTimeSlider Minimum="2010-01-01" 
+                          Maximum="2020-01-01" 
+                          Value="2014-01-01"
+                          Interval="0.2" 
+                          ShowTicks="True">
+</sliders:SfDateTimeSlider>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfDateTimeSlider slider = new SfDateTimeSlider();
+slider.Minimum = new Date(2010, 01, 01);
+slider.Maximum = new Date(2020, 01, 01);
+slider.value = new Date(2014, 01, 01);
 slider.Interval = 0.2;
 slider.ShowTicks = true;
 
@@ -97,6 +150,37 @@ slider.ShowLabels = true;
 
 {% endtabs %}
 
+code snippet for `DateTime` slider,
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfDateTimeSlider Minimum="2010-01-01" 
+                          Maximum="2020-01-01" 
+                          Value="2014-01-01"
+                          ShowLabels="True" 
+                          MinorTicksPerInterval="3" 
+		                  ShowTicks="True">
+</sliders:SfDateTimeSlider>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfDateTimeSlider slider = new SfDateTimeSlider();
+slider.Minimum = new Date(2010, 01, 01);
+slider.Maximum = new Date(2020, 01, 01);
+slider.value = new Date(2014, 01, 01);
+slider.Interval = 2;
+slider.MinorTicksPerInterval = 3;
+slider.ShowTicks = true;
+slider.ShowLabels = true;
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ![Slider minor ticks](images/ticks/show-minorticks-without-interval.png)
 
 ### With Interval
@@ -122,6 +206,38 @@ SfSlider slider = new SfSlider();
 slider.Minimum = 0;
 slider.Maximum = 10;
 slider.Value = 6;
+slider.Interval = 2;
+slider.MinorTicksPerInterval = 1;
+slider.ShowTicks = true;
+slider.ShowLabels = true;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+code snippet for `DateTime` slider,
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfDateTimeSlider Minimum="2010-01-01" 
+                          Maximum="2020-01-01" 
+                          Value="2014-01-01"
+                          Interval="2" 
+                          ShowLabels="True" 
+                          MinorTicksPerInterval="1" 
+		                  ShowTicks="True">
+</sliders:SfDateTimeSlider>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfDateTimeSlider slider = new SfDateTimeSlider();
+slider.Minimum = new Date(2010, 01, 01);
+slider.Maximum = new Date(2020, 01, 01);
+slider.value = new Date(2014, 01, 01);
 slider.Interval = 2;
 slider.MinorTicksPerInterval = 1;
 slider.ShowTicks = true;
@@ -159,6 +275,40 @@ The inactive side of the slider is between the thumb and the [`Maximum`](https:/
 
 SfSlider slider = new SfSlider();
 slider.Interval = 0.2;
+slider.ShowTicks = true;
+slider.MajorTickStyle.ActiveFill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+slider.MajorTickStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
+
+{% endhighlight %}
+
+{% endtabs %}
+
+code snippet for `DateTime` slider,
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfDateTimeSlider Minimum="2010-01-01" 
+                          Maximum="2020-01-01" 
+                          Value="2014-01-01"
+                          Interval="2" 
+                          ShowTicks="True">
+   <sliders:SfDateTimeSlider.MajorTickStyle>
+      <sliders:SliderTickStyle ActiveFill="#EE3F3F" 
+                               InactiveFill="#F7B1AE"/>
+    </sliders:SfDateTimeSlider.MajorTickStyle>
+</sliders:SfDateTimeSlider>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfDateTimeSlider slider = new SfDateTimeSlider();
+slider.Minimum = new Date(2010, 01, 01);
+slider.Maximum = new Date(2020, 01, 01);
+slider.value = new Date(2014, 01, 01);
+slider.Interval = 2;
 slider.ShowTicks = true;
 slider.MajorTickStyle.ActiveFill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
 slider.MajorTickStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
@@ -213,6 +363,40 @@ slider.MinorTickStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F7B1AE
 
 {% endtabs %}
 
+code snippet for `DateTime` slider,
+
+<sliders:SfDateTimeSlider Minimum="2010-01-01" 
+                          Maximum="2020-01-01" 
+                          Value="2014-01-01"
+                          Interval="2"
+                          ShowTicks="True"
+                          ShowLabels="True" 
+                          MinorTicksPerInterval="1">
+     <sliders:SfDateTimeSlider.MinorTickStyle>
+        <sliders:SliderTickStyle ActiveFill="#EE3F3F" 
+                                 InactiveFill="#F7B1AE"/>
+      </sliders:SfDateTimeSlider.MinorTickStyle>
+</sliders:SfDateTimeSlider> 
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfDateTimeSlider slider = new SfDateTimeSlider();
+slider.Minimum = new Date(2010, 01, 01);
+slider.Maximum = new Date(2020, 01, 01);
+slider.value = new Date(2014, 01, 01);
+slider.Interval = 2;
+slider.ShowTicks = true;
+slider.ShowLabels = true;
+slider.MinorTicksPerInterval = 1;
+slider.MinorTickStyle.ActiveFill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+slider.MinorTickStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ![Slider minor ticks color](images/ticks/minor-ticks-color.png)
 
 ## Ticks size
@@ -253,6 +437,48 @@ slider.MajorTickStyle.InactiveSize = new Size(2, 15);
 
 {% endtabs %}
 
+code snippet for `DateTime` slider,
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfDateTimeSlider Minimum="2010-01-01" 
+                          Maximum="2020-01-01" 
+                          Value="2014-01-01"
+                          Interval="2" 
+                          ShowTicks="True" 
+		                  MinorTicksPerInterval="1">
+     <sliders:SfDateTimeSlider.MinorTickStyle>
+         <sliders:SliderTickStyle ActiveSize="2,10" 
+                                  InactiveSize="2, 10"/>
+     </sliders:SfDateTimeSlider.MinorTickStyle>
+     <sliders:SfDateTimeSlider.MajorTickStyle>
+         <sliders:SliderTickStyle ActiveSize="2,15" 
+                                  InactiveSize="2, 15"/>
+     </sliders:SfDateTimeSlider.MajorTickStyle>
+</sliders:SfDateTimeSlider>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfDateTimeSlider slider = new SfDateTimeSlider();
+slider.Minimum = new Date(2010, 01, 01);
+slider.Maximum = new Date(2020, 01, 01);
+slider.value = new Date(2014, 01, 01);
+slider.Interval = 2;
+slider.ShowTicks = true;
+slider.MinorTicksPerInterval = 1;
+slider.MinorTickStyle.ActiveSize = new Size(2, 10);
+slider.MinorTickStyle.InactiveSize = new Size(2, 10);
+slider.MajorTickStyle.ActiveSize = new Size(2, 15);
+slider.MajorTickStyle.InactiveSize = new Size(2, 15);
+    
+{% endhighlight %}
+
+{% endtabs %}
+
 ![Slider tick size](images/ticks/tick-size.png)
 
 ## Ticks offset
@@ -280,6 +506,44 @@ You can adjust the space between track and ticks of the slider using the [`Offse
 
 SfSlider slider = new SfSlider();
 slider.Interval = 0.2;
+slider.ShowTicks = true;
+slider.MinorTicksPerInterval = 1;
+slider.MinorTickStyle.Offset = 5;
+slider.MajorTickStyle.Offset = 6;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+code snippet for `DateTime` slider,
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfDateTimeSlider Minimum="2010-01-01" 
+                          Maximum="2020-01-01" 
+                          Value="2014-01-01"
+                          Interval="0.2"  
+                          ShowTicks="True" 
+                          MinorTicksPerInterval="1">
+   <sliders:SfDateTimeSlider.MinorTickStyle>
+       <sliders:SliderTickStyle Offset="5"/>
+   </sliders:SfDateTimeSlider.MinorTickStyle>
+   <sliders:SfDateTimeSlider.MajorTickStyle>
+       <sliders:SliderTickStyle Offset="6"/>
+    </sliders:SfDateTimeSlider.MajorTickStyle>
+</sliders:SfDateTimeSlider>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfDateTimeSlider slider = new SfDateTimeSlider();
+slider.Minimum = new Date(2010, 01, 01);
+slider.Maximum = new Date(2020, 01, 01);
+slider.value = new Date(2014, 01, 01);
+slider.Interval = 2;
 slider.ShowTicks = true;
 slider.MinorTicksPerInterval = 1;
 slider.MinorTickStyle.Offset = 5;

@@ -99,6 +99,48 @@ namespace SliderGettingStarted
 
 {% endtabs %}
 
+code snippet for `DateTime` slider,
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage
+    . . .
+    xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders">
+    <Grid>
+        <sliders:SfDateTimeSlider Minimum="2010-01-01" 
+                          Maximum="2020-01-01" 
+                          Value="2014-01-01" />
+    </Grid>
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+using Syncfusion.Maui.Sliders;
+
+namespace SliderGettingStarted
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+            SfDateTimeSlider slider = new SfDateTimeSlider();
+            slider.Minimum = new Date(2010, 01, 01);
+            slider.Maximum = new Date(2020, 01, 01);
+            slider.value = new Date(2014, 01, 01);
+            this.content = slider;
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ![Initialize slider](images/getting-started/initialize-slider.png)
 
 ## Enable labels
@@ -125,6 +167,35 @@ SfSlider slider = new SfSlider();
 slider.Minimum = 20;
 slider.Maximum = 100;
 slider.Value = 60;
+slider.ShowLabels = true;
+slider.Interval = 2;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+Code snippets for `DateTime` slider,
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfDateTimeSlider Minimum="2010-01-01" 
+                          Maximum="2020-01-01" 
+                          Value="2014-01-01"
+		                  ShowLabels="True" 
+		                  Interval="2">
+</sliders:SfDateTimeSlider>
+
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfDateTimeSlider slider = new SfDateTimeSlider();
+slider.Minimum = new Date(2010, 01, 01);
+slider.Maximum = new Date(2020, 01, 01);
+slider.value = new Date(2014, 01, 01);
 slider.ShowLabels = true;
 slider.Interval = 2;
 
@@ -160,6 +231,38 @@ SfSlider slider = new SfSlider();
 slider.Minimum = 20;
 slider.Maximum = 100;
 slider.Value = 60;
+slider.ShowLabels = true;
+slider.Interval = 2;
+slider.ShowTicks = true;
+slider.MinorTicksPerInterval = 1;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+code snippet for `DateTime` slider,
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfDateTimeSlider Minimum="2010-01-01" 
+                          Maximum="2020-01-01" 
+                          Value="2014-01-01" 
+		                  ShowLabels="True"  
+		                  ShowTicks="True" 
+		                  Interval="2" 
+		                  MinorTicksPerInterval="1">
+</sliders:SfDateTimeSlider>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfDateTimeSlider slider = new SfDateTimeSlider();
+slider.Minimum = new Date(2010, 01, 01);
+slider.Maximum = new Date(2020, 01, 01);
+slider.value = new Date(2014, 01, 01);
 slider.ShowLabels = true;
 slider.Interval = 2;
 slider.ShowTicks = true;
@@ -207,6 +310,40 @@ slider.MinorTicksPerInterval = 1;
 
 {% endtabs %}
 
+code snippet for `DateTime` slider,
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfDateTimeSlider Orientation="Vertical"
+                          Minimum="2010-01-01" 
+                          Maximum="2020-01-01" 
+                          Value="2014-01-01" 
+		                  ShowLabels="True"  
+		                  ShowTicks="True" 
+		                  Interval="2" 
+		                  MinorTicksPerInterval="1">
+</sliders:SfDateTimeSlider>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfDateTimeSlider slider = new SfDateTimeSlider();
+slider.Orientation = SliderOrientation.Vertical;
+slider.Minimum = new Date(2010, 01, 01);
+slider.Maximum = new Date(2020, 01, 01);
+slider.value = new Date(2014, 01, 01);
+slider.ShowLabels = true;
+slider.Interval = 2;
+slider.ShowTicks = true;
+slider.MinorTicksPerInterval = 1;
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ![Slider orientation](images/getting-started/orientation.png)
 
 ## Inverse the slider
@@ -236,6 +373,40 @@ slider.IsInversed = true;
 slider.Minimum = 20;
 slider.Maximum = 100;
 slider.Value = 60;
+slider.ShowLabels = true;
+slider.Interval = 2;
+slider.ShowTicks = true;
+slider.MinorTicksPerInterval = 1;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+code snippet for `DateTime` slider,
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfDateTimeSlider Minimum="2010-01-01" 
+                          Maximum="2020-01-01" 
+                          Value="2014-01-01" 
+                          IsInversed="True"
+		                  ShowLabels="True"  
+		                  ShowTicks="True" 
+		                  Interval="2" 
+		                  MinorTicksPerInterval="1">
+</sliders:SfDateTimeSlider>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfDateTimeSlider slider = new SfDateTimeSlider();
+slider.Minimum = new Date(2010, 01, 01);
+slider.Maximum = new Date(2020, 01, 01);
+slider.value = new Date(2014, 01, 01);
+slider.IsInversed = true;
 slider.ShowLabels = true;
 slider.Interval = 2;
 slider.ShowTicks = true;
@@ -313,6 +484,38 @@ You can add prefix or suffix to the labels using the [`NumberFormat`](https://he
  slider.ShowLabels = true;
  slider.Interval = 20;
  slider.NumberFormat = "$##";
+
+{% endhighlight %}
+
+{% endtabs %}
+
+code snippet for `DateTime` slider,
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfDateTimeSlider Minimum="2010-01-01" 
+                          Maximum="2020-01-01" 
+                          Value="2014-01-01" 
+		                  NumberFormat="$##" 
+                          ShowTicks="True"
+                          MinorTicksPerInterval="1"
+		                  ShowLabels="True" 
+		                  Interval="20">
+</sliders:SfDateTimeSlider>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfDateTimeSlider slider = new SfDateTimeSlider();
+slider.Minimum = new Date(2010, 01, 01);
+slider.Maximum = new Date(2020, 01, 01);
+slider.value = new Date(2014, 01, 01);
+slider.ShowLabels = true;
+slider.Interval = 20;
+slider.NumberFormat = "$##";
 
 {% endhighlight %}
 
