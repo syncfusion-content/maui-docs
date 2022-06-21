@@ -95,7 +95,7 @@ namespace SignaturePadGettingStarted
 
 {% endtabs %}
 
-![SignaturePad default](images/getting-started/default.jpg)
+![SignaturePad default](images/getting-started/default.png)
 
 ## Customize signature stroke color
 
@@ -120,7 +120,7 @@ SfSignaturePad signaturePad = new SfSignaturePad()
 
 {% endtabs %}
 
-![SignaturePad stroke color](images/getting-started/stroke-color.jpg)
+![SignaturePad stroke color](images/getting-started/stroke-color.png)
 
 ## Customize signature stroke thickness
 
@@ -147,7 +147,7 @@ SfSignaturePad signaturePad = new SfSignaturePad()
 
 {% endtabs %}
 
-![SignaturePad stroke thickness](images/getting-started/stroke-thickness.jpg)
+![SignaturePad stroke thickness](images/getting-started/stroke-thickness.png)
 
 ## Save signature as image
 
