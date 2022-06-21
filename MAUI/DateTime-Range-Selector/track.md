@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Track in .NET MAUI Range Selector control | Syncfusion
-description: Learn here all about adding the track feature of .NET MAUI Range Selector (SfRangeSelector) control and more.
+description: Learn here all about adding the track feature of .NET MAUI Range Selector (SfDateTimeRangeSelector) control and more.
 platform: maui
-control: SfRangeSelector
+control: SfDateTimeRangeSelector
 documentation: ug
 ---
 
-# Track in .NET MAUI Range Selector (SfRangeSelector)
+# Track in .NET MAUI DateTime Range Selector (SfDateTimeRangeSelector)
 
 This section helps to learn about how to customize the track in the Range Selector.
 
@@ -28,24 +28,31 @@ The inactive side of the Range Selector is between the [`Minimum`](https://help.
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
     
-    <sliders:SfRangeSelector>
+    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
+                                     Maximum="2018-01-01" 
+                                     RangeStart="2012-01-01" 
+                                     RangeEnd="2016-01-01">
         
-        <sliders:SfRangeSelector.TrackStyle>
+        <sliders:SfDateTimeRangeSelector.TrackStyle>
             <sliders:SliderTrackStyle ActiveFill="#EE3F3F" InactiveFill="#F7B1AE" />
-        </sliders:SfRangeSelector.TrackStyle>
+        </sliders:SfDateTimeRangeSelector.TrackStyle>
         
         <charts:SfCartesianChart>
             ...
         </charts:SfCartesianChart>
     
-    </sliders:SfRangeSelector>
+    </sliders:SfDateTimeRangeSelector>
 </ContentPage>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfRangeSelector rangeSelector = new SfRangeSelector();
+SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
+rangeSelector.Minimum = new DateTime(2010, 01, 01);
+rangeSelector.Maximum = new DateTime(2018, 01, 01);
+rangeSelector.RangeStart = new DateTime(2012, 01, 01);
+rangeSelector.RangeEnd = new DateTime(2016, 01, 01);
 rangeSelector.TrackStyle.ActiveFill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
 rangeSelector.TrackStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
 SfCartesianChart chart = new SfCartesianChart();
@@ -70,24 +77,31 @@ You can change the active and inactive track height of the Range Selector using 
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
     
-    <sliders:SfRangeSelector>
+    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
+                                     Maximum="2018-01-01" 
+                                     RangeStart="2012-01-01" 
+                                     RangeEnd="2016-01-01">
         
-        <sliders:SfRangeSelector.TrackStyle>
+        <sliders:SfDateTimeRangeSelector.TrackStyle>
             <sliders:SliderTrackStyle ActiveSize="10" InactiveSize="8" />
-        </sliders:SfRangeSelector.TrackStyle>
+        </sliders:SfDateTimeRangeSelector.TrackStyle>
         
         <charts:SfCartesianChart>
             ...
         </charts:SfCartesianChart>
     
-    </sliders:SfRangeSelector>
+    </sliders:SfDateTimeRangeSelector>
 </ContentPage>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfRangeSelector rangeSelector = new SfRangeSelector();
+SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
+rangeSelector.Minimum = new DateTime(2010, 01, 01);
+rangeSelector.Maximum = new DateTime(2018, 01, 01);
+rangeSelector.RangeStart = new DateTime(2012, 01, 01);
+rangeSelector.RangeEnd = new DateTime(2016, 01, 01);
 rangeSelector.TrackStyle.ActiveSize = 10;
 rangeSelector.TrackStyle.InactiveSize = 8;
 SfCartesianChart chart = new SfCartesianChart();

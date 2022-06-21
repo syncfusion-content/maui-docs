@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Thumb and Overlay in .NET MAUI Range Selector control | Syncfusion
-description: Learn here all about the Thumb and Thumb Overlay features of Syncfusion .NET MAUI Range Selector (SfRangeSelector) control and more.
+description: Learn here all about the Thumb and Thumb Overlay features of Syncfusion .NET MAUI Range Selector (SfDateTimeRangeSelector) control and more.
 platform: maui
-control: SfRangeSelector
+control: SfDateTimeRangeSelector
 documentation: ug
 ---
 
-# Thumb and Overlay in .NET MAUI Range Selector (SfRangeSelector)
+# Thumb and Overlay in .NET MAUI DateTime Range Selector (SfDateTimeRangeSelector)
 
-This section helps to learn about how to customize the thumb and thumb overlay in the Range Selector.
+This section helps to learn about how to customize the thumb and thumb overlay in the date-time Range Selector.
 
 * Thumb - It is one of the elements of slider which can be used to drag and change the selected value of the Range Selector.
 * Thumb overlay - It is rendered around the thumb while interacting with them.
@@ -27,24 +27,31 @@ You can change the size of the thumb in the Range Selector using the [`Radius`](
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
     
-    <sliders:SfRangeSelector>
+    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
+                                     Maximum="2018-01-01" 
+                                     RangeStart="2012-01-01" 
+                                     RangeEnd="2016-01-01">
         
-        <sliders:SfRangeSelector.ThumbStyle>
+        <sliders:SfDateTimeRangeSelector.ThumbStyle>
             <sliders:SliderThumbStyle Radius="15" />
-        </sliders:SfRangeSelector.ThumbStyle>
+        </sliders:SfDateTimeRangeSelector.ThumbStyle>
         
         <charts:SfCartesianChart>
             ...
         </charts:SfCartesianChart>
     
-    </sliders:SfRangeSelector>
+    </sliders:SfDateTimeRangeSelector>
 </ContentPage>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfRangeSelector rangeSelector = new SfRangeSelector();
+SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
+rangeSelector.Minimum = new DateTime(2010, 01, 01);
+rangeSelector.Maximum = new DateTime(2018, 01, 01);
+rangeSelector.RangeStart = new DateTime(2012, 01, 01);
+rangeSelector.RangeEnd = new DateTime(2016, 01, 01);
 rangeSelector.ThumbStyle.Radius = 15;
 SfCartesianChart chart = new SfCartesianChart();
 rangeSelector.Content = chart;
@@ -68,24 +75,31 @@ You can change the color of the thumb in the Range Selector using the [`Fill`](h
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
     
-    <sliders:SfRangeSelector>
+    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
+                                     Maximum="2018-01-01" 
+                                     RangeStart="2012-01-01" 
+                                     RangeEnd="2016-01-01">
         
-        <sliders:SfRangeSelector.ThumbStyle>
+        <sliders:SfDateTimeRangeSelector.ThumbStyle>
             <sliders:SliderThumbStyle Fill="#EE3F3F" />
-        </sliders:SfRangeSelector.ThumbStyle>
+        </sliders:SfDateTimeRangeSelector.ThumbStyle>
         
         <charts:SfCartesianChart>
             ...
         </charts:SfCartesianChart>
     
-    </sliders:SfRangeSelector>
+    </sliders:SfDateTimeRangeSelector>
 </ContentPage>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfRangeSelector rangeSelector = new SfRangeSelector();
+SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
+rangeSelector.Minimum = new DateTime(2010, 01, 01);
+rangeSelector.Maximum = new DateTime(2018, 01, 01);
+rangeSelector.RangeStart = new DateTime(2012, 01, 01);
+rangeSelector.RangeEnd = new DateTime(2016, 01, 01);
 rangeSelector.ThumbStyle.Fill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
 SfCartesianChart chart = new SfCartesianChart();
 rangeSelector.Content = chart;
@@ -109,24 +123,31 @@ You can change the thumb stroke width using the [`StrokeThickness`](https://help
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
     
-    <sliders:SfRangeSelector>
+    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
+                                     Maximum="2018-01-01" 
+                                     RangeStart="2012-01-01" 
+                                     RangeEnd="2016-01-01">
         
-        <sliders:SfRangeSelector.ThumbStyle>
+        <sliders:SfDateTimeRangeSelector.ThumbStyle>
             <sliders:SliderThumbStyle StrokeThickness="2" Stroke="#EE3F3F" />
-        </sliders:SfRangeSelector.ThumbStyle>
+        </sliders:SfDateTimeRangeSelector.ThumbStyle>
         
         <charts:SfCartesianChart>
             ...
         </charts:SfCartesianChart>
     
-    </sliders:SfRangeSelector>
+    </sliders:SfDateTimeRangeSelector>
 </ContentPage>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfRangeSelector rangeSelector = new SfRangeSelector();
+SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
+rangeSelector.Minimum = new DateTime(2010, 01, 01);
+rangeSelector.Maximum = new DateTime(2018, 01, 01);
+rangeSelector.RangeStart = new DateTime(2012, 01, 01);
+rangeSelector.RangeEnd = new DateTime(2016, 01, 01);
 rangeSelector.ThumbStyle.Stroke = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
 rangeSelector.ThumbStyle.StrokeThickness = 2;
 SfCartesianChart chart = new SfCartesianChart();
@@ -151,24 +172,31 @@ You can change the thumb stroke color while two thumbs are overlapping in the Ra
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
     
-    <sliders:SfRangeSelector>
+    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
+                                     Maximum="2018-01-01" 
+                                     RangeStart="2012-01-01" 
+                                     RangeEnd="2016-01-01">
         
-        <sliders:SfRangeSelector.ThumbStyle>
+        <sliders:SfDateTimeRangeSelector.ThumbStyle>
             <sliders:SliderThumbStyle OverlapStroke="#EE3F3F" />
-        </sliders:SfRangeSelector.ThumbStyle>
+        </sliders:SfDateTimeRangeSelector.ThumbStyle>
         
         <charts:SfCartesianChart>
             ...
         </charts:SfCartesianChart>
     
-    </sliders:SfRangeSelector>
+    </sliders:SfDateTimeRangeSelector>
 </ContentPage>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfRangeSelector rangeSelector = new SfRangeSelector();
+SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
+rangeSelector.Minimum = new DateTime(2010, 01, 01);
+rangeSelector.Maximum = new DateTime(2018, 01, 01);
+rangeSelector.RangeStart = new DateTime(2012, 01, 01);
+rangeSelector.RangeEnd = new DateTime(2016, 01, 01);
 rangeSelector.ThumbStyle.OverlapStroke = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
 SfCartesianChart chart = new SfCartesianChart();
 rangeSelector.Content = chart;
@@ -192,24 +220,31 @@ You can change the size of the thumb overlay in the Range Selector using the [`R
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
     
-    <sliders:SfRangeSelector>
+    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
+                                     Maximum="2018-01-01" 
+                                     RangeStart="2012-01-01" 
+                                     RangeEnd="2016-01-01">
         
-        <sliders:SfRangeSelector.ThumbOverlayStyle>
+        <sliders:SfDateTimeRangeSelector.ThumbOverlayStyle>
             <sliders:SliderThumbOverlayStyle Radius="30" />
-        </sliders:SfRangeSelector.ThumbOverlayStyle>
+        </sliders:SfDateTimeRangeSelector.ThumbOverlayStyle>
         
         <charts:SfCartesianChart>
             ...
         </charts:SfCartesianChart>
     
-    </sliders:SfRangeSelector>
+    </sliders:SfDateTimeRangeSelector>
 </ContentPage>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfRangeSelector rangeSelector = new SfRangeSelector();
+SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
+rangeSelector.Minimum = new DateTime(2010, 01, 01);
+rangeSelector.Maximum = new DateTime(2018, 01, 01);
+rangeSelector.RangeStart = new DateTime(2012, 01, 01);
+rangeSelector.RangeEnd = new DateTime(2016, 01, 01);
 rangeSelector.ThumbOverlayStyle.Radius = 30;
 SfCartesianChart chart = new SfCartesianChart();
 rangeSelector.Content = chart;
@@ -233,24 +268,31 @@ You can change the color of the thumb overlay in the Range Selector using the [`
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
     
-    <sliders:SfRangeSelector>
+    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
+                                     Maximum="2018-01-01" 
+                                     RangeStart="2012-01-01" 
+                                     RangeEnd="2016-01-01">
         
-        <sliders:SfRangeSelector.ThumbOverlayStyle>
+        <sliders:SfDateTimeRangeSelector.ThumbOverlayStyle>
             <sliders:SliderThumbOverlayStyle Fill="#F7C8DB" />
-        </sliders:SfRangeSelector.ThumbOverlayStyle>
+        </sliders:SfDateTimeRangeSelector.ThumbOverlayStyle>
         
         <charts:SfCartesianChart>
             ...
         </charts:SfCartesianChart>
     
-    </sliders:SfRangeSelector>
+    </sliders:SfDateTimeRangeSelector>
 </ContentPage>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfRangeSelector rangeSelector = new SfRangeSelector();
+SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
+rangeSelector.Minimum = new DateTime(2010, 01, 01);
+rangeSelector.Maximum = new DateTime(2018, 01, 01);
+rangeSelector.RangeStart = new DateTime(2012, 01, 01);
+rangeSelector.RangeEnd = new DateTime(2016, 01, 01);
 rangeSelector.ThumbOverlayStyle.Fill = new SolidColorBrush(Color.FromArgb("#F7C8DB"));
 SfCartesianChart chart = new SfCartesianChart();
 rangeSelector.Content = chart;

@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Labels in .NET MAUI Range Selector control | Syncfusion
-description: Learn here all about the Labels and its customization feature of .NET MAUI Range Selector (SfRangeSelector) control and more.
+description: Learn here all about the Labels and its customization feature of .NET MAUI Range Selector (SfDateTimeRangeSelector) control and more.
 platform: maui
-control: SfRangeSelector
+control: SfDateTimeRangeSelector
 documentation: ug
 ---
 
-# Labels in .NET MAUI Range Selector (SfRangeSelector)
+# Labels in .NET MAUI DateTime Range Selector (SfDateTimeRangeSelector)
 
-This section explains about how to add the labels in the Range Selector.
+This section explains about how to add the labels in the date-time Range Selector.
 
 ## Show labels
 
@@ -24,30 +24,30 @@ The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.S
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
 
-    <sliders:SfRangeSelector Minimum="0" 
-                             Maximum="10"
-                             RangeStart="2"
-                             RangeEnd="8" 
-                             Interval="2" 
-                             ShowLabels="True"
-                             ShowTicks="True">
+    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
+                                     Maximum="2018-01-01" 
+                                     RangeStart="2012-01-01" 
+                                     RangeEnd="2016-01-01"
+                                     Interval="2" 
+                                     ShowLabels="True"
+                                     ShowTicks="True">
 
         <charts:SfCartesianChart>
             ...
         </charts:SfCartesianChart>
 
-    </sliders:SfRangeSelector>
+    </sliders:SfDateTimeRangeSelector>
 </ContentPage>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfRangeSelector rangeSelector = new SfRangeSelector();
-rangeSelector.Minimum = 0;
-rangeSelector.Maximum = 10;
-rangeSelector.RangeStart = 2;
-rangeSelector.RangeEnd = 8;
+SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
+rangeSelector.Minimum = new DateTime(2010, 01, 01);
+rangeSelector.Maximum = new DateTime(2018, 01, 01);
+rangeSelector.RangeStart = new DateTime(2012, 01, 01);
+rangeSelector.RangeEnd = new DateTime(2016, 01, 01);
 rangeSelector.Interval = 2;
 rangeSelector.ShowLabels = true;
 rangeSelector.ShowTicks = true;
@@ -59,57 +59,6 @@ rangeSelector.Content = chart;
 {% endtabs %}
 
 ![RangeSelector labels](images/labels-and-dividers/labels.png)
-
-## Number format
-
-The [`NumberFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_NumberFormat) property is used to format the numeric labels. The default value of [`NumberFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_NumberFormat) property is `0.##`.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<ContentPage 
-             ...
-             xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-
-    <sliders:SfRangeSelector Minimum="0" 
-                             Maximum="10"
-                             RangeStart="2"
-                             RangeEnd="8" 
-                             Interval="2"
-                             NumberFormat="$#" 
-                             ShowLabels="True"
-                             ShowTicks="True">
-
-        <charts:SfCartesianChart>
-            ...
-        </charts:SfCartesianChart>
-    
-    </sliders:SfRangeSelector>
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfRangeSelector rangeSelector = new SfRangeSelector();
-rangeSelector.Minimum = 0;
-rangeSelector.Maximum = 10;
-rangeSelector.RangeStart = 2;
-rangeSelector.RangeEnd = 8;
-rangeSelector.Interval = 2;
-rangeSelector.NumberFormat = "$##";
-rangeSelector.ShowLabels = true;
-rangeSelector.ShowTicks = true;
-SfCartesianChart chart = new SfCartesianChart();
-rangeSelector.Content = chart;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![RangeSelector number format](images/labels-and-dividers/number-format.png)
 
 ## Date format
 
@@ -178,31 +127,31 @@ The [`LabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slid
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
 
-    <sliders:SfRangeSelector Minimum="0" 
-                             Maximum="10" 
-                             Interval="2"
-                             RangeStart="2"
-                             RangeEnd="8" 
-                             LabelsPlacement="BetweenTicks"  
-                             ShowLabels="True" 
-                             ShowTicks="True">
+    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
+                                     Maximum="2018-01-01" 
+                                     RangeStart="2012-01-01" 
+                                     RangeEnd="2016-01-01" 
+                                     Interval="2"
+                                     LabelsPlacement="BetweenTicks"  
+                                     ShowLabels="True" 
+                                     ShowTicks="True">
 
         <charts:SfCartesianChart>
             ...
         </charts:SfCartesianChart>
 
-    </sliders:SfRangeSelector>
+    </sliders:SfDateTimeRangeSelector>
 </ContentPage>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfRangeSelector rangeSelector = new SfRangeSelector();
-rangeSelector.Minimum = 0;
-rangeSelector.Maximum = 10;
-rangeSelector.RangeStart = 2;
-rangeSelector.RangeEnd = 8;
+SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
+rangeSelector.Minimum = new DateTime(2010, 01, 01);
+rangeSelector.Maximum = new DateTime(2018, 01, 01);
+rangeSelector.RangeStart = new DateTime(2012, 01, 01);
+rangeSelector.RangeEnd = new DateTime(2016, 01, 01);
 rangeSelector.Interval = 2;
 rangeSelector.LabelsPlacement = SliderLabelsPlacement.BetweenTicks;
 rangeSelector.ShowLabels = true;
@@ -248,7 +197,7 @@ If the `TrackExtent` > 0 and `EdgeLabelsPlacement` is `SliderEdgeLabelsPlacement
             ...
         </charts:SfCartesianChart>
 
-    </sliders:SfRangeSelector>
+    </sliders:SfDateTimeRangeSelector>
 </ContentPage>
 
 {% endhighlight %}
@@ -292,39 +241,39 @@ The inactive side of the Range Selector is between the [`Minimum`](hhttps://help
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
 
-    <sliders:SfRangeSelector Minimum="2" 
-                             Maximum="10" 
-                             RangeStart="2" 
-                             RangeEnd="6"
-                             Interval="2"  
-                             ShowLabels="True" 
-                             ShowTicks="True">
+    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
+                                     Maximum="2018-01-01" 
+                                     RangeStart="2012-01-01" 
+                                     RangeEnd="2016-01-01"
+                                     Interval="2"  
+                                     ShowLabels="True" 
+                                     ShowTicks="True">
 
-        <sliders:SfRangeSelector.LabelStyle>
+        <sliders:SfDateTimeRangeSelector.LabelStyle>
             <sliders:SliderLabelStyle ActiveTextColor="#EE3F3F" 
                                       InactiveTextColor="#F7B1AE" 
                                       ActiveFontAttributes="Italic" 
                                       InactiveFontAttributes="Italic" 
                                       ActiveFontSize="16" 
                                       InactiveFontSize="16" />
-            </sliders:SfRangeSelector.LabelStyle>
+        </sliders:SfDateTimeRangeSelector.LabelStyle>
 
         <charts:SfCartesianChart>
             ...
         </charts:SfCartesianChart>
 
-    </sliders:SfRangeSelector>
+    </sliders:SfDateTimeRangeSelector>
 </ContentPage>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfRangeSelector rangeSelector = new SfRangeSeletor();
-rangeSelector.Minimum = 0;
-rangeSelector.Maximum = 10;
-rangeSelector.RangeStart = 2;
-rangeSelector.RangeEnd = 6;
+SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
+rangeSelector.Minimum = new DateTime(2010, 01, 01);
+rangeSelector.Maximum = new DateTime(2018, 01, 01);
+rangeSelector.RangeStart = new DateTime(2012, 01, 01);
+rangeSelector.RangeEnd = new DateTime(2016, 01, 01);
 rangeSelector.Interval = 2;
 rangeSelector.ShowLabels = true;
 rangeSelector.ShowTicks = true;
@@ -356,34 +305,34 @@ You can adjust the space between ticks and labels of the Range Selector using th
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
     
-    <sliders:SfRangeSelector Minimum="0"
-                             Maximum="10"
-                             RangeStart="2"
-                             RangeEnd="8"
-                             Interval="2" 
-                             ShowLabels="True" 
-                             ShowTicks="True">
+    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
+                                     Maximum="2018-01-01" 
+                                     RangeStart="2012-01-01" 
+                                     RangeEnd="2016-01-01"
+                                     Interval="2" 
+                                     ShowLabels="True" 
+                                     ShowTicks="True">
         
-        <sliders:SfRangeSelector.LabelStyle>
+        <sliders:SfDateTimeRangeSelector.LabelStyle>
             <sliders:SliderLabelStyle Offset="10" />
-        </sliders:SfRangeSelector.LabelStyle>
+        </sliders:SfDateTimeRangeSelector.LabelStyle>
         
         <charts:SfCartesianChart>
             ...
         </charts:SfCartesianChart>
     
-    </sliders:SfRangeSelector>
+    </sliders:SfDateTimeRangeSelector>
 </ContentPage>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfRangeSelector rangeSelector = new SfRangeSelector();
-rangeSelector.Minimum = 0;
-rangeSelector.Maximum = 10;
-rangeSelector.RangeStart = 2;
-rangeSelector.RangeEnd = 8;
+SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
+rangeSelector.Minimum = new DateTime(2010, 01, 01);
+rangeSelector.Maximum = new DateTime(2018, 01, 01);
+rangeSelector.RangeStart = new DateTime(2012, 01, 01);
+rangeSelector.RangeEnd = new DateTime(2016, 01, 01);
 rangeSelector.Interval = 2;
 rangeSelector.ShowLabels = true;
 rangeSelector.ShowTicks = true;

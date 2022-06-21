@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Tick in .NET MAUI Range Selector control | Syncfusion 
-description: Learn here all about adding the Tick feature of Syncfusion .NET MAUI Range Selector (SfRangeSelector) control and more.
+description: Learn here all about adding the Tick feature of Syncfusion .NET MAUI Range Selector (SfDateTimeRangeSelector) control and more.
 platform: maui
-control: SfRangeSelector
+control: SfDateTimeRangeSelector
 documentation: ug
 ---
 
-# Tick in .NET MAUI Range Selector (SfRangeSelector)
+# Tick in .NET MAUI DateTime Range Selector (SfDateTimeRangeSelector)
 
-This section helps to learn about how to add major and minor ticks in the Range Selector.
+This section helps to learn about how to add major and minor ticks in the date-time Range Selector.
 
 ## Show major ticks
 
@@ -28,20 +28,28 @@ For example, if [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
     
-    <sliders:SfRangeSelector ShowTicks="True">
+    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
+                                     Maximum="2018-01-01" 
+                                     RangeStart="2012-01-01" 
+                                     RangeEnd="2016-01-01"
+                                     ShowTicks="True">
         
         <charts:SfCartesianChart>
             ...
         </charts:SfCartesianChart>
     
-    </sliders:SfRangeSelector>
+    </sliders:SfDateTimeRangeSelector>
 </ContentPage>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfRangeSelector rangeSelector = new SfRangeSelector();
+SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
+rangeSelector.Minimum = new DateTime(2010, 01, 01);
+rangeSelector.Maximum = new DateTime(2018, 01, 01);
+rangeSelector.RangeStart = new DateTime(2012, 01, 01);
+rangeSelector.RangeEnd = new DateTime(2016, 01, 01);
 rangeSelector.ShowTicks = true;
 SfCartesianChart chart = new SfCartesianChart();
 rangeSelector.Content = chart;
@@ -63,22 +71,30 @@ rangeSelector.Content = chart;
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
     
-    <sliders:SfRangeSelector Interval="0.2"  
-                             ShowTicks="True">
+    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
+                                     Maximum="2018-01-01" 
+                                     RangeStart="2012-01-01" 
+                                     RangeEnd="2016-01-01"
+                                     Interval="2"
+                                     ShowTicks="True">
         
         <charts:SfCartesianChart>
             ...
         </charts:SfCartesianChart>
     
-    </sliders:SfRangeSelector>
+    </sliders:SfDateTimeRangeSelector>
 </ContentPage>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfRangeSelector rangeSelector = new SfRangeSelector();
-rangeSelector.Interval = 0.2;
+SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
+rangeSelector.Minimum = new DateTime(2010, 01, 01);
+rangeSelector.Maximum = new DateTime(2018, 01, 01);
+rangeSelector.RangeStart = new DateTime(2012, 01, 01);
+rangeSelector.RangeEnd = new DateTime(2016, 01, 01);
+rangeSelector.Interval = 2;
 rangeSelector.ShowTicks = true;
 SfCartesianChart chart = new SfCartesianChart();
 rangeSelector.Content = chart;
@@ -104,21 +120,29 @@ It is used to represent the number of smaller ticks between two major ticks. For
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
     
-    <sliders:SfRangeSelector ShowTicks="True" 
-                             MinorTicksPerInterval="1">
+    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
+                                     Maximum="2018-01-01" 
+                                     RangeStart="2012-01-01" 
+                                     RangeEnd="2016-01-01"
+                                     ShowTicks="True"
+                                     MinorTicksPerInterval="1">
         
         <charts:SfCartesianChart>
             ...
         </charts:SfCartesianChart>
     
-    </sliders:SfRangeSelector>
+    </sliders:SfDateTimeRangeSelector>
 </ContentPage>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfRangeSelector rangeSelector = new SfRangeSelector();
+SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
+rangeSelector.Minimum = new DateTime(2010, 01, 01);
+rangeSelector.Maximum = new DateTime(2018, 01, 01);
+rangeSelector.RangeStart = new DateTime(2012, 01, 01);
+rangeSelector.RangeEnd = new DateTime(2016, 01, 01);
 rangeSelector.MinorTicksPerInterval = 1;
 rangeSelector.ShowTicks = true;
 SfCartesianChart chart = new SfCartesianChart();
@@ -140,23 +164,31 @@ rangeSelector.Content = chart;
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
     
-    <sliders:SfRangeSelector Interval="0.2"
-                             ShowTicks="True"
-                             MinorTicksPerInterval="1">
+    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
+                                     Maximum="2018-01-01" 
+                                     RangeStart="2012-01-01" 
+                                     RangeEnd="2016-01-01"
+                                     Interval="2"
+                                     ShowTicks="True"
+                                     MinorTicksPerInterval="1">
         
         <charts:SfCartesianChart>
             ...
         </charts:SfCartesianChart>
 
-    </sliders:SfRangeSelector>
+    </sliders:SfDateTimeRangeSelector>
 </ContentPage>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfRangeSelector rangeSelector = new SfRangeSelector();
-rangeSelector.Interval = 0.2;
+SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
+rangeSelector.Minimum = new DateTime(2010, 01, 01);
+rangeSelector.Maximum = new DateTime(2018, 01, 01);
+rangeSelector.RangeStart = new DateTime(2012, 01, 01);
+rangeSelector.RangeEnd = new DateTime(2016, 01, 01);
+rangeSelector.Interval = 2;
 rangeSelector.MinorTicksPerInterval = 1;
 rangeSelector.ShowTicks = true;
 SfCartesianChart chart = new SfCartesianChart();
@@ -185,27 +217,35 @@ The inactive side of the Range Selector is between the [`Minimum`](https://help.
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
     
-    <sliders:SfRangeSelector Interval="0.2"
-                             ShowTicks="True">
+    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
+                                     Maximum="2018-01-01" 
+                                     RangeStart="2012-01-01" 
+                                     RangeEnd="2016-01-01"
+                                     Interval="2"
+                                     ShowTicks="True">
         
-        <sliders:SfRangeSelector.MajorTickStyle>
+        <sliders:SfDateTimeRangeSelector.MajorTickStyle>
             <sliders:SliderTickStyle ActiveFill="#EE3F3F" 
                                      InactiveFill="#F7B1AE" />
-        </sliders:SfRangeSelector.MajorTickStyle>
+        </sliders:SfDateTimeRangeSelector.MajorTickStyle>
         
         <charts:SfCartesianChart>
             ...
         </charts:SfCartesianChart>
     
-    </sliders:SfRangeSelector>
+    </sliders:SfDateTimeRangeSelector>
 </ContentPage>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfRangeSelector rangeSelector = new SfRangeSelector();
-rangeSelector.Interval = 0.2;
+SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
+rangeSelector.Minimum = new DateTime(2010, 01, 01);
+rangeSelector.Maximum = new DateTime(2018, 01, 01);
+rangeSelector.RangeStart = new DateTime(2012, 01, 01);
+rangeSelector.RangeEnd = new DateTime(2016, 01, 01);
+rangeSelector.Interval = 2;
 rangeSelector.ShowTicks = true;
 rangeSelector.MajorTickStyle.ActiveFill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
 rangeSelector.MajorTickStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
@@ -235,28 +275,36 @@ The inactive side of the Range Selector is between the [`Minimum`](https://help.
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
     
-    <sliders:SfRangeSelector Interval="0.2"
-                             ShowTicks="True" 
-                             MinorTicksPerInterval="1">
+    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
+                                     Maximum="2018-01-01" 
+                                     RangeStart="2012-01-01" 
+                                     RangeEnd="2016-01-01"
+                                     Interval="0.2"
+                                     ShowTicks="True" 
+                                     MinorTicksPerInterval="1">
         
-        <sliders:SfRangeSelector.MinorTickStyle>
+        <sliders:SfDateTimeRangeSelector.MinorTickStyle>
             <sliders:SliderTickStyle ActiveFill="#EE3F3F" 
                                      InactiveFill="#F7B1AE" />
-        </sliders:SfRangeSelector.MinorTickStyle>
+        </sliders:SfDateTimeRangeSelector.MinorTickStyle>
         
         <charts:SfCartesianChart>
             ...
         </charts:SfCartesianChart>
     
-    </sliders:SfRangeSelector>
+    </sliders:SfDateTimeRangeSelector>
 </ContentPage>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfRangeSelector rangeSelector = new SfRangeSelector();
-rangeSelector.Interval = 0.2;
+SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
+rangeSelector.Minimum = new DateTime(2010, 01, 01);
+rangeSelector.Maximum = new DateTime(2018, 01, 01);
+rangeSelector.RangeStart = new DateTime(2012, 01, 01);
+rangeSelector.RangeEnd = new DateTime(2016, 01, 01);
+rangeSelector.Interval = 2;
 rangeSelector.ShowTicks = true;
 rangeSelector.MinorTicksPerInterval = 1;
 rangeSelector.MinorTickStyle.ActiveFill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
@@ -283,31 +331,39 @@ You can change the major and minor ticks size of the Range Selector using the [`
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
     
-    <sliders:SfRangeSelector Interval="0.2"
-                             ShowTicks="True" 
-                             MinorTicksPerInterval="1">
+    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
+                                     Maximum="2018-01-01" 
+                                     RangeStart="2012-01-01" 
+                                     RangeEnd="2016-01-01"
+                                     Interval="2"
+                                     ShowTicks="True" 
+                                     MinorTicksPerInterval="1">
         
-        <sliders:SfRangeSelector.MinorTickStyle>
+        <sliders:SfDateTimeRangeSelector.MinorTickStyle>
             <sliders:SliderTickStyle ActiveSize="2,10" InactiveSize="2, 10" />
-        </sliders:SfRangeSelector.MinorTickStyle>
+        </sliders:SfDateTimeRangeSelector.MinorTickStyle>
         
-        <sliders:SfRangeSelector.MajorTickStyle>
+        <sliders:SfDateTimeRangeSelector.MajorTickStyle>
             <sliders:SliderTickStyle ActiveSize="2,15" InactiveSize="2, 15" />
-        </sliders:SfRangeSelector.MajorTickStyle>
+        </sliders:SfDateTimeRangeSelector.MajorTickStyle>
         
         <charts:SfCartesianChart>
             ...
         </charts:SfCartesianChart>
     
-    </sliders:SfRangeSelector>
+    </sliders:SfDateTimeRangeSelector>
 </ContentPage>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfRangeSelector rangeSelector = new SfRangeSelector();
-rangeSelector.Interval = 0.2;
+SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
+rangeSelector.Minimum = new DateTime(2010, 01, 01);
+rangeSelector.Maximum = new DateTime(2018, 01, 01);
+rangeSelector.RangeStart = new DateTime(2012, 01, 01);
+rangeSelector.RangeEnd = new DateTime(2016, 01, 01);
+rangeSelector.Interval = 2;
 rangeSelector.ShowTicks = true;
 rangeSelector.MinorTicksPerInterval = 1;
 rangeSelector.MinorTickStyle.ActiveSize = new Size(2, 10);
@@ -336,31 +392,39 @@ You can adjust the space between track and ticks of the Range Selector using the
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
     
-    <sliders:SfRangeSelector Interval="0.2"
-                             ShowTicks="True" 
-                             MinorTicksPerInterval="1">
+    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
+                                     Maximum="2018-01-01" 
+                                     RangeStart="2012-01-01" 
+                                     RangeEnd="2016-01-01"
+                                     Interval="2"
+                                     ShowTicks="True" 
+                                     MinorTicksPerInterval="1">
         
-        <sliders:SfRangeSelector.MinorTickStyle>
+        <sliders:SfDateTimeRangeSelector.MinorTickStyle>
             <sliders:SliderTickStyle Offset="5" />
-        </sliders:SfRangeSelector.MinorTickStyle>
+        </sliders:SfDateTimeRangeSelector.MinorTickStyle>
         
-        <sliders:SfRangeSelector.MajorTickStyle>
+        <sliders:SfDateTimeRangeSelector.MajorTickStyle>
             <sliders:SliderTickStyle Offset="5" />
-        </sliders:SfRangeSelector.MajorTickStyle>
+        </sliders:SfDateTimeRangeSelector.MajorTickStyle>
         
         <charts:SfCartesianChart>
             ...
         </charts:SfCartesianChart>
     
-    </sliders:SfRangeSelector>
+    </sliders:SfDateTimeRangeSelector>
 </ContentPage>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfRangeSelector rangeSelector = new SfRangeSelector();
-rangeSelector.Interval = 0.2;
+SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
+rangeSelector.Minimum = new DateTime(2010, 01, 01);
+rangeSelector.Maximum = new DateTime(2018, 01, 01);
+rangeSelector.RangeStart = new DateTime(2012, 01, 01);
+rangeSelector.RangeEnd = new DateTime(2016, 01, 01);
+rangeSelector.Interval = 2;
 rangeSelector.ShowTicks = true;
 rangeSelector.MinorTicksPerInterval = 1;
 rangeSelector.MinorTickStyle.Offset = 5;
