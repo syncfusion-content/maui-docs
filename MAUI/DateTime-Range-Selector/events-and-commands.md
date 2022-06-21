@@ -7,9 +7,9 @@ control: SfDateTimeRangeSelector
 documentation: ug
 ---
 
-# Events and Commands in .NET MAUI DateTime Range Selector (SfDateTimeRangeSelector)
+# Events and Commands in .NET MAUI DateTime Range Selector
 
-This section explains about how to add the events and commands for date-time Range Selector.
+This section explains about how to add the events and commands for date-time Range Selector(SfDateTimeRangeSelector).
 
 ## Events
 
