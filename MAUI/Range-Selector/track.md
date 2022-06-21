@@ -111,21 +111,39 @@ You can extend the track at edges using the `TrackExtent` property. The default 
              ...
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-    
-    <sliders:SfRangeSelector TrackExtent="10" />
-        
+
+    <sliders:SfDateTimeRangeSelector Minimum="2019-12-01"
+                                     Maximum="2019-12-16"
+                                     RangeStart="2019-12-04"
+                                     RangeEnd="2019-12-13"
+                                     Interval="3"
+                                     IntervalType="Days"
+                                     ShowTicks="True"
+                                     ShowLabels="True"
+                                     DateFormat="MMM d"
+                                     TrackExtent="10">
+
         <charts:SfCartesianChart>
             ...
         </charts:SfCartesianChart>
-    
-    </sliders:SfRangeSelector>
+
+    </sliders:SfDateTimeRangeSelector>
 </ContentPage>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfRangeSelector rangeSelector = new SfRangeSelector();
+SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
+rangeSelector.Minimum = new DateTime(2019, 12, 01);
+rangeSelector.Maximum = new DateTime(2019, 12, 16);
+rangeSelector.RangeStart = new DateTime(2009, 12, 04);
+rangeSelector.RangeEnd = new DateTime(2000, 12, 13);
+rangeSelector.Interval = 3;
+rangeSelector.IntervalType = SliderDateIntervalType.Days;
+rangeSelector.DateFormat = "MMM d";
+rangeSelector.ShowLabels = true;
+rangeSelector.ShowTicks = true;
 rangeSelector.TrackExtent = 10;
 SfCartesianChart chart = new SfCartesianChart();
 rangeSelector.Content = chart;

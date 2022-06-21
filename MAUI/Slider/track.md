@@ -79,13 +79,31 @@ You can extend the track at edges using the `TrackExtent` property. The default 
 
 {% highlight xaml %}
 
-<sliders:SfSlider TrackExtent="10" />
+<sliders:SfDateTimeSlider Minimum="2000-01-01T09:00:00"
+                          Maximum="2000-01-01T21:00:00"
+                          Value="2000-01-01T15:00:00"
+                          IntervalType="Hours"
+                          DateFormat="h tt"
+                          MinorTicksPerInterval="3"
+                          Interval="4"
+                          ShowTicks="True"
+                          ShowLabels="True"
+                          TrackExtent="10" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfSlider slider = new SfSlider();
+SfDateTimeSlider slider = new SfDateTimeSlider();
+slider.Minimum = new DateTime(2000, 01, 01, 09, 00, 00);
+slider.Maximum = new DateTime(2019, 01, 01, 21, 00, 00);
+slider.Value = new DateTime(2000, 01, 01, 15, 00, 00);
+slider.Interval = 4;
+slider.MinorTicksPerInterval = 3;
+slider.IntervalType = SliderDateIntervalType.Hours;
+slider.DateFormat = "h tt";
+slider.ShowLabels = true;
+slider.ShowTicks = true;
 slider.TrackExtent = 10;
 
 {% endhighlight %}
