@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Thumb DragBehavior in .NET MAUI Range Slider control | Syncfusion
-description: Learn here all about Thumb Dragbehavior feature of Syncfusion .NET MAUI Range Slider (SfDateTimeRangeSlider) control and more.
+description: Learn here all about Thumb DragBehavior feature of Syncfusion .NET MAUI Range Slider (SfDateTimeRangeSlider) control and more.
 platform: maui
 control: SfDateTimeRangeSlider
 documentation: ug
 ---
 
-# Thumb DragBehavior in .NET MAUI DateTime Range Slider (SfDateTimeRangeSlider)
+# Thumb DragBehavior in .NET MAUI DateTime Range Slider
 
-This section helps to learn about thumb drag behavior in the date-time range slider.
+This section helps to learn about thumb drag behavior in the date-time range slider(SfDateTimeRangeSlider).
 
 ## OnThumb
 
