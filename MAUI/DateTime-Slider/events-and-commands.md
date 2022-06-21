@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Events and Commands in.NET MAUI Slider control | Syncfusion 
-description: Learn here all about adding and customizing through events and commands of Syncfusion .NET MAUI Slider (SfSlider) control and more.
+description: Learn here all about adding and customizing through events and commands of Syncfusion .NET MAUI Slider (SfDateTimeSlider) control and more.
 platform: maui
-control: SfSlider
+control: SfDateTimeSlider
 documentation: ug
 ---
 
-# Events and Commands in .NET MAUI Slider (SfSlider)
+# Events and Commands in .NET MAUI DateTime Slider (SfDateTimeSlider)
 
-This section explains about how to add the events and commands for slider.
+This section explains about how to add the events and commands for date-time slider.
 
 ## Events
 
@@ -79,23 +79,22 @@ You can format or change the whole numeric or date label text using the [`LabelC
 
 {% highlight xaml %}
 
-<sliders:SfSlider Minimum="2" 
-                  Maximum="10" 
-                  Value="6" 
-		            Interval="2" 	           
-	               LabelCreated="OnLabelCreated" 
-		            ShowLabels="True">
-</sliders:SfSlider>
+<sliders:SfDateTimeSlider Minimum="2010-01-01" 
+  	                      Maximum="2020-01-01" 
+		                  Value="2014-01-01" 
+	                      Interval="2" 	           
+	                      LabelCreated="OnLabelCreated" 
+		                  ShowLabels="True">
+</sliders:SfDateTimeSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-{
-   SfSlider slider = new SfSlider();
-   slider.Minimum = 2;
-   slider.Maximum = 10;
-   slider.Value = 6;
+SfDateTimeSlider slider = new SfDateTimeSlider();
+   slider.Minimum = new DateTime(2010, 01, 01);
+   slider.Maximum = new DateTime(2020, 01, 01);
+   slider.value = new DateTime(2014, 01, 01);
    slider.Interval = 2;
    slider.ShowLabels = true;
    slider.LabelCreated += OnLabelCreated;
@@ -112,7 +111,6 @@ You can format or change the whole numeric or date label text using the [`LabelC
 
 ![Slider custom label](images/labels-and-dividers/custom-label.png)
 
-
 ### Tooltip text format
 
 By default it is formatted based on [`NumberFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html#Syncfusion_Maui_Sliders_SfSlider_NumberFormat)  property and [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeSlider_DateFormat) property based on whether it is date type [`SfDateTimeSlider`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html) or numeric [`SfSlider`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html).
@@ -126,20 +124,26 @@ You can format or change the whole tooltip label text using the [`TooltipLabelCr
 
 {% highlight xaml %}
 
-<slider:SfSlider>
-   <slider:SfSlider.Tooltip>
+<sliders:SfDateTimeSlider Minimum="2010-01-01" 
+  	                      Maximum="2020-01-01" 
+		                  Value="2014-01-01">
+
+    <slider:SfDateTimeSlider.Tooltip>
       <slider:SliderTooltip TooltipLabelCreated="OnTooltipLabelCreated"/>
-   </slider:SfSlider.Tooltip>
-</slider:SfSlider>
+   </slider:SfDateTimeSlider.Tooltip>
+
+</sliders:SfDateTimeSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-{
-   SfSlider slider = new SfSlider();
+SfDateTimeSlider slider = new SfDateTimeSlider();
+   slider.Minimum = new DateTime(2010, 01, 01);
+   slider.Maximum = new DateTime(2020, 01, 01);
+   slider.value = new DateTime(2014, 01, 01);
    slider.TooltipLabelCreated += OnTooltipLabelCreated;
-}
+ }
 
 private void OnTooltipLabelCreated(object sender, SliderTooltipLabelCreatedEventArgs e)
 {
@@ -167,16 +171,22 @@ The `DragStartedCommand` will be executed when the user started moving the thumb
 </ContentPage.BindingContext>
 
 <ContentPage.Content>
-    <sliders:SfSlider DragStartedCommand="{Binding DragStartedCommand}" />
+    <sliders:SfDateTimeSlider Minimum="2010-01-01" 
+                          Maximum="2020-01-01" 
+                          Value="2014-01-01"
+                          DragStartedCommand="{Binding DragStartedCommand}" />
 </ContentPage.Content>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfSlider slider = new SfSlider()
+SfDateTimeSlider slider = new SfDateTimeSlider()
 {
-    DragStartedCommand = viewModel.DragStartedCommand
+    Minimum = new DateTime(2010, 01, 01),
+   Maximum = new DateTime(2020, 01, 01),
+   value = new DateTime(2014, 01, 01),
+    DragStartedCommand = viewModel.DragStartedCommand,
 };
 
 public class ViewModel
@@ -210,7 +220,10 @@ The `DragStartedCommandParameter` will be executed when the user started moving 
 </ContentPage.BindingContext>
 
 <ContentPage.Content>
-    <sliders:SfSlider DragStartedCommand="{Binding DragStartedCommand}"
+    <sliders:SfDateTimeSlider Minimum="2010-01-01" 
+                          Maximum="2020-01-01" 
+                          Value="2014-01-01"
+                          DragStartedCommand="{Binding DragStartedCommand}"
                       DragStartedCommandParameter="1" />
 </ContentPage.Content>
 
@@ -218,8 +231,11 @@ The `DragStartedCommandParameter` will be executed when the user started moving 
 
 {% highlight C# %}
 
-SfSlider slider = new SfSlider()
+SfDateTimeSlider slider = new SfDateTimeSlider()
 {
+    Minimum = new DateTime(2010, 01, 01),
+    Maximum = new DateTime(2020, 01, 01),
+    value = new DateTime(2014, 01, 01),
     DragStartedCommand = viewModel.DragStartedCommand,
     DragStartedCommandParameter = "1"
 };
@@ -255,15 +271,21 @@ The `DragCompletedCommand` will be executed when the user completed moving the t
 </ContentPage.BindingContext>
 
 <ContentPage.Content>
-    <sliders:SfSlider DragCompletedCommand="{Binding DragCompletedCommand}" />
+    <sliders:SfDateTimeSlider Minimum="2010-01-01" 
+                          Maximum="2020-01-01" 
+                          Value="2014-01-01"
+                          DragCompletedCommand="{Binding DragCompletedCommand}" />
 </ContentPage.Content>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfSlider slider = new SfSlider()
+SfDateTimeSlider slider = new SfDateTimeSlider()
 {
+    Minimum = new DateTime(2010, 01, 01),
+   Maximum = new DateTime(2020, 01, 01),
+   value = new DateTime(2014, 01, 01),
     DragCompletedCommand = viewModel.DragCompletedCommand
 };
 
@@ -298,7 +320,10 @@ The `DragCompletedCommandParameter` will be executed when the user completed mov
 </ContentPage.BindingContext>
 
 <ContentPage.Content>
-    <sliders:SfSlider DragCompletedCommand="{Binding DragCompletedCommand}"
+    <sliders:SfDateTimeSlider Minimum="2010-01-01" 
+                          Maximum="2020-01-01" 
+                          Value="2014-01-01"
+                          DragCompletedCommand="{Binding DragCompletedCommand}"
                       DragCompletedCommandParameter="1" />
 </ContentPage.Content>
 
@@ -306,8 +331,11 @@ The `DragCompletedCommandParameter` will be executed when the user completed mov
 
 {% highlight C# %}
 
-SfSlider slider = new SfSlider()
+SfDateTimeSlider slider = new SfDateTimeSlider()
 {
+    Minimum = new DateTime(2010, 01, 01),
+   Maximum = new DateTime(2020, 01, 01),
+   value = new DateTime(2014, 01, 01),
     DragCompletedCommand = viewModel.DragCompletedCommand,
     DragCompletedCommandParameter = "1"
 };
