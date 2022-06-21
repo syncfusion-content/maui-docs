@@ -237,23 +237,18 @@ dataGrid.AutoGenerateColumnsMode = AutoGenerateColumnsMode.None;
 
 DataGridTextColumn orderIdColumn = new DataGridTextColumn ();
 orderIdColumn.MappingName = "OrderID";
-orderIdColumn.HeaderText = "Order ID";
+orderIdColumn.HeaderText = "ID";
 
 DataGridTextColumn customerIdColumn = new DataGridTextColumn ();
 customerIdColumn.MappingName = "CustomerID";
-customerIdColumn.HeaderText = "Customer ID";
-
-DataGridTextColumn customerColumn = new DataGridTextColumn ();
-customerColumn.MappingName = "Customer";
-customerColumn.HeaderText = "Customer";
+customerIdColumn.HeaderText = "Customer";
 
 DataGridTextColumn countryColumn = new DataGridTextColumn();
 countryColumn.MappingName = "ShipCountry";
-countryColumn.HeaderText = "Ship Country";
+countryColumn.HeaderText = "Country";
 
 dataGrid.Columns.Add (orderIdColumn);
 dataGrid.Columns.Add (customerIdColumn);
-dataGrid.Columns.Add (customerColumn);
 dataGrid.Columns.Add (countryColumn); 
 {% endhighlight %}
 {% endtabs %}
