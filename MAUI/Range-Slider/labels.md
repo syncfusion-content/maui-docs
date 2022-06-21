@@ -175,25 +175,27 @@ If the `TrackExtent` > 0 and `EdgeLabelsPlacement` is `SliderEdgeLabelsPlacement
 
 {% highlight xaml %}
 
-<sliders:SfRangeSlider Minimum="0"
-                       Maximum="10"
-                       RangeStart="2"
-                       RangeEnd="8"
-                       Interval="2"
-                       EdgeLabelsPlacement="Inside"
+<sliders:SfRangeSlider Minimum="100"
+                       Maximum="10000"
+                       RangeStart="2575"
+                       RangeEnd="7525"
+                       Interval="2475"
+                       NumberFormat="$##.#"
                        ShowLabels="True"
-                       ShowTicks="True" />
+                       ShowTicks="True"
+                       EdgeLabelsPlacement="Inside" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
 SfRangeSlider rangeSlider = new SfRangeSlider();
-rangeSlider.Minimum = 0;
-rangeSlider.Maximum = 10;
-rangeSlider.RangeStart = 2;
-rangeSlider.RangeEnd = 8;
-rangeSlider.Interval = 2;
+rangeSlider.Minimum = 100;
+rangeSlider.Maximum = 10000;
+rangeSlider.RangeStart = 2575;
+rangeSlider.RangeEnd = 7525;
+rangeSlider.Interval = 2475;
+rangeSlider.NumberFormat = "$##.#";
 rangeSlider.EdgeLabelsPlacement = SliderEdgeLabelsPlacement.Inside;
 rangeSlider.ShowLabels = true;
 rangeSlider.ShowTicks = true;
