@@ -473,6 +473,32 @@ this.Scheduler.DaysView.TimeIntervalHeight = -1;
 
 ![full-screen-scheduler-in-timeslots-views-in-maui-scheduler](images/day-week-views/full-screen-scheduler-in-timeslots-views-in-maui-scheduler.png)
 
+## Number of days in days view
+
+The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) number of visible days can be adjusted by changing the [NumberOfVisibleDays]() property of [DaysView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDaysView.html).
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
+
+ <scheduler:SfScheduler x:Name="Scheduler" 
+                        View="Week">
+    <scheduler:SfScheduler.DaysView>
+        <scheduler:SchedulerDaysView 
+                        NumberOfVisibleDays="3"/>
+    </scheduler:SfScheduler.DaysView>
+ </scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
+
+this.Scheduler.View = SchedulerView.Week;
+this.Scheduler.DaysView.NumberOfVisibleDays = 3;
+
+{% endhighlight %}
+{% endtabs %}
+
+![full-screen-scheduler-in-timeslots-views-in-maui-scheduler](images/day-week-views/full-screen-scheduler-in-timeslots-views-in-maui-scheduler.png)
+
 ## Show current time indicator
 
 You can show or hide the current time indicator in day, week, and workweek views of [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) by using the [ShowCurrentTimeIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_ShowCurrentTimeIndicator) property of [DaysView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDaysView.html), and by default, its `true.`

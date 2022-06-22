@@ -462,9 +462,33 @@ this.Scheduler.View = SchedulerView.TimelineDay;
 this.Scheduler.TimelineView.TimeIntervalWidth = -1;
 
 {% endhighlight %}
+{% endtabs 
+
+## Number of days in timeline view
+
+The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) number of visible days can be adjusted by changing the [NumberOfVisibleDays]() property of [TimelineView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineView.html)
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
+
+ <scheduler:SfScheduler x:Name="Scheduler" 
+                        View="TimelineWeek">
+    <scheduler:SfScheduler.TimelineView>
+        <scheduler:SchedulerTimelineView 
+                        NumberOfVisibleDays="3"/>
+    </scheduler:SfScheduler.TimelineView>
+ </scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
+
+this.Scheduler.View = SchedulerView.TimelineWeek;
+this.Scheduler.DaysView.NumberOfVisibleDays = 3;
+
+{% endhighlight %}
 {% endtabs %}
 
-![full-screen-scheduler-in-timeline-views-in-maui-scheduler](images/timeline-views/full-screen-scheduler-in-timeline-views-in-maui-scheduler.png)
+![number-of-visble-days-in-daysview](images/day-week-views/)
 
 ## Show current time indicator
 

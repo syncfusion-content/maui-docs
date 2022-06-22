@@ -467,6 +467,30 @@ this.Scheduler.AppointmentsSource = Meetings;
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/RecurringAppointment/BusinessObject)
 
+### Recurence appointment on last day of month
+To create recurring appointments on the last day of the month, use BYMONTHDAY=-1 in scheduler.
+ 
+{% tabs %}
+{% highlight c# tabtitle="MainXaml.cs" %}
+
+this.Scheduler.View = SchedulerView.Month;
+// Creating an instance for the scheduler appointment collection.
+var appointments = new ObservableCollection<SchedulerAppointment>();
+// Adding scheduler appointment in the scheduler appointment collection.
+appointments.Add(new SchedulerAppointment()
+{
+    Subject = "Meeting",
+    StartTime = DateTime.Now,
+    EndTime = DateTime.Now.AddHours(1),
+    Background = Brush.Orange,
+	RecurrenceRule = "FREQ=MONTHLY;BYMONTHDAY=-1"
+});
+// Adding scheduler appointment into the AppointmentsSource.
+this.Scheduler.AppointmentsSource = appointments;
+
+{% endhighlight %}
+{% endtabs %}
+
 #### How to get the recurrence editor field values from RRULE?
 
 The [RRuleParser](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRecurrenceManager.html#Syncfusion_Maui_Scheduler_SchedulerRecurrenceManager_ParseRRule_System_String_System_DateTime_) method of the `.NET MAUI Scheduler` retrieves the recurrence properties from the [RRULE](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRecurrenceManager.html#Syncfusion_Maui_Scheduler_SchedulerRecurrenceManager_GenerateRRule_Syncfusion_Maui_Scheduler_SchedulerRecurrenceInfo_System_DateTime_System_DateTime_).

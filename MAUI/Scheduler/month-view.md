@@ -79,6 +79,32 @@ this.Scheduler.MonthView.ShowLeadingAndTrailingDates = false;
 
 ![show-or-hide-leading-and-trailing-days-appearence-customization-in-maui-scheduler](images/month-view/show-or-hide-leading-and-trailing-days-appearence-customization-in-maui-scheduler.png)
 
+## Customize number of month rows
+
+The number of weeks in the month view can be changed by setting the [NumberOfVisibleWeeks]() property in the [MonthView](). By default, [NumberOfVisibleWeeks]() starts from current week, and this can be modified using the initialDisplayDate property of scheduler, the two weeks scheduler can be achieved by setting the `NumberOfVisibleWeeks` property with the value 2.
+
+{% tabs %}  
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
+
+ <scheduler:SfScheduler x:Name="Scheduler" 
+                        View="Month">
+    <scheduler:SfScheduler.MonthView>
+        <scheduler:SchedulerMonthView  
+                       NumberOfVisibleWeeks="2"/>
+    </scheduler:SfScheduler.MonthView>
+ </scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
+
+this.Scheduler.View = SchedulerView.Month;
+this.Scheduler.MonthView.NumberOfVisibleWeeks = 2;
+
+{% endhighlight %}  
+{% endtabs %}
+
+![show-or-hide-leading-and-trailing-days-appearence-customization-in-maui-scheduler](images/month-view/show-or-hide-leading-and-trailing-days-appearence-customization-in-maui-scheduler.png)
+
 ## View header
 
 You can customize the default appearance of view header in a month view by setting the [DayFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViewHeaderSettings.html#Syncfusion_Maui_Scheduler_SchedulerViewHeaderSettings_DayFormat), [DayTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViewHeaderSettings.html#Syncfusion_Maui_Scheduler_SchedulerViewHeaderSettings_DayTextStyle), [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderSettingsBase.html#Syncfusion_Maui_Scheduler_SchedulerHeaderSettingsBase_Background), [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderSettingsBase.html#Syncfusion_Maui_Scheduler_SchedulerHeaderSettingsBase_Height), and [ViewHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_ViewHeaderTemplate) properties of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
