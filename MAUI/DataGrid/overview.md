@@ -2,7 +2,7 @@
 layout: post
 title: About .NET MAUI DataGrid control | Syncfusion
 description: Learn here all about introduction of Syncfusion .NET MAUI DataGrid (SfDataGrid) control, its elements and more.
-platform: .NET MAUI
+platform: MAUI
 control: SfDataGrid
 documentation: ug
 ---
