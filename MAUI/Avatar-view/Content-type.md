@@ -160,7 +160,7 @@ Set the `InitialsMemberPath` for displaying the initials in the group view. For 
 
     }
 
-    public class EmployeeViewMdoel : INotifyPropertyChanged
+    public class EmployeeViewModel : INotifyPropertyChanged
     {
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -183,7 +183,7 @@ Set the `InitialsMemberPath` for displaying the initials in the group view. For 
             }
         }
 
-        public EmployeeViewMdoel()
+        public EmployeeViewModel()
         {
             CollectionImage = new ObservableCollection<Employee>();
             CollectionImage.Add(new Employee { Name="Mike" , ImageSource = "mike.png",Colors=Colors.Gray });
@@ -199,7 +199,7 @@ Set the `InitialsMemberPath` for displaying the initials in the group view. For 
 {% highlight xaml %}
 
 <ContentPage.BindingContext>
-        <local:EmployeeViewMdoel/>
+        <local:EmployeeViewModel/>
 </ContentPage.BindingContext>
 
    <sfavatar:SfAvatarView ContentType="Group"                         
@@ -218,13 +218,13 @@ Set the `InitialsMemberPath` for displaying the initials in the group view. For 
 
  public partial class MainPage : ContentPage, INotifyPropertyChanged
     {
-        EmployeeViewMdoel emp;
+        EmployeeViewModel emp;
 
            public MainPage()
           {
             InitializeComponent();
             Grid mainGrid = new Grid();
-            emp = new EmployeeViewMdoel();
+            emp = new EmployeeViewModel();
             SfAvatarView avatarview = new SfAvatarView();
             avatarview.VerticalOptions = LayoutOptions.Center;
             avatarview.HorizontalOptions = LayoutOptions.Center;
@@ -255,7 +255,7 @@ You can set the initials only in the group view by setting the `InitialsMemberPa
 {% highlight xaml %}
 
 <ContentPage.BindingContext>
-        <local:EmployeeViewMdoel/>
+        <local:EmployeeViewModel/>
 </ContentPage.BindingContext>
 
     <sfavatar:SfAvatarView ContentType="Group"                         
@@ -276,12 +276,12 @@ You can set the initials only in the group view by setting the `InitialsMemberPa
 
 public partial class MainPage : ContentPage, INotifyPropertyChanged
     {
-        EmployeeViewMdoel emp;
+        EmployeeViewModel emp;
          public MainPage()
         {
 
             Grid mainGrid = new Grid();
-            emp = new EmployeeViewMdoel();
+            emp = new EmployeeViewModel();
             SfAvatarView avatarview = new SfAvatarView();
             avatarview.VerticalOptions = LayoutOptions.Center;
             avatarview.HorizontalOptions = LayoutOptions.Center;
@@ -302,7 +302,7 @@ public partial class MainPage : ContentPage, INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![GroupView in Initials Only](ContentType_Images/GroupView_Initilasalone.png)
+![GroupView in Initials Only](ContentType_Images/GroupView_InitialsAlone.png)
 
 ## Add both image and initials in a GroupView
 
@@ -311,9 +311,9 @@ You have to set both the image and initials based on what should be added in the
 {% tabs %}
 {% highlight c# %}
 
- public class EmployeeViewMdoel : INotifyPropertyChanged
+ public class EmployeeViewModel : INotifyPropertyChanged
     {
-          public EmployeeViewMdoel()
+          public EmployeeViewModel()
         {
             CollectionImage = new ObservableCollection<Employee>();
             CollectionImage.Add(new Employee { ImageSource="mike.png" });
@@ -328,5 +328,5 @@ You have to set both the image and initials based on what should be added in the
 {% endtabs %}
 
 
-![GroupView for both image and initials](ContentType_Images/GroupView_InitilalandImage.png)
+![GroupView for both image and initials](ContentType_Images/GroupView_InitialAndImage.png)
 
