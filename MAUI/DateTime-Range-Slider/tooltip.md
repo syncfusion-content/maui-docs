@@ -9,7 +9,7 @@ documentation: ug
 
 # Tooltip in .NET MAUI DateTime Range Slider (SfDateTimeRangeSlider)
 
-This section helps to learn about how to add tooltip in the date-time range slider.
+This section helps to learn about how to add tooltip in the DateTime Range Slider.
 
 ## Enable tooltip
 

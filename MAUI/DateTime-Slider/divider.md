@@ -9,7 +9,7 @@ documentation: ug
 
 # Dividers in .NET MAUI DateTime Slider (SfDateTimeSlider)
 
-This section explains about how to add the dividers in the slider.
+This section explains about how to add dividers to the date-time slider.
 
 ## Show dividers
 

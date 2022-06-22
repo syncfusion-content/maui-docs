@@ -7,9 +7,9 @@ control: SfDateTimeSlider
 documentation: ug
 ---
 
-# Getting Started with .NET MAUI Slider
+# Getting Started with .NET MAUI DateTime Slider (SfDateTimeSlider)
 
-This section explains the steps required to add the slider control and its elements such as numeric and date values, ticks, labels and tooltip. This section covers only basic features needed to know to get started with Syncfusion Slider.
+This section explains the steps required to add the DateTime Slider control and its elements such as numeric and date values, ticks, labels and tooltip. This section covers only basic features needed to know to get started with Syncfusion DatetTime Slider.
 
 ## Creating an application with .NET MAUI
 
@@ -60,7 +60,7 @@ namespace SliderGettingStarted
 
 {% endhighlight %}
 
-## Initialize slider
+## Initialize DateTimeSlider
 
 Import the [`SfDateTimeSlider`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html?tabs=tabid-2) namespace and initialize the date-time slider as shown below.
 

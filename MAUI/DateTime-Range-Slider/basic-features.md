@@ -9,7 +9,7 @@ documentation: ug
 
 # Basic features in .NET MAUI DateTime Range Slider
 
-This section explains about how to add date-time range slider(SfDateTimeRangeSlider).
+This section explains about how to add DateTime Range Slider(SfDateTimeRangeSlider).
 
 ## Minimum
 

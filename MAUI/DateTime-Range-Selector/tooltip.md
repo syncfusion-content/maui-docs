@@ -9,7 +9,7 @@ documentation: ug
 
 # Tooltip in .NET MAUI DateTime Range Selector (SfDateTimeRangeSelector)
 
-This section helps to learn about how to add tooltip in the date-time Range Selector.
+This section helps to learn about how to add tooltip in the DateTime Range Selector.
 
 ## Enable tooltip
 

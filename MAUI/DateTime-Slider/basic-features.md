@@ -9,7 +9,7 @@ documentation: ug
 
 # Basic features  in .NET MAUI DateTime Slider (SfDateTimeSlider)
 
-This section explains about how to add the date-time slider.
+This section explains about how to add the DateTime Slider.
 
 ## Minimum
 

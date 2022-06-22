@@ -9,7 +9,7 @@ documentation: ug
 
 # Thumb DragBehavior in .NET MAUI DateTime Range Slider
 
-This section helps to learn about thumb drag behavior in the date-time range slider(SfDateTimeRangeSlider).
+This section helps to learn about thumb drag behavior in the DateTime Range Slider(SfDateTimeRangeSlider).
 
 ## OnThumb
 

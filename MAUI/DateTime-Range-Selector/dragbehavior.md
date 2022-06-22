@@ -9,7 +9,7 @@ documentation: ug
 
 # Thumb DragBehavior in .NET MAUI DateTime Range Selector
 
-This section helps to learn about thumb drag behavior in the date-time Range Selector(SfDateTimeRangeSelector).
+This section helps to learn about thumb drag behavior in the DateTime Range Selector(SfDateTimeRangeSelector).
 
 ## OnThumb
 

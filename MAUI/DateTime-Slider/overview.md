@@ -7,16 +7,16 @@ control: SfDateTimeSlider
 documentation: ug
 ---
 
-# .NET MAUI Slider Overview
+# .NET MAUI DateTime Slider Overview
 
-The Syncfusion .NET MAUI Slider ([SfDateTimeSlider](https://www.syncfusion.com/maui-controls/maui-slider)) is a highly interactive UI control, allowing users to select a single value from a range of values. It provides rich features, such as numeric and date values, labels, ticks, dividers, and tooltip.
+The Syncfusion .NET MAUI DateTime Slider ([SfDateTimeSlider](https://www.syncfusion.com/maui-controls/maui-slider)) is a highly interactive UI control, allowing users to select a single value from a range of values. It provides rich features, such as numeric and date values, labels, ticks, dividers, and tooltip.
 
 ## Key features
 
-* **Date support** - Provided functionality for selecting date values. It provides support up to the seconds interval.
+* **Date support** - Provided functionality for selecting date values. 
 * **Orientation** - Supports both horizontal and vertical orientations.
-* **Labels** - Render labels for date and numeric values with the option to customize their formats based on your requirements.
+* **Labels** - Render labels for date values with the option to customize their formats based on your requirements.
 * **Ticks and dividers** - Provided an option to show ticks and dividers based on the slider interval. Also, minor ticks can be enabled to indicate the values between each interval. These options present the selected value in a more intuitive way for end users.
-* **Discrete mode** - Able to move the thumb in a discrete manner for both date and numeric values based on the provided step value.
+* **Discrete mode** - Able to move the thumb in a discrete manner based on the provided step value.
 * **Tooltip** - Render a tooltip to show the selected value clearly.
 

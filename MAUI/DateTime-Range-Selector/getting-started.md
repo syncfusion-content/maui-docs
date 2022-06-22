@@ -7,9 +7,9 @@ control: SfDateTimeRangeSelector
 documentation: ug
 ---
 
-# Getting Started with .NET MAUI Range Selector
+# Getting Started with .NET MAUI DateTime Range Selector
 
-This section explains the steps required to add the Range Selector control and its elements such as numeric and date values, ticks, labels and tooltip. This section covers only basic features needed to know to get started with Syncfusion Range Selector.
+This section explains the steps required to add the DateTime Range Selector control and its elements such track, ticks, labels and tooltip. This section covers only basic features needed to know to get started with Syncfusion Range Selector.
 
 ## Creating an application with .NET MAUI
 
@@ -58,9 +58,9 @@ namespace RangeSelector
 
 {% endhighlight %}
 
-## Initialize Range Selector
+## Initialize DateTime Range Selector
 
-Import the [`SfDateTimeRangeSelector`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSelector.html) namespace and initialize the Range Selector as shown below.
+Import the [`SfDateTimeRangeSelector`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSelector.html) namespace and initialize the DateTime Range Selector as shown below.
 
 {% tabs %}
 
@@ -106,7 +106,7 @@ namespace GettingStarted
 
 ## Adding content to DateTime Range Selector
 
-The [`Content`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSelector.html#Syncfusion_Maui_Sliders_SfRangeSelector_Content) property will add the content to the Range Selector. You can add any control within the Range Selector with this property. In most cases the [Charts](https://www.syncfusion.com/maui-controls/maui-charts) will be added as a content.
+The [`Content`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSelector.html#Syncfusion_Maui_Sliders_SfRangeSelector_Content) property will add the content to the DateTime Range Selector. You can add any control within the DateTime Range Selector with this property. In most cases the [Charts](https://www.syncfusion.com/maui-controls/maui-charts) will be added as a content.
 
 {% tabs %}
 
@@ -227,7 +227,7 @@ rangeSelector.Content = chart;
 
 ## Enable ticks
 
-The [`ShowTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ShowTicks) property enables the ticks in the Range Selector, while the [`MinorTicksPerInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MinorTicksPerInterval) property enables the minor ticks between the major ticks.
+The [`ShowTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ShowTicks) property enables the ticks in the DateTime Range Selector, while the [`MinorTicksPerInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MinorTicksPerInterval) property enables the minor ticks between the major ticks.
 
 {% tabs %}
 
@@ -278,7 +278,7 @@ rangeSelector.Content = chart;
 
 ## Inverse the Range Selector
 
-You can invert the Range Selector using the [`IsInversed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_IsInversed) property. The default value of the [`IsInversed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_IsInversed) property is `False`.
+You can invert the DateTime Range Selector using the [`IsInversed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_IsInversed) property. The default value of the [`IsInversed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_IsInversed) property is `False`.
 
 {% tabs %}
 

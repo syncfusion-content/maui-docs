@@ -7,9 +7,9 @@ control: SfDateTimeSlider
 documentation: ug
 ---
 
-# Track in .NET MAUI Slider (SfDateTimeSlider)
+# Track in .NET MAUI DateTime Slider (SfDateTimeSlider)
 
-This section helps to learn about how to customize the track in the date-time slider.
+This section helps to learn about how to customize the track in the DateTime Slider.
 
 ## Track color
 
