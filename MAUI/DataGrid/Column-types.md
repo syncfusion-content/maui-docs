@@ -2,7 +2,7 @@
 layout: post
 title: Column Types in .NET MAUI DataGrid control | Syncfusion
 description: Learn here all about Column Types support in Syncfusion .NET MAUI DataGrid (SfDataGrid) control and more.
-platform: .NET MAUI
+platform: MAUI
 control: SfDataGrid
 documentation: UG
 ---
@@ -697,8 +697,6 @@ public class FreightTemplateSelector : DataTemplateSelector
 }
 {% endhighlight %}
 
-![DataGrid with template selector](SfDataGrid_images/CellTemplateSelector.png)
-
 ### Getting row index of a row in GridTemplateColumn
 
 The SfDataGrid provides various resolving methods to resolve the row index of grid rows based on certain criteria. The actual row index of a row can be resolved by using the `ResolveToRowIndex(recordRowIndex)` method. 
@@ -846,8 +844,6 @@ public class ViewModel
     #endregion
 }
 {% endhighlight %}
-
-![DataGrid with date time column](SfDataGrid_images/Editing_DateTimeColumn_Forms.png)
 
 ## DataGridNumericColumn
 
