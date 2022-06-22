@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with .NET MAUI Busy Indicator control | Syncfusion
-description: Learn here about getting started with Syncfusion .NET MAUI Busy Indicator (SfBusyIndicator) control, its elements and more.
+description: Learn here about getting started with Syncfusion .NET MAUI Busy Indicator (SfBusyIndicator) control, its elements, and more.
 platform: maui
 control: BusyIndicator
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ## Getting started with .NET MAUI Busy Indicator(SfBusyIndicator)
 
-This section explains you the steps to configure a SfBusyIndicator control in a real-time scenario and also provides a walk-through on some of the customization features available in SfBusyIndicator control.
+This section explains the steps to configure a SfBusyIndicator control in a real-time scenario and provides a walk-through on some of the customization features available in SfBusyIndicator control.
 
 ## Adding a SfBusyIndicator reference
 
@@ -54,7 +54,7 @@ Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org
 
 ## Create a Simple SfBusyIndicator
 
-The SfBusyIndicator control is configured entirely in C# code or by using XAML markup. The following steps explain on how to create a SfBusyIndicator and configure its elements,
+The SfBusyIndicator control is configured entirely in C# code or by using XAML markup. The following steps explain how to create a SfBusyIndicator and configure its elements.
 
 ### Adding a SfBusyIndicator control
 
@@ -78,7 +78,7 @@ Step 2: Add the namespace as shown in the following code sample.
 
 {% endtabs %}
 
-Step 3: Set the control to content in `ContentPage`.
+Step 3: Set the control to content in `ContentPage.`
 
 {% tabs %}
 
@@ -117,9 +117,9 @@ Step 3: Set the control to content in `ContentPage`.
 
 ## Setting Animation Type
 
-SfBusyIndicator provide some predefined animation types like Cupertino, LinearMaterial, CircularMaterial. User can select any one of the animation types using `AnimationType` property.
+SfBusyIndicator provides some predefined animation types like Cupertino, LinearMaterial, and CircularMaterial. Users can select any one of the animation types using the `AnimationType` property.
 
-Following example depicts the CircularMaterial type animation for SfBusyIndicator. 
+The following example depicts the CircularMaterial type animation for SfBusyIndicator.
 
 {% tabs %}
 

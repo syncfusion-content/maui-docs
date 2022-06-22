@@ -10,7 +10,7 @@ documentation: ug
 
 ## Animation Type in SfBusyIndicator
 
-The `AnimationType` property for the SfBusyIndicator allows the users to set one of the animations from the built-in animations. The different types of animations are `CircularMaterial`, `LinearMaterial`, `Cupertino`.
+The `AnimationType` property for the SfBusyIndicator allows the users to set one of the animations from the built-in animations. The different types of animations are `CircularMaterial,` `LinearMaterial,` and `Cupertino.`
 
 {% tabs %}
 

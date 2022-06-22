@@ -121,7 +121,7 @@ SfBusyIndicator provides option to set the overlay background. This can be done 
 {% endtabs %}
 
 
-The `OverlayFill` property type is `Brush`, so can able set Gradients as background.
+The `OverlayFill` property type is `Brush`, so you can set Gradients as background.
 
 {% tabs %}
 
