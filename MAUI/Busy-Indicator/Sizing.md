@@ -10,7 +10,7 @@ documentation: ug
 
 ## Sizing in SfBusyIndicator
 
-Drawing size can be customized in SfBusyIndicator.  `SizeFactor` property can be used to set height and width of the Indicator.  Its default value is 0.5 and  range between 0 to 1.
+Drawing size can be customized in SfBusyIndicator. `SizeFactor` property can be used to set the height and width of the Indicator. Its default value is 0.5 and ranges from 0 to 1.
 
 {% tabs %}
 
