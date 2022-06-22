@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Migrating from Xamarin to .NET MAUI SfAvatarView | Syncfusion 
-description: Learn here all about Migrating from Syncfusion Xamarin AvatarView to Syncfusion .NET MAUI AvatarView control and more.
+description: Learn here all about Migrating from Syncfusion Xamarin Avatar View to Syncfusion .NET MAUI Avatar View control and more.
 platform: maui
 control: SfAvatarView
 documentation: ug
@@ -32,6 +32,6 @@ To migrate easier from Xamarin SfAvatarView to .NET MAUI SfAvatarView, we kept m
 <tr>
 <td>BorderWidth</td>
 <td>BorderThickness</td>
-<td>Gets or sets the thickness of the avatar view border</td></tr>
+<td>Gets or sets the thickness of the Avatar View border</td></tr>
 <tr>
 </table> 
