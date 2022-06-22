@@ -10,7 +10,7 @@ documentation: ug
 
 ## Set Header in SfBusyIndicator
 
-The Syncfusion Busy Indicator provides a feature to display a title with font customizations
+The Syncfusion Busy Indicator provides a feature to display a title with font customizations.
 
 ## Title
 
@@ -250,13 +250,13 @@ SfBusyIndicator provides options to set the space between the indicator and the 
 
 The following screenshot illustrates the result of the above code.
 
-![TitleSpacing](Images/SetHeader/Spacing.png)
+![Title Spacing](Images/SetHeader/Spacing.png)
 
 
 
 ## Font customization
 
-SfBusyIndicator provides options to customize the title text.  The title text can be customized using the `FontSize`, `FontAttributes` and `FontFamily` properties.
+SfBusyIndicator provides options to customize the title text. The title text can be customized using the `FontSize,` `FontAttributes,` and `FontFamily` properties.
 
 
 {% tabs %}
@@ -317,5 +317,5 @@ SfBusyIndicator provides options to customize the title text.  The title text ca
 
 The following screenshot illustrates the result of the above code.
 
-![FontCustomization](Images/SetHeader/Fontattributes(bold).png)
+![Font Customization](Images/SetHeader/Fontattributes(bold).png)
 
