@@ -9,7 +9,7 @@ documentation: ug
 
 # Interval in .NET MAUI DateTime Slider (SfDateTimeSlider)
 
-This section explains about how to add the interval for date-time slider.
+This section explains about how to add the interval for DateTime Slider.
 
 ## Date interval
 

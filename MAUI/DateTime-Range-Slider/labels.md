@@ -265,7 +265,7 @@ rangeSlider.LabelStyle.Offset = 10;
 
 ## Disabled labels
 
-You can change the state of the DateTime Range Slider to disabled by setting `false` to the `IsEnabled` property. Using the Visual State Manager (VSM), You can customize the range slider labels properties based on the visual states. The applicable visual states are enabled(default) and disabled.
+You can change the state of the DateTime Range Slider to disabled by setting `false` to the `IsEnabled` property. Using the Visual State Manager (VSM), You can customize the DateTime Range Slider label properties based on the visual states. The applicable visual states are enabled(default) and disabled.
 
 {% tabs %}
 

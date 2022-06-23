@@ -9,7 +9,7 @@ documentation: ug
 
 # Tick in .NET MAUI DateTime Range Slider (SfDateTimeRangeSlider)
 
-This section helps to learn about how to add major and minor ticks in the DateTime range slider.
+This section helps to learn about how to add major and minor ticks in the DateTime Range Slider.
 
 ## Show major ticks
 
