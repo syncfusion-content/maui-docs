@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migrate from Xamarin SfRangeSlider to .NET MAUI SfDateTimeSlider | Syncfusion 
+title: Migrate Xamarin SfRangeSlider to MAUI SfDateTimeSlider | Syncfusion 
 description: Learn here all about Migrating from Syncfusion Xamarin RangeSlider to Syncfusion .NET MAUI Slider control and more.
 platform: MAUI
 control: SfDateTimeSlider
