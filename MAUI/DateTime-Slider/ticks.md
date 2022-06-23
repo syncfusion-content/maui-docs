@@ -215,7 +215,7 @@ The inactive side of the slider is between the thumb and the [`Maximum`](https:/
 
 {% highlight C# %}
 
-SfDateTimeSlider slider = new SfDateTimeSlider();
+SfDateTimeSlider slider = new SfDateTimeSlider(); 
 slider.Minimum = new DateTime(2010, 01, 01);
 slider.Maximum = new DateTime(2018, 01, 01);
 slider.Value = new DateTime(2014, 01, 01);
