@@ -179,16 +179,14 @@ If the `TrackExtent` > 0 and `EdgeLabelsPlacement` is `SliderEdgeLabelsPlacement
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
 
-    <sliders:SfDateTimeRangeSelector Minimum="2002-01-07"
-                                     Maximum="2002-01-13"
-                                     RangeStart="2002-01-09"
-                                     RangeEnd="2002-01-11"
-                                     Interval="1"
-                                     IntervalType="Days"
-                                     DateFormat="ddd" 
-                                     EdgeLabelsPlacement="Inside" 
-                                     ShowLabels="True" 
-                                     ShowTicks="True">
+    <sliders:SfRangeSelector Minimum="1000"
+                             Maximum="5000"
+                             RangeStart="2000"
+                             RangeEnd="4000"
+                             Interval="1000"
+                             EdgeLabelsPlacement="Inside"
+                             ShowLabels="True"
+                             ShowTicks="True">
 
         <charts:SfCartesianChart>
             ...
@@ -201,14 +199,12 @@ If the `TrackExtent` > 0 and `EdgeLabelsPlacement` is `SliderEdgeLabelsPlacement
 
 {% highlight C# %}
 
-SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
-rangeSelector.Minimum = new DateTime(2002, 01, 07);
-rangeSelector.Maximum = new DateTime(2002, 01, 13);
-rangeSelector.RangeStart = new DateTime(2002, 01, 09);
-rangeSelector.RangeEnd = new DateTime(2002, 01, 11);
-rangeSelector.Interval = 1;
-rangeSelector.IntervalType = SliderDateIntervalType.Days;
-rangeSelector.DateFormat = "ddd";
+SfRangeSelector rangeSelector = new SfRangeSelector();
+rangeSelector.Minimum = "1000";
+rangeSelector.Maximum = "5000";
+rangeSelector.RangeStart = "2000";
+rangeSelector.RangeEnd = "4000";
+rangeSelector.Interval = 1000;
 rangeSelector.EdgeLabelsPlacement = SliderEdgeLabelsPlacement.Inside;
 rangeSelector.ShowLabels = true;
 rangeSelector.ShowTicks = true;
@@ -219,7 +215,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector edge label placement](images/labels-and-dividers/edge-labels-placement.gif)
+![RangeSelector edge label placement](images/labels-and-dividers/edge-labels-placement.png)
 
 ## Label style
 
