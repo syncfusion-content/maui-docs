@@ -9,7 +9,7 @@ documentation: ug
 
 # Dividers in .NET MAUI DateTime Range Slider (SfDateTimeRangeSlider)
 
-This section explains about how to add the dividers in the DateTime range slider.
+This section explains about how to add the dividers in the DateTime Range Slider.
 
 ## Show dividers
 
@@ -188,7 +188,7 @@ rangeSlider.DividerStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F7B
 
 ## Disabled divider
 
-You can change the state of the DateTime Range Slider to disabled by setting `false` to the `IsEnabled` property. Using the Visual State Manager (VSM), you can customize the range slider divider properties based on the visual states. The applicable visual states are enabled(default) and disabled.
+You can change the state of the DateTime Range Slider to disabled by setting `false` to the `IsEnabled` property. Using the Visual State Manager (VSM), you can customize the DateTime Range Slider divider properties based on the visual states. The applicable visual states are enabled(default) and disabled.
 
 {% tabs %}
 

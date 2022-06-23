@@ -9,7 +9,7 @@ documentation: ug
 
 # Events and Commands in .NET MAUI DateTime Slider (SfDateTimeSlider)
 
-This section explains about how to add the events and commands for date-time slider.
+This section explains about how to add the events and commands for DateTime Slider.
 
 ## Events
 
@@ -26,11 +26,11 @@ This section explains about how to add the events and commands for date-time sli
 
 <sliders:SfDateTimeSlider  Minimum="2010-01-01" 
   	                        Maximum="2018-01-01" 
-		                     Value="2014-01-01" 
+		                    Value="2014-01-01" 
 	                        ValueChangeStart="OnValueChangeStart" 
-	 	                     ValueChanging="OnValueChanging" 
-		                     ValueChanged="OnValueChanged" 
-		                     ValueChangeEnd="OnValueChangeEnd">
+	 	                    ValueChanging="OnValueChanging" 
+		                    ValueChanged="OnValueChanged" 
+		                    ValueChangeEnd="OnValueChangeEnd">
 </sliders:SfDateTimeSlider>
 
 {% endhighlight %}
@@ -70,7 +70,7 @@ private void OnValueChangeEnd(object sender, EventArgs e)
 
 ### Customize label text
 
-You can format or change the whole numeric or date label text using the [`LabelCreated`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_LabelCreated) event. The [`SliderLabelCreatedEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelCreatedEventArgs.html) contains the following parameters,
+You can format or change the label text using the [`LabelCreated`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_LabelCreated) event. The [`SliderLabelCreatedEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelCreatedEventArgs.html) contains the following parameters,
 
 * Text – Customize the text color using the [`Text`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelCreatedEventArgs.html#Syncfusion_Maui_Sliders_SliderLabelCreatedEventArgs_Style) parameter.
 * Style – Formats the text color, font size, font family, offset using the [`Style`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelCreatedEventArgs.html#Syncfusion_Maui_Sliders_SliderLabelCreatedEventArgs_Style) parameter.

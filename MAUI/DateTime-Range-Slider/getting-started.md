@@ -7,9 +7,9 @@ control: SfDateTimeRangeSlider
 documentation: ug
 ---
 
-# Getting Started with .NET MAUI DateTime Range Slider
+# Getting Started - MAUI DateTime Range Slider (SfDateTimeRangeSlider)
 
-This section explains the steps required to add the DateTime Range Slider control and its elements track, ticks, labels and tooltip. This section covers only basic features needed to know to get started with Syncfusion Range Slider.
+This section explains the steps required to add the DateTime Range Slider control and its elements track, ticks, labels and tooltip. This section covers only basic features needed to know to get started with Syncfusion DateTime Range Slider.
 
 ## Creating an application with .NET MAUI
 
