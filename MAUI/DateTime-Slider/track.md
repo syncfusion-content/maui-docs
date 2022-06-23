@@ -7,9 +7,9 @@ control: SfDateTimeSlider
 documentation: ug
 ---
 
-# Track in .NET MAUI Slider (SfDateTimeSlider)
+# Track in .NET MAUI DateTime Slider (SfDateTimeSlider)
 
-This section helps to learn about how to customize the track in the date-time slider.
+This section helps to learn about how to customize the track in the DateTime Slider.
 
 ## Track color
 
@@ -24,7 +24,7 @@ The inactive side of the slider is between the thumb and the [`Maximum`](https:/
 {% highlight xaml %}
 
 <sliders:SfDateTimeSlider Minimum="2010-01-01" 
-                          Maximum="2020-01-01" 
+                          Maximum="2018-01-01" 
                           Value="2014-01-01">
   <sliders:SfDateTimeSlider.TrackStyle>
      <sliders:SliderTrackStyle ActiveFill="#EE3F3F" InactiveFill="#F7B1AE" />
@@ -37,8 +37,8 @@ The inactive side of the slider is between the thumb and the [`Maximum`](https:/
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
 slider.Minimum = new DateTime(2010, 01, 01);
-slider.Maximum = new DateTime(2020, 01, 01);
-slider.value = new DateTime(2014, 01, 01);
+slider.Maximum = new DateTime(2018, 01, 01);
+slider.Value = new DateTime(2014, 01, 01);
 slider.TrackStyle.ActiveFill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
 slider.TrackStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
 
@@ -57,7 +57,7 @@ You can change the active and inactive track height of the slider using the [`Ac
 {% highlight xaml %}
 
 <sliders:SfDateTimeSlider Minimum="2010-01-01" 
-                          Maximum="2020-01-01" 
+                          Maximum="2018-01-01" 
                           Value="2014-01-01">
    <sliders:SfDateTimeSlider.TrackStyle>
        <sliders:SliderTrackStyle ActiveSize="10" InactiveSize="8" />
@@ -71,7 +71,7 @@ You can change the active and inactive track height of the slider using the [`Ac
 SfDateTimeSlider slider = new SfDateTimeSlider();
 slider.Minimum = new DateTime(2010, 01, 01);
 slider.Maximum = new DateTime(2020, 01, 01);
-slider.value = new DateTime(2014, 01, 01);
+slider.Value = new DateTime(2014, 01, 01);
 slider.TrackStyle.ActiveSize = 10;
 slider.TrackStyle.InactiveSize = 8;
 
@@ -133,8 +133,13 @@ You can change the state of the slider to disabled by setting `false` to the `Is
 {% highlight xaml %}
 
 <ContentPage.Resources>
-    <Style TargetType="sliders:SfSlider">
-        <Setter Property="Interval" Value="0.25" />
+    <Style TargetType="sliders:SfDateTimeSlider">
+        <Setter Property="Minimum"
+                Value="2010-01-01" />
+        <Setter Property="Maximum"
+                Value="2018-01-01" />
+        <Setter Property="Value"
+                Value="2014-01-01" />
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup>
@@ -142,10 +147,10 @@ You can change the state of the slider to disabled by setting `false` to the `Is
                         <VisualState.Setters>
                             <Setter Property="TrackStyle">
                                 <Setter.Value>
-                                    <sliders:SliderTrackStyle ActiveSize="8" 
-                                                                  InactiveSize="6" 
-                                                                  ActiveFill="#EE3F3F" 
-                                                                  InactiveFill="#F7B1AE"/>
+                                    <sliders:SliderTrackStyle ActiveSize="8"
+                                                              InactiveSize="6"
+                                                              ActiveFill="#EE3F3F"
+                                                              InactiveFill="#F7B1AE" />
                                 </Setter.Value>
                             </Setter>
                         </VisualState.Setters>
@@ -154,10 +159,10 @@ You can change the state of the slider to disabled by setting `false` to the `Is
                         <VisualState.Setters>
                             <Setter Property="TrackStyle">
                                 <Setter.Value>
-                                    <sliders:SliderTrackStyle ActiveSize="10" 
-                                                                  InactiveSize="8"
-                                                                  ActiveFill="Grey" 
-                                                                  InactiveFill="LightGrey" />
+                                    <sliders:SliderTrackStyle ActiveSize="10"
+                                                              InactiveSize="8"
+                                                              ActiveFill="Grey"
+                                                              InactiveFill="LightGrey" />
                                 </Setter.Value>
                             </Setter>
                         </VisualState.Setters>
@@ -170,10 +175,12 @@ You can change the state of the slider to disabled by setting `false` to the `Is
 
 <ContentPage.Content>
     <VerticalStackLayout>
-        <Label Text="Enabled Slider" Padding="0,10"/>
-        <sliders:SfSlider/>
-        <Label Text="Disabled Slider" Padding="0,10"/>
-        <sliders:SfSlider IsEnabled="False"/>
+        <Label Text="Enabled Slider"
+               Padding="0,10" />
+        <sliders:SfDateTimeSlider />
+        <Label Text="Disabled Slider"
+               Padding="0,10" />
+        <sliders:SfDateTimeSlider IsEnabled="False" />
     </VerticalStackLayout>
 </ContentPage.Content>
 
@@ -182,8 +189,19 @@ You can change the state of the slider to disabled by setting `false` to the `Is
 {% highlight C# %}
 
 VerticalStackLayout stackLayout = new VerticalStackLayout();
-SfSlider defaultSlider = new SfSlider();
-SfSlider disabledSlider = new SfSlider { IsEnabled = false };
+SfDateTimeSlider defaultSlider = new SfDateTimeSlider()
+{
+    Minimum = new DateTime(2010, 01, 01),
+    Maximum = new DateTime(2020, 01, 01),
+    Value = new DateTime(2014, 01, 01)
+};
+SfDateTimeSlider disabledSlider = new SfDateTimeSlider
+{
+    Minimum = new DateTime(2010, 01, 01),
+    Maximum = new DateTime(2020, 01, 01),
+    Value = new DateTime(2014, 01, 01),
+    IsEnabled = false
+};
 
 VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
 VisualStateGroup commonStateGroup = new VisualStateGroup();
@@ -191,7 +209,7 @@ VisualStateGroup commonStateGroup = new VisualStateGroup();
 VisualState defaultState = new VisualState { Name = "Default" };
 defaultState.Setters.Add(new Setter
 {
-    Property = SfSlider.TrackStyleProperty,
+    Property = SfDateTimeSlider.TrackStyleProperty,
     Value = new SliderTrackStyle
     {
         ActiveFill = Color.FromArgb("#EE3F3F"),
@@ -204,7 +222,7 @@ defaultState.Setters.Add(new Setter
 VisualState disabledState = new VisualState { Name = "Disabled" };
 disabledState.Setters.Add(new Setter
 {
-    Property = SfSlider.TrackStyleProperty,
+    Property = SfDateTimeSlider.TrackStyleProperty,
     Value = new SliderTrackStyle
     {
         ActiveFill = Colors.Grey,

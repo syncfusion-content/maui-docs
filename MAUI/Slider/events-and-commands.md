@@ -41,7 +41,7 @@ This section explains about how to add the events and commands for slider.
    SfDateTimeSlider slider = new SfDateTimeSlider();
    slider.Minimum = new DateTime(2010, 01, 01);
    slider.Maximum = new DateTime(2020, 01, 01);
-   slider.value = new DateTime(2014, 01, 01);
+   slider.Value = new DateTime(2014, 01, 01);
    slider.ValueChangeStart += OnValueChanged;
    slider.ValueChanging += OnValueChanged;
    slider.ValueChanged += OnValueChanged;

@@ -9,7 +9,7 @@ documentation: ug
 
 # Tick in .NET MAUI Slider (SfDateTimeSlider)
 
-This section helps to learn about how to add major and minor ticks in the date-time slider.
+This section helps to learn about how to add major and minor ticks in the DateTime Slider.
 
 ## Show major ticks
 
@@ -24,7 +24,7 @@ For example, if [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 {% highlight xaml %}
 
 <sliders:SfDateTimeSlider Minimum="2010-01-01" 
-                          Maximum="2020-01-01" 
+                          Maximum="2018-01-01" 
                           Value="2014-01-01" 
                           ShowTicks="True" />
 
@@ -34,8 +34,8 @@ For example, if [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
 slider.Minimum = new DateTime(2010, 01, 01);
-slider.Maximum = new DateTime(2020, 01, 01);
-slider.value = new DateTime(2014, 01, 01);
+slider.Maximum = new DateTime(2018, 01, 01);
+slider.Value = new DateTime(2014, 01, 01);
 slider.ShowTicks = true;
 
 {% endhighlight %}
@@ -64,7 +64,7 @@ slider.ShowTicks = true;
 SfDateTimeSlider slider = new SfDateTimeSlider();
 slider.Minimum = new DateTime(2010, 01, 01);
 slider.Maximum = new DateTime(2020, 01, 01);
-slider.value = new DateTime(2014, 01, 01);
+slider.Value = new DateTime(2014, 01, 01);
 slider.Interval = 0.2;
 slider.ShowTicks = true;
 
@@ -85,10 +85,10 @@ It is used to represent the number of smaller ticks between two major ticks. For
 {% highlight xaml %}
 
 <sliders:SfDateTimeSlider Minimum="2010-01-01" 
-                          Maximum="2020-01-01" 
+                          Maximum="2018-01-01" 
                           Value="2014-01-01"
                           ShowLabels="True" 
-                          MinorTicksPerInterval="3" 
+                          MinorTicksPerInterval="7" 
 		                  ShowTicks="True">
 </sliders:SfDateTimeSlider>
 
@@ -98,10 +98,9 @@ It is used to represent the number of smaller ticks between two major ticks. For
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
 slider.Minimum = new DateTime(2010, 01, 01);
-slider.Maximum = new DateTime(2020, 01, 01);
-slider.value = new DateTime(2014, 01, 01);
-slider.Interval = 2;
-slider.MinorTicksPerInterval = 3;
+slider.Maximum = new DateTime(2018, 01, 01);
+slider.Value = new DateTime(2014, 01, 01);
+slider.MinorTicksPerInterval = 7;
 slider.ShowTicks = true;
 slider.ShowLabels = true;
 
@@ -133,7 +132,7 @@ slider.ShowLabels = true;
 SfDateTimeSlider slider = new SfDateTimeSlider();
 slider.Minimum = new DateTime(2010, 01, 01);
 slider.Maximum = new DateTime(2020, 01, 01);
-slider.value = new DateTime(2014, 01, 01);
+slider.Value = new DateTime(2014, 01, 01);
 slider.Interval = 2;
 slider.MinorTicksPerInterval = 1;
 slider.ShowTicks = true;
@@ -159,7 +158,7 @@ The inactive side of the slider is between the thumb and the [`Maximum`](https:/
 
 <sliders:SfDateTimeSlider Minimum="2010-01-01" 
                           Maximum="2020-01-01" 
-                          Value="2014-01-01"
+                          Value="2015-01-01"
                           Interval="2" 
                           ShowTicks="True">
    <sliders:SfDateTimeSlider.MajorTickStyle>
@@ -175,7 +174,7 @@ The inactive side of the slider is between the thumb and the [`Maximum`](https:/
 SfDateTimeSlider slider = new SfDateTimeSlider();
 slider.Minimum = new DateTime(2010, 01, 01);
 slider.Maximum = new DateTime(2020, 01, 01);
-slider.value = new DateTime(2014, 01, 01);
+slider.Value = new DateTime(2015, 01, 01);
 slider.Interval = 2;
 slider.ShowTicks = true;
 slider.MajorTickStyle.ActiveFill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
@@ -196,7 +195,7 @@ The active side of the slider is between the [`Minimum`](https://help.syncfusion
 The inactive side of the slider is between the thumb and the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html#Syncfusion_Maui_Sliders_SfSlider_Maximum) value.
 
 <sliders:SfDateTimeSlider Minimum="2010-01-01" 
-                          Maximum="2020-01-01" 
+                          Maximum="2018-01-01" 
                           Value="2014-01-01"
                           Interval="2"
                           ShowTicks="True"
@@ -214,8 +213,8 @@ The inactive side of the slider is between the thumb and the [`Maximum`](https:/
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
 slider.Minimum = new DateTime(2010, 01, 01);
-slider.Maximum = new DateTime(2020, 01, 01);
-slider.value = new DateTime(2014, 01, 01);
+slider.Maximum = new DateTime(2018, 01, 01);
+slider.Value = new DateTime(2014, 01, 01);
 slider.Interval = 2;
 slider.ShowTicks = true;
 slider.ShowLabels = true;
@@ -239,7 +238,7 @@ You can change the major and minor ticks size of the slider using the [`ActiveSi
 
 <sliders:SfDateTimeSlider Minimum="2010-01-01" 
                           Maximum="2020-01-01" 
-                          Value="2014-01-01"
+                          Value="2015-01-01"
                           Interval="2" 
                           ShowTicks="True" 
 		                  MinorTicksPerInterval="1">
@@ -260,7 +259,7 @@ You can change the major and minor ticks size of the slider using the [`ActiveSi
 SfDateTimeSlider slider = new SfDateTimeSlider();
 slider.Minimum = new DateTime(2010, 01, 01);
 slider.Maximum = new DateTime(2020, 01, 01);
-slider.value = new DateTime(2014, 01, 01);
+slider.Value = new DateTime(2015, 01, 01);
 slider.Interval = 2;
 slider.ShowTicks = true;
 slider.MinorTicksPerInterval = 1;
@@ -304,7 +303,7 @@ You can adjust the space between track and ticks of the slider using the [`Offse
 SfDateTimeSlider slider = new SfDateTimeSlider();
 slider.Minimum = new DateTime(2010, 01, 01);
 slider.Maximum = new DateTime(2020, 01, 01);
-slider.value = new DateTime(2014, 01, 01);
+slider.Value = new DateTime(2015, 01, 01);
 slider.Interval = 2;
 slider.ShowTicks = true;
 slider.MinorTicksPerInterval = 1;
@@ -326,8 +325,14 @@ You can change the state of the slider to disabled by setting `false` to the `Is
 {% highlight xaml %}
 
 <ContentPage.Resources>
-    <Style TargetType="sliders:SfSlider">
-        <Setter Property="Interval" Value="0.25" />
+    <Style TargetType="sliders:SfDateTimeSlider">
+        <Setter Property="Minimum"
+                Value="2010-01-01" />
+        <Setter Property="Maximum"
+                Value="2018-01-01" />
+        <Setter Property="Value"
+                Value="2014-01-01" />
+        <Setter Property="Interval" Value="2" />
         <Setter Property="ShowTicks" Value="True" />
         <Setter Property="MinorTicksPerInterval" Value="2" />
         <Setter Property="VisualStateManager.VisualStateGroups">
@@ -382,9 +387,9 @@ You can change the state of the slider to disabled by setting `false` to the `Is
 <ContentPage.Content>
     <VerticalStackLayout Padding="10">
         <Label Text="Enabled Slider" Padding="0,10"/>
-        <sliders:SfSlider/>
+        <sliders:SfDateTimeSlider/>
         <Label Text="Disabled Slider" Padding="0,10"/>
-        <sliders:SfSlider IsEnabled="False"/>
+        <sliders:SfDateTimeSlider IsEnabled="False"/>
     </VerticalStackLayout>
 </ContentPage.Content>
 
@@ -393,8 +398,25 @@ You can change the state of the slider to disabled by setting `false` to the `Is
 {% highlight C# %}
 
 VerticalStackLayout stackLayout = new VerticalStackLayout();
-SfSlider defaultSlider = new SfSlider { Interval = 0.25, ShowTicks = true, MinorTicksPerInterval = 2 };
-SfSlider disabledSlider = new SfSlider { IsEnabled = false, Interval = 0.25, ShowTicks = true, MinorTicksPerInterval = 2 };
+SfDateTimeSlider defaultSlider = new SfDateTimeSlider()
+{
+    Minimum = new DateTime(2010, 01, 01),
+    Maximum = new DateTime(2018, 01, 01),
+    Value = new DateTime(2014, 01, 01),
+    Interval = 2, 
+    ShowTicks = true, 
+    MinorTicksPerInterval = 2
+};
+SfDateTimeSlider disabledSlider = new SfDateTimeSlider
+{
+    Minimum = new DateTime(2010, 01, 01),
+    Maximum = new DateTime(2018, 01, 01),
+    Value = new DateTime(2014, 01, 01),,
+    IsEnabled = false, 
+    Interval = 2, 
+    ShowTicks = true, 
+    MinorTicksPerInterval = 2
+};
 
 VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
 VisualStateGroup commonStateGroup = new VisualStateGroup();
@@ -402,7 +424,7 @@ VisualStateGroup commonStateGroup = new VisualStateGroup();
 VisualState defaultState = new VisualState { Name = "Default" };
 defaultState.Setters.Add(new Setter
 {
-    Property = SfSlider.MajorTickStyleProperty,
+    Property = SfDateTimeSlider.MajorTickStyleProperty,
     Value = new SliderTickStyle
     {
         ActiveSize = new Size(3, 10),
@@ -413,7 +435,7 @@ defaultState.Setters.Add(new Setter
 });
 defaultState.Setters.Add(new Setter
 {
-    Property = SfSlider.MinorTickStyleProperty,
+    Property = SfDateTimeSlider.MinorTickStyleProperty,
     Value = new SliderTickStyle
     {
         ActiveSize = new Size(3, 6),
@@ -426,7 +448,7 @@ defaultState.Setters.Add(new Setter
 VisualState disabledState = new VisualState { Name = "Disabled" };
 disabledState.Setters.Add(new Setter
 {
-    Property = SfSlider.MajorTickStyleProperty,
+    Property = SfDateTimeSlider.MajorTickStyleProperty,
     Value = new SliderTickStyle
     {
         ActiveSize = new Size(3, 10),
@@ -437,7 +459,7 @@ disabledState.Setters.Add(new Setter
 });
 disabledState.Setters.Add(new Setter
 {
-    Property = SfSlider.MinorTickStyleProperty,
+    Property = SfDateTimeSlider.MinorTickStyleProperty,
     Value = new SliderTickStyle
     {
         ActiveSize = new Size(3, 6),

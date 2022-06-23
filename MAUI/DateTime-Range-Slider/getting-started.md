@@ -7,9 +7,9 @@ control: SfDateTimeRangeSlider
 documentation: ug
 ---
 
-# Getting Started with .NET MAUI Range Slider
+# Getting Started with .NET MAUI DateTime Range Slider
 
-This section explains the steps required to add the range slider control and its elements such as numeric and date values, ticks, labels and tooltip. This section covers only basic features needed to know to get started with Syncfusion Range Slider.
+This section explains the steps required to add the DateTime Range Slider control and its elements track, ticks, labels and tooltip. This section covers only basic features needed to know to get started with Syncfusion Range Slider.
 
 ## Creating an application with .NET MAUI
 
@@ -60,7 +60,7 @@ namespace Slider
 
 ## Initialize range slider
 
-Import the [`SfDateTimeRangeSlider`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSlider.html) namespace and initialize the range slider as shown below.
+Import the [`SfDateTimeRangeSlider`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSlider.html) namespace and initialize the DateTime Range Slider as shown below.
 
 {% tabs %}
 
@@ -140,7 +140,7 @@ rangeSlider.Interval = 2;
 
 ## Enable ticks
 
-The [`ShowTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ShowTicks) property enables the ticks in the range selector, while the [`MinorTicksPerInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MinorTicksPerInterval) property enables the minor ticks between the major ticks.
+The [`ShowTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ShowTicks) property enables the ticks, while the [`MinorTicksPerInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MinorTicksPerInterval) property enables the minor ticks between the major ticks.
 
 {% tabs %}
 
@@ -178,7 +178,7 @@ rangeSlider.MinorTicksPerInterval = 1;
 
 ## Orientation
 
-The [`Orientation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSlider.html#Syncfusion_Maui_Sliders_SfRangeSlider_Orientation) property allows you to show the range slider in both horizontal and vertical directions. The default value of the [`Orientation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSlider.html#Syncfusion_Maui_Sliders_SfRangeSlider_Orientation) property is `Horizontal`.
+The [`Orientation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSlider.html#Syncfusion_Maui_Sliders_SfRangeSlider_Orientation) property allows you to show the DateTime Range Slider in both horizontal and vertical directions. The default value of the [`Orientation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSlider.html#Syncfusion_Maui_Sliders_SfRangeSlider_Orientation) property is `Horizontal`.
 
 {% tabs %}
 
@@ -189,6 +189,7 @@ The [`Orientation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.
                                RangeStart="2012-01-01" 
                                RangeEnd="2016-01-01"
                                ShowTicks="True" 
+                               ShowLabels="True"
                                Interval="2" 
                                MinorTicksPerInterval="1" 
                                Orientation="Vertical">
@@ -217,7 +218,7 @@ rangeSlider.MinorTicksPerInterval = 1;
 
 ## Inverse the slider
 
-You can invert the range slider using the [`IsInversed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_IsInversed) property. The default value of the [`IsInversed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_IsInversed) property is `False`.
+You can invert the DateTime Range Slider using the [`IsInversed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_IsInversed) property. The default value of the [`IsInversed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_IsInversed) property is `False`.
 
 {% tabs %}
 
@@ -229,9 +230,8 @@ You can invert the range slider using the [`IsInversed`](https://help.syncfusion
                                RangeEnd="2016-01-01"
                                Interval="2" 
                                ShowTicks="True"
-                               ShowLablels="True"  
+                               ShowLabels="True"  
                                MinorTicksPerInterval="1" 
-                               Orientation="Vertical" 
                                IsInversed="True">
 </sliders:SfDateTimeRangeSlider>
 
@@ -264,14 +264,16 @@ You can add prefix or suffix to the labels using the [`NumberFormat`](https://he
 
 {% highlight xaml %}
 
-<sliders:SfDateTimeRangeSlider Minimum="2010-01-01" 
-                               Maximum="2018-01-01" 
-                               RangeStart="2012-01-01" 
-                               RangeEnd="2016-01-01"
-                               Interval="2"
+<sliders:SfDateTimeRangeSlider Minimum="2000-01-01"
+                               Maximum="2005-01-01"
+                               RangeStart="2010-04-01"
+                               RangeEnd="2010-10-01"
+                               DateFormat="MMM"
+                               IntervalType="Months"
+                               ShowTicks="True"
+                               MinorTicksPerInterval="1"
                                ShowLabels="True"
-                               DateFormat="MMM dd" 
-                               ShowTicks="True">
+                               Interval="2">
 </sliders:SfDateTimeRangeSlider>
 
 {% endhighlight %}
@@ -280,14 +282,15 @@ You can add prefix or suffix to the labels using the [`NumberFormat`](https://he
 
 SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider();
 rangeSlider.Minimum = new DateTime(2010, 01, 01);
-rangeSlider.Maximum = new DateTime(2018, 01, 01);
-rangeSlider.RangeStart = new DateTime(2012, 01, 01);
-rangeSlider.RangeEnd = new DateTime(2016, 01, 01);
-rangeSlider.Interval = 2;
+rangeSlider.Maximum = new DateTime(2011, 01, 01);
+rangeSlider.RangeStart = new DateTime(2010, 04, 01);
+rangeSlider.RangeEnd = new DateTime(2010, 10, 01);
 rangeSlider.ShowLabels = true;
-rangeSlider.DateFormat = "MMM dd";
+rangeSlider.Interval = 2;
 rangeSlider.ShowTicks = true;
-
+rangeSlider.MinorTicksPerInterval = 1;
+rangeSlider.DateFormat = "MMM";
+rangeSlider.IntervalType = SliderDateIntervalType.Months;
 
 {% endhighlight %}
 

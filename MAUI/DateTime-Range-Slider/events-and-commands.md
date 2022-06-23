@@ -9,7 +9,7 @@ documentation: ug
 
 # Events and Commands in .NET MAUI Range Slider (SfDateTimeRangeSlider)
 
-This section explains about how to add the events and commands for range slider.
+This section explains about how to add the events and commands for DateTime Range Slider.
 
 ## Events
 
@@ -81,14 +81,17 @@ You can format or change the whole numeric or date label text using the [`LabelC
 
 {% highlight xaml %}
 
-<sliders:SfDateTimeRangeSlider Minimum="2010-01-01" 
-                               Maximum="2018-01-01" 
-                               RangeStart="2012-01-01" 
-                               RangeEnd="2016-01-01"
-                               Interval="2"   
-                               ShowLabels="True" 
-                               ShowTicks="True" 
-                               LabelCreated="OnLabelCreated">
+<sliders:SfDateTimeRangeSlider Minimum="2010-01-01"
+                               Maximum="2011-01-01"
+                               RangeStart="2010-04-01"
+                               RangeEnd="2010-10-01"
+                               Interval="3"
+                               DateFormat="MMM"
+                               ShowTicks="True"
+                               LabelsPlacement="BetweenTicks"
+                               IntervalType="Months"
+                               LabelCreated="OnLabelCreated"
+                               ShowLabels="True">
 </sliders:SfDateTimeRangeSlider>
 
 {% endhighlight %}
@@ -96,18 +99,37 @@ You can format or change the whole numeric or date label text using the [`LabelC
 {% highlight C# %}
 {
    SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider();
-    rangeSlider.Minimum = new DateTime(2010, 01, 01);
-    rangeSlider.Maximum = new DateTime(2018, 01, 01);
-    rangeSlider.RangeStart = new DateTime(2012, 01, 01);
-    rangeSlider.RangeEnd = new DateTime(2016, 01, 01);
-   rangeSlider.Interval = 2;
-   rangeSlider.ShowLabels = true;
+   rangeSlider.Minimum = new DateTime(2010, 01, 01);
+   rangeSlider.Maximum = new DateTime(2011, 01, 01);
+   rangeSlider.RangeStart = new DateTime(2010, 04, 01);
+   rangeSlider.RangeEnd = new DateTime(2010, 10, 01);
+   rangeSlider.Interval = 3;
+   rangeSlider.DateFormat = "MMM";
+   rangeSlider.IntervalType = SliderDateIntervalType.Months;
+   rangeSlider.LabelsPlacement = SliderLabelsPlacement.BetweenTicks;
    rangeSlider.ShowTicks = true;
+   rangeSlider.ShowLabels = true;
    rangeSlider.LabelCreated += OnLabelCreated;
 }
+
 private void OnLabelCreated(object sender, SliderLabelCreatedEventArgs e)
 {
-	e.Text = "$" + e.Text;
+    if (e.Text == "Jan")
+    {
+        e.Text = "Quarter 1";
+    }
+    else if (e.Text == "Apr")
+    {
+        e.Text = "Quarter 2";
+    }
+    else if (e.Text == "Jul")
+    {
+        e.Text = "Quarter 3";
+    }
+    else
+    {
+        e.Text = "Quarter 4";
+    }
 }
 
 {% endhighlight %}
@@ -129,31 +151,40 @@ You can format or change the whole tooltip label text using the [`TooltipLabelCr
 
 {% highlight xaml %}
 
-<sliders:SfDateTimeRangeSlider Minimum="2010-01-01" 
-                               Maximum="2018-01-01" 
-                               RangeStart="2012-01-01" 
-                               RangeEnd="2016-01-01">
+<sliders:SfDateTimeRangeSlider Minimum="2010-01-01"
+                               Maximum="2018-01-01"
+                               RangeStart="2012-01-01"
+                               RangeEnd="2016-01-01"
+                               Interval="2"
+                               ShowTicks="True"
+                               ShowLabels="True">
 
-   <sliders:SfDateTimeRangeSlider.Tooltip>
-      <sliders:SliderTooltip TooltipLabelCreated="OnTooltipLabelCreated"/>
-   </sliders:SfDateTimeRangeSlider.Tooltip>
+    <sliders:SfDateTimeRangeSlider.Tooltip>
+        <sliders:SliderTooltip TooltipLabelCreated="OnTooltipLabelCreated" />
+    </sliders:SfDateTimeRangeSlider.Tooltip>
 
 </sliders:SfDateTimeRangeSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
+
 {
     SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider();
     rangeSlider.Minimum = new DateTime(2010, 01, 01);
     rangeSlider.Maximum = new DateTime(2018, 01, 01);
     rangeSlider.RangeStart = new DateTime(2012, 01, 01);
     rangeSlider.RangeEnd = new DateTime(2016, 01, 01);
-    rangeSlider.TooltipLabelCreated += OnTooltipLabelCreated;
+    rangeSlider.Interval = 2;
+    rangeSlider.ShowTicks = true;
+    rangeSlider.ShowLabels = true;
+    rangeSlider.Tooltip = new SliderTooltip();
+    rangeSlider.Tooltip.TooltipLabelCreated += OnTooltipLabelCreated;
  }
+
  private void OnTooltipLabelCreated(object sender, SliderTooltipLabelCreatedEventArgs e)
  {
-     e.Text = "$" + e.Text;
+     e.Text = "Year: " + e.Text;
  }
 
 {% endhighlight %}

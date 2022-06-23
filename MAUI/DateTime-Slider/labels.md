@@ -9,7 +9,7 @@ documentation: ug
 
 # Labels in .NET MAUI DateTime Slider (SfDateTimeSlider)
 
-This section explains about how to add the labels in the date-time slider.
+This section explains about how to add the labels in the DateTime Slider.
 
 ## Show labels
 
@@ -21,7 +21,7 @@ The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.S
 
 <sliders:SfDateTimeSlider Minimum="2010-01-01" 
                           Maximum="2020-01-01" 
-                          Value="2014-01-01"
+                          Value="2018-01-01"
                           Interval="2"
                           ShowLabels="True"
                           ShowTicks="True">
@@ -33,8 +33,8 @@ The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.S
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
 slider.Minimum = new DateTime(2010, 01, 01);
-slider.Maximum = new DateTime(2020, 01, 01);
-slider.value = new DateTime(2014, 01, 01);
+slider.Maximum = new DateTime(2018, 01, 01);
+slider.Value = new DateTime(2014, 01, 01);
 slider.Interval = 2;
 slider.ShowTicks = true;
 slider.ShowLabels = true;
@@ -47,7 +47,7 @@ slider.ShowLabels = true;
 
 ## Date format
 
-The [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeSlider_DateFormat) property is used to format the date labels. It is mandatory for date [`SfDateTimeSlider`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html). For date values, the slider does not have auto interval support. So, it is mandatory to set [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Interval), [`IntervalType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeSlider_IntervalType), and [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeSlider_DateFormat) for date values. The default value of [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeSlider_DateFormat) property is `yyyy`.
+The [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeSlider_DateFormat) property is used to format the date labels. For date values, the slider does not have auto interval support. So, it is mandatory to set [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Interval), [`IntervalType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeSlider_IntervalType), and [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeSlider_DateFormat) for properties. The default value of [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeSlider_DateFormat) property is `yyyy`.
 
 {% tabs %}
 
@@ -66,7 +66,7 @@ The [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.S
 
 {% highlight C# %}
 
-SfSlider slider = new SfSlider();
+SfDateTimeSlider slider = new SfDateTimeSlider();
 slider.Minimum = new DateTime(2000, 01, 01, 09, 00, 00);
 slider.Maximum = new DateTime(2000, 01, 01, 17, 00, 00);
 slider.Value = new DateTime(2000, 01, 01, 13, 00, 00);
@@ -89,13 +89,13 @@ The [`LabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slid
 
 {% highlight xaml %}
 
-<sliders:SfDateTimeSlider Minimum="2010-01-01" 
-                          Maximum="2020-01-01" 
-                          Value="2014-01-01"
-		                  Interval="2"  
-		                  LabelsPlacement="BetweenTicks" 
-		                  ShowLabels="True" 
-		                  ShowTicks="True">
+<sliders:SfDateTimeSlider Minimum="2011-01-01"
+                          Maximum="2016-01-01"
+                          Value="2013-01-01"
+                          Interval="1"
+                          LabelsPlacement="BetweenTicks"
+                          ShowLabels="True"
+                          ShowTicks="True">
 </sliders:SfDateTimeSlider>
 
 {% endhighlight %}
@@ -103,10 +103,10 @@ The [`LabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slid
 {% highlight C# %}
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
-slider.Minimum = new DateTime(2010, 01, 01);
-slider.Maximum = new DateTime(2020, 01, 01);
-slider.value = new DateTime(2014, 01, 01);
-slider.Interval = 2;
+slider.Minimum = new DateTime(2011, 01, 01);
+slider.Maximum = new DateTime(2016, 01, 01);
+slider.Value = new DateTime(2013, 01, 01);
+slider.Interval = 1;
 slider.LabelsPlacement = SliderLabelsPlacement.BetweenTicks;
 slider.ShowLabels = true;
 slider.ShowTicks = true;
@@ -130,7 +130,7 @@ If the `TrackExtent` > 0 and `EdgeLabelsPlacement` is `SliderEdgeLabelsPlacement
 {% highlight xaml %}
 
 <sliders:SfDateTimeSlider Minimum="2010-01-01" 
-                          Maximum="2020-01-01" 
+                          Maximum="2018-01-01" 
                           Value="2014-01-01" 
                           Interval="2"
                           EdgeLabelsPlacement="Inside"
@@ -143,8 +143,8 @@ If the `TrackExtent` > 0 and `EdgeLabelsPlacement` is `SliderEdgeLabelsPlacement
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
 slider.Minimum = new DateTime(2010, 01, 01);
-slider.Maximum = new DateTime(2020, 01, 01);
-slider.value = new DateTime(2014, 01, 01);
+slider.Maximum = new DateTime(2018, 01, 01);
+slider.Value = new DateTime(2014, 01, 01);
 slider.Interval = 2;
 slider.EdgeLabelsPlacement = SliderEdgeLabelsPlacement.Inside;
 slider.ShowLabels = true;
@@ -154,7 +154,7 @@ slider.ShowTicks = true;
 
 {% endtabs %}
 
-![Slider edge labels placement](images/labels-and-dividers/edge-labels-placement.gif)
+![Slider edge labels placement](images/labels-and-dividers/edge-labels-placement.png)
 
 ## Label style
 
@@ -169,7 +169,7 @@ The inactive side of the slider is between the thumb and the [`Maximum`](https:/
 {% highlight xaml %}
 
 <sliders:SfDateTimeSlider Minimum="2010-01-01" 
-                          Maximum="2020-01-01" 
+                          Maximum="2018-01-01" 
                           Value="2014-01-01" 
                   Interval="2" 
                   ShowTicks="True"  
@@ -190,8 +190,8 @@ The inactive side of the slider is between the thumb and the [`Maximum`](https:/
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
 slider.Minimum = new DateTime(2010, 01, 01);
-slider.Maximum = new DateTime(2020, 01, 01);
-slider.value = new DateTime(2014, 01, 01);
+slider.Maximum = new DateTime(2018, 01, 01);
+slider.Value = new DateTime(2014, 01, 01);
 slider.Interval = 2;
 slider.ShowLabels = true;
 slider.ShowTicks = true;
@@ -217,13 +217,13 @@ You can adjust the space between ticks and labels of the slider using the [`Offs
 {% highlight xaml %}
 
 <sliders:SfDateTimeSlider Minimum="2010-01-01" 
-                          Maximum="2020-01-01" 
+                          Maximum="2018-01-01" 
                           Value="2014-01-01" 
                   Interval="2" 
                   ShowTicks="True"
                   ShowLabels="True">
     <sliders:SfDateTimeSlider.LabelStyle>
-        <sliders:SliderLabelStyle Offset="10" />
+        <sliders:SliderLabelStyle Offset="15" />
      </sliders:SfDateTimeSlider.LabelStyle>
 </sliders:SfDateTimeSlider>
 
@@ -233,12 +233,12 @@ You can adjust the space between ticks and labels of the slider using the [`Offs
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
 slider.Minimum = new DateTime(2010, 01, 01);
-slider.Maximum = new DateTime(2020, 01, 01);
-slider.value = new DateTime(2014, 01, 01);
+slider.Maximum = new DateTime(2018, 01, 01);
+slider.Value = new DateTime(2014, 01, 01);
 slider.Interval = 2;
 slider.ShowLabels = true;
 slider.ShowTicks = true;
-slider.LabelStyle.Offset = 10;
+slider.LabelStyle.Offset = 15;
 
 {% endhighlight %}
 
@@ -255,8 +255,14 @@ You can change the state of the slider to disabled by setting `false` to the `Is
 {% highlight xaml %}
 
 <ContentPage.Resources>
-    <Style TargetType="sliders:SfSlider">
-        <Setter Property="Interval" Value="0.25" />
+    <Style TargetType="sliders:SfDateTimeSlider">
+        <Setter Property="Minimum"
+                Value="2010-01-01" />
+        <Setter Property="Maximum"
+                Value="2018-01-01" />
+        <Setter Property="Value"
+                Value="2014-01-01" />
+        <Setter Property="Interval" Value="2" />
         <Setter Property="ShowTicks" Value="True" />
         <Setter Property="ShowLabels" Value="True" />
         <Setter Property="VisualStateManager.VisualStateGroups">
@@ -299,9 +305,9 @@ You can change the state of the slider to disabled by setting `false` to the `Is
 <ContentPage.Content>
     <VerticalStackLayout>
         <Label Text="Enabled Slider" Padding="0,10"/>
-        <sliders:SfSlider/>
+        <sliders:SfDateTimeSlider/>
         <Label Text="Disabled Slider" Padding="0,10"/>
-        <sliders:SfSlider IsEnabled="False"/>
+        <sliders:SfDateTimeSlider IsEnabled="False"/>
     </VerticalStackLayout>
 </ContentPage.Content>
 
@@ -310,8 +316,25 @@ You can change the state of the slider to disabled by setting `false` to the `Is
 {% highlight C# %}
 
 VerticalStackLayout stackLayout = new VerticalStackLayout();
-SfSlider defaultSlider = new SfSlider { Interval = 0.25, ShowTicks = true, ShowLabels = true };
-SfSlider disabledSlider = new SfSlider { IsEnabled = false, Interval = 0.25, ShowTicks = true, ShowLabels = true };
+SfDateTimeSlider defaultSlider = new SfDateTimeSlider()
+{
+    Minimum = new DateTime(2010, 01, 01),
+    Maximum = new DateTime(2020, 01, 01),
+    Value = new DateTime(2014, 01, 01),
+    Interval = 2, 
+    ShowTicks = true, 
+    ShowLabels = true
+};
+SfDateTimeSlider disabledSlider = new SfDateTimeSlider
+{
+    Minimum = new DateTime(2010, 01, 01),
+    Maximum = new DateTime(2020, 01, 01),
+    Value = new DateTime(2014, 01, 01),
+    IsEnabled = false, 
+    Interval = 2, 
+    ShowTicks = true, 
+    ShowLabels = true 
+};
 
 VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
 VisualStateGroup commonStateGroup = new VisualStateGroup();
@@ -319,7 +342,7 @@ VisualStateGroup commonStateGroup = new VisualStateGroup();
 VisualState defaultState = new VisualState { Name = "Default" };
 defaultState.Setters.Add(new Setter
 {
-    Property = SfSlider.LabelStyleProperty,
+    Property = SfDateTimeSlider.LabelStyleProperty,
     Value = new SliderLabelStyle
     {
         ActiveFontSize = 16,
@@ -333,7 +356,7 @@ defaultState.Setters.Add(new Setter
 VisualState disabledState = new VisualState { Name = "Disabled" };
 disabledState.Setters.Add(new Setter
 {
-    Property = SfSlider.LabelStyleProperty,
+    Property = SfDateTimeSlider.LabelStyleProperty,
     Value = new SliderLabelStyle
     {
         ActiveFontSize = 16,

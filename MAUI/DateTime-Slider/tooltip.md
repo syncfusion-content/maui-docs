@@ -20,7 +20,7 @@ You can enable tooltip for the thumb by setting the [`Tooltip`](https://help.syn
 {% highlight xaml %}
 
 <sliders:SfDateTimeSlider Minimum="2010-01-01" 
-                          Maximum="2020-01-01" 
+                          Maximum="2018-01-01" 
                           Value="2014-01-01">
   <sliders:SfDateTimeSlider.Tooltip>
     <sliders:SliderTooltip />
@@ -33,8 +33,8 @@ You can enable tooltip for the thumb by setting the [`Tooltip`](https://help.syn
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
 slider.Minimum = new DateTime(2010, 01, 01);
-slider.Maximum = new DateTime(2020, 01, 01);
-slider.value = new DateTime(2014, 01, 01);
+slider.Maximum = new DateTime(2018, 01, 01);
+slider.Value = new DateTime(2014, 01, 01);
 slider.Tooltip = new SliderTooltip();
 
 {% endhighlight %}
@@ -54,7 +54,7 @@ You can change the appearance of the tooltip text like fill, stroke, padding aro
 {% highlight xaml %}
 
 <sliders:SfDateTimeSlider Minimum="2010-01-01" 
-                          Maximum="2020-01-01" 
+                          Maximum="2018-01-01" 
                           Value="2014-01-01">
   <sliders:SfDateTimeSlider.Tooltip>
     <sliders:SliderTooltip Fill="#F7B1AE" 
@@ -69,8 +69,8 @@ You can change the appearance of the tooltip text like fill, stroke, padding aro
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
 slider.Minimum = new DateTime(2010, 01, 01);
-slider.Maximum = new DateTime(2020, 01, 01);
-slider.value = new DateTime(2014, 01, 01);
+slider.Maximum = new DateTime(2018, 01, 01);
+slider.Value = new DateTime(2014, 01, 01);
 slider.Tooltip.Fill = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
 slider.Tooltip.Stroke = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
 slider.Tooltip.StrokeThickness = 2;
