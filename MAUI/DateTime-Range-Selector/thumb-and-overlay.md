@@ -7,7 +7,7 @@ control: SfDateTimeRangeSelector
 documentation: ug
 ---
 
-# Thumb and Overlay in .NET MAUI DateTime Range Selector (SfDateTimeRangeSelector)
+# Thumb and Overlay in DateTime Range Selector (SfDateTimeRangeSelector)
 
 This section helps to learn about how to customize the thumb and thumb overlay in the DateTime Range Selector.
 

@@ -7,7 +7,7 @@ control: SfDateTimeRangeSelector
 documentation: ug
 ---
 
-# Interval in .NET MAUI DateTime Range Selector (SfDateTimeRangeSelector)
+# Interval in DateTime Range Selector (SfDateTimeRangeSelector)
 
 This section explains about how to add the interval for numeric and DateTime Range Selector.
 

@@ -7,7 +7,7 @@ control: SfDateTimeRangeSlider
 documentation: ug
 ---
 
-# Thumb and Overlay in .NET MAUI DateTime Range Slider (SfDateTimeRangeSlider)
+# Thumb and Overlay in DateTime Range Slider (SfDateTimeRangeSlider)
 
 This section helps to learn about how to customize the thumb and thumb overlay in the DateTime Range Slider.
 
