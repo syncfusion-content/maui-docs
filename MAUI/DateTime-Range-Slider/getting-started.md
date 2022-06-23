@@ -264,8 +264,8 @@ You can add prefix or suffix to the labels using the [`NumberFormat`](https://he
 
 {% highlight xaml %}
 
-<sliders:SfDateTimeRangeSlider Minimum="2000-01-01"
-                               Maximum="2005-01-01"
+<sliders:SfDateTimeRangeSlider Minimum="2010-01-01"
+                               Maximum="2011-01-01"
                                RangeStart="2010-04-01"
                                RangeEnd="2010-10-01"
                                DateFormat="MMM"

@@ -127,13 +127,13 @@ The [`LabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slid
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
 
-    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
-                                     Maximum="2018-01-01" 
-                                     RangeStart="2012-01-01" 
-                                     RangeEnd="2016-01-01" 
-                                     Interval="2"
-                                     LabelsPlacement="BetweenTicks"  
-                                     ShowLabels="True" 
+    <sliders:SfDateTimeRangeSelector Minimum="2011-01-01"
+                                     Maximum="2016-01-01"
+                                     RangeStart="2012-01-01"
+                                     RangeEnd="2015-01-01"
+                                     Interval="1"
+                                     LabelsPlacement="BetweenTicks"
+                                     ShowLabels="True"
                                      ShowTicks="True">
 
         <charts:SfCartesianChart>
@@ -148,11 +148,11 @@ The [`LabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slid
 {% highlight C# %}
 
 SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
-rangeSelector.Minimum = new DateTime(2010, 01, 01);
-rangeSelector.Maximum = new DateTime(2018, 01, 01);
+rangeSelector.Minimum = new DateTime(2011, 01, 01);
+rangeSelector.Maximum = new DateTime(2016, 01, 01);
 rangeSelector.RangeStart = new DateTime(2012, 01, 01);
-rangeSelector.RangeEnd = new DateTime(2016, 01, 01);
-rangeSelector.Interval = 2;
+rangeSelector.RangeEnd = new DateTime(2015, 01, 01);
+rangeSelector.Interval = 1;
 rangeSelector.LabelsPlacement = SliderLabelsPlacement.BetweenTicks;
 rangeSelector.ShowLabels = true;
 rangeSelector.ShowTicks = true;
