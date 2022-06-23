@@ -80,42 +80,6 @@ slider.ShowLabels = true;
 
 ![Slider number format](images/labels-and-dividers/number-format.png)
 
-## Date format
-
-The [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeSlider_DateFormat) property is used to format the date labels. It is mandatory for date [`SfDateTimeSlider`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html). For date values, the slider does not have auto interval support. So, it is mandatory to set [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Interval), [`IntervalType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeSlider_IntervalType), and [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeSlider_DateFormat) for date values. The default value of [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeSlider_DateFormat) property is `yyyy`.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<sliders:SfDateTimeSlider Minimum="2000-01-01T09:00:00" 
-                          Maximum="2000-01-01T17:00:00" 
-                          Value="2000-01-01T13:00:00" 
-          	              ShowLabels="True"  
-		                  IntervalType="Hours" 
-		                  Interval="2" 
-		                  DateFormat="h tt">
-</sliders:SfDateTimeSlider>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfSlider slider = new SfSlider();
-slider.Minimum = new DateTime(2000, 01, 01, 09, 00, 00);
-slider.Maximum = new DateTime(2000, 01, 01, 17, 00, 00);
-slider.Value = new DateTime(2000, 01, 01, 13, 00, 00);
-slider.Interval = 2;
-slider.IntervalType = SliderDateIntervalType.Hours;
-slider.DateFormat = "h tt";
-slider.ShowLabels = true;
-    
-{% endhighlight %}
-
-{% endtabs %}
-
-![Slider date format](images/labels-and-dividers/date-format.png)
-
 ## Label placement
 
 The [`LabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_LabelsPlacement) property is used to place the labels either between the major ticks or on the major ticks. The default value of the [`LabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_LabelsPlacement) property is [`SliderLabelsPlacement.OnTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelsPlacement.html#Syncfusion_Maui_Sliders_SliderLabelsPlacement_OnTicks).

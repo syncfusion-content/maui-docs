@@ -9,7 +9,7 @@ documentation: ug
 
 # Basic features  in .NET MAUI Range Slider (SfRangeSlider)
 
-This section explains about how to add the numeric and date range slider.
+This section explains about how to add the numeric range slider.
 
 ## Minimum
 
@@ -23,33 +23,31 @@ The maximum value that the user can select. The default value of [`Maximum`](htt
 
 It represents the values currently selected in the range slider. The range slider’s thumb is drawn corresponding to this [`RangeStart`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_RangeStart) and [`RangeEnd`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_RangeEnd) values.
 
-For date values, the range slider does not have auto interval support. So, it is mandatory to set [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html?tabs=tabid-1#Syncfusion_Maui_Sliders_SliderBase_Interval), [`IntervalType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.DateTimeRangeSliderBase.html#Syncfusion_Maui_Sliders_DateTimeRangeSliderBase_IntervalType), and [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.DateTimeRangeSliderBase.html#Syncfusion_Maui_Sliders_DateTimeRangeSliderBase_DateFormat) for date values.
-
 {% tabs %}
 
 {% highlight xaml %}
 
-<sliders:SfDateTimeRangeSlider Minimum="2010-01-01" 
-                               Maximum="2020-01-01" 
-                               RangeStart="2012-01-01" 
-                               RangeEnd="2018-01-01" 
-                               ShowLabels="True">
-</sliders:SfDateTimeRangeSlider>
+<sliders:SfRangeSlider Minimum="0"
+                       Maximum="10"
+                       RangeStart="3"
+                       RangeEnd="7"
+                       ShowLabels="True">
+</sliders:SfRangeSlider>
  
 {% endhighlight %}
 
 {% highlight C# %}
 
- SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider();
- rangeSlider.Minimum = new DateTime(2010, 01, 01);
- rangeSlider.Maximum = new DateTime(2020, 01, 01);
- rangeSlider.RangeStart = new DateTime(2012, 01, 01);
- rangeSlider.RangeEnd = new DateTime(2018, 01, 01);
+ SfRangeSlider rangeSlider = new SfRangeSlider();
+ rangeSlider.Minimum = "0";
+ rangeSlider.Maximum = "10";
+ rangeSlider.RangeStart = "3";
+ rangeSlider.RangeEnd = "7";
  rangeSlider.ShowLabels = true;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![RangeSlider date label](images/basic-features/date-labels.png)
+![RangeSlider numeric label](images/basic-features/rangeslider-basic.png)
 

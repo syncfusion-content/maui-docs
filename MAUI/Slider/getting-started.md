@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI Slider
 
-This section explains the steps required to add the slider control and its elements such as numeric and date values, ticks, labels and tooltip. This section covers only basic features needed to know to get started with Syncfusion Slider.
+This section explains the steps required to add the slider control and its elements such as numeric values, ticks, labels and tooltip. This section covers only basic features needed to know to get started with Syncfusion Slider.
 
 ## Creating an application with .NET MAUI
 
@@ -247,45 +247,9 @@ slider.MinorTicksPerInterval = 1;
 
 ![Inverse slider](images/getting-started/slider-inverse.png)
 
-## Set date value
-
-Set the 'DateTime' values to the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeSlider_Minimum), [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeSlider_Maximum), and [`Value`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeSlider_Value) properties to display date labels in the slider.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<sliders:SfDateTimeSlider Minimum="2010-01-01" 
-		                  Maximum="2020-01-01" 
-		                  Value="2014-01-01" 
-                          ShowLabels="True"
-		                  ShowTicks="True" 
-		                  Interval="2" 
-		                  MinorTicksPerInterval="1">
-</sliders:SfDateTimeSlider>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfDateTimeSlider slider = new SfDateTimeSlider();
-slider.Minimum = new DateTime(2010, 01, 01);
-slider.Maximum = new DateTime(2020, 01, 01);
-slider.Value = new DateTime(2014, 02, 01);
-slider.ShowLabels = true;
-slider.ShowTicks = true;
-slider.Interval = 2;
-slider.MinorTicksPerInterval = 1;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Slider date labels](images/getting-started/date-time-labels.png)
-
 ## Formatting labels
 
-You can add prefix or suffix to the labels using the [`NumberFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html#Syncfusion_Maui_Sliders_SfSlider_NumberFormat) or [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeSlider_DateFormat) properties.
+You can add prefix or suffix to the labels using the [`NumberFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html#Syncfusion_Maui_Sliders_SfSlider_NumberFormat) property.
 
 
 {% tabs %}

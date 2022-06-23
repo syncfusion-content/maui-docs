@@ -111,60 +111,6 @@ rangeSelector.Content = chart;
 
 ![RangeSelector number format](images/labels-and-dividers/number-format.png)
 
-## Date format
-
-The [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.DateTimeRangeSliderBase.html#Syncfusion_Maui_Sliders_DateTimeRangeSliderBase_DateFormat) property is used to format the date labels. It is mandatory for date [`SfDateTimeRangeSelector`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSelector.html). For date values, the slider does not have auto interval support. So, it is mandatory to set [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Interval), [`IntervalType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.DateTimeRangeSliderBase.html#Syncfusion_Maui_Sliders_DateTimeRangeSliderBase_IntervalType), and [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DateFormat) for date values. The default value of [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.DateTimeRangeSliderBase.html#Syncfusion_Maui_Sliders_DateTimeRangeSliderBase_DateFormat) property is `yyyy`.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<ContentPage 
-             ...
-             xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-
-    <sliders:SfDateTimeRangeSelector Minimum="2000-01-01T09:00:00" 
-                                     Maximum="2000-01-01T17:00:00" 
-                                     RangeStart="2000-01-01T11:00:00" 
-                                     RangeEnd="2000-01-01T15:00:00" 
-                                     ShowLabels="True" 
-                                     ShowTicks="True" 
-                                     IntervalType="Hours" 
-                                     Interval="2" 
-                                     DateFormat="h tt"
-                                     ShowTicks="True">
-
-        <charts:SfCartesianChart>
-            ...
-        </charts:SfCartesianChart>
-
-    </sliders:SfDateTimeRangeSelector>
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
-rangeSelector.Minimum = new DateTime(2000, 01, 01, 09, 00, 00);
-rangeSelector.Maximum = new DateTime(2000, 01, 01, 17, 00, 00);
-rangeSelector.RangeStart = new DateTime(2000, 01, 01, 11, 00, 00);
-rangeSelector.RangeEnd = new DateTime(2000, 01, 01, 15, 00, 00);
-rangeSelector.Interval = 2;
-rangeSelector.IntervalType = SliderDateIntervalType.Hours;
-rangeSelector.DateFormat = "h tt";
-rangeSelector.ShowLabels = true;
-rangeSelector.ShowTicks = true;
-SfCartesianChart chart = new SfCartesianChart();
-rangeSelector.Content = chart;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![RangeSelector date format](images/labels-and-dividers/date-format.png)
-
 ## Label placement
 
 The [`LabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_LabelsPlacement) property is used to place the labels either between the major ticks or on the major ticks. The default value of the [`LabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_LabelsPlacement) property is [`SliderLabelsPlacement.OnTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelsPlacement.html#Syncfusion_Maui_Sliders_SliderLabelsPlacement_OnTicks).

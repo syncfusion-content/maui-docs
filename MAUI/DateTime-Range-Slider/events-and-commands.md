@@ -54,11 +54,11 @@ private void OnValueChangeStart(object sender, EventArgs e)
 {
 }
 
-private void OnValueChanging(object sender, RangeSliderValueChangingEventArgs e)
+private void OnValueChanging(object sender, DateTimeRangeSliderValueChangingEventArgs e)
 {
 }
 
-private void OnValueChanged(object sender, RangeSliderValueChangedEventArgs e)
+private void OnValueChanged(object sender, DateTimeRangeSliderValueChangedEventArgs e)
 {
 }
 

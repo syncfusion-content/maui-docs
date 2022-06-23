@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI Range Slider
 
-This section explains the steps required to add the range slider control and its elements such as numeric and date values, ticks, labels and tooltip. This section covers only basic features needed to know to get started with Syncfusion Range Slider.
+This section explains the steps required to add the range slider control and its elements such as numeric values, ticks, labels and tooltip. This section covers only basic features needed to know to get started with Syncfusion Range Slider.
 
 ## Creating an application with .NET MAUI
 
@@ -249,45 +249,9 @@ rangeSlider.IsInversed = true;
 
 ![Inverse rangeslider](images/getting-started/slider-inverse.png)
 
-## Set date value
-
-Set the 'DateTime' values to the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.DateTimeRangeSliderBase.html#Syncfusion_Maui_Sliders_DateTimeRangeSliderBase_Minimum), [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.DateTimeRangeSliderBase.html#Syncfusion_Maui_Sliders_DateTimeRangeSliderBase_Maximum), and [`Range values`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.DateTimeRangeSliderBase.html#Syncfusion_Maui_Sliders_DateTimeRangeSliderBase_RangeStart) properties to display date labels in the range slider.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<sliders:SfDateTimeRangeSlider Minimum="2010-01-01"
-                               Maximum="2020-01-01" 
-                               RangeStart="2012-01-01" 
-                               RangeEnd="2018-01-01"
-                               Interval="2" 
-                               ShowLabels="True" 
-                               ShowTicks="True">
-</sliders:SfDateTimeRangeSlider>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider();
-rangeSlider.Minimum = new DateTime(2010, 01, 01);
-rangeSlider.Maximum = new DateTime(2020, 01, 01);
-rangeSlider.RangeStart = new DateTime(2012, 01, 01);
-rangeSlider.RangeEnd = new DateTime(2018, 01, 01);
-rangeSlider.Interval = 2;
-rangeSlider.ShowLabels = true;
-rangeSlider.ShowTicks = true;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![RangeSlider date labels](images/getting-started/date-time-labels.png)
-
 ## Formatting labels
 
-You can add prefix or suffix to the labels using the [`NumberFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_NumberFormat) or [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.DateTimeRangeSliderBase.html#Syncfusion_Maui_Sliders_DateTimeRangeSliderBase_DateFormat) properties.
+You can add prefix or suffix to the labels using the [`NumberFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_NumberFormat) property.
 
 {% tabs %}
 
