@@ -22,9 +22,9 @@ For example, if [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 {% highlight xaml %}
 
 <sliders:SfDateTimeRangeSlider Minimum="2010-01-01" 
-                               Maximum="2018-01-01" 
+                               Maximum="2020-01-01" 
                                RangeStart="2012-01-01" 
-                               RangeEnd="2016-01-01"
+                               RangeEnd="2018-01-01"
                                Interval="2" 
                                ShowDividers="True">
 </sliders:SfDateTimeRangeSlider>
@@ -35,9 +35,9 @@ For example, if [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 
 SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider();
 rangeSlider.Minimum = new DateTime(2010, 01, 01);
-rangeSlider.Maximum = new DateTime(2018, 01, 01);
+rangeSlider.Maximum = new DateTime(2020, 01, 01);
 rangeSlider.RangeStart = new DateTime(2012, 01, 01);
-rangeSlider.RangeEnd = new DateTime(2016, 01, 01);
+rangeSlider.RangeEnd = new DateTime(2018, 01, 01);
 rangeSlider.Interval = 2;
 rangeSlider.ShowDividers = true;
 
@@ -56,7 +56,7 @@ You can change the active and inactive divider radius of the range slider using 
 {% highlight xaml %}
 
 <sliders:SfDateTimeRangeSlider Minimum="2010-01-01" 
-                               Maximum="2018-01-01" 
+                               Maximum="2020-01-01" 
                                RangeStart="2012-01-01" 
                                RangeEnd="2016-01-01"
                                Interval="2"
@@ -74,7 +74,7 @@ You can change the active and inactive divider radius of the range slider using 
 
 SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider();
 rangeSlider.Minimum = new DateTime(2010, 01, 01);
-rangeSlider.Maximum = new DateTime(2018, 01, 01);
+rangeSlider.Maximum = new DateTime(2020, 01, 01);
 rangeSlider.RangeStart = new DateTime(2012, 01, 01);
 rangeSlider.RangeEnd = new DateTime(2016, 01, 01);
 rangeSlider.Interval = 2;
@@ -99,9 +99,9 @@ Also, you can change the active and inactive divider stroke color using the [`Ac
 {% highlight xaml %}
 
 <sliders:SfDateTimeRangeSlider Minimum="2010-01-01" 
-                               Maximum="2018-01-01" 
+                               Maximum="2020-01-01" 
                                RangeStart="2012-01-01" 
-                               RangeEnd="2016-01-01"
+                               RangeEnd="2018-01-01"
                                Interval="2"
                                ShowDividers="True">
    
@@ -122,9 +122,9 @@ Also, you can change the active and inactive divider stroke color using the [`Ac
 
 SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider();
 rangeSlider.Minimum = new DateTime(2010, 01, 01);
-rangeSlider.Maximum = new DateTime(2018, 01, 01);
+rangeSlider.Maximum = new DateTime(2020, 01, 01);
 rangeSlider.RangeStart = new DateTime(2012, 01, 01);
-rangeSlider.RangeEnd = new DateTime(2016, 01, 01);
+rangeSlider.RangeEnd = new DateTime(2018, 01, 01);
 rangeSlider.Interval = 2;
 rangeSlider.ShowDividers = true;
 rangeSlider.DividerStyle.ActiveRadius = 7;
@@ -149,10 +149,10 @@ You can change the active and inactive divider color using the [`ActiveFill`](ht
 {% highlight xaml %}
 
 <sliders:SfDateTimeRangeSlider Minimum="2010-01-01" 
-                               Maximum="2018-01-01" 
+                               Maximum="2020-01-01" 
                                RangeStart="2012-01-01" 
-                               RangeEnd="2016-01-01"
-                               Interval="0.2"
+                               RangeEnd="2018-01-01"
+                               Interval="2"
                                ShowDividers="True">
     
     <sliders:SfDateTimeRangeSlider.DividerStyle>
@@ -170,9 +170,9 @@ You can change the active and inactive divider color using the [`ActiveFill`](ht
 
 SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider();
 rangeSlider.Minimum = new DateTime(2010, 01, 01);
-rangeSlider.Maximum = new DateTime(2018, 01, 01);
+rangeSlider.Maximum = new DateTime(2020, 01, 01);
 rangeSlider.RangeStart = new DateTime(2012, 01, 01);
-rangeSlider.RangeEnd = new DateTime(2016, 01, 01);
+rangeSlider.RangeEnd = new DateTime(2018, 01, 01);
 rangeSlider.Interval = 2;
 rangeSlider.ShowDividers = true;
 rangeSlider.DividerStyle.ActiveRadius = 7;
@@ -196,7 +196,15 @@ You can change the state of the DateTime Range Slider to disabled by setting `fa
 
 <ContentPage.Resources>
     <Style TargetType="sliders:SfDateTimeRangeSlider">
-        <Setter Property="Interval" Value="0.25" />
+        <Setter Property="Minimum"
+                Value="2010-01-01" />
+        <Setter Property="Maximum"
+                Value="2018-01-01" />
+        <Setter Property="RangeStart"
+                Value="2012-01-01" />
+        <Setter Property="RangeEnd"
+                Value="2016-01-01" />
+        <Setter Property="Interval" Value="2" />
         <Setter Property="ShowDividers" Value="True" />
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
@@ -246,8 +254,25 @@ You can change the state of the DateTime Range Slider to disabled by setting `fa
 {% highlight C# %}
 
 VerticalStackLayout stackLayout = new VerticalStackLayout();
-SfRangeSlider defaultRangeSlider = new SfRangeSlider { Interval = 0.25, ShowDividers = true };
-SfRangeSlider disabledRangeSlider = new SfRangeSlider { IsEnabled = false, Interval = 0.25, ShowDividers = true };
+SfDateTimeRangeSlider defaultRangeSlider = new SfDateTimeRangeSlider()
+{
+    Minimum = new DateTime(2010, 01, 01),
+    Maximum = new DateTime(2018, 01, 01),
+    RangeStart = new DateTime(2012, 01, 01),
+    RangeEnd = new DateTime(2016, 01, 01),
+    Interval = 2, 
+    ShowDividers = true
+};
+SfDateTimeRangeSlider disabledRangeSlider = new SfDateTimeRangeSlider()
+{
+    Minimum = new DateTime(2010, 01, 01),
+    Maximum = new DateTime(2018, 01, 01),
+    RangeStart = new DateTime(2012, 01, 01),
+    RangeEnd = new DateTime(2016, 01, 01),
+    IsEnabled = false, 
+    Interval = 2, 
+    ShowDividers = true
+};
 
 VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
 VisualStateGroup commonStateGroup = new VisualStateGroup();
@@ -255,7 +280,7 @@ VisualStateGroup commonStateGroup = new VisualStateGroup();
 VisualState defaultState = new VisualState { Name = "Default" };
 defaultState.Setters.Add(new Setter
 {
-    Property = SfRangeSlider.DividerStyleProperty,
+    Property = SfDateTimeRangeSlider.DividerStyleProperty,
     Value = new SliderDividerStyle
     {
         ActiveFill = Color.FromArgb("#F7B1AE"),
@@ -268,7 +293,7 @@ defaultState.Setters.Add(new Setter
 VisualState disabledState = new VisualState { Name = "Disabled" };
 disabledState.Setters.Add(new Setter
 {
-    Property = SfRangeSlider.DividerStyleProperty,
+    Property = SfDateTimeRangeSlider.DividerStyleProperty,
     Value = new SliderDividerStyle
     {
         ActiveFill = Colors.Grey,

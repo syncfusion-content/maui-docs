@@ -53,9 +53,9 @@ rangeSlider.ShowTicks = true;
 {% highlight xaml %}
 
 <sliders:SfDateTimeRangeSlider Minimum="2010-01-01" 
-                               Maximum="2018-01-01" 
+                               Maximum="2020-01-01" 
                                RangeStart="2012-01-01" 
-                               RangeEnd="2016-01-01"
+                               RangeEnd="2018-01-01"
                                Interval="2"
                                ShowTicks="True">
 </sliders:SfDateTimeRangeSlider>
@@ -66,9 +66,9 @@ rangeSlider.ShowTicks = true;
 
 SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider();
 rangeSlider.Minimum = new DateTime(2010, 01, 01);
-rangeSlider.Maximum = new DateTime(2018, 01, 01);
+rangeSlider.Maximum = new DateTime(2020, 01, 01);
 rangeSlider.RangeStart = new DateTime(2012, 01, 01);
-rangeSlider.RangeEnd = new DateTime(2016, 01, 01);
+rangeSlider.RangeEnd = new DateTime(2018, 01, 01);
 rangeSlider.Interval = 2;
 rangeSlider.ShowTicks = true;
 
@@ -92,7 +92,7 @@ It is used to represent the number of smaller ticks between two major ticks. For
                                Maximum="2018-01-01" 
                                RangeStart="2012-01-01" 
                                RangeEnd="2016-01-01"
-                               MinorTicksPerInterval="1"
+                               MinorTicksPerInterval="3"
                                ShowTicks="True">
 </sliders:SfDateTimeRangeSlider>
 
@@ -105,7 +105,7 @@ rangeSlider.Minimum = new DateTime(2010, 01, 01);
 rangeSlider.Maximum = new DateTime(2018, 01, 01);
 rangeSlider.RangeStart = new DateTime(2012, 01, 01);
 rangeSlider.RangeEnd = new DateTime(2016, 01, 01);
-rangeSlider.MinorTicksPerInterval = 1;
+rangeSlider.MinorTicksPerInterval = 3;
 rangeSlider.ShowTicks = true;
 
 {% endhighlight %}
@@ -120,9 +120,9 @@ rangeSlider.ShowTicks = true;
 {% highlight xaml %}
 
 <sliders:SfDateTimeRangeSlider Minimum="2010-01-01" 
-                               Maximum="2018-01-01" 
+                               Maximum="2020-01-01" 
                                RangeStart="2012-01-01" 
-                               RangeEnd="2016-01-01"
+                               RangeEnd="2018-01-01"
                                Interval="2" 
                                MinorTicksPerInterval="1" 
                                ShowTicks="True">
@@ -134,9 +134,9 @@ rangeSlider.ShowTicks = true;
 
 SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider();
 rangeSlider.Minimum = new DateTime(2010, 01, 01);
-rangeSlider.Maximum = new DateTime(2018, 01, 01);
+rangeSlider.Maximum = new DateTime(2020, 01, 01);
 rangeSlider.RangeStart = new DateTime(2012, 01, 01);
-rangeSlider.RangeEnd = new DateTime(2016, 01, 01);
+rangeSlider.RangeEnd = new DateTime(2018, 01, 01);
 rangeSlider.Interval = 2;
 rangeSlider.MinorTicksPerInterval = 1;
 rangeSlider.ShowTicks = true;
@@ -160,9 +160,9 @@ The inactive side of the DateTime Range Slider is between the [`Minimum`](https:
 {% highlight xaml %}
 
 <sliders:SfDateTimeRangeSlider Minimum="2010-01-01" 
-                               Maximum="2018-01-01" 
+                               Maximum="2020-01-01" 
                                RangeStart="2012-01-01" 
-                               RangeEnd="2016-01-01"
+                               RangeEnd="2018-01-01"
                                Interval="2"
                                ShowTicks="True">
     
@@ -179,9 +179,9 @@ The inactive side of the DateTime Range Slider is between the [`Minimum`](https:
 
 SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider();
 rangeSlider.Minimum = new DateTime(2010, 01, 01);
-rangeSlider.Maximum = new DateTime(2018, 01, 01);
+rangeSlider.Maximum = new DateTime(2020, 01, 01);
 rangeSlider.RangeStart = new DateTime(2012, 01, 01);
-rangeSlider.RangeEnd = new DateTime(2016, 01, 01);
+rangeSlider.RangeEnd = new DateTime(2018, 01, 01);
 rangeSlider.Interval = 2;
 rangeSlider.ShowTicks = true;
 rangeSlider.MajorTickStyle.ActiveFill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
@@ -206,10 +206,10 @@ The inactive side of the DateTime Range Slider is between the [`Minimum`](https:
 {% highlight xaml %}
 
 <sliders:SfDateTimeRangeSlider Minimum="2010-01-01" 
-                               Maximum="2018-01-01" 
+                               Maximum="2020-01-01" 
                                RangeStart="2012-01-01" 
-                               RangeEnd="2016-01-01"
-                               Interval="0.2" 
+                               RangeEnd="2018-01-01"
+                               Interval="2" 
                                ShowTicks="True" 
                                MinorTicksPerInterval="1">
     
@@ -226,9 +226,9 @@ The inactive side of the DateTime Range Slider is between the [`Minimum`](https:
 
 SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider();
 rangeSlider.Minimum = new DateTime(2010, 01, 01);
-rangeSlider.Maximum = new DateTime(2018, 01, 01);
+rangeSlider.Maximum = new DateTime(2020, 01, 01);
 rangeSlider.RangeStart = new DateTime(2012, 01, 01);
-rangeSlider.RangeEnd = new DateTime(2016, 01, 01);
+rangeSlider.RangeEnd = new DateTime(2018, 01, 01);
 rangeSlider.Interval = 2;
 rangeSlider.ShowTicks = true;
 rangeSlider.MinorTicksPerInterval = 1;
@@ -346,7 +346,15 @@ You can change the state of the DateTime Range Slider to disabled by setting `fa
 
 <ContentPage.Resources>
     <Style TargetType="sliders:SfDateTimeRangeSlider">
-        <Setter Property="Interval" Value="0.25" />
+        <Setter Property="Minimum"
+                Value="2010-01-01" />
+        <Setter Property="Maximum"
+                Value="2018-01-01" />
+        <Setter Property="RangeStart"
+                Value="2012-01-01" />
+        <Setter Property="RangeEnd"
+                Value="2016-01-01" />
+        <Setter Property="Interval" Value="2" />
         <Setter Property="ShowTicks" Value="True" />
         <Setter Property="MinorTicksPerInterval" Value="2" />
         <Setter Property="VisualStateManager.VisualStateGroups">
@@ -412,8 +420,27 @@ You can change the state of the DateTime Range Slider to disabled by setting `fa
 {% highlight C# %}
 
 VerticalStackLayout stackLayout = new VerticalStackLayout();
-SfDateTimeRangeSlider defaultRangeSlider = new SfDateTimeRangeSlider { Interval = 0.25, ShowTicks = true, MinorTicksPerInterval = 2 };
-SfDateTimeRangeSlider disabledRangeSlider = new SfDateTimeRangeSlider { IsEnabled = false, Interval = 0.25, ShowTicks = true, MinorTicksPerInterval = 2 };
+SfDateTimeRangeSlider defaultRangeSlider = new SfDateTimeRangeSlider()
+{
+    Minimum = new DateTime(2010, 01, 01),
+    Maximum = new DateTime(2018, 01, 01),
+    RangeStart = new DateTime(2012, 01, 01),
+    RangeEnd = new DateTime(2016, 01, 01),
+    Interval = 2, 
+    ShowTicks = true,
+    MinorTicksPerInterval = 2
+};
+SfDateTimeRangeSlider disabledRangeSlider = new SfDateTimeRangeSlider()
+{
+    Minimum = new DateTime(2010, 01, 01),
+    Maximum = new DateTime(2018, 01, 01),
+    RangeStart = new DateTime(2012, 01, 01),
+    RangeEnd = new DateTime(2016, 01, 01),
+    IsEnabled = false, 
+    Interval = 2, 
+    ShowTicks = true,
+    MinorTicksPerInterval = 2
+};
 
 VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
 VisualStateGroup commonStateGroup = new VisualStateGroup();

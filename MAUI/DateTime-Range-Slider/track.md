@@ -142,7 +142,14 @@ You can change the state of the DateTime Range Slider to disabled by setting `fa
 
 <ContentPage.Resources>
     <Style TargetType="sliders:SfDateTimeRangeSlider">
-        <Setter Property="Interval" Value="0.25" />
+        <Setter Property="Minimum"
+                Value="2010-01-01" />
+        <Setter Property="Maximum"
+                Value="2018-01-01" />
+        <Setter Property="RangeStart"
+                Value="2012-01-01" />
+        <Setter Property="RangeEnd"
+                Value="2016-01-01" />
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup>
@@ -190,8 +197,21 @@ You can change the state of the DateTime Range Slider to disabled by setting `fa
 {% highlight C# %}
 
 VerticalStackLayout stackLayout = new VerticalStackLayout();
-SfDateTimeRangeSlider defaultRangeSlider = new SfDateTimeRangeSlider();
-SfDateTimeRangeSlider disabledRangeSlider = new SfDateTimeRangeSlider { IsEnabled = false };
+SfDateTimeRangeSlider defaultRangeSlider = new SfDateTimeRangeSlider()
+{
+    Minimum = new DateTime(2010, 01, 01),
+    Maximum = new DateTime(2018, 01, 01),
+    RangeStart = new DateTime(2012, 01, 01),
+    RangeEnd = new DateTime(2016, 01, 01),
+};
+SfDateTimeRangeSlider disabledRangeSlider = new SfDateTimeRangeSlider()
+{
+    Minimum = new DateTime(2010, 01, 01),
+    Maximum = new DateTime(2018, 01, 01),
+    RangeStart = new DateTime(2012, 01, 01),
+    RangeEnd = new DateTime(2016, 01, 01),
+    IsEnabled = false, 
+};
 
 VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
 VisualStateGroup commonStateGroup = new VisualStateGroup();

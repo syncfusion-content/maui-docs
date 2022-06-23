@@ -215,7 +215,7 @@ SfDateTimeSlider slider = new SfDateTimeSlider()
 {
     Minimum = new DateTime(2010, 01, 01),
    Maximum = new DateTime(2020, 01, 01),
-   value = new DateTime(2014, 01, 01),
+   Value = new DateTime(2014, 01, 01),
     DragStartedCommand = viewModel.DragStartedCommand,
 };
 
@@ -265,7 +265,7 @@ SfDateTimeSlider slider = new SfDateTimeSlider()
 {
     Minimum = new DateTime(2010, 01, 01),
     Maximum = new DateTime(2020, 01, 01),
-    value = new DateTime(2014, 01, 01),
+    Value = new DateTime(2014, 01, 01),
     DragStartedCommand = viewModel.DragStartedCommand,
     DragStartedCommandParameter = "1"
 };
@@ -315,7 +315,7 @@ SfDateTimeSlider slider = new SfDateTimeSlider()
 {
     Minimum = new DateTime(2010, 01, 01),
    Maximum = new DateTime(2020, 01, 01),
-   value = new DateTime(2014, 01, 01),
+   Value = new DateTime(2014, 01, 01),
     DragCompletedCommand = viewModel.DragCompletedCommand
 };
 
@@ -365,7 +365,7 @@ SfDateTimeSlider slider = new SfDateTimeSlider()
 {
     Minimum = new DateTime(2010, 01, 01),
    Maximum = new DateTime(2020, 01, 01),
-   value = new DateTime(2014, 01, 01),
+   Value = new DateTime(2014, 01, 01),
     DragCompletedCommand = viewModel.DragCompletedCommand,
     DragCompletedCommandParameter = "1"
 };

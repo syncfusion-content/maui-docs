@@ -95,13 +95,13 @@ The [`LabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slid
 
 {% highlight xaml %}
 
-<sliders:SfDateTimeRangeSlider Minimum="2010-01-01" 
-                               Maximum="2018-01-01" 
-                               RangeStart="2012-01-01" 
-                               RangeEnd="2016-01-01" 
-                               Interval="2" 
-                               LabelsPlacement="BetweenTicks"  
-                               ShowLabels="True" 
+<sliders:SfDateTimeRangeSlider Minimum="2011-01-01"
+                               Maximum="2016-01-01"
+                               RangeStart="2012-01-01"
+                               RangeEnd="2015-01-01"
+                               Interval="1"
+                               LabelsPlacement="BetweenTicks"
+                               ShowLabels="True"
                                ShowTicks="True">
 </sliders:SfDateTimeRangeSlider>
 
@@ -110,11 +110,11 @@ The [`LabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slid
 {% highlight C# %}
 
 SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider();
-rangeSlider.Minimum = new DateTime(2010, 01, 01);
-rangeSlider.Maximum = new DateTime(2018, 01, 01);
+rangeSlider.Minimum = new DateTime(2011, 01, 01);
+rangeSlider.Maximum = new DateTime(2016, 01, 01);
 rangeSlider.RangeStart = new DateTime(2012, 01, 01);
-rangeSlider.RangeEnd = new DateTime(2016, 01, 01);
-rangeSlider.Interval = 2;
+rangeSlider.RangeEnd = new DateTime(2015, 01, 01);
+rangeSlider.Interval = 1;
 rangeSlider.LabelsPlacement = SliderLabelsPlacement.BetweenTicks;
 rangeSlider.ShowLabels = true;
 rangeSlider.ShowTicks = true;
@@ -164,7 +164,7 @@ rangeSlider.ShowTicks = true;
 
 {% endtabs %}
 
-![RangeSlider edge labels placement](images/labels-and-dividers/edge-labels-placement.gif)
+![RangeSlider edge labels placement](images/labels-and-dividers/edge-labels-placement.png)
 
 ## Label style
 
@@ -273,7 +273,15 @@ You can change the state of the DateTime Range Slider to disabled by setting `fa
 
 <ContentPage.Resources>
     <Style TargetType="sliders:SfDateTimeRangeSlider">
-        <Setter Property="Interval" Value="0.25" />
+        <Setter Property="Minimum"
+                Value="2010-01-01" />
+        <Setter Property="Maximum"
+                Value="2018-01-01" />
+        <Setter Property="RangeStart"
+                RangeStart="2012-01-01" />
+        <Setter Property="RangeEnd"
+                RangeEnd="2016-01-01" />
+        <Setter Property="Interval" Value="2" />
         <Setter Property="ShowTicks" Value="True" />
         <Setter Property="ShowLabels" Value="True" />
         <Setter Property="VisualStateManager.VisualStateGroups">
@@ -327,8 +335,27 @@ You can change the state of the DateTime Range Slider to disabled by setting `fa
 {% highlight C# %}
 
 VerticalStackLayout stackLayout = new VerticalStackLayout();
-SfDateTimeRangeSlider defaultRangeSlider = new SfDateTimeRangeSlider { Interval = 0.25, ShowTicks = true, ShowLabels = true };
-SfDateTimeRangeSlider disabledRangeSlider = new SfDateTimeRangeSlider { IsEnabled = false, Interval = 0.25, ShowTicks = true, ShowLabels = true };
+SfDateTimeRangeSlider defaultRangeSlider = new SfDateTimeRangeSlider()
+{
+    Minimum = new DateTime(2010, 01, 01),
+    Maximum = new DateTime(2018, 01, 01),
+    RangeStart = new DateTime(2012, 01, 01),
+    RangeEnd = new DateTime(2016, 01, 01),
+    Interval = 2, 
+    ShowTicks = true, 
+    ShowLabels = true
+};
+SfDateTimeRangeSlider disabledRangeSlider = new SfDateTimeRangeSlider()
+{
+    Minimum = new DateTime(2010, 01, 01),
+    Maximum = new DateTime(2018, 01, 01),
+    RangeStart = new DateTime(2012, 01, 01),
+    RangeEnd = new DateTime(2016, 01, 01),
+    IsEnabled = false, 
+    Interval = 2, 
+    ShowTicks = true, 
+    ShowLabels = true
+};
 
 VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
 VisualStateGroup commonStateGroup = new VisualStateGroup();
