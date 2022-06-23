@@ -194,6 +194,10 @@ The active side of the slider is between the [`Minimum`](https://help.syncfusion
 
 The inactive side of the slider is between the thumb and the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html#Syncfusion_Maui_Sliders_SfSlider_Maximum) value.
 
+{% tabs %}
+
+{% highlight xaml %}
+
 <sliders:SfDateTimeSlider Minimum="2010-01-01" 
                           Maximum="2018-01-01" 
                           Value="2014-01-01"
