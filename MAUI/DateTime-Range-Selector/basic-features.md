@@ -7,7 +7,7 @@ control: SfDateTimeRangeSelector
 documentation: ug
 ---
 
-# Basic features  in .NET MAUI DateTime Range Selector (SfDateTimeRangeSelector)
+# Basic features of DateTime RangeSelector (SfDateTimeRangeSelector)
 
 This section explains about how to add the DateTime Range Selector.
 
