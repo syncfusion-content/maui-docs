@@ -189,6 +189,7 @@ The [`Orientation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.
                                RangeStart="2012-01-01" 
                                RangeEnd="2016-01-01"
                                ShowTicks="True" 
+                               ShowLabels="True"
                                Interval="2" 
                                MinorTicksPerInterval="1" 
                                Orientation="Vertical">
@@ -229,9 +230,8 @@ You can invert the DateTime Range Slider using the [`IsInversed`](https://help.s
                                RangeEnd="2016-01-01"
                                Interval="2" 
                                ShowTicks="True"
-                               ShowLablels="True"  
+                               ShowLabels="True"  
                                MinorTicksPerInterval="1" 
-                               Orientation="Vertical" 
                                IsInversed="True">
 </sliders:SfDateTimeRangeSlider>
 
@@ -264,14 +264,16 @@ You can add prefix or suffix to the labels using the [`NumberFormat`](https://he
 
 {% highlight xaml %}
 
-<sliders:SfDateTimeRangeSlider Minimum="2010-01-01" 
-                               Maximum="2018-01-01" 
-                               RangeStart="2012-01-01" 
-                               RangeEnd="2016-01-01"
-                               Interval="2"
+<sliders:SfDateTimeRangeSlider Minimum="2010-01-01"
+                               Maximum="2011-01-01"
+                               RangeStart="2010-04-01"
+                               RangeEnd="2010-10-01"
+                               DateFormat="MMM"
+                               IntervalType="Months"
+                               ShowTicks="True"
+                               MinorTicksPerInterval="1"
                                ShowLabels="True"
-                               DateFormat="MMM dd" 
-                               ShowTicks="True">
+                               Interval="2">
 </sliders:SfDateTimeRangeSlider>
 
 {% endhighlight %}
@@ -280,14 +282,15 @@ You can add prefix or suffix to the labels using the [`NumberFormat`](https://he
 
 SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider();
 rangeSlider.Minimum = new DateTime(2010, 01, 01);
-rangeSlider.Maximum = new DateTime(2018, 01, 01);
-rangeSlider.RangeStart = new DateTime(2012, 01, 01);
-rangeSlider.RangeEnd = new DateTime(2016, 01, 01);
-rangeSlider.Interval = 2;
+rangeSlider.Maximum = new DateTime(2011, 01, 01);
+rangeSlider.RangeStart = new DateTime(2010, 04, 01);
+rangeSlider.RangeEnd = new DateTime(2010, 10, 01);
 rangeSlider.ShowLabels = true;
-rangeSlider.DateFormat = "MMM dd";
+rangeSlider.Interval = 2;
 rangeSlider.ShowTicks = true;
-
+rangeSlider.MinorTicksPerInterval = 1;
+rangeSlider.DateFormat = "MMM";
+rangeSlider.IntervalType = SliderDateIntervalType.Months;
 
 {% endhighlight %}
 

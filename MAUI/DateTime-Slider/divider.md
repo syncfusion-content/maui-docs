@@ -252,7 +252,7 @@ SfDateTimeSlider defaultSlider = new SfDateTimeSlider()
     Interval = 2, 
     ShowDividers = true
 };
-SfDateTimeSlider disabledSlider = new SfDateTimeSlider
+SfDateTimeSlider disabledSlider = new SfDateTimeSlider()
 {
     Minimum = new DateTime(2010, 01, 01),
     Maximum = new DateTime(2020, 01, 01),

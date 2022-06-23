@@ -99,14 +99,17 @@ You can format or change the whole numeric or date label text using the [`LabelC
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
 
-   <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
-                                    Maximum="2020-01-01" 
-                                    RangeStart="2012-01-01" 
-                                    RangeEnd="2018-01-01"  
-                                    Interval="2"
-                                    ShowLabels="True"
-                                    ShowTicks="True" 
-                                    LabelCreated="OnLabelCreated">
+   <sliders:SfDateTimeRangeSelector Minimum="2010-01-01"
+                                    Maximum="2011-01-01"
+                                    RangeStart="2010-04-01"
+                                    RangeEnd="2010-10-01"
+                                    Interval="3"
+                                    DateFormat="MMM"
+                                    ShowTicks="True"
+                                    LabelsPlacement="BetweenTicks"
+                                    IntervalType="Months"
+                                    LabelCreated="OnLabelCreated"
+                                    ShowLabels="True">
 
          <charts:SfCartesianChart>
             ...
@@ -122,26 +125,44 @@ You can format or change the whole numeric or date label text using the [`LabelC
 {
    SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
    rangeSelector.Minimum = new DateTime(2010, 01, 01);
-   rangeSelector.Maximum = new DateTime(2018, 01, 01);
-   rangeSelector.RangeStart = new DateTime(2012, 01, 01);
-   rangeSelector.RangeEnd = new DateTime(2016, 01, 01);
-   rangeSelector.Interval = 2;
-   rangeSelector.ShowLabels = true;
+   rangeSelector.Maximum = new DateTime(2011, 01, 01);
+   rangeSelector.RangeStart = new DateTime(2010, 04, 01);
+   rangeSelector.RangeEnd = new DateTime(2010, 10, 01);
+   rangeSelector.Interval = 3;
+   rangeSelector.DateFormat = "MMM";
+   rangeSelector.IntervalType = SliderDateIntervalType.Months;
+   rangeSelector.LabelsPlacement = SliderLabelsPlacement.BetweenTicks;
    rangeSelector.ShowTicks = true;
-   rangeSelector.LabelCreated += OnLabelCreated;
+   rangeSelector.ShowLabels = true;
    SfCartesianChart chart = new SfCartesianChart();
    rangeSelector.Content = chart;
 }
+
 private void OnLabelCreated(object sender, SliderLabelCreatedEventArgs e)
 {
-	e.Text = "$" + e.Text;
+    if (e.Text == "Jan")
+    {
+        e.Text = "Quarter 1";
+    }
+    else if (e.Text == "Apr")
+    {
+        e.Text = "Quarter 2";
+    }
+    else if (e.Text == "Jul")
+    {
+        e.Text = "Quarter 3";
+    }
+    else
+    {
+        e.Text = "Quarter 4";
+    }
 }
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![RangeSelector custom label](images/labels-and-dividers/number-format.png)
+![RangeSelector custom label](images/labels-and-dividers/custom-label-format.png)
 
 ### Tooltip text format
 
@@ -161,10 +182,13 @@ You can format or change the whole tooltip label text using the [`ToolTipLabelCr
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
    
-   <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
-                                    Maximum="2020-01-01" 
-                                    RangeStart="2012-01-01" 
-                                    RangeEnd="2018-01-01">
+   <sliders:SfDateTimeRangeSelector Minimum="2010-01-01"
+                                    Maximum="2018-01-01"
+                                    RangeStart="2012-01-01"
+                                    RangeEnd="2016-01-01"
+                                    Interval="2"
+                                    ShowTicks="True"
+                                    ShowLabels="True">
       
       <sliders:SfDateTimeRangeSelector.Tooltip>
          <sliders:SliderTooltip TooltipLabelCreated="OnTooltipLabelCreated" />
@@ -182,18 +206,22 @@ You can format or change the whole tooltip label text using the [`ToolTipLabelCr
 {% highlight C# %}
 
 {
-   SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
-   rangeSelector.Minimum = new DateTime(2010, 01, 01);
-   rangeSelector.Maximum = new DateTime(2018, 01, 01);
-   rangeSelector.RangeStart = new DateTime(2012, 01, 01);
-   rangeSelector.RangeEnd = new DateTime(2016, 01, 01);
+    SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
+    rangeSelector.Minimum = new DateTime(2010, 01, 01);
+    rangeSelector.Maximum = new DateTime(2018, 01, 01);
+    rangeSelector.RangeStart = new DateTime(2012, 01, 01);
+    rangeSelector.RangeEnd = new DateTime(2016, 01, 01);
+    rangeSelector.Interval = 2;
+    rangeSelector.ShowTicks = true;
+    rangeSelector.ShowLabels = true;
+    rangeSelector.Tooltip = new SliderTooltip();
     rangeSelector.Tooltip.TooltipLabelCreated += OnTooltipLabelCreated;
     SfCartesianChart chart = new SfCartesianChart();
     rangeSelector.Content = chart;
  }
  private void OnTooltipLabelCreated(object sender, SliderTooltipLabelCreatedEventArgs e)
  {
-     e.Text = "$" + e.Text;
+     e.Text = "Year: " + e.Text;
  }
 
 {% endhighlight %}

@@ -342,14 +342,16 @@ You can add prefix or suffix to the labels using the [`NumberFormat`](https://he
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
     
-    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
-                                     Maximum="2018-01-01" 
-                                     RangeStart="2012-01-01" 
-                                     RangeEnd="2016-01-01"
-                                     Interval="20"
+    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01"
+                                     Maximum="2011-01-01"
+                                     RangeStart="2010-04-01"
+                                     RangeEnd="2010-10-01"
+                                     DateFormat="MMM"
+                                     IntervalType="Months"
+                                     ShowTicks="True"
+                                     MinorTicksPerInterval="1"
                                      ShowLabels="True"
-                                     NumberFormat="$#" 
-                                     ShowTicks="True">
+                                     Interval="2">
         
         <charts:SfCartesianChart>
             ...
@@ -364,13 +366,15 @@ You can add prefix or suffix to the labels using the [`NumberFormat`](https://he
 
 SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
 rangeSelector.Minimum = new DateTime(2010, 01, 01);
-rangeSelector.Maximum = new DateTime(2018, 01, 01);
-rangeSelector.RangeStart = new DateTime(2012, 01, 01);
-rangeSelector.RangeEnd = new DateTime(2016, 01, 01);
+rangeSelector.Maximum = new DateTime(2011, 01, 01);
+rangeSelector.RangeStart = new DateTime(2010, 04, 01);
+rangeSelector.RangeEnd = new DateTime(2010, 10, 01);
 rangeSelector.ShowLabels = true;
-rangeSelector.ShowTicks = true;
 rangeSelector.Interval = 2;
-rangeSelector.NumberFormat = "$#";
+rangeSelector.ShowTicks = true;
+rangeSelector.MinorTicksPerInterval = 1;
+rangeSelector.DateFormat = "MMM";
+rangeSelector.IntervalType = SliderDateIntervalType.Months;
 SfCartesianChart chart = new SfCartesianChart();
 rangeSelector.Content = chart;
 
