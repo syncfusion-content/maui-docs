@@ -11,7 +11,9 @@ documentation: ug
 
 ## Avatar Types
 
-The `SfAvatarView` control allows you to display the view in three different ways:
+The `SfAvatarView` control allows you to display the view in five different ways:
+
+* `Default` - Displays the default image when initializing without any other source such as image and group.
 
 * `Initials` - Displays the initial in the view.
 
@@ -21,6 +23,45 @@ The `SfAvatarView` control allows you to display the view in three different way
 
 * `Group` - Displays a maximum of three images or initials in a single view.
 
+
+## Default
+
+Default type avatar view is used for displaying the default vector image when initializing without the initials, custom, or group view types.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+     <sfavatar:SfAvatarView  ContentType="Default"
+                             VerticalOptions="Center"
+							 HorizontalOptions="Center"
+                             BackgroundColor="OrangeRed"
+                             WidthRequest="50"
+                             HeightRequest="50"
+                             CornerRadius="25">
+    </sfavatar:SfAvatarView>
+	
+{% endhighlight %}
+
+{% highlight C# %}
+
+             Grid mainGrid = new Grid();
+			 SfAvatarView avatarview = new SfAvatarView();
+			 avatarview.VerticalOptions = LayoutOptions.Center;
+			 avatarview.HorizontalOptions = LayoutOptions.Center;
+			 avatarview.WidthRequest = 50;
+			 avatarview.HeightRequest = 50;
+			 avatarview.CornerRadius = 25;
+			 avatarview.ContentType = ContentType.Default;
+			 avatarview.BackgroundColor = Colors.OrangeRed;
+			 mainGrid.Children.Add(avatarview);
+			 this.Content = mainGrid;	
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Default](ContentType_Images/Default.jpg)
 
 ## Initials 
 
