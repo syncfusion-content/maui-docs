@@ -134,3 +134,5 @@ The following screenshot illustrates the result of the above code.
 
 ![.NET MAUI Avatar View Getting Started](GettingStarted_Images/Getting_Started_Sample.png) 
 
+The Getting Started sample is available in this following link: [Getting Started](https://github.com/SyncfusionExamples/maui-avatarview-samples). 
+

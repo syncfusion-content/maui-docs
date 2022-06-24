@@ -33,5 +33,4 @@ To migrate easier from Xamarin SfAvatarView to .NET MAUI SfAvatarView, we kept m
 <td>BorderWidth</td>
 <td>BorderThickness</td>
 <td>Gets or sets the thickness of the Avatar View border</td></tr>
-<tr>
 </table> 
