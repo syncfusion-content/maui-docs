@@ -16,43 +16,19 @@ The `AnimationType` property for the SfBusyIndicator allows the users to set one
 
 {% highlight xaml %}
 
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-             x:Class="BusyIndicatorSample.MainPage">
-
-        <ContentPage.Content>
-            <core:SfBusyIndicator x:Name="busyIndicator"
-                                  IsRunning="True"
-                                  AnimationType="CircularMaterial" />
-        </ContentPage.Content>
-    </ContentPage>
+<core:SfBusyIndicator x:Name="busyIndicator"
+                        IsRunning="True"
+                        AnimationType="CircularMaterial" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    using Syncfusion.Maui.Core;
-    using Microsoft.Maui;
-    using Microsoft.Maui.Controls;
-
-    namespace BusyIndicatorSample
-    {
-       public partial class MainPage : ContentPage
-       {
-           public MainPage()
-           {
-               InitializeComponent();
-               SfBusyIndicator busyIndicator = new SfBusyIndicator()
-               {
-                   IsRunning = true,
-                   AnimationType = AnimationType.CircularMaterial;
-               };
-            this.Content = busyIndicator;
-            }
-       }
-    }
+SfBusyIndicator busyIndicator = new SfBusyIndicator()
+{
+    IsRunning = true,
+    AnimationType = AnimationType.CircularMaterial;
+};
 
 {% endhighlight %}
 

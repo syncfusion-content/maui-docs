@@ -23,32 +23,32 @@ Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org
 
 {% highlight C# %}
    
-    using Microsoft.Maui;
-    using Microsoft.Maui.Hosting;
-    using Microsoft.Maui.Controls.Compatibility;
-    using Microsoft.Maui.Controls.Hosting;
-    using Microsoft.Maui.Controls.Xaml;
-    `using Syncfusion.Maui.Core.Hosting`;
+using Microsoft.Maui;
+using Microsoft.Maui.Hosting;
+using Microsoft.Maui.Controls.Compatibility;
+using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Controls.Xaml;
+`using Syncfusion.Maui.Core.Hosting`;
 
-    namespace BusyIndicatorSample
+namespace BusyIndicatorSample
+{
+    public static class MauiProgram
     {
-      public static class MauiProgram
-      {
-        public static MauiApp CreateMauiApp()
+    public static MauiApp CreateMauiApp()
+    {
+        var builder = MauiApp.CreateBuilder();
+        builder
+        .UseMauiApp<App>()
+        .`ConfigureSyncfusionCore()` 
+        .ConfigureFonts(fonts =>
         {
-            var builder = MauiApp.CreateBuilder();
-            builder
-            .UseMauiApp<App>()
-			.`ConfigureSyncfusionCore()` 
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
+            fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+        });
 
-            return builder.Build();
-         }      
-      }
-    }     
+        return builder.Build();
+        }      
+    }
+}     
 
 {% endhighlight %} 
 
@@ -84,32 +84,19 @@ Step 3: Set the control to content in `ContentPage.`
 
 {% highlight xaml %}
 
-    <ContentPage.Content> 
-         <core:SfBusyIndicator x:Name="busyIndicator"
-                               IsRunning = "True"/> 
-    </ContentPage.Content>  
+
+<ContentPage.Content>    
+    <core:SfBusyIndicator x:Name="busyIndicator"
+                          IsRunning = "True" />
+</ContentPage.Content>
 
 
 {% endhighlight %}
 
 {% highlight c# %}
-
-    using Syncfusion.Maui.Core;
-
-    namespace BusyIndicatorSample   
-    {  
-        public partial class MainPage : ContentPage                  
-        {   
-           SfEffectsView effectsView;
-
-           public MainPage()   
-           {   
-               InitializeComponent();       
-               busyIndicator = new SfBusyIndicator(){IsRunning = true}; 
-               this.Content = busyIndicator;  
-           }  
-        }      
-    }  
+          
+SfBusyIndicator busyIndicator = new SfBusyIndicator(){IsRunning = true}; 
+Content = busyIndicator;  
 
 {% endhighlight %}
 
@@ -125,45 +112,51 @@ The following example depicts the CircularMaterial type animation for SfBusyIndi
 
 {% highlight xaml %}
 
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-             x:Class="BusyIndicatorSample.MainPage">
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+        x:Class="BusyIndicatorSample.MainPage">
 
-        <ContentPage.Content>
-            <core:SfBusyIndicator x:Name="busyIndicator"
-                                  IsRunning="True"
-                                  AnimationType="CircularMaterial" />
-        </ContentPage.Content>
-    </ContentPage>
+    <ContentPage.Content>
+        <core:SfBusyIndicator x:Name="busyIndicator"
+                            IsRunning="True"
+                            AnimationType="CircularMaterial" />
+    </ContentPage.Content>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    using Syncfusion.Maui.Core;
-    using Microsoft.Maui;
-    using Microsoft.Maui.Controls;
+using Syncfusion.Maui.Core;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
 
-    namespace BusyIndicatorSample
+namespace BusyIndicatorSample
+{
+    public partial class MainPage : ContentPage
     {
-       public partial class MainPage : ContentPage
-       {
-           public MainPage()
-           {
-               InitializeComponent();
-               SfBusyIndicator busyIndicator = new SfBusyIndicator()
-               {
-                   IsRunning = true,
-                   AnimationType = AnimationType.CircularMaterial;
-               };
-            this.Content = busyIndicator;
-            }
-       }
+        public MainPage()
+        {
+            InitializeComponent();
+            SfBusyIndicator busyIndicator = new SfBusyIndicator()
+            {
+                IsRunning = true,
+                AnimationType = AnimationType.CircularMaterial;
+            };
+        this.Content = busyIndicator;
+        }
     }
+}
 
 {% endhighlight %}
 
 {% endtabs %}
+
+The following gif image illustrates the result of the above code.
+
+![Getting Started](Images/GettingStarted/CircularMaterial.gif)
+
+You can find the complete getting started sample from this [link]().
 

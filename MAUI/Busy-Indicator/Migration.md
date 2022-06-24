@@ -32,11 +32,11 @@ To migrate easier from Xamarin SfBusyIndicator to .NET MAUI SfBusyIndicator, we 
 <tr>
 <td> IsBusy </td>
 <td>IsRunning</td>
-<td>Gets or sets a value indicating whether gets or sets the value of the IsBusy property in busy indicator. It determines whether the animation of indicator to be shown or not.</td></tr>
+<td>Gets or sets a value of the IsRunning property in busy indicator. It determines whether the animation of indicator to be shown or not.</td></tr>
 <tr>
 <td>Duration</td>
 <td>DurationFactor</td>
-<td>Gets or sets the value of the Duration property. It is used to change the speed of animation to finish a cycle.</td></tr>
+<td>Gets or sets the value of the duration property. It is used to change the speed of animation to finish a cycle.</td></tr>
 <tr>
 <td>ViewBoxWidth ViewBoxHeight</td>
 <td>SizeFactor</td>
@@ -44,9 +44,9 @@ To migrate easier from Xamarin SfBusyIndicator to .NET MAUI SfBusyIndicator, we 
 <tr>
 <td>OverlayColor</td>
 <td>OverlayFill</td>
-<td>Gets or sets the overlay fill brush.</td></tr>
+<td>Gets or sets the overlay fill brush. It determines the background of the control</td></tr>
 <tr>
 <td>TextSize</td>
 <td>FontSize</td>
-<td>Gets or sets the font size of the title.</td></tr>
+<td>Gets or sets the font size of the title text.</td></tr>
 </table> 
