@@ -85,8 +85,6 @@ slider.TrackStyle.InactiveSize = 8;
 
 You can extend the track at edges using the `TrackExtent` property. The default value is `0.0` and it should be in pixels.
 
-code snippet for `DateTime` slider,
-
 {% tabs %}
 
 {% highlight xaml %}
