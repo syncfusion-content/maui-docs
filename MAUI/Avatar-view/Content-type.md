@@ -15,6 +15,8 @@ The `SfAvatarView` control allows you to display the view in three different way
 
 * `Initials` - Displays the initial in the view.
 
+* `AvatarCharacter` - Displays the default image in the view.
+
 * `Custom` - Displays a custom image in the view.
 
 * `Group` - Displays a maximum of three images or initials in a single view.
@@ -124,6 +126,44 @@ The `DoubleCharacter` is used for displaying a two-characters text you have set 
 ## Custom image
 
 You can add a custom user image by setting the `ImageSource` property. Refer to the Getting Started Documentation in SfAvatarView
+
+## Avatar characters
+
+You can set the default vector images that already present in avatar view by setting the `AvatarCharacter` property.
+
+{% tabs %}
+{% highlight xaml %}
+
+         <sfavatar:SfAvatarView VerticalOptions="Center"
+                                HorizontalOptions="Center"
+                                ContentType="AvatarCharacter"
+                                AvatarCharacter="Avatar8"
+                                BackgroundColor="DeepSkyBlue"
+                                WidthRequest="50"
+                                HeightRequest="50"
+                                CornerRadius="25">
+        </sfavatar:SfAvatarView>
+
+{% endhighlight %}
+{% highlight c# %}
+            
+        Grid mainGrid = new Grid();
+        SfAvatarView avatarview = new SfAvatarView();
+        avatarview.VerticalOptions = LayoutOptions.Center;
+        avatarview.HorizontalOptions = LayoutOptions.Center;
+        avatarview.WidthRequest = 50;
+        avatarview.HeightRequest = 50;
+        avatarview.CornerRadius = 25;
+        avatarview.ContentType = ContentType.AvatarCharacter;
+        avatarview.AvatarCharacter = AvatarCharacter.Avatar8;
+        avatarview.Background = Colors.DeepSkyBlue;
+        mainGrid.Children.Add(avatarview);
+        this.Content = mainGrid;
+            
+{% endhighlight %}
+{% endtabs %}
+
+![AvatarCharacter](ContentType_Images/AvatarCharacter.jpg)
 
 ## GroupView 
 
