@@ -24,11 +24,7 @@ This section explains about how to add the events and commands for range slider.
 
 {% highlight xaml %}
 
- <sliders:SfRangeSlider Minimum="2010-01-01" 
-                        Maximum="2020-01-01" 
-                        RangeStart="2012-01-01" 
-                        RangeEnd="2018-01-01" 
-                        ValueChangeStart="OnValueChangeStart" 
+ <sliders:SfRangeSlider ValueChangeStart="OnValueChangeStart" 
                         ValueChanging="OnValueChanging" 
                         ValueChanged="OnValueChanged" 
                         ValueChangeEnd="OnValueChangeEnd">
