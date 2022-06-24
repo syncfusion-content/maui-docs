@@ -158,5 +158,5 @@ The following gif image illustrates the result of the above code.
 
 ![Getting Started](Images/GettingStarted/CircularMaterial.gif)
 
-You can find the complete getting started sample from this [link]().
+You can find the complete getting started sample from this [link.](https://github.com/SyncfusionExamples/maui-busyindicator-samples)
 
