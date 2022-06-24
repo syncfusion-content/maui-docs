@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI Range Selector
 
-This section explains the steps required to add the Range Selector control and its elements such as numeric values, ticks, labels and tooltip. This section covers only basic features needed to know to get started with Syncfusion Range Selector.
+This section explains the steps required to add the Range Selector control and its elements such as track, ticks, labels and tooltip. This section covers only basic features needed to know to get started with Syncfusion Range Selector.
 
 ## Creating an application with .NET MAUI
 
