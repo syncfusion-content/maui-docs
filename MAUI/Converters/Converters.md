@@ -101,7 +101,7 @@ Refer to the following code example. Here, we’ll set two different font sizes 
 
 The following gif image illustrates the result of the above code.
 
-![Bool To Object Converter sample](Images/BoolToObjectSample.gif)
+![Bool To Object Converter sample](Images/BoolToObjectConverter.png)
 
 ## BoolToOpacityConverter
 
@@ -143,7 +143,7 @@ x:Class="MAUIValueConverters.BoolToOpacityConverterPage">
 
 The following gif image illustrates the result of the above code.
 
-![Bool To Opacity Converter sample](Images/Bool_To_Opacity_Converter.gif)
+![Bool To Opacity Converter sample](Images/BoolToOpacityConverter.png)
 
 ## BrushToColorConverter
 
@@ -189,7 +189,7 @@ Refer to the following code example. Here, the `Stroke` property is set as the b
 
 The following screenshot illustrates the result of the above code.
 
-![Brush To Color Sample](Images/Brush_To_Color_Converter.png)
+![Brush To Color Sample](Images/BrushToColorConverter.png)
 
 ## ColorToBrushConverter
 
@@ -234,7 +234,7 @@ Refer to the following code example. Here, the `BackgroundColor` property is set
 
 The following screenshot illustrates the result of the above code.
 
-![Color To Brush Sample](Images/Color_To_Brush_Converter.png)
+![Color To Brush Sample](Images/ColorToBrushConverter.png)
 
 ## ColorToOnColorConverter
 
@@ -274,7 +274,7 @@ Refer to the following code example. Here, the `TextColor` property is set based
 
 The following screenshot illustrates the result of the above code.
 
-![Color To OnColor Sample](Images/Color_To_OnColor_Converter.png)
+![Color To OnColor Sample](Images/ColorToOnColorConverter.png)
 
 ## ColorToGrayScaleColorConverter
 
@@ -313,7 +313,7 @@ Refer to the following code example. Here, the first content has a yellow backgr
 
 The following screenshot illustrates the result of the above code.
 
-![Color To GrayScaleColor sample](Images/Color_To_GrayScaleColor_Converter.png)
+![Color To GrayScaleColor sample](Images/ColorToGrayScaleColorConverter.png)
 
 ## ColorToInverseColorConverter
 
@@ -352,7 +352,7 @@ Refer to the following code example. Here, the first content has a yellow backgr
 
 The following screenshot illustrates the result of the above code.
 
-![Color To InverseColor Converter](Images/Color_To_InverseColor_Converter.png)
+![Color To InverseColor Converter](Images/ColorToInverseColorConverter.png)
 
 ## CompareConverter
 
@@ -397,7 +397,7 @@ Refer to the following code example. Here, we’ll set the TrueObject as "Availa
 
 The following gif image illustrates the result of the above code.
 
-![Compare Converter sample](Images/ComparConverterSample.gif)
+![Compare Converter sample](Images/CompareConverter.png)
 
 ## DecimalValueConverter
 
@@ -519,7 +519,7 @@ public class DecimalValueConverterViewModel : INotifyPropertyChanged
 
 The following gif image illustrates the result of the above code.
 
-![Decimal Value Converter sample](Images/Decimal_Value_Converter.gif)
+![Decimal Value Converter sample](Images/DecimalValueConverter.png)
 
 ## DoubleToIntConverter
 
@@ -577,7 +577,7 @@ Refer to the following code example. Here, the slider value is converted to an i
 
 The following gif image illustrates the result of the above code.
 
-![Double To Int Converter sample](Images/Double_To_Int_Converter.gif)
+![Double To Int Converter sample](Images/DoubleToIntConverter.png)
 
 ## EnumToIntConverter
 
@@ -675,7 +675,7 @@ public enum Floor
 
 The following gif image illustrates the result of the above code.
 
-![Enum To Int Converter sample](Images/Enum_To_Int_Converter.gif)
+![Enum To Int Converter sample](Images/EnumToIntConverter.png)
 
 ## EqualConverter
 
@@ -733,7 +733,7 @@ Refer to the following code example. Here, if the input value is matched with th
 
 The following gif image illustrates the result of the above code.
 
-![Equal Converter sample](Images/Equal_Converter.gif)
+![Equal Converter sample](Images/EqualConverter.png)
 
 ## FormatStringConverter
 
@@ -777,7 +777,7 @@ The FormatStringConverter allows users to convert the incoming string type bindi
 
 The following gif image illustrates the result of the above code.
 
-![Format String Converter](Images/Format_String_Converter.gif)
+![Format String Converter](Images/FormatStringConverter.png)
 
 ## IndexToArrayItemConverter
 
@@ -833,7 +833,7 @@ Refer to the following code example. Here, we will get the country name based on
 
 The following gif image illustrates the result of the above code.
 
-![Index To ArrayItem Converter sample](Images/IndexToArrayItemSample.gif)
+![Index To ArrayItem Converter sample](Images/IndexToArrayItemConverter.png)
 
 ## InverseOpacityConverter
 
@@ -874,7 +874,7 @@ Refer to the following code example. Here, the image visibility is inversely pro
 
 The following gif image illustrates the result of the above code.
 
-![Inverse Opacity Converter sample](Images/Inversed_Opacity_Converter.gif)
+![Inverse Opacity Converter sample](Images/InverseOpacityConverter.png)
 
 ## InvertedBoolConverter
 
@@ -914,7 +914,7 @@ Refer to the following code example. Here, the image `IsVisible` property is set
 
 The following gif image illustrates the result of the above code.
 
-![Inverted Bool Converter sample](Images/InvertedBoolSample.gif)
+![Inverted Bool Converter sample](Images/InvertedBoolConverter.png)
 
 ## IsListNotNullOrEmptyConverter
 
@@ -1008,7 +1008,7 @@ internal class IsListNotNullOrEmptyViewModel : INotifyPropertyChanged
 
 The following gif image illustrates the result of the above code.
 
-![Is List Not Null Or Empty Converter](Images/IsListNotNullOrEmptySample.gif)
+![Is List Not Null Or Empty Converter](Images/IsListNotNullOrEmptyConverter.png)
 
 ## IsStringNotNullOrEmptyConverter
 
@@ -1030,14 +1030,11 @@ Refer to the following code example. Here, we will set the visibility of the sub
     </ContentPage.Resources>
     <VerticalStackLayout HeightRequest="200" HorizontalOptions="Center" VerticalOptions="Center" Spacing="10">
         <Label Text="Name"/>
-
         <Entry x:Name="Entry" Placeholder="Enter name here" WidthRequest="400"/>
         <Label Text="* Submit button appears when entered string is not null or empty " FontSize="12"/>
-
         <Button Text="Submit" WidthRequest="100"
                 BindingContext="{x:Reference Entry}"
                 IsVisible="{Binding Text, Converter={StaticResource isStringNotNullOrEmptyConverter}}"/>
-
     </VerticalStackLayout>
 </ContentPage>
 
@@ -1047,7 +1044,7 @@ Refer to the following code example. Here, we will set the visibility of the sub
 
 The following gif image illustrates the result of the above code.
 
-![Is String Not Null Or Empty Converter Sample](Images/IsStringNotNullOrEmptySample.gif)
+![Is String Not Null Or Empty Converter Sample](Images/IsStringNotNullOrEmptyConverter.gif)
 
 ## IsStringNotNullOrWhitespaceConverter
 
@@ -1068,15 +1065,12 @@ Refer to the following code example. Here, we will set the visibility of the sub
         <syncfusionConverters:IsStringNotNullOrWhitespaceConverter x:Key="isStringNotNullOrWhitespaceConverter"/>
     </ContentPage.Resources>
     <VerticalStackLayout HeightRequest="200" HorizontalOptions="Center" VerticalOptions="Center" Spacing="10">
-        <Label Text="Name"/>
-        
+        <Label Text="Name"/>        
         <Entry x:Name="Entry" Placeholder="Enter name here" WidthRequest="400"/>
         <Label Text="* Submit button appears when entered string is not null or whitespace " FontSize="12"/>
-
         <Button Text="Submit" WidthRequest="100"
                 BindingContext="{x:Reference Entry}"
                 IsVisible="{Binding Text, Converter={StaticResource isStringNotNullOrWhitespaceConverter}}"/>
-    
     </VerticalStackLayout>
 </ContentPage>
 
@@ -1086,7 +1080,7 @@ Refer to the following code example. Here, we will set the visibility of the sub
 
 The following gif image illustrates the result of the above code.
 
-![Is String Not Null Or Whitespace Converter Sample](Images/IsStringNotNullOrWhitespaceConverterSample.gif)
+![Is String Not Null Or Whitespace Converter Sample](Images/IsStringNotNullOrWhitespaceConverter.gif)
 
 ## ListToStringConverter
 
@@ -1207,7 +1201,7 @@ public class ListToStringViewModel : INotifyPropertyChanged
 
 The following gif image illustrates the result of the above code.
 
-![List To String Converter sample](Images/List_To_String_Converter.gif)
+![List To String Converter sample](Images/ListToStringConverter.png)
 
 ## MultiConverter
 
@@ -1292,7 +1286,7 @@ public class MultiConverterViewModel : INotifyPropertyChanged
 
 The following gif image illustrates the result of the above code.
 
-![MultiConverter Sample](Images/Multi_Converter.gif)
+![MultiConverter Sample](Images/MultiConverter.gif)
 
 ## NumberToBoolConverter
 
@@ -1377,7 +1371,7 @@ public class NumberToBoolViewModel : INotifyPropertyChanged
 
 The following gif image illustrates the result of the above code.
 
-![Number To Bool Converter sample](Images/Number_To_Bool_Converter.gif)
+![Number To Bool Converter sample](Images/NumberToBoolConverter.png)
 
 ## StringToListConverter
 
@@ -1458,7 +1452,7 @@ Refer to the following code example. Here, the string will be added to the list 
 
 The following gif image illustrates the result of the above code.
 
-![String To List Converter sample](Images/String_To_List_Converter.gif)
+![String To List Converter sample](Images/StringToListConverter.png)
 
 ## TextCaseConverter
 
@@ -1529,7 +1523,7 @@ Refer to the following code example. Here, we will convert the input string into
 
 The following gif image illustrates the result of the above code.
 
-![Text Case Converter sample](Images/Text_Case_Converter.gif)
+![Text Case Converter sample](Images/TextCaseConverter.png)
 
 ## Sample
 
