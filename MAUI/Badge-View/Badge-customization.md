@@ -304,41 +304,16 @@ Align the badge view using the Center, Start, and End properties of `BadgeAlignm
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight xaml hl_lines="7" %}
 
-   <badge:SfBadgeView BadgeText="20" HorizontalOptions="Center" VerticalOptions="Center" >
-        <badge:SfBadgeView.Content>
-            <Label Text="CENTER" BackgroundColor="LightGray" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
-                   WidthRequest="100" HeightRequest="60" TextColor="Black" />
-        </badge:SfBadgeView.Content>
-        <badge:SfBadgeView.BadgeSettings>
-            <badge:BadgeSettings BadgeAlignment="Center" CornerRadius="0"/>
-        </badge:SfBadgeView.BadgeSettings>
-</badge:SfBadgeView>    
+{% include_relative code-snippet/badge-alignment.xaml %}
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight c# hl_lines="15" %}
 
- SfBadgeView sfBadgeView = new SfBadgeView();
-		sfBadgeView.HorizontalOptions = LayoutOptions.Center;
-		sfBadgeView.VerticalOptions = LayoutOptions.Center;
-		sfBadgeView.BadgeText = "20";
-		Label label = new Label();
-		label.Text = "CENTER";
-		label.HeightRequest = 60;
-		label.WidthRequest = 100;
-		label.BackgroundColor = Colors.LightGray;
-		label.HorizontalTextAlignment = TextAlignment.Center;
-		label.VerticalTextAlignment = TextAlignment.Center;
-		label.TextColor = Colors.Black;
-		sfBadgeView.Content = label;
-		BadgeSettings badgeSetting = new BadgeSettings();
-		badgeSetting.BadgeAlignment = BadgeAlignment.Center;
-		badgeSetting.CornerRadius = 0;
-		sfBadgeView.BadgeSettings = badgeSetting;
-		Content = sfBadgeView;
-    
+{% include_relative code-snippet/badge-alignment.cs %}
+ 
 {% endhighlight %}
 
 {% endtabs %}

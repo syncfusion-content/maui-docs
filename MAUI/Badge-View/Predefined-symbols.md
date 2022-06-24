@@ -27,37 +27,16 @@ N> When both the `Icon` and `BadgeText` are set for badge view, then badge text 
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight xaml hl_lines="6" %}
 
-<badge:SfBadgeView  HorizontalOptions="Center" VerticalOptions="Center" >
-        <badge:SfBadgeView.Content>
-            <Image Source="friends.jpg" HeightRequest="70" WidthRequest="60"/>
-        </badge:SfBadgeView.Content>
-        <badge:SfBadgeView.BadgeSettings>
-            <badge:BadgeSettings Type="Warning"  Offset="0, -10" Position="BottomRight" Icon="Away"/>
-        </badge:SfBadgeView.BadgeSettings>
-</badge:SfBadgeView>
+{% include_relative code-snippet/badge-icon.xaml %}
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight c# hl_lines="11" %}
 
- SfBadgeView sfBadgeView = new SfBadgeView();
-		sfBadgeView.HorizontalOptions = LayoutOptions.Center;
-		sfBadgeView.VerticalOptions = LayoutOptions.Center;
-		Image image = new Image();
-		image.Source = "friends.jpg";
-		image.HeightRequest = 70;
-		image.WidthRequest = 60;
-		sfBadgeView.Content = image;
-		BadgeSettings badgeSetting = new BadgeSettings();
-		badgeSetting.Type = BadgeType.Warning;
-		badgeSetting.Icon = BadgeIcon.Away;
-		badgeSetting.Position = BadgePosition.BottomRight;
-		badgeSetting.Offset = new Point(0, -10);
-		sfBadgeView.BadgeSettings = badgeSetting;
-		Content = sfBadgeView;
-    
+{% include_relative code-snippet/badge-icon.cs %}
+ 
 {% endhighlight %}
 
 {% endtabs %}

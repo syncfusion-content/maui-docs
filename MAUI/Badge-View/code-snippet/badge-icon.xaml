@@ -1,0 +1,8 @@
+<badge:SfBadgeView  HorizontalOptions="Center" VerticalOptions="Center" >
+        <badge:SfBadgeView.Content>
+            <Image Source="friends.jpg" HeightRequest="70" WidthRequest="60"/>
+        </badge:SfBadgeView.Content>
+        <badge:SfBadgeView.BadgeSettings>
+            <badge:BadgeSettings Type="Warning"  Offset="0, -10" Position="BottomRight" Icon="Away"/>
+        </badge:SfBadgeView.BadgeSettings>
+</badge:SfBadgeView>

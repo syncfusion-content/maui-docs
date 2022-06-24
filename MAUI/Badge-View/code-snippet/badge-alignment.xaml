@@ -1,0 +1,9 @@
+<badge:SfBadgeView BadgeText="20" HorizontalOptions="Center" VerticalOptions="Center" >
+        <badge:SfBadgeView.Content>
+            <Label Text="CENTER" BackgroundColor="LightGray" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                   WidthRequest="100" HeightRequest="60" TextColor="Black" />
+        </badge:SfBadgeView.Content>
+        <badge:SfBadgeView.BadgeSettings>
+            <badge:BadgeSettings BadgeAlignment="Center" CornerRadius="0"/>
+        </badge:SfBadgeView.BadgeSettings>
+</badge:SfBadgeView>    
