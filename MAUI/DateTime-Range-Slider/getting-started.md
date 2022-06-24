@@ -254,11 +254,11 @@ rangeSlider.IsInversed = true;
 
 {% endtabs %}
 
-![Inverse rangeslider](images/getting-started/slider-inverse.png)
+![Inverse range slider](images/getting-started/slider-inverse.png)
 
 ## Formatting labels
 
-You can add prefix or suffix to the labels using the [`NumberFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_NumberFormat) or [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.DateTimeRangeSliderBase.html#Syncfusion_Maui_Sliders_DateTimeRangeSliderBase_DateFormat) properties.
+You can add prefix or suffix to the labels using the [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.DateTimeRangeSliderBase.html#Syncfusion_Maui_Sliders_DateTimeRangeSliderBase_DateFormat) property.
 
 {% tabs %}
 
