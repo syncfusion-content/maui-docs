@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion .NET MAUI Converters | Syncfusion
-description: Learn here about Syncfusion .NET MAUI Converters.
+description: Learn here about built-in value converters included in the Syncfusion .NET MAUI platform.
 platform: maui
 control: Converters
 documentation: ug
