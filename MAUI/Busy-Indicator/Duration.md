@@ -16,45 +16,23 @@ The `DurationFactor` property of SfBusyIndicator indicates timeline for completi
 
 {% highlight xaml %}
 
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-             x:Class="BusyIndicatorSample.MainPage">
+<core:SfBusyIndicator x:Name="busyIndicator"
+                      IsRunning="True"
+                      AnimationType="CircularMaterial"
+                      DurationFactor="0.2" />
 
-        <ContentPage.Content>
-            <core:SfBusyIndicator x:Name="busyIndicator"
-                                  IsRunning="True"
-                                  AnimationType="CircularMaterial"
-                                  DurationFactor="0.2" />
-        </ContentPage.Content>
-    </ContentPage>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    using Syncfusion.Maui.Core;
-    using Microsoft.Maui;
-    using Microsoft.Maui.Controls;
+SfBusyIndicator busyIndicator = new SfBusyIndicator()
+{
+    IsRunning = true,
+    AnimationType = AnimationType.CircularMaterial;
+    DurationFactor= 0.2
+};
 
-    namespace BusyIndicatorSample
-    {
-       public partial class MainPage : ContentPage
-       {
-           public MainPage()
-           {
-               InitializeComponent();
-               SfBusyIndicator busyIndicator = new SfBusyIndicator()
-               {
-                   IsRunning = true,
-                   AnimationType = AnimationType.CircularMaterial;
-                   DurationFactor= 0.2
-               };
-               this.Content = busyIndicator;
-            }
-       }
-    }
 
 {% endhighlight %}
 

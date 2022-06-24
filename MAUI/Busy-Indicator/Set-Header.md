@@ -20,47 +20,21 @@ SfBusyIndicator provides option to set the text that indicates the information r
 
 {% highlight xaml %}
 
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-                x:Class="BusyIndicatorSample.MainPage">
-
-        <ContentPage.Content>
-            <core:SfBusyIndicator x:Name="busyindicator"
-                                  IsRunning="True"
-                                  AnimationType="CircularMaterial"
-                                  Title="Loading..." />
-        </ContentPage.Content>
-    </ContentPage>
-
+<core:SfBusyIndicator x:Name="busyindicator"
+                      IsRunning="True"
+                      AnimationType="CircularMaterial"
+                      Title="Loading..." />
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    using Syncfusion.Maui.Core;
-    using Microsoft.Maui;
-    using Microsoft.Maui.Controls;
-
-    namespace BusyIndicatorSample
-    {
-        public partial class MainPage : ContentPage
-        {
-            public MainPage()
-            {
-                InitializeComponent();
-                SfBusyIndicator busyIndicator = new SfBusyIndicator()
-                {
-                    IsRunning = true,
-                    AnimationType = AnimationType.CircularMaterial,
-                    Title = "Loading...",
-                };
-                this.Content = busyIndicator;
-            }
-        }
-    }
-
+SfBusyIndicator busyIndicator = new SfBusyIndicator()
+{
+    IsRunning = true,
+    AnimationType = AnimationType.CircularMaterial,
+    Title = "Loading...",
+};
 
 {% endhighlight %}
 
@@ -77,48 +51,24 @@ SfBusyIndicator provides options to change the color of the text. The color of t
 {% tabs %}
 
 {% highlight xaml %}
-
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-                x:Class="BusyIndicatorSample.MainPage">
-
-        <ContentPage.Content>
-            <core:SfBusyIndicator x:Name="busyindicator"
-                                  IsRunning="True"
-                                  AnimationType="CircularMaterial"
-                                  Title="Loading..."
-                                  TextColor = "Red" />           
-        </ContentPage.Content>
-    </ContentPage>
-
+  
+<core:SfBusyIndicator x:Name="busyindicator"
+                      IsRunning="True"
+                      AnimationType="CircularMaterial"
+                      Title="Loading..."
+                      TextColor = "Red" />           
+       
 {% endhighlight %}
 
 {% highlight c# %}
-
-    using Syncfusion.Maui.Core;
-    using Microsoft.Maui;
-    using Microsoft.Maui.Controls;
-
-    namespace BusyIndicatorSample
-    {
-        public partial class MainPage : ContentPage
-        {
-            public MainPage()
-            {
-                InitializeComponent();
-                SfBusyIndicator busyIndicator = new SfBusyIndicator()
-                {
-                    IsRunning = true,
-                    AnimationType = AnimationType.CircularMaterial,
-                    Title = "Loading...",
-                    TextColor = Colors.Red
-                };
-                this.Content = busyIndicator;
-            }
-        }
-    }
+   
+SfBusyIndicator busyIndicator = new SfBusyIndicator()
+{
+    IsRunning = true,
+    AnimationType = AnimationType.CircularMaterial,
+    Title = "Loading...",
+    TextColor = Colors.Red
+};
 
 {% endhighlight %}
 
@@ -137,49 +87,25 @@ SfBusyIndicator provides options to set the `Title` at the top or bottom of the 
 
 {% highlight xaml %}
 
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-                x:Class="BusyIndicatorSample.MainPage">
-
-        <ContentPage.Content>
-            <core:SfBusyIndicator x:Name="busyindicator"
-                                  IsRunning="True"
-                                  AnimationType="CircularMaterial"
-                                  Title="Loading..."
-                                  TextColor = "Red" 
-                                  TitlePlacement="Top"/>           
-        </ContentPage.Content>
-    </ContentPage>
+<core:SfBusyIndicator x:Name="busyindicator"
+                        IsRunning="True"
+                        AnimationType="CircularMaterial"
+                        Title="Loading..."
+                        TextColor = "Red" 
+                        TitlePlacement="Top"/>           
 
 {% endhighlight %}
 
 {% highlight c# %}
-
-    using Syncfusion.Maui.Core;
-    using Microsoft.Maui;
-    using Microsoft.Maui.Controls;
-
-    namespace BusyIndicatorSample
-    {
-        public partial class MainPage : ContentPage
-        {
-            public MainPage()
-            {
-                InitializeComponent();
-                SfBusyIndicator busyIndicator = new SfBusyIndicator()
-                {
-                    IsRunning = true,
-                    AnimationType = AnimationType.CircularMaterial,
-                    Title = "Loading...",
-                    TextColor = Colors.Red,
-                    TitlePlacement = BusyIndicatorTitlePlacement.Top
-                };
-                this.Content = busyIndicator;
-            }
-        }
-    }
+  
+SfBusyIndicator busyIndicator = new SfBusyIndicator()
+{
+    IsRunning = true,
+    AnimationType = AnimationType.CircularMaterial,
+    Title = "Loading...",
+    TextColor = Colors.Red,
+    TitlePlacement = BusyIndicatorTitlePlacement.Top
+};
 
 {% endhighlight %}
 
@@ -198,51 +124,28 @@ SfBusyIndicator provides options to set the space between the indicator and the 
 
 {% highlight xaml %}
 
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-                x:Class="BusyIndicatorSample.MainPage">
-
-        <ContentPage.Content>
-            <core:SfBusyIndicator x:Name="busyindicator"
-                                  IsRunning="True"
-                                  AnimationType="CircularMaterial"
-                                  Title="Loading..."
-                                  TextColor = "Red" 
-                                  TitlePlacement="Top"
-                                  TitleSpacing="20"/>           
-        </ContentPage.Content>
-    </ContentPage>
+<core:SfBusyIndicator x:Name="busyindicator"
+                        IsRunning="True"
+                        AnimationType="CircularMaterial"
+                        Title="Loading..."
+                        TextColor = "Red" 
+                        TitlePlacement="Top"
+                        TitleSpacing="20"/>           
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    using Syncfusion.Maui.Core;
-    using Microsoft.Maui;
-    using Microsoft.Maui.Controls;
-
-    namespace BusyIndicatorSample
-    {
-        public partial class MainPage : ContentPage
-        {
-            public MainPage()
-            {
-                InitializeComponent();
-                SfBusyIndicator busyIndicator = new SfBusyIndicator()
-                {
-                    IsRunning = true,
-                    AnimationType = AnimationType.CircularMaterial,
-                    Title = "Loading...",
-                    TextColor = Colors.Red,
-                    TitlePlacement = BusyIndicatorTitlePlacement.Top,
-                    TitleSpacing = 20
-                };
-                this.Content = busyIndicator;
-            }
-        }
-    }
+    
+SfBusyIndicator busyIndicator = new SfBusyIndicator()
+{
+    IsRunning = true,
+    AnimationType = AnimationType.CircularMaterial,
+    Title = "Loading...",
+    TextColor = Colors.Red,
+    TitlePlacement = BusyIndicatorTitlePlacement.Top,
+    TitleSpacing = 20
+};
 
 {% endhighlight %}
 
@@ -263,53 +166,29 @@ SfBusyIndicator provides options to customize the title text. The title text can
 
 {% highlight xaml %}
 
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-                x:Class="BusyIndicatorSample.MainPage">
-
-        <ContentPage.Content>
-            <core:SfBusyIndicator x:Name="busyindicator"
-                                  IsRunning="True"
-                                  AnimationType="CircularMaterial"
-                                  Title="Loading..."
-                                  TextColor = "Red" 
-                                  FontSize = "16"
-                                  FontAttributes="Bold"
-                                  FontFamily="serif" />           
-        </ContentPage.Content>
-    </ContentPage>
-
+<core:SfBusyIndicator x:Name="busyindicator"
+                        IsRunning="True"
+                        AnimationType="CircularMaterial"
+                        Title="Loading..."
+                        TextColor = "Red" 
+                        FontSize = "16"
+                        FontAttributes="Bold"
+                        FontFamily="serif" />           
+ 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    using Syncfusion.Maui.Core;
-    using Microsoft.Maui;
-    using Microsoft.Maui.Controls;
-
-    namespace BusyIndicatorSample
-    {
-        public partial class MainPage : ContentPage
-        {
-            public MainPage()
-            {
-                InitializeComponent();
-                SfBusyIndicator busyIndicator = new SfBusyIndicator()
-                {
-                    IsRunning = true,
-                    AnimationType = AnimationType.CircularMaterial,
-                    Title = "Loading...",
-                    TextColor = Colors.Red,
-                    FontSize = 16,
-                    FontAttributes=FontAttributes.Bold,
-                    FontFamily="serif"
-                };
-                this.Content = busyIndicator;
-            }
-        }
-    }
+SfBusyIndicator busyIndicator = new SfBusyIndicator()
+{
+    IsRunning = true,
+    AnimationType = AnimationType.CircularMaterial,
+    Title = "Loading...",
+    TextColor = Colors.Red,
+    FontSize = 16,
+    FontAttributes=FontAttributes.Bold,
+    FontFamily="serif"
+};
 
 {% endhighlight %}
 
