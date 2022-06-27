@@ -20,7 +20,7 @@ SfBusyIndicator provides option to set the color for indicator. This can be done
 <core:SfBusyIndicator x:Name="busyindicator"
                         IsRunning="True"
                         AnimationType="CircularMaterial"
-                        Title="Loading..."
+                        Title="Searching..."
                         IndicatorColor="Red"/>           
  
 {% endhighlight %}
@@ -31,7 +31,7 @@ SfBusyIndicator busyIndicator = new SfBusyIndicator()
 {
     IsRunning = true,
     AnimationType = AnimationType.CircularMaterial,
-    Title = "Loading...",
+    Title = "Searching...",
     IndicatorColor = Colors.Red
 };
 
@@ -39,7 +39,9 @@ SfBusyIndicator busyIndicator = new SfBusyIndicator()
 
 {% endtabs %}
 
+The following gif image illustrates the result of the above code.
 
+![Indicator Color](Images/IndicatorColor/Indicator%20Color.png)
 
 ## Overlay Background in SfBusyIndicator
 
@@ -50,11 +52,12 @@ SfBusyIndicator provides option to set the overlay background. This can be done 
 {% highlight xaml %}
 
 <core:SfBusyIndicator x:Name="busyindicator"
-                        IsRunning="True"
-                        AnimationType="CircularMaterial"
-                        Title="Loading..."
-                        IndicatorColor="Red"
-                        OverlayFill = "DarkViolet"/>           
+                      IsRunning="True"
+                      AnimationType="CircularMaterial"
+                      Title="Searching..."
+                      TextColor="White"
+                      IndicatorColor="White"
+                      OverlayFill="#512BD4" />       
 
 {% endhighlight %}
 
@@ -64,15 +67,19 @@ SfBusyIndicator busyIndicator = new SfBusyIndicator()
 {
     IsRunning = true,
     AnimationType = AnimationType.CircularMaterial,
-    Title = "Loading...",
-    IndicatorColor = Colors.Red,
-    OverlayFill = Colors.DarkViolet
+    Title = "Searching...",
+    TextColor = Colors.White,
+    IndicatorColor = Colors.White,
+    OverlayFill = Color.FromArgb("#512BD4")
 };
  
 {% endhighlight %}
 
 {% endtabs %}
 
+The following gif image illustrates the result of the above code.
+
+![Overlay Fill](Images/IndicatorColor/Overlay%20Fill%20Color.png)
 
 The `OverlayFill` property type is `Brush`, so you can set Gradients as background.
 
@@ -83,7 +90,7 @@ The `OverlayFill` property type is `Brush`, so you can set Gradients as backgrou
 <core:SfBusyIndicator IsRunning="True" 
                         AnimationType = "CircularMaterial"
                         IndicatorColor="#e64c93" 
-                        Title="Loading...">
+                        Title="Searching...">
     <core:SfBusyIndicator.OverlayFill>
         <RadialGradientBrush>
             <GradientStop Color="#44e64c93"
@@ -92,8 +99,8 @@ The `OverlayFill` property type is `Brush`, so you can set Gradients as backgrou
                 Offset="1.0" />
         </RadialGradientBrush>
     </core:SfBusyIndicator.OverlayFill>
-</core:SfBusyIndicator>         
-  
+</core:SfBusyIndicator>  
+
 {% endhighlight %}
 
 {% highlight c# %}
@@ -102,7 +109,7 @@ SfBusyIndicator busyIndicator = new SfBusyIndicator()
 {
     IsRunning = true,
     AnimationType = AnimationType.CircularMaterial,
-    Title = "Loading...",
+    Title = "Searching...",
     IndicatorColor = Color.FromArgb("#e64c93"),
     OverlayFill = new RadialGradientBrush()
     {
@@ -119,7 +126,7 @@ SfBusyIndicator busyIndicator = new SfBusyIndicator()
 
 {% endtabs %}
 
-The following screenshot illustrates the indicator color and background of SfBusyIndicator.
+The following gif image illustrates the result of the above code.
 
-![IndicatorColor and OverlayFill](Images/IndicatorColor/Indicator_Background.png)
+![Overlay Fill](Images/IndicatorColor/Overlay%20Fill%20Brush.png)
 
