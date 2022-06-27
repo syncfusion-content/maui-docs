@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion .NET MAUI Converters | Syncfusion
-description: Learn here about getting started with built-in value converters included in the Syncfusion .NET MAUI platform.
+description: Learn here about Syncfusion .NET MAUI built-in value converters included in the Syncfusion .NET MAUI platform.
 platform: maui
 control: Converters
 documentation: ug
@@ -9,17 +9,13 @@ documentation: ug
 
 # Syncfusion .NET MAUI Converters
 
-## Getting started with Syncfusion .NET MAUI Converters
-
-Most applications developed using XAML depend on value converters. As you know, .NET MAUI is a cross-platform framework for creating native mobile and desktop apps with C# and XAML, so when you develop a .NET MAUI app, you will need an arsenal of converters at your disposal.
-
-Syncfusion are helping rid you of the hassle of writing common converters from scratch by providing a set of 24 new .NET MAUI value converters. This section explains you the steps to configure a Converters in a real-time scenario
+Syncfusion are helping rid you of the hassle of writing common converters from scratch by providing a set of 24 new .NET MAUI value converters. This section explains you the steps to configure a Converters in a real-time scenario.
 
 ## Adding a Syncfusion Maui Core reference
 
 Syncfusion .NET MAUI Converters are available in [Nuget.org](https://www.nuget.org/). To add [Converters](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Converters.html?tabs=tabid-1) to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and then install it.
 
-## Adding a namespace
+**Adding a namespace**
 
 Step 1: Add the NuGet to the project as discussed in the above reference section. 
 
@@ -42,11 +38,7 @@ Step 2: Add the namespace as shown in the following code sample.
 
 {% endtabs %}
 
-## Syncfusion built-in converters for .NET MAUI
-
-The following section explains the 24 new built-in value converters included in the Syncfusion .NET MAUI platform. 
-
-## BoolToObjectConverter
+## Bool To Object Converter
 
 The BoolToObjectConverter can convert a Boolean value to an object. By including both a `TrueObject` and a `FalseObject` in the converter, the appropriate object will be used based on the binding value.
 
@@ -103,7 +95,7 @@ The following gif image illustrates the result of the above code.
 
 ![Bool To Object Converter sample](Images/BoolToObjectConverter.png)
 
-## BoolToOpacityConverter
+## Bool To Opacity Converter
 
 The BoolToOpacityConverter helps us convert a Boolean value into an opacity.
 
@@ -145,7 +137,7 @@ The following gif image illustrates the result of the above code.
 
 ![Bool To Opacity Converter sample](Images/BoolToOpacityConverter.png)
 
-## BrushToColorConverter
+## Brush To Color Converter
 
 The BrushToColorConverter is also a type converter. It converts any Brush into a Color. This converter has the ConvertBack method, so it also works in two-way binding mode.
 
@@ -191,7 +183,7 @@ The following screenshot illustrates the result of the above code.
 
 ![Brush To Color Sample](Images/BrushToColorConverter.png)
 
-## ColorToBrushConverter
+## Color To Brush Converter
 
 The ColorToBrushConverter is a type converter. It converts any Color to a Brush. This converter has the ConvertBack method, so it also works in two-way binding mode.
 
@@ -236,7 +228,7 @@ The following screenshot illustrates the result of the above code.
 
 ![Color To Brush Sample](Images/ColorToBrushConverter.png)
 
-## ColorToOnColorConverter
+## Color To On Color Converter
 
 The ColorToOnColorConverter can convert the text color to white or black based on its background color density.
 
@@ -276,7 +268,7 @@ The following screenshot illustrates the result of the above code.
 
 ![Color To OnColor Sample](Images/ColorToOnColorConverter.png)
 
-## ColorToGrayScaleColorConverter
+## Color To Grayscale Color Converter
 
 The ColorToGrayScaleColorConverter converts a color into its grayscale value color.
 
@@ -315,7 +307,7 @@ The following screenshot illustrates the result of the above code.
 
 ![Color To GrayScaleColor sample](Images/ColorToGrayScaleColorConverter.png)
 
-## ColorToInverseColorConverter
+## Color To Inverse Color Converter
 
 The ColorToInverseColorConverter is used to convert a color into its inverse color.
 
@@ -354,7 +346,7 @@ The following screenshot illustrates the result of the above code.
 
 ![Color To InverseColor Converter](Images/ColorToInverseColorConverter.png)
 
-## CompareConverter
+## Compare Converter
 
 The CompareConverter can convert an object into another by comparing the `Value` and `ComparingValue` properties using the `ComparisonOperator.` Based on the result, it returns the `TrueObject` or `FalseObject.` If TrueObject and FalseObject are not set by the user, it will return a Boolean value.
 
@@ -399,7 +391,7 @@ The following gif image illustrates the result of the above code.
 
 ![Compare Converter sample](Images/CompareConverter.png)
 
-## DecimalValueConverter
+## Decimal Value Converter
 
 The DecimalValueConverter is a value converter that converts the input value into a specified number of fractional digits based on the decimal digits that the user provides.
 
@@ -521,7 +513,7 @@ The following gif image illustrates the result of the above code.
 
 ![Decimal Value Converter sample](Images/DecimalValueConverter.png)
 
-## DoubleToIntConverter
+## Double To Int Converter
 
 The DoubleToIntConverter is a value converter that converts a double value into an integer value.
 
@@ -579,7 +571,7 @@ The following gif image illustrates the result of the above code.
 
 ![Double To Int Converter sample](Images/DoubleToIntConverter.png)
 
-## EnumToIntConverter
+## Enum To Int Converter
 
 The EnumToIntConverter can convert an enum value to its primitive integer data type.
 
@@ -677,7 +669,7 @@ The following gif image illustrates the result of the above code.
 
 ![Enum To Int Converter sample](Images/EnumToIntConverter.png)
 
-## EqualConverter
+## Equal Converter
 
 The EqualConverter checks whether the input binding value is equal to the converter parameter and returns the corresponding Boolean value.
 
@@ -735,7 +727,7 @@ The following gif image illustrates the result of the above code.
 
 ![Equal Converter sample](Images/EqualConverter.png)
 
-## FormatStringConverter
+## Format String Converter
 
 The FormatStringConverter allows users to convert the incoming string type binding into the user-defined format. Users can define the format by using the command parameter. 
 
@@ -779,7 +771,7 @@ The following gif image illustrates the result of the above code.
 
 ![Format String Converter](Images/FormatStringConverter.png)
 
-## IndexToArrayItemConverter
+## Index To Array Item Converter
 
 The IndexToArrayItemConverter is used to convert a number value into an array item. The ConverterParameter is used to pass the array value.
 
@@ -835,7 +827,7 @@ The following gif image illustrates the result of the above code.
 
 ![Index To ArrayItem Converter sample](Images/IndexToArrayItemConverter.png)
 
-## InverseOpacityConverter
+## Inverse Opacity Converter
 
 The InverseOpacityConverter can convert a Boolean value into an inverted opacity.
 
@@ -876,7 +868,7 @@ The following gif image illustrates the result of the above code.
 
 ![Inverse Opacity Converter sample](Images/InverseOpacityConverter.png)
 
-## InvertedBoolConverter
+## Inverted Bool Converter
 
 The InvertedBoolConverter is used to convert the true value to false and the false value to true.
 
@@ -916,7 +908,7 @@ The following gif image illustrates the result of the above code.
 
 ![Inverted Bool Converter sample](Images/InvertedBoolConverter.png)
 
-## IsListNotNullOrEmptyConverter
+## Is List Not Null Or Empty Converter
 
 The IsListNotNullOrEmptyConverter can convert a list into a Boolean value. It returns true when the list is not null or empty.
 
@@ -1010,7 +1002,7 @@ The following gif image illustrates the result of the above code.
 
 ![Is List Not Null Or Empty Converter](Images/IsListNotNullOrEmptyConverter.png)
 
-## IsStringNotNullOrEmptyConverter
+## Is String Not Null Or Empty Converter
 
 The IsStringNotNullOrEmptyConverter can convert a string to a Boolean value. It returns true when the string is not null or empty.
 
@@ -1046,7 +1038,7 @@ The following gif image illustrates the result of the above code.
 
 ![Is String Not Null Or Empty Converter Sample](Images/IsStringNotNullOrEmptyConverter.gif)
 
-## IsStringNotNullOrWhitespaceConverter
+## Is String Not Null Or Whitespace Converter
 
 The IsStringNotNullOrWhitespaceConverter can convert a string to a Boolean value. It returns true when the string is not null or white space.
 
@@ -1082,7 +1074,7 @@ The following gif image illustrates the result of the above code.
 
 ![Is String Not Null Or Whitespace Converter Sample](Images/IsStringNotNullOrWhitespaceConverter.gif)
 
-## ListToStringConverter
+## List To String Converter
 
 The ListToStringConverter is a value converter that converts the incoming IEnumerable value into a string.
 
@@ -1203,7 +1195,7 @@ The following gif image illustrates the result of the above code.
 
 ![List To String Converter sample](Images/ListToStringConverter.png)
 
-## MultiConverter
+## Multi Converter
 
 The MultiConverter is a value converter that allows users to bind multiple converters together.
 
@@ -1288,7 +1280,7 @@ The following gif image illustrates the result of the above code.
 
 ![MultiConverter Sample](Images/MultiConverter.gif)
 
-## NumberToBoolConverter
+## Number To Bool Converter
 
 The NumberToBoolConverter is used to convert a numeric value into a Boolean.
 
@@ -1373,7 +1365,7 @@ The following gif image illustrates the result of the above code.
 
 ![Number To Bool Converter sample](Images/NumberToBoolConverter.png)
 
-## StringToListConverter
+## String To List Converter
 
 The StringToListConverter is a value converter that converts the string value into a list based on the separator provided by the user.
 
@@ -1454,7 +1446,7 @@ The following gif image illustrates the result of the above code.
 
 ![String To List Converter sample](Images/StringToListConverter.png)
 
-## TextCaseConverter
+## Text Case Converter
 
 The TextCaseConverter is used to convert the input string to the desired casing.
 
@@ -1525,9 +1517,7 @@ The following gif image illustrates the result of the above code.
 
 ![Text Case Converter sample](Images/TextCaseConverter.png)
 
-## Sample
-
-You can find the complete converters sample from this [link](https://github.com/SyncfusionExamples/maui-converters-samples).
+N> You can find the complete converters sample from this [link](https://github.com/SyncfusionExamples/maui-converters-samples).
 
 
 
