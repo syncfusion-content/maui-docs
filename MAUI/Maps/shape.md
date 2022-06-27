@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Shape colors in MAUI Maps widget | Syncfusion
+title: Shape in MAUI Maps widget | Syncfusion
 description: Learn here all about different shape appearance customization options of the Syncfusion MAUI Maps (SfMaps) widget.
 platform: MAUI
 control: SfMaps
@@ -9,7 +9,7 @@ documentation: ug
 
 # Shapes in MAUI Maps (SfMaps)
 
-This section explains about shapes and how to apply colors to the shapes based on specific values in the Flutter maps.
+This section explains about shapes and how to apply colors to the shapes based on specific values in the MAUI maps.
 
 ## Shape color
 
@@ -17,23 +17,19 @@ You can apply color, stroke color and stroke thickness to the shapes using the [
 
 {% tabs %}
 
-{% highlight xml %}
+{% highlight xaml %}
 
-     <maps:SfMaps x:Name="sfmap" >
-        
-        <maps:SfMaps.Layer>
-
-            <maps:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json" ShapeStroke="Green"
+     <map:SfMaps>
+        <map:SfMaps.Layer>
+            <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json" ShapeStroke="Green"
                                   ShapeFill="LightGreen"  ShapeStrokeThickness="2" >
-            </maps:MapShapeLayer>
-            
+            </map:MapShapeLayer>
         </maps:SfMaps.Layer>
-        
     </maps:SfMaps>
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
  public MainPage()
     {
@@ -60,23 +56,19 @@ You can apply hover color, stroke color and stroke thickness to the shapes using
 
 {% tabs %}
 
-{% highlight xml %}
+{% highlight xaml %}
 
-     <maps:SfMaps x:Name="sfmap" >
-        
-        <maps:SfMaps.Layer>
-
-            <maps:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json" ShapeHoverStroke="Blue"
+     <map:SfMaps>
+        <map:SfMaps.Layer>
+            <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json" ShapeHoverStroke="Blue"
                                   ShapeHoverFill="LightBlue"  ShapeHoverStrokeThickness="2" >
-            </maps:MapShapeLayer>
-            
-        </maps:SfMaps.Layer>
-        
-    </maps:SfMaps>
+            </map:MapShapeLayer>
+        </map:SfMaps.Layer>
+    </map:SfMaps>
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
  public MainPage()
     {
@@ -97,31 +89,26 @@ You can apply hover color, stroke color and stroke thickness to the shapes using
 
 ## Applying colors based on the data
 
-If you return a color from the [`shapeColorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeColorValueMapper.html), then the color will be applied to the respective shape straightaway.
+If you return a color from the [`ShapeColorValuePath`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeColorValueMapper.html), then the color will be applied to the respective shape straightaway.
 
-If you return a value of different type other than the color from the [`shapeColorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeColorValueMapper.html), then you must set the [`MapShapeSource.shapeColorMappers`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeColorMappers.html) property which is a collection of [`MapColorMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper-class.html) to apply colors for the respective shapes.
+If you return a value of different type other than the color from the [`ShapeColorValuePath`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeColorValueMapper.html), then you must set the [`MapShapeLayer.ShapeColorValuePath`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeColorMappers.html) property to apply colors for the respective shapes.
 
-N> You can show legend using the [`MapShapeLayer.legend`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/legend.html) property. The icons color of the legend is applied based on the colors returned in the [`MapShapeSource.shapeColorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeColorValueMapper.html) property and the text will be taken from the [`primaryValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/primaryValueMapper.html). It is possible to customize the legend icons color and text using the [`MapShapeSource.shapeColorMappers`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeColorMappers.html) property.
+N> You can show legend using the [`MapShapeLayer.legend`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/legend.html) property. The icons color of the legend is applied based on the colors returned in the [`MapShapeLayer.ShapeColorValuePath`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeColorValueMapper.html) property and the text will be taken from the [`PrimaryValuePath`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/primaryValueMapper.html). 
 
 {% tabs %}
 
-{% highlight xml %}
+{% highlight xaml %}
 
-     <maps:SfMaps x:Name="sfmap" >
-        
-        <maps:SfMaps.Layer>
-
-            <maps:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/australia.json" DataSource="{Binding Data}" PrimaryValuePath="Country" ShapeDataField="STATE_NAME" ShapeColorValuePath = "Color" >
-            
-            </maps:MapShapeLayer>
-            
-        </maps:SfMaps.Layer>
-        
-    </maps:SfMaps>
+     <map:SfMaps>
+        <map:SfMaps.Layer>
+            <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/australia.json" DataSource="{Binding Data}"       PrimaryValuePath="Country" ShapeDataField="STATE_NAME" ShapeColorValuePath = "Color" >
+            </map:MapShapeLayer>
+        </map:SfMaps.Layer>
+    </map:SfMaps>
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 public MainPage()
     {
@@ -137,8 +124,6 @@ public MainPage()
 
         SfMaps maps = new SfMaps();
         MapShapeLayer layer = new MapShapeLayer();
-        
-
         layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/australia.json"));
         layer.DataSource = Data;
         layer.PrimaryValuePath = "Country";
@@ -148,7 +133,7 @@ public MainPage()
         maps.Layer = layer;
         this.Content = maps;
     }
-    class Model
+    public class Model
     {
         public Model(string country, Color color)
         {
@@ -171,30 +156,24 @@ You can apply color to the shape by comparing a value that returns from the [`Co
 
 {% tabs %}
 
-{% highlight xml %}
+{% highlight xaml %}
 
-     <maps:SfMaps x:Name="sfmap" >
-        
-        <maps:SfMaps.Layer>
-
-            <maps:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json" DataSource="{Binding Data}" PrimaryValuePath="Country" ShapeDataField="name" ShapeColorValuePath = "Storage" >
+     <map:SfMaps>
+        <map:SfMaps.Layer>
+            <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json" DataSource="{Binding Data}" PrimaryValuePath="Country" ShapeDataField="name" ShapeColorValuePath = "Storage" >
             
                 <map:MapShapeLayer.ColorMappings>
-
                     <map:EqualColorMapping Color="Red" Value = "Low" />
                      <map:EqualColorMapping Color="Blue" Value = "High" />
-
                 </map:MapShapeLayer.ColorMappings>
 
-            </maps:MapShapeLayer>
-            
-        </maps:SfMaps.Layer>
-        
-    </maps:SfMaps>
+            </map:MapShapeLayer>
+        </map:SfMaps.Layer>
+    </map:SfMaps>
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 public MainPage()
 {
@@ -226,11 +205,11 @@ public MainPage()
     maps.Layer = layer;
     this.Content = maps;
 }
-class Model
+public class Model
 {
     public Model(string country, string storage)
     {
-         Country = country;
+        Country = country;
         Storage = storage;
     }
     public String Country { get; set; }
@@ -238,6 +217,7 @@ class Model
 }
 
 {% endhighlight %}
+
 {% endtabs %}
 
 ![Equal color mapping](images/shape/equal_color_mapping.png)
@@ -248,30 +228,24 @@ You can apply color to the shape based on whether the value returned from [`Colo
 
 {% tabs %}
 
-{% highlight xml %}
+{% highlight xaml %}
 
-     <maps:SfMaps x:Name="sfmap" >
-        
-        <maps:SfMaps.Layer>
-
-            <maps:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json" DataSource="{Binding Data}" PrimaryValuePath="Country" ShapeDataField="name" ShapeColorValuePath = "Storage" >
+     <map:SfMaps>
+        <map:SfMaps.Layer>
+            <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json" DataSource="{Binding Data}" PrimaryValuePath="Country" ShapeDataField="name" ShapeColorValuePath = "Storage" >
             
                 <map:MapShapeLayer.ColorMappings>
-
                     <map:RangeColorMapping Color="Red" From="0" To="90"/>
                     <map:RangeColorMapping Color="Blue" From="100" To="150"/>
-                     
                 </map:MapShapeLayer.ColorMappings>
 
-            </maps:MapShapeLayer>
-            
-        </maps:SfMaps.Layer>
-        
-    </maps:SfMaps>
+            </map:MapShapeLayer>
+        </map:SfMaps.Layer>
+    </map:SfMaps>
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 public MainPage()
 {
@@ -304,7 +278,7 @@ public MainPage()
     maps.Layer = layer;
     this.Content = maps;
 }
-class Model
+public class Model
 {
     public Model(string country, int count)
     {
@@ -316,9 +290,10 @@ class Model
 }
 
 {% endhighlight %}
+
 {% endtabs %}
 
 ![Range color mapping](images/shape/range_color_mapping.png)
 
 N>
-* Refer the [`MapShapeLayer.BubbleSettings`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/bubbleColorMappers.html), for setting the bubble colors based on the specific value. You can refer to our [MAUI Maps](https://www.syncfusion.com/flutter-widgets/flutter-maps) feature tour page for its groundbreaking feature representations. You can also explore our [MAUI Maps Shapes example](https://flutter.syncfusion.com/#/maps/shape-layer/range-color-mapping) that shows how to configure a Maps in Flutter.
+* Refer the [`MapShapeLayer.BubbleSettings`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/bubbleColorMappers.html), for setting the bubble colors based on the specific value. You can refer to our [MAUI Maps](https://www.syncfusion.com/flutter-widgets/flutter-maps) feature tour page for its groundbreaking feature representations. You can also explore our [MAUI Maps Shapes example](https://flutter.syncfusion.com/#/maps/shape-layer/range-color-mapping) that shows how to configure a Maps in MAUI.
