@@ -17,29 +17,23 @@ You can show data labels on the map using the [`MapShapeLayer.ShowDataLabels`](h
 
 {% tabs %}
 
-{% highlight xml %}
+{% highlight xaml %}
 
-     <maps:SfMaps x:Name="sfmap" >
-        
-        <maps:SfMaps.Layer>
+     <map:SfMaps>
+        <map:SfMaps.Layer>
+            <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"  DataSource="{Binding Data}" PrimaryValuePath="Continent" ShapeDataField="continent" ShowDataLabels = "True"  >
 
-            <maps:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"  DataSource="{Binding Data}" PrimaryValuePath="Continent" ShapeDataField="continent" ShowDataLabels = "True"  >
+                <map:MapShapeLayer.DataLabelSettings>
+                    <map:MapDataLabelSettings   DataLabelPath="Continent"/>
+                </map:MapShapeLayer.DataLabelSettings>
 
-                <maps:MapShapeLayer.DataLabelSettings>
-
-                    <maps:MapDataLabelSettings   DataLabelPath="Continent"/>
-
-                </maps:MapShapeLayer.DataLabelSettings>
-
-            </maps:MapShapeLayer>
-            
-        </maps:SfMaps.Layer>
-        
-    </maps:SfMaps>
+            </map:MapShapeLayer>
+        </map:SfMaps.Layer>
+    </map:SfMaps>
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 public MainPage()
 {
@@ -66,7 +60,7 @@ public MainPage()
     maps.Layer = layer;
     this.Content = maps;
 }
-class Model
+public class Model
 {
     public Model(string continent, string continentCode)
     {
@@ -78,55 +72,70 @@ class Model
 }
 
 {% endhighlight %}
+
 {% endtabs %}
 
 ![Data labels support](images/data-labels/default-data-labels.png)
 
 ## Text customization
 
-You can customize text of the data labels using the [`MapShapeSource.DataLabelPath`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/dataLabelMapper.html) property.
+You can customize text of the data labels using the [`MapDataLabelSettings.DataLabelPath`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/dataLabelMapper.html) property.
 
 {% tabs %}
 
-{% highlight xml %}
+{% highlight xaml %}
 
-     <maps:SfMaps x:Name="sfmap" >
-        
-        <maps:SfMaps.Layer>
+     <map:SfMaps>
+        <map:SfMaps.Layer>
+            <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"  DataSource="{Binding Data}" PrimaryValuePath="Continent" ShapeDataField="continent" ShowDataLabels = "True"  >
 
-            <maps:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"  DataSource="{Binding Data}" PrimaryValuePath="Continent" ShapeDataField="continent" ShowDataLabels = "True"  >
+                <map:MapShapeLayer.DataLabelSettings>
+                    <map:MapDataLabelSettings   DataLabelPath="ContinentCode"/>
+                </map:MapShapeLayer.DataLabelSettings>
 
-                <maps:MapShapeLayer.DataLabelSettings>
-
-                    <maps:MapDataLabelSettings   DataLabelPath="ContinentCode"/>
-
-                </maps:MapShapeLayer.DataLabelSettings>
-
-            </maps:MapShapeLayer>
-            
-        </maps:SfMaps.Layer>
-        
+            </map:MapShapeLayer>
+        </map:SfMaps.Layer>
     </maps:SfMaps>
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
-SfMaps maps = new SfMaps();
-        MapShapeLayer layer = new MapShapeLayer();
-        layer.ShapesSource = MapSource.FromResource("world-map.json");
-        layer.DataSource = Data;
-        layer.PrimaryValuePath = "Continent";
-        layer.ShapeDataField = "continent";
-        layer.ShowDataLabels = true;
+public MainPage()
+{
+    InitializeComponent();
+    ObservableCollection<Model> Data = new ObservableCollection<Model>();
+    Data.Add(new Model("Asia", "Asia"));
+    Data.Add(new Model("Europe", "EU"));
+    Data.Add(new Model("North America", "NA"));
+    Data.Add(new Model("South America", "SA"));
+    Data.Add(new Model("Australia", "Australia"));
+    Data.Add(new Model("Africa", "Africa"));
+    SfMaps maps = new SfMaps();
+    MapShapeLayer layer = new MapShapeLayer();
+    layer.ShapesSource = MapSource.FromResource("world-map.json");
+    layer.DataSource = Data;
+    layer.PrimaryValuePath = "Continent";
+    layer.ShapeDataField = "continent";
+    layer.ShowDataLabels = true;
 
-        layer.DataLabelSettings = new MapDataLabelSettings()
-        {
-            DataLabelPath = "ContinentCode",
-        };
-
-        maps.Layer = layer;
-        this.Content = maps;
+    layer.DataLabelSettings = new MapDataLabelSettings()
+    {
+       DataLabelPath = "ContinentCode",
+    };
+    maps.Layer = layer;
+    this.Content = maps;
+}
+public class Model
+{
+    public Model(string continent, string continentCode)
+    {
+        Continent = continent;
+        ContinentCode = continentCode;
+    }
+     public String Continent { get; set; }
+     public String ContinentCode { get; set; }
+}
 
 {% endhighlight %}
 
@@ -136,35 +145,28 @@ SfMaps maps = new SfMaps();
 
 ## Overflow mode
 
-You can trim or remove the data label when it is overflowed from the shape using the [`MapDataLabelSettings.OverflowMode`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapDataLabelSettings/overflowMode.html) property. The possible values are `None`, `Trim`, and `Hide`. The default value of the [`OverflowMode`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapDataLabelSettings/overflowMode.html) property is `OverflowMode.None`.
+You can trim or remove the data label when it is overflowed from the shape using the [`MapDataLabelSettings.OverflowMode`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapDataLabelSettings/overflowMode.html) property. The possible values are `None`, `Trim`, and `Hide`. The default value of the [`OverflowMode`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapDataLabelSettings/overflowMode.html) property is `MapLabelOverflowMode.None`.
 
 By default, the data labels will render even if it overflows from the shape. 
 
 {% tabs %}
 
-{% highlight xml %}
+{% highlight xaml %}
 
-     <maps:SfMaps x:Name="sfmap" >
-        
-        <maps:SfMaps.Layer>
+     <map:SfMaps>
+        <map:SfMaps.Layer>
+            <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/australia.json" DataSource="{Binding Data}         "PrimaryValuePath="State" ShapeDataField="STATE_NAME" ShowDataLabels = "True"  >
 
-            <maps:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/australia.json" DataSource="{Binding Data}         "PrimaryValuePath="State" ShapeDataField="STATE_NAME" ShowDataLabels = "True"  >
-
-                <maps:MapShapeLayer.DataLabelSettings>
-
-                    <maps:MapDataLabelSettings OverflowMode="Trim"  DataLabelPath="ContinentCode"/>
-
-                </maps:MapShapeLayer.DataLabelSettings>
-
-            </maps:MapShapeLayer>
-            
-        </maps:SfMaps.Layer>
-        
-    </maps:SfMaps>
+                <map:MapShapeLayer.DataLabelSettings>
+                    <map:MapDataLabelSettings OverflowMode="Trim"  DataLabelPath="ContinentCode"/>
+                </map:MapShapeLayer.DataLabelSettings>
+            </map:MapShapeLayer>
+        </map:SfMaps.Layer>
+    </map:SfMaps>
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 public MainPage()
 {
@@ -193,7 +195,7 @@ public MainPage()
     maps.Layer = layer;
     this.Content = maps;
 }
-class Model
+public class Model
 {
     public Model(string state, string stateCode)
     {
@@ -205,6 +207,7 @@ class Model
 }
 
 {% endhighlight %}
+
 {% endtabs %}
 
 ![Data labels trim support](images/data-labels/data-labels-overflow-mode.png)
@@ -215,38 +218,30 @@ You can customize the data labels using the [`MapDataLabelSettings.DataLabelStyl
 
 {% tabs %}
 
-{% highlight xml %}
+{% highlight xaml %}
 
-     <maps:SfMaps x:Name="sfmap" >
-        
-        <maps:SfMaps.Layer>
+     <map:SfMaps>
+        <map:SfMaps.Layer>
+            <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/australia.json"  DataSource="{Binding Data}" PrimaryValuePath="State" ShapeDataField="STATE_NAME" ShowDataLabels = "True"  >
 
-            <maps:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/australia.json"  DataSource="{Binding Data}" PrimaryValuePath="State" ShapeDataField="STATE_NAME" ShowDataLabels = "True"  >
-
-                <maps:MapShapeLayer.DataLabelSettings>
-
-                    <maps:MapDataLabelSettings OverflowMode="Trim"  DataLabelPath="ContinentCode"/>
-
-                    <map:MapDataLabelSettings.DataLabelStyle>
+                <map:MapShapeLayer.DataLabelSettings>
+                    <map:MapDataLabelSettings OverflowMode="Trim"  DataLabelPath="ContinentCode"/>
+                          <map:MapDataLabelSettings.DataLabelStyle>
                                     <map:MapLabelStyle x:Name="labelStyle"
                                                    FontSize="12"
                                                    TextColor="Red"
                                                    FontAttributes="Bold"/>
                                 </map:MapDataLabelSettings.DataLabelStyle>
                             </map:MapDataLabelSettings>
+                </map:MapShapeLayer.DataLabelSettings>
 
-                </maps:MapShapeLayer.DataLabelSettings>
-
-            </maps:MapShapeLayer>
-            
-        </maps:SfMaps.Layer>
-        
-    </maps:SfMaps>
+            </map:MapShapeLayer>
+        </map:SfMaps.Layer>
+    </map:SfMaps>
 
 {% endhighlight %}
 
-
-{% highlight C# %}
+{% highlight c# %}
 
 public MainPage()
 {
@@ -281,7 +276,7 @@ public MainPage()
     maps.Layer = layer;
     this.Content = maps;
 }
-class Model
+public class Model
 {
     public Model(string state, string stateCode)
     {
