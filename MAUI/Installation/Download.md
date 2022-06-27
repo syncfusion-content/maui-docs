@@ -2,7 +2,7 @@
 layout: post
 title: How to download Syncfusion Essential Studio
 description: This page explains about how to download the Syncfusion Essential Studio installer based on licensed and trial customer
-platform: .NET MAUI
+platform: MAUI
 control: Installation and Deployment
 documentation: ug
 
@@ -75,4 +75,4 @@ You should initiate an evaluation if you have already obtained our components th
    ![License and downloads of Syncfusion Essential Studio](download-images/license-download.png)
 	
 	
-You can also refer to the [**Online installer**](https://help.syncfusion.com/maui/installation/install-using-the-web-installer) and [**Offline installer**](https://help.syncfusion.com/maui/installation/install-using-the-offline-installer) links for step-by-step installation guidelines.	
+You can also refer to the [**Online installer**](https://help.syncfusion.com/xamarin/installation/install-using-the-web-installer) and [**Offline installer**](https://help.syncfusion.com/xamarin/installation/install-using-the-offline-installer) links for step-by-step installation guidelines.	
