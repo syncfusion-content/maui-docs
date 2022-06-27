@@ -17,6 +17,7 @@ The datagrid provides the following callbacks to handle interactions to the cell
 * `CellDoubleTapped` : Called when user is tapped a cell with a primary button at the same cell twice in quick succession.
 * `CellLongPress` : Called when a long press gesture with a primary button has been recognized for a cell. 
 
+
 ### CellTapped event
 
 This event will be triggered while tapping the SfDataGrid with `DataGridCellTappedEventArgs` properties as follows:
