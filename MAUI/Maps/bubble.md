@@ -13,40 +13,34 @@ Bubbles can be rendered in different colors and sizes based on the data values o
 
 ## Enable bubbles
 
-You can enable bubbles using the [`MapShapeLayer.BubbleSettings`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/bubbleSizeMapper.html). This property is used to specify the value based on which the bubble's size has to be rendered.
+You can enable bubbles using the [`MapShapeLayer.ShowBubbles`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/bubbleSizeMapper.html). 
+You can customize a bubbles using the [`MapShapeLayer.BubbleSettings`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/bubbleSizeMapper.html).This property is used to specify the value based on which the bubble's size has to be rendered.
 
 {% tabs %}
 
-{% highlight xml %}
+{% highlight xaml %}
 
-     <maps:SfMaps>
-        
-        <maps:SfMaps.Layer>
-
+     <map:SfMaps>
+        <map:SfMaps.Layer>
             <map:MapShapeLayer 
                   ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
                   DataSource="{Binding Data}" PrimaryValuePath="Continent" ShapeDataField="continent" ShowBubbles="True" >
 
               <map:MapShapeLayer.BubbleSettings>
-
                   <map:MapBubbleSettings ColorValuePath="Population" 
                       SizeValuePath="Population" 
                       Fill="DarkViolet"
                       MinSize="30"
                       MaxSize="80">
                   </map:MapBubbleSettings>
-
               </map:MapShapeLayer.BubbleSettings>
-
-            </maps:MapShapeLayer>
-            
-        </maps:SfMaps.Layer>
-        
-    </maps:SfMaps>
+            </map:MapShapeLayer>
+        </map:SfMaps.Layer>
+    </map:SfMaps>
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 public MainPage()
 {
@@ -81,7 +75,7 @@ public MainPage()
         maps.Layer = layer;
         this.Content = maps;
     }
-    class Model
+    public class Model
     {
         public Model(string continent, int population)
         {
@@ -104,18 +98,15 @@ You can enable tooltip for the bubbles using the [`MapShapeLayer.ShowBubbleToolt
 
 {% tabs %}
 
-{% highlight xml %}
+{% highlight xaml %}
 
-     <maps:SfMaps>
-        
-        <maps:SfMaps.Layer>
-
+     <map:SfMaps>
+        <map:SfMaps.Layer>
             <map:MapShapeLayer 
                   ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"  ShowBubbleTooltip="True"
                   DataSource="{Binding Data}" PrimaryValuePath="Continent" ShapeDataField="continent" ShowBubbles="True" >
 
-              <map:MapShapeLayer.BubbleSettings>
-
+                <map:MapShapeLayer.BubbleSettings>
                   <map:MapBubbleSettings ColorValuePath="Population" 
                       SizeValuePath="Population" 
                       Fill="LightGreen"
@@ -124,26 +115,22 @@ You can enable tooltip for the bubbles using the [`MapShapeLayer.ShowBubbleToolt
                       MinSize="30"
                       MaxSize="80">
                   </map:MapBubbleSettings>
-
-              </map:MapShapeLayer.BubbleSettings>
-
-            </maps:MapShapeLayer>
-            
-        </maps:SfMaps.Layer>
-        
-    </maps:SfMaps>
+                </map:MapShapeLayer.BubbleSettings>
+            </map:MapShapeLayer>
+        </map:SfMaps.Layer>
+    </map:SfMaps>
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 Data = new ObservableCollection<Model>();
-        Data.Add(new Model("Asia",Colors.Red, 51));
-        Data.Add(new Model("Africa", Colors.Violet, 58));
-        Data.Add(new Model("Europe", Colors.SkyBlue, 48));
-        Data.Add(new Model("North America", Colors.LightGreen, 41));
-        Data.Add(new Model("South America", Colors.Yellow, 14));
-        Data.Add(new Model("Australia", Colors.Orange, 23));
+        Data.Add(new Model("Asia", 51));
+        Data.Add(new Model("Africa", 58));
+        Data.Add(new Model("Europe", 48));
+        Data.Add(new Model("North America", 41));
+        Data.Add(new Model("South America", 14));
+        Data.Add(new Model("Australia", 23));
         
         SfMaps maps = new SfMaps();
         MapShapeLayer layer = new MapShapeLayer();
@@ -171,18 +158,15 @@ Data = new ObservableCollection<Model>();
         this.Content = maps;
     }
    public class Model
-    {
-        public Model(string continent, Color color, int population)
+   {
+        public Model(string continent, int population)
         {
             Continent = continent;
-            BubbleColor = color;
             Population = population;
         }
         public String Continent { get; set; }
-
-        public Color BubbleColor { get; set; }
         public int Population { get; set; }
-    }
+  }
 
 {% endhighlight %}
 
@@ -200,12 +184,10 @@ If [`ColorMappings`](https://pub.dev/documentation/syncfusion_flutter_maps/lates
 
 {% tabs %}
 
-{% highlight xml %}
+{% highlight xaml %}
 
-     <maps:SfMaps>
-        
-        <maps:SfMaps.Layer>
-
+     <map:SfMaps>
+        <map:SfMaps.Layer>
             <map:MapShapeLayer 
                   ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"  ShowBubbleTooltip="True" 
                   ShapeColorValuePath = "Population" ShowDataLabels="True"
@@ -230,8 +212,8 @@ If [`ColorMappings`](https://pub.dev/documentation/syncfusion_flutter_maps/lates
                            <map:EqualColorMapping  Color="Aqua" Value="23"/>
                       </map:MapBubbleSettings.ColorMappings>
                 </map:MapBubbleSettings>
-
               </map:MapShapeLayer.BubbleSettings>
+
               <map:MapShapeLayer.DataLabelSettings>
                   <map:MapDataLabelSettings  DataLabelPath="Continent" OverflowMode="None">
                       <map:MapDataLabelSettings.DataLabelStyle>
@@ -239,15 +221,14 @@ If [`ColorMappings`](https://pub.dev/documentation/syncfusion_flutter_maps/lates
                       </map:MapDataLabelSettings.DataLabelStyle>
                   </map:MapDataLabelSettings>
               </map:MapShapeLayer.DataLabelSettings>
-            </maps:MapShapeLayer>
-            
-        </maps:SfMaps.Layer>
-        
-    </maps:SfMaps>
+
+            </map:MapShapeLayer>
+        </map:SfMaps.Layer>
+    </map:SfMaps>
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 public MainPage()
     {
@@ -306,7 +287,7 @@ public MainPage()
         maps.Layer = layer;
         this.Content = maps;
     }
-    class Model
+    public class Model
     {
         public Model(string continent, int population)
         {
@@ -338,18 +319,15 @@ You can customize the below appearance of the bubbles.
 
 {% tabs %}
 
-{% highlight xml %}
+{% highlight xaml %}
 
-     <maps:SfMaps>
-        
-        <maps:SfMaps.Layer>
-
+     <map:SfMaps>
+        <map:SfMaps.Layer>
             <map:MapShapeLayer 
                   ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"  ShowBubbleTooltip="True"
                   DataSource="{Binding Data}" PrimaryValuePath="Continent" ShapeDataField="continent" ShowBubbles="True" >
 
               <map:MapShapeLayer.BubbleSettings>
-
                   <map:MapBubbleSettings ColorValuePath="Population" 
                       SizeValuePath="Population" 
                       Fill="LightGreen"
@@ -361,29 +339,26 @@ You can customize the below appearance of the bubbles.
                       MinSize="30"
                       MaxSize="80">
                   </map:MapBubbleSettings>
-
               </map:MapShapeLayer.BubbleSettings>
 
-            </maps:MapShapeLayer>
-            
-        </maps:SfMaps.Layer>
-        
-    </maps:SfMaps>
+            </map:MapShapeLayer>
+        </map:SfMaps.Layer>
+    </map:SfMaps>
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 public MainPage()
     {
         InitializeComponent();
         ObservableCollection<Model> Data = new ObservableCollection<Model>();
-        Data.Add(new Model("Asia",Colors.Red, 51));
-        Data.Add(new Model("Africa", Colors.Violet, 58));
-        Data.Add(new Model("Europe", Colors.SkyBlue, 48));
-        Data.Add(new Model("North America", Colors.LightGreen, 41));
-        Data.Add(new Model("South America", Colors.Yellow, 14));
-        Data.Add(new Model("Australia", Colors.Orange, 23));
+        Data.Add(new Model("Asia", 51));
+        Data.Add(new Model("Africa", 58));
+        Data.Add(new Model("Europe", 48));
+        Data.Add(new Model("North America", 41));
+        Data.Add(new Model("South America", 14));
+        Data.Add(new Model("Australia", 23));
         
         SfMaps maps = new SfMaps();
         MapShapeLayer layer = new MapShapeLayer();
@@ -414,14 +389,12 @@ public MainPage()
     }
    public class Model
     {
-        public Model(string continent, Color color, int population)
+        public Model(string continent, int population)
         {
             Continent = continent;
-            BubbleColor = color;
             Population = population;
         }
         public String Continent { get; set; }
-        public Color BubbleColor { get; set; }
         public int Population { get; set; }
     }
 
