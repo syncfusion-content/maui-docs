@@ -9,13 +9,13 @@ documentation: ug
 
 # Getting started with MAUI Maps (SfMaps)
 
-This section explains the steps required to add the maps widget with shape layer and its elements such as data labels, tooltip, assignable colors based on region, and legends. This section covers only basic features needed to know to get started with Syncfusion maps.
+This section explains the steps required to add the maps widget with shape layer and its elements such as data labels, tooltip, markers, and legends. This section covers only basic features needed to know to get started with Syncfusion maps.
 
 ## Creating an application using the .NET MAUI Maps
 
 * Create a new .NET MAUI application in the Visual Studio.
 
-* Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfLinearGauge to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Maps], and [Syncfusion.Maui.Core] then install that.
+* Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfMaps to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Maps], and [Syncfusion.Maui.Core] then install that.
 
 ### Register the handler
 
@@ -60,7 +60,7 @@ Add the following namespace.
 
 {% highlight xaml %}
 
-xmlns:maps="clr-namespace:Syncfusion.Maui.Maps;assembly=Syncfusion.Maui.Maps"
+xmlns:map="clr-namespace:Syncfusion.Maui.Maps;assembly=Syncfusion.Maui.Maps"
 
 {% endhighlight %}
 
@@ -80,9 +80,9 @@ Create an instance for the maps control, and add it as content.
 
 {% highlight xaml %}
 
-<maps:SfMaps >
+<map:SfMaps >
   
-</maps:SfMaps>
+</map:SfMaps>
 
 {% endhighlight %}
 
@@ -100,9 +100,9 @@ this.Content = map;
 
 The [`Layer`]() in [`SfMaps`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html) contains collection of [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html). The actual geographical rendering is done in the each [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html). The [`ShapesSource`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/source.html) property of the [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html) is of type [`MapShapeSource`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource-class.html). The [`ShapesSource`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/source.html) can be set as the .json source from file, from network and from stream as bytes. Use the respective constructor depends on the type of the source.
 
-The [`ShapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeDataField.html) property of the [`MapShapeSource`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource-class.html) is used to refer the unique field name in the .json source to identify each shapes. In [`Mapping the data source`](https://help.syncfusion.com/flutter/maps/getting-started#mapping-the-data-source-for-shape-layer) section of this document, this [`ShapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeDataField.html) will be used to map with respective value returned in [`PrimaryValuePath`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/primaryValueMapper.html) from the data source.
+The [`ShapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeDataField.html) property of the [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource-class.html) is used to refer the unique field name in the .json source to identify each shapes. In [`Mapping the data source`](https://help.syncfusion.com/flutter/maps/getting-started#mapping-the-data-source-for-shape-layer) section of this document, this [`ShapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeDataField.html) will be used to map with respective value returned in [`PrimaryValuePath`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/primaryValueMapper.html) from the data source.
 
-N> It supports reading and loading the shape files. A shape file can be a set of files or a single file. 
+N> It supports reading and loading the shape files in .shp file format.
 
 I> The Mercator projection is the default projection in the maps.
 
@@ -114,17 +114,16 @@ N> You can get the [`australia.json`](https://www.syncfusion.com/downloads/suppo
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 public MapSourcePage()
 {
     InitializeComponent();
-    SfMaps maps = new SfMaps();
+    SfMaps map = new SfMaps();
     MapShapeLayer layer = new MapShapeLayer();
     layer.ShapesSource = MapSource.FromResource("australia.json");
-    layer.ShapeDataField = "STATE_NAME";
-    maps.Layer = layer;
-    this.Content = maps;
+    map.Layer = layer;
+    this.Content = map;
 }
 
 {% endhighlight %}
@@ -137,17 +136,16 @@ Load .json data from the network.
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 public MapSourcePage()
 {
     InitializeComponent();
-    SfMaps maps = new SfMaps();
+    SfMaps map = new SfMaps();
     MapShapeLayer layer = new MapShapeLayer();
     layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/australia.json"));
-    layer.ShapeDataField = "STATE_NAME";
-    maps.Layer = layer;
-    this.Content = maps;
+    map.Layer = layer;
+    this.Content = map;
 }
 
 {% endhighlight %}
@@ -165,14 +163,13 @@ Load .json data as bytes from stream.
 public MapSourcePage()
 {
     InitializeComponent();
-    SfMaps maps = new SfMaps();
+    SfMaps map = new SfMaps();
     MapShapeLayer layer = new MapShapeLayer();
     Assembly assembly = Application.Current?.GetType().GetTypeInfo().Assembly;
     var jsonStream = assembly?.GetManifestResourceStream("australia.json");
     layer.ShapesSource = MapSource.FromStream(jsonStream);
-    layer.ShapeDataField = "STATE_NAME";
-    maps.Layer = layer;
-    this.Content = maps;
+    map.Layer = layer;
+    this.Content = map;
 }
 
 {% endhighlight %}
@@ -187,7 +184,7 @@ By default, the value specified for the [`ShapeDataField`](https://pub.dev/docum
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 public MapSourcePage()
 {
@@ -208,7 +205,7 @@ public MapSourcePage()
     this.Content = maps;
 }
 
-class Model
+public class Model
 {
     public Model(string state, string stateCode)
     {
@@ -235,7 +232,7 @@ Add the basic maps elements such as data labels, legend, and tooltip as shown in
 
 * **Data labels** - You can show data labels using the [`MapShapeLayer.ShowDataLabels`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/showDataLabels.html) property and also, it is possible to show data labels only for the particular shapes/or show custom text using the [`MapShapeLayer.DataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/dataLabelMapper.html) property.
 
-* **Legend** - You can enable legend using the [`MapShapeLayer.Legend`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/legend.html) property. The icons color of the legend is applied based on the colors returned in the [`MapLegend SourceType`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeColorValueMapper.html) property. It is possible to customize the legend text customizations using the [`MapLegend.TextStyle`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeColorMappers.html) property.
+* **Legend** - You can enable legend using the [`MapShapeLayer.Legend`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/legend.html) property. The icons color of the legend is applied based on the colors returned in the [`MapShapeLayer.ColorMappings`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeColorValueMapper.html) property. It is possible to customize the legend text customizations using the [`MapLegend.TextStyle`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeColorMappers.html) property.
 
 * **Tooltip** - You can enable tooltip for the shapes using the [`MapShapeLayer. ShowShapeTooltip`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/shapeTooltipBuilder.html) property. It will be called with the corresponding index every time when you interacts with the shapes i.e., while tapping in touch devices and hover enter in the mouse enabled devices.
 
@@ -290,7 +287,7 @@ public MapSourcePage()
         this.Content = maps;
     }
 
-    class Model
+    public class Model
     {
         public Model(string state, string stateCode,int population)
         {
@@ -310,4 +307,4 @@ public MapSourcePage()
 ![Maps getting started](images/getting-started/maps_getting_started.png)
 
 
-N> You can refer to our [MAUI Maps](https://www.syncfusion.com/flutter-widgets/flutter-maps) feature tour page for its groundbreaking feature representations. You can also explore our [MAUI Maps example](https://flutter.syncfusion.com/#/maps/shape-layer/range-color-mapping) that shows how to configure a Maps in Flutter.
+N> You can refer to our [MAUI Maps](https://www.syncfusion.com/flutter-widgets/flutter-maps) feature tour page for its groundbreaking feature representations. You can also explore our [MAUI Maps example](https://flutter.syncfusion.com/#/maps/shape-layer/range-color-mapping) that shows how to configure a Maps in MAUI.
