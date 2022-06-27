@@ -42,4 +42,4 @@ public App()
 
 
 
-N> Refer to this [link](https://help.syncfusion.com/maui/licensing/licensing-errors) for common licensing errors
+N> Refer to this [link](https://help.syncfusion.com/maui/Licensing/licensing-errors) for common licensing errors

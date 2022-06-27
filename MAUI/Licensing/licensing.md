@@ -35,5 +35,5 @@ This application was built using a trial version of Syncfusion Essential Studio.
 
 ## See Also
 
-* [How to Generate Syncfusion .NET MAUI License Key?](https://help.syncfusion.com/maui/licensing/generating-license-keys)
-* [How to Register Syncfusion License Key in the Application?](https://help.syncfusion.com/maui/licensing/registering-license-keys)
+* [How to Generate Syncfusion .NET MAUI License Key?](https://help.syncfusion.com/maui/Licensing/generating-license-keys)
+* [How to Register Syncfusion License Key in the Application?](https://help.syncfusion.com/maui/Licensing/registering-license-keys)
