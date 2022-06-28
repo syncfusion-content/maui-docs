@@ -1,557 +1,330 @@
 ---
 layout: post
-title: Resource View in Xamarin Scheduler control | Syncfusion
-description: Learn here all about Resource View support in Syncfusion Xamarin Scheduler (SfSchedule) control and more.
-platform: xamarin
+title: Resource in MAUI Scheduler control | Syncfusion
+description:  Learn here all about grouping the appointments based on the resources in the day, week, and timeline views in Syncfusion WinUI Scheduler (SfScheduler) control.
+platform: maui
 control: SfScheduler
 documentation: ug
 ---
 
-# Resource View in Xamarin Scheduler (SfSchedule)
+# Resource in MAUI Scheduler (SfScheduler)
 
-Resource view displays the resources as discrete views integrated with the scheduler to display appointments in all types of schedule views. It provides an intuitive user interface, which allows users to select single or multiple resources and display the events associated with the selected resources with efficient and effective utilization. Each resource can be assigned to a unique color to more easily identify the resource associated with an appointment. 
+The scheduler resource view will allow the group appointments based on the resources or dates, arranged by the column, or row in the day, week, workweek, timeline day, timeline week, timeline workweek, and timeline month views. It also allows to share the events or appointments to the multiple resources and resource appointment details that can be edited by using a built-in appointment editor dialog.
 
-You can add resources that can be assigned to appointments using the [ScheduleResources](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_ScheduleResources) property of `SfSchedule`. You need to set the [Name](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ScheduleResource.html#Syncfusion_SfSchedule_XForms_ScheduleResource_Name), [Id](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ScheduleResource.html#Syncfusion_SfSchedule_XForms_ScheduleResource_Id), and [Color](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ScheduleResource.html#Syncfusion_SfSchedule_XForms_ScheduleResource_Color) properties of [ScheduleResource](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ScheduleResource.html) to create a resource.
+## Assigning resources to appointments
 
-{% tabs %}
-{% highlight xaml %}
-<syncfusion:SfSchedule
-          x:Name="schedule"
-          ScheduleView="WeekView" 
-          ShowResourceView="True">
-          <syncfusion:SfSchedule.ScheduleResources>
-               <syncfusion:ScheduleResource 
-                    Name="Brooklyn" 
-                    Id="5601" 
-                    Color="#FF3399" />
-          </syncfusion:SfSchedule.ScheduleResources>
-</syncfusion:SfSchedule>
-{% endhighlight %}
-{% highlight c# %}
-// Creating an instance for schedule resource collection.
-ObservableCollection<object> resources = new ObservableCollection<object>();
-
-// Adding schedule resource in schedule resource collection.
-resources.Add(new ScheduleResource() 
-{ 
-     Name = "Brooklyn", 
-     Id = 5601, 
-     Color = Color.FromHex("#FF3399") 
-});
-
-// Adding schedule resource collection to schedule resources of SfSchedule.
-schedule.ScheduleResources = resources;
-{% endhighlight %}
-{% endtabs %}
-
-You can download the custom resource demo for Xamarin.Forms from [here](https://github.com/SyncfusionExamples/Resource-view/tree/master/ResourceView).
-
-![Resource view in xamarin forms](resource-view-images/xamarin-forms-resource-view.jpg)
-
-## Resource view visibility
-
-You can handle the visibility of resource view using the [ShowResourceView](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_ShowResourceView) bool property of `SfSchedule`. By default, value of this property is set to false.
+Appointments associated with the scheduler [ResourceCollection](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Scheduler.SfScheduler.html#Syncfusion_UI_Xaml_Scheduler_SfScheduler_ResourceCollection)  will be displayed by setting the schedule resource Id in the [ScheduleAppointment](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Scheduler.ScheduleAppointment.html) by using the [ResourceIdCollection](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Scheduler.ScheduleAppointment.html#Syncfusion_UI_Xaml_Scheduler_ScheduleAppointment_ResourceIdCollection). For [ResourceGroupType](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Scheduler.ResourceGroupType.html) set as [Resource](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Scheduler.ResourceGroupType.html#Syncfusion_UI_Xaml_Scheduler_ResourceGroupType_Resource) or [Date](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Scheduler.ResourceGroupType.html#Syncfusion_UI_Xaml_Scheduler_ResourceGroupType_Date). Also assign the resources to `recurrence appointments.`
 
 {% tabs %}
-{% highlight xaml %}
-<schedule:SfSchedule ScheduleView="WeekView" ShowResourceView="True" />
+{% highlight xaml tabtitle="MainWindow.xaml" hl_lines="3" %}
+
+{% include_relative code-snippet/resourceview.xaml %}
+
 {% endhighlight %}
-{% highlight c# %}
-schedule.ScheduleView = ScheduleView.WeekView;
-schedule.ShowResourceView = true;
-{% endhighlight %}
-{% endtabs %}
-
-## Assigning events for resources
-
-You can associate `Resources` to the appointments by adding `Id` of resource in the [ResourceIds](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ScheduleAppointment.html#Syncfusion_SfSchedule_XForms_ScheduleAppointment_ResourceIds) property of `ScheduleAppointment`. Appointments associated with the selected resources will be displayed in the `SfSchedule` views. 
-
-{% tabs %}
-{% highlight c# %}
-// Creating an instance for schedule appointment collection
-ScheduleAppointmentCollection scheduleAppointmentCollection = new ScheduleAppointmentCollection();
-//Adding schedule appointment in schedule appointment collection 
-scheduleAppointmentCollection.Add(new ScheduleAppointment()
+{% highlight c# tabtitle="MainWindow.xaml.cs" hl_lines="9" %}
+// Creating an instance for the schedule appointment collection.
+var scheduleAppointmentCollection = new ScheduleAppointmentCollection();
+//Adding schedule appointment in the schedule appointment collection. 
+var appointments = new ScheduleAppointment()
 {
-     StartTime = new DateTime(2019, 05, 08, 10, 0, 0),
-     EndTime = new DateTime(2019, 05, 08, 12, 0, 0),
-     Subject = "Meeting",
-     Location = "Hutchison road",
-     ResourceIds = new ObservableCollection<object> { 5601, 5602 }
-});
-
-//Adding schedule appointment collection to DataSource of SfSchedule
-schedule.DataSource = scheduleAppointmentCollection;
+    StartTime = DateTime.Now,
+    EndTime = DateTime.Now.AddHours(2),
+    Subject = "General Meeting",
+    ResourceIdCollection = new ObservableCollection<object>() { "1000", "1001" }
+};
+//Adding the schedule appointment to the schedule appointment collection.
+scheduleAppointmentCollection.Add(appointments);
+//Adding the schedule appointment collection to the ItemsSource of SfScheduler.
+this.Schedule.ItemsSource = scheduleAppointmentCollection;
 {% endhighlight %}
 {% endtabs %}
 
-## Assigning custom events to resources
+#### Multiple resource sharing
 
-You can associate resources to the custom appointments using the equivalent field of `ResourceIds` in custom appointment class.
-
-### Creating custom events
-
-You can create a custom class `Event` with mandatory fields `From`, `To`, `EventName`, and `Resources`. 
+Multiple resources can share the same events or appointments. If the appointment details are edited or updated, then the changes will be reflected on all other shared instances simultaneously.
 
 {% tabs %}
-{% highlight c# %}
-/// <summary>
-/// Represents custom data properties.
-/// </summary>
-public class Event
+{% highlight xaml tabtitle="MainWindow.xaml" hl_lines="3" %}
+
+{% include_relative code-snippet/resourceview.xaml %}
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainWindow.xaml.cs" hl_lines="9" %}
+// Creating an instance for schedule appointment collection.
+var scheduleAppointmentCollection = new ScheduleAppointmentCollection();
+//Adding schedule appointment in the schedule appointment collection. 
+var appointments = new ScheduleAppointment()
 {
-	public string EventName { get; set; }
-	public DateTime From { get; set; }
-	public DateTime To { get; set; }
-	public Color Color { get; set; }
-	public ObservableCollection<object> Resources { get; set; }
-}
+   StartTime = DateTime.Now,
+   EndTime = DateTime.Now.AddHours(2),
+   Subject = "General Meeting",
+   ResourceIdCollection = new ObservableCollection<object>() { "1000", "1001","1002" },
+   AppointmentBackground = new SolidColorBrush(Color.FromArgb(255, 133, 81, 242)),
+};
+//Adding the schedule appointment to the schedule appointment collection.
+scheduleAppointmentCollection.Add(appointments);
+//Adding the schedule appointment collection to the ItemsSource of SfScheduler.
+this.Schedule.ItemsSource = scheduleAppointmentCollection;
 {% endhighlight %}
 {% endtabs %}
 
->**NOTE**
-You can inherit this class from `INotifyPropertyChanged` for dynamic changes in custom data.
+![multiple-resource-sharing-resourcegroup-as-resource-week-view-in-winui-scheduler](Resource_Images/multiple-resource-sharing-resourcegroup-as-resource-week-view-in-winui-scheduler.png)
 
-You can map the properties of `Meeting` class with our `SfSchedule` control using `ScheduleAppointmentMapping`.
+![multiple-resource-sharing-resourcegroup-as-resource-timelineweek-view-in-winui-scheduler](Resource_Images/multiple-resource-sharing-resourcegroup-as-resource-timelineweek-view-in-winui-scheduler.png)
 
-{% tabs %}
-{% highlight xaml %}
-<syncfusion:SfSchedule x:Name="schedule" ScheduleView="DayView" DataSource="{Binding Meetings}">
-     <syncfusion:SfSchedule.AppointmentMapping>
-          <syncfusion:ScheduleAppointmentMapping
-               SubjectMapping="EventName"
-               ColorMapping="Color"
-               StartTimeMapping="From"
-               EndTimeMapping="To"
-               ResourceIdsMapping="Resources">
-          </syncfusion:ScheduleAppointmentMapping>
-     </syncfusion:SfSchedule.AppointmentMapping>
-</syncfusion:SfSchedule>
-{% endhighlight %}
-{% highlight c# %}
-// Schedule data mapping for custom appointments.
-ScheduleAppointmentMapping dataMapping = new ScheduleAppointmentMapping();
-dataMapping.SubjectMapping = "EventName";
-dataMapping.StartTimeMapping = "From";
-dataMapping.EndTimeMapping = "To";
-dataMapping.ColorMapping = "Color";
-dataMapping.ResourceIdsMapping = "Resources";
-schedule.AppointmentMapping = dataMapping;
-{% endhighlight %}
-{% endtabs %}
+## Scheduler resource mapping
 
-You can associate resources to the custom events by adding `Id` of resource in the `Resources` property of custom appointment class.
-
-{% tabs %}
-{% highlight c# %}
-// Creating an instance for custom appointment class.
-Meeting meeting = new Meeting();
-meeting.From = new DateTime(2017, 06, 11, 10, 0, 0);
-meeting.To = meeting.From.AddHours(2);
-meeting.EventName = "Client Meeting";
-meeting.Color = Color.Green;
-
-// Setting resources for an event.
-meeting.Resources = new ObservableCollection<object> () {5601, 5604};
-{% endhighlight %}
-{% endtabs %}
-
->**NOTE**
-* You can also associate custom resources to the appointments by using the equivalent field of resource `Id` in custom resource class.
-* All appointments will be displayed when the `ShowResourceView` property is set to false.
-* If an appointment is mapped to a single resource, it will be displayed in resource `Color`. If an appointment is mapped to multiple resources, it will be displayed in the default appointment `Color`.
-
-
-## Mapping
-
-Schedule supports full data binding to any type of `IEnumerable` source. Specify the [ResourceMapping](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_ResourceMapping) attribute to map the properties in the underlying data source to the schedule resource.
+The Schedule supports full data binding to [ResourceCollection](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Scheduler.SfScheduler.html#Syncfusion_UI_Xaml_Scheduler_SfScheduler_ResourceCollection). Specify the [ResourceMapping](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Scheduler.ResourceMapping.html) attribute to map the properties in the underlying data source to the schedule resource.
 
 | Property Name | Description |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| [Name](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ResourceMapping.html#Syncfusion_SfSchedule_XForms_ResourceMapping_Name) | Maps the property name of custom class, which is equivalent to Name in ScheduleResource. |
-| [Id](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ResourceMapping.html#Syncfusion_SfSchedule_XForms_ResourceMapping_Id) | Maps the property name of custom class, which is equivalent to Id in ScheduleResource. |
-| [Image](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ResourceMapping.html#Syncfusion_SfSchedule_XForms_ResourceMapping_Image) | Maps the property name of custom class, which is equivalent to Image in ScheduleResource. |
-| [Color](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ResourceMapping.html#Syncfusion_SfSchedule_XForms_ResourceMapping_Color) | Maps the property name of custom class, which is equivalent to Color in ScheduleResource. |
+| Name | Maps the property name of custom class, which is equivalent to Name in ScheduleResource. |
+| Id | Maps the property name of custom class, which is equivalent to Id in ScheduleResource. |
+| Background | Maps the property name of custom class, which is equivalent to Background in ScheduleResource. |
+| Foreground | Maps the property name of custom class, which is equivalent to Foreground in ScheduleResource. |
 
->**NOTE**
-Custom resource class should contain a mandatory field for resource `Id`.
+N> Custom resource class should contain a mandatory field for resource `Id`.
 
-### Creating a custom resource
+## Create business object for resource
 
-You can create a custom class `Employee` with required fields such as `Name`, `Id`, `Color`, and `DisplayPicture`.
+Create a custom class employee with mandatory fields `Name,` `Id,` `ForegroundColor,` and `BackgroundColor.` Also assign the resources to `recurrence appointments.`
 
 {% tabs %}
-{% highlight c# %}
-/// <summary>   
-/// Represents custom data properties.   
-/// </summary> 
+{% highlight c# tabtitle="Employee.cs" hl_lines="6" %}
 public class Employee
 {
-     public string Name { get; set; }
-     public object Id { get; set; }
-     public Color Color { get; set; }
-     public string DisplayPicture { get; set; }
+   public string Name {get; set;}
+
+   public string Id {get; set;}
+
+   public Brush BackgroundColor {get; set; }
+
+   public Brush ForegroundColor {get; set; }
 }
+
 {% endhighlight %}
 {% endtabs %}
 
->**NOTE**
-You can inherit this class from `INotifyPropertyChanged` for dynamic changes in custom data.
-
-You can map the properties of `Employee` class with our `SfSchedule` control using `ResourceMapping`.
+Map the properties of the `Employee` class with SfScheduler control using the Scheduler `ResourceMapping.`
 
 {% tabs %}
-{% highlight xaml %}
-<schedule:SfSchedule ScheduleView="WeekView" ShowResourceView="True">
-     <schedule:SfSchedule.ResourceMapping>
-          <schedule:ResourceMapping Name="Name"
-                                    Id="Id"
-                                    Color="Color"
-                                    Image="DisplayPicture"/>
-     </schedule:SfSchedule.ResourceMapping>
-</schedule:SfSchedule>
+{% highlight xaml tabtitle="MainWindow.xaml" hl_lines="2 3 4" %}
+<scheduler:SfScheduler Name="Schedule" ViewType="Week" ResourceGroupType="Resource">
+    <scheduler:SfScheduler.ResourceMapping>
+       <scheduler:ResourceMapping Id="Id" Name="Name" Background="BackgroundColor" Foreground="ForegroundColor"/>
+    </scheduler:SfScheduler.ResourceMapping>
+</scheduler:SfScheduler>
 {% endhighlight %}
-{% highlight c# %}
-// Creating an instance for resource mapping.
+{% highlight c# tabtitle="MainWindow.xaml.cs" hl_lines="2 7" %}
+ // Schedule data mapping for custom resource.
 ResourceMapping resourceMapping = new ResourceMapping();
-
-// Mapping the custom data fields. 
 resourceMapping.Name = "Name";
 resourceMapping.Id = "Id";
-resourceMapping.Color = "Color";
-resourceMapping.Image = "DisplayPicture";
-schedule.ResourceMapping = resourceMapping;
+resourceMapping.Background = "BackgroundColor";
+resourceMapping.Foreground = "ForegroundColor";
+this.Schedule.ResourceMapping = resourceMapping;
 {% endhighlight %}
 {% endtabs %}
 
-You can create a resource by setting `Id`, `Name`, `Color` and `DisplayPicture` of the `Employee` class. Create resources of type `ObservableCollection<Employee>` and assign this resource collection to the `ScheduleResources` property of `SfSchedule`.
+#### Assign resource object collection
+
+Add the resources of `Employee` collection that can be assigned to the scheduler using the [ResourceCollection](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Scheduler.SfScheduler.html#Syncfusion_UI_Xaml_Scheduler_SfScheduler_ResourceCollection) property which is of `IEnumerable` type. Also add or remove scheduler resources dynamically.
 
 {% tabs %}
-{% highlight c# %}
-public ObservableCollection<object> Employees { get; set; }
-
-// Creating an instance for collection of custom resources.
-Employees = new ObservableCollection<object>();
-
-// Creating an instance for custom appointment class.
-Employee employee = new Employee();
-
-employee.Name = "Kinsley Elena";
-employee.Id = 5601;
-employee.Color = Color.FromHex("#FFE671B8");
-employee.DisplayPicture = "KinsleyElena.png";
-
-// Adding a custom resource in custom resource collection.
-Employees.Add(employee);
-
-// Adding a custom resource collection to schedule resources.
-schedule.ScheduleResources = Employees;
+{% highlight xaml tabtitle="MainWindow.xaml" hl_lines="2 3 4" %}
+<scheduler:SfScheduler Name="Schedule" ViewType="Week" ResourceGroupType="Resource">
+    <scheduler:SfScheduler.ResourceMapping>
+       <scheduler:ResourceMapping Id="Id" Name="Name" Background="BackgroundColor" Foreground="ForegroundColor"/>
+    </scheduler:SfScheduler.ResourceMapping>
+</scheduler:SfScheduler>
 {% endhighlight %}
-{% endtabs %}
-
-## Resource view mode
-
-The `SfSchedule` control provides support to view the appointments of either selected resource or entire resource in timeline view using the [ResourceViewMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_ResourceViewMode) property of `SfSchedule`.
-
-`Selection`: Displays the appointments of selected resource.
-`Absolute`: Displays the appointments of entire resource.
-
-{% tabs %}
-{% highlight xaml %}
-<schedule:SfSchedule ScheduleView="TimelineView" ResourceViewMode="Absolute" />
-{% endhighlight %}
-{% highlight c# %}
-schedule.ScheduleView = ScheduleView.TimelineView;
-schedule.ResourceViewMode = ResourceViewMode.Absolute;
-{% endhighlight %}
-{% endtabs %}
-
-![Selection mode in xamarin forms Resource view](resource-view-images/xamarin-forms-schedule-resource-view-mode.png)
-
->**NOTE**
-* `Absolute` option in the `ResourceViewMode` is applicable only for timeline view.
-* If an appointment is mapped to a single resource and `ResourceViewMode` is `Selection`, it will be displayed in resource color. If an appointment is mapped to multiple resources or `ResourceViewMode` is `Absolute`, it will be displayed in the default appointment color.
-
-## Selection mode
-
-The `SfSchedule` control provides support to select single or multiple resources using the [SelectionMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ResourceViewSettings.html#Syncfusion_SfSchedule_XForms_ResourceViewSettings_SelectionMode) property of [ResourceViewSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_ResourceViewSettings) in `SfSchedule`.
-
-{% tabs %}
-{% highlight xaml %}
-<schedule:SfSchedule ScheduleView="WeekView" ShowResourceView="True">
-     <schedule:SfSchedule.ResourceViewSettings>
-          <schedule:ResourceViewSettings SelectionMode="Multiple"/>
-     </schedule:SfSchedule.ResourceViewSettings>
-</schedule:SfSchedule>
-{% endhighlight %}
-{% highlight c# %}
-schedule.ScheduleView = ScheduleView.WeekView;
-schedule.ShowResourceView = true;
-ResourceViewSettings resourceViewSettings = new ResourceViewSettings();
-resourceViewSettings.SelectionMode = SelectionMode.Multiple;
-schedule.ResourceViewSettings = resourceViewSettings;
-{% endhighlight %}
-{% endtabs %}
-
-![Selection mode in xamarin forms Resource view](resource-view-images/xamarin-forms-resource-view-selection-mode.png)
-
->**NOTE**
-In timeline view, [SelectionMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ResourceViewSettings.html#Syncfusion_SfSchedule_XForms_ResourceViewSettings_SelectionMode) is applicable only when the `ResourceViewMode` is `Selection`.
-
-## Programmatic resource selection
-
-You can programmatically select single or multiple resources by adding resources to the [SelectedResources](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_SelectedResources) property of `SfSchedule`.
-
-{% tabs %}
-{% highlight c# %}
-// Creating an instance for collection of selected resources.
-ObservableCollection<object> selectedResources = new ObservableCollection<object>();
-
-// Adding selected resource in resource collection from the resources.
-selectedResources.Add(resources.FirstOrDefault(resource => (resource as ScheduleResource).Id.ToString() == "5601"));
-selectedResources.Add(resources.FirstOrDefault(resource => (resource as ScheduleResource).Id.ToString() == "5604"));
-selectedResources.Add(resources.FirstOrDefault(resource => (resource as ScheduleResource).Id.ToString() == "5608"));
-
-// Adding selected resource collection to the selected resources of SfSchedule.
-schedule.SelectedResources = selectedResources;
-{% endhighlight %}
-{% endtabs %}
-
-You can clear the selection by removing the resource from `SelectedResources` or by setting `SelectedResources` to null.  
-
-{% tabs %}
-{% highlight c# %}
-var selectedResource = selectedResources.FirstOrDefault(resource => (resource as ScheduleResource).Id.ToString() == "5604");
-
-// Removing selected resource in selected resources of SfSchedule.
-schedule.SelectedResources.Remove(selectedResource);
-{% endhighlight %}
-{% endtabs %}
-
-## Changing resource view height
-
-You can customize the height of the resource view using the [ResourceViewHeight](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_ResourceViewHeight) property of `SfSchedule`.
-
-{% tabs %}
-{% highlight xaml %}
-<schedule:SfSchedule ScheduleView="WeekView" 
-                     ShowResourceView="True" 
-                     ResourceViewHeight="200" />
-{% endhighlight %}
-{% highlight c# %}
-schedule.ScheduleView = ScheduleView.WeekView;
-schedule.ShowResourceView = true;
-schedule.ResourceViewHeight = 200;
-{% endhighlight %}
-{% endtabs %}
-
-![Resource view height in xamarin forms schedule resources](resource-view-images/xamarin-forms-resource-view-height.png)
-
->**NOTE**
-The `ResourceViewHeight` property functions as width when `ResourceViewMode` is `Absolute` for timeline view.
-
-## Visible resource count
-
-You can customize the number of visible resources in the current view using the [VisibleResourceCount](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ResourceViewSettings.html#Syncfusion_SfSchedule_XForms_ResourceViewSettings_VisibleResourceCount) property of `ResourceViewSettings` in `SfSchedule`. By default, value of this property is set to -1. 
-
-{% tabs %}
-{% highlight xaml %}
-<schedule:SfSchedule ScheduleView="WeekView" ShowResourceView="True">
-     <schedule:SfSchedule.ResourceViewSettings>
-          <schedule:ResourceViewSettings>
-          <schedule:ResourceViewSettings.VisibleResourceCount>
-               <OnPlatform x:TypeArguments="x:Int32"
-                              iOS="5"
-                              Android="4" 
-                              WinPhone="10" />
-          </schedule:ResourceViewSettings.VisibleResourceCount>
-          </schedule:ResourceViewSettings>
-     </schedule:SfSchedule.ResourceViewSettings>
-</schedule:SfSchedule>
-{% endhighlight %}
-{% highlight c# %}
-ResourceViewSettings resourceViewSettings = new ResourceViewSettings();
-resourceViewSettings.VisibleResourceCount = Device.OnPlatform(5, 10, 5);
-schedule.ResourceViewSettings = resourceViewSettings;
-{% endhighlight %}
-{% endtabs %}
-
-![Visible resource count in xamarin forms Resource view](resource-view-images/xamarin-forms-resource-view-visible-resource-count.png)
-
-## Resource item tapped event
-
-You can handle the single tap action of resource view using the [ResourceItemTapped](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html) event of `SfSchedule`. This event occurs when a resource item is tapped. This event contains [ResourceItemTappedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ResourceItemTappedEventArgs.html) argument, which holds the details of [SelectedResource](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ResourceItemTappedEventArgs.html#Syncfusion_SfSchedule_XForms_ResourceItemTappedEventArgs_SelectedResource) and [SelectedResources](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ResourceItemTappedEventArgs.html#Syncfusion_SfSchedule_XForms_ResourceItemTappedEventArgs_SelectedResources) in it.
-
-{% tabs %}
-{% highlight c# %}
-schedule.ResourceItemTapped += OnResourceItemTapped;
-          …
-private void OnResourceItemTapped(object sender, ResourceItemTappedEventArgs e)
+{% highlight c# tabtitle="MainWindow.xaml.cs" hl_lines="10" %}
+// Creating and Adding custom resource in scheduler resource collection.
+var ResourceCollection = new ObservableCollection<Employee>()
 {
+   new Employee () {Name = "Sophia", BackgroundColor = new SolidColorBrush((Color.FromArgb(255, 157, 101, 201))), Id = "1000", ForegroundColor = new SolidColorBrush(Colors.White) },
+   new Employee () {Name = "Zoey Addison", BackgroundColor = new SolidColorBrush(Color.FromArgb(255, 240, 138, 93)), Id = "1001" , ForegroundColor = new SolidColorBrush(Colors.White)},
+   new Employee () {Name = "James William", BackgroundColor = new SolidColorBrush(Color.FromArgb(255,103, 155, 155)), Id = "1002" , ForegroundColor = new SolidColorBrush(Colors.White)},
+};
+
+// Adding the scheduler resource collection to the schedule resources of SfSchedule.
+this.Schedule.ResourceCollection = ResourceCollection;
+{% endhighlight %}
+{% endtabs %}
+
+#### Assign the resource objects to appointment business object
+
+Associate the scheduler [ResourceMapping](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Scheduler.ResourceMapping.html) to the custom appointment by mapping resource [Id](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Scheduler.ScheduleAppointment.html#Syncfusion_UI_Xaml_Scheduler_ScheduleAppointment_Id) in the [ResourceIdCollection](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Scheduler.ScheduleAppointment.html#Syncfusion_UI_Xaml_Scheduler_ScheduleAppointment_ResourceIdCollection) property of [AppointmentMapping](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Scheduler.AppointmentMapping.html). The custom appointments associated with the scheduler resources will be displayed when the `ResourceGroupType` is set to `Resource` or `Date.` Also assign the resources to recurrence appointments.
+
+{% tabs %}
+{% highlight c# tabtitle="Meeting.cs" %}
+/// <summary>   
+/// Represents the custom data properties.   
+/// </summary> 
+public class Meeting
+{
+	public string EventName {get; set;}
+	public DateTime From {get; set;}
+	public DateTime To {get; set;}
+   public ObservableCollection<object> Resources {get; set;}
 }
 {% endhighlight %}
 {% endtabs %}
 
->**NOTE**
-In timeline view, the `SelectedResources` becomes null on tapping an item when the `ResourceViewMode` is `Absolute`.
 
-## Customization
+Map those properties of the `Meeting` class to schedule appointments by using the `AppointmentMapping` properties.
 
-### Changing resource name label text color
-
-You can customize the text color of the resource name using the [DisplayLabelTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ResourceViewSettings.html#Syncfusion_SfSchedule_XForms_ResourceViewSettings_DisplayLabelTextColor) property of `ResourceViewSettings` in `SfSchedule`.
-
-{% tabs %}
-{% highlight xaml %}
-<schedule:SfSchedule ScheduleView="WeekView" ShowResourceView="True">
-     <schedule:SfSchedule.ResourceViewSettings>
-          <schedule:ResourceViewSettings DisplayLabelTextColor="#8490f9" />
-     </schedule:SfSchedule.ResourceViewSettings>
-</schedule:SfSchedule>
+{%tabs %}
+{% highlight xaml tabtitle="MainWindow.xaml" hl_lines="2 3 4 5 6 7 8" %}
+<scheduler:SfScheduler x:Name="Schedule" ItemsSource="{Binding Appointments}" ViewType="Week">
+         <scheduler:SfScheduler.AppointmentMapping>
+            <scheduler:AppointmentMapping
+            Subject="EventName"
+            StartTime="From"
+            EndTime="To"
+            ResourceIdCollection ="Resources"/>
+        </scheduler:SfScheduler.AppointmentMapping>
+</scheduler:SfScheduler>
 {% endhighlight %}
-{% highlight c# %}
-ResourceViewSettings resourceViewSettings = new ResourceViewSettings();
-resourceViewSettings.DisplayLabelTextColor = Color.FromHex("#8490f9");
-schedule.ResourceViewSettings = resourceViewSettings;
-{% endhighlight %}
-{% endtabs %}
-
-### Data template
-
-The default appearance of the resource can be customized using the [ResourceItemTemplate](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_ResourceItemTemplate) property of the schedule. You can handle the default touch action such as selection of resource item using the `InputTransparent` property of the `Xamarin.Forms.VisualElement`.
-
-{% tabs %}
-{% highlight xaml %}
-<schedule:SfSchedule x:Name="schedule"
-     ResourceItemTemplate="{Binding ResourceTemplate}">
-     <schedule:SfSchedule.BindingContext>
-          <samplelocal:ResourceDataTemplate />
-     </schedule:SfSchedule.BindingContext>
-</schedule:SfSchedule>
+{% highlight c# tabtitle="MainWindow.xaml.cs" hl_lines="2 8" %}
+//Schedule data mapping for custom appointments
+AppointmentMapping dataMapping = new AppointmentMapping();
+dataMapping.Subject = "EventName";
+dataMapping.StartTime = "From";
+dataMapping.EndTime = "To";
+dataMapping.AppointmentBackground = "Color";
+dataMapping.ResourceIdCollection= "Resources";
+this.Schedule.AppointmentMapping = dataMapping;
 {% endhighlight %}
 {% endtabs %}
 
-### Creating a DataTemplate
+Schedule meetings for a resource by setting `From,` `To,` and `Resources` of the Meeting class.
 
-{% tabs %}
-{% highlight xaml %}
-<?xml version="1.0" encoding="utf-8" ?>
-<Button xmlns="http://xamarin.com/schemas/2014/forms"
-        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-        x:Class="ScheduleSample.ResourceTemplate"
-        Text="{Binding Name}" 
-        TextColor="White"
-        FontSize="15"
-        BackgroundColor="{Binding Color}"
-        BorderColor="Black"
-        BorderWidth="2">
-</Button>
+{%tabs %}
+{% highlight c# tabtitle="MainWindow.xaml.cs" %}
+Meeting meeting = new Meeting ();
+meeting.From = new DateTime(2020, 07, 01, 10, 0, 0);
+meeting.To = meeting.From.AddHours(1);
+meeting.EventName = "Meeting";
+meeting.Resources = new ObservableCollection<object> { (Resources[0] as Employee).Id, (Resources[1] as Employee).Id };
+var Meetings = new ObservableCollection<Meeting> ();
+Meetings.Add(meeting);
+this.Schedule.ItemsSource = Meetings;
 {% endhighlight %}
 {% endtabs %}
 
+## Resource minimum height
+You can customize minimum row height of visible resources in timeline day, timeline week, timeline workweek and timeline month views by using the [RowMinHeight](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Scheduler.TimelineViewSettings.html#Syncfusion_UI_Xaml_Scheduler_TimelineViewSettings_RowMinHeight) property of [TimelineViewSettings](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Scheduler.TimelineViewSettings.html) in [SfScheduler.](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Scheduler.SfScheduler.html) By default, value of this property is set to 50.
+
 {% tabs %}
-{% highlight c# %}
-public class ResourceDataTemplate : DataTemplate
+{% highlight xaml tabtitle="MainWindow.xaml" hl_lines="6" %}
+<Schedule:SfScheduler Name="schedule" 
+                      ViewType="TimelineWeek" 
+                      ResourceGroupType="Resource">
+   <Schedule:SfScheduler.TimelineViewSettings>
+      <Schedule:TimelineViewSettings 
+                     RowMinHeight="100" />
+   </Schedule:SfScheduler.TimelineViewSettings>
+</Schedule:SfScheduler>
+{% endhighlight %}
+{% highlight c# tabtitle="MainWindow.xaml.cs" %}
+ schedule.TimelineViewSettings.RowMinHeight = 100;
+{% endhighlight %}
+{% endtabs %} 
+
+N> The minimum resource row height adjusted based on view port size and the [VisibleResourceCount](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Scheduler.ViewSettingsBase.html#Syncfusion_UI_Xaml_Scheduler_ViewSettingsBase_VisibleResourceCount) will not be applicable. 
+
+## Assign resources to special time regions
+
+Special time region can be created based on the resources in the day, week, workweek, timeline day, timeline week, timeline workweek, and timeline month views.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainWindow.xaml" %}
+
+{% include_relative code-snippet/resourceview.xaml %}
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainWindow.xaml.cs" hl_lines="9" %}
+this.Schedule.DaysViewSettings.SpecialTimeRegions.Add(new SpecialTimeRegion
 {
-     public DataTemplate ResourceTemplate { get; set; }
-
-     public ResourceDataTemplate()
-     {
-          ResourceTemplate = new DataTemplate(() =>
-          {
-               return new ResourceTemplate();
-          });
-     }
-}
+   StartTime = new System.DateTime(2021, 04, 04, 13, 0, 0),
+   EndTime = new System.DateTime(2021, 04, 04, 14, 0, 0),
+   Text = "Lunch",
+   CanEdit = false,
+   RecurrenceRule = "FREQ=DAILY;INTERVAL=1",
+   CanMergeAdjacentRegions = false,
+   ResourceIdCollection = new ObservableCollection<object>() { "1000", "1001", "1002" }
+});
 {% endhighlight %}
 {% endtabs %}
 
-![Data template in xamarin forms Resource view](resource-view-images/xamarin-forms-resource-view-data-template.png)
+![assign-resources-to-special-time-regions-date-basis-in-winui-scheduler](Resource_Images/resources-to-special-time-regions-date-basis-in-winui-scheduler.png)
 
-### Template selector
-
-`DataTemplateSelector` can be used to choose a `DataTemplate` at run time based on the value of data bound to the `ScheduleResource` property through `ResourceItemTemplate`. It provides multiple `DataTemplates` to be enabled for schedule resources to customize the appearance of a particular resource item. You can handle the default touch action such as selection of a resource item using the `InputTransparent` property of the `Xamarin.Forms.VisualElement`.
- 
+#### Assign resources to special time regions in timeline view
 {% tabs %}
-{% highlight xaml %}
-<ContentPage.Resources>
-     <ResourceDictionary>
-          <local:ResourceTemplateSelector x:Key="resourceDataTemplateSelector"/>
-     </ResourceDictionary>
-</ContentPage.Resources>     
-<ContentPage.Content>
-     <schedule:SfSchedule x:Name="schedule" 
-                         ScheduleView="WeekView" 
-                         ShowResourceView="True"               
-                         ResourceItemTemplate="{StaticResource resourceDataTemplateSelector}"/>
-</ContentPage.Content>                         
+{% highlight xaml tabtitle="MainWindow.xaml" %}
+
+{% include_relative code-snippet/resourceview.xaml %}
+
 {% endhighlight %}
-{% endtabs %}
-
-### Creating a DataTemplateSelector
-
-{% tabs %}
-{% highlight c# %}
-public class ResourceTemplateSelector : DataTemplateSelector
+{% highlight c# tabtitle="MainWindow.xaml.cs" hl_lines="9" %}
+this.Schedule.TimelineViewSettings.SpecialTimeRegions.Add(new SpecialTimeRegion
 {
-     public DataTemplate AvailabelResourceTemplate { get; set; }
-     public DataTemplate UnavailableResourceTemplate { get; set; }
-
-     public ResourceTemplateSelector()
-     {
-          AvailabelResourceTemplate = new DataTemplate(typeof(AvailableResourceTemplate));
-          UnavailableResourceTemplate = new DataTemplate(typeof(UnavailableResourceTemplate));
-     }
-
-     protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
-     {
-          if ((item as ScheduleResource).Id.ToString() == "5601" || 
-               (item as ScheduleResource).Id.ToString() == "5604")
-               return UnavailableResourceTemplate;
-          else
-               return AvailabelResourceTemplate;
-     }
-}
+   StartTime = new System.DateTime(2021, 04, 04, 13, 0, 0),
+   EndTime = new System.DateTime(2021, 04, 04, 14, 0, 0),
+   Text = "Lunch",
+   CanEdit = false,
+   RecurrenceRule = "FREQ=DAILY;INTERVAL=1",
+   CanMergeAdjacentRegions = false,
+   ResourceIdCollection = new ObservableCollection<object>() { "1000", "1001", "1002" }
+});
 {% endhighlight %}
 {% endtabs %}
 
-Used button to display the resources
+![assign-resources-to-special-time-regions-timeline-view-in-winui-scheduler](Resource_Images/resources-to-special-time-regions-timeline-view-in-winui-scheduler.png)
+
+## Appearance customization
+
+The resource appearance customization can be achieved by using the [ResourceHeaderTemplate](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Scheduler.SfScheduler.html#Syncfusion_UI_Xaml_Scheduler_SfScheduler_ResourceHeaderTemplate) and [ResourceHeaderTemplateSelector](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Scheduler.SfScheduler.html#Syncfusion_UI_Xaml_Scheduler_SfScheduler_ResourceHeaderTemplateSelector) properties of the [SfScheduler](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Scheduler.SfScheduler.html).
+
+#### Customize resource appearance using ResourceHeaderTemplate
 
 {% tabs %}
-{% highlight xaml %}
-<?xml version="1.0" encoding="utf-8" ?>
-<Button xmlns="http://xamarin.com/schemas/2014/forms"
-        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-        x:Class="ScheduleSample.AvailableResourceTemplate"
-        Text="{Binding Name}" 
-        TextColor="White"
-        FontSize="15"
-        BackgroundColor="{Binding Color}"
-        BorderColor="Black"
-        BorderWidth="2">
-</Button>
-    .......
-
-<?xml version="1.0" encoding="utf-8" ?>
-<Button xmlns="http://xamarin.com/schemas/2014/forms"
-        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-        x:Class="ScheduleSample.UnavailableResource"
-        Text="{Binding Name, StringFormat= '\{0\} (unavailable)'}"
-        TextColor="White"
-        FontSize="15"
-        BackgroundColor="{Binding Color}"
-        BorderColor="Black"
-        BorderWidth="2">
-</Button>
+{% highlight xaml tabtitle="MainWindow.xaml" hl_lines="28" %}
+<!--used to find Image Source and Name properties.-->
+<Grid>
+   <Grid.DataContext>
+      <local:Employee />
+   </Grid.DataContext>
+   <Grid.Resources>
+      <DataTemplate  x:Key="DayViewResourceTemplate">
+         <Grid Background="Transparent">
+            <Border Background="Transparent" >
+               <StackPanel VerticalAlignment="Center" Orientation="Vertical">
+                  <Border CornerRadius="36" Height="72" Width="72" BorderThickness="4" BorderBrush="{Binding Data.BackgroundBrush}">
+                        <Border CornerRadius="36" Height="64" Width="64" BorderThickness="4" BorderBrush="White">
+                        <Image HorizontalAlignment="Center" VerticalAlignment="Center" Width="55"
+                          Height="55" Source="{Binding Data.ImageSource}" />
+                        </Border>
+                  </Border>
+                  <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15"
+                  Foreground="Black" Text="{Binding Data.Name}" />
+               </StackPanel>
+            </Border>
+         </Grid>
+      </DataTemplate>
+   </Grid.Resources>
+   <scheduler:SfScheduler x:Name="Schedule"  
+                          ViewType="Week"
+                          ResourceGroupType="Resource" 
+                          ResourceCollection="{Binding ResourceCollection}"
+                          ResourceHeaderTemplate="{StaticResource DayViewResourceTemplate}">
+      <scheduler:SfScheduler.ResourceMapping>
+         <scheduler:ResourceMapping Id="Id" Name="Name" Background="BackgroundBrush" Foreground="ForegroundBrush"/>
+      </scheduler:SfScheduler.ResourceMapping>
+   </scheduler:SfScheduler>
+</Grid>
 {% endhighlight %}
 {% endtabs %}
 
-![Data template selector in xamarin forms Resource view](resource-view-images/xamarin-forms-resource-view-data-template-selector.png)
-
-You can download the template selector demo for Xamarin.Forms from [here](https://github.com/SyncfusionExamples/xamarin-schedule-templated-resource-view).
-
-N> You can refer to our [Xamarin Scheduler](https://www.syncfusion.com/xamarin-ui-controls/xamarin-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [Xamarin Scheduler example](https://github.com/syncfusion/xamarin-demos/tree/master/Forms/Schedule) to understand how to schedule and manage appointments.
-
-## See also
-
-[How to handle appointments for multiple resources in Schedule?](https://www.syncfusion.com/kb/6694/how-to-handle-appointments-for-multiple-resources-in-schedule)
+![customize-resource-appearance-using-resource-header-template-in-winui-scheduler](Resource_Images/customize-resource-appearance-using-resource-header-template-in-winui-scheduler.png)
