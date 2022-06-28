@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Bubbles in maximum Maps widget | Syncfusion
-description: Learn here all about the Bubbles feature of Syncfusion MAUI Maps (SfMaps) widget to customize their appearances and more.
+title: Bubbles in Maps control | Syncfusion
+description: Learn here all about the Bubbles feature of Syncfusion MAUI Maps (SfMaps) control to customize their appearances and more.
 platform: MAUI
 control: SfMaps
 documentation: ug
@@ -13,8 +13,7 @@ Bubbles can be rendered in different colors and sizes based on the data values o
 
 ## Enable bubbles
 
-You can enable bubbles using the [`MapShapeLayer.ShowBubbles`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/bubbleSizeMapper.html). 
-You can customize a bubbles using the [`MapShapeLayer.BubbleSettings`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/bubbleSizeMapper.html).This property is used to specify the value based on which the bubble's size has to be rendered.
+You can enable bubbles using the [`ShowBubbles`](). You can customize a bubbles using the [`BubbleSettings`]().This property is used to specify the value based on which the bubble's size has to be rendered.
 
 {% tabs %}
 
@@ -23,8 +22,11 @@ You can customize a bubbles using the [`MapShapeLayer.BubbleSettings`](https://p
      <map:SfMaps>
         <map:SfMaps.Layer>
             <map:MapShapeLayer 
-                  ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
-                  DataSource="{Binding Data}" PrimaryValuePath="Continent" ShapeDataField="continent" ShowBubbles="True" >
+                ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                DataSource="{Binding Data}"
+                PrimaryValuePath="State" 
+                ShapeDataField="name" 
+                ShowBubbles="True" >
 
               <map:MapShapeLayer.BubbleSettings>
                   <map:MapBubbleSettings ColorValuePath="Population" 
@@ -45,20 +47,14 @@ You can customize a bubbles using the [`MapShapeLayer.BubbleSettings`](https://p
 public MainPage()
 {
    InitializeComponent();
-        ObservableCollection<Model> Data = new ObservableCollection<Model>();
-        Data.Add(new Model("Asia", 51));
-        Data.Add(new Model("Africa", 58));
-        Data.Add(new Model("Europe", 48));
-        Data.Add(new Model("North America", 41));
-        Data.Add(new Model("South America", 14));
-        Data.Add(new Model("Australia", 23));
-        
+        ViewModel viewModel = new ViewModel();
+        this.BindingContext = viewModel;
         SfMaps maps = new SfMaps();
         MapShapeLayer layer = new MapShapeLayer();
         layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
-        layer.DataSource = Data;
-        layer.PrimaryValuePath = "Continent";
-        layer.ShapeDataField = "continent";
+        layer.DataSource = viewModel.Data;
+        layer.PrimaryValuePath = "State";
+        layer.ShapeDataField = "name";
         layer.ShowBubbles = true;
 
         MapBubbleSettings bubbleSetting = new MapBubbleSettings()
@@ -75,16 +71,30 @@ public MainPage()
         maps.Layer = layer;
         this.Content = maps;
     }
-    public class Model
+public class ViewModel
+{
+    public ObservableCollection<Model> Data { get; set; }
+    public ViewModel()
     {
-        public Model(string continent, int population)
-        {
-            Continent = continent;
-            Population = population;
-        }
-        public String Continent { get; set; }
-        public int Population { get; set; }
+        Data = new ObservableCollection<Model>();
+        Data.Add(new Model("India", 21));
+        Data.Add(new Model("United States", 58));
+        Data.Add(new Model("Kazakhstan", 41));
+        Data.Add(new Model("Italy", 48));
+        Data.Add(new Model("Korea", 14));
+        Data.Add(new Model("China", 23));
     }
+}
+public class Model
+{
+    public Model(string state, int population)
+    {
+        State = state;
+        Population = population;
+    }
+    public String State { get; set; }
+    public int Population { get; set; }
+}
 
 {% endhighlight %}
 
@@ -94,7 +104,7 @@ public MainPage()
 
 ## Tooltip for the bubbles
 
-You can enable tooltip for the bubbles using the [`MapShapeLayer.ShowBubbleTooltip`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/bubbleTooltipBuilder.html) property. It can be used to indicate clearly the information about the currently interacted bubble.
+You can enable tooltip for the bubbles using the [`MapShapeLayer.ShowBubbleTooltip`]() property. It can be used to indicate clearly the information about the currently interacted bubble.
 
 {% tabs %}
 
@@ -103,19 +113,21 @@ You can enable tooltip for the bubbles using the [`MapShapeLayer.ShowBubbleToolt
      <map:SfMaps>
         <map:SfMaps.Layer>
             <map:MapShapeLayer 
-                  ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"  ShowBubbleTooltip="True"
-                  DataSource="{Binding Data}" PrimaryValuePath="Continent" ShapeDataField="continent" ShowBubbles="True" >
+                ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                DataSource="{Binding Data}"
+                PrimaryValuePath="State" 
+                ShapeDataField="name" 
+                ShowBubbles="True"
+                ShowBubbleTooltip="True" >
 
-                <map:MapShapeLayer.BubbleSettings>
+              <map:MapShapeLayer.BubbleSettings>
                   <map:MapBubbleSettings ColorValuePath="Population" 
                       SizeValuePath="Population" 
-                      Fill="LightGreen"
-                      Stroke="Green"
-                      StrokeThickness="2"
+                      Fill="DarkViolet"
                       MinSize="30"
                       MaxSize="80">
                   </map:MapBubbleSettings>
-                </map:MapShapeLayer.BubbleSettings>
+              </map:MapShapeLayer.BubbleSettings>
             </map:MapShapeLayer>
         </map:SfMaps.Layer>
     </map:SfMaps>
@@ -124,30 +136,26 @@ You can enable tooltip for the bubbles using the [`MapShapeLayer.ShowBubbleToolt
 
 {% highlight c# %}
 
-Data = new ObservableCollection<Model>();
-        Data.Add(new Model("Asia", 51));
-        Data.Add(new Model("Africa", 58));
-        Data.Add(new Model("Europe", 48));
-        Data.Add(new Model("North America", 41));
-        Data.Add(new Model("South America", 14));
-        Data.Add(new Model("Australia", 23));
-        
+public MainPage()
+{
+   InitializeComponent();
+        ViewModel viewModel = new ViewModel();
+        this.BindingContext = viewModel;
         SfMaps maps = new SfMaps();
         MapShapeLayer layer = new MapShapeLayer();
         layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
-        layer.DataSource = Data;
-        layer.PrimaryValuePath = "Continent";
-        layer.ShapeDataField = "continent";
-        layer.ShowBubbleTooltip = true;
+        layer.DataSource = viewModel.Data;
+        layer.PrimaryValuePath = "State";
+        layer.ShapeDataField = "name";
         layer.ShowBubbles = true;
+        layer.ShowBubbleTooltip = true;
+
 
         MapBubbleSettings bubbleSetting = new MapBubbleSettings()
         {
             ColorValuePath = "Population",
             SizeValuePath = "Population",
-            Fill = Colors.LightGreen,
-            Stroke = Colors.Green,
-            StrokeThickness = 2,
+            Fill = Colors.DarkViolet,
             MinSize = 30,
             MaxSize =80
             
@@ -157,16 +165,30 @@ Data = new ObservableCollection<Model>();
         maps.Layer = layer;
         this.Content = maps;
     }
-   public class Model
-   {
-        public Model(string continent, int population)
-        {
-            Continent = continent;
-            Population = population;
-        }
-        public String Continent { get; set; }
-        public int Population { get; set; }
-  }
+public class ViewModel
+{
+    public ObservableCollection<Model> Data { get; set; }
+    public ViewModel()
+    {
+        Data = new ObservableCollection<Model>();
+        Data.Add(new Model("India", 21));
+        Data.Add(new Model("United States", 58));
+        Data.Add(new Model("Kazakhstan", 41));
+        Data.Add(new Model("Italy", 48));
+        Data.Add(new Model("Korea", 14));
+        Data.Add(new Model("China", 23));
+    }
+}
+public class Model
+{
+    public Model(string state, int population)
+    {
+        State = state;
+        Population = population;
+    }
+    public String State { get; set; }
+    public int Population { get; set; }
+}
 
 {% endhighlight %}
 
@@ -176,11 +198,11 @@ Data = new ObservableCollection<Model>();
 
 ## Color
 
-You can customize the bubble color based on the value returned from the [`MapBubbleSettings.ColorMappings`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/bubbleColorValueMapper.html) property. 
+You can customize the bubble color based on the value returned from the [`MapBubbleSettings.ColorMappings`]() property. 
 
-If [`ColorMappings`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/bubbleColorValueMapper.html) returns a color, then the color will be applied to the bubble straightaway.
+If [`ColorMappings`]() returns a color, then the color will be applied to the bubble straightaway.
 
- The value returned from the [`ColorMappings`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/bubbleColorValueMapper.html) will be used for the comparison in the [`EqualColorMapping.Value`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/value.html) or [`RangeColorMapping.From`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/from.html) and [`RangeColorMapping.To`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/to.html). Then, the [`RangeColorMapping.Color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/color.html) or [`EqualColorMapping.Color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/color.html) will be applied to the respective bubble.
+ The value returned from the [`ColorMappings`]() will be used for the comparison in the [`EqualColorMapping.Value`]() or [`RangeColorMapping.From`]() and [`RangeColorMapping.To`](). Then, the [`RangeColorMapping.Color`]() or [`EqualColorMapping.Color`]() will be applied to the respective bubble.
 
 {% tabs %}
 
@@ -189,9 +211,13 @@ If [`ColorMappings`](https://pub.dev/documentation/syncfusion_flutter_maps/lates
      <map:SfMaps>
         <map:SfMaps.Layer>
             <map:MapShapeLayer 
-                  ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"  ShowBubbleTooltip="True" 
-                  ShapeColorValuePath = "Population" ShowDataLabels="True"
-                  DataSource="{Binding Data}" PrimaryValuePath="Continent" ShapeDataField="continent" ShowBubbles="True" >
+                ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"  
+                ShowBubbleTooltip="True" 
+                ShapeColorValuePath = "Population" 
+                ShowDataLabels="True"
+                DataSource="{Binding Data}" 
+                PrimaryValuePath="Continent" 
+                ShapeDataField="continent" ShowBubbles="True" >
 
               <map:MapShapeLayer.BubbleSettings>
 
@@ -308,14 +334,14 @@ public MainPage()
 
 You can customize the below appearance of the bubbles.
 
-* **MinSize** - Change the minimum radius of the bubbles using the [`MapBubbleSettings.MinSize`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapBubbleSettings/minRadius.html) property. The default value of the [`MinSize`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapBubbleSettings/minRadius.html) property is `20.0`.
-* **MaxSize** - Change the maximum radius of the bubbles using the [`MapBubbleSettings.MaxSize`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapBubbleSettings/maxRadius.html) property. The default value of the [`MaxSize`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapBubbleSettings/maxRadius.html) property is `50.0`.
-* **Fill** - Change the background color of the bubbles using the [`MapBubbleSettings.Fill`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapBubbleSettings/color.html) property.
-* **Stroke** - Change the stroke color of the bubbles using the [`MapBubbleSettings.Stroke`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapBubbleSettings/strokeColor.html) property.
-* **StrokeThickness** - Change the stroke width of the bubbles using the [`MapBubbleSettings.StrokeThickness`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapBubbleSettings/strokeWidth.html) property.
-* **HoverFill** - Change the hover color of the bubbles using the [`MapBubbleSettings.HoverFill`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsThemeData/bubbleHoverColor.html) property.
-* **HoverStroke** - Change the hover stroke color of the bubbles using the [`MapBubbleSettings.HoverStroke`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsThemeData/bubbleHoverStrokeColor.html) property.
-* **HoverStrokeThickness** - Change the hover stroke thickness of the bubbles using the [`MapBubbleSettings.HoverStrokeThickness`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsThemeData/bubbleHoverStrokeWidth.html) property.
+* **MinSize** - Change the minimum radius of the bubbles using the [`MapBubbleSettings.MinSize`]() property. The default value of the [`MinSize`]() property is `20.0`.
+* **MaxSize** - Change the maximum radius of the bubbles using the [`MapBubbleSettings.MaxSize`]() property. The default value of the [`MaxSize`]() property is `50.0`.
+* **Fill** - Change the background color of the bubbles using the [`MapBubbleSettings.Fill`]() property.
+* **Stroke** - Change the stroke color of the bubbles using the [`MapBubbleSettings.Stroke`]() property.
+* **StrokeThickness** - Change the stroke width of the bubbles using the [`MapBubbleSettings.StrokeThickness`]() property.
+* **HoverFill** - Change the hover color of the bubbles using the [`MapBubbleSettings.HoverFill`]() property.
+* **HoverStroke** - Change the hover stroke color of the bubbles using the [`MapBubbleSettings.HoverStroke`]() property.
+* **HoverStrokeThickness** - Change the hover stroke thickness of the bubbles using the [`MapBubbleSettings.HoverStrokeThickness`]() property.
 
 {% tabs %}
 
@@ -404,4 +430,4 @@ public MainPage()
 
 ![Bubble customization](images/bubble/bubble-customization.png)
 
-N> You can refer to our [MAUI Maps](https://www.syncfusion.com/flutter-widgets/flutter-maps) feature tour page for its groundbreaking feature representations. You can also explore our [MAUI Maps Bubble example](https://flutter.syncfusion.com/#/maps/shape-layer/bubble) that shows how to configure a Maps in MAUI.
+N> You can refer to our [MAUI Maps]() feature tour page for its groundbreaking feature representations. You can also explore our [MAUI Maps Bubble example]() that shows how to configure a Maps in MAUI.
