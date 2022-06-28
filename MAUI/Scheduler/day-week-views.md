@@ -497,7 +497,7 @@ this.Scheduler.DaysView.NumberOfVisibleDays = 3;
 {% endhighlight %}
 {% endtabs %}
 
-![full-screen-scheduler-in-timeslots-views-in-maui-scheduler](images/day-week-views/full-screen-scheduler-in-timeslots-views-in-maui-scheduler.png)
+![number-of-visble-days-in-daysview](images/day-week-views/)
 
 ## Show current time indicator
 
