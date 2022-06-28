@@ -2,7 +2,7 @@
 layout: post
 title: Licensing FAQ – Get the license key | Syncfusion
 description: Learn here some information about recommended places to register the Syncfusion license key in your application.
-platform: Xamarin
+platform: maui
 control: Essential Studio
 documentation: ug
 ---
