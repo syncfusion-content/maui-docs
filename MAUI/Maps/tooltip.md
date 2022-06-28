@@ -9,7 +9,7 @@ documentation: ug
 
 # Tooltip in MAUI Maps (SfMaps)
 
-Tooltip is used to indicate the shape, bubble, marker information during the tap, or click interaction. This section helps to learn about
+Tooltip is used to indicate the shape, bubble, marker information during the tap, or hover interactions. This section helps to learn about
  how to show tooltip for the shapes, bubbles, and markers in the maps and customize them.
 
 ## Tooltip for the shapes
@@ -22,12 +22,11 @@ The [`ShowShapeTooltip`]() is used to clearly indicate the shape information eve
 
      <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer 
-                ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
-                DataSource="{Binding Data}"
-                PrimaryValuePath="State" 
-                ShapeDataField="name" 
-                ShowShapeToolTip="True" >
+            <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+							   DataSource="{Binding Data}"
+							   PrimaryValuePath="State" 
+							   ShapeDataField="name" 
+							   ShowShapeToolTip="True">
             </map:MapShapeLayer>
         </map:SfMaps.Layer>
     </map:SfMaps>
@@ -39,22 +38,26 @@ The [`ShowShapeTooltip`]() is used to clearly indicate the shape information eve
 public MainPage()
 {
    InitializeComponent();
-        ViewModel viewModel = new ViewModel();
-        this.BindingContext = viewModel;
-        SfMaps maps = new SfMaps();
-        MapShapeLayer layer = new MapShapeLayer();
-        layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
-        layer.DataSource = viewModel.Data;
-        layer.PrimaryValuePath = "State";
-        layer.ShapeDataField = "name";
-        layer.ShowShapeToolTip = true;
+   
+   ViewModel viewModel = new ViewModel();
+   this.BindingContext = viewModel;
+   
+   MapShapeLayer layer = new MapShapeLayer();
+   layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
+   layer.DataSource = viewModel.Data;
+   layer.PrimaryValuePath = "State";
+   layer.ShapeDataField = "name";
+   layer.ShowShapeToolTip = true;
 
-        maps.Layer = layer;
-        this.Content = maps;
-    }
+   SfMaps maps = new SfMaps();
+   maps.Layer = layer;
+   this.Content = maps;
+}
+
 public class ViewModel
 {
     public ObservableCollection<Model> Data { get; set; }
+	
     public ViewModel()
     {
         Data = new ObservableCollection<Model>();
@@ -66,17 +69,18 @@ public class ViewModel
         Data.Add(new Model("China", 23));
     }
 }
+
 public class Model
 {
+    public String State { get; set; }
+    public int Population { get; set; }
+	
     public Model(string state, int population)
     {
         State = state;
         Population = population;
     }
-    public String State { get; set; }
-    public int Population { get; set; }
 }
-
 
 {% endhighlight %}
 
@@ -97,24 +101,24 @@ The [`MapShapeLayer.ShowBubbleTooltip`]() is used to clearly indicate the bubble
 
     <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer 
-                ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
-                DataSource="{Binding Data}"
-                PrimaryValuePath="State" 
-                ShapeDataField="name" 
-                ShapeHoverFill = "Transparent" 
-                ShapeHoverStroke="Transparent"
-                ShowBubbles="True"
-                ShowBubbleTooltip="True" >
+            <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+							   DataSource="{Binding Data}"
+							   PrimaryValuePath="State" 
+							   ShapeDataField="name" 
+							   ShapeHoverFill = "Transparent" 
+							   ShapeHoverStroke="Transparent"
+							   ShowBubbles="True"
+							   ShowBubbleTooltip="True">
 
               <map:MapShapeLayer.BubbleSettings>
                   <map:MapBubbleSettings ColorValuePath="Population" 
-                      SizeValuePath="Population" 
-                      Fill="DarkViolet"
-                      MinSize="30"
-                      MaxSize="80">
+                                         SizeValuePath="Population" 
+                                         Fill="DarkViolet"
+                                         MinSize="30"
+                                         MaxSize="80">
                   </map:MapBubbleSettings>
               </map:MapShapeLayer.BubbleSettings>
+			  
             </map:MapShapeLayer>
         </map:SfMaps.Layer>
     </map:SfMaps>
@@ -123,12 +127,13 @@ The [`MapShapeLayer.ShowBubbleTooltip`]() is used to clearly indicate the bubble
 
 {% highlight c# %}
 
-public MainPage()
-{
-   InitializeComponent();
+	public MainPage()
+	{
+		InitializeComponent();
+		
         ViewModel viewModel = new ViewModel();
         this.BindingContext = viewModel;
-        SfMaps maps = new SfMaps();
+		
         MapShapeLayer layer = new MapShapeLayer();
         layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
         layer.DataSource = viewModel.Data;
@@ -139,46 +144,49 @@ public MainPage()
         layer.ShowBubbles = true;
         layer.ShowBubbleTooltip = true;
 
-
         MapBubbleSettings bubbleSetting = new MapBubbleSettings()
         {
             ColorValuePath = "Population",
             SizeValuePath = "Population",
             Fill = Colors.DarkViolet,
             MinSize = 30,
-            MaxSize =80
-            
+            MaxSize = 80
         };
 
         layer.BubbleSettings = bubbleSetting;
+		
+        SfMaps maps = new SfMaps();
         maps.Layer = layer;
         this.Content = maps;
     }
-public class ViewModel
-{
-    public ObservableCollection<Model> Data { get; set; }
-    public ViewModel()
-    {
-        Data = new ObservableCollection<Model>();
-        Data.Add(new Model("India", 21));
-        Data.Add(new Model("United States", 58));
-        Data.Add(new Model("Kazakhstan", 41));
-        Data.Add(new Model("Italy", 48));
-        Data.Add(new Model("Korea", 14));
-        Data.Add(new Model("China", 23));
-    }
-}
-public class Model
-{
-    public Model(string state, int population)
-    {
-        State = state;
-        Population = population;
-    }
-    public String State { get; set; }
-    public int Population { get; set; }
-}
-
+	
+	public class ViewModel
+	{
+		public ObservableCollection<Model> Data { get; set; }
+		
+		public ViewModel()
+		{
+			Data = new ObservableCollection<Model>();
+			Data.Add(new Model("India", 21));
+			Data.Add(new Model("United States", 58));
+			Data.Add(new Model("Kazakhstan", 41));
+			Data.Add(new Model("Italy", 48));
+			Data.Add(new Model("Korea", 14));
+			Data.Add(new Model("China", 23));
+		}
+	}
+	
+	public class Model
+	{
+		public String State { get; set; }
+		public int Population { get; set; }
+		
+		public Model(string state, int population)
+		{
+			State = state;
+			Population = population;
+		}
+	}
 
 {% endhighlight %}
 
@@ -194,44 +202,40 @@ The [`MapShapeLayer.ShowMarkerTooltip`]() is used to clearly indicate the marker
 
 {% highlight xaml %}
 
-     <map:SfMaps>
-            <map:SfMaps.Layer>
-                <map:MapShapeLayer 
-                        ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json" 
-                         ShapeStroke="DarkGrey"
-                         ShapeHoverFill = "Transparent" 
-                         ShapeHoverStroke="Transparent" 
-                         ShowMarkerTooltip="True">
+    <map:SfMaps>
+         <map:SfMaps.Layer>
+             <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json" 
+							    ShapeStroke="DarkGrey"
+							    ShapeHoverFill = "Transparent" 
+							    ShapeHoverStroke="Transparent" 
+							    ShowMarkerTooltip="True">
 
-                    <map:MapShapeLayer.Markers>
-                        <map:MapMarkerCollection>
-                            <map:MapMarker
-                              Latitude="1454.6" 
-                              IconWidth="20" 
-                              IconHeight="20" 
-                              IconType="Diamond" 
-                              Longitude="36.0"  />
+                 <map:MapShapeLayer.Markers>
+                     <map:MapMarkerCollection>
+                         <map:MapMarker Latitude="1454.6" 
+									    IconWidth="20" 
+									    IconHeight="20" 
+									    IconType="Diamond" 
+									    Longitude="36.0" />
+                         <map:MapMarker Latitude="34.0479"
+ 									    IconWidth="20" 
+ 									    IconHeight="20" 
+ 									    IconType="Circle" 
+ 									    Longitude="100.6124" />
 
-                            <map:MapMarker
-                               Latitude="34.0479"
-                               IconWidth="20" 
-                               IconHeight="20" 
-                               IconType="Circle" 
-                               Longitude="100.6124" />
-
-                        </map:MapMarkerCollection>
-                    </map:MapShapeLayer.Markers>
-           </map:SfMaps.Layer>
+                     </map:MapMarkerCollection>
+                 </map:MapShapeLayer.Markers>
+        </map:SfMaps.Layer>
     </map:SfMaps>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-public MainPage()
+	public MainPage()
 	{
 		InitializeComponent();
-        SfMaps maps = new SfMaps();
+		
         MapShapeLayer layer = new MapShapeLayer();
         layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
         layer.ShapeHoverFill = Colors.Transparent;
@@ -257,6 +261,8 @@ public MainPage()
         mapMarkers.Add(circleMarker);
 
         layer.Markers = mapMarkers;
+		
+        SfMaps maps = new SfMaps();
         maps.Layer = layer;
         this.Content = maps;
     }
@@ -272,9 +278,9 @@ N>
 
 ## Appearance customization
 
-### Customizing data templates in toolTip
+### Apply data template for tooltip
 
-Data template can be customized for items and headers of the control. The following code example shows the usage of DataTemplate.
+Data template can be used customize the tooltip view. The following code example shows the usage of `DataTemplate`.
 
 {% tabs %}
 
@@ -282,17 +288,17 @@ Data template can be customized for items and headers of the control. The follow
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-       <map:MapShapeLayer 
-            ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
-            DataSource="{Binding Data}"
-            ShapeDataField="continent"
-            PrimaryValuePath="Continent"
-            ShapeHoverFill="Transparent"
-            ShapeHoverStroke="transparent"
-            ShowShapeTooltip="True">
+       <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+						  DataSource="{Binding Data}"
+						  ShapeDataField="continent"
+						  PrimaryValuePath="Continent"
+						  ShapeHoverFill="Transparent"
+						  ShapeHoverStroke="transparent"
+						  ShowShapeTooltip="True">
+						  
             <map:MapShapeLayer.ShapeTooltipTemplate>
                 <DataTemplate>
-                    <Grid >
+                    <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition />
                             <RowDefinition />
@@ -316,12 +322,13 @@ Data template can be customized for items and headers of the control. The follow
 
 {% highlight c# %}
 
- public ToolTip()
+    public ToolTip()
 	{
         InitializeComponent();
+		
         ViewModel viewModel = new ViewModel();
         this.BindingContext = viewModel;  
-        SfMaps maps = new SfMaps();
+		
         MapShapeLayer layer = new MapShapeLayer();
         layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
         layer.PrimaryValuePath = "Continent";
@@ -332,9 +339,11 @@ Data template can be customized for items and headers of the control. The follow
         layer.ShowShapeTooltip = true;
         layer.ShapeTooltipTemplate = CreateDataTemplate();
 
+        SfMaps maps = new SfMaps();
         maps.Layer = layer;
         this.Content = maps;
     }
+	
     private DataTemplate CreateDataTemplate()
     {
         return new DataTemplate(() =>
@@ -353,6 +362,7 @@ Data template can be customized for items and headers of the control. The follow
                     new ColumnDefinition(),
                 }
             };
+			
             var image = new Image { Source = "flag.png", WidthRequest = 20, HeightRequest = 20 };
             grid.SetRow(image, 0); grid.SetColumn(image, 0);
             var label = new Label { FontAttributes = FontAttributes.Bold, TextColor = Colors.White, Padding = 5 };
@@ -375,32 +385,36 @@ Data template can be customized for items and headers of the control. The follow
             return new ViewCell { View = grid };
         });
     }
-public class ViewModel
-{
-    public ObservableCollection<Model> Data { get; set; }
-    public ViewModel()
-    {
-        Data = new ObservableCollection<Model>();
-        Data.Add( new Model("Asia", 130,"30,370,000 sq. km."));
-        Data.Add(new Model("Africa", 120,"24,709,000 sq. km."));
-        Data.Add( new Model("Europe", 586, "17,840,000 sq. km."));
-        Data.Add(new Model("North America", 472,"8,600,000 sq. km."));
-        Data.Add( new Model("South America", 363,"10,180,000 sq. km."));
-        Data.Add(new Model("Australia", 348,"59,180,000 sq. km."));
-    }
-}
-public class Model
-{
-    public string Continent { get; set; }
-    public string Area { get; set; }
-    public int Population1 { get; set; }
-    public Model(string continent, int population, string area)
-    {
-        this.Continent = continent;
-        this.Population1 = population;
-        this.Area = area;
-    }
-}
+	
+	public class ViewModel
+	{
+		public ObservableCollection<Model> Data { get; set; }
+		
+		public ViewModel()
+		{
+			Data = new ObservableCollection<Model>();
+			Data.Add( new Model("Asia", 130,"30,370,000 sq. km."));
+			Data.Add(new Model("Africa", 120,"24,709,000 sq. km."));
+			Data.Add( new Model("Europe", 586, "17,840,000 sq. km."));
+			Data.Add(new Model("North America", 472,"8,600,000 sq. km."));
+			Data.Add( new Model("South America", 363,"10,180,000 sq. km."));
+			Data.Add(new Model("Australia", 348,"59,180,000 sq. km."));
+		}
+	}
+
+	public class Model
+	{
+		public string Continent { get; set; }
+		public string Area { get; set; }
+		public int Population1 { get; set; }
+		
+		public Model(string continent, int population, string area)
+		{
+			this.Continent = continent;
+			this.Population1 = population;
+			this.Area = area;
+		}
+	}
 
 {% endhighlight %}
 
@@ -417,7 +431,7 @@ N>
 * Refer the [MapShapeLayer.BubbleTooltipTemplate](), for customize tooltip for the bubbles.
 * Refer the [MapLayer.MarkerTooltipTemplate](), for customize tooltip for the markers.
 
-### Customizing data templates selector in toolTip
+### Apply data template selector for tooltip
 
 Data template selector can be customized the appearance of each item with different templates based on specific constraints. You can choose a DataTemplate for each item at runtime based on the value of data-bound property using DataTemplateSelector.
 
@@ -425,7 +439,7 @@ Data template selector can be customized the appearance of each item with differ
 
 {% highlight xaml %}
 
-<ContentPage.Resources>
+	<ContentPage.Resources>
         <ResourceDictionary>
             <DataTemplate x:Key="HighPopulationTemplate">
                 <StackLayout IsClippedToBounds="false"
@@ -440,6 +454,7 @@ Data template selector can be customized the appearance of each item with differ
                        VerticalOptions="Center" />
                 </StackLayout>
             </DataTemplate>
+			
             <DataTemplate x:Key="LowPopulationTemplate">
                 <StackLayout IsClippedToBounds="false"
                          HorizontalOptions="StartAndExpand"
@@ -453,42 +468,48 @@ Data template selector can be customized the appearance of each item with differ
                        VerticalOptions="Center" />
                 </StackLayout>
             </DataTemplate>
+			
+			<local:MarkerTemplateSelector x:Key="MarkerTemplateSelector"
+										  Template1="{StaticResource LowPopulationTemplate}"
+										  Template2="{StaticResource HighPopulationTemplate}" />
         </ResourceDictionary>
     </ContentPage.Resources>
-       <map:SfMaps>
-                <map:SfMaps.Layer>
-                    <map:MapShapeLayer x:Name="layer"
-                                   ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
-                                   ShapeStroke="DarkGrey" >
-                        <map:MapShapeLayer.Markers>
-                         <map:MapMarkerCollection>
-                             <map:MapMarker Latitude="20.5595" Longitude="22.9375"  />
-                            <map:MapMarker Latitude="21.7679" Longitude="78.8718"  />
-                            <map:MapMarker Latitude="133.7751"  Longitude="25.2744"  />
-                            <map:MapMarker Latitude="60.2551" Longitude="84.5260" />
-                            <map:MapMarker Latitude="195.4915"  Longitude="-50.7832"  />
-                         </map:MapMarkerCollection>
-                       </map:MapShapeLayer.Markers>
-                    </map:MapShapeLayer>
-             </map:SfMaps.Layer>
-       </map:SfMaps>
-        <Button Text="Change marker Template" Clicked="Button_Clicked" />
+	
+    <map:SfMaps>
+          <map:SfMaps.Layer>
+              <map:MapShapeLayer x:Name="layer"
+								 ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+								 ShapeStroke="DarkGrey"
+								 MarkerTooltipTemplate={StaticResource MarkerTemplateSelector}>
+									
+                 <map:MapShapeLayer.Markers>
+					<map:MapMarkerCollection>
+						<map:MapMarker Latitude="20.5595" Longitude="22.9375" />
+						<map:MapMarker Latitude="21.7679" Longitude="78.8718" />
+						<map:MapMarker Latitude="133.7751"  Longitude="25.2744" />
+						<map:MapMarker Latitude="60.2551" Longitude="84.5260" />
+						<map:MapMarker Latitude="195.4915"  Longitude="-50.7832" />
+					</map:MapMarkerCollection>
+                 </map:MapShapeLayer.Markers>
+					
+              </map:MapShapeLayer>
+          </map:SfMaps.Layer>
+    </map:SfMaps>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-private void Button_Clicked(object sender, EventArgs e)
+public class MarkerTemplateSelector : DataTemplateSelector
+{
+    public DataTemplate Template1 { get; set; }
+    public DataTemplate Template2 { get; set; }
+	
+    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
     {
-        if (layer.MarkerTooltipTemplate != null && layer.MarkerTooltipTemplate.Equals(Resources["LowPopulationTemplate"] as DataTemplate))
-        {
-            layer.MarkerTooltipTemplate = Resources["HighPopulationTemplate"] as DataTemplate;
-        }
-        else
-        {
-            layer.MarkerTooltipTemplate = Resources["LowPopulationTemplate"] as DataTemplate;
-        }
-    }    
+        return (double)((MapMarker)item).Latitude < 20 ? Template1 : Template2;
+    }
+}
 
 {% endhighlight %}
 

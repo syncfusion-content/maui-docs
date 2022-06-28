@@ -80,7 +80,7 @@ Create an instance for the maps control, and add it as content.
 
 {% highlight xaml %}
 
-<map:SfMaps >
+<map:SfMaps>
   
 </map:SfMaps>
 
@@ -98,7 +98,7 @@ this.Content = map;
 
 ## Set GeoJSON data for shape layer from various source
 
-The [`Layer`]() in [`SfMaps`]() contains [`MapShapeLayer`]() property. The actual geographical rendering is done in the each [`MapShapeLayer`](). The [`ShapesSource`]() property of the [`MapShapeLayer`]() is of type [`MapShapeSource`](). The [`ShapesSource`]() can be set as the .json source from file, from network and from stream as bytes. Use the respective constructor depends on the type of the source.
+The [`Layer`]() in [`SfMaps`]() holds [`MapShapeLayer`](). The actual geographical rendering is done in the each [`MapShapeLayer`](). The [`ShapesSource`]() property of the [`MapShapeLayer`]() is of type [`MapShapeSource`](). The [`ShapesSource`]() can be set as the .json source from file, from network and from stream as bytes. Use the respective constructor depends on the type of the source.
 
 The [`ShapeDataField`]() property of the [`MapShapeLayer`]() is used to refer the unique field name in the .json source to identify each shapes. In [`Mapping the data source`]() section of this document, this [`ShapeDataField`]() will be used to map with respective value  in [`PrimaryValuePath`]() from the data source.
 
@@ -127,7 +127,7 @@ public MapSourcePage()
     InitializeComponent();
     SfMaps map = new SfMaps();
     MapShapeLayer layer = new MapShapeLayer();
-    layer.ShapesSource = MapSource.FromResource("ProjectFileName.ShapeFiles.australia.json");
+    layer.ShapesSource = MapSource.FromResource("ProjectName.ShapeFiles.australia.json");
     map.Layer = layer;
     this.Content = map;
 }
@@ -216,13 +216,14 @@ public MapSourcePage()
 
 public class Model
 {
+    public String State { get; set; }
+    public String StateCode { get; set; }
+
     public Model(string state, string stateCode)
     {
         State = state;
         StateCode = stateCode;
     }
-        public String State { get; set; }
-        public String StateCode { get; set; }
 }
 
 {% endhighlight %}
@@ -239,11 +240,11 @@ N>
 
 Add the basic maps elements such as data labels, legend, and tooltip as shown in the below code snippet.
 
-* **Data labels** - You can show data labels using the [`ShowDataLabels`]() property and also, it is possible to show data labels only for the particular shapes/or show custom text using the [`DataLabelSettings`]() property.
+* **Data labels** - You can show data labels using the [`ShowDataLabels`]() property and also, customize it using the [`DataLabelSettings`]() property.
 
-* **Legend** - You can enable legend using the [`Legend`]() property. The text of the legend is applied based on the [`ColorMapping.Text`]() property. It is possible to customize the legend text style customizations using the [`TextStyle`]() property.
+* **Legend** - You can enable legend using the [`Legend`]() property. The text of the legend is displayed based on the [`ColorMapping.Text`]() property. It is possible to customize the legend text using the [`TextStyle`]() property.
 
-* **Tooltip** - You can enable tooltip for the shapes using the [`ShowShapeTooltip`]() property. It will be called with the corresponding index every time when you interacts with the shapes i.e., while tapping in touch devices and hover enter in the mouse enabled devices.
+* **Tooltip** - You can enable tooltip for the shapes using the [`ShowShapeTooltip`]() property. It will be displayed when you interacts with the shapes i.e., while tapping in touch devices and hover in the mouse enabled devices.
 
 {% tabs %}
 
@@ -252,62 +253,73 @@ Add the basic maps elements such as data labels, legend, and tooltip as shown in
 public MapSourcePage()
 {
     InitializeComponent();
-     ObservableCollection<Model> Data = new ObservableCollection<Model>();
-        Data.Add(new Model("New South Wales", "New\nSouth Wales",6000));
-        Data.Add(new Model("Queensland", "Queensland",8000));
-        Data.Add(new Model("Northern Territory", "Northern\nTerritory",10000));
-        Data.Add(new Model("Victoria", "Victoria",5000));
-        Data.Add(new Model("Tasmania", "Tasmania",90000));
-        Data.Add(new Model("Western Australia", "Western Australia", 7000));
-        Data.Add(new Model("South Australia", "South Australia", 3000));
-        SfMaps maps = new SfMaps();
-        MapShapeLayer layer = new MapShapeLayer();
-        layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/australia.json"));
-        layer.DataSource = Data;
-        layer.PrimaryValuePath = "State";
-        layer.ShapeDataField = "STATE_NAME";
-        layer.ShowShapeTooltip = true;
-        layer.ShapeColorValuePath = "Population";
-        layer.ShowDataLabels = true;
+	ViewModel viewModel = new ViewModel();
+    SfMaps maps = new SfMaps();
+    MapShapeLayer layer = new MapShapeLayer();
+    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/australia.json"));
+    layer.DataSource = viewModel.Data;
+    layer.PrimaryValuePath = "State";
+    layer.ShapeDataField = "STATE_NAME";
+    layer.ShowShapeTooltip = true;
+    layer.ShapeColorValuePath = "Population";
+    layer.ShowDataLabels = true;
 
-        layer.DataLabelSettings = new MapDataLabelSettings()
-        {
-            DataLabelPath = "StateCode",
-            DataLabelStyle = new MapLabelStyle()
-            {
-                FontSize = 14,
-                FontAttributes = FontAttributes.Bold,
-                TextColor = Colors.Black
-            },
-
-            OverflowMode = MapLabelOverflowMode.None,
-        };
-
-        layer.ColorMappings = new ObservableCollection<ColorMapping>()
-        {
-            new EqualColorMapping { Color = Colors.Yellow, Value = "6000" },
-            new EqualColorMapping { Color = Colors.LimeGreen, Value = "8000" },
-            new EqualColorMapping { Color = Colors.Violet, Value = "5000" },
-            new EqualColorMapping { Color = Colors.Blue, Value = "90000" },
-            new EqualColorMapping { Color = Colors.Red, Value = "7000" },
-            new EqualColorMapping { Color = Colors.Orange, Value = "3000" },
-        };
-        maps.Layer = layer;
-        this.Content = maps;
-    }
-
-    public class Model
+    layer.DataLabelSettings = new MapDataLabelSettings()
     {
-        public Model(string state, string stateCode,int population)
+        DataLabelPath = "StateCode",
+        DataLabelStyle = new MapLabelStyle()
         {
-            State = state;
-            StateCode = stateCode;
-            Population = population;
-        }
-        public String State { get; set; }
-        public String StateCode { get; set; }
-        public int Population { get; set; }
+            FontSize = 14,
+            FontAttributes = FontAttributes.Bold,
+            TextColor = Colors.Black
+        },
+
+        OverflowMode = MapLabelOverflowMode.None,
+    };
+
+    layer.ColorMappings = new ObservableCollection<ColorMapping>()
+    {
+        new EqualColorMapping { Color = Colors.Yellow, Value = "6000" },
+        new EqualColorMapping { Color = Colors.LimeGreen, Value = "8000" },
+        new EqualColorMapping { Color = Colors.Violet, Value = "5000" },
+        new EqualColorMapping { Color = Colors.Blue, Value = "90000" },
+        new EqualColorMapping { Color = Colors.Red, Value = "7000" },
+        new EqualColorMapping { Color = Colors.Orange, Value = "3000" },
+    };
+    maps.Layer = layer;
+    this.Content = maps;
+}
+
+public class Model
+{
+    public string State { get; set; }
+    public string StateCode { get; set; }
+    public int Population { get; set; }
+	
+    public Model(string state, string stateCode,int population)
+    {
+        State = state;
+        StateCode = stateCode;
+        Population = population;
     }
+}
+
+public class ViewModel
+{
+    public ObservableCollection<Model> Data {get; set;}
+	
+    public ViewModel()
+    {
+        Data = new ObservableCollection<Model>();
+		Data.Add(new Model("New South Wales", "New\nSouth Wales",6000));
+		Data.Add(new Model("Queensland", "Queensland",8000));
+		Data.Add(new Model("Northern Territory", "Northern\nTerritory",10000));
+		Data.Add(new Model("Victoria", "Victoria",5000));
+		Data.Add(new Model("Tasmania", "Tasmania",90000));
+		Data.Add(new Model("Western Australia", "Western Australia", 7000));
+		Data.Add(new Model("South Australia", "South Australia", 3000));
+    }
+}
 
 {% endhighlight %}
 

@@ -13,7 +13,7 @@ Data labels provides identification for the shapes by displaying their names. Yo
 
 ## Show data labels
 
-You can show data labels on the map using the [`ShowDataLabels`]() property. By default, the data labels are rendered based on the value of [`ShapeDataField`]() property. The default value of the [`ShowDataLabels`]() property is `false`.
+You can show data labels on the map using the [`ShowDataLabels`]() property. The default value is `false`.
 
 {% tabs %}
 
@@ -22,13 +22,13 @@ You can show data labels on the map using the [`ShowDataLabels`]() property. By 
      <map:SfMaps>
         <map:SfMaps.Layer>
             <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/australia.json" 
-               DataSource="{Binding Data}"        
-               PrimaryValuePath="State" 
-               ShapeDataField="STATE_NAME" 
-               ShowDataLabels = "True"  >
+							   DataSource="{Binding Data}"        
+							   PrimaryValuePath="State" 
+							   ShapeDataField="STATE_NAME" 
+							   ShowDataLabels="True">
 
                 <map:MapShapeLayer.DataLabelSettings>
-                    <map:MapDataLabelSettings   DataLabelPath="State"/>
+                    <map:MapDataLabelSettings DataLabelPath="State" />
                 </map:MapShapeLayer.DataLabelSettings>
             </map:MapShapeLayer>
         </map:SfMaps.Layer>
@@ -43,7 +43,7 @@ public MainPage()
     InitializeComponent();
     ViewModel viewModel = new ViewModel();
     this.BindingContext = viewModel;
-    SfMaps maps = new SfMaps();
+	
     MapShapeLayer layer = new MapShapeLayer();
     layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/australia.json"));
     layer.DataSource = viewModel.Data;
@@ -55,33 +55,39 @@ public MainPage()
     {
        DataLabelPath = "State",
     };
+	
+    SfMaps maps = new SfMaps();
     maps.Layer = layer;
     this.Content = maps;
 }
+
 public class ViewModel
 {
     public ObservableCollection<Model> Data { get; set; }
-       public ViewModel()
-       {
-          Data = new ObservableCollection<Model>();
-          Data.Add(new Model("New South Wales", "New\nSouth Wales"));
-          Data.Add(new Model("Queensland", "Queensland"));
-          Data.Add(new Model("Northern Territory", "Northern\nTerritory"));
-          Data.Add(new Model("Victoria", "Victoria"));
-          Data.Add(new Model("Tasmania", "Tasmania"));
-          Data.Add(new Model("Western Australia", "Western Australia"));
-          Data.Add(new Model("South Australia", "South Australia"));
-       }
-}       
+    
+	public ViewModel()
+    {
+       Data = new ObservableCollection<Model>();
+       Data.Add(new Model("New South Wales", "New\nSouth Wales"));
+       Data.Add(new Model("Queensland", "Queensland"));
+       Data.Add(new Model("Northern Territory", "Northern\nTerritory"));
+       Data.Add(new Model("Victoria", "Victoria"));
+       Data.Add(new Model("Tasmania", "Tasmania"));
+       Data.Add(new Model("Western Australia", "Western Australia"));
+       Data.Add(new Model("South Australia", "South Australia"));
+    }
+}
+
 public class Model
 {
+    public String State { get; set; }
+    public String StateCode { get; set; }
+	
     public Model(string state, string stateCode)
     {
         State = state;
         StateCode = stateCode;
     }
-    public String State { get; set; }
-    public String StateCode { get; set; }
 }
 
 {% endhighlight %}
@@ -101,13 +107,13 @@ You can customize text of the data labels using the [`DataLabelPath`]() property
      <map:SfMaps>
         <map:SfMaps.Layer>
             <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/australia.json" 
-               DataSource="{Binding Data}"        
-               PrimaryValuePath="State" 
-               ShapeDataField="STATE_NAME" 
-               ShowDataLabels = "True"  >
+							   DataSource="{Binding Data}"        
+							   PrimaryValuePath="State" 
+							   ShapeDataField="STATE_NAME" 
+							   ShowDataLabels="True" >
 
                 <map:MapShapeLayer.DataLabelSettings>
-                    <map:MapDataLabelSettings DataLabelPath="StateCode"/>
+                    <map:MapDataLabelSettings DataLabelPath="StateCode" />
                 </map:MapShapeLayer.DataLabelSettings>
             </map:MapShapeLayer>
         </map:SfMaps.Layer>
@@ -122,7 +128,7 @@ public MainPage()
     InitializeComponent();
     ViewModel viewModel = new ViewModel();
     this.BindingContext = viewModel;
-    SfMaps maps = new SfMaps();
+	
     MapShapeLayer layer = new MapShapeLayer();
     layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/australia.json"));
     layer.DataSource = viewModel.Data;
@@ -134,33 +140,39 @@ public MainPage()
     {
        DataLabelPath = "StateCode",
     };
+	
+    SfMaps maps = new SfMaps();
     maps.Layer = layer;
     this.Content = maps;
 }
+
 public class ViewModel
 {
     public ObservableCollection<Model> Data { get; set; }
-       public ViewModel()
-       {
-          Data = new ObservableCollection<Model>();
-          Data.Add(new Model("New South Wales", "New\nSouth Wales"));
-          Data.Add(new Model("Queensland", "Queensland"));
-          Data.Add(new Model("Northern Territory", "NT"));
-          Data.Add(new Model("Victoria", "Victoria"));
-          Data.Add(new Model("Tasmania", "Tasmania"));
-          Data.Add(new Model("Western Australia", "WA"));
-          Data.Add(new Model("South Australia", "SA"));
-       }
-}       
+	
+    public ViewModel()
+    {
+       Data = new ObservableCollection<Model>();
+       Data.Add(new Model("New South Wales", "New\nSouth Wales"));
+       Data.Add(new Model("Queensland", "Queensland"));
+       Data.Add(new Model("Northern Territory", "NT"));
+       Data.Add(new Model("Victoria", "Victoria"));
+       Data.Add(new Model("Tasmania", "Tasmania"));
+       Data.Add(new Model("Western Australia", "WA"));
+       Data.Add(new Model("South Australia", "SA"));
+    }
+}
+
 public class Model
 {
+    public String State { get; set; }
+    public String StateCode { get; set; }
+	
     public Model(string state, string stateCode)
     {
         State = state;
         StateCode = stateCode;
     }
-    public String State { get; set; }
-    public String StateCode { get; set; }
 }
 
 {% endhighlight %}
@@ -182,13 +194,14 @@ By default, the data labels will render even if it overflows from the shape.
      <map:SfMaps>
         <map:SfMaps.Layer>
             <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/australia.json" 
-               DataSource="{Binding Data}"        
-               PrimaryValuePath="State" 
-               ShapeDataField="STATE_NAME" 
-               ShowDataLabels = "True"  >
+							   DataSource="{Binding Data}"        
+							   PrimaryValuePath="State" 
+							   ShapeDataField="STATE_NAME" 
+							   ShowDataLabels="True">
 
                 <map:MapShapeLayer.DataLabelSettings>
-                    <map:MapDataLabelSettings OverflowMode="Trim"  DataLabelPath="State"/>
+                    <map:MapDataLabelSettings OverflowMode="Trim"
+											  DataLabelPath="State" />
                 </map:MapShapeLayer.DataLabelSettings>
             </map:MapShapeLayer>
         </map:SfMaps.Layer>
@@ -203,7 +216,7 @@ public MainPage()
     InitializeComponent();
     ViewModel viewModel = new ViewModel();
     this.BindingContext = viewModel;
-    SfMaps maps = new SfMaps();
+	
     MapShapeLayer layer = new MapShapeLayer();
     layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/australia.json"));
     layer.DataSource = viewModel.Data;
@@ -214,35 +227,41 @@ public MainPage()
     layer.DataLabelSettings = new MapDataLabelSettings()
     {
        DataLabelPath = "State",
-      OverflowMode = MapLabelOverflowMode.Trim,
+       OverflowMode = MapLabelOverflowMode.Trim,
     };
+	
+    SfMaps maps = new SfMaps();
     maps.Layer = layer;
     this.Content = maps;
 }
+
 public class ViewModel
 {
     public ObservableCollection<Model> Data { get; set; }
-       public ViewModel()
-       {
-          Data = new ObservableCollection<Model>();
-          Data.Add(new Model("New South Wales", "New\nSouth Wales"));
-          Data.Add(new Model("Queensland", "Queensland"));
-          Data.Add(new Model("Northern Territory", "Northern\nTerritory"));
-          Data.Add(new Model("Victoria", "Victoria"));
-          Data.Add(new Model("Tasmania", "Tasmania"));
-          Data.Add(new Model("Western Australia", "Western Australia"));
-          Data.Add(new Model("South Australia", "South Australia"));
-       }
-}       
+	
+    public ViewModel()
+    {
+       Data = new ObservableCollection<Model>();
+       Data.Add(new Model("New South Wales", "New\nSouth Wales"));
+       Data.Add(new Model("Queensland", "Queensland"));
+       Data.Add(new Model("Northern Territory", "Northern\nTerritory"));
+       Data.Add(new Model("Victoria", "Victoria"));
+       Data.Add(new Model("Tasmania", "Tasmania"));
+       Data.Add(new Model("Western Australia", "Western Australia"));
+       Data.Add(new Model("South Australia", "South Australia"));
+    }
+}
+
 public class Model
 {
+    public String State { get; set; }
+    public String StateCode { get; set; }
+	
     public Model(string state, string stateCode)
     {
         State = state;
         StateCode = stateCode;
     }
-    public String State { get; set; }
-    public String StateCode { get; set; }
 }
 
 {% endhighlight %}
@@ -262,19 +281,20 @@ You can customize the data labels using the [`DataLabelStyle`]() property.
      <map:SfMaps>
         <map:SfMaps.Layer>
             <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/australia.json"  
-                DataSource="{Binding Data}" 
-                PrimaryValuePath="State" 
-                ShapeDataField="STATE_NAME" 
-                ShowDataLabels = "True"  >
+							   DataSource="{Binding Data}" 
+							   PrimaryValuePath="State" 
+							   ShapeDataField="STATE_NAME" 
+							   ShowDataLabels="True">
 
                 <map:MapShapeLayer.DataLabelSettings>
-                    <map:MapDataLabelSettings OverflowMode="Trim"  DataLabelPath="ContinentCode"/>
+                    <map:MapDataLabelSettings OverflowMode="Trim"
+											  DataLabelPath="ContinentCode">
                           <map:MapDataLabelSettings.DataLabelStyle>
                                     <map:MapLabelStyle FontSize="12"
-                                                   TextColor="Red"
-                                                   FontAttributes="Bold"/>
-                                </map:MapDataLabelSettings.DataLabelStyle>
-                            </map:MapDataLabelSettings>
+                                                       TextColor="Red"
+                                                       FontAttributes="Bold" />
+                          </map:MapDataLabelSettings.DataLabelStyle>
+                    </map:MapDataLabelSettings>
                 </map:MapShapeLayer.DataLabelSettings>
 
             </map:MapShapeLayer>
@@ -290,7 +310,7 @@ public MainPage()
     InitializeComponent();
     ViewModel viewModel = new ViewModel();
     this.BindingContext = viewModel;
-    SfMaps maps = new SfMaps();
+	
     MapShapeLayer layer = new MapShapeLayer();
     layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/australia.json"));
     layer.DataSource = viewModel.Data;
@@ -303,39 +323,45 @@ public MainPage()
        DataLabelPath = "State",
        OverflowMode = MapLabelOverflowMode.Trim,
        DataLabelStyle = new MapLabelStyle()
-        {
-            FontSize = 12,
-            FontAttributes = FontAttributes.Bold,
-            TextColor = Colors.Red
-        },
+       {
+           FontSize = 12,
+           FontAttributes = FontAttributes.Bold,
+           TextColor = Colors.Red
+       },
     };
+	
+    SfMaps maps = new SfMaps();
     maps.Layer = layer;
     this.Content = maps;
 }
+
 public class ViewModel
 {
     public ObservableCollection<Model> Data { get; set; }
-       public ViewModel()
-       {
-          Data = new ObservableCollection<Model>();
-          Data.Add(new Model("New South Wales", "New\nSouth Wales"));
-          Data.Add(new Model("Queensland", "Queensland"));
-          Data.Add(new Model("Northern Territory", "Northern\nTerritory"));
-          Data.Add(new Model("Victoria", "Victoria"));
-          Data.Add(new Model("Tasmania", "Tasmania"));
-          Data.Add(new Model("Western Australia", "Western Australia"));
-          Data.Add(new Model("South Australia", "South Australia"));
-       }
-}       
+	
+    public ViewModel()
+    {
+       Data = new ObservableCollection<Model>();
+       Data.Add(new Model("New South Wales", "New\nSouth Wales"));
+       Data.Add(new Model("Queensland", "Queensland"));
+       Data.Add(new Model("Northern Territory", "Northern\nTerritory"));
+       Data.Add(new Model("Victoria", "Victoria"));
+       Data.Add(new Model("Tasmania", "Tasmania"));
+       Data.Add(new Model("Western Australia", "Western Australia"));
+       Data.Add(new Model("South Australia", "South Australia"));
+    }
+}
+
 public class Model
 {
+    public String State { get; set; }
+    public String StateCode { get; set; }
+	
     public Model(string state, string stateCode)
     {
         State = state;
         StateCode = stateCode;
     }
-    public String State { get; set; }
-    public String StateCode { get; set; }
 }
 
 {% endhighlight %}

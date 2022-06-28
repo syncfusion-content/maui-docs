@@ -13,7 +13,7 @@ Bubbles can be rendered in different colors and sizes based on the data values o
 
 ## Enable bubbles
 
-You can enable bubbles using the [`ShowBubbles`](). You can customize a bubbles using the [`BubbleSettings`]().This property is used to specify the value based on which the bubble's size has to be rendered.
+You can enable bubbles using the [`ShowBubbles`](). You can customize a bubbles using the [`BubbleSettings`](). This property is used to specify the value based on which the bubble's size has to be rendered.
 
 {% tabs %}
 
@@ -21,19 +21,18 @@ You can enable bubbles using the [`ShowBubbles`](). You can customize a bubbles 
 
      <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer 
-                ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
-                DataSource="{Binding Data}"
-                PrimaryValuePath="State" 
-                ShapeDataField="name" 
-                ShowBubbles="True" >
+            <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+							   DataSource="{Binding Data}"
+							   PrimaryValuePath="State" 
+							   ShapeDataField="name" 
+							   ShowBubbles="True">
 
               <map:MapShapeLayer.BubbleSettings>
                   <map:MapBubbleSettings ColorValuePath="Population" 
-                      SizeValuePath="Population" 
-                      Fill="DarkViolet"
-                      MinSize="30"
-                      MaxSize="80">
+       									 SizeValuePath="Population" 
+       									 Fill="DarkViolet"
+       									 MinSize="30"
+       									 MaxSize="80">
                   </map:MapBubbleSettings>
               </map:MapShapeLayer.BubbleSettings>
             </map:MapShapeLayer>
@@ -47,33 +46,34 @@ You can enable bubbles using the [`ShowBubbles`](). You can customize a bubbles 
 public MainPage()
 {
    InitializeComponent();
-        ViewModel viewModel = new ViewModel();
-        this.BindingContext = viewModel;
-        SfMaps maps = new SfMaps();
-        MapShapeLayer layer = new MapShapeLayer();
-        layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
-        layer.DataSource = viewModel.Data;
-        layer.PrimaryValuePath = "State";
-        layer.ShapeDataField = "name";
-        layer.ShowBubbles = true;
+   ViewModel viewModel = new ViewModel();
+   this.BindingContext = viewModel;
+   SfMaps maps = new SfMaps();
+   MapShapeLayer layer = new MapShapeLayer();
+   layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
+   layer.DataSource = viewModel.Data;
+   layer.PrimaryValuePath = "State";
+   layer.ShapeDataField = "name";
+   layer.ShowBubbles = true;
 
-        MapBubbleSettings bubbleSetting = new MapBubbleSettings()
-        {
-            ColorValuePath = "Population",
-            SizeValuePath = "Population",
-            Fill = Colors.DarkViolet,
-            MinSize = 30,
-            MaxSize =80
-            
-        };
+   MapBubbleSettings bubbleSetting = new MapBubbleSettings()
+   {
+       ColorValuePath = "Population",
+       SizeValuePath = "Population",
+       Fill = Colors.DarkViolet,
+       MinSize = 30,
+       MaxSize = 80
+   };
 
-        layer.BubbleSettings = bubbleSetting;
-        maps.Layer = layer;
-        this.Content = maps;
-    }
+   layer.BubbleSettings = bubbleSetting;
+   maps.Layer = layer;
+   this.Content = maps;
+}
+
 public class ViewModel
 {
     public ObservableCollection<Model> Data { get; set; }
+	
     public ViewModel()
     {
         Data = new ObservableCollection<Model>();
@@ -85,15 +85,17 @@ public class ViewModel
         Data.Add(new Model("China", 23));
     }
 }
+
 public class Model
 {
+    public String State { get; set; }
+    public int Population { get; set; }
+	
     public Model(string state, int population)
     {
         State = state;
         Population = population;
     }
-    public String State { get; set; }
-    public int Population { get; set; }
 }
 
 {% endhighlight %}
@@ -112,22 +114,21 @@ You can enable tooltip for the bubbles using the [`ShowBubbleTooltip`]() propert
 
      <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer 
-                ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
-                DataSource="{Binding Data}"
-                PrimaryValuePath="State" 
-                ShapeDataField="name" 
-                ShapeHoverFill = "Transparent" 
-                ShapeHoverStroke="Transparent"
-                ShowBubbles="True"
-                ShowBubbleTooltip="True" >
+            <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+   							   DataSource="{Binding Data}"
+   							   PrimaryValuePath="State" 
+   							   ShapeDataField="name" 
+   							   ShapeHoverFill="Transparent" 
+   							   ShapeHoverStroke="Transparent"
+   							   ShowBubbles="True"
+   							   ShowBubbleTooltip="True">
 
               <map:MapShapeLayer.BubbleSettings>
                   <map:MapBubbleSettings ColorValuePath="Population" 
-                      SizeValuePath="Population" 
-                      Fill="DarkViolet"
-                      MinSize="30"
-                      MaxSize="80">
+										 SizeValuePath="Population" 
+										 Fill="DarkViolet"
+										 MinSize="30"
+										 MaxSize="80">
                   </map:MapBubbleSettings>
               </map:MapShapeLayer.BubbleSettings>
             </map:MapShapeLayer>
@@ -141,37 +142,37 @@ You can enable tooltip for the bubbles using the [`ShowBubbleTooltip`]() propert
 public MainPage()
 {
    InitializeComponent();
-        ViewModel viewModel = new ViewModel();
-        this.BindingContext = viewModel;
-        SfMaps maps = new SfMaps();
-        MapShapeLayer layer = new MapShapeLayer();
-        layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
-        layer.DataSource = viewModel.Data;
-        layer.PrimaryValuePath = "State";
-        layer.ShapeDataField = "name";
-        layer.ShapeHoverFill = Colors.Transparent;
-        layer.ShapeHoverStroke = Colors.Transparent;
-        layer.ShowBubbles = true;
-        layer.ShowBubbleTooltip = true;
+   ViewModel viewModel = new ViewModel();
+   this.BindingContext = viewModel;
+   SfMaps maps = new SfMaps();
+   MapShapeLayer layer = new MapShapeLayer();
+   layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
+   layer.DataSource = viewModel.Data;
+   layer.PrimaryValuePath = "State";
+   layer.ShapeDataField = "name";
+   layer.ShapeHoverFill = Colors.Transparent;
+   layer.ShapeHoverStroke = Colors.Transparent;
+   layer.ShowBubbles = true;
+   layer.ShowBubbleTooltip = true;
 
+   MapBubbleSettings bubbleSetting = new MapBubbleSettings()
+   {
+       ColorValuePath = "Population",
+       SizeValuePath = "Population",
+       Fill = Colors.DarkViolet,
+       MinSize = 30,
+       MaxSize = 80
+   };
 
-        MapBubbleSettings bubbleSetting = new MapBubbleSettings()
-        {
-            ColorValuePath = "Population",
-            SizeValuePath = "Population",
-            Fill = Colors.DarkViolet,
-            MinSize = 30,
-            MaxSize =80
-            
-        };
+   layer.BubbleSettings = bubbleSetting;
+   maps.Layer = layer;
+   this.Content = maps;
+}
 
-        layer.BubbleSettings = bubbleSetting;
-        maps.Layer = layer;
-        this.Content = maps;
-    }
 public class ViewModel
 {
     public ObservableCollection<Model> Data { get; set; }
+	
     public ViewModel()
     {
         Data = new ObservableCollection<Model>();
@@ -183,15 +184,17 @@ public class ViewModel
         Data.Add(new Model("China", 23));
     }
 }
+
 public class Model
 {
+    public String State { get; set; }
+    public int Population { get; set; }
+	
     public Model(string state, int population)
     {
         State = state;
         Population = population;
     }
-    public String State { get; set; }
-    public int Population { get; set; }
 }
 
 {% endhighlight %}
@@ -202,9 +205,9 @@ public class Model
 
 ## Color
 
-You can customize the bubble color based on the value from the [`ColorMappings`]() property. 
+You can customize the bubble color based on the value from the [`ColorValuePath`]() property. If it provides direct color value then it applies to bubbles strightaway. Otherwise, we must provide [`ColorMapping`]().
 
- The value from the [`ColorMappings`]() will be used for the comparison in the [`EqualColorMapping.Value`]() or [`RangeColorMapping.From`]() and [`RangeColorMapping.To`](). Then, the [`RangeColorMapping.Color`]() or [`EqualColorMapping.Color`]() will be applied to the respective bubble.
+The value from the [`ColorValuePath`]() will be used for the comparison in the [`EqualColorMapping.Value`]() or [`RangeColorMapping.From`]() and [`RangeColorMapping.To`](). Then, the [`RangeColorMapping.Color`]() or [`EqualColorMapping.Color`]() will be applied to the respective bubble.
 
 {% tabs %}
 
@@ -212,39 +215,37 @@ You can customize the bubble color based on the value from the [`ColorMappings`]
 
      <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer 
-                ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"  
-                ShowDataLabels="True"
-                DataSource="{Binding Data}" 
-                PrimaryValuePath="State" 
-                ShapeDataField="name" 
-                ShowBubbles="True" >
-
+            <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"  
+							   ShowDataLabels="True"
+							   DataSource="{Binding Data}" 
+							   PrimaryValuePath="State" 
+							   ShapeDataField="name" 
+							   ShowBubbles="True">
               <map:MapShapeLayer.BubbleSettings>
 
                 <map:MapBubbleSettings ColorValuePath="Population" 
-                      SizeValuePath="Population" 
-                      MinSize="30"
-                      MaxSize="80">
+									   SizeValuePath="Population" 
+									   MinSize="30"
+									   MaxSize="80">
 
                       <map:MapBubbleSettings.ColorMappings>
-                           <map:EqualColorMapping  Color="DarkViolet" Value="51"/>
-                           <map:EqualColorMapping  Color="Orange" Value="58"/>
-                           <map:EqualColorMapping  Color="Yellow" Value="41"/>
-                           <map:EqualColorMapping  Color="LightGreen" Value="48"/>
-                           <map:EqualColorMapping  Color="Green" Value="14"/>
-                           <map:EqualColorMapping  Color="Aqua" Value="23"/>
+                           <map:EqualColorMapping Color="DarkViolet" Value="51"/>
+                           <map:EqualColorMapping Color="Orange" Value="58"/>
+                           <map:EqualColorMapping Color="Yellow" Value="41"/>
+                           <map:EqualColorMapping Color="LightGreen" Value="48"/>
+                           <map:EqualColorMapping Color="Green" Value="14"/>
+                           <map:EqualColorMapping Color="Aqua" Value="23"/>
                       </map:MapBubbleSettings.ColorMappings>
                 </map:MapBubbleSettings>
               </map:MapShapeLayer.BubbleSettings>
 
               <map:MapShapeLayer.DataLabelSettings>
-                  <map:MapDataLabelSettings  DataLabelPath="State" OverflowMode="None">
+                  <map:MapDataLabelSettings DataLabelPath="State"
+										    OverflowMode="None">
                       <map:MapDataLabelSettings.DataLabelStyle>
-                         <map:MapLabelStyle 
-                            FontSize="12" 
-                            TextColor="Red" 
-                            FontAttributes="Italic"/>
+                         <map:MapLabelStyle FontSize="12" 
+											TextColor="Red" 
+											FontAttributes="Italic"/>
                       </map:MapDataLabelSettings.DataLabelStyle>
                   </map:MapDataLabelSettings>
               </map:MapShapeLayer.DataLabelSettings>
@@ -258,58 +259,61 @@ You can customize the bubble color based on the value from the [`ColorMappings`]
 {% highlight c# %}
 
 public MainPage()
+{
+    InitializeComponent();
+    ViewModel viewModel = new ViewModel();
+    this.BindingContext = viewModel;
+
+    SfMaps maps = new SfMaps();
+    MapShapeLayer layer = new MapShapeLayer();
+    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
+    layer.DataSource = viewModel.Data;
+    layer.PrimaryValuePath = "State";
+    layer.ShapeDataField = "name";
+    layer.ShowBubbles = true;
+    layer.ShowDataLabels = true;
+
+    MapBubbleSettings bubbleSetting = new MapBubbleSettings()
     {
-        InitializeComponent();
-        ViewModel viewModel = new ViewModel();
-        this.BindingContext = viewModel;
+        ColorValuePath = "Population",
+        SizeValuePath = "Population",
+        Opacity = 1,
+        MinSize = 30,
+        MaxSize = 80,
+    };
+	
+    bubbleSetting.ColorMappings.Add(new EqualColorMapping() { Color = Colors.DarkViolet, Value = "21" });
+    bubbleSetting.ColorMappings.Add(new EqualColorMapping() { Color = Colors.Orange, Value = "58" });
+    bubbleSetting.ColorMappings.Add(new EqualColorMapping() { Color = Colors.Yellow, Value = "41" });
+    bubbleSetting.ColorMappings.Add(new EqualColorMapping() { Color = Colors.LightGreen, Value = "48" });
+    bubbleSetting.ColorMappings.Add(new EqualColorMapping() { Color = Colors.Green, Value = "14" });
+    bubbleSetting.ColorMappings.Add(new EqualColorMapping() { Color = Colors.Aqua, Value = "23" });
 
-        SfMaps maps = new SfMaps();
-        MapShapeLayer layer = new MapShapeLayer();
-        layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
-        layer.DataSource = viewModel.Data;
-        layer.PrimaryValuePath = "State";
-        layer.ShapeDataField = "name";
-        layer.ShowBubbles = true;
-        layer.ShowDataLabels = true;
+    layer.BubbleSettings = bubbleSetting;
+    layer.ShapeColorValuePath = "Population";
+    layer.ShowDataLabels = true;
 
-        MapBubbleSettings bubbleSetting = new MapBubbleSettings()
+    layer.DataLabelSettings = new MapDataLabelSettings()
+    {
+        DataLabelPath = "State",
+        OverflowMode = MapLabelOverflowMode.None,
+        DataLabelStyle = new MapLabelStyle()
         {
-            ColorValuePath = "Population",
-            SizeValuePath = "Population",
-            Opacity = 1,
-            MinSize = 30,
-            MaxSize = 80,
-        };
-        bubbleSetting.ColorMappings.Add(new EqualColorMapping() { Color = Colors.DarkViolet, Value = "21" });
-        bubbleSetting.ColorMappings.Add(new EqualColorMapping() { Color = Colors.Orange, Value = "58" });
-        bubbleSetting.ColorMappings.Add(new EqualColorMapping() { Color = Colors.Yellow, Value = "41" });
-        bubbleSetting.ColorMappings.Add(new EqualColorMapping() { Color = Colors.LightGreen, Value = "48" });
-        bubbleSetting.ColorMappings.Add(new EqualColorMapping() { Color = Colors.Green, Value = "14" });
-        bubbleSetting.ColorMappings.Add(new EqualColorMapping() { Color = Colors.Aqua, Value = "23" });
+            FontSize = 12,
+            FontAttributes = FontAttributes.Italic,
+            TextColor = Colors.Red
+        },
+    };
 
-        layer.BubbleSettings = bubbleSetting;
-        layer.ShapeColorValuePath = "Population";
-        layer.ShowDataLabels = true;
-
-        layer.DataLabelSettings = new MapDataLabelSettings()
-        {
-            DataLabelPath = "State",
-            OverflowMode = MapLabelOverflowMode.None,
-            DataLabelStyle = new MapLabelStyle()
-            {
-                FontSize = 12,
-                FontAttributes = FontAttributes.Italic,
-                TextColor = Colors.Red
-            },
-        };
-
-        layer.BubbleSettings = bubbleSetting;
-        maps.Layer = layer;
-        this.Content = maps;
-    }
-    public class ViewModel
+    layer.BubbleSettings = bubbleSetting;
+    maps.Layer = layer;
+    this.Content = maps;
+}
+	
+public class ViewModel
 {
     public ObservableCollection<Model> Data { get; set; }
+	
     public ViewModel()
     {
         Data = new ObservableCollection<Model>();
@@ -321,15 +325,17 @@ public MainPage()
         Data.Add(new Model("China", 23));
     }
 }
+
 public class Model
 {
+    public String State { get; set; }
+    public int Population { get; set; }
+	
     public Model(string state, int population)
     {
         State = state;
         Population = population;
     }
-    public String State { get; set; }
-    public int Population { get; set; }
 }
 
 {% endhighlight %}
@@ -357,27 +363,26 @@ You can customize the below appearance of the bubbles.
 
      <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer 
-                ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
-                DataSource="{Binding Data}"
-                PrimaryValuePath="State" 
-                ShapeDataField="name"
-                ShapeHoverFill = "Transparent" 
-                ShapeHoverStroke="Transparent"
-                ShowBubbles="True"
-                ShowBubbleTooltip="True" >
+            <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+							   DataSource="{Binding Data}"
+							   PrimaryValuePath="State" 
+							   ShapeDataField="name"
+							   ShapeHoverFill = "Transparent" 
+							   ShapeHoverStroke="Transparent"
+							   ShowBubbles="True"
+							   ShowBubbleTooltip="True" >
 
               <map:MapShapeLayer.BubbleSettings>
                   <map:MapBubbleSettings ColorValuePath="Population" 
-                      SizeValuePath="Population" 
-                      Fill="Green"
-                      Stroke="DarkGreen"
-                      StrokeThickness="2"
-                      HoverFill="Blue"
-                      HoverStroke="DarkBlue"
-                      HoverStrokeThickness="3"
-                      MinSize="30"
-                      MaxSize="80">
+										 SizeValuePath="Population" 
+										 Fill="Green"
+										 Stroke="DarkGreen"
+										 StrokeThickness="2"
+										 HoverFill="Blue"
+										 HoverStroke="DarkBlue"
+										 HoverStrokeThickness="3"
+										 MinSize="30"
+										 MaxSize="80">
                   </map:MapBubbleSettings>
               </map:MapShapeLayer.BubbleSettings>
             </map:MapShapeLayer>
@@ -391,42 +396,43 @@ You can customize the below appearance of the bubbles.
 public MainPage()
 {
    InitializeComponent();
-        ViewModel viewModel = new ViewModel();
-        this.BindingContext = viewModel;
-        SfMaps maps = new SfMaps();
-        MapShapeLayer layer = new MapShapeLayer();
-        layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
-        layer.DataSource = viewModel.Data;
-        layer.PrimaryValuePath = "State";
-        layer.ShapeDataField = "name";
-        layer.ShapeHoverFill = Colors.Transparent;
-        layer.ShapeHoverStroke = Colors.Transparent;
-        layer.ShowBubbles = true;
-        layer.ShowBubbleTooltip = true;
+    ViewModel viewModel = new ViewModel();
+    this.BindingContext = viewModel;
+    SfMaps maps = new SfMaps();
+    MapShapeLayer layer = new MapShapeLayer();
+    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
+    layer.DataSource = viewModel.Data;
+    layer.PrimaryValuePath = "State";
+    layer.ShapeDataField = "name";
+    layer.ShapeHoverFill = Colors.Transparent;
+    layer.ShapeHoverStroke = Colors.Transparent;
+    layer.ShowBubbles = true;
+    layer.ShowBubbleTooltip = true;
 
 
-        MapBubbleSettings bubbleSetting = new MapBubbleSettings()
-        {
-            ColorValuePath = "Population",
-            SizeValuePath = "Population",
-            Fill = Colors.Green,
-            Stroke = Colors.DarkGreen,
-            StrokeThickness = 2,
-            HoverFill = Colors.Blue,
-            HoverStroke = Colors.DarkBlue,
-            HoverStrokeThickness = 3,
-            MinSize = 30,
-            MaxSize =80
-            
-        };
+    MapBubbleSettings bubbleSetting = new MapBubbleSettings()
+    {
+        ColorValuePath = "Population",
+        SizeValuePath = "Population",
+        Fill = Colors.Green,
+        Stroke = Colors.DarkGreen,
+        StrokeThickness = 2,
+        HoverFill = Colors.Blue,
+        HoverStroke = Colors.DarkBlue,
+        HoverStrokeThickness = 3,
+        MinSize = 30,
+        MaxSize = 80
+    };
 
-        layer.BubbleSettings = bubbleSetting;
-        maps.Layer = layer;
-        this.Content = maps;
-    }
+    layer.BubbleSettings = bubbleSetting;
+    maps.Layer = layer;
+    this.Content = maps;
+}
+
 public class ViewModel
 {
     public ObservableCollection<Model> Data { get; set; }
+	
     public ViewModel()
     {
         Data = new ObservableCollection<Model>();
@@ -438,15 +444,17 @@ public class ViewModel
         Data.Add(new Model("China", 23));
     }
 }
+
 public class Model
 {
+    public String State { get; set; }
+    public int Population { get; set; }
+	
     public Model(string state, int population)
     {
         State = state;
         Population = population;
     }
-    public String State { get; set; }
-    public int Population { get; set; }
 }
 
 {% endhighlight %}

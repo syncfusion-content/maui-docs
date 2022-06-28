@@ -9,41 +9,56 @@ documentation: ug
 
 # Markers in MAUI Maps (SfMaps)
 
-Markers can be used to denote the locations. It is possible to use the built-in symbols or display a custom widget at a specific latitude and longitude on a map.
+Markers can be used to denote the locations. It is possible to use the built-in symbols or display a custom control at a specific latitude and longitude on a map.
 
 ## Adding markers
 
 ### Shape layer
 
-You can show markers at any position on the map by providing latitude and longitude position to the [`MapMarker`](), which is the widget returns from the [`Markers`]() property.
+You can show markers at any position on the map by providing latitude and longitude position to the [`MapMarker`](), which is from the [`Markers`]() collection.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<map:SfMaps>
+		<map:SfMaps>
             <map:SfMaps.Layer>
-                <map:MapShapeLayer 
-                                   ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
                                    ShapeStroke="DarkGrey"
                                    ShowMarkerTooltip="True">
+								   
                     <map:MapShapeLayer.Markers>
                         <map:MapMarkerCollection>
-                            <map:MapMarker
-                              Latitude="20.5595" IconWidth="15" IconHeight="15" IconFill="#00ccff" IconType="Circle" 
-                                 Longitude="22.9375" />
-                            <map:MapMarker
-                              Latitude="21.7679" IconWidth="15" IconHeight="15" IconFill=" #00ccff" IconType="Circle" 
-                                 Longitude="78.8718"  />
-                            <map:MapMarker
-                              Latitude="133.7751" IconWidth="15" IconHeight="15" IconFill=" #00ccff" IconType="Circle" 
-                                 Longitude="25.2744" />
-                            <map:MapMarker
-                              Latitude="60.2551" IconWidth="15" IconHeight="15" IconFill=" #00ccff" IconType="Circle" 
-                                 Longitude="84.5260" />
-                            <map:MapMarker
-                              Latitude="195.4915" IconWidth="15" IconHeight="15" IconType="Circle" IconFill=" #00ccff"
-                                 Longitude="-50.7832" />
+                            <map:MapMarker Latitude="20.5595"
+										   IconWidth="15"
+										   IconHeight="15"
+										   IconFill="#00ccff"
+										   IconType="Circle" 
+										   Longitude="22.9375" />
+                            <map:MapMarker Latitude="21.7679"
+										   IconWidth="15"
+										   IconHeight="15"
+										   IconFill="#00ccff"
+										   IconType="Circle" 
+										   Longitude="78.8718" />
+                            <map:MapMarker Latitude="133.7751"
+										   IconWidth="15"
+										   IconHeight="15"
+										   IconFill="#00ccff"
+										   IconType="Circle" 
+										   Longitude="25.2744" />
+                            <map:MapMarker Latitude="60.2551"
+										   IconWidth="15"
+										   IconHeight="15"
+										   IconFill="#00ccff"
+										   IconType="Circle" 
+										   Longitude="84.5260" />
+                            <map:MapMarker Latitude="195.4915"
+										   IconWidth="15"
+										   IconHeight="15"
+										   IconType="Circle"
+										   IconFill="#00ccff"
+										   Longitude="-50.7832" />
                         </map:MapMarkerCollection>
                     </map:MapShapeLayer.Markers>
                 </map:MapShapeLayer>
@@ -55,64 +70,65 @@ You can show markers at any position on the map by providing latitude and longit
 {% highlight c# %}
 
 public MarkerTool()
-	{
-		InitializeComponent();
-        SfMaps map = new SfMaps();
-        MapShapeLayer layer = new MapShapeLayer();
-        layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
+{
+	InitializeComponent();
+	
+     MapShapeLayer layer = new MapShapeLayer();
+     layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
 
-        MapMarker mapMarker = new MapMarker();
-        mapMarker.Latitude = 20.5595;
-        mapMarker.Longitude = 22.9375;
-        mapMarker.IconHeight = 15;
-        mapMarker.IconWidth = 15;
-        mapMarker.IconType = MapIconType.Circle;
-        mapMarker.IconFill = Color.FromRgb(0, 204, 255);
+     MapMarker mapMarker = new MapMarker();
+     mapMarker.Latitude = 20.5595;
+     mapMarker.Longitude = 22.9375;
+     mapMarker.IconHeight = 15;
+     mapMarker.IconWidth = 15;
+     mapMarker.IconType = MapIconType.Circle;
+     mapMarker.IconFill = Color.FromRgb(0, 204, 255);
 
-        MapMarker mapMarker1 = new MapMarker();
-        mapMarker1.Latitude = 21.7679;
-        mapMarker1.Longitude = 78.8718;
-        mapMarker1.IconHeight = 15;
-        mapMarker1.IconWidth = 15;
-        mapMarker1.IconType = MapIconType.Circle;
-        mapMarker1.IconFill = Color.FromRgb(0, 204, 255);
+     MapMarker mapMarker1 = new MapMarker();
+     mapMarker1.Latitude = 21.7679;
+     mapMarker1.Longitude = 78.8718;
+     mapMarker1.IconHeight = 15;
+     mapMarker1.IconWidth = 15;
+     mapMarker1.IconType = MapIconType.Circle;
+     mapMarker1.IconFill = Color.FromRgb(0, 204, 255);
 
-        MapMarker mapMarker2 = new MapMarker();
-        mapMarker2.Latitude = 133.7751;
-        mapMarker2.Longitude = 25.2744;
-        mapMarker2.IconHeight = 15;
-        mapMarker2.IconWidth = 15;
-        mapMarker2.IconType = MapIconType.Circle;
-        mapMarker2.IconFill = Color.FromRgb(0, 204, 255);
+     MapMarker mapMarker2 = new MapMarker();
+     mapMarker2.Latitude = 133.7751;
+     mapMarker2.Longitude = 25.2744;
+     mapMarker2.IconHeight = 15;
+     mapMarker2.IconWidth = 15;
+     mapMarker2.IconType = MapIconType.Circle;
+     mapMarker2.IconFill = Color.FromRgb(0, 204, 255);
 
-        MapMarker mapMarker3 = new MapMarker();
-        mapMarker3.Latitude = 60.2551;
-        mapMarker3.Longitude = 84.5260;
-        mapMarker3.IconHeight = 15;
-        mapMarker3.IconWidth = 15;
-        mapMarker3.IconType = MapIconType.Circle;
-        mapMarker3.IconFill = Color.FromRgb(0, 204, 255);
+     MapMarker mapMarker3 = new MapMarker();
+     mapMarker3.Latitude = 60.2551;
+     mapMarker3.Longitude = 84.5260;
+     mapMarker3.IconHeight = 15;
+     mapMarker3.IconWidth = 15;
+     mapMarker3.IconType = MapIconType.Circle;
+     mapMarker3.IconFill = Color.FromRgb(0, 204, 255);
 
-        MapMarker mapMarker4 = new MapMarker();
-        mapMarker4.Latitude = 195.4915;
-        mapMarker4.Longitude = -50.7832;
-        mapMarker4.IconHeight = 15;
-        mapMarker4.IconWidth = 15;
-        mapMarker4.IconType = MapIconType.Circle;
-        mapMarker4.IconFill = Color.FromRgb(0, 204, 255);
+     MapMarker mapMarker4 = new MapMarker();
+     mapMarker4.Latitude = 195.4915;
+     mapMarker4.Longitude = -50.7832;
+     mapMarker4.IconHeight = 15;
+     mapMarker4.IconWidth = 15;
+     mapMarker4.IconType = MapIconType.Circle;
+     mapMarker4.IconFill = Color.FromRgb(0, 204, 255);
 
-        MapMarkerCollection mapMarkers =new MapMarkerCollection();
-        mapMarkers.Add(mapMarker);
-        mapMarkers.Add(mapMarker1);
-        mapMarkers.Add(mapMarker2);
-        mapMarkers.Add(mapMarker3);
-        mapMarkers.Add(mapMarker4);
-        layer.Markers = mapMarkers;
+     MapMarkerCollection mapMarkers =new MapMarkerCollection();
+     mapMarkers.Add(mapMarker);
+     mapMarkers.Add(mapMarker1);
+     mapMarkers.Add(mapMarker2);
+     mapMarkers.Add(mapMarker3);
+     mapMarkers.Add(mapMarker4);
+     layer.Markers = mapMarkers;
 
-        map.Layer = layer;
-        map.Margin = new Thickness(0, 50, 0, 0);
-        this.Content = map;
-    }
+     SfMaps map = new SfMaps();
+     map.Layer = layer;
+     map.Margin = new Thickness(0, 50, 0, 0);
+     this.Content = map;
+ }
 
 {% endhighlight %}
 
@@ -133,36 +149,60 @@ You can customize the built-in markers appearance using the [`IconType`](), [`Ic
 N>
 * The default value of the [`IconType`]() is `MapIconType.circle`.
 * The default value of the [`IconStrokeThickness`]() is `1.0`.
-* The default value of the [`IconFill`]() is `Colors.blue`.
-* The default value of the [`IconWidth`]() and [`IconHeight`]() is `14.0`.
+* The default value of the [`IconFill`]() is `Color.FromRgb(138, 69, 175)`.
+* The default value of the [`IconWidth`]() and [`IconHeight`]() is `8.0`.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<map:SfMaps>
+		<map:SfMaps>
             <map:SfMaps.Layer>
-                <map:MapShapeLayer 
-                                   ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
                                    ShapeStroke="DarkGrey"
                                    ShowMarkerTooltip="True">
                     <map:MapShapeLayer.Markers>
                         <map:MapMarkerCollection>
-                            <map:MapMarker
-                              Latitude="20.5595" IconWidth="20" IconHeight="20" IconFill="LightGreen" IconType="Triangle" 
-                                 Longitude="22.9375" IconStroke="Green" IconStrokeThickness="3" />
-                            <map:MapMarker
-                              Latitude="21.7679" IconWidth="20" IconHeight="20" IconFill=" LightGreen" IconType="Triangle" 
-                                 Longitude="78.8718" IconStroke="Green" IconStrokeThickness="3" />
-                            <map:MapMarker
-                              Latitude="133.7751" IconWidth="20" IconHeight="20" IconFill=" LightGreen" IconType="Triangle" 
-                                 Longitude="25.2744" IconStroke="Green" IconStrokeThickness="3" />
-                            <map:MapMarker
-                              Latitude="60.2551" IconWidth="20" IconHeight="20" IconFill=" LightGreen" IconType="Triangle" 
-                                 Longitude="84.5260" IconStroke="Green" IconStrokeThickness="3"/>
-                            <map:MapMarker
-                              Latitude="195.4915" IconWidth="20" IconHeight="20" IconType="Triangle" IconFill=" LightGreen"
-                                 Longitude="-50.7832" IconStroke="Green" IconStrokeThickness="3" />
+                            <map:MapMarker Latitude="20.5595"
+										   IconWidth="20"
+										   IconHeight="20"
+										   IconFill="LightGreen"
+										   IconType="Triangle" 
+										   Longitude="22.9375"
+										   IconStroke="Green"
+										   IconStrokeThickness="3" />
+                            <map:MapMarker Latitude="21.7679" 
+										   IconWidth="20"
+										   IconHeight="20"
+										   IconFill="LightGreen"
+										   IconType="Triangle" 
+										   Longitude="78.8718"
+										   IconStroke="Green"
+										   IconStrokeThickness="3" />
+                            <map:MapMarker Latitude="133.7751" 
+										   IconWidth="20"
+										   IconHeight="20"
+										   IconFill="LightGreen"
+										   IconType="Triangle" 
+										   Longitude="25.2744"
+										   IconStroke="Green"
+										   IconStrokeThickness="3" />
+                            <map:MapMarker Latitude="60.2551"
+										   IconWidth="20"
+										   IconHeight="20"
+										   IconFill="LightGreen"
+										   IconType="Triangle" 
+										   Longitude="84.5260"
+										   IconStroke="Green"
+										   IconStrokeThickness="3"/>
+                            <map:MapMarker Latitude="195.4915"
+										   IconWidth="20"
+										   IconHeight="20"
+										   IconType="Triangle"
+										   IconFill="LightGreen"
+										   Longitude="-50.7832"
+										   IconStroke="Green"
+										   IconStrokeThickness="3" />
                         </map:MapMarkerCollection>
                     </map:MapShapeLayer.Markers>
                 </map:MapShapeLayer>
@@ -173,12 +213,11 @@ N>
 
 {% highlight c# %}
 
-public MarkerTool()
+	public MarkerTool()
 	{
 		InitializeComponent();
-         SfMaps map = new SfMaps();
-         MapShapeLayer layer = new MapShapeLayer();
-         layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
+        MapShapeLayer layer = new MapShapeLayer();
+        layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
 
         MapMarker mapMarker = new MapMarker();
         mapMarker.Latitude = 20.5595;
@@ -238,6 +277,7 @@ public MarkerTool()
         mapMarkers.Add(mapMarker4);
         layer.Markers = mapMarkers;
 
+        SfMaps map = new SfMaps();
         map.Layer = layer;
         this.Content = map;
     }
@@ -256,7 +296,7 @@ You can show custom marker using the [`MarkerTemplate`]() property of the `MapSh
 
 {% highlight xaml %}
 
-<ContentPage.Resources>
+	<ContentPage.Resources>
         <ResourceDictionary>
             <DataTemplate x:Key="LowPopulationTemplate">
                 <StackLayout 
@@ -264,39 +304,39 @@ You can show custom marker using the [`MarkerTemplate`]() property of the `MapSh
                       VerticalOptions="Center">
                     <Image Source="map.png"
                        HeightRequest="30"
-                       WidthRequest="30"></Image>
+                       WidthRequest="30" />
                 </StackLayout>
             </DataTemplate>
         </ResourceDictionary>
     </ContentPage.Resources>
-     <map:SfMaps>
-            <map:SfMaps.Layer>
-                <map:MapShapeLayer 
-                                   ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
-                                   ShapeStroke="DarkGrey"
-                                   MarkerTemplate="{StaticResource LowPopulationTemplate}"
-                                   ShowMarkerTooltip="True">
-                    <map:MapShapeLayer.Markers>
-                        <map:MapMarkerCollection>
-                            <map:MapMarker Latitude="20.5595" Longitude="22.9375"  />
-                            <map:MapMarker Latitude="21.7679" Longitude="78.8718"  />
-                            <map:MapMarker Latitude="133.7751"  Longitude="25.2744"  />
-                            <map:MapMarker Latitude="60.2551" Longitude="84.5260" />
-                            <map:MapMarker Latitude="195.4915"  Longitude="-50.7832"  />
-                        </map:MapMarkerCollection>
-                    </map:MapShapeLayer.Markers>
-                </map:MapShapeLayer>
-            </map:SfMaps.Layer>
-        </map:SfMaps>
+	
+    <map:SfMaps>
+        <map:SfMaps.Layer>
+            <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                               ShapeStroke="DarkGrey"
+                               MarkerTemplate="{StaticResource LowPopulationTemplate}"
+                               ShowMarkerTooltip="True">
+                <map:MapShapeLayer.Markers>
+                    <map:MapMarkerCollection>
+                        <map:MapMarker Latitude="20.5595" Longitude="22.9375"  />
+                        <map:MapMarker Latitude="21.7679" Longitude="78.8718"  />
+                        <map:MapMarker Latitude="133.7751" Longitude="25.2744"  />
+                        <map:MapMarker Latitude="60.2551" Longitude="84.5260" />
+                        <map:MapMarker Latitude="195.4915" Longitude="-50.7832"  />
+                    </map:MapMarkerCollection>
+                </map:MapShapeLayer.Markers>
+            </map:MapShapeLayer>
+        </map:SfMaps.Layer>
+    </map:SfMaps>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-public MainPage()
+	public MainPage()
     {
         InitializeComponent();
-        SfMaps map = new SfMaps();
+		
         MapShapeLayer layer = new MapShapeLayer();
         layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
 
@@ -329,10 +369,13 @@ public MainPage()
         
         layer.Markers = mapMarkers;
         layer.MarkerTemplate = CreateDataTemplate();
+		
+        SfMaps map = new SfMaps();
         map.Layer = layer;
         map.Margin = new Thickness(0, 50, 0, 0);
         this.Content = map;
     }
+	
     private DataTemplate CreateDataTemplate()
     {
         return new DataTemplate(() =>
@@ -350,74 +393,75 @@ public MainPage()
 
 ![custom marker](images/markers/custom_marker.png)
 
-### Customizing data templates in marker toolTip
+### Customizing data templates in marker tooltip
 
-Data template can be customized for items and headers of the control. The following code example shows the usage of DataTemplate.
+Data template can be used to customize the marker tooltip. The following code example shows the usage of `DataTemplate`.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage.Resources>
+	<ContentPage.Resources>
         <ResourceDictionary>
             <DataTemplate x:Key="LowPopulationTemplate">
-                <StackLayout 
-                      HorizontalOptions="StartAndExpand"
-                      VerticalOptions="Center">
+                <StackLayout HorizontalOptions="StartAndExpand"
+							 VerticalOptions="Center">
                     <Image Source="map.png"
-                       HeightRequest="30"
-                       WidthRequest="30"></Image>
+                           HeightRequest="30"
+						   WidthRequest="30" />
                 </StackLayout>
             </DataTemplate>
         </ResourceDictionary>
     </ContentPage.Resources>
-      <map:SfMaps>
-            <map:SfMaps.Layer>
-                <map:MapShapeLayer 
-                                   ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
-                                   ShapeStroke="DarkGrey"
-                                   MarkerTemplate="{StaticResource LowPopulationTemplate}"
-                                   ShowMarkerTooltip="True">
-                      <map:MapShapeLayer.Markers>
-                        <map:MapMarkerCollection>
-                            <local:CustomMarker Name="South africa" Area="38,570,000 sq. km."  Latitude="20.5595" Longitude="22.9375"  />
-                            <local:CustomMarker Name="India" Area="30,370,000 sq. km." Latitude="21.7679" Longitude="78.8718"  />
-                            <local:CustomMarker Name="Europe" Area="20,370,000 sq. km." Latitude="133.7751"  Longitude="25.2744"  />
-                            <local:CustomMarker Name="Asia" Area="50,570,000 sq. km." Latitude="60.2551" Longitude="84.5260" />
-                            <local:CustomMarker Name="South America" Area="30,370,000 sq. km." Latitude="195.4915"  Longitude="-50.7832"  />
-                        </map:MapMarkerCollection>
-                    </map:MapShapeLayer.Markers>
-                    <map:MapShapeLayer.MarkerTooltipTemplate>
-                        <DataTemplate>
-                            <Grid Padding="10" WidthRequest="150">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto" />
-                                    <RowDefinition Height="Auto" />
-                                    <RowDefinition Height="Auto" />
-                                </Grid.RowDefinitions>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="10"/>
-                                    <ColumnDefinition Width="Auto"/>
-                                </Grid.ColumnDefinitions>
-                                <Image Source="flag.png" Grid.Column="0" Grid.Row="0" WidthRequest="20" HeightRequest="20"></Image>
-                                <Label Text="{Binding Name}" TextColor="White"  Grid.Column="1" Grid.Row="0" Padding="10"/>
-                                <Label Grid.Row="2" Grid.ColumnSpan="2"  Text="{Binding Population}" TextColor="White" />
-                            </Grid>
-                        </DataTemplate>
-                    </map:MapShapeLayer.MarkerTooltipTemplate>
-                </map:MapShapeLayer>
-            </map:SfMaps.Layer>
-        </map:SfMaps>
+	
+    <map:SfMaps>
+        <map:SfMaps.Layer>
+            <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                               ShapeStroke="DarkGrey"
+                               MarkerTemplate="{StaticResource LowPopulationTemplate}"
+                               ShowMarkerTooltip="True">
+							   
+                  <map:MapShapeLayer.Markers>
+                    <map:MapMarkerCollection>
+                        <local:CustomMarker Name="South africa" Area="38,570,000 sq. km."  Latitude="20.5595" Longitude="22.9375"  />
+                        <local:CustomMarker Name="India" Area="30,370,000 sq. km." Latitude="21.7679" Longitude="78.8718"  />
+                        <local:CustomMarker Name="Europe" Area="20,370,000 sq. km." Latitude="133.7751"  Longitude="25.2744"  />
+                        <local:CustomMarker Name="Asia" Area="50,570,000 sq. km." Latitude="60.2551" Longitude="84.5260" />
+                        <local:CustomMarker Name="South America" Area="30,370,000 sq. km." Latitude="195.4915"  Longitude="-50.7832"  />
+                    </map:MapMarkerCollection>
+                </map:MapShapeLayer.Markers>
+			
+                <map:MapShapeLayer.MarkerTooltipTemplate>
+                    <DataTemplate>
+                        <Grid Padding="10" WidthRequest="150">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="10"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Source="flag.png" Grid.Column="0" Grid.Row="0" WidthRequest="20" HeightRequest="20" />
+                            <Label Text="{Binding Name}" TextColor="White"  Grid.Column="1" Grid.Row="0" Padding="10"/>
+                            <Label Grid.Row="2" Grid.ColumnSpan="2"  Text="{Binding Population}" TextColor="White" />
+                        </Grid>
+                    </DataTemplate>
+                </map:MapShapeLayer.MarkerTooltipTemplate>
+			
+            </map:MapShapeLayer>
+        </map:SfMaps.Layer>
+    </map:SfMaps>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
- public MainPage()
+	public MainPage()
     {
         InitializeComponent();
         
-        SfMaps map = new SfMaps();
         MapShapeLayer layer = new MapShapeLayer();
         layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
 
@@ -463,10 +507,13 @@ Data template can be customized for items and headers of the control. The follow
         layer.MarkerTemplate = CreateDataTemplate();
         layer.MarkerTooltipTemplate = CreateToolTip();
         layer.ShowMarkerTooltip = true;
+		
+        SfMaps map = new SfMaps();
         map.Layer = layer;
         map.Margin = new Thickness(0, 50, 0, 0);
         this.Content = map;
     }
+	
     private DataTemplate CreateDataTemplate()
     {
         return new DataTemplate(() =>
@@ -477,6 +524,7 @@ Data template can be customized for items and headers of the control. The follow
             return new ViewCell { View = stackLayout };
         });
     }
+	
     private DataTemplate CreateToolTip()
     {
         return new DataTemplate(() =>
@@ -485,7 +533,7 @@ Data template can be customized for items and headers of the control. The follow
             {
                 RowDefinitions =
                 {
-                  new RowDefinition (),
+                  new RowDefinition(),
                   new RowDefinition(),
                   new RowDefinition()
                 },
@@ -517,27 +565,27 @@ Data template can be customized for items and headers of the control. The follow
         });
     }
 
-public class CustomMarker : MapMarker
-{
-	public string Name { get; set; }
-    public string Area { get; set; }
-}
+	public class CustomMarker : MapMarker
+	{
+		public string Name { get; set; }
+		public string Area { get; set; }
+	}
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Maps tooltip appearance customization](images/markers/marker_tooltip.png)
+![Maps marker tooltip appearance customization](images/markers/marker_tooltip.png)
 
 ### Customizing data templates selector in markers
 
- Data template selector can be customized the appearance of each item with different templates based on specific constraints. You can choose a DataTemplate for each item at runtime based on the value of data-bound property using DataTemplateSelector.
+Data template selector can be customized the appearance of each item with different templates based on specific constraints. You can choose a DataTemplate for each item at runtime based on the value of data-bound property using DataTemplateSelector.
 
 {% tabs %}
 
 {% highlight xml %}
 
-<ContentPage.Resources>
+	<ContentPage.Resources>
         <ResourceDictionary>
             <DataTemplate x:Key="HighPopulationTemplate">
                 <StackLayout IsClippedToBounds="false"
@@ -552,6 +600,7 @@ public class CustomMarker : MapMarker
                        VerticalOptions="Center" />
                 </StackLayout>
             </DataTemplate>
+			
             <DataTemplate x:Key="LowPopulationTemplate">
                 <StackLayout IsClippedToBounds="false"
                          HorizontalOptions="StartAndExpand"
@@ -562,46 +611,51 @@ public class CustomMarker : MapMarker
                            TextColor="Red"
                            BackgroundColor="Yellow"
                            HorizontalOptions="StartAndExpand"
-                       VerticalOptions="Center" /> />
+                       VerticalOptions="Center" />
                 </StackLayout>
             </DataTemplate>
+			
+			<local:MarkerTemplateSelector x:Key="MarkerTemplateSelector"
+										  Template1="{StaticResource LowPopulationTemplate}"
+										  Template2="{StaticResource HighPopulationTemplate}" />
+			
         </ResourceDictionary>
     </ContentPage.Resources>
 
-<map:SfMaps>
-                <map:SfMaps.Layer>
-                    <map:MapShapeLayer x:Name="layer"
-                                   ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
-                                   ShapeStroke="DarkGrey" >
-                        <map:MapShapeLayer.Markers>
-                        <map:MapMarkerCollection>
-                            <map:MapMarker Latitude="20.5595" Longitude="22.9375"  />
-                            <map:MapMarker Latitude="21.7679" Longitude="78.8718"  />
-                            <map:MapMarker Latitude="133.7751"  Longitude="25.2744"  />
-                            <map:MapMarker Latitude="60.2551" Longitude="84.5260" />
-                            <map:MapMarker Latitude="195.4915"  Longitude="-50.7832"  />
-                        </map:MapMarkerCollection>
-                    </map:MapShapeLayer.Markers>
-                    </map:MapShapeLayer>
-                </map:SfMaps.Layer>
-            </map:SfMaps>
-            <Button Text="Change marker Template" Clicked="Button_Clicked_1" />
+	<map:SfMaps>
+        <map:SfMaps.Layer>
+            <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+							   ShapeStroke="DarkGrey"
+							   MarkerTemplate={StaticResource MarkerTemplateSelector}>
+							   
+            <map:MapShapeLayer.Markers>
+                <map:MapMarkerCollection>
+                    <map:MapMarker Latitude="20.5595" Longitude="22.9375"  />
+                    <map:MapMarker Latitude="21.7679" Longitude="78.8718"  />
+                    <map:MapMarker Latitude="133.7751" Longitude="25.2744"  />
+                    <map:MapMarker Latitude="60.2551" Longitude="84.5260" />
+                    <map:MapMarker Latitude="195.4915" Longitude="-50.7832"  />
+                </map:MapMarkerCollection>
+            </map:MapShapeLayer.Markers>
+			
+            </map:MapShapeLayer>
+        </map:SfMaps.Layer>
+    </map:SfMaps>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    private void Button_Clicked_1(object sender, EventArgs e)
+public class MarkerTemplateSelector : DataTemplateSelector
+{
+    public DataTemplate Template1 { get; set; }
+    public DataTemplate Template2 { get; set; }
+	
+    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
     {
-        if (layer.MarkerTemplate != null && layer.MarkerTemplate.Equals(Resources["LowPopulationTemplate"] as DataTemplate))
-        {
-            layer.MarkerTemplate = Resources["HighPopulationTemplate"] as DataTemplate;
-        }
-        else
-        {
-            layer.MarkerTemplate = Resources["LowPopulationTemplate"] as DataTemplate;
-        }
-    }    
+        return (double)((MapMarker)item).Latitude < 20 ? Template1 : Template2;
+    }
+} 
 
 {% endhighlight %}
 
