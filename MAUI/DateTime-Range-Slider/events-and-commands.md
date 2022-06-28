@@ -9,16 +9,16 @@ documentation: ug
 
 # Events and Commands in .NET MAUI Range Slider (SfDateTimeRangeSlider)
 
-This section explains about how to add the events and commands for DateTime Range Slider.
+This section explains how to add the events and commands for the DateTime Range Slider.
 
 ## Events
 
 ### Handle callbacks
 
-* [ValueChangeStart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ValueChangeStart) -  Called when the user selecting a new value for the slider by tap/mouse down in the thumb.
+* [ValueChangeStart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ValueChangeStart) -  Called when the user selects a new value for the slider by tapping/mouse down on the thumb.
 * [ValueChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSlider.html#Syncfusion_Maui_Sliders_SfRangeSlider_ValueChanging) - Called when the user is selecting a new value for the slider by dragging the thumb.
-* [ValueChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSlider.html#Syncfusion_Maui_Sliders_SfRangeSlider_ValueChanged) - Called when the user completed selecting a new value.
-* [ValueChangeEnd](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ValueChangeEnd) - Called when the user stopped interacting with slider by tap/mouse up the thumb.
+* [ValueChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSlider.html#Syncfusion_Maui_Sliders_SfRangeSlider_ValueChanged) - Called when the user completes selecting a new value.
+* [ValueChangeEnd](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ValueChangeEnd) - Called when the user stops interacting with the slider by tapping/mouse up the thumb.
 
 {% tabs %}
 
@@ -193,11 +193,11 @@ You can format or change the whole tooltip label text using the [`TooltipLabelCr
 
 ![RangeSlider custom tooltip](images/tooltip/custom-tooltip.png)
 
-## Commands and its parameter
+## Commands and their parameter
 
 ### Drag started command
 
-The `DragStartedCommand` will be executed when the user started moving the thumb.
+The `DragStartedCommand` will be executed when the user starts to move the thumb.
 
 {% tabs %}
 
@@ -248,7 +248,7 @@ public class ViewModel
 
 ### Drag started command parameter
 
-The `DragStartedCommandParameter` will be executed when the user started moving the thumb.
+The `DragStartedCommandParameter` will be executed when the user starts to move the thumb.
 
 {% tabs %}
 
@@ -301,7 +301,7 @@ public class ViewModel
 
 ### Drag completed command
 
-The `DragCompletedCommand` will be executed when the user completed moving the thumb.
+The `DragCompletedCommand` will be executed when the user completes moving the thumb.
 
 {% tabs %}
 
@@ -352,7 +352,7 @@ public class ViewModel
 
 ### Drag completed command parameter
 
-The `DragCompletedCommandParameter` will be executed when the user completed moving the thumb.
+The `DragCompletedCommandParameter` will be executed when the user completes moving the thumb.
 
 {% tabs %}
 

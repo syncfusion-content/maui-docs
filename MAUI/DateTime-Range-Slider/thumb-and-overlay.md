@@ -11,8 +11,8 @@ documentation: ug
 
 This section helps to learn about how to customize the thumb and thumb overlay in the DateTime Range Slider.
 
-* Thumb - It is one of the elements of slider which can be used to drag and change the selected value of the range slider.
-* Thumb overlay - It is rendered around the thumb while interacting with them.
+* Thumb - It is one of the slider elements that can be used to drag and change the selected value of the range slider.
+* Thumb overlay - It is rendered around the thumbs while interacting with them.
 
 ## Thumb size
 
@@ -125,7 +125,7 @@ rangeSlider.ThumbStyle.StrokeThickness = 2;
 
 ## Thumb overlapping stroke color
 
-You can change the thumb stroke color while two thumbs are overlapping by using the [`OverlapStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html#Syncfusion_Maui_Sliders_SliderThumbStyle_OverlapStroke) property of the [`ThumbStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html) class.
+You can change the thumb stroke color while two thumbs overlap by using the [`OverlapStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html#Syncfusion_Maui_Sliders_SliderThumbStyle_OverlapStroke) property of the [`ThumbStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html) class.
 
 {% tabs %}
 
