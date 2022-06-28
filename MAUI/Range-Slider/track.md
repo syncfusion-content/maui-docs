@@ -15,7 +15,7 @@ This section helps to learn about how to customize the track in the range slider
 
 You can change the active and inactive track color of the range slider using the [`ActiveFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTrackStyle.html#Syncfusion_Maui_Sliders_SliderTrackStyle_ActiveFill) and [`InactiveFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTrackStyle.html#Syncfusion_Maui_Sliders_SliderTrackStyle_InactiveFill) properties of the [`TrackStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_TrackStyle) class.
 
-The active side of the range slider is between start and end thumbs.
+The active side of the range slider is between the start and end thumbs.
 
 The inactive side of the range slider is between the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_Minimum) value and the left thumb, and the right thumb and the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_Maximum) value.
 
@@ -77,7 +77,7 @@ rangeSlider.TrackStyle.InactiveSize = 8;
 
 ## Track extent
 
-You can extend the track at edges using the `TrackExtent` property. The default value is `0.0` and it should be in pixels.
+You can extend the track at the edges using the `TrackExtent` property. The default value is `0.0` and it should be in pixels.
 
 {% tabs %}
 

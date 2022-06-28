@@ -187,11 +187,11 @@ You can format or change the whole tooltip label text using the [`ToolTipLabelCr
 
 ![RangeSelector custom tooltip](images/tooltip/custom-tooltip.png)
 
-## Commands and its parameter
+## Commands and their parameter
 
 ### Drag started command
 
-The `DragStartedCommand` will be executed when the user started moving the thumb.
+The `DragStartedCommand` will be executed when the user starts moving the thumb.
 
 {% tabs %}
 
@@ -246,7 +246,7 @@ public class ViewModel
 
 ### Drag started command parameter
 
-The `DragStartedCommandParameter` will be executed when the user started moving the thumb.
+The `DragStartedCommandParameter` will be executed when the user starts moving the thumb.
 
 {% tabs %}
 
@@ -303,7 +303,7 @@ public class ViewModel
 
 ### Drag completed command
 
-The `DragCompletedCommand` will be executed when the user completed moving the thumb.
+The `DragCompletedCommand` will be executed when the user completes moving the thumb.
 
 {% tabs %}
 
@@ -358,7 +358,7 @@ public class ViewModel
 
 ### Drag completed command parameter
 
-The `DragCompletedCommandParameter` will be executed when the user completed moving the thumb.
+The `DragCompletedCommandParameter` will be executed when the user completes moving the thumb.
 
 {% tabs %}
 

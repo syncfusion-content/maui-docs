@@ -73,7 +73,7 @@ slider.TrackStyle.InactiveSize = 8;
 
 ## Track extent
 
-You can extend the track at edges using the `TrackExtent` property. The default value is `0.0` and it should be in pixels.
+You can extend the track at the edges using the `TrackExtent` property. The default value is `0.0` and it should be in pixels.
 
 {% tabs %}
 
