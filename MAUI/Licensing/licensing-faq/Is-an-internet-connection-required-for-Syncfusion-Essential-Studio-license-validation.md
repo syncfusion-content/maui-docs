@@ -2,7 +2,7 @@
 layout: post
 title: Licensing FAQ – Net need for ES license validation | Syncfusion
 description: Learn here some information about whether syncfusion Essential Studio license validation needs internet conncetion.
-platform: Xamarin
+platform: maui
 control: Essential Studio
 documentation: ug
 ---
