@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI DateTime Slider (SfDateTimeSlider)
 
-This section explains the steps required to add the DateTime Slider control and its elements track, ticks, labels and tooltip. This section covers only basic features needed to know to get started with Syncfusion DateTime Slider.
+This section explains the steps required to add the DateTime Slider control and its elements track, ticks, labels, and tooltip. This section covers only basic features needed to know to get started with Syncfusion DateTime Slider.
 
 ## Creating an application with .NET MAUI
 
@@ -19,14 +19,14 @@ Create a new .NET MAUI application in Visual Studio.
 
 ## Adding SfDateTimeSlider reference
 
- Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfDateTimeSlider to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Sliders and then install it.
+ Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfDateTimeSlider to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Sliders, and then install it.
 
  ![Create MAUI Application](images/getting-started/nuget-installation.png)
 
 
 ## Handler registration
 
-In the MauiProgram.cs file, register the handler for Syncfusion core
+In the MauiProgram.cs file, register the handler for Syncfusion core.
 
 {% highlight C# %}
 
