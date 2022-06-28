@@ -79,9 +79,9 @@ this.Scheduler.MonthView.ShowLeadingAndTrailingDates = false;
 
 ![show-or-hide-leading-and-trailing-days-appearence-customization-in-maui-scheduler](images/month-view/show-or-hide-leading-and-trailing-days-appearence-customization-in-maui-scheduler.png)
 
-## Customize number of month rows
+## Number of weeks visible in the month view 
 
-The number of weeks in the month view can be changed by setting the [NumberOfVisibleWeeks]() property in the [MonthView](). By default, [NumberOfVisibleWeeks]() starts from current week, and this can be modified using the initialDisplayDate property of scheduler, the two weeks scheduler can be achieved by setting the `NumberOfVisibleWeeks` property with the value 2.
+The number of weeks visible in the month view can be changed by setting the [NumberOfVisibleWeeks]() property in the [MonthView](). 
 
 {% tabs %}  
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
@@ -103,7 +103,7 @@ this.Scheduler.MonthView.NumberOfVisibleWeeks = 2;
 {% endhighlight %}  
 {% endtabs %}
 
-![show-or-hide-leading-and-trailing-days-appearence-customization-in-maui-scheduler](images/month-view/show-or-hide-leading-and-trailing-days-appearence-customization-in-maui-scheduler.png)
+![number-of-visble-weeks-in-monthview](images/month-view/)
 
 ## View header
 

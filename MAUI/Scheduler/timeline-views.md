@@ -19,6 +19,32 @@ The timelineView displays the date inside the horizontal time axis with the desi
 
 * **Timeline month**: A horizontal axis displaying appointments across all days of a month is displayed, where each column represents a single day.
 
+## Number of days in timeline view
+
+The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) number of visible days can be adjusted by changing the [NumberOfVisibleDays]() property of [TimelineView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineView.html)
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
+
+ <scheduler:SfScheduler x:Name="Scheduler" 
+                        View="TimelineWeek">
+    <scheduler:SfScheduler.TimelineView>
+        <scheduler:SchedulerTimelineView 
+                        NumberOfVisibleDays="3"/>
+    </scheduler:SfScheduler.TimelineView>
+ </scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
+
+this.Scheduler.View = SchedulerView.TimelineWeek;
+this.Scheduler.DaysView.NumberOfVisibleDays = 3;
+
+{% endhighlight %}
+{% endtabs %}
+
+![number-of-visble-days-in-daysview](images/day-week-views/)
+
 ## Change time interval
 
 The time interval between the time slots in the timeline day, timeline week, and timeline workweek views can be customized by using the [TimeInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_TimeInterval) property of [TimelineView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineView.html).
@@ -463,32 +489,6 @@ this.Scheduler.TimelineView.TimeIntervalWidth = -1;
 
 {% endhighlight %}
 {% endtabs 
-
-## Number of days in timeline view
-
-The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) number of visible days can be adjusted by changing the [NumberOfVisibleDays]() property of [TimelineView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineView.html)
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
-
- <scheduler:SfScheduler x:Name="Scheduler" 
-                        View="TimelineWeek">
-    <scheduler:SfScheduler.TimelineView>
-        <scheduler:SchedulerTimelineView 
-                        NumberOfVisibleDays="3"/>
-    </scheduler:SfScheduler.TimelineView>
- </scheduler:SfScheduler>
-
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
-
-this.Scheduler.View = SchedulerView.TimelineWeek;
-this.Scheduler.DaysView.NumberOfVisibleDays = 3;
-
-{% endhighlight %}
-{% endtabs %}
-
-![number-of-visble-days-in-daysview](images/day-week-views/)
 
 ## Show current time indicator
 
