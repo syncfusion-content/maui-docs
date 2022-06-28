@@ -206,7 +206,7 @@ dataGrid.ItemsSource = viewModel.OrderInfoCollection;
 
 Run the application to render the following output.
 
-![.Net MAUI DataGrid](Images\getting-started\basic-datagrid.jpg)
+![.Net MAUI DataGrid](Images\getting-started\basic.png)
 
 ## Defining columns
 
@@ -259,7 +259,8 @@ In SfDataGrid sorting can be done on its data by setting the `SfDataGrid.Sorting
  
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid SortingMode="Single" />
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                           ItemsSource="{Binding OrderInfoCollection}" SortingMode="Single" />
 {% endhighlight %}
 {% highlight c# %}
 dataGrid.SortingMode=DataGridSortingMode.Single; 
@@ -268,9 +269,9 @@ dataGrid.SortingMode=DataGridSortingMode.Single;
 
 Run the application and touch the header cell to sort the data and the following output will be displayed.
  
+![.Net MAUI DataGrid](Images\getting-started\sorting.png)
 
-
-Sorting can also be configured by adding the column to the `SfDataGrid.SortColumnDescription` collection as follows.
+Sorting can also be configured programmatically by adding the column to the `SfDataGrid.SortColumnDescription` collection as follows,
 
 {% tabs %}
 {% highlight xaml %}
@@ -285,7 +286,7 @@ dataGrid.SortColumnDescription.Add (new SortColumnDescription () { ColumnNam
 
 ## Selection
 
-The SfDataGrid allows selecting the row or rows by setting the `SfDataGrid.SelectionMode` property. You can set the `SfDataGrid.SelectionMode` property to single, multiple, single deselect, or none. Information about the row or rows selected can be tracked using the `SfDataGrid.SelectedRow` and `SfDataGrid.SelectedRows` properties.
+The SfDataGrid allows selecting the one row or more rows by setting the `SfDataGrid.SelectionMode` property. You can set the `SfDataGrid.SelectionMode` property to single, multiple, single deselect, or none. Information about the row or rows selected can be tracked using the `SfDataGrid.SelectedRow` and `SfDataGrid.SelectedRows` properties.
 
 The selection operations can be handled with the help of the `SelectionChanging` and `SelectionChanged` events of the SfDataGrid.
 
@@ -306,7 +307,7 @@ The following code example illustrates how this can be done.
         <local:OrderInfoRepository x:Name="viewModel" />
     </ContentPage.BindingContext>
     
-        <sfgrid:SfDataGrid x:Name="dataGrid"
+        <syncfusion:SfDataGrid x:Name="dataGrid"
                            ItemsSource="{Binding OrderInfoCollection}"
                            HeightRequest="290"
                            WidthRequest="200"
@@ -330,7 +331,5 @@ public MainPage()
 }
 {% endhighlight %}
 {% endtabs %}
-
-The following screenshot shows how the SfDataGrid is loaded with specific height and width with VerticalOptions and HorizontalOptions.
 
 N> Set `HorizontalOptions` and `VerticalOptions` to grid accordingly. When the `SfDataGrid` doesn't obtain finite size from its parent to layout in the View, the predefined `MinimumHeightRequest` and `MinimumWidthRequest`, which is 300, will be acquired.
