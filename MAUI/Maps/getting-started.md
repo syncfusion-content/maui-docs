@@ -155,7 +155,7 @@ public MainPage()
 
 {% endtabs %}
 
-### Loading from resource
+### Loading from embedded resource
 
 * Embedded sources are loaded based on their resource ID, which is compromised of the name of the project and its location in the project. 
 * You can load both json and shape file.
