@@ -2,7 +2,7 @@
 layout: post
 title: License Key Errors of Essential Studio | Syncfusion 
 description: Learn here some information about how to fix Syncfusion license key related errors and more details.
-platform: maui
+platform: MAUI
 control: Essential Studio
 documentation: ug
 ---
