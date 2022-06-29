@@ -99,7 +99,7 @@ namespace SignaturePadGettingStarted
 
 ## Customize signature stroke color
 
-You can customize the stroke color of the SignaturePad control by using the `StrokeColor` property. The default stroke color is `Colors.Black`.
+Customize the stroke color of the SignaturePad control by using the `StrokeColor` property. The default stroke color is `Colors.Black`.
 
 {% tabs %}
 
@@ -151,7 +151,7 @@ SfSignaturePad signaturePad = new SfSignaturePad()
 
 ## Saving the signature as an image
 
-You can save the signature drawn in the SignaturePad as an [`ImageSource`](https://docs.microsoft.com/en-us/dotnet/api/xamarin.forms.imagesource?view=xamarin-forms) using the `ToImageSource()` method which can further be synchronized with your devices and documents that need your signature.
+Save the signature drawn in the SignaturePad as an [`ImageSource`](https://docs.microsoft.com/en-us/dotnet/api/xamarin.forms.imagesource?view=xamarin-forms) using the `ToImageSource()` method which can further be synchronized with your devices and documents that need your signature.
 
 {% tabs %}
 
@@ -180,7 +180,7 @@ private void OnSaveButtonClicked(object? sender, EventArgs e)
 
 ## Clear the existing signature in SignaturePad
 
-You can clear the signature drawn in the SignaturePad using the `Clear()` method as shown in the code snippet below:
+Clear the signature drawn in the SignaturePad using the `Clear()` method as shown in the code snippet below:
 
 {% tabs %}
 
@@ -211,7 +211,7 @@ private void OnClearButtonClicked(object? sender, EventArgs e)
 
 ### DrawStarted
 
-This event will be triggered when we start drawing in the SignaturePad. With this, `CancelEventArgs` will be passed. You can restrict the draw start action by setting `e.cancel` as `true`.
+This event will be triggered when we start drawing in the SignaturePad. With this, `CancelEventArgs` will be passed. Also, restrict the draw start action by setting `e.cancel` as `true`.
 
 {% tabs %}
 
