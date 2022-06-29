@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI Range Slider
 
-This section explains the steps required to add the range slider control and its elements such as numeric and date values, ticks, labels and tooltip. This section covers only basic features needed to know to get started with Syncfusion Range Slider.
+This section explains the steps required to add the range slider control and its elements such as track, ticks, labels and tooltip. This section covers only basic features needed to know to get started with Syncfusion Range Slider.
 
 ## Creating an application with .NET MAUI
 
@@ -19,13 +19,13 @@ Create a new .NET MAUI application in Visual Studio.
 
 ## Adding SfRangeSlider reference
 
-Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfRangeSlider to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Sliders and then install it.
+The Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add the SfRangeSlider to your project, open the NuGet package manager in the Visual Studio, search for the Syncfusion.Maui.Sliders, and install it.
 
  ![Create MAUI Application](images/getting-started/nuget-installation.png)
 
 ## Handler registration
 
-In the MauiProgram.cs file, register the handler for Syncfusion core
+In the MauiProgram.cs file, register the handler for the Syncfusion core.
 
 {% highlight C# %}
 
@@ -210,7 +210,7 @@ rangeSlider.MinorTicksPerInterval = 1;
 
 ## Inverse the slider
 
-You can invert the range slider using the [`IsInversed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_IsInversed) property. The default value of the [`IsInversed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_IsInversed) property is `False`.
+Invert the range slider using the [`IsInversed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_IsInversed) property. The default value of the [`IsInversed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_IsInversed) property is `False`.
 
 {% tabs %}
 
@@ -249,45 +249,9 @@ rangeSlider.IsInversed = true;
 
 ![Inverse rangeslider](images/getting-started/slider-inverse.png)
 
-## Set date value
-
-Set the 'DateTime' values to the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.DateTimeRangeSliderBase.html#Syncfusion_Maui_Sliders_DateTimeRangeSliderBase_Minimum), [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.DateTimeRangeSliderBase.html#Syncfusion_Maui_Sliders_DateTimeRangeSliderBase_Maximum), and [`Range values`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.DateTimeRangeSliderBase.html#Syncfusion_Maui_Sliders_DateTimeRangeSliderBase_RangeStart) properties to display date labels in the range slider.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<sliders:SfDateTimeRangeSlider Minimum="2010-01-01"
-                               Maximum="2020-01-01" 
-                               RangeStart="2012-01-01" 
-                               RangeEnd="2018-01-01"
-                               Interval="2" 
-                               ShowLabels="True" 
-                               ShowTicks="True">
-</sliders:SfDateTimeRangeSlider>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider();
-rangeSlider.Minimum = new DateTime(2010, 01, 01);
-rangeSlider.Maximum = new DateTime(2020, 01, 01);
-rangeSlider.RangeStart = new DateTime(2012, 01, 01);
-rangeSlider.RangeEnd = new DateTime(2018, 01, 01);
-rangeSlider.Interval = 2;
-rangeSlider.ShowLabels = true;
-rangeSlider.ShowTicks = true;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![RangeSlider date labels](images/getting-started/date-time-labels.png)
-
 ## Formatting labels
 
-You can add prefix or suffix to the labels using the [`NumberFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_NumberFormat) or [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.DateTimeRangeSliderBase.html#Syncfusion_Maui_Sliders_DateTimeRangeSliderBase_DateFormat) properties.
+Add prefix or suffix to the labels using the [`NumberFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_NumberFormat) property.
 
 {% tabs %}
 
