@@ -11,7 +11,29 @@ documentation: ug
 
 The scheduler resource view will allow the group appointments based on the resources or dates, arranged by the column, or row in the day, week, workweek, timeline day, timeline week, timeline workweek, and timeline month views. It also allows to share the events or appointments to the multiple resources and resource appointment details that can be edited by using a built-in appointment editor dialog.
 
-## Assigning resources to appointments
+## Create Scheduler resources
+You can create a resource view by setting the Name, Id, Background, and Foreground property of the SchedulerResource.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
+<schedule:SfScheduler x:Name="Scheduler"  View="TimelineWeek">
+</schedule:SfScheduler>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9" %}
+// Adding schedule resource in the scheduler resource collection.
+var resourceCollection = new ObservableCollection<SchedulerResource>()
+{
+   new SchedulerResource() { Name = "Sophia", Foreground = Colors.Blue, Background = Colors.Green, Id = "1000" },
+   new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.Blue, Background = Colors.Green, Id = "1001" },
+   new SchedulerResource() { Name = "James William",  Foreground = Colors.Blue, Background = Colors.Green, Id = "1002" },
+};
+
+// Adding the scheduler resource collection to the schedule resources of SfSchedule.
+this.Scheduler.ResourceView.Resources = resourceCollection;
+{% endhighlight %}
+{% endtabs %}
+
+### Assigning Scheduler resources to appointments
 
 Appointments associated with the scheduler [ResourceCollection]()  will be displayed by setting the schedule resource Id in the [ScheduleAppointment]() by using the [ResourceIdCollection](). For [ResourceGroupType]() set as [Resource]() or [Date](). Also assign the resources to `recurrence appointments.`
 
@@ -38,7 +60,7 @@ this.Scheduler.AppointmentsSource = appointment;
 {% endhighlight %}
 {% endtabs %}
 
-#### Multiple resource sharing
+### Multiple resource sharing using Scheduler resources
 
 Multiple resources can share the same events or appointments. If the appointment details are edited or updated, then the changes will be reflected on all other shared instances simultaneously.
 
@@ -65,7 +87,7 @@ this.Scheduler.AppointmentsSource = appointment;
 {% endhighlight %}
 {% endtabs %}
 
-## Scheduler resource mapping
+## Business object binding for resources
 
 The Schedule supports full data binding to [ResourceCollection](). Specify the [ResourceMapping]() attribute to map the properties in the underlying data source to the schedule resource.
 
@@ -78,7 +100,7 @@ The Schedule supports full data binding to [ResourceCollection](). Specify the [
 
 N> Custom resource class should contain a mandatory field for resource `Id`.
 
-## Create business object for resource
+## Mapping resource business object custom field
 
 Create a custom class employee with mandatory fields `Name,` `Id,` `ForegroundColor,` and `BackgroundColor.` Also assign the resources to `recurrence appointments.`
 
@@ -126,7 +148,7 @@ this.Scheduler.ResourceView.Mapping = resourceMapping;
 {% endhighlight %}
 {% endtabs %}
 
-#### Assign resource object collection
+### Assign resource object collection to scheduler
 
 Add the resources of `Employee` collection that can be assigned to the scheduler using the [ResourceCollection]() property which is of `IEnumerable` type. Also add or remove scheduler resources dynamically.
 
@@ -152,7 +174,7 @@ this.Scheduler.ResourceView.Resources = ResourceCollection;
 {% endhighlight %}
 {% endtabs %}
 
-#### Assign the resource objects to appointment business object
+### Assign the resource objects to appointment business object
 
 Associate the scheduler [ResourceMapping]() to the custom appointment by mapping resource [Id]() in the [ResourceIdCollection]() property of [AppointmentMapping](). The custom appointments associated with the scheduler resources will be displayed when the `ResourceGroupType` is set to `Resource` or `Date.` Also assign the resources to recurrence appointments.
 
@@ -219,8 +241,8 @@ this.Schedule.ItemsSource = Meetings;
 {% endhighlight %}
 {% endtabs %}
 
-## Resource minimum height
-You can customize minimum row height of visible resources in timeline day, timeline week, timeline workweek and timeline month views by using the [RowMinHeight]() property of [SchedulerResourceView]() in [SfScheduler.]() By default, value of this property is set to 50.
+## Resource minimum row height
+You can customize minimum row height of visible resources in timeline day, timeline week, timeline workweek and timeline month views by using the [MinimumRowHeight]() property of [SchedulerResourceView]() in [SfScheduler.]() By default, esource row height will be auto-expanded from minimum height based on the appointment counts.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
@@ -236,11 +258,18 @@ this.Scheduler.ResourceView.MinimumRowHeight = 100;
 {% endhighlight %}
 {% endtabs %} 
 
-## Assign resources to special time regions in timeline view
+N>
+* By default, if the viewport height is greater than 400 then each resource height will be calculated by viewport size divided by the minimum value of scheduler resources count and 4 (default resource count). 
+* If the viewport height is lesser than 400 then each resource height will be calculated by default viewport size(4 (default resource*100)) divided by the minimum value of scheduler resources count and 4 (default resource count).
+* If the MinimumRowHeight is less than the default row height then the default row height will be used.
+
+## Special time regions
+Special time region can be created based on the resources in the timeline day, timeline week, timeline workweek, and timeline month views.
+
+### Assign resources to special time regions in timeline view
 {% tabs %}
 {% highlight xaml tabtitle="MainWindow.xaml" %}
 
-{% include_relative code-snippet/resourceview.xaml %}
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9" %}
@@ -254,6 +283,9 @@ this.Scheduler.DaysView.TimeRegions.Add(new SchedulerTimeRegion
 });
 {% endhighlight %}
 {% endtabs %}
+
+## Programmatic resource selection
+You can programmatically select the resource by using the ResourceId and SelectedDate of the SfScheduler. Please [click]() here to see more details about programmatic date selection.
 
 ## Appearance customization
 

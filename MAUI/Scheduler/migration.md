@@ -496,6 +496,167 @@ this.Content = scheduler;
 
 </table> 
 
+### Scheduler Resource 
+
+The following code example explains how to add the scheduler resource in Xamarin SfSchedule and .NET MAUI SfScheduler.
+
+<table>
+<tr>
+<th>Xamarin SfSchedule</th>
+<th>.NET MAUI SfScheduler</th></tr>
+<tr>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<syncfusion:SfSchedule
+          x:Name="schedule"
+          ScheduleView="WeekView" 
+          ShowResourceView="True">
+          <syncfusion:SfSchedule.ScheduleResources>
+               <syncfusion:ScheduleResource 
+                    Name="Brooklyn" 
+                    Id="5601" 
+                    Color="#FF3399" />
+          </syncfusion:SfSchedule.ScheduleResources>
+</syncfusion:SfSchedule>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+// Creating an instance for schedule resource collection.
+ObservableCollection<object> resources = new ObservableCollection<object>();
+
+// Adding schedule resource in schedule resource collection.
+resources.Add(new ScheduleResource() 
+{ 
+     Name = "Brooklyn", 
+     Id = 5601, 
+     Color = Color.FromHex("#FF3399") 
+});
+
+// Adding schedule resource collection to schedule resources of SfSchedule.
+schedule.ScheduleResources = resources;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<scheduler:SfScheduler View="MonthView" AppointmentsSource="{Binding Appointments}"/>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+public ObservableCollection<SchedulerAppointment> Appointments { get; set; }
+
+SfScheduler scheduler = new SfScheduler();
+// Creating an instance for the scheduler appointment collection.
+this.Appointments = new ObservableCollection<SchedulerAppointment>();
+
+// Adding scheduler appointment in the schedule appointment collection. 
+Appointments.Add(new SchedulerAppointment()
+{
+    StartTime = DateTime.Today.AddHours(9),
+    EndTime = DateTime.Today.AddHours(11),
+    Subject = "Client Meeting",
+    Background = Brush.LightSkyBlue,
+});
+
+// Adding the scheduler appointment collection to the AppointmentsSource of .NET MAUI Scheduler.
+scheduler.AppointmentsSource = Appointments;
+this.Content = scheduler;		
+// Adding schedule resource in the scheduler resource collection.
+var resourceCollection = new ObservableCollection<SchedulerResource>()
+{
+   new SchedulerResource() { Name = "Sophia", Foreground = Colors.Blue, Background = Colors.Green, Id = "1000" },
+   new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.Blue, Background = Colors.Green, Id = "1001" },
+   new SchedulerResource() { Name = "James William",  Foreground = Colors.Blue, Background = Colors.Green, Id = "1002" },
+};
+
+// Adding the scheduler resource collection to the schedule resources of SfSchedule.
+this.Scheduler.ResourceView.Resources = resourceCollection;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td></tr>
+</table>
+
+### Scheduler ResourceMapping
+
+<table>
+<tr>
+<th>Xamarin SfSchedule</th>
+<th>.NET MAUI SfScheduler</th></tr>
+<tr>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<schedule:SfSchedule ScheduleView="WeekView" ShowResourceView="True">
+     <schedule:SfSchedule.ResourceMapping>
+          <schedule:ResourceMapping Name="Name"
+                                    Id="Id"
+                                    Color="Color"
+                                    Image="DisplayPicture"/>
+     </schedule:SfSchedule.ResourceMapping>
+</schedule:SfSchedule>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+// Creating an instance for resource mapping.
+ResourceMapping resourceMapping = new ResourceMapping();
+
+// Mapping the custom data fields. 
+resourceMapping.Name = "Name";
+resourceMapping.Id = "Id";
+resourceMapping.Color = "Color";
+resourceMapping.Image = "DisplayPicture";
+schedule.ResourceMapping = resourceMapping;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<schedule:SchedulerResourceView.Mapping>
+    <schedule:SchedulerResourceMapping Name="Name"
+                                    Id="Id"
+                                    Background="Background"
+                                    Foreground="Foreground"/>
+</schedule:SchedulerResourceView.Mapping>
+{% endhighlight %}
+
+{% highlight C# %}
+
+SchedulerResourceMapping resourceMapping = new SchedulerResourceMapping();
+resourceMapping.Name = "Name";
+resourceMapping.Id = "Id";
+resourceMapping.Background = "BackgroundColor";
+resourceMapping.Foreground = "ForegroundColor";
+this.Scheduler.ResourceView.Mapping = resourceMapping;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td></tr>
+</table>
+
 ### SchedulerAppointment
 
 The following code example explains how to create the scheduler appointments in Xamarin SfSchedule and .NET MAUI SfScheduler.
@@ -2301,9 +2462,6 @@ this.Content = scheduler;
 
 ## Upcoming Features
 
-* Resource view support.
-* Days count support in timeslot views.
-* Month view navigation direction support.
 * Command support for Tapped, DoubleTapped, LongPressed and ViewChanged events.
 * Support to change text color for each scheduler appointment.
 * Suspend and resume for appointment update.

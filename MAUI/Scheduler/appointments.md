@@ -314,7 +314,7 @@ Based on the value of the `RecurrenceRule` property, recurrence appointments in 
 <tr><td>BYDAY</td>
 <td>It holds the “DAY” values of an appointment to render. For example, create the weekly appointment, select the day(s) from the day options (Monday/Tuesday/Wednesday/Thursday/Friday/Saturday/Sunday). When Monday is selected, the first two letters of the selected day “MO” is stored in the “BYDAY” property. While selecting the multiple days, the values are separated by commas. Example:FREQ=WEEKLY;INTERVAL=1;BYDAY=MO,WE;COUNT=10</td></tr>
 <tr><td>BYMONTHDAY</td>
-<td>This property is used to store the date value of the Month while creating the Month recurrence appointment. For example, while creating a Monthly recurrence appointment in the date 3, it means the BYMONTHDAY holds the value 3 and creates the appointment on 3rd day of every month. Example:FREQ=MONTHLY;BYMONTHDAY=3;INTERVAL=1;COUNT=10</td></tr>
+<td>This property is used to store the date value of the Month while creating the Month recurrence appointment. For example, while creating a Monthly recurrence appointment in the date 3, it means the BYMONTHDAY holds the value 3 and creates the appointment on 3rd day of every month. Example:* FREQ=MONTHLY;BYMONTHDAY=3;INTERVAL=1;COUNT=10 * FREQ=MONTHLY;BYMONTHDAY=-1;INTERVAL=1;COUNT=10</td></tr>
 <tr><td>BYMONTH</td>
 <td>This property is used to store the index value of the selected Month while creating the yearly appointments. For example, while creating the yearly appointment in the Month June, it means the index value for June month is 6 and it is stored in the BYMONTH field. The appointment is created on every 6th month of a year. Example:FREQ=YEARLY;BYMONTHDAY=16;BYMONTH=6;INTERVAL=1;COUNT=10</td></tr>
 <tr><td>BYSETPOS</td>
@@ -466,30 +466,6 @@ this.Scheduler.AppointmentsSource = Meetings;
 ![business-object-recurring-appointment-in-maui-scheduler](images/appointments/business-object-recurring-appointment-in-maui-scheduler.png)
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/RecurringAppointment/BusinessObject)
-
-### Recurence appointment on last day of month
-To create recurring appointments on the last day of the month, use BYMONTHDAY=-1 in scheduler.
- 
-{% tabs %}
-{% highlight c# tabtitle="MainXaml.cs" %}
-
-this.Scheduler.View = SchedulerView.Month;
-// Creating an instance for the scheduler appointment collection.
-var appointments = new ObservableCollection<SchedulerAppointment>();
-// Adding scheduler appointment in the scheduler appointment collection.
-appointments.Add(new SchedulerAppointment()
-{
-    Subject = "Meeting",
-    StartTime = DateTime.Now,
-    EndTime = DateTime.Now.AddHours(1),
-    Background = Brush.Orange,
-	RecurrenceRule = "FREQ=MONTHLY;BYMONTHDAY=-1"
-});
-// Adding scheduler appointment into the AppointmentsSource.
-this.Scheduler.AppointmentsSource = appointments;
-
-{% endhighlight %}
-{% endtabs %}
 
 #### How to get the recurrence editor field values from RRULE?
 
