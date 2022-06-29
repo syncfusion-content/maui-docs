@@ -11,8 +11,6 @@ documentation: ug
 
 The .NET MAUI DataGrid control is used to display and manipulate data in a tabular view. It was built from the ground up to achieve the best possible performance, even when loading large amounts of data.
 
-I> .NET MAUI is unique and offers a single language(C#) and runtime that works across the platforms like Android, iOS, UWP and MacOS platform as well.
-
 **Key Features**
 
 * **Data Binding** - Bind different types of data sources, including DataTable.

@@ -142,7 +142,8 @@ Create a model repository class with OrderInfo collection property initialized w
 public class OrderInfoRepository
 {
     private ObservableCollection<OrderInfo> orderInfo;
-    public ObservableCollection<OrderInfo> OrderInfoCollection {
+    public ObservableCollection<OrderInfo>
+    {
         get { return orderInfo; }
         set { this.orderInfo = value; }
     }
