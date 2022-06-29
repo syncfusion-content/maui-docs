@@ -24,7 +24,7 @@ The `ShapeSelected` event is used to perform any action on shape selected shape 
      <map:SfMaps>
         <map:SfMaps.Layer>
             <map:MapShapeLayer x:Name="layer"
-							   ShapesSource = "{local:ImageResource MyProject.australia.json}" 
+							   ShapesSource="{local:MapSourceResourceExtension MyProject.australia.json}"
 							   SelectedShapeFill="Aqua"
 							   ShapeSelected="layer_ShapeSelected" 
 							   EnableSelection="True">
@@ -62,7 +62,7 @@ You can customize the below appearance of the selected shape.
 
      <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource = "{local:ImageResource MyProject.australia.json}" 
+            <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.australia.json}"
 							   DataSource="{Binding Data}" 
 							   PrimaryValuePath="Country"
 							   ShapeDataField="STATE_NAME" 

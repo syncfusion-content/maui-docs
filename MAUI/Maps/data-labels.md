@@ -21,7 +21,7 @@ You can show data labels on the map using the `ShowDataLabels` property. The def
 
      <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource = "{local:ImageResource MyProject.australia.json}" 
+            <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.australia.json}"
 							   DataSource="{Binding Data}"        
 							   PrimaryValuePath="State" 
 							   ShapeDataField="STATE_NAME" 
@@ -106,7 +106,7 @@ You can customize text of the data labels using the `DataLabelPath` property.
 
      <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource = "{local:ImageResource MyProject.australia.json}"  
+            <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.australia.json}"
 							   DataSource="{Binding Data}"        
 							   PrimaryValuePath="State" 
 							   ShapeDataField="STATE_NAME" 
@@ -193,7 +193,7 @@ By default, the data labels will render even if it overflows from the shape.
 
      <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource = "{local:ImageResource MyProject.australia.json}"  
+            <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.australia.json}"
 							   DataSource="{Binding Data}"        
 							   PrimaryValuePath="State" 
 							   ShapeDataField="STATE_NAME" 
@@ -280,7 +280,7 @@ You can customize the data labels using the `DataLabelStyle` property.
 
      <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource = "{local:ImageResource MyProject.australia.json}"  
+            <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.australia.shp}" 
 							   DataSource="{Binding Data}" 
 							   PrimaryValuePath="State" 
 							   ShapeDataField="STATE_NAME" 

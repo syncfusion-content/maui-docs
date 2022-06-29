@@ -21,7 +21,7 @@ You can enable bubbles using the `ShowBubbles`. You can customize a bubbles usin
 
      <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource = "{local:ImageResource MyProject.world1.shp}"
+            <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world1.shp}"
 							   DataSource="{Binding Data}"
 							   PrimaryValuePath="State" 
 							   ShapeDataField="name" 
@@ -114,7 +114,7 @@ You can enable tooltip for the bubbles using the `ShowBubbleTooltip` property. I
 
      <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource = "{local:ImageResource MyProject.world1.shp}"
+            <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world1.shp}"
    							   DataSource="{Binding Data}"
    							   PrimaryValuePath="State" 
    							   ShapeDataField="name" 
@@ -215,7 +215,7 @@ The value from the `ColorValuePath` will be used for the comparison in the `Equa
 
      <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource = "{local:ImageResource MyProject.world1.shp}"  
+            <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world1.shp}"
 							   ShowDataLabels="True"
 							   DataSource="{Binding Data}" 
 							   PrimaryValuePath="State" 
@@ -363,7 +363,7 @@ You can customize the below appearance of the bubbles.
 
      <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource = "{local:ImageResource MyProject.world1.shp}"
+            <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world1.shp}"
 							   DataSource="{Binding Data}"
 							   PrimaryValuePath="State" 
 							   ShapeDataField="name"

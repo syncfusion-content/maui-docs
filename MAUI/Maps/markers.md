@@ -23,7 +23,7 @@ You can show markers at any position on the map by providing latitude and longit
 
 		<map:SfMaps>
             <map:SfMaps.Layer>
-                <map:MapShapeLayer ShapesSource = "{local:ImageResource MyProject.world1.shp}"
+                <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world1.shp}"
                                    ShapeStroke="DarkGrey"
                                    ShowMarkerTooltip="True">
 								   
@@ -158,7 +158,7 @@ N>
 
 		<map:SfMaps>
             <map:SfMaps.Layer>
-                <map:MapShapeLayer ShapesSource = "{local:ImageResource MyProject.world1.shp}"
+                <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world1.shp}"
                                    ShapeStroke="DarkGrey"
                                    ShowMarkerTooltip="True">
                     <map:MapShapeLayer.Markers>
@@ -312,17 +312,17 @@ You can show custom marker using the `MarkerTemplate` property of the `MapShapeL
 	
     <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource = "{local:ImageResource MyProject.world1.shp}"
+            <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world1.shp}"
                                ShapeStroke="DarkGrey"
                                MarkerTemplate="{StaticResource LowPopulationTemplate}"
                                ShowMarkerTooltip="True">
                 <map:MapShapeLayer.Markers>
                     <map:MapMarkerCollection>
-                        <map:MapMarker Latitude="20.5595" Longitude="22.9375" HorizontalAlignment="Center" VerticalAlignment="End"/>
+                        <map:MapMarker Latitude="20.5595" Longitude="22.9375" HorizontalAlignment="Center" VerticalAlignment="Start"/>
                         <map:MapMarker Latitude="21.7679" Longitude="78.8718" HorizontalAlignment="Center" VerticalAlignment="Start"  />
                         <map:MapMarker Latitude="133.7751" Longitude="25.2744" HorizontalAlignment="Center" VerticalAlignment="Start" />
                         <map:MapMarker Latitude="60.2551" Longitude="84.5260" HorizontalAlignment="Center" VerticalAlignment="Start" />
-                        <map:MapMarker Latitude="195.4915" Longitude="-50.7832" HorizontalAlignment="Start" VerticalAlignment="Center"  />
+                        <map:MapMarker Latitude="195.4915" Longitude="-50.7832" HorizontalAlignment="Center" VerticalAlignment="Start"  />
                     </map:MapMarkerCollection>
                 </map:MapShapeLayer.Markers>
             </map:MapShapeLayer>
@@ -416,7 +416,7 @@ Data template can be used to customize the marker tooltip. The following code ex
 	
     <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource = "{local:ImageResource MyProject.world1.shp}"
+            <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world1.shp}"
                                ShapeStroke="DarkGrey"
                                ShapeHoverFill="Transparent"   
                                ShapeHoverStroke="Transparent"

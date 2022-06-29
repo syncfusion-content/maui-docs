@@ -22,7 +22,7 @@ The `ShowShapeTooltip` is used to clearly indicate the shape information every t
 
      <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource = "{local:ImageResource MyProject.world1.shp}"
+            <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world1.shp}"
 							   DataSource="{Binding Data}"
 							   PrimaryValuePath="State" 
 							   ShapeDataField="name" 
@@ -101,7 +101,7 @@ The `MapShapeLayer.ShowBubbleTooltip` is used to clearly indicate the bubble inf
 
     <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource = "{local:ImageResource MyProject.world1.shp}"
+            <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world1.shp}"
 							   DataSource="{Binding Data}"
 							   PrimaryValuePath="State" 
 							   ShapeDataField="name" 
@@ -204,7 +204,7 @@ The `MapShapeLayer.ShowMarkerTooltip` is used to clearly indicate the marker inf
 
     <map:SfMaps>
          <map:SfMaps.Layer>
-             <map:MapShapeLayer ShapesSource = "{local:ImageResource MyProject.world1.shp}" 
+             <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world1.shp}"
 							    ShapeStroke="DarkGrey"
 							    ShapeHoverFill = "Transparent" 
 							    ShapeHoverStroke="Transparent" 
@@ -439,74 +439,81 @@ Data template selector can be customized the appearance of each item with differ
 
 {% highlight xaml %}
 
-	<ContentPage.Resources>
-        <ResourceDictionary>
-            <DataTemplate x:Key="MarkerTooltipTemplate1">
-                <StackLayout IsClippedToBounds="false"
+<ContentPage.Resources>
+    <ResourceDictionary>
+        <DataTemplate x:Key="SouthAfricaTemplate">
+            <StackLayout IsClippedToBounds="false"
                          HorizontalOptions="StartAndExpand"
                          VerticalOptions="Center">
-                    <Label Text="{Binding Longitude}"
-                           Scale="1"
-                           TextColor="Blue"
-                           HorizontalOptions="StartAndExpand"
+                <Label Text="{Binding Name}"
+                       Scale="1"
+                       TextColor="Red"
+                       HorizontalOptions="StartAndExpand"
                        VerticalOptions="Center" />
-                </StackLayout>
-            </DataTemplate>
-			
-            <DataTemplate x:Key="MarkerTooltipTemplate2">
-                <StackLayout IsClippedToBounds="false"
+            </StackLayout>
+        </DataTemplate>
+
+        <DataTemplate x:Key="SouthAmericaTemplate">
+            <StackLayout IsClippedToBounds="false"
                          HorizontalOptions="StartAndExpand"
                          VerticalOptions="Center">
-                     <Label Text="{Binding Longitude}"
-                           Scale="1"
-                           TextColor="White"
-                           HorizontalOptions="StartAndExpand"
+                <Label Text="{Binding Name}"
+                       Scale="1"
+                       TextColor="White"
+                       HorizontalOptions="StartAndExpand"
                        VerticalOptions="Center" />
-                </StackLayout>
-            </DataTemplate>
-			
-			<local:MarkerTemplateSelector x:Key="MarkerTemplateSelector"
-										  Template1="{StaticResource MarkerTooltipTemplate1}"
-										  Template2="{StaticResource MarkerTooltipTemplate2}" />
-        </ResourceDictionary>
-    </ContentPage.Resources>
-	
-    <map:SfMaps>
-          <map:SfMaps.Layer>
-              <map:MapShapeLayer x:Name="layer"
-								 ShapesSource = "{local:ImageResource MyProject.world1.shp}"
-								 ShapeStroke="DarkGrey"
-                                 ShowMarkerTooltip="True"
-                                 ShapeHoverFill="Transparent"
-                                 ShapeHoverStroke="Transparent"
-								 MarkerTooltipTemplate="{StaticResource MarkerTemplateSelector}">
-									
-                 <map:MapShapeLayer.Markers>
-					<map:MapMarkerCollection>
-						<map:MapMarker Latitude="20.5595" Longitude="22.9375" />
-						<map:MapMarker Latitude="21.7679" Longitude="78.8718" />
-						<map:MapMarker Latitude="133.7751"  Longitude="25.2744" />
-						<map:MapMarker Latitude="60.2551" Longitude="84.5260" />
-						<map:MapMarker Latitude="195.4915"  Longitude="-50.7832" />
-					</map:MapMarkerCollection>
-                 </map:MapShapeLayer.Markers>
-					
-              </map:MapShapeLayer>
-          </map:SfMaps.Layer>
-    </map:SfMaps>
+            </StackLayout>
+        </DataTemplate>
+
+        <local:MarkerTemplateSelector x:Key="MarkerTemplateSelector"
+                                      Template1="{StaticResource SouthAfricaTemplate}"
+                                      Template2="{StaticResource SouthAmericaTemplate}" />
+    </ResourceDictionary>
+</ContentPage.Resources>
+
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer x:Name="layer"
+                           ShapesSource="{local:MapSourceResourceExtension MyProject.world1.shp}"
+                           ShapeStroke="DarkGrey"
+                           ShowMarkerTooltip="True"
+                           ShapeHoverFill="Transparent"
+                           ShapeHoverStroke="Transparent"
+                           MarkerTooltipTemplate="{StaticResource MarkerTemplateSelector}">
+
+            <map:MapShapeLayer.Markers>
+                <map:MapMarkerCollection>
+                    <local:CustomMarker Name="South africa"
+                                        Latitude="20.5595"
+                                        Longitude="22.9375" />
+                    <local:CustomMarker Name="South America"
+                                        Latitude="195.4915"
+                                        Longitude="-50.7832" />
+                </map:MapMarkerCollection>
+            </map:MapShapeLayer.Markers>
+
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
+
 
 {% endhighlight %}
 
 {% highlight c# %}
 
+public class CustomMarker : MapMarker
+{
+   public string Name { get; set; } 
+}
+
 public class MarkerTemplateSelector : DataTemplateSelector
 {
     public DataTemplate Template1 { get; set; }
     public DataTemplate Template2 { get; set; }
-	
+
     protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
     {
-        return (double)((MapMarker)item).Latitude < 20 ? Template1 : Template2;
+        return ((CustomMarker)item).Name == "South africa" ? Template1 : Template2;
     }
 }
 

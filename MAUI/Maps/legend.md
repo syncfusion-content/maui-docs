@@ -21,7 +21,7 @@ You can show shape legend by setting the `Legend` property as `MapLegend(LegendS
 
      <map:SfMaps>
             <map:SfMaps.Layer>
-                <map:MapShapeLayer ShapesSource="{local:ImageResource MyProject.world1.shp}"
+                <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world1.shp}"
 								   DataSource="{Binding Data}"
 								   PrimaryValuePath="State" 
 								   ShapeDataField="name" 
@@ -122,7 +122,7 @@ You can show bubble legend by setting the `MapShapeLayer.Legend` property as `Ma
 
      <map:SfMaps>
             <map:SfMaps.Layer>
-                <map:MapShapeLayer ShapesSource="{local:ImageResource MyProject.world1.shp}" 
+                <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world1.shp}"
 								   DataSource="{Binding Data}"  
 								   ShowBubbles="True" 
 								   PrimaryValuePath="State" 
@@ -242,7 +242,7 @@ You can customize the legend item's text style using the `MapLegend.TextStyle` p
 
      <map:SfMaps>
             <map:SfMaps.Layer>
-                <map:MapShapeLayer ShapesSource="{local:ImageResource MyProject.world1.shp}" 
+                <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world1.shp}"
    								   DataSource="{Binding Data}"
    								   PrimaryValuePath="State"
    								   ShapeDataField="name" 
@@ -362,7 +362,7 @@ You can position the legend items in different directions using the `MapLegend.P
 
      <map:SfMaps>
             <map:SfMaps.Layer>
-                <map:MapShapeLayer ShapesSource="{local:ImageResource MyProject.world1.shp}" 
+                <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world1.shp}"
    								   DataSource="{Binding Data}"
    								   PrimaryValuePath="State" 
    								   ShapeDataField="name" 

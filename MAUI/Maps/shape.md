@@ -21,7 +21,7 @@ You can apply color, stroke color and stroke thickness to the shapes using the `
 
      <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource = "{local:ImageResource MyProject.world-map.json}" 
+            <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world-map.json}"
 							   ShapeStroke="Green"
 							   ShapeFill="LightGreen"  
 							   ShapeStrokeThickness="2">
@@ -65,7 +65,7 @@ You can apply hover color, hover stoke color and hover stroke thickness to the s
 
      <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource = "{local:ImageResource MyProject.world-map.json}"
+            <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world-map.json}"
 							   ShapeHoverStroke="Blue"
 							   ShapeHoverFill="LightBlue"  
 							   ShapeHoverStrokeThickness="2">
@@ -109,7 +109,7 @@ N> You can show legend using the `Legend` property.The icons color of the legend
 
      <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource = "{local:ImageResource MyProject.australia.json}"
+            <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world-map.json}"
 							   DataSource="{Binding Data}"       
 							   PrimaryValuePath="State" 
 							   ShapeDataField="STATE_NAME" 
@@ -187,7 +187,7 @@ You can apply color to the shape by comparing a value from the `ColorMappings` w
 
      <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource = "{local:ImageResource MyProject.world-map.json}"
+            <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world-map.json}"
 							   DataSource="{Binding Data}" 
 							   PrimaryValuePath="Country" 
 							   ShapeDataField="name" 
@@ -278,7 +278,7 @@ You can apply color to the shape based on whether the value from `ColorMappings`
 
      <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource = "{local:ImageResource MyProject.world-map.json}" 
+            <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world-map.json}"
 							   DataSource="{Binding Data}" 
 							   PrimaryValuePath="Country" 
 							   ShapeDataField="name" 
