@@ -14,7 +14,7 @@ To migrate from the [Xamarin Range Slider](https://www.syncfusion.com/xamarin-ui
 1. SfDateTimeRangeSlider – For date-time scale.
 2. SfRangeSlider – For numeric scale.
 
-One more thing is, in .NET MAUI SfDateTimeRangeSlider, you do not have an API name [ShowRange](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_AllowDragRange) in MAUI. Both the MAUI SfRangeSlider and SfDateTimeRangeSlider controls will show two thumbs by default. If you wish to use the single thumb, check the [Migration from Xamarin.Forms SfRangeSlider to .NET MAUI SfDateTimeSlider](https://help.syncfusion.com/maui/datetime-slider/migration).
+One more thing is, in .NET MAUI SfDateTimeRangeSlider, you do not have an API name [ShowRange](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_AllowDragRange) in MAUI. Both the MAUI SfRangeSlider and SfDateTimeRangeSlider controls will show two thumbs by default. If you wish to use the single thumb, check the `Migration from Xamarin.Forms SfRangeSlider to .NET MAUI SfDateTimeSlider`.
 
 ## Namespaces 
 
