@@ -13,6 +13,8 @@ documentation: ug
 
 The area chart is rendered by using a collection of line segments connected to form a closed loop area, filled with the specified color. To render a area chart, create an instance of [AreaSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.AreaSeries.html?tabs=tabid-1) and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of the chart.
 
+N> The cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) as its default content.
+
 {% tabs %}
 
 {% highlight xaml %}
@@ -27,9 +29,7 @@ The area chart is rendered by using a collection of line segments connected to f
         <chart:NumericalAxis />
     </chart:SfCartesianChart.YAxes>   
 
-    <chart:SfCartesianChart.Series>
-        <chart:AreaSeries ItemsSource="{Binding Data}" XBindingPath="Demand" YBindingPath="Year2010"/>  
-    </chart:SfCartesianChart.Series>
+    <chart:AreaSeries ItemsSource="{Binding Data}" XBindingPath="Demand" YBindingPath="Year2010"/>  
 
 </chart:SfCartesianChart>
 
@@ -77,9 +77,7 @@ The [SplineAreaSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chart
         <chart:NumericalAxis />
     </chart:SfCartesianChart.YAxes>
             
-    <chart:SfCartesianChart.Series>
-        <chart:SplineAreaSeries ItemsSource="{Binding Data}" XBindingPath="Demand" YBindingPath="Year2010"/>  
-    </chart:SfCartesianChart.Series>
+    <chart:SplineAreaSeries ItemsSource="{Binding Data}" XBindingPath="Demand" YBindingPath="Year2010"/>  
 
 </chart:SfCartesianChart>
 

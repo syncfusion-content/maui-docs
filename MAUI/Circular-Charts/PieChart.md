@@ -11,16 +11,16 @@ documentation: ug
 
 To render a [PieSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PieSeries.html) in circular chart, create an instance of the [PieSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PieSeries.html) and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html#Syncfusion_Maui_Charts_SfCircularChart_Series) collection property of [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html).
 
+N> The circular chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html#Syncfusion_Maui_Charts_SfCircularChart_Series) as its default content.
+
 {% tabs %}
 
 {% highlight xaml %}
 
 <chart:SfCircularChart>
-    <chart:SfCircularChart.Series>
         <chart:PieSeries ItemsSource="{Binding Data}" 
                         XBindingPath="Product" 
                         YBindingPath="SalesRate"/>
-    </chart:SfCircularChart.Series>
 </chart:SfCircularChart>
 
 {% endhighlight %}
@@ -50,11 +50,10 @@ The rendering size of the [PieSeries](https://help.syncfusion.com/cr/maui/Syncfu
 {% highlight xaml %}
 
 <chart:SfCircularChart>
-    <chart:SfCircularChart.Series>
-        <chart:PieSeries ItemsSource="{Binding Data}" 
-                        XBindingPath="Product" 
-                        YBindingPath="SalesRate"
-                        Radius = "0.9"/>
+    <chart:PieSeries ItemsSource="{Binding Data}" 
+                    XBindingPath="Product" 
+                    YBindingPath="SalesRate"
+                    Radius = "0.9"/>
     </chart:SfCircularChart.Series>            
 </chart:SfCircularChart>
 
@@ -86,9 +85,7 @@ By using the [StartAngle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Ch
 {% highlight xaml %}
 
 <chart:SfCircularChart>
-    <chart:SfCircularChart.Series>
-        <chart:PieSeries StartAngle="180" EndAngle="360" ItemsSource="{Binding Data}"  XBindingPath="Product"  YBindingPath="SalesRate" />
-    </chart:SfCircularChart.Series>
+    <chart:PieSeries StartAngle="180" EndAngle="360" ItemsSource="{Binding Data}"  XBindingPath="Product"  YBindingPath="SalesRate" />
 </chart:SfCircularChart>
 
 {% endhighlight %}

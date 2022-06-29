@@ -201,6 +201,8 @@ Run the project and check if you get following output to make sure you have conf
 
 As we are going to visualize the comparison of heights in the data model, add [ColumnSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ColumnSeries.html?tabs=tabid-1) to [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) property of chart, and then bind the `Data` property of the above `ViewModel` to the `ColumnSeries.ItemsSource` as follows.
 
+N> The cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) as its default content.
+
 N> You need to set [XBindingPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_XBindingPath) and [YBindingPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.XYDataSeries.html#Syncfusion_Maui_Charts_XYDataSeries_YBindingPath)
  properties so that chart will fetch values from the respective properties in the data model to plot the series. 
 
@@ -224,12 +226,9 @@ N> You need to set [XBindingPath](https://help.syncfusion.com/cr/maui/Syncfusion
         </chart:NumericalAxis>
     </chart:SfCartesianChart.YAxes>
 
-    <chart:SfCartesianChart.Series>
-        <chart:ColumnSeries ItemsSource="{Binding Data}" 
-                            XBindingPath="Name" 
-                            YBindingPath="Height">
-        </chart:ColumnSeries>
-    </chart:SfCartesianChart.Series>
+    <chart:ColumnSeries ItemsSource="{Binding Data}" 
+                        XBindingPath="Name" 
+                        YBindingPath="Height" />
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -387,9 +386,7 @@ Tooltips are used to show information about the segment, when a user hovers over
 
 <chart:SfCartesianChart>
     ...
-    <chart:SfCartesianChart.Series>
-        <chart:ColumnSeries EnableTooltip="True" ItemsSource="{Binding Data}" XBindingPath="Name" YBindingPath="Height"/>
-    </chart:SfCartesianChart.Series>
+    <chart:ColumnSeries EnableTooltip="True" ItemsSource="{Binding Data}" XBindingPath="Name" YBindingPath="Height"/>
     ...
 </chart:SfCartesianChart> 
 
@@ -452,18 +449,16 @@ The following code example gives you the complete code of above configurations.
                 </chart:SfCartesianChart.YAxes>
 
             <!--Initialize the series for chart-->
-                <chart:SfCartesianChart.Series>
-                    <chart:ColumnSeries Label="Height" 
-                            EnableTooltip="True"
-                            ShowDataLabels="True"
-                            ItemsSource="{Binding Data}"
-                            XBindingPath="Name" 
-                            YBindingPath="Height">
-                        <chart:ColumnSeries.DataLabelSettings>
-                            <chart:CartesianDataLabelSettings LabelPlacement="Inner"/>
-                        </chart:ColumnSeries.DataLabelSettings>
-                    </chart:ColumnSeries>
-                </chart:SfCartesianChart.Series>
+            <chart:ColumnSeries Label="Height" 
+                    EnableTooltip="True"
+                    ShowDataLabels="True"
+                    ItemsSource="{Binding Data}"
+                    XBindingPath="Name" 
+                    YBindingPath="Height">
+                <chart:ColumnSeries.DataLabelSettings>
+                    <chart:CartesianDataLabelSettings LabelPlacement="Inner"/>
+                    </chart:ColumnSeries.DataLabelSettings>
+            </chart:ColumnSeries>
             </chart:SfCartesianChart>
         </Grid>
     </ContentPage.Content>
