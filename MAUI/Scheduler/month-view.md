@@ -81,7 +81,7 @@ this.Scheduler.MonthView.ShowLeadingAndTrailingDates = false;
 
 ## Number of weeks visible in the month view 
 
-The number of weeks visible in the month view can be changed by setting the [NumberOfVisibleWeeks]() property in the [MonthView](). 
+The number of week visible in the month view can be changed by setting the [NumberOfVisibleWeeks]() property in the [MonthView](). 
 
 {% tabs %}  
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}

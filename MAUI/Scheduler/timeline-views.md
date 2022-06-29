@@ -21,7 +21,7 @@ The timelineView displays the date inside the horizontal time axis with the desi
 
 ## Number of days in timeline view
 
-The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) number of visible days can be adjusted by changing the [NumberOfVisibleDays]() property of [TimelineView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineView.html)
+The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) number of visible days in timelineday, timelineweek and timeline workweek can be adjusted by changing the [NumberOfVisibleDays]() property of [TimelineView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineView.html)
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
