@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with .NET MAUI DataGrid control | Syncfusion
-description: Learn here about getting started with Syncfusion .NET MAUI DataGrid (SfDataGrid) control, its elements and more.
+description: Learn about getting started with Syncfusion .NET MAUI DataGrid (SfDataGrid) control, its elements, and more here.
 platform: MAUI
 control: SfDataGrid
 documentation: ug
@@ -87,7 +87,7 @@ namespace GettingStarted
 
 The SfDataGrid is a data-bound control. Hence, a data model should be created to bind it to the control. 
 
-Create a simple data source as shown in the following code example in a new class file. Save it as OrderInfo.cs file:
+Create a simple data source as shown in the following code example in a new class file, and save it as OrderInfo.cs file:
 
 {% highlight c# %}
 public class OrderInfo
@@ -134,9 +134,9 @@ public class OrderInfo
 } 
 {% endhighlight %}
 
-N> If you want your data model to respond to property changes, implement `INotifyPropertyChanged` interface in your model class.
+N> If you want your data model to respond to property changes, implement the `INotifyPropertyChanged` interface in your model class.
 
-Create a model repository class with OrderInfo collection property initialized with required number of data objects in a new class file as shown in the following code example and save it as OrderInfoRepository.cs file:
+Create a model repository class with OrderInfo collection property initialized with the required number of data objects in a new class file as shown in the following code example and save it as OrderInfoRepository.cs file:
 
 {% highlight c# %}
 public class OrderInfoRepository
@@ -178,7 +178,7 @@ public class OrderInfoRepository
 
 To bind the data source to the SfDataGrid, set the `SfDataGrid.ItemsSource` property as follows. You can bind the data source of the SfDataGrid either from XAML or in code. 
 
-The following code example binds the collection created in previous step to `SfDataGrid.ItemsSource` property.
+The following code example binds the collection created in the previous step to the `SfDataGrid.ItemsSource` property:
 
 {% tabs %}
 {% highlight xaml %}
@@ -205,7 +205,7 @@ dataGrid.ItemsSource = viewModel.OrderInfoCollection;
 {% endhighlight %}
 {% endtabs %}
 
-Run the application to render the following output.
+Run the application to render the following output:
 
 ![.Net MAUI DataGrid](Images\getting-started\basic.png)
 
@@ -213,7 +213,7 @@ Run the application to render the following output.
 
 By default, the SfDataGrid automatically creates columns for all the properties in the data source. The type of the column generated depends on the type of data in the column. When the columns are auto-generated, handle the `SfDataGrid.AutoGeneratingColumnMode` mode to customize or cancel the columns before they are added to the columns collection in the SfDataGrid.
  
-The columns can be manually defined by setting the`SfDataGrid.AutoGenerateColumnsMode` property to None and by adding the `GridColumn` objects to the `SfDataGrid.Columns` collection. It can be done from both XAML and code. The following code example illustrates this:
+The columns can be manually defined by setting the `SfDataGrid.AutoGenerateColumnsMode` property to 'None' and by adding the `DataGridColumn` objects to the `SfDataGrid.Columns` collection. This can be done from both XAML and code. The following code example illustrates this:
 
 {% tabs %}
 {% highlight xaml %}
@@ -256,7 +256,7 @@ dataGrid.Columns.Add (countryColumn);
 
 ## Sorting
 
-In SfDataGrid sorting can be done on its data by setting the `SfDataGrid.SortingMode` property to single,multiple or none.
+In the SfDataGrid, sorting can be done on its data by setting the `SfDataGrid.SortingMode` property to single, multiple, or none.
  
 {% tabs %}
 {% highlight xaml %}
@@ -268,11 +268,11 @@ dataGrid.SortingMode=DataGridSortingMode.Single;
 {% endhighlight %}
 {% endtabs %}
 
-Run the application and touch the header cell to sort the data and the following output will be displayed.
+Run the application and touch the header cell to sort the data and the following output will be displayed:
  
 ![.Net MAUI DataGrid](Images\getting-started\sorting.png)
 
-Sorting can also be configured programmatically by adding the column to the `SfDataGrid.SortColumnDescription` collection as follows,
+Sorting can also be configured by adding the column to the `SfDataGrid.SortColumnDescription` collection as follows:
 
 {% tabs %}
 {% highlight xaml %}
@@ -293,9 +293,9 @@ The selection operations can be handled with the help of the `SelectionChanging`
 
 ## Loading the SfDataGrid with customized height and width
 
-The SfDataGrid can be load with specific height and width inside different layouts using the `SfDataGrid.HeightRequest` and `SfDataGrid.WidthRequest` properties. 
+The SfDataGrid can be loaded with specific heights and widths inside different layouts using the `SfDataGrid.HeightRequest` and `SfDataGrid.WidthRequest` properties.
 
-The following code example illustrates how this can be done.
+The following code example illustrates how this can be done:
 
 {% tabs %}
 {% highlight xaml %}
