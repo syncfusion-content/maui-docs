@@ -10,7 +10,7 @@ documentation: ug
 
 # Downloading Syncfusion .NET MAUI offline installer
 
-The Syncfusion .NET MAUI installer can be downloaded from the [Syncfusion](https://www.syncfusion.com/maui-ui-controls) website. You can either download the licensed installer or try our trial installer depending on your license. 
+The Syncfusion .NET MAUI installer can be downloaded from the [Syncfusion](https://www.syncfusion.com/xamarin-ui-controls) website. You can either download the licensed installer or try our trial installer depending on your license. 
 
    -	Trial Installer
    -	Licensed Installer
