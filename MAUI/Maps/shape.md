@@ -13,7 +13,7 @@ This section explains about shapes and how to apply colors to the shapes based o
 
 ## Shape color
 
-You can apply color, stroke color and stroke thickness to the shapes using the [`ShapeFill`](), [`ShapeStroke`]() and [`ShapeStrokeThickness`]() properties respectively.
+You can apply color, stroke color and stroke thickness to the shapes using the `ShapeFill`, `ShapeStroke` and `ShapeStrokeThickness` properties respectively.
 
 {% tabs %}
 
@@ -21,7 +21,7 @@ You can apply color, stroke color and stroke thickness to the shapes using the [
 
      <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json" 
+            <map:MapShapeLayer ShapesSource = "{local:ImageResource MyProject.world-map.json}" 
 							   ShapeStroke="Green"
 							   ShapeFill="LightGreen"  
 							   ShapeStrokeThickness="2">
@@ -38,7 +38,7 @@ You can apply color, stroke color and stroke thickness to the shapes using the [
         InitializeComponent();
 		
         MapShapeLayer layer = new MapShapeLayer();
-        layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
+        layer.ShapesSource = MapSource.FromResource("MyProject.world-map.json");
         layer.ShapeFill = Brush.LightGreen;
         layer.ShapeStroke = Brush.Green;
         layer.ShapeStrokeThickness = 2;
@@ -57,7 +57,7 @@ You can apply color, stroke color and stroke thickness to the shapes using the [
 
 ## Hover color
 
-You can apply hover color, hover stoke color and hover stroke thickness to the shapes using the [`ShapeHoverFill`](), [`ShapeHoverStroke`]() and [`ShapeHoverStrokeThickness`]() properties respectively.
+You can apply hover color, hover stoke color and hover stroke thickness to the shapes using the `ShapeHoverFill`, `ShapeHoverStroke` and `ShapeHoverStrokeThickness` properties respectively.
 
 {% tabs %}
 
@@ -65,7 +65,7 @@ You can apply hover color, hover stoke color and hover stroke thickness to the s
 
      <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+            <map:MapShapeLayer ShapesSource = "{local:ImageResource MyProject.world-map.json}"
 							   ShapeHoverStroke="Blue"
 							   ShapeHoverFill="LightBlue"  
 							   ShapeHoverStrokeThickness="2">
@@ -82,11 +82,11 @@ You can apply hover color, hover stoke color and hover stroke thickness to the s
         InitializeComponent();
 		
         MapShapeLayer layer = new MapShapeLayer();
-        layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
+        
         layer.ShapeHoverFill = Brush.LightBlue;
         layer.ShapeHoverStroke = Brush.Blue;
         layer.ShapeHoverStrokeThickness = 2;
-		
+		layer.ShapesSource = MapSource.FromResource("MyProject.world-map.json");
         SfMaps maps = new SfMaps();
         maps.Layer = layer;
 		
@@ -99,9 +99,9 @@ You can apply hover color, hover stoke color and hover stroke thickness to the s
 
 ## Applying colors based on the data
 
-The [`ShapeColorValuePath`]() is provides a color directly, then the color will be applied to the respective shape straightaway. Otherwise, you have to provide `ColorMapping`.
+The `ShapeColorValuePath` is provides a color directly, then the color will be applied to the respective shape straightaway. Otherwise, you have to provide `ColorMapping`.
 
-N> You can show legend using the [`Legend`]() property.The icons color of the legend is applied based on the colors from `ShapeColorValuePath` property and have to provide text for the legend from `ColorMapping.Text` property. 
+N> You can show legend using the `Legend` property.The icons color of the legend is applied based on the colors from `ShapeColorValuePath` property and have to provide text for the legend from `ColorMapping.Text` property. 
 
 {% tabs %}
 
@@ -109,7 +109,7 @@ N> You can show legend using the [`Legend`]() property.The icons color of the le
 
      <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/australia.json" 
+            <map:MapShapeLayer ShapesSource = "{local:ImageResource MyProject.australia.json}"
 							   DataSource="{Binding Data}"       
 							   PrimaryValuePath="State" 
 							   ShapeDataField="STATE_NAME" 
@@ -130,7 +130,7 @@ public MainPage()
     this.BindingContext = viewModel;
 	
     MapShapeLayer layer = new MapShapeLayer();
-    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/australia.json"));
+    layer.ShapesSource = MapSource.FromResource("MyProject.australia.json");
     layer.DataSource = viewModel.Data;
     layer.PrimaryValuePath = "State";
     layer.ShapeDataField = "STATE_NAME";
@@ -179,7 +179,7 @@ public class Model
 
 ## Equal color mapping
 
-You can apply color to the shape by comparing a value from the [`ColorMappings`]() with the [`EqualColorMapping.Value`](). For the matched values, the [`EqualColorMapping.color`]() will be applied to the respective shapes.
+You can apply color to the shape by comparing a value from the `ColorMappings` with the `EqualColorMapping.Value`. For the matched values, the `EqualColorMapping.color` will be applied to the respective shapes.
 
 {% tabs %}
 
@@ -187,7 +187,7 @@ You can apply color to the shape by comparing a value from the [`ColorMappings`]
 
      <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json" 
+            <map:MapShapeLayer ShapesSource = "{local:ImageResource MyProject.world-map.json}"
 							   DataSource="{Binding Data}" 
 							   PrimaryValuePath="Country" 
 							   ShapeDataField="name" 
@@ -214,7 +214,7 @@ public MainPage()
     this.BindingContext = viewModel;
 	
     MapShapeLayer layer = new MapShapeLayer();
-    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
+    layer.ShapesSource = MapSource.FromResource("MyProject.world-map.json");
     layer.DataSource = viewModel.Data;
     layer.PrimaryValuePath = "Country";
     layer.ShapeDataField = "name";
@@ -270,7 +270,7 @@ public class Model
 
 ## Range color mapping
 
-You can apply color to the shape based on whether the value from [`ColorMappings`]() falls within the [`RangeColorMapping.From`]() and [`RangeColorMapping.To`](). Then, the [`RangeColorMapping.Color`]() will be applied to the respective shapes.
+You can apply color to the shape based on whether the value from `ColorMappings` falls within the `RangeColorMapping.From` and `RangeColorMapping.To`. Then, the `RangeColorMapping.Color` will be applied to the respective shapes.
 
 {% tabs %}
 
@@ -278,7 +278,7 @@ You can apply color to the shape based on whether the value from [`ColorMappings
 
      <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json" 
+            <map:MapShapeLayer ShapesSource = "{local:ImageResource MyProject.world-map.json}" 
 							   DataSource="{Binding Data}" 
 							   PrimaryValuePath="Country" 
 							   ShapeDataField="name" 
@@ -305,7 +305,7 @@ public MainPage()
     this.BindingContext = viewModel;
 	
     MapShapeLayer layer = new MapShapeLayer();
-    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
+    layer.ShapesSource = MapSource.FromResource("MyProject.world-map.json");
     layer.DataSource = viewModel.Data;
     layer.PrimaryValuePath = "Country";
     layer.ShapeDataField = "name";
@@ -362,4 +362,4 @@ public class Model
 ![Range color mapping](images/shape/range_color_mapping.png)
 
 N>
-* Refer the [`BubbleSettings`](), for setting the bubble colors based on the specific value. You can refer to our [MAUI Maps]() feature tour page for its groundbreaking feature representations. You can also explore our [MAUI Maps Shapes example]() that shows how to configure a Maps in MAUI.
+* Refer the `BubbleSettings`, for setting the bubble colors based on the specific value. You can refer to our `MAUI Maps` feature tour page for its groundbreaking feature representations. You can also explore our `MAUI Maps Shapes example` that shows how to configure a Maps in MAUI.

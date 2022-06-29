@@ -14,7 +14,7 @@ Tooltip is used to indicate the shape, bubble, marker information during the tap
 
 ## Tooltip for the shapes
 
-The [`ShowShapeTooltip`]() is used to clearly indicate the shape information every time when you interacts with the shapes i.e., while tapping in touch devices and hover enter in the mouse enabled devices.
+The `ShowShapeTooltip` is used to clearly indicate the shape information every time when you interacts with the shapes i.e., while tapping in touch devices and hover enter in the mouse enabled devices.
 
 {% tabs %}
 
@@ -22,7 +22,7 @@ The [`ShowShapeTooltip`]() is used to clearly indicate the shape information eve
 
      <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+            <map:MapShapeLayer ShapesSource = "{local:ImageResource MyProject.world1.shp}"
 							   DataSource="{Binding Data}"
 							   PrimaryValuePath="State" 
 							   ShapeDataField="name" 
@@ -43,7 +43,7 @@ public MainPage()
    this.BindingContext = viewModel;
    
    MapShapeLayer layer = new MapShapeLayer();
-   layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
+   layer.ShapesSource = MapSource.FromResource("MyProject.world1.shp");
    layer.DataSource = viewModel.Data;
    layer.PrimaryValuePath = "State";
    layer.ShapeDataField = "name";
@@ -89,11 +89,11 @@ public class Model
 ![Maps shape tooltip builder](images/tooltip/shape_tooltip_builder.png)
 
 N>
-* Refer the [`MapTooltipSettings`](), for customizing the tooltip.
+* Refer the `MapTooltipSettings`, for customizing the tooltip.
 
 ## Tooltip for the bubbles
 
-The [`MapShapeLayer.ShowBubbleTooltip`]() is used to clearly indicate the bubble information every time when you interacts with the bubbles i.e., while tapping in touch devices and hover enter in the mouse enabled devices.
+The `MapShapeLayer.ShowBubbleTooltip` is used to clearly indicate the bubble information every time when you interacts with the bubbles i.e., while tapping in touch devices and hover enter in the mouse enabled devices.
 
 {% tabs %}
 
@@ -101,7 +101,7 @@ The [`MapShapeLayer.ShowBubbleTooltip`]() is used to clearly indicate the bubble
 
     <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+            <map:MapShapeLayer ShapesSource = "{local:ImageResource MyProject.world1.shp}"
 							   DataSource="{Binding Data}"
 							   PrimaryValuePath="State" 
 							   ShapeDataField="name" 
@@ -135,7 +135,7 @@ The [`MapShapeLayer.ShowBubbleTooltip`]() is used to clearly indicate the bubble
         this.BindingContext = viewModel;
 		
         MapShapeLayer layer = new MapShapeLayer();
-        layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
+        layer.ShapesSource = MapSource.FromResource("MyProject.world1.shp");
         layer.DataSource = viewModel.Data;
         layer.PrimaryValuePath = "State";
         layer.ShapeDataField = "name";
@@ -196,7 +196,7 @@ The [`MapShapeLayer.ShowBubbleTooltip`]() is used to clearly indicate the bubble
 
 ## Tooltip for the markers
 
-The [`MapShapeLayer.ShowMarkerTooltip`]() is used to clearly indicate the marker information every time when you interacts with the markers i.e., while tapping in touch devices and hover enter in the mouse enabled devices.
+The `MapShapeLayer.ShowMarkerTooltip` is used to clearly indicate the marker information every time when you interacts with the markers i.e., while tapping in touch devices and hover enter in the mouse enabled devices.
 
 {% tabs %}
 
@@ -204,7 +204,7 @@ The [`MapShapeLayer.ShowMarkerTooltip`]() is used to clearly indicate the marker
 
     <map:SfMaps>
          <map:SfMaps.Layer>
-             <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json" 
+             <map:MapShapeLayer ShapesSource = "{local:ImageResource MyProject.world1.shp}" 
 							    ShapeStroke="DarkGrey"
 							    ShapeHoverFill = "Transparent" 
 							    ShapeHoverStroke="Transparent" 
@@ -237,7 +237,7 @@ The [`MapShapeLayer.ShowMarkerTooltip`]() is used to clearly indicate the marker
 		InitializeComponent();
 		
         MapShapeLayer layer = new MapShapeLayer();
-        layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
+        layer.ShapesSource = MapSource.FromResource("MyProject.world1.shp");
         layer.ShapeHoverFill = Colors.Transparent;
         layer.ShapeHoverStroke = Colors.Transparent;
         layer.ShowMarkerTooltip = true;
@@ -274,7 +274,7 @@ The [`MapShapeLayer.ShowMarkerTooltip`]() is used to clearly indicate the marker
 ![Maps marker tooltip builder](images/tooltip/marker_tooltip_builder.png)
 
 N>
-* Refer the [`MapTooltipSettings`](), for customizing the tooltip.
+* Refer the `MapTooltipSettings`, for customizing the tooltip.
 
 ## Appearance customization
 
@@ -288,7 +288,7 @@ Data template can be used customize the tooltip view. The following code example
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-       <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+       <map:MapShapeLayer ShapesSource = "{local:ImageResource MyProject.world1.shp}"
 						  DataSource="{Binding Data}"
 						  ShapeDataField="continent"
 						  PrimaryValuePath="Continent"
@@ -330,7 +330,7 @@ Data template can be used customize the tooltip view. The following code example
         this.BindingContext = viewModel;  
 		
         MapShapeLayer layer = new MapShapeLayer();
-        layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
+        layer.ShapesSource = MapSource.FromResource("MyProject.world1.shp");
         layer.PrimaryValuePath = "Continent";
         layer.ShapeDataField = "continent";
         layer.DataSource = viewModel.Data;
@@ -427,9 +427,9 @@ N>
 * The BindingContext of the Marker will be the corresponding MapMarker.
 
 N>
-* Refer the [MapShapeLayer.ShapeTooltipTemplate](), for customize tooltip for the shapes.
-* Refer the [MapShapeLayer.BubbleTooltipTemplate](), for customize tooltip for the bubbles.
-* Refer the [MapLayer.MarkerTooltipTemplate](), for customize tooltip for the markers.
+* Refer the `MapShapeLayer.ShapeTooltipTemplate`, for customize tooltip for the shapes.
+* Refer the `MapShapeLayer.BubbleTooltipTemplate`, for customize tooltip for the bubbles.
+* Refer the `MapLayer.MarkerTooltipTemplate`, for customize tooltip for the markers.
 
 ### Apply data template selector for tooltip
 
@@ -474,7 +474,7 @@ Data template selector can be customized the appearance of each item with differ
     <map:SfMaps>
           <map:SfMaps.Layer>
               <map:MapShapeLayer x:Name="layer"
-								 ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+								 ShapesSource = "{local:ImageResource MyProject.world1.shp}"
 								 ShapeStroke="DarkGrey"
                                  ShowMarkerTooltip="True"
                                  ShapeHoverFill="Transparent"
@@ -519,4 +519,4 @@ public class MarkerTemplateSelector : DataTemplateSelector
 N>
 * Data Templates and Data Templates selector are also applicable with bubbles and markers.
 
-N> You can refer to our [MAUI Maps]() feature tour page for its groundbreaking feature representations. You can also explore our [MAUI Maps Tooltip example]() that shows how to configure a Maps in MAUI.
+N> You can refer to our `MAUI Maps` feature tour page for its groundbreaking feature representations. You can also explore our `MAUI Maps Tooltip example` that shows how to configure a Maps in MAUI.

@@ -13,7 +13,7 @@ Data labels provides identification for the shapes by displaying their names. Yo
 
 ## Show data labels
 
-You can show data labels on the map using the [`ShowDataLabels`]() property. The default value is `false`.
+You can show data labels on the map using the `ShowDataLabels` property. The default value is `false`.
 
 {% tabs %}
 
@@ -21,7 +21,7 @@ You can show data labels on the map using the [`ShowDataLabels`]() property. The
 
      <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/australia.json" 
+            <map:MapShapeLayer ShapesSource = "{local:ImageResource MyProject.australia.json}" 
 							   DataSource="{Binding Data}"        
 							   PrimaryValuePath="State" 
 							   ShapeDataField="STATE_NAME" 
@@ -45,7 +45,7 @@ public MainPage()
     this.BindingContext = viewModel;
 	
     MapShapeLayer layer = new MapShapeLayer();
-    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/australia.json"));
+    layer.ShapesSource = MapSource.FromResource("MyProject.australia.json");
     layer.DataSource = viewModel.Data;
     layer.PrimaryValuePath = "State";
     layer.ShapeDataField = "STATE_NAME";
@@ -98,7 +98,7 @@ public class Model
 
 ## Text customization
 
-You can customize text of the data labels using the [`DataLabelPath`]() property.
+You can customize text of the data labels using the `DataLabelPath` property.
 
 {% tabs %}
 
@@ -106,7 +106,7 @@ You can customize text of the data labels using the [`DataLabelPath`]() property
 
      <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/australia.json" 
+            <map:MapShapeLayer ShapesSource = "{local:ImageResource MyProject.australia.json}"  
 							   DataSource="{Binding Data}"        
 							   PrimaryValuePath="State" 
 							   ShapeDataField="STATE_NAME" 
@@ -130,7 +130,7 @@ public MainPage()
     this.BindingContext = viewModel;
 	
     MapShapeLayer layer = new MapShapeLayer();
-    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/australia.json"));
+    layer.ShapesSource = MapSource.FromResource("MyProject.australia.json");
     layer.DataSource = viewModel.Data;
     layer.PrimaryValuePath = "State";
     layer.ShapeDataField = "STATE_NAME";
@@ -183,7 +183,7 @@ public class Model
 
 ## Overflow mode
 
-You can trim or remove the data label when it is overflowed from the shape using the [`OverflowMode`]() property. The possible values are `None`, `Trim`, and `Hide`. The default value of the [`OverflowMode`]() property is `MapLabelOverflowMode.None`.
+You can trim or remove the data label when it is overflowed from the shape using the `OverflowMode` property. The possible values are `None`, `Trim`, and `Hide`. The default value of the `OverflowMode` property is `MapLabelOverflowMode.None`.
 
 By default, the data labels will render even if it overflows from the shape. 
 
@@ -193,7 +193,7 @@ By default, the data labels will render even if it overflows from the shape.
 
      <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/australia.json" 
+            <map:MapShapeLayer ShapesSource = "{local:ImageResource MyProject.australia.json}"  
 							   DataSource="{Binding Data}"        
 							   PrimaryValuePath="State" 
 							   ShapeDataField="STATE_NAME" 
@@ -218,7 +218,7 @@ public MainPage()
     this.BindingContext = viewModel;
 	
     MapShapeLayer layer = new MapShapeLayer();
-    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/australia.json"));
+    layer.ShapesSource = MapSource.FromResource("MyProject.australia.json");
     layer.DataSource = viewModel.Data;
     layer.PrimaryValuePath = "State";
     layer.ShapeDataField = "STATE_NAME";
@@ -272,7 +272,7 @@ public class Model
 
 ## Appearance customization
 
-You can customize the data labels using the [`DataLabelStyle`]() property.
+You can customize the data labels using the `DataLabelStyle` property.
 
 {% tabs %}
 
@@ -280,7 +280,7 @@ You can customize the data labels using the [`DataLabelStyle`]() property.
 
      <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/australia.json"  
+            <map:MapShapeLayer ShapesSource = "{local:ImageResource MyProject.australia.json}"  
 							   DataSource="{Binding Data}" 
 							   PrimaryValuePath="State" 
 							   ShapeDataField="STATE_NAME" 
@@ -312,7 +312,7 @@ public MainPage()
     this.BindingContext = viewModel;
 	
     MapShapeLayer layer = new MapShapeLayer();
-    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/australia.json"));
+    layer.ShapesSource = MapSource.FromResource("MyProject.australia.json");
     layer.DataSource = viewModel.Data;
     layer.PrimaryValuePath = "State";
     layer.ShapeDataField = "STATE_NAME";

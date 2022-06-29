@@ -15,7 +15,7 @@ Markers can be used to denote the locations. It is possible to use the built-in 
 
 ### Shape layer
 
-You can show markers at any position on the map by providing latitude and longitude position to the [`MapMarker`](), which is from the [`Markers`]() collection.
+You can show markers at any position on the map by providing latitude and longitude position to the `MapMarker`, which is from the `Markers` collection.
 
 {% tabs %}
 
@@ -23,7 +23,7 @@ You can show markers at any position on the map by providing latitude and longit
 
 		<map:SfMaps>
             <map:SfMaps.Layer>
-                <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                <map:MapShapeLayer ShapesSource = "{local:ImageResource MyProject.world1.shp}"
                                    ShapeStroke="DarkGrey"
                                    ShowMarkerTooltip="True">
 								   
@@ -74,7 +74,7 @@ public MarkerTool()
 	InitializeComponent();
 	
      MapShapeLayer layer = new MapShapeLayer();
-     layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
+     layer.ShapesSource = MapSource.FromResource("MyProject.world1.shp");
 
      MapMarker mapMarker = new MapMarker();
      mapMarker.Latitude = 20.5595;
@@ -137,20 +137,20 @@ public MarkerTool()
 ![default marker](images/markers/default_marker.png)
 
 N>
-* Refer the [`MapMarkerCollection`](), for collection of [`MapMarker`]().
+* Refer the `MapMarkerCollection`, for collection of `MapMarker`.
 
 ## Appearance customization
 
-You can customize the built-in markers appearance using the [`IconType`](), [`IconFill`](), [`IconStroke`](), [`IconStrokeThickness`](), [`IconWidth`]() and [`IconHeight`]() properties of the [`MapMarker`]().
+You can customize the built-in markers appearance using the `IconType`, `IconFill`, `IconStroke`, `IconStrokeThickness`, `IconWidth` and `IconHeight` properties of the `MapMarker`.
 
 * **Alignment** - You can change the position of the marker from the given coordinate using the `HorizontalAlignment` and `VerticalAlignment` property. The default value is `MapAlignment.Center`. The available alignment options are `Center`, `Start`, `End`.
 * **Offset** - You can adjust the marker position from the given coordinate using the `Offset` property. The default value of the `Offset` property is `Offset.zero`.
 
 N>
-* The default value of the [`IconType`]() is `MapIconType.circle`.
-* The default value of the [`IconStrokeThickness`]() is `1.0`.
-* The default value of the [`IconFill`]() is `Color.FromRgb(138, 69, 175)`.
-* The default value of the [`IconWidth`]() and [`IconHeight`]() is `8.0`.
+* The default value of the `IconType` is `MapIconType.circle`.
+* The default value of the `IconStrokeThickness` is `1.0`.
+* The default value of the `IconFill` is `Color.FromRgb(138, 69, 175)`.
+* The default value of the `IconWidth` and `IconHeight` is `8.0`.
 
 {% tabs %}
 
@@ -158,7 +158,7 @@ N>
 
 		<map:SfMaps>
             <map:SfMaps.Layer>
-                <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                <map:MapShapeLayer ShapesSource = "{local:ImageResource MyProject.world1.shp}"
                                    ShapeStroke="DarkGrey"
                                    ShowMarkerTooltip="True">
                     <map:MapShapeLayer.Markers>
@@ -217,7 +217,7 @@ N>
 	{
 		InitializeComponent();
         MapShapeLayer layer = new MapShapeLayer();
-        layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
+        layer.ShapesSource = MapSource.FromResource("MyProject.world1.shp");
 
         MapMarker mapMarker = new MapMarker();
         mapMarker.Latitude = 20.5595;
@@ -290,7 +290,7 @@ N>
 
 ## Adding custom markers
 
-You can show custom marker using the [`MarkerTemplate`]() property of the `MapShapeLayer` which returns the template to customize markers.
+You can show custom marker using the `MarkerTemplate` property of the `MapShapeLayer` which returns the template to customize markers.
 
 {% tabs %}
 
@@ -312,17 +312,17 @@ You can show custom marker using the [`MarkerTemplate`]() property of the `MapSh
 	
     <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+            <map:MapShapeLayer ShapesSource = "{local:ImageResource MyProject.world1.shp}"
                                ShapeStroke="DarkGrey"
                                MarkerTemplate="{StaticResource LowPopulationTemplate}"
                                ShowMarkerTooltip="True">
                 <map:MapShapeLayer.Markers>
                     <map:MapMarkerCollection>
-                        <map:MapMarker Latitude="20.5595" Longitude="22.9375"  />
-                        <map:MapMarker Latitude="21.7679" Longitude="78.8718"  />
-                        <map:MapMarker Latitude="133.7751" Longitude="25.2744"  />
-                        <map:MapMarker Latitude="60.2551" Longitude="84.5260" />
-                        <map:MapMarker Latitude="195.4915" Longitude="-50.7832"  />
+                        <map:MapMarker Latitude="20.5595" Longitude="22.9375" HorizontalAlignment="Center" VerticalAlignment="End"/>
+                        <map:MapMarker Latitude="21.7679" Longitude="78.8718" HorizontalAlignment="Center" VerticalAlignment="Start"  />
+                        <map:MapMarker Latitude="133.7751" Longitude="25.2744" HorizontalAlignment="Center" VerticalAlignment="Start" />
+                        <map:MapMarker Latitude="60.2551" Longitude="84.5260" HorizontalAlignment="Center" VerticalAlignment="Start" />
+                        <map:MapMarker Latitude="195.4915" Longitude="-50.7832" HorizontalAlignment="Start" VerticalAlignment="Center"  />
                     </map:MapMarkerCollection>
                 </map:MapShapeLayer.Markers>
             </map:MapShapeLayer>
@@ -338,7 +338,7 @@ You can show custom marker using the [`MarkerTemplate`]() property of the `MapSh
         InitializeComponent();
 		
         MapShapeLayer layer = new MapShapeLayer();
-        layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
+        layer.ShapesSource = MapSource.FromResource("MyProject.world1.shp");
 
         MapMarker mapMarker = new MapMarker();
         mapMarker.Latitude = 20.5595;
@@ -403,7 +403,7 @@ Data template can be used to customize the marker tooltip. The following code ex
 
 	<ContentPage.Resources>
         <ResourceDictionary>
-            <DataTemplate x:Key="LowPopulationTemplate">
+            <DataTemplate x:Key="MapMarkerTemplate">
                 <StackLayout HorizontalOptions="StartAndExpand"
 							 VerticalOptions="Center">
                     <Image Source="map.png"
@@ -416,9 +416,11 @@ Data template can be used to customize the marker tooltip. The following code ex
 	
     <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+            <map:MapShapeLayer ShapesSource = "{local:ImageResource MyProject.world1.shp}"
                                ShapeStroke="DarkGrey"
-                               MarkerTemplate="{StaticResource LowPopulationTemplate}"
+                               ShapeHoverFill="Transparent"   
+                               ShapeHoverStroke="Transparent"
+                               MarkerTemplate="{StaticResource MapMarkerTemplate}"
                                ShowMarkerTooltip="True">
 							   
                   <map:MapShapeLayer.Markers>
@@ -445,7 +447,7 @@ Data template can be used to customize the marker tooltip. The following code ex
                             </Grid.ColumnDefinitions>
                             <Image Source="flag.png" Grid.Column="0" Grid.Row="0" WidthRequest="20" HeightRequest="20" />
                             <Label Text="{Binding Name}" TextColor="White"  Grid.Column="1" Grid.Row="0" Padding="10"/>
-                            <Label Grid.Row="2" Grid.ColumnSpan="2"  Text="{Binding Population}" TextColor="White" />
+                            <Label Grid.Row="2" Grid.ColumnSpan="2"  Text="{Binding Area}" TextColor="White" />
                         </Grid>
                     </DataTemplate>
                 </map:MapShapeLayer.MarkerTooltipTemplate>
@@ -463,8 +465,9 @@ Data template can be used to customize the marker tooltip. The following code ex
         InitializeComponent();
         
         MapShapeLayer layer = new MapShapeLayer();
-        layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
-
+        layer.ShapesSource = MapSource.FromResource("MyProject.world1.shp");
+        layer.ShapeHoverFill = Colors.Transparent;
+        layer.ShapeHoverStroke = Colors.Transparent;
         CustomMarker customMarker = new CustomMarker();
         customMarker.Latitude = 20.5595;
         customMarker.Longitude = 22.9375;
@@ -624,7 +627,7 @@ Data template selector can be customized the appearance of each item with differ
 
 	<map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+            <map:MapShapeLayer ShapesSource = "{local:ImageResource MyProject.world1.shp}"
 							   ShapeStroke="DarkGrey"
 							   MarkerTemplate="{StaticResource MarkerTemplateSelector}">
 							   
@@ -663,4 +666,4 @@ public class MarkerTemplateSelector : DataTemplateSelector
 
 ![Maps marker appearance customization](images/markers/marker_selector.png)
 
-N> You can refer to our [MAUI Maps]() feature tour page for its groundbreaking feature representations. You can also explore our [MAUI Maps Markers example]() that shows how to configure a Maps in MAUI.
+N> You can refer to our `MAUI Maps` feature tour page for its groundbreaking feature representations. You can also explore our `MAUI Maps Markers example` that shows how to configure a Maps in MAUI.

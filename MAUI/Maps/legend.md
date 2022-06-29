@@ -13,7 +13,7 @@ You can provide clear information on the data plotted on the map using legend.
 
 ## Shape legend
 
-You can show shape legend by setting the [`Legend`]() property as `MapLegend(LegendSourceType.Shape)`. By default, the legend item's text is displayed based on the value of `ColorMappings.Text` property. The default value of the `Legend` property is `null` and hence the legend will not be shown by default.
+You can show shape legend by setting the `Legend` property as `MapLegend(LegendSourceType.Shape)`. By default, the legend item's text is displayed based on the value of `ColorMappings.Text` property. The default value of the `Legend` property is `null` and hence the legend will not be shown by default.
 
 {% tabs %}
 
@@ -21,7 +21,7 @@ You can show shape legend by setting the [`Legend`]() property as `MapLegend(Leg
 
      <map:SfMaps>
             <map:SfMaps.Layer>
-                <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                <map:MapShapeLayer ShapesSource="{local:ImageResource MyProject.world1.shp}"
 								   DataSource="{Binding Data}"
 								   PrimaryValuePath="State" 
 								   ShapeDataField="name" 
@@ -56,7 +56,7 @@ public MainPage()
 
     SfMaps maps = new SfMaps();
     MapShapeLayer layer = new MapShapeLayer();
-    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
+    layer.ShapesSource = MapSource.FromResource("MyProject.world1.shp");
     layer.DataSource = viewModel.Data;
     layer.PrimaryValuePath = "State";
     layer.ShapeDataField = "name";
@@ -114,7 +114,7 @@ public class Model
 
 ## Bubble legend
 
-You can show bubble legend by setting the [`MapShapeLayer.Legend`]() property as `MapLegend(SourceType.Bubble)`. By default, the legend item's text is displayed based on the value of [`ColorMapping.Text`]() property.
+You can show bubble legend by setting the `MapShapeLayer.Legend` property as `MapLegend(SourceType.Bubble)`. By default, the legend item's text is displayed based on the value of `ColorMapping.Text` property.
 
 {% tabs %}
 
@@ -122,7 +122,7 @@ You can show bubble legend by setting the [`MapShapeLayer.Legend`]() property as
 
      <map:SfMaps>
             <map:SfMaps.Layer>
-                <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json" 
+                <map:MapShapeLayer ShapesSource="{local:ImageResource MyProject.world1.shp}" 
 								   DataSource="{Binding Data}"  
 								   ShowBubbles="True" 
 								   PrimaryValuePath="State" 
@@ -165,7 +165,7 @@ public MainPage()
     this.BindingContext = viewModel;
 
     MapShapeLayer layer = new MapShapeLayer();
-    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
+    layer.ShapesSource = MapSource.FromResource("MyProject.world1.shp");
     layer.DataSource = viewModel.Data;
     layer.PrimaryValuePath = "State";
     layer.ShapeDataField = "name";
@@ -234,7 +234,7 @@ public class Model
 
 ## Legend text customization
 
-You can customize the legend item's text style using the [`MapLegend.TextStyle`]() property.
+You can customize the legend item's text style using the `MapLegend.TextStyle` property.
 
 {% tabs %}
 
@@ -242,7 +242,7 @@ You can customize the legend item's text style using the [`MapLegend.TextStyle`]
 
      <map:SfMaps>
             <map:SfMaps.Layer>
-                <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json" 
+                <map:MapShapeLayer ShapesSource="{local:ImageResource MyProject.world1.shp}" 
    								   DataSource="{Binding Data}"
    								   PrimaryValuePath="State"
    								   ShapeDataField="name" 
@@ -284,7 +284,7 @@ You can customize the legend item's text style using the [`MapLegend.TextStyle`]
         this.BindingContext = viewModel;
 
         MapShapeLayer layer = new MapShapeLayer();
-        layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
+        layer.ShapesSource = MapSource.FromResource("MyProject.world1.shp");
         layer.DataSource = viewModel.Data;
         layer.PrimaryValuePath = "State";
         layer.ShapeDataField = "name";
@@ -354,7 +354,7 @@ You can customize the legend item's text style using the [`MapLegend.TextStyle`]
 
 ## Position
 
-You can position the legend items in different directions using the [`MapLegend.Placement`]() property. The default value of the [`Placement`]() property is `Placement.Top`. The possible values are `Left`, `Right`, `Top`, and `Bottom`.
+You can position the legend items in different directions using the `MapLegend.Placement` property. The default value of the `Placement` property is `Placement.Top`. The possible values are `Left`, `Right`, `Top`, and `Bottom`.
 
 {% tabs %}
 
@@ -362,7 +362,7 @@ You can position the legend items in different directions using the [`MapLegend.
 
      <map:SfMaps>
             <map:SfMaps.Layer>
-                <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json" 
+                <map:MapShapeLayer ShapesSource="{local:ImageResource MyProject.world1.shp}" 
    								   DataSource="{Binding Data}"
    								   PrimaryValuePath="State" 
    								   ShapeDataField="name" 
@@ -397,7 +397,7 @@ public MainPage()
     this.BindingContext = viewModel;
 
     MapShapeLayer layer = new MapShapeLayer();
-    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
+    layer.ShapesSource = MapSource.FromResource("MyProject.world1.shp");
     layer.DataSource = viewModel.Data;
     layer.PrimaryValuePath = "State";
     layer.ShapeDataField = "name";
@@ -465,4 +465,4 @@ public class Model
 
 ![Legend position](images/legend/legend-position.png)
 
-N> You can refer to our [MAUI Maps]() feature tour page for its groundbreaking feature representations. You can also explore our [MAUI Maps Legend example]() that shows how to configure a Maps in MAUI.
+N> You can refer to our `MAUI Maps` feature tour page for its groundbreaking feature representations. You can also explore our `MAUI Maps Legend example` that shows how to configure a Maps in MAUI.

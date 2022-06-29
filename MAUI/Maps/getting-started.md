@@ -96,25 +96,28 @@ this.Content = map;
 
 {% endtabs %}
 
-## Set GeoJSON data for shape layer from various source
+## Set GeoJSON data or shape files for shape layer from various source
 
-The [`Layer`]() in [`SfMaps`]() holds [`MapShapeLayer`](). The actual geographical rendering is done in the each [`MapShapeLayer`](). The [`ShapesSource`]() property of the [`MapShapeLayer`]() is of type [`MapShapeSource`](). The [`ShapesSource`]() can be set as the .json source from file, from network and from stream as bytes. Use the respective constructor depends on the type of the source.
+The `Layer` in `SfMaps` holds `MapShapeLayer`. The actual geographical rendering is done in the each `MapShapeLayer`. The `ShapesSource` property of the `MapShapeLayer` is of type `MapShapeSource`. The `ShapesSource` can be set as the .json source from file, from network and from stream as bytes. Use the respective constructor depends on the type of the source.
 
-The [`ShapeDataField`]() property of the [`MapShapeLayer`]() is used to refer the unique field name in the .json source to identify each shapes. In [`Mapping the data source`]() section of this document, this [`ShapeDataField`]() will be used to map with respective value  in [`PrimaryValuePath`]() from the data source.
-
-N> It supports reading and loading the shape files in .shp file format.
+The `ShapeDataField` property of the `MapShapeLayer` is used to refer the unique field name in the .json source to identify each shapes. In `Mapping the data source` section of this document, this `ShapeDataField` will be used to map with respective value  in `PrimaryValuePath` from the data source.
 
 I> The Mercator projection is the default projection in the maps.
 
-### Add a file
+The `ShapesSource` property is used to load an shapes from different sources:
 
-* Add necessary shapes files in a folder, and name it as `ShapeFiles`. Add this `ShapeFiles` folder into ProjectFileName.
+`FromFile ` returns a MapSource that reads an shape source from a local file.
+`FromUri ` returns an MapSource that downloads and reads an Geo json data from a specified URI.
+`FromResource ` returns a MapSource that reads an shape file or json file embedded in an assembly.
+`FromStream ` returns a MapSource that reads an shape source from a stream that supplies source data.
+
+### Loading a file
+
+* Embedded sources are loaded based on their resource ID, which is compromised of the name of the project and its location in the project. 
+* You can load both .json and .shp file.
+* For example, placing `australia.json` in the root folder of a project named `MyProject` will result in a resource ID of `MyProject.australia.json.` Similarly, placing `world1.shp` in the Assets folder of a project named MyProject will result in a resource ID of `MyProject.Assets.world1.shp`
 * Right-click the added shape file, and navigate to properties.
 * Choose the `EmbeddedResource` option under BuildAction of respective shape file.
-
-### From file
-
-Load .json data from file.
 
 N> You can get the [`australia.json`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/australia-json-910278184.zip) file here.
 
@@ -127,7 +130,7 @@ public MapSourcePage()
     InitializeComponent();
     SfMaps map = new SfMaps();
     MapShapeLayer layer = new MapShapeLayer();
-    layer.ShapesSource = MapSource.FromResource("ProjectName.ShapeFiles.australia.json");
+    layer.ShapesSource = MapSource.FromResource("MyProject.australia.json");
     map.Layer = layer;
     this.Content = map;
 }
@@ -136,9 +139,64 @@ public MapSourcePage()
 
 {% endtabs %}
 
-### From network
+### Loading a file in xaml
 
-Load .json data from the network.
+Embedded sources can be loaded in XAML with a custom XAML markup extension:
+{% tabs %}
+
+{% highlight c# %}
+
+using System.Reflection;
+using System.Xml;
+
+namespace MapDemos
+{
+    [ContentProperty("Source")]
+    public class ImageResourceExtension : IMarkupExtension<ImageSource>
+    {
+        public string Source { set; get; }
+
+        public MapSource ProvideValue(IServiceProvider serviceProvider)
+        {
+            if (String.IsNullOrEmpty(Source))
+            {
+                IXmlLineInfoProvider lineInfoProvider = serviceProvider.GetService(typeof(IXmlLineInfoProvider)) as IXmlLineInfoProvider;
+                IXmlLineInfo lineInfo = (lineInfoProvider != null) ? lineInfoProvider.XmlLineInfo : new XmlLineInfo();
+                throw new XamlParseException("ImageResourceExtension requires Source property to be set", lineInfo);
+            }
+
+            return MapSource.FromResource(Source);
+        }
+
+        object IMarkupExtension.ProvideValue(IServiceProvider serviceProvider)
+        {
+            return (this as IMarkupExtension<ImageSource>).ProvideValue(serviceProvider);
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% highlight xaml %}
+
+<ContentPage ...
+             xmlns:local="clr-namespace:MapDemos">
+    <StackLayout>
+        <map:SfMaps>
+                <map:SfMaps.Layer>
+                    <map:MapShapeLayer 
+                        ShapesSource="{local:ImageResource MyProject.world1.shp}">
+                    </map:MapShapeLayer>
+                </map:SfMaps.Layer>
+        </map:SfMaps>
+    </StackLayout>
+</ContentPage>
+
+{% endtabs %}
+
+### Loading from URI
+
+Load .json data from the uri.
 
 {% tabs %}
 
@@ -149,7 +207,7 @@ public MapSourcePage()
     InitializeComponent();
     SfMaps map = new SfMaps();
     MapShapeLayer layer = new MapShapeLayer();
-    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/australia.json"));
+    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
     map.Layer = layer;
     this.Content = map;
 }
@@ -158,9 +216,9 @@ public MapSourcePage()
 
 {% endtabs %}
 
-### From Stream
+### Loading from stream
 
-Load .json data as bytes from stream.
+Load .json data or .shp file as bytes from stream.
 
 {% tabs %}
 
@@ -172,7 +230,7 @@ public MapSourcePage()
     SfMaps map = new SfMaps();
     MapShapeLayer layer = new MapShapeLayer();
     Assembly assembly = Application.Current?.GetType().GetTypeInfo().Assembly;
-    var jsonStream = assembly?.GetManifestResourceStream("ProjectFileName.ShapeFiles.australia.json");
+    var jsonStream = assembly?.GetManifestResourceStream("MyProject.Assets.australia.json");
     layer.ShapesSource = MapSource.FromStream(jsonStream);
     map.Layer = layer;
     this.Content = map;
@@ -186,9 +244,9 @@ public MapSourcePage()
 
 ## Mapping the data source for shape layer
 
-The [`DataSource`]() property accepts the collection values as input. The [`PrimaryValuePath`]() property refers the data ID in `DataSource`.
+The `DataSource` property accepts the collection values as input. The `PrimaryValuePath` property refers the data ID in `DataSource`.
 
-The [`ShapeDataField`]() property is similar to the `PrimaryValuePath` property. It refers to the column name in the data property of shape layers to identify the shape. When the values of the `PrimaryValuePath` property in the `DataSource` property and the values of `ShapeDataField` in the data property match, the associated object from the dataSource will be bound to the corresponding shape.
+The `ShapeDataField` property is similar to the `PrimaryValuePath` property. It refers to the column name in the data property of shape layers to identify the shape. When the values of the `PrimaryValuePath` property in the `DataSource` property and the values of `ShapeDataField` in the data property match, the associated object from the dataSource will be bound to the corresponding shape.
 
 {% tabs %}
 
@@ -206,7 +264,7 @@ public MapSourcePage()
     Data.Add(new Model("Tasmania", "Tasmania"));
     SfMaps maps = new SfMaps();
     MapShapeLayer layer = new MapShapeLayer();
-    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/australia.json"));
+    layer.ShapesSource = MapSource.FromResource("MyProject.australia.json");
     layer.PrimaryValuePath = "State";
     layer.DataSource = Data;
     layer.ShapeDataField = "STATE_NAME";
@@ -231,20 +289,20 @@ public class Model
 {% endtabs %}
 
 N>
-* Refer the [`PrimaryValuePath`](), for mapping the data of the data source collection with the respective [`ShapeDataField`]() in .json source.
-* Refer the [`BubbleSettings`](), for customizing the bubble.
-* Refer the [`DataLabelSettings`](), for customizing the data label.
-* Refer the [`ColorMappings`](), for customizing the shape colors.
+* Refer the `PrimaryValuePath`, for mapping the data of the data source collection with the respective `ShapeDataField` in .json source.
+* Refer the `BubbleSettings`, for customizing the bubble.
+* Refer the `DataLabelSettings`, for customizing the data label.
+* Refer the `ColorMappings`, for customizing the shape colors.
 
 ## Add shape layer maps elements
 
 Add the basic maps elements such as data labels, legend, and tooltip as shown in the below code snippet.
 
-* **Data labels** - You can show data labels using the [`ShowDataLabels`]() property and also, customize it using the [`DataLabelSettings`]() property.
+* **Data labels** - You can show data labels using the `ShowDataLabels` property and also, customize it using the `DataLabelSettings` property.
 
-* **Legend** - You can enable legend using the [`Legend`]() property. The text of the legend is displayed based on the [`ColorMapping.Text`]() property. It is possible to customize the legend text using the [`TextStyle`]() property.
+* **Legend** - You can enable legend using the `Legend` property. The text of the legend is displayed based on the `ColorMapping.Text` property. It is possible to customize the legend text using the `TextStyle` property.
 
-* **Tooltip** - You can enable tooltip for the shapes using the [`ShowShapeTooltip`]() property. It will be displayed when you interacts with the shapes i.e., while tapping in touch devices and hover in the mouse enabled devices.
+* **Tooltip** - You can enable tooltip for the shapes using the `ShowShapeTooltip` property. It will be displayed when you interacts with the shapes i.e., while tapping in touch devices and hover in the mouse enabled devices.
 
 {% tabs %}
 
@@ -256,7 +314,7 @@ public MapSourcePage()
 	ViewModel viewModel = new ViewModel();
     SfMaps maps = new SfMaps();
     MapShapeLayer layer = new MapShapeLayer();
-    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/australia.json"));
+    layer.ShapesSource = MapSource.FromResource("MyProject.australia.json");
     layer.DataSource = viewModel.Data;
     layer.PrimaryValuePath = "State";
     layer.ShapeDataField = "STATE_NAME";
@@ -327,4 +385,4 @@ public class ViewModel
 
 ![Maps getting started](images/getting-started/maps_getting_started.png)
 
-N> You can refer to our [MAUI Maps]() feature tour page for its groundbreaking feature representations. You can also explore our [MAUI Maps example]() that shows how to configure a Maps in MAUI.
+N> You can refer to our `MAUI Maps` feature tour page for its groundbreaking feature representations. You can also explore our `MAUI Maps example`that shows how to configure a Maps in MAUI.

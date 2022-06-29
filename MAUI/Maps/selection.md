@@ -13,9 +13,9 @@ You can select a shape in order to highlight that area on a map. You can use the
 
 ## Enable shape selection
 
-You can enable shape selection on a map using the [`EnableSelection`]() property. Selection allows you select only one shape at a time. You can select a shape by tapping it. By default, the selection is disabled.
+You can enable shape selection on a map using the `EnableSelection` property. Selection allows you select only one shape at a time. You can select a shape by tapping it. By default, the selection is disabled.
 
-The [`ShapeSelected`]() event is used to perform any action on shape selected shape when the user is selecting a shape by tapping or clicking or by programmatically.
+The `ShapeSelected` event is used to perform any action on shape selected shape when the user is selecting a shape by tapping or clicking or by programmatically.
 
 {% tabs %}
 
@@ -24,7 +24,7 @@ The [`ShapeSelected`]() event is used to perform any action on shape selected sh
      <map:SfMaps>
         <map:SfMaps.Layer>
             <map:MapShapeLayer x:Name="layer"
-							   ShapesSource="https://cdn.syncfusion.com/maps/map-data/australia.json" 
+							   ShapesSource = "{local:ImageResource MyProject.australia.json}" 
 							   SelectedShapeFill="Aqua"
 							   ShapeSelected="layer_ShapeSelected" 
 							   EnableSelection="True">
@@ -52,9 +52,9 @@ private void layer_ShapeSelected(object sender, ShapeSelectedEventArgs e)
 
 You can customize the below appearance of the selected shape.
 
-* **SelectedShapeFill** - Change the background color of the selected shape using the [`SelectedShapeFill`]() property. If SelectedShapeFill is null then the saturated color of the shape will be applied. If SelectedShapeFill is Transparent, then the UI changes will not occur.
-* **SelectedShapeStrokeThickness** - Change the stroke width of the selected shape using the [`SelectedShapeStrokeThickness`]() property.
-* **SelectedShapeStroke** - Change the stroke color of the selected shape using the [`SelectedShapeStroke`]() property.
+* **SelectedShapeFill** - Change the background color of the selected shape using the `SelectedShapeFill` property. If SelectedShapeFill is null then the saturated color of the shape will be applied. If SelectedShapeFill is Transparent, then the UI changes will not occur.
+* **SelectedShapeStrokeThickness** - Change the stroke width of the selected shape using the `SelectedShapeStrokeThickness` property.
+* **SelectedShapeStroke** - Change the stroke color of the selected shape using the `SelectedShapeStroke` property.
 
 {% tabs %}
 
@@ -62,7 +62,7 @@ You can customize the below appearance of the selected shape.
 
      <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/australia.json" 
+            <map:MapShapeLayer ShapesSource = "{local:ImageResource MyProject.australia.json}" 
 							   DataSource="{Binding Data}" 
 							   PrimaryValuePath="Country"
 							   ShapeDataField="STATE_NAME" 
@@ -88,7 +88,7 @@ You can customize the below appearance of the selected shape.
         this.BindingContext = viewModel;
 
         MapShapeLayer layer = new MapShapeLayer();
-        layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/australia.json"));
+        layer.ShapesSource = MapSource.FromResource("MyProject.australia.json");
         layer.DataSource = viewModel.Data;
         layer.PrimaryValuePath = "Country";
         layer.ShapeDataField = "STATE_NAME";
@@ -138,4 +138,4 @@ You can customize the below appearance of the selected shape.
 
 ![Selection customization](images/selection/selection-customization.png)
 
-N> You can refer to our [MAUI Maps]() feature tour page for its groundbreaking feature representations. You can also explore our [MAUI Maps Selection example]() that shows how to configure a Maps in MAUI.
+N> You can refer to our `MAUI Maps` feature tour page for its groundbreaking feature representations. You can also explore our `MAUI Maps Selection example` that shows how to configure a Maps in MAUI.
