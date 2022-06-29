@@ -95,13 +95,11 @@ Circular chart provides support to customize the appearance of the tooltip by us
         </DataTemplate>
     </chart:SfCircularChart.Resources>
 
-    <chart:SfCircularChart.Series>
-        <chart:PieSeries EnableTooltip="True"
-                ItemsSource="{Binding Data}" 
-                XBindingPath="Product" 
-                YBindingPath="SalesRate"
-                TooltipTemplate="{StaticResource tooltipTemplate}"/>
-    </chart:SfCircularChart.Series>
+    <chart:PieSeries EnableTooltip="True"
+            ItemsSource="{Binding Data}" 
+            XBindingPath="Product" 
+            YBindingPath="SalesRate"
+            TooltipTemplate="{StaticResource tooltipTemplate}"/>
     . . .
 </chart:SfCircularChart>
 

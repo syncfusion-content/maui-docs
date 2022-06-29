@@ -163,6 +163,8 @@ chart.BindingContext = viewModel;
 
 Adding [PieSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PieSeries.html) to the charts [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html#Syncfusion_Maui_Charts_SfCircularChart_Series) collection and binding `Data` to the series [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_ItemsSource) property from its BindingContext to create our own Product Sales Pie chart.
 
+N> The circular chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html#Syncfusion_Maui_Charts_SfCircularChart_Series) as its default content.
+
 N> To plot the series, the [XBindingPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_XBindingPath) and [YBindingPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CircularSeries.html#Syncfusion_Maui_Charts_CircularSeries_YBindingPath) properties must be configured so that the chart may get values from the respective properties in the data model.
 
 {% tabs %}   
@@ -171,11 +173,9 @@ N> To plot the series, the [XBindingPath](https://help.syncfusion.com/cr/maui/Sy
 
 <chart:SfCircularChart>
     . . .
-    <chart:SfCircularChart.Series>
-        <chart:PieSeries ItemsSource="{Binding Data}" 
-                        XBindingPath="Product" 
-                        YBindingPath="SalesRate"/>
-    </chart:SfCircularChart.Series>
+    <chart:PieSeries ItemsSource="{Binding Data}" 
+                    XBindingPath="Product" 
+                    YBindingPath="SalesRate"/>
 </chart:SfCircularChart>
 
 {% endhighlight %}
@@ -321,10 +321,7 @@ The following code example gives you the complete code of above configurations.
     <chart:SfCircularChart.Legend>
         <chart:ChartLegend/>
     </chart:SfCircularChart.Legend>
-    <chart:SfCircularChart.Series>
-        <chart:PieSeries ItemsSource="{Binding Data}" ShowDataLabels="True" XBindingPath="Product" EnableTooltip="True" YBindingPath="SalesRate">
-        </chart:PieSeries>
-    </chart:SfCircularChart.Series>
+    <chart:PieSeries ItemsSource="{Binding Data}" ShowDataLabels="True" XBindingPath="Product" EnableTooltip="True" YBindingPath="SalesRate"/>
 </chart:SfCircularChart>
  
 {% endhighlight %}
