@@ -9,10 +9,10 @@ documentation: ug
 
 # Migrate from Xamarin.Forms SfRangeSlider to .NET MAUI SfRangeSlider 
 
-To migrate from the [Xamarin Range Slider](https://www.syncfusion.com/xamarin-ui-controls/xamarin-range-slider) control to MAUI, you can use the following two controls.
+To migrate from the [Xamarin Range Slider](https://www.syncfusion.com/xamarin-ui-controls/xamarin-range-slider) control to MAUI, use the following two controls.
 
-1. SfDateTimeRangeSlider – For date-time scale
-2. SfRangeSlider – For numeric scale
+1. SfDateTimeRangeSlider – For date-time scale.
+2. SfRangeSlider – For numeric scale.
 
 One more thing is, in .NET MAUI SfRangeSlider, you do not have an API name [ShowRange](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_AllowDragRange) in MAUI. Both the MAUI SfDateTimeRangeSlider and SfRangeSlider controls will show two thumbs by default. If you wish to use the single thumb, check the [Migration from Xamarin.Forms SfRangeSlider to .NET MAUI SfSlider](https://help.syncfusion.com/maui/slider/migration).
 
@@ -39,19 +39,19 @@ One more thing is, in .NET MAUI SfRangeSlider, you do not have an API name [Show
 <tr>
 <td>{{'[TrackColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_TrackColor)'| markdownify }}</td>
 <td>{{'[SliderTrackStyle.InactiveFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTrackStyle.html#Syncfusion_Maui_Sliders_SliderTrackStyle_InactiveFill)'| markdownify }}</td>
-<td>Gets or sets the brush for the inactive track.</td></tr>
+<td>Gets or sets the brush for the inactive track in the SfSlider.</td></tr>
 <tr>
 <td>{{'[TrackSelectionColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_TrackSelectionColor)'| markdownify }}</td>
 <td>{{'[SliderTrackStyle.ActiveFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTrackStyle.html#Syncfusion_Maui_Sliders_SliderTrackStyle_ActiveFill)'| markdownify }}</td>
-<td>Gets or sets the brush for the active track.</td></tr>
+<td>Gets or sets the brush for the active track in the SfSlider.</td></tr>
 <tr>
 <td>{{'[TrackThickness](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_TrackThickness)'| markdownify }}</td>
 <td>{{'[SliderTrackStyle.InactiveSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTrackStyle.html#Syncfusion_Maui_Sliders_SliderTrackStyle_InactiveSize)'| markdownify }}</td>
-<td>Gets or sets the size for the inactive track.</td></tr>
+<td>Gets or sets the size for the inactive track in the SfSlider.</td></tr>
 <tr>
 <td>{{'[TrackSelectionThickness](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_TrackSelectionThickness)'| markdownify }}</td>
 <td>{{'[SliderTrackStyle.ActiveSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTrackStyle.html#Syncfusion_Maui_Sliders_SliderTrackStyle_ActiveSize)'| markdownify }}</td>
-<td>Gets or sets the size for the active track.</td></tr>
+<td>Gets or sets the size for the active track in the SfSlider.</td></tr>
 </table> 
 
 ### Thumb
@@ -64,19 +64,19 @@ One more thing is, in .NET MAUI SfRangeSlider, you do not have an API name [Show
 <tr>
 <td>{{'[ThumbSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_ThumbSize)'| markdownify }}</td>
 <td>{{'[SliderThumbStyle.Radius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html#Syncfusion_Maui_Sliders_SliderThumbStyle_Radius)'| markdownify }}</td>
-<td>Gets or sets the radius for the thumb.</td></tr>
+<td>Gets or sets the radius for the thumb in the SfSlider.</td></tr>
 <tr>
 <td>{{'[KnobColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_KnobColor)'| markdownify }}</td>
 <td>{{'[SliderThumbStyle.Fill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html#Syncfusion_Maui_Sliders_SliderThumbStyle_Fill)'| markdownify }}</td>
-<td>Gets or sets the color for the thumb.</td></tr>
+<td>Gets or sets the color for the thumb in the SfSlider.</td></tr>
 <tr>
 <td>{{'[ThumbBorderColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_ThumbBorderColor)'| markdownify }}</td>
 <td>{{'[SliderThumbStyle.Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html#Syncfusion_Maui_Sliders_SliderThumbStyle_Stroke)'| markdownify }}</td>
-<td>Gets or sets the stroke color for the thumb.</td></tr>
+<td>Gets or sets the stroke color for the thumb in the SfSlider.</td></tr>
 <tr>
 <td>{{'[ThumbBorderThickness](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_ThumbBorderThickness)'| markdownify }}</td>
 <td>{{'[SliderThumbStyle.StrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html#Syncfusion_Maui_Sliders_SliderThumbStyle_StrokeThickness)'| markdownify }}</td>
-<td>Gets or sets the stroke value for the thumb.</td></tr>
+<td>Gets or sets the stroke value for the thumb in the SfSlider.</td></tr>
 </table> 
 
 ### Ticks
@@ -91,10 +91,10 @@ One more thing is, in .NET MAUI SfRangeSlider, you do not have an API name [Show
 			{{'[TickColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_TickColor)'| markdownify }}<br/>
 		</td>
 <td>{{'[SliderTickStyle.InactiveFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_InactiveFill)'| markdownify }}</td>
-<td>Gets or sets the brush for the inactive ticks.</td></tr>
+<td>Gets or sets the brush for the inactive ticks in the SfSlider.</td></tr>
 <tr>
 <td>{{'[SliderTickStyle.ActiveFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_ActiveFill)'| markdownify }}</td>
-<td>Gets or sets the brush for the active ticks.</td></tr>
+<td>Gets or sets the brush for the active ticks in the SfSlider.</td></tr>
 </table> 
 
 ### Labels
@@ -113,37 +113,37 @@ One more thing is, in .NET MAUI SfRangeSlider, you do not have an API name [Show
 			{{'[LabelColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_LabelColor)'| markdownify }}<br/>
 		</td>
 <td>{{'[SliderLabelStyle.InactiveTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_InactiveTextColor)'| markdownify }}</td>
-<td>Gets or sets the color for the inactive labels.</td></tr>
+<td>Gets or sets the color for the inactive labels in the SfSlider.</td></tr>
 <tr>
 <td>{{'[SliderLabelStyle.ActiveTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_ActiveTextColor)'| markdownify }}</td>
-<td>Gets or sets the color for the active labels.</td></tr>
+<td>Gets or sets the color for the active labels in the SfSlider.</td></tr>
 <tr>
 <td rowspan="2" valign="center">
 			{{'[FontFamily](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_FontFamily)'| markdownify }}<br/>
 		</td>
 <td>{{'[SliderLabelStyle.InactiveFontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_InactiveFontFamily)'| markdownify }}</td>
-<td>Gets or sets the font family for the inactive labels.</td></tr>
+<td>Gets or sets the font family for the inactive labels in the SfSlider.</td></tr>
 <tr>
 <td>{{'[SliderLabelStyle.ActiveFontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_ActiveFontFamily)'| markdownify }}</td>
-<td>Gets or sets the font family for the active labels.</td></tr>
+<td>Gets or sets the font family for the active labels in the SfSlider.</td></tr>
 <tr>
 <td rowspan="2" valign="center">
 			{{'[FontAttribute](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_FontAttribute)'| markdownify }}<br/>
 		</td>
 <td>{{'[SliderLabelStyle.InactiveFontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_InactiveFontAttributes)'| markdownify }}</td>
-<td>Gets or sets the font attributes for the inactive labels.</td></tr>
+<td>Gets or sets the font attributes for the inactive labels in the SfSlider.</td></tr>
 <tr>
 <td>{{'[SliderLabelStyle.ActiveFontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_ActiveFontAttributes)'| markdownify }}</td>
-<td>Gets or sets the font attributes for the active labels.</td></tr>
+<td>Gets or sets the font attributes for the active labels in the SfSlider.</td></tr>
 <tr>
 <td rowspan="2" valign="center">
 			{{'[FontSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_FontSize)'| markdownify }}<br/>
 		</td>
 <td>{{'[SliderLabelStyle.InactiveFontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_InactiveFontSize)'| markdownify }}</td>
-<td>Gets or sets the size for the inactive fonts.</td></tr>
+<td>Gets or sets the size for the inactive fonts in the SfSlider.</td></tr>
 <tr>
 <td>{{'[SliderLabelStyle.ActiveFontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_ActiveFontSize)'| markdownify }}</td>
-<td>Gets or sets the size for the active fonts.</td></tr>
+<td>Gets or sets the size for the active fonts in the SfSlider.</td></tr>
 <tr>
 <td>{{'[LabelFormat](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_LabelFormat)'| markdownify }}</td>
 <td>{{'[NumberFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_NumberFormat)'| markdownify }}</td>
@@ -160,15 +160,15 @@ One more thing is, in .NET MAUI SfRangeSlider, you do not have an API name [Show
 <tr>
 <td>{{'[TooltipBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_ToolTipBackgroundColor)'| markdownify }}</td>
 <td>{{'[SliderTooltip.Fill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html#Syncfusion_Maui_Sliders_SliderTooltip_Fill)'| markdownify }}</td>
-<td>Gets or sets the brush for the tooltip.</td></tr>
+<td>Gets or sets the brush for the tooltip in the SfSlider.</td></tr>
 <tr>
 <td>{{'[TooltipTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_ToolTipTextColor)'| markdownify }}</td>
 <td>{{'[SliderTooltip.TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html#Syncfusion_Maui_Sliders_SliderTooltip_TextColor)'| markdownify }}</td>
-<td>Gets or sets the color for the tooltip text.</td></tr>
+<td>Gets or sets the color for the tooltip text in the SfSlider.</td></tr>
 <tr>
 <td>{{'[TooltipPrecision](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_ToolTipPrecision)'| markdownify }}</td>
 <td>{{'[SliderTooltip.NumberFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html#Syncfusion_Maui_Sliders_SliderTooltip_NumberFormat)'| markdownify }}</td>
-<td>Gets or sets the value to format the label text.</td></tr>
+<td>Gets or sets the value to format the label text in the SfSlider.</td></tr>
 </table> 
 
 ## Events
