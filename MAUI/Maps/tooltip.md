@@ -441,37 +441,33 @@ Data template selector can be customized the appearance of each item with differ
 
 	<ContentPage.Resources>
         <ResourceDictionary>
-            <DataTemplate x:Key="HighPopulationTemplate">
+            <DataTemplate x:Key="MarkerTooltipTemplate1">
                 <StackLayout IsClippedToBounds="false"
                          HorizontalOptions="StartAndExpand"
-                         VerticalOptions="Center"
-                         HeightRequest="30">
+                         VerticalOptions="Center">
                     <Label Text="{Binding Longitude}"
                            Scale="1"
-                           TextColor="Yellow"
-                           BackgroundColor="Red"
+                           TextColor="Blue"
                            HorizontalOptions="StartAndExpand"
                        VerticalOptions="Center" />
                 </StackLayout>
             </DataTemplate>
 			
-            <DataTemplate x:Key="LowPopulationTemplate">
+            <DataTemplate x:Key="MarkerTooltipTemplate2">
                 <StackLayout IsClippedToBounds="false"
                          HorizontalOptions="StartAndExpand"
-                         VerticalOptions="Center"
-                         HeightRequest="30">
+                         VerticalOptions="Center">
                      <Label Text="{Binding Longitude}"
                            Scale="1"
                            TextColor="White"
-                           BackgroundColor="Red"
                            HorizontalOptions="StartAndExpand"
                        VerticalOptions="Center" />
                 </StackLayout>
             </DataTemplate>
 			
 			<local:MarkerTemplateSelector x:Key="MarkerTemplateSelector"
-										  Template1="{StaticResource LowPopulationTemplate}"
-										  Template2="{StaticResource HighPopulationTemplate}" />
+										  Template1="{StaticResource MarkerTooltipTemplate1}"
+										  Template2="{StaticResource MarkerTooltipTemplate2}" />
         </ResourceDictionary>
     </ContentPage.Resources>
 	
@@ -480,7 +476,10 @@ Data template selector can be customized the appearance of each item with differ
               <map:MapShapeLayer x:Name="layer"
 								 ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
 								 ShapeStroke="DarkGrey"
-								 MarkerTooltipTemplate={StaticResource MarkerTemplateSelector}>
+                                 ShowMarkerTooltip="True"
+                                 ShapeHoverFill="Transparent"
+                                 ShapeHoverStroke="Transparent"
+								 MarkerTooltipTemplate="{StaticResource MarkerTemplateSelector}">
 									
                  <map:MapShapeLayer.Markers>
 					<map:MapMarkerCollection>

@@ -587,7 +587,7 @@ Data template selector can be customized the appearance of each item with differ
 
 	<ContentPage.Resources>
         <ResourceDictionary>
-            <DataTemplate x:Key="HighPopulationTemplate">
+            <DataTemplate x:Key="MarkerTemplate1">
                 <StackLayout IsClippedToBounds="false"
                          HorizontalOptions="StartAndExpand"
                          VerticalOptions="Center"
@@ -601,7 +601,7 @@ Data template selector can be customized the appearance of each item with differ
                 </StackLayout>
             </DataTemplate>
 			
-            <DataTemplate x:Key="LowPopulationTemplate">
+            <DataTemplate x:Key="MarkerTemplate2">
                 <StackLayout IsClippedToBounds="false"
                          HorizontalOptions="StartAndExpand"
                          VerticalOptions="Center"
@@ -616,8 +616,8 @@ Data template selector can be customized the appearance of each item with differ
             </DataTemplate>
 			
 			<local:MarkerTemplateSelector x:Key="MarkerTemplateSelector"
-										  Template1="{StaticResource LowPopulationTemplate}"
-										  Template2="{StaticResource HighPopulationTemplate}" />
+										  Template1="{StaticResource MarkerTemplate1}"
+										  Template2="{StaticResource MarkerTemplate2}" />
 			
         </ResourceDictionary>
     </ContentPage.Resources>
@@ -626,7 +626,7 @@ Data template selector can be customized the appearance of each item with differ
         <map:SfMaps.Layer>
             <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
 							   ShapeStroke="DarkGrey"
-							   MarkerTemplate={StaticResource MarkerTemplateSelector}>
+							   MarkerTemplate="{StaticResource MarkerTemplateSelector}">
 							   
             <map:MapShapeLayer.Markers>
                 <map:MapMarkerCollection>
