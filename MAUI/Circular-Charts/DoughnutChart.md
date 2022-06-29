@@ -11,16 +11,16 @@ documentation: ug
 
 [DoughnutSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DoughnutSeries.html) is similar to [PieSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PieSeries.html). It is used to show the relationship between parts of data and whole data. To render a [DoughnutSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DoughnutSeries.html) in circular chart, create an instance of the [DoughnutSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DoughnutSeries.html) and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html#Syncfusion_Maui_Charts_SfCircularChart_Series) collection property of [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html).
 
+N> The circular chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html#Syncfusion_Maui_Charts_SfCircularChart_Series) as its default content.
+
 {% tabs %}
 
 {% highlight xaml %}
 
 <chart:SfCircularChart>
-    <chart:SfCircularChart.Series>
-        <chart:DoughnutSeries ItemsSource="{Binding Data}" 
-                            XBindingPath="Product" 
-                            YBindingPath="SalesRate" />
-    </chart:SfCircularChart.Series>
+    <chart:DoughnutSeries ItemsSource="{Binding Data}" 
+                        XBindingPath="Product" 
+                        YBindingPath="SalesRate" />
 </chart:SfCircularChart>
 
 {% endhighlight %}
@@ -50,9 +50,7 @@ The [InnerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Dou
 {% highlight xaml %}
 
 <chart:SfCircularChart>
-    <chart:SfCircularChart.Series>
-        <chart:DoughnutSeries ItemsSource="{Binding Data}" InnerRadius="0.7" XBindingPath="Product" YBindingPath="SalesRate" />
-    </chart:SfCircularChart.Series>
+    <chart:DoughnutSeries ItemsSource="{Binding Data}" InnerRadius="0.7" XBindingPath="Product" YBindingPath="SalesRate" />
 </chart:SfCircularChart>
 
 {% endhighlight %}
@@ -82,12 +80,10 @@ By using the [StartAngle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Ch
 {% highlight xaml %}
 
 <chart:SfCircularChart>
-    <chart:SfCircularChart.Series>
-        <chart:DoughnutSeries StartAngle="180" EndAngle="360"
-                        ItemsSource="{Binding Data}"
-                        XBindingPath="Product" 
-                        YBindingPath="SalesRate" />
-    </chart:SfCircularChart.Series>
+    <chart:DoughnutSeries StartAngle="180" EndAngle="360"
+                    ItemsSource="{Binding Data}"
+                    XBindingPath="Product" 
+                    YBindingPath="SalesRate" />
 </chart:SfCircularChart>
     
 {% endhighlight %}
