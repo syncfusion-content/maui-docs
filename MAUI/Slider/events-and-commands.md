@@ -9,7 +9,7 @@ documentation: ug
 
 # Events and Commands in .NET MAUI Slider (SfSlider)
 
-This section explains about how to add the events and commands for slider.
+This section explains how to add the events and commands for slider.
 
 ## Events
 

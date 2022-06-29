@@ -9,7 +9,7 @@ documentation: ug
 
 # Events and Commands in .NET MAUI DateTime Slider (SfDateTimeSlider)
 
-This section explains about how to add the events and commands for DateTime Slider.
+This section explains how to add the events and commands for DateTime Slider.
 
 ## Events
 

@@ -19,14 +19,14 @@ Create a new .NET MAUI application in Visual Studio.
 
 ## Adding SfSlider reference
 
- Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfSlider to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Sliders and then install it.
+ The Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add the SfSlider to your project, open the NuGet package manager in the Visual Studio, search for the Syncfusion.Maui.Sliders, and install it.
 
  ![Create MAUI Application](images/getting-started/nuget-installation.png)
 
 
 ## Handler registration
 
-In the MauiProgram.cs file, register the handler for Syncfusion core
+In the MauiProgram.cs file, register the handler for the Syncfusion core.
 
 {% highlight C# %}
 

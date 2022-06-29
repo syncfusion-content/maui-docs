@@ -19,7 +19,7 @@ Create a new .NET MAUI application in Visual Studio.
 
 ## Adding SfSignaturePad reference
 
- Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfSignaturePad to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.SignaturePad, and then install it.
+ The Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add the SfSignaturePad to your project, open the NuGet package manager in the Visual Studio, search for the Syncfusion.Maui.SignaturePad, and install it.
 
  ![Create MAUI Application](images/getting-started/nuget-installation.png)
 

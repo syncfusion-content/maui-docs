@@ -9,7 +9,7 @@ documentation: ug
 
 # Events and Commands in .NET MAUI Range Selector (SfRangeSelector)
 
-This section explains about how to add the events and commands for Range Selector.
+This section explains how to add the events and commands for Range Selector.
 
 ## Events
 

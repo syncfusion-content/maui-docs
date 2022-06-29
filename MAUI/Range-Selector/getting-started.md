@@ -19,13 +19,13 @@ Create a new .NET MAUI application in Visual Studio.
 
 ## Adding SfRangeSelector reference
 
-Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfRangeSelector to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Sliders and then install it.
+The Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add the SfRangeSelector to your project, open the NuGet package manager in the Visual Studio, search for the Syncfusion.Maui.Sliders, and install it.
 
  ![Create MAUI Application](images/getting-started/nuget-installation.png)
 
 ## Handler registration
 
-In the MauiProgram.cs file, register the handler for Syncfusion core
+In the MauiProgram.cs file, register the handler for the Syncfusion core.
 
 {% highlight C# %}
 
@@ -99,7 +99,7 @@ namespace GettingStarted
 
 ## Adding content to Range Selector
 
-The [`Content`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSelector.html#Syncfusion_Maui_Sliders_SfRangeSelector_Content) property will add the content to the Range Selector. You can add any control within the Range Selector with this property. In most cases the [Charts](https://www.syncfusion.com/maui-controls/maui-charts) will be added as a content.
+The [`Content`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSelector.html#Syncfusion_Maui_Sliders_SfRangeSelector_Content) property will add the content to the Range Selector. Add any control within the Range Selector with this property. In most cases, the [Charts](https://www.syncfusion.com/maui-controls/maui-charts) will be added as a content.
 
 {% tabs %}
 
