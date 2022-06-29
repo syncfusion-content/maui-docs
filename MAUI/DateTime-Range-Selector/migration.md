@@ -7,12 +7,12 @@ control: SfDateTimeRangeSelector
 documentation: ug
 ---  
 
-# Migrate Xamarin.Forms SfDateTimeRangeNavigator to MAUI SfDateTimeRangeSelector
+# Migrate from Xamarin SfDateTimeRangeNavigator to MAUI Range Selector
 
-In Xamarin.Forms, [SfDateTimeRangeNavigator](https://help.syncfusion.com/cr/xamarin/Syncfusion.RangeNavigator.XForms.SfDateTimeRangeNavigator.html) control, which supports only the date-time scale. But in MAUI, separate controls for this date-time scale and numeric scale. Also, in Xamarin.Forms, the control comes along with the [Syncfusion.Xamarin.SfChart](https://www.nuget.org/packages/Syncfusion.Xamarin.SfChart/) package but in MAUI we have the controls that come with the [Syncfusion.Maui.Sliders](https://www.nuget.org/packages/Syncfusion.Maui.Sliders/) package. The following are the new MAUI controls for migrating from Xamarin.Forms SfDateTimeRangeNavigator to MAUI.
+In the Xamarin.Forms, [SfDateTimeRangeNavigator](https://help.syncfusion.com/cr/xamarin/Syncfusion.RangeNavigator.XForms.SfDateTimeRangeNavigator.html) control supports only the date-time scale. But in MAUI, separate controls for this date-time scale and numeric scale. Also, in the Xamarin.Forms, the control comes along with the [Syncfusion.Xamarin.SfChart](https://www.nuget.org/packages/Syncfusion.Xamarin.SfChart/) package, but in MAUI the controls comes with the [Syncfusion.Maui.Sliders](https://www.nuget.org/packages/Syncfusion.Maui.Sliders/) package. The following are the new MAUI controls for migrating from the Xamarin.Forms SfDateTimeRangeNavigator to MAUI.
 
-1. SfDateTimeRangeSelector  - For date-time scale
-2. SfRangeSelector – For numeric scale
+1. SfDateTimeRangeSelector  - For date-time scale.
+2. SfRangeSelector – For numeric scale.
 
 ## Namespaces 
 
@@ -197,19 +197,19 @@ In Xamarin.Forms, [SfDateTimeRangeNavigator](https://help.syncfusion.com/cr/xama
 <tr>
 <td>{{'[TooltipStyle.BorderWidth](https://help.syncfusion.com/cr/xamarin/Syncfusion.RangeNavigator.XForms.TooltipStyle.html#Syncfusion_RangeNavigator_XForms_TooltipStyle_BorderWidth)'| markdownify }}</td>
 <td>{{'[SliderTooltip.StrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html#Syncfusion_Maui_Sliders_SliderTooltip_StrokeThickness)'| markdownify }}</td>
-<td>Gets or sets the stroke size for tooltip.</td></tr>
+<td>Gets or sets the stroke size for the tooltip.</td></tr>
 <tr>
 <td>{{'[TooltipStyle.FontSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.RangeNavigator.XForms.TooltipStyle.html#Syncfusion_RangeNavigator_XForms_TooltipStyle_FontSize)'| markdownify }}</td>
 <td>{{'[SliderTooltip.FontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html#Syncfusion_Maui_Sliders_SliderTooltip_FontSize)'| markdownify }}</td>
-<td>Gets or sets the font size for tooltip text.</td></tr>
+<td>Gets or sets the font size for the tooltip text.</td></tr>
 <tr>
 <td>{{'[TooltipStyle.FontFamily](https://help.syncfusion.com/cr/xamarin/Syncfusion.RangeNavigator.XForms.TooltipStyle.html#Syncfusion_RangeNavigator_XForms_TooltipStyle_FontFamily)'| markdownify }}</td>
 <td>{{'[SliderTooltip.FontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html#Syncfusion_Maui_Sliders_SliderTooltip_FontFamily)'| markdownify }}</td>
-<td>Gets or sets the font family for tooltip text.</td></tr>
+<td>Gets or sets the font family for the tooltip text.</td></tr>
 <tr>
 <td>{{'[TooltipStyle.FontAttributes](https://help.syncfusion.com/cr/xamarin/Syncfusion.RangeNavigator.XForms.TooltipStyle.html#Syncfusion_RangeNavigator_XForms_TooltipStyle_FontAttributes)'| markdownify }}</td>
 <td>{{'[SliderTooltip.FontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html#Syncfusion_Maui_Sliders_SliderTooltip_FontAttributes)'| markdownify }}</td>
-<td>Gets or sets the font attributes for tooltip text.</td></tr>
+<td>Gets or sets the font attributes for the tooltip text.</td></tr>
 </table> 
 
 ## Events
