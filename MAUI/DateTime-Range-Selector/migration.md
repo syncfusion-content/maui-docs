@@ -7,7 +7,7 @@ control: SfDateTimeRangeSelector
 documentation: ug
 ---  
 
-# Migrate SfDateTimeRangeNavigator to MAUI SfDateTimeRangeSelector
+# Migrate from Xamarin SfDateTimeRangeNavigator to MAUI Range Selector
 
 In the Xamarin.Forms, [SfDateTimeRangeNavigator](https://help.syncfusion.com/cr/xamarin/Syncfusion.RangeNavigator.XForms.SfDateTimeRangeNavigator.html) control supports only the date-time scale. But in MAUI, separate controls for this date-time scale and numeric scale. Also, in the Xamarin.Forms, the control comes along with the [Syncfusion.Xamarin.SfChart](https://www.nuget.org/packages/Syncfusion.Xamarin.SfChart/) package, but in MAUI the controls comes with the [Syncfusion.Maui.Sliders](https://www.nuget.org/packages/Syncfusion.Maui.Sliders/) package. The following are the new MAUI controls for migrating from the Xamarin.Forms SfDateTimeRangeNavigator to MAUI.
 

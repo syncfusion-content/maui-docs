@@ -66,7 +66,7 @@ rangeSelector.Content = chart;
 
 ## Discrete selection for numeric values
 
-You can move the thumb in discrete manner for numeric values using the [`StepSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_StepSize) property in the Range Selector.
+Move the thumb in discrete manner for numeric values using the [`StepSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_StepSize) property in the Range Selector.
 
 {% tabs %}
 
@@ -118,8 +118,8 @@ rangeSelector.Content = chart;
 
 ## Interval Selection
 
-You can drag thumbs only in interval when [EnableIntervalSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase.html#Syncfusion_Maui_Sliders_RangeSliderBase_EnableIntervalSelection) is true.
-If true, both the thumbs can be only moved on the selector Interval.
+Drag thumbs only in interval when the [EnableIntervalSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase.html#Syncfusion_Maui_Sliders_RangeSliderBase_EnableIntervalSelection) is true.
+If true, both the thumbs can only be moved on the selector Interval.
 
 {% tabs %}
 
