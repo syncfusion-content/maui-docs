@@ -2,7 +2,7 @@
 layout: post
 title: Resource in MAUI Scheduler control | Syncfusion
 description:  Learn here all about grouping the appointments based on the resources in the timeline day, timeline week, timeline workweek and timeline month views in Syncfusion .NET MAUI Scheduler (SfScheduler) control.
-platform: maui
+platform: Maui
 control: SfScheduler
 documentation: ug
 ---
@@ -11,8 +11,8 @@ documentation: ug
 
 The .NET MAUI Scheduler control allows you to group appointments based on the resources associated with them in the timeline day, timeline week, timeline workweek, and timeline month views, with complete business object binding, multi resource appointment sharing and UI customization features.
 
-## Create Scheduler resources
-You can create a resource view by setting the Name, Id, Background, and Foreground property of the SchedulerResource.
+## Create resources to Scheduler by using SchedulerResource
+You can create a resource view by setting the Name, Id, Background, and Foreground properties of the built-in SchedulerResource class and assign SchedulerResource collection to the scheduler by using the Resources property of the ResourceView class.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
@@ -35,7 +35,7 @@ this.Scheduler.ResourceView.Resources = resourceCollection;
 
 ### Assigning Scheduler resources to appointments
 
-Appointments associated with the scheduler [ResourceCollection]()  will be displayed by setting the schedule resource Id in the [ScheduleAppointment]() by using the [ResourceIdCollection](). For [ResourceGroupType]() set as [Resource]() or [Date](). Also assign the resources to `recurrence appointments.`
+Appointments associated with the `ResourceView` [Resources]()  will be displayed by setting the `ResourceView` resource Id in the [ScheduleAppointment]() by using the [ResourceIds]().
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
@@ -52,7 +52,7 @@ appointment.Add(new SchedulerAppointment()
 	EndTime = DateTime.Today.AddHours(11),
 	Subject = "Client Meeting",
 	Location = "Hutchison road",
-	ResourceIds = new ObservableCollection<object>() { "1000", "1001" }
+	ResourceIds = new ObservableCollection<object>() { "1000" }
 });
 
 //Adding the scheduler appointment collection to the AppointmentsSource of .NET MAUI Scheduler.
@@ -62,7 +62,7 @@ this.Scheduler.AppointmentsSource = appointment;
 
 ### Multiple resource sharing using Scheduler resources
 
-Multiple resources can share the same events or appointments. If the appointment details are edited or updated, then the changes will be reflected on all other shared instances simultaneously.
+Multiple resources can share the same events or appointments by declaring resources ids in `ResourceIds` in `ScheduleAppointment` class. If the appointment details are edited or updated, then the changes will be reflected on all other shared instances simultaneously.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
@@ -79,6 +79,7 @@ appointment.Add(new SchedulerAppointment()
 	EndTime = DateTime.Today.AddHours(11),
 	Subject = "Client Meeting",
 	Location = "Hutchison road",
+	//Multi resource share same event
 	ResourceIds = new ObservableCollection<object>() { "1000", "1001","1002" }
 });
 
@@ -89,7 +90,7 @@ this.Scheduler.AppointmentsSource = appointment;
 
 ## Business object binding for resources
 
-The Schedule supports full data binding to [ResourceCollection](). Specify the [ResourceMapping]() attribute to map the properties in the underlying data source to the schedule resource.
+The Schedule supports full data binding to [Resources]() in the `ResourceView` class. Specify the [Mapping]() property of the `ResourceView` class to map the custom properties to the schedule resource.
 
 | Property Name | Description |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
@@ -102,7 +103,7 @@ N> Custom resource class should contain a mandatory field for resource `Id`.
 
 ## Mapping resource business object custom field
 
-Create a custom class employee with mandatory fields `Name,` `Id,` `ForegroundColor,` and `BackgroundColor.` Also assign the resources to `recurrence appointments.`
+Create a custom class `Employee` with mandatory fields `Name,` `Id,` `ForegroundColor,` and `BackgroundColor`.
 
 {% tabs %}
 {% highlight c# tabtitle="Employee.cs" hl_lines="6" %}
@@ -120,7 +121,7 @@ public class Employee
 {% endhighlight %}
 {% endtabs %}
 
-Map the properties of the `Employee` class with SfScheduler control using the Scheduler `SchedulerResourceMapping.`
+Map the properties of the `Employee` class by using the [Mapping]() property of the `ResourceView`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2 3 4" %}
@@ -148,9 +149,9 @@ this.Scheduler.ResourceView.Mapping = resourceMapping;
 {% endhighlight %}
 {% endtabs %}
 
-### Assign resource object collection to scheduler
+### Assign resource business objects to scheduler
 
-Add the resources of `Employee` collection that can be assigned to the scheduler using the [ResourceCollection]() property which is of `IEnumerable` type. Also add or remove scheduler resources dynamically.
+Add the resources of `Employee` collection that can be assigned  to the [Resources]() in the `ResourceView` class which is of `IEnumerable` type. Also add or remove scheduler resources dynamically.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainWindow.xaml" hl_lines="2 3 4" %}
@@ -176,7 +177,7 @@ this.Scheduler.ResourceView.Resources = ResourceCollection;
 
 ### Assign the resource objects to appointment business object
 
-Associate the scheduler [ResourceMapping]() to the custom appointment by mapping resource [Id]() in the [ResourceIdCollection]() property of [AppointmentMapping](). The custom appointments associated with the scheduler resources will be displayed when the `ResourceGroupType` is set to `Resource` or `Date.` Also assign the resources to recurrence appointments.
+Associate the `ResourceView` [Mapping]() to the custom appointment by mapping resource [Id]() in the [ResourceIds]() property of [AppointmentMapping](). 
 
 {% tabs %}
 {% highlight c# tabtitle="Meeting.cs" %}
@@ -226,7 +227,7 @@ this.Scheduler.AppointmentMapping = dataMapping;
 {% endhighlight %}
 {% endtabs %}
 
-Schedule meetings for a resource by setting `From,` `To,` and `Resources` of the Meeting class.
+Schedule meetings for a resource by setting `From,` `To,` and `Resources` of the `Meeting` class.
 
 {%tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -242,7 +243,7 @@ this.Schedule.ItemsSource = Meetings;
 {% endtabs %}
 
 ## Resource minimum row height
-You can customize minimum row height of visible resources in timeline day, timeline week, timeline workweek and timeline month views by using the [MinimumRowHeight]() property of [SchedulerResourceView]() in [SfScheduler.]() By default, esource row height will be auto-expanded from minimum height based on the appointment counts.
+You can customize resource minimum row height of visible resources in timeline day, timeline week, timeline workweek and timeline month views by using the [MinimumRowHeight]() property of [SchedulerResourceView]() in [SfScheduler.]() By default, resource row height will be auto-expanded from minimum height based on the appointment counts.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
@@ -264,7 +265,7 @@ N>
 * If the MinimumRowHeight is less than the default row height then the default row height will be used.
 
 ## Assign resources to special time regions
-Special time region can be created based on the resources in the timeline day, timeline week, timeline workweek, and timeline month views.
+You can highlight a resource’s availability by creating special time regions in the timeline day, timeline week, and timeline workweek views.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainWindow.xaml" %}
@@ -284,13 +285,17 @@ this.Scheduler.DaysView.TimeRegions.Add(new SchedulerTimeRegion
 {% endtabs %}
 
 ## Programmatic resource selection
-You can programmatically select the resource by using the ResourceId and SelectedDate of the SfScheduler. Please [click]() here to see more details about programmatic date selection.
+You can programmatically select the resource by using the `SelectedResourceId` and `SelectedDate` of the SfScheduler. Please [click]() here to see more details about programmatic date selection.
 
 ## Appearance customization
 
-The resource appearance customization can be achieved by using the [ResourceHeaderTemplate]() property of the [SfScheduler]().
+The resource appearance customization can be achieved by using the [ResourceHeaderTemplate]() and [TextStyle]() properties of the [SchedulerResourceView]().
 
+#### Customize resource appearance using text style
+The resource header text style can be customized by using the [TextStyle]() property of the [SchedulerResourceView]().
+	
 #### Customize resource appearance using ResourceHeaderTemplate
+The resource appearance customization can be achieved by using the [ResourceHeaderTemplate]() property of the [SchedulerResourceView]().
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="28" %}
