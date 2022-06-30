@@ -594,7 +594,7 @@ Data template selector can be customized the appearance of each item with differ
                     <Label Text="{Binding Latitude}"
                            Scale="1"
                            TextColor="White"
-                           BackgroundColor="Red"
+                           BackgroundColor="Blue"
                            HorizontalOptions="StartAndExpand"
                        VerticalOptions="Center" />
                 </StackLayout>
@@ -607,8 +607,8 @@ Data template selector can be customized the appearance of each item with differ
                          HeightRequest="30">
                     <Label Text="{Binding Latitude}"
                            Scale="1"
-                           TextColor="Red"
-                           BackgroundColor="Yellow"
+                           TextColor="White"
+                           BackgroundColor="Red"
                            HorizontalOptions="StartAndExpand"
                        VerticalOptions="Center" />
                 </StackLayout>
@@ -629,11 +629,10 @@ Data template selector can be customized the appearance of each item with differ
 							   
             <map:MapShapeLayer.Markers>
                 <map:MapMarkerCollection>
-                    <map:MapMarker Latitude="20.5595" Longitude="22.9375"  />
-                    <map:MapMarker Latitude="21.7679" Longitude="78.8718"  />
-                    <map:MapMarker Latitude="133.7751" Longitude="25.2744"  />
-                    <map:MapMarker Latitude="60.2551" Longitude="84.5260" />
-                    <map:MapMarker Latitude="195.4915" Longitude="-50.7832"  />
+                     <local:CustomMarker1 Latitude="21.7679" Longitude="78.8718" Area = "10,370,000 sq. km." Population="15"  />
+                     <local:CustomMarker1 Latitude="133.7751" Longitude="25.2744" Area = "20,370,000 sq. km." Population="31" />
+                     <local:CustomMarker1 Latitude="60.2551" Longitude="84.5260"   Area = "50,570,000 sq. km." Population="26" />
+                     <local:CustomMarker1 Latitude="195.4915" Longitude="-50.7832" Area = "30,370,000 sq. km." Population="40"/>
                 </map:MapMarkerCollection>
             </map:MapShapeLayer.Markers>
 			
@@ -652,9 +651,14 @@ public class MarkerTemplateSelector : DataTemplateSelector
 	
     protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
     {
-        return (double)((MapMarker)item).Latitude < 20 ? Template1 : Template2;
+        return (double)((CustomMarker1)item).Population < 4? Template1 : Template2;
     }
 } 
+public class CustomMarker1 : MapMarker
+{
+    public string Area { get; set; }
+    public double Population { get; set; }
+}
 
 {% endhighlight %}
 

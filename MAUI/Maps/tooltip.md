@@ -85,7 +85,7 @@ public class Model
 
 {% endtabs %}
 
-![Maps shape tooltip builder](images/tooltip/shape_tooltip_builder.png)
+![Maps shape tooltip builder](images/tooltip/shape_tooltip.png)
 
 N>
 * Refer the `MapTooltipSettings`, for customizing the tooltip.
@@ -190,7 +190,7 @@ The `MapShapeLayer.ShowBubbleTooltip` is used to clearly indicate the bubble inf
 
 {% endtabs %}
 
-![Maps bubble tooltip builder](images/tooltip/bubble_tooltip_builder.png)
+![Maps bubble tooltip builder](images/tooltip/bubble_tooltip.png)
 
 ## Tooltip for the markers
 
@@ -269,7 +269,7 @@ The `MapShapeLayer.ShowMarkerTooltip` is used to clearly indicate the marker inf
 
 {% endtabs %}
 
-![Maps marker tooltip builder](images/tooltip/marker_tooltip_builder.png)
+![Maps marker tooltip builder](images/tooltip/marker_tooltip.png)
 
 N>
 * Refer the `MapTooltipSettings`, for customizing the tooltip.

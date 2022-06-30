@@ -21,8 +21,8 @@ You can apply color, stroke color and stroke thickness to the shapes using the `
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer ShapeStroke="Green"
-                           ShapeFill="LightGreen"  
+        <map:MapShapeLayer ShapeStroke="#1585ed"
+                           ShapeFill="#b5dcff"  
                            ShapeStrokeThickness="2">
         </map:MapShapeLayer>
     </maps:SfMaps.Layer>
@@ -38,8 +38,8 @@ You can apply color, stroke color and stroke thickness to the shapes using the `
 		
         MapShapeLayer layer = new MapShapeLayer();
         layer.ShapesSource = MapSource.FromResource("MyProject.world-map.json");
-        layer.ShapeFill = Brush.LightGreen;
-        layer.ShapeStroke = Brush.Green;
+        layer.ShapeFill = Color.FromRgb(181, 220, 255);
+        layer.ShapeStroke = Color.FromRgb(21, 133, 237);
         layer.ShapeStrokeThickness = 2;
 		
         SfMaps maps = new SfMaps();
@@ -109,7 +109,8 @@ N> You can show legend using the `Legend` property.The icons color of the legend
     <map:SfMaps.Layer>
         <map:MapShapeLayer DataSource="{Binding Data}"       
                            PrimaryValuePath="State" 
-                           ShapeDataField="STATE_NAME" 
+                           ShapeDataField="STATE_NAME"
+                           ShapeStrokeThickness="0" 
                            ShapeColorValuePath="Color">
         </map:MapShapeLayer>
     </map:SfMaps.Layer>
@@ -132,6 +133,7 @@ public MainPage()
     layer.PrimaryValuePath = "State";
     layer.ShapeDataField = "STATE_NAME";
     layer.ShapeColorValuePath = "Color";
+    layer.ShapeStrokeThickness = 0;
 
     SfMaps maps = new SfMaps();
     maps.Layer = layer;
@@ -145,14 +147,13 @@ public class ViewModel
     public ViewModel()
     {
         Data = new ObservableCollection<Model>();
-        ObservableCollection<Model> Data = new ObservableCollection<Model>();
-        Data.Add(new Model("New South Wales", Colors.Green));
-        Data.Add(new Model("Northern Territory", Colors.Blue));
-        Data.Add(new Model("Victoria", Colors.LightGreen));
-        Data.Add(new Model("Tasmania", Colors.Orange));
-        Data.Add(new Model("Queensland", Colors.Red));
-        Data.Add(new Model("Western Australia", Colors.Yellow));
-        Data.Add(new Model("South Australia", Colors.Violet));
+        Data.Add(new Model("New South Wales", Color.FromRgb(208,183,0)));
+        Data.Add(new Model("Northern Territory",  Color.FromRgb(255,78,66)));
+        Data.Add(new Model("Victoria",  Color.FromRgb(207,78,238)));
+        Data.Add(new Model("Tasmania", Color.FromRgb(79,147,216)));
+        Data.Add(new Model("Queensland",  Color.FromRgb(0,213,207)));
+        Data.Add(new Model("Western Australia", Color.FromRgb(139,106,223)));
+        Data.Add(new Model("South Australia", Color.FromRgb(123,255,103)));
     }
 }
 

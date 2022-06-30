@@ -24,8 +24,9 @@ The `ShapeSelected` event is used to perform any action on shape selected shape 
 <map:SfMaps>
    <map:SfMaps.Layer>
       <map:MapShapeLayer x:Name="layer"
-                         SelectedShapeFill="Aqua"
+                         SelectedShapeFill="#6189ff"
                          ShapeSelected="layer_ShapeSelected" 
+                         ShapeStrokeThickness="0"
                          EnableSelection="True">
 		
        </map:MapShapeLayer>
@@ -74,9 +75,9 @@ You can customize the below appearance of the selected shape.
                          PrimaryValuePath="Country"
                          ShapeDataField="STATE_NAME" 
                          ShapeColorValuePath = "Color" 
-                         SelectedShapeFill="Green"
-                         SelectedShapeStroke="DarkGreen" 
-                         SelectedShapeStrokeThickness="2" 
+                         SelectedShapeFill="#1a35db"
+                         SelectedShapeStroke="DarkGrey" 
+                         SelectedShapeStrokeThickness="1" 
                          EnableSelection="True">
 
        </map:MapShapeLayer>
@@ -99,9 +100,9 @@ You can customize the below appearance of the selected shape.
         layer.DataSource = viewModel.Data;
         layer.PrimaryValuePath = "Country";
         layer.ShapeDataField = "STATE_NAME";
-        layer.SelectedShapeFill = Colors.Green;
-        layer.SelectedShapeStroke = Colors.DarkGreen;
-        layer.SelectedShapeStrokeThickness = 2;
+        layer.SelectedShapeFill = Color.FromRgb(26, 53, 219);
+        layer.SelectedShapeStroke = Colors.DarkGray;
+        layer.SelectedShapeStrokeThickness = 1;
         layer.EnableSelection = true;
         layer.ShapeColorValuePath = "Color";
 
@@ -117,13 +118,13 @@ You can customize the below appearance of the selected shape.
 		public ViewModel()
 		{
 			Data = new ObservableCollection<Model>();
-			Data.Add(new Model("New South Wales", Colors.LightGreen));
-			Data.Add(new Model("Northern Territory",Colors.LightGreen));
-			Data.Add(new Model("Victoria", Colors.LightGreen));
-			Data.Add(new Model("Tasmania", Colors.LightGray));
-			Data.Add(new Model("Queensland", Colors.LightGreen));
-			Data.Add(new Model("Western Australia", Colors.LightGreen));
-			Data.Add(new Model("South Australia", Colors.LightGreen));
+			Data.Add(new Model("New South Wales",  Color.FromRgb(97, 137, 255)));
+			Data.Add(new Model("Northern Territory", Color.FromRgb(97, 137, 255)));
+			Data.Add(new Model("Victoria", Color.FromRgb(97, 137, 255)));
+			Data.Add(new Model("Tasmania", Color.FromRgb(97, 137, 255)));
+			Data.Add(new Model("Queensland", Color.FromRgb(97, 137, 255)));
+			Data.Add(new Model("Western Australia", Color.FromRgb(97, 137, 255)));
+			Data.Add(new Model("South Australia", Color.FromRgb(97, 137, 255)));
 		}
 	}
     

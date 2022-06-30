@@ -275,11 +275,24 @@ The `ShapeDataField` property is similar to the `PrimaryValuePath` property. It 
 
 {% tabs %}
 
+{% highlight XAML %}
+
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer DataSource="{Binding Data}"        
+                           PrimaryValuePath="State" 
+                           ShapeDataField="STATE_NAME" />
+    </map:SfMaps.Layer>
+</map:SfMaps>
+
+{% endhighlight %}
+
 {% highlight c# %}
 
 public MainPage()
 {
     InitializeComponent();
+    this.BindingContext = this;
     ObservableCollection<Model> Data = new ObservableCollection<Model>();
     Data.Add(new Model("New South Wales", "New\nSouth Wales"));
     Data.Add(new Model("Queensland", "Queensland"));
@@ -331,12 +344,57 @@ Add the basic maps elements such as data labels, legend, and tooltip as shown in
 
 {% tabs %}
 
+{% highlight xaml %}
+
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer DataSource="{Binding Data}" 
+                           PrimaryValuePath="State"
+                           ShapeStrokeThickness="0"    
+                           ShapeDataField="STATE_NAME"
+                           ShowShapeTooltip="True"
+                           ShapeColorValuePath="Population"
+                           ShowDataLabels="True"
+                           SelectedShapeStrokeThickness="0"
+                           ShapeHoverFill="Transparent">
+
+             <map:MapShapeLayer.ColorMappings>
+                <map:EqualColorMapping Color ="#d0b800" Value = "6000" Text="New South Wales" />
+                <map:EqualColorMapping Color = "#00d5cf" Value = "8000"  Text="Queensland" />
+                <map:EqualColorMapping Color ="#cf4eee" Value = "5000" Text="Victoria" />
+                <map:EqualColorMapping Color ="#4f93d8"  Value = "90000" Text="Tasmania" />
+                <map:EqualColorMapping Color = "#8b6adf" Value = "7000" Text="Western Australia"  />
+                <map:EqualColorMapping Color ="#7bff67"  Value = "3000" Text="South Australia" />
+                <map:EqualColorMapping Color ="#ff4e42"  Value = "10000" Text="Northern Territory" />
+             </map:MapShapeLayer.ColorMappings>
+
+            <map:MapShapeLayer.Legend>
+                <map:MapLegend SourceType="Shape" Placement="Right" />
+            </map:MapShapeLayer.Legend>
+
+            <map:MapShapeLayer.DataLabelSettings>
+                <map:MapDataLabelSettings DataLabelPath="StateCode">
+                        <map:MapDataLabelSettings.DataLabelStyle>
+                                <map:MapLabelStyle FontSize="14"
+                                                   TextColor="Black"
+                                                   FontAttributes="Bold" />
+                        </map:MapDataLabelSettings.DataLabelStyle>
+                </map:MapDataLabelSettings>
+            </map:MapShapeLayer.DataLabelSettings>
+
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
+
+{% endhighlight %}
+
 {% highlight C# %}
 
 public MainPage()
 {
     InitializeComponent();
 	ViewModel viewModel = new ViewModel();
+    this.BindingContext = viewModel;
     SfMaps maps = new SfMaps();
     MapShapeLayer layer = new MapShapeLayer();
     layer.ShapesSource = MapSource.FromResource("MyProject.australia.json");
@@ -346,6 +404,8 @@ public MainPage()
     layer.ShowShapeTooltip = true;
     layer.ShapeColorValuePath = "Population";
     layer.ShowDataLabels = true;
+    layer.ShapeStrokeThickness = 0;
+    layer.ShapeHoverFill = Colors.Transparent;
 
     layer.DataLabelSettings = new MapDataLabelSettings()
     {
@@ -362,13 +422,20 @@ public MainPage()
 
     layer.ColorMappings = new ObservableCollection<ColorMapping>()
     {
-        new EqualColorMapping { Color = Colors.Yellow, Value = "6000" },
-        new EqualColorMapping { Color = Colors.LimeGreen, Value = "8000" },
-        new EqualColorMapping { Color = Colors.Violet, Value = "5000" },
-        new EqualColorMapping { Color = Colors.Blue, Value = "90000" },
-        new EqualColorMapping { Color = Colors.Red, Value = "7000" },
-        new EqualColorMapping { Color = Colors.Orange, Value = "3000" },
+        new EqualColorMapping { Color = Color.FromRgb(208,183,0), Value = "6000",Text="New South Wales" },
+        new EqualColorMapping { Color = Color.FromRgb(0,213,207), Value = "8000" , Text="Queensland" },
+        new EqualColorMapping { Color = Color.FromRgb(207,78,238), Value = "5000", Text="Victoria" },
+        new EqualColorMapping { Color = Color.FromRgb(79,147,216), Value = "90000", Text="Tasmania" },
+        new EqualColorMapping { Color = Color.FromRgb(139,106,223), Value = "7000", Text="Western Australia" },
+        new EqualColorMapping { Color = Color.FromRgb(123,255,103), Value = "3000", Text="South Australia" },
+        new EqualColorMapping { Color = Color.FromRgb(255,78,66), Value = "10000",Text="Northern Territory" },
     };
+
+    MapLegend legendSet = new MapLegend();
+    legendSet.SourceType = LegendSourceType.Shape;
+    legendSet.Placement = Syncfusion.Maui.Core.LegendPlacement.Right;
+    layer.Legend = legendSet;
+
     maps.Layer = layer;
     this.Content = maps;
 }

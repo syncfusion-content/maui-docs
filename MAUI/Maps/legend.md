@@ -27,12 +27,12 @@ You can show shape legend by setting the `Legend` property as `MapLegend(LegendS
                             ShapeStroke="DarkGrey">
                 
                 <map:MapShapeLayer.ColorMappings>
-                    <map:EqualColorMapping Color="Gray" Value="51" Text="India" />
-                    <map:EqualColorMapping Color="Gray" Value="58" Text="United States" />
-                    <map:EqualColorMapping Color="Gray" Value="41" Text="Kazakhstan" />
-                    <map:EqualColorMapping Color="Gray" Value="48" Text="Italy" />
-                    <map:EqualColorMapping Color="Gray" Value="14" Text="Korea" />
-                    <map:EqualColorMapping Color="Gray" Value="23" Text="China" />
+                    <map:EqualColorMapping Color="LightGray" Value="51" Text="India" />
+                    <map:EqualColorMapping Color="LightGray" Value="58" Text="United States" />
+                    <map:EqualColorMapping Color="LightGray" Value="41" Text="Kazakhstan" />
+                    <map:EqualColorMapping Color="LightGray" Value="48" Text="Italy" />
+                    <map:EqualColorMapping Color="LightGray" Value="14" Text="Korea" />
+                    <map:EqualColorMapping Color="LightGray" Value="23" Text="China" />
                 </map:MapShapeLayer.ColorMappings>
 
                 <map:MapShapeLayer.Legend>
@@ -61,12 +61,12 @@ public MainPage()
     layer.ShapeDataField = "name";
     layer.ShapeStroke = Colors.DarkGrey;
 
-    layer.ColorMappings.Add(new EqualColorMapping() { Color = Colors.Gray, Value = "51", Text = "India"});
-    layer.ColorMappings.Add(new EqualColorMapping() { Color = Colors.Gray, Value = "58", Text = "United States" });
-    layer.ColorMappings.Add(new EqualColorMapping() { Color = Colors.Gray, Value = "41", Text = "Kazakhstan" });
-    layer.ColorMappings.Add(new EqualColorMapping() { Color = Colors.Gray, Value = "48", Text = "Italy" });
-    layer.ColorMappings.Add(new EqualColorMapping() { Color = Colors.Gray, Value = "14", Text = "Korea" });
-    layer.ColorMappings.Add(new EqualColorMapping() { Color = Colors.Gray, Value = "23", Text = "China" });
+    layer.ColorMappings.Add(new EqualColorMapping() { Color = Colors.LightGray, Value = "51", Text = "India"});
+    layer.ColorMappings.Add(new EqualColorMapping() { Color = Colors.LightGray, Value = "58", Text = "United States" });
+    layer.ColorMappings.Add(new EqualColorMapping() { Color = Colors.LightGray, Value = "41", Text = "Kazakhstan" });
+    layer.ColorMappings.Add(new EqualColorMapping() { Color = Colors.LightGray, Value = "48", Text = "Italy" });
+    layer.ColorMappings.Add(new EqualColorMapping() { Color = Colors.LightGray, Value = "14", Text = "Korea" });
+    layer.ColorMappings.Add(new EqualColorMapping() { Color = Colors.LightGray, Value = "23", Text = "China" });
 
     MapLegend legendSet = new MapLegend();
     legendSet.SourceType = LegendSourceType.Shape;
