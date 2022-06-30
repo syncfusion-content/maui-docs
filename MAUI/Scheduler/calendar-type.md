@@ -27,10 +27,10 @@ The Scheduler control supports different types of calendars such as Gregorian, K
 * UmAlQuraCalendar<br>
 * PersianCalendar<br>
 * JulianCalendar<br>
+* JapaneseCalendar<br>
 </td>
 
 <td>
-* JapaneseCalendar<br>
 * Lunar type calendars<br>
 </td>
 </tr>
