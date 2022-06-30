@@ -12,7 +12,7 @@ documentation: ug
 The .NET MAUI Scheduler control allows you to group appointments based on the resources associated with them in the timeline day, timeline week, timeline workweek, and timeline month views, with complete business object binding, multi resource appointment sharing and UI customization features.
 
 ## Create resources to Scheduler by using SchedulerResource
-You can create a resource view by setting the Name, Id, Background, and Foreground properties of the built-in SchedulerResource class and assign SchedulerResource collection to the scheduler by using the Resources property of the ResourceView class.
+You can create a resource view by setting the `Name`, `Id`, `Background`, and `Foreground` properties of the built-in `SchedulerResource` class and assign `SchedulerResource` collection to the scheduler by using the `Resources` property of the `ResourceView` class.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
