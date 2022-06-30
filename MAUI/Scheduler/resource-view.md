@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Resource in MAUI Scheduler control | Syncfusion
-description:  Learn here all about grouping the appointments based on the resources in the timeline day, timeline week, timeline workweek and timeline month views in Syncfusion .NET MAUI Scheduler (SfScheduler) control.
+description: Learn here all about Resource view feature of Syncfusion .NET MAUI SfSchedler(SfScheduler) in day, week and workweek of timeline views and more.
 platform: Maui
 control: SfScheduler
 documentation: ug
