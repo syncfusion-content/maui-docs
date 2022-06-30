@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Legend in MAUI Maps control | Syncfusion
-description: Learn here all about the Legend feature of Syncfusion MAUI Maps (SfMaps) control to customize its appearance including text, icon and more.
+title: Legend in .NET MAUI Maps control | Syncfusion
+description: Learn here all about the Legend feature of Syncfusion .NET MAUI Maps (SfMaps) control to customize its appearance including text, icon and more.
 platform: MAUI
 control: SfMaps
 documentation: ug
 ---
 
-# Legend in MAUI Maps (SfMaps)
+# Legend in .NET MAUI Maps (SfMaps)
 
 You can provide clear information on the data plotted on the map using legend.
 
@@ -21,8 +21,7 @@ You can show shape legend by setting the `Legend` property as `MapLegend(LegendS
 
      <map:SfMaps>
             <map:SfMaps.Layer>
-                <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world1.shp}"
-								   DataSource="{Binding Data}"
+                <map:MapShapeLayer DataSource="{Binding Data}"
 								   PrimaryValuePath="State" 
 								   ShapeDataField="name" 
 								   ShapeStroke="DarkGrey">
@@ -122,8 +121,7 @@ You can show bubble legend by setting the `MapShapeLayer.Legend` property as `Ma
 
      <map:SfMaps>
             <map:SfMaps.Layer>
-                <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world1.shp}"
-								   DataSource="{Binding Data}"  
+                <map:MapShapeLayer DataSource="{Binding Data}"  
 								   ShowBubbles="True" 
 								   PrimaryValuePath="State" 
 								   ShapeDataField="name" 
@@ -242,8 +240,7 @@ You can customize the legend item's text style using the `MapLegend.TextStyle` p
 
      <map:SfMaps>
             <map:SfMaps.Layer>
-                <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world1.shp}"
-   								   DataSource="{Binding Data}"
+                <map:MapShapeLayer DataSource="{Binding Data}"
    								   PrimaryValuePath="State"
    								   ShapeDataField="name" 
    								   ShapeStroke="DarkGray" 
@@ -362,8 +359,7 @@ You can position the legend items in different directions using the `MapLegend.P
 
      <map:SfMaps>
             <map:SfMaps.Layer>
-                <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world1.shp}"
-   								   DataSource="{Binding Data}"
+                <map:MapShapeLayer DataSource="{Binding Data}"
    								   PrimaryValuePath="State" 
    								   ShapeDataField="name" 
    								   ShapeStroke="DarkGray" 
@@ -465,4 +461,4 @@ public class Model
 
 ![Legend position](images/legend/legend-position.png)
 
-N> You can refer to our `MAUI Maps` feature tour page for its groundbreaking feature representations. You can also explore our `MAUI Maps Legend example` that shows how to configure a Maps in MAUI.
+N> You can refer to our `.NET MAUI Maps` feature tour page for its groundbreaking feature representations. You can also explore our `.NET MAUI Maps Legend example` that shows how to configure a Maps in .NET MAUI.

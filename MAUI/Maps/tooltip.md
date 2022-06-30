@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tooltip in MAUI Maps control | Syncfusion 
-description: Learn here all about adding the Tooltip feature of Syncfusion MAUI Maps (SfMaps) control and more.
+title: Tooltip in .NET MAUI Maps control | Syncfusion 
+description: Learn here all about adding the Tooltip feature of Syncfusion .NET MAUI Maps (SfMaps) control and more.
 platform: MAUI
 control: SfMaps
 documentation: ug
 ---
 
-# Tooltip in MAUI Maps (SfMaps)
+# Tooltip in .NET MAUI Maps (SfMaps)
 
 Tooltip is used to indicate the shape, bubble, marker information during the tap, or hover interactions. This section helps to learn about
  how to show tooltip for the shapes, bubbles, and markers in the maps and customize them.
@@ -22,8 +22,7 @@ The `ShowShapeTooltip` is used to clearly indicate the shape information every t
 
      <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world1.shp}"
-							   DataSource="{Binding Data}"
+            <map:MapShapeLayer DataSource="{Binding Data}"
 							   PrimaryValuePath="State" 
 							   ShapeDataField="name" 
 							   ShowShapeToolTip="True">
@@ -101,8 +100,7 @@ The `MapShapeLayer.ShowBubbleTooltip` is used to clearly indicate the bubble inf
 
     <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world1.shp}"
-							   DataSource="{Binding Data}"
+            <map:MapShapeLayer DataSource="{Binding Data}"
 							   PrimaryValuePath="State" 
 							   ShapeDataField="name" 
 							   ShapeHoverFill = "Transparent" 
@@ -204,8 +202,7 @@ The `MapShapeLayer.ShowMarkerTooltip` is used to clearly indicate the marker inf
 
     <map:SfMaps>
          <map:SfMaps.Layer>
-             <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world1.shp}"
-							    ShapeStroke="DarkGrey"
+             <map:MapShapeLayer ShapeStroke="DarkGrey"
 							    ShapeHoverFill = "Transparent" 
 							    ShapeHoverStroke="Transparent" 
 							    ShowMarkerTooltip="True">
@@ -474,7 +471,6 @@ Data template selector can be customized the appearance of each item with differ
 <map:SfMaps>
     <map:SfMaps.Layer>
         <map:MapShapeLayer x:Name="layer"
-                           ShapesSource="{local:MapSourceResourceExtension MyProject.world1.shp}"
                            ShapeStroke="DarkGrey"
                            ShowMarkerTooltip="True"
                            ShapeHoverFill="Transparent"
@@ -501,6 +497,15 @@ Data template selector can be customized the appearance of each item with differ
 
 {% highlight c# %}
 
+public class MainPage()
+{
+	public MainPage()
+	{
+		InitializeComponent();
+		layer.ShapesSource = MapSource.FromResource("MyProject.World1.shp");
+	}
+}
+
 public class CustomMarker : MapMarker
 {
    public string Name { get; set; } 
@@ -526,4 +531,4 @@ public class MarkerTemplateSelector : DataTemplateSelector
 N>
 * Data Templates and Data Templates selector are also applicable with bubbles and markers.
 
-N> You can refer to our `MAUI Maps` feature tour page for its groundbreaking feature representations. You can also explore our `MAUI Maps Tooltip example` that shows how to configure a Maps in MAUI.
+N> You can refer to our `.NET MAUI Maps` feature tour page for its groundbreaking feature representations. You can also explore our `.NET MAUI Maps Tooltip example` that shows how to configure a Maps in .NET MAUI.

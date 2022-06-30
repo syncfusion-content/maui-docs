@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Labels in MAUI Maps control | Syncfusion
-description: Learn here all about the Data Labels feature of Syncfusion MAUI Maps (SfMaps) control to add labels to the shapes and more.
+title: Data Labels in .NET MAUI Maps control | Syncfusion
+description: Learn here all about the Data Labels feature of Syncfusion .NET MAUI Maps (SfMaps) control to add labels to the shapes and more.
 platform: MAUI
 control: SfMaps
 documentation: ug
 ---
 
-# Data Labels in MAUI Maps (SfMaps)
+# Data Labels in .NET MAUI Maps (SfMaps)
 
 Data labels provides identification for the shapes by displaying their names. You can trim or hide the labels if they exceed the shape bounds.
 
@@ -21,8 +21,7 @@ You can show data labels on the map using the `ShowDataLabels` property. The def
 
      <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.australia.json}"
-							   DataSource="{Binding Data}"        
+            <map:MapShapeLayer DataSource="{Binding Data}"        
 							   PrimaryValuePath="State" 
 							   ShapeDataField="STATE_NAME" 
 							   ShowDataLabels="True">
@@ -106,8 +105,7 @@ You can customize text of the data labels using the `DataLabelPath` property.
 
      <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.australia.json}"
-							   DataSource="{Binding Data}"        
+            <map:MapShapeLayer DataSource="{Binding Data}"        
 							   PrimaryValuePath="State" 
 							   ShapeDataField="STATE_NAME" 
 							   ShowDataLabels="True" >
@@ -193,8 +191,7 @@ By default, the data labels will render even if it overflows from the shape.
 
      <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.australia.json}"
-							   DataSource="{Binding Data}"        
+            <map:MapShapeLayer DataSource="{Binding Data}"        
 							   PrimaryValuePath="State" 
 							   ShapeDataField="STATE_NAME" 
 							   ShowDataLabels="True">
@@ -280,8 +277,7 @@ You can customize the data labels using the `DataLabelStyle` property.
 
      <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.australia.shp}" 
-							   DataSource="{Binding Data}" 
+            <map:MapShapeLayer DataSource="{Binding Data}" 
 							   PrimaryValuePath="State" 
 							   ShapeDataField="STATE_NAME" 
 							   ShowDataLabels="True">

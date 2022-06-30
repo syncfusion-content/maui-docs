@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Bubbles in Maps control | Syncfusion
-description: Learn here all about the Bubbles feature of Syncfusion MAUI Maps (SfMaps) control to customize their appearances and more.
+description: Learn here all about the Bubbles feature of Syncfusion .NET MAUI Maps (SfMaps) control to customize their appearances and more.
 platform: MAUI
 control: SfMaps
 documentation: ug
 ---
 
-# Bubbles in MAUI Maps (SfMaps)
+# Bubbles in .NET MAUI Maps (SfMaps)
 
 Bubbles can be rendered in different colors and sizes based on the data values of their assigned shape. You can add information to shapes such as population density, number of users, and more. 
 
@@ -21,8 +21,7 @@ You can enable bubbles using the `ShowBubbles`. You can customize a bubbles usin
 
      <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world1.shp}"
-							   DataSource="{Binding Data}"
+            <map:MapShapeLayer DataSource="{Binding Data}"
 							   PrimaryValuePath="State" 
 							   ShapeDataField="name" 
 							   ShowBubbles="True">
@@ -114,8 +113,7 @@ You can enable tooltip for the bubbles using the `ShowBubbleTooltip` property. I
 
      <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world1.shp}"
-   							   DataSource="{Binding Data}"
+            <map:MapShapeLayer DataSource="{Binding Data}"
    							   PrimaryValuePath="State" 
    							   ShapeDataField="name" 
    							   ShapeHoverFill="Transparent" 
@@ -215,8 +213,7 @@ The value from the `ColorValuePath` will be used for the comparison in the `Equa
 
      <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world1.shp}"
-							   ShowDataLabels="True"
+            <map:MapShapeLayer ShowDataLabels="True"
 							   DataSource="{Binding Data}" 
 							   PrimaryValuePath="State" 
 							   ShapeDataField="name" 
@@ -363,8 +360,7 @@ You can customize the below appearance of the bubbles.
 
      <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world1.shp}"
-							   DataSource="{Binding Data}"
+            <map:MapShapeLayer DataSource="{Binding Data}"
 							   PrimaryValuePath="State" 
 							   ShapeDataField="name"
 							   ShapeHoverFill = "Transparent" 
@@ -463,4 +459,4 @@ public class Model
 
 ![Bubble customization](images/bubble/bubble-customization.png)
 
-N> You can refer to our `MAUI Maps` feature tour page for its groundbreaking feature representations. You can also explore our `MAUI Maps Bubble example` that shows how to configure a Maps in MAUI.
+N> You can refer to our `.NET MAUI Maps` feature tour page for its groundbreaking feature representations. You can also explore our `.NET MAUI Maps Bubble example` that shows how to configure a Maps in .NET MAUI.

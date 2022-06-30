@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Markers in MAUI Maps control | Syncfusion
-description: Learn here all about the Markers feature of Syncfusion MAUI Maps (SfMaps) control to customize its appearance including text, icon and more.
+title: Markers in .NET MAUI Maps control | Syncfusion
+description: Learn here all about the Markers feature of Syncfusion .NET MAUI Maps (SfMaps) control to customize its appearance including text, icon and more.
 platform: MAUI
 control: SfMaps
 documentation: ug
 ---
 
-# Markers in MAUI Maps (SfMaps)
+# Markers in .NET MAUI Maps (SfMaps)
 
 Markers can be used to denote the locations. It is possible to use the built-in symbols or display a custom control at a specific latitude and longitude on a map.
 
@@ -23,8 +23,7 @@ You can show markers at any position on the map by providing latitude and longit
 
 		<map:SfMaps>
             <map:SfMaps.Layer>
-                <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world1.shp}"
-                                   ShapeStroke="DarkGrey"
+                <map:MapShapeLayer ShapeStroke="DarkGrey"
                                    ShowMarkerTooltip="True">
 								   
                     <map:MapShapeLayer.Markers>
@@ -158,8 +157,7 @@ N>
 
 		<map:SfMaps>
             <map:SfMaps.Layer>
-                <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world1.shp}"
-                                   ShapeStroke="DarkGrey"
+                <map:MapShapeLayer ShapeStroke="DarkGrey"
                                    ShowMarkerTooltip="True">
                     <map:MapShapeLayer.Markers>
                         <map:MapMarkerCollection>
@@ -312,8 +310,7 @@ You can show custom marker using the `MarkerTemplate` property of the `MapShapeL
 	
     <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world1.shp}"
-                               ShapeStroke="DarkGrey"
+            <map:MapShapeLayer ShapeStroke="DarkGrey"
                                MarkerTemplate="{StaticResource LowPopulationTemplate}"
                                ShowMarkerTooltip="True">
                 <map:MapShapeLayer.Markers>
@@ -416,8 +413,7 @@ Data template can be used to customize the marker tooltip. The following code ex
 	
     <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world1.shp}"
-                               ShapeStroke="DarkGrey"
+            <map:MapShapeLayer ShapeStroke="DarkGrey"
                                ShapeHoverFill="Transparent"   
                                ShapeHoverStroke="Transparent"
                                MarkerTemplate="{StaticResource MapMarkerTemplate}"
@@ -666,4 +662,4 @@ public class MarkerTemplateSelector : DataTemplateSelector
 
 ![Maps marker appearance customization](images/markers/marker_selector.png)
 
-N> You can refer to our `MAUI Maps` feature tour page for its groundbreaking feature representations. You can also explore our `MAUI Maps Markers example` that shows how to configure a Maps in MAUI.
+N> You can refer to our `.NET MAUI Maps` feature tour page for its groundbreaking feature representations. You can also explore our `.NET MAUI Maps Markers example` that shows how to configure a Maps in .NET MAUI.

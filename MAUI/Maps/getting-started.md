@@ -15,7 +15,7 @@ This section explains the steps required to add the maps control with shape laye
 
 * Create a new .NET MAUI application in the Visual Studio.
 
-* Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfMaps to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Maps], and [Syncfusion.Maui.Core] then install that.
+* Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfMaps to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Maps] then install that.
 
 ### Register the handler
 
@@ -96,24 +96,22 @@ this.Content = map;
 
 {% endtabs %}
 
-## Set GeoJSON data or shape files for shape layer from various source
+## Set GeoJSON data or shapefile for shape layer from various source
 
-The `Layer` in `SfMaps` holds `MapShapeLayer`. The actual geographical rendering is done in the each `MapShapeLayer`. The `ShapesSource` property of the `MapShapeLayer` is of type `MapShapeSource`. The `ShapesSource` can be set as the .json source from file, from network and from stream as bytes. Use the respective constructor depends on the type of the source.
-
-The `ShapeDataField` property of the `MapShapeLayer` is used to refer the unique field name in the .json source to identify each shapes. In `Mapping the data source` section of this document, this `ShapeDataField` will be used to map with respective value  in `PrimaryValuePath` from the data source.
+The `Layer` in `SfMaps` holds `MapShapeLayer`. The actual geographical rendering is done in the each `MapShapeLayer`. The `ShapesSource` property of the `MapShapeLayer` is of type `MapShapeSource`. The `ShapesSource` can be set as the .json source or shapefile.
 
 I> The Mercator projection is the default projection in the maps.
 
 The `ShapesSource` property is used to load an shapes from different sources:
 
 `FromFile` returns a MapSource that reads an shape source from a local file.
-`FromUri` returns an MapSource that downloads and reads an Geo json data from a specified URI.
-`FromResource` returns a MapSource that reads an shape file or json file embedded in an assembly.
+`FromUri` returns an MapSource that downloads and reads an shape source from a specified URI.
+`FromResource` returns a MapSource that reads an shape source file embedded in an assembly.
 `FromStream` returns a MapSource that reads an shape source from a stream that supplies source data.
 
-### Loading from file
+### Loading a local file
 
-SfMaps provides support to load the json data or shape file from local path. 
+SfMaps provides support to load the json data or shapefile from local path. 
 
 {% tabs %}
 
@@ -133,9 +131,39 @@ public MainPage()
 
 {% endtabs %}
 
-### Loading from URI
+The MapSource.FromFile method requires a string argument, and returns a new MapShapeSource object that reads the data from the shape source file. There's also an implicit conversion operator that enables the filename to be specified as a string argument to the `ShapeSource` property
 
-SfMaps provides support to load the json data or shape file from the uri.
+{% tabs %}
+
+{% highlight XAML %}
+
+     <map:SfMaps>
+        <map:SfMaps.Layer>
+            <map:MapShapeLayer ShapesSource="D:\MyProject\usa_state.shp" />
+        </map:SfMaps.Layer>
+    </map:SfMaps>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+public MainPage()
+{
+    InitializeComponent();
+    SfMaps map = new SfMaps();
+    MapShapeLayer layer = new MapShapeLayer();
+    layer.ShapesSource = MapSource.FromFile(@"D:\MyProject\usa_state.shp");
+    map.Layer = layer;
+    this.Content = map;
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Load a remote image
+
+SfMaps provides support to load the json data or shapefile from the uri.
 
 {% tabs %}
 
@@ -155,13 +183,43 @@ public MainPage()
 
 {% endtabs %}
 
-### Loading from embedded resource
+The MapSource.FromUri method requires a Uri argument, and returns a new `MapShapeSource` object that reads the shape source from the Uri. There's also an implicit conversion for string-based URIs.
+
+{% tabs %}
+
+{% highlight XAML %}
+
+     <map:SfMaps>
+        <map:SfMaps.Layer>
+            <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json" />
+        </map:SfMaps.Layer>
+    </map:SfMaps>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+public MainPage()
+{
+    InitializeComponent();
+    SfMaps map = new SfMaps();
+    MapShapeLayer layer = new MapShapeLayer();
+    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
+    map.Layer = layer;
+    this.Content = map;
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Load an embedded file
 
 * Embedded sources are loaded based on their resource ID, which is compromised of the name of the project and its location in the project. 
-* You can load both json and shape file.
+* You can load both json data and shapefile.
 * For example, placing `australia.json` in the root folder of a project named `MyProject` will result in a resource ID of `MyProject.australia.json.` Similarly, placing `world1.shp` in the Assets folder of a project named MyProject will result in a resource ID of `MyProject.Assets.world1.shp`
-* Right-click the added shape file, and navigate to properties.
-* Choose the `EmbeddedResource` option under BuildAction of respective shape file.
+* Right-click the added shapefile, and navigate to properties.
+* Choose the `EmbeddedResource` option under BuildAction of respective shapefile.
 
 N> You can get the [`australia.json`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/australia-json-910278184.zip) file here.
 
@@ -183,54 +241,9 @@ public MainPage()
 
 {% endtabs %}
 
-### Load an embedded file in XAML
-
-The Embedded json or shape file can be loaded in XAML using a custom XAML markup extentions.
-
-{% tabs %}
-
-{% highlight XAML %}
-
-<map:SfMaps>
-    <map:SfMaps.Layer>
-        <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world1.shp}" />
-    </map:SfMaps.Layer>
-</map:SfMaps>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-[ContentProperty("ResourcePath")]
-public class MapSourceResourceExtension : IMarkupExtension<MapSource>
-{
-    public string ResourcePath { set; get; }
-
-    public MapSource ProvideValue(IServiceProvider serviceProvider)
-    {
-        if (string.IsNullOrEmpty(ResourcePath))
-        {
-            IXmlLineInfoProvider lineInfoProvider = serviceProvider.GetService(typeof(IXmlLineInfoProvider)) as IXmlLineInfoProvider;
-            IXmlLineInfo lineInfo = (lineInfoProvider != null) ? lineInfoProvider.XmlLineInfo : new XmlLineInfo();
-            throw new XamlParseException("MapSourceResourceExtension needs ResourcePath value", lineInfo);
-        }
-
-        return MapSource.FromResource(ResourcePath);
-    }
-
-    object IMarkupExtension.ProvideValue(IServiceProvider serviceProvider)
-    {
-        return (this as IMarkupExtension<MapSource>).ProvideValue(serviceProvider);
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
 ### Loading from stream
 
-SfMaps provides support to load the json data or shape file as bytes from stream.
+SfMaps provides support to load the json data or shapefile as bytes from stream.
 
 {% tabs %}
 
@@ -397,4 +410,4 @@ public class ViewModel
 
 ![Maps getting started](images/getting-started/maps_getting_started.png)
 
-N> You can refer to our `MAUI Maps` feature tour page for its groundbreaking feature representations. You can also explore our `MAUI Maps example`that shows how to configure a Maps in MAUI.
+N> You can refer to our `.NET MAUI Maps` feature tour page for its groundbreaking feature representations. You can also explore our `.NET MAUI Maps example`that shows how to configure a Maps in .NET MAUI.

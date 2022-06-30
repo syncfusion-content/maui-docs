@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Shape in MAUI Maps control | Syncfusion
-description: Learn here all about different shape appearance customization options of the Syncfusion MAUI Maps (SfMaps) control.
+title: Shape in .NET MAUI Maps control | Syncfusion
+description: Learn here all about different shape appearance customization options of the Syncfusion .NET MAUI Maps (SfMaps) control.
 platform: MAUI
 control: SfMaps
 documentation: ug
 ---
 
-# Shapes in MAUI Maps (SfMaps)
+# Shapes in .NET MAUI Maps (SfMaps)
 
-This section explains about shapes and how to apply colors to the shapes based on specific values in the MAUI maps.
+This section explains about shapes and how to apply colors to the shapes based on specific values in the .NET MAUI maps.
 
 ## Shape color
 
@@ -21,8 +21,7 @@ You can apply color, stroke color and stroke thickness to the shapes using the `
 
      <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world-map.json}"
-							   ShapeStroke="Green"
+            <map:MapShapeLayer ShapeStroke="Green"
 							   ShapeFill="LightGreen"  
 							   ShapeStrokeThickness="2">
             </map:MapShapeLayer>
@@ -65,8 +64,7 @@ You can apply hover color, hover stoke color and hover stroke thickness to the s
 
      <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world-map.json}"
-							   ShapeHoverStroke="Blue"
+            <map:MapShapeLayer ShapeHoverStroke="Blue"
 							   ShapeHoverFill="LightBlue"  
 							   ShapeHoverStrokeThickness="2">
             </map:MapShapeLayer>
@@ -109,8 +107,7 @@ N> You can show legend using the `Legend` property.The icons color of the legend
 
      <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world-map.json}"
-							   DataSource="{Binding Data}"       
+            <map:MapShapeLayer DataSource="{Binding Data}"       
 							   PrimaryValuePath="State" 
 							   ShapeDataField="STATE_NAME" 
 							   ShapeColorValuePath="Color">
@@ -187,8 +184,7 @@ You can apply color to the shape by comparing a value from the `ColorMappings` w
 
      <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world-map.json}"
-							   DataSource="{Binding Data}" 
+            <map:MapShapeLayer DataSource="{Binding Data}" 
 							   PrimaryValuePath="Country" 
 							   ShapeDataField="name" 
 							   ShapeColorValuePath="Count">
@@ -278,8 +274,7 @@ You can apply color to the shape based on whether the value from `ColorMappings`
 
      <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world-map.json}"
-							   DataSource="{Binding Data}" 
+            <map:MapShapeLayer DataSource="{Binding Data}" 
 							   PrimaryValuePath="Country" 
 							   ShapeDataField="name" 
 							   ShapeColorValuePath="Count">
@@ -362,4 +357,4 @@ public class Model
 ![Range color mapping](images/shape/range_color_mapping.png)
 
 N>
-* Refer the `BubbleSettings`, for setting the bubble colors based on the specific value. You can refer to our `MAUI Maps` feature tour page for its groundbreaking feature representations. You can also explore our `MAUI Maps Shapes example` that shows how to configure a Maps in MAUI.
+* Refer the `BubbleSettings`, for setting the bubble colors based on the specific value. You can refer to our `.NET MAUI Maps` feature tour page for its groundbreaking feature representations. You can also explore our `.NET MAUI Maps Shapes example` that shows how to configure a Maps in .NET MAUI.

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Shape Selection in MAUI Maps control | Syncfusion
-description: Learn here all about the Shape Selection feature of Syncfusion MAUI Maps (SfMaps) control and more.
+title: Shape Selection in .NET MAUI Maps control | Syncfusion
+description: Learn here all about the Shape Selection feature of Syncfusion .NET MAUI Maps (SfMaps) control and more.
 platform: MAUI
 control: SfMaps
 documentation: ug
 ---
 
-# Shape Selection in MAUI Maps (SfMaps)
+# Shape Selection in .NET MAUI Maps (SfMaps)
 
 You can select a shape in order to highlight that area on a map. You can use the event for performing any action during shape selection.
 
@@ -24,7 +24,6 @@ The `ShapeSelected` event is used to perform any action on shape selected shape 
      <map:SfMaps>
         <map:SfMaps.Layer>
             <map:MapShapeLayer x:Name="layer"
-							   ShapesSource="{local:MapSourceResourceExtension MyProject.australia.json}"
 							   SelectedShapeFill="Aqua"
 							   ShapeSelected="layer_ShapeSelected" 
 							   EnableSelection="True">
@@ -36,6 +35,15 @@ The `ShapeSelected` event is used to perform any action on shape selected shape 
 {% endhighlight %}
 
 {% highlight c# %}
+
+public class MainPage()
+{
+	public MainPage()
+	{
+		InitializeComponent();
+		layer.ShapesSource = MapSource.FromResource("MyProject.australia.json");
+	}
+}
 
 private void layer_ShapeSelected(object sender, ShapeSelectedEventArgs e)
 {
@@ -62,8 +70,7 @@ You can customize the below appearance of the selected shape.
 
      <map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.australia.json}"
-							   DataSource="{Binding Data}" 
+            <map:MapShapeLayer DataSource="{Binding Data}" 
 							   PrimaryValuePath="Country"
 							   ShapeDataField="STATE_NAME" 
 							   ShapeColorValuePath = "Color" 
@@ -138,4 +145,4 @@ You can customize the below appearance of the selected shape.
 
 ![Selection customization](images/selection/selection-customization.png)
 
-N> You can refer to our `MAUI Maps` feature tour page for its groundbreaking feature representations. You can also explore our `MAUI Maps Selection example` that shows how to configure a Maps in MAUI.
+N> You can refer to our `.NET MAUI Maps` feature tour page for its groundbreaking feature representations. You can also explore our `.NET MAUI Maps Selection example` that shows how to configure a Maps in .NET MAUI.
