@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Grouping in .NET MAUI ListView control | Syncfusion
-description: Learn here all about Grouping support in Syncfusion .NET MAUI ListView (SfListView) control, its elements and more.
+title: Styling in .NET MAUI DataGrid control | Syncfusion
+description: Learn here all about Styling support in Syncfusion .NET MAUI DataGrid (SfDataGrid) control, its elements and more.
 platform: MAUI
-control: SfListView
+control: SfDataGrid
 documentation: ug
 ---
 
