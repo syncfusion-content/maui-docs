@@ -44,10 +44,10 @@ N>
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
-<schedule:SfScheduler x:Name="Scheduler"  View="TimelineMonth" CalendarType="Taiwan">
+<schedule:SfScheduler x:Name="Scheduler"  View="TimelineMonth" CalendarType="Hijri">
 </scheduler:SfScheduler>
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10" %}
-this.Scheduler.CalendarType = CalendarType.Taiwan;
+this.Scheduler.CalendarType = CalendarType.Hijri;
 {% endhighlight %}
 {% endtabs %}

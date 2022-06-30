@@ -79,7 +79,7 @@ this.Scheduler.MonthView.ShowLeadingAndTrailingDates = false;
 
 ![show-or-hide-leading-and-trailing-days-appearence-customization-in-maui-scheduler](images/month-view/show-or-hide-leading-and-trailing-days-appearence-customization-in-maui-scheduler.png)
 
-## Number of visible  weeks in the month view 
+## Number of weeks visible in the month view 
 
 The number of week visible in the month view can be changed by setting the [NumberOfVisibleWeeks]() property in the [MonthView](). 
 

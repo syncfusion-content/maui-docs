@@ -41,7 +41,7 @@ this.Scheduler.DaysView.NumberOfVisibleDays = 3;
 {% endhighlight %}
 {% endtabs %}
 
-![number of visble days in maui scheduler](images/day-week-views/)
+![number-of-visble-days-in-maui-scheduler](images/day-week-views/)
 
 ## Change time interval
 
