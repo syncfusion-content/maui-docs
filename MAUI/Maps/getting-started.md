@@ -292,7 +292,9 @@ The `ShapeDataField` property is similar to the `PrimaryValuePath` property. It 
 public MainPage()
 {
     InitializeComponent();
+
     this.BindingContext = this;
+    
     ObservableCollection<Model> Data = new ObservableCollection<Model>();
     Data.Add(new Model("New South Wales", "New\nSouth Wales"));
     Data.Add(new Model("Queensland", "Queensland"));
@@ -300,6 +302,7 @@ public MainPage()
     Data.Add(new Model("Victoria", "Victoria"));
     Data.Add(new Model("Western Australia", "Western Australia"));
     Data.Add(new Model("Tasmania", "Tasmania"));
+
     SfMaps maps = new SfMaps();
     MapShapeLayer layer = new MapShapeLayer();
     layer.ShapesSource = MapSource.FromResource("MyProject.australia.json");
@@ -377,7 +380,7 @@ Add the basic maps elements such as data labels, legend, and tooltip as shown in
                         <map:MapDataLabelSettings.DataLabelStyle>
                                 <map:MapLabelStyle FontSize="14"
                                                    TextColor="Black"
-                                                   FontAttributes="Bold" />
+                                                   FontAttributes="Italic" />
                         </map:MapDataLabelSettings.DataLabelStyle>
                 </map:MapDataLabelSettings>
             </map:MapShapeLayer.DataLabelSettings>
@@ -413,7 +416,7 @@ public MainPage()
         DataLabelStyle = new MapLabelStyle()
         {
             FontSize = 14,
-            FontAttributes = FontAttributes.Bold,
+            FontAttributes = FontAttributes.Italic,
             TextColor = Colors.Black
         },
 

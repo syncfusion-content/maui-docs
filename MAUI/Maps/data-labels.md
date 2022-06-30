@@ -13,7 +13,7 @@ Data labels provides identification for the shapes by displaying their names. Yo
 
 ## Show data labels
 
-You can show data labels on the map using the `ShowDataLabels` property and customize text of the data labels using the `DataLabelPath` property. The default value of  `ShowDataLabels`  is `false`. 
+You can show data labels on the map using the `ShowDataLabels` and `DataLabelPath` properties. The `ShowDataLabels` is used to control the visibility of data labels, the `DataLabelPath` is used to decide which underline property has to be displayed as data labels. The default value of `ShowDataLabels` is `false`. 
 
 {% tabs %}
 
