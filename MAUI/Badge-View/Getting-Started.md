@@ -132,7 +132,7 @@ An Image, button, or label or any view can be added to the Badge View using the 
 
 {% highlight xaml %}
 
- <badge:SfBadgeView HorizontalOptions="Center" VerticalOptions="Center" >
+<badge:SfBadgeView HorizontalOptions="Center" VerticalOptions="Center" >
         <badge:SfBadgeView.Content>
             <Button Text="Primary" WidthRequest="120"  HeightRequest="60"/>
         </badge:SfBadgeView.Content>
@@ -163,7 +163,7 @@ The following code sample gives you the complete code for Badge View with badge 
 
 {% highlight xaml %}
 
- <badge:SfBadgeView HorizontalOptions="Center" VerticalOptions="Center" BadgeText="20">
+<badge:SfBadgeView HorizontalOptions="Center" VerticalOptions="Center" BadgeText="20">
         <badge:SfBadgeView.Content>
             <Button Text="Primary" WidthRequest="120"  HeightRequest="60"/>
         </badge:SfBadgeView.Content>
@@ -174,22 +174,22 @@ The following code sample gives you the complete code for Badge View with badge 
 
 {% highlight c# %}
 
-        public MainPage()
-        {
-            InitializeComponent();
-            SfBadgeView sfBadgeView = new SfBadgeView();
-            sfBadgeView.HorizontalOptions = LayoutOptions.Center;
-            sfBadgeView.VerticalOptions = LayoutOptions.Center;
-            sfBadgeView.BadgeText = "20";
+public MainPage()
+{
+    InitializeComponent();
+    SfBadgeView sfBadgeView = new SfBadgeView();
+    sfBadgeView.HorizontalOptions = LayoutOptions.Center;
+    sfBadgeView.VerticalOptions = LayoutOptions.Center;
+    sfBadgeView.BadgeText = "20";
 
-            //Adding image to the content of the badge view.
-            Button button = new Button();
-            button.Text = "Primary";
-            button.WidthRequest = 120;
-            button.HeightRequest = 60;
-            sfBadgeView.Content = button;
-            Content = sfBadgeView;
-        }
+    //Adding image to the content of the badge view.
+    Button button = new Button();
+    button.Text = "Primary";
+    button.WidthRequest = 120;
+    button.HeightRequest = 60;
+    sfBadgeView.Content = button;
+    Content = sfBadgeView;
+}
 
 {% endhighlight %}
 
