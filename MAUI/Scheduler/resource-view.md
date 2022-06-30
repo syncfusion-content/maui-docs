@@ -9,7 +9,7 @@ documentation: ug
 
 # Resource in MAUI Scheduler (SfScheduler)
 
-The scheduler resource view will allow the group appointments based on the resources or dates, arranged by the column, or row in the day, week, workweek, timeline day, timeline week, timeline workweek, and timeline month views. It also allows to share the events or appointments to the multiple resources and resource appointment details that can be edited by using a built-in appointment editor dialog.
+The .NET MAUI Scheduler control allows you to group appointments based on the resources associated with them in the timeline day, timeline week, timeline workweek, and timeline month views, with complete business object binding, multi resource appointment sharing and UI customization features.
 
 ## Create Scheduler resources
 You can create a resource view by setting the Name, Id, Background, and Foreground property of the SchedulerResource.
@@ -263,10 +263,9 @@ N>
 * If the viewport height is lesser than 400 then each resource height will be calculated by default viewport size(4 (default resource*100)) divided by the minimum value of scheduler resources count and 4 (default resource count).
 * If the MinimumRowHeight is less than the default row height then the default row height will be used.
 
-## Special time regions
+## Assign resources to special time regions
 Special time region can be created based on the resources in the timeline day, timeline week, timeline workweek, and timeline month views.
 
-### Assign resources to special time regions in timeline view
 {% tabs %}
 {% highlight xaml tabtitle="MainWindow.xaml" %}
 
@@ -289,7 +288,7 @@ You can programmatically select the resource by using the ResourceId and Selecte
 
 ## Appearance customization
 
-The resource appearance customization can be achieved by using the [ResourceHeaderTemplate]() and [ResourceHeaderTemplateSelector]() properties of the [SfScheduler]().
+The resource appearance customization can be achieved by using the [ResourceHeaderTemplate]() property of the [SfScheduler]().
 
 #### Customize resource appearance using ResourceHeaderTemplate
 
