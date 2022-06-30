@@ -70,7 +70,7 @@ Default column width or defined width set to column.
 </tr>
 </table>
 
-N> ColumnWidthMode will not work when the column width defined explicitly. ColumnWidthMode calculates column width based on `MinimumWidth` and `MaximumWidth` properties.
+N> ColumnWidthMode will not work when the column width defined explicitly. ColumnWidthMode calculates column width based on `MinimumWidth`, `MaximumWidth` and `Width` properties.
 
 Below code, applies `ColumnWidthMode.Fill` to equally set width for `SfDataGrid.Columns`.
 
