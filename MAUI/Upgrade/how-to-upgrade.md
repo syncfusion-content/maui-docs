@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Upgrading Syncfusion .NET MAUI installer to a latest version - Syncfusion
+title: Upgrading Syncfusion MAUI installer to a latest version
 description: Learn here about the how upgrade Syncfusion .NET MAUI installer to a latest version from website and control panel.
 platform: MAUI
 control: Essential Studio
