@@ -54,7 +54,7 @@ The following table describes the types of columns and its usage:
 
 ## DataGridColumn
 
-The `DataGridColumn` is the base column types of all columns. Hence its properties are used by all the columns. The following sub-sections explain the properties and customizations of DataGridColumn:
+The `DataGridColumn` is the base column types of all columns. Hence its properties are used by all the columns. The following sub-sections explain the properties and customizations of DataGridColumn.
 
 ### Binding options
 
@@ -64,7 +64,7 @@ The actual bound value of the GridColumn is determined from `DataGridColumn.Valu
 
 #### Mapping column to particular property
 
-The `DataGridColumn.MappingName`associates the DataGridColumn with a property available in the underlying data source. While setting MappingName alone to the SfDataGrid, the `DataGridColumn.DisplayBinding` will be automatically generated based on the MappingName. Data manipulation operations like sorting, filtering, and grouping will be done based on the MappingName property.
+The `DataGridColumn.MappingName` associates the DataGridColumn with a property available in the underlying data source. While setting MappingName alone to the SfDataGrid, the `DataGridColumn.DisplayBinding` will be automatically generated based on the MappingName. Data manipulation operations like sorting, filtering, and grouping will be done based on the MappingName property.
 
 To format cell content, use the converter of the `DataGridColumn.DisplayBinding` to customize the cell content. The following code example appends the text “Customer” along with the Customer ID:
 
@@ -92,7 +92,7 @@ public class DisplayBindingConverter : IValueConverter
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
     {
         if (value != null)
-            return "Customer:" + value.ToString();
+            return "Customer : " + value.ToString();
         return null;
     }
 
@@ -103,15 +103,17 @@ public class DisplayBindingConverter : IValueConverter
 }
 {% endhighlight %}
 
+
+
+### TextAlignment
+
+To get or set the TextAlignment of the header cell and data row cell , use the `DataGridColumn.HeaderTextAlignment` and `DataGridColumn.cellTextAlignment` property. The default alignment is `Center`. It can be customized as `Start` or `End`.
+
 ### Header customizations
 
 #### HeaderText
 
 To customize the display content of the header cell, use the `DataGridColumn.HeaderText` property. It specifies the text displayed in the column header. If header text is not defined, then `DataGridColumn.MappingName` will be assigned to the header text and will be displayed as column header.
-
-#### HeaderTextAlignment
-
-To get or set the TextAlignment of the header cell, use the `DataGridColumn.HeaderTextAlignment` property. The default alignment is `Center`. It can be customized as `Start` or `End`.
 
 #### HeaderTemplate
 
@@ -119,11 +121,11 @@ Based on the requirement, the header cell can be customized using the `DataGridC
 
 {% highlight xaml %}
 <syncfusion:SfDataGrid.Columns>
-    <syncfusion:DataGridTextColumn="OrderID">
+    <syncfusion:DataGridTextColumn MappingName="OrderID">
         <syncfusion:DataGridTextColumn.HeaderTemplate>
             <DataTemplate>
-                <Label x:Name="OrderID" Text="OrderID" TextColor="Black" 
-                       BackgroundColor="Yellow"/>
+                <Label x:Name="OrderID" Text="OrderID" TextColor="Black" 
+                BackgroundColor="Yellow"  />
             </DataTemplate>
         </syncfusion:DataGridTextColumn.HeaderTemplate>
     </syncfusion:DataGridTextColumn>
@@ -140,13 +142,12 @@ Customize the width for auto generated columns in both XAML and code as follows:
 
 {% tabs %}
 {% highlight xaml %}
-<sfgrid:SfDataGrid x:Name="dataGrid"
-                   AutoGenerateColumnsMode="None"
-    <sfgrid:SfDataGrid.Columns x:TypeArguments="sfgrid:Columns">
-      <sfgrid:DataGridTextColumn MappingName="OrderID"
+<syncfusion:SfDataGrid x:Name="dataGrid" ItemsSource="{Binding OrderInfoCollection}" AutoGenerateColumnsMode="None">
+        <syncfusion:SfDataGrid.Columns x:TypeArguments="sfgrid:Columns">
+        <syncfusion:DataGridTextColumn MappingName="OrderID" HeaderText="Order ID"
                              Width="100"/>
-      </sfgrid:SfDataGrid.Columns > 
-  </sfgrid:SfDataGrid>
+        </syncfusion:SfDataGrid.Columns >
+    </syncfusion:SfDataGrid>
   
 {% endhighlight %}
 {% highlight c# %}
@@ -202,17 +203,47 @@ SfDataGrid allows the users to set padding for the Header and cells in display m
 
 {% tabs %}
 {% highlight xaml %}    
-    <syncfusion:DataGridTextColumn MappingName="OrderID" TextAlignment="Start" CellPadding="10,0,0,0"  HeaderPadding="10,0,0,0"/>
+    <syncfusion:DataGridTextColumn MappingName="OrderID" CellTextAlignment="Start" CellPadding="10,0,0,0"  HeaderPadding="10,0,0,0"/>
 {% endhighlight %}
 
 {% highlight c# %}
 
 DataGridTextColumn orderID = new DataGridTextColumn();
 orderID.MappingName = "OrderID";
-orderID.TextAlignment = TextAlignment.Start;
+orderID.CellTextAlignment = TextAlignment.Start;
 orderID.CellPadding = new Thickness(10, 0, 0, 0);
 orderID.HeaderPadding = new Thickness(10, 0, 0, 0);
 
+{% endhighlight %}
+{% endtabs %}
+
+### Formatting
+
+To format values displayed in the GridColumn, use the `DataGridColumn.Format` property.
+
+#### Format column using StringFormat
+
+Assign the format of string to the `DataGridColumn.Format` property based on the bound data type of the property, the DataGridColumn is associated to format the value. You can use different `StringFormats` to customize values displayed in the record cells.
+
+To apply formatting for a DataGridTextColumn, follow the code example:
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid.Columns>
+    <syncfusion:DataGridTextColumn MappingName="Freight" Format="C" />
+    <syncfusion:DataGridTextColumn MappingName="ShippingDate" Format="dd/MM/yyyy" />
+</syncfusion:SfDataGrid.Columns> 
+{% endhighlight %}
+{% highlight c# %}
+dataGrid.Columns.Add (new GridTextColumn () { 
+    MappingName = "Freight",
+    Format = "C"
+});
+
+dataGrid.Columns.Add (new GridTextColumn () { 
+    MappingName = "ShippingDate",
+    Format = "dd/MM/yyyy"
+});
 {% endhighlight %}
 {% endtabs %}
 
@@ -224,7 +255,7 @@ The following code example creates DataGridTextColumn:
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:DataGridTextColumn="OrderID" /> 
+<syncfusion:DataGridTextColumn MappingName ="OrderID" /> 
 {% endhighlight %}
 {% highlight c# %}
 dataGrid.Columns.Add(DataGridTextColumn() { MappingName = "OrderID" });
@@ -339,12 +370,12 @@ To use DataGridCheckBoxColumn, follow the code example:
     <local:ViewModel />
 </ContentPage.BindingContext>
 
-<sfGrid:SfDataGrid x:Name="dataGrid"
+<syncfusion:SfDataGrid x:Name="dataGrid"
                    ItemsSource="{Binding OrdersInfo}">
-    <sfGrid:SfDataGrid.Columns>
-        <sfGrid:DataGridCheckBoxColumn MappingName="IsOnline" />
-    </sfGrid:SfDataGrid.Columns>
-</sfGrid:SfDataGrid> 
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridCheckBoxColumn MappingName="IsOnline" HeaderText="Is Online" />
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid> 
 {% endhighlight %}
 
 {% highlight c# %}
@@ -375,7 +406,7 @@ public class ViewModel
 
     private ObservableCollection<OrderInfo> ordersInfo;
 
-    public ObservableCollection<OrderInfo> OrdersInfo
+    public ObservableCollection<OrderInfo> OrderInfoCollection
     {
         get { return ordersInfo; }
         set { this.ordersInfo = value; }
@@ -403,7 +434,7 @@ public class ViewModel
 } 
 {% endhighlight %}
 
-![DateColumn](Images/column-types/checkbox-column.PNG)
+![DataGrid with image column](Images\column-types\checkbox.png)
 
 
 ## DataGridImageColumn
@@ -424,13 +455,11 @@ To load image (embedded resource) in DataGridImageColumn, follow the code exampl
     <local:ViewModel />
 </ContentPage.BindingContext>
 
-<sfGrid:SfDataGrid x:Name="dataGrid"
-                   AutoGenerateColumnsMode="None"
-                   ItemsSource="{Binding OrdersInfo}">
-    <sfGrid:SfDataGrid.Columns>
-        <sfGrid:DataGridImageColumn MappingName="DealerImage" />
-    </sfGrid:SfDataGrid.Columns>
-</sfGrid:SfDataGrid>
+<syncfusion:SfDataGrid x:Name="dataGrid" ItemsSource="{Binding OrderInfoCollection}"  ColumnWidthMode="Fill" utoGenerateColumnsMode="None">
+    <syncfusion:SfDataGrid.Columns >
+        <syncfusion:DataGridImageColumn  MappingName="DealerImage" HeaderText="Dealer Image" />
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 
 {% highlight c# %}
@@ -461,7 +490,7 @@ public class ViewModel
 
     private ObservableCollection<OrderInfo> ordersInfo;
 
-    public ObservableCollection<OrderInfo> OrdersInfo
+    public ObservableCollection<OrderInfo> OrderInfoCollection
     {
         get { return ordersInfo; }
         set { this.ordersInfo = value; }
@@ -489,6 +518,7 @@ public class ViewModel
 }
 {% endhighlight %}
 
+![DataGrid with image column](Images\column-types\image-column.png)
 ### Aspect
 
 SfDataGrid allows you to set the `Aspect` to size the loaded images within the bounds of the grid cell (whether to stretch, crop or letterbox) using the `DataGridImageColumn.Aspect` property. The supported aspects are described below, the default value is AspectFit.
@@ -542,14 +572,15 @@ Underlying records will be the BindingContext for the `CellTemplate`. The follow
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:DataGridTemplateColumn="CustomerID">
+<syncfusion:DataGridTemplateColumn MappingName="CustomerID" HeaderText="Customer ID">
     <syncfusion:DataGridTemplateColumn.CellTemplate>
         <DataTemplate>
-            <Label Text="{Binding CustomerID}" TextColor="Blue" 
-                   XAlign="Center" YAlign="Center" />
+            <StackLayout>
+                <Label Text="{Binding CustomerID}" TextColor="Blue" />
+            </StackLayout>
         </DataTemplate>
     </syncfusion:DataGridTemplateColumn.CellTemplate>
-</syncfusion:DataGridTemplateColumn> 
+</syncfusion:DataGridTemplateColumn>
 {% endhighlight %}
 {% highlight c# %}
 DataGridTemplateColumn templateColumn = new DataGridTemplateColumn()
@@ -667,13 +698,11 @@ Load the underlying records through the `CellTemplate` to use CellTemplateSelect
     </ResourceDictionary>
 </ContentPage.Resources>
 
-<sfgrid:DataGridTemplateColumn MappingName="Freight" >
-    <sfgrid:DataGridTemplateColumn.CellTemplate>
-        <local:FreightTemplateSelector High="{StaticResource high}"
-                                       Average="{StaticResource average}"
-                                       Low="{StaticResource low}"/>
-    </sfgrid:DataGridTemplateColumn.CellTemplate>
-</sfgrid:DataGridTemplateColumn>
+<syncfusion:DataGridTemplateColumn MappingName="Freight" HeaderText="Freight">
+    <syncfusion:DataGridTemplateColumn.CellTemplate>
+            <local:FreightTemplateSelector High="{StaticResource high}" Average="{StaticResource average}" Low="{StaticResource low}"/>
+    </syncfusion:DataGridTemplateColumn.CellTemplate>
+</syncfusion:DataGridTemplateColumn>
 {% endhighlight %}
 
 {% highlight c# %}
@@ -699,25 +728,23 @@ public class FreightTemplateSelector : DataTemplateSelector
 }
 {% endhighlight %}
 
-![DateColumn](Images/column-types/template-column.PNG)
+![DataGrid with image column](Images\column-types\celltemplateselector.png)
 
 ### Getting row index of a row in GridTemplateColumn
 
-The SfDataGrid provides various resolving methods to resolve the row index of grid rows based on certain criteria. The actual row index of a row can be resolved by using the `ResolveToRowIndex(recordRowIndex)` method. 
-
-The row index of a grid row can be obtained in GridTemplateColumn by retrieving the record index of the row using the bound data from its `BindingContext` and by resolving the recordRowIndex using the `SfDataGrid.ResolveToRowIndex(recordRowIndex)` method.
+We can get the row data of the specified row using a button inside the DataGridTemplateColumn .
 
 {% tabs %}
 {% highlight xaml %}
 // MainPage.Xaml
 
-<sfgrid:DataGridTemplateColumn HeaderText="ShipCity" MappingName="ShipCity">
-  <sfgrid:DataGridTemplateColumn.CellTemplate>
-    <DataTemplate>
-      <Button Clicked="button_Clicked" WidthRequest="120" Text="{Binding ShipCity}"/>
-    </DataTemplate>
-  </sfgrid:DataGridTemplateColumn.CellTemplate>
-</sfgrid:DataGridTemplateColumn>
+<syncfusion:DataGridTemplateColumn HeaderText="ShipCity" MappingName="ShipCity">
+    <syncfusion:DataGridTemplateColumn.CellTemplate>
+        <DataTemplate>
+            <Button Clicked="Button_Clicked" WidthRequest="120" Text="{Binding ShipCity}"/>
+        </DataTemplate>
+    </syncfusion:DataGridTemplateColumn.CellTemplate>
+</syncfusion:DataGridTemplateColumn>
 
 {% endhighlight %}
 
@@ -734,11 +761,34 @@ public partial class MainPage : ContentPage
           var button = sender as Button;
           var record = button.BindingContext as OrderInfo;
           var recordRowIndex = viewModel.OrderInfoCollection.IndexOf(record);
-          var rowIndex = sfGrid.ResolveToRowIndex(recordRowIndex);
      }
 }
 {% endhighlight %}
 {% endtabs %}
+
+### Loading DatePicker and TimePicker together
+
+Currently .NET MAUI does not provide a view that combines both the `DatePicker` and the `TimePicker` as one control. However, the two controls are available individually. 
+
+The SfDataGrid supports `DatePicker` and `TimePicker` in the same column. It can be achieved by loading the `DatePicker` and `TimePicker` in `StackLayout` in the `GridTemplateColumn`.
+
+To load `DatePicker` and `TimePicker` together, follow the code example:
+
+{% highlight xaml %}
+<syncfusion:DataGridTemplateColumn MappingName="ShippingDate" HeaderText="Shipping Date">
+    <syncfusion:DataGridTemplateColumn.CellTemplate>
+        <DataTemplate>
+            <StackLayout  Margin="10">
+                <DatePicker Date="{Binding ShippedDate}" TextColor="Black"/>
+                <TimePicker Time="{Binding ShippingTime}" TextColor="Black" />
+            </StackLayout>
+        </DataTemplate>
+    </syncfusion:DataGridTemplateColumn.CellTemplate>
+</syncfusion:DataGridTemplateColumn>
+{% endhighlight %}
+
+The following screenshot shows that how `DatePicker` and `TimePicker` are viewed together:
+
 
 ## DataGridDateColumn
 
@@ -750,14 +800,11 @@ The `SfDataGrid.DataGridDateColumn` inherits all the properties of the `SfDataGr
     <local:ViewModel x:Name ="viewModel"/>
 </ContentPage.BindingContext>
 
-<sfGrid:SfDataGrid x:Name="dataGrid"                   
-                   ItemsSource="{Binding OrdersInfo}">
-    <sfGrid:SfDataGrid.Columns>
-        <sfgrid:DataGridDateColumn Format="d"
-                                   HeaderText="Date"
-                                   MappingName="ShippedDate" />
-    </sfGrid:SfDataGrid.Columns>
-</sfGrid:SfDataGrid>
+<syncfusion:SfDataGrid x:Name="DataGrid" ItemsSource="{Binding OrderInfoCollection}" AutoGenerateColumnsMode="None">
+        <syncfusion:SfDataGrid.Columns >
+           <syncfusion:DataGridDateColumn Format="d"  HeaderText="Date" MappingName="ShippedDate" />
+        </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 
 {% highlight c# %}
@@ -803,7 +850,7 @@ public class ViewModel
 
     private ObservableCollection<OrderInfo> ordersInfo;
 
-    public ObservableCollection<OrderInfo> OrdersInfo
+    public ObservableCollection<OrderInfo> OrderInfoCollection
     {
         get { return ordersInfo; }
         set { this.ordersInfo = value; }
@@ -861,14 +908,13 @@ The `DataGridNumericColumn` inherits all the properties of `DataGridColumn`. It 
     <local:ViewModel  x:Name ="viewModel"/>
 </ContentPage.BindingContext>
 
-<sfGrid:SfDataGrid x:Name="dataGrid"                   
+<syncfusion:SfDataGrid x:Name="dataGrid"           
                    ItemsSource="{Binding OrdersInfo}">
-    <sfGrid:SfDataGrid.Columns>
-        <sfgrid:DataGridNumericColumn
-                                  HeaderText="OrderID"
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridNumericColumn Format="C" HeaderText="ID"
                                   MappingName="OrderID"/>
-    </sfGrid:SfDataGrid.Columns>
-</sfGrid:SfDataGrid>
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 
 {% highlight c# %}
@@ -887,30 +933,29 @@ dataGrid.Columns.Add(numericColumn);
 
 ## Bind a view model property inside header template?
 
-The SfDataGrid allows binding the view model property to the `HeaderTemplate` by setting the BindingContext of the the `DataGridColumn` as `ViewModel`.
+The SfDataGrid allows binding the view model property to the `HeaderTemplate` by setting the BindingContext of the `DataGridColumn` as `ViewModel`.
 
 To bind a view model property inside `HeaderTemplate`, follow the code example:
 
 {% highlight xaml %}
 
-<sfgrid:SfDataGrid x:Name="datagrid" ItemsSource="{Binding OrdersInfo}" AutoGenerateColumnsMode="None">
-        <sfgrid:SfDataGrid.Columns>
-            <sfgrid:DataGridTextColumn MappingName="OrderID">
-                <sfgrid:DataGridColumn.HeaderTemplate>
-                    <DataTemplate>
-                        <Label BindingContext="{StaticResource viewModel}" 
-                            VerticalTextAlignment ="Center"
-                            HorizontalTextAlignment="Center"
-                      Text="{Binding Headertext}" TextColor="Blue" IsVisible="{Binding _Visibility}"/>
-                    </DataTemplate>
-                </sfgrid:DataGridColumn.HeaderTemplate>
-            </sfgrid:DataGridTextColumn>
-            <sfgrid:DataGridTextColumn MappingName="CustomerID" HeaderText="Customer"/>
-            <sfgrid:DataGridTextColumn MappingName="ShipCountry" HeaderText="Country"/>
-            <sfgrid:DataGridTextColumn MappingName="ShipCity" HeaderText="City"/>
-        </sfgrid:SfDataGrid.Columns>
-    </sfgrid:SfDataGrid>
+<syncfusion:SfDataGrid x:Name="dataGrid" ItemsSource="{Binding OrderInfoCollection}" AutoGenerateColumnsMode="None">
+            <syncfusion:SfDataGrid.Columns >
+                <syncfusion:DataGridTextColumn MappingName="OrderID"  >
+                    <syncfusion:DataGridColumn.HeaderTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                <Label BindingContext="{StaticResource viewModel}" Text="{Binding Headertext}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" TextColor="Blue" IsVisible="{Binding _Visibility}"/>
+                            </StackLayout>
+                        </DataTemplate>
+                    </syncfusion:DataGridColumn.HeaderTemplate>
+                </syncfusion:DataGridTextColumn>
+                <syncfusion:DataGridTextColumn  MappingName="CustomerID" HeaderText="Customer" />
+                <syncfusion:DataGridTextColumn MappingName="ShipCountry" HeaderText="Country" />
+                <syncfusion:DataGridTextColumn MappingName="ShipCity" HeaderText="City" />
+            </syncfusion:SfDataGrid.Columns>
+        </syncfusion:SfDataGrid>
 
 {% endhighlight %}
 
-![Binding property in a HeaderTemplate with a property in ViewModel](Images/column-types/binding-headertemplate-from-viewmodel.PNG)
+![DataGrid with image column](Images\column-types\viewmodel-to-header.png)
