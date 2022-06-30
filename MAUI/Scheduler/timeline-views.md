@@ -488,7 +488,7 @@ this.Scheduler.View = SchedulerView.TimelineDay;
 this.Scheduler.TimelineView.TimeIntervalWidth = -1;
 
 {% endhighlight %}
-{% endtabs 
+{% endtabs %}
 
 ![full-screen-scheduler-in-timeline-views-in-maui-scheduler](images/timeline-views/full-screen-scheduler-in-timeline-views-in-maui-scheduler.png)
 

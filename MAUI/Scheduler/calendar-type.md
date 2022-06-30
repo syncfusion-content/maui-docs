@@ -31,7 +31,14 @@ The Scheduler control supports different types of calendars such as Gregorian, K
 </td>
 
 <td>
-* Lunar type calendars<br>
+* Gezer Calendar<br>
+* Haida Calendar<br>
+* Igbo calendar<br>
+* Islamic calendar<br>
+* Javanese calendar<br>
+* Maramataka (Māori lunar calendar)<br>
+* Nepal Sambat<br>
+* Yoruba calendar<br>
 </td>
 </tr>
 </table>
@@ -51,3 +58,49 @@ N>
 this.Scheduler.CalendarType = CalendarType.Hijri;
 {% endhighlight %}
 {% endtabs %}
+
+### DateTime values in Calendar Types
+All the DateTime values can be given such as [DisplayDate,]() [SelectedDate,]() [BlackoutDates,]() Appointment [StartTime,]() and [EndTime,]() SpecialTimeRegion [StartTime]() and [EndTime]() values in two ways when calendar identifier is specified other than [GregorianCalendar.]()
+
+* Create an appointment with a start and end time value by declaring the calendar type and respective calendar type date.
+
+{% tabs %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9 10" %}
+// Creating an instance for the schedule appointment collection.
+var appointments = new ObservableCollection<SchedulerAppointment>(); 
+
+// Adding schedule appointment in the schedule appointment collection.
+appointments.Add(new SchedulerAppointment()
+{
+	Subject = "Meeting",
+	// StartTime and EndTime value specified with calendar type and respective calendar date.
+	StartTime = new DateTime(1443, 02, 22, 10, 0, 0, new HijriCalendar()),
+	EndTime = new DateTime(1443, 02, 22, 11, 0, 0, new HijriCalendar()),
+});
+
+// Adding the schedule appointment collection to the ItemsSource.
+this.Scheduler.AppointmentsSource = appointments;
+{% endhighlight %}
+{% endtabs %}
+
+* Create an appointment with a start and end time by declaring the local system date; in that case, the system date will be converted to the relevant calendar type date.
+
+{% tabs %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9 10" %}
+// Creating an instance for the schedule appointment collection.
+var appointments = new ObservableCollection<SchedulerAppointment>();
+
+// Adding schedule appointment in the schedule appointment collection.
+appointments.Add(new SchedulerAppointment()
+{
+	Subject = "Meeting",
+	// StartTime and EndTime values specified with local system date will be converted to the Hijiri calendar mentioned.
+	StartTime = new DateTime(2021, 09, 29, 10, 0, 0, 0),
+	EndTime = new DateTime(2021, 09, 29, 11, 0, 0, 0),
+});
+
+// Adding the schedule appointment collection to the ItemsSource.
+this.Scheduler.AppointmentsSource = appointments;
+{% endhighlight %}
+{% endtabs %}
+
