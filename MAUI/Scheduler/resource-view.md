@@ -21,7 +21,7 @@ You can create a resource view by setting the Name, Id, Background, and Foregrou
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9" %}
 // Adding schedule resource in the scheduler resource collection.
-var resourceCollection = new ObservableCollection<SchedulerResource>()
+var resources = new ObservableCollection<SchedulerResource>()
 {
    new SchedulerResource() { Name = "Sophia", Foreground = Colors.Blue, Background = Colors.Green, Id = "1000" },
    new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.Blue, Background = Colors.Green, Id = "1001" },
@@ -29,7 +29,7 @@ var resourceCollection = new ObservableCollection<SchedulerResource>()
 };
 
 // Adding the scheduler resource collection to the schedule resources of SfSchedule.
-this.Scheduler.ResourceView.Resources = resourceCollection;
+this.Scheduler.ResourceView.Resources = resources;
 {% endhighlight %}
 {% endtabs %}
 
@@ -163,7 +163,7 @@ Add the resources of `Employee` collection that can be assigned  to the [Resourc
 {% endhighlight %}
 {% highlight c# tabtitle="MainWindow.xaml.cs" hl_lines="10" %}
 // Creating and Adding custom resource in scheduler resource collection.
-var ResourceCollection = new ObservableCollection<Employee>()
+var resources = new ObservableCollection<Employee>()
 {
    new Employee () {Name = "Sophia", Background=Colors.Blue, Id = "1000", Foreground = Colors.Green},
    new Employee () {Name = "Zoey Addison", Background=Colors.Blue, Id = "1001", Foreground = Colors.Green},
@@ -171,7 +171,7 @@ var ResourceCollection = new ObservableCollection<Employee>()
 };
 
 // Adding the scheduler resource collection to the schedule resources of SfSchedule.
-this.Scheduler.ResourceView.Resources = ResourceCollection;
+this.Scheduler.ResourceView.Resources = resources;
 {% endhighlight %}
 {% endtabs %}
 
@@ -265,10 +265,10 @@ N>
 * If the MinimumRowHeight is less than the default row height then the default row height will be used.
 
 ## Assign resources to special time regions
-You can highlight a resource’s availability by creating special time regions in the timeline day, timeline week, and timeline workweek views.
+You can highlight a resources availability by creating special time regions in the timeline day, timeline week, and timeline workweek views.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainWindow.xaml" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
 
 {% endhighlight %}
