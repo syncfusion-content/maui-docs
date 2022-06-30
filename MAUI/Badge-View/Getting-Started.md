@@ -19,38 +19,35 @@ The Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget
 
  In the MauiProgram.cs file, register the handler for Syncfusion core.
 
-{% highlight C# %}
+{% highlight c# hl_lines="6 17" %}   
+using Microsoft.Maui;
+using Microsoft.Maui.Hosting;
+using Microsoft.Maui.Controls.Compatibility;
+using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Controls.Xaml;
+using Syncfusion.Maui.Core.Hosting;
+
+namespace BadgeViewMauiSample
+{
+  public static class MauiProgram
+  {
+	public static MauiApp CreateMauiApp()
+	{
+		var builder = MauiApp.CreateBuilder();
+		builder
+		.UseMauiApp<App>()
+		.ConfigureSyncfusionCore()
+		.ConfigureFonts(fonts =>
+		{
+			fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+		});
+
+		return builder.Build();
+	 }
    
-    using Microsoft.Maui;
-    using Microsoft.Maui.Hosting;
-    using Microsoft.Maui.Controls.Compatibility;
-    using Microsoft.Maui.Controls.Hosting;
-    using Microsoft.Maui.Controls.Xaml;
-    
-`using Syncfusion.Maui.Core.Hosting;`
+  }
 
-    namespace EffectsViewMauiSample
-    {
-      public static class MauiProgram
-      {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-            .UseMauiApp<App>()
- .`ConfigureSyncfusionCore()`
- 
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-            return builder.Build();
-         }
-       
-      }
-
-    }     
+}     
 
 {% endhighlight %}
 
