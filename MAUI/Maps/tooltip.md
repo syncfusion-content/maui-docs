@@ -87,12 +87,9 @@ public class Model
 
 ![Maps shape tooltip builder](images/tooltip/shape_tooltip.png)
 
-N>
-* Refer the `MapTooltipSettings`, for customizing the tooltip.
-
 ## Tooltip for the bubbles
 
-The `MapShapeLayer.ShowBubbleTooltip` is used to clearly indicate the bubble information every time when you interacts with the bubbles i.e., while tapping in touch devices and hover enter in the mouse enabled devices.
+The [`ShowBubbleTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShowBubbleTooltip) is used to clearly indicate the bubble information every time when you interacts with the bubbles i.e., while tapping in touch devices and hover enter in the mouse enabled devices.
 
 {% tabs %}
 
@@ -194,7 +191,7 @@ The `MapShapeLayer.ShowBubbleTooltip` is used to clearly indicate the bubble inf
 
 ## Tooltip for the markers
 
-The `MapShapeLayer.ShowMarkerTooltip` is used to clearly indicate the marker information every time when you interacts with the markers i.e., while tapping in touch devices and hover enter in the mouse enabled devices.
+The [`ShowMarkerTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_ShowMarkerTooltip) is used to clearly indicate the marker information every time when you interacts with the markers i.e., while tapping in touch devices and hover enter in the mouse enabled devices.
 
 {% tabs %}
 
@@ -271,14 +268,11 @@ The `MapShapeLayer.ShowMarkerTooltip` is used to clearly indicate the marker inf
 
 ![Maps marker tooltip builder](images/tooltip/marker_tooltip.png)
 
-N>
-* Refer the `MapTooltipSettings`, for customizing the tooltip.
-
 ## Appearance customization
 
 ### Apply data template for tooltip
 
-Data template can be used customize the tooltip view. The following code example shows the usage of `DataTemplate`.
+Data template can be used customize the tooltip view using [`ShapeTooltipTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeTooltipTemplate) property. The following code example shows the usage of `DataTemplate`.
 
 {% tabs %}
 
@@ -425,13 +419,13 @@ N>
 * The BindingContext of the Marker will be the corresponding MapMarker.
 
 N>
-* Refer the `MapShapeLayer.ShapeTooltipTemplate`, for customize tooltip for the shapes.
-* Refer the `MapShapeLayer.BubbleTooltipTemplate`, for customize tooltip for the bubbles.
-* Refer the `MapLayer.MarkerTooltipTemplate`, for customize tooltip for the markers.
+* Refer the [`ShapeTooltipTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeTooltipTemplate), for customize tooltip for the shapes.
+* Refer the [`BubbleTooltipTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_BubbleTooltipTemplate), for customize tooltip for the bubbles.
+* Refer the [`MarkerTooltipTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_MarkerTooltipTemplate), for customize tooltip for the markers.
 
 ### Apply data template selector for tooltip
 
-Data template selector can be customized the appearance of each item with different templates based on specific constraints. You can choose a DataTemplate for each item at runtime based on the value of data-bound property using DataTemplateSelector.
+Data template selector can be customized the appearance of each item with different templates based on specific constraints. You can choose a DataTemplate for each item at runtime based on the value of data-bound property using DataTemplateSelector in [`ShapeTooltipTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeTooltipTemplate).
 
 {% tabs %}
 
@@ -530,6 +524,6 @@ public class MarkerTemplateSelector : DataTemplateSelector
 ![Maps tooltip appearance customization](images/tooltip/tooltip_selector.png)
 
 N>
-* Data Templates and Data Templates selector are also applicable with bubbles and markers.
+* Data Template and Data Template selector are also applicable for bubbles and markers.
 
-N> You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our `.NET MAUI Maps Tooltip example` that shows how to configure a Maps in .NET MAUI.
+N> You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Maps Tooltip example](https://github.com/syncfusion/maui-demos/) that shows how to configure a Maps in .NET MAUI.

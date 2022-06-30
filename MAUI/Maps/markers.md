@@ -146,7 +146,7 @@ You can customize the built-in markers appearance using the [`IconType`](https:/
 * **Offset** - You can adjust the marker position from the given coordinate using the [`Offset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_Offset) property. The default value of the [`Offset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_Offset) property is `Offset.zero`.
 
 N>
-* The default value of the [`IconType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_IconType) is `MapIconType.circle`.
+* The default value of the [`IconType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_IconType) is [`MapIconType.circle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapIconType.html#Syncfusion_Maui_Maps_MapIconType_Circle).
 * The default value of the [`IconStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_IconStrokeThickness) is `1.0`.
 * The default value of the [`IconFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_IconFill) is `Color.FromRgb(138, 69, 175)`.
 * The default value of the [`IconWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_IconWidth) and [`IconHeight`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_IconHeight) is `8.0`.
@@ -392,7 +392,7 @@ You can show custom marker using the [`MarkerTemplate`](https://help.syncfusion.
 
 ### Customizing data templates in marker tooltip
 
-Data template can be used to customize the marker tooltip. The following code example shows the usage of `DataTemplate`.
+Data template can be used to customize the marker tooltip using [`MarkerTooltipTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_MarkerTooltipTemplate) property. The following code example shows the usage of `DataTemplate`.
 
 {% tabs %}
 
@@ -578,7 +578,7 @@ Data template can be used to customize the marker tooltip. The following code ex
 
 ### Customizing data templates selector in markers
 
-Data template selector can be customized the appearance of each item with different templates based on specific constraints. You can choose a DataTemplate for each item at runtime based on the value of data-bound property using DataTemplateSelector.
+Data template selector also can be customized the appearance of each item with different templates based on specific constraints . You can choose a DataTemplate for each item at runtime based on the value of data-bound property using DataTemplateSelector in [`MarkerTooltipTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_MarkerTooltipTemplate) property.
 
 {% tabs %}
 

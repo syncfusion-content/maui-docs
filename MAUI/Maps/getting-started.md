@@ -104,10 +104,10 @@ I> The Mercator projection is the default projection in the maps.
 
 The [`ShapesSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapesSource) property is used to load an shapes from different sources:
 
-`FromFile` returns a MapSource that reads an shape source from a local file.
-`FromUri` returns an MapSource that downloads and reads an shape source from a specified URI.
-`FromResource` returns a MapSource that reads an shape source file embedded in an assembly.
-`FromStream` returns a MapSource that reads an shape source from a stream that supplies source data.
+* [`FromFile`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapSource.html#Syncfusion_Maui_Maps_MapSource_FromFile_System_String_) returns a MapSource that reads an shape source from a local file.
+* [`FromUri`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapSource.html#Syncfusion_Maui_Maps_MapSource_FromUri_System_Uri_) returns an MapSource that downloads and reads an shape source from a specified URI.
+* `FromResource` returns a MapSource that reads an shape source file embedded in an assembly.
+* [`FromStream`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapSource.html#Syncfusion_Maui_Maps_MapSource_FromStream_System_IO_Stream_) returns a MapSource that reads an shape source from a stream that supplies source data.
 
 ### Loading a local file
 
