@@ -13,7 +13,7 @@ Bubbles can be rendered in different colors and sizes based on the data values o
 
 ## Enable bubbles
 
-You can enable bubbles using the `ShowBubbles`. You can customize a bubbles using the `BubbleSettings`. This property is used to specify the value based on which the bubble's size has to be rendered.
+You can enable bubbles using the [`ShowBubbles`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShowBubbles). You can customize a bubbles using the [`BubbleSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_BubbleSettings). This property is used to specify the value based on which the bubble's size has to be rendered.
 
 {% tabs %}
 
@@ -105,7 +105,7 @@ public class Model
 
 ## Tooltip for the bubbles
 
-You can enable tooltip for the bubbles using the `ShowBubbleTooltip` property. It can be used to indicate clearly the information about the currently interacted bubble.
+You can enable tooltip for the bubbles using the [`ShowBubbleTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShowBubbleTooltip) property. It can be used to indicate clearly the information about the currently interacted bubble.
 
 {% tabs %}
 
@@ -203,9 +203,9 @@ public class Model
 
 ## Color
 
-You can customize the bubble color based on the value from the `ColorValuePath` property. If it provides direct color value then it applies to bubbles strightaway. Otherwise, we must provide `ColorMapping`.
+You can customize the bubble color based on the value from the [`ColorValuePath`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapBubbleSettings.html#Syncfusion_Maui_Maps_MapBubbleSettings_ColorValuePath) property. If it provides direct color value then it applies to bubbles strightaway. Otherwise, we must provide [`ColorMapping`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapBubbleSettings.html#Syncfusion_Maui_Maps_MapBubbleSettings_ColorMappings).
 
-The value from the `ColorValuePath` will be used for the comparison in the `EqualColorMapping.Value` or `RangeColorMapping.From` and `RangeColorMapping.To`. Then, the `RangeColorMapping.Color` or `EqualColorMapping.Color` will be applied to the respective bubble.
+The value from the [`ColorValuePath`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapBubbleSettings.html#Syncfusion_Maui_Maps_MapBubbleSettings_ColorValuePath) will be used for the comparison in the [`EqualColorMapping.Value`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapBubbleSettings.html#Syncfusion_Maui_Maps_MapBubbleSettings_ColorValuePath) or [`RangeColorMapping.From`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.RangeColorMapping.html#Syncfusion_Maui_Maps_RangeColorMapping_From) and [`RangeColorMapping.To`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.RangeColorMapping.html#Syncfusion_Maui_Maps_RangeColorMapping_To). Then, the [`RangeColorMapping.Color`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.ColorMapping.html#Syncfusion_Maui_Maps_ColorMapping_Color) or [`EqualColorMapping.Color`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.ColorMapping.html#Syncfusion_Maui_Maps_ColorMapping_Color) will be applied to the respective bubble.
 
 {% tabs %}
 
@@ -458,4 +458,4 @@ public class Model
 
 ![Bubble customization](images/bubble/bubble-customization.png)
 
-N> You can refer to our `.NET MAUI Maps` feature tour page for its groundbreaking feature representations. You can also explore our `.NET MAUI Maps Bubble example` that shows how to configure a Maps in .NET MAUI.
+N> You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Maps Bubble example](https://github.com/syncfusion/maui-demos/) that shows how to configure a Maps in .NET MAUI.

@@ -13,7 +13,7 @@ This section explains about shapes and how to apply colors to the shapes based o
 
 ## Shape color
 
-You can apply color, stroke color and stroke thickness to the shapes using the `ShapeFill`, `ShapeStroke` and `ShapeStrokeThickness` properties respectively.
+You can apply color, stroke color and stroke thickness to the shapes using the [`ShapeFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeFill), [`ShapeStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeStroke) and [`ShapeStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeStrokeThickness) properties respectively.
 
 {% tabs %}
 
@@ -56,7 +56,7 @@ You can apply color, stroke color and stroke thickness to the shapes using the `
 
 ## Hover color
 
-You can apply hover color, hover stoke color and hover stroke thickness to the shapes using the `ShapeHoverFill`, `ShapeHoverStroke` and `ShapeHoverStrokeThickness` properties respectively.
+You can apply hover color, hover stoke color and hover stroke thickness to the shapes using the [`ShapeHoverFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeHoverFill), [`ShapeHoverStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeHoverStroke) and [`ShapeHoverStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeHoverStrokeThickness) properties respectively.
 
 {% tabs %}
 
@@ -97,9 +97,9 @@ You can apply hover color, hover stoke color and hover stroke thickness to the s
 
 ## Applying colors based on the data
 
-The `ShapeColorValuePath` is provides a color directly, then the color will be applied to the respective shape straightaway. Otherwise, you have to provide `ColorMapping`.
+The [`ShapeColorValuePath`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeColorValuePath) is provides a color directly, then the color will be applied to the respective shape straightaway. Otherwise, you have to provide [`ColorMapping`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ColorMappings).
 
-N> You can show legend using the `Legend` property.The icons color of the legend is applied based on the colors from `ShapeColorValuePath` property and have to provide text for the legend from `ColorMapping.Text` property. 
+N> You can show legend using the [`Legend`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_Legend) property.The icons color of the legend is applied based on the colors from [`ShapeColorValuePath`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeColorValuePath) property and have to provide text for the legend from [`ColorMapping.Text`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.ColorMapping.html#Syncfusion_Maui_Maps_ColorMapping_Text) property. 
 
 {% tabs %}
 
@@ -177,7 +177,7 @@ public class Model
 
 ## Equal color mapping
 
-You can apply color to the shape by comparing a value from the `ColorMappings` with the `EqualColorMapping.Value`. For the matched values, the `EqualColorMapping.color` will be applied to the respective shapes.
+You can apply color to the shape by comparing a value from the [`ColorMappings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ColorMappings) with the [`EqualColorMapping.Value`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapBubbleSettings.html#Syncfusion_Maui_Maps_MapBubbleSettings_ColorValuePath). For the matched values, the [`EqualColorMapping.color`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.ColorMapping.html#Syncfusion_Maui_Maps_ColorMapping_Color) will be applied to the respective shapes.
 
 {% tabs %}
 
@@ -267,7 +267,7 @@ public class Model
 
 ## Range color mapping
 
-You can apply color to the shape based on whether the value from `ColorMappings` falls within the `RangeColorMapping.From` and `RangeColorMapping.To`. Then, the `RangeColorMapping.Color` will be applied to the respective shapes.
+You can apply color to the shape based on whether the value from [`ColorMappings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ColorMappings) falls within the [`RangeColorMapping.From`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.RangeColorMapping.html#Syncfusion_Maui_Maps_RangeColorMapping_From) and [`RangeColorMapping.To`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.RangeColorMapping.html#Syncfusion_Maui_Maps_RangeColorMapping_To). Then, the [`RangeColorMapping.Color`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.ColorMapping.html#Syncfusion_Maui_Maps_ColorMapping_Color) will be applied to the respective shapes.
 
 {% tabs %}
 
@@ -358,4 +358,4 @@ public class Model
 ![Range color mapping](images/shape/range_color_mapping.png)
 
 N>
-* Refer the `BubbleSettings`, for setting the bubble colors based on the specific value. You can refer to our `.NET MAUI Maps` feature tour page for its groundbreaking feature representations. You can also explore our `.NET MAUI Maps Shapes example` that shows how to configure a Maps in .NET MAUI.
+* Refer the [`BubbleSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_BubbleSettings), for setting the bubble colors based on the specific value. You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Maps Shapes example](https://github.com/syncfusion/maui-demos/) that shows how to configure a Maps in .NET MAUI.

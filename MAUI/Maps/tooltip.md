@@ -14,7 +14,7 @@ Tooltip is used to indicate the shape, bubble, marker information during the tap
 
 ## Tooltip for the shapes
 
-The `ShowShapeTooltip` is used to clearly indicate the shape information every time when you interacts with the shapes i.e., while tapping in touch devices and hover enter in the mouse enabled devices.
+The [`ShowShapeTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShowShapeTooltip) is used to clearly indicate the shape information every time when you interacts with the shapes i.e., while tapping in touch devices and hover enter in the mouse enabled devices.
 
 {% tabs %}
 
@@ -532,4 +532,4 @@ public class MarkerTemplateSelector : DataTemplateSelector
 N>
 * Data Templates and Data Templates selector are also applicable with bubbles and markers.
 
-N> You can refer to our `.NET MAUI Maps` feature tour page for its groundbreaking feature representations. You can also explore our `.NET MAUI Maps Tooltip example` that shows how to configure a Maps in .NET MAUI.
+N> You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our `.NET MAUI Maps Tooltip example` that shows how to configure a Maps in .NET MAUI.

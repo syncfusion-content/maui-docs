@@ -15,7 +15,7 @@ Markers can be used to denote the locations. It is possible to use the built-in 
 
 ### Shape layer
 
-You can show markers at any position on the map by providing latitude and longitude position to the `MapMarker`, which is from the `Markers` collection.
+You can show markers at any position on the map by providing latitude and longitude position to the [`MapMarker`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html), which is from the [`Markers`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_Markers) collection.
 
 {% tabs %}
 
@@ -136,20 +136,20 @@ public MarkerTool()
 ![default marker](images/markers/default_marker.png)
 
 N>
-* Refer the `MapMarkerCollection`, for collection of `MapMarker`.
+* Refer the [`MapMarkerCollection`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarkerCollection.html), for collection of [`MapMarker`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html).
 
 ## Appearance customization
 
-You can customize the built-in markers appearance using the `IconType`, `IconFill`, `IconStroke`, `IconStrokeThickness`, `IconWidth` and `IconHeight` properties of the `MapMarker`.
+You can customize the built-in markers appearance using the [`IconType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_IconType), [`IconFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_IconFill), [`IconStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_IconStroke), [`IconStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_IconStrokeThickness), [`IconWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_IconWidth) and [`IconHeight`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_IconHeight) properties of the [`MapMarker`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html).
 
-* **Alignment** - You can change the position of the marker from the given coordinate using the `HorizontalAlignment` and `VerticalAlignment` property. The default value is `MapAlignment.Center`. The available alignment options are `Center`, `Start`, `End`.
-* **Offset** - You can adjust the marker position from the given coordinate using the `Offset` property. The default value of the `Offset` property is `Offset.zero`.
+* **Alignment** - You can change the position of the marker from the given coordinate using the [`HorizontalAlignment`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_HorizontalAlignment) and [`VerticalAlignment`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_VerticalAlignment) property. The default value is [`MapAlignment.Center`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapAlignment.html#Syncfusion_Maui_Maps_MapAlignment_Center). The available alignment options are [`Center`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapAlignment.html#Syncfusion_Maui_Maps_MapAlignment_Center), [`Start`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapAlignment.html#Syncfusion_Maui_Maps_MapAlignment_Start), [`End`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapAlignment.html#Syncfusion_Maui_Maps_MapAlignment_End).
+* **Offset** - You can adjust the marker position from the given coordinate using the [`Offset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_Offset) property. The default value of the [`Offset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_Offset) property is `Offset.zero`.
 
 N>
-* The default value of the `IconType` is `MapIconType.circle`.
-* The default value of the `IconStrokeThickness` is `1.0`.
-* The default value of the `IconFill` is `Color.FromRgb(138, 69, 175)`.
-* The default value of the `IconWidth` and `IconHeight` is `8.0`.
+* The default value of the [`IconType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_IconType) is `MapIconType.circle`.
+* The default value of the [`IconStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_IconStrokeThickness) is `1.0`.
+* The default value of the [`IconFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_IconFill) is `Color.FromRgb(138, 69, 175)`.
+* The default value of the [`IconWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_IconWidth) and [`IconHeight`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_IconHeight) is `8.0`.
 
 {% tabs %}
 
@@ -289,7 +289,7 @@ N>
 
 ## Adding custom markers
 
-You can show custom marker using the `MarkerTemplate` property of the `MapShapeLayer` which returns the template to customize markers.
+You can show custom marker using the [`MarkerTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_MarkerTemplate) property of the [`MapShapeLayer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html) which returns the template to customize markers.
 
 {% tabs %}
 
@@ -666,4 +666,4 @@ public class CustomMarker1 : MapMarker
 
 ![Maps marker appearance customization](images/markers/marker_selector.png)
 
-N> You can refer to our `.NET MAUI Maps` feature tour page for its groundbreaking feature representations. You can also explore our `.NET MAUI Maps Markers example` that shows how to configure a Maps in .NET MAUI.
+N> You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Maps Markers example](https://github.com/syncfusion/maui-demos/) that shows how to configure a Maps in .NET MAUI.
