@@ -20,28 +20,29 @@ The `SfAvatarView` control provides support for `BadgeView` to notify users of n
 xmlns:badge="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
 .......
 
-<badge:SfBadgeView VerticalOptions="Center"
-				   HorizontalOptions="Center">
-<badge:SfBadgeView.Content>
-	<sfavatar:SfAvatarView  HorizontalOptions="Center"
-							ContentType="Custom"
-							ImageSource="alex.png"
-							VerticalOptions="Center"
-							WidthRequest="60"
-							HeightRequest="60"
-							CornerRadius="30">
-	</sfavatar:SfAvatarView>
-</badge:SfBadgeView.Content>
-<badge:SfBadgeView.BadgeSettings>
-<badge:BadgeSettings 	Offset="-10,-10"
-						Animation="Scale"
-						Position="BottomRight" 
-						Type="Success"
-						Icon="Away"/>
-</badge:SfBadgeView.BadgeSettings>
-</badge:SfBadgeView>
+         <badge:SfBadgeView VerticalOptions="Center"
+                            HorizontalOptions="Center">
+			<badge:SfBadgeView.Content>
+				<sfavatar:SfAvatarView  HorizontalOptions="Center"
+                                        ContentType="Custom"
+                                        ImageSource="alex.png"
+                                        VerticalOptions="Center"
+                                        WidthRequest="60"
+                                        HeightRequest="60"
+                                        CornerRadius="30">
+				</sfavatar:SfAvatarView>
+			</badge:SfBadgeView.Content>
+			<badge:SfBadgeView.BadgeSettings>
+            <badge:BadgeSettings 	Offset="-10,-10"
+                                    Animation="Scale"
+                                    Position="BottomRight" 
+                                    Type="Success"
+                                    Icon="Away"/>
+			</badge:SfBadgeView.BadgeSettings>
+		</badge:SfBadgeView>
 
 {% endhighlight %}
+
 
 {% highlight C# %}
 
