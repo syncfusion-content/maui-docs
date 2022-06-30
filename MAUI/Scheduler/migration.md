@@ -540,6 +540,21 @@ resources.Add(new ScheduleResource()
 // Adding schedule resource collection to schedule resources of SfSchedule.
 schedule.ScheduleResources = resources;
 
+// Creating an instance for schedule appointment collection
+ScheduleAppointmentCollection scheduleAppointmentCollection = new ScheduleAppointmentCollection();
+//Adding schedule appointment in schedule appointment collection 
+scheduleAppointmentCollection.Add(new ScheduleAppointment()
+{
+     StartTime = new DateTime(2019, 05, 08, 10, 0, 0),
+     EndTime = new DateTime(2019, 05, 08, 12, 0, 0),
+     Subject = "Meeting",
+     Location = "Hutchison road",
+     ResourceIds = new ObservableCollection<object> { 5601}
+});
+
+//Adding schedule appointment collection to DataSource of SfSchedule
+schedule.DataSource = scheduleAppointmentCollection;
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -602,6 +617,7 @@ this.Scheduler.ResourceView.Resources = resourceCollection;
 
 {% highlight xaml %}
 
+
 <schedule:SfSchedule ScheduleView="WeekView" ShowResourceView="True">
      <schedule:SfSchedule.ResourceMapping>
           <schedule:ResourceMapping Name="Name"
@@ -615,6 +631,39 @@ this.Scheduler.ResourceView.Resources = resourceCollection;
 
 {% highlight C# %}
 
+/// <summary>
+/// Represents custom data properties.
+/// </summary>
+public class Event
+{
+	public string EventName { get; set; }
+	public DateTime From { get; set; }
+	public DateTime To { get; set; }
+	public Color Color { get; set; }
+	public ObservableCollection<object> Resources { get; set; }
+}
+
+// Creating an instance for custom appointment class.
+Meeting meeting = new Meeting();
+meeting.From = new DateTime(2017, 06, 11, 10, 0, 0);
+meeting.To = meeting.From.AddHours(2);
+meeting.EventName = "Client Meeting";
+meeting.Color = Color.Green;
+
+// Setting resources for an event.
+meeting.Resources = new ObservableCollection<object> () {5601, 5604};
+
+/// <summary>   
+/// Represents custom data properties.   
+/// </summary> 
+public class Employee
+{
+     public string Name { get; set; }
+     public object Id { get; set; }
+     public Color Color { get; set; }
+     public string DisplayPicture { get; set; }
+}
+
 // Creating an instance for resource mapping.
 ResourceMapping resourceMapping = new ResourceMapping();
 
@@ -625,6 +674,24 @@ resourceMapping.Color = "Color";
 resourceMapping.Image = "DisplayPicture";
 schedule.ResourceMapping = resourceMapping;
 
+public ObservableCollection<object> Employees { get; set; }
+
+// Creating an instance for collection of custom resources.
+Employees = new ObservableCollection<object>();
+
+// Creating an instance for custom appointment class.
+Employee employee = new Employee();
+
+employee.Name = "Kinsley Elena";
+employee.Id = 5601;
+employee.Color = Color.FromHex("#FFE671B8");
+employee.DisplayPicture = "KinsleyElena.png";
+
+// Adding a custom resource in custom resource collection.
+Employees.Add(employee);
+
+// Adding a custom resource collection to schedule resources.
+schedule.ScheduleResources = Employees;
 {% endhighlight %}
 
 {% endtabs %}
@@ -633,23 +700,69 @@ schedule.ResourceMapping = resourceMapping;
 {% tabs %}
 
 {% highlight xaml %}
-
-<schedule:SchedulerResourceView.Mapping>
-    <schedule:SchedulerResourceMapping Name="Name"
+<schedule:SfScheduler x:Name="Scheduler"  View="TimelineWeek"
+                            AppointmentsSource="{Binding Events}"
+                            AllowedViews="TimelineDay,TimelineMonth,TimelineWeek,TimelineWorkWeek" >
+<schedule:SfScheduler.ResourceView>
+ <schedule:SchedulerResourceView Resources="{Binding Resources}">
+    <schedule:SchedulerResourceView.Mapping>
+      <schedule:SchedulerResourceMapping Name="Name"
                                     Id="Id"
                                     Background="Background"
                                     Foreground="Foreground"/>
-</schedule:SchedulerResourceView.Mapping>
+    </schedule:SchedulerResourceView.Mapping>
+  </schedule:SchedulerResourceView>
+</schedule:SfScheduler.ResourceView>    
+</schedule:SfScheduler>
 {% endhighlight %}
 
 {% highlight C# %}
 
+/// <summary>
+/// Represents custom data properties.
+/// </summary>
+public class Event
+{
+	public string EventName { get; set; }
+	public DateTime From { get; set; }
+	public DateTime To { get; set; }
+	public Color Color { get; set; }
+	public ObservableCollection<object> Resources { get; set; }
+}
+
+Meeting meeting = new Meeting();
+meeting.From = new DateTime(2020, 07, 01, 10, 0, 0);
+meeting.To = meeting.From.AddHours(1);
+meeting.EventName = "Meeting";
+meeting.Resources = new ObservableCollection<object> { "1000" };
+var Meetings = new ObservableCollection<Meeting>();
+Meetings.Add(meeting);
+this.Scheduler.AppointmentsSource = Meetings;
+
+/// <summary>   
+/// Represents custom data properties.   
+/// </summary> 
+public class Employee
+{
+     public string Name { get; set; }
+     public object Id { get; set; }
+     public Brush Background { get; set; }
+     public Brush Foreground { get; set; }
+}
 SchedulerResourceMapping resourceMapping = new SchedulerResourceMapping();
 resourceMapping.Name = "Name";
 resourceMapping.Id = "Id";
 resourceMapping.Background = "BackgroundColor";
 resourceMapping.Foreground = "ForegroundColor";
 this.Scheduler.ResourceView.Mapping = resourceMapping;
+
+var resources = new ObservableCollection<Employee>()
+{
+   new Employee () {Name = "Sophia", Background=Colors.Blue, Id = "1000", Foreground = Colors.Green},
+};
+
+// Adding the scheduler resource collection to the schedule resources of SfSchedule.
+this.Scheduler.ResourceView.Resources = resources;
 
 {% endhighlight %}
 

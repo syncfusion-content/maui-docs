@@ -19,7 +19,7 @@ The timelineView displays the date inside the horizontal time axis with the desi
 
 * **Timeline month**: A horizontal axis displaying appointments across all days of a month is displayed, where each column represents a single day.
 
-## Number of visible days in the timeline views
+## Number of days visible in the timeline views
 
 The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) number of visible days in timelineday, timelineweek and timeline workweek can be adjusted by changing the [NumberOfVisibleDays]() property of [TimelineView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineView.html)
 
@@ -38,12 +38,12 @@ The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sc
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
 
 this.Scheduler.View = SchedulerView.TimelineWeek;
-this.Scheduler.DaysView.NumberOfVisibleDays = 3;
+this.Scheduler.TimelineView.NumberOfVisibleDays = 3;
 
 {% endhighlight %}
 {% endtabs %}
 
-![number-of-visble-days-in-daysview](images/day-week-views/)
+![number-of-days-visble-in-.net maui scheduler timeline views](images/day-week-views/)
 
 ## Change time interval
 
