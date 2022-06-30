@@ -42,6 +42,26 @@ You can find the platforms supported by each .NET MAUI control as below.
 		</th>
 	</tr>
 	<tr>
+	<td rowspan="1" valign="top">
+			GRIDS<br/>
+		</td>
+		<td>
+			<a href="/maui/datagrid/overview">DataGrid</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+	</td>
+	</tr>
+	<tr>
 		<td rowspan="5" valign="top">
 			DATA VISUALIZATION<br/>
 		</td>
