@@ -564,7 +564,7 @@ schedule.DataSource = scheduleAppointmentCollection;
 
 {% highlight xaml %}
 
-<scheduler:SfScheduler View="MonthView" AppointmentsSource="{Binding Appointments}"/>
+<scheduler:SfScheduler View="TimelineWeek" AppointmentsSource="{Binding Appointments}"/>
 
 {% endhighlight %}
 
@@ -587,9 +587,10 @@ Appointments.Add(new SchedulerAppointment()
 
 // Adding the scheduler appointment collection to the AppointmentsSource of .NET MAUI Scheduler.
 scheduler.AppointmentsSource = Appointments;
-this.Content = scheduler;		
+this.Content = scheduler;	
+	
 // Adding schedule resource in the scheduler resource collection.
-var resourceCollection = new ObservableCollection<SchedulerResource>()
+var resources = new ObservableCollection<SchedulerResource>()
 {
    new SchedulerResource() { Name = "Sophia", Foreground = Colors.Blue, Background = Colors.Green, Id = "1000" },
    new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.Blue, Background = Colors.Green, Id = "1001" },
@@ -597,7 +598,7 @@ var resourceCollection = new ObservableCollection<SchedulerResource>()
 };
 
 // Adding the scheduler resource collection to the schedule resources of SfSchedule.
-this.Scheduler.ResourceView.Resources = resourceCollection;
+this.Scheduler.ResourceView.Resources = resources;
 
 {% endhighlight %}
 
@@ -944,6 +945,11 @@ this.Content = scheduler;
 <td>{{'[RecurrenceId](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_RecurrenceId)'| markdownify }}</td>
 <td>Gets or sets the Id which is used to maintain the pattern recurrence Id that added in AppointmentsSource for creating the exception recurrence appointment.</td></tr>
 
+<tr>
+<td>{{'[ResourceIds](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ScheduleAppointment.html#Syncfusion_SfSchedule_XForms_ScheduleAppointment_ResourceIds)'| markdownify }}</td>
+<td>{{'[ResourceIds]()'| markdownify }}</td>
+<td>Gets or sets the resource ids property for schedule appointment to allocate the corresponding resource to the appointment.</td></tr>
+
 </table> 
 
 ### SchedulerAppointmentMapping
@@ -1153,6 +1159,11 @@ this.Content = scheduler;
 <td>{{'[ExceptionOccurrenceActualDateMapping](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ScheduleAppointmentMapping.html#Syncfusion_SfSchedule_XForms_ScheduleAppointmentMapping_ExceptionOccurrenceActualDateMapping)'| markdownify }}</td>
 <td>{{'[RecurrenceId](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentMapping_RecurrenceId)'| markdownify }}</td>
 <td>Gets or sets the Recurrence ID mapping to map the custom appointment property with scheduler appointments Recurrence ID property.</td></tr>
+
+<tr>
+<td>{{'[ResourceIdsMapping](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ScheduleAppointmentMapping.html#Syncfusion_SfSchedule_XForms_ScheduleAppointmentMapping_ResourceIdsMapping)'| markdownify }}</td>
+<td>{{'[ResourceIdsMapping]()'| markdownify }} (From DaysView, TimelineView)</td>
+<td>Gets or sets the resource ids mapping to map the custom appointment property with schedule appointments resource ids property.</td></tr>
 
  </table> 
 
@@ -1758,6 +1769,12 @@ this.Content = scheduler;
 <td>{{'[CanEdit](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.TimeRegionSettings.html#Syncfusion_SfSchedule_XForms_TimeRegionSettings_CanEdit)'| markdownify }}</td>
 <td>{{'[EnablePointerInteraction](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeRegion.html#Syncfusion_Maui_Scheduler_SchedulerTimeRegion_EnablePointerInteraction)'| markdownify }} </td>
 <td>Gets or sets a value indicating whether this SchedulerTimeRegion is enable pointer interaction..</td></tr>
+
+<tr>
+<td>{{''| markdownify }}</td>
+<td>{{'[ResourceIds]()'| markdownify }} </td>
+<td>Gets or sets the resource id for an appointment or the scheduler time region in the SfScheduler.</td></tr>
+
 
 </table> 
 
