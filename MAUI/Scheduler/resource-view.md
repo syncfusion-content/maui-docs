@@ -35,7 +35,7 @@ this.Scheduler.ResourceView.Resources = resources;
 
 ### Assigning Scheduler resources to appointments
 
-Appointments associated with the `ResourceView` [Resources]()  will be displayed by setting the `ResourceView` resource Id in the [ScheduleAppointment]() by using the [ResourceIds]().
+Appointments associated with the `ResourceView` [Resources](), will be displayed by setting the `ResourceView` resource Id in the [ScheduleAppointment]() by using the [ResourceIds]().
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
@@ -101,7 +101,7 @@ The Schedule supports full data binding to [Resources]() in the `ResourceView` c
 
 N> Custom resource class should contain a mandatory field for resource `Id`.
 
-## Mapping resource business object custom field
+## Mapping resource business object or custom field
 
 Create a custom class `Employee` with mandatory fields `Name,` `Id,` `ForegroundColor,` and `BackgroundColor`.
 
@@ -264,7 +264,7 @@ N>
 * If the viewport height is lesser than 400 then each resource height will be calculated by default viewport size(4 (default resource*100)) divided by the minimum value of scheduler resources count and 4 (default resource count).
 * If the MinimumRowHeight is less than the default row height then the default row height will be used.
 
-## Assign resources to special time regions
+## Assign special time regions to scheduler resources
 You can highlight a resources availability by creating special time regions in the timeline day, timeline week, and timeline workweek views.
 
 {% tabs %}

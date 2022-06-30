@@ -17,7 +17,7 @@ The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sc
 
 * **Work week view**: It displays only the working days of a week. By default, Saturday and Sunday are not working days. It can be customized with any day of the week.
 
-## Number of days visible in the days view 
+## Number of visible days in the days view 
 
 The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) number of visible days in the day, week and workweek can be adjusted by changing the [NumberOfVisibleDays]() property of [DaysView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDaysView.html).
 
@@ -41,7 +41,7 @@ this.Scheduler.DaysView.NumberOfVisibleDays = 3;
 {% endhighlight %}
 {% endtabs %}
 
-![number-of-visble-days-in-daysview](images/day-week-views/)
+![number of visble days in maui scheduler](images/day-week-views/)
 
 ## Change time interval
 
