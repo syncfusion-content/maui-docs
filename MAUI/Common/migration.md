@@ -116,7 +116,7 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 			<a href="https://help.syncfusion.com/xamarin/datetime-range-navigator/rangenavigator">SfDateTimeRangeNavigator</a><br/>
 		</td>
 	    <td valign="top">
-			<a href="https://help.syncfusion.com/maui/range-selector/migration">SfRangeSelector</a><br/>
+			<a href="https://help.syncfusion.com/maui/datetime-range-selector/migration">SfDateTimeRangeSelector</a><br/>
 		</td>
 	</tr>
 	<tr>
@@ -131,8 +131,8 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 	    <td rowspan="1" valign="top">
 			<a href="https://help.syncfusion.com/xamarin/signaturepad/getting-started">SfSignaturePad</a><br/>
 		</td>
-		<td rowspan="1" valign="top">
-			Underway<br/>
+		<td valign="top">
+			<a href="https://help.syncfusion.com/maui/signaturepad/migration">SfSignaturePad</a><br/>
 		</td>
 	</tr>
 	<tr>

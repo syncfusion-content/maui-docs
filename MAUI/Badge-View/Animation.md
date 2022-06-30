@@ -17,7 +17,7 @@ You can enable or disable the animation of the badge text using [Scale](https://
 
 {% highlight xaml %}
 
- <badge:SfBadgeView HorizontalOptions="Center"  WidthRequest="70" HeightRequest="70" BadgeText="6" 
+<badge:SfBadgeView HorizontalOptions="Center"  WidthRequest="70" HeightRequest="70" BadgeText="6" 
                                VerticalOptions="Center">
         <badge:SfBadgeView.Content>
             <Image Source="BadgeFacebook.png" HeightRequest="70" WidthRequest="70"  />

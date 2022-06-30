@@ -19,14 +19,13 @@ Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org
 
 The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
 
-{% highlight C# %}
-
+{% highlight C# hl_lines="6 17" %}
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
 using Microsoft.Maui.Controls.Compatibility;
 using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Controls.Xaml;
-`using Syncfusion.Maui.Core.Hosting;`
+using Syncfusion.Maui.Core.Hosting;
 
 namespace TabViewMauiSample
 {
@@ -37,7 +36,7 @@ namespace TabViewMauiSample
             var builder = MauiApp.CreateBuilder();
             builder
             .UseMauiApp<App>()
-            .`ConfigureSyncfusionCore()`
+            .ConfigureSyncfusionCore()
             .ConfigureFonts(fonts =>
             {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
