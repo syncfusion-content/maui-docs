@@ -21,48 +21,48 @@ You can show markers at any position on the map by providing latitude and longit
 
 {% highlight xaml %}
 
-		<map:SfMaps>
-            <map:SfMaps.Layer>
-                <map:MapShapeLayer ShapeStroke="DarkGrey"
-                                   ShowMarkerTooltip="True">
-								   
-                    <map:MapShapeLayer.Markers>
-                        <map:MapMarkerCollection>
-                            <map:MapMarker Latitude="20.5595"
-										   IconWidth="15"
-										   IconHeight="15"
-										   IconFill="#00ccff"
-										   IconType="Circle" 
-										   Longitude="22.9375" />
-                            <map:MapMarker Latitude="21.7679"
-										   IconWidth="15"
-										   IconHeight="15"
-										   IconFill="#00ccff"
-										   IconType="Circle" 
-										   Longitude="78.8718" />
-                            <map:MapMarker Latitude="133.7751"
-										   IconWidth="15"
-										   IconHeight="15"
-										   IconFill="#00ccff"
-										   IconType="Circle" 
-										   Longitude="25.2744" />
-                            <map:MapMarker Latitude="60.2551"
-										   IconWidth="15"
-										   IconHeight="15"
-										   IconFill="#00ccff"
-										   IconType="Circle" 
-										   Longitude="84.5260" />
-                            <map:MapMarker Latitude="195.4915"
-										   IconWidth="15"
-										   IconHeight="15"
-										   IconType="Circle"
-										   IconFill="#00ccff"
-										   Longitude="-50.7832" />
-                        </map:MapMarkerCollection>
-                    </map:MapShapeLayer.Markers>
-                </map:MapShapeLayer>
-            </map:SfMaps.Layer>
-        </map:SfMaps>
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer ShapeStroke="DarkGrey"
+                           ShowMarkerTooltip="True">
+                            
+            <map:MapShapeLayer.Markers>
+                <map:MapMarkerCollection>
+                    <map:MapMarker Latitude="20.5595"
+                                   IconWidth="15"
+                                   IconHeight="15"
+                                   IconFill="#00ccff"
+                                   IconType="Circle" 
+                                   Longitude="22.9375" />
+                    <map:MapMarker Latitude="21.7679"
+                                   IconWidth="15"
+                                   IconHeight="15"
+                                   IconFill="#00ccff"
+                                   IconType="Circle" 
+                                   Longitude="78.8718" />
+                    <map:MapMarker Latitude="133.7751"
+                                   IconWidth="15"
+                                   IconHeight="15"
+                                   IconFill="#00ccff"
+                                   IconType="Circle" 
+                                   Longitude="25.2744" />
+                    <map:MapMarker Latitude="60.2551"
+                                   IconWidth="15"
+                                   IconHeight="15"
+                                   IconFill="#00ccff"
+                                   IconType="Circle" 
+                                   Longitude="84.5260" />
+                    <map:MapMarker Latitude="195.4915"
+                                   IconWidth="15"
+                                   IconHeight="15"
+                                   IconType="Circle"
+                                   IconFill="#00ccff"
+                                   Longitude="-50.7832" />
+                </map:MapMarkerCollection>
+            </map:MapShapeLayer.Markers>
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
 
 {% endhighlight %}
 
@@ -155,57 +155,58 @@ N>
 
 {% highlight xaml %}
 
-		<map:SfMaps>
-            <map:SfMaps.Layer>
-                <map:MapShapeLayer ShapeStroke="DarkGrey"
-                                   ShowMarkerTooltip="True">
-                    <map:MapShapeLayer.Markers>
-                        <map:MapMarkerCollection>
-                            <map:MapMarker Latitude="20.5595"
-										   IconWidth="20"
-										   IconHeight="20"
-										   IconFill="LightGreen"
-										   IconType="Triangle" 
-										   Longitude="22.9375"
-										   IconStroke="Green"
-										   IconStrokeThickness="3" />
-                            <map:MapMarker Latitude="21.7679" 
-										   IconWidth="20"
-										   IconHeight="20"
-										   IconFill="LightGreen"
-										   IconType="Triangle" 
-										   Longitude="78.8718"
-										   IconStroke="Green"
-										   IconStrokeThickness="3" />
-                            <map:MapMarker Latitude="133.7751" 
-										   IconWidth="20"
-										   IconHeight="20"
-										   IconFill="LightGreen"
-										   IconType="Triangle" 
-										   Longitude="25.2744"
-										   IconStroke="Green"
-										   IconStrokeThickness="3" />
-                            <map:MapMarker Latitude="60.2551"
-										   IconWidth="20"
-										   IconHeight="20"
-										   IconFill="LightGreen"
-										   IconType="Triangle" 
-										   Longitude="84.5260"
-										   IconStroke="Green"
-										   IconStrokeThickness="3"/>
-                            <map:MapMarker Latitude="195.4915"
-										   IconWidth="20"
-										   IconHeight="20"
-										   IconType="Triangle"
-										   IconFill="LightGreen"
-										   Longitude="-50.7832"
-										   IconStroke="Green"
-										   IconStrokeThickness="3" />
-                        </map:MapMarkerCollection>
-                    </map:MapShapeLayer.Markers>
-                </map:MapShapeLayer>
-            </map:SfMaps.Layer>
-        </map:SfMaps>
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer ShapeStroke="DarkGrey"
+                           ShowMarkerTooltip="True">
+
+            <map:MapShapeLayer.Markers>
+                <map:MapMarkerCollection>
+                    <map:MapMarker Latitude="20.5595"
+                                   IconWidth="20"
+                                   IconHeight="20"
+                                   IconFill="LightGreen"
+                                   IconType="Triangle" 
+                                   Longitude="22.9375"
+                                   IconStroke="Green"
+                                   IconStrokeThickness="3" />
+                    <map:MapMarker Latitude="21.7679" 
+                                   IconWidth="20"
+                                   IconHeight="20"
+                                   IconFill="LightGreen"
+                                   IconType="Triangle" 
+                                   Longitude="78.8718"
+                                   IconStroke="Green"
+                                   IconStrokeThickness="3" />
+                    <map:MapMarker Latitude="133.7751" 
+                                   IconWidth="20"
+                                   IconHeight="20"
+                                   IconFill="LightGreen"
+                                   IconType="Triangle" 
+                                   Longitude="25.2744"
+                                   IconStroke="Green"
+                                   IconStrokeThickness="3" />
+                    <map:MapMarker Latitude="60.2551"
+                                   IconWidth="20"
+                                   IconHeight="20"
+                                   IconFill="LightGreen"
+                                   IconType="Triangle" 
+                                   Longitude="84.5260"
+                                   IconStroke="Green"
+                                   IconStrokeThickness="3"/>
+                    <map:MapMarker Latitude="195.4915"
+                                   IconWidth="20"
+                                   IconHeight="20"
+                                   IconType="Triangle"
+                                   IconFill="LightGreen"
+                                   Longitude="-50.7832"
+                                   IconStroke="Green"
+                                   IconStrokeThickness="3" />
+                </map:MapMarkerCollection>
+            </map:MapShapeLayer.Markers>
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
 
 {% endhighlight %}
 
@@ -294,37 +295,36 @@ You can show custom marker using the `MarkerTemplate` property of the `MapShapeL
 
 {% highlight xaml %}
 
-	<ContentPage.Resources>
-        <ResourceDictionary>
-            <DataTemplate x:Key="LowPopulationTemplate">
-                <StackLayout 
-                      HorizontalOptions="StartAndExpand"
-                      VerticalOptions="Center">
-                    <Image Source="map.png"
+<ContentPage.Resources>
+    <ResourceDictionary>
+        <DataTemplate x:Key="LowPopulationTemplate">
+            <StackLayout HorizontalOptions="StartAndExpand"
+                         VerticalOptions="Center">
+                <Image Source="map.png"
                        HeightRequest="30"
                        WidthRequest="30" />
-                </StackLayout>
-            </DataTemplate>
-        </ResourceDictionary>
-    </ContentPage.Resources>
-	
-    <map:SfMaps>
-        <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapeStroke="DarkGrey"
-                               MarkerTemplate="{StaticResource LowPopulationTemplate}"
-                               ShowMarkerTooltip="True">
-                <map:MapShapeLayer.Markers>
-                    <map:MapMarkerCollection>
-                        <map:MapMarker Latitude="20.5595" Longitude="22.9375" HorizontalAlignment="Center" VerticalAlignment="Start"/>
-                        <map:MapMarker Latitude="21.7679" Longitude="78.8718" HorizontalAlignment="Center" VerticalAlignment="Start"  />
-                        <map:MapMarker Latitude="133.7751" Longitude="25.2744" HorizontalAlignment="Center" VerticalAlignment="Start" />
-                        <map:MapMarker Latitude="60.2551" Longitude="84.5260" HorizontalAlignment="Center" VerticalAlignment="Start" />
-                        <map:MapMarker Latitude="195.4915" Longitude="-50.7832" HorizontalAlignment="Center" VerticalAlignment="Start"  />
-                    </map:MapMarkerCollection>
-                </map:MapShapeLayer.Markers>
-            </map:MapShapeLayer>
-        </map:SfMaps.Layer>
-    </map:SfMaps>
+            </StackLayout>
+        </DataTemplate>
+    </ResourceDictionary>
+</ContentPage.Resources>
+
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer ShapeStroke="DarkGrey"
+                           MarkerTemplate="{StaticResource LowPopulationTemplate}"
+                           ShowMarkerTooltip="True">
+            <map:MapShapeLayer.Markers>
+                <map:MapMarkerCollection>
+                    <map:MapMarker Latitude="20.5595" Longitude="22.9375" HorizontalAlignment="Center" VerticalAlignment="Start"/>
+                    <map:MapMarker Latitude="21.7679" Longitude="78.8718" HorizontalAlignment="Center" VerticalAlignment="Start"  />
+                    <map:MapMarker Latitude="133.7751" Longitude="25.2744" HorizontalAlignment="Center" VerticalAlignment="Start" />
+                    <map:MapMarker Latitude="60.2551" Longitude="84.5260" HorizontalAlignment="Center" VerticalAlignment="Start" />
+                    <map:MapMarker Latitude="195.4915" Longitude="-50.7832" HorizontalAlignment="Center" VerticalAlignment="Start"  />
+                </map:MapMarkerCollection>
+            </map:MapShapeLayer.Markers>
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
 
 {% endhighlight %}
 
@@ -398,59 +398,59 @@ Data template can be used to customize the marker tooltip. The following code ex
 
 {% highlight xaml %}
 
-	<ContentPage.Resources>
-        <ResourceDictionary>
-            <DataTemplate x:Key="MapMarkerTemplate">
-                <StackLayout HorizontalOptions="StartAndExpand"
-							 VerticalOptions="Center">
-                    <Image Source="map.png"
-                           HeightRequest="30"
-						   WidthRequest="30" />
-                </StackLayout>
-            </DataTemplate>
-        </ResourceDictionary>
-    </ContentPage.Resources>
-	
-    <map:SfMaps>
-        <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapeStroke="DarkGrey"
-                               ShapeHoverFill="Transparent"   
-                               ShapeHoverStroke="Transparent"
-                               MarkerTemplate="{StaticResource MapMarkerTemplate}"
-                               ShowMarkerTooltip="True">
-							   
-                  <map:MapShapeLayer.Markers>
-                    <map:MapMarkerCollection>
-                        <local:CustomMarker Name="South africa" Area="38,570,000 sq. km."  Latitude="20.5595" Longitude="22.9375"  />
-                        <local:CustomMarker Name="India" Area="30,370,000 sq. km." Latitude="21.7679" Longitude="78.8718"  />
-                        <local:CustomMarker Name="Europe" Area="20,370,000 sq. km." Latitude="133.7751"  Longitude="25.2744"  />
-                        <local:CustomMarker Name="Asia" Area="50,570,000 sq. km." Latitude="60.2551" Longitude="84.5260" />
-                        <local:CustomMarker Name="South America" Area="30,370,000 sq. km." Latitude="195.4915"  Longitude="-50.7832"  />
-                    </map:MapMarkerCollection>
-                </map:MapShapeLayer.Markers>
-			
-                <map:MapShapeLayer.MarkerTooltipTemplate>
-                    <DataTemplate>
-                        <Grid Padding="10" WidthRequest="150">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="Auto" />
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="Auto"/>
-                            </Grid.ColumnDefinitions>
-                            <Image Source="flag.png" Grid.Column="0" Grid.Row="0" WidthRequest="20" HeightRequest="20" />
-                            <Label Text="{Binding Name}" TextColor="White"  Grid.Column="1" Grid.Row="0" Padding="10"/>
-                            <Label Grid.Row="2" Grid.ColumnSpan="2"  Text="{Binding Area}" TextColor="White" />
-                        </Grid>
-                    </DataTemplate>
-                </map:MapShapeLayer.MarkerTooltipTemplate>
-			
-            </map:MapShapeLayer>
-        </map:SfMaps.Layer>
-    </map:SfMaps>
+<ContentPage.Resources>
+    <ResourceDictionary>
+        <DataTemplate x:Key="MapMarkerTemplate">
+            <StackLayout HorizontalOptions="StartAndExpand"
+                         VerticalOptions="Center">
+                <Image Source="map.png"
+                       HeightRequest="30"
+                       WidthRequest="30" />
+            </StackLayout>
+        </DataTemplate>
+    </ResourceDictionary>
+</ContentPage.Resources>
+
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer ShapeStroke="DarkGrey"
+                           ShapeHoverFill="Transparent"   
+                           ShapeHoverStroke="Transparent"
+                           MarkerTemplate="{StaticResource MapMarkerTemplate}"
+                           ShowMarkerTooltip="True">
+                            
+            <map:MapShapeLayer.Markers>
+                <map:MapMarkerCollection>
+                    <local:CustomMarker Name="South africa" Area="38,570,000 sq. km."  Latitude="20.5595" Longitude="22.9375"  />
+                    <local:CustomMarker Name="India" Area="30,370,000 sq. km." Latitude="21.7679" Longitude="78.8718"  />
+                    <local:CustomMarker Name="Europe" Area="20,370,000 sq. km." Latitude="133.7751"  Longitude="25.2744"  />
+                    <local:CustomMarker Name="Asia" Area="50,570,000 sq. km." Latitude="60.2551" Longitude="84.5260" />
+                    <local:CustomMarker Name="South America" Area="30,370,000 sq. km." Latitude="195.4915"  Longitude="-50.7832"  />
+                </map:MapMarkerCollection>
+            </map:MapShapeLayer.Markers>
+        
+            <map:MapShapeLayer.MarkerTooltipTemplate>
+                <DataTemplate>
+                    <Grid Padding="10" WidthRequest="150">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="10"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="flag.png" Grid.Column="0" Grid.Row="0" WidthRequest="20" HeightRequest="20" />
+                        <Label Text="{Binding Name}" TextColor="White"  Grid.Column="1" Grid.Row="0" Padding="10"/>
+                        <Label Grid.Row="2" Grid.ColumnSpan="2"  Text="{Binding Area}" TextColor="White" />
+                    </Grid>
+                </DataTemplate>
+            </map:MapShapeLayer.MarkerTooltipTemplate>
+        
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
 
 {% endhighlight %}
 

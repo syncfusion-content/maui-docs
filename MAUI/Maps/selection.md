@@ -21,16 +21,16 @@ The `ShapeSelected` event is used to perform any action on shape selected shape 
 
 {% highlight xaml %}
 
-     <map:SfMaps>
-        <map:SfMaps.Layer>
-            <map:MapShapeLayer x:Name="layer"
-							   SelectedShapeFill="Aqua"
-							   ShapeSelected="layer_ShapeSelected" 
-							   EnableSelection="True">
-            
-            </map:MapShapeLayer>
-        </map:SfMaps.Layer>
-    </map:SfMaps>
+<map:SfMaps>
+   <map:SfMaps.Layer>
+      <map:MapShapeLayer x:Name="layer"
+                         SelectedShapeFill="Aqua"
+                         ShapeSelected="layer_ShapeSelected" 
+                         EnableSelection="True">
+		
+       </map:MapShapeLayer>
+   </map:SfMaps.Layer>
+</map:SfMaps>
 
 {% endhighlight %}
 
@@ -68,20 +68,20 @@ You can customize the below appearance of the selected shape.
 
 {% highlight xaml %}
 
-     <map:SfMaps>
-        <map:SfMaps.Layer>
-            <map:MapShapeLayer DataSource="{Binding Data}" 
-							   PrimaryValuePath="Country"
-							   ShapeDataField="STATE_NAME" 
-							   ShapeColorValuePath = "Color" 
-							   SelectedShapeFill="Green"
-							   SelectedShapeStroke="DarkGreen" 
-							   SelectedShapeStrokeThickness="2" 
-							   EnableSelection="True">
-            
-            </map:MapShapeLayer>
-        </map:SfMaps.Layer>
-    </map:SfMaps>
+<map:SfMaps>
+   <map:SfMaps.Layer>
+      <map:MapShapeLayer DataSource="{Binding Data}" 
+                         PrimaryValuePath="Country"
+                         ShapeDataField="STATE_NAME" 
+                         ShapeColorValuePath = "Color" 
+                         SelectedShapeFill="Green"
+                         SelectedShapeStroke="DarkGreen" 
+                         SelectedShapeStrokeThickness="2" 
+                         EnableSelection="True">
+
+       </map:MapShapeLayer>
+   </map:SfMaps.Layer>
+</map:SfMaps>
 
 {% endhighlight %}
 

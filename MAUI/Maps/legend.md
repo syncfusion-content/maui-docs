@@ -19,29 +19,29 @@ You can show shape legend by setting the `Legend` property as `MapLegend(LegendS
 
 {% highlight xaml %}
 
-     <map:SfMaps>
-            <map:SfMaps.Layer>
-                <map:MapShapeLayer DataSource="{Binding Data}"
-								   PrimaryValuePath="State" 
-								   ShapeDataField="name" 
-								   ShapeStroke="DarkGrey">
-                       
-                        <map:MapShapeLayer.ColorMappings>
-                            <map:EqualColorMapping Color="Gray" Value="51" Text="India" />
-                            <map:EqualColorMapping Color="Gray" Value="58" Text="United States" />
-                            <map:EqualColorMapping Color="Gray" Value="41" Text="Kazakhstan" />
-                            <map:EqualColorMapping Color="Gray" Value="48" Text="Italy" />
-                            <map:EqualColorMapping Color="Gray" Value="14" Text="Korea" />
-                            <map:EqualColorMapping Color="Gray" Value="23" Text="China" />
-                        </map:MapShapeLayer.ColorMappings>
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer DataSource="{Binding Data}"
+                            PrimaryValuePath="State" 
+                            ShapeDataField="name" 
+                            ShapeStroke="DarkGrey">
+                
+                <map:MapShapeLayer.ColorMappings>
+                    <map:EqualColorMapping Color="Gray" Value="51" Text="India" />
+                    <map:EqualColorMapping Color="Gray" Value="58" Text="United States" />
+                    <map:EqualColorMapping Color="Gray" Value="41" Text="Kazakhstan" />
+                    <map:EqualColorMapping Color="Gray" Value="48" Text="Italy" />
+                    <map:EqualColorMapping Color="Gray" Value="14" Text="Korea" />
+                    <map:EqualColorMapping Color="Gray" Value="23" Text="China" />
+                </map:MapShapeLayer.ColorMappings>
 
-                        <map:MapShapeLayer.Legend>
-                            <map:MapLegend SourceType="Shape" Placement="Top" />
-                        </map:MapShapeLayer.Legend>
-                        
-                </map:MapShapeLayer>
-           </map:SfMaps.Layer>
-    </map:SfMaps>
+                <map:MapShapeLayer.Legend>
+                    <map:MapLegend SourceType="Shape" Placement="Top" />
+                </map:MapShapeLayer.Legend>
+                
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
 
 {% endhighlight %}
 
@@ -119,38 +119,38 @@ You can show bubble legend by setting the `MapShapeLayer.Legend` property as `Ma
 
 {% highlight xaml %}
 
-     <map:SfMaps>
-            <map:SfMaps.Layer>
-                <map:MapShapeLayer DataSource="{Binding Data}"  
-								   ShowBubbles="True" 
-								   PrimaryValuePath="State" 
-								   ShapeDataField="name" 
-								   ShapeStroke="DarkGray">
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer DataSource="{Binding Data}"  
+                           ShowBubbles="True" 
+                           PrimaryValuePath="State" 
+                           ShapeDataField="name" 
+                           ShapeStroke="DarkGray">
 
-                        <map:MapShapeLayer.BubbleSettings>
-                            <map:MapBubbleSettings ColorValuePath="Population"
-												   SizeValuePath="Population"
-												   MinSize="30"
-												   MaxSize="80">
+                <map:MapShapeLayer.BubbleSettings>
+                    <map:MapBubbleSettings ColorValuePath="Population"
+                                           SizeValuePath="Population"
+                                           MinSize="30"
+                                           MaxSize="80">
 
-								<map:MapBubbleSettings.ColorMappings>
-									<map:EqualColorMapping Color="LightGreen" Value="21" Text="India" />
-									<map:EqualColorMapping Color="LightGreen" Value="58" Text="United States" />
-									<map:EqualColorMapping Color="LightGreen" Value="41" Text="Kazakhstan" />
-									<map:EqualColorMapping Color="LightGreen" Value="48" Text="Italy" />
-									<map:EqualColorMapping Color="LightGreen" Value="14" Text="Korea" />
-									<map:EqualColorMapping Color="LightGreen" Value="23" Text="China" />
-								</map:MapBubbleSettings.ColorMappings>
-							</map:MapBubbleSettings>
-						</map:MapShapeLayer.BubbleSettings>
-                        
-                        <map:MapShapeLayer.Legend>
-                            <map:MapLegend SourceType="Bubble" Placement="Top" />
-                        </map:MapShapeLayer.Legend>
-                        
-                </map:MapShapeLayer>
-           </map:SfMaps.Layer>
-    </map:SfMaps>
+                        <map:MapBubbleSettings.ColorMappings>
+                            <map:EqualColorMapping Color="LightGreen" Value="21" Text="India" />
+                            <map:EqualColorMapping Color="LightGreen" Value="58" Text="United States" />
+                            <map:EqualColorMapping Color="LightGreen" Value="41" Text="Kazakhstan" />
+                            <map:EqualColorMapping Color="LightGreen" Value="48" Text="Italy" />
+                            <map:EqualColorMapping Color="LightGreen" Value="14" Text="Korea" />
+                            <map:EqualColorMapping Color="LightGreen" Value="23" Text="China" />
+                        </map:MapBubbleSettings.ColorMappings>
+                    </map:MapBubbleSettings>
+                </map:MapShapeLayer.BubbleSettings>
+                
+                <map:MapShapeLayer.Legend>
+                    <map:MapLegend SourceType="Bubble" Placement="Top" />
+                </map:MapShapeLayer.Legend>
+                
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
 
 {% endhighlight %}
 
@@ -238,37 +238,37 @@ You can customize the legend item's text style using the `MapLegend.TextStyle` p
 
 {% highlight xaml %}
 
-     <map:SfMaps>
-            <map:SfMaps.Layer>
-                <map:MapShapeLayer DataSource="{Binding Data}"
-   								   PrimaryValuePath="State"
-   								   ShapeDataField="name" 
-   								   ShapeStroke="DarkGray" 
-   								   ShapeColorValuePath="Population">
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer DataSource="{Binding Data}"
+                           PrimaryValuePath="State"
+                           ShapeDataField="name" 
+                           ShapeStroke="DarkGray" 
+                           ShapeColorValuePath="Population">
 
-                        <map:MapShapeLayer.ColorMappings>
-                            <map:RangeColorMapping Color="Red" From="0" To="100" Text="0 - 100/km" />
-                            <map:RangeColorMapping Color="LightGreen" From="101" To="200"  Text="100 - 200/km" />
-                            <map:RangeColorMapping Color="Blue" From="201" To="300"  Text="200 - 300/km" />
-                            <map:RangeColorMapping Color="Orange" From="301" To="400"  Text="300 - 400/km" />
-                            <map:RangeColorMapping Color="Teal" From="401" To="500"  Text="400 - 500/km" />
-                            <map:RangeColorMapping Color="Purple" From="501" To="600"  Text="500 - 600/km" />
-                        </map:MapShapeLayer.ColorMappings>
+                <map:MapShapeLayer.ColorMappings>
+                    <map:RangeColorMapping Color="Red" From="0" To="100" Text="0 - 100/km" />
+                    <map:RangeColorMapping Color="LightGreen" From="101" To="200"  Text="100 - 200/km" />
+                    <map:RangeColorMapping Color="Blue" From="201" To="300"  Text="200 - 300/km" />
+                    <map:RangeColorMapping Color="Orange" From="301" To="400"  Text="300 - 400/km" />
+                    <map:RangeColorMapping Color="Teal" From="401" To="500"  Text="400 - 500/km" />
+                    <map:RangeColorMapping Color="Purple" From="501" To="600"  Text="500 - 600/km" />
+                </map:MapShapeLayer.ColorMappings>
 
-                        <map:MapShapeLayer.Legend>
-                            <map:MapLegend SourceType="Shape" Placement="Top">
-                                <map:MapLegend.TextStyle>
-                                    <map:MapLabelStyle FontSize="16"
-													   TextColor="Black"
-													   FontFamily="Times"
-													   FontAttributes="Italic" />
-                                </map:MapLegend.TextStyle>
-                            </map:MapLegend>    
-                        </map:MapShapeLayer.Legend>
-                        
-                </map:MapShapeLayer>
-           </map:SfMaps.Layer>
-    </map:SfMaps>
+                <map:MapShapeLayer.Legend>
+                    <map:MapLegend SourceType="Shape" Placement="Top">
+                        <map:MapLegend.TextStyle>
+                            <map:MapLabelStyle FontSize="16"
+                                               TextColor="Black"
+                                               FontFamily="Times"
+                                               FontAttributes="Italic" />
+                        </map:MapLegend.TextStyle>
+                    </map:MapLegend>    
+                </map:MapShapeLayer.Legend>
+                
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
 
 {% endhighlight %}
 
@@ -357,30 +357,30 @@ You can position the legend items in different directions using the `MapLegend.P
 
 {% highlight xaml %}
 
-     <map:SfMaps>
-            <map:SfMaps.Layer>
-                <map:MapShapeLayer DataSource="{Binding Data}"
-   								   PrimaryValuePath="State" 
-   								   ShapeDataField="name" 
-   								   ShapeStroke="DarkGray" 
-   								   ShapeColorValuePath="Population">
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer DataSource="{Binding Data}"
+                           PrimaryValuePath="State" 
+                           ShapeDataField="name" 
+                           ShapeStroke="DarkGray" 
+                           ShapeColorValuePath="Population">
 
-                        <map:MapShapeLayer.ColorMappings>
-                            <map:RangeColorMapping Color="Red" From="0" To="100" Text="0 - 100/km" />
-                            <map:RangeColorMapping Color="LightGreen" From="101" To="200"  Text="100 - 200/km" />
-                            <map:RangeColorMapping Color="Blue" From="201" To="300"  Text="200 - 300/km" />
-                            <map:RangeColorMapping Color="Orange" From="301" To="400"  Text="300 - 400/km" />
-                            <map:RangeColorMapping Color="Teal" From="401" To="500"  Text="400 - 500/km" />
-                            <map:RangeColorMapping Color="Purple" From="501" To="600"  Text="500 - 600/km" />
-                        </map:MapShapeLayer.ColorMappings>
+                <map:MapShapeLayer.ColorMappings>
+                    <map:RangeColorMapping Color="Red" From="0" To="100" Text="0 - 100/km" />
+                    <map:RangeColorMapping Color="LightGreen" From="101" To="200"  Text="100 - 200/km" />
+                    <map:RangeColorMapping Color="Blue" From="201" To="300"  Text="200 - 300/km" />
+                    <map:RangeColorMapping Color="Orange" From="301" To="400"  Text="300 - 400/km" />
+                    <map:RangeColorMapping Color="Teal" From="401" To="500"  Text="400 - 500/km" />
+                    <map:RangeColorMapping Color="Purple" From="501" To="600"  Text="500 - 600/km" />
+                </map:MapShapeLayer.ColorMappings>
 
-                        <map:MapShapeLayer.Legend>
-                            <map:MapLegend SourceType="Shape" Placement="Right" />
-                        </map:MapShapeLayer.Legend>
-                        
-                </map:MapShapeLayer>
-           </map:SfMaps.Layer>
-    </map:SfMaps>
+                <map:MapShapeLayer.Legend>
+                    <map:MapLegend SourceType="Shape" Placement="Right" />
+                </map:MapShapeLayer.Legend>
+                
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
 
 {% endhighlight %}
 

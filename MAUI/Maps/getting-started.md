@@ -137,11 +137,11 @@ The MapSource.FromFile method requires a string argument, and returns a new MapS
 
 {% highlight XAML %}
 
-     <map:SfMaps>
-        <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource="D:\MyProject\usa_state.shp" />
-        </map:SfMaps.Layer>
-    </map:SfMaps>
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer ShapesSource="D:\MyProject\usa_state.shp" />
+    </map:SfMaps.Layer>
+</map:SfMaps>
 
 {% endhighlight %}
 
@@ -189,11 +189,11 @@ The MapSource.FromUri method requires a Uri argument, and returns a new `MapShap
 
 {% highlight XAML %}
 
-     <map:SfMaps>
-        <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json" />
-        </map:SfMaps.Layer>
-    </map:SfMaps>
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json" />
+    </map:SfMaps.Layer>
+</map:SfMaps>
 
 {% endhighlight %}
 

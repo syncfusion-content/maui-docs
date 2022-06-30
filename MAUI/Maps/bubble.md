@@ -19,24 +19,24 @@ You can enable bubbles using the `ShowBubbles`. You can customize a bubbles usin
 
 {% highlight xaml %}
 
-     <map:SfMaps>
-        <map:SfMaps.Layer>
-            <map:MapShapeLayer DataSource="{Binding Data}"
-							   PrimaryValuePath="State" 
-							   ShapeDataField="name" 
-							   ShowBubbles="True">
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer DataSource="{Binding Data}"
+                           PrimaryValuePath="State" 
+                           ShapeDataField="name" 
+                           ShowBubbles="True">
 
-              <map:MapShapeLayer.BubbleSettings>
-                  <map:MapBubbleSettings ColorValuePath="Population" 
-       									 SizeValuePath="Population" 
-       									 Fill="DarkViolet"
-       									 MinSize="30"
-       									 MaxSize="80">
-                  </map:MapBubbleSettings>
-              </map:MapShapeLayer.BubbleSettings>
-            </map:MapShapeLayer>
-        </map:SfMaps.Layer>
-    </map:SfMaps>
+            <map:MapShapeLayer.BubbleSettings>
+                <map:MapBubbleSettings ColorValuePath="Population" 
+                                       SizeValuePath="Population" 
+                                       Fill="DarkViolet"
+                                       MinSize="30"
+                                       MaxSize="80">
+                </map:MapBubbleSettings>
+            </map:MapShapeLayer.BubbleSettings>
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
 
 {% endhighlight %}
 
@@ -111,27 +111,27 @@ You can enable tooltip for the bubbles using the `ShowBubbleTooltip` property. I
 
 {% highlight xaml %}
 
-     <map:SfMaps>
-        <map:SfMaps.Layer>
-            <map:MapShapeLayer DataSource="{Binding Data}"
-   							   PrimaryValuePath="State" 
-   							   ShapeDataField="name" 
-   							   ShapeHoverFill="Transparent" 
-   							   ShapeHoverStroke="Transparent"
-   							   ShowBubbles="True"
-   							   ShowBubbleTooltip="True">
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer DataSource="{Binding Data}"
+                           PrimaryValuePath="State" 
+                           ShapeDataField="name" 
+                           ShapeHoverFill="Transparent" 
+                           ShapeHoverStroke="Transparent"
+                           ShowBubbles="True"
+                           ShowBubbleTooltip="True">
 
-              <map:MapShapeLayer.BubbleSettings>
-                  <map:MapBubbleSettings ColorValuePath="Population" 
-										 SizeValuePath="Population" 
-										 Fill="DarkViolet"
-										 MinSize="30"
-										 MaxSize="80">
-                  </map:MapBubbleSettings>
-              </map:MapShapeLayer.BubbleSettings>
-            </map:MapShapeLayer>
-        </map:SfMaps.Layer>
-    </map:SfMaps>
+            <map:MapShapeLayer.BubbleSettings>
+                <map:MapBubbleSettings ColorValuePath="Population" 
+                                       SizeValuePath="Population" 
+                                       Fill="DarkViolet"
+                                       MinSize="30"
+                                       MaxSize="80">
+                </map:MapBubbleSettings>
+            </map:MapShapeLayer.BubbleSettings>
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
 
 {% endhighlight %}
 
@@ -211,45 +211,45 @@ The value from the `ColorValuePath` will be used for the comparison in the `Equa
 
 {% highlight xaml %}
 
-     <map:SfMaps>
-        <map:SfMaps.Layer>
-            <map:MapShapeLayer ShowDataLabels="True"
-							   DataSource="{Binding Data}" 
-							   PrimaryValuePath="State" 
-							   ShapeDataField="name" 
-							   ShowBubbles="True">
-              <map:MapShapeLayer.BubbleSettings>
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer ShowDataLabels="True"
+                           DataSource="{Binding Data}" 
+                           PrimaryValuePath="State" 
+                           ShapeDataField="name" 
+                           ShowBubbles="True">
+            <map:MapShapeLayer.BubbleSettings>
 
-                <map:MapBubbleSettings ColorValuePath="Population" 
-									   SizeValuePath="Population" 
-									   MinSize="30"
-									   MaxSize="80">
+            <map:MapBubbleSettings ColorValuePath="Population" 
+                                   SizeValuePath="Population" 
+                                   MinSize="30"
+                                   MaxSize="80">
 
-                      <map:MapBubbleSettings.ColorMappings>
-                           <map:EqualColorMapping Color="DarkViolet" Value="51"/>
-                           <map:EqualColorMapping Color="Orange" Value="58"/>
-                           <map:EqualColorMapping Color="Yellow" Value="41"/>
-                           <map:EqualColorMapping Color="LightGreen" Value="48"/>
-                           <map:EqualColorMapping Color="Green" Value="14"/>
-                           <map:EqualColorMapping Color="Aqua" Value="23"/>
-                      </map:MapBubbleSettings.ColorMappings>
-                </map:MapBubbleSettings>
-              </map:MapShapeLayer.BubbleSettings>
+                    <map:MapBubbleSettings.ColorMappings>
+                        <map:EqualColorMapping Color="DarkViolet" Value="51"/>
+                        <map:EqualColorMapping Color="Orange" Value="58"/>
+                        <map:EqualColorMapping Color="Yellow" Value="41"/>
+                        <map:EqualColorMapping Color="LightGreen" Value="48"/>
+                        <map:EqualColorMapping Color="Green" Value="14"/>
+                        <map:EqualColorMapping Color="Aqua" Value="23"/>
+                    </map:MapBubbleSettings.ColorMappings>
+            </map:MapBubbleSettings>
+            </map:MapShapeLayer.BubbleSettings>
 
-              <map:MapShapeLayer.DataLabelSettings>
-                  <map:MapDataLabelSettings DataLabelPath="State"
-										    OverflowMode="None">
-                      <map:MapDataLabelSettings.DataLabelStyle>
-                         <map:MapLabelStyle FontSize="12" 
-											TextColor="Red" 
-											FontAttributes="Italic"/>
-                      </map:MapDataLabelSettings.DataLabelStyle>
-                  </map:MapDataLabelSettings>
-              </map:MapShapeLayer.DataLabelSettings>
+            <map:MapShapeLayer.DataLabelSettings>
+                <map:MapDataLabelSettings DataLabelPath="State"
+                                          OverflowMode="None">
+                    <map:MapDataLabelSettings.DataLabelStyle>
+                        <map:MapLabelStyle FontSize="12" 
+                                           TextColor="Red" 
+                                           FontAttributes="Italic"/>
+                    </map:MapDataLabelSettings.DataLabelStyle>
+                </map:MapDataLabelSettings>
+            </map:MapShapeLayer.DataLabelSettings>
 
-            </map:MapShapeLayer>
-        </map:SfMaps.Layer>
-    </map:SfMaps>
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
 
 {% endhighlight %}
 
@@ -358,32 +358,32 @@ You can customize the below appearance of the bubbles.
 
 {% highlight xaml %}
 
-     <map:SfMaps>
-        <map:SfMaps.Layer>
-            <map:MapShapeLayer DataSource="{Binding Data}"
-							   PrimaryValuePath="State" 
-							   ShapeDataField="name"
-							   ShapeHoverFill = "Transparent" 
-							   ShapeHoverStroke="Transparent"
-							   ShowBubbles="True"
-							   ShowBubbleTooltip="True" >
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer DataSource="{Binding Data}"
+                           PrimaryValuePath="State" 
+                           ShapeDataField="name"
+                           ShapeHoverFill = "Transparent" 
+                           ShapeHoverStroke="Transparent"
+                           ShowBubbles="True"
+                           ShowBubbleTooltip="True" >
 
-              <map:MapShapeLayer.BubbleSettings>
-                  <map:MapBubbleSettings ColorValuePath="Population" 
-										 SizeValuePath="Population" 
-										 Fill="Green"
-										 Stroke="DarkGreen"
-										 StrokeThickness="2"
-										 HoverFill="Blue"
-										 HoverStroke="DarkBlue"
-										 HoverStrokeThickness="3"
-										 MinSize="30"
-										 MaxSize="80">
-                  </map:MapBubbleSettings>
-              </map:MapShapeLayer.BubbleSettings>
-            </map:MapShapeLayer>
-        </map:SfMaps.Layer>
-    </map:SfMaps>
+            <map:MapShapeLayer.BubbleSettings>
+                <map:MapBubbleSettings ColorValuePath="Population" 
+                                       SizeValuePath="Population" 
+                                       Fill="Green"
+                                       Stroke="DarkGreen"
+                                       StrokeThickness="2"
+                                       HoverFill="Blue"
+                                       HoverStroke="DarkBlue"
+                                       HoverStrokeThickness="3"
+                                       MinSize="30"
+                                       MaxSize="80">
+                </map:MapBubbleSettings>
+            </map:MapShapeLayer.BubbleSettings>
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
 
 {% endhighlight %}
 
@@ -404,7 +404,6 @@ public MainPage()
     layer.ShapeHoverStroke = Colors.Transparent;
     layer.ShowBubbles = true;
     layer.ShowBubbleTooltip = true;
-
 
     MapBubbleSettings bubbleSetting = new MapBubbleSettings()
     {

@@ -19,19 +19,19 @@ You can show data labels on the map using the `ShowDataLabels` property. The def
 
 {% highlight xaml %}
 
-     <map:SfMaps>
-        <map:SfMaps.Layer>
-            <map:MapShapeLayer DataSource="{Binding Data}"        
-							   PrimaryValuePath="State" 
-							   ShapeDataField="STATE_NAME" 
-							   ShowDataLabels="True">
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer DataSource="{Binding Data}"        
+                           PrimaryValuePath="State" 
+                           ShapeDataField="STATE_NAME" 
+                           ShowDataLabels="True">
 
-                <map:MapShapeLayer.DataLabelSettings>
-                    <map:MapDataLabelSettings DataLabelPath="State" />
-                </map:MapShapeLayer.DataLabelSettings>
-            </map:MapShapeLayer>
-        </map:SfMaps.Layer>
-    </map:SfMaps>
+            <map:MapShapeLayer.DataLabelSettings>
+                <map:MapDataLabelSettings DataLabelPath="State" />
+            </map:MapShapeLayer.DataLabelSettings>
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
 
 {% endhighlight %}
 
@@ -103,19 +103,19 @@ You can customize text of the data labels using the `DataLabelPath` property.
 
 {% highlight xaml %}
 
-     <map:SfMaps>
-        <map:SfMaps.Layer>
-            <map:MapShapeLayer DataSource="{Binding Data}"        
-							   PrimaryValuePath="State" 
-							   ShapeDataField="STATE_NAME" 
-							   ShowDataLabels="True" >
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer DataSource="{Binding Data}"        
+                           PrimaryValuePath="State" 
+                           ShapeDataField="STATE_NAME" 
+                           ShowDataLabels="True" >
 
-                <map:MapShapeLayer.DataLabelSettings>
-                    <map:MapDataLabelSettings DataLabelPath="StateCode" />
-                </map:MapShapeLayer.DataLabelSettings>
-            </map:MapShapeLayer>
-        </map:SfMaps.Layer>
-    </map:SfMaps>
+            <map:MapShapeLayer.DataLabelSettings>
+                <map:MapDataLabelSettings DataLabelPath="StateCode" />
+            </map:MapShapeLayer.DataLabelSettings>
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
 
 {% endhighlight %}
 
@@ -189,20 +189,20 @@ By default, the data labels will render even if it overflows from the shape.
 
 {% highlight xaml %}
 
-     <map:SfMaps>
-        <map:SfMaps.Layer>
-            <map:MapShapeLayer DataSource="{Binding Data}"        
-							   PrimaryValuePath="State" 
-							   ShapeDataField="STATE_NAME" 
-							   ShowDataLabels="True">
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer DataSource="{Binding Data}"        
+                           PrimaryValuePath="State" 
+                           ShapeDataField="STATE_NAME" 
+                           ShowDataLabels="True">
 
-                <map:MapShapeLayer.DataLabelSettings>
-                    <map:MapDataLabelSettings OverflowMode="Trim"
-											  DataLabelPath="State" />
-                </map:MapShapeLayer.DataLabelSettings>
-            </map:MapShapeLayer>
-        </map:SfMaps.Layer>
-    </map:SfMaps>
+            <map:MapShapeLayer.DataLabelSettings>
+                <map:MapDataLabelSettings OverflowMode="Trim"
+                                          DataLabelPath="State" />
+            </map:MapShapeLayer.DataLabelSettings>
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
 
 {% endhighlight %}
 
@@ -275,27 +275,27 @@ You can customize the data labels using the `DataLabelStyle` property.
 
 {% highlight xaml %}
 
-     <map:SfMaps>
-        <map:SfMaps.Layer>
-            <map:MapShapeLayer DataSource="{Binding Data}" 
-							   PrimaryValuePath="State" 
-							   ShapeDataField="STATE_NAME" 
-							   ShowDataLabels="True">
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer DataSource="{Binding Data}" 
+                           PrimaryValuePath="State" 
+                           ShapeDataField="STATE_NAME" 
+                           ShowDataLabels="True">
 
-                <map:MapShapeLayer.DataLabelSettings>
-                    <map:MapDataLabelSettings OverflowMode="Trim"
-											  DataLabelPath="ContinentCode">
-                          <map:MapDataLabelSettings.DataLabelStyle>
-                                    <map:MapLabelStyle FontSize="12"
-                                                       TextColor="Red"
-                                                       FontAttributes="Bold" />
-                          </map:MapDataLabelSettings.DataLabelStyle>
-                    </map:MapDataLabelSettings>
-                </map:MapShapeLayer.DataLabelSettings>
+            <map:MapShapeLayer.DataLabelSettings>
+                <map:MapDataLabelSettings OverflowMode="Trim"
+                                          DataLabelPath="ContinentCode">
+                        <map:MapDataLabelSettings.DataLabelStyle>
+                                <map:MapLabelStyle FontSize="12"
+                                                   TextColor="Red"
+                                                   FontAttributes="Bold" />
+                        </map:MapDataLabelSettings.DataLabelStyle>
+                </map:MapDataLabelSettings>
+            </map:MapShapeLayer.DataLabelSettings>
 
-            </map:MapShapeLayer>
-        </map:SfMaps.Layer>
-    </map:SfMaps>
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
 
 {% endhighlight %}
 

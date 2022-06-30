@@ -20,15 +20,15 @@ The `ShowShapeTooltip` is used to clearly indicate the shape information every t
 
 {% highlight xaml %}
 
-     <map:SfMaps>
-        <map:SfMaps.Layer>
-            <map:MapShapeLayer DataSource="{Binding Data}"
-							   PrimaryValuePath="State" 
-							   ShapeDataField="name" 
-							   ShowShapeToolTip="True">
-            </map:MapShapeLayer>
-        </map:SfMaps.Layer>
-    </map:SfMaps>
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer DataSource="{Binding Data}"
+                           PrimaryValuePath="State" 
+                           ShapeDataField="name" 
+                           ShowShapeToolTip="True">
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
 
 {% endhighlight %}
 
@@ -98,28 +98,28 @@ The `MapShapeLayer.ShowBubbleTooltip` is used to clearly indicate the bubble inf
 
 {% highlight xaml %}
 
-    <map:SfMaps>
-        <map:SfMaps.Layer>
-            <map:MapShapeLayer DataSource="{Binding Data}"
-							   PrimaryValuePath="State" 
-							   ShapeDataField="name" 
-							   ShapeHoverFill = "Transparent" 
-							   ShapeHoverStroke="Transparent"
-							   ShowBubbles="True"
-							   ShowBubbleTooltip="True">
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer DataSource="{Binding Data}"
+                           PrimaryValuePath="State" 
+                           ShapeDataField="name" 
+                           ShapeHoverFill = "Transparent" 
+                           ShapeHoverStroke="Transparent"
+                           ShowBubbles="True"
+                           ShowBubbleTooltip="True">
 
-              <map:MapShapeLayer.BubbleSettings>
-                  <map:MapBubbleSettings ColorValuePath="Population" 
-                                         SizeValuePath="Population" 
-                                         Fill="DarkViolet"
-                                         MinSize="30"
-                                         MaxSize="80">
-                  </map:MapBubbleSettings>
-              </map:MapShapeLayer.BubbleSettings>
-			  
-            </map:MapShapeLayer>
-        </map:SfMaps.Layer>
-    </map:SfMaps>
+            <map:MapShapeLayer.BubbleSettings>
+                <map:MapBubbleSettings ColorValuePath="Population" 
+                                       SizeValuePath="Population" 
+                                       Fill="DarkViolet"
+                                       MinSize="30"
+                                       MaxSize="80">
+                </map:MapBubbleSettings>
+            </map:MapShapeLayer.BubbleSettings>
+            
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
 
 {% endhighlight %}
 
@@ -200,30 +200,31 @@ The `MapShapeLayer.ShowMarkerTooltip` is used to clearly indicate the marker inf
 
 {% highlight xaml %}
 
-    <map:SfMaps>
-         <map:SfMaps.Layer>
-             <map:MapShapeLayer ShapeStroke="DarkGrey"
-							    ShapeHoverFill = "Transparent" 
-							    ShapeHoverStroke="Transparent" 
-							    ShowMarkerTooltip="True">
+<map:SfMaps>
+    <map:SfMaps.Layer>
+            <map:MapShapeLayer ShapeStroke="DarkGrey"
+                               ShapeHoverFill = "Transparent" 
+                               ShapeHoverStroke="Transparent" 
+                               ShowMarkerTooltip="True">
 
-                 <map:MapShapeLayer.Markers>
-                     <map:MapMarkerCollection>
-                         <map:MapMarker Latitude="1454.6" 
-									    IconWidth="20" 
-									    IconHeight="20" 
-									    IconType="Diamond" 
-									    Longitude="36.0" />
-                         <map:MapMarker Latitude="34.0479"
- 									    IconWidth="20" 
- 									    IconHeight="20" 
- 									    IconType="Circle" 
- 									    Longitude="100.6124" />
+                <map:MapShapeLayer.Markers>
+                    <map:MapMarkerCollection>
+                        <map:MapMarker Latitude="1454.6" 
+                                       IconWidth="20" 
+                                       IconHeight="20" 
+                                       IconType="Diamond" 
+                                       Longitude="36.0" />
+                        <map:MapMarker Latitude="34.0479"
+                                       IconWidth="20" 
+                                       IconHeight="20" 
+                                       IconType="Circle" 
+                                       Longitude="100.6124" />
 
-                     </map:MapMarkerCollection>
-                 </map:MapShapeLayer.Markers>
-        </map:SfMaps.Layer>
-    </map:SfMaps>
+                    </map:MapMarkerCollection>
+                </map:MapShapeLayer.Markers>
+            </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
 
 {% endhighlight %}
 

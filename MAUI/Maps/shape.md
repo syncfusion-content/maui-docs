@@ -19,14 +19,14 @@ You can apply color, stroke color and stroke thickness to the shapes using the `
 
 {% highlight xaml %}
 
-     <map:SfMaps>
-        <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapeStroke="Green"
-							   ShapeFill="LightGreen"  
-							   ShapeStrokeThickness="2">
-            </map:MapShapeLayer>
-        </maps:SfMaps.Layer>
-    </maps:SfMaps>
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer ShapeStroke="Green"
+                           ShapeFill="LightGreen"  
+                           ShapeStrokeThickness="2">
+        </map:MapShapeLayer>
+    </maps:SfMaps.Layer>
+</maps:SfMaps>
 
 {% endhighlight %}
 
@@ -62,14 +62,14 @@ You can apply hover color, hover stoke color and hover stroke thickness to the s
 
 {% highlight xaml %}
 
-     <map:SfMaps>
-        <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapeHoverStroke="Blue"
-							   ShapeHoverFill="LightBlue"  
-							   ShapeHoverStrokeThickness="2">
-            </map:MapShapeLayer>
-        </map:SfMaps.Layer>
-    </map:SfMaps>
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer ShapeHoverStroke="Blue"
+                           ShapeHoverFill="LightBlue"  
+                           ShapeHoverStrokeThickness="2">
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
 
 {% endhighlight %}
 
@@ -105,15 +105,15 @@ N> You can show legend using the `Legend` property.The icons color of the legend
 
 {% highlight xaml %}
 
-     <map:SfMaps>
-        <map:SfMaps.Layer>
-            <map:MapShapeLayer DataSource="{Binding Data}"       
-							   PrimaryValuePath="State" 
-							   ShapeDataField="STATE_NAME" 
-							   ShapeColorValuePath="Color">
-            </map:MapShapeLayer>
-        </map:SfMaps.Layer>
-    </map:SfMaps>
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer DataSource="{Binding Data}"       
+                           PrimaryValuePath="State" 
+                           ShapeDataField="STATE_NAME" 
+                           ShapeColorValuePath="Color">
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
 
 {% endhighlight %}
 
@@ -182,21 +182,21 @@ You can apply color to the shape by comparing a value from the `ColorMappings` w
 
 {% highlight xaml %}
 
-     <map:SfMaps>
-        <map:SfMaps.Layer>
-            <map:MapShapeLayer DataSource="{Binding Data}" 
-							   PrimaryValuePath="Country" 
-							   ShapeDataField="name" 
-							   ShapeColorValuePath="Count">
-            
-                <map:MapShapeLayer.ColorMappings>
-                    <map:EqualColorMapping Color="Red" Value="Low" />
-                     <map:EqualColorMapping Color="Green" Value="High" />
-                </map:MapShapeLayer.ColorMappings>
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer DataSource="{Binding Data}" 
+                           PrimaryValuePath="Country" 
+                           ShapeDataField="name" 
+                           ShapeColorValuePath="Count">
+        
+            <map:MapShapeLayer.ColorMappings>
+                <map:EqualColorMapping Color="Red" Value="Low" />
+                    <map:EqualColorMapping Color="Green" Value="High" />
+            </map:MapShapeLayer.ColorMappings>
 
-            </map:MapShapeLayer>
-        </map:SfMaps.Layer>
-    </map:SfMaps>
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
 
 {% endhighlight %}
 
@@ -272,21 +272,21 @@ You can apply color to the shape based on whether the value from `ColorMappings`
 
 {% highlight xaml %}
 
-     <map:SfMaps>
-        <map:SfMaps.Layer>
-            <map:MapShapeLayer DataSource="{Binding Data}" 
-							   PrimaryValuePath="Country" 
-							   ShapeDataField="name" 
-							   ShapeColorValuePath="Count">
-            
-                <map:MapShapeLayer.ColorMappings>
-                    <map:RangeColorMapping Color="Green" From="0" To="90" />
-                    <map:RangeColorMapping Color="Red" From="100" To="150" />
-                </map:MapShapeLayer.ColorMappings>
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer DataSource="{Binding Data}" 
+                           PrimaryValuePath="Country" 
+                           ShapeDataField="name" 
+                           ShapeColorValuePath="Count">
+        
+            <map:MapShapeLayer.ColorMappings>
+                <map:RangeColorMapping Color="Green" From="0" To="90" />
+                <map:RangeColorMapping Color="Red" From="100" To="150" />
+            </map:MapShapeLayer.ColorMappings>
 
-            </map:MapShapeLayer>
-        </map:SfMaps.Layer>
-    </map:SfMaps>
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
 
 {% endhighlight %}
 
