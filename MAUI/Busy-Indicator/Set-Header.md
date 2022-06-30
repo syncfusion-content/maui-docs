@@ -88,11 +88,11 @@ SfBusyIndicator provides options to set the `Title` at the top or bottom of the 
 {% highlight xaml %}
 
 <core:SfBusyIndicator x:Name="busyindicator"
-                        IsRunning="True"
-                        AnimationType="CircularMaterial"
-                        Title="Loading..."
-                        TextColor = "Red" 
-                        TitlePlacement="Top"/>           
+                      IsRunning="True"
+                      AnimationType="CircularMaterial"
+                      Title="Loading..."
+                      TextColor = "Red" 
+                      TitlePlacement="Top"/>           
 
 {% endhighlight %}
 
@@ -125,12 +125,12 @@ SfBusyIndicator provides options to set the space between the indicator and the 
 {% highlight xaml %}
 
 <core:SfBusyIndicator x:Name="busyindicator"
-                        IsRunning="True"
-                        AnimationType="CircularMaterial"
-                        Title="Loading..."
-                        TextColor = "Red" 
-                        TitlePlacement="Top"
-                        TitleSpacing="20"/>           
+                      IsRunning="True"
+                      AnimationType="CircularMaterial"
+                      Title="Loading..."
+                      TextColor = "Red" 
+                      TitlePlacement="Top"
+                      TitleSpacing="20"/>           
 
 {% endhighlight %}
 
@@ -167,13 +167,13 @@ SfBusyIndicator provides options to customize the title text. The title text can
 {% highlight xaml %}
 
 <core:SfBusyIndicator x:Name="busyindicator"
-                        IsRunning="True"
-                        AnimationType="CircularMaterial"
-                        Title="Loading..."
-                        TextColor = "Red" 
-                        FontSize = "16"
-                        FontAttributes="Bold"
-                        FontFamily="serif" />           
+                      IsRunning="True"
+                      AnimationType="CircularMaterial"
+                      Title="Loading..."
+                      TextColor = "Red" 
+                      FontSize = "16"
+                      FontAttributes="Bold"
+                      FontFamily="serif" />           
  
 {% endhighlight %}
 

@@ -18,3 +18,5 @@ The Busy Indicator control for .NET MAUI provides an indication of the app loadi
 * The animation duration can be customized.
 * Size of the indicator can be customized.
 * Supports displaying a title with font customizations.
+
+![Overview Image](Images/Overview/Overview.gif)
