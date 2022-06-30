@@ -85,7 +85,7 @@ public class Model
 
 {% endtabs %}
 
-![Maps shape tooltip builder](images/tooltip/shape_tooltip.png)
+![Maps shape tooltip](images/tooltip/shape_tooltip.png)
 
 ## Tooltip for the bubbles
 
@@ -187,7 +187,7 @@ The [`ShowBubbleTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Ma
 
 {% endtabs %}
 
-![Maps bubble tooltip builder](images/tooltip/bubble_tooltip.png)
+![Maps bubble tooltip](images/tooltip/bubble_tooltip.png)
 
 ## Tooltip for the markers
 
@@ -266,7 +266,7 @@ The [`ShowMarkerTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Ma
 
 {% endtabs %}
 
-![Maps marker tooltip builder](images/tooltip/marker_tooltip.png)
+![Maps marker tooltip](images/tooltip/marker_tooltip.png)
 
 ## Appearance customization
 
