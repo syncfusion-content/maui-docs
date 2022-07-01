@@ -1,7 +1,7 @@
 ---
 layout: post
 title: About .NET MAUI Maps control | Syncfusion 
-description: Learn about the introduction of Syncfusion .NET MAUI Maps (SfMaps) control, its features, and more.
+description: Learn here all about the introduction of Syncfusion .NET MAUI Maps (SfMaps) control, its features, and more.
 platform: MAUI
 control: SfMaps
 documentation: ug

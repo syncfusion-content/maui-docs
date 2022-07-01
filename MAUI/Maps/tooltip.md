@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tooltip in .NET MAUI Maps control | Syncfusion 
-description: Learn all about adding the Tooltip feature of Syncfusion .NET MAUI Maps (SfMaps) control and more.
+description: Learn here all about adding the Tooltip feature of Syncfusion .NET MAUI Maps (SfMaps) control and more.
 platform: MAUI
 control: SfMaps
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Shape Selection in .NET MAUI Maps control | Syncfusion
-description: Learn all about the Shape Selection feature of Syncfusion .NET MAUI Maps (SfMaps) control and more.
+description: Learn here all about the Shape Selection feature of Syncfusion .NET MAUI Maps (SfMaps) control and more.
 platform: MAUI
 control: SfMaps
 documentation: ug
