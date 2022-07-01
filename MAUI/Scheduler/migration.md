@@ -691,7 +691,7 @@ employee.DisplayPicture = "KinsleyElena.png";
 //Adding a custom resource in the custom resource collection.
 Employees.Add(employee);
 
-// Adding a custom resource collection to schedule resources.
+//Adding a custom resource collection to the schedule resources.
 schedule.ScheduleResources = Employees;
 {% endhighlight %}
 
