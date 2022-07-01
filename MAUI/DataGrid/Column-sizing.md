@@ -82,7 +82,7 @@ Below code, applies `ColumnWidthMode.Fill` to equally set width for `SfDataGrid.
 {% endhighlight %}
 {% endtabs %}
 
-![Column Sizing in .NET MAUI DataGrid](Images\column-sizing\columnWidthModeFill.png)
+![Fill column width mode in .NET MAUI DataGrid](Images\column-sizing\maui-datagrid-fill-column-width-mode.png)
 
 
 ## Apply ColumnWidthMode for a particular column
@@ -107,7 +107,7 @@ textColumn.ColumnWithMode = ColumnWithMode.Auto;
 {% endhighlight %}
 {% endtabs %}
 
-![Column Sizing in .NET MAUI DataGrid](Images\column-sizing\particularColumn.png)
+![Invididual column width mode in .NET MAUI DataGrid](Images\column-sizing\maui-datagrid-invididual-column-width-mode.png)
 
 ## Refreshing ColumnSizer at runtime
 
@@ -134,7 +134,7 @@ Consider that `ColumnWidthMode.Auto` is applied to the SfDataGrid. If the underl
 private void ColumnSizerChanged(object sender, EventArgs e)
 {
     //Refreshes the column sizer of the SfDataGrid
-    dataGrid.GridColumnSizer.Refresh(true);
+    dataGrid.ColumnSizer.Refresh(true);
 }    
 {% endhighlight %}
 {% endtabs %} 
@@ -183,4 +183,4 @@ dataGrid.ColumnSizer  = new CustomColumnSizer();
 {% endhighlight %}
 {% endtabs %}
 
-![Column Sizing in .NET MAUI DataGrid](Images\column-sizing\customizeAutoWidth.png)
+![Customize Auto Width calculation in .NET MAUI DataGrid](Images\column-sizing\maui-datagrid-customize-column-width-calculation.png)
