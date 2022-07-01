@@ -584,8 +584,8 @@ Appointments.Add(new SchedulerAppointment()
     Subject = "Client Meeting",
     Background = Brush.LightSkyBlue,
 });
-
-// Adding the scheduler appointment collection to the AppointmentsSource of .NET MAUI Scheduler.
+	
+//Adding the scheduler appointment collection to the AppointmentsSource of the .NET MAUI Scheduler.
 scheduler.AppointmentsSource = Appointments;
 this.Content = scheduler;	
 	
