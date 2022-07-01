@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Legend in .NET MAUI Maps control | Syncfusion
-description: Learn here all about the Legend feature of Syncfusion .NET MAUI Maps (SfMaps) control to customize its appearance including text, icon and more.
+description: Learn all about the Legend feature of Syncfusion .NET MAUI Maps (SfMaps) control to customize its appearance including text, icon and more.
 platform: MAUI
 control: SfMaps
 documentation: ug
@@ -9,11 +9,11 @@ documentation: ug
 
 # Legend in .NET MAUI Maps (SfMaps)
 
-You can provide clear information on the data plotted on the map using legend.
+Using a legend, you can provide clear information on the data plotted on the map.
 
 ## Shape legend
 
-You can show shape legend by setting the [`Legend`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_Legend) property as [`MapLegend`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html) with [`SourceType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html#Syncfusion_Maui_Maps_MapLegend_SourceType) as [`Shape`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.LegendSourceType.html#Syncfusion_Maui_Maps_LegendSourceType_Shape). By default, the legend item's text is displayed based on the value of [`ColorMappings.Text`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.ColorMapping.html#Syncfusion_Maui_Maps_ColorMapping_Text) property. The default value of the [`Legend`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_Legend) property is `null` and hence the legend will not be shown by default.
+You can show shape legend by setting the [`Legend`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_Legend) property as [`MapLegend`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html) with [`SourceType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html#Syncfusion_Maui_Maps_MapLegend_SourceType) as [`Shape`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.LegendSourceType.html#Syncfusion_Maui_Maps_LegendSourceType_Shape). The legend item’s text is default displayed based on the value of [`ColorMappings.Text`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.ColorMapping.html#Syncfusion_Maui_Maps_ColorMapping_Text) property. The default value of the [`Legend`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_Legend) property is `null` and hence the legend will not be shown by default.
 
 {% tabs %}
 
@@ -113,7 +113,7 @@ public class Model
 
 ## Bubble legend
 
-You can show bubble legend by setting the [`MapShapeLayer.Legend`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html) property as [`SourceType.Bubble`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.LegendSourceType.html#Syncfusion_Maui_Maps_LegendSourceType_Bubble). By default, the legend item's text is displayed based on the value of [`ColorMapping.Text`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.ColorMapping.html#Syncfusion_Maui_Maps_ColorMapping_Text) property.
+You can show bubble legend by setting the [`MapShapeLayer.Legend`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html) property as [`SourceType.Bubble`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.LegendSourceType.html#Syncfusion_Maui_Maps_LegendSourceType_Bubble). By default, the legend item's text is displayed based on the [`ColorMapping.Text`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.ColorMapping.html#Syncfusion_Maui_Maps_ColorMapping_Text) value.
 
 {% tabs %}
 

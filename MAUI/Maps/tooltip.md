@@ -1,20 +1,18 @@
 ---
 layout: post
 title: Tooltip in .NET MAUI Maps control | Syncfusion 
-description: Learn here all about adding the Tooltip feature of Syncfusion .NET MAUI Maps (SfMaps) control and more.
+description: Learn all about adding the Tooltip feature of Syncfusion .NET MAUI Maps (SfMaps) control and more.
 platform: MAUI
 control: SfMaps
 documentation: ug
 ---
 
 # Tooltip in .NET MAUI Maps (SfMaps)
-
-Tooltip is used to indicate the shape, bubble, marker information during the tap, or hover interactions. This section helps to learn about
- how to show tooltip for the shapes, bubbles, and markers in the maps and customize them.
+A tooltip indicates the shape, bubble and marker information during the tap or hover interactions. This section demonstrates how to show tooltips for the shapes, bubbles, and markers in the maps and how to customize them.
 
 ## Tooltip for the shapes
 
-The [`ShowShapeTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShowShapeTooltip) is used to clearly indicate the shape information every time when you interacts with the shapes i.e., while tapping in touch devices and hover enter in the mouse enabled devices.
+The [`ShowShapeTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShowShapeTooltip) is used to indicate the shape information whenever you interact with the shapes i.e., while tapping on touch devices and hovering enter in the mouse enabled devices.
 
 {% tabs %}
 
@@ -89,7 +87,7 @@ public class Model
 
 ## Tooltip for the bubbles
 
-The [`ShowBubbleTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShowBubbleTooltip) is used to clearly indicate the bubble information every time when you interacts with the bubbles i.e., while tapping in touch devices and hover enter in the mouse enabled devices.
+The [`ShowBubbleTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShowBubbleTooltip) is used to indicate the bubble information whenever you interact with the bubbles i.e., while tapping on touch devices and hovering enter in the mouse enabled devices.
 
 {% tabs %}
 
@@ -191,7 +189,7 @@ The [`ShowBubbleTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Ma
 
 ## Tooltip for the markers
 
-The [`ShowMarkerTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_ShowMarkerTooltip) is used to clearly indicate the marker information every time when you interacts with the markers i.e., while tapping in touch devices and hover enter in the mouse enabled devices.
+The [`ShowMarkerTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_ShowMarkerTooltip) is used to indicate the marker information whenever you interact with the markers i.e., while tapping on touch devices and hovering enter in the mouse enabled devices.
 
 {% tabs %}
 
@@ -419,13 +417,13 @@ N>
 * The BindingContext of the Marker will be the corresponding MapMarker.
 
 N>
-* Refer the [`ShapeTooltipTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeTooltipTemplate), for customize tooltip for the shapes.
-* Refer the [`BubbleTooltipTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_BubbleTooltipTemplate), for customize tooltip for the bubbles.
-* Refer the [`MarkerTooltipTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_MarkerTooltipTemplate), for customize tooltip for the markers.
+* Refer to the [`ShapeTooltipTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeTooltipTemplate), for customize tooltip for the shapes.
+* Refer to the [`BubbleTooltipTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_BubbleTooltipTemplate), for customize tooltip for the bubbles.
+* Refer to the [`MarkerTooltipTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_MarkerTooltipTemplate), for customize tooltip for the markers.
 
 ### Apply data template selector for tooltip
 
-Data template selector can be customized the appearance of each item with different templates based on specific constraints. You can choose a DataTemplate for each item at runtime based on the value of data-bound property using DataTemplateSelector in [`ShapeTooltipTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeTooltipTemplate).
+A data template selector can be customized to the appearance of each item with different templates based on specific constraints. You can choose a DataTemplate for each item at runtime based on the value of data-bound property using DataTemplateSelector in [`ShapeTooltipTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeTooltipTemplate).
 
 {% tabs %}
 
