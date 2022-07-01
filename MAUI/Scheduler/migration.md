@@ -525,8 +525,8 @@ The following code example explains how to add the scheduler resource in the Xam
 {% endhighlight %}
 
 {% highlight C# %}
-
-// Creating an instance for schedule resource collection.
+	
+// Creating an instance for the schedule resource collection.
 ObservableCollection<object> resources = new ObservableCollection<object>();
 
 // Adding schedule resource in schedule resource collection.
