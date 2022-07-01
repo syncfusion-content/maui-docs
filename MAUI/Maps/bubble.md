@@ -13,7 +13,7 @@ Bubbles can be rendered in different colors and sizes based on the data values o
 
 ## Enable bubbles
 
-You can enable bubbles using the `ShowBubbles`. You can customize a bubbles using the `BubbleSettings`. This property is used to specify the value based on which the bubble's size has to be rendered.
+You can enable bubbles using the [`ShowBubbles`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShowBubbles). You can customize a bubbles using the [`BubbleSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_BubbleSettings). This property is used to specify the value based on which the bubble's size has to be rendered.
 
 {% tabs %}
 
@@ -105,7 +105,7 @@ public class Model
 
 ## Tooltip for the bubbles
 
-You can enable tooltip for the bubbles using the `ShowBubbleTooltip` property. It can be used to indicate clearly the information about the currently interacted bubble.
+You can enable tooltip for the bubbles using the [`ShowBubbleTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShowBubbleTooltip) property. It can be used to indicate clearly the information about the currently interacted bubble.
 
 {% tabs %}
 
@@ -203,9 +203,9 @@ public class Model
 
 ## Color
 
-You can customize the bubble color based on the value from the `ColorValuePath` property. If it provides direct color value then it applies to bubbles strightaway. Otherwise, we must provide `ColorMapping`.
+You can customize the bubble color based on the value from the [`ColorValuePath`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapBubbleSettings.html#Syncfusion_Maui_Maps_MapBubbleSettings_ColorValuePath) property. If it provides direct color value then it applies to bubbles strightaway. Otherwise, we must provide [`ColorMapping`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapBubbleSettings.html#Syncfusion_Maui_Maps_MapBubbleSettings_ColorMappings).
 
-The value from the `ColorValuePath` will be used for the comparison in the `EqualColorMapping.Value` or `RangeColorMapping.From` and `RangeColorMapping.To`. Then, the `RangeColorMapping.Color` or `EqualColorMapping.Color` will be applied to the respective bubble.
+The value from the [`ColorValuePath`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapBubbleSettings.html#Syncfusion_Maui_Maps_MapBubbleSettings_ColorValuePath) will be used for the comparison in the [`EqualColorMapping.Value`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.EqualColorMapping.html#Syncfusion_Maui_Maps_EqualColorMapping_Value) or [`RangeColorMapping.From`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.RangeColorMapping.html#Syncfusion_Maui_Maps_RangeColorMapping_From) and [`RangeColorMapping.To`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.RangeColorMapping.html#Syncfusion_Maui_Maps_RangeColorMapping_To). Then, the [`RangeColorMapping.Color`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.ColorMapping.html#Syncfusion_Maui_Maps_ColorMapping_Color) or [`EqualColorMapping.Color`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.ColorMapping.html#Syncfusion_Maui_Maps_ColorMapping_Color) will be applied to the respective bubble.
 
 {% tabs %}
 
@@ -345,14 +345,14 @@ public class Model
 
 You can customize the below appearance of the bubbles.
 
-* **MinSize** - Change the minimum radius of the bubbles using the `MinSize` property. The default value of the `MinSize` property is `20.0`.
-* **MaxSize** - Change the maximum radius of the bubbles using the `MaxSize` property. The default value of the `MaxSize` property is `50.0`.
-* **Fill** - Change the background color of the bubbles using the `Fill` property.
-* **Stroke** - Change the stroke color of the bubbles using the `Stroke` property.
-* **StrokeThickness** - Change the stroke width of the bubbles using the `StrokeThickness` property.
-* **HoverFill** - Change the hover color of the bubbles using the `HoverFill` property.
-* **HoverStroke** - Change the hover stroke color of the bubbles using the `HoverStroke` property.
-* **HoverStrokeThickness** - Change the hover stroke thickness of the bubbles using the `HoverStrokeThickness` property.
+* **MinSize** - Change the minimum radius of the bubbles using the [`MinSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapBubbleSettings.html#Syncfusion_Maui_Maps_MapBubbleSettings_MinSize) property. The default value of the `MinSize` property is `20.0`.
+* **MaxSize** - Change the maximum radius of the bubbles using the [`MaxSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapBubbleSettings.html#Syncfusion_Maui_Maps_MapBubbleSettings_MaxSize) property. The default value of the `MaxSize` property is `50.0`.
+* **Fill** - Change the background color of the bubbles using the [`Fill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapBubbleSettings.html#Syncfusion_Maui_Maps_MapBubbleSettings_Fill) property.
+* **Stroke** - Change the stroke color of the bubbles using the [`Stroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapBubbleSettings.html#Syncfusion_Maui_Maps_MapBubbleSettings_Stroke) property.
+* **StrokeThickness** - Change the stroke width of the bubbles using the [`StrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapBubbleSettings.html#Syncfusion_Maui_Maps_MapBubbleSettings_StrokeThickness) property.
+* **HoverFill** - Change the hover color of the bubbles using the [`HoverFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapBubbleSettings.html#Syncfusion_Maui_Maps_MapBubbleSettings_HoverFill) property.
+* **HoverStroke** - Change the hover stroke color of the bubbles using the [`HoverStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapBubbleSettings.html#Syncfusion_Maui_Maps_MapBubbleSettings_HoverStroke) property.
+* **HoverStrokeThickness** - Change the hover stroke thickness of the bubbles using the [`HoverStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapBubbleSettings.html#Syncfusion_Maui_Maps_MapBubbleSettings_HoverStrokeThickness) property.
 
 {% tabs %}
 

@@ -13,7 +13,7 @@ Data labels provides identification for the shapes by displaying their names. Yo
 
 ## Show data labels
 
-You can show data labels on the map using the `ShowDataLabels` property and customize text of the data labels using the `DataLabelPath` property. The default value of  `ShowDataLabels`  is `false`. 
+You can show data labels on the map using the [`ShowDataLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShowDataLabels) property and customize text of the data labels using the [`DataLabelPath`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapDataLabelSettings.html#Syncfusion_Maui_Maps_MapDataLabelSettings_DataLabelPath) property. The default value of  [`ShowDataLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShowDataLabels)  is `false`. 
 
 {% tabs %}
 
@@ -97,7 +97,7 @@ public class Model
 
 ## Overflow mode
 
-You can trim or remove the data label when it is overflowed from the shape using the `OverflowMode` property. The possible values are `None`, `Trim`, and `Hide`. The default value of the `OverflowMode` property is `MapLabelOverflowMode.None`.
+You can trim or remove the data label when it is overflowed from the shape using the [`OverflowMode`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapDataLabelSettings.html#Syncfusion_Maui_Maps_MapDataLabelSettings_OverflowMode) property. The possible values are `None`, `Trim`, and `Hide`. The default value of the [`OverflowMode`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapDataLabelSettings.html#Syncfusion_Maui_Maps_MapDataLabelSettings_OverflowMode) property is [`MapLabelOverflowMode.None`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLabelOverflowMode.html#Syncfusion_Maui_Maps_MapLabelOverflowMode_None).
 
 By default, the data labels will render even if it overflows from the shape. 
 
@@ -185,7 +185,7 @@ public class Model
 
 ## Appearance customization
 
-You can customize the data labels using the `DataLabelStyle` property.
+You can customize the data labels using the [`DataLabelStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapDataLabelSettings.html?tabs=tabid-1#Syncfusion_Maui_Maps_MapDataLabelSettings_DataLabelStyle) property.
 
 {% tabs %}
 
