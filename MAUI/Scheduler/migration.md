@@ -552,7 +552,7 @@ scheduleAppointmentCollection.Add(new ScheduleAppointment()
      ResourceIds = new ObservableCollection<object> { 5601}
 });
 
-//Adding schedule appointment collection to DataSource of SfSchedule
+//Adding the schedule appointment collection to the DataSource of the SfSchedule.
 schedule.DataSource = scheduleAppointmentCollection;
 
 {% endhighlight %}
