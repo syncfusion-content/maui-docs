@@ -10,7 +10,7 @@ documentation: ug
 
 ## Animation Duration in SfBusyIndicator
 
-The `DurationFactor` property of SfBusyIndicator indicates timeline for completing one animation cycle. Setting smaller duration value accelerates animation speed.
+The `DurationFactor` property of SfBusyIndicator can be used to set the animation speed based on given value. Setting smaller duration value accelerates animation speed. Its default value is 0.5 and ranges from 0 to 1. 
 
 {% tabs %}
 

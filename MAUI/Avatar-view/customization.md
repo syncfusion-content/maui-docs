@@ -25,32 +25,32 @@ The border color is used for setting color to the border of SfAvatarView using t
 
 {% highlight xaml %}
 
-   <Grid>
-        <sfavatar:SfAvatarView  ContentType="Default"  
-                                AvatarShape="Circle"
-                                AvatarSize="Large"
-                                HorizontalOptions="Center"
-                                VerticalOptions="Center"
-                                ImageSource="ellanaa.png"
-                                BorderColor="Red">
-        </sfavatar:SfAvatarView>
-   </Grid>
+<Grid>
+   <sfavatar:SfAvatarView  ContentType="Default"  
+                           AvatarShape="Circle"
+                           AvatarSize="Large"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           ImageSource="ellanaa.png"
+                           BorderColor="Red">
+   </sfavatar:SfAvatarView>
+</Grid>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-            Grid mainGrid = new Grid();
-            SfAvatarView avatarview = new SfAvatarView();
-            avatarview.ContentType = ContentType.Default;
-            avatarview.AvatarShape = AvatarShape.Circle;
-            avatarview.AvatarSize = AvatarSize.Large;
-            avatarview.VerticalOptions = LayoutOptions.Center;
-            avatarview.HorizontalOptions = LayoutOptions.Center;
-            avatarview.ImageSource = "ellanaa.png";
-            avatarview.BorderColor = Colors.Red;
-            mainGrid.Children.Add(avatarview);
-            this.Content = mainGrid;
+Grid mainGrid = new Grid();
+SfAvatarView avatarview = new SfAvatarView();
+avatarview.ContentType = ContentType.Default;
+avatarview.AvatarShape = AvatarShape.Circle;
+avatarview.AvatarSize = AvatarSize.Large;
+avatarview.VerticalOptions = LayoutOptions.Center;
+avatarview.HorizontalOptions = LayoutOptions.Center;
+avatarview.ImageSource = "ellanaa.png";
+avatarview.BorderColor = Colors.Red;
+mainGrid.Children.Add(avatarview);
+this.Content = mainGrid;
 
 {% endhighlight %}
 
@@ -66,37 +66,37 @@ The background color for the SfAvatarView control can be set using the `AvatarCo
 
 {% highlight xaml %}
 
-   <Grid>
-        <sfavatar:SfAvatarView ContentType="Initials"
-                               AvatarShape="Circle"
-                               AvatarSize="Large"
-                               HorizontalOptions="Center"
-                               VerticalOptions="Center"
-                               AvatarName="Alex"          
-                               BackgroundColor="Bisque"
-                               AvatarColorMode="Default"
-                               BorderColor="Black">
-        </sfavatar:SfAvatarView>
-   </Grid>
+<Grid>
+   <sfavatar:SfAvatarView  ContentType="Initials"
+                           AvatarShape="Circle"
+                           AvatarSize="Large"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           AvatarName="Alex"          
+                           BackgroundColor="Bisque"
+                           AvatarColorMode="Default"
+                           BorderColor="Black">
+   </sfavatar:SfAvatarView>
+</Grid>
       
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-            Grid mainGrid = new Grid();
-            SfAvatarView avatarview = new SfAvatarView();
-            avatarview.ContentType = ContentType.Initials;
-            avatarview.AvatarShape = AvatarShape.Circle;
-            avatarview.AvatarSize = AvatarSize.Large;
-            avatarview.VerticalOptions = LayoutOptions.Center;
-            avatarview.HorizontalOptions = LayoutOptions.Center;
-            avatarview.AvatarName = "Alex";
-            avatarview.BorderColor = Colors.Black;
-            avatarview.AvatarColorMode = AvatarColorMode.Default;
-            avatarview.BackgroundColor = Colors.Bisque;
-            mainGrid.Children.Add(avatarview);
-            this.Content = mainGrid;
+Grid mainGrid = new Grid();
+SfAvatarView avatarview = new SfAvatarView();
+avatarview.ContentType = ContentType.Initials;
+avatarview.AvatarShape = AvatarShape.Circle;
+avatarview.AvatarSize = AvatarSize.Large;
+avatarview.VerticalOptions = LayoutOptions.Center;
+avatarview.HorizontalOptions = LayoutOptions.Center;
+avatarview.AvatarName = "Alex";
+avatarview.BorderColor = Colors.Black;
+avatarview.AvatarColorMode = AvatarColorMode.Default;
+avatarview.BackgroundColor = Colors.Bisque;
+mainGrid.Children.Add(avatarview);
+this.Content = mainGrid;
 
 {% endhighlight %}
 
@@ -119,37 +119,37 @@ The dark background color can be set using `DarkBackground` in the `AvatarColorM
 
 {% highlight xaml %}
 
-   <Grid>
-        <sfavatar:SfAvatarView ContentType="Initials"
-                               InitialsType="DoubleCharacter"
-                               AvatarShape="Circle"
-                               AvatarSize="Large"
-                               HorizontalOptions="Center"
-                               VerticalOptions="Center"
-                               AvatarName="Alex"
-                               AvatarColorMode="DarkBackground"
-                               BorderColor="Black">
-        </sfavatar:SfAvatarView>
-   </Grid>
+<Grid>
+   <sfavatar:SfAvatarView  ContentType="Initials"
+                           InitialsType="DoubleCharacter"
+                           AvatarShape="Circle"
+                           AvatarSize="Large"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           AvatarName="Alex"
+                           AvatarColorMode="DarkBackground"
+                           BorderColor="Black">
+   </sfavatar:SfAvatarView>
+</Grid>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
 
-            Grid mainGrid = new Grid();
-            SfAvatarView avatarview = new SfAvatarView();
-            avatarview.VerticalOptions = LayoutOptions.Center;
-            avatarview.HorizontalOptions = LayoutOptions.Center;
-            avatarview.AvatarShape = AvatarShape.Circle;
-            avatarview.AvatarSize = AvatarSize.Large;
-            avatarview.ContentType = ContentType.Initials;
-            avatarview.InitialsType = InitialsType.DoubleCharacter;
-            avatarview.AvatarName = "Alex";
-            avatarview.BorderColor = Colors.Black;
-            avatarview.AvatarColorMode = AvatarColorMode.DarkBackground;
-            mainGrid.Children.Add(avatarview);
-            this.Content = mainGrid;
+Grid mainGrid = new Grid();
+SfAvatarView avatarview = new SfAvatarView();
+avatarview.VerticalOptions = LayoutOptions.Center;
+avatarview.HorizontalOptions = LayoutOptions.Center;
+avatarview.AvatarShape = AvatarShape.Circle;
+avatarview.AvatarSize = AvatarSize.Large;
+avatarview.ContentType = ContentType.Initials;
+avatarview.InitialsType = InitialsType.DoubleCharacter;
+avatarview.AvatarName = "Alex";
+avatarview.BorderColor = Colors.Black;
+avatarview.AvatarColorMode = AvatarColorMode.DarkBackground;
+mainGrid.Children.Add(avatarview);
+this.Content = mainGrid;
 
 
 {% endhighlight %}
@@ -166,36 +166,36 @@ The light background color can be set using `LightBackground` in the `AvatarColo
 
 {% highlight xaml %}
 
-   <Grid>
-        <sfavatar:SfAvatarView ContentType="Initials"
-                               InitialsType="DoubleCharacter"
-                               VerticalOptions="Center"
-                               AvatarName="Alex"
-                               AvatarShape="Circle"
-                               AvatarSize="Large"
-                               AvatarColorMode="LightBackground"
-                               BorderColor="Black"
-                               HorizontalOptions="Center" >
-        </sfavatar:SfAvatarView>
-   </Grid>
+<Grid>
+   <sfavatar:SfAvatarView  ContentType="Initials"
+                           InitialsType="DoubleCharacter"
+                           VerticalOptions="Center"
+                           AvatarName="Alex"
+                           AvatarShape="Circle"
+                           AvatarSize="Large"
+                           AvatarColorMode="LightBackground"
+                           BorderColor="Black"
+                           HorizontalOptions="Center" >
+   </sfavatar:SfAvatarView>
+</Grid>
 
 {% endhighlight %}
 
 {% highlight c# %}
   
-            Grid mainGrid = new Grid();
-            SfAvatarView avatarview = new SfAvatarView();
-            avatarview.VerticalOptions = LayoutOptions.Center;
-            avatarview.HorizontalOptions = LayoutOptions.Center;
-            avatarview.AvatarShape = AvatarShape.Circle;
-            avatarview.AvatarSize = AvatarSize.Large;
-            avatarview.ContentType = ContentType.Initials;
-            avatarview.InitialsType = InitialsType.DoubleCharacter;
-            avatarview.AvatarName = "Alex";
-            avatarview.BorderColor = Colors.Black;
-            avatarview.AvatarColorMode = AvatarColorMode.LightBackground;
-            mainGrid.Children.Add(avatarview);
-            this.Content = mainGrid;
+Grid mainGrid = new Grid();
+SfAvatarView avatarview = new SfAvatarView();
+avatarview.VerticalOptions = LayoutOptions.Center;
+avatarview.HorizontalOptions = LayoutOptions.Center;
+avatarview.AvatarShape = AvatarShape.Circle;
+avatarview.AvatarSize = AvatarSize.Large;
+avatarview.ContentType = ContentType.Initials;
+avatarview.InitialsType = InitialsType.DoubleCharacter;
+avatarview.AvatarName = "Alex";
+avatarview.BorderColor = Colors.Black;
+avatarview.AvatarColorMode = AvatarColorMode.LightBackground;
+mainGrid.Children.Add(avatarview);
+this.Content = mainGrid;
 
 {% endhighlight %}
 
@@ -211,49 +211,49 @@ You can also specify a range of colors using `LinearGradientBrush` in `Backgroun
 
 {% highlight xaml %}
 
-        <sfavatar:SfAvatarView ContentType="Initials" 
-                               AvatarName="Alex"
-                               AvatarShape="Circle"
-                               AvatarSize="Large"
-                               HorizontalOptions="Center"
-                               VerticalOptions="Center"      
-                               InitialsType="DoubleCharacter">
-            <sfavatar:SfAvatarView.Background>
-                <LinearGradientBrush StartPoint="0,0"
-									 EndPoint="1,0">
-                    <GradientStop Color="#2F9BDF" Offset="0"/>
-                    <GradientStop Color="#51F1F2" Offset="1"/>
-                </LinearGradientBrush>
-            </sfavatar:SfAvatarView.Background>
-        </sfavatar:SfAvatarView>
+<sfavatar:SfAvatarView  ContentType="Initials" 
+                        AvatarName="Alex"
+                        AvatarShape="Circle"
+                        AvatarSize="Large"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"      
+                        InitialsType="DoubleCharacter">
+   <sfavatar:SfAvatarView.Background>
+         <LinearGradientBrush StartPoint="0,0"
+                     EndPoint="1,0">
+            <GradientStop Color="#2F9BDF" Offset="0"/>
+            <GradientStop Color="#51F1F2" Offset="1"/>
+         </LinearGradientBrush>
+   </sfavatar:SfAvatarView.Background>
+</sfavatar:SfAvatarView>
   
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-				Grid mainGrid = new Grid();
-				SfAvatarView avatarview = new SfAvatarView();
-				avatarview.VerticalOptions = LayoutOptions.Center;
-				avatarview.HorizontalOptions = LayoutOptions.Center;
-				avatarview.AvatarShape = AvatarShape.Circle;
-				avatarview.AvatarSize = AvatarSize.Large;
-				avatarview.ContentType = ContentType.Initials;
-				avatarview.InitialsType = InitialsType.DoubleCharacter;
-				avatarview.AvatarName = "Alex";
-				avatarview.BorderColor = Colors.Black;
-				avatarview.Background = new LinearGradientBrush() 
-				{ 
-					StartPoint = new Point(0,0), 
-					EndPoint = new Point(1, 0),
-					GradientStops = new GradientStopCollection() 
-					{ 
-						new GradientStop() { Color = Color.FromArgb("#2F9BDF"), Offset = 0 },
-						new GradientStop() { Color = Color.FromArgb("#51F1F2"), Offset = 1 }
-					}
-				};
-				mainGrid.Children.Add(avatarview);
-			    this.Content = mainGrid;
+Grid mainGrid = new Grid();
+SfAvatarView avatarview = new SfAvatarView();
+avatarview.VerticalOptions = LayoutOptions.Center;
+avatarview.HorizontalOptions = LayoutOptions.Center;
+avatarview.AvatarShape = AvatarShape.Circle;
+avatarview.AvatarSize = AvatarSize.Large;
+avatarview.ContentType = ContentType.Initials;
+avatarview.InitialsType = InitialsType.DoubleCharacter;
+avatarview.AvatarName = "Alex";
+avatarview.BorderColor = Colors.Black;
+avatarview.Background = new LinearGradientBrush() 
+{ 
+   StartPoint = new Point(0,0), 
+   EndPoint = new Point(1, 0),
+   GradientStops = new GradientStopCollection() 
+   { 
+      new GradientStop() { Color = Color.FromArgb("#2F9BDF"), Offset = 0 },
+      new GradientStop() { Color = Color.FromArgb("#51F1F2"), Offset = 1 }
+   }
+};
+mainGrid.Children.Add(avatarview);
+this.Content = mainGrid;
 
 {% endhighlight %}
 
@@ -281,34 +281,34 @@ You can customize the thickness of the avatar view using the `BorderThickness` p
 
 {% highlight xaml %}
 
-   <Grid>
-        <sfavatar:SfAvatarView ContentType="Default"
-                               AvatarShape="Circle"
-                               AvatarSize="Large"
-                               ImageSource="ellanaa.png"
-                               BorderColor="Red" 
-                               VerticalOptions="Center"
-                               BorderThickness="4"
-                               HorizontalOptions="Center" >
-        </sfavatar:SfAvatarView>
-   </Grid>
+<Grid>
+   <sfavatar:SfAvatarView  ContentType="Default"
+                           AvatarShape="Circle"
+                           AvatarSize="Large"
+                           ImageSource="ellanaa.png"
+                           BorderColor="Red" 
+                           VerticalOptions="Center"
+                           BorderThickness="4"
+                           HorizontalOptions="Center" >
+   </sfavatar:SfAvatarView>
+</Grid>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-            Grid mainGrid = new Grid();
-            SfAvatarView avatarview = new SfAvatarView();
-            avatarview.HorizontalOptions = LayoutOptions.Center;
-            avatarview.VerticalOptions = LayoutOptions.Center;
-            avatarview.AvatarShape = AvatarShape.Circle;
-            avatarview.AvatarSize = AvatarSize.Large;
-            avatarview.BorderThickness = 4;
-            avatarview.BorderColor = Colors.Red,
-            avatarview.ContentType = ContentType.Default;
-            avatarview.ImageSource = "ellanaa.png";
-            mainGrid.Children.Add(avatarview);
-            this.Content = mainGrid;
+Grid mainGrid = new Grid();
+SfAvatarView avatarview = new SfAvatarView();
+avatarview.HorizontalOptions = LayoutOptions.Center;
+avatarview.VerticalOptions = LayoutOptions.Center;
+avatarview.AvatarShape = AvatarShape.Circle;
+avatarview.AvatarSize = AvatarSize.Large;
+avatarview.BorderThickness = 4;
+avatarview.BorderColor = Colors.Red,
+avatarview.ContentType = ContentType.Default;
+avatarview.ImageSource = "ellanaa.png";
+mainGrid.Children.Add(avatarview);
+this.Content = mainGrid;
 
 {% endhighlight %}
 
@@ -324,32 +324,32 @@ You can customize the corner radius of the avatar view using the `CornerRadius` 
 
 {% highlight xaml %}
 
-   <Grid>
-        <sfavatar:SfAvatarView ContentType="Default"
-                               ImageSource="ellanaa.png"
-                               HorizontalOptions="Center"
-                               VerticalOptions="Center"   
-                               WidthRequest="60"
-                               HeightRequest="60"
-                               CornerRadius="20">
-        </sfavatar:SfAvatarView>
-   </Grid>
+<Grid>
+   <sfavatar:SfAvatarView  ContentType="Default"
+                           ImageSource="ellanaa.png"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"   
+                           WidthRequest="60"
+                           HeightRequest="60"
+                           CornerRadius="20">
+   </sfavatar:SfAvatarView>
+</Grid>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-            Grid mainGrid = new Grid();
-            SfAvatarView avatarview = new SfAvatarView();
-            avatarview.HorizontalOptions = LayoutOptions.Center;
-            avatarview.VerticalOptions = LayoutOptions.Center;
-            avatarview.WidthRequest = 60;
-            avatarview.HeightRequest = 60;
-            avatarview.CornerRadius = 20;
-            avatarview.ImageSource = "ellanaa.png";
-            avatarview.ContentType = ContentType.Default;
-            mainGrid.Children.Add(avatarview);
-            this.Content = mainGrid;
+Grid mainGrid = new Grid();
+SfAvatarView avatarview = new SfAvatarView();
+avatarview.HorizontalOptions = LayoutOptions.Center;
+avatarview.VerticalOptions = LayoutOptions.Center;
+avatarview.WidthRequest = 60;
+avatarview.HeightRequest = 60;
+avatarview.CornerRadius = 20;
+avatarview.ImageSource = "ellanaa.png";
+avatarview.ContentType = ContentType.Default;
+mainGrid.Children.Add(avatarview);
+this.Content = mainGrid;
 
 {% endhighlight %}
 
