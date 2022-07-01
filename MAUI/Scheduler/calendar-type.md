@@ -94,7 +94,7 @@ var appointments = new ObservableCollection<SchedulerAppointment>();
 appointments.Add(new SchedulerAppointment()
 {
 	Subject = "Meeting",
-	// StartTime and EndTime values specified with local system date will be converted to the Hijiri calendar mentioned.
+	//The StartTime and EndTime values specified with the local system date will be converted to the Hijiri calendar mentioned.
 	StartTime = new DateTime(2021, 09, 29, 10, 0, 0, 0),
 	EndTime = new DateTime(2021, 09, 29, 11, 0, 0, 0),
 });
