@@ -688,7 +688,7 @@ employee.Id = 5601;
 employee.Color = Color.FromHex("#FFE671B8");
 employee.DisplayPicture = "KinsleyElena.png";
 
-// Adding a custom resource in custom resource collection.
+//Adding a custom resource in the custom resource collection.
 Employees.Add(employee);
 
 // Adding a custom resource collection to schedule resources.
