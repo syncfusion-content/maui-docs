@@ -644,7 +644,7 @@ public class Event
 	public ObservableCollection<object> Resources { get; set; }
 }
 
-// Creating an instance for custom appointment class.
+//Creating an instance for a custom appointment class.
 Meeting meeting = new Meeting();
 meeting.From = new DateTime(2017, 06, 11, 10, 0, 0);
 meeting.To = meeting.From.AddHours(2);
