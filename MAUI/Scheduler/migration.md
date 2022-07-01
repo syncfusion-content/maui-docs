@@ -948,7 +948,7 @@ this.Content = scheduler;
 <tr>
 <td>{{'[ResourceIds](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ScheduleAppointment.html#Syncfusion_SfSchedule_XForms_ScheduleAppointment_ResourceIds)'| markdownify }}</td>
 <td>{{'[ResourceIds]()'| markdownify }}</td>
-<td>Gets or sets the resource ids property for schedule appointment to allocate the corresponding resource to the appointment.</td></tr>
+<td>Gets or sets the resource ids property for the schedule appointment to allocate the corresponding resource to the appointment.</td></tr>
 
 </table> 
 
