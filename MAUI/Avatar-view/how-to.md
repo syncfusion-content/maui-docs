@@ -21,7 +21,7 @@ xmlns:badge="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
 .......
 
          <badge:SfBadgeView VerticalOptions="Center"
-                           HorizontalOptions="Center">
+                            HorizontalOptions="Center">
 			<badge:SfBadgeView.Content>
 				<sfavatar:SfAvatarView  HorizontalOptions="Center"
                                         ContentType="Custom"
@@ -43,32 +43,33 @@ xmlns:badge="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
 
 {% endhighlight %}
 
+
 {% highlight C# %}
 
-            SfBadgeView badge = new SfBadgeView();
-			badge.HorizontalOptions = LayoutOptions.Center;
-			badge.VerticalOptions = LayoutOptions.Center;
-			badge.BadgeSettings = new BadgeSettings();
-			BadgeSettings badgeSetting = new BadgeSettings();
-			badgeSetting.Type = BadgeType.Success;
-			badgeSetting.Icon = BadgeIcon.Away;
-			badgeSetting.Position = BadgePosition.BottomRight;
-			badgeSetting.Animation = BadgeAnimation.Scale;
-			badgeSetting.Offset = new Point(-10, -10);
-			badge.BadgeSettings = badgeSetting;
+SfBadgeView badge = new SfBadgeView();
+badge.HorizontalOptions = LayoutOptions.Center;
+badge.VerticalOptions = LayoutOptions.Center;
+badge.BadgeSettings = new BadgeSettings();
+BadgeSettings badgeSetting = new BadgeSettings();
+badgeSetting.Type = BadgeType.Success;
+badgeSetting.Icon = BadgeIcon.Away;
+badgeSetting.Position = BadgePosition.BottomRight;
+badgeSetting.Animation = BadgeAnimation.Scale;
+badgeSetting.Offset = new Point(-10, -10);
+badge.BadgeSettings = badgeSetting;
 
-			Grid mainGrid = new Grid();
-			SfAvatarView avatarview = new SfAvatarView();
-			avatarview.HorizontalOptions = LayoutOptions.Center;
-			avatarview.VerticalOptions = LayoutOptions.Center;
-			avatarview.WidthRequest = 60;
-			avatarview.HeightRequest = 60;
-			avatarview.CornerRadius = 30;
-			avatarview.ImageSource = "alex.png";
-			avatarview.ContentType = ContentType.Custom;
-			badge.Content = avatarview;
-			mainGrid.Children.Add(badge);
-			this.Content = mainGrid;
+Grid mainGrid = new Grid();
+SfAvatarView avatarview = new SfAvatarView();
+avatarview.HorizontalOptions = LayoutOptions.Center;
+avatarview.VerticalOptions = LayoutOptions.Center;
+avatarview.WidthRequest = 60;
+avatarview.HeightRequest = 60;
+avatarview.CornerRadius = 30;
+avatarview.ImageSource = "alex.png";
+avatarview.ContentType = ContentType.Custom;
+badge.Content = avatarview;
+mainGrid.Children.Add(badge);
+this.Content = mainGrid;
 
 {% endhighlight %}
 

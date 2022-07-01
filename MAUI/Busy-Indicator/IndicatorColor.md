@@ -18,10 +18,10 @@ SfBusyIndicator provides option to set the color for indicator. This can be done
 
     
 <core:SfBusyIndicator x:Name="busyindicator"
-                        IsRunning="True"
-                        AnimationType="CircularMaterial"
-                        Title="Searching..."
-                        IndicatorColor="Red"/>           
+                      IsRunning="True"
+                      AnimationType="CircularMaterial"
+                      Title="Searching..."
+                      IndicatorColor="Red"/>           
  
 {% endhighlight %}
 
@@ -88,9 +88,9 @@ The `OverlayFill` property type is `Brush`, so you can set Gradients as backgrou
 {% highlight xaml %}
 
 <core:SfBusyIndicator IsRunning="True" 
-                        AnimationType = "CircularMaterial"
-                        IndicatorColor="#e64c93" 
-                        Title="Searching...">
+                      AnimationType = "CircularMaterial"
+                      IndicatorColor="#e64c93" 
+                      Title="Searching...">
     <core:SfBusyIndicator.OverlayFill>
         <RadialGradientBrush>
             <GradientStop Color="#44e64c93"

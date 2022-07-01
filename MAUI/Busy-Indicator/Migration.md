@@ -42,10 +42,6 @@ To migrate easier from Xamarin SfBusyIndicator to .NET MAUI SfBusyIndicator, we 
 <td>SizeFactor</td>
 <td>Gets or set the size factor of the indicator. This is not applicable for all animation types.</td></tr>
 <tr>
-<td>OverlayColor</td>
-<td>OverlayFill</td>
-<td>Gets or sets the overlay fill brush. It determines the background of the control</td></tr>
-<tr>
 <td>TextSize</td>
 <td>FontSize</td>
 <td>Gets or sets the font size of the title text.</td></tr>
