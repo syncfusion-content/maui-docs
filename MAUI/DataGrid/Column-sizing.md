@@ -9,7 +9,7 @@ documentation: ug
 
 # Column Sizing in .NET MAUI DataGrid (SfDataGrid)
 
-DataGrid allows you to set the column widths based on certain logic using `SfDataGrid.ColumnWidthMode` or `DataGridColumn.ColumnWidthMode`property. Below is the list of predefined column sizing options available.
+DataGrid allows you to set the column widths based on certain logic using [SfDataGrid.ColumnWidthMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ColumnWidthMode) or [DataGridColumn.ColumnWidthMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_ColumnWidthMode) property. Below is the list of predefined column sizing options available.
 
 <table>
 <tr>
@@ -41,7 +41,7 @@ Calculates the width of column based on header and cell contents. So that header
 <code>LastColumnFill</code>
 </td>
 <td>
-The column width of the DataGridColumns are adjusted with respect to SfDataGrid.DefaultColumnWidth property. In case the columns does not fill the entire view space, width of the last column fills the unoccupied space in the view.
+The column width of the DataGridColumns are adjusted with respect to [SfDataGrid.DefaultColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DefaultColumnWidth) property. In case the columns does not fill the entire view space, width of the last column fills the unoccupied space in the view.
 </td>
 </tr>
 <tr>
@@ -70,9 +70,9 @@ Default column width or defined width set to column.
 </tr>
 </table>
 
-N> ColumnWidthMode will not work when the column width defined explicitly. ColumnWidthMode calculates column width based on `MinimumWidth`, `MaximumWidth` and `Width` properties.
+N> ColumnWidthMode will not work when the column width defined explicitly. ColumnWidthMode calculates column width based on [MinimumWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_MinimumWidth) and [MaximumWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_MaximumWidth) properties.
 
-Below code, applies `ColumnWidthMode.Fill` to equally set width for `SfDataGrid.Columns`.
+Below code, applies [ColumnWidthMode.Fill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DefaultColumnWidth) to equally set width for `SfDataGrid.Columns`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -87,7 +87,7 @@ Below code, applies `ColumnWidthMode.Fill` to equally set width for `SfDataGrid.
 
 ## Apply ColumnWidthMode for a particular column
 
-To apply column sizing to individual column, use the `DataGridColumns.ColumnWidthMode` property. The `GridColumn.ColumnWidthMode` property is also a type of the `ColumnWidthMode`. If the `GridColumn.ColumnWidthMode` is not explicitly set to a value, then it takes the value of the `SfDataGrid.ColumnWidthMode`and applies width to the columns accordingly.
+To apply column sizing to individual column, use the `DataGridColumn.ColumnWidthMode` property. The `DataGridColumn.ColumnWidthMode` property is also a type of the `ColumnWidthMode`. If the `DataGridColumn.ColumnWidthMode` is not explicitly set to a value, then it takes the value of the `SfDataGrid.ColumnWidthMode`and applies width to the columns accordingly.
 
 To apply `ColumnWidthMode` for a particular column, follow the code example:
 
@@ -111,9 +111,9 @@ textColumn.ColumnWithMode = ColumnWithMode.Auto;
 
 ## Refreshing ColumnSizer at runtime
 
-To refresh the column sizing for `SfDataGrid.Columns` at runtime, use the `SfDataGrid.ColumnSizer.Refresh` method.
+To refresh the column sizing for [SfDataGrid.Columns](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_Columns) at runtime, use the [SfDataGrid.ColumnSizer.Refresh](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumnSizer.html#Syncfusion_Maui_DataGrid_DataGridColumnSizer_Refresh_System_Boolean_) method.
 
-Consider that `ColumnWidthMode.Auto` is applied to the SfDataGrid. If the underlying values are changed at run time, refresh the column sizer as follows:
+Consider that [ColumnWidthMode.Auto](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.ColumnWidthMode.html#Syncfusion_Maui_DataGrid_ColumnWidthMode_Auto) is applied to the SfDataGrid. If the underlying values are changed at run time, refresh the column sizer as follows:
 
 {% tabs %}
 {% highlight xaml %}    
@@ -142,8 +142,8 @@ private void ColumnSizerChanged(object sender, EventArgs e)
 
 ## Customize auto width calculation for a column
 
-For cases, where a column might require more width than the applied auto width or if you want to apply your own custom logic to calculate the auto width of a column, return a desired width in the `OnComputeCellWidth()`override of the custom written column-sizer class derived from `DataGridColumnSizer` and assign it to the `SfDataGrid.ColumnSizer` property.
-If in case you want to modify the auto calculations of a column's header cell alone, return a desired width in the `OnComputeHeaderCellWidth()` override of your custom column-sizer class.
+For cases, where a column might require more width than the applied auto width or if you want to apply your own custom logic to calculate the auto width of a column, return a desired width in the [OnComputeCellWidth()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumnSizer.html#Syncfusion_Maui_DataGrid_DataGridColumnSizer_OnComputeCellWidth_Syncfusion_Maui_DataGrid_DataGridColumn_System_String_) override of the custom written column-sizer class derived from `DataGridColumnSizer` and assign it to the `SfDataGrid.ColumnSizer` property.
+If in case you want to modify the auto calculations of a column's header cell alone, return a desired width in the [OnComputeHeaderCellWidth()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumnSizer.html#Syncfusion_Maui_DataGrid_DataGridColumnSizer_OnComputeHeaderCellWidth_System_String_Syncfusion_Maui_DataGrid_DataGridColumn_) override of your custom column-sizer class.
 
 {% tabs %}
 {% highlight c# %}
