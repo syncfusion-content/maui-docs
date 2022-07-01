@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Markers in .NET MAUI Maps control | Syncfusion
-description: Learn here all about the Markers feature of Syncfusion .NET MAUI Maps (SfMaps) control to customize its appearance including text, icon and more.
+description: Learn all about the Markers feature of Syncfusion .NET MAUI Maps (SfMaps) control to customize its appearance, including text, icon and more.
 platform: MAUI
 control: SfMaps
 documentation: ug
@@ -136,13 +136,13 @@ public MarkerTool()
 ![default marker](images/markers/default_marker.png)
 
 N>
-* Refer the [`MapMarkerCollection`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarkerCollection.html), for collection of [`MapMarker`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html).
+* Refer to the [`MapMarkerCollection`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarkerCollection.html), for collection of [`MapMarker`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html).
 
 ## Appearance customization
 
 You can customize the built-in markers appearance using the [`IconType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_IconType), [`IconFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_IconFill), [`IconStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_IconStroke), [`IconStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_IconStrokeThickness), [`IconWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_IconWidth) and [`IconHeight`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_IconHeight) properties of the [`MapMarker`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html).
 
-* **Alignment** - You can change the position of the marker from the given coordinate using the [`HorizontalAlignment`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_HorizontalAlignment) and [`VerticalAlignment`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_VerticalAlignment) property. The default value is [`MapAlignment.Center`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapAlignment.html#Syncfusion_Maui_Maps_MapAlignment_Center). The available alignment options are [`Center`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapAlignment.html#Syncfusion_Maui_Maps_MapAlignment_Center), [`Start`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapAlignment.html#Syncfusion_Maui_Maps_MapAlignment_Start), [`End`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapAlignment.html#Syncfusion_Maui_Maps_MapAlignment_End).
+* **Alignment** - You can change the position of the marker from the given coordinate using the [`HorizontalAlignment`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_HorizontalAlignment) and [`VerticalAlignment`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_VerticalAlignment) properties. The default value is [`MapAlignment.Center`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapAlignment.html#Syncfusion_Maui_Maps_MapAlignment_Center). The available alignment options are [`Center`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapAlignment.html#Syncfusion_Maui_Maps_MapAlignment_Center), [`Start`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapAlignment.html#Syncfusion_Maui_Maps_MapAlignment_Start), [`End`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapAlignment.html#Syncfusion_Maui_Maps_MapAlignment_End).
 * **Offset** - You can adjust the marker position from the given coordinate using the [`Offset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_Offset) property. The default value of the [`Offset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_Offset) property is `Offset.zero`.
 
 N>
@@ -392,7 +392,7 @@ You can show custom marker using the [`MarkerTemplate`](https://help.syncfusion.
 
 ### Customizing data templates in marker tooltip
 
-Data template can be used to customize the marker tooltip using [`MarkerTooltipTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_MarkerTooltipTemplate) property. The following code example shows the usage of `DataTemplate`.
+A data template can be used to customize the marker tooltip using [`MarkerTooltipTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_MarkerTooltipTemplate) property. The following code example shows the usage of `DataTemplate`.
 
 {% tabs %}
 
@@ -578,7 +578,7 @@ Data template can be used to customize the marker tooltip using [`MarkerTooltipT
 
 ### Customizing data templates selector in markers
 
-Data template selector also can be customized the appearance of each item with different templates based on specific constraints . You can choose a DataTemplate for each item at runtime based on the value of data-bound property using DataTemplateSelector in [`MarkerTooltipTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_MarkerTooltipTemplate) property.
+A data template selector also can be used to customize the appearance of each item with different templates based on specific constraints . You can choose a DataTemplate for each item at runtime based on the value of data-bound property using DataTemplateSelector in [`MarkerTooltipTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_MarkerTooltipTemplate) property.
 
 {% tabs %}
 
