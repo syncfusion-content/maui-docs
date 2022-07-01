@@ -19,37 +19,32 @@ Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org
 
  In the MauiProgram.cs file, register the handler for Syncfusion core.
 
-{% highlight C# %}
-   
-    using Microsoft.Maui;
-    using Microsoft.Maui.Hosting;
-    using Microsoft.Maui.Controls.Compatibility;
-    using Microsoft.Maui.Controls.Hosting;
-    using Microsoft.Maui.Controls.Xaml;
-   `using Syncfusion.Maui.Core.Hosting;`
+{% highlight C# hl_lines="6 17" %}
+using Microsoft.Maui;
+using Microsoft.Maui.Hosting;
+using Microsoft.Maui.Controls.Compatibility;
+using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Controls.Xaml;
+using Syncfusion.Maui.Core.Hosting;
 
-    namespace EffectsViewMauiSample
-    {
-      public static class MauiProgram
-      {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-            .UseMauiApp<App>()
- .`ConfigureSyncfusionCore()`
- 
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-            return builder.Build();
-         }
-       
-      }
-
-    }     
+namespace EffectsViewMauiSample
+{
+  public static class MauiProgram
+  {
+	public static MauiApp CreateMauiApp()
+	{
+		var builder = MauiApp.CreateBuilder();
+		builder
+		.UseMauiApp<App>()
+		.ConfigureSyncfusionCore()
+		.ConfigureFonts(fonts =>
+		{
+			fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+		});
+		return builder.Build();
+	}  
+  }
+}     
 
 {% endhighlight %} 
 
@@ -85,33 +80,31 @@ Step 3: Set the control to content in `ContentPage`.
 
 {% highlight xaml %}
 
-    <ContentPage.Content> 
-         <effectsView:SfEffectsView /> 
-    </ContentPage.Content>  
+<ContentPage.Content> 
+	 <effectsView:SfEffectsView /> 
+</ContentPage.Content>  
 
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    using Syncfusion.Maui.Core;
+using Syncfusion.Maui.Core;
 
-    namespace EffectsViewMauiSample   
-    {  
-    public partial class MainPage : ContentPage                  
-    {   
-    
-       SfEffectsView effectsView;
+namespace EffectsViewMauiSample   
+{  
+	public partial class MainPage : ContentPage                  
+	{ 
+	    SfEffectsView effectsView;
 
-        public MainPage()   
-        {   
-            InitializeComponent();       
-            effectsView = new SfEffectsView(); 
-            this.Content = effectsView;  
-        }  
-    }  
-    
-    }  
+		public MainPage()   
+		{   
+			InitializeComponent();       
+			effectsView = new SfEffectsView(); 
+			this.Content = effectsView;  
+		}  
+	}  
+}  
 
 {% endhighlight %}
 
