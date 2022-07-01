@@ -680,7 +680,7 @@ public ObservableCollection<object> Employees { get; set; }
 //Creating an instance for the collection of custom resources.
 Employees = new ObservableCollection<object>();
 
-// Creating an instance for custom appointment class.
+//Creating an instance for a custom appointment class.
 Employee employee = new Employee();
 
 employee.Name = "Kinsley Elena";
