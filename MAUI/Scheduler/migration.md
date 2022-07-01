@@ -498,7 +498,7 @@ this.Content = scheduler;
 
 ### Scheduler Resource 
 
-The following code example explains how to add the scheduler resource in Xamarin SfSchedule and .NET MAUI SfScheduler.
+The following code example explains how to add the scheduler resource in the Xamarin SfSchedule and .NET MAUI SfScheduler.
 
 <table>
 <tr>
