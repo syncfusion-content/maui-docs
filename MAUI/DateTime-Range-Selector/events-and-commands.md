@@ -9,16 +9,16 @@ documentation: ug
 
 # Events and Commands in .NET MAUI DateTime Range Selector
 
-This section explains about how to add the events and commands for DateTime Range Selector(SfDateTimeRangeSelector).
+This section explains how to add the events and commands for the DateTime Range Selector(SfDateTimeRangeSelector).
 
 ## Events
 
 ### Handle callbacks
 
-* [ValueChangeStart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ValueChangeStart) -  Called when the user selecting a new value for the selector by tap/mouse down in the thumb.
+* [ValueChangeStart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ValueChangeStart) -  Called when the user selects a new value for the selector by tapping or mouse down on the thumb.
 * [ValueChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSelector.html#Syncfusion_Maui_Sliders_SfRangeSelector_ValueChanging) - Called when the user is selecting a new value for the selector by dragging the thumb.
 * [ValueChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSelector.html#Syncfusion_Maui_Sliders_SfRangeSelector_ValueChanged) - Called when the user completed selecting a new value.
-* [ValueChangeEnd](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ValueChangeEnd) - Called when the user stopped interacting with selector by tap/mouse up the thumb.
+* [ValueChangeEnd](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ValueChangeEnd) - Called when the user stopped interacting with the selector by tapping or mouse up the thumb.
 
 {% tabs %}
 
@@ -85,10 +85,10 @@ private void OnValueChangeEnd(object sender, EventArgs e)
 
 ### Customize label text
 
-You can format or change the whole numeric or date label text using the [`LabelCreated`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_LabelCreated) event. The [`SliderLabelCreatedEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelCreatedEventArgs.html) contains the following parameters,
+Format or change the whole numeric or date label text using the [`LabelCreated`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_LabelCreated) event. The [`SliderLabelCreatedEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelCreatedEventArgs.html) contains the following parameters:
 
 * Text – Customize the text color using the [`Text`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelCreatedEventArgs.html#Syncfusion_Maui_Sliders_SliderLabelCreatedEventArgs_Style) parameter.
-* Style – Formats the text color, font size, font family, offset using the [`Style`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelCreatedEventArgs.html#Syncfusion_Maui_Sliders_SliderLabelCreatedEventArgs_Style) parameter.
+* Style – Formats the text color, font size, font family, and offset using the [`Style`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelCreatedEventArgs.html#Syncfusion_Maui_Sliders_SliderLabelCreatedEventArgs_Style) parameter.
 
 {% tabs %}
 
@@ -166,9 +166,9 @@ private void OnLabelCreated(object sender, SliderLabelCreatedEventArgs e)
 
 ### Tooltip text format
 
-By default it is formatted based [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.DateTimeRangeSliderBase.html#Syncfusion_Maui_Sliders_DateTimeRangeSliderBase_DateFormat) property.
+By default, it is formatted based on the [`SliderTooltip.DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html#Syncfusion_Maui_Sliders_SliderTooltip_DateFormat) property.
 
-You can format or change the whole tooltip label text using the [`ToolTipLabelCreated`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html#Syncfusion_Maui_Sliders_SliderTooltip_TooltipLabelCreated) event. The [`SliderTooltipLabelCreatedEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltipLabelCreatedEventArgs.html) contains the following parameters,
+Format or change the whole tooltip label text using the [`ToolTipLabelCreated`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html#Syncfusion_Maui_Sliders_SliderTooltip_TooltipLabelCreated) event. The [`SliderTooltipLabelCreatedEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltipLabelCreatedEventArgs.html) contains the following parameters:
 
 * Text – Change the format of the tooltip text using the [`Text`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltipLabelCreatedEventArgs.html#Syncfusion_Maui_Sliders_SliderTooltipLabelCreatedEventArgs_Text) property.
 * Style – Change the appearance of the tooltip text like color, stroke color, and padding using the [`Style`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltipLabelCreatedEventArgs.html) property.
@@ -230,11 +230,11 @@ You can format or change the whole tooltip label text using the [`ToolTipLabelCr
 
 ![RangeSelector custom tooltip](images/tooltip/custom-tooltip.png)
 
-## Commands and its parameter
+## Commands and their parameter
 
 ### Drag started command
 
-The `DragStartedCommand` will be executed when the user started moving the thumb.
+The `DragStartedCommand` will be executed when the user starts moving the thumb.
 
 {% tabs %}
 
@@ -297,7 +297,7 @@ public class ViewModel
 
 ### Drag started command parameter
 
-The `DragStartedCommandParameter` will be executed when the user started moving the thumb.
+The `DragStartedCommandParameter` will be executed when the user starts moving the thumb.
 
 {% tabs %}
 
@@ -362,7 +362,7 @@ public class ViewModel
 
 ### Drag completed command
 
-The `DragCompletedCommand` will be executed when the user completed moving the thumb.
+The `DragCompletedCommand` will be executed when the user completes moving the thumb.
 
 {% tabs %}
 
@@ -424,7 +424,7 @@ public class ViewModel
 
 ### Drag completed command parameter
 
-The `DragCompletedCommandParameter` will be executed when the user completed moving the thumb.
+The `DragCompletedCommandParameter` will be executed when the user completes moving the thumb.
 
 {% tabs %}
 

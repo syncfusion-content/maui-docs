@@ -42,6 +42,26 @@ You can find the platforms supported by each .NET MAUI control as below.
 		</th>
 	</tr>
 	<tr>
+	<td rowspan="1" valign="top">
+			GRIDS<br/>
+		</td>
+		<td>
+			<a href="/maui/datagrid/overview">DataGrid</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+	</td>
+	</tr>
+	<tr>
 		<td rowspan="5" valign="top">
 			DATA VISUALIZATION<br/>
 		</td>
@@ -170,7 +190,7 @@ You can find the platforms supported by each .NET MAUI control as below.
 		</td>
 	</tr>
 	<tr>
-	    <td rowspan="3" valign="top">
+	    <td rowspan="6" valign="top">
 			SLIDERS<br/>
 		</td>	
 		<td>
@@ -209,6 +229,77 @@ You can find the platforms supported by each .NET MAUI control as below.
 	<tr>
 		<td>
 			<a href="/maui/slider/overview">Slider</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="/maui/DateTime-Range-Selector/overview">DateTime Range Selector</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="/maui/DateTime-Range-Slider/overview">DateTime Range Slider</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="/maui/DateTime-Slider/overview">DateTime Slider</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
+		EDITORS<br/>
+		</td>
+		<td>
+			<a href="/maui/SignaturePad/overview">Signature Pad</a><br/>
 		</td>
 		<td>
 		Yes<br/>
