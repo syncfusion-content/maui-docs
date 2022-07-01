@@ -60,8 +60,6 @@ The [DataGridColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGri
 
 Display content of the DataGridColumn is determined from the [DataGridColumn.DisplayBinding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_DisplayBinding) property. It gets or sets display binding that associates the DataGridColumn with a property in the data source. 
 
-The actual bound value of the DataGridColumn is determined from `DataGridColumn.ValueBinding` property. It gets or sets value binding that associates the DataGridColumn with a property in the data source.  
-
 #### Mapping column to particular property
 
 The [DataGridColumn.MappingName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_MappingName) associates the DataGridColumn with a property available in the underlying data source. While setting MappingName alone to the SfDataGrid, the `DataGridColumn.DisplayBinding` will be automatically generated based on the MappingName. Data manipulation operations like sorting, filtering, and grouping will be done based on the MappingName property.
@@ -71,17 +69,17 @@ To format cell content, use the converter of the `DataGridColumn.DisplayBinding`
 {% highlight xaml %}
 <ContentPage.Resources>
     <ResourceDictionary>
-        <local:DisplayBindingConverter x:Key="displayBindingConverter" />
+        <local:DisplayBindingConverter x:Key="displayBindingConverter" />
     </ResourceDictionary>
 </ContentPage.Resources> 
 
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding OrdersInfo}">
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}">
 
     <syncfusion:SfDataGrid.Columns>
-        <syncfusion:DataGridTextColumn MappingName="CustomerID" 
-                                   DisplayBinding="{Binding CustomerID, 
-                                   Converter={StaticResource displayBindingConverter}}" />
+        <syncfusion:DataGridTextColumn MappingName="CustomerID" 
+                                   DisplayBinding="{Binding CustomerID, 
+                                   Converter={StaticResource displayBindingConverter}}" />
     </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid> 
 {% endhighlight %}
@@ -134,8 +132,8 @@ Based on the requirement, the header cell can be customized using the [DataGridC
 
 ### Setting manual column width
 
-SfDataGrid allows you to customize the width of each DataGridColumn in the [SfDataGrid.Columns](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_Columns) collection. To customize column width, use the [DataGridColumn.Width](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_Width) property. By default, this property will not be assigned any value. The DataGridColumn renders in view based on the value of the {DefaultColumnWidth` property.
-SfDataGrid allows you to customize the width of each DataGridColumn in the [SfDataGrid.Columns](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_Columns) collection. To customize column width, use the [DataGridColumn.Width](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_Width) property. By default, this property will not be assigned any value. The DataGridColumn renders in view based on the value of the [DefaultColumnWidth]() property.
+SfDataGrid allows you to customize the width of each DataGridColumn in the [SfDataGrid.Columns](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_Columns) collection. To customize column width, use the [DataGridColumn.Width](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_Width) property. By default, this property will not be assigned any value. The DataGridColumn renders in view based on the value of the [DefaultColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DefaultColumnWidth) property.
+SfDataGrid allows you to customize the width of each DataGridColumn in the [SfDataGrid.Columns](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_Columns) collection. To customize column width, use the [DataGridColumn.Width](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_Width) property. By default, this property will not be assigned any value. The DataGridColumn renders in view based on the value of the `DefaultColumnWidth` property.
 
 N> Set the [Visible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_Visible) property to `True` instead of setting column width as `0` to hide a column.
 
@@ -156,11 +154,14 @@ Customize the width for auto generated columns in both XAML and code as follows:
 
 dataGrid.AutoGeneratingColumn += DataGrid_AutoGeneratingColumn;
 
-void dataGrid_AutoGeneratingColumn(object sender, AutoGeneratingColumnArgs e){
-if (e.Column.MappingName == "OrderID") {
-    e.Column.Width = 100;
+private void DataGrid_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
+{
+    if (e.Column.MappingName == "OrderID")
+    {
+        e.Column.Width = 100;
     }
 }
+
 
 // Manually generated column
 
@@ -186,9 +187,11 @@ To hide column using the `Visible` property, follow the code example:
 
 dataGrid.AutoGeneratingColumn += DataGrid_AutoGeneratingColumn;
 
-void dataGrid_AutoGeneratingColumn(object sender, AutoGeneratingColumnArgs e){
-if (e.Column.MappingName == "OrderID") {
-    e.Column.Visible = false;
+private void DataGrid_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
+{
+    if (e.Column.MappingName == "OrderID")
+    {
+        e.Column.Visible = false;
     }
 }
 
@@ -231,19 +234,21 @@ To apply formatting for a DataGridTextColumn, follow the code example:
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid.Columns>
-    <syncfusion:DataGridTextColumn MappingName="Freight" Format="C" />
-    <syncfusion:DataGridTextColumn MappingName="ShippingDate" Format="dd/MM/yyyy" />
+    <syncfusion:DataGridTextColumn MappingName="Freight" Format="C" />
+    <syncfusion:DataGridTextColumn MappingName="ShippingDate" Format="dd/MM/yyyy" />
 </syncfusion:SfDataGrid.Columns> 
 {% endhighlight %}
 {% highlight c# %}
-dataGrid.Columns.Add (new GridTextColumn () { 
-    MappingName = "Freight",
-    Format = "C"
+dataGrid.Columns.Add(new DataGridTextColumn()
+{
+    MappingName = "Freight",
+    Format = "C"
 });
 
-dataGrid.Columns.Add (new GridTextColumn () { 
-    MappingName = "ShippingDate",
-    Format = "dd/MM/yyyy"
+dataGrid.Columns.Add(new DataGridTextColumn()
+{
+    MappingName = "ShippedDate",
+    Format = "dd/MM/yyyy"
 });
 {% endhighlight %}
 {% endtabs %}
@@ -256,78 +261,19 @@ The following code example creates DataGridTextColumn:
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:DataGridTextColumn MappingName ="OrderID" /> 
+<syncfusion:DataGridTextColumn MappingName ="OrderID" /> 
 {% endhighlight %}
 {% highlight c# %}
-dataGrid.Columns.Add(DataGridTextColumn() { MappingName = "OrderID" });
-{% endhighlight %}
-{% endtabs %}
-
-The following topics explain the customizations done in the DataGridTextColumn:
-
-### Formatting
-
-To format values displayed in the DataGridColumn, use the `DataGridColumn.Format` property.
-
-#### Format column using StringFormat
-
-Assign the format of string to the `DataGridColumn.Format` property based on the bound data type of the property, the DataGridColumn is associated to format the value. You can use different  `StringFormats` to customize values displayed in the record cells.
-
-To apply formatting for a DataGridTextColumn, follow the code example:
-
-{% tabs %}
-{% highlight xaml %}
-<syncfusion:SfDataGrid.Columns>
-    <syncfusion:DataGridTextColumn  MappingName="Freight" Format="C" />
-    <syncfusion:DataGridTextColumn  MappingName="ShippingDate" Format="dd/MM/yyyy" />
-</syncfusion:SfDataGrid.Columns> 
-{% endhighlight %}
-{% highlight c# %}
-dataGrid.Columns.Add (DataGridTextColumn() { 
-    MappingName = "Customer",
-    Format = "C"
-});
-
-dataGrid.Columns.Add (DataGridTextColumn() { 
-    MappingName = "ShippingDate",
-    Format = "dd/MM/yyyy"
+dataGrid.Columns.Add( new DataGridTextColumn()
+{ 
+    MappingName = "OrderID"
 });
 {% endhighlight %}
 {% endtabs %}
-
-#### Format column using converter
-
-Using converter, set the format of the column.
-
-To set the format using converter, follow the code example:
-
- {% highlight xaml%}
- <sfgrid:SfDataGrid.Columns>
-    <sfgrid:DataGridTextColumn MappingName="Salary" DisplayBinding="{Binding Salary, Converter={StaticResource SummaryConverter}}" />
-</sfgrid:SfDataGrid.Columns>  
- {% endhighlight%}
-
- {% highlight C#%}
-
-public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
-{
-        var formattedString = string.Format("$ {0}", value);
-        return formattedString;
-}
-
- {% endhighlight%}
-
-N> For AutoGenerated columns formatting can be applied by handling the [SfDataGrid.AutoGeneratingColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AutoGeneratingColumn) event.
-
-### Font and alignment options
-
-#### TextAlignment
-
-To get or set TextAlignment of the header cell and Grid Cell , use the `DataGridColumn.HeaderTextAlignment` and `DataGridColumn.CellTextAlignment` property. The default alignment of the record cell is `Center`. It can be customized as `Start` or `End`.
 
 ## DataGridCheckBoxColumn
 
-DataGridCheckBoxColumn inherits all the properties of DataGridColumn. It loads a switch as the content of record cells in the column and responds to value changes in it. The underlying data source can be changed that it toggles the values shown in the switch. The SfDataGrid automatically generates DataGridCheckBoxColumn if the property in the underlying collection of type set to bool.
+DataGridCheckBoxColumn inherits all the properties of `DataGridColumn`. It loads a switch as the content of record cells in the column and responds to value changes in it. The underlying data source can be changed that it toggles the values shown in the switch. The SfDataGrid automatically generates DataGridCheckBoxColumn if the property in the underlying collection of type set to bool.
 
 To use DataGridCheckBoxColumn, follow the code example:
  
@@ -342,62 +288,6 @@ To use DataGridCheckBoxColumn, follow the code example:
         <syncfusion:DataGridCheckBoxColumn MappingName="IsOnline" HeaderText="Is Online" />
     </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid> 
-{% endhighlight %}
-
-{% highlight c# %}
-// Model class
-public class Model
-{
-    private bool _isOnline;
-
-    public bool IsOnline
-    {
-        get { return _isOnline; }
-        set
-        {
-            this._isOnline = value;
-        }
-    }
-}
-
-// ViewModel class
-public class ViewModel
-{
-    public ViewModel()
-    {
-        GetOrderDetails(50);
-    }
-
-    #region ItemsSource
-
-    private ObservableCollection<OrderInfo> ordersInfo;
-
-    public ObservableCollection<OrderInfo> OrderInfoCollection
-    {
-        get { return ordersInfo; }
-        set { this.ordersInfo = value; }
-    }
-
-    #endregion
-
-    #region ItemSource Generator
-
-    public void GetOrderDetails(int count)
-    {
-        var orderDetails = new ObservableCollection<OrderInfo>();
-        for (int i = 1; i <= count; i++)
-        {
-            var order = new OrderInfo()
-            {
-                IsOnline = (i % 2) == 0 ? true : false
-            };
-            orderDetails.Add(order);
-        }
-        ordersInfo = orderDetails;
-    }
-
-    #endregion
-} 
 {% endhighlight %}
 
 ![DataGrid with checkbox column](Images\column-types\maui-datagrid-column-checkbox.png)
@@ -428,72 +318,18 @@ To load image (embedded resource) in DataGridImageColumn, follow the code exampl
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 
-{% highlight c# %}
-// Model class
-public class Model
-{
-    private ImageSource _dealer;
-
-    public ImageSource DealerImage
-    {
-        get { return _dealer; }
-        set
-        {
-            this._dealer = value;
-        }
-    }
-}
-
-// ViewModel class
-public class ViewModel
-{
-    public ViewModel()
-    {
-        GetOrderDetails(50);
-    }
-
-    #region ItemsSource
-
-    private ObservableCollection<OrderInfo> ordersInfo;
-
-    public ObservableCollection<OrderInfo> OrderInfoCollection
-    {
-        get { return ordersInfo; }
-        set { this.ordersInfo = value; }
-    }
-
-    #endregion
-
-    #region ItemSource Generator
-
-    public void GetOrderDetails(int count)
-    {
-        var orderDetails = new ObservableCollection<OrderInfo>();
-        for (int i = 1; i <= count; i++)
-        {
-            var order = new OrderInfo()
-            {
-                DealerImage = ImageSource.FromResource("DataGridDemo.Buchanan.png") // Need to give the image path properly. Here, DataGridDemo denotes the project name and Buchanan denotes the image name.
-            };
-            orderDetails.Add(order);
-        }
-        ordersInfo = orderDetails;
-    }
-
-    #endregion
-}
-{% endhighlight %}
-
 ![DataGrid with image column](Images\column-types\maui-datagrid-column-imagecolumn.png)
 ### Aspect
 
 SfDataGrid allows you to set the [Aspect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridImageColumn.html#Syncfusion_Maui_DataGrid_DataGridImageColumn_Aspect) to size the loaded images within the bounds of the grid cell (whether to stretch, crop or letterbox) using the `DataGridImageColumn.Aspect` property. The supported aspects are described below, the default value is AspectFit.
 
-AspectFill: Clips the image so that it fills the display area while preserving the aspect (no distortion).
+* **AspectFill**: Clips the image so that it fills the display area while preserving the aspect (no distortion).
 
-AspectFit:  Letterboxes the image (if required) so that the entire image fits into the display area, with blank space added to the top/bottom or sides depending on whether the image is wide or tall.
+* **AspectFit**:  Letterboxes the image (if required) so that the entire image fits into the display area, with blank space added to the top/bottom or sides depending on whether the image is wide or tall.
 
-Fill: Stretches the image to completely and exactly fill the display area. This may result in the image being distorted.
+* **Fill**: Stretches the image to completely and exactly fill the display area. This may result in the image being distorted.
+
+* **Center**: Places the image to the center of the cell.
 
 To set `Aspect` to images loaded inside `DataGridImageColumn`, refer the below code snippet.
 
@@ -547,29 +383,6 @@ Underlying records will be the BindingContext for the `CellTemplate`. The follow
         </DataTemplate>
     </syncfusion:DataGridTemplateColumn.CellTemplate>
 </syncfusion:DataGridTemplateColumn>
-{% endhighlight %}
-{% highlight c# %}
-DataGridTemplateColumn templateColumn = new DataGridTemplateColumn()
-{
-    MappingName = "CustomerID",
-    Width = 50,
-};
-var dataTemplate = new DataTemplate(() =>
-{
-var label = new Label()
-{
-    TextColor = Color.Blue,
-    VerticalOptions = LayoutOptions.Center,
-    HorizontalOptions = LayoutOptions.Center
-};
-label.SetBinding(Label.TextProperty, "CustomerID");
-return label;
-});
-templateColumn.CellTemplate = dataTemplate;
-{% endhighlight %}
-{% endtabs %}
-
-
 
 ### CellTemplateSelector
 
@@ -634,42 +447,6 @@ public class FreightTemplateSelector : DataTemplateSelector
 
 ![DataGrid with Template column contain cell Template selector](Images\column-types\maui-datagrid-templatecolumn-celltemplate-celltemplateselector.png)
 
-### Getting row index of a row in GridTemplateColumn
-
-We can get the row data of the specified row using a button inside the DataGridTemplateColumn .
-
-{% tabs %}
-{% highlight xaml %}
-// MainPage.Xaml
-
-<syncfusion:DataGridTemplateColumn HeaderText="ShipCity" MappingName="ShipCity">
-    <syncfusion:DataGridTemplateColumn.CellTemplate>
-        <DataTemplate>
-            <Button Clicked="Button_Clicked" WidthRequest="120" Text="{Binding ShipCity}"/>
-        </DataTemplate>
-    </syncfusion:DataGridTemplateColumn.CellTemplate>
-</syncfusion:DataGridTemplateColumn>
-
-{% endhighlight %}
-
-{% highlight c# %}
-// MainPage.cs 
-public partial class MainPage : ContentPage
-{
-     public MainPage()
-     {
-         InitializeComponent();
-     }
-     private void button_Clicked(object sender, EventArgs e)
-     {
-          var button = sender as Button;
-          var record = button.BindingContext as OrderInfo;
-          var recordRowIndex = viewModel.OrderInfoCollection.IndexOf(record);
-     }
-}
-{% endhighlight %}
-{% endtabs %}
-
 ### Loading DatePicker
 We can load DatePicker inside a `DataGridTemplateColumn`.
 
@@ -716,83 +493,6 @@ dataGrid.Columns.Add(dateColumn);
 {% endhighlight %}
 {% endtabs %}
 
-{% highlight c# %}
-// Model class
-public class Model
-{
-    private DateTime shippedDate;
-
-    public DateTime ShippedDate
-    {
-        get { return shippedDate; }
-        set
-        {
-            shippedDate = value;
-            RaisePropertyChanged("ShippedDate");
-        }
-    }
-}
-
-// ViewModel class
-public class ViewModel
-{
-    private List<DateTime> OrderedDates;
-
-    public ViewModel()
-    {
-        GetOrderDetails(50);
-    }
-
-    #region ItemsSource
-
-    private ObservableCollection<OrderInfo> ordersInfo;
-
-    public ObservableCollection<OrderInfo> OrderInfoCollection
-    {
-        get { return ordersInfo; }
-        set { this.ordersInfo = value; }
-    }
-
-    #endregion
-
-    #region ItemSource Generator
-
-     private List<DateTime> GetDateBetween(int startYear, int endYear, int count)
-     {
-        List<DateTime> date = new List<DateTime>();
-        Random d = new Random(1);
-        Random m = new Random(2);
-        Random y = new Random(startYear);
-        for (int i = 0; i < count; i++)
-        {
-            int year = y.Next(startYear, endYear);
-            int month = m.Next(3, 13);
-            int day = d.Next(1, 31);
-
-            date.Add(new DateTime(year, month, day));
-        }
-        return date;
-     }
-
-    public void GetOrderDetails(int count)
-    {
-        var orderDetails= new ObservableCollection<OrderInfo>();
-        this.OrderedDates = GetDateBetween(2000, 2014, count);
-        for (int i = 1; i <= count; i++)
-        {
-            var order = new OrderInfo()
-            {
-                ShippedDate = this.OrderedDates[i - 1],
-            };
-            orderDetails.Add(order);
-        }
-        ordersInfo = orderDetails;
-    }
-
-    #endregion
-}
-{% endhighlight %}
-
 ## DataGridNumericColumn
 
 The `DataGridNumericColumn` inherits all the properties of `DataGridColumn`. It is used to display numeric data. To create `DataGridNumericColumn`, the property corresponding to the column in the underlying collection must be a numeric type(int, double, float, etc.). To create a `GridNumericColumn`, follow the code example:
@@ -806,8 +506,7 @@ The `DataGridNumericColumn` inherits all the properties of `DataGridColumn`. It 
 <syncfusion:SfDataGrid x:Name="dataGrid"           
                    ItemsSource="{Binding OrdersInfo}">
     <syncfusion:SfDataGrid.Columns>
-        <syncfusion:DataGridNumericColumn Format="C" HeaderText="ID"
-                                  MappingName="OrderID"/>
+        <syncfusion:DataGridNumericColumn Format="C" HeaderText="ID"                                 MappingName="OrderID"/>
     </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
