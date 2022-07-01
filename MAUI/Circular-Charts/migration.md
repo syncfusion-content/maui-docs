@@ -185,7 +185,8 @@ this.Content = chart;
 
 <chart:SfCircularChart>
     <chart:PieSeries ItemsSource="{Binding Data}" 
-                    XBindingPath="Product"                    YBindingPath="SalesRate"/>
+                    XBindingPath="Product" 
+                    YBindingPath="SalesRate"/>
 </chart:SfCircularChart>
 
 {% endhighlight %} 
