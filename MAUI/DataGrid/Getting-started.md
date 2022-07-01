@@ -212,7 +212,7 @@ dataGrid.ItemsSource = viewModel.OrderInfoCollection;
 {% endtabs %}
 
 Run the application to render the following output:
-![.Net MAUI DataGrid](Images\getting-started\basic-datagrid.png)
+![Getting started with .NET MAUI DataGrid](Images\getting-started\maui-datagrid-getting-started.png)
 
 
 ## Defining columns
@@ -276,7 +276,7 @@ dataGrid.SortingMode=DataGridSortingMode.Single;
 
 Run the application and touch the header cell to sort the data and the following output will be displayed:
  
-![.Net MAUI DataGrid](Images\getting-started\sorting-datagrid.png)
+![Sorting in .NET MAUI DataGrid](Images\getting-started\maui-datagrid-basic-sorting.png)
 
 Sorting can also be configured by adding the column to the `SfDataGrid.SortColumnDescription` collection as follows:
 
