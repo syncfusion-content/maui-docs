@@ -665,7 +665,7 @@ public class Employee
      public string DisplayPicture { get; set; }
 }
 
-// Creating an instance for resource mapping.
+//Creating an instance for the resource mapping.
 ResourceMapping resourceMapping = new ResourceMapping();
 
 // Mapping the custom data fields. 
