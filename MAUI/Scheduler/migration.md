@@ -589,7 +589,7 @@ Appointments.Add(new SchedulerAppointment()
 scheduler.AppointmentsSource = Appointments;
 this.Content = scheduler;	
 	
-// Adding schedule resource in the scheduler resource collection.
+//Adding schedule resource in the scheduler resource collection.
 var resources = new ObservableCollection<SchedulerResource>()
 {
    new SchedulerResource() { Name = "Sophia", Foreground = Colors.Blue, Background = Colors.Green, Id = "1000" },
