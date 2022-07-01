@@ -1163,7 +1163,7 @@ this.Content = scheduler;
 <tr>
 <td>{{'[ResourceIdsMapping](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ScheduleAppointmentMapping.html#Syncfusion_SfSchedule_XForms_ScheduleAppointmentMapping_ResourceIdsMapping)'| markdownify }}</td>
 <td>{{'[ResourceIdsMapping]()'| markdownify }} (From DaysView, TimelineView)</td>
-<td>Gets or sets the resource ids mapping to map the custom appointment property with schedule appointments resource ids property.</td></tr>
+<td>Gets or sets the resource ids mapping to map the custom appointment property with the schedule appointments resource ids property.</td></tr>
 
  </table> 
 
