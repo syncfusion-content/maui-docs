@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Calendar type in .NET MAUI Scheduler control | Syncfusion
-description: Learn here all about the Calendar type in Syncfusion .NET MAUI Scheduler (SfScheduler) control and more details.
+title: Calendar types in .NET MAUI Scheduler control | Syncfusion
+description: Learn here all about the Calendar types in Syncfusion .NET MAUI Scheduler (SfScheduler) control and more details.
 platform: maui
 control: SfScheduler
 documentation: ug
 ---
 
-# Calendar type in .NET MAUI Scheduler (SfScheduler)
+# Calendar types in .NET MAUI Scheduler (SfScheduler)
 The Scheduler control supports different types of calendars such as Gregorian, Korean, Hebrew, and more. Change the calendar types by using the CalendarType property in the SfScheduler.  
 
 <table>
