@@ -536,8 +536,8 @@ resources.Add(new ScheduleResource()
      Id = 5601, 
      Color = Color.FromHex("#FF3399") 
 });
-
-// Adding schedule resource collection to schedule resources of SfSchedule.
+	
+// Adding the schedule resource collection to the schedule resources of the SfSchedule.
 schedule.ScheduleResources = resources;
 
 // Creating an instance for schedule appointment collection
