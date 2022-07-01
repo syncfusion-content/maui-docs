@@ -573,7 +573,7 @@ schedule.DataSource = scheduleAppointmentCollection;
 public ObservableCollection<SchedulerAppointment> Appointments { get; set; }
 
 SfScheduler scheduler = new SfScheduler();
-// Creating an instance for the scheduler appointment collection.
+//Creating an instance for the scheduler appointment collection.
 this.Appointments = new ObservableCollection<SchedulerAppointment>();
 
 // Adding scheduler appointment in the schedule appointment collection. 
