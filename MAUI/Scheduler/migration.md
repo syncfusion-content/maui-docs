@@ -773,7 +773,7 @@ this.Scheduler.ResourceView.Resources = resources;
 
 ### SchedulerAppointment
 
-The following code example explains how to create the scheduler appointments in Xamarin SfSchedule and .NET MAUI SfScheduler.
+The following code example explains how to create the scheduler appointments in the Xamarin SfSchedule and .NET MAUI SfScheduler.
 
 <table>
 <tr>
