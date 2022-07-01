@@ -578,7 +578,7 @@ A data template can be used to customize the marker tooltip using [`MarkerToolti
 
 ### Customizing data templates selector in markers
 
-A data template selector can be customized to the appearance of each item with different templates based on specific constraints . You can choose a DataTemplate for each item at runtime based on the value of data-bound property using DataTemplateSelector in [`MarkerTooltipTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_MarkerTooltipTemplate) property.
+A data template selector also can be used to customize the appearance of each item with different templates based on specific constraints . You can choose a DataTemplate for each item at runtime based on the value of data-bound property using DataTemplateSelector in [`MarkerTooltipTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_MarkerTooltipTemplate) property.
 
 {% tabs %}
 
