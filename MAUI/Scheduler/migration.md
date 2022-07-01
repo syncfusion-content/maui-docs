@@ -542,7 +542,7 @@ schedule.ScheduleResources = resources;
 	
 //Creating an instance for the schedule appointment collection.
 ScheduleAppointmentCollection scheduleAppointmentCollection = new ScheduleAppointmentCollection();
-//Adding schedule appointment in schedule appointment collection 
+//Adding schedule appointment in the schedule appointment collection.  
 scheduleAppointmentCollection.Add(new ScheduleAppointment()
 {
      StartTime = new DateTime(2019, 05, 08, 10, 0, 0),
