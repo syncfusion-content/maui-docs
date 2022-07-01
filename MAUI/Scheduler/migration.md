@@ -597,7 +597,7 @@ var resources = new ObservableCollection<SchedulerResource>()
    new SchedulerResource() { Name = "James William",  Foreground = Colors.Blue, Background = Colors.Green, Id = "1002" },
 };
 
-// Adding the scheduler resource collection to the schedule resources of SfSchedule.
+//Adding the scheduler resource collection to the schedule resources of the SfSchedule.
 this.Scheduler.ResourceView.Resources = resources;
 
 {% endhighlight %}
