@@ -34,7 +34,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI DataGrid Styling based on DefaultStyle](Images/styling/Styles_1.png)
+![Default Styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-defaultsyle.png)
 
 ## Set datagrid style from application resources
 You can write custom style for the properties in SfDataGrid.DefaultStyle class using application resource and consume the custom style as static resource to the DefaultSyle property for the required DataGrid used in that page.
@@ -76,7 +76,7 @@ You can write custom style for the properties in SfDataGrid.DefaultStyle class u
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI DataGrid Styling based on DefaultStyle in APP or Page resource](Images/styling/Styles_2.png)
+![App or Page resource Styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-app-page-resource.png)
 
 ## Implicit styling
 The appearance of DataGrid (SfDataGrid) and its inner elements can be customized by writing style of TargetType to those control. If the key is not specified, then the style will be applied to all the SfDataGrid in its scope. You can apply specific to SfDataGrid or DataRow or cell using various properties exposed.
@@ -98,7 +98,7 @@ The record cells can be customized by writing style of TargetType DataGridCell. 
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI DataGrid Styling Record cell](Images/styling/Styles_5.png)
+![Record cell styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-recordcell_style.png)
 
 ### Styling Record row
 The record row can be customized by writing style of TargetType DataGridRow. 
@@ -111,7 +111,7 @@ The record row can be customized by writing style of TargetType DataGridRow.
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI DataGrid Styling Record row](Images/styling/Styles_6.png)
+![Record row styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-recordrow_style.png)
 
 ### Styling Header cell
 The header cells can be customized by writing style of TargetType DataGridHeaderCell
@@ -128,7 +128,7 @@ The header cells can be customized by writing style of TargetType DataGridHeader
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI DataGrid Styling Header cell](Images/styling/Styles_7.png)
+![Header cell styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-headercell_style.png)
 
 ### Styling Header row
 The header row can be customized by writing style of TargetType DataGridHeaderRow.
@@ -141,7 +141,7 @@ The header row can be customized by writing style of TargetType DataGridHeaderRo
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI DataGrid Styling Header row](Images/styling/Styles_8.png)
+![Header row styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-headerrow_style.png)
 
 ### Column Styling 
 You can apply the style for a particular column by using GridColumn.CellStyle and GridColumn.HeaderStyle property.
@@ -175,7 +175,7 @@ You can apply the style for a particular column by using GridColumn.CellStyle an
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI DataGrid Column Styling ](Images/styling/Styles_15.png)
+![Column Styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-column_style.png)
 
 ## Applying alternate row style
 You can apply the alternative row color by using AlternateRowBackground in SfDataGrid.DefaultStyle.
@@ -200,7 +200,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI DataGrid Applying alternate row style](Images/styling/Styles_3.png)
+![Alternative row style in .NET MAUI DataGrid](Images/styling/maui-datagrid-Alternativerow-style.png)
 
 ## Changing the alternation row count
 You can customize the alternate row count for applying the alternate row style using the SfDataGrid.AlternationRowCount property.
@@ -227,7 +227,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI DataGrid Changing the alternation row count](Images/styling/Styles_4.png)
+![Changing the alternation row count in .NET MAUI DataGrid](Images/styling/Styles_4.png)
 
 ## Changing the font style
 You can apply the style for header and row font attributes by using SfDataGrid.DefaultStyle.
@@ -247,7 +247,7 @@ You can apply the style for header and row font attributes by using SfDataGrid.D
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI DataGrid Changing the font style](Images/styling/Styles_9.png)
+![Changing the font style .NET MAUI DataGrid](Images/styling/Styles_9.png)
 
 ## Border customization
 The data grid customizes the grid borders to vertical, horizontal, both, or none. Set desired value to GridLinesVisibility property in SfDataGrid.GridLinesVisibility or SfDataGrid.HeaderGridLinesVisibility
@@ -279,7 +279,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI DataGrid Both GridLinesVisibility](Images/styling/Styles_10.png)
+![Both GridLinesVisibility in .NET MAUI DataGrid](Images/styling/Styles_10.png)
 
 ### Horizontal
 The GridLinesVisibility.Horizontal allows displays the data grid with horizontal border only.
@@ -303,7 +303,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI DataGrid Horizontal GridLinesVisibility](Images/styling/Styles_11.png)
+![Horizontal GridLinesVisibility in .NET MAUI DataGrid](Images/styling/Styles_11.png)
 
 ### Vertical
 The GridLinesVisibility.Vertical displays the data grid with vertical border only.
@@ -327,7 +327,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI DataGrid Vertical GridLinesVisibility](Images/styling/Styles_12.png)
+![Vertical GridLinesVisibility in .NET MAUI DataGrid](Images/styling/Styles_12.png)
 
 ### None
 GridLinesVisibility.None allows you to display the data grid without borders.
@@ -351,7 +351,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI DataGrid None GridLinesVisibility](Images/styling/Styles_13.png)
+![None GridLinesVisibility in .NET MAUI DataGrid](Images/styling/Styles_13.png)
 
 ## Changing the border width
 You can change the border width by using GridLineStrokeThickness  property in SfDataGrid.DefaultStyle.
@@ -376,4 +376,4 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI DataGrid Changing the border width](Images/styling/Styles_14.png)
+![Changing the border width in .NET MAUI DataGrid](Images/styling/Styles_14.png)
