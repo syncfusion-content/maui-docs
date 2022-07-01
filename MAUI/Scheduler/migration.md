@@ -651,7 +651,7 @@ meeting.To = meeting.From.AddHours(2);
 meeting.EventName = "Client Meeting";
 meeting.Color = Color.Green;
 
-// Setting resources for an event.
+//Setting resources for an event.
 meeting.Resources = new ObservableCollection<object> () {5601, 5604};
 
 /// <summary>   
