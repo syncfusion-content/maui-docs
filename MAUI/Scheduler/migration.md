@@ -668,7 +668,7 @@ public class Employee
 //Creating an instance for the resource mapping.
 ResourceMapping resourceMapping = new ResourceMapping();
 
-// Mapping the custom data fields. 
+//Mapping the custom data fields.  
 resourceMapping.Name = "Name";
 resourceMapping.Id = "Id";
 resourceMapping.Color = "Color";
