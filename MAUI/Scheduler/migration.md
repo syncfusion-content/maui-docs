@@ -539,8 +539,8 @@ resources.Add(new ScheduleResource()
 	
 // Adding the schedule resource collection to the schedule resources of the SfSchedule.
 schedule.ScheduleResources = resources;
-
-// Creating an instance for schedule appointment collection
+	
+//Creating an instance for the schedule appointment collection.
 ScheduleAppointmentCollection scheduleAppointmentCollection = new ScheduleAppointmentCollection();
 //Adding schedule appointment in schedule appointment collection 
 scheduleAppointmentCollection.Add(new ScheduleAppointment()
