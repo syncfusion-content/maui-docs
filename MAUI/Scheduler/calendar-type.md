@@ -60,7 +60,7 @@ this.Scheduler.CalendarType = CalendarType.Hijri;
 {% endtabs %}
 
 ### DateTime values in Calendar Types
-All the DateTime values can be given such as [DisplayDate,]() [SelectedDate,]() [BlackoutDates,]() Appointment [StartTime,]() and [EndTime,]() SpecialTimeRegion [StartTime]() and [EndTime]() values in two ways when calendar identifier is specified other than [GregorianCalendar.]()
+All the DateTime values can be given such as [DisplayDate](), [SelectedDate](), [BlackoutDates](), Appointment [StartTime]() and [EndTime](), and SpecialTimeRegion [StartTime]() and [EndTime]() values in two ways when the calendar identifier is specified other than the [GregorianCalendar]().
 
 * Create an appointment with a start and end time value by declaring the calendar type and respective calendar type date.
 
