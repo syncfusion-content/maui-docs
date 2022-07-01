@@ -576,7 +576,7 @@ SfScheduler scheduler = new SfScheduler();
 //Creating an instance for the scheduler appointment collection.
 this.Appointments = new ObservableCollection<SchedulerAppointment>();
 
-// Adding scheduler appointment in the schedule appointment collection. 
+//Adding scheduler appointment in the schedule appointment collection.  
 Appointments.Add(new SchedulerAppointment()
 {
     StartTime = DateTime.Today.AddHours(9),
