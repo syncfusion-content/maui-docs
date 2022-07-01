@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bubbles in Maps control | Syncfusion
-description: Learn here all about the Bubbles feature of Syncfusion .NET MAUI Maps (SfMaps) control to customize their appearances and more.
+description: Learn all about the Bubbles feature of Syncfusion .NET MAUI Maps (SfMaps) control to customize their appearances and more.
 platform: MAUI
 control: SfMaps
 documentation: ug
@@ -13,7 +13,7 @@ Bubbles can be rendered in different colors and sizes based on the data values o
 
 ## Enable bubbles
 
-You can enable bubbles using the [`ShowBubbles`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShowBubbles). You can customize a bubbles using the [`BubbleSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_BubbleSettings). This property is used to specify the value based on which the bubble's size has to be rendered.
+You can enable bubbles using the [`ShowBubbles`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShowBubbles). You can customize bubbles using the [`BubbleSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_BubbleSettings). This property is used to specify the value based on which the bubble's size has to be rendered.
 
 {% tabs %}
 
@@ -343,7 +343,7 @@ public class Model
 
 ## Appearance customization
 
-You can customize the below appearance of the bubbles.
+You can customize appearance of the bubbles as below.
 
 * **MinSize** - Change the minimum radius of the bubbles using the [`MinSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapBubbleSettings.html#Syncfusion_Maui_Maps_MapBubbleSettings_MinSize) property. The default value of the [`MinSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapBubbleSettings.html#Syncfusion_Maui_Maps_MapBubbleSettings_MinSize) property is `20.0`.
 * **MaxSize** - Change the maximum radius of the bubbles using the [`MaxSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapBubbleSettings.html#Syncfusion_Maui_Maps_MapBubbleSettings_MaxSize) property. The default value of the [`MaxSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapBubbleSettings.html#Syncfusion_Maui_Maps_MapBubbleSettings_MaxSize) property is `50.0`.
