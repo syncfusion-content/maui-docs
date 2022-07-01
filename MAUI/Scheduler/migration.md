@@ -2592,7 +2592,7 @@ this.Content = scheduler;
 
 ## Upcoming Features
 
-* Command support for Tapped, DoubleTapped, LongPressed and ViewChanged events.
+* Command support for Tapped, DoubleTapped, LongPressed, and ViewChanged events.
 * Support to change text color for each scheduler appointment.
 * Suspend and resume for appointment update.
 * Appointment Drag and Drop.
