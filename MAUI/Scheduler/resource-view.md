@@ -7,7 +7,7 @@ control: SfScheduler
 documentation: ug
 ---
 
-# Resource in MAUI Scheduler (SfScheduler)
+# Resource view in .NET MAUI Scheduler (SfScheduler)
 
 The .NET MAUI Scheduler control allows you to group appointments based on the resources associated with them in the timeline day, timeline week, timeline workweek, and timeline month views, with complete business object binding, multi resource appointment sharing and UI customization features.
 
