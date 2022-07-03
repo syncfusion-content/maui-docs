@@ -313,13 +313,29 @@ You can show custom marker using the [`MarkerTemplate`](https://help.syncfusion.
         <map:MapShapeLayer ShapeStroke="DarkGrey"
                            MarkerTemplate="{StaticResource LowPopulationTemplate}"
                            ShowMarkerTooltip="True">
+
             <map:MapShapeLayer.Markers>
                 <map:MapMarkerCollection>
-                    <map:MapMarker Latitude="20.5595" Longitude="22.9375" HorizontalAlignment="Center" VerticalAlignment="Start"/>
-                    <map:MapMarker Latitude="21.7679" Longitude="78.8718" HorizontalAlignment="Center" VerticalAlignment="Start"  />
-                    <map:MapMarker Latitude="133.7751" Longitude="25.2744" HorizontalAlignment="Center" VerticalAlignment="Start" />
-                    <map:MapMarker Latitude="60.2551" Longitude="84.5260" HorizontalAlignment="Center" VerticalAlignment="Start" />
-                    <map:MapMarker Latitude="195.4915" Longitude="-50.7832" HorizontalAlignment="Center" VerticalAlignment="Start"  />
+                    <map:MapMarker Latitude="20.5595"
+                                   Longitude="22.9375"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Start" />
+                    <map:MapMarker Latitude="21.7679"
+                                   Longitude="78.8718"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Start" />
+                    <map:MapMarker Latitude="133.7751"
+                                   Longitude="25.2744"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Start" />
+                    <map:MapMarker Latitude="60.2551"
+                                   Longitude="84.5260"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Start" />
+                    <map:MapMarker Latitude="195.4915"
+                                   Longitude="-50.7832"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Start" />
                 </map:MapMarkerCollection>
             </map:MapShapeLayer.Markers>
         </map:MapShapeLayer>
@@ -378,7 +394,12 @@ You can show custom marker using the [`MarkerTemplate`](https://help.syncfusion.
         return new DataTemplate(() =>
         {
             var stackLayout = new StackLayout();
-            var image = new Image { Source = "map.png", WidthRequest = 20, HeightRequest = 20 };
+            var image = new Image
+            {
+                Source = "map.png",
+                WidthRequest = 20,
+                HeightRequest = 20
+            };
             stackLayout.Add(image);
             return new ViewCell { View = stackLayout };
         });
@@ -414,40 +435,67 @@ A data template can be used to customize the marker tooltip using [`MarkerToolti
 <map:SfMaps>
     <map:SfMaps.Layer>
         <map:MapShapeLayer ShapeStroke="DarkGrey"
-                           ShapeHoverFill="Transparent"   
+                           ShapeHoverFill="Transparent"
                            ShapeHoverStroke="Transparent"
                            MarkerTemplate="{StaticResource MapMarkerTemplate}"
                            ShowMarkerTooltip="True">
-                            
+
             <map:MapShapeLayer.Markers>
                 <map:MapMarkerCollection>
-                    <local:CustomMarker Name="South africa" Area="38,570,000 sq. km."  Latitude="20.5595" Longitude="22.9375"  />
-                    <local:CustomMarker Name="India" Area="30,370,000 sq. km." Latitude="21.7679" Longitude="78.8718"  />
-                    <local:CustomMarker Name="Europe" Area="20,370,000 sq. km." Latitude="133.7751"  Longitude="25.2744"  />
-                    <local:CustomMarker Name="Asia" Area="50,570,000 sq. km." Latitude="60.2551" Longitude="84.5260" />
-                    <local:CustomMarker Name="South America" Area="30,370,000 sq. km." Latitude="195.4915"  Longitude="-50.7832"  />
+                    <local:CustomMarker Name="South africa"
+                                        Area="38,570,000 sq. km."
+                                        Latitude="20.5595"
+                                        Longitude="22.9375" />
+                    <local:CustomMarker Name="India"
+                                        Area="30,370,000 sq. km."
+                                        Latitude="21.7679"
+                                        Longitude="78.8718" />
+                    <local:CustomMarker Name="Europe"
+                                        Area="20,370,000 sq. km."
+                                        Latitude="133.7751"
+                                        Longitude="25.2744" />
+                    <local:CustomMarker Name="Asia"
+                                        Area="50,570,000 sq. km."
+                                        Latitude="60.2551"
+                                        Longitude="84.5260" />
+                    <local:CustomMarker Name="South America"
+                                        Area="30,370,000 sq. km."
+                                        Latitude="195.4915"
+                                        Longitude="-50.7832" />
                 </map:MapMarkerCollection>
             </map:MapShapeLayer.Markers>
-        
+
             <map:MapShapeLayer.MarkerTooltipTemplate>
                 <DataTemplate>
-                    <Grid Padding="10" WidthRequest="150">
+                    <Grid Padding="10"
+                          WidthRequest="150">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto" />
                             <RowDefinition Height="Auto" />
                             <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="10"/>
-                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="10" />
+                            <ColumnDefinition Width="Auto" />
                         </Grid.ColumnDefinitions>
-                        <Image Source="flag.png" Grid.Column="0" Grid.Row="0" WidthRequest="20" HeightRequest="20" />
-                        <Label Text="{Binding Name}" TextColor="White"  Grid.Column="1" Grid.Row="0" Padding="10"/>
-                        <Label Grid.Row="2" Grid.ColumnSpan="2"  Text="{Binding Area}" TextColor="White" />
+                        <Image Source="flag.png"
+                               Grid.Column="0"
+                               Grid.Row="0"
+                               WidthRequest="20"
+                               HeightRequest="20" />
+                        <Label Text="{Binding Name}"
+                               TextColor="White"
+                               Grid.Column="1"
+                               Grid.Row="0"
+                               Padding="10" />
+                        <Label Grid.Row="2"
+                               Grid.ColumnSpan="2"
+                               Text="{Binding Area}"
+                               TextColor="White" />
                     </Grid>
                 </DataTemplate>
             </map:MapShapeLayer.MarkerTooltipTemplate>
-        
+
         </map:MapShapeLayer>
     </map:SfMaps.Layer>
 </map:SfMaps>
@@ -518,7 +566,12 @@ A data template can be used to customize the marker tooltip using [`MarkerToolti
         return new DataTemplate(() =>
         {
             var stackLayout = new StackLayout();
-            var image = new Image { Source = "map.png", WidthRequest = 20, HeightRequest = 20 };
+            var image = new Image
+            {
+                Source = "map.png",
+                WidthRequest = 20,
+                HeightRequest = 20
+            };
             stackLayout.Add(image);
             return new ViewCell { View = stackLayout };
         });
@@ -543,15 +596,33 @@ A data template can be used to customize the marker tooltip using [`MarkerToolti
                 }
             };
           
-            var image = new Image { Source = "flag.png", WidthRequest = 20, HeightRequest = 20 };
-            grid.SetRow(image, 0); grid.SetColumn(image, 0);
-            var label = new Label { FontAttributes = FontAttributes.Bold, TextColor = Colors.White, Padding = 5, Text = "Asia", };
+            var image = new Image
+            {
+                Source = "flag.png",
+                WidthRequest = 20,
+                HeightRequest = 20
+            };
+            grid.SetRow(image, 0);
+            grid.SetColumn(image, 0);
+            var label = new Label
+            {
+                FontAttributes = FontAttributes.Bold,
+                TextColor = Colors.White,
+                Padding = 5,
+                Text = "Asia"
+            };
             Binding binding = new Binding();
             binding.Path = nameof(CustomMarker1.Name);
             label.SetBinding(Label.TextProperty, binding);
-            grid.SetRow(label, 0); grid.SetColumn(label, 1);
+            grid.SetRow(label, 0);
+            grid.SetColumn(label, 1);
            
-            var areaLabel = new Label { FontAttributes = FontAttributes.Bold, Text = "10,180,000 sq. km.", TextColor = Colors.White, };
+            var areaLabel = new Label
+            {
+                FontAttributes = FontAttributes.Bold,
+                Text = "10,180,000 sq. km.",
+                TextColor = Colors.White
+            };
             Binding binding1 = new Binding();
             binding1.Path = nameof(CustomMarker1.Area);
             areaLabel.SetBinding(Label.TextProperty, binding1);
@@ -623,19 +694,30 @@ A data template selector also can be used to customize the appearance of each it
 
 	<map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource = "{local:ImageResource MyProject.world1.shp}"
-							   ShapeStroke="DarkGrey"
+            <map:MapShapeLayer ShapeStroke="DarkGrey"
 							   MarkerTemplate="{StaticResource MarkerTemplateSelector}">
 							   
-            <map:MapShapeLayer.Markers>
-                <map:MapMarkerCollection>
-                     <local:CustomMarker1 Latitude="21.7679" Longitude="78.8718" Area = "10,370,000 sq. km." Population="15"  />
-                     <local:CustomMarker1 Latitude="133.7751" Longitude="25.2744" Area = "20,370,000 sq. km." Population="31" />
-                     <local:CustomMarker1 Latitude="60.2551" Longitude="84.5260"   Area = "50,570,000 sq. km." Population="26" />
-                     <local:CustomMarker1 Latitude="195.4915" Longitude="-50.7832" Area = "30,370,000 sq. km." Population="40"/>
-                </map:MapMarkerCollection>
-            </map:MapShapeLayer.Markers>
-			
+                <map:MapShapeLayer.Markers>
+                    <map:MapMarkerCollection>
+                        <local:CustomMarker1 Latitude="21.7679"
+                                             Longitude="78.8718"
+                                             Area="10,370,000 sq. km."
+                                             Population="15" />
+                        <local:CustomMarker1 Latitude="133.7751"
+                                             Longitude="25.2744"
+                                             Area="20,370,000 sq. km."
+                                             Population="31" />
+                        <local:CustomMarker1 Latitude="60.2551"
+                                             Longitude="84.5260"
+                                             Area="50,570,000 sq. km."
+                                             Population="26" />
+                        <local:CustomMarker1 Latitude="195.4915"
+                                             Longitude="-50.7832"
+                                             Area="30,370,000 sq. km."
+                                             Population="40" />
+                    </map:MapMarkerCollection>
+                </map:MapShapeLayer.Markers>
+
             </map:MapShapeLayer>
         </map:SfMaps.Layer>
     </map:SfMaps>

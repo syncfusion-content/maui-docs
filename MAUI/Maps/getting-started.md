@@ -161,7 +161,7 @@ public MainPage()
 
 {% endtabs %}
 
-### Load a remote image
+### Load a remote file
 
 SfMaps provides support to load the json data or shapefile from the uri.
 
@@ -341,6 +341,8 @@ Add the basic maps elements such as data labels, legend, and tooltip as shown in
 
 * **[Data labels](https://help.syncfusion.com/maui/maps/data-labels)** - You can show data labels using the [`ShowDataLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShowDataLabels) property and also, customize it using the [`DataLabelSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_DataLabelSettings) property.
 
+* **[Markers](https://help.syncfusion.com/maui/maps/markers)** - You can show markers at any position on the map by providing latitude and longitude position to the [`MapMarker`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html), which is from the [`Markers`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_Markers) collection.
+
 * **[Legend](https://help.syncfusion.com/maui/maps/legend)** - You can enable legend using the [`Legend`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_Legend) property. The legend's text is displayed based on the [`ColorMapping.Text`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.ColorMapping.html#Syncfusion_Maui_Maps_ColorMapping_Text) property. It is possible to customize the legend text using the [`TextStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html#Syncfusion_Maui_Maps_MapLegend_TextStyle) property.
 
 * **[Tooltip](https://help.syncfusion.com/maui/maps/tooltip)** - You can enable tooltip for the shapes using the [`ShowShapeTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShowShapeTooltip) property. It will be displayed when you interacts with the shapes i.e., while tapping in touch devices and hover in the mouse enabled devices.
@@ -362,18 +364,41 @@ Add the basic maps elements such as data labels, legend, and tooltip as shown in
                            ShapeHoverFill="Transparent">
 
              <map:MapShapeLayer.ColorMappings>
-                <map:EqualColorMapping Color ="#d0b800" Value = "6000" Text="New South Wales" />
-                <map:EqualColorMapping Color = "#00d5cf" Value = "8000"  Text="Queensland" />
-                <map:EqualColorMapping Color ="#cf4eee" Value = "5000" Text="Victoria" />
-                <map:EqualColorMapping Color ="#4f93d8"  Value = "90000" Text="Tasmania" />
-                <map:EqualColorMapping Color = "#8b6adf" Value = "7000" Text="Western Australia"  />
-                <map:EqualColorMapping Color ="#7bff67"  Value = "3000" Text="South Australia" />
-                <map:EqualColorMapping Color ="#ff4e42"  Value = "10000" Text="Northern Territory" />
+                <map:EqualColorMapping Color="#d0b800"
+				                       Value="6000"
+									   Text="New South Wales" />
+                <map:EqualColorMapping Color="#00d5cf"
+				                       Value="8000"
+									   Text="Queensland" />
+                <map:EqualColorMapping Color="#cf4eee"
+				                       Value="5000"
+									   Text="Victoria" />
+                <map:EqualColorMapping Color="#4f93d8" 
+				                       Value="90000"
+									   Text="Tasmania" />
+                <map:EqualColorMapping Color="#8b6adf"
+				                       Value="7000"
+									   Text="Western Australia"  />
+                <map:EqualColorMapping Color="#7bff67"
+				                       Value="3000"
+									   Text="South Australia" />
+                <map:EqualColorMapping Color="#ff4e42"
+				                       Value="10000"
+									   Text="Northern Territory" />
              </map:MapShapeLayer.ColorMappings>
 
             <map:MapShapeLayer.Legend>
-                <map:MapLegend SourceType="Shape" Placement="Right" />
+                <map:MapLegend SourceType="Shape"
+				               Placement="Right" />
             </map:MapShapeLayer.Legend>
+
+            <map:MapShapeLayer.Markers>
+                <map:MapMarkerCollection>
+                    <map:MapMarker x:Name="Adelaide"
+                                   Latitude="-34.928497"
+                                   Longitude="138.600739" />
+                </map:MapMarkerCollection>
+            </map:MapShapeLayer.Markers>
 
             <map:MapShapeLayer.DataLabelSettings>
                 <map:MapDataLabelSettings DataLabelPath="StateCode">
@@ -425,14 +450,56 @@ public MainPage()
 
     layer.ColorMappings = new ObservableCollection<ColorMapping>()
     {
-        new EqualColorMapping { Color = Color.FromRgb(208,183,0), Value = "6000",Text="New South Wales" },
-        new EqualColorMapping { Color = Color.FromRgb(0,213,207), Value = "8000" , Text="Queensland" },
-        new EqualColorMapping { Color = Color.FromRgb(207,78,238), Value = "5000", Text="Victoria" },
-        new EqualColorMapping { Color = Color.FromRgb(79,147,216), Value = "90000", Text="Tasmania" },
-        new EqualColorMapping { Color = Color.FromRgb(139,106,223), Value = "7000", Text="Western Australia" },
-        new EqualColorMapping { Color = Color.FromRgb(123,255,103), Value = "3000", Text="South Australia" },
-        new EqualColorMapping { Color = Color.FromRgb(255,78,66), Value = "10000",Text="Northern Territory" },
+        new EqualColorMapping
+		   {
+		      Color = Color.FromRgb(208,183,0),
+			  Value = "6000",Text="New South Wales"
+		   },
+        new EqualColorMapping
+		   { 
+		      Color = Color.FromRgb(0,213,207),
+		      Value = "8000" ,
+			  Text="Queensland"
+		   },
+        new EqualColorMapping
+		   {
+		      Color = Color.FromRgb(207,78,238),
+			  Value = "5000", Text="Victoria"
+		   },
+        new EqualColorMapping
+		   {
+		      Color = Color.FromRgb(79,147,216),
+			  Value = "90000",
+			  Text="Tasmania"
+		   },
+        new EqualColorMapping
+		   {
+		      Color = Color.FromRgb(139,106,223),
+			  Value = "7000",
+			  Text="Western Australia"
+		   },
+        new EqualColorMapping
+		   {
+		      Color = Color.FromRgb(123,255,103),
+			  Value = "3000",
+			  Text="South Australia"
+		   },
+        new EqualColorMapping
+		   {
+		      Color = Color.FromRgb(255,78,66),
+			  Value = "10000",
+			  Text="Northern Territory"
+		   },
     };
+
+    MapMarker mapMarker = new MapMarker();
+    mapMarker.Latitude = -34.928497;
+    mapMarker.Longitude = 138.600739;
+    MapMarkerCollection mapMarkers =new MapMarkerCollection
+    {
+       mapMarkers.Add(mapMarker)
+    };
+    layer.Markers = mapMarkers;
 
     MapLegend legendSet = new MapLegend();
     legendSet.SourceType = LegendSourceType.Shape;
@@ -480,4 +547,6 @@ public class ViewModel
 
 ![Maps getting started](images/getting-started/maps_getting_started.png)
 
-N> You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Maps example](https://github.com/syncfusion/maui-demos/) that shows how to configure a Maps in .NET MAUI.
+N> 
+* Get the complete getting started sample from [GitHub](https://github.com/SyncfusionExamples/MAUI-Maps-Getting-Started) link.
+* You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations.
