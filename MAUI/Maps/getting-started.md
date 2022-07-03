@@ -363,29 +363,29 @@ Add the basic maps elements such as data labels, legend, and tooltip as shown in
                            SelectedShapeStrokeThickness="0"
                            ShapeHoverFill="Transparent">
 
-             <map:MapShapeLayer.ColorMappings>
-                <map:EqualColorMapping Color="#d0b800"
-				                       Value="6000"
-									   Text="New South Wales" />
-                <map:EqualColorMapping Color="#00d5cf"
-				                       Value="8000"
-									   Text="Queensland" />
-                <map:EqualColorMapping Color="#cf4eee"
-				                       Value="5000"
-									   Text="Victoria" />
-                <map:EqualColorMapping Color="#4f93d8" 
-				                       Value="90000"
-									   Text="Tasmania" />
-                <map:EqualColorMapping Color="#8b6adf"
-				                       Value="7000"
-									   Text="Western Australia"  />
-                <map:EqualColorMapping Color="#7bff67"
-				                       Value="3000"
-									   Text="South Australia" />
-                <map:EqualColorMapping Color="#ff4e42"
-				                       Value="10000"
-									   Text="Northern Territory" />
-             </map:MapShapeLayer.ColorMappings>
+            <map:MapShapeLayer.ColorMappings>
+               <map:EqualColorMapping Color="#d0b800"
+                                       Value="6000"
+                                       Text="New South Wales" />
+               <map:EqualColorMapping Color="#00d5cf"
+                                       Value="8000"
+                                       Text="Queensland" />
+               <map:EqualColorMapping Color="#cf4eee"
+                                       Value="5000"
+                                       Text="Victoria" />
+               <map:EqualColorMapping Color="#4f93d8" 
+                                       Value="90000"
+                                       Text="Tasmania" />
+               <map:EqualColorMapping Color="#8b6adf"
+                                       Value="7000"
+                                       Text="Western Australia"  />
+               <map:EqualColorMapping Color="#7bff67"
+                                       Value="3000"
+                                       Text="South Australia" />
+               <map:EqualColorMapping Color="#ff4e42"
+                                       Value="10000"
+                                       Text="Northern Territory" />
+            </map:MapShapeLayer.ColorMappings>
 
             <map:MapShapeLayer.Legend>
                 <map:MapLegend SourceType="Shape"
