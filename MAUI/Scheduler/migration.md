@@ -496,9 +496,284 @@ this.Content = scheduler;
 
 </table> 
 
+### Scheduler Resource 
+
+The following code example explains how to add the scheduler resource in the Xamarin SfSchedule and .NET MAUI SfScheduler.
+
+<table>
+<tr>
+<th>Xamarin SfSchedule</th>
+<th>.NET MAUI SfScheduler</th></tr>
+<tr>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<syncfusion:SfSchedule
+          x:Name="schedule"
+          ScheduleView="WeekView" 
+          ShowResourceView="True">
+          <syncfusion:SfSchedule.ScheduleResources>
+               <syncfusion:ScheduleResource 
+                    Name="Brooklyn" 
+                    Id="5601" 
+                    Color="#FF3399" />
+          </syncfusion:SfSchedule.ScheduleResources>
+</syncfusion:SfSchedule>
+
+{% endhighlight %}
+
+{% highlight C# %}
+	
+// Creating an instance for the schedule resource collection.
+ObservableCollection<object> resources = new ObservableCollection<object>();
+
+// Adding the schedule resource in the schedule resource collection.
+resources.Add(new ScheduleResource() 
+{ 
+     Name = "Brooklyn", 
+     Id = 5601, 
+     Color = Color.FromHex("#FF3399") 
+});
+	
+// Adding the schedule resource collection to the schedule resources of the SfSchedule.
+schedule.ScheduleResources = resources;
+	
+//Creating an instance for the schedule appointment collection.
+ScheduleAppointmentCollection scheduleAppointmentCollection = new ScheduleAppointmentCollection();
+//Adding schedule appointment in the schedule appointment collection.  
+scheduleAppointmentCollection.Add(new ScheduleAppointment()
+{
+     StartTime = new DateTime(2019, 05, 08, 10, 0, 0),
+     EndTime = new DateTime(2019, 05, 08, 12, 0, 0),
+     Subject = "Meeting",
+     Location = "Hutchison road",
+     ResourceIds = new ObservableCollection<object> { 5601}
+});
+
+//Adding the schedule appointment collection to the DataSource of the SfSchedule.
+schedule.DataSource = scheduleAppointmentCollection;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<scheduler:SfScheduler View="TimelineWeek" AppointmentsSource="{Binding Appointments}"/>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+public ObservableCollection<SchedulerAppointment> Appointments { get; set; }
+
+SfScheduler scheduler = new SfScheduler();
+//Creating an instance for the scheduler appointment collection.
+this.Appointments = new ObservableCollection<SchedulerAppointment>();
+
+//Adding scheduler appointment in the schedule appointment collection.  
+Appointments.Add(new SchedulerAppointment()
+{
+    StartTime = DateTime.Today.AddHours(9),
+    EndTime = DateTime.Today.AddHours(11),
+    Subject = "Client Meeting",
+    Background = Brush.LightSkyBlue,
+});
+	
+//Adding the scheduler appointment collection to the AppointmentsSource of the .NET MAUI Scheduler.
+scheduler.AppointmentsSource = Appointments;
+this.Content = scheduler;	
+	
+//Adding schedule resource in the scheduler resource collection.
+var resources = new ObservableCollection<SchedulerResource>()
+{
+   new SchedulerResource() { Name = "Sophia", Foreground = Colors.Blue, Background = Colors.Green, Id = "1000" },
+   new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.Blue, Background = Colors.Green, Id = "1001" },
+   new SchedulerResource() { Name = "James William",  Foreground = Colors.Blue, Background = Colors.Green, Id = "1002" },
+};
+
+//Adding the scheduler resource collection to the schedule resources of the SfSchedule.
+this.Scheduler.ResourceView.Resources = resources;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td></tr>
+</table>
+
+### Scheduler ResourceMapping
+
+<table>
+<tr>
+<th>Xamarin SfSchedule</th>
+<th>.NET MAUI SfScheduler</th></tr>
+<tr>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+
+<schedule:SfSchedule ScheduleView="WeekView" ShowResourceView="True">
+     <schedule:SfSchedule.ResourceMapping>
+          <schedule:ResourceMapping Name="Name"
+                                    Id="Id"
+                                    Color="Color"
+                                    Image="DisplayPicture"/>
+     </schedule:SfSchedule.ResourceMapping>
+</schedule:SfSchedule>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+/// <summary>
+/// Represents custom data properties.
+/// </summary>
+public class Event
+{
+	public string EventName { get; set; }
+	public DateTime From { get; set; }
+	public DateTime To { get; set; }
+	public Color Color { get; set; }
+	public ObservableCollection<object> Resources { get; set; }
+}
+
+//Creating an instance for a custom appointment class.
+Meeting meeting = new Meeting();
+meeting.From = new DateTime(2017, 06, 11, 10, 0, 0);
+meeting.To = meeting.From.AddHours(2);
+meeting.EventName = "Client Meeting";
+meeting.Color = Color.Green;
+
+//Setting resources for an event.
+meeting.Resources = new ObservableCollection<object> () {5601, 5604};
+
+/// <summary>   
+/// Represents custom data properties.   
+/// </summary> 
+public class Employee
+{
+     public string Name { get; set; }
+     public object Id { get; set; }
+     public Color Color { get; set; }
+     public string DisplayPicture { get; set; }
+}
+
+//Creating an instance for the resource mapping.
+ResourceMapping resourceMapping = new ResourceMapping();
+
+//Mapping the custom data fields.  
+resourceMapping.Name = "Name";
+resourceMapping.Id = "Id";
+resourceMapping.Color = "Color";
+resourceMapping.Image = "DisplayPicture";
+schedule.ResourceMapping = resourceMapping;
+
+public ObservableCollection<object> Employees { get; set; }
+
+//Creating an instance for the collection of custom resources.
+Employees = new ObservableCollection<object>();
+
+//Creating an instance for a custom appointment class.
+Employee employee = new Employee();
+
+employee.Name = "Kinsley Elena";
+employee.Id = 5601;
+employee.Color = Color.FromHex("#FFE671B8");
+employee.DisplayPicture = "KinsleyElena.png";
+
+//Adding a custom resource in the custom resource collection.
+Employees.Add(employee);
+
+//Adding a custom resource collection to the schedule resources.
+schedule.ScheduleResources = Employees;
+{% endhighlight %}
+
+{% endtabs %}
+</td>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+<schedule:SfScheduler x:Name="Scheduler"  View="TimelineWeek"
+                            AppointmentsSource="{Binding Events}"
+                            AllowedViews="TimelineDay,TimelineMonth,TimelineWeek,TimelineWorkWeek" >
+<schedule:SfScheduler.ResourceView>
+ <schedule:SchedulerResourceView Resources="{Binding Resources}">
+    <schedule:SchedulerResourceView.Mapping>
+      <schedule:SchedulerResourceMapping Name="Name"
+                                    Id="Id"
+                                    Background="Background"
+                                    Foreground="Foreground"/>
+    </schedule:SchedulerResourceView.Mapping>
+  </schedule:SchedulerResourceView>
+</schedule:SfScheduler.ResourceView>    
+</schedule:SfScheduler>
+{% endhighlight %}
+
+{% highlight C# %}
+
+/// <summary>
+/// Represents custom data properties.
+/// </summary>
+public class Event
+{
+	public string EventName { get; set; }
+	public DateTime From { get; set; }
+	public DateTime To { get; set; }
+	public Color Color { get; set; }
+	public ObservableCollection<object> Resources { get; set; }
+}
+
+Meeting meeting = new Meeting();
+meeting.From = new DateTime(2020, 07, 01, 10, 0, 0);
+meeting.To = meeting.From.AddHours(1);
+meeting.EventName = "Meeting";
+meeting.Resources = new ObservableCollection<object> { "1000" };
+var Meetings = new ObservableCollection<Meeting>();
+Meetings.Add(meeting);
+this.Scheduler.AppointmentsSource = Meetings;
+
+/// <summary>   
+/// Represents custom data properties.   
+/// </summary> 
+public class Employee
+{
+     public string Name { get; set; }
+     public object Id { get; set; }
+     public Brush Background { get; set; }
+     public Brush Foreground { get; set; }
+}
+SchedulerResourceMapping resourceMapping = new SchedulerResourceMapping();
+resourceMapping.Name = "Name";
+resourceMapping.Id = "Id";
+resourceMapping.Background = "BackgroundColor";
+resourceMapping.Foreground = "ForegroundColor";
+this.Scheduler.ResourceView.Mapping = resourceMapping;
+
+var resources = new ObservableCollection<Employee>()
+{
+   new Employee () {Name = "Sophia", Background=Colors.Blue, Id = "1000", Foreground = Colors.Green},
+};
+
+//Adding the scheduler resource collection to the schedule resources of the SfSchedule.
+this.Scheduler.ResourceView.Resources = resources;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td></tr>
+</table>
+
 ### SchedulerAppointment
 
-The following code example explains how to create the scheduler appointments in Xamarin SfSchedule and .NET MAUI SfScheduler.
+The following code example explains how to create the scheduler appointments in the Xamarin SfSchedule and .NET MAUI SfScheduler.
 
 <table>
 <tr>
@@ -669,6 +944,11 @@ this.Content = scheduler;
 <td>{{'[ExceptionOccurrenceActualDate](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ScheduleAppointment.html#Syncfusion_SfSchedule_XForms_ScheduleAppointment_ExceptionOccurrenceActualDate)'| markdownify }}</td>
 <td>{{'[RecurrenceId](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_RecurrenceId)'| markdownify }}</td>
 <td>Gets or sets the Id which is used to maintain the pattern recurrence Id that added in AppointmentsSource for creating the exception recurrence appointment.</td></tr>
+
+<tr>
+<td>{{'[ResourceIds](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ScheduleAppointment.html#Syncfusion_SfSchedule_XForms_ScheduleAppointment_ResourceIds)'| markdownify }}</td>
+<td>{{'[ResourceIds]()'| markdownify }}</td>
+<td>Gets or sets the resource ids property for the schedule appointment to allocate the corresponding resource to the appointment.</td></tr>
 
 </table> 
 
@@ -879,6 +1159,11 @@ this.Content = scheduler;
 <td>{{'[ExceptionOccurrenceActualDateMapping](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ScheduleAppointmentMapping.html#Syncfusion_SfSchedule_XForms_ScheduleAppointmentMapping_ExceptionOccurrenceActualDateMapping)'| markdownify }}</td>
 <td>{{'[RecurrenceId](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentMapping_RecurrenceId)'| markdownify }}</td>
 <td>Gets or sets the Recurrence ID mapping to map the custom appointment property with scheduler appointments Recurrence ID property.</td></tr>
+
+<tr>
+<td>{{'[ResourceIdsMapping](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.ScheduleAppointmentMapping.html#Syncfusion_SfSchedule_XForms_ScheduleAppointmentMapping_ResourceIdsMapping)'| markdownify }}</td>
+<td>{{'[ResourceIdsMapping]()'| markdownify }} (From DaysView, TimelineView)</td>
+<td>Gets or sets the resource ids mapping to map the custom appointment property with the schedule appointments resource ids property.</td></tr>
 
  </table> 
 
@@ -1484,6 +1769,12 @@ this.Content = scheduler;
 <td>{{'[CanEdit](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.TimeRegionSettings.html#Syncfusion_SfSchedule_XForms_TimeRegionSettings_CanEdit)'| markdownify }}</td>
 <td>{{'[EnablePointerInteraction](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeRegion.html#Syncfusion_Maui_Scheduler_SchedulerTimeRegion_EnablePointerInteraction)'| markdownify }} </td>
 <td>Gets or sets a value indicating whether this SchedulerTimeRegion is enable pointer interaction..</td></tr>
+
+<tr>
+<td>{{''| markdownify }}</td>
+<td>{{'[ResourceIds]()'| markdownify }} </td>
+<td>Gets or sets the resource id for an appointment or the scheduler time region in the SfScheduler.</td></tr>
+
 
 </table> 
 
@@ -2301,10 +2592,7 @@ this.Content = scheduler;
 
 ## Upcoming Features
 
-* Resource view support.
-* Days count support in timeslot views.
-* Month view navigation direction support.
-* Command support for Tapped, DoubleTapped, LongPressed and ViewChanged events.
+* Command support for Tapped, DoubleTapped, LongPressed, and ViewChanged events.
 * Support to change text color for each scheduler appointment.
 * Suspend and resume for appointment update.
 * Appointment Drag and Drop.

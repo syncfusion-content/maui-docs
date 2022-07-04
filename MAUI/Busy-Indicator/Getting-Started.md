@@ -21,14 +21,13 @@ Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org
 
  In the MauiProgram.cs file, register the handler for Syncfusion core.
 
-{% highlight C# %}
-   
+{% highlight c# hl_lines="6 17" %}
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
 using Microsoft.Maui.Controls.Compatibility;
 using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Controls.Xaml;
-`using Syncfusion.Maui.Core.Hosting`;
+using Syncfusion.Maui.Core.Hosting;
 
 namespace BusyIndicatorSample
 {
@@ -39,7 +38,7 @@ namespace BusyIndicatorSample
         var builder = MauiApp.CreateBuilder();
         builder
         .UseMauiApp<App>()
-        .`ConfigureSyncfusionCore()` 
+        .ConfigureSyncfusionCore() 
         .ConfigureFonts(fonts =>
         {
             fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -120,8 +119,8 @@ The following example depicts the CircularMaterial type animation for SfBusyIndi
 
     <ContentPage.Content>
         <core:SfBusyIndicator x:Name="busyIndicator"
-                            IsRunning="True"
-                            AnimationType="CircularMaterial" />
+                              IsRunning="True"
+                              AnimationType="CircularMaterial" />
     </ContentPage.Content>
 </ContentPage>
 

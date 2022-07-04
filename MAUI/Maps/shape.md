@@ -1,33 +1,32 @@
 ---
 layout: post
-title: Shape in MAUI Maps control | Syncfusion
-description: Learn here all about different shape appearance customization options of the Syncfusion MAUI Maps (SfMaps) control.
+title: Shape in .NET MAUI Maps control | Syncfusion
+description: Learn all about different shape appearance customization options of the Syncfusion .NET MAUI Maps (SfMaps) control.
 platform: MAUI
 control: SfMaps
 documentation: ug
 ---
 
-# Shapes in MAUI Maps (SfMaps)
+# Shapes in .NET MAUI Maps (SfMaps)
 
-This section explains about shapes and how to apply colors to the shapes based on specific values in the MAUI maps.
+This section explains about shapes and how to apply colors to them based on specific values in the .NET MAUI maps.
 
 ## Shape color
 
-You can apply color, stroke color and stroke thickness to the shapes using the `ShapeFill`, `ShapeStroke` and `ShapeStrokeThickness` properties respectively.
+You can apply color, stroke color and thickness to the shapes using the [`ShapeFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeFill), [`ShapeStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeStroke) and [`ShapeStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeStrokeThickness) properties respectively.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-     <map:SfMaps>
-        <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world-map.json}"
-							   ShapeStroke="Green"
-							   ShapeFill="LightGreen"  
-							   ShapeStrokeThickness="2">
-            </map:MapShapeLayer>
-        </maps:SfMaps.Layer>
-    </maps:SfMaps>
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer ShapeStroke="#1585ed"
+                           ShapeFill="#b5dcff"  
+                           ShapeStrokeThickness="2">
+        </map:MapShapeLayer>
+    </maps:SfMaps.Layer>
+</maps:SfMaps>
 
 {% endhighlight %}
 
@@ -39,8 +38,8 @@ You can apply color, stroke color and stroke thickness to the shapes using the `
 		
         MapShapeLayer layer = new MapShapeLayer();
         layer.ShapesSource = MapSource.FromResource("MyProject.world-map.json");
-        layer.ShapeFill = Brush.LightGreen;
-        layer.ShapeStroke = Brush.Green;
+        layer.ShapeFill = Color.FromRgb(181, 220, 255);
+        layer.ShapeStroke = Color.FromRgb(21, 133, 237);
         layer.ShapeStrokeThickness = 2;
 		
         SfMaps maps = new SfMaps();
@@ -57,21 +56,20 @@ You can apply color, stroke color and stroke thickness to the shapes using the `
 
 ## Hover color
 
-You can apply hover color, hover stoke color and hover stroke thickness to the shapes using the `ShapeHoverFill`, `ShapeHoverStroke` and `ShapeHoverStrokeThickness` properties respectively.
+You can apply hover color, hover stoke color and hover stroke thickness to the shapes using the [`ShapeHoverFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeHoverFill), [`ShapeHoverStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeHoverStroke) and [`ShapeHoverStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeHoverStrokeThickness) properties respectively.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-     <map:SfMaps>
-        <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world-map.json}"
-							   ShapeHoverStroke="Blue"
-							   ShapeHoverFill="LightBlue"  
-							   ShapeHoverStrokeThickness="2">
-            </map:MapShapeLayer>
-        </map:SfMaps.Layer>
-    </map:SfMaps>
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer ShapeHoverStroke="Blue"
+                           ShapeHoverFill="LightBlue"  
+                           ShapeHoverStrokeThickness="2">
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
 
 {% endhighlight %}
 
@@ -99,24 +97,24 @@ You can apply hover color, hover stoke color and hover stroke thickness to the s
 
 ## Applying colors based on the data
 
-The `ShapeColorValuePath` is provides a color directly, then the color will be applied to the respective shape straightaway. Otherwise, you have to provide `ColorMapping`.
+The [`ShapeColorValuePath`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeColorValuePath) provides a color directly. The color will then be applied to the respective shape. Otherwise, you must provide [`ColorMapping`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ColorMappings).
 
-N> You can show legend using the `Legend` property.The icons color of the legend is applied based on the colors from `ShapeColorValuePath` property and have to provide text for the legend from `ColorMapping.Text` property. 
+N> You can show legend using the [`Legend`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_Legend) property.The icon's color of the legend is applied based on the colors from [`ShapeColorValuePath`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeColorValuePath) property and has to provide text for the legend from the [`ColorMapping.Text`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.ColorMapping.html#Syncfusion_Maui_Maps_ColorMapping_Text) property. 
 
 {% tabs %}
 
 {% highlight xaml %}
 
-     <map:SfMaps>
-        <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world-map.json}"
-							   DataSource="{Binding Data}"       
-							   PrimaryValuePath="State" 
-							   ShapeDataField="STATE_NAME" 
-							   ShapeColorValuePath="Color">
-            </map:MapShapeLayer>
-        </map:SfMaps.Layer>
-    </map:SfMaps>
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer DataSource="{Binding Data}"       
+                           PrimaryValuePath="State" 
+                           ShapeDataField="STATE_NAME"
+                           ShapeStrokeThickness="0" 
+                           ShapeColorValuePath="Color">
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
 
 {% endhighlight %}
 
@@ -135,6 +133,7 @@ public MainPage()
     layer.PrimaryValuePath = "State";
     layer.ShapeDataField = "STATE_NAME";
     layer.ShapeColorValuePath = "Color";
+    layer.ShapeStrokeThickness = 0;
 
     SfMaps maps = new SfMaps();
     maps.Layer = layer;
@@ -148,14 +147,13 @@ public class ViewModel
     public ViewModel()
     {
         Data = new ObservableCollection<Model>();
-        ObservableCollection<Model> Data = new ObservableCollection<Model>();
-        Data.Add(new Model("New South Wales", Colors.Green));
-        Data.Add(new Model("Northern Territory", Colors.Blue));
-        Data.Add(new Model("Victoria", Colors.LightGreen));
-        Data.Add(new Model("Tasmania", Colors.Orange));
-        Data.Add(new Model("Queensland", Colors.Red));
-        Data.Add(new Model("Western Australia", Colors.Yellow));
-        Data.Add(new Model("South Australia", Colors.Violet));
+        Data.Add(new Model("New South Wales", Color.FromRgb(208,183,0)));
+        Data.Add(new Model("Northern Territory",  Color.FromRgb(255,78,66)));
+        Data.Add(new Model("Victoria",  Color.FromRgb(207,78,238)));
+        Data.Add(new Model("Tasmania", Color.FromRgb(79,147,216)));
+        Data.Add(new Model("Queensland",  Color.FromRgb(0,213,207)));
+        Data.Add(new Model("Western Australia", Color.FromRgb(139,106,223)));
+        Data.Add(new Model("South Australia", Color.FromRgb(123,255,103)));
     }
 }
 
@@ -179,28 +177,27 @@ public class Model
 
 ## Equal color mapping
 
-You can apply color to the shape by comparing a value from the `ColorMappings` with the `EqualColorMapping.Value`. For the matched values, the `EqualColorMapping.color` will be applied to the respective shapes.
+You can apply color to the shape by comparing a value from the [`ColorMappings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ColorMappings) with the [`EqualColorMapping.Value`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapBubbleSettings.html#Syncfusion_Maui_Maps_MapBubbleSettings_ColorValuePath). For the matched values, the [`EqualColorMapping.color`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.ColorMapping.html#Syncfusion_Maui_Maps_ColorMapping_Color) will be applied to the respective shapes.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-     <map:SfMaps>
-        <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world-map.json}"
-							   DataSource="{Binding Data}" 
-							   PrimaryValuePath="Country" 
-							   ShapeDataField="name" 
-							   ShapeColorValuePath="Count">
-            
-                <map:MapShapeLayer.ColorMappings>
-                    <map:EqualColorMapping Color="Red" Value="Low" />
-                     <map:EqualColorMapping Color="Green" Value="High" />
-                </map:MapShapeLayer.ColorMappings>
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer DataSource="{Binding Data}" 
+                           PrimaryValuePath="Country" 
+                           ShapeDataField="name" 
+                           ShapeColorValuePath="Count">
+        
+            <map:MapShapeLayer.ColorMappings>
+                <map:EqualColorMapping Color="Red" Value="Low" />
+                    <map:EqualColorMapping Color="Green" Value="High" />
+            </map:MapShapeLayer.ColorMappings>
 
-            </map:MapShapeLayer>
-        </map:SfMaps.Layer>
-    </map:SfMaps>
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
 
 {% endhighlight %}
 
@@ -270,28 +267,27 @@ public class Model
 
 ## Range color mapping
 
-You can apply color to the shape based on whether the value from `ColorMappings` falls within the `RangeColorMapping.From` and `RangeColorMapping.To`. Then, the `RangeColorMapping.Color` will be applied to the respective shapes.
+You can apply color to the shapes based on whether the value from [`ColorMappings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ColorMappings) falls within the [`RangeColorMapping.From`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.RangeColorMapping.html#Syncfusion_Maui_Maps_RangeColorMapping_From) and [`RangeColorMapping.To`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.RangeColorMapping.html#Syncfusion_Maui_Maps_RangeColorMapping_To). Then, the [`RangeColorMapping.Color`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.ColorMapping.html#Syncfusion_Maui_Maps_ColorMapping_Color) will be applied to the respective shapes.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-     <map:SfMaps>
-        <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world-map.json}"
-							   DataSource="{Binding Data}" 
-							   PrimaryValuePath="Country" 
-							   ShapeDataField="name" 
-							   ShapeColorValuePath="Count">
-            
-                <map:MapShapeLayer.ColorMappings>
-                    <map:RangeColorMapping Color="Green" From="0" To="90" />
-                    <map:RangeColorMapping Color="Red" From="100" To="150" />
-                </map:MapShapeLayer.ColorMappings>
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer DataSource="{Binding Data}" 
+                           PrimaryValuePath="Country" 
+                           ShapeDataField="name" 
+                           ShapeColorValuePath="Count">
+        
+            <map:MapShapeLayer.ColorMappings>
+                <map:RangeColorMapping Color="Green" From="0" To="90" />
+                <map:RangeColorMapping Color="Red" From="100" To="150" />
+            </map:MapShapeLayer.ColorMappings>
 
-            </map:MapShapeLayer>
-        </map:SfMaps.Layer>
-    </map:SfMaps>
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
 
 {% endhighlight %}
 
@@ -362,4 +358,4 @@ public class Model
 ![Range color mapping](images/shape/range_color_mapping.png)
 
 N>
-* Refer the `BubbleSettings`, for setting the bubble colors based on the specific value. You can refer to our `MAUI Maps` feature tour page for its groundbreaking feature representations. You can also explore our `MAUI Maps Shapes example` that shows how to configure a Maps in MAUI.
+* Refer to the [`BubbleSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_BubbleSettings), for setting the bubble colors based on the specific value. You can also refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Maps Shapes example](https://github.com/syncfusion/maui-demos/) that shows how to configure a Maps in .NET MAUI.

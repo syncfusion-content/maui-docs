@@ -7,7 +7,7 @@ control: SfDataGrid
 documentation: ug
 ---
 
-# Getting Started with .NET Maui DataGrid (SfDataGrid)
+# Getting Started with .NET MAUI DataGrid (SfDataGrid)
 
 This section provides a quick overview for working with the SfDataGrid for .NET MAUI. Walk through the entire process of creating a real world of this control.
 
@@ -90,46 +90,51 @@ The SfDataGrid is a data-bound control. Hence, a data model should be created to
 Create a simple data source as shown in the following code example in a new class file, and save it as OrderInfo.cs file:
 
 {% highlight c# %}
-public class OrderInfo
+public class OrderInfo
 {
-    private string orderID;
-    private string customerID;
-    private string customer;
-    private string shipCity;
-    private string shipCountry;
+    private string orderID;
+    private string customerID;
+    private string customer;
+    private string shipCity;
+    private string shipCountry;
 
-    public string OrderID {
-        get { return orderID; }
-        set { this.orderID = value; }
-    }
-
-    public string CustomerID {
-        get { return customerID; }
-        set { this.customerID = value; }
-    }
-
-    public string ShipCountry {
-        get { return shipCountry; }
-        set { this.shipCountry = value; }
-    }
-
-    public string Customer {
-        get { return this.customer; }
-        set { this.customer = value; }
-    }
-
-    public string ShipCity {
-        get { return shipCity; }
-        set { this.shipCity = value; }
-    }
-
-    public OrderInfo (string orderId, string customerId, string country, string customer, string shipCity)
+    public string OrderID
     {
-        this.OrderID = orderId;
-        this.CustomerID = customerId;
-        this.Customer = customer;
-        this.ShipCountry = country;
-        this.ShipCity = shipCity;
+        get { return orderID; }
+        set { this.orderID = value; }
+    }
+
+    public string CustomerID
+    {
+        get { return customerID; }
+        set { this.customerID = value; }
+    }
+
+    public string ShipCountry
+    {
+        get { return shipCountry; }
+        set { this.shipCountry = value; }
+    }
+
+    public string Customer
+    {
+        get { return this.customer; }
+        set { this.customer = value; }
+    }
+
+    public string ShipCity
+    {
+        get { return shipCity; }
+        set { this.shipCity = value; }
+    }
+
+    public OrderInfo(string orderId, string customerId, string country, string customer, string shipCity)
+    {
+        this.OrderID = orderId;
+        this.CustomerID = customerId;
+        this.Customer = customer;
+        this.ShipCountry = country;
+        this.ShipCity = shipCity;
     }
 } 
 {% endhighlight %}
@@ -139,37 +144,37 @@ N> If you want your data model to respond to property changes, implement the `IN
 Create a model repository class with OrderInfo collection property initialized with the required number of data objects in a new class file as shown in the following code example and save it as OrderInfoRepository.cs file:
 
 {% highlight c# %}
-public class OrderInfoRepository
+public class OrderInfoRepository
 {
-    private ObservableCollection<OrderInfo> orderInfo;
-    public ObservableCollection<OrderInfo>
+    private ObservableCollection<OrderInfo> orderInfo;
+    public ObservableCollection<OrderInfo> OrderInfoCollection
     {
-        get { return orderInfo; }
-        set { this.orderInfo = value; }
+        get { return orderInfo; }
+        set { this.orderInfo = value; }
     }
 
-    public OrderInfoRepository ()
+    public OrderInfoRepository()
     {
-        orderInfo = new ObservableCollection<OrderInfo> ();
-        this.GenerateOrders ();
+        orderInfo = new ObservableCollection<OrderInfo>();
+        this.GenerateOrders();
     }
 
-    private void GenerateOrders ()
+    public void GenerateOrders()
     {
-        orderInfo.Add (new OrderInfo ("1001", "Maria Anders", "Germany", "ALFKI", "Berlin"));
-        orderInfo.Add (new OrderInfo ("1002", "Ana Trujillo", "Mexico", "ANATR", "Mexico D.F."));
-        orderInfo.Add (new OrderInfo ("1003", "Ant Fuller", "Mexico", "ANTON", "Mexico D.F."));
-        orderInfo.Add (new OrderInfo ("1004", "Thomas Hardy", "UK", "AROUT", "London"));
-        orderInfo.Add (new OrderInfo ("1005", "Tim Adams", "Sweden", "BERGS", "London"));
-        orderInfo.Add (new OrderInfo ("1006", "Hanna Moos", "Germany", "BLAUS", "Mannheim"));
-        orderInfo.Add (new OrderInfo ("1007", "Andrew Fuller", "France", "BLONP", "Strasbourg"));
-        orderInfo.Add (new OrderInfo ("1008", "Martin King", "Spain", "BOLID", "Madrid"));
-        orderInfo.Add (new OrderInfo ("1009", "Lenny Lin", "France", "BONAP", "Marsiella"));
-        orderInfo.Add (new OrderInfo ("1010", "John Carter", "Canada", "BOTTM", "Lenny Lin"));
-        orderInfo.Add (new OrderInfo ("1011", "Laura King", "UK", "AROUT", "London"));
-        orderInfo.Add (new OrderInfo ("1012", "Anne Wilson", "Germany", "BLAUS", "Mannheim"));
-        orderInfo.Add (new OrderInfo ("1013", "Martin King", "France", "BLONP", "Strasbourg"));
-        orderInfo.Add (new OrderInfo ("1014", "Gina Irene", "UK", "AROUT", "London"));
+        orderInfo.Add(new OrderInfo("1001", "Maria Anders", "Germany", "ALFKI", "Berlin"));
+        orderInfo.Add(new OrderInfo("1002", "Ana Trujillo", "Mexico", "ANATR", "Mexico D.F."));
+        orderInfo.Add(new OrderInfo("1003", "Ant Fuller", "Mexico", "ANTON", "Mexico D.F."));
+        orderInfo.Add(new OrderInfo("1004", "Thomas Hardy", "UK", "AROUT", "London"));
+        orderInfo.Add(new OrderInfo("1005", "Tim Adams", "Sweden", "BERGS", "London"));
+        orderInfo.Add(new OrderInfo("1006", "Hanna Moos", "Germany", "BLAUS", "Mannheim"));
+        orderInfo.Add(new OrderInfo("1007", "Andrew Fuller", "France", "BLONP", "Strasbourg"));
+        orderInfo.Add(new OrderInfo("1008", "Martin King", "Spain", "BOLID", "Madrid"));
+        orderInfo.Add(new OrderInfo("1009", "Lenny Lin", "France", "BONAP", "Marsiella"));
+        orderInfo.Add(new OrderInfo("1010", "John Carter", "Canada", "BOTTM", "Lenny Lin"));
+        orderInfo.Add(new OrderInfo("1011", "Laura King", "UK", "AROUT", "London"));
+        orderInfo.Add(new OrderInfo("1012", "Anne Wilson", "Germany", "BLAUS", "Mannheim"));
+        orderInfo.Add(new OrderInfo("1013", "Martin King", "France", "BLONP", "Strasbourg"));
+        orderInfo.Add(new OrderInfo("1014", "Gina Irene", "UK", "AROUT", "London"));
     }
 }
 {% endhighlight %}
@@ -182,22 +187,23 @@ The following code example binds the collection created in the previous step to 
 
 {% tabs %}
 {% highlight xaml %}
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:GettingStarted;assembly=GettingStarted"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid">     
+              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
+              xmlns:local="clr-namespace:MauiApp1"
+             x:Class="MauiApp1.MainPage">
 
     <ContentPage.BindingContext>
-        <local:OrderInfoRepository x:Name="viewModel" />
+        <local:OrderInfoRepository x:Name="viewModel" />
     </ContentPage.BindingContext>
 
     <ContentPage.Content>
-        <syncfusion:SfDataGrid x:Name="dataGrid"
-                               ItemsSource="{Binding OrderInfoCollection}">
+        <syncfusion:SfDataGrid x:Name="dataGrid"
+                               ItemsSource="{Binding OrderInfoCollection}">
         </syncfusion:SfDataGrid>
     </ContentPage.Content>
-</ContentPage> 
+</ContentPage>
 {% endhighlight %}
 {% highlight c# %}
 OrderInfoRepository viewModel = new OrderInfoRepository ();
@@ -206,8 +212,8 @@ dataGrid.ItemsSource = viewModel.OrderInfoCollection;
 {% endtabs %}
 
 Run the application to render the following output:
+![Getting started with .NET MAUI DataGrid](Images\getting-started\maui-datagrid-getting-started.png)
 
-![.Net MAUI DataGrid](Images\getting-started\basic.png)
 
 ## Defining columns
 
@@ -270,7 +276,7 @@ dataGrid.SortingMode=DataGridSortingMode.Single;
 
 Run the application and touch the header cell to sort the data and the following output will be displayed:
  
-![.Net MAUI DataGrid](Images\getting-started\sorting.png)
+![Sorting in .NET MAUI DataGrid](Images\getting-started\maui-datagrid-basic-sorting.png)
 
 Sorting can also be configured by adding the column to the `SfDataGrid.SortColumnDescription` collection as follows:
 

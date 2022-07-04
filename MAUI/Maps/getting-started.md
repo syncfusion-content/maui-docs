@@ -9,13 +9,13 @@ documentation: ug
 
 # Getting started with MAUI Maps (SfMaps)
 
-This section explains the steps required to add the maps control with shape layer and its elements such as data labels, tooltip, markers, and legends. This section covers only basic features needed to know to get started with Syncfusion maps.
+This section explains the steps required to add the maps control with the shape layer and its elements such as data labels, tooltip, markers, and legends. This section covers only basic features needed to know to get started with Syncfusion maps.
 
 ## Creating an application using the .NET MAUI Maps
 
 * Create a new .NET MAUI application in the Visual Studio.
 
-* Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfMaps to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Maps], and [Syncfusion.Maui.Core] then install that.
+* Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfMaps to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Maps] then install that.
 
 ### Register the handler
 
@@ -96,24 +96,22 @@ this.Content = map;
 
 {% endtabs %}
 
-## Set GeoJSON data or shape files for shape layer from various source
+## Set GeoJSON data or shapefile for shape layer from various source
 
-The `Layer` in `SfMaps` holds `MapShapeLayer`. The actual geographical rendering is done in the each `MapShapeLayer`. The `ShapesSource` property of the `MapShapeLayer` is of type `MapShapeSource`. The `ShapesSource` can be set as the .json source from file, from network and from stream as bytes. Use the respective constructor depends on the type of the source.
-
-The `ShapeDataField` property of the `MapShapeLayer` is used to refer the unique field name in the .json source to identify each shapes. In `Mapping the data source` section of this document, this `ShapeDataField` will be used to map with respective value  in `PrimaryValuePath` from the data source.
+The [`Layer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.SfMaps.html#Syncfusion_Maui_Maps_SfMaps_Layer) in [`SfMaps`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.SfMaps.html) holds [`MapShapeLayer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html). The actual geographical rendering is done in the each [`MapShapeLayer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html). The [`ShapesSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapesSource) property of the [`MapShapeLayer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html) is of type [`MapSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapSource.html). The [`ShapesSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapesSource) can be set as the .json source or shapefile.
 
 I> The Mercator projection is the default projection in the maps.
 
-The `ShapesSource` property is used to load an shapes from different sources:
+The [`ShapesSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapesSource) property is used to load shapes from different sources:
 
-`FromFile` returns a MapSource that reads an shape source from a local file.
-`FromUri` returns an MapSource that downloads and reads an Geo json data from a specified URI.
-`FromResource` returns a MapSource that reads an shape file or json file embedded in an assembly.
-`FromStream` returns a MapSource that reads an shape source from a stream that supplies source data.
+* [`FromFile`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapSource.html#Syncfusion_Maui_Maps_MapSource_FromFile_System_String_) returns a MapSource that reads a shape source from a local file.
+* [`FromUri`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapSource.html#Syncfusion_Maui_Maps_MapSource_FromUri_System_Uri_) returns an MapSource that downloads and reads a shape source from a specified URI.
+* `FromResource` returns a MapSource that reads a shape source file embedded in an assembly.
+* [`FromStream`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapSource.html#Syncfusion_Maui_Maps_MapSource_FromStream_System_IO_Stream_) returns a MapSource that reads a shape source from a stream that supplies source data.
 
-### Loading from file
+### Loading a local file
 
-SfMaps provides support to load the json data or shape file from local path. 
+SfMaps provides support to load the json data or shapefile from local path. 
 
 {% tabs %}
 
@@ -133,9 +131,39 @@ public MainPage()
 
 {% endtabs %}
 
-### Loading from URI
+The [`MapSource.FromFile`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapSource.html#Syncfusion_Maui_Maps_MapSource_FromFile_System_String_) method requires a string argument, and returns a new [`MapSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapSource.html) object that reads the data from the shape source file. There's also an implicit conversion operator that enables the filename to be specified as a string argument to the [`ShapesSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapesSource) property
 
-SfMaps provides support to load the json data or shape file from the uri.
+{% tabs %}
+
+{% highlight XAML %}
+
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer ShapesSource="D:\MyProject\usa_state.shp" />
+    </map:SfMaps.Layer>
+</map:SfMaps>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+public MainPage()
+{
+    InitializeComponent();
+    SfMaps map = new SfMaps();
+    MapShapeLayer layer = new MapShapeLayer();
+    layer.ShapesSource = MapSource.FromFile(@"D:\MyProject\usa_state.shp");
+    map.Layer = layer;
+    this.Content = map;
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Load a remote file
+
+SfMaps provides support to load the json data or shapefile from the uri.
 
 {% tabs %}
 
@@ -155,13 +183,43 @@ public MainPage()
 
 {% endtabs %}
 
-### Loading from embedded resource
+The [`MapSource.FromUri`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapSource.html#Syncfusion_Maui_Maps_MapSource_FromFile_System_String_) method requires a Uri argument, and returns a new [`MapSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapSource.html) object that reads the shape source from the Uri. There's also an implicit conversion for string-based URIs.
+
+{% tabs %}
+
+{% highlight XAML %}
+
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json" />
+    </map:SfMaps.Layer>
+</map:SfMaps>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+public MainPage()
+{
+    InitializeComponent();
+    SfMaps map = new SfMaps();
+    MapShapeLayer layer = new MapShapeLayer();
+    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
+    map.Layer = layer;
+    this.Content = map;
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Load an embedded file
 
 * Embedded sources are loaded based on their resource ID, which is compromised of the name of the project and its location in the project. 
-* You can load both json and shape file.
+* You can load both json data and shapefile.
 * For example, placing `australia.json` in the root folder of a project named `MyProject` will result in a resource ID of `MyProject.australia.json.` Similarly, placing `world1.shp` in the Assets folder of a project named MyProject will result in a resource ID of `MyProject.Assets.world1.shp`
-* Right-click the added shape file, and navigate to properties.
-* Choose the `EmbeddedResource` option under BuildAction of respective shape file.
+* Right-click the added shapefile, and navigate to properties.
+* Choose the `EmbeddedResource` option under BuildAction of respective shapefile.
 
 N> You can get the [`australia.json`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/australia-json-910278184.zip) file here.
 
@@ -183,54 +241,9 @@ public MainPage()
 
 {% endtabs %}
 
-### Load an embedded file in XAML
-
-The Embedded json or shape file can be loaded in XAML using a custom XAML markup extentions.
-
-{% tabs %}
-
-{% highlight XAML %}
-
-<map:SfMaps>
-    <map:SfMaps.Layer>
-        <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world1.shp}" />
-    </map:SfMaps.Layer>
-</map:SfMaps>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-[ContentProperty("ResourcePath")]
-public class MapSourceResourceExtension : IMarkupExtension<MapSource>
-{
-    public string ResourcePath { set; get; }
-
-    public MapSource ProvideValue(IServiceProvider serviceProvider)
-    {
-        if (string.IsNullOrEmpty(ResourcePath))
-        {
-            IXmlLineInfoProvider lineInfoProvider = serviceProvider.GetService(typeof(IXmlLineInfoProvider)) as IXmlLineInfoProvider;
-            IXmlLineInfo lineInfo = (lineInfoProvider != null) ? lineInfoProvider.XmlLineInfo : new XmlLineInfo();
-            throw new XamlParseException("MapSourceResourceExtension needs ResourcePath value", lineInfo);
-        }
-
-        return MapSource.FromResource(ResourcePath);
-    }
-
-    object IMarkupExtension.ProvideValue(IServiceProvider serviceProvider)
-    {
-        return (this as IMarkupExtension<MapSource>).ProvideValue(serviceProvider);
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
 ### Loading from stream
 
-SfMaps provides support to load the json data or shape file as bytes from stream.
+SfMaps provides support to load the json data or shapefile as bytes from stream.
 
 {% tabs %}
 
@@ -256,43 +269,59 @@ public MainPage()
 
 ## Mapping the data source for shape layer
 
-The `DataSource` property accepts the collection values as input. The `PrimaryValuePath` property refers the data ID in `DataSource`.
+The [`DataSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_DataSource) property accepts the collection values as input. The [`PrimaryValuePath`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_PrimaryValuePath) property refers to the data ID in [`DataSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_DataSource).
 
-The `ShapeDataField` property is similar to the `PrimaryValuePath` property. It refers to the column name in the data property of shape layers to identify the shape. When the values of the `PrimaryValuePath` property in the `DataSource` property and the values of `ShapeDataField` in the data property match, the associated object from the dataSource will be bound to the corresponding shape.
+The [`ShapeDataField`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeDataField) property is similar to the [`PrimaryValuePath`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_PrimaryValuePath) property. It refers to the column name in the data property of shape layers to identify the shape. When the values of the [`PrimaryValuePath`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_PrimaryValuePath) property in the [`DataSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_DataSource) property and the values of [`ShapeDataField`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeDataField) in the data property match, the associated object from the dataSource will be bound to the corresponding shape.
 
 {% tabs %}
+
+{% highlight XAML %}
+
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer x:Name="layer"
+                           ShapeDataField="STATE_NAME"
+                           DataSource="{Binding Data}"        
+                           PrimaryValuePath="State"  />
+    </map:SfMaps.Layer>
+</map:SfMaps>
+
+{% endhighlight %}
 
 {% highlight c# %}
 
 public MainPage()
 {
-    InitializeComponent();
-    ObservableCollection<Model> Data = new ObservableCollection<Model>();
-    Data.Add(new Model("New South Wales", "New\nSouth Wales"));
-    Data.Add(new Model("Queensland", "Queensland"));
-    Data.Add(new Model("Northern Territory", "Northern\nTerritory"));
-    Data.Add(new Model("Victoria", "Victoria"));
-    Data.Add(new Model("Western Australia", "Western Australia"));
-    Data.Add(new Model("Tasmania", "Tasmania"));
-    SfMaps maps = new SfMaps();
-    MapShapeLayer layer = new MapShapeLayer();
-    layer.ShapesSource = MapSource.FromResource("MyProject.australia.json");
-    layer.PrimaryValuePath = "State";
-    layer.DataSource = Data;
-    layer.ShapeDataField = "STATE_NAME";
-    maps.Layer = layer;
-    this.Content = maps;
+	InitializeComponent();
+	this.layer.ShapesSource = MapSource.FromResource("MyProject.australia.json");
 }
 
-public class Model
+public class ViewModel
 {
-    public String State { get; set; }
-    public String StateCode { get; set; }
-
-    public Model(string state, string stateCode)
+    public ObservableCollection<Model> Data { get; set; }
+    public ViewModel()
     {
-        State = state;
-        StateCode = stateCode;
+        Data = new ObservableCollection<Model>();
+        Data.Add(new Model("New South Wales", "New\nSouth Wales", 1));
+        Data.Add(new Model("Queensland", "Queensland",2));
+        Data.Add(new Model("Northern Territory", "Northern\nTerritory",3));
+        Data.Add(new Model("Victoria", "Victoria",4));
+        Data.Add(new Model("Tasmania", "Tasmania",5));
+        Data.Add(new Model("Western Australia", "Western Australia",6));
+        Data.Add(new Model("South Australia", "South Australia",7));
+    }
+
+    public class Model
+    {
+        public string State { get; set; }
+        public string StateCode { get; set; }
+        public int ID { get; set; }
+        public Model(string state, string stateCode, int id)
+        {
+            State = state;
+            StateCode = stateCode;
+            ID = id;
+        }
     }
 }
 
@@ -301,22 +330,92 @@ public class Model
 {% endtabs %}
 
 N>
-* Refer the `PrimaryValuePath`, for mapping the data of the data source collection with the respective `ShapeDataField` in .json source.
-* Refer the `BubbleSettings`, for customizing the bubble.
-* Refer the `DataLabelSettings`, for customizing the data label.
-* Refer the `ColorMappings`, for customizing the shape colors.
+* Refer to the [`PrimaryValuePath`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_PrimaryValuePath), for mapping the data of the data source collection with the respective [`ShapeDataField`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeDataField) in .json source.
+* Refer to the [`BubbleSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_BubbleSettings), for customizing the bubble.
+* Refer to the [`DataLabelSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_DataLabelSettings), for customizing the data label.
+* Refer to the [`ColorMappings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ColorMappings), for customizing the shape colors.
 
 ## Add shape layer maps elements
 
 Add the basic maps elements such as data labels, legend, and tooltip as shown in the below code snippet.
 
-* **Data labels** - You can show data labels using the `ShowDataLabels` property and also, customize it using the `DataLabelSettings` property.
+* **[Data labels](https://help.syncfusion.com/maui/maps/data-labels)** - You can show data labels using the [`ShowDataLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShowDataLabels) property and also, customize it using the [`DataLabelSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_DataLabelSettings) property.
 
-* **Legend** - You can enable legend using the `Legend` property. The text of the legend is displayed based on the `ColorMapping.Text` property. It is possible to customize the legend text using the `TextStyle` property.
+* **[Markers](https://help.syncfusion.com/maui/maps/markers)** - You can show markers at any position on the map by providing latitude and longitude position to the [`MapMarker`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html), which is from the [`Markers`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_Markers) collection.
 
-* **Tooltip** - You can enable tooltip for the shapes using the `ShowShapeTooltip` property. It will be displayed when you interacts with the shapes i.e., while tapping in touch devices and hover in the mouse enabled devices.
+* **[Legend](https://help.syncfusion.com/maui/maps/legend)** - You can enable legend using the [`Legend`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_Legend) property. The legend's text is displayed based on the [`ColorMapping.Text`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.ColorMapping.html#Syncfusion_Maui_Maps_ColorMapping_Text) property. It is possible to customize the legend text using the [`TextStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html#Syncfusion_Maui_Maps_MapLegend_TextStyle) property.
+
+* **[Tooltip](https://help.syncfusion.com/maui/maps/tooltip)** - You can enable tooltip for the shapes using the [`ShowShapeTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShowShapeTooltip) property. It will be displayed when you interacts with the shapes i.e., while tapping in touch devices and hover in the mouse enabled devices.
 
 {% tabs %}
+
+{% highlight xaml %}
+
+<Grid>
+    <Grid.BindingContext>
+        <local:ViewModel />
+    </Grid.BindingContext>
+
+    <map:SfMaps>
+        <map:SfMaps.Layer>
+            <map:MapShapeLayer x:Name="layer"
+                               ShapeDataField="STATE_NAME"
+                               DataSource="{Binding Data}"
+                               PrimaryValuePath="State" 
+                               ShowDataLabels="True"
+                               ShowShapeTooltip="True"
+                               ShapeColorValuePath="ID">
+
+                <!--Set Data Label-->
+                <map:MapShapeLayer.DataLabelSettings>
+                    <map:MapDataLabelSettings DataLabelPath="StateCode" />
+                </map:MapShapeLayer.DataLabelSettings>
+                
+                <!--Set Color mapping-->
+                <map:MapShapeLayer.ColorMappings>
+                    <map:EqualColorMapping Color="#d0b800"
+                                           Value="1"
+                                           Text="NSW" />
+                    <map:EqualColorMapping Color="#00d5cf"
+                                           Value="2"
+                                           Text="Queensland" />
+                    <map:EqualColorMapping Color="#cf4eee"
+                                           Value="3"
+                                           Text="Victoria" />
+                    <map:EqualColorMapping Color="#4f93d8"
+                                           Value="4"
+                                           Text="Tasmania" />
+                    <map:EqualColorMapping Color="#8b6adf"
+                                           Value="5"
+                                           Text="WA" />
+                    <map:EqualColorMapping Color="#7bff67"
+                                           Value="6"
+                                           Text="SA" />
+                    <map:EqualColorMapping Color="#ff4e42"
+                                           Value="7"
+                                           Text="NT" />
+                </map:MapShapeLayer.ColorMappings>
+
+                <!--Set Markers-->
+                <map:MapShapeLayer.Markers>
+                    <map:MapMarkerCollection>
+                        <map:MapMarker x:Name="Adelaide"
+                                       Latitude="-34.928497"
+                                       Longitude="138.600739" />
+                    </map:MapMarkerCollection>
+                </map:MapShapeLayer.Markers>
+                
+                <!--Set Legend-->
+                <map:MapShapeLayer.Legend>
+                    <map:MapLegend SourceType="Shape"
+                                   Placement="Bottom" />
+                </map:MapShapeLayer.Legend>
+            </map:MapShapeLayer>
+        </map:SfMaps.Layer>
+    </map:SfMaps>
+</Grid>
+
+{% endhighlight %}
 
 {% highlight C# %}
 
@@ -324,38 +423,82 @@ public MainPage()
 {
     InitializeComponent();
 	ViewModel viewModel = new ViewModel();
+    this.BindingContext = viewModel;
     SfMaps maps = new SfMaps();
     MapShapeLayer layer = new MapShapeLayer();
     layer.ShapesSource = MapSource.FromResource("MyProject.australia.json");
     layer.DataSource = viewModel.Data;
     layer.PrimaryValuePath = "State";
     layer.ShapeDataField = "STATE_NAME";
-    layer.ShowShapeTooltip = true;
-    layer.ShapeColorValuePath = "Population";
+    layer.ShapeColorValuePath = "ID";
     layer.ShowDataLabels = true;
+    layer.ShowShapeTooltip = true;
 
     layer.DataLabelSettings = new MapDataLabelSettings()
     {
-        DataLabelPath = "StateCode",
-        DataLabelStyle = new MapLabelStyle()
-        {
-            FontSize = 14,
-            FontAttributes = FontAttributes.Bold,
-            TextColor = Colors.Black
-        },
-
-        OverflowMode = MapLabelOverflowMode.None,
+        DataLabelPath = "StateCode"
     };
 
     layer.ColorMappings = new ObservableCollection<ColorMapping>()
     {
-        new EqualColorMapping { Color = Colors.Yellow, Value = "6000" },
-        new EqualColorMapping { Color = Colors.LimeGreen, Value = "8000" },
-        new EqualColorMapping { Color = Colors.Violet, Value = "5000" },
-        new EqualColorMapping { Color = Colors.Blue, Value = "90000" },
-        new EqualColorMapping { Color = Colors.Red, Value = "7000" },
-        new EqualColorMapping { Color = Colors.Orange, Value = "3000" },
+        new EqualColorMapping
+		   {
+		      Color = Color.FromRgb(208,183,0),
+			  Value = "1",
+              Text="NSW"
+		   },
+        new EqualColorMapping
+		   { 
+		      Color = Color.FromRgb(0,213,207),
+		      Value = "2" ,
+			  Text="Queensland"
+		   },
+        new EqualColorMapping
+		   {
+		      Color = Color.FromRgb(207,78,238),
+			  Value = "3",
+              Text="Victoria"
+		   },
+        new EqualColorMapping
+		   {
+		      Color = Color.FromRgb(79,147,216),
+			  Value = "4",
+			  Text="Tasmania"
+		   },
+        new EqualColorMapping
+		   {
+		      Color = Color.FromRgb(139,106,223),
+			  Value = "5",
+			  Text="WA"
+		   },
+        new EqualColorMapping
+		   {
+		      Color = Color.FromRgb(123,255,103),
+			  Value = "6",
+			  Text="SA"
+		   },
+        new EqualColorMapping
+		   {
+		      Color = Color.FromRgb(255,78,66),
+			  Value = "7",
+			  Text="NT"
+		   },
     };
+
+    MapMarker mapMarker = new MapMarker();
+    mapMarker.Latitude = -34.928497;
+    mapMarker.Longitude = 138.600739;
+    MapMarkerCollection mapMarkers =new MapMarkerCollection
+    {
+       mapMarker
+    };
+    layer.Markers = mapMarkers;
+
+    MapLegend legendSet = new MapLegend();
+    legendSet.SourceType = LegendSourceType.Shape;
+    legendSet.Placement = LegendPlacement.Bottom;
+    layer.Legend = legendSet;
+
     maps.Layer = layer;
     this.Content = maps;
 }
@@ -397,4 +540,6 @@ public class ViewModel
 
 ![Maps getting started](images/getting-started/maps_getting_started.png)
 
-N> You can refer to our `MAUI Maps` feature tour page for its groundbreaking feature representations. You can also explore our `MAUI Maps example`that shows how to configure a Maps in MAUI.
+N> 
+* Get the complete getting started sample from [GitHub](https://github.com/SyncfusionExamples/.NET-MAUI-Maps-Getting-Started) link.
+* You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations.

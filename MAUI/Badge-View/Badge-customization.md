@@ -38,25 +38,25 @@ The font can be customized using the [FontSize](https://help.syncfusion.com/cr/m
 
 {% highlight c# %}
 
-  SfBadgeView sfBadgeView = new SfBadgeView();
-            sfBadgeView.WidthRequest = 120;
-            sfBadgeView.HeightRequest = 50;
-            sfBadgeView.HorizontalOptions = LayoutOptions.Center;
-            sfBadgeView.VerticalOptions = LayoutOptions.Center;
-            sfBadgeView.BadgeText = "48";
-            Button button = new Button();
-            button.Text = "Primary";
-            button.TextColor = Colors.Black;
-            button.BackgroundColor =Color.FromRgba(214, 216, 215, 255);
-            button.WidthRequest = 120;
-            button.HeightRequest = 60;
-            sfBadgeView.Content = button;
-            BadgeSettings badgeSetting = new BadgeSettings();
-            badgeSetting.FontAttributes = FontAttributes.Bold;
-            badgeSetting.FontSize = 15;
-            badgeSetting.FontFamily = "serif";
-            sfBadgeView.BadgeSettings = badgeSetting;
-            Content = sfBadgeView;
+SfBadgeView sfBadgeView = new SfBadgeView();
+sfBadgeView.WidthRequest = 120;
+sfBadgeView.HeightRequest = 50;
+sfBadgeView.HorizontalOptions = LayoutOptions.Center;
+sfBadgeView.VerticalOptions = LayoutOptions.Center;
+sfBadgeView.BadgeText = "48";
+Button button = new Button();
+button.Text = "Primary";
+button.TextColor = Colors.Black;
+button.BackgroundColor =Color.FromRgba(214, 216, 215, 255);
+button.WidthRequest = 120;
+button.HeightRequest = 60;
+sfBadgeView.Content = button;
+BadgeSettings badgeSetting = new BadgeSettings();
+badgeSetting.FontAttributes = FontAttributes.Bold;
+badgeSetting.FontSize = 15;
+badgeSetting.FontFamily = "serif";
+sfBadgeView.BadgeSettings = badgeSetting;
+Content = sfBadgeView;
     
 {% endhighlight %}
 
@@ -73,36 +73,36 @@ The border color and border width of the badge view can be customized using the 
 {% highlight xaml %}
 
 <badge:SfBadgeView BadgeText="30"  WidthRequest="120" HeightRequest="60" HorizontalOptions="Center" VerticalOptions="Center">
-        <badge:SfBadgeView.Content>
-            <Button Text ="Primary" BackgroundColor="#d6d8d7" TextColor="Black" WidthRequest="120" HeightRequest="60"/>
-        </badge:SfBadgeView.Content>
-        <badge:SfBadgeView.BadgeSettings>
-            <badge:BadgeSettings Stroke="Orange" BorderWidth="2" />
-        </badge:SfBadgeView.BadgeSettings>
-    </badge:SfBadgeView>
+    <badge:SfBadgeView.Content>
+        <Button Text ="Primary" BackgroundColor="#d6d8d7" TextColor="Black" WidthRequest="120" HeightRequest="60"/>
+    </badge:SfBadgeView.Content>
+    <badge:SfBadgeView.BadgeSettings>
+        <badge:BadgeSettings Stroke="Orange" BorderWidth="2" />
+    </badge:SfBadgeView.BadgeSettings>
+</badge:SfBadgeView>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-           SfBadgeView sfBadgeView = new SfBadgeView();
-            sfBadgeView.WidthRequest = 120;
-            sfBadgeView.HeightRequest = 80;
-            sfBadgeView.BadgeText = "30";
-            sfBadgeView.HorizontalOptions = LayoutOptions.Center;
-            sfBadgeView.VerticalOptions = LayoutOptions.Center;
-            Button button = new Button();
-            button.TextColor = Colors.Black;
-            button.BackgroundColor = Color.FromRgba(214, 216, 215, 255);
-            button.Text = "Primary";
-            button.WidthRequest = 120;
-            button.HeightRequest = 60;
-            sfBadgeView.Content = button;
-            BadgeSettings badgeSetting = new BadgeSettings();
-            badgeSetting.Stroke = Colors.Orange;
-            badgeSetting.BorderWidth = 2;
-            sfBadgeView.BadgeSettings = badgeSetting;
-            Content = sfBadgeView;
+SfBadgeView sfBadgeView = new SfBadgeView();
+sfBadgeView.WidthRequest = 120;
+sfBadgeView.HeightRequest = 80;
+sfBadgeView.BadgeText = "30";
+sfBadgeView.HorizontalOptions = LayoutOptions.Center;
+sfBadgeView.VerticalOptions = LayoutOptions.Center;
+Button button = new Button();
+button.TextColor = Colors.Black;
+button.BackgroundColor = Color.FromRgba(214, 216, 215, 255);
+button.Text = "Primary";
+button.WidthRequest = 120;
+button.HeightRequest = 60;
+sfBadgeView.Content = button;
+BadgeSettings badgeSetting = new BadgeSettings();
+badgeSetting.Stroke = Colors.Orange;
+badgeSetting.BorderWidth = 2;
+sfBadgeView.BadgeSettings = badgeSetting;
+Content = sfBadgeView;
     
 {% endhighlight %}
 
@@ -119,13 +119,13 @@ The text color and margin of badge view can be changed using the [TextColor](htt
 {% highlight xaml %}
 
 <badge:SfBadgeView BadgeText="45"  WidthRequest="120" HeightRequest="80" HorizontalOptions="Center" VerticalOptions="Center">
-        <badge:SfBadgeView.Content>
-            <Button Text ="Primary" BackgroundColor="#d6d8d7" TextColor="Black" WidthRequest="120" HeightRequest="60"/>
-        </badge:SfBadgeView.Content>
-        <badge:SfBadgeView.BadgeSettings>
-            <badge:BadgeSettings TextColor="LightYellow"  TextPadding ="10" />
-        </badge:SfBadgeView.BadgeSettings>
-    </badge:SfBadgeView>
+    <badge:SfBadgeView.Content>
+        <Button Text ="Primary" BackgroundColor="#d6d8d7" TextColor="Black" WidthRequest="120" HeightRequest="60"/>
+    </badge:SfBadgeView.Content>
+    <badge:SfBadgeView.BadgeSettings>
+        <badge:BadgeSettings TextColor="LightYellow"  TextPadding ="10" />
+    </badge:SfBadgeView.BadgeSettings>
+</badge:SfBadgeView>
 
 {% endhighlight %}
 
@@ -216,13 +216,13 @@ Other than the predefined styles, the color of the badge can be customized using
 
 {% highlight xaml %}
  <badge:SfBadgeView BadgeText="48" WidthRequest="120" HeightRequest="60" HorizontalOptions="Center" VerticalOptions="Center" >
-        <badge:SfBadgeView.Content>
-            <Button Text ="Primary"  BackgroundColor="#d6d8d7" TextColor="Black" WidthRequest="120" HeightRequest="60"/>
-        </badge:SfBadgeView.Content>
-        <badge:SfBadgeView.BadgeSettings>
-            <badge:BadgeSettings Type="None" Background="Green" />
-        </badge:SfBadgeView.BadgeSettings>
-    </badge:SfBadgeView>
+    <badge:SfBadgeView.Content>
+        <Button Text ="Primary"  BackgroundColor="#d6d8d7" TextColor="Black" WidthRequest="120" HeightRequest="60"/>
+    </badge:SfBadgeView.Content>
+    <badge:SfBadgeView.BadgeSettings>
+        <badge:BadgeSettings Type="None" Background="Green" />
+    </badge:SfBadgeView.BadgeSettings>
+</badge:SfBadgeView>
 
 {% endhighlight %}
 
@@ -306,38 +306,38 @@ Align the badge view using the Center, Start, and End properties of `BadgeAlignm
 
 {% highlight xaml %}
 
-   <badge:SfBadgeView BadgeText="20" HorizontalOptions="Center" VerticalOptions="Center" >
-        <badge:SfBadgeView.Content>
-            <Label Text="CENTER" BackgroundColor="LightGray" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
-                   WidthRequest="100" HeightRequest="60" TextColor="Black" />
-        </badge:SfBadgeView.Content>
-        <badge:SfBadgeView.BadgeSettings>
-            <badge:BadgeSettings BadgeAlignment="Center" CornerRadius="0"/>
-        </badge:SfBadgeView.BadgeSettings>
+<badge:SfBadgeView BadgeText="20" HorizontalOptions="Center" VerticalOptions="Center" >
+    <badge:SfBadgeView.Content>
+        <Label Text="CENTER" BackgroundColor="LightGray" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                WidthRequest="100" HeightRequest="60" TextColor="Black" />
+    </badge:SfBadgeView.Content>
+    <badge:SfBadgeView.BadgeSettings>
+        <badge:BadgeSettings BadgeAlignment="Center" CornerRadius="0"/>
+    </badge:SfBadgeView.BadgeSettings>
 </badge:SfBadgeView>    
 
 {% endhighlight %}
 
 {% highlight c# %}
 
- SfBadgeView sfBadgeView = new SfBadgeView();
-		sfBadgeView.HorizontalOptions = LayoutOptions.Center;
-		sfBadgeView.VerticalOptions = LayoutOptions.Center;
-		sfBadgeView.BadgeText = "20";
-		Label label = new Label();
-		label.Text = "CENTER";
-		label.HeightRequest = 60;
-		label.WidthRequest = 100;
-		label.BackgroundColor = Colors.LightGray;
-		label.HorizontalTextAlignment = TextAlignment.Center;
-		label.VerticalTextAlignment = TextAlignment.Center;
-		label.TextColor = Colors.Black;
-		sfBadgeView.Content = label;
-		BadgeSettings badgeSetting = new BadgeSettings();
-		badgeSetting.BadgeAlignment = BadgeAlignment.Center;
-		badgeSetting.CornerRadius = 0;
-		sfBadgeView.BadgeSettings = badgeSetting;
-		Content = sfBadgeView;
+SfBadgeView sfBadgeView = new SfBadgeView();
+sfBadgeView.HorizontalOptions = LayoutOptions.Center;
+sfBadgeView.VerticalOptions = LayoutOptions.Center;
+sfBadgeView.BadgeText = "20";
+Label label = new Label();
+label.Text = "CENTER";
+label.HeightRequest = 60;
+label.WidthRequest = 100;
+label.BackgroundColor = Colors.LightGray;
+label.HorizontalTextAlignment = TextAlignment.Center;
+label.VerticalTextAlignment = TextAlignment.Center;
+label.TextColor = Colors.Black;
+sfBadgeView.Content = label;
+BadgeSettings badgeSetting = new BadgeSettings();
+badgeSetting.BadgeAlignment = BadgeAlignment.Center;
+badgeSetting.CornerRadius = 0;
+sfBadgeView.BadgeSettings = badgeSetting;
+Content = sfBadgeView;
     
 {% endhighlight %}
 

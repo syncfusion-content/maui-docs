@@ -1,43 +1,42 @@
 ---
 layout: post
 title: Bubbles in Maps control | Syncfusion
-description: Learn here all about the Bubbles feature of Syncfusion MAUI Maps (SfMaps) control to customize their appearances and more.
+description: Learn all about the Bubbles feature of Syncfusion .NET MAUI Maps (SfMaps) control to customize their appearances and more.
 platform: MAUI
 control: SfMaps
 documentation: ug
 ---
 
-# Bubbles in MAUI Maps (SfMaps)
+# Bubbles in .NET MAUI Maps (SfMaps)
 
 Bubbles can be rendered in different colors and sizes based on the data values of their assigned shape. You can add information to shapes such as population density, number of users, and more. 
 
 ## Enable bubbles
 
-You can enable bubbles using the `ShowBubbles`. You can customize a bubbles using the `BubbleSettings`. This property is used to specify the value based on which the bubble's size has to be rendered.
+You can enable bubbles using the [`ShowBubbles`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShowBubbles). You can customize bubbles using the [`BubbleSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_BubbleSettings). This property is used to specify the value based on which the bubble's size has to be rendered.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-     <map:SfMaps>
-        <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world1.shp}"
-							   DataSource="{Binding Data}"
-							   PrimaryValuePath="State" 
-							   ShapeDataField="name" 
-							   ShowBubbles="True">
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer DataSource="{Binding Data}"
+                           PrimaryValuePath="State" 
+                           ShapeDataField="name" 
+                           ShowBubbles="True">
 
-              <map:MapShapeLayer.BubbleSettings>
-                  <map:MapBubbleSettings ColorValuePath="Population" 
-       									 SizeValuePath="Population" 
-       									 Fill="DarkViolet"
-       									 MinSize="30"
-       									 MaxSize="80">
-                  </map:MapBubbleSettings>
-              </map:MapShapeLayer.BubbleSettings>
-            </map:MapShapeLayer>
-        </map:SfMaps.Layer>
-    </map:SfMaps>
+            <map:MapShapeLayer.BubbleSettings>
+                <map:MapBubbleSettings ColorValuePath="Population" 
+                                       SizeValuePath="Population" 
+                                       Fill="DarkViolet"
+                                       MinSize="30"
+                                       MaxSize="80">
+                </map:MapBubbleSettings>
+            </map:MapShapeLayer.BubbleSettings>
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
 
 {% endhighlight %}
 
@@ -106,34 +105,33 @@ public class Model
 
 ## Tooltip for the bubbles
 
-You can enable tooltip for the bubbles using the `ShowBubbleTooltip` property. It can be used to indicate clearly the information about the currently interacted bubble.
+You can enable tooltip for the bubbles using the [`ShowBubbleTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShowBubbleTooltip) property. It can be used to indicate clearly the information about the currently interacted bubble.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-     <map:SfMaps>
-        <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world1.shp}"
-   							   DataSource="{Binding Data}"
-   							   PrimaryValuePath="State" 
-   							   ShapeDataField="name" 
-   							   ShapeHoverFill="Transparent" 
-   							   ShapeHoverStroke="Transparent"
-   							   ShowBubbles="True"
-   							   ShowBubbleTooltip="True">
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer DataSource="{Binding Data}"
+                           PrimaryValuePath="State" 
+                           ShapeDataField="name" 
+                           ShapeHoverFill="Transparent" 
+                           ShapeHoverStroke="Transparent"
+                           ShowBubbles="True"
+                           ShowBubbleTooltip="True">
 
-              <map:MapShapeLayer.BubbleSettings>
-                  <map:MapBubbleSettings ColorValuePath="Population" 
-										 SizeValuePath="Population" 
-										 Fill="DarkViolet"
-										 MinSize="30"
-										 MaxSize="80">
-                  </map:MapBubbleSettings>
-              </map:MapShapeLayer.BubbleSettings>
-            </map:MapShapeLayer>
-        </map:SfMaps.Layer>
-    </map:SfMaps>
+            <map:MapShapeLayer.BubbleSettings>
+                <map:MapBubbleSettings ColorValuePath="Population" 
+                                       SizeValuePath="Population" 
+                                       Fill="DarkViolet"
+                                       MinSize="30"
+                                       MaxSize="80">
+                </map:MapBubbleSettings>
+            </map:MapShapeLayer.BubbleSettings>
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
 
 {% endhighlight %}
 
@@ -205,54 +203,53 @@ public class Model
 
 ## Color
 
-You can customize the bubble color based on the value from the `ColorValuePath` property. If it provides direct color value then it applies to bubbles strightaway. Otherwise, we must provide `ColorMapping`.
+You can customize the bubble color based on the value from the [`ColorValuePath`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapBubbleSettings.html#Syncfusion_Maui_Maps_MapBubbleSettings_ColorValuePath) property. If it provides direct color value then it applies to bubbles strightaway. Otherwise, we must provide [`ColorMapping`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapBubbleSettings.html#Syncfusion_Maui_Maps_MapBubbleSettings_ColorMappings).
 
-The value from the `ColorValuePath` will be used for the comparison in the `EqualColorMapping.Value` or `RangeColorMapping.From` and `RangeColorMapping.To`. Then, the `RangeColorMapping.Color` or `EqualColorMapping.Color` will be applied to the respective bubble.
+The value from the [`ColorValuePath`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapBubbleSettings.html#Syncfusion_Maui_Maps_MapBubbleSettings_ColorValuePath) will be used for the comparison in the [`EqualColorMapping.Value`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapBubbleSettings.html#Syncfusion_Maui_Maps_MapBubbleSettings_ColorValuePath) or [`RangeColorMapping.From`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.RangeColorMapping.html#Syncfusion_Maui_Maps_RangeColorMapping_From) and [`RangeColorMapping.To`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.RangeColorMapping.html#Syncfusion_Maui_Maps_RangeColorMapping_To). Then, the [`RangeColorMapping.Color`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.ColorMapping.html#Syncfusion_Maui_Maps_ColorMapping_Color) or [`EqualColorMapping.Color`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.ColorMapping.html#Syncfusion_Maui_Maps_ColorMapping_Color) will be applied to the respective bubble.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-     <map:SfMaps>
-        <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world1.shp}"
-							   ShowDataLabels="True"
-							   DataSource="{Binding Data}" 
-							   PrimaryValuePath="State" 
-							   ShapeDataField="name" 
-							   ShowBubbles="True">
-              <map:MapShapeLayer.BubbleSettings>
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer ShowDataLabels="True"
+                           DataSource="{Binding Data}" 
+                           PrimaryValuePath="State" 
+                           ShapeDataField="name" 
+                           ShowBubbles="True">
+            <map:MapShapeLayer.BubbleSettings>
 
-                <map:MapBubbleSettings ColorValuePath="Population" 
-									   SizeValuePath="Population" 
-									   MinSize="30"
-									   MaxSize="80">
+            <map:MapBubbleSettings ColorValuePath="Population" 
+                                   SizeValuePath="Population" 
+                                   MinSize="30"
+                                   MaxSize="80">
 
-                      <map:MapBubbleSettings.ColorMappings>
-                           <map:EqualColorMapping Color="DarkViolet" Value="51"/>
-                           <map:EqualColorMapping Color="Orange" Value="58"/>
-                           <map:EqualColorMapping Color="Yellow" Value="41"/>
-                           <map:EqualColorMapping Color="LightGreen" Value="48"/>
-                           <map:EqualColorMapping Color="Green" Value="14"/>
-                           <map:EqualColorMapping Color="Aqua" Value="23"/>
-                      </map:MapBubbleSettings.ColorMappings>
-                </map:MapBubbleSettings>
-              </map:MapShapeLayer.BubbleSettings>
+                    <map:MapBubbleSettings.ColorMappings>
+                        <map:EqualColorMapping Color="DarkViolet" Value="51"/>
+                        <map:EqualColorMapping Color="Orange" Value="58"/>
+                        <map:EqualColorMapping Color="Yellow" Value="41"/>
+                        <map:EqualColorMapping Color="LightGreen" Value="48"/>
+                        <map:EqualColorMapping Color="Green" Value="14"/>
+                        <map:EqualColorMapping Color="Aqua" Value="23"/>
+                    </map:MapBubbleSettings.ColorMappings>
+            </map:MapBubbleSettings>
+            </map:MapShapeLayer.BubbleSettings>
 
-              <map:MapShapeLayer.DataLabelSettings>
-                  <map:MapDataLabelSettings DataLabelPath="State"
-										    OverflowMode="None">
-                      <map:MapDataLabelSettings.DataLabelStyle>
-                         <map:MapLabelStyle FontSize="12" 
-											TextColor="Red" 
-											FontAttributes="Italic"/>
-                      </map:MapDataLabelSettings.DataLabelStyle>
-                  </map:MapDataLabelSettings>
-              </map:MapShapeLayer.DataLabelSettings>
+            <map:MapShapeLayer.DataLabelSettings>
+                <map:MapDataLabelSettings DataLabelPath="State"
+                                          OverflowMode="None">
+                    <map:MapDataLabelSettings.DataLabelStyle>
+                        <map:MapLabelStyle FontSize="12" 
+                                           TextColor="Red" 
+                                           FontAttributes="Italic"/>
+                    </map:MapDataLabelSettings.DataLabelStyle>
+                </map:MapDataLabelSettings>
+            </map:MapShapeLayer.DataLabelSettings>
 
-            </map:MapShapeLayer>
-        </map:SfMaps.Layer>
-    </map:SfMaps>
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
 
 {% endhighlight %}
 
@@ -346,48 +343,47 @@ public class Model
 
 ## Appearance customization
 
-You can customize the below appearance of the bubbles.
+You can customize appearance of the bubbles as below.
 
-* **MinSize** - Change the minimum radius of the bubbles using the `MinSize` property. The default value of the `MinSize` property is `20.0`.
-* **MaxSize** - Change the maximum radius of the bubbles using the `MaxSize` property. The default value of the `MaxSize` property is `50.0`.
-* **Fill** - Change the background color of the bubbles using the `Fill` property.
-* **Stroke** - Change the stroke color of the bubbles using the `Stroke` property.
-* **StrokeThickness** - Change the stroke width of the bubbles using the `StrokeThickness` property.
-* **HoverFill** - Change the hover color of the bubbles using the `HoverFill` property.
-* **HoverStroke** - Change the hover stroke color of the bubbles using the `HoverStroke` property.
-* **HoverStrokeThickness** - Change the hover stroke thickness of the bubbles using the `HoverStrokeThickness` property.
+* **MinSize** - Change the minimum radius of the bubbles using the [`MinSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapBubbleSettings.html#Syncfusion_Maui_Maps_MapBubbleSettings_MinSize) property. The default value of the [`MinSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapBubbleSettings.html#Syncfusion_Maui_Maps_MapBubbleSettings_MinSize) property is `20.0`.
+* **MaxSize** - Change the maximum radius of the bubbles using the [`MaxSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapBubbleSettings.html#Syncfusion_Maui_Maps_MapBubbleSettings_MaxSize) property. The default value of the [`MaxSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapBubbleSettings.html#Syncfusion_Maui_Maps_MapBubbleSettings_MaxSize) property is `50.0`.
+* **Fill** - Change the background color of the bubbles using the [`Fill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapBubbleSettings.html#Syncfusion_Maui_Maps_MapBubbleSettings_Fill) property.
+* **Stroke** - Change the stroke color of the bubbles using the [`Stroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapBubbleSettings.html#Syncfusion_Maui_Maps_MapBubbleSettings_Stroke) property.
+* **StrokeThickness** - Change the stroke width of the bubbles using the [`StrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapBubbleSettings.html#Syncfusion_Maui_Maps_MapBubbleSettings_StrokeThickness) property.
+* **HoverFill** - Change the hover color of the bubbles using the [`HoverFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapBubbleSettings.html#Syncfusion_Maui_Maps_MapBubbleSettings_HoverFill) property.
+* **HoverStroke** - Change the hover stroke color of the bubbles using the [`HoverStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapBubbleSettings.html#Syncfusion_Maui_Maps_MapBubbleSettings_HoverStroke) property.
+* **HoverStrokeThickness** - Change the hover stroke thickness of the bubbles using the [`HoverStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapBubbleSettings.html#Syncfusion_Maui_Maps_MapBubbleSettings_HoverStrokeThickness) property.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-     <map:SfMaps>
-        <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world1.shp}"
-							   DataSource="{Binding Data}"
-							   PrimaryValuePath="State" 
-							   ShapeDataField="name"
-							   ShapeHoverFill = "Transparent" 
-							   ShapeHoverStroke="Transparent"
-							   ShowBubbles="True"
-							   ShowBubbleTooltip="True" >
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer DataSource="{Binding Data}"
+                           PrimaryValuePath="State" 
+                           ShapeDataField="name"
+                           ShapeHoverFill = "Transparent" 
+                           ShapeHoverStroke="Transparent"
+                           ShowBubbles="True"
+                           ShowBubbleTooltip="True" >
 
-              <map:MapShapeLayer.BubbleSettings>
-                  <map:MapBubbleSettings ColorValuePath="Population" 
-										 SizeValuePath="Population" 
-										 Fill="Green"
-										 Stroke="DarkGreen"
-										 StrokeThickness="2"
-										 HoverFill="Blue"
-										 HoverStroke="DarkBlue"
-										 HoverStrokeThickness="3"
-										 MinSize="30"
-										 MaxSize="80">
-                  </map:MapBubbleSettings>
-              </map:MapShapeLayer.BubbleSettings>
-            </map:MapShapeLayer>
-        </map:SfMaps.Layer>
-    </map:SfMaps>
+            <map:MapShapeLayer.BubbleSettings>
+                <map:MapBubbleSettings ColorValuePath="Population" 
+                                       SizeValuePath="Population" 
+                                       Fill="Green"
+                                       Stroke="DarkGreen"
+                                       StrokeThickness="2"
+                                       HoverFill="Blue"
+                                       HoverStroke="DarkBlue"
+                                       HoverStrokeThickness="3"
+                                       MinSize="30"
+                                       MaxSize="80">
+                </map:MapBubbleSettings>
+            </map:MapShapeLayer.BubbleSettings>
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
 
 {% endhighlight %}
 
@@ -408,7 +404,6 @@ public MainPage()
     layer.ShapeHoverStroke = Colors.Transparent;
     layer.ShowBubbles = true;
     layer.ShowBubbleTooltip = true;
-
 
     MapBubbleSettings bubbleSetting = new MapBubbleSettings()
     {
@@ -463,4 +458,4 @@ public class Model
 
 ![Bubble customization](images/bubble/bubble-customization.png)
 
-N> You can refer to our `MAUI Maps` feature tour page for its groundbreaking feature representations. You can also explore our `MAUI Maps Bubble example` that shows how to configure a Maps in MAUI.
+N> You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Maps Bubble example](https://github.com/syncfusion/maui-demos/) that shows how to configure a Maps in .NET MAUI.
