@@ -1,35 +1,34 @@
 ---
 layout: post
-title: Tooltip in MAUI Maps control | Syncfusion 
-description: Learn here all about adding the Tooltip feature of Syncfusion MAUI Maps (SfMaps) control and more.
+title: Tooltip in .NET MAUI Maps control | Syncfusion 
+description: Learn here all about adding the Tooltip feature of Syncfusion .NET MAUI Maps (SfMaps) control and more.
 platform: MAUI
 control: SfMaps
 documentation: ug
 ---
 
-# Tooltip in MAUI Maps (SfMaps)
+# Tooltip in .NET MAUI Maps (SfMaps)
 
 Tooltip is used to indicate the shape, bubble, marker information during the tap, or hover interactions. This section helps to learn about
  how to show tooltip for the shapes, bubbles, and markers in the maps and customize them.
 
 ## Tooltip for the shapes
 
-The `ShowShapeTooltip` is used to clearly indicate the shape information every time when you interacts with the shapes i.e., while tapping in touch devices and hover enter in the mouse enabled devices.
+The [`ShowShapeTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShowShapeTooltip) is used to clearly indicate the shape information every time when you interacts with the shapes i.e., while tapping in touch devices and hover enter in the mouse enabled devices.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-     <map:SfMaps>
-        <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world1.shp}"
-							   DataSource="{Binding Data}"
-							   PrimaryValuePath="State" 
-							   ShapeDataField="name" 
-							   ShowShapeToolTip="True">
-            </map:MapShapeLayer>
-        </map:SfMaps.Layer>
-    </map:SfMaps>
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer DataSource="{Binding Data}"
+                           PrimaryValuePath="State" 
+                           ShapeDataField="name" 
+                           ShowShapeToolTip="True">
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
 
 {% endhighlight %}
 
@@ -86,42 +85,38 @@ public class Model
 
 {% endtabs %}
 
-![Maps shape tooltip builder](images/tooltip/shape_tooltip_builder.png)
-
-N>
-* Refer the `MapTooltipSettings`, for customizing the tooltip.
+![Maps shape tooltip](images/tooltip/shape_tooltip.png)
 
 ## Tooltip for the bubbles
 
-The `MapShapeLayer.ShowBubbleTooltip` is used to clearly indicate the bubble information every time when you interacts with the bubbles i.e., while tapping in touch devices and hover enter in the mouse enabled devices.
+The [`ShowBubbleTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShowBubbleTooltip) is used to clearly indicate the bubble information every time when you interacts with the bubbles i.e., while tapping in touch devices and hover enter in the mouse enabled devices.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-    <map:SfMaps>
-        <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world1.shp}"
-							   DataSource="{Binding Data}"
-							   PrimaryValuePath="State" 
-							   ShapeDataField="name" 
-							   ShapeHoverFill = "Transparent" 
-							   ShapeHoverStroke="Transparent"
-							   ShowBubbles="True"
-							   ShowBubbleTooltip="True">
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer DataSource="{Binding Data}"
+                           PrimaryValuePath="State" 
+                           ShapeDataField="name" 
+                           ShapeHoverFill = "Transparent" 
+                           ShapeHoverStroke="Transparent"
+                           ShowBubbles="True"
+                           ShowBubbleTooltip="True">
 
-              <map:MapShapeLayer.BubbleSettings>
-                  <map:MapBubbleSettings ColorValuePath="Population" 
-                                         SizeValuePath="Population" 
-                                         Fill="DarkViolet"
-                                         MinSize="30"
-                                         MaxSize="80">
-                  </map:MapBubbleSettings>
-              </map:MapShapeLayer.BubbleSettings>
-			  
-            </map:MapShapeLayer>
-        </map:SfMaps.Layer>
-    </map:SfMaps>
+            <map:MapShapeLayer.BubbleSettings>
+                <map:MapBubbleSettings ColorValuePath="Population" 
+                                       SizeValuePath="Population" 
+                                       Fill="DarkViolet"
+                                       MinSize="30"
+                                       MaxSize="80">
+                </map:MapBubbleSettings>
+            </map:MapShapeLayer.BubbleSettings>
+            
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
 
 {% endhighlight %}
 
@@ -192,41 +187,41 @@ The `MapShapeLayer.ShowBubbleTooltip` is used to clearly indicate the bubble inf
 
 {% endtabs %}
 
-![Maps bubble tooltip builder](images/tooltip/bubble_tooltip_builder.png)
+![Maps bubble tooltip](images/tooltip/bubble_tooltip.png)
 
 ## Tooltip for the markers
 
-The `MapShapeLayer.ShowMarkerTooltip` is used to clearly indicate the marker information every time when you interacts with the markers i.e., while tapping in touch devices and hover enter in the mouse enabled devices.
+The [`ShowMarkerTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_ShowMarkerTooltip) is used to clearly indicate the marker information every time when you interacts with the markers i.e., while tapping in touch devices and hover enter in the mouse enabled devices.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-    <map:SfMaps>
-         <map:SfMaps.Layer>
-             <map:MapShapeLayer ShapesSource="{local:MapSourceResourceExtension MyProject.world1.shp}"
-							    ShapeStroke="DarkGrey"
-							    ShapeHoverFill = "Transparent" 
-							    ShapeHoverStroke="Transparent" 
-							    ShowMarkerTooltip="True">
+<map:SfMaps>
+    <map:SfMaps.Layer>
+            <map:MapShapeLayer ShapeStroke="DarkGrey"
+                               ShapeHoverFill = "Transparent" 
+                               ShapeHoverStroke="Transparent" 
+                               ShowMarkerTooltip="True">
 
-                 <map:MapShapeLayer.Markers>
-                     <map:MapMarkerCollection>
-                         <map:MapMarker Latitude="1454.6" 
-									    IconWidth="20" 
-									    IconHeight="20" 
-									    IconType="Diamond" 
-									    Longitude="36.0" />
-                         <map:MapMarker Latitude="34.0479"
- 									    IconWidth="20" 
- 									    IconHeight="20" 
- 									    IconType="Circle" 
- 									    Longitude="100.6124" />
+                <map:MapShapeLayer.Markers>
+                    <map:MapMarkerCollection>
+                        <map:MapMarker Latitude="1454.6" 
+                                       IconWidth="20" 
+                                       IconHeight="20" 
+                                       IconType="Diamond" 
+                                       Longitude="36.0" />
+                        <map:MapMarker Latitude="34.0479"
+                                       IconWidth="20" 
+                                       IconHeight="20" 
+                                       IconType="Circle" 
+                                       Longitude="100.6124" />
 
-                     </map:MapMarkerCollection>
-                 </map:MapShapeLayer.Markers>
-        </map:SfMaps.Layer>
-    </map:SfMaps>
+                    </map:MapMarkerCollection>
+                </map:MapShapeLayer.Markers>
+            </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
 
 {% endhighlight %}
 
@@ -271,16 +266,13 @@ The `MapShapeLayer.ShowMarkerTooltip` is used to clearly indicate the marker inf
 
 {% endtabs %}
 
-![Maps marker tooltip builder](images/tooltip/marker_tooltip_builder.png)
-
-N>
-* Refer the `MapTooltipSettings`, for customizing the tooltip.
+![Maps marker tooltip](images/tooltip/marker_tooltip.png)
 
 ## Appearance customization
 
 ### Apply data template for tooltip
 
-Data template can be used customize the tooltip view. The following code example shows the usage of `DataTemplate`.
+Data template can be used customize the tooltip view using [`ShapeTooltipTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeTooltipTemplate) property. The following code example shows the usage of `DataTemplate`.
 
 {% tabs %}
 
@@ -427,13 +419,13 @@ N>
 * The BindingContext of the Marker will be the corresponding MapMarker.
 
 N>
-* Refer the `MapShapeLayer.ShapeTooltipTemplate`, for customize tooltip for the shapes.
-* Refer the `MapShapeLayer.BubbleTooltipTemplate`, for customize tooltip for the bubbles.
-* Refer the `MapLayer.MarkerTooltipTemplate`, for customize tooltip for the markers.
+* Refer the [`ShapeTooltipTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeTooltipTemplate), for customize tooltip for the shapes.
+* Refer the [`BubbleTooltipTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_BubbleTooltipTemplate), for customize tooltip for the bubbles.
+* Refer the [`MarkerTooltipTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_MarkerTooltipTemplate), for customize tooltip for the markers.
 
 ### Apply data template selector for tooltip
 
-Data template selector can be customized the appearance of each item with different templates based on specific constraints. You can choose a DataTemplate for each item at runtime based on the value of data-bound property using DataTemplateSelector.
+Data template selector can be customized the appearance of each item with different templates based on specific constraints. You can choose a DataTemplate for each item at runtime based on the value of data-bound property using DataTemplateSelector in [`ShapeTooltipTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeTooltipTemplate).
 
 {% tabs %}
 
@@ -474,7 +466,6 @@ Data template selector can be customized the appearance of each item with differ
 <map:SfMaps>
     <map:SfMaps.Layer>
         <map:MapShapeLayer x:Name="layer"
-                           ShapesSource="{local:MapSourceResourceExtension MyProject.world1.shp}"
                            ShapeStroke="DarkGrey"
                            ShowMarkerTooltip="True"
                            ShapeHoverFill="Transparent"
@@ -501,6 +492,15 @@ Data template selector can be customized the appearance of each item with differ
 
 {% highlight c# %}
 
+public class MainPage()
+{
+	public MainPage()
+	{
+		InitializeComponent();
+		layer.ShapesSource = MapSource.FromResource("MyProject.World1.shp");
+	}
+}
+
 public class CustomMarker : MapMarker
 {
    public string Name { get; set; } 
@@ -524,6 +524,6 @@ public class MarkerTemplateSelector : DataTemplateSelector
 ![Maps tooltip appearance customization](images/tooltip/tooltip_selector.png)
 
 N>
-* Data Templates and Data Templates selector are also applicable with bubbles and markers.
+* Data Template and Data Template selector are also applicable for bubbles and markers.
 
-N> You can refer to our `MAUI Maps` feature tour page for its groundbreaking feature representations. You can also explore our `MAUI Maps Tooltip example` that shows how to configure a Maps in MAUI.
+N> You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Maps Tooltip example](https://github.com/syncfusion/maui-demos/) that shows how to configure a Maps in .NET MAUI.

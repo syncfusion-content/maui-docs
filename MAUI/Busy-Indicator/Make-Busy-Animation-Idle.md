@@ -17,8 +17,8 @@ SfBusyIndicator control provides support to determine whether an animation needs
 {% highlight xaml %}
 
 <core:SfBusyIndicator x:Name="busyindicator"
-                        AnimationType="CircularMaterial"
-                        IsRunning="false" />
+                      AnimationType="CircularMaterial"
+                      IsRunning="false" />
 
 {% endhighlight %}
 

@@ -19,38 +19,35 @@ The Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget
 
  In the MauiProgram.cs file, register the handler for Syncfusion core.
 
-{% highlight C# %}
+{% highlight c# hl_lines="6 17" %}   
+using Microsoft.Maui;
+using Microsoft.Maui.Hosting;
+using Microsoft.Maui.Controls.Compatibility;
+using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Controls.Xaml;
+using Syncfusion.Maui.Core.Hosting;
+
+namespace BadgeViewMauiSample
+{
+  public static class MauiProgram
+  {
+	public static MauiApp CreateMauiApp()
+	{
+		var builder = MauiApp.CreateBuilder();
+		builder
+		.UseMauiApp<App>()
+		.ConfigureSyncfusionCore()
+		.ConfigureFonts(fonts =>
+		{
+			fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+		});
+
+		return builder.Build();
+	 }
    
-    using Microsoft.Maui;
-    using Microsoft.Maui.Hosting;
-    using Microsoft.Maui.Controls.Compatibility;
-    using Microsoft.Maui.Controls.Hosting;
-    using Microsoft.Maui.Controls.Xaml;
-    
-`using Syncfusion.Maui.Core.Hosting;`
+  }
 
-    namespace EffectsViewMauiSample
-    {
-      public static class MauiProgram
-      {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-            .UseMauiApp<App>()
- .`ConfigureSyncfusionCore()`
- 
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-            return builder.Build();
-         }
-       
-      }
-
-    }     
+}     
 
 {% endhighlight %}
 
@@ -135,7 +132,7 @@ An Image, button, or label or any view can be added to the Badge View using the 
 
 {% highlight xaml %}
 
- <badge:SfBadgeView HorizontalOptions="Center" VerticalOptions="Center" >
+<badge:SfBadgeView HorizontalOptions="Center" VerticalOptions="Center" >
         <badge:SfBadgeView.Content>
             <Button Text="Primary" WidthRequest="120"  HeightRequest="60"/>
         </badge:SfBadgeView.Content>
@@ -166,7 +163,7 @@ The following code sample gives you the complete code for Badge View with badge 
 
 {% highlight xaml %}
 
- <badge:SfBadgeView HorizontalOptions="Center" VerticalOptions="Center" BadgeText="20">
+<badge:SfBadgeView HorizontalOptions="Center" VerticalOptions="Center" BadgeText="20">
         <badge:SfBadgeView.Content>
             <Button Text="Primary" WidthRequest="120"  HeightRequest="60"/>
         </badge:SfBadgeView.Content>
@@ -177,22 +174,22 @@ The following code sample gives you the complete code for Badge View with badge 
 
 {% highlight c# %}
 
-        public MainPage()
-        {
-            InitializeComponent();
-            SfBadgeView sfBadgeView = new SfBadgeView();
-            sfBadgeView.HorizontalOptions = LayoutOptions.Center;
-            sfBadgeView.VerticalOptions = LayoutOptions.Center;
-            sfBadgeView.BadgeText = "20";
+public MainPage()
+{
+    InitializeComponent();
+    SfBadgeView sfBadgeView = new SfBadgeView();
+    sfBadgeView.HorizontalOptions = LayoutOptions.Center;
+    sfBadgeView.VerticalOptions = LayoutOptions.Center;
+    sfBadgeView.BadgeText = "20";
 
-            //Adding image to the content of the badge view.
-            Button button = new Button();
-            button.Text = "Primary";
-            button.WidthRequest = 120;
-            button.HeightRequest = 60;
-            sfBadgeView.Content = button;
-            Content = sfBadgeView;
-        }
+    //Adding image to the content of the badge view.
+    Button button = new Button();
+    button.Text = "Primary";
+    button.WidthRequest = 120;
+    button.HeightRequest = 60;
+    sfBadgeView.Content = button;
+    Content = sfBadgeView;
+}
 
 {% endhighlight %}
 
