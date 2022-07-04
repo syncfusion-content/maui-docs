@@ -70,9 +70,9 @@ Default column width or defined width set to column.
 </tr>
 </table>
 
-N> ColumnWidthMode will not work when the column width defined explicitly. ColumnWidthMode calculates column width based on [MinimumWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_MinimumWidth) and [MaximumWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_MaximumWidth) properties.
+N> `ColumnWidthMode` will not work when the column width defined explicitly. `ColumnWidthMode` calculates column width based on [MinimumWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_MinimumWidth) and [MaximumWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_MaximumWidth) properties.
 
-Below code, applies [ColumnWidthMode.Fill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DefaultColumnWidth) to equally set width for `SfDataGrid.Columns`.
+Below code, applies [ColumnWidthMode.Fill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.ColumnWidthMode.html#Syncfusion_Maui_DataGrid_ColumnWidthMode_Fill) to equally set width for `SfDataGrid.Columns`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -93,17 +93,19 @@ To apply `ColumnWidthMode` for a particular column, follow the code example:
 
 {% tabs %}
 {% highlight xaml %}
-<sfgrid:SfDataGrid x:Name="dataGrid"
-                   AutoGenerateColumns="True"
+<syncfusion:SfDataGrid x:Name="dataGrid"
                    ColumnWidthMode="None">
-
+<syncfusion:SfDataGrid.Columns>
    <syncfusion:DataGridTextColumn MappingName="CustomerID" ColumnWidthMode="Auto" HeaderText="Customer" ></syncfusion:DataGridTextColumn>
+    </syncfusion:SfDataGrid.Columns>
+    </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
 DataGridTextColumn textColumn = new DataGridTextColumn();
 textColumn.MappingName = "CustomerID";
 textColumn.HeaderText = "Customer";
-textColumn.ColumnWithMode = ColumnWithMode.Auto;  
+textColumn.ColumnWidthMode = ColumnWidthMode.Auto;
+this.sfGrid.Columns.Add(textColumn);  
 {% endhighlight %}
 {% endtabs %}
 
@@ -124,10 +126,10 @@ Consider that [ColumnWidthMode.Auto](https://help.syncfusion.com/cr/maui/Syncfus
             HeightRequest="100"
             HorizontalOptions="Center"
             Clicked="ColumnSizerChanged"/>
-<sfgrid:SfDataGrid x:Name="dataGrid"
+<syncfusion:SfDataGrid x:Name="dataGrid"
                    ColumnWidthMode="Auto"
                    ItemsSource="{Binding OrdersInfo}">
-</sfgrid:SfDataGrid>
+</syncfusion:SfDataGrid>
 </StackLayout>
 {% endhighlight %}
 {% highlight c# %}  
