@@ -296,8 +296,7 @@ Following are the list of options available to customize the grid borders:
 .	Vertical
 .	None
 
-### Both
-The [GridLinesVisibility.Both] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.GridLinesVisibility.html#Syncfusion_Maui_DataGrid_GridLinesVisibility_Both) displays the data grid with both horizontal and vertical borders.
+The following example shows how to apply both vertical and horizontal borders for header and data rows,
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
