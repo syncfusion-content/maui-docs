@@ -494,6 +494,11 @@ this.Content = scheduler;
 <td>Nil</td>
 <td>Not supported.</td></tr>
 
+<tr>
+<td>Nil</td>
+<td>{{'[CalendarType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_CalendarType)' | markdownify }}</td>
+<td>Gets or sets the calendar system to use.The default value is Gregorian.</td></tr>
+
 </table> 
 
 ### Scheduler Resource 
@@ -1449,6 +1454,11 @@ this.Content = scheduler;
 <td>{{'[ShowAllDay](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.SfSchedule.html#Syncfusion_SfSchedule_XForms_SfSchedule_TimeZone)' | markdownify }}</td>
 <td>Nil</td>
 <td>The all day panel will be visible if the all-day appointments present in the scheduler.</td></tr>
+
+<tr>
+<td>Nil</td>
+<td>{{'[NumberOfVisibleDays](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_NumberOfVisibleDays' | markdownify }}</td>
+<td>Gets or sets a value to display the number of days of Day, Week, WorkWeek, TimelineDay, TimelineWeek, TimelineWorkWeek in the SfScheduler</td></tr>
 
  </table> 
 
