@@ -27,16 +27,29 @@ You can show shape legend by setting the [`Legend`](https://help.syncfusion.com/
                             ShapeStroke="DarkGrey">
                 
                 <map:MapShapeLayer.ColorMappings>
-                    <map:EqualColorMapping Color="LightGray" Value="51" Text="India" />
-                    <map:EqualColorMapping Color="LightGray" Value="58" Text="United States" />
-                    <map:EqualColorMapping Color="LightGray" Value="41" Text="Kazakhstan" />
-                    <map:EqualColorMapping Color="LightGray" Value="48" Text="Italy" />
-                    <map:EqualColorMapping Color="LightGray" Value="14" Text="Korea" />
-                    <map:EqualColorMapping Color="LightGray" Value="23" Text="China" />
+                    <map:EqualColorMapping Color="LightGray"
+					                       Value="51"
+										   Text="India" />
+                    <map:EqualColorMapping Color="LightGray"
+					                       Value="58"
+										   Text="United States" />
+                    <map:EqualColorMapping Color="LightGray"
+					                       Value="41"
+										   Text="Kazakhstan" />
+                    <map:EqualColorMapping Color="LightGray"
+					                       Value="48"
+										   Text="Italy" />
+                    <map:EqualColorMapping Color="LightGray"
+					                       Value="14"
+										   Text="Korea" />
+                    <map:EqualColorMapping Color="LightGray"
+					                       Value="23"
+										   Text="China" />
                 </map:MapShapeLayer.ColorMappings>
 
                 <map:MapShapeLayer.Legend>
-                    <map:MapLegend SourceType="Shape" Placement="Top" />
+                    <map:MapLegend SourceType="Shape"
+					               Placement="Top" />
                 </map:MapShapeLayer.Legend>
                 
         </map:MapShapeLayer>
@@ -61,12 +74,42 @@ public MainPage()
     layer.ShapeDataField = "name";
     layer.ShapeStroke = Colors.DarkGrey;
 
-    layer.ColorMappings.Add(new EqualColorMapping() { Color = Colors.LightGray, Value = "51", Text = "India"});
-    layer.ColorMappings.Add(new EqualColorMapping() { Color = Colors.LightGray, Value = "58", Text = "United States" });
-    layer.ColorMappings.Add(new EqualColorMapping() { Color = Colors.LightGray, Value = "41", Text = "Kazakhstan" });
-    layer.ColorMappings.Add(new EqualColorMapping() { Color = Colors.LightGray, Value = "48", Text = "Italy" });
-    layer.ColorMappings.Add(new EqualColorMapping() { Color = Colors.LightGray, Value = "14", Text = "Korea" });
-    layer.ColorMappings.Add(new EqualColorMapping() { Color = Colors.LightGray, Value = "23", Text = "China" });
+    layer.ColorMappings.Add(new EqualColorMapping()
+	                       {
+						      Color = Colors.LightGray,
+							  Value = "51",
+							  Text = "India"
+						   });
+    layer.ColorMappings.Add(new EqualColorMapping()
+	                       {
+						      Color = Colors.LightGray,
+							  Value = "58",
+							  Text = "United States"
+						   });
+    layer.ColorMappings.Add(new EqualColorMapping()
+	                       {
+						      Color = Colors.LightGray,
+							  Value = "41",
+							  Text = "Kazakhstan"
+						   });
+    layer.ColorMappings.Add(new EqualColorMapping()
+	                       {
+						      Color = Colors.LightGray,
+							  Value = "48",
+							  Text = "Italy"
+						   });
+    layer.ColorMappings.Add(new EqualColorMapping()
+	                       {
+						      Color = Colors.LightGray,
+							  Value = "14",
+							  Text = "Korea"
+						   });
+    layer.ColorMappings.Add(new EqualColorMapping()
+	                       {
+						      Color = Colors.LightGray,
+							  Value = "23",
+							  Text = "China"
+						   });
 
     MapLegend legendSet = new MapLegend();
     legendSet.SourceType = LegendSourceType.Shape;
@@ -134,12 +177,24 @@ You can show bubble legend by setting the [`MapShapeLayer.Legend`](https://help.
                                            MaxSize="80">
 
                         <map:MapBubbleSettings.ColorMappings>
-                            <map:EqualColorMapping Color="LightGreen" Value="21" Text="India" />
-                            <map:EqualColorMapping Color="LightGreen" Value="58" Text="United States" />
-                            <map:EqualColorMapping Color="LightGreen" Value="41" Text="Kazakhstan" />
-                            <map:EqualColorMapping Color="LightGreen" Value="48" Text="Italy" />
-                            <map:EqualColorMapping Color="LightGreen" Value="14" Text="Korea" />
-                            <map:EqualColorMapping Color="LightGreen" Value="23" Text="China" />
+                            <map:EqualColorMapping Color="LightGreen"
+							                       Value="21"
+												   Text="India" />
+                            <map:EqualColorMapping Color="LightGreen"
+							                       Value="58"
+												   Text="United States" />
+                            <map:EqualColorMapping Color="LightGreen"
+							                       Value="41"
+												   Text="Kazakhstan" />
+                            <map:EqualColorMapping Color="LightGreen"
+							                       Value="48"
+												   Text="Italy" />
+                            <map:EqualColorMapping Color="LightGreen"
+							                       Value="14"
+												   Text="Korea" />
+                            <map:EqualColorMapping Color="LightGreen"
+							                       Value="23"
+												   Text="China" />
                         </map:MapBubbleSettings.ColorMappings>
                     </map:MapBubbleSettings>
                 </map:MapShapeLayer.BubbleSettings>
@@ -178,12 +233,42 @@ public MainPage()
         MaxSize = 80,
     };
 
-    bubbleSetting.ColorMappings.Add(new EqualColorMapping() { Color = Colors.LightGreen, Value = "21", Text = "India"});
-    bubbleSetting.ColorMappings.Add(new EqualColorMapping() { Color = Colors.LightGreen, Value = "58", Text = "United States" });
-    bubbleSetting.ColorMappings.Add(new EqualColorMapping() { Color = Colors.LightGreen, Value = "41", Text = "Kazakhstan" });
-    bubbleSetting.ColorMappings.Add(new EqualColorMapping() { Color = Colors.LightGreen, Value = "48", Text = "Italy" });
-    bubbleSetting.ColorMappings.Add(new EqualColorMapping() { Color = Colors.LightGreen, Value = "14", Text = "Korea" });
-    bubbleSetting.ColorMappings.Add(new EqualColorMapping() { Color = Colors.LightGreen, Value = "23", Text = "China" });
+    bubbleSetting.ColorMappings.Add(new EqualColorMapping()
+	                               {
+								      Color = Colors.LightGreen,
+									  Value = "21",
+									  Text = "India"
+								   });
+    bubbleSetting.ColorMappings.Add(new EqualColorMapping()
+	                               {
+								      Color = Colors.LightGreen,
+									  Value = "58",
+									  Text = "United States"
+								   });
+    bubbleSetting.ColorMappings.Add(new EqualColorMapping()
+	                               {
+								      Color = Colors.LightGreen,
+									  Value = "41",
+									  Text = "Kazakhstan"
+								   });
+    bubbleSetting.ColorMappings.Add(new EqualColorMapping()
+	                               {
+								      Color = Colors.LightGreen,
+									  Value = "48",
+									  Text = "Italy"
+								   });
+    bubbleSetting.ColorMappings.Add(new EqualColorMapping()
+	                               {
+								      Color = Colors.LightGreen,
+									  Value = "14",
+									  Text = "Korea"
+								   });
+    bubbleSetting.ColorMappings.Add(new EqualColorMapping()
+	                               {
+								      Color = Colors.LightGreen,
+									  Value = "23",
+									  Text = "China"
+								   });
 
     layer.BubbleSettings = bubbleSetting;
     MapLegend legendSet = new MapLegend();
@@ -242,30 +327,49 @@ You can customize the legend item's text style using the [`MapLegend.TextStyle`]
     <map:SfMaps.Layer>
         <map:MapShapeLayer DataSource="{Binding Data}"
                            PrimaryValuePath="State"
-                           ShapeDataField="name" 
-                           ShapeStroke="DarkGray" 
+                           ShapeDataField="name"
+                           ShapeStroke="DarkGray"
                            ShapeColorValuePath="Population">
 
-                <map:MapShapeLayer.ColorMappings>
-                    <map:RangeColorMapping Color="Red" From="0" To="100" Text="0 - 100/km" />
-                    <map:RangeColorMapping Color="LightGreen" From="101" To="200"  Text="100 - 200/km" />
-                    <map:RangeColorMapping Color="Blue" From="201" To="300"  Text="200 - 300/km" />
-                    <map:RangeColorMapping Color="Orange" From="301" To="400"  Text="300 - 400/km" />
-                    <map:RangeColorMapping Color="Teal" From="401" To="500"  Text="400 - 500/km" />
-                    <map:RangeColorMapping Color="Purple" From="501" To="600"  Text="500 - 600/km" />
-                </map:MapShapeLayer.ColorMappings>
+            <map:MapShapeLayer.ColorMappings>
+                <map:RangeColorMapping Color="Red"
+                                       From="0"
+                                       To="100"
+                                       Text="0 - 100/km" />
+                <map:RangeColorMapping Color="LightGreen"
+                                       From="101"
+                                       To="200"
+                                       Text="100 - 200/km" />
+                <map:RangeColorMapping Color="Blue"
+                                       From="201"
+                                       To="300"
+                                       Text="200 - 300/km" />
+                <map:RangeColorMapping Color="Orange"
+                                       From="301"
+                                       To="400"
+                                       Text="300 - 400/km" />
+                <map:RangeColorMapping Color="Teal"
+                                       From="401"
+                                       To="500"
+                                       Text="400 - 500/km" />
+                <map:RangeColorMapping Color="Purple"
+                                       From="501"
+                                       To="600"
+                                       Text="500 - 600/km" />
+            </map:MapShapeLayer.ColorMappings>
 
-                <map:MapShapeLayer.Legend>
-                    <map:MapLegend SourceType="Shape" Placement="Top">
-                        <map:MapLegend.TextStyle>
-                            <map:MapLabelStyle FontSize="16"
-                                               TextColor="Black"
-                                               FontFamily="Times"
-                                               FontAttributes="Italic" />
-                        </map:MapLegend.TextStyle>
-                    </map:MapLegend>    
-                </map:MapShapeLayer.Legend>
-                
+            <map:MapShapeLayer.Legend>
+                <map:MapLegend SourceType="Shape"
+                               Placement="Top">
+                    <map:MapLegend.TextStyle>
+                        <map:MapLabelStyle FontSize="16"
+                                           TextColor="Black"
+                                           FontFamily="Times"
+                                           FontAttributes="Italic" />
+                    </map:MapLegend.TextStyle>
+                </map:MapLegend>
+            </map:MapShapeLayer.Legend>
+
         </map:MapShapeLayer>
     </map:SfMaps.Layer>
 </map:SfMaps>
@@ -288,12 +392,48 @@ You can customize the legend item's text style using the [`MapLegend.TextStyle`]
         layer.ShapeStroke = Colors.DarkGrey;
         layer.ShapeColorValuePath = "Population";
 
-        layer.ColorMappings.Add(new RangeColorMapping() { Color = Colors.Red, From = 0, To = 100, Text = "< 100/km" });
-        layer.ColorMappings.Add(new RangeColorMapping() { Color = Colors.LightGreen, From = 101, To = 200, Text = "100 - 200/km" });
-        layer.ColorMappings.Add(new RangeColorMapping() { Color = Colors.Blue, From = 201, To = 300, Text = "200 - 300/km" });
-        layer.ColorMappings.Add(new RangeColorMapping() { Color = Colors.Orange, From = 301, To = 400, Text = "300 - 400/km" });
-        layer.ColorMappings.Add(new RangeColorMapping() { Color = Colors.Teal, From = 401, To = 500, Text = "400 - 500/km" });
-        layer.ColorMappings.Add(new RangeColorMapping() { Color = Colors.Purple, From = 501, To = 600, Text = "500 - 600/km" });
+        layer.ColorMappings.Add(new RangeColorMapping() 
+        {
+            Color = Colors.Red,
+            From = 0,
+            To = 100,
+            Text = "< 100/km"
+        });
+        layer.ColorMappings.Add(new RangeColorMapping() 
+        {
+            Color = Colors.LightGreen,
+            From = 101,
+            To = 200,
+            Text = "100 - 200/km"
+        });
+        layer.ColorMappings.Add(new RangeColorMapping()
+        { 
+            Color = Colors.Blue,
+            From = 201,
+            To = 300,
+            Text = "200 - 300/km"
+        });
+        layer.ColorMappings.Add(new RangeColorMapping()
+        {
+            Color = Colors.Orange,
+            From = 301,
+            To = 400,
+            Text = "300 - 400/km"
+        });
+        layer.ColorMappings.Add(new RangeColorMapping()
+        {
+            Color = Colors.Teal,
+            From = 401,
+            To = 500,
+            Text = "400 - 500/km"
+        });
+        layer.ColorMappings.Add(new RangeColorMapping()
+        {
+            Color = Colors.Purple,
+            From = 501,
+            To = 600,
+            Text = "500 - 600/km"
+        });
 
         MapLegend legendSet = new MapLegend();
         legendSet.SourceType = LegendSourceType.Shape;
@@ -360,24 +500,43 @@ You can position the legend items in different directions using the [`MapLegend.
 <map:SfMaps>
     <map:SfMaps.Layer>
         <map:MapShapeLayer DataSource="{Binding Data}"
-                           PrimaryValuePath="State" 
-                           ShapeDataField="name" 
-                           ShapeStroke="DarkGray" 
+                           PrimaryValuePath="State"
+                           ShapeDataField="name"
+                           ShapeStroke="DarkGray"
                            ShapeColorValuePath="Population">
 
-                <map:MapShapeLayer.ColorMappings>
-                    <map:RangeColorMapping Color="Red" From="0" To="100" Text="0 - 100/km" />
-                    <map:RangeColorMapping Color="LightGreen" From="101" To="200"  Text="100 - 200/km" />
-                    <map:RangeColorMapping Color="Blue" From="201" To="300"  Text="200 - 300/km" />
-                    <map:RangeColorMapping Color="Orange" From="301" To="400"  Text="300 - 400/km" />
-                    <map:RangeColorMapping Color="Teal" From="401" To="500"  Text="400 - 500/km" />
-                    <map:RangeColorMapping Color="Purple" From="501" To="600"  Text="500 - 600/km" />
-                </map:MapShapeLayer.ColorMappings>
+            <map:MapShapeLayer.ColorMappings>
+                <map:RangeColorMapping Color="Red"
+                                       From="0"
+                                       To="100"
+                                       Text="0 - 100/km" />
+                <map:RangeColorMapping Color="LightGreen"
+                                       From="101"
+                                       To="200"
+                                       Text="100 - 200/km" />
+                <map:RangeColorMapping Color="Blue"
+                                       From="201"
+                                       To="300"
+                                       Text="200 - 300/km" />
+                <map:RangeColorMapping Color="Orange"
+                                       From="301"
+                                       To="400"
+                                       Text="300 - 400/km" />
+                <map:RangeColorMapping Color="Teal"
+                                       From="401"
+                                       To="500"
+                                       Text="400 - 500/km" />
+                <map:RangeColorMapping Color="Purple"
+                                       From="501"
+                                       To="600"
+                                       Text="500 - 600/km" />
+            </map:MapShapeLayer.ColorMappings>
 
-                <map:MapShapeLayer.Legend>
-                    <map:MapLegend SourceType="Shape" Placement="Right" />
-                </map:MapShapeLayer.Legend>
-                
+            <map:MapShapeLayer.Legend>
+                <map:MapLegend SourceType="Shape"
+                               Placement="Right" />
+            </map:MapShapeLayer.Legend>
+
         </map:MapShapeLayer>
     </map:SfMaps.Layer>
 </map:SfMaps>
@@ -400,12 +559,48 @@ public MainPage()
     layer.ShapeStroke = Colors.DarkGrey;
     layer.ShapeColorValuePath = "Population";
 
-    layer.ColorMappings.Add(new RangeColorMapping() { Color = Colors.Red, From = 0, To = 100, Text = "< 100/km" });
-    layer.ColorMappings.Add(new RangeColorMapping() { Color = Colors.LightGreen, From = 101, To = 200, Text = "100 - 200/km" });
-    layer.ColorMappings.Add(new RangeColorMapping() { Color = Colors.Blue, From = 201, To = 300, Text = "200 - 300/km" });
-    layer.ColorMappings.Add(new RangeColorMapping() { Color = Colors.Orange, From = 301, To = 400, Text = "300 - 400/km" });
-    layer.ColorMappings.Add(new RangeColorMapping() { Color = Colors.Teal, From = 401, To = 500, Text = "400 - 500/km" });
-    layer.ColorMappings.Add(new RangeColorMapping() { Color = Colors.Purple, From = 501, To = 600, Text = "500 - 600/km" });
+    layer.ColorMappings.Add(new RangeColorMapping() 
+    {
+        Color = Colors.Red,
+        From = 0,
+        To = 100,
+        Text = "< 100/km"
+    });
+    layer.ColorMappings.Add(new RangeColorMapping() 
+    {
+        Color = Colors.LightGreen,
+        From = 101,
+        To = 200,
+        Text = "100 - 200/km"
+    });
+    layer.ColorMappings.Add(new RangeColorMapping()
+    { 
+        Color = Colors.Blue,
+        From = 201,
+        To = 300,
+        Text = "200 - 300/km"
+    });
+    layer.ColorMappings.Add(new RangeColorMapping()
+    {
+        Color = Colors.Orange,
+        From = 301,
+        To = 400,
+        Text = "300 - 400/km"
+    });
+    layer.ColorMappings.Add(new RangeColorMapping()
+    {
+        Color = Colors.Teal,
+        From = 401,
+        To = 500,
+        Text = "400 - 500/km"
+    });
+    layer.ColorMappings.Add(new RangeColorMapping()
+    {
+        Color = Colors.Purple,
+        From = 501,
+        To = 600,
+        Text = "500 - 600/km"
+    });
 
     MapLegend legendSet = new MapLegend();
     legendSet.SourceType = LegendSourceType.Shape;

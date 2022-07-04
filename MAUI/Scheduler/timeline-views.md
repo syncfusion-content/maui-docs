@@ -43,8 +43,6 @@ this.Scheduler.TimelineView.NumberOfVisibleDays = 3;
 {% endhighlight %}
 {% endtabs %}
 
-![number-of-days-visble-in-.net maui scheduler timeline views](images/day-week-views/)
-
 ## Change time interval
 
 The time interval between the time slots in the timeline day, timeline week, and timeline workweek views can be customized by using the [TimeInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_TimeInterval) property of the [TimelineView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineView.html).
