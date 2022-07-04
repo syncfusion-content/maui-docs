@@ -10,7 +10,7 @@ documentation: ug
 
 # System Requirements for .NET MAUI
 
-The system requirements for using our Syncfusion .NET MAUI platform are as follows.
+The system requirements for using our Syncfusion .NET MAUI platform are as follows
 
 ### Operating Systems
 
