@@ -9,7 +9,7 @@ documentation: UG
 
 # Data Binding in MAUI DataGrid (SfDataGrid)
 
-The [.NET MAUI DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) Control is bound to an external data source to display the data in the tabular format. It supports data sources such as List, and so on. The [SfDataGrid.ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ItemsSourceProperty) property helps to bind this control with collection of objects.
+The [.NET MAUI DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) Control is bound to an external data source to display the data in the tabular format. It supports data sources such as List, IEnumerable, and so on. The [SfDataGrid.ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ItemsSourceProperty) property helps to bind this control with collection of objects.
 
 Below codes demonstrate that how to bind a data source to the `SfDataGrid`. Each row in the SfDataGrid would bind to an object in data source. Each column would bind to a property in the data model object.
 
@@ -26,7 +26,7 @@ Below codes demonstrate that how to bind a data source to the `SfDataGrid`. Each
         <local:ViewModel/>
     </ContentPage.BindingContext>
 
-    <syncfusion:SfDataGrid x:Name="sfDataGrid" AutoGenerateColumnsMode="None" ItemsSource="{Binding OrderInfoCollection}" />
+    <syncfusion:SfDataGrid x:Name="sfDataGrid" ItemsSource="{Binding OrderInfoCollection}" />
 </ContentPage>
 {% endhighlight %}
 
@@ -88,7 +88,7 @@ During data manipulation operations and property changes, the `SfDataGrid` suppo
 </tr>
 <tr>
 <td>AllowDataShaping</td>
-<td>Data operations like sorting, grouping, and filtering are updated during data manipulation change.
+<td>Data operations like sorting, and filtering are updated during data manipulation change.
 </td>
 </tr>
 </table>
