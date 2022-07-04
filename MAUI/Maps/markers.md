@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Markers in .NET MAUI Maps control | Syncfusion
-description: Learn here all about the Markers feature of Syncfusion .NET MAUI Maps (SfMaps) control to customize its appearance including text, icon and more.
+description: Learn all about the Markers feature of Syncfusion .NET MAUI Maps (SfMaps) control to customize its appearance, including text, icon and more.
 platform: MAUI
 control: SfMaps
 documentation: ug
@@ -136,13 +136,13 @@ public MarkerTool()
 ![default marker](images/markers/default_marker.png)
 
 N>
-* Refer the [`MapMarkerCollection`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarkerCollection.html), for collection of [`MapMarker`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html).
+* Refer to the [`MapMarkerCollection`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarkerCollection.html), for collection of [`MapMarker`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html).
 
 ## Appearance customization
 
 You can customize the built-in markers appearance using the [`IconType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_IconType), [`IconFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_IconFill), [`IconStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_IconStroke), [`IconStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_IconStrokeThickness), [`IconWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_IconWidth) and [`IconHeight`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_IconHeight) properties of the [`MapMarker`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html).
 
-* **Alignment** - You can change the position of the marker from the given coordinate using the [`HorizontalAlignment`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_HorizontalAlignment) and [`VerticalAlignment`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_VerticalAlignment) property. The default value is [`MapAlignment.Center`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapAlignment.html#Syncfusion_Maui_Maps_MapAlignment_Center). The available alignment options are [`Center`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapAlignment.html#Syncfusion_Maui_Maps_MapAlignment_Center), [`Start`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapAlignment.html#Syncfusion_Maui_Maps_MapAlignment_Start), [`End`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapAlignment.html#Syncfusion_Maui_Maps_MapAlignment_End).
+* **Alignment** - You can change the position of the marker from the given coordinate using the [`HorizontalAlignment`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_HorizontalAlignment) and [`VerticalAlignment`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_VerticalAlignment) properties. The default value is [`MapAlignment.Center`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapAlignment.html#Syncfusion_Maui_Maps_MapAlignment_Center). The available alignment options are [`Center`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapAlignment.html#Syncfusion_Maui_Maps_MapAlignment_Center), [`Start`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapAlignment.html#Syncfusion_Maui_Maps_MapAlignment_Start), [`End`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapAlignment.html#Syncfusion_Maui_Maps_MapAlignment_End).
 * **Offset** - You can adjust the marker position from the given coordinate using the [`Offset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_Offset) property. The default value of the [`Offset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_Offset) property is `Offset.zero`.
 
 N>
@@ -313,13 +313,29 @@ You can show custom marker using the [`MarkerTemplate`](https://help.syncfusion.
         <map:MapShapeLayer ShapeStroke="DarkGrey"
                            MarkerTemplate="{StaticResource LowPopulationTemplate}"
                            ShowMarkerTooltip="True">
+
             <map:MapShapeLayer.Markers>
                 <map:MapMarkerCollection>
-                    <map:MapMarker Latitude="20.5595" Longitude="22.9375" HorizontalAlignment="Center" VerticalAlignment="Start"/>
-                    <map:MapMarker Latitude="21.7679" Longitude="78.8718" HorizontalAlignment="Center" VerticalAlignment="Start"  />
-                    <map:MapMarker Latitude="133.7751" Longitude="25.2744" HorizontalAlignment="Center" VerticalAlignment="Start" />
-                    <map:MapMarker Latitude="60.2551" Longitude="84.5260" HorizontalAlignment="Center" VerticalAlignment="Start" />
-                    <map:MapMarker Latitude="195.4915" Longitude="-50.7832" HorizontalAlignment="Center" VerticalAlignment="Start"  />
+                    <map:MapMarker Latitude="20.5595"
+                                   Longitude="22.9375"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Start" />
+                    <map:MapMarker Latitude="21.7679"
+                                   Longitude="78.8718"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Start" />
+                    <map:MapMarker Latitude="133.7751"
+                                   Longitude="25.2744"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Start" />
+                    <map:MapMarker Latitude="60.2551"
+                                   Longitude="84.5260"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Start" />
+                    <map:MapMarker Latitude="195.4915"
+                                   Longitude="-50.7832"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Start" />
                 </map:MapMarkerCollection>
             </map:MapShapeLayer.Markers>
         </map:MapShapeLayer>
@@ -378,7 +394,12 @@ You can show custom marker using the [`MarkerTemplate`](https://help.syncfusion.
         return new DataTemplate(() =>
         {
             var stackLayout = new StackLayout();
-            var image = new Image { Source = "map.png", WidthRequest = 20, HeightRequest = 20 };
+            var image = new Image
+            {
+                Source = "map.png",
+                WidthRequest = 20,
+                HeightRequest = 20
+            };
             stackLayout.Add(image);
             return new ViewCell { View = stackLayout };
         });
@@ -392,7 +413,7 @@ You can show custom marker using the [`MarkerTemplate`](https://help.syncfusion.
 
 ### Customizing data templates in marker tooltip
 
-Data template can be used to customize the marker tooltip using [`MarkerTooltipTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_MarkerTooltipTemplate) property. The following code example shows the usage of `DataTemplate`.
+A data template can be used to customize the marker tooltip using [`MarkerTooltipTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_MarkerTooltipTemplate) property. The following code example shows the usage of `DataTemplate`.
 
 {% tabs %}
 
@@ -414,40 +435,67 @@ Data template can be used to customize the marker tooltip using [`MarkerTooltipT
 <map:SfMaps>
     <map:SfMaps.Layer>
         <map:MapShapeLayer ShapeStroke="DarkGrey"
-                           ShapeHoverFill="Transparent"   
+                           ShapeHoverFill="Transparent"
                            ShapeHoverStroke="Transparent"
                            MarkerTemplate="{StaticResource MapMarkerTemplate}"
                            ShowMarkerTooltip="True">
-                            
+
             <map:MapShapeLayer.Markers>
                 <map:MapMarkerCollection>
-                    <local:CustomMarker Name="South africa" Area="38,570,000 sq. km."  Latitude="20.5595" Longitude="22.9375"  />
-                    <local:CustomMarker Name="India" Area="30,370,000 sq. km." Latitude="21.7679" Longitude="78.8718"  />
-                    <local:CustomMarker Name="Europe" Area="20,370,000 sq. km." Latitude="133.7751"  Longitude="25.2744"  />
-                    <local:CustomMarker Name="Asia" Area="50,570,000 sq. km." Latitude="60.2551" Longitude="84.5260" />
-                    <local:CustomMarker Name="South America" Area="30,370,000 sq. km." Latitude="195.4915"  Longitude="-50.7832"  />
+                    <local:CustomMarker Name="South africa"
+                                        Area="38,570,000 sq. km."
+                                        Latitude="20.5595"
+                                        Longitude="22.9375" />
+                    <local:CustomMarker Name="India"
+                                        Area="30,370,000 sq. km."
+                                        Latitude="21.7679"
+                                        Longitude="78.8718" />
+                    <local:CustomMarker Name="Europe"
+                                        Area="20,370,000 sq. km."
+                                        Latitude="133.7751"
+                                        Longitude="25.2744" />
+                    <local:CustomMarker Name="Asia"
+                                        Area="50,570,000 sq. km."
+                                        Latitude="60.2551"
+                                        Longitude="84.5260" />
+                    <local:CustomMarker Name="South America"
+                                        Area="30,370,000 sq. km."
+                                        Latitude="195.4915"
+                                        Longitude="-50.7832" />
                 </map:MapMarkerCollection>
             </map:MapShapeLayer.Markers>
-        
+
             <map:MapShapeLayer.MarkerTooltipTemplate>
                 <DataTemplate>
-                    <Grid Padding="10" WidthRequest="150">
+                    <Grid Padding="10"
+                          WidthRequest="150">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto" />
                             <RowDefinition Height="Auto" />
                             <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="10"/>
-                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="10" />
+                            <ColumnDefinition Width="Auto" />
                         </Grid.ColumnDefinitions>
-                        <Image Source="flag.png" Grid.Column="0" Grid.Row="0" WidthRequest="20" HeightRequest="20" />
-                        <Label Text="{Binding Name}" TextColor="White"  Grid.Column="1" Grid.Row="0" Padding="10"/>
-                        <Label Grid.Row="2" Grid.ColumnSpan="2"  Text="{Binding Area}" TextColor="White" />
+                        <Image Source="flag.png"
+                               Grid.Column="0"
+                               Grid.Row="0"
+                               WidthRequest="20"
+                               HeightRequest="20" />
+                        <Label Text="{Binding Name}"
+                               TextColor="White"
+                               Grid.Column="1"
+                               Grid.Row="0"
+                               Padding="10" />
+                        <Label Grid.Row="2"
+                               Grid.ColumnSpan="2"
+                               Text="{Binding Area}"
+                               TextColor="White" />
                     </Grid>
                 </DataTemplate>
             </map:MapShapeLayer.MarkerTooltipTemplate>
-        
+
         </map:MapShapeLayer>
     </map:SfMaps.Layer>
 </map:SfMaps>
@@ -518,7 +566,12 @@ Data template can be used to customize the marker tooltip using [`MarkerTooltipT
         return new DataTemplate(() =>
         {
             var stackLayout = new StackLayout();
-            var image = new Image { Source = "map.png", WidthRequest = 20, HeightRequest = 20 };
+            var image = new Image
+            {
+                Source = "map.png",
+                WidthRequest = 20,
+                HeightRequest = 20
+            };
             stackLayout.Add(image);
             return new ViewCell { View = stackLayout };
         });
@@ -543,15 +596,33 @@ Data template can be used to customize the marker tooltip using [`MarkerTooltipT
                 }
             };
           
-            var image = new Image { Source = "flag.png", WidthRequest = 20, HeightRequest = 20 };
-            grid.SetRow(image, 0); grid.SetColumn(image, 0);
-            var label = new Label { FontAttributes = FontAttributes.Bold, TextColor = Colors.White, Padding = 5, Text = "Asia", };
+            var image = new Image
+            {
+                Source = "flag.png",
+                WidthRequest = 20,
+                HeightRequest = 20
+            };
+            grid.SetRow(image, 0);
+            grid.SetColumn(image, 0);
+            var label = new Label
+            {
+                FontAttributes = FontAttributes.Bold,
+                TextColor = Colors.White,
+                Padding = 5,
+                Text = "Asia"
+            };
             Binding binding = new Binding();
             binding.Path = nameof(CustomMarker1.Name);
             label.SetBinding(Label.TextProperty, binding);
-            grid.SetRow(label, 0); grid.SetColumn(label, 1);
+            grid.SetRow(label, 0);
+            grid.SetColumn(label, 1);
            
-            var areaLabel = new Label { FontAttributes = FontAttributes.Bold, Text = "10,180,000 sq. km.", TextColor = Colors.White, };
+            var areaLabel = new Label
+            {
+                FontAttributes = FontAttributes.Bold,
+                Text = "10,180,000 sq. km.",
+                TextColor = Colors.White
+            };
             Binding binding1 = new Binding();
             binding1.Path = nameof(CustomMarker1.Area);
             areaLabel.SetBinding(Label.TextProperty, binding1);
@@ -578,7 +649,7 @@ Data template can be used to customize the marker tooltip using [`MarkerTooltipT
 
 ### Customizing data templates selector in markers
 
-Data template selector also can be customized the appearance of each item with different templates based on specific constraints . You can choose a DataTemplate for each item at runtime based on the value of data-bound property using DataTemplateSelector in [`MarkerTooltipTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_MarkerTooltipTemplate) property.
+A data template selector also can be used to customize the appearance of each item with different templates based on specific constraints . You can choose a DataTemplate for each item at runtime based on the value of data-bound property using DataTemplateSelector in [`MarkerTooltipTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_MarkerTooltipTemplate) property.
 
 {% tabs %}
 
@@ -623,19 +694,30 @@ Data template selector also can be customized the appearance of each item with d
 
 	<map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapesSource = "{local:ImageResource MyProject.world1.shp}"
-							   ShapeStroke="DarkGrey"
+            <map:MapShapeLayer ShapeStroke="DarkGrey"
 							   MarkerTemplate="{StaticResource MarkerTemplateSelector}">
 							   
-            <map:MapShapeLayer.Markers>
-                <map:MapMarkerCollection>
-                     <local:CustomMarker1 Latitude="21.7679" Longitude="78.8718" Area = "10,370,000 sq. km." Population="15"  />
-                     <local:CustomMarker1 Latitude="133.7751" Longitude="25.2744" Area = "20,370,000 sq. km." Population="31" />
-                     <local:CustomMarker1 Latitude="60.2551" Longitude="84.5260"   Area = "50,570,000 sq. km." Population="26" />
-                     <local:CustomMarker1 Latitude="195.4915" Longitude="-50.7832" Area = "30,370,000 sq. km." Population="40"/>
-                </map:MapMarkerCollection>
-            </map:MapShapeLayer.Markers>
-			
+                <map:MapShapeLayer.Markers>
+                    <map:MapMarkerCollection>
+                        <local:CustomMarker1 Latitude="21.7679"
+                                             Longitude="78.8718"
+                                             Area="10,370,000 sq. km."
+                                             Population="15" />
+                        <local:CustomMarker1 Latitude="133.7751"
+                                             Longitude="25.2744"
+                                             Area="20,370,000 sq. km."
+                                             Population="31" />
+                        <local:CustomMarker1 Latitude="60.2551"
+                                             Longitude="84.5260"
+                                             Area="50,570,000 sq. km."
+                                             Population="26" />
+                        <local:CustomMarker1 Latitude="195.4915"
+                                             Longitude="-50.7832"
+                                             Area="30,370,000 sq. km."
+                                             Population="40" />
+                    </map:MapMarkerCollection>
+                </map:MapShapeLayer.Markers>
+
             </map:MapShapeLayer>
         </map:SfMaps.Layer>
     </map:SfMaps>

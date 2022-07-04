@@ -17,9 +17,33 @@ The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sc
 
 * **Work week view**: It displays only the working days of a week. By default, Saturday and Sunday are not working days. It can be customized with any day of the week.
 
+## Number of days visible in the days view 
+
+The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) number of visible days in the day, week, and workweek can be adjusted by changing the [NumberOfVisibleDays]() property of the [DaysView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDaysView.html).
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
+
+ <scheduler:SfScheduler x:Name="Scheduler" 
+                        View="Week">
+    <scheduler:SfScheduler.DaysView>
+        <scheduler:SchedulerDaysView 
+                        NumberOfVisibleDays="3"/>
+    </scheduler:SfScheduler.DaysView>
+ </scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
+
+this.Scheduler.View = SchedulerView.Week;
+this.Scheduler.DaysView.NumberOfVisibleDays = 3;
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Change time interval
 
-The time interval between the time slots in the day, week and workweek views can be customized by using the [TimeInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_TimeInterval) property of [DaysView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDaysView.html).
+The time interval between the time slots in the day, week, and workweek views can be customized by using the [TimeInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_TimeInterval) property of the [DaysView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDaysView.html).
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}

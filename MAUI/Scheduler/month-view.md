@@ -79,6 +79,32 @@ this.Scheduler.MonthView.ShowLeadingAndTrailingDates = false;
 
 ![show-or-hide-leading-and-trailing-days-appearence-customization-in-maui-scheduler](images/month-view/show-or-hide-leading-and-trailing-days-appearence-customization-in-maui-scheduler.png)
 
+## Number of weeks visible in the month view 
+
+The number of week visible in the month view can be changed by setting the [NumberOfVisibleWeeks]() property in the [MonthView](). 
+
+{% tabs %}  
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
+
+ <scheduler:SfScheduler x:Name="Scheduler" 
+                        View="Month">
+    <scheduler:SfScheduler.MonthView>
+        <scheduler:SchedulerMonthView  
+                       NumberOfVisibleWeeks="2"/>
+    </scheduler:SfScheduler.MonthView>
+ </scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
+
+this.Scheduler.View = SchedulerView.Month;
+this.Scheduler.MonthView.NumberOfVisibleWeeks = 2;
+
+{% endhighlight %}  
+{% endtabs %}
+
+![number-of-visble-weeks-in-monthview](images/month-view/)
+
 ## View header
 
 You can customize the default appearance of view header in a month view by setting the [DayFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViewHeaderSettings.html#Syncfusion_Maui_Scheduler_SchedulerViewHeaderSettings_DayFormat), [DayTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViewHeaderSettings.html#Syncfusion_Maui_Scheduler_SchedulerViewHeaderSettings_DayTextStyle), [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderSettingsBase.html#Syncfusion_Maui_Scheduler_SchedulerHeaderSettingsBase_Background), [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderSettingsBase.html#Syncfusion_Maui_Scheduler_SchedulerHeaderSettingsBase_Height), and [ViewHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_ViewHeaderTemplate) properties of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
