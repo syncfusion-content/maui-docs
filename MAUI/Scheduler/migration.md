@@ -1458,7 +1458,7 @@ this.Content = scheduler;
 <tr>
 <td>Nil</td>
 <td>{{'[NumberOfVisibleDays](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_NumberOfVisibleDays' | markdownify }}</td>
-<td>Gets or sets a value to display the number of days of Day, Week, WorkWeek, TimelineDay, TimelineWeek, TimelineWorkWeek in the SfScheduler</td></tr>
+<td>Gets or sets a value to display the number of days of Day, Week, WorkWeek in the SfScheduler</td></tr>
 
  </table> 
 
@@ -1614,6 +1614,11 @@ this.Content = scheduler;
 <td>{{'[BorderWidth](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSchedule.XForms.TimelineViewSettings.html#Syncfusion_SfSchedule_XForms_TimelineViewSettings_BorderWidth)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td></tr>
+
+<tr>
+<td>Nil</td>
+<td>{{'[NumberOfVisibleDays](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_NumberOfVisibleDays' | markdownify }}</td>
+<td>Gets or sets a value to display the number of days of TimelineDay, TimelineWeek, TimelineWorkWeek in the SfScheduler</td></tr>
 
  </table> 
 
