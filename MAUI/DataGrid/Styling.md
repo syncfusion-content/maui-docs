@@ -9,7 +9,7 @@ documentation: ug
 
 # Styling in .NET MAUI DataGrid (SfDataGrid)
 
-The [DataGrid] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.html) applies style for all of its elements by setting desired values to the style properties in [SfDataGrid.DefaultStyle] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DefaultStyleProperty).
+The [DataGrid] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.html) applies style for all of its elements by setting desired values to the style properties in [SfDataGrid.DefaultStyle] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DefaultStyleProperty). This property has all the required styling properties for each and every elements in the DataGrid.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
@@ -17,7 +17,7 @@ The [DataGrid] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.htm
     <ContentPage.Content>
         <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}" >
             <syncfusion:SfDataGrid.DefaultStyle>
-                <syncfusion:DataGridStyle HeaderRowBackground="Red" HeaderRowTextColor="White" RowBackground="Bisque" RowTextColor="Red"/>
+                <syncfusion:DataGridStyle HeaderRowBackground="#0074E3" HeaderRowTextColor="White" RowBackground="#AFD5FB" RowTextColor="#212121"/>
             </syncfusion:SfDataGrid.DefaultStyle>
         </syncfusion:SfDataGrid>
     </ContentPage.Content>
@@ -29,10 +29,10 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        this.dataGrid.DefaultStyle.HeaderRowBackground = Colors.Red;
+        this.dataGrid.DefaultStyle.HeaderRowBackground = Color.FromArgb("#0074E3");
         this.dataGrid.DefaultStyle.HeaderRowTextColor = Colors.White;
-        this.dataGrid.DefaultStyle.RowBackground = Colors.Bisque;
-        this.dataGrid.DefaultStyle.RowTextColor = Colors.Red;
+        this.dataGrid.DefaultStyle.RowBackground = Color.FromArgb("#AFD5FB");
+        this.dataGrid.DefaultStyle.RowTextColor = Color.FromArgb("#212121");
     }
 }
 {% endhighlight %}
@@ -44,7 +44,7 @@ public partial class MainPage : ContentPage
 You can write custom style for the properties in `SfDataGrid.DefaultStyle` class using application resource and consume the custom style as static resource to the DefaultSyle property for the required DataGrid used in that page.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml"%}
+{% highlight xaml tabtitle="App.xaml"%}
 <Application.Resources>
     <ResourceDictionary>
         <syncfusion:DataGridStyle x:Key="customStyle" 
@@ -54,6 +54,8 @@ You can write custom style for the properties in `SfDataGrid.DefaultStyle` class
                                   HeaderRowTextColor="White"/>
     </ResourceDictionary>
 </Application.Resources>
+{% endhighlight %}
+{% highlight xaml tabtitle="MainPage.xaml"%}
 <ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
     <ContentPage.Content>
         <syncfusion:SfDataGrid DefaultStyle="{StaticResource customStyle}" ItemsSource="{Binding OrderInfoCollection}" />
@@ -87,18 +89,18 @@ You can write custom style for the properties in `SfDataGrid.DefaultStyle` class
 ![App or Page resource Styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-app-page-resource.png)
 
 ## Implicit styling
-The appearance of DataGrid (SfDataGrid) and its inner elements can be customized by writing style of TargetType to those control. If the key is not specified, then the style will be applied to all the SfDataGrid in its scope. You can apply specific to `SfDataGrid` or [DataGridRow] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridRow.html) or [DataGridCell] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html) using various properties exposed.
+The appearance of DataGrid (SfDataGrid) and its inner elements can be customized by writing style of TargetType to those control. If the key is not specified, then the style will be applied to all the SfDataGrid in its scope. You can apply specific to [DataGridRow] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridRow.html) or [DataGridCell] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html) using various properties exposed.
 
 ### Styling Record cell
-The record cells can be customized by writing style of TargetType [DataGridCell] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html). Underlying record will be the DataContext for `DataGridCell`.
+The record cells can be customized by writing style for [DataGridCell] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html) TargetType. Underlying record will be the DataContext for `DataGridCell`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
 <ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
     <ContentPage.Resources>
         <Style TargetType="syncfusion:DataGridCell">
-            <Setter Property="Background" Value="Bisque"/>
-            <Setter Property="TextColor" Value="Red"/>
+            <Setter Property="Background" Value="#AFD5FB"/>
+            <Setter Property="TextColor" Value="#212121"/>
             <Setter Property="FontAttributes" Value="Italic"/>
             <Setter Property="FontSize" Value="14"/>
             <Setter Property="FontFamily" Value="TimesNewRoman"/>
@@ -111,14 +113,14 @@ The record cells can be customized by writing style of TargetType [DataGridCell]
 ![Record cell styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-recordcell-style.png)
 
 ### Styling Record row
-The record row can be customized by writing style of TargetType [DataGridRow] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridRow.html). 
+The record row can be customized by writing style for [DataGridRow] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridRow.html) TargetType. 
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
 <ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
     <ContentPage.Resources>
         <Style TargetType="syncfusion:DataGridRow">
-            <Setter Property="Background" Value="Bisque"/>
+            <Setter Property="Background" Value="#AFD5FB"/>
         </Style>
     </ContentPage.Resources>
 </ContentPage>
@@ -128,15 +130,15 @@ The record row can be customized by writing style of TargetType [DataGridRow] (h
 ![Record row styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-recordrow-style.png)
 
 ### Styling Header cell
-The header cells can be customized by writing style of TargetType [DataGridHeaderCell] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridHeaderCell.html).
+The header cells can be customized by writing style for [DataGridHeaderCell] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridHeaderCell.html) TargetType.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
 <ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
     <ContentPage.Resources>
         <Style TargetType="syncfusion:DataGridHeaderCell">
-            <Setter Property="Background" Value="Bisque"/>
-            <Setter Property="TextColor" Value="Red"/>
+            <Setter Property="Background" Value="#0074E3"/>
+            <Setter Property="TextColor" Value="White"/>
             <Setter Property="FontAttributes" Value="Bold"/>
             <Setter Property="FontSize" Value="14"/>
             <Setter Property="FontFamily" Value="TimesNewRoman"/>
@@ -149,14 +151,14 @@ The header cells can be customized by writing style of TargetType [DataGridHeade
 ![Header cell styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-headercell-style.png)
 
 ### Styling Header row
-The header row can be customized by writing style of TargetType [DataGridHeaderRow] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridHeaderRow.html).
+The header row can be customized by writing style for [DataGridHeaderRow] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridHeaderRow.html) TargetType.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
 <ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
     <ContentPage.Resources>
         <Style TargetType="syncfusion:DataGridHeaderRow">
-            <Setter Property="Background" Value="Bisque"/>
+            <Setter Property="Background" Value="#0074E3"/>
         </Style>
     </ContentPage.Resources>
 </ContentPage>
@@ -173,15 +175,15 @@ You can apply the style for a particular column by using [DataGridColumn.CellSty
 <ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
     <ContentPage.Resources>
         <Style TargetType="syncfusion:DataGridHeaderCell" x:Key="customHeaderStyle">
-            <Setter Property="Background" Value="Red"/>
-            <Setter Property="TextColor" Value="Bisque"/>
+            <Setter Property="Background" Value="#0074E3"/>
+            <Setter Property="TextColor" Value="White"/>
             <Setter Property="FontAttributes" Value="Bold"/>
             <Setter Property="FontSize" Value="14"/>
             <Setter Property="FontFamily" Value="TimesNewRoman"/>
         </Style>
         <Style TargetType="syncfusion:DataGridCell" x:Key="customCellStyle">
-            <Setter Property="Background" Value="Bisque"/>
-            <Setter Property="TextColor" Value="Red"/>
+            <Setter Property="Background" Value="#AFD5FB"/>
+            <Setter Property="TextColor" Value="#212121"/>
             <Setter Property="FontAttributes" Value="Italic"/>
             <Setter Property="FontSize" Value="14"/>
             <Setter Property="FontFamily" Value="TimesNewRoman"/>
@@ -210,7 +212,7 @@ You can apply the alternative row color by using [AlternateRowBackground] (https
     <ContentPage.Content>
         <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}">
             <syncfusion:SfDataGrid.DefaultStyle>
-                <syncfusion:DataGridStyle AlternateRowBackground="Bisque"/>
+                <syncfusion:DataGridStyle AlternateRowBackground="#AFD5FB"/>
             </syncfusion:SfDataGrid.DefaultStyle>
         </syncfusion:SfDataGrid>
     </ContentPage.Content>
@@ -222,7 +224,7 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        this.dataGrid.DefaultStyle.AlternateRowBackground = Colors.Bisque;
+        this.dataGrid.DefaultStyle.AlternateRowBackground = Color.FromArgb("#AFD5FB");
     }
 }
 {% endhighlight %}
@@ -231,7 +233,7 @@ public partial class MainPage : ContentPage
 ![Alternative row style in .NET MAUI DataGrid](Images/styling/maui-datagrid-Alternativerow-style.png)
 
 ## Changing the alternation row count
-You can customize the alternate row count for applying the alternate row style using the [SfDataGrid.AlternationRowCount] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AlternationRowCountProperty) property.
+You can change the row count which should be considered to apply the background for alternate rows using the [SfDataGrid.AlternationRowCount] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AlternationRowCountProperty) property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
@@ -240,7 +242,7 @@ You can customize the alternate row count for applying the alternate row style u
         <syncfusion:SfDataGrid AlternationRowCount="3" 
                             ItemsSource="{Binding OrderInfoCollection}">
             <syncfusion:SfDataGrid.DefaultStyle>
-                <syncfusion:DataGridStyle AlternateRowBackground="Bisque"/>
+                <syncfusion:DataGridStyle AlternateRowBackground="#AFD5FB"/>
             </syncfusion:SfDataGrid.DefaultStyle>
         </syncfusion:SfDataGrid>
     </ContentPage.Content>
@@ -252,7 +254,7 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        this.dataGrid.DefaultStyle.AlternateRowBackground = Colors.Bisque;
+        this.dataGrid.DefaultStyle.AlternateRowBackground = Color.FromArgb("#AFD5FB");
         this.dataGrid.AlternationRowCount = 3;
     }
 }
@@ -286,7 +288,8 @@ You can apply the style for header and row font attributes by using SfDataGrid.D
 ![Changing the font style .NET MAUI DataGrid](Images/styling/maui-datagrid-font-style.png)
 
 ## Border customization
-The data grid customizes the grid borders to vertical, horizontal, both or none. Set desired value to [SfDataGrid.GridLinesVisibility] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_GridLinesVisibilityProperty) or [SfDataGrid.HeaderGridLinesVisibility] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_HeaderGridLinesVisibilityProperty)
+The DataGrid provides support to change the visibility of the vertical and horizontal borders. Set desired value to [SfDataGrid.GridLinesVisibility] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_GridLinesVisibilityProperty) for data rows or [SfDataGrid.HeaderGridLinesVisibility] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_HeaderGridLinesVisibilityProperty) for header row.
+
 Following are the list of options available to customize the grid borders:
 .	Both
 .	Horizontal
@@ -320,90 +323,6 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ![Both GridLinesVisibility in .NET MAUI DataGrid](Images/styling/maui-datagrid-both-gridlinesvisibility.png)
-
-### Horizontal
-The [GridLinesVisibility.Horizontal] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.GridLinesVisibility.html#Syncfusion_Maui_DataGrid_GridLinesVisibility_Horizontal) allows displays the data grid with horizontal border only.
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml"%}
-<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
-    <ContentPage.Content>
-        <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}"
-                            GridLinesVisibility="Horizontal"
-                            HeaderGridLinesVisibility="Horizontal"/>
-    </ContentPage.Content>
-</ContentPage>
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        this.dataGrid.GridLinesVisibility = Syncfusion.Maui.DataGrid.GridLinesVisibility.Horizontal;
-        this.dataGrid.HeaderGridLinesVisibility = Syncfusion.Maui.DataGrid.GridLinesVisibility.Horizontal;
-    }
-}
-{% endhighlight %}
-{% endtabs %}
-
-![Horizontal GridLinesVisibility in .NET MAUI DataGrid](Images/styling/maui-datagrid-horizontal-gridlinesvisibility.png)
-
-### Vertical
-The [GridLinesVisibility.Vertical] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.GridLinesVisibility.html#Syncfusion_Maui_DataGrid_GridLinesVisibility_Vertical) displays the data grid with vertical border only.
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml"%}
-<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
-    <ContentPage.Content>
-        <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}"
-                            GridLinesVisibility="Vertical"
-                            HeaderGridLinesVisibility="Vertical"/>
-    </ContentPage.Content>
-</ContentPage>
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        this.dataGrid.GridLinesVisibility = Syncfusion.Maui.DataGrid.GridLinesVisibility.Vertical;
-        this.dataGrid.HeaderGridLinesVisibility = Syncfusion.Maui.DataGrid.GridLinesVisibility.Vertical;
-    }
-}
-{% endhighlight %}
-{% endtabs %}
-
-![Vertical GridLinesVisibility in .NET MAUI DataGrid](Images/styling/maui-datagrid-vertical-gridlinesvisibility.png)
-
-### None
-The [GridLinesVisibility.None] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.GridLinesVisibility.html#Syncfusion_Maui_DataGrid_GridLinesVisibility_None) allows you to display the data grid without borders.
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml"%}
-<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
-    <ContentPage.Content>
-        <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}"
-                            GridLinesVisibility="None"
-                            HeaderGridLinesVisibility="None"/>
-    </ContentPage.Content>
-</ContentPage>
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        this.dataGrid.GridLinesVisibility = Syncfusion.Maui.DataGrid.GridLinesVisibility.None;
-        this.dataGrid.HeaderGridLinesVisibility = Syncfusion.Maui.DataGrid.GridLinesVisibility.None;
-    }
-}
-{% endhighlight %}
-{% endtabs %}
-
-![None GridLinesVisibility in .NET MAUI DataGrid](Images/styling/maui-datagrid-none-gridlinesvisibility.png)
 
 ## Changing the border width
 You can change the border width by using [GridLineStrokeThickness] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_GridLineStrokeThicknessProperty) property in `SfDataGrid.DefaultStyle`.
