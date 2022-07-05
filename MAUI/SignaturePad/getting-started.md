@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI SignaturePad 
 
-This section explains the steps required to add the SignaturePad control and its elements such as minimum and maximum stroke thickness, and stroke color. This section also covers how to save the signature as an image, clear the existing signature in SignaturePad and handle the `DrawStarted` and `DrawCompleted` callbacks in the SignaturePad control.
+This section explains the steps required to add the SignaturePad control and its elements such as minimum and maximum stroke thickness, and stroke color. This section also covers how to save the signature as an image, clear the existing signature in SignaturePad and handle the [`DrawStarted`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_DrawStarted) and [`DrawCompleted`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_DrawCompleted) callbacks in the SignaturePad control.
 
 ## Creating an application with .NET MAUI
 
@@ -56,7 +56,7 @@ namespace SignaturePadGettingStarted
 
 ## Initialize signature pad
 
-Import the `SfSignaturePad` namespace and initialize the SignaturePad as shown below.
+Import the [`SfSignaturePad`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html) namespace and initialize the SignaturePad as shown below.
 
 {% tabs %}
 
@@ -98,7 +98,7 @@ namespace SignaturePadGettingStarted
 
 ## Customize signature stroke color
 
-Customize the stroke color of the SignaturePad control by using the `StrokeColor` property. The default stroke color is `Colors.Black`.
+Customize the stroke color of the SignaturePad control by using the [`StrokeColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_StrokeColor) property. The default stroke color is `Colors.Black`.
 
 {% tabs %}
 
@@ -123,7 +123,7 @@ SfSignaturePad signaturePad = new SfSignaturePad()
 
 ## Customize signature stroke thickness
 
-The thickness of the stroke drawn can be customized by setting the `MinimumStrokeThickness` and `MaximumStrokeThickness` properties. The `MinimumStrokeThickness` defines the minimum thickness of the stroke and the `MaximumStrokeThickness` defines the maximum thickness of the stroke that can be drawn based on the speed and impression we provide through gesture within its minimum and maximum stroke thickness ranges. So that the signature will be more realistic.
+The thickness of the stroke drawn can be customized by setting the [`MinimumStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_MinimumStrokeThickness) and [`MaximumStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_MaximumStrokeThickness) properties. The [`MinimumStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_MinimumStrokeThickness) defines the minimum thickness of the stroke and the [`MaximumStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_MaximumStrokeThickness) defines the maximum thickness of the stroke that can be drawn based on the speed and impression we provide through gesture within its minimum and maximum stroke thickness ranges. So that the signature will be more realistic.
 
 {% tabs %}
 
@@ -150,7 +150,7 @@ SfSignaturePad signaturePad = new SfSignaturePad()
 
 ## Saving the signature as an image
 
-Save the signature drawn in the SignaturePad as an [`ImageSource`](https://docs.microsoft.com/en-us/dotnet/api/xamarin.forms.imagesource?view=xamarin-forms) using the `ToImageSource()` method which can further be synchronized with your devices and documents that need your signature.
+Save the signature drawn in the SignaturePad as an [`ImageSource`](https://docs.microsoft.com/en-us/dotnet/api/xamarin.forms.imagesource?view=xamarin-forms) using the [`ToImageSource()`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_ToImageSource) method which can further be synchronized with your devices and documents that need your signature.
 
 {% tabs %}
 
@@ -179,7 +179,7 @@ private void OnSaveButtonClicked(object? sender, EventArgs e)
 
 ## Clear the existing signature in SignaturePad
 
-Clear the signature drawn in the SignaturePad using the `Clear()` method as shown in the code snippet below:
+Clear the signature drawn in the SignaturePad using the [`Clear()`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_Clear) method as shown in the code snippet below:
 
 {% tabs %}
 
@@ -210,7 +210,7 @@ private void OnClearButtonClicked(object? sender, EventArgs e)
 
 ### DrawStarted
 
-This event will be triggered when we start drawing in the SignaturePad. With this, `CancelEventArgs` will be passed. Also, restrict the draw start action by setting `e.cancel` as `true`.
+This event will be triggered when we start drawing in the SignaturePad. With this, [`CancelEventArgs`](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.canceleventargs.-ctor?view=net-6.0#system-componentmodel-canceleventargs-ctor(system-boolean)) will be passed. Also, restrict the draw start action by setting [`e.cancel`](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.canceleventargs.cancel?view=net-6.0#system-componentmodel-canceleventargs-cancel) as `true`.
 
 {% tabs %}
 

@@ -73,7 +73,7 @@ slider.TrackStyle.InactiveSize = 8;
 
 ## Track extent
 
-Extend the track at the edges using the `TrackExtent` property. The default value is `0` and it should be in pixels.
+Extend the track at the edges using the [`TrackExtent`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_TrackExtent) property. The default value is `0` and it should be in pixels.
 
 {% tabs %}
 
