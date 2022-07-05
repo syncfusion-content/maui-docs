@@ -185,8 +185,8 @@ Change the state of the range slider to disabled by setting `false` to the `IsEn
                         <VisualState.Setters>
                             <Setter Property="DividerStyle">
                                 <Setter.Value>
-                                    <sliders:SliderDividerStyle ActiveFill = "grey"
-                                                                    InactiveFill="LightGrey"
+                                    <sliders:SliderDividerStyle ActiveFill = "gray"
+                                                                    InactiveFill="LightGray"
                                                                     ActiveRadius="5"
                                                                     InactiveRadius="4"/>
                                 </Setter.Value>
@@ -239,8 +239,8 @@ disabledState.Setters.Add(new Setter
     Property = SfRangeSlider.DividerStyleProperty,
     Value = new SliderDividerStyle
     {
-        ActiveFill = Colors.Grey,
-        InactiveFill = Colors.LightGrey,
+        ActiveFill = Colors.Gray,
+        InactiveFill = Colors.LightGray,
         ActiveRadius = 5,
         InactiveRadius = 4,
     }

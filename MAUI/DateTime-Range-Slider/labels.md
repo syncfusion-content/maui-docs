@@ -305,8 +305,8 @@ Change the state of the DateTime Range Slider to disabled by setting `false` to 
                         <VisualState.Setters>
                             <Setter Property="LabelStyle">
                                 <Setter.Value>
-                                    <sliders:SliderLabelStyle ActiveTextColor = "Grey"
-                                                                  InactiveTextColor="LightGrey"
+                                    <sliders:SliderLabelStyle ActiveTextColor = "Gray"
+                                                                  InactiveTextColor="LightGray"
                                                                   ActiveFontSize="14"
                                                                   InactiveFontSize="16"
                                                                   ActiveFontAttributes="Italic"

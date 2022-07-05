@@ -171,8 +171,8 @@ Change the state of the DateTime Range Slider to disabled by setting `false` to 
                                 <Setter.Value>
                                     <sliders:SliderTrackStyle ActiveSize="10" 
                                                                   InactiveSize="8"
-                                                                  ActiveFill="Grey" 
-                                                                  InactiveFill="LightGrey" />
+                                                                  ActiveFill="Gray" 
+                                                                  InactiveFill="LightGray" />
                                 </Setter.Value>
                             </Setter>
                         </VisualState.Setters>
@@ -235,8 +235,8 @@ disabledState.Setters.Add(new Setter
     Property = SfDateTimeRangeSlider.TrackStyleProperty,
     Value = new SliderTrackStyle
     {
-        ActiveFill = Colors.Grey,
-        InactiveFill = Colors.LightGrey,
+        ActiveFill = Colors.Gray,
+        InactiveFill = Colors.LightGray,
         ActiveSize = 10,
         InactiveSize = 8,
     }

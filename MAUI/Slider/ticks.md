@@ -333,16 +333,16 @@ Change the state of the slider to disabled by setting `false` to the `IsEnabled`
                                 <Setter.Value>
                                     <sliders:SliderTickStyle ActiveSize="3,10" 
                                                                  InactiveSize="3, 10"
-                                                                 ActiveFill="Grey" 
-                                                                 InactiveFill="LightGrey" />
+                                                                 ActiveFill="Gray" 
+                                                                 InactiveFill="LightGray" />
                                 </Setter.Value>
                             </Setter>
                             <Setter Property="MinorTickStyle">
                                 <Setter.Value>
                                     <sliders:SliderTickStyle ActiveSize ="3,6" 
                                                                  InactiveSize="3, 6"
-                                                                 ActiveFill="Grey" 
-                                                                 InactiveFill="LightGrey" />
+                                                                 ActiveFill="Gray" 
+                                                                 InactiveFill="LightGray" />
                                 </Setter.Value>
                             </Setter>
                         </VisualState.Setters>
@@ -405,8 +405,8 @@ disabledState.Setters.Add(new Setter
     {
         ActiveSize = new Size(3, 10),
         InactiveSize = new Size(3, 10),
-        ActiveFill = Colors.Grey,
-        InactiveFill = Colors.LightGrey,
+        ActiveFill = Colors.Gray,
+        InactiveFill = Colors.LightGray,
     }
 });
 disabledState.Setters.Add(new Setter
@@ -416,8 +416,8 @@ disabledState.Setters.Add(new Setter
     {
         ActiveSize = new Size(3, 6),
         InactiveSize = new Size(3, 6),
-        ActiveFill = Colors.Grey,
-        InactiveFill = Colors.LightGrey,
+        ActiveFill = Colors.Gray,
+        InactiveFill = Colors.LightGray,
     }
 });
 

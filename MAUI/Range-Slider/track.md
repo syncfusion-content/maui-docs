@@ -146,8 +146,8 @@ Change the state of the range slider to disabled by setting `false` to the `IsEn
                                 <Setter.Value>
                                     <sliders:SliderTrackStyle ActiveSize="10" 
                                                                   InactiveSize="8"
-                                                                  ActiveFill="Grey" 
-                                                                  InactiveFill="LightGrey" />
+                                                                  ActiveFill="Gray" 
+                                                                  InactiveFill="LightGray" />
                                 </Setter.Value>
                             </Setter>
                         </VisualState.Setters>
@@ -197,8 +197,8 @@ disabledState.Setters.Add(new Setter
     Property = SfRangeSlider.TrackStyleProperty,
     Value = new SliderTrackStyle
     {
-        ActiveFill = Colors.Grey,
-        InactiveFill = Colors.LightGrey,
+        ActiveFill = Colors.Gray,
+        InactiveFill = Colors.LightGray,
         ActiveSize = 10,
         InactiveSize = 8,
     }

@@ -297,8 +297,8 @@ Change the state of the range slider to disabled by setting `false` to the `IsEn
                         <VisualState.Setters>
                             <Setter Property="LabelStyle">
                                 <Setter.Value>
-                                    <sliders:SliderLabelStyle ActiveTextColor = "Grey"
-                                                                  InactiveTextColor="LightGrey"
+                                    <sliders:SliderLabelStyle ActiveTextColor = "Gray"
+                                                                  InactiveTextColor="LightGray"
                                                                   ActiveFontSize="14"
                                                                   InactiveFontSize="16"
                                                                   ActiveFontAttributes="Italic"
