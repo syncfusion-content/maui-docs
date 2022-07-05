@@ -9,13 +9,13 @@ documentation: UG
 
 # Filtering in MAUI DataGrid (SfDataGrid)
 
-Filtering is the process of retrieving the values from the collection which satisfy the specified condition. The `SfDataGrid` provides the view filtering support.
+Filtering is the process of retrieving the values from the collection which satisfy the specified condition. The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) provides the view filtering support.
 
 ## View filtering
 
-The `SfDataGrid` supports to filter the records in the view by setting `SfDataGrid.View.Filter` property where `Filter` is a predicate.
+The `SfDataGrid` supports to filter the records in the view by setting [SfDataGrid.View.Filter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ICollectionViewAdv.html#Syncfusion_Maui_Data_ICollectionViewAdv_Filter) property where `Filter` is a predicate.
 
->N Note: In order to refresh filtering for the newly added row or column, set the `SfDataGrid.View.LiveDataUpdateMode` to `LiveDataUpdateMode.AllowDataShaping`.
+>N Note: In order to refresh filtering for the newly added row or column, set the [SfDataGrid.View.LiveDataUpdateMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ICollectionViewAdv.html#Syncfusion_Maui_Data_ICollectionViewAdv_LiveDataUpdateMode) to [LiveDataUpdateMode.AllowDataShaping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.LiveDataUpdateMode.html#Syncfusion_Maui_Data_LiveDataUpdateMode_AllowDataShaping).
 
 {% tabs %}
 {% highlight c# %}
@@ -38,7 +38,7 @@ public bool FilterRecords(object record)
 {% endhighlight %}
 {% endtabs %}
 
->N Note: View filtering is not supported when `ItemsSource` is `DataTable`.
+>N Note: View filtering is not supported when [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ItemsSource) is [DataTable](https://docs.microsoft.com/en-us/dotnet/api/system.data.datatable?view=net-6.0).
 
 ## Filter based on conditions
 
@@ -128,7 +128,7 @@ private void Button_Clicked(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-The following code example illustrates how to create a `Picker` for conditions and add appropriate strings to that Picker and how the records will be filtered based on selected conditions,
+The following code example illustrates how to create a [Picker](https://docs.microsoft.com/en-us/dotnet/maui/user-interface/controls/picker) for conditions and add appropriate strings to that Picker and how the records will be filtered based on selected conditions,
 
 {% tabs %}
 {% highlight xaml %}
