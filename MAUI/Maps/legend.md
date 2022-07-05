@@ -28,28 +28,28 @@ You can show shape legend by setting the [`Legend`](https://help.syncfusion.com/
                 
                 <map:MapShapeLayer.ColorMappings>
                     <map:EqualColorMapping Color="LightGray"
-					                       Value="51"
-										   Text="India" />
+                                            Value="51"
+                                            Text="India" />
                     <map:EqualColorMapping Color="LightGray"
-					                       Value="58"
-										   Text="United States" />
+                                            Value="58"
+                                            Text="United States" />
                     <map:EqualColorMapping Color="LightGray"
-					                       Value="41"
-										   Text="Kazakhstan" />
+                                            Value="41"
+                                            Text="Kazakhstan" />
                     <map:EqualColorMapping Color="LightGray"
-					                       Value="48"
-										   Text="Italy" />
+                                            Value="48"
+                                            Text="Italy" />
                     <map:EqualColorMapping Color="LightGray"
-					                       Value="14"
-										   Text="Korea" />
+                                            Value="14"
+                                            Text="Korea" />
                     <map:EqualColorMapping Color="LightGray"
-					                       Value="23"
-										   Text="China" />
+                                            Value="23"
+                                            Text="China" />
                 </map:MapShapeLayer.ColorMappings>
-
+    
                 <map:MapShapeLayer.Legend>
                     <map:MapLegend SourceType="Shape"
-					               Placement="Top" />
+                                    Placement="Top" />
                 </map:MapShapeLayer.Legend>
                 
         </map:MapShapeLayer>
@@ -75,41 +75,41 @@ public MainPage()
     layer.ShapeStroke = Colors.DarkGrey;
 
     layer.ColorMappings.Add(new EqualColorMapping()
-	                       {
-						      Color = Colors.LightGray,
-							  Value = "51",
-							  Text = "India"
-						   });
+                            {
+                                Color = Colors.LightGray,
+                                Value = "51",
+                                Text = "India"
+                            });
     layer.ColorMappings.Add(new EqualColorMapping()
-	                       {
-						      Color = Colors.LightGray,
-							  Value = "58",
-							  Text = "United States"
-						   });
+                            {
+                                Color = Colors.LightGray,
+                                Value = "58",
+                                Text = "United States"
+                            });
     layer.ColorMappings.Add(new EqualColorMapping()
-	                       {
-						      Color = Colors.LightGray,
-							  Value = "41",
-							  Text = "Kazakhstan"
-						   });
+                            {
+                                Color = Colors.LightGray,
+                                Value = "41",
+                                Text = "Kazakhstan"
+                            });
     layer.ColorMappings.Add(new EqualColorMapping()
-	                       {
-						      Color = Colors.LightGray,
-							  Value = "48",
-							  Text = "Italy"
-						   });
+                            {
+                                Color = Colors.LightGray,
+                                Value = "48",
+                                Text = "Italy"
+                            });
     layer.ColorMappings.Add(new EqualColorMapping()
-	                       {
-						      Color = Colors.LightGray,
-							  Value = "14",
-							  Text = "Korea"
-						   });
+                            {
+                                Color = Colors.LightGray,
+                                Value = "14",
+                                Text = "Korea"
+                            });
     layer.ColorMappings.Add(new EqualColorMapping()
-	                       {
-						      Color = Colors.LightGray,
-							  Value = "23",
-							  Text = "China"
-						   });
+                            {
+                                Color = Colors.LightGray,
+                                Value = "23",
+                                Text = "China"
+                            });
 
     MapLegend legendSet = new MapLegend();
     legendSet.SourceType = LegendSourceType.Shape;
@@ -165,36 +165,36 @@ You can show bubble legend by setting the [`MapShapeLayer.Legend`](https://help.
 <map:SfMaps>
     <map:SfMaps.Layer>
         <map:MapShapeLayer DataSource="{Binding Data}"  
-                           ShowBubbles="True" 
-                           PrimaryValuePath="State" 
-                           ShapeDataField="name" 
-                           ShapeStroke="DarkGray">
-
+                            ShowBubbles="True" 
+                            PrimaryValuePath="State" 
+                            ShapeDataField="name" 
+                            ShapeStroke="DarkGray">
+    
                 <map:MapShapeLayer.BubbleSettings>
                     <map:MapBubbleSettings ColorValuePath="Population"
-                                           SizeValuePath="Population"
-                                           MinSize="30"
-                                           MaxSize="80">
-
+                                            SizeValuePath="Population"
+                                            MinSize="30"
+                                            MaxSize="80">
+    
                         <map:MapBubbleSettings.ColorMappings>
                             <map:EqualColorMapping Color="LightGreen"
-							                       Value="21"
-												   Text="India" />
+                                                    Value="21"
+                                                    Text="India" />
                             <map:EqualColorMapping Color="LightGreen"
-							                       Value="58"
-												   Text="United States" />
+                                                    Value="58"
+                                                    Text="United States" />
                             <map:EqualColorMapping Color="LightGreen"
-							                       Value="41"
-												   Text="Kazakhstan" />
+                                                    Value="41"
+                                                    Text="Kazakhstan" />
                             <map:EqualColorMapping Color="LightGreen"
-							                       Value="48"
-												   Text="Italy" />
+                                                    Value="48"
+                                                    Text="Italy" />
                             <map:EqualColorMapping Color="LightGreen"
-							                       Value="14"
-												   Text="Korea" />
+                                                    Value="14"
+                                                    Text="Korea" />
                             <map:EqualColorMapping Color="LightGreen"
-							                       Value="23"
-												   Text="China" />
+                                                    Value="23"
+                                                    Text="China" />
                         </map:MapBubbleSettings.ColorMappings>
                     </map:MapBubbleSettings>
                 </map:MapShapeLayer.BubbleSettings>
@@ -234,41 +234,41 @@ public MainPage()
     };
 
     bubbleSetting.ColorMappings.Add(new EqualColorMapping()
-	                               {
-								      Color = Colors.LightGreen,
-									  Value = "21",
-									  Text = "India"
-								   });
+                                    {
+                                        Color = Colors.LightGreen,
+                                        Value = "21",
+                                        Text = "India"
+                                    });
     bubbleSetting.ColorMappings.Add(new EqualColorMapping()
-	                               {
-								      Color = Colors.LightGreen,
-									  Value = "58",
-									  Text = "United States"
-								   });
+                                    {
+                                        Color = Colors.LightGreen,
+                                        Value = "58",
+                                        Text = "United States"
+                                    });
     bubbleSetting.ColorMappings.Add(new EqualColorMapping()
-	                               {
-								      Color = Colors.LightGreen,
-									  Value = "41",
-									  Text = "Kazakhstan"
-								   });
+                                    {
+                                        Color = Colors.LightGreen,
+                                        Value = "41",
+                                        Text = "Kazakhstan"
+                                    });
     bubbleSetting.ColorMappings.Add(new EqualColorMapping()
-	                               {
-								      Color = Colors.LightGreen,
-									  Value = "48",
-									  Text = "Italy"
-								   });
+                                    {
+                                        Color = Colors.LightGreen,
+                                        Value = "48",
+                                        Text = "Italy"
+                                    });
     bubbleSetting.ColorMappings.Add(new EqualColorMapping()
-	                               {
-								      Color = Colors.LightGreen,
-									  Value = "14",
-									  Text = "Korea"
-								   });
+                                    {
+                                        Color = Colors.LightGreen,
+                                        Value = "14",
+                                        Text = "Korea"
+                                    });
     bubbleSetting.ColorMappings.Add(new EqualColorMapping()
-	                               {
-								      Color = Colors.LightGreen,
-									  Value = "23",
-									  Text = "China"
-								   });
+                                    {
+                                        Color = Colors.LightGreen,
+                                        Value = "23",
+                                        Text = "China"
+                                    });
 
     layer.BubbleSettings = bubbleSetting;
     MapLegend legendSet = new MapLegend();
