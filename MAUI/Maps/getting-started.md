@@ -163,7 +163,7 @@ public MainPage()
 
 ### Load a remote image
 
-SfMaps provides support to load the json data from the uri.
+SfMaps provides support to load the json data or shapefile from the uri.
 
 {% tabs %}
 
