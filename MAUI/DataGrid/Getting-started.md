@@ -12,10 +12,10 @@ documentation: ug
 This section provides a quick overview for working with the SfDataGrid for .NET MAUI. Walk through the entire process of creating a real world of this control.
 
 ## Creating an application using the .NET MAUI DataGrid
- 1. Create a new .NET MAUI application in Visual Studio.
+ 1. Create a new .NET MAUI application in Visual Studio.
  2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfDataGrid to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.DataGrid and then install it.
  3. Import the control namespace `Syncfusion.Maui.DataGrid` in XAML or C# code.
- 4. Initialize the `SfDataGrid` control.
+ 4. Initialize the [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) control.
 
  {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -51,7 +51,7 @@ public partial class MainPage : ContentPage
 To use this control inside an application, you must initialize the `SfDataGrid` handler.
 
 {% tabs %}
-{% highlight c# tabtitle="MauiProgram.cs" hl_lines="4 5 22 23" %}
+{% highlight c# tabtitle="MauiProgram.cs" hl_lines="4 5 21 22" %}
 
 using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Controls.Xaml;
@@ -181,7 +181,7 @@ public class OrderInfoRepository
 
 ## Binding data to the SfDataGrid
 
-To bind the data source to the SfDataGrid, set the `SfDataGrid.ItemsSource` property as follows. You can bind the data source of the SfDataGrid either from XAML or in code. 
+To bind the data source to the SfDataGrid, set the [SfDataGrid.ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ItemsSource) property as follows. You can bind the data source of the SfDataGrid either from XAML or in code. 
 
 The following code example binds the collection created in the previous step to the `SfDataGrid.ItemsSource` property:
 
@@ -191,8 +191,8 @@ The following code example binds the collection created in the previous step to 
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
               xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
-              xmlns:local="clr-namespace:MauiApp1"
-             x:Class="MauiApp1.MainPage">
+              xmlns:local="clr-namespace:GettingStarted"
+             x:Class="GettingStarted.MainPage">
 
     <ContentPage.BindingContext>
         <local:OrderInfoRepository x:Name="viewModel" />
@@ -217,16 +217,16 @@ Run the application to render the following output:
 
 ## Defining columns
 
-By default, the SfDataGrid automatically creates columns for all the properties in the data source. The type of the column generated depends on the type of data in the column. When the columns are auto-generated, handle the `SfDataGrid.AutoGeneratingColumnMode` mode to customize or cancel the columns before they are added to the columns collection in the SfDataGrid.
+By default, the SfDataGrid automatically creates columns for all the properties in the data source. The type of the column generated depends on the type of data in the column. When the columns are auto-generated, handle the [SfDataGrid.AutoGeneratingColumnMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AutoGenerateColumnsMode) mode to customize or cancel the columns before they are added to the columns collection in the SfDataGrid.
  
-The columns can be manually defined by setting the `SfDataGrid.AutoGenerateColumnsMode` property to 'None' and by adding the `DataGridColumn` objects to the `SfDataGrid.Columns` collection. This can be done from both XAML and code. The following code example illustrates this:
+The columns can be manually defined by setting the `SfDataGrid.AutoGenerateColumnsMode` property to 'None' and by adding the [DataGridColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html) objects to the [SfDataGrid.Columns](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.ColumnCollection.html) collection. This can be done from both XAML and code. The following code example illustrates this:
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
+<syncfusion:SfDataGrid x:Name="dataGrid"
             ColumnSizer="Star"
             AutoGenerateColumnsMode="None"
-            ItemsSource="{Binding OrderInfoCollection}">
+            ItemsSource="{Binding OrderInfoCollection}">
 
     <syncfusion:SfDataGrid.Columns >
         <syncfusion:DataGridTextColumn HeaderText="ID" 
@@ -262,7 +262,7 @@ dataGrid.Columns.Add (countryColumn);
 
 ## Sorting
 
-In the SfDataGrid, sorting can be done on its data by setting the `SfDataGrid.SortingMode` property to single, multiple, or none.
+In the SfDataGrid, sorting can be done on its data by setting the [SfDataGrid.SortingMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SortingMode) property to single, multiple, or none.
  
 {% tabs %}
 {% highlight xaml %}
@@ -278,7 +278,7 @@ Run the application and touch the header cell to sort the data and the following
  
 ![Sorting in .NET MAUI DataGrid](Images\getting-started\maui-datagrid-basic-sorting.png)
 
-Sorting can also be configured by adding the column to the `SfDataGrid.SortColumnDescription` collection as follows:
+Sorting can also be configured by adding the column to the [SfDataGrid.SortColumnDescriptions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SortColumnDescriptions) collection as follows:
 
 {% tabs %}
 {% highlight xaml %}
@@ -287,15 +287,15 @@ Sorting can also be configured by adding the column to the `SfDataGrid.SortColum
 </syncfusion:SfDataGrid.SortColumnDescription> 
 {% endhighlight %}
 {% highlight c# %}
-dataGrid.SortColumnDescription.Add (new SortColumnDescription () { ColumnName = "CustomerID" });
+dataGrid.SortColumnDescriptions.Add(new SortColumnDescription() { ColumnName = "CustomerID" });
 {% endhighlight %}
 {% endtabs %}
 
 ## Selection
 
-The SfDataGrid allows selecting the one row or more rows by setting the `SfDataGrid.SelectionMode` property. You can set the `SfDataGrid.SelectionMode` property to single, multiple, single deselect, or none. Information about the row or rows selected can be tracked using the `SfDataGrid.SelectedRow` and `SfDataGrid.SelectedRows` properties.
+The SfDataGrid allows selecting the one row or more rows by setting the [SfDataGrid.SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectionMode) property. You can set the `SfDataGrid.SelectionMode` property to single, multiple, single deselect, or none. Information about the row or rows selected can be tracked using the [SfDataGrid.SelectedRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectedRow) and [SfDataGrid.SelectedRows](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectedRows) properties.
 
-The selection operations can be handled with the help of the `SelectionChanging` and `SelectionChanged` events of the SfDataGrid.
+The selection operations can be handled with the help of the [SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectionChanging) and [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectionChanged) events of the SfDataGrid.
 
 ## Loading the SfDataGrid with customized height and width
 
@@ -307,15 +307,16 @@ The following code example illustrates how this can be done:
 {% highlight xaml %}
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:GettingStarted;assembly=GettingStarted"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid" >
+              xmlns:local="clr-namespace:GettingStarted"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
+             x:Class="GettingStarted.MainPage">
 
      <ContentPage.BindingContext>
-        <local:OrderInfoRepository x:Name="viewModel" />
+        <local:OrderInfoRepository x:Name="viewModel" />
     </ContentPage.BindingContext>
     
         <syncfusion:SfDataGrid x:Name="dataGrid"
-                           ItemsSource="{Binding OrderInfoCollection}"
+                           ItemsSource="{Binding OrderInfoCollection}"
                            HeightRequest="290"
                            WidthRequest="200"
                            VerticalOptions="CenterAndExpand"
@@ -327,9 +328,9 @@ The following code example illustrates how this can be done:
 public MainPage()
 {
     InitializeComponent();
-    OrderInfoRepository = new OrderInfoRepository();
+    OrderInfoRepository viewModel = new OrderInfoRepository();
     dataGrid = new SfDataGrid();
-    dataGrid.ItemsSource = viewModel.OrdersInfo;
+    dataGrid.ItemsSource = viewModel.OrderInfoCollection;
     dataGrid.HeightRequest = 290;
     dataGrid.WidthRequest = 200;
     dataGrid.VerticalOptions = LayoutOptions.CenterAndExpand;
