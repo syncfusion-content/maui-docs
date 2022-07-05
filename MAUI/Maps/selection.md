@@ -9,13 +9,13 @@ documentation: ug
 
 # Shape Selection in .NET MAUI Maps (SfMaps)
 
-You can select a shape to highlight that area on a map. You can use the event for performing any action during shape selection.
+You can select a shape in order to highlight that area on a map. You can use the event for performing any action during shape selection.
 
 ## Enable shape selection
 
-You can enable shape selection on a map using the [`EnableSelection`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_EnableSelection) property. The Selection allows you to select only one shape at a time. You can select a shape by tapping it. By default, the selection is disabled.
+You can enable shape selection on a map using the [`EnableSelection`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_EnableSelection) property. Selection allows you select only one shape at a time. You can select a shape by tapping it. By default, the selection is disabled.
 
-The [`ShapeSelected`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeSelected) event is used to perform any action on shape selected when the user is selects it by tapping or clicking or by programmatically.
+The [`ShapeSelected`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeSelected) event is used to perform any action on shape selected shape when the user is selecting a shape by tapping or clicking or by programmatically.
 
 {% tabs %}
 
@@ -59,9 +59,9 @@ private void layer_ShapeSelected(object sender, ShapeSelectedEventArgs e)
 
 ## Appearance customization
 
-You can customize the below appearance of the selected shape as below.
+You can customize the below appearance of the selected shape.
 
-* **SelectedShapeFill** - Change the background color of the selected shape using the [`SelectedShapeFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_SelectedShapeFill) property. If the [`SelectedShapeFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_SelectedShapeFill) is null, then the saturated color of the shape will be applied. If the [`SelectedShapeFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_SelectedShapeFill) is Transparent, then the UI changes will not occur.
+* **SelectedShapeFill** - Change the background color of the selected shape using the [`SelectedShapeFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_SelectedShapeFill) property. If [`SelectedShapeFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_SelectedShapeFill) is null then the saturated color of the shape will be applied. If [`SelectedShapeFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_SelectedShapeFill) is Transparent, then the UI changes will not occur.
 * **SelectedShapeStrokeThickness** - Change the stroke width of the selected shape using the [`SelectedShapeStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_SelectedShapeStrokeThickness) property.
 * **SelectedShapeStroke** - Change the stroke color of the selected shape using the [`SelectedShapeStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_SelectedShapeStroke) property.
 
