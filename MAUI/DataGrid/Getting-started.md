@@ -13,7 +13,7 @@ This section provides a quick overview for working with the SfDataGrid for .NET 
 
 ## Creating an application using the .NET MAUI DataGrid
  1. Create a new .NET MAUI application in Visual Studio.
- 2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfDataGrid to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.DataGrid and then install it.
+ 2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfDataGrid to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.DataGrid and then install it.
  3. Import the control namespace `Syncfusion.Maui.DataGrid` in XAML or C# code.
  4. Initialize the [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) control.
 
@@ -181,7 +181,7 @@ public class OrderInfoRepository
 
 ## Binding data to the SfDataGrid
 
-To bind the data source to the SfDataGrid, set the [SfDataGrid.ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ItemsSource) property as follows. You can bind the data source of the SfDataGrid either from XAML or in code. 
+To bind the data source to the SfDataGrid, set the [SfDataGrid.ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ItemsSource) property as follows. You can bind the data source of the SfDataGrid either from XAML or in code. 
 
 The following code example binds the collection created in the previous step to the `SfDataGrid.ItemsSource` property:
 
@@ -206,8 +206,8 @@ The following code example binds the collection created in the previous step to 
 </ContentPage>
 {% endhighlight %}
 {% highlight c# %}
-OrderInfoRepository viewModel = new OrderInfoRepository ();
-dataGrid.ItemsSource = viewModel.OrderInfoCollection; 
+OrderInfoRepository viewModel = new OrderInfoRepository();
+dataGrid.ItemsSource = viewModel.OrderInfoCollection; 
 {% endhighlight %}
 {% endtabs %}
 
@@ -228,35 +228,35 @@ The columns can be manually defined by setting the `SfDataGrid.AutoGenerateColum
             AutoGenerateColumnsMode="None"
             ItemsSource="{Binding OrderInfoCollection}">
 
-    <syncfusion:SfDataGrid.Columns >
-        <syncfusion:DataGridTextColumn HeaderText="ID" 
-                                   MappingName="OrderID" />
-        <syncfusion:DataGridTextColumn HeaderText="Customer "
-                                   MappingName="CustomerID" />
-        <syncfusion:DataGridTextColumn MappingName="Customer" />
-        <syncfusion:DataGridTextColumn HeaderText="Country"
-                                   MappingName="ShipCountry" />
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridTextColumn HeaderText="ID"
+                                   MappingName="OrderID"/>
+        <syncfusion:DataGridTextColumn HeaderText="Customer"
+                                   MappingName="CustomerID"/>
+        <syncfusion:DataGridTextColumn MappingName="Customer"/>
+        <syncfusion:DataGridTextColumn HeaderText="Country"
+                                   MappingName="ShipCountry"/>
     </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
 dataGrid.AutoGenerateColumnsMode = AutoGenerateColumnsMode.None;
 
-DataGridTextColumn orderIdColumn = new DataGridTextColumn ();
-orderIdColumn.MappingName = "OrderID";
-orderIdColumn.HeaderText = "ID";
+DataGridTextColumn orderIdColumn = new DataGridTextColumn ();
+orderIdColumn.MappingName = "OrderID";
+orderIdColumn.HeaderText = "ID";
 
-DataGridTextColumn customerIdColumn = new DataGridTextColumn ();
-customerIdColumn.MappingName = "CustomerID";
-customerIdColumn.HeaderText = "Customer";
+DataGridTextColumn customerIdColumn = new DataGridTextColumn();
+customerIdColumn.MappingName = "CustomerID";
+customerIdColumn.HeaderText = "Customer";
 
-DataGridTextColumn countryColumn = new DataGridTextColumn();
-countryColumn.MappingName = "ShipCountry";
-countryColumn.HeaderText = "Country";
+DataGridTextColumn countryColumn = new DataGridTextColumn();
+countryColumn.MappingName = "ShipCountry";
+countryColumn.HeaderText = "Country";
 
-dataGrid.Columns.Add (orderIdColumn);
-dataGrid.Columns.Add (customerIdColumn);
-dataGrid.Columns.Add (countryColumn); 
+dataGrid.Columns.Add (orderIdColumn);
+dataGrid.Columns.Add (customerIdColumn);
+dataGrid.Columns.Add (countryColumn); 
 {% endhighlight %}
 {% endtabs %}
 
@@ -267,7 +267,7 @@ In the SfDataGrid, sorting can be done on its data by setting the [SfDataGrid.So
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                           ItemsSource="{Binding OrderInfoCollection}" SortingMode="Single" />
+                           ItemsSource="{Binding OrderInfoCollection}" SortingMode="Single" />
 {% endhighlight %}
 {% highlight c# %}
 dataGrid.SortingMode=DataGridSortingMode.Single; 
@@ -283,7 +283,7 @@ Sorting can also be configured by adding the column to the [SfDataGrid.SortColum
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid.SortColumnDescription>
-    <syncfusion:SortColumnDescription ColumnName="CustomerID" />
+    <syncfusion:SortColumnDescription ColumnName="CustomerID" />
 </syncfusion:SfDataGrid.SortColumnDescription> 
 {% endhighlight %}
 {% highlight c# %}
