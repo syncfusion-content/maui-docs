@@ -9,35 +9,33 @@ documentation: UG
 
 # Grid Events in .NET MAUI DataGrid (SfDataGrid)
 
-## Cell Tap callbacks
+## Cell Tap Events
 
-The datagrid provides the following callbacks to handle interactions to the cells,
+The datagrid provides the following Events to handle interactions to the cells,
 
-* `CellTapped` : Called when a tap with a cell has occurred.
-* `CellDoubleTapped` : Called when user is tapped a cell with a primary button at the same cell twice in quick succession.
-* `CellLongPress` : Called when a long press gesture with a primary button has been recognized for a cell. 
+* [CellTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellTapped) : Called when a tap with a cell has occurred.
+* [CellDoubleTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellDoubleTapped) : Called when user is tapped a cell with a primary button at the same cell twice in quick succession.
+* [CellLongPress](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellLongPress) : Called when a long press gesture with a primary button has been recognized for a cell. 
 
 
 ### CellTapped event
 
-This event will be triggered while tapping the SfDataGrid with `DataGridCellTappedEventArgs` properties as follows:
+This event will be triggered while tapping the SfDataGrid with [DataGridCellTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellTappedEventArgs.html) properties as follows:
 
- * `RowIndex`: Gets row index of the tapped row.
- * `ColumnIndex`: Gets column index of the tapped column.
- * `RowData`: Gets row data of the tapped row.
- * `Column` : Gets the Corresponding Column.
+ * [RowColumnIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellTappedEventArgs.html#Syncfusion_Maui_DataGrid_DataGridCellTappedEventArgs_RowColumnIndex): Gets Row and column index of the tapped column.
+ * [RowData](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellTappedEventArgs.html#Syncfusion_Maui_DataGrid_DataGridCellTappedEventArgs_RowData): Gets row data of the tapped row.
+ * [Column](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellTappedEventArgs.html#Syncfusion_Maui_DataGrid_DataGridCellTappedEventArgs_Column) : Gets the Corresponding Column.
 
 To hook the `CellTapped` event, and to get the tapped row and column details, follow the code example:
 
 {% tabs %}
 {% highlight xaml %}
-<sfgrid:SfDataGrid x:Name="dataGrid"
-                   AutoGenerateColumns="True"
+<syncfusion:SfDataGrid x:Name="dataGrid"
                    CellTapped="dataGrid_CellTapped"
-                   ItemsSource="{Binding OrdersInfo}" />
+                   ItemsSource="{Binding OrderInfoCollection}" />
 {% endhighlight %}
 {% highlight c# %}
-private void DataGrid_CellTapped(object sender, DataGridCellTappedEventArgs e)
+private void dataGrid_CellTapped(object sender,DataGridCellTappedEventArgs e)
 {
     var rowIndex = e.RowColumnIndex.RowIndex;
     var rowData = e.RowData;
@@ -49,24 +47,22 @@ private void DataGrid_CellTapped(object sender, DataGridCellTappedEventArgs e)
 
 ### CellDoubleTapped event
 
-This event will be triggered while double tapping the SfDataGrid with `DataGridCellDoubleTappedEventArgs` properties as follows:
+This event will be triggered while double tapping the SfDataGrid with [DataGridCellDoubleTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellDoubleTappedEventArgs.html) properties as follows:
 
- * `RowIndex`: Gets row index of the tapped row.
- * `ColumnIndex`: Gets column index of the tapped column.
- * `RowData`: Gets row data of the tapped row.
- * `Column` : Gets the Corresponding Column.
+ * [RowColumnIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellDoubleTappedEventArgs.html#Syncfusion_Maui_DataGrid_DataGridCellDoubleTappedEventArgs_RowColumnIndex): Gets Row and column index of the tapped column.
+ * [RowData](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellDoubleTappedEventArgs.html#Syncfusion_Maui_DataGrid_DataGridCellDoubleTappedEventArgs_RowData): Gets row data of the tapped row.
+ * [Column](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellDoubleTappedEventArgs.html#Syncfusion_Maui_DataGrid_DataGridCellDoubleTappedEventArgs_Column) : Gets the Corresponding Column.
 
 To hook the `CellDoubleTapped` event, and to get the double tapped row and column details, follow the code example:  
 
 {% tabs %}
 {% highlight xaml %}
-<sfgrid:SfDataGrid x:Name="dataGrid"
-                   AutoGenerateColumns="True"
-                   CellDoubleTapped="DataGrid_CellDoubleTapped"
-                   ItemsSource="{Binding OrdersInfo}" />
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                   CellDoubleTapped="dataGrid_CellDoubleTapped"
+                   ItemsSource="{Binding OrderInfoCollection}" />
 {% endhighlight %}
 {% highlight c# %}
-private void DataGrid_CellDoubleTapped(object sender, DataGridCellDoubleTappedEventArgs e)
+private void dataGrid_CellDoubleTapped(object sender, DataGridCellDoubleTappedEventArgs e)
 {
     var rowIndex = e.RowColumnIndex.RowIndex;
     var rowData = e.RowData;
@@ -78,24 +74,22 @@ private void DataGrid_CellDoubleTapped(object sender, DataGridCellDoubleTappedEv
 
 ### CellLongPress event
 
-This event will be triggered while long pressing the SfDataGrid with `DataGridCellLongPressEventArgs` properties as follows:
+This event will be triggered while long pressing the SfDataGrid with [DataGridCellLongPressEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellLongPressEventArgs.html) properties as follows:
 
- * `RowIndex`: Gets row index of the tapped row.
- * `ColumnIndex`: Gets column index of the tapped column.
- * `RowData`: Gets row data of the tapped row.
- * `Column` : Gets the Corresponding Column.
+ * [RowColumnIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellLongPressEventArgs.html#Syncfusion_Maui_DataGrid_DataGridCellLongPressEventArgs_RowColumnIndex): Gets Row and column index of the tapped column.
+ * [RowData](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellLongPressEventArgs.html#Syncfusion_Maui_DataGrid_DataGridCellLongPressEventArgs_RowData): Gets row data of the tapped row.
+ * [Column](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellLongPressEventArgs.html#Syncfusion_Maui_DataGrid_DataGridCellLongPressEventArgs_Column) : Gets the Corresponding Column.
 
 To hook the `CellLongPress` event, and to get the long pressed row and column details, follow the code example: 
 
 {% tabs %}
 {% highlight xaml %}
-<sfgrid:SfDataGrid x:Name="dataGrid"
-                   AutoGenerateColumns="True"
-                   CellLongPress="DataGrid_CellLongPress"
-                   ItemsSource="{Binding OrdersInfo}" />
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                   CellDoubleTapped="dataGrid_CellDoubleTapped"
+                   ItemsSource="{Binding OrderInfoCollection}" />
 {% endhighlight %}
 {% highlight c# %}
-private void DataGrid_CellLongPress(object sender, DataGridCellLongPressEventArgs e)
+private void dataGrid_CellLongPress(object sender,DataGridCellLongPressEventArgs e)
 {
     var rowIndex = e.RowColumnIndex.RowIndex;
     var rowData = e.RowData;
