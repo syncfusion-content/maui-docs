@@ -278,14 +278,13 @@ Data template can be used customize the tooltip view using [`ShapeTooltipTemplat
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-       <map:MapShapeLayer ShapesSource = "{local:ImageResource MyProject.world1.shp}"
-						  DataSource="{Binding Data}"
-						  ShapeDataField="continent"
-						  PrimaryValuePath="Continent"
-						  ShapeHoverFill="Transparent"
-						  ShapeHoverStroke="transparent"
-						  ShowShapeTooltip="True">
-						  
+        <map:MapShapeLayer DataSource="{Binding Data}"
+                           ShapeDataField="continent"
+                           PrimaryValuePath="Continent"
+                           ShapeHoverFill="Transparent"
+                           ShapeHoverStroke="transparent"
+                           ShowShapeTooltip="True">
+
             <map:MapShapeLayer.ShapeTooltipTemplate>
                 <DataTemplate>
                     <Grid>
@@ -295,15 +294,26 @@ Data template can be used customize the tooltip view using [`ShapeTooltipTemplat
                             <RowDefinition />
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
-                             <ColumnDefinition />
-                             <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
                         </Grid.ColumnDefinitions>
-                        <Image Source="flag.png" Grid.Column="0" Grid.Row="0" WidthRequest="20" HeightRequest="20"></Image>
-                        <Label Text="{Binding Continent}" TextColor="White"  Grid.Column="1" Grid.Row="0" Padding="10"/>
-                         <Label Grid.Row="2" Grid.ColumnSpan="2"  Text="{Binding Area}" TextColor="White" />
+                        <Image Source="flag.png"
+                               Grid.Column="0"
+                               Grid.Row="0"
+                               WidthRequest="20"
+                               HeightRequest="20" />
+                        <Label Text="{Binding Continent}"
+                               TextColor="White"
+                               Grid.Column="1"
+                               Grid.Row="0"
+                               Padding="10" />
+                        <Label Grid.Row="2"
+                               Grid.ColumnSpan="2"
+                               Text="{Binding Area}"
+                               TextColor="White" />
                     </Grid>
                 </DataTemplate>
-             </map:MapShapeLayer.ShapeTooltipTemplate>
+            </map:MapShapeLayer.ShapeTooltipTemplate>
         </map:MapShapeLayer>
     </map:SfMaps.Layer>
 </map:SfMaps>
@@ -353,16 +363,32 @@ Data template can be used customize the tooltip view using [`ShapeTooltipTemplat
                 }
             };
 			
-            var image = new Image { Source = "flag.png", WidthRequest = 20, HeightRequest = 20 };
-            grid.SetRow(image, 0); grid.SetColumn(image, 0);
-            var label = new Label { FontAttributes = FontAttributes.Bold, TextColor = Colors.White, Padding = 5 };
+            var image = new Image
+            {
+                Source = "flag.png",
+                WidthRequest = 20
+                , HeightRequest = 20
+            };
+            grid.SetRow(image, 0);
+            grid.SetColumn(image, 0);
+            var label = new Label
+            {
+                FontAttributes = FontAttributes.Bold,
+                TextColor = Colors.White,
+                Padding = 5
+            };
             Binding binding = new Binding();
             binding.Source = grid.BindingContext;
             binding.Path = nameof(Model1.Continent);
             label.SetBinding(Label.TextProperty, binding);
             grid.SetRow(label, 0); grid.SetColumn(label, 1);
-            var areaLabel = new Label { FontAttributes = FontAttributes.Bold, TextColor = Colors.White, };
-            grid.SetRow(areaLabel, 2); grid.SetColumnSpan(areaLabel, 2);
+            var areaLabel = new Label
+            {
+                FontAttributes = FontAttributes.Bold,
+                TextColor = Colors.White
+            };
+            grid.SetRow(areaLabel, 2);
+            grid.SetColumnSpan(areaLabel, 2);
             Binding binding1 = new Binding();
             binding1.Source = grid.BindingContext;
             binding1.Path = nameof(Model1.Area);
@@ -382,13 +408,15 @@ Data template can be used customize the tooltip view using [`ShapeTooltipTemplat
 		
 		public ViewModel()
 		{
-			Data = new ObservableCollection<Model>();
-			Data.Add( new Model("Asia", 130,"30,370,000 sq. km."));
-			Data.Add(new Model("Africa", 120,"24,709,000 sq. km."));
-			Data.Add( new Model("Europe", 586, "17,840,000 sq. km."));
-			Data.Add(new Model("North America", 472,"8,600,000 sq. km."));
-			Data.Add( new Model("South America", 363,"10,180,000 sq. km."));
-			Data.Add(new Model("Australia", 348,"59,180,000 sq. km."));
+			Data = new ObservableCollection<Model>
+            {
+                new Model("Asia", 130, "30,370,000 sq. km.")),
+                new Model("Africa", 120, "24,709,000 sq. km.")),
+                new Model("Europe", 586, "17,840,000 sq. km.")),
+                new Model("North America", 472, "8,600,000 sq. km.")),
+                new Model("South America", 363, "10,180,000 sq. km.")),
+                new Model("Australia", 348, "59,180,000 sq. km.")),
+            };
 		}
 	}
 

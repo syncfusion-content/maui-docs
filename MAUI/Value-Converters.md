@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Syncfusion .NET MAUI Converters | Syncfusion
+title: Syncfusion .NET MAUI Value Converters
 description: Learn here about Syncfusion .NET MAUI built-in value converters included in the Syncfusion .NET MAUI platform.
 platform: maui
 control: Converters
@@ -9,7 +9,7 @@ documentation: ug
 
 # Syncfusion .NET MAUI Converters
 
-Syncfusion are helping rid you of the hassle of writing common converters from scratch by providing a set of 24 new .NET MAUI value converters. This section explains you the steps to configure a Converters in a real-time scenario.
+Most applications developed using XAML depend on value converters. As you know, .NET MAUI is a cross-platform framework for creating native mobile and desktop apps with C# and XAML, so when you develop a .NET MAUI app, you will need an arsenal of converters at your disposal.
 
 ## Adding a Syncfusion Maui Core reference
 
@@ -40,9 +40,9 @@ Step 2: Add the namespace as shown in the following code sample.
 
 ## Bool To Object Converter
 
-The BoolToObjectConverter can convert a Boolean value to an object. By including both a `TrueObject` and a `FalseObject` in the converter, the appropriate object will be used based on the binding value.
+The `BoolToObjectConverter` can convert a Boolean value to an object. By including both a `TrueObject` and a `FalseObject` in the converter, the appropriate object will be used based on the binding value.
 
-Refer to the following code example. Here, we’ll set two different font sizes for the text based on the IsChecked Boolean property of the CheckBox control.
+Refer to the following code example. Here, we’ll set two different font sizes for the text based on the `IsChecked` Boolean property of the `CheckBox` control.
 
 {% tabs %}
 
@@ -93,11 +93,11 @@ Refer to the following code example. Here, we’ll set two different font sizes 
 
 The following gif image illustrates the result of the above code.
 
-![Bool To Object Converter sample](Images/BoolToObjectConverter.png)
+![Bool To Object Converter sample](Converters-Images/BoolToObjectConverter.png)
 
 ## Bool To Opacity Converter
 
-The BoolToOpacityConverter helps us convert a Boolean value into an opacity.
+The `BoolToOpacityConverter` helps us convert a Boolean value into an opacity.
 
 Refer to the following code example. Here, the image will be shown if the Boolean value is true.
 
@@ -135,11 +135,11 @@ x:Class="MAUIValueConverters.BoolToOpacityConverterPage">
 
 The following gif image illustrates the result of the above code.
 
-![Bool To Opacity Converter sample](Images/BoolToOpacityConverter.png)
+![Bool To Opacity Converter sample](Converters-Images/BoolToOpacityConverter.png)
 
 ## Brush To Color Converter
 
-The BrushToColorConverter is also a type converter. It converts any Brush into a Color. This converter has the ConvertBack method, so it also works in two-way binding mode.
+The `BrushToColorConverter` is also a type converter. It converts any `Brush` into a `Color.` This converter has the ConvertBack method, so it also works in two-way binding mode.
 
 Refer to the following code example. Here, the `Stroke` property is set as the binding value for the `BackgroundColor` property using the BrushToColorConverter.
 
@@ -167,8 +167,8 @@ Refer to the following code example. Here, the `Stroke` property is set as the b
                         BindingContext="{x:Reference brushProperty}"
                         HeightRequest="50"
                         WidthRequest="50"
-                        BackgroundColor="{Binding Stroke,Converter={StaticResource brushToColorConverter}}" HorizontalOptions="Start"/>
-
+                        BackgroundColor="{Binding Stroke,Converter={StaticResource brushToColorConverter}}" 
+                        HorizontalOptions="Start"/>
         </Grid>
 
         <Label FontSize="12" Text="* Stroke property is set to a binding value for the BackgroundColor property."/>
@@ -181,11 +181,11 @@ Refer to the following code example. Here, the `Stroke` property is set as the b
 
 The following screenshot illustrates the result of the above code.
 
-![Brush To Color Sample](Images/BrushToColorConverter.png)
+![Brush To Color Sample](Converters-Images/BrushToColorConverter.png)
 
 ## Color To Brush Converter
 
-The ColorToBrushConverter is a type converter. It converts any Color to a Brush. This converter has the ConvertBack method, so it also works in two-way binding mode.
+The `ColorToBrushConverter` is a type converter. It converts any `Color` to a `Brush.` This converter has the ConvertBack method, so it also works in two-way binding mode.
 
 Refer to the following code example. Here, the `BackgroundColor` property is set as the binding value for the `Stroke` (Brush) property using the ColorToBrushConverter.
 
@@ -226,11 +226,11 @@ Refer to the following code example. Here, the `BackgroundColor` property is set
 
 The following screenshot illustrates the result of the above code.
 
-![Color To Brush Sample](Images/ColorToBrushConverter.png)
+![Color To Brush Sample](Converters-Images/ColorToBrushConverter.png)
 
 ## Color To On Color Converter
 
-The ColorToOnColorConverter can convert the text color to white or black based on its background color density.
+The `ColorToOnColorConverter` can convert the text color to white or black based on its background color density.
 
 Refer to the following code example. Here, the `TextColor` property is set based on the `BackgroundColor` property using the ColorToOnColorConverter.
 
@@ -266,11 +266,11 @@ Refer to the following code example. Here, the `TextColor` property is set based
 
 The following screenshot illustrates the result of the above code.
 
-![Color To OnColor Sample](Images/ColorToOnColorConverter.png)
+![Color To OnColor Sample](Converters-Images/ColorToOnColorConverter.png)
 
 ## Color To Grayscale Color Converter
 
-The ColorToGrayScaleColorConverter converts a color into its grayscale value color.
+The `ColorToGrayScaleColorConverter` converts a color into its grayscale value color.
 
 Refer to the following code example. Here, the first content has a yellow background color, whereas the second content’s background color is set based on the `BackgroundColor` property of the first content using the ColorToGrayScaleColorConverter.
  
@@ -305,11 +305,11 @@ Refer to the following code example. Here, the first content has a yellow backgr
 
 The following screenshot illustrates the result of the above code.
 
-![Color To GrayScaleColor sample](Images/ColorToGrayScaleColorConverter.png)
+![Color To GrayScaleColor sample](Converters-Images/ColorToGrayScaleColorConverter.png)
 
 ## Color To Inverse Color Converter
 
-The ColorToInverseColorConverter is used to convert a color into its inverse color.
+The `ColorToInverseColorConverter` is used to convert a color into its inverse color.
 
 Refer to the following code example. Here, the first content has a yellow background color, whereas the second content’s background color is set based on the `BackgroundColor` property of the first content.
 
@@ -344,7 +344,7 @@ Refer to the following code example. Here, the first content has a yellow backgr
 
 The following screenshot illustrates the result of the above code.
 
-![Color To InverseColor Converter](Images/ColorToInverseColorConverter.png)
+![Color To InverseColor Converter](Converters-Images/ColorToInverseColorConverter.png)
 
 ## Compare Converter
 
@@ -389,11 +389,11 @@ Refer to the following code example. Here, we’ll set the TrueObject as "Availa
 
 The following gif image illustrates the result of the above code.
 
-![Compare Converter sample](Images/CompareConverter.png)
+![Compare Converter sample](Converters-Images/CompareConverter.png)
 
 ## Decimal Value Converter
 
-The DecimalValueConverter is a value converter that converts the input value into a specified number of fractional digits based on the decimal digits that the user provides.
+The `DecimalValueConverter` is a value converter that converts the input value into a specified number of fractional digits based on the decimal digits that the user provides.
 
 Refer to the following code example. Here, I have assigned the NumberDecimalDigits property as 2. So, the total stock value’s fractional digits will be rounded off at two digits.
 
@@ -511,11 +511,11 @@ public class DecimalValueConverterViewModel : INotifyPropertyChanged
 
 The following gif image illustrates the result of the above code.
 
-![Decimal Value Converter sample](Images/DecimalValueConverter.png)
+![Decimal Value Converter sample](Converters-Images/DecimalValueConverter.png)
 
 ## Double To Int Converter
 
-The DoubleToIntConverter is a value converter that converts a double value into an integer value.
+The `DoubleToIntConverter` is a value converter that converts a double value into an integer value.
 
 Refer to the following code example. Here, the slider value is converted to an integer value assigned to the selected index of the Picker control.
 
@@ -569,11 +569,11 @@ Refer to the following code example. Here, the slider value is converted to an i
 
 The following gif image illustrates the result of the above code.
 
-![Double To Int Converter sample](Images/DoubleToIntConverter.png)
+![Double To Int Converter sample](Converters-Images/DoubleToIntConverter.png)
 
 ## Enum To Int Converter
 
-The EnumToIntConverter can convert an enum value to its primitive integer data type.
+The `EnumToIntConverter` can convert an enum value to its primitive integer data type.
 
 Refer to the following code example. Here, when the user selects a value from the picker, the corresponding integer value will be displayed on the label.
 
@@ -667,11 +667,11 @@ public enum Floor
 
 The following gif image illustrates the result of the above code.
 
-![Enum To Int Converter sample](Images/EnumToIntConverter.png)
+![Enum To Int Converter sample](Converters-Images/EnumToIntConverter.png)
 
 ## Equal Converter
 
-The EqualConverter checks whether the input binding value is equal to the converter parameter and returns the corresponding Boolean value.
+The `EqualConverter` checks whether the input binding value is equal to the converter parameter and returns the corresponding Boolean value.
 
 Refer to the following code example. Here, if the input value is matched with the converter parameter value, the label will be visible. Otherwise, the label will not be visible.
 
@@ -725,11 +725,11 @@ Refer to the following code example. Here, if the input value is matched with th
 
 The following gif image illustrates the result of the above code.
 
-![Equal Converter sample](Images/EqualConverter.png)
+![Equal Converter sample](Converters-Images/EqualConverter.png)
 
 ## Format String Converter
 
-The FormatStringConverter allows users to convert the incoming string type binding into the user-defined format. Users can define the format by using the command parameter. 
+The `FormatStringConverter` allows users to convert the incoming string type binding into the user-defined format. Users can define the format by using the command parameter. 
 
 {% tabs %}
 
@@ -769,13 +769,13 @@ The FormatStringConverter allows users to convert the incoming string type bindi
 
 The following gif image illustrates the result of the above code.
 
-![Format String Converter](Images/FormatStringConverter.png)
+![Format String Converter](Converters-Images/FormatStringConverter.png)
 
 ## Index To Array Item Converter
 
-The IndexToArrayItemConverter is used to convert a number value into an array item. The ConverterParameter is used to pass the array value.
+The `IndexToArrayItemConverter` is used to convert a number value into an array item. The `ConverterParameter` is used to pass the array value.
 
-Refer to the following code example. Here, we will get the country name based on the index value property of the stepper control.
+Refer to the following code example. Here, we will get the Country name based on the `Value` property of the    `Stepper` control.
 
 {% tabs %}
 
@@ -825,11 +825,11 @@ Refer to the following code example. Here, we will get the country name based on
 
 The following gif image illustrates the result of the above code.
 
-![Index To ArrayItem Converter sample](Images/IndexToArrayItemConverter.png)
+![Index To ArrayItem Converter sample](Converters-Images/IndexToArrayItemConverter.png)
 
 ## Inverse Opacity Converter
 
-The InverseOpacityConverter can convert a Boolean value into an inverted opacity.
+The `InverseOpacityConverter` can convert a Boolean value into an inverted opacity.
 
 Refer to the following code example. Here, the image visibility is inversely proportional to the slider value.
 
@@ -866,11 +866,11 @@ Refer to the following code example. Here, the image visibility is inversely pro
 
 The following gif image illustrates the result of the above code.
 
-![Inverse Opacity Converter sample](Images/InverseOpacityConverter.png)
+![Inverse Opacity Converter sample](Converters-Images/InverseOpacityConverter.png)
 
 ## Inverted Bool Converter
 
-The InvertedBoolConverter is used to convert the true value to false and the false value to true.
+The `InvertedBoolConverter` is used to convert the true value to false and the false value to true.
 
 Refer to the following code example. Here, the image `IsVisible` property is set to an inverse value of the switch' `IsToggled` property.
 
@@ -906,13 +906,13 @@ Refer to the following code example. Here, the image `IsVisible` property is set
 
 The following gif image illustrates the result of the above code.
 
-![Inverted Bool Converter sample](Images/InvertedBoolConverter.png)
+![Inverted Bool Converter sample](Converters-Images/InvertedBoolConverter.png)
 
 ## Is List Not Null Or Empty Converter
 
-The IsListNotNullOrEmptyConverter can convert a list into a Boolean value. It returns true when the list is not null or empty.
+The `IsListNotNullOrEmptyConverter` can convert a `List` into a `Boolean` value. It returns true when the list is not null or empty.
 
-Refer to the following code example. Here, the Book Ticket button will be visible only when the number of people is equal to or greater than one, i.e. the list should not be null or empty.
+Refer to the following code example. Here, the "Book Ticket" button will be visible only when the number of people is equal to or greater than one, i.e. the list should not be null or empty.
 
 {% tabs %}
 
@@ -1000,13 +1000,13 @@ internal class IsListNotNullOrEmptyViewModel : INotifyPropertyChanged
 
 The following gif image illustrates the result of the above code.
 
-![Is List Not Null Or Empty Converter](Images/IsListNotNullOrEmptyConverter.png)
+![Is List Not Null Or Empty Converter](Converters-Images/IsListNotNullOrEmptyConverter.png)
 
 ## Is String Not Null Or Empty Converter
 
-The IsStringNotNullOrEmptyConverter can convert a string to a Boolean value. It returns true when the string is not null or empty.
+The `IsStringNotNullOrEmptyConverter` can convert a `String` to a `Boolean` value. It returns true when the string is not null or empty.
 
-Refer to the following code example. Here, we will set the visibility of the submit button based on the text entered by the user.
+Refer to the following code example. Here, we will set the visibility of the "Submit" button based on the text entered by the user.
 
 {% tabs %}
 
@@ -1036,13 +1036,13 @@ Refer to the following code example. Here, we will set the visibility of the sub
 
 The following gif image illustrates the result of the above code.
 
-![Is String Not Null Or Empty Converter Sample](Images/IsStringNotNullOrEmptyConverter.gif)
+![Is String Not Null Or Empty Converter Sample](Converters-Images/IsStringNotNullOrEmptyConverter.gif)
 
 ## Is String Not Null Or Whitespace Converter
 
-The IsStringNotNullOrWhitespaceConverter can convert a string to a Boolean value. It returns true when the string is not null or white space.
+The `IsStringNotNullOrWhitespaceConverter` can convert a `String` to a `Boolean` value. It returns true when the string is not null or white space.
 
-Refer to the following code example. Here, we will set the visibility of the submit button based on the text entered by the user.
+Refer to the following code example. Here, we will set the visibility of the "Submit" button based on the text entered by the user.
 
 {% tabs %}
 
@@ -1072,11 +1072,11 @@ Refer to the following code example. Here, we will set the visibility of the sub
 
 The following gif image illustrates the result of the above code.
 
-![Is String Not Null Or Whitespace Converter Sample](Images/IsStringNotNullOrWhitespaceConverter.gif)
+![Is String Not Null Or Whitespace Converter Sample](Converters-Images/IsStringNotNullOrWhitespaceConverter.gif)
 
 ## List To String Converter
 
-The ListToStringConverter is a value converter that converts the incoming IEnumerable value into a string.
+The `ListToStringConverter` is a value converter that converts the incoming `IEnumerable` value into a `String.`
 
 Refer to the following code example. Here, the items in the list are converted into strings separated by a comma.
 
@@ -1193,13 +1193,13 @@ public class ListToStringViewModel : INotifyPropertyChanged
 
 The following gif image illustrates the result of the above code.
 
-![List To String Converter sample](Images/ListToStringConverter.png)
+![List To String Converter sample](Converters-Images/ListToStringConverter.png)
 
 ## Multi Converter
 
-The MultiConverter is a value converter that allows users to bind multiple converters together.
+The `MultiConverter` is a value converter that allows users to bind multiple converters together.
 
-Refer to the following code example. Here, the TextCaseConverter converts the casing to uppercase and returns the value. After that, the EqualConverter checks whether the value is equal and returns the Boolean value.
+Refer to the following code example. Here, the `TextCaseConverter` converts the casing to uppercase and returns the value. After that, the `EqualConverter` checks whether the value is equal and returns the Boolean value.
 
 {% tabs %}
 
@@ -1278,13 +1278,13 @@ public class MultiConverterViewModel : INotifyPropertyChanged
 
 The following gif image illustrates the result of the above code.
 
-![MultiConverter Sample](Images/MultiConverter.gif)
+![MultiConverter Sample](Converters-Images/MultiConverter.gif)
 
 ## Number To Bool Converter
 
-The NumberToBoolConverter is used to convert a numeric value into a Boolean.
+The `NumberToBoolConverter` is used to convert a numeric value into a Boolean.
 
-Refer to the following code example. Here, the Proceed button will be visible when the input number value is at least 1.
+Refer to the following code example. Here, the "Proceed" button will be visible when the input number value is at least 1.
 
 {% tabs %}
 
@@ -1363,11 +1363,11 @@ public class NumberToBoolViewModel : INotifyPropertyChanged
 
 The following gif image illustrates the result of the above code.
 
-![Number To Bool Converter sample](Images/NumberToBoolConverter.png)
+![Number To Bool Converter sample](Converters-Images/NumberToBoolConverter.png)
 
 ## String To List Converter
 
-The StringToListConverter is a value converter that converts the string value into a list based on the separator provided by the user.
+The `StringToListConverter` is a value converter that converts the string value into a list based on the separator provided by the user.
 
 Refer to the following code example. Here, the string will be added to the list if a comma is included in the entry.
 
@@ -1444,11 +1444,11 @@ Refer to the following code example. Here, the string will be added to the list 
 
 The following gif image illustrates the result of the above code.
 
-![String To List Converter sample](Images/StringToListConverter.png)
+![String To List Converter sample](Converters-Images/StringToListConverter.png)
 
 ## Text Case Converter
 
-The TextCaseConverter is used to convert the input string to the desired casing.
+The `TextCaseConverter` is used to convert the input string to the desired casing.
 
 Refer to the following code example. Here, we will convert the input string into upper, lower, Pascal, and paragraph casings. 
 
@@ -1515,7 +1515,7 @@ Refer to the following code example. Here, we will convert the input string into
 
 The following gif image illustrates the result of the above code.
 
-![Text Case Converter sample](Images/TextCaseConverter.png)
+![Text Case Converter sample](Converters-Images/TextCaseConverter.png)
 
 N> You can find the complete converters sample from this [link](https://github.com/SyncfusionExamples/maui-converters-samples).
 
