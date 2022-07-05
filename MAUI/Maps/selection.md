@@ -118,14 +118,28 @@ You can customize the below appearance of the selected shape as below.
 		public ViewModel()
 		{
 			Data = new ObservableCollection<Model>();
-			Data.Add(new Model("New South Wales",  Color.FromRgb(97, 137, 255)));
-			Data.Add(new Model("Northern Territory", Color.FromRgb(97, 137, 255)));
-			Data.Add(new Model("Victoria", Color.FromRgb(97, 137, 255)));
-			Data.Add(new Model("Tasmania", Color.FromRgb(97, 137, 255)));
-			Data.Add(new Model("Queensland", Color.FromRgb(97, 137, 255)));
-			Data.Add(new Model("Western Australia", Color.FromRgb(97, 137, 255)));
-			Data.Add(new Model("South Australia", Color.FromRgb(97, 137, 255)));
-		}
+			Data.Add(new Model(
+               "New South Wales",
+               Color.FromRgb(97, 137, 255)));
+            Data.Add(new Model(
+                "Northern Territory",
+                Color.FromRgb(97, 137, 255)));
+            Data.Add(new Model(
+                "Victoria",
+                Color.FromRgb(97, 137, 255)));
+            Data.Add(new Model(
+                "Tasmania",
+                Color.FromRgb(97, 137, 255)));
+            Data.Add(new Model(
+                "Queensland",
+                Color.FromRgb(97, 137, 255)));
+            Data.Add(new Model(
+                "Western Australia",
+                Color.FromRgb(97, 137, 255)));
+            Data.Add(new Model(
+                "South Australia",
+                Color.FromRgb(97, 137, 255)));
+        }
 	}
     
 	public class Model

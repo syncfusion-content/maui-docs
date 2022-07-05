@@ -695,8 +695,8 @@ A data template selector also can be used to customize the appearance of each it
 	<map:SfMaps>
         <map:SfMaps.Layer>
             <map:MapShapeLayer ShapeStroke="DarkGrey"
-							   MarkerTemplate="{StaticResource MarkerTemplateSelector}">
-							   
+                               MarkerTemplate="{StaticResource MarkerTemplateSelector}">
+                               
                 <map:MapShapeLayer.Markers>
                     <map:MapMarkerCollection>
                         <local:CustomMarker1 Latitude="21.7679"
