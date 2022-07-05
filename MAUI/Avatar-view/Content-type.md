@@ -11,14 +11,57 @@ documentation: ug
 
 ## Avatar Types
 
-The `SfAvatarView` control allows you to display the view in three different ways:
+The `SfAvatarView` control allows you to display the view in five different ways:
+
+* `Default` - Displays the default image when initializing without any other source such as image and group.
 
 * `Initials` - Displays the initial in the view.
+
+* `AvatarCharacter` - Displays the default image in the view.
 
 * `Custom` - Displays a custom image in the view.
 
 * `Group` - Displays a maximum of three images or initials in a single view.
 
+
+## Default
+
+Default type avatar view is used for displaying the default vector image when initializing without the initials, custom, or group view types.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sfavatar:SfAvatarView  ContentType="Default"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        BackgroundColor="OrangeRed"
+                        WidthRequest="50"
+                        HeightRequest="50"
+                        CornerRadius="25">
+</sfavatar:SfAvatarView>
+	
+{% endhighlight %}
+
+{% highlight C# %}
+
+Grid mainGrid = new Grid();
+SfAvatarView avatarview = new SfAvatarView();
+avatarview.VerticalOptions = LayoutOptions.Center;
+avatarview.HorizontalOptions = LayoutOptions.Center;
+avatarview.WidthRequest = 50;
+avatarview.HeightRequest = 50;
+avatarview.CornerRadius = 25;
+avatarview.ContentType = ContentType.Default;
+avatarview.BackgroundColor = Colors.OrangeRed;
+mainGrid.Children.Add(avatarview);
+this.Content = mainGrid;	
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Default](ContentType_Images/Default.jpg)
 
 ## Initials 
 
@@ -44,36 +87,36 @@ The `SingleCharacter` is used for displaying the first character in the string y
 {% tabs %}
 {% highlight xaml %}
 
-        <sfavatar:SfAvatarView ContentType="Initials"
-                               HorizontalOptions="Center"
-                               VerticalOptions="Center"
-                               InitialsType="SingleCharacter"
-                               AvatarName="Alex"
-                               InitialsColor="Black" 
-                               WidthRequest="50"
-                               FontAttributes="Bold"
-                               HeightRequest="50"
-                               CornerRadius="25"          
-                               BackgroundColor="Bisque">
-        </sfavatar:SfAvatarView>
+<sfavatar:SfAvatarView ContentType="Initials"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       InitialsType="SingleCharacter"
+                       AvatarName="Alex"
+                       InitialsColor="Black" 
+                       WidthRequest="50"
+                       FontAttributes="Bold"
+                       HeightRequest="50"
+                       CornerRadius="25"          
+                       BackgroundColor="Bisque">
+</sfavatar:SfAvatarView>
 
 {% endhighlight %}
 {% highlight c# %}
              
-            Grid mainGrid = new Grid();
-            SfAvatarView avatarview = new SfAvatarView();
-            avatarview.VerticalOptions = LayoutOptions.Center;
-            avatarview.HorizontalOptions = LayoutOptions.Center;
-            avatarview.BackgroundColor = Colors.Bisque;
-            avatarview.WidthRequest = 50;
-            avatarview.HeightRequest = 50;
-            avatarview.CornerRadius = 25;
-            avatarview.ContentType = ContentType.Initials;
-            avatarview.AvatarName = "Alex";
-            avatarview.InitialsType = InitialsType.SingleCharacter;
-            avatarview.InitialsColor = Colors.Black;
-            mainGrid.Children.Add(avatarview);
-            this.Content = mainGrid;
+Grid mainGrid = new Grid();
+SfAvatarView avatarview = new SfAvatarView();
+avatarview.VerticalOptions = LayoutOptions.Center;
+avatarview.HorizontalOptions = LayoutOptions.Center;
+avatarview.BackgroundColor = Colors.Bisque;
+avatarview.WidthRequest = 50;
+avatarview.HeightRequest = 50;
+avatarview.CornerRadius = 25;
+avatarview.ContentType = ContentType.Initials;
+avatarview.AvatarName = "Alex";
+avatarview.InitialsType = InitialsType.SingleCharacter;
+avatarview.InitialsColor = Colors.Black;
+mainGrid.Children.Add(avatarview);
+this.Content = mainGrid;
 
 {% endhighlight %}
 {% endtabs %}
@@ -87,34 +130,34 @@ The `DoubleCharacter` is used for displaying a two-characters text you have set 
 {% tabs %}
 {% highlight xaml %}
 
-        <sfavatar:SfAvatarView ContentType="Initials"
-                               InitialsType="DoubleCharacter"
-                               AvatarName="Alex"
-                               InitialsColor="Black"                     
-                               WidthRequest="50"
-                               FontAttributes="Bold"                     
-                               HeightRequest="50"
-                               CornerRadius="25"                        
-                               BackgroundColor="Bisque">
-        </sfavatar:SfAvatarView>
+<sfavatar:SfAvatarView ContentType="Initials"
+                       InitialsType="DoubleCharacter"
+                       AvatarName="Alex"
+                       InitialsColor="Black"                     
+                       WidthRequest="50"
+                       FontAttributes="Bold"                     
+                       HeightRequest="50"
+                       CornerRadius="25"                        
+                       BackgroundColor="Bisque">
+</sfavatar:SfAvatarView>
 
 {% endhighlight %}
 {% highlight c# %}
           
-            Grid mainGrid = new Grid();
-            SfAvatarView avatarview = new SfAvatarView();
-            avatarview.VerticalOptions = LayoutOptions.Center;
-            avatarview.HorizontalOptions = LayoutOptions.Center;
-            avatarview.BackgroundColor = Colors.Bisque;
-            avatarview.WidthRequest = 50;
-            avatarview.HeightRequest = 50;
-            avatarview.CornerRadius = 25;
-            avatarview.ContentType = ContentType.Initials;
-            avatarview.AvatarName = "Alex";
-            avatarview.InitialsType = InitialsType.DoubleCharacter;
-            avatarview.InitialsColor = Colors.Black;
-            mainGrid.Children.Add(avatarview);
-            this.Content = mainGrid;
+Grid mainGrid = new Grid();
+SfAvatarView avatarview = new SfAvatarView();
+avatarview.VerticalOptions = LayoutOptions.Center;
+avatarview.HorizontalOptions = LayoutOptions.Center;
+avatarview.BackgroundColor = Colors.Bisque;
+avatarview.WidthRequest = 50;
+avatarview.HeightRequest = 50;
+avatarview.CornerRadius = 25;
+avatarview.ContentType = ContentType.Initials;
+avatarview.AvatarName = "Alex";
+avatarview.InitialsType = InitialsType.DoubleCharacter;
+avatarview.InitialsColor = Colors.Black;
+mainGrid.Children.Add(avatarview);
+this.Content = mainGrid;
 
 {% endhighlight %}
 {% endtabs %}
@@ -124,6 +167,44 @@ The `DoubleCharacter` is used for displaying a two-characters text you have set 
 ## Custom image
 
 You can add a custom user image by setting the `ImageSource` property. Refer to the Getting Started Documentation in SfAvatarView
+
+## Avatar characters
+
+You can set the default vector images that already present in avatar view by setting the `AvatarCharacter` property.
+
+{% tabs %}
+{% highlight xaml %}
+
+<sfavatar:SfAvatarView VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       ContentType="AvatarCharacter"
+                       AvatarCharacter="Avatar8"
+                       BackgroundColor="DeepSkyBlue"
+                       WidthRequest="50"
+                       HeightRequest="50"
+                       CornerRadius="25">
+</sfavatar:SfAvatarView>
+
+{% endhighlight %}
+{% highlight c# %}
+            
+Grid mainGrid = new Grid();
+SfAvatarView avatarview = new SfAvatarView();
+avatarview.VerticalOptions = LayoutOptions.Center;
+avatarview.HorizontalOptions = LayoutOptions.Center;
+avatarview.WidthRequest = 50;
+avatarview.HeightRequest = 50;
+avatarview.CornerRadius = 25;
+avatarview.ContentType = ContentType.AvatarCharacter;
+avatarview.AvatarCharacter = AvatarCharacter.Avatar8;
+avatarview.Background = Colors.DeepSkyBlue;
+mainGrid.Children.Add(avatarview);
+this.Content = mainGrid;
+            
+{% endhighlight %}
+{% endtabs %}
+
+![AvatarCharacter](ContentType_Images/AvatarCharacter.jpg)
 
 ## GroupView 
 
@@ -161,7 +242,7 @@ Set the `InitialsMemberPath` for displaying the initials in the group view. For 
 
     }
 
-    public class EmployeeViewMdoel : INotifyPropertyChanged
+    public class EmployeeViewModel : INotifyPropertyChanged
     {
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -184,7 +265,7 @@ Set the `InitialsMemberPath` for displaying the initials in the group view. For 
             }
         }
 
-        public EmployeeViewMdoel()
+        public EmployeeViewModel()
         {
             CollectionImage = new ObservableCollection<Employee>();
             CollectionImage.Add(new Employee { Name="Mike" , ImageSource = "mike.png",Colors=Colors.Gray });
@@ -200,32 +281,32 @@ Set the `InitialsMemberPath` for displaying the initials in the group view. For 
 {% highlight xaml %}
 
 <ContentPage.BindingContext>
-        <local:EmployeeViewMdoel/>
+    <local:EmployeeViewModel/>
 </ContentPage.BindingContext>
 
-   <sfavatar:SfAvatarView ContentType="Group"                         
-                          VerticalOptions="Center"
-                          HorizontalOptions="Center"
-                          GroupSource="{Binding CollectionImage}"
-                          BackgroundColorMemberPath="Colors"
-                          ImageSourceMemberPath="ImageSource"
-                          WidthRequest="50"
-                          HeightRequest="50"
-                          CornerRadius="25">
-    </sfavatar:SfAvatarView>
+<sfavatar:SfAvatarView ContentType="Group"                         
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       GroupSource="{Binding CollectionImage}"
+                       BackgroundColorMemberPath="Colors"
+                       ImageSourceMemberPath="ImageSource"
+                       WidthRequest="50"
+                       HeightRequest="50"
+                       CornerRadius="25">
+</sfavatar:SfAvatarView>
 
 {% endhighlight %}
 {% highlight c# %}
 
  public partial class MainPage : ContentPage, INotifyPropertyChanged
     {
-        EmployeeViewMdoel emp;
+        EmployeeViewModel emp;
 
            public MainPage()
-          {
+           {
             InitializeComponent();
             Grid mainGrid = new Grid();
-            emp = new EmployeeViewMdoel();
+            emp = new EmployeeViewModel();
             SfAvatarView avatarview = new SfAvatarView();
             avatarview.VerticalOptions = LayoutOptions.Center;
             avatarview.HorizontalOptions = LayoutOptions.Center;
@@ -256,20 +337,20 @@ You can set the initials only in the group view by setting the `InitialsMemberPa
 {% highlight xaml %}
 
 <ContentPage.BindingContext>
-        <local:EmployeeViewMdoel/>
+    <local:EmployeeViewModel/>
 </ContentPage.BindingContext>
 
-    <sfavatar:SfAvatarView ContentType="Group"                         
-                          VerticalOptions="Center"
-                          HorizontalOptions="Center"
-                          GroupSource="{Binding CollectionImage}"
-                          BackgroundColorMemberPath="Colors"
-                          ImageSourceMemberPath="ImageSource"
-                          InitialsMemberPath="Name"
-                          WidthRequest="50"
-                          HeightRequest="50"
-                          CornerRadius="25">
-    </sfavatar:SfAvatarView>
+<sfavatar:SfAvatarView ContentType="Group"                         
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       GroupSource="{Binding CollectionImage}"
+                       BackgroundColorMemberPath="Colors"
+                       ImageSourceMemberPath="ImageSource"
+                       InitialsMemberPath="Name"
+                       WidthRequest="50"
+                       HeightRequest="50"
+                       CornerRadius="25">
+</sfavatar:SfAvatarView>
 
 {% endhighlight %}
 
@@ -277,12 +358,12 @@ You can set the initials only in the group view by setting the `InitialsMemberPa
 
 public partial class MainPage : ContentPage, INotifyPropertyChanged
     {
-        EmployeeViewMdoel emp;
-         public MainPage()
+        EmployeeViewModel emp;
+        public MainPage()
         {
 
             Grid mainGrid = new Grid();
-            emp = new EmployeeViewMdoel();
+            emp = new EmployeeViewModel();
             SfAvatarView avatarview = new SfAvatarView();
             avatarview.VerticalOptions = LayoutOptions.Center;
             avatarview.HorizontalOptions = LayoutOptions.Center;
@@ -303,7 +384,7 @@ public partial class MainPage : ContentPage, INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![GroupView in Initials Only](ContentType_Images/GroupView_Initilasalone.png)
+![GroupView in Initials Only](ContentType_Images/GroupView_InitialsAlone.png)
 
 ## Add both image and initials in a GroupView
 
@@ -312,9 +393,9 @@ You have to set both the image and initials based on what should be added in the
 {% tabs %}
 {% highlight c# %}
 
- public class EmployeeViewMdoel : INotifyPropertyChanged
+ public class EmployeeViewModel : INotifyPropertyChanged
     {
-          public EmployeeViewMdoel()
+        public EmployeeViewModel()
         {
             CollectionImage = new ObservableCollection<Employee>();
             CollectionImage.Add(new Employee { ImageSource="mike.png" });
@@ -329,5 +410,5 @@ You have to set both the image and initials based on what should be added in the
 {% endtabs %}
 
 
-![GroupView for both image and initials](ContentType_Images/GroupView_InitilalandImage.png)
+![GroupView for both image and initials](ContentType_Images/GroupView_InitialAndImage.png)
 

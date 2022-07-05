@@ -21,38 +21,36 @@ The Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget
 
  In the MauiProgram.cs file, register the handler for Syncfusion core.
 
-{% highlight C# %}
-   
-    using Microsoft.Maui;
-    using Microsoft.Maui.Hosting;
-    using Microsoft.Maui.Controls.Compatibility;
-    using Microsoft.Maui.Controls.Hosting;
-    using Microsoft.Maui.Controls.Xaml;
-    
-`using Syncfusion.Maui.Core.Hosting;`
+{% highlight C#  hl_lines="6 17" %}   
+using Microsoft.Maui;
+using Microsoft.Maui.Hosting;
+using Microsoft.Maui.Controls.Compatibility;
+using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Controls.Xaml;    
+using Syncfusion.Maui.Core.Hosting;
 
-    namespace AvatarViewSample
+namespace AvatarViewSample
+{
+    public static class MauiProgram
     {
-      public static class MauiProgram
-      {
-        public static MauiApp CreateMauiApp()
+    public static MauiApp CreateMauiApp()
+    {
+        var builder = MauiApp.CreateBuilder();
+        builder
+        .UseMauiApp<App>()
+        .ConfigureSyncfusionCore()
+
+        .ConfigureFonts(fonts =>
         {
-            var builder = MauiApp.CreateBuilder();
-            builder
-            .UseMauiApp<App>()
-			.`ConfigureSyncfusionCore()`
- 
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
+            fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+        });
 
-            return builder.Build();
-         }
-       
-      }
+        return builder.Build();
+        }
+    
+    }
 
-    }     
+}     
 
 {% endhighlight %}
 
@@ -91,8 +89,8 @@ You can add a custom image for displaying in `SfAvatarView` using the `ImageSour
                            HeightRequest="50"
                            CornerRadius="25"
                            WidthRequest="50" />
- </Grid>
- </ContentPage.Content>
+</Grid>
+</ContentPage.Content>
 {% endhighlight %}
 {% highlight c# %}
 
@@ -133,4 +131,6 @@ namespace AvatarViewGettingStarted
 The following screenshot illustrates the result of the above code.
 
 ![.NET MAUI Avatar View Getting Started](GettingStarted_Images/Getting_Started_Sample.png) 
+
+The Getting Started sample is available in this following link: [Getting Started](https://github.com/SyncfusionExamples/maui-avatarview-samples). 
 

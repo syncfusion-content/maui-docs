@@ -16,47 +16,23 @@ Drawing size can be customized in SfBusyIndicator. `SizeFactor` property can be 
 
 {% highlight xaml %}
 
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-                x:Class="BusyIndicatorSample.MainPage">
-
-        <ContentPage.Content>
-            <core:SfBusyIndicator x:Name="busyindicator"
-                                  IsRunning="True"
-                                  AnimationType="CircularMaterial"
-                                  Title="Loading..."                            
-                                  SizeFactor="0.7"/>           
-        </ContentPage.Content>
-    </ContentPage>
+<core:SfBusyIndicator x:Name="busyindicator"
+                      IsRunning="True"
+                      AnimationType="CircularMaterial"
+                      Title="Loading..."                            
+                      SizeFactor="0.7"/>           
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    using Syncfusion.Maui.Core;
-    using Microsoft.Maui;
-    using Microsoft.Maui.Controls;
-
-    namespace BusyIndicatorSample
-    {
-        public partial class MainPage : ContentPage
-        {
-            public MainPage()
-            {
-                InitializeComponent();
-                SfBusyIndicator busyIndicator = new SfBusyIndicator()
-                {
-                    IsRunning = true,
-                    AnimationType = AnimationType.CircularMaterial,
-                    Title = "Loading...",
-                    SizeFactor = 0.7
-                };
-                this.Content = busyIndicator;
-            }
-        }
-    }
+SfBusyIndicator busyIndicator = new SfBusyIndicator()
+{
+    IsRunning = true,
+    AnimationType = AnimationType.CircularMaterial,
+    Title = "Loading...",
+    SizeFactor = 0.7
+};
 
 {% endhighlight %}
 

@@ -16,53 +16,32 @@ SfBusyIndicator provides option to set the color for indicator. This can be done
 
 {% highlight xaml %}
 
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-                x:Class="BusyIndicatorSample.MainPage">
-
-        <ContentPage.Content>
-            <core:SfBusyIndicator x:Name="busyindicator"
-                                  IsRunning="True"
-                                  AnimationType="CircularMaterial"
-                                  Title="Loading..."
-                                  IndicatorColor="Red"/>           
-        </ContentPage.Content>
-    </ContentPage>
-
+    
+<core:SfBusyIndicator x:Name="busyindicator"
+                      IsRunning="True"
+                      AnimationType="CircularMaterial"
+                      Title="Searching..."
+                      IndicatorColor="Red"/>           
+ 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    using Syncfusion.Maui.Core;
-    using Microsoft.Maui;
-    using Microsoft.Maui.Controls;
-
-    namespace BusyIndicatorSample
-    {
-        public partial class MainPage : ContentPage
-        {
-            public MainPage()
-            {
-                InitializeComponent();
-                SfBusyIndicator busyIndicator = new SfBusyIndicator()
-                {
-                    IsRunning = true,
-                    AnimationType = AnimationType.CircularMaterial,
-                    Title = "Loading...",
-                    IndicatorColor = Colors.Red
-                };
-                this.Content = busyIndicator;
-            }
-        }
-    }
+SfBusyIndicator busyIndicator = new SfBusyIndicator()
+{
+    IsRunning = true,
+    AnimationType = AnimationType.CircularMaterial,
+    Title = "Searching...",
+    IndicatorColor = Colors.Red
+};
 
 {% endhighlight %}
 
 {% endtabs %}
 
+The following gif image illustrates the result of the above code.
 
+![Indicator Color](Images/IndicatorColor/IndicatorColor.png)
 
 ## Overlay Background in SfBusyIndicator
 
@@ -72,54 +51,35 @@ SfBusyIndicator provides option to set the overlay background. This can be done 
 
 {% highlight xaml %}
 
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-                x:Class="BusyIndicatorSample.MainPage">
-
-        <ContentPage.Content>
-            <core:SfBusyIndicator x:Name="busyindicator"
-                                  IsRunning="True"
-                                  AnimationType="CircularMaterial"
-                                  Title="Loading..."
-                                  IndicatorColor="Red"
-                                  OverlayFill = "DarkViolet""/>           
-        </ContentPage.Content>
-    </ContentPage>
+<core:SfBusyIndicator x:Name="busyindicator"
+                      IsRunning="True"
+                      AnimationType="CircularMaterial"
+                      Title="Searching..."
+                      TextColor="White"
+                      IndicatorColor="White"
+                      OverlayFill="#512BD4" />       
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    using Syncfusion.Maui.Core;
-    using Microsoft.Maui;
-    using Microsoft.Maui.Controls;
-
-    namespace BusyIndicatorSample
-    {
-        public partial class MainPage : ContentPage
-        {
-            public MainPage()
-            {
-                InitializeComponent();
-                SfBusyIndicator busyIndicator = new SfBusyIndicator()
-                {
-                    IsRunning = true,
-                    AnimationType = AnimationType.CircularMaterial,
-                    Title = "Loading...",
-                    IndicatorColor = Colors.Red,
-                    OverlayFill = Colors.DarkViolet
-                };
-                this.Content = busyIndicator;
-            }
-        }
-    }
-
+SfBusyIndicator busyIndicator = new SfBusyIndicator()
+{
+    IsRunning = true,
+    AnimationType = AnimationType.CircularMaterial,
+    Title = "Searching...",
+    TextColor = Colors.White,
+    IndicatorColor = Colors.White,
+    OverlayFill = Color.FromArgb("#512BD4")
+};
+ 
 {% endhighlight %}
 
 {% endtabs %}
 
+The following gif image illustrates the result of the above code.
+
+![Overlay Fill](Images/IndicatorColor/OverlayFillColor.png)
 
 The `OverlayFill` property type is `Brush`, so you can set Gradients as background.
 
@@ -127,71 +87,46 @@ The `OverlayFill` property type is `Brush`, so you can set Gradients as backgrou
 
 {% highlight xaml %}
 
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-                x:Class="BusyIndicatorSample.MainPage">
-
-        <ContentPage.Content>
-           <core:SfBusyIndicator IsRunning="True" 
-                                 AnimationType = "CircularMaterial"
-                                 IndicatorColor="#e64c93" 
-                                 Title="Loading...">
-                <core:SfBusyIndicator.OverlayFill>
-                    <RadialGradientBrush>
-                        <GradientStop Color="#44e64c93"
-                          Offset="0.1" />
-                        <GradientStop Color="#AA9d40db"
-                          Offset="1.0" />
-                    </RadialGradientBrush>
-                </core:SfBusyIndicator.OverlayFill>
-            </core:SfBusyIndicator>         
-        </ContentPage.Content>
-    </ContentPage>
+<core:SfBusyIndicator IsRunning="True" 
+                      AnimationType = "CircularMaterial"
+                      IndicatorColor="#e64c93" 
+                      Title="Searching...">
+    <core:SfBusyIndicator.OverlayFill>
+        <RadialGradientBrush>
+            <GradientStop Color="#44e64c93"
+                Offset="0.1" />
+            <GradientStop Color="#AA9d40db"
+                Offset="1.0" />
+        </RadialGradientBrush>
+    </core:SfBusyIndicator.OverlayFill>
+</core:SfBusyIndicator>  
 
 {% endhighlight %}
 
 {% highlight c# %}
-
-    using Syncfusion.Maui.Core;
-    using Microsoft.Maui;
-    using Microsoft.Maui.Controls;
-
-    namespace BusyIndicatorSample
+  
+SfBusyIndicator busyIndicator = new SfBusyIndicator()
+{
+    IsRunning = true,
+    AnimationType = AnimationType.CircularMaterial,
+    Title = "Searching...",
+    IndicatorColor = Color.FromArgb("#e64c93"),
+    OverlayFill = new RadialGradientBrush()
     {
-        public partial class MainPage : ContentPage
-        {
-            public MainPage()
-            {
-                InitializeComponent();
-                SfBusyIndicator busyIndicator = new SfBusyIndicator()
-                {
-                    IsRunning = true,
-                    AnimationType = AnimationType.CircularMaterial,
-                    Title = "Loading...",
-                    IndicatorColor = Color.FromArgb("#e64c93"),
-                    OverlayFill = new RadialGradientBrush()
-                    {
-                        GradientStops = new GradientStopCollection()
-                                            {
-                                                new GradientStop(){Color= Color.FromArgb("#44e64c93"),Offset= 0.1f},
-                                                new GradientStop(){ Color = Color.FromArgb("#AA9d40db"), Offset = 1.0f }
-                                            }
-                    }
-
-                };
-
-                this.Content = busyIndicator;
-            }
-        }
+        GradientStops = new GradientStopCollection()
+                            {
+                                new GradientStop(){Color= Color.FromArgb("#44e64c93"),Offset= 0.1f},
+                                new GradientStop(){ Color = Color.FromArgb("#AA9d40db"), Offset = 1.0f }
+                            }
     }
+
+};
 
 {% endhighlight %}
 
 {% endtabs %}
 
-The following screenshot illustrates the indicator color and background of SfBusyIndicator.
+The following gif image illustrates the result of the above code.
 
-![IndicatorColor and OverlayFill](Images/IndicatorColor/Indicator_Background.png)
+![Overlay Fill](Images/IndicatorColor/OverlayFillBrush.png)
 

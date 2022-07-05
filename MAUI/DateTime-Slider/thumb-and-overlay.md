@@ -9,21 +9,21 @@ documentation: ug
 
 # Thumb and Overlay in .NET MAUI DateTime Slider (SfDateTimeSlider)
 
-This section helps to learn about how to customize the thumb and thumb overlay in the date-time slider.
+This section helps to learn about how to customize the thumb and thumb overlay in the DateTime Slider.
 
 * Thumb - It is one of the elements of slider which can be used to drag and change the selected value of the slider.
 * Thumb overlay - It is rendered around the thumb while interacting with them.
 
 ## Thumb size
 
-You can change the size of the thumb in the slider using the [`Radius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html#Syncfusion_Maui_Sliders_SliderThumbStyle_Radius) property of the [`ThumbStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html) class. The default value of the [`Radius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html#Syncfusion_Maui_Sliders_SliderThumbStyle_Radius)  property is `10.0`.
+Change the size of the thumb in the DateTime Slider using the [`Radius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html#Syncfusion_Maui_Sliders_SliderThumbStyle_Radius) property of the [`ThumbStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html) class. The default value of the [`Radius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html#Syncfusion_Maui_Sliders_SliderThumbStyle_Radius)  property is `10.0`.
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <sliders:SfDateTimeSlider Minimum="2010-01-01" 
-                          Maximum="2020-01-01" 
+                          Maximum="2018-01-01" 
                           Value="2014-01-01">
     <sliders:SfDateTimeSlider.ThumbStyle>
         <sliders:SliderThumbStyle Radius="15" />
@@ -36,8 +36,8 @@ You can change the size of the thumb in the slider using the [`Radius`](https://
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
 slider.Minimum = new DateTime(2010, 01, 01);
-slider.Maximum = new DateTime(2020, 01, 01);
-slider.value = new DateTime(2014, 01, 01);
+slider.Maximum = new DateTime(2018, 01, 01);
+slider.Value = new DateTime(2014, 01, 01);
 slider.ThumbStyle.Radius = 15;
 
 {% endhighlight %}
@@ -48,14 +48,14 @@ slider.ThumbStyle.Radius = 15;
 
 ## Thumb color
 
-You can change the color of the thumb in the slider using the [`Fill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html#Syncfusion_Maui_Sliders_SliderThumbStyle_Fill) property of the [`ThumbStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html) class.
+Change the color of the thumb using the [`Fill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html#Syncfusion_Maui_Sliders_SliderThumbStyle_Fill) property of the [`ThumbStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html) class.
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <sliders:SfDateTimeSlider Minimum="2010-01-01" 
-                          Maximum="2020-01-01" 
+                          Maximum="2018-01-01" 
                           Value="2014-01-01">
    <sliders:SfDateTimeSlider.ThumbStyle>
        <sliders:SliderThumbStyle Fill="#EE3F3F" />
@@ -68,8 +68,8 @@ You can change the color of the thumb in the slider using the [`Fill`](https://h
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
 slider.Minimum = new DateTime(2010, 01, 01);
-slider.Maximum = new DateTime(2020, 01, 01);
-slider.value = new DateTime(2014, 01, 01);
+slider.Maximum = new DateTime(2018, 01, 01);
+slider.Value = new DateTime(2014, 01, 01);
 slider.ThumbStyle.Fill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
 
 {% endhighlight %}
@@ -80,14 +80,14 @@ slider.ThumbStyle.Fill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
 
 ## Thumb stroke thickness and stroke
 
-You can change the thumb stroke width using the [`StrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html#Syncfusion_Maui_Sliders_SliderThumbStyle_StrokeThickness) property and thumb stroke color using the [`Stroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html#Syncfusion_Maui_Sliders_SliderThumbStyle_Stroke) property of the [`ThumbStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html) class.
+Change the thumb stroke width using the [`StrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html#Syncfusion_Maui_Sliders_SliderThumbStyle_StrokeThickness) property and thumb stroke color using the [`Stroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html#Syncfusion_Maui_Sliders_SliderThumbStyle_Stroke) property of the [`ThumbStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html) class.
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <sliders:SfDateTimeSlider Minimum="2010-01-01" 
-                          Maximum="2020-01-01" 
+                          Maximum="2018-01-01" 
                           Value="2014-01-01">
     <sliders:SfDateTimeSlider.ThumbStyle>
         <sliders:SliderThumbStyle Stroke="#EE3F3F" 
@@ -101,8 +101,8 @@ You can change the thumb stroke width using the [`StrokeThickness`](https://help
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
 slider.Minimum = new DateTime(2010, 01, 01);
-slider.Maximum = new DateTime(2020, 01, 01);
-slider.value = new DateTime(2014, 01, 01);
+slider.Maximum = new DateTime(2018, 01, 01);
+slider.Value = new DateTime(2014, 01, 01);
 slider.ThumbStyle.Stroke = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
 slider.ThumbStyle.StrokeThickness = 2;
 
@@ -114,14 +114,14 @@ slider.ThumbStyle.StrokeThickness = 2;
 
 ## Thumb overlay size
 
-You can change the size of the thumb overlay in the slider using the [`Radius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbOverlayStyle.html#Syncfusion_Maui_Sliders_SliderThumbOverlayStyle_Radius) property of the [`ThumbOverlayStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbOverlayStyle.html) class. The default value of the [`Radius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbOverlayStyle.html#Syncfusion_Maui_Sliders_SliderThumbOverlayStyle_Radius)  property is `24.0`.
+Change the size of the thumb overlay using the [`Radius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbOverlayStyle.html#Syncfusion_Maui_Sliders_SliderThumbOverlayStyle_Radius) property of the [`ThumbOverlayStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbOverlayStyle.html) class. The default value of the [`Radius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbOverlayStyle.html#Syncfusion_Maui_Sliders_SliderThumbOverlayStyle_Radius)  property is `24.0`.
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <sliders:SfDateTimeSlider Minimum="2010-01-01" 
-                          Maximum="2020-01-01" 
+                          Maximum="2018-01-01" 
                           Value="2014-01-01">
    <sliders:SfDateTimeSlider.ThumbOverlayStyle>
       <sliders:SliderThumbOverlayStyle Radius="26"/>
@@ -134,8 +134,8 @@ You can change the size of the thumb overlay in the slider using the [`Radius`](
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
 slider.Minimum = new DateTime(2010, 01, 01);
-slider.Maximum = new DateTime(2020, 01, 01);
-slider.value = new DateTime(2014, 01, 01);
+slider.Maximum = new DateTime(2018, 01, 01);
+slider.Value = new DateTime(2014, 01, 01);
 slider.ThumbOverlayStyle.Radius = 26;
 
 {% endhighlight %}
@@ -146,14 +146,14 @@ slider.ThumbOverlayStyle.Radius = 26;
 
 ## Thumb overlay color
 
-You can change the color of the thumb overlay in the slider using the [`Fill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbOverlayStyle.html#Syncfusion_Maui_Sliders_SliderThumbOverlayStyle_Fill) property of the [`ThumbOverlayStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbOverlayStyle.html) class.
+Change the color of the thumb overlay using the [`Fill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbOverlayStyle.html#Syncfusion_Maui_Sliders_SliderThumbOverlayStyle_Fill) property of the [`ThumbOverlayStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbOverlayStyle.html) class.
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <sliders:SfDateTimeSlider Minimum="2010-01-01" 
-                          Maximum="2020-01-01" 
+                          Maximum="2018-01-01" 
                           Value="2014-01-01">
    <sliders:SfDateTimeSlider.ThumbOverlayStyle>
        <sliders:SliderThumbOverlayStyle Fill="#F7C8DB"/>
@@ -166,8 +166,8 @@ You can change the color of the thumb overlay in the slider using the [`Fill`](h
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
 slider.Minimum = new DateTime(2010, 01, 01);
-slider.Maximum = new DateTime(2020, 01, 01);
-slider.value = new DateTime(2014, 01, 01);
+slider.Maximum = new DateTime(2018, 01, 01);
+slider.Value = new DateTime(2014, 01, 01);
 slider.ThumbOverlayStyle.Fill = new SolidColorBrush(Color.FromArgb("#F7C8DB")); 
 
 {% endhighlight %}
@@ -178,15 +178,20 @@ slider.ThumbOverlayStyle.Fill = new SolidColorBrush(Color.FromArgb("#F7C8DB"));
 
 ## Disabled thumb
 
-You can change the state of the slider to disabled by setting `false` to the `IsEnabled` property. Using the Visual State Manager (VSM), you can customize the slider thumb properties based on the visual states. The applicable visual states are enabled(default) and disabled.
+Change the state of the slider to disabled by setting `false` to the `IsEnabled` property. Using the Visual State Manager (VSM), customize the slider thumb properties based on the visual states. The applicable visual states are enabled(default) and disabled.
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <ContentPage.Resources>
-    <Style TargetType="sliders:SfSlider">
-        <Setter Property="Interval" Value="0.25" />
+    <Style TargetType="sliders:SfDateTimeSlider">
+        <Setter Property="Minimum"
+                Value="2010-01-01" />
+        <Setter Property="Maximum"
+                Value="2018-01-01" />
+        <Setter Property="Value"
+                Value="2014-01-01" />
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup>
@@ -224,9 +229,9 @@ You can change the state of the slider to disabled by setting `false` to the `Is
 <ContentPage.Content>
     <VerticalStackLayout>
         <Label Text="Enabled Slider" Padding="0,10"/>
-        <sliders:SfSlider/>
+        <sliders:SfDateTimeSlider/>
         <Label Text="Disabled Slider" Padding="0,10"/>
-        <sliders:SfSlider IsEnabled="False"/>
+        <sliders:SfDateTimeSlider IsEnabled="False"/>
     </VerticalStackLayout>
 </ContentPage.Content>
 
@@ -235,8 +240,19 @@ You can change the state of the slider to disabled by setting `false` to the `Is
 {% highlight C# %}
 
 VerticalStackLayout stackLayout = new VerticalStackLayout();
-SfSlider defaultSlider = new SfSlider();
-SfSlider disabledSlider = new SfSlider { IsEnabled = false };
+SfDateTimeSlider defaultSlider = new SfDateTimeSlider()
+{
+    Minimum = new DateTime(2010, 01, 01),
+    Maximum = new DateTime(2020, 01, 01),
+    Value = new DateTime(2014, 01, 01)
+};
+SfDateTimeSlider disabledSlider = new SfDateTimeSlider
+{
+    Minimum = new DateTime(2010, 01, 01),
+    Maximum = new DateTime(2020, 01, 01),
+    Value = new DateTime(2014, 01, 01),
+    IsEnabled = false
+};
 
 VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
 VisualStateGroup commonStateGroup = new VisualStateGroup();
@@ -244,7 +260,7 @@ VisualStateGroup commonStateGroup = new VisualStateGroup();
 VisualState defaultState = new VisualState { Name = "Default" };
 defaultState.Setters.Add(new Setter
 {
-    Property = SfSlider.ThumbStyleProperty,
+    Property = SfDateTimeSlider.ThumbStyleProperty,
     Value = new SliderThumbStyle
     {
         Radius = 13,
@@ -257,7 +273,7 @@ defaultState.Setters.Add(new Setter
 VisualState disabledState = new VisualState { Name = "Disabled" };
 disabledState.Setters.Add(new Setter
 {
-    Property = SfSlider.ThumbStyleProperty,
+    Property = SfDateTimeSlider.ThumbStyleProperty,
     Value = new SliderThumbStyle
     {
         Radius = 13,

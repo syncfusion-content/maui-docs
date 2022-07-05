@@ -9,7 +9,7 @@ documentation: ug
 
 # Events and Commands in .NET MAUI Range Selector (SfRangeSelector)
 
-This section explains about how to add the events and commands for Range Selector.
+This section explains how to add the events and commands for Range Selector.
 
 ## Events
 
@@ -28,21 +28,17 @@ This section explains about how to add the events and commands for Range Selecto
              ...
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-   
-   <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
-                                    Maximum="2020-01-01" 
-                                    RangeStart="2012-01-01" 
-                                    RangeEnd="2018-01-01" 
-                                    ValueChangeStart="OnValueChangeStart" 
-                                    ValueChanging="OnValueChanging" 
-                                    ValueChanged="OnValueChanged" 
-                                    ValueChangeEnd="OnValueChangeEnd">
-      
-      <charts:SfCartesianChart>
+
+    <sliders:SfRangeSelector ValueChangeStart="OnValueChangeStart"
+                             ValueChanging="OnValueChanging"
+                             ValueChanged="OnValueChanged"
+                             ValueChangeEnd="OnValueChangeEnd">
+
+        <charts:SfCartesianChart>
             ...
-      </charts:SfCartesianChart>
-   
-   </sliders:SfRangeSelector>
+        </charts:SfCartesianChart>
+
+    </sliders:SfRangeSelector>
 </ContentPage>
 
 {% endhighlight %}
@@ -63,11 +59,11 @@ private void OnValueChangeStart(object sender, EventArgs e)
 {
 }
 
-private void OnValueChanging(object sender, DateTimeRangeSelectorValueChangingEventArgs e)
+private void OnValueChanging(object sender, RangeSelectorValueChangingEventArgs e)
 {
 }
 
-private void OnValueChanged(object sender, DateTimeRangeSelectorValueChangedEventArgs e)
+private void OnValueChanged(object sender, RangeSelectorValueChangedEventArgs e)
 {
 }
 
@@ -81,7 +77,7 @@ private void OnValueChangeEnd(object sender, EventArgs e)
 
 ### Customize label text
 
-You can format or change the whole numeric or date label text using the [`LabelCreated`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_LabelCreated) event. The [`SliderLabelCreatedEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelCreatedEventArgs.html) contains the following parameters,
+Format or change the whole numeric label text using the [`LabelCreated`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_LabelCreated) event. The [`SliderLabelCreatedEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelCreatedEventArgs.html) contains the following parameters,
 
 * Text – Customize the text color using the [`Text`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelCreatedEventArgs.html#Syncfusion_Maui_Sliders_SliderLabelCreatedEventArgs_Style) parameter.
 * Style – Formats the text color, font size, font family, offset using the [`Style`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelCreatedEventArgs.html#Syncfusion_Maui_Sliders_SliderLabelCreatedEventArgs_Style) parameter.
@@ -141,9 +137,9 @@ private void OnLabelCreated(object sender, SliderLabelCreatedEventArgs e)
 
 ### Tooltip text format
 
-By default it is formatted based on [`NumberFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_NumberFormat)  property and [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.DateTimeRangeSliderBase.html#Syncfusion_Maui_Sliders_DateTimeRangeSliderBase_DateFormat) property based on whether it is date type [`SfDateTimeRangeSelector`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSelector.html) or numeric [`SfRangeSelector`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSelector.html).
+By default, it is formatted based on the [`SliderTooltip.NumberFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html#Syncfusion_Maui_Sliders_SliderTooltip_NumberFormat)  property.
 
-You can format or change the whole tooltip label text using the [`ToolTipLabelCreated`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html#Syncfusion_Maui_Sliders_SliderTooltip_TooltipLabelCreated) event. The [`SliderTooltipLabelCreatedEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltipLabelCreatedEventArgs.html) contains the following parameters,
+Format or change the whole tooltip label text using the [`ToolTipLabelCreated`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html#Syncfusion_Maui_Sliders_SliderTooltip_TooltipLabelCreated) event. The [`SliderTooltipLabelCreatedEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltipLabelCreatedEventArgs.html) contains the following parameters,
 
 * Text – Change the format of the tooltip text using the [`Text`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltipLabelCreatedEventArgs.html#Syncfusion_Maui_Sliders_SliderTooltipLabelCreatedEventArgs_Text) property.
 * Style – Change the appearance of the tooltip text like color, stroke color, and padding using the [`Style`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltipLabelCreatedEventArgs.html) property.
@@ -191,11 +187,11 @@ You can format or change the whole tooltip label text using the [`ToolTipLabelCr
 
 ![RangeSelector custom tooltip](images/tooltip/custom-tooltip.png)
 
-## Commands and its parameter
+## Commands and their parameter
 
 ### Drag started command
 
-The `DragStartedCommand` will be executed when the user started moving the thumb.
+The `DragStartedCommand` will be executed when the user starts moving the thumb.
 
 {% tabs %}
 
@@ -250,7 +246,7 @@ public class ViewModel
 
 ### Drag started command parameter
 
-The `DragStartedCommandParameter` will be executed when the user started moving the thumb.
+The `DragStartedCommandParameter` will be executed when the user starts moving the thumb.
 
 {% tabs %}
 
@@ -307,7 +303,7 @@ public class ViewModel
 
 ### Drag completed command
 
-The `DragCompletedCommand` will be executed when the user completed moving the thumb.
+The `DragCompletedCommand` will be executed when the user completes moving the thumb.
 
 {% tabs %}
 
@@ -362,7 +358,7 @@ public class ViewModel
 
 ### Drag completed command parameter
 
-The `DragCompletedCommandParameter` will be executed when the user completed moving the thumb.
+The `DragCompletedCommandParameter` will be executed when the user completes moving the thumb.
 
 {% tabs %}
 

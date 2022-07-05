@@ -10,54 +10,94 @@ documentation: ug
 
 ## Animation Type in SfBusyIndicator
 
-The `AnimationType` property for the SfBusyIndicator allows the users to set one of the animations from the built-in animations. The different types of animations are `CircularMaterial,` `LinearMaterial,` and `Cupertino.`
+The `AnimationType` property for the SfBusyIndicator allows the users to set one of the animations from the built-in animations. The different types of animations are `CircularMaterial,` `Cupertino,` and `LinearMaterial.`
+
+### Circular Material 
+
+The CircularMaterial animation is an one of the built-in animations in SfBusyIndicator. Refer to the following code example. Here, we’ll set the animation type as `CircularMaterial`.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-             x:Class="BusyIndicatorSample.MainPage">
-
-        <ContentPage.Content>
-            <core:SfBusyIndicator x:Name="busyIndicator"
-                                  IsRunning="True"
-                                  AnimationType="CircularMaterial" />
-        </ContentPage.Content>
-    </ContentPage>
+<core:SfBusyIndicator x:Name="busyIndicator"
+                      IsRunning="True"
+                      AnimationType="CircularMaterial" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-    using Syncfusion.Maui.Core;
-    using Microsoft.Maui;
-    using Microsoft.Maui.Controls;
-
-    namespace BusyIndicatorSample
-    {
-       public partial class MainPage : ContentPage
-       {
-           public MainPage()
-           {
-               InitializeComponent();
-               SfBusyIndicator busyIndicator = new SfBusyIndicator()
-               {
-                   IsRunning = true,
-                   AnimationType = AnimationType.CircularMaterial;
-               };
-            this.Content = busyIndicator;
-            }
-       }
-    }
+SfBusyIndicator busyIndicator = new SfBusyIndicator()
+{
+    IsRunning = true,
+    AnimationType = AnimationType.CircularMaterial;
+};
 
 {% endhighlight %}
 
 {% endtabs %}
 
-The following gif image contains the types of animation in BusyIndicator.
+The following gif image illustrates the result of the above code.
 
-![Animation Types](Images/AnimationType/AnimationType.gif)
+![Circular Material](Images/AnimationType/CircularMaterial.gif)
+
+### Cupertino
+
+The Cupertino animation is an one of the built-in animations in SfBusyIndicator. Refer to the following code example. Here, we’ll set the animation type as `Cupertino`.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<core:SfBusyIndicator x:Name="busyIndicator"
+                      IsRunning="True"
+                      AnimationType="Cupertino" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfBusyIndicator busyIndicator = new SfBusyIndicator()
+{
+    IsRunning = true,
+    AnimationType = AnimationType.Cupertino;
+};
+
+{% endhighlight %}
+
+{% endtabs %}
+
+The following gif image illustrates the result of the above code.
+
+![Cupertino](Images/AnimationType/Cupertino.gif)
+
+### Linear Material
+
+The LinearMaterial animation is an one of the built-in animations in SfBusyIndicator. Refer to the following code example. Here, we’ll set the animation type as `LinearMaterial`.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<core:SfBusyIndicator x:Name="busyIndicator"
+                      IsRunning="True"
+                      AnimationType="LinearMaterial" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfBusyIndicator busyIndicator = new SfBusyIndicator()
+{
+    IsRunning = true,
+    AnimationType = AnimationType.LinearMaterial;
+};
+
+{% endhighlight %}
+
+{% endtabs %}
+
+The following gif image illustrates the result of the above code.
+
+![Linear Material](Images/AnimationType/LinearMaterial.gif)

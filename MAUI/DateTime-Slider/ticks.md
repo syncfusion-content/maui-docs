@@ -9,13 +9,13 @@ documentation: ug
 
 # Tick in .NET MAUI Slider (SfDateTimeSlider)
 
-This section helps to learn about how to add major and minor ticks in the date-time slider.
+This section helps to learn about how to add major and minor ticks in the DateTime Slider.
 
 ## Show major ticks
 
-You can enable the major ticks on the track. It is a shape which is used to represent the major interval points of the track. The default value of [`ShowTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ShowTicks) property is `False`.
+Enable the major ticks on the track. It is a shape used to represent the major interval points of the track. The default value of the [`ShowTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ShowTicks) property is `False`.
 
-For example, if [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html#Syncfusion_Maui_Sliders_SfSlider_Minimum) is 0.0 and [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html#Syncfusion_Maui_Sliders_SfSlider_Maximum) is 10.0 and [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Interval) is 2.0, the slider will render the major ticks at 0.0, 2.0, 4.0 and so on.
+For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html#Syncfusion_Maui_Sliders_SfSlider_Minimum) is 0.0, the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html#Syncfusion_Maui_Sliders_SfSlider_Maximum) is 10.0, and [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Interval) is 2.0, the slider will render the major ticks at 0.0, 2.0, 4.0, and so on.
 
 ### Without Interval
 
@@ -24,7 +24,7 @@ For example, if [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 {% highlight xaml %}
 
 <sliders:SfDateTimeSlider Minimum="2010-01-01" 
-                          Maximum="2020-01-01" 
+                          Maximum="2018-01-01" 
                           Value="2014-01-01" 
                           ShowTicks="True" />
 
@@ -34,8 +34,8 @@ For example, if [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
 slider.Minimum = new DateTime(2010, 01, 01);
-slider.Maximum = new DateTime(2020, 01, 01);
-slider.value = new DateTime(2014, 01, 01);
+slider.Maximum = new DateTime(2018, 01, 01);
+slider.Value = new DateTime(2014, 01, 01);
 slider.ShowTicks = true;
 
 {% endhighlight %}
@@ -64,7 +64,7 @@ slider.ShowTicks = true;
 SfDateTimeSlider slider = new SfDateTimeSlider();
 slider.Minimum = new DateTime(2010, 01, 01);
 slider.Maximum = new DateTime(2020, 01, 01);
-slider.value = new DateTime(2014, 01, 01);
+slider.Value = new DateTime(2014, 01, 01);
 slider.Interval = 0.2;
 slider.ShowTicks = true;
 
@@ -76,7 +76,7 @@ slider.ShowTicks = true;
 
 ## Show minor ticks
 
-It is used to represent the number of smaller ticks between two major ticks. For example, if [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html#Syncfusion_Maui_Sliders_SfSlider_Minimum) is 0.0 and [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html#Syncfusion_Maui_Sliders_SfSlider_Maximum) is 10.0 and [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Interval) is 2.0, the slider will render the major ticks at 0.0, 2.0, 4.0 and so on. If [`MinorTicksPerInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MinorTicksPerInterval) is 1, then smaller ticks will be rendered on 1.0 and 3.0 and so on. The default value of [`MinorTicksPerInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MinorTicksPerInterval) property is Zero.
+It is used to represent the number of smaller ticks between two major ticks. For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeSlider_Minimum) is `DateTime(2010, 01, 01)`, the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeSlider_Maximum) is `DateTime(2018, 01, 01)`, and [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Interval) is 1, the DateTime Slider will render the major ticks at 2010, 2011, 2012, and so on. If the [`MinorTicksPerInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MinorTicksPerInterval) is 1, then smaller ticks will be rendered between 2010 and 2011, so on. The default value of the [`MinorTicksPerInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MinorTicksPerInterval) property is `Zero`.
 
 ### Without Interval
 
@@ -85,10 +85,10 @@ It is used to represent the number of smaller ticks between two major ticks. For
 {% highlight xaml %}
 
 <sliders:SfDateTimeSlider Minimum="2010-01-01" 
-                          Maximum="2020-01-01" 
+                          Maximum="2018-01-01" 
                           Value="2014-01-01"
                           ShowLabels="True" 
-                          MinorTicksPerInterval="3" 
+                          MinorTicksPerInterval="7" 
 		                  ShowTicks="True">
 </sliders:SfDateTimeSlider>
 
@@ -98,10 +98,9 @@ It is used to represent the number of smaller ticks between two major ticks. For
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
 slider.Minimum = new DateTime(2010, 01, 01);
-slider.Maximum = new DateTime(2020, 01, 01);
-slider.value = new DateTime(2014, 01, 01);
-slider.Interval = 2;
-slider.MinorTicksPerInterval = 3;
+slider.Maximum = new DateTime(2018, 01, 01);
+slider.Value = new DateTime(2014, 01, 01);
+slider.MinorTicksPerInterval = 7;
 slider.ShowTicks = true;
 slider.ShowLabels = true;
 
@@ -133,7 +132,7 @@ slider.ShowLabels = true;
 SfDateTimeSlider slider = new SfDateTimeSlider();
 slider.Minimum = new DateTime(2010, 01, 01);
 slider.Maximum = new DateTime(2020, 01, 01);
-slider.value = new DateTime(2014, 01, 01);
+slider.Value = new DateTime(2014, 01, 01);
 slider.Interval = 2;
 slider.MinorTicksPerInterval = 1;
 slider.ShowTicks = true;
@@ -147,7 +146,7 @@ slider.ShowLabels = true;
 
 ## Major ticks color
 
-You can change the active and inactive major ticks color of the slider using the [`ActiveFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_ActiveFill) and [`InactiveFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_InactiveFill) properties of the [`MajorTickStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MajorTickStyle) class.
+Change the active and inactive major ticks color of the slider using the [`ActiveFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_ActiveFill) and [`InactiveFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_InactiveFill) properties of the [`MajorTickStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MajorTickStyle) class.
 
 The active side of the slider is between the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html#Syncfusion_Maui_Sliders_SfSlider_Minimum) value and the thumb.
 
@@ -159,7 +158,7 @@ The inactive side of the slider is between the thumb and the [`Maximum`](https:/
 
 <sliders:SfDateTimeSlider Minimum="2010-01-01" 
                           Maximum="2020-01-01" 
-                          Value="2014-01-01"
+                          Value="2015-01-01"
                           Interval="2" 
                           ShowTicks="True">
    <sliders:SfDateTimeSlider.MajorTickStyle>
@@ -175,7 +174,7 @@ The inactive side of the slider is between the thumb and the [`Maximum`](https:/
 SfDateTimeSlider slider = new SfDateTimeSlider();
 slider.Minimum = new DateTime(2010, 01, 01);
 slider.Maximum = new DateTime(2020, 01, 01);
-slider.value = new DateTime(2014, 01, 01);
+slider.Value = new DateTime(2015, 01, 01);
 slider.Interval = 2;
 slider.ShowTicks = true;
 slider.MajorTickStyle.ActiveFill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
@@ -189,14 +188,18 @@ slider.MajorTickStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F7B1AE
 
 ## Minor ticks color
 
-You can change the active and inactive minor ticks color of the slider using the [`ActiveFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_ActiveFill) and [`InactiveFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_InactiveFill) properties of the [`MinorTickStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MinorTickStyle) class.
+Change the active and inactive minor ticks color of the slider using the [`ActiveFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_ActiveFill) and [`InactiveFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_InactiveFill) properties of the [`MinorTickStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MinorTickStyle) class.
 
 The active side of the slider is between the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html#Syncfusion_Maui_Sliders_SfSlider_Minimum) value and the thumb.
 
 The inactive side of the slider is between the thumb and the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html#Syncfusion_Maui_Sliders_SfSlider_Maximum) value.
 
+{% tabs %}
+
+{% highlight xaml %}
+
 <sliders:SfDateTimeSlider Minimum="2010-01-01" 
-                          Maximum="2020-01-01" 
+                          Maximum="2018-01-01" 
                           Value="2014-01-01"
                           Interval="2"
                           ShowTicks="True"
@@ -214,8 +217,8 @@ The inactive side of the slider is between the thumb and the [`Maximum`](https:/
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
 slider.Minimum = new DateTime(2010, 01, 01);
-slider.Maximum = new DateTime(2020, 01, 01);
-slider.value = new DateTime(2014, 01, 01);
+slider.Maximum = new DateTime(2018, 01, 01);
+slider.Value = new DateTime(2014, 01, 01);
 slider.Interval = 2;
 slider.ShowTicks = true;
 slider.ShowLabels = true;
@@ -229,9 +232,9 @@ slider.MinorTickStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F7B1AE
 
 ![Slider minor ticks color](images/ticks/minor-ticks-color.png)
 
-## Ticks size
+## Tick size
 
-You can change the major and minor ticks size of the slider using the [`ActiveSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_ActiveSize) and [`InactiveSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_InactiveSize) property of the [`MajorTickStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MajorTickStyle) and [`MinorTickStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MinorTickStyle)  classes. The default value is is `Size(2.0, 8.0)`.
+Change the major and minor tick size of the slider using the [`ActiveSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_ActiveSize) and [`InactiveSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_InactiveSize) property of the [`MajorTickStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MajorTickStyle) and [`MinorTickStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MinorTickStyle)  classes. The default value is `Size(2.0, 8.0)`.
 
 {% tabs %}
 
@@ -239,7 +242,7 @@ You can change the major and minor ticks size of the slider using the [`ActiveSi
 
 <sliders:SfDateTimeSlider Minimum="2010-01-01" 
                           Maximum="2020-01-01" 
-                          Value="2014-01-01"
+                          Value="2015-01-01"
                           Interval="2" 
                           ShowTicks="True" 
 		                  MinorTicksPerInterval="1">
@@ -260,7 +263,7 @@ You can change the major and minor ticks size of the slider using the [`ActiveSi
 SfDateTimeSlider slider = new SfDateTimeSlider();
 slider.Minimum = new DateTime(2010, 01, 01);
 slider.Maximum = new DateTime(2020, 01, 01);
-slider.value = new DateTime(2014, 01, 01);
+slider.Value = new DateTime(2015, 01, 01);
 slider.Interval = 2;
 slider.ShowTicks = true;
 slider.MinorTicksPerInterval = 1;
@@ -275,9 +278,9 @@ slider.MajorTickStyle.InactiveSize = new Size(2, 15);
 
 ![Slider tick size](images/ticks/tick-size.png)
 
-## Ticks offset
+## Tick offset
 
-You can adjust the space between track and ticks of the slider using the [`Offset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_Offset) property of the [`MajorTickStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MajorTickStyle) and [`MinorTickStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MinorTickStyle). The default value of the [`Offset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_Offset) property is `3.0`.
+Adjust the space between track and tick of the slider using the [`Offset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_Offset) property of the [`MajorTickStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MajorTickStyle) and [`MinorTickStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MinorTickStyle). The default value of the [`Offset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_Offset) property is `3.0`.
 
 {% tabs %}
 
@@ -304,7 +307,7 @@ You can adjust the space between track and ticks of the slider using the [`Offse
 SfDateTimeSlider slider = new SfDateTimeSlider();
 slider.Minimum = new DateTime(2010, 01, 01);
 slider.Maximum = new DateTime(2020, 01, 01);
-slider.value = new DateTime(2014, 01, 01);
+slider.Value = new DateTime(2015, 01, 01);
 slider.Interval = 2;
 slider.ShowTicks = true;
 slider.MinorTicksPerInterval = 1;
@@ -319,15 +322,21 @@ slider.MajorTickStyle.Offset = 6;
 
 ## Disabled ticks
 
-You can change the state of the slider to disabled by setting `false` to the `IsEnabled` property. Using the Visual State Manager (VSM), you can customize the slider’s major and minor tick properties based on the visual states. The applicable visual states are enabled(default) and disabled.
+Change the state of the slider to disabled by setting `false` to the `IsEnabled` property. Using the Visual State Manager (VSM), customize the slider’s major and minor tick properties based on the visual states. The applicable visual states are enabled(default) and disabled.
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <ContentPage.Resources>
-    <Style TargetType="sliders:SfSlider">
-        <Setter Property="Interval" Value="0.25" />
+    <Style TargetType="sliders:SfDateTimeSlider">
+        <Setter Property="Minimum"
+                Value="2010-01-01" />
+        <Setter Property="Maximum"
+                Value="2018-01-01" />
+        <Setter Property="Value"
+                Value="2014-01-01" />
+        <Setter Property="Interval" Value="2" />
         <Setter Property="ShowTicks" Value="True" />
         <Setter Property="MinorTicksPerInterval" Value="2" />
         <Setter Property="VisualStateManager.VisualStateGroups">
@@ -382,9 +391,9 @@ You can change the state of the slider to disabled by setting `false` to the `Is
 <ContentPage.Content>
     <VerticalStackLayout Padding="10">
         <Label Text="Enabled Slider" Padding="0,10"/>
-        <sliders:SfSlider/>
+        <sliders:SfDateTimeSlider/>
         <Label Text="Disabled Slider" Padding="0,10"/>
-        <sliders:SfSlider IsEnabled="False"/>
+        <sliders:SfDateTimeSlider IsEnabled="False"/>
     </VerticalStackLayout>
 </ContentPage.Content>
 
@@ -393,8 +402,25 @@ You can change the state of the slider to disabled by setting `false` to the `Is
 {% highlight C# %}
 
 VerticalStackLayout stackLayout = new VerticalStackLayout();
-SfSlider defaultSlider = new SfSlider { Interval = 0.25, ShowTicks = true, MinorTicksPerInterval = 2 };
-SfSlider disabledSlider = new SfSlider { IsEnabled = false, Interval = 0.25, ShowTicks = true, MinorTicksPerInterval = 2 };
+SfDateTimeSlider defaultSlider = new SfDateTimeSlider()
+{
+    Minimum = new DateTime(2010, 01, 01),
+    Maximum = new DateTime(2018, 01, 01),
+    Value = new DateTime(2014, 01, 01),
+    Interval = 2, 
+    ShowTicks = true, 
+    MinorTicksPerInterval = 2
+};
+SfDateTimeSlider disabledSlider = new SfDateTimeSlider
+{
+    Minimum = new DateTime(2010, 01, 01),
+    Maximum = new DateTime(2018, 01, 01),
+    Value = new DateTime(2014, 01, 01),,
+    IsEnabled = false, 
+    Interval = 2, 
+    ShowTicks = true, 
+    MinorTicksPerInterval = 2
+};
 
 VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
 VisualStateGroup commonStateGroup = new VisualStateGroup();
@@ -402,7 +428,7 @@ VisualStateGroup commonStateGroup = new VisualStateGroup();
 VisualState defaultState = new VisualState { Name = "Default" };
 defaultState.Setters.Add(new Setter
 {
-    Property = SfSlider.MajorTickStyleProperty,
+    Property = SfDateTimeSlider.MajorTickStyleProperty,
     Value = new SliderTickStyle
     {
         ActiveSize = new Size(3, 10),
@@ -413,7 +439,7 @@ defaultState.Setters.Add(new Setter
 });
 defaultState.Setters.Add(new Setter
 {
-    Property = SfSlider.MinorTickStyleProperty,
+    Property = SfDateTimeSlider.MinorTickStyleProperty,
     Value = new SliderTickStyle
     {
         ActiveSize = new Size(3, 6),
@@ -426,7 +452,7 @@ defaultState.Setters.Add(new Setter
 VisualState disabledState = new VisualState { Name = "Disabled" };
 disabledState.Setters.Add(new Setter
 {
-    Property = SfSlider.MajorTickStyleProperty,
+    Property = SfDateTimeSlider.MajorTickStyleProperty,
     Value = new SliderTickStyle
     {
         ActiveSize = new Size(3, 10),
@@ -437,7 +463,7 @@ disabledState.Setters.Add(new Setter
 });
 disabledState.Setters.Add(new Setter
 {
-    Property = SfSlider.MinorTickStyleProperty,
+    Property = SfDateTimeSlider.MinorTickStyleProperty,
     Value = new SliderTickStyle
     {
         ActiveSize = new Size(3, 6),
