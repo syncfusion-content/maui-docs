@@ -338,13 +338,13 @@ To set `Aspect` to images loaded inside `DataGridImageColumn`, refer the below c
     <local:ViewModel />
 </ContentPage.BindingContext>
 
-<sfGrid:SfDataGrid x:Name="dataGrid"
+<syncfusion:SfDataGrid x:Name="dataGrid"
                    AutoGenerateColumnsMode="None"
                    ItemsSource="{Binding OrdersInfo}">
-    <sfGrid:SfDataGrid.Columns>
+    <syncfusion:SfDataGrid.Columns>
         <sfGrid:DataGridImageColumn MappingName="DealerImage" Aspect="AspectFit"/>
-    </sfGrid:SfDataGrid.Columns>
-</sfGrid:SfDataGrid>
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 
 ## DataGridTemplateColumn
