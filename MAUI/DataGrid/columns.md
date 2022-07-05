@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Columns in .NET MAUI DataGrid control | Syncfusion
-description: Learn here all about Columns support in Syncfusion .NET MAUI DataGrid (SfDataGrid) control, its elements and more.
+description: Learn all about Columns support in Syncfusion .NET MAUI DataGrid (SfDataGrid) control, its elements, and more here.
 platform: MAUI
 control: SfDataGrid
 documentation: UG
@@ -9,7 +9,7 @@ documentation: UG
 
 # Columns in MAUI DataGrid (SfDataGrid)
 
-The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) allows to create and add columns in the following two ways,
+The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) allows a user to create and add columns in the following two ways:
 
 * Automatically generating columns
 * Manually defining columns
@@ -18,7 +18,7 @@ The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Sf
 
 The SfDataGrid creates columns automatically based on the bindable property [SfDataGrid.AutoGenerateColumnsMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AutoGenerateColumnsMode). The columns are generated based on the type of individual properties in the underlying collection that is set as ItemsSource.
 
-Below table shows the column type created for the respective data types. For remaining types, [DataGridTextColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridTextColumn.html) will be created.
+The table below shows the column type created for the respective data types. For the remaining data types, [DataGridTextColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridTextColumn.html) will be created.
 
 <table>
 <tr>
@@ -67,15 +67,16 @@ The `SfDataGrid.AutoGenerateColumnsMode` includes the following modes,
 </tr>
 <tr>
 <td> <code>ResetAll</code> </td>
-<td> When changing the <code>ItemsSource</code>, the columns for the previous data source are cleared and the columns will be created newly for the new data source. Even when columns are explicitly defined it does not consider the defined columns and creates the column based on the underlying collection.<br/> Further when changing the <code>ItemsSource</code> and sorting for all the columns will be cleared. </td>
+<td> When changing the <code>ItemsSource</code>, the columns for the previous data source are cleared and the columns will be newly created for the new data source. Even when columns are explicitly defined, it does not consider the defined columns and creates the column based on the underlying collection.<br/> Further when changing the <code>ItemsSource</code> and sorting for all the columns will be cleared. </td>
 </tr>
 <tr>
 <td> <code>RetainOld</code> </td>
-<td> When changing the <code>ItemsSource</code>, creates columns for all fields in a data source when the DataGrid does not have any explicit definition for columns. When columns are defined explicitly, then the defined columns alone are retained and new columns are not created.<br/>Similarly when changing the <code>ItemsSource</code> and when the DataGrid have any explicit definition for columns and sorting are retained as it is. </td>
+<td> When changing the <code>ItemsSource</code>,  create columns for all fields in a data source when the DataGrid does not have any explicit definition for columns. When columns are defined explicitly, then the defined columns alone are retained and new columns are not created.<br/>Similarly, when changing the <code>ItemsSource</code> and when the DataGrid has an explicit definition for columns and sorting are retained as it is. </td>
 </tr>
 <tr>
 <td> <code>SmartReset</code> </td>
-<td> Retains the columns defined explicitly in application level and the columns with <code>MappingName</code> identical to the properties in the new data source. Creates columns newly for all the other properties in the data source.<br/> Similarly it retains the sorting of the columns that are defined explicitly in application level and the columns with <code>MappingName</code> identical to the properties in new data source. </td>
+<td> Retains the columns defined explicitly at the application level and the columns with <code>MappingName</code> identical to the properties in the new data source. Newly creates columns for all the other properties in the data source.
+Similarly, it retains the sorting of the columns that are defined explicitly at the application level and the columns with <code>MappingName/<code> identical to the properties in the new data source. </td>
 </tr>
 </table>
 
@@ -88,7 +89,7 @@ The [DataGridAutoGeneratingColumnEventArgs](https://help.syncfusion.com/cr/maui/
 * **Column**: This property returns the created column which can be customized.
 * **Cancel**: This property cancels the column creation.
 
-You can skip generating a column by handling the `SfDataGrid.AutoGeneratingColumn` event as shown as follows,
+You can skip generating a column by handling the `SfDataGrid.AutoGeneratingColumn` event as follows,
 
 {% tabs %}
 {% highlight c# %}
@@ -104,7 +105,7 @@ private void SfDataGrid_AutoGeneratingColumn(object sender, DataGridAutoGenerati
 {% endhighlight %}
 {% endtabs %}
 
-Formatting for the auto generated columns can be applied as follows:
+Formatting for the auto-generated columns can be applied as follows:
 
 {% tabs %}
 {% highlight c# %}
@@ -124,7 +125,7 @@ private void SfDataGrid_AutoGeneratingColumn(object sender, DataGridAutoGenerati
 
 ## Manually generate columns
 
-The `SfDataGrid` allows to define the columns manually by adding the [DataGridColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html) objects to the [SfDataGrid.Columns](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_Columns) collection. If you want to show only the manually defined columns in the view, you can achieve it by setting the `SfDataGrid.AutoGenerateColumnsMode` property to `None`.
+The `SfDataGrid` allows to define the columns manually by adding the [DataGridColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html) objects to the [SfDataGrid.Columns](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_Columns) collection. If you want to show only the manually defined columns in the view, you can achieve that by setting the `SfDataGrid.AutoGenerateColumnsMode` property to `None`.
 
 There are different types of columns available. Any column can be created based on the requirements from both XAML and code.
 
@@ -164,7 +165,7 @@ You can get the columns from the `SfDataGrid.Columns` property.
 
 ### Adding column to DataGrid
 
-You can add a column to the DataGrid at runtime by adding instance of a `DataGridColumn` to the `SfDataGrid.Columns` collection.
+You can add a column to the DataGrid at runtime by adding an instance of a `DataGridColumn` to the `SfDataGrid.Columns` collection.
 
 {% tabs %}
 {% highlight c# %}
@@ -172,9 +173,9 @@ this.sfDataGrid.Columns.Add(new DataGridTextColumn() { HeaderText = "Order ID", 
 {% endhighlight %}
 {% endtabs %}
 
-### Accessing column
+### Accessing a column
 
-You can access the column through its column index or [DataGridColumn.MappingName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_MappingName) from the `SfDataGrid.Columns` collection.
+You can access a column through its column index or [DataGridColumn.MappingName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_MappingName) from the `SfDataGrid.Columns` collection.
 
 {% tabs %}
 {% highlight c# %}
@@ -194,7 +195,7 @@ this.sfDataGrid.Columns.Clear();
 {% endhighlight %}
 {% endtabs %}
 
-You can remove a column using `Remove` and `RemoveAt` methods.
+You can remove a column using the `Remove` and `RemoveAt` methods.
 
 {% tabs %}
 {% highlight c# %}

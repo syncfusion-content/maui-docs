@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Binding in .NET MAUI DataGrid control | Syncfusion
-description: Learn here all about Data Binding support in Syncfusion .NET MAUI DataGrid (SfDataGrid) control and more.
+description: Learn all about Data Binding support in Syncfusion .NET MAUI DataGrid (SfDataGrid) control and more.
 platform: MAUI
 control: SfDataGrid
 documentation: UG
@@ -9,9 +9,9 @@ documentation: UG
 
 # Data Binding in MAUI DataGrid (SfDataGrid)
 
-The [.NET MAUI DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) Control is bound to an external data source to display the data in the tabular format. It supports data sources such as List, IEnumerable, and so on. The [SfDataGrid.ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ItemsSourceProperty) property helps to bind this control with collection of objects.
+The [.NET MAUI DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) Control is bound to an external data source to display the data in a tabular format. It supports data sources such as List, IEnumerable, and so on. The [SfDataGrid.ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ItemsSourceProperty) property helps to bind this control with a collection of objects.
 
-Below codes demonstrate that how to bind a data source to the `SfDataGrid`. Each row in the SfDataGrid would bind to an object in data source. Each column would bind to a property in the data model object.
+The codes below codes demonstrate how to bind a data source to the `SfDataGrid`. Each row in the SfDataGrid binds to an object in the data source. Each column binds to a property in the data model object.
 
 {% tabs %}
 {% highlight xaml %}
@@ -36,17 +36,17 @@ this.sfDataGrid.ItemsSource = orderInfoViewModel.OrderInfoCollection;
 {% endhighlight %}
 {% endtabs %}
 
-If the data source implements [ICollectionChanged](https://docs.microsoft.com/en-us/dotnet/api/system.collections.icollection?view=net-6.0) interface, then the `SfDataGrid` will automatically refresh the view when an item is added, removed, or cleared. When you add or remove an item in [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-6.0), it automatically refreshes the view as the ObservableCollection. That implements the [INotifyCollectionChanged](https://docs.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1.system-componentmodel-inotifypropertychanged-propertychanged?view=net-6.0). But when you do the same in `List`, it will not refresh the view automatically.
+If the data source implements the [ICollectionChanged](https://docs.microsoft.com/en-us/dotnet/api/system.collections.icollection?view=net-6.0) interface, then the `SfDataGrid` will automatically refresh the view when an item is added, removed, or cleared. When you add or remove an item in [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-6.0), it automatically refreshes the view as the ObservableCollection. That implements the [INotifyCollectionChanged](https://docs.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1.system-componentmodel-inotifypropertychanged-propertychanged?view=net-6.0). But when you do the same in `List`, it will not refresh the view automatically.
 
 If the data model implements the `INotifyPropertyChanged` interface, then the SfDataGrid responds to the property change at runtime to update the view.
 
 ## Binding with IEnumerable
 
-The `SfDataGrid` control supports to bind any collection that implements from [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerable?view=net-6.0) interface. All the data operations such as sorting and filtering are supported when binding collection derived from IEnumerable.
+The `SfDataGrid` control supports binding any collection that implements from [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerable?view=net-6.0) interface. All the data operations such as sorting and filtering are supported when the binding collection is derived from `IEnumerable`.
 
 ## Binding with DataTable
 
-The `SfDataGrid` control supports to bind the [DataTable](https://docs.microsoft.com/en-us/dotnet/api/system.data.datatable?view=net-6.0). `SfDataGrid` control automatically refresh the UI when binding DataTable as ItemsSource when rows are added, removed or cleared.
+The `SfDataGrid` control supports binding the [DataTable](https://docs.microsoft.com/en-us/dotnet/api/system.data.datatable?view=net-6.0). `SfDataGrid` control automatically refresh the UI when binding `DataTable` as `ItemsSource` when rows are added, removed or cleared.
 
 {% tabs %}
 {% highlight c# %}
@@ -63,9 +63,9 @@ this.sfDataGrid1.ItemsSource = table;
 
 ## View
 
-The `SfDataGrid` has the View property of type [ICollectionViewAdv](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ICollectionViewAdv.html) interface that implements `ICollectionView` interface. View is responsible for maintaining and manipulating data and other advanced operations, like Sorting, Filtering, and etc.,
+The `SfDataGrid` has the View property of type [ICollectionViewAdv](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ICollectionViewAdv.html) interface that implements `ICollectionView` interface. The view is responsible for maintaining and manipulating data and other advanced operations, like Sorting, Filtering, and etc.,
 
-When you bind collection to the `ItemsSource` property of the `SfDataGrid`, then View will be created and maintains the operations on Data such as Sorting, Filtering, Insert, Delete, and Modification.
+When you bind a collection to the `ItemsSource` property of the `SfDataGrid`, then View will be created and maintains the operations on Data such as Sorting, Filtering, Inserting, Deleting, and Modification.
 
 >Note: The `SfDataGrid` creates different types of view derived from `ICollectionViewAdv` interface based on the `ItemsSource` property.
 
@@ -101,13 +101,13 @@ this.sfDataGrid.View.LiveDataUpdateMode = LiveDataUpdateMode.Default;
 
 ### RecordPropertyChanged
 
-The [RecordPropertyChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ICollectionViewAdv.html#Syncfusion_Maui_Data_ICollectionViewAdv_RecordPropertyChanged) event is invoked when the value of `DataModel` property is changed, if `DataModel` implements the `INotifyPropertyChanged` interface. The event receives with two arguments namely `sender` that handles the `DataModel` and the [PropertyChangedEventArgs](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.propertychangedeventargs?view=net-6.0) as argument. `PropertyChangedEventArgs` object contains the following property,
+The [RecordPropertyChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ICollectionViewAdv.html#Syncfusion_Maui_Data_ICollectionViewAdv_RecordPropertyChanged) event is invoked when the value of the `DataModel` property is changed, if `DataModel` implements the `INotifyPropertyChanged` interface. The event receives with two arguments namely `sender` that handles the `DataModel` and the [PropertyChangedEventArgs](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.propertychangedeventargs?view=net-6.0) as argument. `PropertyChangedEventArgs` object contains the following property,
 
 * **PropertyName**: Defines the `PropertyName` of the changed value in the `DataModel`.
 
 ### SourceCollectionChanged
 
-The [SourceCollectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ICollectionViewAdv.html#Syncfusion_Maui_Data_ICollectionViewAdv_SourceCollectionChanged) event is invoked when the `SourceCollection` is changed. For example, adding or removing the collection. The event receives two arguments namely `sender` that handles [GridQueryableCollectionViewWrapper](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.GridQueryableCollectionViewWrapper.html) object and the [NotifyCollectionChangedEventArgs](https://docs.microsoft.com/en-us/dotnet/api/system.collections.specialized.notifycollectionchangedeventargs?view=net-6.0) as argument. `NotifyCollectionChangedEventArgs` object contains the following properties,
+The [SourceCollectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ICollectionViewAdv.html#Syncfusion_Maui_Data_ICollectionViewAdv_SourceCollectionChanged) event is invoked when the `SourceCollection` is changed, for example, adding or removing the collection. The event receives two arguments namely `sender` that handles [GridQueryableCollectionViewWrapper](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.GridQueryableCollectionViewWrapper.html) object and the [NotifyCollectionChangedEventArgs](https://docs.microsoft.com/en-us/dotnet/api/system.collections.specialized.notifycollectionchangedeventargs?view=net-6.0) as argument. `NotifyCollectionChangedEventArgs` object contains the following properties,
 
 * **Action**: Defines the current action. (i.e.) Add, Remove, Move, Replace, Reset.
 * **NewItems**: It contains the list of new items involved in the change.
