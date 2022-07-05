@@ -161,7 +161,7 @@ public MainPage()
 
 {% endtabs %}
 
-### Load a remote image
+### Load a remote file
 
 SfMaps provides support to load the json data or shapefile from the uri.
 
@@ -279,9 +279,10 @@ The [`ShapeDataField`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer DataSource="{Binding Data}"        
-                           PrimaryValuePath="State" 
-                           ShapeDataField="STATE_NAME" />
+        <map:MapShapeLayer x:Name="layer"
+                           ShapeDataField="STATE_NAME"
+                           DataSource="{Binding Data}"        
+                           PrimaryValuePath="State"  />
     </map:SfMaps.Layer>
 </map:SfMaps>
 
@@ -291,37 +292,36 @@ The [`ShapeDataField`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.
 
 public MainPage()
 {
-    InitializeComponent();
-
-    this.BindingContext = this;
-    
-    ObservableCollection<Model> Data = new ObservableCollection<Model>();
-    Data.Add(new Model("New South Wales", "New\nSouth Wales"));
-    Data.Add(new Model("Queensland", "Queensland"));
-    Data.Add(new Model("Northern Territory", "Northern\nTerritory"));
-    Data.Add(new Model("Victoria", "Victoria"));
-    Data.Add(new Model("Western Australia", "Western Australia"));
-    Data.Add(new Model("Tasmania", "Tasmania"));
-
-    SfMaps maps = new SfMaps();
-    MapShapeLayer layer = new MapShapeLayer();
-    layer.ShapesSource = MapSource.FromResource("MyProject.australia.json");
-    layer.PrimaryValuePath = "State";
-    layer.DataSource = Data;
-    layer.ShapeDataField = "STATE_NAME";
-    maps.Layer = layer;
-    this.Content = maps;
+	InitializeComponent();
+	this.layer.ShapesSource = MapSource.FromResource("MyProject.australia.json");
 }
 
-public class Model
+public class ViewModel
 {
-    public String State { get; set; }
-    public String StateCode { get; set; }
-
-    public Model(string state, string stateCode)
+    public ObservableCollection<Model> Data { get; set; }
+    public ViewModel()
     {
-        State = state;
-        StateCode = stateCode;
+        Data = new ObservableCollection<Model>();
+        Data.Add(new Model("New South Wales", "New\nSouth Wales", 1));
+        Data.Add(new Model("Queensland", "Queensland",2));
+        Data.Add(new Model("Northern Territory", "Northern\nTerritory",3));
+        Data.Add(new Model("Victoria", "Victoria",4));
+        Data.Add(new Model("Tasmania", "Tasmania",5));
+        Data.Add(new Model("Western Australia", "Western Australia",6));
+        Data.Add(new Model("South Australia", "South Australia",7));
+    }
+
+    public class Model
+    {
+        public string State { get; set; }
+        public string StateCode { get; set; }
+        public int ID { get; set; }
+        public Model(string state, string stateCode, int id)
+        {
+            State = state;
+            StateCode = stateCode;
+            ID = id;
+        }
     }
 }
 
@@ -341,6 +341,8 @@ Add the basic maps elements such as data labels, legend, and tooltip as shown in
 
 * **[Data labels](https://help.syncfusion.com/maui/maps/data-labels)** - You can show data labels using the [`ShowDataLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShowDataLabels) property and also, customize it using the [`DataLabelSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_DataLabelSettings) property.
 
+* **[Markers](https://help.syncfusion.com/maui/maps/markers)** - You can show markers at any position on the map by providing latitude and longitude position to the [`MapMarker`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html), which is from the [`Markers`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_Markers) collection.
+
 * **[Legend](https://help.syncfusion.com/maui/maps/legend)** - You can enable legend using the [`Legend`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_Legend) property. The legend's text is displayed based on the [`ColorMapping.Text`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.ColorMapping.html#Syncfusion_Maui_Maps_ColorMapping_Text) property. It is possible to customize the legend text using the [`TextStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html#Syncfusion_Maui_Maps_MapLegend_TextStyle) property.
 
 * **[Tooltip](https://help.syncfusion.com/maui/maps/tooltip)** - You can enable tooltip for the shapes using the [`ShowShapeTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShowShapeTooltip) property. It will be displayed when you interacts with the shapes i.e., while tapping in touch devices and hover in the mouse enabled devices.
@@ -349,45 +351,69 @@ Add the basic maps elements such as data labels, legend, and tooltip as shown in
 
 {% highlight xaml %}
 
-<map:SfMaps>
-    <map:SfMaps.Layer>
-        <map:MapShapeLayer DataSource="{Binding Data}" 
-                           PrimaryValuePath="State"
-                           ShapeStrokeThickness="0"    
-                           ShapeDataField="STATE_NAME"
-                           ShowShapeTooltip="True"
-                           ShapeColorValuePath="Population"
-                           ShowDataLabels="True"
-                           SelectedShapeStrokeThickness="0"
-                           ShapeHoverFill="Transparent">
+<Grid>
+    <Grid.BindingContext>
+        <local:ViewModel />
+    </Grid.BindingContext>
 
-             <map:MapShapeLayer.ColorMappings>
-                <map:EqualColorMapping Color ="#d0b800" Value = "6000" Text="New South Wales" />
-                <map:EqualColorMapping Color = "#00d5cf" Value = "8000"  Text="Queensland" />
-                <map:EqualColorMapping Color ="#cf4eee" Value = "5000" Text="Victoria" />
-                <map:EqualColorMapping Color ="#4f93d8"  Value = "90000" Text="Tasmania" />
-                <map:EqualColorMapping Color = "#8b6adf" Value = "7000" Text="Western Australia"  />
-                <map:EqualColorMapping Color ="#7bff67"  Value = "3000" Text="South Australia" />
-                <map:EqualColorMapping Color ="#ff4e42"  Value = "10000" Text="Northern Territory" />
-             </map:MapShapeLayer.ColorMappings>
+    <map:SfMaps>
+        <map:SfMaps.Layer>
+            <map:MapShapeLayer x:Name="layer"
+                               ShapeDataField="STATE_NAME"
+                               DataSource="{Binding Data}"
+                               PrimaryValuePath="State" 
+                               ShowDataLabels="True"
+                               ShowShapeTooltip="True"
+                               ShapeColorValuePath="ID">
 
-            <map:MapShapeLayer.Legend>
-                <map:MapLegend SourceType="Shape" Placement="Right" />
-            </map:MapShapeLayer.Legend>
+                <!--Set Data Label-->
+                <map:MapShapeLayer.DataLabelSettings>
+                    <map:MapDataLabelSettings DataLabelPath="StateCode" />
+                </map:MapShapeLayer.DataLabelSettings>
+                
+                <!--Set Color mapping-->
+                <map:MapShapeLayer.ColorMappings>
+                    <map:EqualColorMapping Color="#d0b800"
+                                           Value="1"
+                                           Text="NSW" />
+                    <map:EqualColorMapping Color="#00d5cf"
+                                           Value="2"
+                                           Text="Queensland" />
+                    <map:EqualColorMapping Color="#cf4eee"
+                                           Value="3"
+                                           Text="Victoria" />
+                    <map:EqualColorMapping Color="#4f93d8"
+                                           Value="4"
+                                           Text="Tasmania" />
+                    <map:EqualColorMapping Color="#8b6adf"
+                                           Value="5"
+                                           Text="WA" />
+                    <map:EqualColorMapping Color="#7bff67"
+                                           Value="6"
+                                           Text="SA" />
+                    <map:EqualColorMapping Color="#ff4e42"
+                                           Value="7"
+                                           Text="NT" />
+                </map:MapShapeLayer.ColorMappings>
 
-            <map:MapShapeLayer.DataLabelSettings>
-                <map:MapDataLabelSettings DataLabelPath="StateCode">
-                        <map:MapDataLabelSettings.DataLabelStyle>
-                                <map:MapLabelStyle FontSize="14"
-                                                   TextColor="Black"
-                                                   FontAttributes="Italic" />
-                        </map:MapDataLabelSettings.DataLabelStyle>
-                </map:MapDataLabelSettings>
-            </map:MapShapeLayer.DataLabelSettings>
-
-        </map:MapShapeLayer>
-    </map:SfMaps.Layer>
-</map:SfMaps>
+                <!--Set Markers-->
+                <map:MapShapeLayer.Markers>
+                    <map:MapMarkerCollection>
+                        <map:MapMarker x:Name="Adelaide"
+                                       Latitude="-34.928497"
+                                       Longitude="138.600739" />
+                    </map:MapMarkerCollection>
+                </map:MapShapeLayer.Markers>
+                
+                <!--Set Legend-->
+                <map:MapShapeLayer.Legend>
+                    <map:MapLegend SourceType="Shape"
+                                   Placement="Bottom" />
+                </map:MapShapeLayer.Legend>
+            </map:MapShapeLayer>
+        </map:SfMaps.Layer>
+    </map:SfMaps>
+</Grid>
 
 {% endhighlight %}
 
@@ -404,73 +430,105 @@ public MainPage()
     layer.DataSource = viewModel.Data;
     layer.PrimaryValuePath = "State";
     layer.ShapeDataField = "STATE_NAME";
-    layer.ShowShapeTooltip = true;
-    layer.ShapeColorValuePath = "Population";
+    layer.ShapeColorValuePath = "ID";
     layer.ShowDataLabels = true;
-    layer.ShapeStrokeThickness = 0;
-    layer.ShapeHoverFill = Colors.Transparent;
+    layer.ShowShapeTooltip = true;
 
     layer.DataLabelSettings = new MapDataLabelSettings()
     {
-        DataLabelPath = "StateCode",
-        DataLabelStyle = new MapLabelStyle()
-        {
-            FontSize = 14,
-            FontAttributes = FontAttributes.Italic,
-            TextColor = Colors.Black
-        },
-
-        OverflowMode = MapLabelOverflowMode.None,
+        DataLabelPath = "StateCode"
     };
 
     layer.ColorMappings = new ObservableCollection<ColorMapping>()
     {
-        new EqualColorMapping { Color = Color.FromRgb(208,183,0), Value = "6000",Text="New South Wales" },
-        new EqualColorMapping { Color = Color.FromRgb(0,213,207), Value = "8000" , Text="Queensland" },
-        new EqualColorMapping { Color = Color.FromRgb(207,78,238), Value = "5000", Text="Victoria" },
-        new EqualColorMapping { Color = Color.FromRgb(79,147,216), Value = "90000", Text="Tasmania" },
-        new EqualColorMapping { Color = Color.FromRgb(139,106,223), Value = "7000", Text="Western Australia" },
-        new EqualColorMapping { Color = Color.FromRgb(123,255,103), Value = "3000", Text="South Australia" },
-        new EqualColorMapping { Color = Color.FromRgb(255,78,66), Value = "10000",Text="Northern Territory" },
+        new EqualColorMapping
+		   {
+		      Color = Color.FromRgb(208,183,0),
+			  Value = "1",
+              Text="NSW"
+		   },
+        new EqualColorMapping
+		   { 
+		      Color = Color.FromRgb(0,213,207),
+		      Value = "2" ,
+			  Text="Queensland"
+		   },
+        new EqualColorMapping
+		   {
+		      Color = Color.FromRgb(207,78,238),
+			  Value = "3",
+              Text="Victoria"
+		   },
+        new EqualColorMapping
+		   {
+		      Color = Color.FromRgb(79,147,216),
+			  Value = "4",
+			  Text="Tasmania"
+		   },
+        new EqualColorMapping
+		   {
+		      Color = Color.FromRgb(139,106,223),
+			  Value = "5",
+			  Text="WA"
+		   },
+        new EqualColorMapping
+		   {
+		      Color = Color.FromRgb(123,255,103),
+			  Value = "6",
+			  Text="SA"
+		   },
+        new EqualColorMapping
+		   {
+		      Color = Color.FromRgb(255,78,66),
+			  Value = "7",
+			  Text="NT"
+		   },
     };
+
+    MapMarker mapMarker = new MapMarker();
+    mapMarker.Latitude = -34.928497;
+    mapMarker.Longitude = 138.600739;
+    MapMarkerCollection mapMarkers =new MapMarkerCollection
+    {
+       mapMarker
+    };
+    layer.Markers = mapMarkers;
 
     MapLegend legendSet = new MapLegend();
     legendSet.SourceType = LegendSourceType.Shape;
-    legendSet.Placement = Syncfusion.Maui.Core.LegendPlacement.Right;
+    legendSet.Placement = LegendPlacement.Bottom;
     layer.Legend = legendSet;
 
     maps.Layer = layer;
     this.Content = maps;
 }
 
-public class Model
-{
-    public string State { get; set; }
-    public string StateCode { get; set; }
-    public int Population { get; set; }
-	
-    public Model(string state, string stateCode,int population)
-    {
-        State = state;
-        StateCode = stateCode;
-        Population = population;
-    }
-}
-
 public class ViewModel
 {
-    public ObservableCollection<Model> Data {get; set;}
-	
+    public ObservableCollection<Model> Data { get; set; }
     public ViewModel()
     {
         Data = new ObservableCollection<Model>();
-		Data.Add(new Model("New South Wales", "New\nSouth Wales",6000));
-		Data.Add(new Model("Queensland", "Queensland",8000));
-		Data.Add(new Model("Northern Territory", "Northern\nTerritory",10000));
-		Data.Add(new Model("Victoria", "Victoria",5000));
-		Data.Add(new Model("Tasmania", "Tasmania",90000));
-		Data.Add(new Model("Western Australia", "Western Australia", 7000));
-		Data.Add(new Model("South Australia", "South Australia", 3000));
+        Data.Add(new Model("New South Wales", "New\nSouth Wales", 1));
+        Data.Add(new Model("Queensland", "Queensland",2));
+        Data.Add(new Model("Northern Territory", "Northern\nTerritory",3));
+        Data.Add(new Model("Victoria", "Victoria",4));
+        Data.Add(new Model("Tasmania", "Tasmania",5));
+        Data.Add(new Model("Western Australia", "Western Australia",6));
+        Data.Add(new Model("South Australia", "South Australia",7));
+    }
+    
+    public class Model
+    {
+        public string State { get; set; }
+        public string StateCode { get; set; }
+        public int ID { get; set; }
+        public Model(string state, string stateCode, int id)
+        {
+            State = state;
+            StateCode = stateCode;
+            ID = id;
+        }
     }
 }
 
@@ -480,4 +538,6 @@ public class ViewModel
 
 ![Maps getting started](images/getting-started/maps_getting_started.png)
 
-N> You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Maps example](https://github.com/syncfusion/maui-demos/) that shows how to configure a Maps in .NET MAUI.
+N> 
+* Get the complete getting started sample from [GitHub](https://github.com/SyncfusionExamples/.NET-MAUI-Maps-Getting-Started) link.
+* You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations.
