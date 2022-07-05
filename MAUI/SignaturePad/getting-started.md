@@ -23,7 +23,6 @@ Create a new .NET MAUI application in Visual Studio.
 
  ![Create MAUI Application](images/getting-started/nuget-installation.png)
 
-
 ## Handler registration
 
 In the MauiProgram.cs file, register the handler for Syncfusion SignaturePad

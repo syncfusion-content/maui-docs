@@ -101,7 +101,7 @@ rangeSelector.Content = chart;
 
 ## Track extent
 
-Extend the track at the edges using the `TrackExtent` property. The default value is `0.0` and it should be in pixels.
+Extend the track at the edges using the `TrackExtent` property. The default value is `0` and it should be in pixels.
 
 {% tabs %}
 
