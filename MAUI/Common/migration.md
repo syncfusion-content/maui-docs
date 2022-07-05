@@ -124,7 +124,7 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 			<a href="https://help.syncfusion.com/xamarin/avatar-view/getting-started">SfAvatarView</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Underway<br/>
+			<a href="https://help.syncfusion.com/maui/avatar-view/migration">SfAvatarView</a><br/>
 		</td>
 	</tr>
 	<tr>
@@ -156,7 +156,7 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 			<a href="https://help.syncfusion.com/xamarin/busy-indicator/getting-started">SfBusyIndicator</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Underway<br/>
+			<a href="https://help.syncfusion.com/maui/busy-indicator/migration">SfBusyIndicator</a><br/>
 		</td>
 	</tr>
 	<tr>
