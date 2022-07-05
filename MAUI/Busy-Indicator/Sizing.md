@@ -17,10 +17,10 @@ Drawing size can be customized in SfBusyIndicator. `SizeFactor` property can be 
 {% highlight xaml %}
 
 <core:SfBusyIndicator x:Name="busyindicator"
-                        IsRunning="True"
-                        AnimationType="CircularMaterial"
-                        Title="Loading..."                            
-                        SizeFactor="0.7"/>           
+                      IsRunning="True"
+                      AnimationType="CircularMaterial"
+                      Title="Loading..."                            
+                      SizeFactor="0.7"/>           
 
 {% endhighlight %}
 

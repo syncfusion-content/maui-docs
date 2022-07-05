@@ -19,13 +19,13 @@ Create a new .NET MAUI application in Visual Studio.
 
 ## Adding SfRangeSlider reference
 
-Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfRangeSlider to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Sliders and then install it.
+The Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add the SfRangeSlider to your project, open the NuGet package manager in the Visual Studio, search for the Syncfusion.Maui.Sliders, and install it.
 
  ![Create MAUI Application](images/getting-started/nuget-installation.png)
 
 ## Handler registration
 
-In the MauiProgram.cs file, register the handler for Syncfusion core
+In the MauiProgram.cs file, register the handler for the Syncfusion core.
 
 {% highlight C# %}
 
@@ -210,7 +210,7 @@ rangeSlider.MinorTicksPerInterval = 1;
 
 ## Inverse the slider
 
-You can invert the range slider using the [`IsInversed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_IsInversed) property. The default value of the [`IsInversed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_IsInversed) property is `False`.
+Invert the range slider using the [`IsInversed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_IsInversed) property. The default value of the [`IsInversed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_IsInversed) property is `False`.
 
 {% tabs %}
 
@@ -251,7 +251,7 @@ rangeSlider.IsInversed = true;
 
 ## Formatting labels
 
-You can add prefix or suffix to the labels using the [`NumberFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_NumberFormat) property.
+Add prefix or suffix to the labels using the [`NumberFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_NumberFormat) property.
 
 {% tabs %}
 

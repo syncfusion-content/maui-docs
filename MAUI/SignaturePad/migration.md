@@ -70,7 +70,7 @@ To migrate from the [Xamarin SignaturePad](https://help.syncfusion.com/cr/xamari
 <tr>
 <td>{{'StrokeStarted'| markdownify }}</td>
 <td>{{'DrawStarted'| markdownify }}</td>
-<td>Occurs when starts drawing in the SfSignaturePad.</td></tr>
+<td>Occurs when a drawing is started in the SfSignaturePad.</td></tr>
 <tr>
 <td>{{'StrokeCompleted'| markdownify }}</td>
 <td>{{'DrawCompleted'| markdownify }}</td>
