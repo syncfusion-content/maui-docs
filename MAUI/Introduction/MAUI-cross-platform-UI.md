@@ -62,7 +62,7 @@ You can find the platforms supported by each .NET MAUI control as below.
 	</td>
 	</tr>
 	<tr>
-		<td rowspan="5" valign="top">
+		<td rowspan="6" valign="top">
 			DATA VISUALIZATION<br/>
 		</td>
 		<td>
@@ -135,6 +135,23 @@ You can find the platforms supported by each .NET MAUI control as below.
 	<tr>
 		<td>
 			<a href="/maui/radial-gauge/overview">Radial Gauge</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="/maui/maps/overview">Maps</a><br/>
 		</td>
 		<td>
 		Yes<br/>
@@ -335,7 +352,7 @@ You can find the platforms supported by each .NET MAUI control as below.
 		</td>
 	</tr>	
     <tr>
-	    <td rowspan="1" valign="top">
+	    <td rowspan="2" valign="top">
 		NOTIFICATION<br/>
 		</td>
 		<td>
@@ -353,11 +370,45 @@ You can find the platforms supported by each .NET MAUI control as below.
 		<td>
 		Yes<br/>
 		</td>
-	</tr>	
+	</tr>
+	<tr>
+		<td>
+			<a href="/maui/busy-indicator/overview">Busy Indicator</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
     <tr>  
-	    <td rowspan="1" valign="top">
+	    <td rowspan="2" valign="top">
 	    MISCELLANEOUS<br/>
 		</td>
+		<td>
+			<a href="/maui/avatar-view/overview">Avatar View</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
+	<tr>
 		<td>
 			<a href="/maui/effects-view/overview">Effects View</a><br/>
 		</td>
@@ -373,7 +424,7 @@ You can find the platforms supported by each .NET MAUI control as below.
 		<td>
 		Yes<br/>
 		</td>
-	</tr>	
+	</tr>
 </table>
 
 You can find the platforms supported by each .NET MAUI file-format library as below.
