@@ -88,11 +88,10 @@ public partial class MainPage : ContentPage
     {
         InitializeComponent();
         ////Perform multiple selection using selected roes
-        
         var viewModel = new ViewModel();
         dataGrid.SelectedRows.Add(viewModel.OrderInfoCollection[4]);
         dataGrid.SelectedRows.Add(viewModel.OrderInfoCollection[6]);
-        dataGrid.SelectedRows.Add(viewModel.OrderInfoCollection[9]);
+        dataGrid.SelectedRows.Add(viewModel.OrderInfoCollection[2]);
         dataGrid.SelectedRows.Add(viewModel.OrderInfoCollection[11]);
     }
 }
@@ -269,7 +268,7 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        dataGrid.MoveCurrentCellTo(new RowColumnIndex(3, 3), false);
+        dataGrid.MoveCurrentCellTo(new RowColumnIndex(3, 1), false);
     }
 }
 {% endhighlight %}
@@ -361,7 +360,7 @@ You can change the selection back color and text color by using [SelectionBackgr
     <ContentPage.Content>
         <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}">
             <syncfusion:SfDataGrid.DefaultStyle>
-                <syncfusion:DataGridStyle SelectedRowTextColor="White" SelectionBackground="Brown"/>
+                <syncfusion:DataGridStyle SelectedRowTextColor="Black" SelectionBackground="#E3F2FD"/>
             </syncfusion:SfDataGrid.DefaultStyle>
         </syncfusion:SfDataGrid>
     </ContentPage.Content>
@@ -373,8 +372,8 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        this.dataGrid.DefaultStyle.SelectedRowTextColor = Colors.White;
-        this.dataGrid.DefaultStyle.SelectionBackground = Colors.Brown;
+        this.dataGrid.DefaultStyle.SelectedRowTextColor = Colors.Black;
+        this.dataGrid.DefaultStyle.SelectionBackground = Color.FromArgb("#E3F2FD");
     }
 }
 {% endhighlight %}
@@ -391,7 +390,7 @@ You can change the current cell border color and width by using [CurrentCellBord
     <ContentPage.Content>
         <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}">
             <syncfusion:SfDataGrid.DefaultStyle>
-                <syncfusion:DataGridStyle CurrentCellBorderColor="Brown" CurrentCellBorderWidth="4"/>
+                <syncfusion:DataGridStyle CurrentCellBorderColor="Black" CurrentCellBorderWidth="4"/>
             </syncfusion:SfDataGrid.DefaultStyle>
         </syncfusion:SfDataGrid>
     </ContentPage.Content>
@@ -403,7 +402,7 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        this.dataGrid.DefaultStyle.CurrentCellBorderColor = Colors.Brown;
+        this.dataGrid.DefaultStyle.CurrentCellBorderColor = Colors.Black;
         this.dataGrid.DefaultStyle.CurrentCellBorderWidth = 4;
     }
 }
