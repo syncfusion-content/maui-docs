@@ -324,6 +324,7 @@ The following code example illustrates how this can be done:
     
 </ContentPage>
 {% endhighlight %}
+
 {% highlight c# %}
 public MainPage()
 {
