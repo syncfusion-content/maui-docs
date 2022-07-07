@@ -569,7 +569,7 @@ schedule.DataSource = scheduleAppointmentCollection;
 
 {% highlight xaml %}
 
-<scheduler:SfScheduler View="TimelineWeek" AppointmentsSource="{Binding Appointments}"/>
+<scheduler:SfScheduler View="TimelineWeek" AppointmentsSource="{Binding Appointments}" Resources="{Binding Resources}"/>
 
 {% endhighlight %}
 
@@ -595,7 +595,7 @@ scheduler.AppointmentsSource = Appointments;
 this.Content = scheduler;	
 	
 //Adding schedule resource in the scheduler resource collection.
-var resources = new ObservableCollection<SchedulerResource>()
+var Resources = new ObservableCollection<SchedulerResource>()
 {
    new SchedulerResource() { Name = "Sophia", Foreground = Colors.Blue, Background = Colors.Green, Id = "1000" },
    new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.Blue, Background = Colors.Green, Id = "1001" },
@@ -603,7 +603,7 @@ var resources = new ObservableCollection<SchedulerResource>()
 };
 
 //Adding the scheduler resource collection to the schedule resources of the SfSchedule.
-this.Scheduler.ResourceView.Resources = resources;
+this.Scheduler.ResourceView.Resources = Resources;
 
 {% endhighlight %}
 
@@ -626,7 +626,8 @@ this.Scheduler.ResourceView.Resources = resources;
 
 <schedule:SfSchedule ScheduleView="WeekView" ShowResourceView="True">
      <schedule:SfSchedule.ResourceMapping>
-          <schedule:ResourceMapping Name="Name"
+          <schedule:ResourceMapping 
+		                            Name="Name"
                                     Id="Id"
                                     Color="Color"
                                     Image="DisplayPicture"/>
@@ -706,8 +707,8 @@ schedule.ScheduleResources = Employees;
 {% tabs %}
 
 {% highlight xaml %}
-<schedule:SfScheduler x:Name="Scheduler"  View="TimelineWeek"
-                            AppointmentsSource="{Binding Events}"
+<schedule:SfScheduler x:Name="Scheduler"  View="TimelineWeek" 
+                            AppointmentsSource="{Binding Meetings}"
                             AllowedViews="TimelineDay,TimelineMonth,TimelineWeek,TimelineWorkWeek" >
 <schedule:SfScheduler.ResourceView>
  <schedule:SchedulerResourceView Resources="{Binding Resources}">
@@ -762,13 +763,13 @@ resourceMapping.Background = "BackgroundColor";
 resourceMapping.Foreground = "ForegroundColor";
 this.Scheduler.ResourceView.Mapping = resourceMapping;
 
-var resources = new ObservableCollection<Employee>()
+var Resources = new ObservableCollection<Employee>()
 {
    new Employee () {Name = "Sophia", Background=Colors.Blue, Id = "1000", Foreground = Colors.Green},
 };
 
 //Adding the scheduler resource collection to the schedule resources of the SfSchedule.
-this.Scheduler.ResourceView.Resources = resources;
+this.Scheduler.ResourceView.Resources = Resources;
 
 {% endhighlight %}
 
