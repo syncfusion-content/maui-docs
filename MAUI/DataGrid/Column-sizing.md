@@ -41,7 +41,7 @@ Calculates the width of columns based on header and cell contents so that header
 <code>LastColumnFill</code>
 </td>
 <td>
-The column width of the DataGridColumns is adjusted with respect to the [SfDataGrid.DefaultColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DefaultColumnWidth) property. If the columns do not fill the entire view space, the width of the last column fills the unoccupied space in the view.
+The column width of the DataGridColumns is adjusted with respect to the SfDataGrid.DefaultColumnWidth property. If the columns do not fill the entire view space, the width of the last column fills the unoccupied space in the view.
 </td>
 </tr>
 <tr>
@@ -96,7 +96,7 @@ To apply `ColumnWidthMode` for a particular column, follow the code example:
 <syncfusion:SfDataGrid x:Name="dataGrid"
                    ColumnWidthMode="None">
 <syncfusion:SfDataGrid.Columns>
-   <syncfusion:DataGridTextColumn MappingName="CustomerID" ColumnWidthMode="Auto" HeaderText="Customer" ></syncfusion:DataGridTextColumn>
+   <syncfusion:DataGridTextColumn MappingName="CustomerID" ColumnWidthMode="Auto" HeaderText="Customer"></syncfusion:DataGridTextColumn>
     </syncfusion:SfDataGrid.Columns>
     </syncfusion:SfDataGrid>
 {% endhighlight %}
@@ -155,8 +155,8 @@ public class CustomColumnSizer : DataGridColumnSizer
 	{
 		if (column.MappingName == "CustomerID")
 		{
-            // return width based on your logic
-            return 150;	
+                       // return width based on your logic
+                       return 150;	
 		}
 		else
 		{
