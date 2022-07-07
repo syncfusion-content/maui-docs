@@ -212,8 +212,10 @@ dataGrid.ItemsSource = viewModel.OrderInfoCollection;
 {% endtabs %}
 
 Run the application to render the following output:
+
 ![Getting started with .NET MAUI DataGrid](Images\getting-started\maui-datagrid-getting-started.png)
 
+You can download the complete project of this demo from [GitHub](https://github.com/SyncfusionExamples/simple-.net-maui-datagrid).
 
 ## Defining columns
 
