@@ -11,7 +11,7 @@ documentation: ug
 
 MAUI DataGrid [SfDataGrid] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.html) allows you to select one or more rows based on the [SelectionMode] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionMode.html).
 
-## 	Current Cell Navigation
+## Current Cell Navigation
 Keyboard navigation through the cells and rows is determined based on the [NavigationMode] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_NavigationMode) property. [NavigationMode.Cell] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridNavigationMode.html#Syncfusion_Maui_DataGrid_DataGridNavigationMode_Cell) allows you to navigate between the cells in a row as well as between rows. [NavigationMode.Row] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridNavigationMode.html#Syncfusion_Maui_DataGrid_DataGridNavigationMode_Row) allows you to navigate only between rows. 
 
 ## Selection Modes
@@ -26,11 +26,11 @@ Keyboard navigation through the cells and rows is determined based on the [Navig
 </tr>
 <tr>
 <td>{{'[Single] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionMode.html#Syncfusion_Maui_DataGrid_DataGridSelectionMode_Single)'| markdownify }} </td>
-<td> Allows selection of a single row or cell only. Upon selecting the next row or cell, the selection in the previous row or cell is cleared. </td>
+<td> Allows selection of a single row. Upon selecting the next row or cell, the selection in the previous row or cell is cleared. </td>
 </tr>
 <tr>
 <td>{{'[Multiple] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionMode.html#Syncfusion_Maui_DataGrid_DataGridSelectionMode_Multiple)'| markdownify }}</td>
-<td> Allows selection of more than one row or cell. Selection is not cleared when selecting more than one row or cell. When you click on an already selected row or cell for the second time, the selection is cleared. </td>
+<td> Allows selection of more than one row. Selection is not cleared when selecting more than one row or cell. When you click on an already selected row or cell for the second time, the selection is cleared. </td>
 </tr>
 <tr>
 <td> {{'[SingleDeselect] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionMode.html#Syncfusion_Maui_DataGrid_DataGridSelectionMode_SingleDeselect)'| markdownify }} </td>
@@ -42,13 +42,13 @@ Keyboard navigation through the cells and rows is determined based on the [Navig
 You can disable selection in a particular row or cell or column by handling the [CurrentCellActivating] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CurrentCellActivating) event.
 
 ## Getting selected rows
-`SfDataGrid` provides [SelectedIndex] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectedIndex), [SelectedRow] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectedRow), and [CurrentRow] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CurrentRow) properties to get details of the selected rows when the selection mode is Single, Multiple, and SingleDeselect.
+`SfDataGrid` provides [SelectedIndex] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectedIndex), [SelectedRow] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectedRow), [SelectedRows] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectedRows)and [CurrentRow] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CurrentRow) properties to get details of the selected rows when the selection mode is Single, Multiple, and SingleDeselect.
 
 `SfDataGrid.SelectedRow`: Provides the underlying data object of the selected row. Denotes the underlying data object of the first selected row in multiple selection.
 
-`SfDataGrid.SelectedIndex`: Provides the row index of SfDataGrid.SelectedItem. Denotes the index of first selected row in multiple selection.
+`SfDataGrid.SelectedIndex`: Provides the row index of SfDataGrid.SelectedRow. Denotes the index of first selected row in multiple selection.
 
-`SfDataGrid.CurrentRow`: Provides the underlying data object of the currently selected row in the data grid. Denotes the underlying data object of lastly selected row in multiple selection.
+`SfDataGrid.CurrentRow`: Provides the underlying data object of the currently selected row in the DataGrid. Denotes the underlying data object of lastly selected row in multiple selection.
 
 [SfDataGrid.SelectedRows] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectedRows): Provides all the selected records of the selected items when multiple selection is enabled.
 
@@ -98,10 +98,9 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-
 ![Multiple Selection in .NET MAUI DataGrid](Images/selection/maui-datagrid-multiple-selection.png)
 
-### Process selection using methods
+### Select all the rows
 You can select all the rows in the datagrid using [SfDataGrid.SelectAll()] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectAll) method.
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -116,7 +115,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![SelectionAll in .NET MAUI DataGrid](Images/selection/maui-datagrid-selectall.png)
+![All the rows selected in .NET MAUI DataGrid](Images/selection/maui-datagrid-selectall.png)
 
 ## Keyboard behavior
 <table>
@@ -297,11 +296,11 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ## Events in selection
-The data grid provides the following events for selection:
+The DataGrid provides the following events for selection:
 
-[SelectionChanging] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectionChanging): This event is raised while selecting a row at the execution time before the row is selected. So it allows canceling the selection action by setting the Cancel property of DataGridSelectionChangingEventArgs.
+[SelectionChanging] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectionChanging): This event is raised while selecting a row at the execution time before the row is selected. So it allows canceling the selection action by setting the [Cancel] (https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.canceleventargs.cancel?view=net-6.0#system-componentmodel-canceleventargs-cancel) property of [DataGridSelectionChangingEventArgs] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionChangingEventArgs.html).
 [SelectionChanged] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SortColumnsChanged): This event is raised after a row is selected.
-These two events are triggered with DataGridSelectionChangingEventArgs and DataGridSelectionChangedEventArgs that contain the following properties:
+These two events are triggered with `DataGridSelectionChangingEventArgs` and [DataGridSelectionChangedEventArgs] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionChangedEventArgs.html) that contain the following properties:
 
 [AddedRows] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionChangingEventArgs.html#Syncfusion_Maui_DataGrid_DataGridSelectionChangingEventArgs_AddedRows): Gets collection of the underlying data objects added for selection.
 [RemovedRows] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionChangingEventArgs.html#Syncfusion_Maui_DataGrid_DataGridSelectionChangingEventArgs_RemovedRows): Gets collection of the underlying data objects removed from selection.
@@ -381,7 +380,7 @@ public partial class MainPage : ContentPage
 
 ![Selection style in .NET MAUI DataGrid](Images/selection/maui-datagrid-selection-style.png)
 
-## 	Changing current cell border color and width
+## Changing current cell border color and width
 You can change the current cell border color and width by using [CurrentCellBorderColor] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_CurrentCellBorderColor) and [CurrentCellBorderWidth] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_CurrentCellBorderWidth) in SfDataGrid.DefaultStyle.
 
 {% tabs %}
@@ -424,42 +423,53 @@ The SfDataGrid allows you to bind the selection properties such as `SelectedInde
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
- private int dataGridSelectedIndex;
+{% highlight c# tabtitle="ViewModel.cs" %}
+public class ViewModel : INotifyPropertyChanged
+    {
+        private int dataGridSelectedIndex;
 
- private object dataGridSelectedRow;
+        private object dataGridSelectedRow;
 
- public int DataGridSelectedIndex
- {
-     get
-     {
-         return dataGridSelectedIndex;
-     }
-     set
-     {
-         this.dataGridSelectedIndex = value;
-         RaisePropertyChanged("DataGridSelectedIndex");
-     }
- }
+        public int DataGridSelectedIndex
+        {
+            get
+            {
+                return dataGridSelectedIndex;
+            }
+            set
+            {
+                this.dataGridSelectedIndex = value;
+                RaisePropertyChanged("DataGridSelectedIndex");
+            }
+        }
 
- public object DataGridSelectedRow
- {
-     get
-     {
-         return dataGridSelectedRow;
-     }
-     set
-     {
-         this.dataGridSelectedRow = value;
-         RaisePropertyChanged("DataGridSelectedRow");
-     }
- }
+        public object DataGridSelectedRow
+        {
+            get
+            {
+                return dataGridSelectedRow;
+            }
+            set
+            {
+                this.dataGridSelectedRow = value;
+                RaisePropertyChanged("DataGridSelectedRow");
+            }
+        }
 
- public ViewModel()
- {
-     DataGridSelectedIndex = 2;
-     DataGridSelectedRow = OrderInfoCollection[5];
- }
+        public ViewModel()
+        {
+            DataGridSelectedIndex = 2;
+            DataGridSelectedRow = OrderInfoCollection[5];
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private void RaisePropertyChanged(string name)
+        {
+            if (PropertyChanged != null)
+                this.PropertyChanged(this, new PropertyChangedEventArgs(name));
+        }
+    }
 {% endhighlight %}
 {% endtabs %}
 
