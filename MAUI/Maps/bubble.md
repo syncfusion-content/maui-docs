@@ -279,12 +279,36 @@ public MainPage()
         MaxSize = 80,
     };
 	
-    bubbleSetting.ColorMappings.Add(new EqualColorMapping() { Color = Colors.DarkViolet, Value = "21" });
-    bubbleSetting.ColorMappings.Add(new EqualColorMapping() { Color = Colors.Orange, Value = "58" });
-    bubbleSetting.ColorMappings.Add(new EqualColorMapping() { Color = Colors.Yellow, Value = "41" });
-    bubbleSetting.ColorMappings.Add(new EqualColorMapping() { Color = Colors.LightGreen, Value = "48" });
-    bubbleSetting.ColorMappings.Add(new EqualColorMapping() { Color = Colors.Green, Value = "14" });
-    bubbleSetting.ColorMappings.Add(new EqualColorMapping() { Color = Colors.Aqua, Value = "23" });
+    bubbleSetting.ColorMappings.Add(new EqualColorMapping()
+    {
+        Color = Colors.DarkViolet,
+        Value = "21"
+    });
+    bubbleSetting.ColorMappings.Add(new EqualColorMapping()
+    {
+        Color = Colors.Orange,
+        Value = "58"
+    });
+    bubbleSetting.ColorMappings.Add(new EqualColorMapping()
+    {
+        Color = Colors.Yellow,
+        Value = "41"
+    });
+    bubbleSetting.ColorMappings.Add(new EqualColorMapping()
+    {
+        Color = Colors.LightGreen,
+        Value = "48"
+    });
+    bubbleSetting.ColorMappings.Add(new EqualColorMapping()
+    {
+        Color = Colors.Green,
+        Value = "14"
+    });
+    bubbleSetting.ColorMappings.Add(new EqualColorMapping()
+    {
+        Color = Colors.Aqua,
+        Value = "23"
+    });
 
     layer.BubbleSettings = bubbleSetting;
     layer.ShapeColorValuePath = "Population";
