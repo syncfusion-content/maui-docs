@@ -22,7 +22,7 @@ Enable the tooltip for the thumb by setting the [`Tooltip`](https://help.syncfus
 <ContentPage 
              ...
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:chartS="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
+             xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
     
     <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
                                      Maximum="2018-01-01" 
@@ -70,7 +70,7 @@ Always shows a tooltip with and without the thumb interaction by setting the [`S
 <ContentPage 
              ...
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:chartS="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
+             xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
     
     <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
                                      Maximum="2018-01-01" 
@@ -106,7 +106,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector show always tooltip](images/tooltip/tooltip.png)
+![RangeSelector show always tooltip](images/tooltip/show-always-tooltip.gif)
 
 N> Refer [here](https://help.syncfusion.com/maui/datetime-range-selector/events-and-commands#tooltip-text-format) to customize the tooltip text format through the DateTime Range Selector events.
 
@@ -121,7 +121,7 @@ Change the appearance of the tooltip using the [`Fill`](https://help.syncfusion.
 <ContentPage 
              ...
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:chartS="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
+             xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
     
     <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
                                      Maximum="2018-01-01" 

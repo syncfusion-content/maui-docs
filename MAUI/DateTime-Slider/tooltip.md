@@ -74,7 +74,7 @@ slider.Tooltip.ShowAlways = true;
 
 {% endtabs %}
 
-![Slider always shows tooltip](images/tooltip/tooltip.png)
+![Slider always shows tooltip](images/tooltip/show-always-tooltip.gif)
 
 N> Refer [here](https://help.syncfusion.com/maui/datetime-slider/events-and-commands#tooltip-text-format) to customize tooltip text format through DateTime Slider events.
 

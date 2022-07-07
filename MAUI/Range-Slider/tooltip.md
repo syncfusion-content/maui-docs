@@ -68,7 +68,7 @@ rangeSlider.Tooltip.ShowAlways = true;
 
 {% endtabs %}
 
-![RangeSlider show always tooltip](images/tooltip/tooltip.png)
+![RangeSlider show always tooltip](images/tooltip/show-always-tooltip.gif)
 
 N> Refer [here](https://help.syncfusion.com/maui/range-slider/events-and-commands#tooltip-text-format) to customize the tooltip text format through Range Slider events.
 
