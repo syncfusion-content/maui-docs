@@ -65,7 +65,7 @@ N> This API is only available for the `WinUI` platform.
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <syncfusion:SfListView x:Name="listView" 
-            ScrollBarVisibility="Always" />
+                       ScrollBarVisibility="Always" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 listView.ScrollBarVisibility = ScrollBarVisibility.Always; 
