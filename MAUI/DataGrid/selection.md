@@ -344,8 +344,77 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-## CurrentRow
+## Cell Tap Events
 
+The datagrid provides the following Events to handle interactions to the cells,
+
+* [CellTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellTapped) : Called when a tap with a cell has occurred.
+* [CellDoubleTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellDoubleTapped) : Called when user is tapped a cell with a primary button at the same cell twice in quick succession.
+* [CellLongPress](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellLongPress) : Called when a long press gesture with a primary button has been recognized for a cell. 
+
+### CellTapped event
+This event will be triggered while tapping a cell in DataGrid. This event has [DataGridCellTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellTappedEventArgs.html) as arguments.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                   CellTapped="dataGrid_CellTapped"
+                   ItemsSource="{Binding OrderInfoCollection}" />
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+private void dataGrid_CellTapped(object sender,DataGridCellTappedEventArgs e)
+{
+    var rowIndex = e.RowColumnIndex.RowIndex;
+    var rowData = e.RowData;
+    var columnIndex = e.RowColumnIndex.ColumnIndex;
+    var column = e.Column;
+}
+{% endhighlight %}
+{% endtabs %}
+
+### CellDoubleTapped event
+
+This event will be triggered while double tapping a cell in DataGrid. This event has [DataGridCellDoubleTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellDoubleTappedEventArgs.html) as arguments. 
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                   CellDoubleTapped="dataGrid_CellDoubleTapped"
+                   ItemsSource="{Binding OrderInfoCollection}" />
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+private void dataGrid_CellDoubleTapped(object sender, DataGridCellDoubleTappedEventArgs e)
+{
+    var rowIndex = e.RowColumnIndex.RowIndex;
+    var rowData = e.RowData;
+    var columnIndex = e.RowColumnIndex.ColumnIndex;
+    var column = e.Column;
+}
+{% endhighlight %}
+{% endtabs %}
+
+### CellLongPress event
+
+This event will be triggered while long pressing a cell in DataGrid. This event has [DataGridCellLongPressEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellLongPressEventArgs.html) as arguments. 
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                   CellLongPress="dataGrid_CellLongPress"
+                   ItemsSource="{Binding OrderInfoCollection}" />
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+private void dataGrid_CellLongPress(object sender,DataGridCellLongPressEventArgs e)
+{
+    var rowIndex = e.RowColumnIndex.RowIndex;
+    var rowData = e.RowData;
+    var columnIndex = e.RowColumnIndex.ColumnIndex;
+    var column = e.Column;
+}
+{% endhighlight %}
+{% endtabs %}
+
+## CurrentRow
 The [SfDataGrid.CurrentRow] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CurrentRow) property holds the underlying data of the last selected row in data grid.
 
 Get the current row in the `SfDataGrid.SelectionChanged` event by setting the `SfDataGrid.SelectionMode` as Multiple or SingleDeselect. If the SelectionMode is Single, the current item and selected item are same.
