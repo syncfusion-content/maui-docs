@@ -16,7 +16,7 @@ You can create a resource view by setting the [Name](), [Id](), [Background](), 
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="1" %}
-<schedule:SfScheduler x:Name="Scheduler"  View="TimelineWeek"  Resources="{Binding Resources}">
+<schedule:SfScheduler x:Name="Scheduler"  View="TimelineWeek" Resources="{Binding Resources}">
 </schedule:SfScheduler>
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10" %}
@@ -39,10 +39,22 @@ Appointments associated with the `ResourceView` [Resources](), will be displayed
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
-<schedule:SfScheduler x:Name="Scheduler"  View="TimelineWeek">
+<schedule:SfScheduler x:Name="Scheduler"  View="TimelineWeek" Resources="{Binding Resources}">
 </schedule:SfScheduler>
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10" %}
+
+// Adding schedule resource in the scheduler resource collection.
+var Resources = new ObservableCollection<SchedulerResource>()
+{
+   new SchedulerResource() { Name = "Sophia", Foreground = Colors.Blue, Background = Colors.Green, Id = "1000" },
+   new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.Blue, Background = Colors.Green, Id = "1001" },
+   new SchedulerResource() { Name = "James William",  Foreground = Colors.Blue, Background = Colors.Green, Id = "1002" },
+};
+
+// Adding the scheduler resource collection to the schedule resources of SfSchedule.
+this.Scheduler.ResourceView.Resources = Resources;
+
 var appointment = new ObservableCollection<SchedulerAppointment>();
 
 //Adding scheduler appointment in the scheduler appointment collection. 
@@ -163,7 +175,7 @@ Add the resources of `Employee` collection that can be assigned  to the [Resourc
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10" %}
 // Creating and Adding custom resource in scheduler resource collection.
-var resources = new ObservableCollection<Employee>()
+var Resources = new ObservableCollection<Employee>()
 {
    new Employee () {Name = "Sophia", Background=Colors.Blue, Id = "1000", Foreground = Colors.Green},
    new Employee () {Name = "Zoey Addison", Background=Colors.Blue, Id = "1001", Foreground = Colors.Green},
@@ -171,7 +183,7 @@ var resources = new ObservableCollection<Employee>()
 };
 
 // Adding the scheduler resource collection to the schedule resources of SfSchedule.
-this.Scheduler.ResourceView.Resources = resources;
+this.Scheduler.ResourceView.Resources = Resources;
 {% endhighlight %}
 {% endtabs %}
 
