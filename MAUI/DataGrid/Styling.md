@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Styling in .NET MAUI DataGrid control | Syncfusion
-description: Learn here all about Styling support in Syncfusion .NET MAUI DataGrid (SfDataGrid) control, its elements and more.
+description: Learn all about Styling support in Syncfusion .NET MAUI DataGrid (SfDataGrid) control, its elements and more.
 platform: MAUI
 control: SfDataGrid
 documentation: ug
@@ -41,7 +41,7 @@ public partial class MainPage : ContentPage
 ![Default Styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-defaultsyle.png)
 
 ## Set datagrid style from application resources
-You can write custom style for the properties in `SfDataGrid.DefaultStyle` class using application resource and consume the custom style as static resource to the DefaultSyle property for the required DataGrid used in that page.
+You can write custom style for the properties in the `SfDataGrid.DefaultStyle` class using the application resource and consume the custom style as a static resource to the DefaultSyle property for the required DataGrid used on that page.
 
 {% tabs %}
 {% highlight xaml tabtitle="App.xaml"%}
@@ -65,7 +65,7 @@ You can write custom style for the properties in `SfDataGrid.DefaultStyle` class
 {% endtabs %}
 
 ## Set datagrid style from page resources
-You can write custom style for the properties in `SfDataGrid.DefaultStyle` class using page resource and consume the custom style as static resource to the DefaultSyle property for the required DataGrid used in that page.
+You can write custom style for the properties in the `SfDataGrid.DefaultStyle` class using page resource and consume the custom style as a static resource to the DefaultSyle property for the required DataGrid used on that page.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
@@ -89,10 +89,11 @@ You can write custom style for the properties in `SfDataGrid.DefaultStyle` class
 ![App or Page resource Styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-app-page-resource.png)
 
 ## Implicit styling
-The appearance of DataGrid (SfDataGrid) and its inner elements can be customized by writing style of TargetType to those control. If the key is not specified, then the style will be applied to all the SfDataGrid in its scope. You can apply specific to [DataGridRow] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridRow.html) or [DataGridCell] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html) using various properties exposed.
+The appearance of DataGrid (SfDataGrid) and its inner elements can be customized by the writing style of TargetType to those control. If the key is not specified, then the style will be applied to all the SfDataGrid in its scope. You can apply specific to [DataGridRow] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridRow.html) or [DataGridCell] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html) using various properties exposed.
 
 ### Styling Record cell
-The record cells can be customized by writing style for [DataGridCell] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html) TargetType. Underlying record will be the DataContext for `DataGridCell`.
+The record cells can be customized by the writing style for [DataGridCell] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html) TargetType. Underlying record will be the DataContext for `DataGridCell`.
+
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
@@ -113,7 +114,7 @@ The record cells can be customized by writing style for [DataGridCell] (https://
 ![Record cell styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-recordcell-style.png)
 
 ### Styling Record row
-The record row can be customized by writing style for [DataGridRow] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridRow.html) TargetType. 
+The record row can be customized by the writing style for [DataGridRow] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridRow.html) TargetType. 
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
@@ -130,7 +131,7 @@ The record row can be customized by writing style for [DataGridRow] (https://hel
 ![Record row styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-recordrow-style.png)
 
 ### Styling Header cell
-The header cells can be customized by writing style for [DataGridHeaderCell] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridHeaderCell.html) TargetType.
+The header cells can be customized by the writing style for [DataGridHeaderCell] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridHeaderCell.html) TargetType.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
@@ -151,7 +152,7 @@ The header cells can be customized by writing style for [DataGridHeaderCell] (ht
 ![Header cell styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-headercell-style.png)
 
 ### Styling Header row
-The header row can be customized by writing style for [DataGridHeaderRow] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridHeaderRow.html) TargetType.
+The header row can be customized by the writing style for [DataGridHeaderRow] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridHeaderRow.html) TargetType.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
