@@ -12,16 +12,16 @@ documentation: ug
 The .NET MAUI Scheduler control allows you to group appointments based on the resources associated with them in the timeline day, timeline week, timeline workweek, and timeline month views, with complete business object binding, multi resource appointment sharing and UI customization features.
 
 ## Create resources to Scheduler by using SchedulerResource
-You can create a resource view by setting the `Name`, `Id`, `Background`, and `Foreground` properties of the built-in `SchedulerResource` class and assign `SchedulerResource` collection to the scheduler by using the `Resources` property of the `ResourceView` class.
+You can create a resource view by setting the [Name](), [Id](), [Background](), and [Foreground] properties of the built-in [SchedulerResource]() class and assign `SchedulerResource` collection to the scheduler by using the [Resources]() property of the `ResourceView` class.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
-<schedule:SfScheduler x:Name="Scheduler"  View="TimelineWeek">
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="1" %}
+<schedule:SfScheduler x:Name="Scheduler"  View="TimelineWeek" Resources="{Binding Resources}">
 </schedule:SfScheduler>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10" %}
 // Adding schedule resource in the scheduler resource collection.
-var resources = new ObservableCollection<SchedulerResource>()
+var Resources = new ObservableCollection<SchedulerResource>()
 {
    new SchedulerResource() { Name = "Sophia", Foreground = Colors.Blue, Background = Colors.Green, Id = "1000" },
    new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.Blue, Background = Colors.Green, Id = "1001" },
@@ -29,7 +29,7 @@ var resources = new ObservableCollection<SchedulerResource>()
 };
 
 // Adding the scheduler resource collection to the schedule resources of SfSchedule.
-this.Scheduler.ResourceView.Resources = resources;
+this.Scheduler.ResourceView.Resources = Resources;
 {% endhighlight %}
 {% endtabs %}
 
@@ -38,11 +38,23 @@ this.Scheduler.ResourceView.Resources = resources;
 Appointments associated with the `ResourceView` [Resources](), will be displayed by setting the `ResourceView` resource Id in the [ScheduleAppointment]() by using the [ResourceIds]().
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
-<schedule:SfScheduler x:Name="Scheduler"  View="TimelineWeek">
+{% highlight xaml tabtitle="MainPage.xaml"%}
+<schedule:SfScheduler x:Name="Scheduler"  View="TimelineWeek" Resources="{Binding Resources}">
 </schedule:SfScheduler>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10" %}
+
+// Adding schedule resource in the scheduler resource collection.
+var Resources = new ObservableCollection<SchedulerResource>()
+{
+   new SchedulerResource() { Name = "Sophia", Foreground = Colors.Blue, Background = Colors.Green, Id = "1000" },
+   new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.Blue, Background = Colors.Green, Id = "1001" },
+   new SchedulerResource() { Name = "James William",  Foreground = Colors.Blue, Background = Colors.Green, Id = "1002" },
+};
+
+// Adding the scheduler resource collection to the schedule resources of SfSchedule.
+this.Scheduler.ResourceView.Resources = Resources;
+
 var appointment = new ObservableCollection<SchedulerAppointment>();
 
 //Adding scheduler appointment in the scheduler appointment collection. 
@@ -62,14 +74,14 @@ this.Scheduler.AppointmentsSource = appointment;
 
 ### Multiple resource sharing using Scheduler resources
 
-Multiple resources can share the same events or appointments by declaring resources ids in `ResourceIds` in `ScheduleAppointment` class. If the appointment details are edited or updated, then the changes will be reflected on all other shared instances simultaneously.
+Multiple resources can share the same events or appointments by declaring resources ids in [ResourceIds]() in [ScheduleAppointment]() class. If the appointment details are edited or updated, then the changes will be reflected on all other shared instances simultaneously.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
+{% highlight xaml tabtitle="MainPage.xaml"%}
 <schedule:SfScheduler x:Name="Scheduler"  View="TimelineWeek">
 </schedule:SfScheduler>
 {% endhighlight %}
-{% highlight c# tabtitle="MainWindow.xaml.cs" hl_lines="9" %}
+{% highlight c# tabtitle="MainWindow.xaml.cs" hl_lines="11" %}
 var appointment = new ObservableCollection<SchedulerAppointment>();
 
 //Adding scheduler appointment in the scheduler appointment collection. 
@@ -106,7 +118,7 @@ N> Custom resource class should contain a mandatory field for resource `Id`.
 Create a custom class `Employee` with mandatory fields `Name,` `Id,` `ForegroundColor,` and `BackgroundColor`.
 
 {% tabs %}
-{% highlight c# tabtitle="Employee.cs" hl_lines="6" %}
+{% highlight c# tabtitle="Employee.cs"%}
 public class Employee
 {
    public string Name {get; set;}
@@ -124,7 +136,7 @@ public class Employee
 Map the properties of the `Employee` class by using the [Mapping]() property of the `ResourceView`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2 3 4" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5 6 7 8" %}
 <scheduler:SfScheduler Name="Schedule" ViewType="TimelineWeek">
 <schedule:SfScheduler.ResourceView>
     <schedule:SchedulerResourceView>
@@ -154,16 +166,16 @@ this.Scheduler.ResourceView.Mapping = resourceMapping;
 Add the resources of `Employee` collection that can be assigned  to the [Resources]() in the `ResourceView` class which is of `IEnumerable` type. Also add or remove scheduler resources dynamically.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainWindow.xaml" hl_lines="2 3 4" %}
-<scheduler:SfScheduler Name="Schedule" ViewType="Week" ResourceGroupType="Resource">
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2 3 4" %}
+<scheduler:SfScheduler Name="Schedule" ViewType="TimelineWeek">
     <scheduler:SfScheduler.ResourceMapping>
        <scheduler:ResourceMapping Id="Id" Name="Name" Background="BackgroundColor" Foreground="ForegroundColor"/>
     </scheduler:SfScheduler.ResourceMapping>
 </scheduler:SfScheduler>
 {% endhighlight %}
-{% highlight c# tabtitle="MainWindow.xaml.cs" hl_lines="10" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10" %}
 // Creating and Adding custom resource in scheduler resource collection.
-var resources = new ObservableCollection<Employee>()
+var Resources = new ObservableCollection<Employee>()
 {
    new Employee () {Name = "Sophia", Background=Colors.Blue, Id = "1000", Foreground = Colors.Green},
    new Employee () {Name = "Zoey Addison", Background=Colors.Blue, Id = "1001", Foreground = Colors.Green},
@@ -171,7 +183,7 @@ var resources = new ObservableCollection<Employee>()
 };
 
 // Adding the scheduler resource collection to the schedule resources of SfSchedule.
-this.Scheduler.ResourceView.Resources = resources;
+this.Scheduler.ResourceView.Resources = Resources;
 {% endhighlight %}
 {% endtabs %}
 
@@ -198,7 +210,7 @@ public class Meeting
 Map those properties of the `Meeting` class to schedule appointments by using the `AppointmentMapping` properties.
 
 {%tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2 3 4 5 6 7 8" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4 5 6 7 8 9 10 11 12 13 14" %}
 <schedule:SfScheduler x:Name="Scheduler"  View="TimelineWeek"
                             AppointmentsSource="{Binding Events}"
                             AllowedViews="TimelineDay,TimelineMonth,TimelineWeek,TimelineWorkWeek" >
@@ -246,7 +258,7 @@ this.Schedule.ItemsSource = Meetings;
 You can customize resource minimum row height of visible resources in timeline day, timeline week, timeline workweek and timeline month views by using the [MinimumRowHeight]() property of [SchedulerResourceView]() in [SfScheduler.]() By default, resource row height will be auto-expanded from minimum height based on the appointment counts.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 4 5" %}
 <schedule:SfScheduler x:Name="Scheduler"  View="TimelineWeek"
                             AllowedViews="TimelineDay,TimelineMonth,TimelineWeek,TimelineWorkWeek" >
 <schedule:SfScheduler.ResourceView>
@@ -272,7 +284,7 @@ You can highlight a resources availability by creating special time regions in t
 
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="7" %}
 this.Scheduler.DaysView.TimeRegions.Add(new SchedulerTimeRegion
 {
 	StartTime = new DateTime(2022, 06, 04, 13, 0, 0),
@@ -285,7 +297,7 @@ this.Scheduler.DaysView.TimeRegions.Add(new SchedulerTimeRegion
 {% endtabs %}
 
 ## Programmatic resource selection
-You can programmatically select the resource by using the `SelectedResourceId` and `SelectedDate` of the SfScheduler. Please [click]() here to see more details about programmatic date selection.
+You can programmatically select the resource by using the [SelectedResourceId]() and [SelectedDate]() of the SfScheduler. Please [click]() here to see more details about programmatic date selection.
 
 ## Appearance customization
 
@@ -298,7 +310,7 @@ The resource header text style can be customized by using the [TextStyle]() prop
 The resource appearance customization can be achieved by using the [ResourceHeaderTemplate]() property of the [SchedulerResourceView]().
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="28" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="15 36" %}
 
 <ContentPage.Behaviors>
     <local:ResourceViewBehavior/>
@@ -374,7 +386,7 @@ The resource appearance customization can be achieved by using the [ResourceHead
 {% endhighlight %}
 {% endtabs %}
 {% tabs %}
-{% highlight xaml tabtitle="SfImageSourceConverter.cs" hl_lines="28" %}
+{% highlight xaml tabtitle="SfImageSourceConverter.cs"%}
 public class SfImageSourceConverter : IValueConverter
 {
     /// <summary>
