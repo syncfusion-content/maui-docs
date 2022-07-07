@@ -17,7 +17,7 @@ You can sort the data programmatically by adding or removing the [SortColumnDesc
 
 The `SortColumnDescription` object holds the following two properties,
 
-* **ColumnName**: Name of the sorted column.
+* **ColumnName**: The name of a column to be sorted
 * **SortDirection**: An object of type `ListSortDirection` defines the sorting direction.
 
 {% tabs %}
@@ -28,11 +28,6 @@ The `SortColumnDescription` object holds the following two properties,
         <syncfusion:SortColumnDescription ColumnName="OrderID" SortDirection="Ascending" />
     </syncfusion:SfDataGrid.SortColumnDescriptions>
 </syncfusion:SfDataGrid>
-{% endhighlight %}
-
-{% highlight c# %}
-SortColumnDescription sortColumnDescription = new SortColumnDescription() { ColumnName = "OrderID", SortDirection = ListSortDirection.Ascending };
-this.sfDataGrid.SortColumnDescriptions.Add(sortColumnDescription);
 {% endhighlight %}
 {% endtabs %}
 
@@ -75,11 +70,12 @@ this.sfDataGrid.AllowTriStateSorting = true;
 
 ## Show sort number
 
-The `SfDataGrid` provides support the sequence numbers to display the sorted columns during multi-column sorting by setting [SfDataGrid.ShowSortNumbers](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ShowSortNumbers) is set to true. This is applicable when the `SfDataGrid.SortingMode` property is `Multiple`.
+The `SfDataGrid` provides support to display the sequence numbers to denote the order of the column in which they are sorted during multiple column sorting by setting [SfDataGrid.ShowSortNumbers](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ShowSortNumbers) is set to true. This is applicable when the `SfDataGrid.SortingMode` property is `Multiple`.
 
 {% tabs %}
-{% highlight c# %}
-this.sfDataGrid.ShowSortNumbers = true;
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="sfDataGrid" SortingMode="Multiple" ShowSortNumbers="True" ItemsSource="{Binding OrderInfoCollection}" >
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 {% endtabs %}
 
@@ -134,11 +130,13 @@ private void sfDataGrid_SortColumnsChanging(object sender, DataGridSortColumnsCh
 {% endhighlight %}
 {% endtabs %}
 
-## Disable sorting for an individual column
+## Disable sorting for manually defined columns
 
 The `SfDataGrid` disables sorting for an individual column by setting the [DataGridColumn.AllowSorting](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_AllowSorting) property to false. The default value of this property is true.
 
-### for auto generated columns
+### Disable sorting for auto generated columns
+
+During auto-generating columns, you can disable sorting for an individual column by customizing the `e.Column.AllowSorting` property to false that comes from the `SfDataGrid.AutoGeneratingColumn` event. The event will be invoked when the column is auto-generated.
 
 {% tabs %}
 {% highlight xaml %}
@@ -155,7 +153,7 @@ private void sfDataGrid_AutoGeneratingColumn(object sender, DataGridAutoGenerati
 {% endhighlight %}
 {% endtabs %}
 
-### for manually defined columns
+### Disable sorting for manually defined columns
 
 {% tabs %}
 {% highlight xaml %}
@@ -173,12 +171,14 @@ private void sfDataGrid_AutoGeneratingColumn(object sender, DataGridAutoGenerati
 
 ## Custom sorting
 
-The `SfDataGrid` sort columns based on custom logic, when the standard sorting techniques do not meet the requirements. For each column, you can apply different sorting criteria by adding [SortComparer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.SortComparer.html) objects to [SfDataGrid.SortComparers](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SortComparers) collection.
+The `SfDataGrid` provides support to sort columns based on custom logic, when the standard sorting techniques do not meet the requirements. For each column, you can apply different sorting criteria by adding [SortComparer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.SortComparer.html) objects to [SfDataGrid.SortComparers](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SortComparers) collection.
 
 The `SortComparer` object contains the following properties,
 
 * **PropertyName**: `MappingName` of the column that applies custom sorting.
 * **Comparer**: Gets or sets the custom comparer that implements the [IComparer](https://docs.microsoft.com/en-us/dotnet/api/system.collections.icomparer?view=net-6.0) and [ISortDirection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ISortDirection.html) interfaces.
+
+The following example shows how to sort the columns based on length of its cell values,
 
 {% tabs %}
 {% highlight xaml %}
