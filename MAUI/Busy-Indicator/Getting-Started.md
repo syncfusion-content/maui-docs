@@ -11,7 +11,7 @@ documentation: ug
 
 ## Getting started with .NET MAUI Busy Indicator(SfBusyIndicator)
 
-This section explains the steps to configure a SfBusyIndicator control in a real-time scenario and provides a walk-through on some of the customization features available in SfBusyIndicator control.
+This section explains the steps to configure a [SfBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) control in a real-time scenario and provides a walk-through on some of the customization features available in [SfBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) control.
 
 ## Adding a SfBusyIndicator reference
 
@@ -53,7 +53,7 @@ namespace BusyIndicatorSample
 
 ## Create a Simple SfBusyIndicator
 
-The SfBusyIndicator control is configured entirely in C# code or by using XAML markup. The following steps explain how to create a SfBusyIndicator and configure its elements.
+The [SfBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) control is configured entirely in C# code or by using XAML markup. The following steps explain how to create a [SfBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) and configure its elements.
 
 ### Adding a SfBusyIndicator control
 
@@ -103,7 +103,7 @@ Content = busyIndicator;
 
 ## Setting Animation Type
 
-SfBusyIndicator provides some predefined animation types like Cupertino, LinearMaterial, and CircularMaterial. Users can select any one of the animation types using the `AnimationType` property.
+[SfBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) provides some predefined animation types like Cupertino, LinearMaterial, and CircularMaterial. Users can select any one of the animation types using the [AnimationType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_AnimationType) property.
 
 The following example depicts the CircularMaterial type animation for SfBusyIndicator.
 

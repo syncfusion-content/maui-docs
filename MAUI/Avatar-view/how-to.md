@@ -11,7 +11,7 @@ documentation: ug
 
 ## Set badge view to avatar
 
-The `SfAvatarView` control provides support for `BadgeView` to notify users of new or unread messages, notifications, or the status of something.
+The [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html) control provides support for [BadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1) to notify users of new or unread messages, notifications, or the status of something.
 
 {% tabs %}
 
@@ -77,4 +77,4 @@ this.Content = mainGrid;
 
 ![BadgeView support](HowTo_Images/BadgeView_AvatarView.jpg)
 
-To know more about `SfBadgeView` view, refer to this [documentation](https://help.syncfusion.com/maui/badge-view/getting-started).
+To know more about [SfBadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1) view, refer to this [documentation](https://help.syncfusion.com/maui/badge-view/getting-started).
