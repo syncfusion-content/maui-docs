@@ -13,7 +13,7 @@ Filtering is the process of retrieving the values from the collection which sati
 
 ## View filtering
 
-The `SfDataGrid` supports to filter the records in the view by setting [SfDataGrid.View.Filter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ICollectionViewAdv.html#Syncfusion_Maui_Data_ICollectionViewAdv_Filter) property where `Filter` is a predicate.
+The `SfDataGrid` supports filtering the records in the view by setting [SfDataGrid.View.Filter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ICollectionViewAdv.html#Syncfusion_Maui_Data_ICollectionViewAdv_Filter) property where `Filter` is a predicate.
 
 >N Note: In order to refresh filtering for the newly added row or column, set the [SfDataGrid.View.LiveDataUpdateMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ICollectionViewAdv.html#Syncfusion_Maui_Data_ICollectionViewAdv_LiveDataUpdateMode) to [LiveDataUpdateMode.AllowDataShaping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.LiveDataUpdateMode.html#Syncfusion_Maui_Data_LiveDataUpdateMode_AllowDataShaping).
 
@@ -50,7 +50,7 @@ The records can be filtered based on any of the following conditions,
 * Does not equal
 * Contains
 
-The above mentioned conditions are the mostly used conditions. You can simply add new condition based on your requirement and alter the following code snippets on the basis of your requirement.
+The above mentioned conditions are the mostly used conditions. You can simply add new conditions and alter the following code snippets based on your requirement.
 
 {% tabs %}
 {% highlight c# %}
