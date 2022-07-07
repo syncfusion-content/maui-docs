@@ -155,8 +155,8 @@ public class CustomColumnSizer : DataGridColumnSizer
 	{
 		if (column.MappingName == "CustomerID")
 		{
-             // return width based on your logic
-             return 150;	
+                       // return width based on your logic
+                       return 150;	
 		}
 		else
 		{
