@@ -28,7 +28,7 @@ dataGrid.HeaderRowHeight = 60;
 {% endhighlight %}
 {% endtabs %}
 
-## Customize the row height for all rows
+## Customize the row height for all data rows
 
 The DataGrid allows you to customize the height of data rows in the scrolling region by setting the [SfDataGrid.RowHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_RowHeight) property. The default value of this property is 47. This property responds to runtime changes, so it can be customized. Setting `SfDataGrid.RowHeight` to zero will collapse all rows in the grid.
 
