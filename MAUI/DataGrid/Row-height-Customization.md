@@ -36,7 +36,9 @@ To customize header row height, follow the code example:
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
+
 <syncfusion:SfDataGrid x:Name="dataGrid"  ItemsSource="{Binding OrderInfoCollection }" RowHeight="60" />
+
 {% endhighlight %}
 
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
