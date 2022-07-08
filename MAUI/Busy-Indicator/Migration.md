@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrating from Xamarin SfBusyIndicator to .NET MAUI SfBusyIndicator 
 
-To migrate easier from Xamarin SfBusyIndicator to .NET MAUI SfBusyIndicator, we kept most of the APIs from Xamarin SfBusyIndicator in MAUI SfBusyIndicator. However, to maintain the consistency of API naming in MAUI SfBusyIndicator, we renamed some of the APIs. The APIs that have been changed in MAUI SfBusyIndicator from Xamarin SfBusyIndicator are detailed as follows.
+To migrate easier from Xamarin SfBusyIndicator to .NET MAUI [SfBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html), we kept most of the APIs from Xamarin SfBusyIndicator in MAUI SfBusyIndicator. However, to maintain the consistency of API naming in MAUI SfBusyIndicator, we renamed some of the APIs. The APIs that have been changed in MAUI SfBusyIndicator from Xamarin SfBusyIndicator are detailed as follows.
 
 ## Namespaces 
 

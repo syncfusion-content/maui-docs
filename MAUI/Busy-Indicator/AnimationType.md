@@ -10,11 +10,11 @@ documentation: ug
 
 ## Animation Type in SfBusyIndicator
 
-The `AnimationType` property for the SfBusyIndicator allows the users to set one of the animations from the built-in animations. The different types of animations are `CircularMaterial,` `Cupertino,` and `LinearMaterial.`
+The [AnimationType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_AnimationType) property for the SfBusyIndicator allows the users to set one of the animations from the built-in animations. The different types of animations are [CircularMaterial](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.AnimationType.html#Syncfusion_Maui_Core_AnimationType_CircularMaterial), [Cupertino](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.AnimationType.html#Syncfusion_Maui_Core_AnimationType_Cupertino), and [LinearMaterial.](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.AnimationType.html#Syncfusion_Maui_Core_AnimationType_LinearMaterial)
 
 ### Circular Material 
 
-The CircularMaterial animation is an one of the built-in animations in SfBusyIndicator. Refer to the following code example. Here, we’ll set the animation type as `CircularMaterial`.
+The CircularMaterial animation is an one of the built-in animations in [SfBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1). Refer to the following code example. Here, we’ll set the animation type as [CircularMaterial.](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.AnimationType.html#Syncfusion_Maui_Core_AnimationType_CircularMaterial)
 
 {% tabs %}
 
@@ -44,7 +44,7 @@ The following gif image illustrates the result of the above code.
 
 ### Cupertino
 
-The Cupertino animation is an one of the built-in animations in SfBusyIndicator. Refer to the following code example. Here, we’ll set the animation type as `Cupertino`.
+The Cupertino animation is an one of the built-in animations in [SfBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1). Refer to the following code example. Here, we’ll set the animation type as [Cupertino](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.AnimationType.html#Syncfusion_Maui_Core_AnimationType_Cupertino).
 
 {% tabs %}
 
@@ -74,7 +74,7 @@ The following gif image illustrates the result of the above code.
 
 ### Linear Material
 
-The LinearMaterial animation is an one of the built-in animations in SfBusyIndicator. Refer to the following code example. Here, we’ll set the animation type as `LinearMaterial`.
+The LinearMaterial animation is an one of the built-in animations in [SfBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1). Refer to the following code example. Here, we’ll set the animation type as [LinearMaterial](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.AnimationType.html#Syncfusion_Maui_Core_AnimationType_LinearMaterial).
 
 {% tabs %}
 
