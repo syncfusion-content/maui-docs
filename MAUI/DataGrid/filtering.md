@@ -13,7 +13,7 @@ Filtering is the process of retrieving the values from the collection which sati
 
 ## View filtering
 
-The `SfDataGrid` supports filtering the records in the view by setting [SfDataGrid.View.Filter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ICollectionViewAdv.html#Syncfusion_Maui_Data_ICollectionViewAdv_Filter) property where `Filter` is a predicate.
+The `SfDataGrid` supports filtering the records in the view by setting the [SfDataGrid.View.Filter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ICollectionViewAdv.html#Syncfusion_Maui_Data_ICollectionViewAdv_Filter) property where `Filter` is a predicate.
 
 >N Note: In order to refresh filtering for the newly added row or column, set the [SfDataGrid.View.LiveDataUpdateMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ICollectionViewAdv.html#Syncfusion_Maui_Data_ICollectionViewAdv_LiveDataUpdateMode) to [LiveDataUpdateMode.AllowDataShaping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.LiveDataUpdateMode.html#Syncfusion_Maui_Data_LiveDataUpdateMode_AllowDataShaping).
 
@@ -42,15 +42,15 @@ public bool FilterRecords(object record)
 
 ## Filter based on conditions
 
-Additionally, the records can be filtered based on the conditions. For example, the records can be filtered based on the given input or contrast to the input. The condition based filtering can also be achieved for all the columns or any particular column.
+In addition, the records can be filtered based on the conditions. For example, the records can be filtered based on the given input or contrast to the input. The condition-based filtering can also be achieved for all or any particular column.
 
-The records can be filtered based on any of the following conditions,
+The records can be filtered based on any of the following conditions:
 
 * Equals
 * Does not equal
 * Contains
 
-The above mentioned conditions are the mostly used conditions. You can simply add new conditions and alter the following code snippets based on your requirement.
+The above mentioned conditions are the mostly used conditions. Add new conditions and alter the following code samples based on your requiremen
 
 {% tabs %}
 {% highlight c# %}
@@ -128,7 +128,7 @@ private void Button_Clicked(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-The following code example illustrates how to create a [Picker](https://docs.microsoft.com/en-us/dotnet/maui/user-interface/controls/picker) for conditions and add appropriate strings to that Picker and how the records will be filtered based on selected conditions,
+The following code example illustrates how to create a [Picker](https://docs.microsoft.com/en-us/dotnet/maui/user-interface/controls/picker) for conditions and add appropriate strings to that Picker and how the records will be filtered based on selected conditions.
 
 {% tabs %}
 {% highlight xaml %}
@@ -171,7 +171,7 @@ The following code example illustrates how to create a [Picker](https://docs.mic
 
 ## Clear filtering
 
-You can clear the applied filtering by setting the `SfDataGrid.View.Filter` property to `null`.
+Clear the applied filtering by setting the `SfDataGrid.View.Filter` property to `null`.
 
 {% tabs %}
 {% highlight c# %}
