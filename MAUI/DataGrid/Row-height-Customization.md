@@ -51,9 +51,11 @@ dataGrid.RowHeight = 60;
 
 The height of a row can be customized based on its cell content by using the [SfDatagrid.QueryRowHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_QueryRowHeight) event and the [SfDatagrid.GetIntrinsicRowHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridQueryRowHeightEventArgs.html#Syncfusion_Maui_DataGrid_DataGridQueryRowHeightEventArgs_GetIntrinsicRowHeight_System_Int32_System_Boolean_System_Collections_Generic_List_System_String__) method. The `SfDatagrid.QueryRowHeight` event returns the row height on demand. The `SfDatagrid.GetIntrinsicRowHeight` method returns the height of the row based on the content.
 
-* [RowIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridQueryRowHeightEventArgs.html#Syncfusion_Maui_DataGrid_DataGridQueryRowHeightEventArgs_RowIndex): This property helps to identify a particular row in the grid.
-* [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridQueryRowHeightEventArgs.html#Syncfusion_Maui_DataGrid_DataGridQueryRowHeightEventArgs_Height): This property sets and returns the height of a grid row on demand. Default line size of the rows is 50.
-* `Handled`: This property decides whether the specified height can be set to the row or not. The default value is false. When this property is not set, the decided height is not set to the row.
+The [GetIntrinsicRowHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridQueryRowHeightEventArgs.html#Syncfusion_Maui_DataGrid_DataGridQueryRowHeightEventArgs_GetIntrinsicRowHeight_System_Int32_System_Boolean_System_Collections_Generic_List_System_String__) method provides some properties to customize the autofit calculation,
+
+`excludedColumns`  – By default, the `GetIntrinsicRowHeight` method calculates the row height based on all columns. To skip the specific columns from the row height calculation, add that column’s [DataGridColumn.MappingName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_MappingName) to the excludeColumns collection.
+
+`canIncludeHiddenColumns`  – The hidden columns ([DataGridColumn.visible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_Visible) is false) can also be considered for the row height calculation by setting the canIncludeHiddenColumns as true.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -85,7 +87,7 @@ private void DataGrid_QueryRowHeight(object sender, DataGridQueryRowHeightEventA
 
 ### Calculate height based on certain columns
 
-The datagrid allows you to calculate the row height excluding certain columns using the `ExcludeColumns` property which is available as argument in `GetIntrinsicRowHeight` method.
+The datagrid allows you to calculate the row height excluding certain columns using the [ExcludeColumns]() property which is available as argument in `GetIntrinsicRowHeight` method.
 
 The following code example illustrates calculating the height of grid rows based on certain columns:
 
