@@ -9,11 +9,11 @@ documentation: ug
 
 # Getting Started with .NET MAUI Tab View (SfTabView)
 
-This section explains the steps required to configure the .NET MAUI Tab View control and customize its elements.
+This section explains the steps required to configure the [.NET MAUI Tab View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html?tabs=tabid-1) control and customize its elements.
 
-## Adding a SfTabView reference
+## Adding a .NET MAUI Tab View reference
 
-Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html?tabs=tabid-1) to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.TabView](https://www.nuget.org/packages/Syncfusion.Maui.TabView/) and then install it.
+Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add [.NET MAUI Tab View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html?tabs=tabid-1) to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.TabView](https://www.nuget.org/packages/Syncfusion.Maui.TabView/) and then install it.
 
 ## Handler registration 
 
@@ -49,15 +49,15 @@ namespace TabViewMauiSample
 
 {% endhighlight %} 
 
-## Create a simple Tab View
+## Create a simple .NET MAUI Tab View
 
-This section explains how to create a Tab View and configure it. The control can be configured entirely in C# code or by the XAML markup.
+This section explains how to create a [.NET MAUI Tab View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html?tabs=tabid-1) and configure it. The control can be configured entirely in C# code or by the XAML markup.
 
 ### Creating the project
 
 Create a new .NET MAUI application in Visual Studio 
 
-### Adding a SfTabView control
+### Adding a .NET MAUI Tab View control
 
 Step 1: Add the NuGet to the project as discussed in the above reference section. 
 
@@ -120,7 +120,7 @@ namespace TabViewMauiSample
 
 {% endtabs %}
 
-## Populate Tab Items
+## Populate Tab Items in .NET MAUI Tab View
 
 Tab items can be added to the control using the [Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_ItemsProperty) property of [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html).
 

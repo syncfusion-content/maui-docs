@@ -8,13 +8,11 @@ documentation: ug
 ---
 
 # Tooltip in .NET MAUI Maps (SfMaps)
-
-Tooltip is used to indicate the shape, bubble, marker information during the tap, or hover interactions. This section helps to learn about
- how to show tooltip for the shapes, bubbles, and markers in the maps and customize them.
+A tooltip indicates the shape, bubble and marker information during the tap or hover interactions. This section demonstrates how to show tooltips for the shapes, bubbles, and markers in the maps and how to customize them.
 
 ## Tooltip for the shapes
 
-The [`ShowShapeTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShowShapeTooltip) is used to clearly indicate the shape information every time when you interacts with the shapes i.e., while tapping in touch devices and hover enter in the mouse enabled devices.
+The [`ShowShapeTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShowShapeTooltip) is used to indicate the shape information whenever you interact with the shapes i.e., while tapping on touch devices and hovering enter in the mouse enabled devices.
 
 {% tabs %}
 
@@ -89,7 +87,7 @@ public class Model
 
 ## Tooltip for the bubbles
 
-The [`ShowBubbleTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShowBubbleTooltip) is used to clearly indicate the bubble information every time when you interacts with the bubbles i.e., while tapping in touch devices and hover enter in the mouse enabled devices.
+The [`ShowBubbleTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShowBubbleTooltip) is used to indicate the bubble information whenever you interact with the bubbles i.e., while tapping on touch devices and hovering enter in the mouse enabled devices.
 
 {% tabs %}
 
@@ -191,7 +189,7 @@ The [`ShowBubbleTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Ma
 
 ## Tooltip for the markers
 
-The [`ShowMarkerTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_ShowMarkerTooltip) is used to clearly indicate the marker information every time when you interacts with the markers i.e., while tapping in touch devices and hover enter in the mouse enabled devices.
+The [`ShowMarkerTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_ShowMarkerTooltip) is used to indicate the marker information whenever you interact with the markers i.e., while tapping on touch devices and hovering enter in the mouse enabled devices.
 
 {% tabs %}
 
@@ -280,14 +278,13 @@ Data template can be used customize the tooltip view using [`ShapeTooltipTemplat
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-       <map:MapShapeLayer ShapesSource = "{local:ImageResource MyProject.world1.shp}"
-						  DataSource="{Binding Data}"
-						  ShapeDataField="continent"
-						  PrimaryValuePath="Continent"
-						  ShapeHoverFill="Transparent"
-						  ShapeHoverStroke="transparent"
-						  ShowShapeTooltip="True">
-						  
+        <map:MapShapeLayer DataSource="{Binding Data}"
+                           ShapeDataField="continent"
+                           PrimaryValuePath="Continent"
+                           ShapeHoverFill="Transparent"
+                           ShapeHoverStroke="transparent"
+                           ShowShapeTooltip="True">
+
             <map:MapShapeLayer.ShapeTooltipTemplate>
                 <DataTemplate>
                     <Grid>
@@ -297,15 +294,26 @@ Data template can be used customize the tooltip view using [`ShapeTooltipTemplat
                             <RowDefinition />
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
-                             <ColumnDefinition />
-                             <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
                         </Grid.ColumnDefinitions>
-                        <Image Source="flag.png" Grid.Column="0" Grid.Row="0" WidthRequest="20" HeightRequest="20"></Image>
-                        <Label Text="{Binding Continent}" TextColor="White"  Grid.Column="1" Grid.Row="0" Padding="10"/>
-                         <Label Grid.Row="2" Grid.ColumnSpan="2"  Text="{Binding Area}" TextColor="White" />
+                        <Image Source="flag.png"
+                               Grid.Column="0"
+                               Grid.Row="0"
+                               WidthRequest="20"
+                               HeightRequest="20" />
+                        <Label Text="{Binding Continent}"
+                               TextColor="White"
+                               Grid.Column="1"
+                               Grid.Row="0"
+                               Padding="10" />
+                        <Label Grid.Row="2"
+                               Grid.ColumnSpan="2"
+                               Text="{Binding Area}"
+                               TextColor="White" />
                     </Grid>
                 </DataTemplate>
-             </map:MapShapeLayer.ShapeTooltipTemplate>
+            </map:MapShapeLayer.ShapeTooltipTemplate>
         </map:MapShapeLayer>
     </map:SfMaps.Layer>
 </map:SfMaps>
@@ -355,16 +363,32 @@ Data template can be used customize the tooltip view using [`ShapeTooltipTemplat
                 }
             };
 			
-            var image = new Image { Source = "flag.png", WidthRequest = 20, HeightRequest = 20 };
-            grid.SetRow(image, 0); grid.SetColumn(image, 0);
-            var label = new Label { FontAttributes = FontAttributes.Bold, TextColor = Colors.White, Padding = 5 };
+            var image = new Image
+            {
+                Source = "flag.png",
+                WidthRequest = 20
+                , HeightRequest = 20
+            };
+            grid.SetRow(image, 0);
+            grid.SetColumn(image, 0);
+            var label = new Label
+            {
+                FontAttributes = FontAttributes.Bold,
+                TextColor = Colors.White,
+                Padding = 5
+            };
             Binding binding = new Binding();
             binding.Source = grid.BindingContext;
             binding.Path = nameof(Model1.Continent);
             label.SetBinding(Label.TextProperty, binding);
             grid.SetRow(label, 0); grid.SetColumn(label, 1);
-            var areaLabel = new Label { FontAttributes = FontAttributes.Bold, TextColor = Colors.White, };
-            grid.SetRow(areaLabel, 2); grid.SetColumnSpan(areaLabel, 2);
+            var areaLabel = new Label
+            {
+                FontAttributes = FontAttributes.Bold,
+                TextColor = Colors.White
+            };
+            grid.SetRow(areaLabel, 2);
+            grid.SetColumnSpan(areaLabel, 2);
             Binding binding1 = new Binding();
             binding1.Source = grid.BindingContext;
             binding1.Path = nameof(Model1.Area);
@@ -384,13 +408,15 @@ Data template can be used customize the tooltip view using [`ShapeTooltipTemplat
 		
 		public ViewModel()
 		{
-			Data = new ObservableCollection<Model>();
-			Data.Add( new Model("Asia", 130,"30,370,000 sq. km."));
-			Data.Add(new Model("Africa", 120,"24,709,000 sq. km."));
-			Data.Add( new Model("Europe", 586, "17,840,000 sq. km."));
-			Data.Add(new Model("North America", 472,"8,600,000 sq. km."));
-			Data.Add( new Model("South America", 363,"10,180,000 sq. km."));
-			Data.Add(new Model("Australia", 348,"59,180,000 sq. km."));
+			Data = new ObservableCollection<Model>
+            {
+                new Model("Asia", 130, "30,370,000 sq. km.")),
+                new Model("Africa", 120, "24,709,000 sq. km.")),
+                new Model("Europe", 586, "17,840,000 sq. km.")),
+                new Model("North America", 472, "8,600,000 sq. km.")),
+                new Model("South America", 363, "10,180,000 sq. km.")),
+                new Model("Australia", 348, "59,180,000 sq. km.")),
+            };
 		}
 	}
 
@@ -419,13 +445,13 @@ N>
 * The BindingContext of the Marker will be the corresponding MapMarker.
 
 N>
-* Refer the [`ShapeTooltipTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeTooltipTemplate), for customize tooltip for the shapes.
-* Refer the [`BubbleTooltipTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_BubbleTooltipTemplate), for customize tooltip for the bubbles.
-* Refer the [`MarkerTooltipTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_MarkerTooltipTemplate), for customize tooltip for the markers.
+* Refer to the [`ShapeTooltipTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeTooltipTemplate), for customize tooltip for the shapes.
+* Refer to the [`BubbleTooltipTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_BubbleTooltipTemplate), for customize tooltip for the bubbles.
+* Refer to the [`MarkerTooltipTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_MarkerTooltipTemplate), for customize tooltip for the markers.
 
 ### Apply data template selector for tooltip
 
-Data template selector can be customized the appearance of each item with different templates based on specific constraints. You can choose a DataTemplate for each item at runtime based on the value of data-bound property using DataTemplateSelector in [`ShapeTooltipTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeTooltipTemplate).
+A data template selector also can be used to customize the appearance of each item with different templates based on specific constraints. You can choose a DataTemplate for each item at runtime based on the value of data-bound property using DataTemplateSelector in [`ShapeTooltipTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeTooltipTemplate).
 
 {% tabs %}
 
