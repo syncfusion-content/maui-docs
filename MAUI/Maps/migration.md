@@ -9,20 +9,11 @@ documentation: ug
 
 # Migrate from Xamarin.Forms SfMaps to .NET MAUI SfMaps
 
-To migrate easier from [Xamarin SfMaps](https://www.syncfusion.com/xamarin-ui-controls/xamarin-maps) to [.NET MAUI SfMaps](https://www.syncfusion.com/maui-controls/maui-maps), we kept most of the APIs from Xamarin SfMaps in MAUI SfMaps. However, to maintain the consistency of API naming in MAUI SfMaps, we renamed some of the APIs. The APIs that have been changed in MAUI SfMaps from Xamarin SfMaps are detailed as follows.
+To make the migration from the [Xamarin SfMaps](https://www.syncfusion.com/xamarin-ui-controls/xamarin-maps) to [.NET MAUI SfMaps](https://www.syncfusion.com/maui-controls/maui-maps) easier, most of the APIs from the Xamarin SfMaps were kept in the.NET MAUI SfMaps. However, to maintain the consistency of API naming in the.NET MAUI SfMaps, some of the APIs have been renamed. Please find the difference in the following topics.
 
-## Adding Reference
+## Initialize control
 
-<table>
-<tr>
-<th>Xamarin SfMaps</th>
-<th>.NET MAUI SfMaps</th></tr>
-<tr>
-<td>Syncfusion.SfMaps.XForms</td>
-<td>Syncfusion.Maui.Maps</td></tr>
-</table>
-
-To initialize the control, import the map namespace and initialize SfMaps as per the following code snippet.
+To initialize the control, import the map namespace and initialize SfMaps as shown in the following code sample.
 
 <table>
 <tr>
@@ -100,9 +91,6 @@ SfMaps map = new SfMaps();
    <td>
       {{'[Layer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.SfMaps.html#Syncfusion_Maui_Maps_SfMaps_Layer)'| markdownify }}
    </td>
-   <td>
-      Gets or sets the MapShapeLayer as a content of map in which geographical rendering is done.
-   </td>
 </tr>
 <tr>
    <td>
@@ -110,9 +98,6 @@ SfMaps map = new SfMaps();
    </td>
    <td>
       {{'[MapShapeLayer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html)'| markdownify }}
-   </td>
-   <td>
-      The shape layer in which geographical rendering is done.
    </td>
 </tr>
 </table>
@@ -204,9 +189,81 @@ SfMaps map = new SfMaps();
       {{'[ShapeSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeSelected)'| markdownify }}
    </td>
 </tr>
+<tr>
+   <td>
+      {{'[ColorMappings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html#Syncfusion_SfMaps_XForms_ShapeSetting_ColorMappings)'| markdownify }} in
+       {{'[ShapeSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html)'| markdownify }} class
+   </td>
+   <td>
+      {{'[ColorMappings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ColorMappings)'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[ShapeFill](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html#Syncfusion_SfMaps_XForms_ShapeSetting_ShapeFill)'| markdownify }} in
+       {{'[ShapeSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html)'| markdownify }} class
+   </td>
+   <td>
+      {{'[ShapeFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeFill)'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[ShapeStroke](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html#Syncfusion_SfMaps_XForms_ShapeSetting_ShapeStroke)'| markdownify }} in
+       {{'[ShapeSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html)'| markdownify }} class
+   </td>
+   <td>
+      {{'[ShapeStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeStroke)'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[ShapeStrokeThickness](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html#Syncfusion_SfMaps_XForms_ShapeSetting_ShapeStrokeThickness)'| markdownify }} in
+       {{'[ShapeSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html)'| markdownify }} class
+   </td>
+   <td>
+      {{'[ShapeStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeStrokeThickness)'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[SelectedShapeColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html#Syncfusion_SfMaps_XForms_ShapeSetting_SelectedShapeColor)'| markdownify }} in
+       {{'[ShapeSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html)'| markdownify }} class
+   </td>
+   <td>
+      {{'[SelectedShapeFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_SelectedShapeFill)'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[SelectedShapeStroke](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html#Syncfusion_SfMaps_XForms_ShapeSetting_SelectedShapeStroke)'| markdownify }} in
+       {{'[ShapeSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html)'| markdownify }} class
+   </td>
+   <td>
+      {{'[SelectedShapeStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_SelectedShapeStroke)'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[SelectedShapeStrokeThickness](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html#Syncfusion_SfMaps_XForms_ShapeSetting_SelectedShapeStrokeThickness)'| markdownify }} in
+       {{'[ShapeSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html)'| markdownify }} class
+   </td>
+   <td>
+      {{'[SelectedShapeStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_SelectedShapeStrokeThickness)'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[ShapeColorValuePath](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html#Syncfusion_SfMaps_XForms_ShapeSetting_ShapeColorValuePath)'| markdownify }} and {{'[ShapeValuePath](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html#Syncfusion_SfMaps_XForms_ShapeSetting_ShapeValuePath)'| markdownify }} in
+       {{'[ShapeSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html)'| markdownify }} class
+   </td>
+   <td>
+      {{'[ShapeColorValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeColorValuePath)'| markdownify }}
+   </td>
+</tr>
 </table>
 
-The below code example, explains how to intialize layer and customize layer in Xamarin SfMaps and .Net MAUI SfMaps.
+The following code example, explains how to intialize layer and customize layer in Xamarin SfMaps and .Net MAUI SfMaps.
 
 <table>
 <tr>
@@ -223,11 +280,7 @@ The below code example, explains how to intialize layer and customize layer in X
         <maps:ShapeFileLayer Uri="world.shp" >
             <maps:ShapeFileLayer.ShapeSettings>
                 <maps:ShapeSetting  ShapeFill="#b5dcff"
-                                    ShapeStroke="#1585ed"
-                                    ShapeStrokeThickness="2"
-                                    SelectedShapeColor="#1a35db"
-                                    SelectedShapeStroke="DarkGrey"
-                                    SelectedShapeStrokeThickness="1">
+                                    ShapeStroke="#1585ed">
                 </maps:ShapeSetting>
             </maps:ShapeFileLayer.ShapeSettings>
         </maps:ShapeFileLayer>
@@ -246,10 +299,6 @@ The below code example, explains how to intialize layer and customize layer in X
     ShapeSetting shapeSetting = new ShapeSetting(); 
     shapeSetting.ShapeFill = Color.FromRgb(181, 220, 255);
     shapeSetting.ShapeStroke = Color.FromRgb(21, 133, 237);
-    shapeSetting.ShapeStrokeThickness = 2;
-    shapeSetting.SelectedShapeColor = Color.FromRgb(26, 53, 219);
-    shapeSetting.SelectedShapeStroke = Color.DarkGray;
-    shapeSetting.SelectedShapeStrokeThickness = 1;
     layer.ShapeSettings = shapeSetting;
 
     maps.Layers.Add(layer);
@@ -266,14 +315,7 @@ The below code example, explains how to intialize layer and customize layer in X
 <map:SfMaps>
     <map:SfMaps.Layer>
         <map:MapShapeLayer ShapeStroke="#1585ed"
-                           ShapeFill="#b5dcff"  
-                           ShapeStrokeThickness="2"
-                           ShapeHoverStroke="Blue"
-                           ShapeHoverFill="LightBlue"  
-                           ShapeHoverStrokeThickness="2"
-                           SelectedShapeFill="#1a35db"
-                           SelectedShapeStroke="DarkGrey"
-                           SelectedShapeStrokeThickness="1">
+                           ShapeFill="#b5dcff">
         </map:MapShapeLayer>
     </maps:SfMaps.Layer>
 </maps:SfMaps>
@@ -290,13 +332,6 @@ The below code example, explains how to intialize layer and customize layer in X
         layer.ShapesSource = MapSource.FromResource("MyProject.world-map.json");
         layer.ShapeFill = Color.FromRgb(181, 220, 255);
         layer.ShapeStroke = Color.FromRgb(21, 133, 237);
-        layer.ShapeStrokeThickness = 2;
-        layer.ShapeHoverFill = Brush.LightBlue;
-        layer.ShapeHoverStroke = Brush.Blue;
-        layer.ShapeHoverStrokeThickness = 2;
-        layer.SelectedShapeFill = Color.FromRgb(26, 53, 219);
-        layer.SelectedShapeStroke = Colors.DarkGray;
-        layer.SelectedShapeStrokeThickness = 1;
 
         SfMaps maps = new SfMaps();
         maps.Layer = layer;
@@ -310,7 +345,7 @@ The below code example, explains how to intialize layer and customize layer in X
 </td></tr>
 </table>
 
-## BubbleSettings
+## Bubble Settings
 
 <table>
 <tr>
@@ -373,9 +408,18 @@ The below code example, explains how to intialize layer and customize layer in X
       {{'[SizeValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapBubbleSettings.html#Syncfusion_Maui_Maps_MapBubbleSettings_SizeValuePath)'| markdownify }}
    </td>
 </tr>
+<tr>
+   <td>
+      {{'[ShowBubbles](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.BubbleMarkerSetting.html#Syncfusion_SfMaps_XForms_BubbleMarkerSetting_ShowBubbles)'| markdownify }}
+   </td>
+   <td>
+      {{'[ShowBubbles](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShowBubbles)'| markdownify }} in
+      {{'[MapShapeLayer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html)'| markdownify }} class
+   </td>
+</tr>
 </table>
 
-The below code example explains how to customize bubble in Xamarin SfMaps and .Net MAUI SfMaps.
+The following code example, explains how to customize bubble in Xamarin SfMaps and .Net MAUI SfMaps.
 
 <table>
 <tr>
@@ -383,7 +427,7 @@ The below code example explains how to customize bubble in Xamarin SfMaps and .N
 <th>.NET MAUI SfMaps</th></tr>
 <tr>
 <td>
-{% tabs %} 
+{% tabs %}
 
 {% highlight xaml %}
 
@@ -396,11 +440,7 @@ The below code example explains how to customize bubble in Xamarin SfMaps and .N
             <maps:ShapeFileLayer.BubbleMarkerSettings>
                 <maps:BubbleMarkerSetting ShowBubbles="True"
                                           ColorValuePath="Population"
-                                          ValuePath="Population"  
-                                          Fill="Green"
-                                          Opacity="0.8"
-                                          MinSize="30"
-                                          MaxSize="80"/>
+                                          ValuePath="Population"/>
             </maps:ShapeFileLayer.BubbleMarkerSettings>
         </maps:ShapeFileLayer>
     </maps:SfMaps.Layers>
@@ -424,12 +464,8 @@ The below code example explains how to customize bubble in Xamarin SfMaps and .N
     {
         ShowBubbles = true,
         ValuePath = "index",
-        Opacity = 0.8,
         ColorValuePath = "Population",
         SizeValuePath = "Population",
-        Fill = Colors.Green,
-        MinSize = 30,
-        MaxSize = 80
     };
 
     layer.BubbleMarkerSettings = bubbleSetting;
@@ -448,25 +484,14 @@ The below code example explains how to customize bubble in Xamarin SfMaps and .N
 <map:SfMaps>
     <map:SfMaps.Layer>
         <map:MapShapeLayer DataSource="{Binding Data}"
-                           PrimaryValuePath="State" 
+                           PrimaryValuePath="State"
                            ShapeDataField="name"
-                           ShapeHoverFill = "Transparent" 
-                           ShapeHoverStroke="Transparent"
                            ShowBubbles="True"
-                           ShowBubbleTooltip="True" >
+                           ShowBubbleTooltip="True">
 
             <map:MapShapeLayer.BubbleSettings>
                 <map:MapBubbleSettings ColorValuePath="Population" 
-                                       SizeValuePath="Population" 
-                                       Opacity="0.8"
-                                       Fill="Green"
-                                       Stroke="DarkGreen"
-                                       StrokeThickness="2"
-                                       HoverFill="Blue"
-                                       HoverStroke="DarkBlue"
-                                       HoverStrokeThickness="3"
-                                       MinSize="30"
-                                       MaxSize="80">
+                                       SizeValuePath="Population">
                 </map:MapBubbleSettings>
             </map:MapShapeLayer.BubbleSettings>
         </map:MapShapeLayer>
@@ -488,8 +513,6 @@ public MainPage()
     layer.DataSource = viewModel.Data;
     layer.PrimaryValuePath = "State";
     layer.ShapeDataField = "name";
-    layer.ShapeHoverFill = Colors.Transparent;
-    layer.ShapeHoverStroke = Colors.Transparent;
     layer.ShowBubbles = true;
     layer.ShowBubbleTooltip = true;
 
@@ -497,15 +520,6 @@ public MainPage()
     {
         ColorValuePath = "Population",
         SizeValuePath = "Population",
-        Fill = Colors.Green,
-        Opacity = 0.8,
-        Stroke = Colors.DarkGreen,
-        StrokeThickness = 2,
-        HoverFill = Colors.Blue,
-        HoverStroke = Colors.DarkBlue,
-        HoverStrokeThickness = 3,
-        MinSize = 30,
-        MaxSize = 80
     };
 
     layer.BubbleSettings = bubbleSetting;
@@ -519,7 +533,7 @@ public MainPage()
 </td></tr>
 </table>
 
-## DataLabelSettings
+## Data Label Settings
 
 <table>
 <tr>
@@ -534,9 +548,20 @@ public MainPage()
       {{'[OverflowMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapDataLabelSettings.html#Syncfusion_Maui_Maps_MapDataLabelSettings_OverflowMode)'| markdownify }}
    </td>
 </tr>
+<tr>
+   <td>
+      {{'[TextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.DataLabelSetting.html#Syncfusion_SfMaps_XForms_DataLabelSetting_TextColor)'| markdownify }},
+      {{'[FontSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.DataLabelSetting.html#Syncfusion_SfMaps_XForms_DataLabelSetting_FontSize)'| markdownify }},
+      {{'[FontFamily](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.DataLabelSetting.html#Syncfusion_SfMaps_XForms_DataLabelSetting_FontFamily)'| markdownify }}, and
+      {{'[FontAttributes](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.DataLabelSetting.html#Syncfusion_SfMaps_XForms_DataLabelSetting_FontAttributes)'| markdownify }}
+   </td>
+   <td>
+      {{'[DataLabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapDataLabelSettings.html#Syncfusion_Maui_Maps_MapDataLabelSettings_DataLabelStyle)'| markdownify }}
+   </td>
+</tr>
 </table>
 
-The below code example explains how to customize data label in Xamarin SfMaps and .Net MAUI SfMaps.
+The following code example, explains how to customize data label in Xamarin SfMaps and .Net MAUI SfMaps.
 
 <table>
 <tr>
@@ -556,10 +581,7 @@ The below code example explains how to customize data label in Xamarin SfMaps an
                              ShapeIDTableField="name"
                              ShowMapItems="True">
             <maps:ShapeFileLayer.DataLabelSettings>
-                <maps:DataLabelSetting  SmartLabelMode="Trim"
-                                        TextColor="#ff4e41"
-                                        FontAttributes="Italic"
-                                        FontSize="12" />
+                <maps:DataLabelSetting  SmartLabelMode="Trim" />
             </maps:ShapeFileLayer.DataLabelSettings>
         </maps:ShapeFileLayer>
     </maps:SfMaps.Layers>
@@ -581,9 +603,6 @@ The below code example explains how to customize data label in Xamarin SfMaps an
     layer.ShowMapItems = true;
 
     DataLabelSetting dataLabelSetting = new DataLabelSetting();
-    dataLabelSetting.TextColor = Color.FromRgb(255, 78, 65);
-    dataLabelSetting.FontAttributes = FontAttributes.Italic;
-    dataLabelSetting.FontSize = 12;
     dataLabelSetting.SmartLabelMode = IntersectAction.Trim;
     
     layer.DataLabelSettings = dataLabelSetting;
@@ -606,16 +625,13 @@ The below code example explains how to customize data label in Xamarin SfMaps an
                            ShapeDataField="name"
                            ShapeHoverFill = "Transparent" 
                            ShapeHoverStroke="Transparent"
-                           ShowBubbles="True"
-                           ShowBubbleTooltip="True" >
+                           ShowDataLabels="True">
 
             <map:MapShapeLayer.DataLabelSettings>
                 <map:MapDataLabelSettings OverflowMode="Trim"
                                           DataLabelPath="State">
                         <map:MapDataLabelSettings.DataLabelStyle>
-                                <map:MapLabelStyle FontSize="12"
-                                                   TextColor="#ff4e41"
-                                                   FontAttributes="Italic" />
+                                <map:MapLabelStyle FontSize="12"/>
                         </map:MapDataLabelSettings.DataLabelStyle>
                 </map:MapDataLabelSettings>
             </map:MapShapeLayer.DataLabelSettings>
@@ -647,9 +663,7 @@ public MainPage()
        OverflowMode = MapLabelOverflowMode.Trim,
        DataLabelStyle = new MapLabelStyle()
        {
-           FontSize = 12,
-           FontAttributes = FontAttributes.Italic,
-           TextColor = Color.FromRgb(255, 78, 65)
+           FontSize = 12
        },
     };
 
@@ -663,7 +677,7 @@ public MainPage()
 </td></tr>
 </table>
 
-## ColorMappings
+## Color Mappings
 
 <table>
 <tr>
@@ -704,7 +718,7 @@ public MainPage()
 </tr>
 </table>
 
-### EqualColorMapping
+### Equal Color Mapping
 
 <table>
 <tr>
@@ -721,7 +735,7 @@ public MainPage()
 </tr>
 </table>
 
-### RangeColorMapping
+### Range Color Mapping
 
 <table>
 <tr>
@@ -746,7 +760,7 @@ public MainPage()
 </tr>
 </table>
 
-The below code example explains how to customize shape color in Xamarin SfMaps and .Net MAUI SfMaps.
+The following code example, explains how to customize shape color in Xamarin SfMaps and .Net MAUI SfMaps.
 
 <table>
 <tr>
@@ -767,9 +781,8 @@ The below code example explains how to customize shape color in Xamarin SfMaps a
             <maps:ShapeFileLayer.ShapeSettings>
                 <maps:ShapeSetting ShapeValuePath="Count" ShapeColorValuePath="Count" >
                     <maps:ShapeSetting.ColorMappings>
-                        <maps:EqualColorMapping Color="Blue" Value="150" Text="150"/>
-                        <maps:RangeColorMapping Color="Green" From="0" To="90" Text="0-90"/>
-                        <maps:RangeColorMapping Color="Red" From="100" To="149" Text="100-149"/>
+                        <maps:EqualColorMapping Color="Blue" Value="100" Text="100"/>
+                        <maps:RangeColorMapping Color="Green" From="0" To="99" Text="0-99"/>
                     </maps:ShapeSetting.ColorMappings>
                 </maps:ShapeSetting>
             </maps:ShapeFileLayer.ShapeSettings>
@@ -791,22 +804,16 @@ The below code example explains how to customize shape color in Xamarin SfMaps a
     layer.ShapeIDTableField="name"
     layer.DataSource = viewModel.Data;
 
-    RangeColorMapping colorMapping = new RangeColorMapping();
-    colorMapping.Color = Colors.Green;
-    colorMapping.From = 0;
-    colorMapping.To = 90;
-    colorMapping1.Text = "0-90";
+    EqualColorMapping colorMapping = new EqualColorMapping();
+    colorMapping.Color = Colors.Blue;
+    colorMapping.Value = "100";
+    colorMapping.Text = "100";
 
     RangeColorMapping colorMapping1 = new RangeColorMapping();
-    colorMapping1.Color = Colors.Red;
-    colorMapping1.From = 100;
-    colorMapping1.To = 149;
-    colorMapping1.Text = "100-149";
-
-    EqualColorMapping colorMapping2 = new EqualColorMapping();
-    colorMapping2.Color = Colors.Blue;
-    colorMapping2.Value = "150";
-    colorMapping2.Text = "150";
+    colorMapping1.Color = Colors.Green;
+    colorMapping1.From = 0;
+    colorMapping1.To = 99;
+    colorMapping1.Text = "0-99";
     
     ShapeSetting shapeSetting = new ShapeSetting();
     shapeSetting.ShapeValuePath = "Count";
@@ -814,7 +821,6 @@ The below code example explains how to customize shape color in Xamarin SfMaps a
     
     shapeSetting.ColorMappings.Add(colorMapping);
     shapeSetting.ColorMappings.Add(colorMapping1);
-    shapeSetting.ColorMappings.Add(colorMapping2);
 
     layer.ShapeSettings = shapeSetting;
 
@@ -836,9 +842,8 @@ The below code example explains how to customize shape color in Xamarin SfMaps a
                            ShapeDataField="name"
                            ShapeColorValuePath="Count">
             <map:MapShapeLayer.ColorMappings>
-                <map:EqualColorMapping Color="Blue" Value="150" Text="150"/>
-                <map:RangeColorMapping Color="Green" From="0" To="90" Text="0-90"/>
-                <map:RangeColorMapping Color="Red" From="100" To="149" Text="100-149"/>
+                <map:EqualColorMapping Color="Blue" Value="100" Text="100"/>
+                <map:RangeColorMapping Color="Green" From="0" To="99" Text="0-99"/>
             </map:MapShapeLayer.ColorMappings>
         </map:MapShapeLayer>
     </map:SfMaps.Layer>
@@ -861,26 +866,19 @@ public MainPage()
     layer.ShapeDataField = "name";
     layer.ShapeColorValuePath = "Count";
 
-    RangeColorMapping colorMapping = new RangeColorMapping();
-    colorMapping.Color = Colors.Green;
-    colorMapping.From = 0;
-    colorMapping.To = 90;
-    colorMapping1.Text = "0-90";
+    EqualColorMapping colorMapping = new EqualColorMapping();
+    colorMapping.Color = Colors.Blue;
+    colorMapping.Value = "100";
+    colorMapping.Text = "100";
 
     RangeColorMapping colorMapping1 = new RangeColorMapping();
-    colorMapping1.Color = Colors.Red;
-    colorMapping1.From = 100;
-    colorMapping1.To = 149;
-    colorMapping1.Text = "100-149";
-
-    EqualColorMapping colorMapping2 = new EqualColorMapping();
-    colorMapping2.Color = Colors.Blue;
-    colorMapping2.Value = "150";
-    colorMapping2.Text = "150";
+    colorMapping1.Color = Colors.Green;
+    colorMapping1.From = 0;
+    colorMapping1.To = 99;
+    colorMapping1.Text = "0-99";
 
     layer.ColorMappings.Add(colorMapping);
     layer.ColorMappings.Add(colorMapping1);
-    layer.ColorMappings.Add(colorMapping2);
 
     maps.Layer = layer;
     this.Content = maps;
@@ -915,9 +913,55 @@ public MainPage()
       {{'[Longitude](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_Longitude)'| markdownify }}
    </td>
 </tr>
+<tr>
+   <td>
+      {{'[IconColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.MapMarkerSetting.html#Syncfusion_SfMaps_XForms_MapMarkerSetting_IconColor)'| markdownify }} in
+      {{'[MapMarkerSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.MapMarkerSetting.html)'| markdownify }}
+   </td>
+   <td>
+      {{'[IconFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_IconFill)'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[IconSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.MapMarkerSetting.html#Syncfusion_SfMaps_XForms_MapMarkerSetting_IconSize)'| markdownify }} in
+      {{'[MapMarkerSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.MapMarkerSetting.html)'| markdownify }}
+   </td>
+   <td>
+      {{'[IconHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_IconHeight)'| markdownify }} and
+       {{'[IconWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_IconWidth)'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[MarkerIcon](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.MapMarkerSetting.html#Syncfusion_SfMaps_XForms_MapMarkerSetting_MarkerIcon)'| markdownify }} in
+      {{'[MapMarkerSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.MapMarkerSetting.html)'| markdownify }}
+   </td>
+   <td>
+      {{'[IconType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_IconType)'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[HorizontalAlignment](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.MapMarkerSetting.html#Syncfusion_SfMaps_XForms_MapMarkerSetting_HorizontalAlignment)'| markdownify }} in
+      {{'[MapMarkerSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.MapMarkerSetting.html)'| markdownify }}
+   </td>
+   <td>
+      {{'[HorizontalAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_HorizontalAlignment)'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[VerticalAlignment](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.MapMarkerSetting.html#Syncfusion_SfMaps_XForms_MapMarkerSetting_VerticalAlignment)'| markdownify }} in
+      {{'[MapMarkerSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.MapMarkerSetting.html)'| markdownify }}
+   </td>
+   <td>
+      {{'[VerticalAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_VerticalAlignment)'| markdownify }}
+   </td>
+</tr>
 </table>
 
-The below code example explains how to customize marker in Xamarin SfMaps and .Net MAUI SfMaps.
+The following code example, explains how to customize marker in Xamarin SfMaps and .Net MAUI SfMaps.
 
 <table>
 <tr>
@@ -932,21 +976,13 @@ The below code example explains how to customize marker in Xamarin SfMaps and .N
 <maps:SfMaps>
     <maps:SfMaps.Layers >
         <maps:ShapeFileLayer Uri="world.shp"
-                             ItemsSource="{Binding Data}"
-                             ShapeIDPath="State"
-                             ShapeIDTableField="name"
                              ShowMapItems="True">
             <maps:ShapeFileLayer.Markers>
                 <maps:MapMarker Latitude="20.5595"
                                 Longitude="22.9375"/>
             </maps:ShapeFileLayer.Markers>
             <maps:ShapeFileLayer.MarkerSettings>
-                <maps:MapMarkerSetting x:Name="markerSetting"
-                                       VerticalAlignment="Center"
-                                       HorizontalAlignment="Center"
-                                       IconColor="Red"
-                                       IconSize="15"
-                                       MarkerIcon="Diamond"/>
+                <maps:MapMarkerSetting IconColor="Red"/>
             </maps:ShapeFileLayer.MarkerSettings>
         </maps:ShapeFileLayer>
     </maps:SfMaps.Layers>
@@ -956,15 +992,10 @@ The below code example explains how to customize marker in Xamarin SfMaps and .N
 
 {% highlight C# %}
 
-    ViewModel viewModel = new ViewModel();
-    this.BindingContext = viewModel;
     SfMaps maps = new SfMaps();
 
     ShapeFileLayer layer = new ShapeFileLayer();
     layer.Uri = "world.shp";           
-    layer.ShapeIDPath="State"
-    layer.ShapeIDTableField="name"
-    layer.DataSource = viewModel.Data;
 
     MapMarker mapMarker = new MapMarker();
     mapMarker.Latitude = 20.5595;
@@ -972,11 +1003,7 @@ The below code example explains how to customize marker in Xamarin SfMaps and .N
     layer.Markers.Add(marker);
 
     MapMarkerSetting mapMarkerSetting = new MapMarkerSetting();
-    mapMarkerSetting.IconSize = 15;
     mapMarkerSetting.IconColor = Colors.Red;
-    markerSetting.MarkerIcon = MapMarkerIcon.Diamond;
-    mapMarkerSetting.HorizontalAlignment = MarkerAlignment.Center;
-    mapMarkerSetting.VerticalAlignment = MarkerAlignment.Center;
     layer.MarkerSettings = mapMarkerSetting;
 
     maps.Layers.Add(layer);
@@ -992,21 +1019,12 @@ The below code example explains how to customize marker in Xamarin SfMaps and .N
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer DataSource="{Binding Data}"
-                           PrimaryValuePath="State"
-                           ShapeDataField="name"
-                           ShapeHoverFill = "Transparent"
-                           ShapeHoverStroke="Transparent">
+        <map:MapShapeLayer>
             <map:MapShapeLayer.Markers>
                 <map:MapMarkerCollection>
                     <map:MapMarker Latitude="20.5595"
                                    Longitude="22.9375"
-                                   IconWidth="15"
-                                   IconHeight="15"
-                                   IconFill="Red"
-                                   IconType="Diamond"
-                                   HorizontalAlignment="Center"
-                                   VerticalAlignment="Start" />
+                                   IconFill="Red"/>
                 </map:MapMarkerCollection>
             </map:MapShapeLayer.Markers>
         </map:MapShapeLayer>
@@ -1020,23 +1038,13 @@ The below code example explains how to customize marker in Xamarin SfMaps and .N
 public MainPage()
 {
    InitializeComponent();
-    ViewModel viewModel = new ViewModel();
-    this.BindingContext = viewModel;
     SfMaps maps = new SfMaps();
     MapShapeLayer layer = new MapShapeLayer();
     layer.ShapesSource = MapSource.FromResource("MyProject.world1.shp");
-    layer.DataSource = viewModel.Data;
-    layer.PrimaryValuePath = "State";
-    layer.ShapeDataField = "name";
 
     MapMarker mapMarker = new MapMarker();
     mapMarker.Latitude = 20.5595;
     mapMarker.Longitude = 22.9375;
-    mapMarker.HorizontalAlignment = MapAlignment.Center;
-    mapMarker.VerticalAlignment = MapAlignment.Center;
-    mapMarker.IconHeight = 15;
-    mapMarker.IconWidth = 15;
-    mapMarker.IconType = MapIconType.Diamond;
     mapMarker.IconFill = Colors.Red;
 
     maps.Layer = layer;
@@ -1051,7 +1059,53 @@ public MainPage()
 
 ## Legend
 
-The below code example explains how to customize legend in Xamarin SfMaps and .Net MAUI SfMaps.
+<table>
+<tr>
+<th>Xamarin SfMaps</th>
+<th>.NET MAUI SfMaps</th>
+</tr>
+<tr>
+   <td>
+      {{'[LegendType](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.MapLegendSetting.html#Syncfusion_SfMaps_XForms_MapLegendSetting_LegendType)'| markdownify }} in
+      {{'[MapLegendSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.MapLegendSetting.html)'| markdownify }}
+   </td>
+   <td>
+      {{'[SourceType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html#Syncfusion_Maui_Maps_MapLegend_SourceType)'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[TextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.MapLegendSetting.html#Syncfusion_SfMaps_XForms_MapLegendSetting_TextColor)'| markdownify }},
+      {{'[FontSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.MapLegendSetting.html#Syncfusion_SfMaps_XForms_MapLegendSetting_FontSize)'| markdownify }},
+      {{'[FontFamily](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.MapLegendSetting.html#Syncfusion_SfMaps_XForms_MapLegendSetting_FontFamily)'| markdownify }}, and
+      {{'[FontAttributes](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.MapLegendSetting.html#Syncfusion_SfMaps_XForms_MapLegendSetting_FontAttributes)'| markdownify }} in
+      {{'[MapLegendSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.MapLegendSetting.html)'| markdownify }}
+   </td>
+   <td>
+      {{'[TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html#Syncfusion_Maui_Maps_MapLegend_TextStyle)'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[IconSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.MapLegendSetting.html#Syncfusion_SfMaps_XForms_MapLegendSetting_IconSize)'| markdownify }} in
+      {{'[MapLegendSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.MapLegendSetting.html)'| markdownify }}
+   </td>
+   <td>
+      Upcoming
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[LegendIcon](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.MapLegendSetting.html#Syncfusion_SfMaps_XForms_MapLegendSetting_LegendIcon)'| markdownify }} in
+      {{'[MapLegendSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.MapLegendSetting.html)'| markdownify }}
+   </td>
+   <td>
+      Upcoming
+   </td>
+</tr>
+</table>
+
+The following code example, explains how to customize legend in Xamarin SfMaps and .Net MAUI SfMaps.
 
 <table>
 <tr>
@@ -1072,16 +1126,12 @@ The below code example explains how to customize legend in Xamarin SfMaps and .N
             <maps:ShapeFileLayer.ShapeSettings>
                 <maps:ShapeSetting ShapeValuePath="Count" ShapeColorValuePath="Count" >
                     <maps:ShapeSetting.ColorMappings>
-                        <maps:EqualColorMapping Color="Blue" Value="150" Text="150"/>
-                        <maps:RangeColorMapping Color="Green" From="0" To="90" Text="0-90"/>
-                        <maps:RangeColorMapping Color="Red" From="100" To="149" Text="100-149"/>
+                        <map:EqualColorMapping Color="Blue" Value="100" Text="100"/>
                     </maps:ShapeSetting.ColorMappings>
                 </maps:ShapeSetting>
             </maps:ShapeFileLayer.ShapeSettings>
             <maps:ShapeFileLayer.LegendSettings>
-                        <maps:MapLegendSetting ItemMargin="30" LegendIcon="Diamond" LegendPosition="50,20"
-                                               FontFamily="algerian.ttf" FontSize="14" TextColor="Maroon"
-                                               ShowLegend="True">
+                        <maps:MapLegendSetting ShowLegend="True" LegendType="Layers">
                         </maps:MapLegendSetting>
                     </maps:ShapeFileLayer.LegendSettings>
         </maps:ShapeFileLayer>
@@ -1102,22 +1152,10 @@ The below code example explains how to customize legend in Xamarin SfMaps and .N
     layer.ShapeIDTableField="name"
     layer.DataSource = viewModel.Data;
 
-    RangeColorMapping colorMapping = new RangeColorMapping();
-    colorMapping.Color = Colors.Green;
-    colorMapping.From = 0;
-    colorMapping.To = 90;
-    colorMapping1.Text = "0-90";
-
-    RangeColorMapping colorMapping1 = new RangeColorMapping();
-    colorMapping1.Color = Colors.Red;
-    colorMapping1.From = 100;
-    colorMapping1.To = 149;
-    colorMapping1.Text = "100-149";
-
-    EqualColorMapping colorMapping2 = new EqualColorMapping();
-    colorMapping2.Color = Colors.Blue;
-    colorMapping2.Value = "150";
-    colorMapping2.Text = "150";
+    EqualColorMapping colorMapping = new EqualColorMapping();
+    colorMapping.Color = Colors.Blue;
+    colorMapping.Value = "100";
+    colorMapping.Text = "100";
     
     ShapeSetting shapeSetting = new ShapeSetting();
     shapeSetting.ShapeValuePath = "Count";
@@ -1125,17 +1163,10 @@ The below code example explains how to customize legend in Xamarin SfMaps and .N
 
     MapLegendSetting legendSetting = new MapLegendSetting();
     legendSetting.ShowLegend = true;
-    legendSetting.LegendPosition = new Point(50, 20);
     legendSetting.LegendType = LegendType.Layers;
-    legendSetting.FontFamily ="algerian.ttf";
-    legendSetting.TextColor = Color.Maroon;
-    legendSetting.ItemMargin = 30;
-    legendSetting.LegendIcon = LegendIcon.Diamond;
     layer.LegendSettings = legendSetting;
 
     shapeSetting.ColorMappings.Add(colorMapping);
-    shapeSetting.ColorMappings.Add(colorMapping1);
-    shapeSetting.ColorMappings.Add(colorMapping2);
 
     layer.ShapeSettings = shapeSetting;
 
@@ -1157,18 +1188,13 @@ The below code example explains how to customize legend in Xamarin SfMaps and .N
                            ShapeDataField="name"
                            ShapeColorValuePath="Count">
             <map:MapShapeLayer.ColorMappings>
-                <map:EqualColorMapping Color="Blue" Value="150" Text="150"/>
-                <map:RangeColorMapping Color="Green" From="0" To="90" Text="0-90"/>
-                <map:RangeColorMapping Color="Red" From="100" To="149" Text="100-149"/>
+                <map:EqualColorMapping Color="Blue" Value="100" Text="100"/>
             </map:MapShapeLayer.ColorMappings>
             <map:MapShapeLayer.Legend>
                 <map:MapLegend SourceType="Shape"
                                Placement="Top">
                     <map:MapLegend.TextStyle>
-                        <map:MapLabelStyle FontSize="16"
-                                           TextColor="Maroon"
-                                           FontFamily="Times"
-                                           FontAttributes="Italic" />
+                        <map:MapLabelStyle FontSize="16"/>
                     </map:MapLegend.TextStyle>
                 </map:MapLegend>
             </map:MapShapeLayer.Legend>
@@ -1193,36 +1219,18 @@ public MainPage()
     layer.ShapeDataField = "name";
     layer.ShapeColorValuePath = "Count";
 
-    RangeColorMapping colorMapping = new RangeColorMapping();
-    colorMapping.Color = Colors.Green;
-    colorMapping.From = 0;
-    colorMapping.To = 90;
-    colorMapping1.Text = "0-90";
-
-    RangeColorMapping colorMapping1 = new RangeColorMapping();
-    colorMapping1.Color = Colors.Red;
-    colorMapping1.From = 100;
-    colorMapping1.To = 149;
-    colorMapping1.Text = "100-149";
-
-    EqualColorMapping colorMapping2 = new EqualColorMapping();
-    colorMapping2.Color = Colors.Blue;
-    colorMapping2.Value = "150";
-    colorMapping2.Text = "150";
+    EqualColorMapping colorMapping = new EqualColorMapping();
+    colorMapping.Color = Colors.Blue;
+    colorMapping.Value = "100";
+    colorMapping.Text = "100";
 
     layer.ColorMappings.Add(colorMapping);
-    layer.ColorMappings.Add(colorMapping1);
-    layer.ColorMappings.Add(colorMapping2);
 
     MapLegend legendSet = new MapLegend();
     legendSet.SourceType = LegendSourceType.Shape;
-    legendSet.Placement = Syncfusion.Maui.Core.LegendPlacement.Top;
 
     MapLabelStyle mapLabelStyle = new MapLabelStyle();
-    mapLabelStyle.TextColor = Colors.Black;
     mapLabelStyle.FontSize = 16;
-    mapLabelStyle.FontFamily = "Times";
-    mapLabelStyle.FontAttributes = FontAttributes.Italic;
         
     legendSet.TextStyle = mapLabelStyle;
     layer.Legend = legendSet;
@@ -1238,6 +1246,21 @@ public MainPage()
 </table>
 
 ## Tooltip
+
+<table>
+<tr>
+<th>Xamarin SfMaps</th>
+<th>.NET MAUI SfMaps</th>
+</tr>
+<tr>
+   <td>
+      {{'[TooltipSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.TooltipSetting.html)'| markdownify }}
+   </td>
+   <td>
+      Upcoming
+   </td>
+</tr>
+</table>
 
 The below code example explains how to customize tooltip in Xamarin SfMaps and .Net MAUI SfMaps.
 
@@ -1259,13 +1282,7 @@ The below code example explains how to customize tooltip in Xamarin SfMaps and .
                              ShapeIDTableField="name">
             <maps:ShapeFileLayer.TooltipSettings>
                 <maps:TooltipSetting  ShowTooltip="True"
-                                      ValuePath="Count"
-                                      TextColor="White"
-                                      Margin="10"
-                                      BackgroundColor="Green"  
-                                      StrokeColor="Black"
-                                      StrokeWidth="2"
-                                      Duration="2000"/>
+                                      ValuePath="Count"/>
     </maps:ShapeFileLayer.TooltipSettings>
         </maps:ShapeFileLayer>
     </maps:SfMaps.Layers>
@@ -1287,12 +1304,6 @@ The below code example explains how to customize tooltip in Xamarin SfMaps and .
 
     shapeFileLayer.TooltipSettings.ShowTooltip = true;
     shapeFileLayer.TooltipSettings.ValuePath = "Count";
-    shapeFileLayer.TooltipSettings.TextColor = Color.White;
-    shapeFileLayer.TooltipSettings.BackgroundColor = Color.Green;
-    shapeFileLayer.TooltipSettings.StrokeColor = Color.Black;
-    shapeFileLayer.TooltipSettings.StrokeWidth = 2;
-    shapeFileLayer.TooltipSettings.Margin = 10;
-    shapeFileLayer.TooltipSettings.Duration = 2000;
 
     layer.ShapeSettings = shapeSetting;
 
@@ -1314,35 +1325,6 @@ The below code example explains how to customize tooltip in Xamarin SfMaps and .
                            ShapeDataField="name"
                            ShapeColorValuePath="Count"
                            ShowShapeToolTip="True">
-            <map:MapShapeLayer.ShapeTooltipTemplate>
-                <DataTemplate>
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition />
-                            <RowDefinition />
-                            <RowDefinition />
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition />
-                            <ColumnDefinition />
-                        </Grid.ColumnDefinitions>
-                        <Image Source="flag.png"
-                               Grid.Column="0"
-                               Grid.Row="0"
-                               WidthRequest="20"
-                               HeightRequest="20" />
-                        <Label Text="{Binding Continent}"
-                               TextColor="White"
-                               Grid.Column="1"
-                               Grid.Row="0"
-                               Padding="10" />
-                        <Label Grid.Row="2"
-                               Grid.ColumnSpan="2"
-                               Text="{Binding Area}"
-                               TextColor="White" />
-                    </Grid>
-                </DataTemplate>
-            </map:MapShapeLayer.ShapeTooltipTemplate>
         </map:MapShapeLayer>
     </map:SfMaps.Layer>
 </map:SfMaps>
@@ -1363,72 +1345,11 @@ The below code example explains how to customize tooltip in Xamarin SfMaps and .
         layer.PrimaryValuePath = "Continent";
         layer.ShapeDataField = "continent";
         layer.DataSource = viewModel.Data;
-        layer.ShapeHoverFill = Colors.Transparent;
-        layer.ShapeHoverStroke = Colors.Transparent;
         layer.ShowShapeTooltip = true;
-        layer.ShapeTooltipTemplate = CreateDataTemplate();
 
         SfMaps maps = new SfMaps();
         maps.Layer = layer;
         this.Content = maps;
-    }
-
-    private DataTemplate CreateDataTemplate()
-    {
-        return new DataTemplate(() =>
-        {
-            var grid = new Grid()
-            {
-                RowDefinitions =
-                {
-                  new RowDefinition (),
-                  new RowDefinition(),
-                  new RowDefinition()
-                },
-                ColumnDefinitions =
-                {
-                    new ColumnDefinition(),
-                    new ColumnDefinition(),
-                }
-            };
-
-            var image = new Image
-            {
-                Source = "flag.png",
-                WidthRequest = 20
-                , HeightRequest = 20
-            };
-            grid.SetRow(image, 0);
-            grid.SetColumn(image, 0);
-            var label = new Label
-            {
-                FontAttributes = FontAttributes.Bold,
-                TextColor = Colors.White,
-                Padding = 5
-            };
-            Binding binding = new Binding();
-            binding.Source = grid.BindingContext;
-            binding.Path = nameof(Model1.Continent);
-            label.SetBinding(Label.TextProperty, binding);
-            grid.SetRow(label, 0); grid.SetColumn(label, 1);
-            var areaLabel = new Label
-            {
-                FontAttributes = FontAttributes.Bold,
-                TextColor = Colors.White
-            };
-            grid.SetRow(areaLabel, 2);
-            grid.SetColumnSpan(areaLabel, 2);
-            Binding binding1 = new Binding();
-            binding1.Source = grid.BindingContext;
-            binding1.Path = nameof(Model1.Area);
-            areaLabel.SetBinding(Label.TextProperty, binding1);
-
-            grid.Children.Add(image);
-            grid.Children.Add(label);
-           
-            grid.Children.Add(areaLabel);
-            return new ViewCell { View = grid };
-        });
     }
 
 {% endhighlight %}
@@ -1449,6 +1370,7 @@ The below code example explains how to customize tooltip in Xamarin SfMaps and .
 
 * Label support have not been provided in the marker.Instead, you can achieve it using the [MarkerTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_MarkerTemplate).
 * In .Net MAUI, IntersectionAction support not provided for data labels.
+* [ShowLegend](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.MapLegendSetting.html#Syncfusion_SfMaps_XForms_MapLegendSetting_ShowLegend) support is not provided in the .Net MAUI. Instead, set value for the [Legend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_Legend) to display map legend in the .Net MAUI platform.
 
 ## Support and feedback
 
