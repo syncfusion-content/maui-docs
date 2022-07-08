@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Getting Started with Syncfusion .NET MAUI AvatarView
-description: This section will explain how to initialize and use the .NET MAUI SfAvatarView control in simple way.
+title: Getting Started with Syncfusion .NET MAUI Avatar View
+description: This section will explain how to initialize and use the .NET MAUI Avatar View control in simple way.
 platform: maui
 control: SfAvatarView
 documentation: ug
 ---
 
-# Getting Started With .NET MAUI AvatarView (SfAvatarView)
+# Getting Started With .NET MAUI Avatar View (SfAvatarView)
 
-## Getting started with SfAvatarView
+## Creating an application using the .NET MAUI Avatar View
 
-This section explains the steps required to work with the SfAvatarView control for .NET MAUI.
+This section explains the steps required to work with the `SfAvatarView` control for .NET MAUI.
 
-## Adding SfAvatarView reference
+## Adding .NET MAUI Avatar View reference
 
-The Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add SfAvatarView to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and then install it.
+The Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add [.NET MAUI Avatar View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1) to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and then install it.
 
 ## Handler registration 
 
@@ -56,7 +56,7 @@ namespace AvatarViewSample
 
 ## Adding a namespace
 
-Add the following namespace to add .NET MAUI Avatar View.
+Add the following namespace to add [.NET MAUI Avatar View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1).
 
 {% tabs %}
 
@@ -74,9 +74,9 @@ Add the following namespace to add .NET MAUI Avatar View.
 
 {% endtabs %}
 
-### Adding the SfAvatarView control as the content of ContentPage
+### Adding the .NET MAUI Avatar View control
 
-You can add a custom image for displaying in `SfAvatarView` using the `ImageSource` property.
+You can add a custom image for displaying in [.NTE MAUI Avatar View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1) using the [ImageSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_ImageSource) property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -132,5 +132,5 @@ The following screenshot illustrates the result of the above code.
 
 ![.NET MAUI Avatar View Getting Started](GettingStarted_Images/Getting_Started_Sample.png) 
 
-The Getting Started sample is available in this following link: [Getting Started](https://github.com/SyncfusionExamples/maui-avatarview-samples). 
+The Getting Started sample of .NET MAUI Avatar View is available in this following link: [Getting Started](https://github.com/SyncfusionExamples/maui-avatarview-samples). 
 

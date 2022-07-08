@@ -11,15 +11,15 @@ documentation: ug
 
 ## Customization in .NET MAUI Avatar View(SfAvatarView)
 
-The SfAvatarView control provides options to customize the color and size. The control can be customized using the following properties:
+The [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1) control provides options to customize the color and size. The control can be customized using the following properties:
 
 ## Colors
 
-Color in the SfAvatarView can be customized by the border color, the default background color, and automatic background color.
+Color in the [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1) can be customized by the border color, the default background color, and automatic background color.
 
 ### Border color
 
-The border color is used for setting color to the border of SfAvatarView using the `BorderColor` property.
+The border color is used for setting color to the border of [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1) using the [BorderColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_BorderColor) property.
 
 {% tabs %}
 
@@ -60,7 +60,7 @@ this.Content = mainGrid;
 
 ### Default background color
 
-The background color for the SfAvatarView control can be set using the `AvatarColorMode` property. When the `AvatarColorMode` property is set to default, it displays the background color set in the `BackgroundColor` property.
+The background color for the SfAvatarView control can be set using the [AvatarColorMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_AvatarColorMode) property. When the [AvatarColorMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_AvatarColorMode)  property is set to default, it displays the background color set in the [BackgroundColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_BackgroundColor) property.
 
 {% tabs %}
 
@@ -106,14 +106,14 @@ this.Content = mainGrid;
 
 ### Automatic background color
 
-The `SfAvatarView` control allows automatic background color while initializing. It contains the following properties:
+The [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html) control allows automatic background color while initializing. It contains the following properties:
 
 * `DarkBackground`: Shows a dark color for the initials and background color.
 * `LightBackground`: Shows a light color for the initials and background color.
 
 #### Dark color
 
-The dark background color can be set using `DarkBackground` in the `AvatarColorMode` property.
+The dark background color can be set using `DarkBackground` in the [AvatarColorMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_AvatarColorMode) property.
 
 {% tabs %}
 
@@ -160,7 +160,7 @@ this.Content = mainGrid;
 
 #### Light color
 
-The light background color can be set using `LightBackground` in the `AvatarColorMode` property.
+The light background color can be set using `LightBackground` in the [AvatarColorMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_AvatarColorMode)   property.
 
 {% tabs %}
 
@@ -205,7 +205,7 @@ this.Content = mainGrid;
 
 ### Gradients
 
-You can also specify a range of colors using `LinearGradientBrush` in `Background` Property as demonstrated in the following code example.
+You can also specify a range of colors using `LinearGradientBrush` in [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_Background) Property as demonstrated in the following code example.
 
 {% tabs %}
 
@@ -263,19 +263,19 @@ this.Content = mainGrid;
 
 ## Sizing
 
-In the `SfAvatarView` control, size of the view can be controlled using width, height, border thickness, and corner radius.
+In the [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html) control, size of the view can be controlled using width, height, border thickness, and corner radius.
 
 ### Width
 
-You can customize the width of the avatar view using the `WidthRequest` property.
+You can customize the width of the avatar view using the [WidthRequest](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_WidthRequest) property.
 
 ### Height
 
-You can customize the height of the avatar view using the `HeightRequest` property.
+You can customize the height of the avatar view using the  [HeightRequest](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_HeightRequest) property.
 
 ### Border Thickness
 
-You can customize the thickness of the avatar view using the `BorderThickness` property.
+You can customize the thickness of the avatar view using the [BorderThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_BorderThickness) property.
 
 {% tabs %}
 
@@ -318,7 +318,7 @@ this.Content = mainGrid;
 
 ### Corner radius
 
-You can customize the corner radius of the avatar view using the `CornerRadius` property.
+You can customize the corner radius of the avatar view using the [CornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_CornerRadius) property.
 
 {% tabs %}
 

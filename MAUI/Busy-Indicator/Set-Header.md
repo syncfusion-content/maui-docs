@@ -14,7 +14,7 @@ The Syncfusion Busy Indicator provides a feature to display a title with font cu
 
 ## Title
 
-SfBusyIndicator provides option to set the text that indicates the information related to loading. This can be done using `Title` property.
+[SfBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) provides option to set the text that indicates the information related to loading. This can be done using [Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_Title) property.
 
 {% tabs %}
 
@@ -46,7 +46,7 @@ The following screenshot illustrates the result of the above code.
 
 ## Text Color
 
-SfBusyIndicator provides options to change the color of the text. The color of the text can be changed using the `TextColor` property.
+[SfBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) provides options to change the color of the text. The color of the text can be changed using the [TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_TextColor) property.
 
 {% tabs %}
 
@@ -81,7 +81,7 @@ The following screenshot illustrates the result of the above code.
 
 ## Title Placement
 
-SfBusyIndicator provides options to set the `Title` at the top or bottom of the Busy Indicator. The `Title` can be set using the `TitlePlacement` property. When the `Title` is not needed, set the `TitlePlacement` property of SfBusyIndicator to None.
+[SfBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1)   provides options to set the [Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_Title) at the top or bottom of the Busy Indicator. The [Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_Title) can be set using the [TitlePlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_TitlePlacement)  property. When the [Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_Title) is not needed, set the [TitlePlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_TitlePlacement)  property of SfBusyIndicator to None.
 
 {% tabs %}
 
@@ -118,7 +118,7 @@ The following screenshot illustrates the result of the above code.
 
 ## Title Spacing
 
-SfBusyIndicator provides options to set the space between the indicator and the title. The space can be set using the `TitleSpacing` property.
+[SfBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) provides options to set the space between the indicator and the title. The space can be set using the [TitleSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_TitleSpacing) property.
 
 {% tabs %}
 
@@ -159,7 +159,7 @@ The following screenshot illustrates the result of the above code.
 
 ## Font customization
 
-SfBusyIndicator provides options to customize the title text. The title text can be customized using the `FontSize,` `FontAttributes,` and `FontFamily` properties.
+[SfBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html) provides options to customize the title text. The title text can be customized using the [FontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_FontSize), [FontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_FontAttributes), and [FontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_FontFamily) properties.
 
 
 {% tabs %}

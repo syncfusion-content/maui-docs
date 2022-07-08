@@ -9,7 +9,7 @@ documentation: ug
 
 # .NET MAUI Avatar View (SfAvatarView) Overview
 
-The `SfAvatarView` control for .NET MAUI provides a graphical representation of user image that allows you to customize the view by adding image, background color, icon, text, etc.
+The [.NET MAUI Avatar View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1) control provides a graphical representation of user image that allows you to customize the view by adding image, background color, icon, text, etc.
 
 ![.NET MAUI SfAvatarview overview.](Overview_Images/overview.png)
 
@@ -19,4 +19,4 @@ The `SfAvatarView` control for .NET MAUI provides a graphical representation of 
 * Customizes the height, width, BorderColor, BackgroundColor, and CornerRadius of the view.
 * `GroupView`: Supports to add maximum three custom images or initials in a single view.
 * Supports different types of visual styles. 
-* Supports `BadgeView`
+* Supports [BadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html).
