@@ -56,7 +56,7 @@ namespace AvatarViewSample
 
 ## Adding a namespace
 
-Add the following namespace to add .NET MAUI Avatar View.
+Add the following namespace to add .NET MAUI [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1).
 
 {% tabs %}
 
@@ -76,7 +76,7 @@ Add the following namespace to add .NET MAUI Avatar View.
 
 ### Adding the SfAvatarView control as the content of ContentPage
 
-You can add a custom image for displaying in `SfAvatarView` using the `ImageSource` property.
+You can add a custom image for displaying in [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1) using the [ImageSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_ImageSource) property.
 
 {% tabs %}
 {% highlight xaml %}
