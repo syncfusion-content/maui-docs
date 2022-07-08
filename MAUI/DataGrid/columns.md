@@ -76,7 +76,7 @@ The `SfDataGrid.AutoGenerateColumnsMode` includes the following modes,
 <tr>
 <td> <code>SmartReset</code> </td>
 <td> Retains the columns defined explicitly at the application level and the columns with <code>MappingName</code> identical to the properties in the new data source. Newly creates columns for all the other properties in the data source.
-Similarly, it retains the sorting of the columns that are defined explicitly at the application level and the columns with <code>MappingName/<code> identical to the properties in the new data source. </td>
+Similarly, it retains the sorting of the columns that are defined explicitly at the application level and the columns with <code>MappingName</code> identical to the properties in the new data source. </td>
 </tr>
 </table>
 

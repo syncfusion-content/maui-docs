@@ -95,7 +95,12 @@ During data manipulation operations and property changes, the `SfDataGrid` suppo
 
 {% tabs %}
 {% highlight c# %}
-this.sfDataGrid.View.LiveDataUpdateMode = LiveDataUpdateMode.Default;
+this.sfDataGrid.Loaded += SfDataGrid_Loaded;
+
+private void SfDataGrid_Loaded(object sender, EventArgs e)
+{
+    this.sfDataGrid.View.LiveDataUpdateMode = LiveDataUpdateMode.Default;
+}
 {% endhighlight %}
 {% endtabs %}
 
