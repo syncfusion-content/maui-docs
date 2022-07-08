@@ -10,7 +10,7 @@ documentation: ug
 
 ## Make Busy Animation Idle in SfBusyIndicator
 
-SfBusyIndicator control provides support to determine whether an animation needs to be executed or not. Setting the `IsRunning` property to false will stop the animation and removes the control from view.
+[SfBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html) control provides support to determine whether an animation needs to be executed or not. Setting the [IsRunning](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_IsRunning) property to false will stop the animation and removes the control from view.
 
 {% tabs %}
 
