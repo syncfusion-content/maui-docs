@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrating from Xamarin SfAvatarView to .NET MAUI SfAvatarView 
 
-To migrate easier from Xamarin SfAvatarView to .NET MAUI SfAvatarView, we kept most of the APIs from Xamarin SfAvatarView in MAUI SfAvatarView. However, to maintain the consistency of API naming in MAUI SfAvatarView, we renamed some of the APIs. The APIs that have been changed in MAUI SfAvatarView from Xamarin SfAvatarView are detailed as follows.
+To migrate easier from Xamarin [SfAvatarView](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.AvatarView.html) to .NET MAUI SfAvatarView, we kept most of the APIs from Xamarin SfAvatarView in MAUI [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html). However, to maintain the consistency of API naming in MAUI [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html), we renamed some of the APIs. The APIs that have been changed in MAUI SfAvatarView from Xamarin SfAvatarView are detailed as follows.
 
 ## Namespaces 
 

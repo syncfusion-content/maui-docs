@@ -2,13 +2,13 @@
 layout: post
 title: Installation and Deployment process for Syncfusion .NET MAUI products
 description: Describes about system requirements to install the Syncfusion .NET MAUI Components and list of supported platforms. 
-platform: .NET MAUI
+platform: maui
 control: Installation and Deployment
 documentation: ug
 
 ---
 
-# System Requirements for .NET MAUI.Forms
+# System Requirements for .NET MAUI
 
 The system requirements for using our Syncfusion .NET MAUI platform are as follows
 
