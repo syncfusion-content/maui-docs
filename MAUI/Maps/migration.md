@@ -1375,4 +1375,4 @@ The below code example explains how to customize tooltip in Xamarin SfMaps and .
 
 ## Support and feedback
 
-If you are unable to find the migration information you require in the self-help resources listed above, please contact us by creating a [support ticket](https://support.syncfusion.com). Do not see what you need? Please request it in our [feedback portal](https://www.syncfusion.com/feedback/maui).
+If you are unable to find the migration information you require in the self-help resources listed above, please contact us by creating a [support ticket](https://www.syncfusion.com/support/directtrac/incidents). Do not see what you need? Please request it in our [feedback portal](https://www.syncfusion.com/feedback/maui).
