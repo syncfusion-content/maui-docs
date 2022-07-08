@@ -102,7 +102,7 @@ SfMaps map = new SfMaps();
 </tr>
 </table>
 
-## Intialize Layer
+## Adding layer
 
 <table>
 <tr>
@@ -345,7 +345,7 @@ The following code example, explains how to intialize layer and customize layer 
 </td></tr>
 </table>
 
-## Bubble Settings
+## Bubble settings
 
 <table>
 <tr>
@@ -533,7 +533,7 @@ public MainPage()
 </td></tr>
 </table>
 
-## Data Label Settings
+## Data label settings
 
 <table>
 <tr>
@@ -677,7 +677,7 @@ public MainPage()
 </td></tr>
 </table>
 
-## Color Mappings
+## Color mappings
 
 <table>
 <tr>
@@ -718,7 +718,7 @@ public MainPage()
 </tr>
 </table>
 
-### Equal Color Mapping
+### Equal color mapping
 
 <table>
 <tr>
@@ -735,7 +735,7 @@ public MainPage()
 </tr>
 </table>
 
-### Range Color Mapping
+### Range color mapping
 
 <table>
 <tr>
@@ -1371,7 +1371,8 @@ The below code example explains how to customize tooltip in Xamarin SfMaps and .
 * Label support have not been provided in the marker.Instead, you can achieve it using the [MarkerTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_MarkerTemplate).
 * In .Net MAUI, IntersectionAction support not provided for data labels.
 * [ShowLegend](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.MapLegendSetting.html#Syncfusion_SfMaps_XForms_MapLegendSetting_ShowLegend) support is not provided in the .Net MAUI. Instead, set value for the [Legend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_Legend) to display map legend in the .Net MAUI platform.
+* In Xamarin, [Layers](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.SfMaps.html#Syncfusion_SfMaps_XForms_SfMaps_Layers) are maintained as observable collection.But, In .NET MAUI, support single [Layer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.SfMaps.html#Syncfusion_Maui_Maps_SfMaps_Layer).
 
 ## Support and feedback
 
-If you are unable to find the migration information you require in the self-help resources listed above, please contact us by creating a [support ticket](https://www.syncfusion.com/support/directtrac/incidents). Do not see what you need? Please request it in our [feedback portal](https://www.syncfusion.com/feedback/maui).
+If you are unable to find the migration information you require in the self-help resources listed above, please contact us by creating a [support ticket](https://syncfusion.bolddesk.com). Do not see what you need? Please request it in our [feedback portal](https://www.syncfusion.com/feedback/maui).
