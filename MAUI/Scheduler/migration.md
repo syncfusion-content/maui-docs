@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migrate from Xamarin Syncfusion SfSchedule to .NET MAUI SfScheduler
+title: Migrate from Syncfusion Xamarin SfSchedule to .NET MAUI SfScheduler
 description: Learn here all about Migrating from Syncfusion Xamarin Schedule to Syncfusion .NET MAUI Scheduler control and more.
 platform: MAUI
 control: SfScheduler
