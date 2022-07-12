@@ -21,7 +21,10 @@ The Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget
 
  In the MauiProgram.cs file, register the handler for Syncfusion core.
 
+{% tabs %}
+
 {% highlight C#  hl_lines="6 17" %}   
+
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
 using Microsoft.Maui.Controls.Compatibility;
@@ -54,6 +57,9 @@ namespace AvatarViewSample
 
 {% endhighlight %}
 
+{% endtabs %}
+
+
 ## Adding a namespace
 
 Add the following namespace to add .NET MAUI [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1).
@@ -79,7 +85,9 @@ Add the following namespace to add .NET MAUI [SfAvatarView](https://help.syncfus
 You can add a custom image for displaying in [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1) using the [ImageSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_ImageSource) property.
 
 {% tabs %}
+
 {% highlight xaml %}
+
 <ContentPage.Content>
 <Grid>
     <sfavatar:SfAvatarView ContentType="Custom"
@@ -91,7 +99,9 @@ You can add a custom image for displaying in [SfAvatarView](https://help.syncfus
                            WidthRequest="50" />
 </Grid>
 </ContentPage.Content>
+
 {% endhighlight %}
+
 {% highlight c# %}
 
 using Syncfusion.Maui.Core;
@@ -117,8 +127,6 @@ namespace AvatarViewGettingStarted
             avatarview.WidthRequest = 50;
             avatarview.HeightRequest = 50;
             avatarview.CornerRadius = 25;
-
-
             mainGrid.Children.Add(avatarview);
             this.Content = mainGrid;
         }
@@ -126,6 +134,7 @@ namespace AvatarViewGettingStarted
 }
  
 {% endhighlight %}
+
 {% endtabs %}
 
 The following screenshot illustrates the result of the above code.
