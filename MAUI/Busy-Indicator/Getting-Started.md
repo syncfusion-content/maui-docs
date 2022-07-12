@@ -9,13 +9,13 @@ documentation: ug
 
 # Getting Started with .NET MAUI Busy Indicator (SfBusyIndicator)
 
-## Getting started with .NET MAUI Busy Indicator(SfBusyIndicator)
+## Getting started with .NET MAUI Busy Indicator
 
-This section explains the steps to configure a [SfBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) control in a real-time scenario and provides a walk-through on some of the customization features available in [SfBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) control.
+This section explains the steps to configure the [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) control in a real-time scenario and provides a walk-through on some of the customization features available in the control.
 
-## Adding a SfBusyIndicator reference
+## Adding a .NET MAUI Busy Indicator reference
 
-Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add [SfBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and then install it.
+Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and then install it.
 
 ## Handler registration 
 
@@ -51,11 +51,11 @@ namespace BusyIndicatorSample
 
 {% endhighlight %} 
 
-## Create a Simple SfBusyIndicator
+## Create a Simple .NET MAUI Busy Indicator
 
-The [SfBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) control is configured entirely in C# code or by using XAML markup. The following steps explain how to create a [SfBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) and configure its elements.
+The [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) control is configured entirely in C# code or by using XAML markup. The following steps explain how to create a [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) (SfBusyIndicator) and configure its elements.
 
-### Adding a SfBusyIndicator control
+### Adding the .NET MAUI Busy Indicator control
 
 Step 1: Add the NuGet to the project as discussed in the above reference section. 
 
@@ -101,11 +101,11 @@ Content = busyIndicator;
 
 {% endtabs %}
 
-## Setting Animation Type
+## Setting Animation Type in .NET MAUI Busy Indicator
 
-[SfBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) provides some predefined animation types like Cupertino, LinearMaterial, and CircularMaterial. Users can select any one of the animation types using the [AnimationType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_AnimationType) property.
+[.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) provides some predefined animation types like Cupertino, LinearMaterial, and CircularMaterial. Users can select any one of the animation types using the [AnimationType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_AnimationType) property.
 
-The following example depicts the CircularMaterial type animation for SfBusyIndicator.
+The following example depicts the CircularMaterial type animation of .NET  MAUI Busy Indicator.
 
 {% tabs %}
 
@@ -157,5 +157,5 @@ The following gif image illustrates the result of the above code.
 
 ![Getting Started](Images/GettingStarted/CircularMaterial.gif)
 
-You can find the complete getting started sample from this [link.](https://github.com/SyncfusionExamples/maui-busyindicator-samples)
+You can find the complete getting started sample of .NET MAUI Busy Indicator from this [link.](https://github.com/SyncfusionExamples/maui-busyindicator-samples)
 
