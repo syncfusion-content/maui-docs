@@ -12,7 +12,7 @@ documentation: ug
 The .NET MAUI Scheduler control allows you to group appointments based on the resources associated with them in the timeline day, timeline week, timeline workweek, and timeline month views, with complete business object binding, multi resource appointment sharing and UI customization features.
 
 ## Create resources to Scheduler by using SchedulerResource
-You can create a resource view by setting the [Name](), [Id](), [Background](), and [Foreground] properties of the built-in [SchedulerResource]() class and assign `SchedulerResource` collection to the scheduler by using the [Resources]() property of the `ResourceView` class.
+You can create a resource view by setting the [Name](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Name), [Id](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Id), [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Background), and [Foreground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Foreground) and [DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Foreground) properties of the built-in [SchedulerResource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html) class and assign `SchedulerResource` collection to the scheduler by using the [Resources](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_Resources) property of the [SchedulerResourceView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html?tabs=tabid-13%2Ctabid-6) class.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="1" %}
@@ -35,7 +35,7 @@ this.Scheduler.ResourceView.Resources = Resources;
 
 ### Assigning Scheduler resources to appointments
 
-Appointments associated with the `ResourceView` [Resources](), will be displayed by setting the `ResourceView` resource Id in the [ScheduleAppointment]() by using the [ResourceIds]().
+Appointments associated with the `ResourceView` [Resources](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_Resources), will be displayed by setting the `SchedulerResourceView` resource Id in the [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html) by using the [ResourceIds]().
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
@@ -74,7 +74,7 @@ this.Scheduler.AppointmentsSource = appointment;
 
 ### Multiple resource sharing using Scheduler resources
 
-Multiple resources can share the same events or appointments by declaring resources ids in [ResourceIds]() in [ScheduleAppointment]() class. If the appointment details are edited or updated, then the changes will be reflected on all other shared instances simultaneously.
+Multiple resources can share the same events or appointments by declaring resources ids in [ResourceIds]() in [ScheduleAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html) class. If the appointment details are edited or updated, then the changes will be reflected on all other shared instances simultaneously.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
@@ -102,14 +102,14 @@ this.Scheduler.AppointmentsSource = appointment;
 
 ## Business object binding for resources
 
-The Schedule supports full data binding to [Resources]() in the `ResourceView` class. Specify the [Mapping]() property of the `ResourceView` class to map the custom properties to the schedule resource.
+The Schedule supports full data binding to [Resources](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_Resources) in the `SchedulerResourceView` class. Specify the [SchedulerResourceMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceMapping.html#properties) property of the `SchedulerResourceView` class to map the custom properties to the schedule resource.
 
 | Property Name | Description |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| Name | Maps the property name of custom class, which is equivalent to Name in ScheduleResource. |
-| Id | Maps the property name of custom class, which is equivalent to Id in ScheduleResource. |
-| Background | Maps the property name of custom class, which is equivalent to Background in ScheduleResource. |
-| Foreground | Maps the property name of custom class, which is equivalent to Foreground in ScheduleResource. |
+| Name | Maps the property name of custom class, which is equivalent to Name in SchedulerResource. |
+| Id | Maps the property name of custom class, which is equivalent to Id in SchedulerResource. |
+| Background | Maps the property name of custom class, which is equivalent to Background in SchedulerResource. |
+| Foreground | Maps the property name of custom class, which is equivalent to Foreground in SchedulerResource. |
 
 N> Custom resource class should contain a mandatory field for resource `Id`.
 
@@ -163,7 +163,7 @@ this.Scheduler.ResourceView.Mapping = resourceMapping;
 
 ### Assign resource business objects to scheduler
 
-Add the resources of `Employee` collection that can be assigned  to the [Resources]() in the `ResourceView` class which is of `IEnumerable` type. Also add or remove scheduler resources dynamically.
+Add the resources of `Employee` collection that can be assigned  to the [Resources](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_Resources) in the `SchedulerResourceView` class which is of `IEnumerable` type. Also add or remove scheduler resources dynamically.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2 3 4" %}
@@ -189,7 +189,7 @@ this.Scheduler.ResourceView.Resources = Resources;
 
 ### Assign the resource objects to appointment business object
 
-Associate the `ResourceView` [Mapping]() to the custom appointment by mapping resource [Id]() in the [ResourceIds]() property of [AppointmentMapping](). 
+Associate the `ResourceView` [SchedulerResourceMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceMapping.html#properties) to the custom appointment by mapping resource [Id]() in the [ResourceIds]() property of [SchedulerAppointmentMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html). 
 
 {% tabs %}
 {% highlight c# tabtitle="Meeting.cs" %}
@@ -207,7 +207,7 @@ public class Meeting
 {% endtabs %}
 
 
-Map those properties of the `Meeting` class to schedule appointments by using the `AppointmentMapping` properties.
+Map those properties of the `Meeting` class to schedule appointments by using the `SchedulerAppointmentMapping` properties.
 
 {%tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="4 5 6 7 8 9 10 11 12 13 14" %}
@@ -255,7 +255,7 @@ this.Schedule.ItemsSource = Meetings;
 {% endtabs %}
 
 ## Resource minimum row height
-You can customize resource minimum row height of visible resources in timeline day, timeline week, timeline workweek and timeline month views by using the [MinimumRowHeight]() property of [SchedulerResourceView]() in [SfScheduler.]() By default, resource row height will be auto-expanded from minimum height based on the appointment counts.
+You can customize resource minimum row height of visible resources in timeline day, timeline week, timeline workweek and timeline month views by using the [MinimumRowHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_MinimumRowHeight) property of [SchedulerResourceView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html) in [SfScheduler.](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) By default, resource row height will be auto-expanded from minimum height based on the appointment counts.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 4 5" %}
@@ -304,10 +304,10 @@ You can programmatically select the resource by using the [SelectedResourceId]()
 The resource appearance customization can be achieved by using the [ResourceHeaderTemplate]() and [TextStyle]() properties of the [SchedulerResourceView]().
 
 #### Customize resource appearance using text style
-The resource header text style can be customized by using the [TextStyle]() property of the [SchedulerResourceView]().
+The resource header text style can be customized by using the [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_TextStyle) property of the [SchedulerResourceView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html).
 	
 #### Customize resource appearance using ResourceHeaderTemplate
-The resource appearance customization can be achieved by using the [ResourceHeaderTemplate]() property of the [SchedulerResourceView]().
+The resource appearance customization can be achieved by using the [HeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_HeaderTemplate) property of the [SchedulerResourceView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html).
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="15 36" %}
