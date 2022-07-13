@@ -322,7 +322,7 @@ public partial class MainPage : ContentPage
         e.Cancel = true;
     }
 }
-{% enhighlight %}
+{% endhighlight %}
 {% endtabs %}
 
 To get the selected item in a code-behind using the `SelectionChanged` event, follow this code example:
