@@ -362,6 +362,8 @@ Underlying records will be the BindingContext for the `CellTemplate`. The follow
         </DataTemplate>
     </syncfusion:DataGridTemplateColumn.CellTemplate>
 </syncfusion:DataGridTemplateColumn>
+{% endhighlight %}
+{% endtabs %}
 
 ### Load view through template selector
 
