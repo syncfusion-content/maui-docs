@@ -11,7 +11,7 @@ documentation: ug
 
 ## Avatar Types
 
-The `SfAvatarView` control allows you to display the view in five different ways:
+The [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1) control allows you to display the view in five different ways:
 
 * `Default` - Displays the default image when initializing without any other source such as image and group.
 
@@ -65,24 +65,24 @@ this.Content = mainGrid;
 
 ## Initials 
 
-When using the SfAvatarType as initials, you need to set the initial character using the following properties:
+When using the [ContentType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_ContentType) as initials, you need to set the initial character using the following properties:
 
-* `InitialsType` - Defines the type of characters to be displayed.
-* `AvatarName`- Gets or sets the value for the initials type, which displays the text in the avatar view.
-* `InitialsColor`- Gets or sets the color of the initial color value that defines color for the initial string.
+* [InitialsType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_InitialsType) - Defines the type of characters to be displayed.
+* [AvatarName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_AvatarName)- Gets or sets the value for the initials type, which displays the text in the avatar view.
+* [InitialsColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_InitialsColor)- Gets or sets the color of the initial color value that defines color for the initial string.
 
 ### InitialsType
 
-The `InitialsType` contains the following two types:
+The [InitialsType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_InitialsType) contains the following two types:
 
 * SingleCharacter
 * DoubleCharacter
 
-You must set the `AvatarName` string property for displaying the initial value in the AvatarView.
+You must set the [AvatarName]((https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_AvatarName)) string property for displaying the initial value in the AvatarView.
 
 #### SingleCharacter
 
-The `SingleCharacter` is used for displaying the first character in the string you have set in the `Initials` property.
+The `SingleCharacter` is used for displaying the first character in the string you have set in the [InitialsType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_InitialsType) property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -125,7 +125,7 @@ this.Content = mainGrid;
 
 ### DoubleCharacter
 
-The `DoubleCharacter` is used for displaying a two-characters text you have set in the `Initials` property. If the initials contain one word, it shows the first and last letters of the single string. If it contains two or more words, it displays the first letter of the first string and first letter of the last string.
+The `DoubleCharacter` is used for displaying a two-characters text you have set in the [InitialsType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_InitialsType) property. If the initials contain one word, it shows the first and last letters of the single string. If it contains two or more words, it displays the first letter of the first string and first letter of the last string.
 
 {% tabs %}
 {% highlight xaml %}
@@ -166,11 +166,11 @@ this.Content = mainGrid;
 
 ## Custom image
 
-You can add a custom user image by setting the `ImageSource` property. Refer to the Getting Started Documentation in SfAvatarView
+You can add a custom user image by setting the [ImageSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_ImageSource) property. Refer to the Getting Started Documentation in [SfAvatarView.](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html)
 
 ## Avatar characters
 
-You can set the default vector images that already present in avatar view by setting the `AvatarCharacter` property.
+You can set the default vector images that already present in avatar view by setting the [AvatarCharacter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_AvatarCharacter) property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -210,7 +210,7 @@ this.Content = mainGrid;
 
 You can add maximum three images or initials in the same view using a GroupView type.
 
-Set the `InitialsMemberPath` for displaying the initials in the group view. For image, set the `ImageSourcePath`. The following code sample demonstrates how to add images using the `GroupView` property.
+Set the [InitialsMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_InitialsMemberPath) for displaying the initials in the group view. For image, set the [ImageSourceMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_ImageSourceMemberPath). The following code sample demonstrates how to add images using the [GroupSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_GroupSource) property.
 
 {% tabs %}
 {% highlight c# %}
@@ -330,7 +330,7 @@ Set the `InitialsMemberPath` for displaying the initials in the group view. For 
 
 ## Add initials only in GroupView
 
-You can set the initials only in the group view by setting the `InitialsMemberPath` alone. It is demonstrated in the following code sample.
+You can set the initials only in the group view by setting the [InitialsMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_InitialsMemberPath) alone. It is demonstrated in the following code sample.
 
 {% tabs %}
 
@@ -388,7 +388,7 @@ public partial class MainPage : ContentPage, INotifyPropertyChanged
 
 ## Add both image and initials in a GroupView
 
-You have to set both the image and initials based on what should be added in the collection. If the image needs to be added, set `ImageSourcePath`, or if initials need to be added, set `InitialsMemberPath`. This is demonstrated in the following code snippet.
+You have to set both the image and initials based on what should be added in the collection. If the image needs to be added, set [ImageSourceMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_ImageSourceMemberPath), or if initials need to be added, set [InitialsMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_InitialsMemberPath). This is demonstrated in the following code snippet.
 
 {% tabs %}
 {% highlight c# %}
