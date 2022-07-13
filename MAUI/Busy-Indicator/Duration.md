@@ -10,7 +10,7 @@ documentation: ug
 
 ## Animation Duration in SfBusyIndicator
 
-The `DurationFactor` property of SfBusyIndicator can be used to set the animation speed based on given value. Setting smaller duration value accelerates animation speed. Its default value is 0.5 and ranges from 0 to 1. 
+The [DurationFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_DurationFactor) property of [SfBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) can be used to set the animation speed based on given value. Setting smaller duration value accelerates animation speed. Its default value is 0.5 and ranges from 0 to 1. 
 
 {% tabs %}
 
