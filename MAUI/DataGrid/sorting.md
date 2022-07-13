@@ -18,7 +18,7 @@ Sort the data programmatically by adding or removing the [SortColumnDescription]
 The `SortColumnDescription` object holds the following two properties:
 
 * **ColumnName**: The name of a column to be sorted.
-* **SortDirection**: An object of type `ListSortDirection` defines the sorting direction.
+* **SortDirection**: An object of type [ListSortDirection](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.listsortdirection?view=net-6.0) defines the sorting direction.
 
 {% tabs %}
 {% highlight xaml %}
@@ -46,10 +46,6 @@ To apply the sort for multiple columns, tap the desired column headers after set
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="sfDataGrid" SortingMode="Multiple" ItemsSource="{Binding OrderInfoCollection}" >
-
-    <syncfusion:SfDataGrid.SortColumnDescriptions>
-        <syncfusion:SortColumnDescription ColumnName="OrderID" SortDirection="Ascending" />
-    </syncfusion:SfDataGrid.SortColumnDescriptions>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% endtabs %}
@@ -58,7 +54,7 @@ To apply the sort for multiple columns, tap the desired column headers after set
 
 ## Tri-state sorting
 
-In addition, to sort the data in ascending or descending order, the SfDataGrid unsort the data in the original order by clicking the header again after sorting to descending order by setting the[SfDataGrid.AllowTriStateSorting](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowTriStateSorting) property to true. When this property is set, sorting in each column iterates through three sort states; ascending, descending, and unsort.
+In addition, to sort the data in ascending or descending order, the SfDataGrid unsort the data in the original order by clicking the header again after sorting to descending order by setting the [SfDataGrid.AllowTriStateSorting](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowTriStateSorting) property to true. When this property is set, sorting in each column iterates through three sort states; ascending, descending, and unsort.
 
 {% tabs %}
 {% highlight xaml %}
@@ -123,11 +119,7 @@ private void sfDataGrid_SortColumnsChanging(object sender, DataGridSortColumnsCh
 {% endhighlight %}
 {% endtabs %}
 
-## Disable sorting for manually defined columns
-
-The `SfDataGrid` disables sorting for an individual column by setting the [DataGridColumn.AllowSorting](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_AllowSorting) property to false. The default value of this property is true.
-
-### Disable sorting for auto generated columns
+## Disable sorting for auto generated columns
 
 During auto-generating columns, disable sorting for an individual column by customizing the `e.Column.AllowSorting` property to false that comes from the `SfDataGrid.AutoGeneratingColumn` event. The event will be invoked when the column is auto-generated.
 
@@ -148,7 +140,9 @@ private void sfDataGrid_AutoGeneratingColumn(object sender, DataGridAutoGenerati
 {% endhighlight %}
 {% endtabs %}
 
-### Disable sorting for manually defined columns
+## Disable sorting for manually defined columns
+
+The `SfDataGrid` disables sorting for an individual column by setting the [DataGridColumn.AllowSorting](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_AllowSorting) property to false. The default value of this property is true.
 
 {% tabs %}
 {% highlight xaml %}
