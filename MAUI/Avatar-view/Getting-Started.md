@@ -11,7 +11,7 @@ documentation: ug
 
 ## Creating an application using the .NET MAUI Avatar View
 
-This section explains the steps required to work with the `SfAvatarView` control for .NET MAUI.
+This section explains the steps required to work with the [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1) control for .NET MAUI.
 
 ## Adding .NET MAUI Avatar View reference
 
@@ -21,43 +21,37 @@ The Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget
 
  In the MauiProgram.cs file, register the handler for Syncfusion core.
 
-{% tabs %}
-
-{% highlight C#  hl_lines="6 17" %}   
-
+{% highlight c# hl_lines="6 17" %}   
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
 using Microsoft.Maui.Controls.Compatibility;
 using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;    
+using Microsoft.Maui.Controls.Xaml;
 using Syncfusion.Maui.Core.Hosting;
 
 namespace AvatarViewSample
 {
-    public static class MauiProgram
-    {
-    public static MauiApp CreateMauiApp()
-    {
-        var builder = MauiApp.CreateBuilder();
-        builder
-        .UseMauiApp<App>()
-        .ConfigureSyncfusionCore()
+  public static class MauiProgram
+  {
+	public static MauiApp CreateMauiApp()
+	{
+		var builder = MauiApp.CreateBuilder();
+		builder
+		.UseMauiApp<App>()
+		.ConfigureSyncfusionCore()
+		.ConfigureFonts(fonts =>
+		{
+			fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+		});
 
-        .ConfigureFonts(fonts =>
-        {
-            fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-        });
-
-        return builder.Build();
-        }
-    
-    }
+		return builder.Build();
+	 }
+   
+  }
 
 }     
 
 {% endhighlight %}
-
-{% endtabs %}
 
 
 ## Adding a namespace
@@ -72,7 +66,7 @@ Add the following namespace to add [.NET MAUI Avatar View](https://help.syncfusi
 	
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# %}
 
     using Syncfusion.Maui.Core;
 
