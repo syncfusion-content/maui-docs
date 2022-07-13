@@ -8,14 +8,10 @@ documentation: ug
 ---
 
 # Conditional Styling in .NET MAUI DataGrid (SfDataGrid)
-The [SfDataGrid] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.html) allows to customize the style of the individual cells and rows based on the requirements. It can be customized in the following ways:
+The [SfDataGrid] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.html) allows to customize the style of the individual cells and rows based on the requirements. 
 
-1. Using column CellStyle
-2. Using Converter
-3. Using DataTriggers
-
-## Conditional Row Style
-The record rows ([DataGridRow] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridRow.html)) can be customized conditionally by changing its property value based on ‘cell value’ or ‘data object’ by using converter, where converter returns the value based on underlying record.
+## Conditional row style
+The data rows can be customized conditionally by writing the style with converter for [DataGridRow] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridRow.html) control. Its BindingContext is underlying datasource object.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
@@ -51,7 +47,7 @@ public class ColorConverter : IValueConverter
 
 ![Conditional DataGridRow styling in .NET MAUI DataGrid](Images/conditional-styling/maui-datagrid-conditional-datagridrowstyle.png)
 
-## How to style a particular row based on RowIndex
+## How to style a particular row based on row index
 Styling can be applied to a particular row based on RowIndex property by writing the style for [DataGridRow] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridRow.html) TargetType.
 
 {% tabs %}
@@ -123,9 +119,9 @@ public class ColorConverter : IValueConverter
 
 ![Conditional DataGridRow styling Based on RowData in .NET MAUI DataGrid](Images/conditional-styling/maui-datagrid-conditional-datagridrowstyle_basedonrowdata.png)
 
-## Conditional Style for Column 
+## Conditional style for particular column
 
-The `SfDataGrid` provides the support for apply the conditional style for a column by using [CellStyle] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_CellStyleProperty) property in [SfDataGrid.Column] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html).
+The `SfDataGrid` provides the support to apply the conditional style for specific column by using [CellStyle] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_CellStyleProperty) property in [DataGridColumn] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html).
 
 % tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
