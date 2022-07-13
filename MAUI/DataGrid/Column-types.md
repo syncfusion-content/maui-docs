@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Column Types in .NET MAUI DataGrid control | Syncfusion
-description: Learn here all about Column Types support in Syncfusion .NET MAUI DataGrid (SfDataGrid) control and more.
+description: Learn all about Column Types support in Syncfusion .NET MAUI DataGrid (SfDataGrid) control and more here.
 platform: MAUI
 control: SfDataGrid
 documentation: UG
@@ -9,9 +9,9 @@ documentation: UG
 
 # Column Types in .NET MAUI DataGrid (SfDataGrid)
 
-The SfDataGrid contains different types of columns. The functionalities of the column can be implied by its name. Based on the requirements any column can be used. 
+The SfDataGrid contains different types of columns. The functionalities of the columns can be implied by their names. Any of the columns can be used depending on the requirements.
 
-The following table describes the types of columns and its usage:
+The following table describes the types of columns and their usage:
 
 <table>
 <tr>
@@ -22,7 +22,7 @@ The following table describes the types of columns and its usage:
 <tr>
 <td>{{'[DataGridTextColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridTextColumn.html)'| markdownify }}</td>
 <td>{{'[DataGridTextBoxRenderer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridTextBoxCellRenderer.html)' | markdownify }}</td>
-<td>To display string or numbers in each row.</td>
+<td>To display a string or numbers in each row.</td>
 </tr>
 <tr>
 <td>{{'[DataGridCheckBoxColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCheckBoxColumn.html)'| markdownify }}</td>
@@ -37,12 +37,12 @@ The following table describes the types of columns and its usage:
 <tr>
 <td>{{'[DataGridTemplateColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridTemplateColumn.html)'| markdownify }}</td>
 <td>{{'[DataGridCellTemplateRenderer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellTemplateRenderer.html)'| markdownify }}</td>
-<td>To customize the column based on the requirements.</td>
+<td>To customize a column based on the requirements.</td>
 </tr>
 <tr>
 <td>{{'[DataGridNumericColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridNumericColumn.html)'| markdownify }}</td>
 <td>{{'[DataGridNumericCellRenderer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridNumericCellRenderer.html)'| markdownify }}</td>
-<td>To display a numeric data.</td>
+<td>To display numeric data.</td>
 </tr>
 <tr>
 <td>{{'[DataGridDateColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDateColumn.html)'| markdownify }}</td>
@@ -53,17 +53,17 @@ The following table describes the types of columns and its usage:
 
 ## DataGridColumn
 
-The [DataGridColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html) is the base column types of all columns. Hence its properties are used by all the columns. The following sub-sections explain the properties and customizations of DataGridColumn.
+The [DataGridColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html) is the base column type of all columns, hence its properties are used by all the columns. The following sub-sections explain the properties and customizations of DataGridColumn:
 
 ### Binding options
 
-Display content of the DataGridColumn is determined from the [DataGridColumn.DisplayBinding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_DisplayBinding) property. It gets or sets display binding that associates the DataGridColumn with a property in the data source. 
+The display content of the DataGridColumn is determined by the [DataGridColumn.DisplayBinding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_DisplayBinding) property. It gets or sets display binding that associates the DataGridColumn with a property in the data source.
 
 #### Mapping column to particular property
 
 The [DataGridColumn.MappingName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_MappingName) associates the DataGridColumn with a property available in the underlying data source. While setting MappingName alone to the SfDataGrid, the `DataGridColumn.DisplayBinding` will be automatically generated based on the MappingName. Data manipulation operations like sorting and filtering will be done based on the MappingName property.
 
-To format cell content, use the converter of the `DataGridColumn.DisplayBinding` to customize the cell content.
+To format cell contents, use the converter of the `DataGridColumn.DisplayBinding` to customize the cell contents.
 
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage.Resources>
@@ -108,7 +108,7 @@ In order to set the TextAlignment of the header cell and data row cell , use the
 
 #### HeaderText
 
-To customize the display content of the header cell, use the [DataGridColumn.HeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_HeaderText) property. It specifies the text displayed in the column header. If header text is not defined, then `DataGridColumn.MappingName` will be assigned to the header text and will be displayed as column header.
+To customize the display content of the header cell, use the [DataGridColumn.HeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_HeaderText) property. It specifies the text displayed in the column header. If the header text is not defined, then `DataGridColumn.MappingName` will be assigned to the header text and will be displayed as a column header.
 
 #### Header template
 
@@ -129,10 +129,10 @@ Based on the requirement, the header cell can be customized using the [DataGridC
 
 ### Setting manual column width
 
-SfDataGrid allows you to customize the width of each DataGridColumn in the [SfDataGrid.Columns](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_Columns) collection. To customize column width, use the [DataGridColumn.Width](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_Width) property. By default, this property will not be assigned any value. The DataGridColumn renders in view based on the value of the [DefaultColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DefaultColumnWidth) property.
+The SfDataGrid allows you to customize the width of each DataGridColumn in the [SfDataGrid.Columns](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_Columns) collection. To customize the column width, use the [DataGridColumn.Width](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_Width) property. By default, this property will not be assigned any value. The DataGridColumn renders in a view based on the value of the [DefaultColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DefaultColumnWidth) property.
 SfDataGrid allows you to customize the width of each DataGridColumn in the [SfDataGrid.Columns](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_Columns) collection. To customize column width, use the [DataGridColumn.Width](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_Width) property. By default, this property will not be assigned any value. The DataGridColumn renders in view based on the value of the `DefaultColumnWidth` property.
 
-N> Set the [Visible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_Visible) property to `True` instead of setting column width as `0` to hide a column.
+N> Set the [Visible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_Visible) property to `True` instead of setting the column width as `0` to hide a column.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -194,7 +194,7 @@ dataGrid.Columns.Add(new DataGridTextColumn() { MappingName = "OrderID", Visible
 
 ### Padding
 
-SfDataGrid allows the users to set padding for the Header and cells in display mode by using the property [DataGridColumn.HeaderPadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_HeaderPadding) and [DataGridColumn.CellPadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_CellPadding). 
+The SfDataGrid allows users to set padding for the Header and cells in display mode by using the property [DataGridColumn.HeaderPadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_HeaderPadding) and [DataGridColumn.CellPadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_CellPadding). 
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}    
@@ -265,11 +265,11 @@ Public class SummaryConverter : IValueConverter
 }
 {% endhighlight%}
 
-N> For AutoGenerated columns formatting can be applied by handling the [SfDataGrid.AutoGeneratingColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AutoGeneratingColumn) event.
+N> For AutoGenerated columns, formatting can be applied by handling the [SfDataGrid.AutoGeneratingColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AutoGeneratingColumn) event.
 
 ## DataGridTextColumn
 
-DataGridTextColumn inherits all the properties of DataGridColumn. It is used to host the textual content in the record cells. Each of the record cell displays text based on the `MappingName` that associates the column with a property in the data source.
+The DataGridTextColumn inherits all the properties of the DataGridColumn. It is used to host the textual content in the record cells. Each of the record cells displays text based on the  `MappingName` that associates the column with a property in the data source.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -285,7 +285,7 @@ dataGrid.Columns.Add( new DataGridTextColumn()
 
 ## DataGridCheckBoxColumn
 
-DataGridCheckBoxColumn inherits all the properties of `DataGridColumn`. It loads a [CheckBox](https://docs.microsoft.com/en-us/dotnet/maui/user-interface/controls/checkbox) as the content of record cells in the column and responds to value changes in it. The underlying data source can be changed that it toggles the values shown in the CheckBox. The SfDataGrid automatically generates DataGridCheckBoxColumn if the property in the underlying collection of type set to bool.
+The `DataGridCheckBoxColumn` inherits all the properties of the `DataGridColumn`. It loads a [CheckBox](https://docs.microsoft.com/en-us/dotnet/maui/user-interface/controls/checkbox) as the content of record cells in the column and responds to value changes in it. The underlying data source can be changed so that it toggles the values shown in the CheckBox. The `SfDataGrid` automatically generates `DataGridCheckBoxColumn` the property in the underlying collection of the type is set to bool.
  
 {% highlight xaml tabtitle="MainPage.xaml"%}
 <ContentPage.BindingContext>
@@ -304,14 +304,14 @@ DataGridCheckBoxColumn inherits all the properties of `DataGridColumn`. It loads
 
 ## DataGridImageColumn
 
-DataGridImageColumn is derived from DataGridColumn. Hence, it inherits all the properties of DataGridColumn. It displays image as cell content of a column. To create DataGridImageColumn, the property corresponding to the column in the underlying collection must be `ImageSource` type.
+The `DataGridImageColumn` is derived from the `DataGridColumn`. Hence, it inherits all the properties of the `DataGridColumn`. It displays an image as the cell content of a column. To create a `DataGridImageColumn`, the property corresponding to the column in the underlying collection must be `ImageSource` type.
 
 It is possible to load images in any of the following four ways:
 
  * **FromFile**: Required to specify the path of the file.
- * **FromResource**: Required to set image as embedded resource.
- * **FromStream**: Required to load image from byte[] array.
- * **FromURI**: Required to set image from a web service or website.
+ * **FromResource**: Required to set an image as an embedded resource.
+ * **FromStream**: Required to load an image from the byte[] array.
+ * **FromURI**: Required to set an image from a web service or website.
  
 {% highlight xaml tabtitle="MainPage.xaml"%}
 <ContentPage.BindingContext>
@@ -329,7 +329,7 @@ It is possible to load images in any of the following four ways:
 
 ### Aspect
 
-SfDataGrid allows you to set the [Aspect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridImageColumn.html#Syncfusion_Maui_DataGrid_DataGridImageColumn_Aspect) to size the loaded images within the bounds of the grid cell (whether to stretch, crop or letterbox) using the `DataGridImageColumn.Aspect` property. The default value is `AspectFit`.
+The SfDataGrid allows you to set the [Aspect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridImageColumn.html#Syncfusion_Maui_DataGrid_DataGridImageColumn_Aspect) to size the loaded images within the bounds of the grid cell (whether to stretch, crop or letterbox) using the `DataGridImageColumn.Aspect` property. The default value is `AspectFit`.
 
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage.BindingContext>
@@ -347,9 +347,9 @@ SfDataGrid allows you to set the [Aspect](https://help.syncfusion.com/cr/maui/Sy
 
 ## DataGridTemplateColumn
 
-The DataGridTemplateColumn is derived from DataGridColumn. Hence, it inherits all the properties of DataGridColumn. It allows you to extend the functionality of DataGridColumn with own view by creating the [CellTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridTemplateColumn.html#Syncfusion_Maui_DataGrid_DataGridTemplateColumn_CellTemplate).
+The `DataGridTemplateColumn` is derived from the `DataGridColumn`, hence, it inherits all the properties of the `DataGridColumn`. It allows you to extend the functionality of the `DataGridColumn` with your own view by creating the [CellTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridTemplateColumn.html#Syncfusion_Maui_DataGrid_DataGridTemplateColumn_CellTemplate).
 
-Underlying records will be the BindingContext for the `CellTemplate`. The following code example shows templating of DataGridTemplateColumn:
+Underlying records will be the BindingContext for the `CellTemplate`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
