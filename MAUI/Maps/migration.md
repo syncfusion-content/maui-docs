@@ -9,11 +9,11 @@ documentation: ug
 
 # Migrate from Xamarin.Forms SfMaps to .NET MAUI SfMaps
 
-To make the migration from the [Xamarin SfMaps](https://www.syncfusion.com/xamarin-ui-controls/xamarin-maps) to [.NET MAUI SfMaps](https://www.syncfusion.com/maui-controls/maui-maps) easier, most of the APIs from the Xamarin SfMaps were kept in the.NET MAUI SfMaps. However, to maintain the consistency of API naming in the.NET MAUI SfMaps, some of the APIs have been renamed. Please find the difference in the following topics.
+To make the migration from the [Xamarin SfMaps](https://www.syncfusion.com/xamarin-ui-controls/xamarin-maps) to [.NET MAUI SfMaps](https://www.syncfusion.com/maui-controls/maui-maps) easier, most of the APIs from the Xamarin SfMaps are kept in the.NET MAUI SfMaps. However, some APIs have been renamed to maintain the consistency of API naming in the .NET MAUI SfMaps. Please find the difference in the following topics.
 
 ## Initialize control
 
-To initialize the control, import the map namespace and initialize SfMaps as shown in the following code sample.
+To initialize the control, import the map namespace and initialize the SfMaps as shown in the following code sample.
 
 <table>
 <tr>
@@ -82,7 +82,6 @@ SfMaps map = new SfMaps();
 <tr>
    <th>Xamarin SfMaps</th>
    <th>.NET MAUI SfMaps</th>
-   <th>Description</th>
 </tr>
 <tr>
    <td>
@@ -263,7 +262,7 @@ SfMaps map = new SfMaps();
 </tr>
 </table>
 
-The following code example, explains how to intialize layer and customize layer in Xamarin SfMaps and .Net MAUI SfMaps.
+The following code example explains how to intialize the layer and customize the layer in Xamarin SfMaps and .Net MAUI SfMaps.
 
 <table>
 <tr>
@@ -419,7 +418,7 @@ The following code example, explains how to intialize layer and customize layer 
 </tr>
 </table>
 
-The following code example, explains how to customize bubble in Xamarin SfMaps and .Net MAUI SfMaps.
+The following code example explains how to customize the bubble in the Xamarin SfMaps and .Net MAUI SfMaps.
 
 <table>
 <tr>
@@ -561,7 +560,7 @@ public MainPage()
 </tr>
 </table>
 
-The following code example, explains how to customize data label in Xamarin SfMaps and .Net MAUI SfMaps.
+The following code example explains how to customize the data label in the Xamarin SfMaps and .Net MAUI SfMaps.
 
 <table>
 <tr>
@@ -760,7 +759,7 @@ public MainPage()
 </tr>
 </table>
 
-The following code example, explains how to customize shape color in Xamarin SfMaps and .Net MAUI SfMaps.
+The following code example explains how to customize the shape color in the Xamarin SfMaps and .Net MAUI SfMaps.
 
 <table>
 <tr>
@@ -961,7 +960,7 @@ public MainPage()
 </tr>
 </table>
 
-The following code example, explains how to customize marker in Xamarin SfMaps and .Net MAUI SfMaps.
+The following code example explains how to customize marker in the Xamarin SfMaps and .Net MAUI SfMaps.
 
 <table>
 <tr>
@@ -1105,7 +1104,7 @@ public MainPage()
 </tr>
 </table>
 
-The following code example, explains how to customize legend in Xamarin SfMaps and .Net MAUI SfMaps.
+The following code example explains how to customize legend in the Xamarin SfMaps and .Net MAUI SfMaps.
 
 <table>
 <tr>
@@ -1262,7 +1261,7 @@ public MainPage()
 </tr>
 </table>
 
-The below code example explains how to customize tooltip in Xamarin SfMaps and .Net MAUI SfMaps.
+The following code example explains how to customize tooltip in the Xamarin SfMaps and .Net MAUI SfMaps.
 
 <table>
 <tr>
@@ -1368,11 +1367,11 @@ The below code example explains how to customize tooltip in Xamarin SfMaps and .
 
 ## Unsupported features from Xamarin.Forms
 
-* Label support have not been provided in the marker.Instead, you can achieve it using the [MarkerTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_MarkerTemplate).
-* In .Net MAUI, IntersectionAction support not provided for data labels.
-* [ShowLegend](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.MapLegendSetting.html#Syncfusion_SfMaps_XForms_MapLegendSetting_ShowLegend) support is not provided in the .Net MAUI. Instead, set value for the [Legend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_Legend) to display map legend in the .Net MAUI platform.
-* In Xamarin, [Layers](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.SfMaps.html#Syncfusion_SfMaps_XForms_SfMaps_Layers) are maintained as observable collection.But, In .NET MAUI, support single [Layer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.SfMaps.html#Syncfusion_Maui_Maps_SfMaps_Layer).
+* Label support has not been provided in the marker. Instead, you can achieve it using the [MarkerTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_MarkerTemplate).
+* In .Net MAUI, IntersectionAction support is not provided for data labels.
+* The [ShowLegend](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.MapLegendSetting.html#Syncfusion_SfMaps_XForms_MapLegendSetting_ShowLegend) support is not provided in the .Net MAUI. Instead, set the value for the [Legend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_Legend) to display map legend in the .Net MAUI platform.
+* In Xamarin, [Layers](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.SfMaps.html#Syncfusion_SfMaps_XForms_SfMaps_Layers) are maintained as observable collection. But .NET MAUI supports a single [Layer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.SfMaps.html#Syncfusion_Maui_Maps_SfMaps_Layer).
 
 ## Support and feedback
 
-If you are unable to find the migration information you require in the self-help resources listed above, please contact us by creating a [support ticket](https://www.syncfusion.com/support/directtrac/incidents). Do not see what you need? Please request it in our [feedback portal](https://www.syncfusion.com/feedback/maui).
+If you cannot find the migration information you require in the self-help resources listed above, please contact us by creating a [support ticket](https://www.syncfusion.com/support/directtrac/incidents). Do not see what you need? Please request it in our [feedback portal](https://www.syncfusion.com/feedback/maui).
