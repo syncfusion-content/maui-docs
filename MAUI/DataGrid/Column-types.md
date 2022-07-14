@@ -445,7 +445,7 @@ You can load the `DatePicker` control in cells using the `DataGridTemplateColumn
 
 ## DataGridDateColumn
 
-The DataGridDateColumn inherits all the properties of the `DataGridColumn`. It displays the date information as the content of a column. To create the `SfDataGrid.DataGridDateColumn`, the property corresponding to the column in the underlying collection must be of type DateTime. 
+The `DataGridDateColumn` inherits all the properties of the `DataGridColumn`.It displays the date information as the content of a column. To create the  `DataGridDateColumn`, the property corresponding to the column in the underlying collection must be of the type DateTime. 
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
@@ -474,7 +474,7 @@ dataGrid.Columns.Add(dateColumn);
 
 ## DataGridNumericColumn
 
-The `DataGridNumericColumn` inherits all the properties of `DataGridColumn`. It is used to display numeric data. To create `DataGridNumericColumn`, the property corresponding to the column in the underlying collection must be a numeric type(int, double, float, etc.).
+The `DataGridNumericColumn` inherits all the properties of the `DataGridColumn`. It is used to display numeric data. To create a  `DataGridNumericColumn`, the property corresponding to the column in the underlying collection must be a numeric type (int, double, float, etc.). 
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
