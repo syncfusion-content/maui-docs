@@ -8,10 +8,10 @@ documentation: ug
 ---
 
 # Conditional Styling in .NET MAUI DataGrid (SfDataGrid)
-The [SfDataGrid] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.html) allows to customize the style of the individual cells and rows based on the requirements. 
+The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.html) allows you to customize the style of the individual cells and rows based on the requirements. 
 
 ## Conditional row style
-The data rows can be customized conditionally by writing the style with converter for [DataGridRow] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridRow.html) control. Its BindingContext is underlying datasource object.
+The data rows can be customized conditionally by writing the style with a converter for the [DataGridRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridRow.html) control. Its BindingContext is the underlying datasource object.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
@@ -48,7 +48,7 @@ public class ColorConverter : IValueConverter
 ![Conditional DataGridRow styling in .NET MAUI DataGrid](Images/conditional-styling/maui-datagrid-conditional-datagridrowstyle.png)
 
 ## How to style a particular row based on row index
-Styling can be applied to a particular row based on RowIndex property by writing the style for [DataGridRow] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridRow.html) TargetType.
+Styling can be applied to a particular row based on RowIndex property by writing the style for the [DataGridRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridRow.html) TargetType.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
@@ -84,7 +84,7 @@ public class ColorConverter : IValueConverter
 ![Conditional DataGridRow styling Based on RowIndex in .NET MAUI DataGrid](Images/conditional-styling/maui-datagrid-conditional-datagridrowstyle_basedonrowindex.png)
 
 ## How to style a particular row based on RowData
-Styling can be applied to a particular row based on RowData property by writing the style for [DataGridRow] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridRow.html) TargetType.
+Styling can be applied to a particular row based on the RowData property by writing the style for the [DataGridRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridRow.html) TargetType.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
@@ -121,7 +121,7 @@ public class ColorConverter : IValueConverter
 
 ## Conditional style for particular column
 
-The `SfDataGrid` provides the support to apply the conditional style for specific column by using [CellStyle] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_CellStyleProperty) property in [DataGridColumn] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html).
+The `SfDataGrid` provides the support to apply the conditional style for specific column by using the [CellStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_CellStyleProperty) property in the [DataGridColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html).
 
 % tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
