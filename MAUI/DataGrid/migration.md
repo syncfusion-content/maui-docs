@@ -35,7 +35,7 @@ To make migration from [Xamarin SfDataGrid](https://www.syncfusion.com/xamarin-u
 <tr>
 <td>{{'[ColumnSizer](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.ColumnSizer.html)'| markdownify }}</td>
 <td>{{'[ColumnWidthMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.ColumnWidthMode.html)'| markdownify }}</td>
-<td>Defines constants that specify how the columns in a [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) are sized.</td></tr>
+<td>Defines constants that specify how the columns in a {{'[SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html)'| markdownify }} are sized.</td></tr>
 <tr>
 <td>{{'[SortTapAction](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SortTapAction.html)'| markdownify }}</td>
 <td>{{'[DataGridSortingGestureType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSortingGestureType.html)'| markdownify }}</td>
@@ -181,14 +181,14 @@ To make migration from [Xamarin SfDataGrid](https://www.syncfusion.com/xamarin-u
 <tr>
 <td>{{'[QueryRowStyle](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_QueryRowStyle)'| markdownify }}</td>
 <td>{{'-'| markdownify }}</td>
-<td>This event is not available in MAUI DataGrid. You can write the custom style for [DataGridRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridRow.html) TargetType.<br>
-By writing the converter, you can achieve the requirement conditionally. Refer this UG documentation for more information.
+<td>This event is not available in MAUI DataGrid. You can write the custom style for {{'[DataGridRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridRow.html)'| markdownify }} TargetType.<br>
+By writing the converter, you can achieve the requirement conditionally. Refer {{'[this](https://help.syncfusion.com/maui/datagrid/conditional-styling)'| markdownify }} UG documentation for more information.
 </td>
 </tr>
 <tr>
 <td>{{'[QueryCellStyle](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_QueryCellStyle)'| markdownify }}</td>
 <td>{{'-'| markdownify }}</td>
-<td>This event is not available in MAUI DataGrid. You can write the custom style for [DataGridCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html) TargetType.<br> By writing the converter, you can achieve the requirement conditionally. Refer this UG documentation for more information.
+<td>This event is not available in MAUI DataGrid. You can write the custom style for {{'[DataGridCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html)'| markdownify }} TargetType.<br> By writing the converter, you can achieve the requirement conditionally. Refer {{'[this](https://help.syncfusion.com/maui/datagrid/conditional-styling)'| markdownify }} UG documentation for more information.
 </td>
 </tr>
 </table>
@@ -204,7 +204,7 @@ By writing the converter, you can achieve the requirement conditionally. Refer t
 <td>{{'[GetRowHeight](https://help.syncfusion.com/xamarin/datagrid/row-height-customization#auto-fit-the-grid-rows-based-on-content)'| markdownify }}</td>
 <td>{{'[GetIntrinsicRowHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridQueryRowHeightEventArgs.html#Syncfusion_Maui_DataGrid_DataGridQueryRowHeightEventArgs_GetIntrinsicRowHeight_System_Int32_System_Boolean_System_Collections_Generic_List_System_String__)'| markdownify }}</td>
 <td>Gets the row height to fit that row based on the content.<br>
-We have passed the optional parameters such as [canIncludeHiddenColumns](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.GridRowSizingOptions.html#Syncfusion_SfDataGrid_XForms_GridRowSizingOptions_CanIncludeHiddenColumns) and [excludedColumns](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.GridRowSizingOptions.html#Syncfusion_SfDataGrid_XForms_GridRowSizingOptions_ExcludeColumns) where as we have not provided the [GridRowSizingOptions](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.GridRowSizingOptions.html) class as parameters.
+We have passed the optional parameters such as {{'[canIncludeHiddenColumns](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.GridRowSizingOptions.html#Syncfusion_SfDataGrid_XForms_GridRowSizingOptions_CanIncludeHiddenColumns)'| markdownify }} and {{'[excludedColumns](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.GridRowSizingOptions.html#Syncfusion_SfDataGrid_XForms_GridRowSizingOptions_ExcludeColumns)'| markdownify }} where as we have not provided the {{'[GridRowSizingOptions](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.GridRowSizingOptions.html)'| markdownify }} class as parameters.
 </td>
 </tr>
 </table>
@@ -219,7 +219,7 @@ We have passed the optional parameters such as [canIncludeHiddenColumns](https:/
 <tr>
 <td>{{'[GridColumn](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.GridColumn.html)'| markdownify }}</td>
 <td>{{'[DataGridColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html)'| markdownify }}</td>
-<td>Represents the base class for the different column types of the [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) control.</td>
+<td>Represents the base class for the different column types of the {{'[SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html)'| markdownify }} control.</td>
 </tr>
 <tr>
 <td>{{'[GridNumericColumn](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.GridNumericColumn.html)'| markdownify }}</td>
@@ -244,29 +244,29 @@ We have passed the optional parameters such as [canIncludeHiddenColumns](https:/
 <tr>
 <td>{{'[GridTextColumn](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.GridTextColumn.html)'| markdownify }}</td>
 <td>{{'[DataGridTextColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridTextColumn.html)'| markdownify }}</td>
-<td>Represents a [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) column that hosts textual Content in its cells.</td>
+<td>Represents a {{'[SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html)'| markdownify }} column that hosts textual Content in its cells.</td>
 </tr>
 <tr>
 <td>{{'[GridCell](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.GridCell.html)'| markdownify }}</td>
 <td>{{'[DataGridCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html)'| markdownify }}</td>
-<td>Represents a record cell in a [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) control.</td>
+<td>Represents a record cell in a {{'[SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html)'| markdownify }} control.</td>
 </tr>
 <tr>
 <td>{{'[VirtualizingCellsControl](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.VirtualizingCellsControl.html)'| markdownify }}</td>
 <td>{{'[DataGridRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridRow.html)'| markdownify }}</td>
-<td>Represents a record row in a [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) control.</td>
+<td>Represents a record row in a {{'[SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html)'| markdownify }} control.</td>
 </tr>
 
 <tr>
 <td>{{'[GridHeaderCellControl](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.GridHeaderCellControl.html)'| markdownify }}</td>
 <td>{{'[DataGridHeaderCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridHeaderCell.html)'| markdownify }}</td>
-<td>Represents a header cell in a [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) control</td>
+<td>Represents a header cell in a {{'[SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html)'| markdownify }} control</td>
 </tr>
 
 <tr>
 <td>{{'[GridColumnSizer](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.GridColumnSizer.html)'| markdownify }}</td>
 <td>{{'[DataGridColumnSizer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumnSizer.html)'| markdownify }}</td>
-<td>Represents a class that handles the sizing for all the [columns](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_Columns) in the Columns collection in a [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) control.</td>
+<td>Represents a class that handles the sizing for all the {{'[columns](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_Columns)'| markdownify }} in the Columns collection in a {{'[SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html)'| markdownify }} control.</td>
 </tr>
 </table>
 
