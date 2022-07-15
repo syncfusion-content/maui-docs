@@ -182,13 +182,13 @@ To make migration from [Xamarin SfDataGrid](https://www.syncfusion.com/xamarin-u
 <td>{{'[QueryRowStyle](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_QueryRowStyle)'| markdownify }}</td>
 <td>{{'-'| markdownify }}</td>
 <td>This event is not available in MAUI DataGrid. You can write the custom style for {{'[DataGridRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridRow.html)'| markdownify }} TargetType.<br>
-By writing the converter, you can achieve the requirement conditionally. Refer {{'[this](https://help.syncfusion.com/maui/datagrid/conditional-styling)'| markdownify }} UG documentation for more information.
+By writing the converter, you can achieve the requirement conditionally. Refer `Conditional Styling` UG documentation for more information.
 </td>
 </tr>
 <tr>
 <td>{{'[QueryCellStyle](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_QueryCellStyle)'| markdownify }}</td>
 <td>{{'-'| markdownify }}</td>
-<td>This event is not available in MAUI DataGrid. You can write the custom style for {{'[DataGridCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html)'| markdownify }} TargetType.<br> By writing the converter, you can achieve the requirement conditionally. Refer {{'[this](https://help.syncfusion.com/maui/datagrid/conditional-styling)'| markdownify }} UG documentation for more information.
+<td>This event is not available in MAUI DataGrid. You can write the custom style for {{'[DataGridCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html)'| markdownify }} TargetType.<br> By writing the converter, you can achieve the requirement conditionally. Refer `Conditional Styling` UG documentation for more information.
 </td>
 </tr>
 </table>
