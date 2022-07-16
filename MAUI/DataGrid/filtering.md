@@ -15,14 +15,14 @@ Filtering is the process of retrieving the values from the collection which sati
 
 The `SfDataGrid` supports filtering the records in the view by setting the [SfDataGrid.View.Filter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ICollectionViewAdv.html#Syncfusion_Maui_Data_ICollectionViewAdv_Filter) property where `Filter` is a predicate.
 
->N Note: In order to refresh filtering for the newly added row or column, set the [SfDataGrid.View.LiveDataUpdateMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ICollectionViewAdv.html#Syncfusion_Maui_Data_ICollectionViewAdv_LiveDataUpdateMode) to [LiveDataUpdateMode.AllowDataShaping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.LiveDataUpdateMode.html#Syncfusion_Maui_Data_LiveDataUpdateMode_AllowDataShaping).
+N> In order to refresh filtering for the newly added row or column, set the [SfDataGrid.View.LiveDataUpdateMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ICollectionViewAdv.html#Syncfusion_Maui_Data_ICollectionViewAdv_LiveDataUpdateMode) to [LiveDataUpdateMode.AllowDataShaping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.LiveDataUpdateMode.html#Syncfusion_Maui_Data_LiveDataUpdateMode_AllowDataShaping).
 
 {% tabs %}
 {% highlight c# %}
 private void Button_Clicked(object sender, EventArgs e)
 {
 	this.sfDataGrid.View.Filter = FilterRecords;
-    this.sfDataGrid.View.RefreshFilter();
+	this.sfDataGrid.View.RefreshFilter();
 }
 
 public bool FilterRecords(object record)
@@ -38,8 +38,8 @@ public bool FilterRecords(object record)
 {% endhighlight %}
 {% endtabs %}
 
->N Note: View filtering is not supported when [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ItemsSource) is [DataTable](https://docs.microsoft.com/en-us/dotnet/api/system.data.datatable?view=net-6.0).
-
+N> View filtering is not supported when [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ItemsSource) is [DataTable](https://docs.microsoft.com/en-us/dotnet/api/system.data.datatable?view=net-6.0).
+ 
 ## Filter based on conditions
 
 In addition, the records can be filtered based on the conditions. For example, the records can be filtered based on the given input or contrast to the input. The condition-based filtering can also be achieved for all or any particular column.
@@ -178,7 +178,7 @@ Clear the applied filtering by setting the `SfDataGrid.View.Filter` property to 
 private void Button_Clicked(object sender, EventArgs e)
 {
 	this.sfDataGrid.View.Filter = null;
-    this.sfDataGrid.View.RefreshFilter();
+	this.sfDataGrid.View.RefreshFilter();
 }
 {% endhighlight %}
 {% endtabs %}
