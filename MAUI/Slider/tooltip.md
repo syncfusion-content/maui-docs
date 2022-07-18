@@ -66,7 +66,7 @@ slider.Tooltip.ShowAlways = true;
 
 ![Slider show always tooltip](images/tooltip/show-always-tooltip.gif)
 
-N> Refer [here](https://help.syncfusion.com/maui/slider/events-and-commands#tooltip-text-format) to customize tooltip text format through Slider events.
+N> Refer [here](https://help.syncfusion.com/maui/slider/events-and-commands#tooltip-text-format) to customize tooltip text through the [`SliderTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html) events.
 
 ## Tooltip label style
 
