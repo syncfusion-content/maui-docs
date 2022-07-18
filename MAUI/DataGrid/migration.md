@@ -53,10 +53,10 @@ To make migration from [Xamarin SfDataGrid](https://www.syncfusion.com/xamarin-u
 <tr>
 <td>{{'[AutoGenerateColumns](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_AutoGenerateColumns)'| markdownify }}</td>
 <td>{{'[AutoGenerateColumnsMode.None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.ColumnWidthMode.html)'| markdownify }}</td>
-<td>Defines constants that specify how the columns in a [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) are sized.</td></tr>
+<td>Defines constants that specify how the columns in a {{'[SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html)'| markdownify }} are sized.</td></tr>
 <tr>
 <td>{{'[AllowSorting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_AllowSorting)'| markdownify }}</td>
-<td>{{'[SortingMode.Single](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSortingMode.html#Syncfusion_Maui_DataGrid_DataGridSortingMode_Single))'| markdownify }}</td>
+<td>{{'[SortingMode.Single](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSortingMode.html#Syncfusion_Maui_DataGrid_DataGridSortingMode_Single)'| markdownify }}</td>
 <td>Specifies that the single column alone can be sorted at a time.</td>
 </tr>
 <tr>
@@ -95,7 +95,7 @@ To make migration from [Xamarin SfDataGrid](https://www.syncfusion.com/xamarin-u
 <td>Gets or sets the background for the header row.</td>
 </tr>
 <tr>
-<td>{{'[RowBackgroundColo](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.DataGridStyle.html#Syncfusion_SfDataGrid_XForms_DataGridStyle_RowBackgroundColor)'| markdownify }}</td>
+<td>{{'[RowBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.DataGridStyle.html#Syncfusion_SfDataGrid_XForms_DataGridStyle_RowBackgroundColor)'| markdownify }}</td>
 <td>{{'[RowBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_RowBackground)'| markdownify }}</td>
 <td>Gets or sets the background of the data rows.</td>
 </tr>
@@ -170,7 +170,7 @@ To make migration from [Xamarin SfDataGrid](https://www.syncfusion.com/xamarin-u
 </tr>
 <tr>
 <td>{{'[GridDoubleTapped](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_GridDoubleTapped)'| markdownify }}</td>
-<td>{{'[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellDoubleTapped]()'| markdownify }}</td>
+<td>{{'[CellDoubleTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellDoubleTapped)'| markdownify }}</td>
 <td>Occurs when the cell is tapped twice.</td>
 </tr>
 <tr>
@@ -180,15 +180,15 @@ To make migration from [Xamarin SfDataGrid](https://www.syncfusion.com/xamarin-u
 </tr>
 <tr>
 <td>{{'[QueryRowStyle](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_QueryRowStyle)'| markdownify }}</td>
-<td>{{'-'| markdownify }}</td>
+<td>-</td>
 <td>This event is not available in MAUI DataGrid. You can write the custom style for {{'[DataGridRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridRow.html)'| markdownify }} TargetType.<br>
-By writing the converter, you can achieve the requirement conditionally. Refer `Conditional Styling` UG documentation for more information.
+By writing the converter, you can achieve the requirement conditionally. Refer {{'[Conditional Styling](https://help.syncfusion.com/maui/datagrid/conditional-styling)'| markdownify }} UG documentation for more information.
 </td>
 </tr>
 <tr>
 <td>{{'[QueryCellStyle](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_QueryCellStyle)'| markdownify }}</td>
-<td>{{'-'| markdownify }}</td>
-<td>This event is not available in MAUI DataGrid. You can write the custom style for {{'[DataGridCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html)'| markdownify }} TargetType.<br> By writing the converter, you can achieve the requirement conditionally. Refer `Conditional Styling` UG documentation for more information.
+<td>-</td>
+<td>This event is not available in MAUI DataGrid. You can write the custom style for {{'[DataGridCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html)'| markdownify }} TargetType.<br> By writing the converter, you can achieve the requirement conditionally. Refer {{'[Conditional Styling](https://help.syncfusion.com/maui/datagrid/conditional-styling)'| markdownify }} UG documentation for more information.
 </td>
 </tr>
 </table>
