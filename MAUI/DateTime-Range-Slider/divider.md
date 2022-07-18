@@ -225,7 +225,7 @@ Change the state of the DateTime Range Slider to disabled by setting `false` to 
                         <VisualState.Setters>
                             <Setter Property="DividerStyle">
                                 <Setter.Value>
-                                    <sliders:SliderDividerStyle ActiveFill = "gray"
+                                    <sliders:SliderDividerStyle ActiveFill = "Gray"
                                                                     InactiveFill="LightGray"
                                                                     ActiveRadius="5"
                                                                     InactiveRadius="4"/>

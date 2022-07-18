@@ -215,7 +215,7 @@ Change the state of the slider to disabled by setting `false` to the `IsEnabled`
                         <VisualState.Setters>
                             <Setter Property="DividerStyle">
                                 <Setter.Value>
-                                    <sliders:SliderDividerStyle ActiveFill = "gray"
+                                    <sliders:SliderDividerStyle ActiveFill = "Gray"
                                                                     InactiveFill="LightGray"
                                                                     ActiveRadius="5"
                                                                     InactiveRadius="4"/>
