@@ -190,7 +190,7 @@ private void OnTooltipLabelCreated(object sender, SliderTooltipLabelCreatedEvent
 
 ### Drag started command
 
-The `DragStartedCommand` will be executed when the user started moving the thumb.
+The [`DragStartedCommand`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DragStartedCommand) will be executed when the user started moving the thumb.
 
 {% tabs %}
 
@@ -239,7 +239,7 @@ public class ViewModel
 
 ### Drag started command parameter
 
-The `DragStartedCommandParameter` will be executed when the user started moving the thumb.
+The [`DragStartedCommandParameter`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DragStartedCommandParameter) will be executed when the user started moving the thumb.
 
 {% tabs %}
 
@@ -290,7 +290,7 @@ public class ViewModel
 
 ### Drag completed command
 
-The `DragCompletedCommand` will be executed when the user completed moving the thumb.
+The [`DragCompletedCommand`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DragCompletedCommand) will be executed when the user completed moving the thumb.
 
 {% tabs %}
 
@@ -339,7 +339,7 @@ public class ViewModel
 
 ### Drag completed command parameter
 
-The `DragCompletedCommandParameter` will be executed when the user completed moving the thumb.
+The [`DragCompletedCommandParameter`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DragCompletedCommandParameter) will be executed when the user completed moving the thumb.
 
 {% tabs %}
 

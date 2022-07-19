@@ -80,7 +80,7 @@ rangeSlider.ShowTicks = true;
 
 ## Show minor ticks
 
-It represents the number of smaller ticks between two major ticks. For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.DateTimeRangeSliderBase.html#Syncfusion_Maui_Sliders_DateTimeRangeSliderBase_Minimum) is `DateTime(2010, 01, 01)`, [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.DateTimeRangeSliderBase.html#Syncfusion_Maui_Sliders_DateTimeRangeSliderBase_Maximum) is `DateTime(2018, 01, 01)`, and [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Interval) is 1, the DateTime Range Slider will render the major ticks at 2010, 2011, 2012, and so on. If [`MinorTicksPerInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MinorTicksPerInterval) is 1, smaller ticks will be rendered between 2010 and 2011, so on. The default value of the [`MinorTicksPerInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MinorTicksPerInterval) property is `Zero`.
+It represents the number of smaller ticks between two major ticks. For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.DateTimeRangeSliderBase.html#Syncfusion_Maui_Sliders_DateTimeRangeSliderBase_Minimum) is `DateTime(2010, 01, 01)`, [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.DateTimeRangeSliderBase.html#Syncfusion_Maui_Sliders_DateTimeRangeSliderBase_Maximum) is `DateTime(2018, 01, 01)`, and [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Interval) is 1, the DateTime Range Slider will render the major ticks at 2010, 2011, 2012, and so on. If [`MinorTicksPerInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MinorTicksPerInterval) is 1, smaller ticks will be rendered between 2010 and 2011, so on. The default value of the [`MinorTicksPerInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MinorTicksPerInterval) property is `0`.
 
 ### Without interval
 
@@ -386,16 +386,16 @@ Change the state of the DateTime Range Slider to disabled by setting `false` to 
                                 <Setter.Value>
                                     <sliders:SliderTickStyle ActiveSize="3,10" 
                                                                  InactiveSize="3, 10"
-                                                                 ActiveFill="Grey" 
-                                                                 InactiveFill="LightGrey" />
+                                                                 ActiveFill="Gray" 
+                                                                 InactiveFill="LightGray" />
                                 </Setter.Value>
                             </Setter>
                             <Setter Property="MinorTickStyle">
                                 <Setter.Value>
                                     <sliders:SliderTickStyle ActiveSize ="3,6" 
                                                                  InactiveSize="3, 6"
-                                                                 ActiveFill="Grey" 
-                                                                 InactiveFill="LightGrey" />
+                                                                 ActiveFill="Gray" 
+                                                                 InactiveFill="LightGray" />
                                 </Setter.Value>
                             </Setter>
                         </VisualState.Setters>
@@ -477,8 +477,8 @@ disabledState.Setters.Add(new Setter
     {
         ActiveSize = new Size(3, 10),
         InactiveSize = new Size(3, 10),
-        ActiveFill = Colors.Grey,
-        InactiveFill = Colors.LightGrey,
+        ActiveFill = Colors.Gray,
+        InactiveFill = Colors.LightGray,
     }
 });
 disabledState.Setters.Add(new Setter
@@ -488,8 +488,8 @@ disabledState.Setters.Add(new Setter
     {
         ActiveSize = new Size(3, 6),
         InactiveSize = new Size(3, 6),
-        ActiveFill = Colors.Grey,
-        InactiveFill = Colors.LightGrey,
+        ActiveFill = Colors.Gray,
+        InactiveFill = Colors.LightGray,
     }
 });
 
