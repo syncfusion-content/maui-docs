@@ -72,6 +72,8 @@ this.Scheduler.AppointmentsSource = appointment;
 {% endhighlight %}
 {% endtabs %}
 
+![resource-view-in-maui-scheduler](images/resource-view/resourceview-appointments-in-maui-scheduler.png)
+
 ### Multiple resource sharing using Scheduler resources
 
 Multiple resources can share the same events or appointments by declaring resources ids in [ResourceIds](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_ResourceIds) in [ScheduleAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html) class. If the appointment details are edited or updated, then the changes will be reflected on all other shared instances simultaneously.
@@ -99,6 +101,9 @@ appointment.Add(new SchedulerAppointment()
 this.Scheduler.AppointmentsSource = appointment;
 {% endhighlight %}
 {% endtabs %}
+
+![resource-sharing-in-maui-scheduler](images/resource-view/resource-sharing-in-maui-scheduler.png)
+
 
 ## Business object binding for resources
 
@@ -276,6 +281,8 @@ N>
 * If the viewport height is lesser than 400 then each resource height will be calculated by default viewport size(4 (default resource*100)) divided by the minimum value of scheduler resources count and 4 (default resource count).
 * If the MinimumRowHeight is less than the default row height then the default row height will be used.
 
+![resource-minimum-row-height-maui-scheduler](images/resource-view/resourceview-minimum-height-in-maui-scheduler.png)
+
 ## Assign special time regions to scheduler resources
 You can highlight a resources availability by creating special time regions in the timeline day, timeline week, and timeline workweek views.
 
@@ -285,16 +292,26 @@ You can highlight a resources availability by creating special time regions in t
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="7" %}
-this.Scheduler.DaysView.TimeRegions.Add(new SchedulerTimeRegion
+this.Scheduler.TimelineView.TimeRegions = this.GetTimeRegion();
+
+private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 {
-	StartTime = new DateTime(2022, 06, 04, 13, 0, 0),
-	EndTime = new DateTime(2022, 06, 04, 14, 0, 0),
-	Text = "Lunch",
-	RecurrenceRule = "FREQ=DAILY;INTERVAL=1",
-	ResourceIds = new ObservableCollection<object>() { "1000", "1001", "1002" }
-});
+    var timeRegions = new ObservableCollection<SchedulerTimeRegion>();
+    var timeRegion = new SchedulerTimeRegion()
+    {
+        StartTime = DateTime.Today.Date.AddHours(13),
+        EndTime = DateTime.Today.Date.AddHours(14),
+        Text = "Lunch",
+        EnablePointerInteraction = false,
+        ResourceIds= new ObservableCollection<object>() { "1000", "1001", "1002" }
+    };
+    timeRegions.Add(timeRegion);
+    return timeRegions;
+}
 {% endhighlight %}
 {% endtabs %}
+
+![resource-view-special-timeregion-maui-scheduler](images/resource-view/special-regions-resources-in-maui-scheduler.png)
 
 ## Programmatic resource selection
 You can programmatically select the resource by using the [SelectedResourceId]() and [SelectedDate]() of the SfScheduler. Please [click]() here to see more details about programmatic date selection.
