@@ -225,8 +225,8 @@ Change the state of the DateTime Range Slider to disabled by setting `false` to 
                         <VisualState.Setters>
                             <Setter Property="DividerStyle">
                                 <Setter.Value>
-                                    <sliders:SliderDividerStyle ActiveFill = "grey"
-                                                                    InactiveFill="LightGrey"
+                                    <sliders:SliderDividerStyle ActiveFill = "Gray"
+                                                                    InactiveFill="LightGray"
                                                                     ActiveRadius="5"
                                                                     InactiveRadius="4"/>
                                 </Setter.Value>
@@ -296,8 +296,8 @@ disabledState.Setters.Add(new Setter
     Property = SfDateTimeRangeSlider.DividerStyleProperty,
     Value = new SliderDividerStyle
     {
-        ActiveFill = Colors.Grey,
-        InactiveFill = Colors.LightGrey,
+        ActiveFill = Colors.Gray,
+        InactiveFill = Colors.LightGray,
         ActiveRadius = 5,
         InactiveRadius = 4,
     }
