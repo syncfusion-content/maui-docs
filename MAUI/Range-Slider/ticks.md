@@ -64,7 +64,7 @@ rangeSlider.ShowTicks = true;
 
 ## Show minor ticks
 
-It is used to represent the number of smaller ticks between two major ticks. For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_Minimum) is 0.0, the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_Maximum) is 10.0, and [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Interval) is 2.0, the range slider will render the major ticks at 0.0, 2.0, 4.0 and so on. If the [`MinorTicksPerInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MinorTicksPerInterval) is 1, then smaller ticks will be rendered on 1.0 and 3.0 and so on. The default value of the [`MinorTicksPerInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MinorTicksPerInterval) property is Zero.
+It is used to represent the number of smaller ticks between two major ticks. For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_Minimum) is 0.0, the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_Maximum) is 10.0, and [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Interval) is 2.0, the range slider will render the major ticks at 0.0, 2.0, 4.0 and so on. If the [`MinorTicksPerInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MinorTicksPerInterval) is 1, then smaller ticks will be rendered on 1.0 and 3.0 and so on. The default value of the [`MinorTicksPerInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MinorTicksPerInterval) property is 0.
 
 ### Without interval
 
@@ -314,16 +314,16 @@ Change the state of the range slider to disabled by setting `false` to the `IsEn
                                 <Setter.Value>
                                     <sliders:SliderTickStyle ActiveSize="3,10" 
                                                                  InactiveSize="3, 10"
-                                                                 ActiveFill="Grey" 
-                                                                 InactiveFill="LightGrey" />
+                                                                 ActiveFill="Gray" 
+                                                                 InactiveFill="LightGray" />
                                 </Setter.Value>
                             </Setter>
                             <Setter Property="MinorTickStyle">
                                 <Setter.Value>
                                     <sliders:SliderTickStyle ActiveSize ="3,6" 
                                                                  InactiveSize="3, 6"
-                                                                 ActiveFill="Grey" 
-                                                                 InactiveFill="LightGrey" />
+                                                                 ActiveFill="Gray" 
+                                                                 InactiveFill="LightGray" />
                                 </Setter.Value>
                             </Setter>
                         </VisualState.Setters>
@@ -386,8 +386,8 @@ disabledState.Setters.Add(new Setter
     {
         ActiveSize = new Size(3, 10),
         InactiveSize = new Size(3, 10),
-        ActiveFill = Colors.Grey,
-        InactiveFill = Colors.LightGrey,
+        ActiveFill = Colors.Gray,
+        InactiveFill = Colors.LightGray,
     }
 });
 disabledState.Setters.Add(new Setter
@@ -397,8 +397,8 @@ disabledState.Setters.Add(new Setter
     {
         ActiveSize = new Size(3, 6),
         InactiveSize = new Size(3, 6),
-        ActiveFill = Colors.Grey,
-        InactiveFill = Colors.LightGrey,
+        ActiveFill = Colors.Gray,
+        InactiveFill = Colors.LightGray,
     }
 });
 

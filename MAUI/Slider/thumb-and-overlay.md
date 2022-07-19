@@ -182,8 +182,8 @@ Change the state of the slider to disabled by setting `false` to the `IsEnabled`
                             <Setter Property="ThumbStyle">
                                 <Setter.Value>
                                     <sliders:SliderThumbStyle Radius = "13"
-                                                                  Fill="Grey"
-                                                                  Stroke="LightGrey"
+                                                                  Fill="Gray"
+                                                                  Stroke="LightGray"
                                                                   StrokeThickness="3"/>
                                 </Setter.Value>
                             </Setter>
@@ -236,8 +236,8 @@ disabledState.Setters.Add(new Setter
     Value = new SliderThumbStyle
     {
         Radius = 13,
-        Fill = Colors.Grey,
-        Stroke = Colors.LightGrey,
+        Fill = Colors.Gray,
+        Stroke = Colors.LightGray,
         StrokeThickness = 3,
     }
 });
