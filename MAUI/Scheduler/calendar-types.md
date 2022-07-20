@@ -59,6 +59,8 @@ this.Scheduler.CalendarType = CalendarType.Hijri;
 {% endhighlight %}
 {% endtabs %}
 
+![calendar-type-in-maui-scheduler](images/calendar-type/calendartype-in-maui-scheduler.png)
+
 ### DateTime values in Calendar Types
 All the DateTime values can be given such as [DisplayDate](), [SelectedDate](), [BlackoutDates](), Appointment [StartTime]() and [EndTime](), and SpecialTimeRegion [StartTime]() and [EndTime]() values in two ways when the calendar identifier is specified other than the [GregorianCalendar]().
 
