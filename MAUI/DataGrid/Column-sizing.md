@@ -103,7 +103,7 @@ You can retrieve the width of the columns when it is auto-calculated based on th
 {% tabs %}
 {% highlight xaml tabtile="MainPage.xaml" %}
 <StackLayout>
-    <Button Clicked="Button_Clicked" Text="OK"/>
+    <Button Clicked="Button_Clicked" Text="Get Column Width"/>
     <syncfusion:SfDataGrid x:Name="dataGrid" ItemsSource="{Binding Orders}" VerticalOptions="FillAndExpand" ColumnWidthMode="Auto"/>
 </StackLayout>
 {% endhighlight %}
@@ -112,7 +112,7 @@ You can retrieve the width of the columns when it is auto-calculated based on th
 
 private void Button_Clicked(object sender, EventArgs e)
 {
-    double widthValue = dataGrid.Columns["OrderID"].ActualWidth;
+    double width = dataGrid.Columns["OrderID"].ActualWidth;
 }
 
 {% endhighlight %}
