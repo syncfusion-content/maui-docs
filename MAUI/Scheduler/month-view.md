@@ -103,7 +103,7 @@ this.Scheduler.MonthView.NumberOfVisibleWeeks = 2;
 {% endhighlight %}  
 {% endtabs %}
 
-![visible-weeks-count-in-maui-scheduler](images/month-view/weeks-visible-in-maui-scheduler.png)
+![visible-weeks-count-in-maui-scheduler-month-view](images/month-view/weeks-visible-in-maui-scheduler.png)
 
 ## View header
 
