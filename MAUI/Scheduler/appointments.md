@@ -506,6 +506,49 @@ var date1 = 12/14/2021 10:00:00 AM;
 var date2 = 12/15/2021 10:00:00 AM;
 var date3 = 12/16/2021 10:00:00 AM;
 
+#### How to get the occurence appointment from RRULE?
+
+The [GetOccurenceAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRecurrenceManager.html#Syncfusion_Maui_Scheduler_SchedulerRecurrenceManager_GetDateTimeOccurrences_System_String_System_DateTime_System_Nullable_System_DateTime__System_Nullable_System_DateTime__System_Nullable_System_DateTime__) method of `.NET MAUI Scheduler` returns the occurrence appointment for the given pattern appointment at the specified date.
+
+{% tabs %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3" %}
+
+var dateTime = new DateTime(2022,07,22,9,0,0);
+var dateCollection = SchedulerRecurrenceManager.GetOccurrenceAppointment(Scheduler, appointment, dateTime);
+
+{% endhighlight %}
+{% endtabs%}
+
+#### How to get the pattern appointment from RRULE? 
+
+The [GetOccurenceAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRecurrenceManager.html#Syncfusion_Maui_Scheduler_SchedulerRecurrenceManager_GetDateTimeOccurrences_System_String_System_DateTime_System_Nullable_System_DateTime__System_Nullable_System_DateTime__System_Nullable_System_DateTime__) method of `.NET MAUI Scheduler` returns returns the Pattern appointment for the provided occurrence appointment.
+
+{% tabs %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
+
+var dateTime = new DateTime(2022,07,22,9,0,0);
+var dateCollection = SchedulerRecurrenceManager.GetPatternAppointment(Scheduler,appointment);
+
+{% endhighlight %}
+{% endtabs%}
+
+#### How to generate RRule from given appointment?
+The [GenerateRRule](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRecurrenceManager.html#Syncfusion_Maui_Scheduler_SchedulerRecurrenceManager_GetDateTimeOccurrences_System_String_System_DateTime_System_Nullable_System_DateTime__System_Nullable_System_DateTime__System_Nullable_System_DateTime__) method of `.NET MAUI Scheduler` Method to generates the recurrence rule based on the given recurrence properties, the start date and end date of the recurrence appointments.
+
+{% tabs %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="7" %}
+
+var recurrenceProperties = new SchedulerRecurrenceInfo();
+recurrenceProperties.RecurrenceType = SchedulerRecurrenceType.Daily;
+recurrenceProperties.Interval = 2;
+recurrenceProperties.RecurrenceCount = 3;
+var startTime = DateTime.Today.AddHours(9);
+var endTime = DateTime.Today.AddHours(10);
+var dateCollection = SchedulerRecurrenceManager.GenerateRRule(recurrenceProperties, startTime, endTime);
+
+{% endhighlight %}
+{% endtabs%}
+
 ## Recurrence pattern exceptions
 
 The Recurrence pattern appointments can be deleted or changed by handling exception dates and exception appointments.
