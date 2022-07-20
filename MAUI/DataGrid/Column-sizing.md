@@ -84,6 +84,38 @@ The code below applies the [ColumnWidthMode.Fill](https://help.syncfusion.com/cr
 
 ![Fill column width mode in .NET MAUI DataGrid](Images\column-sizing\maui-datagrid-fill-column-width-mode.png)
 
+## Change the default column width for columns
+
+Based on the value of the [DefaultColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DefaultColumnWidth) property in [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html), [DataGridColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html) renders in view.
+
+{% tabs %}
+{% highlight xaml tabtile="MainPage.xaml" %}
+<syncfusion:SfDataGrid  x:Name="dataGrid"
+                        DefaultColumnWidth="120"
+                        ItemsSource="{Binding Orders}" />
+{% endhighlight %}
+{% endtabs %}
+
+## Retrieve the auto-calculated widths of columns
+Using the [ActualWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_ActualWidth) property, we can get the column's width after auto-fitting.
+
+{% tabs %}
+{% highlight xaml tabtile="MainPage.xaml" %}
+<StackLayout>
+    <Button Clicked="Button_Clicked" Text="OK"/>
+    <syncfusion:SfDataGrid x:Name="dataGrid" ItemsSource="{Binding Orders}" VerticalOptions="FillAndExpand" />
+</StackLayout>
+{% endhighlight %}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+private void Button_Clicked(object sender, EventArgs e)
+{
+    double widthValue = dataGrid.Columns["OrderID"].ActualWidth;
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Apply ColumnWidthMode for a particular column
 
