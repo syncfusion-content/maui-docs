@@ -514,7 +514,7 @@ The [GetOccurenceAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3" %}
 
 var dateTime = new DateTime(2022,07,22,9,0,0);
-var dateCollection = SchedulerRecurrenceManager.GetOccurrenceAppointment(Scheduler, appointment, dateTime);
+var occurrenceAppointment = SchedulerRecurrenceManager.GetOccurrenceAppointment(Scheduler, appointment, dateTime);
 
 {% endhighlight %}
 {% endtabs%}
@@ -527,7 +527,7 @@ The [GetOccurenceAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
 
 var dateTime = new DateTime(2022,07,22,9,0,0);
-var dateCollection = SchedulerRecurrenceManager.GetPatternAppointment(Scheduler,appointment);
+var patternAppointment = SchedulerRecurrenceManager.GetPatternAppointment(Scheduler,appointment);
 
 {% endhighlight %}
 {% endtabs%}
@@ -544,9 +544,9 @@ recurrenceProperties.Interval = 2;
 recurrenceProperties.RecurrenceCount = 3;
 var startTime = DateTime.Today.AddHours(9);
 var endTime = DateTime.Today.AddHours(10);
-var dateCollection = SchedulerRecurrenceManager.GenerateRRule(recurrenceProperties, startTime, endTime);
+var recurrenceRule = SchedulerRecurrenceManager.GenerateRRule(recurrenceProperties, startTime, endTime);
 
-{% endhighlight %}
+{% endhighlight %}	
 {% endtabs%}
 
 ## Recurrence pattern exceptions
