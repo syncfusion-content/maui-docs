@@ -521,7 +521,7 @@ var occurrenceAppointment = SchedulerRecurrenceManager.GetOccurrenceAppointment(
 
 #### How to get the pattern appointment from RRULE? 
 
-The [GetOccurenceAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRecurrenceManager.html#Syncfusion_Maui_Scheduler_SchedulerRecurrenceManager_GetDateTimeOccurrences_System_String_System_DateTime_System_Nullable_System_DateTime__System_Nullable_System_DateTime__System_Nullable_System_DateTime__) method of the `.NET MAUI Scheduler` returns the Pattern appointment for the provided occurrence appointment.
+The [GetOccurenceAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRecurrenceManager.html#Syncfusion_Maui_Scheduler_SchedulerRecurrenceManager_GetDateTimeOccurrences_System_String_System_DateTime_System_Nullable_System_DateTime__System_Nullable_System_DateTime__System_Nullable_System_DateTime__) method of the `.NET MAUI Scheduler` returns the pattern appointment for the provided occurrence appointment.
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
