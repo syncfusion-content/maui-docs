@@ -199,7 +199,7 @@ public class ColorConverter : IValueConverter
 ![Conditional cell styling in .NET MAUI DataGrid](Images/conditional-styling/maui-datagrid-conditional-datagridcellstyle.png)
 
 ## Style a cell based on MappingName and RowColumnIndex
-Styling can be applied to a particular cell based on RowIndex, ColumnIndex and MappingName property by writing the style for the [DataGridCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html) TargetType.
+Styling can be applied to a particular cell based on RowIndex, ColumnIndex and MappingName property of the column by writing the style for the [DataGridCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html) TargetType.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
