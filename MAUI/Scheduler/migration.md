@@ -569,7 +569,11 @@ schedule.DataSource = scheduleAppointmentCollection;
 
 {% highlight xaml %}
 
-<scheduler:SfScheduler View="TimelineWeek" AppointmentsSource="{Binding Appointments}" Resources="{Binding Resources}"/>
+<scheduler:SfScheduler View="TimelineWeek" AppointmentsSource="{Binding Appointments}">
+    <scheduler:SfScheduler.ResourceView>
+        <scheduler:SchedulerResourceView Resources="{Binding Resources}" />
+    </scheduler:SfScheduler.ResourceView>
+</scheduler:SfScheduler>
 
 {% endhighlight %}
 
