@@ -15,8 +15,11 @@ The .NET MAUI Scheduler control allows you to group appointments based on the re
 You can create a resource view by setting the [Name](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Name), [Id](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Id), [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Background), and [Foreground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Foreground) and [DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Foreground) properties of the built-in [SchedulerResource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html) class and assign `SchedulerResource` collection to the scheduler by using the [Resources](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_Resources) property of the [SchedulerResourceView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html?tabs=tabid-13%2Ctabid-6) class.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="1" %}
-<schedule:SfScheduler x:Name="Scheduler"  View="TimelineWeek" Resources="{Binding Resources}">
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
+<schedule:SfScheduler x:Name="Scheduler" View="TimelineWeek">
+    <schedule:SfScheduler.ResourceView>
+        <schedule:SchedulerResourceView Resources="{Binding Resources}" />
+    </schedule:SfScheduler.ResourceView>
 </schedule:SfScheduler>
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10" %}
@@ -39,7 +42,10 @@ Appointments associated with the `ResourceView` [Resources](https://help.syncfus
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
-<schedule:SfScheduler x:Name="Scheduler"  View="TimelineWeek" Resources="{Binding Resources}">
+<schedule:SfScheduler x:Name="Scheduler" View="TimelineWeek" AppointmentsSource="{Binding Appointments}">
+    <schedule:SfScheduler.ResourceView>
+        <schedule:SchedulerResourceView Resources="{Binding Resources}" />
+    </schedule:SfScheduler.ResourceView>
 </schedule:SfScheduler>
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10" %}
