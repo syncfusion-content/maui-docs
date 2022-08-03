@@ -22,7 +22,7 @@ documentation: ug
 
    3.	When you click "Open" the installer window will be opened.
 
-# Step-by-Step Installation
+## Step-by-Step Installation
 
 The steps below show how to install .NET MAUI Mac installer. 
 
