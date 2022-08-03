@@ -272,7 +272,7 @@ We have passed the optional parameters such as {{'[canIncludeHiddenColumns](http
 
 ## Known issues 
 
-Horizontal scrolling performance is not smooth in the Debug solution configuration when compared to Xamarin.Forms SfDataGrid. However, the scrolling performance is smooth when the solution configuration is Release.
+* [Android] Horizontal scrolling performance is not smooth in the Debug solution configuration when compared to Xamarin.Forms SfDataGrid. However, the scrolling performance is smooth when the solution configuration is Release.
 
 ## Upcoming Features   
 
