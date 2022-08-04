@@ -52,7 +52,7 @@ The following properties are used to customize the range pointer:
 
 * [`PointerWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RangePointer.html#Syncfusion_Maui_Gauges_RangePointer_PointerWidth) - Specifies the width of pointer either in pixels or factor.
 
-* [`WidthUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RangePointer.html#Syncfusion_Maui_Gauges_RangePointer_WidthUnit) – Specifies whether the `PointerWidth` is defined in pixels or factor.
+* [`WidthUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RangePointer.html#Syncfusion_Maui_Gauges_RangePointer_WidthUnit) – Specifies whether the [`PointerWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RangePointer.html#Syncfusion_Maui_Gauges_RangePointer_PointerWidth) is defined in pixels or factor.
 
 The [`PointerWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RangePointer.html#Syncfusion_Maui_Gauges_RangePointer_PointerWidth) of the pointer can be specified either in pixel or factor. If the [`WidthUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RangePointer.html#Syncfusion_Maui_Gauges_RangePointer_WidthUnit) is specified as Pixel, then the range will be rendered based on the provided pixel value. If the [`WidthUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RangePointer.html#Syncfusion_Maui_Gauges_RangePointer_WidthUnit) is set as factor, the provided factor value will be multiplied with axis radius. For example, if the pointer width is set as 0.1, then 10% of axis radius is considered as range pointer width.
 
