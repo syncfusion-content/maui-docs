@@ -140,7 +140,7 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 			<a href="https://help.syncfusion.com/xamarin/datagrid/getting-started">SfDataGrid</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Underway<br/>
+			<a href="https://help.syncfusion.com/maui/datagrid/migration">SfDataGrid</a><br/>
 		</td>
 	</tr>
 	<tr>
@@ -148,7 +148,7 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 			<a href="https://help.syncfusion.com/xamarin/maps/getting-started">SfMaps</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Underway<br/>
+			<a href="https://help.syncfusion.com/maui/maps/migration">SfMaps</a><br/>
 		</td>
 	</tr>
 	<tr>
