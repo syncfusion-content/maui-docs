@@ -9,7 +9,7 @@ documentation: ug
 
 # Shape Pointer in .NET MAUI Radial Gauge
 
-Indicate current values by using different types of shape pointers. You can change the shape type using the `ShapeType` property.
+Indicate current values by using different types of shape pointers. You can change the shape type using the [`ShapeType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.ShapeType.html) property.
 
 {% tabs %}
 
@@ -48,11 +48,11 @@ this.Content = sfRadialGauge;
 
 Gauge supports the following types of shapes:
 
-* Circle
-* Diamond
-* Inverted triangle
-* Rectangle
-* Triangle
+* [`Circle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.ShapeType.html#Syncfusion_Maui_Gauges_ShapeType_Circle)
+* [`Diamond`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.ShapeType.html#Syncfusion_Maui_Gauges_ShapeType_Diamond)
+* [`Inverted triangle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.ShapeType.html#Syncfusion_Maui_Gauges_ShapeType_InvertedTriangle)
+* [`Rectangle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.ShapeType.html#Syncfusion_Maui_Gauges_ShapeType_Rectangle)
+* [`Triangle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.ShapeType.html#Syncfusion_Maui_Gauges_ShapeType_Triangle)
 
 ![.NET MAUI Radial Gauge Markers](images/marker-pointers/maui-radial-gauge-markers.png)
 
@@ -60,12 +60,12 @@ Gauge supports the following types of shapes:
 
 The shape pointer can be customized using the following properties:
 
-* `Fill` – Allows you to customize the shape color.
-* `ShapeHeight` – Allows you to specify the shape height.
-* `ShapeWidth` – Allows you to specify the shape width.
-* `Stroke` – Allows you to specify the border color for the shape.
-* `BorderWidth` – Allows you to specify the border width of the shape.
-* `HasShadow` – Allows you to specify the shadow of the shape.
+* [`Fill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.ShapePointer.html#Syncfusion_Maui_Gauges_ShapePointer_Fill) – Allows you to customize the shape color.
+* [`ShapeHeight`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.ShapePointer.html#Syncfusion_Maui_Gauges_ShapePointer_ShapeHeight) – Allows you to specify the shape height.
+* [`ShapeWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.ShapePointer.html#Syncfusion_Maui_Gauges_ShapePointer_ShapeWidth) – Allows you to specify the shape width.
+* [`Stroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.ShapePointer.html#Syncfusion_Maui_Gauges_ShapePointer_Stroke) – Allows you to specify the border color for the shape.
+* [`BorderWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.ShapePointer.html#Syncfusion_Maui_Gauges_ShapePointer_BorderWidth) – Allows you to specify the border width of the shape.
+* [`HasShadow`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.ShapePointer.html#Syncfusion_Maui_Gauges_ShapePointer_HasShadow) – Allows you to specify the shadow of the shape.
 
 {% tabs %}
 
@@ -116,7 +116,7 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
 ## Shadow support
 
-The shadow can be applied by the `HasShadow` property.
+The shadow can be applied by the [`HasShadow`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.ShapePointer.html#Syncfusion_Maui_Gauges_ShapePointer_HasShadow) property.
 
 {% tabs %}
 
@@ -158,12 +158,12 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
 ## Shape pointer overlay
 
-The shape pointer overlay is rendered around the shape when the shape pointer is dragged. When `IsInteractive` property of pointer is set to true and the marker is dragged, the overlay will come around the marker pointer.
+The shape pointer overlay is rendered around the shape when the shape pointer is dragged. When [`IsInteractive`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialPointer.html#Syncfusion_Maui_Gauges_RadialPointer_IsInteractive) property of pointer is set to true and the marker is dragged, the overlay will come around the marker pointer.
 
 The shape pointer overlay can be customized using the following properties:
 
-* `OverlayFill` – Allows you to specify the color for the shapes' dragging overlay.
-* `OverlayRadius` – Allows you to specify the radius for the shapes' dragging overlay.
+* [`OverlayFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.ShapePointer.html#Syncfusion_Maui_Gauges_ShapePointer_OverlayFill) – Allows you to specify the color for the shapes' dragging overlay.
+* [`OverlayRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.ShapePointer.html#Syncfusion_Maui_Gauges_ShapePointer_OverlayRadius) – Allows you to specify the radius for the shapes' dragging overlay.
 
 {% tabs %}
 
@@ -207,7 +207,7 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
 ## Marker position customization
 
-The marker pointer can be moved near or far from its actual position using the `Offset` and [`OffsetUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.MarkerPointer.html#Syncfusion_Maui_Gauges_MarkerPointer_OffsetUnit) properties. 
+The marker pointer can be moved near or far from its actual position using the [`Offset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.MarkerPointer.html#Syncfusion_Maui_Gauges_MarkerPointer_Offset) and [`OffsetUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.MarkerPointer.html#Syncfusion_Maui_Gauges_MarkerPointer_OffsetUnit) properties. 
 
 When you set [`OffsetUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.MarkerPointer.html#Syncfusion_Maui_Gauges_MarkerPointer_OffsetUnit) to pixel, the marker pointer will be moved based on the pixel value. If you set [`OffsetUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.MarkerPointer.html#Syncfusion_Maui_Gauges_MarkerPointer_OffsetUnit) to factor, then provided factor will be multiplied by the scale radius value, and then the pointer will be moved to corresponding value. The default value of [`OffsetUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.MarkerPointer.html#Syncfusion_Maui_Gauges_MarkerPointer_OffsetUnit) is [`SizeUnit.Pixel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SizeUnit.html#Syncfusion_Maui_Gauges_SizeUnit_Pixel).
 
