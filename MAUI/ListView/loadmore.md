@@ -184,14 +184,14 @@ private bool CanLoadMoreItems(object obj)
 private async void LoadMoreItems(object obj)
 {
     var listView = obj as Syncfusion.Maui.ListView.SfListView;
-    //Enables LoadMoreIndicator to the LoadMoreTemplate.
+    //Enables ListViewLoadMoreIndicator to the LoadMoreTemplate.
     listView.IsBusy = true;
     await Task.Delay(2500);
     var index = Products.Count;
     var count = index + 3 >= totalItems ? totalItems - index : 3;
     //Adding the items to the list.
     AddProducts(index, count);
-    //Disables LoadMoreIndicator after adding the items.
+    //Disables ListViewLoadMoreIndicator after adding the items.
     listView.IsBusy = false;
 }
 
@@ -215,7 +215,7 @@ private void AddProducts(int index, int count)
 
 ## Show loading indicator
 
-The [SfListView.LoadMoreIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewLoadMoreIndicator.html) will be displayed when loading more items in the list.
+The [SfListView.ListViewLoadMoreIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewLoadMoreIndicator.html) will be displayed when loading more items in the list.
 
 By using the [SfListView.IsBusy](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_IsBusy) property, you can interchange the visibility of the button and busy indicator when creating the load more view. You can set the value of the `SfListView.IsBusy` property to `true` before adding items to the list and set it to `false`, after adding the items. You can also bind the `IsBusy` property using ViewModel.
 
@@ -716,7 +716,7 @@ public partial class MainPage : ContentPage
         Color = Color.Blue,
         IsRunning = true
       };
-      loadMoreIndicator.SetBinding(LoadMoreIndicator.IsVisibleProperty, new Binding("IndicatorIsVisible"));
+      loadMoreIndicator.SetBinding(ListViewLoadMoreIndicator.IsVisibleProperty, new Binding("IndicatorIsVisible"));
       grid1.Children.Add(loadMoreIndicator);
       grid1.Children.Add(grid);
       return grid1;
