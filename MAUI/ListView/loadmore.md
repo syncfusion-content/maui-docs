@@ -578,7 +578,7 @@ public partial class MainPage : ContentPage
         Color = Color.Blue,
         IsRunning = true
       };
-      loadMoreIndicator.SetBinding(LoadMoreIndicator.IsVisibleProperty, new Binding("IndicatorIsVisible"));
+      loadMoreIndicator.SetBinding(ListViewLoadMoreIndicator.IsVisibleProperty, new Binding("IndicatorIsVisible"));
       grid.Children.Add(loadMoreIndicator);
       return grid;
     });
