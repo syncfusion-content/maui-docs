@@ -124,7 +124,7 @@ A solid color can be achieved by assigning the SolidColorBrush to the [TabBarBac
 {% endhighlight %}
 
 {% highlight C# %}
-     tabView.TabBarBackground = Color.LightBlue;
+     tabView.TabBarBackground = Colors.LightBlue;
 {% endhighlight %}
 
 {% endtabs %}
