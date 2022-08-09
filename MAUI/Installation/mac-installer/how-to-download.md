@@ -72,4 +72,4 @@ You should initiate an evaluation if you have already obtained our components th
    ![License and downloads of Syncfusion Essential Studio](images/Mac_Download.png)
 	
 	
-You can also refer to the [**.NET MAUI Mac installer**](https://help.syncfusion.com/common/essential-studio/installation/mac-installer/how-to-install) links for step-by-step installation guidelines.	
+You can also refer to the [**.NET MAUI Mac installer**](https://help.syncfusion.com/maui/installation/mac-installer/how-to-install) links for step-by-step installation guidelines.	
