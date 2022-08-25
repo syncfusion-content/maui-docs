@@ -21,7 +21,8 @@ You can apply color, stroke color and thickness to the shapes using the [`ShapeF
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer ShapeStroke="#1585ed"
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                           ShapeStroke="#1585ed"
                            ShapeFill="#b5dcff"  
                            ShapeStrokeThickness="2">
         </map:MapShapeLayer>
@@ -37,7 +38,7 @@ You can apply color, stroke color and thickness to the shapes using the [`ShapeF
         InitializeComponent();
 		
         MapShapeLayer layer = new MapShapeLayer();
-        layer.ShapesSource = MapSource.FromResource("MyProject.world-map.json");
+        layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
         layer.ShapeFill = Color.FromRgb(181, 220, 255);
         layer.ShapeStroke = Color.FromRgb(21, 133, 237);
         layer.ShapeStrokeThickness = 2;
@@ -64,7 +65,8 @@ You can apply hover color, hover stoke color and hover stroke thickness to the s
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer ShapeHoverStroke="Blue"
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                           ShapeHoverStroke="Blue"
                            ShapeHoverFill="LightBlue"  
                            ShapeHoverStrokeThickness="2">
         </map:MapShapeLayer>
@@ -80,11 +82,11 @@ You can apply hover color, hover stoke color and hover stroke thickness to the s
         InitializeComponent();
 		
         MapShapeLayer layer = new MapShapeLayer();
-        
+        layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
         layer.ShapeHoverFill = Brush.LightBlue;
         layer.ShapeHoverStroke = Brush.Blue;
         layer.ShapeHoverStrokeThickness = 2;
-		layer.ShapesSource = MapSource.FromResource("MyProject.world-map.json");
+		
         SfMaps maps = new SfMaps();
         maps.Layer = layer;
 		
@@ -107,7 +109,8 @@ N> You can show legend using the [`Legend`](https://help.syncfusion.com/cr/maui/
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer DataSource="{Binding Data}"       
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/australia.json"
+                           DataSource="{Binding Data}"       
                            PrimaryValuePath="State" 
                            ShapeDataField="STATE_NAME"
                            ShapeStrokeThickness="0" 
@@ -128,7 +131,7 @@ public MainPage()
     this.BindingContext = viewModel;
 	
     MapShapeLayer layer = new MapShapeLayer();
-    layer.ShapesSource = MapSource.FromResource("MyProject.australia.json");
+    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/australia.json"));
     layer.DataSource = viewModel.Data;
     layer.PrimaryValuePath = "State";
     layer.ShapeDataField = "STATE_NAME";
@@ -185,7 +188,8 @@ You can apply color to the shape by comparing a value from the [`ColorMappings`]
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer DataSource="{Binding Data}" 
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                           DataSource="{Binding Data}" 
                            PrimaryValuePath="Country" 
                            ShapeDataField="name" 
                            ShapeColorValuePath="Count">
@@ -211,7 +215,7 @@ public MainPage()
     this.BindingContext = viewModel;
 	
     MapShapeLayer layer = new MapShapeLayer();
-    layer.ShapesSource = MapSource.FromResource("MyProject.world-map.json");
+    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
     layer.DataSource = viewModel.Data;
     layer.PrimaryValuePath = "Country";
     layer.ShapeDataField = "name";
@@ -275,7 +279,8 @@ You can apply color to the shapes based on whether the value from [`ColorMapping
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer DataSource="{Binding Data}" 
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                           DataSource="{Binding Data}" 
                            PrimaryValuePath="Country" 
                            ShapeDataField="name" 
                            ShapeColorValuePath="Count">
@@ -301,7 +306,7 @@ public MainPage()
     this.BindingContext = viewModel;
 	
     MapShapeLayer layer = new MapShapeLayer();
-    layer.ShapesSource = MapSource.FromResource("MyProject.world-map.json");
+    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
     layer.DataSource = viewModel.Data;
     layer.PrimaryValuePath = "Country";
     layer.ShapeDataField = "name";

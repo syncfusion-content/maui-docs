@@ -20,7 +20,8 @@ The [`ShowShapeTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Map
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer DataSource="{Binding Data}"
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                           DataSource="{Binding Data}"
                            PrimaryValuePath="State" 
                            ShapeDataField="name" 
                            ShowShapeToolTip="True">
@@ -40,7 +41,7 @@ public MainPage()
    this.BindingContext = viewModel;
    
    MapShapeLayer layer = new MapShapeLayer();
-   layer.ShapesSource = MapSource.FromResource("MyProject.world1.shp");
+   layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
    layer.DataSource = viewModel.Data;
    layer.PrimaryValuePath = "State";
    layer.ShapeDataField = "name";
@@ -95,7 +96,8 @@ The [`ShowBubbleTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Ma
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer DataSource="{Binding Data}"
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                           DataSource="{Binding Data}"
                            PrimaryValuePath="State" 
                            ShapeDataField="name" 
                            ShapeHoverFill = "Transparent" 
@@ -128,7 +130,7 @@ The [`ShowBubbleTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Ma
         this.BindingContext = viewModel;
 		
         MapShapeLayer layer = new MapShapeLayer();
-        layer.ShapesSource = MapSource.FromResource("MyProject.world1.shp");
+        layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
         layer.DataSource = viewModel.Data;
         layer.PrimaryValuePath = "State";
         layer.ShapeDataField = "name";
@@ -197,7 +199,8 @@ The [`ShowMarkerTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Ma
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapeStroke="DarkGrey"
+            <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                               ShapeStroke="DarkGrey"
                                ShapeHoverFill = "Transparent" 
                                ShapeHoverStroke="Transparent" 
                                ShowMarkerTooltip="True">
@@ -230,7 +233,7 @@ The [`ShowMarkerTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Ma
 		InitializeComponent();
 		
         MapShapeLayer layer = new MapShapeLayer();
-        layer.ShapesSource = MapSource.FromResource("MyProject.world1.shp");
+        layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
         layer.ShapeHoverFill = Colors.Transparent;
         layer.ShapeHoverStroke = Colors.Transparent;
         layer.ShowMarkerTooltip = true;
@@ -278,7 +281,8 @@ Data template can be used customize the tooltip view using [`ShapeTooltipTemplat
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer DataSource="{Binding Data}"
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                           DataSource="{Binding Data}"
                            ShapeDataField="continent"
                            PrimaryValuePath="Continent"
                            ShapeHoverFill="Transparent"
@@ -330,7 +334,7 @@ Data template can be used customize the tooltip view using [`ShapeTooltipTemplat
         this.BindingContext = viewModel;  
 		
         MapShapeLayer layer = new MapShapeLayer();
-        layer.ShapesSource = MapSource.FromResource("MyProject.world1.shp");
+        layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
         layer.PrimaryValuePath = "Continent";
         layer.ShapeDataField = "continent";
         layer.DataSource = viewModel.Data;
@@ -492,6 +496,7 @@ A data template selector also can be used to customize the appearance of each it
 <map:SfMaps>
     <map:SfMaps.Layer>
         <map:MapShapeLayer x:Name="layer"
+                           ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
                            ShapeStroke="DarkGrey"
                            ShowMarkerTooltip="True"
                            ShapeHoverFill="Transparent"
@@ -523,7 +528,7 @@ public class MainPage()
 	public MainPage()
 	{
 		InitializeComponent();
-		layer.ShapesSource = MapSource.FromResource("MyProject.World1.shp");
+		layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
 	}
 }
 

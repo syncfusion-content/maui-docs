@@ -21,7 +21,8 @@ You can show data labels on the map using the [`ShowDataLabels`](https://help.sy
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer DataSource="{Binding Data}"        
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/australia.json"
+                           DataSource="{Binding Data}"        
                            PrimaryValuePath="State" 
                            ShapeDataField="STATE_NAME" 
                            ShowDataLabels="True">
@@ -44,7 +45,7 @@ public MainPage()
     this.BindingContext = viewModel;
 	
     MapShapeLayer layer = new MapShapeLayer();
-    layer.ShapesSource = MapSource.FromResource("MyProject.australia.json");
+    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/australia.json"));
     layer.DataSource = viewModel.Data;
     layer.PrimaryValuePath = "State";
     layer.ShapeDataField = "STATE_NAME";
@@ -107,7 +108,8 @@ By default, the data labels will render even if it overflows from the shape.
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer DataSource="{Binding Data}"        
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/australia.json"
+                           DataSource="{Binding Data}"        
                            PrimaryValuePath="State" 
                            ShapeDataField="STATE_NAME" 
                            ShowDataLabels="True">
@@ -131,7 +133,7 @@ public MainPage()
     this.BindingContext = viewModel;
 	
     MapShapeLayer layer = new MapShapeLayer();
-    layer.ShapesSource = MapSource.FromResource("MyProject.australia.json");
+    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/australia.json"));
     layer.DataSource = viewModel.Data;
     layer.PrimaryValuePath = "State";
     layer.ShapeDataField = "STATE_NAME";
@@ -193,7 +195,8 @@ You can customize the data labels using the [`DataLabelStyle`](https://help.sync
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer DataSource="{Binding Data}" 
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/australia.json"
+                           DataSource="{Binding Data}" 
                            PrimaryValuePath="State" 
                            ShapeDataField="STATE_NAME" 
                            ShowDataLabels="True">
@@ -224,7 +227,7 @@ public MainPage()
     this.BindingContext = viewModel;
 	
     MapShapeLayer layer = new MapShapeLayer();
-    layer.ShapesSource = MapSource.FromResource("MyProject.australia.json");
+    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/australia.json"));
     layer.DataSource = viewModel.Data;
     layer.PrimaryValuePath = "State";
     layer.ShapeDataField = "STATE_NAME";

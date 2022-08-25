@@ -21,7 +21,8 @@ You can show shape legend by setting the [`Legend`](https://help.syncfusion.com/
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer DataSource="{Binding Data}"
+        <map:MapShapeLayer  ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                            DataSource="{Binding Data}"
                             PrimaryValuePath="State" 
                             ShapeDataField="name" 
                             ShapeStroke="DarkGrey">
@@ -68,7 +69,7 @@ public MainPage()
 
     SfMaps maps = new SfMaps();
     MapShapeLayer layer = new MapShapeLayer();
-    layer.ShapesSource = MapSource.FromResource("MyProject.world1.shp");
+    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
     layer.DataSource = viewModel.Data;
     layer.PrimaryValuePath = "State";
     layer.ShapeDataField = "name";
@@ -164,7 +165,8 @@ You can show bubble legend by setting the [`MapShapeLayer.Legend`](https://help.
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer DataSource="{Binding Data}"  
+        <map:MapShapeLayer  ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                            DataSource="{Binding Data}"  
                             ShowBubbles="True" 
                             PrimaryValuePath="State" 
                             ShapeDataField="name" 
@@ -218,7 +220,7 @@ public MainPage()
     this.BindingContext = viewModel;
 
     MapShapeLayer layer = new MapShapeLayer();
-    layer.ShapesSource = MapSource.FromResource("MyProject.world1.shp");
+    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
     layer.DataSource = viewModel.Data;
     layer.PrimaryValuePath = "State";
     layer.ShapeDataField = "name";
@@ -325,7 +327,8 @@ You can customize the legend item's text style using the [`MapLegend.TextStyle`]
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer DataSource="{Binding Data}"
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                           DataSource="{Binding Data}"
                            PrimaryValuePath="State"
                            ShapeDataField="name"
                            ShapeStroke="DarkGray"
@@ -385,7 +388,7 @@ You can customize the legend item's text style using the [`MapLegend.TextStyle`]
         this.BindingContext = viewModel;
 
         MapShapeLayer layer = new MapShapeLayer();
-        layer.ShapesSource = MapSource.FromResource("MyProject.world1.shp");
+        layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
         layer.DataSource = viewModel.Data;
         layer.PrimaryValuePath = "State";
         layer.ShapeDataField = "name";
@@ -499,7 +502,8 @@ You can position the legend items in different directions using the [`MapLegend.
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer DataSource="{Binding Data}"
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                           DataSource="{Binding Data}"
                            PrimaryValuePath="State"
                            ShapeDataField="name"
                            ShapeStroke="DarkGray"
@@ -552,7 +556,7 @@ public MainPage()
     this.BindingContext = viewModel;
 
     MapShapeLayer layer = new MapShapeLayer();
-    layer.ShapesSource = MapSource.FromResource("MyProject.world1.shp");
+    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
     layer.DataSource = viewModel.Data;
     layer.PrimaryValuePath = "State";
     layer.ShapeDataField = "name";

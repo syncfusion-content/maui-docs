@@ -21,7 +21,8 @@ You can enable bubbles using the [`ShowBubbles`](https://help.syncfusion.com/cr/
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer DataSource="{Binding Data}"
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                           DataSource="{Binding Data}"
                            PrimaryValuePath="State" 
                            ShapeDataField="name" 
                            ShowBubbles="True">
@@ -49,7 +50,7 @@ public MainPage()
    this.BindingContext = viewModel;
    SfMaps maps = new SfMaps();
    MapShapeLayer layer = new MapShapeLayer();
-   layer.ShapesSource = MapSource.FromResource("MyProject.world1.shp");
+   layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
    layer.DataSource = viewModel.Data;
    layer.PrimaryValuePath = "State";
    layer.ShapeDataField = "name";
@@ -113,7 +114,8 @@ You can enable tooltip for the bubbles using the [`ShowBubbleTooltip`](https://h
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer DataSource="{Binding Data}"
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                           DataSource="{Binding Data}"
                            PrimaryValuePath="State" 
                            ShapeDataField="name" 
                            ShapeHoverFill="Transparent" 
@@ -144,7 +146,7 @@ public MainPage()
    this.BindingContext = viewModel;
    SfMaps maps = new SfMaps();
    MapShapeLayer layer = new MapShapeLayer();
-   layer.ShapesSource = MapSource.FromResource("MyProject.world1.shp");
+   layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
    layer.DataSource = viewModel.Data;
    layer.PrimaryValuePath = "State";
    layer.ShapeDataField = "name";
@@ -213,7 +215,8 @@ The value from the [`ColorValuePath`](https://help.syncfusion.com/cr/maui/Syncfu
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer ShowDataLabels="True"
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                           ShowDataLabels="True"
                            DataSource="{Binding Data}" 
                            PrimaryValuePath="State" 
                            ShapeDataField="name" 
@@ -263,7 +266,7 @@ public MainPage()
 
     SfMaps maps = new SfMaps();
     MapShapeLayer layer = new MapShapeLayer();
-    layer.ShapesSource = MapSource.FromResource("MyProject.world1.shp");
+    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
     layer.DataSource = viewModel.Data;
     layer.PrimaryValuePath = "State";
     layer.ShapeDataField = "name";
@@ -384,7 +387,8 @@ You can customize appearance of the bubbles as below.
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer DataSource="{Binding Data}"
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                           DataSource="{Binding Data}"
                            PrimaryValuePath="State" 
                            ShapeDataField="name"
                            ShapeHoverFill = "Transparent" 
@@ -420,7 +424,7 @@ public MainPage()
     this.BindingContext = viewModel;
     SfMaps maps = new SfMaps();
     MapShapeLayer layer = new MapShapeLayer();
-    layer.ShapesSource = MapSource.FromResource("MyProject.world1.shp");
+    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
     layer.DataSource = viewModel.Data;
     layer.PrimaryValuePath = "State";
     layer.ShapeDataField = "name";

@@ -313,7 +313,8 @@ The following code example explains how to intialize the layer and customize the
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer ShapeStroke="#1585ed"
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                           ShapeStroke="#1585ed"
                            ShapeFill="#b5dcff">
         </map:MapShapeLayer>
     </maps:SfMaps.Layer>
@@ -328,7 +329,7 @@ The following code example explains how to intialize the layer and customize the
         InitializeComponent();
 
         MapShapeLayer layer = new MapShapeLayer();
-        layer.ShapesSource = MapSource.FromResource("MyProject.world-map.json");
+        layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
         layer.ShapeFill = Color.FromRgb(181, 220, 255);
         layer.ShapeStroke = Color.FromRgb(21, 133, 237);
 
@@ -482,7 +483,8 @@ The following code example explains how to customize the bubble in the Xamarin S
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer DataSource="{Binding Data}"
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                           DataSource="{Binding Data}"
                            PrimaryValuePath="State"
                            ShapeDataField="name"
                            ShowBubbles="True"
@@ -508,7 +510,7 @@ public MainPage()
     this.BindingContext = viewModel;
     SfMaps maps = new SfMaps();
     MapShapeLayer layer = new MapShapeLayer();
-    layer.ShapesSource = MapSource.FromResource("MyProject.world1.shp");
+    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
     layer.DataSource = viewModel.Data;
     layer.PrimaryValuePath = "State";
     layer.ShapeDataField = "name";
@@ -619,7 +621,8 @@ The following code example explains how to customize the data label in the Xamar
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer DataSource="{Binding Data}"
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                           DataSource="{Binding Data}"
                            PrimaryValuePath="State" 
                            ShapeDataField="name"
                            ShapeHoverFill = "Transparent" 
@@ -650,7 +653,7 @@ public MainPage()
     this.BindingContext = viewModel;
     SfMaps maps = new SfMaps();
     MapShapeLayer layer = new MapShapeLayer();
-    layer.ShapesSource = MapSource.FromResource("MyProject.world1.shp");
+    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
     layer.DataSource = viewModel.Data;
     layer.PrimaryValuePath = "State";
     layer.ShapeDataField = "name";
@@ -836,7 +839,8 @@ The following code example explains how to customize the shape color in the Xama
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer DataSource="{Binding Data}"
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                           DataSource="{Binding Data}"
                            PrimaryValuePath="State"
                            ShapeDataField="name"
                            ShapeColorValuePath="Count">
@@ -859,7 +863,7 @@ public MainPage()
     this.BindingContext = viewModel;
     SfMaps maps = new SfMaps();
     MapShapeLayer layer = new MapShapeLayer();
-    layer.ShapesSource = MapSource.FromResource("MyProject.world1.shp");
+    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
     layer.DataSource = viewModel.Data;
     layer.PrimaryValuePath = "State";
     layer.ShapeDataField = "name";
@@ -1018,7 +1022,7 @@ The following code example explains how to customize marker in the Xamarin SfMap
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer>
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json">
             <map:MapShapeLayer.Markers>
                 <map:MapMarkerCollection>
                     <map:MapMarker Latitude="20.5595"
@@ -1039,7 +1043,7 @@ public MainPage()
    InitializeComponent();
     SfMaps maps = new SfMaps();
     MapShapeLayer layer = new MapShapeLayer();
-    layer.ShapesSource = MapSource.FromResource("MyProject.world1.shp");
+    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
 
     MapMarker mapMarker = new MapMarker();
     mapMarker.Latitude = 20.5595;
@@ -1182,7 +1186,8 @@ The following code example explains how to customize legend in the Xamarin SfMap
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer DataSource="{Binding Data}"
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                           DataSource="{Binding Data}"
                            PrimaryValuePath="State"
                            ShapeDataField="name"
                            ShapeColorValuePath="Count">
@@ -1212,7 +1217,7 @@ public MainPage()
     this.BindingContext = viewModel;
     SfMaps maps = new SfMaps();
     MapShapeLayer layer = new MapShapeLayer();
-    layer.ShapesSource = MapSource.FromResource("MyProject.world1.shp");
+    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
     layer.DataSource = viewModel.Data;
     layer.PrimaryValuePath = "State";
     layer.ShapeDataField = "name";
@@ -1319,7 +1324,8 @@ The following code example explains how to customize tooltip in the Xamarin SfMa
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer DataSource="{Binding Data}"
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                           DataSource="{Binding Data}"
                            PrimaryValuePath="State"
                            ShapeDataField="name"
                            ShapeColorValuePath="Count"
@@ -1340,7 +1346,7 @@ The following code example explains how to customize tooltip in the Xamarin SfMa
         this.BindingContext = viewModel;  
 
         MapShapeLayer layer = new MapShapeLayer();
-        layer.ShapesSource = MapSource.FromResource("MyProject.world1.shp");
+        layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
         layer.PrimaryValuePath = "Continent";
         layer.ShapeDataField = "continent";
         layer.DataSource = viewModel.Data;
