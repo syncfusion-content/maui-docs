@@ -24,6 +24,7 @@ The [`ShapeSelected`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.M
 <map:SfMaps>
    <map:SfMaps.Layer>
       <map:MapShapeLayer x:Name="layer"
+                         ShapesSource="https://cdn.syncfusion.com/maps/map-data/australia.json"
                          SelectedShapeFill="#6189ff"
                          ShapeSelected="layer_ShapeSelected" 
                          ShapeStrokeThickness="0"
@@ -42,7 +43,7 @@ public class MainPage()
 	public MainPage()
 	{
 		InitializeComponent();
-		layer.ShapesSource = MapSource.FromResource("MyProject.australia.json");
+		layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/australia.json"));
 	}
 }
 
@@ -71,7 +72,8 @@ You can customize the below appearance of the selected shape as below.
 
 <map:SfMaps>
    <map:SfMaps.Layer>
-      <map:MapShapeLayer DataSource="{Binding Data}" 
+      <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/australia.json"
+                         DataSource="{Binding Data}" 
                          PrimaryValuePath="Country"
                          ShapeDataField="STATE_NAME" 
                          ShapeColorValuePath = "Color" 
@@ -96,7 +98,7 @@ You can customize the below appearance of the selected shape as below.
         this.BindingContext = viewModel;
 
         MapShapeLayer layer = new MapShapeLayer();
-        layer.ShapesSource = MapSource.FromResource("MyProject.australia.json");
+        layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/australia.json"));
         layer.DataSource = viewModel.Data;
         layer.PrimaryValuePath = "Country";
         layer.ShapeDataField = "STATE_NAME";
