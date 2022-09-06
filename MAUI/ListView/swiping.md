@@ -74,11 +74,11 @@ N> Similarly, the UI for swiping towards left can be customized by using the `Sf
 
 N> Swipe Template is mandatory to perform swiping in the `SfListView`.
 
-![Left swiping functionalities](Images/swiping//maui-listview-startswipetemplate.png)
+![Start swiping functionalities](Images/swiping/maui-listview-startswipetemplate.jpg)
 
 Download the entire source code from GitHub `here`. 
 
-![Right swiping functionalities](Images/swiping/maui-listview-endswipetemplate.png)
+![End swiping functionalities](Images/swiping/maui-listview-endswipetemplate.jpg)
 
 N> To customize the appearance of each swipe item with different templates based on specific constraints by using the `DataTemplateSelector`. 
 
@@ -164,7 +164,7 @@ listView.StartSwipeTemplate = new DataTemplate(() =>
 {%endhighlight %}
 {% endtabs %}
 
-![Customize left swipe in listview](Images/swiping/maui-listview-working-with-multiple-views-in-swipetemplate.png)
+![Customize left swipe in listview](Images/swiping/maui-listview-working-with-multiple-views-in-swipetemplate.jpg)
 
 To delete the item when `Delete` image is tapped and setting favorites to item when `Favorites` image is tapped, follow the code example.
 
@@ -372,7 +372,7 @@ private void RightSwipeButton_Clicked(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-![Programmatic Right and left swiping in listview](Images/swiping/maui-listview-programmatic-swiping.gif)
+![Programmatic Start and End swiping in listview](Images/swiping/maui-listview-programmatic-swiping.gif)
 
 ## Events
 
@@ -551,7 +551,7 @@ private void ListView_PropertyChanged(object sender, PropertyChangedEventArgs e)
 
 Download the entire source code from GitHub `here`
 
-![Indefinite swipe in listview](Images/swiping/maui-listview-swipe-an-item-indefinetly.png)
+![Indefinite swipe in listview](Images/swiping/maui-listview-swipe-an-item-indefinetly.jpg)
 
 ## How to edit data by swiping?
 
