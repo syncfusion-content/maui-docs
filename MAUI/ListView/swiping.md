@@ -517,9 +517,6 @@ private void ListView_SwipeReset(object sender, ResetSwipeEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-## Limitations
-
-
 ## How to reset swipe view automatically?
 
 Swiped item can be reset by defining the `SfListView.SwipeOffSet` argument of `SfListView.SwipeEnded` event to `0` when the swiping action is completed.
