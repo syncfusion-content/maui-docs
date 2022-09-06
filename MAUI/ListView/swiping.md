@@ -21,16 +21,16 @@ N> When tap a swiped item, the [SelectionChanging](https://help.syncfusion.com/c
 
 N> When the `Visual` is `Material`, you need to set the `BackgroundColor` to `ItemTemplate` to show the slide swiping.
 
-## Assigning left and right swipe templates
+## Assigning Start and End swipe templates
 
-The User Interface (UI) for swiping can be customized by using swipe templates `SfListView.StartSwipeTemplate` when swiping towards right and `SfListView.EndSwipeTemplate` when swiping towards left. The contents inside the swipe template are arranged based on the offset values when swiping an item. You can reset the swiping item or swiped item by calling the `SfListView.ResetSwipeItem` method.
+The User Interface (UI) for swiping can be customized by using swipe templates `SfListView.StartSwipeTemplate` when swiping towards End and `SfListView.EndSwipeTemplate` when swiping towards Start. The contents inside the swipe template are arranged based on the offset values when swiping an item. You can reset the swiping item or swiped item by calling the `SfListView.ResetSwipeItem` method.
 
 {% tabs %}
 {% highlight xaml tabtitel=MainPage.xaml" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
   <syncfusion:SfListView x:Name="listView" AllowSwiping="True">
     <syncfusion:SfListView.StartSwipeTemplate>
-      <DataTemplate x:Name="LeftSwipeTemplate">
+      <DataTemplate x:Name="StartSwipeTemplate">
         <Grid>
           <Grid BackgroundColor="#009EDA" HorizontalOptions="Fill" VerticalOptions="Fill" Grid.Column="0">
             <Grid VerticalOptions="Center" HorizontalOptions="Center">
@@ -91,7 +91,7 @@ The swipe templates allows customizing with custom actions such as deleting the 
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
  <syncfusion:SfListView x:Name="listView">
   <syncfusion:SfListView.StartSwipeTemplate>
-    <DataTemplate x:Name="LeftSwipeTemplate">
+    <DataTemplate x:Name="StartSwipeTemplate">
       <Grid>
         <Grid.ColumnDefinitions>
           <ColumnDefinition Width="*" />
@@ -164,7 +164,7 @@ listView.StartSwipeTemplate = new DataTemplate(() =>
 {%endhighlight %}
 {% endtabs %}
 
-![Customize left swipe in listview](Images/swiping/maui-listview-working-with-multiple-views-in-swipetemplate.jpg)
+![Customize Start swipe in listview](Images/swiping/maui-listview-working-with-multiple-views-in-swipetemplate.jpg)
 
 To delete the item when `Delete` image is tapped and setting favorites to item when `Favorites` image is tapped, follow the code example.
 
@@ -562,7 +562,7 @@ The `SfListView` allows editing the item data using either `SfListView.EndSwipeT
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
  <syncfusion:SfListView > 
   <syncfusion:SfListView.EndSwipeTemplate> 
-      <DataTemplate x:Name="RightSwipeTemplate"> 
+      <DataTemplate x:Name="EndSwipeTemplate"> 
         <Grid BackgroundColor="#DC595F" HorizontalOptions="Fill" VerticalOptions="Fill"> 
           <Grid> 
             <Label Grid.Row="0" 
