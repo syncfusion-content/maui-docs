@@ -209,3 +209,36 @@ private void Scheduler_ReminderAlertOpening(object sender, ReminderAlertOpeningE
 }
 {% endhighlight %}
 {% endtabs %}
+
+## Handling reminders for future appointment
+
+* If the Reminder alert time is less than the current time, then appointment reminder time will be calculated from the current time.
+
+* Future normal and recurring appointment reminder alert will be displayed as Reminder deliver time.
+
+## Handling reminders for overdue appointment
+
+* If a Non-recurring appointments reminder is in past, reminder alert as overdue 
+
+* If a recurring appointment is in the past such past occurrences do not have reminders. 
+
+* Span appointment < 24 hours - Shows alert time in overdue from appointment 
+
+* Overdue after recurrence end 
+
+## Handling reminder for Changed occurrence appointment
+If a regular occurrence is in the future:
+
+* Once this changed occurrence is moved to the past, its reminder is deleted.
+
+* When the changed occurrence is restored to a time in the future, its reminder is restored and persists until this occurrence becomes outdated.
+
+* The reminder is not restored when the changed occurrence is restored to a time in the past.
+
+If a recurring appointment is in the past (such occurrences do not have reminders): 
+
+* Once the changed occurrence is moved to the future, its reminder is re-created from the pattern.
+
+* When the changed occurrence is restored to a time in the past, the reminder is deleted. 
+
+* Past Changed occurrence reminders will be dismissed.
