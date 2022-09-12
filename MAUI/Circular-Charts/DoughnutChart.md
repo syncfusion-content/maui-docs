@@ -164,6 +164,6 @@ chart.Series.Add(series);
 
 ![Center View in MAUI doughnut Chart](Chart-Types_images/maui_center_View.png)
 
-# Center Hole Size
+## Center Hole Size
 
 The [CenterHoleSize] property of [DoughnutSeries] is used to get only the inner diameter. Using this [CenterHoleSize] value, you can provide [CentreView] for series to avoid the view from being cropped outside the series.
