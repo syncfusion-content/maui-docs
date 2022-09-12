@@ -20,7 +20,7 @@ documentation: ug
         <local:ViewModel/>
     </chart:SfCircularChart.BindingContext>
     <chart:SfCartesianChart.PlotAreaBackgroundView>
-        <BoxView Color="Aqua" Margin = "10" CornerRadius = "5" />
+        <Image Source="syncfusion_logo_image.png" HeightRequest="300" WidthRequest="300" HorizontalOptions="Center" VerticalOptions="Center" Opacity="0.8"/>
     </chart:SfCartesianChart.PlotAreaBackgroundView>
 </chart:SfCircularChart>
 
@@ -31,16 +31,20 @@ documentation: ug
 SfCircularChart chart = new SfCircularChart();
 ViewModel viewModel = new ViewModel();
 chart.BindingContext = viewModel;      	 
-BoxView boxView = new BoxView()
+Image image = new Image()
 {
-    Color = Colors.Aqua,
-    Margin = 10,
-    CornerRadius = 5,
+    Source = ImageSource.FromFile("syncfusion_logo_image.png"),
+    HeightRequest = 300,
+    WidthRequest = 300,
+    HorizontalOptions = LayoutOptions.Center,
+    VerticalOptions = LayoutOptions.Center,
 };  
-chart.PlotAreaBackgroundView = boxView
+chart.PlotAreaBackgroundView = image;
 chart.Series.Add(series);
 
 {% endhighlight %}
 
 {% endtabs %}
+
+![Plot Area Background View in MAUI chart](PlotAreabackgroundView_images/maui_charts_plot_area_background_view.png)
 
