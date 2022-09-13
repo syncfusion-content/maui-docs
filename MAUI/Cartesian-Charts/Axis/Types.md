@@ -337,7 +337,7 @@ chart.XAxes.Add(primaryAxis);
 
 ## Logarithmic Axis
 
-The [LogarithmicAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html) uses logarithmic scale, and it is very useful in visualizing data, when the data range of a chart’s series has significant disparity. Plotting data on such an axis is equivalent to plotting the log of that data. 
+This [LogarithmicAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html) uses a logarithmic scale, and it is very useful in visualising data when the data range of a chart’s series has significant disparity. Plotting data on such an axis is equivalent to plotting the log of that data.
 
 {% tabs %}
 
@@ -374,7 +374,7 @@ chart.YAxes.Add(secondaryAxis);
 
 ## Customizing the logarithmic range
 
-To customize the range of log axis, you can use the [Minimum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html#Syncfusion_Maui_Charts_LogarithmicAxis_Minimum), [Maximum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html#Syncfusion_Maui_Charts_LogarithmicAxis_Maximum) and [Interval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html#Syncfusion_Maui_Charts_LogarithmicAxis_Interval) properties of [LogarithmicAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html).By default, nice range will be calculated automatically based on the provided data.The following code example demonstrates the logarithmic values in y axis calculated from base 2.The following code example demonstrates the logarithmic values in y axis calculated from base 2. The following code example demonstrates the range customization of the axis.
+To customise the range of the log axis, you can use the [Minimum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html#Syncfusion_Maui_Charts_LogarithmicAxis_Minimum), [Maximum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html#Syncfusion_Maui_Charts_LogarithmicAxis_Maximum) and [Interval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html#Syncfusion_Maui_Charts_LogarithmicAxis_Interval) properties of [LogarithmicAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html). By default, a nice range will be calculated automatically based on the provided data.The following code example demonstrates the logarithmic values in the y axis calculated from base 2. The following code example demonstrates the logarithmic values in the y axis calculated from base 2. The following code example demonstrates the range of customization of the axis.
 
 {% tabs %}
 
@@ -414,7 +414,7 @@ chart.YAxes = new LogarithmicAxis() {
 
 ## Customizing the logarithmic base
 
-Logarithmic base can be customized by using the [[LogarithmicBase](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html#Syncfusion_Maui_Charts_LogarithmicAxis_LogarithmicBase) property of the axis. By default, the base of a logarithmic axis is set to 10. You can, however, set the base to any value of your requirement. Just ensure that the base value is any positive number greater than 1. The following code example demonstrates the logarithmic values in y axis calculated from base 2.
+The logarithmic base of the axis can be customised by using the [[LogarithmicBase](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html#Syncfusion_Maui_Charts_LogarithmicAxis_LogarithmicBase) property of the axis. By default, the base of a logarithmic axis is set to 10. You can, however, set the base to any value that meets your requirements. Just ensure that the base value is any positive number greater than 1. The following code example demonstrates the logarithmic values in the y axis calculated from base 2.
 
 {% tabs %}
 
