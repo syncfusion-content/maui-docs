@@ -9,23 +9,24 @@ documentation: ug
 
 # Selection in .NET MAUI Chart
 
-Circular chart supports selection that allows to select or highlight a segment in the chart by using [ChartSelectionBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelectionBehavior.html).
+[SfCircularChart]() supports selection that allows you to select or highlight a segment in the chart by using [DataPointSelectionBehavior]().
 
-## Enable Selection
+## Data Point Selection
 
-To enable the selection in chart, create an instance of [ChartSelectionBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelectionBehavior.html) and set it to the [SelectionBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_SelectionBehavior) property of circular chart. And also need to set the `SelectionBrush` property to highlight the segment in the series.
+To enable the data point selection in the [SfCircularChart](), create an instance of [DataSelectionBehavior]() and set a color value for[SelectionBrush]() property to highlight the segment in the series. Then set the selection instance to the [SelectionBehavior]() property of the chart series.
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <chart:SfCircularChart>
-    <chart:SfCircularChart.SelectionBehavior>
-        <chart:ChartSelectionBehavior />
-    </chart:SfCircularChart.SelectionBehavior>
-<chart:SfCircularChart.Series>
-    <chart:PieSeries SelectionBrush="BlueViolet"/>
-</chart:SfCircularChart.Series>
+    <chart:SfCircularChart.Series>
+        <chart:PieSeries>
+            <chart:PieSeries.SelectionBehavior>
+                <chart:DataPointSelectionBehavior SelectionBrush="BlueViolet"/>
+            </chart:PieSeries.SelectionBehavior>
+        </chart:PieSeries>
+    </chart:SfCircularChart.Series>
 </chart:SfCircularChart>
 
 {% endhighlight %}
@@ -34,18 +35,67 @@ To enable the selection in chart, create an instance of [ChartSelectionBehavior]
 
 SfCircularChart chart = new SfCircularChart();
 
-ChartSelectionBehavior selection = new ChartSelectionBehavior();
-chart.SelectionBehavior = selection;
+DataPointSelectionBehavior selection = new DataPointSelectionBehavior();
+selection.SelectionBrush = Brush.BlueViolet;
 
 PieSeries series = new PieSeries();
-series.SelectionBrush = Brush.BlueViolet;
+series.SelectionBehavior = selection;
 chart.Series.Add(series);
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Segment selection support in MAUI Chart](Selection_images/maui_chart_segment_selection.png)
+![Segment selection support in MAUI CircularChart](Selection_images/maui_chart_segment_selection.png)
+
+## Properties
+
+The following properties are used to configure the selection feature,
+
+* [Type]() - Gets the ChartSelectionType enum value for Selection behavior.     
+And the following types are in ChartSelectionType :
+    * ChartSelectionType.None
+    * ChartSelectionType.Single
+    * ChartSelectionType.SingleDeselect
+    * ChartSelectionType.Multiple
+* [SelectionBrush]() - Gets the Selection brush color for Selection behavior.
+* [SelectedIndex]() - Gets the index of segment to be selected in Selection behavior.
+* [SelectedIndexes]() - Gets the list of segments to be selected in Selection behavior.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:PieSeries>
+    <chart:PieSeries.SelectionBehavior>
+        <chart:DataPointSelectionBehavior SelectionBrush="BlueViolet" SelectedIndex="5" Type="Single"/>
+    </chart:PieSeries.SelectionBehavior>
+</chart:PieSeries>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCircularChart chart = new SfCircularChart();
+
+DataPointSelectionBehavior selection = new DataPointSelectionBehavior();
+selection.SelectionBrush = Brush.BlueViolet;
+selection.SelectedIndex = 5;
+selection.Type = ChartSelectionType.Single;
+
+PieSeries series = new PieSeries();
+series.SelectionBehavior = selection;
+chart.Series.Add(series);
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![SelectionBrush, SelectedIndex and Type properties in DataPointSelectionBehavior](Selection_images/data_point_selection_properties.PNG)
+
+## Methods
+
+The Selection Behavior has a public method called [ClearSelecton()](), which resets all the current Selection properties to default.
 
 ## Events
 
@@ -53,17 +103,15 @@ The following events are available in chart [SfCircularChart](https://help.syncf
 
 ### SelectionChanging
 
-The [SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_SelectionChanging) event occurs before the data point is being selected. This is a cancelable event. This argument contains the following information.
+The [SelectionChanging]() event occurs before the data point is being selected. This is a cancelable event. This argument contains the following information.
 
-* [CurrentIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SelectionEventArgs.html#Syncfusion_Maui_Charts_SelectionEventArgs_CurrentIndex) - Gets the index of currently selected data point.
-* [PreviousIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SelectionEventArgs.html#Syncfusion_Maui_Charts_SelectionEventArgs_PreviousIndex) - Gets the index of previously selected data point.
-* [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SelectionEventArgs.html#Syncfusion_Maui_Charts_SelectionEventArgs_Series) - Gets the selected series.
-* [Cancel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SelectionChangingEventArgs.html#Syncfusion_Maui_Charts_SelectionChangingEventArgs_Cancel) - Gets or sets a value indicating whether to continue the segment selection.
+* [NewIndexws]() - Gets the index of currently selected data point.
+* [OldIndexes]() - Gets the index of previously selected data point.
+* [Cancel]() - Gets a boolean value indicating whether to continue the segment selection or not.
 
 ### SelectionChanged
 
-The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_SelectionChanged) event occurs after a data point has been selected. This argument contains the following information.
+The [SelectionChanged]() event occurs after a data point has been selected. This argument contains the following information.
 
-* [CurrentIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SelectionEventArgs.html#Syncfusion_Maui_Charts_SelectionEventArgs_CurrentIndex) - Gets the index of currently selected data point.
-* [PreviousIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SelectionEventArgs.html#Syncfusion_Maui_Charts_SelectionEventArgs_PreviousIndex) - Gets the index of previously selected data point.
-* [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SelectionEventArgs.html#Syncfusion_Maui_Charts_SelectionEventArgs_Series) - Gets the selected series.
+* [NewIndexes]() - Gets the index of currently selected data point.
+* [OldIndexes]() - Gets the index of previously selected data point.
