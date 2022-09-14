@@ -374,7 +374,7 @@ chart.YAxes.Add(secondaryAxis);
 
 ## Customizing the logarithmic range
 
-To customise the range of the log axis, you can use the [Minimum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html#Syncfusion_Maui_Charts_LogarithmicAxis_Minimum), [Maximum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html#Syncfusion_Maui_Charts_LogarithmicAxis_Maximum) and [Interval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html#Syncfusion_Maui_Charts_LogarithmicAxis_Interval) properties of [LogarithmicAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html). By default, a nice range will be calculated automatically based on the provided data.The following code example demonstrates the logarithmic values in the y axis calculated from base 2. The following code example demonstrates the logarithmic values in the y axis calculated from base 2. The following code example demonstrates the range of customization of the axis.
+To customise the range of the log axis, you can use the [Minimum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html#Syncfusion_Maui_Charts_LogarithmicAxis_Minimum), [Maximum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html#Syncfusion_Maui_Charts_LogarithmicAxis_Maximum) and [Interval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html#Syncfusion_Maui_Charts_LogarithmicAxis_Interval) properties of [LogarithmicAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html). By default, a nice range will be calculated automatically based on the provided data. The following code example demonstrates the range of customization of the axis.
 
 {% tabs %}
 
@@ -414,7 +414,7 @@ chart.YAxes = new LogarithmicAxis() {
 
 ## Customizing the logarithmic base
 
-The logarithmic base of the axis can be customised by using the [LogarithmicBase](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html#Syncfusion_Maui_Charts_LogarithmicAxis_LogarithmicBase) property of the axis. By default, the base of a logarithmic axis is set to 10. You can, however, set the base to any value that meets your requirements. Just ensure that the base value is any positive number greater than 1. The following code example demonstrates the logarithmic values in the y axis calculated from base 2.
+The log base can be customised by using the [LogarithmicBase](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html#Syncfusion_Maui_Charts_LogarithmicAxis_LogarithmicBase) property of the axis. By default, the base of a logarithmic axis is set to 10. You can, however, set the base to any value that meets your requirements. Just ensure that the base value is any positive number greater than 1. The following code example demonstrates the logarithmic values in the y axis calculated from base 2.
 
 {% tabs %}
 
@@ -437,6 +437,32 @@ chart.YAxes = new LogarithmicAxis() { LogarithmicBase = 2 };
 {% endtabs %}
 
 ![LogarithmicAxis base customization in MAUI Chart](Axis_Images/maui_chart_logarithmic_axis_base.jpg)
+
+## Logarithmic Interval
+
+The logarithmic interval can be customised by using the [Interval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html#Syncfusion_Maui_Charts_LogarithmicAxis_Interval) property of the axis. In the logarithmic axis, the interval is based on powers. When the logarithmic base is 10 and the logarithmic interval is 1, then the axis labels are placed at an interval of 10. i.e., 1, 10, 100, 1000, etc. When the logarithmic interval is 2, then the axis labels are placed at an interval of 102. i.e., 1, 100, 1000, etc. The default value of the interval is 1.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCartesianChart.YAxes>
+
+    <chart:LogarithmicAxis Interval="2"/>
+
+</chart:SfCartesianChart.YAxes>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+chart.YAxes = new LogarithmicAxis() { Interval = 2 };
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![LogarithmicAxis Interval in MAUI Chart](Axis_Images/maui_chart_logarithmic_axis_interval.jpg)
 
 ## Inversed
 
