@@ -9,11 +9,11 @@ documentation: ug
 
 # Selection in .NET MAUI Chart
 
-[SfCircularChart]() supports selection that allows you to select or highlight a segment in the chart by using [DataPointSelectionBehavior]().
+[SfCircularChart]() provides selection behavior, which allows you to select or highlight a chart segment using [DataPointSelectionBehavior]().
 
 ## Data Point Selection
 
-To enable the data point selection in the [SfCircularChart](), create an instance of [DataSelectionBehavior]() and set a color value for[SelectionBrush]() property to highlight the segment in the series. Then set the selection instance to the [SelectionBehavior]() property of the chart series.
+To enable the data point selection in the [SfCircularChart](), create an instance of [DataPointSelectionBehavior]() and specify a color value for the [SelectionBrush]() property to highlight the selected segment in the series. The selection instance should then be set to the chart series [SelectionBehavior]() property.
 
 {% tabs %}
 
@@ -50,17 +50,17 @@ chart.Series.Add(series);
 
 ## Properties
 
-The following properties are used to configure the selection feature,
+The Selection feature can be configured using the following properties:
 
-* [Type]() - Gets the ChartSelectionType enum value for Selection behavior.     
-And the following types are in ChartSelectionType :
+* [Type]() - Retrieves the ChartSelectionType Enum value for the Selection Behavior.     
+And the following SelectionType can be achieved during Selection:
     * ChartSelectionType.None
     * ChartSelectionType.Single
     * ChartSelectionType.SingleDeselect
     * ChartSelectionType.Multiple
-* [SelectionBrush]() - Gets the Selection brush color for Selection behavior.
-* [SelectedIndex]() - Gets the index of segment to be selected in Selection behavior.
-* [SelectedIndexes]() - Gets the list of segments to be selected in Selection behavior.
+* [SelectionBrush]() - Retrieves the SelectionBrush color value for Selection Behavior.
+* [SelectedIndex]() - Retrieves the index value of the segment that should be selected during the Selection.
+* [SelectedIndexes]() - Retrieves the list of indexes of the segments that should be selected during the Selection.
 
 {% tabs %}
 
@@ -95,23 +95,23 @@ chart.Series.Add(series);
 
 ## Methods
 
-The Selection Behavior has a public method called [ClearSelecton()](), which resets all the current Selection properties to default.
+The Selection Behavior has a public method called [ClearSelection ()](), which resets all current Selection Behavior property values to their default values.
 
 ## Events
 
-The following events are available in chart [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html).
+The following public Chart Selection Events are available in [ChartSelectionBehavior]().
 
 ### SelectionChanging
 
-The [SelectionChanging]() event occurs before the data point is being selected. This is a cancelable event. This argument contains the following information.
+The [SelectionChanging]() event is triggered before any data point has been selected. This event is cancelable, and these details are contained in the following event arguments.
 
-* [NewIndexws]() - Gets the index of currently selected data point.
-* [OldIndexes]() - Gets the index of previously selected data point.
-* [Cancel]() - Gets a boolean value indicating whether to continue the segment selection or not.
+* [NewIndexes]() - Holds the index of the currently selected data point.
+* [OldIndexes]() - Holds the index of the previously selected data point.
+* [Cancel]() - Returns a Boolean value indicating whether to continue the segment selection or not.
 
 ### SelectionChanged
 
-The [SelectionChanged]() event occurs after a data point has been selected. This argument contains the following information.
+The [SelectionChanged]() event is triggered after a data point has been selected. And these following details are contained in the following event arguments.
 
-* [NewIndexes]() - Gets the index of currently selected data point.
-* [OldIndexes]() - Gets the index of previously selected data point.
+* [NewIndexes]() - Holds the index of the currently selected data point.
+* [OldIndexes]() - Holds the index of the previously selected data point.
