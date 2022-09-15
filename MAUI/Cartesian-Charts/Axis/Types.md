@@ -337,7 +337,7 @@ chart.XAxes.Add(primaryAxis);
 
 ## Logarithmic Axis
 
-The [LogarithmicAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html) uses a logarithmic scale, and it is very useful in visualising data when the data range of a chart’s series has significant disparity. Plotting data on such an axis is equivalent to plotting the log of that data.
+The [LogarithmicAxis]() uses a logarithmic scale, and it is very useful in visualising data when the data range of a chart’s series has significant disparity. Plotting data on such an axis is equivalent to plotting the log of that data.
 
 {% tabs %}
 
@@ -372,9 +372,9 @@ chart.YAxes.Add(secondaryAxis);
 
 ![LogarithmicAxis support in MAUI Chart](Axis_Images/maui_chart_logarithmic_axis.jpg)
 
-## Customizing the logarithmic range
+### Customizing the logarithmic range
 
-To customise the range of the log axis, you can use the [Minimum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html#Syncfusion_Maui_Charts_LogarithmicAxis_Minimum), [Maximum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html#Syncfusion_Maui_Charts_LogarithmicAxis_Maximum) and [Interval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html#Syncfusion_Maui_Charts_LogarithmicAxis_Interval) properties of [LogarithmicAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html). By default, a nice range will be calculated automatically based on the provided data. The following code example demonstrates the range of customization of the axis.
+To customise the range of the log axis, you can use the [Minimum](), [Maximum]() and [Interval]() properties of [LogarithmicAxis](). By default, a nice range will be calculated automatically based on the provided data. The following code example demonstrates the range of customization of the axis.
 
 {% tabs %}
 
@@ -412,9 +412,9 @@ chart.YAxes = new LogarithmicAxis() {
 
 ![LogarithmicAxis range customization in MAUI Chart](Axis_Images/maui_chart_logarithmic_axis_range.jpg)
 
-## Customizing the logarithmic base
+### Logarithmic base
 
-The log base can be customised by using the [LogarithmicBase](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html#Syncfusion_Maui_Charts_LogarithmicAxis_LogarithmicBase) property of the axis. By default, the base of a logarithmic axis is set to 10. You can, however, set the base to any value that meets your requirements. Just ensure that the base value is any positive number greater than 1. The following code example demonstrates the logarithmic values in the y axis calculated from base 2.
+The log base can be customised by using the [LogarithmicBase]() property of the axis. By default, the base of a logarithmic axis is set to 10. You can, however, set the base to any value that meets your requirements. Just ensure that the base value is any positive number greater than 1. The following code example demonstrates the logarithmic values in the y axis calculated from base 2.
 
 {% tabs %}
 
@@ -440,7 +440,7 @@ chart.YAxes = new LogarithmicAxis() { LogarithmicBase = 2 };
 
 ## Logarithmic Interval
 
-The logarithmic interval can be customised by using the [Interval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html#Syncfusion_Maui_Charts_LogarithmicAxis_Interval) property of the axis. In the logarithmic axis, the interval is based on powers. When the logarithmic base is 10 and the logarithmic interval is 1, then the axis labels are placed at an interval of 10. i.e., 1, 10, 100, 1000, etc. When the logarithmic interval is 2, then the axis labels are placed at an interval of 102. i.e., 1, 100, 1000, etc. The default value of the interval is 1.
+The logarithmic interval can be customised by using the [Interval]() property of the axis. In the logarithmic axis, the interval is based on powers. When the logarithmic base is 10 and the logarithmic interval is 1, then the axis labels are placed at an interval of 10. i.e., 1, 10, 100, 1000, etc. When the logarithmic interval is 2, then the axis labels are placed at an interval of 102. i.e., 1, 100, 1000, etc. The default value of the interval is 1.
 
 {% tabs %}
 
