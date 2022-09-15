@@ -438,7 +438,7 @@ chart.YAxes = new LogarithmicAxis() { LogarithmicBase = 2 };
 
 ![LogarithmicAxis base customization in MAUI Chart](Axis_Images/maui_chart_logarithmic_axis_base.jpg)
 
-## Logarithmic Interval
+### Logarithmic Interval
 
 The logarithmic interval can be customised by using the [Interval]() property of the axis. In the logarithmic axis, the interval is based on powers. When the logarithmic base is 10 and the logarithmic interval is 1, then the axis labels are placed at an interval of 10. i.e., 1, 10, 100, 1000, etc. When the logarithmic interval is 2, then the axis labels are placed at an interval of 102. i.e., 1, 100, 1000, etc. The default value of the interval is 1.
 
