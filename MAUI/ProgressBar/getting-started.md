@@ -74,7 +74,7 @@ using Syncfusion.Maui.ProgressBar;
 
 ## Initializing progress bar
 
-Create an instance for the progress bar control, and add it as content.The progress bar control has two variants: SfLinearProgressBar and SfCircularProgressBar. Each renders the progress in its own shape, such as rectangle and circle, respectively. Initialize both the progress bars with a progress value using the Progress property as demonstrated in the following code sample.
+Create an instance for the progress bar control, and add it as content. The progress bar control has two variants: SfLinearProgressBar and SfCircularProgressBar. Each renders the progress in its own shape, such as rectangle and circle, respectively. Initialize both the progress bars with a progress value using the Progress property as demonstrated in the following code sample.
 
 {% tabs %}
 
