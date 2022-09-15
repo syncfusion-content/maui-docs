@@ -11,7 +11,7 @@ documentation: ug
 
 This section explains the steps required to work with the progress bar control for .NET MAUI.
 
-## Creating an application using the .NET MAUI Maps
+## Creating an application using the .NET MAUI ProgressBar
 
 * Create a new .NET MAUI application in the Visual Studio.
 
