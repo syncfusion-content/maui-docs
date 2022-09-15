@@ -89,6 +89,8 @@ Delete<br/><br/></td><td>Deletes the selected appointment from appointments coll
 
 #### View navigations
 
+#### Windows
+
 <table>
 <tr>
 <td>
@@ -122,6 +124,67 @@ Moves the view to Timeline work week view.<br/><br/></td></tr>
 <td>
 Ctrl + Alt + 8 => TimelineMonthView<br/><br/></td><td>
 Moves the view to Timeline month view.<br/><br/></td></tr>
+<tr>
+<td>
+Ctrl + Alt + 9 => AgendaView<br/><br/></td><td>
+Moves the view to Agenda view.<br/><br/></td></tr>
+</table>
+
+#### MAC
+
+<table>
+<tr>
+<td>
+Ctrl + 1 => DayView<br/><br/></td><td>
+Moves the view to day view.<br/><br/></td></tr>
+<tr>
+<td>
+Ctrl + 2 => WeekView<br/><br/></td><td>
+Moves the view to week view.<br/><br/></td></tr>
+<tr>
+<td>
+Ctrl + 3 => WorkWeekView<br/><br/></td><td>
+Moves the view to work week view.<br/><br/></td></tr>
+<tr>
+<td>
+Ctrl + 4 => MonthView<br/><br/></td><td>
+Moves the view to work week view.<br/><br/></td></tr>
+<tr>
+<td>
+Ctrl + 5 => TimelineDayView<br/><br/></td><td>
+Moves the view to Timeline day view.<br/><br/></td></tr>
+<tr>
+<td>
+Ctrl + 6 => TimelineWeekView<br/><br/></td><td>
+Moves the view to Timeline week view.<br/><br/></td></tr>
+<tr>
+<td>
+Ctrl + 7 => TimelineWorkWeekView<br/><br/></td><td>
+Moves the view to Timeline work week view.<br/><br/></td></tr>
+<tr>
+<td>
+Ctrl + 8 => TimelineMonthView<br/><br/></td><td>
+Moves the view to Timeline month view.<br/><br/></td></tr>
+<tr>
+<td>
+Ctrl + 9 => AgendaView<br/><br/></td><td>
+Moves the view to Agenda view.<br/><br/></td></tr>
+</table>
+
+#### Header
+
+<table>
+<tr>
+<td>
+<b> Navigation Shortcut Keys </b> <br/><br/></td><td>
+<b> Descriptions </b> <br/><br/></td></tr>
+<tr>
+<td>
+Tab<br/><br/></td><td>Move to next focusable element in header.<br/><br/></td></tr>
+<tr>
+<td>
+Shift + Tab<br/><br/></td><td>
+Move to previous focusable element in header.<br/><br/></td></tr>
 </table>
 
 N> You can also explore our [MAUI Scheduler example](https://github.com/syncfusion/maui-demos) to knows how to schedule and manage appointments through an intuitive user interface, similar to the Outlook calendar.
