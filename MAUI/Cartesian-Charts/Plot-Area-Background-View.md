@@ -17,7 +17,7 @@ documentation: ug
 
   <chart:SfCartesianChart>
         <chart:SfCartesianChart.PlotAreaBackgroundView>
-            <Image Source="https://help.syncfusion.com/maui/circular-charts/explode_images/maui_exploded_doughnut_chart.png"  />
+            <Image Source="https://cdn.syncfusion.com/content/images/company-logos/Syncfusion_Logo_Image.png"  />
         </chart:SfCartesianChart.PlotAreaBackgroundView>
     </chart:SfCartesianChart>
 
@@ -26,7 +26,7 @@ documentation: ug
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-Image image = new Image { Source = "https://help.syncfusion.com/maui/circular-charts/explode_images/maui_exploded_doughnut_chart.png" };
+Image image = new Image { Source = "https://cdn.syncfusion.com/content/images/company-logos/Syncfusion_Logo_Image.png" };
 chart.PlotAreaBackgroundView = image;
 this.Content = chart;
 
@@ -34,5 +34,5 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Plot Area Background View in MAUI chart](Tooltip_images/maui_chart_tooltip_customization.png)
+![Plot Area Background View in MAUI chart](Plot-Area-Background-View_images/maui_chart_plot_area_background_view.png)
 
