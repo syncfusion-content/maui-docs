@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Swiping in .NET MAUI ListView control | Syncfusion
-description: Learn here all about Swiping support in Syncfusion .NET MAUI ListView (SfListView) control, its elements and more.
+description: Learn here all about swiping support in Syncfusion .NET MAUI ListView (SfListView) control, its elements and more.
 platform: MAUI
 control: SfListView
 documentation: ug
@@ -11,19 +11,19 @@ documentation: ug
 
 ## Overview
 
-The `SfListView` allows swiping items to do custom actions such as deleting the data, adding the data, editing the data, etc. To enable swiping, set the `SfListView.AllowSwiping` property to `true`. Swipe views are displayed when swiping from left to right or right to left (for `Horizontal` orientation, top to bottom or bottom to top) on the item. 
+The `SfListView` allows swiping items to achieve custom actions such as deleting the data, adding the data, editing the data, etc. To enable swiping, set the `SfListView.AllowSwiping` property to `true`. Swipe views are displayed when swiping from left to right or right to left (for `Horizontal` orientation, top to bottom, or bottom to top) on the item. 
 
-It provides customizable swipe templates for swiping on left and right sides. You can restrict the layout of swipe view up to a certain position when swiping the item by setting the `SfListView.SwipeThreshold` property. You can set size of the swipe views by setting the `SfListView.SwipeOffset` property.
+It provides customizable swipe templates for swiping on the left and right sides. You can restrict the layout of the swipe view up to a certain position when swiping the item by setting the `SfListView.SwipeThreshold` property. You can set the size of the swipe views by setting the `SfListView.SwipeOffset` property.
 
-N> When [SfListView.AutoFitMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_AutoFitMode) is `AutoFitMode.Height` for main listview, the height of inner listview will change while scrolling the view and items will be refreshed.
+N> When [SfListView.AutoFitMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_AutoFitMode) is `AutoFitMode.Height` for the main listview, the height of inner listview will change while scrolling the view and items will be refreshed.
 
-N> When tap a swiped item, the [SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionChanging) and [SelectionChanged](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.SfListView.html#Syncfusion_ListView_XForms_SfListView_SelectionChanged) events will not occur since the swiped item is reset at this time.
+N> When tapping a swiped item, the [SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionChanging) and [SelectionChanged](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.SfListView.html#Syncfusion_ListView_XForms_SfListView_SelectionChanged) events will not occur since the swiped item is reset at this time.
 
 N> When the `Visual` is `Material`, you need to set the `BackgroundColor` to `ItemTemplate` to show the slide swiping.
 
-## Assigning Start and End swipe templates
+## Assigning start and end swipe templates
 
-The User Interface (UI) for swiping can be customized by using swipe templates `SfListView.StartSwipeTemplate` when swiping towards End and `SfListView.EndSwipeTemplate` when swiping towards Start. The contents inside the swipe template are arranged based on the offset values when swiping an item. You can reset the swiping item or swiped item by calling the `SfListView.ResetSwipeItem` method.
+The User Interface (UI) for swiping can be customized by using swipe templates `SfListView.StartSwipeTemplate` when swiping towards the end and `SfListView.EndSwipeTemplate` when swiping towards the start. The contents inside the swipe template are arranged based on the offset values when swiping an item. You can reset the swiping item or swiped item by calling the `SfListView.ResetSwipeItem` method.
 
 {% tabs %}
 {% highlight xaml tabtitel=MainPage.xaml" %}
@@ -70,9 +70,9 @@ listView.StartSwipeTemplate = new DataTemplate(() =>
 {% endhighlight %}
 {% endtabs %}
 
-N> Similarly, the UI for swiping towards left can be customized by using the `SfListView.EndSwipeTemplate`.
+N> Similarly, the UI for swiping left can be customized by using the `SfListView.EndSwipeTemplate`.
 
-N> Swipe Template is mandatory to perform swiping in the `SfListView`.
+N> The Swipe Template is mandatory to perform swiping in the `SfListView`.
 
 ![Start swiping functionalities](Images/swiping/maui-listview-startswipetemplate.jpg)
 
@@ -80,11 +80,11 @@ Download the entire source code from GitHub `here`.
 
 ![End swiping functionalities](Images/swiping/maui-listview-endswipetemplate.jpg)
 
-N> To customize the appearance of each swipe item with different templates based on specific constraints by using the `DataTemplateSelector`. 
+N> Customize the appearance of each swipe item with different templates based on specific constraints by using the `DataTemplateSelector`. 
 
 ## Working with multiple views in swipe template
 
-The swipe templates allows customizing with custom actions such as deleting the data, adding the data, editing the data, etc. by loading multiple views.
+The swipe templates allow customizing with custom actions such as deleting the data, adding the data, editing the data, etc. by loading multiple views.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -166,7 +166,7 @@ listView.StartSwipeTemplate = new DataTemplate(() =>
 
 ![Customize Start swipe in listview](Images/swiping/maui-listview-working-with-multiple-views-in-swipetemplate.jpg)
 
-To delete the item when `Delete` image is tapped and setting favorites to item when `Favorites` image is tapped, follow the code example.
+To delete the item when `Delete` image is tapped and set favorites to an item when `Favorites` image is tapped, follow the code example shown.
 
 {% tabs %}
 {% highlight c# %}
@@ -225,7 +225,7 @@ private void rightImage_BindingContextChanged(object sender, EventArgs e)
 
 ## Performing swipe delete operation
 
-To delete an item in view while swiping the item from one extent to other by using `SfListView.SwipeEnded` event. By setting the `SfListView.SwipeOffset` value to the view size to swipe the item upto end of the item.
+To delete an item in view while swiping the item from one extent to another,Use the `SfListView.SwipeEnded` event. By setting the `SfListView.SwipeOffset` value to the view size to swipe the item up to the end of the item.
 
 {% tabs %}
 {% highlight xaml %}
@@ -383,7 +383,7 @@ The `SfListView.SwipeStarting` event is raised when the swipe offset changes fro
 The `SwipeStarting` event provides the following properties in their arguments:
 
  * `Index`: Defines the swiping item index.
- * `DataItem`: Defines the underlying data associated with the swiped item. as its arguments. 
+ * `DataItem`: Defines the underlying data associated with the swiped item as its arguments. 
  * `Direction`: Defines the swipe direction of the swiped item.
  
 The `SwipeStarting` event is used for the following use case:
@@ -420,12 +420,12 @@ The `Swiping` event provides the following properties in their arguments:
  * `DataItem`: Defines the underlying data associated with the swiped item as its arguments.
  * `Direction`: Defines the swipe direction of the swiped item.
  * `OffSet`: Defines the current swipe offset of the item being swiped.
- * `Handled`: Defines that if it is `true`, current swipe offset value remains same for the swiped item until the `SwipeEnded` event is raised.
+ * `Handled`: Defines that if it is `true`,the current swipe offset value remains the same for the swiped item until the `SwipeEnded` event is raised.
 
 The `Swiping` event used for the following use cases:
 
-* To maintain the current offset value for the swiped item till the `SwipeEnded` event gets called.
-* To hold the swipe view being swiping by setting the `Handled` property to `true` if swipe offset meet certain position.
+* To maintain the current offset value for the swiped item until the `SwipeEnded` event gets called.
+* Hold the swipe view being swiping by setting the `Handled` property to `true` if the swipe offset meets a certain position.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml.cs" %}
@@ -487,13 +487,13 @@ private void ListView_SwipeEnded(object sender, SwipeEndedEventArgs e)
 ### SwipeReset Event
 
 
-`SwipeReset` event provides the following properties in their arguments:
+The `SwipeReset` event provides the following properties in their arguments:
 
  * `Index`: Defines the swiping item index.
  * `DataItem`: Defines the underlying data associated with the swiped item as its arguments. 
  * `OffSet`: Defines the current swipe offset of the item being swiped.
  
-The `SwipeReset` event used for the following use case:
+The `SwipeReset` event is used for the following use case:
 
  * To skip the reset operation for a swiped item.
 
@@ -517,7 +517,7 @@ private void ListView_SwipeReset(object sender, ResetSwipeEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-## How to reset swipe view automatically?
+## How to reset swipe the view automatically
 
 Swiped item can be reset by defining the `SfListView.SwipeOffSet` argument of `SfListView.SwipeEnded` event to `0` when the swiping action is completed.
 
@@ -531,7 +531,7 @@ private void ListView_SwipeEnded(object sender, SwipeEndedEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-## How to swipe an item indefinitely?
+## How to swipe an item indefinitely
 
 To swipe an item indefinitely, set the `SfListView.SwipeOffset` property by considering the width or height of the SfListView with [SfListView.Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_Orientation) accordingly.
 
@@ -553,7 +553,7 @@ Download the entire source code from GitHub `here`
 
 ![Indefinite swipe in listview](Images/swiping/maui-listview-swipe-an-item-indefinetly.jpg)
 
-## How to edit data by swiping?
+## How to edit data by swiping
 
 The `SfListView` allows editing the item data using either `SfListView.EndSwipeTemplate` or `SfListView.StartSwipeTemplate` by loading edit view into the respective template after swiping the item.
 
@@ -610,7 +610,7 @@ listView.EndSwipeTemplate = new DataTemplate(() =>
 {% endhighlight%}
 {% endtabs %}
 
-To set tapped items binding context for pop-up page, follow the code example.
+To set tapped items binding context for pop-up page, follow the code example below.
 
 {% tabs %}
 {% highlight c# %}
@@ -625,4 +625,4 @@ private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
 
 Download entire source code from GitHub `here`.
 
-N> You can refer to our [.NET MAUI ListView](https://www.syncfusion.com/maui-controls/maui-listview) feature tour page for its groundbreaking feature representations. You can also explore our `.NET MAUI ListView example` to know how to render set of data items with Xamarin.Forms views or custom templates.
+N> You can refer to our [.NET MAUI ListView](https://www.syncfusion.com/maui-controls/maui-listview) feature tour page for its groundbreaking feature representations. You can also explore our `.NET MAUI ListView example` to know how to render set of data items with .NET MAUI views or custom templates.
