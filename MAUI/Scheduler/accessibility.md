@@ -1,4 +1,4 @@
-#  Accessibility Support in Maui Scheduler (SfScheduler)
+Accessibility Support in Maui Scheduler (SfScheduler)
 
 ## Keyboard navigation
 
@@ -13,11 +13,11 @@ The `SfScheduler` supports selection using keyboard interactions.
 <b> Descriptions </b> <br/><br/></td></tr>
 <tr>
 <td>
-Right arrow<br/><br/></td><td>Moves selection to the same time slot on the next day.<br/><br/></td></tr>
+Right arrow<br/><br/></td><td>Moves selection to the same time slot on the next (LTR) or previous (RTL) day.<br/><br/></td></tr>
 <tr>
 <td>
 Left arrow<br/><br/></td><td>
-Moves selection to the same time slot on the previous day.<br/><br/></td></tr>
+Moves selection to the same time slot on the previous (LTR) or next (RTL) day.<br/><br/></td></tr>
 <tr>
 <td>
 Down arrow<br/><br/></td><td>
@@ -26,6 +26,10 @@ Moves selection to the next time slot directly below the currently selected time
 <td>
 Up arrow<br/><br/></td><td>
 Moves selection to the previous time slot directly above the currently selected time slot.<br/><br/></td></tr>
+<tr>
+<td>
+Enter<br/><br/></td><td>
+It triggers Tapped event<br/><br/></td></tr>
 </table>
 
 #### Timeline views
@@ -37,11 +41,15 @@ Moves selection to the previous time slot directly above the currently selected 
 <b> Descriptions </b> <br/><br/></td></tr>
 <tr>
 <td>
-Right arrow<br/><br/></td><td>Moves selection to the next time slot of the currently selected time slot.<br/><br/></td></tr>
+Right arrow<br/><br/></td><td>Moves selection to the next (LTR) or previous (RTL) time slot of the currently selected time slot. <br/><br/></td></tr>
 <tr>
 <td>
 Left arrow<br/><br/></td><td>
-Moves selection to the previous time slot of the currently selected time slot.<br/><br/></td></tr>
+Moves selection to the previous (LTR) or next (RTL) time slot of the currently selected time slot.<br/><br/></td></tr>
+<tr>
+<td>
+Enter<br/><br/></td><td>
+It triggers Tapped event<br/><br/></td></tr>
 </table>
 
 #### Month view
@@ -53,11 +61,11 @@ Moves selection to the previous time slot of the currently selected time slot.<b
 <b> Descriptions </b> <br/><br/></td></tr>
 <tr>
 <td>
-Right arrow<br/><br/></td><td>Moves selection to the next date of the currently selected date.<br/><br/></td></tr>
+Right arrow<br/><br/></td><td>Moves selection to the next (LTR) or previous (LTR) date of the currently selected date.<br/><br/></td></tr>
 <tr>
 <td>
 Left arrow<br/><br/></td><td>
-Moves selection to the previous date of the currently selected date.<br/><br/></td></tr>
+Moves selection to the previous (LTR) or next (RTL) date of the currently selected date. <br/><br/></td></tr>
 <tr>
 <td>
 Down arrow<br/><br/></td><td>
@@ -66,6 +74,10 @@ Moves selection to the date directly below the currently selected date on the ne
 <td>
 Up arrow<br/><br/></td><td>
 Moves selection to the date directly above the currently selected date on the previous row.<br/><br/></td></tr>
+<tr>
+<td>
+Enter<br/><br/></td><td>
+It triggers Tapped event<br/><br/></td></tr>
 </table>
 
 #### Appointments
@@ -77,14 +89,22 @@ Moves selection to the date directly above the currently selected date on the pr
 <b> Descriptions </b> <br/><br/></td></tr>
 <tr>
 <td>
-Tab<br/><br/></td><td>Moves selection to the next appointment of the currently selected appointment.<br/><br/></td></tr>
+Tab<br/><br/></td><td>Moves selection to the next (LTR) or Previous (RTL) appointment of the currently selected appointment. 
+
+If the focus is in the last or first appointment, then focus will move to header<br/><br/></td></tr>
 <tr>
 <td>
 Shift + Tab<br/><br/></td><td>
-Moves selection to the previous appointment of the currently selected appointment.<br/><br/></td></tr>
+Moves selection to the previous (LTR) or next (RTL) appointment of the currently selected appointment. 
+
+If the focus is in the last or first appointment, then focus will move to header <br/><br/></td></tr>
 <tr>
 <td>
 Delete<br/><br/></td><td>Deletes the selected appointment from appointments collection.<br/><br/></td></tr>
+<tr>
+<td>
+Enter<br/><br/></td><td>
+It triggers Tapped event<br/><br/></td></tr>
 </table>
 
 #### View navigations
