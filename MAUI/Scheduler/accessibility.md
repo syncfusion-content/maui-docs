@@ -1,10 +1,19 @@
-Accessibility Support in Maui Scheduler (SfScheduler)
+---
+layout: post
+title: Accessibility in .NET MAUI SfScheduler control | Syncfusion
+description: Learn here about Accessibility support with the Syncfusion .NET MAUI Scheduler (SfScheduler) control, its elements and more.
+platform: maui
+control: SfScheduler
+documentation: ug
+---
+
+# Accessibility Support in .NET MAUI Scheduler (SfScheduler)
 
 ## Keyboard navigation
 
 The `SfScheduler` supports selection using keyboard interactions.
 
-#### Day, Week and WorkWeek views
+### Day, Week and WorkWeek views
 
 <table>
 <tr>
@@ -32,7 +41,7 @@ Enter<br/><br/></td><td>
 It triggers Tapped event<br/><br/></td></tr>
 </table>
 
-#### Timeline views
+### Timeline views
 
 <table>
 <tr>
@@ -52,7 +61,7 @@ Enter<br/><br/></td><td>
 It triggers Tapped event<br/><br/></td></tr>
 </table>
 
-#### Month view
+### Month view
 
 <table>
 <tr>
@@ -80,7 +89,7 @@ Enter<br/><br/></td><td>
 It triggers Tapped event<br/><br/></td></tr>
 </table>
 
-#### Appointments
+### Appointments
 
 <table>
 <tr>
@@ -107,7 +116,7 @@ Enter<br/><br/></td><td>
 It triggers Tapped event<br/><br/></td></tr>
 </table>
 
-#### View navigations
+### View navigations
 
 #### Windows
 
@@ -191,7 +200,7 @@ Ctrl + 9 => AgendaView<br/><br/></td><td>
 Moves the view to Agenda view.<br/><br/></td></tr>
 </table>
 
-#### Header
+### Header
 
 <table>
 <tr>
