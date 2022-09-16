@@ -33,11 +33,13 @@ circularProgressBar.StartAngle = 180;
 
 circularProgressBar.EndAngle = 360;
 
+this.Content = circularProgressBar;
+
 {% endhighlight %}
 
 {% endtabs %} 
 
-![angle]()
+![angle](images/Appearance/Angle.png)
 
 ## Range colors
 
@@ -60,9 +62,6 @@ The following code sample demonstrates how to map the solid color range in the p
 {% endhighlight %}
 
 {% highlight c# %}
-
-// Using linear progress bar.
-
 
 
 {% endhighlight %}
@@ -101,7 +100,6 @@ In the linear progress bar, the height of the track, progress and secondary prog
 
 {% highlight c# %}
 
-
 {% endhighlight %}
 
 {% endtabs %} 
@@ -112,10 +110,13 @@ In the linear progress bar, the height of the track, progress and secondary prog
 
 The following properties are used to customize the appearance of the circular progress bar:
 
-* [`IndicatorOuterRadius`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfCircularProgressBar.html#Syncfusion_XForms_ProgressBar_SfCircularProgressBar_IndicatorOuterRadius): Defines the outer radius of the progress indicator.
-* [`IndicatorInnerRadius`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfCircularProgressBar.html#Syncfusion_XForms_ProgressBar_SfCircularProgressBar_IndicatorInnerRadius): Defines the inner radius of the progress indicator.
-* [`TrackOuterRadius`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfCircularProgressBar.html#Syncfusion_XForms_ProgressBar_SfCircularProgressBar_TrackOuterRadius): Defines the outer radius of the track indicator.
-* [`TrackInnerRadius`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfCircularProgressBar.html#Syncfusion_XForms_ProgressBar_SfCircularProgressBar_TrackInnerRadius): Defines the inner radius of the track indicator.
+* [`ProgressRadiusFactor`](): Defines the outer radius of the progress indicator.
+* [`ProgressThickness`](): Defines the thickness of the progress indicator.
+* [`TrackRadiusFactor`](): Defines the outer radius of the track indicator.
+* [`TrackThickness`](): Defines the thickness of the track indicator.
+* [`ThicknessUnit`](): Specifies whether the [`ProgressThickness`]() or [`TrackThickness`]() are defined in pixel or factor.
+
+The [`ProgressThickness`]() or [`TrackThickness`]() of the progress bar can be specified either in pixel or factor. If the [`ThicknessUnit`]() is specified as Pixel, then the range will be rendered based on the provided pixel value. If the [`ThicknessUnit`]() is set as factor, the provided factor value will be multiplied with outer radius. For example, if the thickness width is set as 0.1, then 10% of outer radius is considered as thickness.
 
 The following code sample demonstrates how to customize the appearance of circular progress bar.
 
@@ -125,37 +126,49 @@ The following code sample demonstrates how to customize the appearance of circul
 
 <!--Circular progress bar with radius customization -->
 
-<progressBar:SfCircularProgressBar x:Name="TrackOutsideProgressBar" Grid.Column="0" Grid.Row="0"
-                                   Progress="75" Margin="0,10,0,0" IndicatorOuterRadius="0.7" 
-                                   IndicatorInnerRadius="0.65" ShowProgressValue="False">
-</progressBar:SfCircularProgressBar>       
+<progressBar:SfCircularProgressBar x:Name="TrackOutsideProgressBar"
+                                   Progress="75"
+                                   TrackRadiusFactor="0.8" 
+                                   ProgressRadiusFactor="0.75"
+                                   ThicknessUnit="Factor"
+                                   TrackThickness="0.05"
+                                   ProgressThickness="0.05">
+</progressBar:SfCircularProgressBar>    
 
 {% endhighlight %}
 
 {% highlight c# %}
-SfCircularProgressBar trackOutsideProgressBar = new SfCircularProgressBar();
 
-trackOutsideProgressBar.Progress = 75;
+SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 
-trackOutsideProgressBar.IndicatorOuterRadius = 0.7;
+circularProgressBar.Progress = 75;
 
-trackOutsideProgressBar.IndicatorInnerRadius = 0.65;
+circularProgressBar.TrackRadiusFactor = 0.8;
 
-trackOutsideProgressBar.ShowProgressValue = false;
+circularProgressBar.ProgressRadiusFactor = 0.75;
+
+circularProgressBar.TrackThickness = 0.05;
+
+circularProgressBar.ProgressThickness = 0.05;
+
+circularProgressBar.ThicknessUnit = SizeUnit.Factor;
+
+this.Content = circularProgressBar;
 
 {% endhighlight %}
 
 {% endtabs %} 
 
-![appearance](overview_images/appearance.png)
+![appearance]()
 
 ## Corner radius
 
-The [`CornerRadius`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfLinearProgressBar.html#Syncfusion_XForms_ProgressBar_SfLinearProgressBar_CornerRadius) property is used to customize the rounded edges in the linear progress bar as demonstrated in the following code sample.
+The [`CornerRadius`]() property is used to customize the rounded edges in the linear progress bar as demonstrated in the following code sample.
 
 {% tabs %} 
 
 {% highlight xaml %}
+
 <progressBar:SfLinearProgressBar Progress="50" TrackHeight="10" CornerRadius="10">
 
 </progressBar:SfLinearProgressBar>
@@ -176,18 +189,23 @@ linearProgressBar.CornerRadius = 10;
 
 ![cornerradius](overview_images/cornerradius.png)
 
+## Corner style customization
+
+The [`CornerStyle`]() property of circular progress bar specifies the corner type for the track or progress. The corners can be customized using the [`BothFlat`](), [`BothCurve`](), [`StartCurve`](), and [`EndCurve`]() options. The default value of this property is [`BothFlat`]().
+
 ## Color customization
 
 The following properties are used to customize the color in the progress bar:
 
-* [`ProgressColor`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_ProgressColor): Represents the color of the progress indicator.
-* [`TrackColor`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_TrackColor): Represents the color of the track indicator.
+* [`ProgressFill`](): Represents the color of the progress indicator.
+* [`TrackFill`](): Represents the color of the track indicator.
 
 The following code sample demonstrates the color customization in progress and track indicator.
 
 {% tabs %} 
 
 {% highlight xaml %}
+
 <progressBar:SfLinearProgressBar Progress="75" TrackColor="#3351483a" ProgressColor="#FF51483a">
 
 </progressBar:SfLinearProgressBar>
@@ -195,40 +213,38 @@ The following code sample demonstrates the color customization in progress and t
 {% endhighlight %}
 
 {% highlight c# %}
-SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 
-linearProgressBar.Progress = 75;
 
-linearProgressBar.ProgressColor = Color.FromHex("FF51483a");
-
-linearProgressBar.TrackColor = Color.FromHex("3351483a");
 
 {% endhighlight %}
 
 {% endtabs %} 
 
-![color1](overview_images/color1.png)
+![color1]()
 
-The linear progress bar provides support to customize the color for the secondary progress bar using the [`SecondaryProgressColor`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfLinearProgressBar.html#Syncfusion_XForms_ProgressBar_SfLinearProgressBar_SecondaryProgressColor) property as demonstrated in the following code sample.
+The linear progress bar provides support to customize the color for the secondary progress bar using the [`SecondaryProgressFill`]() property as demonstrated in the following code sample.
 
 {% tabs %} 
 
 {% highlight xaml %}
+
 <progressBar:SfLinearProgressBar Progress="25" SecondaryProgress="75" SecondaryProgressColor="CornflowerBlue"></progressBar:SfLinearProgressBar>
+
 {% endhighlight %}
 
 {% highlight c# %}
+
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 
 linearProgressBar.Progress = 25;
 
 linearProgressBar.SecondaryProgress = 75;
 
-linearProgressBar.SecondaryProgressColor = Color.CornflowerBlue;
+linearProgressBar.SecondaryProgressColor = Colors.CornflowerBlue;
 
 {% endhighlight %}
 
 {% endtabs %} 
 
-![color2](overview_images/color2.png)
+![color2]()
 

@@ -27,4 +27,4 @@ The .NET MAUI ProgressBar shows task progress with customizable visuals. It has 
 
 **Angle** - Customizes the angle of the circular progress bar.
 
-![ProgresBar control for .NET MAUI.](images/.net_maui_progressbar.PNG)
+![ProgresBar control for .NET MAUI.](images/Overview/.net_maui_progressbar.PNG)
