@@ -34,5 +34,5 @@ documentation: ug
 
 {% endtabs %}
 
-![Plot Area Background View in MAUI chart](Plot-Area-Background-View_images/plot_view.gif)
+![Plot Area Background View in MAUI chart](Plot-Area-Background-View_images/plot_view.png)
 
