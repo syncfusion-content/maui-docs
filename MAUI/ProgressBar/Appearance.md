@@ -50,7 +50,7 @@ The colors can be mapped to the specific ranges using the [`GradientStops`]() pr
 The following properties in the [`GradientStops`]() are used to map the colors to a range:
 
 * [`Color`](): Represents the color to the specified range.
-* [`Value`]():
+* [`Value`](): Represents the start and end value for the specified color.
 
 The following code sample demonstrates how to map the solid color range in the progress bar.
 
@@ -58,17 +58,73 @@ The following code sample demonstrates how to map the solid color range in the p
 
 {% highlight xaml %}
 
+<!--Using linear progress bar-->
+
+<progressBar:SfLinearProgressBar Progress="100">
+    <progressBar:SfLinearProgressBar.GradientStops>
+        <progressBar:ProgressGradientStop Color="#00bdaf" Value="0"/>
+        <progressBar:ProgressGradientStop Color="#00bdaf" Value="25"/>
+        <progressBar:ProgressGradientStop Color="#2f7ecc" Value="25"/>
+        <progressBar:ProgressGradientStop Color="#2f7ecc" Value="50"/>
+        <progressBar:ProgressGradientStop Color="#e9648e" Value="50"/>
+        <progressBar:ProgressGradientStop Color="#e9648e" Value="75"/>
+        <progressBar:ProgressGradientStop Color="#e9648e" Value="75"/>
+        <progressBar:ProgressGradientStop Color="#e9648e" Value="100"/>
+    </progressBar:SfLinearProgressBar.GradientStops>
+</progressBar:SfLinearProgressBar>
+
+<!--Using circular progress bar-->
+
+<progressBar:SfCircularProgressBar Progress="100" >
+    <progressBar:SfCircularProgressBar.GradientStops>
+        <progressBar:ProgressGradientStop Color="#00bdaf" Value="0"/>
+        <progressBar:ProgressGradientStop Color="#00bdaf" Value="25"/>
+        <progressBar:ProgressGradientStop Color="#2f7ecc" Value="25"/>
+        <progressBar:ProgressGradientStop Color="#2f7ecc" Value="50"/>
+        <progressBar:ProgressGradientStop Color="#e9648e" Value="50"/>
+        <progressBar:ProgressGradientStop Color="#e9648e" Value="75"/>
+        <progressBar:ProgressGradientStop Color="#fbb78a" Value="75"/>
+        <progressBar:ProgressGradientStop Color="#fbb78a" Value="100"/>
+    </progressBar:SfCircularProgressBar.GradientStops>
+</progressBar:SfCircularProgressBar>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
+// Using linear progress bar
+
+SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
+linearProgressBar.Progress = 100;
+linearProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("00bdaf"), Value = 0 });
+linearProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("00bdaf"), Value = 25 });
+linearProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("2f7ecc"), Value = 25 });
+linearProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("2f7ecc"), Value = 50 });
+linearProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("e9648e"), Value = 50 });
+linearProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("e9648e"), Value = 75 });
+linearProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("fbb78a"), Value = 75 });
+linearProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("fbb78a"), Value = 100 });
+this.Content = linearProgressBar;
+
+// Using circular progress bar
+
+SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
+circularProgressBar.Progress = 100;
+circularProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("00bdaf"), Value = 0 });
+circularProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("00bdaf"), Value = 25 });
+circularProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("2f7ecc"), Value = 25 });
+circularProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("2f7ecc"), Value = 50 });
+circularProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("e9648e"), Value = 50 });
+circularProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("e9648e"), Value = 75 });
+circularProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("fbb78a"), Value = 75 });
+circularProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("fbb78a"), Value = 100 });
+this.Content = circularProgressBar;
 
 {% endhighlight %}
 
 {% endtabs %} 
 
-![rangecolors]()
+![rangecolors](images/Appearance/RangeColors.png)
 
 The following code sample demonstrates how to apply gradient transition effect to the range colors in the linear progress bar.
 
@@ -76,15 +132,49 @@ The following code sample demonstrates how to apply gradient transition effect t
 
 {% highlight xaml %}
 
+<progressBar:SfLinearProgressBar Progress="100" >
+    <progressBar:SfLinearProgressBar.GradientStops>
+        <progressBar:ProgressGradientStop Color="#88A0D9EF" Value="0"/>
+        <progressBar:ProgressGradientStop Color="#AA62C1E5" Value="25"/>
+        <progressBar:ProgressGradientStop Color="#DD20A7DB" Value="50"/>
+        <progressBar:ProgressGradientStop Color="#FF1C96C5" Value="75"/>
+    </progressBar:SfLinearProgressBar.GradientStops>
+</progressBar:SfLinearProgressBar>
+
+<progressBar:SfCircularProgressBar Progress="100">
+    <progressBar:SfCircularProgressBar.GradientStops>
+        <progressBar:ProgressGradientStop Color="#88A0D9EF" Value="0"/>
+        <progressBar:ProgressGradientStop Color="#AA62C1E5" Value="25"/>
+        <progressBar:ProgressGradientStop Color="#DD20A7DB" Value="50"/>
+        <progressBar:ProgressGradientStop Color="#FF1C96C5" Value="75"/>
+    </progressBar:SfCircularProgressBar.GradientStops>
+</progressBar:SfCircularProgressBar>
+
 {% endhighlight %}
 
 {% highlight c# %}
+
+SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
+linearProgressBar.Progress = 100;
+linearProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("88A0D9EF"), Value = 0 });
+linearProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("AA62C1E5"), Value = 25 });
+linearProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("DD20A7DB"), Value = 50 });
+linearProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("FF1C96C5"), Value = 75 });
+this.Content = linearProgressBar;
+
+SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
+circularProgressBar.Progress = 100;
+circularProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("88A0D9EF"), Value = 0 });
+circularProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("AA62C1E5"), Value = 25 });
+circularProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("DD20A7DB"), Value = 50 });
+circularProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("FF1C96C5"), Value = 75 });
+this.Content = circularProgressBar;
 
 {% endhighlight %}
 
 {% endtabs %} 
 
-![gradient]()
+![gradient](images/Appearance/Gradient.png)
 
 ## Thickness
 
@@ -96,15 +186,29 @@ In the linear progress bar, the height of the track, progress and secondary prog
 
 {% highlight xaml %}
 
+<progressBar:SfLinearProgressBar Progress="100" 
+                                 TrackHeight="10" 
+                                 ProgressHeight="10"
+                                 SecondaryProgressHeight="10">
+
+</progressBar:SfLinearProgressBar>
+
 {% endhighlight %}
 
 {% highlight c# %}
+
+SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
+linearProgressBar.Progress = 100;
+linearProgressBar.TrackHeight = 10;
+linearProgressBar.ProgressHeight = 10;
+linearProgressBar.SecondaryProgressHeight = 10;
+this.Content = linearProgressBar;
 
 {% endhighlight %}
 
 {% endtabs %} 
 
-![thickness_linear]()
+![thickness_linear](images/Appearance/thickness.png)
 
 ### Circular progress bar
 
@@ -126,14 +230,13 @@ The following code sample demonstrates how to customize the appearance of circul
 
 <!--Circular progress bar with radius customization -->
 
-<progressBar:SfCircularProgressBar x:Name="TrackOutsideProgressBar"
-                                   Progress="75"
+<progressBar:SfCircularProgressBar Progress="75"
                                    TrackRadiusFactor="0.8" 
                                    ProgressRadiusFactor="0.75"
                                    ThicknessUnit="Factor"
                                    TrackThickness="0.05"
                                    ProgressThickness="0.05">
-</progressBar:SfCircularProgressBar>    
+</progressBar:SfCircularProgressBar>   
 
 {% endhighlight %}
 
@@ -159,7 +262,7 @@ this.Content = circularProgressBar;
 
 {% endtabs %} 
 
-![appearance]()
+![appearance](images/Appearance/circular_thickness.png)
 
 ## Corner radius
 
@@ -169,8 +272,12 @@ The [`CornerRadius`]() property is used to customize the rounded edges in the li
 
 {% highlight xaml %}
 
-<progressBar:SfLinearProgressBar Progress="50" TrackHeight="10" CornerRadius="10">
-
+<progressBar:SfLinearProgressBar Progress="50"
+                                 TrackHeight="10" 
+                                 TrackCornerRadius="5"
+                                 ProgressHeight="10"
+                                 ProgressCornerRadius="5">
+    
 </progressBar:SfLinearProgressBar>
 
 {% endhighlight %}
@@ -178,20 +285,54 @@ The [`CornerRadius`]() property is used to customize the rounded edges in the li
 {% highlight c# %}
 
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
-
 linearProgressBar.Progress = 50;
-
-linearProgressBar.CornerRadius = 10;
+linearProgressBar.TrackHeight = 10;
+linearProgressBar.ProgressHeight = 10;
+linearProgressBar.ProgressCornerRadius = 5;
+linearProgressBar.TrackCornerRadius = 5;
+this.Content = linearProgressBar;
 
 {% endhighlight %}
 
 {% endtabs %} 
 
-![cornerradius](overview_images/cornerradius.png)
+![cornerradius](images/Appearance/CornerRadius.png)
 
 ## Corner style customization
 
 The [`CornerStyle`]() property of circular progress bar specifies the corner type for the track or progress. The corners can be customized using the [`BothFlat`](), [`BothCurve`](), [`StartCurve`](), and [`EndCurve`]() options. The default value of this property is [`BothFlat`]().
+
+The following code sample demonstrates the corner style customization in progress and track indicator.
+
+{% tabs %} 
+
+{% highlight xaml %}
+
+<progressBar:SfCircularProgressBar Progress="50"
+                                   TrackCornerStyle="BothCurve"
+                                   ProgressCornerStyle="BothCurve"
+                                   StartAngle="180"
+                                   EndAngle="360">
+    
+</progressBar:SfCircularProgressBar>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
+circularProgressBar.Progress = 50;
+circularProgressBar.TrackCornerStyle = CornerStyle.BothCurve;
+circularProgressBar.ProgressCornerStyle = CornerStyle.BothCurve;
+circularProgressBar.StartAngle = 180;
+circularProgressBar.EndAngle = 360;
+this.Content = circularProgressBar;
+
+{% endhighlight %}
+
+{% endtabs %} 
+
+![cornerstyle](images/Appearance/corner_style.png)
 
 ## Color customization
 
@@ -206,7 +347,11 @@ The following code sample demonstrates the color customization in progress and t
 
 {% highlight xaml %}
 
-<progressBar:SfLinearProgressBar Progress="75" TrackColor="#3351483a" ProgressColor="#FF51483a">
+<progressBar:SfLinearProgressBar Progress="75" 
+                                 TrackFill="#3351483a" 
+                                 ProgressFill="#FF51483a"
+                                 SecondaryProgressFill="CornflowerBlue"
+                                 Margin="20">
 
 </progressBar:SfLinearProgressBar>
 
@@ -214,13 +359,23 @@ The following code sample demonstrates the color customization in progress and t
 
 {% highlight c# %}
 
+SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 
+linearProgressBar.Progress = 75;
+
+linearProgressBar.TrackFill = Color.FromArgb("3351483a");
+
+linearProgressBar.ProgressFill = Color.FromArgb("FF51483a");
+
+linearProgressBar.SecondaryProgressFill = Colors.CornflowerBlue;
+
+this.Content = linearProgressBar;
 
 {% endhighlight %}
 
 {% endtabs %} 
 
-![color1]()
+![color1](images/Appearance/Color.png)
 
 The linear progress bar provides support to customize the color for the secondary progress bar using the [`SecondaryProgressFill`]() property as demonstrated in the following code sample.
 
@@ -228,7 +383,10 @@ The linear progress bar provides support to customize the color for the secondar
 
 {% highlight xaml %}
 
-<progressBar:SfLinearProgressBar Progress="25" SecondaryProgress="75" SecondaryProgressColor="CornflowerBlue"></progressBar:SfLinearProgressBar>
+<progressBar:SfLinearProgressBar Progress="25" 
+                                 SecondaryProgress="75" 
+                                 SecondaryProgressFill="CornflowerBlue">
+</progressBar:SfLinearProgressBar>
 
 {% endhighlight %}
 
@@ -240,11 +398,13 @@ linearProgressBar.Progress = 25;
 
 linearProgressBar.SecondaryProgress = 75;
 
-linearProgressBar.SecondaryProgressColor = Colors.CornflowerBlue;
+linearProgressBar.SecondaryProgressFill = Colors.CornflowerBlue;
+
+this.Content = linearProgressBar;
 
 {% endhighlight %}
 
 {% endtabs %} 
 
-![color2]()
+![color2](images/Appearance/SecondaryProgress.png)
 
