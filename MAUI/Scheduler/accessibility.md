@@ -57,6 +57,14 @@ Left arrow<br/><br/></td><td>
 Moves selection to the previous (LTR) or next (RTL) time slot of the currently selected time slot.<br/><br/></td></tr>
 <tr>
 <td>
+Down arrow<br/><br/></td><td>
+Moves selection to the same time slot on the next resource.<br/><br/></td></tr>
+<tr>
+<td>
+Up arrow<br/><br/></td><td>
+Moves selection to the same time slot on the previous resource.<br/><br/></td></tr>
+<tr>
+<td>
 Enter<br/><br/></td><td>
 It triggers Tapped event<br/><br/></td></tr>
 </table>
@@ -159,6 +167,8 @@ Ctrl + Alt + 9 => AgendaView<br/><br/></td><td>
 Moves the view to Agenda view.<br/><br/></td></tr>
 </table>
 
+N> There is a framework issue with unable to remove or modify  default visual focus style on tab press in windows and the following framework issue in this report [link](https://github.com/dotnet/maui/issues/10193).
+
 #### MAC
 
 <table>
@@ -199,6 +209,8 @@ Moves the view to Timeline month view.<br/><br/></td></tr>
 Ctrl + 9 => AgendaView<br/><br/></td><td>
 Moves the view to Agenda view.<br/><br/></td></tr>
 </table>
+
+N> There is a framework issue with focus events not working in MAC and iOS and the following framework issue in this report [link](https://github.com/dotnet/maui/issues/10192).
 
 ### Header
 
