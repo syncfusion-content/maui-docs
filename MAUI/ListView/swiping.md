@@ -76,7 +76,7 @@ N> The Swipe Template is mandatory to perform swiping in the `SfListView`.
 
 ![Start swiping functionalities](Images/swiping/maui-listview-startswipetemplate.jpg)
 
-Download the entire source code from GitHub `here`. 
+Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/how-to-customize-the-swipe-view-in-.net-maui-listview). 
 
 ![End swiping functionalities](Images/swiping/maui-listview-endswipetemplate.jpg)
 
@@ -549,7 +549,7 @@ private void ListView_PropertyChanged(object sender, PropertyChangedEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-Download the entire source code from GitHub `here`
+Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/how-to-do-indefinite-swiping-in-.net-maui-listview).
 
 ![Indefinite swipe in listview](Images/swiping/maui-listview-swipe-an-item-indefinetly.jpg)
 
@@ -623,6 +623,6 @@ private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-Download entire source code from GitHub `here`.
+Download entire source code from GitHub [here](https://github.com/SyncfusionExamples/how-to-edit-the-item-through-swipe-view-in-.net-maui-listview).
 
 N> You can refer to our [.NET MAUI ListView](https://www.syncfusion.com/maui-controls/maui-listview) feature tour page for its groundbreaking feature representations. You can also explore our `.NET MAUI ListView example` to know how to render set of data items with .NET MAUI views or custom templates.
