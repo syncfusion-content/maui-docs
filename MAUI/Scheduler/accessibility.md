@@ -107,14 +107,12 @@ It triggers Tapped event<br/><br/></td></tr>
 <tr>
 <td>
 Tab<br/><br/></td><td>Moves selection to the next (LTR) or Previous (RTL) appointment of the currently selected appointment. 
-
-If the focus is in the last or first appointment, then focus will move to header<br/><br/></td></tr>
+<br/><br/></td></tr>
 <tr>
 <td>
 Shift + Tab<br/><br/></td><td>
 Moves selection to the previous (LTR) or next (RTL) appointment of the currently selected appointment. 
-
-If the focus is in the last or first appointment, then focus will move to header <br/><br/></td></tr>
+<br/><br/></td></tr>
 <tr>
 <td>
 Delete<br/><br/></td><td>Deletes the selected appointment from appointments collection.<br/><br/></td></tr>
@@ -174,39 +172,39 @@ N> There is a framework issue with unable to remove or modify  default visual fo
 <table>
 <tr>
 <td>
-Ctrl + 1 => DayView<br/><br/></td><td>
+Command + 1 => DayView<br/><br/></td><td>
 Moves the view to day view.<br/><br/></td></tr>
 <tr>
 <td>
-Ctrl + 2 => WeekView<br/><br/></td><td>
+Command + 2 => WeekView<br/><br/></td><td>
 Moves the view to week view.<br/><br/></td></tr>
 <tr>
 <td>
-Ctrl + 3 => WorkWeekView<br/><br/></td><td>
+Command + 3 => WorkWeekView<br/><br/></td><td>
 Moves the view to work week view.<br/><br/></td></tr>
 <tr>
 <td>
-Ctrl + 4 => MonthView<br/><br/></td><td>
+Command + 4 => MonthView<br/><br/></td><td>
 Moves the view to work week view.<br/><br/></td></tr>
 <tr>
 <td>
-Ctrl + 5 => TimelineDayView<br/><br/></td><td>
+Command + 5 => TimelineDayView<br/><br/></td><td>
 Moves the view to Timeline day view.<br/><br/></td></tr>
 <tr>
 <td>
-Ctrl + 6 => TimelineWeekView<br/><br/></td><td>
+Command + 6 => TimelineWeekView<br/><br/></td><td>
 Moves the view to Timeline week view.<br/><br/></td></tr>
 <tr>
 <td>
-Ctrl + 7 => TimelineWorkWeekView<br/><br/></td><td>
+Command + 7 => TimelineWorkWeekView<br/><br/></td><td>
 Moves the view to Timeline work week view.<br/><br/></td></tr>
 <tr>
 <td>
-Ctrl + 8 => TimelineMonthView<br/><br/></td><td>
+Command + 8 => TimelineMonthView<br/><br/></td><td>
 Moves the view to Timeline month view.<br/><br/></td></tr>
 <tr>
 <td>
-Ctrl + 9 => AgendaView<br/><br/></td><td>
+Command + 9 => AgendaView<br/><br/></td><td>
 Moves the view to Agenda view.<br/><br/></td></tr>
 </table>
 
