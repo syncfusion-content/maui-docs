@@ -9,26 +9,26 @@ documentation: ug
 
 # Plot Area Background View in .NET MAUI Chart
 
-[SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html?tabs=tabid-1) allows you to add a any view to the chart plot area . The [PlotAreaBackGroundView]() will be visible behind the grid line and series.
+[SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html?tabs=tabid-1) allows you to add any view to the chart plot area . The [PlotAreaBackGroundView]() will be visible behind the grid line and series.
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <chart:SfCircularChart>
-    <chart:SfCircularChart.PlotAreaBackgroundView>
-        <Image Source="https://cdn.syncfusion.com/content/images/company-logos/Syncfusion_Logo_Image.png"/>
-    </chart:SfCircularChart.PlotAreaBackgroundView>
+       <chart:SfCircularChart.PlotAreaBackgroundView>
+            <BoxView Color="Aqua"/>
+        </chart:SfCircularChart.PlotAreaBackgroundView>
 </chart:SfCircularChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-SfCircularChart chart = new SfCircularChart();
-Image image = new Image { Source = "https://cdn.syncfusion.com/content/images/company-logos/Syncfusion_Logo_Image.png" };
-chart.PlotAreaBackgroundView = image;
-this.Content = chart;
+ SfCircularChart chart = new SfCircularChart();
+        BoxView boxview = new BoxView {Color=Colors.Aqua };
+        chart.PlotAreaBackgroundView = boxview;
+        this.Content = chart;
 
 {% endhighlight %}
 
