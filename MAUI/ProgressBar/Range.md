@@ -57,4 +57,4 @@ this.Content = circularProgressBar;
 
 {% endtabs %} 
 
-![range](images/Define%20range/range.png)
+![range](images/Define_range/range.png)

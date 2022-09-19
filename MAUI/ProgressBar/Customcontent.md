@@ -102,7 +102,7 @@ this.Content = circularProgressBar;
 
 {% endtabs %} 
 
-![.NET MAUI Circular Progress Bar with Custom content](images/Custom%20Content/Content.png)
+![.NET MAUI Circular Progress Bar with Custom content](images/Custom_Content/Content.png)
 
 ## Limitations
 
