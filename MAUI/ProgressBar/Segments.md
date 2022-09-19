@@ -9,7 +9,7 @@ documentation: ug
 
 # Segments in .NET MAUI ProgressBar (Progress Bar)
 
-To visualize the progress of multiple sequential tasks, split the progress bar into multiple segments by setting the [`SegmentsCount`]() property as demonstrated in the following code sample.
+To visualize the progress of multiple sequential tasks, split the progress bar into multiple segments by setting the [`SegmentCount`]() property as demonstrated in the following code sample.
 
 {% tabs %} 
 
@@ -41,7 +41,7 @@ this.Content = linearProgressBar;
 
 SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 
-circularProgressBar.Progress = 25
+circularProgressBar.Progress = 25;
 
 circularProgressBar.SegmentCount = 7;
 
@@ -53,7 +53,7 @@ this.Content = circularProgressBar;
 
 ![Segment](images/Segment/Segment.png)
 
-**Gap customization**
+## Gap customization
 
 You can also customize the default spacing between the segments using the [`GapWidth`]() property as demonstrated in following code sample.
 
@@ -62,11 +62,11 @@ You can also customize the default spacing between the segments using the [`GapW
 
 <!--Using linear progress bar-->
 
-<progressBar:SfLinearProgressBar Progress="25" SegmentCount="4" GapWidth="5" />
+<progressBar:SfLinearProgressBar Progress="25" SegmentCount="4" SegmentGapWidth="5" />
 
 <!--Using circular progress bar-->
 
-<progressBar:SfCircularProgressBar Progress="25" SegmentCount="7" GapWidth="10" />
+<progressBar:SfCircularProgressBar Progress="25" SegmentCount="7" SegmentGapWidth="10" />
 
 {% endhighlight %}
 
@@ -79,7 +79,7 @@ linearProgressBar.Progress = 25;
 
 linearProgressBar.SegmentCount = 4;
 
-inearProgressBar.GapWidth = 5;
+linearProgressBar.SegmentGapWidth = 5;
 
 this.Content = linearProgressBar;
 
@@ -87,11 +87,11 @@ this.Content = linearProgressBar;
 
 SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 
-circularProgressBar.Progress = 25
+circularProgressBar.Progress = 25;
 
 circularProgressBar.SegmentCount = 7;
 
-circularProgressBar.GapWidth = 10;
+circularProgressBar.SegmentGapWidth = 10;
 
 this.Content = circularProgressBar;
 

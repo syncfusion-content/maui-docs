@@ -37,7 +37,9 @@ SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 
 linearProgressBar.Progress = 75;
 
-linearProgressBar.EasingEffect = Easing.CubicInOut;
+linearProgressBar.AnimationEasing = Easing.CubicInOut;
+
+this.Content = linearProgressBar;
 
 {% endhighlight %}
 
@@ -47,7 +49,7 @@ The [`SetProgress()`]() method in the progress bar is used to set progress value
 
 {% highlight c# %}
 
-void SetProgress(double progress, int animationDuration, Easing easingEffect)
+void SetProgress(double progress, double? animationDuration = null, Easing? easing = null)
 
 {% endhighlight %}
 
@@ -74,6 +76,8 @@ SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 linearProgressBar.IsIndeterminate = true;
 
 linearProgressBar.IndeterminateAnimationEasing = Easing.BounceIn;
+
+ this.Content = linearProgressBar;
 
 {% endhighlight %}
 

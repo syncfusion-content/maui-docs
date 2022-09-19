@@ -50,7 +50,7 @@ The colors can be mapped to the specific ranges using the [`GradientStops`]() pr
 The following properties in the [`GradientStops`]() are used to map the colors to a range:
 
 * [`Color`](): Represents the color to the specified range.
-* [`Value`](): Represents the start and end value for the specified color.
+* [`Value`](): Represents the start or end value for the specified color.
 
 The following code sample demonstrates how to map the solid color range in the progress bar.
 
@@ -126,7 +126,7 @@ this.Content = circularProgressBar;
 
 ![rangecolors](images/Appearance/RangeColors.png)
 
-The following code sample demonstrates how to apply gradient transition effect to the range colors in the linear progress bar.
+The following code sample demonstrates how to apply gradient transition effect to the range colors in the progress bar.
 
 {% tabs %} 
 
@@ -198,10 +198,15 @@ In the linear progress bar, the height of the track, progress and secondary prog
 {% highlight c# %}
 
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
+
 linearProgressBar.Progress = 100;
+
 linearProgressBar.TrackHeight = 10;
+
 linearProgressBar.ProgressHeight = 10;
+
 linearProgressBar.SecondaryProgressHeight = 10;
+
 this.Content = linearProgressBar;
 
 {% endhighlight %}
@@ -285,11 +290,17 @@ The [`CornerRadius`]() property is used to customize the rounded edges in the li
 {% highlight c# %}
 
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
+
 linearProgressBar.Progress = 50;
+
 linearProgressBar.TrackHeight = 10;
+
 linearProgressBar.ProgressHeight = 10;
+
 linearProgressBar.ProgressCornerRadius = 5;
+
 linearProgressBar.TrackCornerRadius = 5;
+
 this.Content = linearProgressBar;
 
 {% endhighlight %}
@@ -321,11 +332,17 @@ The following code sample demonstrates the corner style customization in progres
 {% highlight c# %}
 
 SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
+
 circularProgressBar.Progress = 50;
+
 circularProgressBar.TrackCornerStyle = CornerStyle.BothCurve;
+
 circularProgressBar.ProgressCornerStyle = CornerStyle.BothCurve;
+
 circularProgressBar.StartAngle = 180;
+
 circularProgressBar.EndAngle = 360;
+
 this.Content = circularProgressBar;
 
 {% endhighlight %}

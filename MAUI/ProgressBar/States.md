@@ -71,7 +71,7 @@ linearProgressBar.Progress = 25;
 
 linearProgressBar.SecondaryProgress = 75;
 
-this.Content = circularProgressBar;
+this.Content = linearProgressBar;
 
 {% endhighlight %}
 

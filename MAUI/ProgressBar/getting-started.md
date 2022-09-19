@@ -219,6 +219,7 @@ SfLinearProgressBar sfLinearProgressBar = new SfLinearProgressBar{Progress = 75,
 SfCircularProgressBar circularProgressBar = new SfCircularProgressBar{Progress = 75, TrackFill = new SolidColorBrush(Color.FromArgb("#33c15244")), ProgressFill = new SolidColorBrush(Color.FromArgb("#FFc15244"))};
 
 SfCircularProgressBar sfCircularProgressBar = new SfCircularProgressBar{Progress = 75, TrackFill = new SolidColorBrush(Color.FromArgb("#3390a84e")), ProgressFill = new SolidColorBrush(Color.FromArgb("#FF90a84e"))};
+
 {% endhighlight %}
 
 {% endtabs %} 
