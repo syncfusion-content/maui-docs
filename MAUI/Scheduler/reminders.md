@@ -9,7 +9,10 @@ documentation: ug
 
 # Reminder in .NET MAUI Scheduler (SfScheduler)
 
-The MAUI Scheduler notify an appointment reminder by using  the [ReminderAlertOpening] event. An appointment can have one or more reminders.
+The MAUI Scheduler notify an appointment reminder by using  the [EnableReminder] property and [ReminderAlertOpening] event. An appointment can have one or more reminders.
+
+N>
+* In .NET MAUI Framework notification implementation is in progress, So as of now added event to notify appointment reminder.
 
 ## Enable reminder
 
@@ -18,7 +21,7 @@ Reminder can be enabled by setting the [EnableReminder] property to `true` which
 {% tabs %}
 {% highlight xaml tabtitle="MainWindow.xaml" hl_lines="3" %}
 <syncfusion:SfScheduler x:Name="Scheduler"
-                        ViewType="Week"
+                        View ="Week"
                         EnableReminder="True" >
 </syncfusion:SfScheduler>
 {% endhighlight %}
@@ -58,19 +61,19 @@ Configure the appointment reminders with [SchedulerReminder.] The `SchedulerRemi
 
 {% tabs %}
 {% highlight xaml tabtitle="MainWindow.xaml" hl_lines="6" %}
- <Grid.DataContext>
-    <local:ReminderViewModel/>
- </Grid.DataContext>
  <syncfusion:SfScheduler x:Name="Schedule" 
-                ItemsSource="{Binding Events}"
+                AppointmentsSource="{Binding Events}"
                 EnableReminder="True">
+        <syncfusion:SfScheduler.BindingContext>
+            <local:SchedulerViewModel/>
+        </syncfusion:SfScheduler.BindingContext>
   </syncfusion:SfScheduler>
 {% endhighlight %}
 {% highlight c# tabtitle="ReminderViewModel.cs" %}
  public class ReminderViewModel 
  {
     ...
-    public ScheduleAppointmentCollection Events { get; set; } = new ScheduleAppointmentCollection();
+    public ObservableCollection<SchedulerAppointment> Events { get; set; } = new ObservableCollection<SchedulerAppointment>();
     this.Events.Add(new ScheduleAppointment()
     {
         StartTime = DateTime.Now,
@@ -150,15 +153,18 @@ Map those properties of the `Event` class with the [SfScheduler] control by usin
 
 {% tabs %}
 {% highlight xaml tabtitle="MainWindow.xaml" hl_lines="3 17 18 19 20" %}
- <syncfusion:SfScheduler x:Name="Schedule" 
-                ItemsSource="{Binding Events}"
+  <syncfusion:SfScheduler x:Name="Schedule" 
+                AppointmentsSource="{Binding Events}"
                 EnableReminder="True">
-            <syncfusion:SfScheduler.AppointmentMapping>
-                <syncfusion:AppointmentMapping
+        <syncfusion:SfScheduler.BindingContext>
+            <local:SchedulerViewModel/>
+        </syncfusion:SfScheduler.BindingContext>
+        <syncfusion:SfScheduler.AppointmentMapping>
+            <syncfusion:SchedulerAppointmentMapping
                     Subject="EventName"
                     StartTime="From"
                     EndTime="To"
-                    AppointmentBackground="Color"
+                    Background="Color"
                     IsAllDay="IsAllDay"
                     StartTimeZone="StartTimeZone"
                     EndTimeZone="EndTimeZone"
@@ -166,19 +172,19 @@ Map those properties of the `Event` class with the [SfScheduler] control by usin
                     RecurrenceRule="RecurrenceRule"
                     RecurrenceId="RecurrenceId"
                     Reminders="Reminders">
-                    <syncfusion:AppointmentMapping.ReminderMapping>
-                        <syncfusion:ReminderMapping IsDismissed="Dismissed"
-                                                    TimeBeforeStart="TimeBeforeStart"/>
-                    </syncfusion:AppointmentMapping.ReminderMapping>
-                </syncfusion:AppointmentMapping>
-            </syncfusion:SfScheduler.AppointmentMapping>
-        </syncfusion:SfScheduler>
+                <syncfusion:SchedulerAppointmentMapping.ReminderMapping>
+                    <syncfusion:SchedulerReminderMapping IsDismissed="Dismissed"
+                    TimeBeforeStart="TimeBeforeStart"/>
+                </syncfusion:SchedulerAppointmentMapping.ReminderMapping>
+            </syncfusion:SchedulerAppointmentMapping>
+        </syncfusion:SfScheduler.AppointmentMapping>
+    </syncfusion:SfScheduler>
 {% endhighlight %}
 {% highlight c# tabtitle="ReminderViewModel.cs" %}
 public class ReminderViewModel 
 {
   ...
-  public ObservableCollection<Event> Events { get; set; } = new ObservableCollection<Event>();
+   public ObservableCollection<Event> Events { get; set; } = new ObservableCollection<Event>();
   this.Events.Add(new Event()
   {
     From = DateTime.Now,
@@ -209,33 +215,42 @@ private void Scheduler_ReminderAlertOpening(object sender, ReminderAlertOpeningE
 }
 {% endhighlight %}
 {% endtabs %}
+## Handle Dismissed for reminder
+
+* Normal appointment directly dismissed using [IsDismissed] property
+
+* For recurrence appointment, if current occurrence need to dismiss then need to add changed occurrence for reminder occurrence dismissed, then current occurrence dismissed details get updated in underlying appointment or data source.
+
+* If only occurrence dismissed, then the changed icon will not be updated for dismissed changed occurrence
+
+## Handle Snooze for reminder
+If Snooze time is set to 5 minutes than the value of reminder [TimeBeforeStart] property is calculated by 
+
+* For future appointments, TimeBeforeStart = Appointment.StartTime - AlertTime - snoozeTime
+
+* For Overdue appointments, TimeBeforeStart = Appointment.StartTime.AddSeconds(DateTime.Now.Second) - DateTime.Now - snoozeTime
+
+* For All day appointment, TimeBeforeStart = Appointment.StartTime.Date.AddSeconds(DateTime.Now.Second) - DateTime.Now - snoozeTime
 
 ## Handling reminders for future appointment
 
-* If the Reminder alert time is less than the current time, then appointment reminder time will be calculated from the current time.
+* Future normal and recurring appointment reminder alert will be displayed as Reminder alert time.
 
-* Future normal and recurring appointment reminder alert will be displayed as Reminder deliver time.
+* Reminder alert time will be calculated form appointment start time substrate with reminder time interval. For an example if appointment time is 3.30pm and reminder time interval is new Timespan (0,15,0) then reminder alter time is 3.15 pm.
+
+* If the Reminder alert time is less than the current time, then appointment reminder time will be calculated from the current time.
 
 ## Handling reminders for overdue appointment
 
-* If a Non-recurring appointments reminder is in past, reminder alert as overdue 
+* If a Non-recurring appointments reminder is in past, reminder alert as overdue untill dismissed.
 
-* If a recurring appointment is in the past such past occurrences do not have reminders. 
+* Recurring appointment overdue after recurrence end until dismissed and past occurrences do not have reminders.
 
-* Span appointment < 24 hours - Shows alert time in overdue from appointment 
+* Recurrence appointment due calculated from current date occurrence and its in due until next occurrence reminder time.
 
-* Overdue after recurrence end 
+*  If the last occurrence in recurrence is series is get dismissed, then the pattern recurring appointment dismissed.
 
 ## Handling reminder for Changed occurrence appointment
-If a regular occurrence is in the future:
-
-* Once this changed occurrence is moved to the past, its reminder is deleted.
-
-* When the changed occurrence is restored to a time in the future, its reminder is restored and persists until this occurrence becomes outdated.
-
-* The reminder is not restored when the changed occurrence is restored to a time in the past.
-
-If a recurring appointment is in the past (such occurrences do not have reminders): 
 
 * Once the changed occurrence is moved to the future, its reminder is re-created from the pattern.
 
