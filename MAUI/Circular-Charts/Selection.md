@@ -52,15 +52,19 @@ chart.Series.Add(series);
 
 The Selection feature can be configured using the following properties:
 
-* [Type]() - Retrieves the ChartSelectionType Enum value for the Selection Behavior.     
-And the following SelectionType can be achieved during Selection:
-    * ChartSelectionType.None
-    * ChartSelectionType.Single
-    * ChartSelectionType.SingleDeselect
-    * ChartSelectionType.Multiple
-* [SelectionBrush]() - Retrieves the SelectionBrush color value for Selection Behavior.
-* [SelectedIndex]() - Retrieves the index value of the segment that should be selected during the Selection.
-* [SelectedIndexes]() - Retrieves the list of indexes of the segments that should be selected during the Selection.
+* [Type]() - Gets or Sets the ChartSelectionType Enum value for the Selection Behavior.     
+The following ChartSelectionType can be achieved during Selection:
+    * Single
+    * SingleDeselect
+    * Multiple
+    * None
+* [SelectionBrush]() - Gets or Sets  the SelectionBrush color value for Selection Behavior.
+* [SelectedIndex]() - Gets or Sets  the index value of the segment that should be selected during the Selection.
+* [SelectedIndexes]() - Gets or Sets  the list of indexes of the segments that should be selected during the Selection.
+
+## Selection on initial rendering
+
+[SfCircularChart]() provides support to select a point programmatically on a chart using the [SelectionBrush](), [SelectedIndex]() and [Type]() properties of [ChartSelectionBehavior]().
 
 {% tabs %}
 
@@ -91,11 +95,24 @@ chart.Series.Add(series);
 
 {% endtabs %}
 
-![SelectionBrush, SelectedIndex and Type properties in DataPointSelectionBehavior](Selection_images/data_point_selection_properties.PNG)
+![DataPointSelectionBehavior in LoadTime](Selection_images/data_point_selection_properties.PNG)
 
 ## Methods
 
 The Selection Behavior has a public method called [ClearSelection ()](), which resets all current Selection Behavior property values to their default values.
+
+{% tabs %}
+
+{% highlight c# %}
+
+SfCircularChart chart = new SfCircularChart();
+
+DataPointSelectionBehavior selection = new DataPointSelectionBehavior();
+selection.ClearSelection();
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ## Events
 
@@ -103,15 +120,14 @@ The following public Chart Selection Events are available in [ChartSelectionBeha
 
 ### SelectionChanging
 
-The [SelectionChanging]() event is triggered before any data point has been selected. This event is cancelable, and these details are contained in the following event arguments.
+The [SelectionChanging]() event is triggered before any data point has been selected. This event is cancelable because it inherits CancelEventArgs which has a public property [Cancel]() that holds a Boolean value indicating whether to continue the segment selection or not, and below properties are contained in the following event arguments.
 
-* [NewIndexes]() - Holds the index of the currently selected data point.
-* [OldIndexes]() - Holds the index of the previously selected data point.
-* [Cancel]() - Returns a Boolean value indicating whether to continue the segment selection or not.
+* [NewIndexes]() - Holds the index of the selected data point.
+* [OldIndexes]() - Holds the index of the deselected data point.
 
 ### SelectionChanged
 
 The [SelectionChanged]() event is triggered after a data point has been selected. And these following details are contained in the following event arguments.
 
-* [NewIndexes]() - Holds the index of the currently selected data point.
-* [OldIndexes]() - Holds the index of the previously selected data point.
+* [NewIndexes]() - Holds the index of the selected data point.
+* [OldIndexes]() - Holds the index of the deselected data point.
