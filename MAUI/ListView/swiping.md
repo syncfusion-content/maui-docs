@@ -310,36 +310,6 @@ Using the `SwipeItem` method, you can swipe an item programmatically based on th
 </tr>
 </table>
 
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-<ContentPage.Content>
-    <StackLayout>
-        <Grid HeightRequest="50">
-            <Button x:Name="EndSwipe" Text="End Swipe Button" />
-            <Button x:Name="StartSwipe" Text="End Swipe Button" Grid.Column="1"/>
-        </Grid>
-        <listView:SfListView x:Name="listView" ItemSize="70" SelectionMode="Single" AllowSwiping="True"
-    ItemSpacing="0,0,5,0" >
-            <listView:SfListView.StartSwipeTemplate>
-                <DataTemplate>
-                    <Grid BackgroundColor="SlateBlue"  HorizontalOptions="Fill" VerticalOptions="Fill">
-                        <Label Text="Start Swipe Template" TextColor="White" VerticalOptions="Center" HorizontalOptions="Center"/>
-                    </Grid>
-                </DataTemplate>
-            </listView:SfListView.StartSwipeTemplate>
-            <listView:SfListView.EndSwipeTemplate>
-                <DataTemplate>
-                    <Grid BackgroundColor="SlateBlue" HorizontalOptions="Fill" VerticalOptions="Fill">
-                        <Label Text="End Swipe Template" TextColor="White" VerticalOptions="Center"/>
-                    </Grid>
-                </DataTemplate>
-            </listView:SfListView.EndSwipeTemplate>
-        </listView:SfListView>
-    </StackLayout>
-</ContentPage.Content>
-{% endhighlight %}
-{% endtabs %}
-
 The `SwipeOffset` value should be positive for the left swiping of the listview item.
  
 {% tabs %}
@@ -357,7 +327,7 @@ The `SwipeOffset` value should be negative for the right-swiping of the listview
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 private void RightSwipeButton_Clicked(object sender, EventArgs e)
 {
-    ListView.SwipeItem(viewModel.contactsinfo[1], -150);
+    ListView.SwipeItem(viewModel.contactsinfo[1], -200);
 }
 {% endhighlight %}
 {% endtabs %}
