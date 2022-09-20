@@ -337,7 +337,7 @@ chart.XAxes.Add(primaryAxis);
 
 ## Logarithmic Axis
 
-The [LogarithmicAxis]() uses a logarithmic scale, and it is very useful in visualising data when the data range of a chart’s series has significant disparity. Plotting data on such an axis is equivalent to plotting the log of that data.
+The [LogarithmicAxis]() uses a logarithmic scale, and it is very useful in visualising data when the data range of a chart’s series has significant disparity. It can be used either on the x axis or the y axis of the chart. The Logarithmic Axis does not support zero or negative values. The following code example demonstrates how to set the logarithmic axis in the chart.
 
 {% tabs %}
 
@@ -359,7 +359,9 @@ The [LogarithmicAxis]() uses a logarithmic scale, and it is very useful in visua
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
+
 . . .
+
 LogarithmicAxis primaryAxis = new LogarithmicAxis();
 chart.XAxes.Add(primaryAxis);
 
@@ -372,7 +374,7 @@ chart.YAxes.Add(secondaryAxis);
 
 ![LogarithmicAxis support in MAUI Chart](Axis_Images/maui_chart_logarithmic_axis.jpg)
 
-### Customizing the logarithmic range
+### Logarithmic range
 
 To customise the range of the log axis, you can use the [Minimum](), [Maximum]() and [Interval]() properties of [LogarithmicAxis](). By default, a nice range will be calculated automatically based on the provided data. The following code example demonstrates the range of customization of the axis.
 
@@ -381,19 +383,11 @@ To customise the range of the log axis, you can use the [Minimum](), [Maximum]()
 {% highlight xaml %}
 
 <chart:SfCartesianChart.YAxes>
-    
-	<chart:LogarithmicAxis >
-		<chart:LogarithmicAxis.Minimum>
-			<x:Double>100</x:Double>
-		</chart:LogarithmicAxis.Minimum>
-		
-		<chart:LogarithmicAxis.Maximum>
-			<x:Double>10000</x:Double>
-		</chart:LogarithmicAxis.Maximum>
-		
-	</chart:LogarithmicAxis>
-	
+
+    <chart:LogarithmicAxis Minimum="100" Maximum="10000"/>
+
 </chart:SfCartesianChart.YAxes>
+
 
 {% endhighlight %}
 
@@ -414,7 +408,7 @@ chart.YAxes = new LogarithmicAxis() {
 
 ### Logarithmic base
 
-The log base can be customised by using the [LogarithmicBase]() property of the axis. By default, the base of a logarithmic axis is set to 10. You can, however, set the base to any value that meets your requirements. Just ensure that the base value is any positive number greater than 1. The following code example demonstrates the logarithmic values in the y axis calculated from base 2.
+The log base can be customised by using the [LogarithmicBase]() property of the axis. By default, the base of a logarithmic axis is set to 10. You can, however, set the base to any value that meets your requirements. Just ensure that the base value is any positive number greater than 1, and it cannot be a decimal number. The following code example demonstrates the logarithmic values in the y axis calculated from base 2.
 
 {% tabs %}
 
@@ -430,7 +424,7 @@ The log base can be customised by using the [LogarithmicBase]() property of the 
 
 {% highlight c# %}
 
-chart.YAxes = new LogarithmicAxis() { LogarithmicBase = 2 };
+chart.YAxes = new LogarithmicAxis( ) { LogarithmicBase = 2 };
 
 {% endhighlight %}
 
@@ -438,9 +432,9 @@ chart.YAxes = new LogarithmicAxis() { LogarithmicBase = 2 };
 
 ![LogarithmicAxis base customization in MAUI Chart](Axis_Images/maui_chart_logarithmic_axis_base.jpg)
 
-### Logarithmic Interval
+### Logarithmic interval
 
-The logarithmic interval can be customised by using the [Interval]() property of the axis. In the logarithmic axis, the interval is based on powers. When the logarithmic base is 10 and the logarithmic interval is 1, then the axis labels are placed at an interval of 10. i.e., 1, 10, 100, 1000, etc. When the logarithmic interval is 2, then the axis labels are placed at an interval of 102. i.e., 1, 100, 1000, etc. The default value of the interval is 1.
+The logarithmic interval can be customised by using the [Interval]() property of the axis. In the logarithmic axis, the interval is based on powers. When the logarithmic base is 10 and the logarithmic interval is 1, then the axis labels are placed at an interval of 10. i.e., 1, 10, 100, 1000, etc. When the logarithmic interval is 2, then the axis labels are placed at an interval of 10^2. i.e., 1, 100, 1000, etc. The default value of the interval is 1.
 
 {% tabs %}
 
@@ -456,13 +450,127 @@ The logarithmic interval can be customised by using the [Interval]() property of
 
 {% highlight c# %}
 
-chart.YAxes = new LogarithmicAxis() { Interval = 2 };
+chart.YAxes = new LogarithmicAxis( ) { Interval = 2 };
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![LogarithmicAxis Interval in MAUI Chart](Axis_Images/maui_chart_logarithmic_axis_interval.jpg)
+![LogarithmicAxis interval in MAUI Chart](Axis_Images/maui_chart_logarithmic_axis_interval.jpg)
+
+### Actual minimum
+
+The actual minimum property can be used only to get the double value that represents the minimum value of the chart axis range. The following code example demonstrates how to get the actual minimum value of the axis range using a label.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<VerticalStackLayout>
+     <Label Text="{Binding Source= {x:Reference yAxis}, Path=ActualMinimum,        
+      StringFormat='Actual minimum is: {0}'}" />
+     <chart:SfCartesianChart>
+        
+         <chart:SfCartesianChart.XAxes>
+                       <chart:LogarithmicAxis x:Name="xAxis"/>
+         </chart:SfCartesianChart.XAxes>
+        
+         <chart:SfCartesianChart.YAxes>
+                       <chart:LogarithmicAxis x:Name="yAxis"/>
+         </chart:SfCartesianChart.YAxes>
+        
+         <chart:SfCartesianChart.Series>
+             <chart:ColumnSeries ItemsSource="{Binding Data}" XBindingPath="XValue" 
+              YBindingPath="YValue" />
+         </chart:SfCartesianChart.Series>
+                  
+     </chart:SfCartesianChart>
+</VerticalStackLayout>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+VerticalStackLayout layout = new VerticalStackLayout( );
+
+SfCartesianChart chart = new SfCartesianChart( );
+
+chart.XAxes.Add(new LogarithmicAxis( ));
+
+LogarithmicAxis yAxis = new LogarithmicAxis( );
+
+chart.YAxes.Add(yAxis);
+
+. . . 
+
+Label label = new Label( );
+
+label.SetBinding(Label.TextProperty, new Binding("ActualMinimum", source: yAxis, stringFormat: "Actual minimum is: {0}"));
+
+. . . 
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![LogarithmicAxis actual minimum in MAUI Chart](Axis_Images/maui_chart_logarithmic_axis_actual_minimum.jpg)
+
+### Actual maximum
+
+The actual maximum property can be used only to get the double value that represents the minimum value of the chart axis range. The following code example demonstrates how to get the actual maximum value of the axis range using a label.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<VerticalStackLayout>
+     <Label Text="{Binding Source= {x:Reference yAxis}, Path=ActualMaximum,        
+      StringFormat='Actual maximum is: {0}'}" />
+     <chart:SfCartesianChart>
+        
+         <chart:SfCartesianChart.XAxes>
+                       <chart:LogarithmicAxis x:Name="xAxis"/>
+         </chart:SfCartesianChart.XAxes>
+        
+         <chart:SfCartesianChart.YAxes>
+                       <chart:LogarithmicAxis x:Name="yAxis"/>
+         </chart:SfCartesianChart.YAxes>
+        
+         <chart:SfCartesianChart.Series>
+             <chart:ColumnSeries ItemsSource="{Binding Data}" XBindingPath="XValue" 
+              YBindingPath="YValue" />
+         </chart:SfCartesianChart.Series>
+                  
+     </chart:SfCartesianChart>
+</VerticalStackLayout>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+VerticalStackLayout layout = new VerticalStackLayout( );
+
+SfCartesianChart chart = new SfCartesianChart( );
+
+chart.XAxes.Add(new LogarithmicAxis( ));
+
+LogarithmicAxis yAxis = new LogarithmicAxis( );
+
+chart.YAxes.Add(yAxis);
+
+. . .
+
+Label label = new Label( );
+
+label.SetBinding(Label.TextProperty, new Binding("ActualMaximum", source: yAxis, stringFormat: "Actual maximum is: {0}"));
+
+. . .
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![LogarithmicAxis actual maximum in MAUI Chart](Axis_Images/maui_chart_logarithmic_axis_actual_maximum.jpg)
 
 ## Inversed
 
