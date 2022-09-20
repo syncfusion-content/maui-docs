@@ -173,7 +173,7 @@ Map those properties of the `Event` class with the [SfScheduler] control by usin
                     RecurrenceId="RecurrenceId"
                     Reminders="Reminders">
                 <syncfusion:SchedulerAppointmentMapping.ReminderMapping>
-                    <syncfusion:SchedulerReminderMapping IsDismissed="Dismissed"
+                    <syncfusion:SchedulerReminderMapping IsDismissed="IsDismissed"
                     TimeBeforeStart="TimeBeforeStart"/>
                 </syncfusion:SchedulerAppointmentMapping.ReminderMapping>
             </syncfusion:SchedulerAppointmentMapping>
@@ -238,7 +238,7 @@ If Snooze time is set to 5 minutes than the value of reminder [TimeBeforeStart] 
 
 * Reminder alert time will be calculated form appointment start time substrate with reminder time interval. For an example if appointment time is 3.30pm and reminder time interval is new Timespan (0,15,0) then reminder alter time is 3.15 pm.
 
-* If the Reminder alert time is less than the current time, then appointment reminder time will be calculated from the current time.
+* If the Reminder alert time is less than the current time, then appointment reminder time will be calculated from the current time. For an example if current time is 3.30pm and the Reminder alert time is 3.40pm, than alert time will be displayed as 10 minutes.
 
 ## Handling reminders for overdue appointment
 
