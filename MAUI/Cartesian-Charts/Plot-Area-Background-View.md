@@ -9,25 +9,50 @@ documentation: ug
 
 # Plot Area Background View in .NET MAUI Chart
 
-[SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1) allows you to add a view to the chart plot area . The [PlotAreaBackGroundView]() will be visible behind the grid line and series.
+[SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1) allows you to add view to the chart plot area . The [PlotAreaBackGroundView]() will be visible behind the grid line and series.
+
+## Plot Area Customization:
+You can customize the plot area using the following:
+* BoxView - Use a BoxView as a Background if the plot area is expected to be coloured.
+* Image - Readability would be a problem if you planned to display your own company logo at the plot area. In that situation, an image may be utilised as the background.
+* Label—you can add any text to the plot area background.
+
+
+
 
 {% tabs %}
 
 {% highlight xaml %}
 
-  <chart:SfCartesianChart>
-        <chart:SfCartesianChart.PlotAreaBackgroundView>
-            <Image Source="https://cdn.syncfusion.com/content/images/company-logos/Syncfusion_Logo_Image.png"  />
-        </chart:SfCartesianChart.PlotAreaBackgroundView>
-    </chart:SfCartesianChart>
+<chart:SfCartesianChart>
+  <chart:SfCartesianChart.PlotAreaBackgroundView>
+    <AbsoluteLayout>
+      <Label Text="Copyright @ 2022 Parker Industries"
+                    AbsoluteLayout.LayoutBounds="1,1,240,30"
+                    AbsoluteLayout.LayoutFlags="PositionProportional" />
+            
+      <Image Source="https://cdn.syncfusion.com/content/images/company-logos/Syncfusion_Logo_Image.png"
+                       AbsoluteLayout.LayoutBounds="0,1,100,49"
+                       AbsoluteLayout.LayoutFlags="PositionProportional"/>
+    </AbsoluteLayout>
+</chart:SfCartesianChart.PlotAreaBackgroundView>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-SfCartesianChart chart = new SfCartesianChart();
-Image image = new Image { Source = "https://cdn.syncfusion.com/content/images/company-logos/Syncfusion_Logo_Image.png" };
-chart.PlotAreaBackgroundView = image;
+SfCartesianChart chart = new SfCartesianChart(); 
+AbsoluteLayout absoluteLayout = new AbsoluteLayout();
+var label = new Label() { Text = "Copyright @ 2022 Parker Industries" };
+AbsoluteLayout.SetLayoutBounds(label, new Rect(1, 1, 240, 30));
+AbsoluteLayout.SetLayoutFlags(label, Microsoft.Maui.Layouts.AbsoluteLayoutFlags.PositionProportional);
+absoluteLayout.Children.Add(label);
+var image = new Image() { Source = "https://cdn.syncfusion.com/content/images/company-logos/Syncfusion_Logo_Image.png" };
+AbsoluteLayout.SetLayoutBounds(image, new Rect(0, 1, 100, 49));
+AbsoluteLayout.SetLayoutFlags(image, Microsoft.Maui.Layouts.AbsoluteLayoutFlags.PositionProportional);
+absoluteLayout.Children.Add(image);
+chart.PlotAreaBackgroundView = absoluteLayout;
 this.Content = chart;
 
 {% endhighlight %}
