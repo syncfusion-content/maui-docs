@@ -450,7 +450,7 @@ The `SwipeEnded` event provides the following properties in their arguments:
  
 The `SwipeEnded` event is used for the following use cases:
  
- * To insert the data or edit the data after swiped.
+ * To insert the data or edit the data after swiping.
  * To delete the item from view after swiping it to certain extent.
  * To reset the swipe view automatically for the swiped item.
 
