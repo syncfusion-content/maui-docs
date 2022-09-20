@@ -11,7 +11,7 @@ documentation: ug
 
 ## Keyboard navigation
 
-The `SfScheduler` supports selection using keyboard interactions.
+The `SfScheduler` supports selecting the scheduler date time, appointments, and view navigation using keyboard interaction in WinUI, MAC Catalyst, and iOS platforms.
 
 ### Day, Week and WorkWeek views
 
@@ -167,7 +167,7 @@ Moves the view to Agenda view.<br/><br/></td></tr>
 
 N> There is a framework issue with unable to remove or modify  default visual focus style on tab press in windows and the following framework issue in this report [link](https://github.com/dotnet/maui/issues/10193).
 
-#### MAC
+#### MAC and iOS
 
 <table>
 <tr>
