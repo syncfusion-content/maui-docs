@@ -9,11 +9,11 @@ documentation: ug
 
 # Circle Layer in .NET MAUI Maps (SfMaps)
 
-Circle layer is a sublayer that renders a group of [`MapCircle`]() on [`MapShapeLayer`](). This section helps to learn about how to add the circles and customize them.
+Circle layer is a sublayer that renders a group of `MapCircle` on `MapShapeLayer`. This section helps to learn about how to add the circles and customize them.
 
 ## Adding circles
 
-The [`Circles`]() is a collection of [`MapCircle`](). Every single [`MapCircle`]() renders a circle using the [`MapCircle.Center`]() and [`MapCircle.Radius`]() properties.
+The `Circles` is a collection of `MapCircle`. Every single `MapCircle` renders a circle using the `MapCircle.Center` and `MapCircle.Radius` properties.
 
 {% tabs %}
 
@@ -117,7 +117,7 @@ this.Content = maps;
 
 ## Radius
 
-You can change the size of the circles using the [`MapCircle.Radius`]() property. The default value of the [`MapCircle.Radius`]() property is 5.
+You can change the size of the circles using the `MapCircle.Radius` property. The default value of the `MapCircle.Radius` property is 5.
 
 {% tabs %}
 
@@ -228,7 +228,7 @@ this.Content = maps;
 
 ## Fill color
 
-You can apply colors to each [`MapCircle`]() in the [`Circles`]() collection using the individual [`MapCircle.Fill`]() property.
+You can apply colors to each `MapCircle` in the `Circles` collection using the individual `MapCircle.Fill` property.
 
 {% tabs %}
 
@@ -353,9 +353,9 @@ this.Content = maps;
 
 ## Stroke thickness and color
 
-You can apply stroke thickness to each [`MapCircle`]() in the [`Circles`]() collection using the individual [`MapCircle.StrokeThickness`]() property. The default value of the [`MapCircleLayer.StrokeThickness`]() property is `2`.
+You can apply stroke thickness to each `MapCircle` in the `Circles` collection using the individual `MapCircle.StrokeThickness` property. The default value of the `MapCircleLayer.StrokeThickness` property is `2`.
 
-You can apply stroke color to each [`MapCircle`]() in the [`Circles`]() collection using the individual [`MapCircle.Stroke`]() property.
+You can apply stroke color to each `MapCircle` in the `Circles` collection using the individual `MapCircle.Stroke` property.
 
 {% tabs %}
 

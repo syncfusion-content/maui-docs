@@ -9,13 +9,13 @@ documentation: ug
 
 # Shape Sublayer in .NET MAUI Maps (SfMaps)
 
-The shape sublayer is where geographical rendering will happen for the sublayer. This is similar to the main [`MapShapeLayer`]() rendering. This section explains adding a shape sublayer on the shape layer.
+The shape sublayer is where geographical rendering will happen for the sublayer. This is similar to the main `MapShapeLayer` rendering. This section explains adding a shape sublayer on the shape layer.
 
 ## Shape sublayer on shape layer
 
-The [`Sublayers`]() in [`MapShapeLayer`]() contains collection of [`MapSublayer`]().The actual geographical rendering is done in the each [`MapShapeSublayer`](). The [`ShapesSource`]() property of the [`MapShapeSublayer`]() is of type [`MapSource`](). The path of the .json file which contains the GeoJSON data has to be set to the [`ShapesSource`]().
+The `Sublayers` in `MapShapeLayer` contains collection of `MapSublayer`.The actual geographical rendering is done in the each `MapShapeSublayer`. The `ShapesSource` property of the `MapShapeSublayer` is of type `MapSource`. The path of the .json file which contains the GeoJSON data has to be set to the `ShapesSource`.
 
-The [`ShapeDataField`]) property of the [`ShapesSource`]() is used to refer the unique field name in the .json file to identify each shapes.
+The `ShapeDataField` property of the `ShapesSource` is used to refer the unique field name in the .json file to identify each shapes.
 
 {% tabs %}
 
@@ -58,11 +58,11 @@ this.Content = maps;
 ![Shape sublayer support](images/shape-sublayer/shape-sublayer.png)
 
 N>
-* Refer the [`MapShapeLayer`](), for adding shape layer in [`SfMaps`]().
+* Refer the `MapShapeLayer`, for adding shape layer in `SfMaps`.
 
 ## Color and stroke color
 
-You can change the color, strokeColor and strokeWidth of the shape sublayer using the [`ShapeFill`](), [`ShapeStroke`]() and [`ShapeStrokeThickness`]() properties.
+You can change the color, strokeColor and strokeWidth of the shape sublayer using the `ShapeFill`, `ShapeStroke` and `ShapeStrokeThickness` properties.
 
 {% tabs %}
 
@@ -106,7 +106,7 @@ this.Content = maps;
 
 ## Equal color mapping
 
-You can apply color to the sublayer shape by comparing a value from the [`ColorMappings`]() with the [`EqualColorMapping.Value`](). For the matched values, the [`EqualColorMapping.color`]() will be applied to the respective shapes.
+You can apply color to the sublayer shape by comparing a value from the `ColorMappings` with the `EqualColorMapping.Value`. For the matched values, the `EqualColorMapping.color` will be applied to the respective shapes.
 
 {% tabs %}
 
@@ -208,7 +208,7 @@ public class Model
 
 ## Range color mapping
 
-You can apply color to the sublayer shapes based on whether the value from [`ColorMappings`]() falls within the [`RangeColorMapping.From`]() and [`RangeColorMapping.To`](). Then, the [`RangeColorMapping.Color`]() will be applied to the respective shapes.
+You can apply color to the sublayer shapes based on whether the value from `ColorMappings` falls within the `RangeColorMapping.From` and `RangeColorMapping.To`. Then, the `RangeColorMapping.Color` will be applied to the respective shapes.
 
 {% tabs %}
 
@@ -312,7 +312,7 @@ public class Model
 
 ## Enable data labels and its customization
 
-You can enable data labels to the shape sublayer using the [`ShowDataLabels`]() and [`DataLabelPath`]() properties. The [`ShowDataLabels`]() is used to control the visibility of data labels, the [`DataLabelPath`]() is used to decide which underline property has to be displayed as data labels. The default value of [`ShowDataLabels`]() is `false`. 
+You can enable data labels to the shape sublayer using the `ShowDataLabels` and `DataLabelPath` properties. The `ShowDataLabels` is used to control the visibility of data labels, the `DataLabelPath` is used to decide which underline property has to be displayed as data labels. The default value of `ShowDataLabels` is `false`. 
 
 {% tabs %}
 
@@ -421,9 +421,9 @@ public class Model
 
 ## Add bubbles to the sublayer
 
-You can enable bubbles to the shape sublayer using the [`ShowBubbles`](). You can customize bubbles appearance using the [`BubbleSettings`](). This property is used to specify the value based on which the bubble's size has to be rendered.
+You can enable bubbles to the shape sublayer using the `ShowBubbles`. You can customize bubbles appearance using the `BubbleSettings`. This property is used to specify the value based on which the bubble's size has to be rendered.
 
-N> Refer the [`Bubbles`]() section, to know more about the bubbles customization.
+N> Refer the `Bubbles` section, to know more about the bubbles customization.
 
 {% tabs %}
 
@@ -530,4 +530,4 @@ public class Model
 
 ![Shape sublayer bubbles](images/shape-sublayer/sublayer-bubbles.png)
 
-N> You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Maps Sublayer example]() that shows how to configure a Maps in .NET MAUI.
+N> You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our `.NET MAUI Maps Sublayer example` that shows how to configure a Maps in .NET MAUI.

@@ -9,11 +9,11 @@ documentation: ug
 
 # Polygons in .NET MAUI Maps (SfMaps)
 
-Polygon layer is a sublayer that renders a group of [`MapPolygon`]() on [`MapShapeLayer`](). This section helps to learn about how to add the polygons and customize them.
+Polygon layer is a sublayer that renders a group of `MapPolygon` on `MapShapeLayer`. This section helps to learn about how to add the polygons and customize them.
 
 ## Adding polygons
 
-The [`Polygons`]() is a collection of [`MapPolygon`](). Every single [`MapPolygon`]() connects multiple coordinates through a [`Points`]() property.
+The `Polygons` is a collection of `MapPolygon`. Every single `MapPolygon` connects multiple coordinates through a `Points` property.
 
 {% tabs %}
 
@@ -90,7 +90,7 @@ this.Content = maps;
 
 ## Fill color
 
-You can apply colors to each [`MapPolygon`]() in the [`Polygons`]() collection using the individual [`MapPolygon.Fill`]() property.
+You can apply colors to each `MapPolygon` in the `Polygons` collection using the individual `MapPolygon.Fill` property.
 
 {% tabs %}
 
@@ -169,9 +169,9 @@ this.Content = maps;
 
 ## Stroke thickness and color
 
-You can apply stroke thickness to each [`MapPolygon`]() in the [`Polygons`]() collection using the individual [`MapPolygon.StrokeThickness`]() property. The default value of the [`MapPolygonLayer.StrokeThickness`]() property is `2`.
+You can apply stroke thickness to each `MapPolygon` in the `Polygons` collection using the individual `MapPolygon.StrokeThickness` property. The default value of the `MapPolygonLayer.StrokeThickness` property is `2`.
 
-You can apply stroke color to each [`MapPolygon`]() in the [`Polygons`]() collection using the individual [`MapPolygon.Stroke`]() property.
+You can apply stroke color to each `MapPolygon` in the `Polygons` collection using the individual `MapPolygon.Stroke` property.
 
 {% tabs %}
 

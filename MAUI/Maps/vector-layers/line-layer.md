@@ -9,11 +9,11 @@ documentation: ug
 
 # Lines in .NET MAUI Maps (SfMaps)
 
-Line layer is a sublayer that renders a group of [`MapLine`]() on [`MapShapeLayer`](). This section helps to learn about how to add the lines and customize them.
+Line layer is a sublayer that renders a group of `MapLine` on `MapShapeLayer`. This section helps to learn about how to add the lines and customize them.
 
 ## Adding lines
 
-The [`Lines`]() is a collection of [`MapLine`](). Every single [`MapLine`]() connects two location coordinates through a straight line. The start coordinate is set to [`MapLine.From`]() property and the end coordinate is set to [`MapLine.To`]() property.
+The `Lines` is a collection of `MapLine`. Every single `MapLine` connects two location coordinates through a straight line. The start coordinate is set to `MapLine.From` property and the end coordinate is set to `MapLine.To` property.
 
 {% tabs %}
 
@@ -118,7 +118,7 @@ The [`Lines`]() is a collection of [`MapLine`](). Every single [`MapLine`]() con
 
 ## Color
 
-You can apply colors to each [`MapLine`]() in the [`Lines`]() collection using the individual [`MapLine.Color`]() property.
+You can apply colors to each `MapLine` in the `Lines` collection using the individual `MapLine.Color` property.
 
 {% tabs %}
 
@@ -225,7 +225,7 @@ this.Content = maps;
 
 ## Width
 
-You can apply width to each [`MapLine`]() in the [`Lines`]() collection using the individual [`MapLine.StrokeThickness`]() property. The default value of the [`MapLine.StrokeThickness`]() property is `2`.
+You can apply width to each `MapLine` in the `Lines` collection using the individual `MapLine.StrokeThickness` property. The default value of the `MapLine.StrokeThickness` property is `2`.
 
 {% tabs %}
 
@@ -334,7 +334,7 @@ this.Content = maps;
 
 ## Stroke cap
 
-You can apply stroke cap to each [`MapLine`]() in the [`Lines`]() collection using the individual `MapLine.StrokeLineCap` property. The default value of the `MapLineLayer.StrokeLineCap` property is `StrokeLineCap.butt`. The available values are `butt`, `round`, and `square`.
+You can apply stroke cap to each `MapLine` in the `Lines` collection using the individual `MapLine.StrokeLineCap` property. The default value of the `MapLineLayer.StrokeLineCap` property is `StrokeLineCap.butt`. The available values are `butt`, `round`, and `square`.
 
 {% tabs %}
 
@@ -450,7 +450,7 @@ this.Content = maps;
 
 ## Dash array
 
-You can apply dash support for the line using the [`MapLine.dashArray`]() property.
+You can apply dash support for the line using the `MapLine.dashArray` property.
 
 A sequence of dash and gap will be rendered based on the values in this list. Once all values of the list is rendered, it will be repeated again till the end of the line.
 
