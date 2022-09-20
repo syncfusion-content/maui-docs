@@ -11,7 +11,9 @@ documentation: ug
 
 ## Keyboard navigation
 
-The `SfScheduler` supports selecting the scheduler date time, appointments, and view navigation using keyboard interaction in WinUI, MAC Catalyst, and iOS platforms. [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_SelectionChanged) event triggers for cell selection changed.
+The `SfScheduler` supports selecting the scheduler date time, appointments, and view navigation using keyboard interaction in WinUI, MAC Catalyst, and iOS platforms.
+
+N> [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_SelectionChanged) event triggers for cell selection changed.
 
 
 ### Day, Week and WorkWeek views
