@@ -541,7 +541,7 @@ private void ListView_PropertyChanged(object sender, PropertyChangedEventArgs e)
 
 Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/how-to-do-indefinite-swiping-in-.net-maui-listview).
 
-![Indefinite swipe in listview](Images/swiping/maui-listview-swipe-an-item-indefinetly.jpg)
+![Indefinite swipe in listview](Images/swiping/maui-listview-swipe-an-item-indefinitely.jpg)
 
 ## How to edit data by swiping
 
