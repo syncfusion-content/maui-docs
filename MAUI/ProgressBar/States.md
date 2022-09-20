@@ -17,7 +17,7 @@ This is the default state. You can use it when the progress estimation is known.
 
 ## Indeterminate
 
-By enabling the [`IsIndeterminate`]() property, the state of the progress bar can be changed to indeterminate when the progress cannot be estimated or is not being calculated. It can be combined with determinate mode to know that the application is estimating progress before the actual progress starts.
+By enabling the `IsIndeterminate` property, the state of the progress bar can be changed to indeterminate when the progress cannot be estimated or is not being calculated. It can be combined with determinate mode to know that the application is estimating progress before the actual progress starts.
 
 {% tabs %} 
 
@@ -53,7 +53,7 @@ this.Content = circularProgressBar;
 
 ## Buffer
 
-The secondary task’s progress can be defined using the [`SecondaryProgress`]() property as demonstrated in the following code sample.
+The secondary task’s progress can be defined using the `SecondaryProgress` property as demonstrated in the following code sample.
 
 {% tabs %} 
 

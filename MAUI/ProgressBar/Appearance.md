@@ -11,7 +11,7 @@ documentation: ug
 
 ## Angle
 
-The appearance of the circular progress bar can be customized to semi-circle, arc, etc. The start and end angles can be customized using the [`StartAngle`]() and [`EndAngle`]() properties. 
+The appearance of the circular progress bar can be customized to semi-circle, arc, etc. The start and end angles can be customized using the `StartAngle` and `EndAngle` properties. 
 
 The following code sample demonstrates how to change the appearance of the circular progress bar to semi-circle.
 
@@ -45,12 +45,12 @@ this.Content = circularProgressBar;
 
 You can visualize the multiple ranges with different colors that are mapped to each range to enhance the readability of progress. 
 
-The colors can be mapped to the specific ranges using the [`GradientStops`]() property, which holds a collection of [`ProgressGradientStop`](). 
+The colors can be mapped to the specific ranges using the `GradientStops` property, which holds a collection of `ProgressGradientStop`. 
 
-The following properties in the [`GradientStops`]() are used to map the colors to a range:
+The following properties in the `GradientStops` are used to map the colors to a range:
 
-* [`Color`](): Represents the color to the specified range.
-* [`Value`](): Represents the start or end value for the specified color.
+* `Color`: Represents the color to the specified range.
+* `Value`: Represents the start or end value for the specified color.
 
 The following code sample demonstrates how to map the solid color range in the progress bar.
 
@@ -180,7 +180,7 @@ this.Content = circularProgressBar;
 
 ### Linear progress bar
 
-In the linear progress bar, the height of the track, progress and secondary progress can be customized using the [`TrackHeight`]() and [`ProgressHeight`]() and [`SecondaryProgressHeight`]() properties, respectively.
+In the linear progress bar, the height of the track, progress and secondary progress can be customized using the `TrackHeight` and `ProgressHeight` and `SecondaryProgressHeight` properties, respectively.
 
 {% tabs %} 
 
@@ -219,13 +219,13 @@ this.Content = linearProgressBar;
 
 The following properties are used to customize the appearance of the circular progress bar:
 
-* [`ProgressRadiusFactor`](): Defines the outer radius of the progress indicator.
-* [`ProgressThickness`](): Defines the thickness of the progress indicator.
-* [`TrackRadiusFactor`](): Defines the outer radius of the track indicator.
-* [`TrackThickness`](): Defines the thickness of the track indicator.
-* [`ThicknessUnit`](): Specifies whether the [`ProgressThickness`]() or [`TrackThickness`]() are defined in pixel or factor.
+* `ProgressRadiusFactor`: Defines the outer radius of the progress indicator.
+* `ProgressThickness`: Defines the thickness of the progress indicator.
+* `TrackRadiusFactor`: Defines the outer radius of the track indicator.
+* `TrackThickness`: Defines the thickness of the track indicator.
+* `ThicknessUnit`: Specifies whether the `ProgressThickness` or `TrackThickness` are defined in pixel or factor.
 
-The [`ProgressThickness`]() or [`TrackThickness`]() of the progress bar can be specified either in pixel or factor. If the [`ThicknessUnit`]() is specified as Pixel, then the range will be rendered based on the provided pixel value. If the [`ThicknessUnit`]() is set as factor, the provided factor value will be multiplied with outer radius. For example, if the thickness width is set as 0.1, then 10% of outer radius is considered as thickness.
+The `ProgressThickness` or `TrackThickness` of the progress bar can be specified either in pixel or factor. If the `ThicknessUnit` is specified as Pixel, then the range will be rendered based on the provided pixel value. If the `ThicknessUnit` is set as factor, the provided factor value will be multiplied with outer radius. For example, if the thickness width is set as 0.1, then 10% of outer radius is considered as thickness.
 
 The following code sample demonstrates how to customize the appearance of circular progress bar.
 
@@ -271,7 +271,7 @@ this.Content = circularProgressBar;
 
 ## Corner radius
 
-The [`CornerRadius`]() property is used to customize the rounded edges in the linear progress bar as demonstrated in the following code sample.
+The `CornerRadius` property is used to customize the rounded edges in the linear progress bar as demonstrated in the following code sample.
 
 {% tabs %} 
 
@@ -311,7 +311,7 @@ this.Content = linearProgressBar;
 
 ## Corner style customization
 
-The [`CornerStyle`]() property of circular progress bar specifies the corner type for the track or progress. The corners can be customized using the [`BothFlat`](), [`BothCurve`](), [`StartCurve`](), and [`EndCurve`]() options. The default value of this property is [`BothFlat`]().
+The `CornerStyle` property of circular progress bar specifies the corner type for the track or progress. The corners can be customized using the `BothFlat`, `BothCurve`, `StartCurve`, and `EndCurve` options. The default value of this property is `BothFlat`.
 
 The following code sample demonstrates the corner style customization in progress and track indicator.
 
@@ -355,8 +355,8 @@ this.Content = circularProgressBar;
 
 The following properties are used to customize the color in the progress bar:
 
-* [`ProgressFill`](): Represents the color of the progress indicator.
-* [`TrackFill`](): Represents the color of the track indicator.
+* `ProgressFill`: Represents the color of the progress indicator.
+* `TrackFill`: Represents the color of the track indicator.
 
 The following code sample demonstrates the color customization in progress and track indicator.
 
@@ -394,7 +394,7 @@ this.Content = linearProgressBar;
 
 ![color1](images/Appearance/Color.png)
 
-The linear progress bar provides support to customize the color for the secondary progress bar using the [`SecondaryProgressFill`]() property as demonstrated in the following code sample.
+The linear progress bar provides support to customize the color for the secondary progress bar using the `SecondaryProgressFill` property as demonstrated in the following code sample.
 
 {% tabs %} 
 

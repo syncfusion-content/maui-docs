@@ -13,15 +13,15 @@ The progress bar provides animation support to visualize the progress value chan
 
 The following properties are used to define the duration of animation for the specific states:
 
-* [`AnimationDuration`](): Represents animation duration of the determinate state’s progress indicator.
-* [`SecondaryAnimationDuration`](): Represents animation duration of the determinate state’s secondary progress indicator.
-* [`IndeterminateAnimationDuration`](): Represents animation duration of the indeterminate state’s indicator.
+* `AnimationDuration`: Represents animation duration of the determinate state’s progress indicator.
+* `SecondaryAnimationDuration`: Represents animation duration of the determinate state’s secondary progress indicator.
+* `IndeterminateAnimationDuration`: Represents animation duration of the indeterminate state’s indicator.
 
 ## Easing effects
 
-The [`AnimationEasing`]() property allows you specify the transfer function that controls animation speed when they run. 
+The `AnimationEasing` property allows you specify the transfer function that controls animation speed when they run. 
 
-The following code sample demonstrates the [`CubicInOut`]() easing function of the linear progress bar.
+The following code sample demonstrates the `CubicInOut` easing function of the linear progress bar.
 
 {% tabs %} 
 
@@ -45,7 +45,7 @@ this.Content = linearProgressBar;
 
 {% endtabs %} 
 
-The [`SetProgress()`]() method in the progress bar is used to set progress value along with animation duration and easing effect applicable for the specific method call.
+The `SetProgress()` method in the progress bar is used to set progress value along with animation duration and easing effect applicable for the specific method call.
 
 {% highlight c# %}
 
@@ -53,13 +53,13 @@ void SetProgress(double progress, double? animationDuration = null, Easing? easi
 
 {% endhighlight %}
 
-N> The animationDuration and easingEffect parameters will not affect the configuration of the [`AnimationDuration`]() and [`AnimationEasing`]() properties.
+N> The animationDuration and easingEffect parameters will not affect the configuration of the `AnimationDuration`and `AnimationEasing` properties.
 
 ## Indeterminate Easing Effects
 
-The [`IndeterminateAnimationEasing`]() property allows you to specify a transfer function for indeterminate state, which controls animation speed when they run.
+The `IndeterminateAnimationEasing` property allows you to specify a transfer function for indeterminate state, which controls animation speed when they run.
 
-The following code sample demonstrates the [`BounceIn`]() easing function of the linear progress bar.
+The following code sample demonstrates the `BounceIn` easing function of the linear progress bar.
 
 {% tabs %} 
 

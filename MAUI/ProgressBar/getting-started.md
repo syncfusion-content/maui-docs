@@ -148,7 +148,7 @@ this.Content = circularProgressBar;
 
 ## Enable segments
 
-To visualize the progress of a multiple sequential task, split the progress bar into the multiple segments by defining the [SegmentCount]() property as demonstrated in the following code sample.
+To visualize the progress of a multiple sequential task, split the progress bar into the multiple segments by defining the `SegmentCount` property as demonstrated in the following code sample.
 
 {% tabs %} 
 
@@ -186,7 +186,7 @@ this.Content = circularProgressBar;
 
 ## Apply colors
 
-You can customize the color of the progress indicator and track by defining the [ProgressFill]() and [TrackFill]() properties, respectively.
+You can customize the color of the progress indicator and track by defining the `ProgressFill` and `TrackFill` properties, respectively.
 
 {% tabs %} 
 

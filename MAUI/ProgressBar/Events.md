@@ -13,7 +13,7 @@ documentation: ug
 
 This event is triggered when the progress value is changed. This event contains the following event argument.
 
-* [`Progress`](): Represents the progress value.
+* `Progress`: Represents the progress value.
 
 The following code sample demonstrates how to customize the color of a progress indicator based on progress using this event. 
 
@@ -49,7 +49,7 @@ private void LinearProgressBar_ProgressChanged(object sender, ProgressValueEvent
 
 This event is triggered when the progress attains the [`Maximum`]() value. This event contains the following argument.
 
-* [`Progress`](): Represents the progress value.
+* `Progress`: Represents the progress value.
 
 The following code sample demonstrates how to customize the progress bar when progress reaches maximum using this event. 
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Custom Content in .NET MAUI ProgressBar (Progress Bar)
 
-In the circular progress bar, you can add any view to the center using the [`Content`]() property. 
+In the circular progress bar, you can add any view to the center using the `Content` property. 
 
 For example, you can include add, start, or pause button to control the progress. You can also add an image that indicates the actual task in progress or add custom text that conveys how far the task is completed. 
 

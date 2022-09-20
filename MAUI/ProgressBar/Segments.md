@@ -9,7 +9,7 @@ documentation: ug
 
 # Segments in .NET MAUI ProgressBar (Progress Bar)
 
-To visualize the progress of multiple sequential tasks, split the progress bar into multiple segments by setting the [`SegmentCount`]() property as demonstrated in the following code sample.
+To visualize the progress of multiple sequential tasks, split the progress bar into multiple segments by setting the `SegmentCount` property as demonstrated in the following code sample.
 
 {% tabs %} 
 
@@ -55,7 +55,7 @@ this.Content = circularProgressBar;
 
 ## Gap customization
 
-You can also customize the default spacing between the segments using the [`GapWidth`]() property as demonstrated in following code sample.
+You can also customize the default spacing between the segments using the `GapWidth` property as demonstrated in following code sample.
 
 {% tabs %} 
 {% highlight xaml %}
