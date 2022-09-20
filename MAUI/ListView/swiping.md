@@ -476,14 +476,13 @@ private void ListView_SwipeEnded(object sender, SwipeEndedEventArgs e)
 
 ### SwipeReset Event
 
+The `SfListView.SwipeReset` event is fired when swipe view is reset. This event is triggered with `SwipeResetEventArgs`.
 
 The `SwipeReset` event provides the following properties in their arguments:
 
  * `Index`: Defines the swiping item index.
  * `DataItem`: Defines the underlying data associated with the swiped item as its arguments. 
  * `OffSet`: Defines the current swipe offset of the item being swiped.
- 
-The `SwipeReset` event is used for the following use case:
 
 Swiped item can be reset by defining the `SfListView.SwipeOffSet` argument of `SfListView.SwipeEnded` event to `0` when the swiping action is completed.
 
