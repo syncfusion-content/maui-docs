@@ -89,7 +89,7 @@ this.Content = maps;
 
 {% endtabs %}
 
-![Default polyline shape](../images/polyline-layer/default-polyline-shape.png)
+![Default polyline shape](images/polyline-layer/default-polyline-shape.png)
 
 ## Stroke
 
@@ -170,7 +170,7 @@ this.Content = maps;
 
 {% endtabs %}
 
-![Polyline color](../images/polyline-layer/polyline-color.png)
+![Polyline color](images/polyline-layer/polyline-color.png)
 
 ## Stroke thickness
 
@@ -251,7 +251,7 @@ this.Content = maps;
 
 {% endtabs %}
 
-![Polyline width](../images/polyline-layer/polyline-width.png)
+![Polyline width](images/polyline-layer/polyline-width.png)
 
 ## Stroke cap
 
@@ -334,7 +334,7 @@ this.Content = maps;
 
 {% endtabs %}
 
-![Polyline stroke cap](../images/polyline-layer/polyline-stroke-cap.png)
+![Polyline stroke cap](images/polyline-layer/polyline-stroke-cap.png)
 
 ## Dash array
 
@@ -426,4 +426,4 @@ this.Content = maps;
 
 {% endtabs %}
 
-![Polyline dash array](../images/polyline-layer/polyline-dash-array.png)
+![Polyline dash array](images/polyline-layer/polyline-dash-array.png)

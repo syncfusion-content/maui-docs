@@ -114,7 +114,7 @@ The [`Lines`]() is a collection of [`MapLine`](). Every single [`MapLine`]() con
 
 {% endtabs %}
 
-![Default line shape](images/bubble/default-bubble.png)
+![Default line shape](images/line-layer/default_line_shape.png)
 
 ## Color
 
@@ -221,7 +221,7 @@ this.Content = maps;
 
 {% endtabs %}
 
-![Line shape color](../images/line-layer/line_shape_color.png)
+![Line shape color](images/line-layer/line_shape_color.png)
 
 ## Width
 
@@ -330,7 +330,7 @@ this.Content = maps;
 
 {% endtabs %}
 
-![Line shape width](../images/line-layer/line_shape_width.png)
+![Line shape width](images/line-layer/line_shape_width.png)
 
 ## Stroke cap
 
@@ -446,7 +446,7 @@ this.Content = maps;
 {% endhighlight %}
 
 {% endtabs %}
-![Line stroke cap](../images/line-layer/line_stroke_cap.png)
+![Line stroke cap](images/line-layer/line_stroke_cap.png)
 
 ## Dash array
 
@@ -587,4 +587,4 @@ this.Content = maps;
 
 {% endtabs %}
 
-![Line shape dash array](../images/line-layer/line_shape_dash_array.png)
+![Line shape dash array](images/line-layer/line_shape_dash_array.png)

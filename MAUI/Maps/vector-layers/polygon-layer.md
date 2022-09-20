@@ -86,7 +86,7 @@ this.Content = maps;
 
 {% endtabs %}
 
-![Default polygon shape](../images/polygon-layer/default-polygon-shape.png)
+![Default polygon shape](images/polygon-layer/default-polygon-shape.png)
 
 ## Fill color
 
@@ -165,7 +165,7 @@ this.Content = maps;
 
 {% endtabs %}
 
-![Polygon fill color](../images/polygon-layer/polygon-fill-color.png)
+![Polygon fill color](images/polygon-layer/polygon-fill-color.png)
 
 ## Stroke thickness and color
 
@@ -250,4 +250,4 @@ this.Content = maps;
 
 {% endtabs %}
 
-![Polygon stroke color](../images/polygon-layer/polygon-stroke-color.png)
+![Polygon stroke color](images/polygon-layer/polygon-stroke-color.png)

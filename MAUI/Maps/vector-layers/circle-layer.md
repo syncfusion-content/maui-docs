@@ -489,4 +489,4 @@ this.Content = maps;
 
 {% endtabs %}
 
-![Circle stroke color](images/shape-sublayer/range_color_mapping.png)
+![Circle stroke color](images/circle-layer/circle-stroke-color.png)
