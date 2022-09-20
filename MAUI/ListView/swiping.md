@@ -485,30 +485,6 @@ The `SwipeReset` event provides the following properties in their arguments:
  
 The `SwipeReset` event is used for the following use case:
 
- * To skip the reset operation for a swiped item.
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-<syncfusion:SfListView x:Name="listView" ItemsSource="{Binding InboxInfo}" AllowSwiping="True"
-                       SwipeReset="listView_SwipeReset" />
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
-listView.SwipeReset += ListView_SwipeReset;
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
-private void ListView_SwipeReset(object sender, ResetSwipeEventArgs e)
-{
-  if (e.Index == 1)
-    e.Cancel = true;
-}
-{% endhighlight %}
-{% endtabs %}
-
-## How to reset swipe the view automatically
-
 Swiped item can be reset by defining the `SfListView.SwipeOffSet` argument of `SfListView.SwipeEnded` event to `0` when the swiping action is completed.
 
 {% tabs %}
@@ -532,9 +508,9 @@ ListView.PropertyChanged += ListView_PropertyChanged;
 private void ListView_PropertyChanged(object sender, PropertyChangedEventArgs e)
 {
   if (e.PropertyName == "Width" && ListView.Orientation == Orientation.Vertical && ListView.SwipeOffset != ListView.Width)
-     ListView.Offset = ListView.Width;
+     ListView.SwipeOffset = ListView.Width;
   else if (e.PropertyName == "Height" && ListView.Orientation == Orientation.Horizontal && ListView.SwipeOffset != ListView.Height)
-     ListView.Offset = ListView.Height;
+     ListView.SwipeOffset = ListView.Height;
 }
 {% endhighlight %}
 {% endtabs %}
