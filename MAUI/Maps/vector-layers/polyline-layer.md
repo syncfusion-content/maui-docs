@@ -21,13 +21,12 @@ The [`Polylines`]() is a collection of [`MapPolyline`](). Every single [`MapPoly
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer x:Name="layer"
-                           ShapesSource="{local:ImageResource MapDemo.ShapeFiles.india.json}"
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/india.json"
                            ShapeStroke="DarkGray">
             <map:MapShapeLayer.Sublayers>
-                <map:MapPolylineLayer x:Name="mapPolylineLayer">
+                <map:MapPolylineLayer>
                     <map:MapPolylineLayer.Polylines>
-                        <map:MapPolyline x:Name="polyline">
+                        <map:MapPolyline>
                             <map:MapPolyline.Points>
                                 <map:MapLatLng Latitude="80.2707"
                                                Longitude="13.0827" />
@@ -102,14 +101,12 @@ You can apply colors to each [`MapPolyline`]() in the [`Polylines`]() collection
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer x:Name="layer"
-                           ShapesSource="{local:ImageResource MapDemo.ShapeFiles.india.json}"
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/india.json"
                            ShapeStroke="DarkGray">
             <map:MapShapeLayer.Sublayers>
-                <map:MapPolylineLayer x:Name="mapPolylineLayer">
+                <map:MapPolylineLayer>
                     <map:MapPolylineLayer.Polylines>
-                        <map:MapPolyline x:Name="polyline"
-                                         Stroke="#993fad">
+                        <map:MapPolyline Stroke="#993fad">
                             <map:MapPolyline.Points>
                                 <map:MapLatLng Latitude="80.2707"
                                                Longitude="13.0827" />
@@ -146,7 +143,7 @@ You can apply colors to each [`MapPolyline`]() in the [`Polylines`]() collection
 
 SfMaps maps = new SfMaps();
 MapShapeLayer layer = new MapShapeLayer();
-layer.ShapesSource = MapSource.FromResource("MyProject.india.json");
+layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/india.json"));
 layer.ShapeStroke = Brush.DarkGray;
 MapPolylineLayer mapPolylineLayer = new MapPolylineLayer();
 MapPolyline polyline = new MapPolyline();
@@ -185,14 +182,12 @@ You can apply different stroke thickness to each [`MapPolyline`]() in the [`Poly
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer x:Name="layer"
-                           ShapesSource="{local:ImageResource MapDemo.ShapeFiles.india.json}"
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/india.json"
                            ShapeStroke="DarkGray">
             <map:MapShapeLayer.Sublayers>
-                <map:MapPolylineLayer x:Name="mapPolylineLayer">
+                <map:MapPolylineLayer>
                     <map:MapPolylineLayer.Polylines>
-                        <map:MapPolyline x:Name="polyline"
-                                         StrokeThickness="3">
+                        <map:MapPolyline StrokeThickness="3">
                             <map:MapPolyline.Points>
                                 <map:MapLatLng Latitude="80.2707"
                                                Longitude="13.0827" />
@@ -223,14 +218,13 @@ You can apply different stroke thickness to each [`MapPolyline`]() in the [`Poly
     </map:SfMaps.Layer>
 </map:SfMaps>
 
-
 {% endhighlight %}
 
 {% highlight c# %}
 
 SfMaps maps = new SfMaps();
 MapShapeLayer layer = new MapShapeLayer();
-layer.ShapesSource = MapSource.FromResource("MyProject.india.json");
+layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/india.json"));
 layer.ShapeStroke = Brush.DarkGray;
 MapPolylineLayer mapPolylineLayer = new MapPolylineLayer();
 MapPolyline polyline = new MapPolyline();
@@ -269,14 +263,12 @@ You can apply different stroke cap to each [`MapPolyline`]() in the [`Polylines`
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer x:Name="layer"
-                           ShapesSource="{local:ImageResource MapDemo.ShapeFiles.india.json}"
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/india.json"
                            ShapeStroke="DarkGray">
             <map:MapShapeLayer.Sublayers>
-                <map:MapPolylineLayer x:Name="mapPolylineLayer">
+                <map:MapPolylineLayer>
                     <map:MapPolylineLayer.Polylines>
-                        <map:MapPolyline x:Name="polyline"
-                                         StrokeThickness="5"
+                        <map:MapPolyline StrokeThickness="5"
                                          StrokeLineCap="Round">
                             <map:MapPolyline.Points>
                                 <map:MapLatLng Latitude="80.2707"
@@ -314,7 +306,7 @@ You can apply different stroke cap to each [`MapPolyline`]() in the [`Polylines`
 
 SfMaps maps = new SfMaps();
 MapShapeLayer layer = new MapShapeLayer();
-layer.ShapesSource = MapSource.FromResource("MyProject.india.json");
+layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/india.json"));
 layer.ShapeStroke = Brush.DarkGray;
 MapPolylineLayer mapPolylineLayer = new MapPolylineLayer();
 MapPolyline polyline = new MapPolyline();
@@ -356,14 +348,12 @@ A sequence of dash and gap will be rendered based on the values in this list. On
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer x:Name="layer"
-                           ShapesSource="{local:ImageResource MapDemo.ShapeFiles.india.json}"
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/india.json"
                            ShapeStroke="DarkGray">
             <map:MapShapeLayer.Sublayers>
-                <map:MapPolylineLayer x:Name="mapPolylineLayer">
+                <map:MapPolylineLayer>
                     <map:MapPolylineLayer.Polylines>
-                        <map:MapPolyline x:Name="polyline"
-                                         Stroke="#52a8ef">
+                        <map:MapPolyline Stroke="#52a8ef">
                             <map:MapPolyline.Points>
                                 <map:MapLatLng Latitude="80.2707"
                                                Longitude="13.0827" />
@@ -408,7 +398,7 @@ A sequence of dash and gap will be rendered based on the values in this list. On
 
 SfMaps maps = new SfMaps();
 MapShapeLayer layer = new MapShapeLayer();
-layer.ShapesSource = MapSource.FromResource("MyProject.india.json");
+layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/india.json"));
 layer.ShapeStroke = Brush.DarkGray;
 MapPolylineLayer mapPolylineLayer = new MapPolylineLayer();
 MapPolyline polyline = new MapPolyline();

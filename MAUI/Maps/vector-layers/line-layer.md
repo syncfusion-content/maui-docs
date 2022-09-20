@@ -26,8 +26,7 @@ The [`Lines`]() is a collection of [`MapLine`](). Every single [`MapLine`]() con
             <map:MapShapeLayer.Sublayers>
                 <map:MapLineLayer>
                     <map:MapLineLayer.Lines>
-                        <map:MapLine x:Name="line1"
-                                     StrokeThickness="2"
+                        <map:MapLine StrokeThickness="2"
                                      Stroke="#8a8a8a">
                             <map:MapLine.From>
                                 <map:MapLatLng Latitude="77.1025"
@@ -38,8 +37,7 @@ The [`Lines`]() is a collection of [`MapLine`](). Every single [`MapLine`]() con
                                                Longitude="56.1304" />
                             </map:MapLine.To>
                         </map:MapLine>
-                        <map:MapLine x:Name="line2"
-                                     StrokeThickness="2"
+                        <map:MapLine StrokeThickness="2"
                                      Stroke="#8a8a8a">
                             <map:MapLine.From>
                                 <map:MapLatLng Latitude="77.1025"
@@ -50,8 +48,7 @@ The [`Lines`]() is a collection of [`MapLine`](). Every single [`MapLine`]() con
                                                Longitude="-9.1900" />
                             </map:MapLine.To>
                         </map:MapLine>
-                        <map:MapLine x:Name="line3"
-                                     StrokeThickness="2"
+                        <map:MapLine StrokeThickness="2"
                                      Stroke="#8a8a8a">
                             <map:MapLine.From>
                                 <map:MapLatLng Latitude="77.1025"
@@ -62,8 +59,7 @@ The [`Lines`]() is a collection of [`MapLine`](). Every single [`MapLine`]() con
                                                Longitude="61.5240" />
                             </map:MapLine.To>
                         </map:MapLine>
-                        <map:MapLine x:Name="line4"
-                                     StrokeThickness="2"
+                        <map:MapLine StrokeThickness="2"
                                      Stroke="#8a8a8a">
                             <map:MapLine.From>
                                 <map:MapLatLng Latitude="77.1025"
@@ -87,7 +83,7 @@ The [`Lines`]() is a collection of [`MapLine`](). Every single [`MapLine`]() con
 
  SfMaps maps = new SfMaps();
  MapShapeLayer layer = new MapShapeLayer();
- layer.ShapesSource = MapSource.FromResource("MyProject.world1.shp");
+ layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
  layer.ShapeStroke = Brush.DarkGrey;
  MapLineLayer mapLineLayer = new MapLineLayer();
  MapLine line1 = new MapLine();
@@ -135,8 +131,7 @@ You can apply colors to each [`MapLine`]() in the [`Lines`]() collection using t
             <map:MapShapeLayer.Sublayers>
                 <map:MapLineLayer>
                     <map:MapLineLayer.Lines>
-                        <map:MapLine x:Name="line1"
-                                     StrokeThickness="2"
+                        <map:MapLine StrokeThickness="2"
                                      Stroke="#ed4a47">
                             <map:MapLine.From>
                                 <map:MapLatLng Latitude="77.1025"
@@ -147,8 +142,7 @@ You can apply colors to each [`MapLine`]() in the [`Lines`]() collection using t
                                                Longitude="56.1304" />
                             </map:MapLine.To>
                         </map:MapLine>
-                        <map:MapLine x:Name="line2"
-                                     StrokeThickness="2"
+                        <map:MapLine StrokeThickness="2"
                                      Stroke="#724df6">
                             <map:MapLine.From>
                                 <map:MapLatLng Latitude="77.1025"
@@ -159,8 +153,7 @@ You can apply colors to each [`MapLine`]() in the [`Lines`]() collection using t
                                                Longitude="-9.1900" />
                             </map:MapLine.To>
                         </map:MapLine>
-                        <map:MapLine x:Name="line3"
-                                     StrokeThickness="2"
+                        <map:MapLine StrokeThickness="2"
                                      Stroke="#3e8af5">
                             <map:MapLine.From>
                                 <map:MapLatLng Latitude="77.1025"
@@ -171,8 +164,7 @@ You can apply colors to each [`MapLine`]() in the [`Lines`]() collection using t
                                                Longitude="61.5240" />
                             </map:MapLine.To>
                         </map:MapLine>
-                        <map:MapLine x:Name="line4"
-                                     StrokeThickness="2"
+                        <map:MapLine StrokeThickness="2"
                                      Stroke="#439386">
                             <map:MapLine.From>
                                 <map:MapLatLng Latitude="77.1025"
@@ -196,7 +188,7 @@ You can apply colors to each [`MapLine`]() in the [`Lines`]() collection using t
 
 SfMaps maps = new SfMaps();
 MapShapeLayer layer = new MapShapeLayer();
-layer.ShapesSource = MapSource.FromResource("MyProject.world1.shp");
+layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
 layer.ShapeStroke = Brush.DarkGrey;
 MapLineLayer mapLineLayer = new MapLineLayer();
 MapLine line1 = new MapLine();
@@ -246,8 +238,7 @@ You can apply width to each [`MapLine`]() in the [`Lines`]() collection using th
             <map:MapShapeLayer.Sublayers>
                 <map:MapLineLayer>
                     <map:MapLineLayer.Lines>
-                        <map:MapLine x:Name="line1"
-                                     StrokeThickness="2"
+                        <map:MapLine StrokeThickness="2"
                                      Stroke="#8a8a8a">
                             <map:MapLine.From>
                                 <map:MapLatLng Latitude="77.1025"
@@ -258,8 +249,7 @@ You can apply width to each [`MapLine`]() in the [`Lines`]() collection using th
                                                Longitude="56.1304" />
                             </map:MapLine.To>
                         </map:MapLine>
-                        <map:MapLine x:Name="line2"
-                                     StrokeThickness="4"
+                        <map:MapLine StrokeThickness="4"
                                      Stroke="#8a8a8a">
                             <map:MapLine.From>
                                 <map:MapLatLng Latitude="77.1025"
@@ -270,8 +260,7 @@ You can apply width to each [`MapLine`]() in the [`Lines`]() collection using th
                                                Longitude="-9.1900" />
                             </map:MapLine.To>
                         </map:MapLine>
-                        <map:MapLine x:Name="line3"
-                                     StrokeThickness="5"
+                        <map:MapLine StrokeThickness="5"
                                      Stroke="#8a8a8a">
                             <map:MapLine.From>
                                 <map:MapLatLng Latitude="77.1025"
@@ -282,8 +271,7 @@ You can apply width to each [`MapLine`]() in the [`Lines`]() collection using th
                                                Longitude="61.5240" />
                             </map:MapLine.To>
                         </map:MapLine>
-                        <map:MapLine x:Name="line4"
-                                     StrokeThickness="6"
+                        <map:MapLine StrokeThickness="6"
                                      Stroke="#8a8a8a">
                             <map:MapLine.From>
                                 <map:MapLatLng Latitude="77.1025"
@@ -307,7 +295,7 @@ You can apply width to each [`MapLine`]() in the [`Lines`]() collection using th
 
 SfMaps maps = new SfMaps();
 MapShapeLayer layer = new MapShapeLayer();
-layer.ShapesSource = MapSource.FromResource("MyProject.world1.shp");
+layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
 layer.ShapeStroke = Brush.DarkGrey;
 MapLineLayer mapLineLayer = new MapLineLayer();
 MapLine line1 = new MapLine();
@@ -359,8 +347,7 @@ You can apply stroke cap to each [`MapLine`]() in the [`Lines`]() collection usi
             <map:MapShapeLayer.Sublayers>
                 <map:MapLineLayer>
                     <map:MapLineLayer.Lines>
-                        <map:MapLine x:Name="line1"
-                                     StrokeThickness="2"
+                        <map:MapLine StrokeThickness="2"
                                      Stroke="#8a8a8a" 
                                      StrokeLineCap="Round">
                             <map:MapLine.From>
@@ -372,8 +359,7 @@ You can apply stroke cap to each [`MapLine`]() in the [`Lines`]() collection usi
                                                Longitude="56.1304" />
                             </map:MapLine.To>
                         </map:MapLine>
-                        <map:MapLine x:Name="line2"
-                                     StrokeThickness="4"
+                        <map:MapLine StrokeThickness="4"
                                      Stroke="#8a8a8a"
                                      StrokeLineCap="Round">
                             <map:MapLine.From>
@@ -385,8 +371,7 @@ You can apply stroke cap to each [`MapLine`]() in the [`Lines`]() collection usi
                                                Longitude="-9.1900" />
                             </map:MapLine.To>
                         </map:MapLine>
-                        <map:MapLine x:Name="line3"
-                                     StrokeThickness="5"
+                        <map:MapLine StrokeThickness="5"
                                      Stroke="#8a8a8a"
                                      StrokeLineCap="Round">
                             <map:MapLine.From>
@@ -398,8 +383,7 @@ You can apply stroke cap to each [`MapLine`]() in the [`Lines`]() collection usi
                                                Longitude="61.5240" />
                             </map:MapLine.To>
                         </map:MapLine>
-                        <map:MapLine x:Name="line4"
-                                     StrokeThickness="6"
+                        <map:MapLine StrokeThickness="6"
                                      Stroke="#8a8a8a"
                                      StrokeLineCap="Round">
                             <map:MapLine.From>
@@ -424,7 +408,7 @@ You can apply stroke cap to each [`MapLine`]() in the [`Lines`]() collection usi
 
 SfMaps maps = new SfMaps();
 MapShapeLayer layer = new MapShapeLayer();
-layer.ShapesSource = MapSource.FromResource("MyProject.world1.shp");
+layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
 layer.ShapeStroke = Brush.DarkGrey;
 MapLineLayer mapLineLayer = new MapLineLayer();
 MapLine line1 = new MapLine();
@@ -481,8 +465,7 @@ A sequence of dash and gap will be rendered based on the values in this list. On
             <map:MapShapeLayer.Sublayers>
                 <map:MapLineLayer>
                     <map:MapLineLayer.Lines>
-                        <map:MapLine x:Name="line1"
-                                     Stroke="#3d9bf2" >
+                        <map:MapLine Stroke="#3d9bf2" >
                             <map:MapLine.From>
                                 <map:MapLatLng Latitude="77.1025"
                                                Longitude="28.7041" />
@@ -500,8 +483,7 @@ A sequence of dash and gap will be rendered based on the values in this list. On
                                 </DoubleCollection>
                             </map:MapLine.StrokeDashArray>
                         </map:MapLine>
-                        <map:MapLine x:Name="line2"
-                                     Stroke="#3d9bf2">
+                        <map:MapLine Stroke="#3d9bf2">
                             <map:MapLine.From>
                                 <map:MapLatLng Latitude="77.1025"
                                                Longitude="28.7041" />
@@ -519,8 +501,7 @@ A sequence of dash and gap will be rendered based on the values in this list. On
                                 </DoubleCollection>
                             </map:MapLine.StrokeDashArray>
                         </map:MapLine>
-                        <map:MapLine x:Name="line3"
-                                     Stroke="#3d9bf2">
+                        <map:MapLine Stroke="#3d9bf2">
                             <map:MapLine.From>
                                 <map:MapLatLng Latitude="77.1025"
                                                Longitude="28.7041" />
@@ -538,8 +519,7 @@ A sequence of dash and gap will be rendered based on the values in this list. On
                                 </DoubleCollection>
                             </map:MapLine.StrokeDashArray>
                         </map:MapLine>
-                        <map:MapLine x:Name="line4"
-                                     Stroke="#3d9bf2">
+                        <map:MapLine Stroke="#3d9bf2">
                             <map:MapLine.From>
                                 <map:MapLatLng Latitude="77.1025"
                                                Longitude="28.7041" />
@@ -570,7 +550,7 @@ A sequence of dash and gap will be rendered based on the values in this list. On
 
 SfMaps maps = new SfMaps();
 MapShapeLayer layer = new MapShapeLayer();
-layer.ShapesSource = MapSource.FromResource("MyProject.world1.shp");
+layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
 layer.ShapeStroke = Brush.DarkGrey;
 MapLineLayer mapLineLayer = new MapLineLayer();
 MapLine line1 = new MapLine();

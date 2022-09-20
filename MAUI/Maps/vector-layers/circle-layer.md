@@ -21,48 +21,48 @@ The [`Circles`]() is a collection of [`MapCircle`](). Every single [`MapCircle`]
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer ShapesSource="{local:ImageResource MapDemo.ShapeFiles.india.json}"
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/india.json"
                            ShapeStroke="DarkGrey">
             <map:MapShapeLayer.Sublayers>
                 <map:MapCircleLayer>
                     <map:MapCircleLayer.Circles>
-                        <map:MapCircle x:Name="circle1">
+                        <map:MapCircle>
                             <map:MapCircle.Center>
                                 <map:MapLatLng Latitude="74.1240"
                                                Longitude="15.2993"></map:MapLatLng>
                             </map:MapCircle.Center>
                         </map:MapCircle>
-                        <map:MapCircle x:Name="circle2">
+                        <map:MapCircle>
                             <map:MapCircle.Center>
                                 <map:MapLatLng Latitude="80.0499"
                                                Longitude="15.5057"></map:MapLatLng>
                             </map:MapCircle.Center>
                         </map:MapCircle>
-                        <map:MapCircle x:Name="circle3">
+                        <map:MapCircle>
                             <map:MapCircle.Center>
                                 <map:MapLatLng Latitude="75.7139"
                                                Longitude="19.7515"></map:MapLatLng>
                             </map:MapCircle.Center>
                         </map:MapCircle>
-                        <map:MapCircle x:Name="circle4">
+                        <map:MapCircle>
                             <map:MapCircle.Center>
                                 <map:MapLatLng Latitude="72.5714"
                                                Longitude="23.0225"></map:MapLatLng>
                             </map:MapCircle.Center>
                         </map:MapCircle>
-                        <map:MapCircle x:Name="circle5">
+                        <map:MapCircle>
                             <map:MapCircle.Center>
                                 <map:MapLatLng Latitude="74.2179"
                                                Longitude="27.0238"></map:MapLatLng>
                             </map:MapCircle.Center>
                         </map:MapCircle>
-                        <map:MapCircle x:Name="circle6">
+                        <map:MapCircle>
                             <map:MapCircle.Center>
                                 <map:MapLatLng Latitude="80.9462"
                                                Longitude="26.8467"></map:MapLatLng>
                             </map:MapCircle.Center>
                         </map:MapCircle>
-                        <map:MapCircle x:Name="circle7">
+                        <map:MapCircle>
                             <map:MapCircle.Center>
                                 <map:MapLatLng Latitude="85.2799"
                                                Longitude="21.2787"></map:MapLatLng>
@@ -81,7 +81,7 @@ The [`Circles`]() is a collection of [`MapCircle`](). Every single [`MapCircle`]
 
 SfMaps maps = new SfMaps();
 MapShapeLayer layer = new MapShapeLayer();
-layer.ShapesSource = MapSource.FromResource("MyProject.india.json");
+layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/india.json"));
 layer.ShapeStroke = Brush.DarkGray;
 MapCircleLayer circleLayer = new MapCircleLayer();
 MapCircle circle1 = new MapCircle();
@@ -113,7 +113,7 @@ this.Content = maps;
 
 {% endtabs %}
 
-![Default circle shape](../images/circle-layer/default-circle-shape.png)
+![Default circle shape](images\circle-layer/default-circle-shape.png)
 
 ## Radius
 
@@ -125,55 +125,48 @@ You can change the size of the circles using the [`MapCircle.Radius`]() property
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer ShapesSource="{local:ImageResource MapDemo.ShapeFiles.india.json}"
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/india.json"
                            ShapeStroke="DarkGrey">
             <map:MapShapeLayer.Sublayers>
                 <map:MapCircleLayer>
                     <map:MapCircleLayer.Circles>
-                        <map:MapCircle x:Name="circle1"
-                                       Radius="10">
+                        <map:MapCircle Radius="10">
                             <map:MapCircle.Center>
                                 <map:MapLatLng Latitude="74.1240"
                                                Longitude="15.2993"></map:MapLatLng>
                             </map:MapCircle.Center>
                         </map:MapCircle>
-                        <map:MapCircle x:Name="circle2"
-                                       Radius="10">
+                        <map:MapCircle Radius="10">
                             <map:MapCircle.Center>
                                 <map:MapLatLng Latitude="80.0499"
                                                Longitude="15.5057"></map:MapLatLng>
                             </map:MapCircle.Center>
                         </map:MapCircle>
-                        <map:MapCircle x:Name="circle3"
-                                       Radius="10">
+                        <map:MapCircle Radius="10">
                             <map:MapCircle.Center>
                                 <map:MapLatLng Latitude="75.7139"
                                                Longitude="19.7515"></map:MapLatLng>
                             </map:MapCircle.Center>
                         </map:MapCircle>
-                        <map:MapCircle x:Name="circle4"
-                                       Radius="10">
+                        <map:MapCircle Radius="10">
                             <map:MapCircle.Center>
                                 <map:MapLatLng Latitude="72.5714"
                                                Longitude="23.0225"></map:MapLatLng>
                             </map:MapCircle.Center>
                         </map:MapCircle>
-                        <map:MapCircle x:Name="circle5"
-                                       Radius="10">
+                        <map:MapCircle Radius="10">
                             <map:MapCircle.Center>
                                 <map:MapLatLng Latitude="74.2179"
                                                Longitude="27.0238"></map:MapLatLng>
                             </map:MapCircle.Center>
                         </map:MapCircle>
-                        <map:MapCircle x:Name="circle6"
-                                       Radius="10">
+                        <map:MapCircle Radius="10">
                             <map:MapCircle.Center>
                                 <map:MapLatLng Latitude="80.9462"
                                                Longitude="26.8467"></map:MapLatLng>
                             </map:MapCircle.Center>
                         </map:MapCircle>
-                        <map:MapCircle x:Name="circle7"
-                                       Radius="10">
+                        <map:MapCircle Radius="10">
                             <map:MapCircle.Center>
                                 <map:MapLatLng Latitude="85.2799"
                                                Longitude="21.2787"></map:MapLatLng>
@@ -192,7 +185,7 @@ You can change the size of the circles using the [`MapCircle.Radius`]() property
 
 SfMaps maps = new SfMaps();
 MapShapeLayer layer = new MapShapeLayer();
-layer.ShapesSource = MapSource.FromResource("MyProject.india.json");
+layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/india.json"));
 layer.ShapeStroke = Brush.DarkGray;
 MapCircleLayer circleLayer = new MapCircleLayer();
 MapCircle circle1 = new MapCircle();
@@ -231,7 +224,7 @@ this.Content = maps;
 
 {% endtabs %}
 
-![Circle radius](../images/circle-layer/circle-radius.png)
+![Circle radius](images/circle-layer/circle-radius.png)
 
 ## Fill color
 
@@ -243,61 +236,54 @@ You can apply colors to each [`MapCircle`]() in the [`Circles`]() collection usi
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer ShapesSource="{local:ImageResource MapDemo.ShapeFiles.india.json}"
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/india.json"
                            ShapeStroke="DarkGrey">
             <map:MapShapeLayer.Sublayers>
                 <map:MapCircleLayer>
                     <map:MapCircleLayer.Circles>
-                        <map:MapCircle x:Name="circle1"
-                                       Radius="10"
+                        <map:MapCircle Radius="10"
                                        Fill="#ea3c62">
                             <map:MapCircle.Center>
                                 <map:MapLatLng Latitude="74.1240"
                                                Longitude="15.2993"></map:MapLatLng>
                             </map:MapCircle.Center>
                         </map:MapCircle>
-                        <map:MapCircle x:Name="circle2"
-                                       Radius="10"
+                        <map:MapCircle Radius="10"
                                        Fill="Teal">
                             <map:MapCircle.Center>
                                 <map:MapLatLng Latitude="80.0499"
                                                Longitude="15.5057"></map:MapLatLng>
                             </map:MapCircle.Center>
                         </map:MapCircle>
-                        <map:MapCircle x:Name="circle3"
-                                       Radius="10"
+                        <map:MapCircle Radius="10"
                                        Fill="#9c3bb0">
                             <map:MapCircle.Center>
                                 <map:MapLatLng Latitude="75.7139"
                                                Longitude="19.7515"></map:MapLatLng>
                             </map:MapCircle.Center>
                         </map:MapCircle>
-                        <map:MapCircle x:Name="circle4"
-                                       Radius="10"
+                        <map:MapCircle Radius="10"
                                        Fill="#50af50">
                             <map:MapCircle.Center>
                                 <map:MapLatLng Latitude="72.5714"
                                                Longitude="23.0225"></map:MapLatLng>
                             </map:MapCircle.Center>
                         </map:MapCircle>
-                        <map:MapCircle x:Name="circle5"
-                                       Radius="10"
+                        <map:MapCircle Radius="10"
                                        Fill="#3195ec">
                             <map:MapCircle.Center>
                                 <map:MapLatLng Latitude="74.2179"
                                                Longitude="27.0238"></map:MapLatLng>
                             </map:MapCircle.Center>
                         </map:MapCircle>
-                        <map:MapCircle x:Name="circle6"
-                                       Radius="10"
+                        <map:MapCircle Radius="10"
                                        Fill="#e157f9">
                             <map:MapCircle.Center>
                                 <map:MapLatLng Latitude="80.9462"
                                                Longitude="26.8467"></map:MapLatLng>
                             </map:MapCircle.Center>
                         </map:MapCircle>
-                        <map:MapCircle x:Name="circle7"
-                                       Radius="10"
+                        <map:MapCircle Radius="10"
                                        Fill="#ee4e4e">
                             <map:MapCircle.Center>
                                 <map:MapLatLng Latitude="85.2799"
@@ -317,7 +303,7 @@ You can apply colors to each [`MapCircle`]() in the [`Circles`]() collection usi
 
 SfMaps maps = new SfMaps();
 MapShapeLayer layer = new MapShapeLayer();
-layer.ShapesSource = MapSource.FromResource("MyProject.india.json");
+layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/india.json"));
 layer.ShapeStroke = Brush.DarkGray;
 MapCircleLayer circleLayer = new MapCircleLayer();
 MapCircle circle1 = new MapCircle();
@@ -363,7 +349,7 @@ this.Content = maps;
 
 {% endtabs %}
 
-![Circle color](../images/circle-layer/circle-color.png)
+![Circle color](images/circle-layer/circle-color.png)
 
 ## Stroke thickness and color
 
@@ -377,13 +363,12 @@ You can apply stroke color to each [`MapCircle`]() in the [`Circles`]() collecti
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer ShapesSource="{local:ImageResource MapDemo.ShapeFiles.india.json}"
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/india.json"
                            ShapeStroke="DarkGrey">
             <map:MapShapeLayer.Sublayers>
                 <map:MapCircleLayer>
                     <map:MapCircleLayer.Circles>
-                        <map:MapCircle x:Name="circle1"
-                                       Radius="10"
+                        <map:MapCircle Radius="10"
                                        Stroke="#ea3c62"
                                        StrokeThickness="3">
                             <map:MapCircle.Center>
@@ -391,8 +376,7 @@ You can apply stroke color to each [`MapCircle`]() in the [`Circles`]() collecti
                                                Longitude="15.2993"></map:MapLatLng>
                             </map:MapCircle.Center>
                         </map:MapCircle>
-                        <map:MapCircle x:Name="circle2"
-                                       Radius="20"
+                        <map:MapCircle Radius="20"
                                        Stroke="Teal"
                                        StrokeThickness="3">
                             <map:MapCircle.Center>
@@ -400,8 +384,7 @@ You can apply stroke color to each [`MapCircle`]() in the [`Circles`]() collecti
                                                Longitude="15.5057"></map:MapLatLng>
                             </map:MapCircle.Center>
                         </map:MapCircle>
-                        <map:MapCircle x:Name="circle3"
-                                       Radius="10"
+                        <map:MapCircle Radius="10"
                                        Stroke="#9c3bb0"
                                        StrokeThickness="3">
                             <map:MapCircle.Center>
@@ -409,8 +392,7 @@ You can apply stroke color to each [`MapCircle`]() in the [`Circles`]() collecti
                                                Longitude="19.7515"></map:MapLatLng>
                             </map:MapCircle.Center>
                         </map:MapCircle>
-                        <map:MapCircle x:Name="circle4"
-                                       Radius="20"
+                        <map:MapCircle Radius="20"
                                        Stroke="#50af50"
                                        StrokeThickness="3">
                             <map:MapCircle.Center>
@@ -418,8 +400,7 @@ You can apply stroke color to each [`MapCircle`]() in the [`Circles`]() collecti
                                                Longitude="23.0225"></map:MapLatLng>
                             </map:MapCircle.Center>
                         </map:MapCircle>
-                        <map:MapCircle x:Name="circle5"
-                                       Radius="20"
+                        <map:MapCircle Radius="20"
                                        Stroke="#3195ec"
                                        StrokeThickness="3">
                             <map:MapCircle.Center>
@@ -427,8 +408,7 @@ You can apply stroke color to each [`MapCircle`]() in the [`Circles`]() collecti
                                                Longitude="27.0238"></map:MapLatLng>
                             </map:MapCircle.Center>
                         </map:MapCircle>
-                        <map:MapCircle x:Name="circle6"
-                                       Radius="10"
+                        <map:MapCircle Radius="10"
                                        Stroke="#e157f9"
                                        StrokeThickness="3">
                             <map:MapCircle.Center>
@@ -436,8 +416,7 @@ You can apply stroke color to each [`MapCircle`]() in the [`Circles`]() collecti
                                                Longitude="26.8467"></map:MapLatLng>
                             </map:MapCircle.Center>
                         </map:MapCircle>
-                        <map:MapCircle x:Name="circle7"
-                                       Radius="20"
+                        <map:MapCircle Radius="20"
                                        Stroke="#ee4e4e"
                                        StrokeThickness="3">
                             <map:MapCircle.Center>
@@ -457,7 +436,7 @@ You can apply stroke color to each [`MapCircle`]() in the [`Circles`]() collecti
 {% highlight c# %}
 SfMaps maps = new SfMaps();
 MapShapeLayer layer = new MapShapeLayer();
-layer.ShapesSource = MapSource.FromResource("MyProject.india.json");
+layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/india.json"));
 layer.ShapeStroke = Brush.DarkGray;
 MapCircleLayer circleLayer = new MapCircleLayer();
 MapCircle circle1 = new MapCircle();
@@ -510,4 +489,4 @@ this.Content = maps;
 
 {% endtabs %}
 
-![Circle stroke color](../images/circle-layer/circle-stroke-color.png)
+![Circle stroke color](images/shape-sublayer/range_color_mapping.png)

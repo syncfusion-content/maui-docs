@@ -9,7 +9,7 @@ documentation: ug
 
 # Arc Layer in .NET MAUI Maps (SfMaps)
 
-Arc layer is a sublayer that renders a group of [`MapArc`]() on [`MapShapeLayer`](). This section helps to learn about how to add the arcs and customize them.
+Arc layer is a sublayer that renders a group of [`MapArc`]() on [`MapShapeLayer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html?tabs=tabid-1). This section helps to learn about how to add the arcs and customize them.
 
 ## Adding arcs
 
@@ -21,13 +21,12 @@ The [`Arcs`]() is a collection of [`MapArc`](). Every single [`MapArc`]() connec
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer x:Name="layer"
-                           ShapesSource="{local:ImageResource MapDemo.ShapeFiles.world-map.json}"
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
                            ShapeStroke="DarkGrey">
             <map:MapShapeLayer.Sublayers>
-                <map:MapArcLayer x:Name="arcLayer">
+                <map:MapArcLayer>
                     <map:MapArcLayer.Arcs>
-                        <map:MapArc x:Name="arc1">
+                        <map:MapArc>
                             <map:MapArc.From>
                                 <map:MapLatLng Latitude="77.2090"
                                                Longitude="28.6139" />
@@ -37,7 +36,7 @@ The [`Arcs`]() is a collection of [`MapArc`](). Every single [`MapArc`]() connec
                                                Longitude="39.9042" />
                             </map:MapArc.To>
                         </map:MapArc>
-                        <map:MapArc x:Name="arc2">
+                        <map:MapArc>
                             <map:MapArc.From>
                                 <map:MapLatLng Latitude="77.1025"
                                                Longitude="28.7041" />
@@ -47,7 +46,7 @@ The [`Arcs`]() is a collection of [`MapArc`](). Every single [`MapArc`]() connec
                                                Longitude="31.2304" />
                             </map:MapArc.To>
                         </map:MapArc>
-                        <map:MapArc x:Name="arc3">
+                        <map:MapArc>
                             <map:MapArc.From>
                                 <map:MapLatLng Latitude="77.1025"
                                                Longitude="28.7041" />
@@ -57,7 +56,7 @@ The [`Arcs`]() is a collection of [`MapArc`](). Every single [`MapArc`]() connec
                                                Longitude="22.3193" />
                             </map:MapArc.To>
                         </map:MapArc>
-                        <map:MapArc x:Name="arc4">
+                        <map:MapArc>
                             <map:MapArc.From>
                                 <map:MapLatLng Latitude="72.8777"
                                                Longitude="19.0760" />
@@ -67,7 +66,7 @@ The [`Arcs`]() is a collection of [`MapArc`](). Every single [`MapArc`]() connec
                                                Longitude="22.3193" />
                             </map:MapArc.To>
                         </map:MapArc>
-                        <map:MapArc x:Name="arc5">
+                        <map:MapArc>
                             <map:MapArc.From>
                                 <map:MapLatLng Latitude="114.1694"
                                                Longitude="22.3193" />
@@ -90,7 +89,7 @@ The [`Arcs`]() is a collection of [`MapArc`](). Every single [`MapArc`]() connec
 
 SfMaps maps = new SfMaps();
 MapShapeLayer layer = new MapShapeLayer();
-layer.ShapesSource = MapSource.FromResource("MyProject.world1.shp");
+layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
 layer.ShapeStroke = Brush.DarkGray;
 MapArcLayer arcLayer = new MapArcLayer();
 MapArc arc1 = new MapArc();
@@ -122,7 +121,7 @@ this.Content = maps;
 
 {% endtabs %}
 
-![Default arc shape](../images/arc-layer/default_arc_shape.png)
+![Default arc shape](images/arc-layer/default_arc_shape.png)
 
 ## Height factor
 
@@ -136,14 +135,12 @@ By default, the arc will always render above the [`MapArc.From`]() and [`MapArc.
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer x:Name="layer"
-                           ShapesSource="{local:ImageResource MapDemo.ShapeFiles.world-map.json}"
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
                            ShapeStroke="DarkGrey">
             <map:MapShapeLayer.Sublayers>
-                <map:MapArcLayer x:Name="arcLayer">
+                <map:MapArcLayer>
                     <map:MapArcLayer.Arcs>
-                        <map:MapArc x:Name="arc1"
-                                    HeightFactor="-0.2">
+                        <map:MapArc HeightFactor="-0.2">
                             <map:MapArc.From>
                                 <map:MapLatLng Latitude="77.2090"
                                                Longitude="28.6139" />
@@ -153,8 +150,7 @@ By default, the arc will always render above the [`MapArc.From`]() and [`MapArc.
                                                Longitude="39.9042" />
                             </map:MapArc.To>
                         </map:MapArc>
-                        <map:MapArc x:Name="arc2"
-                                    HeightFactor="-0.2">
+                        <map:MapArc HeightFactor="-0.2">
                             <map:MapArc.From>
                                 <map:MapLatLng Latitude="77.1025"
                                                Longitude="28.7041" />
@@ -164,8 +160,7 @@ By default, the arc will always render above the [`MapArc.From`]() and [`MapArc.
                                                Longitude="31.2304" />
                             </map:MapArc.To>
                         </map:MapArc>
-                        <map:MapArc x:Name="arc3"
-                                    HeightFactor="-0.2">
+                        <map:MapArc HeightFactor="-0.2">
                             <map:MapArc.From>
                                 <map:MapLatLng Latitude="77.1025"
                                                Longitude="28.7041" />
@@ -175,8 +170,7 @@ By default, the arc will always render above the [`MapArc.From`]() and [`MapArc.
                                                Longitude="22.3193" />
                             </map:MapArc.To>
                         </map:MapArc>
-                        <map:MapArc x:Name="arc4"
-                                    HeightFactor="-0.2">
+                        <map:MapArc HeightFactor="-0.2">
                             <map:MapArc.From>
                                 <map:MapLatLng Latitude="72.8777"
                                                Longitude="19.0760" />
@@ -186,8 +180,7 @@ By default, the arc will always render above the [`MapArc.From`]() and [`MapArc.
                                                Longitude="22.3193" />
                             </map:MapArc.To>
                         </map:MapArc>
-                        <map:MapArc x:Name="arc5"
-                                    HeightFactor="-0.2">
+                        <map:MapArc HeightFactor="-0.2">
                             <map:MapArc.From>
                                 <map:MapLatLng Latitude="114.1694"
                                                Longitude="22.3193" />
@@ -210,7 +203,7 @@ By default, the arc will always render above the [`MapArc.From`]() and [`MapArc.
 
 SfMaps maps = new SfMaps();
 MapShapeLayer layer = new MapShapeLayer();
-layer.ShapesSource = MapSource.FromResource("MyProject.world1.shp");
+layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
 layer.ShapeStroke = Brush.DarkGray;
 MapArcLayer arcLayer = new MapArcLayer();
 MapArc arc1 = new MapArc();
@@ -246,7 +239,7 @@ this.Content = maps;
 
 {% endtabs %}
 
-![Arc height factor](../images/arc-layer/arc_height_factor.png)
+![Arc height factor](images/arc-layer/arc_height_factor.png)
 
 ## Control point factor
 
@@ -261,13 +254,12 @@ By default, the arc will bend at the center between the [`MapArc.From`]() and [`
 <map:SfMaps>
     <map:SfMaps.Layer>
         <map:MapShapeLayer x:Name="layer"
-                           ShapesSource="{local:ImageResource MapDemo.ShapeFiles.world-map.json}"
+                           ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
                            ShapeStroke="DarkGrey">
             <map:MapShapeLayer.Sublayers>
-                <map:MapArcLayer x:Name="arcLayer">
+                <map:MapArcLayer>
                     <map:MapArcLayer.Arcs>
-                        <map:MapArc x:Name="arc1"
-                                    ControlPointFactor="0.2">
+                        <map:MapArc ControlPointFactor="0.2">
                             <map:MapArc.From>
                                 <map:MapLatLng Latitude="77.2090"
                                                Longitude="28.6139" />
@@ -277,8 +269,7 @@ By default, the arc will bend at the center between the [`MapArc.From`]() and [`
                                                Longitude="39.9042" />
                             </map:MapArc.To>
                         </map:MapArc>
-                        <map:MapArc x:Name="arc2"
-                                    ControlPointFactor="0.2">
+                        <map:MapArc ControlPointFactor="0.2">
                             <map:MapArc.From>
                                 <map:MapLatLng Latitude="77.1025"
                                                Longitude="28.7041" />
@@ -288,8 +279,7 @@ By default, the arc will bend at the center between the [`MapArc.From`]() and [`
                                                Longitude="31.2304" />
                             </map:MapArc.To>
                         </map:MapArc>
-                        <map:MapArc x:Name="arc3"
-                                    ControlPointFactor="0.2">
+                        <map:MapArc ControlPointFactor="0.2">
                             <map:MapArc.From>
                                 <map:MapLatLng Latitude="77.1025"
                                                Longitude="28.7041" />
@@ -299,8 +289,7 @@ By default, the arc will bend at the center between the [`MapArc.From`]() and [`
                                                Longitude="22.3193" />
                             </map:MapArc.To>
                         </map:MapArc>
-                        <map:MapArc x:Name="arc4"
-                                    ControlPointFactor="0.2">
+                        <map:MapArc ControlPointFactor="0.2">
                             <map:MapArc.From>
                                 <map:MapLatLng Latitude="72.8777"
                                                Longitude="19.0760" />
@@ -310,8 +299,7 @@ By default, the arc will bend at the center between the [`MapArc.From`]() and [`
                                                Longitude="22.3193" />
                             </map:MapArc.To>
                         </map:MapArc>
-                        <map:MapArc x:Name="arc5"
-                                    ControlPointFactor="0.2">
+                        <map:MapArc ControlPointFactor="0.2">
                             <map:MapArc.From>
                                 <map:MapLatLng Latitude="114.1694"
                                                Longitude="22.3193" />
@@ -335,7 +323,7 @@ By default, the arc will bend at the center between the [`MapArc.From`]() and [`
 
 SfMaps maps = new SfMaps();
 MapShapeLayer layer = new MapShapeLayer();
-layer.ShapesSource = MapSource.FromResource("MyProject.world1.shp");
+layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
 layer.ShapeStroke = Brush.DarkGray;
 MapArcLayer arcLayer = new MapArcLayer();
 MapArc arc1 = new MapArc();
@@ -371,7 +359,7 @@ this.Content = maps;
 
 {% endtabs %}
 
-![Arc control point factor](../images/arc-layer/arc_control_point_factor.png)
+![Arc control point factor](images/arc-layer/arc_control_point_factor.png)
 
 ## Stroke
 
@@ -383,14 +371,12 @@ You can apply colors to each [`MapArc`]() in the [`Arcs`]() collection using the
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer x:Name="layer"
-                           ShapesSource="{local:ImageResource MapDemo.ShapeFiles.world-map.json}
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
                            ShapeStroke="DarkGrey">
             <map:MapShapeLayer.Sublayers>
-                <map:MapArcLayer x:Name="arcLayer">
+                <map:MapArcLayer>
                     <map:MapArcLayer.Arcs>
-                        <map:MapArc x:Name="arc1"
-                                    Stroke="#ed4545">
+                        <map:MapArc Stroke="#ed4545">
                             <map:MapArc.From>
                                 <map:MapLatLng Latitude="77.2090"
                                                Longitude="28.6139" />
@@ -400,8 +386,7 @@ You can apply colors to each [`MapArc`]() in the [`Arcs`]() collection using the
                                                Longitude="39.9042" />
                             </map:MapArc.To>
                         </map:MapArc>
-                        <map:MapArc x:Name="arc2"
-                                    Stroke="#e35bf8">
+                        <map:MapArc Stroke="#e35bf8">
                             <map:MapArc.From>
                                 <map:MapLatLng Latitude="77.1025"
                                                Longitude="28.7041" />
@@ -411,8 +396,7 @@ You can apply colors to each [`MapArc`]() in the [`Arcs`]() collection using the
                                                Longitude="31.2304" />
                             </map:MapArc.To>
                         </map:MapArc>
-                        <map:MapArc x:Name="arc3"
-                                    Stroke="#704cb9">
+                        <map:MapArc Stroke="#704cb9">
                             <map:MapArc.From>
                                 <map:MapLatLng Latitude="77.1025"
                                                Longitude="28.7041" />
@@ -422,8 +406,7 @@ You can apply colors to each [`MapArc`]() in the [`Arcs`]() collection using the
                                                Longitude="22.3193" />
                             </map:MapArc.To>
                         </map:MapArc>
-                        <map:MapArc x:Name="arc4"
-                                    Stroke="#6da0f2">
+                        <map:MapArc Stroke="#6da0f2">
                             <map:MapArc.From>
                                 <map:MapLatLng Latitude="72.8777"
                                                Longitude="19.0760" />
@@ -433,8 +416,7 @@ You can apply colors to each [`MapArc`]() in the [`Arcs`]() collection using the
                                                Longitude="22.3193" />
                             </map:MapArc.To>
                         </map:MapArc>
-                        <map:MapArc x:Name="arc5"
-                                    Stroke="#499787">
+                        <map:MapArc Stroke="#499787">
                             <map:MapArc.From>
                                 <map:MapLatLng Latitude="114.1694"
                                                Longitude="22.3193" />
@@ -457,7 +439,7 @@ You can apply colors to each [`MapArc`]() in the [`Arcs`]() collection using the
 
 SfMaps maps = new SfMaps();
 MapShapeLayer layer = new MapShapeLayer();
-layer.ShapesSource = MapSource.FromResource("MyProject.world1.shp");
+layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
 layer.ShapeStroke = Brush.DarkGray;
 MapArcLayer arcLayer = new MapArcLayer();
 MapArc arc1 = new MapArc();
@@ -494,7 +476,7 @@ this.Content = maps;
 
 {% endtabs %}
 
-![Arc color](../images/arc-layer/arc_color.png)
+![Arc color](images/arc-layer/arc_color.png)
 
 ## Stroke thickness
 
@@ -506,14 +488,12 @@ You can apply stroke thickness to each [`MapArc`]() in the [`Arcs`]() collection
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer x:Name="layer"
-                           ShapesSource="{local:ImageResource MapDemo.ShapeFiles.world-map.json}"
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
                            ShapeStroke="DarkGrey">
             <map:MapShapeLayer.Sublayers>
-                <map:MapArcLayer x:Name="arcLayer">
+                <map:MapArcLayer>
                     <map:MapArcLayer.Arcs>
-                        <map:MapArc x:Name="arc1"
-                                    StrokeThickness="2">
+                        <map:MapArc StrokeThickness="2">
                             <map:MapArc.From>
                                 <map:MapLatLng Latitude="77.2090"
                                                Longitude="28.6139" />
@@ -523,8 +503,7 @@ You can apply stroke thickness to each [`MapArc`]() in the [`Arcs`]() collection
                                                Longitude="39.9042" />
                             </map:MapArc.To>
                         </map:MapArc>
-                        <map:MapArc x:Name="arc2"
-                                    StrokeThickness="3">
+                        <map:MapArc StrokeThickness="3">
                             <map:MapArc.From>
                                 <map:MapLatLng Latitude="77.1025"
                                                Longitude="28.7041" />
@@ -534,8 +513,7 @@ You can apply stroke thickness to each [`MapArc`]() in the [`Arcs`]() collection
                                                Longitude="31.2304" />
                             </map:MapArc.To>
                         </map:MapArc>
-                        <map:MapArc x:Name="arc3"
-                                    StrokeThickness="4">
+                        <map:MapArc StrokeThickness="4">
                             <map:MapArc.From>
                                 <map:MapLatLng Latitude="77.1025"
                                                Longitude="28.7041" />
@@ -545,8 +523,7 @@ You can apply stroke thickness to each [`MapArc`]() in the [`Arcs`]() collection
                                                Longitude="22.3193" />
                             </map:MapArc.To>
                         </map:MapArc>
-                        <map:MapArc x:Name="arc4"
-                                    StrokeThickness="5">
+                        <map:MapArc StrokeThickness="5">
                             <map:MapArc.From>
                                 <map:MapLatLng Latitude="72.8777"
                                                Longitude="19.0760" />
@@ -556,8 +533,7 @@ You can apply stroke thickness to each [`MapArc`]() in the [`Arcs`]() collection
                                                Longitude="22.3193" />
                             </map:MapArc.To>
                         </map:MapArc>
-                        <map:MapArc x:Name="arc5"
-                                   StrokeThickness="6">
+                        <map:MapArc StrokeThickness="6">
                             <map:MapArc.From>
                                 <map:MapLatLng Latitude="114.1694"
                                                Longitude="22.3193" />
@@ -581,7 +557,7 @@ You can apply stroke thickness to each [`MapArc`]() in the [`Arcs`]() collection
 
 SfMaps maps = new SfMaps();
 MapShapeLayer layer = new MapShapeLayer();
-layer.ShapesSource = MapSource.FromResource("MyProject.world1.shp");
+layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
 layer.ShapeStroke = Brush.DarkGray;
 MapArcLayer arcLayer = new MapArcLayer();
 MapArc arc1 = new MapArc();
@@ -618,7 +594,7 @@ this.Content = maps;
 
 {% endtabs %}
 
-![Arc width](../images/arc-layer/arc_width.png)
+![Arc width](images/arc-layer/arc_width.png)
 
 ## Dash array
 
@@ -632,14 +608,12 @@ A sequence of dash and gap will be rendered based on the values in this list. On
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer x:Name="layer"
-                           ShapesSource="{local:ImageResource MapDemo.ShapeFiles.world-map.json}
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
                            ShapeStroke="DarkGrey">
             <map:MapShapeLayer.Sublayers>
-                <map:MapArcLayer x:Name="arcLayer">
+                <map:MapArcLayer>
                     <map:MapArcLayer.Arcs>
-                        <map:MapArc x:Name="arc1"
-                                    Stroke="#3d9bf2">
+                        <map:MapArc Stroke="#3d9bf2">
                             <map:MapArc.From>
                                 <map:MapLatLng Latitude="77.2090"
                                                Longitude="28.6139" />
@@ -657,8 +631,7 @@ A sequence of dash and gap will be rendered based on the values in this list. On
                                 </DoubleCollection>
                             </map:MapArc.StrokeDashArray>
                         </map:MapArc>
-                        <map:MapArc x:Name="arc2"
-                                    Stroke="#3d9bf2">
+                        <map:MapArc Stroke="#3d9bf2">
                             <map:MapArc.From>
                                 <map:MapLatLng Latitude="77.1025"
                                                Longitude="28.7041" />
@@ -676,8 +649,7 @@ A sequence of dash and gap will be rendered based on the values in this list. On
                                 </DoubleCollection>
                             </map:MapArc.StrokeDashArray>
                         </map:MapArc>
-                        <map:MapArc x:Name="arc3"
-                                    Stroke="#3d9bf2">
+                        <map:MapArc Stroke="#3d9bf2">
                             <map:MapArc.From>
                                 <map:MapLatLng Latitude="77.1025"
                                                Longitude="28.7041" />
@@ -695,8 +667,7 @@ A sequence of dash and gap will be rendered based on the values in this list. On
                                 </DoubleCollection>
                             </map:MapArc.StrokeDashArray>
                         </map:MapArc>
-                        <map:MapArc x:Name="arc4"
-                                    Stroke="#3d9bf2">
+                        <map:MapArc Stroke="#3d9bf2">
                             <map:MapArc.From>
                                 <map:MapLatLng Latitude="72.8777"
                                                Longitude="19.0760" />
@@ -714,8 +685,7 @@ A sequence of dash and gap will be rendered based on the values in this list. On
                                 </DoubleCollection>
                             </map:MapArc.StrokeDashArray>
                         </map:MapArc>
-                        <map:MapArc x:Name="arc5"
-                                    Stroke="#3d9bf2">
+                        <map:MapArc Stroke="#3d9bf2">
                             <map:MapArc.From>
                                 <map:MapLatLng Latitude="114.1694"
                                                Longitude="22.3193" />
@@ -746,7 +716,7 @@ A sequence of dash and gap will be rendered based on the values in this list. On
 
 SfMaps maps = new SfMaps();
 MapShapeLayer layer = new MapShapeLayer();
-layer.ShapesSource = MapSource.FromResource("MyProject.world1.shp");
+layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
 layer.ShapeStroke = Brush.DarkGray;
 MapArcLayer arcLayer = new MapArcLayer();
 MapArc arc1 = new MapArc();
@@ -788,4 +758,4 @@ this.Content = maps;
 
 {% endtabs %}
 
-![Arc dash array](../images/arc-layer/arc_dash_array.png)
+![Arc dash array](images/arc-layer/arc_dash_array.png)

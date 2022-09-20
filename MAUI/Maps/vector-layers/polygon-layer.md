@@ -21,13 +21,12 @@ The [`Polygons`]() is a collection of [`MapPolygon`](). Every single [`MapPolygo
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer x:Name="layer"
-                           ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
                            ShapeStroke="DarkGray">
             <map:MapShapeLayer.Sublayers>
-                <map:MapPolygonLayer x:Name="mapPolygonLayer">
+                <map:MapPolygonLayer>
                     <map:MapPolygonLayer.Polygons>
-                        <map:MapPolygon x:Name="polygon1">
+                        <map:MapPolygon>
                             <map:MapPolygon.Points>
                                 <map:MapLatLng Latitude="37.6173"
                                                Longitude="55.7558" />
@@ -37,7 +36,7 @@ The [`Polygons`]() is a collection of [`MapPolygon`](). Every single [`MapPolygo
                                                Longitude="61.5240" />
                             </map:MapPolygon.Points>
                         </map:MapPolygon>
-                        <map:MapPolygon x:Name="polygon2">
+                        <map:MapPolygon>
                             <map:MapPolygon.Points>
                                 <map:MapLatLng Latitude="-135.0000"
                                                Longitude="64.2823" />
@@ -60,7 +59,7 @@ The [`Polygons`]() is a collection of [`MapPolygon`](). Every single [`MapPolygo
 
 SfMaps maps = new SfMaps();
 MapShapeLayer layer = new MapShapeLayer();
-layer.ShapesSource = MapSource.FromResource("MyProject.world1.shp");
+layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
 layer.ShapeStroke = Brush.DarkGray;
 MapPolygonLayer mapPolygonLayer = new MapPolygonLayer();
 MapPolygon polygon1 = new MapPolygon();
@@ -99,14 +98,12 @@ You can apply colors to each [`MapPolygon`]() in the [`Polygons`]() collection u
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer x:Name="layer"
-                           ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
                            ShapeStroke="DarkGray">
             <map:MapShapeLayer.Sublayers>
-                <map:MapPolygonLayer x:Name="mapPolygonLayer">
+                <map:MapPolygonLayer>
                     <map:MapPolygonLayer.Polygons>
-                        <map:MapPolygon x:Name="polygon1"
-                                        Fill="#6defae">
+                        <map:MapPolygon Fill="#6defae">
                             <map:MapPolygon.Points>
                                 <map:MapLatLng Latitude="37.6173"
                                                Longitude="55.7558" />
@@ -116,8 +113,7 @@ You can apply colors to each [`MapPolygon`]() in the [`Polygons`]() collection u
                                                Longitude="61.5240" />
                             </map:MapPolygon.Points>
                         </map:MapPolygon>
-                        <map:MapPolygon x:Name="polygon2"
-                                        Fill="#ec407f">
+                        <map:MapPolygon Fill="#ec407f">
                             <map:MapPolygon.Points>
                                 <map:MapLatLng Latitude="-135.0000"
                                                Longitude="64.2823" />
@@ -140,7 +136,7 @@ You can apply colors to each [`MapPolygon`]() in the [`Polygons`]() collection u
 
 SfMaps maps = new SfMaps();
 MapShapeLayer layer = new MapShapeLayer();
-layer.ShapesSource = MapSource.FromResource("MyProject.world1.shp");
+layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
 layer.ShapeStroke = Brush.DarkGray;
 MapPolygonLayer mapPolygonLayer = new MapPolygonLayer();
 MapPolygon polygon1 = new MapPolygon();
@@ -183,14 +179,12 @@ You can apply stroke color to each [`MapPolygon`]() in the [`Polygons`]() collec
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer x:Name="layer"
-                           ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
                            ShapeStroke="DarkGray">
             <map:MapShapeLayer.Sublayers>
-                <map:MapPolygonLayer x:Name="mapPolygonLayer">
+                <map:MapPolygonLayer>
                     <map:MapPolygonLayer.Polygons>
-                        <map:MapPolygon x:Name="polygon1"
-                                        Stroke="#ea3b5e"
+                        <map:MapPolygon Stroke="#ea3b5e"
                                         StrokeThickness="3">
                             <map:MapPolygon.Points>
                                 <map:MapLatLng Latitude="37.6173"
@@ -201,8 +195,7 @@ You can apply stroke color to each [`MapPolygon`]() in the [`Polygons`]() collec
                                                Longitude="61.5240" />
                             </map:MapPolygon.Points>
                         </map:MapPolygon>
-                        <map:MapPolygon x:Name="polygon2"
-                                        Stroke="#ea3b5e"
+                        <map:MapPolygon Stroke="#ea3b5e"
                                         StrokeThickness="4">
                             <map:MapPolygon.Points>
                                 <map:MapLatLng Latitude="-135.0000"
@@ -226,7 +219,7 @@ You can apply stroke color to each [`MapPolygon`]() in the [`Polygons`]() collec
 
 SfMaps maps = new SfMaps();
 MapShapeLayer layer = new MapShapeLayer();
-layer.ShapesSource = MapSource.FromResource("MyProject.world1.shp");
+layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
 layer.ShapeStroke = Brush.DarkGray;
 MapPolygonLayer mapPolygonLayer = new MapPolygonLayer();
 MapPolygon polygon1 = new MapPolygon();

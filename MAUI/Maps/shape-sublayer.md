@@ -106,7 +106,7 @@ this.Content = maps;
 
 ## Equal color mapping
 
-You can apply color to the sublayer shape by comparing a value that returns from the [`shapeColorValueMapper`]() with the [`MapColorMapper.value`](). For the matched values, the [`MapColorMapper.color`]() will be applied to the respective shapes.
+You can apply color to the sublayer shape by comparing a value from the [`ColorMappings`]() with the [`EqualColorMapping.Value`](). For the matched values, the [`EqualColorMapping.color`]() will be applied to the respective shapes.
 
 {% tabs %}
 
@@ -208,7 +208,7 @@ public class Model
 
 ## Range color mapping
 
-You can apply color to the sublayer shape based on whether the value returned from [`shapeColorValueMapper`]() falls within the [`MapColorMapper.from`]() and [`MapColorMapper.to`](). Then, the [`MapColorMapper.color`]() will be applied to the respective shapes.
+You can apply color to the sublayer shapes based on whether the value from [`ColorMappings`]() falls within the [`RangeColorMapping.From`]() and [`RangeColorMapping.To`](). Then, the [`RangeColorMapping.Color`]() will be applied to the respective shapes.
 
 {% tabs %}
 
@@ -312,9 +312,7 @@ public class Model
 
 ## Enable data labels and its customization
 
-You can enable data labels to the shape sublayer using the [`showDataLabels`]() property and customize the data labels text using the [`dataLabelMapper`]() property.
-
-N> Refer the [`DataLabels`]() section, for customizing data labels.
+You can enable data labels to the shape sublayer using the [`ShowDataLabels`]() and [`DataLabelPath`]() properties. The [`ShowDataLabels`]() is used to control the visibility of data labels, the [`DataLabelPath`]() is used to decide which underline property has to be displayed as data labels. The default value of [`ShowDataLabels`]() is `false`. 
 
 {% tabs %}
 
@@ -418,13 +416,12 @@ public class Model
 {% endhighlight %}
 
 {% endtabs %}
+
 ![Shape sublayer data labels](images/shape-sublayer/sublayer-data-labels.png)
 
 ## Add bubbles to the sublayer
 
-You can enable bubbles to the shape sublayer using the [`bubbleSizeMapper`]() property and customize the bubbles appearance using the [`bubblesSettings`]() property and enable tooltip for the shape sublayer bubbles using the [`bubbleTooltipBuilder`]() property.
-
-N> It is applicable for both tile layer and shape layer.
+You can enable bubbles to the shape sublayer using the [`ShowBubbles`](). You can customize bubbles appearance using the [`BubbleSettings`](). This property is used to specify the value based on which the bubble's size has to be rendered.
 
 N> Refer the [`Bubbles`]() section, to know more about the bubbles customization.
 
@@ -432,11 +429,100 @@ N> Refer the [`Bubbles`]() section, to know more about the bubbles customization
 
 {% highlight xaml %}
 
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer x:Name="layer"
+                           ShapesSource="{local:ImageResource MapDemo.ShapeFiles.world1.shp}">
+            <map:MapShapeLayer.Sublayers>
+                <map:MapShapeSublayer x:Name="sublayer"
+                                      ShapesSource="{local:ImageResource MapDemo.ShapeFiles.africa.json}"
+                                      ShapeStroke="DarkGrey"
+                                      ShapeFill="#c6c6c6"
+                                      ShapeDataField="name"
+                                      DataSource="{Binding Data}"
+                                      PrimaryValuePath="State"
+                                      ShowBubbles="True">
+                    <map:MapShapeSublayer.BubbleSettings>
+                        <map:MapBubbleSettings ColorValuePath="Color"
+                                               SizeValuePath="Size"
+                                               MinSize="10"
+                                               MaxSize="20">
+                        </map:MapBubbleSettings>
+                    </map:MapShapeSublayer.BubbleSettings>
+                </map:MapShapeSublayer>
+            </map:MapShapeLayer.Sublayers>
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
+public BubblesSubUG()
+{
+    InitializeComponent();
+    ViewModel viewModel = new ViewModel();
+    this.BindingContext = viewModel;
+    SfMaps maps = new SfMaps();
+    MapShapeLayer layer = new MapShapeLayer();
+    layer.ShapesSource = MapSource.FromResource("MapDemo.ShapeFiles.world1.shp");
+    MapShapeSublayer sublayer = new MapShapeSublayer();
+    sublayer.ShapesSource = MapSource.FromResource("MapDemo.ShapeFiles.africa.json");
+    sublayer.ShapeFill = Color.FromRgb(198, 198, 198);
+    sublayer.ShapeStroke = Colors.DarkGray;
+    sublayer.DataSource = viewModel.Data;
+    sublayer.PrimaryValuePath = "State";
+    sublayer.ShapeDataField = "name";
+    sublayer.ShowBubbles = true;
+
+    MapBubbleSettings bubbleSetting = new MapBubbleSettings()
+    {
+        ColorValuePath = "Color",
+        SizeValuePath = "Size",
+        MinSize = 10,
+        MaxSize = 20
+    };
+
+    sublayer.BubbleSettings = bubbleSetting;
+    layer.Sublayers.Add(sublayer);
+    maps.Layer = layer;
+    this.Content = maps;
+}
+public class ViewModel
+{
+    public ObservableCollection<Model> Data { get; set; }
+
+    public ViewModel()
+    {
+        Data = new ObservableCollection<Model>();
+        Data.Add(new Model("Algeria", Color.FromRgb(80, 175, 80), 36232));
+        Data.Add(new Model("Libya", Color.FromRgb(64, 150, 137), 34121));
+        Data.Add(new Model("Egypt", Color.FromRgb(48, 150, 243), 43453));
+        Data.Add(new Model("Mali", Color.FromRgb(157, 59, 176), 28123));
+        Data.Add(new Model("Niger", Color.FromRgb(63, 81, 181), 40111));
+        Data.Add(new Model("Nigeria", Color.FromRgb(225, 87, 249), 30232));
+        Data.Add(new Model("Chad", Color.FromRgb(139, 194, 74), 48132));
+        Data.Add(new Model("Sudan", Color.FromRgb(238, 79, 79), 52654));
+        Data.Add(new Model("Mauritania", Color.FromRgb(243, 151, 62), 42231));
+        Data.Add(new Model("South Sudan", Color.FromRgb(198, 198, 198), 40421));
+        Data.Add(new Model("Ethiopia", Color.FromRgb(109, 240, 174), 27198));
+    }
+}
+
+public class Model
+{
+    public String State { get; set; }
+    public Color Color { get; set; }
+    public double Size { get; set; }
+
+    public Model(string state, Color color, double size)
+    {
+        State = state;
+        Color = color;
+        Size = size;
+    }
+}
 
 {% endhighlight %}
 
@@ -444,4 +530,4 @@ N> Refer the [`Bubbles`]() section, to know more about the bubbles customization
 
 ![Shape sublayer bubbles](images/shape-sublayer/sublayer-bubbles.png)
 
-N> You can refer to our [Flutter Maps]() feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Maps Sublayer example]() that shows how to configure a Maps in Flutter.
+N> You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Maps Sublayer example]() that shows how to configure a Maps in .NET MAUI.
