@@ -393,12 +393,12 @@ To customise the range of the log axis, you can use the [Minimum](), [Maximum]()
 
 {% highlight c# %}
 
-chart.YAxes = new LogarithmicAxis() { 
+chart.YAxes.Add(new LogarithmicAxis() { 
 
 	Minimum = 100, 
 	Maximum = 10000 
 
-};
+});
 
 {% endhighlight %}
 
@@ -424,7 +424,7 @@ The log base can be customised by using the [LogarithmicBase]() property of the 
 
 {% highlight c# %}
 
-chart.YAxes = new LogarithmicAxis( ) { LogarithmicBase = 2 };
+chart.YAxes.Add(new LogarithmicAxis( ) { LogarithmicBase = 2 });
 
 {% endhighlight %}
 
@@ -450,7 +450,7 @@ The logarithmic interval can be customised by using the [Interval]() property of
 
 {% highlight c# %}
 
-chart.YAxes = new LogarithmicAxis( ) { Interval = 2 };
+chart.YAxes.Add(new LogarithmicAxis( ) { Interval = 2 });
 
 {% endhighlight %}
 
