@@ -19,14 +19,12 @@ N> When [SfListView.AutoFitMode](https://help.syncfusion.com/cr/maui/Syncfusion.
 
 N> When tapping a swiped item, the [SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionChanging) and [SelectionChanged](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.SfListView.html#Syncfusion_ListView_XForms_SfListView_SelectionChanged) events will not occur since the swiped item is reset at this time.
 
-N> When the `Visual` is `Material`, you need to set the `BackgroundColor` to `ItemTemplate` to show the slide swiping.
-
 ## Assigning start and end swipe templates
 
 The User Interface (UI) for swiping can be customized by using swipe templates `SfListView.StartSwipeTemplate` when swiping towards the end and `SfListView.EndSwipeTemplate` when swiping towards the start. The contents inside the swipe template are arranged based on the offset values when swiping an item. You can reset the swiping item or swiped item by calling the `SfListView.ResetSwipeItem` method.
 
 {% tabs %}
-{% highlight xaml tabtitel=MainPage.xaml" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
   <syncfusion:SfListView x:Name="listView" AllowSwiping="True">
     <syncfusion:SfListView.StartSwipeTemplate>
@@ -89,7 +87,7 @@ The swipe templates allow customizing with custom actions such as deleting the d
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
- <syncfusion:SfListView x:Name="listView">
+ <syncfusion:SfListView x:Name="listView" AllowSwiping="True">
   <syncfusion:SfListView.StartSwipeTemplate>
     <DataTemplate x:Name="StartSwipeTemplate">
       <Grid>
@@ -125,7 +123,7 @@ The swipe templates allow customizing with custom actions such as deleting the d
  </syncfusion:SfListView>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitel="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 listView.StartSwipeTemplate = new DataTemplate(() =>
 {
   var grid = new Grid();
@@ -169,7 +167,7 @@ listView.StartSwipeTemplate = new DataTemplate(() =>
 To delete the item when `Delete` image is tapped and set favorites to an item when `Favorites` image is tapped, follow the code example shown.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 Image leftImage;
 Image rightImage;
 int itemIndex = -1;
@@ -228,7 +226,7 @@ private void rightImage_BindingContextChanged(object sender, EventArgs e)
 To delete an item in view while swiping the item from one extent to another,Use the `SfListView.SwipeEnded` event. By setting the `SfListView.SwipeOffset` value to the view size to swipe the item up to the end of the item.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
  <syncfusion:SfListView x:Name="listView" 
                  AllowSwiping="True" SelectionMode="None" 
@@ -253,7 +251,7 @@ To delete an item in view while swiping the item from one extent to another,Use 
  </syncfusion:SfListView>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 listView.AllowSwiping = true;
 listView.SelectionMode = SelectionMode.None;
 listView.SwipeOffset = 360;
@@ -313,7 +311,7 @@ Using the `SwipeItem` method, you can swipe an item programmatically based on th
 </table>
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xam" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage.Content>
     <StackLayout>
         <Grid HeightRequest="50">
@@ -324,24 +322,16 @@ Using the `SwipeItem` method, you can swipe an item programmatically based on th
     ItemSpacing="0,0,5,0" >
             <listView:SfListView.StartSwipeTemplate>
                 <DataTemplate>
-                    <ViewCell>
-                        <ViewCell.View>
-                            <Grid BackgroundColor="SlateBlue"  HorizontalOptions="Fill" VerticalOptions="Fill">
-                                <Label Text="Start Swipe Template" TextColor="White" VerticalOptions="Center" HorizontalOptions="Center"/>
-                            </Grid>
-                        </ViewCell.View>
-                    </ViewCell>
+                    <Grid BackgroundColor="SlateBlue"  HorizontalOptions="Fill" VerticalOptions="Fill">
+                        <Label Text="Start Swipe Template" TextColor="White" VerticalOptions="Center" HorizontalOptions="Center"/>
+                    </Grid>
                 </DataTemplate>
             </listView:SfListView.StartSwipeTemplate>
             <listView:SfListView.EndSwipeTemplate>
                 <DataTemplate>
-                    <ViewCell>
-                        <ViewCell.View>
-                            <Grid BackgroundColor="SlateBlue" HorizontalOptions="Fill" VerticalOptions="Fill">
-                                <Label Text="End Swipe Template" TextColor="White" VerticalOptions="Center"/>
-                            </Grid>
-                        </ViewCell.View>
-                    </ViewCell>
+                    <Grid BackgroundColor="SlateBlue" HorizontalOptions="Fill" VerticalOptions="Fill">
+                        <Label Text="End Swipe Template" TextColor="White" VerticalOptions="Center"/>
+                    </Grid>
                 </DataTemplate>
             </listView:SfListView.EndSwipeTemplate>
         </listView:SfListView>
@@ -376,7 +366,7 @@ private void RightSwipeButton_Clicked(object sender, EventArgs e)
 
 ## Events
 
-### SwipeStarted Event
+### SwipeStarting Event
 
 The `SfListView.SwipeStarting` event is raised when the swipe offset changes from its initial value. 
 
@@ -392,10 +382,10 @@ The `SwipeStarting` event is used for the following use case:
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-<syncfusion:SfListView x:Name="listView" ItemsSource="{Binding InboxInfo}" 
+<syncfusion:SfListView x:Name="listView" ItemsSource="{Binding InboxInfo}" AllowSwiping="True"
                      SwipeStarting="listView_SwipeStarting" />
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 listView.SwipeStarting += ListView_SwipeStarting;
 {% endhighlight %}
 {% endtabs %}
@@ -428,17 +418,17 @@ The `Swiping` event used for the following use cases:
 * Hold the swipe view being swiping by setting the `Handled` property to `true` if the swipe offset meets a certain position.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml.cs" %}
-<syncfusion:SfListView x:Name="listView" ItemsSource="{Binding InboxInfo}" 
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfListView x:Name="listView" ItemsSource="{Binding InboxInfo}" AllowSwiping="True"
                        Swiping="ListView_Swiping" />
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 listView.Swiping += ListView_Swiping;
 {% endhighlight %}
 {% endtabs %}
 
 {% tabs %}
-{% highlight c# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 private void ListView_Swiping(object sender, SwipingEventArgs e)
 {
    if (e.Index == 1 && e.OffSet > 70)
@@ -466,7 +456,7 @@ The `SwipeEnded` event is used for the following use cases:
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-<syncfusion:SfListView x:Name="listView" ItemsSource="{Binding InboxInfo}" 
+<syncfusion:SfListView x:Name="listView" ItemsSource="{Binding InboxInfo}" AllowSwiping="True"
                        SwipeEnded="ListView_SwipeEnded" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -499,7 +489,7 @@ The `SwipeReset` event is used for the following use case:
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-<syncfusion:SfListView x:Name="listView" ItemsSource="{Binding InboxInfo}" 
+<syncfusion:SfListView x:Name="listView" ItemsSource="{Binding InboxInfo}" AllowSwiping="True"
                        SwipeReset="listView_SwipeReset" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -522,7 +512,7 @@ private void ListView_SwipeReset(object sender, ResetSwipeEventArgs e)
 Swiped item can be reset by defining the `SfListView.SwipeOffSet` argument of `SfListView.SwipeEnded` event to `0` when the swiping action is completed.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 private void ListView_SwipeEnded(object sender, SwipeEndedEventArgs e)
 {
   if (e.Offset > 70)
@@ -536,7 +526,7 @@ private void ListView_SwipeEnded(object sender, SwipeEndedEventArgs e)
 To swipe an item indefinitely, set the `SfListView.SwipeOffset` property by considering the width or height of the SfListView with [SfListView.Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_Orientation) accordingly.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 ListView.PropertyChanged += ListView_PropertyChanged;
 
 private void ListView_PropertyChanged(object sender, PropertyChangedEventArgs e)
@@ -560,7 +550,7 @@ The `SfListView` allows editing the item data using either `SfListView.EndSwipeT
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
- <syncfusion:SfListView > 
+ <syncfusion:SfListView AllowSwiping="True"> 
   <syncfusion:SfListView.EndSwipeTemplate> 
       <DataTemplate x:Name="EndSwipeTemplate"> 
         <Grid BackgroundColor="#DC595F" HorizontalOptions="Fill" VerticalOptions="Fill"> 
@@ -613,7 +603,7 @@ listView.EndSwipeTemplate = new DataTemplate(() =>
 To set tapped items binding context for pop-up page, follow the code example below.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
 {
    var popupPage = new SfPopUpView();
