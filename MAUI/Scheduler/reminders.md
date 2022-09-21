@@ -315,7 +315,47 @@ private void Scheduler_ReminderAlertOpening(object sender, ReminderAlertOpeningE
     bool snooze = await DisplayAlert("Reminder", Reminders[0].Appointment.Subject + " - " + Reminders[0].Appointment.StartTime.ToString(" dddd, MMMM dd, yyyy, hh:mm tt"), "Snooze", "Dismiss");
     if (Dismiss)
     {
-        e.Reminders[0].IsDismissed = true;
+        
+        // For Recurrence appointment, if current occurrence need to dismiss then need to add changed occurrence for reminder occurrence dismissed
+        var appointment = e.Reminders[0].Appointment;
+        var Reminder = new ObservableCollection<SchedulerReminder>()
+        {
+            new SchedulerReminder {TimeBeforeStart = new TimeSpan (0,0,30)}
+        };
+        DateTime changedExceptionDate = e.Reminders[0].Appointment.StartTime;
+        DateTime endDate = e.Reminders[0].Appointment.EndTime;
+        if (!string.IsNullOrEmpty(e.Reminders[0].Appointment.RecurrenceRule))
+        {
+            appointment.RecurrenceExceptionDates = new ObservableCollection<DateTime>()
+                {
+                    changedExceptionDate,
+                };
+
+            // Clone parent details
+            var exceptionAppointment = new SchedulerAppointment()
+            {
+                Id = 2,
+                Subject = appointment.Subject,
+                StartTime = new DateTime(changedExceptionDate.Year, changedExceptionDate.Month, changedExceptionDate.Day, changedExceptionDate.Hour, 0, 0),
+                EndTime = new DateTime(endDate.Year, endDate.Month, endDate.Day, endDate.Hour, 0, 0),
+                Background = appointment.Background,
+                RecurrenceId = 1,
+                Reminders = Reminder
+            };
+            if (!(scheduler.AppointmentsSource as ObservableCollection<SchedulerAppointment>).Contains(exceptionAppointment))
+            {
+                (scheduler.AppointmentsSource as ObservableCollection<SchedulerAppointment>).Add(exceptionAppointment);
+                exceptionAppointment.Reminders[0].IsDismissed = true;
+            }
+        }
+        // Dismissing Normal appointment 
+        else
+        {
+            for (int i = e.Reminders.Count - 1; i >= 0; i--)
+            {
+                e.Reminders[i].IsDismissed = true;                        
+            }
+        }
     }    
 
 }
@@ -358,7 +398,6 @@ private void Scheduler_ReminderAlertOpening(object sender, ReminderAlertOpeningE
             {
                 e.Reminders[0].TimeBeforeStart = e.Reminders[0].Appointment.StartTime.AddSeconds(DateTime.Now.Second) - DateTime.Now - snoozeTime;
             }
-
         }
 }
 {% endhighlight %}
