@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with .NET MAUI ComboBox | Syncfusion
-description: Learn here about getting started with Syncfusion .NET MAUI ComboBox (SfComboBox) control, its elements, and in its features.
+description: Learn here about getting started with Syncfusion .NET MAUI ComboBox (SfComboBox) control, its elements, and its features.
 platform: maui
 control: SfComboBox
 documentation: ug
@@ -9,11 +9,11 @@ documentation: ug
 
 # Getting Started with .NET MAUI ComboBox (SfComboBox)
 
-This section explains the steps required to add the `ComboBox` control and binding data in `ComboBox` control. This section covers only basic features needed to get started with Syncfusion `ComboBox` control.
+This section explains the steps required to add the `ComboBox` control and binding data in the `ComboBox` control. This section covers only the basic features needed to get started with Syncfusion `ComboBox` control.
 
 ## Adding a .NET MAUI ComboBox reference
 
-Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add .NET MAUI ComboBox to your project, open the NuGet package manager in Visual Studio, search for `Syncfusion.Maui.Inputs` and then install it.
+Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add .NET MAUI ComboBox to your project, open the NuGet package manager in Visual Studio, search for `Syncfusion.Maui.Inputs,` and then install it.
 
 ## Handler registration 
 
@@ -143,7 +143,7 @@ public class SocialMediaViewModel
 
 **Step 2:** Populate data in `ComboBox`. 
 
-Now, populate this SocialMediaViewModel data in `ComboBox` control by binding to the `ItemSource` property. 
+Now, populate this SocialMediaViewModel data in `ComboBox` control by binding it to the `ItemSource` property. 
 
 {% tabs %}
 {% highlight xaml %}
@@ -183,7 +183,7 @@ N> Set the SocialMediaViewModel instance as the BindingContext of your control; 
 
 **Step 3:** Setting TextMemberPath and DisplayMemberPath.
 
-The `ComboBox` control is populated with the list of social medias. But the SocialMedia model contains two properties, ID and Name, so it is necessary to intimate by which property it should display value in the selection box portion of the `ComboBox` control, when an item is selected.
+The `ComboBox` control is populated with a list of social media. But the SocialMedia model contains two properties, ID and Name, so it is necessary to intimate by which property it should display the value in the selection box portion of the `ComboBox` control when an item is selected.
 
 `TextMemberPath` - This property path is used to get the value for displaying in the selection box portion of the `ComboBox` control when an item is selected. The default value is `String.Empty`.
 

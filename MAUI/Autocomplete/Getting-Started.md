@@ -182,7 +182,7 @@ N> Set the 'SocialMediaViewModel' instance as the `BindingContext` of your contr
 
 **Step 3:** Set the `TextMemberPath` and `DisplayMemberPath`.
 
-The `Autocomplete` control is populated with the list of social media. However, because the 'SocialMedia' model contains two properties such as 'Name' and 'ID', it is necessary to intimate, which property should be a display value in the selection box portion and drop-down suggestion of the `Autocomplete` control.
+The `Autocomplete` control is populated with the list of social media. However, because the 'SocialMedia' model contains two properties 'Name' and 'ID', it is necessary to intimate, which property should be a display value in the selection box portion and drop-down suggestion of the `Autocomplete` control.
 
 `TextMemberPath` - This property path is used to get the value for displaying in the selection box portion of the `Autocomplete` control when an item is selected. The default value is `String.Empty`.
 
@@ -207,7 +207,7 @@ autocomplete.TextMemberPath = "Name";
 
 ## Selection
 
-The `Autocomplete` allows the user to select item from the drop-down list by clicking the `Enter` key or losing focus from the text box.
+The `Autocomplete` allows the user to select an item from the drop-down list by clicking the `Enter` key or losing focus from the text box.
 
 {% tabs %}
 {% highlight xaml %}
