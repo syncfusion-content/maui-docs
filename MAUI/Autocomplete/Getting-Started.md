@@ -13,7 +13,7 @@ This section explains how to add the Autocomplete control and bind data to it. T
 
 ## Adding a .NET MAUI Autocomplete reference
 
-Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add .NET MAUI Autocomplete to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs/) and then install it.
+Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add .NET MAUI Autocomplete to your project, open the NuGet package manager in Visual Studio, search for `Syncfusion.Maui.Inputs` and then install it.
 
 ## Handler registration 
 

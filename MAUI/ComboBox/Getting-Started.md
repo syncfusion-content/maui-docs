@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with .NET MAUI ComboBox | Syncfusion
-description: Learn how to get started with Syncfusion .NET MAUI ComboBox control, its elements, and more in here.
+description: Learn how to get started with Syncfusion .NET MAUI ComboBox control, its elements, and in its features here.
 platform: maui
 control: SfComboBox
 documentation: ug
@@ -13,7 +13,7 @@ This section explains the steps required to add the `ComboBox` control and bindi
 
 ## Adding a .NET MAUI ComboBox reference
 
-Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add .NET MAUI ComboBox to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs/) and then install it.
+Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add .NET MAUI ComboBox to your project, open the NuGet package manager in Visual Studio, search for `Syncfusion.Maui.Inputs` and then install it.
 
 ## Handler registration 
 
