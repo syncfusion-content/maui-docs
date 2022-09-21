@@ -337,7 +337,7 @@ chart.XAxes.Add(primaryAxis);
 
 ## Logarithmic Axis
 
-The [LogarithmicAxis]() uses a logarithmic scale, and it is very useful in visualising data when the data range of a chart’s series has significant disparity. It can be used either on the x axis or the y axis of the chart. The Logarithmic Axis does not support zero or negative values. The following code example demonstrates how to set the logarithmic axis in the chart.
+The [LogarithmicAxis]() uses a logarithmic scale, and it is very useful in visualizing data when the data range of a chart’s series has significant disparity. It can be used either on the x-axis or the chart's y-axis. The Logarithmic Axis does not support zero or negative values. The following code example demonstrates how to set the logarithmic axis in the chart.
 
 {% tabs %}
 
@@ -376,7 +376,7 @@ chart.YAxes.Add(secondaryAxis);
 
 ### Logarithmic range
 
-To customise the range of the log axis, you can use the [Minimum](), [Maximum]() and [Interval]() properties of [LogarithmicAxis](). By default, a nice range will be calculated automatically based on the provided data. The following code example demonstrates the range of customization of the axis.
+To customize the range of the log axis, you can use the [Minimum](), [Maximum]() and [Interval]() properties of the [LogarithmicAxis](). By default, an excellent range will be calculated automatically based on the provided data. The following code example demonstrates the range customization of the axis.
 
 {% tabs %}
 
@@ -408,7 +408,7 @@ chart.YAxes.Add(new LogarithmicAxis() {
 
 ### Logarithmic base
 
-The log base can be customised by using the [LogarithmicBase]() property of the axis. By default, the base of a logarithmic axis is set to 10. You can, however, set the base to any value that meets your requirements. Just ensure that the base value is any positive number greater than 1, and it cannot be a decimal number. The following code example demonstrates the logarithmic values in the y axis calculated from base 2.
+The log base can be customized using the [LogarithmicBase]() property of the axis. By default, the base of a logarithmic axis is set to 10. You can, however, set the base to any value that meets your requirements. Just ensure that the base value is any positive number greater than 1 and cannot be a decimal number. The following code example demonstrates the logarithmic values in the y-axis calculated from base 2:
 
 {% tabs %}
 
@@ -434,7 +434,7 @@ chart.YAxes.Add(new LogarithmicAxis( ) { LogarithmicBase = 2 });
 
 ### Logarithmic interval
 
-The logarithmic interval can be customised by using the [Interval]() property of the axis. In the logarithmic axis, the interval is based on powers. When the logarithmic base is 10 and the logarithmic interval is 1, then the axis labels are placed at an interval of 10. i.e., 1, 10, 100, 1000, etc. When the logarithmic interval is 2, then the axis labels are placed at an interval of 10^2. i.e., 1, 100, 1000, etc. The default value of the interval is 1.
+The logarithmic interval can be customized using the [Interval]() property of the axis. In the logarithmic axis, the interval is based on powers. When the logarithmic base is 10 and the logarithmic interval is 1, then the axis labels are placed at an interval of 10. i.e., 1, 10, 100, 1000, etc. When the logarithmic interval is 2, then the axis labels are placed at an interval of 10^2. i.e., 1, 100, 1000, etc. The default value of the interval is 1, and it cannot be a decimal number.
 
 {% tabs %}
 
