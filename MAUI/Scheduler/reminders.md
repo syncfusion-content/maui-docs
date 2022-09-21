@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Reminders in .NET MAUI Scheduler control | Syncfusion
-description: Learn here all about the Reminder support in Syncfusion .NET MAUI Scheduler (SfScheduler) control, its element and more.
+description: Learn here all about the Reminder support in Syncfusion .NET MAUI Scheduler (SfScheduler) appointments.
 platform: maui
 control: SfScheduler
 documentation: ug
 ---
 
-# Reminder in .NET MAUI Scheduler (SfScheduler)
+# Appointment reminder in .NET MAUI Scheduler (SfScheduler)
 
 The MAUI Scheduler notify an appointment reminder by using  the [EnableReminder] property and [ReminderAlertOpening] event. An appointment can have one or more reminders.
 
@@ -134,31 +134,6 @@ Configure the appointment reminders with [SchedulerReminder.] The `SchedulerRemi
 
         };
         Events.Add(recurrenceAppointment);
-
-        // For recurrence appointment, if current occurrence need to dismiss then need to add changed occurrence for reminder occurrence dismissed, then current occurrence dismissed details get updated in underlying appointment or data source.
-
-        DateTime exceptionDate = DateTime.Now.AddDays(4);
-        recurrenceAppointment.RecurrenceExceptionDates = new ObservableCollection<DateTime>() { exceptionDate };
-
-        var exceptionAppointment = new SchedulerAppointment()
-        {
-            Id = 2,
-            Subject = "Changed Occurence Appointment",
-            StartTime = DateTime.Now.AddDays(4).AddHours(-2),
-            EndTime = DateTime.Now.AddDays(4).AddHours(-1),
-            Background = Brush.Gray,
-            RecurrenceId = 1,
-            Reminders = new ObservableCollection<SchedulerReminder>
-            {
-                new SchedulerReminder {TimeBeforeStart = new TimeSpan (0,1,0)},
-            }
-
-        };
-        if (!Events.Contains(exceptionAppointment))
-        {
-            Events.Add(exceptionAppointment);
-            exceptionAppointment.Reminders[0].IsDismissed = true;
-        }
  }
 {% endhighlight %}
 {% endtabs %}
@@ -303,31 +278,6 @@ public class ReminderViewModel
 
     };
     Events.Add(recurrenceAppointment);
-
-    // For recurrence appointment, if current occurrence need to dismiss then need to add changed occurrence for reminder occurrence dismissed, then current occurrence dismissed details get updated in underlying appointment or data source.
-
-    DateTime exceptionDate = DateTime.Now.AddDays(4);
-    recurrenceAppointment.RecurrenceExceptionDates = new ObservableCollection<DateTime>() { exceptionDate };
-
-    Event exceptionAppointment = new Event()
-    {
-        Id = 2,
-        EventName = "Changed Occurence Appointment",
-        From = DateTime.Now.AddDays(4).AddHours(-2),
-        To = DateTime.Now.AddDays(4).AddHours(-1),
-        Color = Brush.Gray,
-        RecurrenceId = 1,
-        Reminders = new ObservableCollection<Reminder>
-        {
-            new Reminder {TimeBeforeStart = new TimeSpan (0,1,0)},
-        }
-
-    };
-    if (!Events.Contains(exceptionAppointment))
-    {
-        Events.Add(exceptionAppointment);
-        exceptionAppointment.Reminders[0].IsDismissed = true;
-    }
 }
 {% endhighlight %}
 {% endtabs %}
