@@ -12,225 +12,7 @@ documentation: ug
 The MAUI Scheduler notify an appointment reminder by using  the [EnableReminder] property and [ReminderAlertOpening] event. An appointment can have one or more reminders.
 
 N>
-* In .NET MAUI Framework notification implementation is in progress, So as of now added event to notify appointment reminder.
-
-## Enable reminder
-
-Reminder can be enabled by setting the [EnableReminder] property to `true` which will trigger the `ReminderAlertOpening` event to notify appointment reminder. The reminder can be set by using the [Reminders] property of [SchedulerAppointment.]
-
-{% tabs %}
-{% highlight xaml tabtitle="MainWindow.xaml" hl_lines="3" %}
-<syncfusion:SfScheduler x:Name="Scheduler"
-                        View ="Week"
-                        EnableReminder="True" >
-</syncfusion:SfScheduler>
-{% endhighlight %}
-{% endtabs %}
-
-## Adding Reminders
-
-Configure the appointment reminders with [SchedulerReminder.] The `SchedulerReminder` has the following properties for reminder alert.
-
-<table>
-<tr>
-<th>Properties</th>
-<th>Description</th>
-</tr>
-<tr>
-<td>{{'[TimeBeforeStart]'| markdownify }}</td>
-<td>Gets or sets the time interval that decides to notify the reminder before the appointment’s start time.
-</td>
-</tr>
-<tr>
-<td>{{'[AlertTime]'| markdownify }}</td>
-<td>Gets the reminder time that decides when to enable `ReminderAlertOpening` event to the reminder of the appointment.</td>
-</tr>
-<tr>
-<td>{{'[Appointment]'| markdownify }}</td>
-<td>Gets the appointment details for which the reminder is created.</td>
-</tr>
-<tr>
-<td>{{'[DataItem]'| markdownify }}</td>
-<td>Gets the reminder data object associated with the `SchedulerReminder.`</td>
-</tr>
-<tr>
-<td>{{'[IsDismissed]' | markdownify }}</td>
-<td> Gets or sets whether the reminder is dismissed. </td>
-</tr>
-</table>
-
-{% tabs %}
-{% highlight xaml tabtitle="MainWindow.xaml" hl_lines="6" %}
- <syncfusion:SfScheduler x:Name="Schedule" 
-                AppointmentsSource="{Binding Events}"
-                EnableReminder="True">
-        <syncfusion:SfScheduler.BindingContext>
-            <local:SchedulerViewModel/>
-        </syncfusion:SfScheduler.BindingContext>
-  </syncfusion:SfScheduler>
-{% endhighlight %}
-{% highlight c# tabtitle="ReminderViewModel.cs" %}
- public class ReminderViewModel 
- {
-    ...
-    public ObservableCollection<SchedulerAppointment> Events { get; set; } = new ObservableCollection<SchedulerAppointment>();
-    this.Events.Add(new ScheduleAppointment()
-    {
-        StartTime = DateTime.Now,
-        EndTime = DateTime.Now.AddHours(1),
-        AppointmentBackground = new SolidColorBrush(Color.FromArgb(255, 83, 99, 250)),
-        Subject = "Conference",
-        Reminders = new ObservableCollection<SchedulerReminder>
-        {
-            new SchedulerReminder { ReminderTimeInterval = new TimeSpan(0)},
-        }
-    });
- }
-{% endhighlight %}
-{% endtabs %}
-
-## Creating business object for reminder
-
-[Reminders] supports to map the custom object with  [SchedulerAppointment.Reminders.]
-
-{% tabs %}
-{% highlight c# tabtitle="Event.xaml.cs" %}
-/// <summary>
-/// Represents custom data properties.
-/// </summary>
- public class Event
-    {
-        public Event()
-        {
-        }
-
-        public DateTime From { get; set; }
-        public DateTime To { get; set; }
-        public bool IsAllDay { get; set; }
-        public string EventName { get; set; }
-        public string Notes { get; set; }
-        public string StartTimeZone { get; set; }
-        public string EndTimeZone { get; set; }
-        public Brush Color { get; set; }
-        public object RecurrenceId { get; set; }
-        public object Id { get; set; }
-        public string RecurrenceRule { get; set; }
-        public ObservableCollection<DateTime> RecurrenceExceptions { get; set; }
-        public ObservableCollection<Reminder> Reminders { get; set; }
-    }
-{% endhighlight %}
-{% endtabs %}
-
-The [ReminderMapping] provides the mapping information about the [SchedulerReminder] properties to the [DataItem] object. `ReminderMapping` has the following properties.
-
-* [TimeBeforeStart]: Maps the property name of a custom class, which is equivalent for the [SchedulerReminder.ReminderTimeInterval.]
-
-* [IsDismissed]: Maps the property name of a custom class, which is equivalent for the [SchedulerReminder.IsDismissed.]
-
-{% tabs %}
-{% highlight c# tabtitle="Reminder.cs" %}
-/// <summary>
-/// Represents custom data properties.
-/// </summary>
-public class Reminder
-{
-    /// <summary>
-    /// Gets or sets a value that decides to notify the reminder before the appointment’s start time.
-    /// </summary>
-    public TimeSpan TimeBeforeStart { get; set; }
-    
-    /// <summary>
-    /// Gets or sets the value indicating whether the reminder is dismissed or not. 
-    /// </summary>
-    public bool Dismissed { get; set; }
-
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-Map those properties of the `Event` class with the [SfScheduler] control by using the [AppointmentMapping] and map `CustomReminder` properties with the [SchedulerReminder] by using [ReminderMapping.]
-
-{% tabs %}
-{% highlight xaml tabtitle="MainWindow.xaml" hl_lines="3 17 18 19 20" %}
-  <syncfusion:SfScheduler x:Name="Schedule" 
-                AppointmentsSource="{Binding Events}"
-                EnableReminder="True">
-        <syncfusion:SfScheduler.BindingContext>
-            <local:SchedulerViewModel/>
-        </syncfusion:SfScheduler.BindingContext>
-        <syncfusion:SfScheduler.AppointmentMapping>
-            <syncfusion:SchedulerAppointmentMapping
-                    Subject="EventName"
-                    StartTime="From"
-                    EndTime="To"
-                    Background="Color"
-                    IsAllDay="IsAllDay"
-                    StartTimeZone="StartTimeZone"
-                    EndTimeZone="EndTimeZone"
-                    RecurrenceExceptionDates="RecurrenceExceptions"
-                    RecurrenceRule="RecurrenceRule"
-                    RecurrenceId="RecurrenceId"
-                    Reminders="Reminders">
-                <syncfusion:SchedulerAppointmentMapping.ReminderMapping>
-                    <syncfusion:SchedulerReminderMapping IsDismissed="IsDismissed"
-                    TimeBeforeStart="TimeBeforeStart"/>
-                </syncfusion:SchedulerAppointmentMapping.ReminderMapping>
-            </syncfusion:SchedulerAppointmentMapping>
-        </syncfusion:SfScheduler.AppointmentMapping>
-    </syncfusion:SfScheduler>
-{% endhighlight %}
-{% highlight c# tabtitle="ReminderViewModel.cs" %}
-public class ReminderViewModel 
-{
-  ...
-   public ObservableCollection<Event> Events { get; set; } = new ObservableCollection<Event>();
-  this.Events.Add(new Event()
-  {
-    From = DateTime.Now,
-    To = DateTime.Now.AddHours(1),
-    Color = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF339933")),
-    EventName = "Conference",
-    Reminders = new ObservableCollection<Reminder>
-    {
-        new Reminder { TimeBeforeStart = new TimeSpan(0)},
-    }
-    });
-}
-{% endhighlight %}
-{% endtabs %}
-
-## ReminderAlertOpening event
-Scheduler notify the appointment's reminder by [ReminderAlertOpening] event before the appointment's start time. The [ReminderAlertOpeningEventArgs] has the following property,
-* [Reminders]: Gets a list of reminders that are used to notify the appointment reminders.
-
-{% tabs %}
-{% highlight c# tabtitle="MainWindow.xaml.cs" hl_lines="1" %}
-scheduler.ReminderAlertOpening += Scheduler_ReminderAlertOpening;
-
-private void Scheduler_ReminderAlertOpening(object sender, ReminderAlertOpeningEventArgs e)
-{
-    var reminders = e.Reminders;
-    e.Reminders[0].IsDismissed = true;
-}
-{% endhighlight %}
-{% endtabs %}
-## Handle Dismissed for reminder
-
-* Normal appointment directly dismissed using [IsDismissed] property
-
-* For recurrence appointment, if current occurrence need to dismiss then need to add changed occurrence for reminder occurrence dismissed, then current occurrence dismissed details get updated in underlying appointment or data source.
-
-* If only occurrence dismissed, then the changed icon will not be updated for dismissed changed occurrence
-
-## Handle Snooze for reminder
-If Snooze time is set to 5 minutes than the value of reminder [TimeBeforeStart] property is calculated by 
-
-* For future appointments, TimeBeforeStart = Appointment.StartTime - AlertTime - snoozeTime
-
-* For Overdue appointments, TimeBeforeStart = Appointment.StartTime.AddSeconds(DateTime.Now.Second) - DateTime.Now - snoozeTime
-
-* For All day appointment, TimeBeforeStart = Appointment.StartTime.Date.AddSeconds(DateTime.Now.Second) - DateTime.Now - snoozeTime
+* In .NET MAUI Framework notification implementation is in progress, So as of now added event to notify appointment reminder.[Reference](https://github.com/dotnet/maui/discussions/4216)
 
 ## Handling reminders for future appointment
 
@@ -257,3 +39,378 @@ If Snooze time is set to 5 minutes than the value of reminder [TimeBeforeStart] 
 * When the changed occurrence is restored to a time in the past, the reminder is deleted. 
 
 * Past Changed occurrence reminders will be dismissed.
+
+## Enable reminder
+
+Reminder can be enabled by setting the [EnableReminder] property to `true` which will trigger the `ReminderAlertOpening` event to notify appointment reminder. The reminder can be set by using the [Reminders] property of [SchedulerAppointment.]
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
+<syncfusion:SfScheduler x:Name="Scheduler"
+                        View ="Week"
+                        EnableReminder="True" >
+</syncfusion:SfScheduler>
+{% endhighlight %}
+{% endtabs %}
+
+## Adding Reminders
+
+Configure the appointment reminders with [SchedulerReminder.] The `SchedulerReminder` has the following properties for reminder alert.
+
+<table>
+<tr><th>Properties</th><th>Description</th></tr>
+<tr><td>{{'[TimeBeforeStart]'| markdownify }}</td>
+<td>Gets or sets the time interval that decides to notify the reminder before the appointment’s start time.
+</td></tr>
+<tr><td>{{'[AlertTime]'| markdownify }}</td>
+<td>Gets the reminder time that decides when to enable `ReminderAlertOpening` event to the reminder of the appointment.</td></tr>
+<tr><td>{{'[Appointment]'| markdownify }}</td>
+<td>Gets the appointment details for which the reminder is created.</td></tr>
+<tr><td>{{'[DataItem]'| markdownify }}</td>
+<td>Gets the reminder data object associated with the `SchedulerReminder.`</td></tr>
+<tr><td>{{'[IsDismissed]' | markdownify }}</td>
+<td> Gets or sets whether the reminder is dismissed. </td></tr>
+</table>
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
+ <syncfusion:SfScheduler x:Name="Schedule" 
+                AppointmentsSource="{Binding Events}"
+                EnableReminder="True">
+        <syncfusion:SfScheduler.BindingContext>
+            <local:SchedulerViewModel/>
+        </syncfusion:SfScheduler.BindingContext>
+  </syncfusion:SfScheduler>
+{% endhighlight %}
+{% highlight c# tabtitle="ReminderViewModel.cs" %}
+ public class ReminderViewModel 
+ {
+    ...
+    public ObservableCollection<SchedulerAppointment> Events { get; set; } = new ObservableCollection<SchedulerAppointment>();
+        // Normal Appointment
+        SchedulerAppointment normalAppointment = new SchedulerAppointment()
+        {
+            StartTime = DateTime.Now.AddMinutes(5),
+            EndTime = DateTime.Now.AddHours(1),
+            Subject = "Normal Appointment",
+            Background = Brush.SkyBlue,
+            Reminders = new ObservableCollection<SchedulerReminder>
+            {
+                new SchedulerReminder {TimeBeforeStart = new TimeSpan (0,4,0)},
+            }
+
+        };
+        Events.Add(normalAppointment);
+
+        // All Day Appointment
+        SchedulerAppointment allDayAppointment = new SchedulerAppointment()
+        {
+            StartTime = DateTime.Now.AddDays(1).AddMinutes(1),
+            EndTime = DateTime.Now.AddDays(1).AddHours(1),
+            Subject = "All Day Appointment",
+            Background = Brush.SkyBlue,
+            IsAllDay = true,
+            Reminders = new ObservableCollection<SchedulerReminder>
+            {
+                new SchedulerReminder {TimeBeforeStart = new TimeSpan (0,0,50)},
+            }
+
+        };
+        Events.Add(allDayAppointment);
+
+        // Recurrence Appointment
+        SchedulerAppointment recurrenceAppointment = new SchedulerAppointment()
+        {
+            Id = 1,
+            StartTime = DateTime.Now.AddDays(2).AddMinutes(1),
+            EndTime = DateTime.Now.AddDays(2).AddHours(1),
+            Subject = "Recurrence Appointment",
+            Background = Brush.LightGray,
+            RecurrenceRule = "FREQ=DAILY;COUNT=3",
+            Reminders = new ObservableCollection<SchedulerReminder>
+            {
+                new SchedulerReminder {TimeBeforeStart = new TimeSpan (0,0,40)},
+            }
+
+        };
+        Events.Add(recurrenceAppointment);
+
+        // For recurrence appointment, if current occurrence need to dismiss then need to add changed occurrence for reminder occurrence dismissed, then current occurrence dismissed details get updated in underlying appointment or data source.
+
+        DateTime exceptionDate = DateTime.Now.AddDays(4);
+        recurrenceAppointment.RecurrenceExceptionDates = new ObservableCollection<DateTime>() { exceptionDate };
+
+        var exceptionAppointment = new SchedulerAppointment()
+        {
+            Id = 2,
+            Subject = "Changed Occurence Appointment",
+            StartTime = DateTime.Now.AddDays(4).AddHours(-2),
+            EndTime = DateTime.Now.AddDays(4).AddHours(-1),
+            Background = Brush.Gray,
+            RecurrenceId = 1,
+            Reminders = new ObservableCollection<SchedulerReminder>
+            {
+                new SchedulerReminder {TimeBeforeStart = new TimeSpan (0,1,0)},
+            }
+
+        };
+        if (!Events.Contains(exceptionAppointment))
+        {
+            Events.Add(exceptionAppointment);
+            exceptionAppointment.Reminders[0].IsDismissed = true;
+        }
+ }
+{% endhighlight %}
+{% endtabs %}
+
+## Creating business object for reminder
+
+Create a business object class `Event` with mandatory fields `From,` `To,` and `EventName.` and also business object class `Reminder` with mandatory fields `TimeBeforeStart` and `IsDismissed`.
+
+{% tabs %}
+{% highlight c# tabtitle="Event.cs" %}
+/// <summary>
+/// Represents custom data properties.
+/// </summary>
+ public class Event
+    {
+        public DateTime From { get; set; }
+        public DateTime To { get; set; }
+        public bool IsAllDay { get; set; }
+        public string EventName { get; set; }
+        public string Notes { get; set; }
+        public string StartTimeZone { get; set; }
+        public string EndTimeZone { get; set; }
+        public Brush Color { get; set; }
+        public object RecurrenceId { get; set; }
+        public object Id { get; set; }
+        public string RecurrenceRule { get; set; }
+        public ObservableCollection<DateTime> RecurrenceExceptions { get; set; }
+        public ObservableCollection<Reminder> Reminders { get; set; }
+    }
+{% endhighlight %}
+{% endtabs %}
+
+The [ReminderMapping] provides the mapping information about the [SchedulerReminder] properties to the [DataItem] object. `ReminderMapping` has the following properties.
+
+* [TimeBeforeStart]: Maps the property name of a custom class, which is equivalent for the [SchedulerReminder.ReminderTimeInterval.]
+
+* [IsDismissed]: Maps the property name of a custom class, which is equivalent for the [SchedulerReminder.IsDismissed.]
+
+{% tabs %}
+{% highlight c# tabtitle="Reminder.cs" %}
+/// <summary>
+/// Represents custom reminder properties.
+/// </summary>
+public class Reminder
+{
+    /// <summary>
+    /// Gets or sets a value that decides to notify the reminder before the appointment’s start time.
+    /// </summary>
+    public TimeSpan TimeBeforeStart { get; set; }
+    
+    /// <summary>
+    /// Gets or sets the value indicating whether the reminder is dismissed or not. 
+    /// </summary>
+    public bool Dismissed { get; set; }
+
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+Map those properties of the `Event` class with the [SfScheduler] control by using the [AppointmentMapping] and map `CustomReminder` properties with the [SchedulerReminder] by using [ReminderMapping.]
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 17 18 19 20" %}
+  <syncfusion:SfScheduler x:Name="Schedule" 
+                AppointmentsSource="{Binding Events}"
+                EnableReminder="True">
+        <syncfusion:SfScheduler.BindingContext>
+            <local:SchedulerViewModel/>
+        </syncfusion:SfScheduler.BindingContext>
+        <syncfusion:SfScheduler.AppointmentMapping>
+            <syncfusion:SchedulerAppointmentMapping
+                    Subject="EventName"
+                    StartTime="From"
+                    EndTime="To"
+                    Background="Color"
+                    IsAllDay="IsAllDay"
+                    StartTimeZone="StartTimeZone"
+                    EndTimeZone="EndTimeZone"
+                    RecurrenceExceptionDates="RecurrenceExceptionDates"
+                    RecurrenceRule="RecurrenceRule"
+                    RecurrenceId="RecurrenceId"
+                    Reminders="Reminders">
+                <syncfusion:SchedulerAppointmentMapping.ReminderMapping>
+                    <syncfusion:SchedulerReminderMapping IsDismissed="IsDismissed"
+                    TimeBeforeStart="TimeBeforeStart"/>
+                </syncfusion:SchedulerAppointmentMapping.ReminderMapping>
+            </syncfusion:SchedulerAppointmentMapping>
+        </syncfusion:SfScheduler.AppointmentMapping>
+    </syncfusion:SfScheduler>
+{% endhighlight %}
+{% highlight c# tabtitle="ReminderViewModel.cs" %}
+public class ReminderViewModel 
+{
+  ...
+   public ObservableCollection<Event> Events { get; set; } = new ObservableCollection<Event>();
+
+   // Normal Appointment
+    Event normalAppointment = new Event()
+    {
+        From = DateTime.Now.AddMinutes(5),
+        To = DateTime.Now.AddHours(1),
+        EventName = "Normal Appointment",
+        Color = Brush.SkyBlue,
+        Reminders = new ObservableCollection<Reminder>
+        {
+            new Reminder {TimeBeforeStart = new TimeSpan (0,4,0)},
+        }
+
+    };
+    Events.Add(normalAppointment);
+
+    // All Day Appointment
+    Event allDayAppointment = new Event()
+    {
+        From = DateTime.Now.AddDays(1).AddMinutes(1),
+        To = DateTime.Now.AddDays(1).AddHours(1),
+        EventName = "All Day Appointment",
+        Color = Brush.SkyBlue,
+        IsAllDay = true,
+        Reminders = new ObservableCollection<Reminder>
+        {
+            new Reminder {TimeBeforeStart = new TimeSpan (0,0,50)},
+        }
+
+    };
+    Events.Add(allDayAppointment);
+
+    // Recurrence Appointment
+    Event recurrenceAppointment = new Event()
+    {
+        Id = 1,
+        From = DateTime.Now.AddDays(2).AddMinutes(1),
+        To = DateTime.Now.AddDays(2).AddHours(1),
+        EventName = "Recurrence Appointment",
+        Color = Brush.LightGray,
+        RecurrenceRule = "FREQ=DAILY;COUNT=3",
+        Reminders = new ObservableCollection<Reminder>
+        {
+            new Reminder {TimeBeforeStart = new TimeSpan (0,0,40)},
+        }
+
+    };
+    Events.Add(recurrenceAppointment);
+
+    // For recurrence appointment, if current occurrence need to dismiss then need to add changed occurrence for reminder occurrence dismissed, then current occurrence dismissed details get updated in underlying appointment or data source.
+
+    DateTime exceptionDate = DateTime.Now.AddDays(4);
+    recurrenceAppointment.RecurrenceExceptionDates = new ObservableCollection<DateTime>() { exceptionDate };
+
+    Event exceptionAppointment = new Event()
+    {
+        Id = 2,
+        EventName = "Changed Occurence Appointment",
+        From = DateTime.Now.AddDays(4).AddHours(-2),
+        To = DateTime.Now.AddDays(4).AddHours(-1),
+        Color = Brush.Gray,
+        RecurrenceId = 1,
+        Reminders = new ObservableCollection<Reminder>
+        {
+            new Reminder {TimeBeforeStart = new TimeSpan (0,1,0)},
+        }
+
+    };
+    if (!Events.Contains(exceptionAppointment))
+    {
+        Events.Add(exceptionAppointment);
+        exceptionAppointment.Reminders[0].IsDismissed = true;
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+## ReminderAlertOpening event
+Scheduler notify the appointment's reminder by [ReminderAlertOpening] event before the appointment's start time. The [ReminderAlertOpeningEventArgs] has the following property,
+* [Reminders]: Gets a list of reminders that are used to notify the appointment reminders.
+
+{% tabs %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+scheduler.ReminderAlertOpening += Scheduler_ReminderAlertOpening;
+
+private void Scheduler_ReminderAlertOpening(object sender, ReminderAlertOpeningEventArgs e)
+{
+    var reminders = e.Reminders;
+    bool snooze = await DisplayAlert("Reminder", Reminders[0].Appointment.Subject + " - " + Reminders[0].Appointment.StartTime.ToString(" dddd, MMMM dd, yyyy, hh:mm tt"), "Snooze", "Dismiss"); 
+}
+{% endhighlight %}
+{% endtabs %}
+## Handle Dismissed for reminder
+
+* Normal appointment directly dismissed using [IsDismissed] property
+
+* For recurrence appointment, if current occurrence need to dismiss then need to add changed occurrence for reminder occurrence dismissed, then current occurrence dismissed details get updated in underlying appointment or data source.
+
+* If only occurrence dismissed, then the changed icon will not be updated for dismissed changed occurrence
+
+{% tabs %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+scheduler.ReminderAlertOpening += Scheduler_ReminderAlertOpening;
+
+private void Scheduler_ReminderAlertOpening(object sender, ReminderAlertOpeningEventArgs e)
+{
+    var reminders = e.Reminders;
+    bool snooze = await DisplayAlert("Reminder", Reminders[0].Appointment.Subject + " - " + Reminders[0].Appointment.StartTime.ToString(" dddd, MMMM dd, yyyy, hh:mm tt"), "Snooze", "Dismiss");
+    if (Dismiss)
+    {
+        e.Reminders[0].IsDismissed = true;
+    }    
+
+}
+{% endhighlight %}
+{% endtabs %}
+
+## Handle Snooze for reminder
+If Snooze time is set to 5 minutes than the value of reminder [TimeBeforeStart] property is calculated by 
+
+* For Future appointments, TimeBeforeStart = Appointment.StartTime - AlertTime - snoozeTime
+
+* For Overdue appointments, TimeBeforeStart = Appointment.StartTime.AddSeconds(DateTime.Now.Second) - DateTime.Now - snoozeTime
+
+* For All day appointment, TimeBeforeStart = Appointment.StartTime.Date.AddSeconds(DateTime.Now.Second) - DateTime.Now - snoozeTime
+
+{% tabs %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+scheduler.ReminderAlertOpening += Scheduler_ReminderAlertOpening;
+
+private void Scheduler_ReminderAlertOpening(object sender, ReminderAlertOpeningEventArgs e)
+{
+    var reminders = e.Reminders;
+    bool snooze = await DisplayAlert("Reminder", Reminders[0].Appointment.Subject + " - " + Reminders[0].Appointment.StartTime.ToString(" dddd, MMMM dd, yyyy, hh:mm tt"), "Snooze", "Dismiss");
+
+    if (snooze)
+        {
+            var snoozeTime = new TimeSpan(0, 5, 0);
+            // Future appointment reminder
+            if (e.Reminders[0].Appointment.ActualStartTime > DateTime.Now && !e.Reminders[0].Appointment.IsAllDay)
+            {
+                e.Reminders[0].TimeBeforeStart = e.Reminders[0].Appointment.StartTime - e.Reminders[0].AlertTime - snoozeTime;
+            }
+            // Allday appointment reminder
+            else if (e.Reminders[0].Appointment.IsAllDay)
+            {
+                e.Reminders[0].TimeBeforeStart = e.Reminders[0].Appointment.StartTime.Date.AddSeconds(DateTime.Now.Second) - DateTime.Now - snoozeTime;
+            }
+            // Overdue appointment reminder
+            else
+            {
+                e.Reminders[0].TimeBeforeStart = e.Reminders[0].Appointment.StartTime.AddSeconds(DateTime.Now.Second) - DateTime.Now - snoozeTime;
+            }
+
+        }
+}
+{% endhighlight %}
+{% endtabs %}
+
