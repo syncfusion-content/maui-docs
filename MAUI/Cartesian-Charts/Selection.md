@@ -7,11 +7,11 @@ control: SfCartesianChart
 documentation: ug
 ---
 
-# Selection in .NET MAUI Chart
+# Selection in .NET MAUI SfCartesianChart
 
 [SfCartesianChart]() provides selection behavior support, which allows you to select or highlight a segment in a series or the series itself using [DataPointSelectionBehavior]() or [SeriesSelectionBehavior]().
 
-## Data Point Selection
+## Enable DataPointSelection
 
 To enable the data point selection in the [SfCartesianChart](), create an instance of [DataPointSelectionBehavior]() and specify a color value for the [SelectionBrush]() property to highlight the selected segment in the series. The selection instance should then be set to the chart series [SelectionBehavior]() property.
 
@@ -48,16 +48,15 @@ ColumnSeries series = new ColumnSeries()
     YBindingPath = "Year2010",
     SelectionBehavior = selection
 };
-
 chart.Series.Add(series);
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Segment selection support in MAUI Chart](Selection_images/maui_chart_segment_selection.png)
+![Segment selection support in MAUI Chart](Selection_images/maui_chart_segment_selection.PNG)
 
-## Series Selection
+## Enable SeriesSelection
 
 To enable the series selection in the [SfCartesianChart](), create an instance of [SeriesSelectionBehavior]() and specify a color value for the [SelectionBrush]() property to highlight the entire selected series. The selection instance should then be set to the SfCartesianChart [SelectionBehavior]() property.
 
@@ -120,23 +119,23 @@ chart.Series.Add(series2);
 
 {% endtabs %}
 
-![Series Selection support in MAUI Chart](Selection_images/maui_chart_series_selection.PNG)
+![Series Selection support in MAUI Chart](Selection_images/maui_chart_seriesSelection.PNG)
 
 ## Properties
 
 These following properties are common for both Selection Behaviors and the Selection feature can be configured using the following properties:
 
-* [Type]() - Retrieves the ChartSelectionType Enum value for the Selection Behavior.     
+* [Type]() - Gets or Sets the ChartSelectionType Enum value for the Selection Behavior.     
 The following ChartSelectionType can be achieved during Selection:
     * Single
     * SingleDeselect
     * Multiple
     * None
-* [SelectionBrush]() - Retrieves the SelectionBrush color value for Selection Behavior.
-* [SelectedIndex]() - Retrieves the index value of the segment or series that should be selected during the Selection.
-* [SelectedIndexes]() - Retrieves the list of indexes of the segments or series that should be selected during the Selection.
+* [SelectionBrush]() - Gets or Sets the SelectionBrush color value for Selection Behavior.
+* [SelectedIndex]() - Gets or Sets the index value of the segment or series that should be selected during the Selection.
+* [SelectedIndexes]() - Gets or Sets the list of indexes of the segments or series that should be selected during the Selection.
 
-## Multiple Selection
+## Enable MultiSelection
 
 In [SfCartesianChart]() we can perform Multiple Selection for both DataPointSelection and SeriesSelection by selecting more than one segment in a series or more than one series in the chart by setting [SelectionBrush]() color and ChartSelectionType as Multiple, else by setting the [SelectedIndexes]() value from the viewmodel and set ChartSelectionType as Multiple to either [DataPointSelectionBehavior]() or [SeriesSelectionBehavior]() for load time selection changes.
 
@@ -175,14 +174,34 @@ chart.SelectionBehavior = selection;
 
 {% endtabs %}
 
-N> The Multiple Selction in [DataPointSelectionBehavior]() can be performed by doing the same within the CartesianSeries.
-
 ![Mutiple SeriesSelection in MAUI Chart](Selection_images/maui_multi_seriesselection.PNG)
 ![Multiple DataPointSelection support in MAUI Chart](Selection_images/maui_multi_dataPoint_selection.png)
 
-## Methods
+N> The Multiple Selection in [DataPointSelectionBehavior]() can be performed by doing the same using the ChartSeries SelectionBehavior property.
+
+## ClearSelection Method
 
 Both the SelectionBehavior has a public method called [ClearSelection ()](), which resets all current Selection Behavior property values to their default values and resets the selected elements color to default.
+
+{% tabs %}
+
+{% highlight c# %}
+
+SfCartesianChart chart = new SfCartesianChart();
+
+DataPointSelectionBehavior selection = new DataPointSelectionBehavior();
+
+ColumnSeries series = new ColumnSeries();
+series.SelectionBehavior = selection;
+chart.Series.Add(series);
+
+selection.ClearSelection();
+
+{% endhighlight %}
+
+{% endtabs %}
+
+N> The [ClearSelection()]() method can be performed in [SeriesSelectionBehavior]() by doing the same using the SfCartesianChart SelectionBehavior property.
 
 ## Events
 
@@ -190,15 +209,14 @@ The following public Chart Selection Events are available in [ChartSelectionBeha
 
 ### SelectionChanging
 
-The [SelectionChanging]() event is triggered before any data point has been selected. This event is cancelable, and these details are contained in the following event arguments.
+The [SelectionChanging]() event is triggered before any data point has been selected. This event is cancelable because it inherits CancelEventArgs which has a public property [Cancel]() that holds a Boolean value indicating whether to continue the selection or not, and below properties are contained in the following event arguments.
 
-* [NewIndexes]() - Holds the index of the currently selected data point.
-* [OldIndexes]() - Holds the index of the previously selected data point.
-* [Cancel]() - Returns a Boolean value indicating whether to continue the segment selection or not.
+* [NewIndexes]() - Holds the index of the selected data point or series.
+* [OldIndexes]() - Holds the index of the deselected data point or series.
 
 ### SelectionChanged
 
 The [SelectionChanged]() event is triggered after a data point has been selected. And these following details are contained in the following event arguments.
 
-* [NewIndexes]() - Holds the index of the currently selected data point.
-* [OldIndexes]() - Holds the index of the previously selected data point.
+* [NewIndexes]() - Holds the index of the selected data point or series.
+* [OldIndexes]() - Holds the index of the deselected data point or series.
