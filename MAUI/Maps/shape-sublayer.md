@@ -23,13 +23,9 @@ The `ShapeDataField` property of the `ShapesSource` is used to refer the unique 
 
  <map:SfMaps>
      <map:SfMaps.Layer>
-         <map:MapShapeLayer x:Name="shape"
-                            ShapesSource="{local:ImageResource MapDemo.ShapeFiles.world1.shp}">
+         <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json">
              <map:MapShapeLayer.Sublayers>
-                 <map:MapShapeSublayer x:Name="layer"
-                                       ShapeStroke="DarkGrey"
-                                       ShapeFill="#c6c6c6"
-                                       ShapesSource="{local:ImageResource MapDemo.ShapeFiles.africa.json">
+                 <map:MapShapeSublayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/africa.json">
                  </map:MapShapeSublayer>
              </map:MapShapeLayer.Sublayers>
          </map:MapShapeLayer>
@@ -42,9 +38,9 @@ The `ShapeDataField` property of the `ShapesSource` is used to refer the unique 
 
 SfMaps maps = new SfMaps();
 MapShapeLayer layer = new MapShapeLayer();
-layer.ShapesSource = MapSource.FromResource("MapDemo.ShapeFiles.world1.shp");
+layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
 MapShapeSublayer sublayer = new MapShapeSublayer();
-sublayer.ShapesSource = MapSource.FromResource("MapDemo.ShapeFiles.africa.json");
+sublayer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/africa.json"));
 sublayer.ShapeFill = Color.FromRgb(198, 198, 198);
 sublayer.ShapeStroke = Colors.DarkGrey;
 layer.Sublayers.Add(sublayer);
@@ -70,13 +66,11 @@ You can change the color, strokeColor and strokeWidth of the shape sublayer usin
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer x:Name="shape"
-                           ShapesSource="{local:ImageResource MapDemo.ShapeFiles.world1.shp}">
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json">
             <map:MapShapeLayer.Sublayers>
-                <map:MapShapeSublayer x:Name="layer"
-                                      ShapeStroke="#226ac1"
+                <map:MapShapeSublayer ShapeStroke="#226ac1"
                                       ShapeFill="#bbdefa"
-                                      ShapesSource="{local:ImageResource MapDemo.ShapeFiles.africa.json}">
+                                      ShapesSource="https://cdn.syncfusion.com/maps/map-data/africa.json">
                 </map:MapShapeSublayer>
             </map:MapShapeLayer.Sublayers>
         </map:MapShapeLayer>
@@ -89,9 +83,9 @@ You can change the color, strokeColor and strokeWidth of the shape sublayer usin
 
 SfMaps maps = new SfMaps();
 MapShapeLayer layer = new MapShapeLayer();
-layer.ShapesSource = MapSource.FromResource("MapDemo.ShapeFiles.world1.shp");
+layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
 MapShapeSublayer sublayer = new MapShapeSublayer();
-sublayer.ShapesSource = MapSource.FromResource("MapDemo.ShapeFiles.africa.json");
+sublayer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/africa.json"));
 sublayer.ShapeFill = Color.FromRgb(187, 222, 250);
 sublayer.ShapeStroke = Color.FromRgb(34, 106, 193);
 layer.Sublayers.Add(sublayer);
@@ -114,18 +108,14 @@ You can apply color to the sublayer shape by comparing a value from the `ColorMa
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer x:Name="shape"
-                           ShapesSource="{local:ImageResource MapDemo.ShapeFiles.world1.shp}"
-                           >
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json">
             <map:MapShapeLayer.Sublayers>
-                <map:MapShapeSublayer x:Name="layer"
-                                      ShapesSource="{local:ImageResource MapDemo.ShapeFiles.africa.json}"
+                <map:MapShapeSublayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/africa.json"
                                       ShapeStroke="DarkGrey"
                                       ShapeFill="#c6c6c6"
                                       ShapeDataField="name"
                                       PrimaryValuePath="State"
-                                      ShapeColorValuePath="Storage"
-                                      >
+                                      ShapeColorValuePath="Storage">
                     <map:MapShapeSublayer.ColorMappings>
                         <map:EqualColorMapping Color="Red"
                                                Value="Low" />
@@ -149,9 +139,9 @@ public MainPage()
     this.BindingContext = viewModel;
     SfMaps maps = new SfMaps();
     MapShapeLayer layer = new MapShapeLayer();
-    layer.ShapesSource = MapSource.FromResource("MapDemo.ShapeFiles.world1.shp");
+    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
     MapShapeSublayer sublayer = new MapShapeSublayer();
-    sublayer.ShapesSource = MapSource.FromResource("MapDemo.ShapeFiles.africa.json");
+    sublayer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/africa.json"));
     sublayer.ShapeFill = Color.FromRgb(198, 198, 198);
     sublayer.ShapeStroke = Colors.DarkGrey;
     sublayer.DataSource = viewModel.Data;
@@ -216,18 +206,14 @@ You can apply color to the sublayer shapes based on whether the value from `Colo
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer x:Name="layer"
-                           ShapesSource="{local:ImageResource MapDemo.ShapeFiles.world1.shp}"
-                           >
+        <map:MapShapeLayer  ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json">
             <map:MapShapeLayer.Sublayers>
-                <map:MapShapeSublayer x:Name="sublayer"
-                                      ShapesSource="{local:ImageResource MapDemo.ShapeFiles.africa.json}"
+                <map:MapShapeSublayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/africa.json"
                                       ShapeStroke="DarkGrey"
                                       ShapeFill="#c6c6c6"
                                       ShapeDataField="name"
                                       PrimaryValuePath="State"
-                                      ShapeColorValuePath="Count"
-                                      >
+                                      ShapeColorValuePath="Count">
                     <map:MapShapeSublayer.ColorMappings>
                         <map:RangeColorMapping Color="Red"
                                                From="0" To="100" />
@@ -251,9 +237,9 @@ public MainPage()
     this.BindingContext = viewModel;
     SfMaps maps = new SfMaps();
     MapShapeLayer layer = new MapShapeLayer();
-    layer.ShapesSource = MapSource.FromResource("MapDemo.ShapeFiles.world1.shp");
+    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
     MapShapeSublayer sublayer = new MapShapeSublayer();
-    sublayer.ShapesSource = MapSource.FromResource("MapDemo.ShapeFiles.africa.json");
+    sublayer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/africa.json"));
     sublayer.ShapeFill = Color.FromRgb(198, 198, 198);
     sublayer.ShapeStroke = Colors.DarkGrey;
     sublayer.DataSource = viewModel.Data;
@@ -320,11 +306,9 @@ You can enable data labels to the shape sublayer using the `ShowDataLabels` and 
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer x:Name="layer"
-                           ShapesSource="{local:ImageResource MapDemo.ShapeFiles.world1.shp}">
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json">
             <map:MapShapeLayer.Sublayers>
-                <map:MapShapeSublayer x:Name="sublayer"
-                                      ShapesSource="{local:ImageResource MapDemo.ShapeFiles.africa.json}"
+                <map:MapShapeSublayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/africa.json"
                                       ShapeStroke="DarkGrey"
                                       ShapeFill="#c6c6c6"
                                       ShapeDataField="name"
@@ -356,9 +340,9 @@ public SublayerDataLabels()
     this.BindingContext = viewModel;
     SfMaps maps = new SfMaps();
     MapShapeLayer layer = new MapShapeLayer();
-    layer.ShapesSource = MapSource.FromResource("MapDemo.ShapeFiles.world1.shp");
+    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
     MapShapeSublayer sublayer = new MapShapeSublayer();
-    sublayer.ShapesSource = MapSource.FromResource("MapDemo.ShapeFiles.africa.json");
+    sublayer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/africa.json"));
     sublayer.ShapeFill = Color.FromRgb(198, 198, 198);
     sublayer.ShapeStroke = Colors.DarkGray;
     sublayer.DataSource = viewModel.Data;
@@ -431,11 +415,9 @@ N> Refer the `Bubbles` section, to know more about the bubbles customization.
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer x:Name="layer"
-                           ShapesSource="{local:ImageResource MapDemo.ShapeFiles.world1.shp}">
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json">
             <map:MapShapeLayer.Sublayers>
-                <map:MapShapeSublayer x:Name="sublayer"
-                                      ShapesSource="{local:ImageResource MapDemo.ShapeFiles.africa.json}"
+                <map:MapShapeSublayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/africa.json"
                                       ShapeStroke="DarkGrey"
                                       ShapeFill="#c6c6c6"
                                       ShapeDataField="name"
@@ -466,9 +448,9 @@ public BubblesSubUG()
     this.BindingContext = viewModel;
     SfMaps maps = new SfMaps();
     MapShapeLayer layer = new MapShapeLayer();
-    layer.ShapesSource = MapSource.FromResource("MapDemo.ShapeFiles.world1.shp");
+    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
     MapShapeSublayer sublayer = new MapShapeSublayer();
-    sublayer.ShapesSource = MapSource.FromResource("MapDemo.ShapeFiles.africa.json");
+    sublayer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/africa.json"));
     sublayer.ShapeFill = Color.FromRgb(198, 198, 198);
     sublayer.ShapeStroke = Colors.DarkGray;
     sublayer.DataSource = viewModel.Data;

@@ -26,8 +26,7 @@ The `Lines` is a collection of `MapLine`. Every single `MapLine` connects two lo
             <map:MapShapeLayer.Sublayers>
                 <map:MapLineLayer>
                     <map:MapLineLayer.Lines>
-                        <map:MapLine StrokeThickness="2"
-                                     Stroke="#8a8a8a">
+                        <map:MapLine>
                             <map:MapLine.From>
                                 <map:MapLatLng Latitude="77.1025"
                                                Longitude="28.7041" />
@@ -37,8 +36,7 @@ The `Lines` is a collection of `MapLine`. Every single `MapLine` connects two lo
                                                Longitude="56.1304" />
                             </map:MapLine.To>
                         </map:MapLine>
-                        <map:MapLine StrokeThickness="2"
-                                     Stroke="#8a8a8a">
+                        <map:MapLine>
                             <map:MapLine.From>
                                 <map:MapLatLng Latitude="77.1025"
                                                Longitude="28.7041" />
@@ -48,8 +46,7 @@ The `Lines` is a collection of `MapLine`. Every single `MapLine` connects two lo
                                                Longitude="-9.1900" />
                             </map:MapLine.To>
                         </map:MapLine>
-                        <map:MapLine StrokeThickness="2"
-                                     Stroke="#8a8a8a">
+                        <map:MapLine">
                             <map:MapLine.From>
                                 <map:MapLatLng Latitude="77.1025"
                                                Longitude="28.7041" />
@@ -59,8 +56,7 @@ The `Lines` is a collection of `MapLine`. Every single `MapLine` connects two lo
                                                Longitude="61.5240" />
                             </map:MapLine.To>
                         </map:MapLine>
-                        <map:MapLine StrokeThickness="2"
-                                     Stroke="#8a8a8a">
+                        <map:MapLine>
                             <map:MapLine.From>
                                 <map:MapLatLng Latitude="77.1025"
                                                Longitude="28.7041" />
