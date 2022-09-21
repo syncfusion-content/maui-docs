@@ -228,7 +228,7 @@ autocomplete.TextMemberPath = "Name";
 
 The following gif image illustrates the result of the above code.
 
-![.NET MAUI Autocomplete with single selection mode](GettingStarted_images/AutocompleteGettingStarted.gif)
+![.NET MAUI Autocomplete with single selection mode](Images/GettingStarted/AutocompleteGettingStarted.gif)
 
 You can find the complete getting started sample of .NET MAUI Autocomplete from this [link.](https://github.com/SyncfusionExamples/maui-autocomplete-samples)
 
