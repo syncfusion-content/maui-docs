@@ -11,7 +11,7 @@ documentation: ug
 
 The .NET MAUI `ComboBox` control is a selection component that allows users to type a value or choose an option from a list of predefined options. It has many features, such as data binding, editing, searching, clear button and dropdown button customization, and more.
 
-![.NET MAUI SfComboBox](Images/Overview/ComboBoxGettingStarted.png)
+![.NET MAUI SfComboBox](Images/Overview/ComboBoxOverview.png)
 
 ## Key features
 
