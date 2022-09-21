@@ -1,0 +1,239 @@
+---
+layout: post
+title: Getting Started with .NET MAUI ComboBox | Syncfusion
+description: Learn how to get started with Syncfusion .NET MAUI ComboBox control, its elements, and more in here.
+platform: maui
+control: SfComboBox
+documentation: ug
+---
+
+# Getting Started with .NET MAUI ComboBox (SfComboBox)
+
+This section explains the steps required to add the `ComboBox` control and binding data in `ComboBox` control. This section covers only basic features needed to get started with Syncfusion `ComboBox` control.
+
+## Adding a .NET MAUI ComboBox reference
+
+Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add .NET MAUI ComboBox to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs/) and then install it.
+
+## Handler registration 
+
+ In the MauiProgram.cs file, register the handler for Syncfusion core.
+
+{% highlight c# hl_lines="6 7 18 19" %}
+using Microsoft.Maui;
+using Microsoft.Maui.Hosting;
+using Microsoft.Maui.Controls.Compatibility;
+using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Controls.Xaml;
+using Syncfusion.Maui.Core.Hosting;
+using Syncfusion.Maui.ListView.Hosting;
+
+namespace ComboBoxSample
+{
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureSyncfusionListView()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
+
+            return builder.Build();
+        }      
+    }
+}     
+
+## Create a Simple .NET MAUI ComboBox
+
+The .NET MAUI ComboBox control is configured entirely in C# code or by using XAML markup. The following steps explain how to create a .NET MAUI ComboBox (SfComboBox) and configure its elements.
+
+### Adding the .NET MAUI ComboBox control
+
+Step 1: Add the NuGet to the project as discussed in the above reference section. 
+
+Step 2: Add the namespace as shown in the following code sample.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+    xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
+	
+{% endhighlight %}
+
+{% highlight c# %}
+
+    using Syncfusion.Maui.Inputs;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+Step 3: Set the control to content in `ContentPage.`
+
+{% tabs %}
+
+{% highlight xaml %}
+
+
+<ContentPage.Content>    
+    <editors:SfComboBox x:Name="comboBox />
+</ContentPage.Content>
+
+
+{% endhighlight %}
+
+{% highlight c# %}
+          
+SfComboBox comboBox = new SfComboBox(); 
+Content = comboBox;  
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## Populating items using data binding
+
+The `ComboBox` can be bound to an external data source using the `ItemsSource` property. Now, let us create Model and ViewModel classes to populate `ComboBox` with SocialMedia details.
+
+**Step 1:** Define a simple model class SocialMedia with fields ID and name, and then populate social media data in the ViewModel.
+
+{% tabs %}
+{% highlight c# %}
+
+//Model.cs
+public class SocialMedia
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
+
+//ViewModel.cs
+public class SocialMediaViewModel
+{
+    public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+    public SocialMediaViewModel()
+    {
+        this.SocialMedias = new ObservableCollection<SocialMedia>();
+        this.SocialMedias.Add(new SocialMedia() { Name = "Facebook", ID = 0 });
+        this.SocialMedias.Add(new SocialMedia() { Name = "Google Plus", ID = 1 });
+        this.SocialMedias.Add(new SocialMedia() { Name = "Instagram", ID = 2 });
+        this.SocialMedias.Add(new SocialMedia() { Name = "LinkedIn", ID = 3 });
+        this.SocialMedias.Add(new SocialMedia() { Name = "Skype", ID = 4 });
+        this.SocialMedias.Add(new SocialMedia() { Name = "Telegram", ID = 5 });
+        this.SocialMedias.Add(new SocialMedia() { Name = "Televzr", ID = 6 });
+        this.SocialMedias.Add(new SocialMedia() { Name = "Tik Tok", ID = 7 });
+        this.SocialMedias.Add(new SocialMedia() { Name = "Tout", ID = 8 });
+        this.SocialMedias.Add(new SocialMedia() { Name = "Tumblr", ID = 9 });
+        this.SocialMedias.Add(new SocialMedia() { Name = "Twitter", ID = 10 });
+        this.SocialMedias.Add(new SocialMedia() { Name = "Vimeo", ID = 11 });
+        this.SocialMedias.Add(new SocialMedia() { Name = "WhatsApp", ID = 12 });
+        this.SocialMedias.Add(new SocialMedia() { Name = "YouTube", ID = 13 });
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+**Step 2:** Populate data in `ComboBox`. 
+
+Now, populate this SocialMediaViewModel data in `ComboBox` control by binding to the `ItemSource` property. 
+
+{% tabs %}
+{% highlight xaml %}
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
+             xmlns:local="clr-namespace:ComboBoxSample"             
+             x:Class="ComboBoxSample.MainPage">
+
+       <ContentPage.BindingContext>
+            <local:SocialMediaViewModel />
+       </ContentPage.BindingContext>
+
+       <ContentPage.Content>
+            <!--Setting ItemsSource-->
+            <editors:SfComboBox x:Name="comboBox" 
+                                Width="250"
+                                ItemsSource="{Binding SocialMedias}" />
+        </ContentPage.Content>
+</ContentPage>
+
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
+comboBox.BindingContext = socialMediaViewModel;
+comboBox.ItemsSource = SocialMediaViewModel.SocialMedias;
+
+{% endhighlight %}
+{% endtabs %}
+
+N> Set the SocialMediaViewModel instance as the BindingContext of your control; this is done to bind properties of SocialMediaViewModel to `ComboBox`.
+
+**Step 3:** Setting TextMemberPath and DisplayMemberPath.
+
+The `ComboBox` control is populated with the list of social medias. But the SocialMedia model contains two properties, ID and Name, so it is necessary to intimate by which property it should display value in the selection box portion of the `ComboBox` control, when an item is selected.
+
+`TextMemberPath` - This property path is used to get the value for displaying in the selection box portion of the `ComboBox` control when an item is selected. The default value is `String.Empty`.
+
+`DisplayMemberPath` - This property path is used to the name or path of the property displayed for each data item in the drop-down list. The default value is `String.Empty`.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfComboBox x:Name="comboBox" 
+                    DisplayMemberPath = "Name"
+                    TextMemberPath = "Name"
+                    ItemsSource="{Binding SocialMedias}" />
+
+{% endhighlight %}
+{% highlight C# %}
+
+comboBox.DisplayMemberPath = "Name";
+comboBox.TextMemberPath = "Name";
+
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI ComboBox populating using data binding](GettingStarted_images/ComboBoxGettingStarted.gif)
+
+## Editing
+
+The `ComboBox` control supports editable and non-editable modes to choose items. To enable editing functionality, set the `IsEditable` property as `true`. The default value is `false`.
+
+{% tabs %}
+{% highlight XAML %}
+
+<editors:SfComboBox x:Name="comboBox"
+                    Width="250"
+                    IsEditable="true"
+                    ItemsSource="{Binding SocialMedias}"
+                    DisplayMemberPath="Name"
+                    TextMemberPath="Name">
+</editors:SfComboBox>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+comboBox.IsEditable = true;
+
+{% endhighlight %}
+{% endtabs %}
+
+The following gif image illustrates the result of the above code.
+
+![.NET MAUI ComboBox choose item using editing](GettingStarted_images/ComboBoxEditableMode.gif)
+
+You can find the complete getting started sample of .NET MAUI ComboBox from this [link.](https://github.com/SyncfusionExamples/maui-combobox-samples)
