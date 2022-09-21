@@ -7,11 +7,11 @@ control: SfCircularChart
 documentation: ug
 ---
 
-# Selection in .NET MAUI Chart
+# Selection in .NET MAUI SfCircularChart
 
 [SfCircularChart]() provides selection behavior, which allows you to select or highlight a chart segment using [DataPointSelectionBehavior]().
 
-## Data Point Selection
+## Enable Selection
 
 To enable the data point selection in the [SfCircularChart](), create an instance of [DataPointSelectionBehavior]() and specify a color value for the [SelectionBrush]() property to highlight the selected segment in the series. The selection instance should then be set to the chart series [SelectionBehavior]() property.
 
@@ -62,7 +62,7 @@ The following ChartSelectionType can be achieved during Selection:
 * [SelectedIndex]() - Gets or Sets  the index value of the segment that should be selected during the Selection.
 * [SelectedIndexes]() - Gets or Sets  the list of indexes of the segments that should be selected during the Selection.
 
-## Selection on initial rendering
+## Rendering Selection Programmatically
 
 [SfCircularChart]() provides support to select a point programmatically on a chart using the [SelectionBrush](), [SelectedIndex]() and [Type]() properties of [ChartSelectionBehavior]().
 
@@ -95,9 +95,9 @@ chart.Series.Add(series);
 
 {% endtabs %}
 
-![DataPointSelectionBehavior in LoadTime](Selection_images/data_point_selection_properties.PNG)
+![Rendering DataPoint Selection Programmatically](Selection_images/data_point_selection_properties.PNG)
 
-## Methods
+## ClearSelection Method
 
 The Selection Behavior has a public method called [ClearSelection ()](), which resets all current Selection Behavior property values to their default values.
 
@@ -108,6 +108,11 @@ The Selection Behavior has a public method called [ClearSelection ()](), which r
 SfCircularChart chart = new SfCircularChart();
 
 DataPointSelectionBehavior selection = new DataPointSelectionBehavior();
+
+PieSeries series = new PieSeries();
+series.SelectionBehavior = selection;
+chart.Series.Add(series);
+
 selection.ClearSelection();
 
 {% endhighlight %}
