@@ -15,8 +15,6 @@ The `SfListView` allows swiping items to achieve custom actions such as deleting
 
 It provides customizable swipe templates for swiping on the left and right sides. You can restrict the layout of the swipe view up to a certain position when swiping the item by setting the `SfListView.SwipeThreshold` property. You can set the size of the swipe views by setting the `SfListView.SwipeOffset` property.
 
-N> When [SfListView.AutoFitMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_AutoFitMode) is `AutoFitMode.Height` for the main listview, the height of inner listview will change while scrolling the view and items will be refreshed.
-
 N> When tapping a swiped item, the [SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionChanging) and [SelectionChanged](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.SfListView.html#Syncfusion_ListView_XForms_SfListView_SelectionChanged) events will not occur since the swiped item is reset at this time.
 
 ## Assigning start and end swipe templates
@@ -68,7 +66,7 @@ listView.StartSwipeTemplate = new DataTemplate(() =>
 {% endhighlight %}
 {% endtabs %}
 
-N> Similarly, the UI for swiping left can be customized by using the `SfListView.EndSwipeTemplate`.
+N> Similarly, the UI for swiping from right to left or bottom to top in vertical or horizontal Orientation can be customized by using the `SfListView.EndSwipeTemplate`.
 
 N> The Swipe Template is mandatory to perform swiping in the `SfListView`.
 
@@ -162,7 +160,7 @@ listView.StartSwipeTemplate = new DataTemplate(() =>
 {%endhighlight %}
 {% endtabs %}
 
-![Customize Start swipe in listview](Images/swiping/maui-listview-working-with-multiple-views-in-swipetemplate.jpg)
+![Customize Start swipe in .NET MAUI Listview](Images/swiping/maui-listview-working-with-multiple-views-in-swipetemplate.jpg)
 
 To delete the item when `Delete` image is tapped and set favorites to an item when `Favorites` image is tapped, follow the code example shown.
 
@@ -332,7 +330,7 @@ private void RightSwipeButton_Clicked(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-![Programmatic Start and End swiping in listview](Images/swiping/maui-listview-programmatic-swiping.gif)
+![Programmatic Start and End swiping in .NET MAUI Listview](Images/swiping/maui-listview-programmatic-swiping.gif)
 
 ## Events
 
@@ -486,7 +484,7 @@ private void ListView_PropertyChanged(object sender, PropertyChangedEventArgs e)
 
 Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/how-to-do-indefinite-swiping-in-.net-maui-listview).
 
-![Indefinite swipe in listview](Images/swiping/maui-listview-swipe-an-item-indefinitely.jpg)
+![Indefinite swipe in .NET MAUI Listview](Images/swiping/maui-listview-swipe-an-item-indefinitely.jpg)
 
 ## How to edit data by swiping
 
