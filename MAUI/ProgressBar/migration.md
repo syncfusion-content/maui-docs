@@ -311,6 +311,7 @@ linearProgressBar.ProgressFill = Colors.Blue;
 linearProgressBar.TrackFill = Colors.Violet;
 linearProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("00bdaf"), Value = 0 });
 linearProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("2f7ecc"), Value = 50 });
+this.Content = linearProgressBar;
 
 // Snippet for circular progress bar
 
@@ -324,7 +325,7 @@ circularProgressBar.ProgressFill = Colors.Blue;
 circularProgressBar.TrackFill = Colors.Violet;
 circularProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("00bdaf"), Value = 0 });
 circularProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("2f7ecc"), Value = 50 });
-
+this.Content = circularProgressBar;
 ...
 
 {% endhighlight %}
@@ -430,7 +431,7 @@ linearProgressBar.TrackCornerRadius = new CornerRadius(5, 5, 5, 5);
 linearProgressBar.SecondaryProgressCornerRadius = new CornerRadius(5, 5, 5, 5);
 linearProgressBar.SecondaryProgressFill = Colors.Red;
 linearProgressBar.SecondaryProgress = 50;
-
+this.Content = linearProgressBar;
 ... 
 
 {% endhighlight %}
@@ -570,7 +571,7 @@ circularProgressBar.ProgressCornerStyle = CornerStyle.BothCurve;
 circularProgressBar.TrackCornerStyle = CornerStyle.BothCurve;
 circularProgressBar.ThicknessUnit = SizeUnit.Pixel;
 circularProgressBar.Progress = 50;
-
+this.Content = circularProgressBar;
 ...
 {% endhighlight %}
 
