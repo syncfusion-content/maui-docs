@@ -11,7 +11,7 @@ documentation: ug
 
 ## Angle
 
-The appearance of the circular progress bar can be customized to semi-circle, arc, etc. The start and end angles can be customized using the `StartAngle` and `EndAngle` properties. 
+The appearance of the circular progress bar can be customized to semi-circle, arc, and more. . The start and end angles can be customized using the `StartAngle` and `EndAngle` properties. 
 
 The following code sample demonstrates how to change the appearance of the circular progress bar to semi-circle.
 
@@ -41,7 +41,7 @@ this.Content = circularProgressBar;
 
 ## Range colors
 
-You can visualize the multiple ranges with different colors that are mapped to each range to enhance the readability of progress. 
+Visualize multiple ranges with different colors mapped to each range to enhance the readability of progress.
 
 The colors can be mapped to the specific ranges using the `GradientStops` property, which holds a collection of `ProgressGradientStop`. 
 
@@ -56,7 +56,7 @@ The following code sample demonstrates how to map the solid color range in the p
 
 {% highlight xaml %}
 
-<!--Using linear progress bar-->
+<!--Using the linear progress bar-->
 
 <progressBar:SfLinearProgressBar Progress="100">
     <progressBar:SfLinearProgressBar.GradientStops>
@@ -71,7 +71,7 @@ The following code sample demonstrates how to map the solid color range in the p
     </progressBar:SfLinearProgressBar.GradientStops>
 </progressBar:SfLinearProgressBar>
 
-<!--Using circular progress bar-->
+<!--Using the circular progress bar-->
 
 <progressBar:SfCircularProgressBar Progress="100" >
     <progressBar:SfCircularProgressBar.GradientStops>
@@ -90,7 +90,7 @@ The following code sample demonstrates how to map the solid color range in the p
 
 {% highlight c# %}
 
-// Using linear progress bar
+// Using the linear progress bar
 
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 linearProgressBar.Progress = 100;
@@ -104,7 +104,7 @@ linearProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.Fro
 linearProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("fbb78a"), Value = 100 });
 this.Content = linearProgressBar;
 
-// Using circular progress bar
+// Using the circular progress bar
 
 SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 circularProgressBar.Progress = 100;
@@ -178,7 +178,7 @@ this.Content = circularProgressBar;
 
 ### Linear progress bar
 
-In the linear progress bar, the height of the track, progress and secondary progress can be customized using the `TrackHeight` and `ProgressHeight` and `SecondaryProgressHeight` properties, respectively.
+In the linear progress bar, the height of the track, progress, and secondary progress can be customized using the `TrackHeight`, `ProgressHeight`, and `SecondaryProgressHeight` properties, respectively.
 
 {% tabs %} 
 
@@ -218,9 +218,9 @@ The following properties are used to customize the appearance of the circular pr
 * `TrackThickness`: Defines the thickness of the track indicator.
 * `ThicknessUnit`: Specifies whether the `ProgressThickness` or `TrackThickness` are defined in pixel or factor.
 
-The `ProgressThickness` or `TrackThickness` of the progress bar can be specified either in pixel or factor. If the `ThicknessUnit` is specified as Pixel, then the range will be rendered based on the provided pixel value. If the `ThicknessUnit` is set as factor, the provided factor value will be multiplied with outer radius. For example, if the thickness width is set as 0.1, then 10% of outer radius is considered as thickness.
+The `ProgressThickness` or `TrackThickness` of the progress bar can be specified either in pixel or factor. If the `ThicknessUnit` is specified as Pixel, the range will be rendered based on the provided pixel value. If the `ThicknessUnit` is set as factor, the provided factor value will be multiplied by the outer radius. For example, if the thickness width is set as 0.1, then 10% of outer radius is considered as thickness.
 
-The following code sample demonstrates how to customize the appearance of circular progress bar.
+The following code sample demonstrates how to customize the appearance of the circular progress bar.
 
 {% tabs %} 
 
@@ -291,7 +291,7 @@ this.Content = linearProgressBar;
 
 ## Corner style customization
 
-The `ProgressCornerStyle` and `TrackCornerStyle` property of circular progress bar specifies the corner type for the progress and track. The corners can be customized using the `BothFlat`, `BothCurve`, `StartCurve`, and `EndCurve` options. The default value of this property is `BothFlat`.
+The `ProgressCornerStyle` and `TrackCornerStyle` property of the circular progress bar specifies the corner type for the progress and track. The corners can be customized using the `BothFlat`, `BothCurve`, `StartCurve`, and `EndCurve` options. The default value of this property is `BothFlat`.
 
 The following code sample demonstrates the corner style customization in progress and track indicator.
 

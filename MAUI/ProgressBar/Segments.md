@@ -15,12 +15,12 @@ To visualize the progress of multiple sequential tasks, split the progress bar i
 
 {% highlight xaml %}
 
-<!--Using linear progress bar-->
+<!--Using the linear progress bar-->
 
 <progressBar:SfLinearProgressBar Progress="25" 
                                  SegmentCount="4" />
 
-<!--Using circular progress bar-->
+<!--Using the circular progress bar-->
 
 <progressBar:SfCircularProgressBar Progress="25" 
                                    SegmentCount="7" />
@@ -29,14 +29,14 @@ To visualize the progress of multiple sequential tasks, split the progress bar i
 
 {% highlight c# %}
 
-// Using linear progress bar.
+// Using the linear progress bar.
 
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 linearProgressBar.Progress = 25;
 linearProgressBar.SegmentCount = 4;
 this.Content = linearProgressBar;
 
-// Using circular progress bar.
+// Using the circular progress bar.
 
 SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 circularProgressBar.Progress = 25;
@@ -51,7 +51,7 @@ this.Content = circularProgressBar;
 
 ## Gap customization
 
-You can also customize the default spacing between the segments using the `GapWidth` property as demonstrated in following code sample.
+Customize the default spacing between the segments using the GapWidth property as demonstrated in the following code sample.
 
 {% tabs %} 
 {% highlight xaml %}

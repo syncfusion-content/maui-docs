@@ -53,7 +53,7 @@ This event is triggered when the progress attains the [`Maximum`]() value. This 
 
 * `Progress`: Represents the progress value.
 
-The following code sample demonstrates how to customize the progress bar when progress reaches maximum using this event. 
+The following code sample demonstrates how to customize the progress bar when the progress reaches maximum using this event. 
 
 {% tabs %} 
 

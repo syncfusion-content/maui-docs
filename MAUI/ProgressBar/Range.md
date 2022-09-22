@@ -9,7 +9,7 @@ documentation: ug
 
 # Define Range in Xamarin ProgressBar (Progress Bar)
 
-Range represents the entire span of the progress bar and can be defined using the `Minimum` and `Maximum` properties. The default value of the range is 0 to 100.
+The Range represents the entire span of the progress bar and can be defined using the `Minimum` and `Maximum` properties. The default value of the range is 0 to 100.
 
 The following code sample demonstrates how to customize the range as factor value to the progress bar.
 
@@ -17,13 +17,13 @@ The following code sample demonstrates how to customize the range as factor valu
 
 {% highlight xaml %}
 
-<!--Using linear progress bar-->
+<!--Using the linear progress bar-->
 
 <progressBar:SfLinearProgressBar Minimum="0" 
                                  Progress="0.5" 
                                  Maximum="1"/>
 
-<!--Using circular progress bar-->
+<!--Using the circular progress bar-->
 
 <progressBar:SfCircularProgressBar Minimum="0" 
                                    Progress="0.5" 
@@ -33,7 +33,7 @@ The following code sample demonstrates how to customize the range as factor valu
 
 {% highlight c# %}
 
-// Using linear progress bar.
+// Using the linear progress bar.
 
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 linearProgressBar.Minimum = 0;
@@ -41,7 +41,7 @@ linearProgressBar.Maximum = 1;
 linearProgressBar.Progress = 0.5;
 this.Content = linearProgressBar;
 
-// Using circular progress bar.
+// Using the circular progress bar.
 
 SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 circularProgressBar.Minimum = 0;
