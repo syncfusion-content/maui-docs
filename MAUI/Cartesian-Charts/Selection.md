@@ -54,7 +54,7 @@ chart.Series.Add(series);
 
 {% endtabs %}
 
-![Segment selection support in MAUI SfCartesianChart](Selection_images/maui_chart_segment_selection.PNG)
+![Segment selection support in MAUI SfCartesianChart](Selection_images/maui_cartesianchart_segment_selection.PNG)
 
 ## Enable SeriesSelection
 
@@ -111,7 +111,7 @@ chart.Series.Add(series3);
 
 {% endtabs %}
 
-![Series Selection support in MAUI SfCartesianChart](Selection_images/maui_chart_seriesSelection.PNG)
+![Series Selection support in MAUI SfCartesianChart](Selection_images/maui_cartesianchart_series_selection.PNG)
 
 ## Properties
 
