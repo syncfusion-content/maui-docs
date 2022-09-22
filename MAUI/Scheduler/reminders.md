@@ -1,40 +1,40 @@
 ---
 layout: post
-title: Appointments Reminders in .NET MAUI Scheduler control | Syncfusion
+title: Appointment Reminders in .NET MAUI Scheduler control | Syncfusion
 description: Learn here all about the appointments reminders support in Syncfusion .NET MAUI Scheduler (SfScheduler) appointments.
 platform: maui
 control: SfScheduler
 documentation: ug
 ---
 
-# Appointments reminders in .NET MAUI Scheduler (SfScheduler)
+# Appointment reminders in .NET MAUI Scheduler (SfScheduler)
 
-The MAUI Scheduler notify an appointment reminders by using  the [EnableReminder] property and [ReminderAlertOpening] event. An appointment can have one or more reminders.
+The .NET MAUI Scheduler notify an appointment reminders by using the [EnableReminder] property and [ReminderAlertOpening] event. An appointment can have one or more reminders.
 
 N>
 * As restriction in enabling toast notification in .NET MAUI Framework, as of now added event to notify appointment reminder.[Reference](https://github.com/dotnet/maui/discussions/4216)
 
-## Handling reminders for future appointment
+## Handling reminders for future appointments
 
 * Future normal and recurring appointment reminder alert will be displayed as Reminder alert time.
 
-* Reminder alert time will be calculated form appointment start time substrate with reminder time interval. For an example if appointment time is 3.30pm and reminder time interval is new Timespan (0,15,0) then reminder alter time is 3.15 pm.
+* Reminder alert time will be calculated form appointment start time substrate with reminder time interval. For an example if appointment time is 3.30pm and reminder time interval is `new Timespan (0,15,0)` then reminder alter time is 3.15 pm.
 
-## Handling reminders for overdue appointment
+## Handling reminders for overdue appointments
 
 * If a Non-recurring appointments reminder is in past, reminder alert as overdue untill dismissed.
 
-* Recurring appointment overdue after recurrence end until dismissed and past occurrences do not have reminders.
+* Recurring appointment overdue from last occurrence date and time until last occurrence is dismissed.
 
-* Recurrence appointment due calculated from current date occurrence and its in due until next occurrence reminder time.
+* Recurrence appointment due calculated from current date occurrence and it is in due until next occurrence reminder time.
 
 *  If the last occurrence in recurrence is series is get dismissed, then the pattern recurring appointment dismissed.
 
-## Handling reminders for Changed occurrence appointment
+## Handling reminders for Changed occurrence appointments
 
-* Once the changed occurrence is moved to the future, its reminder is re-created from the pattern.
+* Once the changed occurrence is moved to the future, then pattern reminder value will be used for changed occurrence.
 
-* When the changed occurrence is restored to a time in the past, the reminder is deleted. 
+* When the changed occurrence is restored to a time in the past, then its reminder will be dismissed.
 
 * Past Changed occurrence reminders will be dismissed.
 
@@ -294,7 +294,7 @@ private void Scheduler_ReminderAlertOpening(object sender, ReminderAlertOpeningE
 }
 {% endhighlight %}
 {% endtabs %}
-## Handle Dismissed for reminders
+## Handle dismiss property of reminders
 
 * Normal appointment directly dismissed using [IsDismissed] property
 
