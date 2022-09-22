@@ -20,8 +20,7 @@ The following code sample demonstrates how to add custom text content.
 {% highlight xaml %}
 
 <progressBar:SfCircularProgressBar x:Name="CustomContentCircularProgressBar" 
-                                   Progress="23"
-                                   HeightRequest="200">
+                                   Progress="23">
     <progressBar:SfCircularProgressBar.Content>
         <Grid>
             <Grid.RowDefinitions>
