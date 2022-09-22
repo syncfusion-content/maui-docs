@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Appointments Reminders in .NET MAUI Scheduler control | Syncfusion
-description: Learn here all about the Reminder support in Syncfusion .NET MAUI Scheduler (SfScheduler) appointments.
+description: Learn here all about the appointments reminders support in Syncfusion .NET MAUI Scheduler (SfScheduler) appointments.
 platform: maui
 control: SfScheduler
 documentation: ug
@@ -290,7 +290,6 @@ scheduler.ReminderAlertOpening += Scheduler_ReminderAlertOpening;
 
 private void Scheduler_ReminderAlertOpening(object sender, ReminderAlertOpeningEventArgs e)
 {
-    var reminders = e.Reminders;
     bool snooze = await DisplayAlert("Reminder", Reminders[0].Appointment.Subject + " - " + Reminders[0].Appointment.StartTime.ToString(" dddd, MMMM dd, yyyy, hh:mm tt"), "Snooze", "Dismiss"); 
 }
 {% endhighlight %}
