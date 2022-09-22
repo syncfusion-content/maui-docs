@@ -11,7 +11,7 @@ documentation: ug
 
 In the circular progress bar, add any view to the center using the `Content` property. 
 
-For example, you can include add, start, or pause button to control the progress. You can also add an image that indicates the actual task in progress or add custom text that conveys how far the task is completed. 
+For example, include add, start, or pause button to control the progress. Also add an image that indicates the actual task in progress or add custom text that conveys how far the task is completed. 
 
 The following code sample demonstrates how to add custom text content.
 

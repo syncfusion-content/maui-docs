@@ -51,7 +51,7 @@ this.Content = circularProgressBar;
 
 ## Gap customization
 
-Customize the default spacing between the segments using the `GapWidth` property as demonstrated in the following code sample.
+Customize the default spacing between the segments using the `SegmentGapWidth` property as demonstrated in the following code sample.
 
 {% tabs %} 
 {% highlight xaml %}

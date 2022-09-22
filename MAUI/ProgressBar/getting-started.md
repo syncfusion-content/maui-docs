@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting started with .NET MAUI ProgressBar (Progress Bar)
 
-This section explains the steps required to add the progress bar control with the progress and its customizable elements such as indeterminate, segment, progress fill, and track fill. This section covers only the basic features needed to know to get started with Syncfusion progress bar.
+This section explains the steps required to add the progress bar control with the progress and its customizable elements such as indeterminate, segment, progress fill, and track fill. This section covers only the basic features needed to know to get started with the Syncfusion progress bar.
 
 ## Creating an application using the .NET MAUI ProgressBar
 
