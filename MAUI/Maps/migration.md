@@ -1481,15 +1481,19 @@ The following code example explains how to intialize the shape sublayer and cust
     <maps:SfMaps.Layers>
         <maps:ShapeFileLayer Uri="world1.shp">
             <maps:ShapeFileLayer.Sublayers>
-                <maps:ShapeFileLayer Uri="usa_state.shp"
-                                     ShapeStroke="#B1D8F5"
-                                     ShapeFill="#8DCCF4"
-                                     ShapeStrokeThickness = "1">
+                <maps:ShapeFileLayer Uri="usa_state.shp">
+                    <maps:ShapeFileLayer.ShapeSettings>
+                        <maps:ShapeSetting  ShapeFill="#8DCCF4"
+                                            ShapeStroke="#B1D8F5"
+                                            ShapeStrokeThickness="1">
+                        </maps:ShapeSetting>
+                    </maps:ShapeFileLayer.ShapeSettings>
                 </maps:ShapeFileLayer>
             </maps:ShapeFileLayer.Sublayers>
         </maps:ShapeFileLayer>
     </maps:SfMaps.Layers>
 </maps:SfMaps>
+
 
 {% endhighlight %}
 
@@ -1498,7 +1502,7 @@ The following code example explains how to intialize the shape sublayer and cust
     SfMaps maps = new SfMaps();
 
     ShapeFileLayer layer = new ShapeFileLayer();
-    layer.Uri = "world.shp";    
+    layer.Uri = "world1.shp";    
 
     ShapeFileLayer subShapeLayer = new ShapeFileLayer();
     subShapeLayer.Uri = "usa_state.shp";
@@ -1644,16 +1648,21 @@ The following code example explains how to customize the bubble in the Xamarin S
 {% highlight xaml %}
 
 <maps:SfMaps>
-    <maps:SfMaps.Layers >
-        <maps:ShapeFileLayer Uri="world.shp"
-                             ItemsSource="{Binding Data}"
-                             ShapeIDPath="State"
-                             ShapeIDTableField="name">
-            <maps:ShapeFileLayer.BubbleMarkerSettings>
-                <maps:BubbleMarkerSetting ShowBubbles="True"
-                                          ColorValuePath="Population"
-                                          ValuePath="Population"/>
-            </maps:ShapeFileLayer.BubbleMarkerSettings>
+    <maps:SfMaps.Layers>
+        <maps:ShapeFileLayer Uri="world1.shp">
+            <maps:ShapeFileLayer.Sublayers>
+                <maps:ShapeFileLayer Uri="usa_state.shp"
+                                     ItemsSource="{Binding DataSource}"
+                                     ShapeIDPath="Name"
+                                     ShapeIDTableField="STATE_NAME">
+                    <maps:ShapeFileLayer.BubbleMarkerSettings>
+                        <maps:BubbleMarkerSetting ShowBubbles="True"
+                                                  ValuePath="index"
+                                                  Fill="Orange"
+                                                  Opacity="0.8" />
+                    </maps:ShapeFileLayer.BubbleMarkerSettings>
+                </maps:ShapeFileLayer>
+            </maps:ShapeFileLayer.Sublayers>
         </maps:ShapeFileLayer>
     </maps:SfMaps.Layers>
 </maps:SfMaps>
@@ -1667,20 +1676,18 @@ The following code example explains how to customize the bubble in the Xamarin S
     SfMaps maps = new SfMaps();
 
     ShapeFileLayer layer = new ShapeFileLayer();
-    layer.Uri = "world.shp"; 
+    layer.Uri = "world1.shp"; 
 
     ShapeFileLayer subShapeLayer = new ShapeFileLayer();
     subShapeLayer.Uri = "usa_state.shp";          
     subShapeLayer.ShapeIDTableField = "STATE_NAME",
     subShapeLayer.ShapeIDPath = "Name"
-    subShapeLayer.DataSource = viewModel.Data;
+    subShapeLayer.DataSource = viewModel.DataSource;
 
     BubbleMarkerSetting bubbleSetting = new BubbleMarkerSetting()
     {
         ShowBubbles = true,
         ValuePath = "index",
-        ColorValuePath = "Population",
-        SizeValuePath = "Population",
     };
 
     subShapeLayer.BubbleMarkerSettings = bubbleSetting;
@@ -1798,9 +1805,9 @@ The following code example explains how to customize the data label in the Xamar
         <maps:ShapeFileLayer Uri="world1.shp">
             <maps:ShapeFileLayer.Sublayers>
                 <maps:ShapeFileLayer Uri="usa_state.shp"
-                                     ItemsSource="{Binding Data}"
-                                     ShapeIDPath="State"
-                                     ShapeIDTableField="name"
+                                     ItemsSource="{Binding DataSource}"
+                                     ShapeIDPath="Name"
+                                     ShapeIDTableField="STATE_NAME"
                                      ShowMapItems="True">
                     <maps:ShapeFileLayer.DataLabelSettings>
                         <maps:DataLabelSetting  SmartLabelMode="Trim" />
@@ -1820,13 +1827,13 @@ The following code example explains how to customize the data label in the Xamar
     SfMaps maps = new SfMaps();
 
     ShapeFileLayer layer = new ShapeFileLayer();
-    layer.Uri = "world.shp";           
+    layer.Uri = "world1.shp";           
     
     ShapeFileLayer subShapeLayer = new ShapeFileLayer();
     subShapeLayer.Uri = "usa_state.shp";          
     subShapeLayer.ShapeIDTableField = "STATE_NAME",
     subShapeLayer.ShapeIDPath = "Name"
-    subShapeLayer.DataSource = viewModel.Data;
+    subShapeLayer.DataSource = viewModel.DataSource;
 
     DataLabelSetting dataLabelSetting = new DataLabelSetting();
     dataLabelSetting.SmartLabelMode = IntersectAction.Trim;
@@ -2005,12 +2012,12 @@ The following code example explains how to customize the shape color in the Xama
         <maps:ShapeFileLayer Uri="world1.shp">
             <maps:ShapeFileLayer.Sublayers>
                 <maps:ShapeFileLayer Uri="usa_state.shp"
-                                     ItemsSource="{Binding Data}"
-                                     ShapeIDPath="State"
-                                     ShapeIDTableField="name">
+                                     ItemsSource="{Binding DataSource}"
+                                     ShapeIDPath="Name"
+                                     ShapeIDTableField="STATE_NAME">
                     <maps:ShapeFileLayer.ShapeSettings>
-                        <maps:ShapeSetting ShapeValuePath="Count"
-                                           ShapeColorValuePath="Count">
+                        <maps:ShapeSetting ShapeValuePath="index"
+                                           ShapeColorValuePath="index">
                             <maps:ShapeSetting.ColorMappings>
                                 <maps:EqualColorMapping Color="Blue"
                                                         Value="100"
@@ -2037,13 +2044,13 @@ The following code example explains how to customize the shape color in the Xama
     SfMaps maps = new SfMaps();
 
     ShapeFileLayer layer = new ShapeFileLayer();
-    layer.Uri = "world.shp";
+    layer.Uri = "world1.shp";
 
     ShapeFileLayer subShapeLayer = new ShapeFileLayer();
     subShapeLayer.Uri = "usa_state.shp";           
-    subShapeLayer.ShapeIDPath="State"
-    subShapeLayer.ShapeIDTableField="name"
-    subShapeLayer.DataSource = viewModel.Data;
+    subShapeLayer.ShapeIDPath="Name"
+    subShapeLayer.ShapeIDTableField="STATE_NAME"
+    subShapeLayer.DataSource = viewModel.DataSource;
 
     EqualColorMapping colorMapping = new EqualColorMapping();
     colorMapping.Color = Colors.Blue;
