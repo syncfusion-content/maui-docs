@@ -271,6 +271,121 @@ The [`ShowMarkerTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Ma
 
 ## Appearance customization
 
+Customize the tooltip appearance using the following properties.
+
+* **Background** - Change the background color of the tooltip in maps using the `MapTooltipSettings.Background` property.
+* **Padding** - Change the padding of the tooltip text in maps using the `MaptooltipSettings.Padding` property.
+* **TextStyle** - Change the tooltip text appearance such as `TextColor`, `FontSize`, `FontAttributes`, and `FontFamily` in maps using the `MapTooltipSettings.TextStyle` property.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                           DataSource="{Binding Data}"
+                           PrimaryValuePath="State" 
+                           ShapeDataField="name" 
+                           ShapeStroke="White"
+                           ShapeStrokeThickness="1"
+                           ShapeHoverFill="#b0ed83"
+                           ShapeFill="#809FFF"
+                           ShowShapeToolTip="True">
+
+                <map:MapShapeLayer.ShapeTooltipSettings>
+                    <map:MapTooltipSettings Background="#002080"
+                                            Padding="2">
+                        <map:MapTooltipSettings.TextStyle>
+                            <map:MapLabelStyle FontSize="14"
+                                               TextColor="White"
+                                               FontAttributes="Bold">
+                            </map:MapLabelStyle>
+                        </map:MapTooltipSettings.TextStyle>
+                    </map:MapTooltipSettings>
+                </map:MapShapeLayer.ShapeTooltipSettings>
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+public MainPage()
+{
+   InitializeComponent();
+   
+   ViewModel viewModel = new ViewModel();
+   this.BindingContext = viewModel;
+   
+   MapShapeLayer layer = new MapShapeLayer();
+   layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
+   layer.DataSource = viewModel.Data;
+   layer.PrimaryValuePath = "State";
+   layer.ShapeDataField = "name";
+   layer.ShapeStroke = Colors.White;
+   layer.ShapeStrokeThickness = 1;
+   layer.ShapeHoverFill = Color.FromArgb("#b0ed83");
+   layer.ShapeFill = Color.FromArgb("#809FFF");
+   layer.ShowShapeToolTip = true;
+
+   layer.ShapeTooltipSettings = new MapTooltipSettings()
+        {
+            Background = Color.FromArgb("#002080"),
+            Padding = new Thickness(2),
+            TextStyle = new MapLabelStyle()
+            {
+                FontSize = 14,
+                TextColor = Colors.White,
+                FontAttributes = FontAttributes.Bold
+            }
+        };
+
+   SfMaps maps = new SfMaps();
+   maps.Layer = layer;
+   this.Content = maps;
+}
+
+public class ViewModel
+{
+    public ObservableCollection<Model> Data { get; set; }
+	
+    public ViewModel()
+    {
+        Data = new ObservableCollection<Model>();
+        Data.Add(new Model("India", 21));
+        Data.Add(new Model("United States", 58));
+        Data.Add(new Model("Kazakhstan", 41));
+        Data.Add(new Model("Italy", 48));
+        Data.Add(new Model("Korea", 14));
+        Data.Add(new Model("China", 23));
+    }
+}
+
+public class Model
+{
+    public String State { get; set; }
+    public int Population { get; set; }
+	
+    public Model(string state, int population)
+    {
+        State = state;
+        Population = population;
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Maps tooltip settings](images/tooltip/tooltip-appearance-customization.png)
+
+N>
+* Refer to the `ShapeTooltipSettings` to customize the shape tooltip appearance.
+* Refer to the `BubbleTooltipSettings` to customize the bubble tooltip appearance.
+* Refer to the `MarkerTooltipSettings` to customize the marker tooltip appearance.
+
 ### Apply data template for tooltip
 
 Data template can be used customize the tooltip view using [`ShapeTooltipTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeTooltipTemplate) property. The following code example shows the usage of `DataTemplate`.
@@ -306,14 +421,14 @@ Data template can be used customize the tooltip view using [`ShapeTooltipTemplat
                                Grid.Row="0"
                                WidthRequest="20"
                                HeightRequest="20" />
-                        <Label Text="{Binding Continent}"
+                        <Label Text="{Binding DataItem.Continent}"
                                TextColor="White"
                                Grid.Column="1"
                                Grid.Row="0"
                                Padding="10" />
                         <Label Grid.Row="2"
                                Grid.ColumnSpan="2"
-                               Text="{Binding Area}"
+                               Text="{Binding DataItem.Area}"
                                TextColor="White" />
                     </Grid>
                 </DataTemplate>
@@ -383,7 +498,7 @@ Data template can be used customize the tooltip view using [`ShapeTooltipTemplat
             };
             Binding binding = new Binding();
             binding.Source = grid.BindingContext;
-            binding.Path = nameof(Model1.Continent);
+            binding.Path = nameof(MapTooltipInfo.DataItem) + "." + nameof(Model1.Continent);
             label.SetBinding(Label.TextProperty, binding);
             grid.SetRow(label, 0); grid.SetColumn(label, 1);
             var areaLabel = new Label
@@ -395,7 +510,7 @@ Data template can be used customize the tooltip view using [`ShapeTooltipTemplat
             grid.SetColumnSpan(areaLabel, 2);
             Binding binding1 = new Binding();
             binding1.Source = grid.BindingContext;
-            binding1.Path = nameof(Model1.Area);
+            binding1.Path = nameof(MapTooltipInfo.DataItem) + "." + nameof(Model1.Area);
             areaLabel.SetBinding(Label.TextProperty, binding1);
 
             grid.Children.Add(image);
@@ -444,9 +559,7 @@ Data template can be used customize the tooltip view using [`ShapeTooltipTemplat
 
 ![Maps tooltip appearance customization](images/tooltip/tooltip_textStyle.png)
 
-N>
-* The BindingContext of the Shape and Bubble will be the corresponding underline object.
-* The BindingContext of the Marker will be the corresponding MapMarker.
+N> The `BindingContext` of the Tooltip will be the `MapTooltipInfo`, and it has the `DataItem` property. This property holds the corresponding underline object for the shape, bubble tooltip, and the corresponding `MapMarker` for the marker tooltip.
 
 N>
 * Refer to the [`ShapeTooltipTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeTooltipTemplate), for customize tooltip for the shapes.
@@ -467,7 +580,7 @@ A data template selector also can be used to customize the appearance of each it
             <StackLayout IsClippedToBounds="false"
                          HorizontalOptions="StartAndExpand"
                          VerticalOptions="Center">
-                <Label Text="{Binding Name}"
+                <Label Text="{Binding DataItem.Name}"
                        Scale="1"
                        TextColor="Red"
                        HorizontalOptions="StartAndExpand"
@@ -479,7 +592,7 @@ A data template selector also can be used to customize the appearance of each it
             <StackLayout IsClippedToBounds="false"
                          HorizontalOptions="StartAndExpand"
                          VerticalOptions="Center">
-                <Label Text="{Binding Name}"
+                <Label Text="{Binding DataItem.Name}"
                        Scale="1"
                        TextColor="White"
                        HorizontalOptions="StartAndExpand"
