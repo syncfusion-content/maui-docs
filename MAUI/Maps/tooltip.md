@@ -271,11 +271,11 @@ The [`ShowMarkerTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Ma
 
 ## Appearance customization
 
-Customize the below appearances of the tooltip.
+Customize the tooltip appearance using the following properties.
 
-* **Background** - Change the background color of the tooltip in the maps using the `MapTooltipSettings.Background` property.
-* **Padding** - Change the padding of the tooltip text in the maps using the `MaptooltipSettings.Padding` property.
-* **TextStyle** - Change the tooltip text appearance such as `TextColor`, `FontSize`, `FontAttributes` and `FontFamily` in the maps using the `MapTooltipSettings.TextStyle` property.
+* **Background** - Change the background color of the tooltip in maps using the `MapTooltipSettings.Background` property.
+* **Padding** - Change the padding of the tooltip text in maps using the `MaptooltipSettings.Padding` property.
+* **TextStyle** - Change the tooltip text appearance such as `TextColor`, `FontSize`, `FontAttributes`, and `FontFamily` in maps using the `MapTooltipSettings.TextStyle` property.
 
 {% tabs %}
 
@@ -380,6 +380,11 @@ public class Model
 {% endtabs %}
 
 ![Maps tooltip settings](images/tooltip/tooltip-appearance-customization.png)
+
+N>
+* Refer to the `ShapeTooltipSettings` to customize the shape tooltip appearance.
+* Refer to the `BubbleTooltipSettings` to customize the bubble tooltip appearance.
+* Refer to the `MarkerTooltipSettings` to customize the marker tooltip appearance.
 
 ### Apply data template for tooltip
 
@@ -554,14 +559,7 @@ Data template can be used customize the tooltip view using [`ShapeTooltipTemplat
 
 ![Maps tooltip appearance customization](images/tooltip/tooltip_textStyle.png)
 
-N>
-* The `BindingContext` of the Tooltip will be the `MapTooltipInfo`, and it has the `DataItem` property. This property holds the corresponding underline object for the shape, bubble tooltip, and the corresponding `MapMarker` for the marker tooltip.
-
-N>
-* Refer to the `ShapeTooltipSettings` to customize the shape tooltip appearance.
-* Refer to the `BubbleTooltipSettings` to customize the bubble tooltip appearance.
-* Refer to the `MarkerTooltipSettings` to customize the marker tooltip appearance.
-
+N> The `BindingContext` of the Tooltip will be the `MapTooltipInfo`, and it has the `DataItem` property. This property holds the corresponding underline object for the shape, bubble tooltip, and the corresponding `MapMarker` for the marker tooltip.
 
 N>
 * Refer to the [`ShapeTooltipTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeTooltipTemplate), for customize tooltip for the shapes.
