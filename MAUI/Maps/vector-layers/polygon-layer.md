@@ -9,7 +9,7 @@ documentation: ug
 
 # Polygons in .NET MAUI Maps (SfMaps)
 
-Polygon layer is a sublayer that renders a group of `MapPolygon` on `MapShapeLayer`. This section helps to learn about how to add the polygons and customize them.
+Polygon layer is a sublayer that renders a group of `MapPolygon` on the `MapShapeLayer`. This section helps to learn about how to add the polygons and customize them.
 
 ## Adding polygons
 
