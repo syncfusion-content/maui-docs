@@ -11,7 +11,7 @@ documentation: ug
 
 The progress bar provides animation support to visualize the progress value changes in an interactive way. 
 
-The following properties are used to define the duration of animation for the specific states:
+The following properties are used to define the duration of animation for the specific states.
 
 * `AnimationDuration`: Represents animation duration of the determinate state’s progress indicator.
 * `SecondaryAnimationDuration`: Represents animation duration of the determinate state’s secondary progress indicator.
@@ -51,7 +51,7 @@ void SetProgress(double progress, double? animationDuration = null, Easing? easi
 
 {% endhighlight %}
 
-N> The animationDuration and easingEffect parameters will not affect the configuration of the `AnimationDuration`and `AnimationEasing` properties.
+N> The animation duration and easing effect parameters will not affect the configuration of the `AnimationDuration`and `AnimationEasing` properties.
 
 ## Indeterminate Easing Effects
 
@@ -78,3 +78,5 @@ this.Content = linearProgressBar;
 {% endhighlight %}
 
 {% endtabs %} 
+
+N> You can refer to our `.NET MAUI ProgressBar` feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI ProgressBar example](https://github.com/syncfusion/maui-demos/) that shows how to configure a ProgressBar in .NET MAUI.

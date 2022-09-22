@@ -47,11 +47,11 @@ this.Content = circularProgressBar;
 
 {% endtabs %} 
 
-![Segment](images/segment/segment.png)
+![.NET MAUI ProgressBar with segment](images/segment/segment.png)
 
 ## Gap customization
 
-Customize the default spacing between the segments using the GapWidth property as demonstrated in the following code sample.
+Customize the default spacing between the segments using the `GapWidth` property as demonstrated in the following code sample.
 
 {% tabs %} 
 {% highlight xaml %}
@@ -71,6 +71,7 @@ Customize the default spacing between the segments using the GapWidth property a
 {% endhighlight %}
 
 {% highlight c# %}
+
 // Using linear progress bar.
 
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
@@ -91,4 +92,6 @@ this.Content = circularProgressBar;
 
 {% endtabs %} 
 
-![Gap](images/segment/gap-width.png)
+![.NET MAUI ProgressBar with segment gap width](images/segment/gap-width.png)
+
+N> You can refer to our `.NET MAUI ProgressBar` feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI ProgressBar example](https://github.com/syncfusion/maui-demos/) that shows how to configure a ProgressBar in .NET MAUI.

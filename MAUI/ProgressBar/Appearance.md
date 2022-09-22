@@ -11,7 +11,7 @@ documentation: ug
 
 ## Angle
 
-The appearance of the circular progress bar can be customized to semi-circle, arc, and more. . The start and end angles can be customized using the `StartAngle` and `EndAngle` properties. 
+The appearance of the circular progress bar can be customized to semi-circle, arc, and more. The start and end angles can be customized using the `StartAngle` and `EndAngle` properties respectively.
 
 The following code sample demonstrates how to change the appearance of the circular progress bar to semi-circle.
 
@@ -37,7 +37,7 @@ this.Content = circularProgressBar;
 
 {% endtabs %} 
 
-![angle](images/appearance/angle.png)
+![.NET MAUI Circular Progress Bar with angle customization](images/appearance/angle.png)
 
 ## Range colors
 
@@ -122,13 +122,15 @@ this.Content = circularProgressBar;
 
 {% endtabs %} 
 
-![rangecolors](images/appearance/range-colors.png)
+![.NET MAUI ProgressBar with range colors](images/appearance/range-colors.png)
 
 The following code sample demonstrates how to apply gradient transition effect to the range colors in the progress bar.
 
 {% tabs %} 
 
 {% highlight xaml %}
+
+<!--Using the linear progress bar-->
 
 <progressBar:SfLinearProgressBar Progress="100" >
     <progressBar:SfLinearProgressBar.GradientStops>
@@ -138,6 +140,8 @@ The following code sample demonstrates how to apply gradient transition effect t
         <progressBar:ProgressGradientStop Color="#FF1C96C5" Value="75"/>
     </progressBar:SfLinearProgressBar.GradientStops>
 </progressBar:SfLinearProgressBar>
+
+<!--Using the circular progress bar-->
 
 <progressBar:SfCircularProgressBar Progress="100">
     <progressBar:SfCircularProgressBar.GradientStops>
@@ -152,6 +156,8 @@ The following code sample demonstrates how to apply gradient transition effect t
 
 {% highlight c# %}
 
+// Using the linear progress bar
+
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 linearProgressBar.Progress = 100;
 linearProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("88A0D9EF"), Value = 0 });
@@ -159,6 +165,8 @@ linearProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.Fro
 linearProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("DD20A7DB"), Value = 50 });
 linearProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("FF1C96C5"), Value = 75 });
 this.Content = linearProgressBar;
+
+// Using the circular progress bar
 
 SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 circularProgressBar.Progress = 100;
@@ -172,7 +180,7 @@ this.Content = circularProgressBar;
 
 {% endtabs %} 
 
-![gradient](images/appearance/gradient.png)
+![.NET MAUI ProgressBar with gradient range](images/appearance/gradient.png)
 
 ## Thickness
 
@@ -187,9 +195,7 @@ In the linear progress bar, the height of the track, progress, and secondary pro
 <progressBar:SfLinearProgressBar Progress="100" 
                                  TrackHeight="10" 
                                  ProgressHeight="10"
-                                 SecondaryProgressHeight="10">
-
-</progressBar:SfLinearProgressBar>
+                                 SecondaryProgressHeight="10" />
 
 {% endhighlight %}
 
@@ -206,7 +212,7 @@ this.Content = linearProgressBar;
 
 {% endtabs %} 
 
-![thickness_linear](images/appearance/thickness.png)
+![.NET MAUI Linear Progress Bar with height customization](images/appearance/thickness.png)
 
 ### Circular progress bar
 
@@ -218,7 +224,7 @@ The following properties are used to customize the appearance of the circular pr
 * `TrackThickness`: Defines the thickness of the track indicator.
 * `ThicknessUnit`: Specifies whether the `ProgressThickness` or `TrackThickness` are defined in pixel or factor.
 
-The `ProgressThickness` or `TrackThickness` of the progress bar can be specified either in pixel or factor. If the `ThicknessUnit` is specified as Pixel, the range will be rendered based on the provided pixel value. If the `ThicknessUnit` is set as factor, the provided factor value will be multiplied by the outer radius. For example, if the thickness width is set as 0.1, then 10% of outer radius is considered as thickness.
+The `ProgressThickness` or `TrackThickness` of the progress bar can be specified either in pixel or factor. If the `ThicknessUnit` is specified as `Pixel`, the range will be rendered based on the provided pixel value. If the `ThicknessUnit` is set as `Factor`, the provided factor value will be multiplied by the outer radius. For example, if the thickness width is set as 0.1, then 10% of outer radius is considered as thickness.
 
 The following code sample demonstrates how to customize the appearance of the circular progress bar.
 
@@ -233,8 +239,7 @@ The following code sample demonstrates how to customize the appearance of the ci
                                    ProgressRadiusFactor="0.75"
                                    ThicknessUnit="Factor"
                                    TrackThickness="0.05"
-                                   ProgressThickness="0.05">
-</progressBar:SfCircularProgressBar>   
+                                   ProgressThickness="0.05" />
 
 {% endhighlight %}
 
@@ -253,11 +258,11 @@ this.Content = circularProgressBar;
 
 {% endtabs %} 
 
-![appearance](images/appearance/circular-thickness.png)
+![.NET MAUI Circular Progress Bar with appearance customization](images/appearance/circular-thickness.png)
 
 ## Corner radius
 
-The `CornerRadius` property is used to customize the rounded edges in the linear progress bar as demonstrated in the following code sample.
+In the linear progress bar, the corner radius of the track, progress, and secondary progress can be customized using the `TrackCornerRadius`, `ProgressCornerRadius`, and `SecondaryCornerRadius` properties, respectively.
 
 {% tabs %} 
 
@@ -267,9 +272,7 @@ The `CornerRadius` property is used to customize the rounded edges in the linear
                                  TrackHeight="10" 
                                  TrackCornerRadius="5"
                                  ProgressHeight="10"
-                                 ProgressCornerRadius="5">
-    
-</progressBar:SfLinearProgressBar>
+                                 ProgressCornerRadius="5" />
 
 {% endhighlight %}
 
@@ -287,7 +290,7 @@ this.Content = linearProgressBar;
 
 {% endtabs %} 
 
-![cornerradius](images/appearance/corner-radius.png)
+![.NET MAUI Linear Progress Bar with corner radius customization](images/appearance/corner-radius.png)
 
 ## Corner style customization
 
@@ -303,9 +306,7 @@ The following code sample demonstrates the corner style customization in progres
                                    TrackCornerStyle="BothCurve"
                                    ProgressCornerStyle="BothCurve"
                                    StartAngle="180"
-                                   EndAngle="360">
-    
-</progressBar:SfCircularProgressBar>
+                                   EndAngle="360" />
 
 {% endhighlight %}
 
@@ -323,11 +324,11 @@ this.Content = circularProgressBar;
 
 {% endtabs %} 
 
-![cornerstyle](images/appearance/corner-style.png)
+![.NET MAUI Circular Progress Bar with corner style customization](images/appearance/corner-style.png)
 
 ## Color customization
 
-The following properties are used to customize the color in the progress bar:
+The following properties are used to customize the color in the progress bar.
 
 * `ProgressFill`: Represents the color of the progress indicator.
 * `TrackFill`: Represents the color of the track indicator.
@@ -342,9 +343,7 @@ The following code sample demonstrates the color customization in progress and t
                                  TrackFill="#3351483a" 
                                  ProgressFill="#FF51483a"
                                  SecondaryProgressFill="CornflowerBlue"
-                                 Margin="20">
-
-</progressBar:SfLinearProgressBar>
+                                 Margin="20" />
 
 {% endhighlight %}
 
@@ -361,7 +360,7 @@ this.Content = linearProgressBar;
 
 {% endtabs %} 
 
-![color1](images/appearance/color.png)
+![.NET MAUI Linear Progress Bar with color customization](images/appearance/color.png)
 
 The linear progress bar provides support to customize the color for the secondary progress bar using the `SecondaryProgressFill` property as demonstrated in the following code sample.
 
@@ -371,8 +370,7 @@ The linear progress bar provides support to customize the color for the secondar
 
 <progressBar:SfLinearProgressBar Progress="25" 
                                  SecondaryProgress="75" 
-                                 SecondaryProgressFill="CornflowerBlue">
-</progressBar:SfLinearProgressBar>
+                                 SecondaryProgressFill="CornflowerBlue" />
 
 {% endhighlight %}
 
@@ -388,5 +386,6 @@ this.Content = linearProgressBar;
 
 {% endtabs %} 
 
-![color2](images/appearance/secondary-progress.png)
+![.NET MAUI Linear Progress Bar with seconday progress color customization](images/appearance/secondary-progress.png)
 
+N> You can refer to our `.NET MAUI ProgressBar` feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI ProgressBar example](https://github.com/syncfusion/maui-demos/) that shows how to configure a ProgressBar in .NET MAUI.

@@ -74,7 +74,7 @@ using Syncfusion.Maui.ProgressBar;
 
 ## Initializing progress bar
 
-Create an instance for the progress bar control, and add it as content. The progress bar control has two variants: The SfLinearProgressBar and SfCircularProgressBar. Each renders the progress in its own shape, such as rectangle and circle, respectively. Initialize both progress bars with a progress value using the Progress property as demonstrated in the following code sample.
+Create an instance for the progress bar control, and add it as content. The progress bar control has two variants: The `SfLinearProgressBar` and `SfCircularProgressBar`. Each renders the progress in its own shape, such as rectangle and circle, respectively. Initialize both progress bars with a progress value using the Progress property as demonstrated in the following code sample.
 
 {% tabs %}
 
@@ -112,7 +112,7 @@ Run the project, and check if you get following output to make sure that the pro
 
 ## Enabling indeterminate state
 
-When the progress of a task cannot be shown determinately, you can enable the indeterminate state using the [IsIndeterminate]() property to know if any progress is happening in the background.
+When the progress of a task cannot be shown determinately, you can enable the indeterminate state using the `IsIndeterminate` property to know if any progress is happening in the background.
 
 {% tabs %} 
 
@@ -247,3 +247,7 @@ SfCircularProgressBar sfCircularProgressBar = new SfCircularProgressBar
 {% endtabs %} 
 
 ![.NET MAUI linear progress bar and circular progress bar with customized colors](images/getting-started/style.png)
+
+N> 
+* Get the complete getting started sample from `GitHub` link.
+* You can refer to our `.NET MAUI progress bar` feature tour page for its groundbreaking feature representations.

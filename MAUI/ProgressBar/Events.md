@@ -23,9 +23,7 @@ The following code sample demonstrates how to customize the color of a progress 
 
 <progressBar:SfLinearProgressBar x:Name="LinearProgressBar" 
                                  ProgressChanged="LinearProgressBar_ProgressChanged" 
-                                 Progress="100"/>
-
-</progressBar:SfLinearProgressBar>
+                                 Progress="100" />
 
 {% endhighlight %}
 
@@ -49,7 +47,7 @@ private void LinearProgressBar_ProgressChanged(object sender, ProgressValueEvent
 
 ## ProgressCompleted
 
-This event is triggered when the progress attains the [`Maximum`]() value. This event contains the following argument.
+This event is triggered when the `Progress` attains the `Maximum` value. This event contains the following argument.
 
 * `Progress`: Represents the progress value.
 
@@ -59,18 +57,17 @@ The following code sample demonstrates how to customize the progress bar when th
 
 {% highlight xaml %}
 
-<progressBar:SfCircularProgressBar x:Name="CircularProgressBar" 
-                                   Minimum="100" 
+<progressBar:SfCircularProgressBar Minimum="100" 
                                    Maximum="500" 
                                    ProgressCompleted="CircularProgressBar_ProgressCompleted" 
                                    Progress="500">
     <progressBar:SfCircularProgressBar.Content>
         <Grid WidthRequest="150">
-            <Label Text="Start" 
-                   FontSize="15" 
-                   x:Name="Label" 
+            <Label x:Name="Label" 
+                   Text="Start" 
+                   FontSize="15"
                    HorizontalTextAlignment="Center" 
-                   VerticalTextAlignment="Center"></Label>
+                   VerticalTextAlignment="Center" />
         </Grid>
     </progressBar:SfCircularProgressBar.Content>
 </progressBar:SfCircularProgressBar>
@@ -81,13 +78,11 @@ The following code sample demonstrates how to customize the progress bar when th
 
 private void CircularProgressBar_ProgressCompleted(object sender, ProgressValueEventArgs e)
 {
-    if (e.Progress.Equals(this.CircularProgressBar.Maximum))
-    {
-        // Changed the label text when progress reaches maximum value.
-        this.Label.Text = "Completed";
-    }
+    this.Label.Text = "Completed";
 }
 
 {% endhighlight %}
 
 {% endtabs %} 
+
+N> You can refer to our `.NET MAUI ProgressBar` feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI ProgressBar example](https://github.com/syncfusion/maui-demos/) that shows how to configure a ProgressBar in .NET MAUI.

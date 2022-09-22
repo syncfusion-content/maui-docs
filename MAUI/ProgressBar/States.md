@@ -1,7 +1,7 @@
 ---
 layout: post
 title: States in .NET MAUI ProgressBar control | Syncfusion
-description: Learn here all about States support in Syncfusion Xamarin ProgressBar (Progress Bar) control and more.
+description: Learn here all about States support in Syncfusion .NET MAUI ProgressBar (Progress Bar) control and more.
 platform: MAUI
 control: ProgressBar
 documentation: ug
@@ -73,4 +73,6 @@ this.Content = linearProgressBar;
 
 {% endtabs %} 
 
-![Buffer](images\states\buffer.png)
+![.NET MAUI ProgressBar with buffer](images\states\buffer.png)
+
+N> You can refer to our `.NET MAUI ProgressBar` feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI ProgressBar example](https://github.com/syncfusion/maui-demos/) that shows how to configure a ProgressBar in .NET MAUI.

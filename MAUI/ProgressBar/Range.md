@@ -7,7 +7,7 @@ control: ProgressBar
 documentation: ug
 ---
 
-# Define Range in Xamarin ProgressBar (Progress Bar)
+# Define Range in .NET MAUI ProgressBar (Progress Bar)
 
 The Range represents the entire span of the progress bar and can be defined using the `Minimum` and `Maximum` properties. The default value of the range is 0 to 100.
 
@@ -53,4 +53,6 @@ this.Content = circularProgressBar;
 
 {% endtabs %} 
 
-![range](images/define-range/range.png)
+![.NET MAUI ProgressBar with range customization](images/define-range/range.png)
+
+N> You can refer to our `.NET MAUI ProgressBar` feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI ProgressBar example](https://github.com/syncfusion/maui-demos/) that shows how to configure a ProgressBar in .NET MAUI.
