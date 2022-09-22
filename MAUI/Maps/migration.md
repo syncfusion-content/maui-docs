@@ -1094,7 +1094,7 @@ public MainPage()
       {{'[MapLegendSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.MapLegendSetting.html)'| markdownify }}
    </td>
    <td>
-      Upcoming
+      `IconSize`
    </td>
 </tr>
 <tr>
@@ -1103,7 +1103,7 @@ public MainPage()
       {{'[MapLegendSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.MapLegendSetting.html)'| markdownify }}
    </td>
    <td>
-      Upcoming
+      `IconType`
    </td>
 </tr>
 </table>
@@ -1196,7 +1196,9 @@ The following code example explains how to customize legend in the Xamarin SfMap
             </map:MapShapeLayer.ColorMappings>
             <map:MapShapeLayer.Legend>
                 <map:MapLegend SourceType="Shape"
-                               Placement="Top">
+                               Placement="Top"
+                               IconSize="20, 20"
+                               IconType="Diamond">
                     <map:MapLegend.TextStyle>
                         <map:MapLabelStyle FontSize="16"/>
                     </map:MapLegend.TextStyle>
@@ -1232,7 +1234,9 @@ public MainPage()
 
     MapLegend legendSet = new MapLegend();
     legendSet.SourceType = LegendSourceType.Shape;
-
+    legendSet.Placement = Syncfusion.Maui.Core.LegendPlacement.Top;
+    legendSet.IconSize = new Size(20, 20);
+    legendSet.IconType = Syncfusion.Maui.Core.ShapeType.Diamond;
     MapLabelStyle mapLabelStyle = new MapLabelStyle();
     mapLabelStyle.FontSize = 16;
         
@@ -1261,7 +1265,7 @@ public MainPage()
       {{'[TooltipSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.TooltipSetting.html)'| markdownify }}
    </td>
    <td>
-      Upcoming
+      `MapTooltipSettings`
    </td>
 </tr>
 </table>
@@ -1330,6 +1334,18 @@ The following code example explains how to customize tooltip in the Xamarin SfMa
                            ShapeDataField="name"
                            ShapeColorValuePath="Count"
                            ShowShapeToolTip="True">
+
+                  <map:MapShapeLayer.ShapeTooltipSettings>
+                    <map:MapTooltipSettings Background="#002080"
+                                            Padding="2">
+                        <map:MapTooltipSettings.TextStyle>
+                            <map:MapLabelStyle FontSize="14"
+                                               TextColor="White"
+                                               FontAttributes="Bold">
+                            </map:MapLabelStyle>
+                        </map:MapTooltipSettings.TextStyle>
+                    </map:MapTooltipSettings>
+                </map:MapShapeLayer.ShapeTooltipSettings>
         </map:MapShapeLayer>
     </map:SfMaps.Layer>
 </map:SfMaps>
@@ -1352,6 +1368,18 @@ The following code example explains how to customize tooltip in the Xamarin SfMa
         layer.DataSource = viewModel.Data;
         layer.ShowShapeTooltip = true;
 
+        layer.ShapeTooltipSettings = new MapTooltipSettings()
+        {
+            Background = Color.FromArgb("#002080"),
+            Padding = new Thickness(2),
+            TextStyle = new MapLabelStyle()
+            {
+                FontSize = 14,
+                TextColor = Colors.White,
+                FontAttributes = FontAttributes.Bold
+            }
+        };
+
         SfMaps maps = new SfMaps();
         maps.Layer = layer;
         this.Content = maps;
@@ -1368,8 +1396,6 @@ The following code example explains how to customize tooltip in the Xamarin SfMa
 * Support for imagery layer such as Bing Maps, OpenStreetMap, etc.
 * Zooming and panning
 * Sublayers
-* Legend interaction and customization
-* Tooltip customization
 
 ## Unsupported features from Xamarin.Forms
 
