@@ -12,7 +12,7 @@ documentation: ug
 The MAUI Scheduler notify an appointment reminders by using  the [EnableReminder] property and [ReminderAlertOpening] event. An appointment can have one or more reminders.
 
 N>
-* In .NET MAUI Framework notification implementation is in progress, So as of now added event to notify appointment reminder.[Reference](https://github.com/dotnet/maui/discussions/4216)
+* As restriction in enabling toast notification in .NET MAUI Framework, as of now added event to notify appointment reminder.[Reference](https://github.com/dotnet/maui/discussions/4216)
 
 ## Handling reminders for future appointment
 
