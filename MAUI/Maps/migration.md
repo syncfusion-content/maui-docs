@@ -1465,7 +1465,7 @@ The following code example explains how to customize tooltip in the Xamarin SfMa
 </tr>
 </table>
 
-The following code example explains how to intialize the shape sublayer and customize the layer in Xamarin SfMaps and .Net MAUI SfMaps.
+The following code example explains how to initialize the shape sublayer and it's customization in the Xamarin SfMaps and .Net MAUI SfMaps.
 
 <table>
 <tr>
@@ -1494,24 +1494,23 @@ The following code example explains how to intialize the shape sublayer and cust
     </maps:SfMaps.Layers>
 </maps:SfMaps>
 
-
 {% endhighlight %}
 
 {% highlight C# %}
 
-    SfMaps maps = new SfMaps();
-
-    ShapeFileLayer layer = new ShapeFileLayer();
-    layer.Uri = "world1.shp";    
-
-    ShapeFileLayer subShapeLayer = new ShapeFileLayer();
-    subShapeLayer.Uri = "usa_state.shp";
-    ShapeSetting shapeSetting = new ShapeSetting(); 
-    shapeSetting.ShapeFill = Color.FromRgb(181, 220, 255);
-    shapeSetting.ShapeStroke = Color.FromRgb(21, 133, 237);
-    subShapeLayer.ShapeSettings = shapeSetting;
-    layer.Sublayers.Add(subShapeLayer);
-    maps.Layers.Add(layer);
+SfMaps map = new SfMaps();
+map.BackgroundColor = Color.White;
+ShapeFileLayer layer = new ShapeFileLayer();
+layer.Uri = "world1.shp";
+ShapeFileLayer subShapeLayer = new ShapeFileLayer();
+subShapeLayer.Uri = "usa_state.shp";
+ShapeSetting shapeSetting = new ShapeSetting();
+shapeSetting.ShapeFill = Color.FromRgb(181, 220, 255);
+shapeSetting.ShapeStroke = Color.FromRgb(21, 133, 237);
+subShapeLayer.ShapeSettings = shapeSetting;
+layer.Sublayers.Add(subShapeLayer);
+map.Layers.Add(layer);
+this.Content = map;
 
 {% endhighlight %}
 
@@ -1671,28 +1670,29 @@ The following code example explains how to customize the bubble in the Xamarin S
 
 {% highlight C# %}
 
-    ViewModel viewModel = new ViewModel();
-    this.BindingContext = viewModel;
-    SfMaps maps = new SfMaps();
+ ViewModel viewModel = new ViewModel();
+this.BindingContext = viewModel;
+SfMaps maps = new SfMaps();
+ShapeFileLayer layer = new ShapeFileLayer();
+layer.Uri = "world1.shp";
+ShapeFileLayer subShapeLayer = new ShapeFileLayer();
+subShapeLayer.Uri = "usa_state.shp";
+subShapeLayer.ShapeIDTableField = "STATE_NAME";
+subShapeLayer.ShapeIDPath = "Name";
+subShapeLayer.ItemsSource = viewModel.DataSource;
 
-    ShapeFileLayer layer = new ShapeFileLayer();
-    layer.Uri = "world1.shp"; 
+BubbleMarkerSetting bubbleSetting = new BubbleMarkerSetting()
+{
+    ShowBubbles = true,
+    ValuePath = "index",
+    Fill = Color.Orange,
+    Opacity = 0.8
+};
 
-    ShapeFileLayer subShapeLayer = new ShapeFileLayer();
-    subShapeLayer.Uri = "usa_state.shp";          
-    subShapeLayer.ShapeIDTableField = "STATE_NAME",
-    subShapeLayer.ShapeIDPath = "Name"
-    subShapeLayer.DataSource = viewModel.DataSource;
-
-    BubbleMarkerSetting bubbleSetting = new BubbleMarkerSetting()
-    {
-        ShowBubbles = true,
-        ValuePath = "index",
-    };
-
-    subShapeLayer.BubbleMarkerSettings = bubbleSetting;
-    layer.Sublayers.Add(subShapeLayer);
-    maps.Layers.Add(layer);
+subShapeLayer.BubbleMarkerSettings = bubbleSetting;
+layer.Sublayers.Add(subShapeLayer);
+maps.Layers.Add(layer);
+this.Content = maps;
 
 {% endhighlight %}
 
@@ -1744,7 +1744,7 @@ public MainPage()
 
     MapBubbleSettings bubbleSetting = new MapBubbleSettings()
     {
-        ColorValuePath = "Color",
+        ColorValuePath = "Size",
         SizeValuePath = "Size",
     };
 
@@ -1809,8 +1809,12 @@ The following code example explains how to customize the data label in the Xamar
                                      ShapeIDPath="Name"
                                      ShapeIDTableField="STATE_NAME"
                                      ShowMapItems="True">
+                    <maps:ShapeFileLayer.ShapeSettings>
+                        <maps:ShapeSetting ShapeValuePath="Name" />
+                    </maps:ShapeFileLayer.ShapeSettings>
                     <maps:ShapeFileLayer.DataLabelSettings>
-                        <maps:DataLabelSetting  SmartLabelMode="Trim" />
+                        <maps:DataLabelSetting  TextColor="Blue"
+                                                SmartLabelMode="None" />
                     </maps:ShapeFileLayer.DataLabelSettings>
                 </maps:ShapeFileLayer>
             </maps:ShapeFileLayer.Sublayers>
@@ -1822,26 +1826,28 @@ The following code example explains how to customize the data label in the Xamar
 
 {% highlight C# %}
 
-    ViewModel viewModel = new ViewModel();
-    this.BindingContext = viewModel;
-    SfMaps maps = new SfMaps();
+ViewModel viewModel = new ViewModel();
+this.BindingContext = viewModel;
+SfMaps maps = new SfMaps();
 
-    ShapeFileLayer layer = new ShapeFileLayer();
-    layer.Uri = "world1.shp";           
-    
-    ShapeFileLayer subShapeLayer = new ShapeFileLayer();
-    subShapeLayer.Uri = "usa_state.shp";          
-    subShapeLayer.ShapeIDTableField = "STATE_NAME",
-    subShapeLayer.ShapeIDPath = "Name"
-    subShapeLayer.DataSource = viewModel.DataSource;
+ShapeFileLayer layer = new ShapeFileLayer();
+layer.Uri = "world1.shp";
 
-    DataLabelSetting dataLabelSetting = new DataLabelSetting();
-    dataLabelSetting.SmartLabelMode = IntersectAction.Trim;
-    subShapeLayer.DataLabelSettings = dataLabelSetting;
+ShapeFileLayer subShapeLayer = new ShapeFileLayer();
+subShapeLayer.Uri = "usa_state.shp";
+subShapeLayer.ShapeIDTableField = "STATE_NAME";
+subShapeLayer.ShapeIDPath = "Name";
+subShapeLayer.ItemsSource = viewModel.DataSource;
+subShapeLayer.ShapeSettings.ShapeValuePath = "Name";
 
-    layer.Sublayers.Add(subShapeLayer);
-    maps.Layers.Add(layer);
-    maps.Layers.Add(layer);
+DataLabelSetting dataLabelSetting = new DataLabelSetting();
+dataLabelSetting.SmartLabelMode = IntersectAction.None;
+ dataLabelSetting.TextColor = Color.Blue;
+subShapeLayer.DataLabelSettings = dataLabelSetting;
+
+layer.Sublayers.Add(subShapeLayer);
+maps.Layers.Add(layer);
+this.Content = maps;
 
 {% endhighlight %}
 
@@ -1858,6 +1864,7 @@ The following code example explains how to customize the data label in the Xamar
             <map:MapShapeLayer.Sublayers>
                 <map:MapShapeSublayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/africa.json"
                                       ShapeDataField="name"
+                                      DataSource="{Binding Data}"
                                       PrimaryValuePath="State"
                                       ShowDataLabels="True">
                     <map:MapShapeSublayer.DataLabelSettings>
@@ -1929,14 +1936,6 @@ public MainPage()
 </tr>
 <tr>
    <td>
-      {{'[LegendLabel](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ColorMapping.html#Syncfusion_SfMaps_XForms_ColorMapping_LegendLabel)'| markdownify }}
-   </td>
-   <td>
-      {{'[Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.ColorMapping.html#Syncfusion_Maui_Maps_ColorMapping_Text)'| markdownify }}
-   </td>
-</tr>
-<tr>
-   <td>
       {{'[EqualColorMapping](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.EqualColorMapping.html)'| markdownify }}
    </td>
    <td>
@@ -1953,7 +1952,7 @@ public MainPage()
 </tr>
 </table>
 
-### Equal color mapping
+<b>Equal color mapping</b>
 
 <table>
 <tr>
@@ -1970,7 +1969,7 @@ public MainPage()
 </tr>
 </table>
 
-### Range color mapping
+<b>Range color mapping</b>
 
 <table>
 <tr>
@@ -2073,6 +2072,7 @@ The following code example explains how to customize the shape color in the Xama
     subShapeLayer.ShapeSettings = shapeSetting;
     layer.Sublayers.Add(subShapeLayer);
     maps.Layers.Add(layer);
+    this.Content = maps;
 
 {% endhighlight %}
 
@@ -2206,7 +2206,7 @@ public MainPage()
 </tr>
 </table>
 
-The following code example explains how to intialize the layer and customize the layer in Xamarin SfMaps and .Net MAUI SfMaps.
+The following code example explains how to intialize the polygon layer and it's customization in Xamarin SfMaps and .Net MAUI SfMaps.
 
 <table>
 <tr>
@@ -2281,8 +2281,7 @@ The following code example explains how to intialize the layer and customize the
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
-                           ShapeStroke="DarkGray">
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json">
             <map:MapShapeLayer.Sublayers>
                 <map:MapPolygonLayer>
                     <map:MapPolygonLayer.Polygons>
@@ -2362,15 +2361,6 @@ public MainPage()
 </tr>
 <tr>
    <td>
-      {{'[ShapeFill](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html#Syncfusion_SfMaps_XForms_ShapeSetting_ShapeFill)'| markdownify }} in
-       {{'[ShapeSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html)'| markdownify }} class
-   </td>
-   <td>
-      {{'[-](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeFill)'| markdownify }}
-   </td>
-</tr>
-<tr>
-   <td>
       {{'[ShapeStroke](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html#Syncfusion_SfMaps_XForms_ShapeSetting_ShapeStroke)'| markdownify }} in
        {{'[ShapeSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html)'| markdownify }} class
    </td>
@@ -2397,7 +2387,7 @@ public MainPage()
 </tr>
 </table>
 
-The following code example explains how to intialize the layer and customize the layer in Xamarin SfMaps and .Net MAUI SfMaps.
+The following code example explains how to intialize the polyline layer and it's customization in Xamarin SfMaps and .Net MAUI SfMaps.
 
 <table>
 <tr>
@@ -2591,7 +2581,7 @@ The following code example explains how to intialize the layer and customize the
 </tr>
 </table>
 
-The following code example explains how to intialize the layer and customize the layer in Xamarin SfMaps and .Net MAUI SfMaps.
+The following code example explains how to intialize the line layer and it's customization in Xamarin SfMaps and .Net MAUI SfMaps.
 
 <table>
 <tr>
@@ -2599,17 +2589,7 @@ The following code example explains how to intialize the layer and customize the
 <th>.NET MAUI SfMaps</th></tr>
 <tr>
 <td>
-{% tabs %}
-
-{% highlight xaml %}
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-{% endhighlight %}
-
-{% endtabs %}
+{{'-'| markdownify }}
 </td>
 <td>
 {% tabs %}
@@ -2742,7 +2722,7 @@ The following code example explains how to intialize the layer and customize the
 </tr>
 </table>
 
-The following code example explains how to intialize the layer and customize the layer in Xamarin SfMaps and .Net MAUI SfMaps.
+The following code example explains how to intialize the arc layer and it's customization in Xamarin SfMaps and .Net MAUI SfMaps.
 
 <table>
 <tr>
@@ -2750,17 +2730,7 @@ The following code example explains how to intialize the layer and customize the
 <th>.NET MAUI SfMaps</th></tr>
 <tr>
 <td>
-{% tabs %}
-
-{% highlight xaml %}
-
-{% endhighlight %}
-
-{% highlight C# %}
-    
-{% endhighlight %}
-
-{% endtabs %}
+{{'-'| markdownify }}
 </td>
 <td>
 {% tabs %}
@@ -2880,7 +2850,7 @@ The following code example explains how to intialize the layer and customize the
 </tr>
 </table>
 
-The following code example explains how to intialize the layer and customize the layer in Xamarin SfMaps and .Net MAUI SfMaps.
+The following code example explains how to intialize the circle layer and it's customization in Xamarin SfMaps and .Net MAUI SfMaps.
 
 <table>
 <tr>
@@ -2888,17 +2858,7 @@ The following code example explains how to intialize the layer and customize the
 <th>.NET MAUI SfMaps</th></tr>
 <tr>
 <td>
-{% tabs %}
-
-{% highlight xaml %}
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-{% endhighlight %}
-
-{% endtabs %}
+{{'-'| markdownify }}
 </td>
 <td>
 {% tabs %}
