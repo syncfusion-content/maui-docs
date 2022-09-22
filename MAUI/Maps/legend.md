@@ -660,9 +660,10 @@ public class Model
 
 ![Legend position](images/legend/legend-position.png)
 
-## Legend icon customization
+## Appearance customization
 
-You can customize the legend icon using the `IconType` and `IconSize` properties. The default value of `IconType` is [`ShapeType.Rectangle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ShapeType.html#Syncfusion_Maui_Core_ShapeType_Rectangle) and 12 is the default value of `IconSize`.
+* **IconType** - Used to change the icon shape. The default value of the iconType argument in the constructor is [`ShapeType.Rectangle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ShapeType.html#Syncfusion_Maui_Core_ShapeType_Rectangle). The possible values are circle, rectangle, triangle, and diamond.
+* **IconSize** - Used to change the size of the icon. The default value of iconSize argument in the constructor is Size(12.0, 12.0).
 
 {% tabs %}
 

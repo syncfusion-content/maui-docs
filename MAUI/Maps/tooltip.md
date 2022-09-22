@@ -273,9 +273,9 @@ The [`ShowMarkerTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Ma
 
 You can customize the below appearances of the tooltip.
 
-* **Background** - Change the background color of the tooltip in the maps using the MapTooltipSettings.Background property.
-* **Padding** - Change the padding of tooltip text in the maps using the MaptooltipSettings.Padding property.
-* **TextStyle** - Change the tooltip text appearance in the maps using the MapTooltipSettings.TextStyle property
+* **Background** - Change the background color of the tooltip in the maps using the `MapTooltipSettings.Background` property.
+* **Padding** - Change the padding of tooltip text in the maps using the `MaptooltipSettings.Padding` property.
+* **TextStyle** - Change the tooltip text appearance such as `TextColor`, `FontSize`, `FontAttributes` and `FontFamily` in the maps using `MapTooltipSettings.TextStyle` property.
 
 {% tabs %}
 
@@ -487,7 +487,7 @@ Data template can be used customize the tooltip view using [`ShapeTooltipTemplat
             };
             Binding binding = new Binding();
             binding.Source = grid.BindingContext;
-            binding.Path = nameof(DataItem.Continent);
+            binding.Path = nameof(MapTooltipInfo.DataItem) + "." + nameof(Model1.Continent);
             label.SetBinding(Label.TextProperty, binding);
             grid.SetRow(label, 0); grid.SetColumn(label, 1);
             var areaLabel = new Label
@@ -499,7 +499,7 @@ Data template can be used customize the tooltip view using [`ShapeTooltipTemplat
             grid.SetColumnSpan(areaLabel, 2);
             Binding binding1 = new Binding();
             binding1.Source = grid.BindingContext;
-            binding1.Path = nameof(DataItem.Area);
+            binding.Path = nameof(MapTooltipInfo.DataItem) + "." + nameof(Model1.Area);
             areaLabel.SetBinding(Label.TextProperty, binding1);
 
             grid.Children.Add(image);
@@ -549,12 +549,12 @@ Data template can be used customize the tooltip view using [`ShapeTooltipTemplat
 ![Maps tooltip appearance customization](images/tooltip/tooltip_textStyle.png)
 
 N>
-* The BindingContext of the Tooltip will be the `TooltipInfo`, it holds the `DataItem` property. This property has corresponding underline object for shape, bubble and marker.
+* The `BindingContext` of the Tooltip will be the `MapTooltipInfo`, and it has the `DataItem` property. This property holds the corresponding underline object for shape, bubble tooltip and holds the corresponding `MapMarker` for the marker tooltip.
 
 N>
-* Refer to the `ShapeTooltipSettings` for customize the shape tooltip appearance.
-* Refer to the `BubbleTooltipSettings` for customize the bubble tooltip appearance.
-* Refer to the `MarkerTooltipSettings` for customize the marker tooltip appearance.
+* Refer to the `ShapeTooltipSettings` to customize the shape tooltip appearance.
+* Refer to the `BubbleTooltipSettings` to customize the bubble tooltip appearance.
+* Refer to the `MarkerTooltipSettings` to customize the marker tooltip appearance.
 
 
 N>
