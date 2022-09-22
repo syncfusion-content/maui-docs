@@ -166,7 +166,7 @@ Create a business object class `Event` with mandatory fields `From,` `To,` and `
 
 The [ReminderMapping] provides the mapping information about the [SchedulerReminder] properties to the [DataItem] object. `ReminderMapping` has the following properties.
 
-* [TimeBeforeStart]: Maps the property name of a custom class, which is equivalent for the [SchedulerReminder.ReminderTimeInterval.]
+* [TimeBeforeStart]: Maps the property name of a custom class, which is equivalent for the [SchedulerReminder.TimeBeforeStart.]
 
 * [IsDismissed]: Maps the property name of a custom class, which is equivalent for the [SchedulerReminder.IsDismissed.]
 
@@ -185,7 +185,7 @@ public class Reminder
     /// <summary>
     /// Gets or sets the value indicating whether the reminder is dismissed or not. 
     /// </summary>
-    public bool Dismissed { get; set; }
+    public bool IsDismissed { get; set; }
 
 }
 
@@ -281,7 +281,7 @@ public class ReminderViewModel
 {% endtabs %}
 
 ## ReminderAlertOpening event
-Scheduler notify the appointment's reminder by [ReminderAlertOpening] event before the appointment's start time. The [ReminderAlertOpeningEventArgs] has the following property,
+Scheduler notify the appointment's reminders by [ReminderAlertOpening] event before the appointment's start time. The [ReminderAlertOpeningEventArgs] has the following property,
 * [Reminders]: Gets a list of reminders that are used to notify the appointment reminders.
 
 {% tabs %}
