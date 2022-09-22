@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Appointment Reminders in .NET MAUI Scheduler control | Syncfusion
+title: Appointments Reminders in .NET MAUI Scheduler control | Syncfusion
 description: Learn here all about the Reminder support in Syncfusion .NET MAUI Scheduler (SfScheduler) appointments.
 platform: maui
 control: SfScheduler
 documentation: ug
 ---
 
-# Appointment reminder in .NET MAUI Scheduler (SfScheduler)
+# Appointments reminders in .NET MAUI Scheduler (SfScheduler)
 
-The MAUI Scheduler notify an appointment reminder by using  the [EnableReminder] property and [ReminderAlertOpening] event. An appointment can have one or more reminders.
+The MAUI Scheduler notify an appointment reminders by using  the [EnableReminder] property and [ReminderAlertOpening] event. An appointment can have one or more reminders.
 
 N>
 * In .NET MAUI Framework notification implementation is in progress, So as of now added event to notify appointment reminder.[Reference](https://github.com/dotnet/maui/discussions/4216)
@@ -32,7 +32,7 @@ N>
 
 *  If the last occurrence in recurrence is series is get dismissed, then the pattern recurring appointment dismissed.
 
-## Handling reminder for Changed occurrence appointment
+## Handling reminders for Changed occurrence appointment
 
 * Once the changed occurrence is moved to the future, its reminder is re-created from the pattern.
 
@@ -40,9 +40,9 @@ N>
 
 * Past Changed occurrence reminders will be dismissed.
 
-## Enable reminder
+## Enable reminders
 
-Reminder can be enabled by setting the [EnableReminder] property to `true` which will trigger the `ReminderAlertOpening` event to notify appointment reminder. The reminder can be set by using the [Reminders] property of [SchedulerAppointment.]
+Reminders can be enabled by setting the [EnableReminder] property to `true` which will trigger the `ReminderAlertOpening` event to notify appointment reminders. The reminders can be set by using the [Reminders] property of [SchedulerAppointment.]
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
@@ -138,7 +138,7 @@ Configure the appointment reminders with [SchedulerReminder.] The `SchedulerRemi
 {% endhighlight %}
 {% endtabs %}
 
-## Creating business object for reminder
+## Creating business object for reminders
 
 Create a business object class `Event` with mandatory fields `From,` `To,` and `EventName.` and also business object class `Reminder` with mandatory fields `TimeBeforeStart` and `IsDismissed`.
 
@@ -297,7 +297,7 @@ private void Scheduler_ReminderAlertOpening(object sender, ReminderAlertOpeningE
 }
 {% endhighlight %}
 {% endtabs %}
-## Handle Dismissed for reminder
+## Handle Dismissed for reminders
 
 * Normal appointment directly dismissed using [IsDismissed] property
 
@@ -311,14 +311,14 @@ scheduler.ReminderAlertOpening += Scheduler_ReminderAlertOpening;
 
 private void Scheduler_ReminderAlertOpening(object sender, ReminderAlertOpeningEventArgs e)
 {
-    var reminders = e.Reminders;
     bool snooze = await DisplayAlert("Reminder", Reminders[0].Appointment.Subject + " - " + Reminders[0].Appointment.StartTime.ToString(" dddd, MMMM dd, yyyy, hh:mm tt"), "Snooze", "Dismiss");
     if (Dismiss)
     {
         // For Recurrence appointment, if current occurrence need to dismiss then need to add changed occurrence for reminder occurrence dismissed
         if (!string.IsNullOrEmpty(e.Reminders[0].Appointment.RecurrenceRule))
         {
-            SchedulerAppointment patternAppointment = (scheduler.AppointmentsSource as ObservableCollection<SchedulerAppointment>).FirstOrDefault(x => x.Id == e.Reminders[0].Appointment.Id);
+            ObservableCollection<SchedulerAppointment> appointments = scheduler.AppointmentsSource as ObservableCollection<SchedulerAppointment>;
+            SchedulerAppointment patternAppointment = appointments.FirstOrDefault(x => x.Id == e.Reminders[0].Appointment.Id);
             DateTime changedExceptionDate = e.Reminders[0].Appointment.StartTime;
             DateTime endDate = e.Reminders[0].Appointment.EndTime;
             patternAppointment.RecurrenceExceptionDates = new ObservableCollection<DateTime>()
@@ -336,10 +336,11 @@ private void Scheduler_ReminderAlertOpening(object sender, ReminderAlertOpeningE
                 RecurrenceId = 1,
                 Reminders = patternAppointment.Reminders,
             };
-            if (!(scheduler.AppointmentsSource as ObservableCollection<SchedulerAppointment>).Contains(exceptionAppointment))
+            if (!appointments.Contains(exceptionAppointment))
             {
-                (scheduler.AppointmentsSource as ObservableCollection<SchedulerAppointment>).Add(exceptionAppointment);
                 exceptionAppointment.Reminders[0].IsDismissed = true;
+                appointments.Add(exceptionAppointment);
+
             }
         }
         // To dismiss normal reminder
@@ -356,7 +357,7 @@ private void Scheduler_ReminderAlertOpening(object sender, ReminderAlertOpeningE
 {% endhighlight %}
 {% endtabs %}
 
-## Handle Snooze for reminder
+## Handle Snooze for reminders
 If Snooze time is set to 5 minutes than the value of reminder [TimeBeforeStart] property is calculated by 
 
 * For Future appointments, TimeBeforeStart = Appointment.StartTime - AlertTime - snoozeTime
@@ -371,7 +372,6 @@ scheduler.ReminderAlertOpening += Scheduler_ReminderAlertOpening;
 
 private void Scheduler_ReminderAlertOpening(object sender, ReminderAlertOpeningEventArgs e)
 {
-    var reminders = e.Reminders;
     bool snooze = await DisplayAlert("Reminder", Reminders[0].Appointment.Subject + " - " + Reminders[0].Appointment.StartTime.ToString(" dddd, MMMM dd, yyyy, hh:mm tt"), "Snooze", "Dismiss");
 
     if (snooze)
@@ -392,12 +392,11 @@ private void Scheduler_ReminderAlertOpening(object sender, ReminderAlertOpeningE
             {
                 e.Reminders[0].TimeBeforeStart = e.Reminders[0].Appointment.StartTime.AddSeconds(DateTime.Now.Second) - DateTime.Now - snoozeTime;
             }
-
-            DateTime changedExceptionDate = e.Reminders[0].Appointment.StartTime;
-            DateTime endDate = e.Reminders[0].Appointment.EndTime;
+           
             if (!string.IsNullOrEmpty(e.Reminders[0].Appointment.RecurrenceRule))
             {
-                SchedulerAppointment patternAppointment = (scheduler.AppointmentsSource as ObservableCollection<SchedulerAppointment>).FirstOrDefault(x => x.Id == e.Reminders[0].Appointment.Id);
+                ObservableCollection<SchedulerAppointment> appointments = scheduler.AppointmentsSource as ObservableCollection<SchedulerAppointment>;
+                SchedulerAppointment patternAppointment = appointments.FirstOrDefault(x => x.Id == e.Reminders[0].Appointment.Id);
                 DateTime changedExceptionDate = e.Reminders[0].Appointment.StartTime;
                 DateTime endDate = e.Reminders[0].Appointment.EndTime;
                 patternAppointment.RecurrenceExceptionDates = new ObservableCollection<DateTime>()
@@ -413,13 +412,13 @@ private void Scheduler_ReminderAlertOpening(object sender, ReminderAlertOpeningE
                     EndTime = new DateTime(endDate.Year, endDate.Month, endDate.Day, endDate.Hour, 0, 0),
                     Background = patternAppointment.Background,
                     RecurrenceId = 1,
-                    Reminders = patternAppointment.Reminders,
+                    Reminders = new ObservableCollection<SchedulerReminder> { new SchedulerReminder { TimeBeforeStart = e.Reminders[0].TimeBeforeStart } },
                 };
-                if (!(scheduler.AppointmentsSource as ObservableCollection<SchedulerAppointment>).Contains(exceptionAppointment))
+                if (!appointments.Contains(exceptionAppointment))
                 {
-                    (scheduler.AppointmentsSource as ObservableCollection<SchedulerAppointment>).Add(exceptionAppointment);
+                    appointments.Add(exceptionAppointment);
                 }
-            }            
+            }          
         }
 }
 {% endhighlight %}
