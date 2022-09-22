@@ -167,7 +167,7 @@ this.Content = maps;
 
 ![Polygon fill color](images/polygon-layer/polygon-fill-color.png)
 
-## Stroke thickness and color
+## Stroke and stroke thickness
 
 You can apply stroke thickness to each `MapPolygon` in the `Polygons` collection using the individual `MapPolygon.StrokeThickness` property. The default value of the `MapPolygonLayer.StrokeThickness` property is `2`.
 

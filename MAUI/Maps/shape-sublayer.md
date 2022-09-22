@@ -25,8 +25,7 @@ The `ShapeDataField` property of the `ShapesSource` is used to refer the unique 
      <map:SfMaps.Layer>
          <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json">
              <map:MapShapeLayer.Sublayers>
-                 <map:MapShapeSublayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/africa.json">
-                 </map:MapShapeSublayer>
+                 <map:MapShapeSublayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/africa.json" />
              </map:MapShapeLayer.Sublayers>
          </map:MapShapeLayer>
      </map:SfMaps.Layer>
@@ -53,12 +52,11 @@ this.Content = maps;
 
 ![Shape sublayer support](images/shape-sublayer/shape-sublayer.png)
 
-N>
-* Refer the `MapShapeLayer`, for adding shape layer in `SfMaps`.
+N> Refer the `MapShapeLayer`, for adding shape layer in `SfMaps`.
 
 ## Color and stroke color
 
-You can change the color, strokeColor and strokeWidth of the shape sublayer using the `ShapeFill`, `ShapeStroke` and `ShapeStrokeThickness` properties.
+You can change the color, stroke color and stroke thickness of the shape sublayer using the `ShapeFill`, `ShapeStroke` and `ShapeStrokeThickness` properties.
 
 {% tabs %}
 
@@ -70,8 +68,7 @@ You can change the color, strokeColor and strokeWidth of the shape sublayer usin
             <map:MapShapeLayer.Sublayers>
                 <map:MapShapeSublayer ShapeStroke="#226ac1"
                                       ShapeFill="#bbdefa"
-                                      ShapesSource="https://cdn.syncfusion.com/maps/map-data/africa.json">
-                </map:MapShapeSublayer>
+                                      ShapesSource="https://cdn.syncfusion.com/maps/map-data/africa.json" />
             </map:MapShapeLayer.Sublayers>
         </map:MapShapeLayer>
     </map:SfMaps.Layer>
@@ -134,7 +131,7 @@ You can apply color to the sublayer shape by comparing a value from the `ColorMa
 
 public MainPage()
 {
-	  InitializeComponent();
+	InitializeComponent();
     ViewModel viewModel = new ViewModel();
     this.BindingContext = viewModel;
     SfMaps maps = new SfMaps();
@@ -206,7 +203,7 @@ You can apply color to the sublayer shapes based on whether the value from `Colo
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer  ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json">
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json">
             <map:MapShapeLayer.Sublayers>
                 <map:MapShapeSublayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/africa.json"
                                       ShapeStroke="DarkGrey"
@@ -232,7 +229,7 @@ You can apply color to the sublayer shapes based on whether the value from `Colo
 
 public MainPage()
 {
-	  InitializeComponent();
+	InitializeComponent();
     ViewModel viewModel = new ViewModel();
     this.BindingContext = viewModel;
     SfMaps maps = new SfMaps();
@@ -365,6 +362,7 @@ public SublayerDataLabels()
     maps.Layer = layer;
     this.Content = maps;
 }
+
 public class ViewModel
 {
     public ObservableCollection<Model> Data { get; set; }
@@ -471,6 +469,7 @@ public BubblesSubUG()
     maps.Layer = layer;
     this.Content = maps;
 }
+
 public class ViewModel
 {
     public ObservableCollection<Model> Data { get; set; }
@@ -512,4 +511,4 @@ public class Model
 
 ![Shape sublayer bubbles](images/shape-sublayer/sublayer-bubbles.png)
 
-N> You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our `.NET MAUI Maps Sublayer example` that shows how to configure a Maps in .NET MAUI.
+N> You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Maps Sublayer example](https://github.com/syncfusion/maui-demos/) that shows how to configure a Maps in .NET MAUI.

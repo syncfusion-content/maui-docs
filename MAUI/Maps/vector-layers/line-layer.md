@@ -112,9 +112,9 @@ The `Lines` is a collection of `MapLine`. Every single `MapLine` connects two lo
 
 ![Default line shape](images/line-layer/default_line_shape.png)
 
-## Color
+## Stroke
 
-You can apply colors to each `MapLine` in the `Lines` collection using the individual `MapLine.Color` property.
+You can apply stroke colors to each `MapLine` in the `Lines` collection using the individual `MapLine.Stroke` property.
 
 {% tabs %}
 
@@ -211,17 +211,15 @@ layer.Sublayers.Add(mapLineLayer);
 maps.Layer = layer;
 this.Content = maps;
 
-
-
 {% endhighlight %}
 
 {% endtabs %}
 
 ![Line shape color](images/line-layer/line_shape_color.png)
 
-## Width
+## Thickness
 
-You can apply width to each `MapLine` in the `Lines` collection using the individual `MapLine.StrokeThickness` property. The default value of the `MapLine.StrokeThickness` property is `2`.
+You can apply thickness to each `MapLine` in the `Lines` collection using the individual `MapLine.StrokeThickness` property. The default value of the `MapLine.StrokeThickness` property is `2`.
 
 {% tabs %}
 
@@ -326,11 +324,11 @@ this.Content = maps;
 
 {% endtabs %}
 
-![Line shape width](images/line-layer/line_shape_width.png)
+![Line shape thickness](images/line-layer/line_shape_width.png)
 
 ## Stroke cap
 
-You can apply stroke cap to each `MapLine` in the `Lines` collection using the individual `MapLine.StrokeLineCap` property. The default value of the `MapLineLayer.StrokeLineCap` property is `StrokeLineCap.butt`. The available values are `butt`, `round`, and `square`.
+You can apply stroke cap to each `MapLine` in the `Lines` collection using the individual `MapLine.StrokeLineCap` property. The default value of the `MapLineLayer.StrokeLineCap` property is `StrokeLineCap.Butt`. The available values are `Butt`, `Round`, and `Square`.
 
 {% tabs %}
 
@@ -442,6 +440,7 @@ this.Content = maps;
 {% endhighlight %}
 
 {% endtabs %}
+
 ![Line stroke cap](images/line-layer/line_stroke_cap.png)
 
 ## Dash array

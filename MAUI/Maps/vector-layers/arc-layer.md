@@ -116,7 +116,6 @@ layer.Sublayers.Add(arcLayer);
 maps.Layer = layer;
 this.Content = maps;
 
-
 {% endhighlight %}
 
 {% endtabs %}
@@ -316,7 +315,6 @@ By default, the arc will bend at the center between the `MapArc.From` and `MapAr
     </map:SfMaps.Layer>
 </map:SfMaps>
 
-
 {% endhighlight %}
 
 {% highlight c# %}
@@ -471,7 +469,6 @@ layer.Sublayers.Add(arcLayer);
 maps.Layer = layer;
 this.Content = maps;
 
-
 {% endhighlight %}
 
 {% endtabs %}
@@ -550,7 +547,6 @@ You can apply stroke thickness to each `MapArc` in the `Arcs` collection using t
     </map:SfMaps.Layer>
 </map:SfMaps>
 
-
 {% endhighlight %}
 
 {% highlight c# %}
@@ -589,12 +585,11 @@ layer.Sublayers.Add(arcLayer);
 maps.Layer = layer;
 this.Content = maps;
 
-
 {% endhighlight %}
 
 {% endtabs %}
 
-![Arc width](images/arc-layer/arc_width.png)
+![Arc stroke thickness](images/arc-layer/arc_width.png)
 
 ## Dash array
 
@@ -752,7 +747,6 @@ arcLayer.Arcs.Add(arc5);
 layer.Sublayers.Add(arcLayer);
 maps.Layer = layer;
 this.Content = maps;
-
 
 {% endhighlight %}
 

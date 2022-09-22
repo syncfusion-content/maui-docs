@@ -29,43 +29,43 @@ The `Circles` is a collection of `MapCircle`. Every single `MapCircle` renders a
                         <map:MapCircle>
                             <map:MapCircle.Center>
                                 <map:MapLatLng Latitude="74.1240"
-                                               Longitude="15.2993"></map:MapLatLng>
+                                               Longitude="15.2993" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                         <map:MapCircle>
                             <map:MapCircle.Center>
                                 <map:MapLatLng Latitude="80.0499"
-                                               Longitude="15.5057"></map:MapLatLng>
+                                               Longitude="15.5057" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                         <map:MapCircle>
                             <map:MapCircle.Center>
                                 <map:MapLatLng Latitude="75.7139"
-                                               Longitude="19.7515"></map:MapLatLng>
+                                               Longitude="19.7515" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                         <map:MapCircle>
                             <map:MapCircle.Center>
                                 <map:MapLatLng Latitude="72.5714"
-                                               Longitude="23.0225"></map:MapLatLng>
+                                               Longitude="23.0225" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                         <map:MapCircle>
                             <map:MapCircle.Center>
                                 <map:MapLatLng Latitude="74.2179"
-                                               Longitude="27.0238"></map:MapLatLng>
+                                               Longitude="27.0238" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                         <map:MapCircle>
                             <map:MapCircle.Center>
                                 <map:MapLatLng Latitude="80.9462"
-                                               Longitude="26.8467"></map:MapLatLng>
+                                               Longitude="26.8467" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                         <map:MapCircle>
                             <map:MapCircle.Center>
                                 <map:MapLatLng Latitude="85.2799"
-                                               Longitude="21.2787"></map:MapLatLng>
+                                               Longitude="21.2787" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                     </map:MapCircleLayer.Circles>
@@ -113,7 +113,7 @@ this.Content = maps;
 
 {% endtabs %}
 
-![Default circle shape](images\circle-layer/default-circle-shape.png)
+![Default circle shape](images/circle-layer/default-circle-shape.png)
 
 ## Radius
 
@@ -133,43 +133,43 @@ You can change the size of the circles using the `MapCircle.Radius` property. Th
                         <map:MapCircle Radius="10">
                             <map:MapCircle.Center>
                                 <map:MapLatLng Latitude="74.1240"
-                                               Longitude="15.2993"></map:MapLatLng>
+                                               Longitude="15.2993" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                         <map:MapCircle Radius="10">
                             <map:MapCircle.Center>
                                 <map:MapLatLng Latitude="80.0499"
-                                               Longitude="15.5057"></map:MapLatLng>
+                                               Longitude="15.5057" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                         <map:MapCircle Radius="10">
                             <map:MapCircle.Center>
                                 <map:MapLatLng Latitude="75.7139"
-                                               Longitude="19.7515"></map:MapLatLng>
+                                               Longitude="19.7515" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                         <map:MapCircle Radius="10">
                             <map:MapCircle.Center>
                                 <map:MapLatLng Latitude="72.5714"
-                                               Longitude="23.0225"></map:MapLatLng>
+                                               Longitude="23.0225" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                         <map:MapCircle Radius="10">
                             <map:MapCircle.Center>
                                 <map:MapLatLng Latitude="74.2179"
-                                               Longitude="27.0238"></map:MapLatLng>
+                                               Longitude="27.0238" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                         <map:MapCircle Radius="10">
                             <map:MapCircle.Center>
                                 <map:MapLatLng Latitude="80.9462"
-                                               Longitude="26.8467"></map:MapLatLng>
+                                               Longitude="26.8467" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                         <map:MapCircle Radius="10">
                             <map:MapCircle.Center>
                                 <map:MapLatLng Latitude="85.2799"
-                                               Longitude="21.2787"></map:MapLatLng>
+                                               Longitude="21.2787" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                     </map:MapCircleLayer.Circles>
@@ -245,49 +245,49 @@ You can apply colors to each `MapCircle` in the `Circles` collection using the i
                                        Fill="#ea3c62">
                             <map:MapCircle.Center>
                                 <map:MapLatLng Latitude="74.1240"
-                                               Longitude="15.2993"></map:MapLatLng>
+                                               Longitude="15.2993" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                         <map:MapCircle Radius="10"
                                        Fill="Teal">
                             <map:MapCircle.Center>
                                 <map:MapLatLng Latitude="80.0499"
-                                               Longitude="15.5057"></map:MapLatLng>
+                                               Longitude="15.5057" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                         <map:MapCircle Radius="10"
                                        Fill="#9c3bb0">
                             <map:MapCircle.Center>
                                 <map:MapLatLng Latitude="75.7139"
-                                               Longitude="19.7515"></map:MapLatLng>
+                                               Longitude="19.7515" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                         <map:MapCircle Radius="10"
                                        Fill="#50af50">
                             <map:MapCircle.Center>
                                 <map:MapLatLng Latitude="72.5714"
-                                               Longitude="23.0225"></map:MapLatLng>
+                                               Longitude="23.0225" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                         <map:MapCircle Radius="10"
                                        Fill="#3195ec">
                             <map:MapCircle.Center>
                                 <map:MapLatLng Latitude="74.2179"
-                                               Longitude="27.0238"></map:MapLatLng>
+                                               Longitude="27.0238" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                         <map:MapCircle Radius="10"
                                        Fill="#e157f9">
                             <map:MapCircle.Center>
                                 <map:MapLatLng Latitude="80.9462"
-                                               Longitude="26.8467"></map:MapLatLng>
+                                               Longitude="26.8467" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                         <map:MapCircle Radius="10"
                                        Fill="#ee4e4e">
                             <map:MapCircle.Center>
                                 <map:MapLatLng Latitude="85.2799"
-                                               Longitude="21.2787"></map:MapLatLng>
+                                               Longitude="21.2787" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                     </map:MapCircleLayer.Circles>
@@ -351,7 +351,7 @@ this.Content = maps;
 
 ![Circle color](images/circle-layer/circle-color.png)
 
-## Stroke thickness and color
+## Stroke and stroke thickness
 
 You can apply stroke thickness to each `MapCircle` in the `Circles` collection using the individual `MapCircle.StrokeThickness` property. The default value of the `MapCircleLayer.StrokeThickness` property is `2`.
 
@@ -373,7 +373,7 @@ You can apply stroke color to each `MapCircle` in the `Circles` collection using
                                        StrokeThickness="3">
                             <map:MapCircle.Center>
                                 <map:MapLatLng Latitude="74.1240"
-                                               Longitude="15.2993"></map:MapLatLng>
+                                               Longitude="15.2993" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                         <map:MapCircle Radius="20"
@@ -381,7 +381,7 @@ You can apply stroke color to each `MapCircle` in the `Circles` collection using
                                        StrokeThickness="3">
                             <map:MapCircle.Center>
                                 <map:MapLatLng Latitude="80.0499"
-                                               Longitude="15.5057"></map:MapLatLng>
+                                               Longitude="15.5057" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                         <map:MapCircle Radius="10"
@@ -389,7 +389,7 @@ You can apply stroke color to each `MapCircle` in the `Circles` collection using
                                        StrokeThickness="3">
                             <map:MapCircle.Center>
                                 <map:MapLatLng Latitude="75.7139"
-                                               Longitude="19.7515"></map:MapLatLng>
+                                               Longitude="19.7515" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                         <map:MapCircle Radius="20"
@@ -397,7 +397,7 @@ You can apply stroke color to each `MapCircle` in the `Circles` collection using
                                        StrokeThickness="3">
                             <map:MapCircle.Center>
                                 <map:MapLatLng Latitude="72.5714"
-                                               Longitude="23.0225"></map:MapLatLng>
+                                               Longitude="23.0225" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                         <map:MapCircle Radius="20"
@@ -405,7 +405,7 @@ You can apply stroke color to each `MapCircle` in the `Circles` collection using
                                        StrokeThickness="3">
                             <map:MapCircle.Center>
                                 <map:MapLatLng Latitude="74.2179"
-                                               Longitude="27.0238"></map:MapLatLng>
+                                               Longitude="27.0238" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                         <map:MapCircle Radius="10"
@@ -413,7 +413,7 @@ You can apply stroke color to each `MapCircle` in the `Circles` collection using
                                        StrokeThickness="3">
                             <map:MapCircle.Center>
                                 <map:MapLatLng Latitude="80.9462"
-                                               Longitude="26.8467"></map:MapLatLng>
+                                               Longitude="26.8467" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                         <map:MapCircle Radius="20"
@@ -421,7 +421,7 @@ You can apply stroke color to each `MapCircle` in the `Circles` collection using
                                        StrokeThickness="3">
                             <map:MapCircle.Center>
                                 <map:MapLatLng Latitude="85.2799"
-                                               Longitude="21.2787"></map:MapLatLng>
+                                               Longitude="21.2787" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                     </map:MapCircleLayer.Circles>

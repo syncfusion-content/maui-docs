@@ -170,7 +170,7 @@ this.Content = maps;
 
 {% endtabs %}
 
-![Polyline color](images/polyline-layer/polyline-color.png)
+![Polyline stroke color](images/polyline-layer/polyline-color.png)
 
 ## Stroke thickness
 
@@ -251,11 +251,11 @@ this.Content = maps;
 
 {% endtabs %}
 
-![Polyline width](images/polyline-layer/polyline-width.png)
+![Polyline stroke thickness](images/polyline-layer/polyline-width.png)
 
 ## Stroke cap
 
-You can apply different stroke cap to each `MapPolyline` in the `Polylines` collection using the individual `MapPolyline.StrokeLineCap` property. The default value of the `MapPolylineLayer.StrokeLineCap` property is `StrokeLineCap.butt`. The available values are `butt`, `round`, and `square`.
+You can apply different stroke cap to each `MapPolyline` in the `Polylines` collection using the individual `MapPolyline.StrokeLineCap` property. The default value of the `MapPolylineLayer.StrokeLineCap` property is `StrokeLineCap.Butt`. The available values are `Butt`, `Round`, and `Square`.
 
 {% tabs %}
 
@@ -403,18 +403,18 @@ layer.ShapeStroke = Brush.DarkGray;
 MapPolylineLayer mapPolylineLayer = new MapPolylineLayer();
 MapPolyline polyline = new MapPolyline();
 polyline.Points = new ObservableCollection<MapLatLng>()
- {
-     new MapLatLng(80.2707, 13.0827),
-     new MapLatLng(79.6117, 13.1746),
-     new MapLatLng(79.5037, 13.6373),
-     new MapLatLng(78.8242, 14.4673),
-     new MapLatLng(78.0092, 14.9091),
-     new MapLatLng(77.3566, 16.2160),
-     new MapLatLng(76.8697, 17.1557),
-     new MapLatLng(75.4249, 18.0975),
-     new MapLatLng(73.8567, 18.5204),
-     new MapLatLng(72.8777, 19.0760),
- };
+{
+    new MapLatLng(80.2707, 13.0827),
+    new MapLatLng(79.6117, 13.1746),
+    new MapLatLng(79.5037, 13.6373),
+    new MapLatLng(78.8242, 14.4673),
+    new MapLatLng(78.0092, 14.9091),
+    new MapLatLng(77.3566, 16.2160),
+    new MapLatLng(76.8697, 17.1557),
+    new MapLatLng(75.4249, 18.0975),
+    new MapLatLng(73.8567, 18.5204),
+    new MapLatLng(72.8777, 19.0760),
+};
 polyline.Stroke = Color.FromRgb(82, 168, 239);
 polyline.StrokeDashArray = new double[] { 4, 2, 1, 2 };
 mapPolylineLayer.Polylines.Add(polyline);
