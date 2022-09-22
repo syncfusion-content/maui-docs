@@ -89,9 +89,7 @@ SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 </td></tr>
 </table>
 
-## Properties
-
-### Common Properties
+## Common Properties
 
 <table> 
 <tr>
@@ -99,32 +97,32 @@ SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 <th>.NET MAUI SfProgressBar</th>
 <th>Description</th></tr>
 <tr>
-<td>{{'[EasingEffect]()'| markdownify }}</td>
-<td>{{'[AnimationEasing]()'| markdownify }}</td>
+<td>{{'[EasingEffect](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_EasingEffect)'| markdownify }}</td>
+<td>{{'AnimationEasing'| markdownify }}</td>
 <td>Gets or sets a value that specifies the easing effect for progress animation.</td></tr>
 <tr>
-<td>{{'[GapWidth]()'| markdownify }}</td>
-<td>{{'[SegmentGapWidth]()'| markdownify }}</td>
+<td>{{'[GapWidth](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_GapWidth)'| markdownify }}</td>
+<td>{{'SegmentGapWidth'| markdownify }}</td>
 <td>Gets or sets the value that determine the gap between the segments.</td></tr>
 <tr>
-<td>{{'[IndeterminateEasingEffect]()'| markdownify }}</td>
-<td>{{'[IndeterminateAnimationEasing]()'| markdownify }}</td>
+<td>{{'[IndeterminateEasingEffect](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_IndeterminateEasingEffect)'| markdownify }}</td>
+<td>{{'IndeterminateAnimationEasing'| markdownify }}</td>
 <td>Gets or sets a value that specifies the easing effect for indeterminate animation.</td></tr>
 <tr>
-<td>{{'[IndeterminateIndicatorWidth]()'| markdownify }}</td>
-<td>{{'[IndeterminateIndicatorWidthFactor]()'| markdownify }}</td>
+<td>{{'[IndeterminateIndicatorWidth](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_IndeterminateIndicatorWidth)'| markdownify }}</td>
+<td>{{'IndeterminateIndicatorWidthFactor'| markdownify }}</td>
 <td>Gets or sets the value that specifies width of the indeterminate indicator.</td></tr>
 <tr>
-<td>{{'[ProgressColor]()'| markdownify }}</td>
-<td>{{'[ProgressFill]()'| markdownify }}</td>
+<td>{{'[ProgressColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_ProgressColor)'| markdownify }}</td>
+<td>{{'ProgressFill'| markdownify }}</td>
 <td>Gets or sets the brush that paints the interior area of the progress.</td></tr>
 <tr>
-<td>{{'[RangeColors]()'| markdownify }}</td>
-<td>{{'[GradientStops]()'| markdownify }}</td>
+<td>{{'[RangeColors](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_RangeColors)'| markdownify }}</td>
+<td>{{'GradientStops'| markdownify }}</td>
 <td>Gets or sets a collection of ProgressGradientStop to fill the gradient brush to the progress.</td></tr>
 <tr>
-<td>{{'[TrackColor]()'| markdownify }}</td>
-<td>{{'[TrackFill]()'| markdownify }}</td>
+<td>{{'[TrackColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_TrackColor)'| markdownify }}</td>
+<td>{{'TrackFill'| markdownify }}</td>
 <td>Gets or sets the brush that paints the interior area of the track.</td></tr>
 </table> 
 
@@ -345,12 +343,12 @@ circularProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.F
 <th>.NET MAUI SfProgressBar</th>
 <th>Description</th></tr>
 <tr>
-<td>{{'[SecondaryProgressColor]()'| markdownify }}</td>
-<td>{{'[SecondaryProgressFill]()'| markdownify }}</td>
+<td>{{'[SecondaryProgressColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfLinearProgressBar.html#Syncfusion_XForms_ProgressBar_SfLinearProgressBar_SecondaryProgressColor)'| markdownify }}</td>
+<td>{{'SecondaryProgressFill'| markdownify }}</td>
 <td>Gets or sets the brush that paints the interior area of the secondary progress.</td></tr>
 <tr>
-<td>{{'[CornerRadius]()'| markdownify }}</td>
-<td>Divided into {{'[TrackCornerRadius]()'| markdownify }}, {{'[ProgressCornerRadius]()'| markdownify }} and {{'[SecondaryProgressCornerRadius]()'| markdownify }}</td>
+<td>{{'[CornerRadius](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfLinearProgressBar.html#Syncfusion_XForms_ProgressBar_SfLinearProgressBar_CornerRadius)'| markdownify }}</td>
+<td>Divided into {{'TrackCornerRadius'| markdownify }}, {{'ProgressCornerRadius'| markdownify }} and {{'SecondaryProgressCornerRadius'| markdownify }}</td>
 <td></td></tr>
 </table> 
 
@@ -450,36 +448,36 @@ linearProgressBar.SecondaryProgress = 50;
 <th>.NET MAUI SfProgressBar</th>
 <th>Description</th></tr>
 <tr>
-<td>{{'[IndicatorInnerRadius]()'| markdownify }}</td>
-<td>{{'[ProgressThickness]()'| markdownify }}</td>
+<td>{{'[IndicatorInnerRadius](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfCircularProgressBar.html#Syncfusion_XForms_ProgressBar_SfCircularProgressBar_IndicatorInnerRadius)'| markdownify }}</td>
+<td>{{'ProgressThickness'| markdownify }}</td>
 <td>Gets or sets a value that specifies the thickness for the progress. You can specify value either in logical pixel or radius factor using the ThicknessUnit property.</td></tr>
 <tr>
-<td>{{'[IndicatorOuterRadius]()'| markdownify }}</td>
-<td>{{'[ProgressRadiusFactor]()'| markdownify }}</td>
+<td>{{'[IndicatorOuterRadius](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfCircularProgressBar.html#Syncfusion_XForms_ProgressBar_SfCircularProgressBar_IndicatorOuterRadius)'| markdownify }}</td>
+<td>{{'ProgressRadiusFactor'| markdownify }}</td>
 <td>Gets or sets a value that specifies the outer radius factor of the progress.</td></tr>
 <tr>
-<td>{{'[ShowProgressValue]()'| markdownify }}</td>
-<td>{{'[-]()'| markdownify }}</td>
+<td>{{'[ShowProgressValue](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfCircularProgressBar.html#Syncfusion_XForms_ProgressBar_SfCircularProgressBar_ShowProgressValue)'| markdownify }}</td>
+<td>{{'-'| markdownify }}</td>
 <td>Gets or sets a value indicating whether to show progress value label or not in SfCircularProgressBar.</td></tr>
 <tr>
-<td>{{'[TrackInnerRadius]()'| markdownify }}</td>
-<td>{{'[TrackThickness]()'| markdownify }}</td>
+<td>{{'[TrackInnerRadius](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfCircularProgressBar.html#Syncfusion_XForms_ProgressBar_SfCircularProgressBar_TrackInnerRadius)'| markdownify }}</td>
+<td>{{'TrackThickness'| markdownify }}</td>
 <td>Gets or sets a value that specifies the thickness of track in circular progress bar. You can specify value either in logical pixel or radius factor using the ThicknessUnit property.</td></tr>
 <tr>
-<td>{{'[TrackOuterRadius]()'| markdownify }}</td>
-<td>{{'[TrackRadiusFactor]()'| markdownify }}</td>
+<td>{{'[TrackOuterRadius](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfCircularProgressBar.html#Syncfusion_XForms_ProgressBar_SfCircularProgressBar_TrackOuterRadius)'| markdownify }}</td>
+<td>{{'TrackRadiusFactor'| markdownify }}</td>
 <td>Gets or sets a value that specifies the outer radius factor of the track.</td></tr>
 <tr>
-<td>{{'[-]()'| markdownify }}</td>
-<td>{{'[ProgressCornerStyle]()'| markdownify }}</td>
+<td>{{'-'| markdownify }}</td>
+<td>{{'ProgressCornerStyle'| markdownify }}</td>
 <td>Gets or sets the value that specifies the corner style of the progress.</td></tr>
 <tr>
-<td>{{'[-]()'| markdownify }}</td>
-<td>{{'[TrackCornerStyle]()'| markdownify }}</td>
+<td>{{'-'| markdownify }}</td>
+<td>{{'TrackCornerStyle'| markdownify }}</td>
 <td>Gets or sets the value that specifies the corner style of the track.</td></tr>
 <tr>
-<td>{{'[-]()'| markdownify }}</td>
-<td>{{'[ThicknessUnit]()'| markdownify }}</td>
+<td>{{'-'| markdownify }}</td>
+<td>{{'ThicknessUnit'| markdownify }}</td>
 <td>Gets or sets enum value that indicates to calculate the track and progress thickness either in logical pixel or radius factor.</td></tr>
 </table> 
 
@@ -583,6 +581,6 @@ circularProgressBar.Progress = 50;
 
 ## Unsupported features from Xamarin.Forms
 
-* [`ShowProgressValue`]() support has not been provided in the SfCircularProgressBar. Instead, you can achieve it using the `Content` property. Please visit Custom Content page for more details about  `Content` property
+* [`ShowProgressValue`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfCircularProgressBar.html#Syncfusion_XForms_ProgressBar_SfCircularProgressBar_ShowProgressValue) support has not been provided in the SfCircularProgressBar. Instead, you can achieve it using the `Content` property. Please visit Custom Content page for more details about  `Content` property
 
-* [`Padding`]() support has not been provided in the SfLinearProgressBar.
+* [`Padding`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfLinearProgressBar.html#Syncfusion_XForms_ProgressBar_SfLinearProgressBar_Padding) support has not been provided in the SfLinearProgressBar.
