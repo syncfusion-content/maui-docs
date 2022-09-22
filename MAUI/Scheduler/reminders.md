@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Reminders in .NET MAUI Scheduler control | Syncfusion
+title: Appointment Reminders in .NET MAUI Scheduler control | Syncfusion
 description: Learn here all about the Reminder support in Syncfusion .NET MAUI Scheduler (SfScheduler) appointments.
 platform: maui
 control: SfScheduler
@@ -315,32 +315,26 @@ private void Scheduler_ReminderAlertOpening(object sender, ReminderAlertOpeningE
     bool snooze = await DisplayAlert("Reminder", Reminders[0].Appointment.Subject + " - " + Reminders[0].Appointment.StartTime.ToString(" dddd, MMMM dd, yyyy, hh:mm tt"), "Snooze", "Dismiss");
     if (Dismiss)
     {
-        
         // For Recurrence appointment, if current occurrence need to dismiss then need to add changed occurrence for reminder occurrence dismissed
-        var appointment = e.Reminders[0].Appointment;
-        var Reminder = new ObservableCollection<SchedulerReminder>()
-        {
-            new SchedulerReminder {TimeBeforeStart = new TimeSpan (0,0,30)}
-        };
-        DateTime changedExceptionDate = e.Reminders[0].Appointment.StartTime;
-        DateTime endDate = e.Reminders[0].Appointment.EndTime;
         if (!string.IsNullOrEmpty(e.Reminders[0].Appointment.RecurrenceRule))
         {
-            appointment.RecurrenceExceptionDates = new ObservableCollection<DateTime>()
+            SchedulerAppointment patternAppointment = (scheduler.AppointmentsSource as ObservableCollection<SchedulerAppointment>).FirstOrDefault(x => x.Id == e.Reminders[0].Appointment.Id);
+            DateTime changedExceptionDate = e.Reminders[0].Appointment.StartTime;
+            DateTime endDate = e.Reminders[0].Appointment.EndTime;
+            patternAppointment.RecurrenceExceptionDates = new ObservableCollection<DateTime>()
                 {
                     changedExceptionDate,
                 };
-
             // Clone parent details
-            var exceptionAppointment = new SchedulerAppointment()
+            SchedulerAppointment exceptionAppointment = new SchedulerAppointment()
             {
                 Id = 2,
-                Subject = appointment.Subject,
+                Subject = patternAppointment.Subject,
                 StartTime = new DateTime(changedExceptionDate.Year, changedExceptionDate.Month, changedExceptionDate.Day, changedExceptionDate.Hour, 0, 0),
                 EndTime = new DateTime(endDate.Year, endDate.Month, endDate.Day, endDate.Hour, 0, 0),
-                Background = appointment.Background,
+                Background = patternAppointment.Background,
                 RecurrenceId = 1,
-                Reminders = Reminder
+                Reminders = patternAppointment.Reminders,
             };
             if (!(scheduler.AppointmentsSource as ObservableCollection<SchedulerAppointment>).Contains(exceptionAppointment))
             {
@@ -348,12 +342,12 @@ private void Scheduler_ReminderAlertOpening(object sender, ReminderAlertOpeningE
                 exceptionAppointment.Reminders[0].IsDismissed = true;
             }
         }
-        // Dismissing Normal appointment 
+        // To dismiss normal reminder
         else
         {
             for (int i = e.Reminders.Count - 1; i >= 0; i--)
             {
-                e.Reminders[i].IsDismissed = true;                        
+                e.Reminders[i].IsDismissed = true;
             }
         }
     }    
@@ -382,7 +376,7 @@ private void Scheduler_ReminderAlertOpening(object sender, ReminderAlertOpeningE
 
     if (snooze)
         {
-            var snoozeTime = new TimeSpan(0, 5, 0);
+            TimeSpan snoozeTime = new TimeSpan(0, 5, 0);
             // Future appointment reminder
             if (e.Reminders[0].Appointment.ActualStartTime > DateTime.Now && !e.Reminders[0].Appointment.IsAllDay)
             {
@@ -399,44 +393,33 @@ private void Scheduler_ReminderAlertOpening(object sender, ReminderAlertOpeningE
                 e.Reminders[0].TimeBeforeStart = e.Reminders[0].Appointment.StartTime.AddSeconds(DateTime.Now.Second) - DateTime.Now - snoozeTime;
             }
 
-            var appointment = e.Reminders[0].Appointment;
-            var Reminder = new ObservableCollection<SchedulerReminder>()
-            {
-                new SchedulerReminder {TimeBeforeStart = new TimeSpan (0,0,30)}
-            };
             DateTime changedExceptionDate = e.Reminders[0].Appointment.StartTime;
             DateTime endDate = e.Reminders[0].Appointment.EndTime;
             if (!string.IsNullOrEmpty(e.Reminders[0].Appointment.RecurrenceRule))
             {
-                appointment.RecurrenceExceptionDates = new ObservableCollection<DateTime>()
+                SchedulerAppointment patternAppointment = (scheduler.AppointmentsSource as ObservableCollection<SchedulerAppointment>).FirstOrDefault(x => x.Id == e.Reminders[0].Appointment.Id);
+                DateTime changedExceptionDate = e.Reminders[0].Appointment.StartTime;
+                DateTime endDate = e.Reminders[0].Appointment.EndTime;
+                patternAppointment.RecurrenceExceptionDates = new ObservableCollection<DateTime>()
                     {
                         changedExceptionDate,
                     };
-
                 // Clone parent details
-                var exceptionAppointment = new SchedulerAppointment()
+                SchedulerAppointment exceptionAppointment = new SchedulerAppointment()
                 {
                     Id = 2,
-                    Subject = appointment.Subject,
+                    Subject = patternAppointment.Subject,
                     StartTime = new DateTime(changedExceptionDate.Year, changedExceptionDate.Month, changedExceptionDate.Day, changedExceptionDate.Hour, 0, 0),
                     EndTime = new DateTime(endDate.Year, endDate.Month, endDate.Day, endDate.Hour, 0, 0),
-                    Background = appointment.Background,
+                    Background = patternAppointment.Background,
                     RecurrenceId = 1,
-                    Reminders = Reminder
+                    Reminders = patternAppointment.Reminders,
                 };
                 if (!(scheduler.AppointmentsSource as ObservableCollection<SchedulerAppointment>).Contains(exceptionAppointment))
                 {
                     (scheduler.AppointmentsSource as ObservableCollection<SchedulerAppointment>).Add(exceptionAppointment);
-                    exceptionAppointment.Reminders[0].IsDismissed = true;
                 }
-            }
-            else
-            {
-                for (int i = e.Reminders.Count - 1; i >= 0; i--)
-                {
-                    e.Reminders[i].IsDismissed = true;                        
-                }
-            }
+            }            
         }
 }
 {% endhighlight %}
