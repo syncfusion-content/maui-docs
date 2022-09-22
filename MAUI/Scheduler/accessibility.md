@@ -15,7 +15,6 @@ The `SfScheduler` supports selecting the scheduler date time, appointments, and 
 
 N> [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_SelectionChanged) event triggers for cell selection changed.
 
-
 ### Day, Week and WorkWeek views
 
 <table>
