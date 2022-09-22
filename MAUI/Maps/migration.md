@@ -1268,7 +1268,83 @@ public MainPage()
       `MapTooltipSettings`
    </td>
 </tr>
+<tr>
+   <td>
+      {{'[ShowTooltip](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.TooltipSetting.html#Syncfusion_SfMaps_XForms_TooltipSetting_ShowTooltip)'| markdownify }} in 
+      {{'[TooltipSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.TooltipSetting.html)'| markdownify }}
+   </td>
+   <td>
+      `ShowShapeTooltip`, `ShowBubbleTooltip`, `ShowMarkerTooltip`
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[TooltipSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeFileLayer.html#Syncfusion_SfMaps_XForms_ShapeFileLayer_TooltipSettings)'| markdownify }} in 
+      {{'[ShapeFileLayer](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeFileLayer.html)'| markdownify }}
+
+   </td>
+   <td>
+      `ShapeTooltipSettings`
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[TooltipSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.BubbleMarkerSetting.html#Syncfusion_SfMaps_XForms_BubbleMarkerSetting_TooltipSettings)'| markdownify }} in 
+      {{'[BubbleMarkerSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.BubbleMarkerSetting.html)'| markdownify }}
+
+   </td>
+   <td>
+      `BubbleTooltipSettings`
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[TooltipSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.MapMarkerSetting.html#Syncfusion_SfMaps_XForms_MapMarkerSetting_TooltipSettings)'| markdownify }} in 
+      {{'[MapMarkerSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.MapMarkerSetting.html)'| markdownify }}
+
+   </td>
+   <td>
+      `MarkerTooltipSettings`
+   </td>
+</tr>
 </table>
+
+### Tooltip settings
+
+<table>
+<tr>
+<th>Xamarin SfMaps</th>
+<th>.NET MAUI SfMaps</th>
+</tr>
+<tr>
+   <td>
+      {{'[BackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.TooltipSetting.html#Syncfusion_SfMaps_XForms_TooltipSetting_BackgroundColor)'| markdownify }}
+   </td>
+   <td>
+      `Background`
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[Margin](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.TooltipSetting.html#Syncfusion_SfMaps_XForms_TooltipSetting_Margin)'| markdownify }}
+   </td>
+   <td>
+      `Padding`
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[TextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.TooltipSetting.html#Syncfusion_SfMaps_XForms_TooltipSetting_TextColor)'| markdownify }}, 
+      {{'[FontSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.TooltipSetting.html#Syncfusion_SfMaps_XForms_TooltipSetting_FontSize)'| markdownify }}, 
+      {{'[FontFamily](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.TooltipSetting.html#Syncfusion_SfMaps_XForms_TooltipSetting_FontFamily)'| markdownify }} and 
+      {{'[FontAttributes](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.TooltipSetting.html#Syncfusion_SfMaps_XForms_TooltipSetting_FontAttributes)'| markdownify }}
+
+   </td>
+   <td>
+      `TextStyle`
+   </td>
+</tr>
+<table>
 
 The following code example explains how to customize tooltip in the Xamarin SfMaps and .Net MAUI SfMaps.
 
