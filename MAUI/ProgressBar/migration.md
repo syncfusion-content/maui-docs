@@ -139,7 +139,7 @@ SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
     xmlns:progressBar="clr-namespace:Syncfusion.XForms.ProgressBar;assembly=Syncfusion.SfProgressBar.XForms">
 
     ...     
-<!--Snippet for linear progress bar-->
+<!--Snippet for the linear progress bar-->
 <progressBar:SfLinearProgressBar EasingEffect="CubicOut"
                                  GapWidth="5"
                                  SegmentCount="4"
@@ -156,7 +156,7 @@ SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
     </progressBar:SfLinearProgressBar.RangeColors>
 </progressBar:SfLinearProgressBar>
 
-<!--Snippet for circular progress bar-->
+<!--Snippet for the circular progress bar-->
 <progressBar:SfCircularProgressBar EasingEffect="CubicOut"
                                    GapWidth="5"
                                    SegmentCount="4"
@@ -183,7 +183,7 @@ using Syncfusion.XForms.ProgressBar;
 
 ...
 
-// Snippet for linear progress bar
+//Snippet for the linear progress bar
 
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 linearProgressBar.Progress = 75;
@@ -211,7 +211,7 @@ linearProgressBar.RangeColors.Add(
     });
 this.Content = linearProgressBar;
 
-// Snippet for circular progress bar
+//Snippet for circular progress bar
 
 SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 circularProgressBar.Progress = 75;
@@ -257,7 +257,7 @@ this.Content = circularProgressBar;
     xmlns:progressBar="clr-namespace:Syncfusion.Maui.ProgressBar;assembly=Syncfusion.Maui.ProgressBar">
 
 ...
-<!--Snippet for linear progress bar-->
+<!--Snippet for the linear progress bar-->
 <progressBar:SfLinearProgressBar AnimationEasing="{x:Static Easing.CubicOut}"
                                  SegmentGapWidth="5"
                                  SegmentCount="4"
@@ -273,7 +273,7 @@ this.Content = circularProgressBar;
     
 </progressBar:SfLinearProgressBar>
 
-<!--Snippet for circular progress bar-->
+<!--Snippet for the circular progress bar-->
 <progressBar:SfCircularProgressBar AnimationEasing="{x:Static Easing.CubicOut}"
                                    SegmentGapWidth="5"
                                    SegmentCount="4"
@@ -299,7 +299,7 @@ this.Content = circularProgressBar;
 
 using Syncfusion.Maui.ProgressBar;
 ...
-// Snippet for linear progress bar
+//Snippet for the linear progress bar
 
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 linearProgressBar.AnimationEasing = Easing.CubicOut;
@@ -313,7 +313,7 @@ linearProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.Fro
 linearProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("2f7ecc"), Value = 50 });
 this.Content = linearProgressBar;
 
-// Snippet for circular progress bar
+//Snippet for the circular progress bar
 
 SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 circularProgressBar.AnimationEasing = Easing.CubicOut;
@@ -582,6 +582,6 @@ this.Content = circularProgressBar;
 
 ## Unsupported features from Xamarin.Forms
 
-* [`ShowProgressValue`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfCircularProgressBar.html#Syncfusion_XForms_ProgressBar_SfCircularProgressBar_ShowProgressValue) support has not been provided in the SfCircularProgressBar. Instead, you can achieve it using the `Content` property. Please visit Custom Content page for more details about  `Content` property.
+* [`ShowProgressValue`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfCircularProgressBar.html#Syncfusion_XForms_ProgressBar_SfCircularProgressBar_ShowProgressValue) support has not been provided in the SfCircularProgressBar. Instead, you can achieve it using the `Content` property. Please visit Custom Content page for more details about the `Content` property.
 
 * [`Padding`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfLinearProgressBar.html#Syncfusion_XForms_ProgressBar_SfLinearProgressBar_Padding) support has not been provided in the SfLinearProgressBar.
