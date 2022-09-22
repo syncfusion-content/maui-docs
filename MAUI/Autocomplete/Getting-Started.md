@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with .NET MAUI Autocomplete | Syncfusion
-description: Learn how to get started with Syncfusion .NET MAUI Autocomplete control and its suggestion list, as well as other topics, in this section.
+description: Learn how to get started with Syncfusion .NET MAUI Autocomplete control and its suggestion list, as well as other topics in this section.
 platform: maui
 control: SfAutocomplete
 documentation: ug
@@ -51,13 +51,13 @@ namespace AutocompleteSample
 
 ## Create a Simple .NET MAUI Autocomplete
 
-The .NET MAUI Autocomplete control is configured entirely in C# code or by using XAML markup. The following steps explain how to create a .NET MAUI Autocomplete (SfAutocomplete) and configure its elements.
+The .NET MAUI Autocomplete control is configured entirely in C# code or by using XAML markup. The following steps explain how to create a .NET MAUI Autocomplete (SfAutocomplete) and configure its elements:
 
 ### Adding the .NET MAUI Autocomplete control
 
 Step 1: Add the NuGet to the project as discussed in the above reference section. 
 
-Step 2: Add the namespace as shown in the following code sample.
+Step 2: Add the namespace as shown in the following code sample:
 
 {% tabs %}
 
@@ -182,7 +182,7 @@ N> Set the 'SocialMediaViewModel' instance as the `BindingContext` of your contr
 
 **Step 3:** Set the `TextMemberPath` and `DisplayMemberPath`.
 
-The `Autocomplete` control is populated with the list of social media. However, because the 'SocialMedia' model contains two properties 'Name' and 'ID', it is necessary to intimate, which property should be a display value in the selection box portion and drop-down suggestion of the `Autocomplete` control.
+The `Autocomplete` control is populated with the list of social media. However, because the 'SocialMedia' model contains two properties 'Name' and 'ID', it is necessary to intimate which property should be a display value in the selection box portion and drop-down suggestion of the Autocomplete control.
 
 `TextMemberPath` - This property path is used to get the value for displaying in the selection box portion of the `Autocomplete` control when an item is selected. The default value is `String.Empty`.
 
@@ -226,7 +226,7 @@ autocomplete.TextMemberPath = "Name";
 {% endhighlight %}
 {% endtabs %}
 
-The following gif image illustrates the result of the above code.
+The following gif image illustrates the result of the above code:
 
 ![.NET MAUI Autocomplete with single selection mode](Images/GettingStarted/AutocompleteGettingStarted.gif)
 

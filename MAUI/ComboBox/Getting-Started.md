@@ -51,13 +51,13 @@ namespace ComboBoxSample
 
 ## Create a Simple .NET MAUI ComboBox
 
-The .NET MAUI ComboBox control is configured entirely in C# code or by using XAML markup. The following steps explain how to create a .NET MAUI ComboBox (SfComboBox) and configure its elements.
+The .NET MAUI ComboBox control is configured entirely in C# code or by using XAML markup. The following steps explain how to create a .NET MAUI ComboBox (SfComboBox) and configure its elements:
 
 ### Adding the .NET MAUI ComboBox control
 
 Step 1: Add the NuGet to the project as discussed in the above reference section. 
 
-Step 2: Add the namespace as shown in the following code sample.
+Step 2: Add the namespace as shown in the following code sample:
 
 {% tabs %}
 
@@ -206,13 +206,13 @@ comboBox.TextMemberPath = "Name";
 {% endhighlight %}
 {% endtabs %}
 
-The following gif image illustrates the result of the above code.
+The following gif image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox populating using data binding](Images/GettingStarted/ComboBoxGettingStarted.gif)
 
 ## Editing
 
-The `ComboBox` control supports editable and non-editable modes to choose items. To enable editing functionality, set the `IsEditable` property as `true`. The default value is `false`.
+The `ComboBox` control supports editable and non-editable modes to choose items. To enable the editing functionality, set the `IsEditable` property as `true.` The default value is `false.`
 
 {% tabs %}
 {% highlight XAML %}
@@ -234,7 +234,7 @@ comboBox.IsEditable = true;
 {% endhighlight %}
 {% endtabs %}
 
-The following gif image illustrates the result of the above code.
+The following gif image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox choose item using editing](Images/GettingStarted/ComboBoxEditableMode.gif)
 
