@@ -38,13 +38,11 @@ By enabling the `IsIndeterminate` property, the state of the progress bar can be
 // Using linear progress bar. 
 
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar { IsIndeterminate = true};
-
 this.Content = linearProgressBar;
 
 // Using circular progress bar.
 
 SfCircularProgressBar circularProgressBar = new SfCircularProgressBar { IsIndeterminate = true };
-
 this.Content = circularProgressBar;
 
 {% endhighlight %}
@@ -59,22 +57,20 @@ The secondary task’s progress can be defined using the `SecondaryProgress` pro
 
 {% highlight xaml %} 
 
-<progressBar:SfLinearProgressBar Progress="25" SecondaryProgress="75"/>
+<progressBar:SfLinearProgressBar Progress="25" 
+                                 SecondaryProgress="75"/>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
-
 linearProgressBar.Progress = 25;
-
 linearProgressBar.SecondaryProgress = 75;
-
 this.Content = linearProgressBar;
 
 {% endhighlight %}
 
 {% endtabs %} 
 
-![Buffer](images\States\Buffer.png)
+![Buffer](images\states\buffer.png)

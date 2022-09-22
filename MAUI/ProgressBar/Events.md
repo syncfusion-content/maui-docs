@@ -21,7 +21,9 @@ The following code sample demonstrates how to customize the color of a progress 
 
 {% highlight xaml %}
 
-<progressBar:SfLinearProgressBar x:Name="LinearProgressBar" ProgressChanged="LinearProgressBar_ProgressChanged" Progress="100"/>
+<progressBar:SfLinearProgressBar x:Name="LinearProgressBar" 
+                                 ProgressChanged="LinearProgressBar_ProgressChanged" 
+                                 Progress="100"/>
 
 </progressBar:SfLinearProgressBar>
 
@@ -64,7 +66,11 @@ The following code sample demonstrates how to customize the progress bar when pr
                                    Progress="500">
     <progressBar:SfCircularProgressBar.Content>
         <Grid WidthRequest="150">
-            <Label Text="Start" FontSize="15" x:Name="Label" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+            <Label Text="Start" 
+                   FontSize="15" 
+                   x:Name="Label" 
+                   HorizontalTextAlignment="Center" 
+                   VerticalTextAlignment="Center"></Label>
         </Grid>
     </progressBar:SfCircularProgressBar.Content>
 </progressBar:SfCircularProgressBar>

@@ -27,18 +27,16 @@ The following code sample demonstrates the `CubicInOut` easing function of the l
 
 {% highlight xaml %}
 
-<progressBar:SfLinearProgressBar Progress="75" AnimationEasing="{x:Static Easing.CubicInOut}" />
+<progressBar:SfLinearProgressBar Progress="75" 
+                                 AnimationEasing="{x:Static Easing.CubicInOut}" />
 
 {% endhighlight %}
 
 {% highlight c# %}
 
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
-
 linearProgressBar.Progress = 75;
-
 linearProgressBar.AnimationEasing = Easing.CubicInOut;
-
 this.Content = linearProgressBar;
 
 {% endhighlight %}
@@ -65,19 +63,17 @@ The following code sample demonstrates the `BounceIn` easing function of the lin
 
 {% highlight xaml %}
 
-<progressBar:SfLinearProgressBar IsIndeterminate="True" IndeterminateAnimationEasing="{x:Static Easing.BounceIn}" />
+<progressBar:SfLinearProgressBar IsIndeterminate="True" 
+                                 IndeterminateAnimationEasing="{x:Static Easing.BounceIn}" />
 
 {% endhighlight %}
 
 {% highlight c# %}
 
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
-
 linearProgressBar.IsIndeterminate = true;
-
 linearProgressBar.IndeterminateAnimationEasing = Easing.BounceIn;
-
- this.Content = linearProgressBar;
+this.Content = linearProgressBar;
 
 {% endhighlight %}
 

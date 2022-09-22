@@ -17,11 +17,13 @@ To visualize the progress of multiple sequential tasks, split the progress bar i
 
 <!--Using linear progress bar-->
 
-<progressBar:SfLinearProgressBar Progress="25" SegmentCount="4" />
+<progressBar:SfLinearProgressBar Progress="25" 
+                                 SegmentCount="4" />
 
 <!--Using circular progress bar-->
 
-<progressBar:SfCircularProgressBar Progress="25" SegmentCount="7" />
+<progressBar:SfCircularProgressBar Progress="25" 
+                                   SegmentCount="7" />
 
 {% endhighlight %}
 
@@ -30,28 +32,22 @@ To visualize the progress of multiple sequential tasks, split the progress bar i
 // Using linear progress bar.
 
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
-
 linearProgressBar.Progress = 25;
-
 linearProgressBar.SegmentCount = 4;
-
 this.Content = linearProgressBar;
 
 // Using circular progress bar.
 
 SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
-
 circularProgressBar.Progress = 25;
-
 circularProgressBar.SegmentCount = 7;
-
 this.Content = circularProgressBar;
 
 {% endhighlight %}
 
 {% endtabs %} 
 
-![Segment](images/Segment/Segment.png)
+![Segment](images/segment/segment.png)
 
 ## Gap customization
 
@@ -62,11 +58,15 @@ You can also customize the default spacing between the segments using the `GapWi
 
 <!--Using linear progress bar-->
 
-<progressBar:SfLinearProgressBar Progress="25" SegmentCount="4" SegmentGapWidth="5" />
+<progressBar:SfLinearProgressBar Progress="25" 
+                                 SegmentCount="4"
+                                 SegmentGapWidth="5" />
 
 <!--Using circular progress bar-->
 
-<progressBar:SfCircularProgressBar Progress="25" SegmentCount="7" SegmentGapWidth="10" />
+<progressBar:SfCircularProgressBar Progress="25"
+                                   SegmentCount="7" 
+                                   SegmentGapWidth="10" />
 
 {% endhighlight %}
 
@@ -74,29 +74,21 @@ You can also customize the default spacing between the segments using the `GapWi
 // Using linear progress bar.
 
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
-
 linearProgressBar.Progress = 25;
-
 linearProgressBar.SegmentCount = 4;
-
 linearProgressBar.SegmentGapWidth = 5;
-
 this.Content = linearProgressBar;
 
 // Using circular progress bar.
 
 SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
-
 circularProgressBar.Progress = 25;
-
 circularProgressBar.SegmentCount = 7;
-
 circularProgressBar.SegmentGapWidth = 10;
-
 this.Content = circularProgressBar;
 
 {% endhighlight %}
 
 {% endtabs %} 
 
-![Gap](images/Segment/Gap_width.png)
+![Gap](images/segment/gap-width.png)

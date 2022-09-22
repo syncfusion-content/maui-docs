@@ -19,11 +19,15 @@ The following code sample demonstrates how to customize the range as factor valu
 
 <!--Using linear progress bar-->
 
-<progressBar:SfLinearProgressBar Minimum="0" Progress="0.5" Maximum="1"/>
+<progressBar:SfLinearProgressBar Minimum="0" 
+                                 Progress="0.5" 
+                                 Maximum="1"/>
 
 <!--Using circular progress bar-->
 
-<progressBar:SfCircularProgressBar Minimum="0" Progress="0.5" Maximum="1"/>
+<progressBar:SfCircularProgressBar Minimum="0" 
+                                   Progress="0.5" 
+                                   Maximum="1"/>
 
 {% endhighlight %}
 
@@ -32,29 +36,21 @@ The following code sample demonstrates how to customize the range as factor valu
 // Using linear progress bar.
 
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
-
 linearProgressBar.Minimum = 0;
-
 linearProgressBar.Maximum = 1;
-
 linearProgressBar.Progress = 0.5;
-
 this.Content = linearProgressBar;
 
 // Using circular progress bar.
 
 SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
-
 circularProgressBar.Minimum = 0;
-
 circularProgressBar.Maximum = 1;
-
 circularProgressBar.Progress = 0.5;
-
 this.Content = circularProgressBar;
 
 {% endhighlight %}
 
 {% endtabs %} 
 
-![range](images/Define_range/range.png)
+![range](images/define-range/range.png)

@@ -19,27 +19,25 @@ The following code sample demonstrates how to change the appearance of the circu
 
 {% highlight xaml %}
 
-<progressBar:SfCircularProgressBar Progress="75" StartAngle="180" EndAngle="360" />
+<progressBar:SfCircularProgressBar Progress="75" 
+                                   StartAngle="180" 
+                                   EndAngle="360" />
 
 {% endhighlight %}
 
 {% highlight c# %}
 
 SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
-
 circularProgressBar.Progress = 75;
-
 circularProgressBar.StartAngle = 180;
-
 circularProgressBar.EndAngle = 360;
-
 this.Content = circularProgressBar;
 
 {% endhighlight %}
 
 {% endtabs %} 
 
-![angle](images/Appearance/Angle.png)
+![angle](images/appearance/angle.png)
 
 ## Range colors
 
@@ -124,7 +122,7 @@ this.Content = circularProgressBar;
 
 {% endtabs %} 
 
-![rangecolors](images/Appearance/RangeColors.png)
+![rangecolors](images/appearance/range-colors.png)
 
 The following code sample demonstrates how to apply gradient transition effect to the range colors in the progress bar.
 
@@ -174,7 +172,7 @@ this.Content = circularProgressBar;
 
 {% endtabs %} 
 
-![gradient](images/Appearance/Gradient.png)
+![gradient](images/appearance/gradient.png)
 
 ## Thickness
 
@@ -198,22 +196,17 @@ In the linear progress bar, the height of the track, progress and secondary prog
 {% highlight c# %}
 
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
-
 linearProgressBar.Progress = 100;
-
 linearProgressBar.TrackHeight = 10;
-
 linearProgressBar.ProgressHeight = 10;
-
 linearProgressBar.SecondaryProgressHeight = 10;
-
 this.Content = linearProgressBar;
 
 {% endhighlight %}
 
 {% endtabs %} 
 
-![thickness_linear](images/Appearance/thickness.png)
+![thickness_linear](images/appearance/thickness.png)
 
 ### Circular progress bar
 
@@ -248,26 +241,19 @@ The following code sample demonstrates how to customize the appearance of circul
 {% highlight c# %}
 
 SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
-
 circularProgressBar.Progress = 75;
-
 circularProgressBar.TrackRadiusFactor = 0.8;
-
 circularProgressBar.ProgressRadiusFactor = 0.75;
-
 circularProgressBar.TrackThickness = 0.05;
-
 circularProgressBar.ProgressThickness = 0.05;
-
 circularProgressBar.ThicknessUnit = SizeUnit.Factor;
-
 this.Content = circularProgressBar;
 
 {% endhighlight %}
 
 {% endtabs %} 
 
-![appearance](images/Appearance/circular_thickness.png)
+![appearance](images/appearance/circular-thickness.png)
 
 ## Corner radius
 
@@ -290,28 +276,22 @@ The `CornerRadius` property is used to customize the rounded edges in the linear
 {% highlight c# %}
 
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
-
 linearProgressBar.Progress = 50;
-
 linearProgressBar.TrackHeight = 10;
-
 linearProgressBar.ProgressHeight = 10;
-
 linearProgressBar.ProgressCornerRadius = 5;
-
 linearProgressBar.TrackCornerRadius = 5;
-
 this.Content = linearProgressBar;
 
 {% endhighlight %}
 
 {% endtabs %} 
 
-![cornerradius](images/Appearance/CornerRadius.png)
+![cornerradius](images/appearance/corner-radius.png)
 
 ## Corner style customization
 
-The `CornerStyle` property of circular progress bar specifies the corner type for the track or progress. The corners can be customized using the `BothFlat`, `BothCurve`, `StartCurve`, and `EndCurve` options. The default value of this property is `BothFlat`.
+The `ProgressCornerStyle` and `TrackCornerStyle` property of circular progress bar specifies the corner type for the progress and track. The corners can be customized using the `BothFlat`, `BothCurve`, `StartCurve`, and `EndCurve` options. The default value of this property is `BothFlat`.
 
 The following code sample demonstrates the corner style customization in progress and track indicator.
 
@@ -332,24 +312,18 @@ The following code sample demonstrates the corner style customization in progres
 {% highlight c# %}
 
 SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
-
 circularProgressBar.Progress = 50;
-
 circularProgressBar.TrackCornerStyle = CornerStyle.BothCurve;
-
 circularProgressBar.ProgressCornerStyle = CornerStyle.BothCurve;
-
 circularProgressBar.StartAngle = 180;
-
 circularProgressBar.EndAngle = 360;
-
 this.Content = circularProgressBar;
 
 {% endhighlight %}
 
 {% endtabs %} 
 
-![cornerstyle](images/Appearance/corner_style.png)
+![cornerstyle](images/appearance/corner-style.png)
 
 ## Color customization
 
@@ -377,22 +351,17 @@ The following code sample demonstrates the color customization in progress and t
 {% highlight c# %}
 
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
-
 linearProgressBar.Progress = 75;
-
 linearProgressBar.TrackFill = Color.FromArgb("3351483a");
-
 linearProgressBar.ProgressFill = Color.FromArgb("FF51483a");
-
 linearProgressBar.SecondaryProgressFill = Colors.CornflowerBlue;
-
 this.Content = linearProgressBar;
 
 {% endhighlight %}
 
 {% endtabs %} 
 
-![color1](images/Appearance/Color.png)
+![color1](images/appearance/color.png)
 
 The linear progress bar provides support to customize the color for the secondary progress bar using the `SecondaryProgressFill` property as demonstrated in the following code sample.
 
@@ -410,18 +379,14 @@ The linear progress bar provides support to customize the color for the secondar
 {% highlight c# %}
 
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
-
 linearProgressBar.Progress = 25;
-
 linearProgressBar.SecondaryProgress = 75;
-
 linearProgressBar.SecondaryProgressFill = Colors.CornflowerBlue;
-
 this.Content = linearProgressBar;
 
 {% endhighlight %}
 
 {% endtabs %} 
 
-![color2](images/Appearance/SecondaryProgress.png)
+![color2](images/appearance/secondary-progress.png)
 
