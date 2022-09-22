@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrate from Xamarin.Forms SfProgressBar to .NET MAUI SfProgressBar
 
-To make the migration from the [Xamarin SfProgressBar]() to [.NET MAUI SfProgressBar]() easier, most of the APIs from the Xamarin SfProgressBar were kept in the.NET MAUI SfProgressBar. However, to maintain the consistency of API naming in the .NET MAUI SfProgressBar, some of the APIs have been renamed. Please find the difference in the following topics.
+To make the migration from the [Xamarin SfProgressBar](https://www.syncfusion.com/xamarin-ui-controls/xamarin-progressbar) to `.NET MAUI SfProgressBar` easier, most of the APIs from the Xamarin SfProgressBar were kept in the.NET MAUI SfProgressBar. However, to maintain the consistency of API naming in the .NET MAUI SfProgressBar, some of the APIs have been renamed. Please find the difference in the following topics.
 
 ## Initialize control
 
@@ -350,7 +350,7 @@ this.Content = circularProgressBar;
 <tr>
 <td>{{'[CornerRadius](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfLinearProgressBar.html#Syncfusion_XForms_ProgressBar_SfLinearProgressBar_CornerRadius)'| markdownify }}</td>
 <td>Divided into {{'TrackCornerRadius'| markdownify }}, {{'ProgressCornerRadius'| markdownify }} and {{'SecondaryProgressCornerRadius'| markdownify }}</td>
-<td></td></tr>
+<td>Gets or sets a value to determine the corner radius of the track, progress and secondary progress.</td></tr>
 </table> 
 
 <table>
@@ -582,6 +582,6 @@ this.Content = circularProgressBar;
 
 ## Unsupported features from Xamarin.Forms
 
-* [`ShowProgressValue`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfCircularProgressBar.html#Syncfusion_XForms_ProgressBar_SfCircularProgressBar_ShowProgressValue) support has not been provided in the SfCircularProgressBar. Instead, you can achieve it using the `Content` property. Please visit Custom Content page for more details about  `Content` property
+* [`ShowProgressValue`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfCircularProgressBar.html#Syncfusion_XForms_ProgressBar_SfCircularProgressBar_ShowProgressValue) support has not been provided in the SfCircularProgressBar. Instead, you can achieve it using the `Content` property. Please visit Custom Content page for more details about  `Content` property.
 
 * [`Padding`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfLinearProgressBar.html#Syncfusion_XForms_ProgressBar_SfLinearProgressBar_Padding) support has not been provided in the SfLinearProgressBar.
