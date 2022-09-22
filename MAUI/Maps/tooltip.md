@@ -287,6 +287,9 @@ You can customize the below appearances of the tooltip.
                            DataSource="{Binding Data}"
                            PrimaryValuePath="State" 
                            ShapeDataField="name" 
+                           ShapeStroke="White"
+                           ShapeStrokeThickness="1"
+                           ShapeHoverFill="#b0ed83"
                            ShapeFill="#809FFF"
                            ShowShapeToolTip="True">
 
@@ -321,6 +324,9 @@ public MainPage()
    layer.DataSource = viewModel.Data;
    layer.PrimaryValuePath = "State";
    layer.ShapeDataField = "name";
+   layer.ShapeStroke = Colors.White;
+   layer.ShapeStrokeThickness = 1;
+   layer.ShapeHoverFill = Color.FromArgb("#b0ed83");
    layer.ShapeFill = Color.FromArgb("#809FFF");
    layer.ShowShapeToolTip = true;
 
