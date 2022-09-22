@@ -373,7 +373,7 @@ public class Model
 
 {% endtabs %}
 
-![Maps tooltip settings](images/tooltip/tooltip_appearance.png)
+![Maps tooltip settings](images/tooltip/tooltip-appearance-customization.png)
 
 ### Apply data template for tooltip
 
@@ -499,7 +499,7 @@ Data template can be used customize the tooltip view using [`ShapeTooltipTemplat
             grid.SetColumnSpan(areaLabel, 2);
             Binding binding1 = new Binding();
             binding1.Source = grid.BindingContext;
-            binding.Path = nameof(MapTooltipInfo.DataItem) + "." + nameof(Model1.Area);
+            binding1.Path = nameof(MapTooltipInfo.DataItem) + "." + nameof(Model1.Area);
             areaLabel.SetBinding(Label.TextProperty, binding1);
 
             grid.Children.Add(image);
