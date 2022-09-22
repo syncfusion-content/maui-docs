@@ -20,8 +20,6 @@ N>
 
 * Reminder alert time will be calculated form appointment start time substrate with reminder time interval. For an example if appointment time is 3.30pm and reminder time interval is new Timespan (0,15,0) then reminder alter time is 3.15 pm.
 
-* If the Reminder alert time is less than the current time, then appointment reminder time will be calculated from the current time. For an example if current time is 3.30pm and the Reminder alert time is 3.40pm, than alert time will be displayed as 10 minutes.
-
 ## Handling reminders for overdue appointment
 
 * If a Non-recurring appointments reminder is in past, reminder alert as overdue untill dismissed.
