@@ -269,6 +269,336 @@ The [`ShowMarkerTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Ma
 
 ![Maps marker tooltip](images/tooltip/marker_tooltip.png)
 
+## Shape tooltip settings
+
+You can customize the shape tooltip by `ShapeTooltipSettings` property. It includes `Background`, `Padding` and `TextStyle` properties.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                           DataSource="{Binding Data}"
+                           PrimaryValuePath="State" 
+                           ShapeDataField="name" 
+                           ShowShapeToolTip="True">
+
+                <map:MapShapeLayer.ShapeTooltipSettings>
+                    <map:MapTooltipSettings Background="#002080"
+                                            Padding="2">
+                        <map:MapTooltipSettings.TextStyle>
+                            <map:MapLabelStyle FontSize="14"
+                                               TextColor="White"
+                                               FontAttributes="Bold">
+                            </map:MapLabelStyle>
+                        </map:MapTooltipSettings.TextStyle>
+                    </map:MapTooltipSettings>
+                </map:MapShapeLayer.ShapeTooltipSettings>
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+public MainPage()
+{
+   InitializeComponent();
+   
+   ViewModel viewModel = new ViewModel();
+   this.BindingContext = viewModel;
+   
+   MapShapeLayer layer = new MapShapeLayer();
+   layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
+   layer.DataSource = viewModel.Data;
+   layer.PrimaryValuePath = "State";
+   layer.ShapeDataField = "name";
+   layer.ShowShapeToolTip = true;
+
+   layer.ShapeTooltipSettings = new MapTooltipSettings()
+        {
+            Background = Color.FromArgb("#002080"),
+            Padding = new Thickness(2),
+            TextStyle = new MapLabelStyle()
+            {
+                FontSize = 14,
+                TextColor = Colors.White,
+                FontAttributes = FontAttributes.Bold
+            }
+        };
+
+   SfMaps maps = new SfMaps();
+   maps.Layer = layer;
+   this.Content = maps;
+}
+
+public class ViewModel
+{
+    public ObservableCollection<Model> Data { get; set; }
+	
+    public ViewModel()
+    {
+        Data = new ObservableCollection<Model>();
+        Data.Add(new Model("India", 21));
+        Data.Add(new Model("United States", 58));
+        Data.Add(new Model("Kazakhstan", 41));
+        Data.Add(new Model("Italy", 48));
+        Data.Add(new Model("Korea", 14));
+        Data.Add(new Model("China", 23));
+    }
+}
+
+public class Model
+{
+    public String State { get; set; }
+    public int Population { get; set; }
+	
+    public Model(string state, int population)
+    {
+        State = state;
+        Population = population;
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Maps shape tooltip settings](images/tooltip/shape-tooltip-settings.png)
+
+
+## Bubble tooltip settings
+
+You can customize the bubble tooltip by `BubbleTooltipSettings` property. It includes `Background`, `Padding` and `TextStyle` properties.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                           DataSource="{Binding Data}"
+                           PrimaryValuePath="State" 
+                           ShapeDataField="name" 
+                           ShapeHoverFill = "Transparent" 
+                           ShapeHoverStroke="Transparent"
+                           ShowBubbles="True"
+                           ShowBubbleTooltip="True">
+
+            <map:MapShapeLayer.BubbleSettings>
+                <map:MapBubbleSettings ColorValuePath="Population" 
+                                       SizeValuePath="Population" 
+                                       Fill="DarkViolet"
+                                       MinSize="30"
+                                       MaxSize="80">
+                </map:MapBubbleSettings>
+            </map:MapShapeLayer.BubbleSettings>
+
+            <map:MapShapeLayer.BubbleTooltipSettings>
+                    <map:MapTooltipSettings Background="#002080"
+                                            Padding="2">
+                        <map:MapTooltipSettings.TextStyle>
+                            <map:MapLabelStyle FontSize="14"
+                                               TextColor="White"
+                                               FontAttributes="Bold">
+                            </map:MapLabelStyle>
+                        </map:MapTooltipSettings.TextStyle>
+                    </map:MapTooltipSettings>
+                </map:MapShapeLayer.BubbleTooltipSettings>
+
+            
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+	public MainPage()
+	{
+		InitializeComponent();
+		
+        ViewModel viewModel = new ViewModel();
+        this.BindingContext = viewModel;
+		
+        MapShapeLayer layer = new MapShapeLayer();
+        layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
+        layer.DataSource = viewModel.Data;
+        layer.PrimaryValuePath = "State";
+        layer.ShapeDataField = "name";
+        layer.ShapeHoverFill = Colors.Transparent;
+        layer.ShapeHoverStroke = Colors.Transparent;
+        layer.ShowBubbles = true;
+        layer.ShowBubbleTooltip = true;
+
+        MapBubbleSettings bubbleSetting = new MapBubbleSettings()
+        {
+            ColorValuePath = "Population",
+            SizeValuePath = "Population",
+            Fill = Colors.DarkViolet,
+            MinSize = 30,
+            MaxSize = 80
+        };
+
+        layer.BubbleSettings = bubbleSetting;
+
+        layer.BubbleTooltipSettings = new MapTooltipSettings()
+        {
+            Background = Color.FromArgb("#002080"),
+            Padding = new Thickness(2),
+            TextStyle = new MapLabelStyle()
+            {
+                FontSize = 14,
+                TextColor = Colors.White,
+                FontAttributes = FontAttributes.Bold
+            }
+        };
+		
+        SfMaps maps = new SfMaps();
+        maps.Layer = layer;
+        this.Content = maps;
+    }
+	
+	public class ViewModel
+	{
+		public ObservableCollection<Model> Data { get; set; }
+		
+		public ViewModel()
+		{
+			Data = new ObservableCollection<Model>();
+			Data.Add(new Model("India", 21));
+			Data.Add(new Model("United States", 58));
+			Data.Add(new Model("Kazakhstan", 41));
+			Data.Add(new Model("Italy", 48));
+			Data.Add(new Model("Korea", 14));
+			Data.Add(new Model("China", 23));
+		}
+	}
+	
+	public class Model
+	{
+		public String State { get; set; }
+		public int Population { get; set; }
+		
+		public Model(string state, int population)
+		{
+			State = state;
+			Population = population;
+		}
+	}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Maps bubble tooltip settings](images/tooltip/bubble-tooltip-settings.png)
+
+## Marker tooltip settings
+
+You can customize the marker tooltip by `MarkerTooltipSettings` property. It includes `Background`, `Padding` and `TextStyle` properties.
+
+<map:SfMaps>
+    <map:SfMaps.Layer>
+            <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                               ShapeStroke="DarkGrey"
+                               ShapeHoverFill = "Transparent" 
+                               ShapeHoverStroke="Transparent" 
+                               ShowMarkerTooltip="True">
+
+                <map:MapShapeLayer.Markers>
+                    <map:MapMarkerCollection>
+                        <map:MapMarker Latitude="1454.6" 
+                                       IconWidth="20" 
+                                       IconHeight="20" 
+                                       IconType="Diamond" 
+                                       Longitude="36.0" />
+                        <map:MapMarker Latitude="34.0479"
+                                       IconWidth="20" 
+                                       IconHeight="20" 
+                                       IconType="Circle" 
+                                       Longitude="100.6124" />
+
+                    </map:MapMarkerCollection>
+                </map:MapShapeLayer.Markers>
+
+                 <map:MapShapeLayer.MarkerTooltipSettings>
+                    <map:MapTooltipSettings Background="#002080"
+                                            Padding="2">
+                        <map:MapTooltipSettings.TextStyle>
+                            <map:MapLabelStyle FontSize="14"
+                                               TextColor="White"
+                                               FontAttributes="Bold">
+                            </map:MapLabelStyle>
+                        </map:MapTooltipSettings.TextStyle>
+                    </map:MapTooltipSettings>
+                </map:MapShapeLayer.MarkerTooltipSettings>
+
+            </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+	public MainPage()
+	{
+		InitializeComponent();
+		
+        MapShapeLayer layer = new MapShapeLayer();
+        layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
+        layer.ShapeHoverFill = Colors.Transparent;
+        layer.ShapeHoverStroke = Colors.Transparent;
+        layer.ShowMarkerTooltip = true;
+
+        MapMarker diamondMarker = new MapMarker();
+        diamondMarker.Longitude = 36.0;
+        diamondMarker.Latitude = 1454.6;
+        diamondMarker.IconHeight = 20;
+        diamondMarker.IconWidth = 20;
+        diamondMarker.IconType = MapIconType.Diamond;
+
+        MapMarker circleMarker = new MapMarker();
+        circleMarker.Longitude = 100.6124;
+        circleMarker.Latitude = 34.0479;
+        circleMarker.IconHeight = 20;
+        circleMarker.IconWidth = 20;
+        circleMarker.IconType = MapIconType.Circle;
+
+        MapMarkerCollection mapMarkers = new MapMarkerCollection();
+        mapMarkers.Add(diamondMarker);
+        mapMarkers.Add(circleMarker);
+
+        layer.Markers = mapMarkers;
+
+        layer.MarkerTooltipSettings = new MapTooltipSettings()
+        {
+            Background = Color.FromArgb("#002080"),
+            Padding = new Thickness(2),
+            TextStyle = new MapLabelStyle()
+            {
+                FontSize = 14,
+                TextColor = Colors.White,
+                FontAttributes = FontAttributes.Bold
+            }
+        };
+		
+        SfMaps maps = new SfMaps();
+        maps.Layer = layer;
+        this.Content = maps;
+    }
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Maps marker tooltip settings](images/tooltip/marker-tooltip-settings.png)
+
 ## Appearance customization
 
 ### Apply data template for tooltip

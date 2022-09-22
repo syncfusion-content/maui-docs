@@ -660,4 +660,169 @@ public class Model
 
 ![Legend position](images/legend/legend-position.png)
 
+## Legend icon customization
+
+You can customize the legend icon using the `IconType` and `IconSize` properties. The default value of `IconType` is [`ShapeType.Rectangle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ShapeType.html#Syncfusion_Maui_Core_ShapeType_Rectangle) and 12 is the default value of `IconSize`.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                           DataSource="{Binding Data}"
+                           PrimaryValuePath="State"
+                           ShapeDataField="name"
+                           ShapeStroke="DarkGray"
+                           ShapeColorValuePath="Population">
+
+            <map:MapShapeLayer.ColorMappings>
+                <map:RangeColorMapping Color="Red"
+                                       From="0"
+                                       To="100"
+                                       Text="0 - 100/km" />
+                <map:RangeColorMapping Color="LightGreen"
+                                       From="101"
+                                       To="200"
+                                       Text="100 - 200/km" />
+                <map:RangeColorMapping Color="Blue"
+                                       From="201"
+                                       To="300"
+                                       Text="200 - 300/km" />
+                <map:RangeColorMapping Color="Orange"
+                                       From="301"
+                                       To="400"
+                                       Text="300 - 400/km" />
+                <map:RangeColorMapping Color="Teal"
+                                       From="401"
+                                       To="500"
+                                       Text="400 - 500/km" />
+                <map:RangeColorMapping Color="Purple"
+                                       From="501"
+                                       To="600"
+                                       Text="500 - 600/km" />
+            </map:MapShapeLayer.ColorMappings>
+
+            <map:MapShapeLayer.Legend>
+                <map:MapLegend SourceType="Shape"
+                               Placement="Top"
+                               IconSize="20,20"
+                               IconType="Diamond" />
+            </map:MapShapeLayer.Legend>
+
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+public MainPage()
+{
+    InitializeComponent();
+    ViewModel viewModel = new ViewModel();
+    this.BindingContext = viewModel;
+
+    MapShapeLayer layer = new MapShapeLayer();
+    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
+    layer.DataSource = viewModel.Data;
+    layer.PrimaryValuePath = "State";
+    layer.ShapeDataField = "name";
+    layer.ShapeStroke = Colors.DarkGrey;
+    layer.ShapeColorValuePath = "Population";
+
+    layer.ColorMappings.Add(new RangeColorMapping() 
+    {
+        Color = Colors.Red,
+        From = 0,
+        To = 100,
+        Text = "< 100/km"
+    });
+    layer.ColorMappings.Add(new RangeColorMapping() 
+    {
+        Color = Colors.LightGreen,
+        From = 101,
+        To = 200,
+        Text = "100 - 200/km"
+    });
+    layer.ColorMappings.Add(new RangeColorMapping()
+    { 
+        Color = Colors.Blue,
+        From = 201,
+        To = 300,
+        Text = "200 - 300/km"
+    });
+    layer.ColorMappings.Add(new RangeColorMapping()
+    {
+        Color = Colors.Orange,
+        From = 301,
+        To = 400,
+        Text = "300 - 400/km"
+    });
+    layer.ColorMappings.Add(new RangeColorMapping()
+    {
+        Color = Colors.Teal,
+        From = 401,
+        To = 500,
+        Text = "400 - 500/km"
+    });
+    layer.ColorMappings.Add(new RangeColorMapping()
+    {
+        Color = Colors.Purple,
+        From = 501,
+        To = 600,
+        Text = "500 - 600/km"
+    });
+
+    MapLegend legendSet = new MapLegend();
+    legendSet.SourceType = LegendSourceType.Shape;
+    legendSet.Placement = Syncfusion.Maui.Core.LegendPlacement.Top;
+    legendSet.IconSize = new Size(20, 20);
+    legendSet.IconType = Syncfusion.Maui.Core.ShapeType.Diamond;
+    
+    layer.Legend = legendSet;
+
+    SfMaps maps = new SfMaps();
+    maps.Layer = layer;
+    this.Content = maps;
+}
+
+public class ViewModel
+{
+    public ObservableCollection<Model> Data { get; set; }
+	
+    public ViewModel()
+    {
+        Data = new ObservableCollection<Model>();
+        Data.Add(new Model("India", 205));
+        Data.Add(new Model("United States", 190));
+        Data.Add(new Model("Kazakhstan", 37));
+        Data.Add(new Model("Italy", 201));
+        Data.Add(new Model("Korea", 512));
+        Data.Add(new Model("Japan", 335));
+        Data.Add(new Model("Cuba", 103));
+        Data.Add(new Model("China", 148));
+    }
+}
+
+public class Model
+{
+    public String State { get; set; }
+    public int Population { get; set; }
+	
+    public Model(string state, int population)
+    {
+        State = state;
+        Population = population;
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Legend icon customization](images/legend/legend-icon-customization.png)
+
 N> You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Maps Legend example](https://github.com/syncfusion/maui-demos/) that shows how to configure a Maps in .NET MAUI.
