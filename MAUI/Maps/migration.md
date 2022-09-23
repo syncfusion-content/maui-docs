@@ -1094,7 +1094,7 @@ public MainPage()
       {{'[MapLegendSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.MapLegendSetting.html)'| markdownify }}
    </td>
    <td>
-      `IconSize`
+      {{'IconSize'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -1103,7 +1103,7 @@ public MainPage()
       {{'[MapLegendSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.MapLegendSetting.html)'| markdownify }}
    </td>
    <td>
-      `IconType`
+      {{'IconType'| markdownify }}
    </td>
 </tr>
 </table>
@@ -1265,7 +1265,7 @@ public MainPage()
       {{'[TooltipSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.TooltipSetting.html)'| markdownify }}
    </td>
    <td>
-      `MapTooltipSettings`
+      {{'MapTooltipSettings'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -1274,7 +1274,7 @@ public MainPage()
       {{'[TooltipSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.TooltipSetting.html)'| markdownify }}
    </td>
    <td>
-      `ShowShapeTooltip`, `ShowBubbleTooltip`, `ShowMarkerTooltip`
+      Divided into {{'ShowShapeTooltip'| markdownify }}, {{'ShowBubbleTooltip'| markdownify }} and {{'ShowMarkerTooltip'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -1284,7 +1284,7 @@ public MainPage()
 
    </td>
    <td>
-      `ShapeTooltipSettings`
+      {{'ShapeTooltipSettings'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -1294,7 +1294,7 @@ public MainPage()
 
    </td>
    <td>
-      `BubbleTooltipSettings`
+      {{'BubbleTooltipSettings'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -1304,7 +1304,7 @@ public MainPage()
 
    </td>
    <td>
-      `MarkerTooltipSettings`
+      {{'MarkerTooltipSettings'| markdownify }}
    </td>
 </tr>
 </table>
@@ -1321,7 +1321,7 @@ public MainPage()
       {{'[BackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.TooltipSetting.html#Syncfusion_SfMaps_XForms_TooltipSetting_BackgroundColor)'| markdownify }}
    </td>
    <td>
-      `Background`
+      {{'Background'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -1329,7 +1329,7 @@ public MainPage()
       {{'[Margin](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.TooltipSetting.html#Syncfusion_SfMaps_XForms_TooltipSetting_Margin)'| markdownify }}
    </td>
    <td>
-      `Padding`
+      {{'Padding'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -1341,7 +1341,7 @@ public MainPage()
 
    </td>
    <td>
-      `TextStyle`
+      {{'TextStyle'| markdownify }}
    </td>
 </tr>
 <table>
