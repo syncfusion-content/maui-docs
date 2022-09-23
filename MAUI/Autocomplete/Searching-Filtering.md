@@ -28,29 +28,6 @@ N> When both the `DisplayMemberPath` and `TextMemberPath` properties have a `nul
 Searching will be performed based on the `DisplayMemberPath` property while entering the text into the selection box when `TextMemberPath` is `null` or `string.Empty`. 
 
 {% tabs %}
-{% highlight xaml %}
-
-<editors:SfAutocomplete
-    x:Name="autocomplete"
-    ItemsSource="{Binding SocialMedias}"
-    DisplayMemberPath="Name" />
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-autocomplete.DisplayMemberPath = "Name";
-
-{% endhighlight %}
-{% endtabs %}
-
-For e.g. After typing `T` in selection box, social medias which have starting letter `T` will be listed in drop-down.
-
-### Searching based on TextMemberPath
-
-Searching will be performed based on the `TextMemberPath` property, while entering the text into the selection box. If `TextMemberPath` is `null` or `string.Empty`, searching will be performed based on `DisplayMemberPath`. 
-
-{% tabs %}
 {% highlight c# %}
 
 //Model.cs
@@ -92,6 +69,36 @@ public class SocialMediaViewModel
 
 <editors:SfAutocomplete
     x:Name="autocomplete"
+    WidthRequest="250" 
+    ItemsSource="{Binding SocialMedias}"
+    DisplayMemberPath="Name" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+autocomplete.DisplayMemberPath = "Name";
+
+{% endhighlight %}
+{% endtabs %}
+
+For e.g. After typing `T` in selection box, social medias which have starting letter `T` will be listed in drop-down.
+
+The following image illustrates the result of the above code:
+
+![.NET MAUI Autocomplete search based on display member path](Images/Searching_Filtering/SearchBasedDisplayMemberPath.png)
+
+### Searching based on TextMemberPath
+
+Searching will be performed based on the `TextMemberPath` property, while entering the text into the selection box. If `TextMemberPath` is `null` or `string.Empty`, searching will be performed based on `DisplayMemberPath`. 
+
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfAutocomplete
+    x:Name="autocomplete"
+    WidthRequest="250"
     ItemsSource="{Binding SocialMedias}"
     TextMemberPath="ID"
     DisplayMemberPath="Name" />
@@ -105,7 +112,9 @@ autocomplete.TextMemberPath = "ID";
 {% endhighlight %}
 {% endtabs %}
 
-For e.g. After typing `5` in selection box.
+The following image illustrates the result of the above code:
+
+![.NET MAUI Autocomplete search based on text member path](Images/Searching_Filtering/SearchBasedTextMemberPath.png)
 
 ## Filtering mode
 
@@ -123,11 +132,11 @@ Set the `TextSearchMode` property value to `StartWith` to filter matching items 
 
 <editors:SfAutocomplete 
     x:Name="autoComplete"
+    WidthRequest="250"
     TextSearchMode="StartsWith"
     ItemsSource="{Binding SocialMedias}"
     DisplayMemberPath="Name"
-    TextMemberPath="Name"
-    Width="250" />
+    TextMemberPath="Name" />
 
 {% endhighlight %}
 
@@ -138,6 +147,10 @@ autocomplete.TextSearchMode = AutocompleteTextSearchMode.StartsWith;
 {% endhighlight %}
 {% endtabs %}
 
+The following image illustrates the result of the above code:
+
+![.NET MAUI Autocomplete filtering based on started text](Images/Searching_Filtering/SearchModeStartsWith.png)
+
 ### Filter with contains text
 
 Set the `TextSearchMode` property value to `Contains` to filter the matching items based on the containing specific text. The first item  in the drop-down list that matches the user input will be highlighted. 
@@ -147,11 +160,11 @@ Set the `TextSearchMode` property value to `Contains` to filter the matching ite
 
 <editors:SfAutocomplete 
     x:Name="autoComplete"
+    WidthRequest="250"
     TextSearchMode="Contains"
     ItemsSource="{Binding SocialMedias}"
     DisplayMemberPath="Name"
-    TextMemberPath="Name"
-    Width="250" />
+    TextMemberPath="Name" />
 
 {% endhighlight %}
 
@@ -161,3 +174,7 @@ autocomplete.TextSearchMode = AutocompleteTextSearchMode.Contains;
 
 {% endhighlight %}
 {% endtabs %}
+
+The following gif image illustrates the result of the above code:
+
+![.NET MAUI Autocomplete filtering based on contains text](Images/Searching_Filtering/SearchModeContains.png)

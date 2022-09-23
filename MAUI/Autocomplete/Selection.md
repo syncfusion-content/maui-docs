@@ -13,7 +13,7 @@ The `Autocomplete` allows user to select a single item from dropdown list.
 
 ## Single selection
 
-The `Autocomplete` allows user to select a single item by entering the value using keyboard, then selecting from the drop-down list and clicking the `Enter` key or `Tab` key. The selected item can be retrieved from the `SelectedItem` property.
+The `Autocomplete` allows user to select an item by entering the value using keyboard, then selecting from the drop-down list and clicking the `Enter` key or `Tab` key. The selected item can be retrieved from the `SelectedItem` property.
 
 {% tabs %}
 {% highlight c# %}
@@ -57,6 +57,7 @@ public class SocialMediaViewModel
 
 <editors:SfAutoComplete
     x:Name="autocomplete"
+    WidthRequest="250"
     ItemsSource="{Binding SocialMedias}"
     DisplayMemberPath="Name"
     TextMemberPath="Name" />
@@ -74,6 +75,10 @@ autocomplete.TextMemberPath = "Name";
 {% endhighlight %}
 {% endtabs %}
 
+The following gif image illustrates the result of the above code:
+
+![.NET MAUI Autocomplete with single selection mode](Images/Selection/SingleSelection.png)
+
 ## Selection changed notification
 
 When an item is selected from the drop-down list, the `SelectionChanged` event is triggered. The `SelectionChanged` event contains the newly selected and previously selected item in the `CurrentSelection` and `PreviousSelection` properties. The `SelectionChanged` contains the following properties:
@@ -86,6 +91,7 @@ When an item is selected from the drop-down list, the `SelectionChanged` event i
 
 <editors:SfAutoComplete 
     x:Name="autocomplete"
+    WidthRequest="250"
     ItemsSource="{Binding SocialMedias}"
     TextMemberPath="Name"
     DisplayMemberPath="Name"
@@ -113,6 +119,10 @@ private async void OnSelectionChanged(object sender, Syncfusion.Maui.Inputs.Sele
 {% endhighlight %}
 {% endtabs %}
 
+The following gif image illustrates the result of the above code:
+
+![.NET MAUI Autocomplete](Images/Selection/SelectionChangedEventNotification.png)
+
 ## Get the selected value
 
 The `SelectedValuePath` property allows you to specify a SelectedValue for a `Autocomplete`'s `SelectedItem`. The `SelectedItem` represents an object in the `Items` collection, and the `Autocomplete` displays the value of the selected item's single property. The `SelectedValuePath` property specifies the path to the property that is used to determine the `SelectedValue` property's value. The default value of `SelectedValue` and `SelectedValuePath` is `null`.
@@ -125,6 +135,7 @@ For example, when you select any `SocialMedia.Name` in the `Autocomplete,` the `
 
 <editors:SfAutoComplete 
     x:Name="autoComplete"
+    WidthRequest="250"
     SelectedValuePath="ID"
     TextMemberPath="Name"   
     DisplayMemberPath="Name"
@@ -154,6 +165,10 @@ private void OnSelectionChanged(object sender, Syncfusion.Maui.Inputs.SelectionC
 {% endhighlight %}
 {% endtabs %}
 
+The following gif image illustrates the result of the above code:
+
+![.NET MAUI Autocomplete selected value](Images/Selection/SelectedValuePath.png)
+
 ## Hide clear button in the Autocomplete
 
 By default, the clear button `X` will be displayed in the editor of the `Autocomplete` control, which can be used to clear the entered input. Hide the clear button in `Autocomplete` control using the `IsClearButtonVisible` property. The default value of `IsClearButtonVisible` property value is `true`.
@@ -163,6 +178,7 @@ By default, the clear button `X` will be displayed in the editor of the `Autocom
 
 <editors:SfAutocomplete 
     x:Name="autocomplete"
+    WidthRequest="250"
     IsClearButtonVisible="false"
     ItemsSource="{Binding SocialMedias}"
     DisplayMemberPath="Name"
@@ -176,3 +192,7 @@ autocomplete.IsClearButtonVisible = false;
 
 {% endhighlight %}
 {% endtabs %}
+
+The following image illustrates the result of the above code:
+
+![.NET MAUI Autocomplete](Images/Selection/IsClearButtonVisible.png)
