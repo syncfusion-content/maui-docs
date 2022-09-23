@@ -29,4 +29,4 @@ The .NET MAUI ProgressBar shows task progress with customizable visuals. It has 
 
 ![ProgresBar control for .NET MAUI.](images/overview/.net_maui_progressbar.PNG)
 
-N> You can get the samples in the [GitHub](https://github.com/syncfusion/maui-demos) link.
+N> Get the samples in the [GitHub](https://github.com/syncfusion/maui-demos) link.

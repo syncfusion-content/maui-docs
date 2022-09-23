@@ -13,9 +13,9 @@ The progress bar provides animation support to visualize the progress value chan
 
 The following properties are used to define the duration of animation for the specific states.
 
-* `AnimationDuration`: Represents animation duration of the determinate state’s progress indicator.
-* `SecondaryAnimationDuration`: Represents animation duration of the determinate state’s secondary progress indicator.
-* `IndeterminateAnimationDuration`: Represents animation duration of the indeterminate state’s indicator.
+* `AnimationDuration:` Represents animation duration of the determinate state’s progress indicator.
+* `SecondaryAnimationDuration:` Represents animation duration of the determinate state’s secondary progress indicator.
+* `IndeterminateAnimationDuration:` Represents animation duration of the indeterminate state’s indicator.
 
 ## Easing effects
 
@@ -108,4 +108,4 @@ this.Content = circularProgressBar;
 
 ![.NET MAUI Progress Bar with indeterminate animation](images/animation/indeterminate.gif)
 
-N> You can refer to our `.NET MAUI ProgressBar` feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI ProgressBar example](https://github.com/syncfusion/maui-demos/) that shows how to configure a ProgressBar in .NET MAUI.
+N> Refer to our `.NET MAUI ProgressBar` feature tour page for its groundbreaking feature representations. Also explore our [.NET MAUI ProgressBar example](https://github.com/syncfusion/maui-demos/) that shows how to configure a ProgressBar in .NET MAUI.
