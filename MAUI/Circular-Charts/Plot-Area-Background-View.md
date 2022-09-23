@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Plot Area Background View  in .NET MAUI Chart control | Syncfusion
-description: This section explains about how to configure the Plot Area Backgrund and its features in .NET MAUI Chart (SfCartesianChart).
+description: This section explains about how to configure the Plot Area Backgrund and its features in .NET MAUI Chart (SfCircularChart).
 platform: maui
 control: SfCircularChart
 documentation: ug
@@ -22,19 +22,24 @@ You can customize the plot area using the following:
 {% highlight xaml %}
 
 <chart:SfCircularChart>
-<chart:SfCircularChart.PlotAreaBackgroundView>
-    <AbsoluteLayout>
-      <Border Stroke="Black" StrokeThickness="2"
-              AbsoluteLayout.LayoutBounds="0,0,1,1"
-              AbsoluteLayout.LayoutFlags="All"/>
-       <Label Text="Copyright @ 2022 Parker Industries"
-                    AbsoluteLayout.LayoutBounds="1,1,240,30"
-                    AbsoluteLayout.LayoutFlags="PositionProportional"/>
-       <Label Text="Confidential" TextColor="Red"
-                       AbsoluteLayout.LayoutBounds="0,1,100,29"
-                       AbsoluteLayout.LayoutFlags="PositionProportional"/>
+   <chart:SfCircularChart.PlotAreaBackgroundView>
+      <AbsoluteLayout>
+         <Label Text="Copyright @ 2022 Parker Industries"
+                FontSize="18"
+                AbsoluteLayout.LayoutBounds="1,1,310,33"
+                AbsoluteLayout.LayoutFlags="PositionProportional"
+                Opacity="0.4" />
+         <Label Text="CONFIDENTIAL"
+                Rotation="340"
+                FontSize="80"
+                FontAttributes="Bold,Italic"
+                TextColor="Gray"
+                Margin="10,0,0,0"
+                AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1"
+                AbsoluteLayout.LayoutFlags="PositionProportional"
+                Opacity="0.3" />
     </AbsoluteLayout>
-</chart:SfCircularChart.PlotAreaBackgroundView>
+   </chart:SfCircularChart.PlotAreaBackgroundView>
 </chart:SfCircularChart>
 
 {% endhighlight %}
@@ -43,19 +48,21 @@ You can customize the plot area using the following:
 
 SfCircularChart chart = new SfCircularChart();
 AbsoluteLayout absoluteLayout = new AbsoluteLayout();
-var border = new Border() { Stroke = Colors.Black,StrokeThickness = 2 };
-AbsoluteLayout.SetLayoutBounds(border, new Rect(0, 0, 1, 1));
-AbsoluteLayout.SetLayoutFlags(border, Microsoft.Maui.Layouts.AbsoluteLayoutFlags.All);
-absoluteLayout.Children.Add(border);
-var copyRight = new Label() { Text = "Copyright @ 2022 Parker Industries" };
+var copyRight = new Label() { Text = "Copyright @ 2022 Parker Industries", FontSize = 18, Opacity = 0.4 };
 AbsoluteLayout.SetLayoutBounds(copyRight, new Rect(1, 1, 240, 30));
-AbsoluteLayout.SetLayoutFlags(copyRight, Microsoft.Maui.Layouts.AbsoluteLayoutFlags.
-PositionProportional);
+AbsoluteLayout.SetLayoutFlags(copyRight, Microsoft.Maui.Layouts.AbsoluteLayoutFlags.PositionProportional);
 absoluteLayout.Children.Add(copyRight);
-var watermark = new Label() { Text = "Confidential" };
-AbsoluteLayout.SetLayoutBounds(watermark, new Rect(0, 1, 100, 29));
-AbsoluteLayout.SetLayoutFlags(watermark, Microsoft.Maui.Layouts.AbsoluteLayoutFlags.
-PositionProportional);
+var watermark = new Label()
+{
+   Text = "CONFIDENTIAL",
+   Rotation = 340,
+   FontSize = 80,
+   FontAttributes = FontAttributes.Bold,
+   TextColor = Colors.Gray,
+   Opacity = 0.3,
+};
+AbsoluteLayout.SetLayoutBounds(watermark, new Rect(0.5, 0.5, -1, -1));
+AbsoluteLayout.SetLayoutFlags(watermark, Microsoft.Maui.Layouts.AbsoluteLayoutFlags.PositionProportional);
 absoluteLayout.Children.Add(watermark);
 chart.PlotAreaBackgroundView = absoluteLayout;
 this.Content = chart;
@@ -64,5 +71,5 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Plot Area Background View in MAUI chart](Plot-Area-Background-View_images/plot_view.png)
+![Watermark in .NET MAUI Charts](Plot-Area-Background-View_images/plot_view.png)
 
