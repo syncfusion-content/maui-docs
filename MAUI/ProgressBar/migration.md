@@ -1,24 +1,24 @@
 ---
 layout: post
 title: Migrate from Xamarin to .NET MAUI  ProgressBar | Syncfusion
-description: Learn here all about Migrating from Syncfusion Xamarin SfProgressBar to Syncfusion .NET MAUI SfProgressBar control and more.
+description: Learn here all about Migrating from Syncfusion Xamarin ProgressBar to Syncfusion .NET MAUI ProgressBar control and more.
 platform: MAUI
 control: ProgressBar
 documentation: ug
 ---  
 
-# Migrate from Xamarin.Forms SfProgressBar to .NET MAUI SfProgressBar
+# Migrate from Xamarin.Forms ProgressBar to .NET MAUI ProgressBar
 
-To make the migration from the [Xamarin SfProgressBar](https://www.syncfusion.com/xamarin-ui-controls/xamarin-progressbar) to `.NET MAUI SfProgressBar` easier, most of the APIs from the Xamarin SfProgressBar were kept in the .NET MAUI SfProgressBar. However, to maintain the consistency of API naming in the .NET MAUI SfProgressBar, some of the APIs have been renamed. Please find the difference in the following topics.
+To make the migration from the [Xamarin ProgressBar](https://www.syncfusion.com/xamarin-ui-controls/xamarin-progressbar) to `.NET MAUI ProgressBar` easier, most of the APIs from the Xamarin ProgressBar were kept in the .NET MAUI ProgressBar. However, to maintain the consistency of API naming in the .NET MAUI ProgressBar, some of the APIs have been renamed. Please find the difference in the following topics.
 
 ## Initialize control
 
-To initialize the control, import the ProgressBar namespace and initialize the SfProgressBar as shown in the following code sample.
+To initialize the control, import the ProgressBar namespace and initialize the ProgressBar as shown in the following code sample.
 
 <table>
 <tr>
-<th>Xamarin SfProgressBar</th>
-<th>.NET MAUI SfProgressBar</th></tr>
+<th>Xamarin ProgressBar</th>
+<th>.NET MAUI ProgressBar</th></tr>
 <tr>
 <td>
 {% tabs %}
@@ -93,8 +93,8 @@ SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 
 <table> 
 <tr>
-<th>Xamarin SfProgressBar</th>
-<th>.NET MAUI SfProgressBar</th>
+<th>Xamarin ProgressBar</th>
+<th>.NET MAUI ProgressBar</th>
 <th>Description</th></tr>
 <tr>
 <td>{{'[Progress](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_Progress)'| markdownify }}</td>
@@ -153,6 +153,8 @@ SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 <td>{{'IndeterminateIndicatorWidthFactor'| markdownify }}</td>
 <td>Gets or sets the value that specifies width of the indeterminate indicator.</td></tr>
 </table> 
+
+The following code example explains how to use the common properties in the Xamarin progress bar and the .NET MAUI progress bar.
 
 <table>
 <tr>
@@ -411,8 +413,8 @@ this.Content = circularProgressBar;
 
 <table> 
 <tr>
-<th>Xamarin SfProgressBar</th>
-<th>.NET MAUI SfProgressBar</th>
+<th>Xamarin ProgressBar</th>
+<th>.NET MAUI ProgressBar</th>
 <th>Description</th></tr>
 <tr>
 <td>{{'[SecondaryProgress](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfLinearProgressBar.html#Syncfusion_XForms_ProgressBar_SfLinearProgressBar_SecondaryProgress)'| markdownify }}</td>
@@ -436,6 +438,8 @@ this.Content = circularProgressBar;
 <td>Gets or sets a value that specifies the secondary progress animation duration in milliseconds.</td></tr>
 
 </table> 
+
+The following code example explains how to initialize the Xamarin SfLinearProgressBar and the .NET MAUI SfLinearProgressBar along with its properties.
 
 <table>
 <tr>
@@ -541,8 +545,8 @@ this.Content = linearProgressBar;
 
 <table> 
 <tr>
-<th>Xamarin SfProgressBar</th>
-<th>.NET MAUI SfProgressBar</th>
+<th>Xamarin ProgressBar</th>
+<th>.NET MAUI ProgressBar</th>
 <th>Description</th></tr>
 <tr>
 <td>{{'[StartAngle](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfCircularProgressBar.html#Syncfusion_XForms_ProgressBar_SfCircularProgressBar_StartAngle)'| markdownify }}</td>
@@ -590,6 +594,8 @@ this.Content = linearProgressBar;
 <td>Gets or sets a value indicating whether to show the progress value label or not in SfCircularProgressBar.</td></tr>
 
 </table> 
+
+The following code example explains how to initialize the Xamarin SfCircularProgressBar and the .NET MAUI SfCircularProgressBar along with its properties.
 
 <table>
 <tr>
@@ -710,6 +716,168 @@ label.SetBinding(Label.TextProperty, new Binding("Progress", source: circularPro
 circularProgressBar.Content = label;
 this.Content = circularProgressBar;
 
+...
+{% endhighlight %}
+
+{% endtabs %}
+</td>
+</tr>
+</table>
+
+## Events
+
+<table> 
+<tr>
+<th>Xamarin ProgressBar</th>
+<th>.NET MAUI ProgressBar</th>
+<th>Description</th></tr>
+<tr>
+<td>{{'[ValueChanged](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_ValueChanged)'| markdownify }}</td>
+<td>{{'ProgressChanged'| markdownify }}</td>
+<td>The value change event occurs when the Progress is changed.</td></tr>
+<tr>
+<td>{{'[ProgressCompleted](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_ProgressCompleted)'| markdownify }}</td>
+<td>{{'ProgressCompleted'| markdownify }}</td>
+<td>The progress completed event occurs when Progress value attains Maximum value in ProgressBar.</td></tr>
+</table> 
+
+The following code example explains how to utilize the Xamarin progress bar and the .NET MAUI progress bar progress changed and progress completed event.
+
+<table>
+<tr>
+<th>Xamarin</th>
+</tr>
+<tr>
+<td>
+{% tabs %} 
+{% highlight xaml %}
+
+<ContentPage
+    xmlns:progressBar="clr-namespace:Syncfusion.XForms.ProgressBar;assembly=Syncfusion.SfProgressBar.XForms">
+
+...    
+
+<!--Snippet for the value changed event-->
+
+<progressBar:SfLinearProgressBar x:Name="LinearProgressBar" 
+                                 ValueChanged="LinearProgressBar_ValueChanged" 
+                                 Progress="100" />
+
+<!--Snippet for the progress completed event-->
+
+<progressBar:SfCircularProgressBar Minimum="100" 
+                               Maximum="500" 
+                               ProgressCompleted="SfCircularProgressBar_ProgressCompleted" 
+                               Progress="500">
+    <progressBar:SfCircularProgressBar.Content>
+        <Grid WidthRequest="150">
+            <Label x:Name="Label" 
+               Text="Start" 
+               FontSize="15"
+               HorizontalTextAlignment="Center" 
+               VerticalTextAlignment="Center" />
+        </Grid>
+    </progressBar:SfCircularProgressBar.Content>
+
+
+...
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+using Syncfusion.XForms.ProgressBar;
+
+...
+
+private void LinearProgressBar_ValueChanged(object sender, ProgressValueEventArgs e)
+{
+    if (e.Progress < 50)
+    {
+        this.LinearProgressBar.ProgressColor = Color.Red;
+    }
+    else if (e.Progress >= 50)
+    {
+        this.LinearProgressBar.ProgressColor = Color.Green;
+    }
+}
+
+private void SfCircularProgressBar_ProgressCompleted(object sender, ProgressValueEventArgs e)
+{
+    this.Label.Text = "Completed";
+}
+
+...
+
+{% endhighlight %}
+{% endtabs %}
+</td>
+</tr>
+<tr>
+<th>.NET MAUI</th>
+</tr>
+<tr>
+<td>
+{% tabs %} 
+
+{% highlight xaml %}
+
+<ContentPage
+    xmlns:progressBar="clr-namespace:Syncfusion.Maui.ProgressBar;assembly=Syncfusion.Maui.ProgressBar">
+
+...
+
+<!--Snippet for the progress changed event-->
+
+<progressBar:SfLinearProgressBar x:Name="LinearProgressBar" 
+                                 ProgressChanged="LinearProgressBar_ProgressChanged" 
+                                 Progress="100" />
+
+<!--Snippet for the progress completed event-->
+
+<progressBar:SfCircularProgressBar Minimum="100" 
+                                   Maximum="500" 
+                                   ProgressCompleted="CircularProgressBar_ProgressCompleted" 
+                                   Progress="500">
+    <progressBar:SfCircularProgressBar.Content>
+        <Grid WidthRequest="150">
+            <Label x:Name="Label" 
+                   Text="Start" 
+                   FontSize="15"
+                   HorizontalTextAlignment="Center" 
+                   VerticalTextAlignment="Center" />
+        </Grid>
+    </progressBar:SfCircularProgressBar.Content>
+</progressBar:SfCircularProgressBar>
+
+...
+
+</ContentPage>
+ 
+{% endhighlight %}
+
+{% highlight C# %}
+
+using Syncfusion.Maui.ProgressBar;
+...
+
+private void LinearProgressBar_ProgressChanged(object sender, ProgressValueEventArgs e)
+{
+    if (e.Progress < 50)
+    {
+        this.LinearProgressBar.ProgressFill = Colors.Red;
+    }
+    else if (e.Progress >= 50)
+    {
+        this.LinearProgressBar.ProgressFill = Colors.Green;
+    }
+}
+
+private void CircularProgressBar_ProgressCompleted(object sender, ProgressValueEventArgs e)
+{
+    this.Label.Text = "Completed";
+}
 ...
 {% endhighlight %}
 
