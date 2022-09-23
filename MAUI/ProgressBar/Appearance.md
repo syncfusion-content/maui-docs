@@ -66,8 +66,8 @@ The following code sample demonstrates how to map the solid color range in the p
         <progressBar:ProgressGradientStop Color="#2f7ecc" Value="50"/>
         <progressBar:ProgressGradientStop Color="#e9648e" Value="50"/>
         <progressBar:ProgressGradientStop Color="#e9648e" Value="75"/>
-        <progressBar:ProgressGradientStop Color="#e9648e" Value="75"/>
-        <progressBar:ProgressGradientStop Color="#e9648e" Value="100"/>
+        <progressBar:ProgressGradientStop Color="#fbb78a" Value="75"/>
+        <progressBar:ProgressGradientStop Color="#fbb78a" Value="100"/>
     </progressBar:SfLinearProgressBar.GradientStops>
 </progressBar:SfLinearProgressBar>
 
@@ -192,10 +192,11 @@ In the linear progress bar, the height of the track, progress, and secondary pro
 
 {% highlight xaml %}
 
-<progressBar:SfLinearProgressBar Progress="100" 
+<progressBar:SfLinearProgressBar Progress="30" 
                                  TrackHeight="10" 
                                  ProgressHeight="10"
-                                 SecondaryProgressHeight="10" />
+                                 SecondaryProgressHeight="10"
+                                 SecondaryProgress="70" />
 
 {% endhighlight %}
 
@@ -203,6 +204,7 @@ In the linear progress bar, the height of the track, progress, and secondary pro
 
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 linearProgressBar.Progress = 100;
+linearProgressBar.SecondaryProgress = 100;
 linearProgressBar.TrackHeight = 10;
 linearProgressBar.ProgressHeight = 10;
 linearProgressBar.SecondaryProgressHeight = 10;
