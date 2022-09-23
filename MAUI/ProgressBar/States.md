@@ -17,7 +17,7 @@ This is the default state. Use it when the progress estimation is known.
 
 ## Indeterminate
 
-By enabling the `IsIndeterminate` property, the state of the progress bar can be changed to indeterminate when the progress cannot be estimated or is not being calculated. It can be combined with a determinate mode to know that the application is estimating progress before the actual progress starts.
+By enabling the `IsIndeterminate` property, the state of the progress bar can be changed to indeterminate when the progress cannot be estimated or is not being calculated. It can be combined with a determinate mode to know that the application estimates progress before the actual progress starts.
 
 {% tabs %} 
 
