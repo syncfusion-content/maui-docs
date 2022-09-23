@@ -38,13 +38,15 @@ It represents the value currently selected in the slider. The slider's thumb is 
 
 {% highlight C# %}
 
-SfSlider slider = new SfSlider();
-slider.Minimum = "20";
-slider.Maximum = "20";
-slider.Value = "20";
-slider.Interval = "10";
-slider.ShowTicks = true;
-slider.ShowLabel = true;
+SfSlider slider = new SfSlider()
+{
+    Minimum = 20,
+    Maximum = 60,
+    Value = 40,
+    Interval = 10,
+    ShowTicks = true,
+    ShowLabels = true,
+};
 
 {% endhighlight %}
 

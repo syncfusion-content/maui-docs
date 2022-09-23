@@ -109,24 +109,24 @@ The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.S
 
 {% highlight xaml %}
 
-<sliders:SfSlider Minimum="0" 
-		          Maximum="10" 
-		          Value="6" 
-		          ShowLabels="True" 
-		          Interval="2">
-</sliders:SfSlider>
-
+<sliders:SfSlider Minimum="0"
+                  Maximum="10"
+                  Value="5"
+                  ShowLabels="True"
+                  Interval="2" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfSlider slider = new SfSlider();
-slider.Minimum = 20;
-slider.Maximum = 100;
-slider.Value = 60;
-slider.ShowLabels = true;
-slider.Interval = 2;
+SfSlider slider = new SfSlider()
+{
+    Minimum = 0,
+    Maximum = 10,
+    Value = 5,
+    Interval = 2,
+    ShowLabels = true,
+};
 
 {% endhighlight %}
 
@@ -142,28 +142,28 @@ The [`ShowTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.Sl
 
 {% highlight xaml %}
 
-<sliders:SfSlider Minimum="0" 
-		          Maximum="10" 
-		          Value="6" 
-		          ShowLabels="True"  
-		          ShowTicks="True" 
-		          Interval="2" 
-		          MinorTicksPerInterval="1">
-</sliders:SfSlider>
-
+<sliders:SfSlider Minimum="0"
+                  Maximum="10"
+                  Value="5"
+                  Interval="2"
+                  ShowTicks="True"
+                  ShowLabels="True"
+                  MinorTicksPerInterval="1" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfSlider slider = new SfSlider();
-slider.Minimum = 20;
-slider.Maximum = 100;
-slider.Value = 60;
-slider.ShowLabels = true;
-slider.Interval = 2;
-slider.ShowTicks = true;
-slider.MinorTicksPerInterval = 1;
+SfSlider slider = new SfSlider()
+{
+    Minimum = 0,
+    Maximum = 10,
+    Value = 5,
+    Interval = 2,
+    ShowLabels = true,
+    ShowTicks = true,
+    MinorTicksPerInterval = 1
+};
 
 {% endhighlight %}
 
@@ -180,28 +180,29 @@ The [`Orientation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.
 {% highlight xaml %}
 
 <sliders:SfSlider Orientation="Vertical"
-                  Minimum="0" 
-		          Maximum="10" 
-		          Value="6" 
-		          ShowLabels="True"  
-		          ShowTicks="True" 
-		          Interval="2" 
-		          MinorTicksPerInterval="1">
-</sliders:SfSlider>
+                  Minimum="0"
+                  Maximum="10"
+                  Value="5"
+                  Interval="2"
+                  ShowLabels="True"
+                  ShowTicks="True"
+                  MinorTicksPerInterval="1" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfSlider slider = new SfSlider();
-slider.Orientation = SliderOrientation.Vertical;
-slider.Minimum = 20;
-slider.Maximum = 100;
-slider.Value = 60;
-slider.ShowLabels = true;
-slider.Interval = 2;
-slider.ShowTicks = true;
-slider.MinorTicksPerInterval = 1;
+SfSlider slider = new SfSlider()
+{
+    Orientation = SliderOrientation.Vertical,
+    Minimum = 0,
+    Maximum = 10,
+    Value = 5,
+    Interval = 2,
+    ShowLabels = true,
+    ShowTicks = true,
+    MinorTicksPerInterval = 1
+};
 
 {% endhighlight %}
 
@@ -217,29 +218,30 @@ Invert the slider using the [`IsInversed`](https://help.syncfusion.com/cr/maui/S
 
 {% highlight xaml %}
 
-<sliders:SfSlider IsInversed="True"
-                  Minimum="0" 
-		          Maximum="10" 
-		          Value="6" 
-		          ShowLabels="True"  
-		          ShowTicks="True" 
-		          Interval="2" 
-		          MinorTicksPerInterval="1">
-</sliders:SfSlider>
+<sliders:SfSlider Minimum="0"
+                  Maximum="10"
+                  Value="5"
+                  IsInversed="True"
+                  Interval="2"
+                  ShowTicks="True"
+                  ShowLabels="True"
+                  MinorTicksPerInterval="1" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfSlider slider = new SfSlider();
-slider.IsInversed = true;
-slider.Minimum = 20;
-slider.Maximum = 100;
-slider.Value = 60;
-slider.ShowLabels = true;
-slider.Interval = 2;
-slider.ShowTicks = true;
-slider.MinorTicksPerInterval = 1;
+SfSlider slider = new SfSlider()
+{
+    Minimum = 0,
+    Maximum = 10,
+    Value = 5,
+    IsInversed = true,
+    Interval = 2,
+    ShowLabels = true,
+    ShowTicks = true,
+    MinorTicksPerInterval = 1
+};
 
 {% endhighlight %}
 
@@ -256,27 +258,30 @@ Add prefix or suffix to the labels using the [`NumberFormat`](https://help.syncf
 
 {% highlight xaml %}
 
-<sliders:SfSlider Minimum="20" 
-		          Maximum="100" 
-		          Value="60" 
-		          NumberFormat="$##" 
+<sliders:SfSlider Minimum="20"
+                  Maximum="100"
+                  Value="60"
+                  Interval="20"
+                  NumberFormat="$##"
+                  ShowLabels="True"
                   ShowTicks="True"
-                  MinorTicksPerInterval="1"
-		          ShowLabels="True" 
-		          Interval="20">
-</sliders:SfSlider>
+                  MinorTicksPerInterval="1" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
- SfSlider slider = new SfSlider();
- slider.Minimum = 20;
- slider.Maximum = 100;
- slider.Value = 60;
- slider.ShowLabels = true;
- slider.Interval = 20;
- slider.NumberFormat = "$##";
+SfSlider slider = new SfSlider()
+{
+    Minimum = 20,
+    Maximum = 100,
+    Value = 60,
+    Interval = 20,
+    NumberFormat = "$##",
+    ShowLabels = true,
+    ShowTicks = true,
+    MinorTicksPerInterval = 1
+};
 
 {% endhighlight %}
 

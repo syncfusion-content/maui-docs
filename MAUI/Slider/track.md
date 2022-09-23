@@ -118,7 +118,8 @@ Change the state of the slider to disabled by setting `false` to the `IsEnabled`
 
 <ContentPage.Resources>
     <Style TargetType="sliders:SfSlider">
-        <Setter Property="Interval" Value="0.25" />
+        <Setter Property="Interval"
+                Value="0.25" />
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup>
@@ -126,10 +127,10 @@ Change the state of the slider to disabled by setting `false` to the `IsEnabled`
                         <VisualState.Setters>
                             <Setter Property="TrackStyle">
                                 <Setter.Value>
-                                    <sliders:SliderTrackStyle ActiveSize="8" 
-                                                                  InactiveSize="6" 
-                                                                  ActiveFill="#EE3F3F" 
-                                                                  InactiveFill="#F7B1AE"/>
+                                    <sliders:SliderTrackStyle ActiveSize="8"
+                                                              InactiveSize="6"
+                                                              ActiveFill="#EE3F3F"
+                                                              InactiveFill="#F7B1AE" />
                                 </Setter.Value>
                             </Setter>
                         </VisualState.Setters>
@@ -138,10 +139,10 @@ Change the state of the slider to disabled by setting `false` to the `IsEnabled`
                         <VisualState.Setters>
                             <Setter Property="TrackStyle">
                                 <Setter.Value>
-                                    <sliders:SliderTrackStyle ActiveSize="10" 
-                                                                  InactiveSize="8"
-                                                                  ActiveFill="Gray" 
-                                                                  InactiveFill="LightGray" />
+                                    <sliders:SliderTrackStyle ActiveSize="10"
+                                                              InactiveSize="8"
+                                                              ActiveFill="Gray"
+                                                              InactiveFill="LightGray" />
                                 </Setter.Value>
                             </Setter>
                         </VisualState.Setters>
@@ -154,10 +155,12 @@ Change the state of the slider to disabled by setting `false` to the `IsEnabled`
 
 <ContentPage.Content>
     <VerticalStackLayout>
-        <Label Text="Enabled Slider" Padding="0,10"/>
-        <sliders:SfSlider/>
-        <Label Text="Disabled Slider" Padding="0,10"/>
-        <sliders:SfSlider IsEnabled="False"/>
+        <Label Text="Enabled Slider"
+               Padding="0,10" />
+        <sliders:SfSlider />
+        <Label Text="Disabled Slider"
+               Padding="0,10" />
+        <sliders:SfSlider IsEnabled="False" />
     </VerticalStackLayout>
 </ContentPage.Content>
 
