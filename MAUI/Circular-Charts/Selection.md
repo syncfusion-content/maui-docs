@@ -9,7 +9,7 @@ documentation: ug
 
 # Selection in .NET MAUI SfCircularChart
 
-[SfCircularChart]() provides selection behavior, which allows you to select or highlight a chart segment using [DataPointSelectionBehavior]().
+The [SfCircularChart]() provides selection behavior, which allows you to select or highlight a chart segment using the [DataPointSelectionBehavior]().
 
 ## Enable Selection
 
@@ -46,25 +46,25 @@ chart.Series.Add(series);
 
 {% endtabs %}
 
-![Segment selection support in MAUI CircularChart](Selection_images/maui_chart_segment_selection.png)
+![Segment Selection Support in MAUI SfCircularChart](Selection_images/maui_chart_segment_selection.png)
 
 ## Properties
 
 The Selection feature can be configured using the following properties:
 
-* [Type]() - Gets or Sets the ChartSelectionType Enum value for the Selection Behavior.     
+* [Type]() - Gets or sets the ChartSelectionType Enum value for the Selection Behavior.     
 The following ChartSelectionType can be achieved during Selection:
     * Single
     * SingleDeselect
     * Multiple
     * None
-* [SelectionBrush]() - Gets or Sets  the SelectionBrush color value for Selection Behavior.
-* [SelectedIndex]() - Gets or Sets  the index value of the segment that should be selected during the Selection.
-* [SelectedIndexes]() - Gets or Sets  the list of indexes of the segments that should be selected during the Selection.
+* [SelectionBrush]() - Gets or sets  the SelectionBrush color value for the Selection Behavior.
+* [SelectedIndex]() - Gets or sets the index value of the segment that should be selected during the selection.
+* [SelectedIndexes]() - Gets or sets the list of indexes of the segments that should be selected during the selection.
 
 ## Rendering Selection Programmatically
 
-[SfCircularChart]() provides support to select a point programmatically on a chart using the [SelectionBrush](), [SelectedIndex]() and [Type]() properties of [ChartSelectionBehavior]().
+The [SfCircularChart]() provides support to select a point programmatically on a chart using the [SelectionBrush]() and  [SelectedIndex](), properties of the [ChartSelectionBehavior]().
 
 {% tabs %}
 
@@ -72,7 +72,7 @@ The following ChartSelectionType can be achieved during Selection:
 
 <chart:PieSeries>
     <chart:PieSeries.SelectionBehavior>
-        <chart:DataPointSelectionBehavior SelectionBrush="BlueViolet" SelectedIndex="5" Type="Single"/>
+        <chart:DataPointSelectionBehavior SelectionBrush="BlueViolet" SelectedIndex="5" />
     </chart:PieSeries.SelectionBehavior>
 </chart:PieSeries>
 
@@ -85,7 +85,6 @@ SfCircularChart chart = new SfCircularChart();
 DataPointSelectionBehavior selection = new DataPointSelectionBehavior();
 selection.SelectionBrush = Brush.BlueViolet;
 selection.SelectedIndex = 5;
-selection.Type = ChartSelectionType.Single;
 
 PieSeries series = new PieSeries();
 series.SelectionBehavior = selection;
@@ -95,7 +94,7 @@ chart.Series.Add(series);
 
 {% endtabs %}
 
-![Rendering DataPoint Selection Programmatically](Selection_images/data_point_selection_properties.PNG)
+![Rendering Selection Programmatically in MAUI SfCircularChart](Selection_images/data_point_selection_properties.PNG)
 
 ## ClearSelection Method
 
@@ -105,11 +104,11 @@ The Selection Behavior has a public method called [ClearSelection ()](), which r
 
 {% highlight c# %}
 
-SfCircularChart chart = new SfCircularChart();
+SfCircularChart chart = new SfCircularChart ();
 
-DataPointSelectionBehavior selection = new DataPointSelectionBehavior();
+DataPointSelectionBehavior selection = new DataPointSelectionBehavior ();
 
-PieSeries series = new PieSeries();
+PieSeries series = new PieSeries ();
 series.SelectionBehavior = selection;
 chart.Series.Add(series);
 
@@ -121,18 +120,19 @@ selection.ClearSelection();
 
 ## Events
 
-The following public Chart Selection Events are available in [ChartSelectionBehavior]().
+The following public Chart Selection Events are available in the [ChartSelectionBehavior]():
 
 ### SelectionChanging
 
-The [SelectionChanging]() event is triggered before any data point has been selected. This event is cancelable because it inherits CancelEventArgs which has a public property [Cancel]() that holds a Boolean value indicating whether to continue the segment selection or not, and below properties are contained in the following event arguments.
+The [SelectionChanging]() event is triggered before any data point has been selected. This event is cancelable because it inherits the CancelEventArgs, which has a public property [Cancel]() that holds a Boolean value indicating whether to continue the segment selection or not. The following properties are contained in the event arguments:
 
-* [NewIndexes]() - Holds the index of the selected data point.
-* [OldIndexes]() - Holds the index of the deselected data point.
+* [NewIndexes]() - Gets or sets the index of the selected data point before selection changes occur.
+* [OldIndexes]() - Gets or sets the index of the deselected data point before selection changes occur.
+
 
 ### SelectionChanged
 
-The [SelectionChanged]() event is triggered after a data point has been selected. And these following details are contained in the following event arguments.
+The [SelectionChanged]() event is triggered after a data point has been selected. The following properties are contained in the event arguments:
 
-* [NewIndexes]() - Holds the index of the selected data point.
-* [OldIndexes]() - Holds the index of the deselected data point.
+* [NewIndexes]() - Gets or sets the index of the selected data point after selection changes occur.
+* [OldIndexes]() - Gets or sets the index of the deselected data point after selection changes occur.
