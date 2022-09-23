@@ -9,7 +9,7 @@ documentation: ug
 
 # Selection in .NET MAUI SfCartesianChart
 
-[SfCartesianChart]() provides selection behavior support, which allows you to select or highlight a segment in a series or the series itself using [DataPointSelectionBehavior]() or [SeriesSelectionBehavior]().
+[SfCartesianChart]() provides selection behavior support, which allows you to select or highlight a segment in a series or a series in the Chart using the [DataPointSelectionBehavior]() or [SeriesSelectionBehavior]().
 
 ## Enable DataPointSelection
 
@@ -115,15 +115,17 @@ chart.Series.Add(series3);
 
 ## Properties
 
-* [Type]() - Gets or Sets the ChartSelectionType Enum value for the Selection Behavior.     
+The following properties are common for both Selection Behaviors in [SfCartesianChart]() and [ChartSeries](), and the Selection feature can be configured using the following properties:
+
+* [Type]() - Gets or sets the ChartSelectionType Enum value for the Selection Behavior.     
 The following ChartSelectionType can be achieved during Selection:
     * Single
     * SingleDeselect
     * Multiple
     * None
-* [SelectionBrush]() - Gets or Sets the SelectionBrush color value for Selection Behavior.
-* [SelectedIndex]() - Gets or Sets the index value of the segment or series that should be selected during the Selection.
-* [SelectedIndexes]() - Gets or Sets the list of indexes of the segments or series that should be selected during the Selection.
+* [SelectionBrush]() - Gets or sets the SelectionBrush color value for the Selection Behavior.
+* [SelectedIndex]() - Gets or sets the index value of the segment or series that should be selected during the Selection.
+* [SelectedIndexes]() - Gets or sets the list of indexes of the segments or series that should be selected during the Selection.
 
 ## Enable MultiSelection
 
@@ -167,7 +169,7 @@ chart.SelectionBehavior = selection;
 ![Multiple SeriesSelection support in MAUI SfCartesianChart](Selection_images/maui_multi_seriesselection.PNG)
 ![Multiple DataPointSelection support in MAUI SfCartesianChart](Selection_images/maui_multi_dataPoint_selection.png)
 
-N> The Multiple Selection in [DataPointSelectionBehavior]() can be performed by doing the same using the ChartSeries SelectionBehavior property.
+N> The Multiple Selection in [DataPointSelectionBehavior]() can also be performed by using the ChartSeries SelectionBehavior property.
 
 ## ClearSelection Method
 
@@ -191,7 +193,7 @@ selection.ClearSelection();
 
 {% endtabs %}
 
-N> The [ClearSelection ()]() method can be performed in [SeriesSelectionBehavior]() by using the SfCartesianChart SelectionBehavior property. 
+N> The [ClearSelection ()]() method can also be performed in [SeriesSelectionBehavior]() by using the SfCartesianChart SelectionBehavior property. 
 
 ## Events
 
@@ -199,14 +201,14 @@ The following public Chart Selection Events are available in [ChartSelectionBeha
 
 ### SelectionChanging
 
-The [SelectionChanging]() event is triggered before any data point has been selected. This event is cancelable because it inherits CancelEventArgs, which has a public property [Cancel]() that holds a Boolean value indicating whether to continue the selection or not, and the properties below are contained in the following event arguments.
+The [SelectionChanging]() event is triggered before any data point has been selected. This event is cancelable because it inherits CancelEventArgs, which has a public property [Cancel]() that holds a Boolean value indicating whether to continue the selection or not. The following properties are contained in the event arguments:
 
-* [NewIndexes]() - Gets or Sets the index of the selected data point or series before selection changing.
-* [OldIndexes]() - Gets or Sets the index of the deselected data point or series before selection changing.
+* [NewIndexes]() - Gets or sets the index of the selected data point before selection changes occurs.
+* [OldIndexes]() - Gets or sets the index of the deselected data point before selection changes occurs.
 
 ### SelectionChanged
 
-The [SelectionChanged]() event is triggered after a data point has been selected. And the properties below are contained in the following event arguments
+The [SelectionChanged]() event is triggered after a data point has been selected. The following properties are contained in the event arguments:
 
-* [NewIndexes]() - Gets or Sets the index of the selected data point or series after selection changed.
-* [OldIndexes]() - Gets or Sets the index of the deselected data point or series after selection changed.
+* [NewIndexes]() - Gets or sets the index of the selected data point after selection changes occurs.
+* [OldIndexes]() - Gets or sets the index of the deselected data point after selection changes occurs.
