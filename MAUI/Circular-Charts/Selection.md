@@ -94,7 +94,7 @@ chart.Series.Add(series);
 
 {% endtabs %}
 
-![Rendering Selection Programmatically in MAUI SfCircularChart](Selection_images/data_point_selection_properties.PNG)
+![Rendering Selection Programmatically in MAUI SfCircularChart](Selection_images/rendering_selection_programmatically.PNG)
 
 ## ClearSelection Method
 
