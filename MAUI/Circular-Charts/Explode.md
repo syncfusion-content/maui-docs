@@ -7,12 +7,13 @@ control: SfCircularChart
 documentation: ug
 ---
 
-# Explode segments in .NET MAUI Chart
+# Explode segments in .NET MAUI SfCircularChart
 
 Exploding a segment is used to pull attention to a specific area of the circular chart. The following properties are used to explode the segments in the circular chart.
 
 * [ExplodeIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PieSeries.html#Syncfusion_Maui_Charts_PieSeries_ExplodeIndex) - Used to explode any specific segment.
 * [ExplodeRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PieSeries.html#Syncfusion_Maui_Charts_PieSeries_ExplodeRadius) - Used to define the explode distance.
+* [ExplodeOnTouch]() - Can be used to explode a specific segment by touch interaction when value is true.
 
 {% tabs %}
 
@@ -20,7 +21,7 @@ Exploding a segment is used to pull attention to a specific area of the circular
 
 <chart:SfCircularChart>
     . . .
-    <chart:PieSeries x:Name="PieSeries" ItemsSource="{Binding Data}" ExplodeIndex="2" ExplodeRadius="10" XBindingPath="Utilization" YBindingPath="ResponseTime" />
+    <chart:DoughnutSeries x:Name="DoughnutSeries" ItemsSource="{Binding Data}" ExplodeIndex="2" ExplodeRadius="10" ExplodeOnTouch="True" XBindingPath="Utilization" YBindingPath="ResponseTime" />
 </chart:SfCircularChart>
 
 {% endhighlight %}
@@ -29,13 +30,14 @@ Exploding a segment is used to pull attention to a specific area of the circular
 
 SfCircularChart chart = new SfCircularChart();
 . . .
-PieSeries series = new PieSeries()
+DoughnutSeries series = new DoughnutSeries()
 {
     ItemsSource = new ViewModel().Data,
     XBindingPath = "Utilization",
     YBindingPath = "ResponseTime",
     ExplodeIndex = 2,
-    ExplodeRadius = 10
+    ExplodeRadius = 10,
+    ExplodeOnTouch = true
 };
 
 chart.Series.Add(series);
@@ -44,4 +46,4 @@ chart.Series.Add(series);
 
 {% endtabs %}
 
-![Exploded doughnut chart in MAUI](Explode_images/maui_exploded_doughnut_chart.png)
+![Exploding Segemnt in MAUI SfCircularChart](Explode_images/Explode_Segment_in_CircularChart.gif)
