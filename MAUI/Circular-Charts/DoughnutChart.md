@@ -107,7 +107,11 @@ chart.Series.Add(series);
 
 ## Center View
 
-Any view can be added to the center of doughnut chart using the [CenterView]() property of DoughnutSeries. The binding context of the [CenterView]() will be the respective DoughnutSeries.
+Any view can be added to the center of the doughnut chart using the [CenterView]() property of [DoughnutSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DoughnutSeries.html). The binding context of the [CenterView]() will be the respective DoughnutSeries.
+
+### Center Hole Size
+
+The [CenterHoleSize]() property of [DoughnutSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DoughnutSeries.html) is used to get the diameter value of the doughnut center hole. Using this [CenterHoleSize]() value, you can provide [CentreView]() for the series to avoid the view from being cropped outside the series.
 
 {% tabs %}
 
@@ -157,7 +161,3 @@ chart.Series.Add(series);
 {% endtabs %}
 
 ![Center View in MAUI doughnut Chart](Chart-Types_images/maui_center_View.png)
-
-## Center Hole Size
-
-The [CenterHoleSize]() property of [DoughnutSeries]() is used to get the diameter value of doughnut center hole. Using this [CenterHoleSize]() value, you can provide [CentreView]() for series to avoid the view from being cropped outside the series.
