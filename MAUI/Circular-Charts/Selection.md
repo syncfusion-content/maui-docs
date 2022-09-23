@@ -9,7 +9,7 @@ documentation: ug
 
 # Selection in .NET MAUI SfCircularChart
 
-The [SfCircularChart]() provides selection behavior, which allows you to select or highlight a chart segment using the [DataPointSelectionBehavior]().
+The [SfCircularChart]() provides selection behavior, which allows you to select or highlight a segment in a series using the [DataPointSelectionBehavior]().
 
 ## Enable Selection
 
@@ -59,12 +59,12 @@ The following ChartSelectionType can be achieved during Selection:
     * Multiple
     * None
 * [SelectionBrush]() - Gets or sets  the SelectionBrush color value for the Selection Behavior.
-* [SelectedIndex]() - Gets or sets the index value of the segment that should be selected during the selection.
-* [SelectedIndexes]() - Gets or sets the list of indexes of the segments that should be selected during the selection.
+* [SelectedIndex]() - Gets or sets the index value of the segment that should be selected during the Selection.
+* [SelectedIndexes]() - Gets or sets the list of indexes of the segments that should be selected during the Selection.
 
 ## Rendering Selection Programmatically
 
-The [SfCircularChart]() provides support to select a point programmatically on a chart using the [SelectionBrush]() and  [SelectedIndex](), properties of the [ChartSelectionBehavior]().
+The [SfCircularChart]() provides support to select a point programmatically on a chart using the [SelectionBrush]() and [SelectedIndex]() properties of the [ChartSelectionBehavior]().
 
 {% tabs %}
 
@@ -98,7 +98,7 @@ chart.Series.Add(series);
 
 ## ClearSelection Method
 
-The Selection Behavior has a public method called [ClearSelection ()](), which resets all current Selection Behavior property values to their default values.
+The Selection Behavior has a public method called [ClearSelection ()](), which resets all current Selection Behavior property values to their default values and resets the color of the selected element to default.
 
 {% tabs %}
 
@@ -126,13 +126,13 @@ The following public Chart Selection Events are available in the [ChartSelection
 
 The [SelectionChanging]() event is triggered before any data point has been selected. This event is cancelable because it inherits the CancelEventArgs, which has a public property [Cancel]() that holds a Boolean value indicating whether to continue the segment selection or not. The following properties are contained in the event arguments:
 
-* [NewIndexes]() - Gets or sets the index of the selected data point before selection changes occur.
-* [OldIndexes]() - Gets or sets the index of the deselected data point before selection changes occur.
+* [NewIndexes]() - Gets or sets the index of the selected data point before selection changes occurs.
+* [OldIndexes]() - Gets or sets the index of the deselected data point before selection changes occurs.
 
 
 ### SelectionChanged
 
 The [SelectionChanged]() event is triggered after a data point has been selected. The following properties are contained in the event arguments:
 
-* [NewIndexes]() - Gets or sets the index of the selected data point after selection changes occur.
-* [OldIndexes]() - Gets or sets the index of the deselected data point after selection changes occur.
+* [NewIndexes]() - Gets or sets the index of the selected data point after selection changes occurs.
+* [OldIndexes]() - Gets or sets the index of the deselected data point after selection changes occurs.
