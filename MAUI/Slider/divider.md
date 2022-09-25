@@ -21,16 +21,15 @@ For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.M
 
 {% highlight xaml %}
 
-<sliders:SfSlider Interval="0.2" 
-                  ShowDividers="True">
-</sliders:SfSlider>
+<sliders:SfSlider Interval="0.25"
+                  ShowDividers="True" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
 SfSlider slider = new SfSlider();
-slider.Interval = 0.2;
+slider.Interval = 0.25;
 slider.ShowDividers = true;
 
 {% endhighlight %}
@@ -47,7 +46,7 @@ Change the active and inactive divider radius of the slider using the [`ActiveRa
 
 {% highlight xaml %}
 
-<sliders:SfSlider Interval="0.2" 
+<sliders:SfSlider Interval="0.25" 
                   ShowDividers="True">
     <sliders:SfSlider.DividerStyle>
          <sliders:SliderDividerStyle ActiveRadius="7" 
@@ -60,7 +59,7 @@ Change the active and inactive divider radius of the slider using the [`ActiveRa
 {% highlight C# %}
 
 SfSlider slider = new SfSlider();
-slider.Interval = 0.2;
+slider.Interval = 0.25;
 slider.ShowDividers = true;
 slider.DividerStyle.ActiveRadius = 7;
 slider.DividerStyle.InactiveRadius = 7;
@@ -71,48 +70,6 @@ slider.DividerStyle.InactiveRadius = 7;
 
 ![Slider divider radius](images/labels-and-dividers/divider-radius.png)
 
-## Divider stroke width and stroke color
-
-Change the active and inactive divider stroke width of the slider using the [`ActiveStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDividerStyle.html#Syncfusion_Maui_Sliders_SliderDividerStyle_ActiveStrokeThickness) and the [`InactiveStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDividerStyle.html#Syncfusion_Maui_Sliders_SliderDividerStyle_InactiveStrokeThickness) properties of the [`DividerStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDividerStyle.html) class.
-
-Also, change the active and inactive divider stroke color of the slider using the [`ActiveStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDividerStyle.html#Syncfusion_Maui_Sliders_SliderDividerStyle_ActiveStroke) and the [`InactiveStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDividerStyle.html#Syncfusion_Maui_Sliders_SliderDividerStyle_InactiveStroke) properties of the [`DividerStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDividerStyle.html) class.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<sliders:SfSlider Interval="0.2" 
-                  ShowDividers="True">
-    <sliders:SfSlider.DividerStyle>
-         <sliders:SliderDividerStyle ActiveRadius="7" 
-                                     InactiveRadius="7" 
-            			             ActiveStrokeThickness="2" 
-				                     InactiveStrokeThickness="2" 
-				                     ActiveStroke="#EE3F3F" 
-				                     InactiveStroke="#F7B1AE"/>
-     </sliders:SfSlider.DividerStyle>
-</sliders:SfSlider>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfSlider slider = new SfSlider();
-slider.Interval = 0.2;
-slider.ShowDividers = true;
-slider.DividerStyle.ActiveRadius = 7;
-slider.DividerStyle.InactiveRadius = 7;
-slider.DividerStyle.ActiveStroke = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
-slider.DividerStyle.InactiveStroke = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
-slider.DividerStyle.ActiveStrokeThickness = 2;
-slider.DividerStyle.InactiveStrokeThickness = 2;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Slider divider stroke color](images/labels-and-dividers/divider-stroke-color.png)
-
 ## Divider color
 
 Change the active and inactive divider color of the slider using the [`ActiveFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDividerStyle.html#Syncfusion_Maui_Sliders_SliderDividerStyle_ActiveFill) and [`InactiveFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDividerStyle.html#Syncfusion_Maui_Sliders_SliderDividerStyle_InactiveFill) properties of the [`DividerStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDividerStyle.html) class.
@@ -121,7 +78,7 @@ Change the active and inactive divider color of the slider using the [`ActiveFil
 
 {% highlight xaml %}
 
-<sliders:SfSlider Interval="0.2" 
+<sliders:SfSlider Interval="0.25" 
                   ShowDividers="True">
     <sliders:SfSlider.DividerStyle>
        <sliders:SliderDividerStyle ActiveRadius="7" 
@@ -136,7 +93,7 @@ Change the active and inactive divider color of the slider using the [`ActiveFil
 {% highlight C# %}
 
 SfSlider slider = new SfSlider();
-slider.Interval = 0.2;
+slider.Interval = 0.25;
 slider.ShowDividers = true;
 slider.DividerStyle.ActiveRadius = 7;
 slider.DividerStyle.InactiveRadius = 7;
@@ -149,6 +106,50 @@ slider.DividerStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F7B1AE")
 
 ![Slider divider color](images/labels-and-dividers/divider-color.png)
 
+## Divider stroke width and stroke color
+
+Change the active and inactive divider stroke width of the slider using the [`ActiveStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDividerStyle.html#Syncfusion_Maui_Sliders_SliderDividerStyle_ActiveStrokeThickness) and the [`InactiveStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDividerStyle.html#Syncfusion_Maui_Sliders_SliderDividerStyle_InactiveStrokeThickness) properties of the [`DividerStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDividerStyle.html) class.
+
+Also, change the active and inactive divider stroke color of the slider using the [`ActiveStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDividerStyle.html#Syncfusion_Maui_Sliders_SliderDividerStyle_ActiveStroke) and the [`InactiveStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDividerStyle.html#Syncfusion_Maui_Sliders_SliderDividerStyle_InactiveStroke) properties of the [`DividerStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDividerStyle.html) class.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfSlider Interval="0.25"
+                  ShowDividers="True">
+    <sliders:SfSlider.DividerStyle>
+        <sliders:SliderDividerStyle ActiveRadius="7"
+                                    InactiveRadius="7"
+                                    ActiveFill="#EE3F3F"
+                                    InactiveFill="#F7B1AE"
+                                    ActiveStrokeThickness="2"
+                                    InactiveStrokeThickness="2"
+                                    ActiveStroke="#FFD700"
+                                    InactiveStroke="#FFD700" />
+    </sliders:SfSlider.DividerStyle>
+</sliders:SfSlider>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfSlider slider = new SfSlider();
+slider.Interval = 0.25;
+slider.ShowDividers = true;
+slider.DividerStyle.ActiveRadius = 7;
+slider.DividerStyle.InactiveRadius = 7;
+slider.DividerStyle.ActiveStroke = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+slider.DividerStyle.InactiveStroke = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
+slider.DividerStyle.ActiveStrokeThickness = 2;
+slider.DividerStyle.InactiveStrokeThickness = 2;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Slider divider stroke color](images/labels-and-dividers/divider-stroke-color.png)
+
 ## Disabled divider
 
 Change the state of the slider to disabled by setting `false` to the `IsEnabled` property. Using the Visual State Manager (VSM), customize the slider divider properties based on the visual states. The applicable visual states are enabled(default) and disabled.
@@ -159,8 +160,10 @@ Change the state of the slider to disabled by setting `false` to the `IsEnabled`
 
 <ContentPage.Resources>
     <Style TargetType="sliders:SfSlider">
-        <Setter Property="Interval" Value="0.25" />
-        <Setter Property="ShowDividers" Value="True" />
+        <Setter Property="Interval"
+                Value="0.25" />
+        <Setter Property="ShowDividers"
+                Value="True" />
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup>
@@ -168,10 +171,10 @@ Change the state of the slider to disabled by setting `false` to the `IsEnabled`
                         <VisualState.Setters>
                             <Setter Property="DividerStyle">
                                 <Setter.Value>
-                                    <sliders:SliderDividerStyle ActiveFill = "#F7B1AE"
-                                                                    InactiveFill="#EE3F3F"
-                                                                    ActiveRadius="5"
-                                                                    InactiveRadius="4"/>
+                                    <sliders:SliderDividerStyle ActiveFill="#F7B1AE"
+                                                                InactiveFill="#EE3F3F"
+                                                                ActiveRadius="5"
+                                                                InactiveRadius="4" />
                                 </Setter.Value>
                             </Setter>
                         </VisualState.Setters>
@@ -180,10 +183,10 @@ Change the state of the slider to disabled by setting `false` to the `IsEnabled`
                         <VisualState.Setters>
                             <Setter Property="DividerStyle">
                                 <Setter.Value>
-                                    <sliders:SliderDividerStyle ActiveFill = "Gray"
-                                                                    InactiveFill="LightGray"
-                                                                    ActiveRadius="5"
-                                                                    InactiveRadius="4"/>
+                                    <sliders:SliderDividerStyle ActiveFill="Gray"
+                                                                InactiveFill="LightGray"
+                                                                ActiveRadius="5"
+                                                                InactiveRadius="4" />
                                 </Setter.Value>
                             </Setter>
                         </VisualState.Setters>
@@ -197,10 +200,12 @@ Change the state of the slider to disabled by setting `false` to the `IsEnabled`
 
 <ContentPage.Content>
     <VerticalStackLayout>
-        <Label Text="Enabled Slider" Padding="0,10"/>
-        <sliders:SfSlider/>
-        <Label Text="Disabled Slider" Padding="0,10"/>
-        <sliders:SfSlider IsEnabled="False"/>
+        <Label Text="Enabled Slider"
+               Padding="0,10" />
+        <sliders:SfSlider />
+        <Label Text="Disabled Slider"
+               Padding="0,10" />
+        <sliders:SfSlider IsEnabled="False" />
     </VerticalStackLayout>
 </ContentPage.Content>
 

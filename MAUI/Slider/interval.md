@@ -57,27 +57,30 @@ Move the thumb in discrete manner for numeric values using the [`StepSize`](http
 
 {% highlight xaml %}
 
- <sliders:SfSlider Minimum="0" 
-                   Maximum="10" 
-                   Value="6"
-                   StepSize="2" 
-                   ShowLabels="True"
-                   ShowTicks="True" 
-                   ShowDividers="True">
- </sliders:SfSlider>                   
+<sliders:SfSlider Minimum="20"
+                  Maximum="40"
+                  Interval="5"
+                  Value="30"
+                  StepSize="5"
+                  ShowLabels="True"
+                  ShowTicks="True"
+                  ShowDividers="True" />                 
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfSlider slider = new SfSlider();
-slider.Minimum = 0;
-slider.Maximum = 10;
-slider.StepSize = 2;
-slider.Value = 6;
-slider.ShowLabels = true;
-slider.ShowTicks = true;
-slider.ShowDividers = true;
+SfSlider slider = new SfSlider()
+{
+    Minimum = 20,
+    Maximum = 40,
+    Value = 30,
+    Interval = 5,
+    ShowTicks = true,
+    ShowLabels = true,
+    ShowDividers = true,
+    StepSize = 5,
+};
 
 {% endhighlight %}
 

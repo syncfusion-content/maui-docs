@@ -77,11 +77,16 @@ Change the appearance of the tooltip using the [`Fill`](https://help.syncfusion.
 {% highlight xaml %}
 
 <sliders:SfSlider>
-  <sliders:SfSlider.Tooltip>
-    <sliders:SliderTooltip Fill="#F7B1AE" 
-                           Stroke="#EE3F3F" 
-				                   StrokeThickness="2" />
-  </sliders:SfSlider.Tooltip>
+    <sliders:SfSlider.Tooltip>
+        <sliders:SliderTooltip Fill="#DFD8F7"
+                               Stroke="#512BD4"
+                               StrokeThickness="2"
+                               TextColor="#512BD4"
+                               FontSize="14"
+                               FontAttributes="Bold"
+                               Padding="12,12"
+                               NumberFormat="0.#0" />
+    </sliders:SfSlider.Tooltip>
 </sliders:SfSlider>
 
 {% endhighlight %}
@@ -89,9 +94,14 @@ Change the appearance of the tooltip using the [`Fill`](https://help.syncfusion.
 {% highlight C# %}
 
 SfSlider slider = new SfSlider();
-slider.Tooltip.Fill = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
-slider.Tooltip.Stroke = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+slider.Tooltip.Fill = new SolidColorBrush(Color.FromArgb("#DFD8F7"));
+slider.Tooltip.Stroke = new SolidColorBrush(Color.FromArgb("#512BD4"));
 slider.Tooltip.StrokeThickness = 2;
+slider.Tooltip.TextColor = Color.FromArgb("#512BD4");
+slider.Tooltip.FontSize = 14;
+slider.Tooltip.FontAttributes = FontAttributes.Bold;
+slider.Tooltip.Padding = new Thickness(12, 12);
+slider.Tooltip.NumberFormat = "0.#0";
 
 {% endhighlight %}
 
