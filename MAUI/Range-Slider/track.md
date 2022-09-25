@@ -24,11 +24,10 @@ The inactive side of the range slider is between the [`Minimum`](https://help.sy
 {% highlight xaml %}
 
 <sliders:SfRangeSlider>
-  
-  <sliders:SfRangeSlider.TrackStyle>
-      <sliders:SliderTrackStyle ActiveFill="#EE3F3F" InactiveFill="#F7B1AE" />
-  </sliders:SfRangeSlider.TrackStyle>
-
+    <sliders:SfRangeSlider.TrackStyle>
+        <sliders:SliderTrackStyle ActiveFill="#EE3F3F"
+                                  InactiveFill="#F7B1AE" />
+    </sliders:SfRangeSlider.TrackStyle>
 </sliders:SfRangeSlider>
 
 {% endhighlight %}
@@ -54,11 +53,10 @@ Change the active and inactive track height of the range slider using the [`Acti
 {% highlight xaml %}
 
 <sliders:SfRangeSlider>
-   
-   <sliders:SfRangeSlider.TrackStyle>
-      <sliders:SliderTrackStyle ActiveSize="10" InactiveSize="8" />
-   </sliders:SfRangeSlider.TrackStyle>
-
+    <sliders:SfRangeSlider.TrackStyle>
+        <sliders:SliderTrackStyle ActiveSize="10"
+                                  InactiveSize="8" />
+    </sliders:SfRangeSlider.TrackStyle>
 </sliders:SfRangeSlider>
 
 {% endhighlight %}
@@ -124,7 +122,8 @@ Change the state of the range slider to disabled by setting `false` to the `IsEn
 
 <ContentPage.Resources>
     <Style TargetType="sliders:SfRangeSlider">
-        <Setter Property="Interval" Value="0.25" />
+        <Setter Property="Interval"
+                Value="0.25" />
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup>
@@ -132,10 +131,10 @@ Change the state of the range slider to disabled by setting `false` to the `IsEn
                         <VisualState.Setters>
                             <Setter Property="TrackStyle">
                                 <Setter.Value>
-                                    <sliders:SliderTrackStyle ActiveSize="8" 
-                                                                  InactiveSize="6" 
-                                                                  ActiveFill="#EE3F3F" 
-                                                                  InactiveFill="#F7B1AE"/>
+                                    <sliders:SliderTrackStyle ActiveSize="8"
+                                                              InactiveSize="6"
+                                                              ActiveFill="#EE3F3F"
+                                                              InactiveFill="#F7B1AE" />
                                 </Setter.Value>
                             </Setter>
                         </VisualState.Setters>
@@ -144,10 +143,10 @@ Change the state of the range slider to disabled by setting `false` to the `IsEn
                         <VisualState.Setters>
                             <Setter Property="TrackStyle">
                                 <Setter.Value>
-                                    <sliders:SliderTrackStyle ActiveSize="10" 
-                                                                  InactiveSize="8"
-                                                                  ActiveFill="Gray" 
-                                                                  InactiveFill="LightGray" />
+                                    <sliders:SliderTrackStyle ActiveSize="10"
+                                                              InactiveSize="8"
+                                                              ActiveFill="Gray"
+                                                              InactiveFill="LightGray" />
                                 </Setter.Value>
                             </Setter>
                         </VisualState.Setters>
@@ -160,10 +159,12 @@ Change the state of the range slider to disabled by setting `false` to the `IsEn
 
 <ContentPage.Content>
     <VerticalStackLayout>
-        <Label Text="Enabled Range Slider" Padding="0,10"/>
+        <Label Text="Enabled Range Slider"
+               Padding="0,10" />
         <sliders:SfRangeSlider />
-        <Label Text="Disabled Range Slider" Padding="0,10"/>
-        <sliders:SfRangeSlider IsEnabled="False"/>
+        <Label Text="Disabled Range Slider"
+               Padding="0,10" />
+        <sliders:SfRangeSlider IsEnabled="False" />
     </VerticalStackLayout>
 </ContentPage.Content>
 

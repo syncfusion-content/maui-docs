@@ -31,8 +31,7 @@ It represents the values currently selected in the range slider. The range slide
                        Maximum="10"
                        RangeStart="3"
                        RangeEnd="7"
-                       ShowLabels="True">
-</sliders:SfRangeSlider>
+                       ShowLabels="True" />
  
 {% endhighlight %}
 
