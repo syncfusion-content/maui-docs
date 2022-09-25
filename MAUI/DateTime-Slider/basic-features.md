@@ -31,7 +31,7 @@ It does not have auto interval support. So, setting [`Interval`](https://help.sy
 
 <sliders:SfDateTimeSlider Minimum="2010-01-01"
                           Maximum="2020-01-01"
-                          Value="2014-01-01"
+                          Value="2015-01-01"
                           ShowTicks="True"
                           ShowLabels="True" />
 
@@ -42,7 +42,7 @@ It does not have auto interval support. So, setting [`Interval`](https://help.sy
 SfDateTimeSlider slider = new SfDateTimeSlider();
 slider.Minimum = new DateTime(2010, 01, 01);
 slider.Maximum = new DateTime(2020, 01, 01);
-slider.Value = new DateTime(2014, 01, 01);
+slider.Value = new DateTime(2015, 01, 01);
 slider.ShowTicks = true;
 slider.ShowLabels = true;
 

@@ -49,7 +49,7 @@ Change the active and inactive divider radius of the slider using the [`ActiveRa
 <sliders:SfSlider Interval="0.25" 
                   ShowDividers="True">
     <sliders:SfSlider.DividerStyle>
-         <sliders:SliderDividerStyle ActiveRadius="7" 
+         <sliders:SliderDividerStyle ActiveRadius="3" 
                                      InactiveRadius="7" />
     </sliders:SfSlider.DividerStyle>
 </sliders:SfSlider>
@@ -61,7 +61,7 @@ Change the active and inactive divider radius of the slider using the [`ActiveRa
 SfSlider slider = new SfSlider();
 slider.Interval = 0.25;
 slider.ShowDividers = true;
-slider.DividerStyle.ActiveRadius = 7;
+slider.DividerStyle.ActiveRadius = 3;
 slider.DividerStyle.InactiveRadius = 7;
 
 {% endhighlight %}

@@ -23,24 +23,23 @@ For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.M
 
 {% highlight xaml %}
 
-<sliders:SfDateTimeSlider Minimum="2000-01-01" 
-                          Maximum="2005-01-01" 
-                          Interval="1" 
-                          Value="2002-01-01" 
-                          DateFormat="yyyy" 
-                          IntervalType="Years" 
+<sliders:SfDateTimeSlider Minimum="2000-01-01"
+                          Maximum="2004-01-01"
+                          Interval="1"
+                          Value="2002-01-01"
+                          DateFormat="yyyy"
+                          IntervalType="Years"
                           ShowLabels="True"
-                          ShowTicks="True" 
-                          ShowDividers="True">
-</sliders:SfDateTimeSlider>
+                          ShowTicks="True"
+                          ShowDividers="True" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfSlider slider = new SfSlider();
+SfDateTimeSlider slider = new SfDateTimeSlider();
 slider.Minimum = new DateTime(2000, 01, 01);
-slider.Maximum = new DateTime(2005, 01, 01);
+slider.Maximum = new DateTime(2004, 01, 01);
 slider.Value = new DateTime(2002, 01, 01); 
 slider.Interval = 1;
 slider.IntervalType = SliderDateIntervalType.Years;
@@ -69,8 +68,7 @@ For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.M
                            Maximum="2005-01-01" 
                            Value="2002-01-01"
                            StepDuration="1"  
-                           IntervalType="Years" >
-</sliders:SfDateTimeSlider>
+                           IntervalType="Years" />
 
 {% endhighlight %}
 

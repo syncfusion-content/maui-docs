@@ -88,8 +88,7 @@ Format or change the label text using the [`LabelCreated`](https://help.syncfusi
                           LabelsPlacement="BetweenTicks"
                           IntervalType="Months"
                           LabelCreated="OnLabelCreated"
-                          ShowLabels="True">
-</sliders:SfDateTimeSlider>
+                          ShowLabels="True" />
 
 {% endhighlight %}
 
@@ -157,6 +156,7 @@ Format or change the whole tooltip label text using the [`TooltipLabelCreated`](
     <sliders:SfDateTimeSlider.Tooltip>
         <sliders:SliderTooltip TooltipLabelCreated="OnTooltipLabelCreated" />
     </sliders:SfDateTimeSlider.Tooltip>
+    
 </sliders:SfDateTimeSlider>
 
 {% endhighlight %}

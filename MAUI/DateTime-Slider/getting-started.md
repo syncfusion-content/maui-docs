@@ -145,14 +145,13 @@ The [`ShowTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.Sl
 
 {% highlight xaml %}
 
-<sliders:SfDateTimeSlider Minimum="2010-01-01" 
-                          Maximum="2018-01-01" 
-                          Value="2014-01-01" 
-		                  ShowLabels="True"  
-		                  ShowTicks="True" 
-		                  Interval="2" 
-		                  MinorTicksPerInterval="1">
-</sliders:SfDateTimeSlider>
+<sliders:SfDateTimeSlider Minimum="2010-01-01"
+                          Maximum="2018-01-01"
+                          Value="2014-01-01"
+                          ShowLabels="True"
+                          ShowTicks="True"
+                          Interval="2"
+                          MinorTicksPerInterval="1" />
 
 {% endhighlight %}
 
@@ -182,14 +181,13 @@ The [`Orientation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.
 {% highlight xaml %}
 
 <sliders:SfDateTimeSlider Orientation="Vertical"
-                          Minimum="2010-01-01" 
-                          Maximum="2018-01-01" 
-                          Value="2014-01-01" 
-		                  ShowLabels="True"  
-		                  ShowTicks="True" 
-		                  Interval="2" 
-		                  MinorTicksPerInterval="1">
-</sliders:SfDateTimeSlider>
+                          Minimum="2010-01-01"
+                          Maximum="2018-01-01"
+                          Value="2014-01-01"
+                          ShowLabels="True"
+                          ShowTicks="True"
+                          Interval="2"
+                          MinorTicksPerInterval="1" />
 
 {% endhighlight %}
 
@@ -219,15 +217,14 @@ Invert the slider using the [`IsInversed`](https://help.syncfusion.com/cr/maui/S
 
 {% highlight xaml %}
 
-<sliders:SfDateTimeSlider Minimum="2010-01-01" 
-                          Maximum="2018-01-01" 
-                          Value="2014-01-01" 
+<sliders:SfDateTimeSlider Minimum="2010-01-01"
+                          Maximum="2018-01-01"
+                          Value="2014-01-01"
                           IsInversed="True"
-		                  ShowLabels="True"  
-		                  ShowTicks="True" 
-		                  Interval="2" 
-		                  MinorTicksPerInterval="1">
-</sliders:SfDateTimeSlider>
+                          ShowLabels="True"
+                          ShowTicks="True"
+                          Interval="2"
+                          MinorTicksPerInterval="1" />
 
 {% endhighlight %}
 
