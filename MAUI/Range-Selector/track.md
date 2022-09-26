@@ -112,11 +112,11 @@ Extend the track at the edges using the [`TrackExtent`](https://help.syncfusion.
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
 
-    <sliders:SfRangeSelector Minimum="1000"
-                             Maximum="5000"
-                             RangeStart="2000"
-                             RangeEnd="4000"
-                             Interval="1000"
+    <sliders:SfRangeSelector Minimum="100"
+                             Maximum="1000"
+                             RangeStart="370"
+                             RangeEnd="730"
+                             Interval="180"
                              TrackExtent="10"
                              ShowLabels="True"
                              ShowTicks="True">
@@ -133,11 +133,11 @@ Extend the track at the edges using the [`TrackExtent`](https://help.syncfusion.
 {% highlight C# %}
 
 SfRangeSelector rangeSelector = new SfRangeSelector();
-rangeSelector.Minimum = "1000";
-rangeSelector.Maximum = "5000";
-rangeSelector.RangeStart = "2000";
-rangeSelector.RangeEnd = "4000";
-rangeSelector.Interval = 1000;
+rangeSelector.Minimum = 100;
+rangeSelector.Maximum = 1000;
+rangeSelector.RangeStart = 370;
+rangeSelector.RangeEnd = 730;
+rangeSelector.Interval = 180;
 rangeSelector.ShowLabels = true;
 rangeSelector.ShowTicks = true;
 rangeSelector.TrackExtent = 10;

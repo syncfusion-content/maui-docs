@@ -217,7 +217,7 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector edge label placement](images/labels-and-dividers/edge-labels-placement.png)
+![RangeSelector edge label placement](images/labels-and-dividers/edge-labels-placement.gif)
 
 ## Label style
 
