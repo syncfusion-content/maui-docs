@@ -7,18 +7,11 @@ control: SfCartesianChart
 documentation: ug
 ---
 
-# Plot Area Background View in .NET MAUI Chart
+# Appearance in .NET MAUI Cartesian Chart
 
-[SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1) allows you to add any view to the chart plot area. The [PlotAreaBackgroundView]() will be visible behind the grid line and series.
+## Plotting Area Customization:
 
-## Plot Area Customization:
-You can customize the plot area using the following:
-* Box View - Use a BoxView as a Background if the plot area is expected to be colored.
-* Image - Readability would be a problem if you planned to display your own company logo in the plot area. In that situation, an image   may be utilized as the background.
-* Label—you can add any text to the plot area background.
-
-
-
+[SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1) allows you to add any view to the chart plot area , which is useful for adding any relevant data, a watermark, or a color gradient to the background of the chart. The following code example shows how to configure plot area background view.
 
 {% tabs %}
 
@@ -27,9 +20,9 @@ You can customize the plot area using the following:
 <chart:SfCartesianChart>
    <chart:SfCartesianChart.PlotAreaBackgroundView>
       <AbsoluteLayout>
-         <Label Text="Copyright @ 2022 Parker Industries"
+         <Label Text="Copyright @ 2001 - 2022 Syncfusion Inc"
                 FontSize="18"
-                AbsoluteLayout.LayoutBounds="1,1,310,33"
+                AbsoluteLayout.LayoutBounds="1,1,-1,-1"
                 AbsoluteLayout.LayoutFlags="PositionProportional"
                 Opacity="0.4" />
          <Label Text="CONFIDENTIAL"
@@ -45,15 +38,14 @@ You can customize the plot area using the following:
    </chart:SfCartesianChart.PlotAreaBackgroundView>
 </chart:SfCartesianChart>
 
-
 {% endhighlight %}
 
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
 AbsoluteLayout absoluteLayout = new AbsoluteLayout();
-var copyRight = new Label() { Text = "Copyright @ 2022 Parker Industries", FontSize = 18, Opacity = 0.4 };
-AbsoluteLayout.SetLayoutBounds(copyRight, new Rect(1, 1, 240, 30));
+var copyRight = new Label() { Text = "Copyright @ 2001 - 2022 Syncfusion Inc", FontSize = 18, Opacity = 0.4 };
+AbsoluteLayout.SetLayoutBounds(copyRight, new Rect(1, 1, -1, -1));
 AbsoluteLayout.SetLayoutFlags(copyRight, Microsoft.Maui.Layouts.AbsoluteLayoutFlags.PositionProportional);
 absoluteLayout.Children.Add(copyRight);
 var watermark = new Label()
@@ -75,5 +67,5 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Watermark in .NET MAUI Charts](Plot-Area-Background-View_images/plot_view.png)
+![Watermark in .NET MAUI Charts](Plot-Area-Background-View_images/water_mark.png)
 
