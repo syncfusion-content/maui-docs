@@ -111,7 +111,7 @@ The view placed in the center of the doughnut chart is useful for sharing additi
 
 ### Center Hole Size
 
-The [CenterHoleSize]() property of [DoughnutSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DoughnutSeries.html) is used to get the diameter value of the doughnut center hole. Using this [CenterHoleSize]() value, you can provide [CentreView]() for the series to prevent the view from overlapping the series.
+The [CenterHoleSize]() property of [DoughnutSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DoughnutSeries.html) is used to get the diameter value of the doughnut center hole. Using the [CenterHoleSize](), we can protect the view in the doughnut center from overlapping with the series.
 
 {% tabs %}
 
@@ -122,11 +122,11 @@ The [CenterHoleSize]() property of [DoughnutSeries](https://help.syncfusion.com/
         <chart:DoughnutSeries.CenterView>
                 <Border HeightRequest="{Binding CenterHoleSize}" WidthRequest="{Binding CenterHoleSize}">
                     <Border.StrokeShape>
-                        <RoundRectangle CornerRadius="{Binding CenterHoleSize,Converter={StaticResource innerRadiusConverter}"/>
+                        <RoundRectangle CornerRadius="200"/>
                     </Border.StrokeShape>
                     <StackLayout>
                         <Label Text="Total :" />
-                        <Label Text="357580 km²"/>
+                        <Label Text="357,580 km²"/>
                     </StackLayout>
                 </Border>
         </chart:DoughnutSeries.CenterView>
@@ -146,7 +146,7 @@ Border border = new Border();
 Label name = new Label();
 name.Text = "Total :";
 Label value = new Label()
-value.Text = "357580 km²";
+value.Text = "357,580 km²";
 StackLayout layout = new StackLayout();
 
 border.Content = layout;
