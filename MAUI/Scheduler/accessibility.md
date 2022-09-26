@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in .NET MAUI SfScheduler control | Syncfusion
-description: Learn here about Accessibility support with the Syncfusion .NET MAUI Scheduler (SfScheduler) control, its elements and more.
+description: Learn here about Accessibility support with the Syncfusion .NET MAUI Scheduler (SfScheduler) control, its elements, and more.
 platform: maui
 control: SfScheduler
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ## Keyboard navigation
 
-The `SfScheduler` supports selecting the scheduler date time, appointments, and view navigation using keyboard interaction in WinUI, MAC Catalyst, and iOS platforms.
+The `SfScheduler` supports selecting the scheduler date time, appointments, and view navigation using keyboard interactions in WinUI, macOS, and iOS platforms.
 
 N> [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_SelectionChanged) event triggers for cell selection changed.
 
@@ -167,7 +167,7 @@ Ctrl + Alt + 9 => AgendaView<br/><br/></td><td>
 Moves the view to Agenda view.<br/><br/></td></tr>
 </table>
 
-N> There is a framework issue with unable to remove or modify  default visual focus style on tab press in windows and the following framework issue in this report [link](https://github.com/dotnet/maui/issues/10193).
+N> There is a framework issue with unable to remove or modify the default visual focus style on tab press in windows platform and following the framework issue in this report [link](https://github.com/dotnet/maui/issues/10193).
 
 #### MAC and iOS
 
@@ -228,4 +228,4 @@ Shift + Tab<br/><br/></td><td>
 Move to previous focusable element in header.<br/><br/></td></tr>
 </table>
 
-N> You can also explore our [MAUI Scheduler example](https://github.com/syncfusion/maui-demos) to knows how to schedule and manage appointments through an intuitive user interface, similar to the Outlook calendar.
+N> You can also explore our [MAUI Scheduler example](https://github.com/syncfusion/maui-demos) to know how to schedule and manage appointments through an intuitive user interface, similar to the Outlook calendar.
