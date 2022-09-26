@@ -15,7 +15,7 @@ The `ComboBox` allows user to select an single item from the drop-down list.
 
 ### UI Selection 
 
-The selected item can be changed interactively by selecting from the drop-down list or entering the value using keyboard and clicking the `Enter` key or losing the control focus.
+The selected item can be changed interactively by selecting from the drop-down list or entering the value.
 
 {% tabs %}
 {% highlight xaml %}

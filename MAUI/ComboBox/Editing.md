@@ -97,27 +97,3 @@ N> The `IsClearButtonVisible` property has no effect in non-editable mode.
 The following gif image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox clear button visibility](Images/Editing/IsClearButtonVisible.png)
-
-## Open a drop-down programmatically
-
-In `ComboBox` control, the drop-down can be opened or closed programmatically by using the `IsDropDownOpen` property. The default value of `IsDropDownOpen` property is `false`.
-
-{% tabs %}
-{% highlight XAML %}
-
-<editors:SfComboBox x:Name="comboBox"
-                    WidthRequest="250"
-                    IsEditable="true"
-                    ItemsSource="{Binding SocialMedias}"
-                    IsDropDownOpen = true;
-                    DisplayMemberPath="Name"
-                    TextMemberPath="Name">
-</editors:SfComboBox>
-
-{% endhighlight %}
-{% highlight C# %}
-
-comboBox.IsDropDownOpen = true;
-
-{% endhighlight %}
-{% endtabs %}

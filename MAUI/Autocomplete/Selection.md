@@ -13,7 +13,7 @@ The `Autocomplete` allows user to select a single item from dropdown list.
 
 ## Single selection
 
-The `Autocomplete` allows user to select an item by entering the value using keyboard, then selecting from the drop-down list and clicking the `Enter` key or `Tab` key. The selected item can be retrieved from the `SelectedItem` property.
+The `Autocomplete` allows user to select an item by entering the value using keyboard, then selecting from the drop-down list by clicking the item. The selected item can be retrieved from the `SelectedItem` property.
 
 {% tabs %}
 {% highlight c# %}
