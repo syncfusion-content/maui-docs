@@ -11,7 +11,7 @@ documentation: ug
 
 ## Plotting Area Customization:
 
-[SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1) allows you to add any view to the chart plot area , which is useful for adding any relevant data, a watermark, or a color gradient to the background of the chart. The following code example shows how to configure plot area background view.
+[SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1) allows you to add any view to the chart plot area, which is useful for adding any relevant data, a watermark, or a color gradient to the background of the chart.The following code example shows how to configure plot area background view.
 
 {% tabs %}
 
