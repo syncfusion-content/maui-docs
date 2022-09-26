@@ -1094,7 +1094,7 @@ public MainPage()
       {{'[MapLegendSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.MapLegendSetting.html)'| markdownify }}
    </td>
    <td>
-      Upcoming
+      {{'IconSize'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -1103,7 +1103,7 @@ public MainPage()
       {{'[MapLegendSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.MapLegendSetting.html)'| markdownify }}
    </td>
    <td>
-      Upcoming
+      {{'IconType'| markdownify }}
    </td>
 </tr>
 </table>
@@ -1196,7 +1196,9 @@ The following code example explains how to customize legend in the Xamarin SfMap
             </map:MapShapeLayer.ColorMappings>
             <map:MapShapeLayer.Legend>
                 <map:MapLegend SourceType="Shape"
-                               Placement="Top">
+                               Placement="Top"
+                               IconSize="20, 20"
+                               IconType="Diamond">
                     <map:MapLegend.TextStyle>
                         <map:MapLabelStyle FontSize="16"/>
                     </map:MapLegend.TextStyle>
@@ -1232,7 +1234,9 @@ public MainPage()
 
     MapLegend legendSet = new MapLegend();
     legendSet.SourceType = LegendSourceType.Shape;
-
+    legendSet.Placement = Syncfusion.Maui.Core.LegendPlacement.Top;
+    legendSet.IconSize = new Size(20, 20);
+    legendSet.IconType = Syncfusion.Maui.Core.ShapeType.Diamond;
     MapLabelStyle mapLabelStyle = new MapLabelStyle();
     mapLabelStyle.FontSize = 16;
         
@@ -1261,10 +1265,86 @@ public MainPage()
       {{'[TooltipSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.TooltipSetting.html)'| markdownify }}
    </td>
    <td>
-      Upcoming
+      {{'MapTooltipSettings'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[ShowTooltip](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.TooltipSetting.html#Syncfusion_SfMaps_XForms_TooltipSetting_ShowTooltip)'| markdownify }} in 
+      {{'[TooltipSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.TooltipSetting.html)'| markdownify }}
+   </td>
+   <td>
+      Divided into {{'ShowShapeTooltip'| markdownify }}, {{'ShowBubbleTooltip'| markdownify }} and {{'ShowMarkerTooltip'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[TooltipSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeFileLayer.html#Syncfusion_SfMaps_XForms_ShapeFileLayer_TooltipSettings)'| markdownify }} in 
+      {{'[ShapeFileLayer](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeFileLayer.html)'| markdownify }}
+
+   </td>
+   <td>
+      {{'ShapeTooltipSettings'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[TooltipSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.BubbleMarkerSetting.html#Syncfusion_SfMaps_XForms_BubbleMarkerSetting_TooltipSettings)'| markdownify }} in 
+      {{'[BubbleMarkerSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.BubbleMarkerSetting.html)'| markdownify }}
+
+   </td>
+   <td>
+      {{'BubbleTooltipSettings'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[TooltipSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.MapMarkerSetting.html#Syncfusion_SfMaps_XForms_MapMarkerSetting_TooltipSettings)'| markdownify }} in 
+      {{'[MapMarkerSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.MapMarkerSetting.html)'| markdownify }}
+
+   </td>
+   <td>
+      {{'MarkerTooltipSettings'| markdownify }}
    </td>
 </tr>
 </table>
+
+### Tooltip settings
+
+<table>
+<tr>
+<th>Xamarin SfMaps</th>
+<th>.NET MAUI SfMaps</th>
+</tr>
+<tr>
+   <td>
+      {{'[BackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.TooltipSetting.html#Syncfusion_SfMaps_XForms_TooltipSetting_BackgroundColor)'| markdownify }}
+   </td>
+   <td>
+      {{'Background'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[Margin](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.TooltipSetting.html#Syncfusion_SfMaps_XForms_TooltipSetting_Margin)'| markdownify }}
+   </td>
+   <td>
+      {{'Padding'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[TextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.TooltipSetting.html#Syncfusion_SfMaps_XForms_TooltipSetting_TextColor)'| markdownify }}, 
+      {{'[FontSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.TooltipSetting.html#Syncfusion_SfMaps_XForms_TooltipSetting_FontSize)'| markdownify }}, 
+      {{'[FontFamily](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.TooltipSetting.html#Syncfusion_SfMaps_XForms_TooltipSetting_FontFamily)'| markdownify }} and 
+      {{'[FontAttributes](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.TooltipSetting.html#Syncfusion_SfMaps_XForms_TooltipSetting_FontAttributes)'| markdownify }}
+
+   </td>
+   <td>
+      {{'TextStyle'| markdownify }}
+   </td>
+</tr>
+<table>
 
 The following code example explains how to customize tooltip in the Xamarin SfMaps and .Net MAUI SfMaps.
 
@@ -1330,6 +1410,18 @@ The following code example explains how to customize tooltip in the Xamarin SfMa
                            ShapeDataField="name"
                            ShapeColorValuePath="Count"
                            ShowShapeToolTip="True">
+
+                  <map:MapShapeLayer.ShapeTooltipSettings>
+                    <map:MapTooltipSettings Background="#002080"
+                                            Padding="2">
+                        <map:MapTooltipSettings.TextStyle>
+                            <map:MapLabelStyle FontSize="14"
+                                               TextColor="White"
+                                               FontAttributes="Bold">
+                            </map:MapLabelStyle>
+                        </map:MapTooltipSettings.TextStyle>
+                    </map:MapTooltipSettings>
+                </map:MapShapeLayer.ShapeTooltipSettings>
         </map:MapShapeLayer>
     </map:SfMaps.Layer>
 </map:SfMaps>
@@ -1352,6 +1444,18 @@ The following code example explains how to customize tooltip in the Xamarin SfMa
         layer.DataSource = viewModel.Data;
         layer.ShowShapeTooltip = true;
 
+        layer.ShapeTooltipSettings = new MapTooltipSettings()
+        {
+            Background = Color.FromArgb("#002080"),
+            Padding = new Thickness(2),
+            TextStyle = new MapLabelStyle()
+            {
+                FontSize = 14,
+                TextColor = Colors.White,
+                FontAttributes = FontAttributes.Bold
+            }
+        };
+
         SfMaps maps = new SfMaps();
         maps.Layer = layer;
         this.Content = maps;
@@ -1363,13 +1467,1562 @@ The following code example explains how to customize tooltip in the Xamarin SfMa
 </td></tr>
 </table>
 
+## Shape sublayer
+
+<table>
+<tr>
+   <th>Xamarin SfMaps</th>
+   <th>.NET MAUI SfMaps</th>
+</tr>
+<tr>
+   <td>
+      {{'[BubbleMarkerSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeFileLayer.html#Syncfusion_SfMaps_XForms_ShapeFileLayer_BubbleMarkerSettings)'| markdownify }}
+   </td>
+   <td>
+      {{'BubbleSettings'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[DataLabelSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeFileLayer.html#Syncfusion_SfMaps_XForms_ShapeFileLayer_DataLabelSettings)'| markdownify }}
+   </td>
+   <td>
+      {{'DataLabelSettings'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[ItemsSource](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeFileLayer.html#Syncfusion_SfMaps_XForms_ShapeFileLayer_ItemsSource)'| markdownify }}
+   </td>
+   <td>
+      {{'DataSource'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[ShapeIDPath](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeFileLayer.html#Syncfusion_SfMaps_XForms_ShapeFileLayer_ShapeIDPath)'| markdownify }}
+   </td>
+   <td>
+      {{'PrimaryValuePath'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[ShapeIDTableField](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeFileLayer.html#Syncfusion_SfMaps_XForms_ShapeFileLayer_ShapeIDTableField)'| markdownify }}
+   </td>
+   <td>
+      {{'ShapeDataField'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[Uri](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeFileLayer.html#Syncfusion_SfMaps_XForms_ShapeFileLayer_Uri)'| markdownify }}
+   </td>
+   <td>
+      {{'ShapesSource'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[ColorMappings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html#Syncfusion_SfMaps_XForms_ShapeSetting_ColorMappings)'| markdownify }} in
+       {{'[ShapeSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html)'| markdownify }} class
+   </td>
+   <td>
+      {{'ColorMappings'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[ShapeFill](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html#Syncfusion_SfMaps_XForms_ShapeSetting_ShapeFill)'| markdownify }} in
+       {{'[ShapeSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html)'| markdownify }} class
+   </td>
+   <td>
+      {{'ShapeFill'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[ShapeStroke](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html#Syncfusion_SfMaps_XForms_ShapeSetting_ShapeStroke)'| markdownify }} in
+       {{'[ShapeSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html)'| markdownify }} class
+   </td>
+   <td>
+      {{'ShapeStroke'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[ShapeStrokeThickness](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html#Syncfusion_SfMaps_XForms_ShapeSetting_ShapeStrokeThickness)'| markdownify }} in
+       {{'[ShapeSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html)'| markdownify }} class
+   </td>
+   <td>
+      {{'ShapeStrokeThickness'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[ShapeColorValuePath](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html#Syncfusion_SfMaps_XForms_ShapeSetting_ShapeColorValuePath)'| markdownify }} and {{'[ShapeValuePath](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html#Syncfusion_SfMaps_XForms_ShapeSetting_ShapeValuePath)'| markdownify }} in
+       {{'[ShapeSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html)'| markdownify }} class
+   </td>
+   <td>
+      {{'ShapeColorValuePath'| markdownify }}
+   </td>
+</tr>
+</table>
+
+The following code example explains how to initialize the shape sublayer and it's customization in the Xamarin SfMaps and .Net MAUI SfMaps.
+
+<table>
+<tr>
+<th>Xamarin SfMaps</th>
+<th>.NET MAUI SfMaps</th></tr>
+<tr>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<maps:SfMaps>
+    <maps:SfMaps.Layers>
+        <maps:ShapeFileLayer Uri="world1.shp">
+            <maps:ShapeFileLayer.Sublayers>
+                <maps:ShapeFileLayer Uri="usa_state.shp">
+                    <maps:ShapeFileLayer.ShapeSettings>
+                        <maps:ShapeSetting  ShapeFill="#8DCCF4"
+                                            ShapeStroke="#B1D8F5"
+                                            ShapeStrokeThickness="1">
+                        </maps:ShapeSetting>
+                    </maps:ShapeFileLayer.ShapeSettings>
+                </maps:ShapeFileLayer>
+            </maps:ShapeFileLayer.Sublayers>
+        </maps:ShapeFileLayer>
+    </maps:SfMaps.Layers>
+</maps:SfMaps>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfMaps map = new SfMaps();
+map.BackgroundColor = Color.White;
+ShapeFileLayer layer = new ShapeFileLayer();
+layer.Uri = "world1.shp";
+ShapeFileLayer subShapeLayer = new ShapeFileLayer();
+subShapeLayer.Uri = "usa_state.shp";
+ShapeSetting shapeSetting = new ShapeSetting();
+shapeSetting.ShapeFill = Color.FromRgb(181, 220, 255);
+shapeSetting.ShapeStroke = Color.FromRgb(21, 133, 237);
+subShapeLayer.ShapeSettings = shapeSetting;
+layer.Sublayers.Add(subShapeLayer);
+map.Layers.Add(layer);
+this.Content = map;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json">
+            <map:MapShapeLayer.Sublayers>
+                <map:MapShapeSublayer ShapeStroke="#B1D8F5"
+                                      ShapeFill="#8DCCF4"
+                                      ShapeStrokeThickness = "1"
+                                      ShapesSource="https://cdn.syncfusion.com/maps/map-data/africa.json">
+                </map:MapShapeSublayer>
+            </map:MapShapeLayer.Sublayers>
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+public MainPage()
+{
+    InitializeComponent();
+    SfMaps maps = new SfMaps();
+    MapShapeLayer layer = new MapShapeLayer();
+    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
+    MapShapeSublayer sublayer = new MapShapeSublayer();
+    sublayer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/africa.json"));
+    sublayer.ShapeFill = Color.FromRgb(81, 220, 255);
+    sublayer.ShapeStroke = Color.FromRgb(21, 133, 237);
+    sublayer.ShapeStrokeThickness = 1;
+    layer.Sublayers.Add(sublayer);
+    maps.Layer = layer;
+    this.Content = maps;
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+</td></tr>
+</table>
+
+### Bubble settings
+
+<table>
+<tr>
+<th>Xamarin SfMaps</th>
+<th>.NET MAUI SfMaps</th>
+</tr>
+<tr>
+   <td>
+      {{'[ColorMappings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.BubbleMarkerSetting.html#Syncfusion_SfMaps_XForms_BubbleMarkerSetting_ColorMappings)'| markdownify }}
+   </td>
+   <td>
+      {{'[ColorMappings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapBubbleSettings.html#Syncfusion_Maui_Maps_MapBubbleSettings_ColorMappings)'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[ColorValuePath](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.BubbleMarkerSetting.html#Syncfusion_SfMaps_XForms_BubbleMarkerSetting_ColorValuePath)'| markdownify }}
+   </td>
+   <td>
+      {{'[ColorValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapBubbleSettings.html#Syncfusion_Maui_Maps_MapBubbleSettings_ColorValuePath)'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[Fill](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.BubbleMarkerSetting.html#Syncfusion_SfMaps_XForms_BubbleMarkerSetting_Fill)'| markdownify }}
+   </td>
+   <td>
+      {{'[Fill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapBubbleSettings.html#Syncfusion_Maui_Maps_MapBubbleSettings_Fill)'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[MaxSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.BubbleMarkerSetting.html#Syncfusion_SfMaps_XForms_BubbleMarkerSetting_MaxSize)'| markdownify }}
+   </td>
+   <td>
+      {{'[MaxSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapBubbleSettings.html#Syncfusion_Maui_Maps_MapBubbleSettings_MaxSize)'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[MinSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.BubbleMarkerSetting.html#Syncfusion_SfMaps_XForms_BubbleMarkerSetting_MinSize)'| markdownify }}
+   </td>
+   <td>
+      {{'[MinSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapBubbleSettings.html#Syncfusion_Maui_Maps_MapBubbleSettings_MinSize)'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[Opacity](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.BubbleMarkerSetting.html#Syncfusion_SfMaps_XForms_BubbleMarkerSetting_Opacity)'| markdownify }}
+   </td>
+   <td>
+      {{'[Opacity](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapBubbleSettings.html#Syncfusion_Maui_Maps_MapBubbleSettings_Opacity)'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[ValuePath](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.BubbleMarkerSetting.html#Syncfusion_SfMaps_XForms_BubbleMarkerSetting_ValuePath)'| markdownify }}
+   </td>
+   <td>
+      {{'[SizeValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapBubbleSettings.html#Syncfusion_Maui_Maps_MapBubbleSettings_SizeValuePath)'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[ShowBubbles](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.BubbleMarkerSetting.html#Syncfusion_SfMaps_XForms_BubbleMarkerSetting_ShowBubbles)'| markdownify }}
+   </td>
+   <td>
+      {{'ShowBubbles'| markdownify }}
+   </td>
+</tr>
+</table>
+
+The following code example explains how to customize the bubble in the Xamarin SfMaps and .Net MAUI SfMaps.
+
+<table>
+<tr>
+<th>Xamarin SfMaps</th>
+<th>.NET MAUI SfMaps</th></tr>
+<tr>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<maps:SfMaps>
+    <maps:SfMaps.Layers>
+        <maps:ShapeFileLayer Uri="world1.shp">
+            <maps:ShapeFileLayer.Sublayers>
+                <maps:ShapeFileLayer Uri="usa_state.shp"
+                                     ItemsSource="{Binding DataSource}"
+                                     ShapeIDPath="Name"
+                                     ShapeIDTableField="STATE_NAME">
+                    <maps:ShapeFileLayer.BubbleMarkerSettings>
+                        <maps:BubbleMarkerSetting ShowBubbles="True"
+                                                  ValuePath="index"
+                                                  Fill="Orange"
+                                                  Opacity="0.8" />
+                    </maps:ShapeFileLayer.BubbleMarkerSettings>
+                </maps:ShapeFileLayer>
+            </maps:ShapeFileLayer.Sublayers>
+        </maps:ShapeFileLayer>
+    </maps:SfMaps.Layers>
+</maps:SfMaps>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+ ViewModel viewModel = new ViewModel();
+this.BindingContext = viewModel;
+SfMaps maps = new SfMaps();
+ShapeFileLayer layer = new ShapeFileLayer();
+layer.Uri = "world1.shp";
+ShapeFileLayer subShapeLayer = new ShapeFileLayer();
+subShapeLayer.Uri = "usa_state.shp";
+subShapeLayer.ShapeIDTableField = "STATE_NAME";
+subShapeLayer.ShapeIDPath = "Name";
+subShapeLayer.ItemsSource = viewModel.DataSource;
+
+BubbleMarkerSetting bubbleSetting = new BubbleMarkerSetting()
+{
+    ShowBubbles = true,
+    ValuePath = "index",
+    Fill = Color.Orange,
+    Opacity = 0.8
+};
+
+subShapeLayer.BubbleMarkerSettings = bubbleSetting;
+layer.Sublayers.Add(subShapeLayer);
+maps.Layers.Add(layer);
+this.Content = maps;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json">
+            <map:MapShapeLayer.Sublayers>
+                <map:MapShapeSublayer  ShapesSource="https://cdn.syncfusion.com/maps/map-data/africa.json"
+                                      ShapeDataField="name"
+                                      DataSource="{Binding Data}"
+                                      PrimaryValuePath="State"
+                                      ShowBubbles="True">
+                    <map:MapShapeSublayer.BubbleSettings>
+                        <map:MapBubbleSettings ColorValuePath="Size"
+                                               SizeValuePath="Size">
+                        </map:MapBubbleSettings>
+                    </map:MapShapeSublayer.BubbleSettings>
+                </map:MapShapeSublayer>
+            </map:MapShapeLayer.Sublayers>
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+public MainPage()
+{
+    InitializeComponent();
+    ViewModel viewModel = new ViewModel();
+    this.BindingContext = viewModel;
+    SfMaps maps = new SfMaps();
+    MapShapeLayer layer = new MapShapeLayer();
+    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
+    MapShapeSublayer sublayer = new MapShapeSublayer();
+    sublayer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/africa.json"));
+    sublayer.DataSource = viewModel.Data;
+    sublayer.PrimaryValuePath = "State";
+    sublayer.ShapeDataField = "name";
+    sublayer.ShowBubbles = true;
+
+    MapBubbleSettings bubbleSetting = new MapBubbleSettings()
+    {
+        ColorValuePath = "Size",
+        SizeValuePath = "Size",
+    };
+
+    sublayer.BubbleSettings = bubbleSetting;
+    layer.Sublayers.Add(sublayer);
+    maps.Layer = layer;
+    this.Content = maps;
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+</td></tr>
+</table>
+
+### Data label settings
+
+<table>
+<tr>
+<th>Xamarin SfMaps</th>
+<th>.NET MAUI SfMaps</th>
+</tr>
+<tr>
+   <td>
+      {{'[SmartLabelMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.DataLabelSetting.html#Syncfusion_SfMaps_XForms_DataLabelSetting_SmartLabelMode)'| markdownify }}
+   </td>
+   <td>
+      {{'[OverflowMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapDataLabelSettings.html#Syncfusion_Maui_Maps_MapDataLabelSettings_OverflowMode)'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[TextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.DataLabelSetting.html#Syncfusion_SfMaps_XForms_DataLabelSetting_TextColor)'| markdownify }},
+      {{'[FontSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.DataLabelSetting.html#Syncfusion_SfMaps_XForms_DataLabelSetting_FontSize)'| markdownify }},
+      {{'[FontFamily](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.DataLabelSetting.html#Syncfusion_SfMaps_XForms_DataLabelSetting_FontFamily)'| markdownify }}, and
+      {{'[FontAttributes](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.DataLabelSetting.html#Syncfusion_SfMaps_XForms_DataLabelSetting_FontAttributes)'| markdownify }}
+   </td>
+   <td>
+      {{'[DataLabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapDataLabelSettings.html#Syncfusion_Maui_Maps_MapDataLabelSettings_DataLabelStyle)'| markdownify }}
+   </td>
+</tr>
+</table>
+
+The following code example explains how to customize the data label in the Xamarin SfMaps and .Net MAUI SfMaps.
+
+<table>
+<tr>
+<th>Xamarin SfMaps</th>
+<th>.NET MAUI SfMaps</th></tr>
+<tr>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<maps:SfMaps>
+    <maps:SfMaps.Layers>
+        <maps:ShapeFileLayer Uri="world1.shp">
+            <maps:ShapeFileLayer.Sublayers>
+                <maps:ShapeFileLayer Uri="usa_state.shp"
+                                     ItemsSource="{Binding DataSource}"
+                                     ShapeIDPath="Name"
+                                     ShapeIDTableField="STATE_NAME"
+                                     ShowMapItems="True">
+                    <maps:ShapeFileLayer.ShapeSettings>
+                        <maps:ShapeSetting ShapeValuePath="Name" />
+                    </maps:ShapeFileLayer.ShapeSettings>
+                    <maps:ShapeFileLayer.DataLabelSettings>
+                        <maps:DataLabelSetting  TextColor="Blue"
+                                                SmartLabelMode="None" />
+                    </maps:ShapeFileLayer.DataLabelSettings>
+                </maps:ShapeFileLayer>
+            </maps:ShapeFileLayer.Sublayers>
+        </maps:ShapeFileLayer>
+    </maps:SfMaps.Layers>
+</maps:SfMaps>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+ViewModel viewModel = new ViewModel();
+this.BindingContext = viewModel;
+SfMaps maps = new SfMaps();
+
+ShapeFileLayer layer = new ShapeFileLayer();
+layer.Uri = "world1.shp";
+
+ShapeFileLayer subShapeLayer = new ShapeFileLayer();
+subShapeLayer.Uri = "usa_state.shp";
+subShapeLayer.ShapeIDTableField = "STATE_NAME";
+subShapeLayer.ShapeIDPath = "Name";
+subShapeLayer.ItemsSource = viewModel.DataSource;
+subShapeLayer.ShapeSettings.ShapeValuePath = "Name";
+
+DataLabelSetting dataLabelSetting = new DataLabelSetting();
+dataLabelSetting.SmartLabelMode = IntersectAction.None;
+ dataLabelSetting.TextColor = Color.Blue;
+subShapeLayer.DataLabelSettings = dataLabelSetting;
+
+layer.Sublayers.Add(subShapeLayer);
+maps.Layers.Add(layer);
+this.Content = maps;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json">
+            <map:MapShapeLayer.Sublayers>
+                <map:MapShapeSublayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/africa.json"
+                                      ShapeDataField="name"
+                                      DataSource="{Binding Data}"
+                                      PrimaryValuePath="State"
+                                      ShowDataLabels="True">
+                    <map:MapShapeSublayer.DataLabelSettings>
+                        <map:MapDataLabelSettings DataLabelPath="State" >
+                        <map:MapDataLabelSettings.DataLabelStyle>
+                                <map:MapLabelStyle FontSize="6" />
+                            </map:MapDataLabelSettings.DataLabelStyle>
+                            </map:MapDataLabelSettings>
+                    </map:MapShapeSublayer.DataLabelSettings>
+                </map:MapShapeSublayer>
+            </map:MapShapeLayer.Sublayers>
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+public MainPage()
+{
+	 InitializeComponent();
+    ViewModel viewModel = new ViewModel();
+    this.BindingContext = viewModel;
+    SfMaps maps = new SfMaps();
+    MapShapeLayer layer = new MapShapeLayer();
+    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
+    MapShapeSublayer sublayer = new MapShapeSublayer();
+    sublayer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/africa.json"));
+    sublayer.DataSource = viewModel.Data;
+    sublayer.PrimaryValuePath = "State";
+    sublayer.ShapeDataField = "name";
+    sublayer.ShowDataLabels = true;
+
+    sublayer.DataLabelSettings = new MapDataLabelSettings()
+    {
+        DataLabelPath = "State",
+        DataLabelStyle = new MapLabelStyle()
+        {
+            FontSize = 6,
+        },
+    };
+
+    layer.Sublayers.Add(sublayer);
+    maps.Layer = layer;
+    this.Content = maps;
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+</td></tr>
+</table>
+
+### Color mappings
+
+<table>
+<tr>
+<th>Xamarin SfMaps</th>
+<th>.NET MAUI SfMaps</th>
+</tr>
+<tr>
+   <td>
+      {{'[Color](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ColorMapping.html#Syncfusion_SfMaps_XForms_ColorMapping_Color)'| markdownify }}
+   </td>
+   <td>
+      {{'[Color](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.ColorMapping.html#Syncfusion_Maui_Maps_ColorMapping_Color)'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[EqualColorMapping](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.EqualColorMapping.html)'| markdownify }}
+   </td>
+   <td>
+      {{'[EqualColorMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.EqualColorMapping.html)'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[RangeColorMapping](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.RangeColorMapping.html)'| markdownify }}
+   </td>
+   <td>
+      {{'[RangeColorMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.RangeColorMapping.html)'| markdownify }}
+   </td>
+</tr>
+</table>
+
+<b>Equal color mapping</b>
+
+<table>
+<tr>
+<th>Xamarin SfMaps</th>
+<th>.NET MAUI SfMaps</th>
+</tr>
+<tr>
+   <td>
+      {{'[Value](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.EqualColorMapping.html#Syncfusion_SfMaps_XForms_EqualColorMapping_Value)'| markdownify }}
+   </td>
+   <td>
+      {{'[Value](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.EqualColorMapping.html#Syncfusion_Maui_Maps_EqualColorMapping_Value)'| markdownify }}
+   </td>
+</tr>
+</table>
+
+<b>Range color mapping</b>
+
+<table>
+<tr>
+<th>Xamarin SfMaps</th>
+<th>.NET MAUI SfMaps</th>
+</tr>
+<tr>
+   <td>
+      {{'[From](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.RangeColorMapping.html#Syncfusion_SfMaps_XForms_RangeColorMapping_From)'| markdownify }}
+   </td>
+   <td>
+      {{'[From](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.RangeColorMapping.html#Syncfusion_Maui_Maps_RangeColorMapping_From)'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[To](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.RangeColorMapping.html#Syncfusion_SfMaps_XForms_RangeColorMapping_To)'| markdownify }}
+   </td>
+   <td>
+      {{'[To](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.RangeColorMapping.html#Syncfusion_Maui_Maps_RangeColorMapping_To)'| markdownify }}
+   </td>
+</tr>
+</table>
+
+The following code example explains how to customize the shape color in the Xamarin SfMaps and .Net MAUI SfMaps.
+
+<table>
+<tr>
+<th>Xamarin SfMaps</th>
+<th>.NET MAUI SfMaps</th></tr>
+<tr>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<maps:SfMaps>
+    <maps:SfMaps.Layers>
+        <maps:ShapeFileLayer Uri="world1.shp">
+            <maps:ShapeFileLayer.Sublayers>
+                <maps:ShapeFileLayer Uri="usa_state.shp"
+                                     ItemsSource="{Binding DataSource}"
+                                     ShapeIDPath="Name"
+                                     ShapeIDTableField="STATE_NAME">
+                    <maps:ShapeFileLayer.ShapeSettings>
+                        <maps:ShapeSetting ShapeValuePath="index"
+                                           ShapeColorValuePath="index">
+                            <maps:ShapeSetting.ColorMappings>
+                                <maps:EqualColorMapping Color="Blue"
+                                                        Value="100"
+                                                        LegendLabel="100" />
+                                <maps:RangeColorMapping Color="Green"
+                                                        From="0"
+                                                        To="99"
+                                                        LegendLabel="100" />
+                            </maps:ShapeSetting.ColorMappings>
+                        </maps:ShapeSetting>
+                    </maps:ShapeFileLayer.ShapeSettings>
+                </maps:ShapeFileLayer>
+            </maps:ShapeFileLayer.Sublayers>
+        </maps:ShapeFileLayer>
+    </maps:SfMaps.Layers>
+</maps:SfMaps>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+    ViewModel viewModel = new ViewModel();
+    this.BindingContext = viewModel;
+    SfMaps maps = new SfMaps();
+
+    ShapeFileLayer layer = new ShapeFileLayer();
+    layer.Uri = "world1.shp";
+
+    ShapeFileLayer subShapeLayer = new ShapeFileLayer();
+    subShapeLayer.Uri = "usa_state.shp";           
+    subShapeLayer.ShapeIDPath="Name"
+    subShapeLayer.ShapeIDTableField="STATE_NAME"
+    subShapeLayer.DataSource = viewModel.DataSource;
+
+    EqualColorMapping colorMapping = new EqualColorMapping();
+    colorMapping.Color = Colors.Blue;
+    colorMapping.Value = "100";
+    colorMapping.LegendLabel = "100";
+
+    RangeColorMapping colorMapping1 = new RangeColorMapping();
+    colorMapping1.Color = Colors.Green;
+    colorMapping1.From = 0;
+    colorMapping1.To = 99;
+    colorMapping1.LegendLabel = "0-99";
+    
+    ShapeSetting shapeSetting = new ShapeSetting();
+    shapeSetting.ShapeValuePath = "Count";
+    shapeSetting.ShapeColorValuePath = "Count";
+    
+    shapeSetting.ColorMappings.Add(colorMapping);
+    shapeSetting.ColorMappings.Add(colorMapping1);
+
+    subShapeLayer.ShapeSettings = shapeSetting;
+    layer.Sublayers.Add(subShapeLayer);
+    maps.Layers.Add(layer);
+    this.Content = maps;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json">
+            <map:MapShapeLayer.Sublayers>
+                <map:MapShapeSublayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/africa.json"
+                                   DataSource="{Binding Data}"
+                                   PrimaryValuePath="State"
+                                   ShapeDataField="name"
+                                   ShapeColorValuePath="Count">
+                    <map:MapShapeSublayer.ColorMappings>
+                        <map:EqualColorMapping Color="Blue"
+                                               Value="100"
+                                               Text="100" />
+                        <map:RangeColorMapping Color="Green"
+                                               From="0"
+                                               To="99"
+                                               Text="0-99" />
+                    </map:MapShapeSublayer.ColorMappings>
+                </map:MapShapeSublayer>
+            </map:MapShapeLayer.Sublayers>
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+public MainPage()
+{
+   InitializeComponent();
+    ViewModel viewModel = new ViewModel();
+    this.BindingContext = viewModel;
+    SfMaps maps = new SfMaps();
+    MapShapeLayer layer = new MapShapeLayer();
+    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
+    MapShapeSublayer sublayer = new MapShapeSublayer();
+    sublayer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/africa.json"));
+    sublayer.DataSource = viewModel.Data;
+    sublayer.PrimaryValuePath = "State";
+    sublayer.ShapeDataField = "name";
+    sublayer.ShapeColorValuePath = "Count";
+
+    EqualColorMapping colorMapping = new EqualColorMapping();
+    colorMapping.Color = Colors.Blue;
+    colorMapping.Value = "100";
+    colorMapping.Text = "100";
+
+    RangeColorMapping colorMapping1 = new RangeColorMapping();
+    colorMapping1.Color = Colors.Green;
+    colorMapping1.From = 0;
+    colorMapping1.To = 99;
+    colorMapping1.Text = "0-99";
+
+    sublayer.ColorMappings.Add(colorMapping);
+    sublayer.ColorMappings.Add(colorMapping1);
+
+    layer.Sublayers.Add(sublayer);
+    maps.Layer = layer;
+    this.Content = maps;
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+</td></tr>
+</table>
+
+## Vector layer
+
+### Polygon Layer
+
+<table>
+<tr>
+   <th>Xamarin SfMaps</th>
+   <th>.NET MAUI SfMaps</th>
+</tr>
+<tr>
+<tr>
+   <td>
+      {{'[ShapeType](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeFileLayer.html#Syncfusion_SfMaps_XForms_ShapeFileLayer_ShapeTypeProperty)'| markdownify }}
+   </td>
+   <td>
+      {{'MapPolygon'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[Points](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeFileLayer.html#Syncfusion_SfMaps_XForms_ShapeFileLayer_PointsProperty)'| markdownify }}
+   </td>
+   <td>
+      {{'Points'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[ShapeFill](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html#Syncfusion_SfMaps_XForms_ShapeSetting_ShapeFill)'| markdownify }} in
+       {{'[ShapeSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html)'| markdownify }} class
+   </td>
+   <td>
+      {{'Fill'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[ShapeStroke](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html#Syncfusion_SfMaps_XForms_ShapeSetting_ShapeStroke)'| markdownify }} in
+       {{'[ShapeSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html)'| markdownify }} class
+   </td>
+   <td>
+      {{'Stroke'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[ShapeStrokeThickness](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html#Syncfusion_SfMaps_XForms_ShapeSetting_ShapeStrokeThickness)'| markdownify }} in
+       {{'[ShapeSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html)'| markdownify }} class
+   </td>
+   <td>
+      {{'StrokeThickness'| markdownify }}
+   </td>
+</tr>
+</table>
+
+The following code example explains how to intialize the polygon layer and it's customization in Xamarin SfMaps and .Net MAUI SfMaps.
+
+<table>
+<tr>
+<th>Xamarin SfMaps</th>
+<th>.NET MAUI SfMaps</th></tr>
+<tr>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<maps:SfMaps>
+    <maps:SfMaps.Layers>
+        <maps:ShapeFileLayer Uri="world1.shp">
+            <maps:ShapeFileLayer.Sublayers>
+                <maps:ShapeFileLayer ShapeType="Polygon">
+                    <maps:ShapeFileLayer.Points>
+                        <Point>
+                            <Point.X>39.6737</Point.X>
+                            <Point.Y>-100.5</Point.Y>
+                        </Point>
+                        <Point>
+                            <Point.X>61.35</Point.X>
+                            <Point.Y>18.131</Point.Y>
+                        </Point>
+                        <Point>
+                            <Point.X>-32.259</Point.X>
+                            <Point.Y>145.4214</Point.Y>
+                        </Point>
+                    </maps:ShapeFileLayer.Points>
+                    <maps:ShapeFileLayer.ShapeSettings>
+                        <maps:ShapeSetting  ShapeStrokeThickness="3" ShapeFill="Blue" />
+                    </maps:ShapeFileLayer.ShapeSettings>
+                </maps:ShapeFileLayer>
+            </maps:ShapeFileLayer.Sublayers>
+        </maps:ShapeFileLayer>
+    </maps:SfMaps.Layers>
+</maps:SfMaps>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+    SfMaps maps = new SfMaps();
+
+    ShapeFileLayer layer = new ShapeFileLayer();
+    layer.Uri = "world.shp"; 
+
+    ShapeFileLayer subLayer = new ShapeFileLayer();
+    subLayer.ShapeType = ShapeType.Polygon;
+    subLayer.Points.Add(new Point(39.6737,-100.5));
+    subLayer.Points.Add(new Point(61.35, 18.131));
+    subLayer.Points.Add(new Point(-32.259, 145.4214));
+    
+    ShapeSetting subLayerSetting = new ShapeSetting();
+    subLayerSetting.ShapeStrokeThickness = 4;
+    subLayerSetting.ShapeFill = Color.Blue;
+    subLayerSetting.ShapeStroke = Color.DarkBlue;
+
+    subLayer.ShapeSettings = subLayerSetting;
+    layer.Sublayers.Add(subLayer);
+    maps.Layers.Add(layer);
+
+{% endhighlight %}
+
+{% endtabs %}
+</td>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json">
+            <map:MapShapeLayer.Sublayers>
+                <map:MapPolygonLayer>
+                    <map:MapPolygonLayer.Polygons>
+                        <map:MapPolygon Stroke="DarkBule" Fill="blue" StrokeThickness="4">
+                            <map:MapPolygon.Points>
+                                <map:MapLatLng Latitude="37.6173"
+                                               Longitude="55.7558" />
+                                <map:MapLatLng Latitude="87.1216"
+                                               Longitude="53.7596" />
+                                <map:MapLatLng Latitude="105.3188"
+                                               Longitude="61.5240" />
+                            </map:MapPolygon.Points>
+                        </map:MapPolygon>
+                    </map:MapPolygonLayer.Polygons>
+                </map:MapPolygonLayer>
+            </map:MapShapeLayer.Sublayers>
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+public MainPage()
+{
+    InitializeComponent();
+    SfMaps maps = new SfMaps();
+    MapShapeLayer layer = new MapShapeLayer();
+    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
+    MapPolygonLayer mapPolygonLayer = new MapPolygonLayer();
+    MapPolygon polygon1 = new MapPolygon();
+    polygon1.Points = new ObservableCollection<MapLatLng>()
+    {
+    new MapLatLng(37.6173, 55.7558),
+    new MapLatLng(87.1216, 53.7596),
+    new MapLatLng(105.3188, 61.5240)
+    };
+    polygon1.Fill = Colors.Blue;
+    polygon1.Stroke = Colors.DarkBlue;
+    polygon1.StrokeThickness = 4;
+    mapPolygonLayer.Polygons.Add(polygon1);
+    layer.Sublayers.Add(mapPolygonLayer);
+    maps.Layer = layer;
+    this.Content = maps;
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+</td></tr>
+</table>
+
+### Polyline Layer
+
+<table>
+<tr>
+   <th>Xamarin SfMaps</th>
+   <th>.NET MAUI SfMaps</th>
+</tr>
+<tr>
+<tr>
+   <td>
+      {{'[ShapeType](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeFileLayer.html#Syncfusion_SfMaps_XForms_ShapeFileLayer_ShapeTypeProperty)'| markdownify }}
+   </td>
+   <td>
+      {{'MapPolyline'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[Points](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeFileLayer.html#Syncfusion_SfMaps_XForms_ShapeFileLayer_PointsProperty)'| markdownify }}
+   </td>
+   <td>
+      {{'Points'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[ShapeStroke](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html#Syncfusion_SfMaps_XForms_ShapeSetting_ShapeStroke)'| markdownify }} in
+       {{'[ShapeSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html)'| markdownify }} class
+   </td>
+   <td>
+      {{'Stroke'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[ShapeStrokeThickness](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html#Syncfusion_SfMaps_XForms_ShapeSetting_ShapeStrokeThickness)'| markdownify }} in
+       {{'[ShapeSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html)'| markdownify }} class
+   </td>
+   <td>
+      {{'StrokeThickness'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[-]'| markdownify }}
+   </td>
+   <td>
+      {{'StrokeDashArray'| markdownify }}
+   </td>
+</tr>
+</table>
+
+The following code example explains how to intialize the polyline layer and it's customization in Xamarin SfMaps and .Net MAUI SfMaps.
+
+<table>
+<tr>
+<th>Xamarin SfMaps</th>
+<th>.NET MAUI SfMaps</th></tr>
+<tr>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+ <maps:SfMaps>
+     <maps:SfMaps.Layers>
+         <maps:ShapeFileLayer Uri="world1.shp">
+             <maps:ShapeFileLayer.Sublayers>
+                 <maps:ShapeFileLayer ShapeType="Polyline">
+                     <maps:ShapeFileLayer.Points>
+                         <Point>
+                             <Point.X>39.6737</Point.X>
+                             <Point.Y>-100.5</Point.Y>
+                         </Point>
+                         <Point>
+                             <Point.X>61.35</Point.X>
+                             <Point.Y>18.131</Point.Y>
+                         </Point>
+                         <Point>
+                             <Point.X>-32.259</Point.X>
+                             <Point.Y>145.4214</Point.Y>
+                         </Point>
+                     </maps:ShapeFileLayer.Points>
+                     <maps:ShapeFileLayer.ShapeSettings>
+                         <maps:ShapeSetting  ShapeStrokeThickness="3" />
+                     </maps:ShapeFileLayer.ShapeSettings>
+                 </maps:ShapeFileLayer>
+             </maps:ShapeFileLayer.Sublayers>
+         </maps:ShapeFileLayer>
+     </maps:SfMaps.Layers>
+ </maps:SfMaps>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+    SfMaps maps = new SfMaps();
+
+    ShapeFileLayer layer = new ShapeFileLayer();
+    layer.Uri = "world.shp"; 
+
+    ShapeFileLayer subLayer = new ShapeFileLayer();
+    subLayer.Points.Add(new Point(39.6737,-100.5));
+    subLayer.Points.Add(new Point(61.35, 18.131));
+    subLayer.Points.Add(new Point(-32.259, 145.4214));
+    subLayer.ShapeType = ShapeType.Polyline;
+              
+    ShapeSetting subLayerSetting = new ShapeSetting();
+    subLayerSetting.ShapeStrokeThickness = 3;
+    subLayerSetting.ShapeStroke = Color.Blue;
+    subLayer.ShapeSettings = subLayerSetting;
+    layer.Sublayers.Add(subLayer);
+    maps.Layers.Add(layer);
+
+{% endhighlight %}
+
+{% endtabs %}
+</td>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+ <map:SfMaps>
+     <map:SfMaps.Layer>
+         <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/india.json">
+             <map:MapShapeLayer.Sublayers>
+                 <map:MapPolylineLayer>
+                     <map:MapPolylineLayer.Polylines>
+                         <map:MapPolyline StrokeThickness="3" Stroke="Blue">
+                             <map:MapPolyline.Points>
+                                 <map:MapLatLng Latitude="80.2707"
+                                                Longitude="13.0827" />
+                                 <map:MapLatLng Latitude="79.6117"
+                                                Longitude="13.1746" />
+                                 <map:MapLatLng Latitude="79.5037"
+                                                Longitude="13.6373" />
+                                 <map:MapLatLng Latitude="78.8242"
+                                                Longitude="14.4673" />
+                             </map:MapPolyline.Points>
+                         </map:MapPolyline>
+                     </map:MapPolylineLayer.Polylines>
+                 </map:MapPolylineLayer>
+             </map:MapShapeLayer.Sublayers>
+         </map:MapShapeLayer>
+     </map:SfMaps.Layer>
+ </map:SfMaps>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+ public MainPage()
+ {
+     InitializeComponent();
+     SfMaps maps = new SfMaps();
+     MapShapeLayer layer = new MapShapeLayer();
+     layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/india.json"));
+     MapPolylineLayer mapPolylineLayer = new MapPolylineLayer();
+     MapPolyline polyline = new MapPolyline();
+     polyline.Points = new ObservableCollection<MapLatLng>()
+      {
+          new MapLatLng(80.2707, 13.0827),
+          new MapLatLng(79.6117, 13.1746),
+          new MapLatLng(79.5037, 13.6373),
+          new MapLatLng(78.8242, 14.4673),
+      };
+     polyline.Stroke = Colors.Blue;
+     mapPolylineLayer.Polylines.Add(polyline);
+     layer.Sublayers.Add(mapPolylineLayer);
+     maps.Layer = layer;
+     this.Content = maps;
+ }
+
+{% endhighlight %}
+
+{% endtabs %}
+</td></tr>
+</table>
+
+### Line Layer
+
+<table>
+<tr>
+   <th>Xamarin SfMaps</th>
+   <th>.NET MAUI SfMaps</th>
+</tr>
+<tr>
+<tr>
+   <td>
+      {{'-'| markdownify }}
+   </td>
+   <td>
+      {{'MapLine'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'-'| markdownify }}
+   </td>
+   <td>
+      {{'From'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'-'| markdownify }}
+   </td>
+   <td>
+      {{'To'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'-'| markdownify }}
+   </td>
+   <td>
+      {{'Stroke'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+     {{'-'| markdownify }}
+   </td>
+   <td>
+      {{'StrokeThickness'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'-'| markdownify }}
+   </td>
+   <td>
+      {{'StrokeDashArray'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'-'| markdownify }}
+   </td>
+   <td>
+      {{'StrokeLineCap'| markdownify }}
+   </td>
+</tr>
+</table>
+
+The following code example explains how to intialize the line layer and it's customization in Xamarin SfMaps and .Net MAUI SfMaps.
+
+<table>
+<tr>
+<th>Xamarin SfMaps</th>
+<th>.NET MAUI SfMaps</th></tr>
+<tr>
+<td>
+{{'-'| markdownify }}
+</td>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+ <map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json">
+            <map:MapShapeLayer.Sublayers>
+                <map:MapLineLayer>
+                    <map:MapLineLayer.Lines>
+                        <map:MapLine StrokeThickness="2"
+                                     Stroke="#8a8a8a">
+                            <map:MapLine.From>
+                                <map:MapLatLng Latitude="77.1025"
+                                               Longitude="28.7041" />
+                            </map:MapLine.From>
+                            <map:MapLine.To>
+                                <map:MapLatLng Latitude="-106.3468"
+                                               Longitude="56.1304" />
+                            </map:MapLine.To>
+                        </map:MapLine>
+                    </map:MapLineLayer.Lines>
+                </map:MapLineLayer>
+            </map:MapShapeLayer.Sublayers>
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+ public MainPage()
+{
+    InitializeComponent();
+    SfMaps maps = new SfMaps();
+    MapShapeLayer layer = new MapShapeLayer();
+    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
+    MapLineLayer mapLineLayer = new MapLineLayer();
+    MapLine line1 = new MapLine();
+    line1.From = new MapLatLng(77.1025, 28.7041);
+    line1.To = new MapLatLng(-106.3468, 56.1304);
+    line1.Stroke = Color.FromRgb(61, 155, 242);
+    line1.StrokeThickness = 2;
+    line1.StrokeLineCap = LineCap.Round;
+    layer.Sublayers.Add(mapLineLayer);
+    maps.Layer = layer;
+    this.Content = maps;
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+</td></tr>
+</table>
+
+### Arc Layer
+
+<table>
+<tr>
+   <th>Xamarin SfMaps</th>
+   <th>.NET MAUI SfMaps</th>
+</tr>
+<tr>
+<tr>
+   <td>
+      {{'-'| markdownify }}
+   </td>
+   <td>
+      {{'MapArc'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'-'| markdownify }}
+   </td>
+   <td>
+      {{'From'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'-'| markdownify }}
+   </td>
+   <td>
+      {{'To'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'-'| markdownify }}
+   </td>
+   <td>
+      {{'Stroke'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+       {{'-'| markdownify }}
+   </td>
+   <td>
+      {{'StrokeThickness'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'-'| markdownify }}
+   </td>
+   <td>
+      {{'StrokeDashArray'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'-'| markdownify }}
+   </td>
+   <td>
+      {{'HeightFactor'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+       {{'-'| markdownify }}
+   </td>
+   <td>
+      {{'ControlPointFactor'| markdownify }}
+   </td>
+</tr>
+</table>
+
+The following code example explains how to intialize the arc layer and it's customization in Xamarin SfMaps and .Net MAUI SfMaps.
+
+<table>
+<tr>
+<th>Xamarin SfMaps</th>
+<th>.NET MAUI SfMaps</th></tr>
+<tr>
+<td>
+{{'-'| markdownify }}
+</td>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+ <map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json">
+            <map:MapShapeLayer.Sublayers>
+                <map:MapArcLayer>
+                    <map:MapArcLayer.Arcs>
+                        <map:MapArc StrokeThickness="2"
+                                    Stroke="#8a8a8a" 
+                                    ControlPointFactor="0.5" 
+                                    HeightFactor="0.2">
+                            <map:MapArc.From>
+                                <map:MapLatLng Latitude="77.1025"
+                                               Longitude="28.7041" />
+                            </map:MapArc.From>
+                            <map:MapArc.To>
+                                <map:MapLatLng Latitude="-106.3468"
+                                               Longitude="56.1304" />
+                            </map:MapArc.To>
+                        </map:MapArc>
+                    </map:MapArcLayer.Arcs>
+                </map:MapArcLayer>
+            </map:MapShapeLayer.Sublayers>
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+ public MainPage()
+{
+    InitializeComponent();
+    SfMaps maps = new SfMaps();
+    MapShapeLayer layer = new MapShapeLayer();
+    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
+    MapArcLayer mapArcLayer = new MapArcLayer();
+    MapArc arc = new MapArc();
+    arc.From = new MapLatLng(77.1025, 28.7041);
+    arc.To = new MapLatLng(-106.3468, 56.1304);
+    arc.Stroke = Color.FromRgb(61, 155, 242);
+    arc.StrokeThickness = 2;
+    arc.ControlPointFactor = 0.5;
+    arc.HeightFactor = 0.2;
+    layer.Sublayers.Add(mapArcLayer);
+    maps.Layer = layer;
+    this.Content = maps;
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+</td></tr>
+</table>
+
+### Circle Layer
+
+<table>
+<tr>
+   <th>Xamarin SfMaps</th>
+   <th>.NET MAUI SfMaps</th>
+</tr>
+<tr>
+<tr>
+   <td>
+       {{'-'| markdownify }}
+   </td>
+   <td>
+      {{'MapCircle'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+       {{'-'| markdownify }}
+   </td>
+   <td>
+      {{'Center'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'-'| markdownify }}
+   </td>
+   <td>
+      {{'Radius'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+       {{'-'| markdownify }}
+   </td>
+   <td>
+      {{'Stroke'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'-'| markdownify }}
+   </td>
+   <td>
+      {{'StrokeThickness'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'-'| markdownify }}
+   </td>
+   <td>
+      {{'Fill'| markdownify }}
+   </td>
+</tr>
+</table>
+
+The following code example explains how to intialize the circle layer and it's customization in Xamarin SfMaps and .Net MAUI SfMaps.
+
+<table>
+<tr>
+<th>Xamarin SfMaps</th>
+<th>.NET MAUI SfMaps</th></tr>
+<tr>
+<td>
+{{'-'| markdownify }}
+</td>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+ <map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/india.json">
+            <map:MapShapeLayer.Sublayers>
+                <map:MapCircleLayer>
+                    <map:MapCircleLayer.Circles>
+                        <map:MapCircle Radius="10" 
+                                       Fill="LightGreen" 
+                                       Stroke="Green" 
+                                       StrokeThickness="2">
+                            <map:MapCircle.Center>
+                                <map:MapLatLng Latitude="74.1240"
+                                               Longitude="15.2993"></map:MapLatLng>
+                            </map:MapCircle.Center>
+                        </map:MapCircle>
+                    </map:MapCircleLayer.Circles>
+                </map:MapCircleLayer>
+            </map:MapShapeLayer.Sublayers>
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+public MainPage()
+{
+    InitializeComponent();
+    SfMaps maps = new SfMaps();
+    MapShapeLayer layer = new MapShapeLayer();
+    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/india.json"));
+    MapCircleLayer circleLayer = new MapCircleLayer();
+    MapCircle circle1 = new MapCircle();
+    circle1.Center = new MapLatLng(74.1240, 15.2993);
+    circle1.Radius = 10;
+    circle1.Fill = Colors.LightGreen;
+    circle1.Stroke = Colors.Green;
+    circle1.StrokeThickness = 3;
+    circleLayer.Circles.Add(circle1);
+    maps.Layer = layer;
+    this.Content = maps;
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+</td></tr>
+</table>
+
 ## Upcoming features in .NET MAUI
 
 * Support for imagery layer such as Bing Maps, OpenStreetMap, etc.
 * Zooming and panning
-* Sublayers
-* Legend interaction and customization
-* Tooltip customization
 
 ## Unsupported features from Xamarin.Forms
 
