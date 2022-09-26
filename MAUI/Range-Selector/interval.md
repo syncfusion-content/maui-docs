@@ -39,7 +39,7 @@ For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.M
             ...
         </charts:SfCartesianChart>
     
-    </rangeselector:SfRangeSelector>
+    </sliders:SfRangeSelector>
 </ContentPage>
 
 {% endhighlight %}
@@ -81,7 +81,8 @@ Move the thumb in discrete manner for numeric values using the [`StepSize`](http
                              Maximum="10"                                
                              RangeStart="2" 
                              RangeEnd="8"
-                             Interval="2" 
+                             Interval="2"
+                             StepSize="2" 
                              ShowLabels="True" 
                              ShowTicks="True" 
                              ShowDividers="True">
@@ -104,6 +105,7 @@ rangeSelector.Maximum = 10;
 rangeSelector.RangeStart = 2;
 rangeSelector.RangeEnd = 8;
 rangeSelector.Interval = 2;
+rangeSelector.StepSize = 2;
 rangeSelector.ShowLabels = true;
 rangeSelector.ShowTicks = true;
 rangeSelector.ShowDividers = true;

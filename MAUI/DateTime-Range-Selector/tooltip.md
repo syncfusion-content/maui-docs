@@ -129,10 +129,13 @@ Change the appearance of the tooltip using the [`Fill`](https://help.syncfusion.
                                      RangeEnd="2016-01-01">
          
          <sliders:SfDateTimeRangeSelector.Tooltip>
-            <sliders:SliderTooltip Fill="#F7B1AE" 
-                                   Stroke="#EE3F3F" 
-                                   StrokeThickness="2" />
-        
+            <sliders:SliderTooltip Fill="#DFD8F7"
+                                   Stroke="#512BD4"
+                                   StrokeThickness="2"
+                                   TextColor="#512BD4"
+                                   FontSize="14"
+                                   FontAttributes="Bold"
+                                   Padding="12,12" />
          </sliders:SfDateTimeRangeSelector.Tooltip>
         
         <charts:SfCartesianChart>
@@ -151,9 +154,13 @@ rangeSelector.Minimum = new DateTime(2010, 01, 01);
 rangeSelector.Maximum = new DateTime(2018, 01, 01);
 rangeSelector.RangeStart = new DateTime(2012, 01, 01);
 rangeSelector.RangeEnd = new DateTime(2016, 01, 01);
-rangeSelector.Tooltip.Fill = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
-rangeSelector.Tooltip.Stroke = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+rangeSelector.Tooltip.Fill = new SolidColorBrush(Color.FromArgb("#DFD8F7"));
+rangeSelector.Tooltip.Stroke = new SolidColorBrush(Color.FromArgb("#512BD4"));
 rangeSelector.Tooltip.StrokeThickness = 2;
+rangeSelector.Tooltip.TextColor = Color.FromArgb("#512BD4");
+rangeSelector.Tooltip.FontSize = 14;
+rangeSelector.Tooltip.FontAttributes = FontAttributes.Bold;
+rangeSelector.Tooltip.Padding = new Thickness(12, 12);
 SfCartesianChart chart = new SfCartesianChart();
 rangeSelector.Content = chart;
 
