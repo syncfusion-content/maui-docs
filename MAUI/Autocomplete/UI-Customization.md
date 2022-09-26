@@ -38,9 +38,9 @@ The following image illustrates the result of the above code:
 
 ![.NET MAUI Autocomplete placeholder](Images/UICustomization/Placeholder.png)
 
-### Change color of placeholder
+## Placeholder Color
 
-The placeholder texts’ foreground can be changed by using the `PlaceholderColor` property. The default value of `PlaceholderColor` property is `Colors.Gray`.
+The placeholder text color can be changed by using the `PlaceholderColor` property. The default value of `PlaceholderColor` property is `Colors.Gray`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -66,7 +66,65 @@ The following gif image illustrates the result of the above code:
 
 ![.NET MAUI Autocomplete placeholder color](Images/UICustomization/PlaceholderColor.png)
 
-## How to change DropDown MaxHeight
+## Clear Button Icon Color
+
+The clear button icon color can be changed by using the `ClearButtonIconColor` property. The default value of `ClearButtonIconColor` property is `Colors.Black`.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfAutocomplete
+    x:Name="autocomplete"
+    WidthRequest="250"
+    ItemsSource="{Binding SocialMedias}"
+    DisplayMemberPath="Name"
+    TextMemberPath="Name"
+    Placeholder="Select a social media"
+    PlaceholderColor="Red"
+    ClearButtonIconColor="Red" />
+
+{% endhighlight %}
+{% highlight C# %}
+
+autocomplete.ClearButtonIconColor = Colors.Red;
+
+{% endhighlight %}
+{% endtabs %}
+
+The following gif image illustrates the result of the above code:
+
+![.NET MAUI Autocomplete clear button color](Images/UICustomization/ClearButtonColor.png)
+
+## Border Color
+
+The Autocomplete border color can be changed by using the `BorderColor` property.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfAutocomplete
+    x:Name="autocomplete"
+    WidthRequest="250"
+    ItemsSource="{Binding SocialMedias}"
+    DisplayMemberPath="Name"
+    TextMemberPath="Name"
+    Placeholder="Select a social media"
+    PlaceholderColor="Red"
+    BorderColor="Red" />
+
+{% endhighlight %}
+{% highlight C# %}
+
+autocomplete.BorderColor = Colors.Red;
+
+{% endhighlight %}
+{% endtabs %}
+
+The following gif image illustrates the result of the above code:
+
+![.NET MAUI Autocomplete border color](Images/UICustomization/BorderColor.png)
+
+## Maximum DropDown Height
 
 The maximum height of the drop-down can be changed by using `MaxDropDownHeight` property of `Autocomplete` control. The default value of `MaxDropDownHeight` property is `400d`. 
 

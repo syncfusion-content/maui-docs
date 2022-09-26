@@ -58,7 +58,7 @@ In non-editable mode, searching will be performed based on the `DisplayMemberPat
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox"
-                    Width="250"
+                    WidthRequest="250"
                     ItemsSource="{Binding SocialMedias}"
                     TextMemberPath="Name"
                     DisplayMemberPath="ID" />
@@ -95,7 +95,7 @@ Set the `TextSearchMode` property value to `StartWith` to search the matching it
 {% highlight XAML %}
 
 <editors:SfComboBox x:Name="comboBox"
-                    Width="250"
+                    WidthRequest="250"
                     TextSearchMode="StartsWith"
                     ItemsSource="{Binding SocialMedias}"
                     DisplayMemberPath="Name"
@@ -122,7 +122,7 @@ Set the `TextSearchMode` property value to `Contains` to search the matching ite
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox"
-                    Width="250"
+                    WidthRequest="250"
                     IsEditable="True"
                     TextSearchMode="Contains"
                     ItemsSource="{Binding SocialMedias}"

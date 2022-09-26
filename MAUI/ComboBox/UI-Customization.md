@@ -19,7 +19,7 @@ You can prompt the user with any information by using the `Placeholder` property
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox"
-                    Width="250"
+                    WidthRequest="250"
                     ItemsSource="{Binding SocialMedias}"
                     DisplayMemberPath="Name"
                     TextMemberPath="Name"
@@ -38,7 +38,7 @@ The following image illustrates the result of the above code:
 ![.NET MAUI ComboBox placeholder](Images/UICustomization/Placeholder.png)
 
 
-### Change color of placeholder
+## Placeholder color
 
 The placeholder texts’ foreground can be changed by using the `PlaceholderColor` property. The default value of `PlaceholderColor` property is `Colors.Gray`.
 
@@ -46,7 +46,7 @@ The placeholder texts’ foreground can be changed by using the `PlaceholderColo
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox"
-                    Width="250"
+                    WidthRequest="250"
                     ItemsSource="{Binding SocialMedias}"
                     DisplayMemberPath="Name"
                     TextMemberPath="Name"
@@ -65,7 +65,88 @@ The following image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox placeholder color](Images/UICustomization/PlaceholderColor.png)
 
-## How to change DropDown MaxHeight
+## Clear Button Icon Color
+
+The clear button icon color can be changed by using the `ClearButtonIconColor` property. The default value of `ClearButtonIconColor` property is `Colors.Black`.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfComboBox x:Name="combobox"
+                    WidthRequest="250"
+                    ItemsSource="{Binding SocialMedias}"
+                    DisplayMemberPath="Name"
+                    TextMemberPath="Name"
+                    ClearButtonIconColor="Red" />
+
+{% endhighlight %}
+{% highlight C# %}
+
+combobox.ClearButtonIconColor = Colors.Red;
+
+{% endhighlight %}
+{% endtabs %}
+
+The following gif image illustrates the result of the above code:
+
+![.NET MAUI ComboBox clear button color](Images/UICustomization/ClearButtonColor.png)
+
+## DropDown Icon Color
+
+The DropDown icon color can be changed by using the `DropDownIconColor` property. The default value of `DropDownIconColor` property is `Colors.Black`.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfComboBox x:Name="combobox"
+                    WidthRequest="250"
+                    ItemsSource="{Binding SocialMedias}"
+                    DisplayMemberPath="Name"
+                    TextMemberPath="Name"
+                    DropDownIconColor="Red" />
+
+{% endhighlight %}
+{% highlight C# %}
+
+combobox.DropDownIconColor = Colors.Red;
+
+{% endhighlight %}
+{% endtabs %}
+
+The following gif image illustrates the result of the above code:
+
+![.NET MAUI ComboBox  drop-down icon color](Images/UICustomization/DropDownIconColor.png)
+
+
+## Border Color
+
+The ComboBox border color can be changed by using the `BorderColor` property.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfComboBox x:Name="combobox"
+                    WidthRequest="250"
+                    ItemsSource="{Binding SocialMedias}"
+                    DisplayMemberPath="Name"
+                    TextMemberPath="Name"
+                    DropDownIconColor="Red"
+                    BorderColor="Red" />
+
+{% endhighlight %}
+{% highlight C# %}
+
+combobox.BorderColor = Colors.Red;
+
+{% endhighlight %}
+{% endtabs %}
+
+The following gif image illustrates the result of the above code:
+
+![.NET MAUI ComboBox border color](Images/UICustomization/BorderColor.png)
+
+
+## Maximum DropDown Height
 
 The maximum height of the drop-down can be changed by using the `MaxDropDownHeight` property of `ComboBox` control. The default value of `MaxDropDownHeight` property is `400d`. 
 
@@ -75,7 +156,7 @@ The maximum height of the drop-down can be changed by using the `MaxDropDownHeig
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox"
-                    Width="250"
+                    WidthRequest="250"
                     IsEditable="true"
                     MaxDropDownHeight="300"
                     ItemsSource="{Binding SocialMedias}"

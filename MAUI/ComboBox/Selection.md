@@ -41,6 +41,8 @@ The selected item can be changed programmatically by using the `SelectedItem` or
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox"
+                    WidthRequest="250"
+                    MaxDropDownHeight="250"
                     IsEditable="True"
                     ItemsSource="{Binding SocialMedias}"
                     DisplayMemberPath="Name"
@@ -72,7 +74,7 @@ When an item is selected from the drop-down list, the `SelectionChanged` event i
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox"
-                    Width="250"
+                    WidthRequest="250"
                     TextMemberPath="Name"
                     DisplayMemberPath="Name"
                     ItemsSource="{Binding SocialMedias}"
@@ -114,13 +116,14 @@ For example, when you select any `SocialMedia.Name` in the `ComboBox,` the `Sele
 {% tabs %}
 {% highlight XAML %}
 
-<editors:SfComboBox 
-    x:Name="comboBox"
-    SelectedValuePath="ID"
-    TextMemberPath="Name"   
-    DisplayMemberPath="Name"
-    ItemsSource="{Binding SocialMedias}" 
-    SelectionChanged="OnSelectionChanged"/>
+<editors:SfComboBox x:Name="comboBox"
+                    WidthRequest="250"
+                    MaxDropDownHeight="250"
+                    SelectedValuePath="ID"
+                    TextMemberPath="Name"   
+                    DisplayMemberPath="Name"
+                    ItemsSource="{Binding SocialMedias}" 
+                    SelectionChanged="OnSelectionChanged"/>
 
 <Label Text="SelectedValue :" />
 <Label x:Name="selectedValue" />
@@ -148,3 +151,27 @@ private void OnSelectionChanged(object sender, Syncfusion.Maui.Inputs.SelectionC
 The following gif image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox selected value](Images/Selection/SelectedValuePath.png)
+
+## Open a drop-down programmatically
+
+In `ComboBox` control, the drop-down can be opened or closed programmatically by using the `IsDropDownOpen` property. The default value of `IsDropDownOpen` property is `false`.
+
+{% tabs %}
+{% highlight XAML %}
+
+<editors:SfComboBox x:Name="comboBox"
+                    WidthRequest="250"
+                    IsEditable="true"
+                    ItemsSource="{Binding SocialMedias}"
+                    IsDropDownOpen = true;
+                    DisplayMemberPath="Name"
+                    TextMemberPath="Name">
+</editors:SfComboBox>
+
+{% endhighlight %}
+{% highlight C# %}
+
+comboBox.IsDropDownOpen = true;
+
+{% endhighlight %}
+{% endtabs %}

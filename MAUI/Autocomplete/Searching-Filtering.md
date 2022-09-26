@@ -67,11 +67,10 @@ public class SocialMediaViewModel
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfAutocomplete
-    x:Name="autocomplete"
-    WidthRequest="250" 
-    ItemsSource="{Binding SocialMedias}"
-    DisplayMemberPath="Name" />
+<editors:SfAutocomplete x:Name="autocomplete"
+                        WidthRequest="250" 
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name" />
 
 {% endhighlight %}
 
@@ -96,12 +95,11 @@ Searching will be performed based on the `TextMemberPath` property, while enteri
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfAutocomplete
-    x:Name="autocomplete"
-    WidthRequest="250"
-    ItemsSource="{Binding SocialMedias}"
-    TextMemberPath="ID"
-    DisplayMemberPath="Name" />
+<editors:SfAutocomplete x:Name="autocomplete"
+                        WidthRequest="250"
+                        ItemsSource="{Binding SocialMedias}"
+                        TextMemberPath="ID"
+                        DisplayMemberPath="Name" />
 
 {% endhighlight %}
 
@@ -130,13 +128,12 @@ Set the `TextSearchMode` property value to `StartWith` to filter matching items 
 {% tabs %}
 {% highlight XAML %}
 
-<editors:SfAutocomplete 
-    x:Name="autoComplete"
-    WidthRequest="250"
-    TextSearchMode="StartsWith"
-    ItemsSource="{Binding SocialMedias}"
-    DisplayMemberPath="Name"
-    TextMemberPath="Name" />
+<editors:SfAutocomplete x:Name="autoComplete"
+                        WidthRequest="250"
+                        TextSearchMode="StartsWith"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name" />
 
 {% endhighlight %}
 
@@ -158,13 +155,12 @@ Set the `TextSearchMode` property value to `Contains` to filter the matching ite
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfAutocomplete 
-    x:Name="autoComplete"
-    WidthRequest="250"
-    TextSearchMode="Contains"
-    ItemsSource="{Binding SocialMedias}"
-    DisplayMemberPath="Name"
-    TextMemberPath="Name" />
+<editors:SfAutocomplete x:Name="autoComplete"
+                        WidthRequest="250"
+                        TextSearchMode="Contains"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name" />
 
 {% endhighlight %}
 

@@ -19,7 +19,7 @@ In editable mode, the `ComboBox` allows users to edit in the text box and it aut
 {% highlight XAML %}
 
 <editors:SfComboBox x:Name="comboBox"
-                    Width="250"
+                    WidthRequest="250"
                     IsEditable="true"
                     ItemsSource="{Binding SocialMedias}"
                     DisplayMemberPath="Name"
@@ -47,7 +47,7 @@ Non-editable mode prevents users from editing and instead allows them to select 
 {% highlight XAML %}
 
 <editors:SfComboBox x:Name="comboBox"
-                    Width="250"
+                    WidthRequest="250"
                     IsEditable="false"
                     ItemsSource="{Binding SocialMedias}"
                     DisplayMemberPath="Name"
@@ -75,7 +75,7 @@ By default, the clear button `X` will be displayed in the editor of the `ComboBo
 {% highlight XAML %}
 
 <editors:SfComboBox x:Name="comboBox"
-                    Width="250"
+                    WidthRequest="250"
                     IsEditable="true"
                     IsClearButtonVisible="false"
                     ItemsSource="{Binding SocialMedias}"
@@ -100,13 +100,13 @@ The following gif image illustrates the result of the above code:
 
 ## Open a drop-down programmatically
 
-In `ComboBox` control, the drop-down can be opened or closed programmatically by using the `IsDropDownOpen` property. The default value of `IsDropDownOpen` property is `false`. The following example shows how to open the drop-down when pressing alphabet keys in `ComboBox` control.
+In `ComboBox` control, the drop-down can be opened or closed programmatically by using the `IsDropDownOpen` property. The default value of `IsDropDownOpen` property is `false`.
 
 {% tabs %}
 {% highlight XAML %}
 
 <editors:SfComboBox x:Name="comboBox"
-                    Width="250"
+                    WidthRequest="250"
                     IsEditable="true"
                     ItemsSource="{Binding SocialMedias}"
                     IsDropDownOpen = true;
