@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Appearance in .NET MAUI Chart control  Syncfusion
-description: Learn here all about appearance customization in .NET MAUI Chart (SfCartesianChart), its elements and more.
+description: Learn here all about appearance customization in .NET MAUI Chart (SfCircularChart), its elements and more.
 platform: maui
 control: SfCircularChart
 documentation: ug
