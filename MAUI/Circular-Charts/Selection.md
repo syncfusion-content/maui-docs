@@ -21,11 +21,11 @@ To enable the data point selection in the [SfCircularChart](), create an instanc
 
 <chart:SfCircularChart>
     <chart:SfCircularChart.Series>
-        <chart:PieSeries>
-            <chart:PieSeries.SelectionBehavior>
-                <chart:DataPointSelectionBehavior SelectionBrush="BlueViolet"/>
-            </chart:PieSeries.SelectionBehavior>
-        </chart:PieSeries>
+        <chart:DoughnutSeries>
+            <chart:DoughnutSeries.SelectionBehavior>
+                <chart:DataPointSelectionBehavior/>
+            </chart:DoughnutSeries.SelectionBehavior>
+        </chart:DoughnutSeries>
     </chart:SfCircularChart.Series>
 </chart:SfCircularChart>
 
@@ -36,9 +36,8 @@ To enable the data point selection in the [SfCircularChart](), create an instanc
 SfCircularChart chart = new SfCircularChart();
 
 DataPointSelectionBehavior selection = new DataPointSelectionBehavior();
-selection.SelectionBrush = Brush.BlueViolet;
 
-PieSeries series = new PieSeries();
+DoughnutSeries series = new DoughnutSeries();
 series.SelectionBehavior = selection;
 chart.Series.Add(series);
 
@@ -70,11 +69,11 @@ The [SfCircularChart]() provides support to select a point programmatically on a
 
 {% highlight xaml %}
 
-<chart:PieSeries>
-    <chart:PieSeries.SelectionBehavior>
+<chart:DoughnutSeries>
+    <chart:DoughnutSeries.SelectionBehavior>
         <chart:DataPointSelectionBehavior SelectionBrush="BlueViolet" SelectedIndex="5" />
-    </chart:PieSeries.SelectionBehavior>
-</chart:PieSeries>
+    </chart:DoughnutSeries.SelectionBehavior>
+</chart:DoughnutSeries>
 
 {% endhighlight %}
 
@@ -86,7 +85,7 @@ DataPointSelectionBehavior selection = new DataPointSelectionBehavior();
 selection.SelectionBrush = Brush.BlueViolet;
 selection.SelectedIndex = 5;
 
-PieSeries series = new PieSeries();
+DoughnutSeries series = new DoughnutSeries();
 series.SelectionBehavior = selection;
 chart.Series.Add(series);
 

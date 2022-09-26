@@ -46,4 +46,4 @@ chart.Series.Add(series);
 
 {% endtabs %}
 
-![Exploding Segemnt in MAUI SfCircularChart](Explode_images/Explode_Segment_in_CircularChart.gif)
+![Exploded doughnut chart in MAUI](Explode_images/explode_segment_in_circularchart.gif)
