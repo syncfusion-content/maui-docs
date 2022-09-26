@@ -21,15 +21,15 @@ To enable the data point selection in the [SfCartesianChart](), create an instan
 
 <chart:SfCartesianChart>
 . . .
-    <chart:SfCircularChart.Series>
+    <chart:SfCartesianChart.Series>
         <chart:ColumnSeries ItemsSource="{Binding Data}" 
                         XBindingPath="Time"
                         YBindingPath="FootStepsCount">
                 <chart:ColumnSeries.SelectionBehavior>
-                        <chart:DataPointSelectionBehavior SelectionBrush="Green"/>
+                        <chart:DataPointSelectionBehavior/>
                 </chart:ColumnSeries.SelectionBehavior>
         </chart:ColumnSeries>
-    </chart:SfCircularChart.Series>
+    </chart:SfCartesianChart.Series>
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -39,7 +39,6 @@ To enable the data point selection in the [SfCartesianChart](), create an instan
 SfCartesianChart chart = new SfCartesianChart();
 . . .
 DataPointSelectionBehavior selection = new DataPointSelectionBehavior();
-selection.SelectionBrush = Brush.Green;
 
 ColumnSeries series = new ColumnSeries()
 {
@@ -67,9 +66,9 @@ To enable the series selection in the [SfCartesianChart](), create an instance o
 <chart:SfCartesianChart>
 . . .
     <chart:SfCartesianChart.SelectionBehavior>
-        <chart:SeriesSelectionBehavior SelectionBrush="Green"/>
+        <chart:SeriesSelectionBehavior/>
     </chart:SfCartesianChart.SelectionBehavior>
-    <chart:SfCircularChart.Series>
+    <chart:SfCartesianChart.Series>
         <chart:ColumnSeries ItemsSource="{Binding Data}" 
                         XBindingPath="Country"
                         YBindingPath="Kids"/>
@@ -79,7 +78,7 @@ To enable the series selection in the [SfCartesianChart](), create an instance o
         <chart:ColumnSeries ItemsSource="{Binding Data}" 
                         XBindingPath="Country"
                         YBindingPath="Seniors"/>
-    </chart:SfCircularChart.Series>
+    </chart:SfCartesianChart.Series>
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -89,7 +88,6 @@ To enable the series selection in the [SfCartesianChart](), create an instance o
 SfCartesianChart chart = new SfCartesianChart();
 . . .
 SeriesSelectionBehavior selection = new SeriesSelectionBehavior();
-selection.SelectionBrush = Brush.Green;
 chart.SelectionBehavior = selection;
 
 ColumnSeries series1 = new ColumnSeries()
