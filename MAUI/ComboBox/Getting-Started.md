@@ -47,7 +47,9 @@ namespace ComboBoxSample
             return builder.Build();
         }      
     }
-}     
+}    
+
+{% endhighlight %} 
 
 ## Create a Simple .NET MAUI ComboBox
 

@@ -47,7 +47,9 @@ namespace AutocompleteSample
             return builder.Build();
         }      
     }
-}     
+}   
+
+{% endhighlight %}  
 
 ## Create a Simple .NET MAUI Autocomplete
 
