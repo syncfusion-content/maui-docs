@@ -1,7 +1,7 @@
 ---
 layout: post
 title: UI Customization in .NET MAUI ComboBox control | Syncfusion
-description: Learn here all about UI customization support in Syncfusion .NET MAUI ComboBox control into .NET MAUI application and its basic features.
+description: Learn all about UI customization support in Syncfusion .NET MAUI ComboBox control into .NET MAUI application and its basic features here.
 platform: maui
 control: SfComboBox
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # UI Customization in .NET MAUI ComboBox (SfComboBox)
 
-This section explains different UI customization available in `ComboBox`.
+This section explains different UI customizations available in `ComboBox`.
 
 ## Placeholder
 
@@ -40,7 +40,7 @@ The following image illustrates the result of the above code:
 
 ## Placeholder color
 
-The placeholder texts’ foreground can be changed by using the `PlaceholderColor` property. The default value of `PlaceholderColor` property is `Colors.Gray`.
+The placeholder text color can be changed by using the `PlaceholderColor` property. The default value of `PlaceholderColor` property is `Colors.Gray`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -67,7 +67,7 @@ The following image illustrates the result of the above code:
 
 ## Clear Button Icon Color
 
-The clear button icon color can be changed by using the `ClearButtonIconColor` property. The default value of `ClearButtonIconColor` property is `Colors.Black`.
+The clear button icon color can be changed by using the `ClearButtonIconColor` property. The default value of the ClearButtonIconColor property is `Colors.Black`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -93,7 +93,7 @@ The following gif image illustrates the result of the above code:
 
 ## DropDown Icon Color
 
-The DropDown icon color can be changed by using the `DropDownIconColor` property. The default value of `DropDownIconColor` property is `Colors.Black`.
+The DropDown icon color can be changed by using the `DropDownIconColor` property. The default value of the DropDownIconColor property is `Colors.Black`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -148,9 +148,9 @@ The following gif image illustrates the result of the above code:
 
 ## Maximum DropDown Height
 
-The maximum height of the drop-down can be changed by using the `MaxDropDownHeight` property of `ComboBox` control. The default value of `MaxDropDownHeight` property is `400d`. 
+The maximum height of the drop-down can be changed by using the `MaxDropDownHeight` property of the ComboBox control. The default value of MaxDropDownHeight property is `400d`.
 
- N> If the `MaxDropDownHeight` is too small compared to the populated items, scroll viewer will be automatically shown to navigate the hidden items.
+ N> If the `MaxDropDownHeight` is too small compared to the populated items, the scroll viewer will be automatically shown to navigate the hidden items.
 
 {% tabs %}
 {% highlight xaml %}
@@ -158,7 +158,7 @@ The maximum height of the drop-down can be changed by using the `MaxDropDownHeig
 <editors:SfComboBox x:Name="comboBox"
                     WidthRequest="250"
                     IsEditable="true"
-                    MaxDropDownHeight="300"
+                    MaxDropDownHeight="150"
                     ItemsSource="{Binding SocialMedias}"
                     DisplayMemberPath="Name"
                     TextMemberPath="Name" />

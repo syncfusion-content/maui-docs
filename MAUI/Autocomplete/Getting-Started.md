@@ -47,9 +47,9 @@ namespace AutocompleteSample
             return builder.Build();
         }      
     }
-}    
+}   
 
-{% endhighlight %}
+{% endhighlight %} 
 
 ## Create a Simple .NET MAUI Autocomplete
 
@@ -193,7 +193,8 @@ The `Autocomplete` control is populated with the list of social media. However, 
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfAutocomplete x:Name="autocomplete" 
+<editors:SfAutocomplete x:Name="autocomplete"
+                        WidthRequest="250" 
                         DisplayMemberPath = "Name"
                         TextMemberPath = "Name"
                         ItemsSource="{Binding SocialMedias}" />

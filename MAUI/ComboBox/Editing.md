@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Editing in .NET MAUI ComboBox control | Syncfusion
-description: Learn here all about Editable modes support in Syncfusion .NET MAUI ComboBox (SfComboBox) control and more.
+description: Learn all about Editable modes support in Syncfusion .NET MAUI ComboBox (SfComboBox) control and more here.
 platform: maui
 control: SfComboBox
 documentation: ug
@@ -13,7 +13,7 @@ The `ComboBox` control supports both editable and non-editable text boxes for se
 
 ## Editable ComboBox
 
-In editable mode, the `ComboBox` allows users to edit in the text box and it automatically appends the remaining letters to the entered text when it is valid.
+In the editable mode, the `ComboBox` allows users to edit in the text box and it automatically appends the remaining letters to the entered text when it is valid.
 
 {% tabs %}
 {% highlight XAML %}
@@ -41,7 +41,7 @@ The following image illustrates the result of the above code:
 
 ## Non-editable ComboBox
 
-Non-editable mode prevents users from editing and instead allows them to select from drop-down list.
+Non-editable mode prevents users from editing and instead allows them to select from the drop-down list.
 
 {% tabs %}
 {% highlight XAML %}
@@ -69,7 +69,7 @@ The following gif image illustrates the result of the above code:
 
 ## Hide clear button in the editor
 
-By default, the clear button `X` will be displayed in the editor of the `ComboBox` control, which can be used to clear the entered input. Hide the clear button in `ComboBox` control using the `IsClearButtonVisible` property. The default value of `IsClearButtonVisible` property value is `true`.
+By default, the clear button `X` will be displayed in the editor of the ComboBox control, which can be used to clear the entered input. Hide the clear button in ComboBox control using the `IsClearButtonVisible` property. The default value of the IsClearButtonVisible property value is `true`.
 
 {% tabs %}
 {% highlight XAML %}

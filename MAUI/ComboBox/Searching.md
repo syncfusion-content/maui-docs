@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Searching in .NET MAUI ComboBox control | Syncfusion
-description: Learn how to perform searching operation in Syncfusion .NET MAUI ComboBox control and more.
+description: Learn how to perform the searching operation in Syncfusion .NET MAUI ComboBox control and more.
 platform: maui
 control: SfComboBox
 documentation: ug
@@ -82,7 +82,7 @@ N> Auto appending of text is supported only in `Editable` mode and `TextSearchMo
 
 ## Text Search Mode
 
-The `TextSearchMode` property of the `ComboBox` can be used to regulate how the control behaves when it receives user input. The default text searching type is `StartsWith`, ignoring accent and it is case insensitive. The available text search modes are,
+The `TextSearchMode` property of the `ComboBox` can be used to regulate how the control behaves when it receives user input. The default text searching type is `StartsWith`, ignoring accent and it is case insensitive. The available text search modes are:
 
 * StartsWith
 * Contains

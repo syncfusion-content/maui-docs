@@ -1,7 +1,7 @@
 ---
 layout: post
 title: UI Customization in .NET MAUI Autocomplete control | Syncfusion
-description: Learn here all about UI customization support in Syncfusion .NET MAUI Autocomplete control into .NET MAUI application and its features.
+description: Learn all about UI customization support in Syncfusion .NET MAUI Autocomplete control into .NET MAUI application and its features here.
 platform: maui
 control: SfAutocomplete
 documentation: ug
@@ -9,22 +9,21 @@ documentation: ug
 
 # UI Customization in .NET MAUI Autocomplete (SfAutocomplete)
 
-This section explains different UI customization available in the `Autocomplete` control.
+This section explains different UI customizations available in the `Autocomplete` control.
 
 ## Placeholder
 
-You can prompt the user with any information by using the `Placeholder` property. This text will be displayed only if no items are selected or the edit text is empty. The default value of `Placeholder` property is `string.Empty` (No string will be displayed).
+You can prompt the user with any information by using the `Placeholder` property. This text will be displayed only if no items are selected or the edit text is empty. The default value of the Placeholder property is `string.Empty` (No string will be displayed).
 
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfAutocomplete
-    x:Name="autocomplete"
-    WidthRequest="250"
-    Placeholder="Select a social media"
-    ItemsSource="{Binding SocialMedias}"
-    DisplayMemberPath="Name"
-    TextMemberPath="Name" />
+<editors:SfAutocomplete x:Name="autocomplete"
+                        WidthRequest="250"
+                        Placeholder="Select a social media"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name" />
 
 {% endhighlight %}
 {% highlight C# %}
@@ -40,19 +39,18 @@ The following image illustrates the result of the above code:
 
 ## Placeholder Color
 
-The placeholder text color can be changed by using the `PlaceholderColor` property. The default value of `PlaceholderColor` property is `Colors.Gray`.
+The placeholder text color can be changed by using the `PlaceholderColor` property. The default value of the `PlaceholderColor` property is `Colors.Gray`.
 
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfAutocomplete
-    x:Name="autocomplete"
-    WidthRequest="250"
-    ItemsSource="{Binding SocialMedias}"
-    DisplayMemberPath="Name"
-    TextMemberPath="Name"
-    Placeholder="Select a social media"
-    PlaceholderColor="Red" />
+<editors:SfAutocomplete x:Name="autocomplete"
+                        WidthRequest="250"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        Placeholder="Select a social media"
+                        PlaceholderColor="Red" />
 
 {% endhighlight %}
 {% highlight C# %}
@@ -68,20 +66,19 @@ The following gif image illustrates the result of the above code:
 
 ## Clear Button Icon Color
 
-The clear button icon color can be changed by using the `ClearButtonIconColor` property. The default value of `ClearButtonIconColor` property is `Colors.Black`.
+The clear button icon color can be changed by using the `ClearButtonIconColor` property. The default value of the `ClearButtonIconColor` property is `Colors.Black`.
 
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfAutocomplete
-    x:Name="autocomplete"
-    WidthRequest="250"
-    ItemsSource="{Binding SocialMedias}"
-    DisplayMemberPath="Name"
-    TextMemberPath="Name"
-    Placeholder="Select a social media"
-    PlaceholderColor="Red"
-    ClearButtonIconColor="Red" />
+<editors:SfAutocomplete x:Name="autocomplete"
+                        WidthRequest="250"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        Placeholder="Select a social media"
+                        PlaceholderColor="Red"
+                        ClearButtonIconColor="Red" />
 
 {% endhighlight %}
 {% highlight C# %}
@@ -102,15 +99,14 @@ The Autocomplete border color can be changed by using the `BorderColor` property
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfAutocomplete
-    x:Name="autocomplete"
-    WidthRequest="250"
-    ItemsSource="{Binding SocialMedias}"
-    DisplayMemberPath="Name"
-    TextMemberPath="Name"
-    Placeholder="Select a social media"
-    PlaceholderColor="Red"
-    BorderColor="Red" />
+<editors:SfAutocomplete x:Name="autocomplete"
+                        WidthRequest="250"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        Placeholder="Select a social media"
+                        PlaceholderColor="Red"
+                        BorderColor="Red" />
 
 {% endhighlight %}
 {% highlight C# %}
@@ -126,20 +122,19 @@ The following gif image illustrates the result of the above code:
 
 ## Maximum DropDown Height
 
-The maximum height of the drop-down can be changed by using `MaxDropDownHeight` property of `Autocomplete` control. The default value of `MaxDropDownHeight` property is `400d`. 
+The maximum height of the drop-down can be changed by using the `MaxDropDownHeight` property of the `Autocomplete` control. The default value of the `MaxDropDownHeight` property is `400d`. 
 
 N> If the `MaxDropDownHeight` is too small compared to the populated items, the scroll viewer will be automatically shown to navigate the hidden items.
 
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfAutocomplete
-    x:Name="autocomplete"
-    WidthRequest="250"
-    MaxDropDownHeight = "100"
-    ItemsSource="{Binding SocialMedias}"
-    DisplayMemberPath="Name"
-    TextMemberPath="Name" />
+<editors:SfAutocomplete x:Name="autocomplete"
+                        WidthRequest="250"
+                        MaxDropDownHeight = "100"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name" />
 
 {% endhighlight %}
 {% highlight C# %}

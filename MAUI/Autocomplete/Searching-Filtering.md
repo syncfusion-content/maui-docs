@@ -13,7 +13,7 @@ The `Autocomplete` control allows for rich text searching and filtering function
 
 ## Searching based on member path
 
-The `DisplayMemberPath` and `TextMemberPath` properties of Autocomplete control specify the property path, by which the searching must be done when a custom data is bound to the `ItemsSource` property.
+The `DisplayMemberPath` and `TextMemberPath` properties of Autocomplete control specify the property path by which the searching must be done when a custom data is bound to the `ItemsSource` property.
 
  * `DisplayMemberPath` - Specifies the property path whose value is displayed as text in the drop-down menu. The default value is `string.Empty`.
 
@@ -21,7 +21,7 @@ The `DisplayMemberPath` and `TextMemberPath` properties of Autocomplete control 
 
 N> `DisplayMemberPath` and `TextMemberPath` will be effective for the collection item that holds two or more properties in it.
 
-N> When both the `DisplayMemberPath` and `TextMemberPath` properties have a `null` or `string.Empty` value, searching will be performed based on the class name with namespace of the item.
+N> When both the `DisplayMemberPath` and `TextMemberPath` properties have a `null` or `string.Empty` value, searching will be performed based on the class name with the namespace of the item.
 
 ### Searching based on DisplayMemberPath
 
@@ -81,7 +81,7 @@ autocomplete.DisplayMemberPath = "Name";
 {% endhighlight %}
 {% endtabs %}
 
-For e.g. After typing `T` in selection box, social medias which have starting letter `T` will be listed in drop-down.
+For e.g. After typing `T` in selection box, social media which have starting letter `T` will be listed in drop-down.
 
 The following image illustrates the result of the above code:
 
@@ -89,7 +89,7 @@ The following image illustrates the result of the above code:
 
 ### Searching based on TextMemberPath
 
-Searching will be performed based on the `TextMemberPath` property, while entering the text into the selection box. If `TextMemberPath` is `null` or `string.Empty`, searching will be performed based on `DisplayMemberPath`. 
+Searching will be performed based on the `TextMemberPath` property while entering the text into the selection box. If `TextMemberPath` is `null` or `string.Empty`, searching will be performed based on `DisplayMemberPath`. 
 
 
 {% tabs %}
@@ -116,7 +116,7 @@ The following image illustrates the result of the above code:
 
 ## Filtering mode
 
-The `TextSearchMode` property of the `Autocomplete` can be used to regulate how the control behaves when it receives user input. The default text filtering type is `StartsWith`, which ignores accent and is case insensitive. The text filter modes that are available are as follows,
+The `TextSearchMode` property of the `Autocomplete` can be used to regulate how the control behaves when it receives user input. The default text filtering type is `StartsWith`, which ignores accent and is case insensitive. The text filter modes that are available are as follows:
 
 * StartsWith
 * Contains
@@ -150,7 +150,7 @@ The following image illustrates the result of the above code:
 
 ### Filter with contains text
 
-Set the `TextSearchMode` property value to `Contains` to filter the matching items based on the containing specific text. The first item  in the drop-down list that matches the user input will be highlighted. 
+Set the `TextSearchMode` property value to `Contains` to filter the matching items based on the containing specific text. The first item in the drop-down list that matches the user input will be highlighted.
 
 {% tabs %}
 {% highlight xaml %}

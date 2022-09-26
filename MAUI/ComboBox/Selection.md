@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Selection in .NET MAUI ComboBox control | Syncfusion
-description: Learn here all about Selection modes support in Syncfusion .NET MAUI ComboBox (SfComboBox) control and more.
+description: Learn all about Selection modes support in Syncfusion .NET MAUI ComboBox (SfComboBox) control and more here.
 platform: maui
 control: SfComboBox
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ## Single selection
 
-The `ComboBox` allows user to select an single item from the drop-down list.
+The `ComboBox` allows users to select an single item from the drop-down list.
 
 ### UI Selection 
 
@@ -21,6 +21,7 @@ The selected item can be changed interactively by selecting from the drop-down l
 {% highlight xaml %}
 
 <editors:SfComboBox IsEditable="True"
+                    WidthRequest="250"
                     ItemsSource="{Binding SocialMedias}"
                     DisplayMemberPath="Name"
                     TextMemberPath="Name" />
@@ -35,7 +36,7 @@ The following gif image illustrates the result of the above code:
 
 ### Programmatic selection 
 
-The selected item can be changed programmatically by using the `SelectedItem` or `SelectedIndex` property of `ComboBox` control. 
+The selected item can be changed programmatically by using the `SelectedItem` or `SelectedIndex` properties of the ComboBox control.
 
 {% tabs %}
 {% highlight xaml %}
@@ -65,7 +66,7 @@ The following gif image illustrates the result of the above code:
 
 ## Selection changed notification
 
-When an item is selected from the drop-down list, the `SelectionChanged` event is triggered. The `SelectionChanged` event contains the newly selected and previously selected item in the `CurrentSelection` and `PreviousSelection` properties. The `SelectionChanged` contains the following properties:
+When an item is selected from the drop-down list, the `SelectionChanged` event is triggered. The `SelectionChanged` event contains the newly selected and previously selected items in the `CurrentSelection` and `PreviousSelection` properties. The `SelectionChanged` contains the following properties:
 
  * CurrentSelection - Contains the item that were currently selected.
  * PreviousSelection - Contains the item that were previously selected.
@@ -89,7 +90,7 @@ comboBox.SelectionChanged += OnSelectionChanged;
 {% endhighlight %}
 {% endtabs %}
 
-The SelectionChanged event can be handled as follows.
+The SelectionChanged event can be handled as follows:
 
 {% tabs %}
 {% highlight C# %}
@@ -154,7 +155,7 @@ The following gif image illustrates the result of the above code:
 
 ## Open a drop-down programmatically
 
-In `ComboBox` control, the drop-down can be opened or closed programmatically by using the `IsDropDownOpen` property. The default value of `IsDropDownOpen` property is `false`.
+In the ComboBox control, the drop-down can be opened or closed programmatically by using the `IsDropDownOpen` property. The default value of the IsDropDownOpen property is `false`.
 
 {% tabs %}
 {% highlight XAML %}

@@ -47,7 +47,9 @@ namespace ComboBoxSample
             return builder.Build();
         }      
     }
-}     
+}    
+
+{% endhighlight %} 
 
 {% endhighlight %}
 

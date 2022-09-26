@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Selection in .NET MAUI Autocomplete control | Syncfusion
-description: Learn here all about Selection support in Syncfusion .NET MAUI Autocomplete (SfAutocomplete) control and more.
+description: Learn all about Selection support in Syncfusion .NET MAUI Autocomplete (SfAutocomplete) control and more here.
 platform: maui
 control: SfAutocomplete
 documentation: ug
@@ -13,7 +13,7 @@ The `Autocomplete` allows user to select a single item from dropdown list.
 
 ## Single selection
 
-The `Autocomplete` allows user to select an item by entering the value using keyboard, then selecting from the drop-down list by clicking the item. The selected item can be retrieved from the `SelectedItem` property.
+The `Autocomplete` allows the user to select an item by entering the value using the keyboard, then selecting from the drop-down list by clicking the item. The selected item can be retrieved from the `SelectedItem` property.
 
 {% tabs %}
 {% highlight c# %}
@@ -55,12 +55,11 @@ public class SocialMediaViewModel
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfAutoComplete
-    x:Name="autocomplete"
-    WidthRequest="250"
-    ItemsSource="{Binding SocialMedias}"
-    DisplayMemberPath="Name"
-    TextMemberPath="Name" />
+<editors:SfAutoComplete x:Name="autocomplete"
+                        WidthRequest="250"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name" />
 
 {% endhighlight %}
 {% highlight c# %}
@@ -81,7 +80,7 @@ The following gif image illustrates the result of the above code:
 
 ## Selection changed notification
 
-When an item is selected from the drop-down list, the `SelectionChanged` event is triggered. The `SelectionChanged` event contains the newly selected and previously selected item in the `CurrentSelection` and `PreviousSelection` properties. The `SelectionChanged` contains the following properties:
+When an item is selected from the drop-down list, the `SelectionChanged` event is triggered. The SelectionChanged event contains the newly selected and previously selected items in the `CurrentSelection` and `PreviousSelection` properties. The SelectionChanged contains the following properties:
 
  * CurrentSelection - Contains the item that were currently selected.
  * PreviousSelection - Contains the item that were previously selected.
@@ -89,13 +88,12 @@ When an item is selected from the drop-down list, the `SelectionChanged` event i
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfAutoComplete 
-    x:Name="autocomplete"
-    WidthRequest="250"
-    ItemsSource="{Binding SocialMedias}"
-    TextMemberPath="Name"
-    DisplayMemberPath="Name"
-    SelectionChanged="OnSelectionChanged"/>
+<editors:SfAutoComplete x:Name="autocomplete"
+                        WidthRequest="250"
+                        ItemsSource="{Binding SocialMedias}"
+                        TextMemberPath="Name"
+                        DisplayMemberPath="Name"
+                        SelectionChanged="OnSelectionChanged"/>
 
 {% endhighlight %}
 
@@ -106,7 +104,7 @@ autocomplete.SelectionChanged += OnSelectionChanged;
 {% endhighlight %}
 {% endtabs %}
 
-The `SelectionChanged` event can be handled as follows.
+The `SelectionChanged` event can be handled as follows:
 
 {% tabs %}
 {% highlight C# %}
@@ -133,14 +131,13 @@ For example, when you select any `SocialMedia.Name` in the `Autocomplete,` the `
 {% tabs %}
 {% highlight XAML %}
 
-<editors:SfAutoComplete 
-    x:Name="autoComplete"
-    WidthRequest="250"
-    SelectedValuePath="ID"
-    TextMemberPath="Name"   
-    DisplayMemberPath="Name"
-    ItemsSource="{Binding SocialMedias}" 
-    SelectionChanged="OnSelectionChanged"/>
+<editors:SfAutoComplete x:Name="autoComplete"
+                        WidthRequest="250"
+                        SelectedValuePath="ID"
+                        TextMemberPath="Name"   
+                        DisplayMemberPath="Name"
+                        ItemsSource="{Binding SocialMedias}" 
+                        SelectionChanged="OnSelectionChanged"/>
 
 <Label Text="SelectedValue :" />
 <Label x:Name="selectedValue" />
@@ -176,13 +173,12 @@ By default, the clear button `X` will be displayed in the editor of the `Autocom
 {% tabs %}
 {% highlight XAML %}
 
-<editors:SfAutocomplete 
-    x:Name="autocomplete"
-    WidthRequest="250"
-    IsClearButtonVisible="false"
-    ItemsSource="{Binding SocialMedias}"
-    DisplayMemberPath="Name"
-    TextMemberPath="Name" />
+<editors:SfAutocomplete x:Name="autocomplete"
+                        WidthRequest="250"
+                        IsClearButtonVisible="false"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name" />
 
 {% endhighlight %}
 
@@ -205,12 +201,12 @@ In `Autocomplete` control, the drop-down can be opened or closed programmaticall
 {% highlight XAML %}
 
 <editors:SfAutocomplete x:Name="autocomplete"
-                    WidthRequest="250"
-                    IsEditable="true"
-                    ItemsSource="{Binding SocialMedias}"
-                    IsDropDownOpen = true;
-                    DisplayMemberPath="Name"
-                    TextMemberPath="Name">
+                        WidthRequest="250"
+                        IsEditable="true"
+                        ItemsSource="{Binding SocialMedias}"
+                        IsDropDownOpen = true;
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name">
 </editors:SfAutocomplete>
 
 {% endhighlight %}
