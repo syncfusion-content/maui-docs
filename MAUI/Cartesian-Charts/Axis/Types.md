@@ -374,7 +374,7 @@ chart.YAxes.Add(secondaryAxis);
 
 ![LogarithmicAxis support in MAUI Chart](Axis_Images/maui_chart_logarithmic_axis.jpg)
 
-### Logarithmic range
+### Customizing the range
 
 To customize the range of the log axis, you can use the [Minimum](), [Maximum]() and [Interval]() properties of the [LogarithmicAxis](). By default, an excellent range will be calculated automatically based on the provided data. The following code example demonstrates the range customization of the axis.
 
@@ -408,7 +408,7 @@ chart.YAxes.Add(new LogarithmicAxis() {
 
 ### Logarithmic base
 
-The log base can be customized using the [LogarithmicBase]() property of the axis. By default, the base of a logarithmic axis is set to 10. You can, however, set the base to any value that meets your requirements. Just ensure that the base value is any positive number greater than 1 and cannot be a decimal number. The following code example demonstrates the logarithmic values in the y-axis calculated from base 2:
+The log axis base can be customized using the [LogarithmicBase]() property of the axis. By default, the base of a logarithmic axis is set to 10. You can, however, set the base to any value that meets your requirements. Just ensure that the base value is any positive number greater than 1 and cannot be a decimal number. The following code example demonstrates the logarithmic values in the y-axis calculated from base 2.
 
 {% tabs %}
 
@@ -458,17 +458,16 @@ chart.YAxes.Add(new LogarithmicAxis( ) { Interval = 2 });
 
 ![LogarithmicAxis interval in MAUI Chart](Axis_Images/maui_chart_logarithmic_axis_interval.jpg)
 
-### Actual minimum
+### Actual minimum & Actual maximum
 
-The actual minimum property can be used only to get the double value that represents the minimum value of the chart axis range. The following code example demonstrates how to get the actual minimum value of the axis range using a label.
+The actual minimum property can be used to get the double value that represents the minimum value of the chart axis range and the actual maximum property can be used to get the double value that represents the maximum value of the chart axis range. The following code example demonstrates how to get the actual minimum and actual maximum values of the axis range using the labels.
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <VerticalStackLayout>
-     <Label Text="{Binding Source= {x:Reference yAxis}, Path=ActualMinimum,        
-      StringFormat='Actual minimum is: {0}'}" />
+
      <chart:SfCartesianChart>
         
          <chart:SfCartesianChart.XAxes>
@@ -485,6 +484,11 @@ The actual minimum property can be used only to get the double value that repres
          </chart:SfCartesianChart.Series>
                   
      </chart:SfCartesianChart>
+
+    <Label HorizontalOptions="Center" Text="{Binding Source= {x:Reference yAxis}, Path=ActualMinimum,   
+    StringFormat='Actual minimum is: {0}'}" />
+    <Label HorizontalOptions="Center" Text="{Binding Source= {x:Reference yAxis}, Path=ActualMaximum,    StringFormat='Actual maximum is: {0}'}" />
+
 </VerticalStackLayout>
 
 {% endhighlight %}
@@ -503,74 +507,19 @@ chart.YAxes.Add(yAxis);
 
 . . . 
 
-Label label = new Label( );
+Label firstLabel = new Label( );
+Label secondLabel = new Label( );
 
-label.SetBinding(Label.TextProperty, new Binding("ActualMinimum", source: yAxis, stringFormat: "Actual minimum is: {0}"));
-
+firstLabel.SetBinding(Label.TextProperty, new Binding("ActualMinimum", source: yAxis, stringFormat: "Actual minimum is: {0}"));
+secondLabel.SetBinding(Label.TextProperty, new Binding("ActualMaximum", source: yAxis, stringFormat: "Actual maximum is: {0}"));
 . . . 
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![LogarithmicAxis actual minimum in MAUI Chart](Axis_Images/maui_chart_logarithmic_axis_actual_minimum.jpg)
+![LogarithmicAxis actual minimum and actual maximum in MAUI Chart](Axis_Images/maui_chart_logarithmic_axis_actual_minimum_actual_maximum.jpg)
 
-### Actual maximum
-
-The actual maximum property can be used only to get the double value that represents the minimum value of the chart axis range. The following code example demonstrates how to get the actual maximum value of the axis range using a label.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<VerticalStackLayout>
-     <Label Text="{Binding Source= {x:Reference yAxis}, Path=ActualMaximum,        
-      StringFormat='Actual maximum is: {0}'}" />
-     <chart:SfCartesianChart>
-        
-         <chart:SfCartesianChart.XAxes>
-                       <chart:LogarithmicAxis x:Name="xAxis"/>
-         </chart:SfCartesianChart.XAxes>
-        
-         <chart:SfCartesianChart.YAxes>
-                       <chart:LogarithmicAxis x:Name="yAxis"/>
-         </chart:SfCartesianChart.YAxes>
-        
-         <chart:SfCartesianChart.Series>
-             <chart:ColumnSeries ItemsSource="{Binding Data}" XBindingPath="XValue" 
-              YBindingPath="YValue" />
-         </chart:SfCartesianChart.Series>
-                  
-     </chart:SfCartesianChart>
-</VerticalStackLayout>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-VerticalStackLayout layout = new VerticalStackLayout( );
-
-SfCartesianChart chart = new SfCartesianChart( );
-
-chart.XAxes.Add(new LogarithmicAxis( ));
-
-LogarithmicAxis yAxis = new LogarithmicAxis( );
-
-chart.YAxes.Add(yAxis);
-
-. . .
-
-Label label = new Label( );
-
-label.SetBinding(Label.TextProperty, new Binding("ActualMaximum", source: yAxis, stringFormat: "Actual maximum is: {0}"));
-
-. . .
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![LogarithmicAxis actual maximum in MAUI Chart](Axis_Images/maui_chart_logarithmic_axis_actual_maximum.jpg)
 
 ## Inversed
 
