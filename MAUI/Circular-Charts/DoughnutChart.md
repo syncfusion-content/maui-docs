@@ -107,53 +107,50 @@ chart.Series.Add(series);
 
 ## Center View
 
-Any view can be added to the center of the doughnut chart using the [CenterView]() property of [DoughnutSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DoughnutSeries.html). The binding context of the [CenterView]() will be the respective DoughnutSeries.
+The view placed in the center of the doughnut chart is useful for sharing additional information about the doughnut chart. Any view can be added to the center of the doughnut chart using the [CenterView]() property of [DoughnutSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DoughnutSeries.html). The binding context of the [CenterView]() will be the respective DoughnutSeries.
 
 ### Center Hole Size
 
-The [CenterHoleSize]() property of [DoughnutSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DoughnutSeries.html) is used to get the diameter value of the doughnut center hole. Using this [CenterHoleSize]() value, you can provide [CentreView]() for the series to avoid the view from being cropped outside the series.
+The [CenterHoleSize]() property of [DoughnutSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DoughnutSeries.html) is used to get the diameter value of the doughnut center hole. Using this [CenterHoleSize]() value, you can provide [CentreView]() for the series to prevent the view from overlapping the series.
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <chart:SfCircularChart>    
-    <chart:SfCircularChart.Series>
-        <chart:DoughnutSeries ItemsSource="{Binding DoughnutSeriesData}" XBindingPath="Name" YBindingPath="Value"/>
-            <chart:DoughnutSeries.CenterView>
-                <StackLayout HeightRequest="{Binding CenterHoleSize}" WidthRequest="{Binding CenterHoleSize}">
-                    <Label Text = "{Binding Name,Source={x:Reference doughnutViewModel}}"/>
-                    <Label Text = "{Binding Value,Source={x:Reference doughnutViewModel},StringFormat='{0} %'}"/>
-                </StackLayout>
-            </chart:DoughnutSeries.CenterView>
-    </chart:SfCircularChart.Series>
+    <chart:DoughnutSeries ItemsSource="{Binding Data}" XBindingPath="Name" YBindingPath="Value"/>
+        <chart:DoughnutSeries.CenterView>
+                <Border HeightRequest="{Binding CenterHoleSize}" WidthRequest="{Binding CenterHoleSize}">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="{Binding CenterHoleSize,Converter={StaticResource innerRadiusConverter}"/>
+                    </Border.StrokeShape>
+                    <StackLayout>
+                        <Label Text="Total :" />
+                        <Label Text="357580 km²"/>
+                    </StackLayout>
+                </Border>
+        </chart:DoughnutSeries.CenterView>
+    </chart:DoughnutSeries>
 </chart:SfCircularChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-SfCircularChart chart = new SfCircularChart();
-        
+SfCircularChart chart = new SfCircularChart();       
 DoughnutSeries series = new DoughnutSeries()
-{
-    ItemsSource = viewmodel.DoughnutSeriesData,
-    XBindingPath = "Name",
-    YBindingPath = "Value",
-};
-  
+series.XBindingPath = "Name";
+series.YBindingPath = "Value";
+
+Border border = new Border();  
 Label name = new Label();
-Label value = new Label(); 
+name.Text = "Total :";
+Label value = new Label()
+value.Text = "357580 km²";
 StackLayout layout = new StackLayout();
-layout.Children.Add(name);
-layout.Children.Add(value);
-          
-name.SetBinding(Label.TextProperty, nameof(doughnutViewModel.Name));
-value.SetBinding(Label.TextProperty, new Binding(nameof(doughnutViewModel.Value),default,null,null,"0%"));
-layout.SetBinding(StackLayout.HeightRequestProperty, nameof(DoughnutSeries.CenterHoleSize));
-layout.SetBinding(StackLayout.WidthRequestProperty, nameof(DoughnutSeries.CenterHoleSize));
-          
-series.CenterView = layout;
+
+border.Content = layout;
+series.CenterView = border;
 chart.Series.Add(series);
 
 {% endhighlight %}
