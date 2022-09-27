@@ -54,3 +54,14 @@ To migrate easier from Xamarin SfAutoComplete to .NET MAUI `SfAutocomplete`, we 
 <td>MaxDropDownHeight</td>
 <td>Gets or sets the maximum dropdown height.</td></tr>
 </table> 
+
+## Upcoming features
+
+  * ItemTemplate
+  * AutoCompleteModes
+  * MultipleSelection
+  *	DiacriticSensitivity
+  *	Header and Footer
+  *	Highlighting Text
+  *	LoadMore 
+  *	NoResultsFound

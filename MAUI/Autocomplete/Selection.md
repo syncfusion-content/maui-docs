@@ -193,18 +193,18 @@ The following image illustrates the result of the above code:
 
 ![.NET MAUI Autocomplete](Images/Selection/IsClearButtonVisible.png)
 
-## Open a drop-down programmatically
+## Is Drop-Down Open
 
-In `Autocomplete` control, the drop-down can be opened or closed programmatically by using the `IsDropDownOpen` property. The default value of `IsDropDownOpen` property is `false`. 
+The "IsDropDownOpen" property in the "Autocomplete" control can be used to gets a boolean value indicating whether the drop down is open or close. It returns `true` if the drop down is open, otherwise `false`.
+
+N> Currently, users can only get the boolean value based on whether a drop-down menu is open or not; the property "IsDropDownOpen" cannot be set.
 
 {% tabs %}
 {% highlight XAML %}
 
 <editors:SfAutocomplete x:Name="autocomplete"
                         WidthRequest="250"
-                        IsEditable="true"
                         ItemsSource="{Binding SocialMedias}"
-                        IsDropDownOpen = true;
                         DisplayMemberPath="Name"
                         TextMemberPath="Name">
 </editors:SfAutocomplete>
@@ -212,7 +212,7 @@ In `Autocomplete` control, the drop-down can be opened or closed programmaticall
 {% endhighlight %}
 {% highlight C# %}
 
-autocomplete.IsDropDownOpen = true;
+bool isAutocompleteDropDownOpen = autocomplete.IsDropDownOpen;
 
 {% endhighlight %}
 {% endtabs %}

@@ -64,13 +64,24 @@ To migrate easier from Xamarin SfComboBox to .NET MAUI `SfComboBox`, we kept mos
 <table> 
 <tr>
 <th>Event Name</th>
-<th>Xamarin SfComboBox SelectionChangedEventArgs</th>
-<th>.NET MAUI SfComboBox SelectionChangedEventArgs</th>
+<th>Xamarin SelectionChangedEventArgs</th>
+<th>.NET MAUI SelectionChangedEventArgs</th>
 <th>Description</th></tr>
 <tr>
 <td>SelectedChanged</td>
 <td>Value</td>
-<td>PreviousSelection  CurrentSelection</td>
+<td>PreviousSelection <br/> CurrentSelection</td>
 <td>Raises when an item is selected in the dropdown or the SelectedItem is set programatically.Returns the previous selected item and the currently selected item</td></tr>
 
 </table> 
+
+## Upcoming features
+
+  * ItemTemplate
+  * AutoCompleteModes
+  * MultipleSelection
+  *	DiacriticSensitivity
+  *	Header and Footer
+  *	Highlighting Text
+  *	LoadMore 
+  *	NoResultsFound
