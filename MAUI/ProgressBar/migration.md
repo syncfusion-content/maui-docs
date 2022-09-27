@@ -193,18 +193,18 @@ The following code example explains how to use the common properties in the Xama
 
 <!--Snippet for the circular progress bar-->
 <progressBar:SfCircularProgressBar EasingEffect="CubicOut"
-                                 GapWidth="5"
-                                 SegmentCount="4"
-                                 IndeterminateEasingEffect="BounceIn"
-                                 IndeterminateIndicatorWidth="0.7"
-                                 ProgressColor="Red"
-                                 TrackColor="Violet"
-                                 Progress="75"
-                                 IsIndeterminate="False"
-                                 Minimum="10"
-                                 Maximum="90"
-                                 AnimationDuration="1500"
-                                 IndeterminateAnimationDuration="2000">
+                                   GapWidth="5"
+                                   SegmentCount="4"
+                                   IndeterminateEasingEffect="BounceIn"
+                                   IndeterminateIndicatorWidth="0.7"
+                                   ProgressColor="Red"
+                                   TrackColor="Violet"
+                                   Progress="75"
+                                   IsIndeterminate="False"
+                                   Minimum="10"
+                                   Maximum="90"
+                                   AnimationDuration="1500"
+                                   IndeterminateAnimationDuration="2000">
     <progressBar:SfCircularProgressBar.RangeColors>
         <progressBar:RangeColorCollection>
             <progressBar:RangeColor IsGradient="True" Color="#00bdaf" Start="0" End="25"/>
@@ -497,9 +497,9 @@ this.Content = linearProgressBar;
     xmlns:progressBar="clr-namespace:Syncfusion.Maui.ProgressBar;assembly=Syncfusion.Maui.ProgressBar">
 
 ...
-<progressBar:SfLinearProgressBar ProgressCornerRadius="5,5,5,5"
-                                 TrackCornerRadius="5,5,5,5"
-                                 SecondaryProgressCornerRadius="5,5,5,5"
+<progressBar:SfLinearProgressBar ProgressCornerRadius="5"
+                                 TrackCornerRadius="5"
+                                 SecondaryProgressCornerRadius="5"
                                  SecondaryProgressFill="Yellow"
                                  SecondaryProgress="50"
                                  TrackHeight="10"
@@ -521,9 +521,9 @@ using Syncfusion.Maui.ProgressBar;
 ...
 
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
-linearProgressBar.ProgressCornerRadius = new CornerRadius(5, 5, 5, 5);
-linearProgressBar.TrackCornerRadius = new CornerRadius(5, 5, 5, 5);
-linearProgressBar.SecondaryProgressCornerRadius = new CornerRadius(5, 5, 5, 5);
+linearProgressBar.ProgressCornerRadius = new CornerRadius(5);
+linearProgressBar.TrackCornerRadius = new CornerRadius(5);
+linearProgressBar.SecondaryProgressCornerRadius = new CornerRadius(5);
 linearProgressBar.SecondaryProgressFill = Colors.Yellow;
 linearProgressBar.SecondaryProgress = 50;
 linearProgressBar.TrackHeight = 10;
@@ -766,9 +766,9 @@ The following code example explains how to utilize the Xamarin progress bar and 
 <!--Snippet for the progress completed event-->
 
 <progressBar:SfCircularProgressBar Minimum="100" 
-                               Maximum="500" 
-                               ProgressCompleted="SfCircularProgressBar_ProgressCompleted" 
-                               Progress="500">
+                                   Maximum="500" 
+                                   ProgressCompleted="SfCircularProgressBar_ProgressCompleted" 
+                                   Progress="500">
     <progressBar:SfCircularProgressBar.Content>
         <Grid WidthRequest="150">
             <Label x:Name="Label" 
@@ -868,7 +868,7 @@ private void LinearProgressBar_ProgressChanged(object sender, ProgressValueEvent
     {
         this.LinearProgressBar.ProgressFill = Colors.Red;
     }
-    else if (e.Progress >= 50)
+    else
     {
         this.LinearProgressBar.ProgressFill = Colors.Green;
     }

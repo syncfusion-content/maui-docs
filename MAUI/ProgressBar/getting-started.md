@@ -93,12 +93,10 @@ Create an instance for the progress bar control, and add it as content. The prog
 // Using the linear progress bar. 
 
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar { Progress = 75 };
-this.Content = linearProgressBar;
 
 // Using the circular progress bar.
 
 SfCircularProgressBar circularProgressBar = new SfCircularProgressBar { Progress = 75 };
-this.Content = circularProgressBar;
 
 {% endhighlight %}
 

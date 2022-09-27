@@ -21,7 +21,7 @@ The following properties are used to define the duration of animation for the sp
 
 The `AnimationEasing` property allows you specify the transfer function that controls animation speed when they run. 
 
-The following code sample demonstrates the `CubicInOut` easing function of the linear progress bar.
+The following code sample demonstrates the `CubicInOut` easing function of the linear and circular progress bar.
 
 {% tabs %} 
 
@@ -72,7 +72,7 @@ N> The animation duration and easing effect parameters will not affect the confi
 
 The `IndeterminateAnimationEasing` property allows you to specify a transfer function for indeterminate state, which controls animation speed when they run.
 
-The following code sample demonstrates the `BounceIn` easing function of the linear progress bar.
+The following code sample demonstrates the `BounceIn` easing function of the linear and circular progress bar.
 
 {% tabs %} 
 

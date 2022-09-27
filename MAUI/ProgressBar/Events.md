@@ -35,7 +35,7 @@ private void LinearProgressBar_ProgressChanged(object sender, ProgressValueEvent
     {
         this.LinearProgressBar.ProgressFill = Colors.Red;
     }
-    else if (e.Progress >= 50)
+    else
     {
         this.LinearProgressBar.ProgressFill = Colors.Green;
     }

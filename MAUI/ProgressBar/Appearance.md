@@ -343,8 +343,7 @@ The following code sample demonstrates the color customization in progress and t
 
 <progressBar:SfLinearProgressBar Progress="75" 
                                  TrackFill="#3351483a" 
-                                 ProgressFill="#FF51483a"
-                                 SecondaryProgressFill="CornflowerBlue" />
+                                 ProgressFill="#FF51483a"/>
 
 {% endhighlight %}
 
