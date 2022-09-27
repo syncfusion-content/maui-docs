@@ -94,18 +94,22 @@ Change the appearance of the tooltip using the [`Fill`](https://help.syncfusion.
 
 {% highlight xaml %}
 
-<sliders:SfDateTimeRangeSlider Minimum="2010-01-01" 
-                               Maximum="2018-01-01" 
-                               RangeStart="2012-01-01" 
+<sliders:SfDateTimeRangeSlider Minimum="2010-01-01"
+                               Maximum="2018-01-01"
+                               RangeStart="2012-01-01"
                                RangeEnd="2016-01-01">
-    
+
     <sliders:SfDateTimeRangeSlider.Tooltip>
-       <sliders:SliderTooltip Fill="#F7B1AE" 
-                              Stroke="#EE3F3F" 
-                              StrokeThickness="2" />
+        <sliders:SliderTooltip Fill="#DFD8F7"
+                               Stroke="#512BD4"
+                               StrokeThickness="2"
+                               TextColor="#512BD4"
+                               FontSize="14"
+                               FontAttributes="Bold"
+                               Padding="12,12" />
     </sliders:SfDateTimeRangeSlider.Tooltip>
- 
- </sliders:SfDateTimeRangeSlider>
+
+</sliders:SfDateTimeRangeSlider>
 
 {% endhighlight %}
 
@@ -116,9 +120,13 @@ rangeSlider.Minimum = new DateTime(2010, 01, 01);
 rangeSlider.Maximum = new DateTime(2018, 01, 01);
 rangeSlider.RangeStart = new DateTime(2012, 01, 01);
 rangeSlider.RangeEnd = new DateTime(2016, 01, 01);
- rangeSlider.Tooltip.Fill = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
- rangeSlider.Tooltip.Stroke = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
- rangeSlider.Tooltip.StrokeThickness = 2;
+rangeSlider.Tooltip.Fill = new SolidColorBrush(Color.FromArgb("#DFD8F7"));
+rangeSlider.Tooltip.Stroke = new SolidColorBrush(Color.FromArgb("#512BD4"));
+rangeSlider.Tooltip.StrokeThickness = 2;
+rangeSlider.Tooltip.TextColor = Color.FromArgb("#512BD4");
+rangeSlider.Tooltip.FontSize = 14;
+rangeSlider.Tooltip.FontAttributes = FontAttributes.Bold;
+rangeSlider.Tooltip.Padding = new Thickness(12, 12);
 
 {% endhighlight %}
 

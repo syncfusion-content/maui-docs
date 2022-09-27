@@ -23,11 +23,9 @@ Change the size of the thumb in the range slider using the [`Radius`](https://he
 {% highlight xaml %}
 
 <sliders:SfRangeSlider>
-   
-   <sliders:SfRangeSlider.ThumbStyle>
-       <sliders:SliderThumbStyle Radius="15" />
-   </sliders:SfRangeSlider.ThumbStyle>
-
+    <sliders:SfRangeSlider.ThumbStyle>
+        <sliders:SliderThumbStyle Radius="15" />
+    </sliders:SfRangeSlider.ThumbStyle>
 </sliders:SfRangeSlider>
 
 {% endhighlight %}
@@ -52,11 +50,9 @@ Change the color of the thumb in the range slider using the [`Fill`](https://hel
 {% highlight xaml %}
 
 <sliders:SfRangeSlider>
-   
    <sliders:SfRangeSlider.ThumbStyle>
        <sliders:SliderThumbStyle Fill="#EE3F3F" />
    </sliders:SfRangeSlider.ThumbStyle>
-
 </sliders:SfRangeSlider>
 
 {% endhighlight %}
@@ -81,11 +77,10 @@ Change the thumb stroke width using the [`StrokeThickness`](https://help.syncfus
 {% highlight xaml %}
 
 <sliders:SfRangeSlider>
-   
-   <sliders:SfRangeSlider.ThumbStyle>
-       <sliders:SliderThumbStyle StrokeThickness="2" Stroke="#EE3F3F" />
-   </sliders:SfRangeSlider.ThumbStyle>
-
+    <sliders:SfRangeSlider.ThumbStyle>
+        <sliders:SliderThumbStyle StrokeThickness="2"
+                                  Stroke="#EE3F3F" />
+    </sliders:SfRangeSlider.ThumbStyle>
 </sliders:SfRangeSlider>
 
 {% endhighlight %}
@@ -111,11 +106,9 @@ Change the thumb stroke color while two thumbs are overlapping in the range slid
 {% highlight xaml %}
 
 <sliders:SfRangeSlider>
-  
   <sliders:SfRangeSlider.ThumbStyle>
-      <sliders:SliderThumbStyle OverlapStroke="#EE3F3F" />
+      <sliders:SliderThumbStyle OverlapStroke="#FFD700" />
   </sliders:SfRangeSlider.ThumbStyle>
-
 </sliders:SfRangeSlider>
 
 {% endhighlight %}
@@ -123,7 +116,7 @@ Change the thumb stroke color while two thumbs are overlapping in the range slid
 {% highlight C# %}
 
 SfRangeSlider rangeSlider = new SfRangeSlider();
-rangeSlider.ThumbStyle.OverlapStroke = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+rangeSlider.ThumbStyle.OverlapStroke = new SolidColorBrush(Color.FromArgb("#FFD700"));
         
 {% endhighlight %}
 
@@ -140,11 +133,9 @@ Change the size of the thumb overlay in the range slider using the [`Radius`](ht
 {% highlight xaml %}
 
 <sliders:SfRangeSlider>
-   
    <sliders:SfRangeSlider.ThumbOverlayStyle>
-      <sliders:SliderThumbOverlayStyle Radius="30"/>
+      <sliders:SliderThumbOverlayStyle Radius="18"/>
    </sliders:SfRangeSlider.ThumbOverlayStyle>
-
 </sliders:SfRangeSlider>
 
 {% endhighlight %}
@@ -152,7 +143,7 @@ Change the size of the thumb overlay in the range slider using the [`Radius`](ht
 {% highlight C# %}
 
 SfRangeSlider rangeSlider = new SfRangeSlider();
-rangeSlider.ThumbOverlayStyle.Radius = 30;
+rangeSlider.ThumbOverlayStyle.Radius = 18;
         
 {% endhighlight %}
 
@@ -169,11 +160,9 @@ Change the color of the thumb overlay in the range slider using the [`Fill`](htt
 {% highlight xaml %}
 
 <sliders:SfRangeSlider>
-   
    <sliders:SfRangeSlider.ThumbOverlayStyle>
-      <sliders:SliderThumbOverlayStyle Fill="#F7C8DB"/>
+      <sliders:SliderThumbOverlayStyle Fill="#66FFD700"/>
    </sliders:SfRangeSlider.ThumbOverlayStyle>
-
 </sliders:SfRangeSlider>
 
 {% endhighlight %}
@@ -181,7 +170,7 @@ Change the color of the thumb overlay in the range slider using the [`Fill`](htt
 {% highlight C# %}
 
 SfRangeSlider rangeSlider = new SfRangeSlider();
-rangeSlider.ThumbOverlayStyle.Fill = new SolidColorBrush(Color.FromArgb("#F7C8DB"));
+rangeSlider.ThumbOverlayStyle.Fill = new SolidColorBrush(Color.FromArgb("#66FFD700"));
         
 {% endhighlight %}
 
@@ -199,7 +188,8 @@ Change the state of the range slider to disabled by setting `false` to the `IsEn
 
 <ContentPage.Resources>
     <Style TargetType="sliders:SfRangeSlider">
-        <Setter Property="Interval" Value="0.25" />
+        <Setter Property="Interval"
+                Value="0.25" />
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup>
@@ -207,10 +197,10 @@ Change the state of the range slider to disabled by setting `false` to the `IsEn
                         <VisualState.Setters>
                             <Setter Property="ThumbStyle">
                                 <Setter.Value>
-                                    <sliders:SliderThumbStyle Radius = "13"
-                                                                  Fill="Red"
-                                                                  Stroke="Yellow"
-                                                                  StrokeThickness="3"/>
+                                    <sliders:SliderThumbStyle Radius="13"
+                                                              Fill="Red"
+                                                              Stroke="Yellow"
+                                                              StrokeThickness="3" />
                                 </Setter.Value>
                             </Setter>
                         </VisualState.Setters>
@@ -219,10 +209,10 @@ Change the state of the range slider to disabled by setting `false` to the `IsEn
                         <VisualState.Setters>
                             <Setter Property="ThumbStyle">
                                 <Setter.Value>
-                                    <sliders:SliderThumbStyle Radius = "13"
-                                                                  Fill="Gray"
-                                                                  Stroke="LightGray"
-                                                                  StrokeThickness="3"/>
+                                    <sliders:SliderThumbStyle Radius="13"
+                                                              Fill="Gray"
+                                                              Stroke="LightGray"
+                                                              StrokeThickness="3" />
                                 </Setter.Value>
                             </Setter>
                         </VisualState.Setters>
@@ -235,10 +225,12 @@ Change the state of the range slider to disabled by setting `false` to the `IsEn
 
 <ContentPage.Content>
     <VerticalStackLayout>
-        <Label Text="Enabled Range Slider" Padding="0,10"/>
-        <sliders:SfRangeSlider/>
-        <Label Text="Disabled Range Slider" Padding="0,10"/>
-        <sliders:SfRangeSlider IsEnabled="False"/>
+        <Label Text="Enabled Range Slider"
+               Padding="0,10" />
+        <sliders:SfRangeSlider />
+        <Label Text="Disabled Range Slider"
+               Padding="0,10" />
+        <sliders:SfRangeSlider IsEnabled="False" />
     </VerticalStackLayout>
 </ContentPage.Content>
 

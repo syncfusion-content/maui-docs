@@ -44,9 +44,8 @@ rangeSlider.ShowTicks = true;
 
 {% highlight xaml %}
 
-<sliders:SfRangeSlider Interval="0.2"  
-                       ShowTicks="True">
-</sliders:SfRangeSlider>
+<sliders:SfRangeSlider Interval="0.2"
+                       ShowTicks="True" />
 
 {% endhighlight %}
 
@@ -72,16 +71,15 @@ It is used to represent the number of smaller ticks between two major ticks. For
 
 {% highlight xaml %}
 
-<sliders:SfRangeSlider MinorTicksPerInterval="3" 
-                       ShowTicks="True">
-</sliders:SfRangeSlider>
+<sliders:SfRangeSlider MinorTicksPerInterval="2"
+                       ShowTicks="True" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
 SfRangeSlider rangeSlider = new SfRangeSlider();
-rangeSlider.MinorTicksPerInterval = 1;
+rangeSlider.MinorTicksPerInterval = 2;
 rangeSlider.ShowTicks = true;
 
 {% endhighlight %}
@@ -95,17 +93,16 @@ rangeSlider.ShowTicks = true;
 
 {% highlight xaml %}
 
-<sliders:SfRangeSlider Interval="0.2" 
-                       MinorTicksPerInterval="1" 
-                       ShowTicks="True">
-</sliders:SfRangeSlider>
+<sliders:SfRangeSlider Interval="0.25"
+                       MinorTicksPerInterval="1"
+                       ShowTicks="True" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
 SfRangeSlider rangeSlider = new SfRangeSlider();
-rangeSlider.Interval = 0.2;
+rangeSlider.Interval = 0.25;
 rangeSlider.MinorTicksPerInterval = 1;
 rangeSlider.ShowTicks = true;
 
@@ -127,12 +124,12 @@ The inactive side of the range slider is between the [`Minimum`](https://help.sy
 
 {% highlight xaml %}
 
-<sliders:SfRangeSlider Interval="0.2" 
+<sliders:SfRangeSlider Interval="0.2"
                        ShowTicks="True">
-    
+
     <sliders:SfRangeSlider.MajorTickStyle>
-         <sliders:SliderTickStyle ActiveFill="#EE3F3F" 
-                                  InactiveFill="#F7B1AE" />
+        <sliders:SliderTickStyle ActiveFill="#EE3F3F"
+                                 InactiveFill="#F7B1AE" />
     </sliders:SfRangeSlider.MajorTickStyle>
 
 </sliders:SfRangeSlider>
@@ -165,14 +162,14 @@ The inactive side of the range slider is between the [`Minimum`](https://help.sy
 
 {% highlight xaml %}
 
-<sliders:SfRangeSlider Interval="0.2" 
-                       ShowTicks="True" 
+<sliders:SfRangeSlider Interval="0.2"
+                       ShowTicks="True"
                        MinorTicksPerInterval="1">
-    
+
     <sliders:SfRangeSlider.MinorTickStyle>
-         <sliders:SliderTickStyle ActiveFill="#EE3F3F" 
-                                  InactiveFill="#F7B1AE" />
-     </sliders:SfRangeSlider.MinorTickStyle>
+        <sliders:SliderTickStyle ActiveFill="#EE3F3F"
+                                 InactiveFill="#F7B1AE" />
+    </sliders:SfRangeSlider.MinorTickStyle>
 
 </sliders:SfRangeSlider>
 
@@ -201,16 +198,18 @@ Change the major and minor ticks size of the range slider using the [`ActiveSize
 
 {% highlight xaml %}
 
-<sliders:SfRangeSlider Interval="0.2" 
-                       ShowTicks="True" 
+<sliders:SfRangeSlider Interval="0.2"
+                       ShowTicks="True"
                        MinorTicksPerInterval="1">
-    
+
     <sliders:SfRangeSlider.MinorTickStyle>
-       <sliders:SliderTickStyle ActiveSize="2,10" InactiveSize="2, 10" />
+        <sliders:SliderTickStyle ActiveSize="2,10"
+                                 InactiveSize="2, 10" />
     </sliders:SfRangeSlider.MinorTickStyle>
-    
+
     <sliders:SfRangeSlider.MajorTickStyle>
-        <sliders:SliderTickStyle ActiveSize="2,15" InactiveSize="2, 15" />
+        <sliders:SliderTickStyle ActiveSize="2,15"
+                                 InactiveSize="2, 15" />
     </sliders:SfRangeSlider.MajorTickStyle>
 
 </sliders:SfRangeSlider>
@@ -243,16 +242,17 @@ Adjust the space between track and ticks of the range slider using the [`Offset`
 {% highlight xaml %}
 
 <sliders:SfRangeSlider Interval="0.2"
-                       ShowTicks="True" 
+                       ShowTicks="True"
                        MinorTicksPerInterval="1">
-   
+
     <sliders:SfRangeSlider.MinorTickStyle>
-       <sliders:SliderTickStyle Offset="5" />
+        <sliders:SliderTickStyle Offset="5" />
     </sliders:SfRangeSlider.MinorTickStyle>
-   
+
     <sliders:SfRangeSlider.MajorTickStyle>
-       <sliders:SliderTickStyle Offset="5" />
+        <sliders:SliderTickStyle Offset="5" />
     </sliders:SfRangeSlider.MajorTickStyle>
+
 </sliders:SfRangeSlider>
 
 {% endhighlight %}
@@ -282,9 +282,12 @@ Change the state of the range slider to disabled by setting `false` to the `IsEn
 
 <ContentPage.Resources>
     <Style TargetType="sliders:SfRangeSlider">
-        <Setter Property="Interval" Value="0.25" />
-        <Setter Property="ShowTicks" Value="True" />
-        <Setter Property="MinorTicksPerInterval" Value="2" />
+        <Setter Property="Interval"
+                Value="0.25" />
+        <Setter Property="ShowTicks"
+                Value="True" />
+        <Setter Property="MinorTicksPerInterval"
+                Value="2" />
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup>
@@ -292,18 +295,18 @@ Change the state of the range slider to disabled by setting `false` to the `IsEn
                         <VisualState.Setters>
                             <Setter Property="MajorTickStyle">
                                 <Setter.Value>
-                                    <sliders:SliderTickStyle ActiveSize = "3, 10" 
-                                                                 InactiveSize = "3, 10"
-                                                                 ActiveFill = "#EE3F3F"
-                                                                 InactiveFill = "#F7B1AE" />
+                                    <sliders:SliderTickStyle ActiveSize="3, 10"
+                                                             InactiveSize="3, 10"
+                                                             ActiveFill="#EE3F3F"
+                                                             InactiveFill="#F7B1AE" />
                                 </Setter.Value>
                             </Setter>
                             <Setter Property="MinorTickStyle">
                                 <Setter.Value>
-                                    <sliders:SliderTickStyle ActiveSize = "3, 6" 
-                                                                 InactiveSize = "3, 6"
-                                                                  ActiveFill = "#EE3F3F"
-                                                                 InactiveFill = "#F7B1AE" />
+                                    <sliders:SliderTickStyle ActiveSize="3, 6"
+                                                             InactiveSize="3, 6"
+                                                             ActiveFill="#EE3F3F"
+                                                             InactiveFill="#F7B1AE" />
                                 </Setter.Value>
                             </Setter>
                         </VisualState.Setters>
@@ -312,18 +315,18 @@ Change the state of the range slider to disabled by setting `false` to the `IsEn
                         <VisualState.Setters>
                             <Setter Property="MajorTickStyle">
                                 <Setter.Value>
-                                    <sliders:SliderTickStyle ActiveSize="3,10" 
-                                                                 InactiveSize="3, 10"
-                                                                 ActiveFill="Gray" 
-                                                                 InactiveFill="LightGray" />
+                                    <sliders:SliderTickStyle ActiveSize="3,10"
+                                                             InactiveSize="3, 10"
+                                                             ActiveFill="Gray"
+                                                             InactiveFill="LightGray" />
                                 </Setter.Value>
                             </Setter>
                             <Setter Property="MinorTickStyle">
                                 <Setter.Value>
-                                    <sliders:SliderTickStyle ActiveSize ="3,6" 
-                                                                 InactiveSize="3, 6"
-                                                                 ActiveFill="Gray" 
-                                                                 InactiveFill="LightGray" />
+                                    <sliders:SliderTickStyle ActiveSize="3,6"
+                                                             InactiveSize="3, 6"
+                                                             ActiveFill="Gray"
+                                                             InactiveFill="LightGray" />
                                 </Setter.Value>
                             </Setter>
                         </VisualState.Setters>
@@ -336,10 +339,12 @@ Change the state of the range slider to disabled by setting `false` to the `IsEn
 
 <ContentPage.Content>
     <VerticalStackLayout>
-        <Label Text="Enabled Range Slider" Padding="0,10"/>
-        <sliders:SfRangeSlider/>
-        <Label Text="Disabled Range Slider" Padding="0,10"/>
-        <sliders:SfRangeSlider IsEnabled="False"/>
+        <Label Text="Enabled Range Slider"
+               Padding="0,10" />
+        <sliders:SfRangeSlider />
+        <Label Text="Disabled Range Slider"
+               Padding="0,10" />
+        <sliders:SfRangeSlider IsEnabled="False" />
     </VerticalStackLayout>
 </ContentPage.Content>
 
@@ -408,7 +413,7 @@ visualStateGroupList.Add(commonStateGroup);
 VisualStateManager.SetVisualStateGroups(defaultRangeSlider, visualStateGroupList);
 VisualStateManager.SetVisualStateGroups(disabledRangeSlider, visualStateGroupList);
 
-stackLayout.Children.Add(new Label() { Text = "Default Range Slider", Padding = new Thickness(0, 10) });
+stackLayout.Children.Add(new Label() { Text = "Enabled Range Slider", Padding = new Thickness(0, 10) });
 stackLayout.Children.Add(defaultRangeSlider);
 stackLayout.Children.Add(new Label() { Text = "Disabled Range Slider", Padding = new Thickness(0, 10) });
 stackLayout.Children.Add(disabledRangeSlider);

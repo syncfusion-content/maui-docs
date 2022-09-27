@@ -117,7 +117,7 @@ The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.S
                                RangeStart="2012-01-01" 
                                RangeEnd="2016-01-01"
                                Interval="2" 
-                               ShowLabel="True">
+                               ShowLabels="True">
 </sliders:SfDateTimeRangeSlider>
 
 {% endhighlight %}
@@ -129,7 +129,7 @@ rangeSlider.Minimum = new DateTime(2010, 01, 01);
 rangeSlider.Maximum = new DateTime(2018, 01, 01);
 rangeSlider.RangeStart = new DateTime(2012, 01, 01);
 rangeSlider.RangeEnd = new DateTime(2016, 01, 01);
-rangeSlider.ShowLabel = true;
+rangeSlider.ShowLabels = true;
 rangeSlider.Interval = 2;
 
 {% endhighlight %}

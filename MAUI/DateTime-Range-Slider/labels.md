@@ -164,7 +164,7 @@ rangeSlider.ShowTicks = true;
 
 {% endtabs %}
 
-![RangeSlider edge labels placement](images/labels-and-dividers/edge-labels-placement.png)
+![RangeSlider edge labels placement](images/labels-and-dividers/edge-labels-placement.gif)
 
 ## Label style
 
@@ -190,7 +190,7 @@ The inactive side of the DateTime Range Slider is between the [`Minimum`](https:
         <sliders:SliderLabelStyle ActiveTextColor="#EE3F3F" 
                                   InactiveTextColor="#F7B1AE" 
                                   ActiveFontAttributes="Italic" 
-                                  InactiveFontAttributes="Italic" 
+                                  InactiveFontAttributes="Bold" 
                                   ActiveFontSize="16" 
                                   InactiveFontSize="16" />
     </sliders:SfDateTimeRangeSlider.LabelStyle>
@@ -213,7 +213,7 @@ rangeSlider.LabelStyle.InactiveTextColor = Color.FromArgb("#F7B1AE");
 rangeSlider.LabelStyle.ActiveFontSize = 16;
 rangeSlider.LabelStyle.InactiveFontSize = 16;
 rangeSlider.LabelStyle.ActiveFontAttributes = FontAttributes.Italic;
-rangeSlider.LabelStyle.InactiveFontAttributes = FontAttributes.Italic;
+rangeSlider.LabelStyle.InactiveFontAttributes = FontAttributes.Bold;
 
 {% endhighlight %}
 
@@ -278,12 +278,15 @@ Change the state of the DateTime Range Slider to disabled by setting `false` to 
         <Setter Property="Maximum"
                 Value="2018-01-01" />
         <Setter Property="RangeStart"
-                RangeStart="2012-01-01" />
+                Value="2012-01-01" />
         <Setter Property="RangeEnd"
-                RangeEnd="2016-01-01" />
-        <Setter Property="Interval" Value="2" />
-        <Setter Property="ShowTicks" Value="True" />
-        <Setter Property="ShowLabels" Value="True" />
+                Value="2016-01-01" />
+        <Setter Property="Interval"
+                Value="2" />
+        <Setter Property="ShowTicks"
+                Value="True" />
+        <Setter Property="ShowLabels"
+                Value="True" />
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup>
@@ -291,12 +294,12 @@ Change the state of the DateTime Range Slider to disabled by setting `false` to 
                         <VisualState.Setters>
                             <Setter Property="LabelStyle">
                                 <Setter.Value>
-                                    <sliders:SliderLabelStyle ActiveTextColor = "#EE3F3F"
-                                                                  InactiveTextColor="#F7B1AE"
-                                                                  ActiveFontSize="16"
-                                                                  InactiveFontSize="14"
-                                                                  ActiveFontAttributes="Bold"
-                                                                  InactiveFontAttributes="Italic"/>
+                                    <sliders:SliderLabelStyle ActiveTextColor="#EE3F3F"
+                                                              InactiveTextColor="#F7B1AE"
+                                                              ActiveFontSize="16"
+                                                              InactiveFontSize="14"
+                                                              ActiveFontAttributes="Bold"
+                                                              InactiveFontAttributes="Italic" />
                                 </Setter.Value>
                             </Setter>
                         </VisualState.Setters>
@@ -305,12 +308,12 @@ Change the state of the DateTime Range Slider to disabled by setting `false` to 
                         <VisualState.Setters>
                             <Setter Property="LabelStyle">
                                 <Setter.Value>
-                                    <sliders:SliderLabelStyle ActiveTextColor = "Gray"
-                                                                  InactiveTextColor="LightGray"
-                                                                  ActiveFontSize="14"
-                                                                  InactiveFontSize="16"
-                                                                  ActiveFontAttributes="Italic"
-                                                                  InactiveFontAttributes="Bold"/>
+                                    <sliders:SliderLabelStyle ActiveTextColor="Gray"
+                                                              InactiveTextColor="LightGray"
+                                                              ActiveFontSize="14"
+                                                              InactiveFontSize="16"
+                                                              ActiveFontAttributes="Italic"
+                                                              InactiveFontAttributes="Bold" />
                                 </Setter.Value>
                             </Setter>
                         </VisualState.Setters>
@@ -323,10 +326,12 @@ Change the state of the DateTime Range Slider to disabled by setting `false` to 
 
 <ContentPage.Content>
     <VerticalStackLayout>
-        <Label Text="Enabled Range Slider" Padding="0,10"/>
-        <sliders:SfDateTimeRangeSlider/>
-        <Label Text="Disabled Range Slider" Padding="0,10"/>
-        <sliders:SfDateTimeRangeSlider IsEnabled="False"/>
+        <Label Text="Enabled Range Slider"
+               Padding="0,10" />
+        <sliders:SfDateTimeRangeSlider />
+        <Label Text="Disabled Range Slider"
+               Padding="0,10" />
+        <sliders:SfDateTimeRangeSlider IsEnabled="False" />
     </VerticalStackLayout>
 </ContentPage.Content>
 
@@ -394,7 +399,7 @@ visualStateGroupList.Add(commonStateGroup);
 VisualStateManager.SetVisualStateGroups(defaultRangeSlider, visualStateGroupList);
 VisualStateManager.SetVisualStateGroups(disabledRangeSlider, visualStateGroupList);
 
-stackLayout.Children.Add(new Label() { Text = "Default Range Slider", Padding = new Thickness(0, 10) });
+stackLayout.Children.Add(new Label() { Text = "Enabled Range Slider", Padding = new Thickness(0, 10) });
 stackLayout.Children.Add(defaultRangeSlider);
 stackLayout.Children.Add(new Label() { Text = "Disabled Range Slider", Padding = new Thickness(0, 10) });
 stackLayout.Children.Add(disabledRangeSlider);
