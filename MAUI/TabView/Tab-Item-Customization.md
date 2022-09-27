@@ -223,7 +223,7 @@ The image will be placed to the right side of the text horizontally.
 
 ## Image Text Spacing
 
-The `ImageTextSpacing` property in SfTabItem allows to provide spacing between the image and the text of the tab item.
+The `ImageTextSpacing` property in SfTabItem allows for the provision of spacing between the image and the text of the tab item.
 
 {% highlight xaml %}
 <tabView:SfTabView>
