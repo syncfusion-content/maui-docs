@@ -30,13 +30,15 @@ The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.S
 
 {% highlight C# %}
 
-SfSlider slider = new SfSlider();
-slider.Minimum = 2;
-slider.Maximum = 10;
-slider.Value = 6;
-slider.Interval = 2;
-slider.ShowTicks = true;
-slider.ShowLabels = true;
+SfSlider slider = new SfSlider()
+{
+    Minimum = 2,
+    Maximum = 10,
+    Value = 6,
+    Interval = 2,
+    ShowLabels = true,
+    ShowTicks = true,
+};
 
 {% endhighlight %}
 
@@ -64,13 +66,16 @@ The [`NumberFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders
 
 {% highlight C# %}
 
-SfSlider slider = new SfSlider();
-slider.Minimum = 2;
-slider.Maximum = 10;
-slider.Value = 6;
-slider.Interval = 2;
-slider.NumberFormat = "$##";
-slider.ShowLabels = true;
+SfSlider slider = new SfSlider()
+{
+    Minimum = 2,
+    Maximum = 10,
+    Value = 6,
+    Interval = 2,
+    NumberFormat = "$##",
+    ShowLabels = true,
+    ShowTicks = true,
+};
 
 {% endhighlight %}
 
@@ -98,14 +103,16 @@ The [`LabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slid
 
 {% highlight C# %}
 
-SfSlider slider = new SfSlider();
-slider.Minimum = 0;
-slider.Maximum = 10;
-slider.Value = 5;
-slider.Interval = 2;
-slider.LabelsPlacement = SliderLabelsPlacement.BetweenTicks;
-slider.ShowLabels = true;
-slider.ShowTicks = true;
+SfSlider slider = new SfSlider()
+{
+    Minimum = 0,
+    Maximum = 10,
+    Value = 5,
+    Interval = 2,
+    ShowLabels = true,
+    ShowTicks = true,
+    LabelsPlacement = SliderLabelsPlacement.BetweenTicks,
+};
 
 {% endhighlight %}
 
@@ -169,33 +176,37 @@ The inactive side of the slider is between the thumb and the [`Maximum`](https:/
 
 {% highlight xaml %}
 
-<sliders:SfSlider Minimum="2" 
+<sliders:SfSlider Minimum="2"
                   Maximum="10"
-                  Value="6" 
-                  Interval="2" 
-                  ShowTicks="True"  
+                  Value="6"
+                  Interval="2"
+                  ShowTicks="True"
                   ShowLabels="True">
+    
     <sliders:SfSlider.LabelStyle>
-         <sliders:SliderLabelStyle ActiveTextColor="#EE3F3F" 
-                                   InactiveTextColor="#F7B1AE" 
-	             		           ActiveFontAttributes="Italic" 
-				                   InactiveFontAttributes="Italic" 
-				                   ActiveFontSize="16" 
-				                   InactiveFontSize="16" />
+        <sliders:SliderLabelStyle ActiveTextColor="#EE3F3F"
+                                  InactiveTextColor="#F7B1AE"
+                                  ActiveFontAttributes="Italic"
+                                  InactiveFontAttributes="Italic"
+                                  ActiveFontSize="16"
+                                  InactiveFontSize="16" />
     </sliders:SfSlider.LabelStyle>
+    
 </sliders:SfSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfSlider slider = new SfSlider();
-slider.Minimum = 2;
-slider.Maximum = 10;
-slider.Value = 6;
-slider.Interval = 2;
-slider.ShowLabels = true;
-slider.ShowTicks = true;
+SfSlider slider = new SfSlider()
+{
+    Minimum = 2,
+    Maximum = 10,
+    Value = 6,
+    Interval = 2,
+    ShowLabels = true,
+    ShowTicks = true,
+};
 slider.LabelStyle.ActiveTextColor = Color.FromArgb("#EE3F3F");
 slider.LabelStyle.InactiveTextColor = Color.FromArgb("#F7B1AE");
 slider.LabelStyle.ActiveFontSize = 16;
@@ -217,28 +228,32 @@ Adjust the space between ticks and labels of the slider using the [`Offset`](htt
 
 {% highlight xaml %}
 
-<sliders:SfSlider Minimum="2" 
+<sliders:SfSlider Minimum="2"
                   Maximum="10"
-                  Value="6" 
-                  Interval="2" 
+                  Value="6"
+                  Interval="2"
                   ShowTicks="True"
                   ShowLabels="True">
+
     <sliders:SfSlider.LabelStyle>
         <sliders:SliderLabelStyle Offset="10" />
-     </sliders:SfSlider.LabelStyle>
+    </sliders:SfSlider.LabelStyle>
+
 </sliders:SfSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfSlider slider = new SfSlider();
-slider.Minimum = 2;
-slider.Maximum = 10;
-slider.Value = 6;
-slider.Interval = 2;
-slider.ShowLabels = true;
-slider.ShowTicks = true;
+SfSlider slider = new SfSlider()
+{
+    Minimum = 2,
+    Maximum = 10,
+    Value = 6,
+    Interval = 2,
+    ShowLabels = true,
+    ShowTicks = true,
+};
 slider.LabelStyle.Offset = 10;
 
 {% endhighlight %}

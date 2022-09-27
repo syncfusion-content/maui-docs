@@ -29,8 +29,10 @@ Enable tooltip for the thumb by setting the [`Tooltip`](https://help.syncfusion.
 
 {% highlight C# %}
 
-SfSlider slider = new SfSlider();
-slider.Tooltip = new SliderTooltip();
+SfSlider slider = new SfSlider()
+{
+    Tooltip = new SliderTooltip()
+};
 
 {% endhighlight %}
 
@@ -56,9 +58,13 @@ Always shows a tooltip with and without the thumb interaction by setting the [`S
 
 {% highlight C# %}
 
-SfSlider slider = new SfSlider();
-slider.Tooltip = new SliderTooltip();
-slider.Tooltip.ShowAlways = true;
+SfSlider slider = new SfSlider()
+{
+    Tooltip = new SliderTooltip()
+    {
+        ShowAlways = true,
+    }
+};
 
 {% endhighlight %}
 
@@ -93,15 +99,20 @@ Change the appearance of the tooltip using the [`Fill`](https://help.syncfusion.
 
 {% highlight C# %}
 
-SfSlider slider = new SfSlider();
-slider.Tooltip.Fill = new SolidColorBrush(Color.FromArgb("#DFD8F7"));
-slider.Tooltip.Stroke = new SolidColorBrush(Color.FromArgb("#512BD4"));
-slider.Tooltip.StrokeThickness = 2;
-slider.Tooltip.TextColor = Color.FromArgb("#512BD4");
-slider.Tooltip.FontSize = 14;
-slider.Tooltip.FontAttributes = FontAttributes.Bold;
-slider.Tooltip.Padding = new Thickness(12, 12);
-slider.Tooltip.NumberFormat = "0.#0";
+SfSlider slider = new SfSlider()
+{
+    Tooltip = new SliderTooltip()
+    {
+        Fill = new SolidColorBrush(Color.FromArgb("#DFD8F7")),
+        Stroke = new SolidColorBrush(Color.FromArgb("#512BD4")),
+        StrokeThickness = 2,
+        TextColor = Color.FromArgb("#512BD4"),
+        FontSize = 14,
+        FontAttributes = FontAttributes.Bold,
+        Padding = new Thickness(12, 12),
+        NumberFormat = "0.#0",
+    }
+};
 
 {% endhighlight %}
 

@@ -24,14 +24,13 @@ This section explains how to add the events and commands for DateTime Slider.
 
 {% highlight xaml %}
 
-<sliders:SfDateTimeSlider  Minimum="2010-01-01" 
-  	                        Maximum="2018-01-01" 
-		                    Value="2014-01-01" 
-	                        ValueChangeStart="OnValueChangeStart" 
-	 	                    ValueChanging="OnValueChanging" 
-		                    ValueChanged="OnValueChanged" 
-		                    ValueChangeEnd="OnValueChangeEnd">
-</sliders:SfDateTimeSlider>
+<sliders:SfDateTimeSlider  Minimum="2010-01-01"
+                           Maximum="2018-01-01"
+                           Value="2014-01-01"
+                           ValueChangeStart="OnValueChangeStart"
+                           ValueChanging="OnValueChanging"
+                           ValueChanged="OnValueChanged"
+                           ValueChangeEnd="OnValueChangeEnd" />
 
 {% endhighlight %}
 
@@ -94,7 +93,8 @@ Format or change the label text using the [`LabelCreated`](https://help.syncfusi
 
 {% highlight C# %}
 
-SfDateTimeSlider slider = new SfDateTimeSlider();
+{
+   SfDateTimeSlider slider = new SfDateTimeSlider();
    slider.Minimum = new DateTime(2010, 01, 01);
    slider.Maximum = new DateTime(2011, 01, 01);
    slider.Value = new DateTime(2010, 07, 01);

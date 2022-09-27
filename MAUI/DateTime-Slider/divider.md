@@ -31,12 +31,14 @@ For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.M
 
 {% highlight C# %}
 
-SfDateTimeSlider slider = new SfDateTimeSlider();
-slider.Minimum = new DateTime(2010, 01, 01);
-slider.Maximum = new DateTime(2018, 01, 01);
-slider.Value = new DateTime(2014, 01, 01);
-slider.Interval = 2;
-slider.ShowDividers = true;
+SfDateTimeSlider slider = new SfDateTimeSlider()
+{
+    Minimum = new DateTime(2010, 01, 01),
+    Maximum = new DateTime(2018, 01, 01),
+    Value = new DateTime(2014, 01, 01),
+    Interval = 2,
+    ShowDividers = true,
+};
 
 {% endhighlight %}
 
@@ -69,12 +71,14 @@ Change the active and inactive divider radius of the slider using the [`ActiveRa
 
 {% highlight C# %}
 
-SfDateTimeSlider slider = new SfDateTimeSlider();
-slider.Minimum = new DateTime(2010, 01, 01);
-slider.Maximum = new DateTime(2020, 01, 01);
-slider.Value = new DateTime(2015, 01, 01);
-slider.Interval = 2;
-slider.ShowDividers = true;
+SfDateTimeSlider slider = new SfDateTimeSlider()
+{
+    Minimum = new DateTime(2010, 01, 01),
+    Maximum = new DateTime(2020, 01, 01),
+    Value = new DateTime(2015, 01, 01),
+    Interval = 2,
+    ShowDividers = true,
+};
 slider.DividerStyle.ActiveRadius = 3;
 slider.DividerStyle.InactiveRadius = 7;
 
@@ -111,12 +115,14 @@ Change the active and inactive divider color of the slider using the [`ActiveFil
 
 {% highlight C# %}
 
-SfDateTimeSlider slider = new SfDateTimeSlider();
-slider.Minimum = new DateTime(2010, 01, 01);
-slider.Maximum = new DateTime(2018, 01, 01);
-slider.Value = new DateTime(2014, 01, 01);
-slider.Interval = 2;
-slider.ShowDividers = true;
+SfDateTimeSlider slider = new SfDateTimeSlider()
+{
+    Minimum = new DateTime(2010, 01, 01),
+    Maximum = new DateTime(2018, 01, 01),
+    Value = new DateTime(2014, 01, 01),
+    Interval = 2,
+    ShowDividers = true,
+};
 slider.DividerStyle.ActiveRadius = 7;
 slider.DividerStyle.InactiveRadius = 7;
 slider.DividerStyle.ActiveFill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
@@ -161,12 +167,14 @@ Also, change the active and inactive divider stroke color of the slider using th
 
 {% highlight C# %}
 
-SfDateTimeSlider slider = new SfDateTimeSlider();
-slider.Minimum = new DateTime(2010, 01, 01);
-slider.Maximum = new DateTime(2018, 01, 01);
-slider.Value = new DateTime(2014, 01, 01);
-slider.Interval = 2;
-slider.ShowDividers = true;
+SfDateTimeSlider slider = new SfDateTimeSlider()
+{
+    Minimum = new DateTime(2010, 01, 01),
+    Maximum = new DateTime(2018, 01, 01),
+    Value = new DateTime(2014, 01, 01),
+    Interval = 2,
+    ShowDividers = true,
+};
 slider.DividerStyle.ActiveRadius = 7;
 slider.DividerStyle.InactiveRadius = 7;
 slider.DividerStyle.ActiveFill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));

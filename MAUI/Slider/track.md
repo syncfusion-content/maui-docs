@@ -67,9 +67,10 @@ The inactive side of the slider is between the thumb and the [`Maximum`](https:/
 {% highlight xaml %}
 
 <sliders:SfSlider>
-  <sliders:SfSlider.TrackStyle>
-     <sliders:SliderTrackStyle ActiveFill="#EE3F3F" InactiveFill="#F7B1AE" />
-  </sliders:SfSlider.TrackStyle>
+    <sliders:SfSlider.TrackStyle>
+        <sliders:SliderTrackStyle ActiveFill="#EE3F3F"
+                                  InactiveFill="#F7B1AE" />
+    </sliders:SfSlider.TrackStyle>
 </sliders:SfSlider>
 
 {% endhighlight %}
@@ -95,9 +96,10 @@ Change the active and inactive track height of the slider using the [`ActiveSize
 {% highlight xaml %}
 
 <sliders:SfSlider>
-   <sliders:SfSlider.TrackStyle>
-       <sliders:SliderTrackStyle ActiveSize="10" InactiveSize="8" />
-   </sliders:SfSlider.TrackStyle>
+    <sliders:SfSlider.TrackStyle>
+        <sliders:SliderTrackStyle ActiveSize="10"
+                                  InactiveSize="8" />
+    </sliders:SfSlider.TrackStyle>
 </sliders:SfSlider>
 
 {% endhighlight %}
@@ -122,28 +124,20 @@ Extend the track at the edges using the [`TrackExtent`](https://help.syncfusion.
 
 {% highlight xaml %}
 
-<sliders:SfSlider Minimum="-20"
-                  Maximum="20"
-                  Value="0"
-                  MinorTicksPerInterval="1"
-                  Interval="10"
+<sliders:SfSlider Interval="0.25"
                   ShowTicks="True"
-                  ShowLabels="True"
-                  TrackExtent="10" />
+                  TrackExtent="25" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfSlider slider = new SfSlider();
-slider.Minimum = "-20";
-slider.Maximum = "20";
-slider.Value = "0";
-slider.Interval = 10;
-slider.MinorTicksPerInterval = 3;
-slider.ShowLabels = true;
-slider.ShowTicks = true;
-slider.TrackExtent = 10;
+SfSlider slider = new SfSlider()
+{
+    Interval = 0.25,
+    TrackExtent = 25,
+    ShowTicks = true,
+};
 
 {% endhighlight %}
 
@@ -198,11 +192,11 @@ Change the state of the slider to disabled by setting `false` to the `IsEnabled`
 
 <ContentPage.Content>
     <VerticalStackLayout>
-        <Label Text="Enabled Slider"
-               Padding="0,10" />
+        <Label Text="Enabled"
+               Padding="24,10" />
         <sliders:SfSlider />
-        <Label Text="Disabled Slider"
-               Padding="0,10" />
+        <Label Text="Disabled"
+               Padding="24,10" />
         <sliders:SfSlider IsEnabled="False" />
     </VerticalStackLayout>
 </ContentPage.Content>
@@ -250,9 +244,9 @@ visualStateGroupList.Add(commonStateGroup);
 VisualStateManager.SetVisualStateGroups(defaultSlider, visualStateGroupList);
 VisualStateManager.SetVisualStateGroups(disabledSlider, visualStateGroupList);
 
-stackLayout.Children.Add(new Label() { Text = "Default Slider", Padding = new Thickness(0, 10) });
+stackLayout.Children.Add(new Label() { Text = "Enabled", Padding = new Thickness(24, 10) });
 stackLayout.Children.Add(defaultSlider);
-stackLayout.Children.Add(new Label() { Text = "Disabled Slider", Padding = new Thickness(0, 10) });
+stackLayout.Children.Add(new Label() { Text = "Disabled", Padding = new Thickness(24, 10) });
 stackLayout.Children.Add(disabledSlider);
 this.Content = stackLayout;
 

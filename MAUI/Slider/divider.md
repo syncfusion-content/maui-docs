@@ -28,9 +28,11 @@ For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.M
 
 {% highlight C# %}
 
-SfSlider slider = new SfSlider();
-slider.Interval = 0.25;
-slider.ShowDividers = true;
+SfSlider slider = new SfSlider()
+{
+    Interval = 0.25,
+    ShowDividers = true,
+};
 
 {% endhighlight %}
 
@@ -46,21 +48,25 @@ Change the active and inactive divider radius of the slider using the [`ActiveRa
 
 {% highlight xaml %}
 
-<sliders:SfSlider Interval="0.25" 
+<sliders:SfSlider Interval="0.25"
                   ShowDividers="True">
+
     <sliders:SfSlider.DividerStyle>
-         <sliders:SliderDividerStyle ActiveRadius="3" 
-                                     InactiveRadius="7" />
+        <sliders:SliderDividerStyle ActiveRadius="3"
+                                    InactiveRadius="7" />
     </sliders:SfSlider.DividerStyle>
+
 </sliders:SfSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfSlider slider = new SfSlider();
-slider.Interval = 0.25;
-slider.ShowDividers = true;
+SfSlider slider = new SfSlider()
+{
+    Interval = 0.25,
+    ShowDividers = true,
+};
 slider.DividerStyle.ActiveRadius = 3;
 slider.DividerStyle.InactiveRadius = 7;
 
@@ -78,23 +84,27 @@ Change the active and inactive divider color of the slider using the [`ActiveFil
 
 {% highlight xaml %}
 
-<sliders:SfSlider Interval="0.25" 
+<sliders:SfSlider Interval="0.25"
                   ShowDividers="True">
+
     <sliders:SfSlider.DividerStyle>
-       <sliders:SliderDividerStyle ActiveRadius="7" 
-                                   InactiveRadius="7" 
-				                   ActiveFill="#EE3F3F" 
-				                   InactiveFill="#F7B1AE"/>
-      </sliders:SfSlider.DividerStyle>
+        <sliders:SliderDividerStyle ActiveRadius="7"
+                                    InactiveRadius="7"
+                                    ActiveFill="#EE3F3F"
+                                    InactiveFill="#F7B1AE" />
+    </sliders:SfSlider.DividerStyle>
+
 </sliders:SfSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfSlider slider = new SfSlider();
-slider.Interval = 0.25;
-slider.ShowDividers = true;
+SfSlider slider = new SfSlider()
+{
+    Interval = 0.25,
+    ShowDividers = true,
+};
 slider.DividerStyle.ActiveRadius = 7;
 slider.DividerStyle.InactiveRadius = 7;
 slider.DividerStyle.ActiveFill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
@@ -118,6 +128,7 @@ Also, change the active and inactive divider stroke color of the slider using th
 
 <sliders:SfSlider Interval="0.25"
                   ShowDividers="True">
+
     <sliders:SfSlider.DividerStyle>
         <sliders:SliderDividerStyle ActiveRadius="7"
                                     InactiveRadius="7"
@@ -128,15 +139,18 @@ Also, change the active and inactive divider stroke color of the slider using th
                                     ActiveStroke="#FFD700"
                                     InactiveStroke="#FFD700" />
     </sliders:SfSlider.DividerStyle>
+
 </sliders:SfSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfSlider slider = new SfSlider();
-slider.Interval = 0.25;
-slider.ShowDividers = true;
+SfSlider slider = new SfSlider()
+{
+    Interval = 0.25,
+    ShowDividers = true,
+};
 slider.DividerStyle.ActiveRadius = 7;
 slider.DividerStyle.InactiveRadius = 7;
 slider.DividerStyle.ActiveStroke = new SolidColorBrush(Color.FromArgb("#EE3F3F"));

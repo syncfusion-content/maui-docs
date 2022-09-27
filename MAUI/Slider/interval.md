@@ -21,27 +21,28 @@ For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.M
 
 {% highlight xaml %}
 
-<sliders:SfSlider Minimum="0" 
-                  Maximum="10" 
-                  Interval="2" 
-                  Value="6" 
-                  ShowLabels="True" 
-                  ShowTicks="True" 
-                  ShowDividers="True">
-</sliders:SfSlider>
+<sliders:SfSlider Minimum="0"
+                  Maximum="10"
+                  Interval="2"
+                  Value="5"
+                  ShowLabels="True"
+                  ShowTicks="True"
+                  ShowDividers="True" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfSlider slider = new SfSlider();
-slider.Minimum = 0;
-slider.Maximum = 10;
-slider.Value = 6;
-slider.Interval = 2;
-slider.ShowLabels = true;
-slider.ShowTicks = true;
-slider.ShowDividers = true;
+SfSlider slider = new SfSlider()
+{
+    Minimum = 0,
+    Maximum = 10,
+    Value = 5,
+    Interval = 2,
+    ShowDividers = true,
+    ShowLabels = true,
+    ShowTicks = true,
+};
 
 {% endhighlight %}
 

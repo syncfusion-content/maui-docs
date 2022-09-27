@@ -133,21 +133,25 @@ The inactive side of the slider is between the thumb and the [`Maximum`](https:/
 
 {% highlight xaml %}
 
-<sliders:SfSlider Interval="0.2" 
+<sliders:SfSlider Interval="0.2"
                   ShowTicks="True">
-   <sliders:SfSlider.MajorTickStyle>
-      <sliders:SliderTickStyle ActiveFill="#EE3F3F" 
-                               InactiveFill="#F7B1AE"/>
+
+    <sliders:SfSlider.MajorTickStyle>
+        <sliders:SliderTickStyle ActiveFill="#EE3F3F"
+                                 InactiveFill="#F7B1AE" />
     </sliders:SfSlider.MajorTickStyle>
+
 </sliders:SfSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfSlider slider = new SfSlider();
-slider.Interval = 0.2;
-slider.ShowTicks = true;
+SfSlider slider = new SfSlider()
+{
+    Interval = 0.2,
+    ShowTicks = true,
+};
 slider.MajorTickStyle.ActiveFill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
 slider.MajorTickStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
 
@@ -169,31 +173,35 @@ The inactive side of the slider is between the thumb and the [`Maximum`](https:/
 
 {% highlight xaml %}
 
-<sliders:SfSlider Minimum="0" 
+<sliders:SfSlider Minimum="0"
                   Maximum="10"
                   Interval="2"
-                  Value="6" 
+                  Value="6"
                   ShowTicks="True"
-                  ShowLabels="True" 
+                  ShowLabels="True"
                   MinorTicksPerInterval="1">
-     <sliders:SfSlider.MinorTickStyle>
-        <sliders:SliderTickStyle ActiveFill="#EE3F3F" 
-                                 InactiveFill="#F7B1AE"/>
-      </sliders:SfSlider.MinorTickStyle>
+    
+    <sliders:SfSlider.MinorTickStyle>
+        <sliders:SliderTickStyle ActiveFill="#EE3F3F"
+                                 InactiveFill="#F7B1AE" />
+    </sliders:SfSlider.MinorTickStyle>
+    
 </sliders:SfSlider> 
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfSlider slider = new SfSlider();
-slider.Minimum = 0;
-slider.Maximum = 10;
-slider.Value = 6;
-slider.Interval = 2;
-slider.ShowTicks = true;
-slider.ShowLabels = true;
-slider.MinorTicksPerInterval = 1;
+SfSlider slider = new SfSlider()
+{
+    Minimum = 0,
+    Maximum = 10,
+    Value = 5,
+    Interval = 2,
+    ShowLabels = true,
+    ShowTicks = true,
+    MinorTicksPerInterval = 1
+};
 slider.MinorTickStyle.ActiveFill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
 slider.MinorTickStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
 
@@ -211,27 +219,32 @@ Change the major and minor ticks size of the slider using the [`ActiveSize`](htt
 
 {% highlight xaml %}
 
-<sliders:SfSlider Interval="0.2" 
-                  ShowTicks="True" 
-		          MinorTicksPerInterval="1">
-     <sliders:SfSlider.MinorTickStyle>
-         <sliders:SliderTickStyle ActiveSize="2,10" 
-                                  InactiveSize="2,10"/>
-     </sliders:SfSlider.MinorTickStyle>
-     <sliders:SfSlider.MajorTickStyle>
-         <sliders:SliderTickStyle ActiveSize="2,15" 
-                                  InactiveSize="2,15"/>
-     </sliders:SfSlider.MajorTickStyle>
+<sliders:SfSlider Interval="0.2"
+                  ShowTicks="True"
+                  MinorTicksPerInterval="1">
+
+    <sliders:SfSlider.MinorTickStyle>
+        <sliders:SliderTickStyle ActiveSize="2,10"
+                                 InactiveSize="2,10" />
+    </sliders:SfSlider.MinorTickStyle>
+
+    <sliders:SfSlider.MajorTickStyle>
+        <sliders:SliderTickStyle ActiveSize="2,15"
+                                 InactiveSize="2,15" />
+    </sliders:SfSlider.MajorTickStyle>
+
 </sliders:SfSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfSlider slider = new SfSlider();
-slider.Interval = 0.2;
-slider.ShowTicks = true;
-slider.MinorTicksPerInterval = 1;
+SfSlider slider = new SfSlider()
+{
+    Interval = 0.2,
+    ShowTicks = true,
+    MinorTicksPerInterval = 1,
+};
 slider.MinorTickStyle.ActiveSize = new Size(2, 10);
 slider.MinorTickStyle.InactiveSize = new Size(2, 10);
 slider.MajorTickStyle.ActiveSize = new Size(2, 15);
@@ -254,26 +267,31 @@ Adjust the space between track and ticks of the slider using the [`Offset`](http
 <sliders:SfSlider Interval="0.2"
                   ShowTicks="True"
                   MinorTicksPerInterval="1">
+
     <sliders:SfSlider.MinorTickStyle>
         <sliders:SliderTickStyle ActiveSize="2,6"
                                  InactiveSize="2,6"
                                  Offset="6" />
     </sliders:SfSlider.MinorTickStyle>
+
     <sliders:SfSlider.MajorTickStyle>
         <sliders:SliderTickStyle ActiveSize="2,10"
                                  InactiveSize="2,10"
                                  Offset="6" />
     </sliders:SfSlider.MajorTickStyle>
+
 </sliders:SfSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfSlider slider = new SfSlider();
-slider.Interval = 0.2;
-slider.ShowTicks = true;
-slider.MinorTicksPerInterval = 1;
+SfSlider slider = new SfSlider()
+{
+    Interval = 0.2,
+    ShowTicks = true,
+    MinorTicksPerInterval = 1,
+};
 slider.MinorTickStyle.Offset = 5;
 slider.MajorTickStyle.Offset = 6;
 
