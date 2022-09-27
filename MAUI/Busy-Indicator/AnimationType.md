@@ -101,3 +101,63 @@ SfBusyIndicator busyIndicator = new SfBusyIndicator()
 The following gif image illustrates the result of the above code.
 
 ![Linear Material](Images/AnimationType/LinearMaterial.gif)
+
+### Single Circle
+
+The SingleCircle animation is an one of the built-in animations in [SfBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1). Refer to the following code example. Here, we’ll set the animation type as `SingleCircle`
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<core:SfBusyIndicator x:Name="busyIndicator"
+                      IsRunning="True"
+                      AnimationType="SingleCircle" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfBusyIndicator busyIndicator = new SfBusyIndicator()
+{
+    IsRunning = true,
+    AnimationType = AnimationType.SingleCircle;
+};
+
+{% endhighlight %}
+
+{% endtabs %}
+
+The following gif image illustrates the result of the above code.
+
+![Linear Material](Images/AnimationType/SingleCircle.gif)
+
+### Double Circle
+
+The DoubleCircle animation is an one of the built-in animations in [SfBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1). Refer to the following code example. Here, we’ll set the animation type as `DoubleCircle`
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<core:SfBusyIndicator x:Name="busyIndicator"
+                      IsRunning="True"
+                      AnimationType="DoubleCircle" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfBusyIndicator busyIndicator = new SfBusyIndicator()
+{
+    IsRunning = true,
+    AnimationType = AnimationType.DoubleCircle;
+};
+
+{% endhighlight %}
+
+{% endtabs %}
+
+The following gif image illustrates the result of the above code.
+
+![Linear Material](Images/AnimationType/DoubleCircle.gif)
