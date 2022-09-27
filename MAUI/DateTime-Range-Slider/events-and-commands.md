@@ -234,10 +234,10 @@ public class ViewModel
 
     public ViewModel()
     {
-        DragStartedCommand = new Command(DragStarted);
+        DragStartedCommand = new Command(OnDragStarted);
     }
 
-    private void DragStarted(object obj)
+    private void OnDragStarted(object obj)
     {
     }
 }
@@ -287,10 +287,10 @@ public class ViewModel
 
     public ViewModel()
     {
-        DragStartedCommand = new Command<string>(DragStarted);
+        DragStartedCommand = new Command<object>(OnDragStarted);
     }
 
-    private void DragStarted(string value)
+    private void OnDragStarted(object obj)
     {
     }
 }
@@ -338,10 +338,10 @@ public class ViewModel
 
     public ViewModel()
     {
-        DragCompletedCommand = new Command(DragCompleted);
+        DragCompletedCommand = new Command(OnDragCompleted);
     }
 
-    private void DragCompleted(object obj)
+    private void OnDragCompleted(object obj)
     {
     }
 }
@@ -391,10 +391,10 @@ public class ViewModel
 
     public ViewModel()
     {
-        DragCompletedCommand = new Command<string>(DragCompleted);
+        DragCompletedCommand = new Command<object>(OnDragCompleted);
     }
 
-    private void DragCompleted(string value)
+    private void OnDragCompleted(object obj)
     {
     }
 }
