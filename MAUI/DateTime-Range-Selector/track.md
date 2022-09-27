@@ -127,15 +127,13 @@ Extend the track at the edges using the [`TrackExtent`](https://help.syncfusion.
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
 
     <sliders:SfDateTimeRangeSelector Minimum="2019-12-01"
-                                     Maximum="2019-12-16"
-                                     RangeStart="2019-12-04"
-                                     RangeEnd="2019-12-13"
-                                     Interval="3"
+                                     Maximum="2019-12-07"
+                                     RangeStart="2019-12-02"
+                                     RangeEnd="2019-12-07"
+                                     Interval="2"
                                      IntervalType="Days"
                                      ShowTicks="True"
-                                     ShowLabels="True"
-                                     DateFormat="MMM d"
-                                     TrackExtent="10">
+                                     TrackExtent="25">
 
         <charts:SfCartesianChart>
             ...
@@ -150,15 +148,13 @@ Extend the track at the edges using the [`TrackExtent`](https://help.syncfusion.
 
 SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
 rangeSelector.Minimum = new DateTime(2019, 12, 01);
-rangeSelector.Maximum = new DateTime(2019, 12, 16);
-rangeSelector.RangeStart = new DateTime(2009, 12, 04);
-rangeSelector.RangeEnd = new DateTime(2000, 12, 13);
-rangeSelector.Interval = 3;
+rangeSelector.Maximum = new DateTime(2019, 12, 07);
+rangeSelector.RangeStart = new DateTime(2009, 12, 02);
+rangeSelector.RangeEnd = new DateTime(2000, 12, 06);
+rangeSelector.Interval = 2;
 rangeSelector.IntervalType = SliderDateIntervalType.Days;
-rangeSelector.DateFormat = "MMM d";
-rangeSelector.ShowLabels = true;
 rangeSelector.ShowTicks = true;
-rangeSelector.TrackExtent = 10;
+rangeSelector.TrackExtent = 25;
 SfCartesianChart chart = new SfCartesianChart();
 rangeSelector.Content = chart;
 
@@ -166,4 +162,10 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector track extent](images/track/track-extent.png)
+**Without Track Extent**
+
+![RangeSelector track extent before](images/track/track-extent-before-image.png)
+
+**With Track Extent**
+
+![RangeSelector track extent after](images/track/track-extent-after-image.png)

@@ -112,13 +112,12 @@ Extend the track at the edges using the [`TrackExtent`](https://help.syncfusion.
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
 
-    <sliders:SfRangeSelector Minimum="100"
-                             Maximum="1000"
-                             RangeStart="370"
-                             RangeEnd="730"
-                             Interval="180"
-                             TrackExtent="10"
-                             ShowLabels="True"
+    <sliders:SfRangeSelector Minimum="1"
+                             Maximum="7"
+                             RangeStart="2"
+                             RangeEnd="6"
+                             Interval="2"
+                             TrackExtent="25"
                              ShowTicks="True">
 
         <charts:SfCartesianChart>
@@ -133,14 +132,13 @@ Extend the track at the edges using the [`TrackExtent`](https://help.syncfusion.
 {% highlight C# %}
 
 SfRangeSelector rangeSelector = new SfRangeSelector();
-rangeSelector.Minimum = 100;
-rangeSelector.Maximum = 1000;
-rangeSelector.RangeStart = 370;
-rangeSelector.RangeEnd = 730;
-rangeSelector.Interval = 180;
-rangeSelector.ShowLabels = true;
+rangeSelector.Minimum = 1;
+rangeSelector.Maximum = 7;
+rangeSelector.RangeStart = 2;
+rangeSelector.RangeEnd = 6;
+rangeSelector.Interval = 2;
 rangeSelector.ShowTicks = true;
-rangeSelector.TrackExtent = 10;
+rangeSelector.TrackExtent = 25;
 SfCartesianChart chart = new SfCartesianChart();
 rangeSelector.Content = chart;
 
@@ -148,4 +146,10 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector track extent](images/track/track-extent.png)
+**Without Track Extent**
+
+![RangeSelector track extent before](images/track/track-extent-before-image.png)
+
+**With Track Extent**
+
+![RangeSelector track extent after](images/track/track-extent-after-image.png)
