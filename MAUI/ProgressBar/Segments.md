@@ -34,14 +34,12 @@ To visualize the progress of multiple sequential tasks, split the progress bar i
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 linearProgressBar.Progress = 25;
 linearProgressBar.SegmentCount = 4;
-this.Content = linearProgressBar;
 
 // Using the circular progress bar.
 
 SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 circularProgressBar.Progress = 25;
 circularProgressBar.SegmentCount = 7;
-this.Content = circularProgressBar;
 
 {% endhighlight %}
 
@@ -78,7 +76,6 @@ SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 linearProgressBar.Progress = 25;
 linearProgressBar.SegmentCount = 4;
 linearProgressBar.SegmentGapWidth = 5;
-this.Content = linearProgressBar;
 
 // Using the circular progress bar.
 
@@ -86,7 +83,6 @@ SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 circularProgressBar.Progress = 25;
 circularProgressBar.SegmentCount = 7;
 circularProgressBar.SegmentGapWidth = 10;
-this.Content = circularProgressBar;
 
 {% endhighlight %}
 

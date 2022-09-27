@@ -38,12 +38,10 @@ By enabling the `IsIndeterminate` property, the state of the progress bar can be
 // Using the linear progress bar. 
 
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar { IsIndeterminate = true};
-this.Content = linearProgressBar;
 
 // Using the circular progress bar.
 
 SfCircularProgressBar circularProgressBar = new SfCircularProgressBar { IsIndeterminate = true };
-this.Content = circularProgressBar;
 
 {% endhighlight %}
 

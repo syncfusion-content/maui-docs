@@ -129,12 +129,10 @@ When the progress of a task cannot be shown determinately, you can enable the in
 // Using the linear progress bar.
 
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar { IsIndeterminate = true };
-this.Content = linearProgressBar;
 
 // Using the circular progress bar.
 
 SfCircularProgressBar circularProgressBar = new SfCircularProgressBar { IsIndeterminate = true };
-this.Content = circularProgressBar;
 
 {% endhighlight %}
 
@@ -163,12 +161,10 @@ To visualize the progress of a multiple sequential task, split the progress bar 
 // Using the linear progress bar.
 
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar { Progress = 75, SegmentCount = 4 };
-this.Content = linearProgressBar;
 
 // Using the circular progress bar.
 
 SfCircularProgressBar circularProgressBar = new SfCircularProgressBar { Progress = 75, SegmentCount = 4 };
-this.Content = circularProgressBar;
 
 {% endhighlight %}
 

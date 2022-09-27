@@ -102,7 +102,6 @@ linearProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.Fro
 linearProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("e9648e"), Value = 75 });
 linearProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("fbb78a"), Value = 75 });
 linearProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("fbb78a"), Value = 100 });
-this.Content = linearProgressBar;
 
 // Using the circular progress bar
 
@@ -116,7 +115,6 @@ circularProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.F
 circularProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("e9648e"), Value = 75 });
 circularProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("fbb78a"), Value = 75 });
 circularProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("fbb78a"), Value = 100 });
-this.Content = circularProgressBar;
 
 {% endhighlight %}
 
@@ -164,7 +162,6 @@ linearProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.Fro
 linearProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("AA62C1E5"), Value = 25 });
 linearProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("DD20A7DB"), Value = 50 });
 linearProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("FF1C96C5"), Value = 75 });
-this.Content = linearProgressBar;
 
 // Using the circular progress bar
 
@@ -174,7 +171,6 @@ circularProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.F
 circularProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("AA62C1E5"), Value = 25 });
 circularProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("DD20A7DB"), Value = 50 });
 circularProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("FF1C96C5"), Value = 75 });
-this.Content = circularProgressBar;
 
 {% endhighlight %}
 

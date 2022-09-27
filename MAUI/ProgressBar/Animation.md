@@ -43,13 +43,11 @@ The following code sample demonstrates the `CubicInOut` easing function of the l
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 linearProgressBar.Progress = 75;
 linearProgressBar.AnimationEasing = Easing.CubicInOut;
-this.Content = linearProgressBar;
 
 // Using the circular progress bar
 SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 circularProgressBar.Progress = 75;
 circularProgressBar.AnimationEasing = Easing.CubicInOut;
-this.Content = circularProgressBar;
 
 
 {% endhighlight %}
@@ -94,13 +92,11 @@ The following code sample demonstrates the `BounceIn` easing function of the lin
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 linearProgressBar.IsIndeterminate = true;
 linearProgressBar.IndeterminateAnimationEasing = Easing.BounceIn;
-this.Content = linearProgressBar;
 
 // Using the circular progress bar
 SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 circularProgressBar.IsIndeterminate = true;
 circularProgressBar.IndeterminateAnimationEasing = Easing.BounceIn;
-this.Content = circularProgressBar;
 
 {% endhighlight %}
 

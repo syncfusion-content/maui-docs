@@ -39,7 +39,6 @@ SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 linearProgressBar.Minimum = 0;
 linearProgressBar.Maximum = 1;
 linearProgressBar.Progress = 0.5;
-this.Content = linearProgressBar;
 
 // Using the circular progress bar.
 
@@ -47,7 +46,6 @@ SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 circularProgressBar.Minimum = 0;
 circularProgressBar.Maximum = 1;
 circularProgressBar.Progress = 0.5;
-this.Content = circularProgressBar;
 
 {% endhighlight %}
 
