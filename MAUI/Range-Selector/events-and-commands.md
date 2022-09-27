@@ -300,7 +300,7 @@ public class ViewModel
 
     public ViewModel()
     {
-        DragStartedCommand = new Command<object>(OnDragStarted);
+        DragStartedCommand = new Command(OnDragStarted);
     }
 
     private void OnDragStarted(object obj)
@@ -412,7 +412,7 @@ public class ViewModel
 
     public ViewModel()
     {
-        DragCompletedCommand = new Command<object>(OnDragCompleted);
+        DragCompletedCommand = new Command(OnDragCompleted);
     }
 
     private void OnDragCompleted(object obj)
