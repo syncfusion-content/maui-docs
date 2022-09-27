@@ -171,6 +171,32 @@ One more thing is, in .NET MAUI SfRangeSlider, you do not have an API name [Show
 <td>Gets or sets the value to format the label text in the SfSlider.</td></tr>
 </table> 
 
+### DragMode
+
+<table> 
+<tr>
+<th>Xamarin SfRangeSlider</th>
+<th>.NET MAUI SfRangeSlider</th>
+<th>Description</th></tr>
+<tr>
+<td>{{'[AllowDragRange](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_AllowDragRange)'| markdownify }}</td>
+<td>{{'[DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase.html#Syncfusion_Maui_Sliders_RangeSliderBase_DragBehavior)'| markdownify }}</td>
+<td>Gets or sets the value which indicates the behavior of the thumb dragging.</td></tr>
+</table> 
+
+### Step
+
+<table> 
+<tr>
+<th>Xamarin SfRangeSlider</th>
+<th>.NET MAUI SfRangeSlider</th>
+<th>Description</th></tr>
+<tr>
+<td>{{'[SnapsTo](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_SnapsTo)'| markdownify }}</td>
+<td>{{'[StepSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_StepSize)'| markdownify }}</td>
+<td>Gets or sets the value indicating whether to select the discrete value.</td></tr>
+</table> 
+
 ## Events
 
 <table>
