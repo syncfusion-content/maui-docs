@@ -9,30 +9,30 @@ documentation: ug
 
 # Appointment reminders in .NET MAUI Scheduler (SfScheduler)
 
-The .NET MAUI Scheduler notify an appointment reminders by using the [EnableReminder] property and [ReminderAlertOpening] event. An appointment can have one or more reminders.
+The .NET MAUI Scheduler notify an appointment reminder by using the [EnableReminder] property and [ReminderAlertOpening] event. An appointment can have one or more reminders.
 
 N>
-* As restriction in enabling toast notification in .NET MAUI Framework, as of now added event to notify appointment reminder.[Reference](https://github.com/dotnet/maui/discussions/4216)
+* As a restriction in enabling toast notification in .NET MAUI Framework, as of now, add an event to notify appointment reminders.[Reference](https://github.com/dotnet/maui/discussions/4216)
 
 ## Handling reminders for future appointments
 
-* Future normal and recurring appointment reminder alert will be displayed as Reminder alert time.
+* Future normal and recurring appointment reminder alerts will be displayed as Reminder alert time.
 
-* Reminder alert time will be calculated form appointment start time substrate with reminder time interval. For an example if appointment time is 3.30pm and reminder time interval is `new Timespan (0,15,0)` then reminder alter time is 3.15 pm.
+* Reminder alert time will be calculated from the appointment start time substrate with reminder time interval. For example, if the appointment time is 3.30 pm and the reminder time interval is `new Timespan (0,15,0)`, then the reminder alter time is 3.15 pm.
 
 ## Handling reminders for overdue appointments
 
-* If a Non-recurring appointments reminder is in past, reminder alert as overdue untill dismissed.
+* If a Non-recurring appointment reminder is in the past, the reminder alert is overdue until dismissed.
 
-* Recurring appointment overdue from last occurrence date and time until last occurrence is dismissed.
+* Recurring appointment overdue from the last occurrence date and time until the last occurrence is dismissed.
 
-* Recurrence appointment due calculated from current date occurrence and it is in due until next occurrence reminder time.
+* Recurrence appointment due calculated from current date occurrence and is in due until the next reminder time.
 
-*  If the last occurrence in recurrence is series is get dismissed, then the pattern recurring appointment dismissed.
+* If the last occurrence in recurrence in series is dismissed, then the recurring pattern appointment is dismissed.
 
 ## Handling reminders for Changed occurrence appointments
 
-* Once the changed occurrence is moved to the future, then pattern reminder value will be used for changed occurrence.
+* Once the changed occurrence is moved to the future, then the pattern reminder value will be used for the changed occurrence.
 
 * When the changed occurrence is restored to a time in the past, then its reminder will be dismissed.
 
@@ -40,7 +40,7 @@ N>
 
 ## Enable reminders
 
-Reminders can be enabled by setting the [EnableReminder] property to `true` which will trigger the `ReminderAlertOpening` event to notify appointment reminders. The reminders can be set by using the [Reminders] property of [SchedulerAppointment.]
+Reminders can be enabled by setting the [EnableReminder] property to `true` which will trigger the `ReminderAlertOpening` event to notify appointment reminders. The reminders can be set by using the [Reminders] property of [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html).
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
@@ -166,9 +166,9 @@ Create a business object class `Event` with mandatory fields `From,` `To,` and `
 
 The [ReminderMapping] provides the mapping information about the [SchedulerReminder] properties to the [DataItem] object. `ReminderMapping` has the following properties.
 
-* [TimeBeforeStart]: Maps the property name of a custom class, which is equivalent for the [SchedulerReminder.TimeBeforeStart.]
+* [TimeBeforeStart]: Maps the property name of a custom class, which is equivalent to the [SchedulerReminder.TimeBeforeStart].
 
-* [IsDismissed]: Maps the property name of a custom class, which is equivalent for the [SchedulerReminder.IsDismissed.]
+* [IsDismissed]: Maps the property name of a custom class, which is equivalent to the [SchedulerReminder.IsDismissed].
 
 {% tabs %}
 {% highlight c# tabtitle="Reminder.cs" %}
@@ -192,7 +192,7 @@ public class Reminder
 {% endhighlight %}
 {% endtabs %}
 
-Map those properties of the `Event` class with the [SfScheduler] control by using the [AppointmentMapping] and map `CustomReminder` properties with the [SchedulerReminder] by using [ReminderMapping.]
+Map those properties of the `Event` class with the [SfScheduler] control by using the [AppointmentMapping] and map `CustomReminder` properties with the [SchedulerReminder] by using [ReminderMapping].
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 17 18 19 20" %}
@@ -281,7 +281,7 @@ public class ReminderViewModel
 {% endtabs %}
 
 ## ReminderAlertOpening event
-Scheduler notify the appointment's reminders by [ReminderAlertOpening] event before the appointment's start time. The [ReminderAlertOpeningEventArgs] has the following property,
+Scheduler notifies the appointment's reminders by[ReminderAlertOpening] event before the appointment's start time.The [ReminderAlertOpeningEventArgs] has the following property,
 * [Reminders]: Gets a list of reminders that are used to notify the appointment reminders.
 
 {% tabs %}
