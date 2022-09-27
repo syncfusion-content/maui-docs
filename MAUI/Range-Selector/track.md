@@ -11,6 +11,59 @@ documentation: ug
 
 This section helps to learn about how to customize the track in the Range Selector.
 
+## Minimum
+
+The minimum value that the user can select. The default value of the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_Minimum) property is `0` and it must be less than the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_Maximum) value.
+
+## Maximum
+
+The maximum value that the user can select. The default value of the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_Maximum) property is `1` and it must be greater than the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_Minimum) value.
+
+## Range values
+
+It represents the values currently selected in the Range Selector. The Range Selector’s thumb is drawn corresponding to this [`RangeStart`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_RangeStart) and [`RangeEnd`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_RangeEnd) values.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage 
+             ...
+             xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
+             xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
+
+    <sliders:SfRangeSelector Minimum="10"
+                             Maximum="20"
+                             RangeStart="13"
+                             RangeEnd="17"
+                             ShowLabels="True">
+
+        <charts:SfCartesianChart>
+            ...
+        </charts:SfCartesianChart>
+
+    </sliders:SfRangeSelector>
+</ContentPage>
+ 
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfRangeSelector rangeSelector = new SfRangeSelector();
+rangeSelector.Minimum = 10;
+rangeSelector.Maximum = 20;
+rangeSelector.RangeStart = 13;
+rangeSelector.RangeEnd = 17;
+rangeSelector.ShowLabels = true;
+SfCartesianChart chart = new SfCartesianChart();
+rangeSelector.Content = chart;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![RangeSelector numeric label](images/track/rangeselector-basic.png)
+
 ## Track color
 
 Change the active and inactive track color of the Range Selector using the [`ActiveFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTrackStyle.html#Syncfusion_Maui_Sliders_SliderTrackStyle_ActiveFill) and [`InactiveFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTrackStyle.html#Syncfusion_Maui_Sliders_SliderTrackStyle_InactiveFill) properties of the [`TrackStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_TrackStyle) class.
@@ -112,13 +165,12 @@ Extend the track at the edges using the [`TrackExtent`](https://help.syncfusion.
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
 
-    <sliders:SfRangeSelector Minimum="1000"
-                             Maximum="5000"
-                             RangeStart="2000"
-                             RangeEnd="4000"
-                             Interval="1000"
-                             TrackExtent="10"
-                             ShowLabels="True"
+    <sliders:SfRangeSelector Minimum="1"
+                             Maximum="7"
+                             RangeStart="2"
+                             RangeEnd="6"
+                             Interval="2"
+                             TrackExtent="25"
                              ShowTicks="True">
 
         <charts:SfCartesianChart>
@@ -133,14 +185,13 @@ Extend the track at the edges using the [`TrackExtent`](https://help.syncfusion.
 {% highlight C# %}
 
 SfRangeSelector rangeSelector = new SfRangeSelector();
-rangeSelector.Minimum = "1000";
-rangeSelector.Maximum = "5000";
-rangeSelector.RangeStart = "2000";
-rangeSelector.RangeEnd = "4000";
-rangeSelector.Interval = 1000;
-rangeSelector.ShowLabels = true;
+rangeSelector.Minimum = 1;
+rangeSelector.Maximum = 7;
+rangeSelector.RangeStart = 2;
+rangeSelector.RangeEnd = 6;
+rangeSelector.Interval = 2;
 rangeSelector.ShowTicks = true;
-rangeSelector.TrackExtent = 10;
+rangeSelector.TrackExtent = 25;
 SfCartesianChart chart = new SfCartesianChart();
 rangeSelector.Content = chart;
 
@@ -148,4 +199,10 @@ rangeSelector.Content = chart;
 
 {% endtabs %}
 
-![RangeSelector track extent](images/track/track-extent.png)
+**Without track extent**
+
+![RangeSelector track extent before](images/track/track-extent-before-image.png)
+
+**With track extent**
+
+![RangeSelector track extent after](images/track/track-extent-after-image.png)

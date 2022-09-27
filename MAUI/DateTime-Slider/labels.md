@@ -19,13 +19,12 @@ The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.S
 
 {% highlight xaml %}
 
-<sliders:SfDateTimeSlider Minimum="2010-01-01" 
-                          Maximum="2020-01-01" 
-                          Value="2018-01-01"
+<sliders:SfDateTimeSlider Minimum="2010-01-01"
+                          Maximum="2018-01-01"
+                          Value="2014-01-01"
                           Interval="2"
                           ShowLabels="True"
-                          ShowTicks="True">
-</sliders:SfDateTimeSlider>
+                          ShowTicks="True" />
 
 {% endhighlight %}
 
@@ -53,14 +52,14 @@ The [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.S
 
 {% highlight xaml %}
 
-<sliders:SfDateTimeSlider Minimum="2000-01-01T09:00:00" 
-                          Maximum="2000-01-01T17:00:00" 
-                          Value="2000-01-01T13:00:00" 
-          	              ShowLabels="True"  
-		                  IntervalType="Hours" 
-		                  Interval="2" 
-		                  DateFormat="h tt">
-</sliders:SfDateTimeSlider>
+<sliders:SfDateTimeSlider Minimum="2000-01-01T09:00:00"
+                          Maximum="2000-01-01T17:00:00"
+                          Value="2000-01-01T13:00:00"
+                          ShowLabels="True"
+                          ShowTicks="True"
+                          IntervalType="Hours"
+                          Interval="2"
+                          DateFormat="h tt" />
 
 {% endhighlight %}
 
@@ -74,6 +73,7 @@ slider.Interval = 2;
 slider.IntervalType = SliderDateIntervalType.Hours;
 slider.DateFormat = "h tt";
 slider.ShowLabels = true;
+slider.ShowTicks = true;
     
 {% endhighlight %}
 
@@ -89,23 +89,22 @@ The [`LabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slid
 
 {% highlight xaml %}
 
-<sliders:SfDateTimeSlider Minimum="2011-01-01"
-                          Maximum="2016-01-01"
-                          Value="2013-01-01"
+<sliders:SfDateTimeSlider Minimum="2010-01-01"
+                          Maximum="2014-01-01"
+                          Value="2012-01-01"
                           Interval="1"
                           LabelsPlacement="BetweenTicks"
                           ShowLabels="True"
-                          ShowTicks="True">
-</sliders:SfDateTimeSlider>
+                          ShowTicks="True" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
-slider.Minimum = new DateTime(2011, 01, 01);
-slider.Maximum = new DateTime(2016, 01, 01);
-slider.Value = new DateTime(2013, 01, 01);
+slider.Minimum = new DateTime(2010, 01, 01);
+slider.Maximum = new DateTime(2014, 01, 01);
+slider.Value = new DateTime(2012, 01, 01);
 slider.Interval = 1;
 slider.LabelsPlacement = SliderLabelsPlacement.BetweenTicks;
 slider.ShowLabels = true;
@@ -154,7 +153,7 @@ slider.ShowTicks = true;
 
 {% endtabs %}
 
-![Slider edge labels placement](images/labels-and-dividers/edge-labels-placement.png)
+![Slider edge labels placement](images/labels-and-dividers/edge-labels-placement.gif)
 
 ## Label style
 
@@ -168,20 +167,22 @@ The inactive side of the slider is between the thumb and the [`Maximum`](https:/
 
 {% highlight xaml %}
 
-<sliders:SfDateTimeSlider Minimum="2010-01-01" 
-                          Maximum="2018-01-01" 
-                          Value="2014-01-01" 
-                  Interval="2" 
-                  ShowTicks="True"  
-                  ShowLabels="True">
+<sliders:SfDateTimeSlider Minimum="2010-01-01"
+                          Maximum="2018-01-01"
+                          Value="2014-01-01"
+                          Interval="2"
+                          ShowTicks="True"
+                          ShowLabels="True">
+    
     <sliders:SfDateTimeSlider.LabelStyle>
-         <sliders:SliderLabelStyle ActiveTextColor="#EE3F3F" 
-                                   InactiveTextColor="#F7B1AE" 
-	             		           ActiveFontAttributes="Italic" 
-				                   InactiveFontAttributes="Italic" 
-				                   ActiveFontSize="16" 
-				                   InactiveFontSize="16" />
+        <sliders:SliderLabelStyle ActiveTextColor="#EE3F3F"
+                                  InactiveTextColor="#F7B1AE"
+                                  ActiveFontAttributes="Italic"
+                                  InactiveFontAttributes="Bold"
+                                  ActiveFontSize="16"
+                                  InactiveFontSize="16" />
     </sliders:SfDateTimeSlider.LabelStyle>
+    
 </sliders:SfDateTimeSlider>
 
 {% endhighlight %}
@@ -200,7 +201,7 @@ slider.LabelStyle.InactiveTextColor = Color.FromArgb("#F7B1AE");
 slider.LabelStyle.ActiveFontSize = 16;
 slider.LabelStyle.InactiveFontSize = 16;
 slider.LabelStyle.ActiveFontAttributes = FontAttributes.Italic;
-slider.LabelStyle.InactiveFontAttributes = FontAttributes.Italic;
+slider.LabelStyle.InactiveFontAttributes = FontAttributes.Bold;
 
 {% endhighlight %}
 
@@ -216,15 +217,17 @@ Adjust the space between ticks and labels of the slider using the [`Offset`](htt
 
 {% highlight xaml %}
 
-<sliders:SfDateTimeSlider Minimum="2010-01-01" 
-                          Maximum="2018-01-01" 
-                          Value="2014-01-01" 
-                  Interval="2" 
-                  ShowTicks="True"
-                  ShowLabels="True">
+<sliders:SfDateTimeSlider Minimum="2010-01-01"
+                          Maximum="2018-01-01"
+                          Value="2014-01-01"
+                          Interval="2"
+                          ShowTicks="True"
+                          ShowLabels="True">
+
     <sliders:SfDateTimeSlider.LabelStyle>
         <sliders:SliderLabelStyle Offset="15" />
-     </sliders:SfDateTimeSlider.LabelStyle>
+    </sliders:SfDateTimeSlider.LabelStyle>
+
 </sliders:SfDateTimeSlider>
 
 {% endhighlight %}
@@ -262,9 +265,12 @@ Change the state of the slider to disabled by setting `false` to the `IsEnabled`
                 Value="2018-01-01" />
         <Setter Property="Value"
                 Value="2014-01-01" />
-        <Setter Property="Interval" Value="2" />
-        <Setter Property="ShowTicks" Value="True" />
-        <Setter Property="ShowLabels" Value="True" />
+        <Setter Property="Interval"
+                Value="2" />
+        <Setter Property="ShowTicks"
+                Value="True" />
+        <Setter Property="ShowLabels"
+                Value="True" />
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup>
@@ -272,12 +278,12 @@ Change the state of the slider to disabled by setting `false` to the `IsEnabled`
                         <VisualState.Setters>
                             <Setter Property="LabelStyle">
                                 <Setter.Value>
-                                    <sliders:SliderLabelStyle ActiveTextColor = "#EE3F3F"
-                                                                  InactiveTextColor="#F7B1AE"
-                                                                  ActiveFontSize="16"
-                                                                  InactiveFontSize="14"
-                                                                  ActiveFontAttributes="Bold"
-                                                                  InactiveFontAttributes="Italic"/>
+                                    <sliders:SliderLabelStyle ActiveTextColor="#EE3F3F"
+                                                              InactiveTextColor="#F7B1AE"
+                                                              ActiveFontSize="16"
+                                                              InactiveFontSize="14"
+                                                              ActiveFontAttributes="Bold"
+                                                              InactiveFontAttributes="Italic" />
                                 </Setter.Value>
                             </Setter>
                         </VisualState.Setters>
@@ -286,12 +292,12 @@ Change the state of the slider to disabled by setting `false` to the `IsEnabled`
                         <VisualState.Setters>
                             <Setter Property="LabelStyle">
                                 <Setter.Value>
-                                    <sliders:SliderLabelStyle ActiveTextColor = "Gray"
-                                                                  InactiveTextColor="LightGray"
-                                                                  ActiveFontSize="14"
-                                                                  InactiveFontSize="16"
-                                                                  ActiveFontAttributes="Italic"
-                                                                  InactiveFontAttributes="Bold"/>
+                                    <sliders:SliderLabelStyle ActiveTextColor="Gray"
+                                                              InactiveTextColor="LightGray"
+                                                              ActiveFontSize="14"
+                                                              InactiveFontSize="16"
+                                                              ActiveFontAttributes="Italic"
+                                                              InactiveFontAttributes="Bold" />
                                 </Setter.Value>
                             </Setter>
                         </VisualState.Setters>
@@ -304,10 +310,12 @@ Change the state of the slider to disabled by setting `false` to the `IsEnabled`
 
 <ContentPage.Content>
     <VerticalStackLayout>
-        <Label Text="Enabled Slider" Padding="0,10"/>
-        <sliders:SfDateTimeSlider/>
-        <Label Text="Disabled Slider" Padding="0,10"/>
-        <sliders:SfDateTimeSlider IsEnabled="False"/>
+        <Label Text="Enabled Slider"
+               Padding="0,10" />
+        <sliders:SfDateTimeSlider />
+        <Label Text="Disabled Slider"
+               Padding="0,10" />
+        <sliders:SfDateTimeSlider IsEnabled="False" />
     </VerticalStackLayout>
 </ContentPage.Content>
 
@@ -373,7 +381,7 @@ visualStateGroupList.Add(commonStateGroup);
 VisualStateManager.SetVisualStateGroups(defaultSlider, visualStateGroupList);
 VisualStateManager.SetVisualStateGroups(disabledSlider, visualStateGroupList);
 
-stackLayout.Children.Add(new Label() { Text = "Default Slider", Padding = new Thickness(0, 10) });
+stackLayout.Children.Add(new Label() { Text = "Enabled Slider", Padding = new Thickness(0, 10) });
 stackLayout.Children.Add(defaultSlider);
 stackLayout.Children.Add(new Label() { Text = "Disabled Slider", Padding = new Thickness(0, 10) });
 stackLayout.Children.Add(disabledSlider);

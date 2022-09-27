@@ -310,7 +310,8 @@ Based on the value of the `RecurrenceRule` property, recurrence appointments in 
 <tr><td>COUNT</td>
 <td>It holds the appointment’s count value. For example, when the recurrence appointment count value is 10, it means 10 appointments are created in the recurrence series. Example: FREQ=DAILY;INTERVAL=1;COUNT=10</td></tr>
 <tr><td>UNTIL</td>
-<td>This property is used to store the recurrence end date value. For example, while setting the end date of appointment as 6/30/2020, the UNTIL property holds the end date value when the recurrence actually ends. Example:FREQ=DAILY;INTERVAL=1;UNTIL=20200725</td></tr>
+<td>This property is used to store the recurrence end date value. For example, while setting the end date of appointment as 6/30/2020, the UNTIL property holds the end date value when the recurrence actually ends. The 'T' string sets the end time value and 'Z' sets the timezone (UTC). It improves the accuracy of recurrence UNTIL property with time value.
+Example:FREQ=DAILY;INTERVAL=1;UNTIL=20200725T103059Z</td></tr>
 <tr><td>BYDAY</td>
 <td>It holds the “DAY” values of an appointment to render. For example, create the weekly appointment, select the day(s) from the day options (Monday/Tuesday/Wednesday/Thursday/Friday/Saturday/Sunday). When Monday is selected, the first two letters of the selected day “MO” is stored in the “BYDAY” property. While selecting the multiple days, the values are separated by commas. Example:FREQ=WEEKLY;INTERVAL=1;BYDAY=MO,WE;COUNT=10</td></tr>
 <tr><td>BYMONTHDAY</td>

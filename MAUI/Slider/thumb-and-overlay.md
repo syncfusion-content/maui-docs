@@ -107,7 +107,7 @@ Change the size of the thumb overlay in the slider using the [`Radius`](https://
 
 <sliders:SfSlider>
    <sliders:SfSlider.ThumbOverlayStyle>
-      <sliders:SliderThumbOverlayStyle Radius="26"/>
+      <sliders:SliderThumbOverlayStyle Radius="18"/>
    </sliders:SfSlider.ThumbOverlayStyle>
 </sliders:SfSlider>
 
@@ -116,7 +116,7 @@ Change the size of the thumb overlay in the slider using the [`Radius`](https://
 {% highlight C# %}
 
 SfSlider slider = new SfSlider();
-slider.ThumbOverlayStyle.Radius = 26;
+slider.ThumbOverlayStyle.Radius = 18;
 
 {% endhighlight %}
 
@@ -134,7 +134,7 @@ Change the color of the thumb overlay in the slider using the [`Fill`](https://h
 
 <sliders:SfSlider>
    <sliders:SfSlider.ThumbOverlayStyle>
-       <sliders:SliderThumbOverlayStyle Fill="#F7C8DB"/>
+       <sliders:SliderThumbOverlayStyle Fill="#66FFD700"/>
    </sliders:SfSlider.ThumbOverlayStyle>
 </sliders:SfSlider>
 
@@ -143,7 +143,7 @@ Change the color of the thumb overlay in the slider using the [`Fill`](https://h
 {% highlight C# %}
 
 SfSlider slider = new SfSlider();
-slider.ThumbOverlayStyle.Fill = new SolidColorBrush(Color.FromArgb("#F7C8DB")); 
+slider.ThumbOverlayStyle.Fill = new SolidColorBrush(Color.FromArgb("#66FFD700")); 
 
 {% endhighlight %}
 
@@ -161,7 +161,8 @@ Change the state of the slider to disabled by setting `false` to the `IsEnabled`
 
 <ContentPage.Resources>
     <Style TargetType="sliders:SfSlider">
-        <Setter Property="Interval" Value="0.25" />
+        <Setter Property="Interval"
+                Value="0.25" />
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup>
@@ -169,10 +170,10 @@ Change the state of the slider to disabled by setting `false` to the `IsEnabled`
                         <VisualState.Setters>
                             <Setter Property="ThumbStyle">
                                 <Setter.Value>
-                                    <sliders:SliderThumbStyle Radius = "13"
-                                                                  Fill="Red"
-                                                                  Stroke="Yellow"
-                                                                  StrokeThickness="3"/>
+                                    <sliders:SliderThumbStyle Radius="13"
+                                                              Fill="Red"
+                                                              Stroke="Yellow"
+                                                              StrokeThickness="3" />
                                 </Setter.Value>
                             </Setter>
                         </VisualState.Setters>
@@ -181,10 +182,10 @@ Change the state of the slider to disabled by setting `false` to the `IsEnabled`
                         <VisualState.Setters>
                             <Setter Property="ThumbStyle">
                                 <Setter.Value>
-                                    <sliders:SliderThumbStyle Radius = "13"
-                                                                  Fill="Gray"
-                                                                  Stroke="LightGray"
-                                                                  StrokeThickness="3"/>
+                                    <sliders:SliderThumbStyle Radius="13"
+                                                              Fill="Gray"
+                                                              Stroke="LightGray"
+                                                              StrokeThickness="3" />
                                 </Setter.Value>
                             </Setter>
                         </VisualState.Setters>
@@ -198,10 +199,12 @@ Change the state of the slider to disabled by setting `false` to the `IsEnabled`
 
 <ContentPage.Content>
     <VerticalStackLayout>
-        <Label Text="Enabled Slider" Padding="0,10"/>
-        <sliders:SfSlider/>
-        <Label Text="Disabled Slider" Padding="0,10"/>
-        <sliders:SfSlider IsEnabled="False"/>
+        <Label Text="Enabled Slider"
+               Padding="0,10" />
+        <sliders:SfSlider />
+        <Label Text="Disabled Slider"
+               Padding="0,10" />
+        <sliders:SfSlider IsEnabled="False" />
     </VerticalStackLayout>
 </ContentPage.Content>
 

@@ -21,15 +21,18 @@ For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.M
 
 {% highlight xaml %}
 
-<sliders:SfRangeSlider Interval="0.2" 
-                       ShowDividers="True">
-</sliders:SfRangeSlider>
+<sliders:SfRangeSlider RangeStart="0.2"
+                       RangeEnd="0.8"
+                       Interval="0.2"
+                       ShowDividers="True" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
 SfRangeSlider rangeSlider = new SfRangeSlider();
+rangeSlider.RangeStart = 0.2;
+rangeSlider.RangeEnd = 0.8;
 rangeSlider.Interval = 0.2;
 rangeSlider.ShowDividers = true;
 
@@ -47,12 +50,15 @@ Change the active and inactive divider radius of the range slider using the [`Ac
 
 {% highlight xaml %}
 
-<sliders:SfRangeSlider Interval="0.2" 
+<sliders:SfRangeSlider RangeStart="0.2"
+                       RangeEnd="0.8"
+                       Interval="0.2"
                        ShowDividers="True">
-   
-   <sliders:SfRangeSlider.DividerStyle>
-      <sliders:SliderDividerStyle ActiveRadius="7" InactiveRadius="7" />
-   </sliders:SfRangeSlider.DividerStyle>
+
+    <sliders:SfRangeSlider.DividerStyle>
+        <sliders:SliderDividerStyle ActiveRadius="3"
+                                    InactiveRadius="5" />
+    </sliders:SfRangeSlider.DividerStyle>
 
 </sliders:SfRangeSlider>
 
@@ -61,60 +67,18 @@ Change the active and inactive divider radius of the range slider using the [`Ac
 {% highlight C# %}
 
 SfRangeSlider rangeSlider = new SfRangeSlider();
+rangeSlider.RangeStart = 0.2;
+rangeSlider.RangeEnd = 0.8;
 rangeSlider.Interval = 0.2;
 rangeSlider.ShowDividers = true;
-rangeSlider.DividerStyle.ActiveRadius = 7;
-rangeSlider.DividerStyle.InactiveRadius = 7;
+rangeSlider.DividerStyle.ActiveRadius = 3;
+rangeSlider.DividerStyle.InactiveRadius = 5;
 
 {% endhighlight %}
 
 {% endtabs %}
 
 ![RangeSlider divider radius](images/labels-and-dividers/divider-radius.png)
-
-## Divider stroke width and stroke color
-
-Change the active and inactive divider stroke width of the range slider using the [`ActiveStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDividerStyle.html#Syncfusion_Maui_Sliders_SliderDividerStyle_ActiveStrokeThickness) and the [`InactiveStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDividerStyle.html#Syncfusion_Maui_Sliders_SliderDividerStyle_InactiveStrokeThickness) properties of the [`DividerStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDividerStyle.html) class.
-
-Also, change the active and inactive divider stroke color of the range slider using the [`ActiveStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDividerStyle.html#Syncfusion_Maui_Sliders_SliderDividerStyle_ActiveStroke) and the [`InactiveStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDividerStyle.html#Syncfusion_Maui_Sliders_SliderDividerStyle_InactiveStroke) properties of the [`DividerStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDividerStyle.html) class.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<sliders:SfRangeSlider Interval="0.2" 
-                       ShowDividers="True">
-   
-   <sliders:SfRangeSlider.DividerStyle>
-        <sliders:SliderDividerStyle ActiveRadius="7" 
-                                    InactiveRadius="7" 
-                                    ActiveStrokeThickness="2" 
-                                    InactiveStrokeThickness="2" 
-                                    ActiveStroke="#EE3F3F" 
-                                    InactiveStroke="#F7B1AE"/>
-   </sliders:SfRangeSlider.DividerStyle>
-
-</rangeslider:SfRangeSlider>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfRangeSlider rangeSlider = new SfRangeSlider();
-rangeSlider.Interval = 0.2;
-rangeSlider.ShowDividers = true;
-rangeSlider.DividerStyle.ActiveRadius = 7;
-rangeSlider.DividerStyle.InactiveRadius = 7;
-rangeSlider.DividerStyle.ActiveStroke = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
-rangeSlider.DividerStyle.InactiveStroke = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
-rangeSlider.DividerStyle.ActiveStrokeThickness = 2;
-rangeSlider.DividerStyle.InactiveStrokeThickness = 2;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![RangeSlider divider stroke color](images/labels-and-dividers/divider-stroke-color.png)
 
 ## Divider color
 
@@ -124,15 +88,17 @@ Change the active and inactive divider color of the range slider using the [`Act
 
 {% highlight xaml %}
 
-<sliders:SfRangeSlider Interval="0.2" 
+<sliders:SfRangeSlider RangeStart="0.2"
+                       RangeEnd="0.8"
+                       Interval="0.2"
                        ShowDividers="True">
-    
+
     <sliders:SfRangeSlider.DividerStyle>
-        <sliders:SliderDividerStyle ActiveRadius="7" 
-                                    InactiveRadius="7" 
-                                    ActiveFill="#EE3F3F" 
-                                    InactiveFill="#F7B1AE"/>
-     </sliders:SfRangeSlider.DividerStyle>
+        <sliders:SliderDividerStyle ActiveRadius="7"
+                                    InactiveRadius="7"
+                                    ActiveFill="#EE3F3F"
+                                    InactiveFill="#F7B1AE" />
+    </sliders:SfRangeSlider.DividerStyle>
 
 </sliders:SfRangeSlider>
 
@@ -141,6 +107,8 @@ Change the active and inactive divider color of the range slider using the [`Act
 {% highlight C# %}
 
 SfRangeSlider rangeSlider = new SfRangeSlider();
+rangeSlider.RangeStart = 0.2;
+rangeSlider.RangeEnd = 0.8;
 rangeSlider.Interval = 0.2;
 rangeSlider.ShowDividers = true;
 rangeSlider.DividerStyle.ActiveRadius = 7;
@@ -154,6 +122,58 @@ rangeSlider.DividerStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F7B
 
 ![RangeSlider divider color](images/labels-and-dividers/divider-color.png)
 
+## Divider stroke width and stroke color
+
+Change the active and inactive divider stroke width of the range slider using the [`ActiveStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDividerStyle.html#Syncfusion_Maui_Sliders_SliderDividerStyle_ActiveStrokeThickness) and the [`InactiveStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDividerStyle.html#Syncfusion_Maui_Sliders_SliderDividerStyle_InactiveStrokeThickness) properties of the [`DividerStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDividerStyle.html) class.
+
+Also, change the active and inactive divider stroke color of the range slider using the [`ActiveStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDividerStyle.html#Syncfusion_Maui_Sliders_SliderDividerStyle_ActiveStroke) and the [`InactiveStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDividerStyle.html#Syncfusion_Maui_Sliders_SliderDividerStyle_InactiveStroke) properties of the [`DividerStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDividerStyle.html) class.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfRangeSlider RangeStart="0.2"
+                       RangeEnd="0.8"
+                       Interval="0.2"
+                       ShowDividers="True">
+
+    <sliders:SfRangeSlider.DividerStyle>
+        <sliders:SliderDividerStyle ActiveRadius="7"
+                                    InactiveRadius="7"
+                                    ActiveFill="#EE3F3F"
+                                    InactiveFill="#F7B1AE"
+                                    ActiveStrokeThickness="2"
+                                    InactiveStrokeThickness="2"
+                                    ActiveStroke="#FFD700"
+                                    InactiveStroke="#FFD700" />
+    </sliders:SfRangeSlider.DividerStyle>
+
+</sliders:SfRangeSlider>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfRangeSlider rangeSlider = new SfRangeSlider();
+rangeSlider.RangeStart = 0.2;
+rangeSlider.RangeEnd = 0.8;
+rangeSlider.Interval = 0.2;
+rangeSlider.ShowDividers = true;
+rangeSlider.DividerStyle.ActiveRadius = 7;
+rangeSlider.DividerStyle.InactiveRadius = 7;
+rangeSlider.DividerStyle.ActiveFill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+rangeSlider.DividerStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
+rangeSlider.DividerStyle.ActiveStroke = new SolidColorBrush(Color.FromArgb("#FFD700"));
+rangeSlider.DividerStyle.InactiveStroke = new SolidColorBrush(Color.FromArgb("#FFD700"));
+rangeSlider.DividerStyle.ActiveStrokeThickness = 2;
+rangeSlider.DividerStyle.InactiveStrokeThickness = 2;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![RangeSlider divider stroke color](images/labels-and-dividers/divider-stroke-color.png)
+
 ## Disabled divider
 
 Change the state of the range slider to disabled by setting `false` to the `IsEnabled` property. Using the Visual State Manager (VSM), customize the range slider divider properties based on the visual states. The applicable visual states are enabled(default) and disabled.
@@ -164,8 +184,10 @@ Change the state of the range slider to disabled by setting `false` to the `IsEn
 
 <ContentPage.Resources>
     <Style TargetType="sliders:SfRangeSlider">
-        <Setter Property="Interval" Value="0.25" />
-        <Setter Property="ShowDividers" Value="True" />
+        <Setter Property="Interval"
+                Value="0.25" />
+        <Setter Property="ShowDividers"
+                Value="True" />
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup>
@@ -173,10 +195,10 @@ Change the state of the range slider to disabled by setting `false` to the `IsEn
                         <VisualState.Setters>
                             <Setter Property="DividerStyle">
                                 <Setter.Value>
-                                    <sliders:SliderDividerStyle ActiveFill = "#F7B1AE"
-                                                                    InactiveFill="#EE3F3F"
-                                                                    ActiveRadius="5"
-                                                                    InactiveRadius="4"/>
+                                    <sliders:SliderDividerStyle ActiveFill="#F7B1AE"
+                                                                InactiveFill="#EE3F3F"
+                                                                ActiveRadius="5"
+                                                                InactiveRadius="4" />
                                 </Setter.Value>
                             </Setter>
                         </VisualState.Setters>
@@ -185,10 +207,10 @@ Change the state of the range slider to disabled by setting `false` to the `IsEn
                         <VisualState.Setters>
                             <Setter Property="DividerStyle">
                                 <Setter.Value>
-                                    <sliders:SliderDividerStyle ActiveFill = "Gray"
-                                                                    InactiveFill="LightGray"
-                                                                    ActiveRadius="5"
-                                                                    InactiveRadius="4"/>
+                                    <sliders:SliderDividerStyle ActiveFill="Gray"
+                                                                InactiveFill="LightGray"
+                                                                ActiveRadius="5"
+                                                                InactiveRadius="4" />
                                 </Setter.Value>
                             </Setter>
                         </VisualState.Setters>
@@ -202,10 +224,12 @@ Change the state of the range slider to disabled by setting `false` to the `IsEn
 
 <ContentPage.Content>
     <VerticalStackLayout>
-        <Label Text="Enabled Range Slider" Padding="0,10"/>
-        <sliders:SfRangeSlider/>
-        <Label Text="Disabled Range Slider" Padding="0,10"/>
-        <sliders:SfRangeSlider IsEnabled="False"/>
+        <Label Text="Enabled Range Slider"
+               Padding="0,10" />
+        <sliders:SfRangeSlider />
+        <Label Text="Disabled Range Slider"
+               Padding="0,10" />
+        <sliders:SfRangeSlider IsEnabled="False" />
     </VerticalStackLayout>
 </ContentPage.Content>
 
@@ -252,7 +276,7 @@ visualStateGroupList.Add(commonStateGroup);
 VisualStateManager.SetVisualStateGroups(defaultRangeSlider, visualStateGroupList);
 VisualStateManager.SetVisualStateGroups(disabledRangeSlider, visualStateGroupList);
 
-stackLayout.Children.Add(new Label() { Text = "Default Range Slider", Padding = new Thickness(0, 10) });
+stackLayout.Children.Add(new Label() { Text = "Enabled Range Slider", Padding = new Thickness(0, 10) });
 stackLayout.Children.Add(defaultRangeSlider);
 stackLayout.Children.Add(new Label() { Text = "Disabled Range Slider", Padding = new Thickness(0, 10) });
 stackLayout.Children.Add(disabledRangeSlider);

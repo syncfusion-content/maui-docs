@@ -24,14 +24,13 @@ This section explains how to add the events and commands for DateTime Slider.
 
 {% highlight xaml %}
 
-<sliders:SfDateTimeSlider  Minimum="2010-01-01" 
-  	                        Maximum="2018-01-01" 
-		                    Value="2014-01-01" 
-	                        ValueChangeStart="OnValueChangeStart" 
-	 	                    ValueChanging="OnValueChanging" 
-		                    ValueChanged="OnValueChanged" 
-		                    ValueChangeEnd="OnValueChangeEnd">
-</sliders:SfDateTimeSlider>
+<sliders:SfDateTimeSlider  Minimum="2010-01-01"
+                           Maximum="2018-01-01"
+                           Value="2014-01-01"
+                           ValueChangeStart="OnValueChangeStart"
+                           ValueChanging="OnValueChanging"
+                           ValueChanged="OnValueChanged"
+                           ValueChangeEnd="OnValueChangeEnd" />
 
 {% endhighlight %}
 
@@ -88,14 +87,14 @@ Format or change the label text using the [`LabelCreated`](https://help.syncfusi
                           LabelsPlacement="BetweenTicks"
                           IntervalType="Months"
                           LabelCreated="OnLabelCreated"
-                          ShowLabels="True">
-</sliders:SfDateTimeSlider>
+                          ShowLabels="True" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfDateTimeSlider slider = new SfDateTimeSlider();
+{
+   SfDateTimeSlider slider = new SfDateTimeSlider();
    slider.Minimum = new DateTime(2010, 01, 01);
    slider.Maximum = new DateTime(2011, 01, 01);
    slider.Value = new DateTime(2010, 07, 01);
@@ -157,6 +156,7 @@ Format or change the whole tooltip label text using the [`TooltipLabelCreated`](
     <sliders:SfDateTimeSlider.Tooltip>
         <sliders:SliderTooltip TooltipLabelCreated="OnTooltipLabelCreated" />
     </sliders:SfDateTimeSlider.Tooltip>
+    
 </sliders:SfDateTimeSlider>
 
 {% endhighlight %}
@@ -225,10 +225,10 @@ public class ViewModel
 
     public ViewModel()
     {
-        DragStartedCommand = new Command(DragStarted);
+        DragStartedCommand = new Command(OnDragStarted);
     }
 
-    private void DragStarted(object obj)
+    private void OnDragStarted(object obj)
     {
     }
 }
@@ -276,10 +276,10 @@ public class ViewModel
 
     public ViewModel()
     {
-        DragStartedCommand = new Command<string>(DragStarted);
+        DragStartedCommand = new Command(OnDragStarted);
     }
 
-    private void DragStarted(string value)
+    private void OnDragStarted(object obj)
     {
     }
 }
@@ -325,10 +325,10 @@ public class ViewModel
 
     public ViewModel()
     {
-        DragCompletedCommand = new Command(DragCompleted);
+        DragCompletedCommand = new Command(OnDragCompleted);
     }
 
-    private void DragCompleted(object obj)
+    private void OnDragCompleted(object obj)
     {
     }
 }
@@ -376,10 +376,10 @@ public class ViewModel
 
     public ViewModel()
     {
-        DragCompletedCommand = new Command<string>(DragCompleted);
+        DragCompletedCommand = new Command(OnDragCompleted);
     }
 
-    private void DragCompleted(string value)
+    private void OnDragCompleted(object obj)
     {
     }
 }
