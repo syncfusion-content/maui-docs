@@ -52,8 +52,8 @@ slider.ShowTicks = true;
 
 <sliders:SfDateTimeSlider Minimum="2010-01-01" 
                           Maximum="2020-01-01" 
-                          Value="2014-01-01"
-                          Interval="0.2" 
+                          Value="2015-01-01"
+                          Interval="2" 
                           ShowTicks="True">
 </sliders:SfDateTimeSlider>
 
@@ -64,8 +64,8 @@ slider.ShowTicks = true;
 SfDateTimeSlider slider = new SfDateTimeSlider();
 slider.Minimum = new DateTime(2010, 01, 01);
 slider.Maximum = new DateTime(2020, 01, 01);
-slider.Value = new DateTime(2014, 01, 01);
-slider.Interval = 0.2;
+slider.Value = new DateTime(2015, 01, 01);
+slider.Interval = 2;
 slider.ShowTicks = true;
 
 {% endhighlight %}
@@ -87,7 +87,6 @@ It is used to represent the number of smaller ticks between two major ticks. For
 <sliders:SfDateTimeSlider Minimum="2010-01-01" 
                           Maximum="2018-01-01" 
                           Value="2014-01-01"
-                          ShowLabels="True" 
                           MinorTicksPerInterval="7" 
 		                  ShowTicks="True">
 </sliders:SfDateTimeSlider>
@@ -102,7 +101,6 @@ slider.Maximum = new DateTime(2018, 01, 01);
 slider.Value = new DateTime(2014, 01, 01);
 slider.MinorTicksPerInterval = 7;
 slider.ShowTicks = true;
-slider.ShowLabels = true;
 
 {% endhighlight %}
 
@@ -118,9 +116,8 @@ slider.ShowLabels = true;
 
 <sliders:SfDateTimeSlider Minimum="2010-01-01" 
                           Maximum="2020-01-01" 
-                          Value="2014-01-01"
+                          Value="2015-01-01"
                           Interval="2" 
-                          ShowLabels="True" 
                           MinorTicksPerInterval="1" 
 		                  ShowTicks="True">
 </sliders:SfDateTimeSlider>
@@ -132,11 +129,10 @@ slider.ShowLabels = true;
 SfDateTimeSlider slider = new SfDateTimeSlider();
 slider.Minimum = new DateTime(2010, 01, 01);
 slider.Maximum = new DateTime(2020, 01, 01);
-slider.Value = new DateTime(2014, 01, 01);
+slider.Value = new DateTime(2015, 01, 01);
 slider.Interval = 2;
 slider.MinorTicksPerInterval = 1;
 slider.ShowTicks = true;
-slider.ShowLabels = true;
 
 {% endhighlight %}
 
@@ -203,7 +199,6 @@ The inactive side of the slider is between the thumb and the [`Maximum`](https:/
                           Value="2014-01-01"
                           Interval="2"
                           ShowTicks="True"
-                          ShowLabels="True" 
                           MinorTicksPerInterval="1">
      <sliders:SfDateTimeSlider.MinorTickStyle>
         <sliders:SliderTickStyle ActiveFill="#EE3F3F" 
@@ -221,7 +216,6 @@ slider.Maximum = new DateTime(2018, 01, 01);
 slider.Value = new DateTime(2014, 01, 01);
 slider.Interval = 2;
 slider.ShowTicks = true;
-slider.ShowLabels = true;
 slider.MinorTicksPerInterval = 1;
 slider.MinorTickStyle.ActiveFill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
 slider.MinorTickStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
@@ -288,8 +282,8 @@ Adjust the space between track and tick of the slider using the [`Offset`](https
 
 <sliders:SfDateTimeSlider Minimum="2010-01-01" 
                           Maximum="2020-01-01" 
-                          Value="2014-01-01"
-                          Interval="0.2"  
+                          Value="2015-01-01"
+                          Interval="2"  
                           ShowTicks="True" 
                           MinorTicksPerInterval="1">
    <sliders:SfDateTimeSlider.MinorTickStyle>
