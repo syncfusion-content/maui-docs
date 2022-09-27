@@ -1,0 +1,39 @@
+---
+layout: post
+title: States in .NET MAUI ProgressBar control | Syncfusion
+description: Learn here all about States support in Syncfusion .NET MAUI ProgressBar (Progress Bar) control and more.
+platform: MAUI
+control: ProgressBar
+documentation: ug
+---
+
+# States in .NET MAUI ProgressBar (Progress Bar)
+
+Configure the states of the progress bar control depending on the usage.
+
+## Determinate
+
+This is the default state. Use it when the progress estimation is known.
+
+## Indeterminate
+
+By enabling the `IsIndeterminate` property, the state of the progress bar can be changed to indeterminate when the progress cannot be estimated or is not being calculated. It can be combined with a determinate mode to know that the application estimates progress before the actual progress starts.
+
+{% tabs %} 
+
+{% highlight xaml %} 
+
+<progressBar:SfCircularProgressBar IsIndeterminate="True"/>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCircularProgressBar circularProgressBar = new SfCircularProgressBar { IsIndeterminate = true };
+this.Content = circularProgressBar;
+
+{% endhighlight %}
+
+{% endtabs %} 
+
+N> Refer to our `.NET MAUI ProgressBar` feature tour page for its groundbreaking feature representations. Also explore our [.NET MAUI ProgressBar example](https://github.com/syncfusion/maui-demos/) that shows how to configure a ProgressBar in .NET MAUI.

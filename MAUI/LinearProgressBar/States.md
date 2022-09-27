@@ -23,27 +23,14 @@ By enabling the `IsIndeterminate` property, the state of the progress bar can be
 
 {% highlight xaml %} 
 
-<!--Using the linear progress bar-->
-
 <progressBar:SfLinearProgressBar IsIndeterminate="True"/>
-
-<!--Using the circular progress bar-->
-
-<progressBar:SfCircularProgressBar IsIndeterminate="True"/>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-// Using the linear progress bar. 
-
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar { IsIndeterminate = true};
 this.Content = linearProgressBar;
-
-// Using the circular progress bar.
-
-SfCircularProgressBar circularProgressBar = new SfCircularProgressBar { IsIndeterminate = true };
-this.Content = circularProgressBar;
 
 {% endhighlight %}
 

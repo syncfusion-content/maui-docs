@@ -27,13 +27,8 @@ The following code sample demonstrates the `CubicInOut` easing function of the l
 
 {% highlight xaml %}
 
-<!--Using the linear progress bar-->
 <progressBar:SfLinearProgressBar Progress="75" 
                                  AnimationEasing="{x:Static Easing.CubicInOut}" />
-
-<!--Using the circular progress bar-->
-<progressBar:SfCircularProgressBar Progress="75"
-                                   AnimationEasing="{x:Static Easing.CubicInOut}"/>
 
 {% endhighlight %}
 
@@ -44,13 +39,6 @@ SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 linearProgressBar.Progress = 75;
 linearProgressBar.AnimationEasing = Easing.CubicInOut;
 this.Content = linearProgressBar;
-
-// Using the circular progress bar
-SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
-circularProgressBar.Progress = 75;
-circularProgressBar.AnimationEasing = Easing.CubicInOut;
-this.Content = circularProgressBar;
-
 
 {% endhighlight %}
 
@@ -78,13 +66,8 @@ The following code sample demonstrates the `BounceIn` easing function of the lin
 
 {% highlight xaml %}
 
-<!--Using the linear progress bar-->
 <progressBar:SfLinearProgressBar IsIndeterminate="True" 
                                  IndeterminateAnimationEasing="{x:Static Easing.BounceIn}" />
-
-<!--Using the circular progress bar-->
-<progressBar:SfCircularProgressBar IsIndeterminate="True" 
-                                   IndeterminateAnimationEasing="{x:Static Easing.BounceIn}" />
 
 {% endhighlight %}
 
@@ -95,12 +78,6 @@ SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 linearProgressBar.IsIndeterminate = true;
 linearProgressBar.IndeterminateAnimationEasing = Easing.BounceIn;
 this.Content = linearProgressBar;
-
-// Using the circular progress bar
-SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
-circularProgressBar.IsIndeterminate = true;
-circularProgressBar.IndeterminateAnimationEasing = Easing.BounceIn;
-this.Content = circularProgressBar;
 
 {% endhighlight %}
 

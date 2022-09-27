@@ -15,28 +15,12 @@ To visualize the progress of multiple sequential tasks, split the progress bar i
 
 {% highlight xaml %}
 
-<!--Using the linear progress bar-->
-
-<progressBar:SfLinearProgressBar Progress="25" 
-                                 SegmentCount="4" />
-
-<!--Using the circular progress bar-->
-
 <progressBar:SfCircularProgressBar Progress="25" 
                                    SegmentCount="7" />
 
 {% endhighlight %}
 
 {% highlight c# %}
-
-// Using the linear progress bar.
-
-SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
-linearProgressBar.Progress = 25;
-linearProgressBar.SegmentCount = 4;
-this.Content = linearProgressBar;
-
-// Using the circular progress bar.
 
 SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 circularProgressBar.Progress = 25;
@@ -56,14 +40,6 @@ Customize the default spacing between the segments using the `SegmentGapWidth` p
 {% tabs %} 
 {% highlight xaml %}
 
-<!--Using the linear progress bar-->
-
-<progressBar:SfLinearProgressBar Progress="25" 
-                                 SegmentCount="4"
-                                 SegmentGapWidth="5" />
-
-<!--Using the circular progress bar-->
-
 <progressBar:SfCircularProgressBar Progress="25"
                                    SegmentCount="7" 
                                    SegmentGapWidth="10" />
@@ -71,16 +47,6 @@ Customize the default spacing between the segments using the `SegmentGapWidth` p
 {% endhighlight %}
 
 {% highlight c# %}
-
-// Using the linear progress bar.
-
-SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
-linearProgressBar.Progress = 25;
-linearProgressBar.SegmentCount = 4;
-linearProgressBar.SegmentGapWidth = 5;
-this.Content = linearProgressBar;
-
-// Using the circular progress bar.
 
 SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 circularProgressBar.Progress = 25;

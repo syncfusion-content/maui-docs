@@ -17,14 +17,6 @@ The following code sample demonstrates how to customize the range as factor valu
 
 {% highlight xaml %}
 
-<!--Using the linear progress bar-->
-
-<progressBar:SfLinearProgressBar Minimum="0" 
-                                 Progress="0.5" 
-                                 Maximum="1"/>
-
-<!--Using the circular progress bar-->
-
 <progressBar:SfCircularProgressBar Minimum="0" 
                                    Progress="0.5" 
                                    Maximum="1"/>
@@ -32,16 +24,6 @@ The following code sample demonstrates how to customize the range as factor valu
 {% endhighlight %}
 
 {% highlight c# %}
-
-// Using the linear progress bar.
-
-SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
-linearProgressBar.Minimum = 0;
-linearProgressBar.Maximum = 1;
-linearProgressBar.Progress = 0.5;
-this.Content = linearProgressBar;
-
-// Using the circular progress bar.
 
 SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 circularProgressBar.Minimum = 0;

@@ -80,25 +80,14 @@ Create an instance for the progress bar control, and add it as content. The prog
 
 {% highlight xaml %}
 
-<!--Using the linear progress bar-->
 <progressBar:SfLinearProgressBar Progress="75"/>
-
-<!--Using the circular progress bar-->
-<progressBar:SfCircularProgressBar Progress="75"/>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-// Using the linear progress bar. 
-
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar { Progress = 75 };
 this.Content = linearProgressBar;
-
-// Using the circular progress bar.
-
-SfCircularProgressBar circularProgressBar = new SfCircularProgressBar { Progress = 75 };
-this.Content = circularProgressBar;
 
 {% endhighlight %}
 
@@ -118,25 +107,14 @@ When the progress of a task cannot be shown determinately, you can enable the in
 
 {% highlight xaml %} 
 
-<!--Using the linear progress bar-->
 <progressBar:SfLinearProgressBar IsIndeterminate="True"/>
-
-<!--Using the circular progress bar-->
-<progressBar:SfCircularProgressBar IsIndeterminate="True"/>
 
 {% endhighlight %}
 
 {% highlight C# %} 
 
-// Using the linear progress bar.
-
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar { IsIndeterminate = true };
 this.Content = linearProgressBar;
-
-// Using the circular progress bar.
-
-SfCircularProgressBar circularProgressBar = new SfCircularProgressBar { IsIndeterminate = true };
-this.Content = circularProgressBar;
 
 {% endhighlight %}
 
@@ -150,27 +128,14 @@ To visualize the progress of a multiple sequential task, split the progress bar 
 
 {% highlight xaml %} 
 
-<!--Using the linear progress bar-->
-
 <progressBar:SfLinearProgressBar SegmentCount="4" Progress="75"/>
-
-<!--Using the circular progress bar-->
-
-<progressBar:SfCircularProgressBar SegmentCount="4" Progress="75"/>
 
 {% endhighlight %}
 
 {% highlight C# %} 
 
-// Using the linear progress bar.
-
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar { Progress = 75, SegmentCount = 4 };
 this.Content = linearProgressBar;
-
-// Using the circular progress bar.
-
-SfCircularProgressBar circularProgressBar = new SfCircularProgressBar { Progress = 75, SegmentCount = 4 };
-this.Content = circularProgressBar;
 
 {% endhighlight %}
 
@@ -186,8 +151,6 @@ Customize the color of the progress indicator and track by defining the `Progres
 
 {% highlight xaml %} 
 
-<!--Using the linear progress bar-->
-
 <progressBar:SfLinearProgressBar Progress="75" 
                                  TrackFill="#33ffbe06" 
                                  ProgressFill="#FFffbe06"/>
@@ -195,16 +158,6 @@ Customize the color of the progress indicator and track by defining the `Progres
 <progressBar:SfLinearProgressBar Progress="75"  
                                  TrackFill="#3351483a" 
                                  ProgressFill="#FF51483a"/>
-
-<!--Using the circular progress bar-->
-
- <progressBar:SfCircularProgressBar Progress="75" 
-                                    TrackFill="#33c15244" 
-                                    ProgressFill="#FFc15244"/>
-
-<progressBar:SfCircularProgressBar Progress="75" 
-                                   TrackFill="#3390a84e" 
-                                   ProgressFill="#FF90a84e"/>
 
 {% endhighlight %}
 
@@ -224,22 +177,6 @@ SfLinearProgressBar sfLinearProgressBar = new SfLinearProgressBar
     Progress = 75, 
     TrackFill = new SolidColorBrush(Color.FromArgb("#3351483a")), 
     ProgressFill = new SolidColorBrush(Color.FromArgb("#FF51483a"))
-};
-
-// Using the circular progress bar.
-
-SfCircularProgressBar circularProgressBar = new SfCircularProgressBar
-{
-    Progress = 75, 
-    TrackFill = new SolidColorBrush(Color.FromArgb("#33c15244")), 
-    ProgressFill = new SolidColorBrush(Color.FromArgb("#FFc15244"))
-};
-
-SfCircularProgressBar sfCircularProgressBar = new SfCircularProgressBar
-{
-    Progress = 75, 
-    TrackFill = new SolidColorBrush(Color.FromArgb("#3390a84e")), 
-    ProgressFill = new SolidColorBrush(Color.FromArgb("#FF90a84e"))
 };
 
 {% endhighlight %}
