@@ -32,11 +32,7 @@ To migrate easier from Xamarin SfComboBox to .NET MAUI `SfComboBox`, we kept mos
 <tr>
 <td>IsEditableMode</td>
 <td>IsEditable</td>
-<td>Gets or sets the search mode of the control. The enum values are "StartsWith" and "Contains"</td></tr>
-<tr>
-<td>SuggestionMode</td>
-<td>TextSearchMode</td>
-<td>Gets or sets the search mode of the control. The enum values are "StartsWith" and "Contains"</td></tr>
+<td>Gets or sets whether the textbox can support editing.</td></tr>
 <tr>
 <td>Watermark</td>
 <td>Placeholder</td>
@@ -57,20 +53,53 @@ To migrate easier from Xamarin SfComboBox to .NET MAUI `SfComboBox`, we kept mos
 <td>MaximumDropDownHeight</td>
 <td>MaxDropDownHeight</td>
 <td>Gets or sets the maximum dropdown height.</td></tr>
+<tr>
+<td>SuggestionMode,<br/>ComboBoxMode</td>
+<td>TextSearchMode</td>
+<td>Gets or sets the search mode of the control. The enum values are "StartsWith" and "Contains". <br/>When using StartsWith, the ComboBoxMode will be set to Append. <br/> When using Contains, the ComboBoxMode will be set to Suggest.</td></tr>
+<tr>
+<td>ItemsSource,<br/>DataSource,<br/>ComboBoxSource </td>
+<td>ItemsSource</td>
+<td>Gets or sets the data to be populated in the control.</td></tr>
 </table> 
+
+## Enums
+
+<table>
+<tr>
+<th>Enum</th>
+<th>Xamarin SfComboBox</th>
+<th>.NET MAUI SfComboBox</th>
+<th>Description</th></tr>
+<tr>
+<td>Xamarin - SuggestionMode <br/> .NET MAUI - TextSearchMode</td>
+<td>StartsWith,<br/>StartsWithCaseSensitive,<br/>Contains,<br/>ContainsWithCaseSensitive,<br/>Equals,<br/>EqualsWithCaseSensitive,<br/>EndsWith,<br/>EndsWithCaseSensitive,<br/>Custom</td>
+<td>StartsWith,<br/>Contains.</td>
+<td>Gets or sets the search mode of the control.</td></tr>
+</table>
 
 ## Events
 
 <table> 
 <tr>
 <th>Event Name</th>
-<th>Xamarin SfComboBox SelectionChangedEventArgs</th>
-<th>.NET MAUI SfComboBox SelectionChangedEventArgs</th>
+<th>Xamarin SfComboBox</th>
+<th>.NET MAUI SfComboBox</th>
 <th>Description</th></tr>
 <tr>
 <td>SelectedChanged</td>
-<td>Value</td>
-<td>PreviousSelection  CurrentSelection</td>
+<td>SelectionChangedEventArgs<br/> <ul><li>Value</li></ul></td>
+<td>SelectionChangedEventArgs<br/> <ul> <li>PreviousSelection </li> <li> CurrentSelection</li> </ul></td>
 <td>Raises when an item is selected in the dropdown or the SelectedItem is set programatically.Returns the previous selected item and the currently selected item</td></tr>
 
 </table> 
+
+## Upcoming features
+
+  * Item Template
+  * Multiple Selection
+  * Diacritic Sensitivity
+  * Header and Footer
+  * Highlighting Text
+  * Load More Feature
+  * Minimum Prefix Character
