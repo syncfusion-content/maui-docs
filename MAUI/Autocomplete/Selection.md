@@ -195,7 +195,7 @@ The following image illustrates the result of the above code:
 
 ## Is Drop-Down Open
 
-The "IsDropDownOpen" property in the "Autocomplete" control can be used to gets a boolean value indicating whether the drop down is open or close. It returns `true` if the drop down is open, otherwise `false`.
+The "IsDropDownOpen" property in the "Autocomplete" control can be used to get a boolean value indicating whether the drop-down is open or closed. It returns `true` if the drop-down is open, otherwise `false`.
 
 N> Currently, users can only get the boolean value based on whether a drop-down menu is open or not; the property "IsDropDownOpen" cannot be set.
 
