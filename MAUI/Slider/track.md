@@ -11,6 +11,49 @@ documentation: ug
 
 This section helps to learn about how to customize the track in the slider.
 
+## Minimum
+
+The minimum value that the user can select. The default value of the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html#Syncfusion_Maui_Sliders_SfSlider_Minimum) property is `0` and it must be less than the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html#Syncfusion_Maui_Sliders_SfSlider_Maximum) value.
+
+## Maximum
+
+The maximum value that the user can select. The default value of the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html#Syncfusion_Maui_Sliders_SfSlider_Minimum) property is `1` and it must be greater than the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html#Syncfusion_Maui_Sliders_SfSlider_Maximum) value.
+
+## Value
+
+It represents the value currently selected in the slider. The slider's thumb is drawn corresponding to this value.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfSlider Minimum="20"
+                  Maximum="60"
+                  Value="40"
+                  Interval="10"
+                  ShowTicks="True"
+                  ShowLabels="True" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfSlider slider = new SfSlider()
+{
+    Minimum = 20,
+    Maximum = 60,
+    Value = 40,
+    Interval = 10,
+    ShowTicks = true,
+    ShowLabels = true,
+};
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Slider numeric label](images/track/numeric-labels.png)
+
 ## Track color
 
 Change the active and inactive track color of the slider using the [`ActiveFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTrackStyle.html#Syncfusion_Maui_Sliders_SliderTrackStyle_ActiveFill) and [`InactiveFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTrackStyle.html#Syncfusion_Maui_Sliders_SliderTrackStyle_InactiveFill) properties of the [`TrackStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_TrackStyle) class.
