@@ -54,13 +54,13 @@ To migrate easier from Xamarin SfComboBox to .NET MAUI `SfComboBox`, we kept mos
 <td>MaxDropDownHeight</td>
 <td>Gets or sets the maximum dropdown height.</td></tr>
 <tr>
-<td>SuggestionMode <br/> ComboBoxMode</td>
+<td>SuggestionMode,<br/>ComboBoxMode</td>
 <td>TextSearchMode</td>
 <td>Gets or sets the search mode of the control. The enum values are "StartsWith" and "Contains". <br/>When using StartsWith, the ComboBoxMode will be set to Append. <br/> When using Contains, the ComboBoxMode will be set to Suggest.</td></tr>
 <tr>
-<td>ItemsSource,<br/> DataSource,<br/>ComboBoxSource. </td>
+<td>ItemsSource,<br/>DataSource,<br/>ComboBoxSource </td>
 <td>ItemsSource</td>
-<td>Gets or sets the items source to be populated in the control.</td></tr>
+<td>Gets or sets the data to be populated in the control.</td></tr>
 </table> 
 
 ## Enums
@@ -73,7 +73,7 @@ To migrate easier from Xamarin SfComboBox to .NET MAUI `SfComboBox`, we kept mos
 <th>Description</th></tr>
 <tr>
 <td>Xamarin - SuggestionMode <br/> .NET MAUI - TextSearchMode</td>
-<td>StartsWith,<br/>StartsWithCaseSensitive,<br/>Contains,<br/>ContainsWithCaseSensitive,<br/>Equals,<br/>EqualsWithCaseSensitive,<br/>EndsWith,<br/>EndsWithCaseSensitive,<br/>Custom.</td>
+<td>StartsWith,<br/>StartsWithCaseSensitive,<br/>Contains,<br/>ContainsWithCaseSensitive,<br/>Equals,<br/>EqualsWithCaseSensitive,<br/>EndsWith,<br/>EndsWithCaseSensitive,<br/>Custom</td>
 <td>StartsWith,<br/>Contains.</td>
 <td>Gets or sets the search mode of the control.</td></tr>
 </table>
