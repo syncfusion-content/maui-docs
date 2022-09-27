@@ -124,6 +124,7 @@ Format or change the whole numeric label text using the [`LabelCreated`](https:/
    SfCartesianChart chart = new SfCartesianChart();
    rangeSelector.Content = chart;
 }
+
 private void OnLabelCreated(object sender, SliderLabelCreatedEventArgs e)
 {
 	e.Text = "$" + e.Text;
@@ -152,18 +153,22 @@ Format or change the whole tooltip label text using the [`ToolTipLabelCreated`](
              ...
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-   
-   <sliders:SfRangeSelector>
-      
-      <sliders:SfRangeSelector.Tooltip>
-         <sliders:SliderTooltip TooltipLabelCreated="OnTooltipLabelCreated" />
-      </sliders:SfRangeSelector.Tooltip>
-      
-      <charts:SfCartesianChart>
+
+    <sliders:SfRangeSelector Minimum="2"
+                             Maximum="10"
+                             RangeStart="4"
+                             RangeEnd="8"
+                             Interval="2">
+
+        <sliders:SfRangeSelector.Tooltip>
+            <sliders:SliderTooltip TooltipLabelCreated="OnTooltipLabelCreated" />
+        </sliders:SfRangeSelector.Tooltip>
+
+        <charts:SfCartesianChart>
             ...
-      </charts:SfCartesianChart>
-   
-   </sliders:SfRangeSelector>
+        </charts:SfCartesianChart>
+
+    </sliders:SfRangeSelector>
 </ContentPage>
 
 {% endhighlight %}
@@ -172,10 +177,16 @@ Format or change the whole tooltip label text using the [`ToolTipLabelCreated`](
 
 {
     SfRangeSelector rangeSelector = new SfRangeSelector();
+    rangeSelector.Minimum = 2;
+    rangeSelector.Maximum = 10;
+    rangeSelector.RangeStart = 4;
+    rangeSelector.RangeEnd = 8;
+    rangeSelector.Interval = 2;
     rangeSelector.Tooltip.TooltipLabelCreated += OnTooltipLabelCreated;
     SfCartesianChart chart = new SfCartesianChart();
     rangeSelector.Content = chart;
  }
+
  private void OnTooltipLabelCreated(object sender, SliderTooltipLabelCreatedEventArgs e)
  {
      e.Text = "$" + e.Text;
@@ -232,10 +243,10 @@ public class ViewModel
 
     public ViewModel()
     {
-        DragStartedCommand = new Command(DragStarted);
+        DragStartedCommand = new Command(OnDragStarted);
     }
 
-    private void DragStarted(object obj)
+    private void OnDragStarted(object obj)
     {
     }
 }
@@ -289,10 +300,10 @@ public class ViewModel
 
     public ViewModel()
     {
-        DragStartedCommand = new Command<string>(DragStarted);
+        DragStartedCommand = new Command(OnDragStarted);
     }
 
-    private void DragStarted(string value)
+    private void OnDragStarted(object obj)
     {
     }
 }
@@ -344,10 +355,10 @@ public class ViewModel
 
     public ViewModel()
     {
-        DragCompletedCommand = new Command(DragCompleted);
+        DragCompletedCommand = new Command(OnDragCompleted);
     }
 
-    private void DragCompleted(object obj)
+    private void OnDragCompleted(object obj)
     {
     }
 }
@@ -401,10 +412,10 @@ public class ViewModel
 
     public ViewModel()
     {
-        DragCompletedCommand = new Command<string>(DragCompleted);
+        DragCompletedCommand = new Command(OnDragCompleted);
     }
 
-    private void DragCompleted(string value)
+    private void OnDragCompleted(object obj)
     {
     }
 }

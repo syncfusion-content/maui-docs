@@ -81,8 +81,8 @@ Change the active and inactive divider radius using the [`ActiveRadius`](https:/
                                      ShowDividers="True">
         
         <sliders:SfDateTimeRangeSelector.DividerStyle>
-            <sliders:SliderDividerStyle ActiveRadius="7" 
-                                        InactiveRadius="7" />
+            <sliders:SliderDividerStyle ActiveRadius="3" 
+                                        InactiveRadius="5" />
         </sliders:SfDateTimeRangeSelector.DividerStyle>
         
         <charts:SfCartesianChart>
@@ -103,8 +103,8 @@ rangeSelector.RangeStart = new DateTime(2012, 01, 01);
 rangeSelector.RangeEnd = new DateTime(2016, 01, 01);
 rangeSelector.Interval = 2;
 rangeSelector.ShowDividers = true;
-rangeSelector.DividerStyle.ActiveRadius = 7;
-rangeSelector.DividerStyle.InactiveRadius = 7;
+rangeSelector.DividerStyle.ActiveRadius = 3;
+rangeSelector.DividerStyle.InactiveRadius = 5;
 SfCartesianChart chart = new SfCartesianChart();
 rangeSelector.Content = chart;
 
@@ -137,12 +137,14 @@ Also, change the active and inactive divider stroke color using the [`ActiveStro
                                      ShowDividers="True">
 
         <sliders:SfDateTimeRangeSelector.DividerStyle>
-            <sliders:SliderDividerStyle ActiveRadius="7" 
-                                        InactiveRadius="7" 
-                                        ActiveStrokeThickness="2" 
-                                        InactiveStrokeThickness="2" 
-                                        ActiveStroke="#EE3F3F" 
-                                        InactiveStroke="#F7B1AE" />
+            <sliders:SliderDividerStyle ActiveRadius="7"
+                                        InactiveRadius="7"
+                                        ActiveFill="#EE3F3F"
+                                        InactiveFill="#F7B1AE"
+                                        ActiveStrokeThickness="2"
+                                        InactiveStrokeThickness="2"
+                                        ActiveStroke="#FFD700"
+                                        InactiveStroke="#FFD700" />
         </sliders:SfDateTimeRangeSelector.DividerStyle>
 
         <charts:SfCartesianChart>
@@ -165,8 +167,10 @@ rangeSelector.Interval = 2;
 rangeSelector.ShowDividers = true;
 rangeSelector.DividerStyle.ActiveRadius = 7;
 rangeSelector.DividerStyle.InactiveRadius = 7;
-rangeSelector.DividerStyle.ActiveStroke = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
-rangeSelector.DividerStyle.InactiveStroke = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
+rangeSelector.DividerStyle.ActiveFill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+rangeSelector.DividerStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
+rangeSelector.DividerStyle.ActiveStroke = new SolidColorBrush(Color.FromArgb("#FFD700"));
+rangeSelector.DividerStyle.InactiveStroke = new SolidColorBrush(Color.FromArgb("#FFD700"));
 rangeSelector.DividerStyle.ActiveStrokeThickness = 2;
 rangeSelector.DividerStyle.InactiveStrokeThickness = 2;
 SfCartesianChart chart = new SfCartesianChart();
