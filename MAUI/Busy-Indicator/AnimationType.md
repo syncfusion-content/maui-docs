@@ -130,7 +130,7 @@ SfBusyIndicator busyIndicator = new SfBusyIndicator()
 
 The following gif image illustrates the result of the above code.
 
-![Single Circle](Images/AnimationType/SingleCircle.gif)
+![Single Circle](Images/AnimationType/SingleCircle.png)
 
 ### Double Circle
 
@@ -160,4 +160,4 @@ SfBusyIndicator busyIndicator = new SfBusyIndicator()
 
 The following gif image illustrates the result of the above code.
 
-![Double Circle](Images/AnimationType/DoubleCircle.gif)
+![Double Circle](Images/AnimationType/DoubleCircle.png)
