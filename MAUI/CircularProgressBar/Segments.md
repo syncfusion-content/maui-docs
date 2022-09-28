@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Segments in .NET MAUI ProgressBar control | Syncfusion
-description: Learn here all about Segments support in Syncfusion .NET MAUI ProgressBar control, its elements and more.
+title: Segments in .NET MAUI SfCircularProgressBar control | Syncfusion
+description: Learn here all about Segments support in Syncfusion .NET MAUI SfCircularProgressBar control, its elements and more.
 platform: MAUI
-control: ProgressBar
+control: SfCircularProgressBar
 documentation: ug
 ---
 
@@ -31,7 +31,7 @@ this.Content = circularProgressBar;
 
 {% endtabs %} 
 
-![.NET MAUI ProgressBar with segment](images/segment/segment.png)
+![.NET MAUI SfCircularProgressBar with segment](images/segment/segment.png)
 
 ## Gap customization
 
@@ -58,6 +58,6 @@ this.Content = circularProgressBar;
 
 {% endtabs %} 
 
-![.NET MAUI ProgressBar with segment gap width](images/segment/gap-width.png)
+![.NET MAUI SfCircularProgressBar with segment gap width](images/segment/gap-width.png)
 
-N> Refer to our `.NET MAUI ProgressBar` feature tour page for its groundbreaking feature representations. Also explore our [.NET MAUI ProgressBar example](https://github.com/syncfusion/maui-demos/) that shows how to configure a ProgressBar in .NET MAUI.
+N> Refer to our `.NET MAUI SfCircularProgressBar` feature tour page for its groundbreaking feature representations. Also explore our [.NET MAUI SfCircularProgressBar example](https://github.com/syncfusion/maui-demos/) that shows how to configure a SfCircularProgressBar in .NET MAUI.

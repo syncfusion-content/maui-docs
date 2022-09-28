@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Migrate from Xamarin to .NET MAUI  ProgressBar | Syncfusion
-description: Learn here all about Migrating from Syncfusion Xamarin ProgressBar to Syncfusion .NET MAUI ProgressBar control and more.
+title: Migrate from Xamarin to .NET MAUI  SfCircularProgressBar | Syncfusion
+description: Learn here all about Migrating from Syncfusion Xamarin SfCircularProgressBar to Syncfusion .NET MAUI SfCircularProgressBar control and more.
 platform: MAUI
-control: ProgressBar
+control: SfCircularProgressBar
 documentation: ug
 ---  
 
@@ -86,8 +86,8 @@ SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 
 <table> 
 <tr>
-<th>Xamarin ProgressBar</th>
-<th>.NET MAUI ProgressBar</th>
+<th>Xamarin SfCircularProgressBar</th>
+<th>.NET MAUI SfCircularProgressBar</th>
 <th>Description</th></tr>
 <tr>
 <td>{{'[Progress](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_Progress)'| markdownify }}</td>

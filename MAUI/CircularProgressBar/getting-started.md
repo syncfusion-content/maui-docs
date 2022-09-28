@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Getting started with .NET MAUI ProgressBar control | Syncfusion
-description: Learn here about getting started with Syncfusion .NET MAUI ProgressBar (Progress Bar) control, its elements and more.
+title: Getting started with .NET MAUI SfCircularProgressBar control | Syncfusion
+description: Learn here about getting started with Syncfusion .NET MAUI SfCircularProgressBar (Progress Bar) control, its elements and more.
 platform: MAUI
-control: ProgressBar
+control: SfCircularProgressBar
 documentation: ug
 ---
 

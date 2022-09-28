@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Animation in .NET MAUI ProgressBar control | Syncfusion
-description: Learn here all about animation support in Syncfusion .NET MAUI ProgressBar control, its elements and more.
+title: Animation in .NET MAUI SfCircularProgressBar control | Syncfusion
+description: Learn here all about animation support in Syncfusion .NET MAUI SfCircularProgressBar control, its elements and more.
 platform: MAUI
-control: ProgressBar
+control: SfCircularProgressBar
 documentation: ug
 ---
 
@@ -83,4 +83,4 @@ this.Content = circularProgressBar;
 
 ![.NET MAUI Progress Bar with indeterminate animation](images/animation/indeterminate.gif)
 
-N> Refer to our `.NET MAUI ProgressBar` feature tour page for its groundbreaking feature representations. Also explore our [.NET MAUI ProgressBar example](https://github.com/syncfusion/maui-demos/) that shows how to configure a ProgressBar in .NET MAUI.
+N> Refer to our `.NET MAUI SfCircularProgressBar` feature tour page for its groundbreaking feature representations. Also explore our [.NET MAUI SfCircularProgressBar example](https://github.com/syncfusion/maui-demos/) that shows how to configure a SfCircularProgressBar in .NET MAUI.

@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Appearance in .NET MAUI ProgressBar control | Syncfusion
-description: Learn here all about appearance support in Syncfusion .NET MAUI ProgressBar control, its elements and more.
+title: Appearance in .NET MAUI SfLinearProgressBar control | Syncfusion
+description: Learn here all about appearance support in Syncfusion .NET MAUI SfLinearProgressBar control, its elements and more.
 platform: MAUI
-control: ProgressBar
+control: SfLinearProgressBar
 documentation: ug
 ---
 
@@ -59,7 +59,7 @@ this.Content = linearProgressBar;
 
 {% endtabs %} 
 
-![.NET MAUI ProgressBar with range colors](images/appearance/range-colors.png)
+![.NET MAUI SfLinearProgressBar with range colors](images/appearance/range-colors.png)
 
 The following code sample demonstrates how to apply gradient transition effect to the range colors in the progress bar.
 
@@ -92,7 +92,7 @@ this.Content = linearProgressBar;
 
 {% endtabs %} 
 
-![.NET MAUI ProgressBar with gradient range](images/appearance/gradient.png)
+![.NET MAUI SfLinearProgressBar with gradient range](images/appearance/gradient.png)
 
 ## Thickness
 
@@ -218,4 +218,4 @@ this.Content = linearProgressBar;
 
 ![.NET MAUI Linear Progress Bar with seconday progress color customization](images/appearance/secondary-progress.png)
 
-N> Refer to our `.NET MAUI ProgressBar` feature tour page for its groundbreaking feature representations. Also explore our [.NET MAUI ProgressBar example](https://github.com/syncfusion/maui-demos/) that shows how to configure a ProgressBar in .NET MAUI.
+N> Refer to our `.NET MAUI SfLinearProgressBar` feature tour page for its groundbreaking feature representations. Also explore our [.NET MAUI SfLinearProgressBar example](https://github.com/syncfusion/maui-demos/) that shows how to configure a SfLinearProgressBar in .NET MAUI.
