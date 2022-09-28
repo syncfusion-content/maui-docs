@@ -15,7 +15,7 @@ The `SfListView` allows swiping items to achieve custom actions such as deleting
 
 It provides customizable swipe templates for swiping on the left and right sides. You can restrict the layout of the swipe view up to a certain position when swiping the item by setting the `SfListView.SwipeThreshold` property. You can set the size of the swipe views by setting the `SfListView.SwipeOffset` property.
 
-N> When tapping a swiped item, the [SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionChanging) and [SelectionChanged](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.SfListView.html#Syncfusion_ListView_XForms_SfListView_SelectionChanged) events will not occur since the swiped item is reset at this time.
+N> When tapping a swiped item, the [SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionChanging) and [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionChanged) events will not occur since the swiped item is reset at this time.
 
 ## Assigning start and end swipe templates
 
@@ -160,7 +160,7 @@ listView.StartSwipeTemplate = new DataTemplate(() =>
 {%endhighlight %}
 {% endtabs %}
 
-![Customize start swipe in .NET MAUI ListView](Images/swiping/maui-listview-working-with-multiple-views-in-swipetemplate.jpg)
+![Customize start swipe view in .NET MAUI ListView](Images/swiping/maui-listview-working-with-multiple-views-in-swipetemplate.jpg)
 
 To delete the item when `Delete` image is tapped and set favorites to an item when `Favorites` image is tapped, follow the code example shown.
 
