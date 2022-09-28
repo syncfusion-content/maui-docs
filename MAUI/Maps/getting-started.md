@@ -280,6 +280,7 @@ The [`ShapeDataField`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.
 <map:SfMaps>
     <map:SfMaps.Layer>
         <map:MapShapeLayer x:Name="layer"
+                           ShapesSource="https://cdn.syncfusion.com/maps/map-data/australia.json"
                            ShapeDataField="STATE_NAME"
                            DataSource="{Binding Data}"        
                            PrimaryValuePath="State"  />
@@ -293,7 +294,7 @@ The [`ShapeDataField`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.
 public MainPage()
 {
 	InitializeComponent();
-	this.layer.ShapesSource = MapSource.FromResource("MyProject.australia.json");
+	layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/australia.json"));
 }
 
 public class ViewModel
@@ -359,6 +360,7 @@ Add the basic maps elements such as data labels, legend, and tooltip as shown in
     <map:SfMaps>
         <map:SfMaps.Layer>
             <map:MapShapeLayer x:Name="layer"
+                               ShapesSource="https://cdn.syncfusion.com/maps/map-data/australia.json"
                                ShapeDataField="STATE_NAME"
                                DataSource="{Binding Data}"
                                PrimaryValuePath="State" 
@@ -426,7 +428,7 @@ public MainPage()
     this.BindingContext = viewModel;
     SfMaps maps = new SfMaps();
     MapShapeLayer layer = new MapShapeLayer();
-    layer.ShapesSource = MapSource.FromResource("MyProject.australia.json");
+    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/australia.json"));
     layer.DataSource = viewModel.Data;
     layer.PrimaryValuePath = "State";
     layer.ShapeDataField = "STATE_NAME";

@@ -73,30 +73,31 @@ Format or change the whole numeric label text using the [`LabelCreated`](https:/
 
 {% highlight xaml %}
 
-<sliders:SfRangeSlider Minimum="0" 
-                       Maximum="10" 
-                       RangeStart="2" 
+<sliders:SfRangeSlider Minimum="2"
+                       Maximum="10"
+                       RangeStart="4"
                        RangeEnd="8"
-                       Interval="2"   
-                       ShowLabels="True" 
-                       ShowTicks="True" 
-                       LabelCreated="OnLabelCreated">
-</sliders:SfRangeSlider>
+                       Interval="2"
+                       ShowLabels="True"
+                       ShowTicks="True"
+                       LabelCreated="OnLabelCreated" />
 
 {% endhighlight %}
 
 {% highlight C# %}
+
 {
    SfRangeSlider rangeSlider = new SfRangeSlider();
-   rangeSlider.Minimum = 0;
+   rangeSlider.Minimum = 2;
    rangeSlider.Maximum = 10;
-   rangeSlider.RangeStart = 2;
+   rangeSlider.RangeStart = 4;
    rangeSlider.RangeEnd = 8;
    rangeSlider.Interval = 2;
    rangeSlider.ShowLabels = true;
    rangeSlider.ShowTicks = true;
    rangeSlider.LabelCreated += OnLabelCreated;
 }
+
 private void OnLabelCreated(object sender, SliderLabelCreatedEventArgs e)
 {
 	e.Text = "$" + e.Text;
@@ -180,10 +181,10 @@ public class ViewModel
 
     public ViewModel()
     {
-        DragStartedCommand = new Command(DragStarted);
+        DragStartedCommand = new Command(OnDragStarted);
     }
 
-    private void DragStarted(object obj)
+    private void OnDragStarted(object obj)
     {
     }
 }
@@ -225,10 +226,10 @@ public class ViewModel
 
     public ViewModel()
     {
-        DragStartedCommand = new Command<string>(DragStarted);
+        DragStartedCommand = new Command(OnDragStarted);
     }
 
-    private void DragStarted(string value)
+    private void OnDragStarted(object obj)
     {
     }
 }
@@ -268,10 +269,10 @@ public class ViewModel
 
     public ViewModel()
     {
-        DragCompletedCommand = new Command(DragCompleted);
+        DragCompletedCommand = new Command(OnDragCompleted);
     }
 
-    private void DragCompleted(object obj)
+    private void OnDragCompleted(object obj)
     {
     }
 }
@@ -313,10 +314,10 @@ public class ViewModel
 
     public ViewModel()
     {
-        DragCompletedCommand = new Command<string>(DragCompleted);
+        DragCompletedCommand = new Command(OnDragCompleted);
     }
 
-    private void DragCompleted(string value)
+    private void OnDragCompleted(object obj)
     {
     }
 }

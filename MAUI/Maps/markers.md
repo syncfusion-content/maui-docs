@@ -23,7 +23,8 @@ You can show markers at any position on the map by providing latitude and longit
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer ShapeStroke="DarkGrey"
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                           ShapeStroke="DarkGrey"
                            ShowMarkerTooltip="True">
                             
             <map:MapShapeLayer.Markers>
@@ -73,7 +74,7 @@ public MarkerTool()
 	InitializeComponent();
 	
      MapShapeLayer layer = new MapShapeLayer();
-     layer.ShapesSource = MapSource.FromResource("MyProject.world1.shp");
+     layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
 
      MapMarker mapMarker = new MapMarker();
      mapMarker.Latitude = 20.5595;
@@ -157,7 +158,8 @@ N>
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer ShapeStroke="DarkGrey"
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                           ShapeStroke="DarkGrey"
                            ShowMarkerTooltip="True">
 
             <map:MapShapeLayer.Markers>
@@ -216,7 +218,7 @@ N>
 	{
 		InitializeComponent();
         MapShapeLayer layer = new MapShapeLayer();
-        layer.ShapesSource = MapSource.FromResource("MyProject.world1.shp");
+        layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
 
         MapMarker mapMarker = new MapMarker();
         mapMarker.Latitude = 20.5595;
@@ -310,7 +312,8 @@ You can show custom marker using the [`MarkerTemplate`](https://help.syncfusion.
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer ShapeStroke="DarkGrey"
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                           ShapeStroke="DarkGrey"
                            MarkerTemplate="{StaticResource LowPopulationTemplate}"
                            ShowMarkerTooltip="True">
 
@@ -351,7 +354,7 @@ You can show custom marker using the [`MarkerTemplate`](https://help.syncfusion.
         InitializeComponent();
 		
         MapShapeLayer layer = new MapShapeLayer();
-        layer.ShapesSource = MapSource.FromResource("MyProject.world1.shp");
+        layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
 
         MapMarker mapMarker = new MapMarker();
         mapMarker.Latitude = 20.5595;
@@ -434,7 +437,8 @@ A data template can be used to customize the marker tooltip using [`MarkerToolti
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer ShapeStroke="DarkGrey"
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                           ShapeStroke="DarkGrey"
                            ShapeHoverFill="Transparent"
                            ShapeHoverStroke="Transparent"
                            MarkerTemplate="{StaticResource MapMarkerTemplate}"
@@ -509,7 +513,7 @@ A data template can be used to customize the marker tooltip using [`MarkerToolti
         InitializeComponent();
         
         MapShapeLayer layer = new MapShapeLayer();
-        layer.ShapesSource = MapSource.FromResource("MyProject.world1.shp");
+        layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
         layer.ShapeHoverFill = Colors.Transparent;
         layer.ShapeHoverStroke = Colors.Transparent;
         CustomMarker customMarker = new CustomMarker();
@@ -694,7 +698,8 @@ A data template selector also can be used to customize the appearance of each it
 
 	<map:SfMaps>
         <map:SfMaps.Layer>
-            <map:MapShapeLayer ShapeStroke="DarkGrey"
+            <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                               ShapeStroke="DarkGrey"
                                MarkerTemplate="{StaticResource MarkerTemplateSelector}">
                                
                 <map:MapShapeLayer.Markers>

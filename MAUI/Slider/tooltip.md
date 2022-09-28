@@ -29,8 +29,10 @@ Enable tooltip for the thumb by setting the [`Tooltip`](https://help.syncfusion.
 
 {% highlight C# %}
 
-SfSlider slider = new SfSlider();
-slider.Tooltip = new SliderTooltip();
+SfSlider slider = new SfSlider()
+{
+    Tooltip = new SliderTooltip()
+};
 
 {% endhighlight %}
 
@@ -56,9 +58,13 @@ Always shows a tooltip with and without the thumb interaction by setting the [`S
 
 {% highlight C# %}
 
-SfSlider slider = new SfSlider();
-slider.Tooltip = new SliderTooltip();
-slider.Tooltip.ShowAlways = true;
+SfSlider slider = new SfSlider()
+{
+    Tooltip = new SliderTooltip()
+    {
+        ShowAlways = true,
+    }
+};
 
 {% endhighlight %}
 
@@ -77,21 +83,36 @@ Change the appearance of the tooltip using the [`Fill`](https://help.syncfusion.
 {% highlight xaml %}
 
 <sliders:SfSlider>
-  <sliders:SfSlider.Tooltip>
-    <sliders:SliderTooltip Fill="#F7B1AE" 
-                           Stroke="#EE3F3F" 
-				                   StrokeThickness="2" />
-  </sliders:SfSlider.Tooltip>
+    <sliders:SfSlider.Tooltip>
+        <sliders:SliderTooltip Fill="#DFD8F7"
+                               Stroke="#512BD4"
+                               StrokeThickness="2"
+                               TextColor="#512BD4"
+                               FontSize="14"
+                               FontAttributes="Bold"
+                               Padding="12,12"
+                               NumberFormat="0.#0" />
+    </sliders:SfSlider.Tooltip>
 </sliders:SfSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfSlider slider = new SfSlider();
-slider.Tooltip.Fill = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
-slider.Tooltip.Stroke = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
-slider.Tooltip.StrokeThickness = 2;
+SfSlider slider = new SfSlider()
+{
+    Tooltip = new SliderTooltip()
+    {
+        Fill = new SolidColorBrush(Color.FromArgb("#DFD8F7")),
+        Stroke = new SolidColorBrush(Color.FromArgb("#512BD4")),
+        StrokeThickness = 2,
+        TextColor = Color.FromArgb("#512BD4"),
+        FontSize = 14,
+        FontAttributes = FontAttributes.Bold,
+        Padding = new Thickness(12, 12),
+        NumberFormat = "0.#0",
+    }
+};
 
 {% endhighlight %}
 

@@ -19,25 +19,26 @@ The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.S
 
 {% highlight xaml %}
 
-<sliders:SfSlider Minimum="0" 
+<sliders:SfSlider Minimum="2"
                   Maximum="10"
                   Value="6"
                   Interval="2"
                   ShowLabels="True"
-                  ShowTicks="True">
-</sliders:SfSlider>
+                  ShowTicks="True" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfSlider slider = new SfSlider();
-slider.Minimum = 2;
-slider.Maximum = 10;
-slider.Value = 6;
-slider.Interval = 2;
-slider.ShowTicks = true;
-slider.ShowLabels = true;
+SfSlider slider = new SfSlider()
+{
+    Minimum = 2,
+    Maximum = 10,
+    Value = 6,
+    Interval = 2,
+    ShowLabels = true,
+    ShowTicks = true,
+};
 
 {% endhighlight %}
 
@@ -53,26 +54,28 @@ The [`NumberFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders
 
 {% highlight xaml %}
 
-<sliders:SfSlider Minimum="2" 
+<sliders:SfSlider Minimum="2"
                   Maximum="10"
                   Value="6"
-		          Interval="2"  
-		          NumberFormat="$##" 
-		          ShowLabels="True"
-                  ShowTicks="True">
-</sliders:SfSlider>
+                  Interval="2"
+                  NumberFormat="$##"
+                  ShowLabels="True"
+                  ShowTicks="True" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfSlider slider = new SfSlider();
-slider.Minimum = 2;
-slider.Maximum = 10;
-slider.Value = 6;
-slider.Interval = 2;
-slider.NumberFormat = "$##";
-slider.ShowLabels = true;
+SfSlider slider = new SfSlider()
+{
+    Minimum = 2,
+    Maximum = 10,
+    Value = 6,
+    Interval = 2,
+    NumberFormat = "$##",
+    ShowLabels = true,
+    ShowTicks = true,
+};
 
 {% endhighlight %}
 
@@ -88,27 +91,28 @@ The [`LabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slid
 
 {% highlight xaml %}
 
-<sliders:SfSlider Minimum="0" 
+<sliders:SfSlider Minimum="0"
                   Maximum="10"
                   Value="5"
-		          Interval="2"  
-		          LabelsPlacement="BetweenTicks" 
-		          ShowLabels="True" 
-		          ShowTicks="True">
-</sliders:SfSlider>
+                  Interval="2"
+                  LabelsPlacement="BetweenTicks"
+                  ShowLabels="True"
+                  ShowTicks="True" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfSlider slider = new SfSlider();
-slider.Minimum = 0;
-slider.Maximum = 10;
-slider.Value = 5;
-slider.Interval = 2;
-slider.LabelsPlacement = SliderLabelsPlacement.BetweenTicks;
-slider.ShowLabels = true;
-slider.ShowTicks = true;
+SfSlider slider = new SfSlider()
+{
+    Minimum = 0,
+    Maximum = 10,
+    Value = 5,
+    Interval = 2,
+    ShowLabels = true,
+    ShowTicks = true,
+    LabelsPlacement = SliderLabelsPlacement.BetweenTicks,
+};
 
 {% endhighlight %}
 
@@ -129,27 +133,30 @@ If the [`TrackExtent`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slide
 {% highlight xaml %}
 
 <sliders:SfSlider Minimum="100"
-                  Maximum="10000"
-                  Value="5050"
-                  Interval="2475"
-                  NumberFormat="$##.#"
-                  EdgeLabelsPlacement="Inside"
+                  Maximum="1000"
+                  Value="550"
+                  Interval="225"
                   ShowLabels="True"
-                  ShowTicks="True" />
+                  ShowTicks="True"
+                  NumberFormat="$##"
+                  EdgeLabelsPlacement="Inside" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfSlider slider = new SfSlider();
-slider.Minimum = 100;
-slider.Maximum = 10000;
-slider.Value = 5050;
-slider.Interval = 2475;
-slider.NumberFormat = "$##.#";
-slider.EdgeLabelsPlacement = SliderEdgeLabelsPlacement.Inside;
-slider.ShowLabels = true;
-slider.ShowTicks = true;
+SfSlider slider = new SfSlider()
+{
+    Minimum = 100,
+    Maximum = 100,
+    Value = 550,
+    Interval = 225,
+    ShowTicks = true,
+    ShowLabels = true,
+    ShowDividers = true,
+    NumberFormat = "$##",
+    EdgeLabelsPlacement = SliderEdgeLabelsPlacement.Inside
+};
 
 {% endhighlight %}
 
@@ -169,33 +176,37 @@ The inactive side of the slider is between the thumb and the [`Maximum`](https:/
 
 {% highlight xaml %}
 
-<sliders:SfSlider Minimum="2" 
+<sliders:SfSlider Minimum="2"
                   Maximum="10"
-                  Value="6" 
-                  Interval="2" 
-                  ShowTicks="True"  
+                  Value="6"
+                  Interval="2"
+                  ShowTicks="True"
                   ShowLabels="True">
+    
     <sliders:SfSlider.LabelStyle>
-         <sliders:SliderLabelStyle ActiveTextColor="#EE3F3F" 
-                                   InactiveTextColor="#F7B1AE" 
-	             		           ActiveFontAttributes="Italic" 
-				                   InactiveFontAttributes="Italic" 
-				                   ActiveFontSize="16" 
-				                   InactiveFontSize="16" />
+        <sliders:SliderLabelStyle ActiveTextColor="#EE3F3F"
+                                  InactiveTextColor="#F7B1AE"
+                                  ActiveFontAttributes="Italic"
+                                  InactiveFontAttributes="Italic"
+                                  ActiveFontSize="16"
+                                  InactiveFontSize="16" />
     </sliders:SfSlider.LabelStyle>
+    
 </sliders:SfSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfSlider slider = new SfSlider();
-slider.Minimum = 2;
-slider.Maximum = 10;
-slider.Value = 6;
-slider.Interval = 2;
-slider.ShowLabels = true;
-slider.ShowTicks = true;
+SfSlider slider = new SfSlider()
+{
+    Minimum = 2,
+    Maximum = 10,
+    Value = 6,
+    Interval = 2,
+    ShowLabels = true,
+    ShowTicks = true,
+};
 slider.LabelStyle.ActiveTextColor = Color.FromArgb("#EE3F3F");
 slider.LabelStyle.InactiveTextColor = Color.FromArgb("#F7B1AE");
 slider.LabelStyle.ActiveFontSize = 16;
@@ -217,28 +228,32 @@ Adjust the space between ticks and labels of the slider using the [`Offset`](htt
 
 {% highlight xaml %}
 
-<sliders:SfSlider Minimum="2" 
+<sliders:SfSlider Minimum="2"
                   Maximum="10"
-                  Value="6" 
-                  Interval="2" 
+                  Value="6"
+                  Interval="2"
                   ShowTicks="True"
                   ShowLabels="True">
+
     <sliders:SfSlider.LabelStyle>
         <sliders:SliderLabelStyle Offset="10" />
-     </sliders:SfSlider.LabelStyle>
+    </sliders:SfSlider.LabelStyle>
+
 </sliders:SfSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfSlider slider = new SfSlider();
-slider.Minimum = 2;
-slider.Maximum = 10;
-slider.Value = 6;
-slider.Interval = 2;
-slider.ShowLabels = true;
-slider.ShowTicks = true;
+SfSlider slider = new SfSlider()
+{
+    Minimum = 2,
+    Maximum = 10,
+    Value = 6,
+    Interval = 2,
+    ShowLabels = true,
+    ShowTicks = true,
+};
 slider.LabelStyle.Offset = 10;
 
 {% endhighlight %}
@@ -257,9 +272,12 @@ Change the state of the slider to disabled by setting `false` to the `IsEnabled`
 
 <ContentPage.Resources>
     <Style TargetType="sliders:SfSlider">
-        <Setter Property="Interval" Value="0.25" />
-        <Setter Property="ShowTicks" Value="True" />
-        <Setter Property="ShowLabels" Value="True" />
+        <Setter Property="Interval"
+                Value="0.25" />
+        <Setter Property="ShowTicks"
+                Value="True" />
+        <Setter Property="ShowLabels"
+                Value="True" />
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup>
@@ -267,12 +285,12 @@ Change the state of the slider to disabled by setting `false` to the `IsEnabled`
                         <VisualState.Setters>
                             <Setter Property="LabelStyle">
                                 <Setter.Value>
-                                    <sliders:SliderLabelStyle ActiveTextColor = "#EE3F3F"
-                                                                  InactiveTextColor="#F7B1AE"
-                                                                  ActiveFontSize="16"
-                                                                  InactiveFontSize="14"
-                                                                  ActiveFontAttributes="Bold"
-                                                                  InactiveFontAttributes="Italic"/>
+                                    <sliders:SliderLabelStyle ActiveTextColor="#EE3F3F"
+                                                              InactiveTextColor="#F7B1AE"
+                                                              ActiveFontSize="16"
+                                                              InactiveFontSize="14"
+                                                              ActiveFontAttributes="Bold"
+                                                              InactiveFontAttributes="Italic" />
                                 </Setter.Value>
                             </Setter>
                         </VisualState.Setters>
@@ -281,12 +299,12 @@ Change the state of the slider to disabled by setting `false` to the `IsEnabled`
                         <VisualState.Setters>
                             <Setter Property="LabelStyle">
                                 <Setter.Value>
-                                    <sliders:SliderLabelStyle ActiveTextColor = "Gray"
-                                                                  InactiveTextColor="LightGray"
-                                                                  ActiveFontSize="14"
-                                                                  InactiveFontSize="16"
-                                                                  ActiveFontAttributes="Italic"
-                                                                  InactiveFontAttributes="Bold"/>
+                                    <sliders:SliderLabelStyle ActiveTextColor="Gray"
+                                                              InactiveTextColor="LightGray"
+                                                              ActiveFontSize="14"
+                                                              InactiveFontSize="16"
+                                                              ActiveFontAttributes="Italic"
+                                                              InactiveFontAttributes="Bold" />
                                 </Setter.Value>
                             </Setter>
                         </VisualState.Setters>
@@ -299,10 +317,12 @@ Change the state of the slider to disabled by setting `false` to the `IsEnabled`
 
 <ContentPage.Content>
     <VerticalStackLayout>
-        <Label Text="Enabled Slider" Padding="0,10"/>
-        <sliders:SfSlider/>
-        <Label Text="Disabled Slider" Padding="0,10"/>
-        <sliders:SfSlider IsEnabled="False"/>
+        <Label Text="Enabled Slider"
+               Padding="0,10" />
+        <sliders:SfSlider />
+        <Label Text="Disabled Slider"
+               Padding="0,10" />
+        <sliders:SfSlider IsEnabled="False" />
     </VerticalStackLayout>
 </ContentPage.Content>
 

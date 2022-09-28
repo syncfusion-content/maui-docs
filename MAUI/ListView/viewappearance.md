@@ -187,7 +187,7 @@ public partial class MainPage : ContentPage
 
     private void ListView_ItemTapped(object sender, Syncfusion.Maui.ListView.ItemTappedEventArgs e)
     {
-        GridView.BindingContext = e.ItemData;
+        GridView.BindingContext = e.DataItem;
     }
 }
 {% endhighlight %}
