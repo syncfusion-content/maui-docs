@@ -337,7 +337,7 @@ chart.XAxes.Add(primaryAxis);
 
 ## Logarithmic Axis
 
-The [LogarithmicAxis]() uses a logarithmic scale, and it is very useful in visualizing data when the data range of a chart’s series has significant disparity. It can be used either on the x-axis or the chart's y-axis. The Logarithmic Axis does not support zero or negative values. The following code example demonstrates how to set the logarithmic axis in the chart.
+The [LogarithmicAxis]() uses a logarithmic scale, and it is very useful in visualising data when the data range of a chart’s series has a big difference. It can be used either on the x-axis or the chart's y-axis. The logarithmic axis cannot be plotted with zero or negative values. The following code example demonstrates how to set the logarithmic axis in the chart.
 
 {% tabs %}
 
@@ -408,7 +408,7 @@ chart.YAxes.Add(new LogarithmicAxis() {
 
 ### Logarithmic base
 
-The log axis base can be customized using the [LogarithmicBase]() property of the axis. By default, the base of a logarithmic axis is set to 10. You can, however, set the base to any value that meets your requirements. Just ensure that the base value is any positive number greater than 1 and cannot be a decimal number. The following code example demonstrates the logarithmic values in the y-axis calculated from base 2.
+The log axis base can be customized using the [LogarithmicBase]() property of the axis. By default, the base of a logarithmic axis is 10. The base can be set to a value that meets your needs. The base value should be greater than 1 and it cannot be a decimal number. The following code example demonstrates the logarithmic values in the y-axis calculated from base 2.
 
 {% tabs %}
 
@@ -434,7 +434,7 @@ chart.YAxes.Add(new LogarithmicAxis( ) { LogarithmicBase = 2 });
 
 ### Logarithmic interval
 
-The logarithmic interval can be customized using the [Interval]() property of the axis. In the logarithmic axis, the interval is based on powers. When the logarithmic base is 10 and the logarithmic interval is 1, then the axis labels are placed at an interval of 10. i.e., 1, 10, 100, 1000, etc. When the logarithmic interval is 2, then the axis labels are placed at an interval of 10^2. i.e., 1, 100, 1000, etc. The default value of the interval is 1, and it cannot be a decimal number.
+The logarithmic interval can be customized using the [Interval]() property of the axis. A power-based interval is used for the logarithmic axis. When the logarithmic base is 10 and the logarithmic interval is 1, then the axis labels are placed at an interval of 10. i.e., 1, 10, 100, 1000, etc. When the logarithmic interval is 2, then the axis labels are placed at an interval of 10^2. i.e., 1, 100, 1000, etc. The default value of the interval is 1, and it cannot be a decimal number.
 
 {% tabs %}
 
