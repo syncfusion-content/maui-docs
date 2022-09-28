@@ -118,6 +118,8 @@ this.Content = linearProgressBar;
 
 {% endtabs %} 
 
+![.NET MAUI linear progress bar in indeterminate state](images/getting-started/linear-progressbar-indeterminate.gif)
+
 ## Enable segments
 
 To visualize the progress of a multiple sequential task, split the linear progress bar into the multiple segments by defining the `SegmentCount` property as demonstrated in the following code sample.

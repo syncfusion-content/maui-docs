@@ -118,6 +118,8 @@ this.Content = circularProgressBar;
 
 {% endtabs %} 
 
+![.NET MAUI circular progress bar in indeterminate state](images/getting-started/circular-progressbar-indeterminate.gif)
+
 ## Enable segments
 
 To visualize the progress of a multiple sequential task, split the circular progress bar into the multiple segments by defining the `SegmentCount` property as demonstrated in the following code sample.
