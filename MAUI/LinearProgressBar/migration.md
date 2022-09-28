@@ -43,8 +43,6 @@ using Syncfusion.XForms.ProgressBar;
 
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 
-SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
-
 ...
 
 {% endhighlight %}
@@ -146,170 +144,6 @@ SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 <td>{{'[IndeterminateIndicatorWidth](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_IndeterminateIndicatorWidth)'| markdownify }}</td>
 <td>{{'IndeterminateIndicatorWidthFactor'| markdownify }}</td>
 <td>Gets or sets the value that specifies width of the indeterminate indicator.</td></tr>
-</table> 
-
-The following code example explains how to use the common properties in the Xamarin progress bar and the .NET MAUI progress bar.
-
-<table>
-<tr>
-<th>Xamarin</th>
-</tr>
-<tr>
-<td>
-{% tabs %} 
-{% highlight xaml %}
-
-<ContentPage
-    xmlns:progressBar="clr-namespace:Syncfusion.XForms.ProgressBar;assembly=Syncfusion.SfProgressBar.XForms">
-
-    ...     
-<progressBar:SfLinearProgressBar EasingEffect="CubicOut"
-                                 GapWidth="5"
-                                 SegmentCount="4"
-                                 IndeterminateEasingEffect="BounceIn"
-                                 IndeterminateIndicatorWidth="0.7"
-                                 ProgressColor="Red"
-                                 TrackColor="Violet"
-                                 Progress="75"
-                                 IsIndeterminate="False"
-                                 Minimum="10"
-                                 Maximum="90"
-                                 AnimationDuration="1500"
-                                 IndeterminateAnimationDuration="2000">
-    <progressBar:SfLinearProgressBar.RangeColors>
-        <progressBar:RangeColorCollection>
-            <progressBar:RangeColor IsGradient="True" Color="#00bdaf" Start="0" End="25"/>
-            <progressBar:RangeColor IsGradient="True" Color="#2f7ecc" Start="25" End="50"/>
-        </progressBar:RangeColorCollection>
-    </progressBar:SfLinearProgressBar.RangeColors>
-</progressBar:SfLinearProgressBar>
-    ...
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-using Syncfusion.XForms.ProgressBar;
-
-...
-
-SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
-linearProgressBar.Progress = 75;
-linearProgressBar.EasingEffect = EasingEffects.CubicOut;
-linearProgressBar.GapWidth = 5;
-linearProgressBar.SegmentCount = 4;
-linearProgressBar.IndeterminateEasingEffect = IndeterminateEasingEffects.BounceIn;
-linearProgressBar.IndeterminateIndicatorWidth = 0.7;
-linearProgressBar.ProgressColor = Color.Red;
-linearProgressBar.TrackColor = Color.Violet;
-linearProgressBar.IsIndeterminate = false;
-linearProgressBar.Minimum = 10;
-linearProgressBar.Maximum = 90;
-linearProgressBar.AnimationDuration = 1500;
-linearProgressBar.IndeterminateAnimationDuration = 2000;
-linearProgressBar.RangeColors.Add(
-    new RangeColor
-    {
-        Color = Color.FromHex("00bdaf"),
-        Start = 0,
-        End = 50,
-        IsGradient = true
-    });
-linearProgressBar.RangeColors.Add(
-    new RangeColor
-    {
-        Color = Color.FromHex("2f7ecc"),
-        Start = 50,
-        End = 100,
-        IsGradient = true
-    });
-this.Content = linearProgressBar;
-
-...
-{% endhighlight %}
-{% endtabs %}
-</td>
-</tr>
-<tr>
-<th>.NET MAUI</th>
-</tr>
-<tr>
-<td>
-{% tabs %} 
-
-{% highlight xaml %}
-
-<ContentPage
-    xmlns:progressBar="clr-namespace:Syncfusion.Maui.ProgressBar;assembly=Syncfusion.Maui.ProgressBar">
-
-...
- <progressBar:SfLinearProgressBar AnimationEasing="{x:Static Easing.CubicOut}"
-                                  SegmentGapWidth="5"
-                                  SegmentCount="4"
-                                  IndeterminateAnimationEasing="{x:Static Easing.BounceIn}"
-                                  IndeterminateIndicatorWidthFactor="0.7"
-                                  ProgressFill="Red"
-                                  TrackFill="Violet"
-                                  Progress="75"
-                                  IsIndeterminate="False"
-                                  Minimum="10"
-                                  Maximum="90"
-                                  AnimationDuration="1500"
-                                  IndeterminateAnimationDuration="2000">
-     <progressBar:SfLinearProgressBar.GradientStops>
-         <progressBar:ProgressGradientStop Color="#00bdaf" Value="0"/>
-         <progressBar:ProgressGradientStop Color="#2f7ecc" Value="50"/>
-     </progressBar:SfLinearProgressBar.GradientStops>
-     
- </progressBar:SfLinearProgressBar>
-...
-
-</ContentPage>
- 
-{% endhighlight %}
-
-{% highlight C# %}
-
-using Syncfusion.Maui.ProgressBar;
-...
-//Snippet for the linear progress bar
-
-SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
-linearProgressBar.AnimationEasing = Easing.CubicOut;
-linearProgressBar.Progress = 75;
-linearProgressBar.Minimum = 10;
-linearProgressBar.Maximum = 90;
-linearProgressBar.SegmentGapWidth = 5;
-linearProgressBar.SegmentCount = 4;
-linearProgressBar.IndeterminateAnimationEasing = Easing.BounceIn;
-linearProgressBar.IndeterminateIndicatorWidthFactor = 0.7;
-linearProgressBar.AnimationDuration = 1500;
-linearProgressBar.IndeterminateAnimationDuration = 2000;
-linearProgressBar.IsIndeterminate = false;
-linearProgressBar.ProgressFill = Colors.Red;
-linearProgressBar.TrackFill = Colors.Violet;
-linearProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("00bdaf"), Value = 0 });
-linearProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("2f7ecc"), Value = 50 });
-this.Content = linearProgressBar;
-
-...
-
-{% endhighlight %}
-
-{% endtabs %}
-</td>
-</tr>
-</table>
-
-
-## SfLinearProgressBar
-
-<table> 
-<tr>
-<th>Xamarin ProgressBar</th>
-<th>.NET MAUI ProgressBar</th>
-<th>Description</th></tr>
 <tr>
 <td>{{'[SecondaryProgress](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfLinearProgressBar.html#Syncfusion_XForms_ProgressBar_SfLinearProgressBar_SecondaryProgress)'| markdownify }}</td>
 <td>{{'SecondaryProgress'| markdownify }}</td>
@@ -330,118 +164,6 @@ this.Content = linearProgressBar;
 <td>{{'[SecondaryAnimationDuration](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfLinearProgressBar.html#Syncfusion_XForms_ProgressBar_SfLinearProgressBar_SecondaryAnimationDuration)'| markdownify }}</td>
 <td>{{'SecondaryAnimationDuration'| markdownify }}</td>
 <td>Gets or sets a value that specifies the secondary progress animation duration in milliseconds.</td></tr>
-
-</table> 
-
-The following code example explains how to initialize the Xamarin SfLinearProgressBar and the .NET MAUI SfLinearProgressBar along with its properties.
-
-<table>
-<tr>
-<th>Xamarin</th>
-</tr>
-<tr>
-<td>
-{% tabs %} 
-{% highlight xaml %}
-<ContentPage
-    xmlns:progressBar="clr-namespace:Syncfusion.XForms.ProgressBar;assembly=Syncfusion.SfProgressBar.XForms">
-
-...     
-<progressBar:SfLinearProgressBar CornerRadius="5"
-                                 SecondaryProgressColor="Yellow"
-                                 SecondaryProgress="50"
-                                 TrackHeight="10"
-                                 SecondaryAnimationDuration="2000"
-                                 >
-
-</progressBar:SfLinearProgressBar>
-...
-</ContentPage>
-{% endhighlight %}
-
-{% highlight C# %}
-
-using Syncfusion.XForms.ProgressBar;
-
-...
-
-SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
-linearProgressBar.CornerRadius = 5;
-linearProgressBar.SecondaryProgressColor = Color.Yellow;
-linearProgressBar.SecondaryProgress = 50;
-linearProgressBar.TrackHeight = 10;
-linearProgressBar.SecondaryAnimationDuration = 2000;
-this.Content = linearProgressBar;
-
-...
-{% endhighlight %}
-{% endtabs %}
-</td>
-</tr>
-<tr>
-<th>.NET MAUI</th>
-</tr>
-<tr>
-<td>
-{% tabs %} 
-
-{% highlight xaml %}
-
-<ContentPage
-    xmlns:progressBar="clr-namespace:Syncfusion.Maui.ProgressBar;assembly=Syncfusion.Maui.ProgressBar">
-
-...
-<progressBar:SfLinearProgressBar ProgressCornerRadius="5,5,5,5"
-                                 TrackCornerRadius="5,5,5,5"
-                                 SecondaryProgressCornerRadius="5,5,5,5"
-                                 SecondaryProgressFill="Yellow"
-                                 SecondaryProgress="50"
-                                 TrackHeight="10"
-                                 ProgressHeight="10"
-                                 SecondaryProgressHeight="10"
-                                 SecondaryAnimationDuration="2000"
-                                 >
-    
-</progressBar:SfLinearProgressBar>
-...
-
-</ContentPage>
- 
-{% endhighlight %}
-
-{% highlight C# %}
-
-using Syncfusion.Maui.ProgressBar;
-...
-
-SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
-linearProgressBar.ProgressCornerRadius = new CornerRadius(5, 5, 5, 5);
-linearProgressBar.TrackCornerRadius = new CornerRadius(5, 5, 5, 5);
-linearProgressBar.SecondaryProgressCornerRadius = new CornerRadius(5, 5, 5, 5);
-linearProgressBar.SecondaryProgressFill = Colors.Yellow;
-linearProgressBar.SecondaryProgress = 50;
-linearProgressBar.TrackHeight = 10;
-linearProgressBar.ProgressHeight = 10;
-linearProgressBar.SecondaryProgressHeight = 10;
-linearProgressBar.SecondaryAnimationDuration = 2000;
-this.Content = linearProgressBar;
-
-... 
-
-{% endhighlight %}
-
-{% endtabs %}
-</td>
-</tr>
-</table>
-
-## Events
-
-<table> 
-<tr>
-<th>Xamarin ProgressBar</th>
-<th>.NET MAUI ProgressBar</th>
-<th>Description</th></tr>
 <tr>
 <td>{{'[ValueChanged](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_ValueChanged)'| markdownify }}</td>
 <td>{{'ProgressChanged'| markdownify }}</td>
@@ -450,9 +172,10 @@ this.Content = linearProgressBar;
 <td>{{'[ProgressCompleted](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_ProgressCompleted)'| markdownify }}</td>
 <td>{{'ProgressCompleted'| markdownify }}</td>
 <td>The progress completed event occurs when Progress value attains Maximum value in ProgressBar.</td></tr>
+
 </table> 
 
-The following code example explains how to utilize the Xamarin progress bar and the .NET MAUI progress bar progress changed and progress completed event.
+The following code example explains how to use the properties in the Xamarin linear progress bar and the .NET MAUI linear progress bar.
 
 <table>
 <tr>
@@ -466,32 +189,36 @@ The following code example explains how to utilize the Xamarin progress bar and 
 <ContentPage
     xmlns:progressBar="clr-namespace:Syncfusion.XForms.ProgressBar;assembly=Syncfusion.SfProgressBar.XForms">
 
-...    
-
-<!--Snippet for the value changed event-->
-
+    ...     
 <progressBar:SfLinearProgressBar x:Name="LinearProgressBar" 
-                                 ValueChanged="LinearProgressBar_ValueChanged" 
-                                 Progress="100" />
-
-<!--Snippet for the progress completed event-->
-
-<progressBar:SfCircularProgressBar Minimum="100" 
-                               Maximum="500" 
-                               ProgressCompleted="SfCircularProgressBar_ProgressCompleted" 
-                               Progress="500">
-    <progressBar:SfCircularProgressBar.Content>
-        <Grid WidthRequest="150">
-            <Label x:Name="Label" 
-               Text="Start" 
-               FontSize="15"
-               HorizontalTextAlignment="Center" 
-               VerticalTextAlignment="Center" />
-        </Grid>
-    </progressBar:SfCircularProgressBar.Content>
-
-
-...
+                                 EasingEffect="CubicOut"
+                                 GapWidth="5"
+                                 SegmentCount="4"
+                                 IndeterminateEasingEffect="BounceIn"
+                                 IndeterminateIndicatorWidth="0.7"
+                                 ProgressColor="Red"
+                                 TrackColor="Violet"
+                                 ValueChanged="LinearProgressBar_ValueChanged"
+                                 ProgressCompleted="LinearProgressBar_ProgressCompleted"
+                                 Progress="100"
+                                 IsIndeterminate="False"
+                                 Minimum="10"
+                                 Maximum="90"
+                                 AnimationDuration="1500"
+                                 IndeterminateAnimationDuration="2000"
+                                 CornerRadius="5"
+                                 SecondaryProgressColor="Yellow"
+                                 SecondaryProgress="50"
+                                 TrackHeight="10"
+                                 SecondaryAnimationDuration="2000">
+    <progressBar:SfLinearProgressBar.RangeColors>
+        <progressBar:RangeColorCollection>
+            <progressBar:RangeColor IsGradient="True" Color="#00bdaf" Start="0" End="25"/>
+            <progressBar:RangeColor IsGradient="True" Color="#2f7ecc" Start="25" End="50"/>
+        </progressBar:RangeColorCollection>
+    </progressBar:SfLinearProgressBar.RangeColors>
+</progressBar:SfLinearProgressBar>
+    ...
 </ContentPage>
 
 {% endhighlight %}
@@ -502,25 +229,17 @@ using Syncfusion.XForms.ProgressBar;
 
 ...
 
-private void LinearProgressBar_ValueChanged(object sender, ProgressValueEventArgs e)
-{
-    if (e.Progress < 50)
-    {
-        this.LinearProgressBar.ProgressColor = Color.Red;
-    }
-    else if (e.Progress >= 50)
-    {
-        this.LinearProgressBar.ProgressColor = Color.Green;
-    }
-}
+ private void LinearProgressBar_ValueChanged(object sender, ProgressValueEventArgs e)
+ {
+     var value = e.Progress;
+ }
 
-private void SfCircularProgressBar_ProgressCompleted(object sender, ProgressValueEventArgs e)
-{
-    this.Label.Text = "Completed";
-}
+ private void LinearProgressBar_ProgressCompleted(object sender, ProgressValueEventArgs e)
+ {
+     var value = e.Progress;
+ }
 
 ...
-
 {% endhighlight %}
 {% endtabs %}
 </td>
@@ -538,29 +257,38 @@ private void SfCircularProgressBar_ProgressCompleted(object sender, ProgressValu
     xmlns:progressBar="clr-namespace:Syncfusion.Maui.ProgressBar;assembly=Syncfusion.Maui.ProgressBar">
 
 ...
+ 
+ <progressBar:SfLinearProgressBar x:Name="LinearProgressBar" 
+                                 AnimationEasing="{x:Static Easing.CubicOut}"
+                                 SegmentGapWidth="5"
+                                 SegmentCount="4"
+                                 IndeterminateAnimationEasing="{x:Static Easing.BounceIn}"
+                                 IndeterminateIndicatorWidthFactor="0.7"
+                                 ProgressFill="Red"
+                                 TrackFill="Violet"
+                                 ProgressChanged="LinearProgressBar_ProgressChanged"
+                                 ProgressCompleted="LinearProgressBar_ProgressCompleted"
+                                 Progress="75"
+                                 IsIndeterminate="False"
+                                 Minimum="10"
+                                 Maximum="90"
+                                 AnimationDuration="1500"
+                                 IndeterminateAnimationDuration="2000"
+                                 ProgressCornerRadius="5"
+                                 TrackCornerRadius="5"
+                                 SecondaryProgressCornerRadius="5"
+                                 SecondaryProgressFill="Yellow"
+                                 SecondaryProgress="50"
+                                 TrackHeight="10"
+                                 ProgressHeight="10"
+                                 SecondaryProgressHeight="10"
+                                 SecondaryAnimationDuration="2000">
+    <progressBar:SfLinearProgressBar.GradientStops>
+        <progressBar:ProgressGradientStop Color="#00bdaf" Value="0"/>
+        <progressBar:ProgressGradientStop Color="#2f7ecc" Value="50"/>
+    </progressBar:SfLinearProgressBar.GradientStops>
 
-<!--Snippet for the progress changed event-->
-
-<progressBar:SfLinearProgressBar x:Name="LinearProgressBar" 
-                                 ProgressChanged="LinearProgressBar_ProgressChanged" 
-                                 Progress="100" />
-
-<!--Snippet for the progress completed event-->
-
-<progressBar:SfCircularProgressBar Minimum="100" 
-                                   Maximum="500" 
-                                   ProgressCompleted="CircularProgressBar_ProgressCompleted" 
-                                   Progress="500">
-    <progressBar:SfCircularProgressBar.Content>
-        <Grid WidthRequest="150">
-            <Label x:Name="Label" 
-                   Text="Start" 
-                   FontSize="15"
-                   HorizontalTextAlignment="Center" 
-                   VerticalTextAlignment="Center" />
-        </Grid>
-    </progressBar:SfCircularProgressBar.Content>
-</progressBar:SfCircularProgressBar>
+</progressBar:SfLinearProgressBar>
 
 ...
 
@@ -575,21 +303,16 @@ using Syncfusion.Maui.ProgressBar;
 
 private void LinearProgressBar_ProgressChanged(object sender, ProgressValueEventArgs e)
 {
-    if (e.Progress < 50)
-    {
-        this.LinearProgressBar.ProgressFill = Colors.Red;
-    }
-    else if (e.Progress >= 50)
-    {
-        this.LinearProgressBar.ProgressFill = Colors.Green;
-    }
+    var value = e.Progress;
 }
 
-private void CircularProgressBar_ProgressCompleted(object sender, ProgressValueEventArgs e)
+private void LinearProgressBar_ProgressCompleted(object sender, ProgressValueEventArgs e)
 {
-    this.Label.Text = "Completed";
+    var value = e.Progress;
 }
+
 ...
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -598,7 +321,5 @@ private void CircularProgressBar_ProgressCompleted(object sender, ProgressValueE
 </table>
 
 ## Unsupported features from Xamarin.Forms
-
-* [`ShowProgressValue`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfCircularProgressBar.html#Syncfusion_XForms_ProgressBar_SfCircularProgressBar_ShowProgressValue) support has not been provided in the SfCircularProgressBar. Instead, you can achieve it using the `Content` property. Please visit the Custom Content page for more details about the `Content` property.
 
 * [`Padding`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfLinearProgressBar.html#Syncfusion_XForms_ProgressBar_SfLinearProgressBar_Padding) support has not been provided in the SfLinearProgressBar.

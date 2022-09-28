@@ -97,7 +97,7 @@ N> By default, the value of progress should be specified between 0 and 100. To d
 
 Run the project, and check if you get following output to make sure that the project has been configured properly to add the progress bar.
 
-![.NET MAUI linear progress bar and circular progress bar](images/getting-started/progress-bar.png)
+![.NET MAUI circular progress bar](images/getting-started/progress-bar.png)
 
 ## Enabling indeterminate state
 
@@ -141,7 +141,7 @@ this.Content = circularProgressBar;
 
 {% endtabs %}
 
-![.NET MAUI linear progress bar and circular progress bar visualized with multiple sequential task](images/getting-started/segment.png)
+![.NET MAUI circular progress bar visualized with multiple sequential task](images/getting-started/segment.png)
 
 ## Apply colors
 
@@ -181,7 +181,7 @@ SfCircularProgressBar sfCircularProgressBar = new SfCircularProgressBar
 
 {% endtabs %} 
 
-![.NET MAUI linear progress bar and circular progress bar with customized colors](images/getting-started/style.png)
+![.NET MAUI circular progress bar with customized colors](images/getting-started/style.png)
 
 N> 
 * Get the complete getting started sample from `GitHub` link.
