@@ -337,7 +337,7 @@ chart.XAxes.Add(primaryAxis);
 
 ## Logarithmic Axis
 
-The [LogarithmicAxis]() uses a logarithmic scale, and it is very useful in visualising data when the data range of a chart’s series has a big difference. It can be used either on the x-axis or the chart's y-axis. The logarithmic axis cannot be plotted with zero or negative values. The following code example demonstrates how to set the logarithmic axis in the chart.
+The [LogarithmicAxis]() uses a logarithmic scale, and it is very useful in visualising data when the given data range has a big difference. It can be used either on the x-axis or the chart's y-axis. The logarithmic axis cannot be plotted with zero or negative values. The following code example demonstrates how to set the logarithmic axis in the chart.
 
 {% tabs %}
 
