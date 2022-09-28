@@ -316,6 +316,17 @@ Change the state of the DateTime Range Slider to disabled by setting `false` to 
                                                               InactiveFontAttributes="Bold" />
                                 </Setter.Value>
                             </Setter>
+                            <Setter Property="ThumbStyle">
+                                <Setter.Value>
+                                    <sliders:SliderThumbStyle Fill="Gray" />
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="TrackStyle">
+                                <Setter.Value>
+                                    <sliders:SliderTrackStyle ActiveFill="Gray"
+                                                              InactiveFill="LightGray" />
+                                </Setter.Value>
+                            </Setter>
                         </VisualState.Setters>
                     </VisualState>
                 </VisualStateGroup>
@@ -326,11 +337,11 @@ Change the state of the DateTime Range Slider to disabled by setting `false` to 
 
 <ContentPage.Content>
     <VerticalStackLayout>
-        <Label Text="Enabled Range Slider"
-               Padding="0,10" />
+        <Label Text="Enabled"
+               Padding="10" />
         <sliders:SfDateTimeRangeSlider />
-        <Label Text="Disabled Range Slider"
-               Padding="0,10" />
+        <Label Text="Disabled"
+               Padding="10" />
         <sliders:SfDateTimeRangeSlider IsEnabled="False" />
     </VerticalStackLayout>
 </ContentPage.Content>
@@ -339,33 +350,33 @@ Change the state of the DateTime Range Slider to disabled by setting `false` to 
 
 {% highlight C# %}
 
-VerticalStackLayout stackLayout = new VerticalStackLayout();
-SfDateTimeRangeSlider defaultRangeSlider = new SfDateTimeRangeSlider()
+VerticalStackLayout stackLayout = new();
+SfDateTimeRangeSlider defaultRangeSlider = new()
 {
     Minimum = new DateTime(2010, 01, 01),
     Maximum = new DateTime(2018, 01, 01),
     RangeStart = new DateTime(2012, 01, 01),
     RangeEnd = new DateTime(2016, 01, 01),
-    Interval = 2, 
-    ShowTicks = true, 
+    Interval = 2,
+    ShowTicks = true,
     ShowLabels = true
 };
-SfDateTimeRangeSlider disabledRangeSlider = new SfDateTimeRangeSlider()
+SfDateTimeRangeSlider disabledRangeSlider = new()
 {
     Minimum = new DateTime(2010, 01, 01),
     Maximum = new DateTime(2018, 01, 01),
     RangeStart = new DateTime(2012, 01, 01),
     RangeEnd = new DateTime(2016, 01, 01),
-    IsEnabled = false, 
-    Interval = 2, 
-    ShowTicks = true, 
+    IsEnabled = false,
+    Interval = 2,
+    ShowTicks = true,
     ShowLabels = true
 };
 
-VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
-VisualStateGroup commonStateGroup = new VisualStateGroup();
+VisualStateGroupList visualStateGroupList = new();
+VisualStateGroup commonStateGroup = new();
 // Default State.
-VisualState defaultState = new VisualState { Name = "Default" };
+VisualState defaultState = new() { Name = "Default" };
 defaultState.Setters.Add(new Setter
 {
     Property = SfDateTimeRangeSlider.LabelStyleProperty,
@@ -376,6 +387,7 @@ defaultState.Setters.Add(new Setter
         ActiveTextColor = Color.FromArgb("#EE3F3F"),
         InactiveTextColor = Color.FromArgb("#F7B1AE"),
         ActiveFontAttributes = FontAttributes.Bold,
+        InactiveFontAttributes = FontAttributes.Italic,
     }
 });
 // Disabled State.
@@ -389,7 +401,25 @@ disabledState.Setters.Add(new Setter
         InactiveFontSize = 14,
         ActiveTextColor = Color.FromArgb("#EE3F3F"),
         InactiveTextColor = Color.FromArgb("#F7B1AE"),
-        ActiveFontAttributes = FontAttributes.Bold,
+        ActiveFontAttributes = FontAttributes.Italic,
+        InactiveFontAttributes = FontAttributes.Bold,
+    }
+});
+disabledState.Setters.Add(new Setter
+{
+    Property = SfDateTimeRangeSlider.ThumbStyleProperty,
+    Value = new SliderThumbStyle
+    {
+        Fill = Colors.Gray,
+    }
+});
+disabledState.Setters.Add(new Setter
+{
+    Property = SfDateTimeRangeSlider.TrackStyleProperty,
+    Value = new SliderTrackStyle
+    {
+        ActiveFill = Colors.Gray,
+        InactiveFill = Colors.LightGray,
     }
 });
 
@@ -399,9 +429,9 @@ visualStateGroupList.Add(commonStateGroup);
 VisualStateManager.SetVisualStateGroups(defaultRangeSlider, visualStateGroupList);
 VisualStateManager.SetVisualStateGroups(disabledRangeSlider, visualStateGroupList);
 
-stackLayout.Children.Add(new Label() { Text = "Enabled Range Slider", Padding = new Thickness(0, 10) });
+stackLayout.Children.Add(new Label() { Text = "Enabled", Padding = new Thickness(10) });
 stackLayout.Children.Add(defaultRangeSlider);
-stackLayout.Children.Add(new Label() { Text = "Disabled Range Slider", Padding = new Thickness(0, 10) });
+stackLayout.Children.Add(new Label() { Text = "Disabled", Padding = new Thickness(10) });
 stackLayout.Children.Add(disabledRangeSlider);
 this.Content = stackLayout;
 

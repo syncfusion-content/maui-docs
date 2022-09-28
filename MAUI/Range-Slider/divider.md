@@ -268,8 +268,8 @@ enabledState.Setters.Add(new Setter
     Property = SfRangeSlider.DividerStyleProperty,
     Value = new SliderDividerStyle
     {
-        ActiveFill = Color.FromArgb("#F7B1AE"),
-        InactiveFill = Color.FromArgb("#EE3F3F"),
+        ActiveFill = Color.FromArgb("#EE3F3F"),
+        InactiveFill = Color.FromArgb("#88EE3F3F"),
         ActiveRadius = 5,
         InactiveRadius = 4,
     }

@@ -141,9 +141,11 @@ SfRangeSlider rangeSlider = new SfRangeSlider()
 
 **Without track extent**
 
+![RangeSlider track extent before](images/track/track-extent-before-image.png)
+
 **With track extent**
 
-![RangeSlider track extent](images/track/track-extent.png)
+![RangeSlider track extent after](images/track/track-extent-after-image.png)
 
 ## Disabled track
 

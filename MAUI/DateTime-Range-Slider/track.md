@@ -166,9 +166,11 @@ rangeSlider.TrackExtent = 25;
 
 **Without track extent**
 
+![RangeSlider track extent before](images/track/track-extent-before-image.png)
+
 **With track extent**
 
-![RangeSlider track extent](images/track/track-extent.png)
+![RangeSlider track extent after](images/track/track-extent-after-image.png)
 
 ## Disabled track
 
@@ -188,6 +190,9 @@ Change the state of the DateTime Range Slider to disabled by setting `false` to 
                 Value="2012-01-01" />
         <Setter Property="RangeEnd"
                 Value="2016-01-01" />
+        <Setter Property="ThumbStyle">
+            <sliders:SliderThumbStyle Radius="0" />
+        </Setter>
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup>
@@ -195,10 +200,10 @@ Change the state of the DateTime Range Slider to disabled by setting `false` to 
                         <VisualState.Setters>
                             <Setter Property="TrackStyle">
                                 <Setter.Value>
-                                    <sliders:SliderTrackStyle ActiveSize="8" 
-                                                                  InactiveSize="6" 
-                                                                  ActiveFill="#EE3F3F" 
-                                                                  InactiveFill="#F7B1AE" />
+                                    <sliders:SliderTrackStyle ActiveSize="8"
+                                                              InactiveSize="6"
+                                                              ActiveFill="#EE3F3F"
+                                                              InactiveFill="#F7B1AE" />
                                 </Setter.Value>
                             </Setter>
                         </VisualState.Setters>
@@ -207,10 +212,10 @@ Change the state of the DateTime Range Slider to disabled by setting `false` to 
                         <VisualState.Setters>
                             <Setter Property="TrackStyle">
                                 <Setter.Value>
-                                    <sliders:SliderTrackStyle ActiveSize="10" 
-                                                                  InactiveSize="8"
-                                                                  ActiveFill="Gray" 
-                                                                  InactiveFill="LightGray" />
+                                    <sliders:SliderTrackStyle ActiveSize="10"
+                                                              InactiveSize="8"
+                                                              ActiveFill="Gray"
+                                                              InactiveFill="LightGray" />
                                 </Setter.Value>
                             </Setter>
                         </VisualState.Setters>
@@ -223,10 +228,12 @@ Change the state of the DateTime Range Slider to disabled by setting `false` to 
 
 <ContentPage.Content>
     <VerticalStackLayout>
-        <Label Text="Enabled Range Slider" Padding="0,10"/>
+        <Label Text="Enabled"
+               Padding="24,10" />
         <sliders:SfDateTimeRangeSlider />
-        <Label Text="Disabled Range Slider" Padding="0,10"/>
-        <sliders:SfDateTimeRangeSlider IsEnabled="False"/>
+        <Label Text="Disabled"
+               Padding="24,10" />
+        <sliders:SfDateTimeRangeSlider IsEnabled="False" />
     </VerticalStackLayout>
 </ContentPage.Content>
 
@@ -234,27 +241,27 @@ Change the state of the DateTime Range Slider to disabled by setting `false` to 
 
 {% highlight C# %}
 
-VerticalStackLayout stackLayout = new VerticalStackLayout();
-SfDateTimeRangeSlider defaultRangeSlider = new SfDateTimeRangeSlider()
+VerticalStackLayout stackLayout = new();
+SfDateTimeRangeSlider defaultRangeSlider = new()
 {
     Minimum = new DateTime(2010, 01, 01),
     Maximum = new DateTime(2018, 01, 01),
     RangeStart = new DateTime(2012, 01, 01),
     RangeEnd = new DateTime(2016, 01, 01),
 };
-SfDateTimeRangeSlider disabledRangeSlider = new SfDateTimeRangeSlider()
+SfDateTimeRangeSlider disabledRangeSlider = new()
 {
     Minimum = new DateTime(2010, 01, 01),
     Maximum = new DateTime(2018, 01, 01),
     RangeStart = new DateTime(2012, 01, 01),
     RangeEnd = new DateTime(2016, 01, 01),
-    IsEnabled = false, 
+    IsEnabled = false,
 };
 
-VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
-VisualStateGroup commonStateGroup = new VisualStateGroup();
+VisualStateGroupList visualStateGroupList = new();
+VisualStateGroup commonStateGroup = new();
 // Default State.
-VisualState defaultState = new VisualState { Name = "Default" };
+VisualState defaultState = new() { Name = "Default" };
 defaultState.Setters.Add(new Setter
 {
     Property = SfDateTimeRangeSlider.TrackStyleProperty,
@@ -267,7 +274,7 @@ defaultState.Setters.Add(new Setter
     }
 });
 // Disabled State.
-VisualState disabledState = new VisualState { Name = "Disabled" };
+VisualState disabledState = new() { Name = "Disabled" };
 disabledState.Setters.Add(new Setter
 {
     Property = SfDateTimeRangeSlider.TrackStyleProperty,
@@ -286,9 +293,9 @@ visualStateGroupList.Add(commonStateGroup);
 VisualStateManager.SetVisualStateGroups(defaultRangeSlider, visualStateGroupList);
 VisualStateManager.SetVisualStateGroups(disabledRangeSlider, visualStateGroupList);
 
-stackLayout.Children.Add(new Label() { Text = "Default Range Slider", Padding = new Thickness(0, 10) });
+stackLayout.Children.Add(new Label() { Text = "Enabled", Padding = new Thickness(24, 10) });
 stackLayout.Children.Add(defaultRangeSlider);
-stackLayout.Children.Add(new Label() { Text = "Disabled Range Slider", Padding = new Thickness(0, 10) });
+stackLayout.Children.Add(new Label() { Text = "Disabled Range Slider", Padding = new Thickness(24, 10) });
 stackLayout.Children.Add(disabledRangeSlider);
 this.Content = stackLayout;
 

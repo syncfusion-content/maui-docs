@@ -145,9 +145,11 @@ SfSlider slider = new SfSlider()
 
 **Without track extent**
 
+![Slider track extent before](images/track/track-extent-before-image.png)
+
 **With track extent**
 
-![Slider track extent](images/track/track-extent.png)
+![Slider track extent after](images/track/track-extent-after-image.png)
 
 ## Disabled track
 

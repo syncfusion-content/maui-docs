@@ -330,9 +330,12 @@ Change the state of the slider to disabled by setting `false` to the `IsEnabled`
                 Value="2018-01-01" />
         <Setter Property="Value"
                 Value="2014-01-01" />
-        <Setter Property="Interval" Value="2" />
-        <Setter Property="ShowTicks" Value="True" />
-        <Setter Property="MinorTicksPerInterval" Value="2" />
+        <Setter Property="Interval"
+                Value="2" />
+        <Setter Property="ShowTicks"
+                Value="True" />
+        <Setter Property="MinorTicksPerInterval"
+                Value="2" />
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup>
@@ -340,18 +343,18 @@ Change the state of the slider to disabled by setting `false` to the `IsEnabled`
                         <VisualState.Setters>
                             <Setter Property="MajorTickStyle">
                                 <Setter.Value>
-                                    <sliders:SliderTickStyle ActiveSize = "3, 10" 
-                                                                 InactiveSize = "3, 10"
-                                                                 ActiveFill = "#EE3F3F"
-                                                                 InactiveFill = "#F7B1AE" />
+                                    <sliders:SliderTickStyle ActiveSize="3, 10"
+                                                             InactiveSize="3, 10"
+                                                             ActiveFill="#EE3F3F"
+                                                             InactiveFill="#F7B1AE" />
                                 </Setter.Value>
                             </Setter>
                             <Setter Property="MinorTickStyle">
                                 <Setter.Value>
-                                    <sliders:SliderTickStyle ActiveSize = "3, 6" 
-                                                                 InactiveSize = "3, 6"
-                                                                  ActiveFill = "#EE3F3F"
-                                                                 InactiveFill = "#F7B1AE" />
+                                    <sliders:SliderTickStyle ActiveSize="3, 6"
+                                                             InactiveSize="3, 6"
+                                                             ActiveFill="#EE3F3F"
+                                                             InactiveFill="#F7B1AE" />
                                 </Setter.Value>
                             </Setter>
                         </VisualState.Setters>
@@ -360,18 +363,29 @@ Change the state of the slider to disabled by setting `false` to the `IsEnabled`
                         <VisualState.Setters>
                             <Setter Property="MajorTickStyle">
                                 <Setter.Value>
-                                    <sliders:SliderTickStyle ActiveSize="3,10" 
-                                                                 InactiveSize="3, 10"
-                                                                 ActiveFill="Gray" 
-                                                                 InactiveFill="LightGray" />
+                                    <sliders:SliderTickStyle ActiveSize="3,10"
+                                                             InactiveSize="3, 10"
+                                                             ActiveFill="Gray"
+                                                             InactiveFill="LightGray" />
                                 </Setter.Value>
                             </Setter>
                             <Setter Property="MinorTickStyle">
                                 <Setter.Value>
-                                    <sliders:SliderTickStyle ActiveSize ="3,6" 
-                                                                 InactiveSize="3, 6"
-                                                                 ActiveFill="Gray" 
-                                                                 InactiveFill="LightGray" />
+                                    <sliders:SliderTickStyle ActiveSize="3,6"
+                                                             InactiveSize="3, 6"
+                                                             ActiveFill="Gray"
+                                                             InactiveFill="LightGray" />
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="ThumbStyle">
+                                <Setter.Value>
+                                    <sliders:SliderThumbStyle Fill="Gray" />
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="TrackStyle">
+                                <Setter.Value>
+                                    <sliders:SliderTrackStyle ActiveFill="Gray"
+                                                              InactiveFill="LightGray" />
                                 </Setter.Value>
                             </Setter>
                         </VisualState.Setters>
@@ -383,11 +397,13 @@ Change the state of the slider to disabled by setting `false` to the `IsEnabled`
 </ContentPage.Resources>
 
 <ContentPage.Content>
-    <VerticalStackLayout Padding="10">
-        <Label Text="Enabled Slider" Padding="0,10"/>
-        <sliders:SfDateTimeSlider/>
-        <Label Text="Disabled Slider" Padding="0,10"/>
-        <sliders:SfDateTimeSlider IsEnabled="False"/>
+    <VerticalStackLayout>
+        <Label Text="Enabled"
+               Padding="24,10" />
+        <sliders:SfDateTimeSlider />
+        <Label Text="Disabled"
+               Padding="24,10" />
+        <sliders:SfDateTimeSlider IsEnabled="False" />
     </VerticalStackLayout>
 </ContentPage.Content>
 
@@ -401,18 +417,18 @@ SfDateTimeSlider defaultSlider = new SfDateTimeSlider()
     Minimum = new DateTime(2010, 01, 01),
     Maximum = new DateTime(2018, 01, 01),
     Value = new DateTime(2014, 01, 01),
-    Interval = 2, 
-    ShowTicks = true, 
+    Interval = 2,
+    ShowTicks = true,
     MinorTicksPerInterval = 2
 };
-SfDateTimeSlider disabledSlider = new SfDateTimeSlider
+SfDateTimeSlider disabledSlider = new SfDateTimeSlider()
 {
     Minimum = new DateTime(2010, 01, 01),
     Maximum = new DateTime(2018, 01, 01),
-    Value = new DateTime(2014, 01, 01),,
-    IsEnabled = false, 
-    Interval = 2, 
-    ShowTicks = true, 
+    Value = new DateTime(2014, 01, 01),
+    IsEnabled = false,
+    Interval = 2,
+    ShowTicks = true,
     MinorTicksPerInterval = 2
 };
 
@@ -466,6 +482,23 @@ disabledState.Setters.Add(new Setter
         InactiveFill = Colors.LightGray,
     }
 });
+disabledState.Setters.Add(new Setter
+{
+    Property = SfDateTimeSlider.ThumbStyleProperty,
+    Value = new SliderThumbStyle
+    {
+        Fill = Colors.Gray,
+    }
+});
+disabledState.Setters.Add(new Setter
+{
+    Property = SfDateTimeSlider.TrackStyleProperty,
+    Value = new SliderTrackStyle
+    {
+        ActiveFill = Colors.Gray,
+        InactiveFill = Colors.LightGray,
+    }
+});
 
 commonStateGroup.States.Add(defaultState);
 commonStateGroup.States.Add(disabledState);
@@ -473,9 +506,9 @@ visualStateGroupList.Add(commonStateGroup);
 VisualStateManager.SetVisualStateGroups(defaultSlider, visualStateGroupList);
 VisualStateManager.SetVisualStateGroups(disabledSlider, visualStateGroupList);
 
-stackLayout.Children.Add(new Label() { Text = "Default Slider", Padding = new Thickness(0, 10) });
+stackLayout.Children.Add(new Label() { Text = "Enabled", Padding = new Thickness(24, 10) });
 stackLayout.Children.Add(defaultSlider);
-stackLayout.Children.Add(new Label() { Text = "Disabled Slider", Padding = new Thickness(0, 10) });
+stackLayout.Children.Add(new Label() { Text = "Disabled", Padding = new Thickness(24, 10) });
 stackLayout.Children.Add(disabledSlider);
 this.Content = stackLayout;
 
