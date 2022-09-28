@@ -557,5 +557,3 @@ private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
 {% endtabs %}
 
 Download entire source code from GitHub [here](https://github.com/SyncfusionExamples/how-to-edit-the-item-through-swipe-view-in-.net-maui-listview).
-
-N> You can refer to our [.NET MAUI ListView](https://www.syncfusion.com/maui-controls/maui-listview) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI ListView example](https://github.com/SyncfusionExamples/gettingstarted-listview-.net-maui) to know how to render set of data items with .NET MAUI views or custom templates.
