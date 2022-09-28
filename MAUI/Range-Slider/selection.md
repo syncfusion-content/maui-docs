@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Value selection options in .NET MAUI Range Slider control | Syncfusion
-description: Learn here all about value selection of Syncfusion .NET MAUI Range Slider (SfRangeSlider) control and more.
+title: Range value selection in .NET MAUI Range Slider control | Syncfusion
+description: Learn here all about range value selection of Syncfusion .NET MAUI Range Slider (SfRangeSlider) control and more.
 platform: maui
 control: SfRangeSlider
 documentation: ug
 ---
 
-# Customization options on value selection in .NET MAUI Range Slider (SfRangeSlider)
+# Customization options on range value selection in .NET MAUI Range Slider (SfRangeSlider)
 
-This section helps to learn about various customization options available to configure the selection value in range slider.
+This section helps to learn about various customization options available to configure the selection range value in range slider.
 
 ## Default
 
