@@ -7,13 +7,13 @@ control: SfRangeSlider
 documentation: ug
 ---
 
-# Customization options on range value selection in .NET MAUI Range Slider (SfRangeSlider)
+# Range value selection in .NET MAUI Range Slider (SfRangeSlider)
 
-This section helps to learn about various customization options available to configure the selection range value in range slider.
+This section helps to learn about various customization options available to configure the range value selection in the Range Slider.
 
 ## Default
 
-By default, the thumbs gets moved on continuous manner in the range slider. 
+By default, the thumbs gets moved on continuous manner in the Range Slider. 
 
 {% tabs %}
 

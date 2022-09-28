@@ -7,13 +7,13 @@ control: SfSlider
 documentation: ug
 ---
 
-# Customization options on value selection in .NET MAUI Slider (SfSlider)
+# Value selection in .NET MAUI Slider (SfSlider)
 
-This section helps to learn about customization options available to configure the selection value in slider.
+This section helps to learn about customization options available to configure the value selection in the Slider.
 
 ## Default
 
-By default, the thumb gets moved on continuous manner in the slider. 
+By default, the thumb gets moved on continuous manner in the Slider. 
 
 {% tabs %}
 
