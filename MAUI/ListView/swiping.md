@@ -66,15 +66,15 @@ listView.StartSwipeTemplate = new DataTemplate(() =>
 {% endhighlight %}
 {% endtabs %}
 
-N> Similarly, the UI for swiping from right to left or bottom to top in vertical or horizontal Orientation can be customized by using the `SfListView.EndSwipeTemplate`.
+N> Similarly, the UI for swiping from right to left or bottom to top in vertical or horizontal orientation can be customized by using the `SfListView.EndSwipeTemplate`.
 
-N> The Swipe Template is mandatory to perform swiping in the `SfListView`.
+N> The swipe template is mandatory to perform swiping in the `SfListView`.
 
-![Start swiping functionalities](Images/swiping/maui-listview-startswipetemplate.jpg)
+![Start swipe view in .NET MAUI ListView](Images/swiping/maui-listview-startswipetemplate.jpg)
 
 Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/how-to-customize-the-swipe-view-in-.net-maui-listview). 
 
-![End swiping functionalities](Images/swiping/maui-listview-endswipetemplate.jpg)
+![End swipe view in .NET MAUI ListView](Images/swiping/maui-listview-endswipetemplate.jpg)
 
 N> Customize the appearance of each swipe item with different templates based on specific constraints by using the `DataTemplateSelector`. 
 
@@ -160,7 +160,7 @@ listView.StartSwipeTemplate = new DataTemplate(() =>
 {%endhighlight %}
 {% endtabs %}
 
-![Customize Start swipe in .NET MAUI Listview](Images/swiping/maui-listview-working-with-multiple-views-in-swipetemplate.jpg)
+![Customize start swipe in .NET MAUI ListView](Images/swiping/maui-listview-working-with-multiple-views-in-swipetemplate.jpg)
 
 To delete the item when `Delete` image is tapped and set favorites to an item when `Favorites` image is tapped, follow the code example shown.
 
@@ -308,7 +308,7 @@ Using the `SwipeItem` method, you can swipe an item programmatically based on th
 </tr>
 </table>
 
-The `SwipeOffset` value should be positive for the left swiping of the listview item.
+The `SwipeOffset` value should be positive for the start swiping of the listview item.
  
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -319,7 +319,7 @@ private void LeftSwipeButton_Clicked(object sender, EventArgs e)
 {% endhighlight%}
 {% endtabs %}
 
-The `SwipeOffset` value should be negative for the right-swiping of the listview item.
+The `SwipeOffset` value should be negative for the end swiping of the listview item.
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -330,7 +330,7 @@ private void RightSwipeButton_Clicked(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-![Programmatic Start and End swiping in .NET MAUI Listview](Images/swiping/maui-listview-programmatic-swiping.gif)
+![Programmatic start and end swiping in .NET MAUI ListView](Images/swiping/maui-listview-programmatic-swiping.gif)
 
 ## Events
 
