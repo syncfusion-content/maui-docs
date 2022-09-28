@@ -7,7 +7,7 @@ control: SfCircularProgressBar
 documentation: ug
 ---  
 
-# Migrate from Xamarin.Forms SfCircularProgressBar to .NET MAUI SfCircularProgressBar
+# Migrate from Xamarin.Forms to .NET MAUI SfCircularProgressBar
 
 To make the migration from the [Xamarin SfCircularProgressBar](https://www.syncfusion.com/xamarin-ui-controls/xamarin-progressbar) to `.NET MAUI SfCircularProgressBar` easier, most of the APIs from the Xamarin ProgressBar were kept in the .NET MAUI ProgressBar. However, to maintain the consistency of API naming in the .NET MAUI ProgressBar, some of the APIs have been renamed. Please find the difference in the following topics.
 
