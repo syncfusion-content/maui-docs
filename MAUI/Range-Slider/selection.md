@@ -1,17 +1,133 @@
 ---
 layout: post
-title: Thumb DragBehavior in .NET MAUI Range Slider control | Syncfusion
-description: Learn here all about Thumb Dragbehavior feature of Syncfusion .NET MAUI Range Slider (SfRangeSlider) control and more.
+title: Value selection options in .NET MAUI Range Slider control | Syncfusion
+description: Learn here all about value selection of Syncfusion .NET MAUI Range Slider (SfRangeSlider) control and more.
 platform: maui
 control: SfRangeSlider
 documentation: ug
 ---
 
-# Thumb DragBehavior in .NET MAUI Range Slider (SfRangeSlider)
+# Customization options on value selection in .NET MAUI Range Slider (SfRangeSlider)
 
-This section helps to learn about thumb drag behavior in the range slider.
+This section helps to learn about various customization options available to configure the selection value in range slider.
 
-## OnThumb
+## Default
+
+By default, the thumbs gets moved on continuous manner in the range slider. 
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfRangeSlider Minimum="0"
+                       Maximum="10"
+                       RangeStart="2"
+                       RangeEnd="8"
+                       Interval="2"
+                       ShowLabels="True"
+                       ShowTicks="True"
+                       ShowDividers="True" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfRangeSlider rangeSlider = new SfRangeSlider();
+rangeSlider.Minimum = 0;
+rangeSlider.Maximum = 10;
+rangeSlider.RangeStart = 2;
+rangeSlider.RangeEnd = 8;
+rangeSlider.Interval = 2;
+rangeSlider.ShowLabels = true;
+rangeSlider.ShowTicks = true;
+rangeSlider.ShowDividers = true;
+         
+{% endhighlight %}
+
+{% endtabs %}
+
+![RangeSlider default dragging](images/selection/default.gif)
+
+## Discrete selection
+
+Move the thumb in discrete manner for numeric values using the [`StepSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_StepSize) property in the range slider.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfRangeSlider Minimum="0"
+                       Maximum="10"
+                       RangeStart="2"
+                       RangeEnd="8"
+                       Interval="2"
+                       StepSize="2"
+                       ShowLabels="True"
+                       ShowTicks="True"
+                       ShowDividers="True" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfRangeSlider rangeSlider = new SfRangeSlider();
+rangeSlider.StepSize = 2;
+rangeSlider.Minimum = 0;
+rangeSlider.Maximum = 10;
+rangeSlider.RangeStart = 2;
+rangeSlider.RangeEnd = 8;
+rangeSlider.Interval = 2;
+rangeSlider.ShowLabels = true;
+rangeSlider.ShowTicks = true;
+rangeSlider.ShowDividers = true;
+         
+{% endhighlight %}
+
+{% endtabs %}
+
+![RangeSlider numeric discrete mode](images/selection/step-size.gif)
+
+## Interval Selection
+
+Drag thumbs only in interval when [EnableIntervalSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase.html#Syncfusion_Maui_Sliders_RangeSliderBase_EnableIntervalSelection) is true.
+If true, both the thumbs can be only moved on the slider Interval.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfRangeSlider Minimum="0" 
+                       Maximum="10"
+                       RangeStart="2"
+                       RangeEnd="8"
+                       Interval="2"
+                       ShowTicks="True"
+                       ShowLabels="True"
+                       EnableIntervalSelection="True" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfRangeSlider rangeSlider = new SfRangeSlider();
+rangeSlider.Minimum = 0;
+rangeSlider.Maximum = 10;
+rangeSlider.RangeStart = 2; 
+rangeSlider.RangeEnd = 8;
+rangeSlider.Interval = 2;        
+rangeSlider.ShowLables = true;
+rangeSlider.ShowTicks = true;    
+rangeSlider.EnableIntervalSelection = true;
+         
+{% endhighlight %}
+
+{% endtabs %}
+
+![RangeSlider EnableIntervalSelection](images/selection/enableintervalselection.gif)
+
+## DragBehavior
+
+### OnThumb
 
 When the [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase.html#Syncfusion_Maui_Sliders_RangeSliderBase_DragBehavior) is set to [OnThumb](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDragBehavior.html#Syncfusion_Maui_Sliders_SliderDragBehavior_OnThumb), the individual thumb can be moved based on the dragging. By default, the [OnThumb](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDragBehavior.html#Syncfusion_Maui_Sliders_SliderDragBehavior_OnThumb) is used as drag behavior.
 
@@ -46,9 +162,9 @@ rangeSlider.DragBehavior = SliderDragBehavior.OnThumb;
 
 {% endtabs %}
 
-![DragBehavior OnThumb](images/drag-behavior/onthumb.gif)
+![DragBehavior OnThumb](images/selection/onthumb.gif)
 
-## BetweenThumbs
+### BetweenThumbs
 
 When the [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase.html#Syncfusion_Maui_Sliders_RangeSliderBase_DragBehavior) is set to [BetweenThumbs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDragBehavior.html#Syncfusion_Maui_Sliders_SliderDragBehavior_BetweenThumbs), both the thumbs can be moved at same time without changing the range between the start and end thumbs. We had considered this behavior without the range slider thumb radius. Its not possible to move the individual thumb when setting this behavior.
 
@@ -83,9 +199,9 @@ rangeSlider.DragBehavior = SliderDragBehavior.BetweenThumbs;
 
 {% endtabs %}
 
-![DragBehavior Betweenthumb](images/drag-behavior/betweenthumb.gif)
+![DragBehavior Betweenthumb](images/selection/betweenthumb.gif)
 
-## Both
+### Both
 
 When the  [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase.html#Syncfusion_Maui_Sliders_RangeSliderBase_DragBehavior) is set to [Both](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDragBehavior.html#Syncfusion_Maui_Sliders_SliderDragBehavior_Both), the individual thumb can be moved, and also both the thumbs can be moved at the same time without changing the range between the start and end thumbs.
 
@@ -120,5 +236,4 @@ rangeSlider.DragBehavior = SliderDragBehavior.Both;
 
 {% endtabs %}
 
-![DragBehavior Both](images/drag-behavior/both.gif)
-
+![DragBehavior Both](images/selection/both.gif)
