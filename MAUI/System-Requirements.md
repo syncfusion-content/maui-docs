@@ -28,7 +28,7 @@ The system requirements for using our Syncfusion .NET MAUI platform are as follo
 
 ### Development Environment
 
-* Microsoft Visual Studio 2022 17.3.4 or greater, or Visual Studio 2022 for Mac 17.4 Preview.
+* Microsoft Visual Studio 2022 17.3.4 (.NET MAUI version 6.0.486), or Visual Studio 2022 for Mac 17.4 Preview.
 * .NET 6.0
 
 ### Supported Platforms
