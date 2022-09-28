@@ -50,7 +50,7 @@ The following properties in the `GradientStops` are used to map the colors to a 
 * `Color:` Represents the color to the specified range.
 * `Value:` Represents the start or end value for the specified color.
 
-The following code sample demonstrates how to map the solid color range in the progress bar.
+The following code sample demonstrates how to map the solid color range in the circular progress bar.
 
 {% tabs %} 
 
@@ -91,7 +91,7 @@ this.Content = circularProgressBar;
 
 ![.NET MAUI SfCircularProgressBar with range colors](images/appearance/range-colors.png)
 
-The following code sample demonstrates how to apply gradient transition effect to the range colors in the progress bar.
+The following code sample demonstrates how to apply gradient transition effect to the range colors in the circular progress bar.
 
 {% tabs %} 
 
@@ -204,7 +204,7 @@ this.Content = circularProgressBar;
 
 ## Color customization
 
-The following properties are used to customize the color in the progress bar.
+The following properties are used to customize the color in the circular progress bar.
 
 * `ProgressFill:` Represents the color of the progress indicator.
 * `TrackFill:` Represents the color of the track indicator.

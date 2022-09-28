@@ -1,9 +1,9 @@
 ---
 layout: post
-title: States in .NET MAUI ProgressBar control | Syncfusion
-description: Learn here all about States support in Syncfusion .NET MAUI ProgressBar (Progress Bar) control and more.
+title: States in .NET MAUI SfLinearProgressBar control | Syncfusion
+description: Learn here all about States support in Syncfusion .NET MAUI SfLinearProgressBar (Progress Bar) control and more.
 platform: MAUI
-control: ProgressBar
+control: SfLinearProgressBar
 documentation: ug
 ---
 
@@ -62,4 +62,4 @@ this.Content = linearProgressBar;
 
 ![.NET MAUI ProgressBar with buffer](images\states\buffer.png)
 
-N> Refer to our `.NET MAUI ProgressBar` feature tour page for its groundbreaking feature representations. Also explore our [.NET MAUI ProgressBar example](https://github.com/syncfusion/maui-demos/) that shows how to configure a ProgressBar in .NET MAUI.
+N> Refer to our `.NET MAUI SfLinearProgressBar` feature tour page for its groundbreaking feature representations. Also explore our [.NET MAUI SfLinearProgressBar example](https://github.com/syncfusion/maui-demos/) that shows how to configure a SfLinearProgressBar in .NET MAUI.

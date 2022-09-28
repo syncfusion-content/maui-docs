@@ -81,6 +81,6 @@ this.Content = circularProgressBar;
 
 {% endtabs %} 
 
-![.NET MAUI Progress Bar with indeterminate animation](images/animation/indeterminate.gif)
-
+![.NET MAUI Circular Progress Bar with indeterminate animation](images/animation/indeterminate.gif)
+ 
 N> Refer to our `.NET MAUI SfCircularProgressBar` feature tour page for its groundbreaking feature representations. Also explore our [.NET MAUI SfCircularProgressBar example](https://github.com/syncfusion/maui-demos/) that shows how to configure a SfCircularProgressBar in .NET MAUI.

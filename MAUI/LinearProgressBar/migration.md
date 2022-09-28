@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Migrate from Xamarin to .NET MAUI  ProgressBar | Syncfusion
-description: Learn here all about Migrating from Syncfusion Xamarin ProgressBar to Syncfusion .NET MAUI ProgressBar control and more.
+title: Migrate from Xamarin to .NET MAUI  SfLinearProgressBar | Syncfusion
+description: Learn here all about Migrating from Syncfusion Xamarin SfLinearProgressBar to Syncfusion .NET MAUI SfLinearProgressBar control and more.
 platform: MAUI
-control: ProgressBar
+control: SfLinearProgressBar
 documentation: ug
 ---  
 
 # Migrate from Xamarin.Forms SfLinearProgressBar to .NET MAUI SfLinearProgressBar
 
-To make the migration from the [Xamarin SfLinearProgressBar](https://www.syncfusion.com/xamarin-ui-controls/xamarin-progressbar) to `.NET MAUI SfLinearProgressBar` easier, most of the APIs from the Xamarin ProgressBar were kept in the .NET MAUI ProgressBar. However, to maintain the consistency of API naming in the .NET MAUI ProgressBar, some of the APIs have been renamed. Please find the difference in the following topics.
+To make the migration from the [Xamarin SfLinearProgressBar](https://www.syncfusion.com/xamarin-ui-controls/xamarin-progressbar) to `.NET MAUI SfLinearProgressBar` easier, most of the APIs from the Xamarin ProgressBar were kept in the .NET MAUI ProgressBar. However, to maintain the consistency of API naming in the .NET MAUI SfLinearProgressBar, some of the APIs have been renamed. Please find the difference in the following topics.
 
 ## Initialize control
 
@@ -81,12 +81,12 @@ SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 </td></tr>
 </table>
 
-## Common Properties
+## Properties
 
 <table> 
 <tr>
-<th>Xamarin ProgressBar</th>
-<th>.NET MAUI ProgressBar</th>
+<th>Xamarin SfLinearProgressBar</th>
+<th>.NET MAUI SfLinearProgressBar</th>
 <th>Description</th></tr>
 <tr>
 <td>{{'[Progress](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_Progress)'| markdownify }}</td>

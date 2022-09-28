@@ -82,7 +82,7 @@ SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 </td></tr>
 </table>
 
-## Common Properties
+## Properties
 
 <table> 
 <tr>
@@ -257,7 +257,7 @@ The following code example explains how to use the properties in the Xamarin cir
 using Syncfusion.XForms.ProgressBar;
 
 ...
-
+private void SfCircularProgressBar_ValueChanged(object sender, ProgressValueEventArgs e)
 {
     if (e.Progress < 50)
     {

@@ -1,15 +1,15 @@
 ---
 layout: post
-title: About .NET MAUI ProgressBar control | Syncfusion 
-description: Learn here all about the introduction of Syncfusion .NET MAUI ProgressBar (Progress Bar) control, its elements and more.
+title: About .NET MAUI SfLinearProgressBar control | Syncfusion 
+description: Learn here all about the introduction of Syncfusion .NET MAUI SfLinearProgressBar (Progress Bar) control, its elements and more.
 platform: MAUI
-control: ProgressBar
+control: SfLinearProgressBar
 documentation: ug
 ---
 
 # .NET MAUI SfLinearProgressBar (Linear Progress Bar) Overview
 
-The .NET MAUI ProgressBar shows task progress with customizable visuals. It has features for displaying progress in rectangular shape, determinate and indeterminate states, segments, smooth animation, and a difining range with different colors.
+The .NET MAUI SfLinearProgressBar shows task progress with customizable visuals. It has features for displaying progress in rectangular shape, determinate and indeterminate states, segments, smooth animation, and a difining range with different colors.
 
 ### Key features
 

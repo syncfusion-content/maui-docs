@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Getting started with .NET MAUI ProgressBar control | Syncfusion
-description: Learn here about getting started with Syncfusion .NET MAUI ProgressBar (Progress Bar) control, its elements and more.
+title: Getting started with .NET MAUI SfLinearProgressBar control | Syncfusion
+description: Learn here about getting started with Syncfusion .NET MAUI SfLinearProgressBar (Progress Bar) control, its elements and more.
 platform: MAUI
-control: ProgressBar
+control: SfLinearProgressBar
 documentation: ug
 ---
 
@@ -15,7 +15,7 @@ This section explains the steps required to add the linear progress bar control 
 
 * Create a new .NET MAUI application in the Visual Studio.
 
-* The Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add ProgressBar to your project, open the NuGet package manager in Visual Studio, and search for [Syncfusion.Maui.ProgressBar] then install that.
+* The Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfLinearProgressBar to your project, open the NuGet package manager in Visual Studio, and search for [Syncfusion.Maui.ProgressBar] then install that.
 
 ### Register the handler
 
@@ -185,4 +185,4 @@ SfLinearProgressBar sfLinearProgressBar = new SfLinearProgressBar
 
 N> 
 * Get the complete getting started sample from `GitHub` link.
-* Refer to our `.NET MAUI progress bar` feature tour page for its groundbreaking feature representations.
+* Refer to our `.NET MAUI linear progress bar` feature tour page for its groundbreaking feature representations.
