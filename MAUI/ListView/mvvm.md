@@ -37,8 +37,8 @@ public class CommandViewModel
 
     private void TappedCommandMethod(object obj)
     {
-        if ((obj as Syncfusion.Maui.ListView.ItemTappedEventArgs).ItemData == viewModel.InboxInfo[0])
-            viewModel.InboxInfo.Remove((obj as Syncfusion.Maui.ListView.ItemTappedEventArgs).ItemData as ListViewInboxInfo)
+        if ((obj as Syncfusion.Maui.ListView.ItemTappedEventArgs).DataItem == viewModel.InboxInfo[0])
+            viewModel.InboxInfo.Remove((obj as Syncfusion.Maui.ListView.ItemTappedEventArgs).DataItem as ListViewInboxInfo)
     }   
 }
 
@@ -71,8 +71,8 @@ public class CommandViewModel
 
     private void LongPressCommandMethod(object obj)
     {
-        if ((obj as Syncfusion.Maui.ListView.ItemLongPressEventArgs).ItemData == viewModel.InboxInfo[3])
-            viewModel.InboxInfo.Remove((obj as Syncfusion.Maui.ListView.ItemLongPressEventArgs).ItemData as ListViewInboxInfo);
+        if ((obj as Syncfusion.Maui.ListView.ItemLongPressEventArgs).DataItem == viewModel.InboxInfo[3])
+            viewModel.InboxInfo.Remove((obj as Syncfusion.Maui.ListView.ItemLongPressEventArgs).DataItem as ListViewInboxInfo);
     }
 }
 
@@ -520,8 +520,8 @@ public class BookInfoRepository : INotifyPropertyChanged
     public void OnItemTapped(object obj)
     {
         var eventArgs = obj as Syncfusion.Maui.ListView.ItemTappedEventArgs;
-        var bookName = (eventArgs.ItemData as BookInfo).BookName;
-        var bookDescription = (eventArgs.ItemData as BookInfo).BookDescription;
+        var bookName = (eventArgs.DataItem as BookInfo).BookName;
+        var bookDescription = (eventArgs.DataItem as BookInfo).BookDescription;
         var display = Application.Current.MainPage.DisplayAlert(bookName, "Description:" + bookDescription, "Ok");
     }
 }
