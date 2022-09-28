@@ -7,7 +7,7 @@ control: SfCircularProgressBar
 documentation: ug
 ---
 
-# Appearance in .NET MAUI SfCircularProgressBar (Circular Progress Bar)
+# Appearance in .NET MAUI Circular Progress Bar (SfCircularProgressBar)
 
 ## Angle
 

@@ -7,7 +7,7 @@ control: SfLinearProgressBar
 documentation: ug
 ---
 
-# Segments in .NET MAUI SfLinearProgressBar (Linear Progress Bar)
+# Segments in .NET MAUI Linear Progress Bar (SfLinearProgressBar)
 
 To visualize the progress of multiple sequential tasks, split the linear progress bar into multiple segments by setting the `SegmentCount` property as demonstrated in the following code sample.
 

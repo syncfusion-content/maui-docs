@@ -7,7 +7,7 @@ control: SfLinearProgressBar
 documentation: ug
 ---
 
-# Appearance in .NET MAUI SfLinearProgressBar (Linear Progress Bar)
+# Appearance in .NET MAUI Linear Progress Bar (SfLinearProgressBar)
 
 ## Range colors
 

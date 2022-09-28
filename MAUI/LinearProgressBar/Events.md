@@ -7,7 +7,7 @@ control: SfLinearProgressBar
 documentation: ug
 ---
 
-# Events in .NET MAUI SfLinearProgressBar (Linear Progress Bar)
+# Events in .NET MAUI Linear Progress Bar (SfLinearProgressBar)
 
 ## ProgressChanged
 

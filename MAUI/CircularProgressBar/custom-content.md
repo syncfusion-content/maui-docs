@@ -7,7 +7,7 @@ control: SfCircularProgressBar
 documentation: ug
 ---
 
-# Custom Content in .NET MAUI SfCircularProgressBar
+# Custom Content in .NET MAUI Circular Progress Bar
 
 In the circular progress bar, add any view to the center using the `Content` property. 
 

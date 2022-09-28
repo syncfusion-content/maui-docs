@@ -7,7 +7,7 @@ control: SfLinearProgressBar
 documentation: ug
 ---
 
-# States in .NET MAUI SfLinearProgressBar (Linear Progress Bar)
+# States in .NET MAUI Linear Progress Bar (SfLinearProgressBar)
 
 Configure the states of the linear progress bar control depending on the usage.
 

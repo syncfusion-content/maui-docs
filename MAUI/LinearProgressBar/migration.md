@@ -319,7 +319,3 @@ private void LinearProgressBar_ProgressCompleted(object sender, ProgressValueEve
 </td>
 </tr>
 </table>
-
-## Unsupported features from Xamarin.Forms
-
-* [`Padding`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfLinearProgressBar.html#Syncfusion_XForms_ProgressBar_SfLinearProgressBar_Padding) support has not been provided in the SfLinearProgressBar.

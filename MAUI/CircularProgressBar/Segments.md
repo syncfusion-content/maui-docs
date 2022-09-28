@@ -7,7 +7,7 @@ control: SfCircularProgressBar
 documentation: ug
 ---
 
-# Segments in .NET MAUI SfCircularProgressBar (Circular Progress Bar)
+# Segments in .NET MAUI Circular Progress Bar (SfCircularProgressBar)
 
 To visualize the progress of multiple sequential tasks, split the circular progress bar into multiple segments by setting the `SegmentCount` property as demonstrated in the following code sample.
 
