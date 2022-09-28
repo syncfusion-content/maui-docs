@@ -39,7 +39,7 @@ The `Loaded` event is used for the following use cases:
 The [ItemTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTapped) event will be triggered whenever tapping the item. Here, [TapCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_TapCommandParameter) property sets the parameter for [SfListView.TapCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_TapCommand) and its default value is [ItemTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemTappedEventArgs.html). `ItemTappedEventArgs` has the following members,which provides information for `ItemTapped` event:
 
  * [ItemType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemTappedEventArgs.html#Syncfusion_Maui_ListView_ItemTappedEventArgs_ItemType): It gets the type of the tapped item.
- * [DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemTappedEventArgs.html#Syncfusion_Maui_ListView_ItemTappedEventArgs_ItemData): The underlying data associated with the tapped item as its arguments.
+ * [DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemTappedEventArgs.html#Syncfusion_Maui_ListView_ItemTappedEventArgs_DataItem): The underlying data associated with the tapped item as its arguments.
  * [Position](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemTappedEventArgs.html#Syncfusion_Maui_ListView_ItemTappedEventArgs_Position): Gets the touch position in the tapped item.
 
 {% tabs %}
@@ -71,7 +71,7 @@ The [ItemTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.Sf
 The [ItemDoubleTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemDoubleTapped) has the following members which provides information for the `ItemDoubleTapped` event:
 
  * [ItemType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemDoubleTappedEventArgs.html#Syncfusion_Maui_ListView_ItemDoubleTappedEventArgs_ItemType): It gets the type of double tapped item.
- * [DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemDoubleTappedEventArgs.html#Syncfusion_Maui_ListView_ItemDoubleTappedEventArgs_ItemData): The underlying data associated with the double tapped item as its arguments.
+ * [DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemDoubleTappedEventArgs.html#Syncfusion_Maui_ListView_ItemDoubleTappedEventArgs_DataItem): The underlying data associated with the double tapped item as its arguments.
  * [Position](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemDoubleTappedEventArgs.html#Syncfusion_Maui_ListView_ItemDoubleTappedEventArgs_Position): Gets the touch position in the double tapped item.
 
 {% tabs %}
@@ -101,7 +101,7 @@ The [ItemDoubleTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListV
 The [ItemLongPress](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemLongPress) event will be triggered whenever long pressing the item. Here, [LongPressCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LongPressCommandParameter) sets the parameter for [SfListView.LongPressCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LongPressCommand) and its default value is [ItemLongPressEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemLongPressEventArgs.html). `ItemLongPressEventArgs` has the following members, which provides information for `ItemLongPress` event:
 
  * [ItemType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemLongPressEventArgs.html#Syncfusion_Maui_ListView_ItemLongPressEventArgs_ItemType): It gets the type of the long pressed item.
- * [DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemLongPressEventArgs.html#Syncfusion_Maui_ListView_ItemLongPressEventArgs_ItemData): The underlying data associated with the holding item as its arguments.
+ * [DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemLongPressEventArgs.html#Syncfusion_Maui_ListView_ItemLongPressEventArgs_DataItem): The underlying data associated with the holding item as its arguments.
  * [Position](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemLongPressEventArgs.html#Syncfusion_Maui_ListView_ItemLongPressEventArgs_Position): Gets the touch position in the holding item.
 
 {% tabs %}
@@ -128,7 +128,7 @@ N> Interaction events of the `SfListView` will be triggered for all the `ListVie
 
 The [ItemAppearing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemAppearing) triggered when items appear in the view while scrolling, loading, or navigating from one page to another. The [ItemAppearingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemAppearingEventArgs.html)  has the following member, which provides information of appearing Items.
 
-* [DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemAppearingEventArgs.html#Syncfusion_Maui_ListView_ItemAppearingEventArgs_ItemData): The underlying data associated with the appearing item.
+* [DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemAppearingEventArgs.html#Syncfusion_Maui_ListView_ItemAppearingEventArgs_DataItem): The underlying data associated with the appearing item.
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -157,7 +157,7 @@ The [ItemAppearing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView
 
 The [ItemDisappearing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemDisappearing) event is triggered when the items disappearing in the view while scrolling, disposing, or navigating from one page to another. The [ItemDisappearingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemDisappearingEventArgs.html) has the following member, which provides information about disappearing Items:
 
-* [DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemDisappearingEventArgs.html#Syncfusion_Maui_ListView_ItemDisappearingEventArgs_ItemData): The underlying data associated with the disappearing item.
+* [DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemDisappearingEventArgs.html#Syncfusion_Maui_ListView_ItemDisappearingEventArgs_DataItem): The underlying data associated with the disappearing item.
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
