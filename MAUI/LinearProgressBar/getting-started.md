@@ -7,11 +7,11 @@ control: ProgressBar
 documentation: ug
 ---
 
-# Getting started with .NET MAUI ProgressBar (Progress Bar)
+# Getting started with .NET MAUI SfLinearProgressBar (Linear Progress Bar)
 
-This section explains the steps required to add the progress bar control with the progress and its customizable elements such as indeterminate, segment, progress fill, and track fill. This section covers only the basic features needed to know and gets started with the Syncfusion progress bar.
+This section explains the steps required to add the linear progress bar control with the progress and its customizable elements such as indeterminate, segment, progress fill, and track fill. This section covers only the basic features needed to know and gets started with the Syncfusion progress bar.
 
-## Creating an application using the .NET MAUI ProgressBar
+## Creating an application using the .NET MAUI SfLinearProgressBar
 
 * Create a new .NET MAUI application in the Visual Studio.
 
@@ -74,7 +74,7 @@ using Syncfusion.Maui.ProgressBar;
 
 ## Initializing progress bar
 
-Create an instance for the progress bar control, and add it as content. The progress bar control has two variants: The `SfLinearProgressBar` and `SfCircularProgressBar`. Each renders the progress in its own shape, such as rectangle and circle, respectively. Initialize both progress bars with a progress value using the Progress property as demonstrated in the following code sample.
+Create an instance for the linear progress bar control, and add it as content.
 
 {% tabs %}
 
@@ -97,7 +97,7 @@ N> By default, the value of progress should be specified between 0 and 100. To d
 
 Run the project, and check if you get following output to make sure that the project has been configured properly to add the progress bar.
 
-![.NET MAUI linear progress bar and circular progress bar](images/getting-started/progress-bar.png)
+![.NET MAUI linear progress bar](images/getting-started/progress-bar.png)
 
 ## Enabling indeterminate state
 
@@ -141,7 +141,7 @@ this.Content = linearProgressBar;
 
 {% endtabs %}
 
-![.NET MAUI linear progress bar and circular progress bar visualized with multiple sequential task](images/getting-started/segment.png)
+![.NET MAUI linear progress bar visualized with multiple sequential task](images/getting-started/segment.png)
 
 ## Apply colors
 
@@ -163,8 +163,6 @@ Customize the color of the progress indicator and track by defining the `Progres
 
 {% highlight C# %} 
 
-// Using the linear progress bar.
-
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar
 {
     Progress = 75, 
@@ -183,7 +181,7 @@ SfLinearProgressBar sfLinearProgressBar = new SfLinearProgressBar
 
 {% endtabs %} 
 
-![.NET MAUI linear progress bar and circular progress bar with customized colors](images/getting-started/style.png)
+![.NET MAUI linear progress bar with customized colors](images/getting-started/style.png)
 
 N> 
 * Get the complete getting started sample from `GitHub` link.

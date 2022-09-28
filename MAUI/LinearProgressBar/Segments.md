@@ -7,7 +7,7 @@ control: ProgressBar
 documentation: ug
 ---
 
-# Segments in .NET MAUI ProgressBar (Progress Bar)
+# Segments in .NET MAUI SfLinearProgressBar (Linear Progress Bar)
 
 To visualize the progress of multiple sequential tasks, split the progress bar into multiple segments by setting the `SegmentCount` property as demonstrated in the following code sample.
 

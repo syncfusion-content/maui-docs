@@ -7,9 +7,9 @@ control: ProgressBar
 documentation: ug
 ---  
 
-# Migrate from Xamarin.Forms ProgressBar to .NET MAUI ProgressBar
+# Migrate from Xamarin.Forms SfLinearProgressBar to .NET MAUI SfLinearProgressBar
 
-To make the migration from the [Xamarin ProgressBar](https://www.syncfusion.com/xamarin-ui-controls/xamarin-progressbar) to `.NET MAUI ProgressBar` easier, most of the APIs from the Xamarin ProgressBar were kept in the .NET MAUI ProgressBar. However, to maintain the consistency of API naming in the .NET MAUI ProgressBar, some of the APIs have been renamed. Please find the difference in the following topics.
+To make the migration from the [Xamarin SfLinearProgressBar](https://www.syncfusion.com/xamarin-ui-controls/xamarin-progressbar) to `.NET MAUI SfLinearProgressBar` easier, most of the APIs from the Xamarin ProgressBar were kept in the .NET MAUI ProgressBar. However, to maintain the consistency of API naming in the .NET MAUI ProgressBar, some of the APIs have been renamed. Please find the difference in the following topics.
 
 ## Initialize control
 
@@ -30,8 +30,6 @@ To initialize the control, import the ProgressBar namespace and initialize the P
 
     ...     
     <progressBar:SfLinearProgressBar />
-
-    <progressBar:SfCircularProgressBar />
     ...
 </ContentPage>
 
@@ -165,7 +163,6 @@ The following code example explains how to use the common properties in the Xama
     xmlns:progressBar="clr-namespace:Syncfusion.XForms.ProgressBar;assembly=Syncfusion.SfProgressBar.XForms">
 
     ...     
-<!--Snippet for the linear progress bar-->
 <progressBar:SfLinearProgressBar EasingEffect="CubicOut"
                                  GapWidth="5"
                                  SegmentCount="4"
@@ -196,8 +193,6 @@ The following code example explains how to use the common properties in the Xama
 using Syncfusion.XForms.ProgressBar;
 
 ...
-
-//Snippet for the linear progress bar
 
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 linearProgressBar.Progress = 75;

@@ -7,7 +7,7 @@ control: ProgressBar
 documentation: ug
 ---
 
-# Events in .NET MAUI ProgressBar (Progress Bar)
+# Events in .NET MAUI SfCircularProgressBar (Circular Progress Bar)
 
 ## ProgressChanged
 
@@ -21,23 +21,23 @@ The following code sample demonstrates how to customize the color of a progress 
 
 {% highlight xaml %}
 
-<progressBar:SfLinearProgressBar x:Name="LinearProgressBar" 
-                                 ProgressChanged="LinearProgressBar_ProgressChanged" 
-                                 Progress="100" />
+<progressBar:SfCircularProgressBar x:Name="CircularProgressBar" 
+                                   ProgressChanged="CircularProgressBar_ProgressChanged"
+                                   Progress="100" />
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-private void LinearProgressBar_ProgressChanged(object sender, ProgressValueEventArgs e)
+private void CircularProgressBar_ProgressChanged(object sender, ProgressValueEventArgs e)
 {
     if (e.Progress < 50)
     {
-        this.LinearProgressBar.ProgressFill = Colors.Red;
+        this.CircularProgressBar.ProgressFill = Colors.Red;
     }
-    else if (e.Progress >= 50)
+    else
     {
-        this.LinearProgressBar.ProgressFill = Colors.Green;
+        this.CircularProgressBar.ProgressFill = Colors.Green;
     }
 }
 

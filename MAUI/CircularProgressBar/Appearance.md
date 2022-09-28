@@ -7,7 +7,7 @@ control: ProgressBar
 documentation: ug
 ---
 
-# Appearance in .NET MAUI ProgressBar (Progress Bar)
+# Appearance in .NET MAUI SfCircularProgressBar (Circular Progress Bar)
 
 ## Angle
 
@@ -126,8 +126,6 @@ this.Content = circularProgressBar;
 
 ## Thickness
 
-### Circular progress bar
-
 The following properties are used to customize the appearance of the circular progress bar:
 
 * `ProgressRadiusFactor:` Defines the outer radius of the progress indicator.
@@ -143,8 +141,6 @@ The following code sample demonstrates how to customize the appearance of the ci
 {% tabs %} 
 
 {% highlight xaml %}
-
-<!--Circular progress bar with radius customization -->
 
 <progressBar:SfCircularProgressBar Progress="75"
                                    TrackRadiusFactor="0.8" 
@@ -219,25 +215,24 @@ The following code sample demonstrates the color customization in progress and t
 
 {% highlight xaml %}
 
-<progressBar:SfLinearProgressBar Progress="75" 
-                                 TrackFill="#3351483a" 
-                                 ProgressFill="#FF51483a"/>
+<progressBar:SfCircularProgressBar Progress="75"
+                                   TrackFill="#3351483a" 
+                                   ProgressFill="#FF51483a"/>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
-linearProgressBar.Progress = 75;
-linearProgressBar.TrackFill = Color.FromArgb("3351483a");
-linearProgressBar.ProgressFill = Color.FromArgb("FF51483a");
-linearProgressBar.SecondaryProgressFill = Colors.CornflowerBlue;
-this.Content = linearProgressBar;
+SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
+circularProgressBar.Progress = 75;
+circularProgressBar.TrackFill = Color.FromArgb("3351483a");
+circularProgressBar.ProgressFill = Color.FromArgb("FF51483a");
+this.Content = circularProgressBar;
 
 {% endhighlight %}
 
 {% endtabs %} 
 
-![.NET MAUI Linear Progress Bar with color customization](images/appearance/color.png)
+![.NET MAUI circular Progress Bar with color customization](images/appearance/color.png)
 
 N> Refer to our `.NET MAUI ProgressBar` feature tour page for its groundbreaking feature representations. Also explore our [.NET MAUI ProgressBar example](https://github.com/syncfusion/maui-demos/) that shows how to configure a ProgressBar in .NET MAUI.

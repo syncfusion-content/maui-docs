@@ -7,7 +7,7 @@ control: ProgressBar
 documentation: ug
 ---
 
-# Events in .NET MAUI ProgressBar (Progress Bar)
+# Events in .NET MAUI SfLinearProgressBar (Linear Progress Bar)
 
 ## ProgressChanged
 
@@ -35,7 +35,7 @@ private void LinearProgressBar_ProgressChanged(object sender, ProgressValueEvent
     {
         this.LinearProgressBar.ProgressFill = Colors.Red;
     }
-    else if (e.Progress >= 50)
+    else
     {
         this.LinearProgressBar.ProgressFill = Colors.Green;
     }
@@ -57,28 +57,17 @@ The following code sample demonstrates how to customize the progress bar when th
 
 {% highlight xaml %}
 
-<progressBar:SfCircularProgressBar Minimum="100" 
-                                   Maximum="500" 
-                                   ProgressCompleted="CircularProgressBar_ProgressCompleted" 
-                                   Progress="500">
-    <progressBar:SfCircularProgressBar.Content>
-        <Grid WidthRequest="150">
-            <Label x:Name="Label" 
-                   Text="Start" 
-                   FontSize="15"
-                   HorizontalTextAlignment="Center" 
-                   VerticalTextAlignment="Center" />
-        </Grid>
-    </progressBar:SfCircularProgressBar.Content>
-</progressBar:SfCircularProgressBar>
+<progressBar:SfLinearProgressBar x:Name="LinearProgressBar" 
+                                 ProgressCompleted="LinearProgressBar_ProgressCompleted" 
+                                 Progress="100" />
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-private void CircularProgressBar_ProgressCompleted(object sender, ProgressValueEventArgs e)
+private void LinearProgressBar_ProgressCompleted(object sender, ProgressValueEventArgs e)
 {
-    this.Label.Text = "Completed";
+    this.LinearProgressBar.ProgressFill = Colors.Green;
 }
 
 {% endhighlight %}

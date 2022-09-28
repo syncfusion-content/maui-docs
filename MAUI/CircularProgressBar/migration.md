@@ -7,9 +7,9 @@ control: ProgressBar
 documentation: ug
 ---  
 
-# Migrate from Xamarin.Forms ProgressBar to .NET MAUI ProgressBar
+# Migrate from Xamarin.Forms SfCircularProgressBar to .NET MAUI SfCircularProgressBar
 
-To make the migration from the [Xamarin ProgressBar](https://www.syncfusion.com/xamarin-ui-controls/xamarin-progressbar) to `.NET MAUI ProgressBar` easier, most of the APIs from the Xamarin ProgressBar were kept in the .NET MAUI ProgressBar. However, to maintain the consistency of API naming in the .NET MAUI ProgressBar, some of the APIs have been renamed. Please find the difference in the following topics.
+To make the migration from the [Xamarin SfCircularProgressBar](https://www.syncfusion.com/xamarin-ui-controls/xamarin-progressbar) to `.NET MAUI SfCircularProgressBar` easier, most of the APIs from the Xamarin ProgressBar were kept in the .NET MAUI ProgressBar. However, to maintain the consistency of API naming in the .NET MAUI ProgressBar, some of the APIs have been renamed. Please find the difference in the following topics.
 
 ## Initialize control
 
@@ -163,18 +163,18 @@ The following code example explains how to use the common properties in the Xama
 
     ...     
 <progressBar:SfCircularProgressBar EasingEffect="CubicOut"
-                                 GapWidth="5"
-                                 SegmentCount="4"
-                                 IndeterminateEasingEffect="BounceIn"
-                                 IndeterminateIndicatorWidth="0.7"
-                                 ProgressColor="Red"
-                                 TrackColor="Violet"
-                                 Progress="75"
-                                 IsIndeterminate="False"
-                                 Minimum="10"
-                                 Maximum="90"
-                                 AnimationDuration="1500"
-                                 IndeterminateAnimationDuration="2000">
+                                   GapWidth="5"
+                                   SegmentCount="4"
+                                   IndeterminateEasingEffect="BounceIn"
+                                   IndeterminateIndicatorWidth="0.7"
+                                   ProgressColor="Red"
+                                   TrackColor="Violet"
+                                   Progress="75"
+                                   IsIndeterminate="False"
+                                   Minimum="10"
+                                   Maximum="90"
+                                   AnimationDuration="1500"
+                                   IndeterminateAnimationDuration="2000">
     <progressBar:SfCircularProgressBar.RangeColors>
         <progressBar:RangeColorCollection>
             <progressBar:RangeColor IsGradient="True" Color="#00bdaf" Start="0" End="25"/>
@@ -524,9 +524,9 @@ The following code example explains how to utilize the Xamarin progress bar and 
 <!--Snippet for the progress completed event-->
 
 <progressBar:SfCircularProgressBar Minimum="100" 
-                               Maximum="500" 
-                               ProgressCompleted="SfCircularProgressBar_ProgressCompleted" 
-                               Progress="500">
+                                   Maximum="500" 
+                                   ProgressCompleted="SfCircularProgressBar_ProgressCompleted" 
+                                   Progress="500">
     <progressBar:SfCircularProgressBar.Content>
         <Grid WidthRequest="150">
             <Label x:Name="Label" 
@@ -535,7 +535,7 @@ The following code example explains how to utilize the Xamarin progress bar and 
                HorizontalTextAlignment="Center" 
                VerticalTextAlignment="Center" />
         </Grid>
-    </progressBar:SfCircularProgressBar.Content>
+</progressBar:SfCircularProgressBar.Content>
 
 
 ...
@@ -647,5 +647,3 @@ private void CircularProgressBar_ProgressCompleted(object sender, ProgressValueE
 ## Unsupported features from Xamarin.Forms
 
 * [`ShowProgressValue`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfCircularProgressBar.html#Syncfusion_XForms_ProgressBar_SfCircularProgressBar_ShowProgressValue) support has not been provided in the SfCircularProgressBar. Instead, you can achieve it using the `Content` property. Please visit the Custom Content page for more details about the `Content` property.
-
-* [`Padding`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfLinearProgressBar.html#Syncfusion_XForms_ProgressBar_SfLinearProgressBar_Padding) support has not been provided in the SfLinearProgressBar.

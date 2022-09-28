@@ -7,7 +7,7 @@ control: ProgressBar
 documentation: ug
 ---
 
-# States in .NET MAUI ProgressBar (Progress Bar)
+# States in .NET MAUI SfCircularProgressBar (Circular Progress Bar)
 
 Configure the states of the progress bar control depending on the usage.
 

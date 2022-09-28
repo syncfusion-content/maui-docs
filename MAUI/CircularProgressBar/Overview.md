@@ -7,15 +7,15 @@ control: ProgressBar
 documentation: ug
 ---
 
-# .NET MAUI ProgressBar (Progress Bar) Overview
+# .NET MAUI SfCircularProgressBar (Circular Progress Bar) Overview
 
-The .NET MAUI ProgressBar shows task progress with customizable visuals. It has features for displaying progress in rectangular and circular shapes, determinate and indeterminate states, segments, smooth animation, customizable content, and a difining range with different colors.
+The .NET MAUI ProgressBar shows task progress with customizable visuals. It has features for displaying progress in circular shapes, determinate and indeterminate states, segments, smooth animation, customizable content, and a difining range with different colors.
 
 ### Key features
 
-**States** - Visualize the progress in different modes such as determinate, indeterminate, and buffer state. 
+**States** - Visualize the progress in different modes such as determinate and indeterminate state. 
 
-**Progress shapes** - Visualizes the progress in different shapes such as rectangle and circle.
+**Progress shape** - Visualizes the progress in circular shape.
 
 **Segments** - Progress can be divided into multiple segments to show gradual progress.
 

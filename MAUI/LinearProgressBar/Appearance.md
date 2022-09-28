@@ -7,7 +7,7 @@ control: ProgressBar
 documentation: ug
 ---
 
-# Appearance in .NET MAUI ProgressBar (Progress Bar)
+# Appearance in .NET MAUI SfLinearProgressBar (Linear Progress Bar)
 
 ## Range colors
 
@@ -80,8 +80,6 @@ The following code sample demonstrates how to apply gradient transition effect t
 
 {% highlight c# %}
 
-// Using the linear progress bar
-
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 linearProgressBar.Progress = 100;
 linearProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("88A0D9EF"), Value = 0 });
@@ -97,8 +95,6 @@ this.Content = linearProgressBar;
 ![.NET MAUI ProgressBar with gradient range](images/appearance/gradient.png)
 
 ## Thickness
-
-### Linear progress bar
 
 In the linear progress bar, the height of the track, progress, and secondary progress can be customized using the `TrackHeight`, `ProgressHeight`, and `SecondaryProgressHeight` properties, respectively.
 

@@ -7,11 +7,11 @@ control: ProgressBar
 documentation: ug
 ---
 
-# Getting started with .NET MAUI ProgressBar (Progress Bar)
+# Getting started with .NET MAUI SfCircularProgressBar (Circular Progress Bar)
 
-This section explains the steps required to add the progress bar control with the progress and its customizable elements such as indeterminate, segment, progress fill, and track fill. This section covers only the basic features needed to know and gets started with the Syncfusion progress bar.
+This section explains the steps required to add the circular progress bar control with the progress and its customizable elements such as indeterminate, segment, progress fill, and track fill. This section covers only the basic features needed to know and gets started with the Syncfusion progress bar.
 
-## Creating an application using the .NET MAUI ProgressBar
+## Creating an application using the .NET MAUI SfCircularProgressBar
 
 * Create a new .NET MAUI application in the Visual Studio.
 
@@ -74,7 +74,7 @@ using Syncfusion.Maui.ProgressBar;
 
 ## Initializing progress bar
 
-Create an instance for the progress bar control, and add it as content. The progress bar control has two variants: The `SfLinearProgressBar` and `SfCircularProgressBar`. Each renders the progress in its own shape, such as rectangle and circle, respectively. Initialize both progress bars with a progress value using the Progress property as demonstrated in the following code sample.
+Create an instance for the circular progress bar control, and add it as content.
 
 {% tabs %}
 
@@ -151,9 +151,9 @@ Customize the color of the progress indicator and track by defining the `Progres
 
 {% highlight xaml %} 
 
- <progressBar:SfCircularProgressBar Progress="75" 
-                                    TrackFill="#33c15244" 
-                                    ProgressFill="#FFc15244"/>
+<progressBar:SfCircularProgressBar Progress="75" 
+                                   TrackFill="#33c15244" 
+                                   ProgressFill="#FFc15244"/>
 
 <progressBar:SfCircularProgressBar Progress="75" 
                                    TrackFill="#3390a84e" 
