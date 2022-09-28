@@ -139,38 +139,34 @@ You can extend the track at the edges using the [`TrackExtent`](https://help.syn
 
 {% highlight xaml %}
 
-<sliders:SfDateTimeRangeSlider Minimum="2000-01-01T09:00:00"
-                               Maximum="2000-01-01T21:00:00"
-                               RangeStart="2000-01-01T12:00:00"
-                               RangeEnd="2000-01-01T18:00:00"
-                               IntervalType="Hours"
-                               DateFormat="h tt"
-                               MinorTicksPerInterval="3"
-                               Interval="4"
-                               ShowTicks="True"
-                               ShowLabels="True"
-                               TrackExtent="10" />
+<sliders:SfDateTimeRangeSlider  Minimum="2010-01-01"
+                                Maximum="2018-01-01"
+                                RangeStart="2012-01-01"
+                                RangeEnd="2016-01-01"
+                                Interval="2"
+                                ShowTicks="True"
+                                TrackExtent="25" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
 SfDateTimeSlider rangeSlider = new SfDateTimeSlider();
-rangeSlider.Minimum = new DateTime(2000, 01, 01, 09, 00, 00);
-rangeSlider.Maximum = new DateTime(2019, 01, 01, 21, 00, 00);
-rangeSlider.RangeStart = new DateTime(2000, 01, 01, 12, 00, 00);
-rangeSlider.RangeEnd = new DateTime(2000, 01, 01, 18, 00, 00);
-rangeSlider.Interval = 4;
-rangeSlider.MinorTicksPerInterval = 3;
-rangeSlider.IntervalType = SliderDateIntervalType.Hours;
-rangeSlider.DateFormat = "h tt";
-rangeSlider.ShowLabels = true;
+rangeSlider.Minimum = new DateTime(2010, 01, 01);
+rangeSlider.Maximum = new DateTime(2018, 01, 01);
+rangeSlider.RangeStart = new DateTime(2012, 01, 01);
+rangeSlider.RangeEnd = new DateTime(2016, 01, 01);
+rangeSlider.Interval = 2;
 rangeSlider.ShowTicks = true;
-rangeSlider.TrackExtent = 10;
+rangeSlider.TrackExtent = 25;
 
 {% endhighlight %}
 
 {% endtabs %}
+
+**Without track extent**
+
+**With track extent**
 
 ![RangeSlider track extent](images/track/track-extent.png)
 

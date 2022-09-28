@@ -307,6 +307,17 @@ Change the state of the slider to disabled by setting `false` to the `IsEnabled`
                                                               InactiveFontAttributes="Bold" />
                                 </Setter.Value>
                             </Setter>
+                            <Setter Property="ThumbStyle">
+                                <Setter.Value>
+                                    <sliders:SliderThumbStyle Fill="Gray" />
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="TrackStyle">
+                                <Setter.Value>
+                                    <sliders:SliderTrackStyle ActiveFill="Gray"
+                                                              InactiveFill="LightGray" />
+                                </Setter.Value>
+                            </Setter>
                         </VisualState.Setters>
                     </VisualState>
                 </VisualStateGroup>
@@ -317,11 +328,11 @@ Change the state of the slider to disabled by setting `false` to the `IsEnabled`
 
 <ContentPage.Content>
     <VerticalStackLayout>
-        <Label Text="Enabled Slider"
-               Padding="0,10" />
+        <Label Text="Enabled"
+               Padding="24,10" />
         <sliders:SfSlider />
-        <Label Text="Disabled Slider"
-               Padding="0,10" />
+        <Label Text="Disabled"
+               Padding="24,10" />
         <sliders:SfSlider IsEnabled="False" />
     </VerticalStackLayout>
 </ContentPage.Content>
@@ -331,8 +342,19 @@ Change the state of the slider to disabled by setting `false` to the `IsEnabled`
 {% highlight C# %}
 
 VerticalStackLayout stackLayout = new VerticalStackLayout();
-SfSlider defaultSlider = new SfSlider { Interval = 0.25, ShowTicks = true, ShowLabels = true };
-SfSlider disabledSlider = new SfSlider { IsEnabled = false, Interval = 0.25, ShowTicks = true, ShowLabels = true };
+SfSlider defaultSlider = new()
+{
+    Interval = 0.25,
+    ShowTicks = true,
+    ShowLabels = true
+};
+SfSlider disabledSlider = new()
+{
+    IsEnabled = false,
+    Interval = 0.25,
+    ShowTicks = true,
+    ShowLabels = true
+};
 
 VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
 VisualStateGroup commonStateGroup = new VisualStateGroup();
@@ -348,6 +370,7 @@ defaultState.Setters.Add(new Setter
         ActiveTextColor = Color.FromArgb("#EE3F3F"),
         InactiveTextColor = Color.FromArgb("#F7B1AE"),
         ActiveFontAttributes = FontAttributes.Bold,
+        InactiveFontAttributes = FontAttributes.Italic,
     }
 });
 // Disabled State.
@@ -357,11 +380,29 @@ disabledState.Setters.Add(new Setter
     Property = SfSlider.LabelStyleProperty,
     Value = new SliderLabelStyle
     {
-        ActiveFontSize = 16,
-        InactiveFontSize = 14,
-        ActiveTextColor = Color.FromArgb("#EE3F3F"),
-        InactiveTextColor = Color.FromArgb("#F7B1AE"),
-        ActiveFontAttributes = FontAttributes.Bold,
+        ActiveFontSize = 14,
+        InactiveFontSize = 16,
+        ActiveTextColor = Colors.Gray,
+        InactiveTextColor = Colors.LightGray,
+        ActiveFontAttributes = FontAttributes.Italic,
+        InactiveFontAttributes = FontAttributes.Bold,
+    }
+});
+disabledState.Setters.Add(new Setter
+{
+    Property = SfSlider.ThumbStyleProperty,
+    Value = new SliderThumbStyle
+    {
+        Fill = Colors.Gray,
+    }
+});
+disabledState.Setters.Add(new Setter
+{
+    Property = SfSlider.TrackStyleProperty,
+    Value = new SliderTrackStyle
+    {
+        ActiveFill = Colors.Gray,
+        InactiveFill = Colors.LightGray,
     }
 });
 
@@ -371,9 +412,9 @@ visualStateGroupList.Add(commonStateGroup);
 VisualStateManager.SetVisualStateGroups(defaultSlider, visualStateGroupList);
 VisualStateManager.SetVisualStateGroups(disabledSlider, visualStateGroupList);
 
-stackLayout.Children.Add(new Label() { Text = "Default Slider", Padding = new Thickness(0, 10) });
+stackLayout.Children.Add(new Label() { Text = "Enabled", Padding = new Thickness(24, 10) });
 stackLayout.Children.Add(defaultSlider);
-stackLayout.Children.Add(new Label() { Text = "Disabled Slider", Padding = new Thickness(0, 10) });
+stackLayout.Children.Add(new Label() { Text = "Disabled", Padding = new Thickness(24, 10) });
 stackLayout.Children.Add(disabledSlider);
 this.Content = stackLayout;
 

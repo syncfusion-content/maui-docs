@@ -120,34 +120,28 @@ Extend the track at the edges using the [`TrackExtent`](https://help.syncfusion.
 
 {% highlight xaml %}
 
-<sliders:SfRangeSlider Minimum="-20"
-                       Maximum="20"
-                       RangeStart="-10"
-                       RangeEnd="10"
-                       MinorTicksPerInterval="1"
-                       Interval="10"
+<sliders:SfRangeSlider Interval="0.25"
                        ShowTicks="True"
-                       ShowLabels="True"
-                       TrackExtent="10" />
+                       TrackExtent="25" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfRangeSlider rangeSlider = new SfRangeSlider();
-rangeSlider.Minimum = "-20";
-rangeSlider.Maximum = "20";
-rangeSlider.RangeStart = "-10";
-rangeSlider.RangeEnd = "10";
-rangeSlider.Interval = 10;
-rangeSlider.MinorTicksPerInterval = 1;
-rangeSlider.ShowLabels = true;
-rangeSlider.ShowTicks = true;
-rangeSlider.TrackExtent = 10;
+SfRangeSlider rangeSlider = new SfRangeSlider()
+{
+    Interval = 0.25,
+    TrackExtent = 25,
+    ShowTicks = true,
+};
 
 {% endhighlight %}
 
 {% endtabs %}
+
+**Without track extent**
+
+**With track extent**
 
 ![RangeSlider track extent](images/track/track-extent.png)
 
@@ -163,6 +157,9 @@ Change the state of the range slider to disabled by setting `false` to the `IsEn
     <Style TargetType="sliders:SfRangeSlider">
         <Setter Property="Interval"
                 Value="0.25" />
+        <Setter Property="ThumbStyle">
+            <sliders:SliderThumbStyle Radius="0" />
+        </Setter>
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup>
@@ -198,11 +195,11 @@ Change the state of the range slider to disabled by setting `false` to the `IsEn
 
 <ContentPage.Content>
     <VerticalStackLayout>
-        <Label Text="Enabled Range Slider"
-               Padding="0,10" />
+        <Label Text="Enabled"
+               Padding="24,10" />
         <sliders:SfRangeSlider />
-        <Label Text="Disabled Range Slider"
-               Padding="0,10" />
+        <Label Text="Disabled"
+               Padding="24,10" />
         <sliders:SfRangeSlider IsEnabled="False" />
     </VerticalStackLayout>
 </ContentPage.Content>
@@ -211,14 +208,16 @@ Change the state of the range slider to disabled by setting `false` to the `IsEn
 
 {% highlight C# %}
 
-VerticalStackLayout stackLayout = new VerticalStackLayout();
-SfRangeSlider defaultRangeSlider = new SfRangeSlider();
-SfRangeSlider disabledRangeSlider = new SfRangeSlider { IsEnabled = false };
+VerticalStackLayout stackLayout = new();
+SfRangeSlider defaultRangeSlider = new();
+defaultRangeSlider.ThumbStyle.Radius = 0;
+SfRangeSlider disabledRangeSlider = new() { IsEnabled = false };
+disabledRangeSlider.ThumbStyle.Radius = 0;
 
-VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
-VisualStateGroup commonStateGroup = new VisualStateGroup();
+VisualStateGroupList visualStateGroupList = new();
+VisualStateGroup commonStateGroup = new();
 // Default State.
-VisualState defaultState = new VisualState { Name = "Default" };
+VisualState defaultState = new() { Name = "Default" };
 defaultState.Setters.Add(new Setter
 {
     Property = SfRangeSlider.TrackStyleProperty,
@@ -231,7 +230,7 @@ defaultState.Setters.Add(new Setter
     }
 });
 // Disabled State.
-VisualState disabledState = new VisualState { Name = "Disabled" };
+VisualState disabledState = new() { Name = "Disabled" };
 disabledState.Setters.Add(new Setter
 {
     Property = SfRangeSlider.TrackStyleProperty,
@@ -250,9 +249,9 @@ visualStateGroupList.Add(commonStateGroup);
 VisualStateManager.SetVisualStateGroups(defaultRangeSlider, visualStateGroupList);
 VisualStateManager.SetVisualStateGroups(disabledRangeSlider, visualStateGroupList);
 
-stackLayout.Children.Add(new Label() { Text = "Default Range Slider", Padding = new Thickness(0, 10) });
+stackLayout.Children.Add(new Label() { Text = "Enabled", Padding = new Thickness(24, 10) });
 stackLayout.Children.Add(defaultRangeSlider);
-stackLayout.Children.Add(new Label() { Text = "Disabled Range Slider", Padding = new Thickness(0, 10) });
+stackLayout.Children.Add(new Label() { Text = "Disabled", Padding = new Thickness(24, 10) });
 stackLayout.Children.Add(disabledRangeSlider);
 this.Content = stackLayout;
 

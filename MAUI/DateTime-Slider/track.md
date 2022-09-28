@@ -130,36 +130,32 @@ You can extend the track at edges using the [`TrackExtent`](https://help.syncfus
 
 {% highlight xaml %}
 
-<sliders:SfDateTimeSlider Minimum="2000-01-01T09:00:00"
-                          Maximum="2000-01-01T21:00:00"
-                          Value="2000-01-01T15:00:00"
-                          IntervalType="Hours"
-                          DateFormat="h tt"
-                          MinorTicksPerInterval="3"
-                          Interval="4"
+<sliders:SfDateTimeSlider Minimum="2010-01-01"
+                          Maximum="2018-01-01"
+                          Value="2014-01-01"
+                          Interval="2"
                           ShowTicks="True"
-                          ShowLabels="True"
-                          TrackExtent="10" />
+                          TrackExtent="25" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
 SfDateTimeSlider slider = new SfDateTimeSlider();
-slider.Minimum = new DateTime(2000, 01, 01, 09, 00, 00);
-slider.Maximum = new DateTime(2019, 01, 01, 21, 00, 00);
-slider.Value = new DateTime(2000, 01, 01, 15, 00, 00);
-slider.Interval = 4;
-slider.MinorTicksPerInterval = 3;
-slider.IntervalType = SliderDateIntervalType.Hours;
-slider.DateFormat = "h tt";
-slider.ShowLabels = true;
+slider.Minimum = new DateTime(2010, 01, 01);
+slider.Maximum = new DateTime(2020, 01, 01);
+slider.Value = new DateTime(2014, 01, 01);
+slider.Interval = 2;
 slider.ShowTicks = true;
-slider.TrackExtent = 10;
+slider.TrackExtent = 25;
 
 {% endhighlight %}
 
 {% endtabs %}
+
+**Without track extent**
+
+**With track extent**
 
 ![Slider track extent](images/track/track-extent.png)
 

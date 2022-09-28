@@ -9,7 +9,7 @@ documentation: ug
 
 # Value selection in .NET MAUI DateTime Slider (SfDateTimeSlider)
 
-This section helps to learn about customization options available to configure the value selection in the DateTime Slider.
+This section helps to learn about the value selection in the DateTime Slider.
 
 ## Default
 

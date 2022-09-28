@@ -143,6 +143,10 @@ SfSlider slider = new SfSlider()
 
 {% endtabs %}
 
+**Without track extent**
+
+**With track extent**
+
 ![Slider track extent](images/track/track-extent.png)
 
 ## Disabled track
@@ -157,6 +161,9 @@ Change the state of the slider to disabled by setting `false` to the `IsEnabled`
     <Style TargetType="sliders:SfSlider">
         <Setter Property="Interval"
                 Value="0.25" />
+        <Setter Property="ThumbStyle">
+            <sliders:SliderThumbStyle Radius="0" />
+        </Setter>
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup>
@@ -205,14 +212,16 @@ Change the state of the slider to disabled by setting `false` to the `IsEnabled`
 
 {% highlight C# %}
 
-VerticalStackLayout stackLayout = new VerticalStackLayout();
-SfSlider defaultSlider = new SfSlider();
-SfSlider disabledSlider = new SfSlider { IsEnabled = false };
+VerticalStackLayout stackLayout = new();
+SfSlider defaultSlider = new();
+defaultSlider.ThumbStyle.Radius = 0;
+SfSlider disabledSlider = new() { IsEnabled = false };
+disabledSlider.ThumbStyle.Radius = 0;
 
-VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
-VisualStateGroup commonStateGroup = new VisualStateGroup();
+VisualStateGroupList visualStateGroupList = new();
+VisualStateGroup commonStateGroup = new();
 // Default State.
-VisualState defaultState = new VisualState { Name = "Default" };
+VisualState defaultState = new() { Name = "Default" };
 defaultState.Setters.Add(new Setter
 {
     Property = SfSlider.TrackStyleProperty,
@@ -225,7 +234,7 @@ defaultState.Setters.Add(new Setter
     }
 });
 // Disabled State.
-VisualState disabledState = new VisualState { Name = "Disabled" };
+VisualState disabledState = new() { Name = "Disabled" };
 disabledState.Setters.Add(new Setter
 {
     Property = SfSlider.TrackStyleProperty,

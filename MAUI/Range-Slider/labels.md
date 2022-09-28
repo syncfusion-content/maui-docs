@@ -306,6 +306,17 @@ Change the state of the range slider to disabled by setting `false` to the `IsEn
                                                               InactiveFontAttributes="Bold" />
                                 </Setter.Value>
                             </Setter>
+                            <Setter Property="ThumbStyle">
+                                <Setter.Value>
+                                    <sliders:SliderThumbStyle Fill="Gray" />
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="TrackStyle">
+                                <Setter.Value>
+                                    <sliders:SliderTrackStyle ActiveFill="Gray"
+                                                              InactiveFill="LightGray" />
+                                </Setter.Value>
+                            </Setter>
                         </VisualState.Setters>
                     </VisualState>
                 </VisualStateGroup>
@@ -316,11 +327,11 @@ Change the state of the range slider to disabled by setting `false` to the `IsEn
 
 <ContentPage.Content>
     <VerticalStackLayout>
-        <Label Text="Enabled Range Slider"
-               Padding="0,10" />
+        <Label Text="Enabled"
+               Padding="24,10" />
         <sliders:SfRangeSlider />
-        <Label Text="Disabled Range Slider"
-               Padding="0,10" />
+        <Label Text="Disabled"
+               Padding="24,10" />
         <sliders:SfRangeSlider IsEnabled="False" />
     </VerticalStackLayout>
 </ContentPage.Content>
@@ -330,8 +341,19 @@ Change the state of the range slider to disabled by setting `false` to the `IsEn
 {% highlight C# %}
 
 VerticalStackLayout stackLayout = new VerticalStackLayout();
-SfRangeSlider defaultRangeSlider = new SfRangeSlider { Interval = 0.25, ShowTicks = true, ShowLabels = true };
-SfRangeSlider disabledRangeSlider = new SfRangeSlider { IsEnabled = false, Interval = 0.25, ShowTicks = true, ShowLabels = true };
+SfRangeSlider defaultRangeSlider = new()
+{
+    Interval = 0.25,
+    ShowTicks = true,
+    ShowLabels = true
+};
+SfRangeSlider disabledRangeSlider = new()
+{
+    IsEnabled = false,
+    Interval = 0.25,
+    ShowTicks = true,
+    ShowLabels = true
+};
 
 VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
 VisualStateGroup commonStateGroup = new VisualStateGroup();
@@ -347,6 +369,7 @@ defaultState.Setters.Add(new Setter
         ActiveTextColor = Color.FromArgb("#EE3F3F"),
         InactiveTextColor = Color.FromArgb("#F7B1AE"),
         ActiveFontAttributes = FontAttributes.Bold,
+        InactiveFontAttributes = FontAttributes.Italic,
     }
 });
 // Disabled State.
@@ -356,11 +379,29 @@ disabledState.Setters.Add(new Setter
     Property = SfRangeSlider.LabelStyleProperty,
     Value = new SliderLabelStyle
     {
-        ActiveFontSize = 16,
-        InactiveFontSize = 14,
-        ActiveTextColor = Color.FromArgb("#EE3F3F"),
-        InactiveTextColor = Color.FromArgb("#F7B1AE"),
-        ActiveFontAttributes = FontAttributes.Bold,
+        ActiveFontSize = 14,
+        InactiveFontSize = 16,
+        ActiveTextColor = Colors.Gray,
+        InactiveTextColor = Colors.LightGray,
+        ActiveFontAttributes = FontAttributes.Italic,
+        InactiveFontAttributes = FontAttributes.Bold,
+    }
+});
+disabledState.Setters.Add(new Setter
+{
+    Property = SfRangeSlider.ThumbStyleProperty,
+    Value = new SliderThumbStyle
+    {
+        Fill = Colors.Gray,
+    }
+});
+disabledState.Setters.Add(new Setter
+{
+    Property = SfRangeSlider.TrackStyleProperty,
+    Value = new SliderTrackStyle
+    {
+        ActiveFill = Colors.Gray,
+        InactiveFill = Colors.LightGray,
     }
 });
 
@@ -370,9 +411,9 @@ visualStateGroupList.Add(commonStateGroup);
 VisualStateManager.SetVisualStateGroups(defaultRangeSlider, visualStateGroupList);
 VisualStateManager.SetVisualStateGroups(disabledRangeSlider, visualStateGroupList);
 
-stackLayout.Children.Add(new Label() { Text = "Default Range Slider", Padding = new Thickness(0, 10) });
+stackLayout.Children.Add(new Label() { Text = "Enabled", Padding = new Thickness(24, 10) });
 stackLayout.Children.Add(defaultRangeSlider);
-stackLayout.Children.Add(new Label() { Text = "Disabled Range Slider", Padding = new Thickness(0, 10) });
+stackLayout.Children.Add(new Label() { Text = "Disabled", Padding = new Thickness(24, 10) });
 stackLayout.Children.Add(disabledRangeSlider);
 this.Content = stackLayout;
 

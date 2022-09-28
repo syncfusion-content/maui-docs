@@ -185,8 +185,8 @@ Change the state of the slider to disabled by setting `false` to the `IsEnabled`
                         <VisualState.Setters>
                             <Setter Property="DividerStyle">
                                 <Setter.Value>
-                                    <sliders:SliderDividerStyle ActiveFill="#F7B1AE"
-                                                                InactiveFill="#EE3F3F"
+                                    <sliders:SliderDividerStyle ActiveFill="#EE3F3F"
+                                                                InactiveFill="#88EE3F3F"
                                                                 ActiveRadius="5"
                                                                 InactiveRadius="4" />
                                 </Setter.Value>
@@ -203,6 +203,17 @@ Change the state of the slider to disabled by setting `false` to the `IsEnabled`
                                                                 InactiveRadius="4" />
                                 </Setter.Value>
                             </Setter>
+                            <Setter Property="TrackStyle">
+                                <Setter.Value>
+                                    <sliders:SliderTrackStyle ActiveFill="Gray"
+                                                              InactiveFill="LightGray" />
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="ThumbStyle">
+                                <Setter.Value>
+                                    <sliders:SliderThumbStyle Fill="Gray" />
+                                </Setter.Value>
+                            </Setter>
                         </VisualState.Setters>
                     </VisualState>
                 </VisualStateGroup>
@@ -211,14 +222,13 @@ Change the state of the slider to disabled by setting `false` to the `IsEnabled`
     </Style>
 </ContentPage.Resources>
 
-
 <ContentPage.Content>
     <VerticalStackLayout>
-        <Label Text="Enabled Slider"
-               Padding="0,10" />
+        <Label Text="Enabled"
+               Padding="24,10" />
         <sliders:SfSlider />
-        <Label Text="Disabled Slider"
-               Padding="0,10" />
+        <Label Text="Disabled"
+               Padding="24,10" />
         <sliders:SfSlider IsEnabled="False" />
     </VerticalStackLayout>
 </ContentPage.Content>
@@ -227,15 +237,24 @@ Change the state of the slider to disabled by setting `false` to the `IsEnabled`
 
 {% highlight C# %}
 
-VerticalStackLayout stackLayout = new VerticalStackLayout();
-SfSlider defaultSlider = new SfSlider { Interval = 0.25, ShowDividers = true };
-SfSlider disabledSlider = new SfSlider { IsEnabled = false, Interval = 0.25, ShowDividers = true };
+VerticalStackLayout stackLayout = new();
+SfSlider enabledSlider = new()
+{
+    Interval = 0.25,
+    ShowDividers = true
+};
+SfSlider disabledSlider = new()
+{
+    IsEnabled = false,
+    Interval = 0.25,
+    ShowDividers = true
+};
 
-VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
-VisualStateGroup commonStateGroup = new VisualStateGroup();
+VisualStateGroupList visualStateGroupList = new();
+VisualStateGroup commonStateGroup = new();
 // Default State.
-VisualState defaultState = new VisualState { Name = "Default" };
-defaultState.Setters.Add(new Setter
+VisualState enabledState = new() { Name = "Default" };
+enabledState.Setters.Add(new Setter
 {
     Property = SfSlider.DividerStyleProperty,
     Value = new SliderDividerStyle
@@ -247,7 +266,7 @@ defaultState.Setters.Add(new Setter
     }
 });
 // Disabled State.
-VisualState disabledState = new VisualState { Name = "Disabled" };
+VisualState disabledState = new() { Name = "Disabled" };
 disabledState.Setters.Add(new Setter
 {
     Property = SfSlider.DividerStyleProperty,
@@ -259,16 +278,33 @@ disabledState.Setters.Add(new Setter
         InactiveRadius = 4,
     }
 });
+disabledState.Setters.Add(new Setter
+{
+    Property = SfSlider.TrackStyleProperty,
+    Value = new SliderTrackStyle
+    {
+        ActiveFill = Colors.Gray,
+        InactiveFill = Colors.LightGray,
+    }
+});
+disabledState.Setters.Add(new Setter
+{
+    Property = SfSlider.ThumbStyleProperty,
+    Value = new SliderThumbStyle
+    {
+        Fill = Colors.Gray,
+    }
+});
 
-commonStateGroup.States.Add(defaultState);
+commonStateGroup.States.Add(enabledState);
 commonStateGroup.States.Add(disabledState);
 visualStateGroupList.Add(commonStateGroup);
-VisualStateManager.SetVisualStateGroups(defaultSlider, visualStateGroupList);
+VisualStateManager.SetVisualStateGroups(enabledSlider, visualStateGroupList);
 VisualStateManager.SetVisualStateGroups(disabledSlider, visualStateGroupList);
 
-stackLayout.Children.Add(new Label() { Text = "Default Slider", Padding = new Thickness(0, 10) });
-stackLayout.Children.Add(defaultSlider);
-stackLayout.Children.Add(new Label() { Text = "Disabled Slider", Padding = new Thickness(0, 10) });
+stackLayout.Children.Add(new Label() { Text = "Enabled", Padding = new Thickness(24, 10) });
+stackLayout.Children.Add(enabledSlider);
+stackLayout.Children.Add(new Label() { Text = "Disabled", Padding = new Thickness(24, 10) });
 stackLayout.Children.Add(disabledSlider);
 this.Content = stackLayout;
 
