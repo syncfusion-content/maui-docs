@@ -242,7 +242,6 @@ var tabItems = new TabItemCollection
 }
 {% endhighlight %}
 
-{% endtabs %}
 
 ![Image Text Spacing](images/Image-Text-Spacing.png)
 
