@@ -665,9 +665,9 @@ public class BookInfoRepository : INotifyPropertyChanged
 
 ### Processing LoadMore
 
-`SfListView` supports binding the [LoadMoreOption](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LoadMoreOption), [LoadMoreCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LoadMoreCommand), and [isLazyLoading](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_isLazyLoading) properties from ViewModel to load more number of items at runtime. `LoadMoreOption` enables load more manually or automatically the items when loading the items at runtime. `LoadMoreCommand` executes to load the items form ViewModel. The `isLazyLoading` property notifies that the items are populating from ViewModel to show or hide the load more view. 
+`SfListView` supports binding the [LoadMoreOption](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LoadMoreOption), [LoadMoreCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LoadMoreCommand), and [IsLazyLoading](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_IsLazyLoading) properties from ViewModel to load more number of items at runtime. `LoadMoreOption` enables load more manually or automatically the items when loading the items at runtime. `LoadMoreCommand` executes to load the items form ViewModel. The `IsLazyLoading` property notifies that the items are populating from ViewModel to show or hide the load more view. 
 
-The `isLazyLoading` property in ViewModel shows the busy indicator when populating the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsSource).
+The `IsLazyLoading` property in ViewModel shows the busy indicator when populating the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsSource).
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2 3 4 5" %}
@@ -675,14 +675,14 @@ The `isLazyLoading` property in ViewModel shows the busy indicator when populati
                         LoadMoreOption="Auto"
                         LoadMoreCommand="{Binding LoadMoreItemsCommand}"
                         LoadMoreCommandParameter="{Binding Source={x:Reference Name=listView}}"
-                        isLazyLoading="{Binding isLazyLoading}"
+                        IsLazyLoading="{Binding IsLazyLoading}"
                         ItemsSource="{Binding BookInfoCollection}">
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 listView.LoadMoreOption = LoadMoreOption.Auto;
 listView.SetBinding(SfListView.LoadMoreCommandProperty, new Binding("LoadMoreItemsCommand", BindingMode.OneWay));
 listView.LoadMoreCommandParameter = listView;
-listView.SetBinding(SfListView.isLazyLoadingProperty, new Binding("isLazyLoading", BindingMode.OneWay));
+listView.SetBinding(SfListView.IsLazyLoadingProperty, new Binding("isLazyLoading", BindingMode.OneWay));
 {% endhighlight %}
 {% endtabs %}
 
@@ -722,7 +722,7 @@ public class ViewModel:INotifyPropertyChanged
         var listview = obj as Syncfusion.Maui.ListView.SfListView;
         try
         {
-            isLazyLoading = true;
+            IsLazyLoading = true;
 
             await Task.Delay(1000);
 
@@ -737,7 +737,7 @@ public class ViewModel:INotifyPropertyChanged
         }
         finally
         {
-            isLazyLoading = false;
+            IsLazyLoading = false;
         }
     }
 
