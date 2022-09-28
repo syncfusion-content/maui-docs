@@ -19,7 +19,7 @@ N> When tapping a swiped item, the [SelectionChanging](https://help.syncfusion.c
 
 ## Assigning start and end swipe templates
 
-The User Interface (UI) for swiping can be customized by using swipe templates `SfListView.StartSwipeTemplate` when swiping towards the end and `SfListView.EndSwipeTemplate` when swiping towards the start. The contents inside the swipe template are arranged based on the offset values when swiping an item. You can reset the swiping item or swiped item by calling the `SfListView.ResetSwipeItem` method.
+The User Interface (UI) for swiping can be customized by using swipe templates `SfListView.StartSwipeTemplate` when swiping towards the right and `SfListView.EndSwipeTemplate` when swiping towards the left. The contents inside the swipe template are arranged based on the offset values when swiping an item. You can reset the swiping item or swiped item by calling the `SfListView.ResetSwipeItem` method.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -558,4 +558,4 @@ private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
 
 Download entire source code from GitHub [here](https://github.com/SyncfusionExamples/how-to-edit-the-item-through-swipe-view-in-.net-maui-listview).
 
-N> You can refer to our [.NET MAUI ListView](https://www.syncfusion.com/maui-controls/maui-listview) feature tour page for its groundbreaking feature representations. You can also explore our `.NET MAUI ListView example` to know how to render set of data items with .NET MAUI views or custom templates.
+N> You can refer to our [.NET MAUI ListView](https://www.syncfusion.com/maui-controls/maui-listview) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI ListView example](https://github.com/SyncfusionExamples/gettingstarted-listview-.net-maui) to know how to render set of data items with .NET MAUI views or custom templates.
