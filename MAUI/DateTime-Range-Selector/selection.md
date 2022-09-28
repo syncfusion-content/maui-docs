@@ -54,7 +54,7 @@ rangeSelector.RangeEnd = new DateTime(2004, 01, 01);
 rangeSelector.Interval = 1;
 rangeSelector.IntervalType = SliderDateIntervalType.Years;
 rangeSelector.DateFormat = "yyyy";    
-rangeSelector.ShowLables = true;
+rangeSelector.ShowLabels = true;
 rangeSelector.ShowTicks = true;      
 rangeSelector.ShowDividers = true;    
 SfCartesianChart chart = new SfCartesianChart();
@@ -63,6 +63,8 @@ rangeSelector.Content = chart;
 {% endhighlight %}
 
 {% endtabs %}
+
+![RangeSelector default dragging](images/selection/default.gif)
 
 ## Discrete selection
 

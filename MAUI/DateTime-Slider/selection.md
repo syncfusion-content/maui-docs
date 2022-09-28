@@ -19,27 +19,25 @@ By default, the thumb gets moved on continuous manner in the DateTime Slider.
 
 {% highlight xaml %}
 
-<sliders:SfSlider Minimum="20"
-                  Maximum="40"
-                  Interval="5"
-                  Value="30"
-                  ShowLabels="True"
-                  ShowTicks="True"
-                  ShowDividers="True" />                 
+<sliders:SfDateTimeSlider Minimum="2000-01-01"
+                          Maximum="2004-01-01"
+                          Value="2002-01-01"
+                          Interval="1"
+                          ShowLabels="True"
+                          ShowTicks="True" />                
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfSlider slider = new SfSlider()
+SfDateTimeSlider slider = new SfDateTimeSlider()
 {
-    Minimum = 20,
-    Maximum = 40,
-    Value = 30,
-    Interval = 5,
+    Minimum = new DateTime(2000, 01, 01),
+    Maximum = new DateTime(2004, 01, 01),
+    Value = new DateTime(2002, 01, 01),
+    Interval = 1,
     ShowTicks = true,
     ShowLabels = true,
-    ShowDividers = true,
 };
          
 {% endhighlight %}
@@ -59,10 +57,13 @@ For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.M
 {% highlight xaml %}
 
 <sliders:SfDateTimeSlider Minimum="2000-01-01"
-                          Maximum="2005-01-01"
+                          Maximum="2004-01-01"
                           Value="2002-01-01"
+                          Interval="1"
                           StepDuration="1"
-                          IntervalType="Years" />
+                          IntervalType="Years"
+                          ShowTicks="True"
+                          ShowLabels="True" />
 
 {% endhighlight %}
 
@@ -71,10 +72,13 @@ For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.M
 SfDateTimeSlider slider = new SfDateTimeSlider()
 {
     Minimum = new DateTime(2000, 01, 01),
-    Maximum = new DateTime(2005, 01, 01),
+    Maximum = new DateTime(2004, 01, 01),
     Value = new DateTime(2002, 01, 01),
+    Interval = 1,
     StepDuration = new SliderStepDuration(years: 1),
     IntervalType = SliderDateIntervalType.Years,
+    ShowTicks = true,
+    ShowLabels = true,
 };
 
 {% endhighlight %}
