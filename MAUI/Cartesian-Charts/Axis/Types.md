@@ -268,7 +268,7 @@ In [DateTimeAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Dat
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    . . .
+    ...
     <chart:SfCartesianChart.XAxes>
         <chart:DateTimeAxis Interval="6" IntervalType="Months"/>
     </chart:SfCartesianChart.XAxes>
@@ -351,7 +351,7 @@ The [LogarithmicAxis]() uses a logarithmic scale, and it is very useful in visua
     <chart:SfCartesianChart.YAxes>
         <chart:LogarithmicAxis/>
     </chart:SfCartesianChart.YAxes>
-
+    
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -359,8 +359,6 @@ The [LogarithmicAxis]() uses a logarithmic scale, and it is very useful in visua
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-
-. . .
 
 LogarithmicAxis primaryAxis = new LogarithmicAxis();
 chart.XAxes.Add(primaryAxis);
@@ -374,7 +372,7 @@ chart.YAxes.Add(secondaryAxis);
 
 ![LogarithmicAxis support in MAUI Chart](Axis_Images/maui_chart_logarithmic_axis.jpg)
 
-### Customizing the range
+### Range customization
 
 To customize the range of the log axis, you can use the [Minimum](), [Maximum]() and [Interval]() properties of the [LogarithmicAxis](). By default, an excellent range will be calculated automatically based on the provided data. The following code example demonstrates the range customization of the axis.
 
@@ -394,10 +392,8 @@ To customize the range of the log axis, you can use the [Minimum](), [Maximum]()
 {% highlight c# %}
 
 chart.YAxes.Add(new LogarithmicAxis() { 
-
 	Minimum = 100, 
 	Maximum = 10000 
-
 });
 
 {% endhighlight %}
@@ -408,7 +404,7 @@ chart.YAxes.Add(new LogarithmicAxis() {
 
 ### Logarithmic base
 
-The log axis base can be customized using the [LogarithmicBase]() property of the axis.For example when the logBase is 5, the axis values follows 5<sup>0</sup>,5<sup>1</sup>, 5<sup>2</sup>, 5<sup>3</sup> etc. By default, the base of a logarithmic axis is 10. The base can be set to a value that meets your needs. The base value should be greater than 1 and it cannot be a decimal number. The following code example demonstrates the logarithmic values in the y-axis calculated from base 2.
+The logarithmic axis base can be customized using the [LogarithmicBase]() property of the axis. By default, the base value is 10. The following code example demonstrates how to customize the base value.
 
 {% tabs %}
 
@@ -434,7 +430,7 @@ chart.YAxes.Add(new LogarithmicAxis( ) { LogarithmicBase = 2 });
 
 ### Logarithmic interval
 
-The logarithmic interval can be customized using the [Interval]() property of the axis. A power-based interval is used for the logarithmic axis. When the logarithmic base is 10 and the logarithmic interval is 1, then the axis labels are placed at an interval of 10. i.e., 1, 10, 100, 1000, etc. When the logarithmic interval is 2, then the axis labels are placed at an interval of 10<sup>2</sup>. i.e., 1, 100, 1000, etc. The default value of the interval is 1, and it cannot be a decimal number.
+Axis interval can be customized using the [Interval]() property of the axis. By default, interval will be calculated based on the minimum and maximum value of the provided data. And the default value of the interval is 1. The following code example demonstrates the interval customization of the axis.
 
 {% tabs %}
 
@@ -458,9 +454,9 @@ chart.YAxes.Add(new LogarithmicAxis( ) { Interval = 2 });
 
 ![LogarithmicAxis interval in MAUI Chart](Axis_Images/maui_chart_logarithmic_axis_interval.jpg)
 
-### Actual minimum & Actual maximum
+### Actual minimum & maximum
 
-The actual minimum property can be used to get the double value that represents the minimum value of the chart axis range and the actual maximum property can be used to get the double value that represents the maximum value of the chart axis range. The following code example demonstrates how to get the actual minimum and actual maximum values of the axis range using the labels.
+The ActualMinimum and ActualMaximum of the LogarithmicAxis used to get actual range of the axis. The following code example demonstrates how to get the actual minimum and maximum.
 
 {% tabs %}
 
@@ -477,12 +473,7 @@ The actual minimum property can be used to get the double value that represents 
          <chart:SfCartesianChart.YAxes>
                        <chart:LogarithmicAxis x:Name="yAxis"/>
          </chart:SfCartesianChart.YAxes>
-        
-         <chart:SfCartesianChart.Series>
-             <chart:ColumnSeries ItemsSource="{Binding Data}" XBindingPath="XValue" 
-              YBindingPath="YValue" />
-         </chart:SfCartesianChart.Series>
-                  
+         . . .
      </chart:SfCartesianChart>
 
     <Label HorizontalOptions="Center" Text="{Binding Source= {x:Reference yAxis}, Path=ActualMinimum,   
@@ -511,8 +502,7 @@ Label firstLabel = new Label( );
 Label secondLabel = new Label( );
 
 firstLabel.SetBinding(Label.TextProperty, new Binding("ActualMinimum", source: yAxis, stringFormat: "Actual minimum is: {0}"));
-secondLabel.SetBinding(Label.TextProperty, new Binding("ActualMaximum", source: yAxis, stringFormat: "Actual maximum is: {0}"));
-. . . 
+secondLabel.SetBinding(Label.TextProperty, new Binding("ActualMaximum", source: yAxis, stringFormat: "Actual maximum is: {0}"));  
 
 {% endhighlight %}
 
