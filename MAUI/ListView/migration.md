@@ -134,4 +134,3 @@ To migrate easier from [Xamarin SfListView](https://www.syncfusion.com/xamarin-u
 
   * Item reordering
   * Pull to refresh
-  * Swiping
