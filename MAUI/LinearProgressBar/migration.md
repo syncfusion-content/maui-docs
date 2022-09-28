@@ -9,16 +9,16 @@ documentation: ug
 
 # Migrate from Xamarin.Forms SfLinearProgressBar to .NET MAUI SfLinearProgressBar
 
-To make the migration from the [Xamarin SfLinearProgressBar](https://www.syncfusion.com/xamarin-ui-controls/xamarin-progressbar) to `.NET MAUI SfLinearProgressBar` easier, most of the APIs from the Xamarin ProgressBar were kept in the .NET MAUI ProgressBar. However, to maintain the consistency of API naming in the .NET MAUI SfLinearProgressBar, some of the APIs have been renamed. Please find the difference in the following topics.
+To make the migration from the [Xamarin SfLinearProgressBar](https://www.syncfusion.com/xamarin-ui-controls/xamarin-progressbar) to `.NET MAUI SfLinearProgressBar` easier, most of the APIs from the Xamarin SfLinearProgressBar were kept in the .NET MAUI SfLinearProgressBar. However, to maintain the consistency of API naming in the .NET MAUI SfLinearProgressBar, some of the APIs have been renamed. Please find the difference in the following topics.
 
 ## Initialize control
 
-To initialize the control, import the ProgressBar namespace and initialize the ProgressBar as shown in the following code sample.
+To initialize the control, import the ProgressBar namespace and initialize the SfLinearProgressBar as shown in the following code sample.
 
 <table>
 <tr>
-<th>Xamarin ProgressBar</th>
-<th>.NET MAUI ProgressBar</th></tr>
+<th>Xamarin SfLinearProgressBar</th>
+<th>.NET MAUI SfLinearProgressBar</th></tr>
 <tr>
 <td>
 {% tabs %}
@@ -93,6 +93,10 @@ SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 <td>{{'Progress'| markdownify }}</td>
 <td>Gets or sets the value that specifies the current value for the progress.</td></tr>
 <tr>
+<td>{{'[SecondaryProgress](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfLinearProgressBar.html#Syncfusion_XForms_ProgressBar_SfLinearProgressBar_SecondaryProgress)'| markdownify }}</td>
+<td>{{'SecondaryProgress'| markdownify }}</td>
+<td>Gets or sets the secondary progress value for the SfLinearProgressBar.</td></tr>
+<tr>
 <td>{{'[IsIndeterminate](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_IsIndeterminate)'| markdownify }}</td>
 <td>{{'IsIndeterminate'| markdownify }}</td>
 <td>Gets or sets a value indicating whether the progress bar is in indeterminate state or not.</td></tr>
@@ -108,6 +112,10 @@ SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 <td>{{'[ProgressColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_ProgressColor)'| markdownify }}</td>
 <td>{{'ProgressFill'| markdownify }}</td>
 <td>Gets or sets the brush that paints the interior area of the progress.</td></tr>
+<tr>
+<td>{{'[SecondaryProgressColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfLinearProgressBar.html#Syncfusion_XForms_ProgressBar_SfLinearProgressBar_SecondaryProgressColor)'| markdownify }}</td>
+<td>{{'SecondaryProgressFill'| markdownify }}</td>
+<td>Gets or sets the brush that paints the interior area of the secondary progress.</td></tr>
 <tr>
 <td>{{'[TrackColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_TrackColor)'| markdownify }}</td>
 <td>{{'TrackFill'| markdownify }}</td>
@@ -129,6 +137,10 @@ SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 <td>{{'AnimationDuration'| markdownify }}</td>
 <td>Gets or sets a value that specifies the progress animation duration in milliseconds.</td></tr>
 <tr>
+<td>{{'[SecondaryAnimationDuration](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfLinearProgressBar.html#Syncfusion_XForms_ProgressBar_SfLinearProgressBar_SecondaryAnimationDuration)'| markdownify }}</td>
+<td>{{'SecondaryAnimationDuration'| markdownify }}</td>
+<td>Gets or sets a value that specifies the secondary progress animation duration in milliseconds.</td></tr>
+<tr>
 <td>{{'[IndeterminateAnimationDuration](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_IndeterminateAnimationDuration)'| markdownify }}</td>
 <td>{{'IndeterminateAnimationDuration'| markdownify }}</td>
 <td>Gets or sets a value that specifies the indeterminate animation duration in milliseconds.</td></tr>
@@ -145,14 +157,6 @@ SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 <td>{{'IndeterminateIndicatorWidthFactor'| markdownify }}</td>
 <td>Gets or sets the value that specifies width of the indeterminate indicator.</td></tr>
 <tr>
-<td>{{'[SecondaryProgress](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfLinearProgressBar.html#Syncfusion_XForms_ProgressBar_SfLinearProgressBar_SecondaryProgress)'| markdownify }}</td>
-<td>{{'SecondaryProgress'| markdownify }}</td>
-<td>Gets or sets the secondary progress value for the SfLinearProgressBar.</td></tr>
-<tr>
-<td>{{'[SecondaryProgressColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfLinearProgressBar.html#Syncfusion_XForms_ProgressBar_SfLinearProgressBar_SecondaryProgressColor)'| markdownify }}</td>
-<td>{{'SecondaryProgressFill'| markdownify }}</td>
-<td>Gets or sets the brush that paints the interior area of the secondary progress.</td></tr>
-<tr>
 <td>{{'[TrackHeight](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfLinearProgressBar.html#Syncfusion_XForms_ProgressBar_SfLinearProgressBar_TrackHeight)'| markdownify }}</td>
 <td>Divided into {{'TrackHeight'| markdownify }}, {{'ProgressHeight'| markdownify }} and {{'SecondaryProgressHeight'| markdownify }}</td>
 <td>Gets or sets a value to determine the height of track, progress and secondary progress.</td></tr>
@@ -160,10 +164,6 @@ SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 <td>{{'[CornerRadius](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfLinearProgressBar.html#Syncfusion_XForms_ProgressBar_SfLinearProgressBar_CornerRadius)'| markdownify }}</td>
 <td>Divided into {{'TrackCornerRadius'| markdownify }}, {{'ProgressCornerRadius'| markdownify }} and {{'SecondaryProgressCornerRadius'| markdownify }}</td>
 <td>Gets or sets a value to determine the corner radius of the track, progress, and secondary progress.</td></tr>
-<tr>
-<td>{{'[SecondaryAnimationDuration](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfLinearProgressBar.html#Syncfusion_XForms_ProgressBar_SfLinearProgressBar_SecondaryAnimationDuration)'| markdownify }}</td>
-<td>{{'SecondaryAnimationDuration'| markdownify }}</td>
-<td>Gets or sets a value that specifies the secondary progress animation duration in milliseconds.</td></tr>
 <tr>
 <td>{{'[ValueChanged](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_ValueChanged)'| markdownify }}</td>
 <td>{{'ProgressChanged'| markdownify }}</td>
@@ -259,30 +259,30 @@ using Syncfusion.XForms.ProgressBar;
 ...
  
  <progressBar:SfLinearProgressBar x:Name="LinearProgressBar" 
-                                 AnimationEasing="{x:Static Easing.CubicOut}"
-                                 SegmentGapWidth="5"
-                                 SegmentCount="4"
-                                 IndeterminateAnimationEasing="{x:Static Easing.BounceIn}"
-                                 IndeterminateIndicatorWidthFactor="0.7"
-                                 ProgressFill="Red"
-                                 TrackFill="Violet"
-                                 ProgressChanged="LinearProgressBar_ProgressChanged"
-                                 ProgressCompleted="LinearProgressBar_ProgressCompleted"
-                                 Progress="75"
-                                 IsIndeterminate="False"
-                                 Minimum="10"
-                                 Maximum="90"
-                                 AnimationDuration="1500"
-                                 IndeterminateAnimationDuration="2000"
-                                 ProgressCornerRadius="5"
-                                 TrackCornerRadius="5"
-                                 SecondaryProgressCornerRadius="5"
-                                 SecondaryProgressFill="Yellow"
-                                 SecondaryProgress="50"
-                                 TrackHeight="10"
-                                 ProgressHeight="10"
-                                 SecondaryProgressHeight="10"
-                                 SecondaryAnimationDuration="2000">
+                                  AnimationEasing="{x:Static Easing.CubicOut}"
+                                  SegmentGapWidth="5"
+                                  SegmentCount="4"
+                                  IndeterminateAnimationEasing="{x:Static Easing.BounceIn}"
+                                  IndeterminateIndicatorWidthFactor="0.7"
+                                  ProgressFill="Red"
+                                  TrackFill="Violet"
+                                  ProgressChanged="LinearProgressBar_ProgressChanged"
+                                  ProgressCompleted="LinearProgressBar_ProgressCompleted"
+                                  Progress="100"
+                                  IsIndeterminate="False"
+                                  Minimum="10"
+                                  Maximum="90"
+                                  AnimationDuration="1500"
+                                  IndeterminateAnimationDuration="2000"
+                                  ProgressCornerRadius="5"
+                                  TrackCornerRadius="5"
+                                  SecondaryProgressCornerRadius="5"
+                                  SecondaryProgressFill="Yellow"
+                                  SecondaryProgress="50"
+                                  TrackHeight="10"
+                                  ProgressHeight="10"
+                                  SecondaryProgressHeight="10"
+                                  SecondaryAnimationDuration="2000">
     <progressBar:SfLinearProgressBar.GradientStops>
         <progressBar:ProgressGradientStop Color="#00bdaf" Value="0"/>
         <progressBar:ProgressGradientStop Color="#2f7ecc" Value="50"/>

@@ -9,7 +9,7 @@ documentation: ug
 
 # Animation in .NET MAUI SfLinearProgressBar (Linear Progress Bar)
 
-The progress bar provides animation support to visualize the progress value changes in an interactive way. 
+The linear progress bar provides animation support to visualize the progress value changes in an interactive way. 
 
 The following properties are used to define the duration of animation for the specific states.
 

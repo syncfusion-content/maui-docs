@@ -9,7 +9,7 @@ documentation: ug
 
 # States in .NET MAUI SfCircularProgressBar (Circular Progress Bar)
 
-Configure the states of the progress bar control depending on the usage.
+Configure the states of the circular progress bar control depending on the usage.
 
 ## Determinate
 
@@ -17,7 +17,7 @@ This is the default state. Use it when the progress estimation is known.
 
 ## Indeterminate
 
-By enabling the `IsIndeterminate` property, the state of the progress bar can be changed to indeterminate when the progress cannot be estimated or is not being calculated. It can be combined with a determinate mode to know that the application estimates progress before the actual progress starts.
+By enabling the `IsIndeterminate` property, the state of the circular progress bar can be changed to indeterminate when the progress cannot be estimated or is not being calculated. It can be combined with a determinate mode to know that the application estimates progress before the actual progress starts.
 
 {% tabs %} 
 

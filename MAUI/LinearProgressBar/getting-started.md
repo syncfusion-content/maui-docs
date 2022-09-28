@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting started with .NET MAUI SfLinearProgressBar (Linear Progress Bar)
 
-This section explains the steps required to add the linear progress bar control with the progress and its customizable elements such as indeterminate, segment, progress fill, and track fill. This section covers only the basic features needed to know and gets started with the Syncfusion progress bar.
+This section explains the steps required to add the linear progress bar control with the progress and its customizable elements such as indeterminate, segment, progress fill, and track fill. This section covers only the basic features needed to know and gets started with the Syncfusion linear progress bar.
 
 ## Creating an application using the .NET MAUI SfLinearProgressBar
 
@@ -95,7 +95,7 @@ this.Content = linearProgressBar;
 
 N> By default, the value of progress should be specified between 0 and 100. To determine the progress value between 0 and 1, set the Minimum property to 0 and the Maximum property to 1.
 
-Run the project, and check if you get following output to make sure that the project has been configured properly to add the progress bar.
+Run the project, and check if you get following output to make sure that the project has been configured properly to add the linear progress bar.
 
 ![.NET MAUI linear progress bar](images/getting-started/progress-bar.png)
 
@@ -122,7 +122,7 @@ this.Content = linearProgressBar;
 
 ## Enable segments
 
-To visualize the progress of a multiple sequential task, split the progress bar into the multiple segments by defining the `SegmentCount` property as demonstrated in the following code sample.
+To visualize the progress of a multiple sequential task, split the linear progress bar into the multiple segments by defining the `SegmentCount` property as demonstrated in the following code sample.
 
 {% tabs %} 
 

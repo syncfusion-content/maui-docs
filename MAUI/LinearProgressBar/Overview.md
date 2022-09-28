@@ -15,7 +15,7 @@ The .NET MAUI SfLinearProgressBar shows task progress with customizable visuals.
 
 **States** - Visualize the progress in different modes such as determinate, indeterminate, and buffer state. 
 
-**Progress shapes** - Visualizes the progress in rectangle.
+**Progress shapes** - Visualizes the progress in a rectangle shape.
 
 **Segments** - Progress can be divided into multiple segments to show gradual progress.
 

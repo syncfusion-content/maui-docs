@@ -79,8 +79,4 @@ this.Content = circularProgressBar;
 
 ![.NET MAUI Circular Progress Bar with custom content](images/custom-content/content.png)
 
-## Limitations
-
-The `SfLinearProgressBar` does not support any custom content.
-
 N> Refer to our `.NET MAUI SfCircularProgressBar` feature tour page for its groundbreaking feature representations. Also explore our [.NET MAUI SfCircularProgressBar example](https://github.com/syncfusion/maui-demos/) that shows how to configure a SfCircularProgressBar in .NET MAUI.

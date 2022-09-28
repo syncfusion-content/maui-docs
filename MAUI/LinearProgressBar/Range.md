@@ -9,9 +9,9 @@ documentation: ug
 
 # Define Range in .NET MAUI SfLinearProgressBar (Linear Progress Bar)
 
-The Range represents the entire span of the progress bar and can be defined using the `Minimum` and `Maximum` properties. The default value of the range is 0 to 100.
+The Range represents the entire span of the linear progress bar and can be defined using the `Minimum` and `Maximum` properties. The default value of the range is 0 to 100.
 
-The following code sample demonstrates how to customize the range as factor value to the progress bar.
+The following code sample demonstrates how to customize the range as factor value to the linear progress bar.
 
 {% tabs %}  
 
