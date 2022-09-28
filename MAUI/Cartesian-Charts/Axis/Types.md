@@ -408,7 +408,7 @@ chart.YAxes.Add(new LogarithmicAxis() {
 
 ### Logarithmic base
 
-The log axis base can be customized using the [LogarithmicBase]() property of the axis. By default, the base of a logarithmic axis is 10. The base can be set to a value that meets your needs. The base value should be greater than 1 and it cannot be a decimal number. The following code example demonstrates the logarithmic values in the y-axis calculated from base 2.
+The log axis base can be customized using the [LogarithmicBase]() property of the axis.For example when the logBase is 5, the axis values follows 5<sup>0</sup>,5<sup>1</sup>, 5<sup>2</sup>, 5<sup>3</sup> etc. By default, the base of a logarithmic axis is 10. The base can be set to a value that meets your needs. The base value should be greater than 1 and it cannot be a decimal number. The following code example demonstrates the logarithmic values in the y-axis calculated from base 2.
 
 {% tabs %}
 
@@ -434,7 +434,7 @@ chart.YAxes.Add(new LogarithmicAxis( ) { LogarithmicBase = 2 });
 
 ### Logarithmic interval
 
-The logarithmic interval can be customized using the [Interval]() property of the axis. A power-based interval is used for the logarithmic axis. When the logarithmic base is 10 and the logarithmic interval is 1, then the axis labels are placed at an interval of 10. i.e., 1, 10, 100, 1000, etc. When the logarithmic interval is 2, then the axis labels are placed at an interval of 10^2. i.e., 1, 100, 1000, etc. The default value of the interval is 1, and it cannot be a decimal number.
+The logarithmic interval can be customized using the [Interval]() property of the axis. A power-based interval is used for the logarithmic axis. When the logarithmic base is 10 and the logarithmic interval is 1, then the axis labels are placed at an interval of 10. i.e., 1, 10, 100, 1000, etc. When the logarithmic interval is 2, then the axis labels are placed at an interval of 10<sup>2</sup>. i.e., 1, 100, 1000, etc. The default value of the interval is 1, and it cannot be a decimal number.
 
 {% tabs %}
 
