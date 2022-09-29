@@ -161,14 +161,6 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 	</tr>
 	<tr>
 	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/switch/gettingstarted">SfSwitch</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			Underway<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
 			<a href="https://help.syncfusion.com/xamarin/autocomplete/getting-started">SfAutoComplete</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
@@ -185,7 +177,31 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 	</tr>
 	<tr>
 	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/progressbar/gettingstarted">SfLinearProgressBar</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/maui/linearprogressbar/migration">SfLinearProgressBar</a><br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/progressbar/gettingstarted">SfCircularProgressBar</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/maui/circularprogressbar/migration">SfCircularProgressBar</a><br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
 			<a href="https://help.syncfusion.com/xamarin/rating/getting-started">SfRating</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			Underway<br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/switch/gettingstarted">SfSwitch</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
 			Underway<br/>
@@ -202,22 +218,6 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 	<tr>
 	    <td rowspan="1" valign="top">
 			<a href="https://help.syncfusion.com/xamarin/text-input-layout/getting-started">SfTextInputLayout</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			Underway<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/progressbar/gettingstarted">SfLinearProgressBar</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			Underway<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/progressbar/gettingstarted">SfCircularProgressBar</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
 			Underway<br/>
