@@ -273,9 +273,9 @@ The [`ShowMarkerTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Ma
 
 Customize the tooltip appearance using the following properties.
 
-* **Background** - Change the background color of the tooltip in maps using the `MapTooltipSettings.Background` property.
-* **Padding** - Change the padding of the tooltip text in maps using the `MaptooltipSettings.Padding` property.
-* **TextStyle** - Change the tooltip text appearance such as `TextColor`, `FontSize`, `FontAttributes`, and `FontFamily` in maps using the `MapTooltipSettings.TextStyle` property.
+* **Background** - Change the background color of the tooltip in maps using the [`MapTooltipSettings.Background`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTooltipSettings.html#Syncfusion_Maui_Maps_MapTooltipSettings_Background) property.
+* **Padding** - Change the padding of the tooltip text in maps using the [`MaptooltipSettings.Padding`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTooltipSettings.html#Syncfusion_Maui_Maps_MapTooltipSettings_Padding) property.
+* **TextStyle** - Change the tooltip text appearance such as `TextColor`, `FontSize`, `FontAttributes`, and `FontFamily` in maps using the [`MapTooltipSettings.TextStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTooltipSettings.html#Syncfusion_Maui_Maps_MapTooltipSettings_TextStyle) property.
 
 {% tabs %}
 
@@ -382,9 +382,9 @@ public class Model
 ![Maps tooltip settings](images/tooltip/tooltip-appearance-customization.png)
 
 N>
-* Refer to the `ShapeTooltipSettings` to customize the shape tooltip appearance.
-* Refer to the `BubbleTooltipSettings` to customize the bubble tooltip appearance.
-* Refer to the `MarkerTooltipSettings` to customize the marker tooltip appearance.
+* Refer to the [`ShapeTooltipSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeTooltipSettings) to customize the shape tooltip appearance.
+* Refer to the [`BubbleTooltipSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_BubbleTooltipSettings) to customize the bubble tooltip appearance.
+* Refer to the [`MarkerTooltipSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_MarkerTooltipSettings) to customize the marker tooltip appearance.
 
 ### Apply data template for tooltip
 
