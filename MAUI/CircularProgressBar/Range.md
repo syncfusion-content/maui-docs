@@ -7,7 +7,7 @@ control: SfCircularProgressBar
 documentation: ug
 ---
 
-# Define Range in .NET MAUI Circular Progress Bar
+# Define Range in .NET MAUI Circular ProgressBar
 
 The Range represents the entire span of the circular progress bar and can be defined using the `Minimum` and `Maximum` properties. The default value of the range is 0 to 100.
 

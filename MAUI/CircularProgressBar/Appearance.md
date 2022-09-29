@@ -7,7 +7,7 @@ control: SfCircularProgressBar
 documentation: ug
 ---
 
-# Appearance in .NET MAUI Circular Progress Bar (SfCircularProgressBar)
+# Appearance in .NET MAUI Circular ProgressBar (SfCircularProgressBar)
 
 ## Angle
 
@@ -99,10 +99,10 @@ The following code sample demonstrates how to apply gradient transition effect t
 
 <progressBar:SfCircularProgressBar Progress="100">
     <progressBar:SfCircularProgressBar.GradientStops>
-        <progressBar:ProgressGradientStop Color="#88A0D9EF" Value="0"/>
-        <progressBar:ProgressGradientStop Color="#AA62C1E5" Value="25"/>
-        <progressBar:ProgressGradientStop Color="#DD20A7DB" Value="50"/>
-        <progressBar:ProgressGradientStop Color="#FF1C96C5" Value="75"/>
+        <progressBar:ProgressGradientStop Color="#00bdaf" Value="0"/>
+        <progressBar:ProgressGradientStop Color="#2f7ecc" Value="25"/>
+        <progressBar:ProgressGradientStop Color="#e9648e" Value="50"/>
+        <progressBar:ProgressGradientStop Color="#fbb78a" Value="75"/>
     </progressBar:SfCircularProgressBar.GradientStops>
 </progressBar:SfCircularProgressBar>
 
@@ -112,10 +112,10 @@ The following code sample demonstrates how to apply gradient transition effect t
 
 SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 circularProgressBar.Progress = 100;
-circularProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("88A0D9EF"), Value = 0 });
-circularProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("AA62C1E5"), Value = 25 });
-circularProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("DD20A7DB"), Value = 50 });
-circularProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("FF1C96C5"), Value = 75 });
+circularProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("00bdaf"), Value = 0 });
+circularProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("2f7ecc"), Value = 25 });
+circularProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("e9648e"), Value = 50 });
+circularProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("fbb78a"), Value = 75 });
 this.Content = circularProgressBar;
 
 {% endhighlight %}

@@ -7,7 +7,7 @@ control: SfCircularProgressBar
 documentation: ug
 ---
 
-# Events in .NET MAUI Circular Progress Bar (SfCircularProgressBar)
+# Events in .NET MAUI Circular ProgressBar (SfCircularProgressBar)
 
 ## ProgressChanged
 

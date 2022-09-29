@@ -7,7 +7,7 @@ control: SfLinearProgressBar
 documentation: ug
 ---
 
-# Appearance in .NET MAUI Linear Progress Bar (SfLinearProgressBar)
+# Appearance in .NET MAUI Linear ProgressBar (SfLinearProgressBar)
 
 ## Range colors
 
@@ -69,10 +69,10 @@ The following code sample demonstrates how to apply gradient transition effect t
 
 <progressBar:SfLinearProgressBar Progress="100" >
     <progressBar:SfLinearProgressBar.GradientStops>
-        <progressBar:ProgressGradientStop Color="#88A0D9EF" Value="0"/>
-        <progressBar:ProgressGradientStop Color="#AA62C1E5" Value="25"/>
-        <progressBar:ProgressGradientStop Color="#DD20A7DB" Value="50"/>
-        <progressBar:ProgressGradientStop Color="#FF1C96C5" Value="75"/>
+        <progressBar:ProgressGradientStop Color="#00bdaf" Value="0"/>
+        <progressBar:ProgressGradientStop Color="#2f7ecc" Value="25"/>
+        <progressBar:ProgressGradientStop Color="#e9648e" Value="50"/>
+        <progressBar:ProgressGradientStop Color="#fbb78a" Value="75"/>
     </progressBar:SfLinearProgressBar.GradientStops>
 </progressBar:SfLinearProgressBar>
 
@@ -82,10 +82,10 @@ The following code sample demonstrates how to apply gradient transition effect t
 
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 linearProgressBar.Progress = 100;
-linearProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("88A0D9EF"), Value = 0 });
-linearProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("AA62C1E5"), Value = 25 });
-linearProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("DD20A7DB"), Value = 50 });
-linearProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("FF1C96C5"), Value = 75 });
+linearProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("00bdaf"), Value = 0 });
+linearProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("2f7ecc"), Value = 25 });
+linearProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("e9648e"), Value = 50 });
+linearProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("fbb78a"), Value = 75 });
 this.Content = linearProgressBar;
 
 {% endhighlight %}

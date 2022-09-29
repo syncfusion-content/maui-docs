@@ -7,7 +7,7 @@ control: SfCircularProgressBar
 documentation: ug
 ---
 
-# Animation in .NET MAUI Circular Progress Bar (SfCircularProgressBar)
+# Animation in .NET MAUI Circular ProgressBar (SfCircularProgressBar)
 
 The circular progress bar provides animation support to visualize the progress value changes in an interactive way. 
 

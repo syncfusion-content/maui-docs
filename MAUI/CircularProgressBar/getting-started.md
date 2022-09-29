@@ -7,11 +7,11 @@ control: SfCircularProgressBar
 documentation: ug
 ---
 
-# Getting started with .NET MAUI Circular Progress Bar
+# Getting started with .NET MAUI Circular ProgressBar
 
 This section explains the steps required to add the circular progress bar control with the progress and its customizable elements such as indeterminate, segment, progress fill, and track fill. This section covers only the basic features needed to know and gets started with the Syncfusion circular progress bar.
 
-## Creating an application using the .NET MAUI Circular Progress Bar
+## Creating an application using the .NET MAUI Circular ProgressBar
 
 * Create a new .NET MAUI application in the Visual Studio.
 
