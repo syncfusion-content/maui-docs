@@ -185,4 +185,4 @@ SfCircularProgressBar sfCircularProgressBar = new SfCircularProgressBar
 
 N> 
 * Get the complete getting started sample from [`GitHub`](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-Circular-ProgressBar-control.-) link.
-* Refer to our `.NET MAUI Circular ProgressBar` feature tour page for its groundbreaking feature representations.
+* Refer to our [`.NET MAUI Circular ProgressBar`](https://www.syncfusion.com/maui-controls/maui-progressbar) feature tour page for its groundbreaking feature representations.

@@ -185,4 +185,4 @@ SfLinearProgressBar sfLinearProgressBar = new SfLinearProgressBar
 
 N> 
 * Get the complete getting started sample from [`GitHub`](https://github.com/SyncfusionExamples/Getting-started-with-.NET-MAUI-Linear-ProgressBar-control-) link.
-* Refer to our `.NET MAUI Linear ProgressBar` feature tour page for its groundbreaking feature representations.
+* Refer to our [`.NET MAUI Linear ProgressBar`](https://www.syncfusion.com/maui-controls/maui-progressbar) feature tour page for its groundbreaking feature representations.
