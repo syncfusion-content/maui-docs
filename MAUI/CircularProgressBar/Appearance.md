@@ -37,7 +37,7 @@ this.Content = circularProgressBar;
 
 {% endtabs %} 
 
-![.NET MAUI Circular Progress Bar with angle customization](images/appearance/angle.png)
+![.NET MAUI Circular ProgressBar with angle customization](images/appearance/angle.png)
 
 ## Range colors
 
@@ -89,7 +89,7 @@ this.Content = circularProgressBar;
 
 {% endtabs %} 
 
-![.NET MAUI SfCircularProgressBar with range colors](images/appearance/range-colors.png)
+![.NET MAUI Circular ProgressBar with range colors](images/appearance/range-colors.png)
 
 The following code sample demonstrates how to apply gradient transition effect to the range colors in the circular progress bar.
 
@@ -122,7 +122,7 @@ this.Content = circularProgressBar;
 
 {% endtabs %} 
 
-![.NET MAUI SfCircularProgressBar with gradient range](images/appearance/gradient.png)
+![.NET MAUI Circular ProgressBar with gradient range](images/appearance/gradient.png)
 
 ## Thickness
 
@@ -166,7 +166,7 @@ this.Content = circularProgressBar;
 
 {% endtabs %} 
 
-![.NET MAUI Circular Progress Bar with appearance customization](images/appearance/circular-thickness.png)
+![.NET MAUI Circular ProgressBar with appearance customization](images/appearance/circular-thickness.png)
 
 ## Corner style customization
 
@@ -200,7 +200,7 @@ this.Content = circularProgressBar;
 
 {% endtabs %} 
 
-![.NET MAUI Circular Progress Bar with corner style customization](images/appearance/corner-style.png)
+![.NET MAUI Circular ProgressBar with corner style customization](images/appearance/corner-style.png)
 
 ## Color customization
 
@@ -233,6 +233,6 @@ this.Content = circularProgressBar;
 
 {% endtabs %} 
 
-![.NET MAUI circular Progress Bar with color customization](images/appearance/color.png)
+![.NET MAUI Circular ProgressBar with color customization](images/appearance/color.png)
 
-N> Refer to our `.NET MAUI SfCircularProgressBar` feature tour page for its groundbreaking feature representations. Also explore our [.NET MAUI SfCircularProgressBar example](https://github.com/syncfusion/maui-demos/) that shows how to configure a SfCircularProgressBar in .NET MAUI.
+N> Refer to our `.NET MAUI Circular ProgressBar` feature tour page for its groundbreaking feature representations. Also explore our [.NET MAUI Circular ProgressBar example](https://github.com/syncfusion/maui-demos/) that shows how to configure a SfCircularProgressBar in .NET MAUI.

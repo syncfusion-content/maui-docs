@@ -43,7 +43,7 @@ this.Content = linearProgressBar;
 
 {% endtabs %} 
 
-![.NET MAUI linear Progress Bar with CubicInOut animation](images/animation/easing-animation.gif)
+![.NET MAUI Linear ProgressBar with CubicInOut animation](images/animation/easing-animation.gif)
 
 The `SetProgress()` method in the progress bar is used to set progress value along with animation duration and easing effect applicable for the specific method call.
 
@@ -81,6 +81,6 @@ this.Content = linearProgressBar;
 
 {% endtabs %} 
 
-![.NET MAUI linear Progress Bar with indeterminate animation](images/animation/indeterminate.gif)
+![.NET MAUI Linear ProgressBar with indeterminate animation](images/animation/indeterminate.gif)
 
-N> Refer to our `.NET MAUI SfLinearProgressBar` feature tour page for its groundbreaking feature representations. Also explore our [.NET MAUI SfLinearProgressBar example](https://github.com/syncfusion/maui-demos/) that shows how to configure a SfLinearProgressBar in .NET MAUI.
+N> Refer to our `.NET MAUI Linear ProgressBar` feature tour page for its groundbreaking feature representations. Also explore our [.NET MAUI Linear ProgressBar example](https://github.com/syncfusion/maui-demos/) that shows how to configure a SfLinearProgressBar in .NET MAUI.

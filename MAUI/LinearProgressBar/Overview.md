@@ -23,6 +23,6 @@ The .NET MAUI Linear ProgressBar shows the progress of a task with custom visual
 
 **Appearance customization** - Customize the track thickness, color, and corner radius. 
 
-![Linear ProgresBar control for .NET MAUI.](images/overview/dotnet_maui_progressbar.png)
+![Linear ProgressBar control for .NET MAUI.](images/overview/dotnet_maui_progressbar.png)
 
 N> Get the samples in the [GitHub](https://github.com/syncfusion/maui-demos) link.

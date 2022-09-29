@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with .NET MAUI Linear ProgressBar control | Syncfusion
-description: Learn here about getting started with Syncfusion .NET MAUI Linear ProgressBar (Progress Bar) control, its elements and more.
+description: Learn here about getting started with Syncfusion .NET MAUI Linear ProgressBar (SfLinearProgressBar) control, its elements and more.
 platform: MAUI
 control: SfLinearProgressBar
 documentation: ug
@@ -52,7 +52,7 @@ namespace MyProject
 
 {% endhighlight %}
 
-## Initializing progress bar
+## Initializing linear progress bar
 
 Add the following namespace.
 
@@ -95,7 +95,7 @@ N> By default, the value of progress should be specified between 0 and 100. To d
 
 Run the project, and check if you get following output to make sure that the project has been configured properly to add the linear progress bar.
 
-![.NET MAUI linear progress bar](images/getting-started/progress-bar.png)
+![.NET MAUI Linear ProgressBar](images/getting-started/progress-bar.png)
 
 ## Enabling indeterminate state
 
@@ -118,7 +118,7 @@ this.Content = linearProgressBar;
 
 {% endtabs %} 
 
-![.NET MAUI linear progress bar in indeterminate state](images/getting-started/linear-progressbar-indeterminate.gif)
+![.NET MAUI Linear ProgressBar in indeterminate state](images/getting-started/linear-progressbar-indeterminate.gif)
 
 ## Enable segments
 
@@ -141,7 +141,7 @@ this.Content = linearProgressBar;
 
 {% endtabs %}
 
-![.NET MAUI linear progress bar visualized with multiple sequential task](images/getting-started/segment.png)
+![.NET MAUI Linear ProgressBar visualized with multiple sequential task](images/getting-started/segment.png)
 
 ## Apply colors
 
@@ -181,8 +181,8 @@ SfLinearProgressBar sfLinearProgressBar = new SfLinearProgressBar
 
 {% endtabs %} 
 
-![.NET MAUI linear progress bar with customized colors](images/getting-started/style.png)
+![.NET MAUI Linear ProgressBar with customized colors](images/getting-started/style.png)
 
 N> 
 * Get the complete getting started sample from [`GitHub`](https://github.com/SyncfusionExamples/Getting-started-with-.NET-MAUI-Linear-ProgressBar-control-) link.
-* Refer to our `.NET MAUI linear progress bar` feature tour page for its groundbreaking feature representations.
+* Refer to our `.NET MAUI Linear ProgressBar` feature tour page for its groundbreaking feature representations.
