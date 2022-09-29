@@ -1,32 +1,32 @@
 ---
 layout: post
-title: About .NET MAUI SfCircularProgressBar control | Syncfusion 
-description: Learn here all about the introduction of Syncfusion .NET MAUI SfCircularProgressBar (Progress Bar) control, its elements and more.
+title: About .NET MAUI Circular ProgressBar control | Syncfusion 
+description: Learn here all about the introduction of Syncfusion .NET MAUI Circular ProgressBar (SfCircularProgressBar) control, its elements and more.
 platform: MAUI
 control: SfCircularProgressBar
 documentation: ug
 ---
 
-# .NET MAUI SfCircularProgressBar (Circular Progress Bar) Overview
+# .NET MAUI Circular ProgressBar (SfCircularProgressBar) Overview
 
-The .NET MAUI ProgressBar shows task progress with customizable visuals. It has features for displaying progress in circular shapes, determinate and indeterminate states, segments, smooth animation, customizable content, and a difining range with different colors.
+The .NET MAUI Circular ProgressBar shows the progress of a task with customizable visuals. It displaying the progress of a process in circular shapes, determinate and indeterminate states, segments, smooth animation, and with customizable content. You can also define ranges with different colors. 
 
 ### Key features
 
-**States** - Visualize the progress in different modes such as determinate and indeterminate state. 
+**States** - Visualize the progress of a process in determinate and indeterminate states.  
 
-**Progress shape** - Visualizes the progress in circular shape.
+**Progress shape** - Visualize progress in a circular shape.
 
-**Segments** - Progress can be divided into multiple segments to show gradual progress.
+**Segments** - Progress can be divided into multiple segments to show a gradual progress.
 
-**Color ranges** - Customizes the ranges with different colors in the progress bar.
+**Color ranges** - Customize ranges with different colors.
 
-**Appearance customization** - Customizes the track thickness, color, and corner radius style. 
+**Appearance customization** - Customize the track thickness, color, and corner radius style. 
 
-**Customizable content** - Displays the custom content at the center of the circular progress bar.
+**Customizable content** - Display custom content at the center of a circular progress bar.
 
-**Angle** - Customizes the angle of the circular progress bar.
+**Angle** - Customize the angles of a circular progress bar.
 
-![ProgresBar control for .NET MAUI.](images/overview/dotnet_maui_progressbar.png)
+![Circular ProgresBar control for .NET MAUI.](images/overview/dotnet_maui_progressbar.png)
 
 N> Get the samples in the [GitHub](https://github.com/syncfusion/maui-demos) link.
