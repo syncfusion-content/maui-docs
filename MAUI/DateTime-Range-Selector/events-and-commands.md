@@ -50,17 +50,21 @@ This section explains how to add the events and commands for the DateTime Range 
 {% highlight C# %}
 
 {
-   SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
-   rangeSelector.Minimum = new DateTime(2010, 01, 01);
-   rangeSelector.Maximum = new DateTime(2018, 01, 01);
-   rangeSelector.RangeStart = new DateTime(2012, 01, 01);
-   rangeSelector.RangeEnd = new DateTime(2016, 01, 01);
-   rangeSelector.ValueChangeStart += OnValueChanged;
-   rangeSelector.ValueChanging += OnValueChanged;
-   rangeSelector.ValueChanged += OnValueChanged;
-   rangeSelector.ValueChangeEnd += OnValueChanged;
-   SfCartesianChart chart = new SfCartesianChart();
-   rangeSelector.Content = chart;
+    SfCartesianChart chart = new SfCartesianChart();
+    SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector()
+    {
+        Minimum = new DateTime(2010, 01, 01),
+        Maximum = new DateTime(2018, 01, 01),
+        RangeStart = new DateTime(2012, 01, 01),
+        RangeEnd = new DateTime(2016, 01, 01),
+        Interval = 2,
+        ShowDividers = true,
+        Content = chart,
+    };
+    rangeSelector.ValueChangeStart += OnValueChangeStart;
+    rangeSelector.ValueChanging += OnValueChanging;
+    rangeSelector.ValueChanged += OnValueChanged;
+    rangeSelector.ValueChangeEnd += OnValueChangeEnd;
 }
 
 private void OnValueChangeStart(object sender, EventArgs e)
@@ -123,19 +127,22 @@ Format or change the whole numeric or date label text using the [`LabelCreated`]
 {% highlight C# %}
 
 {
-   SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
-   rangeSelector.Minimum = new DateTime(2010, 01, 01);
-   rangeSelector.Maximum = new DateTime(2011, 01, 01);
-   rangeSelector.RangeStart = new DateTime(2010, 04, 01);
-   rangeSelector.RangeEnd = new DateTime(2010, 10, 01);
-   rangeSelector.Interval = 3;
-   rangeSelector.DateFormat = "MMM";
-   rangeSelector.IntervalType = SliderDateIntervalType.Months;
-   rangeSelector.LabelsPlacement = SliderLabelsPlacement.BetweenTicks;
-   rangeSelector.ShowTicks = true;
-   rangeSelector.ShowLabels = true;
-   SfCartesianChart chart = new SfCartesianChart();
-   rangeSelector.Content = chart;
+    SfCartesianChart chart = new SfCartesianChart();
+    SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector()
+    {
+        Minimum = new DateTime(2010, 01, 01),
+        Maximum = new DateTime(2011, 01, 01),
+        RangeStart = new DateTime(2010, 04, 01),
+        RangeEnd = new DateTime(2010, 10, 01),
+        Interval = 3,
+        DateFormat = "MMM",
+        IntervalType = SliderDateIntervalType.Months,
+        LabelsPlacement = SliderLabelsPlacement.BetweenTicks,
+        ShowTicks = true,
+        ShowLabels = true,
+        Content = chart,
+    };
+    rangeSelector.LabelCreated += OnLabelCreated;
 }
 
 private void OnLabelCreated(object sender, SliderLabelCreatedEventArgs e)
@@ -206,23 +213,26 @@ Format or change the whole tooltip label text using the [`ToolTipLabelCreated`](
 {% highlight C# %}
 
 {
-    SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
-    rangeSelector.Minimum = new DateTime(2010, 01, 01);
-    rangeSelector.Maximum = new DateTime(2018, 01, 01);
-    rangeSelector.RangeStart = new DateTime(2012, 01, 01);
-    rangeSelector.RangeEnd = new DateTime(2016, 01, 01);
-    rangeSelector.Interval = 2;
-    rangeSelector.ShowTicks = true;
-    rangeSelector.ShowLabels = true;
-    rangeSelector.Tooltip = new SliderTooltip();
-    rangeSelector.Tooltip.TooltipLabelCreated += OnTooltipLabelCreated;
     SfCartesianChart chart = new SfCartesianChart();
-    rangeSelector.Content = chart;
- }
- private void OnTooltipLabelCreated(object sender, SliderTooltipLabelCreatedEventArgs e)
- {
-     e.Text = "Year: " + e.Text;
- }
+    SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector()
+    {
+        Minimum = new DateTime(2010, 01, 01),
+        Maximum = new DateTime(2018, 01, 01),
+        RangeStart = new DateTime(2012, 01, 01),
+        RangeEnd = new DateTime(2016, 01, 01),
+        Interval = 2,
+        ShowTicks = true,
+        ShowLabels = true,
+        Tooltip = new SliderTooltip(),
+        Content = chart,
+    };
+    rangeSelector.Tooltip.TooltipLabelCreated += OnTooltipLabelCreated;
+}
+
+private void OnTooltipLabelCreated(object sender, SliderTooltipLabelCreatedEventArgs e)
+{
+    e.Text = "Year: " + e.Text;
+}
 
 {% endhighlight %}
 

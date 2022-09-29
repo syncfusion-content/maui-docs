@@ -37,14 +37,16 @@ This section explains how to add the events and commands for DateTime Slider.
 {% highlight C# %}
 
 {
-   SfDateTimeSlider slider = new SfDateTimeSlider();
-   slider.Minimum = new DateTime(2010, 01, 01);
-   slider.Maximum = new DateTime(2018, 01, 01);
-   slider.Value = new DateTime(2014, 01, 01);
-   slider.ValueChangeStart += OnValueChanged;
-   slider.ValueChanging += OnValueChanged;
-   slider.ValueChanged += OnValueChanged;
-   slider.ValueChangeEnd += OnValueChanged;
+    SfDateTimeSlider slider = new SfDateTimeSlider()
+    {
+        Minimum = new DateTime(2010, 01, 01),
+        Maximum = new DateTime(2018, 01, 01),
+        Value = new DateTime(2014, 01, 01),
+    };
+    slider.ValueChangeStart += OnValueChangeStart;
+    slider.ValueChanging += OnValueChanging;
+    slider.ValueChanged += OnValueChanged;
+    slider.ValueChangeEnd += OnValueChangeEnd;
 }
 
 private void OnValueChangeStart(object sender, EventArgs e)
@@ -58,6 +60,7 @@ private void OnValueChanging(object sender, DateTimeSliderValueChangingEventArgs
 private void OnValueChanged(object sender, DateTimeSliderValueChangedEventArgs e) 
 {
 }
+
 private void OnValueChangeEnd(object sender, EventArgs e)
 {
 }
@@ -94,18 +97,20 @@ Format or change the label text using the [`LabelCreated`](https://help.syncfusi
 {% highlight C# %}
 
 {
-   SfDateTimeSlider slider = new SfDateTimeSlider();
-   slider.Minimum = new DateTime(2010, 01, 01);
-   slider.Maximum = new DateTime(2011, 01, 01);
-   slider.Value = new DateTime(2010, 07, 01);
-   slider.Interval = 3;
-   slider.DateFormat = "MMM";
-   slider.IntervalType = SliderDateIntervalType.Months;
-   slider.LabelsPlacement = SliderLabelsPlacement.BetweenTicks;
-   slider.ShowTicks = true;
-   slider.ShowLabels = true;
-   slider.LabelCreated += OnLabelCreated;
- }
+    SfDateTimeSlider slider = new SfDateTimeSlider()
+    {
+        Minimum = new DateTime(2010, 01, 01),
+        Maximum = new DateTime(2011, 01, 01),
+        Value = new DateTime(2010, 07, 01),
+        Interval = 3,
+        DateFormat = "MMM",
+        IntervalType = SliderDateIntervalType.Months,
+        LabelsPlacement = SliderLabelsPlacement.BetweenTicks,
+        ShowTicks = true,
+        ShowLabels = true,
+    };
+    slider.LabelCreated += OnLabelCreated;
+}
 
 private void OnLabelCreated(object sender, SliderLabelCreatedEventArgs e)
 {
@@ -164,16 +169,18 @@ Format or change the whole tooltip label text using the [`TooltipLabelCreated`](
 {% highlight C# %}
 
 {
-   SfDateTimeSlider slider = new SfDateTimeSlider();
-   slider.Minimum = new DateTime(2010, 01, 01);
-   slider.Maximum = new DateTime(2018, 01, 01);
-   slider.Value = new DateTime(2014, 01, 01);
-   slider.Interval = 2;
-   slider.ShowTicks = true;
-   slider.ShowLabels = true;
-   slider.Tooltip = new SliderTooltip();
-   slider.Tooltip.TooltipLabelCreated += OnTooltipLabelCreated;
- }
+    SfDateTimeSlider slider = new SfDateTimeSlider()
+    {
+        Minimum = new DateTime(2010, 01, 01),
+        Maximum = new DateTime(2018, 01, 01),
+        Value = new DateTime(2014, 01, 01),
+        Interval = 3,
+        ShowTicks = true,
+        ShowLabels = true,
+        Tooltip = new SliderTooltip(),
+    };
+    slider.Tooltip.TooltipLabelCreated += OnTooltipLabelCreated;
+}
 
 private void OnTooltipLabelCreated(object sender, SliderTooltipLabelCreatedEventArgs e)
 {
@@ -201,10 +208,10 @@ The [`DragStartedCommand`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.S
 </ContentPage.BindingContext>
 
 <ContentPage.Content>
-    <sliders:SfDateTimeSlider Minimum="2010-01-01" 
-                          Maximum="2018-01-01" 
-                          Value="2014-01-01"
-                          DragStartedCommand="{Binding DragStartedCommand}" />
+    <sliders:SfDateTimeSlider Minimum="2010-01-01"
+                              Maximum="2018-01-01"
+                              Value="2014-01-01"
+                              DragStartedCommand="{Binding DragStartedCommand}" />
 </ContentPage.Content>
 
 {% endhighlight %}
@@ -214,8 +221,8 @@ The [`DragStartedCommand`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.S
 SfDateTimeSlider slider = new SfDateTimeSlider()
 {
     Minimum = new DateTime(2010, 01, 01),
-   Maximum = new DateTime(2020, 01, 01),
-   Value = new DateTime(2014, 01, 01),
+    Maximum = new DateTime(2020, 01, 01),
+    Value = new DateTime(2014, 01, 01),
     DragStartedCommand = viewModel.DragStartedCommand,
 };
 
@@ -250,11 +257,11 @@ The [`DragStartedCommandParameter`](https://help.syncfusion.com/cr/maui/Syncfusi
 </ContentPage.BindingContext>
 
 <ContentPage.Content>
-    <sliders:SfDateTimeSlider Minimum="2010-01-01" 
-                          Maximum="2018-01-01" 
-                          Value="2014-01-01"
-                          DragStartedCommand="{Binding DragStartedCommand}"
-                      DragStartedCommandParameter="1" />
+    <sliders:SfDateTimeSlider Minimum="2010-01-01"
+                              Maximum="2018-01-01"
+                              Value="2014-01-01"
+                              DragStartedCommand="{Binding DragStartedCommand}"
+                              DragStartedCommandParameter="1" />
 </ContentPage.Content>
 
 {% endhighlight %}
@@ -301,10 +308,10 @@ The [`DragCompletedCommand`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 </ContentPage.BindingContext>
 
 <ContentPage.Content>
-    <sliders:SfDateTimeSlider Minimum="2010-01-01" 
-                          Maximum="2018-01-01" 
-                          Value="2014-01-01"
-                          DragCompletedCommand="{Binding DragCompletedCommand}" />
+    <sliders:SfDateTimeSlider Minimum="2010-01-01"
+                              Maximum="2018-01-01"
+                              Value="2014-01-01"
+                              DragCompletedCommand="{Binding DragCompletedCommand}" />
 </ContentPage.Content>
 
 {% endhighlight %}
@@ -314,8 +321,8 @@ The [`DragCompletedCommand`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 SfDateTimeSlider slider = new SfDateTimeSlider()
 {
     Minimum = new DateTime(2010, 01, 01),
-   Maximum = new DateTime(2020, 01, 01),
-   Value = new DateTime(2014, 01, 01),
+    Maximum = new DateTime(2020, 01, 01),
+    Value = new DateTime(2014, 01, 01),
     DragCompletedCommand = viewModel.DragCompletedCommand
 };
 
@@ -350,11 +357,11 @@ The [`DragCompletedCommandParameter`](https://help.syncfusion.com/cr/maui/Syncfu
 </ContentPage.BindingContext>
 
 <ContentPage.Content>
-    <sliders:SfDateTimeSlider Minimum="2010-01-01" 
-                          Maximum="2018-01-01" 
-                          Value="2014-01-01"
-                          DragCompletedCommand="{Binding DragCompletedCommand}"
-                      DragCompletedCommandParameter="1" />
+    <sliders:SfDateTimeSlider Minimum="2010-01-01"
+                              Maximum="2018-01-01"
+                              Value="2014-01-01"
+                              DragCompletedCommand="{Binding DragCompletedCommand}"
+                              DragCompletedCommandParameter="1" />
 </ContentPage.Content>
 
 {% endhighlight %}
@@ -364,8 +371,8 @@ The [`DragCompletedCommandParameter`](https://help.syncfusion.com/cr/maui/Syncfu
 SfDateTimeSlider slider = new SfDateTimeSlider()
 {
     Minimum = new DateTime(2010, 01, 01),
-   Maximum = new DateTime(2020, 01, 01),
-   Value = new DateTime(2014, 01, 01),
+    Maximum = new DateTime(2020, 01, 01),
+    Value = new DateTime(2014, 01, 01),
     DragCompletedCommand = viewModel.DragCompletedCommand,
     DragCompletedCommandParameter = "1"
 };

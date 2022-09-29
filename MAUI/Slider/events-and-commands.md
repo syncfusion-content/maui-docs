@@ -35,10 +35,10 @@ This section explains how to add the events and commands for slider.
 
 {
    SfSlider slider = new SfSlider();
-   slider.ValueChangeStart += OnValueChanged;
-   slider.ValueChanging += OnValueChanged;
+   slider.ValueChangeStart += OnValueChangeStart;
+   slider.ValueChanging += OnValueChanging;
    slider.ValueChanged += OnValueChanged;
-   slider.ValueChangeEnd += OnValueChanged;
+   slider.ValueChangeEnd += OnValueChangeEnd;
 }
 
 private void OnValueChangeStart(object sender, EventArgs e)
@@ -77,6 +77,7 @@ Format or change the whole numeric label text using the [`LabelCreated`](https:/
                   Value="6"
                   Interval="2"
                   LabelCreated="OnLabelCreated"
+                  ShowTicks="True"
                   ShowLabels="True" />
 
 {% endhighlight %}
@@ -84,14 +85,17 @@ Format or change the whole numeric label text using the [`LabelCreated`](https:/
 {% highlight C# %}
 
 {
-   SfSlider slider = new SfSlider();
-   slider.Minimum = 2;
-   slider.Maximum = 10;
-   slider.Value = 6;
-   slider.Interval = 2;
-   slider.ShowLabels = true;
-   slider.LabelCreated += OnLabelCreated;
- }
+    SfSlider slider = new SfSlider()
+    {
+        Minimum = 2,
+        Maximum = 10,
+        Value = 6,
+        Interval = 2,
+        ShowTicks = true,
+        ShowLabels = true,
+    };
+    slider.LabelCreated += OnLabelCreated;
+}
 
  private void OnLabelCreated(object sender, SliderLabelCreatedEventArgs e)
  {
@@ -129,8 +133,11 @@ Format or change the whole tooltip label text using the [`TooltipLabelCreated`](
 {% highlight C# %}
 
 {
-   SfSlider slider = new SfSlider();
-   slider.TooltipLabelCreated += OnTooltipLabelCreated;
+    SfSlider slider = new SfSlider()
+    {
+        Tooltip= new SliderTooltip(),
+    };
+    slider.TooltipLabelCreated += OnTooltipLabelCreated;
 }
 
 private void OnTooltipLabelCreated(object sender, SliderTooltipLabelCreatedEventArgs e)

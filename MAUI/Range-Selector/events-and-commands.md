@@ -46,13 +46,15 @@ This section explains how to add the events and commands for Range Selector.
 {% highlight C# %}
 
 {
-   SfRangeSelector rangeSelector = new SfRangeSelector();
-   rangeSelector.ValueChangeStart += OnValueChanged;
-   rangeSelector.ValueChanging += OnValueChanged;
-   rangeSelector.ValueChanged += OnValueChanged;
-   rangeSelector.ValueChangeEnd += OnValueChanged;
-   SfCartesianChart chart = new SfCartesianChart();
-   rangeSelector.Content = chart;
+    SfCartesianChart chart = new SfCartesianChart();
+    SfRangeSelector rangeSelector = new SfRangeSelector()
+    {
+        Content = chart,
+    };
+    rangeSelector.ValueChangeStart += OnValueChangeStart;
+    rangeSelector.ValueChanging += OnValueChanging;
+    rangeSelector.ValueChanged += OnValueChanged;
+    rangeSelector.ValueChangeEnd += OnValueChangeEnd;
 }
 
 private void OnValueChangeStart(object sender, EventArgs e)
@@ -112,17 +114,20 @@ Format or change the whole numeric label text using the [`LabelCreated`](https:/
 {% highlight C# %}
 
 {
-   SfRangeSelector rangeSelector = new SfRangeSelector();
-   rangeSelector.Minimum = 2;
-   rangeSelector.Maximum = 10;
-   rangeSelector.RangeStart = 4;
-   rangeSelector.RangeEnd = 8;
-   rangeSelector.Interval = 2;
-   rangeSelector.ShowLabels = true;
-   rangeSelector.ShowTicks = true;
-   rangeSelector.LabelCreated += OnLabelCreated;
-   SfCartesianChart chart = new SfCartesianChart();
-   rangeSelector.Content = chart;
+    SfCartesianChart chart = new SfCartesianChart();
+    SfRangeSelector rangeSelector = new SfRangeSelector()
+    {
+
+        Minimum = 2,
+        Maximum = 10,
+        RangeStart = 4,
+        RangeEnd = 8,
+        Interval = 2,
+        ShowLabels = true,
+        ShowTicks = true,
+        Content = chart,
+    };
+    rangeSelector.LabelCreated += OnLabelCreated;
 }
 
 private void OnLabelCreated(object sender, SliderLabelCreatedEventArgs e)
@@ -176,16 +181,19 @@ Format or change the whole tooltip label text using the [`ToolTipLabelCreated`](
 {% highlight C# %}
 
 {
-    SfRangeSelector rangeSelector = new SfRangeSelector();
-    rangeSelector.Minimum = 2;
-    rangeSelector.Maximum = 10;
-    rangeSelector.RangeStart = 4;
-    rangeSelector.RangeEnd = 8;
-    rangeSelector.Interval = 2;
-    rangeSelector.Tooltip.TooltipLabelCreated += OnTooltipLabelCreated;
     SfCartesianChart chart = new SfCartesianChart();
-    rangeSelector.Content = chart;
- }
+    SfRangeSelector rangeSelector = new SfRangeSelector()
+    {
+        Minimum = 2,
+        Maximum = 10,
+        RangeStart = 4,
+        RangeEnd = 8,
+        Interval = 2,
+        Tooltip = new SliderTooltip(),
+        Content = chart,
+    };
+    rangeSelector.Tooltip.TooltipLabelCreated += OnTooltipLabelCreated;
+}
 
  private void OnTooltipLabelCreated(object sender, SliderTooltipLabelCreatedEventArgs e)
  {

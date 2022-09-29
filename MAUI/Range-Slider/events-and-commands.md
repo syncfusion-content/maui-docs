@@ -36,10 +36,10 @@ This section explains how to add the events and commands for range slider.
 
 {
    SfRangeSlider rangeSlider = new SfRangeSlider();
-   rangeSlider.ValueChangeStart += OnValueChanged;
-   rangeSlider.ValueChanging += OnValueChanged;
+   rangeSlider.ValueChangeStart += OnValueChangeStart;
+   rangeSlider.ValueChanging += OnValueChanging;
    rangeSlider.ValueChanged += OnValueChanged;
-   rangeSlider.ValueChangeEnd += OnValueChanged;
+   rangeSlider.ValueChangeEnd += OnValueChangeEnd;
 }
 
 private void OnValueChangeStart(object sender, EventArgs e)
@@ -87,15 +87,17 @@ Format or change the whole numeric label text using the [`LabelCreated`](https:/
 {% highlight C# %}
 
 {
-   SfRangeSlider rangeSlider = new SfRangeSlider();
-   rangeSlider.Minimum = 2;
-   rangeSlider.Maximum = 10;
-   rangeSlider.RangeStart = 4;
-   rangeSlider.RangeEnd = 8;
-   rangeSlider.Interval = 2;
-   rangeSlider.ShowLabels = true;
-   rangeSlider.ShowTicks = true;
-   rangeSlider.LabelCreated += OnLabelCreated;
+    SfRangeSlider rangeSlider = new SfRangeSlider()
+    {
+        Minimum = 2,
+        Maximum = 10,
+        RangeStart = 4,
+        RangeEnd = 8,
+        Interval = 2,
+        ShowLabels = true,
+        ShowTicks = true,
+    };
+    rangeSlider.LabelCreated += OnLabelCreated;
 }
 
 private void OnLabelCreated(object sender, SliderLabelCreatedEventArgs e)
