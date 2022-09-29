@@ -7,7 +7,7 @@ control: SfDateTimeRangeSlider
 documentation: ug
 ---
 
-# Range selection in .NET MAUI DateTime Range Slider (SfDateTimeRangeSlider)
+# Range selection in .NET MAUI Range Slider (SfDateTimeRangeSlider)
 
 This section helps to learn about the range selection in the DateTime Range Slider.
 
