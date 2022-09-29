@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Appearance in .NET MAUI SfLinearProgressBar control | Syncfusion
-description: Learn here all about appearance support in Syncfusion .NET MAUI SfLinearProgressBar control, its elements and more.
+title: Appearance in .NET MAUI Linear ProgressBar control | Syncfusion
+description: Learn here all about appearance support in Syncfusion .NET MAUI Linear ProgressBar control, its elements and more.
 platform: MAUI
 control: SfLinearProgressBar
 documentation: ug
 ---
 
-# Appearance in .NET MAUI SfLinearProgressBar (Linear Progress Bar)
+# Appearance in .NET MAUI Linear ProgressBar (SfLinearProgressBar)
 
 ## Range colors
 
@@ -59,7 +59,7 @@ this.Content = linearProgressBar;
 
 {% endtabs %} 
 
-![.NET MAUI SfLinearProgressBar with range colors](images/appearance/range-colors.png)
+![.NET MAUI Linear ProgressBar with range colors](images/appearance/range-colors.png)
 
 The following code sample demonstrates how to apply gradient transition effect to the range colors in the linear progress bar.
 
@@ -69,10 +69,10 @@ The following code sample demonstrates how to apply gradient transition effect t
 
 <progressBar:SfLinearProgressBar Progress="100" >
     <progressBar:SfLinearProgressBar.GradientStops>
-        <progressBar:ProgressGradientStop Color="#88A0D9EF" Value="0"/>
-        <progressBar:ProgressGradientStop Color="#AA62C1E5" Value="25"/>
-        <progressBar:ProgressGradientStop Color="#DD20A7DB" Value="50"/>
-        <progressBar:ProgressGradientStop Color="#FF1C96C5" Value="75"/>
+        <progressBar:ProgressGradientStop Color="#00bdaf" Value="0"/>
+        <progressBar:ProgressGradientStop Color="#2f7ecc" Value="25"/>
+        <progressBar:ProgressGradientStop Color="#e9648e" Value="50"/>
+        <progressBar:ProgressGradientStop Color="#fbb78a" Value="75"/>
     </progressBar:SfLinearProgressBar.GradientStops>
 </progressBar:SfLinearProgressBar>
 
@@ -82,17 +82,17 @@ The following code sample demonstrates how to apply gradient transition effect t
 
 SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 linearProgressBar.Progress = 100;
-linearProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("88A0D9EF"), Value = 0 });
-linearProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("AA62C1E5"), Value = 25 });
-linearProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("DD20A7DB"), Value = 50 });
-linearProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("FF1C96C5"), Value = 75 });
+linearProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("00bdaf"), Value = 0 });
+linearProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("2f7ecc"), Value = 25 });
+linearProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("e9648e"), Value = 50 });
+linearProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("fbb78a"), Value = 75 });
 this.Content = linearProgressBar;
 
 {% endhighlight %}
 
 {% endtabs %} 
 
-![.NET MAUI SfLinearProgressBar with gradient range](images/appearance/gradient.png)
+![.NET MAUI Linear ProgressBar with gradient range](images/appearance/gradient.png)
 
 ## Thickness
 
@@ -124,7 +124,7 @@ this.Content = linearProgressBar;
 
 {% endtabs %} 
 
-![.NET MAUI Linear Progress Bar with height customization](images/appearance/thickness.png)
+![.NET MAUI Linear ProgressBar with height customization](images/appearance/thickness.png)
 
 ## Corner radius
 
@@ -156,7 +156,7 @@ this.Content = linearProgressBar;
 
 {% endtabs %} 
 
-![.NET MAUI Linear Progress Bar with corner radius customization](images/appearance/corner-radius.png)
+![.NET MAUI Linear ProgressBar with corner radius customization](images/appearance/corner-radius.png)
 
 ## Color customization
 
@@ -190,7 +190,7 @@ this.Content = linearProgressBar;
 
 {% endtabs %} 
 
-![.NET MAUI Linear Progress Bar with color customization](images/appearance/color.png)
+![.NET MAUI Linear ProgressBar with color customization](images/appearance/color.png)
 
 The linear progress bar provides support to customize the color for the secondary progress bar using the `SecondaryProgressFill` property as demonstrated in the following code sample.
 
@@ -216,6 +216,6 @@ this.Content = linearProgressBar;
 
 {% endtabs %} 
 
-![.NET MAUI Linear Progress Bar with seconday progress color customization](images/appearance/secondary-progress.png)
+![.NET MAUI Linear ProgressBar with seconday progress color customization](images/appearance/secondary-progress.png)
 
-N> Refer to our `.NET MAUI SfLinearProgressBar` feature tour page for its groundbreaking feature representations. Also explore our [.NET MAUI SfLinearProgressBar example](https://github.com/syncfusion/maui-demos/) that shows how to configure a SfLinearProgressBar in .NET MAUI.
+N> Refer to our `.NET MAUI Linear ProgressBar` feature tour page for its groundbreaking feature representations. Also explore our [.NET MAUI Linear ProgressBar example](https://github.com/syncfusion/maui-demos/) that shows how to configure a SfLinearProgressBar in .NET MAUI.

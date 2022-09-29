@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Getting started with .NET MAUI SfCircularProgressBar | Syncfusion
-description: Learn here about getting started with Syncfusion .NET MAUI SfCircularProgressBar (Progress Bar) control, its elements and more.
+title: Getting started with .NET MAUI Circular ProgressBar | Syncfusion
+description: Learn here about getting started with Syncfusion .NET MAUI Circular ProgressBar (SfCircularProgressBar) control, its elements and more.
 platform: MAUI
 control: SfCircularProgressBar
 documentation: ug
 ---
 
-# Getting started with .NET MAUI SfCircularProgressBar
+# Getting started with .NET MAUI Circular ProgressBar
 
-This section explains the steps required to add the circular progress bar control with the progress and its customizable elements such as indeterminate, segment, progress fill, and track fill. This section covers only the basic features needed to know and gets started with the Syncfusion progress bar.
+This section explains the steps required to add the circular progress bar control with the progress and its customizable elements such as indeterminate, segment, progress fill, and track fill. This section covers only the basic features needed to know and gets started with the Syncfusion circular progress bar.
 
-## Creating an application using the .NET MAUI SfCircularProgressBar
+## Creating an application using the .NET MAUI Circular ProgressBar
 
 * Create a new .NET MAUI application in the Visual Studio.
 
-* The Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add ProgressBar to your project, open the NuGet package manager in Visual Studio, and search for [Syncfusion.Maui.ProgressBar] then install that.
+* The Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfCircularProgressBar to your project, open the NuGet package manager in Visual Studio, and search for [Syncfusion.Maui.ProgressBar] then install that.
 
 ### Register the handler
 
@@ -52,7 +52,7 @@ namespace MyProject
 
 {% endhighlight %}
 
-## Adding namespace
+## Initializing circular progress bar
 
 Add the following namespace.
 
@@ -71,8 +71,6 @@ using Syncfusion.Maui.ProgressBar;
 {% endhighlight %}
 
 {% endtabs %}
-
-## Initializing progress bar
 
 Create an instance for the circular progress bar control, and add it as content.
 
@@ -95,9 +93,9 @@ this.Content = circularProgressBar;
 
 N> By default, the value of progress should be specified between 0 and 100. To determine the progress value between 0 and 1, set the Minimum property to 0 and the Maximum property to 1.
 
-Run the project, and check if you get following output to make sure that the project has been configured properly to add the progress bar.
+Run the project, and check if you get following output to make sure that the project has been configured properly to add the circular progress bar.
 
-![.NET MAUI circular progress bar](images/getting-started/progress-bar.png)
+![.NET MAUI Circular ProgressBar](images/getting-started/progress-bar.png)
 
 ## Enabling indeterminate state
 
@@ -120,9 +118,11 @@ this.Content = circularProgressBar;
 
 {% endtabs %} 
 
+![.NET MAUI Circular ProgressBar in indeterminate state](images/getting-started/circular-progressbar-indeterminate.gif)
+
 ## Enable segments
 
-To visualize the progress of a multiple sequential task, split the progress bar into the multiple segments by defining the `SegmentCount` property as demonstrated in the following code sample.
+To visualize the progress of a multiple sequential task, split the circular progress bar into the multiple segments by defining the `SegmentCount` property as demonstrated in the following code sample.
 
 {% tabs %} 
 
@@ -141,7 +141,7 @@ this.Content = circularProgressBar;
 
 {% endtabs %}
 
-![.NET MAUI circular progress bar visualized with multiple sequential task](images/getting-started/segment.png)
+![.NET MAUI Circular ProgressBar visualized with multiple sequential task](images/getting-started/segment.png)
 
 ## Apply colors
 
@@ -181,8 +181,8 @@ SfCircularProgressBar sfCircularProgressBar = new SfCircularProgressBar
 
 {% endtabs %} 
 
-![.NET MAUI circular progress bar with customized colors](images/getting-started/style.png)
+![.NET MAUI Circular ProgressBar with customized colors](images/getting-started/style.png)
 
 N> 
-* Get the complete getting started sample from `GitHub` link.
-* Refer to our `.NET MAUI progress bar` feature tour page for its groundbreaking feature representations.
+* Get the complete getting started sample from [`GitHub`](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-Circular-ProgressBar-control.-) link.
+* Refer to our `.NET MAUI Circular ProgressBar` feature tour page for its groundbreaking feature representations.
