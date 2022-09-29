@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Segments in .NET MAUI SfCircularProgressBar control | Syncfusion
-description: Learn here all about Segments support in Syncfusion .NET MAUI SfCircularProgressBar control, its elements and more.
+title: Segments in .NET MAUI Circular ProgressBar control | Syncfusion
+description: Learn here all about Segments support in Syncfusion .NET MAUI Circular ProgressBar control, its elements and more.
 platform: MAUI
 control: SfCircularProgressBar
 documentation: ug
