@@ -15,9 +15,9 @@ This section explains how to customize the active and inactive regions in the Ra
 
 Change the color of the active and inactive regions using the `ActiveRegionFill` and `InactiveRegionFill` properties of the `RangeSelectorBase` class. The default value of the `ActiveRegionFill` and the `InactiveRegionFill` properties are `SolidColorBrush(Colors.Transparent)` and `SolidColorBrush(Color.FromRgba(255, 255, 255, 192)` respectively.
 
-The active side of the Range Selector is between the start and end thumbs.
+The active side of the Range Selector is between the start and the end thumbs.
 
-The inactive side of the Range Selector is between the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_Minimum) value and the left thumb, and the right thumb and the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_Maximum) value.
+The inactive side of the Range Selector is between the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_Minimum) value and the left thumb and the right thumb and the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_Maximum) value.
 
 {% tabs %}
 
@@ -58,9 +58,9 @@ rangeSelector.Content = chart;
 
 Change the stroke color of the active and inactive regions using the `ActiveRegionStroke` and `InactiveRegionStroke` properties of the `RangeSelectorBase` class. The default value of the `ActiveRegionStroke` and the `InactiveRegionStroke` properties are `SolidColorBrush(Colors.Transparent)` and `SolidColorBrush(Colors.Transparent)` respectively.
 
-The active side of the  Range Selector is between the start and end thumbs.
+The active side of the  Range Selector is between the start and the end thumbs.
 
-The inactive side of the  Range Selector is between the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_Minimum) value and the left thumb, and the right thumb and the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_Maximum) value.
+The inactive side of the  Range Selector is between the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_Minimum) value and the left thumb and the right thumb and the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_Maximum) value.
 
 {% tabs %}
 
@@ -103,11 +103,11 @@ rangeSelector.Content = chart;
 
 ## Region stroke thickness
 
-Change the stroke thickness of the active and inactive regions using the `ActiveRegionStrokeThickness` and `InactiveRegionStrokeThickness` properties of the `RangeSelectorBase` class. The default value of the `ActiveRegionStrokeThickness` and the `InactiveRegionStrokeThickness` properties are `Thickness(1)`.
+Change the stroke thickness of the active and inactive regions using the `ActiveRegionStrokeThickness` and `InactiveRegionStrokeThickness` properties of the `RangeSelectorBase` class. The default value of the `ActiveRegionStrokeThickness` and the `InactiveRegionStrokeThickness` properties is `Thickness(1)`.
 
-The active side of the  Range Selector is between the start and end thumbs.
+The active side of the  Range Selector is between the start and the end thumbs.
 
-The inactive side of the  Range Selector is between the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_Minimum) value and the left thumb, and the right thumb and the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_Maximum) value.
+The inactive side of the  Range Selector is between the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_Minimum) value and the left thumb and the right thumb and the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_Maximum) value.
 
 {% tabs %}
 
