@@ -131,15 +131,16 @@ When the [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slid
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
 
-    <sliders:SfRangeSelector Minimum="0" 
+    <sliders:SfRangeSelector Minimum="0"
                              Maximum="100"
                              RangeStart="25"
                              RangeEnd="75"
-                             Interval="25" 
+                             Interval="25"
                              ShowTicks="True"
                              ShowLabels="True"
+                             EdgeLabelsPlacement="Inside"
                              DragBehavior="OnThumb">
-        
+
         <charts:SfCartesianChart>
             ...
         </charts:SfCartesianChart>
@@ -159,6 +160,7 @@ rangeSelector.RangeEnd = 75;
 rangeSelector.Interval = 25; 
 rangeSelector.ShowTicks = true;
 rangeSelector.ShowLabels = true;  
+rangeSelector.EdgeLabelsPlacement = SliderEdgeLabelsPlacement.Inside;
 rangeSelector.DragBehavior = SliderDragBehavior.OnThumb;
 SfCartesianChart chart = new SfCartesianChart();
 rangeSelector.Content = chart;
@@ -187,6 +189,7 @@ When the [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slid
                              Interval="25" 
                              ShowTicks="True"
                              ShowLabels="True"
+                             EdgeLabelsPlacement="Inside"
                              DragBehavior="BetweenThumbs">
 
         <charts:SfCartesianChart>
@@ -208,6 +211,7 @@ rangeSelector.RangeEnd = 75;
 rangeSelector.Interval = 25; 
 rangeSelector.ShowTicks = true;
 rangeSelector.ShowLabels = true;   
+rangeSelector.EdgeLabelsPlacement = SliderEdgeLabelsPlacement.Inside;
 rangeSelector.DragBehavior = SliderDragBehavior.BetweenThumbs;
 SfCartesianChart chart = new SfCartesianChart();
 rangeSelector.Content = chart;
@@ -236,6 +240,7 @@ When the  [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sli
                              Interval="25" 
                              ShowTicks="True"
                              ShowLabels="True"
+                             EdgeLabelsPlacement="Inside"
                              DragBehavior="Both">
 
         <charts:SfCartesianChart>
@@ -257,6 +262,7 @@ rangeSelector.RangeEnd = 75;
 rangeSelector.Interval = 25; 
 rangeSelector.ShowTicks = true; 
 rangeSelector.ShowLabels = true;  
+rangeSelector.EdgeLabelsPlacement = SliderEdgeLabelsPlacement.Inside;
 rangeSelector.DragBehavior = SliderDragBehavior.Both;
 SfCartesianChart chart = new SfCartesianChart();
 rangeSelector.Content = chart;
