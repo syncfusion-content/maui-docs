@@ -97,9 +97,10 @@ To migrate easier from Xamarin SfComboBox to .NET MAUI `SfComboBox`, we kept mos
 ## Upcoming features
 
   * Item Template
-  * Multiple Selection
+  * Multiple Selection with Tokens and Delimiter
   * Diacritic Sensitivity
   * Header and Footer
   * Highlighting Text
   * Load More Feature
   * Minimum Prefix Character
+  * Customizations in Drop-Down
