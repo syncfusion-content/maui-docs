@@ -9,11 +9,11 @@ documentation: ug
 
 # Polygons in .NET MAUI Maps (SfMaps)
 
-Polygon layer is a sublayer that renders a group of `MapPolygon` on the `MapShapeLayer`. This section helps to learn about how to add the polygons and customize them.
+Polygon layer is a sublayer that renders a group of [`MapPolygon`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolygon.html) on the [`MapShapeLayer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html). This section helps to learn about how to add the polygons and customize them.
 
 ## Adding polygons
 
-The `Polygons` is a collection of `MapPolygon`. Every single `MapPolygon` connects multiple coordinates through a `Points` property.
+The [`Polygons`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolygonLayer.html#Syncfusion_Maui_Maps_MapPolygonLayer_Polygons) is a collection of [`MapPolygon`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolygon.html). Every single [`MapPolygon`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolygon.html) connects multiple coordinates through a [`Points`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolygon.html#Syncfusion_Maui_Maps_MapPolygon_Points) property.
 
 {% tabs %}
 
@@ -90,7 +90,7 @@ this.Content = maps;
 
 ## Fill color
 
-You can apply colors to each `MapPolygon` in the `Polygons` collection using the individual `MapPolygon.Fill` property.
+You can apply colors to each [`MapPolygon`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolygon.html) in the [`Polygons`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolygonLayer.html#Syncfusion_Maui_Maps_MapPolygonLayer_Polygons) collection using the individual [`MapPolygon.Fill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolygon.html#Syncfusion_Maui_Maps_MapPolygon_Fill) property.
 
 {% tabs %}
 
@@ -169,9 +169,9 @@ this.Content = maps;
 
 ## Stroke and stroke thickness
 
-You can apply stroke thickness to each `MapPolygon` in the `Polygons` collection using the individual `MapPolygon.StrokeThickness` property. The default value of the `MapPolygonLayer.StrokeThickness` property is `2`.
+You can apply stroke thickness to each [`MapPolygon`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolygon.html) in the [`Polygons`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolygonLayer.html#Syncfusion_Maui_Maps_MapPolygonLayer_Polygons) collection using the individual [`MapPolygon.StrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolygon.html#Syncfusion_Maui_Maps_MapPolygon_StrokeThickness) property. The default value of the [`MapPolygon.StrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolygon.html#Syncfusion_Maui_Maps_MapPolygon_StrokeThickness) property is `2`.
 
-You can apply stroke color to each `MapPolygon` in the `Polygons` collection using the individual `MapPolygon.Stroke` property.
+You can apply stroke color to each [`MapPolygon`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolygon.html) in the [`Polygons`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolygonLayer.html#Syncfusion_Maui_Maps_MapPolygonLayer_Polygons) collection using the individual [`MapPolygon.Stroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolygon.html#Syncfusion_Maui_Maps_MapPolygon_Stroke) property.
 
 {% tabs %}
 

@@ -9,11 +9,11 @@ documentation: ug
 
 # Polylines in .NET MAUI Maps (SfMaps)
 
-Polyline layer is a sublayer that renders a group of `MapPolyline` on `MapShapeLayer`. This section helps to learn about how to add the polylines and customize them.
+Polyline layer is a sublayer that renders a group of [`MapPolyline`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html) on [`MapShapeLayer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html). This section helps to learn about how to add the polylines and customize them.
 
 ## Adding polylines
 
-The `Polylines` is a collection of `MapPolyline`. Every single `MapPolyline` connects multiple coordinates through a `Points` property.
+The [`Polylines`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolylineLayer.html#Syncfusion_Maui_Maps_MapPolylineLayer_Polylines) is a collection of [`MapPolyline`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html). Every single [`MapPolyline`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html) connects multiple coordinates through a [`Points`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html#Syncfusion_Maui_Maps_MapPolyline_Points) property.
 
 {% tabs %}
 
@@ -93,7 +93,7 @@ this.Content = maps;
 
 ## Stroke
 
-You can apply colors to each `MapPolyline` in the `Polylines` collection using the individual `MapPolyline.Stroke` property.
+You can apply colors to each [`MapPolyline`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html) in the [`Polylines`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolylineLayer.html#Syncfusion_Maui_Maps_MapPolylineLayer_Polylines) collection using the individual [`MapPolyline.Stroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html#Syncfusion_Maui_Maps_MapPolyline_Stroke) property.
 
 {% tabs %}
 
@@ -174,7 +174,7 @@ this.Content = maps;
 
 ## Stroke thickness
 
-You can apply different stroke thickness to each `MapPolyline` in the `Polylines` collection using the individual `MapPolyline.StrokeThickness` property. The default value of the `MapPolylineLayer.StrokeThickness` property is `2`.
+You can apply different stroke thickness to each [`MapPolyline`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html) in the [`Polylines`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolylineLayer.html#Syncfusion_Maui_Maps_MapPolylineLayer_Polylines) collection using the individual [`MapPolyline.StrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html#Syncfusion_Maui_Maps_MapPolyline_StrokeThickness) property. The default value of the [`MapPolyline.StrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html#Syncfusion_Maui_Maps_MapPolyline_StrokeThickness) property is `2`.
 
 {% tabs %}
 
@@ -255,7 +255,7 @@ this.Content = maps;
 
 ## Stroke cap
 
-You can apply different stroke cap to each `MapPolyline` in the `Polylines` collection using the individual `MapPolyline.StrokeLineCap` property. The default value of the `MapPolylineLayer.StrokeLineCap` property is `StrokeLineCap.Butt`. The available values are `Butt`, `Round`, and `Square`.
+You can apply different stroke cap to each [`MapPolyline`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html) in the [`Polylines`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolylineLayer.html#Syncfusion_Maui_Maps_MapPolylineLayer_Polylines) collection using the individual [`MapPolyline.StrokeLineCap`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html#Syncfusion_Maui_Maps_MapPolyline_StrokeLineCap) property. The default value of the [`MapPolyline.StrokeLineCap`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html#Syncfusion_Maui_Maps_MapPolyline_StrokeLineCap) property is `LineCap.Butt`. The available values are `Butt`, `Round`, and `Square`.
 
 {% tabs %}
 
@@ -338,7 +338,7 @@ this.Content = maps;
 
 ## Dash array
 
-You can apply dash support for the polyline using the `MapPolyline.StrokeDashArray` property.
+You can apply dash support for the polyline using the [`MapPolyline.StrokeDashArray`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html#Syncfusion_Maui_Maps_MapPolyline_StrokeDashArray) property.
 
 A sequence of dash and gap will be rendered based on the values in this list. Once all values of the list is rendered, it will be repeated again till the end of the polyline.
 

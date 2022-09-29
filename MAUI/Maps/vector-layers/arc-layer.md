@@ -9,11 +9,11 @@ documentation: ug
 
 # Arc Layer in .NET MAUI Maps (SfMaps)
 
-Arc layer is a sublayer that renders a group of `MapArc` on `MapShapeLayer`. This section helps to learn about how to add the arcs and customize them.
+Arc layer is a sublayer that renders a group of [`MapArc`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapArc.html) on [`MapShapeLayer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html). This section helps to learn about how to add the arcs and customize them.
 
 ## Adding arcs
 
-The `Arcs` is a collection of `MapArc`. Every single `MapArc` connects two location coordinates through a curved line. The start coordinate is set to `MapArc.From` property and the end coordinate is set to `MapArc.To` property.
+The [`Arcs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapArcLayer.html#Syncfusion_Maui_Maps_MapArcLayer_Arcs) is a collection of [`MapArc`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapArc.html). Every single [`MapArc`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapArc.html) connects two location coordinates through a curved line. The start coordinate is set to [`MapArc.From`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapArc.html#Syncfusion_Maui_Maps_MapArc_From) property and the end coordinate is set to [`MapArc.To`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapArc.html#Syncfusion_Maui_Maps_MapArc_To) property.
 
 {% tabs %}
 
@@ -124,9 +124,9 @@ this.Content = maps;
 
 ## Height factor
 
-The `HeightFactor` is the distance from the line connecting two points to the arc bend point. The default value of `HeightFactor` property is `0.2` and the value ranges from -1 to 1.
+The [`HeightFactor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapArc.html#Syncfusion_Maui_Maps_MapArc_HeightFactor) is the distance from the line connecting two points to the arc bend point. The default value of [`HeightFactor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapArc.html#Syncfusion_Maui_Maps_MapArc_HeightFactor) property is `0.2` and the value ranges from -1 to 1.
 
-By default, the arc will always render above the `MapArc.From` and `MapArc.To` points. To render the arc below the points, set the value between -1 to 0.
+By default, the arc will always render above the [`MapArc.From`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapArc.html#Syncfusion_Maui_Maps_MapArc_From) and [`MapArc.To`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapArc.html#Syncfusion_Maui_Maps_MapArc_To) points. To render the arc below the points, set the value between -1 to 0.
 
 {% tabs %}
 
@@ -242,9 +242,9 @@ this.Content = maps;
 
 ## Control point factor
 
-The `MapArc.ControlPointFactor` is the arc bending position. The default value of `MapArc.ControlPointFactor` property is `0.5` and the value ranges from 0 to 1.
+The [`MapArc.ControlPointFactor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapArc.html#Syncfusion_Maui_Maps_MapArc_ControlPointFactor) is the arc bending position. The default value of [`MapArc.ControlPointFactor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapArc.html#Syncfusion_Maui_Maps_MapArc_ControlPointFactor) property is `0.5` and the value ranges from 0 to 1.
 
-By default, the arc will bend at the center between the `MapArc.From` and `MapArc.To` points.
+By default, the arc will bend at the center between the [`MapArc.From`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapArc.html#Syncfusion_Maui_Maps_MapArc_From) and [`MapArc.To`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapArc.html#Syncfusion_Maui_Maps_MapArc_To) points.
 
 {% tabs %}
 
@@ -361,7 +361,7 @@ this.Content = maps;
 
 ## Stroke
 
-You can apply colors to each `MapArc` in the `Arcs` collection using the individual `MapArc.Stroke` property.
+You can apply colors to each [`MapArc`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapArc.html) in the [`Arcs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapArcLayer.html#Syncfusion_Maui_Maps_MapArcLayer_Arcs) collection using the individual [`MapArc.Stroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapArc.html#Syncfusion_Maui_Maps_MapArc_Stroke) property.
 
 {% tabs %}
 
@@ -477,7 +477,7 @@ this.Content = maps;
 
 ## Stroke thickness
 
-You can apply stroke thickness to each `MapArc` in the `Arcs` collection using the individual `MapArc.StrokeThickness` property. The default value of the `MapArc.StrokeThickness` property is `2`.
+You can apply stroke thickness to each [`MapArc`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapArc.html) in the [`Arcs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapArcLayer.html#Syncfusion_Maui_Maps_MapArcLayer_Arcs) collection using the individual [`MapArc.StrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapArc.html#Syncfusion_Maui_Maps_MapArc_StrokeThickness) property. The default value of the [`MapArc.StrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapArc.html#Syncfusion_Maui_Maps_MapArc_StrokeThickness) property is `2`.
 
 {% tabs %}
 
@@ -593,7 +593,7 @@ this.Content = maps;
 
 ## Dash array
 
-You can apply dash support for the arc using the `MapArc.StrokeDashArray` property.
+You can apply dash support for the arc using the [`MapArc.StrokeDashArray`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapArc.html#Syncfusion_Maui_Maps_MapArc_StrokeDashArray) property.
 
 A sequence of dash and gap will be rendered based on the values in this list. Once all values of the list is rendered, it will be repeated again till the end of the arc.
 
