@@ -172,7 +172,7 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 			<a href="https://help.syncfusion.com/xamarin/autocomplete/getting-started">SfAutoComplete</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Underway<br/>
+			<a href="https://help.syncfusion.com/maui/autocomplete/migration">SfAutocomplete</a><br/>
 		</td>
 	</tr>
 	<tr>
@@ -180,7 +180,7 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 			<a href="https://help.syncfusion.com/xamarin/combobox/getting-started">SfComboBox</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Underway<br/>
+			<a href="https://help.syncfusion.com/maui/combobox/migration">SfComboBox</a><br/>
 		</td>
 	</tr>
 	<tr>
