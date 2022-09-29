@@ -145,6 +145,7 @@ button.Clicked += Button_Clicked(sender, args);
 
 SfCartesianChart chart = new SfCartesianChart();
 DataPointSelectionBehavior selection = new DataPointSelectionBehavior();
+selection.SelectionBrush = Color.FromArgb("#314A6E");
 
 ColumnSeries series = new ColumnSeries();
 series.SelectionBehavior = selection;
