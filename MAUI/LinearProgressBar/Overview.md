@@ -1,28 +1,28 @@
 ---
 layout: post
-title: About .NET MAUI SfLinearProgressBar control | Syncfusion 
-description: Learn here all about the introduction of Syncfusion .NET MAUI SfLinearProgressBar (Progress Bar) control, its elements and more.
+title: About .NET MAUI Linear ProgressBar control | Syncfusion 
+description: Learn here all about the introduction of Syncfusion .NET MAUI Linear ProgressBar (SfLinearProgressBar) control, its elements and more.
 platform: MAUI
 control: SfLinearProgressBar
 documentation: ug
 ---
 
-# .NET MAUI SfLinearProgressBar (Linear Progress Bar) Overview
+# .NET MAUI Linear ProgressBar (SfLinearProgressBar) Overview
 
-The .NET MAUI SfLinearProgressBar shows task progress with customizable visuals. It has features for displaying progress in rectangular shape, determinate and indeterminate states, segments, smooth animation, and a difining range with different colors.
+The .NET MAUI Linear ProgressBar shows the progress of a task with custom visuals. It displays the progress of a process in rectangular shapes, determinate and indeterminate states, segments, and smooth animation. You can also define ranges with different colors.
 
 ### Key features
 
-**States** - Visualize the progress in different modes such as determinate, indeterminate, and buffer state. 
+**States** - Visualize progress of a process in determinate, indeterminate, and buffer states.  
 
-**Progress shapes** - Visualizes the progress in rectangle.
+**Progress shapes** - Visualize progress in a rectangle shape.
 
-**Segments** - Progress can be divided into multiple segments to show gradual progress.
+**Segments** - Progress can be divided into multiple segments to show a gradual progress.
 
-**Color ranges** - Customizes the ranges with different colors in the progress bar.
+**Color ranges** - Customize ranges with  different colors.
 
-**Appearance customization** - Customizes the track thickness, color, and corner radius. 
+**Appearance customization** - Customize the track thickness, color, and corner radius. 
 
-![ProgresBar control for .NET MAUI.](images/overview/dotnet_maui_progressbar.png)
+![Linear ProgressBar control for .NET MAUI.](images/overview/dotnet_maui_progressbar.png)
 
 N> Get the samples in the [GitHub](https://github.com/syncfusion/maui-demos) link.

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in .NET MAUI SfCircularProgressBar control | Syncfusion
-description: Learn here all about Events support in Syncfusion .NET MAUI SfCircularProgressBar control, its elements and more.
+title: Events in .NET MAUI Circular ProgressBar control | Syncfusion
+description: Learn here all about Events support in Syncfusion .NET MAUI Circular ProgressBar control, its elements and more.
 platform: MAUI
 control: SfCircularProgressBar
 documentation: ug
 ---
 
-# Events in .NET MAUI SfCircularProgressBar (Circular Progress Bar)
+# Events in .NET MAUI Circular ProgressBar (SfCircularProgressBar)
 
 ## ProgressChanged
 
@@ -85,4 +85,4 @@ private void CircularProgressBar_ProgressCompleted(object sender, ProgressValueE
 
 {% endtabs %} 
 
-N> Refer to our `.NET MAUI SfCircularProgressBar` feature tour page for its groundbreaking feature representations. Also explore our [.NET MAUI SfCircularProgressBar example](https://github.com/syncfusion/maui-demos/) that shows how to configure a SfCircularProgressBar in .NET MAUI.
+N> Refer to our `.NET MAUI Circular ProgressBar` feature tour page for its groundbreaking feature representations. Also explore our [.NET MAUI Circular ProgressBar example](https://github.com/syncfusion/maui-demos/) that shows how to configure a SfCircularProgressBar in .NET MAUI.

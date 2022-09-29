@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Migrate from Xamarin to .NET MAUI  SfCircularProgressBar | Syncfusion
-description: Learn here all about Migrating from Syncfusion Xamarin SfCircularProgressBar to Syncfusion .NET MAUI SfCircularProgressBar control and more.
+title: Migrate from Xamarin to .NET MAUI  Circular ProgressBar | Syncfusion
+description: Learn here all about Migrating from Syncfusion Xamarin Circular ProgressBar to Syncfusion .NET MAUI Circular ProgressBar control and more.
 platform: MAUI
 control: SfCircularProgressBar
 documentation: ug
@@ -9,11 +9,11 @@ documentation: ug
 
 # Migrate from Xamarin.Forms to .NET MAUI SfCircularProgressBar
 
-To make the migration from the [Xamarin SfCircularProgressBar](https://www.syncfusion.com/xamarin-ui-controls/xamarin-progressbar) to `.NET MAUI SfCircularProgressBar` easier, most of the APIs from the Xamarin ProgressBar were kept in the .NET MAUI ProgressBar. However, to maintain the consistency of API naming in the .NET MAUI ProgressBar, some of the APIs have been renamed. Please find the difference in the following topics.
+To make the migration from the [Xamarin SfCircularProgressBar](https://www.syncfusion.com/xamarin-ui-controls/xamarin-progressbar) to `.NET MAUI SfCircularProgressBar` easier, most of the APIs from the Xamarin SfCircularProgressBar were kept in the .NET MAUI SfCircularProgressBar. However, to maintain the consistency of API naming in the .NET MAUI SfCircularProgressBar, some of the APIs have been renamed. Please find the difference in the following topics.
 
 ## Initialize control
 
-To initialize the control, import the ProgressBar namespace and initialize the ProgressBar as shown in the following code sample.
+To initialize the control, import the ProgressBar namespace and initialize the SfCircularProgressBar as shown in the following code sample.
 
 <table>
 <tr>
@@ -106,6 +106,18 @@ SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 <td>{{'Maximum'| markdownify }}</td>
 <td>Gets or sets the maximum possible value of the progress bar. The progress bar ends at this value.</td></tr>
 <tr>
+<td>{{'[StartAngle](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfCircularProgressBar.html#Syncfusion_XForms_ProgressBar_SfCircularProgressBar_StartAngle)'| markdownify }}</td>
+<td>{{'StartAngle'| markdownify }}</td>
+<td>Gets or sets a value that specifies the StartAngle of the progress bar.</td></tr>
+<tr>
+<td>{{'[EndAngle](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfCircularProgressBar.html#Syncfusion_XForms_ProgressBar_SfCircularProgressBar_EndAngle)'| markdownify }}</td>
+<td>{{'EndAngle'| markdownify }}</td>
+<td>Gets or sets a value that specifies the EndAngle of the progress bar.</td></tr>
+<tr>
+<td>{{'[Content](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfCircularProgressBar.html#Syncfusion_XForms_ProgressBar_SfCircularProgressBar_Content)'| markdownify }}</td>
+<td>{{'Content'| markdownify }}</td>
+<td>Gets or sets a any view to display in the center of circular progress bar.</td></tr>
+<tr>
 <td>{{'[ProgressColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_ProgressColor)'| markdownify }}</td>
 <td>{{'ProgressFill'| markdownify }}</td>
 <td>Gets or sets the brush that paints the interior area of the progress.</td></tr>
@@ -114,6 +126,10 @@ SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 <td>{{'TrackFill'| markdownify }}</td>
 <td>Gets or sets the brush that paints the interior area of the track.</td></tr>
 <tr>
+<td>{{'[RangeColors](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_RangeColors)'| markdownify }}</td>
+<td>{{'GradientStops'| markdownify }}</td>
+<td>Gets or sets a collection of ProgressGradientStop to fill the gradient brush to the progress.</td></tr>
+<tr>
 <td>{{'[SegmentCount](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_SegmentCount)'| markdownify }}</td>
 <td>{{'SegmentCount'| markdownify }}</td>
 <td>Gets or sets the value that determine the segments count of progress bar.</td></tr>
@@ -121,10 +137,6 @@ SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 <td>{{'[GapWidth](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_GapWidth)'| markdownify }}</td>
 <td>{{'SegmentGapWidth'| markdownify }}</td>
 <td>Gets or sets the value that determines the gap between the segments.</td></tr>
-<tr>
-<td>{{'[RangeColors](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_RangeColors)'| markdownify }}</td>
-<td>{{'GradientStops'| markdownify }}</td>
-<td>Gets or sets a collection of ProgressGradientStop to fill the gradient brush to the progress.</td></tr>
 <tr>
 <td>{{'[AnimationDuration](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_AnimationDuration)'| markdownify }}</td>
 <td>{{'AnimationDuration'| markdownify }}</td>
@@ -145,18 +157,7 @@ SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 <td>{{'[IndeterminateIndicatorWidth](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_IndeterminateIndicatorWidth)'| markdownify }}</td>
 <td>{{'IndeterminateIndicatorWidthFactor'| markdownify }}</td>
 <td>Gets or sets the value that specifies width of the indeterminate indicator.</td></tr>
-<tr>
-<td>{{'[StartAngle](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfCircularProgressBar.html#Syncfusion_XForms_ProgressBar_SfCircularProgressBar_StartAngle)'| markdownify }}</td>
-<td>{{'StartAngle'| markdownify }}</td>
-<td>Gets or sets a value that specifies the StartAngle of the progress bar.</td></tr>
-<tr>
-<td>{{'[EndAngle](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfCircularProgressBar.html#Syncfusion_XForms_ProgressBar_SfCircularProgressBar_EndAngle)'| markdownify }}</td>
-<td>{{'EndAngle'| markdownify }}</td>
-<td>Gets or sets a value that specifies the EndAngle of the progress bar.</td></tr>
-<tr>
-<td>{{'[Content](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfCircularProgressBar.html#Syncfusion_XForms_ProgressBar_SfCircularProgressBar_Content)'| markdownify }}</td>
-<td>{{'Content'| markdownify }}</td>
-<td>Gets or sets a any view to display in the center of circular progress bar.</td></tr>
+
 <tr>
 <td>{{'[IndicatorInnerRadius](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfCircularProgressBar.html#Syncfusion_XForms_ProgressBar_SfCircularProgressBar_IndicatorInnerRadius)'| markdownify }}</td>
 <td>{{'ProgressThickness'| markdownify }}</td>
@@ -302,7 +303,7 @@ private void SfCircularProgressBar_ProgressCompleted(object sender, ProgressValu
                                    TrackFill="Violet"
                                    ProgressChanged="CircularProgressBar_ProgressChanged"
                                    ProgressCompleted="CircularProgressBar_ProgressCompleted"
-                                   Progress="75"
+                                   Progress="100"
                                    IsIndeterminate="False"
                                    Minimum="10"
                                    Maximum="90"
