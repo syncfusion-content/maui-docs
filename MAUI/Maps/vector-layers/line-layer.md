@@ -328,7 +328,7 @@ this.Content = maps;
 
 ## Stroke cap
 
-You can apply stroke cap to each [`MapLine`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLine.html) in the [`Lines`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLineLayer.html#Syncfusion_Maui_Maps_MapLineLayer_LinesProperty) collection using the individual [`MapLine.StrokeLineCap`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLine.html#Syncfusion_Maui_Maps_MapLine_StrokeLineCap) property. The default value of the [`MapLine.StrokeLineCap`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLine.html#Syncfusion_Maui_Maps_MapLine_StrokeLineCap) property is `StrokeLineCap.Butt`. The available values are `Butt`, `Round`, and `Square`.
+You can apply stroke cap to each [`MapLine`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLine.html) in the [`Lines`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLineLayer.html#Syncfusion_Maui_Maps_MapLineLayer_LinesProperty) collection using the individual [`MapLine.StrokeLineCap`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLine.html#Syncfusion_Maui_Maps_MapLine_StrokeLineCap) property. The default value of the [`MapLine.StrokeLineCap`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLine.html#Syncfusion_Maui_Maps_MapLine_StrokeLineCap) property is `LineCap.Butt`. The available values are `Butt`, `Round`, and `Square`.
 
 {% tabs %}
 

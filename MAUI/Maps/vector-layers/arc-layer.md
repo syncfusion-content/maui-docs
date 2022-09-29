@@ -124,7 +124,7 @@ this.Content = maps;
 
 ## Height factor
 
-The `HeightFactor` is the distance from the line connecting two points to the arc bend point. The default value of `HeightFactor` property is `0.2` and the value ranges from -1 to 1.
+The [`HeightFactor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapArc.html#Syncfusion_Maui_Maps_MapArc_HeightFactor) is the distance from the line connecting two points to the arc bend point. The default value of [`HeightFactor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapArc.html#Syncfusion_Maui_Maps_MapArc_HeightFactor) property is `0.2` and the value ranges from -1 to 1.
 
 By default, the arc will always render above the [`MapArc.From`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapArc.html#Syncfusion_Maui_Maps_MapArc_From) and [`MapArc.To`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapArc.html#Syncfusion_Maui_Maps_MapArc_To) points. To render the arc below the points, set the value between -1 to 0.
 

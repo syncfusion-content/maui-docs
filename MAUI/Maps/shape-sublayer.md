@@ -52,7 +52,7 @@ this.Content = maps;
 
 ![Shape sublayer support](images/shape-sublayer/shape-sublayer.png)
 
-N> Refer the `MapShapeLayer`, for adding shape layer in `SfMaps`.
+N> Refer the [`MapShapeLayer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html), for adding shape layer in [`SfMaps`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.SfMaps.html).
 
 ## Color and stroke color
 
