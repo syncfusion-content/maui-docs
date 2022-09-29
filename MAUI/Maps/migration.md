@@ -1344,7 +1344,7 @@ public MainPage()
       {{'TextStyle'| markdownify }}
    </td>
 </tr>
-<table>
+</table>
 
 The following code example explains how to customize tooltip in the Xamarin SfMaps and .Net MAUI SfMaps.
 
