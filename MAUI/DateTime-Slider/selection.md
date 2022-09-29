@@ -11,41 +11,6 @@ documentation: ug
 
 This section helps to learn about the value selection in the DateTime Slider.
 
-## Default
-
-By default, the thumb gets moved on continuous manner in the DateTime Slider. 
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<sliders:SfDateTimeSlider Minimum="2000-01-01"
-                          Maximum="2004-01-01"
-                          Value="2002-01-01"
-                          Interval="1"
-                          ShowLabels="True"
-                          ShowTicks="True" />                
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfDateTimeSlider slider = new SfDateTimeSlider()
-{
-    Minimum = new DateTime(2000, 01, 01),
-    Maximum = new DateTime(2004, 01, 01),
-    Value = new DateTime(2002, 01, 01),
-    Interval = 1,
-    ShowTicks = true,
-    ShowLabels = true,
-};
-         
-{% endhighlight %}
-
-{% endtabs %}
-
-![Slider default dragging](images/selection/default.gif)
-
 ## Discrete selection
 
 Move the thumb in discrete manner for date values using the [`StepDuration`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeSlider_StepDuration) property in the slider.

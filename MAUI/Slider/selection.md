@@ -11,43 +11,6 @@ documentation: ug
 
 This section helps to learn about the value selection in the Slider.
 
-## Default
-
-By default, the thumb gets moved on continuous manner in the Slider. 
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<sliders:SfSlider Minimum="20"
-                  Maximum="40"
-                  Interval="5"
-                  Value="30"
-                  ShowLabels="True"
-                  ShowTicks="True"
-                  ShowDividers="True" />                 
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfSlider slider = new SfSlider()
-{
-    Minimum = 20,
-    Maximum = 40,
-    Value = 30,
-    Interval = 5,
-    ShowTicks = true,
-    ShowLabels = true,
-    ShowDividers = true,
-};
-         
-{% endhighlight %}
-
-{% endtabs %}
-
-![Slider default dragging](images/selection/default.gif)
-
 ## Discrete selection
 
 Move the thumb in discrete manner for numeric values using the [`StepSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html#Syncfusion_Maui_Sliders_SfSlider_StepSize) property in the slider.

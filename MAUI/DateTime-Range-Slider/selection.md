@@ -1,52 +1,15 @@
 ---
 layout: post
-title: Range value selection in .NET MAUI Range Slider control | Syncfusion
-description: Learn here all about range value selection of Syncfusion .NET MAUI Range Slider (SfDateTimeRangeSlider) control and more.
+title: Range selection in .NET MAUI Range Slider control | Syncfusion
+description: Learn here all about range selection of Syncfusion .NET MAUI Range Slider (SfDateTimeRangeSlider) control and more.
 platform: maui
 control: SfDateTimeRangeSlider
 documentation: ug
 ---
 
-# Range value selection in .NET MAUI DateTime Range Slider (SfDateTimeRangeSlider)
+# Range selection in .NET MAUI DateTime Range Slider (SfDateTimeRangeSlider)
 
-This section helps to learn about various customization options available to configure the range value selection in the DateTime Range Slider.
-
-## Default
-
-By default, the thumbs gets moved on continuous manner in the DateTime Range Slider. 
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<sliders:SfDateTimeRangeSlider Minimum="2000-01-01"
-                               Maximum="2004-01-01"
-                               RangeStart="2001-01-01"
-                               RangeEnd="2003-01-01"
-                               Interval="1"
-                               ShowLabels="True"
-                               ShowTicks="True"
-                               ShowDividers="True" />
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider();
-rangeSlider.Minimum = new DateTime(2000, 01, 01);
-rangeSlider.Maximum = new DateTime(2004, 01, 01);
-rangeSlider.RangeStart = new DateTime(2001, 01, 01); 
-rangeSlider.RangeEnd = new DateTime(2003, 01, 01);     
-rangeSlider.ShowLabels = true;
-rangeSlider.ShowTicks = true;      
-rangeSlider.ShowDividers = true;    
-rangeSlider.Interval = 1;  
-         
-{% endhighlight %}
-
-{% endtabs %}
-
-![RangeSlider default dragging](images/selection/default.gif)
+This section helps to learn about the range selection in the DateTime Range Slider.
 
 ## Discrete selection
 

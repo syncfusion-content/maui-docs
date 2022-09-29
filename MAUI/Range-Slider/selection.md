@@ -1,52 +1,15 @@
 ---
 layout: post
-title: Range value selection in .NET MAUI Range Slider control | Syncfusion
-description: Learn here all about range value selection of Syncfusion .NET MAUI Range Slider (SfRangeSlider) control and more.
+title: Range selection in .NET MAUI Range Slider control | Syncfusion
+description: Learn here all about range selection of Syncfusion .NET MAUI Range Slider (SfRangeSlider) control and more.
 platform: maui
 control: SfRangeSlider
 documentation: ug
 ---
 
-# Range value selection in .NET MAUI Range Slider (SfRangeSlider)
+# Range selection in .NET MAUI Range Slider (SfRangeSlider)
 
-This section helps to learn about various customization options available to configure the range value selection in the Range Slider.
-
-## Default
-
-By default, the thumbs gets moved on continuous manner in the Range Slider. 
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<sliders:SfRangeSlider Minimum="0"
-                       Maximum="10"
-                       RangeStart="2"
-                       RangeEnd="8"
-                       Interval="2"
-                       ShowLabels="True"
-                       ShowTicks="True"
-                       ShowDividers="True" />
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfRangeSlider rangeSlider = new SfRangeSlider();
-rangeSlider.Minimum = 0;
-rangeSlider.Maximum = 10;
-rangeSlider.RangeStart = 2;
-rangeSlider.RangeEnd = 8;
-rangeSlider.Interval = 2;
-rangeSlider.ShowLabels = true;
-rangeSlider.ShowTicks = true;
-rangeSlider.ShowDividers = true;
-         
-{% endhighlight %}
-
-{% endtabs %}
-
-![RangeSlider default dragging](images/selection/default.gif)
+This section helps to learn about the range selection in the Range Slider.
 
 ## Discrete selection
 

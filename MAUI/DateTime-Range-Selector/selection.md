@@ -1,70 +1,15 @@
 ---
 layout: post
-title: Range value selection in .NET MAUI Range Selector control | Syncfusion
-description: Learn here all about range value selection of Syncfusion .NET MAUI Range Selector (SfDateTimeRangeSelector) control and more.
+title: Range selection in .NET MAUI Range Selector control | Syncfusion
+description: Learn here all about range selection of Syncfusion .NET MAUI Range Selector (SfDateTimeRangeSelector) control and more.
 platform: maui
 control: SfDateTimeRangeSelector
 documentation: ug
 ---
 
-# Range value selection in .NET MAUI DateTime Range Selector (SfDateTimeRangeSelector)
+# Range selection in .NET MAUI DateTime Range Selector (SfDateTimeRangeSelector)
 
-This section helps to learn about various customization options available to configure the range value selection in the DateTime Range Selector.
-
-## Default
-
-By default, the thumbs gets moved on continuous manner in the DateTime Range Selector. 
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<ContentPage 
-             ...
-             xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-
-    <sliders:SfDateTimeRangeSelector Minimum="2000-01-01" 
-                                     Maximum="2005-01-01" 
-                                     RangeStart="2001-01-01"
-                                     RangeEnd="2004-01-01"
-                                     Interval="1"
-                                     IntervalType="Years"
-                                     DateFormat="yyyy"  
-                                     ShowLabels="True" 
-                                     ShowTicks="True" 
-                                     ShowDividers="True">
-        
-        <charts:SfCartesianChart>
-            ...
-        </charts:SfCartesianChart>
-    
-    </sliders:SfDateTimeRangeSelector>
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
-rangeSelector.Minimum = new DateTime(2000, 01, 01);
-rangeSelector.Maximum = new DateTime(2005, 01, 01);
-rangeSelector.RangeStart = new DateTime(2001, 01, 01); 
-rangeSelector.RangeEnd = new DateTime(2004, 01, 01);
-rangeSelector.Interval = 1;
-rangeSelector.IntervalType = SliderDateIntervalType.Years;
-rangeSelector.DateFormat = "yyyy";    
-rangeSelector.ShowLabels = true;
-rangeSelector.ShowTicks = true;      
-rangeSelector.ShowDividers = true;    
-SfCartesianChart chart = new SfCartesianChart();
-rangeSelector.Content = chart;
-         
-{% endhighlight %}
-
-{% endtabs %}
-
-![RangeSelector default dragging](images/selection/default.gif)
+This section helps to learn about the range selection in the DateTime Range Selector.
 
 ## Discrete selection
 

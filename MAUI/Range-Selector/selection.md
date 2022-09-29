@@ -1,67 +1,15 @@
 ---
 layout: post
-title: Range Value selection in .NET MAUI Range Selector control | Syncfusion
-description: Learn here all about range value selection of Syncfusion .NET MAUI Range Selector (SfRangeSelector) control and more.
+title: Range selection in .NET MAUI Range Selector control | Syncfusion
+description: Learn here all about range selection of Syncfusion .NET MAUI Range Selector (SfRangeSelector) control and more.
 platform: maui
 control: SfRangeSelector
 documentation: ug
 ---
 
-# Range value selection in .NET MAUI Range Selector (SfRangeSelector)
+# Range selection in .NET MAUI Range Selector (SfRangeSelector)
 
-This section helps to learn about various customization options available to configure the range value selection in the Range Selector.
-
-## Default
-
-By default, the thumbs gets moved on continuous manner in the Range Selector. 
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<ContentPage 
-             ...
-             xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-
-    <sliders:SfRangeSelector Minimum="0" 
-                             Maximum="10"                                
-                             RangeStart="2" 
-                             RangeEnd="8"
-                             Interval="2"
-                             ShowLabels="True" 
-                             ShowTicks="True" 
-                             ShowDividers="True">
-        
-        <charts:SfCartesianChart>
-            ...
-        </charts:SfCartesianChart>
-    
-    </sliders:SfRangeSelector>
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfRangeSelector rangeSelector = new SfRangeSelector();
-rangeSelector.StepSize = 2;
-rangeSelector.Minimum = 0;
-rangeSelector.Maximum = 10;
-rangeSelector.RangeStart = 2;
-rangeSelector.RangeEnd = 8;
-rangeSelector.Interval = 2;
-rangeSelector.ShowLabels = true;
-rangeSelector.ShowTicks = true;
-rangeSelector.ShowDividers = true;
-SfCartesianChart chart = new SfCartesianChart();
-rangeSelector.Content = chart;
-         
-{% endhighlight %}
-
-{% endtabs %}
-
-![RangeSelector default dragging](images/selection/default.gif)
+This section helps to learn about the range selection in the Range Selector.
 
 ## Discrete selection
 
