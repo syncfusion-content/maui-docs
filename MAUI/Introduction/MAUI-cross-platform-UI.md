@@ -312,9 +312,43 @@ You can find the platforms supported by each .NET MAUI control as below.
 		</td>
 	</tr>
 	<tr>
-	    <td rowspan="1" valign="top">
+	    <td rowspan="3" valign="top">
 		EDITORS<br/>
 		</td>
+		<td>
+			<a href="/maui/autocomplete/overview">Autocomplete</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="/maui/combobox/overview">ComboBox</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
+	<tr>
 		<td>
 			<a href="/maui/SignaturePad/overview">Signature Pad</a><br/>
 		</td>
