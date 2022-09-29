@@ -184,5 +184,5 @@ SfLinearProgressBar sfLinearProgressBar = new SfLinearProgressBar
 ![.NET MAUI Linear ProgressBar with customized colors](images/getting-started/style.png)
 
 N> 
-* Get the complete getting started sample from [`GitHub`](https://github.com/SyncfusionExamples/Getting-started-with-.NET-MAUI-Linear-ProgressBar-control-) link.
-* Refer to our [`.NET MAUI Linear ProgressBar`](https://www.syncfusion.com/maui-controls/maui-progressbar) feature tour page for its groundbreaking feature representations.
+* Get the complete getting started sample from [GitHub](https://github.com/SyncfusionExamples/Getting-started-with-.NET-MAUI-Linear-ProgressBar-control-) link.
+* Refer to our [.NET MAUI Linear ProgressBar](https://www.syncfusion.com/maui-controls/maui-progressbar) feature tour page for its groundbreaking feature representations.

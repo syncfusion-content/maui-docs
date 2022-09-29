@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrate from Xamarin.Forms to .NET MAUI SfCircularProgressBar
 
-To make the migration from the [Xamarin SfCircularProgressBar](https://www.syncfusion.com/xamarin-ui-controls/xamarin-progressbar) to `.NET MAUI SfCircularProgressBar` easier, most of the APIs from the Xamarin SfCircularProgressBar were kept in the .NET MAUI SfCircularProgressBar. However, to maintain the consistency of API naming in the .NET MAUI SfCircularProgressBar, some of the APIs have been renamed. Please find the difference in the following topics.
+To make the migration from the [Xamarin SfCircularProgressBar](https://www.syncfusion.com/xamarin-ui-controls/xamarin-progressbar) to [.NET MAUI SfCircularProgressBar](https://www.syncfusion.com/maui-controls/maui-progressbar) easier, most of the APIs from the Xamarin SfCircularProgressBar were kept in the .NET MAUI SfCircularProgressBar. However, to maintain the consistency of API naming in the .NET MAUI SfCircularProgressBar, some of the APIs have been renamed. Please find the difference in the following topics.
 
 ## Initialize control
 
@@ -366,4 +366,4 @@ private void CircularProgressBar_ProgressCompleted(object sender, ProgressValueE
 
 ## Unsupported features from Xamarin.Forms
 
-* [`ShowProgressValue`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfCircularProgressBar.html#Syncfusion_XForms_ProgressBar_SfCircularProgressBar_ShowProgressValue) support has not been provided in the SfCircularProgressBar. Instead, you can achieve it using the `Content` property. Please visit the Custom Content page for more details about the `Content` property.
+* [`ShowProgressValue`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfCircularProgressBar.html#Syncfusion_XForms_ProgressBar_SfCircularProgressBar_ShowProgressValue) support has not been provided in the SfCircularProgressBar. Instead, you can achieve it using the [`Content`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_Content) property. Please visit the Custom Content page for more details about the [`Content`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_Content) property.
