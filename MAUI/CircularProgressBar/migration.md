@@ -160,11 +160,11 @@ SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 
 <tr>
 <td>{{'[IndicatorInnerRadius](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfCircularProgressBar.html#Syncfusion_XForms_ProgressBar_SfCircularProgressBar_IndicatorInnerRadius)'| markdownify }}</td>
-<td>{{'ProgressThickness'| markdownify }}</td>
+<td>{{'[ProgressThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_ProgressThickness)'| markdownify }}</td>
 <td>Gets or sets a value that specifies the thickness of the progress. You can specify the value either in logical pixel or radius factor using the ThicknessUnit property.</td></tr>
 <tr>
 <td>{{'[IndicatorOuterRadius](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfCircularProgressBar.html#Syncfusion_XForms_ProgressBar_SfCircularProgressBar_IndicatorOuterRadius)'| markdownify }}</td>
-<td>{{'[ProgressRadiusFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_ProgressThickness)'| markdownify }}</td>
+<td>{{'[ProgressRadiusFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_ProgressRadiusFactor)'| markdownify }}</td>
 <td>Gets or sets a value that specifies the outer radius factor of the progress.</td></tr>
 <tr>
 <td>{{'[TrackInnerRadius](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfCircularProgressBar.html#Syncfusion_XForms_ProgressBar_SfCircularProgressBar_TrackInnerRadius)'| markdownify }}</td>
