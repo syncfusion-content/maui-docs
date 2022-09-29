@@ -337,7 +337,7 @@ chart.XAxes.Add(primaryAxis);
 
 ## Logarithmic Axis
 
-The [LogarithmicAxis]() uses a logarithmic scale, and it is very useful in visualising data when the given data range has a big difference. It can be used either on the x-axis or the chart's y-axis. The logarithmic axis cannot be plotted with zero or negative values. The following code example demonstrates how to set the logarithmic axis in the chart.
+The [LogarithmicAxis]() uses a logarithmic scale, and it is very useful in visualising data when the given data range has a big difference. It can be used either on the x-axis or the chart's y-axis. The following code example demonstrates how to set the logarithmic axis in the chart.
 
 {% tabs %}
 
@@ -402,7 +402,7 @@ chart.YAxes.Add(new LogarithmicAxis() {
 
 ![LogarithmicAxis range customization in MAUI Chart](Axis_Images/maui_chart_logarithmic_axis_range.jpg)
 
-### Logarithmic base
+### Base customization
 
 The logarithmic axis base can be customized using the [LogarithmicBase]() property of the axis. By default, the base value is 10. The following code example demonstrates how to customize the base value.
 
@@ -428,7 +428,7 @@ chart.YAxes.Add(new LogarithmicAxis( ) { LogarithmicBase = 2 });
 
 ![LogarithmicAxis base customization in MAUI Chart](Axis_Images/maui_chart_logarithmic_axis_base.jpg)
 
-### Logarithmic interval
+### Interval customization
 
 Axis interval can be customized using the [Interval]() property of the axis. By default, interval will be calculated based on the minimum and maximum value of the provided data. And the default value of the interval is 1. The following code example demonstrates the interval customization of the axis.
 
