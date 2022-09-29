@@ -13,12 +13,12 @@ The circular progress bar provides animation support to visualize the progress v
 
 The following properties are used to define the duration of animation for the specific states.
 
-* `AnimationDuration:` Represents animation duration of the determinate state’s progress indicator.
-* `IndeterminateAnimationDuration:` Represents animation duration of the indeterminate state’s indicator.
+* [`AnimationDuration:`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_AnimationDuration) Represents animation duration of the determinate state’s progress indicator.
+* [`IndeterminateAnimationDuration:`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_IndeterminateAnimationDuration) Represents animation duration of the indeterminate state’s indicator.
 
 ## Easing effects
 
-The `AnimationEasing` property allows you specify the transfer function that controls animation speed when they run. 
+The [`AnimationEasing`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_AnimationEasing) property allows you specify the transfer function that controls animation speed when they run. 
 
 The following code sample demonstrates the `CubicInOut` easing function of the circular progress bar.
 
@@ -45,7 +45,7 @@ this.Content = circularProgressBar;
 
 ![.NET MAUI Circular ProgressBar with CubicInOut animation](images/animation/easing-animation.gif)
 
-The `SetProgress()` method in the progress bar is used to set progress value along with animation duration and easing effect applicable for the specific method call.
+The [`SetProgress()`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_SetProgress_System_Double_System_Nullable_System_Double__Microsoft_Maui_Easing_) method in the progress bar is used to set progress value along with animation duration and easing effect applicable for the specific method call.
 
 {% highlight c# %}
 
@@ -57,7 +57,7 @@ N> The animation duration and easing effect parameters will not affect the confi
 
 ## Indeterminate Easing Effects
 
-The `IndeterminateAnimationEasing` property allows you to specify a transfer function for indeterminate state, which controls animation speed when they run.
+The [`IndeterminateAnimationEasing`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_IndeterminateAnimationEasing) property allows you to specify a transfer function for indeterminate state, which controls animation speed when they run.
 
 The following code sample demonstrates the `BounceIn` easing function of the circular progress bar.
 

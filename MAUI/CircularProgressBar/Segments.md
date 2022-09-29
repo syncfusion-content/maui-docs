@@ -9,7 +9,7 @@ documentation: ug
 
 # Segments in .NET MAUI Circular ProgressBar (SfCircularProgressBar)
 
-To visualize the progress of multiple sequential tasks, split the circular progress bar into multiple segments by setting the `SegmentCount` property as demonstrated in the following code sample.
+To visualize the progress of multiple sequential tasks, split the circular progress bar into multiple segments by setting the [`SegmentCount`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_SegmentCount) property as demonstrated in the following code sample.
 
 {% tabs %} 
 
@@ -35,7 +35,7 @@ this.Content = circularProgressBar;
 
 ## Gap customization
 
-Customize the default spacing between the segments using the `SegmentGapWidth` property as demonstrated in the following code sample.
+Customize the default spacing between the segments using the [`SegmentGapWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_SegmentGapWidth) property as demonstrated in the following code sample.
 
 {% tabs %} 
 {% highlight xaml %}

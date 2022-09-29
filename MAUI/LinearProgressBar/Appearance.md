@@ -13,12 +13,12 @@ documentation: ug
 
 Visualize multiple ranges with different colors mapped to each range to enhance the readability of progress.
 
-The colors can be mapped to the specific ranges using the `GradientStops` property, which holds a collection of `ProgressGradientStop`. 
+The colors can be mapped to the specific ranges using the [`GradientStops`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_GradientStops) property, which holds a collection of [`ProgressGradientStop`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressGradientStop.html). 
 
-The following properties in the `GradientStops` are used to map the colors to a range:
+The following properties in the [`GradientStops`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_GradientStops) are used to map the colors to a range:
 
-* `Color:` Represents the color to the specified range.
-* `Value:` Represents the start or end value for the specified color.
+* [`Color:`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressGradientStop.html#Syncfusion_Maui_ProgressBar_ProgressGradientStop_Color) Represents the color to the specified range.
+* [`Value:`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressGradientStop.html#Syncfusion_Maui_ProgressBar_ProgressGradientStop_Value) Represents the start or end value for the specified color.
 
 The following code sample demonstrates how to map the solid color range in the linear progress bar.
 
@@ -96,7 +96,7 @@ this.Content = linearProgressBar;
 
 ## Thickness
 
-In the linear progress bar, the height of the track, progress, and secondary progress can be customized using the `TrackHeight`, `ProgressHeight`, and `SecondaryProgressHeight` properties, respectively.
+In the linear progress bar, the height of the track, progress, and secondary progress can be customized using the [`TrackHeight`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html#Syncfusion_Maui_ProgressBar_SfLinearProgressBar_TrackHeight), [`ProgressHeight`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html#Syncfusion_Maui_ProgressBar_SfLinearProgressBar_ProgressHeight), and [`SecondaryProgressHeight`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html#Syncfusion_Maui_ProgressBar_SfLinearProgressBar_SecondaryProgressHeight) properties, respectively.
 
 {% tabs %} 
 
@@ -128,7 +128,7 @@ this.Content = linearProgressBar;
 
 ## Corner radius
 
-In the linear progress bar, the corner radius of the track, progress, and secondary progress can be customized using the `TrackCornerRadius`, `ProgressCornerRadius`, and `SecondaryCornerRadius` properties, respectively.
+In the linear progress bar, the corner radius of the track, progress, and secondary progress can be customized using the [`TrackCornerRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html#Syncfusion_Maui_ProgressBar_SfLinearProgressBar_TrackCornerRadius), [`ProgressCornerRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html#Syncfusion_Maui_ProgressBar_SfLinearProgressBar_ProgressCornerRadius), and [`SecondaryProgressCornerRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html#Syncfusion_Maui_ProgressBar_SfLinearProgressBar_SecondaryProgressCornerRadius) properties, respectively.
 
 {% tabs %} 
 
@@ -162,8 +162,8 @@ this.Content = linearProgressBar;
 
 The following properties are used to customize the color in the linear progress bar.
 
-* `ProgressFill:` Represents the color of the progress indicator.
-* `TrackFill:` Represents the color of the track indicator.
+* [`ProgressFill:`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_ProgressFill) Represents the color of the progress indicator.
+* [`TrackFill:`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_TrackFill) Represents the color of the track indicator.
 
 The following code sample demonstrates the color customization in progress and track indicator.
 
@@ -192,7 +192,7 @@ this.Content = linearProgressBar;
 
 ![.NET MAUI Linear ProgressBar with color customization](images/appearance/color.png)
 
-The linear progress bar provides support to customize the color for the secondary progress bar using the `SecondaryProgressFill` property as demonstrated in the following code sample.
+The linear progress bar provides support to customize the color for the secondary progress bar using the [`SecondaryProgressFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html#Syncfusion_Maui_ProgressBar_SfLinearProgressBar_SecondaryProgressFill) property as demonstrated in the following code sample.
 
 {% tabs %} 
 
