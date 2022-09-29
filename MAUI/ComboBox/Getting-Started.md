@@ -20,6 +20,7 @@ Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org
  In the MauiProgram.cs file, register the handler for Syncfusion core.
 
 {% highlight c# hl_lines="6 7 18 19" %}
+
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
 using Microsoft.Maui.Controls.Compatibility;
@@ -50,6 +51,7 @@ namespace ComboBoxSample
 }    
 
 {% endhighlight %} 
+
 
 ## Create a Simple .NET MAUI ComboBox
 
@@ -164,7 +166,7 @@ Now, populate this SocialMediaViewModel data in `ComboBox` control by binding it
        <ContentPage.Content>
             <!--Setting ItemsSource-->
             <editors:SfComboBox x:Name="comboBox" 
-                                Width="250"
+                                WidthRequest="250"
                                 ItemsSource="{Binding SocialMedias}" />
         </ContentPage.Content>
 </ContentPage>
@@ -195,6 +197,7 @@ The `ComboBox` control is populated with a list of social media. But the SocialM
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox" 
+                    WidthRequest="250"
                     DisplayMemberPath = "Name"
                     TextMemberPath = "Name"
                     ItemsSource="{Binding SocialMedias}" />
@@ -210,7 +213,7 @@ comboBox.TextMemberPath = "Name";
 
 The following gif image illustrates the result of the above code:
 
-![.NET MAUI ComboBox populating using data binding](Images/GettingStarted/ComboBoxGettingStarted.gif)
+![.NET MAUI ComboBox populating using data binding](Images/GettingStarted/NonEditableMode.png)
 
 ## Editing
 
@@ -220,7 +223,7 @@ The `ComboBox` control supports editable and non-editable modes to choose items.
 {% highlight XAML %}
 
 <editors:SfComboBox x:Name="comboBox"
-                    Width="250"
+                    WidthRequest="250"
                     IsEditable="true"
                     ItemsSource="{Binding SocialMedias}"
                     DisplayMemberPath="Name"
@@ -238,6 +241,6 @@ comboBox.IsEditable = true;
 
 The following gif image illustrates the result of the above code:
 
-![.NET MAUI ComboBox choose item using editing](Images/GettingStarted/ComboBoxEditableMode.gif)
+![.NET MAUI ComboBox choose item using editing](Images/GettingStarted/EditableMode.png)
 
 You can find the complete getting started sample of .NET MAUI ComboBox from this [link.](https://github.com/SyncfusionExamples/maui-combobox-samples)

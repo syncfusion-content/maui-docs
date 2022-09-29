@@ -2265,7 +2265,6 @@ public MainPage()
    <th>.NET MAUI SfMaps</th>
 </tr>
 <tr>
-<tr>
    <td>
       {{'[ShapeType](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeFileLayer.html#Syncfusion_SfMaps_XForms_ShapeFileLayer_ShapeTypeProperty)'| markdownify }}
    </td>
@@ -2447,7 +2446,6 @@ public MainPage()
    <th>.NET MAUI SfMaps</th>
 </tr>
 <tr>
-<tr>
    <td>
       {{'[ShapeType](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeFileLayer.html#Syncfusion_SfMaps_XForms_ShapeFileLayer_ShapeTypeProperty)'| markdownify }}
    </td>
@@ -2627,7 +2625,6 @@ The following code example explains how to intialize the polyline layer and it's
    <th>.NET MAUI SfMaps</th>
 </tr>
 <tr>
-<tr>
    <td>
       {{'-'| markdownify }}
    </td>
@@ -2759,7 +2756,6 @@ The following code example explains how to intialize the line layer and it's cus
    <th>Xamarin SfMaps</th>
    <th>.NET MAUI SfMaps</th>
 </tr>
-<tr>
 <tr>
    <td>
       {{'-'| markdownify }}
@@ -2903,7 +2899,6 @@ The following code example explains how to intialize the arc layer and it's cust
    <th>Xamarin SfMaps</th>
    <th>.NET MAUI SfMaps</th>
 </tr>
-<tr>
 <tr>
    <td>
        {{'-'| markdownify }}

@@ -26,8 +26,7 @@ When the [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slid
                        Interval="25" 
                        ShowTicks="True"
                        ShowLabels="True"
-                       DragBehavior="OnThumb">
-</sliders:SfRangeSlider>
+                       DragBehavior="OnThumb" />
 
 {% endhighlight %}
 
@@ -64,8 +63,7 @@ When the [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Slid
                        Interval="25" 
                        ShowTicks="True"
                        ShowLabels="True"
-                       DragBehavior="BetweenThumbs">
-</sliders:SfRangeSlider>
+                       DragBehavior="BetweenThumbs" />
 
 {% endhighlight %}
 
@@ -102,8 +100,7 @@ When the  [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sli
                        Interval="25" 
                        ShowTicks="True"
                        ShowLabels="True"
-                       DragBehavior="Both">
-</sliders:SfRangeSlider>
+                       DragBehavior="Both" />
 
 {% endhighlight %}
 

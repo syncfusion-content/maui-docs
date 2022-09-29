@@ -81,8 +81,7 @@ The [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.D
                                      ShowTicks="True" 
                                      IntervalType="Hours" 
                                      Interval="2" 
-                                     DateFormat="h tt"
-                                     ShowTicks="True">
+                                     DateFormat="h tt">
 
         <charts:SfCartesianChart>
             ...
@@ -253,7 +252,7 @@ The inactive side of the DateTime Range Selector is between the [`Minimum`](hhtt
             <sliders:SliderLabelStyle ActiveTextColor="#EE3F3F" 
                                       InactiveTextColor="#F7B1AE" 
                                       ActiveFontAttributes="Italic" 
-                                      InactiveFontAttributes="Italic" 
+                                      InactiveFontAttributes="Bold" 
                                       ActiveFontSize="16" 
                                       InactiveFontSize="16" />
         </sliders:SfDateTimeRangeSelector.LabelStyle>
@@ -282,7 +281,7 @@ rangeSelector.LabelStyle.InactiveTextColor = Color.FromArgb("#F7B1AE");
 rangeSelector.LabelStyle.ActiveFontSize = 16;
 rangeSelector.LabelStyle.InactiveFontSize = 16;
 rangeSelector.LabelStyle.ActiveFontAttributes = FontAttributes.Italic;
-rangeSelector.LabelStyle.InactiveFontAttributes = FontAttributes.Italic;
+rangeSelector.LabelStyle.InactiveFontAttributes = FontAttributes.Bold;
 SfCartesianChart chart = new SfCartesianChart();
 rangeSelector.Content = chart;
 

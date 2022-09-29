@@ -173,7 +173,7 @@ Change the size of the thumb overlay using the [`Radius`](https://help.syncfusio
                                RangeEnd="2016-01-01">
    
    <sliders:SfDateTimeRangeSlider.ThumbOverlayStyle>
-      <sliders:SliderThumbOverlayStyle Radius="30"/>
+      <sliders:SliderThumbOverlayStyle Radius="18"/>
    </sliders:SfDateTimeRangeSlider.ThumbOverlayStyle>
 
 </sliders:SfDateTimeRangeSlider>
@@ -187,7 +187,7 @@ rangeSlider.Minimum = new DateTime(2010, 01, 01);
 rangeSlider.Maximum = new DateTime(2018, 01, 01);
 rangeSlider.RangeStart = new DateTime(2012, 01, 01);
 rangeSlider.RangeEnd = new DateTime(2016, 01, 01);
-rangeSlider.ThumbOverlayStyle.Radius = 30;
+rangeSlider.ThumbOverlayStyle.Radius = 18;
         
 {% endhighlight %}
 
@@ -209,7 +209,7 @@ Change the color of the thumb overlay using the [`Fill`](https://help.syncfusion
                                RangeEnd="2016-01-01">
    
    <sliders:SfDateTimeRangeSlider.ThumbOverlayStyle>
-      <sliders:SliderThumbOverlayStyle Fill="#F7C8DB"/>
+      <sliders:SliderThumbOverlayStyle Fill="#66FFD700"/>
    </sliders:SfDateTimeRangeSlider.ThumbOverlayStyle>
 
 </sliders:SfDateTimeRangeSlider>
@@ -223,7 +223,7 @@ rangeSlider.Minimum = new DateTime(2010, 01, 01);
 rangeSlider.Maximum = new DateTime(2018, 01, 01);
 rangeSlider.RangeStart = new DateTime(2012, 01, 01);
 rangeSlider.RangeEnd = new DateTime(2016, 01, 01);
-rangeSlider.ThumbOverlayStyle.Fill = new SolidColorBrush(Color.FromArgb("#F7C8DB"));
+rangeSlider.ThumbOverlayStyle.Fill = new SolidColorBrush(Color.FromArgb("#66FFD700"));
         
 {% endhighlight %}
 
@@ -350,7 +350,7 @@ visualStateGroupList.Add(commonStateGroup);
 VisualStateManager.SetVisualStateGroups(defaultRangeSlider, visualStateGroupList);
 VisualStateManager.SetVisualStateGroups(disabledRangeSlider, visualStateGroupList);
 
-stackLayout.Children.Add(new Label() { Text = "Default Range Slider", Padding = new Thickness(0, 10) });
+stackLayout.Children.Add(new Label() { Text = "Enabled Range Slider", Padding = new Thickness(0, 10) });
 stackLayout.Children.Add(defaultRangeSlider);
 stackLayout.Children.Add(new Label() { Text = "Disabled Range Slider", Padding = new Thickness(0, 10) });
 stackLayout.Children.Add(disabledRangeSlider);

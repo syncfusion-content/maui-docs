@@ -154,7 +154,7 @@ Change the thumb stroke color while two thumbs are overlapping in the Range Sele
     <sliders:SfRangeSelector>
         
         <sliders:SfRangeSelector.ThumbStyle>
-            <sliders:SliderThumbStyle OverlapStroke="#EE3F3F" />
+            <sliders:SliderThumbStyle OverlapStroke="#FFD700" />
         </sliders:SfRangeSelector.ThumbStyle>
         
         <charts:SfCartesianChart>
@@ -169,7 +169,7 @@ Change the thumb stroke color while two thumbs are overlapping in the Range Sele
 {% highlight C# %}
 
 SfRangeSelector rangeSelector = new SfRangeSelector();
-rangeSelector.ThumbStyle.OverlapStroke = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+rangeSelector.ThumbStyle.OverlapStroke = new SolidColorBrush(Color.FromArgb("#FFD700"));
 SfCartesianChart chart = new SfCartesianChart();
 rangeSelector.Content = chart;
         
@@ -195,7 +195,7 @@ Change the size of the thumb overlay in the Range Selector using the [`Radius`](
     <sliders:SfRangeSelector>
         
         <sliders:SfRangeSelector.ThumbOverlayStyle>
-            <sliders:SliderThumbOverlayStyle Radius="30" />
+            <sliders:SliderThumbOverlayStyle Radius="18" />
         </sliders:SfRangeSelector.ThumbOverlayStyle>
         
         <charts:SfCartesianChart>
@@ -210,7 +210,7 @@ Change the size of the thumb overlay in the Range Selector using the [`Radius`](
 {% highlight C# %}
 
 SfRangeSelector rangeSelector = new SfRangeSelector();
-rangeSelector.ThumbOverlayStyle.Radius = 30;
+rangeSelector.ThumbOverlayStyle.Radius = 18;
 SfCartesianChart chart = new SfCartesianChart();
 rangeSelector.Content = chart;
         
@@ -236,7 +236,7 @@ Change the color of the thumb overlay in the Range Selector using the [`Fill`](h
     <sliders:SfRangeSelector>
         
         <sliders:SfRangeSelector.ThumbOverlayStyle>
-            <sliders:SliderThumbOverlayStyle Fill="#F7C8DB" />
+            <sliders:SliderThumbOverlayStyle Fill="#66FFD700" />
         </sliders:SfRangeSelector.ThumbOverlayStyle>
         
         <charts:SfCartesianChart>
@@ -251,7 +251,7 @@ Change the color of the thumb overlay in the Range Selector using the [`Fill`](h
 {% highlight C# %}
 
 SfRangeSelector rangeSelector = new SfRangeSelector();
-rangeSelector.ThumbOverlayStyle.Fill = new SolidColorBrush(Color.FromArgb("#F7C8DB"));
+rangeSelector.ThumbOverlayStyle.Fill = new SolidColorBrush(Color.FromArgb("#66FFD700"));
 SfCartesianChart chart = new SfCartesianChart();
 rangeSelector.Content = chart;
         
