@@ -7,7 +7,7 @@ control: SfCartesianChart
 documentation: ug
 ---
 
-# Selection in .NET MAUI SfCartesianChart
+# Selection in .NET MAUI Chart
 
 [SfCartesianChart]() provides selection behavior support, which allows you to select or highlight a segment (data points) or a series in the chart using the [DataPointSelectionBehavior]() and [SeriesSelectionBehavior]().
 
