@@ -124,7 +124,7 @@ Change the size of the thumb overlay using the [`Radius`](https://help.syncfusio
                           Maximum="2018-01-01" 
                           Value="2014-01-01">
    <sliders:SfDateTimeSlider.ThumbOverlayStyle>
-      <sliders:SliderThumbOverlayStyle Radius="26"/>
+      <sliders:SliderThumbOverlayStyle Radius="18"/>
    </sliders:SfDateTimeSlider.ThumbOverlayStyle>
 </sliders:SfDateTimeSlider>
 
@@ -136,7 +136,7 @@ SfDateTimeSlider slider = new SfDateTimeSlider();
 slider.Minimum = new DateTime(2010, 01, 01);
 slider.Maximum = new DateTime(2018, 01, 01);
 slider.Value = new DateTime(2014, 01, 01);
-slider.ThumbOverlayStyle.Radius = 26;
+slider.ThumbOverlayStyle.Radius = 18;
 
 {% endhighlight %}
 
@@ -156,7 +156,7 @@ Change the color of the thumb overlay using the [`Fill`](https://help.syncfusion
                           Maximum="2018-01-01" 
                           Value="2014-01-01">
    <sliders:SfDateTimeSlider.ThumbOverlayStyle>
-       <sliders:SliderThumbOverlayStyle Fill="#F7C8DB"/>
+       <sliders:SliderThumbOverlayStyle Fill="#66FFD700"/>
    </sliders:SfDateTimeSlider.ThumbOverlayStyle>
 </sliders:SfDateTimeSlider>
 
@@ -168,7 +168,7 @@ SfDateTimeSlider slider = new SfDateTimeSlider();
 slider.Minimum = new DateTime(2010, 01, 01);
 slider.Maximum = new DateTime(2018, 01, 01);
 slider.Value = new DateTime(2014, 01, 01);
-slider.ThumbOverlayStyle.Fill = new SolidColorBrush(Color.FromArgb("#F7C8DB")); 
+slider.ThumbOverlayStyle.Fill = new SolidColorBrush(Color.FromArgb("#66FFD700")); 
 
 {% endhighlight %}
 

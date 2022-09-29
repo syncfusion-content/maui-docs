@@ -49,7 +49,7 @@ namespace AutocompleteSample
     }
 }   
 
-{% endhighlight %}  
+{% endhighlight %} 
 
 ## Create a Simple .NET MAUI Autocomplete
 
@@ -164,7 +164,7 @@ Now, populate this 'SocialMediaViewModel' data in the `Autocomplete` control by 
        <ContentPage.Content>
             <!--Setting ItemsSource-->
             <editors:SfAutocomplete x:Name="autocomplete" 
-                                    Width="250"
+                                    WidthRequest="250"
                                     ItemsSource="{Binding SocialMedias}" />
         </ContentPage.Content>
 </ContentPage>
@@ -193,7 +193,8 @@ The `Autocomplete` control is populated with the list of social media. However, 
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfAutocomplete x:Name="autocomplete" 
+<editors:SfAutocomplete x:Name="autocomplete"
+                        WidthRequest="250" 
                         DisplayMemberPath = "Name"
                         TextMemberPath = "Name"
                         ItemsSource="{Binding SocialMedias}" />
@@ -215,6 +216,7 @@ The `Autocomplete` allows the user to select an item from the drop-down list by 
 {% highlight xaml %}
 
 <editors:SfAutocomplete x:Name="autocomplete"
+                        WidthRequest="250"
                         DisplayMemberPath = "Name"
                         TextMemberPath = "Name"
                         ItemsSource="{Binding SocialMedias}" />
@@ -230,7 +232,7 @@ autocomplete.TextMemberPath = "Name";
 
 The following gif image illustrates the result of the above code:
 
-![.NET MAUI Autocomplete with single selection mode](Images/GettingStarted/AutocompleteGettingStarted.gif)
+![.NET MAUI Autocomplete with single selection mode](Images/GettingStarted/SingleSelection.png)
 
 You can find the complete getting started sample of .NET MAUI Autocomplete from this [link.](https://github.com/SyncfusionExamples/maui-autocomplete-samples)
 
