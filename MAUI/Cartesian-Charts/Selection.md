@@ -39,7 +39,7 @@ To enable the data point selection, create an instance for the series [Selection
 SfCartesianChart chart = new SfCartesianChart();
 . . .
 DataPointSelectionBehavior selection = new DataPointSelectionBehavior();
-selection.SelectionBrush="#314A6E";
+selection.SelectionBrush=Color.FromArgb("#314A6E");
 
 ColumnSeries series = new ColumnSeries()
 {
@@ -89,7 +89,7 @@ To enable the series selection, create an instance for the cartesian chart [Sele
 SfCartesianChart chart = new SfCartesianChart();
 . . .
 SeriesSelectionBehavior selection = new SeriesSelectionBehavior();
-selection.SelectionBrush="#314A6E";
+selection.SelectionBrush=Color.FromArgb("#314A6E");
 chart.SelectionBehavior = selection;
 
 ColumnSeries series1 = new ColumnSeries()
