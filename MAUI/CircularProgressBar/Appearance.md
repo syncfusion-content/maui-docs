@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Appearance in .NET MAUI SfCircularProgressBar control | Syncfusion
-description: Learn here all about appearance support in Syncfusion .NET MAUI SfCircularProgressBar control, its elements and more.
+title: Appearance in .NET MAUI Circular ProgressBar control | Syncfusion
+description: Learn here all about appearance support in Syncfusion .NET MAUI Circular ProgressBar control, its elements and more.
 platform: MAUI
 control: SfCircularProgressBar
 documentation: ug
 ---
 
-# Appearance in .NET MAUI SfCircularProgressBar (Circular Progress Bar)
+# Appearance in .NET MAUI Circular ProgressBar (SfCircularProgressBar)
 
 ## Angle
 
@@ -37,7 +37,7 @@ this.Content = circularProgressBar;
 
 {% endtabs %} 
 
-![.NET MAUI Circular Progress Bar with angle customization](images/appearance/angle.png)
+![.NET MAUI Circular ProgressBar with angle customization](images/appearance/angle.png)
 
 ## Range colors
 
@@ -89,7 +89,7 @@ this.Content = circularProgressBar;
 
 {% endtabs %} 
 
-![.NET MAUI SfCircularProgressBar with range colors](images/appearance/range-colors.png)
+![.NET MAUI Circular ProgressBar with range colors](images/appearance/range-colors.png)
 
 The following code sample demonstrates how to apply gradient transition effect to the range colors in the circular progress bar.
 
@@ -99,10 +99,10 @@ The following code sample demonstrates how to apply gradient transition effect t
 
 <progressBar:SfCircularProgressBar Progress="100">
     <progressBar:SfCircularProgressBar.GradientStops>
-        <progressBar:ProgressGradientStop Color="#88A0D9EF" Value="0"/>
-        <progressBar:ProgressGradientStop Color="#AA62C1E5" Value="25"/>
-        <progressBar:ProgressGradientStop Color="#DD20A7DB" Value="50"/>
-        <progressBar:ProgressGradientStop Color="#FF1C96C5" Value="75"/>
+        <progressBar:ProgressGradientStop Color="#00bdaf" Value="0"/>
+        <progressBar:ProgressGradientStop Color="#2f7ecc" Value="25"/>
+        <progressBar:ProgressGradientStop Color="#e9648e" Value="50"/>
+        <progressBar:ProgressGradientStop Color="#fbb78a" Value="75"/>
     </progressBar:SfCircularProgressBar.GradientStops>
 </progressBar:SfCircularProgressBar>
 
@@ -112,17 +112,17 @@ The following code sample demonstrates how to apply gradient transition effect t
 
 SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 circularProgressBar.Progress = 100;
-circularProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("88A0D9EF"), Value = 0 });
-circularProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("AA62C1E5"), Value = 25 });
-circularProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("DD20A7DB"), Value = 50 });
-circularProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("FF1C96C5"), Value = 75 });
+circularProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("00bdaf"), Value = 0 });
+circularProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("2f7ecc"), Value = 25 });
+circularProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("e9648e"), Value = 50 });
+circularProgressBar.GradientStops.Add(new ProgressGradientStop { Color = Color.FromArgb("fbb78a"), Value = 75 });
 this.Content = circularProgressBar;
 
 {% endhighlight %}
 
 {% endtabs %} 
 
-![.NET MAUI SfCircularProgressBar with gradient range](images/appearance/gradient.png)
+![.NET MAUI Circular ProgressBar with gradient range](images/appearance/gradient.png)
 
 ## Thickness
 
@@ -166,7 +166,7 @@ this.Content = circularProgressBar;
 
 {% endtabs %} 
 
-![.NET MAUI Circular Progress Bar with appearance customization](images/appearance/circular-thickness.png)
+![.NET MAUI Circular ProgressBar with appearance customization](images/appearance/circular-thickness.png)
 
 ## Corner style customization
 
@@ -200,7 +200,7 @@ this.Content = circularProgressBar;
 
 {% endtabs %} 
 
-![.NET MAUI Circular Progress Bar with corner style customization](images/appearance/corner-style.png)
+![.NET MAUI Circular ProgressBar with corner style customization](images/appearance/corner-style.png)
 
 ## Color customization
 
@@ -233,6 +233,6 @@ this.Content = circularProgressBar;
 
 {% endtabs %} 
 
-![.NET MAUI circular Progress Bar with color customization](images/appearance/color.png)
+![.NET MAUI Circular ProgressBar with color customization](images/appearance/color.png)
 
-N> Refer to our `.NET MAUI SfCircularProgressBar` feature tour page for its groundbreaking feature representations. Also explore our [.NET MAUI SfCircularProgressBar example](https://github.com/syncfusion/maui-demos/) that shows how to configure a SfCircularProgressBar in .NET MAUI.
+N> Refer to our `.NET MAUI Circular ProgressBar` feature tour page for its groundbreaking feature representations. Also explore our [.NET MAUI Circular ProgressBar example](https://github.com/syncfusion/maui-demos/) that shows how to configure a SfCircularProgressBar in .NET MAUI.

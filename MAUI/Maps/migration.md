@@ -1094,7 +1094,7 @@ public MainPage()
       {{'[MapLegendSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.MapLegendSetting.html)'| markdownify }}
    </td>
    <td>
-      {{'IconSize'| markdownify }}
+      {{'[IconSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html#Syncfusion_Maui_Maps_MapLegend_IconSize)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -1103,7 +1103,7 @@ public MainPage()
       {{'[MapLegendSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.MapLegendSetting.html)'| markdownify }}
    </td>
    <td>
-      {{'IconType'| markdownify }}
+      {{'[IconType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html#Syncfusion_Maui_Maps_MapLegend_IconType)'| markdownify }}
    </td>
 </tr>
 </table>
@@ -1265,7 +1265,7 @@ public MainPage()
       {{'[TooltipSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.TooltipSetting.html)'| markdownify }}
    </td>
    <td>
-      {{'MapTooltipSettings'| markdownify }}
+      {{'[MapTooltipSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTooltipSettings.html?tabs=tabid-1)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -1274,7 +1274,7 @@ public MainPage()
       {{'[TooltipSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.TooltipSetting.html)'| markdownify }}
    </td>
    <td>
-      Divided into {{'ShowShapeTooltip'| markdownify }}, {{'ShowBubbleTooltip'| markdownify }} and {{'ShowMarkerTooltip'| markdownify }}
+      Divided into {{'[ShowShapeTooltip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShowShapeTooltip)'| markdownify }}, {{'[ShowBubbleTooltip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShowBubbleTooltip)'| markdownify }} and {{'[ShowMarkerTooltip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_ShowMarkerTooltip)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -1284,7 +1284,7 @@ public MainPage()
 
    </td>
    <td>
-      {{'ShapeTooltipSettings'| markdownify }}
+      {{'[ShapeTooltipSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeTooltipSettings)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -1294,7 +1294,7 @@ public MainPage()
 
    </td>
    <td>
-      {{'BubbleTooltipSettings'| markdownify }}
+      {{'[BubbleTooltipSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_BubbleTooltipSettings)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -1304,7 +1304,7 @@ public MainPage()
 
    </td>
    <td>
-      {{'MarkerTooltipSettings'| markdownify }}
+      {{'[MarkerTooltipSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_MarkerTooltipSettings)'| markdownify }}
    </td>
 </tr>
 </table>
@@ -1321,7 +1321,7 @@ public MainPage()
       {{'[BackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.TooltipSetting.html#Syncfusion_SfMaps_XForms_TooltipSetting_BackgroundColor)'| markdownify }}
    </td>
    <td>
-      {{'Background'| markdownify }}
+      {{'[Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTooltipSettings.html#Syncfusion_Maui_Maps_MapTooltipSettings_Background)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -1329,7 +1329,7 @@ public MainPage()
       {{'[Margin](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.TooltipSetting.html#Syncfusion_SfMaps_XForms_TooltipSetting_Margin)'| markdownify }}
    </td>
    <td>
-      {{'Padding'| markdownify }}
+      {{'[Padding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTooltipSettings.html#Syncfusion_Maui_Maps_MapTooltipSettings_Padding)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -1341,10 +1341,10 @@ public MainPage()
 
    </td>
    <td>
-      {{'TextStyle'| markdownify }}
+      {{'[TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTooltipSettings.html#Syncfusion_Maui_Maps_MapTooltipSettings_TextStyle)'| markdownify }}
    </td>
 </tr>
-<table>
+</table>
 
 The following code example explains how to customize tooltip in the Xamarin SfMaps and .Net MAUI SfMaps.
 
