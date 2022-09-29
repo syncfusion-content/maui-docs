@@ -208,7 +208,7 @@ rangeSelector.Maximum = 10;
 rangeSelector.RangeStart = 2;
 rangeSelector.RangeEnd = 8;
 rangeSelector.Interval = 2;
-rangeSelector.ShowLabel = true;
+rangeSelector.ShowLabels = true;
 SfCartesianChart chart = new SfCartesianChart();
 rangeSelector.Content = chart;
 

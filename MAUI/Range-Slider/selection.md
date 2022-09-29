@@ -115,7 +115,7 @@ rangeSlider.Maximum = 10;
 rangeSlider.RangeStart = 2; 
 rangeSlider.RangeEnd = 8;
 rangeSlider.Interval = 2;        
-rangeSlider.ShowLables = true;
+rangeSlider.ShowLabels = true;
 rangeSlider.ShowTicks = true;    
 rangeSlider.EnableIntervalSelection = true;
          
@@ -199,7 +199,7 @@ rangeSlider.DragBehavior = SliderDragBehavior.BetweenThumbs;
 
 {% endtabs %}
 
-![DragBehavior Betweenthumb](images/selection/betweenthumb.gif)
+![DragBehavior BetweenThumbs](images/selection/betweenthumb.gif)
 
 ### Both
 

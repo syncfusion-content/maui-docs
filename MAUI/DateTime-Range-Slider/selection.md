@@ -117,7 +117,7 @@ rangeSlider.Maximum = new DateTime(2018, 01, 01);
 rangeSlider.RangeStart = new DateTime(2012, 01, 01);
 rangeSlider.RangeEnd = new DateTime(2016, 01, 01);
 rangeSlider.Interval = 2;        
-rangeSlider.ShowLables = true;
+rangeSlider.ShowLabels = true;
 rangeSlider.ShowTicks = true;    
 rangeSlider.EnableIntervalSelection = true;
          
@@ -203,7 +203,7 @@ rangeSlider.DragBehavior = SliderDragBehavior.BetweenThumbs;
 
 {% endtabs %}
 
-![DragBehavior Betweenthumb](images/selection/betweenthumb.gif)
+![DragBehavior BetweenThumbs](images/selection/betweenthumb.gif)
 
 ### Both
 

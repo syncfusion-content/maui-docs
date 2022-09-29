@@ -28,12 +28,8 @@ The inactive side of the Range Selector is between the [`Minimum`](https://help.
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
 
-    <sliders:SfRangeSelector Minimum="2000-01-01"
-                                     Maximum="2005-01-01"
-                                     RangeStart="2001-01-01"
-                                     RangeEnd="2004-01-01"
-                                     ActiveRegionFill="#40FFFF00"
-                                     InactiveRegionFill="#33FF8A00">
+    <sliders:SfRangeSelector ActiveRegionFill="#40FFFF00"
+                             InactiveRegionFill="#33FF8A00">
 
         <charts:SfCartesianChart>
             ...
@@ -75,14 +71,10 @@ The inactive side of the  Range Selector is between the [`Minimum`](https://help
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
 
-    <sliders:SfRangeSelector Minimum="2000-01-01"
-                                     Maximum="2005-01-01"
-                                     RangeStart="2001-01-01"
-                                     RangeEnd="2004-01-01"
-                                     ActiveRegionFill="#40FFFF00"
-                                     InactiveRegionFill="#33FF8A00"
-                                     ActiveRegionStroke="#FFFF00"
-                                     InactiveRegionStroke="#B8860B">
+    <sliders:SfRangeSelector ActiveRegionFill="#40FFFF00"
+                             InactiveRegionFill="#33FF8A00"
+                             ActiveRegionStroke="#FFFF00"
+                             InactiveRegionStroke="#B8860B">
 
         <charts:SfCartesianChart>
             ...
@@ -126,16 +118,12 @@ The inactive side of the  Range Selector is between the [`Minimum`](https://help
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
 
-    <sliders:SfRangeSelector Minimum="2000-01-01"
-                                     Maximum="2005-01-01"
-                                     RangeStart="2001-01-01"
-                                     RangeEnd="2004-01-01"
-                                     ActiveRegionFill="#40FFFF00"
-                                     InactiveRegionFill="#33FF8A00"
-                                     ActiveRegionStroke="#A52A2A"
-                                     InactiveRegionStroke="#A52A2A"
-                                     ActiveRegionStrokeThickness="3,0,3,0"
-                                     InactiveRegionStrokeThickness="0,3,0,3">
+    <sliders:SfRangeSelector ActiveRegionFill="#40FFFF00"
+                             InactiveRegionFill="#33FF8A00"
+                             ActiveRegionStroke="#A52A2A"
+                             InactiveRegionStroke="#A52A2A"
+                             ActiveRegionStrokeThickness="3,0,3,0"
+                             InactiveRegionStrokeThickness="0,3,0,3">
 
         <charts:SfCartesianChart>
             ...

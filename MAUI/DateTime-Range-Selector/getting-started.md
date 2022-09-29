@@ -155,27 +155,33 @@ The [`Content`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRa
 
 {% highlight C# %}
 
-SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
-rangeSelector.Minimum = new DateTime(2010, 01, 01);
-rangeSelector.Maximum = new DateTime(2018, 01, 01);
-rangeSelector.RangeStart = new DateTime(2012, 01, 01);
-rangeSelector.RangeEnd = new DateTime(2016, 01, 01);
 SfCartesianChart chart = new SfCartesianChart();
 DateTimeAxis primaryAxis = new DateTimeAxis();
-chart.XAxes = primaryAxis;
+chart.XAxes.Add(primaryAxis);
 NumericalAxis secondaryAxis = new NumericalAxis();
-chart.YAxes = secondaryAxis;
-SplineAreaSeries series = new SplineAreaSeries();
-series.ItemsSource = (new ViewModel()).Source;
-series.XBindingPath = "X";
-series.YBindingPath = "Y";
-rangeSelector.Content = chart;
+chart.YAxes.Add(secondaryAxis);
+SplineAreaSeries series = new SplineAreaSeries()
+{
+    ItemsSource = new ViewModel().Source,
+    XBindingPath = "X",
+    YBindingPath = "Y",
+};
+chart.Series.Add(series);
+SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector()
+{
+    Minimum = new DateTime(2010, 01, 01),
+    Maximum = new DateTime(2018, 01, 01),
+    RangeStart = new DateTime(2012, 01, 01),
+    RangeEnd = new DateTime(2016, 01, 01),
+    Content = chart,
+};
+this.Content = rangeSelector;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![RangeSelector labels](images/getting-started/default-range-selector.png)
+![RangeSelector content](images/getting-started/default-range-selector.png)
 
 
 ## Enable labels
