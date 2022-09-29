@@ -9,11 +9,11 @@ documentation: ug
 
 # Selection in .NET MAUI SfCartesianChart
 
-[SfCartesianChart]() provides selection behavior support, which allows you to select or highlight a segment in a series or a series in the Chart using the [DataPointSelectionBehavior]() or [SeriesSelectionBehavior]().
+[SfCartesianChart]() provides selection behavior support, which allows you to select or highlight a segment (data points) or a series in the chart using the [DataPointSelectionBehavior]() and [SeriesSelectionBehavior]().
 
-## Enable DataPointSelection
+## Enable data point selection
 
-To enable the data point selection in the [SfCartesianChart](), create an instance of [DataPointSelectionBehavior]() and specify a color value for the [SelectionBrush]() property to highlight the selected segment in the series. The selection instance should then be set to the chart series [SelectionBehavior]() property.
+To enable the data point selection, create an instance for the series [SelectionBehavior]()] property. And the following code example shows how to configure and specify the brush for the highlighted segment using [DataPointSelectionBehavior]()].
 
 {% tabs %}
 
@@ -26,7 +26,7 @@ To enable the data point selection in the [SfCartesianChart](), create an instan
                         XBindingPath="Time"
                         YBindingPath="FootStepsCount">
                 <chart:ColumnSeries.SelectionBehavior>
-                        <chart:DataPointSelectionBehavior/>
+                        <chart:DataPointSelectionBehavior SelectionBrush="#314A6E"/>
                 </chart:ColumnSeries.SelectionBehavior>
         </chart:ColumnSeries>
     </chart:SfCartesianChart.Series>
@@ -39,6 +39,7 @@ To enable the data point selection in the [SfCartesianChart](), create an instan
 SfCartesianChart chart = new SfCartesianChart();
 . . .
 DataPointSelectionBehavior selection = new DataPointSelectionBehavior();
+selection.SelectionBrush="#314A6E";
 
 ColumnSeries series = new ColumnSeries()
 {
@@ -55,9 +56,9 @@ chart.Series.Add(series);
 
 ![Segment selection support in MAUI SfCartesianChart](Selection_images/maui_cartesianchart_segment_selection.PNG)
 
-## Enable SeriesSelection
+## Enable series selection
 
-To enable the series selection in the [SfCartesianChart](), create an instance of [SeriesSelectionBehavior]() and specify a color value for the [SelectionBrush]() property to highlight the entire selected series. The selection instance should then be set to the SfCartesianChart [SelectionBehavior]() property.
+To enable the series selection, create an instance for the cartesian chart [SelectionBehavior]() property. And the following code example shows how to configure and specify the brush for the highlighted series using [SeriesSelectionBehavior]().
 
 {% tabs %}
 
@@ -66,7 +67,7 @@ To enable the series selection in the [SfCartesianChart](), create an instance o
 <chart:SfCartesianChart>
 . . .
     <chart:SfCartesianChart.SelectionBehavior>
-        <chart:SeriesSelectionBehavior/>
+        <chart:SeriesSelectionBehavior SelectionBrush="#314A6E"/>
     </chart:SfCartesianChart.SelectionBehavior>
     <chart:SfCartesianChart.Series>
         <chart:ColumnSeries ItemsSource="{Binding Data}" 
@@ -88,6 +89,7 @@ To enable the series selection in the [SfCartesianChart](), create an instance o
 SfCartesianChart chart = new SfCartesianChart();
 . . .
 SeriesSelectionBehavior selection = new SeriesSelectionBehavior();
+selection.SelectionBrush="#314A6E";
 chart.SelectionBehavior = selection;
 
 ColumnSeries series1 = new ColumnSeries()
@@ -111,102 +113,67 @@ chart.Series.Add(series3);
 
 ![Series Selection support in MAUI SfCartesianChart](Selection_images/maui_cartesianchart_series_selection.PNG)
 
-## Properties
+## Behavior customization 
 
-The following properties are common for both Selection Behaviors in [SfCartesianChart]() and [ChartSeries](), and the Selection feature can be configured using the following properties:
+The following properties are used to customize the [ChartSelectionBehavior]():
 
-* [Type]() - Gets or sets the ChartSelectionType Enum value for the Selection Behavior.     
-The following ChartSelectionType can be achieved during Selection:
-    * Single
-    * SingleDeselect
-    * Multiple
-    * None
-* [SelectionBrush]() - Gets or sets the SelectionBrush color value for the Selection Behavior.
-* [SelectedIndex]() - Gets or sets the index value of the segment or series that should be selected during the Selection.
-* [SelectedIndexes]() - Gets or sets the list of indexes of the segments or series that should be selected during the Selection.
+* [Type]() - Gets or sets the [ChartSelectionType]() for the selection behavior.     
+Chart selection types:
+    * Single - The user can select only one item at a time
+    * SingleDeselect - The user can select and deselect only one item at a time.
+    * Multiple - The user can select and deselect multiple items at a time.
+    * None - The user can't select any item.
+* [SelectionBrush]() - Gets or sets the SelectionBrush color for the selection behavior.
+* [SelectedIndex]() - Gets or sets the index value of the segment or series.
+* [SelectedIndexes]() - Gets or sets the list of indexes of the segments or series.
 
-## Enable MultiSelection
+## Clear selection
 
-In [SfCartesianChart](), we can perform Multiple Selection for both DataPointSelection and SeriesSelection by selecting more than one segment in a series or more than one series in the chart by setting [SelectionBrush]() color and ChartSelectionType as Multiple, else by setting the [SelectedIndexes]() value from the ViewModel and set ChartSelectionType as Multiple to either [DataPointSelectionBehavior]() or [SeriesSelectionBehavior]() for load time selection changes.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<chart:SfCartesianChart>
-. . .
-    <chart:SfCartesianChart.BindingContext>
-        <model:ViewModel/>
-    </chart:SfCartesianChart.BindingContext>
-    <chart:SfCartesianChart.SelectionBehavior>
-        <chart:SeriesSelectionBehavior SelectionBrush="Green" Type = Multiple SelectedIndexes = "{Binding Indexes}" />
-    </chart:SfCartesianChart.SelectionBehavior>
-. . .
-</chart:SfCartesianChart>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-SfCartesianChart chart = new SfCartesianChart();
-. . .
-ViewModel model = new ViewModel();
-chart.BindingContext = model;
-
-SeriesSelectionBehavior selection = new SeriesSelectionBehavior();
-selection.SelectionBrush = Brush.Green;
-selection.SelectedIndexes = model.Indexes;
-selection.Type = ChartSelectionType.Multiple;
-chart.SelectionBehavior = selection;
-. . .
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Multiple SeriesSelection support in MAUI SfCartesianChart](Selection_images/maui_multi_seriesselection.PNG)
-![Multiple DataPointSelection support in MAUI SfCartesianChart](Selection_images/maui_multi_dataPoint_selection.png)
-
-N> The Multiple Selection in [DataPointSelectionBehavior]() can also be performed by using the ChartSeries SelectionBehavior property.
-
-## ClearSelection Method
-
-Both the SelectionBehavior has a public method called [ClearSelection ()](), which resets all current Selection Behavior property values to their default values and resets the color of the selected element to default.
+Resets all the selection customization to default. The following code example shows how to use [ClearSelection]():
 
 {% tabs %}
 
 {% highlight c# %}
 
-SfCartesianChart chart = new SfCartesianChart();
+Button button = new Button
+{
+    Text = "Click to Rotate Text!",
+    VerticalOptions = LayoutOptions.Center,
+    HorizontalOptions = LayoutOptions.Center
+};
+button.Clicked += Button_Clicked(sender, args);
 
+SfCartesianChart chart = new SfCartesianChart();
 DataPointSelectionBehavior selection = new DataPointSelectionBehavior();
 
 ColumnSeries series = new ColumnSeries();
 series.SelectionBehavior = selection;
 chart.Series.Add(series);
 
-selection.ClearSelection();
+private void Button_Clicked(object sender, EventArgs e)
+{
+    selection.ClearSelection();
+}
 
 {% endhighlight %}
 
 {% endtabs %}
 
-N> The [ClearSelection ()]() method can also be performed in [SeriesSelectionBehavior]() by using the SfCartesianChart SelectionBehavior property. 
-
 ## Events
 
-The following public Chart Selection Events are available in [ChartSelectionBehavior]() and are common for both [DataPointSelectionBehavior]() and [SeriesSelectionBehavior]().
+The following selection events are available in the [ChartSelectionBehavior]().
 
 ### SelectionChanging
 
-The [SelectionChanging]() event is triggered before any data point has been selected. This event is cancelable because it inherits CancelEventArgs, which has a public property [Cancel]() that holds a Boolean value indicating whether to continue the selection or not. The following properties are contained in the event arguments:
+The [SelectionChanging]() event occurs before the data point is being selected. This is a cancelable event. The following properties are contained in the event arguments:
 
-* [NewIndexes]() - Gets or sets the index of the selected data point before selection changes occurs.
-* [OldIndexes]() - Gets or sets the index of the deselected data point before selection changes occurs.
+* [NewIndexes]() - Gets the index of the selected data point.
+* [OldIndexes]() - Gets the index of the deselected data point.
+* [Cancel]() - Gets or sets a value indicating whether to continue the selection.
 
 ### SelectionChanged
 
-The [SelectionChanged]() event is triggered after a data point has been selected. The following properties are contained in the event arguments:
+The [SelectionChanged]() event occurs after a data point has been selected. The following properties are contained in the event arguments:
 
-* [NewIndexes]() - Gets or sets the index of the selected data point after selection changes occurs.
-* [OldIndexes]() - Gets or sets the index of the deselected data point after selection changes occurs.
+* [NewIndexes]() - Gets the index of the selected data point.
+* [OldIndexes]() - Gets the index of the deselected data point.
