@@ -184,5 +184,5 @@ SfCircularProgressBar sfCircularProgressBar = new SfCircularProgressBar
 ![.NET MAUI circular progress bar with customized colors](images/getting-started/style.png)
 
 N> 
-* Get the complete getting started sample from `GitHub` link.
+* Get the complete getting started sample from [`GitHub`](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-Circular-ProgressBar-control.-) link.
 * Refer to our `.NET MAUI circular progress bar` feature tour page for its groundbreaking feature representations.
