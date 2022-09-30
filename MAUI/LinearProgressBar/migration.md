@@ -110,15 +110,15 @@ SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 <td>Gets or sets the maximum possible value of the progress bar. The progress bar ends at this value.</td></tr>
 <tr>
 <td>{{'[ProgressColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_ProgressColor)'| markdownify }}</td>
-<td>{{'[ProgressFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_ProgressFill)'| markdownify }}</td>
+<td>{{'[*ProgressFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_ProgressFill)'| markdownify }}</td>
 <td>Gets or sets the brush that paints the interior area of the progress.</td></tr>
 <tr>
 <td>{{'[SecondaryProgressColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfLinearProgressBar.html#Syncfusion_XForms_ProgressBar_SfLinearProgressBar_SecondaryProgressColor)'| markdownify }}</td>
-<td>{{'[SecondaryProgressFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html#Syncfusion_Maui_ProgressBar_SfLinearProgressBar_SecondaryProgressFill)'| markdownify }}</td>
+<td>{{'[*SecondaryProgressFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html#Syncfusion_Maui_ProgressBar_SfLinearProgressBar_SecondaryProgressFill)'| markdownify }}</td>
 <td>Gets or sets the brush that paints the interior area of the secondary progress.</td></tr>
 <tr>
 <td>{{'[TrackColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_TrackColor)'| markdownify }}</td>
-<td>{{'[TrackFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_TrackFill)'| markdownify }}</td>
+<td>{{'[*TrackFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_TrackFill)'| markdownify }}</td>
 <td>Gets or sets the brush that paints the interior area of the track.</td></tr>
 <tr>
 <td>{{'[SegmentCount](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_SegmentCount)'| markdownify }}</td>
@@ -126,11 +126,11 @@ SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 <td>Gets or sets the value that determine the segments count of progress bar.</td></tr>
 <tr>
 <td>{{'[GapWidth](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_GapWidth)'| markdownify }}</td>
-<td>{{'[SegmentGapWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_SegmentGapWidth)'| markdownify }}</td>
+<td>{{'[*SegmentGapWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_SegmentGapWidth)'| markdownify }}</td>
 <td>Gets or sets the value that determines the gap between the segments.</td></tr>
 <tr>
 <td>{{'[RangeColors](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_RangeColors)'| markdownify }}</td>
-<td>{{'[GradientStops](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_GradientStops)'| markdownify }}</td>
+<td>{{'[*GradientStops](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_GradientStops)'| markdownify }}</td>
 <td>Gets or sets a collection of ProgressGradientStop to fill the gradient brush to the progress.</td></tr>
 <tr>
 <td>{{'[AnimationDuration](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_AnimationDuration)'| markdownify }}</td>
@@ -146,27 +146,27 @@ SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 <td>Gets or sets a value that specifies the indeterminate animation duration in milliseconds.</td></tr>
 <tr>
 <td>{{'[EasingEffect](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_EasingEffect)'| markdownify }}</td>
-<td>{{'[AnimationEasing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_AnimationEasing)'| markdownify }}</td>
+<td>{{'[*AnimationEasing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_AnimationEasing)'| markdownify }}</td>
 <td>Gets or sets a value that specifies the easing effect for progress animation.</td></tr>
 <tr>
 <td>{{'[IndeterminateEasingEffect](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_IndeterminateEasingEffect)'| markdownify }}</td>
-<td>{{'[IndeterminateAnimationEasing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_IndeterminateAnimationEasing)'| markdownify }}</td>
+<td>{{'[*IndeterminateAnimationEasing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_IndeterminateAnimationEasing)'| markdownify }}</td>
 <td>Gets or sets a value that specifies the easing effect for indeterminate animation.</td></tr>
 <tr>
 <td>{{'[IndeterminateIndicatorWidth](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_IndeterminateIndicatorWidth)'| markdownify }}</td>
-<td>{{'[IndeterminateIndicatorWidthFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_IndeterminateIndicatorWidthFactor)'| markdownify }}</td>
+<td>{{'[*IndeterminateIndicatorWidthFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_IndeterminateIndicatorWidthFactor)'| markdownify }}</td>
 <td>Gets or sets the value that specifies width of the indeterminate indicator.</td></tr>
 <tr>
 <td>{{'[TrackHeight](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfLinearProgressBar.html#Syncfusion_XForms_ProgressBar_SfLinearProgressBar_TrackHeight)'| markdownify }}</td>
-<td>Divided into {{'[TrackHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html#Syncfusion_Maui_ProgressBar_SfLinearProgressBar_TrackHeight)'| markdownify }}, {{'[ProgressHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html#Syncfusion_Maui_ProgressBar_SfLinearProgressBar_ProgressHeight)'| markdownify }} and {{'[SecondaryProgressHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html#Syncfusion_Maui_ProgressBar_SfLinearProgressBar_SecondaryProgressHeight)'| markdownify }}</td>
+<td>Divided into {{'[*TrackHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html#Syncfusion_Maui_ProgressBar_SfLinearProgressBar_TrackHeight)'| markdownify }}, {{'[*ProgressHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html#Syncfusion_Maui_ProgressBar_SfLinearProgressBar_ProgressHeight)'| markdownify }} and {{'[*SecondaryProgressHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html#Syncfusion_Maui_ProgressBar_SfLinearProgressBar_SecondaryProgressHeight)'| markdownify }}</td>
 <td>Gets or sets a value to determine the height of track, progress and secondary progress.</td></tr>
 <tr>
 <td>{{'[CornerRadius](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfLinearProgressBar.html#Syncfusion_XForms_ProgressBar_SfLinearProgressBar_CornerRadius)'| markdownify }}</td>
-<td>Divided into {{'[TrackCornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html#Syncfusion_Maui_ProgressBar_SfLinearProgressBar_TrackCornerRadius)'| markdownify }}, {{'[ProgressCornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html#Syncfusion_Maui_ProgressBar_SfLinearProgressBar_ProgressCornerRadius)'| markdownify }} and {{'[SecondaryProgressCornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html#Syncfusion_Maui_ProgressBar_SfLinearProgressBar_SecondaryProgressCornerRadius)'| markdownify }}</td>
+<td>Divided into {{'[*TrackCornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html#Syncfusion_Maui_ProgressBar_SfLinearProgressBar_TrackCornerRadius)'| markdownify }}, {{'[*ProgressCornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html#Syncfusion_Maui_ProgressBar_SfLinearProgressBar_ProgressCornerRadius)'| markdownify }} and {{'[*SecondaryProgressCornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html#Syncfusion_Maui_ProgressBar_SfLinearProgressBar_SecondaryProgressCornerRadius)'| markdownify }}</td>
 <td>Gets or sets a value to determine the corner radius of the track, progress, and secondary progress.</td></tr>
 <tr>
 <td>{{'[ValueChanged](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_ValueChanged)'| markdownify }}</td>
-<td>{{'[ProgressChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_ProgressChanged)'| markdownify }}</td>
+<td>{{'[*ProgressChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_ProgressChanged)'| markdownify }}</td>
 <td>The value change event occurs when the Progress is changed.</td></tr>
 <tr>
 <td>{{'[ProgressCompleted](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_ProgressCompleted)'| markdownify }}</td>
@@ -174,6 +174,8 @@ SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
 <td>The progress completed event occurs when Progress value attains Maximum value in ProgressBar.</td></tr>
 
 </table> 
+
+N> All the (*) marked APIs are renamed from Xamarin SfLinearProgressBar to maintain the consistency of API naming in the .NET MAUI SfLinearProgressBar.
 
 The following code example explains how to use the properties in the Xamarin linear progress bar and the .NET MAUI linear progress bar.
 
