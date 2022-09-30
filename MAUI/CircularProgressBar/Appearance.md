@@ -11,7 +11,7 @@ documentation: ug
 
 ## Angle
 
-The appearance of the circular progress bar can be customized to semi-circle, arc, and more. The start and end angles can be customized using the `StartAngle` and `EndAngle` properties respectively.
+The appearance of the circular progress bar can be customized to semi-circle, arc, and more. The start and end angles can be customized using the [`StartAngle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_StartAngle) and [`EndAngle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_EndAngle) properties respectively.
 
 The following code sample demonstrates how to change the appearance of the circular progress bar to semi-circle.
 
@@ -43,12 +43,12 @@ this.Content = circularProgressBar;
 
 Visualize multiple ranges with different colors mapped to each range to enhance the readability of progress.
 
-The colors can be mapped to the specific ranges using the `GradientStops` property, which holds a collection of `ProgressGradientStop`. 
+The colors can be mapped to the specific ranges using the [`GradientStops`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_GradientStops) property, which holds a collection of [`ProgressGradientStop`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressGradientStop.html). 
 
-The following properties in the `GradientStops` are used to map the colors to a range:
+The following properties in the [`GradientStops`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_GradientStops) are used to map the colors to a range:
 
-* `Color:` Represents the color to the specified range.
-* `Value:` Represents the start or end value for the specified color.
+* [`Color:`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressGradientStop.html#Syncfusion_Maui_ProgressBar_ProgressGradientStop_Color) Represents the color to the specified range.
+* [`Value:`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressGradientStop.html#Syncfusion_Maui_ProgressBar_ProgressGradientStop_Value) Represents the start or end value for the specified color.
 
 The following code sample demonstrates how to map the solid color range in the circular progress bar.
 
@@ -128,13 +128,13 @@ this.Content = circularProgressBar;
 
 The following properties are used to customize the appearance of the circular progress bar:
 
-* `ProgressRadiusFactor:` Defines the outer radius of the progress indicator.
-* `ProgressThickness:` Defines the thickness of the progress indicator.
-* `TrackRadiusFactor:` Defines the outer radius of the track indicator.
-* `TrackThickness:` Defines the thickness of the track indicator.
-* `ThicknessUnit:` Specifies whether the `ProgressThickness` or `TrackThickness` are defined in pixel or factor.
+* [`ProgressRadiusFactor:`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_ProgressRadiusFactor) Defines the outer radius of the progress indicator.
+* [`ProgressThickness:`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_ProgressThickness) Defines the thickness of the progress indicator.
+* [`TrackRadiusFactor:`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_TrackRadiusFactor) Defines the outer radius of the track indicator.
+* [`TrackThickness:`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_TrackThickness) Defines the thickness of the track indicator.
+* [`ThicknessUnit:`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_ThicknessUnit) Specifies whether the [`ProgressThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_ProgressThickness) or [`TrackThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_TrackThickness) are defined in pixel or factor.
 
-The `ProgressThickness` or `TrackThickness` of the progress bar can be specified either in pixel or factor. If the `ThicknessUnit` is specified as `Pixel`, the range will be rendered based on the provided pixel value. If the `ThicknessUnit` is set as `Factor`, the provided factor value will be multiplied by the outer radius. For example, if the thickness width is set as 0.1, then 10% of outer radius is considered as thickness.
+The [`ProgressThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_ProgressThickness) or [`TrackThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_TrackThickness) of the progress bar can be specified either in pixel or factor. If the [`ThicknessUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_ThicknessUnit) is specified as [`Pixel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SizeUnit.html#Syncfusion_Maui_ProgressBar_SizeUnit_Pixel), the range will be rendered based on the provided pixel value. If the [`ThicknessUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_ThicknessUnit) is set as [`Factor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SizeUnit.html#Syncfusion_Maui_ProgressBar_SizeUnit_Factor), the provided factor value will be multiplied by the outer radius. For example, if the thickness width is set as 0.1, then 10% of outer radius is considered as thickness.
 
 The following code sample demonstrates how to customize the appearance of the circular progress bar.
 
@@ -170,7 +170,7 @@ this.Content = circularProgressBar;
 
 ## Corner style customization
 
-The `ProgressCornerStyle` and `TrackCornerStyle` property of the circular progress bar specifies the corner type for the progress and track. The corners can be customized using the `BothFlat`, `BothCurve`, `StartCurve`, and `EndCurve` options. The default value of this property is `BothFlat`.
+The [`ProgressCornerStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_ProgressCornerStyle) and [`TrackCornerStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_TrackCornerStyle) property of the circular progress bar specifies the corner type for the progress and track. The corners can be customized using the [`BothFlat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.CornerStyle.html#Syncfusion_Maui_ProgressBar_CornerStyle_BothFlat), [`BothCurve`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.CornerStyle.html#Syncfusion_Maui_ProgressBar_CornerStyle_BothCurve), [`StartCurve`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.CornerStyle.html#Syncfusion_Maui_ProgressBar_CornerStyle_StartCurve), and [`EndCurve`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.CornerStyle.html#Syncfusion_Maui_ProgressBar_CornerStyle_EndCurve) options. The default value of this property is [`BothFlat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.CornerStyle.html#Syncfusion_Maui_ProgressBar_CornerStyle_BothFlat).
 
 The following code sample demonstrates the corner style customization in progress and track indicator.
 
@@ -206,8 +206,8 @@ this.Content = circularProgressBar;
 
 The following properties are used to customize the color in the circular progress bar.
 
-* `ProgressFill:` Represents the color of the progress indicator.
-* `TrackFill:` Represents the color of the track indicator.
+* [`ProgressFill:`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_ProgressFill) Represents the color of the progress indicator.
+* [`TrackFill:`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_TrackFill) Represents the color of the track indicator.
 
 The following code sample demonstrates the color customization in progress and track indicator.
 
@@ -235,4 +235,4 @@ this.Content = circularProgressBar;
 
 ![.NET MAUI Circular ProgressBar with color customization](images/appearance/color.png)
 
-N> Refer to our `.NET MAUI Circular ProgressBar` feature tour page for its groundbreaking feature representations. Also explore our [.NET MAUI Circular ProgressBar example](https://github.com/syncfusion/maui-demos/) that shows how to configure a SfCircularProgressBar in .NET MAUI.
+N> Refer to our [.NET MAUI Circular ProgressBar](https://www.syncfusion.com/maui-controls/maui-progressbar) feature tour page for its groundbreaking feature representations. Also explore our [.NET MAUI Circular ProgressBar example](https://github.com/syncfusion/maui-demos/) that shows how to configure a SfCircularProgressBar in .NET MAUI.

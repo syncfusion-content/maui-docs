@@ -99,7 +99,7 @@ Run the project, and check if you get following output to make sure that the pro
 
 ## Enabling indeterminate state
 
-When the progress of a task cannot be shown determinately, you can enable the indeterminate state using the `IsIndeterminate` property to know if any progress is happening in the background.
+When the progress of a task cannot be shown determinately, you can enable the indeterminate state using the [`IsIndeterminate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_IsIndeterminate) property to know if any progress is happening in the background.
 
 {% tabs %} 
 
@@ -122,7 +122,7 @@ this.Content = circularProgressBar;
 
 ## Enable segments
 
-To visualize the progress of a multiple sequential task, split the circular progress bar into the multiple segments by defining the `SegmentCount` property as demonstrated in the following code sample.
+To visualize the progress of a multiple sequential task, split the circular progress bar into the multiple segments by defining the [`SegmentCount`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_SegmentCount) property as demonstrated in the following code sample.
 
 {% tabs %} 
 
@@ -145,7 +145,7 @@ this.Content = circularProgressBar;
 
 ## Apply colors
 
-Customize the color of the progress indicator and track by defining the `ProgressFill` and `TrackFill` properties, respectively.
+Customize the color of the progress indicator and track by defining the [`ProgressFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_ProgressFill) and [`TrackFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_TrackFill) properties, respectively.
 
 {% tabs %} 
 
@@ -184,5 +184,5 @@ SfCircularProgressBar sfCircularProgressBar = new SfCircularProgressBar
 ![.NET MAUI Circular ProgressBar with customized colors](images/getting-started/style.png)
 
 N> 
-* Get the complete getting started sample from [`GitHub`](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-Circular-ProgressBar-control.-) link.
-* Refer to our `.NET MAUI Circular ProgressBar` feature tour page for its groundbreaking feature representations.
+* Get the complete getting started sample from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-Circular-ProgressBar-control.-) link.
+* Refer to our [.NET MAUI Circular ProgressBar](https://www.syncfusion.com/maui-controls/maui-progressbar) feature tour page for its groundbreaking feature representations.
