@@ -1479,7 +1479,7 @@ The following code example explains how to customize tooltip in the Xamarin SfMa
       {{'[BubbleMarkerSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeFileLayer.html#Syncfusion_SfMaps_XForms_ShapeFileLayer_BubbleMarkerSettings)'| markdownify }}
    </td>
    <td>
-      {{'BubbleSettings'| markdownify }}
+      {{'[BubbleSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeSublayer.html#Syncfusion_Maui_Maps_MapShapeSublayer_BubbleSettings)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -1487,7 +1487,7 @@ The following code example explains how to customize tooltip in the Xamarin SfMa
       {{'[DataLabelSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeFileLayer.html#Syncfusion_SfMaps_XForms_ShapeFileLayer_DataLabelSettings)'| markdownify }}
    </td>
    <td>
-      {{'DataLabelSettings'| markdownify }}
+      {{'[DataLabelSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeSublayer.html#Syncfusion_Maui_Maps_MapShapeSublayer_DataLabelSettings)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -1495,7 +1495,7 @@ The following code example explains how to customize tooltip in the Xamarin SfMa
       {{'[ItemsSource](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeFileLayer.html#Syncfusion_SfMaps_XForms_ShapeFileLayer_ItemsSource)'| markdownify }}
    </td>
    <td>
-      {{'DataSource'| markdownify }}
+      {{'[DataSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeSublayer.html#Syncfusion_Maui_Maps_MapShapeSublayer_DataSource)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -1503,7 +1503,7 @@ The following code example explains how to customize tooltip in the Xamarin SfMa
       {{'[ShapeIDPath](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeFileLayer.html#Syncfusion_SfMaps_XForms_ShapeFileLayer_ShapeIDPath)'| markdownify }}
    </td>
    <td>
-      {{'PrimaryValuePath'| markdownify }}
+      {{'[PrimaryValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeSublayer.html#Syncfusion_Maui_Maps_MapShapeSublayer_PrimaryValuePath)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -1511,7 +1511,7 @@ The following code example explains how to customize tooltip in the Xamarin SfMa
       {{'[ShapeIDTableField](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeFileLayer.html#Syncfusion_SfMaps_XForms_ShapeFileLayer_ShapeIDTableField)'| markdownify }}
    </td>
    <td>
-      {{'ShapeDataField'| markdownify }}
+      {{'[ShapeDataField](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeSublayer.html#Syncfusion_Maui_Maps_MapShapeSublayer_ShapeDataField)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -1519,7 +1519,7 @@ The following code example explains how to customize tooltip in the Xamarin SfMa
       {{'[Uri](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeFileLayer.html#Syncfusion_SfMaps_XForms_ShapeFileLayer_Uri)'| markdownify }}
    </td>
    <td>
-      {{'ShapesSource'| markdownify }}
+      {{'[ShapesSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeSublayer.html#Syncfusion_Maui_Maps_MapShapeSublayer_ShapesSource)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -1528,7 +1528,7 @@ The following code example explains how to customize tooltip in the Xamarin SfMa
        {{'[ShapeSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html)'| markdownify }} class
    </td>
    <td>
-      {{'ColorMappings'| markdownify }}
+      {{'[ColorMappings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeSublayer.html#Syncfusion_Maui_Maps_MapShapeSublayer_ColorMappings)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -1537,7 +1537,7 @@ The following code example explains how to customize tooltip in the Xamarin SfMa
        {{'[ShapeSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html)'| markdownify }} class
    </td>
    <td>
-      {{'ShapeFill'| markdownify }}
+      {{'[ShapeFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeSublayer.html#Syncfusion_Maui_Maps_MapShapeSublayer_ShapeFill)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -1546,7 +1546,7 @@ The following code example explains how to customize tooltip in the Xamarin SfMa
        {{'[ShapeSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html)'| markdownify }} class
    </td>
    <td>
-      {{'ShapeStroke'| markdownify }}
+      {{'[ShapeStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeSublayer.html#Syncfusion_Maui_Maps_MapShapeSublayer_ShapeStroke)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -1555,7 +1555,7 @@ The following code example explains how to customize tooltip in the Xamarin SfMa
        {{'[ShapeSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html)'| markdownify }} class
    </td>
    <td>
-      {{'ShapeStrokeThickness'| markdownify }}
+      {{'[ShapeStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeSublayer.html#Syncfusion_Maui_Maps_MapShapeSublayer_ShapeStrokeThickness)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -1564,7 +1564,7 @@ The following code example explains how to customize tooltip in the Xamarin SfMa
        {{'[ShapeSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html)'| markdownify }} class
    </td>
    <td>
-      {{'ShapeColorValuePath'| markdownify }}
+      {{'[ShapeColorValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeSublayer.html#Syncfusion_Maui_Maps_MapShapeSublayer_ShapeColorValuePath)'| markdownify }}
    </td>
 </tr>
 </table>
@@ -1733,7 +1733,7 @@ public MainPage()
       {{'[ShowBubbles](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.BubbleMarkerSetting.html#Syncfusion_SfMaps_XForms_BubbleMarkerSetting_ShowBubbles)'| markdownify }}
    </td>
    <td>
-      {{'ShowBubbles'| markdownify }}
+      {{'[ShowBubbles](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeSublayer.html#Syncfusion_Maui_Maps_MapShapeSublayer_ShowBubbles)'| markdownify }}
    </td>
 </tr>
 </table>
@@ -2269,7 +2269,7 @@ public MainPage()
       {{'[ShapeType](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeFileLayer.html#Syncfusion_SfMaps_XForms_ShapeFileLayer_ShapeTypeProperty)'| markdownify }}
    </td>
    <td>
-      {{'MapPolygon'| markdownify }}
+      {{'[MapPolygon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolygon.html)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -2277,7 +2277,7 @@ public MainPage()
       {{'[Points](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeFileLayer.html#Syncfusion_SfMaps_XForms_ShapeFileLayer_PointsProperty)'| markdownify }}
    </td>
    <td>
-      {{'Points'| markdownify }}
+      {{'[Points](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolygon.html#Syncfusion_Maui_Maps_MapPolygon_Points)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -2286,7 +2286,7 @@ public MainPage()
        {{'[ShapeSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html)'| markdownify }} class
    </td>
    <td>
-      {{'Fill'| markdownify }}
+      {{'[Fill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolygon.html#Syncfusion_Maui_Maps_MapPolygon_Fill)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -2295,7 +2295,7 @@ public MainPage()
        {{'[ShapeSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html)'| markdownify }} class
    </td>
    <td>
-      {{'Stroke'| markdownify }}
+      {{'[Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolygon.html#Syncfusion_Maui_Maps_MapPolygon_Stroke)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -2304,7 +2304,7 @@ public MainPage()
        {{'[ShapeSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html)'| markdownify }} class
    </td>
    <td>
-      {{'StrokeThickness'| markdownify }}
+      {{'[StrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolygon.html#Syncfusion_Maui_Maps_MapPolygon_StrokeThickness)'| markdownify }}
    </td>
 </tr>
 </table>
@@ -2450,7 +2450,7 @@ public MainPage()
       {{'[ShapeType](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeFileLayer.html#Syncfusion_SfMaps_XForms_ShapeFileLayer_ShapeTypeProperty)'| markdownify }}
    </td>
    <td>
-      {{'MapPolyline'| markdownify }}
+      {{'[MapPolyline](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -2458,7 +2458,7 @@ public MainPage()
       {{'[Points](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeFileLayer.html#Syncfusion_SfMaps_XForms_ShapeFileLayer_PointsProperty)'| markdownify }}
    </td>
    <td>
-      {{'Points'| markdownify }}
+      {{'[Points](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html#Syncfusion_Maui_Maps_MapPolyline_Points)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -2467,7 +2467,7 @@ public MainPage()
        {{'[ShapeSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html)'| markdownify }} class
    </td>
    <td>
-      {{'Stroke'| markdownify }}
+      {{'[Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html#Syncfusion_Maui_Maps_MapPolyline_Stroke)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -2476,15 +2476,15 @@ public MainPage()
        {{'[ShapeSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html)'| markdownify }} class
    </td>
    <td>
-      {{'StrokeThickness'| markdownify }}
+      {{'[StrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html#Syncfusion_Maui_Maps_MapPolyline_StrokeThickness)'| markdownify }}
    </td>
 </tr>
 <tr>
    <td>
-      {{'[-]'| markdownify }}
+      {{'-'| markdownify }}
    </td>
    <td>
-      {{'StrokeDashArray'| markdownify }}
+      {{'[StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html#Syncfusion_Maui_Maps_MapPolyline_StrokeDashArray)'| markdownify }}
    </td>
 </tr>
 </table>
@@ -2629,7 +2629,7 @@ The following code example explains how to intialize the polyline layer and it's
       {{'-'| markdownify }}
    </td>
    <td>
-      {{'MapLine'| markdownify }}
+      {{'[MapLine](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLine.html)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -2637,7 +2637,7 @@ The following code example explains how to intialize the polyline layer and it's
       {{'-'| markdownify }}
    </td>
    <td>
-      {{'From'| markdownify }}
+      {{'[From](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLine.html#Syncfusion_Maui_Maps_MapLine_From)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -2645,7 +2645,7 @@ The following code example explains how to intialize the polyline layer and it's
       {{'-'| markdownify }}
    </td>
    <td>
-      {{'To'| markdownify }}
+      {{'[To](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLine.html#Syncfusion_Maui_Maps_MapLine_To)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -2653,7 +2653,7 @@ The following code example explains how to intialize the polyline layer and it's
       {{'-'| markdownify }}
    </td>
    <td>
-      {{'Stroke'| markdownify }}
+      {{'[Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLine.html#Syncfusion_Maui_Maps_MapLine_Stroke)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -2661,7 +2661,7 @@ The following code example explains how to intialize the polyline layer and it's
      {{'-'| markdownify }}
    </td>
    <td>
-      {{'StrokeThickness'| markdownify }}
+      {{'[StrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLine.html#Syncfusion_Maui_Maps_MapLine_StrokeThickness)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -2669,7 +2669,7 @@ The following code example explains how to intialize the polyline layer and it's
       {{'-'| markdownify }}
    </td>
    <td>
-      {{'StrokeDashArray'| markdownify }}
+      {{'[StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLine.html#Syncfusion_Maui_Maps_MapLine_StrokeDashArray)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -2677,7 +2677,7 @@ The following code example explains how to intialize the polyline layer and it's
       {{'-'| markdownify }}
    </td>
    <td>
-      {{'StrokeLineCap'| markdownify }}
+      {{'[StrokeLineCap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLine.html#Syncfusion_Maui_Maps_MapLine_StrokeLineCap)'| markdownify }}
    </td>
 </tr>
 </table>
@@ -2761,7 +2761,7 @@ The following code example explains how to intialize the line layer and it's cus
       {{'-'| markdownify }}
    </td>
    <td>
-      {{'MapArc'| markdownify }}
+      {{'[MapArc](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapArc.html)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -2769,7 +2769,7 @@ The following code example explains how to intialize the line layer and it's cus
       {{'-'| markdownify }}
    </td>
    <td>
-      {{'From'| markdownify }}
+      {{'[From](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapArc.html#Syncfusion_Maui_Maps_MapArc_From)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -2777,7 +2777,7 @@ The following code example explains how to intialize the line layer and it's cus
       {{'-'| markdownify }}
    </td>
    <td>
-      {{'To'| markdownify }}
+      {{'[To](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapArc.html#Syncfusion_Maui_Maps_MapArc_To)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -2785,7 +2785,7 @@ The following code example explains how to intialize the line layer and it's cus
       {{'-'| markdownify }}
    </td>
    <td>
-      {{'Stroke'| markdownify }}
+      {{'[Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapArc.html#Syncfusion_Maui_Maps_MapArc_Stroke)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -2793,7 +2793,7 @@ The following code example explains how to intialize the line layer and it's cus
        {{'-'| markdownify }}
    </td>
    <td>
-      {{'StrokeThickness'| markdownify }}
+      {{'[StrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapArc.html#Syncfusion_Maui_Maps_MapArc_StrokeThickness)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -2801,7 +2801,7 @@ The following code example explains how to intialize the line layer and it's cus
       {{'-'| markdownify }}
    </td>
    <td>
-      {{'StrokeDashArray'| markdownify }}
+      {{'[StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapArc.html#Syncfusion_Maui_Maps_MapArc_StrokeDashArray)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -2809,7 +2809,7 @@ The following code example explains how to intialize the line layer and it's cus
       {{'-'| markdownify }}
    </td>
    <td>
-      {{'HeightFactor'| markdownify }}
+      {{'[HeightFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapArc.html#Syncfusion_Maui_Maps_MapArc_HeightFactor)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -2817,7 +2817,7 @@ The following code example explains how to intialize the line layer and it's cus
        {{'-'| markdownify }}
    </td>
    <td>
-      {{'ControlPointFactor'| markdownify }}
+      {{'[ControlPointFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapArc.html#Syncfusion_Maui_Maps_MapArc_ControlPointFactor)'| markdownify }}
    </td>
 </tr>
 </table>
@@ -2904,7 +2904,7 @@ The following code example explains how to intialize the arc layer and it's cust
        {{'-'| markdownify }}
    </td>
    <td>
-      {{'MapCircle'| markdownify }}
+      {{'[MapCircle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapCircle.html)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -2912,7 +2912,7 @@ The following code example explains how to intialize the arc layer and it's cust
        {{'-'| markdownify }}
    </td>
    <td>
-      {{'Center'| markdownify }}
+      {{'[Center](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapCircle.html#Syncfusion_Maui_Maps_MapCircle_Center)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -2920,7 +2920,7 @@ The following code example explains how to intialize the arc layer and it's cust
       {{'-'| markdownify }}
    </td>
    <td>
-      {{'Radius'| markdownify }}
+      {{'[Radius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapCircle.html#Syncfusion_Maui_Maps_MapCircle_Radius)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -2928,7 +2928,7 @@ The following code example explains how to intialize the arc layer and it's cust
        {{'-'| markdownify }}
    </td>
    <td>
-      {{'Stroke'| markdownify }}
+      {{'[Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapCircle.html#Syncfusion_Maui_Maps_MapCircle_Stroke)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -2936,7 +2936,7 @@ The following code example explains how to intialize the arc layer and it's cust
       {{'-'| markdownify }}
    </td>
    <td>
-      {{'StrokeThickness'| markdownify }}
+      {{'[StrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapCircle.html#Syncfusion_Maui_Maps_MapCircle_StrokeThickness)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -2944,7 +2944,7 @@ The following code example explains how to intialize the arc layer and it's cust
       {{'-'| markdownify }}
    </td>
    <td>
-      {{'Fill'| markdownify }}
+      {{'[Fill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapCircle.html#Syncfusion_Maui_Maps_MapCircle_Fill)'| markdownify }}
    </td>
 </tr>
 </table>
