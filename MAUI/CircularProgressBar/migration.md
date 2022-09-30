@@ -200,7 +200,13 @@ SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 <td>The progress completed event occurs when Progress value attains Maximum value in ProgressBar.</td></tr>
 </table> 
 
-The following code example explains how to use the properties in the Xamarin circular progress bar and the .NET MAUI circular progress bar.
+\*The following code example explains how to use the properties in the Xamarin circular progress bar and the .NET MAUI circular progress bar.
+
+*The following code example explains how to use the properties in the Xamarin circular progress bar and the .NET MAUI circular progress bar.
+
+* The following code example explains how to use the properties in the Xamarin circular progress bar and the .NET MAUI circular progress bar.
+
+\* The following code example explains how to use the properties in the Xamarin circular progress bar and the .NET MAUI circular progress bar.
 
 <table>
 <tr>
