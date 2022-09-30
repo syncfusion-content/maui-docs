@@ -155,7 +155,7 @@ SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 <td>Gets or sets a value that specifies the easing effect for indeterminate animation.</td></tr>
 <tr>
 <td>{{'[IndeterminateIndicatorWidth](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_IndeterminateIndicatorWidth)'| markdownify }}</td>
-<td>{{'[IndeterminateIndicatorWidthFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_IndeterminateIndicatorWidthFactor)'| markdownify }}</td>
+<td>{{*'[IndeterminateIndicatorWidthFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_IndeterminateIndicatorWidthFactor)'| markdownify }}</td>
 <td>Gets or sets the value that specifies width of the indeterminate indicator.</td></tr>
 
 <tr>
