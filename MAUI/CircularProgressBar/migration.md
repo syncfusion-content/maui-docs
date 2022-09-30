@@ -202,6 +202,19 @@ SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 
 The following code example explains how to use the properties in the Xamarin circular progress bar and the .NET MAUI circular progress bar.
 
+\*The following code example explains how to use the properties in the Xamarin circular progress bar and the .NET MAUI circular progress bar.
+
+*The following code example explains how to use the properties in the Xamarin circular progress bar and the .NET MAUI circular progress bar.
+
+* The following code example explains how to use the properties in the Xamarin circular progress bar and the .NET MAUI circular progress bar.
+
+\* The following code example explains how to use the properties in the Xamarin circular progress bar and the .NET MAUI circular progress bar.
+
+\* ['Pro'](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_ProgressCompleted).
+
+\* [`Pro`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_ProgressCompleted).
+
+
 <table>
 <tr>
 <th>Xamarin</th>
