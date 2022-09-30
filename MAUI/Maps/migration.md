@@ -2481,7 +2481,7 @@ public MainPage()
 </tr>
 <tr>
    <td>
-      {{'[-]'| markdownify }}
+      {{'-'| markdownify }}
    </td>
    <td>
       {{'[StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html#Syncfusion_Maui_Maps_MapPolyline_StrokeDashArray)'| markdownify }}
