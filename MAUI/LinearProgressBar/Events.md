@@ -13,7 +13,7 @@ documentation: ug
 
 This event is triggered when the progress value is changed. This event contains the following event argument.
 
-* `Progress:` Represents the progress value.
+* [`Progress:`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressValueEventArgs.html#Syncfusion_Maui_ProgressBar_ProgressValueEventArgs_Progress) Represents the progress value.
 
 The following code sample demonstrates how to customize the color of a progress indicator based on progress using this event. 
 
@@ -47,9 +47,9 @@ private void LinearProgressBar_ProgressChanged(object sender, ProgressValueEvent
 
 ## ProgressCompleted
 
-This event is triggered when the `Progress` attains the `Maximum` value. This event contains the following argument.
+This event is triggered when the [`Progress`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_Progress) attains the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_Maximum) value. This event contains the following argument.
 
-* `Progress:` Represents the progress value.
+* [`Progress:`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressValueEventArgs.html#Syncfusion_Maui_ProgressBar_ProgressValueEventArgs_Progress) Represents the progress value.
 
 The following code sample demonstrates how to customize the progress bar when the progress reaches maximum using this event. 
 
@@ -74,4 +74,4 @@ private void LinearProgressBar_ProgressCompleted(object sender, ProgressValueEve
 
 {% endtabs %} 
 
-N> Refer to our `.NET MAUI Linear ProgressBar` feature tour page for its groundbreaking feature representations. Also explore our [.NET MAUI Linear ProgressBar example](https://github.com/syncfusion/maui-demos/) that shows how to configure a SfLinearProgressBar in .NET MAUI.
+N> Refer to our [.NET MAUI Linear ProgressBar](https://www.syncfusion.com/maui-controls/maui-progressbar) feature tour page for its groundbreaking feature representations. Also explore our [.NET MAUI Linear ProgressBar example](https://github.com/syncfusion/maui-demos/) that shows how to configure a SfLinearProgressBar in .NET MAUI.
