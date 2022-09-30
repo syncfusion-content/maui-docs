@@ -119,15 +119,15 @@ SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 <td>Gets or sets a any view to display in the center of circular progress bar.</td></tr>
 <tr>
 <td>{{'[ProgressColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_ProgressColor)'| markdownify }}</td>
-<td>{{*'[ProgressFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_ProgressFill)'| markdownify }}</td>
+<td>{{'[ProgressFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_ProgressFill)'| markdownify }}</td>
 <td>Gets or sets the brush that paints the interior area of the progress.</td></tr>
 <tr>
 <td>{{'[TrackColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_TrackColor)'| markdownify }}</td>
-<td>{{* '[TrackFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_TrackFill)'| markdownify }}</td>
+<td>{{'[TrackFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_TrackFill)'| markdownify }}</td>
 <td>Gets or sets the brush that paints the interior area of the track.</td></tr>
 <tr>
 <td>{{'[RangeColors](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_RangeColors)'| markdownify }}</td>
-<td>{{'[*GradientStops](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_GradientStops)'| markdownify }}</td>
+<td>{{'[GradientStops](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_GradientStops)'| markdownify }}</td>
 <td>Gets or sets a collection of ProgressGradientStop to fill the gradient brush to the progress.</td></tr>
 <tr>
 <td>{{'[SegmentCount](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_SegmentCount)'| markdownify }}</td>
@@ -200,8 +200,7 @@ SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 <td>The progress completed event occurs when Progress value attains Maximum value in ProgressBar.</td></tr>
 </table> 
 
-*The following code example explains how to use the properties in the Xamarin circular progress bar and the .NET MAUI circular progress bar.
-* The following code example explains how to use the properties in the Xamarin circular progress bar and the .NET MAUI circular progress bar.
+The following code example explains how to use the properties in the Xamarin circular progress bar and the .NET MAUI circular progress bar.
 
 <table>
 <tr>
