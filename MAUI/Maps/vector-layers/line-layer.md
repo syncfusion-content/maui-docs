@@ -9,11 +9,11 @@ documentation: ug
 
 # Lines in .NET MAUI Maps (SfMaps)
 
-Line layer is a sublayer that renders a group of `MapLine` on `MapShapeLayer`. This section helps to learn about how to add the lines and customize them.
+Line layer is a sublayer that renders a group of [`MapLine`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLine.html) on [`MapShapeLayer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html). This section helps to learn about how to add the lines and customize them.
 
 ## Adding lines
 
-The `Lines` is a collection of `MapLine`. Every single `MapLine` connects two location coordinates through a straight line. The start coordinate is set to `MapLine.From` property and the end coordinate is set to `MapLine.To` property.
+The [`Lines`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLineLayer.html#Syncfusion_Maui_Maps_MapLineLayer_LinesProperty) is a collection of [`MapLine`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLine.html). Every single [`MapLine`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLine.html) connects two location coordinates through a straight line. The start coordinate is set to [`MapLine.From`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLine.html#Syncfusion_Maui_Maps_MapLine_From) property and the end coordinate is set to [`MapLine.To`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLine.html#Syncfusion_Maui_Maps_MapLine_To) property.
 
 {% tabs %}
 
@@ -114,7 +114,7 @@ The `Lines` is a collection of `MapLine`. Every single `MapLine` connects two lo
 
 ## Stroke
 
-You can apply stroke colors to each `MapLine` in the `Lines` collection using the individual `MapLine.Stroke` property.
+You can apply stroke colors to each [`MapLine`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLine.html) in the [`Lines`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLineLayer.html#Syncfusion_Maui_Maps_MapLineLayer_LinesProperty) collection using the individual [`MapLine.Stroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLine.html#Syncfusion_Maui_Maps_MapLine_Stroke) property.
 
 {% tabs %}
 
@@ -219,7 +219,7 @@ this.Content = maps;
 
 ## Thickness
 
-You can apply thickness to each `MapLine` in the `Lines` collection using the individual `MapLine.StrokeThickness` property. The default value of the `MapLine.StrokeThickness` property is `2`.
+You can apply thickness to each [`MapLine`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLine.html) in the [`Lines`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLineLayer.html#Syncfusion_Maui_Maps_MapLineLayer_LinesProperty) collection using the individual [`MapLine.StrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLine.html#Syncfusion_Maui_Maps_MapLine_StrokeThickness) property. The default value of the [`MapLine.StrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLine.html#Syncfusion_Maui_Maps_MapLine_StrokeThickness) property is `2`.
 
 {% tabs %}
 
@@ -328,7 +328,7 @@ this.Content = maps;
 
 ## Stroke cap
 
-You can apply stroke cap to each `MapLine` in the `Lines` collection using the individual `MapLine.StrokeLineCap` property. The default value of the `MapLineLayer.StrokeLineCap` property is `StrokeLineCap.Butt`. The available values are `Butt`, `Round`, and `Square`.
+You can apply stroke cap to each [`MapLine`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLine.html) in the [`Lines`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLineLayer.html#Syncfusion_Maui_Maps_MapLineLayer_LinesProperty) collection using the individual [`MapLine.StrokeLineCap`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLine.html#Syncfusion_Maui_Maps_MapLine_StrokeLineCap) property. The default value of the [`MapLine.StrokeLineCap`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLine.html#Syncfusion_Maui_Maps_MapLine_StrokeLineCap) property is `LineCap.Butt`. The available values are `Butt`, `Round`, and `Square`.
 
 {% tabs %}
 
@@ -445,7 +445,7 @@ this.Content = maps;
 
 ## Dash array
 
-You can apply dash support for the line using the `MapLine.dashArray` property.
+You can apply dash support for the line using the [`MapLine.dashArray`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLine.html#Syncfusion_Maui_Maps_MapLine_StrokeDashArray) property.
 
 A sequence of dash and gap will be rendered based on the values in this list. Once all values of the list is rendered, it will be repeated again till the end of the line.
 

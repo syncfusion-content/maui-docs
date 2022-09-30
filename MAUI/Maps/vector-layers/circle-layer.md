@@ -9,11 +9,11 @@ documentation: ug
 
 # Circle Layer in .NET MAUI Maps (SfMaps)
 
-Circle layer is a sublayer that renders a group of `MapCircle` on `MapShapeLayer`. This section helps to learn about how to add the circles and customize them.
+Circle layer is a sublayer that renders a group of [`MapCircle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapCircle.html) on [`MapShapeLayer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html). This section helps to learn about how to add the circles and customize them.
 
 ## Adding circles
 
-The `Circles` is a collection of `MapCircle`. Every single `MapCircle` renders a circle using the `MapCircle.Center` and `MapCircle.Radius` properties.
+The [`Circles`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapCircleLayer.html#Syncfusion_Maui_Maps_MapCircleLayer_Circles) is a collection of [`MapCircle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapCircle.html). Every single [`MapCircle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapCircle.html) renders a circle using the [`MapCircle.Center`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapCircle.html#Syncfusion_Maui_Maps_MapCircle_Center) and [`MapCircle.Radius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapCircle.html#Syncfusion_Maui_Maps_MapCircle_Radius) properties.
 
 {% tabs %}
 
@@ -117,7 +117,7 @@ this.Content = maps;
 
 ## Radius
 
-You can change the size of the circles using the `MapCircle.Radius` property. The default value of the `MapCircle.Radius` property is 5.
+You can change the size of the circles using the [`MapCircle.Radius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapCircle.html#Syncfusion_Maui_Maps_MapCircle_Radius) property. The default value of the [`MapCircle.Radius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapCircle.html#Syncfusion_Maui_Maps_MapCircle_Radius) property is 5.
 
 {% tabs %}
 
@@ -228,7 +228,7 @@ this.Content = maps;
 
 ## Fill color
 
-You can apply colors to each `MapCircle` in the `Circles` collection using the individual `MapCircle.Fill` property.
+You can apply colors to each [`MapCircle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapCircle.html) in the [`Circles`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapCircleLayer.html#Syncfusion_Maui_Maps_MapCircleLayer_Circles) collection using the individual [`MapCircle.Fill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapCircle.html#Syncfusion_Maui_Maps_MapCircle_Fill) property.
 
 {% tabs %}
 
@@ -353,9 +353,9 @@ this.Content = maps;
 
 ## Stroke and stroke thickness
 
-You can apply stroke thickness to each `MapCircle` in the `Circles` collection using the individual `MapCircle.StrokeThickness` property. The default value of the `MapCircleLayer.StrokeThickness` property is `2`.
+You can apply stroke thickness to each [`MapCircle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapCircle.html) in the [`Circles`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapCircleLayer.html#Syncfusion_Maui_Maps_MapCircleLayer_Circles) collection using the individual [`MapCircle.StrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapCircle.html#Syncfusion_Maui_Maps_MapCircle_StrokeThickness) property. The default value of the [`MapCircle.StrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapCircle.html#Syncfusion_Maui_Maps_MapCircle_StrokeThickness) property is `2`.
 
-You can apply stroke color to each `MapCircle` in the `Circles` collection using the individual `MapCircle.Stroke` property.
+You can apply stroke color to each [`MapCircle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapCircle.html) in the [`Circles`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapCircleLayer.html#Syncfusion_Maui_Maps_MapCircleLayer_Circles) collection using the individual [`MapCircle.Stroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapCircle.html#Syncfusion_Maui_Maps_MapCircle_Stroke) property.
 
 {% tabs %}
 

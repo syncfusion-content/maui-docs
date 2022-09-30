@@ -20,6 +20,7 @@ Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org
  In the MauiProgram.cs file, register the handler for Syncfusion core.
 
 {% highlight c# hl_lines="6 7 18 19" %}
+
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
 using Microsoft.Maui.Controls.Compatibility;
@@ -51,7 +52,6 @@ namespace ComboBoxSample
 
 {% endhighlight %} 
 
-{% endhighlight %}
 
 ## Create a Simple .NET MAUI ComboBox
 

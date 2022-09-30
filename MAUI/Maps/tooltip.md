@@ -273,9 +273,9 @@ The [`ShowMarkerTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Ma
 
 Customize the tooltip appearance using the following properties.
 
-* **Background** - Change the background color of the tooltip in maps using the `MapTooltipSettings.Background` property.
-* **Padding** - Change the padding of the tooltip text in maps using the `MaptooltipSettings.Padding` property.
-* **TextStyle** - Change the tooltip text appearance such as `TextColor`, `FontSize`, `FontAttributes`, and `FontFamily` in maps using the `MapTooltipSettings.TextStyle` property.
+* **Background** - Change the background color of the tooltip in maps using the [`MapTooltipSettings.Background`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTooltipSettings.html#Syncfusion_Maui_Maps_MapTooltipSettings_Background) property.
+* **Padding** - Change the padding of the tooltip text in maps using the [`MaptooltipSettings.Padding`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTooltipSettings.html#Syncfusion_Maui_Maps_MapTooltipSettings_Padding) property.
+* **TextStyle** - Change the tooltip text appearance such as [`TextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLabelStyle.html#Syncfusion_Maui_Maps_MapLabelStyle_TextColor), [`FontSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLabelStyle.html#Syncfusion_Maui_Maps_MapLabelStyle_FontSize), [`FontAttributes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLabelStyle.html#Syncfusion_Maui_Maps_MapLabelStyle_FontAttributes), and [`FontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLabelStyle.html#Syncfusion_Maui_Maps_MapLabelStyle_FontFamily) in maps using the [`MapTooltipSettings.TextStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTooltipSettings.html#Syncfusion_Maui_Maps_MapTooltipSettings_TextStyle) property.
 
 {% tabs %}
 
@@ -382,9 +382,9 @@ public class Model
 ![Maps tooltip settings](images/tooltip/tooltip-appearance-customization.png)
 
 N>
-* Refer to the `ShapeTooltipSettings` to customize the shape tooltip appearance.
-* Refer to the `BubbleTooltipSettings` to customize the bubble tooltip appearance.
-* Refer to the `MarkerTooltipSettings` to customize the marker tooltip appearance.
+* Refer to the [`ShapeTooltipSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeTooltipSettings) to customize the shape tooltip appearance.
+* Refer to the [`BubbleTooltipSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_BubbleTooltipSettings) to customize the bubble tooltip appearance.
+* Refer to the [`MarkerTooltipSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_MarkerTooltipSettings) to customize the marker tooltip appearance.
 
 ### Apply data template for tooltip
 
@@ -559,7 +559,7 @@ Data template can be used customize the tooltip view using [`ShapeTooltipTemplat
 
 ![Maps tooltip appearance customization](images/tooltip/tooltip_textStyle.png)
 
-N> The `BindingContext` of the Tooltip will be the `MapTooltipInfo`, and it has the `DataItem` property. This property holds the corresponding underline object for the shape, bubble tooltip, and the corresponding `MapMarker` for the marker tooltip.
+N> The `BindingContext` of the Tooltip will be the [`MapTooltipInfo`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTooltipInfo.html), and it has the [`DataItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTooltipInfo.html#Syncfusion_Maui_Maps_MapTooltipInfo_DataItem) property. This property holds the corresponding underline object for the shape, bubble tooltip, and the corresponding [`MapMarker`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html?tabs=tabid-1) for the marker tooltip.
 
 N>
 * Refer to the [`ShapeTooltipTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeTooltipTemplate), for customize tooltip for the shapes.
