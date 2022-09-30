@@ -11,15 +11,15 @@ documentation: ug
 
 ## Overview
 
-The `SfListView` allows swiping items to achieve custom actions such as deleting the data, adding the data, editing the data, etc. To enable swiping, set the `SfListView.AllowSwiping` property to `true`. Swipe views are displayed when swiping from left to right or right to left (for `Horizontal` orientation, top to bottom, or bottom to top) on the item. 
+The `SfListView` allows swiping items to achieve custom actions such as deleting the data, adding the data, editing the data, etc. To enable swiping, set the [SfListView.AllowSwiping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_AllowSwiping) property to `true`. Swipe views are displayed when swiping from left to right or right to left (for `Horizontal` orientation, top to bottom, or bottom to top) on the item. 
 
-It provides customizable swipe templates for swiping on the left and right sides. You can restrict the layout of the swipe view up to a certain position when swiping the item by setting the `SfListView.SwipeThreshold` property. You can set the size of the swipe views by setting the `SfListView.SwipeOffset` property.
+It provides customizable swipe templates for swiping on the left and right sides. You can restrict the layout of the swipe view up to a certain position when swiping the item by setting the [SfListView.SwipeThreshold](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SwipeThreshold) property. You can set the size of the swipe views by setting the [SfListView.SwipeOffset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SwipeOffset) property.
 
 N> When tapping a swiped item, the [SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionChanging) and [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionChanged) events will not occur since the swiped item is reset at this time.
 
 ## Assigning start and end swipe templates
 
-The User Interface (UI) for swiping can be customized by using swipe templates `SfListView.StartSwipeTemplate` when swiping towards the right and `SfListView.EndSwipeTemplate` when swiping towards the left. The contents inside the swipe template are arranged based on the offset values when swiping an item. You can reset the swiping item or swiped item by calling the `SfListView.ResetSwipeItem` method.
+The User Interface (UI) for swiping can be customized by using swipe templates [SfListView.StartSwipeTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_StartSwipeTemplate) when swiping towards the right and [SfListView.EndSwipeTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_EndSwipeTemplate) when swiping towards the left. The contents inside the swipe template are arranged based on the offset values when swiping an item. You can reset the swiping item or swiped item by calling the [SfListView.ResetSwipeItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ResetSwipeItem_System_Boolean_) method.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -66,15 +66,15 @@ listView.StartSwipeTemplate = new DataTemplate(() =>
 {% endhighlight %}
 {% endtabs %}
 
-N> Similarly, the UI for swiping from right to left or bottom to top in vertical or horizontal orientation can be customized by using the `SfListView.EndSwipeTemplate`.
+N> Similarly, the UI for swiping from right to left or bottom to top in vertical or horizontal orientation can be customized by using the [SfListView.EndSwipeTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_EndSwipeTemplate).
 
 N> The swipe template is mandatory to perform swiping in the `SfListView`.
 
 ![Start swipe view in .NET MAUI ListView](Images/swiping/maui-listview-startswipetemplate.jpg)
 
-Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/how-to-customize-the-swipe-view-in-.net-maui-listview). 
-
 ![End swipe view in .NET MAUI ListView](Images/swiping/maui-listview-endswipetemplate.jpg)
+
+Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/how-to-customize-the-swipe-view-in-.net-maui-listview). 
 
 N> Customize the appearance of each swipe item with different templates based on specific constraints by using the `DataTemplateSelector`. 
 
@@ -221,7 +221,7 @@ private void rightImage_BindingContextChanged(object sender, EventArgs e)
 
 ## Performing swipe delete operation
 
-To delete an item in view while swiping the item from one extent to another,Use the `SfListView.SwipeEnded` event. By setting the `SfListView.SwipeOffset` value to the view size to swipe the item up to the end of the item.
+To delete an item in view while swiping the item from one extent to another,Use the [SfListView.SwipeEnded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SwipeEnded) event. By setting the [SfListView.SwipeOffset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SwipeOffset) value to the view size to swipe the item up to the end of the item.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -291,7 +291,7 @@ private void ListView_SwipeEnded(object sender, SwipeEndedEventArgs e)
 
 ## Programmatic swiping
 
-Using the `SwipeItem` method, you can swipe an item programmatically based on the given offset value. You need to pass the item to be swiped and `SwipeOffset` as a parameter in the `SwipeItem` method.
+Using the [SwipeItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SwipeItem_System_Object_System_Double_) method, you can swipe an item programmatically based on the given offset value. You need to pass the item to be swiped and `SwipeOffset` as a parameter in the `SwipeItem` method.
 
 <table>
 <tr>
@@ -336,17 +336,17 @@ private void RightSwipeButton_Clicked(object sender, EventArgs e)
 
 ### SwipeStarting Event
 
-The `SfListView.SwipeStarting` event is raised when the swipe offset changes from its initial value. 
+The [SfListView.SwipeStarting](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SwipeStarting) event is raised when the swipe offset changes from its initial value. 
 
 The `SwipeStarting` event provides the following properties in their arguments:
 
- * `Index`: Defines the swiping item index.
- * `DataItem`: Defines the underlying data associated with the swiped item as its arguments. 
- * `Direction`: Defines the swipe direction of the swiped item.
+ * [Index](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SwipeStartingEventArgs.html#Syncfusion_Maui_ListView_SwipeStartingEventArgs_Index): Defines the swiping item index.
+ * [DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SwipeStartingEventArgs.html#Syncfusion_Maui_ListView_SwipeStartingEventArgs_DataItem): Defines the underlying data associated with the swiped item as its arguments. 
+ * [Direction](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SwipeStartingEventArgs.html#Syncfusion_Maui_ListView_SwipeStartingEventArgs_Direction): Defines the swipe direction of the swiped item.
  
 The `SwipeStarting` event is used for the following use case:
 
- * You can cancel the swipe action for a particular item by setting the `Cancel` property of the `SwipeStartingEventArgs`.
+ * You can cancel the swipe action for a particular item by setting the `Cancel` property of the [SwipeStartingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SwipeStartingEventArgs.html).
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -370,15 +370,15 @@ private void ListView_SwipeStarting(object sender, SwipeStartedEventArgs e)
 
 ### Swiping Event
  
-The `SfListView.Swiping` event is raised while swiping an item is in progress. This event is triggered with `SwipingEventArgs`.
+The [SfListView.Swiping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_Swiping) event is raised while swiping an item is in progress. This event is triggered with [SwipingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SwipingEventArgs.html).
 
 The `Swiping` event provides the following properties in their arguments:
 
- * `Index`: Defines the swiping item index.
- * `DataItem`: Defines the underlying data associated with the swiped item as its arguments.
- * `Direction`: Defines the swipe direction of the swiped item.
- * `OffSet`: Defines the current swipe offset of the item being swiped.
- * `Handled`: Defines that if it is `true`,the current swipe offset value remains the same for the swiped item until the `SwipeEnded` event is raised.
+ * [Index](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SwipingEventArgs.html#Syncfusion_Maui_ListView_SwipingEventArgs_Index): Defines the swiping item index.
+ * [DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SwipingEventArgs.html#Syncfusion_Maui_ListView_SwipingEventArgs_DataItem): Defines the underlying data associated with the swiped item as its arguments.
+ * [Direction](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SwipingEventArgs.html#Syncfusion_Maui_ListView_SwipingEventArgs_Direction): Defines the swipe direction of the swiped item.
+ * [OffSet](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SwipingEventArgs.html#Syncfusion_Maui_ListView_SwipingEventArgs_OffSet): Defines the current swipe offset of the item being swiped.
+ * [Handled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SwipingEventArgs.html#Syncfusion_Maui_ListView_SwipingEventArgs_Handled): Defines that if it is `true`,the current swipe offset value remains the same for the swiped item until the [SwipeEnded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SwipeEnded) event is raised.
 
 The `Swiping` event used for the following use cases:
 
@@ -407,14 +407,14 @@ private void ListView_Swiping(object sender, SwipingEventArgs e)
 
 ### SwipeEnded Event
 
-The `SfListView.SwipeEnded` event is fired when completing the swipe action. This event is triggered with `SwipeEndedEventArgs`.
+The [SfListView.SwipeEnded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SwipeEnded) event is fired when completing the swipe action. This event is triggered with [SwipeEndedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SwipeEndedEventArgs.html).
 
 The `SwipeEnded` event provides the following properties in their arguments: 
 
- * `Index`: Defines the swiping item index.
- * `DataItem`: Defines the underlying data associated with the swiped item as its arguments. 
- * `Direction`: Defines the swipe direction of the swiped item.
- * `OffSet`: Defines the current swipe offset of the item being swiped.
+ * [Index](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SwipeEndedEventArgs.html#Syncfusion_Maui_ListView_SwipeEndedEventArgs_Index): Defines the swiping item index.
+ * [DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SwipeEndedEventArgs.html#Syncfusion_Maui_ListView_SwipeEndedEventArgs_DataItem): Defines the underlying data associated with the swiped item as its arguments. 
+ * [Direction](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SwipeEndedEventArgs.html#Syncfusion_Maui_ListView_SwipeEndedEventArgs_Direction): Defines the swipe direction of the swiped item.
+ * [OffSet](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SwipeEndedEventArgs.html#Syncfusion_Maui_ListView_SwipeEndedEventArgs_Offset): Defines the current swipe offset of the item being swiped.
  
 The `SwipeEnded` event is used for the following use cases:
  
@@ -444,15 +444,15 @@ private void ListView_SwipeEnded(object sender, SwipeEndedEventArgs e)
 
 ### SwipeReset Event
 
-The `SfListView.SwipeReset` event is fired when swipe view is reset. This event is triggered with `SwipeResetEventArgs`.
+The [SfListView.SwipeReset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SwipeReset) event is fired when swipe view is reset. This event is triggered with [SwipeResetEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ResetSwipeEventArgs.html).
 
 The `SwipeReset` event provides the following properties in their arguments:
 
- * `Index`: Defines the swiping item index.
- * `DataItem`: Defines the underlying data associated with the swiped item as its arguments. 
- * `OffSet`: Defines the current swipe offset of the item being swiped.
+ * [Index](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ResetSwipeEventArgs.html#Syncfusion_Maui_ListView_ResetSwipeEventArgs_Index): Defines the swiping item index.
+ * [DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ResetSwipeEventArgs.html#Syncfusion_Maui_ListView_ResetSwipeEventArgs_DataItem): Defines the underlying data associated with the swiped item as its arguments. 
+ * [OffSet](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ResetSwipeEventArgs.html#Syncfusion_Maui_ListView_ResetSwipeEventArgs_OffSet): Defines the current swipe offset of the item being swiped.
 
-Swiped item can be reset by defining the `SfListView.SwipeOffSet` argument of `SfListView.SwipeEnded` event to `0` when the swiping action is completed.
+Swiped item can be reset by defining the [SfListView.SwipeOffSet](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SwipeOffset) argument of [SfListView.SwipeEnded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SwipeEnded) event to `0` when the swiping action is completed.
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -466,7 +466,7 @@ private void ListView_SwipeEnded(object sender, SwipeEndedEventArgs e)
 
 ## How to swipe an item indefinitely
 
-To swipe an item indefinitely, set the `SfListView.SwipeOffset` property by considering the width or height of the SfListView with [SfListView.Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_Orientation) accordingly.
+To swipe an item indefinitely, set the [SfListView.SwipeOffset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SwipeOffset) property by considering the width or height of the SfListView with [SfListView.Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_Orientation) accordingly.
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -488,7 +488,7 @@ Download the entire source code from GitHub [here](https://github.com/Syncfusion
 
 ## How to edit data by swiping
 
-The `SfListView` allows editing the item data using either `SfListView.EndSwipeTemplate` or `SfListView.StartSwipeTemplate` by loading edit view into the respective template after swiping the item.
+The `SfListView` allows editing the item data using either [SfListView.EndSwipeTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_EndSwipeTemplate) or [SfListView.StartSwipeTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_StartSwipeTemplate) by loading edit view into the respective template after swiping the item.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
