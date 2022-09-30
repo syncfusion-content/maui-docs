@@ -119,15 +119,15 @@ SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 <td>Gets or sets a any view to display in the center of circular progress bar.</td></tr>
 <tr>
 <td>{{'[ProgressColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_ProgressColor)'| markdownify }}</td>
-<td>{{'[ProgressFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_ProgressFill)'| markdownify }}</td>
+<td>{{'[*ProgressFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_ProgressFill)'| markdownify }}</td>
 <td>Gets or sets the brush that paints the interior area of the progress.</td></tr>
 <tr>
 <td>{{'[TrackColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_TrackColor)'| markdownify }}</td>
-<td>{{'[TrackFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_TrackFill)'| markdownify }}</td>
+<td>{{'[*TrackFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_TrackFill)'| markdownify }}</td>
 <td>Gets or sets the brush that paints the interior area of the track.</td></tr>
 <tr>
 <td>{{'[RangeColors](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_RangeColors)'| markdownify }}</td>
-<td>{{'[GradientStops](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_GradientStops)'| markdownify }}</td>
+<td>{{'[*GradientStops](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_GradientStops)'| markdownify }}</td>
 <td>Gets or sets a collection of ProgressGradientStop to fill the gradient brush to the progress.</td></tr>
 <tr>
 <td>{{'[SegmentCount](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_SegmentCount)'| markdownify }}</td>
@@ -135,7 +135,7 @@ SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 <td>Gets or sets the value that determine the segments count of progress bar.</td></tr>
 <tr>
 <td>{{'[GapWidth](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_GapWidth)'| markdownify }}</td>
-<td>{{'[SegmentGapWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_SegmentGapWidth)'| markdownify }}</td>
+<td>{{'[*SegmentGapWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_SegmentGapWidth)'| markdownify }}</td>
 <td>Gets or sets the value that determines the gap between the segments.</td></tr>
 <tr>
 <td>{{'[AnimationDuration](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_AnimationDuration)'| markdownify }}</td>
@@ -147,32 +147,32 @@ SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 <td>Gets or sets a value that specifies the indeterminate animation duration in milliseconds.</td></tr>
 <tr>
 <td>{{'[EasingEffect](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_EasingEffect)'| markdownify }}</td>
-<td>{{'[AnimationEasing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_AnimationEasing)'| markdownify }}</td>
+<td>{{'[*AnimationEasing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_AnimationEasing)'| markdownify }}</td>
 <td>Gets or sets a value that specifies the easing effect for progress animation.</td></tr>
 <tr>
 <td>{{'[IndeterminateEasingEffect](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_IndeterminateEasingEffect)'| markdownify }}</td>
-<td>{{'[IndeterminateAnimationEasing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_IndeterminateAnimationEasing)'| markdownify }}</td>
+<td>{{'[*IndeterminateAnimationEasing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_IndeterminateAnimationEasing)'| markdownify }}</td>
 <td>Gets or sets a value that specifies the easing effect for indeterminate animation.</td></tr>
 <tr>
 <td>{{'[IndeterminateIndicatorWidth](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_IndeterminateIndicatorWidth)'| markdownify }}</td>
-<td>{{'[IndeterminateIndicatorWidthFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_IndeterminateIndicatorWidthFactor)'| markdownify }}</td>
+<td>{{'[*IndeterminateIndicatorWidthFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_IndeterminateIndicatorWidthFactor)'| markdownify }}</td>
 <td>Gets or sets the value that specifies width of the indeterminate indicator.</td></tr>
 
 <tr>
 <td>{{'[IndicatorInnerRadius](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfCircularProgressBar.html#Syncfusion_XForms_ProgressBar_SfCircularProgressBar_IndicatorInnerRadius)'| markdownify }}</td>
-<td>{{'[ProgressThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_ProgressThickness)'| markdownify }}</td>
+<td>{{'[*ProgressThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_ProgressThickness)'| markdownify }}</td>
 <td>Gets or sets a value that specifies the thickness of the progress. You can specify the value either in logical pixel or radius factor using the ThicknessUnit property.</td></tr>
 <tr>
 <td>{{'[IndicatorOuterRadius](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfCircularProgressBar.html#Syncfusion_XForms_ProgressBar_SfCircularProgressBar_IndicatorOuterRadius)'| markdownify }}</td>
-<td>{{'[ProgressRadiusFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_ProgressRadiusFactor)'| markdownify }}</td>
+<td>{{'[*ProgressRadiusFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_ProgressRadiusFactor)'| markdownify }}</td>
 <td>Gets or sets a value that specifies the outer radius factor of the progress.</td></tr>
 <tr>
 <td>{{'[TrackInnerRadius](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfCircularProgressBar.html#Syncfusion_XForms_ProgressBar_SfCircularProgressBar_TrackInnerRadius)'| markdownify }}</td>
-<td>{{'[TrackThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_TrackThickness)'| markdownify }}</td>
+<td>{{'[*TrackThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_TrackThickness)'| markdownify }}</td>
 <td>Gets or sets a value that specifies the thickness of the track in the circular progress bar. You can specify value either in logical pixel or radius factor using the ThicknessUnit property.</td></tr>
 <tr>
 <td>{{'[TrackOuterRadius](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfCircularProgressBar.html#Syncfusion_XForms_ProgressBar_SfCircularProgressBar_TrackOuterRadius)'| markdownify }}</td>
-<td>{{'[TrackRadiusFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_TrackRadiusFactor)'| markdownify }}</td>
+<td>{{'[*TrackRadiusFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html#Syncfusion_Maui_ProgressBar_SfCircularProgressBar_TrackRadiusFactor)'| markdownify }}</td>
 <td>Gets or sets a value that specifies the outer radius factor of the track.</td></tr>
 <tr>
 <td>{{'-'| markdownify }}</td>
@@ -192,13 +192,15 @@ SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
 <td>Gets or sets a value indicating whether to show the progress value label or not in SfCircularProgressBar.</td></tr>
 <tr>
 <td>{{'[ValueChanged](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_ValueChanged)'| markdownify }}</td>
-<td>{{'[ProgressChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_ProgressChanged)'| markdownify }}</td>
+<td>{{'[*ProgressChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_ProgressChanged)'| markdownify }}</td>
 <td>The value change event occurs when the Progress is changed.</td></tr>
 <tr>
 <td>{{'[ProgressCompleted](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.ProgressBarBase.html#Syncfusion_XForms_ProgressBar_ProgressBarBase_ProgressCompleted)'| markdownify }}</td>
 <td>{{'[ProgressCompleted](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.ProgressBarBase.html#Syncfusion_Maui_ProgressBar_ProgressBarBase_ProgressCompleted)'| markdownify }}</td>
 <td>The progress completed event occurs when Progress value attains Maximum value in ProgressBar.</td></tr>
 </table> 
+
+N> All the (*) marked APIs are renamed from Xamarin SfCircularProgressBar to maintain the consistency of API naming in the .NET MAUI SfCircularProgressBar.
 
 The following code example explains how to use the properties in the Xamarin circular progress bar and the .NET MAUI circular progress bar.
 
