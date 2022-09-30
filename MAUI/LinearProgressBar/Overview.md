@@ -13,15 +13,15 @@ The .NET MAUI Linear ProgressBar shows the progress of a task with custom visual
 
 ### Key features
 
-**States** - Visualize progress of a process in determinate, indeterminate, and buffer states.  
+* **States** - Visualize progress of a process in determinate, indeterminate, and buffer states.  
 
-**Progress shapes** - Visualize progress in a rectangle shape.
+* **Progress shapes** - Visualize progress in a rectangle shape.
 
-**Segments** - Progress can be divided into multiple segments to show a gradual progress.
+* **Segments** - Progress can be divided into multiple segments to show a gradual progress.
 
-**Color ranges** - Customize ranges with  different colors.
+* **Color ranges** - Customize ranges with  different colors.
 
-**Appearance customization** - Customize the track thickness, color, and corner radius. 
+* **Appearance customization** - Customize the track thickness, color, and corner radius. 
 
 ![Linear ProgressBar control for .NET MAUI.](images/overview/dotnet_maui_progressbar.png)
 
