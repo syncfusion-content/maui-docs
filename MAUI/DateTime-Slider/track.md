@@ -11,6 +11,47 @@ documentation: ug
 
 This section helps to learn about how to customize the track in the DateTime Slider.
 
+## Minimum
+
+The minimum value that the user can select. The default value of the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.IDateTimeElement.html#Syncfusion_Maui_Sliders_IDateTimeElement_Minimum) property is `null`. The [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.IDateTimeElement.html#Syncfusion_Maui_Sliders_IDateTimeElement_Minimum) must be less than the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.IDateTimeElement.html#Syncfusion_Maui_Sliders_IDateTimeElement_Maximum) value.
+
+## Maximum
+
+The maximum value that the user can select. The default value of the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.IDateTimeElement.html#Syncfusion_Maui_Sliders_IDateTimeElement_Maximum) property is `null`. The [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.IDateTimeElement.html#Syncfusion_Maui_Sliders_IDateTimeElement_Maximum) value must be greater than the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html#Syncfusion_Maui_Sliders_SfSlider_Maximum) value.
+
+## Value
+
+It represents the value currently selected in the DateTime Slider. The slider's thumb is drawn corresponding to this value.
+
+It does not have auto interval support. So, setting [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html?tabs=tabid-1#Syncfusion_Maui_Sliders_SliderBase_Interval), [`IntervalType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeSlider_IntervalType), and [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeSlider_DateFormat) for date values is mandatory.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfDateTimeSlider Minimum="2010-01-01"
+                          Maximum="2020-01-01"
+                          Value="2015-01-01"
+                          ShowTicks="True"
+                          ShowLabels="True" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfDateTimeSlider slider = new SfDateTimeSlider();
+slider.Minimum = new DateTime(2010, 01, 01);
+slider.Maximum = new DateTime(2020, 01, 01);
+slider.Value = new DateTime(2015, 01, 01);
+slider.ShowTicks = true;
+slider.ShowLabels = true;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![DateTime Slider date label](images/track/date-labels.png)
+
 ## Track color
 
 Change the active and inactive track color of the DateTime Slider using the [`ActiveFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTrackStyle.html#Syncfusion_Maui_Sliders_SliderTrackStyle_ActiveFill) and [`InactiveFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTrackStyle.html#Syncfusion_Maui_Sliders_SliderTrackStyle_InactiveFill) properties of the [`TrackStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_TrackStyle) class.

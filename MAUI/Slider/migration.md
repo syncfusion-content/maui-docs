@@ -169,6 +169,19 @@ In Xamarin.Forms, the Range Slider and Slider are combined as the [Xamarin Range
 <td>Gets or sets the value to format the label text in the SfSlider.</td></tr>
 </table> 
 
+### Step
+
+<table> 
+<tr>
+<th>Xamarin SfRangeSlider</th>
+<th>.NET MAUI SfSlider</th>
+<th>Description</th></tr>
+<tr>
+<td>{{'[SnapsTo](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_SnapsTo)'| markdownify }}</td>
+<td>{{'[StepSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html#Syncfusion_Maui_Sliders_SfSlider_StepSize)'| markdownify }}</td>
+<td>Gets or sets the value indicating whether to select the discrete value.</td></tr>
+</table> 
+
 ## Events
 
 <table>

@@ -27,11 +27,11 @@ The `SfListView` allows selecting items on different gestures such as tap, doubl
  <syncfusion:SfListView x:Name="listView"
                         ItemsSource="{Binding MusicInfo}"
                         SelectionMode="Multiple"
-                        SelectionGesture="Hold"/>
+                        SelectionGesture="LongPress"/>
 {% endhighlight %}                     
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 listView.SelectionMode = SelectionMode.Multiple;
-listView.SelectionGesture = TouchGesture.Hold;
+listView.SelectionGesture = TouchGesture.LongPress;
 {% endhighlight %}
 {% endtabs %}
 

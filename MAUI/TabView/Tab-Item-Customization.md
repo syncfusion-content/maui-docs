@@ -221,6 +221,33 @@ The image will be placed to the right side of the text horizontally.
 
 ![Tab Image Position Right](images/Image-Position-Right.png) 
 
+## Image Text Spacing
+
+The `ImageTextSpacing` property in SfTabItem allows for the provision of spacing between the image and the text of the tab item.
+
+{% tabs %}
+
+{% highlight xaml %}
+<tabView:SfTabView>
+    <tabView:SfTabItem ImageTextSpacing="20">
+</tabView:SfTabView>
+{% endhighlight %}
+
+{% highlight C# %}
+var tabView = new SfTabView();
+var tabItems = new TabItemCollection
+{
+    new SfTabItem()
+    {
+        ImageTextSpacing = "20",
+    }
+}
+{% endhighlight %}
+
+{% endtabs %}
+
+![Image Text Spacing](images/Image-Text-Spacing.png)
+
 ## Text Color Customization 
 
 The text color of the tab item displayed in the tab bar.

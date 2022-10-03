@@ -105,13 +105,12 @@ The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.S
 
 {% highlight xaml %}
 
-<sliders:SfRangeSlider Minimum="0" 
-                       Maximum="10" 
-                       RangeStart="2" 
+<sliders:SfRangeSlider Minimum="0"
+                       Maximum="10"
+                       RangeStart="2"
                        RangeEnd="8"
-                       Interval="2" 
-                       ShowLabel="True">
-</sliders:SfRangeSlider>
+                       Interval="2"
+                       ShowLabels="True" />
 
 {% endhighlight %}
 
@@ -122,7 +121,7 @@ rangeSlider.Minimum = 0;
 rangeSlider.Maximum = 10;
 rangeSlider.RangeStart = 2;
 rangeSlider.RangeEnd = 8;
-rangeSlider.ShowLabel = true;
+rangeSlider.ShowLabels = true;
 rangeSlider.Interval = 2;
 
 {% endhighlight %}
@@ -139,15 +138,14 @@ The [`ShowTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.Sl
 
 {% highlight xaml %}
 
-<sliders:SfRangeSlider Minimum="0" 
-                       Maximum="10" 
-                       RangeStart="2" 
-                       RangeEnd="8"                       
-                       Interval="2" 
+<sliders:SfRangeSlider Minimum="0"
+                       Maximum="10"
+                       RangeStart="2"
+                       RangeEnd="8"
+                       Interval="2"
                        ShowLabels="True"
                        ShowTicks="True"
-                       MinorTicksPerInterval="1">
-</sliders:SfRangeSlider>
+                       MinorTicksPerInterval="1" />
 
 {% endhighlight %}
 
@@ -177,15 +175,15 @@ The [`Orientation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.
 
 {% highlight xaml %}
 
-<sliders:SfRangeSlider Minimum="0" 
-                       Maximum="10" 
-                       RangeStart="2" 
-                       RangeEnd="8" 
-                       ShowTicks="True" 
-                       Interval="2" 
-                       MinorTicksPerInterval="1" 
-                       Orientation="Vertical">
-</sliders:SfRangeSlider>
+<sliders:SfRangeSlider Minimum="0"
+                       Maximum="10"
+                       RangeStart="2"
+                       RangeEnd="8"
+                       ShowTicks="True"
+                       ShowLabels="True"
+                       Interval="2"
+                       MinorTicksPerInterval="1"
+                       Orientation="Vertical" />
 
 {% endhighlight %}
 
@@ -216,17 +214,15 @@ Invert the range slider using the [`IsInversed`](https://help.syncfusion.com/cr/
 
 {% highlight xaml %}
 
-<sliders:SfRangeSlider Minimum="0" 
-                       Maximum="10" 
-                       RangeStart="2" 
+<sliders:SfRangeSlider Minimum="0"
+                       Maximum="10"
+                       RangeStart="2"
                        RangeEnd="8"
-                       Interval="2" 
+                       Interval="2"
                        ShowTicks="True"
-                       ShowLablels="True"  
-                       MinorTicksPerInterval="1" 
-                       Orientation="Vertical" 
-                       IsInversed="True">
-</sliders:SfRangeSlider>
+                       ShowLabels="True"
+                       MinorTicksPerInterval="1"
+                       IsInversed="True" />
 
 {% endhighlight %}
 
@@ -247,7 +243,7 @@ rangeSlider.IsInversed = true;
 
 {% endtabs %}
 
-![Inverse rangeslider](images/getting-started/slider-inverse.png)
+![Inverse range slider](images/getting-started/slider-inverse.png)
 
 ## Formatting labels
 
@@ -257,15 +253,14 @@ Add prefix or suffix to the labels using the [`NumberFormat`](https://help.syncf
 
 {% highlight xaml %}
 
-<sliders:SfRangeSlider Minimum="20" 
-                       Maximum="100" 
-                       RangeStart="20" 
+<sliders:SfRangeSlider Minimum="20"
+                       Maximum="100"
+                       RangeStart="40"
                        RangeEnd="80"
                        Interval="20"
                        ShowLabels="True"
-                       NumberFormat="$#" 
-                       ShowTicks="True">
-</sliders:SfRangeSlider>
+                       NumberFormat="$#"
+                       ShowTicks="True" />
 
 {% endhighlight %}
 
@@ -274,7 +269,7 @@ Add prefix or suffix to the labels using the [`NumberFormat`](https://help.syncf
 SfRangeSlider rangeSlider = new SfRangeSlider();
 rangeSlider.Minimum = 20;
 rangeSlider.Maximum = 100;
-rangeSlider.RangeStart = 20;
+rangeSlider.RangeStart = 40;
 rangeSlider.RangeEnd = 80;
 rangeSlider.Interval = 20;
 rangeSlider.ShowLabels = true;

@@ -24,9 +24,9 @@ For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.M
 {% highlight xaml %}
 
 <sliders:SfDateTimeRangeSlider Minimum="2000-01-01" 
-                               Maximum="2005-01-01" 
+                               Maximum="2004-01-01" 
                                RangeStart="2001-01-01" 
-                               RangeEnd="2004-01-01"
+                               RangeEnd="2003-01-01"
                                Interval="1" 
                                IntervalType="Years"
                                DateFormat="yyyy" 
@@ -41,9 +41,9 @@ For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.M
 
 SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider();
 rangeSlider.Minimum = new DateTime(2000, 01, 01);
-rangeSlider.Maximum = new DateTime(2005, 01, 01);
+rangeSlider.Maximum = new DateTime(2004, 01, 01);
 rangeSlider.RangeStart = new DateTime(2001, 01, 01); 
-rangeSlider.RangeEnd = new DateTime(2004, 01, 01);            
+rangeSlider.RangeEnd = new DateTime(2003, 01, 01);            
 rangeSlider.Interval = 1;
 rangeSlider.IntervalType = SliderDateIntervalType.Years;
 rangeSlider.DateFormat = "yyyy";
@@ -67,15 +67,15 @@ For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.M
 
 {% highlight xaml %}
 
-<sliders:SfDateTimeRangeSlider Minimum="2000-01-01" 
-                               Maximum="2005-01-01" 
+<sliders:SfDateTimeRangeSlider Minimum="2000-01-01"
+                               Maximum="2004-01-01"
                                RangeStart="2001-01-01"
-                               RangeEnd="2004-01-01"  
+                               RangeEnd="2003-01-01"
+                               Interval="1"
                                StepDuration="1"
-                               ShowLabels="True" 
-                               ShowTicks="True" 
-                               ShowDividers="True" >
-</sliders:SfDateTimeRangeSlider>
+                               ShowLabels="True"
+                               ShowTicks="True"
+                               ShowDividers="True" />
 
 {% endhighlight %}
 
@@ -83,12 +83,13 @@ For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.M
 
 SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider();
 rangeSlider.Minimum = new DateTime(2000, 01, 01);
-rangeSlider.Maximum = new DateTime(2005, 01, 01);
+rangeSlider.Maximum = new DateTime(2004, 01, 01);
 rangeSlider.RangeStart = new DateTime(2001, 01, 01); 
-rangeSlider.RangeEnd = new DateTime(2004, 01, 01);     
-rangeSlider.ShowLables = true;
+rangeSlider.RangeEnd = new DateTime(2003, 01, 01);     
+rangeSlider.ShowLabels = true;
 rangeSlider.ShowTicks = true;      
 rangeSlider.ShowDividers = true;    
+rangeSlider.Interval = 1;  
 rangeSlider.StepDuration = new SliderStepDuration(years: 1);
          
 {% endhighlight %}

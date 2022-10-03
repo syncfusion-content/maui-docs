@@ -104,3 +104,57 @@ chart.Series.Add(series);
 {% endtabs %}
 
 ![Semi doughnut chart in MAUI Chart](Chart-Types_images/maui_semi_doughnut_chart.png)
+
+## Center View
+
+The view placed in the center of the doughnut chart is useful for sharing additional information about the doughnut chart. Any view can be added to the center of the doughnut chart using the [CenterView]() property of [DoughnutSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DoughnutSeries.html). The binding context of the [CenterView]() will be the respective doughnut series.
+
+### Center Hole Size
+
+The [CenterHoleSize]() property of [DoughnutSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DoughnutSeries.html) is used to get the diameter value of the center hole. Using the [CenterHoleSize](), we can protect the view in the doughnut center from overlapping with the series.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCircularChart>    
+    <chart:DoughnutSeries ItemsSource="{Binding Data}" XBindingPath="Name" YBindingPath="Value"/>
+        <chart:DoughnutSeries.CenterView>
+                <Border HeightRequest="{Binding CenterHoleSize}" WidthRequest="{Binding CenterHoleSize}">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="200"/>
+                    </Border.StrokeShape>
+                    <StackLayout>
+                        <Label Text="Total :" />
+                        <Label Text="357,580 km²"/>
+                    </StackLayout>
+                </Border>
+        </chart:DoughnutSeries.CenterView>
+    </chart:DoughnutSeries>
+</chart:SfCircularChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCircularChart chart = new SfCircularChart();       
+DoughnutSeries series = new DoughnutSeries()
+series.XBindingPath = "Name";
+series.YBindingPath = "Value";
+
+Border border = new Border();  
+Label name = new Label();
+name.Text = "Total :";
+Label value = new Label()
+value.Text = "357,580 km²";
+StackLayout layout = new StackLayout();
+
+border.Content = layout;
+series.CenterView = border;
+chart.Series.Add(series);
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Center View in MAUI doughnut Chart](Chart-Types_images/maui_center_View.png)

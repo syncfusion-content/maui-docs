@@ -21,15 +21,14 @@ For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.M
 
 {% highlight xaml %}
 
-<sliders:SfRangeSlider Minimum="0" 
-                       Maximum="10" 
-                       RangeStart="2" 
+<sliders:SfRangeSlider Minimum="0"
+                       Maximum="10"
+                       RangeStart="2"
                        RangeEnd="8"
-                       Interval="2" 
-                       ShowLabels="True" 
-                       ShowTicks="True" 
-                       ShowDividers="True">
-</sliders:SfRangeSlider>
+                       Interval="2"
+                       ShowLabels="True"
+                       ShowTicks="True"
+                       ShowDividers="True" />
 
 {% endhighlight %}
 
@@ -59,16 +58,15 @@ Move the thumb in discrete manner for numeric values using the [`StepSize`](http
 
 {% highlight xaml %}
 
- <sliders:SfRangeSlider Minimum="0" 
-                        Maximum="10" 
-                        RangeStart="2" 
-                        RangeEnd="8"
-                        Interval="2"
-                        StepSize="2" 
-                        ShowLabels="True" 
-                        ShowTicks="True" 
-                        ShowDividers="True"> 
-</sliders:SfRangeSlider>
+<sliders:SfRangeSlider Minimum="0"
+                       Maximum="10"
+                       RangeStart="2"
+                       RangeEnd="8"
+                       Interval="2"
+                       StepSize="2"
+                       ShowLabels="True"
+                       ShowTicks="True"
+                       ShowDividers="True" />
 
 {% endhighlight %}
 
@@ -107,8 +105,7 @@ If true, both the thumbs can be only moved on the slider Interval.
                        Interval="2"
                        ShowTicks="True"
                        ShowLabels="True"
-                       EnableIntervalSelection="True" >
-</sliders:SfRangeSlider>
+                       EnableIntervalSelection="True" />
 
 {% endhighlight %}
 
