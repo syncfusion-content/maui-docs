@@ -16,6 +16,7 @@ Vertical(Y) axis always uses numerical scale. Horizontal(X) axis supports the fo
 * Category
 * Numeric
 * Date time
+* Logarithm
 
 ## Key features
 
