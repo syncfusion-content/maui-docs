@@ -88,7 +88,7 @@ SfMaps map = new SfMaps();
       {{'[Layers](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.SfMaps.html#Syncfusion_SfMaps_XForms_SfMaps_Layers)'| markdownify }}
    </td>
    <td>
-      {{'[Layer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.SfMaps.html#Syncfusion_Maui_Maps_SfMaps_Layer)'| markdownify }}
+      {{'[*Layer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.SfMaps.html#Syncfusion_Maui_Maps_SfMaps_Layer)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -96,10 +96,12 @@ SfMaps map = new SfMaps();
       {{'[ShapeFileLayer](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeFileLayer.html)'| markdownify }}
    </td>
    <td>
-      {{'[MapShapeLayer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html)'| markdownify }}
+      {{'[*MapShapeLayer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html)'| markdownify }}
    </td>
 </tr>
 </table>
+
+N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
 
 ## Adding layer
 
@@ -113,7 +115,7 @@ SfMaps map = new SfMaps();
       {{'[BubbleMarkerSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeFileLayer.html#Syncfusion_SfMaps_XForms_ShapeFileLayer_BubbleMarkerSettings)'| markdownify }}
    </td>
    <td>
-      {{'[BubbleSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_BubbleSettings)'| markdownify }}
+      {{'[*BubbleSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_BubbleSettings)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -137,7 +139,7 @@ SfMaps map = new SfMaps();
       {{'[ItemsSource](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeFileLayer.html#Syncfusion_SfMaps_XForms_ShapeFileLayer_ItemsSource)'| markdownify }}
    </td>
    <td>
-      {{'[DataSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_DataSource)'| markdownify }}
+      {{'[*DataSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_DataSource)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -145,7 +147,7 @@ SfMaps map = new SfMaps();
       {{'[ShapeIDPath](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeFileLayer.html#Syncfusion_SfMaps_XForms_ShapeFileLayer_ShapeIDPath)'| markdownify }}
    </td>
    <td>
-      {{'[PrimaryValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_PrimaryValuePath)'| markdownify }}
+      {{'[*PrimaryValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_PrimaryValuePath)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -153,7 +155,7 @@ SfMaps map = new SfMaps();
       {{'[ShapeIDTableField](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeFileLayer.html#Syncfusion_SfMaps_XForms_ShapeFileLayer_ShapeIDTableField)'| markdownify }}
    </td>
    <td>
-      {{'[ShapeDataField](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeDataField)'| markdownify }}
+      {{'[*ShapeDataField](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeDataField)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -161,7 +163,7 @@ SfMaps map = new SfMaps();
       {{'[Uri](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeFileLayer.html#Syncfusion_SfMaps_XForms_ShapeFileLayer_Uri)'| markdownify }}
    </td>
    <td>
-      {{'[ShapesSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapesSource)'| markdownify }}
+      {{'[*ShapesSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapesSource)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -185,7 +187,7 @@ SfMaps map = new SfMaps();
       {{'[ShapeSelectionChanged](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeFileLayer.html#Syncfusion_SfMaps_XForms_ShapeFileLayer_ShapeSelectionChanged)'| markdownify }}
    </td>
    <td>
-      {{'[ShapeSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeSelected)'| markdownify }}
+      {{'[*ShapeSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeSelected)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -230,7 +232,7 @@ SfMaps map = new SfMaps();
        {{'[ShapeSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html)'| markdownify }} class
    </td>
    <td>
-      {{'[SelectedShapeFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_SelectedShapeFill)'| markdownify }}
+      {{'[*SelectedShapeFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_SelectedShapeFill)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -261,6 +263,8 @@ SfMaps map = new SfMaps();
    </td>
 </tr>
 </table>
+
+N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
 
 The following code example explains how to intialize the layer and customize the layer in Xamarin SfMaps and .Net MAUI SfMaps.
 
@@ -405,7 +409,7 @@ The following code example explains how to intialize the layer and customize the
       {{'[ValuePath](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.BubbleMarkerSetting.html#Syncfusion_SfMaps_XForms_BubbleMarkerSetting_ValuePath)'| markdownify }}
    </td>
    <td>
-      {{'[SizeValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapBubbleSettings.html#Syncfusion_Maui_Maps_MapBubbleSettings_SizeValuePath)'| markdownify }}
+      {{'[*SizeValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapBubbleSettings.html#Syncfusion_Maui_Maps_MapBubbleSettings_SizeValuePath)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -418,6 +422,8 @@ The following code example explains how to intialize the layer and customize the
    </td>
 </tr>
 </table>
+
+N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
 
 The following code example explains how to customize the bubble in the Xamarin SfMaps and .Net MAUI SfMaps.
 
@@ -546,7 +552,7 @@ public MainPage()
       {{'[SmartLabelMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.DataLabelSetting.html#Syncfusion_SfMaps_XForms_DataLabelSetting_SmartLabelMode)'| markdownify }}
    </td>
    <td>
-      {{'[OverflowMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapDataLabelSettings.html#Syncfusion_Maui_Maps_MapDataLabelSettings_OverflowMode)'| markdownify }}
+      {{'[*OverflowMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapDataLabelSettings.html#Syncfusion_Maui_Maps_MapDataLabelSettings_OverflowMode)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -557,10 +563,12 @@ public MainPage()
       {{'[FontAttributes](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.DataLabelSetting.html#Syncfusion_SfMaps_XForms_DataLabelSetting_FontAttributes)'| markdownify }}
    </td>
    <td>
-      {{'[DataLabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapDataLabelSettings.html#Syncfusion_Maui_Maps_MapDataLabelSettings_DataLabelStyle)'| markdownify }}
+      {{'[*DataLabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapDataLabelSettings.html#Syncfusion_Maui_Maps_MapDataLabelSettings_DataLabelStyle)'| markdownify }}
    </td>
 </tr>
 </table>
+
+N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
 
 The following code example explains how to customize the data label in the Xamarin SfMaps and .Net MAUI SfMaps.
 
@@ -699,7 +707,7 @@ public MainPage()
       {{'[LegendLabel](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ColorMapping.html#Syncfusion_SfMaps_XForms_ColorMapping_LegendLabel)'| markdownify }}
    </td>
    <td>
-      {{'[Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.ColorMapping.html#Syncfusion_Maui_Maps_ColorMapping_Text)'| markdownify }}
+      {{'[*Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.ColorMapping.html#Syncfusion_Maui_Maps_ColorMapping_Text)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -761,6 +769,8 @@ public MainPage()
    </td>
 </tr>
 </table>
+
+N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
 
 The following code example explains how to customize the shape color in the Xamarin SfMaps and .Net MAUI SfMaps.
 
@@ -922,7 +932,7 @@ public MainPage()
       {{'[MapMarkerSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.MapMarkerSetting.html)'| markdownify }}
    </td>
    <td>
-      {{'[IconFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_IconFill)'| markdownify }}
+      {{'[*IconFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_IconFill)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -931,7 +941,7 @@ public MainPage()
       {{'[MapMarkerSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.MapMarkerSetting.html)'| markdownify }}
    </td>
    <td>
-      {{'[IconHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_IconHeight)'| markdownify }} and
+      {{'[*IconHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_IconHeight)'| markdownify }} and
        {{'[IconWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_IconWidth)'| markdownify }}
    </td>
 </tr>
@@ -941,7 +951,7 @@ public MainPage()
       {{'[MapMarkerSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.MapMarkerSetting.html)'| markdownify }}
    </td>
    <td>
-      {{'[IconType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_IconType)'| markdownify }}
+      {{'[*IconType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_IconType)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -963,6 +973,8 @@ public MainPage()
    </td>
 </tr>
 </table>
+
+N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
 
 The following code example explains how to customize marker in the Xamarin SfMaps and .Net MAUI SfMaps.
 
@@ -1073,7 +1085,7 @@ public MainPage()
       {{'[MapLegendSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.MapLegendSetting.html)'| markdownify }}
    </td>
    <td>
-      {{'[SourceType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html#Syncfusion_Maui_Maps_MapLegend_SourceType)'| markdownify }}
+      {{'[*SourceType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html#Syncfusion_Maui_Maps_MapLegend_SourceType)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -1085,7 +1097,7 @@ public MainPage()
       {{'[MapLegendSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.MapLegendSetting.html)'| markdownify }}
    </td>
    <td>
-      {{'[TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html#Syncfusion_Maui_Maps_MapLegend_TextStyle)'| markdownify }}
+      {{'[*TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html#Syncfusion_Maui_Maps_MapLegend_TextStyle)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -1103,10 +1115,12 @@ public MainPage()
       {{'[MapLegendSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.MapLegendSetting.html)'| markdownify }}
    </td>
    <td>
-      {{'[IconType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html#Syncfusion_Maui_Maps_MapLegend_IconType)'| markdownify }}
+      {{'[*IconType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html#Syncfusion_Maui_Maps_MapLegend_IconType)'| markdownify }}
    </td>
 </tr>
 </table>
+
+N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
 
 The following code example explains how to customize legend in the Xamarin SfMaps and .Net MAUI SfMaps.
 
@@ -1265,7 +1279,7 @@ public MainPage()
       {{'[TooltipSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.TooltipSetting.html)'| markdownify }}
    </td>
    <td>
-      {{'[MapTooltipSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTooltipSettings.html?tabs=tabid-1)'| markdownify }}
+      {{'[*MapTooltipSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTooltipSettings.html?tabs=tabid-1)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -1274,7 +1288,7 @@ public MainPage()
       {{'[TooltipSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.TooltipSetting.html)'| markdownify }}
    </td>
    <td>
-      Divided into {{'[ShowShapeTooltip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShowShapeTooltip)'| markdownify }}, {{'[ShowBubbleTooltip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShowBubbleTooltip)'| markdownify }} and {{'[ShowMarkerTooltip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_ShowMarkerTooltip)'| markdownify }}
+      Divided into {{'[*ShowShapeTooltip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShowShapeTooltip)'| markdownify }}, {{'[*ShowBubbleTooltip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShowBubbleTooltip)'| markdownify }} and {{'[*ShowMarkerTooltip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_ShowMarkerTooltip)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -1284,7 +1298,7 @@ public MainPage()
 
    </td>
    <td>
-      {{'[ShapeTooltipSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeTooltipSettings)'| markdownify }}
+      {{'[*ShapeTooltipSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_ShapeTooltipSettings)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -1294,7 +1308,7 @@ public MainPage()
 
    </td>
    <td>
-      {{'[BubbleTooltipSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_BubbleTooltipSettings)'| markdownify }}
+      {{'[*BubbleTooltipSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_BubbleTooltipSettings)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -1304,7 +1318,7 @@ public MainPage()
 
    </td>
    <td>
-      {{'[MarkerTooltipSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_MarkerTooltipSettings)'| markdownify }}
+      {{'[*MarkerTooltipSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_MarkerTooltipSettings)'| markdownify }}
    </td>
 </tr>
 </table>
@@ -1321,7 +1335,7 @@ public MainPage()
       {{'[BackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.TooltipSetting.html#Syncfusion_SfMaps_XForms_TooltipSetting_BackgroundColor)'| markdownify }}
    </td>
    <td>
-      {{'[Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTooltipSettings.html#Syncfusion_Maui_Maps_MapTooltipSettings_Background)'| markdownify }}
+      {{'[*Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTooltipSettings.html#Syncfusion_Maui_Maps_MapTooltipSettings_Background)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -1329,7 +1343,7 @@ public MainPage()
       {{'[Margin](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.TooltipSetting.html#Syncfusion_SfMaps_XForms_TooltipSetting_Margin)'| markdownify }}
    </td>
    <td>
-      {{'[Padding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTooltipSettings.html#Syncfusion_Maui_Maps_MapTooltipSettings_Padding)'| markdownify }}
+      {{'[*Padding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTooltipSettings.html#Syncfusion_Maui_Maps_MapTooltipSettings_Padding)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -1341,10 +1355,12 @@ public MainPage()
 
    </td>
    <td>
-      {{'[TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTooltipSettings.html#Syncfusion_Maui_Maps_MapTooltipSettings_TextStyle)'| markdownify }}
+      {{'[*TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTooltipSettings.html#Syncfusion_Maui_Maps_MapTooltipSettings_TextStyle)'| markdownify }}
    </td>
 </tr>
 </table>
+
+N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
 
 The following code example explains how to customize tooltip in the Xamarin SfMaps and .Net MAUI SfMaps.
 
@@ -1479,7 +1495,7 @@ The following code example explains how to customize tooltip in the Xamarin SfMa
       {{'[BubbleMarkerSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeFileLayer.html#Syncfusion_SfMaps_XForms_ShapeFileLayer_BubbleMarkerSettings)'| markdownify }}
    </td>
    <td>
-      {{'[BubbleSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeSublayer.html#Syncfusion_Maui_Maps_MapShapeSublayer_BubbleSettings)'| markdownify }}
+      {{'[*BubbleSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeSublayer.html#Syncfusion_Maui_Maps_MapShapeSublayer_BubbleSettings)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -1495,7 +1511,7 @@ The following code example explains how to customize tooltip in the Xamarin SfMa
       {{'[ItemsSource](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeFileLayer.html#Syncfusion_SfMaps_XForms_ShapeFileLayer_ItemsSource)'| markdownify }}
    </td>
    <td>
-      {{'[DataSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeSublayer.html#Syncfusion_Maui_Maps_MapShapeSublayer_DataSource)'| markdownify }}
+      {{'[*DataSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeSublayer.html#Syncfusion_Maui_Maps_MapShapeSublayer_DataSource)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -1503,7 +1519,7 @@ The following code example explains how to customize tooltip in the Xamarin SfMa
       {{'[ShapeIDPath](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeFileLayer.html#Syncfusion_SfMaps_XForms_ShapeFileLayer_ShapeIDPath)'| markdownify }}
    </td>
    <td>
-      {{'[PrimaryValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeSublayer.html#Syncfusion_Maui_Maps_MapShapeSublayer_PrimaryValuePath)'| markdownify }}
+      {{'[*PrimaryValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeSublayer.html#Syncfusion_Maui_Maps_MapShapeSublayer_PrimaryValuePath)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -1511,7 +1527,7 @@ The following code example explains how to customize tooltip in the Xamarin SfMa
       {{'[ShapeIDTableField](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeFileLayer.html#Syncfusion_SfMaps_XForms_ShapeFileLayer_ShapeIDTableField)'| markdownify }}
    </td>
    <td>
-      {{'[ShapeDataField](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeSublayer.html#Syncfusion_Maui_Maps_MapShapeSublayer_ShapeDataField)'| markdownify }}
+      {{'[*ShapeDataField](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeSublayer.html#Syncfusion_Maui_Maps_MapShapeSublayer_ShapeDataField)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -1519,7 +1535,7 @@ The following code example explains how to customize tooltip in the Xamarin SfMa
       {{'[Uri](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeFileLayer.html#Syncfusion_SfMaps_XForms_ShapeFileLayer_Uri)'| markdownify }}
    </td>
    <td>
-      {{'[ShapesSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeSublayer.html#Syncfusion_Maui_Maps_MapShapeSublayer_ShapesSource)'| markdownify }}
+      {{'[*ShapesSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeSublayer.html#Syncfusion_Maui_Maps_MapShapeSublayer_ShapesSource)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -1568,6 +1584,8 @@ The following code example explains how to customize tooltip in the Xamarin SfMa
    </td>
 </tr>
 </table>
+
+N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
 
 The following code example explains how to initialize the shape sublayer and it's customization in the Xamarin SfMaps and .Net MAUI SfMaps.
 
@@ -1725,7 +1743,7 @@ public MainPage()
       {{'[ValuePath](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.BubbleMarkerSetting.html#Syncfusion_SfMaps_XForms_BubbleMarkerSetting_ValuePath)'| markdownify }}
    </td>
    <td>
-      {{'[SizeValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapBubbleSettings.html#Syncfusion_Maui_Maps_MapBubbleSettings_SizeValuePath)'| markdownify }}
+      {{'[*SizeValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapBubbleSettings.html#Syncfusion_Maui_Maps_MapBubbleSettings_SizeValuePath)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -1737,6 +1755,8 @@ public MainPage()
    </td>
 </tr>
 </table>
+
+N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
 
 The following code example explains how to customize the bubble in the Xamarin SfMaps and .Net MAUI SfMaps.
 
@@ -1876,7 +1896,7 @@ public MainPage()
       {{'[SmartLabelMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.DataLabelSetting.html#Syncfusion_SfMaps_XForms_DataLabelSetting_SmartLabelMode)'| markdownify }}
    </td>
    <td>
-      {{'[OverflowMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapDataLabelSettings.html#Syncfusion_Maui_Maps_MapDataLabelSettings_OverflowMode)'| markdownify }}
+      {{'[*OverflowMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapDataLabelSettings.html#Syncfusion_Maui_Maps_MapDataLabelSettings_OverflowMode)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -1887,10 +1907,12 @@ public MainPage()
       {{'[FontAttributes](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.DataLabelSetting.html#Syncfusion_SfMaps_XForms_DataLabelSetting_FontAttributes)'| markdownify }}
    </td>
    <td>
-      {{'[DataLabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapDataLabelSettings.html#Syncfusion_Maui_Maps_MapDataLabelSettings_DataLabelStyle)'| markdownify }}
+      {{'[*DataLabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapDataLabelSettings.html#Syncfusion_Maui_Maps_MapDataLabelSettings_DataLabelStyle)'| markdownify }}
    </td>
 </tr>
 </table>
+
+N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
 
 The following code example explains how to customize the data label in the Xamarin SfMaps and .Net MAUI SfMaps.
 
@@ -2098,6 +2120,8 @@ public MainPage()
 </tr>
 </table>
 
+N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
+
 The following code example explains how to customize the shape color in the Xamarin SfMaps and .Net MAUI SfMaps.
 
 <table>
@@ -2269,7 +2293,7 @@ public MainPage()
       {{'[ShapeType](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeFileLayer.html#Syncfusion_SfMaps_XForms_ShapeFileLayer_ShapeTypeProperty)'| markdownify }}
    </td>
    <td>
-      {{'[MapPolygon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolygon.html)'| markdownify }}
+      {{'[*MapPolygon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolygon.html)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -2286,7 +2310,7 @@ public MainPage()
        {{'[ShapeSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html)'| markdownify }} class
    </td>
    <td>
-      {{'[Fill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolygon.html#Syncfusion_Maui_Maps_MapPolygon_Fill)'| markdownify }}
+      {{'[*Fill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolygon.html#Syncfusion_Maui_Maps_MapPolygon_Fill)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -2295,7 +2319,7 @@ public MainPage()
        {{'[ShapeSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html)'| markdownify }} class
    </td>
    <td>
-      {{'[Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolygon.html#Syncfusion_Maui_Maps_MapPolygon_Stroke)'| markdownify }}
+      {{'[*Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolygon.html#Syncfusion_Maui_Maps_MapPolygon_Stroke)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -2304,10 +2328,12 @@ public MainPage()
        {{'[ShapeSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html)'| markdownify }} class
    </td>
    <td>
-      {{'[StrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolygon.html#Syncfusion_Maui_Maps_MapPolygon_StrokeThickness)'| markdownify }}
+      {{'[*StrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolygon.html#Syncfusion_Maui_Maps_MapPolygon_StrokeThickness)'| markdownify }}
    </td>
 </tr>
 </table>
+
+N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
 
 The following code example explains how to intialize the polygon layer and it's customization in Xamarin SfMaps and .Net MAUI SfMaps.
 
@@ -2450,7 +2476,7 @@ public MainPage()
       {{'[ShapeType](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeFileLayer.html#Syncfusion_SfMaps_XForms_ShapeFileLayer_ShapeTypeProperty)'| markdownify }}
    </td>
    <td>
-      {{'[MapPolyline](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html)'| markdownify }}
+      {{'[*MapPolyline](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -2467,7 +2493,7 @@ public MainPage()
        {{'[ShapeSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html)'| markdownify }} class
    </td>
    <td>
-      {{'[Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html#Syncfusion_Maui_Maps_MapPolyline_Stroke)'| markdownify }}
+      {{'[*Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html#Syncfusion_Maui_Maps_MapPolyline_Stroke)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -2476,7 +2502,7 @@ public MainPage()
        {{'[ShapeSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html)'| markdownify }} class
    </td>
    <td>
-      {{'[StrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html#Syncfusion_Maui_Maps_MapPolyline_StrokeThickness)'| markdownify }}
+      {{'[*StrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html#Syncfusion_Maui_Maps_MapPolyline_StrokeThickness)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -2488,6 +2514,8 @@ public MainPage()
    </td>
 </tr>
 </table>
+
+N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
 
 The following code example explains how to intialize the polyline layer and it's customization in Xamarin SfMaps and .Net MAUI SfMaps.
 
