@@ -647,7 +647,6 @@ chart.Series.Add(series);
 
 **Chart** 
 
-* Customize the appearance of the chart plot area.
 * Exporting support for a chart as an image or a stream. 
 * Support for chart localization. 
 
@@ -685,7 +684,6 @@ chart.Series.Add(series);
 ## Known issues
 
 * The legend item was not dynamically added.
-* While resizing the window, the chart size is not dynamically updated.
 
 ## Support and feedback
 
