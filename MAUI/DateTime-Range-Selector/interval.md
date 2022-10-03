@@ -13,11 +13,11 @@ This section explains how to add the interval in the DateTime Range Selector con
 
 ## Date interval
 
-The DateTime Range Selector has the elements like labels, ticks and dividers. These elements are rendered based on the [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Interval), [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_Minimum), and [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_Maximum) properties. The default value is `0`.
+The DateTime Range Selector has the elements like labels, ticks and dividers. These elements are rendered based on the [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Interval), [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Minimum), and [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Maximum) properties. The default value is `0`.
 
-The Range Selector does not have auto interval support. So, setting [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Interval), [`IntervalType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.DateTimeRangeSliderBase.html#Syncfusion_Maui_Sliders_DateTimeRangeSliderBase_IntervalType), and [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.DateTimeRangeSliderBase.html#Syncfusion_Maui_Sliders_DateTimeRangeSliderBase_DateFormat) for date values is mandatory. The default value of the [`IntervalType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.DateTimeRangeSliderBase.html#Syncfusion_Maui_Sliders_DateTimeRangeSliderBase_IntervalType) property is `DateTime.Year`. It can be years to seconds.
+The Range Selector does not have auto interval support. So, setting [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Interval), [`IntervalType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.IDateTimeElement.html#Syncfusion_Maui_Sliders_IDateTimeElement_IntervalType), and [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.IDateTimeElement.html#Syncfusion_Maui_Sliders_IDateTimeElement_DateFormat) for date values is mandatory. The default value of the [`IntervalType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.IDateTimeElement.html#Syncfusion_Maui_Sliders_IDateTimeElement_IntervalType) property is `DateTime.Year`. It can be years to seconds.
 
-For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.DateTimeRangeSliderBase.html#Syncfusion_Maui_Sliders_DateTimeRangeSliderBase_Minimum) is `DateTime(2000, 01, 01)`, [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.DateTimeRangeSliderBase.html#Syncfusion_Maui_Sliders_DateTimeRangeSliderBase_Maximum) is `DateTime(2005, 01, 01)`, [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Interval) is `1`, [`IntervalType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DateIntervalType) is [`SliderDateIntervalType.Years`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDateIntervalType.html#Syncfusion_Maui_Sliders_SliderDateIntervalType_Years), and the [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.DateTimeRangeSliderBase.html#Syncfusion_Maui_Sliders_DateTimeRangeSliderBase_DateFormat) is `yyyy`, then the range slider will render the labels, major ticks, and dividers at 2000, 2001, 2002, and so on.
+For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Minimum) is `DateTime(2000, 01, 01)`, [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Maximum) is `DateTime(2005, 01, 01)`, [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Interval) is `1`, [`IntervalType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.IDateTimeElement.html#Syncfusion_Maui_Sliders_IDateTimeElement_IntervalType) is [`SliderDateIntervalType.Years`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDateIntervalType.html#Syncfusion_Maui_Sliders_SliderDateIntervalType_Years), and the [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.IDateTimeElement.html#Syncfusion_Maui_Sliders_IDateTimeElement_DateFormat) is `yyyy`, then the range slider will render the labels, major ticks, and dividers at 2000, 2001, 2002, and so on.
 
 {% tabs %}
 
@@ -69,112 +69,3 @@ rangeSelector.Content = chart;
 {% endtabs %}
 
 ![RangeSelector date interval](images/interval/date-interval.png)
-
-## Discrete selection for the date values
-
-Move the thumb in a discrete manner for date values using the [`StepDuration`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.DateTimeRangeSliderBase.html#Syncfusion_Maui_Sliders_DateTimeRangeSliderBase_StepDuration) property in the DateTime Range Selector.
-
-For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.DateTimeRangeSliderBase.html#Syncfusion_Maui_Sliders_DateTimeRangeSliderBase_Minimum) is DateTime(2015, 01, 01), [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.DateTimeRangeSliderBase.html#Syncfusion_Maui_Sliders_DateTimeRangeSliderBase_Maximum) is DateTime(2020, 01, 01), and the [`StepDuration`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.DateTimeRangeSliderBase.html#Syncfusion_Maui_Sliders_DateTimeRangeSliderBase_StepDuration) is `1`, the Range Selector will move the thumbs at DateTime(2015, 01, 01), DateTime(2016, 01, 01), DateTime(2017, 01, 01),and DateTime(2018, 01, 01).
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<ContentPage 
-             ...
-             xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-
-    <sliders:SfDateTimeRangeSelector Minimum="2000-01-01" 
-                                     Maximum="2005-01-01" 
-                                     RangeStart="2001-01-01"
-                                     RangeEnd="2004-01-01"
-                                     Interval="1"
-                                     IntervalType="Years"
-                                     DateFormat="yyyy"  
-                                     ShowLabels="True" 
-                                     ShowTicks="True" 
-                                     ShowDividers="True"
-                                     StepDuration="1">
-        
-        <charts:SfCartesianChart>
-            ...
-        </charts:SfCartesianChart>
-    
-    </sliders:SfDateTimeRangeSelector>
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
-rangeSelector.Minimum = new DateTime(2000, 01, 01);
-rangeSelector.Maximum = new DateTime(2005, 01, 01);
-rangeSelector.RangeStart = new DateTime(2001, 01, 01); 
-rangeSelector.RangeEnd = new DateTime(2004, 01, 01);
-rangeSelector.Interval = 1;
-rangeSelector.IntervalType = SliderDateIntervalType.Years;
-rangeSelector.DateFormat = "yyyy";    
-rangeSelector.ShowLables = true;
-rangeSelector.ShowTicks = true;      
-rangeSelector.ShowDividers = true;    
-rangeSelector.StepDuration = new SliderStepDuration(years: 1);
-SfCartesianChart chart = new SfCartesianChart();
-rangeSelector.Content = chart;
-         
-{% endhighlight %}
-
-{% endtabs %}
-
-![RangeSelector date discrete mode](images/interval/step-duration.gif)
-
-## Interval Selection
-
-Drag thumbs only in intervals when the [EnableIntervalSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase.html#Syncfusion_Maui_Sliders_RangeSliderBase_EnableIntervalSelection) is true. If true, both the thumbs can only be moved on the selector Interval.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<ContentPage 
-             ...
-             xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-             xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-    
-    <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
-                                     Maximum="2018-01-01" 
-                                     RangeStart="2012-01-01" 
-                                     RangeEnd="2016-01-01"
-                                     Interval="2" 
-                                     ShowTicks="True"
-                                     ShowLabels="True"
-                                     EnableIntervalSelection="True">
-
-        <charts:SfCartesianChart>
-            ...
-        </charts:SfCartesianChart>
-    
-    </sliders:SfDateTimeRangeSelector>
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
-rangeSelector.Minimum = new DateTime(2010, 01, 01);
-rangeSelector.Maximum = new DateTime(2018, 01, 01);
-rangeSelector.RangeStart = new DateTime(2012, 01, 01);
-rangeSelector.RangeEnd = new DateTime(2016, 01, 01);       
-rangeSelector.ShowLables = true;
-rangeSelector.ShowTicks = true;    
-rangeSelector.EnableIntervalSelection = true;
-SfCartesianChart chart = new SfCartesianChart();
-rangeSelector.Content = chart;
-         
-{% endhighlight %}
-
-{% endtabs %}
-
-![RangeSelector EnableIntervalSelection](images/interval/enableintervalselection.gif)

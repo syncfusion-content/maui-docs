@@ -106,7 +106,7 @@ One more thing is, in .NET MAUI SfRangeSlider, you do not have an API name [Show
 <th>Description</th></tr>
 <tr>
 <td>{{'[AllowDragRange](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_AllowDragRange)'| markdownify }}</td>
-<td>{{'[ShowLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ShowLabels)'| markdownify }}</td>
+<td>{{'[ShowLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels)'| markdownify }}</td>
 <td>Gets or sets a value indicating whether to show or hide the labels.</td></tr>
 <tr>
 <td rowspan="2" valign="center">
@@ -146,7 +146,7 @@ One more thing is, in .NET MAUI SfRangeSlider, you do not have an API name [Show
 <td>Gets or sets the size for the active fonts in the SfSlider.</td></tr>
 <tr>
 <td>{{'[LabelFormat](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_LabelFormat)'| markdownify }}</td>
-<td>{{'[NumberFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_NumberFormat)'| markdownify }}</td>
+<td>{{'[NumberFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.INumericElement.html#Syncfusion_Maui_Sliders_INumericElement_NumberFormat)'| markdownify }}</td>
 <td>Gets or sets the value to format the label text.</td></tr>
 </table> 
 
@@ -180,7 +180,7 @@ One more thing is, in .NET MAUI SfRangeSlider, you do not have an API name [Show
 <th>Description</th></tr>
 <tr>
 <td>{{'[AllowDragRange](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_AllowDragRange)'| markdownify }}</td>
-<td>{{'[DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase.html#Syncfusion_Maui_Sliders_RangeSliderBase_DragBehavior)'| markdownify }}</td>
+<td>{{'[DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_DragBehavior)'| markdownify }}</td>
 <td>Gets or sets the value which indicates the behavior of the thumb dragging.</td></tr>
 </table> 
 
@@ -193,7 +193,7 @@ One more thing is, in .NET MAUI SfRangeSlider, you do not have an API name [Show
 <th>Description</th></tr>
 <tr>
 <td>{{'[SnapsTo](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_SnapsTo)'| markdownify }}</td>
-<td>{{'[StepSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_StepSize)'| markdownify }}</td>
+<td>{{'[StepSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.INumericElement.html#Syncfusion_Maui_Sliders_INumericElement_StepSize)'| markdownify }}</td>
 <td>Gets or sets the value indicating whether to select the discrete value.</td></tr>
 </table> 
 
@@ -206,7 +206,7 @@ One more thing is, in .NET MAUI SfRangeSlider, you do not have an API name [Show
 <th>Description</th></tr>
 <tr>
 <td>{{'[DragStarted](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_DragStarted)'| markdownify }}</td>
-<td>{{'[ValueChangeStart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ValueChangeStart)'| markdownify }}</td>
+<td>{{'[ValueChangeStart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ValueChangeStart)'| markdownify }}</td>
 <td>Occurs when the user selects a new value for the Slider by tapping/mouse down on the thumb.</td></tr>
 <tr>
 <td>{{'[RangeChanging](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_RangeChanging)'| markdownify }}</td>
@@ -214,6 +214,6 @@ One more thing is, in .NET MAUI SfRangeSlider, you do not have an API name [Show
 <td>Occurs when the user selects a new value for the Range Slider by dragging any one of the thumbs.</td></tr>
 <tr>
 <td>{{'[DragCompleted](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_DragCompleted)'| markdownify }}</td>
-<td>{{'[ValueChangeEnd](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ValueChangeEnd)'| markdownify }}</td>
+<td>{{'[ValueChangeEnd](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ValueChangeEnd)'| markdownify }}</td>
 <td>Occurs when the user completes selecting a new value for the Slider by tapping/mouse down on the thumb.</td></tr>
 </table> 

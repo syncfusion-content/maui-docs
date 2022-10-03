@@ -13,9 +13,9 @@ This section explains how to add the interval for numeric range slider.
 
 ## Numeric interval
 
-Range Slider elements like labels, ticks and dividers are rendered based on the [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Interval), [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_Minimum) and [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_Maximum) properties. The default value is `0`.
+Range Slider elements like labels, ticks and dividers are rendered based on the [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Interval), [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Minimum) and [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Maximum) properties. The default value is `0`.
 
-For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_Minimum) is 0.0, the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_Maximum) is 10.0, and [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Interval) is 2.0, the range slider will render the labels, major ticks, and dividers at 0.0, 2.0, 4.0, and so on.
+For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Minimum) is 0.0, the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Maximum) is 10.0, and [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Interval) is 2.0, the range slider will render the labels, major ticks, and dividers at 0.0, 2.0, 4.0, and so on.
 
 {% tabs %}
 
@@ -49,80 +49,3 @@ rangeSlider.ShowDividers = true;
 {% endtabs %}
 
 ![RangeSlider numeric interval](images/interval/numeric-interval.png)
-
-## Discrete selection for numeric values
-
-Move the thumb in discrete manner for numeric values using the [`StepSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_StepSize) property in the range slider.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<sliders:SfRangeSlider Minimum="0"
-                       Maximum="10"
-                       RangeStart="2"
-                       RangeEnd="8"
-                       Interval="2"
-                       StepSize="2"
-                       ShowLabels="True"
-                       ShowTicks="True"
-                       ShowDividers="True" />
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfRangeSlider rangeSlider = new SfRangeSlider();
-rangeSlider.StepSize = 2;
-rangeSlider.Minimum = 0;
-rangeSlider.Maximum = 10;
-rangeSlider.RangeStart = 2;
-rangeSlider.RangeEnd = 8;
-rangeSlider.Interval = 2;
-rangeSlider.ShowLabels = true;
-rangeSlider.ShowTicks = true;
-rangeSlider.ShowDividers = true;
-         
-{% endhighlight %}
-
-{% endtabs %}
-
-![RangeSlider numeric discrete mode](images/interval/step-size.gif)
-
-## Interval Selection
-
-Drag thumbs only in interval when [EnableIntervalSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase.html#Syncfusion_Maui_Sliders_RangeSliderBase_EnableIntervalSelection) is true.
-If true, both the thumbs can be only moved on the slider Interval.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<sliders:SfRangeSlider Minimum="0" 
-                       Maximum="10"
-                       RangeStart="2"
-                       RangeEnd="8"
-                       Interval="2"
-                       ShowTicks="True"
-                       ShowLabels="True"
-                       EnableIntervalSelection="True" />
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfRangeSlider rangeSlider = new SfRangeSlider();
-rangeSlider.Minimum = 0;
-rangeSlider.Maximum = 10;
-rangeSlider.RangeStart = 2; 
-rangeSlider.RangeEnd = 8;
-rangeSlider.Interval = 2;        
-rangeSlider.ShowLables = true;
-rangeSlider.ShowTicks = true;    
-rangeSlider.EnableIntervalSelection = true;
-         
-{% endhighlight %}
-
-{% endtabs %}
-
-![RangeSlider EnableIntervalSelection](images/interval/enableintervalselection.gif)
