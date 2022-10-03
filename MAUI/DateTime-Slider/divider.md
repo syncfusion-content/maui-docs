@@ -13,9 +13,9 @@ This section explains how to add dividers to the DateTime Slider.
 
 ## Show dividers
 
-The [`ShowDividers`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ShowDividers) property is used to render the dividers on the track. The default value of the [`ShowDividers`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ShowDividers) property is `False`. It is a shape used to represent the major interval points of the track.
+The [`ShowDividers`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowDividers) property is used to render the dividers on the track. The default value of the [`ShowDividers`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowDividers) property is `False`. It is a shape used to represent the major interval points of the track.
 
-For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeSlider_Minimum) is `DateTime(2010, 01, 01)`, the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeSlider_Maximum) is `DateTime(2018, 01, 01)`, and [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Interval) is 2.0, the DateTime Slider will render the dividers at 2010, 2012, 2014, and so on.
+For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Minimum) is `DateTime(2010, 01, 01)`, the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Maximum) is `DateTime(2018, 01, 01)`, and [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Interval) is 2.0, the DateTime Slider will render the dividers at 2010, 2012, 2014, and so on.
 
 {% tabs %}
 
@@ -217,8 +217,8 @@ Change the state of the slider to disabled by setting `false` to the `IsEnabled`
                         <VisualState.Setters>
                             <Setter Property="DividerStyle">
                                 <Setter.Value>
-                                    <sliders:SliderDividerStyle ActiveFill="#F7B1AE"
-                                                                InactiveFill="#EE3F3F"
+                                    <sliders:SliderDividerStyle ActiveFill="#EE3F3F"
+                                                                InactiveFill="#88EE3F3F"
                                                                 ActiveRadius="5"
                                                                 InactiveRadius="4" />
                                 </Setter.Value>
@@ -235,6 +235,17 @@ Change the state of the slider to disabled by setting `false` to the `IsEnabled`
                                                                 InactiveRadius="4" />
                                 </Setter.Value>
                             </Setter>
+                            <Setter Property="TrackStyle">
+                                <Setter.Value>
+                                    <sliders:SliderTrackStyle ActiveFill="Gray"
+                                                              InactiveFill="LightGray" />
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="ThumbStyle">
+                                <Setter.Value>
+                                    <sliders:SliderThumbStyle Fill="Gray" />
+                                </Setter.Value>
+                            </Setter>
                         </VisualState.Setters>
                     </VisualState>
                 </VisualStateGroup>
@@ -243,14 +254,13 @@ Change the state of the slider to disabled by setting `false` to the `IsEnabled`
     </Style>
 </ContentPage.Resources>
 
-
 <ContentPage.Content>
     <VerticalStackLayout>
-        <Label Text="Enabled Slider"
-               Padding="0,10" />
+        <Label Text="Enabled"
+               Padding="24,10" />
         <sliders:SfDateTimeSlider />
-        <Label Text="Disabled Slider"
-               Padding="0,10" />
+        <Label Text="Disabled"
+               Padding="24,10" />
         <sliders:SfDateTimeSlider IsEnabled="False" />
     </VerticalStackLayout>
 </ContentPage.Content>
@@ -259,36 +269,36 @@ Change the state of the slider to disabled by setting `false` to the `IsEnabled`
 
 {% highlight C# %}
 
-VerticalStackLayout stackLayout = new VerticalStackLayout();
-SfDateTimeSlider defaultSlider = new SfDateTimeSlider()
+VerticalStackLayout stackLayout = new();
+SfDateTimeSlider defaultSlider = new()
 {
     Minimum = new DateTime(2010, 01, 01),
-    Maximum = new DateTime(2020, 01, 01),
+    Maximum = new DateTime(2018, 01, 01),
     Value = new DateTime(2014, 01, 01),
-    Interval = 2, 
+    Interval = 2,
     ShowDividers = true
 };
-SfDateTimeSlider disabledSlider = new SfDateTimeSlider()
+SfDateTimeSlider disabledSlider = new()
 {
     Minimum = new DateTime(2010, 01, 01),
-    Maximum = new DateTime(2020, 01, 01),
+    Maximum = new DateTime(2018, 01, 01),
     Value = new DateTime(2014, 01, 01),
-    IsEnabled = false, 
-    Interval = 2, 
+    IsEnabled = false,
+    Interval = 2,
     ShowDividers = true
 };
 
-VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
-VisualStateGroup commonStateGroup = new VisualStateGroup();
+VisualStateGroupList visualStateGroupList = new();
+VisualStateGroup commonStateGroup = new();
 // Default State.
-VisualState defaultState = new VisualState { Name = "Default" };
+VisualState defaultState = new() { Name = "Default" };
 defaultState.Setters.Add(new Setter
 {
     Property = SfDateTimeSlider.DividerStyleProperty,
     Value = new SliderDividerStyle
     {
-        ActiveFill = Color.FromArgb("#F7B1AE"),
-        InactiveFill = Color.FromArgb("#EE3F3F"),
+        ActiveFill = Color.FromArgb("#EE3F3F"),
+        InactiveFill = Color.FromArgb("#88EE3F3F"),
         ActiveRadius = 5,
         InactiveRadius = 4,
     }
@@ -306,6 +316,23 @@ disabledState.Setters.Add(new Setter
         InactiveRadius = 4,
     }
 });
+disabledState.Setters.Add(new Setter
+{
+    Property = SfDateTimeSlider.TrackStyleProperty,
+    Value = new SliderTrackStyle
+    {
+        ActiveFill = Colors.Gray,
+        InactiveFill = Colors.LightGray,
+    }
+});
+disabledState.Setters.Add(new Setter
+{
+    Property = SfDateTimeSlider.ThumbStyleProperty,
+    Value = new SliderThumbStyle
+    {
+        Fill = Colors.Gray,
+    }
+});
 
 commonStateGroup.States.Add(defaultState);
 commonStateGroup.States.Add(disabledState);
@@ -313,9 +340,9 @@ visualStateGroupList.Add(commonStateGroup);
 VisualStateManager.SetVisualStateGroups(defaultSlider, visualStateGroupList);
 VisualStateManager.SetVisualStateGroups(disabledSlider, visualStateGroupList);
 
-stackLayout.Children.Add(new Label() { Text = "Default Slider", Padding = new Thickness(0, 10) });
+stackLayout.Children.Add(new Label() { Text = "Enabled", Padding = new Thickness(24, 10) });
 stackLayout.Children.Add(defaultSlider);
-stackLayout.Children.Add(new Label() { Text = "Disabled Slider", Padding = new Thickness(0, 10) });
+stackLayout.Children.Add(new Label() { Text = "Disabled", Padding = new Thickness(24, 10) });
 stackLayout.Children.Add(disabledSlider);
 this.Content = stackLayout;
 

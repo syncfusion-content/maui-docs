@@ -13,7 +13,7 @@ This section explains how to add the labels in the DateTime Range Slider.
 
 ## Show labels
 
-The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ShowLabels) property is used to render the labels at given intervals. The default value of the [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ShowLabels) property is `False`.
+The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels) property is used to render the labels at given intervals. The default value of the [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels) property is `False`.
 
 {% tabs %}
 
@@ -49,7 +49,7 @@ rangeSlider.ShowTicks = true;
 
 ## Date format
 
-The [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.DateTimeRangeSliderBase.html#Syncfusion_Maui_Sliders_DateTimeRangeSliderBase_DateFormat) property is used to format the date labels. For date values, the slider does not have auto interval support. So, setting [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Interval), [`IntervalType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.DateTimeRangeSliderBase.html#Syncfusion_Maui_Sliders_DateTimeRangeSliderBase_IntervalType), and [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.DateTimeRangeSliderBase.html#Syncfusion_Maui_Sliders_DateTimeRangeSliderBase_DateFormat) for date values is mandatory. The default value of the [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.DateTimeRangeSliderBase.html#Syncfusion_Maui_Sliders_DateTimeRangeSliderBase_DateFormat) property is `yyyy`.
+The [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.IDateTimeElement.html#Syncfusion_Maui_Sliders_IDateTimeElement_DateFormat) property is used to format the date labels. For date values, the slider does not have auto interval support. So, setting [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Interval), [`IntervalType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.IDateTimeElement.html#Syncfusion_Maui_Sliders_IDateTimeElement_IntervalType), and [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.IDateTimeElement.html#Syncfusion_Maui_Sliders_IDateTimeElement_DateFormat) for date values is mandatory. The default value of the [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.IDateTimeElement.html#Syncfusion_Maui_Sliders_IDateTimeElement_DateFormat) property is `yyyy`.
 
 {% tabs %}
 
@@ -89,7 +89,7 @@ rangeSlider.ShowTicks = true;
 
 ## Label placement
 
-The [`LabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_LabelsPlacement) property is used to place the labels either between the major ticks or on the major ticks. The default value of the [`LabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_LabelsPlacement) property is [`SliderLabelsPlacement.OnTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelsPlacement.html#Syncfusion_Maui_Sliders_SliderLabelsPlacement_OnTicks).
+The [`LabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_LabelsPlacement) property is used to place the labels either between the major ticks or on the major ticks. The default value of the [`LabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_LabelsPlacement) property is [`SliderLabelsPlacement.OnTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelsPlacement.html#Syncfusion_Maui_Sliders_SliderLabelsPlacement_OnTicks).
 
 {% tabs %}
 
@@ -129,9 +129,9 @@ N> Refer [here](https://help.syncfusion.com/maui/range-slider/events) to customi
 
 ## Edge labels placement
 
-The [`EdgeLabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_EdgeLabelsPlacement) property is used to move the first and last label either inside the track bounds or based on the intervals. The default value of the [`EdgeLabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_EdgeLabelsPlacement) property is [`SliderEdgeLabelPlacement.Default`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderEdgeLabelsPlacement.html#Syncfusion_Maui_Sliders_SliderEdgeLabelsPlacement_Default).
+The [`EdgeLabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_EdgeLabelsPlacement) property is used to move the first and last label either inside the track bounds or based on the intervals. The default value of the [`EdgeLabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_EdgeLabelsPlacement) property is [`SliderEdgeLabelPlacement.Default`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderEdgeLabelsPlacement.html#Syncfusion_Maui_Sliders_SliderEdgeLabelsPlacement_Default).
 
-If the [`TrackExtent`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_TrackExtent) > 0 and [`EdgeLabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_EdgeLabelsPlacement) is [`SliderEdgeLabelsPlacement.Inside`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderEdgeLabelsPlacement.html#Syncfusion_Maui_Sliders_SliderEdgeLabelsPlacement_Inside), the labels get placed inside the extended track edges. 
+If the [`TrackExtent`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_TrackExtent) > 0 and [`EdgeLabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_EdgeLabelsPlacement) is [`SliderEdgeLabelsPlacement.Inside`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderEdgeLabelsPlacement.html#Syncfusion_Maui_Sliders_SliderEdgeLabelsPlacement_Inside), the labels get placed inside the extended track edges. 
 
 {% tabs %}
 
@@ -172,7 +172,7 @@ Change the active and inactive label appearance of the range slider using the [`
 
 The active side of the DateTime Range Slider is between the start and end thumbs.
 
-The inactive side of the DateTime Range Slider is between the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_Minimum) value and the left thumb, and the right thumb and the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_Maximum) value.
+The inactive side of the DateTime Range Slider is between the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Minimum) value and the left thumb, and the right thumb and the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Maximum) value.
 
 {% tabs %}
 
@@ -223,7 +223,7 @@ rangeSlider.LabelStyle.InactiveFontAttributes = FontAttributes.Bold;
 
 ## Label offset
 
-Adjust the space between ticks and labels using the [`Offset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_OffsetProperty) property. The default value of the [`Offset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_Offset) property is 5.0 when [`ShowTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ShowTicks) is enabled, otherwise, it is `15.0` by default.
+Adjust the space between ticks and labels using the [`Offset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_OffsetProperty) property. The default value of the [`Offset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_Offset) property is 5.0 when [`ShowTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowTicks) is enabled, otherwise, it is `15.0` by default.
 
 {% tabs %}
 
@@ -316,6 +316,17 @@ Change the state of the DateTime Range Slider to disabled by setting `false` to 
                                                               InactiveFontAttributes="Bold" />
                                 </Setter.Value>
                             </Setter>
+                            <Setter Property="ThumbStyle">
+                                <Setter.Value>
+                                    <sliders:SliderThumbStyle Fill="Gray" />
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="TrackStyle">
+                                <Setter.Value>
+                                    <sliders:SliderTrackStyle ActiveFill="Gray"
+                                                              InactiveFill="LightGray" />
+                                </Setter.Value>
+                            </Setter>
                         </VisualState.Setters>
                     </VisualState>
                 </VisualStateGroup>
@@ -326,11 +337,11 @@ Change the state of the DateTime Range Slider to disabled by setting `false` to 
 
 <ContentPage.Content>
     <VerticalStackLayout>
-        <Label Text="Enabled Range Slider"
-               Padding="0,10" />
+        <Label Text="Enabled"
+               Padding="10" />
         <sliders:SfDateTimeRangeSlider />
-        <Label Text="Disabled Range Slider"
-               Padding="0,10" />
+        <Label Text="Disabled"
+               Padding="10" />
         <sliders:SfDateTimeRangeSlider IsEnabled="False" />
     </VerticalStackLayout>
 </ContentPage.Content>
@@ -339,33 +350,33 @@ Change the state of the DateTime Range Slider to disabled by setting `false` to 
 
 {% highlight C# %}
 
-VerticalStackLayout stackLayout = new VerticalStackLayout();
-SfDateTimeRangeSlider defaultRangeSlider = new SfDateTimeRangeSlider()
+VerticalStackLayout stackLayout = new();
+SfDateTimeRangeSlider defaultRangeSlider = new()
 {
     Minimum = new DateTime(2010, 01, 01),
     Maximum = new DateTime(2018, 01, 01),
     RangeStart = new DateTime(2012, 01, 01),
     RangeEnd = new DateTime(2016, 01, 01),
-    Interval = 2, 
-    ShowTicks = true, 
+    Interval = 2,
+    ShowTicks = true,
     ShowLabels = true
 };
-SfDateTimeRangeSlider disabledRangeSlider = new SfDateTimeRangeSlider()
+SfDateTimeRangeSlider disabledRangeSlider = new()
 {
     Minimum = new DateTime(2010, 01, 01),
     Maximum = new DateTime(2018, 01, 01),
     RangeStart = new DateTime(2012, 01, 01),
     RangeEnd = new DateTime(2016, 01, 01),
-    IsEnabled = false, 
-    Interval = 2, 
-    ShowTicks = true, 
+    IsEnabled = false,
+    Interval = 2,
+    ShowTicks = true,
     ShowLabels = true
 };
 
-VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
-VisualStateGroup commonStateGroup = new VisualStateGroup();
+VisualStateGroupList visualStateGroupList = new();
+VisualStateGroup commonStateGroup = new();
 // Default State.
-VisualState defaultState = new VisualState { Name = "Default" };
+VisualState defaultState = new() { Name = "Default" };
 defaultState.Setters.Add(new Setter
 {
     Property = SfDateTimeRangeSlider.LabelStyleProperty,
@@ -376,6 +387,7 @@ defaultState.Setters.Add(new Setter
         ActiveTextColor = Color.FromArgb("#EE3F3F"),
         InactiveTextColor = Color.FromArgb("#F7B1AE"),
         ActiveFontAttributes = FontAttributes.Bold,
+        InactiveFontAttributes = FontAttributes.Italic,
     }
 });
 // Disabled State.
@@ -389,7 +401,25 @@ disabledState.Setters.Add(new Setter
         InactiveFontSize = 14,
         ActiveTextColor = Color.FromArgb("#EE3F3F"),
         InactiveTextColor = Color.FromArgb("#F7B1AE"),
-        ActiveFontAttributes = FontAttributes.Bold,
+        ActiveFontAttributes = FontAttributes.Italic,
+        InactiveFontAttributes = FontAttributes.Bold,
+    }
+});
+disabledState.Setters.Add(new Setter
+{
+    Property = SfDateTimeRangeSlider.ThumbStyleProperty,
+    Value = new SliderThumbStyle
+    {
+        Fill = Colors.Gray,
+    }
+});
+disabledState.Setters.Add(new Setter
+{
+    Property = SfDateTimeRangeSlider.TrackStyleProperty,
+    Value = new SliderTrackStyle
+    {
+        ActiveFill = Colors.Gray,
+        InactiveFill = Colors.LightGray,
     }
 });
 
@@ -399,9 +429,9 @@ visualStateGroupList.Add(commonStateGroup);
 VisualStateManager.SetVisualStateGroups(defaultRangeSlider, visualStateGroupList);
 VisualStateManager.SetVisualStateGroups(disabledRangeSlider, visualStateGroupList);
 
-stackLayout.Children.Add(new Label() { Text = "Enabled Range Slider", Padding = new Thickness(0, 10) });
+stackLayout.Children.Add(new Label() { Text = "Enabled", Padding = new Thickness(10) });
 stackLayout.Children.Add(defaultRangeSlider);
-stackLayout.Children.Add(new Label() { Text = "Disabled Range Slider", Padding = new Thickness(0, 10) });
+stackLayout.Children.Add(new Label() { Text = "Disabled", Padding = new Thickness(10) });
 stackLayout.Children.Add(disabledRangeSlider);
 this.Content = stackLayout;
 

@@ -13,9 +13,9 @@ This section explains how to add the dividers in the range slider.
 
 ## Show dividers
 
-The [`ShowDividers`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ShowDividers) property is used to render the dividers on the track. The default value of the [`ShowDividers`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ShowDividers) property is `False`. It is a shape used to represent the major interval points of the track.
+The [`ShowDividers`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowDividers) property is used to render the dividers on the track. The default value of the [`ShowDividers`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowDividers) property is `False`. It is a shape used to represent the major interval points of the track.
 
-For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_Minimum) is 0.0, the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_Maximum) is 10.0, and [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Interval) is 2.0, the range slider will render the dividers at 0.0, 2.0, 4.0, and so on.
+For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Minimum) is 0.0, the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Maximum) is 10.0, and [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Interval) is 2.0, the range slider will render the dividers at 0.0, 2.0, 4.0, and so on.
 
 {% tabs %}
 
@@ -181,7 +181,6 @@ Change the state of the range slider to disabled by setting `false` to the `IsEn
 {% tabs %}
 
 {% highlight xaml %}
-
 <ContentPage.Resources>
     <Style TargetType="sliders:SfRangeSlider">
         <Setter Property="Interval"
@@ -195,8 +194,8 @@ Change the state of the range slider to disabled by setting `false` to the `IsEn
                         <VisualState.Setters>
                             <Setter Property="DividerStyle">
                                 <Setter.Value>
-                                    <sliders:SliderDividerStyle ActiveFill="#F7B1AE"
-                                                                InactiveFill="#EE3F3F"
+                                    <sliders:SliderDividerStyle ActiveFill="#EE3F3F"
+                                                                InactiveFill="#88EE3F3F"
                                                                 ActiveRadius="5"
                                                                 InactiveRadius="4" />
                                 </Setter.Value>
@@ -213,6 +212,17 @@ Change the state of the range slider to disabled by setting `false` to the `IsEn
                                                                 InactiveRadius="4" />
                                 </Setter.Value>
                             </Setter>
+                            <Setter Property="TrackStyle">
+                                <Setter.Value>
+                                    <sliders:SliderTrackStyle ActiveFill="Gray"
+                                                              InactiveFill="LightGray" />
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="ThumbStyle">
+                                <Setter.Value>
+                                    <sliders:SliderThumbStyle Fill="Gray" />
+                                </Setter.Value>
+                            </Setter>
                         </VisualState.Setters>
                     </VisualState>
                 </VisualStateGroup>
@@ -221,14 +231,13 @@ Change the state of the range slider to disabled by setting `false` to the `IsEn
     </Style>
 </ContentPage.Resources>
 
-
 <ContentPage.Content>
     <VerticalStackLayout>
-        <Label Text="Enabled Range Slider"
-               Padding="0,10" />
+        <Label Text="Enabled"
+               Padding="24,10" />
         <sliders:SfRangeSlider />
-        <Label Text="Disabled Range Slider"
-               Padding="0,10" />
+        <Label Text="Disabled"
+               Padding="24,10" />
         <sliders:SfRangeSlider IsEnabled="False" />
     </VerticalStackLayout>
 </ContentPage.Content>
@@ -237,27 +246,36 @@ Change the state of the range slider to disabled by setting `false` to the `IsEn
 
 {% highlight C# %}
 
-VerticalStackLayout stackLayout = new VerticalStackLayout();
-SfRangeSlider defaultRangeSlider = new SfRangeSlider { Interval = 0.25, ShowDividers = true };
-SfRangeSlider disabledRangeSlider = new SfRangeSlider { IsEnabled = false, Interval = 0.25, ShowDividers = true };
+VerticalStackLayout stackLayout = new();
+SfRangeSlider enabledRangeSlider = new()
+{
+    Interval = 0.25,
+    ShowDividers = true
+};
+SfRangeSlider disabledRangeSlider = new()
+{
+    IsEnabled = false,
+    Interval = 0.25,
+    ShowDividers = true
+};
 
-VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
-VisualStateGroup commonStateGroup = new VisualStateGroup();
+VisualStateGroupList visualStateGroupList = new();
+VisualStateGroup commonStateGroup = new();
 // Default State.
-VisualState defaultState = new VisualState { Name = "Default" };
-defaultState.Setters.Add(new Setter
+VisualState enabledState = new() { Name = "Default" };
+enabledState.Setters.Add(new Setter
 {
     Property = SfRangeSlider.DividerStyleProperty,
     Value = new SliderDividerStyle
     {
-        ActiveFill = Color.FromArgb("#F7B1AE"),
-        InactiveFill = Color.FromArgb("#EE3F3F"),
+        ActiveFill = Color.FromArgb("#EE3F3F"),
+        InactiveFill = Color.FromArgb("#88EE3F3F"),
         ActiveRadius = 5,
         InactiveRadius = 4,
     }
 });
 // Disabled State.
-VisualState disabledState = new VisualState { Name = "Disabled" };
+VisualState disabledState = new() { Name = "Disabled" };
 disabledState.Setters.Add(new Setter
 {
     Property = SfRangeSlider.DividerStyleProperty,
@@ -269,16 +287,33 @@ disabledState.Setters.Add(new Setter
         InactiveRadius = 4,
     }
 });
+disabledState.Setters.Add(new Setter
+{
+    Property = SfRangeSlider.TrackStyleProperty,
+    Value = new SliderTrackStyle
+    {
+        ActiveFill = Colors.Gray,
+        InactiveFill = Colors.LightGray,
+    }
+});
+disabledState.Setters.Add(new Setter
+{
+    Property = SfRangeSlider.ThumbStyleProperty,
+    Value = new SliderThumbStyle
+    {
+        Fill = Colors.Gray,
+    }
+});
 
-commonStateGroup.States.Add(defaultState);
+commonStateGroup.States.Add(enabledState);
 commonStateGroup.States.Add(disabledState);
 visualStateGroupList.Add(commonStateGroup);
-VisualStateManager.SetVisualStateGroups(defaultRangeSlider, visualStateGroupList);
+VisualStateManager.SetVisualStateGroups(enabledRangeSlider, visualStateGroupList);
 VisualStateManager.SetVisualStateGroups(disabledRangeSlider, visualStateGroupList);
 
-stackLayout.Children.Add(new Label() { Text = "Enabled Range Slider", Padding = new Thickness(0, 10) });
-stackLayout.Children.Add(defaultRangeSlider);
-stackLayout.Children.Add(new Label() { Text = "Disabled Range Slider", Padding = new Thickness(0, 10) });
+stackLayout.Children.Add(new Label() { Text = "Enabled", Padding = new Thickness(24, 10) });
+stackLayout.Children.Add(enabledRangeSlider);
+stackLayout.Children.Add(new Label() { Text = "Disabled", Padding = new Thickness(24, 10) });
 stackLayout.Children.Add(disabledRangeSlider);
 this.Content = stackLayout;
 

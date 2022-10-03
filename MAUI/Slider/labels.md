@@ -13,7 +13,7 @@ This section explains how to add the labels in the slider.
 
 ## Show labels
 
-The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ShowLabels) property is used to render the labels on given interval. The default value of the [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ShowLabels) property is `False`.
+The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels) property is used to render the labels on given interval. The default value of the [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels) property is `False`.
 
 {% tabs %}
 
@@ -85,7 +85,7 @@ SfSlider slider = new SfSlider()
 
 ## Label placement
 
-The [`LabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_LabelsPlacement) property is used to place the labels either between the major ticks or on the major ticks. The default value of the [`LabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_LabelsPlacement) property is [`SliderLabelsPlacement.OnTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelsPlacement.html#Syncfusion_Maui_Sliders_SliderLabelsPlacement_OnTicks).
+The [`LabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_LabelsPlacement) property is used to place the labels either between the major ticks or on the major ticks. The default value of the [`LabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_LabelsPlacement) property is [`SliderLabelsPlacement.OnTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelsPlacement.html#Syncfusion_Maui_Sliders_SliderLabelsPlacement_OnTicks).
 
 {% tabs %}
 
@@ -124,9 +124,9 @@ N> Refer [here](https://help.syncfusion.com/maui/slider/events) to customize the
 
 ## Edge labels placement
 
-The [`EdgeLabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_EdgeLabelsPlacement) property is used to move the first and the last label either inside the track bounds or based on the intervals. The default value of the [`EdgeLabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_EdgeLabelsPlacement) property is [`SliderEdgeLabelPlacement.Default`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderEdgeLabelsPlacement.html#Syncfusion_Maui_Sliders_SliderEdgeLabelsPlacement_Default).
+The [`EdgeLabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_EdgeLabelsPlacement) property is used to move the first and the last label either inside the track bounds or based on the intervals. The default value of the [`EdgeLabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_EdgeLabelsPlacement) property is [`SliderEdgeLabelPlacement.Default`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderEdgeLabelsPlacement.html#Syncfusion_Maui_Sliders_SliderEdgeLabelsPlacement_Default).
 
-If the [`TrackExtent`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_TrackExtent) > 0 and the [`EdgeLabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_EdgeLabelsPlacement) is [`SliderEdgeLabelsPlacement.Inside`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderEdgeLabelsPlacement.html#Syncfusion_Maui_Sliders_SliderEdgeLabelsPlacement_Inside), the labels get placed inside the extended track edges. 
+If the [`TrackExtent`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_TrackExtent) > 0 and the [`EdgeLabelsPlacement`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_EdgeLabelsPlacement) is [`SliderEdgeLabelsPlacement.Inside`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderEdgeLabelsPlacement.html#Syncfusion_Maui_Sliders_SliderEdgeLabelsPlacement_Inside), the labels get placed inside the extended track edges. 
 
 {% tabs %}
 
@@ -222,7 +222,7 @@ slider.LabelStyle.InactiveFontAttributes = FontAttributes.Italic;
 
 ## Label offset
 
-Adjust the space between ticks and labels of the slider using the [`Offset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_OffsetProperty) property. The default value of the [`Offset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_OffsetProperty) property is 5.0 when [`ShowTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ShowTicks) enabled, otherwise it is `15.0` by default.
+Adjust the space between ticks and labels of the slider using the [`Offset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_OffsetProperty) property. The default value of the [`Offset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelStyle.html#Syncfusion_Maui_Sliders_SliderLabelStyle_OffsetProperty) property is 5.0 when [`ShowTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowTicks) enabled, otherwise it is `15.0` by default.
 
 {% tabs %}
 
@@ -307,6 +307,17 @@ Change the state of the slider to disabled by setting `false` to the `IsEnabled`
                                                               InactiveFontAttributes="Bold" />
                                 </Setter.Value>
                             </Setter>
+                            <Setter Property="ThumbStyle">
+                                <Setter.Value>
+                                    <sliders:SliderThumbStyle Fill="Gray" />
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="TrackStyle">
+                                <Setter.Value>
+                                    <sliders:SliderTrackStyle ActiveFill="Gray"
+                                                              InactiveFill="LightGray" />
+                                </Setter.Value>
+                            </Setter>
                         </VisualState.Setters>
                     </VisualState>
                 </VisualStateGroup>
@@ -317,11 +328,11 @@ Change the state of the slider to disabled by setting `false` to the `IsEnabled`
 
 <ContentPage.Content>
     <VerticalStackLayout>
-        <Label Text="Enabled Slider"
-               Padding="0,10" />
+        <Label Text="Enabled"
+               Padding="24,10" />
         <sliders:SfSlider />
-        <Label Text="Disabled Slider"
-               Padding="0,10" />
+        <Label Text="Disabled"
+               Padding="24,10" />
         <sliders:SfSlider IsEnabled="False" />
     </VerticalStackLayout>
 </ContentPage.Content>
@@ -331,8 +342,19 @@ Change the state of the slider to disabled by setting `false` to the `IsEnabled`
 {% highlight C# %}
 
 VerticalStackLayout stackLayout = new VerticalStackLayout();
-SfSlider defaultSlider = new SfSlider { Interval = 0.25, ShowTicks = true, ShowLabels = true };
-SfSlider disabledSlider = new SfSlider { IsEnabled = false, Interval = 0.25, ShowTicks = true, ShowLabels = true };
+SfSlider defaultSlider = new()
+{
+    Interval = 0.25,
+    ShowTicks = true,
+    ShowLabels = true
+};
+SfSlider disabledSlider = new()
+{
+    IsEnabled = false,
+    Interval = 0.25,
+    ShowTicks = true,
+    ShowLabels = true
+};
 
 VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
 VisualStateGroup commonStateGroup = new VisualStateGroup();
@@ -348,6 +370,7 @@ defaultState.Setters.Add(new Setter
         ActiveTextColor = Color.FromArgb("#EE3F3F"),
         InactiveTextColor = Color.FromArgb("#F7B1AE"),
         ActiveFontAttributes = FontAttributes.Bold,
+        InactiveFontAttributes = FontAttributes.Italic,
     }
 });
 // Disabled State.
@@ -357,11 +380,29 @@ disabledState.Setters.Add(new Setter
     Property = SfSlider.LabelStyleProperty,
     Value = new SliderLabelStyle
     {
-        ActiveFontSize = 16,
-        InactiveFontSize = 14,
-        ActiveTextColor = Color.FromArgb("#EE3F3F"),
-        InactiveTextColor = Color.FromArgb("#F7B1AE"),
-        ActiveFontAttributes = FontAttributes.Bold,
+        ActiveFontSize = 14,
+        InactiveFontSize = 16,
+        ActiveTextColor = Colors.Gray,
+        InactiveTextColor = Colors.LightGray,
+        ActiveFontAttributes = FontAttributes.Italic,
+        InactiveFontAttributes = FontAttributes.Bold,
+    }
+});
+disabledState.Setters.Add(new Setter
+{
+    Property = SfSlider.ThumbStyleProperty,
+    Value = new SliderThumbStyle
+    {
+        Fill = Colors.Gray,
+    }
+});
+disabledState.Setters.Add(new Setter
+{
+    Property = SfSlider.TrackStyleProperty,
+    Value = new SliderTrackStyle
+    {
+        ActiveFill = Colors.Gray,
+        InactiveFill = Colors.LightGray,
     }
 });
 
@@ -371,9 +412,9 @@ visualStateGroupList.Add(commonStateGroup);
 VisualStateManager.SetVisualStateGroups(defaultSlider, visualStateGroupList);
 VisualStateManager.SetVisualStateGroups(disabledSlider, visualStateGroupList);
 
-stackLayout.Children.Add(new Label() { Text = "Default Slider", Padding = new Thickness(0, 10) });
+stackLayout.Children.Add(new Label() { Text = "Enabled", Padding = new Thickness(24, 10) });
 stackLayout.Children.Add(defaultSlider);
-stackLayout.Children.Add(new Label() { Text = "Disabled Slider", Padding = new Thickness(0, 10) });
+stackLayout.Children.Add(new Label() { Text = "Disabled", Padding = new Thickness(24, 10) });
 stackLayout.Children.Add(disabledSlider);
 this.Content = stackLayout;
 
