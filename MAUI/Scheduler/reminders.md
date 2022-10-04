@@ -12,7 +12,7 @@ documentation: ug
 The .NET MAUI Scheduler notify an appointment reminder by using the [EnableReminder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_EnableReminder) property and [ReminderAlertOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_ReminderAlertOpening) event. An appointment can have one or more reminders.
 
 N>
-* As a restriction in enabling toast notification in .NET MAUI Framework, as of now, add an event to notify appointment reminders.[Reference](https://github.com/dotnet/maui/discussions/4216)
+* As a [restriction](https://github.com/dotnet/maui/discussions/4216) in enabling toast notification in .NET MAUI Framework, as of now, add an event to notify appointment reminders.
 
 ## Handling reminders for future appointments
 
@@ -421,3 +421,6 @@ private void Scheduler_ReminderAlertOpening(object sender, ReminderAlertOpeningE
 {% endhighlight %}
 {% endtabs %}
 
+N>
+* [View scheduler appointment sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/GettingStarted)
+* [View business object sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/Reminders/SchedulerReminder)
