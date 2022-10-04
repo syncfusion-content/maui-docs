@@ -12,7 +12,7 @@ documentation: ug
 The .NET MAUI Scheduler notify an appointment reminder by using the [EnableReminder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_EnableReminder) property and [ReminderAlertOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_ReminderAlertOpening) event. An appointment can have one or more reminders.
 
 N>
-* As a restriction in enabling toast notification in .NET MAUI Framework, as of now, add an event to notify appointment reminders.[Reference](https://github.com/dotnet/maui/discussions/4216)
+* As a [restriction](https://github.com/dotnet/maui/discussions/4216) in enabling toast notification in .NET MAUI Framework, as of now, add an event to notify appointment reminders.
 
 ## Handling reminders for future appointments
 
@@ -53,13 +53,12 @@ Reminders can be enabled by setting the [EnableReminder](https://help.syncfusion
 
 ## Adding Reminders
 
-Configure the appointment reminders with [SchedulerReminder.] The `SchedulerReminder` has the following properties for reminder alert.
+Configure the appointment reminders with [SchedulerReminder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerReminder.html). The `SchedulerReminder` has the following properties for reminder alert.
 
 <table>
-<tr><th>Properties</th><th>Description</th></tr>
+<tr><th>Property Name</th><th>Description</th></tr>
 <tr><td>{{'[TimeBeforeStart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerReminder.html#Syncfusion_Maui_Scheduler_SchedulerReminder_TimeBeforeStart)'| markdownify }}</td>
-<td>Gets or sets the time interval that decides to notify the reminder before the appointment’s start time.
-</td></tr>
+<td>Gets or sets the time interval that decides to notify the reminder before the appointment’s start time.</td></tr>
 <tr><td>{{'[AlertTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerReminder.html#Syncfusion_Maui_Scheduler_SchedulerReminder_AlertTime)'| markdownify }}</td>
 <td>Gets the reminder time that decides when to enable `ReminderAlertOpening` event to the reminder of the appointment.</td></tr>
 <tr><td>{{'[Appointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerReminder.html#Syncfusion_Maui_Scheduler_SchedulerReminder_Appointment)'| markdownify }}</td>
@@ -71,7 +70,7 @@ Configure the appointment reminders with [SchedulerReminder.] The `SchedulerRemi
 </table>
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4" %}
  <syncfusion:SfScheduler x:Name="Schedule" 
                 AppointmentsSource="{Binding Events}"
                 EnableReminder="True">
@@ -195,7 +194,7 @@ public class Reminder
 Map those properties of the `Event` class with the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.html) control by using the [SchedulerAppointmentMapping] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html) and map `CustomReminder` properties with the [SchedulerReminder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerReminder.html) by using [SchedulerReminderMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerReminderMapping.html).
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 17 18 19 20" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 8 21" %}
   <syncfusion:SfScheduler x:Name="Schedule" 
                 AppointmentsSource="{Binding Events}"
                 EnableReminder="True">
