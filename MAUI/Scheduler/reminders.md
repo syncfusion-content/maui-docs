@@ -53,10 +53,10 @@ Reminders can be enabled by setting the [EnableReminder](https://help.syncfusion
 
 ## Adding Reminders
 
-Configure the appointment reminders with [SchedulerReminder.] The `SchedulerReminder` has the following properties for reminder alert.
+Configure the appointment reminders with [SchedulerReminder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerReminder.html). The `SchedulerReminder` has the following properties for reminder alert.
 
 <table>
-<tr><th>Properties</th><th>Description</th></tr>
+<tr><th>Property Name</th><th>Description</th></tr>
 <tr><td>{{'[TimeBeforeStart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerReminder.html#Syncfusion_Maui_Scheduler_SchedulerReminder_TimeBeforeStart)'| markdownify }}</td>
 <td>Gets or sets the time interval that decides to notify the reminder before the appointment’s start time.
 </td></tr>
