@@ -395,7 +395,7 @@ chart.YAxes.Add(new LogarithmicAxis( ) { Interval = 2 });
 
 ### Range customization
 
-To customize the range of the log axis, you can use the [Minimum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html#Syncfusion_Maui_Charts_LogarithmicAxis_Minimum), [Maximum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html#Syncfusion_Maui_Charts_LogarithmicAxis_Maximum) and [Interval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html#Syncfusion_Maui_Charts_LogarithmicAxis_Interval) properties of the [LogarithmicAxis](). By default, an excellent range will be calculated automatically based on the provided data. 
+To customize the range of the log axis, you can use the [Minimum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html#Syncfusion_Maui_Charts_LogarithmicAxis_Minimum), [Maximum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html#Syncfusion_Maui_Charts_LogarithmicAxis_Maximum) properties of the [LogarithmicAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html). By default, an excellent range will be calculated automatically based on the provided data. 
 
 {% tabs %}
 
