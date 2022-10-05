@@ -367,6 +367,8 @@ chart.YAxes.Add(secondaryAxis);
 
 {% endtabs %}
 
+![LogarithmicAxis support in MAUI Chart](Axis_Images/maui_chart_logarithmic_axis.jpg)
+
 ### Interval
 
 Axis interval can be customized using the [Interval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html#Syncfusion_Maui_Charts_LogarithmicAxis_Interval) property of the axis. By default, interval will be calculated based on the minimum and maximum value of the provided data. And the default value of the interval is 1. 
@@ -393,7 +395,7 @@ chart.YAxes.Add(new LogarithmicAxis( ) { Interval = 2 });
 
 ### Range customization
 
-To customize the range of the log axis, you can use the [Minimum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html#Syncfusion_Maui_Charts_LogarithmicAxis_Minimum), [Maximum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html#Syncfusion_Maui_Charts_LogarithmicAxis_Maximum) and [Interval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html#Syncfusion_Maui_Charts_LogarithmicAxis_Interval) properties of the [LogarithmicAxis](). By default, an excellent range will be calculated automatically based on the provided data. 
+To customize the range of the log axis, you can use the [Minimum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html#Syncfusion_Maui_Charts_LogarithmicAxis_Minimum), [Maximum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html#Syncfusion_Maui_Charts_LogarithmicAxis_Maximum) properties of the [LogarithmicAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html). By default, an excellent range will be calculated automatically based on the provided data. 
 
 {% tabs %}
 
@@ -429,7 +431,7 @@ The logarithmic axis base can be customized using the [LogarithmicBase](https://
 
 <chart:SfCartesianChart.YAxes>
 
-    <chart:LogarithmicAxis LogarithmicBase="2"/>
+    <chart:LogarithmicAxis LogarithmicBase="5"/>
 
 </chart:SfCartesianChart.YAxes>
 
@@ -437,11 +439,13 @@ The logarithmic axis base can be customized using the [LogarithmicBase](https://
 
 {% highlight c# %}
 
-chart.YAxes.Add(new LogarithmicAxis( ) { LogarithmicBase = 2 });
+chart.YAxes.Add(new LogarithmicAxis( ) { LogarithmicBase = 5 });
 
 {% endhighlight %}
 
 {% endtabs %}
+
+![LogarithmicAxis base customization in MAUI Chart](Axis_Images/maui_chart_logarithmic_axis_base.jpg)
 
 ## Inversed
 
