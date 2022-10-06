@@ -87,7 +87,7 @@ Step 3: Set the control to content in `ContentPage.`
 
 
 <ContentPage.Content>    
-    <editors:SfComboBox x:Name="comboBox />
+    <editors:SfComboBox x:Name="comboBox" />
 </ContentPage.Content>
 
 
