@@ -128,7 +128,7 @@ Set the `TextSearchMode` property value to `StartWith` to filter matching items 
 {% tabs %}
 {% highlight XAML %}
 
-<editors:SfAutocomplete x:Name="autoComplete"
+<editors:SfAutocomplete x:Name="autocomplete"
                         WidthRequest="250"
                         TextSearchMode="StartsWith"
                         ItemsSource="{Binding SocialMedias}"
@@ -155,7 +155,7 @@ Set the `TextSearchMode` property value to `Contains` to filter the matching ite
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfAutocomplete x:Name="autoComplete"
+<editors:SfAutocomplete x:Name="autocomplete"
                         WidthRequest="250"
                         TextSearchMode="Contains"
                         ItemsSource="{Binding SocialMedias}"
