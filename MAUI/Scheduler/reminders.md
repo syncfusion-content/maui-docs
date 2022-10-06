@@ -164,7 +164,8 @@ Create a business object class `Event` with mandatory fields `From,` `To,` and `
 {% endhighlight %}
 {% endtabs %}
 
-The [ReminderMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentMapping_ReminderMapping) provides the mapping information about the [SchedulerReminder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerReminder.html) properties to the [DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_DataItem) object. `ReminderMapping` has the following properties.
+The [ReminderMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentMapping_ReminderMapping) provides the mapping information about the [SchedulerReminder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerReminder.html) properties to the 
+[DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_DataItem) object. `ReminderMapping` has the following properties.
 
 * [TimeBeforeStart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerReminderMapping.html#Syncfusion_Maui_Scheduler_SchedulerReminderMapping_TimeBeforeStart): Maps the property name of a custom class, which is equivalent to the `SchedulerReminder.TimeBeforeStart`.
 
@@ -192,7 +193,7 @@ public class Reminder
 {% endhighlight %}
 {% endtabs %}
 
-Map those properties of the `Event` class with the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.html) control by using the [SchedulerAppointmentMapping] (https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html) and map `CustomReminder` properties with the [SchedulerReminder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerReminder.html) by using [SchedulerReminderMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerReminderMapping.html).
+Map those properties of the `Event` class with the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.html) control by using the [SchedulerAppointmentMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html) and map `CustomReminder` properties with the [SchedulerReminder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerReminder.html) by using [SchedulerReminderMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerReminderMapping.html).
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 8 21" %}
