@@ -123,7 +123,7 @@ The following gif image illustrates the result of the above code:
 
 ## Get the selected value
 
-The `SelectedValuePath` property allows you to specify a SelectedValue for a `Autocomplete`'s `SelectedItem`. The `SelectedItem` represents an object in the `Items` collection, and the `Autocomplete` displays the value of the selected item's single property. The `SelectedValuePath` property specifies the path to the property that is used to determine the `SelectedValue` property's value. The default value of `SelectedValue` and `SelectedValuePath` is `null`.
+The `SelectedValuePath` property allows you to specify a SelectedValue for a Autocomplete's `SelectedItem`. The `SelectedItem` represents an object in the `Items` collection, and the `Autocomplete` displays the value of the selected item's single property. The `SelectedValuePath` property specifies the path to the property that is used to determine the `SelectedValue` property's value. The default value of `SelectedValue` and `SelectedValuePath` is `null`.
 
 For example, when you select any `SocialMedia.Name` in the `Autocomplete,` the `SelectedItem` property returns the `SocialMedia` data item that corresponds to the selected `SocialMedia.Name.` However, because the `SelectedValuePath` of this `Autocomplete` is set to `SocialMedia.ID,` the `SelectedValue` is set to the `SocialMedia.ID.`
 
@@ -195,7 +195,7 @@ The following image illustrates the result of the above code:
 
 ## Is Drop-Down Open
 
-The "IsDropDownOpen" property in the "Autocomplete" control can be used to get a boolean value indicating whether the drop-down is open or closed state. It returns `true` if the drop-down is open, otherwise `false`.
+The `IsDropDownOpen` property in the Autocomplete control can be used to get a boolean value indicating whether the drop-down is open or closed state. It returns `true` if the drop-down is open, otherwise `false`.
 
 N> Currently, users can only get the boolean value based on whether a drop-down menu is open or not; the property "IsDropDownOpen" cannot be set.
 
