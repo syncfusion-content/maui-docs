@@ -9,10 +9,10 @@ documentation: ug
 
 # Appointment reminders in .NET MAUI Scheduler (SfScheduler)
 
-The .NET MAUI Scheduler notify an appointment reminder by using the [EnableReminder] property and [ReminderAlertOpening] event. An appointment can have one or more reminders.
+The .NET MAUI Scheduler notify an appointment reminder by using the [EnableReminder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_EnableReminder) property and [ReminderAlertOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_ReminderAlertOpening) event. An appointment can have one or more reminders.
 
 N>
-* As a restriction in enabling toast notification in .NET MAUI Framework, as of now, add an event to notify appointment reminders.[Reference](https://github.com/dotnet/maui/discussions/4216)
+* As a [restriction](https://github.com/dotnet/maui/discussions/4216) in enabling toast notification in .NET MAUI Framework, as of now, add an event to notify appointment reminders.
 
 ## Handling reminders for future appointments
 
@@ -40,7 +40,7 @@ N>
 
 ## Enable reminders
 
-Reminders can be enabled by setting the [EnableReminder] property to `true` which will trigger the `ReminderAlertOpening` event to notify appointment reminders. The reminders can be set by using the [Reminders] property of [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html).
+Reminders can be enabled by setting the [EnableReminder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_EnableReminder) property to `true` which will trigger the `ReminderAlertOpening` event to notify appointment reminders. The reminders can be set by using the [Reminders](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_Reminders) property of [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html).
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
@@ -53,20 +53,20 @@ Reminders can be enabled by setting the [EnableReminder] property to `true` whic
 
 ## Adding Reminders
 
-Configure the appointment reminders with [SchedulerReminder.] The `SchedulerReminder` has the following properties for reminder alert.
+Configure the appointment reminders with [SchedulerReminder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerReminder.html). The `SchedulerReminder` has the following properties for reminder alert.
 
 <table>
 <tr><th>Properties</th><th>Description</th></tr>
-<tr><td>{{'[TimeBeforeStart]'| markdownify }}</td>
+<tr><td>{{'[TimeBeforeStart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerReminder.html#Syncfusion_Maui_Scheduler_SchedulerReminder_TimeBeforeStart)'| markdownify}}</td>
 <td>Gets or sets the time interval that decides to notify the reminder before the appointment’s start time.
 </td></tr>
-<tr><td>{{'[AlertTime]'| markdownify }}</td>
+<tr><td>{{'[AlertTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerReminder.html#Syncfusion_Maui_Scheduler_SchedulerReminder_AlertTime)'| markdownify}}</td>
 <td>Gets the reminder time that decides when to enable `ReminderAlertOpening` event to the reminder of the appointment.</td></tr>
-<tr><td>{{'[Appointment]'| markdownify }}</td>
+<tr><td>{{'[Appointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerReminder.html#Syncfusion_Maui_Scheduler_SchedulerReminder_Appointment)'| markdownify}}</td>
 <td>Gets the appointment details for which the reminder is created.</td></tr>
-<tr><td>{{'[DataItem]'| markdownify }}</td>
+<tr><td>{{'[DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerReminder.html#Syncfusion_Maui_Scheduler_SchedulerReminder_DataItem)'| markdownify}}</td>
 <td>Gets the reminder data object associated with the `SchedulerReminder.`</td></tr>
-<tr><td>{{'[IsDismissed]' | markdownify }}</td>
+<tr><td>{{'[IsDismissed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerReminder.html#Syncfusion_Maui_Scheduler_SchedulerReminder_IsDismissed)'| markdownify}}</td>
 <td> Gets or sets whether the reminder is dismissed. </td></tr>
 </table>
 
@@ -164,11 +164,11 @@ Create a business object class `Event` with mandatory fields `From,` `To,` and `
 {% endhighlight %}
 {% endtabs %}
 
-The [ReminderMapping] provides the mapping information about the [SchedulerReminder] properties to the [DataItem] object. `ReminderMapping` has the following properties.
+The [ReminderMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentMapping_ReminderMapping) provides the mapping information about the [SchedulerReminder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerReminder.html) properties to the [DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerReminder.html#Syncfusion_Maui_Scheduler_SchedulerReminder_DataItem) object. `ReminderMapping` has the following properties.
 
-* [TimeBeforeStart]: Maps the property name of a custom class, which is equivalent to the [SchedulerReminder.TimeBeforeStart].
+* [TimeBeforeStart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerReminderMapping.html#Syncfusion_Maui_Scheduler_SchedulerReminderMapping_TimeBeforeStart): Maps the property name of a custom class, which is equivalent to the [SchedulerReminder.TimeBeforeStart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerReminder.html#Syncfusion_Maui_Scheduler_SchedulerReminder_TimeBeforeStart).
 
-* [IsDismissed]: Maps the property name of a custom class, which is equivalent to the [SchedulerReminder.IsDismissed].
+* [IsDismissed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerReminderMapping.html#Syncfusion_Maui_Scheduler_SchedulerReminderMapping_IsDismissed): Maps the property name of a custom class, which is equivalent to the [SchedulerReminder.IsDismissed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerReminder.html#Syncfusion_Maui_Scheduler_SchedulerReminder_IsDismissed).
 
 {% tabs %}
 {% highlight c# tabtitle="Reminder.cs" %}
@@ -192,7 +192,7 @@ public class Reminder
 {% endhighlight %}
 {% endtabs %}
 
-Map those properties of the `Event` class with the [SfScheduler] control by using the [AppointmentMapping] and map `CustomReminder` properties with the [SchedulerReminder] by using [ReminderMapping].
+Map those properties of the `Event` class with the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) control by using the [SchedulerAppointmentMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html) and map `CustomReminder` properties with the [SchedulerReminder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerReminder.html) by using [SchedulerReminderMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerReminderMapping.html).
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 17 18 19 20" %}
@@ -281,8 +281,9 @@ public class ReminderViewModel
 {% endtabs %}
 
 ## ReminderAlertOpening event
-Scheduler notifies the appointment's reminders by[ReminderAlertOpening] event before the appointment's start time.The [ReminderAlertOpeningEventArgs] has the following property,
-* [Reminders]: Gets a list of reminders that are used to notify the appointment reminders.
+Scheduler notifies the appointment's reminders by [ReminderAlertOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_ReminderAlertOpening) event before the appointment's start time.The [ReminderAlertOpeningEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.ReminderAlertOpeningEventArgs.html) has the following property,
+
+* [Reminders](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentMapping_Reminders): Gets a list of reminders that are used to notify the appointment reminders.
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
@@ -296,7 +297,7 @@ private void Scheduler_ReminderAlertOpening(object sender, ReminderAlertOpeningE
 {% endtabs %}
 ## Handle dismiss property of reminders
 
-* Normal appointment directly dismissed using [IsDismissed] property
+* Normal appointment directly dismissed using [IsDismissed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerReminderMapping.html#Syncfusion_Maui_Scheduler_SchedulerReminderMapping_IsDismissed) property
 
 * For recurrence appointment, if current occurrence need to dismiss then need to add changed occurrence for reminder occurrence dismissed, then current occurrence dismissed details get updated in underlying appointment or data source.
 
@@ -355,7 +356,7 @@ private void Scheduler_ReminderAlertOpening(object sender, ReminderAlertOpeningE
 {% endtabs %}
 
 ## Handle Snooze for reminders
-If Snooze time is set to 5 minutes than the value of reminder [TimeBeforeStart] property is calculated by 
+If Snooze time is set to 5 minutes than the value of reminder [TimeBeforeStart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerReminderMapping.html#Syncfusion_Maui_Scheduler_SchedulerReminderMapping_TimeBeforeStart) property is calculated by 
 
 * For Future appointments, TimeBeforeStart = Appointment.StartTime - AlertTime - snoozeTime
 
@@ -421,3 +422,6 @@ private void Scheduler_ReminderAlertOpening(object sender, ReminderAlertOpeningE
 {% endhighlight %}
 {% endtabs %}
 
+N>
+* [View scheduler appointment reminder sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/Reminders/SchedulerReminder)
+* [View business object reminder sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/Reminders/BusinessObject)
