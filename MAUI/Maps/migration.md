@@ -2120,8 +2120,6 @@ public MainPage()
 </tr>
 </table>
 
-N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
-
 The following code example explains how to customize the shape color in the Xamarin SfMaps and .Net MAUI SfMaps.
 
 <table>
