@@ -50,6 +50,11 @@ To migrate easier from [Xamarin SfListView](https://www.syncfusion.com/xamarin-u
 <td>{{'[SelectionBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.SfListView.html#Syncfusion_ListView_XForms_SfListView_SelectionBackgroundColor)' | markdownify }}</td>
 <td>{{'[SelectionBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionBackground)'| markdownify }}</td>
 <td>Gets or sets the selection background color for the selected item.</td></tr>
+<tr>
+<td>{{'[IsBusy](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.SfListView.html#Syncfusion_ListView_XForms_SfListView_IsBusy)'| markdownify }}</td>
+<td>{{'[IsLazyLoading](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_IsLazyLoading)'| markdownify }}</td>
+<td>Gets or sets a value indicating whether list view is busy in loading more items. If it is true, the load more indicators will be displayed until it sets to false.</td>
+</tr>
 </table> 
 
 ## Enums
