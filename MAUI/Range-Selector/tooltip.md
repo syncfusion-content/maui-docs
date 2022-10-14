@@ -13,7 +13,7 @@ This section helps to learn about how to add tooltip in the Range Selector.
 
 ## Enable tooltip
 
-Enable tooltip for the thumb by setting the [`Tooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Tooltip) property to [`SliderTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html). It is used to clearly indicate the current selection of the value during interaction. By default, tooltip text is formatted with either numberFormat. The default value of the [`Tooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Tooltip) property is `null`. 
+Enable tooltip for the thumb by setting the [`Tooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Tooltip) property to [`SliderTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html). It is used to clearly indicate the current selection of the value during interaction. By default, tooltip text is formatted with either numberFormat. The default value of the [`Tooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Tooltip) property is `null`. 
 
 {% tabs %}
 
@@ -68,7 +68,7 @@ Always shows a tooltip with and without the thumb interaction by setting the [`S
     <sliders:SfRangeSelector>
          
          <sliders:SfRangeSelector.Tooltip>
-            <sliders:SliderTooltip />
+            <sliders:SliderTooltip ShowAlways="True" />
          </sliders:SfRangeSelector.Tooltip>
      
      <charts:SfCartesianChart>
@@ -84,6 +84,7 @@ Always shows a tooltip with and without the thumb interaction by setting the [`S
 
 SfRangeSelector rangeSelector = new SfRangeSelector();
 rangeSelector.Tooltip = new SliderTooltip();
+rangeSelector.Tooltip.ShowAlways = true;
 SfCartesianChart chart = new SfCartesianChart();
 rangeSelector.Content = chart;
 
@@ -107,20 +108,23 @@ Change the appearance of the tooltip using the [`Fill`](https://help.syncfusion.
              ...
              xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
              xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-    
+
     <sliders:SfRangeSelector>
-         
-         <sliders:SfRangeSelector.Tooltip>
-            <sliders:SliderTooltip Fill="#F7B1AE" 
-                                   Stroke="#EE3F3F" 
-                                   StrokeThickness="2" />
-        
-         </sliders:SfRangeSelector.Tooltip>
-        
+
+        <sliders:SfRangeSelector.Tooltip>
+            <sliders:SliderTooltip Fill="#DFD8F7"
+                                   Stroke="#512BD4"
+                                   StrokeThickness="2"
+                                   TextColor="#512BD4"
+                                   FontSize="14"
+                                   FontAttributes="Bold"
+                                   Padding="12,12" />
+        </sliders:SfRangeSelector.Tooltip>
+
         <charts:SfCartesianChart>
             ...
         </charts:SfCartesianChart>
-    
+
     </sliders:SfRangeSelector>
 </ContentPage>
 
@@ -129,9 +133,13 @@ Change the appearance of the tooltip using the [`Fill`](https://help.syncfusion.
 {% highlight C# %}
 
 SfRangeSelector rangeSelector = new SfRangeSelector();
-rangeSelector.Tooltip.Fill = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
-rangeSelector.Tooltip.Stroke = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+rangeSelector.Tooltip.Fill = new SolidColorBrush(Color.FromArgb("#DFD8F7"));
+rangeSelector.Tooltip.Stroke = new SolidColorBrush(Color.FromArgb("#512BD4"));
 rangeSelector.Tooltip.StrokeThickness = 2;
+rangeSelector.Tooltip.TextColor = Color.FromArgb("#512BD4");
+rangeSelector.Tooltip.FontSize = 14;
+rangeSelector.Tooltip.FontAttributes = FontAttributes.Bold;
+rangeSelector.Tooltip.Padding = new Thickness(12, 12);
 SfCartesianChart chart = new SfCartesianChart();
 rangeSelector.Content = chart;
 

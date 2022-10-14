@@ -877,7 +877,6 @@ chart.ZoomPanBehavior = zooming;
 
 **Chart** 
 
-* Customize the appearance of the chart plot area.
 * Support for trackball interactions. 
 * Support for crosshair interactions. 
 * Exporting support for a chart as an image or a stream. 
@@ -897,7 +896,6 @@ chart.ZoomPanBehavior = zooming;
 
 **Axis**
 
-* Logarithmic axis support.
 * DateTime category axis support.
 * Align the axis labels and tick inside the series clip rect.
 * Range style customization.
@@ -931,7 +929,7 @@ chart.ZoomPanBehavior = zooming;
 
 **Selection**
 
-* Series selection and cluster selection support.
+* Cluster selection support.
 
 **Zooming**
 
@@ -950,11 +948,9 @@ chart.ZoomPanBehavior = zooming;
 ## Known issues
 
 * The legend item was not dynamically added.
-* While resizing the window, the chart size is not dynamically updated.
 * Axis label rotation does not work for all angles.
 * The title position was incorrect for a category axis with an inversed position.
 * Axis range and series are not updated properly when dynamically removing or inserting the axis collection.
-* Axis minor grid lines are not visible unless major gridlines are enabled.
 
 ## Support and feedback
 

@@ -13,7 +13,7 @@ This section helps to learn about how to add tooltip in the DateTime Slider.
 
 ## Enable tooltip
 
-Enable tooltip for the thumb by setting the [`Tooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Tooltip) property to [`SliderTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html). It is used display the selected value during interaction. The default value of the [`Tooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Tooltip) property is `null`. 
+Enable tooltip for the thumb by setting the [`Tooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Tooltip) property to [`SliderTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html). It is used display the selected value during interaction. The default value of the [`Tooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Tooltip) property is `null`. 
 
 {% tabs %}
 
@@ -86,14 +86,20 @@ Change the appearance of the tooltip using the [`Fill`](https://help.syncfusion.
 
 {% highlight xaml %}
 
-<sliders:SfDateTimeSlider Minimum="2010-01-01" 
-                          Maximum="2018-01-01" 
+<sliders:SfDateTimeSlider Minimum="2010-01-01"
+                          Maximum="2018-01-01"
                           Value="2014-01-01">
-  <sliders:SfDateTimeSlider.Tooltip>
-    <sliders:SliderTooltip Fill="#F7B1AE" 
-                           Stroke="#EE3F3F" 
-				                   StrokeThickness="2" />
-  </sliders:SfDateTimeSlider.Tooltip>
+    
+    <sliders:SfDateTimeSlider.Tooltip>
+        <sliders:SliderTooltip Fill="#DFD8F7"
+                               Stroke="#512BD4"
+                               StrokeThickness="2"
+                               TextColor="#512BD4"
+                               FontSize="14"
+                               FontAttributes="Bold"
+                               Padding="12,12" />
+    </sliders:SfDateTimeSlider.Tooltip>
+    
 </sliders:SfDateTimeSlider>
 
 {% endhighlight %}
@@ -104,9 +110,13 @@ SfDateTimeSlider slider = new SfDateTimeSlider();
 slider.Minimum = new DateTime(2010, 01, 01);
 slider.Maximum = new DateTime(2018, 01, 01);
 slider.Value = new DateTime(2014, 01, 01);
-slider.Tooltip.Fill = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
-slider.Tooltip.Stroke = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
+slider.Tooltip.Fill = new SolidColorBrush(Color.FromArgb("#DFD8F7"));
+slider.Tooltip.Stroke = new SolidColorBrush(Color.FromArgb("#512BD4"));
 slider.Tooltip.StrokeThickness = 2;
+slider.Tooltip.TextColor = Color.FromArgb("#512BD4");
+slider.Tooltip.FontSize = 14;
+slider.Tooltip.FontAttributes = FontAttributes.Bold;
+slider.Tooltip.Padding = new Thickness(12, 12);
 
 {% endhighlight %}
 

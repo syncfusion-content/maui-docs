@@ -103,30 +103,30 @@ namespace SliderGettingStarted
 
 ## Enable labels
 
-The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ShowLabels) property enables the labels which renders on given interval.
+The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels) property enables the labels which renders on given interval.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<sliders:SfSlider Minimum="0" 
-		          Maximum="10" 
-		          Value="6" 
-		          ShowLabels="True" 
-		          Interval="2">
-</sliders:SfSlider>
-
+<sliders:SfSlider Minimum="0"
+                  Maximum="10"
+                  Value="5"
+                  ShowLabels="True"
+                  Interval="2" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfSlider slider = new SfSlider();
-slider.Minimum = 20;
-slider.Maximum = 100;
-slider.Value = 60;
-slider.ShowLabels = true;
-slider.Interval = 2;
+SfSlider slider = new SfSlider()
+{
+    Minimum = 0,
+    Maximum = 10,
+    Value = 5,
+    Interval = 2,
+    ShowLabels = true,
+};
 
 {% endhighlight %}
 
@@ -136,34 +136,34 @@ slider.Interval = 2;
 
 ## Enable ticks
 
-The [`ShowTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ShowTicks) property enables the ticks in the range selector, while the [`MinorTicksPerInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MinorTicksPerInterval) property enables the minor ticks between the major ticks.
+The [`ShowTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowTicks) property enables the ticks in the range selector, while the [`MinorTicksPerInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MinorTicksPerInterval) property enables the minor ticks between the major ticks.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<sliders:SfSlider Minimum="0" 
-		          Maximum="10" 
-		          Value="6" 
-		          ShowLabels="True"  
-		          ShowTicks="True" 
-		          Interval="2" 
-		          MinorTicksPerInterval="1">
-</sliders:SfSlider>
-
+<sliders:SfSlider Minimum="0"
+                  Maximum="10"
+                  Value="5"
+                  Interval="2"
+                  ShowTicks="True"
+                  ShowLabels="True"
+                  MinorTicksPerInterval="1" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfSlider slider = new SfSlider();
-slider.Minimum = 20;
-slider.Maximum = 100;
-slider.Value = 60;
-slider.ShowLabels = true;
-slider.Interval = 2;
-slider.ShowTicks = true;
-slider.MinorTicksPerInterval = 1;
+SfSlider slider = new SfSlider()
+{
+    Minimum = 0,
+    Maximum = 10,
+    Value = 5,
+    Interval = 2,
+    ShowLabels = true,
+    ShowTicks = true,
+    MinorTicksPerInterval = 1
+};
 
 {% endhighlight %}
 
@@ -173,35 +173,36 @@ slider.MinorTicksPerInterval = 1;
 
 ## Orientation
 
-The [`Orientation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html#Syncfusion_Maui_Sliders_SfSlider_Orientation) property allows you to show the slider in both horizontal and vertical directions. The default value of the [`Orientation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html#Syncfusion_Maui_Sliders_SfSlider_Orientation) property is `Horizontal`.
+The [`Orientation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase-1.html#Syncfusion_Maui_Sliders_SliderBase_1_Orientation) property allows you to show the slider in both horizontal and vertical directions. The default value of the [`Orientation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase-1.html#Syncfusion_Maui_Sliders_SliderBase_1_Orientation) property is `Horizontal`.
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <sliders:SfSlider Orientation="Vertical"
-                  Minimum="0" 
-		          Maximum="10" 
-		          Value="6" 
-		          ShowLabels="True"  
-		          ShowTicks="True" 
-		          Interval="2" 
-		          MinorTicksPerInterval="1">
-</sliders:SfSlider>
+                  Minimum="0"
+                  Maximum="10"
+                  Value="5"
+                  Interval="2"
+                  ShowLabels="True"
+                  ShowTicks="True"
+                  MinorTicksPerInterval="1" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfSlider slider = new SfSlider();
-slider.Orientation = SliderOrientation.Vertical;
-slider.Minimum = 20;
-slider.Maximum = 100;
-slider.Value = 60;
-slider.ShowLabels = true;
-slider.Interval = 2;
-slider.ShowTicks = true;
-slider.MinorTicksPerInterval = 1;
+SfSlider slider = new SfSlider()
+{
+    Orientation = SliderOrientation.Vertical,
+    Minimum = 0,
+    Maximum = 10,
+    Value = 5,
+    Interval = 2,
+    ShowLabels = true,
+    ShowTicks = true,
+    MinorTicksPerInterval = 1
+};
 
 {% endhighlight %}
 
@@ -211,35 +212,36 @@ slider.MinorTicksPerInterval = 1;
 
 ## Inverse the slider
 
-Invert the slider using the [`IsInversed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_IsInversed) property. The default value of the [`IsInversed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_IsInversed) property is `False`.
+Invert the slider using the [`IsInversed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_IsInversed) property. The default value of the [`IsInversed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_IsInversed) property is `False`.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<sliders:SfSlider IsInversed="True"
-                  Minimum="0" 
-		          Maximum="10" 
-		          Value="6" 
-		          ShowLabels="True"  
-		          ShowTicks="True" 
-		          Interval="2" 
-		          MinorTicksPerInterval="1">
-</sliders:SfSlider>
+<sliders:SfSlider Minimum="0"
+                  Maximum="10"
+                  Value="5"
+                  IsInversed="True"
+                  Interval="2"
+                  ShowTicks="True"
+                  ShowLabels="True"
+                  MinorTicksPerInterval="1" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfSlider slider = new SfSlider();
-slider.IsInversed = true;
-slider.Minimum = 20;
-slider.Maximum = 100;
-slider.Value = 60;
-slider.ShowLabels = true;
-slider.Interval = 2;
-slider.ShowTicks = true;
-slider.MinorTicksPerInterval = 1;
+SfSlider slider = new SfSlider()
+{
+    Minimum = 0,
+    Maximum = 10,
+    Value = 5,
+    IsInversed = true,
+    Interval = 2,
+    ShowLabels = true,
+    ShowTicks = true,
+    MinorTicksPerInterval = 1
+};
 
 {% endhighlight %}
 
@@ -256,27 +258,30 @@ Add prefix or suffix to the labels using the [`NumberFormat`](https://help.syncf
 
 {% highlight xaml %}
 
-<sliders:SfSlider Minimum="20" 
-		          Maximum="100" 
-		          Value="60" 
-		          NumberFormat="$##" 
+<sliders:SfSlider Minimum="20"
+                  Maximum="100"
+                  Value="60"
+                  Interval="20"
+                  NumberFormat="$##"
+                  ShowLabels="True"
                   ShowTicks="True"
-                  MinorTicksPerInterval="1"
-		          ShowLabels="True" 
-		          Interval="20">
-</sliders:SfSlider>
+                  MinorTicksPerInterval="1" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
- SfSlider slider = new SfSlider();
- slider.Minimum = 20;
- slider.Maximum = 100;
- slider.Value = 60;
- slider.ShowLabels = true;
- slider.Interval = 20;
- slider.NumberFormat = "$##";
+SfSlider slider = new SfSlider()
+{
+    Minimum = 20,
+    Maximum = 100,
+    Value = 60,
+    Interval = 20,
+    NumberFormat = "$##",
+    ShowLabels = true,
+    ShowTicks = true,
+    MinorTicksPerInterval = 1
+};
 
 {% endhighlight %}
 

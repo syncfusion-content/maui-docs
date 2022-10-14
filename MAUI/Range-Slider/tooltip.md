@@ -13,7 +13,7 @@ This section helps to learn about how to add tooltip in the range slider.
 
 ## Enable tooltip
 
-Enable tooltip for the thumb by setting the [`Tooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Tooltip) property to [`SliderTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html). It is used to clearly indicate the current selection of the value during interaction. By default, tooltip text is formatted with numberFormat. The default value of the [`Tooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Tooltip) property is `null`.  
+Enable tooltip for the thumb by setting the [`Tooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Tooltip) property to [`SliderTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html). It is used to clearly indicate the current selection of the value during interaction. By default, tooltip text is formatted with numberFormat. The default value of the [`Tooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Tooltip) property is `null`.  
 
 {% tabs %}
 
@@ -80,24 +80,32 @@ Change the appearance of the tooltip using the [`Fill`](https://help.syncfusion.
 
 {% highlight xaml %}
 
- <sliders:SfRangeSlider>
-    
+<sliders:SfRangeSlider>
+
     <sliders:SfRangeSlider.Tooltip>
-       <sliders:SliderTooltip Fill="#F7B1AE" 
-                              Stroke="#EE3F3F" 
-                              StrokeThickness="2" />
+        <sliders:SliderTooltip Fill="#DFD8F7"
+                               Stroke="#512BD4"
+                               StrokeThickness="2"
+                               TextColor="#512BD4"
+                               FontSize="14"
+                               FontAttributes="Bold"
+                               Padding="12,12" />
     </sliders:SfRangeSlider.Tooltip>
- 
- </sliders:SfRangeSlider>
+
+</sliders:SfRangeSlider>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
- SfRangeSlider rangeSlider = new SfRangeSlider();
- rangeSlider.Tooltip.Fill = new SolidColorBrush(Color.FromArgb("#F7B1AE"));
- rangeSlider.Tooltip.Stroke = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
- rangeSlider.Tooltip.StrokeThickness = 2;
+SfRangeSlider rangeSlider = new SfRangeSlider();
+rangeSlider.Tooltip.Fill = new SolidColorBrush(Color.FromArgb("#DFD8F7"));
+rangeSlider.Tooltip.Stroke = new SolidColorBrush(Color.FromArgb("#512BD4"));
+rangeSlider.Tooltip.StrokeThickness = 2;
+rangeSlider.Tooltip.TextColor = Color.FromArgb("#512BD4");
+rangeSlider.Tooltip.FontSize = 14;
+rangeSlider.Tooltip.FontAttributes = FontAttributes.Bold;
+rangeSlider.Tooltip.Padding = new Thickness(12, 12);
 
 {% endhighlight %}
 

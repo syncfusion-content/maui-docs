@@ -99,19 +99,18 @@ namespace RangeSlider
 
 ## Enable labels
 
-The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ShowLabels) property enables the labels which renders on given interval.
+The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels) property enables the labels which renders on given interval.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<sliders:SfRangeSlider Minimum="0" 
-                       Maximum="10" 
-                       RangeStart="2" 
+<sliders:SfRangeSlider Minimum="0"
+                       Maximum="10"
+                       RangeStart="2"
                        RangeEnd="8"
-                       Interval="2" 
-                       ShowLabel="True">
-</sliders:SfRangeSlider>
+                       Interval="2"
+                       ShowLabels="True" />
 
 {% endhighlight %}
 
@@ -122,7 +121,7 @@ rangeSlider.Minimum = 0;
 rangeSlider.Maximum = 10;
 rangeSlider.RangeStart = 2;
 rangeSlider.RangeEnd = 8;
-rangeSlider.ShowLabel = true;
+rangeSlider.ShowLabels = true;
 rangeSlider.Interval = 2;
 
 {% endhighlight %}
@@ -133,21 +132,20 @@ rangeSlider.Interval = 2;
 
 ## Enable ticks
 
-The [`ShowTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ShowTicks) property enables the ticks in the range selector, while the [`MinorTicksPerInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MinorTicksPerInterval) property enables the minor ticks between the major ticks.
+The [`ShowTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowTicks) property enables the ticks in the range selector, while the [`MinorTicksPerInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MinorTicksPerInterval) property enables the minor ticks between the major ticks.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<sliders:SfRangeSlider Minimum="0" 
-                       Maximum="10" 
-                       RangeStart="2" 
-                       RangeEnd="8"                       
-                       Interval="2" 
+<sliders:SfRangeSlider Minimum="0"
+                       Maximum="10"
+                       RangeStart="2"
+                       RangeEnd="8"
+                       Interval="2"
                        ShowLabels="True"
                        ShowTicks="True"
-                       MinorTicksPerInterval="1">
-</sliders:SfRangeSlider>
+                       MinorTicksPerInterval="1" />
 
 {% endhighlight %}
 
@@ -177,15 +175,15 @@ The [`Orientation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.
 
 {% highlight xaml %}
 
-<sliders:SfRangeSlider Minimum="0" 
-                       Maximum="10" 
-                       RangeStart="2" 
-                       RangeEnd="8" 
-                       ShowTicks="True" 
-                       Interval="2" 
-                       MinorTicksPerInterval="1" 
-                       Orientation="Vertical">
-</sliders:SfRangeSlider>
+<sliders:SfRangeSlider Minimum="0"
+                       Maximum="10"
+                       RangeStart="2"
+                       RangeEnd="8"
+                       ShowTicks="True"
+                       ShowLabels="True"
+                       Interval="2"
+                       MinorTicksPerInterval="1"
+                       Orientation="Vertical" />
 
 {% endhighlight %}
 
@@ -210,23 +208,21 @@ rangeSlider.MinorTicksPerInterval = 1;
 
 ## Inverse the slider
 
-Invert the range slider using the [`IsInversed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_IsInversed) property. The default value of the [`IsInversed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_IsInversed) property is `False`.
+Invert the range slider using the [`IsInversed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_IsInversed) property. The default value of the [`IsInversed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_IsInversed) property is `False`.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<sliders:SfRangeSlider Minimum="0" 
-                       Maximum="10" 
-                       RangeStart="2" 
+<sliders:SfRangeSlider Minimum="0"
+                       Maximum="10"
+                       RangeStart="2"
                        RangeEnd="8"
-                       Interval="2" 
+                       Interval="2"
                        ShowTicks="True"
-                       ShowLablels="True"  
-                       MinorTicksPerInterval="1" 
-                       Orientation="Vertical" 
-                       IsInversed="True">
-</sliders:SfRangeSlider>
+                       ShowLabels="True"
+                       MinorTicksPerInterval="1"
+                       IsInversed="True" />
 
 {% endhighlight %}
 
@@ -247,25 +243,24 @@ rangeSlider.IsInversed = true;
 
 {% endtabs %}
 
-![Inverse rangeslider](images/getting-started/slider-inverse.png)
+![Inverse range slider](images/getting-started/slider-inverse.png)
 
 ## Formatting labels
 
-Add prefix or suffix to the labels using the [`NumberFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_NumberFormat) property.
+Add prefix or suffix to the labels using the [`NumberFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.INumericElement.html#Syncfusion_Maui_Sliders_INumericElement_NumberFormat) property.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<sliders:SfRangeSlider Minimum="20" 
-                       Maximum="100" 
-                       RangeStart="20" 
+<sliders:SfRangeSlider Minimum="20"
+                       Maximum="100"
+                       RangeStart="40"
                        RangeEnd="80"
                        Interval="20"
                        ShowLabels="True"
-                       NumberFormat="$#" 
-                       ShowTicks="True">
-</sliders:SfRangeSlider>
+                       NumberFormat="$#"
+                       ShowTicks="True" />
 
 {% endhighlight %}
 
@@ -274,7 +269,7 @@ Add prefix or suffix to the labels using the [`NumberFormat`](https://help.syncf
 SfRangeSlider rangeSlider = new SfRangeSlider();
 rangeSlider.Minimum = 20;
 rangeSlider.Maximum = 100;
-rangeSlider.RangeStart = 20;
+rangeSlider.RangeStart = 40;
 rangeSlider.RangeEnd = 80;
 rangeSlider.Interval = 20;
 rangeSlider.ShowLabels = true;

@@ -13,9 +13,9 @@ This section helps to learn about how to add major and minor ticks in the range 
 
 ## Show major ticks
 
-Enable the major ticks on the track. It is a shape used to represent the major interval points of the track. The default value of the [`ShowTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ShowTicks) property is `False`.
+Enable the major ticks on the track. It is a shape used to represent the major interval points of the track. The default value of the [`ShowTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowTicks) property is `False`.
 
-For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_Minimum) is 0.0, the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_Maximum) is 10.0, and [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Interval) is 2.0, the range slider will render the major ticks at 0.0, 2.0, 4.0, and so on.
+For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Minimum) is 0.0, the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Maximum) is 10.0, and [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Interval) is 2.0, the range slider will render the major ticks at 0.0, 2.0, 4.0, and so on.
 
 ### Without interval
 
@@ -44,9 +44,8 @@ rangeSlider.ShowTicks = true;
 
 {% highlight xaml %}
 
-<sliders:SfRangeSlider Interval="0.2"  
-                       ShowTicks="True">
-</sliders:SfRangeSlider>
+<sliders:SfRangeSlider Interval="0.2"
+                       ShowTicks="True" />
 
 {% endhighlight %}
 
@@ -64,7 +63,7 @@ rangeSlider.ShowTicks = true;
 
 ## Show minor ticks
 
-It is used to represent the number of smaller ticks between two major ticks. For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_Minimum) is 0.0, the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.NumericRangeSliderBase.html#Syncfusion_Maui_Sliders_NumericRangeSliderBase_Maximum) is 10.0, and [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Interval) is 2.0, the range slider will render the major ticks at 0.0, 2.0, 4.0 and so on. If the [`MinorTicksPerInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MinorTicksPerInterval) is 1, then smaller ticks will be rendered on 1.0 and 3.0 and so on. The default value of the [`MinorTicksPerInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MinorTicksPerInterval) property is 0.
+It is used to represent the number of smaller ticks between two major ticks. For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Minimum) is 0.0, the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Maximum) is 10.0, and [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Interval) is 2.0, the range slider will render the major ticks at 0.0, 2.0, 4.0 and so on. If the [`MinorTicksPerInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MinorTicksPerInterval) is 1, then smaller ticks will be rendered on 1.0 and 3.0 and so on. The default value of the [`MinorTicksPerInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MinorTicksPerInterval) property is 0.
 
 ### Without interval
 
@@ -72,16 +71,15 @@ It is used to represent the number of smaller ticks between two major ticks. For
 
 {% highlight xaml %}
 
-<sliders:SfRangeSlider MinorTicksPerInterval="3" 
-                       ShowTicks="True">
-</sliders:SfRangeSlider>
+<sliders:SfRangeSlider MinorTicksPerInterval="2"
+                       ShowTicks="True" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
 SfRangeSlider rangeSlider = new SfRangeSlider();
-rangeSlider.MinorTicksPerInterval = 1;
+rangeSlider.MinorTicksPerInterval = 2;
 rangeSlider.ShowTicks = true;
 
 {% endhighlight %}
@@ -95,17 +93,16 @@ rangeSlider.ShowTicks = true;
 
 {% highlight xaml %}
 
-<sliders:SfRangeSlider Interval="0.2" 
-                       MinorTicksPerInterval="1" 
-                       ShowTicks="True">
-</sliders:SfRangeSlider>
+<sliders:SfRangeSlider Interval="0.25"
+                       MinorTicksPerInterval="1"
+                       ShowTicks="True" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
 SfRangeSlider rangeSlider = new SfRangeSlider();
-rangeSlider.Interval = 0.2;
+rangeSlider.Interval = 0.25;
 rangeSlider.MinorTicksPerInterval = 1;
 rangeSlider.ShowTicks = true;
 
@@ -117,22 +114,22 @@ rangeSlider.ShowTicks = true;
 
 ## Major ticks color
 
-Change the active and inactive major ticks color of the range slider using the [`ActiveFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_ActiveFill) and [`InactiveFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_InactiveFill) properties of the [`MajorTickStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MajorTickStyle) class.
+Change the active and inactive major ticks color of the range slider using the [`ActiveFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_ActiveFill) and [`InactiveFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_InactiveFill) properties of the [`MajorTickStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MajorTickStyle) class.
 
 The active side of the range slider is between the start and end thumbs.
 
-The inactive side of the range slider is between the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Minimum) value and the left thumb, and the right thumb and the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Maximum) value.
+The inactive side of the range slider is between the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Minimum) value and the left thumb, and the right thumb and the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Maximum) value.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<sliders:SfRangeSlider Interval="0.2" 
+<sliders:SfRangeSlider Interval="0.2"
                        ShowTicks="True">
-    
+
     <sliders:SfRangeSlider.MajorTickStyle>
-         <sliders:SliderTickStyle ActiveFill="#EE3F3F" 
-                                  InactiveFill="#F7B1AE" />
+        <sliders:SliderTickStyle ActiveFill="#EE3F3F"
+                                 InactiveFill="#F7B1AE" />
     </sliders:SfRangeSlider.MajorTickStyle>
 
 </sliders:SfRangeSlider>
@@ -155,24 +152,24 @@ rangeSlider.MajorTickStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F
 
 ## Minor ticks color
 
-Change the active and inactive minor ticks color of the range slider using the [`ActiveFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_ActiveFill) and [`InactiveFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_InactiveFill) properties of the [`MinorTickStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MinorTickStyle) class.
+Change the active and inactive minor ticks color of the range slider using the [`ActiveFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_ActiveFill) and [`InactiveFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_InactiveFill) properties of the [`MinorTickStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MinorTickStyle) class.
 
 The active side of the range slider is between the start and end thumbs.
 
-The inactive side of the range slider is between the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Minimum) value and the left thumb, and the right thumb and the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Maximum) value.
+The inactive side of the range slider is between the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Minimum) value and the left thumb, and the right thumb and the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Maximum) value.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<sliders:SfRangeSlider Interval="0.2" 
-                       ShowTicks="True" 
+<sliders:SfRangeSlider Interval="0.2"
+                       ShowTicks="True"
                        MinorTicksPerInterval="1">
-    
+
     <sliders:SfRangeSlider.MinorTickStyle>
-         <sliders:SliderTickStyle ActiveFill="#EE3F3F" 
-                                  InactiveFill="#F7B1AE" />
-     </sliders:SfRangeSlider.MinorTickStyle>
+        <sliders:SliderTickStyle ActiveFill="#EE3F3F"
+                                 InactiveFill="#F7B1AE" />
+    </sliders:SfRangeSlider.MinorTickStyle>
 
 </sliders:SfRangeSlider>
 
@@ -195,22 +192,24 @@ rangeSlider.MinorTickStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F
 
 ## Ticks size
 
-Change the major and minor ticks size of the range slider using the [`ActiveSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_ActiveSize) and [`InactiveSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_InactiveSize) property of the [`MajorTickStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MajorTickStyle) and [`MinorTickStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MinorTickStyle)  classes. The default value is `Size(2.0, 8.0)`.
+Change the major and minor ticks size of the range slider using the [`ActiveSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_ActiveSize) and [`InactiveSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_InactiveSize) property of the [`MajorTickStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MajorTickStyle) and [`MinorTickStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MinorTickStyle)  classes. The default value is `Size(2.0, 8.0)`.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<sliders:SfRangeSlider Interval="0.2" 
-                       ShowTicks="True" 
+<sliders:SfRangeSlider Interval="0.2"
+                       ShowTicks="True"
                        MinorTicksPerInterval="1">
-    
+
     <sliders:SfRangeSlider.MinorTickStyle>
-       <sliders:SliderTickStyle ActiveSize="2,10" InactiveSize="2, 10" />
+        <sliders:SliderTickStyle ActiveSize="2,10"
+                                 InactiveSize="2, 10" />
     </sliders:SfRangeSlider.MinorTickStyle>
-    
+
     <sliders:SfRangeSlider.MajorTickStyle>
-        <sliders:SliderTickStyle ActiveSize="2,15" InactiveSize="2, 15" />
+        <sliders:SliderTickStyle ActiveSize="2,15"
+                                 InactiveSize="2, 15" />
     </sliders:SfRangeSlider.MajorTickStyle>
 
 </sliders:SfRangeSlider>
@@ -236,23 +235,24 @@ rangeSlider.MajorTickStyle.InactiveSize = new Size(2, 15);
 
 ## Ticks offset
 
-Adjust the space between track and ticks of the range slider using the [`Offset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_Offset) property of the [`MajorTickStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MajorTickStyle) and [`MinorTickStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MinorTickStyle) . The default value of the [`Offset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_Offset) property is `3.0`.
+Adjust the space between track and ticks of the range slider using the [`Offset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_Offset) property of the [`MajorTickStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MajorTickStyle) and [`MinorTickStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MinorTickStyle) . The default value of the [`Offset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_Offset) property is `3.0`.
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <sliders:SfRangeSlider Interval="0.2"
-                       ShowTicks="True" 
+                       ShowTicks="True"
                        MinorTicksPerInterval="1">
-   
+
     <sliders:SfRangeSlider.MinorTickStyle>
-       <sliders:SliderTickStyle Offset="5" />
+        <sliders:SliderTickStyle Offset="5" />
     </sliders:SfRangeSlider.MinorTickStyle>
-   
+
     <sliders:SfRangeSlider.MajorTickStyle>
-       <sliders:SliderTickStyle Offset="5" />
+        <sliders:SliderTickStyle Offset="5" />
     </sliders:SfRangeSlider.MajorTickStyle>
+
 </sliders:SfRangeSlider>
 
 {% endhighlight %}
@@ -282,9 +282,12 @@ Change the state of the range slider to disabled by setting `false` to the `IsEn
 
 <ContentPage.Resources>
     <Style TargetType="sliders:SfRangeSlider">
-        <Setter Property="Interval" Value="0.25" />
-        <Setter Property="ShowTicks" Value="True" />
-        <Setter Property="MinorTicksPerInterval" Value="2" />
+        <Setter Property="Interval"
+                Value="0.25" />
+        <Setter Property="ShowTicks"
+                Value="True" />
+        <Setter Property="MinorTicksPerInterval"
+                Value="2" />
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup>
@@ -292,18 +295,18 @@ Change the state of the range slider to disabled by setting `false` to the `IsEn
                         <VisualState.Setters>
                             <Setter Property="MajorTickStyle">
                                 <Setter.Value>
-                                    <sliders:SliderTickStyle ActiveSize = "3, 10" 
-                                                                 InactiveSize = "3, 10"
-                                                                 ActiveFill = "#EE3F3F"
-                                                                 InactiveFill = "#F7B1AE" />
+                                    <sliders:SliderTickStyle ActiveSize="2,10"
+                                                             InactiveSize="2,10"
+                                                             ActiveFill="#EE3F3F"
+                                                             InactiveFill="#F7B1AE" />
                                 </Setter.Value>
                             </Setter>
                             <Setter Property="MinorTickStyle">
                                 <Setter.Value>
-                                    <sliders:SliderTickStyle ActiveSize = "3, 6" 
-                                                                 InactiveSize = "3, 6"
-                                                                  ActiveFill = "#EE3F3F"
-                                                                 InactiveFill = "#F7B1AE" />
+                                    <sliders:SliderTickStyle ActiveSize="2,6"
+                                                             InactiveSize="2,6"
+                                                             ActiveFill="#EE3F3F"
+                                                             InactiveFill="#F7B1AE" />
                                 </Setter.Value>
                             </Setter>
                         </VisualState.Setters>
@@ -312,18 +315,29 @@ Change the state of the range slider to disabled by setting `false` to the `IsEn
                         <VisualState.Setters>
                             <Setter Property="MajorTickStyle">
                                 <Setter.Value>
-                                    <sliders:SliderTickStyle ActiveSize="3,10" 
-                                                                 InactiveSize="3, 10"
-                                                                 ActiveFill="Gray" 
-                                                                 InactiveFill="LightGray" />
+                                    <sliders:SliderTickStyle ActiveSize="2,10"
+                                                             InactiveSize="2,10"
+                                                             ActiveFill="Gray"
+                                                             InactiveFill="LightGray" />
                                 </Setter.Value>
                             </Setter>
                             <Setter Property="MinorTickStyle">
                                 <Setter.Value>
-                                    <sliders:SliderTickStyle ActiveSize ="3,6" 
-                                                                 InactiveSize="3, 6"
-                                                                 ActiveFill="Gray" 
-                                                                 InactiveFill="LightGray" />
+                                    <sliders:SliderTickStyle ActiveSize="2,6"
+                                                             InactiveSize="2,6"
+                                                             ActiveFill="Gray"
+                                                             InactiveFill="LightGray" />
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="ThumbStyle">
+                                <Setter.Value>
+                                    <sliders:SliderThumbStyle Fill="Gray" />
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="TrackStyle">
+                                <Setter.Value>
+                                    <sliders:SliderTrackStyle ActiveFill="Gray"
+                                                              InactiveFill="LightGray" />
                                 </Setter.Value>
                             </Setter>
                         </VisualState.Setters>
@@ -335,11 +349,13 @@ Change the state of the range slider to disabled by setting `false` to the `IsEn
 </ContentPage.Resources>
 
 <ContentPage.Content>
-    <VerticalStackLayout>
-        <Label Text="Enabled Range Slider" Padding="0,10"/>
-        <sliders:SfRangeSlider/>
-        <Label Text="Disabled Range Slider" Padding="0,10"/>
-        <sliders:SfRangeSlider IsEnabled="False"/>
+    <VerticalStackLayout Padding="10">
+        <Label Text="Enabled"
+               Padding="24,10" />
+        <sliders:SfRangeSlider />
+        <Label Text="Disabled"
+               Padding="24,10" />
+        <sliders:SfRangeSlider IsEnabled="False" />
     </VerticalStackLayout>
 </ContentPage.Content>
 
@@ -347,21 +363,32 @@ Change the state of the range slider to disabled by setting `false` to the `IsEn
 
 {% highlight C# %}
 
-VerticalStackLayout stackLayout = new VerticalStackLayout();
-SfRangeSlider defaultRangeSlider = new SfRangeSlider { Interval = 0.25, ShowTicks = true, MinorTicksPerInterval = 2 };
-SfRangeSlider disabledRangeSlider = new SfRangeSlider { IsEnabled = false, Interval = 0.25, ShowTicks = true, MinorTicksPerInterval = 2 };
+VerticalStackLayout stackLayout = new();
+SfRangeSlider defaultRangeSlider = new()
+{
+    Interval = 0.25,
+    ShowTicks = true,
+    MinorTicksPerInterval = 2
+};
+SfRangeSlider disabledRangeSlider = new()
+{
+    IsEnabled = false,
+    Interval = 0.25,
+    ShowTicks = true,
+    MinorTicksPerInterval = 2
+};
 
-VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
-VisualStateGroup commonStateGroup = new VisualStateGroup();
+VisualStateGroupList visualStateGroupList = new();
+VisualStateGroup commonStateGroup = new();
 // Default State.
-VisualState defaultState = new VisualState { Name = "Default" };
+VisualState defaultState = new() { Name = "Default" };
 defaultState.Setters.Add(new Setter
 {
     Property = SfRangeSlider.MajorTickStyleProperty,
     Value = new SliderTickStyle
     {
-        ActiveSize = new Size(3, 10),
-        InactiveSize = new Size(3, 10),
+        ActiveSize = new Size(2, 10),
+        InactiveSize = new Size(2, 10),
         ActiveFill = Color.FromArgb("#EE3F3F"),
         InactiveFill = Color.FromArgb("#F7B1AE"),
     }
@@ -371,21 +398,21 @@ defaultState.Setters.Add(new Setter
     Property = SfRangeSlider.MinorTickStyleProperty,
     Value = new SliderTickStyle
     {
-        ActiveSize = new Size(3, 6),
-        InactiveSize = new Size(3, 6),
+        ActiveSize = new Size(2, 6),
+        InactiveSize = new Size(2, 6),
         ActiveFill = Color.FromArgb("#EE3F3F"),
         InactiveFill = Color.FromArgb("#F7B1AE"),
     }
 });
 // Disabled State.
-VisualState disabledState = new VisualState { Name = "Disabled" };
+VisualState disabledState = new() { Name = "Disabled" };
 disabledState.Setters.Add(new Setter
 {
     Property = SfRangeSlider.MajorTickStyleProperty,
     Value = new SliderTickStyle
     {
-        ActiveSize = new Size(3, 10),
-        InactiveSize = new Size(3, 10),
+        ActiveSize = new Size(2, 10),
+        InactiveSize = new Size(2, 10),
         ActiveFill = Colors.Gray,
         InactiveFill = Colors.LightGray,
     }
@@ -395,8 +422,25 @@ disabledState.Setters.Add(new Setter
     Property = SfRangeSlider.MinorTickStyleProperty,
     Value = new SliderTickStyle
     {
-        ActiveSize = new Size(3, 6),
-        InactiveSize = new Size(3, 6),
+        ActiveSize = new Size(2, 6),
+        InactiveSize = new Size(2, 6),
+        ActiveFill = Colors.Gray,
+        InactiveFill = Colors.LightGray,
+    }
+});
+disabledState.Setters.Add(new Setter
+{
+    Property = SfRangeSlider.ThumbStyleProperty,
+    Value = new SliderThumbStyle
+    {
+        Fill = Colors.Gray,
+    }
+});
+disabledState.Setters.Add(new Setter
+{
+    Property = SfRangeSlider.TrackStyleProperty,
+    Value = new SliderTrackStyle
+    {
         ActiveFill = Colors.Gray,
         InactiveFill = Colors.LightGray,
     }
@@ -408,9 +452,9 @@ visualStateGroupList.Add(commonStateGroup);
 VisualStateManager.SetVisualStateGroups(defaultRangeSlider, visualStateGroupList);
 VisualStateManager.SetVisualStateGroups(disabledRangeSlider, visualStateGroupList);
 
-stackLayout.Children.Add(new Label() { Text = "Default Range Slider", Padding = new Thickness(0, 10) });
+stackLayout.Children.Add(new Label() { Text = "Enabled", Padding = new Thickness(24, 10) });
 stackLayout.Children.Add(defaultRangeSlider);
-stackLayout.Children.Add(new Label() { Text = "Disabled Range Slider", Padding = new Thickness(0, 10) });
+stackLayout.Children.Add(new Label() { Text = "Disabled", Padding = new Thickness(24, 10) });
 stackLayout.Children.Add(disabledRangeSlider);
 this.Content = stackLayout;
 

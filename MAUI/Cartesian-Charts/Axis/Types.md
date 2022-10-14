@@ -14,6 +14,7 @@ Cartesian chart supports the following types of chart axis.
 * NumericalAxis
 * CategoryAxis
 * DateTimeAxis
+* LogarithmicAxis
 
 ## Numerical Axis
 
@@ -267,7 +268,7 @@ In [DateTimeAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Dat
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    . . .
+    ...
     <chart:SfCartesianChart.XAxes>
         <chart:DateTimeAxis Interval="6" IntervalType="Months"/>
     </chart:SfCartesianChart.XAxes>
@@ -333,6 +334,118 @@ chart.XAxes.Add(primaryAxis);
 {% endtabs %}
 
 ![DateTimeAxis range customization support in MAUI Chart](Axis_Images/maui_chart_datetime_axis_range.jpg)
+
+## Logarithmic Axis
+
+The [LogarithmicAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html) uses a logarithmic scale, and it is very useful in visualising data when the given data range has a big difference. It can be used either on the x-axis or the chart's y-axis.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCartesianChart>
+
+   . . .
+    <chart:SfCartesianChart.YAxes>
+        <chart:LogarithmicAxis/>
+    </chart:SfCartesianChart.YAxes>
+    
+</chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCartesianChart chart = new SfCartesianChart();
+
+. . .
+
+LogarithmicAxis secondaryAxis = new LogarithmicAxis();
+chart.YAxes.Add(secondaryAxis);
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![LogarithmicAxis support in MAUI Chart](Axis_Images/maui_chart_logarithmic_axis.jpg)
+
+### Interval
+
+Axis interval can be customized using the [Interval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html#Syncfusion_Maui_Charts_LogarithmicAxis_Interval) property of the axis. By default, interval will be calculated based on the minimum and maximum value of the provided data. And the default value of the interval is 1. 
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCartesianChart.YAxes>
+
+    <chart:LogarithmicAxis Interval="2"/>
+
+</chart:SfCartesianChart.YAxes>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+chart.YAxes.Add(new LogarithmicAxis( ) { Interval = 2 });
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Range customization
+
+To customize the range of the log axis, you can use the [Minimum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html#Syncfusion_Maui_Charts_LogarithmicAxis_Minimum), [Maximum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html#Syncfusion_Maui_Charts_LogarithmicAxis_Maximum) properties of the [LogarithmicAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html). By default, an excellent range will be calculated automatically based on the provided data. 
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCartesianChart.YAxes>
+
+    <chart:LogarithmicAxis Minimum="100" Maximum="10000"/>
+
+</chart:SfCartesianChart.YAxes>
+
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+chart.YAxes.Add(new LogarithmicAxis() { 
+	Minimum = 100, 
+	Maximum = 10000 
+});
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Base customization
+
+The logarithmic axis base can be customized using the [LogarithmicBase](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html#Syncfusion_Maui_Charts_LogarithmicAxis_LogarithmicBase) property of the axis. By default, the base value is 10.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCartesianChart.YAxes>
+
+    <chart:LogarithmicAxis LogarithmicBase="5"/>
+
+</chart:SfCartesianChart.YAxes>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+chart.YAxes.Add(new LogarithmicAxis( ) { LogarithmicBase = 5 });
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![LogarithmicAxis base customization in MAUI Chart](Axis_Images/maui_chart_logarithmic_axis_base.jpg)
 
 ## Inversed
 

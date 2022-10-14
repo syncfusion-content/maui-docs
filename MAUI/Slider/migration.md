@@ -104,7 +104,7 @@ In Xamarin.Forms, the Range Slider and Slider are combined as the [Xamarin Range
 <th>Description</th></tr>
 <tr>
 <td>{{'[AllowDragRange](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_AllowDragRange)'| markdownify }}</td>
-<td>{{'[ShowLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ShowLabels)'| markdownify }}</td>
+<td>{{'[ShowLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels)'| markdownify }}</td>
 <td>Gets or sets a value indicating whether to show or hide the labels.</td></tr>
 <tr>
 <td rowspan="2" valign="center">
@@ -169,6 +169,19 @@ In Xamarin.Forms, the Range Slider and Slider are combined as the [Xamarin Range
 <td>Gets or sets the value to format the label text in the SfSlider.</td></tr>
 </table> 
 
+### Step
+
+<table> 
+<tr>
+<th>Xamarin SfRangeSlider</th>
+<th>.NET MAUI SfSlider</th>
+<th>Description</th></tr>
+<tr>
+<td>{{'[SnapsTo](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_SnapsTo)'| markdownify }}</td>
+<td>{{'[StepSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html#Syncfusion_Maui_Sliders_SfSlider_StepSize)'| markdownify }}</td>
+<td>Gets or sets the value indicating whether to select the discrete value.</td></tr>
+</table> 
+
 ## Events
 
 <table>
@@ -178,10 +191,10 @@ In Xamarin.Forms, the Range Slider and Slider are combined as the [Xamarin Range
 <th>Description</th></tr>
 <tr>
 <td>{{'[DragStarted](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_DragStarted)'| markdownify }}</td>
-<td>{{'[ValueChangeStart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ValueChangeStart)'| markdownify }}</td>
+<td>{{'[ValueChangeStart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ValueChangeStart)'| markdownify }}</td>
 <td>Occurs when the user selects a new value for the Slider by tapping/mouse down on the thumb.</td></tr>
 <tr>
 <td>{{'[DragCompleted](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_DragCompleted)'| markdownify }}</td>
-<td>{{'[ValueChangeEnd](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ValueChangeEnd)'| markdownify }}</td>
+<td>{{'[ValueChangeEnd](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ValueChangeEnd)'| markdownify }}</td>
 <td>Occurs when the user completes selecting a new value for the Slider by tapping/mouse down on the thumb.</td></tr>
 </table> 

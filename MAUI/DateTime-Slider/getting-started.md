@@ -108,7 +108,7 @@ namespace SliderGettingStarted
 
 ## Enable labels
 
-The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ShowLabels) property enables the labels which renders on given interval.
+The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels) property enables the labels which renders on given interval.
 
 {% tabs %}
 
@@ -139,33 +139,34 @@ slider.Interval = 2;
 
 ## Enable ticks
 
-The [`ShowTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ShowTicks) property enables the ticks in the range selector, while the [`MinorTicksPerInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_MinorTicksPerInterval) property enables the minor ticks between the major ticks.
+The [`ShowTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowTicks) property enables the ticks in the range selector, while the [`MinorTicksPerInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MinorTicksPerInterval) property enables the minor ticks between the major ticks.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<sliders:SfDateTimeSlider Minimum="2010-01-01" 
-                          Maximum="2018-01-01" 
-                          Value="2014-01-01" 
-		                  ShowLabels="True"  
-		                  ShowTicks="True" 
-		                  Interval="2" 
-		                  MinorTicksPerInterval="1">
-</sliders:SfDateTimeSlider>
+<sliders:SfDateTimeSlider Minimum="2010-01-01"
+                          Maximum="2018-01-01"
+                          Value="2014-01-01"
+                          ShowLabels="True"
+                          ShowTicks="True"
+                          Interval="2"
+                          MinorTicksPerInterval="1" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfDateTimeSlider slider = new SfDateTimeSlider();
-slider.Minimum = new DateTime(2010, 01, 01);
-slider.Maximum = new DateTime(2018, 01, 01);
-slider.Value = new DateTime(2014, 01, 01);
-slider.ShowLabels = true;
-slider.Interval = 2;
-slider.ShowTicks = true;
-slider.MinorTicksPerInterval = 1;
+SfDateTimeSlider slider = new SfDateTimeSlider()
+{
+    Minimum = new DateTime(2010, 01, 01),
+    Maximum = new DateTime(2018, 01, 01),
+    Value = new DateTime(2014, 01, 01),
+    Interval = 2,
+    ShowLabels = true,
+    ShowTicks = true,
+    MinorTicksPerInterval = 1,
+};
 
 {% endhighlight %}
 
@@ -175,21 +176,20 @@ slider.MinorTicksPerInterval = 1;
 
 ## Orientation
 
-The [`Orientation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html#Syncfusion_Maui_Sliders_SfSlider_Orientation) property allows you to show the slider in both horizontal and vertical directions. The default value of the [`Orientation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html#Syncfusion_Maui_Sliders_SfSlider_Orientation) property is `Horizontal`.
+The [`Orientation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase-1.html#Syncfusion_Maui_Sliders_SliderBase_1_Orientation) property allows you to show the slider in both horizontal and vertical directions. The default value of the [`Orientation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase-1.html#Syncfusion_Maui_Sliders_SliderBase_1_Orientation) property is `Horizontal`.
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <sliders:SfDateTimeSlider Orientation="Vertical"
-                          Minimum="2010-01-01" 
-                          Maximum="2018-01-01" 
-                          Value="2014-01-01" 
-		                  ShowLabels="True"  
-		                  ShowTicks="True" 
-		                  Interval="2" 
-		                  MinorTicksPerInterval="1">
-</sliders:SfDateTimeSlider>
+                          Minimum="2010-01-01"
+                          Maximum="2018-01-01"
+                          Value="2014-01-01"
+                          ShowLabels="True"
+                          ShowTicks="True"
+                          Interval="2"
+                          MinorTicksPerInterval="1" />
 
 {% endhighlight %}
 
@@ -213,21 +213,20 @@ slider.MinorTicksPerInterval = 1;
 
 ## Inverse the slider
 
-Invert the slider using the [`IsInversed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_IsInversed) property. The default value of the [`IsInversed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_IsInversed) property is `False`.
+Invert the slider using the [`IsInversed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_IsInversed) property. The default value of the [`IsInversed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_IsInversed) property is `False`.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<sliders:SfDateTimeSlider Minimum="2010-01-01" 
-                          Maximum="2018-01-01" 
-                          Value="2014-01-01" 
+<sliders:SfDateTimeSlider Minimum="2010-01-01"
+                          Maximum="2018-01-01"
+                          Value="2014-01-01"
                           IsInversed="True"
-		                  ShowLabels="True"  
-		                  ShowTicks="True" 
-		                  Interval="2" 
-		                  MinorTicksPerInterval="1">
-</sliders:SfDateTimeSlider>
+                          ShowLabels="True"
+                          ShowTicks="True"
+                          Interval="2"
+                          MinorTicksPerInterval="1" />
 
 {% endhighlight %}
 
@@ -271,16 +270,18 @@ Add prefix or suffix to the labels using the [`DateFormat`](https://help.syncfus
 
 {% highlight C# %}
 
-SfDateTimeSlider slider = new SfDateTimeSlider();
-slider.Minimum = new DateTime(2010, 01, 01);
-slider.Maximum = new DateTime(2011, 01, 01);
-slider.Value = new DateTime(2010, 07, 01);
-slider.ShowLabels = true;
-slider.Interval = 2;
-slider.ShowTicks = true;
-slider.MinorTicksPerInterval = 1;
-slider.DateFormat = "MMM";
-slider.IntervalType = SliderDateIntervalType.Months;
+SfDateTimeSlider slider = new SfDateTimeSlider()
+{
+    Minimum = new DateTime(2010, 01, 01),
+    Maximum = new DateTime(2011, 01, 01),
+    Value = new DateTime(2010, 07, 01),
+    Interval = 2,
+    ShowLabels = true,
+    ShowTicks = true,
+    MinorTicksPerInterval = 1,
+    DateFormat = "MMM",
+    IntervalType = SliderDateIntervalType.Months,
+};
 
 {% endhighlight %}
 

@@ -53,4 +53,3 @@ this.Content = chart;
 {% endtabs %}
 
 ![Watermark in .NET MAUI Charts](Appearance_images/water_mark.jpg)
-

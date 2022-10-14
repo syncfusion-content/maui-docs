@@ -37,8 +37,8 @@ public class CommandViewModel
 
     private void TappedCommandMethod(object obj)
     {
-        if ((obj as Syncfusion.Maui.ListView.ItemTappedEventArgs).ItemData == viewModel.InboxInfo[0])
-            viewModel.InboxInfo.Remove((obj as Syncfusion.Maui.ListView.ItemTappedEventArgs).ItemData as ListViewInboxInfo)
+        if ((obj as Syncfusion.Maui.ListView.ItemTappedEventArgs).DataItem == viewModel.InboxInfo[0])
+            viewModel.InboxInfo.Remove((obj as Syncfusion.Maui.ListView.ItemTappedEventArgs).DataItem as ListViewInboxInfo)
     }   
 }
 
@@ -71,8 +71,8 @@ public class CommandViewModel
 
     private void LongPressCommandMethod(object obj)
     {
-        if ((obj as Syncfusion.Maui.ListView.ItemLongPressEventArgs).ItemData == viewModel.InboxInfo[3])
-            viewModel.InboxInfo.Remove((obj as Syncfusion.Maui.ListView.ItemLongPressEventArgs).ItemData as ListViewInboxInfo);
+        if ((obj as Syncfusion.Maui.ListView.ItemLongPressEventArgs).DataItem == viewModel.InboxInfo[3])
+            viewModel.InboxInfo.Remove((obj as Syncfusion.Maui.ListView.ItemLongPressEventArgs).DataItem as ListViewInboxInfo);
     }
 }
 
@@ -520,8 +520,8 @@ public class BookInfoRepository : INotifyPropertyChanged
     public void OnItemTapped(object obj)
     {
         var eventArgs = obj as Syncfusion.Maui.ListView.ItemTappedEventArgs;
-        var bookName = (eventArgs.ItemData as BookInfo).BookName;
-        var bookDescription = (eventArgs.ItemData as BookInfo).BookDescription;
+        var bookName = (eventArgs.DataItem as BookInfo).BookName;
+        var bookDescription = (eventArgs.DataItem as BookInfo).BookDescription;
         var display = Application.Current.MainPage.DisplayAlert(bookName, "Description:" + bookDescription, "Ok");
     }
 }
@@ -665,9 +665,9 @@ public class BookInfoRepository : INotifyPropertyChanged
 
 ### Processing LoadMore
 
-`SfListView` supports binding the [LoadMoreOption](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LoadMoreOption), [LoadMoreCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LoadMoreCommand), and [IsBusy](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_IsBusy) properties from ViewModel to load more number of items at runtime. `LoadMoreOption` enables load more manually or automatically the items when loading the items at runtime. `LoadMoreCommand` executes to load the items form ViewModel. The `IsBusy` property notifies that the items are populating from ViewModel to show or hide the load more view. 
+`SfListView` supports binding the [LoadMoreOption](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LoadMoreOption), [LoadMoreCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_LoadMoreCommand), and [IsLazyLoading](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_IsLazyLoading) properties from ViewModel to load more number of items at runtime. `LoadMoreOption` enables load more manually or automatically the items when loading the items at runtime. `LoadMoreCommand` executes to load the items form ViewModel. The `IsLazyLoading` property notifies that the items are populating from ViewModel to show or hide the load more view. 
 
-The `IsBusy` property in ViewModel shows the busy indicator when populating the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsSource).
+The `IsLazyLoading` property in ViewModel shows the busy indicator when populating the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsSource).
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2 3 4 5" %}
@@ -675,14 +675,14 @@ The `IsBusy` property in ViewModel shows the busy indicator when populating the 
                         LoadMoreOption="Auto"
                         LoadMoreCommand="{Binding LoadMoreItemsCommand}"
                         LoadMoreCommandParameter="{Binding Source={x:Reference Name=listView}}"
-                        IsBusy="{Binding IsBusy}"
+                        IsLazyLoading="{Binding IsLazyLoading}"
                         ItemsSource="{Binding BookInfoCollection}">
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 listView.LoadMoreOption = LoadMoreOption.Auto;
 listView.SetBinding(SfListView.LoadMoreCommandProperty, new Binding("LoadMoreItemsCommand", BindingMode.OneWay));
 listView.LoadMoreCommandParameter = listView;
-listView.SetBinding(SfListView.IsBusyProperty, new Binding("IsBusy", BindingMode.OneWay));
+listView.SetBinding(SfListView.IsLazyLoadingProperty, new Binding("isLazyLoading", BindingMode.OneWay));
 {% endhighlight %}
 {% endtabs %}
 
@@ -690,14 +690,14 @@ listView.SetBinding(SfListView.IsBusyProperty, new Binding("IsBusy", BindingMode
 {% highlight c# tabtitle="ViewModel.cs" %}
 public class ViewModel:INotifyPropertyChanged
 {
-    private bool isBusy;
-    public bool IsBusy
+    private bool isLazyLoading;
+    public bool IsLazyLoading
     {
-        get { return isBusy; }
+        get { return isLazyLoading; }
         set
         {
-            this.isBusy = value;
-            RaisePropertyChanged("IsBusy");
+            this.isLazyLoading = value;
+            RaisePropertyChanged("IsLazyLoading");
         }
     }
     private int totalItems = 22;
@@ -722,7 +722,7 @@ public class ViewModel:INotifyPropertyChanged
         var listview = obj as Syncfusion.Maui.ListView.SfListView;
         try
         {
-            IsBusy = true;
+            IsLazyLoading = true;
 
             await Task.Delay(1000);
 
@@ -737,7 +737,7 @@ public class ViewModel:INotifyPropertyChanged
         }
         finally
         {
-            IsBusy = false;
+            IsLazyLoading = false;
         }
     }
 

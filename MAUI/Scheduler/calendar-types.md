@@ -66,6 +66,7 @@ All the DateTime values can be given such as [DisplayDate](), [SelectedDate](), 
 
 * Create an appointment with a start and end time value by declaring the calendar type and respective calendar type date.
 
+{% capture codesnippet1 %}
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9 10" %}
 // Creating an instance for the schedule appointment collection.
@@ -84,9 +85,12 @@ appointments.Add(new SchedulerAppointment()
 this.Scheduler.AppointmentsSource = appointments;
 {% endhighlight %}
 {% endtabs %}
+{% endcapture %}
+{{ codesnippet1 | UnOrderList_Indent_Level_1 }}
 
 * Create an appointment with a start and end time by declaring the local system date; in that case, the system date will be converted to the relevant calendar type date.
 
+{% capture codesnippet2 %}
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9 10" %}
 // Creating an instance for the schedule appointment collection.
@@ -105,4 +109,6 @@ appointments.Add(new SchedulerAppointment()
 this.Scheduler.AppointmentsSource = appointments;
 {% endhighlight %}
 {% endtabs %}
+{% endcapture %}
+{{ codesnippet2 | UnOrderList_Indent_Level_1 }}
 
