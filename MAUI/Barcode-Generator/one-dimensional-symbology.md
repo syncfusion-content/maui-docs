@@ -102,6 +102,8 @@ The [`EnableCheckSum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barco
 
 * [`Code39 Extended`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.Code39Extended.html) symbology is an extended version of Code39 that supports all 128 ASCII characters set. So, it encodes lower case alphabets (a-z) as well as special characters.
 
+{% capture codesnippet1 %}
+
 {% tabs %}
 
 {% highlight xaml hl_lines="5" %}
@@ -128,6 +130,10 @@ The [`EnableCheckSum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barco
 {% endhighlight %}
 
 {% endtabs %}
+
+{% endcapture %}
+
+{{ codesnippet1 | UnOrderList_Indent_Level_1 }} 
 
 ![.NET MAUI Barcode Generator Code39 Extended Symbology](images/one-dimensional-symbology/maui-code39-extended-symbology.png)
 
@@ -313,6 +319,8 @@ The last seven characters of Code Sets A and B (character values 96 - 102) and t
 
 * This type is mainly used for worldwide retail.
 
+{% capture codesnippet2 %}
+
 {% tabs %}
 
 {% highlight xaml hl_lines="5" %}
@@ -340,6 +348,10 @@ The last seven characters of Code Sets A and B (character values 96 - 102) and t
 
 {% endtabs %}
 
+{% endcapture %}
+
+{{ codesnippet2 | UnOrderList_Indent_Level_1 }} 
+
 ![.NET MAUI Barcode Generator UPC-A Symbology](images/one-dimensional-symbology/maui-upca-symbology.png)
 
 ## UPC-E
@@ -347,6 +359,8 @@ The last seven characters of Code Sets A and B (character values 96 - 102) and t
 As like [`UPC-A`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.UPCA.html), the [`UPC-E`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.UPCE.html) symbology supports only numeric character. It is a zero suppressed version of [`UPC-A`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.UPCA.html) symbology where it uses only 6 digits of product code and does not use the middle guard. By default, the number system(0) will add at the front and check digit at the end along with 6 digits of the input product code.
 
 * This type is mainly used on products with very small packaging details.
+
+{% capture codesnippet3 %}
 
 {% tabs %}
 
@@ -375,6 +389,9 @@ As like [`UPC-A`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.UP
 
 {% endtabs %}
 
+{% endcapture %}
+
+{{ codesnippet3 | UnOrderList_Indent_Level_1 }} 
 ![.NET MAUI Barcode Generator UPC-E Symbology](images/one-dimensional-symbology/maui-upce-symbology.png)
 
 ## EAN-13
@@ -382,6 +399,8 @@ As like [`UPC-A`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.UP
 The [`EAN-13`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.EAN13.html) standard is based on the [`UPC-A`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.UPCA.html) standard.. As like [`UPC-A`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.UPCA.html), it supports only the numeric character. It encodes the 12 digits of input data with the check digit at its end.
 
 * This difference between the [`UPCA`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.UPCA.html) and [`EAN13`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.EAN13.html) is that number system used in the [`EAN13`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.EAN13.html) is 2 digits ranges from 00 to 99 whereas the number system used in [`UPCA`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.UPCA.html) is single digits range from 0 to 9.
+
+{% capture codesnippet4 %}
 
 {% tabs %}
 
@@ -409,6 +428,10 @@ The [`EAN-13`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.EAN13
 {% endhighlight %}
 
 {% endtabs %}
+
+{% endcapture %}
+
+{{ codesnippet4 | UnOrderList_Indent_Level_1 }} 
 
 ![.NET MAUI Barcode Generator EAN-13 Symbology](images/one-dimensional-symbology/maui-ean13-symbology.png)
 
