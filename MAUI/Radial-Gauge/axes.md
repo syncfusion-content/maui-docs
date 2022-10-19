@@ -772,6 +772,8 @@ The following property of the axis allows you to customize the axis label text.
 
 * [`LabelFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_LabelFormat) - Allows you to customize the axis label with the globalized label format.
 
+{% capture codesnippet1 %}
+
 {% tabs %}
 
 {% highlight xaml %}
@@ -797,6 +799,10 @@ this.Content = sfRadialGauge;
 {% endhighlight %}
 
 {% endtabs %}
+
+{% endcapture %}
+
+{{ codesnippet1 | UnOrderList_Indent_Level_1 }} 
 
 ![.NET MAUI Radial Gauge Axis Label Format](images/axis/maui-radial-gauge-axis-label-format.png)
 
