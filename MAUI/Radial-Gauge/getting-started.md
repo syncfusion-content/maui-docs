@@ -19,6 +19,8 @@ This section explains the steps required to add the [`.NET MAUI Radial Gauge`](h
 
 * Import the control namespace `Syncfusion.Maui.Gauges` in XAML or C# code.
 
+{% capture codesnippet1 %}
+
 {% tabs %}
 
 {% highlight xaml %}
@@ -35,7 +37,13 @@ using Syncfusion.Maui.Gauges;
 
 {% endtabs %}
 
+{% endcapture %}
+
+{{ codesnippet1 | UnOrderList_Indent_Level_1 }} 
+
 * Initialize the SfRadialGauge control
+
+{% capture codesnippet2 %}
 
 {% tabs %}
 
@@ -53,6 +61,10 @@ this.Content = sfRadialGauge;
 {% endhighlight %}
 
 {% endtabs %}
+
+{% endcapture %}
+
+{{ codesnippet2 | UnOrderList_Indent_Level_1 }} 
 
 ### Register the handler
 
