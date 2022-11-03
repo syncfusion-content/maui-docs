@@ -107,11 +107,11 @@ chart.Series.Add(series);
 
 ## Center View
 
-The view placed in the center of the doughnut chart is useful for sharing additional information about the doughnut chart. Any view can be added to the center of the doughnut chart using the [CenterView]() property of [DoughnutSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DoughnutSeries.html). The binding context of the [CenterView]() will be the respective doughnut series.
+The view placed in the center of the doughnut chart is useful for sharing additional information about the doughnut chart. Any view can be added to the center of the doughnut chart using the [CenterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DoughnutSeries.html#Syncfusion_Maui_Charts_DoughnutSeries_CenterView) property of [DoughnutSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DoughnutSeries.html). The binding context of the [CenterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DoughnutSeries.html#Syncfusion_Maui_Charts_DoughnutSeries_CenterView) will be the respective doughnut series.
 
 ### Center Hole Size
 
-The [CenterHoleSize]() property of [DoughnutSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DoughnutSeries.html) is used to get the diameter value of the center hole. Using the [CenterHoleSize](), we can protect the view in the doughnut center from overlapping with the series.
+The [CenterHoleSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DoughnutSeries.html#Syncfusion_Maui_Charts_DoughnutSeries_CenterHoleSize) property of [DoughnutSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DoughnutSeries.html) is used to get the diameter value of the center hole. Using the [CenterHoleSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DoughnutSeries.html#Syncfusion_Maui_Charts_DoughnutSeries_CenterHoleSize), we can protect the view in the doughnut center from overlapping with the series.
 
 {% tabs %}
 
