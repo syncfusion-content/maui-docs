@@ -15,10 +15,10 @@ This section explains how to add the events and commands for DateTime Slider.
 
 ### Handle callbacks
 
-* [ValueChangeStart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ValueChangeStart) -  Called when the user selecting a new value for the slider by tap/mouse down in the thumb.
-* [ValueChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html#Syncfusion_Maui_Sliders_SfSlider_ValueChanging) - Called when the user is selecting a new value for the slider by dragging the thumb.
-* [ValueChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html#Syncfusion_Maui_Sliders_SfSlider_ValueChanged) - Called when the user completed selecting a new value.
-* [ValueChangeEnd](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ValueChangeEnd) - Called when the user stopped interacting with slider by tap/mouse up the thumb.
+* [ValueChangeStart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ValueChangeStart) -  Called when the user selecting a new value for the slider by tap/mouse down in the thumb.
+* [ValueChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeSlider_ValueChanging) - Called when the user is selecting a new value for the slider by dragging the thumb.
+* [ValueChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeSlider_ValueChanged) - Called when the user completed selecting a new value.
+* [ValueChangeEnd](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ValueChangeEnd) - Called when the user stopped interacting with slider by tap/mouse up the thumb.
 
 {% tabs %}
 
@@ -37,14 +37,16 @@ This section explains how to add the events and commands for DateTime Slider.
 {% highlight C# %}
 
 {
-   SfDateTimeSlider slider = new SfDateTimeSlider();
-   slider.Minimum = new DateTime(2010, 01, 01);
-   slider.Maximum = new DateTime(2018, 01, 01);
-   slider.Value = new DateTime(2014, 01, 01);
-   slider.ValueChangeStart += OnValueChanged;
-   slider.ValueChanging += OnValueChanged;
-   slider.ValueChanged += OnValueChanged;
-   slider.ValueChangeEnd += OnValueChanged;
+    SfDateTimeSlider slider = new SfDateTimeSlider()
+    {
+        Minimum = new DateTime(2010, 01, 01),
+        Maximum = new DateTime(2018, 01, 01),
+        Value = new DateTime(2014, 01, 01),
+    };
+    slider.ValueChangeStart += OnValueChangeStart;
+    slider.ValueChanging += OnValueChanging;
+    slider.ValueChanged += OnValueChanged;
+    slider.ValueChangeEnd += OnValueChangeEnd;
 }
 
 private void OnValueChangeStart(object sender, EventArgs e)
@@ -58,6 +60,7 @@ private void OnValueChanging(object sender, DateTimeSliderValueChangingEventArgs
 private void OnValueChanged(object sender, DateTimeSliderValueChangedEventArgs e) 
 {
 }
+
 private void OnValueChangeEnd(object sender, EventArgs e)
 {
 }
@@ -69,9 +72,9 @@ private void OnValueChangeEnd(object sender, EventArgs e)
 
 ### Customize label text
 
-Format or change the label text using the [`LabelCreated`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_LabelCreated) event. The [`SliderLabelCreatedEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelCreatedEventArgs.html) contains the following parameters:
+Format or change the label text using the [`LabelCreated`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_LabelCreated) event. The [`SliderLabelCreatedEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelCreatedEventArgs.html) contains the following parameters:
 
-* Text – Customize the text color using the [`Text`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelCreatedEventArgs.html#Syncfusion_Maui_Sliders_SliderLabelCreatedEventArgs_Style) parameter.
+* Text – Customize the text color using the [`Text`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelCreatedEventArgs.html#Syncfusion_Maui_Sliders_SliderLabelCreatedEventArgs_Text) parameter.
 * Style – Formats the text color, font size, font family, offset using the [`Style`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelCreatedEventArgs.html#Syncfusion_Maui_Sliders_SliderLabelCreatedEventArgs_Style) parameter.
 
 {% tabs %}
@@ -94,18 +97,20 @@ Format or change the label text using the [`LabelCreated`](https://help.syncfusi
 {% highlight C# %}
 
 {
-   SfDateTimeSlider slider = new SfDateTimeSlider();
-   slider.Minimum = new DateTime(2010, 01, 01);
-   slider.Maximum = new DateTime(2011, 01, 01);
-   slider.Value = new DateTime(2010, 07, 01);
-   slider.Interval = 3;
-   slider.DateFormat = "MMM";
-   slider.IntervalType = SliderDateIntervalType.Months;
-   slider.LabelsPlacement = SliderLabelsPlacement.BetweenTicks;
-   slider.ShowTicks = true;
-   slider.ShowLabels = true;
-   slider.LabelCreated += OnLabelCreated;
- }
+    SfDateTimeSlider slider = new SfDateTimeSlider()
+    {
+        Minimum = new DateTime(2010, 01, 01),
+        Maximum = new DateTime(2011, 01, 01),
+        Value = new DateTime(2010, 07, 01),
+        Interval = 3,
+        DateFormat = "MMM",
+        IntervalType = SliderDateIntervalType.Months,
+        LabelsPlacement = SliderLabelsPlacement.BetweenTicks,
+        ShowTicks = true,
+        ShowLabels = true,
+    };
+    slider.LabelCreated += OnLabelCreated;
+}
 
 private void OnLabelCreated(object sender, SliderLabelCreatedEventArgs e)
 {
@@ -139,8 +144,11 @@ By default, it is formatted based on the [`SliderTooltip.DateFormat`](https://he
 
 Format or change the whole tooltip label text using the [`TooltipLabelCreated`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html#Syncfusion_Maui_Sliders_SliderTooltip_TooltipLabelCreated) event. The [`SliderTooltipLabelCreatedEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltipLabelCreatedEventArgs.html) contains the following parameters:
 
-* Text – Change the format of the tooltip text using the [`Text`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltipLabelCreatedEventArgs.html#Syncfusion_Maui_Sliders_SliderTooltipLabelCreatedEventArgs_Text) property.
-* Style – Change the appearance of the tooltip text like color, stroke color, and padding using the [`Style`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltipLabelCreatedEventArgs.html) property.
+* Text – Change the tooltip text using the [`Text`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltipLabelCreatedEventArgs.html#Syncfusion_Maui_Sliders_SliderTooltipLabelCreatedEventArgs_Text) property.
+* Color – Change the color of the tooltip text using the [`TextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltipLabelCreatedEventArgs.html#Syncfusion_Maui_Sliders_SliderTooltipLabelCreatedEventArgs_TextColor) property.
+* Font Size – Change the font size of the tooltip text using the [`FontSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltipLabelCreatedEventArgs.html#Syncfusion_Maui_Sliders_SliderTooltipLabelCreatedEventArgs_FontSize) property.
+* Font Family – Change the font family of the tooltip text using the [`FontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltipLabelCreatedEventArgs.html#Syncfusion_Maui_Sliders_SliderTooltipLabelCreatedEventArgs_FontFamily) property.
+* Font Attributes – Change the font attributes of the tooltip text using the [`FontAttributes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltipLabelCreatedEventArgs.html#Syncfusion_Maui_Sliders_SliderTooltipLabelCreatedEventArgs_FontAttributes) property.
 
 {% tabs %}
 
@@ -164,16 +172,18 @@ Format or change the whole tooltip label text using the [`TooltipLabelCreated`](
 {% highlight C# %}
 
 {
-   SfDateTimeSlider slider = new SfDateTimeSlider();
-   slider.Minimum = new DateTime(2010, 01, 01);
-   slider.Maximum = new DateTime(2018, 01, 01);
-   slider.Value = new DateTime(2014, 01, 01);
-   slider.Interval = 2;
-   slider.ShowTicks = true;
-   slider.ShowLabels = true;
-   slider.Tooltip = new SliderTooltip();
-   slider.Tooltip.TooltipLabelCreated += OnTooltipLabelCreated;
- }
+    SfDateTimeSlider slider = new SfDateTimeSlider()
+    {
+        Minimum = new DateTime(2010, 01, 01),
+        Maximum = new DateTime(2018, 01, 01),
+        Value = new DateTime(2014, 01, 01),
+        Interval = 3,
+        ShowTicks = true,
+        ShowLabels = true,
+        Tooltip = new SliderTooltip(),
+    };
+    slider.Tooltip.TooltipLabelCreated += OnTooltipLabelCreated;
+}
 
 private void OnTooltipLabelCreated(object sender, SliderTooltipLabelCreatedEventArgs e)
 {
@@ -190,7 +200,7 @@ private void OnTooltipLabelCreated(object sender, SliderTooltipLabelCreatedEvent
 
 ### Drag started command
 
-The [`DragStartedCommand`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DragStartedCommand) will be executed when the user started moving the thumb.
+The [`DragStartedCommand`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DragStartedCommand) will be executed when the user started moving the thumb.
 
 {% tabs %}
 
@@ -201,10 +211,10 @@ The [`DragStartedCommand`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.S
 </ContentPage.BindingContext>
 
 <ContentPage.Content>
-    <sliders:SfDateTimeSlider Minimum="2010-01-01" 
-                          Maximum="2018-01-01" 
-                          Value="2014-01-01"
-                          DragStartedCommand="{Binding DragStartedCommand}" />
+    <sliders:SfDateTimeSlider Minimum="2010-01-01"
+                              Maximum="2018-01-01"
+                              Value="2014-01-01"
+                              DragStartedCommand="{Binding DragStartedCommand}" />
 </ContentPage.Content>
 
 {% endhighlight %}
@@ -214,8 +224,8 @@ The [`DragStartedCommand`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.S
 SfDateTimeSlider slider = new SfDateTimeSlider()
 {
     Minimum = new DateTime(2010, 01, 01),
-   Maximum = new DateTime(2020, 01, 01),
-   Value = new DateTime(2014, 01, 01),
+    Maximum = new DateTime(2020, 01, 01),
+    Value = new DateTime(2014, 01, 01),
     DragStartedCommand = viewModel.DragStartedCommand,
 };
 
@@ -239,7 +249,7 @@ public class ViewModel
 
 ### Drag started command parameter
 
-The [`DragStartedCommandParameter`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DragStartedCommandParameter) will be executed when the user started moving the thumb.
+The [`DragStartedCommandParameter`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DragStartedCommandParameter) will be executed when the user started moving the thumb.
 
 {% tabs %}
 
@@ -250,11 +260,11 @@ The [`DragStartedCommandParameter`](https://help.syncfusion.com/cr/maui/Syncfusi
 </ContentPage.BindingContext>
 
 <ContentPage.Content>
-    <sliders:SfDateTimeSlider Minimum="2010-01-01" 
-                          Maximum="2018-01-01" 
-                          Value="2014-01-01"
-                          DragStartedCommand="{Binding DragStartedCommand}"
-                      DragStartedCommandParameter="1" />
+    <sliders:SfDateTimeSlider Minimum="2010-01-01"
+                              Maximum="2018-01-01"
+                              Value="2014-01-01"
+                              DragStartedCommand="{Binding DragStartedCommand}"
+                              DragStartedCommandParameter="1" />
 </ContentPage.Content>
 
 {% endhighlight %}
@@ -290,7 +300,7 @@ public class ViewModel
 
 ### Drag completed command
 
-The [`DragCompletedCommand`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DragCompletedCommand) will be executed when the user completed moving the thumb.
+The [`DragCompletedCommand`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DragCompletedCommand) will be executed when the user completed moving the thumb.
 
 {% tabs %}
 
@@ -301,10 +311,10 @@ The [`DragCompletedCommand`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 </ContentPage.BindingContext>
 
 <ContentPage.Content>
-    <sliders:SfDateTimeSlider Minimum="2010-01-01" 
-                          Maximum="2018-01-01" 
-                          Value="2014-01-01"
-                          DragCompletedCommand="{Binding DragCompletedCommand}" />
+    <sliders:SfDateTimeSlider Minimum="2010-01-01"
+                              Maximum="2018-01-01"
+                              Value="2014-01-01"
+                              DragCompletedCommand="{Binding DragCompletedCommand}" />
 </ContentPage.Content>
 
 {% endhighlight %}
@@ -314,8 +324,8 @@ The [`DragCompletedCommand`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 SfDateTimeSlider slider = new SfDateTimeSlider()
 {
     Minimum = new DateTime(2010, 01, 01),
-   Maximum = new DateTime(2020, 01, 01),
-   Value = new DateTime(2014, 01, 01),
+    Maximum = new DateTime(2020, 01, 01),
+    Value = new DateTime(2014, 01, 01),
     DragCompletedCommand = viewModel.DragCompletedCommand
 };
 
@@ -339,7 +349,7 @@ public class ViewModel
 
 ### Drag completed command parameter
 
-The [`DragCompletedCommandParameter`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DragCompletedCommandParameter) will be executed when the user completed moving the thumb.
+The [`DragCompletedCommandParameter`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DragCompletedCommandParameter) will be executed when the user completed moving the thumb.
 
 {% tabs %}
 
@@ -350,11 +360,11 @@ The [`DragCompletedCommandParameter`](https://help.syncfusion.com/cr/maui/Syncfu
 </ContentPage.BindingContext>
 
 <ContentPage.Content>
-    <sliders:SfDateTimeSlider Minimum="2010-01-01" 
-                          Maximum="2018-01-01" 
-                          Value="2014-01-01"
-                          DragCompletedCommand="{Binding DragCompletedCommand}"
-                      DragCompletedCommandParameter="1" />
+    <sliders:SfDateTimeSlider Minimum="2010-01-01"
+                              Maximum="2018-01-01"
+                              Value="2014-01-01"
+                              DragCompletedCommand="{Binding DragCompletedCommand}"
+                              DragCompletedCommandParameter="1" />
 </ContentPage.Content>
 
 {% endhighlight %}
@@ -364,8 +374,8 @@ The [`DragCompletedCommandParameter`](https://help.syncfusion.com/cr/maui/Syncfu
 SfDateTimeSlider slider = new SfDateTimeSlider()
 {
     Minimum = new DateTime(2010, 01, 01),
-   Maximum = new DateTime(2020, 01, 01),
-   Value = new DateTime(2014, 01, 01),
+    Maximum = new DateTime(2020, 01, 01),
+    Value = new DateTime(2014, 01, 01),
     DragCompletedCommand = viewModel.DragCompletedCommand,
     DragCompletedCommandParameter = "1"
 };

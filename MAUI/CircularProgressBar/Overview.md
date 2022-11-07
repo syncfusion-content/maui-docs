@@ -13,19 +13,19 @@ The .NET MAUI Circular ProgressBar shows the progress of a task with customizabl
 
 ### Key features
 
-**States** - Visualize the progress of a process in determinate and indeterminate states.  
+* **States** - Visualize the progress of a process in determinate and indeterminate states.  
 
-**Progress shape** - Visualize progress in a circular shape.
+* **Progress shape** - Visualize progress in a circular shape.
 
-**Segments** - Progress can be divided into multiple segments to show a gradual progress.
+* **Segments** - Progress can be divided into multiple segments to show a gradual progress.
 
-**Color ranges** - Customize ranges with different colors.
+* **Color ranges** - Customize ranges with different colors.
 
-**Appearance customization** - Customize the track thickness, color, and corner radius style. 
+* **Appearance customization** - Customize the track thickness, color, and corner radius style. 
 
-**Customizable content** - Display custom content at the center of a circular progress bar.
+* **Customizable content** - Display custom content at the center of a circular progress bar.
 
-**Angle** - Customize the angles of a circular progress bar.
+* **Angle** - Customize the angles of a circular progress bar.
 
 ![Circular ProgresBar control for .NET MAUI.](images/overview/dotnet_maui_progressbar.png)
 

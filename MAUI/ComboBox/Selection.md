@@ -20,7 +20,8 @@ The selected item can be changed interactively by selecting from the drop-down l
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfComboBox IsEditable="True"
+<editors:SfComboBox x:Name="comboBox"
+                    IsEditable="True"
                     WidthRequest="250"
                     ItemsSource="{Binding SocialMedias}"
                     DisplayMemberPath="Name"

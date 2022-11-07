@@ -40,7 +40,7 @@ Moves selection to the previous time slot directly above the currently selected 
 <tr>
 <td>
 Enter<br/><br/></td><td>
-It triggers [Tapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_Tapped) event<br/><br/></td></tr>
+It triggers {{'[Tapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_Tapped)'| markdownify}} event<br/><br/></td></tr>
 </table>
 
 ### Timeline views
@@ -68,7 +68,7 @@ Moves selection to the same time slot on the previous resource.<br/><br/></td></
 <tr>
 <td>
 Enter<br/><br/></td><td>
-It triggers [Tapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_Tapped) event<br/><br/></td></tr>
+It triggers {{'[Tapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_Tapped)'| markdownify}} event<br/><br/></td></tr>
 </table>
 
 ### Month view
@@ -96,7 +96,7 @@ Moves selection to the date directly above the currently selected date on the pr
 <tr>
 <td>
 Enter<br/><br/></td><td>
-It triggers [Tapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_Tapped) event<br/><br/></td></tr>
+It triggers {{'[Tapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_Tapped)'| markdownify}} event<br/><br/></td></tr>
 </table>
 
 ### Appointments
@@ -121,7 +121,7 @@ Delete<br/><br/></td><td>Deletes the selected appointment from appointments coll
 <tr>
 <td>
 Enter<br/><br/></td><td>
-It triggers [Tapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_Tapped) event<br/><br/></td></tr>
+It triggers {{'[Tapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_Tapped)'| markdownify}} event<br/><br/></td></tr>
 </table>
 
 ### View navigations

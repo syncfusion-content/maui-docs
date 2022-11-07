@@ -85,7 +85,7 @@ Step 3: Set the control to content in `ContentPage.`
 
 
 <ContentPage.Content>    
-    <editors:SfAutocomplete x:Name="autocomplete />
+    <editors:SfAutocomplete x:Name="autocomplete" />
 </ContentPage.Content>
 
 

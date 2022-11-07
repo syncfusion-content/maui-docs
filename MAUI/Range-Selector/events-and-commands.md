@@ -15,10 +15,10 @@ This section explains how to add the events and commands for Range Selector.
 
 ### Handle callbacks
 
-* [ValueChangeStart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ValueChangeStart) -  Called when the user selecting a new value for the selector by tap/mouse down in the thumb.
+* [ValueChangeStart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ValueChangeStart) -  Called when the user selecting a new value for the selector by tap/mouse down in the thumb.
 * [ValueChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSelector.html#Syncfusion_Maui_Sliders_SfRangeSelector_ValueChanging) - Called when the user is selecting a new value for the selector by dragging the thumb.
 * [ValueChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSelector.html#Syncfusion_Maui_Sliders_SfRangeSelector_ValueChanged) - Called when the user completed selecting a new value.
-* [ValueChangeEnd](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ValueChangeEnd) - Called when the user stopped interacting with selector by tap/mouse up the thumb.
+* [ValueChangeEnd](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ValueChangeEnd) - Called when the user stopped interacting with selector by tap/mouse up the thumb.
 
 {% tabs %}
 
@@ -46,13 +46,15 @@ This section explains how to add the events and commands for Range Selector.
 {% highlight C# %}
 
 {
-   SfRangeSelector rangeSelector = new SfRangeSelector();
-   rangeSelector.ValueChangeStart += OnValueChanged;
-   rangeSelector.ValueChanging += OnValueChanged;
-   rangeSelector.ValueChanged += OnValueChanged;
-   rangeSelector.ValueChangeEnd += OnValueChanged;
-   SfCartesianChart chart = new SfCartesianChart();
-   rangeSelector.Content = chart;
+    SfCartesianChart chart = new SfCartesianChart();
+    SfRangeSelector rangeSelector = new SfRangeSelector()
+    {
+        Content = chart,
+    };
+    rangeSelector.ValueChangeStart += OnValueChangeStart;
+    rangeSelector.ValueChanging += OnValueChanging;
+    rangeSelector.ValueChanged += OnValueChanged;
+    rangeSelector.ValueChangeEnd += OnValueChangeEnd;
 }
 
 private void OnValueChangeStart(object sender, EventArgs e)
@@ -77,9 +79,9 @@ private void OnValueChangeEnd(object sender, EventArgs e)
 
 ### Customize label text
 
-Format or change the whole numeric label text using the [`LabelCreated`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_LabelCreated) event. The [`SliderLabelCreatedEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelCreatedEventArgs.html) contains the following parameters,
+Format or change the whole numeric label text using the [`LabelCreated`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_LabelCreated) event. The [`SliderLabelCreatedEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelCreatedEventArgs.html) contains the following parameters,
 
-* Text – Customize the text color using the [`Text`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelCreatedEventArgs.html#Syncfusion_Maui_Sliders_SliderLabelCreatedEventArgs_Style) parameter.
+* Text – Customize the text color using the [`Text`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelCreatedEventArgs.html#Syncfusion_Maui_Sliders_SliderLabelCreatedEventArgs_Text) parameter.
 * Style – Formats the text color, font size, font family, offset using the [`Style`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelCreatedEventArgs.html#Syncfusion_Maui_Sliders_SliderLabelCreatedEventArgs_Style) parameter.
 
 {% tabs %}
@@ -112,17 +114,20 @@ Format or change the whole numeric label text using the [`LabelCreated`](https:/
 {% highlight C# %}
 
 {
-   SfRangeSelector rangeSelector = new SfRangeSelector();
-   rangeSelector.Minimum = 2;
-   rangeSelector.Maximum = 10;
-   rangeSelector.RangeStart = 4;
-   rangeSelector.RangeEnd = 8;
-   rangeSelector.Interval = 2;
-   rangeSelector.ShowLabels = true;
-   rangeSelector.ShowTicks = true;
-   rangeSelector.LabelCreated += OnLabelCreated;
-   SfCartesianChart chart = new SfCartesianChart();
-   rangeSelector.Content = chart;
+    SfCartesianChart chart = new SfCartesianChart();
+    SfRangeSelector rangeSelector = new SfRangeSelector()
+    {
+
+        Minimum = 2,
+        Maximum = 10,
+        RangeStart = 4,
+        RangeEnd = 8,
+        Interval = 2,
+        ShowLabels = true,
+        ShowTicks = true,
+        Content = chart,
+    };
+    rangeSelector.LabelCreated += OnLabelCreated;
 }
 
 private void OnLabelCreated(object sender, SliderLabelCreatedEventArgs e)
@@ -142,8 +147,11 @@ By default, it is formatted based on the [`SliderTooltip.NumberFormat`](https://
 
 Format or change the whole tooltip label text using the [`ToolTipLabelCreated`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html#Syncfusion_Maui_Sliders_SliderTooltip_TooltipLabelCreated) event. The [`SliderTooltipLabelCreatedEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltipLabelCreatedEventArgs.html) contains the following parameters,
 
-* Text – Change the format of the tooltip text using the [`Text`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltipLabelCreatedEventArgs.html#Syncfusion_Maui_Sliders_SliderTooltipLabelCreatedEventArgs_Text) property.
-* Style – Change the appearance of the tooltip text like color, stroke color, and padding using the [`Style`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltipLabelCreatedEventArgs.html) property.
+* Text – Change the tooltip text using the [`Text`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltipLabelCreatedEventArgs.html#Syncfusion_Maui_Sliders_SliderTooltipLabelCreatedEventArgs_Text) property.
+* Color – Change the color of the tooltip text using the [`TextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltipLabelCreatedEventArgs.html#Syncfusion_Maui_Sliders_SliderTooltipLabelCreatedEventArgs_TextColor) property.
+* Font Size – Change the font size of the tooltip text using the [`FontSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltipLabelCreatedEventArgs.html#Syncfusion_Maui_Sliders_SliderTooltipLabelCreatedEventArgs_FontSize) property.
+* Font Family – Change the font family of the tooltip text using the [`FontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltipLabelCreatedEventArgs.html#Syncfusion_Maui_Sliders_SliderTooltipLabelCreatedEventArgs_FontFamily) property.
+* Font Attributes – Change the font attributes of the tooltip text using the [`FontAttributes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltipLabelCreatedEventArgs.html#Syncfusion_Maui_Sliders_SliderTooltipLabelCreatedEventArgs_FontAttributes) property.
 
 {% tabs %}
 
@@ -176,16 +184,19 @@ Format or change the whole tooltip label text using the [`ToolTipLabelCreated`](
 {% highlight C# %}
 
 {
-    SfRangeSelector rangeSelector = new SfRangeSelector();
-    rangeSelector.Minimum = 2;
-    rangeSelector.Maximum = 10;
-    rangeSelector.RangeStart = 4;
-    rangeSelector.RangeEnd = 8;
-    rangeSelector.Interval = 2;
-    rangeSelector.Tooltip.TooltipLabelCreated += OnTooltipLabelCreated;
     SfCartesianChart chart = new SfCartesianChart();
-    rangeSelector.Content = chart;
- }
+    SfRangeSelector rangeSelector = new SfRangeSelector()
+    {
+        Minimum = 2,
+        Maximum = 10,
+        RangeStart = 4,
+        RangeEnd = 8,
+        Interval = 2,
+        Tooltip = new SliderTooltip(),
+        Content = chart,
+    };
+    rangeSelector.Tooltip.TooltipLabelCreated += OnTooltipLabelCreated;
+}
 
  private void OnTooltipLabelCreated(object sender, SliderTooltipLabelCreatedEventArgs e)
  {
@@ -202,7 +213,7 @@ Format or change the whole tooltip label text using the [`ToolTipLabelCreated`](
 
 ### Drag started command
 
-The [`DragStartedCommand`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DragStartedCommand) will be executed when the user starts moving the thumb.
+The [`DragStartedCommand`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DragStartedCommand) will be executed when the user starts moving the thumb.
 
 {% tabs %}
 
@@ -257,7 +268,7 @@ public class ViewModel
 
 ### Drag started command parameter
 
-The [`DragStartedCommandParameter`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DragStartedCommandParameter) will be executed when the user starts moving the thumb.
+The [`DragStartedCommandParameter`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DragStartedCommandParameter) will be executed when the user starts moving the thumb.
 
 {% tabs %}
 
@@ -314,7 +325,7 @@ public class ViewModel
 
 ### Drag completed command
 
-The [`DragCompletedCommand`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DragCompletedCommand) will be executed when the user completes moving the thumb.
+The [`DragCompletedCommand`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DragCompletedCommand) will be executed when the user completes moving the thumb.
 
 {% tabs %}
 
@@ -369,7 +380,7 @@ public class ViewModel
 
 ### Drag completed command parameter
 
-The [`DragCompletedCommandParameter`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_DragCompletedCommandParameter) will be executed when the user completes moving the thumb.
+The [`DragCompletedCommandParameter`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DragCompletedCommandParameter) will be executed when the user completes moving the thumb.
 
 {% tabs %}
 

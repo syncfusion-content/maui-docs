@@ -50,6 +50,41 @@ To migrate easier from [Xamarin SfListView](https://www.syncfusion.com/xamarin-u
 <td>{{'[SelectionBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.SfListView.html#Syncfusion_ListView_XForms_SfListView_SelectionBackgroundColor)' | markdownify }}</td>
 <td>{{'[SelectionBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionBackground)'| markdownify }}</td>
 <td>Gets or sets the selection background color for the selected item.</td></tr>
+<tr>
+<td>{{'[IsBusy](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.SfListView.html#Syncfusion_ListView_XForms_SfListView_IsBusy)'| markdownify }}</td>
+<td>{{'[IsLazyLoading](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_IsLazyLoading)'| markdownify }}</td>
+<td>Gets or sets a value indicating whether list view is busy in loading more items. If it is true, the load more indicators will be displayed until it sets to false.</td>
+</tr>
+<tr>
+<td>{{'[ItemData](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.ItemTappedEventArgs.html#Syncfusion_ListView_XForms_ItemTappedEventArgs_ItemData)'| markdownify }}</td>
+<td>{{'[ItemTappedEventArgs.DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemTappedEventArgs.html#Syncfusion_Maui_ListView_ItemTappedEventArgs_DataItem)'| markdownify }}</td>
+<td>Gets the item data of the tapped item.</td>
+</tr>
+<tr>
+<td>{{'[ItemData](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.ItemHoldingEventArgs.html#Syncfusion_ListView_XForms_ItemHoldingEventArgs_ItemData)'| markdownify }}</td>
+<td>{{'[ItemLongPressEventArgs.DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemLongPressEventArgs.html#Syncfusion_Maui_ListView_ItemLongPressEventArgs_DataItem)'| markdownify }}</td>
+<td>Gets the item data of the long pressed item.</td>
+</tr>
+<tr>
+<td>{{'[ItemData](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.ItemDoubleTappedEventArgs.html#Syncfusion_ListView_XForms_ItemDoubleTappedEventArgs_ItemData)'| markdownify }}</td>
+<td>{{'[ItemDoubleTappedEventArgs.DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemDoubleTappedEventArgs.html#Syncfusion_Maui_ListView_ItemDoubleTappedEventArgs_DataItem)'| markdownify }}</td>
+<td>Gets the item data of the double tapped item.</td>
+</tr>
+<tr>
+<td>{{'[ItemData](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.ItemAppearingEventArgs.html#Syncfusion_ListView_XForms_ItemAppearingEventArgs_ItemData)'| markdownify }}</td>
+<td>{{'[ItemAppearingEventArgs.DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemAppearingEventArgs.html#Syncfusion_Maui_ListView_ItemAppearingEventArgs_DataItem)'| markdownify }}</td>
+<td>Gets the underlying data object of the ListViewItem when item appearing from the bound data source.</td>
+</tr>
+<tr>
+<td>{{'[ItemData](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.ItemDisappearingEventArgs.html#Syncfusion_ListView_XForms_ItemDisappearingEventArgs_ItemData)'| markdownify }}</td>
+<td>{{'[ItemDisappearingEventArgs.DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemDisappearingEventArgs.html#Syncfusion_Maui_ListView_ItemDisappearingEventArgs_DataItem)'| markdownify }}</td>
+<td>Gets the underlying data object of the ListViewItem when item disappearing from the bound data source.</td>
+</tr>
+<tr>
+<td>{{'[ItemData](https://help.syncfusion.com/cr/xamarin/Syncfusion.ListView.XForms.QueryItemSizeEventArgs.html#Syncfusion_ListView_XForms_QueryItemSizeEventArgs_ItemData)'| markdownify }}</td>
+<td>{{'[QueryItemSizeEventArgs.DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.QueryItemSizeEventArgs.html#Syncfusion_Maui_ListView_QueryItemSizeEventArgs_DataItem)'| markdownify }}</td>
+<td>Gets the underlying data of the queried item.</td>
+</tr>
 </table> 
 
 ## Enums

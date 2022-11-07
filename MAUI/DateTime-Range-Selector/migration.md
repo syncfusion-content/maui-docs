@@ -36,24 +36,24 @@ In the Xamarin.Forms, [SfDateTimeRangeNavigator](https://help.syncfusion.com/cr/
 <th>Description</th></tr>
 <tr>
 <td>{{'[ViewRangeStart](https://help.syncfusion.com/cr/xamarin/Syncfusion.RangeNavigator.XForms.SfDateTimeRangeNavigator.html#Syncfusion_RangeNavigator_XForms_SfDateTimeRangeNavigator_ViewRangeStart)'| markdownify }}</td>
-<td>{{'[RangeStart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.DateTimeRangeSliderBase.html#Syncfusion_Maui_Sliders_DateTimeRangeSliderBase_RangeStart)'| markdownify }}</td>
+<td>{{'[RangeStart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_RangeStart)'| markdownify }}</td>
 <td>Gets or sets the thumb start value of the track. The thumb starts from this value.</td></tr>
 <tr>
 <td>{{'[ViewRangeEnd](https://help.syncfusion.com/cr/xamarin/Syncfusion.RangeNavigator.XForms.SfDateTimeRangeNavigator.html#Syncfusion_RangeNavigator_XForms_SfDateTimeRangeNavigator_ViewRangeEnd)'| markdownify }}</td>
-<td>{{'[RangeEnd](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.DateTimeRangeSliderBase.html#Syncfusion_Maui_Sliders_DateTimeRangeSliderBase_RangeEnd)'| markdownify }}</td>
+<td>{{'[RangeEnd](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_RangeEnd)'| markdownify }}</td>
 <td>Gets or sets the thumb end value of the track. The thumb ends in this value.</td></tr>
 <tr>
 <td>{{'[Intervals](https://help.syncfusion.com/cr/xamarin/Syncfusion.RangeNavigator.XForms.SfDateTimeRangeNavigator.html#Syncfusion_RangeNavigator_XForms_SfDateTimeRangeNavigator_Intervals)'| markdownify }}</td>
-<td>{{'[IntervalType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.DateTimeRangeSliderBase.html#Syncfusion_Maui_Sliders_DateTimeRangeSliderBase_IntervalType)'| markdownify }}</td>
+<td>{{'[IntervalType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.IDateTimeElement.html#Syncfusion_Maui_Sliders_IDateTimeElement_IntervalType)'| markdownify }}</td>
 <td>Gets or sets the type of the date interval. By default, it will be Years.</td></tr>
 <tr>
 <td>{{'[OverlayColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.RangeNavigator.XForms.SfDateTimeRangeNavigator.html#Syncfusion_RangeNavigator_XForms_SfDateTimeRangeNavigator_OverlayColor)'| markdownify }}</td>
-<td>{{'[InactiveRegionFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSelector.html#Syncfusion_Maui_Sliders_SfDateTimeRangeSelector_InactiveRegionFill)'| markdownify }}</td>
+<td>{{'[InactiveRegionFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSelectorBase-1.html#Syncfusion_Maui_Sliders_RangeSelectorBase_1_InactiveRegionFill)'| markdownify }}</td>
 <td>Gets or sets the color to the InactiveRegionColor.</td></tr>
 <tr>
 <td>{{'[LeftThumbStyle](https://help.syncfusion.com/cr/xamarin/Syncfusion.RangeNavigator.XForms.SfDateTimeRangeNavigator.html#Syncfusion_RangeNavigator_XForms_SfDateTimeRangeNavigator_LeftThumbStyle)'| markdownify }}</td>
 <td rowspan="2" valign="center">
-			{{'[ThumbStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ThumbStyle)'| markdownify }}<br/>
+			{{'[ThumbStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ThumbStyle)'| markdownify }}<br/>
 		</td>
 <td rowspan="2" valign="center">
 			Gets or sets a value to customize the appearance of the thumb shape.<br/>
@@ -63,7 +63,7 @@ In the Xamarin.Forms, [SfDateTimeRangeNavigator](https://help.syncfusion.com/cr/
 <tr>
 <td>{{'[LeftTooltipStyle](https://help.syncfusion.com/cr/xamarin/Syncfusion.RangeNavigator.XForms.SfDateTimeRangeNavigator.html#Syncfusion_RangeNavigator_XForms_SfDateTimeRangeNavigator_LeftTooltipStyle)'| markdownify }}</td>
 <td rowspan="2" valign="center">
-			{{'[Tooltip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_Tooltip)'| markdownify }}<br/>
+			{{'[Tooltip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Tooltip)'| markdownify }}<br/>
 		</td>
 <td rowspan="2" valign="center">
 			Gets or sets a value to customize the appearance of the tooltip shape.<br/>
@@ -139,7 +139,7 @@ In the Xamarin.Forms, [SfDateTimeRangeNavigator](https://help.syncfusion.com/cr/
 <th>Description</th></tr>
 <tr>
 <td>{{'[ScaleStyle.IsVisible](https://help.syncfusion.com/cr/xamarin/Syncfusion.RangeNavigator.XForms.ScaleStyle.html#Syncfusion_RangeNavigator_XForms_ScaleStyle_IsVisible)'| markdownify }}</td>
-<td>{{'[ShowLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_ShowLabels)'| markdownify }}</td>
+<td>{{'[ShowLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels)'| markdownify }}</td>
 <td>Gets or sets a value indicating whether to show or hide the labels.</td></tr>
 <tr>
 <td>{{'[ScaleStyle.LabelTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.RangeNavigator.XForms.ScaleStyle.html#Syncfusion_RangeNavigator_XForms_ScaleStyle_LabelTextColor)'| markdownify }}</td>
@@ -221,7 +221,7 @@ In the Xamarin.Forms, [SfDateTimeRangeNavigator](https://help.syncfusion.com/cr/
 <th>Description</th></tr>
 <tr>
 <td>{{'[MinorScaleLabelsCreated](https://help.syncfusion.com/cr/xamarin/Syncfusion.RangeNavigator.XForms.SfDateTimeRangeNavigator.html#Syncfusion_RangeNavigator_XForms_SfDateTimeRangeNavigator_MinorScaleLabelsCreated)'| markdownify }}</td>
-<td>{{'[LabelCreated](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase.html#Syncfusion_Maui_Sliders_SliderBase_LabelCreated)'| markdownify }}</td>
+<td>{{'[LabelCreated](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_LabelCreated)'| markdownify }}</td>
 <td>It occurs when a label is created. It is used to format or change the label text.</td></tr>
 <tr>
 <td>{{'[RangeChanged](https://help.syncfusion.com/cr/xamarin/Syncfusion.RangeNavigator.XForms.SfDateTimeRangeNavigator.html#Syncfusion_RangeNavigator_XForms_SfDateTimeRangeNavigator_RangeChanged)'| markdownify }}</td>
