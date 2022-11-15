@@ -9,7 +9,7 @@ documentation: ug
 
 # .NET MAUI Autocomplete (SfAutocomplete) Overview
 
-The .NET MAUI `Autocomplete` control is highly optimized to load and populate suggestions quickly from large amounts of data depending on the user’s input characters. It allows users to select an item from the suggestion list. It displays the selected item in the input view with the text and clear button.
+The [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control is highly optimized to load and populate suggestions quickly from large amounts of data depending on the user’s input characters. It allows users to select an item from the suggestion list. It displays the selected item in the input view with the text and clear button.
 
 ![.NET MAUI SfAutocomplete](Images/Overview/AutocompleteOverview.png)
 
