@@ -9,11 +9,11 @@ documentation: ug
 
 # Selection in .NET MAUI Autocomplete (SfAutocomplete)
 
-The `Autocomplete` allows user to select a single item from dropdown list.
+The [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) allows user to select a single item from dropdown list.
 
 ## Single selection
 
-The `Autocomplete` allows the user to select an item by entering the value using the keyboard, then selecting from the drop-down list by clicking the item. The selected item can be retrieved from the `SelectedItem` property.
+The [Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) allows the user to select an item by entering the value using the keyboard, then selecting from the drop-down list by clicking the item. The selected item can be retrieved from the [SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedItem) property.
 
 {% tabs %}
 {% highlight c# %}
@@ -80,7 +80,7 @@ The following gif image illustrates the result of the above code:
 
 ## Selection changed notification
 
-When an item is selected from the drop-down list, the `SelectionChanged` event is triggered. The SelectionChanged event contains the newly selected and previously selected items in the `CurrentSelection` and `PreviousSelection` properties. The SelectionChanged contains the following properties:
+When an item is selected from the drop-down list, the [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectionChanged) event is triggered. The SelectionChanged event contains the newly selected and previously selected items in the `CurrentSelection` and `PreviousSelection` properties. The SelectionChanged contains the following properties:
 
  * CurrentSelection - Contains the item that were currently selected.
  * PreviousSelection - Contains the item that were previously selected.
@@ -123,7 +123,7 @@ The following gif image illustrates the result of the above code:
 
 ## Get the selected value
 
-The `SelectedValuePath` property allows you to specify a SelectedValue for a Autocomplete's `SelectedItem`. The `SelectedItem` represents an object in the `Items` collection, and the `Autocomplete` displays the value of the selected item's single property. The `SelectedValuePath` property specifies the path to the property that is used to determine the `SelectedValue` property's value. The default value of `SelectedValue` and `SelectedValuePath` is `null`.
+The [SelectedValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedValuePath)  property allows you to specify a SelectedValue for a Autocomplete's [SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedItem). The SelectedItem represents an object in the `Items` collection, and the `Autocomplete` displays the value of the selected item's single property. The `SelectedValuePath` property specifies the path to the property that is used to determine the [SelectedValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedValue) property's value. The default value of SelectedValue and SelectedValuePath is `null`.
 
 For example, when you select any `SocialMedia.Name` in the `Autocomplete,` the `SelectedItem` property returns the `SocialMedia` data item that corresponds to the selected `SocialMedia.Name.` However, because the `SelectedValuePath` of this `Autocomplete` is set to `SocialMedia.ID,` the `SelectedValue` is set to the `SocialMedia.ID.`
 
@@ -168,7 +168,7 @@ The following gif image illustrates the result of the above code:
 
 ## Hide clear button in the Autocomplete
 
-By default, the clear button `X` will be displayed in the editor of the `Autocomplete` control, which can be used to clear the entered input. Hide the clear button in `Autocomplete` control using the `IsClearButtonVisible` property. The default value of `IsClearButtonVisible` property value is `true`.
+By default, the clear button `X` will be displayed in the editor of the [Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control, which can be used to clear the entered input. Hide the clear button in Autocomplete control using the [IsClearButtonVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_IsClearButtonVisibleProperty) property. The default value of IsClearButtonVisible property value is `true`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -195,7 +195,7 @@ The following image illustrates the result of the above code:
 
 ## Is Drop-Down Open
 
-The `IsDropDownOpen` property in the Autocomplete control can be used to get a boolean value indicating whether the drop-down is open or closed state. It returns `true` if the drop-down is open, otherwise `false`.
+The [IsDropDownOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_IsDropDownOpenProperty) property in the Autocomplete control can be used to get a boolean value indicating whether the drop-down is open or closed state. It returns `true` if the drop-down is open, otherwise `false`.
 
 N> Currently, users can only get the boolean value based on whether a drop-down menu is open or not; the property "IsDropDownOpen" cannot be set.
 
