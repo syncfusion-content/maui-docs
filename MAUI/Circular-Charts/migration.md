@@ -645,19 +645,19 @@ chart.Series.Add(series);
 
 ## Upcoming features in .NET MAUI
 
-**Chart** 
+###Chart
 
 * Exporting support for a chart as an image or a stream. 
 * Support for chart localization. 
 
-**Series**
+###Series
 
 * Listen to property change support for series.
 * Get data point index based on value.
 * Notify event or method when series are rendering.
 * Suspend and resume notification.
 
-**Legend** 
+###Legend
 
 * Title support for legend. 
 * Support to enable or disable the legend icon visibility.
@@ -667,12 +667,12 @@ chart.Series.Add(series);
 * Event or method to notify the legend click and the creation of a legend item.
 * DataTemplate support for legend items.
 
-**Data label**
+###Data label
 
 * DataTemplate support for data labels.
 * Connector lines customization support.
 
-**Tooltip**
+###Tooltip
 
 * Hide and Show method for tooltip.
 

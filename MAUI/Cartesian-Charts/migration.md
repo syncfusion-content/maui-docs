@@ -875,7 +875,7 @@ chart.ZoomPanBehavior = zooming;
 
 ## Upcoming features in .NET MAUI
 
-**Chart** 
+###Chart 
 
 * Support for trackball interactions. 
 * Support for crosshair interactions. 
@@ -885,7 +885,7 @@ chart.ZoomPanBehavior = zooming;
 * Suspend and resume notification support. 
 * Technical indicators for charts.
 
-**Series**
+###Series
 
 * Listen to property change support for series.
 * Get data point index based on value.
@@ -894,7 +894,7 @@ chart.ZoomPanBehavior = zooming;
 * Suspend and resume notification.
 * Trendlines support for continuous series. 
 
-**Axis**
+###Axis
 
 * DateTime category axis support.
 * Align the axis labels and tick inside the series clip rect.
@@ -907,7 +907,7 @@ chart.ZoomPanBehavior = zooming;
 * Support setting the maximum labels count for the chart axis.
 * Support to extent size between Axis title and axis label.
 
-**Legend** 
+###Legend
 
 * Title support for legend. 
 * Support to enable or disable the legend icon visibility.
@@ -917,21 +917,21 @@ chart.ZoomPanBehavior = zooming;
 * Event or method to notify the legend click and the creation of a legend item.
 * DataTemplate support for legend items.
 
-**Data label**
+###Data label
 
 * Only the line, area, and spline series have support for markers.
 * DataTemplate support for data labels.
 * Connector lines and its customization support.
 
-**Tooltip**
+###Tooltip
 
 * Hide and Show method for tooltip.
 
-**Selection**
+###Selection
 
 * Cluster selection support.
 
-**Zooming**
+###Zooming
 
 * Support for selection and directional zooming.
 * Support setting the maximum zoom level.

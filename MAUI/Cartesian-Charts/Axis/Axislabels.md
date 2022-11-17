@@ -104,7 +104,7 @@ chart.XAxes.Add(primaryAxis);
  
 The visibility of the edge labels of the axis can be controlled using the [EdgeLabelsVisibilityMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RangeAxisBase.html#Syncfusion_Maui_Charts_RangeAxisBase_EdgeLabelsVisibilityMode) property. The default value of [EdgeLabelsVisibilityMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RangeAxisBase.html#Syncfusion_Maui_Charts_RangeAxisBase_EdgeLabelsVisibilityMode) is `Default`, which displays the edge label based on auto interval calculations.
 
-**Always Visible**
+###Always Visible
 
 `AlwaysVisible` option in [EdgeLabelsVisibilityMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RangeAxisBase.html#Syncfusion_Maui_Charts_RangeAxisBase_EdgeLabelsVisibilityMode) is used to view the edge labels even in chart area zoomed state.
 
@@ -136,7 +136,7 @@ chart.XAxes.Add(primaryAxis);
 
 {% endtabs %}
 
-**Visible**
+###Visible
 
 `Visible` option is used to display the edge labels irrespective of the auto interval calculation until zooming (i.e., in normal state).
 

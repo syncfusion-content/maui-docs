@@ -29,7 +29,7 @@ The following types are available for [NumericalAxis](https://help.syncfusion.co
 
 By default, the [RangePadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalAxis.html#Syncfusion_Maui_Charts_NumericalAxis_RangePadding) value for [XAxes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_XAxes) is `Auto` and for [YAxes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_YAxes) is `Round`.
 
-**Additional**
+###Additional
 
 {% tabs %}
 
@@ -68,7 +68,7 @@ chart.YAxes.Add(secondaryAxis);
 
 ![NumericalAxis range padding support in MAUI Chart](Axis_Images/maui_chart_axis_numerical-range-padding_additional.jpg)
 
-**None**
+###None
 
 {% tabs %}
 
@@ -107,7 +107,7 @@ chart.YAxes.Add(secondaryAxis);
 
 ![NumericalAxis range padding none in MAUI Chart](Axis_Images/maui_chart_axis_numerical-range-padding_none.jpg)
 
-**Round**
+###Round
 
 {% tabs %}
 
@@ -159,7 +159,7 @@ The [RangePadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Nu
 * `PrependInterval` - The visible start range will be prepended with an additional interval.
 * `AppendInterval` - The visible start range will be appended with an additional interval.
 
-**Additional**
+###Additional
 
 {% tabs %}
 
@@ -199,7 +199,7 @@ chart.YAxes.Add(secondaryAxis);
 
 ![DateTimeAxis range padding support in MAUI Chart](Axis_Images/maui_chart_axis_datetime-range-padding_additional.jpg)
 
-**None**
+###None
 
 {% tabs %}
 
@@ -238,7 +238,7 @@ chart.YAxes.Add(secondaryAxis);
 
 ![DateTimeAxis range padding none in MAUI Chart](Axis_Images/maui_chart_axis_datetime-range-padding_none.jpg)
 
-**Round**
+###Round
 
 {% tabs %}
 
