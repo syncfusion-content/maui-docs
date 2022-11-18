@@ -88,9 +88,24 @@ Circular chart provides support to customize the appearance of the tooltip by us
     <chart:SfCircularChart.Resources>
         <DataTemplate x:Key="tooltipTemplate">
             <StackLayout Orientation="Horizontal">
-                <Label Text="{Binding Item.Product}" TextColor="Black" FontAttributes="Bold" FontSize="12" HorizontalOptions="Center" VerticalOptions="Center"/>
-                <Label Text=" : " TextColor="Black" FontAttributes="Bold" FontSize="12" HorizontalOptions="Center" VerticalOptions="Center"/>
-                <Label Text="{Binding Item.SalesRate}" TextColor="Black" FontAttributes="Bold" FontSize="12" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <Label Text="{Binding Item.Product}"
+					   TextColor="Black"
+					   FontAttributes="Bold"
+					   FontSize="12"
+					   HorizontalOptions="Center"
+					   VerticalOptions="Center"/>
+                <Label Text=" : " 
+					   TextColor="Black"
+					   FontAttributes="Bold"
+					   FontSize="12"
+					   HorizontalOptions="Center"
+					   VerticalOptions="Center"/>
+                <Label Text="{Binding Item.SalesRate}"
+					   TextColor="Black"
+					   FontAttributes="Bold"
+					   FontSize="12"
+					   HorizontalOptions="Center"
+					   VerticalOptions="Center"/>
             </StackLayout>
         </DataTemplate>
     </chart:SfCircularChart.Resources>

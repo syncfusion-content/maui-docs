@@ -386,7 +386,10 @@ Tooltips are used to show information about the segment, when a user hovers over
 
 <chart:SfCartesianChart>
     ...
-    <chart:ColumnSeries EnableTooltip="True" ItemsSource="{Binding Data}" XBindingPath="Name" YBindingPath="Height"/>
+    <chart:ColumnSeries EnableTooltip="True"
+						ItemsSource="{Binding Data}"
+						XBindingPath="Name"
+						YBindingPath="Height"/>
     ...
 </chart:SfCartesianChart> 
 

@@ -104,7 +104,9 @@ N> If  minimum or maximum value is set, the other value is calculated by default
 {% highlight xaml %}
 
 <chart:SfCartesianChart.YAxes>
-    <chart:NumericalAxis Maximum="2750" Minimum="250" Interval="250"/>
+    <chart:NumericalAxis Maximum="2750"
+						 Minimum="250"
+						 Interval="250"/>
 </chart:SfCartesianChart.YAxes>
 
 {% endhighlight %}
@@ -270,7 +272,8 @@ In [DateTimeAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Dat
 <chart:SfCartesianChart>
     ...
     <chart:SfCartesianChart.XAxes>
-        <chart:DateTimeAxis Interval="6" IntervalType="Months"/>
+        <chart:DateTimeAxis Interval="6"
+							IntervalType="Months"/>
     </chart:SfCartesianChart.XAxes>
     <chart:SfCartesianChart.YAxes>
         <chart:NumericalAxis/>
@@ -311,7 +314,8 @@ chart.YAxes.Add(secondaryAxis);
 <chart:SfCartesianChart>
     . . .
     <chart:SfCartesianChart.XAxes>
-        <chart:DateTimeAxis Minimum="2021/05/10" Maximum="2021/11/01"/>
+        <chart:DateTimeAxis Minimum="2021/05/10"
+							Maximum="2021/11/01"/>
     </chart:SfCartesianChart.XAxes>
 
 </chart:SfCartesianChart>
@@ -403,7 +407,8 @@ To customize the range of the log axis, you can use the [Minimum](https://help.s
 
 <chart:SfCartesianChart.YAxes>
 
-    <chart:LogarithmicAxis Minimum="100" Maximum="10000"/>
+    <chart:LogarithmicAxis Minimum="100"
+						   Maximum="10000"/>
 
 </chart:SfCartesianChart.YAxes>
 
@@ -526,7 +531,9 @@ By default, The 0th index value of XAxes and YAxes is used to plot all of the se
 	</chart:SfCartesianChart.XAxes>
 	<chart:SfCartesianChart.YAxes>
 		<chart:NumericalAxis ShowMajorGridLines="False" />
-		<chart:NumericalAxis Name="series_YAxis" CrossesAt="{Static x:Double.MaxValue}" ShowMajorGridLines="False" />
+		<chart:NumericalAxis Name="series_YAxis"
+							 CrossesAt="{Static x:Double.MaxValue}"
+							 ShowMajorGridLines="False" />
 	</chart:SfCartesianChart.YAxes>
         <chart:ColumnSeries ItemsSource="{Binding Data1}" 
             XBindingPath="Date"
@@ -598,11 +605,17 @@ The chart allows you to customize the origin, by default the axis will be render
 <chart:SfCartesianChart>
     
     <chart:SfCartesianChart.XAxes>
-            <chart:NumericalAxis CrossesAt="0" Minimum="-8" Maximum="8" ShowMajorGridLines="False" />
+            <chart:NumericalAxis CrossesAt="0"
+								 Minimum="-8"
+								 Maximum="8"
+								 ShowMajorGridLines="False" />
     </chart:SfCartesianChart.XAxes>
 
     <chart:SfCartesianChart.YAxes>
-            <chart:NumericalAxis CrossesAt="0" Minimum="-8" Maximum="8"  ShowMajorGridLines="False" />
+            <chart:NumericalAxis CrossesAt="0"
+								 Minimum="-8"
+								 Maximum="8"
+								 ShowMajorGridLines="False" />
     </chart:SfCartesianChart.YAxes>
 
 </chart:SfCartesianChart>
@@ -642,7 +655,8 @@ The [RenderNextToCrossingValue](https://help.syncfusion.com/cr/maui/Syncfusion.M
 <chart:SfCartesianChart>
     
     <chart:SfCartesianChart.XAxes>
-            <chart:NumericalAxis CrossesAt="0" RenderNextToCrossingValue="False" />
+            <chart:NumericalAxis CrossesAt="0"
+								 RenderNextToCrossingValue="False" />
     </chart:SfCartesianChart.XAxes>
 
     <chart:SfCartesianChart.YAxes>
@@ -750,17 +764,15 @@ chart.YAxes.Add(secondaryAxis);
 
 The [ActualRangeChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ActualRangeChangedEventArgs.html) event is triggered when the actual range of the axis is changed. The argument contains the following information:
 
-* [ActualMinimum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ActualRangeChangedEventArgs.html#Syncfusion_Maui_Charts_ActualRangeChangedEventArgs_ActualMinimum) - used to get or set the actual minimum value of the axis.
-* [ActualMaximum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ActualRangeChangedEventArgs.html#Syncfusion_Maui_Charts_ActualRangeChangedEventArgs_ActualMaximum) - used to get or set the actual maximum value of the axis.
-* [VisibleMinimum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ActualRangeChangedEventArgs.html#Syncfusion_Maui_Charts_ActualRangeChangedEventArgs_VisibleMinimum) - used to get or set the visible minimum value of the axis.
-* [VisibleMaximum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ActualRangeChangedEventArgs.html#Syncfusion_Maui_Charts_ActualRangeChangedEventArgs_VisibleMaximum) - used to get or set the visible maximum value of the axis.
+* [ActualMinimum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ActualRangeChangedEventArgs.html#Syncfusion_Maui_Charts_ActualRangeChangedEventArgs_ActualMinimum) - used to get the actual minimum value of the axis.
+* [ActualMaximum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ActualRangeChangedEventArgs.html#Syncfusion_Maui_Charts_ActualRangeChangedEventArgs_ActualMaximum) - used to get the actual maximum value of the axis.
 
-N> The actual range and visible range are similar unless the range is changed by specifying the [ZoomPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_ZoomPosition) and [ZoomFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_ZoomFactor) properties or zooming the chart interactively. The visible range is always the range that you can see visually on the screen.
+N> The actual range is changed by specifying the [ZoomPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_ZoomPosition) and [ZoomFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_ZoomFactor) properties or zooming the chart interactively.
 
 ### LabelCreated
 
 The [LabelCreated](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_LabelCreated) event is triggered when the axis label is created. The argument contains the following information:
 
-* [LabelContent](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisLabelEventArgs.html#Syncfusion_Maui_Charts_ChartAxisLabelEventArgs_LabelContent) - Used to get or set the text of axis label.
+* [Label](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisLabelEventArgs.html#Syncfusion_Maui_Charts_ChartAxisLabelEventArgs_Label) - Used to get or set the text of axis label.
 * [Position](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisLabelEventArgs.html#Syncfusion_Maui_Charts_ChartAxisLabelEventArgs_Position) - Used to get the position of label.
 * [LabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxisLabelEventArgs.html#Syncfusion_Maui_Charts_ChartAxisLabelEventArgs_LabelStyle) - Used to customize the appearance of axis labels.
