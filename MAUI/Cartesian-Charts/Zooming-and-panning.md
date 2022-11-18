@@ -89,7 +89,8 @@ chart.ZoomPanBehavior = zooming;
 
 <chart:SfCartesianChart>
     <chart:SfCartesianChart.XAxes>
-        <chart:CategoryAxis ZoomFactor="0.3" ZoomPosition="0.5"/>
+        <chart:CategoryAxis ZoomFactor="0.3"
+							ZoomPosition="0.5"/>
     </chart:SfCartesianChart.XAxes>
     ...
 </chart:SfCartesianChart>

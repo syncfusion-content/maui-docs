@@ -29,7 +29,9 @@ N> The cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
         <chart:NumericalAxis />
     </chart:SfCartesianChart.YAxes>   
 
-    <chart:AreaSeries ItemsSource="{Binding Data}" XBindingPath="Demand" YBindingPath="Year2010"/>  
+    <chart:AreaSeries ItemsSource="{Binding Data}"
+					  XBindingPath="Demand"
+					  YBindingPath="Year2010"/>  
 
 </chart:SfCartesianChart>
 
@@ -77,7 +79,9 @@ The [SplineAreaSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chart
         <chart:NumericalAxis />
     </chart:SfCartesianChart.YAxes>
             
-    <chart:SplineAreaSeries ItemsSource="{Binding Data}" XBindingPath="Demand" YBindingPath="Year2010"/>  
+    <chart:SplineAreaSeries ItemsSource="{Binding Data}"
+							XBindingPath="Demand" 
+							YBindingPath="Year2010"/>  
 
 </chart:SfCartesianChart>
 
