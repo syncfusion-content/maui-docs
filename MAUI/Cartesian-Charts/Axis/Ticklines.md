@@ -63,7 +63,9 @@ Both major and minor tick lines can be customized by using the [MajorTickStyle](
 <chart:SfCartesianChart.XAxes>
     <chart:NumericalAxis MinorTicksPerInterval="4">
         <chart:NumericalAxis.MajorTickStyle>
-            <chart:ChartAxisTickStyle Stroke="Red" StrokeWidth="1" TickSize="10"/>
+            <chart:ChartAxisTickStyle Stroke="Red"
+									  StrokeWidth="1"
+									  TickSize="10"/>
         </chart:NumericalAxis.MajorTickStyle>
         
         <chart:NumericalAxis.MinorTickStyle>

@@ -360,7 +360,9 @@ this.Content = chart;
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-<chart:ColumnSeries ItemsSource="{Binding Data}" XBindingPath="Name" YBindingPath="Height">
+<chart:ColumnSeries ItemsSource="{Binding Data}"
+					XBindingPath="Name"
+					YBindingPath="Height">
 </chart:ColumnSeries>
 </chart:SfCartesianChart>
 

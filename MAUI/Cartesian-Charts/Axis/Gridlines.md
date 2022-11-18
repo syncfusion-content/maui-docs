@@ -65,7 +65,9 @@ The [MajorGridLineStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cha
     <chart:SfCartesianChart.XAxes>
         <chart:NumericalAxis>
             <chart:NumericalAxis.MajorGridLineStyle>
-                <chart:ChartLineStyle StrokeDashArray="{StaticResource dashArray}" Stroke="Black" StrokeWidth="2" />
+                <chart:ChartLineStyle StrokeDashArray="{StaticResource dashArray}"
+									  Stroke="Black"
+									  StrokeWidth="2" />
             </chart:NumericalAxis.MajorGridLineStyle>
         </chart:NumericalAxis>
     </chart:SfCartesianChart.XAxes>
@@ -163,7 +165,9 @@ The [MinorGridLineStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cha
     <chart:SfCartesianChart.YAxes>
         <chart:NumericalAxis ShowMinorGridLines="True" MinorTicksPerInterval="2">
             <chart:NumericalAxis.MinorGridLineStyle>
-                <chart:ChartLineStyle StrokeDashArray="{StaticResource dashArray}" Stroke="Black" StrokeWidth="0.8"  />
+                <chart:ChartLineStyle StrokeDashArray="{StaticResource dashArray}"
+									  Stroke="Black" 
+									  StrokeWidth="0.8"  />
             </chart:NumericalAxis.MinorGridLineStyle>
         </chart:NumericalAxis>
     </chart:SfCartesianChart.YAxes>

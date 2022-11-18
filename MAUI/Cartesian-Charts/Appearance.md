@@ -20,8 +20,19 @@ documentation: ug
 <chart:SfCartesianChart>
    <chart:SfCartesianChart.PlotAreaBackgroundView>
     <AbsoluteLayout>
-      <Label Text="Copyright @ 2001 - 2022 Syncfusion Inc" FontSize="18" AbsoluteLayout.LayoutBounds="1,1,-1,-1"  AbsoluteLayout.LayoutFlags="PositionProportional" Opacity="0.4"/>
-       <Label Text="CONFIDENTIAL" Rotation="340" FontSize="80" FontAttributes="Bold,Italic" TextColor="Gray" Margin="10,0,0,0"  AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1" AbsoluteLayout.LayoutFlags="PositionProportional" Opacity="0.3" />
+      <Label Text="Copyright @ 2001 - 2022 Syncfusion Inc"
+			 FontSize="18" AbsoluteLayout.LayoutBounds="1,1,-1,-1"
+			 AbsoluteLayout.LayoutFlags="PositionProportional"
+			 Opacity="0.4"/>
+       <Label Text="CONFIDENTIAL" 
+			  Rotation="340"
+			  FontSize="80"
+			  FontAttributes="Bold,Italic"
+			  TextColor="Gray"
+			  Margin="10,0,0,0"
+			  AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1"
+			  AbsoluteLayout.LayoutFlags="PositionProportional"
+			  Opacity="0.3" />
     </AbsoluteLayout>
    </chart:SfCartesianChart.PlotAreaBackgroundView>
 </chart:SfCartesianChart>

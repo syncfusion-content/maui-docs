@@ -321,7 +321,12 @@ The following code example gives you the complete code of above configurations.
     <chart:SfCircularChart.Legend>
         <chart:ChartLegend/>
     </chart:SfCircularChart.Legend>
-    <chart:PieSeries ItemsSource="{Binding Data}" ShowDataLabels="True" XBindingPath="Product" EnableTooltip="True" YBindingPath="SalesRate"/>
+    <chart:PieSeries
+		ItemsSource="{Binding Data}"
+		ShowDataLabels="True"
+		XBindingPath="Product"
+		EnableTooltip="True"
+		YBindingPath="SalesRate"/>
 </chart:SfCircularChart>
  
 {% endhighlight %}
