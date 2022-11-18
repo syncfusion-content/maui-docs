@@ -164,9 +164,24 @@ The [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chart
     <chart:SfCartesianChart.Resources>
         <DataTemplate x:Key="tooltipTemplate1">
             <StackLayout Orientation="Horizontal">
-                <Label Text="{Binding Item.Category}" TextColor="Black" FontAttributes="Bold" FontSize="12" HorizontalOptions="Center" VerticalOptions="Center"/>
-                <Label Text=" : " TextColor="Black" FontAttributes="Bold" FontSize="12" HorizontalOptions="Center" VerticalOptions="Center"/>
-                <Label Text="{Binding Item.Value}" TextColor="Black" FontAttributes="Bold" FontSize="12" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <Label Text="{Binding Item.Category}"
+					   TextColor="Black"
+					   FontAttributes="Bold"
+					   FontSize="12"
+					   HorizontalOptions="Center"
+					   VerticalOptions="Center"/>
+                <Label Text=" : "
+					   TextColor="Black"
+					   FontAttributes="Bold"
+					   FontSize="12"
+					   HorizontalOptions="Center"
+					   VerticalOptions="Center"/>
+                <Label Text="{Binding Item.Value}"
+					   TextColor="Black"
+					   FontAttributes="Bold"
+					   FontSize="12"
+					   HorizontalOptions="Center"
+					   VerticalOptions="Center"/>
             </StackLayout>
         </DataTemplate>
         . . .          

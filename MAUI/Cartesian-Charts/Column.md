@@ -27,7 +27,9 @@ N> The cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
         <chart:NumericalAxis />
     </chart:SfCartesianChart.YAxes>   
 
-    <chart:ColumnSeries ItemsSource="{Binding Data}" XBindingPath="XValue" YBindingPath="YValue"/>
+    <chart:ColumnSeries ItemsSource="{Binding Data}"
+						XBindingPath="XValue"
+						YBindingPath="YValue"/>
 
 </chart:SfCartesianChart>
 
@@ -77,7 +79,11 @@ The [Width](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ColumnSer
         <chart:NumericalAxis />
     </chart:SfCartesianChart.YAxes>  
 
-    <chart:ColumnSeries ItemsSource="{Binding Data}" XBindingPath="XValue" YBindingPath="YValue" Spacing="0.5" Width="0.6"/>
+    <chart:ColumnSeries ItemsSource="{Binding Data}"
+						XBindingPath="XValue"
+						YBindingPath="YValue"
+						Spacing="0.5"
+						Width="0.6"/>
 
 </chart:SfCartesianChart>
 
