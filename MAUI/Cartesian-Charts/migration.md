@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrate from Xamarin.Forms SfChart to .NET MAUI SfCartesianChart
 
-The Cartesian Chart was created from the scratch using the upgraded APIs and performance of the .NET MAUI graphics library and framework layouts. However, a minor code change is required. In addition, [SfChart](https://www.syncfusion.com/xamarin-ui-controls/xamarin-charts) has been divided into five chart controls in .NET MAUI for a better user experience and understanding.
+The Cartesian Chart was created from the scratch using the upgraded APIs and performance of the .NET MAUI graphics library and framework layouts. However, a minor code change is required. In addition, [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html) has been divided into five chart controls in .NET MAUI for a better user experience and understanding.
 
 <table>
 <tr>
@@ -30,7 +30,7 @@ SfChart
 </tr>
 </table>
 
-To make the migration easier, the majority of the APIs from the Xamarin [SfChart](https://www.syncfusion.com/xamarin-ui-controls/xamarin-charts) were kept in the .NET MAUI [SfCartesianChart](https://www.syncfusion.com/maui-controls/maui-charts). Currently, most of the features have been added in the [SfCartesianChart](https://www.syncfusion.com/maui-controls/maui-charts), but only a few are pending in the .NET MAUI along with some limitations. Please refer to the following details and the API migration information available below.
+To make the migration easier, the majority of the APIs from the Xamarin [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html) were kept in the .NET MAUI [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html). Currently, most of the features have been added in the [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html), but only a few are pending in the .NET MAUI along with some limitations. Please refer to the following details and the API migration information available below.
 
 ## API migration
 
@@ -216,7 +216,7 @@ The following table illustrates the API migration for the chart.
 </tr>
 </table>
 
-The following code example explains how to migrate the axis of Xamarin [SfChart](https://help.syncfusion.com/xamarin/charts/overview) to .NET MAUI [SfCartesianChart](https://help.syncfusion.com/maui/cartesian-charts/overview).
+The following code example explains how to migrate the axis of Xamarin [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html) to .NET MAUI [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html).
 
 <table>
 <tr>
@@ -315,7 +315,7 @@ this.Content = chart;
 </tr>
 </table>
 
-The following code example explains how to migrate the series of Xamarin [SfChart](https://help.syncfusion.com/xamarin/charts/overview) to .NET MAUI [SfCartesianChart](https://help.syncfusion.com/maui/cartesian-charts/overview).
+The following code example explains how to migrate the series of Xamarin [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html) to .NET MAUI [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html).
 
 <table>
 <tr>
@@ -956,4 +956,4 @@ chart.ZoomPanBehavior = zooming;
 
 ## Support and feedback
 
-If you are unable to find the migration information you require in the self-help resources listed above, please contact us by creating a [support ticket](https://www.syncfusion.com/support/directtrac/incidents). Do not see what you need? Please request it in our [feedback portal](https://www.syncfusion.com/feedback/maui). 
+If you are unable to find the migration information you require in the self-help resources listed above, please contact us by creating a [support ticket](https://support.syncfusion.com/support). Do not see what you need? Please request it in our [feedback portal](https://www.syncfusion.com/feedback/maui). 
