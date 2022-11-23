@@ -148,7 +148,7 @@ chart.YAxes.Add(secondaryAxis);
 
 ## DateTime Range Padding
 
-The [RangePadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalAxis.html#Syncfusion_Maui_Charts_NumericalAxis_RangePadding) types available in the [DateTimeAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html) are: 
+The [RangePadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html#Syncfusion_Maui_Charts_DateTimeAxis_RangePadding) types available in the [DateTimeAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html) are: 
 
 * `Auto` - Automatically chosen based on the orientation of the axis.
 * `Additional` - The visible start and end range will be added with an additional interval.
