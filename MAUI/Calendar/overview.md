@@ -29,12 +29,12 @@ The Syncfusion .NET MAUI Calendar (SfCalendar) is a lightweight calendar that al
    ![Enable Past date Calendar](images/overview/enable-pastDates.png)
 
 * **Date selection**: Select single, multiple, and range of dates. It also supports programmatic selection.
-
-    ![Date selection Calendar](images/overview/selection_mode.png)
+   
+   ![Date selection Calendar](images/overview/selection_mode.png)
 
 * **Limit the date selection range**: Select only a date range with a specific minimum and maximum numbers of days (span of days) by setting the minimum and maximum days options.
 
-     ![Limit the date selection range Calendar](images/overview/min_max_date.png)
+   ![Limit the date selection range Calendar](images/overview/min_max_date.png)
 
 * **Change first day of week**: Customize the first day of the week as needed. The default first day is Sunday.
 
@@ -42,13 +42,13 @@ The Syncfusion .NET MAUI Calendar (SfCalendar) is a lightweight calendar that al
 
    ![Selectable day predicate Calendar](images/overview/selectable-dates.png)
 
-* **Highlight weekends and special dates**: Highlight any special dates or every weekend in a month using different background color in MAUI Calendar
+* **Highlight weekends and special dates**: Highlight any special dates or every weekend in a month using different background color and textstyles in MAUI Calendar
 
-  ![Highlight weekends and special dates ](images/overview/highlight-dates.png)
+   ![Highlight weekends and special dates ](images/overview/highlight-dates.png)
 
 * **Right to left (RTL)** - Right-to-left direction support for users working in RTL languages like Hebrew and Arabic.
 
-  ![Right to left Date Range Picker](images/overview/right-to-left.png)
+   ![Right to left Date Range Picker](images/overview/right-to-left.png)
 
 * **Globalization** - Display the current date and time by following the globalized date and time formats.
 
