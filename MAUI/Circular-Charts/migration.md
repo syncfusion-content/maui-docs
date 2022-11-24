@@ -379,15 +379,15 @@ To customize the data label appearance, create an instance of the [ChartDataMark
 	    <chart:ChartDataMarker ShowLabel="True">
 		    <chart:ChartDataMarker.LabelStyle>
 		        <chart:DataMarkerLabelStyle 
-                TextColor="Blue" 
-                BorderColor="Red" 
-                BorderThickness="2"
-                BackgroundColor="Aqua"
-                Angle="315" 
-                Margin="5" 
-                FontSize="18" 
-                FontAttributes="Italic"/>
-            </chart:ChartDataMarker.LabelStyle>
+					TextColor="Blue" 
+					BorderColor="Red" 
+					BorderThickness="2"
+					BackgroundColor="Aqua"
+					Angle="315" 
+					Margin="5" 
+					FontSize="18" 
+					FontAttributes="Italic"/>
+			</chart:ChartDataMarker.LabelStyle>
 	    </chart:ChartDataMarker>
 	    </chart:PieSeries.DataMarker>
     </chart:PieSeries>
@@ -432,14 +432,14 @@ chart.Series.Add(series);
         <chart:CircularDataLabelSettings>
             <chart:CircularDataLabelSettings.LabelStyle>
                 <chart:ChartDataLabelStyle 
-                TextColor="Blue" 
-                Stroke="Red" 
-                StrokeWidth="2" 
-                Background="Aqua" 
-                Angle="315" 
-                Margin="5" 
-                FontSize="18"
-                FontAttributes="Italic"/>
+					TextColor="Blue" 
+					Stroke="Red" 
+					StrokeWidth="2" 
+					Background="Aqua" 
+					Angle="315" 
+					Margin="5" 
+					FontSize="18"
+					FontAttributes="Italic"/>
             </chart:CircularDataLabelSettings.LabelStyle>
         </chart:CircularDataLabelSettings>
     </chart:PieSeries.DataLabelSettings>  
