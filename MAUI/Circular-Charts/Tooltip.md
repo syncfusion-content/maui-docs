@@ -94,7 +94,7 @@ Circular chart provides support to customize the appearance of the tooltip by us
 					FontSize="12"
 					HorizontalOptions="Center"
 					VerticalOptions="Center"/>
-                <Label Text=" : " 
+				<Label Text=" : " 
 					TextColor="Black"
 					FontAttributes="Bold"
 					FontSize="12"
