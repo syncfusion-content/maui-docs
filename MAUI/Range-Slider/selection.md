@@ -195,3 +195,42 @@ rangeSlider.DragBehavior = SliderDragBehavior.Both;
 {% endtabs %}
 
 ![RangeSlider DragBehavior](images/selection/drag_behavior.gif)
+
+## Deferred update
+
+You can control when the dependent components are updated while thumbs are being dragged continuously. It can be achieved by setting the `EnableDeferredUpdate` property and the delay in the update can be achieved by setting the `DeferredUpdateDelay` property. The default value of the `DeferredUpdateDelay` property is `500` milliseconds.
+
+It invokes the `ValueChanging` event when the thumb is dragged and held for the duration specified in the `DeferredUpdateDelay`. However, the values are immediately updated in touch-up action.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfRangeSlider Minimum="0" 
+                       Maximum="10"
+                       RangeStart="2"
+                       RangeEnd="8"
+                       Interval="2"
+                       ShowTicks="True"
+                       ShowLabels="True"
+                       EnableDeferredUpdate="True"
+                       DeferredUpdateDelay="1000" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfRangeSlider rangeSlider = new SfRangeSlider();
+rangeSlider.Minimum = 0;
+rangeSlider.Maximum = 10;
+rangeSlider.RangeStart = 2; 
+rangeSlider.RangeEnd = 8;
+rangeSlider.Interval = 2;        
+rangeSlider.ShowLabels = true;
+rangeSlider.ShowTicks = true;    
+rangeSlider.EnableDeferredUpdate = true;
+rangeSlider.DeferredUpdateDelay = 1000;
+         
+{% endhighlight %}
+
+{% endtabs %}

@@ -271,3 +271,55 @@ rangeSelector.Content = chart;
 {% endtabs %}
 
 ![RangeSelector DragBehavior](images/selection/drag_behavior.gif)
+
+## Deferred update
+
+You can control when the dependent components are updated while thumbs are being dragged continuously. It can be achieved by setting the `EnableDeferredUpdate` property and the delay in the update can be achieved by setting the `DeferredUpdateDelay` property. The default value of the `DeferredUpdateDelay` property is `500` milliseconds.
+
+It invokes the `ValueChanging` event when the thumb is dragged and held for the duration specified in the `DeferredUpdateDelay`. However, the values are immediately updated in touch-up action.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage 
+             ...
+             xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
+             xmlns:charts="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
+    
+    <sliders:SfRangeSelector Minimum="0" 
+                             Maximum="10"
+                             RangeStart="2"
+                             RangeEnd="8"
+                             Interval="2" 
+                             ShowTicks="True"
+                             ShowLabels="True"
+                             EnableDeferredUpdate="True"
+                             DeferredUpdateDelay="1000">
+
+        <charts:SfCartesianChart>
+            ...
+        </charts:SfCartesianChart>
+    
+    </sliders:SfRangeSelector>
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfRangeSelector rangeSelector = new SfRangeSelector();
+rangeSelector.Minimum = 0;
+rangeSelector.Maximum = 0;
+rangeSelector.RangeStart = 2; 
+rangeSelector.RangeEnd = 8;        
+rangeSelector.ShowLabels = true;
+rangeSelector.ShowTicks = true;
+rangeSelector.EnableDeferredUpdate = true;
+rangeSelector.DeferredUpdateDelay = 1000;    
+SfCartesianChart chart = new SfCartesianChart();
+rangeSelector.Content = chart;
+         
+{% endhighlight %}
+
+{% endtabs %}
