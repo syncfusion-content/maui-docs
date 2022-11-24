@@ -183,7 +183,7 @@ public partial class MainPage : ContentPage
 
 ## Maintain the scroll position while updating ItemsSource at runtime
 
-The `SfListView` have scrolled to top automatically when changing the `ItemsSource` at runtime. However, you can maintain the same scrolled position by using `SfListView.CanMaintainScrollPosition` property.If you set `SfListView.CanMaintainScrollPosition` to true then on changing ItemsSource, the newly added ItemsSource will be loaded with the previous ItemsSource’s ScrollOffset.
+The `SfListView` has scrolled to the top automatically when changing the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsSource) at runtime. However, you can maintain the same scrolled position using the `SfListView.CanMaintainScrollPosition` property. If you set `SfListView.CanMaintainScrollPosition` to true, then on changing ItemsSource, the newly added ItemsSource will be loaded with the previous ItemsSource’s ScrollOffset.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
