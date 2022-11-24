@@ -9,7 +9,7 @@ documentation: ug
 
 # Overview of .NET MAUI Calendar (SfCalendar)
 
-The Syncfusion .NET MAUI Calendar (SfCalendar) is a lightweight calendar that allows user to easily select a single date, multiple dates, or a range of dates. It provides month, year, decade, and century view options to quickly navigate to the desired date. It supports minimum, maximum, and disabled dates to restrict date selection.
+The Syncfusion .NET MAUI Calendar (SfCalendar) is a lightweight calendar that allows user to easily select a single date, multiple dates, or a range of dates. It provides month, year, decade, and century view options to quickly navigate to the desired date. It supports minimum, maximum, enable past dates and disabled dates to restrict date selection.
 
 
 ## Key features
@@ -20,7 +20,7 @@ The Syncfusion .NET MAUI Calendar (SfCalendar) is a lightweight calendar that al
 
 * **Quick navigation**: Navigate back and forth the date-range views and between different view modes.
 
-* **Allow view Navigation**: Restrict users from navigating to different calendar views by disabling view switching. Select values in terms of month, year, or decade with this feature enabled.
+* **Allow view Navigation**: Restrict users from navigating to different calendar views by disabling view switching. Select the dates in the year, decade and century with this feature is not enabled.
 
 	![Range selection Calendar](images/overview/range-selection.png)
 
@@ -46,7 +46,7 @@ The Syncfusion .NET MAUI Calendar (SfCalendar) is a lightweight calendar that al
 
    ![Highlight weekends and special dates ](images/overview/highlight-dates.png)
 
-* **Right to left (RTL)** - Right-to-left direction support for users working in RTL languages like Hebrew and Arabic.
+* **Right to left (RTL)** - Use the Right-to-left property to change the text direction in the Calendar. Supports users for working in RTL languages like Hebrew and Arabic.
 
    ![Right to left Date Range Picker](images/overview/right-to-left.png)
 
