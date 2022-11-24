@@ -88,7 +88,7 @@ Circular chart provides support to customize the appearance of the tooltip by us
     <chart:SfCircularChart.Resources>
         <DataTemplate x:Key="tooltipTemplate">
             <StackLayout Orientation="Horizontal">
-                <Label Text="{Binding Item.Product}"
+				<Label Text="{Binding Item.Product}"
 					TextColor="Black"
 					FontAttributes="Bold"
 					FontSize="12"
@@ -111,10 +111,10 @@ Circular chart provides support to customize the appearance of the tooltip by us
     </chart:SfCircularChart.Resources>
 
     <chart:PieSeries EnableTooltip="True"
-				ItemsSource="{Binding Data}" 
-				XBindingPath="Product" 
-				YBindingPath="SalesRate"
-				TooltipTemplate="{StaticResource tooltipTemplate}"/>
+			ItemsSource="{Binding Data}" 
+			XBindingPath="Product" 
+			YBindingPath="SalesRate"
+			TooltipTemplate="{StaticResource tooltipTemplate}"/>
     . . .
 </chart:SfCircularChart>
 
