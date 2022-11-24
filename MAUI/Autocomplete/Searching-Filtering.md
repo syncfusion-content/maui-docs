@@ -9,15 +9,15 @@ documentation: ug
 
 # Searching and Filtering in .NET MAUI Autocomplete (SfAutocomplete)
 
-The `Autocomplete` control allows for rich text searching and filtering functionality.
+The [Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control allows for rich text searching and filtering functionality.
 
 ## Searching based on member path
 
-The `DisplayMemberPath` and `TextMemberPath` properties of Autocomplete control specify the property path by which the searching must be done when a custom data is bound to the `ItemsSource` property.
+The [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DisplayMemberPath) and [TextMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_TextMemberPath) properties of Autocomplete control specify the property path by which the searching must be done when a custom data is bound to the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ItemsSource) property.
 
  * `DisplayMemberPath` - Specifies the property path whose value is displayed as text in the drop-down menu. The default value is `string.Empty`.
 
- * `TextMemberPath` - Specifies the property path whose value is used to perform searching based on user input received in the selection box portion of the `Autocomplete` control. The default value is `string.Empty`. When `TextMemberPath` is `null` or `string.Empty`, searching will be performed based on `DisplayMemberPath`. 
+ * `TextMemberPath` - Specifies the property path whose value is used to perform searching based on user input received in the selection box portion of the [Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control. The default value is `string.Empty`. When `TextMemberPath` is `null` or `string.Empty`, searching will be performed based on `DisplayMemberPath`. 
 
 N> `DisplayMemberPath` and `TextMemberPath` will be effective for the collection item that holds two or more properties in it.
 
@@ -25,7 +25,7 @@ N> When both the `DisplayMemberPath` and `TextMemberPath` properties have a `nul
 
 ### Searching based on DisplayMemberPath
 
-Searching will be performed based on the `DisplayMemberPath` property while entering the text into the selection box when `TextMemberPath` is `null` or `string.Empty`. 
+Searching will be performed based on the [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DisplayMemberPath) property while entering the text into the selection box when [TextMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_TextMemberPath)  is `null` or `string.Empty`. 
 
 {% tabs %}
 {% highlight c# %}
@@ -89,7 +89,7 @@ The following image illustrates the result of the above code:
 
 ### Searching based on TextMemberPath
 
-Searching will be performed based on the `TextMemberPath` property while entering the text into the selection box. If `TextMemberPath` is `null` or `string.Empty`, searching will be performed based on `DisplayMemberPath`. 
+Searching will be performed based on the [TextMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_TextMemberPath) property while entering the text into the selection box. If TextMemberPath is `null` or `string.Empty`, searching will be performed based on [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DisplayMemberPath). 
 
 
 {% tabs %}
@@ -116,14 +116,14 @@ The following image illustrates the result of the above code:
 
 ## Filtering mode
 
-The `TextSearchMode` property of the `Autocomplete` can be used to regulate how the control behaves when it receives user input. The default text filtering type is `StartsWith`, which ignores accent and is case insensitive. The text filter modes that are available are as follows:
+The `TextSearchMode` property of the [Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) can be used to regulate how the control behaves when it receives user input. The default text filtering type is [StartWith](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteTextSearchMode.html#Syncfusion_Maui_Inputs_AutocompleteTextSearchMode_StartsWith), which ignores accent and is case insensitive. The text filter modes that are available are as follows:
 
 * StartsWith
 * Contains
 
 ### Filter with beginning text
 
-Set the `TextSearchMode` property value to `StartWith` to filter matching items based on the starting text. The first item in the drop-down list that matches the user input will be highlighted. 
+Set the [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteTextSearchMode.html) property value to [StartWith](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteTextSearchMode.html#Syncfusion_Maui_Inputs_AutocompleteTextSearchMode_StartsWith) to filter matching items based on the starting text. The first item in the drop-down list that matches the user input will be highlighted. 
 
 {% tabs %}
 {% highlight XAML %}
@@ -150,7 +150,7 @@ The following image illustrates the result of the above code:
 
 ### Filter with contains text
 
-Set the `TextSearchMode` property value to `Contains` to filter the matching items based on the containing specific text. The first item in the drop-down list that matches the user input will be highlighted.
+Set the [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteTextSearchMode.html) property value to [Contains](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteTextSearchMode.html#Syncfusion_Maui_Inputs_AutocompleteTextSearchMode_Contains) to filter the matching items based on the containing specific text. The first item in the drop-down list that matches the user input will be highlighted.
 
 {% tabs %}
 {% highlight xaml %}

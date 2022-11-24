@@ -11,7 +11,7 @@ documentation: ug
 
 ## Single selection
 
-The `ComboBox` allows users to select an single item from the drop-down list.
+The [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) allows users to select an single item from the drop-down list.
 
 ### UI Selection 
 
@@ -37,7 +37,7 @@ The following gif image illustrates the result of the above code:
 
 ### Programmatic selection 
 
-The selected item can be changed programmatically by using the `SelectedItem` or `SelectedIndex` properties of the ComboBox control.
+The selected item can be changed programmatically by using the [SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedItem) or [SelectedIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_SelectedIndex) properties of the ComboBox control.
 
 {% tabs %}
 {% highlight xaml %}
@@ -67,7 +67,7 @@ The following gif image illustrates the result of the above code:
 
 ## Selection changed notification
 
-When an item is selected from the drop-down list, the `SelectionChanged` event is triggered. The `SelectionChanged` event contains the newly selected and previously selected items in the `CurrentSelection` and `PreviousSelection` properties. The `SelectionChanged` contains the following properties:
+When an item is selected from the drop-down list, the [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectionChanged) event is triggered. The SelectionChanged event contains the newly selected and previously selected items in the `CurrentSelection` and `PreviousSelection` properties. The SelectionChanged contains the following properties:
 
  * CurrentSelection - Contains the item that were currently selected.
  * PreviousSelection - Contains the item that were previously selected.
@@ -111,7 +111,7 @@ The following gif image illustrates the result of the above code:
 
 ## Get the selected value
 
-The `SelectedValuePath` property allows you to specify a SelectedValue for a `ComboBox`'s `SelectedItem`. The `SelectedItem` represents an object in the `Items` collection, and the `ComboBox` displays the value of the selected item's single property. The `SelectedValuePath` property specifies the path to the property that is used to determine the `SelectedValue` property's value. The default value of `SelectedValue` and `SelectedValuePath` is `null`.
+The [SelectedValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedValuePath) property allows you to specify a SelectedValue for a `ComboBox`'s `SelectedItem`. The [SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedItem) represents an object in the `Items` collection, and the `ComboBox` displays the value of the selected item's single property. The SelectedValuePath property specifies the path to the property that is used to determine the [SelectedValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectedValue) property's value. The default value of SelectedValue and SelectedValuePath is `null`.
 
 For example, when you select any `SocialMedia.Name` in the `ComboBox,` the `SelectedItem` property returns the `SocialMedia` data item that corresponds to the selected `SocialMedia.Name.` However, because the `SelectedValuePath` of this `ComboBox` is set to `SocialMedia.ID,` the `SelectedValue` is set to the `SocialMedia.ID.`
 
@@ -156,7 +156,7 @@ The following gif image illustrates the result of the above code:
 
 ## Open a drop-down programmatically
 
-In the ComboBox control, the drop-down can be opened or closed programmatically by using the `IsDropDownOpen` property. The default value of the IsDropDownOpen property is `false`.
+In the ComboBox control, the drop-down can be opened or closed programmatically by using the [IsDropDownOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_IsDropDownOpen) property. The default value of the IsDropDownOpen property is `false`.
 
 {% tabs %}
 {% highlight XAML %}
