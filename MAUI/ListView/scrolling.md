@@ -183,52 +183,15 @@ public partial class MainPage : ContentPage
 
 ## Maintain the scroll position while updating ItemsSource at runtime
 
-The `SfListView` have scrolled to top automatically when changing the `ItemsSource` at runtime. However, you can maintain the same scrolled position by using the `ScrollY` value of `ListViewScrollView` from the [VisualContainer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.VisualContainer.html). After changing the `ItemsSource`, you can pass the `ScrollY` value to [ScrollTo](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ScrollTo_System_Double_System_Boolean_) method of `SfListView` and scroll back to the same position.
-
-For `Horizontal` orientation, use the `ScrollX` value of `ListViewScrollView`.
-
-By using [Reflection](https://docs.microsoft.com/en-us/dotnet/api/system.reflection?redirectedfrom=MSDN&view=net-5.0), get the value of `ScrollOwner` from `VisualContainer` and use it.
+The `SfListView` have scrolled to top automatically when changing the `ItemsSource` at runtime. However, you can maintain the same scrolled position by using `SfListView.CanMaintainScrollPosition` property.If you set `SfListView.CanMaintainScrollPosition` to true then on changing ItemsSource, the newly added ItemsSource will be loaded with the previous ItemsSource’s ScrollOffset.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="15 17" %}
-using Syncfusion.Maui.ListView.Helpers;
-public partial class MainPage : ContentPage
-{
-    ListViewScrollView scrollView;
-
-    public MainPage()
-    {
-        InitializeComponent();
-        scrollView = listView.GetScrollView();
-    }
-
-    private void ChangeItemsSource_Clicked(object sender, EventArgs e)
-    {
-        var viewModel = listView.BindingContext as ContactsViewModel;
-        var ScrollY = scrollView.ScollY;
-        listView.ItemsSource = viewModel.EmployeeInfo;
-        listView.ScrollTo(ScrollY,true);
-    }
-}
-
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfListView x:Name="listView" 
+                       CanMaintainScrollPosition="True"/>
 {% endhighlight %}
-{% endtabs %}
-
-You can get the scroll view by using the [GetScrollView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.Helpers.SfListViewHelper.html#Syncfusion_Maui_ListView_Helpers_SfListViewHelper_GetScrollView_Syncfusion_Maui_ListView_SfListView_) method. It is a helper method to get the Syncfusion.Maui.ListView.ListViewScrollView class.
-
-{% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9" %}
-using Syncfusion.Maui.ListView.Helpers;
-public partial class MainPage : ContentPage
-{
-    ListViewScrollView scrollView;
-
-    public MainPage()
-    {
-        InitializeComponent();
-        scrollView = listView.GetScrollView();
-    }
-}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+listView.CanMaintainScrollPosition = true; 
 {% endhighlight %}
 {% endtabs %}
 
