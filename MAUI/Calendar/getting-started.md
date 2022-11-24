@@ -84,14 +84,12 @@ namespace GettingStarted
 
 ## Change different calendar views
 
-The .NET MAUI Calendar control provides four different types of views to display dates and it can be assigned to the control by using the `View` property. The control is assigned to the Month view by default. Initially, all Calendar views will show the current date.
+The [.NET MAUI Calendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html) control provides four different types of views to display dates and it can be assigned to the control by using the [View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_View) property. The control is assigned to the [Month](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarView.html#Syncfusion_Maui_Calendar_CalendarView_Month) view by default. The current date will be displayed initially for all the Calendar views.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="Calendar" 
-                        View="Month">
-</calendar:SfCalendar>
+{% include_relative code-snippet/getting_started_views.xaml %}
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -101,13 +99,13 @@ this.Calendar.View = CalendarView.Month;
 {% endhighlight %}
 {% endtabs %}
 
-![change-different-calendar-views-in-maui-calendar](images/getting-started/maui-calendar-month-view.png)
+![change-different-calendar-views-in-maui-calendar](images/getting-started/change-different-calendar-views-in-maui-calendar.png)
 
 ## Change first day of week
 
-The Calendar control rendered with `Sunday` as first day of week and it  provides customization to change the first day of the week with the FirstDayOfWeek property in month view.
+The default first day of week is `Sunday`. But the Calendar allows customization to change the first day of the week with the [FirstDayOfWeek](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Scheduler_SfScheduler_FirstDayOfWeek) property.
 
-The following code shows the Calendar with `Monday` as the first day of the week.
+The following code shows the Calendar with `Wednesday` as the first day of the week.
 
 {% tabs %}  
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -121,18 +119,18 @@ The following code shows the Calendar with `Monday` as the first day of the week
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.MonthView.FirstDayOfWeek = DayOfWeek.Monday;
+this.Calendar.MonthView.FirstDayOfWeek = DayOfWeek.Wednesday;
 
 {% endhighlight %}  
 {% endtabs %}
 
-![change-first-day-of-week-in-maui-calendar](images/getting-started/maui-calendar-first-day-of-week.png)
+![change-first-day-of-week-in-maui-calendar](images/getting-started/change-first-day-of-week-in-maui-calendar.png)
 
-## Date selection
+## Change Selection mode
 
-Calendar allows the user to Select a single date, multiple dates, or a range of dates through interaction and programmatically. The default selection mode is `Default`. 
+Calendar allows the user to select the dates in all the four calendar views. Supports Single, Multiple and Range selection to select the dates. The default selection mode is `Defalut`. 
 
-The selection details can be obtained by using SelectionChanged event of calendar. It returns `CalendarSelectionChangedEventArgs` which holds the details about selected date or range.
+The selection details can be obtained by using call back method which return `CalendarSelectionChangedEventArgs` holds the details of selected date or range.
 
 The following code shows the Calendar with `Multiple` as the Selection mode.
 
