@@ -342,7 +342,7 @@ The following code illustrates how to set the [VerticalDirection]() value as bot
 
 {% endtabs %}
 
-![Vertical Direction as Both in Error Bar Series](ErrorBarOutput_Images/BasicRendering.png
+![Vertical Direction as Both in Error Bar Series](ErrorBarOutput_Images/BasicRendering.png)
 
 #### Plus
 
