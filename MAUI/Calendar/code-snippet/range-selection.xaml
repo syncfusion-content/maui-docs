@@ -1,0 +1,4 @@
+﻿<calendar:SfCalendar  x:Name="Calendar" 
+                        View="Month"
+                        SelectionMode="Range">
+</calendar:SfCalendar>
