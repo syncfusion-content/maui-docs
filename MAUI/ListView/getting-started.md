@@ -49,14 +49,14 @@ public partial class MainPage : ContentPage
 
 ## Register the handler
 
-To use this control inside an application, you must initialize the `SfListView` handler.
+The `Syncfusion.Maui.Core` Nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
 
 {% tabs %}
 {% highlight c# tabtitle="MauiProgram.cs" hl_lines="4 20" %}
 using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Controls.Xaml;
 using Microsoft.Maui.Hosting;
-using Syncfusion.Maui.ListView.Hosting;
+using Syncfusion.Maui.Core.Hosting;
 
 namespace GettingStarted
 {
@@ -72,7 +72,7 @@ namespace GettingStarted
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                 });
 
-            builder.ConfigureSyncfusionListView();
+            builder.ConfigureSyncfusionCore();
             return builder.Build();
         }
     }
