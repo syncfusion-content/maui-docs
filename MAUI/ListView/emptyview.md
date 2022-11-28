@@ -308,7 +308,8 @@ public class EmptyViewDataTemplateSelector : Microsoft.Maui.Controls.DataTemplat
 {% endhighlight %}
 {% endtabs %}
 
-![Choose EmptyView Template at run time in .NET MAUI ListView](Images/emptyview/maui-listview-choose-emptyview-template-at-runtime.jpg)
-
 Template for `SfListView.EmptyView` is set to AdvancedTemplate when SearchBar.Text.Count() is greater than 10. Otherwise, set to BasicTemplate.
 
+![Choose EmptyView Template at run time in .NET MAUI ListView](Images/emptyview/maui-listview-choose-emptyview-template-at-runtime.jpg)
+
+Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/how-to-change-empty-view-template-at-run-time-in-.net-maui-listview).
