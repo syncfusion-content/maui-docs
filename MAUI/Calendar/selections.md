@@ -106,7 +106,7 @@ this.Calendar.RangeSelectionDirection = CalendarRangeSelectionDirection.Default;
 ![default-range-selection-direction-maui-calendar](images/views/default-range-selection-direction.png)
 
 #### Range Selection Direction - Forward
-If the [RangeSelectionDirection](https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/SfCalendar/CalendarRangeSelectionDirection.html) property to `Forward` allows you to select only the dates after the selected range start date and the dates before the range start date is considered as disabled date.
+If the [RangeSelectionDirection](https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/SfCalendar/CalendarRangeSelectionDirection.html) property to `Forward` allows you to select only the dates after the selected range start date and the dates before the range start date is considered as disabled date. The start date will not be changed.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -124,7 +124,7 @@ this.Calendar.RangeSelectionDirection = CalendarRangeSelectionDirection.Forward;
 ![forward-range-selection-direction-maui-calendar](images/views/forward-range-selection-direction.png)
 
 #### Range Selection Direction - Backward
-If the [RangeSelectionDirection](https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/SfCalendar/CalendarRangeSelectionDirection.html) property to `Backward` allows you to select only the dates before the selected range end date and the dates after the range end date is considered as disabled date.
+If the [RangeSelectionDirection](https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/SfCalendar/CalendarRangeSelectionDirection.html) property to `Backward` allows you to select only the dates before the selected range end date and the dates after the range end date is considered as disabled date. The end date will not be changed.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -142,7 +142,7 @@ this.Calendar.RangeSelectionDirection = CalendarRangeSelectionDirection.Backward
 ![backward-range-selection-direction-maui-calendar](images/views/backward-range-selection-direction.png)
 
 #### Range Selection Direction - Both
-If the [RangeSelectionDirection](https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/SfCalendar/CalendarRangeSelectionDirection.html) property to `Both` allows you to extend the selection from the selected range. Then the tapped date is considered based on (if the date is nearby start date then updated the start date, else if the date is nearby end date then updated the end date, else if in-between the start and end date and both have same distance then updated the start date.
+If the [RangeSelectionDirection](https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/SfCalendar/CalendarRangeSelectionDirection.html) property to `Both` allows you to extend the selection from the selected range. Then the tapped date is considered based on (if the date is nearby start date then start date is updated, else if the date is nearby end date then end date is updated, else if in-between the start and end date and both have same distance then the start date is updated.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -160,7 +160,7 @@ this.Calendar.RangeSelectionDirection = CalendarRangeSelectionDirection.Both;
 ![both-range-selection-direction-maui-calendar](images/views/both-range-selection-direction.png)
 
 #### Range Selection Direction - None
-If the [RangeSelectionDirection](https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/SfCalendar/CalendarRangeSelectionDirection.html) property to `None` allows you to select only the single range and the dates after the range end date and before start date is considered as disabled date.
+If the [RangeSelectionDirection](https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/SfCalendar/CalendarRangeSelectionDirection.html) property to `None` allows you to select only the single range and the dates after the range end date and before start date is considered as disabled date. It will remain in the initial range.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -171,6 +171,24 @@ If the [RangeSelectionDirection](https://pub.dev/documentation/syncfusion_maui_c
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 this.Calendar.RangeSelectionDirection = CalendarRangeSelectionDirection.None;
+
+{% endhighlight %}
+{% endtabs %}
+
+![none-range-selection-direction-maui-calendar](images/views/none-range-selection-direction.png)
+
+## Selection shape
+The Selected date will render based on the [selectionShape](https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/SfCalendar/CalendarSelectionShape.html) property. The default selection shape is `Circle`. You can customize the selection shape either `Rectangle` or `Circle` of the SfCalendar.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+{% include_relative code-snippet/selection-shape.xaml %}
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+this.Calendar.SelectionShape = CalendarSelectionShape.Circle;
 
 {% endhighlight %}
 {% endtabs %}
