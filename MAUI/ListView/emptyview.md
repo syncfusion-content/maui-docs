@@ -78,7 +78,7 @@ listView.EmptyView = stackLayout;
 
 N> View displayed by `SfListView.EmptyView` can be a single view or a view that contains multiple child views.
 
-![EmptyView in .NET MAUI ListView](Images/emptyview/maui-listview-emptyview.png)
+![EmptyView in .NET MAUI ListView](Images/emptyview/maui-listview-emptyview.jpg)
 
 Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/how-to-display-a-view-when-.net-maui-listview-has-no-items).
 
@@ -151,7 +151,7 @@ public class FilterItem : BindableObject
 
 FilterItem object is set to `SfListView.EmptyView` property and `Filter` property is binds to `SearchBar.Text` property. When SearchBar.TextChanged event is raised, value of `SearchBar.Text` property is stored in `Filter` property.   
 
-![EmptyView Template in .NET MAUI ListView](Images/emptyview/maui-listview-emptyviewtemplate.png)
+![EmptyView Template in .NET MAUI ListView](Images/emptyview/maui-listview-emptyviewtemplate.jpg)
 
 Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/how-to-customize-the-appearance-of-empty-view-using-empty-view-template-in-.net-maui-listview).
 
@@ -222,7 +222,9 @@ private void CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-![Choose EmptyView at run time in .NET MAUI ListView](Images/emptyview/maui-listview-choose-emptyview-at-runtime.jpg)
+![SingleView EmptyView in .NET MAUI ListView](Images/emptyview/maui-listview-singleview-emptyview.jpg)
+
+![MultiView EmptyView in .NET MAUI ListView](Images/emptyview/maui-listview-multiview-emptyview.jpg)
 
 Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/how-to-change-empty-view-at-run-time-in-.net-maui-listview).
 
@@ -310,6 +312,8 @@ public class EmptyViewDataTemplateSelector : Microsoft.Maui.Controls.DataTemplat
 
 Template for `SfListView.EmptyView` is set to AdvancedTemplate when SearchBar.Text.Count() is greater than 10. Otherwise, set to BasicTemplate.
 
-![Choose EmptyView Template at run time in .NET MAUI ListView](Images/emptyview/maui-listview-choose-emptyview-template-at-runtime.jpg)
+![SingleView EmptyView Template in .NET MAUI ListView](Images/emptyview/maui-listview-singleview-emptyview-template.jpg)
+
+![MultiView EmptyView Template in .NET MAUI ListView](Images/emptyview/maui-listview-multiview-emptyview-template.jpg)
 
 Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/how-to-change-empty-view-template-at-run-time-in-.net-maui-listview).
