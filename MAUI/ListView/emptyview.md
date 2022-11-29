@@ -11,7 +11,7 @@ documentation: ug
 
 The `SfListView` allows to display and customize empty view content, when there is no data available to display using following properties,
 
- * EmptyView - object can be set to a string, numeric or view when `SfListView` has no items. The default value is null.
+ * EmptyView - object can be set to a string or view when `SfListView` has no items. The default value is null.
  * EmptyViewTemplate - used to customize the appearance of `EmptyView`. The default value is null.
 
 ## Display a string when listview has no items
