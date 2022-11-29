@@ -9,9 +9,10 @@ documentation: ug
 
 # EmptyView in .NET MAUI ListView (SfListView)
 
-`SfListView` allows you to display a string, numeric or view when `SfListView` has no items using `SfListView.EmptyView` property.
+The `SfListView` allows to display and customize empty view content, when there is no data available to display using following properties,
 
-`SfListView.EmptyViewTemplate` property is used to customize the appearance of `SfListView.EmptyView`.
+ * EmptyView - object can be set to a string, numeric or view when `SfListView` has no items. The default value is null.
+ * EmptyViewTemplate - used to customize the appearance of `EmptyView`. The default value is null.
 
 ## Display a string when listview has no items
 
@@ -83,7 +84,7 @@ N> View displayed by `SfListView.EmptyView` can be a single view or a view that 
 Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/how-to-display-a-view-when-.net-maui-listview-has-no-items).
 
 ## Display a templated custom type when listview has no items
-The appearance of `SfListView.EmptyView` can be customized by `SfListView.EmptyViewTemplate`, when `SfListView.EmptyView` property is set to a custom type.
+The `SfListView.EmptyView` can be set to custom type which is used to display when the `ItemsSource` is null, or when the collection specified by the `ItemsSource` property is null or empty. The appearance of the `EmptyView` can be customized by using `SfListView.EmptyViewTemplate`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -155,9 +156,9 @@ FilterItem object is set to `SfListView.EmptyView` property and `Filter` propert
 
 Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/how-to-customize-the-appearance-of-empty-view-using-empty-view-template-in-.net-maui-listview).
 
-## Choose an EmptyView at runtime
+## Change an EmptyView at runtime
 
-The `SfListView` allows you to change `EmptyView` at run time. Views can be defined as ContentView objects in ResourceDictionary.
+The `EmptyView` can be change to specific view at run time and views that can be defined as ContentView objects in ResourceDictionary.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -228,9 +229,9 @@ private void CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
 
 Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/how-to-change-empty-view-at-run-time-in-.net-maui-listview).
 
-## Choose an EmptyViewTemplate at runtime
+## Change an EmptyViewTemplate at runtime
 
-The `SfListView` allows you to choose appearance of `SfListView.EmptyView` at run time based on its value using `SfListView.EmptyViewTemplate` property.
+The `EmptyView` appearance can be changed at run time based on its value using `EmptyViewTemplate` property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
