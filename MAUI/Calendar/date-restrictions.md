@@ -1,64 +1,57 @@
 ---
 layout: post
-title: Date Restrictions in .NET MAUI Calendar control | Syncfusion
-description: Learn here all about Date restrictions feature of Syncfusion .NET MAUI Calendar (SfCalendar) control and more.
-platform: maui
+title: Date Restrictions in MAUI Calendar widget | Syncfusion
+description: Learn here all about Date restrictions feature of Syncfusion MAUI Calendar (SfCalendar) widget and more.
+platform: MAUI
 control: SfCalendar
 documentation: ug
 ---
 
-# Date Restrictions in .NET MAUI Calendar (SfCalendar)
+# Date Restrictions in MAUI Calendar (SfCalendar)
 
-## Minimum date
-The [MinimumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_MinimumDate) property will restrict the backward navigation of date selection and also you cannot swipe beyond the minimum date range.
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-
-<calendar:SfCalendar  x:Name="Calendar" 
-                        View="Month">
-</calendar:SfCalendar>
-
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
-
-  this.Calendar.MinimumDate = DateTime.Now.AddDays(-5);
-
-{% endhighlight %}
-{% endtabs %}
-
-![Month view Minimum DateTime in .NET MAUI Calendar.](images/date-restriction/maui-month-view-minimum-date.png)
-
-## Maximum date
-The [MaximumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_MaximumDate) property will restrict the forward navigation of date selection and also you cannot swipe beyond the maximum date range.
+## Minimum DateTime
+The [MinimumDateTime](https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/SfCalendar/minimumDateTime.html) property will restrict the backward navigation of date selection and also you cannot able to swipe beyound the minimum date range. The dates before the minimum date time is considered as disabled date.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="Calendar" 
-                        View="Month">
-</calendar:SfCalendar>
+{% include_relative code-snippet/minimum-dateTime.xaml %}
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.MaximumDate = DateTime.Now.AddDays(5);
+this.Calendar.MinimumDateTime = DateTime.Now.AddDays(3);
 
 {% endhighlight %}
 {% endtabs %}
 
-![Month view Maximum DateTime in .NET MAUI Calendar.](images/date-restriction/maui-month-view-maximum-date.png)
+![minimum-dateTime-maui-calendar](images/minimum-dateTime.png)
+
+## Maximum DateTime
+The [MaximumDateTime](https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/SfCalendar/maximumDateTime.html) property will restrict the forward navigation of date selection and also you cannot able to swipe beyound the maximum date range. The dates after the maximum date time is considered as disabled date.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+{% include_relative code-snippet/maximum-dateTime.xaml %}
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+this.Calendar.MaximumDateTime = DateTime.Now.AddDays(8);
+
+{% endhighlight %}
+{% endtabs %}
+
+![maximum-dateTime-maui-calendar](images/maximum-dateTime.png)
 
 ## Enable past dates
-To enable or disable the dates before today's date using the [EnablePastDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_EnablePastDates) property of the `SfCalendar` and you cannot select the dates before the today date while it is disabled.
+The `EnablePastDates` (https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/SfCalendar/enablePastDate.html) of the `SfCalendar` indicates whether the dates are enabled or disabled before the today date. If this property is disabled, you cannot able to select the dates before the today date and the dates before the today date are considered as disabled dates.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="Calendar" 
-                        View="Month"
-                        EnablePastDates="false">
-</calendar:SfCalendar>
+{% include_relative code-snippet/enable-past-date.xaml %}
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -68,24 +61,22 @@ this.Calendar.EnablePastDates = false;
 {% endhighlight %}
 {% endtabs %}
 
-![Month view Enable past dates in .NET MAUI Calendar.](images/date-restriction/Enable-past-date-in-maui-calendar.png)
+![enable-past-date-maui-calendar](images/enable-past-date.png)
 
-## Selectable day predicate
-The [SelectableDayPredicate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectableDayPredicate) of the `SfCalendar` decides whether the cell is selectable or not in calendar and if you want to disable the particular selected date in a calendar. Easily prevent the selection of weekends by disabling them. If the callback returns true, the date will be selectable in the Calendar.
+## SelectableDayPredicate
+The [SelectableDayPredicate] (https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/SfCalendar/enablePastDate.html) of the `SfCalendar` decides whether the cell is selectable or not in calendar and if you want to disable the particular selected date in a calendar. Easily prevent the selection of weekends by disabling them. If the callback returns true, the date will be selectable in the Calendar.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="Calendar" 
-                        View="Month">
-</calendar:SfCalendar>
+{% include_relative code-snippet/month-view.xaml %}
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 this.Calendar.SelectableDayPredicate = (date) =>
 {
-  if (date.Date == DateTime.Now.AddDays(-2) || date.Date == DateTime.Now.AddDays(-7) || date.Date == DateTime.Now.AddDays(-12) || date.Date == DateTime.Now.AddDays(1) || date.Date == DateTime.Now.AddDays(15))
+  if (date.Date == DateTime.Now.AddDays(3) || date.Date == DateTime.Now.AddDays(6) || date.Date == DateTime.Now.AddDays(-4) || date.Date == DateTime.Now.AddDays(-2))
   {
     return false;
   }
@@ -96,4 +87,8 @@ this.Calendar.SelectableDayPredicate = (date) =>
 {% endhighlight %}
 {% endtabs %}
 
-![Month view Selectable Day Predicate in .NET MAUI Calendar.](images/date-restriction/maui-selectable-day-predicate.png)
+![selectable-dates-maui-calendar](images/selectable-day-predicate.png)
+
+>**NOTE**
+* Applicable for year, decade and century views only when the `allowViewNavigation` set as false.
+* This callback is not applicable when the `navigationMode` set as `DateRangePickerNavigationMode.scroll`.
