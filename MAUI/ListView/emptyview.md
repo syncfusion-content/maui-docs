@@ -16,7 +16,7 @@ The `SfListView` allows to display and customize empty view content when there i
 
 ## Display a string when listview has no items
 
-The `SfListView.EmptyView` property can be set to a string, which will be displayed when the `ItemsSource` is null, or when the collection specified by the `ItemsSource` property is null or empty.
+The `EmptyView` property can be set to a string, which will be displayed when the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsSource) is null, or when the collection specified by the `ItemsSource` property is null or empty.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -35,7 +35,7 @@ listView.EmptyView = "No Items";
 
 ## Display views when listview has no items
 
-The `SfListView.EmptyView` property can be set to a view, which will be displayed when the `ItemsSource` property is null, or when the collection specified by the ItemsSource property is null or empty.
+The `EmptyView` property can be set to a view, which will be displayed when the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsSource) property is null, or when the collection specified by the `ItemsSource` property is null or empty.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -77,14 +77,14 @@ listView.EmptyView = stackLayout;
 {% endhighlight %}
 {% endtabs %}
 
-N> View displayed by the `SfListView.EmptyView` can be a single view or a view that contains multiple child views.
+N> View displayed by the `EmptyView` can be a single view or a view that contains multiple child views.
 
 ![EmptyView in .NET MAUI ListView](Images/emptyview/maui-listview-emptyview.jpg)
 
 Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/how-to-display-a-view-when-.net-maui-listview-has-no-items).
 
 ## Display a templated custom type when listview has no items
-The `SfListView.EmptyView` can be set to a custom type, which is used to display when the `ItemsSource` is null, or when the collection specified by the `ItemsSource` property is null or empty. The appearance of the `EmptyView` can be customized by using the `SfListView.EmptyViewTemplate`.
+The `EmptyView` can be set to a custom type, which is used to display when the `ItemsSource` is null, or when the collection specified by the `ItemsSource` property is null or empty. The appearance of the `EmptyView` can be customized by using the `EmptyViewTemplate`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -150,7 +150,7 @@ public class FilterItem : BindableObject
 {% endhighlight %}
 {% endtabs %}
 
-FilterItem object is set to the `SfListView.EmptyView` property, and the `Filter` property is bound to the `SearchBar.Text` property. When SearchBar.TextChanged event is raised, the value of the `SearchBar.Text` property is stored in the `Filter` property.  
+FilterItem object is set to the `EmptyView` property, and the `Filter` property is bound to the `SearchBar.Text` property. When `SearchBar.TextChanged` event is raised, the value of the `SearchBar.Text` property is stored in the `Filter` property.  
 
 ![EmptyView Template in .NET MAUI ListView](Images/emptyview/maui-listview-emptyviewtemplate.jpg)
 
@@ -158,7 +158,7 @@ Download the entire source code from GitHub [here](https://github.com/Syncfusion
 
 ## Change an EmptyView at runtime
 
-The `EmptyView` can be changed to a specific view at run time and views that can be defined as ContentView objects in the ResourceDictionary.
+The `EmptyView` can be changed to a specific view at run time and views that can be defined as [ContentView](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.contentview?view=net-maui-7.0) objects in the [ResourceDictionary](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.resourcedictionary?view=net-maui-7.0).
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -209,7 +209,7 @@ checkBox.CheckedChanged += CheckBox_CheckedChanged;
 {% endhighlight %}
 {% endtabs %}
 
-`SfListView.EmptyView` is changed based on value of CheckBox.IsChecked property at run time.
+`EmptyView` is changed based on value of [CheckBox.IsChecked](vhttps://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.checkbox.ischecked?view=net-maui-7.0) property at run time.
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -286,7 +286,7 @@ listView.EmptyViewTemplate = new EmptyViewDataTemplateSelector() { BasicTemplate
 {% endhighlight %}
 {% endtabs %}
 
-The `SfListView.EmptyView` property is set to the SearchBar.Text property, and the `SfListView.EmptyViewTemplate` property is set to an EmptyViewDataTemplateSelector object.
+The `EmptyView` property is set to the `SearchBar.Text` property, and the `EmptyViewTemplate` property is set to an `EmptyViewDataTemplateSelector` object.
 
 {% tabs %}
 {% highlight c# tabtitle="EmptyViewDataTemplateSelector.cs" %}
@@ -311,7 +311,7 @@ public class EmptyViewDataTemplateSelector : Microsoft.Maui.Controls.DataTemplat
 {% endhighlight %}
 {% endtabs %}
 
-Template for `SfListView.EmptyView` is set to AdvancedTemplate when SearchBar.Text.Count() is greater than 10. Otherwise, set it to BasicTemplate.
+Template for `EmptyView` is set to AdvancedTemplate when SearchBar.Text.Count() is greater than 10. Otherwise, set it to BasicTemplate.
 
 ![SingleView EmptyView Template in .NET MAUI ListView](Images/emptyview/maui-listview-singleview-emptyview-template.jpg)
 
