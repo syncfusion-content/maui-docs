@@ -163,7 +163,7 @@ The following code illustrate how to define property [BoxPlotMode] value as Incl
         ItemsSource = new ViewModel().BoxWhiskerData,
         XBindingPath = "Department",
         YBindingPath = "Age",
-        BoxPlotMode="Normal"/>
+        BoxPlotMode="Inclusive"/>
     };
 
     chart.Series.Add(series);
@@ -174,6 +174,66 @@ The following code illustrate how to define property [BoxPlotMode] value as Incl
 {% endtabs %}
 
 ![BoxPlotMode Inclusive in MAUI Chart](Chart-types_images/BoxPlotModeInclusive.png)
+
+## ShowMedian
+
+The Median values of given dataset is viewed by enabling the [ShowMedian]() property of [BoxAndWhiskerSeries](). The following code illustrates how to enable the [ShowMedian]() property.
+
+N> By default, the ShowMedian property value is False.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+    <chart:SfCartesianChart>
+
+    <chart:SfCartesianChart.XAxes>
+        <chart:CategoryAxis />
+    </chart:SfCartesianChart.XAxes>
+
+    <chart:SfCartesianChart.YAxes>
+        <chart:NumericalAxis />
+    </chart:SfCartesianChart.YAxes>  
+
+    <chart:BoxAndWhiskerSeries ItemsSource="{Binding BoxWhiskerData}"
+                               XBindingPath="Department"
+                               YBindingPath="Age"
+                               ShowMedian="True"/>
+
+    </chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+    SfCartesianChart chart = new SfCartesianChart();
+    CategoryAxis primaryAxis = new CategoryAxis();
+    chart.XAxes.Add(primaryAxis);
+    NumericalAxis secondaryAxis = new NumericalAxis();
+    chart.YAxes.Add(secondaryAxis);
+
+    BoxAndWhiskerSeries series = new BoxAndWhiskerSeries()
+    {
+        ItemsSource = new ViewModel().BoxWhiskerData,
+        XBindingPath = "Department",
+        YBindingPath = "Age",
+        ShowMedian="True"/>
+    };
+
+    chart.Series.Add(series);
+    this.Content = chart;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![ShowMedian in MAUI chart](Chart-types_images/ShowMedianOutput.png)
+
+N>
+
+* The middle number of data points is the median for the odd number of data points.
+* The average of the middle two numbers is a median for the even number of data points.
+
 
 ## Outlier
 
