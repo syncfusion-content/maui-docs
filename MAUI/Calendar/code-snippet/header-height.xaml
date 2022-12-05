@@ -1,0 +1,4 @@
+﻿<calendar:SfCalendar  x:Name="Calendar"
+                      View="Month"
+                      Calendar:HeaderView="{Calendar:CalendarHeaderView Height=100}">
+</calendar:SfCalendar>
