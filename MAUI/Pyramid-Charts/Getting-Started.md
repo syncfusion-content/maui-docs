@@ -91,10 +91,11 @@ Now, let us define a simple data model that represents a data point in the chart
 
 {% highlight c# %}
 
-public class Sales
+ public class Learning
 {
-    public string Product { get; set; }
-    public double SalesRate { get; set; }
+    public string Name { get; set; }
+    public double Value { get; set; }
+
 }
 
 {% endhighlight %} 
@@ -109,17 +110,17 @@ Next, create a view model class and initialize a list of `Model` objects as foll
 
 public class ChartViewModel
 {
-    public List<Sales> Data { get; set; }
+    public List<Learning> Data { get; set; }
 
     public ChartViewModel()
     {
-        Data = new List<Sales>()
+        Data = new List<Learning>()
         {
-            new Sales(){Product = "iPad", SalesRate = 25},
-            new Sales(){Product = "iPhone", SalesRate = 35},
-            new Sales(){Product = "MacBook", SalesRate = 15},
-            new Sales(){Product = "Mac", SalesRate = 5},
-            new Sales(){Product = "Others", SalesRate = 10},
+            new Learning(){Name = "Cooking and Other Works", Value = 54},
+            new Learning(){Name = "Before Sleeping", Value = 60},
+            new Learning(){Name = "At Festivals", Value = 72},
+            new Learning(){Name = "While Driving", Value = 80},
+            new Learning(){Name = "At Gym", Value = 92},
         };
     }
 }
@@ -161,15 +162,15 @@ chart.BindingContext = viewModel;
 
 ## Populate chart with data
 
- Binding `Data` to the Pyramid chart ItemsSource property from its BindingContext to create our own Product Sales pyramid chart.
+ Binding `Data` to the Pyramid chart ItemsSource property from its BindingContext to create our own pyramid chart.
 
 {% tabs %}   
 
 {% highlight xaml %}
 
 <chart:SfPyramidChart ItemsSource="{Binding Data}" 
-                    XBindingPath="Product" 
-                    YBindingPath="SalesRate"/>
+                    XBindingPath="Name" 
+                    YBindingPath="Value"/>
 . . .            
 </chart:SfPyramidChart>
 
@@ -181,8 +182,8 @@ SfPyramidChart chart = new SfPyramidChart();
 ChartViewModel viewModel = new ChartViewModel();
 chart.BindingContext = viewModel;
 chart.ItemsSource = viewModel.Data;
-chart.XBindingPath = "Product";
-chart.YBindingPath = "SalesRate";
+chart.XBindingPath = "Name";
+chart.YBindingPath = "Value";
 this.Content = chart;
 
 {% endhighlight %}
@@ -199,7 +200,7 @@ The title of the chart acts as the title to provide quick information to the use
 
 <chart:SfPyramidChart>
     <chart:SfPyramidChart.Title>
-        <Label Text="PRODUCT SALES"/>
+        <Label Text="Average Time Spent by Consumers Hearing Music"/>
     </chart:SfPyramidChart.Title>
     . . .
 </chart:SfPyramidChart>
@@ -211,7 +212,7 @@ The title of the chart acts as the title to provide quick information to the use
 SfPyramidChart chart = new SfPyramidChart();
 chart.Title = new Label
 {
-    Text = "PRODUCT SALES"
+    Text = "Average Time Spent by Consumers Hearing Music"
 };
 
 {% endhighlight %}
@@ -299,9 +300,9 @@ The following code example gives you the complete code of above configurations.
 
 {% highlight xaml %}
 
-<chart:SfPyramidChart  ItemsSource="{Binding Data}" ShowDataLabels="True" XBindingPath="Product" EnableTooltip="True"        YBindingPath="SalesRate">
+<chart:SfPyramidChart  ItemsSource="{Binding Data}" ShowDataLabels="True" XBindingPath="Name" EnableTooltip="True"        YBindingPath="Value">
     <chart:SfPyramidChart.Title>
-        <Label Text="PRODUCT SALES"/>
+        <Label Text="Average Time Spent by Consumers Hearing Music"/>
     </chart:SfPyramidChart.Title>
     <chart:SfPyramidChart.BindingContext>
         <model:ChartViewModel/>
@@ -324,15 +325,15 @@ public partial class MainPage : ContentPage
         SfPyramidChart chart = new SfPyramidChart();
         chart.Title = new Label
         {
-            Text = "PRODUCT SALES"
+            Text = "Average Time Spent by Consumers Hearing Music"
         };
         chart.Legend = new ChartLegend();
         ChartViewModel viewModel = new ChartViewModel();
         chart.BindingContext = viewModel;
 
         chart.ItemsSource = viewModel.Data;
-        chart.XBindingPath = "Product";
-        chart.YBindingPath = "SalesRate";
+        chart.XBindingPath = "Name";
+        chart.YBindingPath = "Value";
         chart.EnableTooltip = true;
         chart.ShowDataLabels = true;
         this.Content = chart;
@@ -342,3 +343,5 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 
 {% endtabs %}
+
+![Pyramid chart in .NET MAUI Chart](Getting-Started_Images/MAUI_pyramid_chart.png)
