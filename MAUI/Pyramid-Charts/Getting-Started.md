@@ -95,7 +95,6 @@ Now, let us define a simple data model that represents a data point in the chart
 {
     public string Name { get; set; }
     public double Value { get; set; }
-
 }
 
 {% endhighlight %} 
