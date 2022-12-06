@@ -7,11 +7,11 @@ control: SfPyramidChart
 documentation: ug
 ---
 
-# Getting Started with .NET MAUI Chart
+# Getting Started with .NET MAUI Chart(SfPyramidChart)
 
 This section explains how to populate the pyramid chart with data, a title, data labels, a legend, and tooltips, as well as the essential aspects for getting started with the pyramid chart.
 
-## Creating an application using the .NET MAUI chart
+## Creating an application using the .NET MAUI chart(SfPyramidChart)
 
 1. Create a new .NET MAUI application in Visual Studio.
 2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfPyramidChart to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Charts and then install it.
@@ -116,11 +116,11 @@ public class ChartViewModel
     {
         Data = new List<Learning>()
         {
-            new Learning(){Name = "Cooking and Other Works", Value = 54},
-            new Learning(){Name = "Before Sleeping", Value = 60},
-            new Learning(){Name = "At Festivals", Value = 72},
-            new Learning(){Name = "While Driving", Value = 80},
-            new Learning(){Name = "At Gym", Value = 92},
+            new Learning(){Name = "Others", Value = 20},
+            new Learning(){Name = "Oils and Sweet", Value = 35},
+            new Learning(){Name = "Protein", Value = 40},
+            new Learning(){Name = "Fruits and vegetables", Value = 56},
+            new Learning(){Name = "Grains", Value = 80},
         };
     }
 }
@@ -162,7 +162,7 @@ chart.BindingContext = viewModel;
 
 ## Populate chart with data
 
- Binding `Data` to the Pyramid chart [ItemsSource]() property from its BindingContext to create our own pyramid chart.
+ Binding `Data` to the pyramid chart [ItemsSource]() property from its BindingContext to create our own pyramid chart.
 
 {% tabs %}   
 
@@ -200,7 +200,7 @@ The title of the chart acts as the title to provide quick information to the use
 
 <chart:SfPyramidChart>
     <chart:SfPyramidChart.Title>
-        <Label Text="Average Time Spent by Consumers Hearing Music"/>
+        <Label Text="Nutritional Food"/>
     </chart:SfPyramidChart.Title>
     . . .
 </chart:SfPyramidChart>
@@ -212,7 +212,7 @@ The title of the chart acts as the title to provide quick information to the use
 SfPyramidChart chart = new SfPyramidChart();
 chart.Title = new Label
 {
-    Text = "Average Time Spent by Consumers Hearing Music"
+    Text = "Nutritional Food"
 };
 
 {% endhighlight %}
@@ -302,7 +302,7 @@ The following code example gives you the complete code of above configurations.
 
 <chart:SfPyramidChart  ItemsSource="{Binding Data}" ShowDataLabels="True" XBindingPath="Name" EnableTooltip="True"        YBindingPath="Value">
     <chart:SfPyramidChart.Title>
-        <Label Text="Average Time Spent by Consumers Hearing Music"/>
+        <Label Text="Nutritional Food"/>
     </chart:SfPyramidChart.Title>
     <chart:SfPyramidChart.BindingContext>
         <model:ChartViewModel/>
@@ -325,7 +325,7 @@ public partial class MainPage : ContentPage
         SfPyramidChart chart = new SfPyramidChart();
         chart.Title = new Label
         {
-            Text = "Average Time Spent by Consumers Hearing Music"
+            Text = "Nutritional Food"
         };
         chart.Legend = new ChartLegend();
         ChartViewModel viewModel = new ChartViewModel();
