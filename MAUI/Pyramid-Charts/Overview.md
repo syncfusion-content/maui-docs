@@ -9,11 +9,11 @@ documentation: ug
 
 # .NET MAUI Chart Overview
 
-Syncfusion .NET MAUI Charts (SfPyramidChart) is used to create the beautiful pyramid segments to visualize the proportions of a total in hierarchies, which are used in high-quality .NET MAUI applications. As a single series chart without an axis. Data is shown as percentages of a total (The sum of the parts makes up the whole).
+Syncfusion .NET MAUI Chart (SfPyramidChart) is used to create the beautiful pyramid segments to visualize the proportions of a total in hierarchies, which are used in high-quality .NET MAUI applications. As a single series chart without an axis. Data is shown as percentages of a total (The sum of the parts makes up the whole).
 
 ## Key features
 
-* User interaction - The pyramid chart selection and tooltips user interaction features significantly improves the end-user experience.
+* User interaction - The pyramid chart selection and tooltips user interaction feature significantly improves the end-user experience.
 
 * The end-user experience is greatly enhanced by including the user interaction features such as selection and tooltip.
 
