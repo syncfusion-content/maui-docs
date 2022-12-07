@@ -41,7 +41,7 @@ public MainPage()
 
 {% endtabs %}
 
-![SfRating layout customization](images/layoutSize.jpg)
+![SfRating Item Size customization](images/item-size.png)
 
 ## Set Number of Items
 
@@ -71,7 +71,7 @@ public MainPage()
 
 {% endtabs %}
 
-![Set number of rating items](images/fourstar.jpg)
+![Set number of rating items](images/item-count.png)
  
 ## Set Space between Items
 
@@ -101,7 +101,7 @@ public MainPage()
 
 {% endtabs %}
 
-![Space between rating items](images/layoutSpace.jpg) 
+![Space between rating items](images/item-spacing.png) 
 
 ## Rating Settings
 
@@ -111,30 +111,34 @@ This section explains about various rating settings available in the [`SfRating`
 
 {% highlight xaml %}
 
-     <rating:SfRating  Value="3">
-        <rating:SfRating.RatingSettings>
-            <rating:SfRatingSettings RatedFill="Red" UnRatedFill="Blue" RatedStrokeWidth="3" UnRatedStrokeWidth="2" />
-        </rating:SfRating.RatingSettings>
-     </rating:SfRating>
+<rating:SfRating  Value="3">
+<rating:SfRating.RatingSettings>
+    <rating:RatingSettings RatedFill="Red" UnratedFill="Gray" 
+        UnratedStroke="Blue" RatedStrokeThickness="2" UnratedStrokeThickness="2"/>
+</rating:SfRating.RatingSettings>
+</rating:SfRating>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
 SfRating rating;
-SfRatingSettings ratingSettings;
+RatingSettings ratingSettings;
 public MainPage()
 {
     InitializeComponent();
     rating = new SfRating();
-    ratingSettings = new SfRatingSettings();
-    ratingSettings.RatedFill = Color.Red;
-    ratingSettings.UnRatedFill = Color.Blue;
-    ratingSettings.RatedStrokeWidth = 3;
-    ratingSettings.UnRatedStrokeWidth = 2;
+    ratingSettings = new RatingSettings();
+    ratingSettings.RatedFill = Colors.Red;
+    ratingSettings.UnratedFill = Colors.Gray;
+    ratingSettings.UnratedStroke = Colors.Blue;
+    ratingSettings.RatedStrokeThickness = 2;
+    ratingSettings.UnratedStrokeThickness = 2;
     rating.RatingSettings = ratingSettings;
 }
 
 {% endhighlight %}
 
 {% endtabs %}
+
+![Rating Settings](images/rating-settings.png) 
