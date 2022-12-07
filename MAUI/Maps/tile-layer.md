@@ -1,0 +1,234 @@
+---
+layout: post
+title: Tile Layer in Maps control | Syncfusion
+description: Learn here all about the Tile Layer feature of the Syncfusion .NET MAUI Maps (SfMaps) control to customize their appearances and more.
+platform: MAUI
+control: SfMaps
+documentation: ug
+---
+
+# Tile Layer in in .NET MAUI Maps (SfMaps)
+
+The tile layer renders the tiles returned from web map tile services such as Bing Maps, OpenStreetMaps, Google Maps, TomTom, etc.
+
+## Setting URL template
+
+The `MapTileLayer` needs to be added in the `Layer` collection in `SfMaps`. The URL of the providers must be set in the `MapTileLayer.UrlTemplate` property.
+
+The `UrlTemplate` property accepts the URL in [`WMTS`](https://en.wikipedia.org/wiki/Web_Map_Tile_Service) format i.e. {z} — zoom level, {x} and {y} — tile coordinates. This URL might vary slightly depends on the providers. The formats can be,
+    https://example_provider/{z}/{x}/{y}.png,
+    https://example_provider/z={z}/x={x}/y={y}.png,
+    https://example_provider/z={z}/x={x}/y={y}.png?key=subscription_key, etc.
+
+We will replace the {z}, {x}, {y} internally based on the current `Center` and the zoom level.
+
+N> Some of the providers may need subscription key. Please include them in the `UrlTemplate` itself as mentioned in the above example. Please note that the format may vary between each map providers. You can check the exact URL format needed for the providers on their official websites.
+
+## Adding OSM/OpenStreetMap
+
+The OpenStreetMap is one of the tile/image providers which can be used free of cost. It returns map tiles for the requested coordinates for every requests. The url format of the OSM map provider as shown in the below code snippet.
+
+N> Though the OpenStreetMap is free of cost, we recommend you check the licensing terms and conditions once before using it.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+ <maps:SfMaps>
+    <maps:SfMaps.Layer>
+        <maps:MapTileLayer UrlTemplate="https://tile.openstreetmap.org/{z}/{x}/{y}.png" />
+    </maps:SfMaps.Layer>
+</maps:SfMaps>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfMaps map = new SfMaps();
+MapTileLayer tileLayer = new MapTileLayer();
+tileLayer.UrlTemplate = "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
+map.Layer = tileLayer;
+this.Content = map;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![OSM default view](images/tile-layer/osm_maps_default.png)
+
+## Adding Bing maps
+
+An additional step is required for the Bing maps. The format of the required URL varies from the other tile services. Hence, we have added a top-level [`getBingUrlTemplate`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/getBingUrlTemplate.html) method which returns the URL in the required format. The subscription key is needed for bing maps. You can create an API key by following the steps mentioned in this [`link`](https://docs.microsoft.com/en-us/bingmaps/getting-started/bing-maps-dev-center-help/getting-a-bing-maps-key) and append this key to the bing map url before pass it to the [`getBingUrlTemplate`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/getBingUrlTemplate.html) method. You can use the URL returned from this method to pass it to the `UrlTemplate` property.
+
+Some of the providers provide different map types. For example, Bing Maps provide map types like Road, Aerial, AerialWithLabels etc. These types too can be passed in the `UrlTemplate` itself as shown in the below example. You can check the official websites of the tile providers to know about the available types and the code for it.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+ <maps:SfMaps>
+    <maps:SfMaps.Layer>
+        <maps:MapTileLayer UrlTemplate="https://tile.openstreetmap.org/{z}/{x}/{y}.png" />
+    </maps:SfMaps.Layer>
+</maps:SfMaps>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+public MainPage()
+{
+	InitializeComponent();
+    SfMaps map = new SfMaps();
+    MapTileLayer tileLayer = new MapTileLayer();
+    this.GenerateBing(tileLayer);
+    map.Layer = tileLayer;
+    map.Margin = new Thickness(20);
+    this.Content = map;
+}
+
+private async Task GenerateBing(MapTileLayer tileLayer)
+{
+    tileLayer.UrlTemplate = await MapTileLayer.GetBingUrl("https://dev.virtualearth.net/REST/V1/Imagery/Metadata/RoadOnDemand?output=json&uriScheme=https&include=ImageryProviders&key=subscription_key") + "?name=bingName";
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Bing maps default view](images/tile-layer/bing_maps_default.png)
+
+## Other map tile providers
+
+Our tile layer is not limited or specific to any of the tile providers mentioned here. It supports requesting tiles from any of the tile providers using the unique URL for respective tile providers and renders them.
+
+For other map providers like TomTom, MapBox etc., you can check the respective official websites and provide the url in the format mentioned in the `Setting URL template` section.
+
+Below is the example of adding TomTom map. You can get the TomTom API key from this [`link`](https://developer.tomtom.com/maps-api).
+
+{% tabs %}
+
+{% highlight xaml %}
+
+ <map:SfMaps>
+     <map:SfMaps.Layer>
+         <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json">
+             <map:MapShapeLayer.Sublayers>
+                 <map:MapShapeSublayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/africa.json" />
+             </map:MapShapeLayer.Sublayers>
+         </map:MapShapeLayer>
+     </map:SfMaps.Layer>
+ </map:SfMaps>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfMaps map = new SfMaps();
+MapTileLayer tileLayer = new MapTileLayer();
+tileLayer.UrlTemplate = "https://api.tomtom.com/map/1/tile/basic/main/{z}/{x}/{y}.png?key=subscription_key";
+map.Layer = tileLayer;
+map.Margin = new Thickness(20);
+this.Content = map;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![TomTom maps default view](images/tile-layer/tom_tom_default.png)
+
+## Changing the center latitude and longitude
+
+You can set the initial center position by setting the `MapTileLayer.Center` property. It represents the initial center position of the map layer.
+
+Based on the size of the [`SfMaps`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html) control, `Center` and `ZoomLevel` number of initial tiles needed in the view port alone will be rendered. Refer this section for enabling [zooming and panning]().
+
+This property cannot be changed dynamically. Defaults to `MapLatLng(0.0, 0.0)`.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+ <map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapTileLayer UrlTemplate="https://tile.openstreetmap.org/{z}/{x}/{y}.png">
+            <map:MapTileLayer.Center>
+                <map:MapLatLng Latitude="27.175014"
+                               Longitude="78.042152">
+                </map:MapLatLng>
+            </map:MapTileLayer.Center>
+            <map:MapTileLayer.ZoomPanBehavior>
+                <map:MapZoomPanBehavior ZoomLevel="2"/>
+            </map:MapTileLayer.ZoomPanBehavior>
+        </map:MapTileLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfMaps map = new SfMaps();
+MapTileLayer tileLayer = new MapTileLayer();
+tileLayer.UrlTemplate = "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
+tileLayer.Center = new MapLatLng(27.175014, 78.042152);
+MapZoomPanBehavior zoomPanBehavior = new MapZoomPanBehavior();
+zoomPanBehavior.ZoomLevel = 2;
+tileLayer.ZoomPanBehavior = zoomPanBehavior;
+map.Layer = tileLayer;
+this.Content = map;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![OSM initial focalLatLng](images/tile-layer/osm_initial_focallatlng.png)
+
+## Changing the initial zoom level
+
+You can set the zoom level by setting the `MapZoomPanBehavior.ZoomLevel` property. By default, it will be 1.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+ <map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapTileLayer UrlTemplate="https://tile.openstreetmap.org/{z}/{x}/{y}.png">
+            <map:MapTileLayer.Center>
+                <map:MapLatLng Latitude="27.175014"
+                               Longitude="78.042152">
+                </map:MapLatLng>
+            </map:MapTileLayer.Center>
+            <map:MapTileLayer.ZoomPanBehavior>
+                <map:MapZoomPanBehavior ZoomLevel="2"/>
+            </map:MapTileLayer.ZoomPanBehavior>
+        </map:MapTileLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfMaps map = new SfMaps();
+MapTileLayer tileLayer = new MapTileLayer();
+tileLayer.UrlTemplate = "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
+tileLayer.Center = new MapLatLng(27.175014, 78.042152);
+MapZoomPanBehavior zoomPanBehavior = new MapZoomPanBehavior();
+zoomPanBehavior.ZoomLevel = 5;
+tileLayer.ZoomPanBehavior = zoomPanBehavior;
+map.Layer = tileLayer;
+this.Content = map;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![OSM initial zoomLevel](images/tile-layer/osm_initial_zoomlevel.png)
+
+## Markers
+
+You can add markers in the tile layer. The procedure is very similar to the shape layer. Kindly refer the [markers](https://help.syncfusion.com/maui/maps/markers) section.
+
+N> You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Maps Tile layer example](https://github.com/syncfusion/maui-demos/) that shows how to configure a Maps in .NET MAUI.
