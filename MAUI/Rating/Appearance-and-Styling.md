@@ -11,7 +11,7 @@ documentation: ug
 
 # Appearance and Styling in .NET MAUI Rating (SfRating)
 
-When the default view is not needed, you can customize the view of .NET MAUI [`SfRating`] control. The [`SfRating`] control provides support to customize the size, item count, and space between rating items.
+When the default view is not needed, you can customize the view of .NET MAUI [`SfRating`] control. The [`SfRating`] control provides support to customize the item size, item count, and space between rating items.
 
 ## Set Size
 

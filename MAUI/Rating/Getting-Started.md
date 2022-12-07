@@ -184,6 +184,6 @@ public MainPage()
 
 {% endtabs %}
 
-![SfRating Getting Started ](images/gettingstarted.png)
+![SfRating Getting Started ](images/getting-started.png)
 
 The complete Getting Started sample is available in this [documentation].

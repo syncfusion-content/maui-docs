@@ -20,3 +20,5 @@ The Essential .NET MAUI Rating control provides the number of stars that represe
 
 * [`ItemCount`]: Support to determine the number of Rating items to be displayed.
 
+* ['RatingShape']: Predefined shapes for the rating item
+
