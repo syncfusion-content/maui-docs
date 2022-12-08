@@ -109,7 +109,7 @@ Support has been provided to dynamically add the dataform items to collections u
 				    });
 				
     dataForm.Items.Add(new DataFormSwitchItem() 
-				    { Name = "Save"  });
+				    { FieldName = "Save"  });
 {% endhighlight %}
 {% endtabs %}
 
