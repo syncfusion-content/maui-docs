@@ -557,7 +557,7 @@ this.Content = map;
 
 {% endtabs %}
 
-![Zoom animation](images/zoom-pan/zoom-animation.gif)
+![Zoom animation](images/zoom-pan/zoom_animation.gif)
 
 ### Center Animation
 
@@ -590,7 +590,7 @@ this.Content = map;
 
 {% endtabs %}
 
-![Center animation](images/zoom-pan/zoom-animation.gif)
+![Center animation](images/zoom-pan/center_zoom_animation.gif)
 
 ## Event
 
