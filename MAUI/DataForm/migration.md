@@ -931,7 +931,7 @@ The common properties of `Xamarin SfDataForm` list items (` DataFormPickerItem`,
 <th>Description</th></tr>
 
 <tr>
-<td>{{'[RegisterEditor](https://helpstaging.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.SfDataForm.html#Syncfusion_XForms_DataForm_SfDataForm_RegisterEditor_System_Type_System_String_)'| markdownify }}</td>
+<td>{{'[RegisterEditor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.SfDataForm.html#Syncfusion_XForms_DataForm_SfDataForm_RegisterEditor_System_String_Syncfusion_XForms_DataForm_Editors_DataFormEditorBase_)'| markdownify }}</td>
 <td>{{'[RegisterEditor]'| markdownify }}</td>
 <td>Mthod to register DataFormEditor.</td>
 </tr>
