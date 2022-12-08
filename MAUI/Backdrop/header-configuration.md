@@ -37,13 +37,13 @@ The default icons in the navigation header can be customized using the following
 
 When the backdrop page contained within the [NavigationPage](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/pages/navigationpage?view=net-maui-6.0) , hamburger icon and close icon (X mark ) will be used by default.
 
-![Hamburger icon](Header-Configuration-images/Hamburger.png)
+![.NET MAUI Backdrop in navigation page](images/header-configuration/default-navigationpage-icons.png)
 
 ### Default icons in FlyoutPage
 
 When the backdrop page placed in the [FlyoutPage](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/pages/flyoutpage?view=net-maui-6.0), down arrow icon and up arrow icon will be used by default.
 
-![Arrow icon](Header-Configuration-images/Arrow.png)
+![.NET MAUI Backdrop in navigation page](images/header-configuration/default-flyoutpage-icons.png)
 
 ### Custom icons
 
@@ -57,39 +57,38 @@ Customize the default icons in the navigation header by setting the `OpenIconIma
 
 {% highlight xaml %} 
 
-<?xml version="1.0" encoding="UTF-8"?>
-<backdrop:SfBackdropPage
-    xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:backdrop="clr-namespace:Syncfusion.XForms.Backdrop;assembly=Syncfusion.SfBackdrop.XForms"
-    x:Class="BackdropGettingStarted.BackdropSamplePage"
-    OpenIconImageSource="open.png"
-    CloseIconImageSource="close.png">
+<backdrop:SfBackdropPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                         x:Class="BackdropGettingStarted.BackdropSamplePage"
+                         xmlns:backdrop="clr-namespace:Syncfusion.Maui.Backdrop;assembly=Syncfusion.Maui.Backdrop"
+                         OpenIconImageSource="open.png"
+                         CloseIconImageSource="close.png">
+
 </backdrop:SfBackdropPage>
 
 {% endhighlight %}
 
 {% highlight C# %} 
 
-using Syncfusion.XForms.Backdrop;	
-namespace BackdropGettingStarted
+using Syncfusion.Maui.Backdrop;
+namespace BackdropGettingStarted;
+
+public partial class BackdropSamplePage : SfBackdropPage
 {
-    public partial class BackdropSamplePage : SfBackdropPage
+    public BackdropSamplePage()
     {
-        public BackdropSamplePage()
-        {
-            InitializeComponent();
-            this.OpenIconImageSource = "open.png";
-            this.CloseIconImageSource = "close.png";
-        }
+        InitializeComponent();
+        this.OpenIconImageSource = "open.png";
+        this.CloseIconImageSource = "close.png";
     }
 }
+
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Open Custom icons](Header-Configuration-images/Settings.png)
+![.NET MAUI Backdrop Custom icons](images/header-configuration/custom-icons.png)
  
 ## Icon text customization
 
@@ -99,31 +98,28 @@ You can customize the icon text in the navigation header by setting the `OpenTex
 
 {% highlight xaml %} 
 
-<?xml version="1.0" encoding="UTF-8"?>
-<backdrop:SfBackdropPage
-    xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:backdrop="clr-namespace:Syncfusion.XForms.Backdrop;assembly=Syncfusion.SfBackdrop.XForms"
-    x:Class="BackdropGettingStarted.BackdropSamplePage"
-    OpenText="Show Menu"
-    CloseText="Hide Menu">
+<backdrop:SfBackdropPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                         x:Class="BackdropGettingStarted.BackdropSamplePage"
+                         xmlns:backdrop="clr-namespace:Syncfusion.Maui.Backdrop;assembly=Syncfusion.Maui.Backdrop"
+                         OpenText="Show Menu"
+                         CloseText="Hide Menu">
+
 </backdrop:SfBackdropPage>
 
 {% endhighlight %}
 
 {% highlight C# %} 
 
-using Syncfusion.XForms.Backdrop;	
-namespace BackdropGettingStarted
+using Syncfusion.Maui.Backdrop;
+namespace BackdropGettingStarted;
+public partial class BackdropSamplePage : SfBackdropPage
 {
-    public partial class BackdropSamplePage : SfBackdropPage
+    public BackdropSamplePage()
     {
-        public BackdropSamplePage()
-        {
-            InitializeComponent();
-            this.OpenText = "Show Menu";
-            this.CloseText = "Hide Menu";
-        }
+        InitializeComponent();
+        this.OpenText = "Show Menu";
+        this.CloseText = "Hide Menu";
     }
 }
 
@@ -131,4 +127,4 @@ namespace BackdropGettingStarted
 
 {% endtabs %}
 
-![Open and Close icon text](Header-Configuration-images/OpenIconCloseIconText.png)
+![.NET MAUI Backdrop open and close icon custom text](images/header-configuration/custom-text.png)

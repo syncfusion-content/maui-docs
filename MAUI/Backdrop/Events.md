@@ -17,11 +17,24 @@ The `BackLayerStateChanged` event occurs when the backdrop page back layer is re
 
 {% highlight xaml %} 
 
-  
+<backdrop:SfBackdropPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                         x:Class="BackdropGettingStarted.BackdropSamplePage"
+                         Title="Menu"
+                         xmlns:backdrop="clr-namespace:Syncfusion.Maui.Backdrop;assembly=Syncfusion.Maui.Backdrop"
+                         BackLayerStateChanged="SfBackdropPage_BackLayerStateChanged"
+                         >
+
+</backdrop:SfBackdropPage>
+
 {% endhighlight %}
 
 {% highlight C# %} 
 
+private void SfBackdropPage_BackLayerStateChanged(object sender, EventArgs e)
+{
+    // handle event action.
+}
 
 {% endhighlight %}
 

@@ -11,7 +11,7 @@ documentation: ug
 
 Backdrop allows to customize the shapes on the top corners of the front layer. Curved and cut (flat) shape options are available , it can be switched by setting `EdgeShape` property of the front layer.
 
-![CornerType image](CornerShape_images/CornerType.png)
+![.NET MAUI Backdrop CornerType image](images/corner-shape/edge-shape.png)
 
 N> The backdrop can only be shaped on the top left and top right corners.
 
@@ -28,7 +28,6 @@ Both the side of the corner radius can be customized separately by setting `Left
             <Grid />
         </backdrop:BackdropFrontLayer>
 </backdrop:SfBackdropPage.FrontLayer> 
-
 
 {% endhighlight %}
 

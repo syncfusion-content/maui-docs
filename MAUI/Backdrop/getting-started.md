@@ -188,7 +188,7 @@ The following options are provided in backdrop to reveal and conceal the back la
 
 To know more information about reveal height customization ,refer this [link](https://help.syncfusion.com/xamarin/backdrop-page/revealingheight-customization).
 
-![Reveal and conceal back layer](Getting-Started_images/Backdrop_reveal.gif)
+![.NET Maui Backdrop reveal and conceal back layer](images/getting-started/reveal-conceal.gif)
 
 {% tabs %} 
 
