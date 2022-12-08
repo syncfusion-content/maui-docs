@@ -41,5 +41,4 @@ To migrate easier from Xamarin SfRating to [.NET MAUI SfRating], we kept most of
 <td> {{'[ReadOnly]'| markdownify }}</td>
 <td> {{'[IsReadOnly]'| markdownify }}</td>
 <td>Gets or sets the boolean value of Is Read Only.</td></tr>
-<tr>
 </table> 

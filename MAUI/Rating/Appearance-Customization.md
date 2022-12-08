@@ -11,7 +11,7 @@ documentation: ug
 
 # Appearance Customization in .NET MAUI Rating (SfRating)
 
-We can customize the rated and unrated fill color, stroke and stroke thickness using the following properties of [`SfRatingSettings`].
+We can customize the rated and unrated fill color, stroke and stroke thickness using the following properties of [`RatingSettings`].
 
 * [`RatedFill`]
 * [`UnratedFill`]
@@ -86,7 +86,7 @@ rating.RatingSettings = ratingSettings;
 
 ## Set Stroke
 
-[`SfRating`] control has support to set the stroke color for the selected and unselected items.
+[`SfRating`] control has support to set the stroke color for the rated and unrated items.
 
 ### Rated Items
 

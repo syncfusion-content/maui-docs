@@ -114,7 +114,7 @@ This section explains about various rating settings available in the [`SfRating`
 <rating:SfRating  Value="3">
 <rating:SfRating.RatingSettings>
     <rating:RatingSettings RatedFill="Red" UnratedFill="Gray" 
-        UnratedStroke="Blue" RatedStrokeThickness="2" UnratedStrokeThickness="2"/>
+                           UnratedStroke="Blue" RatedStrokeThickness="2" UnratedStrokeThickness="2"/>
 </rating:SfRating.RatingSettings>
 </rating:SfRating>
 
