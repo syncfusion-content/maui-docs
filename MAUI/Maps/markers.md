@@ -24,41 +24,40 @@ You can show markers at any position on the map by providing latitude and longit
 <map:SfMaps>
     <map:SfMaps.Layer>
         <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
-                           ShapeStroke="DarkGrey"
-                           ShowMarkerTooltip="True">
+                           ShapeStroke="DarkGrey">
                             
             <map:MapShapeLayer.Markers>
                 <map:MapMarkerCollection>
-                    <map:MapMarker Latitude="20.5595"
+                    <map:MapMarker Latitude="-14.235004"
                                    IconWidth="15"
                                    IconHeight="15"
                                    IconFill="#00ccff"
                                    IconType="Circle" 
-                                   Longitude="22.9375" />
-                    <map:MapMarker Latitude="21.7679"
+                                   Longitude="-51.92528" />
+                    <map:MapMarker Latitude="51.16569"
                                    IconWidth="15"
                                    IconHeight="15"
                                    IconFill="#00ccff"
                                    IconType="Circle" 
-                                   Longitude="78.8718" />
-                    <map:MapMarker Latitude="133.7751"
+                                   Longitude="10.451526" />
+                    <map:MapMarker Latitude="-25.274398"
                                    IconWidth="15"
                                    IconHeight="15"
                                    IconFill="#00ccff"
                                    IconType="Circle" 
-                                   Longitude="25.2744" />
-                    <map:MapMarker Latitude="60.2551"
+                                   Longitude="133.775136" />
+                    <map:MapMarker Latitude="20.593684"
                                    IconWidth="15"
                                    IconHeight="15"
                                    IconFill="#00ccff"
                                    IconType="Circle" 
-                                   Longitude="84.5260" />
-                    <map:MapMarker Latitude="195.4915"
+                                   Longitude="78.96288" />
+                    <map:MapMarker Latitude="61.52401"
                                    IconWidth="15"
                                    IconHeight="15"
                                    IconType="Circle"
                                    IconFill="#00ccff"
-                                   Longitude="-50.7832" />
+                                   Longitude="105.318756" />
                 </map:MapMarkerCollection>
             </map:MapShapeLayer.Markers>
         </map:MapShapeLayer>
@@ -73,61 +72,61 @@ public MarkerTool()
 {
 	InitializeComponent();
 	
-     MapShapeLayer layer = new MapShapeLayer();
-     layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
+    MapShapeLayer layer = new MapShapeLayer();
+    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
 
-     MapMarker mapMarker = new MapMarker();
-     mapMarker.Latitude = 20.5595;
-     mapMarker.Longitude = 22.9375;
-     mapMarker.IconHeight = 15;
-     mapMarker.IconWidth = 15;
-     mapMarker.IconType = MapIconType.Circle;
-     mapMarker.IconFill = Color.FromRgb(0, 204, 255);
+    MapMarker mapMarker = new MapMarker();
+    mapMarker.Latitude = -14.235004;
+    mapMarker.Longitude = -51.92528;
+    mapMarker.IconHeight = 15;
+    mapMarker.IconWidth = 15;
+    mapMarker.IconType = MapIconType.Circle;
+    mapMarker.IconFill = Color.FromRgb(0, 204, 255);
 
-     MapMarker mapMarker1 = new MapMarker();
-     mapMarker1.Latitude = 21.7679;
-     mapMarker1.Longitude = 78.8718;
-     mapMarker1.IconHeight = 15;
-     mapMarker1.IconWidth = 15;
-     mapMarker1.IconType = MapIconType.Circle;
-     mapMarker1.IconFill = Color.FromRgb(0, 204, 255);
+    MapMarker mapMarker1 = new MapMarker();
+    mapMarker1.Latitude = 51.16569;
+    mapMarker1.Longitude = 10.451526;
+    mapMarker1.IconHeight = 20;
+    mapMarker1.IconWidth = 20;
+    mapMarker.IconType = MapIconType.Circle;
+    mapMarker.IconFill = Color.FromRgb(0, 204, 255);
 
-     MapMarker mapMarker2 = new MapMarker();
-     mapMarker2.Latitude = 133.7751;
-     mapMarker2.Longitude = 25.2744;
-     mapMarker2.IconHeight = 15;
-     mapMarker2.IconWidth = 15;
-     mapMarker2.IconType = MapIconType.Circle;
-     mapMarker2.IconFill = Color.FromRgb(0, 204, 255);
+    MapMarker mapMarker2 = new MapMarker();
+    mapMarker2.Latitude = -25.274398;
+    mapMarker2.Longitude = 133.775136;
+    mapMarker2.IconHeight = 15;
+    mapMarker2.IconWidth = 15;
+    mapMarker.IconType = MapIconType.Circle;
+    mapMarker.IconFill = Color.FromRgb(0, 204, 255);
 
-     MapMarker mapMarker3 = new MapMarker();
-     mapMarker3.Latitude = 60.2551;
-     mapMarker3.Longitude = 84.5260;
-     mapMarker3.IconHeight = 15;
-     mapMarker3.IconWidth = 15;
-     mapMarker3.IconType = MapIconType.Circle;
-     mapMarker3.IconFill = Color.FromRgb(0, 204, 255);
+    MapMarker mapMarker3 = new MapMarker();
+    mapMarker3.Latitude = 20.593684;
+    mapMarker3.Longitude = 78.96288;
+    mapMarker3.IconHeight = 15;
+    mapMarker3.IconWidth = 15;
+    mapMarker.IconType = MapIconType.Circle;
+    mapMarker.IconFill = Color.FromRgb(0, 204, 255);
 
-     MapMarker mapMarker4 = new MapMarker();
-     mapMarker4.Latitude = 195.4915;
-     mapMarker4.Longitude = -50.7832;
-     mapMarker4.IconHeight = 15;
-     mapMarker4.IconWidth = 15;
-     mapMarker4.IconType = MapIconType.Circle;
-     mapMarker4.IconFill = Color.FromRgb(0, 204, 255);
+    MapMarker mapMarker4 = new MapMarker();
+    mapMarker4.Latitude = 61.52401;
+    mapMarker4.Longitude = 105.318756;
+    mapMarker4.IconHeight = 15;
+    mapMarker4.IconWidth = 15;
+    mapMarker.IconType = MapIconType.Circle;
+    mapMarker.IconFill = Color.FromRgb(0, 204, 255);
 
-     MapMarkerCollection mapMarkers =new MapMarkerCollection();
-     mapMarkers.Add(mapMarker);
-     mapMarkers.Add(mapMarker1);
-     mapMarkers.Add(mapMarker2);
-     mapMarkers.Add(mapMarker3);
-     mapMarkers.Add(mapMarker4);
-     layer.Markers = mapMarkers;
+    MapMarkerCollection mapMarkers = new MapMarkerCollection();
+    mapMarkers.Add(mapMarker);
+    mapMarkers.Add(mapMarker1);
+    mapMarkers.Add(mapMarker2);
+    mapMarkers.Add(mapMarker3);
+    mapMarkers.Add(mapMarker4);
+    layer.Markers = mapMarkers;
 
-     SfMaps map = new SfMaps();
-     map.Layer = layer;
-     map.Margin = new Thickness(0, 50, 0, 0);
-     this.Content = map;
+    SfMaps map = new SfMaps();
+    map.Layer = layer;
+    map.Margin = new Thickness(0, 50, 0, 0);
+    this.Content = map;
  }
 
 {% endhighlight %}
@@ -135,6 +134,127 @@ public MarkerTool()
 {% endtabs %}
 
 ![default marker](images/markers/default_marker.png)
+
+### Tile layer
+
+You can show markers at any position on the map by providing latitude and longitude position to the [`MapMarker`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html), which is from the [`Markers`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_Markers) collection.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapTileLayer UrlTemplate = "https://tile.openstreetmap.org/{z}/{x}/{y}.png" >
+           <map:MapTileLayer.Markers>
+                <map:MapMarkerCollection>
+                        <map:MapMarker Latitude="-14.235004"
+                                       IconWidth="15"
+                                       IconHeight="15"
+                                       IconFill="#2f98f3"
+                                       IconType="Circle"
+                                       Longitude="-51.92528" />
+                        <map:MapMarker Latitude="51.16569"
+                                       IconWidth="15"
+                                       IconHeight="15"
+                                       IconFill="#2f98f3"
+                                       IconType="Circle"
+                                       Longitude="10.451526" />
+                        <map:MapMarker Latitude="-25.274398"
+                                       IconWidth="15"
+                                       IconHeight="15"
+                                       IconFill="#2f98f3"
+                                       IconType="Circle"
+                                       Longitude="133.775136" />
+                        <map:MapMarker Latitude="20.593684"
+                                       IconWidth="15"
+                                       IconHeight="15"
+                                       IconFill="#2f98f3"
+                                       IconType="Circle"
+                                       Longitude="78.96288" />
+                        <map:MapMarker Latitude="61.52401"
+                                       IconWidth="15"
+                                       IconHeight="15"
+                                       IconType="Circle"
+                                       IconFill="#2f98f3"
+                                       Longitude="105.318756" />
+                    </map:MapMarkerCollection>
+            </map:MapTileLayer.Markers>
+        </map:MapTileLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+public MarkerTool()
+{
+	InitializeComponent();
+	
+    SfMaps map = new SfMaps();
+    MapTileLayer tileLayer = new MapTileLayer();
+    tileLayer.UrlTemplate = "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
+
+    MapMarker mapMarker = new MapMarker();
+    mapMarker.Latitude = -14.235004;
+    mapMarker.Longitude = -51.92528;
+    mapMarker.IconHeight = 15;
+    mapMarker.IconWidth = 15;
+    mapMarker.IconType = MapIconType.Circle;
+    mapMarker.IconFill = Color.FromRgb(47, 152, 243);
+
+    MapMarker mapMarker1 = new MapMarker();
+    mapMarker1.Latitude = 51.16569;
+    mapMarker1.Longitude = 10.451526;
+    mapMarker1.IconHeight = 20;
+    mapMarker1.IconWidth = 20;
+    mapMarker.IconType = MapIconType.Circle;
+    mapMarker.IconFill = Color.FromRgb(47, 152, 243);
+
+    MapMarker mapMarker2 = new MapMarker();
+    mapMarker2.Latitude = -25.274398;
+    mapMarker2.Longitude = 133.775136;
+    mapMarker2.IconHeight = 15;
+    mapMarker2.IconWidth = 15;
+    mapMarker.IconType = MapIconType.Circle;
+    mapMarker.IconFill = Color.FromRgb(47, 152, 243);
+
+    MapMarker mapMarker3 = new MapMarker();
+    mapMarker3.Latitude = 20.593684;
+    mapMarker3.Longitude = 78.96288;
+    mapMarker3.IconHeight = 15;
+    mapMarker3.IconWidth = 15;
+    mapMarker.IconType = MapIconType.Circle;
+    mapMarker.IconFill = Color.FromRgb(47, 152, 243);
+
+    MapMarker mapMarker4 = new MapMarker();
+    mapMarker4.Latitude = 61.52401;
+    mapMarker4.Longitude = 105.318756;
+    mapMarker4.IconHeight = 15;
+    mapMarker4.IconWidth = 15;
+    mapMarker.IconType = MapIconType.Circle;
+    mapMarker.IconFill = Color.FromRgb(47, 152, 243);
+
+    MapMarkerCollection mapMarkers = new MapMarkerCollection();
+    mapMarkers.Add(mapMarker);
+    mapMarkers.Add(mapMarker1);
+    mapMarkers.Add(mapMarker2);
+    mapMarkers.Add(mapMarker3);
+    mapMarkers.Add(mapMarker4);
+    layer.Markers = mapMarkers;
+
+    SfMaps map = new SfMaps();
+    map.Layer = tileLayer;
+    map.Margin = new Thickness(0, 50, 0, 0);
+    this.Content = map;
+ }
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![tile layer default marker](images/markers/tile_layer_default_marker.png)
 
 N>
 * Refer to the [`MapMarkerCollection`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarkerCollection.html), for collection of [`MapMarker`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html).
@@ -161,49 +281,38 @@ N>
         <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
                            ShapeStroke="DarkGrey"
                            ShowMarkerTooltip="True">
-
             <map:MapShapeLayer.Markers>
-                <map:MapMarkerCollection>
-                    <map:MapMarker Latitude="20.5595"
-                                   IconWidth="20"
-                                   IconHeight="20"
-                                   IconFill="LightGreen"
-                                   IconType="Triangle" 
-                                   Longitude="22.9375"
-                                   IconStroke="Green"
-                                   IconStrokeThickness="3" />
-                    <map:MapMarker Latitude="21.7679" 
-                                   IconWidth="20"
-                                   IconHeight="20"
-                                   IconFill="LightGreen"
-                                   IconType="Triangle" 
-                                   Longitude="78.8718"
-                                   IconStroke="Green"
-                                   IconStrokeThickness="3" />
-                    <map:MapMarker Latitude="133.7751" 
-                                   IconWidth="20"
-                                   IconHeight="20"
-                                   IconFill="LightGreen"
-                                   IconType="Triangle" 
-                                   Longitude="25.2744"
-                                   IconStroke="Green"
-                                   IconStrokeThickness="3" />
-                    <map:MapMarker Latitude="60.2551"
-                                   IconWidth="20"
-                                   IconHeight="20"
-                                   IconFill="LightGreen"
-                                   IconType="Triangle" 
-                                   Longitude="84.5260"
-                                   IconStroke="Green"
-                                   IconStrokeThickness="3"/>
-                    <map:MapMarker Latitude="195.4915"
-                                   IconWidth="20"
-                                   IconHeight="20"
-                                   IconType="Triangle"
-                                   IconFill="LightGreen"
-                                   Longitude="-50.7832"
-                                   IconStroke="Green"
-                                   IconStrokeThickness="3" />
+                 <map:MapMarkerCollection>
+                    <map:MapMarker Latitude="-14.235004"
+                                   IconWidth="15"
+                                   IconHeight="15"
+                                   IconFill="#00ccff"
+                                   IconType="Circle" 
+                                   Longitude="-51.92528" />
+                    <map:MapMarker Latitude="51.16569"
+                                   IconWidth="15"
+                                   IconHeight="15"
+                                   IconFill="#00ccff"
+                                   IconType="Circle" 
+                                   Longitude="10.451526" />
+                    <map:MapMarker Latitude="-25.274398"
+                                   IconWidth="15"
+                                   IconHeight="15"
+                                   IconFill="#00ccff"
+                                   IconType="Circle" 
+                                   Longitude="133.775136" />
+                    <map:MapMarker Latitude="20.593684"
+                                   IconWidth="15"
+                                   IconHeight="15"
+                                   IconFill="#00ccff"
+                                   IconType="Circle" 
+                                   Longitude="78.96288" />
+                    <map:MapMarker Latitude="61.52401"
+                                   IconWidth="15"
+                                   IconHeight="15"
+                                   IconType="Circle"
+                                   IconFill="#00ccff"
+                                   Longitude="105.318756" />
                 </map:MapMarkerCollection>
             </map:MapShapeLayer.Markers>
         </map:MapShapeLayer>
@@ -214,74 +323,74 @@ N>
 
 {% highlight c# %}
 
-	public MarkerTool()
-	{
-		InitializeComponent();
-        MapShapeLayer layer = new MapShapeLayer();
-        layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
+public MarkerTool()
+{
+	InitializeComponent();
+	
+    MapShapeLayer layer = new MapShapeLayer();
+    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
 
-        MapMarker mapMarker = new MapMarker();
-        mapMarker.Latitude = 20.5595;
-        mapMarker.Longitude = 22.9375;
-        mapMarker.IconHeight = 20;
-        mapMarker.IconWidth = 20;
-        mapMarker.IconType = MapIconType.Triangle;
-        mapMarker.IconFill = Colors.LightGreen;
-        mapMarker.IconStroke = Colors.Green;
-        mapMarker.IconStrokeThickness = 3;
+    MapMarker mapMarker = new MapMarker();
+    mapMarker.Latitude = -14.235004;
+    mapMarker.Longitude = -51.92528;
+    mapMarker.IconHeight = 20;
+    mapMarker.IconWidth = 20;
+    mapMarker.IconType = MapIconType.Triangle;
+    mapMarker.IconFill = Colors.LightGreen;
+    mapMarker.IconStroke = Colors.Green;
+    mapMarker.IconStrokeThickness = 3;
+    MapMarker mapMarker1 = new MapMarker();
+    mapMarker1.Latitude = 51.16569;
+    mapMarker1.Longitude = 10.451526;
+    mapMarker1.IconHeight = 20;
+    mapMarker1.IconWidth = 20;
+    mapMarker1.IconType = MapIconType.Triangle;
+    mapMarker1.IconFill = Colors.LightGreen;
+    mapMarker1.IconStroke = Colors.Green;
+    mapMarker1.IconStrokeThickness = 3;
 
-        MapMarker mapMarker1 = new MapMarker();
-        mapMarker1.Latitude = 21.7679;
-        mapMarker1.Longitude = 78.8718;
-        mapMarker1.IconHeight = 20;
-        mapMarker1.IconWidth = 20;
-        mapMarker1.IconType = MapIconType.Triangle;
-        mapMarker1.IconFill = Colors.LightGreen;
-        mapMarker1.IconStroke = Colors.Green;
-        mapMarker1.IconStrokeThickness = 3;
+    MapMarker mapMarker2 = new MapMarker();
+    mapMarker2.Latitude = -25.274398;
+    mapMarker2.Longitude = 133.775136;
+    mapMarker2.IconHeight = 20;
+    mapMarker2.IconWidth = 20;
+    mapMarker2.IconType = MapIconType.Triangle;
+    mapMarker2.IconFill = Colors.LightGreen;
+    mapMarker2.IconStroke = Colors.Green;
+    mapMarker2.IconStrokeThickness = 3;
+    MapMarker mapMarker3 = new MapMarker();
+    mapMarker3.Latitude = 20.593684;
+    mapMarker3.Longitude = 78.96288;
+    mapMarker3.IconHeight = 20;
+    mapMarker3.IconWidth = 20;
+    mapMarker3.IconType = MapIconType.Triangle;
+    mapMarker3.IconFill = Colors.LightGreen;
+    mapMarker3.IconStroke = Colors.Green;
+    mapMarker3.IconStrokeThickness = 3;
 
-        MapMarker mapMarker2 = new MapMarker();
-        mapMarker2.Latitude = 133.7751;
-        mapMarker2.Longitude = 25.2744;
-        mapMarker2.IconHeight = 20;
-        mapMarker2.IconWidth = 20;
-        mapMarker2.IconType = MapIconType.Triangle;
-        mapMarker2.IconFill = Colors.LightGreen;
-        mapMarker2.IconStroke = Colors.Green;
-        mapMarker2.IconStrokeThickness = 3;
+    MapMarker mapMarker4 = new MapMarker();
+    mapMarker4.Latitude = 61.52401;
+    mapMarker4.Longitude = 105.318756;
+    mapMarker4.IconHeight = 20;
+    mapMarker4.IconWidth = 20;
+    mapMarker4.IconType = MapIconType.Triangle;
+    mapMarker4.IconFill = Colors.LightGreen;
+    mapMarker4.IconStroke = Colors.Green;
+    mapMarker4.IconStrokeThickness = 3;
 
-        MapMarker mapMarker3 = new MapMarker();
-        mapMarker3.Latitude = 60.2551;
-        mapMarker3.Longitude = 84.5260;
-        mapMarker3.IconHeight = 20;
-        mapMarker3.IconWidth = 20;
-        mapMarker3.IconType = MapIconType.Triangle;
-        mapMarker3.IconFill = Colors.LightGreen;
-        mapMarker3.IconStroke = Colors.Green;
-        mapMarker3.IconStrokeThickness = 3;
+    MapMarkerCollection mapMarkers = new MapMarkerCollection();
+    mapMarkers.Add(mapMarker);
+    mapMarkers.Add(mapMarker1);
+    mapMarkers.Add(mapMarker2);
+    mapMarkers.Add(mapMarker3);
+    mapMarkers.Add(mapMarker4);
+    layer.Markers = mapMarkers;
 
-        MapMarker mapMarker4 = new MapMarker();
-        mapMarker4.Latitude = 195.4915;
-        mapMarker4.Longitude = -50.7832;
-        mapMarker4.IconHeight = 20;
-        mapMarker4.IconWidth = 20;
-        mapMarker4.IconType = MapIconType.Triangle;
-        mapMarker4.IconFill = Colors.LightGreen;
-        mapMarker4.IconStroke = Colors.Green;
-        mapMarker4.IconStrokeThickness = 3;
-
-        MapMarkerCollection mapMarkers = new MapMarkerCollection();
-        mapMarkers.Add(mapMarker);
-        mapMarkers.Add(mapMarker1);
-        mapMarkers.Add(mapMarker2);
-        mapMarkers.Add(mapMarker3);
-        mapMarkers.Add(mapMarker4);
-        layer.Markers = mapMarkers;
-
-        SfMaps map = new SfMaps();
-        map.Layer = layer;
-        this.Content = map;
-    }
+    SfMaps map = new SfMaps();
+    map.Layer = layer;
+    map.Margin = new Thickness(0, 50, 0, 0);
+    this.Content = map;
+ }
 
 {% endhighlight %}
 

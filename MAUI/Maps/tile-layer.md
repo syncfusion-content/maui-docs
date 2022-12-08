@@ -58,21 +58,9 @@ this.Content = map;
 
 ## Adding Bing maps
 
-An additional step is required for the Bing maps. The format of the required URL varies from the other tile services. Hence, we have added a top-level [`getBingUrlTemplate`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/getBingUrlTemplate.html) method which returns the URL in the required format. The subscription key is needed for bing maps. You can create an API key by following the steps mentioned in this [`link`](https://docs.microsoft.com/en-us/bingmaps/getting-started/bing-maps-dev-center-help/getting-a-bing-maps-key) and append this key to the bing map url before pass it to the [`getBingUrlTemplate`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/getBingUrlTemplate.html) method. You can use the URL returned from this method to pass it to the `UrlTemplate` property.
+An additional step is required for the Bing maps. The format of the required URL varies from the other tile services. Hence, we have added a top-level `GetTileUrl` method which returns the URL in the required format. The subscription key is needed for bing maps. You can create an API key by following the steps mentioned in this [`link`](https://docs.microsoft.com/en-us/bingmaps/getting-started/bing-maps-dev-center-help/getting-a-bing-maps-key) and append this key to the bing map url before pass it to the `GetTileUrl` method. You can use the URL returned from this method to pass it to the `UrlTemplate` property.
 
 Some of the providers provide different map types. For example, Bing Maps provide map types like Road, Aerial, AerialWithLabels etc. These types too can be passed in the `UrlTemplate` itself as shown in the below example. You can check the official websites of the tile providers to know about the available types and the code for it.
-
-{% tabs %}
-
-{% highlight xaml %}
-
- <maps:SfMaps>
-    <maps:SfMaps.Layer>
-        <maps:MapTileLayer UrlTemplate="https://tile.openstreetmap.org/{z}/{x}/{y}.png" />
-    </maps:SfMaps.Layer>
-</maps:SfMaps>
-
-{% endhighlight %}
 
 {% highlight c# %}
 
@@ -83,7 +71,6 @@ public MainPage()
     MapTileLayer tileLayer = new MapTileLayer();
     this.GenerateBing(tileLayer);
     map.Layer = tileLayer;
-    map.Margin = new Thickness(20);
     this.Content = map;
 }
 
@@ -106,29 +93,12 @@ For other map providers like TomTom, MapBox etc., you can check the respective o
 
 Below is the example of adding TomTom map. You can get the TomTom API key from this [`link`](https://developer.tomtom.com/maps-api).
 
-{% tabs %}
-
-{% highlight xaml %}
-
- <map:SfMaps>
-     <map:SfMaps.Layer>
-         <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json">
-             <map:MapShapeLayer.Sublayers>
-                 <map:MapShapeSublayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/africa.json" />
-             </map:MapShapeLayer.Sublayers>
-         </map:MapShapeLayer>
-     </map:SfMaps.Layer>
- </map:SfMaps>
-
-{% endhighlight %}
-
 {% highlight c# %}
 
 SfMaps map = new SfMaps();
 MapTileLayer tileLayer = new MapTileLayer();
 tileLayer.UrlTemplate = "https://api.tomtom.com/map/1/tile/basic/main/{z}/{x}/{y}.png?key=subscription_key";
 map.Layer = tileLayer;
-map.Margin = new Thickness(20);
 this.Content = map;
 
 {% endhighlight %}
@@ -139,9 +109,9 @@ this.Content = map;
 
 ## Changing the center latitude and longitude
 
-You can set the initial center position by setting the `MapTileLayer.Center` property. It represents the initial center position of the map layer.
+You can set the center position by setting the `MapTileLayer.Center` property. It represents the initial center position of the map layer.
 
-Based on the size of the [`SfMaps`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html) control, `Center` and `ZoomLevel` number of initial tiles needed in the view port alone will be rendered. Refer this section for enabling [zooming and panning]().
+Based on the size of the [`SfMaps`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html) control, `Center` and `ZoomLevel` number of initial tiles needed in the view port alone will be rendered. Refer this section for enabling `zooming and panning`.
 
 This property cannot be changed dynamically. Defaults to `MapLatLng(0.0, 0.0)`.
 
@@ -157,9 +127,6 @@ This property cannot be changed dynamically. Defaults to `MapLatLng(0.0, 0.0)`.
                                Longitude="78.042152">
                 </map:MapLatLng>
             </map:MapTileLayer.Center>
-            <map:MapTileLayer.ZoomPanBehavior>
-                <map:MapZoomPanBehavior ZoomLevel="2"/>
-            </map:MapTileLayer.ZoomPanBehavior>
         </map:MapTileLayer>
     </map:SfMaps.Layer>
 </map:SfMaps>
@@ -172,9 +139,6 @@ SfMaps map = new SfMaps();
 MapTileLayer tileLayer = new MapTileLayer();
 tileLayer.UrlTemplate = "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
 tileLayer.Center = new MapLatLng(27.175014, 78.042152);
-MapZoomPanBehavior zoomPanBehavior = new MapZoomPanBehavior();
-zoomPanBehavior.ZoomLevel = 2;
-tileLayer.ZoomPanBehavior = zoomPanBehavior;
 map.Layer = tileLayer;
 this.Content = map;
 
@@ -182,27 +146,20 @@ this.Content = map;
 
 {% endtabs %}
 
-![OSM initial focalLatLng](images/tile-layer/osm_initial_focallatlng.png)
+![OSM map center](images/tile-layer/osm_center.png)
 
-## Changing the initial zoom level
+## Cache a tile images in application memory
 
-You can set the zoom level by setting the `MapZoomPanBehavior.ZoomLevel` property. By default, it will be 1.
+The `CanCacheTiles` property used to decide whether the tile images should be cached in application memory or not.
 
 {% tabs %}
 
 {% highlight xaml %}
 
- <map:SfMaps>
+<map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapTileLayer UrlTemplate="https://tile.openstreetmap.org/{z}/{x}/{y}.png">
-            <map:MapTileLayer.Center>
-                <map:MapLatLng Latitude="27.175014"
-                               Longitude="78.042152">
-                </map:MapLatLng>
-            </map:MapTileLayer.Center>
-            <map:MapTileLayer.ZoomPanBehavior>
-                <map:MapZoomPanBehavior ZoomLevel="2"/>
-            </map:MapTileLayer.ZoomPanBehavior>
+        <map:MapTileLayer UrlTemplate = "https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+                          CanCacheTiles= "True">
         </map:MapTileLayer>
     </map:SfMaps.Layer>
 </map:SfMaps>
@@ -214,10 +171,7 @@ You can set the zoom level by setting the `MapZoomPanBehavior.ZoomLevel` propert
 SfMaps map = new SfMaps();
 MapTileLayer tileLayer = new MapTileLayer();
 tileLayer.UrlTemplate = "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
-tileLayer.Center = new MapLatLng(27.175014, 78.042152);
-MapZoomPanBehavior zoomPanBehavior = new MapZoomPanBehavior();
-zoomPanBehavior.ZoomLevel = 5;
-tileLayer.ZoomPanBehavior = zoomPanBehavior;
+tileLayer.CanCacheTiles = true;
 map.Layer = tileLayer;
 this.Content = map;
 
@@ -225,10 +179,32 @@ this.Content = map;
 
 {% endtabs %}
 
-![OSM initial zoomLevel](images/tile-layer/osm_initial_zoomlevel.png)
+## Clear a cached tile images from application memory
+
+The `DeleteTilesFromCache` method used to clear the cached tile images from  application cache memory.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<maps:SfMaps>
+    <maps:SfMaps.Layer>
+        <maps:MapTileLayer x:Name="tileLayer" UrlTemplate="https://tile.openstreetmap.org/{z}/{x}/{y}.png" />
+    </maps:SfMaps.Layer>
+</maps:SfMaps>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+tileLayer.DeleteTilesFromCache();
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ## Markers
 
 You can add markers in the tile layer. The procedure is very similar to the shape layer. Kindly refer the [markers](https://help.syncfusion.com/maui/maps/markers) section.
 
-N> You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Maps Tile layer example](https://github.com/syncfusion/maui-demos/) that shows how to configure a Maps in .NET MAUI.
+N> You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our `.NET MAUI Maps Tile layer example` that shows how to configure a Maps in .NET MAUI.
