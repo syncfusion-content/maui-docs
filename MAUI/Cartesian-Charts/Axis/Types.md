@@ -721,7 +721,7 @@ chart.YAxes.Add(secondaryAxis);
 
 ![DateTimeAxis crossing support in MAUI Chart](Axis_Images/maui_chart_datetime_axis_crossing.png)
 
-### Opposed Axis with CrossesAt
+### Opposite Side Axis with CrossesAt
 
 The chart allows you to position the axis to opposed position by setting the value as `double.MaxValue` to the [CrossesAt](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_CrossesAt) property.
 
