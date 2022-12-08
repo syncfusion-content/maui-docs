@@ -279,39 +279,42 @@ N>
 <map:SfMaps>
     <map:SfMaps.Layer>
         <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
-                           ShapeStroke="DarkGrey"
-                           ShowMarkerTooltip="True">
+                           ShapeStroke="DarkGrey">
             <map:MapShapeLayer.Markers>
-                 <map:MapMarkerCollection>
+                <map:MapMarkerCollection>
                     <map:MapMarker Latitude="-14.235004"
-                                   IconWidth="15"
-                                   IconHeight="15"
-                                   IconFill="#00ccff"
-                                   IconType="Circle" 
+                                   IconWidth="20"
+                                   IconHeight="20"
+                                   IconFill="LightGreen"
+                                   IconType="Triangle"
                                    Longitude="-51.92528" />
                     <map:MapMarker Latitude="51.16569"
-                                   IconWidth="15"
-                                   IconHeight="15"
-                                   IconFill="#00ccff"
-                                   IconType="Circle" 
+                                   IconWidth="20"
+                                   IconHeight="20"
+                                   IconFill="LightGreen"
+                                   IconStroke="Green"
+                                   IconType="Triangle"
                                    Longitude="10.451526" />
                     <map:MapMarker Latitude="-25.274398"
-                                   IconWidth="15"
-                                   IconHeight="15"
-                                   IconFill="#00ccff"
-                                   IconType="Circle" 
+                                   IconWidth="20"
+                                   IconHeight="20"
+                                   IconFill="LightGreen"
+                                   IconStroke="Green"
+                                   IconType="Triangle"
                                    Longitude="133.775136" />
                     <map:MapMarker Latitude="20.593684"
-                                   IconWidth="15"
-                                   IconHeight="15"
-                                   IconFill="#00ccff"
-                                   IconType="Circle" 
+                                   IconWidth="20"
+                                   IconHeight="20"
+                                   IconFill="LightGreen"
+                                   IconStroke="Green"
+                                   IconType="Triangle"
                                    Longitude="78.96288" />
                     <map:MapMarker Latitude="61.52401"
-                                   IconWidth="15"
-                                   IconHeight="15"
-                                   IconType="Circle"
-                                   IconFill="#00ccff"
+                                   IconWidth="20"
+                                   IconHeight="20"
+                                   IconType="Triangle"
+                                   IconFill="LightGreen"
+                                   IconStroke="Green"
                                    Longitude="105.318756" />
                 </map:MapMarkerCollection>
             </map:MapShapeLayer.Markers>
