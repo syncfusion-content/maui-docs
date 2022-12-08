@@ -172,11 +172,43 @@ The following code example explains how to use the properties in the Xamarin bac
 {% tabs %} 
 {% highlight xaml %}
 
+<backdrop:SfBackdropPage xmlns="http://xamarin.com/schemas/2014/forms"
+                         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                         x:Class="BackdropGettingStarted.BackdropSamplePage"
+                         xmlns:backdrop="clr-namespace:Syncfusion.XForms.Backdrop;assembly=Syncfusion.SfBackdrop.XForms"
+                         Title="Menu"
+                         CloseIconImageSource="close.png"
+                         OpenIconImageSource="open.png"
+                         OpenText="Show Menu"
+                         CloseText="Hide Menu"
+                         IsBackLayerRevealed="True"
+                         BackLayerRevealOption="Auto"
+                         BackLayerStateChanged="SfBackdropPage_BackLayerStateChanged">
+    
+    <backdrop:SfBackdropPage.BackLayer>
+        <backdrop:BackdropBackLayer>
+        </backdrop:BackdropBackLayer>
+    </backdrop:SfBackdropPage.BackLayer>
+
+    <backdrop:SfBackdropPage.FrontLayer>
+        <backdrop:BackdropFrontLayer EdgeShape="Flat"
+                                     EnableSwiping="False"
+                                     LeftCornerRadius="20"
+                                     RightCornerRadius="0"
+                                     RevealedHeight="100">
+        </backdrop:BackdropFrontLayer>
+    </backdrop:SfBackdropPage.FrontLayer>
+
+</backdrop:SfBackdropPage>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
+private void SfBackdropPage_BackLayerStateChanged(object sender, EventArgs e)
+{
+    //handle event change.
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -191,11 +223,43 @@ The following code example explains how to use the properties in the Xamarin bac
 
 {% highlight xaml %}
 
+<backdrop:SfBackdropPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                         x:Class="BackdropGettingStarted.BackdropSamplePage"
+                         xmlns:backdrop="clr-namespace:Syncfusion.Maui.Backdrop;assembly=Syncfusion.Maui.Backdrop"
+                         Title="Menu"
+                         CloseIconImageSource="close.png"
+                         OpenIconImageSource="open.png"
+                         OpenText="Show Menu"
+                         CloseText="Hide Menu"
+                         IsBackLayerRevealed="True"
+                         BackLayerRevealOption="Auto"
+                         BackLayerStateChanged="SfBackdropPage_BackLayerStateChanged">
+
+    <backdrop:SfBackdropPage.BackLayer>
+        <backdrop:BackdropBackLayer>
+        </backdrop:BackdropBackLayer>
+    </backdrop:SfBackdropPage.BackLayer>
+    
+    <backdrop:SfBackdropPage.FrontLayer>
+        <backdrop:BackdropFrontLayer EdgeShape="Flat"
+                                     EnableSwiping="False"
+                                     LeftCornerRadius="20"
+                                     RightCornerRadius="0"
+                                     RevealedHeight="100">
+        </backdrop:BackdropFrontLayer>
+    </backdrop:SfBackdropPage.FrontLayer>
+
+</backdrop:SfBackdropPage>
  
 {% endhighlight %}
 
 {% highlight C# %}
 
+private void SfBackdropPage_BackLayerStateChanged(object sender, EventArgs e)
+{
+    //handle event change.
+}
 
 {% endhighlight %}
 
