@@ -186,4 +186,4 @@ public MainPage()
 
 ![SfRating Getting Started ](images/getting-started.png)
 
-The complete Getting Started sample is available in this [documentation].
+The complete Getting Started sample is available in this [link].
