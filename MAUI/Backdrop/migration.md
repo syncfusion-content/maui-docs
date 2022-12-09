@@ -45,7 +45,7 @@ namespace BackdropGettingStarted
         public BackdropSamplePage()
         {
             InitializeComponent();
-	        this.Title = "Menu";
+            this.Title = "Menu";
         }
     }
 }
