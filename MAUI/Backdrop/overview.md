@@ -1,12 +1,13 @@
 ---
 layout: post
 title: What's New in Essential Studio for .NET MAUI | Syncfusion
-platform: maui-controls
-description: A backdrop appears behind all the surfaces in an app, displaying contextual and actionable content.
+description: A .NET MAUI backdrop appears behind all the surfaces in an app, displaying contextual and actionable content.
+platform: MAUI
 control: SfBackdropPage
+documentation: ug
 ---
 
-## Backdrop Page (Preview)
+# .NET MAUI Backdrop Page (SfBackdropPage) Overview
 
 The .NET MAUI Backdrop page is composed of two surfaces, a back layer and a front layer. The back layer holds actionable content (like navigation or filtration), which is relevant to the front layer.
 
@@ -22,4 +23,4 @@ The .NET MAUI Backdrop page is composed of two surfaces, a back layer and a fron
  
  * Allows users to customize the icons of navigation header in the revealed and closed states separately.
 
- ![BackdropPage control for .NET MAUI.](backdrop_images/net_maui_backdrop.gif)
+ ![BackdropPage control for .NET MAUI.](images/overview/net_maui_backdrop.gif)

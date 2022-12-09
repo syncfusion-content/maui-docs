@@ -50,8 +50,8 @@ When the backdrop page placed in the [FlyoutPage](https://learn.microsoft.com/en
 Customize the default icons in the navigation header by setting the `OpenIconImageSource` and `CloseIconImageSource` properties in `SfBackdropPage`. It accepts following inputs:
 * FileImageSource
 * UriImageSource
-* FontImageSource
 * StreamImageSource
+* FromResource
 
 {% tabs %} 
 
