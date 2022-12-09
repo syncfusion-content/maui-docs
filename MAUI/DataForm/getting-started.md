@@ -7,8 +7,6 @@ control: SfDataForm
 documentation: ug
 ---
 
-
-
 # Getting Started with Maui DataForm (SfDataForm)
 
 This section provides a quick overview of how to get started with the .NET Maui DataForm(SfDataForm) for Maui and also provides a walk-through to configure the .NET MAUI DataForm control in a real-time scenario.
@@ -29,7 +27,7 @@ This section provides a quick overview of how to get started with the .NET Maui 
 
     <ContentPage   
             
-            xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm"
+            xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm" >
 
             <dataForm:SfDataForm />
     </ContentPage>
@@ -96,26 +94,21 @@ Here, the data object named **DataModel** created with some properties.
 
     public class DataModel
     {
-        public DataModel()
-        {
-
-        }
-
-        public string FirstName {get; set;}
+        public string FirstName { get; set; }
     
-        public string MiddleName{get; set;}
+        public string MiddleName { get; set; }
     
-        public string LastName{get; set;}
+        public string LastName { get; set; }
     
-        public string ContactNumber {get; set;}
+        public string ContactNumber { get; set; }
     
-        public string Email{get; set;}
+        public string Email { get; set; }
    
-        public string Address {get; set; }
+        public string Address { get; set; }
 
-        public DateTime? BirthDate {get; set;}
+        public DateTime? BirthDate { get; set; }
     
-        public string GroupName {get; set; }
+        public string GroupName { get; set; }
 
     }
 
@@ -133,7 +126,7 @@ Create a model repository class with DataModel property initialized with require
         
         public ViewModel()
         {
-            this.dataModel = new DataModel();
+            this.DataModel = new DataModel();
         }
     }
 
@@ -189,7 +182,25 @@ The type of input editor generated for the data field depends on the type and at
 `Link`
 </td>
 <td>
-Default DataFormItem generated for the String type and the properties with [DataType(DataType.Text)], [DataType(DataType.MultilineText)] and [DataType(DataType.Password)] attributes.
+Default DataFormItem generated for the String type and the properties with [DataType(DataType.Text)].
+</td>
+</tr>
+<tr>
+<td>
+{{'[DataFormMultiLineTextItem]
+`Link`
+</td>
+<td>
+Generated for string type property with [DataType(DataType.MultilineText)] attributes.
+</td>
+</tr>
+<tr>
+<td>
+{{'[DataFormPasswordTextItem]
+`Link`
+</td>
+<td>
+Generated for string type property with [DataType(DataType.Password)] attributes.
 </td>
 </tr>
 <tr>
@@ -216,7 +227,7 @@ Generated for the Bool type property.
 {{'[DataFormDateItem] `Link`
 </td>
 <td>
-Generated for the DateTime type property.
+Generated for the DateTime, DateOnly, DateTimeOffset type property.
 [DataType(DataType.Date)].
 [DataType(DataType.DateTime)].
 </td>
@@ -227,7 +238,7 @@ Generated for the DateTime type property.
 `Link`
 </td>
 <td>
-Generated for the DataTime type property.
+Generated for the TimeSpan, TimeOnly  type property.
 [DataType(DataType.Time)].
 </td>
 </tr>
@@ -404,7 +415,7 @@ Enum and List type property.
 [EnumDataTypeAttribute]
 </td>
 <td>
-{{'[VerticalStackLayout]`Link`
+{{'[SfRadioButton]`Link`
 </td>
 </tr>
 </table>
@@ -413,7 +424,7 @@ Enum and List type property.
 
 ### Label position
 
-By default, the data form arranges the label at left side and input control at the right side. You can change the label position by setting the `SfDataForm.LabelPosition` property. You can position the label from left to top of the input control by setting the `LabelPosition` as Top.
+By default, the data form arranges the label at left side and input control at the right side. You can change the label position by setting the `SfDataForm.DefaultLayoutSettings.LabelPosition` property. You can position the label from left to top of the input control by setting the `LabelPosition` as Top.
 
 {% tabs %}
 {% highlight MainPage.xaml %}
@@ -438,6 +449,8 @@ By default, the data form arranges the label at left side and input control at t
 
 By default, the data form arranges one data field per row. It is possible to have more than one data field per row by setting the `ColumnCount` property which provides grid like layout for the data form.
 
+[ItemsOrderInRow]`Link` property is applicable to only when the ColumnCount is greater than 1. The items on the data form are arranged in layout rows. Use the RowOrder property to specify the number of the layout row where the item should be displayed.
+
 {% tabs %}
 {% highlight MainPage.xaml %}
 
@@ -452,31 +465,6 @@ By default, the data form arranges one data field per row. It is possible to hav
 {% endtabs %}
 
 `ColumnCount Image `
-
-## Loading DataForm with customized height and width
-
-The DataForm can be loaded with specific height and width inside different layouts using the `SfDataForm.HeightRequest` and `SfDataForm.WidthRequest` properties.
-
-{% tabs %}
-{% highlight MainPage.xaml %}
-
-    <dataForm:SfDataForm x:Name="dataForm" WidthRequest="300"
-        HeightRequest="300" 
-        VerticalOptions="CenterAndExpand"
-        HorizontalOptions="Center"/>
-
-{% endhighlight %}
-{% highlight MainPage.xaml.cs %}
-
-    dataForm.HeightRequest = 300;
-    dataForm.WidthRequest = 300;
-    dataForm.VerticalOptions = LayoutOptions.CenterAndExpand;
-    dataForm.HorizontalOptions = LayoutOptions.Center;
-
-{% endhighlight %}
-{% endtabs %}
-
-`Image`
 
 ## Editing
 
