@@ -299,7 +299,11 @@ The following code example gives you the complete code of above configurations.
 
 {% highlight xaml %}
 
-<chart:SfFunnelChart  ItemsSource="{Binding Data}" ShowDataLabels="True" XBindingPath="Name" EnableTooltip="True"        YBindingPath="Value">
+<chart:SfFunnelChart ItemsSource="{Binding Data}" 
+                     ShowDataLabels="True" 
+                     XBindingPath="Name" 
+                     EnableTooltip="True"        
+                     YBindingPath="Value">
     <chart:SfFunnelChart.Title>
         <Label Text="Nutritional Food"/>
     </chart:SfFunnelChart.Title>

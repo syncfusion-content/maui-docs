@@ -91,7 +91,7 @@ Now, let us define a simple data model that represents a data point in the chart
 
 {% highlight c# %}
 
- public class Learning
+ public class Stage
 {
     public string Name { get; set; }
     public double Value { get; set; }
@@ -109,17 +109,16 @@ Next, create a view model class and initialize a list of `Model` objects as foll
 
 public class ChartViewModel
 {
-    public List<Learning> Data { get; set; }
+    public List<Stage> Data { get; set; }
 
     public ChartViewModel()
     {
-        Data = new List<Learning>()
+        Data = new List<Stage>()
         {
-            new Learning(){Name = "Others", Value = 20},
-            new Learning(){Name = "Oils and Sweet", Value = 35},
-            new Learning(){Name = "Protein", Value = 40},
-            new Learning(){Name = "Fruits and vegetables", Value = 56},
-            new Learning(){Name = "Grains", Value = 80},
+            new Stage(){Name = "Stage A", Value = 12},
+            new Stage(){Name = "Stage B", Value = 21},
+            new Stage(){Name = "Stage C", Value = 29},
+            new Stage(){Name = "Stage D", Value = 37},
         };
     }
 }
@@ -199,7 +198,7 @@ The title of the chart acts as the title to provide quick information to the use
 
 <chart:SfPyramidChart>
     <chart:SfPyramidChart.Title>
-        <Label Text="Nutritional Food"/>
+        <Label Text="Pyramid Stages"/>
     </chart:SfPyramidChart.Title>
     . . .
 </chart:SfPyramidChart>
@@ -211,7 +210,7 @@ The title of the chart acts as the title to provide quick information to the use
 SfPyramidChart chart = new SfPyramidChart();
 chart.Title = new Label
 {
-    Text = "Nutritional Food"
+    Text = "Pyramid Stages"
 };
 
 {% endhighlight %}
@@ -299,9 +298,13 @@ The following code example gives you the complete code of above configurations.
 
 {% highlight xaml %}
 
-<chart:SfPyramidChart  ItemsSource="{Binding Data}" ShowDataLabels="True" XBindingPath="Name" EnableTooltip="True"        YBindingPath="Value">
+<chart:SfPyramidChart ItemsSource="{Binding Data}" 
+                      ShowDataLabels="True" 
+                      XBindingPath="Name" 
+                      EnableTooltip="True"        
+                      YBindingPath="Value">
     <chart:SfPyramidChart.Title>
-        <Label Text="Nutritional Food"/>
+        <Label Text="Pyramid Stages"/>
     </chart:SfPyramidChart.Title>
     <chart:SfPyramidChart.BindingContext>
         <model:ChartViewModel/>
@@ -324,7 +327,7 @@ public partial class MainPage : ContentPage
         SfPyramidChart chart = new SfPyramidChart();
         chart.Title = new Label
         {
-            Text = "Nutritional Food"
+            Text = "Pyramid Stages"
         };
         chart.Legend = new ChartLegend();
         ChartViewModel viewModel = new ChartViewModel();
