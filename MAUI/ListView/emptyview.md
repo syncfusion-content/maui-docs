@@ -7,14 +7,14 @@ control: SfListView
 documentation: ug
 ---
 
-# EmptyView in .NET MAUI ListView (SfListView)
+# Empty view in .NET MAUI ListView (SfListView)
 
 The `SfListView` allows to display and customize empty view content when there is no data available to display using the following properties,
 
- * EmptyView object can be set to a string or view when `SfListView` has no items. The default value is null.
- * EmptyViewTemplate is used to customize the appearance of `EmptyView`. The default value is null.
+ * `EmptyView` object can be set to a string or view when `SfListView` has no items. The default value is null.
+ * `EmptyViewTemplate` is used to customize the appearance of `EmptyView`. The default value is null.
 
-## Display a string when listview has no items
+## Display a string when ListView has no items
 
 The `EmptyView` property can be set to a string, which will be displayed when the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsSource) is null, or when the collection specified by the `ItemsSource` property is null or empty.
 
@@ -33,7 +33,7 @@ listView.EmptyView = "No Items";
 {% endhighlight %}
 {% endtabs %}
 
-## Display views when listview has no items
+## Display views when ListView has no items
 
 The `EmptyView` property can be set to a view, which will be displayed when the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsSource) property is null, or when the collection specified by the `ItemsSource` property is null or empty.
 
@@ -83,7 +83,7 @@ N> View displayed by the `EmptyView` can be a single view or a view that contain
 
 Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/how-to-display-a-view-when-.net-maui-listview-has-no-items).
 
-## Display a templated custom type when listview has no items
+## Display a templated custom type when ListView has no items
 The `EmptyView` can be set to a custom type, which is used to display when the `ItemsSource` is null, or when the collection specified by the `ItemsSource` property is null or empty. The appearance of the `EmptyView` can be customized by using the `EmptyViewTemplate`.
 
 {% tabs %}
@@ -156,7 +156,7 @@ FilterItem object is set to the `EmptyView` property, and the `Filter` property 
 
 Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/how-to-customize-the-appearance-of-empty-view-using-empty-view-template-in-.net-maui-listview).
 
-## Change an EmptyView at runtime
+## Change an empty view at runtime
 
 The `EmptyView` can be changed to a specific view at run time and views that can be defined as [ContentView](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.contentview?view=net-maui-7.0) objects in the [ResourceDictionary](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.resourcedictionary?view=net-maui-7.0).
 
@@ -229,7 +229,7 @@ private void CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
 
 Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/how-to-change-empty-view-at-run-time-in-.net-maui-listview).
 
-## Change an EmptyViewTemplate at runtime
+## Change an empty view template at runtime
 
 The `EmptyView` appearance can be changed at run time based on its value using the `EmptyViewTemplate` property.
 
