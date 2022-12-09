@@ -7,21 +7,13 @@ control: SfDataForm
 documentation: ug
 ---
 
-**SfDataForm**
 
-The `Maui DataForm` (SfDataForm) control helps editing the data fields of any data object. It can be used to develop various forms such as login, reservation, data entry, etc. Key features includes the following:
-
-* Layout and grouping: Supports to linear, grid layout and floating label layout with grouping support. Supports customizing the layout with different heights for each item.
-* Caption customization: Supports loading the image as caption for the editor.
-* Editors: Built-in support for text, numeric, numeric up-down, picker, date picker, time picker, switch,drop-down,autoComplete and checkbox editors. 
-* Custom editor: Supports loading the custom editors.
-* Validation: Built-in support to validate the data based on the `INotifyDataErrorInfo` and data annotations. It also programmatically supports validation handling.
 
 # Getting Started with Maui DataForm (SfDataForm)
 
-This section explains the quick overview to use the `Maui DataForm (SfDataForm)` for Maui Dataform in your application.
+This section provides a quick overview of how to get started with the .NET Maui DataForm(SfDataForm) for Maui and also provides a walk-through to configure the .NET MAUI DataForm control in a real-time scenario.
 
-## Creating an application using the .NET MAUI Scheduler
+## Creating an application using the .NET MAUI DataForm
 
 1. Create a new .NET MAUI application in Visual Studio.
 
@@ -36,7 +28,7 @@ This section explains the quick overview to use the `Maui DataForm (SfDataForm)`
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 5" %}
 
     <ContentPage   
-            . . .
+            
             xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm"
 
             <dataForm:SfDataForm />
@@ -68,7 +60,7 @@ The `Syncfusion.Maui.Core` nuget is a dependent package for all Syncfusion contr
 {% tabs %}
 {% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
 
-    namespace ValidationModeSample;
+    
     using Syncfusion.Maui.Core.Hosting;
 
     public static class MauiProgram
