@@ -75,8 +75,10 @@ private double? percentage;
 
 {% tabs %}
 {% highlight c# %}
- 
-    private void DataForm_GenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+
+ this.DataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+
+    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
 
         if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name")
@@ -135,16 +137,16 @@ The label position can be changed by using the [DataFormDefaultLayoutSettings.La
     <DataForm:SfDataForm
         x:Name="DataForm"
         DataObject="{Binding DataObjects}"
-        GenerateDataFormItem="DataForm_GenerateDataFormItem">
+        GenerateDataFormItem="OnGenerateDataFormItem">
     </DataForm:SfDataForm>
 </ContentPage>
 
 {% endhighlight %}
 {% highlight c# %}
 
-this.DataForm.GenerateDataFormItem += DataForm_GenerateDataFormItem;
+this.DataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void DataForm_GenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
 
         if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name")
@@ -163,6 +165,26 @@ this.DataForm.GenerateDataFormItem += DataForm_GenerateDataFormItem;
 
 Image can be loaded instead of label  by using [LeadingLabelIcon] property of `DataFormItem`.
 
+## Using Event
+
+{% tabs %}
+{% highlight c# %}
+
+this.DataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+
+    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+    {
+        if (e.DataFormItem != null)
+        {
+            if (e.DataFormItem.FieldName == "Name")
+            {
+                e.DataFormItem.LeadingLabelIcon = ImageSource.FromFile("ContactInfo.png");
+            }
+        }
+    }
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Changing order of the DataFormItem
 
@@ -191,9 +213,9 @@ The fields order can be changed by using the [RowOrder] property in the `DataFor
 {% tabs %}
 {% highlight c# %}
 
-this.DataForm.GenerateDataFormItem += DataForm_GenerateDataFormItem;
+this.DataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void DataForm_GenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
 
         if (e.DataFormItem != null)
@@ -235,9 +257,9 @@ The order of the fields can be changed by using the [ItemsOrderInRow] property i
 {% tabs %}
 {% highlight c# %}
 
-this.DataForm.GenerateDataFormItem += DataForm_GenerateDataFormItem;
+this.DataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void DataForm_GenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
 
         if (e.DataFormItem != null)
@@ -287,9 +309,9 @@ public class ContactsInfo
 {% tabs %}
 {% highlight c# %}
 
-this.DataForm.GenerateDataFormItem += DataForm_GenerateDataFormItem;
+this.DataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void DataForm_GenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
         if (e.DataFormItem != null)
         {
@@ -328,9 +350,9 @@ The order of the `DataFormGroupItem` can also be changed by handling the `Genera
 {% tabs %}
 {% highlight c# %}
 
-this.DataForm.GenerateDataFormItem += DataForm_GenerateDataFormItem;
+this.DataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-        private void DataForm_GenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+        private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
 
         if (e.DataFormItem != null)
@@ -364,9 +386,9 @@ The `GroupName` for the group can be changed in the `GenerateDataFormItem` event
 {% tabs %}
 {% highlight c# %}
 
-this.DataForm.GenerateDataFormItem += DataForm_GenerateDataFormItem;
+this.DataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-       private void DataForm_GenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+       private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
         if (e.DataFormItem != null)
         {
@@ -391,9 +413,9 @@ By setting the `ColumnCount` property in the data form, non-grouped items only w
 {% tabs %}
 {% highlight c# %}
 
-this.DataForm.GenerateDataFormItem += DataForm_GenerateDataFormItem;
+this.DataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void DataForm_GenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
         if (e.DataFormGroupItem != null)
         {
@@ -437,9 +459,9 @@ public class ContactsInfo
 {% endhighlight %}
 {% highlight c# %}
 
-this.DataForm.GenerateDataFormItem += DataForm_GenerateDataFormItem;
+this.DataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void DataForm_GenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
         if (e.DataFormGroupItem != null)
         {
@@ -464,9 +486,9 @@ The different `ColumnCount` can also be set for each group.
 {% tabs %}
 {% highlight c# %}
 
-this.DataForm.GenerateDataFormItem += DataForm_GenerateDataFormItem;
+this.DataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void DataForm_GenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
         if (e.DataFormGroupItem != null)
         {
@@ -492,9 +514,9 @@ By default, the group will be loaded in expanded state. You can collapse the gro
 {% tabs %}
 {% highlight c# %}
 
-this.DataForm.GenerateDataFormItem += DataForm_GenerateDataFormItem;
+this.DataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void DataForm_GenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
         if (e.DataFormGroupItem != null)
         {
@@ -515,9 +537,9 @@ The group being expanded or collapsed can be restricted by setting the [AllowExp
 {% tabs %}
 {% highlight c# %}
 
-this.DataForm.GenerateDataFormItem += DataForm_GenerateDataFormItem;
+this.DataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void DataForm_GenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
         if (e.DataFormGroupItem != null)
         {
@@ -538,9 +560,9 @@ The [DataFormGroupItem] visibility can be changed by using the [IsVisible] prope
 {% tabs %}
 {% highlight c# %}
 
-this.DataForm.GenerateDataFormItem += DataForm_GenerateDataFormItem;
+this.DataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void DataForm_GenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
         if (e.DataFormGroupItem != null)
         {
@@ -622,9 +644,9 @@ The row height of each `DataFormItem` can also be increased by using the [RowSpa
 {% tabs %}
 {% highlight c# %}
 
-this.DataForm.GenerateDataFormItem += DataForm_GenerateDataFormItem;
+this.DataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void DataForm_GenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
         if (e.DataFormItem != null)
         {
@@ -667,9 +689,9 @@ When the grid layout is used, you can increase the column width of each `DataFor
 {% tabs %}
 {% highlight c# %}
 
-this.DataForm.GenerateDataFormItem += DataForm_GenerateDataFormItem;
+this.DataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void DataForm_GenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
         if (e.DataFormItem != null)
         {
