@@ -122,7 +122,7 @@ Chart selection types:
 * [SelectionBrush](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelectionBehavior.html#Syncfusion_Maui_Charts_ChartSelectionBehavior_SelectionBrush) - Gets or sets the brush color for the selection.
 * [SelectedIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelectionBehavior.html#Syncfusion_Maui_Charts_ChartSelectionBehavior_SelectedIndex) - Gets or sets the value of the index to be selected.
 * [SelectedIndexes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelectionBehavior.html#Syncfusion_Maui_Charts_ChartSelectionBehavior_SelectedIndexes) - Gets or sets the list of indexes to be selected.
-* [ClearSelection]() - Used to reset all the selection customizations to default.
+* [ClearSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelectionBehavior.html#Syncfusion_Maui_Charts_ChartSelectionBehavior_ClearSelection) - Used to reset all the selection customizations to default.
 
 ## Events
 
@@ -134,7 +134,7 @@ The [SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Char
 
 * [NewIndexes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelectionChangingEventArgs.html#Syncfusion_Maui_Charts_ChartSelectionChangingEventArgs_NewIndexes) - Gets the index of the selected items.
 * [OldIndexes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSelectionChangingEventArgs.html#Syncfusion_Maui_Charts_ChartSelectionChangingEventArgs_OldIndexes) - Gets the index of the deselected items.
-* [Cancel]() - Gets or sets a value indicating whether to continue the selection.
+* `Cancel` - Gets or sets a value indicating whether to continue the selection.
 
 ### SelectionChanged
 

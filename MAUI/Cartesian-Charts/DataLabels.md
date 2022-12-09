@@ -65,9 +65,9 @@ Data labels can be customized by using the [DataLabelSettings](https://help.sync
 
 The alignment of data labels inside the series is defined by using the [BarAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CartesianDataLabelSettings.html#Syncfusion_Maui_Charts_CartesianDataLabelSettings_BarAlignment) property. 
 
-* [Top](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Alignment.html#Syncfusion_Maui_Charts_Alignment_Top) - Positions the data label at the top edge point of a chart segment.
-* [Middle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Alignment.html#Syncfusion_Maui_Charts_Alignment_Middle) - Positions the data label at the center point of a chart segment.
-* [Bottom](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Alignment.html#Syncfusion_Maui_Charts_Alignment_Bottom) - Positions the data label at the bottom edge point of a chart segment.
+* [Top](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DataLabelAlignment.html#Syncfusion_Maui_Charts_DataLabelAlignment_Top) - Positions the data label at the top edge point of a chart segment.
+* [Middle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DataLabelAlignment.html#Syncfusion_Maui_Charts_DataLabelAlignment_Middle) - Positions the data label at the center point of a chart segment.
+* [Bottom](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DataLabelAlignment.html#Syncfusion_Maui_Charts_DataLabelAlignment_Bottom) - Positions the data label at the bottom edge point of a chart segment.
 
 N> This behavior varies based on the chart series type.
 
@@ -108,7 +108,7 @@ chart.Series.Add(series);
 
 Other than the above alignment options, Chart providing additional customization option to position the data labels. 
 
-The [LabelPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartDataLabelSettings.html#Syncfusion_Maui_Charts_ChartDataLabelSettings_LabelPlacement) property is used to position the data labels at [Center](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Placement.html#Syncfusion_Maui_Charts_Placement_Center), [Inner](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Placement.html#Syncfusion_Maui_Charts_Placement_Inner) and [Outer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Placement.html#Syncfusion_Maui_Charts_Placement_Outer) position of the actual data point position. By default, labels are positioned based on the series types for better readability.
+The [LabelPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartDataLabelSettings.html#Syncfusion_Maui_Charts_ChartDataLabelSettings_LabelPlacement) property is used to position the data labels at [Center](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DataLabelPlacement.html#Syncfusion_Maui_Charts_DataLabelPlacement_Center), [Inner](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DataLabelPlacement.html#Syncfusion_Maui_Charts_DataLabelPlacement_Inner) and [Outer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DataLabelPlacement.html#Syncfusion_Maui_Charts_DataLabelPlacement_Outer) position of the actual data point position. By default, labels are positioned based on the series types for better readability.
 
 ## Applying Series Brush
 

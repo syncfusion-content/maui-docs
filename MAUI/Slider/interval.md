@@ -49,3 +49,38 @@ SfSlider slider = new SfSlider()
 {% endtabs %}
 
 ![Slider numeric interval](images/interval/numeric-interval.png)
+
+## Auto interval
+
+If the [`ShowTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowTicks) or [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels), or [`ShowDividers`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowDividers) properties are `True`, but the [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Interval) is `0`, the [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Interval) will be calculated from the available size.
+
+For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Minimum) is 0, the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Maximum) is 10.0, [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Interval) is 0.0, and consider the screen size as 350, the Range Selector will render the labels, major ticks, and dividers at 0.0, 2.0, 4.0, 6.0, 8.0, and 10.0.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfSlider Minimum="0"
+                  Maximum="10"
+                  Value="5"
+                  ShowLabels="True"
+                  ShowTicks="True"
+                  ShowDividers="True" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfSlider slider = new SfSlider()
+{
+    Minimum = 0,
+    Maximum = 10,
+    Value = 5,
+    ShowDividers = true,
+    ShowLabels = true,
+    ShowTicks = true,
+};
+
+{% endhighlight %}
+
+{% endtabs %}

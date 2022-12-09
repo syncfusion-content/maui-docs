@@ -86,10 +86,10 @@ By using the [StartAngle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Ch
 
 <chart:SfCircularChart>
     <chart:PieSeries StartAngle="180"
-					 EndAngle="360"
-					 ItemsSource="{Binding Data}"
-					 XBindingPath="Product"
-					 YBindingPath="SalesRate" />
+				EndAngle="360"
+				ItemsSource="{Binding Data}"
+				XBindingPath="Product"
+				YBindingPath="SalesRate" />
 </chart:SfCircularChart>
 
 {% endhighlight %}
