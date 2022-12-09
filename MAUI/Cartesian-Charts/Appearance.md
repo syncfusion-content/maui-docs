@@ -14,33 +14,6 @@ The appearance of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfus
 
 By default, chart applies a set of predefined brushes to the series in a predefined order. [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html) provides [PaletteBrushes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_PaletteBrushes) property for applying various kinds of custom palettes brushes.
 
-### Predefined PaletteBrushes
-
-Currently, Chart supports only one predefined palette and it is the default palette for SfCartesianChart. The following screenshot shows the default appearance of multiple series.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<chart:SfCartesianChart x:Name="chart">
-
-</chart:SfCartesianChart>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-SfCartesianChart chart = new SfCartesianChart();
-
-. . .
-this.Content = chart;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Predefined PaletteBrushes in MAUI Chart](Appearance_images/MAUI_chart_predefined_palette.png)
-
 ### Custom PaletteBrushes
 
 [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html) provides support to define own brushes for the chart with preferred order by using the [PaletteBrushes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_PaletteBrushes) property, as shown in the following code example.

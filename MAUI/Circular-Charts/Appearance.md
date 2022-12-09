@@ -8,40 +8,8 @@ documentation: ug
 ---
 
 # Appearance in .NET MAUI Circular Chart
+
 The appearance of the [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html) can be customized by using the predefined palettes, custom palettes, and gradient which allows enriching the application.
-
-## Predefined PaletteBrushes
-
-Currently, the [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html) supports only one predefined [PaletteBrushes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_PaletteBrushes) and it is the default brushes for any circular series. The following screenshot shows the default appearance of the pie series.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<chart:PieSeries ItemsSource="{Binding Data}" 
-                 XBindingPath="Product" 
-                 YBindingPath="SalesRate">
-</chart:PieSeries>
-
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-PieSeries series = new PieSeries()
-{
-	ItemsSource = new ViewModel().Data,
-	XBindingPath = "XValue",
-	YBindingPath = "YValue" 
-};
-. . .
-chart.Series.Add(series);
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Predefined palette in MAUI Chart](Appearance_images/MAUI_pie_chart_predefined_palette.png)
 
 ## Custom PaletteBrushes
 
