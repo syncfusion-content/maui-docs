@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Header Configuration with Syncfusion Backdrop Page | Syncfusion
-description: Learn here all about how to configure and customize the header in the Syncfusion backdrop page control in Xamarin.Forms platform.
+description: Learn here all about how to configure and customize the header in the Syncfusion backdrop page control in .NET MAUI platform.
 platform: MAUI
 control: SfBackdropPage
 documentation: ug
