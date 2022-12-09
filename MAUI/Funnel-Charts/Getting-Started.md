@@ -91,10 +91,10 @@ Now, let us define a simple data model that represents a data point in the chart
 
 {% highlight c# %}
 
- public class Learning
+ public class Admission
 {
-    public string Name { get; set; }
-    public double Value { get; set; }
+    public string XValue { get; set; }
+    public double YValue { get; set; }
 }
 
 {% endhighlight %} 
@@ -109,17 +109,17 @@ Next, create a view model class and initialize a list of `Model` objects as foll
 
 public class ChartViewModel
 {
-    public List<Learning> Data { get; set; }
+    public List<Admission> Data { get; set; }
 
     public ChartViewModel()
     {
-        Data = new List<Learning>()
+        Data = new List<Admission>()
         {
-            new Learning(){Name = "Others", Value = 20},
-            new Learning(){Name = "Oils and Sweet", Value = 35},
-            new Learning(){Name = "Protein", Value = 40},
-            new Learning(){Name = "Fruits and vegetables", Value = 56},
-            new Learning(){Name = "Grains", Value = 80},
+            new Admission() {XValue = "Enrolled", YValue=175},
+            new Admission() {XValue = "Admits", YValue=190},
+            new Admission() {XValue = "Applicants", YValue=245},
+            new Admission() {XValue = "Inquiries ", YValue=290},
+            new Admission() {XValue = "Prospects ", YValue=320},
         };
     }
 }
@@ -168,8 +168,8 @@ chart.BindingContext = viewModel;
 {% highlight xaml %}
 
 <chart:SfFunnelChart ItemsSource="{Binding Data}" 
-                     XBindingPath="Name" 
-                     YBindingPath="Value"/>
+                     XBindingPath="XValue" 
+                     YBindingPath="YValue"/>
 . . .            
 </chart:SfFunnelChart>
 
@@ -181,8 +181,8 @@ SfFunnelChart chart = new SfFunnelChart();
 ChartViewModel viewModel = new ChartViewModel();
 chart.BindingContext = viewModel;
 chart.ItemsSource = viewModel.Data;
-chart.XBindingPath = "Name";
-chart.YBindingPath = "Value";
+chart.XBindingPath = "XValue";
+chart.YBindingPath = "YValue";
 this.Content = chart;
 
 {% endhighlight %}
@@ -199,7 +199,7 @@ The title of the chart acts as the title to provide quick information to the use
 
 <chart:SfFunnelChart>
     <chart:SfFunnelChart.Title>
-        <Label Text="Nutritional Food"/>
+        <Label Text="School Admission"/>
     </chart:SfFunnelChart.Title>
     . . .
 </chart:SfFunnelChart>
@@ -211,7 +211,7 @@ The title of the chart acts as the title to provide quick information to the use
 SfFunnelChart chart = new SfFunnelChart();
 chart.Title = new Label
 {
-    Text = "Nutritional Food"
+    Text = "School Admission"
 };
 
 {% endhighlight %}
@@ -301,11 +301,11 @@ The following code example gives you the complete code of above configurations.
 
 <chart:SfFunnelChart ItemsSource="{Binding Data}" 
                      ShowDataLabels="True" 
-                     XBindingPath="Name" 
-                     EnableTooltip="True"        
-                     YBindingPath="Value">
+                     XBindingPath="XValue" 
+                     YBindingPath="YValue"
+                     EnableTooltip="True">
     <chart:SfFunnelChart.Title>
-        <Label Text="Nutritional Food"/>
+        <Label Text="School Admission"/>
     </chart:SfFunnelChart.Title>
     <chart:SfFunnelChart.BindingContext>
         <model:ChartViewModel/>
@@ -328,15 +328,15 @@ public partial class MainPage : ContentPage
         SfFunnelChart chart = new SfFunnelChart();
         chart.Title = new Label
         {
-            Text = "Nutritional Food"
+            Text = "School Admission"
         };
         chart.Legend = new ChartLegend();
         ChartViewModel viewModel = new ChartViewModel();
         chart.BindingContext = viewModel;
 
         chart.ItemsSource = viewModel.Data;
-        chart.XBindingPath = "Name";
-        chart.YBindingPath = "Value";
+        chart.XBindingPath = "XValue";
+        chart.YBindingPath = "YValue";
         chart.EnableTooltip = true;
         chart.ShowDataLabels = true;
         this.Content = chart;
@@ -347,4 +347,4 @@ public partial class MainPage : ContentPage
 
 {% endtabs %}
 
-![Funnel chart in .NET MAUI Chart](Getting-Started_Images/MAUI_pyramid_chart.png)
+![Funnel chart in .NET MAUI Chart](Getting-Started_Images/MAUI_funnel_chart.png)

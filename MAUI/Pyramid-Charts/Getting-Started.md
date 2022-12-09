@@ -300,8 +300,8 @@ The following code example gives you the complete code of above configurations.
 
 <chart:SfPyramidChart ItemsSource="{Binding Data}" 
                       ShowDataLabels="True" 
-                      XBindingPath="Name" 
-                      EnableTooltip="True"        
+                      EnableTooltip="True"
+                      XBindingPath="Name"         
                       YBindingPath="Value">
     <chart:SfPyramidChart.Title>
         <Label Text="Pyramid Stages"/>
