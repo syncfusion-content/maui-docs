@@ -415,7 +415,7 @@ Enum and List type property.
 [EnumDataTypeAttribute]
 </td>
 <td>
-{{'[SfRadioButton]`Link`
+{{'[RadioButton]`Link`
 </td>
 </tr>
 </table>
