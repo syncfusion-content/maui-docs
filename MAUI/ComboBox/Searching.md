@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Searching in .NET MAUI ComboBox control | Syncfusion
-description: Learn how to perform the searching operation in Syncfusion .NET MAUI ComboBox control and more.
+description: Learn how to perform the searching operation in Syncfusion .NET MAUI ComboBox (SfComboBox) control and more.
 platform: maui
 control: SfComboBox
 documentation: ug
@@ -9,11 +9,11 @@ documentation: ug
 
 # Searching in .NET MAUI ComboBox (SfComboBox)
 
-The `ComboBox` control provides rich text searching functionality. The `TextSearchMode` property of the `ComboBox` can be used to regulate how the control behaves when it receives user input.
+The [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control provides rich text searching functionality. The `TextSearchMode` property of the [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) can be used to regulate how the control behaves when it receives user input.
 
 ## Search based on member path
 
-The `DisplayMemberPath` and `TextMemberPath` properties of ComboBox control specify the property path, by which the searching must be done when a custom data is bound to the `ItemsSource` property.
+The [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DisplayMemberPath) and [TextMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_TextMemberPath) properties of ComboBox control specify the property path, by which the searching must be done when a custom data is bound to the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ItemsSource) property.
 
  * `DisplayMemberPath` - Specifies the property path whose value is displayed as text in the drop-down menu. The default value is `string.Empty`.
 
@@ -25,7 +25,7 @@ N> When both the `DisplayMemberPath` and `TextMemberPath` properties have a `nul
 
 ## Edit mode Searching based on TextMemberPath
 
-In edit mode, searching will be performed based on the `TextMemberPath` property while entering the text into the selection box. When `TextMemberPath` is `null` or `string.Empty`, searching will be performed based on `DisplayMemberPath`. 
+In edit mode, searching will be performed based on the [TextMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_TextMemberPath) property while entering the text into the selection box. When TextMemberPath is `null` or `string.Empty`, searching will be performed based on [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DisplayMemberPath). 
 
 {% tabs %}
 {% highlight xaml %}
@@ -52,7 +52,7 @@ The following image illustrates the result of the above code:
 
 ## Non-Editable mode Searching based on DisplayMemberPath
 
-In non-editable mode, searching will be performed based on the `DisplayMemberPath` property when user input is received in drop-down. 
+In non-editable mode, searching will be performed based on the [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DisplayMemberPath) property when user input is received in drop-down. 
 
 {% tabs %}
 {% highlight xaml %}
@@ -82,14 +82,14 @@ N> Auto appending of text is supported only in `Editable` mode and `TextSearchMo
 
 ## Text Search Mode
 
-The `TextSearchMode` property of the `ComboBox` can be used to regulate how the control behaves when it receives user input. The default text searching type is `StartsWith`, ignoring accent and it is case insensitive. The available text search modes are:
+The [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_TextSearchMode) property of the [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) can be used to regulate how the control behaves when it receives user input. The default text searching type is [StartWith](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxTextSearchMode.html#Syncfusion_Maui_Inputs_ComboBoxTextSearchMode_StartsWith), ignoring accent and it is case insensitive. The available text search modes are:
 
 * StartsWith
 * Contains
 
 ### Search with beginning text
 
-Set the `TextSearchMode` property value to `StartWith` to search the matching items based on the starting text, and the first item which fits the user input in the drop-down list, will be highlighted.
+Set the [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_TextSearchMode) property value to [StartWith](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxTextSearchMode.html#Syncfusion_Maui_Inputs_ComboBoxTextSearchMode_StartsWith) to search the matching items based on the starting text, and the first item which fits the user input in the drop-down list, will be highlighted.
 
 {% tabs %}
 {% highlight XAML %}
@@ -116,7 +116,7 @@ The following image illustrates the result of the above code:
 
 ### Search with contains text
 
-Set the `TextSearchMode` property value to `Contains` to search the matching items containing specific text, and the first item which fits the user input in the drop-down list, will be highlighted.
+Set the [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_TextSearchMode) property value to [Contains](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxTextSearchMode.html#Syncfusion_Maui_Inputs_ComboBoxTextSearchMode_Contains) to search the matching items containing specific text, and the first item which fits the user input in the drop-down list, will be highlighted.
 
 {% tabs %}
 {% highlight xaml %}
