@@ -308,6 +308,8 @@ this.Content= chart;
 
 {% endtabs %}
 
+![Marker support in MAUI Chart](Chart-types_images/marker_support.png)
+
 ### Customizing marker support
 
 To enable marker support customization, create an instance of the series MarkerSettings property. 
