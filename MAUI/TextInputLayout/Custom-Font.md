@@ -1,0 +1,121 @@
+---
+layout: post
+title: Font Customization  in .NET MAUI Text Input Layout control | Syncfusion
+description: Learn here all about Font Customization  support in Syncfusion .NET MAUI Text Input Layout (SfTextInputLayout) control and more.
+platform: maui
+control: SfTextInputLayout
+documentation: ug
+---
+
+# Font Customization  in .NET MAUI Text Input Layout (SfTextInputLayout)
+
+You can customize the appearance (size, attributes, and family) of font by setting the FontFamily, FontSize, and FontAttributes properties of the LabelStyle property.
+
+Refer to this [documentation](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/fonts) to configure the custom fonts in .NET MAUI.
+
+## Hint
+
+You can customize the font of `hint` label by setting the FontFamily, FontSize, and FontAttributes, properties of HintLabelStyle in SfTextInputLayout.
+
+{% tabs %} 
+
+{% highlight xaml %}
+
+<inputLayout:SfTextInputLayout Hint="Name"
+                               ContainerType="Outlined"
+                               HelperText="Enter your name">
+    <Entry />
+    <inputLayout:SfTextInputLayout.HintLabelStyle>
+        <inputLayout:LabelStyle FontSize="16" FontFamily="Lobster-Regular"/>
+    </inputLayout:SfTextInputLayout.HintLabelStyle>
+</inputLayout:SfTextInputLayout> 
+
+{% endhighlight %}
+
+{% highlight C# %} 
+
+var inputLayout = new SfTextInputLayout();
+inputLayout.Hint = "Name";
+inputLayout.ContainerType = ContainerType.Outlined;
+inputLayout.HelperText = "Enter your name";
+inputLayout.HintLabelStyle = new LabelStyle() { FontFamily = "Lobster-Regular", FontSize = 16};
+inputLayout.Content = new Entry(); 
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Hint label style](images/CustomFont/HintLabelStyle.png)
+
+## Helper text
+
+You can customize the font of `helper text` label by setting the FontFamily, FontSize, and FontAttributes properties of HelperLabelStyle in SfTextInputLayout.
+
+{% tabs %} 
+
+{% highlight xaml %}
+
+<inputLayout:SfTextInputLayout Hint="Name"
+                               ContainerType="Outlined"
+                               CharMaxLength="3"
+                               ShowCharCount="True"
+                               HelperText="Enter your name">
+    <Entry />
+    <inputLayout:SfTextInputLayout.HelperLabelStyle>
+        <inputLayout:LabelStyle FontSize="12" FontFamily="Lobster-Regular"/>
+    </inputLayout:SfTextInputLayout.HelperLabelStyle>
+</inputLayout:SfTextInputLayout> 
+
+{% endhighlight %}
+
+{% highlight C# %} 
+
+var inputLayout = new SfTextInputLayout();
+inputLayout.Hint = "Name";
+inputLayout.ContainerType = ContainerType.Outlined;
+inputLayout.HelperText = "Enter your name";
+inputLayout.HelperLabelStyle = new LabelStyle() { FontFamily = "Lobster-Regular", FontSize = 12};
+inputLayout.Content = new Entry(); 
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Helper label style](images/CustomFont/HelperLabelStyle.png)
+
+## Error text
+
+You can customize the font of `error text` label by setting the FontFamily, FontSize, and FontAttributes properties of ErrorLabelStyle in SfTextInputLayout.
+
+{% tabs %} 
+
+{% highlight xaml %}
+
+<inputLayout:SfTextInputLayout
+    Hint="Name"
+    ContainerType="Outlined"
+    HasError="True"
+    ErrorText="Enter valid name">
+    <Entry />
+    <inputLayout:SfTextInputLayout.ErrorLabelStyle>
+        <inputLayout:LabelStyle FontSize="12" FontFamily="Lobster-Regular"/>
+    </inputLayout:SfTextInputLayout.ErrorLabelStyle>
+</inputLayout:SfTextInputLayout> 
+
+{% endhighlight %}
+
+{% highlight C# %} 
+
+var inputLayout = new SfTextInputLayout();
+inputLayout.Hint = "Name";
+inputLayout.ContainerType = ContainerType.Outlined;
+inputLayout.HasError = true;
+inputLayout.ErrorText = "Enter valid name";
+inputLayout.ErrorLabelStyle = new LabelStyle() { FontFamily = "Lobster-Regular", FontSize = 12};
+inputLayout.Content = new Entry(); 
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Error label style](images/CustomFont/ErrorLabelStyle.png)
