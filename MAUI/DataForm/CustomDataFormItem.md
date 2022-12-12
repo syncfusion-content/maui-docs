@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Working with DataForm in Maui DataForm control | Syncfusion
+title: Custom DataFormItem in Maui DataForm control | Syncfusion
 description: Learn here all about Working with DataForm support in Syncfusion Maui DataForm (SfDataForm) control and more.
 platform: Maui
 control: SfDataForm
@@ -9,7 +9,7 @@ documentation: UG
 
 ## Adding custom DataFormItems
 
-Support has been provided to generate custom DataFormItems for the defined business model using the [Items]`Link` property of the `SfDataForm` class. You need to set the [AutoGenerateItems](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.SfDataForm.html#Syncfusion_XForms_DataForm_SfDataForm_AutoGenerateItems) property to false to restrict the auto generation of DataFormItems. 
+Support has been provided to generate custom DataFormItems for the defined business model using the [Items]`Link` property of the `SfDataForm` class. You need to set the [AutoGenerateItems]`Link` property to false to restrict the auto generation of DataFormItems. 
 
 {% tabs %}
 {% highlight xaml %}
@@ -80,16 +80,12 @@ Support has been provided to generate custom DataFormItems for the defined busin
         var list = new List<string>(); 
         if (sourceName == "Countries") 
         { 
-            list.Add("Afghanistan");
-            list.Add("Akrotiri");
-            list.Add("Albania");
-            list.Add("Algeria");
-            list.Add("American Samoa");
-            list.Add("Andorra");
-            list.Add("Angola");
-            list.Add("Anguilla");
-            list.Add("Antarctica");
-            list.Add("Antigua and Barbuda");
+            list.Add("India");
+            list.Add("Japan");
+            list.Add("China");
+            list.Add("USA");
+            list.Add("America");
+            list.Add("UK");
         } 
         return list; 
     }
