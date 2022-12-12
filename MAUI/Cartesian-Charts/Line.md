@@ -266,3 +266,4 @@ this.Content = chart;
 {% endtabs %}
 
 ![Spline types chart in MAUI Chart](Chart-types_images/maui_spline_types_chart.png)
+
