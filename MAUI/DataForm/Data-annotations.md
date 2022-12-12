@@ -52,26 +52,10 @@ Specifies whether the field should be auto generated or not. Refer to `Link` for
 </tr>
 <tr>
 <td>
-{{'[AutoGenerateFilter]`Link`
-</td>
-<td>
-Specifies the value that indicates whether filtering UI is automatically displayed for that field.
-</td>
-</tr>
-<tr>
-<td>
 {{'[ResourceType]`Link`
 </td>
 <td>
-Specifies the type that contains the resources for the other disply attributes property.
-</td>
-</tr>
-<tr>
-<td>
-{{'[Description]`Link`
-</td>
-<td>
-Specifies the value that is used to display a description in the UI.
+Specifies the Resources File (.Resx) which is used to localize the Display attribute of `Name`, `ShortName`, `GroupName` and `Prompt` values.
 </td>
 </tr>
 <tr>
@@ -131,14 +115,6 @@ Specifies the required data field value. Refer to `Link` for more details.
 </tr>
 <tr>
 <td>
-Range
-</td>
-<td>
-Specifies the maximum and minimum values. Refer to `Link` for more details.
-</td>
-</tr>
-<tr>
-<td>
 StringLength
 </td>
 <td>
@@ -167,16 +143,12 @@ It specifies enum type for the data field.
 
 It specifies data type for the field.
 
-Supported data types are Text, MultilineText, Date, DateTime, Time, and Currency.
+Supported data types are Text, MultilineText, Date, DateTime and Time.
 
 Refer to `Link` for more details.
 
-## CustomDataType attribute
-
-The Percent data type is supported. Refer to `Link` for more details.
-
 ## Custom attribute
-The data form supports the following custom attribute, and these attributes can be accessible using `Syncfusion.SfDataForm.XForms`.
+The data form supports the following custom attribute, and these attributes can be accessible using `Syncfusion.Maui.DataForm`.
 
 ### DataFormDisplayOptions attribute
 
@@ -221,6 +193,14 @@ Specifies positive message to be shown when validation is passed. Refer to `Link
 Specifies whether the label should be visible or not. Refer to `Link` for more details.
 </td>
 </tr>
+<tr>
+<td>
+{{'[ItemsOrderInRow] `Link`
+</td>
+<td>
+Specifies the ItemsOrderInRow property to display multiple editors in a single row. Two items with the same RowOrder property value are placed in this row according to their ItemOrderInRow property values.
+</td>
+</tr>
 </table>
 
 ### DataFormValueConverter attribute
@@ -244,7 +224,7 @@ Specifies the Converter type which converts the original value in different form
 </tr>
 </table>
 
-### DateRange attribute
+### DateFormDateRange attribute
 
 <table>
 <tr>
