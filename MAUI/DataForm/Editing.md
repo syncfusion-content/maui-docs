@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Commit in .NET MAUI DataForm control | Syncfusion
-description: Learn here all about the commit support in Syncfusion .NET MAUI DataForm (SfDataForm) and more.
+description: Learn here all about the commit feature in Syncfusion .NET MAUI DataForm (SfDataForm) control and more.
 platform: maui
 control: SfDataForm
 documentation: ug
@@ -31,7 +31,7 @@ Text
 The String type property and any other type apart from the following specified cases.
 </td>
 <td>
-{{'[Entry]'| markdownify }}
+{{'[Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry?view=net-maui-7.0)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -39,14 +39,14 @@ The String type property and any other type apart from the following specified c
 MultilineText
 </td>
 <td>
-{{'[DataFormMultiLineTextEditor]'| markdownify }}
+{{'[DataFormMultilineTextEditor]'| markdownify }}
 </td>
 <td>
 The String type property with multi line text.
 [DataType(DataType.MultilineText)] 
 </td>
 <td>
-{{'[Editor]'| markdownify }}
+{{'[Editor](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/editor?view=net-maui-7.0)'| markdownify }}
 </td>
 </tr>
 </tr>
@@ -62,7 +62,7 @@ The String type property and property with
 [DataType(DataType.Password)] attribute.
 </td>
 <td>
-{{'[Entry]'| markdownify }}
+{{'[Entry]((https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry?view=net-maui-7.0))'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -76,7 +76,7 @@ Checkbox
 Bool type property.
 </td>
 <td>
-{{'[CheckBox]'| markdownify }}
+{{'[CheckBox](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/checkbox?view=net-maui-7.0)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -90,7 +90,7 @@ Switch
 Bool type property.
 </td>
 <td>
-{{'[Switch]'| markdownify }}
+{{'[Switch](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/switch?view=net-maui-7.0)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -101,10 +101,10 @@ Date Picker
 {{'[DataFormDatePickerEditor]'| markdownify }}
 </td>
 <td>
-The DateTime type property and the property with [DataType(DataType.Date)] and [DataType(DataType.DateTime)] attributes.
+The DateTime, DateTimeOffset, DateOnly property and the property with [DataType(DataType.Date)] and [DataType(DataType.DateTime)] attributes.
 </td>
 <td>
-{{'[DatePicker]| markdownify }}
+{{'[DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/datepicker?view=net-maui-7.0)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -115,10 +115,10 @@ Time Picker
 {{'[DataFormTimePickerEditor]'| markdownify }}
 </td>
 <td>
-The property with [DataType(DataType.Time)] attribute.
+The TimeSpan, TimeOnly property and the property with [DataType(DataType.Time)] attribute.
 </td>
 <td>
-{{'[TimePicker]'| markdownify }}
+{{'[TimePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/timepicker?view=net-maui-7.0&tabs=windows)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -133,7 +133,7 @@ Enum and List type property.
 [EnumDataTypeAttribute]
 </td>
 <td>
-{{'[Picker]'| markdownify }}
+{{'[Picker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/picker?view=net-maui-7.0)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -148,7 +148,7 @@ Enum and List type property.
 [EnumDataTypeAttribute]
 </td>
 <td>
-{{'[SfComboBox]'| markdownify }}
+{{'[SfComboBox](https://help.syncfusion.com/maui/combobox)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -163,7 +163,7 @@ Enum and List type property.
 [EnumDataTypeAttribute]
 </td>
 <td>
-{{'[SfAutocomplete]'| markdownify }}
+{{'[SfAutocomplete](https://help.syncfusion.com/xamarin/autocomplete)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -178,7 +178,7 @@ Enum and List type property.
 [EnumDataTypeAttribute]
 </td>
 <td>
-{{'[RadioButton]'| markdownify }}
+{{'[RadioButton](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/radiobutton?view=net-maui-7.0)'| markdownify }}
 </td>
 </tr>
 </table>
@@ -293,6 +293,7 @@ this.DataForm.RegisterEditor("Age", new CustomTextEditor(dataForm));
 {% endtabs %}
 
 The custom DataFormItem editor value should be committed manually by using [OnCommitValue] method of [IDataFormEditor] class on custom editor `Value` or `Focus changed` event which is used to update the custom editor value in respective property in [DataObject] based on dataform [commitMode] set.
+The custom DataFormItem has the following properties [GroupName], [FieldName], [LabelText], [PlaceholderText], [PlaceholderColor], [ShowLabel], [IsReadOnly], [EditorTextStyle], [ErrorLabelTextStyle], [ValidMessageLabelTextStyle], [LabelTextStyle], [Background], [ItemsOrderInRow], [LeadingLabelIcon].
 
 ## Commit mode
 
