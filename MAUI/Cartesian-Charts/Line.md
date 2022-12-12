@@ -380,6 +380,7 @@ this.Content = chart;
 
 ![Marker support in MAUI Chart](Chart-types_images/maui_marker_support.png)
 
+
 Following properties are used to customize marker appearance,
 
 * `Type`- The type property allows to change the rendering type/shape of marker in series. The default value of Type is Circle. The following types are used in marker “circle, rectangle, image, pentagon, vertical Line, horizontal Line, diamond, triangle, inverted Triangle”
