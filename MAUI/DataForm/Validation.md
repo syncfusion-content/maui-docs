@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Validation in .NET MAUI DataForm control | Syncfusion
-description: Learn here all about the validation support in Syncfusion .NET MAUI DataForm (SfDataForm) and more.
+description: Learn here all about the validation feature in Syncfusion .NET MAUI DataForm (SfDataForm) control and more.
 platform: maui
 control: SfDataForm
 documentation: ug
@@ -21,19 +21,6 @@ The supported built in validations are as follows:
 
 You can validate the data using data annotation attributes.
 
-The numeric type like Int, Double, Decimal properties can be validated using the [Range](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.rangeattribute?view=netframework-4.8) attribute.
-
-{% tabs %}
-{% highlight c# %}
-
-    private int age;
-
-    [Range(1,120,ErrorMessage ="Age should be between 1 and 120")]
-    public int Age { get; set; }
-
-{% endhighlight %}
-{% endtabs %}
-
 The String type property can be validated using [Required](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.requiredattribute?view=netframework-4.8) and [StringLength](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.stringlengthattribute?view=netframework-4.8) attributes.
 
 {% tabs %}
@@ -42,7 +29,7 @@ The String type property can be validated using [Required](https://docs.microso
     private string name;
 
     [Required(AllowEmptyStrings = false, ErrorMessage = "Name should not be empty")]
-    [StringLength(10, ErrorMessage = "Name should not exceed 15 characters")]
+    [StringLength(15, ErrorMessage = "Name should not exceed 15 characters")]
     public string Name { get; set; }
 
 {% endhighlight %}
@@ -54,8 +41,6 @@ You can validate the date time value using date range attribute.
 
 {% tabs %}
 {% highlight c# %}
-
-    private DateTime joinDate;
 
     [DataType(DataType.Date)]
     [DataFormDateRange(MinimumDate = "01/01/2022", MaximumDate = "31/12/2022", ErrorMessage = "Join date is invalid")]
@@ -99,13 +84,13 @@ this.DataForm.ValidationMode = DataFormValidationMode.LostFocus;
 
 ### LostFocus
 
-If the commit mode is LostFocus, the value will be validated when the editor lost its focus.
+If the validation mode is LostFocus, the value will be validated when the editor lost its focus. By default the [ValidationMode] is `LostFocus`
 
 ### PropertyChanged
 
-If the commit mode is PropertyChanged, The value will be validated immediately when it is changed.
+If the validation mode is PropertyChanged, The value will be validated immediately when it is changed.
 
-### Explicit
+### Manual
 
 The value should be validated manually by calling the [SfDataForm.Validate] or [SfDataForm.Validate(new List<string>())] method.
 
@@ -140,9 +125,7 @@ You can determine whether the data form or property is valid or not by using the
 
 If the data form or property is valid, `true` will be returned. Or else `false` will be returned.
 
-N> For validating value, the new value should be committed in data object. So, `DataFormValidationMode` takes higher priority than `DataFormCommitMode`.
-
-### Custom validation through events
+### Get Validation details through events
 
 You can validate the entire data form using the [ValidateForm] event of the data form.
 
@@ -156,7 +139,7 @@ You can validate the entire data form using the [ValidateForm] event of the data
 
     <DataForm:SfDataForm
         x:Name="DataForm"
-        ValidateForm="DataForm_ValidateForm">
+        ValidateForm="OnDataFormValidateForm">
     </DataForm:SfDataForm>
 
 </ContentPage>
@@ -164,54 +147,12 @@ You can validate the entire data form using the [ValidateForm] event of the data
 {% endhighlight %}
 {% highlight c# %}
 
-this.DataForm.ValidateForm += DataForm_ValidateForm;
+this.DataForm.ValidateForm += this.OnDataFormValidateForm;
 
-    private void DataForm_ValidateForm(object sender, DataFormValidateFormEventArgs e)
+    private void OnDataFormValidateForm(object sender, DataFormValidateFormEventArgs e)
     {
-        if (e.DataObject != null)
-        {
-            if (e.NewValues != null)
-            {
-                this.DataForm.Validate();
-            }
-        }
-    }
-
-{% endhighlight %}
-{% endtabs %}
-
-You can also validate the each property of data form using the [ValidateProperty] event of the data form.
-
-{% tabs %}
-{% highlight xaml %}
-
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:DataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm"
-             x:Class="CommitMode.MainPage">
-
-    <DataForm:SfDataForm
-        x:Name="DataForm"
-        ValidateProperty="DataForm_ValidateProperty">
-    </DataForm:SfDataForm>
-
-</ContentPage>
-
-{% endhighlight %}
-{% highlight c# %}
-
-this.DataForm.ValidateProperty += DataForm_ValidateProperty;
-
-    private void DataForm_ValidateProperty(object sender, DataFormValidatePropertyEventArgs e)
-    {
-        if (e.PropertyName == "FirstName")
-        {
-            if (e.NewValue != null && e.NewValue.ToString().Length > 8)
-            {
-                e.IsValid = false;
-                e.ErrorMessage = "Name should not exceed 10 characters";
-            }
-        }
+        object dataObject = e.DataObject;
+        var errorMessage = e.ErrorMessage;
     }
 
 {% endhighlight %}
@@ -219,18 +160,65 @@ this.DataForm.ValidateProperty += DataForm_ValidateProperty;
 
 ## Valid message
 
-If the value meets the desired criteria, you can show the [validmessage]. As error message, the valid message will also be displayed at the bottom of the editor.
+If the value meets the desired criteria, you can show the [ValidMessage]. As error message, the valid message will also be displayed at the bottom of the editor.
 
 {% tabs %}
 {% highlight c# %}
 
-    private string name;
-
-    [DataFormDisplayOptions(ValidMessage = "Name length is enough")]
-    [StringLength(10, ErrorMessage = "Name should not exceed 10 characters")]
-    public string Name { get; set; }
+    [DataFormDisplayOptions(ColumnSpan = 2, ValidMessage = "Password strength is good")]
+    [Required(ErrorMessage = "Please enter the password")]
+    [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d]{8,}$", ErrorMessage = "A minimum 8-character password should contain a combination of uppercase and lowercase letters.")]
+    public string Password { get; set; }
 
 {% endhighlight %}
 {% endtabs %}
 
+The [ValidMessageLabelTextStyle] property of [SfDataForm] and [DataFormItem] class is used to customize the text color, font, font size, font family and font  style of valid message label.
+The [ErrorLabelTextStyle] property of [SfDataForm] and [DataFormItem] class is used to customize the text color, font, font size, font family and font  style of error message label.
 
+N> The `ValidMessageLabelTextStyle` and `ErrorLabelTextStyle` property of `DataFormItem` class takes precedence when explicitly defined to particular editor otherwise where `SfDataForm.ErrorLabelTextStyle` and `SfDataForm.ErrorLabelTextStyle` will be applied to the editor.
+
+## Events
+
+### ValidateForm
+
+The [ValidateForm] event is used  to get the invalid DataFormItem’s details such as [DataObject], [NewValues] and [ErrorMessage].
+It occurs when [DataFormValidationMode] is `Manual`.
+
+{% endhighlight %}
+{% highlight c# %}
+
+this.DataForm.ValidateForm += this.OnDataFormValidateForm;
+
+    private void OnDataFormValidateForm(object sender, DataFormValidateFormEventArgs e)
+    {
+        object dataObject = e.DataObject;
+        var values = e.NewValues;
+        var errorMessage = e.ErrorMessage;
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+### ValidateProperty
+
+The [ValidateProperty] event is used to get the invalid DataFormItem’s details such as [IsValid], [PropertyName], [NewValue], [CurrentValue], [ValidMessage] and [ErrorMessage].
+It occurs when `SfDataForm` validates the user input.
+
+{% endhighlight %}
+{% highlight c# %}
+
+this.DataForm.ValidateProperty += this.OnDataFormValidateProperty;
+
+    private void OnDataFormValidateProperty(object sender, DataFormValidatePropertyEventArgs e)
+    {
+        bool isValid = e.IsValid;
+        string propertyName = e.PropertyName;
+        object newValue = e.NewValue;
+        object currentValue = e.CurrentValue;
+        string errorMessage = e.ErrorMessage;
+        string validMessage = e.ValidMessage;
+    }
+
+{% endhighlight %}
+{% endtabs %}
