@@ -112,6 +112,26 @@ The following table illustrates the API migration for the chart.
 <td>ChartBehaviors</td>
 <td>TooltipBehavior, SelectionBehavior</td>
 </tr>
+</table>
+
+### Series
+The following properties are given in [SfPyramidChart]().
+
+<table>
+<tr>
+<tr>
+<th>Xamarin</th>
+<th>.NET MAUI</th></tr>
+</tr>
+<tr>
+<td>Color</td>
+<td> - </td>
+</tr>
+<tr>
+<td>ColorModel</td>
+<td>PaletteBrushes</td>
+</tr>
+<tr>
 <td>SelectedDataPointColor</td>
 <td>SelectionBrush</td>
 </tr>
@@ -238,10 +258,6 @@ this.Content = chart;
 </tr>
 <tr>
 <td>LabelStyle</td>
-<td><em>Upcoming</em></td>
-</tr>
-<tr>
-<td>ItemTemplate</td>
 <td><em>Upcoming</em></td>
 </tr>
 <tr>
@@ -605,8 +621,13 @@ chart.SelectionBehavior = selection;
 
 **Chart** 
 
-* Animation support.
-* Explode support.
+* Exporting support for a chart as an image or a stream.
+* Support for chart localization.
+* Listen to property change support for chart.
+* Notify event or method when chart is rendering.
+* Suspend and resume notification.
+* Support for chart animation.
+* Exploding segments on touch.
 
 **Legend** 
 
@@ -616,13 +637,11 @@ chart.SelectionBehavior = selection;
 * Maximum width support for Legend.
 * Individual legend items based on the data point count.
 * Event or method to notify the legend click and the creation of a legend item.
-* DataTemplate support for legend items.
 
 **Data label**
 
 * DataTemplate support for data labels.
 * Connector lines customization support.
-* SmartLabelAlignment for data label.
 
 **Tooltip**
 
@@ -630,13 +649,11 @@ chart.SelectionBehavior = selection;
 
 ## Unsupported features from Xamarin.Forms
 
-* PyramidMode
-* Color
+* In.NET MAUI, the [ChartDataPoint](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartDataPoint.html#) model class was no longer available. Instead, create your own model.
 
 ## Known issues
 
 * The legend item was not dynamically added.
-* The data label does not support rotation and padding. 
 
 ## Support and feedback
 
