@@ -186,6 +186,8 @@ Enum and List type property.
 
 In the text editor, the [Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry?view=net-maui-7.0) is loaded.
 
+Text editor have Keyboard type change by using `Keyboard` property and you can set maximum allowed length of input by using `MaxLength` property.
+
 ## Multiline Text editor
 
 In the `MultilineText` editor, the [Editor](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/editor?view=net-maui-7.0) is loaded.
@@ -253,7 +255,7 @@ In the [DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface
     private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {   
 
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Date" && e.DataFormItem as DataFormDateItem dateItem)
+        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Date" && e.DataFormItem is DataFormDateItem dateItem)
         {
             dateItem.Format = "dd, MM, yyyy";
         }
@@ -274,7 +276,7 @@ You can customize the maximum and minimum allowable dates in the [DatePicker](ht
 
     private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Date" && e.DataFormItem as DataFormDateItem dateItem)
+        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Date" && e.DataFormItem is DataFormDateItem dateItem)
         {
             dateItem.MinimumDate = new DateTime(2017, 5, 5);
             dateItem.MaximumDate = new DateTime(2017, 9, 2);
@@ -316,7 +318,7 @@ In the [TimePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface
 
     private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "BirthTime" && e.DataFormItem as DataFormTimeItem timeItem)
+        if (e.DataFormItem != null && e.DataFormItem.FieldName == "BirthTime" && e.DataFormItem is DataFormTimeItem timeItem)
         {
             timeItem.Format = "HH:mm";
         }
@@ -433,7 +435,7 @@ You can also set the ItemsSource for combo box editor by using the [GenerateData
 
     private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name" && e.DataFormItem as DataFormComboBoxItem comboBoxItem)
+        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name" && e.DataFormItem is DataFormComboBoxItem comboBoxItem)
         {
             var list = new List<string>();
             list.Add("Home");
@@ -465,7 +467,7 @@ N> Class cannot be directly set as data type for combo box editor in this comple
  
     private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "City" && e.DataFormItem as DataFormComboBoxItem comboBoxItem)
+        if (e.DataFormItem != null && e.DataFormItem.FieldName == "City" && e.DataFormItem is DataFormComboBoxItem comboBoxItem)
         {
             comboBoxItem.DisplayMemberPath = "City";
             comboBoxItem.SelectedValuePath = "PostalCode";
@@ -557,7 +559,7 @@ You can also set `ItemsSource` for picker editor by using the [ItemsSource]`Link
 
     private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name" && e.DataFormItem as DataFormPickerItem pickerItem)
+        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name" && e.DataFormItem is DataFormPickerItem pickerItem)
         {
             var list = new List<string>();
             list.Add("Home");
@@ -587,7 +589,7 @@ N> Class cannot be directly set as data type for picker editor in this complex t
  
     private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "City" && e.DataFormItem as DataFormPickerItem pickerItem)
+        if (e.DataFormItem != null && e.DataFormItem.FieldName == "City" && e.DataFormItem is DataFormPickerItem pickerItem)
         {
             pickerItem.DisplayMemberPath = "City";
             pickerItem.ValueMemberPath = "PostalCode";
@@ -755,7 +757,7 @@ You can also set `ItemsSource` for autocomplete editor by using [ItemsSource]`Li
 
     private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Country" && e.DataFormItem as DataFormAutoCompleteItem autoCompleteItem)
+        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Country" && e.DataFormItem is DataFormAutoCompleteItem autoCompleteItem)
         {
             var list = new List<string>();
             list.Add("Indonesia");
@@ -793,7 +795,7 @@ N> Class cannot be directly set as data type for autocomplete editor in this com
  
     private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "City" && e.DataFormItem as DataFormAutoCompleteItem autoCompleteItem)
+        if (e.DataFormItem != null && e.DataFormItem.FieldName == "City" && e.DataFormItem is DataFormAutoCompleteItem autoCompleteItem)
         {
             autoCompleteItem.DisplayMemberPath = "City";
             autoCompleteItem.SelectedValuePath = "PostalCode";
