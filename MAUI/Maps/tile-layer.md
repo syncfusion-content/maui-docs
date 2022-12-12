@@ -164,7 +164,7 @@ Here, you can replace the serverName as per your wish.
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapTileLayer UrlTemplate = "https://tile.openstreetmap.org/{z}/{x}/{y}.png?name=OpenStreetMap"
+        <map:MapTileLayer UrlTemplate = "http://api.tomtom.com/map/1/tile/basic/main/{z}/{x}/{y}.png?key=subscription_key?name=tomtom"
                           CanCacheTiles= "True">
         </map:MapTileLayer>
     </map:SfMaps.Layer>
@@ -176,7 +176,7 @@ Here, you can replace the serverName as per your wish.
 
 SfMaps map = new SfMaps();
 MapTileLayer tileLayer = new MapTileLayer();
-tileLayer.UrlTemplate = "https://tile.openstreetmap.org/{z}/{x}/{y}.png?name=OpenStreetMap";
+tileLayer.UrlTemplate = "http://api.tomtom.com/map/1/tile/basic/main/{z}/{x}/{y}.png?key=subscription_key?name=tomtom";
 tileLayer.CanCacheTiles = true;
 map.Layer = tileLayer;
 this.Content = map;
