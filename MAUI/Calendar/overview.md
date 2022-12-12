@@ -16,30 +16,57 @@ The Syncfusion .NET MAUI Calendar (SfCalendar) is a lightweight calendar control
 
 * **Multiple calendar views**: Display month, year, decade, and century views that allows user to easily select and navigate between built-in views. Supports programmatic navigation.
 
-   ![monthview-in-maui-calendar](images/overview/MultipleViews/monthview-in-maui-calendar.png)
-   ![yearview-in-maui-calendar](images/overview/MultipleViews/yearview-in-maui-calendar.png)
-   ![decadeview-in-maui-calendar](images/overview/MultipleViews/decadeview-in-maui-calendar.png)
-   ![centuryview-in-maui-calendar](images/overview/MultipleViews/centuryview-in-maui-calendar.png)
+{% multiple_column %}
+{% column %}
+![monthview-in-maui-calendar](images/overview/MultipleViews/monthview-in-maui-calendar.png)
+{% endcolumn}
+{% column %}
+![yearview-in-maui-calendar](images/overview/MultipleViews/yearview-in-maui-calendar.png)
+{% endcolumn}
+{% column %}
+![decadeview-in-maui-calendar](images/overview/MultipleViews/decadeview-in-maui-calendar.png)
+{% endcolumn}
+{% column %}
+![centuryview-in-maui-calendar](images/overview/MultipleViews/centuryview-in-maui-calendar.png)
+{% endcolumn}
+{% endmultiple_column %}
 
 * **Quick navigation**: You can easily navigate to the different views in the SfCalendar.
 
 * **Allow view Navigation**: Allows you to navigate through tap interaction on the cell or header when it is enabled. Restrict users from navigating to different calendar views and allows you to select the dates in the year, decade and century view when this property is not enabled.
 
-	![monthview-range-selection-in-maui-calendar](images/overview/SelectionWhileAllowViewNavigation/monthview-range-selection-in-maui-calendar.png)
-   ![yearview-range-selection-in-maui-calendar](images/overview/SelectionWhileAllowViewNavigation/yearview-range-selection-in-maui-calendar.png)
-   ![decadeview-range-selection-in-maui-calendar](images/overview/SelectionWhileAllowViewNavigation/decadeview-range-selection-in-maui-calendar.png)
-   ![centuryview-range-selection-in-maui-calendar](images/overview/SelectionWhileAllowViewNavigation/centuryview-range-selection-in-maui-calendar.png)
+{% multiple_column %}
+{% column %}
+![monthview-range-selection-in-maui-calendar](images/overview/SelectionWhileAllowViewNavigation/monthview-range-selection-in-maui-calendar.png)
+{% endcolumn}
+{% column %}
+![yearview-range-selection-in-maui-calendar](images/overview/SelectionWhileAllowViewNavigation/yearview-range-selection-in-maui-calendar.png)
+{% endcolumn}
+{% column %}
+![decadeview-range-selection-in-maui-calendar](images/overview/SelectionWhileAllowViewNavigation/decadeview-range-selection-in-maui-calendar.png)
+{% endcolumn}
+{% column %}
+![centuryview-range-selection-in-maui-calendar](images/overview/SelectionWhileAllowViewNavigation/centuryview-range-selection-in-maui-calendar.png)
+{% endcolumn}
+{% endmultiple_column %}
 
 * **Enable Past Dates**: Indicates whether the dates are enabled or disabled before the today date. If this property is disabled, you cannot able to select the dates before the today date and the dates before the today date are considered as disabled dates.
 
    ![enable-past-date-in-maui-calendar](images/overview/enable-past-date-in-maui-calendar.png)
 
 * **Date selection**: The Selection mode is specified in the calendar property enumeration, allows you to select single, multiple, and a range of dates through interaction. It also supports programmatic selection.
-   
-   ![monthview-single-selection-in-maui-calendar](images/overview/DateSelection/monthview-single-selection-in-maui-calendar.png)
-   ![monthview-multiple-selection-in-maui-calendar](images/overview/DateSelection/monthview-multiple-selection-in-maui-calendar.png)
-   ![monthview-range-selection-in-maui-calendar](images/overview/DateSelection/monthview-range-selection-in-maui-calendar.png)
-   
+
+{% multiple_column %}
+{% column %}
+![monthview-single-selection-in-maui-calendar](images/overview/DateSelection/monthview-single-selection-in-maui-calendar.png)
+{% endcolumn}
+{% column %}
+![monthview-multiple-selection-in-maui-calendar](images/overview/DateSelection/monthview-multiple-selection-in-maui-calendar.png)
+{% endcolumn}
+{% column %}
+!![monthview-range-selection-in-maui-calendar](images/overview/DateSelection/monthview-range-selection-in-maui-calendar.png)
+{% endcolumn}
+{% endmultiple_column %}
 
 * **Limit the date selection range**: By setting the minimum and maximum days, you can only able to select the date within the minimum and maximum number of days(span of days).
 
@@ -59,6 +86,6 @@ The Syncfusion .NET MAUI Calendar (SfCalendar) is a lightweight calendar control
 
    ![mothview-rtl-in-maui-calendar](images/overview/mothview-rtl-in-maui-calendar.png)
 
-* **Globalization** - Displays the current date and time based on the globalized date and time formats. You can able change the culture of the calendar.
+* **Globalization** - Displays the current date and time based on the globalized date and time formats. You can able to change the culture of the calendar.
 
    ![globalization-in-maui-calendar](images/overview/globalization-in-maui-calendar.png)
