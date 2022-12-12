@@ -867,15 +867,13 @@ public class Model
 
 ## Marker
 
-You can show markers at any position on the map by providing latitude and longitude position to the [`MapMarker`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker-class.html), which is the widget returns from the [`markerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSublayer/markerBuilder.html) property.
-
-The [`markerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSublayer/markerBuilder.html) callback will be called number of times equal to the value specified in the [`initialMarkersCount`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSublayer/initialMarkersCount.html) property. The default value of the [`initialMarkersCount`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSublayer/initialMarkersCount.html) property is null.
+You can show markers at any position on the map by providing latitude and longitude position to the [`MapMarker`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html), which is from the [`Markers`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_Markers) collection.
 
 N> It is applicable for both tile layer and shape layer.
 
 N>
-* Refer the [`Marker`](https://help.syncfusion.com/flutter/maps/markers) section to know more about the marker feature.
-* Refer the [`Tooltip`](https://help.syncfusion.com/flutter/maps/tooltip) section to know more about the tooltip feature.
+* Refer the [`Markers`](https://help.syncfusion.com/maui/maps/markers) section to know more about the marker feature.
+* Refer the [`Tooltip`](https://help.syncfusion.com/maui/maps/tooltip) section to know more about the tooltip feature.
 
 
 N> You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Maps Sublayer example](https://github.com/syncfusion/maui-demos/) that shows how to configure a Maps in .NET MAUI.

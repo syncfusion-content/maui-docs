@@ -9,7 +9,7 @@ documentation: ug
 
 # Zooming and Panning in .NET MAUI Maps (SfMaps)
 
-It is possible to zoom in and out for any layer to take a closer look at a specific region by pinching the map, scrolling the mouse wheel or track pad, or using the toolbar on the web. Pan the map to navigate across the regions. You can also customize the zoom level and the center point of the rendering.
+It is possible to zoom in and out for any layer to take a closer look at a specific region by pinching the map, scrolling the mouse wheel or track pad. Pan the map to navigate across the regions. You can also customize the zoom level of the rendering.
 
 The procedure for zooming and panning for both layers is very similar.
 
@@ -249,14 +249,14 @@ this.Content = map;
 
 ## Calculate a zoom level based on map geo-bounds or distance
 
-This feature is used to calculate the initial zoom level automatically in two ways:
+This feature is used to calculate the zoom level automatically in two ways:
 
 * Distance in radius(Meter/KiloMeter/Mile)
 * Geo-bounds(Northeast, Southwest)
 
 ### Distance in radius 
 
-Calculate the initial zoom level automatically based on the `Radius` and `DistanceType` properties of imagery layer class.
+Calculate the zoom level automatically based on the `Radius` and `DistanceType` properties of imagery layer class.
 
 N> `DistanceType` property default value is KiloMeter.
 
@@ -364,7 +364,7 @@ private DataTemplate CreateDataTemplate()
 
 ### Geo-bounds
 
-Calculate the initial zoom level automatically based on the `MapLatLngBounds(Northeast, Southwest)` of `MapTileLayer` class.
+Calculate the zoom level automatically based on the `MapLatLngBounds(Northeast, Southwest)` of `MapTileLayer` class.
 
 {% tabs %}
 
@@ -478,7 +478,7 @@ private DataTemplate CreateDataTemplate()
 
 {% endtabs %}
 
-N> When setting `MapLatLngBounds` and `DistanceType` at the same time, the priority is `Radius` and calculate zoom level based radius value.
+N> When setting `MapLatLngBounds` and `DistanceType` at the same time, the priority is `Radius` and so calculate zoom level based on radius value.
 
 ![MAUI SfMaps zoom level changed image](images/zoom-pan/northSouth_Image.png)
 
@@ -562,6 +562,8 @@ this.Content = map;
 ### Center Animation
 
 To perform animation on center value changing using the `MapTileLayer.EnableCenterAnimation` property. The default value of the `EnableCenterAnimation` is `true`.
+
+N> It is applicable only for tile layer.
 
 {% tabs %}
 

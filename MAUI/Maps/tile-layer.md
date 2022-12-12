@@ -109,11 +109,11 @@ this.Content = map;
 
 ## Changing the center latitude and longitude
 
-You can set the center position by setting the `MapTileLayer.Center` property. It represents the initial center position of the map layer.
+You can set the center position by setting the `MapTileLayer.Center` property. It represents the center position of the map layer.
 
-Based on the size of the [`SfMaps`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html) control, `Center` and `ZoomLevel` number of initial tiles needed in the view port alone will be rendered. Refer this section for enabling `zooming and panning`.
+Based on the size of the [`SfMaps`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.html) control, `Center` and `ZoomLevel` number of initial tiles needed in the view port alone will be rendered. Refer this section for enabling `zooming and panning`.
 
-This property cannot be changed dynamically. Defaults to `MapLatLng(0.0, 0.0)`.
+Defaults to `MapLatLng(0.0, 0.0)`.
 
 {% tabs %}
 
@@ -150,7 +150,13 @@ this.Content = map;
 
 ## Cache a tile images in application memory
 
-The `CanCacheTiles` property used to decide whether the tile images should be cached in application memory or not.
+The `CanCacheTiles` property used to decide whether the tile images should be cached in application memory or not. The default value of the `CanCacheTiles` is `false`.
+
+While enabling the `CanCacheTiles` as `true` then need to set the tile server name to maintain the folder to store cache tiles in `MapTileLayer.UrlTemplate` property. The default tile server name to store tile cache is OSM. If you want to change server name you can use the below URL format.
+
+https://example_provider/{z}/{x}/{y}.png?name=serverName
+
+Here, you can replace the serverName as per your wish.
 
 {% tabs %}
 
@@ -158,7 +164,7 @@ The `CanCacheTiles` property used to decide whether the tile images should be ca
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapTileLayer UrlTemplate = "https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+        <map:MapTileLayer UrlTemplate = "https://tile.openstreetmap.org/{z}/{x}/{y}.png?name=OpenStreetMap"
                           CanCacheTiles= "True">
         </map:MapTileLayer>
     </map:SfMaps.Layer>
@@ -170,7 +176,7 @@ The `CanCacheTiles` property used to decide whether the tile images should be ca
 
 SfMaps map = new SfMaps();
 MapTileLayer tileLayer = new MapTileLayer();
-tileLayer.UrlTemplate = "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
+tileLayer.UrlTemplate = "https://tile.openstreetmap.org/{z}/{x}/{y}.png?name=OpenStreetMap";
 tileLayer.CanCacheTiles = true;
 map.Layer = tileLayer;
 this.Content = map;
