@@ -11,7 +11,7 @@ documentation: ug
 
 ## Overview
 
-The data form supports linear and grid layouts. The DataFormLayoutManager creates the [DataFormItemView] and manages layout of label, editor, and validation label.
+The data form supports linear and grid layouts and manages layout of label, editor, and validation label.
 
 ## Linear layout support
 
@@ -23,7 +23,7 @@ When the label position is Top, the linear layout is shown as follows:
 
 ## Grid layout support
 
-By default, the data form arranges one data field per row. It is possible to have more than one data fields per row by setting the [ColumnCount] property which provides grid like layout for the data form.
+By default, the data form arranges one data field per row. It is possible to have more than one data fields per row by setting the [ColumnCount] property which provides grid like layout for the data form. The order of data form field can also be changed in a row using [ItemsOrderInRow]
 
 {% tabs %}
 {% highlight xaml %}
@@ -236,7 +236,7 @@ The order of the `DataFormItem` can be changed within a row by using attributes 
 
 ### Using attributes
 
-The order of the fields can be changed by using the `ItemsOrderInRow` property in [DataFormDisplayOptionsAttribute] attribute.
+The order of the fields can be changed by using the `ItemsOrderInRow` property in [DataFormDisplayOptionsAttribute] attribute. This is applicable only for Grid layout.
 
 {% tabs %}
 {% highlight c# %}
@@ -581,6 +581,11 @@ Here, the `Name` group will be hidden.
 ## Label width customization
 
 The label and editor width can be set proportionally by using [LabelWidth] and [EditorWidth] properties of [DefaultLayoutSettings] class.
+The [Value] and [UnitType] properties of [DataFormItemLength] each return the value and unit type of the corresponding DataFormItemLength, respectively. 
+
+Label and Editor can be specified with proportionate values such as 0.4* and 0.6* when the [DataFormItemLength.UnitType] is 'Star'.
+Additionally, you can specify a defined width for the editor and label, such as "300, 400," and the [DataFormItemLength.UnitType] is "Absolute."
+
 
 {% tabs %}
 {% highlight xaml %}
@@ -594,8 +599,8 @@ The label and editor width can be set proportionally by using [LabelWidth] and [
         x:Name="DataForm">
         <DataForm:SfDataForm.DefaultLayoutSettings>
             <DataForm:DataFormDefaultLayoutSettings
-                LabelWidth="1"
-                EditorWidth="2"/>
+                LabelWidth="0.4*"
+                EditorWidth="0.6*"/>
         </DataForm:SfDataForm.DefaultLayoutSettings>
     </DataForm:SfDataForm>
 </ContentPage>
@@ -603,18 +608,15 @@ The label and editor width can be set proportionally by using [LabelWidth] and [
 {% endhighlight %}
 {% highlight c# %}
 
-    this.DataForm.DefaultLayoutSettings.LabelWidth = 1;
-    this.DataForm.DefaultLayoutSettings.EditorWidth = 2;
+    this.DataForm.DefaultLayoutSettings.LabelWidth = 300;
+    this.DataForm.DefaultLayoutSettings.EditorWidth = 400;
 
 {% endhighlight %}
 {% endtabs %}
 
-Here, the available width is divided into proportionally for editor (2) and label (1).
-
-
 N> Label width customization is applicable only when `LabelPosition` is Left.
 
-By default, the available width is divided equally for editor and label.
+By default, the available width is divided into 40% for label and 60% for editor.
 
 ## Spanning rows and columns
 
