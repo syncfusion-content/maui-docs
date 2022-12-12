@@ -55,33 +55,9 @@ Text
 </td>
 <td>
 Generated for the String type and the properties with [DataType(DataType.Password)] attributes. 
+</td>
+</tr>
 
-</td>
-</tr>
-<tr>
-<td>
-[DataFormCheckBoxItem]
-</td>
-<td>
-CheckBox
-</td>
-<td>
-Generated for the Bool type property.
-[BoolDataTypeAttribute]
-</td>
-</tr>
-<tr>
-<td>
-[DataFormSwitchItem]
-</td>
-<td>
-CheckBox
-</td>
-<td>
-Generated for the Bool type property.
-[BoolDataTypeAttribute]
-</td>
-</tr>
 <tr>
 <td>
 [DataFormDateItem]
@@ -115,6 +91,30 @@ Picker
 </td>
 <td>
 Generated for Enum type property and the property with [EnumDataTypeAttribute] attribute. 
+</td>
+</tr>
+<tr>
+<td>
+[DataFormCheckBoxItem]
+</td>
+<td>
+CheckBox
+</td>
+<td>
+Generated for the Bool type property.
+[BoolDataTypeAttribute]
+</td>
+</tr>
+<tr>
+<td>
+[DataFormSwitchItem]
+</td>
+<td>
+CheckBox
+</td>
+<td>
+Generated for the Bool type property.
+[BoolDataTypeAttribute]
 </td>
 </tr>
 <tr>
@@ -439,7 +439,7 @@ You can remove the label text for editor by using the [ShowLabel] `Link` propert
 
 ## Changing layout settings
 
-You change the label width, label position and editor width. This is possible by using the `GenerateDataFormItem` event. In the event, change the layout by using the [DefaultLayoutOption] property in the `DataFormItem`.
+You can change the label width, label position and editor width. This is possible by using the `GenerateDataFormItem` event. In the event, change the layout by using the [DefaultLayoutOption] property in the `DataFormItem`.
 
 By default label position is left.
 
