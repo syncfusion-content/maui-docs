@@ -2,7 +2,7 @@
 layout: post
 title: Assistive Labels in .NET MAUI Text Input Layout control | Syncfusion
 description: Learn here all about Assistive Labels support in Syncfusion .NET MAUI Text Input Layout (SfTextInputLayout) control and more.
-platform: .NET MAUI
+platform: maui
 control: SfTextInputLayout
 documentation: ug
 ---
