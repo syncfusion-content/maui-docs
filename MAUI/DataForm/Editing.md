@@ -178,7 +178,7 @@ Enum and List type property.
 [EnumDataTypeAttribute]
 </td>
 <td>
-{{'[SfRadioGroup]'| markdownify }}
+{{'[RadioButton]'| markdownify }}
 </td>
 </tr>
 </table>
@@ -204,7 +204,7 @@ To change the editor for any property, use the [RegisterEditor] method and speci
 {% tabs %}
 {% highlight c# %}
 
-this.DataForm.RegisterEditor(nameof(On), DataFormEditorType.Switch);
+this.DataForm.RegisterEditor("On"), DataFormEditorType.Switch);
 
 {% endhighlight %}
 {% endtabs %}
@@ -215,12 +215,12 @@ Here, the Switch editor will be loaded for the `On` property (bool type) instead
 
 Create the custom editor by overriding the [IDataFormEditorBase] class.
 
-Property settings, commit, data validation can be handled by overriding the required methods. Here, the `Entry` is loaded for `Age` editor.
+Property settings, commit, data validation can be handled by implementing the required methods. Here, the `Entry` is loaded for `Age` editor.
 
 {% tabs %}
 {% highlight c# %}
 
-public class CustomTextEditor : IDataFormEditor
+public class CustomNumericEditor : IDataFormEditor
 {
   
     private SfDataForm dataForm;
@@ -292,9 +292,7 @@ this.DataForm.RegisterEditor("Age", new CustomTextEditor(dataForm));
 {% endhighlight %}
 {% endtabs %}
 
-The custom DataFormItem editor value should be committed manually by using [OnCommitValue] method of [IDataFormEditor] class on custom editor `Value` or `Focus changed` event which is used to update the custom editor value in respective property in [DataObject] based on dataform [commit mode] set. 
-
-Also, The custom editor value can be validated manually by using [OnValidateValue] method on custom editor `Value` or `Focus changed` event which is used to validate the custom editor value based on data form [ValidationMode] set.
+The custom DataFormItem editor value should be committed manually by using [OnCommitValue] method of [IDataFormEditor] class on custom editor `Value` or `Focus changed` event which is used to update the custom editor value in respective property in [DataObject] based on dataform [commitMode] set.
 
 ## Commit mode
 
@@ -307,7 +305,7 @@ The supported commit modes are as follows:
 * Manual
 
 ### LostFocus
-If the commit mode is LostFocus, the value is committed when the editor lost its focus.
+If the commit mode is LostFocus, the value is committed when the editor lost its focus. By default DataForm [CommitMode] is `LostFocus`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -375,6 +373,8 @@ this.DataForm.Commit();
 {% endhighlight %}
 {% endtabs %}
 
+N> On manual commit call manual validation will be called to validate the properties before commit
+
 ## Converter
 
 To show the original value in different format or as different value, use the [DataFormValueConverter] attribute.
@@ -387,13 +387,13 @@ Here, the original value is multiplied by 10 and shown in editor. While committi
 {% highlight c# %}
 public class ValueConverterExt : IValueConverter
 {
-    public object Convert(object value)
+    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
     {            
         var amount = double.Parse(value.ToString());
         return amount * 10;
     }
 
-    public object ConvertBack(object value)
+    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
     {
         var amount = double.Parse(value.ToString());
         return amount / 10;
@@ -406,44 +406,6 @@ private double? amount = 1000;
 
 public double? Amount { get; set; }
 
-{% endhighlight %}
-{% endtabs %}
-
-### Using date editor for DateTimeOffset DataForm property data type
-
-In SfDataForm, you cannot use date editor for `DateTimeOffset` property data type. To overcome this, you need to use `DataFormValueConverter` attribute to convert `DateTimeOffset` to `DateTime` value and vice-versa.
-
-{% tabs %}
-{% highlight c# %}
-
-private DateTimeOffset displayDate;
-
-[DataType(DataType.Date)]
-[DataFormValueConverter(typeof(ValueConverterExt))]
-public DateTimeOffset DisplayDate { get; set; }
-
-public class ValueConverterExt : IValueConverter
-{
-      public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
-    {
-        DateTime baseTime = new DateTime(2008, 6, 19, 7, 0, 0);
-        DateTime targetTime;
-
-        var dateTimeOffset = (DateTimeOffset)value;
-        dateTimeOffset = new DateTimeOffset(baseTime,
-                                            TimeZoneInfo.Local.GetUtcOffset(baseTime));
-        targetTime = dateTimeOffset.DateTime;
-        return targetTime;
-    }
-    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-    {
-        var dateTime = (DateTime)value;
-        dateTime = new DateTime(2008, 6, 19, 7, 0, 0);
-        dateTime = DateTime.SpecifyKind(dateTime, DateTimeKind.Local);
-        DateTimeOffset dateTimeOffset = dateTime;
-        return dateTimeOffset;
-    }
-}
 {% endhighlight %}
 {% endtabs %}
 
@@ -475,9 +437,9 @@ The editing behavior can also be changed by setting the [IsReadOnly] property of
 
 {% tabs %}
 {% highlight c# %}
-this.DataForm.GenerateDataFormItem += DataForm_GenerateDataFormItem;
+this.DataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
- private void DataForm_GenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
 {
     if (e.DataFormItem != null)
     {
