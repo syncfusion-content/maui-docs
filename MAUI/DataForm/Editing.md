@@ -222,11 +222,11 @@ Property settings, commit, data validation can be handled by implementing the re
 
 public class CustomNumericEditor : IDataFormEditor
 {
-  
+
     private SfDataForm dataForm;
     private DataFormCustomItem dataFormCustomItem;
 
-    public CustomTextEditor(SfDataForm dataForm)
+    public CustomNumericEditor(SfDataForm dataForm)
     {
         this.dataForm = dataForm;
     }
