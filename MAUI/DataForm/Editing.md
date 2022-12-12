@@ -31,7 +31,7 @@ Text
 The String type property and any other type apart from the following specified cases.
 </td>
 <td>
-[Entry]`Link`
+{{'[Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry?view=net-maui-7.0)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -46,108 +46,7 @@ The String type property with multi line text.
 [DataType(DataType.MultilineText)] 
 </td>
 <td>
-{{'[Editor]`Link`
-</td>
-</tr>
-<tr>
-<td>
-Date
-</td>
-<td>
-[DataFormDateEditor]
-</td>
-<td>
-The DateTime type property and the property with [DataType(DataType.Date)] and [DataType(DataType.DateTime)] attributes.
-</td>
-<td>
-[DatePicker]
-</td>
-</tr>
-<tr>
-<td>
-Time
-</td>
-<td>
-[DataFormTimeEditor]
-</td>
-<td>
-The property with [DataType(DataType.Time)] attribute.
-</td>
-<td>
-[TimePicker]
-</td>
-</tr>
-<tr>
-<td>
-CheckBox
-</td>
-<td>
-[DataFormCheckBoxEditor]
-</td>
-<td>
-Bool type property.
-</td>
-<td>
-'[SfCheckBox]
-</td>
-</tr>
-<tr>
-<td>
-Switch
-</td>
-<td>
-'[SwitchEditor]
-</td>
-<td>
-Bool type property.
-</td>
-<td>
-'[Switch]
-</td>
-</tr>
-<tr>
-<td>
-Picker
-</td>
-<td>
-'[DataFormPickerEditor]`Link`
-</td>
-<td>
-Enum and List type property. 
-[EnumDataTypeAttribute]
-</td>
-<td>
-'[Picker]`Link`
-</td>
-</tr>
-<tr>
-<td>
-ComboBox
-</td>
-<td>
-[ComboBoxEditor]
-</td>
-<td>
-Enum and List type property.
-[EnumDataTypeAttribute]
-</td>
-<td>
-[SfComboBox]
-</td>
-</tr>
-<tr>
-<td>
-AutoComplete
-</td>
-<td>
-{{'[DataFormAutoCompleteEditor]
-</td>
-<td>
-Enum and List type property.
-[EnumDataTypeAttribute]
-</td>
-<td>
-[SfAutoComplete]
+{{'[Editor](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/editor?view=net-maui-7.0)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -162,9 +61,111 @@ The String type property and property with
 [DataType(DataType.Password)] attribute.
 </td>
 <td>
-[Entry]`Link`
+{{'[Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry?view=net-maui-7.0)'| markdownify }}
 </td>
 </tr>
+<tr>
+<td>
+Date
+</td>
+<td>
+[DataFormDateEditor]
+</td>
+<td>
+The DateTime type property and the property with [DataType(DataType.Date)] and [DataType(DataType.DateTime)] attributes.
+</td>
+<td>
+{{'[DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/datepicker?view=net-maui-7.0)'| markdownify }}
+</td>
+</tr>
+<tr>
+<td>
+Time
+</td>
+<td>
+[DataFormTimeEditor]
+</td>
+<td>
+The property with [DataType(DataType.Time)] attribute.
+</td>
+<td>
+{{'[TimePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/timepicker?view=net-maui-7.0&tabs=windows)'| markdownify }}
+</td>
+</tr>
+<tr>
+<td>
+CheckBox
+</td>
+<td>
+[DataFormCheckBoxEditor]
+</td>
+<td>
+Bool type property.
+</td>
+<td>
+{{'[CheckBox](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/checkbox?view=net-maui-7.0)'| markdownify }}
+</td>
+</tr>
+<tr>
+<td>
+Switch
+</td>
+<td>
+'[SwitchEditor]
+</td>
+<td>
+Bool type property.
+</td>
+<td>
+{{'[Switch](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/switch?view=net-maui-7.0)'| markdownify }}
+</td>
+</tr>
+<tr>
+<td>
+Picker
+</td>
+<td>
+'[DataFormPickerEditor]`Link`
+</td>
+<td>
+Enum and List type property. 
+[EnumDataTypeAttribute]
+</td>
+<td>
+{{'[Picker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/picker?view=net-maui-7.0)'| markdownify }}
+</td>
+</tr>
+<tr>
+<td>
+ComboBox
+</td>
+<td>
+[ComboBoxEditor]
+</td>
+<td>
+Enum and List type property.
+[EnumDataTypeAttribute]
+</td>
+<td>
+{{'[SfComboBox](https://help.syncfusion.com/maui/combobox)'| markdownify }}
+</td>
+</tr>
+<tr>
+<td>
+AutoComplete
+</td>
+<td>
+{{'[DataFormAutoCompleteEditor]
+</td>
+<td>
+Enum and List type property.
+[EnumDataTypeAttribute]
+</td>
+<td>
+{{'[SfAutoComplete](https://help.syncfusion.com/maui/autocomplete)'| markdownify }}
+</td>
+</tr>
+
 <tr>
 <td>
 RadioGroup
@@ -177,7 +178,7 @@ Enum and List type property.
 [EnumDataTypeAttribute]
 </td>
 <td>
-[SfRadioGroup]`Link`
+{{'[SfRadioGroup](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/radiobutton?view=net-maui-7.0)'| markdownify }}
 </td>
 </tr>
 </table>
@@ -214,7 +215,7 @@ Here, the Password editor will be loaded for the `Name` property (String type) i
 
 Create the custom editor by inheriting the [IDataFormEditor] interface.
 
-Property settings, commit, data validation can be handled by  the required methods. Here, the `Entry` is loaded for `PhoneNumber` editor.
+Property settings, commit, data validation can be handled by  the required methods. Here, the [Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry?view=net-maui-7.0)'| markdownify }}  is loaded for `PhoneNumber` editor.
 
 {% tabs %}
 {% highlight c# %}
@@ -227,7 +228,12 @@ Property settings, commit, data validation can be handled by  the required metho
         }
         public View CreateEditorView(DataFormItem dataFormItem) 
         { 
-            return new Entry(); 
+            Entry inputView = new Entry();
+            if (dataFormItem.FieldName == "CVV")
+            {
+                inputView.IsPassword = true;
+                inputView.MaxLength = 3;
+            } 
             inputView.Keyboard = Keyboard.Numeric;
             inputView.Placeholder = dataFormItem.PlaceholderText;
             DataFormTextStyle textStyle = dataForm.EditorTextStyle;

@@ -36,6 +36,30 @@ Default DataFormItem generated for the String type and the properties with [Data
 </tr>
 <tr>
 <td>
+[DataFormMultiLineTextItem]
+</td>
+<td>
+Text
+</td>
+<td>
+Generated for the String type and the properties with  [DataType(DataType.MultilineText)] attributes. 
+
+</td>
+</tr>
+<tr>
+<td>
+[DataFormPasswordItem]
+</td>
+<td>
+Text
+</td>
+<td>
+Generated for the String type and the properties with [DataType(DataType.Password)] attributes. 
+
+</td>
+</tr>
+<tr>
+<td>
 [DataFormCheckBoxItem]
 </td>
 <td>
@@ -142,16 +166,16 @@ You can customize or cancel the generated `DataFormItem` by handling the [Gener
              xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm"
              x:Class="GettingStarted.MainPage">
     <ContentPage.Content>
-        <dataForm:SfDataForm x:Name="dataForm" GenerateDataFormItem="DataForm_GenerateDataFormItem"/>
+        <dataForm:SfDataForm x:Name="dataForm" GenerateDataFormItem="OnGenerateDataFormItem"/>
     </ContentPage.Content>
     </ContentPage>
 
 {% endhighlight %}
 {% highlight MainPage.xaml.cs %}
 
-    dataForm.GenerateDataFormItem += DataForm_GenerateDataFormItem;
+    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void DataForm_GenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
 
     }
@@ -185,9 +209,9 @@ In the following code, the `DataFormItem` generation for the `MiddleName` prope
 {% tabs %}
 {% highlight MainPage.xaml.cs %}
 
-    dataForm.GenerateDataFormItem += DataForm_GenerateDataFormItem;
+    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void DataForm_GenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
         if (e.DataFormItem.FieldName == "MiddleName")
             e.Cancel = true;
@@ -204,14 +228,16 @@ Here, `Salary` data field is restricted from being edited in the data form.
 {% tabs %}
 {% highlight MainPage.xaml.cs %}
 
-    dataForm.GenerateDataFormItem += DataForm_GenerateDataFormItem;
+    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void DataForm_GenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
         if (e.DataFormItem != null)
         {
             if (e.DataFormItem.FieldName == "MiddleName")
+            {
                 e.DataFormItem.IsReadOnly = true;
+            }
         }
     }
 {% endhighlight %}
@@ -226,14 +252,16 @@ Here, `LastName` data field will be hidden.
 {% tabs %}
 {% highlight MainPage.xaml.cs %}
 
-    dataForm.GenerateDataFormItem += DataForm_GenerateDataFormItem;
+    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void DataForm_GenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
         if (e.DataFormItem != null)
         {
             if (e.DataFormItem.FieldName == "LastName")
+            {
                 e.DataFormItem.IsVisible = false;
+            }
         }
     }
 {% endhighlight %}
@@ -265,14 +293,16 @@ You can show the watermark in the editor by using the [PlaceholderText] `Link` p
 {% tabs %}
 {% highlight MainPage.xaml.cs %}
 
-    dataForm.GenerateDataFormItem += DataForm_GenerateDataFormItem;
+    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void DataForm_GenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
         if (e.DataFormItem != null)
         {
             if (e.DataFormItem.FieldName == "Description")
+            {
                 e.DataFormItem.PlaceholderText = "Enter description";
+            }
         }
     }
 {% endhighlight %}
@@ -287,9 +317,9 @@ You can change the color for the watermark in the editor by using the [Placehold
 {% tabs %}
 {% highlight MainPage.xaml.cs %}
 
-    dataForm.GenerateDataFormItem += DataForm_GenerateDataFormItem;
+    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void DataForm_GenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
         if (e.DataFormItem != null)
         {
@@ -310,14 +340,16 @@ Here, `FirstName` data field will be changed from the default position.
 {% tabs %}
 {% highlight MainPage.xaml.cs %}
 
-    dataForm.GenerateDataFormItem += DataForm_GenerateDataFormItem;
+    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void DataForm_GenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
         if (e.DataFormItem != null)
         {
             if (e.DataFormItem.FieldName == "LastName")
+            {
                 e.DataFormItem.Padding = new thickness(10,0,10,0);
+            }
         }
     }
 {% endhighlight %}
@@ -349,14 +381,16 @@ You can change the label text by using the [LabelText] `Link` property in [DataF
 {% tabs %}
 {% highlight MainPage.xaml.cs %}
 
-    dataForm.GenerateDataFormItem += DataForm_GenerateDataFormItem;
+    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void DataForm_GenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
         if (e.DataFormItem != null)
         {
             if (e.DataFormItem.FieldName == "Name")
+            {
                 e.DataFormItem.LabelText = "FirstName";
+            }
         }
     }
 {% endhighlight %}
@@ -388,14 +422,16 @@ You can remove the label text for editor by using the [ShowLabel] `Link` propert
 {% tabs %}
 {% highlight MainPage.xaml.cs %}
 
-    dataForm.GenerateDataFormItem += DataForm_GenerateDataFormItem;
+    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void DataForm_GenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
         if (e.DataFormItem != null)
         {
             if (e.DataFormItem.FieldName == "FirstName")
+            {
                 e.DataFormItem.ShowLable = false;
+            }
         }
     }
 {% endhighlight %}
@@ -410,9 +446,9 @@ By default label position is left.
 {% tabs %}
 {% highlight MainPage.xaml.cs %}
 
-    dataForm.GenerateDataFormItem += DataForm_GenerateDataFormItem;
+    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void DataForm_GenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
         if (e.DataFormItem != null)
         {
@@ -437,9 +473,9 @@ You can change the background colour for the label and editor by using the [Back
 {% tabs %}
 {% highlight MainPage.xaml.cs %}
 
-    dataForm.GenerateDataFormItem += DataForm_GenerateDataFormItem;
+    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void DataForm_GenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
         if (e.DataFormItem != null)
         {
@@ -465,14 +501,16 @@ You can change the order of item by using [ItemsOrderInRow] `Link` property in [
 
     dataForm.ColumnCount = 6;
 
-    dataForm.GenerateDataFormItem += DataForm_GenerateDataFormItem;
+    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void DataForm_GenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
         if (e.DataFormItem != null)
         {
             if (e.DataFormItem.FieldName == "FirstName")
+            {
                 e.DataFormItem.ItemsOrderInRow = 3;  //Place a item upto 5 
+            }
         }
     }
 {% endhighlight %}
@@ -492,9 +530,9 @@ Supported image format:- .png and .svg
 {% tabs %}
 {% highlight MainPage.xaml.cs %}
 
-    dataForm.GenerateDataFormItem += DataForm_GenerateDataFormItem;
+    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void DataForm_GenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
         if (e.DataFormItem != null)
         {
@@ -502,7 +540,6 @@ Supported image format:- .png and .svg
             {
                 e.DataFormItem.LeadingLabelIcon = "phone.png"
             }
-                
         }
     }
 {% endhighlight %}
@@ -513,9 +550,9 @@ Without adding an image to the Image folder, you can give the full path of the i
 {% tabs %}
 {% highlight MainPage.xaml.cs %}
 
-    dataForm.GenerateDataFormItem += DataForm_GenerateDataFormItem;
+    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void DataForm_GenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
         if (e.DataFormItem != null)
         {
@@ -587,9 +624,9 @@ You can change the label text style by using [LabelTextStyle] `Link` in the [Dat
 {% tabs %}
 {% highlight MainPage.xaml.cs %}
 
-    dataForm.GenerateDataFormItem += DataForm_GenerateDataFormItem;
+    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void DataForm_GenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
         if (e.DataFormItem != null)
         {
