@@ -159,7 +159,7 @@ In order to change the series markers appearance, create an instance of the [Mar
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-… 
+...
  <chart:AreaSeries XBindingPath="Year"
                    YBindingPath="Percentage"
                    ItemsSource="{Binding Data}"
