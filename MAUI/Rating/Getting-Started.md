@@ -11,7 +11,6 @@ documentation: ug
 
 # Getting Started with .NET MAUI Rating (SfRating)
 
-
 This section explains how to configure a [`SfRating`] control in a real-time scenario and also provides a walk-through on some of the customization features available in [`SfRating`] control.
 
 ## Adding a .NET MAUI Rating reference
@@ -104,7 +103,7 @@ public MainPage()
 
 ## Set Number of Rating Items
 
-The number of rating items to be displayed can be customized in the [`SfRating`] control. Users can create a rating application with 5 items as follows. The [`ItemCount`] property is used to define the number of rating items.
+The number of rating items to be displayed can be customized in the [`SfRating`] control. Users can create a rating application using 5 items as follows. The [`ItemCount`] property is used to define the number of rating items.
 
 N> The default value of [`ItemCount`] is 5.
 
