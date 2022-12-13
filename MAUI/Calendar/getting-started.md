@@ -8,13 +8,13 @@ documentation: ug
 ---
 
 # Getting started with MAUI Calendar (SfCalendar)
-This section explains the steps required to add the [calendar](https://www.syncfusion.com/maui-widgets/maui-calendar) widget. This section covers only basic features needed to get started with Syncfusion Calendar.
+In this section explains the steps required to add the [calendar](https://www.syncfusion.com/maui-widgets/maui-calendar) widget. This section covers only basic features needed to get started with Syncfusion Calendar.
 
 ## Creating an application using the .NET MAUI Calendar
 
 1. Create a new .NET MAUI application in Visual Studio.
 
-2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfCalendar to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Calendar](https://www.nuget.org/packages/Syncfusion.Maui.Calendar) and then install it.
+2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfCalendar to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Calendar](https://www.nuget.org/packages/Syncfusion.Maui.Calendar) and then install it.
 
 3. To initialize the control, import the control namespace `Syncfusion.Maui.Calendar` in XAML or C# code.
 
@@ -84,7 +84,7 @@ namespace GettingStarted
 
 ## Change different calendar views
 
-The [.NET MAUI Calendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html) control provides four different types of views to display dates and it can be assigned to the control by using the [View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_View) property. The control is assigned to the [Month](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarView.html#Syncfusion_Maui_Calendar_CalendarView_Month) view by default. The current date will be displayed initially for all the Calendar views.
+The [.NET MAUI Calendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html) control provides four different types of views to display dates and it can be assigned to the control by using the [View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_View) property. The control is assigned to the [Month](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarView.html#Syncfusion_Maui_Calendar_CalendarView_Month) view by default. By default, Month view will be rendered initially.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
