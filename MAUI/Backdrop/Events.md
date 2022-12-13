@@ -11,7 +11,9 @@ documentation: ug
 
 ## BackLayerStateChanged event
 
-The `BackLayerStateChanged` event occurs when the backdrop page back layer is revealed and concealed. The event occurs in the cases mentioned in this `documentation`.
+The `BackLayerStateChanged` event occurs when the backdrop page back layer is revealed and concealed. The event occurs in the cases mentioned in this `documentation.` This event contains the following argument.
+
+- `Percentage:` Represents the FrontLayer revealed height percentage.
 
 {% tabs %} 
 
@@ -31,7 +33,7 @@ The `BackLayerStateChanged` event occurs when the backdrop page back layer is re
 
 {% highlight C# %} 
 
-private void SfBackdropPage_BackLayerStateChanged(object sender, EventArgs e)
+private void SfBackdropPage_BackLayerStateChanged(object sender, BackLayerStateChangedEventArgs e)
 {
     // handle event action.
 }

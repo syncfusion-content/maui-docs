@@ -9,11 +9,11 @@ documentation: ug
 
 # Reveal Height Customization .NET MAUI Backdrop Page (SfBackdropPage)
 
-When revealing the `back layer`, the front layer will be moved downwards. By setting the `BackLayerRevealOption` property of backdrop, you can customize how far the front layer can be moved from the header when revealing the back layer.
+When revealing the back layer, the front layer will be moved downwards. By setting the `BackLayerRevealOption` property of the backdrop, customize how far the front layer can be moved from the header when revealing the back layer.
 
 The following options are provided to move the front layer:
 
-`Fill` – Moves the front layer downwards to the entire height of the page excluding the `RevealedHeight`.
+`Fill` – Moves the front layer downwards to the entire height of the page, excluding the `RevealedHeight.`
 
 `Auto` – Moves the front layer downwards to the height of the back layer content.
 

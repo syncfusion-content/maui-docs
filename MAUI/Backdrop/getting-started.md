@@ -9,13 +9,13 @@ documentation: ug
 
 # Getting started with .NET MAUI Backdrop Page
 
-This section explains the steps required to add the Backdrop page and its elements such as BackLayer, FrontLayer in project. This section covers only the basic features needed to know and gets started with the Syncfusion backdrop page.
+This section explains the steps required to add the Backdrop page and its elements such as BackLayer and FrontLayer in the project. This section covers only the basic features needed to know and gets started with the Syncfusion backdrop page.
 
 ## Creating an application using the .NET MAUI Backdrop Page
 
 * Create a new .NET MAUI application in the Visual Studio.
 
-* The Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfBackdropPage to your project, open the NuGet package manager in Visual Studio, and search for [Syncfusion.Maui.Backdrop] then install that.
+* The Syncfusion .NET MAUI components are available on the [nuget.org](https://www.nuget.org/). To add the SfBackdropPage to your project, open the NuGet package manager in Visual Studio, and search for [Syncfusion.Maui.Backdrop], then install it.
 
 ### Register the handler
 
@@ -89,11 +89,11 @@ public partial class BackdropSamplePage : SfBackdropPage
 
 {% endtabs %}
 
-N> `Title` and `ToolBarItems` properties of the `Page` can used to customize the appearance of header.
+N> The `Title` and `ToolBarItems` properties of the `Page` can be used to customize the appearance of the header.
 
 ### Configure header
 
-Page header for the backdrop appears only when adding backdrop as a child of NavigationPage. To know more about it, refer to `header configuration`.
+The page header for the backdrop appears only when adding a backdrop as a child of the NavigationPage. To know more about it, refer to the `header configuration.`
 
 ## Add back layer content
 
@@ -180,13 +180,13 @@ this.FrontLayer = new BackdropFrontLayer()
 
 ## Reveal and conceal the back layer
 
-The following options are provided in backdrop to reveal and conceal the back layer:
+The following options are provided in the backdrop to reveal and conceal the back layer.
 
-* **Programmatically** - Reveals back layer by setting the `IsBackLayerRevealed` property to true. By default, it is set to false.
-* **Touch interaction** - Reveals back layer by clicking the tool bar icon at the top-right corner of navigation bar header. The Hamburger (or menu ) icon reveals and the Close icon conceals the back layer. When adding the backdrop as a child of FlyoutPage, the Hamburger and Close icons will be replaced by expand (or down arrow) and collapse (or up arrow) icons, respectively.
-* **Swipe or fling action** - Reveals back layer by swipe/fling action on the front layer to the required direction. Swipe downwards to reveal, and swipe upwards to conceal the back layer.  The swipe/fling action will be handled only on the top of the front layer to the `RevealedHeight`.
+* **Programmatically** - Reveals the back layer by setting the `IsBackLayerRevealed` property to true. By default, it is set to false.
+* **Touch interaction** - Reveals the back layer by clicking the toolbar icon at the top-right corner of the navigation bar header. The Hamburger (or menu ) icon reveals, and the Close icon conceals the back layer. When adding the backdrop as a child of the FlyoutPage, the Hamburger and Close icons will be replaced by expand (or down arrow) and collapse (or up arrow) icons respectively.
+* **Swipe or fling action** - Reveals the back layer by swipe or fling action on the front layer to the required direction. Swipe downwards to reveal, and swipe upwards to conceal the back layer.  The swipe or fling action will be handled only on the top of the front layer to the `RevealedHeight.`
 
-To know more information about reveal height customization ,refer this `link`.
+For more information about reveal height customization, please refer to this `link`.
 
 ![.NET Maui Backdrop reveal and conceal back layer](images/getting-started/reveal-conceal.gif)
 
@@ -222,4 +222,4 @@ public BackdropSamplePage()
 
 N> 
 * Get the complete getting started sample from GitHub `link.`
-* Refer to our `.NET MAUI Backdrop` feature tour page for its groundbreaking feature representations.
+* Refer to Syncfusion `.NET MAUI Backdrop` feature tour page for its groundbreaking feature representations.
