@@ -269,7 +269,7 @@ this.Content = chart;
 
 ### Enable Marker
 
-A marker, also known as a symbol, is used to determine or highlight the position of the data point. To give marker support in the series, set the ShowMarkers property to true. The default value of ShowMarkers property is false. 
+A marker, also known as a symbol, is used to determine or highlight the position of the data point. To enable markers in the series, set the [ShowMarkers]() property to true.
 
 {% tabs %}
 
@@ -310,7 +310,7 @@ this.Content= chart;
 
 ### Customizing marker support
 
-To enable marker support customization, create an instance of the series MarkerSettings property. 
+In order to change the series markers appearance, create an instance of the [MarkerSettings]() property.
 
 {% tabs %}
 
@@ -324,20 +324,6 @@ To enable marker support customization, create an instance of the series MarkerS
                    ShowMarkers="True">
     <chart:LineSeries.MarkerSettings>
         <chart:ChartMarkerSettings Type="Circle"
-                                   Fill="Brown"
-                                   Stroke="Blue"
-                                   StrokeWidth="2"
-                                   Height="15"
-                                   Width="15"/>
-    </chart:LineSeries.MarkerSettings>
- </chart:LineSeries>
-
- <chart:LineSeries XBindingPath="Year"
-                   YBindingPath="Percentage"
-                   ItemsSource="{Binding Data_1}"
-                   ShowMarkers="True">
-    <chart:LineSeries.MarkerSettings>
-        <chart:ChartMarkerSettings Type="Pentagon"
                                    Fill="Brown"
                                    Stroke="Blue"
                                    StrokeWidth="2"

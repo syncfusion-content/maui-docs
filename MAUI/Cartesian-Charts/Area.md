@@ -111,3 +111,108 @@ this.Content = chart;
 
 ![Spline area chart type in MAUI Chart](Chart-types_images/maui_spline_area_chart.png)
 
+## Enable Marker
+
+A marker, also known as a symbol, is used to determine or highlight the position of the data point. To enable markers in the series, set the [ShowMarkers]() property to true.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCartesianChart>
+...
+ <chart:AreaSeries XBindingPath="Year"
+                   YBindingPath="Percentage"
+                   ItemsSource="{Binding Data}"
+                   ShowMarkers="True"/>
+
+</chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCartesianChart chart = new SfCartesianChart();
+CategoryAxis primaryAxis = new CategoryAxis();
+chart.XAxes.Add(primaryAxis);
+NumericalAxis secondaryAxis = new NumericalAxis();
+chart.YAxes.Add(secondaryAxis);
+
+AreaSeries series = new LineSeries()
+{
+    XBindingPath = "Year",
+    YBindingPath = "Percentage",
+    ItemsSource = new ViewModel().Data,
+    ShowMarkers= true,
+ };
+chart.Series.Add(series);
+this.Content= chart;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Customizing marker support
+
+In order to change the series markers appearance, create an instance of the [MarkerSettings]() property.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCartesianChart>
+… 
+ <chart:AreaSeries XBindingPath="Year"
+                   YBindingPath="Percentage"
+                   ItemsSource="{Binding Data}"
+                   ShowMarkers="True">
+    <chart:AreaSeries.MarkerSettings>
+        <chart:ChartMarkerSettings Type="Circle"
+                                   Fill="Brown"
+                                   Stroke="Blue"
+                                   StrokeWidth="2"
+                                   Height="15"
+                                   Width="15"/>
+    </chart:AreaSeries.MarkerSettings>
+ </chart:AreaSeries>
+
+</chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCartesianChart chart = new SfCartesianChart();
+…
+ChartMarkerSettings chartMarker= new ChartMarkerSettings();
+        chartMarker.Type = ShapeType.Diamond;
+        chartMarker.Fill = Colors.Brown;
+        chartMarker.Stroke = Colors.Brown;
+        chartMarker.StrokeWidth= 1;
+        chartMarker.Height = 5;
+        chartMarker.Width = 5;
+
+AreaSeries series = new LineSeries()
+{
+   XBindingPath = "Year",
+   YBindingPath = "Percentage",
+   ItemsSource = new ViewModel().Data,
+   ShowMarkers = true,
+ };
+
+chart.Series.Add(series);
+this.Content = chart;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+Following properties are used to customize marker appearance,
+
+* `Type`- The type property allows to change the rendering type/shape of marker in series. The default value of Type is Circle. The following types are used in marker “circle, rectangle, image, pentagon, vertical Line, horizontal Line, diamond, triangle, inverted Triangle”
+* `Stroke`- used to set the stroke color of the marker
+* `StrokeWidth`- used to change the marker border thickness
+* `Fill`- used to change the color of the marker
+* `Width`- used to change the width of the marker
+* `Height`- used to change the height of the marker
+
