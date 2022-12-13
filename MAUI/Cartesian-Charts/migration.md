@@ -788,27 +788,32 @@ chart.ChartBehaviors.Add(selectionBehavior);
 
 <chart:SfCartesianChart>
 . . .
-    <chart:SfCartesianChart.SelectionBehavior>
-        <chart:ChartSelectionBehavior SelectionBrush="Red" 
-                                      Type="Single" 
-                                      SelectedIndex="1" />
-    </chart:SfCartesianChart.SelectionBehavior>
-
-    <chart:ColumnSeries ItemsSource="{Binding Data}" 
-            XBindingPath="Demand" 
-            YBindingPath="Year2010" />
+    <chart:SfCartesianChart.Series>
+        <chart:ColumnSeries ItemsSource="{Binding Data}" 
+                        XBindingPath="Name"
+                        YBindingPath="Height">
+                <chart:ColumnSeries.SelectionBehavior>
+                        <chart:DataPointSelectionBehavior SelectionBrush="#314A6E"/>
+                </chart:ColumnSeries.SelectionBehavior>
+        </chart:ColumnSeries>
+    </chart:SfCartesianChart.Series>
 </chart:SfCartesianChart>
 
 {% endhighlight %} 
 {% highlight C# %}
-ColumnSeries series = new ColumnSeries();
-. . .
-SeriesSelectionBehavior selection = new SeriesSelectionBehavior();
-selection.SelectionBrush=Color.FromArgb("#314A6E");
-selection.Type = ChartSelectionType.Single;
-selection.SelectedIndex= 0;
-chart.SelectionBehavior = selection;
 
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+DataPointSelectionBehavior selection = new DataPointSelectionBehavior();
+selection.SelectionBrush=Color.FromArgb("#314A6E");
+
+ColumnSeries series = new ColumnSeries()
+{
+    ItemsSource = new ViewModel().Data,
+    XBindingPath = "Name",
+    YBindingPath = "Height",
+    SelectionBehavior = selection
+};
 chart.Series.Add(series);
 {% endhighlight %}
 
