@@ -629,8 +629,12 @@ chart.ChartBehaviors.Add(selectionBehavior);
 {% highlight C# %}
 PieSeries series = new PieSeries();
 . . .
-series.SelectionBrush = Brush.Green;
-chart.SelectionBehavior = new ChartSelectionBehavior();
+SeriesSelectionBehavior selection = new SeriesSelectionBehavior();
+selection.SelectionBrush=Color.FromArgb("#314A6E");
+selection.Type = ChartSelectionType.Single;
+selection.SelectedIndex= 0;
+chart.SelectionBehavior = selection;
+
 chart.Series.Add(series);
 {% endhighlight %}
 
