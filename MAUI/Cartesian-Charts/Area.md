@@ -172,12 +172,12 @@ In order to change the series markers appearance, create an instance of the [Mar
                    ItemsSource="{Binding Data}"
                    ShowMarkers="True">
     <chart:AreaSeries.MarkerSettings>
-        <chart:ChartMarkerSettings Type="Circle"
+        <chart:ChartMarkerSettings Type="Diamond"
                                    Fill="Brown"
-                                   Stroke="Blue"
-                                   StrokeWidth="2"
-                                   Height="15"
-                                   Width="15"/>
+                                   Stroke="Black"
+                                   StrokeWidth="1"
+                                   Height="8"
+                                   Width="8"/>
     </chart:AreaSeries.MarkerSettings>
  </chart:AreaSeries>
 
