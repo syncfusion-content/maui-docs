@@ -613,28 +613,24 @@ chart.ChartBehaviors.Add(selectionBehavior);
 {% highlight xaml %}
 
 <chart:SfCircularChart>
-. . .
-    <chart:SfCircularChart.SelectionBehavior>
-        <chart:ChartSelectionBehavior SelectionBrush="Red" 
-                                      Type="Single" 
-                                      SelectedIndex="1"/>
-    </chart:SfCircularChart.SelectionBehavior>
-
-    <chart:PieSeries ItemsSource="{Binding Data}" 
-                     XBindingPath="Demand" 
-                     YBindingPath="Year2010" />
+    <chart:SfCircularChart.Series>
+        <chart:PieSeries>
+            <chart:PieSeries.SelectionBehavior>
+                <chart:DataPointSelectionBehavior SelectionBrush="#314A6E"/>
+            </chart:PieSeries.SelectionBehavior>
+        </chart:PieSeries>
+    </chart:SfCircularChart.Series>
 </chart:SfCircularChart>
 
 {% endhighlight %} 
 {% highlight C# %}
-PieSeries series = new PieSeries();
-. . .
-SeriesSelectionBehavior selection = new SeriesSelectionBehavior();
-selection.SelectionBrush=Color.FromArgb("#314A6E");
-selection.Type = ChartSelectionType.Single;
-selection.SelectedIndex= 0;
-chart.SelectionBehavior = selection;
+SfCircularChart chart = new SfCircularChart();
+...
+DataPointSelectionBehavior selection = new DataPointSelectionBehavior();
+selection.SelectionBrush="#314A6E";
 
+PieSeries series = new PieSeries();
+series.SelectionBehavior = selection;
 chart.Series.Add(series);
 {% endhighlight %}
 
