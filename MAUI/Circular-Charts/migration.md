@@ -23,9 +23,9 @@ SfChart
 <td>
 <div> SfCartesianChart </div>
 <div> SfCircularChart </div>
-<div> SfFunnelChart (Upcoming) </div>
+<div> SfFunnelChart </div>
+<div> SfPyramidChart </div>
 <div> SfPolarChart (Upcoming) </div>
-<div> SfPyramidChart (Upcoming) </div>
 </td>
 </tr>
 </table>
@@ -131,10 +131,6 @@ The following table illustrates the API migration for the chart.
 <td>PaletteBrushes</td>
 </tr>
 <tr>
-<td>SelectedDataPointColor</td>
-<td>SelectionBrush</td>
-</tr>
-<tr>
 <td>DataMarker</td>
 <td>ShowDataLabels, DataLabelSettings</td>
 </tr>
@@ -228,6 +224,10 @@ this.Content = chart;
 <td>IsVisible</td>
 </tr>
 <tr>
+<td>ItemTemplate</td>
+<td>ItemTemplate</td>
+</tr>
+<tr>
 <td>Title</td>
 <td><em>Upcoming</em></td>
 </tr>
@@ -261,10 +261,6 @@ this.Content = chart;
 </tr>
 <tr>
 <td>LabelStyle</td>
-<td><em>Upcoming</em></td>
-</tr>
-<tr>
-<td>ItemTemplate</td>
 <td><em>Upcoming</em></td>
 </tr>
 <tr>
@@ -665,7 +661,6 @@ chart.Series.Add(series);
 * Maximum width support for Legend.
 * Individual legend items based on the data point count.
 * Event or method to notify the legend click and the creation of a legend item.
-* DataTemplate support for legend items.
 
 **Data label**
 
@@ -680,10 +675,6 @@ chart.Series.Add(series);
 
 * Data label created event support was not provided in series. Instead, you can use the [DrawDataLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_DrawDataLabel_Microsoft_Maui_Graphics_ICanvas_Microsoft_Maui_Controls_Brush_System_String_Microsoft_Maui_Graphics_PointF_System_Int32_) override method in the [ChartSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html) class.
 * In.NET MAUI, the [ChartDataPoint](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartDataPoint.html#) model class was no longer available. Instead, create your own model.
-
-## Known issues
-
-* The legend item was not dynamically added.
 
 ## Support and feedback
 
