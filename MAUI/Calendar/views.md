@@ -48,7 +48,7 @@ this.Calendar.MonthView.ShowWeekNumber = true;
 ![show-week-number-in-month-view-in-maui-calendar](images/views/show-week-number-in-month-view.png)
 
 
-#### Week number style
+#### Week number appearance
 Week number Background and TextStyle can be customized in the month view. Background color can be changed by using the [Background] property and the textStyle can be changed by using the [TextStyle] property.
 
 {% tabs %}
@@ -59,8 +59,12 @@ Week number Background and TextStyle can be customized in the month view. Backgr
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.MonthView.WeekNumberStyle.Background = Colors.Pink;
-this.Calendar.MonthView.WeekNumberStyle.TextStyle.TextColor = Colors.Purple;
+this.Calendar.MonthView.WeekNumberStyle.Background = Colors.DeepSkyBlue;
+this.Calendar.MonthView.WeekNumberStyle.TextStyle = new CalendarTextStyle()
+{
+    TextColor = Colors.White,
+    FontSize = 12,        
+};
 
 {% endhighlight %}
 {% endtabs %}
