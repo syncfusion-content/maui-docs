@@ -82,7 +82,7 @@ chart.DataLabelSettings = new FunnelDataLabelSettings()
 
 {% endtabs %} 
 
-![Data label for .NET MAUI Funnel chart](DataLabel_images/maui_chart_datalabels.png)
+![Data label for .NET MAUI Funnel chart](DataLabel_images/MAUI_data_label.png)
 
 ## LabelStyle
 
@@ -144,4 +144,4 @@ chart.DataLabelSettings.LabelStyle = new ChartDataLabelStyle()
 
 {% endtabs %} 
 
-![Customized the data label in MAUI chart](DataLabel_images/maui_label_style.png)
+![Customized the data label in MAUI chart](DataLabel_images/MAUI_data_label_style.png)
