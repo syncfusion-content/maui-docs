@@ -150,9 +150,18 @@ this.Content= chart;
 
 {% endtabs %}
 
-### Customizing marker support
+### Marker customization
 
 In order to change the series markers appearance, create an instance of the [MarkerSettings]() property.
+
+Following properties are used to customize marker appearance,
+
+* [Type](), of type `ShapeType`, describes the shape of the series marker. The default value of this property is [ShapeType.Circle]()
+* [Stroke](), of type `Brush`, indicates the brush used to paint the marker border.
+* [StrokeWidth](), of type `double`, indicates the width of the border.
+* [Fill](), of type `Brush`, indicates the color of the marker
+* [Width](), of type `double`, indicates the width of the marker
+* [Height](), of type `double`, indicates the height of the marker
 
 {% tabs %}
 
@@ -206,12 +215,6 @@ this.Content = chart;
 
 {% endtabs %}
 
-Following properties are used to customize marker appearance,
 
-* [Type](), of the `ShapeType`, describes the shape of the series marker. The default value of this property is Circle.
-* [Stroke](), of type `Brush`, indicates the brush used to paint the marker border.
-* [StrokeWidth](), of type `double`, indicates the width of the border.
-* [Fill](), of type `Brush`, indicates the color of the marker
-* [Width](), of type `double`, indicates the width of the marker
-* [Height](), of type `double`, indicates the height of the marker
+
 
