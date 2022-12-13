@@ -308,16 +308,14 @@ this.Content= chart;
 
 ### Marker customization
 
-In order to change the series markers appearance, create an instance of the [MarkerSettings]() property.
+In order to change the series markers appearance, create an instance of the [MarkerSettings]() property. The following properties are used to customize marker appearance.
 
-Following properties are used to customize marker appearance,
-
-* [Type](), of type `ShapeType`, describes the shape of the series marker. The default value of this property is [ShapeType.Circle]()
+* [Type](), of type `ShapeType`, describes the shape of the series marker. The default value of this property is [ShapeType.Circle]().
 * [Stroke](), of type `Brush`, indicates the brush used to paint the marker border.
-* [StrokeWidth](), of type `double`, indicates the width of the border.
-* [Fill](), of type `Brush`, indicates the color of the marker
-* [Width](), of type `double`, indicates the width of the marker
-* [Height](), of type `double`, indicates the height of the marker
+* [StrokeWidth](), of type `double`, indicates the width of the marker border.
+* [Fill](), of type `Brush`, indicates the color of the marker.
+* [Width](), of type `double`, indicates the width of the marker.
+* [Height](), of type `double`, indicates the height of the marker.
 
 {% tabs %}
 
@@ -330,12 +328,12 @@ Following properties are used to customize marker appearance,
                    ItemsSource="{Binding Data}"
                    ShowMarkers="True">
     <chart:LineSeries.MarkerSettings>
-        <chart:ChartMarkerSettings Type="Circle"
+        <chart:ChartMarkerSettings Type="Diamond"
                                    Fill="Brown"
-                                   Stroke="Blue"
-                                   StrokeWidth="2"
-                                   Height="15"
-                                   Width="15"/>
+                                   Stroke="Black"
+                                   StrokeWidth="1"
+                                   Height="8"
+                                   Width="8"/>
     </chart:LineSeries.MarkerSettings>
  </chart:LineSeries>
 </chart:SfCartesianChart>
@@ -350,10 +348,10 @@ SfCartesianChart chart = new SfCartesianChart();
 ChartMarkerSettings chartMarker= new ChartMarkerSettings();
         chartMarker.Type = ShapeType.Diamond;
         chartMarker.Fill = Colors.Brown;
-        chartMarker.Stroke = Colors.Brown;
+        chartMarker.Stroke = Colors.Black;
         chartMarker.StrokeWidth= 1;
-        chartMarker.Height = 5;
-        chartMarker.Width = 5;
+        chartMarker.Height = 8;
+        chartMarker.Width = 8;
 
 LineSeries series = new LineSeries()
 {
