@@ -11,7 +11,7 @@ documentation: ug
 
 # Appearance Customization in .NET MAUI Rating (SfRating)
 
-We can customize the rated and unrated fill color, stroke and stroke thickness using the following properties of [`RatingSettings`].
+You can customize the rated and unrated fill color, stroke and stroke thickness using the following properties of [`RatingSettings`].
 
 * [`RatedFill`]
 * [`UnratedFill`]
@@ -24,9 +24,9 @@ We can customize the rated and unrated fill color, stroke and stroke thickness u
 
 [`SfRating`] control has support to set the fill color for the rated and unrated items.
 
-### Rated Items
+### Rated items
 
-The [`RatedFill`] property fills the rated item with the specified solid color in the [`SfRating`]
+The [`RatedFill`] property fills the rated items with the specified solid color in the [`SfRating`].
 
 {% tabs %}
 
@@ -54,9 +54,9 @@ rating.RatingSettings = ratingSettings;
 
 ![Rated item fill color](images/rated-fill.png)
 
-### Unrated Items
+### Unrated items
 
-The [`UnratedFill`] property fills the unrated item with the specified solid color in the [`SfRating`].
+The [`UnratedFill`] property fills the unrated items with the specified solid color in the [`SfRating`].
 
 {% tabs %}
 
@@ -88,9 +88,9 @@ rating.RatingSettings = ratingSettings;
 
 [`SfRating`] control has support to set the stroke color for the rated and unrated items.
 
-### Rated Items
+### Rated items
 
-The [`RatedStroke`] property sets the stroke for the rated item with the specified solid color for the rated items in the [`SfRating`] control.
+The [`RatedStroke`] property sets the stroke for the rated items with the specified solid color in the [`SfRating`] control.
 
 {% tabs %}
 
@@ -118,7 +118,7 @@ rating.RatingSettings = ratingSettings;
 
 ![Rated item stroke](images/rated-stroke.png)
 
-### Unrated Items
+### Unrated items
 
 The [`UnratedStroke`] property sets the stroke for the unrated area with the specified solid color in the [`SfRating`] control.
 
@@ -152,9 +152,9 @@ rating.RatingSettings = ratingSettings;
 
 [`SfRating`] control has support to set the stroke thickness for the rated and unrated items.
 
-### Rated Items
+### Rated items
 
-The [`RatedStrokeThickness`] property sets the stroke thickness for the rated item with the specified value in the [`SfRating`] control.
+The [`RatedStrokeThickness`] property sets the stroke thickness for the rated items with the specified value in the [`SfRating`] control.
 
 {% tabs %}
 
@@ -182,9 +182,9 @@ rating.RatingSettings = ratingSettings;
 
 ![Rated item stroke thickness](images/rated-stroke-thickness.png)
 
-### Unrated Items
+### Unrated items
 
-The [`UnratedStrokeThickness`] property sets the stroke thickness for the unrated item with the specified value in the [`SfRating`] control.
+The [`UnratedStrokeThickness`] property sets the stroke thickness for the unrated items with the specified value in the [`SfRating`] control.
 
 {% tabs %}
 

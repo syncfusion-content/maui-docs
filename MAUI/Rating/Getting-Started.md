@@ -58,7 +58,7 @@ namespace RatingSample
 
 Step 1: Add the NuGet to the project as discussed in the above reference section. 
 
-Step 2: Add the namespace as shown in the following code sample:
+Step 2: Add the namespace, as shown in the following code sample:
 
 {% tabs %}
 
@@ -132,7 +132,7 @@ public MainPage()
 
 ## Set Value
 
-The display value can be set in the [`SfRating`] control, which is selected among the items. The following code example shows the display value of 3 with 5 rating items. The [`Value`] property is used to set display value.
+The display value can be set in the [`SfRating`] control, which is selected among the items. The following code example shows the display value of three with five rating items. The [`Value`] property is used to set display value.
 
 N> The default value of this property is 0.
 
@@ -160,7 +160,7 @@ public MainPage()
 
 ## Precision
 
-The[`SfRating`] control provides an option to rate the items in full, half, and exact values. This can be set using the [`Precision`] property. By default, the precision mode is [`Standard`].
+The [`SfRating`] control provides an option to rate the items in full, half, and exact values. This can be set using the [`Precision`] property. By default, the precision mode is [`Standard`].
 
 {% tabs %}
 

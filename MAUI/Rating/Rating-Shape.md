@@ -53,5 +53,5 @@ public MainPage()
 
 {% endtabs %}
 
-N> The Item size should be same as the path size for Custom Rating Shape
+N> The Item size should be the same as the path size for Custom Rating Shape
 
