@@ -30,11 +30,11 @@ SfChart
 </tr>
 </table>
 
-To make the migration easier, the majority of the APIs from the Xamarin [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html) were kept in the .NET MAUI [SfPyramidChart](). Currently, most of the features have been added in the [SfPyramidChart](), but only a few are pending in the .NET MAUI along with some limitations. Please refer to the following details and the API migration information available below.
+To make the migration easier, the most of the APIs from the Xamarin [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html) were kept in the .NET MAUI [SfPyramidChart](). Currently, most of the features have been added to the [SfPyramidChart](), but only a few are pending in the .NET MAUI, along with some limitations. Please refer to the following details and the API migration information available below.
 
 ## API migration
 
-To initialize the control, import the Chart namespace and Initialize [SfPyramidChart]() as shown in the following code sample. 
+To initialize the control, import the Chart namespace and Initialize [SfPyramidChart](), as shown in the following code sample. 
 
 <table>
 <tr>
