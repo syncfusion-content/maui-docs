@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Getting Started with Maui DataForm control | Syncfusion
-description: Learn here about getting started with Syncfusion Maui DataForm (SfDataForm) control, its elements and more.
+title: Getting Started with .NET MAUI DataForm control | Syncfusion
+description: Learn here about getting started with Syncfusion .NET MAUI DataForm (SfDataForm) control.
 platform: Maui
 control: SfDataForm
 documentation: ug
 ---
 
-# Getting Started with Maui DataForm (SfDataForm)
+# Getting Started with .NET MAUI DataForm (SfDataForm)
 
-This section provides a quick overview of how to get started with the .NET Maui DataForm(SfDataForm) for Maui and also provides a walk-through to configure the .NET MAUI DataForm control in a real-time scenario.
+This section provides a quick overview of how to get started with the .NET MAUI DataForm(SfDataForm) for .NET MAUI and also provides a walk-through to configure the .NET MAUI DataForm control in a real-time scenario.
 
 ## Creating an application using the .NET MAUI DataForm
 
@@ -82,9 +82,9 @@ The `Syncfusion.Maui.Core` nuget is a dependent package for all Syncfusion contr
 {% endhighlight %}
 {% endtabs %}
 
-### Creating data object
+#### Creating data object
 
-The `SfDataForm` is a data edit control so, create a data object to edit the data object.
+The `SfDataForm` is a data edit control so, create a data object with details to create a data form based on your business requirement.
 
 Here, the data object named **DataModel** created with some properties.
 
@@ -92,7 +92,7 @@ Here, the data object named **DataModel** created with some properties.
 {% highlight MainPage.xaml.cs %}
 
 
-    public class DataModel
+    public class ContactsInfo
     {
         public string FirstName { get; set; }
     
@@ -115,16 +115,16 @@ Here, the data object named **DataModel** created with some properties.
 {% endhighlight %}
 {% endtabs %}
 
-Create a model repository class with DataModel property initialized with required data in a new class file as shown in the following code example and save it ViewModel.cs file:
+Initialize the data object in view model class in order to bind in 'DataObject' property of 'SfDataForm'.
 
 {% tabs %}
 {% highlight MainPage.xaml.cs %}
 
-    public class ViewModel
+    public class DataFormViewModel
     {
         public DataModel DataModel {get; set;}
         
-        public ViewModel()
+        public DataFormViewModel()
         {
             this.DataModel = new DataModel();
         }
@@ -133,9 +133,9 @@ Create a model repository class with DataModel property initialized with require
 {% endhighlight %}
 {% endtabs %}
 
-## Setting data object
+## Set data object to data form
 
-To populate the labels and editors in the data form, set the `DataObject` property.
+By default, data form auto generate the editors based on the primitive data type in the 'DataObject' property. Please refer the following code to set the 'DataObject' property.
 
 {% tabs %}
 {% highlight MainPage.xaml %}
@@ -147,7 +147,7 @@ To populate the labels and editors in the data form, set the `DataObject` proper
                 x:Class="GettingStarted.MainPage">
 
                     <ContentPage.BindingContext>
-                        <local:ViewModel/>
+                        <local:DataFormViewModel/>
                     </ContentPage.BindingContext>    
 	                        <dataForm:SfDataForm x:Name="dataForm" 
 						    DataObject="{Binding DataModel}"/>    
@@ -161,13 +161,11 @@ To populate the labels and editors in the data form, set the `DataObject` proper
 {% endhighlight %}
 {% endtabs %}
 
-Now, run the application to render the `data form` to edit the data object as in the following screenshot:
-
 `Image`
 
 ## Defining editors
 
-The data form control automatically generates `DataFormItems` (which has UI settings of data field) when the data object set to the `SfDataForm.DataObject` property. The `DataFormItem` encapsulates the layout and editor setting for the data field appearing in the data form. When the `DataFormItems` are generated, you can handle the SfDataForm.GenerateDataFormItem event to customize or cancel the `DataFormItem`. 
+The data form control automatically generates `DataFormItems` (which has UI settings of data field) based on the data type in the `SfDataForm.DataObject` property. The `DataFormItem` encapsulates the layout of label and editor setting for the data field appearing in the dataform. 
 
 The type of input editor generated for the data field depends on the type and attribute settings of the property. The following table lists the `DataFormItem` and its constraints for generation:
 
@@ -420,9 +418,7 @@ Enum and List type property.
 </tr>
 </table>
 
-## Layout options
-
-### Label position
+#### Label position
 
 By default, the data form arranges the label at left side and input control at the right side. You can change the label position by setting the `SfDataForm.DefaultLayoutSettings.LabelPosition` property. You can position the label from left to top of the input control by setting the `LabelPosition` as Top.
 
@@ -445,26 +441,6 @@ By default, the data form arranges the label at left side and input control at t
 
 `Label Positioning images`
 
-### Grid layout
-
-By default, the data form arranges one data field per row. It is possible to have more than one data field per row by setting the `ColumnCount` property which provides grid like layout for the data form.
-
-[ItemsOrderInRow]`Link` property is applicable to only when the ColumnCount is greater than 1. The items on the data form are arranged in layout rows. Use the RowOrder property to specify the number of the layout row where the item should be displayed.
-
-{% tabs %}
-{% highlight MainPage.xaml %}
-
-    <dataForm:SfDataForm ColumnCount="2"/>
-
-{% endhighlight %}
-{% highlight MainPage.xaml.cs %}
-
-    dataForm.ColumnCount = 2;
-
-{% endhighlight %}
-{% endtabs %}
-
-`ColumnCount Image `
 
 ## Editing
 

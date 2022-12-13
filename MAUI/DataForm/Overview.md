@@ -1,3 +1,12 @@
+---
+layout: post
+title: Overview of .NET MAUI DataForm control | Syncfusion
+description: Overview of Syncfusion .NET MAUI DataForm(SfDataForm) control and its basic features.
+platform: Maui
+control: SfDataForm
+documentation: ug
+---
+ 
  **SfDataForm**
 
 The Syncfusion .NET MAUI DataForm (SfDataForm) control is used to create or edit data form such as data form such as login, reservation, contact, employee form and so, based on the business purpose. 
@@ -17,3 +26,5 @@ The Syncfusion .NET MAUI DataForm (SfDataForm) control is used to create or edit
 
 
 * **Validation**: Built-in support to validate the data based on the `INotifyDataErrorInfo` and data annotations. It also programmatically supports validation handling.
+
+* **Appearnace Customization**: Supports to customize the appearances of editors, labels and group headers. 
