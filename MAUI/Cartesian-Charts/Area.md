@@ -133,11 +133,8 @@ A marker, also known as a symbol, is used to determine or highlight the position
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-CategoryAxis primaryAxis = new CategoryAxis();
-chart.XAxes.Add(primaryAxis);
-NumericalAxis secondaryAxis = new NumericalAxis();
-chart.YAxes.Add(secondaryAxis);
 
+...
 AreaSeries series = new LineSeries()
 {
     XBindingPath = "Year",
@@ -145,6 +142,7 @@ AreaSeries series = new LineSeries()
     ItemsSource = new ViewModel().Data,
     ShowMarkers= true,
  };
+
 chart.Series.Add(series);
 this.Content= chart;
 
@@ -183,7 +181,8 @@ In order to change the series markers appearance, create an instance of the [Mar
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-…
+
+...
 ChartMarkerSettings chartMarker= new ChartMarkerSettings();
         chartMarker.Type = ShapeType.Diamond;
         chartMarker.Fill = Colors.Brown;
@@ -209,10 +208,10 @@ this.Content = chart;
 
 Following properties are used to customize marker appearance,
 
-* `Type`- The type property allows to change the rendering type/shape of marker in series. The default value of Type is Circle. The following types are used in marker “circle, rectangle, image, pentagon, vertical Line, horizontal Line, diamond, triangle, inverted Triangle”
-* `Stroke`- used to set the stroke color of the marker
-* `StrokeWidth`- used to change the marker border thickness
-* `Fill`- used to change the color of the marker
-* `Width`- used to change the width of the marker
-* `Height`- used to change the height of the marker
+* [Type](), of the `ShapeType`, describes the shape of the series marker. The default value of this property is Circle.
+* [Stroke](), of type `Brush`, indicates the brush used to paint the marker border.
+* [StrokeWidth](), of type `double`, indicates the width of the border.
+* [Fill](), of type `Brush`, indicates the color of the marker
+* [Width](), of type `double`, indicates the width of the marker
+* [Height](), of type `double`, indicates the height of the marker
 
