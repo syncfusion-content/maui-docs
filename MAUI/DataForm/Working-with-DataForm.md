@@ -27,23 +27,21 @@ The following tables lists the several types of `DataFormItem` and its constrain
 [DataFormTextItem]
 </td>
 <td>
-Text
+{{'[Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry?view=net-maui-7.0)'| markdownify }}
 </td>
 <td>
-Default DataFormItem generated for the String type and the properties with [DataType(DataType.Text)], [DataType(DataType.MultilineText)] and [DataType(DataType.Password)] attributes. 
-
+Default DataFormItem generated for the String type and the properties with [DataType(DataType.Text)] attributes. 
 </td>
 </tr>
 <tr>
 <td>
-[DataFormMultiLineTextItem]
+[DataFormMultilineTextItem]
 </td>
 <td>
-Text
+{{'[Editor](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/editor?view=net-maui-7.0)'| markdownify }}
 </td>
 <td>
 Generated for the String type and the properties with  [DataType(DataType.MultilineText)] attributes. 
-
 </td>
 </tr>
 <tr>
@@ -51,22 +49,21 @@ Generated for the String type and the properties with  [DataType(DataType.Multil
 [DataFormPasswordItem]
 </td>
 <td>
-Text
+{{'[Entry]((https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry?view=net-maui-7.0)'| markdownify }}
 </td>
 <td>
 Generated for the String type and the properties with [DataType(DataType.Password)] attributes. 
 </td>
 </tr>
-
 <tr>
 <td>
 [DataFormDateItem]
 </td>
 <td>
-Date
+{{'[DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/datepicker?view=net-maui-7.0)'| markdownify }}
 </td>
 <td>
-Generated for DateTime type and properties with [DataType(DataType.Date)] and [DataType(DataType.DateTime)] attributes. 
+Generated for DateTime, DateTime , DateTimeOffset, DateOnly type and properties with [DataType(DataType.Date)] and [DataType(DataType.DateTime)] attributes. 
 
 </td>
 </tr>
@@ -75,11 +72,10 @@ Generated for DateTime type and properties with [DataType(DataType.Date)] and [D
 [DataFormTimeItem]
 </td>
 <td>
-Time
+{{'[TimePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/timepicker?view=net-maui-7.0&tabs=windows)'| markdownify }}
 </td>
 <td>
-Generated for the property with [DataType(DataType.Time)] attribute. 
-
+Generated for TimeSpan, TimeOnly, DateTime and DateTimeOffset property with [DataType(DataType.Time)] attribute. 
 </td>
 </tr>
 <tr>
@@ -87,7 +83,7 @@ Generated for the property with [DataType(DataType.Time)] attribute.
 [DataFormPickerItem]
 </td>
 <td>
-Picker
+{{'[Picker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/picker?view=net-maui-7.0)'| markdownify }}
 </td>
 <td>
 Generated for Enum type property and the property with [EnumDataTypeAttribute] attribute. 
@@ -98,7 +94,7 @@ Generated for Enum type property and the property with [EnumDataTypeAttribute] a
 [DataFormCheckBoxItem]
 </td>
 <td>
-CheckBox
+{{'[CheckBox](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/checkbox?view=net-maui-7.0)'| markdownify }}
 </td>
 <td>
 Generated for the Bool type property.
@@ -110,7 +106,7 @@ Generated for the Bool type property.
 [DataFormSwitchItem]
 </td>
 <td>
-CheckBox
+{{'[Switch](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/switch?view=net-maui-7.0)'| markdownify }}
 </td>
 <td>
 Generated for the Bool type property.
@@ -122,7 +118,7 @@ Generated for the Bool type property.
 [DataFormComboBoxItem]
 </td>
 <td>
-ComboBox
+{{'[SfComboBox](https://help.syncfusion.com/maui/combobox)'| markdownify }}
 </td>
 <td>
 Generated for Enum type property and the property with [EnumDataTypeAttribute] attribute. 
@@ -132,7 +128,7 @@ Generated for Enum type property and the property with [EnumDataTypeAttribute] a
 [DataFormAutoCompleteItem]
 </td>
 <td>
-AutoComplete
+{{'[SfAutoComplete](https://help.syncfusion.com/maui/autocomplete)'| markdownify }}
 </td>
 <td>
 Generated for Enum type property and the property with [EnumDataTypeAttribute] attribute. 
@@ -143,7 +139,7 @@ Generated for Enum type property and the property with [EnumDataTypeAttribute] a
 [DataFormRadioGroupItem]
 </td>
 <td>
-RadioGroup
+{{'[RadioGroup](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/radiobutton?view=net-maui-7.0)'| markdownify }}
 </td>
 <td>
 Generated for the Enum type property.
@@ -430,7 +426,7 @@ You can remove the label text for editor by using the [ShowLabel] `Link` propert
         {
             if (e.DataFormItem.FieldName == "FirstName")
             {
-                e.DataFormItem.ShowLable = false;
+                e.DataFormItem.ShowLabel = false;
             }
         }
     }
@@ -439,7 +435,7 @@ You can remove the label text for editor by using the [ShowLabel] `Link` propert
 
 ## Changing layout settings
 
-You can change the label width, label position and editor width. This is possible by using the `GenerateDataFormItem` event. In the event, change the layout by using the [DefaultLayoutOption] property in the `DataFormItem`.
+You can change the label width, label position and editor width. This is possible by using the `GenerateDataFormItem` event. In the event, change the layout by using the [DefaultLayoutSettings] property in the `DataFormItem`.
 
 By default label position is left.
 
@@ -481,7 +477,7 @@ You can change the background colour for the label and editor by using the [Back
         {
             if (e.DataFormItem.FieldName == "FirstName")
             {
-                e.DataFormItem.Background = Colors.Azure; 
+                e.DataFormItem.Background = Brush.Azure; 
             }
         }
     }
@@ -490,16 +486,16 @@ You can change the background colour for the label and editor by using the [Back
 
 ### Setting order for editor
 
-By default the editor can be placed in the order of how you declare a propety in MainPage.xaml.cs
+By default the editor can be placed in the order of how you declare a propety in model class
 
 You can change the order of item in a row only if the column count more than 1 [If the column count = n , you can place a item upto n-1 position].
 
-You can change the order of item by using [ItemsOrderInRow] `Link` property in [DataFormItem] `Link`.
+You can change the order of item's within a row using [ItemsOrderInRow] `Link` property.
 
 {% tabs %}
 {% highlight MainPage.xaml.cs %}
 
-    dataForm.ColumnCount = 6;
+    dataForm.ColumnCount = 3;
 
     dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
@@ -509,7 +505,8 @@ You can change the order of item by using [ItemsOrderInRow] `Link` property in [
         {
             if (e.DataFormItem.FieldName == "FirstName")
             {
-                e.DataFormItem.ItemsOrderInRow = 3;  //Place a item upto 5 
+                e.DataFormItem.RowOrder = 1;
+                e.DataFormItem.ItemsOrderInRow = 2;  
             }
         }
     }
@@ -520,13 +517,8 @@ You can change the order of item by using [ItemsOrderInRow] `Link` property in [
 
 You can set label icon instead of using label text. Example:- You have a PhoneNumber editor, and the editor label is PhoneNumber. Here You can use a phone image for the label.
 
-`Add a phone image in Images folder`
-
-`build action as Embedded res`
 Right-click on the phone image and change the build action to "Embedded resource" and configure an image in.csproj. Directly add the name of the image by using the [LeadingLabelIcon] `Link` property in [DataFormItem] `Link`.
 
-Supported image format:- .png and .svg
-
 {% tabs %}
 {% highlight MainPage.xaml.cs %}
 
@@ -538,29 +530,14 @@ Supported image format:- .png and .svg
         {
             if (e.DataFormItem.FieldName == "PhoneNumer")
             {
-                e.DataFormItem.LeadingLabelIcon = "phone.png"
+                e.DataFormItem.LeadingLabelIcon = new FontImageSource() 
+                { 
+                    Glyph = "K", 
+                    Color = Colors.Black, 
+                    FontFamily = "DataFormIcons", 
+                    Size=18 
+                };
             }
-        }
-    }
-{% endhighlight %}
-{% endtabs %}
-
-Without adding an image to the Image folder, you can give the full path of the image.
-
-{% tabs %}
-{% highlight MainPage.xaml.cs %}
-
-    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
-
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
-    {
-        if (e.DataFormItem != null)
-        {
-            if (e.DataFormItem.FieldName == "PhoneNumer")
-            {
-                e.DataFormItem.LeadingLabelIcon = "C:\\Users\\Syncfsuion\\Pictures\\Phone.png";
-            }
-                
         }
     }
 {% endhighlight %}
@@ -600,44 +577,3 @@ DataFormTextStyle class properties:-
     2.FontFamily
     3.FontAttributes
     4.TextColor
-
-### Configure Font Family
-
-Here steps to use Configure FontFamily
-
-Step 1:- First download, needed FontFamily with .ttf format.
-
-Step 2:- Go to Fonts under Resources folder then add the .ttf file.  Also, make sure to set the Build Action to MauiFont.
-
-Step3:- Configure a font family by register the font in your MauiProgram.cs, add this line into the ConfigureFonts:
-
-{% tabs %}
-{% highlight %}
-
-        fonts.AddFont("icomoon.ttf", "icomoon");
-
-{% endhighlight %}
-{% endtabs %}
-
-You can change the label text style by using [LabelTextStyle] `Link` in the [DataFormItem] `Link`
-
-{% tabs %}
-{% highlight MainPage.xaml.cs %}
-
-    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
-
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
-    {
-        if (e.DataFormItem != null)
-        {
-            if (e.DataFormItem.FieldName == "Name")
-            {
-                e.DataFormItem.LabelTextStyle = new DataFormTextStyle() {  FontSize = 19, TextColor = Colors.Pink, FontFamily = "icomoon", FontAttributes = FontAttributes.Italic};
-                e.DataFormItem.EditorTextStyle = new DataFormTextStyle() {  FontSize = 23, TextColor = Colors.Red, FontFamily = "icomoon", FontAttributes = FontAttributes.Italic};
-                e.DataFormItem.ValidMessageTextStyle = new DataFormTextStyle() {  FontSize = 20, TextColor = Colors.Blue, FontFamily = "icomoon", FontAttributes = FontAttributes.Italic};
-                e.DataFormItem.ErrorLabelTextStyle = new DataFormTextStyle() {  FontSize = 18, TextColor = Colors.Pink, FontFamily = "icomoon", FontAttributes = FontAttributes.Italic};
-            }
-        }
-    }
-{% endhighlight %}
-{% endtabs %}
