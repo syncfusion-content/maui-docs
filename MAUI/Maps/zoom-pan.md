@@ -9,7 +9,7 @@ documentation: ug
 
 # Zooming and Panning in .NET MAUI Maps (SfMaps)
 
-It is possible to zoom in and out for any layer to take a closer look at a specific region by pinching the map, scrolling the mouse wheel or track pad. Pan the map to navigate across the regions. You can also customize the zoom level of the rendering.
+It is possible to zoom in and out for any layer to take a closer look at a specific region by pinching the map or scrolling the mouse wheel or track pad. Pan the map to navigate across the regions. You can also customize the zoom level of the rendering.
 
 The procedure for zooming and panning for both layers is very similar.
 
@@ -83,9 +83,9 @@ this.Content = map;
 
 ## Customizing the zoom level
 
-You can set the zoom level of the map layer by using `MapZoomPanBehavior.ZoomLevel` property.
+You can set the zoom level of the map layer by using the `MapZoomPanBehavior.ZoomLevel` property.
 
-The default `MapZoomPanBehavior.ZoomLevel` value is 1 which will show the whole map in the viewport for `MapTileLayer`.
+The default `MapZoomPanBehavior.ZoomLevel` value is 1, which will show the whole map in the viewport for `MapTileLayer`.
 
 {% tabs %}
 
@@ -128,7 +128,7 @@ this.Content = map;
 
 ## Enable zooming 
 
-The zooming feature enables you zoom in and zoom out the maps to show the in-depth information. To enable zooming, set the `EnableZooming` property to `true`. The default value of the `EnableZooming` is `true`.
+The zooming feature enables you to zoom in and zoom out the maps to show in-depth information. To enable zooming, set the `EnableZooming` property to `true`. The default value of the `EnableZooming` is `true`.
 
 {% tabs %}
 
@@ -164,7 +164,7 @@ this.Content = map;
 
 ## Enable Panning 
 
-Panning feature allows you move the visible area of the maps when it is zoomed in. To enable panning, set the `EnablePanning` property to `true`. The default value of the `EnablePanning` is `true`.
+The panning feature allows you to move the visible area of the maps when it is zoomed in. To enable panning, set the `EnablePanning` property to `true`. The default value of the `EnablePanning` is `true`.
 
 N> It is applicable for both tile layer and shape layer.
 
@@ -202,9 +202,9 @@ this.Content = map;
 
 ## Customizing min and max zoom level
 
-You can set the min and max zoom level of the map layer by setting the value to `MapZoomPanBehavior.MinZoomLevel` and `MapZoomPanBehavior.MaxZoomLevel` properties. The minimum and maximum zooming levels can be restricted using these properties respectively. The default values of `MapZoomPanBehavior.MinZoomLevel` and `MapZoomPanBehavior.MaxZoomLevel` are 1 and 15 respectively.
+You can set the min and max zoom level of the map layer by setting the value to `MapZoomPanBehavior.MinZoomLevel` and `MapZoomPanBehavior.MaxZoomLevel` properties. The minimum and maximum zooming levels can be restricted using these properties, respectively. The default values of `MapZoomPanBehavior.MinZoomLevel` and `MapZoomPanBehavior.MaxZoomLevel` are 1 and 15, respectively.
 
-However, for `MapTileLayer`, `MapZoomPanBehavior.maxZoomLevel` may slightly vary depends on the providers. Kindly check the respective official website of the map tile providers to know about the maximum zoom level it supports.
+However, for `MapTileLayer`, the `MapZoomPanBehavior.maxZoomLevel` may vary slightly depending on the providers. Kindly check the respective official website of the map tile providers to know about the maximum zoom level it supports.
 
 {% tabs %}
 
@@ -364,7 +364,7 @@ private DataTemplate CreateDataTemplate()
 
 ### Geo-bounds
 
-Calculate the zoom level automatically based on the `MapLatLngBounds(Northeast, Southwest)` of `MapTileLayer` class.
+Calculate the zoom level automatically based on the `MapLatLngBounds(Northeast, Southwest)` of the `MapTileLayer` class.
 
 {% tabs %}
 
@@ -526,7 +526,7 @@ this.Content = map;
 
 ### Zoom level Animation
 
-To perform animation on zoom level changing using the `MapTileLayer.EnableZoomingAnimation` property. The default value of the `EnableZoomingAnimation` is `true`.
+To perform the animation on zoom level changing using the `MapTileLayer.EnableZoomingAnimation` property. The default value of the `EnableZoomingAnimation` is `true`.
 
 N> It is applicable for both tile layer and shape layer.
 
@@ -561,7 +561,7 @@ this.Content = map;
 
 ### Center Animation
 
-To perform animation on center value changing using the `MapTileLayer.EnableCenterAnimation` property. The default value of the `EnableCenterAnimation` is `true`.
+To perform the animation on center value changing using the `MapTileLayer.EnableCenterAnimation` property. The default value of the `EnableCenterAnimation` is `true`.
 
 N> It is applicable only for tile layer.
 
@@ -596,7 +596,7 @@ this.Content = map;
 
 ## Event
 
-The `ZoomLevelChanging` event triggers when zoom level changed. Following arguments can be get from the ZoomLevelChanging event .
+The `ZoomLevelChanging` event triggers when the zoom level is changed. Following arguments can be get from the ZoomLevelChanging event .
 
 * `Cancel` : Used to cancel the zooming.
 * `PreviousLevel` : Returns the previous level after the zooming.
@@ -630,4 +630,4 @@ private void MapTileLayer_ZoomLevelChanging(object sender, ZoomLevelChangingEven
 
 {% endtabs %}
 
-N> You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our `.NET MAUI Maps Zoom & Pan example` that shows how to configure a Maps in .NET MAUI.
+N> You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our `.NET MAUI Maps Zoom & Pan example` that shows how to configure Maps in .NET MAUI.
