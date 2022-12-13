@@ -23,9 +23,9 @@ SfChart
 <td>
 <div> SfCartesianChart </div>
 <div> SfCircularChart </div>
-<div> SfFunnelChart (<em>Upcoming</em>) </div>
+<div> SfFunnelChart</div>
+<div> SfPyramidChart </div>
 <div> SfPolarChart (<em>Upcoming</em>) </div>
-<div> SfPyramidChart (<em>Upcoming</em>) </div>
 </td>
 </tr>
 </table>
@@ -789,12 +789,12 @@ chart.ChartBehaviors.Add(selectionBehavior);
 <chart:SfCartesianChart>
 . . .
     <chart:SfCartesianChart.SelectionBehavior>
-        <chart:ChartSelectionBehavior />
+        <chart:ChartSelectionBehavior SelectionBrush="Red" 
+                                      Type="Single" 
+                                      SelectedIndex="1" />
     </chart:SfCartesianChart.SelectionBehavior>
 
-    <chart:ColumnSeries SelectionBrush="Green" 
-            SelectedIndex="2"
-            ItemsSource="{Binding Data}" 
+    <chart:ColumnSeries ItemsSource="{Binding Data}" 
             XBindingPath="Demand" 
             YBindingPath="Year2010" />
 </chart:SfCartesianChart>
@@ -803,8 +803,12 @@ chart.ChartBehaviors.Add(selectionBehavior);
 {% highlight C# %}
 ColumnSeries series = new ColumnSeries();
 . . .
-series.SelectionBrush = Brush.Green;
-chart.SelectionBehavior = new ChartSelectionBehavior();
+SeriesSelectionBehavior selection = new SeriesSelectionBehavior();
+selection.SelectionBrush=Color.FromArgb("#314A6E");
+selection.Type = ChartSelectionType.Single;
+selection.SelectedIndex= 0;
+chart.SelectionBehavior = selection;
+
 chart.Series.Add(series);
 {% endhighlight %}
 
