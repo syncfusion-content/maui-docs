@@ -615,14 +615,14 @@ chart.ChartBehaviors.Add(selectionBehavior);
 <chart:SfCircularChart>
 . . .
     <chart:SfCircularChart.SelectionBehavior>
-        <chart:ChartSelectionBehavior />
+        <chart:ChartSelectionBehavior SelectionBrush="Red" 
+                                      Type="Single" 
+                                      SelectedIndex="1"/>
     </chart:SfCircularChart.SelectionBehavior>
 
-    <chart:PieSeries SelectionBrush="Green" 
-            SelectedIndex="2"
-            ItemsSource="{Binding Data}" 
-            XBindingPath="Demand" 
-            YBindingPath="Year2010" />
+    <chart:PieSeries ItemsSource="{Binding Data}" 
+                     XBindingPath="Demand" 
+                     YBindingPath="Year2010" />
 </chart:SfCircularChart>
 
 {% endhighlight %} 
