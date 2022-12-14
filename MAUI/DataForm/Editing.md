@@ -151,10 +151,31 @@ this.dataForm.IsReadOnly = true;
 {% endhighlight %}
 {% endtabs %}
 
-The particular editor can disabled by setting the [IsReadOnly] property of the [DataFormItem].
+The particular editor can be disabled using attributes and [GenerateDataFormItem] event.
+
+#### Using attribute
+
+An editor can be disabled using `EditableAttribute` and `ReadOnlyAttribute`.
 
 {% tabs %}
 {% highlight C# %}
+
+    [Editable(false)]
+    public string Name { get; set; }
+
+    [ReadOnly(true)]
+    public string Password { get; set; }
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Using event
+
+An editor can be disabled by setting the [IsReadOnly] property of the [DataFormItem].
+
+{% tabs %}
+{% highlight C# %}
+
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
  private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
@@ -165,5 +186,6 @@ this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
             e.DataFormItem.IsReadOnly = true;
     }
 }
+
 {% endhighlight %}
 {% endtabs %}
