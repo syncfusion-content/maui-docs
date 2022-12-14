@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Commit in .NET MAUI DataForm control | Syncfusion
+title: Data handling in .NET MAUI DataForm control | Syncfusion
 description: Learn here all about the commit feature in Syncfusion .NET MAUI DataForm (SfDataForm) control and more.
 platform: maui
 control: SfDataForm
