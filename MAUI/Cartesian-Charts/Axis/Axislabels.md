@@ -147,7 +147,7 @@ chart.XAxes.Add(primaryAxis);
 <chart:SfCartesianChart>
 . . .
     <chart:SfCartesianChart.XAxes>
-        <chart:NumericalAxis EdgeLabelsVisibilityMode="Visible"/>
+       <chart:NumericalAxis EdgeLabelsVisibilityMode="Visible"/>
     </chart:SfCartesianChart.XAxes>
 
 </chart:SfCartesianChart>

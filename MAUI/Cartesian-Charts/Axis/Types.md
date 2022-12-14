@@ -417,7 +417,8 @@ To customize the range of the log axis, you can use the [Minimum](https://help.s
 
 {% highlight c# %}
 
-chart.YAxes.Add(new LogarithmicAxis() { 
+chart.YAxes.Add(new LogarithmicAxis()
+{ 
 	Minimum = 100, 
 	Maximum = 10000 
 });
@@ -536,12 +537,12 @@ By default, The 0th index value of XAxes and YAxes is used to plot all of the se
 							 ShowMajorGridLines="False" />
 	</chart:SfCartesianChart.YAxes>
         <chart:ColumnSeries ItemsSource="{Binding Data1}" 
-            XBindingPath="Date"
-            YBindingPath="Value"
-			YAxisName="series_YAxis"/>
+                            XBindingPath="Date"
+                            YBindingPath="Value"
+			                YAxisName="series_YAxis"/>
         <chart:SplineSeries ItemsSource="{Binding Data}" 
-                XBindingPath="Date"
-                YBindingPath="Value"/>
+                            XBindingPath="Date"
+                            YBindingPath="Value"/>
 </chart:SfCartesianChart>
 
 </ContentPage>

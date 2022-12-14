@@ -192,9 +192,9 @@ The [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chart
     </chart:SfCartesianChart.TooltipBehavior>
 
     <chart:ColumnSeries ItemsSource="{Binding Data}" TooltipTemplate="{StaticResource tooltipTemplate1}"
-                            XBindingPath="Demand"
-                            YBindingPath="Year2010" 
-                            EnableTooltip="True"/>
+                        XBindingPath="Demand"
+                        YBindingPath="Year2010" 
+                        EnableTooltip="True"/>
 
 </chart:SfCartesianChart>
 

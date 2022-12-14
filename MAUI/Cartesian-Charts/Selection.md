@@ -23,11 +23,11 @@ To enable the data point selection, create an instance of the series [SelectionB
 . . .
     <chart:SfCartesianChart.Series>
         <chart:ColumnSeries ItemsSource="{Binding Data}" 
-                        XBindingPath="Time"
-                        YBindingPath="FootStepsCount">
-                <chart:ColumnSeries.SelectionBehavior>
-                        <chart:DataPointSelectionBehavior SelectionBrush="#314A6E"/>
-                </chart:ColumnSeries.SelectionBehavior>
+                            XBindingPath="Time"
+                            YBindingPath="FootStepsCount">
+           <chart:ColumnSeries.SelectionBehavior>
+                <chart:DataPointSelectionBehavior SelectionBrush="#314A6E"/>
+           </chart:ColumnSeries.SelectionBehavior>
         </chart:ColumnSeries>
     </chart:SfCartesianChart.Series>
 </chart:SfCartesianChart>
@@ -69,14 +69,14 @@ To enable the series selection, create an instance of the cartesian chart [Selec
     </chart:SfCartesianChart.SelectionBehavior>
     <chart:SfCartesianChart.Series>
         <chart:ColumnSeries ItemsSource="{Binding Data}" 
-                        XBindingPath="Country"
-                        YBindingPath="Kids"/>
+                            XBindingPath="Country"
+                            YBindingPath="Kids"/>
         <chart:ColumnSeries ItemsSource="{Binding Data}" 
-                        XBindingPath="Country"
-                        YBindingPath="Adults"/>
+                            XBindingPath="Country"
+                            YBindingPath="Adults"/>
         <chart:ColumnSeries ItemsSource="{Binding Data}" 
-                        XBindingPath="Country"
-                        YBindingPath="Seniors"/>
+                            XBindingPath="Country"
+                            YBindingPath="Seniors"/>
     </chart:SfCartesianChart.Series>
 </chart:SfCartesianChart>
 
