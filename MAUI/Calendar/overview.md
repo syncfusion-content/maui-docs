@@ -9,7 +9,7 @@ documentation: ug
 
 # Overview of .NET MAUI Calendar (SfCalendar)
 
-The Syncfusion .NET MAUI Calendar (SfCalendar) is a lightweight calendar control that allows user to easily select a Single, Multiple and a Range of dates. It offers Month, Year, Decade, and Century view options to quickly navigate to the desired date. To restrict the date selection by using the minimum, maximum, enable past dates, and disabled dates.
+The Syncfusion .NET MAUI Calendar (SfCalendar) control allows user to easily select a Single, Multiple and a Range of dates. It offers Month, Year, Decade, and Century view options to quickly navigate to the desired date. To restrict the date selection by using the minimum, maximum, enable past dates, and disabled dates.
 
 
 ## Key features
@@ -31,9 +31,9 @@ The Syncfusion .NET MAUI Calendar (SfCalendar) is a lightweight calendar control
    {% endcolumn}
    {% endmultiple_column %}
 
-* **Quick navigation**: You can easily navigate to the different view modes in the SfCalendar.
+* **Quick navigation**: You can easily navigate to the desired date using different calendar views in the SfCalendar.
 
-* **Allow view Navigation**: Allows you to navigate to the different view modes through tap interaction on the cell or header when it is enabled. Restrict users from navigating to differnt calendar views and allows you to select the dates in the year, decade and century view cells when this property is not enabled.
+* **Allow view Navigation**: If this feature is disabled, restrict users from navigating to different calendar views and you can select the dates in the Year, Decade and Century view cells.
 
    {% multiple_column %}
    {% column %}
@@ -50,11 +50,11 @@ The Syncfusion .NET MAUI Calendar (SfCalendar) is a lightweight calendar control
    {% endcolumn}
    {% endmultiple_column %}
 
-* **Enable Past Dates**: Indicates whether the dates are enabled or disabled before the today date. If this property is disabled, you cannot able to select the dates before the today date and the dates before the today date are considered as disabled dates.
+* **Enable Past Dates**: The dates before the current date are considered as disabled date if this feature is disabled and you won't be able to select or access them.
 
    ![enable-past-date-in-maui-calendar](images/overview/enable-past-date-in-maui-calendar.png)
 
-* **Date selection**: The Selection mode is specified in the calendar property enumeration, allows you to select Single, Multiple, and a Range of dates through interaction. It also supports programmatic selection.
+* **Date selection**: Date selection allows you to select Single, Multiple, and a Range of dates. It also supports programmatic selection.
 
    {% multiple_column %}
    {% column %}
@@ -68,7 +68,7 @@ The Syncfusion .NET MAUI Calendar (SfCalendar) is a lightweight calendar control
    {% endcolumn}
    {% endmultiple_column %}
 
-* **Limit the date selection range**: You can select a date from a range of dates between a minimum and maximum number of days by setting the minimum and maximum dates (span of days).
+* **Limit the date selection range**: The minimum and maximum days option allows you to choose the date only a specific range of minimum and maximum number of days (span of days). The dates before the minimum date and after the maximum date are considered as disbaled date.
 
    ![monthview-min-and-max-date-in-maui-calendar](images/overview/monthview-min-and-max-date-in-maui-calendar.png)
 
