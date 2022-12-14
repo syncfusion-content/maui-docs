@@ -1,4 +1,6 @@
-﻿<calendar:SfCalendar  x:Name="Calendar" 
-                        View="Month"
-                        MonthView="{Calendar:CalendarMonthView NumberOfVisibleWeeks=4}">
+﻿<calendar:SfCalendar  x:Name="Calendar"
+                      View="Month">
+                      <Calendar:SfCalendar.MonthView>
+                        <Calendar:CalendarMonthView NumberOfVisibleWeeks = 4/>
+                      </Calendar:SfCalendar.MonthView>                    
 </calendar:SfCalendar>

@@ -1,3 +1,5 @@
-﻿<calendar:SfCalendar  x:Name="Calendar" 
-                        MonthView="{Calendar:CalendarMonthView ShowWeekNumber=True}">
+﻿<calendar:SfCalendar  x:Name="Calendar" View="Month"> 
+                      <Calendar:SfCalendar.MonthView>
+                        <Calendar:CalendarMonthView ShowWeekNumber="True" />
+                      </Calendar:SfCalendar.MonthView>>
 </calendar:SfCalendar>
