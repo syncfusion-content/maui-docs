@@ -1,21 +1,19 @@
 ---
 layout: post
-title: Validation in .NET MAUI DataForm control | Syncfusion
+title: Data validation in .NET MAUI DataForm control | Syncfusion
 description: Learn here all about the validation feature in Syncfusion .NET MAUI DataForm (SfDataForm) control and more.
 platform: maui
 control: SfDataForm
 documentation: ug
 ---
 
-# Data validation in .NET MAUI DataForm control
+# Validation in .NET MAUI DataForm (SfDataForm)
 
 The data form validates the data and user input in order to update the correct value in the underlying data object. In case of invalid data, the error message is shown at the bottom of the editor.
 
 ## Built in validations
 
 The supported built in validations are as follows:
-
-* Data annotation
 
 #### Data annotations
 
