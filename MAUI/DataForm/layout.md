@@ -156,7 +156,7 @@ this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
 Image can be loaded instead of label  by using [LeadingLabelIcon] property of `DataFormItem`.
 
-## Using event
+#### Using event
 
 {% tabs %}
 {% highlight C# %}

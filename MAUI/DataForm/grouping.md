@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Grouping in .NET MAUI DataForm control | Syncfusion
-description: Learn here all about the grouping support in Syncfusion .NET MAUI DataForm (SfDataForm) control.
+description: Learn here all about the grouping support in Syncfusion .NET MAUI DataForm (SfDataForm) control and more.
 platform: maui
 control: SfDataForm
 documentation: ug
