@@ -2,7 +2,7 @@
 layout: post
 title: Getting Started with .NET MAUI DataForm control | Syncfusion
 description: Learn here about getting started with Syncfusion .NET MAUI DataForm (SfDataForm) control and its basic features.
-platform: Maui
+platform: maui
 control: SfDataForm
 documentation: ug
 ---
@@ -82,7 +82,7 @@ The `Syncfusion.Maui.Core` nuget is a dependent package for all Syncfusion contr
 {% endhighlight %}
 {% endtabs %}
 
-#### Creating data object
+## Creating data object
 
 The `SfDataForm` is a data edit control so, create a data object with details to create a data form based on your business requirement.
 
@@ -164,7 +164,7 @@ By default, data form auto generate the editors based on the primitive data type
 
 ## Defining editors
 
-The data form control automatically generates `DataFormItems` (which has UI settings of data field) based on the data type in the `SfDataForm.DataObject` property. The `SfDataForm.Items` encapsulates the layout of label and editor setting for the data field appearing in the dataform. 
+The data form control automatically generates `SfDataForm.Items` (which has UI settings of data field) based on the data type in the `SfDataForm.DataObject` property. The `SfDataForm.Items` encapsulates the layout of label and editor setting for the data field appearing in the dataform. 
 
 The type of input editor generated for the data field depends on the type and attribute settings of the property. The following table lists the `DataFormItem` and its constraints for generation:
 
