@@ -2,10 +2,14 @@
 layout: post
 title: Commit in .NET MAUI DataForm control | Syncfusion
 description: Learn here all about the commit feature in Syncfusion .NET MAUI DataForm (SfDataForm) control and more.
-platform: Maui
+platform: maui
 control: SfDataForm
 documentation: ug
 ---
+
+# Commit in .NET MAUI DataForm (SfDataForm)
+
+The data form commits the data and user input in order to update the value in the underlying data object.
 
 ## Commit mode
 
