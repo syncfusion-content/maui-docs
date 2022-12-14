@@ -159,6 +159,13 @@ The following table illustrates the API migration for the chart.
 <td>CrossAxisName</td>
 </tr>
 <tr>
+<td>PlotOffset</td>
+<td>PlotOffsetStart, PlotOffsetEnd</td>
+</tr>
+<tr>
+<td>ShowTrackballInfo</td>
+<td>ShowTrackballLabel</td>
+</tr>
 <td>LabelClicked</td>
 <td><em>Upcoming</em></td>
 </tr>
@@ -183,10 +190,6 @@ The following table illustrates the API migration for the chart.
 <td><em>Upcoming</em></td>
 </tr>
 <tr>
-<td>PlotOffset</td>
-<td><em>Upcoming</em></td>
-</tr>
-<tr>
 <td>LabelsIntersectAction</td>
 <td><em>Upcoming</em></td>
 </tr>
@@ -199,13 +202,6 @@ The following table illustrates the API migration for the chart.
 <td><em>Upcoming</em></td>
 </tr>
 <tr>
-<td>ShowTrackballInfo</td>
-<td><em>Upcoming</em></td>
-</tr>
-<tr>
-<td>TrackballLabelStyle</td>
-<td><em>Upcoming</em></td>
-</tr>
 <tr>
 <td>AutoScrollingDelta</td>
 <td><em>Upcoming</em></td>
@@ -306,10 +302,6 @@ this.Content = chart;
 <td>PaletteBrushes</td>
 </tr>
 <tr>
-<td>SelectedDataPointColor</td>
-<td>SelectionBrush</td>
-</tr>
-<tr>
 <td>DataMarker</td>
 <td>ShowDataLabels, DataLabelSettings</td>
 </tr>
@@ -405,6 +397,9 @@ this.Content = chart;
 <td>IsVisible</td>
 <td>IsVisible</td>
 </tr>
+<td>ItemTemplate</td>
+<td>ItemTemplate</td>
+</tr>
 <tr>
 <td>Title</td>
 <td><em>Upcoming</em> </td>
@@ -442,9 +437,6 @@ this.Content = chart;
 <td><em>Upcoming</em></td>
 </tr>
 <tr>
-<td>ItemTemplate</td>
-<td><em>Upcoming</em></td>
-</tr>
 <tr>
 <td>OverflowMode</td>
 <td><em>Upcoming</em></td>
@@ -878,8 +870,7 @@ chart.ZoomPanBehavior = zooming;
 ## Upcoming features in .NET MAUI
 
 **Chart** 
-
-* Support for trackball interactions. 
+ 
 * Support for crosshair interactions. 
 * Exporting support for a chart as an image or a stream. 
 * Support for chart localization. 
@@ -917,11 +908,9 @@ chart.ZoomPanBehavior = zooming;
 * Maximum width support for Legend.
 * Individual legend items based on the data point count.
 * Event or method to notify the legend click and the creation of a legend item.
-* DataTemplate support for legend items.
 
 **Data label**
 
-* Only the line, area, and spline series have support for markers.
 * DataTemplate support for data labels.
 * Connector lines and its customization support.
 
@@ -947,12 +936,6 @@ chart.ZoomPanBehavior = zooming;
 * [RangeStyle](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartAxis.html#Syncfusion_SfChart_XForms_ChartAxis_RangeStyles) support was not provided in the axis. Instead, you can use [DrawMajorTick](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_DrawMajorTick_Microsoft_Maui_Graphics_ICanvas_System_Double_Microsoft_Maui_Graphics_PointF_Microsoft_Maui_Graphics_PointF_), [DrawMinorTick](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_DrawMinorTick_Microsoft_Maui_Graphics_ICanvas_System_Double_Microsoft_Maui_Graphics_PointF_Microsoft_Maui_Graphics_PointF_) and [DrawGridLine](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_DrawGridLine_Microsoft_Maui_Graphics_ICanvas_System_Double_System_Single_System_Single_System_Single_System_Single_) override methods provided in the axis class.
 * In.NET MAUI, the [ChartDataPoint](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartDataPoint.html#) model class was no longer available. Instead, create your own model.
 
-## Known issues
-
-* The legend item was not dynamically added.
-* Axis label rotation does not work for all angles.
-* The title position was incorrect for a category axis with an inversed position.
-* Axis range and series are not updated properly when dynamically removing or inserting the axis collection.
 
 ## Support and feedback
 
