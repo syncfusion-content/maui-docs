@@ -7,7 +7,7 @@ control: SfDataForm
 documentation: ug
 ---
  
- ## Overview of .NET MAUI DataForm (SfDataForm)
+ # Overview of .NET MAUI DataForm (SfDataForm)
 
 The Syncfusion .NET MAUI DataForm (SfDataForm) control is used to create or edit data form such as data form such as login, reservation, contact, employee form and so, based on the business purpose. 
 
