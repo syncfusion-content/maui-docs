@@ -23,7 +23,7 @@ This section provides a quick overview of how to get started with the .NET MAUI 
 
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 5" %}
+{% highlight xaml tabtitle="XAML" hl_lines="3 5" %}
 
     <ContentPage   
             
@@ -33,7 +33,7 @@ This section provides a quick overview of how to get started with the .NET MAUI 
     </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 10" %}
+{% highlight c# tabtitle="C#" hl_lines="1 9 10" %}
 
     using Syncfusion.Maui.DataForm;
     . . .
@@ -86,10 +86,10 @@ The `Syncfusion.Maui.Core` nuget is a dependent package for all Syncfusion contr
 
 The `SfDataForm` is a data edit control so, create a data object with details to create a data form based on your business requirement.
 
-Here, the data object named **DataModel** created with some properties.
+Here, the data object named **ContactsInfo** created with some properties.
 
 {% tabs %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
 
     public class ContactsInfo
@@ -118,15 +118,15 @@ Here, the data object named **DataModel** created with some properties.
 Initialize the data object in view model class in order to bind in 'DataObject' property of 'SfDataForm'.
 
 {% tabs %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
     public class DataFormViewModel
     {
-        public DataModel DataModel {get; set;}
+        public ContactsInfo ContactsInfo {get; set;}
         
         public DataFormViewModel()
         {
-            this.DataModel = new DataModel();
+            this.ContactsInfo = new ContactsInfo();
         }
     }
 
@@ -138,11 +138,10 @@ Initialize the data object in view model class in order to bind in 'DataObject' 
 By default, data form auto generate the editors based on the primitive data type in the 'DataObject' property. Please refer the following code to set the 'DataObject' property.
 
 {% tabs %}
-{% highlight MainPage.xaml %}
+{% highlight XAML %}
 
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    <ContentPage 
+        . . .
                 xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm"
                 x:Class="GettingStarted.MainPage">
 
@@ -150,13 +149,13 @@ By default, data form auto generate the editors based on the primitive data type
                         <local:DataFormViewModel/>
                     </ContentPage.BindingContext>    
 	                        <dataForm:SfDataForm x:Name="dataForm" 
-						    DataObject="{Binding DataModel}"/>    
+						    DataObject="{Binding ContactsInfo}"/>    
     </ContentPage>
 
 {% endhighlight %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
-    dataForm.DataObject = new DataModel();
+    dataForm.DataObject = new ContactsInfo();
 
 {% endhighlight %}
 {% endtabs %}
@@ -165,7 +164,7 @@ By default, data form auto generate the editors based on the primitive data type
 
 ## Defining editors
 
-The data form control automatically generates `DataFormItems` (which has UI settings of data field) based on the data type in the `SfDataForm.DataObject` property. The `DataFormItem` encapsulates the layout of label and editor setting for the data field appearing in the dataform. 
+The data form control automatically generates `DataFormItems` (which has UI settings of data field) based on the data type in the `SfDataForm.DataObject` property. The `SfDataForm.Items` encapsulates the layout of label and editor setting for the data field appearing in the dataform. 
 
 The type of input editor generated for the data field depends on the type and attribute settings of the property. The following table lists the `DataFormItem` and its constraints for generation:
 
@@ -173,6 +172,8 @@ The type of input editor generated for the data field depends on the type and at
 <tr>
 <th>Generated DataFormItem Type</th>
 <th>Data Type / Attribute</th>
+<th>Editor</th>
+<th>Input Control</th>
 </tr>
 <tr>
 <td>
@@ -182,14 +183,26 @@ The type of input editor generated for the data field depends on the type and at
 <td>
 Default DataFormItem generated for the String type and the properties with [DataType(DataType.Text)].
 </td>
+<td>
+Text
+</td>
+<td>
+Entry
+</td>
 </tr>
 <tr>
 <td>
-{{'[DataFormMultiLineTextItem]
+{{'[DataFormMultilineTextItem]
 `Link`
 </td>
 <td>
 Generated for string type property with [DataType(DataType.MultilineText)] attributes.
+</td>
+<td>
+Multiline Text
+</td>
+<td>
+Editor
 </td>
 </tr>
 <tr>
@@ -200,6 +213,12 @@ Generated for string type property with [DataType(DataType.MultilineText)] attri
 <td>
 Generated for string type property with [DataType(DataType.Password)] attributes.
 </td>
+<td>
+Password
+</td>
+<td>
+Entry
+</td>
 </tr>
 <tr>
 <td>
@@ -208,6 +227,12 @@ Generated for string type property with [DataType(DataType.Password)] attributes
 <td>
 Generated for the Bool type property.
 [BoolDataTypeAttribute]
+</td>
+<td>
+CheckBox
+</td>
+<td>
+CheckBox
 </td>
 </tr>
 <tr>
@@ -218,16 +243,27 @@ Generated for the Bool type property.
 Generated for the Bool type property.
 [BoolDataTypeAttribute]
 </td>
+<td>
+Switch
+</td>
+<td>
+Switch
+</td>
 </tr>
-
 <tr>
 <td>
 {{'[DataFormDateItem] `Link`
 </td>
 <td>
-Generated for the DateTime, DateOnly, DateTimeOffset type property.
+Generated for the DateTime, DateOnly, DateTimeOffset type properties.
 [DataType(DataType.Date)].
 [DataType(DataType.DateTime)].
+</td>
+<td>
+DatePiker
+</td>
+<td>
+DatePicker
 </td>
 </tr>
 <tr>
@@ -236,8 +272,14 @@ Generated for the DateTime, DateOnly, DateTimeOffset type property.
 `Link`
 </td>
 <td>
-Generated for the TimeSpan, TimeOnly  type property.
+Generated for the TimeSpan, TimeOnly, DateTime, DateTimeOffset type properties.
 [DataType(DataType.Time)].
+</td>
+<td>
+TimePicker
+</td>
+<td>
+TimePicker
 </td>
 </tr>
 <tr>
@@ -248,8 +290,13 @@ Generated for the TimeSpan, TimeOnly  type property.
 Generated for the Enum type property.
 [EnumDataTypeAttribute]
 </td>
+<td>
+Picker
+</td>
+<td>
+Picker
+</td>
 </tr>
-
 <tr>
 <td>
 {{'[DataFormAutoCompleteItem]`Link`
@@ -257,6 +304,12 @@ Generated for the Enum type property.
 <td>
 Generated for the Enum type property.
 [EnumDataTypeAttribute]
+</td>
+<td>
+AutoComplete
+</td>
+<td>
+SfAutoComplete
 </td>
 </tr>
 <tr>
@@ -267,6 +320,12 @@ Generated for the Enum type property.
 Generated for the Enum type property.
 [EnumDataTypeAttribute]
 </td>
+<td>
+ComboBox
+</td>
+<td>
+SfComboBox
+</td>
 </tr>
 <tr>
 <td>
@@ -276,144 +335,11 @@ Generated for the Enum type property.
 Generated for the Enum type property.
 [EnumDataTypeAttribute]
 </td>
-</tr>
-</table>
-
-The following list of editors are supported:
-
-<table>
-<tr>
-<th>Editor</th>
-<th>Data Type/Attribute</th>
-<th>Input control loaded</th>
-</tr>
-<tr>
-<td>
-Text
-</td>
-<td>
-The String type property and any other type apart from the following specified cases.
-</td>
-<td>
-{{'[Entry]`Link`
-</td>
-</tr>
-<tr>
-<td>
-MultilineText
-</td>
-<td>
-The String type property with multi line text.
-[DataType(DataType.Multiline)] 
-</td>
-<td>
-{{'[Editor]`Link`
-</td>
-</tr>
-<tr>
-<td>
-Password
-</td>
-<td>
-The String type property with [DataType(DataType.Password)] attribute.
-</td>
-<td>
-{{'[Entry]`Link`
-</td>
-</tr>
-<tr>
-<td>
-CheckBox
-</td>
-<td>
-Bool type property.
-</td>
-<td>
-{{'[CheckBox]`Link`
-</td>
-</tr>
-<tr>
-<td>
-Switch
-</td>
-<td>
-Bool type property.
-</td>
-<td>
-{{'[Switch] `Link`
-</td>
-</tr>
-<tr>
-<td>
-Picker
-</td>
-<td>
-Enum and List type property. 
-[EnumDataTypeAttribute]
-</td>
-<td>
-{{'[Picker]`Link`
-</td>
-</tr>
-<tr>
-<td>
-DatePicker
-</td>
-<td>
-The DateTime type property with date value.
-[DataType(DataType.Date)]
-[DataType(DataType.DateTime)]
-</td>
-<td>
-{{'[DatePicker]`Link`
-</td>
-</tr>
-<tr>
-<td>
-TimePicker
-</td>
-<td>
-Property with [DataType(DataType.Time)] attribute.
-</td>
-<td>
-{{'[TimePicker]`Link`
-</td>
-</tr>
-<tr>
-<td>
-ComboBox
-</td>
-<td>
-Enum and List type property.
-[EnumDataTypeAttribute]
-</td>
-<td>
-{{'[SfComboBox]`Link`
-</td>
-</tr>
-<tr>
-<td>
-AutoComplete
-</td>
-<td>
-Enum and List type property.
-[EnumDataTypeAttribute]
-</td>
-<td>
-{{'[SfAutoComplete]`Link`
-</td>
-</tr>
-
-<tr>
 <td>
 RadioGroup
 </td>
 <td>
-Enum and List type property.
-[EnumDataTypeAttribute]
-</td>
-<td>
-{{'[RadioButton]`Link`
+RadioButton
 </td>
 </tr>
 </table>
@@ -423,7 +349,7 @@ Enum and List type property.
 By default, the data form arranges the label at left side and input control at the right side. You can change the label position by setting the `SfDataForm.DefaultLayoutSettings.LabelPosition` property. You can position the label from left to top of the input control by setting the `LabelPosition` as Top.
 
 {% tabs %}
-{% highlight MainPage.xaml %}
+{% highlight XAML %}
 
     <dataForm:SfDataForm x:Name="dataForm" >
             <dataForm:SfDataForm.DefaultLayoutSettings>
@@ -432,7 +358,7 @@ By default, the data form arranges the label at left side and input control at t
     </dataForm:SfDataForm>
 
 {% endhighlight %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
     dataForm.DefaultLayoutSettings.LabelPosition = LabelPosition.Top;
 

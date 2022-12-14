@@ -13,18 +13,14 @@ The Syncfusion .NET MAUI DataForm (SfDataForm) control is used to create or edit
 
 ## Key features includes the following:
 
-*  **Layout and grouping**: Supports to linear and grid layout with grouping support. Supports customizing the layout with different heights for each item.
+* **Editors** : Support built-in editors such as text, password, multi-line, combo box, automcomplete, date, time, checkbox,switch and radio group editors the primitive data types sych as string, enumeration, DateTime and TimeSpan.
 
+* **Custom editor** : Support to add custom editors.
 
-* **Caption customization**: Supports loading the image as caption for the editor.
+* **Validation** : Built-in support to validate the data or user input to alert the user to enter proper value.
 
+* **Commit mode** : Support to determine when the value should be committed to the underlying data object.
 
-* **Editors**: Built-in support for text, multiline text, password, picker, date picker, time picker, switch, comboBox ,autoComplete and checkbox editors. 
-
-
-* **Custom editor**: Supports loading the custom editors.
-
-
-* **Validation**: Built-in support to validate the data based on the `INotifyDataErrorInfo` and data annotations. It also programmatically supports validation handling.
+* **Layout and grouping** : Supports grouping, linear and grid layout.
 
 * **Appearnace Customization**: Supports to customize the appearances of editors, labels and group headers. 
