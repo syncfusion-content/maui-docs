@@ -340,31 +340,3 @@ RadioGroup
 </td>
 </tr>
 </table>
-
-#### Label position
-
-By default, the data form arranges the label at left side and input control at the right side. You can change the label position by setting the `SfDataForm.DefaultLayoutSettings.LabelPosition` property. You can position the label from left to top of the input control by setting the `LabelPosition` as Top.
-
-{% tabs %}
-{% highlight XAML %}
-
-    <dataForm:SfDataForm x:Name="dataForm" >
-            <dataForm:SfDataForm.DefaultLayoutSettings>
-                <dataForm:DataFormDefaultLayoutSettings LabelPosition="Top"/>
-            </dataForm:SfDataForm.DefaultLayoutSettings>
-    </dataForm:SfDataForm>
-
-{% endhighlight %}
-{% highlight C# %}
-
-    dataForm.DefaultLayoutSettings.LabelPosition = LabelPosition.Top;
-
-{% endhighlight %}
-{% endtabs %}
-
-`Label Positioning images`
-
-
-## Editing
-
-By default, the data form enables editing of the data field. You can disable editing by setting the `IsReadOnly` property of the data form. You can enable or disable editing for a particular data field by setting the `IsReadOnly` property of `DataFormItem` in the `GenerateDataFormItem` event. The data field editing behavior can also be defined by using [EditableAttribute](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.editableattribute?view=netframework-4.8Dip)
