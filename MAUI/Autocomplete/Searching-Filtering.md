@@ -223,8 +223,7 @@ public class CityViewModel
         Cities.Add(new CityInfo() { CityName = "Delhi", CountryName = "India", IsCapital = true });
         Cities.Add(new CityInfo() { CityName = "Mumbai", CountryName = "India", IsCapital = false });
         Cities.Add(new CityInfo() { CityName = "Chennai", CountryName = "India", IsCapital = false });
-        Cities.Add(new CityInfo() { CityName = "Andhra Pradesh", CountryName = "India", IsCapital = false });
-        Cities.Add(new CityInfo() { CityName = "Kerala", CountryName = "India", IsCapital = false });
+        Cities.Add(new CityInfo() { CityName = "Kolkata", CountryName = "India", IsCapital = false });
         Cities.Add(new CityInfo() { CityName = "Chicago", CountryName = "USA", IsCapital = false });
         Cities.Add(new CityInfo() { CityName = "Los Angels", CountryName = "USA", IsCapital = false });
         Cities.Add(new CityInfo() { CityName = "Houston", CountryName = "USA", IsCapital = false });
@@ -257,7 +256,7 @@ public class CityFilteringBehavior : IAutocompleteFilterBehavior
 
 **Step 2:** Then, implement the `GetMatchingIndexes` method of the `IAutocompleteFilterBehavior` interface to create your suggestion list (containing the indices of the filtered items) based on the text entered in the `Autocomplete` control that needs to be shown in the drop-down. The `GetMatchingIndexes` method contains following arguments.
 
-* `source` - The owner of the filter behavior, which holds information about `ItemsSource`  property and so on.
+* `source` - The owner of the filter behavior, which holds information about the `ItemsSource`  property and so on.
 * `filterInfo` - Contains details about the text entered in `Autocomplete` control. Using this text, you can prepare suggestion list, which gets displayed in the drop-down list. 
 
 The following image shows how to display cities in a drop-down based on the country name entered in the `Autocomplete` control.
@@ -329,8 +328,8 @@ public class CapitalCitySearchingBehavior : Syncfusion.Maui.Inputs.IAutocomplete
 
 **Step 2:** Then, implement the `GetHighlightIndex` method of the `IAutocompleteSearchBehavior` interface to initially select any item from the filtered list in the `Autocomplete` control drop-down. The `GetHighlightIndex` method contains the following arguments.
 
-* `source` - The owner of the search behavior, which holds information about `ItemsSource` and so on.
-* `searchInfo` - Contains information about the filtered items based on the text entered in `Autocomplete` control. You can select item from the drop-down list using this list. 
+* `source` - The owner of the search behavior, which holds information about the `ItemsSource` and so on.
+* `searchInfo` - Contains information about the filtered items based on the text entered in the `Autocomplete` control. Select an item from the drop-down list using this list. 
 
 The following code initially demonstrates how to select an item from the filtered list of the drop-down in the `Autocomplete` control. When entering the country's name, the capital cities will be selected.
 {% tabs %}
