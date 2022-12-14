@@ -28,7 +28,7 @@ this.Calendar.SelectionMode = CalendarSelectionMode.Single;
 {% endhighlight %}
 {% endtabs %}
 
-![single-selection-maui-calendar](images/views/single-selection.png)
+![monthview-single-selection-in-maui-calendar](images/selection/monthview-single-selection-in-maui-calendar.png)
 
 >**NOTE**
 * In the Year, Decade and Century views can able to select the cells, only when the `allowViewNavigation` property is set to false.
@@ -55,7 +55,7 @@ this.Calendar.SelectionMode = CalendarSelectionMode.Multiple;
 {% endhighlight %}
 {% endtabs %}
 
-![multiple-selection-maui-calendar](images/views/multiple-selection.png)
+![monthview-multiple-selection-in-maui-calendar](images/selection/monthview-multiple-selection-in-maui-calendar.png)
 
 
 ## Range selection
@@ -74,7 +74,7 @@ this.Calendar.SelectionMode = CalendarSelectionMode.Range;
 {% endhighlight %}
 {% endtabs %}
 
-![range-selection-maui-calendar](images/views/range-selection.png)
+![monthview-range-selection-in-maui-calendar](images/selection/monthview-range-selection-in-maui-calendar.png)
 
 >**NOTE**
 * In the Year, Decade and Century views can able to select the cells, only when the `allowViewNavigation` property is set to false.
@@ -103,7 +103,7 @@ this.Calendar.RangeSelectionDirection = CalendarRangeSelectionDirection.Default;
 {% endhighlight %}
 {% endtabs %}
 
-![default-range-selection-direction-maui-calendar](images/views/default-range-selection-direction.png)
+![default-range-selection-direction-maui-calendar](images/selection/default-range-selection-direction.png)
 
 #### Range Selection Direction - Forward
 If the [RangeSelectionDirection](https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/SfCalendar/CalendarRangeSelectionDirection.html) property to `Forward` allows you to select only the dates after the selected range start date and the dates before the range start date is considered as disabled date. The start date will not be changed.
@@ -121,7 +121,7 @@ this.Calendar.RangeSelectionDirection = CalendarRangeSelectionDirection.Forward;
 {% endhighlight %}
 {% endtabs %}
 
-![forward-range-selection-direction-maui-calendar](images/views/forward-range-selection-direction.png)
+![range-selection-forward-direction-in-maui-calendar](images/selection/range-selection-forward-direction-in-maui-calendar.png)
 
 #### Range Selection Direction - Backward
 If the [RangeSelectionDirection](https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/SfCalendar/CalendarRangeSelectionDirection.html) property to `Backward` allows you to select only the dates before the selected range end date and the dates after the range end date is considered as disabled date. The end date will not be changed.
@@ -139,7 +139,7 @@ this.Calendar.RangeSelectionDirection = CalendarRangeSelectionDirection.Backward
 {% endhighlight %}
 {% endtabs %}
 
-![backward-range-selection-direction-maui-calendar](images/views/backward-range-selection-direction.png)
+![range-selection-backward-direction-in-maui-calendar](images/selection/range-selection-backward-direction-in-maui-calendar.png)
 
 #### Range Selection Direction - Both
 If the [RangeSelectionDirection](https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/SfCalendar/CalendarRangeSelectionDirection.html) property to `Both` allows you to extend the selection from the selected range. Then the tapped date is considered based on (if the date is nearby start date then start date is updated, else if the date is nearby end date then end date is updated, else if in-between the start and end date and both have same distance then the start date is updated.
@@ -157,7 +157,7 @@ this.Calendar.RangeSelectionDirection = CalendarRangeSelectionDirection.Both;
 {% endhighlight %}
 {% endtabs %}
 
-![both-range-selection-direction-maui-calendar](images/views/both-range-selection-direction.png)
+![range-selection-both-direction-in-maui-calendar](images/selection/range-selection-both-direction-in-maui-calendar.png)
 
 #### Range Selection Direction - None
 If the [RangeSelectionDirection](https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/SfCalendar/CalendarRangeSelectionDirection.html) property to `None` allows you to select only the single range and the dates after the range end date and before start date is considered as disabled date. It will remain in the initial range.
@@ -175,7 +175,7 @@ this.Calendar.RangeSelectionDirection = CalendarRangeSelectionDirection.None;
 {% endhighlight %}
 {% endtabs %}
 
-![none-range-selection-direction-maui-calendar](images/views/none-range-selection-direction.png)
+![range-selection-none-direction-in-maui-calendar](images/selection/range-selection-none-direction-in-maui-calendar.png)
 
 ## Selection shape
 The Selected date will render based on the [selectionShape](https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/SfCalendar/CalendarSelectionShape.html) property. The default selection shape is `Circle`. You can customize the selection shape either `Rectangle` or `Circle` of the SfCalendar.
@@ -188,9 +188,41 @@ The Selected date will render based on the [selectionShape](https://pub.dev/docu
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.SelectionShape = CalendarSelectionShape.Circle;
+this.Calendar.SelectionShape = CalendarSelectionShape.Rectangle;
 
 {% endhighlight %}
 {% endtabs %}
 
-![none-range-selection-direction-maui-calendar](images/views/none-range-selection-direction.png)
+![rectangle-selection-shape-for-monthview-in-maui-calendar](images/selection/rectangle-selection-shape-for-monthview-in-maui-calendar.png)
+
+## Enable swipe selection
+You can able to select the dates by using the [EnableSwipeSelection](https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/SfCalendar/EnableSwipeSelection.html) property. By default, `EnableSwipeSelection` property is true.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+{% include_relative code-snippet/enableswipe-selection.xaml %}
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+this.Calendar.EnableSwipeSelection = false;
+
+{% endhighlight %}
+{% endtabs %}
+
+## Toggle day selection
+You can able to deselect the date by using the [CanToggleDaySelection](https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/SfCalendar/CanToggleDaySelection.html) property. By default, `CanToggleDaySelection` property is false.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+{% include_relative code-snippet/toggle-day-selection.xaml %}
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+this.Calendar.CanToggleDaySelection = true;
+
+{% endhighlight %}
+{% endtabs %}
