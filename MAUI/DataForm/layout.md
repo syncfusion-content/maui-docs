@@ -229,15 +229,12 @@ The order of the editors in grid row can be changed within a row by using attrib
 
 The order of the editors in grid rows can be changed by using the `ItemsOrderInRow` property in [DataFormDisplayOptionsAttribute] attribute. This is applicable only for Grid layout.
 
-{% endhighlight %}
+{% tabs %}
 {% highlight C# %}
 
 this.dataForm.ColumnCount = 2;
 
 {% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
 {% highlight C# %}
 
     [DataFormDisplayOptions(RowOrder = 0, ItemsOrderInRow = 1)]
@@ -269,7 +266,7 @@ this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
                 e.DataFormItem.RowOrder = 0;
                 e.DataFormItem.ItemsOrderInRow = 1;
             }
-            if (e.DataFormItem.FieldName == "LastName")
+            else if (e.DataFormItem.FieldName == "LastName")
             {
                 e.DataFormItem.RowOrder = 0;
                 e.DataFormItem.ItemsOrderInRow = 0;

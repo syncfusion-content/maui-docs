@@ -11,7 +11,7 @@ documentation: ug
 
 The .NET MAUI DataForm support to group the editors which are relevant to each other. You can expand or collapse the group by tapping the group item.
 
-Grouping can be achieved by defining [Display] attribute or by handling the `GenerateDataFormItem` event.
+Grouping can be achieved by defining [Display](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute?view=net-7.0) attribute or by handling the `GenerateDataFormItem` event.
 
 #### Using attributes
 
@@ -56,7 +56,11 @@ this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
 ## Changing editors order in the group
 
-The order of the editors in the group can be changed by using attributes. You can set the order of data form items in group by using the `Order` property along with `GroupName` property in display attribute.
+#### Using attribute
+
+#### Display attribute
+
+The order of the editors in the group can be changed by using attributes. You can set the order of data form items in group by using the `Order` property along with `GroupName` property in `Display` attribute.
 
 {% tabs %}
 {% highlight C# %}
@@ -65,16 +69,43 @@ public class ContactInfo
     [Display(GroupName = "Name", Order = 0)]
     public string FirstName { get; set; }
 
-    [Display(GroupName = "Name", Order = 1)]
+    [Display(GroupName = "Name", Order = 2)]
     public string LastName { get; set; }
 
-    [Display(GroupName = "Name", Order = 2)]
+    [Display(GroupName = "Name", Order = 1)]
     public string MiddleName { get; set; }
 }
 {% endhighlight %}
 {% endtabs %}
 
-The order of the `DataFormGroupItem` can also be changed by handling the `GenerateDataFormItem` event using `RowOrder` property of a `DataFormItem`.
+#### DataForm display options attribute
+
+The order of the editors in the group can also be changed by using `RowOrder` property of [DataFormDisplayOptions] attribute.
+
+{% tabs %}
+{% highlight C# %}
+
+public class ContactInfo
+{
+    [Display(GroupName = "Details")]
+    [DataFormDisplayOptions(RowOrder = 0)]
+    public string FirstName { get; set; }
+
+    [Display(GroupName = "Details")]
+    [DataFormDisplayOptions(RowOrder = 2)]
+    public string LastName { get; set; }
+
+    [Display(GroupName = "Details")]
+    [DataFormDisplayOptions(RowOrder = 1)]
+    public string MiddleName { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Using event
+
+The order of the editors in the group can also be changed by handling the `GenerateDataFormItem` event using `RowOrder` property of a `DataFormItem`.
 
 {% tabs %}
 {% highlight C# %}
@@ -99,6 +130,39 @@ this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
             }
         }
     }
+
+{% endhighlight %}
+{% endtabs %}
+
+## Changing editors order of the group in grid rows
+
+The order of the editors of group in grid row can be changed within a row by using `RowOrder` and `ItemsOrderInRow` properties[DataFormDisplayOptions] attribute and by handling `GenerateDataFormItem` event.
+
+{% tabs %}
+{% highlight C# %}
+
+    [Display(GroupName = "Name")]
+    [DataFormDisplayOptions(RowOrder = 0, ItemsOrderInRow = 0)]
+    public string FirstName { get; set; }
+
+    [Display(GroupName = "Name")]
+    [DataFormDisplayOptions(RowOrder = 0, ItemsOrderInRow = 2)]
+    public string LastName { get; set; }
+
+    [Display(GroupName = "Name")]
+    [DataFormDisplayOptions(RowOrder = 0, ItemsOrderInRow = 1)]
+    public string MiddleName { get; set; }
+
+{% endhighlight %}
+{% highlight C# %}
+
+        if (e.DataFormGroupItem != null)
+        {
+            if (e.DataFormGroupItem.GroupName == "Name")
+            {
+                e.DataFormGroupItem.ColumnCount = 3;
+            }
+        }
 
 {% endhighlight %}
 {% endtabs %}
