@@ -20,7 +20,7 @@ The data form supports the following attribute to handle the data, and these att
 </tr>
 <tr>
 <td>
-{{'[Name] `Link`
+{{'[Name](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute.name?view=net-7.0)' |  markdownify }}
 </td>
 <td>
 Specifies the label text.
@@ -28,7 +28,7 @@ Specifies the label text.
 </tr>
 <tr>
 <td>
-{{'[GroupName]`Link`
+{{'[GroupName](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute.groupname?view=net-7.0)' |  markdownify }}
 </td>
 <td>
 Specifies the group name which groups the fields in the data form. Refer to  `Link` for more details.
@@ -36,7 +36,7 @@ Specifies the group name which groups the fields in the data form. Refer to  `Li
 </tr>
 <tr>
 <td>
-{{'[ShortName] `Link`
+{{'[ShortName](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute.shortname?view=net-7.0)' |  markdownify }}
 </td>
 <td>
 Specifies the label text. It takes higher priority than Name.
@@ -44,23 +44,23 @@ Specifies the label text. It takes higher priority than Name.
 </tr>
 <tr>
 <td>
-{{'[AutoGenerateField]`Link`
+{{'[AutoGenerateField](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute.autogeneratefield?view=net-7.0)' |  markdownify }}
 </td>
 <td>
-Specifies whether the field should be auto generated or not. Refer to `Link` for more details.
-</td>
-</tr>
-<tr>
-<td>
-{{'[ResourceType]`Link`
-</td>
-<td>
-Specifies the Resources File (.Resx) which is used to localize the Display attribute of `Name`, `ShortName`, `GroupName` and `Prompt` values.
+Specifies whether the field should be auto generated or not. 
 </td>
 </tr>
 <tr>
 <td>
-{{'[Prompt]`Link`
+{{'[ResourceType](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute.resourcetype?view=net-7.0)' |  markdownify }}
+</td>
+<td>
+Specifies the Resources File (.Resx) which is used to localize the Display attribute of `Name`, `ShortName`, `GroupName`, `Prompt` and `ItemsSource` values.
+</td>
+</tr>
+<tr>
+<td>
+{{'[Prompt](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute.prompt?view=net-7.0)' |  markdownify }}
 </td>
 <td>
 Specifies watermark text for the editor. Refer to `Link` for more details.
@@ -68,10 +68,10 @@ Specifies watermark text for the editor. Refer to `Link` for more details.
 </tr>
 <tr>
 <td>
-{{'[Order] `Link`
+{{'[Order](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute.order?view=net-7.0)' | markdownify }}
 </td>
 <td>
-Specifies the order of field in the data form. Refer to `Link` for more details.
+Specifies the order of field in the data form.
 </td>
 </tr>
 </table>
@@ -88,14 +88,8 @@ Specifies the order of field in the data form. Refer to `Link` for more details.
 {% tabs %}
 {% highlight GroupName attribute}
 
-    [Display(GroupName= "Address")]
-    public string DoorNO { get; set; }
-
     [Display(GroupName = "Address")]
     public string Street { get; set; }
-
-    [Display(GroupName = "Address")]
-    public string City { get; set; }
 
 {% endhighlight %}
 {% endtabs %}
@@ -122,14 +116,6 @@ Specifies the order of field in the data form. Refer to `Link` for more details.
 {% endtabs %}
 
 {% tabs %}
-{% highlight ResourceType attribute}
-
-   -----------------------
-
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
 {% highlight Prompt attribute}
 
     [Display(Prompt = "Enter your name")]
@@ -144,16 +130,8 @@ Specifies the order of field in the data form. Refer to `Link` for more details.
     [Display(Order =2)]
     public string MiddleName { get; set; }
 
-    [Display(Order =1)]
-    public string LastName { get; set; }
-
-    [Display(Order =0)]
-    public string FirstName { get; set; }
-
 {% endhighlight %}
 {% endtabs %}
-
-
 
 ## Validation attribute
 
@@ -171,7 +149,7 @@ Details
 {{'[MinLength](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.minlengthattribute?view=net-7.0)'| markdownify }}
 </td>
 <td>
-Specifies the required minimum length. Refer to `Link` for more details.
+Specifies the required minimum input string length.
 </td>
 </tr>
 <tr>
@@ -180,7 +158,7 @@ Specifies the required minimum length. Refer to `Link` for more details.
 
 </td>
 <td>
-Specifies the required maximum length. Refer to `Link` for more details.
+Specifies the required maximum input string length.
 </td>
 </tr>
 <tr>
@@ -188,7 +166,7 @@ Specifies the required maximum length. Refer to `Link` for more details.
 {{'[Required](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.requiredattribute?view=net-7.0)'| markdownify }}
 </td>
 <td>
-Specifies the required data field value. Refer to `Link` for more details.
+Specifies that a data field value is required. 
 </td>
 </tr>
 <tr>
@@ -199,12 +177,20 @@ Specifies the required data field value. Refer to `Link` for more details.
 Specifies the required string length. Refer to `Link` for more details.
 </td>
 </tr>
+<tr>
+<td>
+{{'[EnumDataType](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.enumdatatypeattribute?view=net-7.0)'| markdownify }}
+</td>
+<td>
+Specifies enum type for the data field.
+</td>
+</tr>
 </table>
 
 {% tabs %}
 {% highlight MinLength attribute}
 
-   [MinLength(5,ErrorMessage ="Password length must be greater than 5 characters")]
+    [MinLength(5,ErrorMessage ="Password length must be greater than 5 characters")]
     public string Password { get; set; }
 
 {% endhighlight %}
@@ -231,35 +217,71 @@ Specifies the required string length. Refer to `Link` for more details.
 {% tabs %}
 {% highlight StringLength attribute}
 
-    [StringLength(20,ErrorMessage ="Name should not exceed 15 characters")]
+    [StringLength(20,ErrorMessage ="Name should not exceed 20 characters")]
     public string Name { get; set; }
+
+{% endhighlight %}
+{% endtabs %}
+
+## EnumDataType attribute
+
+
+
+{% tabs %}
+{% highlight EnumDataType attribute}
+
+    [EnumDataType(typeof(Gender), ErrorMessage = "Please select Gender")]
+    public Gender Gender { get; set; }
 
 {% endhighlight %}
 {% endtabs %}
 
 ## Bindable attribute
 
-It specifies whether the field should be auto generated or not. Refer to `Link`  for more details.
+It specifies whether the field should be auto generated or not. If bindable set to false the field will not be auto generated. 
+
+{% tabs %}
+{% highlight Bindable attribute}
+
+    [Bindable(false)]
+    public string Name { get; set; }
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Editable attribute
 
 It specifies whether the data field is editable or not.
 
+{% tabs %}
+{% highlight Editable attribute}
+
+    [Editable(false)]
+    public string Name { get; set; }
+
+{% endhighlight %}
+{% endtabs %}
+
 ## ReadOnly attribute
 
-It specifies whether the data field is read only or not. Refer to `Link` for more details.
+It specifies whether the data field is read only or not.
 
-## EnumDataType attribute
+{% tabs %}
+{% highlight ReadOnly attribute}
 
-It specifies enum type for the data field.
+    [ReadOnly(false)]
+    public string Name { get; set; }
+
+{% endhighlight %}
+{% endtabs %}
+
+
 
 ## DataType attribute
 
 It specifies data type for the field.
 
 Supported data types are Text, MultilineText, Date, DateTime and Time.
-
-Refer to `Link` for more details.
 
 {% tabs %}
 {% highlight DataType attribute}
@@ -289,7 +311,7 @@ Details
 [RowSpan]
 </td>
 <td>
-Specifies the row span for the data form item. Refer to `Link` for more details.
+Specifies the row span for the data form item.
 </td>
 </tr>
 <tr>
@@ -297,7 +319,7 @@ Specifies the row span for the data form item. Refer to `Link` for more details.
 [ColumnSpan]
 </td>
 <td>
-Specifies the column span for the data form item. Refer to `Link` for more details.
+Specifies the column span for the data form item.
 </td>
 </tr>
 <tr>
@@ -305,7 +327,7 @@ Specifies the column span for the data form item. Refer to `Link` for more detai
 [ValidMessage]
 </td>
 <td>
-Specifies positive message to be shown when validation is passed. Refer to `Link` for more details.
+Specifies positive message to be shown when validation is passed. 
 </td>
 </tr>
 <tr>
@@ -313,7 +335,7 @@ Specifies positive message to be shown when validation is passed. Refer to `Link
 [ShowLabel]
 </td>
 <td>
-Specifies whether the label should be visible or not. Refer to `Link` for more details.
+Specifies whether the label should be visible or not.
 </td>
 </tr>
 <tr>
@@ -400,9 +422,6 @@ Specifies the Converter type which converts the original value in different form
 
     [DataFormValueConverter(typeof(StringToStringConverter))]
     public string Name { get; set; }
-
-    [DataFormDateRange(DisplayFormat="yyyy/mm/dd"  , MaximumDate ="2022/07/07")]
-    public DateTime Date { get; set; }
 
 {% endhighlight %}
 {% endtabs %}
