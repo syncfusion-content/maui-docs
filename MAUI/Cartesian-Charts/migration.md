@@ -814,6 +814,7 @@ ColumnSeries series = new ColumnSeries()
     YBindingPath = "Height",
     SelectionBehavior = selection
 };
+
 chart.Series.Add(series);
 {% endhighlight %}
 
@@ -821,6 +822,8 @@ chart.Series.Add(series);
 </td>
 </tr>
 </table>
+
+N> For more information about selection check [here](https://help.syncfusion.com/maui/cartesian-charts/selection).
 
 ### Zooming and Panning
 
