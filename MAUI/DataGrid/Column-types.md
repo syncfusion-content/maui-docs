@@ -308,7 +308,6 @@ The `SfDataGrid.CellValueChanged` event will be triggered whenever the current c
 * `CellValue`       : The initial value when current cell entered edit mode.
 
 {% tabs %}
-
 {% highlight c# %}
 
         dataGrid.CellValueChanged += SfDataGrid_CellValueChanged;
