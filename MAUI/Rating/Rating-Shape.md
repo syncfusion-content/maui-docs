@@ -11,7 +11,7 @@ documentation: ug
 
 # Rating Shape in .NET MAUI Rating (SfRating)
 
-The ['RatingShape'] property allows you to display the rating in five different rating shapes:
+The `RatingShape` property allows you to display the rating in five different rating shapes:
 
 * `Star`
 * `Heart`
@@ -19,13 +19,13 @@ The ['RatingShape'] property allows you to display the rating in five different 
 * `Circle`
 * `Custom`
 
-The default rating shape of the [`SfRating`] control is [`Star`].
+The default rating shape of the `SfRating` control is `Star`.
 
 ![SfRating rating shapes](images/rating-shapes.png)
 
 ## Custom
 
-When ['RatingShape'] is set to ['Custom'], the custom path should be given to the ['Path'] property
+When `RatingShape` is set to `Custom`, the custom path should be given to the `Path` property
 
 {% tabs %}
 

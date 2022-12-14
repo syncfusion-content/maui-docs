@@ -11,7 +11,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI Rating (SfRating)
 
-This section explains how to configure a [`SfRating`] control in a real-time scenario and also provides a walk-through on some of the customization features available in [`SfRating`] control.
+This section explains how to configure a `SfRating` control in a real-time scenario and also provides a walk-through on some of the customization features available in `SfRating` control.
 
 ## Adding a .NET MAUI Rating reference
 
@@ -77,7 +77,7 @@ Step 2: Add the namespace, as shown in the following code sample:
 
 ## Initialize Rating
 
-Now, add the [`SfRating`] control with a required optimal name using the included namespace.
+Now, add the `SfRating` control with a required optimal name using the included namespace.
 
 {% tabs %}
 
@@ -103,9 +103,9 @@ public MainPage()
 
 ## Set Number of Rating Items
 
-The number of rating items to be displayed can be customized in the [`SfRating`] control. Users can create a rating application using 5 items as follows. The [`ItemCount`] property is used to define the number of rating items.
+The number of rating items to be displayed can be customized in the `SfRating` control. Users can create a rating application using 5 items as follows. The `ItemCount` property is used to define the number of rating items.
 
-N> The default value of [`ItemCount`] is 5.
+N> The default value of `ItemCount` is 5.
 
 {% tabs %}
 
@@ -131,7 +131,7 @@ public MainPage()
 
 ## Set Value
 
-The display value can be set in the [`SfRating`] control, which is selected among the items. The following code example shows the display value of three with five rating items. The [`Value`] property is used to set display value.
+The display value can be set in the `SfRating` control, which is selected among the items. The following code example shows the display value of three with five rating items. The `Value` property is used to set display value.
 
 N> The default value of this property is 0.
 
@@ -159,7 +159,7 @@ public MainPage()
 
 ## Precision
 
-The [`SfRating`] control provides an option to rate the items in full, half, and exact values. This can be set using the [`Precision`] property. By default, the precision mode is [`Standard`].
+The `SfRating` control provides an option to rate the items in full, half, and exact values. This can be set using the `Precision` property. By default, the precision mode is `Standard`.
 
 {% tabs %}
 
@@ -185,4 +185,4 @@ public MainPage()
 
 ![SfRating Getting Started ](images/getting-started.png)
 
-The complete Getting Started sample is available in this [link].
+The complete Getting Started sample is available in this `link`.
