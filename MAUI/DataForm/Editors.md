@@ -132,7 +132,7 @@ Enum and List type property.
 [EnumDataTypeAttribute]
 </td>
 <td>
-{{'[RadioGroup](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/radiobutton?view=net-maui-7.0)'| markdownify }}
+{{'[RadioButton](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/radiobutton?view=net-maui-7.0)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -150,6 +150,37 @@ Enum and List type property.
 </tr>
 </table>
 
+## Changing editor for type
+
+By default, the editors will be loaded based on the previous table. To change the editor for any type, use the [RegisterEditor] method and specify the type and editor.
+
+{% tabs %}
+{% highlight c# %}
+
+    this.dataForm.RegisterEditor(typeof(string), DataFormEditorType.MultilineText);
+
+{% endhighlight %}
+{% endtabs %}
+
+Here, the `MultilineText` editor will be loaded for the string type instead of `Text` editor.
+
+## Changing editor for property
+
+To change the editor for any property, use the [RegisterEditor] method and specify the property name and editor.
+
+{% tabs %}
+{% highlight c# %}
+
+    this.dataForm.RegisterEditor("On", DataFormEditorType.Switch);
+
+{% endhighlight %}
+
+{% endtabs %}
+
+
+
+Here, the Switch editor will be loaded for the `On` property (bool type) instead of `CheckBox` editor.
+
 ## Text editor
 
 In the text editor, the [Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry?view=net-maui-7.0) is loaded.
@@ -163,7 +194,7 @@ In the `MultilineText` editor, the [Editor](https://learn.microsoft.com/en-us/do
 And `MultilineText` editor height will auto expand/reduce based on the line wraps in editor , which allowing text to be readable without scrolling the editor.
 
 {% tabs %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
     [DataType(DataType.MultilineText)]
     public string Address { get; set; }
@@ -178,7 +209,7 @@ And `MultilineText` editor height will auto expand/reduce based on the line wrap
 In the password editor, the [Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry?view=net-maui-7.0) is loaded.
 
 {% tabs %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
     [Display(ShortName = "Transaction password", Prompt = "Enter password")]
     [DataType(DataType.Password)]
@@ -195,7 +226,7 @@ In the date editor, the [DatePicker](https://learn.microsoft.com/en-us/dotnet/ma
 In [DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/datepicker?view=net-maui-7.0), the default date value is current date displayed. You can also adding nullable `DateTime` data type for the date picker property in data form, which allows you to set the current date and display current date in date editor. 
 
 {% tabs %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
     [DataType(DataType.Date)]
     [Display(Name ="Event Date")]
@@ -211,7 +242,7 @@ In [DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/con
 In the [DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/datepicker?view=net-maui-7.0), short date will be shown by default. You can change the applied format by setting the [Format]`Link`property in [DataFormDateItem]`Link`.
 
 {% tabs %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
     dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
@@ -233,7 +264,7 @@ In the [DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface
 You can customize the maximum and minimum allowable dates in the [DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/datepicker?view=net-maui-7.0) by setting [MaximumDate]`Link` and [MinimumDate]`Link` in the [DataFormDateItem]`Link` respectively.
 
 {% tabs %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
     dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
@@ -259,7 +290,7 @@ In the time editor, the [TimePicker](https://learn.microsoft.com/en-us/dotnet/ma
 In [TimePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/timepicker?view=net-maui-7.0&tabs=windows), the default time value (12:00 AM) is displayed. You can also adding nullable `TimeSpan` data type for the time picker property in data form, which allows you to set default time and display the (12:00 AM) in time editor. 
 
 {% tabs %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
     [DataType(DataType.Time)]
     [Display(Name = "Event Time")]
@@ -275,7 +306,7 @@ In [TimePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/con
 In the [TimePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/timepicker?view=net-maui-7.0&tabs=windows), short time will be shown by default. You can change the applied format by setting the [Format]`Link`property in [DataFormTimeItem]`Link`.
 
 {% tabs %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
     dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
@@ -297,7 +328,7 @@ In the [TimePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface
 In [CheckBox](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/checkbox?view=net-maui-7.0) editor, the [CheckBox](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/checkbox?view=net-maui-7.0) control is loaded. By default, for `bool` data type property, the [CheckBox](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/checkbox?view=net-maui-7.0) editor will be loaded in data form.
 
 {% tabs %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
     [Display(Name = "Is Billable")]
     public bool IsBillable { get; set; } = true;
@@ -315,7 +346,7 @@ CheckBox support two visual states.
   - UnChecked
 
 {% tabs %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
     [Display(Name = "Is Billable")]
     public bool IsBillable { get; set; } = true;
@@ -331,7 +362,7 @@ CheckBox support two visual states.
 By default the checkbox color is blue, you can change the checkbox color by using `Color` property in `DataFormItem`.
 
 {% tabs %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
     dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
     
@@ -354,7 +385,7 @@ In switch editor, [Switch](https://learn.microsoft.com/en-us/dotnet/maui/user-in
 To add [Switch](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/switch?view=net-maui-7.0) editor in DataForm, register the editor as DataFormEditorType.Switch  for the required property using the [RegisterEditor]`Link` method.
 
 {% tabs %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
        dataForm.RegisterEditor("CellularData", DataFormEditorType.Switch);
        dataForm.RegisterEditor("AirplaneMode", DataFormEditorType.Switch);
@@ -378,7 +409,7 @@ To add [Switch](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/con
 By default switch editor Thumb color is Blue, you can change the Thumb color by using `ThumbColor` property in the `DataFormItem`.
 
 {% tabs %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
     dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
@@ -400,7 +431,7 @@ By default switch editor Thumb color is Blue, you can change the Thumb color by 
 By default switch editor background colour is white, you can change the Background color by using `OnColor` property in the `DataFormItem`.
 
 {% tabs %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
     dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
@@ -428,7 +459,7 @@ By default, the `ItemsSource` for SfComboBox is auto-generated for enum types an
 #### Using IDataFormSourceProvider
 
 {% tabs %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
     public string Country { get; set; }
     
@@ -461,7 +492,7 @@ By default, the `ItemsSource` for SfComboBox is auto-generated for enum types an
 You can also set the ItemsSource for combo box editor by using the [GenerateDataFormItem]`Link` event in the `DataFormComboBoxItem`.
 
 {% tabs %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
     dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
@@ -492,7 +523,7 @@ By default, in the combobox editor, you can select a needed item by scrolling th
 You can filter a particular item in the list items by using the `IsEditable` property, this property enables you to type a list item in the combo box editor.
 
 {% tabs %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
     dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
@@ -512,7 +543,7 @@ You can filter a particular item in the list items by using the `IsEditable` pro
 Displays all the matches that contain first character of the typed characters in items source of combobox editor. This strategy is case in-sensitive.
 
 {% tabs %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
     dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
@@ -532,7 +563,7 @@ Displays all the matches that contain first character of the typed characters in
 Displays all the matches that contain the typed characters in items source of combobox editor. This strategy is case in-sensitive.
 
 {% tabs %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
     dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
@@ -552,7 +583,7 @@ Displays all the matches that contain the typed characters in items source of co
 By default the combo box drop down list item height is `400d` , You can change the size for the drop down list item size by using `MaxDropDownHeight` property in the `DataFormItem`.
 
 {% tabs %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
     dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
@@ -574,7 +605,7 @@ You can display the complex type property values in combo box editor by using th
 N> Class cannot be directly set as data type for combo box editor in this complex type scenario.
 
 {% tabs %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
     dataForm.ItemsSourceProvider = new DataFormItemsSourceProvider();
     dataForm.DataObject = new ContactModel();
@@ -642,7 +673,7 @@ By default, the [ItemsSource]`Link` for `AutoComplete` editor is auto-generated 
 #### Using IDataFormSourceProvider
 
 {% tabs %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
     public string Country { get ; set ; }
     public class DataFormItemsSourceProvider : IDataFormSourceProvider
@@ -685,7 +716,7 @@ By default, the [ItemsSource]`Link` for `AutoComplete` editor is auto-generated 
 You can also set `ItemsSource` for autocomplete editor by using [ItemsSource]`Link` property in the [DataFormAutoCompleteItem]`Link`.
 
 {% tabs %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
     dataForm.RegisterEditor("Country", DataFormEditorType.AutoComplete);
     dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
@@ -723,7 +754,7 @@ You can display the complex type property values in autocomplete editor by using
 N> Class cannot be directly set as data type for autocomplete editor in this complex type scenario.
 
 {% tabs %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
     dataForm.ItemsSourceProvider = new DataFormItemsSourceProvider();
     dataForm.DataObject = new ContactModel();
@@ -798,7 +829,7 @@ The phenomenon of string comparison for filtering suggestions can be changed usi
 Displays all the matches that contain first character of the typed characters in items source of autocomplete editor. This strategy is case in-sensitive.
 
 {% tabs %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
     dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
@@ -818,7 +849,7 @@ Displays all the matches that contain first character of the typed characters in
 Displays all the matches that contain the typed characters in items source of autocomplete editor. This strategy is case in-sensitive.
 
 {% tabs %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
     dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
@@ -838,7 +869,7 @@ Displays all the matches that contain the typed characters in items source of au
 By default the autocomplete drop down list item height is `400d` , You can change the size for the drop down list item size by using `MaxDropDownHeight` property in the `DataFormItem`.
 
 {% tabs %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
     dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
@@ -867,7 +898,7 @@ By default, the `ItemsSource` for picker is auto-generated for enum type and col
 ### Using IDataFormSourceProvider
 
 {% tabs %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
     public string Country { get; set; }
     
@@ -900,7 +931,7 @@ By default, the `ItemsSource` for picker is auto-generated for enum type and col
 You can also set `ItemsSource` for picker editor by using the [ItemsSource]`Link` property in the [DataFormPickerItem]`Link`.
 
 {% tabs %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
     dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
@@ -929,7 +960,7 @@ You can display the complex type property values in picker editor by using the D
 N> Class cannot be directly set as data type for picker editor in this complex type scenario.
 
 {% tabs %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
     dataForm.ItemsSourceProvider = new DataFormItemsSourceProvider();
     dataForm.DataObject = new ContactModel();
@@ -986,8 +1017,6 @@ N> Class cannot be directly set as data type for picker editor in this complex t
 
 `Image`
 
-
-
 ## RadioGroup editor
 
 In the [RadioGroup](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/radiobutton?view=net-maui-7.0) editor, the [RadioButton](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/radiobutton?view=net-maui-7.0) control is loaded.
@@ -999,7 +1028,7 @@ The [items]`Link` for [RadioButton](https://learn.microsoft.com/en-us/dotnet/mau
 For `enum` data type property, [RadioButon](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/radiobutton?view=net-maui-7.0) [items]`Link` will be added based on specified property enum values.
 
 {% tabs %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
     dataForm.RegisterEditor("Phone", DataFormEditorType.RadioGroup);
 
@@ -1020,7 +1049,7 @@ For `enum` data type property, [RadioButon](https://learn.microsoft.com/en-us/do
 For `List` data type property, you have to set the `ItemsSource` by using the [IDataFormSourceProvider`Link`, based on that [RadioButton](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/radiobutton?view=net-maui-7.0) [items]`Link` will be added.
 
 {% tabs %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
     dataForm.RegisterEditor("Phone", DataFormEditorType.RadioGroup);
     dataForm.ItemsSourceProvider = new DataFormItemsSourceProvider();
@@ -1060,7 +1089,7 @@ Views such as labels, buttons, and sliders can be loaded to custom editor. Here,
 ### Below methioned example code for Numeric editor which accepts only numbers 
 
 {% tabs %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
     public class NumericTextEditor : IDataFormEditor 
     { 
@@ -1094,16 +1123,9 @@ Views such as labels, buttons, and sliders can be loaded to custom editor. Here,
         {
             if (view is InputView numericText)
             {
-                if (dataFormItem.FieldName == nameof(PaymentFormModel.CVV))
-                {
-                    dataFormItem.SetValue(numericText.Text);
-                }
-                else
-                {
-                    double numericValue;
-                    double.TryParse(numericText.Text, out numericValue);
-                    dataFormItem.SetValue(numericValue);
-                }
+                double numericValue;
+                double.TryParse(numericText.Text, out numericValue);
+                 dataFormItem.SetValue(numericValue);
             }
         }
 
