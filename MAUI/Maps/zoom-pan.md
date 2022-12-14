@@ -9,7 +9,7 @@ documentation: ug
 
 # Zooming and Panning in .NET MAUI Maps (SfMaps)
 
-It is possible to zoom in and out for any layer to take a closer look at a specific region by pinching the map or scrolling the mouse wheel or track pad. Pan the map to navigate across the regions. You can also customize the zoom level of the rendering.
+It is possible to zoom in and out for any layer to take a closer look at a specific region by pinching the map or scrolling the mouse wheel or trackpad. Pan the map to navigate across the regions. You can also customize the zoom level of the rendering.
 
 The procedure for zooming and panning for both layers is very similar.
 
@@ -596,7 +596,7 @@ this.Content = map;
 
 ## Event
 
-The `ZoomLevelChanging` event triggers when the zoom level is changed. Following arguments can be get from the ZoomLevelChanging event .
+The `ZoomLevelChanging` event triggers when the zoom level is changed. Following arguments can be get from the ZoomLevelChanging event.
 
 * `Cancel` : Used to cancel the zooming.
 * `PreviousLevel` : Returns the previous level after the zooming.
