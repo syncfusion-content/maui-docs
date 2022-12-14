@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with .NET MAUI DataForm control | Syncfusion
-description: Learn here about getting started with Syncfusion .NET MAUI DataForm (SfDataForm) control.
+description: Learn here about getting started with Syncfusion .NET MAUI DataForm (SfDataForm) control and its basic features.
 platform: Maui
 control: SfDataForm
 documentation: ug
@@ -15,7 +15,7 @@ This section provides a quick overview of how to get started with the .NET MAUI 
 
 1. Create a new .NET MAUI application in Visual Studio.
 
-2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfDataForm to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.DataForm](https://www.nuget.org/packages/Syncfusion.Maui.DataForm) and then install it.
+2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfDataForm to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.DataForm] and then install it.
 
 3. To initialize the control, import the control namespace `Syncfusion.Maui.DataForm` in XAML or C# code.
 
@@ -217,7 +217,7 @@ Generated for string type property with [DataType(DataType.Password)] attributes
 Password
 </td>
 <td>
-{{'[Entry]((https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry?view=net-maui-7.0)'| markdownify }}
+{{'[Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry?view=net-maui-7.0)'| markdownify }}
 </td>
 </tr>
 <tr>
