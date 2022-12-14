@@ -2,298 +2,10 @@
 layout: post
 title: Commit in .NET MAUI DataForm control | Syncfusion
 description: Learn here all about the commit feature in Syncfusion .NET MAUI DataForm (SfDataForm) control and more.
-platform: maui
+platform: Maui
 control: SfDataForm
 documentation: ug
 ---
-
-# Editing in .NET MAUI DataForm (SfDataForm)
-
-The data form supports several built-in editors.
-
-## Supported editors and associated DataFormItem
-
-<table>
-<tr>
-<th>Editor name</th>
-<th>Editor class</th>
-<th>Data Type/Attribute</th>
-<th>Input control loaded</th>
-</tr>
-<tr>
-<td>
-Text
-</td>
-<td>
-{{'[DataFormTextEditor]'| markdownify }}
-</td>
-<td>
-The String type property and any other type apart from the following specified cases.
-</td>
-<td>
-{{'[Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry?view=net-maui-7.0)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
-MultilineText
-</td>
-<td>
-{{'[DataFormMultilineTextEditor]'| markdownify }}
-</td>
-<td>
-The String type property with multi line text.
-[DataType(DataType.MultilineText)] 
-</td>
-<td>
-{{'[Editor](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/editor?view=net-maui-7.0)'| markdownify }}
-</td>
-</tr>
-</tr>
-<tr>
-<td>
-Password
-</td>
-<td>
-{{'[DataFormPasswordEditor]'| markdownify }}
-</td>
-<td>
-The String type property and property with 
-[DataType(DataType.Password)] attribute.
-</td>
-<td>
-{{'[Entry]((https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry?view=net-maui-7.0))'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
-Checkbox
-</td>
-<td>
-{{'[DataFormCheckBoxEditor]'| markdownify }}
-</td>
-<td>
-Bool type property.
-</td>
-<td>
-{{'[CheckBox](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/checkbox?view=net-maui-7.0)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
-Switch
-</td>
-<td>
-{{'[DataFormSwitchEditor]'| markdownify }}
-</td>
-<td>
-Bool type property.
-</td>
-<td>
-{{'[Switch](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/switch?view=net-maui-7.0)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
-Date Picker
-</td>
-<td>
-{{'[DataFormDatePickerEditor]'| markdownify }}
-</td>
-<td>
-The DateTime, DateTimeOffset, DateOnly property and the property with [DataType(DataType.Date)] and [DataType(DataType.DateTime)] attributes.
-</td>
-<td>
-{{'[DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/datepicker?view=net-maui-7.0)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
-Time Picker
-</td>
-<td>
-{{'[DataFormTimePickerEditor]'| markdownify }}
-</td>
-<td>
-The TimeSpan, TimeOnly property and the property with [DataType(DataType.Time)] attribute.
-</td>
-<td>
-{{'[TimePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/timepicker?view=net-maui-7.0&tabs=windows)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
-Picker
-</td>
-<td>
-{{'[DataFormPickerEditor]'| markdownify }}
-</td>
-<td>
-Enum and List type property. 
-[EnumDataTypeAttribute]
-</td>
-<td>
-{{'[Picker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/picker?view=net-maui-7.0)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
-ComboBox
-</td>
-<td>
-{{'[DataFormComboBoxEditor]'| markdownify }}
-</td>
-<td>
-Enum and List type property.
-[EnumDataTypeAttribute]
-</td>
-<td>
-{{'[SfComboBox](https://help.syncfusion.com/maui/combobox)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
-AutoComplete
-</td>
-<td>
-{{'[DataFormAutoCompleteEditor]'| markdownify }}
-</td>
-<td>
-Enum and List type property.
-[EnumDataTypeAttribute]
-</td>
-<td>
-{{'[SfAutocomplete](https://help.syncfusion.com/xamarin/autocomplete)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
-RadioGroup
-</td>
-<td>
-{{'[DataFormRadioGroupEditor]'| markdownify }}
-</td>
-<td>
-Enum and List type property. 
-[EnumDataTypeAttribute]
-</td>
-<td>
-{{'[RadioButton](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/radiobutton?view=net-maui-7.0)'| markdownify }}
-</td>
-</tr>
-</table>
-
-## Changing editor for type
-
-By default, the editors will be loaded based on the previous table. To change the editor for any type, use the [RegisterEditor] method and specify the type and editor.
-
-{% tabs %}
-{% highlight c# %}
-
-this.DataForm.RegisterEditor(typeof(string), DataFormEditorType.MultilineText);
-
-{% endhighlight %}
-{% endtabs %}
-
-Here, the `MultilineText` editor will be loaded for the string type instead of `Text` editor.
-
-## Changing editor for property
-
-To change the editor for any property, use the [RegisterEditor] method and specify the property name and editor.
-
-{% tabs %}
-{% highlight c# %}
-
-this.DataForm.RegisterEditor("On"), DataFormEditorType.Switch);
-
-{% endhighlight %}
-{% endtabs %}
-
-Here, the Switch editor will be loaded for the `On` property (bool type) instead of `CheckBox` editor.
-
-## Creating new custom editor
-
-Create the custom editor by overriding the [IDataFormEditorBase] class.
-
-Property settings, commit, data validation can be handled by implementing the required methods. Here, the `Entry` is loaded for `Age` editor.
-
-{% tabs %}
-{% highlight c# %}
-
-public class CustomNumericEditor : IDataFormEditor
-{
-
-    private SfDataForm dataForm;
-    private DataFormCustomItem dataFormCustomItem;
-
-    public CustomNumericEditor(SfDataForm dataForm)
-    {
-        this.dataForm = dataForm;
-    }
-
-    public View CreateEditorView(DataFormItem dataFormItem)
-    {
-        Entry view = new Entry();
-        view.Keyboard = Keyboard.Numeric;
-        view.Placeholder = dataFormItem.PlaceholderText;
-        DataFormTextStyle textStyle = dataForm.EditorTextStyle;
-        view.TextColor = textStyle.TextColor;
-        view.FontSize = textStyle.FontSize;
-        view.FontFamily = textStyle.FontFamily;
-        view.FontAttributes = textStyle.FontAttributes;
-        view.TextChanged += this.OnViewTextChanged;
-        this.dataFormCustomItem = (DataFormCustomItem)dataFormItem;
-        this.dataFormCustomItem.EditorValue = string.Empty;
-
-        return view;
-    }
-
-    private void OnViewTextChanged(object sender, TextChangedEventArgs e)
-    {
-        if (sender is not InputView numericEntry || dataFormCustomItem == null)
-        {
-            return;
-        }
-
-        string numericText = Regex.Replace(numericEntry.Text, "[^0-9]+", string.Empty);
-        if (numericText != numericEntry.Text)
-        {
-            numericEntry.Text = numericText;
-            return;
-        }
-
-        dataFormCustomItem.EditorValue = numericText;
-        this.ValidateValue(dataFormCustomItem);
-        this.CommitValue(dataFormCustomItem, numericEntry);
-    }
-
-    private void ValidateValue(DataFormItem dataFormItem)
-    {
-        dataForm.Validate(new List<string>() { dataFormItem.FieldName });
-    }
-
-    public void CommitValue(DataFormItem dataFormItem, View view)
-    {
-        if (view is InputView numericText)
-        {
-            double numericValue;
-            double.TryParse(numericText.Text, out numericValue);
-            dataFormItem.SetValue(numericValue);
-        }
-    }
-
-    public void UpdateReadyOnly(DataFormItem dataFormItem)
-    {
-    }
-}
-
-this.DataForm.RegisterEditor("Age", new CustomTextEditor(dataForm));
-
-{% endhighlight %}
-{% endtabs %}
-
-The custom DataFormItem editor value should be committed manually by using [OnCommitValue] method of [IDataFormEditor] class on custom editor `Value` or `Focus changed` event which is used to update the custom editor value in respective property in [DataObject] based on dataform [commitMode] set.
-The custom DataFormItem has the following properties [GroupName], [FieldName], [LabelText], [PlaceholderText], [PlaceholderColor], [ShowLabel], [IsReadOnly], [EditorTextStyle], [ErrorLabelTextStyle], [ValidMessageLabelTextStyle], [LabelTextStyle], [Background], [ItemsOrderInRow], [LeadingLabelIcon].
 
 ## Commit mode
 
@@ -305,64 +17,64 @@ The supported commit modes are as follows:
 * PropertyChanged
 * Manual
 
-### LostFocus
+#### LostFocus
+
 If the commit mode is LostFocus, the value is committed when the editor lost its focus. By default DataForm [CommitMode] is `LostFocus`.
 
 {% tabs %}
 {% highlight xaml %}
-<ContentPage  xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:DataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm"
-             x:Class="CommitMode.MainPage">
-    <DataForm:SfDataForm
-        x:Name="DataForm"
+<ContentPage 
+...
+             xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
+    <dataForm:SfDataForm
+        x:Name="dataForm"
         CommitMode="LostFocus">
-    </DataForm:SfDataForm>
+    </dataForm:SfDataForm>
 </ContentPage>
 {% endhighlight %}
 {% highlight c# %}
-this.DataForm.CommitMode = DataFormCommitMode.LostFocus;
+this.dataForm.CommitMode = DataFormCommitMode.LostFocus;
 {% endhighlight %}
 {% endtabs %}
 
+#### PropertyChanged
 
-### PropertyChanged
 If the commit mode is PropertyChanged, the value will be committed immediately when it is changed.
 
 {% tabs %}
 {% highlight xaml %}
-<ContentPage  xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:DataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm"
-             x:Class="CommitMode.MainPage">
-    <DataForm:SfDataForm
-        x:Name="DataForm"
+<ContentPage 
+...
+             xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
+    <dataForm:SfDataForm
+        x:Name="dataForm"
         CommitMode="PropertyChanged">
-    </DataForm:SfDataForm>
+    </dataForm:SfDataForm>
 </ContentPage>
 {% endhighlight %}
 {% highlight c# %}
-this.DataForm.CommitMode = DataFormCommitMode.PropertyChanged;
+this.dataForm.CommitMode = DataFormCommitMode.PropertyChanged;
 {% endhighlight %}
 {% endtabs %}
 
-### Manual
+#### Manual
+
 If the commit mode is Manual, the value should be committed manually by calling the [SfDataForm.Commit] method.
 
 {% tabs %}
 {% highlight xaml %}
-<ContentPage  xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:DataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm"
-             x:Class="CommitMode.MainPage">
-    <DataForm:SfDataForm
-        x:Name="DataForm"
+<ContentPage 
+...
+        xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
+    <dataForm:SfDataForm
+        x:Name="dataForm"
         CommitMode="Manual">
-    </DataForm:SfDataForm>
+    </dataForm:SfDataForm>
+
 </ContentPage>
 {% endhighlight %}
 {% highlight c# %}
-this.DataForm.CommitMode = DataFormCommitMode.Manual;
+this.dataForm.CommitMode = DataFormCommitMode.Manual;
 {% endhighlight %}
 {% endtabs %}
 
@@ -370,75 +82,76 @@ The following code commits the value of all the properties in the data object:
 
 {% tabs %}
 {% highlight c# %}
-this.DataForm.Commit();
+this.dataForm.Commit();
 {% endhighlight %}
 {% endtabs %}
 
-N> On manual commit call manual validation will be called to validate the properties before commit
+N> On manual commit, manual validation will be called to validate the properties before the commit.
 
-## Converter
+## Value converter attribute
 
 To show the original value in different format or as different value, use the [DataFormValueConverter] attribute.
 
-### Changing original value of the DataForm property value using converter
-
-Here, the original value is multiplied by 10 and shown in editor. While committing, it is divided by 10 and stored in the data object.
+#### Changing original value of the DataForm property value using converter
 
 {% tabs %}
 {% highlight c# %}
-public class ValueConverterExt : IValueConverter
+
+    [DataFormValueConverter(typeof(StringToDateTimeConverter))]
+    public string DateTime { get; set; }
+
+public class StringToDateTimeConverter : IValueConverter
 {
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
-    {            
-        var amount = double.Parse(value.ToString());
-        return amount * 10;
+    {
+        if (value == null || string.IsNullOrEmpty(value.ToString()))
+        {
+            return DateTime.Now;
+        }
+        else
+        {
+            DateTime dateTime;
+            DateTime.TryParse((string)value, out dateTime);
+            return dateTime;
+        }
     }
-
     public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
     {
-        var amount = double.Parse(value.ToString());
-        return amount / 10;
+        return value.ToString();
     }
 }
 
-private double? amount = 1000;
-
-[DataFormValueConverter(typeof(ValueConverterExt))]
-
-public double? Amount { get; set; }
-
 {% endhighlight %}
 {% endtabs %}
 
-## Disable editing
-Editing DataForm can be disabled by setting the [IsReadOnly] property of the data form.
+Here, the editor will display the original value as `DateTime`. While committing, it is converted to `string` and stored in data object.
+
+## Read only mode
+
+DataForm can be disabled by setting the [IsReadOnly] property of the data form.
 
 {% tabs %}
 {% highlight xaml %}
-
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:DataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm"
-             x:Class="CommitMode.MainPage">
-
-    <DataForm:SfDataForm
-        x:Name="DataForm" 
+<ContentPage 
+...
+             xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
+    <dataForm:SfDataForm
+        x:Name="dataForm" 
         IsReadOnly="True">
-    </DataForm:SfDataForm>
+    </dataForm:SfDataForm>
 
 </ContentPage>
-
 {% endhighlight %}
 {% highlight c# %}
-this.DataForm.IsReadOnly = true;
+this.dataForm.IsReadOnly = true;
 {% endhighlight %}
 {% endtabs %}
 
-The editing behavior can also be changed by setting the [IsReadOnly] property of the [DataFormItem].
+The particular editor can disabled by setting the [IsReadOnly] property of the [DataFormItem].
 
 {% tabs %}
 {% highlight c# %}
-this.DataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
  private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
 {
