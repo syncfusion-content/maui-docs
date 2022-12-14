@@ -187,7 +187,7 @@ Default DataFormItem generated for the String type and the properties with [Data
 Text
 </td>
 <td>
-Entry
+{{'[Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry?view=net-maui-7.0)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -202,7 +202,7 @@ Generated for string type property with [DataType(DataType.MultilineText)] attri
 Multiline Text
 </td>
 <td>
-Editor
+{{'[Editor](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/editor?view=net-maui-7.0)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -217,7 +217,7 @@ Generated for string type property with [DataType(DataType.Password)] attributes
 Password
 </td>
 <td>
-Entry
+{{'[Entry]((https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry?view=net-maui-7.0)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -232,7 +232,7 @@ Generated for the Bool type property.
 CheckBox
 </td>
 <td>
-CheckBox
+{{'[CheckBox](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/checkbox?view=net-maui-7.0)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -247,7 +247,7 @@ Generated for the Bool type property.
 Switch
 </td>
 <td>
-Switch
+{{'[Switch](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/switch?view=net-maui-7.0)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -263,7 +263,7 @@ Generated for the DateTime, DateOnly, DateTimeOffset type properties.
 DatePiker
 </td>
 <td>
-DatePicker
+{{'[DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/datepicker?view=net-maui-7.0)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -279,7 +279,7 @@ Generated for the TimeSpan, TimeOnly, DateTime, DateTimeOffset type properties.
 TimePicker
 </td>
 <td>
-TimePicker
+{{'[TimePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/timepicker?view=net-maui-7.0&tabs=windows)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -294,7 +294,7 @@ Generated for the Enum type property.
 Picker
 </td>
 <td>
-Picker
+{{'[Picker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/picker?view=net-maui-7.0)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -309,7 +309,7 @@ Generated for the Enum type property.
 AutoComplete
 </td>
 <td>
-SfAutoComplete
+{{'[SfAutoComplete](https://help.syncfusion.com/maui/autocomplete)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -324,7 +324,7 @@ Generated for the Enum type property.
 ComboBox
 </td>
 <td>
-SfComboBox
+{{'[SfComboBox](https://help.syncfusion.com/maui/combobox)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -339,7 +339,7 @@ Generated for the Enum type property.
 RadioGroup
 </td>
 <td>
-RadioButton
+{{'[RadioButton](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/radiobutton?view=net-maui-7.0)'| markdownify }}
 </td>
 </tr>
 </table>
