@@ -27,9 +27,9 @@ Each data label can be represented by the following:
 <chart:SfCircularChart>
 . . .
 <chart:PieSeries ShowDataLabels="True"
-                ItemsSource="{Binding Data}"  
-                XBindingPath="Product" 
-                YBindingPath="SalesRate"/>
+                 ItemsSource="{Binding Data}"  
+                 XBindingPath="Product" 
+                 YBindingPath="SalesRate"/>
 . . .
 </chart:SfCircularChart>
 

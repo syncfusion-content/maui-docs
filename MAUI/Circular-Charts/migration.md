@@ -150,9 +150,9 @@ The following code example explains how to migrate the series of Xamarin [SfChar
 
 <chart:SfChart>
     <chart:PieSeries ItemsSource="{Binding Data}" 
-                        XBindingPath="Product" 
-                        YBindingPath="SalesRate">
-		 </chart:PieSeries>
+                     XBindingPath="Product" 
+                     YBindingPath="SalesRate">
+	</chart:PieSeries>
  </chart:SfChart>
 
 {% endhighlight %} 
@@ -181,8 +181,8 @@ this.Content = chart;
 
 <chart:SfCircularChart>
     <chart:PieSeries ItemsSource="{Binding Data}" 
-                    XBindingPath="Product" 
-                    YBindingPath="SalesRate"/>
+                     XBindingPath="Product" 
+                     YBindingPath="SalesRate"/>
 </chart:SfCircularChart>
 
 {% endhighlight %} 
@@ -338,7 +338,7 @@ chart.Legend = new ChartLegend ();
 <chart:SfCircularChart>
     . . .
     <chart:SfCircularChart.Legend>
-    <chart:ChartLegend/>
+     <chart:ChartLegend/>
     </chart:SfCircularChart.Legend>
 </chart:SfCircularChart>
 
@@ -370,7 +370,7 @@ To customize the data label appearance, create an instance of the [ChartDataMark
 {% highlight xaml %}
 
 <chart:SfChart>  
-    <chart:PieSeries ItemsSource ="{Binding Data}" XBindingPath="Expense" YBindingPath="Value">
+    <chart:PieSeries ItemsSource ="{Binding Data}"      XBindingPath="Expense" YBindingPath="Value">
 	    <chart:PieSeries.DataMarker>
 	    <chart:ChartDataMarker ShowLabel="True">
 		    <chart:ChartDataMarker.LabelStyle>
@@ -527,17 +527,16 @@ chart.ChartBehaviors.Add(tool);
 <chart:SfCircularChart>
 . . .
   <chart:SfCircularChart.TooltipBehavior>
-        <chart:ChartTooltipBehavior 
-        Background="Blue" 
-        TextColor="White" 
-        Margin="5" 
-        FontSize="15"/>
+    <chart:ChartTooltipBehavior  Background="Blue" 
+                                 TextColor="White" 
+                                 Margin="5" 
+                                 FontSize="15"/>
    </chart:SfCircularChart.TooltipBehavior>
 
    <chart:PieSeries ItemsSource="{Binding Data}" 
-                       XBindingPath="Demand"
-                       YBindingPath="Year2010"
-                       EnableTooltip="True"/>
+                    XBindingPath="Demand"
+                    YBindingPath="Year2010"
+                    EnableTooltip="True"/>
 </chart:PieSeries>
 </chart:SfCircularChart>
 

@@ -174,8 +174,8 @@ N> To plot the series, the [XBindingPath](https://help.syncfusion.com/cr/maui/Sy
 <chart:SfCircularChart>
     . . .
     <chart:PieSeries ItemsSource="{Binding Data}" 
-                    XBindingPath="Product" 
-                    YBindingPath="SalesRate"/>
+                     XBindingPath="Product" 
+                     YBindingPath="SalesRate"/>
 </chart:SfCircularChart>
 
 {% endhighlight %}

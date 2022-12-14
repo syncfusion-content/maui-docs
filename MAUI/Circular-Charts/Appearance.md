@@ -175,15 +175,27 @@ public class ViewModel
 
 SfCircularChart chart = new SfCircularChart();
 AbsoluteLayout absoluteLayout = new AbsoluteLayout();
-var border = new Border() {Stroke = Colors.Red,StrokeThickness = 2};
+var border = new Border() 
+{
+	Stroke = Colors.Red,
+	StrokeThickness = 2
+};
 AbsoluteLayout.SetLayoutBounds(border, new Rect(0, 0, 1, 1));
 AbsoluteLayout.SetLayoutFlags(border, Microsoft.Maui.Layouts.AbsoluteLayoutFlags.All);
 absoluteLayout.Children.Add(border);
-var copyRight = new Label() {Text = "Copyright @ 2001 - 2022 Syncfusion Inc",FontSize = 18,Opacity = 0.4};
+var copyRight = new Label() 
+{
+	Text = "Copyright @ 2001 - 2022 Syncfusion Inc",
+	FontSize = 18,Opacity = 0.4
+};
 AbsoluteLayout.SetLayoutBounds(copyRight, new Rect(1, 1, -1, -1));
 AbsoluteLayout.SetLayoutFlags(copyRight, Microsoft.Maui.Layouts.AbsoluteLayoutFlags.PositionProportional);
 absoluteLayout.Children.Add(copyRight);
-var watermark = new Label(){Text = "CONFIDENTIAL", Rotation = 340,FontSize = 80,FontAttributes = FontAttributes.Bold,TextColor = Colors.Gray,Opacity = 0.3};
+var watermark = new Label()
+{
+	Text = "CONFIDENTIAL", Rotation = 340,FontSize = 80,FontAttributes = FontAttributes.Bold,
+	TextColor = Colors.Gray,Opacity = 0.3
+};
 AbsoluteLayout.SetLayoutBounds(watermark, new Rect(0.5, 0.5, -1, -1));
 AbsoluteLayout.SetLayoutFlags(watermark, Microsoft.Maui.Layouts.AbsoluteLayoutFlags.PositionProportional);
 absoluteLayout.Children.Add(watermark);

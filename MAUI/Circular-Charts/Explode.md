@@ -22,12 +22,12 @@ Exploding a segment is used to pull attention to a specific area of the circular
 <chart:SfCircularChart>
     . . .
     <chart:DoughnutSeries x:Name="DoughnutSeries"
-					  ItemsSource="{Binding Data}"
-					  ExplodeIndex="2"
-					  ExplodeRadius="10"
-					  ExplodeOnTouch="True"
-					  XBindingPath="Utilization"
-					  YBindingPath="ResponseTime" />
+					      ItemsSource="{Binding Data}"
+					      ExplodeIndex="2"
+					      ExplodeRadius="10"
+					      ExplodeOnTouch="True"
+					      XBindingPath="Utilization"
+					      YBindingPath="ResponseTime" />
 </chart:SfCircularChart>
 
 {% endhighlight %}
