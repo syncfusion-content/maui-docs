@@ -2,14 +2,18 @@
 layout: post
 title: Commit in .NET MAUI DataForm control | Syncfusion
 description: Learn here all about the commit feature in Syncfusion .NET MAUI DataForm (SfDataForm) control and more.
-platform: Maui
+platform: maui
 control: SfDataForm
 documentation: ug
 ---
 
+# Commit in .NET MAUI DataForm (SfDataForm)
+
+The data form commits the data and user input in order to update the value in the underlying data object.
+
 ## Commit mode
 
-The [CommitMode] determines when the value should be committed to the data object.
+The [CommitMode] determines when the value should be committed to the underlying data object to allow users commit only correct values.
 
 The supported commit modes are as follows:
 
@@ -19,10 +23,10 @@ The supported commit modes are as follows:
 
 #### LostFocus
 
-If the commit mode is LostFocus, the value is committed when the editor lost its focus. By default DataForm [CommitMode] is `LostFocus`.
+If the commit mode is `LostFocus`, the value is committed when the editor lost its focus. By default DataForm [CommitMode] is `LostFocus`.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 <ContentPage 
 ...
              xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
@@ -32,17 +36,17 @@ If the commit mode is LostFocus, the value is committed when the editor lost its
     </dataForm:SfDataForm>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 this.dataForm.CommitMode = DataFormCommitMode.LostFocus;
 {% endhighlight %}
 {% endtabs %}
 
 #### PropertyChanged
 
-If the commit mode is PropertyChanged, the value will be committed immediately when it is changed.
+If the commit mode is `PropertyChanged`, the value will be committed immediately when it is changed.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 <ContentPage 
 ...
              xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
@@ -52,17 +56,17 @@ If the commit mode is PropertyChanged, the value will be committed immediately w
     </dataForm:SfDataForm>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 this.dataForm.CommitMode = DataFormCommitMode.PropertyChanged;
 {% endhighlight %}
 {% endtabs %}
 
 #### Manual
 
-If the commit mode is Manual, the value should be committed manually by calling the [SfDataForm.Commit] method.
+If the commit mode is `Manual`, the value should be committed manually by calling the [SfDataForm.Commit] method.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 <ContentPage 
 ...
         xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
@@ -73,7 +77,7 @@ If the commit mode is Manual, the value should be committed manually by calling 
 
 </ContentPage>
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 this.dataForm.CommitMode = DataFormCommitMode.Manual;
 {% endhighlight %}
 {% endtabs %}
@@ -81,7 +85,7 @@ this.dataForm.CommitMode = DataFormCommitMode.Manual;
 The following code commits the value of all the properties in the data object:
 
 {% tabs %}
-{% highlight c# %}
+{% highlight C# %}
 this.dataForm.Commit();
 {% endhighlight %}
 {% endtabs %}
@@ -95,7 +99,7 @@ To show the original value in different format or as different value, use the [D
 #### Changing original value of the DataForm property value using converter
 
 {% tabs %}
-{% highlight c# %}
+{% highlight C# %}
 
     [DataFormValueConverter(typeof(StringToDateTimeConverter))]
     public string DateTime { get; set; }
@@ -128,10 +132,10 @@ Here, the editor will display the original value as `DateTime`. While committing
 
 ## Read only mode
 
-DataForm can be disabled by setting the [IsReadOnly] property of the data form.
+`DataForm` can be disabled by setting the [IsReadOnly] property of the data form.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 <ContentPage 
 ...
              xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
@@ -142,7 +146,7 @@ DataForm can be disabled by setting the [IsReadOnly] property of the data form.
 
 </ContentPage>
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 this.dataForm.IsReadOnly = true;
 {% endhighlight %}
 {% endtabs %}
@@ -150,7 +154,7 @@ this.dataForm.IsReadOnly = true;
 The particular editor can disabled by setting the [IsReadOnly] property of the [DataFormItem].
 
 {% tabs %}
-{% highlight c# %}
+{% highlight C# %}
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
  private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
