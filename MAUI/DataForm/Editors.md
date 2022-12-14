@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Editors in Maui DataForm control | Syncfusion
-description: Learn here all about Editors support in Syncfusion Maui DataForm (SfDataForm) control, its elements and more.
+title: Editors in .NET MAUI DataForm(SfDataForm) control | Syncfusion
+description: Learn here all about Editors support in Syncfusion .NET MAUI DataForm (SfDataForm) control, its elements and more.
 platform: Maui
 control: SfDataForm
 documentation: UG
@@ -23,9 +23,6 @@ The data form supports several built-in editors as follows:
 Text
 </td>
 <td>
-{{'[DataFormTextEditor
-</td>
-<td>
 The String type property and any other type apart from the below specified cases.
 </td>
 <td>
@@ -36,9 +33,7 @@ The String type property and any other type apart from the below specified cases
 <td>
 MultilineText
 </td>
-<td>
-DataFormMultiLineTextEditor
-</td>
+
 <td>
 The String type property with multi line text.
 [DataType(DataType.MultilineText)]
@@ -50,9 +45,6 @@ The String type property with multi line text.
 <tr>
 <td>
 Password
-</td>
-<td>
-DataFormPasswordEditor
 </td>
 <td>
 The String type property and property with 
@@ -67,10 +59,7 @@ The String type property and property with
 Date
 </td>
 <td>
-DataFormDateEditor
-</td>
-<td>
-DateTime, DateOnly and DateTimeOffset type property and the property with [DataType(DataType.Date)] and [DataType(DataType.DateTime)] attributes.
+DateTime, DateOnly or DateTimeOffset type property and the property with [DataType(DataType.Date)] and [DataType(DataType.DateTime)] attributes.
 </td>
 <td>
 {{'[DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/datepicker?view=net-maui-7.0)'| markdownify }}
@@ -81,10 +70,7 @@ DateTime, DateOnly and DateTimeOffset type property and the property with [DataT
 Time
 </td>
 <td>
-DataFormTimeEditor
-</td>
-<td>
-The DateTime, TimeSpan, TimeOnly and DateTimeOffset  property with [DataType(DataType.Time)] attribute.
+The DateTime, TimeSpan, TimeOnly or DateTimeOffset  property with [DataType(DataType.Time)] attribute.
 </td>
 <td>
 {{'[TimePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/timepicker?view=net-maui-7.0&tabs=windows)'| markdownify }}
@@ -93,9 +79,6 @@ The DateTime, TimeSpan, TimeOnly and DateTimeOffset  property with [DataType(Dat
 <tr>
 <td>
 Checkbox
-</td>
-<td>
-DataFormCheckBoxEditor
 </td>
 <td>
 Bool type property.
@@ -109,9 +92,6 @@ Bool type property.
 Switch
 </td>
 <td>
-DataFormSwitchEditor
-</td>
-<td>
 Bool type property.
 </td>
 <td>
@@ -121,9 +101,6 @@ Bool type property.
 <tr>
 <td>
 Picker
-</td>
-<td>
-DataFormPickerEditor
 </td>
 <td>
 Enum and List type property. 
@@ -136,9 +113,6 @@ Enum and List type property.
 <tr>
 <td>
 ComboBox
-</td>
-<td>
-DataFormComboBoxEditor
 </td>
 <td>
 Enum and List type property.
@@ -154,9 +128,6 @@ Enum and List type property.
 RadioGroup
 </td>
 <td>
-DataFormRadioGroupEditor
-</td>
-<td>
 Enum and List type property.
 [EnumDataTypeAttribute]
 </td>
@@ -167,9 +138,6 @@ Enum and List type property.
 <tr>
 <td>
 AutoComplete
-</td>
-<td>
-DataFormAutoCompleteEditor
 </td>
 <td>
 Enum and List type property.
@@ -198,7 +166,7 @@ And `MultilineText` editor height will auto expand/reduce based on the line wrap
 {% highlight MainPage.xaml.cs %}
 
     [DataType(DataType.MultilineText)]
-    public String Address { get; set; }
+    public string Address { get; set; }
 
 {% endhighlight %}
 {% endtabs %}
@@ -214,12 +182,7 @@ In the password editor, the [Entry](https://learn.microsoft.com/en-us/dotnet/mau
 
     [Display(ShortName = "Transaction password", Prompt = "Enter password")]
     [DataType(DataType.Password)]
-    public string Password
-    {
-        get { return this.password; }
-        set{ this.password = value; }
-    }
-
+    public string Password { get; set; }
 {% endhighlight %}
 {% endtabs %}
 
@@ -229,14 +192,14 @@ In the password editor, the [Entry](https://learn.microsoft.com/en-us/dotnet/mau
 
 In the date editor, the [DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/datepicker?view=net-maui-7.0) will be loaded.
 
-In [DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/datepicker?view=net-maui-7.0), the default date value is current date displayed by default. You can also adding nullable `DateTime` data type for the date picker property in data form, which allows you to set the current date and display current date in date editor. 
+In [DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/datepicker?view=net-maui-7.0), the default date value is current date displayed. You can also adding nullable `DateTime` data type for the date picker property in data form, which allows you to set the current date and display current date in date editor. 
 
 {% tabs %}
 {% highlight MainPage.xaml.cs %}
 
     [DataType(DataType.Date)]
-    [Display(Name ="Birth Date")]
-    public DateTime? BirthDate { get; set; }
+    [Display(Name ="Event Date")]
+    public DateTime? EventDate { get; set; }
 
 {% endhighlight %}
 {% endtabs %}
@@ -278,8 +241,8 @@ You can customize the maximum and minimum allowable dates in the [DatePicker](ht
     {
         if (e.DataFormItem != null && e.DataFormItem.FieldName == "Date" && e.DataFormItem is DataFormDateItem dateItem)
         {
-            dateItem.MinimumDate = new DateTime(2017, 5, 5);
-            dateItem.MaximumDate = new DateTime(2017, 9, 2);
+            dateItem.MinimumDate = new DateTime(2022, 5, 5);
+            dateItem.MaximumDate = new DateTime(2022, 9, 2);
         }
     }
 
@@ -293,14 +256,14 @@ You can customize the maximum and minimum allowable dates in the [DatePicker](ht
 In the time editor, the [TimePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/timepicker?view=net-maui-7.0&tabs=windows) will be loaded.
 
 
-In [TimePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/timepicker?view=net-maui-7.0&tabs=windows), the default time value (12:00 AM) is displayed by default. You can also adding nullable `TimeSpan` data type for the time picker property in data form, which allows you to set default time and display the (12:00 AM) in time editor. 
+In [TimePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/timepicker?view=net-maui-7.0&tabs=windows), the default time value (12:00 AM) is displayed. You can also adding nullable `TimeSpan` data type for the time picker property in data form, which allows you to set default time and display the (12:00 AM) in time editor. 
 
 {% tabs %}
 {% highlight MainPage.xaml.cs %}
 
     [DataType(DataType.Time)]
-    [Display(Name = "Birth Time")]
-    public TimeSpan? BirthTime { get; set; }
+    [Display(Name = "Event Time")]
+    public TimeSpan? EventTime { get; set; }
 
 {% endhighlight %}
 {% endtabs %}
@@ -347,8 +310,6 @@ In [CheckBox](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/contr
 
 `Image`
 
-**Visual states of CheckBox**
-
 CheckBox support two visual states.
   - Checked
   - UnChecked
@@ -364,12 +325,33 @@ CheckBox support two visual states.
 
 {% endhighlight %}
 {% endtabs %}
+
+### Changing checkbox color
+
+By default the checkbox color is blue, you can change the checkbox color by using `Color` property in `DataFormItem`.
+
+{% tabs %}
+{% highlight MainPage.xaml.cs %}
+
+    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+    
+    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+    {
+        if (e.DataFormItem.FieldName == "agree" && e.DataFormItem is DataFormCheckBoxItem dataFormCheckBox)
+        {
+            dataFormCheckBox.Color = Colors.Pink;
+        }
+    }
+    
+
+{% endhighlight %}
+{% endtabs %}
 		
 ## Switch Editor
 
 In switch editor, [Switch](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/switch?view=net-maui-7.0) is loaded, and DataForm [Switch](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/switch?view=net-maui-7.0) editor supports bool data type property.
 
-To add [Switch](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/switch?view=net-maui-7.0) editor in DataForm, register the editor as [Switch](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/switch?view=net-maui-7.0) for the required property using the [RegisterEditor]`Link` method.
+To add [Switch](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/switch?view=net-maui-7.0) editor in DataForm, register the editor as DataFormEditorType.Switch  for the required property using the [RegisterEditor]`Link` method.
 
 {% tabs %}
 {% highlight MainPage.xaml.cs %}
@@ -389,6 +371,52 @@ To add [Switch](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/con
 
 `Image`
 
+#### Changing Switch Editor Thumb color
+
+### Using event
+
+By default switch editor Thumb color is Blue, you can change the Thumb color by using `ThumbColor` property in the `DataFormItem`.
+
+{% tabs %}
+{% highlight MainPage.xaml.cs %}
+
+    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+
+    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+    {
+        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Agree" && e.DataFormItem is DataFormSwitchItem switchItem)
+        {
+             dataFormSwitchItem. ThumbColor = Colors.Pink;
+        }
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Changing Switch Editor Background color
+
+### Using event
+
+By default switch editor background colour is white, you can change the Background color by using `OnColor` property in the `DataFormItem`.
+
+{% tabs %}
+{% highlight MainPage.xaml.cs %}
+
+    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+
+    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+    {
+        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Agree" && e.DataFormItem is DataFormSwitchItem switchItem)
+        {
+            dataFormSwitchItem. OnColor = Colors.Black;
+        }
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+
+
 ## Combo Box editor
 
 In the Combo Box editor, the [SfComboBox](https://help.syncfusion.com/maui/combobox)  will be loaded.
@@ -406,20 +434,24 @@ By default, the `ItemsSource` for SfComboBox is auto-generated for enum types an
     
     public class DataFormItemsSourceProvider : IDataFormSourceProvider
     {
-        public override object GetSource(string sourceName)
+        public object GetSource(string sourceName)
         {
-            var list = new List<string>();
-            if (sourceName == "ItemName")
+            
+            if (sourceName == "Country")
             {
-                list.Add("India");
-                list.Add("USA");
-                list.Add("Japan");
+                List<string> list = new List<string>()
+                {
+                    "India",
+                    "USA",
+                    "Japan"
+                };
+                return list;
             }
-            return list;
+            return new List<string>();
         }
     }
     dataForm.ItemsSourceProvider = new DataFormItemsSourceProvider();
-    dataForm.RegisterEditor("ItemName", DataFormEditorType.ComboBox);
+    dataForm.RegisterEditor("Country", DataFormEditorType.ComboBox);
 
 {% endhighlight %}
 {% endtabs %}
@@ -437,11 +469,13 @@ You can also set the ItemsSource for combo box editor by using the [GenerateData
     {
         if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name" && e.DataFormItem is DataFormComboBoxItem comboBoxItem)
         {
-            var list = new List<string>();
-            list.Add("Home");
-            list.Add("Food");
-            list.Add("Utilities");
-            list.Add("Education");
+             List<string> list = new List<string>()
+            {
+                "Home",
+                "Food",
+                "Utilities",
+                "Education"
+            };
             comboBoxItem.ItemsSource = list;
         }
     }
@@ -451,9 +485,91 @@ You can also set the ItemsSource for combo box editor by using the [GenerateData
 
 `Image`
 
-### Loading complex type property values in combo box editor
+#### Enabling editing mode in combobox
 
-You can display the complex type property values in combo box editor by using the [GetSource]`Link` method of IDataFormSourceProvider class, which is used to get source list as complex property values for combo box editor and set it to `IDataFormSourceProvider` property of SfDataForm. You need to use `GenerateDataFormItem `event to set [DisplayMemberPath]`Link` and [SelectedValuePath]`Link` property value of DataFormComboBoxItem for complex type property.
+By default, in the combobox editor, you can select a needed item by scrolling the whole list of items.
+
+You can filter a particular item in the list items by using the `IsEditable` property, this property enables you to type a list item in the combo box editor.
+
+{% tabs %}
+{% highlight MainPage.xaml.cs %}
+
+    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+
+    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+    {
+        if (e.DataFormItem != null && e.DataFormItem.FieldName == "City" && e.DataFormItem is DataFormComboBoxItem comboBoxItem)
+        {
+           comboBoxItem.IsEditable = true;
+        }
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Searching words that starts with the input text
+
+Displays all the matches that contain first character of the typed characters in items source of combobox editor. This strategy is case in-sensitive.
+
+{% tabs %}
+{% highlight MainPage.xaml.cs %}
+
+    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+
+    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+    {
+        if (e.DataFormItem != null && e.DataFormItem.FieldName == "City" && e.DataFormItem is DataFormComboBoxItem comboBoxItem)
+        {
+            comboBoxItem.TextSearchMode = DataFormTextSearchMode.StartsWith;
+        }
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Searching words that contains the input text
+
+Displays all the matches that contain the typed characters in items source of combobox editor. This strategy is case in-sensitive.
+
+{% tabs %}
+{% highlight MainPage.xaml.cs %}
+
+    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+
+    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+    {
+        if (e.DataFormItem != null && e.DataFormItem.FieldName == "City" && e.DataFormItem is DataFormComboBoxItem comboBoxItem)
+        {
+            comboBoxItem.TextSearchMode = DataFormTextSearchMode.Contains;
+        }
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Customizing the height of combobox list item 
+
+By default the combo box drop down list item height is `400d` , You can change the size for the drop down list item size by using `MaxDropDownHeight` property in the `DataFormItem`.
+
+{% tabs %}
+{% highlight MainPage.xaml.cs %}
+
+    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+
+    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+    {
+        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Country" && e.DataFormItem is DataFormComboBoxItem comboBoxItem)
+        {
+            comboBoxItem.MaxDropDownHeight = 400;
+        }
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Loading complex type property values in combo box editor
+
+You can display the complex type property values in combo box editor by using the DisplayMemberPath and SelectedValuePath properties of DataFormComboBoxItem. You need to use `GenerateDataFormItem `event to set [DisplayMemberPath]`Link` and [SelectedValuePath]`Link` property value of DataFormComboBoxItem for complex type property.
 
 N> Class cannot be directly set as data type for combo box editor in this complex type scenario.
 
@@ -461,29 +577,35 @@ N> Class cannot be directly set as data type for combo box editor in this comple
 {% highlight MainPage.xaml.cs %}
 
     dataForm.ItemsSourceProvider = new DataFormItemsSourceProvider();
-    dataForm.DataObject = new DataModel();
+    dataForm.DataObject = new ContactModel();
     dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
-    dataForm.RegisterEditor("City", DataFormEditorType.ComboBox);
+    dataForm.RegisterEditor("EmployeeDetails", DataFormEditorType.ComboBox);
  
     private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "City" && e.DataFormItem is DataFormComboBoxItem comboBoxItem)
-        {
-            comboBoxItem.DisplayMemberPath = "City";
-            comboBoxItem.SelectedValuePath = "PostalCode";
+        if (e.DataFormItem != null && e.DataFormItem.FieldName == "EmployeeDetails" && e.DataFormItem is DataFormComboBoxItem comboBoxItem)
+        {   
+            comboBoxItem.DisplayMemberPath = "ID";
+            comboBoxItem.SelectedValuePath = "Name";
         }
     } 
  
-    public class DataFormItemsSourceProvider : IDataFormSourceProvider
+    public class DataFormItemsSourceProvider  : IDataFormSourceProvider
     {
-        public override object GetSource(string sourceName)
+        public object GetSource(string sourceName)
         {
-            if (sourceName == "City")
+            if (sourceName == "EmployeeDetails")
             {
-                List<Address> details = new List<Address>();
-                details.Add(new Address() { City = "Chennai", PostalCode = 1 });
-                details.Add(new Address() { City = "Paris", PostalCode = 2 });
-                details.Add(new Address() { City = "Vatican", PostalCode = 3 });
+                List<EmployeeInfo> details = new List<EmployeeInfo>();
+                details.Add(new EmployeeInfo() { ID = 1, Name =  "Eric"  });
+                details.Add(new EmployeeInfo() { ID = 2, Name = "James"  });
+                details.Add(new EmployeeInfo() { ID = 3, Name = "Jacob"  });
+                details.Add(new EmployeeInfo() { ID = 4, Name = "Lucas"  });
+                details.Add(new EmployeeInfo() { ID = 5, Name = "Mark"  });
+                details.Add(new EmployeeInfo() { ID = 6, Name = "Aldan"  });
+                details.Add(new EmployeeInfo() { ID = 7, Name = "Aldrin"  });
+                details.Add(new EmployeeInfo() { ID = 8, Name = "Alan"  });
+                details.Add(new EmployeeInfo() { ID = 9, Name = "Aaron"  });
 
                 return details;
             }
@@ -491,207 +613,17 @@ N> Class cannot be directly set as data type for combo box editor in this comple
         }
     }
 
-    public class DataModel
+    public class ContactInfo
     {
         [Display(Name ="First Name")]
         public String FirstName { get; set; } 
-        public string City { get; set; }
+        public string EmployeeDetails { get; set; }
     }
 
-    public class Address
+    public class EmployeeInfo
     {
-        public int PostalCode { get; set; }
-        public string City { get; set; }
-    }
-
-{% endhighlight %}
-{% endtabs %}
-
-`Image`
-
-
-## Picker editor
-
-In the picker editor, the [Picker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/picker?view=net-maui-7.0) will be loaded.
-
-`Image`
-
-### Customizing ItemsSource of Picker
-
-By default, the `ItemsSource` for picker is auto-generated for enum type and collection type properties. For other types, you can set the `ItemsSource` by using [IDataFormSourceProvider]`Link`.
-
-### Using IDataFormSourceProvider
-
-{% tabs %}
-{% highlight MainPage.xaml.cs %}
-
-    public string Country { get; set; }
-    
-    public class DataFormItemsSourceProvider : IDataFormSourceProvider
-    {
-         public override object GetSource(string sourceName)
-        {
-            var list = new List<string>();
-            if (sourceName == "Country")
-            {
-                list.Add("India");
-                list.Add("USA");
-                list.Add("China");
-                list.Add("Italy");
-            }
-            return list;
-        }
-    }
-    dataForm.ItemsSourceProvider = new DataFormItemsSourceProvider();
-    dataForm.RegisterEditor("ItemName", DataFormEditorType.Picker);
-
-{% endhighlight %}
-{% endtabs %}
-
-### Using event
-
-You can also set `ItemsSource` for picker editor by using the [ItemsSource]`Link` property in the [DataFormPickerItem]`Link`.
-
-{% tabs %}
-{% highlight MainPage.xaml.cs %}
-
-    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
-
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
-    {
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name" && e.DataFormItem is DataFormPickerItem pickerItem)
-        {
-            var list = new List<string>();
-            list.Add("Home");
-            list.Add("Food");
-            list.Add("Utilities");
-            list.Add("Education");
-            pickerItem.ItemsSource = list;
-        }
-    }
-
-{% endhighlight %}
-{% endtabs %}
-
-### Loading complex type property values in picker
-
-You can display the complex type property values in picker editor by using the [GetSource]`Link` override method of IDataFormSourceProvider class, which is used to get source list as complex property values for picker editor and set it to `IDataFormSourceProvider` property of SfDataForm. You need to use `GenerateDataFormItem`event to set [DisplayMemberPath]`Link` and [ValueMemberPath]`Link` property value DataFormPickerItem for complex type property.
-
-N> Class cannot be directly set as data type for picker editor in this complex type scenario.
-
-{% tabs %}
-{% highlight MainPage.xaml.cs %}
-
-    dataForm.ItemsSourceProvider = new DataFormItemsSourceProvider();
-    dataForm.RegisterEditor("City", DataFormEditorType.Picker);
-    dataForm.DataObject = new DataModel();
-        dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
- 
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
-    {
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "City" && e.DataFormItem is DataFormPickerItem pickerItem)
-        {
-            pickerItem.DisplayMemberPath = "City";
-            pickerItem.ValueMemberPath = "PostalCode";
-        }
-    } 
- 
-    public class DataFormItemsSourceProvider : IDataFormSourceProvider
-    {
-         public object GetSource(string sourceName)
-        {
-            if (sourceName == "City")
-            {
-                List<Address> details = new List<Address>();
-                details.Add(new Address() { City = "Chennai", PostalCode = 1 });
-                details.Add(new Address() { City = "Paris", PostalCode = 2 });
-                details.Add(new Address() { City = "Vatican", PostalCode = 3 });
-
-                return details;
-            }
-        return new List<string>();
-        }
-    }
-
-    public class DataModel
-    {
-        public String FirstName { get; set; } 
-        public string City { get; set; }
-    }
-
-    public class Address
-    {
-        public int PostalCode { get; set; }
-        public string City { get; set; }
-    }
-
-{% endhighlight %}
-{% endtabs %}
-
-`Image`
-
-
-
-## RadioGroup editor
-
-In the [RadioGroup](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/radiobutton?view=net-maui-7.0) editor, the [RadioGroup](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/radiobutton?view=net-maui-7.0) control is loaded.
-
-The [items]`Link` for [RadioGroup](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/radiobutton?view=net-maui-7.0) is generated for `enum` and `List` data type properties. In order to add [RadioGroup](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/radiobutton?view=net-maui-7.0) editor in the DataForm, you need to register editor as [RadioGroup](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/radiobutton?view=net-maui-7.0) for the required property by using the [RegisterEditor]`Link` method.
-
-**Support for enum data type**
-
-For `enum` data type property, [RadioGroup](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/radiobutton?view=net-maui-7.0) [items]`Link` will be added based on specified property enum values.
-
-{% tabs %}
-{% highlight MainPage.xaml.cs %}
-
-    dataForm.RegisterEditor("Phone", DataFormEditorType.RadioGroup);
-
-    public Numbers Phone
-    {
-	    get { return phone; }
-	    set { this.phone = value; }
-    }
-
-    public enum Numbers
-    {
-	    Home,
-	    Work,
-	    Other
-    }
-
-{% endhighlight %}
-{% endtabs %}
-
-**Support for List data type**
-
-For `List` data type property, you have to set the `ItemsSource` by using the [IDataFormSourceProvider`Link`, based on that [RadioGroup](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/radiobutton?view=net-maui-7.0) [items]`Link` will be added.
-
-{% tabs %}
-{% highlight MainPage.xaml.cs %}
-
-    dataForm.RegisterEditor("Phone", DataFormEditorType.RadioGroup);
-    dataForm.ItemsSourceProvider = new DataFormItemsSourceProvider();
-
-    public string Phone
-    {
-        get { return phone; }
-        set { this.phone = value; }
-    }
-
-    public class DataFormItemsSourceProvider : IDataFormSourceProvider
-    {
-         public object GetSource(string sourceName)
-        {
-		    var list = new List<string>();
-		    if(sourceName == "Phone")
-		    {
-			    list.Add("Home");
-			    list.Add("Work");
-			    list.Add("Other");
-		    }
-		    return list;
-        }
+        public int ID { get; set; }
+        public string Name { get; set; }
     }
 
 {% endhighlight %}
@@ -717,24 +649,27 @@ By default, the [ItemsSource]`Link` for `AutoComplete` editor is auto-generated 
     {
          public object GetSource(string sourceName)
         {
-            var list = new List<string>();
             if (sourceName == "Country")
             {
-                list.Add("Indonesia");
-                list.Add("Italy");
-                list.Add("India");
-                list.Add("Iran");
-                list.Add("Iraq");
-                list.Add("Uganda");
-                list.Add("Ukraine");
-                list.Add("Canada");
-                list.Add("Australia");
-                list.Add("Uzbekistan");
-                list.Add("France");
-                list.Add("United Kingdom");
-                list.Add("United States");
+                List<string> list = new List<string>()
+                {
+                    "Indonesia",
+                    "Italy",
+                    "India",
+                    "Iran",
+                    "Iraq",
+                    "Uganda"
+                    "Ukraine"
+                    "Canada"
+                    "Australia"
+                    "Uzbekistan"
+                    "France"
+                    "United Kingdom"
+                    "United States"
+                };
+                return list;
             }
-            return list;
+            return new List<string>();
         }
     }
     dataForm.ItemsSourceProvider = new DataFormItemsSourceProvider();
@@ -759,7 +694,7 @@ You can also set `ItemsSource` for autocomplete editor by using [ItemsSource]`Li
     {
         if (e.DataFormItem != null && e.DataFormItem.FieldName == "Country" && e.DataFormItem is DataFormAutoCompleteItem autoCompleteItem)
         {
-            var list = new List<string>();
+            List<string> list = new List<string>();
             list.Add("Indonesia");
             list.Add("Italy");
             list.Add("India");
@@ -781,7 +716,9 @@ You can also set `ItemsSource` for autocomplete editor by using [ItemsSource]`Li
 
 #### Loading complex type property values in autocomplete editor
 
-You can display the complex type property values in autocomplete editor by using [GetSource]`Link` method of the IDataFormSourceProvider class, which is used to get source list as complex property values for autocomplete editor and set it to the `IDataFormSourceProvider` property of SfDataForm.Use the `GenerateDataFormItem `event to set [DisplayMemberPath] and [SelectedValuePath] property values of AutoComplete for complex type property.
+You can display the complex type property values in combo box editor by using the DisplyMemberPath and SelectedValuePath properties of DataFormComboBoxItem. You need to use `GenerateDataFormItem `event to set [DisplayMemberPath]`Link` and [SelectedValuePath]`Link` property value of DataFormComboBoxItem for complex type property.
+
+You can display the complex type property values in autocomplete editor by using the DisplayMemberPath and SelectedValuePath properties of DataFormAutoCompleteItem. Use the `GenerateDataFormItem `event to set [DisplayMemberPath] and [SelectedValuePath] property values of AutoComplete for complex type property.
 
 N> Class cannot be directly set as data type for autocomplete editor in this complex type scenario.
 
@@ -789,60 +726,60 @@ N> Class cannot be directly set as data type for autocomplete editor in this com
 {% highlight MainPage.xaml.cs %}
 
     dataForm.ItemsSourceProvider = new DataFormItemsSourceProvider();
-    dataForm.DataObject = new DataModel();
-    dataForm.RegisterEditor("City", DataFormEditorType.AutoComplete);
+    dataForm.DataObject = new ContactModel();
     dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+    dataForm.RegisterEditor("EmployeeDetails", DataFormEditorType.ComboBox);
  
     private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "City" && e.DataFormItem is DataFormAutoCompleteItem autoCompleteItem)
-        {
-            autoCompleteItem.DisplayMemberPath = "City";
-            autoCompleteItem.SelectedValuePath = "PostalCode";
+        if (e.DataFormItem != null && e.DataFormItem.FieldName == "EmployeeDetails" && e.DataFormItem is DataFormAutoCompleteItem autoCompleteItem)
+        {   
+            autoCompleteItem.DisplayMemberPath = "ID";
+            autoCompleteItem.SelectedValuePath = "Name";
         }
     } 
  
-    public class DataFormItemsSourceProvider : IDataFormSourceProvider
+    public class DataFormItemsSourceProvider  : IDataFormSourceProvider
     {
-         public object GetSource(string sourceName)
+        public object GetSource(string sourceName)
         {
-            if (sourceName == "City")
+            if (sourceName == "EmployeeDetails")
             {
-                List<Address> details = new List<Address>();
-                details.Add(new Address() { City = "Colorado Springs", PostalCode = 1 });
-                details.Add(new Address() { City = "Chicago", PostalCode = 2 });
-                details.Add(new Address() { City = "Columbus", PostalCode = 3 });
-                details.Add(new Address() { City = "Portland", PostalCode = 4 });
-                details.Add(new Address() { City = "Paris", PostalCode = 5 });
-                details.Add(new Address() { City = "Las Vegas", PostalCode = 6 });         
-                details.Add(new Address() { City = "New York", PostalCode = 7 });
-                details.Add(new Address() { City = "Cincinnati", PostalCode = 8 });
-                details.Add(new Address() { City = "San Diego", PostalCode = 9 });
+                List<EmployeeInfo> details = new List<EmployeeInfo>();
+                details.Add(new EmployeeInfo() { ID = 1, Name =  "Eric"  });
+                details.Add(new EmployeeInfo() { ID = 2, Name = "James"  });
+                details.Add(new EmployeeInfo() { ID = 3, Name = "Jacob"  });
+                details.Add(new EmployeeInfo() { ID = 4, Name = "Lucas"  });
+                details.Add(new EmployeeInfo() { ID = 5, Name = "Mark"  });
+                details.Add(new EmployeeInfo() { ID = 6, Name = "Aldan"  });
+                details.Add(new EmployeeInfo() { ID = 7, Name = "Aldrin"  });
+                details.Add(new EmployeeInfo() { ID = 8, Name = "Alan"  });
+                details.Add(new EmployeeInfo() { ID = 9, Name = "Aaron"  });
 
                 return details;
             }
-            return new List<string>();
+        return new List<string>();
         }
     }
 
-    public class DataModel
+    public class ContactInfo
     {
         [Display(Name ="First Name")]
         public String FirstName { get; set; } 
-        public string City { get; set; }
+        public string EmployeeDetails { get; set; }
     }
 
-    public class Address
+    public class EmployeeInfo
     {
-        public int PostalCode { get; set; }
-        public string City { get; set; }
+        public int ID { get; set; }
+        public string Name { get; set; }
     }
+
 {% endhighlight %}
 {% endtabs %}
 
-`Image`
 
-#### AutoComplete editor modes
+`Image`
 
 The [DataFormAutoCompleteEditor]`Link` provides display the filtered suggestions.
 
@@ -850,19 +787,265 @@ The `AutoCompleteMode` property is used to choose the suggestion display mode in
 
 #### AutoComplete editor suggestion options
 
-The phenomenon of string comparison for filtering suggestions can be changed using the "StartsWith" and "Containswith" `Link` property. The default filtering strategy is “StartsWith”, and it is case insensitive. The available filtering modes are,
+The phenomenon of string comparison for filtering suggestions can be changed using the "StartsWith" and "Contains" `Link` property. The default filtering strategy is “StartsWith”, and it is case insensitive. The available filtering modes are,
 
 * StartsWith
 
-* ContainsWithCaseSensitive
+* Contains
 
 #### Filtering words that starts with the input text
 
 Displays all the matches that contain first character of the typed characters in items source of autocomplete editor. This strategy is case in-sensitive.
 
-#### Filtering words that contains with the input text
+{% tabs %}
+{% highlight MainPage.xaml.cs %}
+
+    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+
+    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+    {
+        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Country" && e.DataFormItem is DataFormAutoCompleteItem autoCompleteItem)
+        {
+            autoComplete.TextSearchMode = DataFormTextSearchMode.StartsWith;
+        }
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Filtering words that contains the input text
 
 Displays all the matches that contain the typed characters in items source of autocomplete editor. This strategy is case in-sensitive.
+
+{% tabs %}
+{% highlight MainPage.xaml.cs %}
+
+    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+
+    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+    {
+        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Country" && e.DataFormItem is DataFormAutoCompleteItem autoCompleteItem)
+        {
+            autoComplete.TextSearchMode = DataFormTextSearchMode.Contains;
+        }
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Setting the height for autocomplete list item 
+
+By default the autocomplete drop down list item height is `400d` , You can change the size for the drop down list item size by using `MaxDropDownHeight` property in the `DataFormItem`.
+
+{% tabs %}
+{% highlight MainPage.xaml.cs %}
+
+    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+
+    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+    {
+        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Country" && e.DataFormItem is DataFormAutoCompleteItem autoCompleteItem)
+        {
+            autoComplete.MaxDropDownHeight = 400;
+        }
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+
+## Picker editor
+
+In the picker editor, the [Picker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/picker?view=net-maui-7.0) will be loaded.
+
+`Image`
+
+### Customizing ItemsSource of Picker
+
+By default, the `ItemsSource` for picker is auto-generated for enum type and collection type properties. For other types, you can set the `ItemsSource` by using [IDataFormSourceProvider]`Link`.
+
+### Using IDataFormSourceProvider
+
+{% tabs %}
+{% highlight MainPage.xaml.cs %}
+
+    public string Country { get; set; }
+    
+    public class DataFormItemsSourceProvider : IDataFormSourceProvider
+    {
+         public object GetSource(string sourceName)
+        {
+            if (sourceName == "Country")
+            {
+                List<string> list = new List<string>()
+                {
+                    "India",
+                    "USA",
+                    "China",
+                    "Italy"
+                };
+                return list;
+            }
+            return new List<string>();
+        }
+    }
+    dataForm.ItemsSourceProvider = new DataFormItemsSourceProvider();
+    dataForm.RegisterEditor("Country", DataFormEditorType.Picker);
+
+{% endhighlight %}
+{% endtabs %}
+
+### Using event
+
+You can also set `ItemsSource` for picker editor by using the [ItemsSource]`Link` property in the [DataFormPickerItem]`Link`.
+
+{% tabs %}
+{% highlight MainPage.xaml.cs %}
+
+    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+
+    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+    {
+        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name" && e.DataFormItem is DataFormPickerItem pickerItem)
+        {
+            List<string> list = new Lisvt<string>()
+            {
+                "Home",
+                "Food",
+                "Utilities",
+                "Education"
+            };
+            pickerItem.ItemsSource = list;
+        }
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+### Loading complex type property values in picker
+
+You can display the complex type property values in picker editor by using the DisplayMemberPath and SelectedValuePath properties of DataFormPickerItem. You need to use `GenerateDataFormItem`event to set [DisplayMemberPath]`Link` and [SelectedValuePath]`Link` property value DataFormPickerItem for complex type property.
+
+N> Class cannot be directly set as data type for picker editor in this complex type scenario.
+
+{% tabs %}
+{% highlight MainPage.xaml.cs %}
+
+    dataForm.ItemsSourceProvider = new DataFormItemsSourceProvider();
+    dataForm.DataObject = new ContactModel();
+    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+    dataForm.RegisterEditor("EmployeeDetails", DataFormEditorType.Picker);
+ 
+    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+    {
+        if (e.DataFormItem != null && e.DataFormItem.FieldName == "EmployeeDetails" && e.DataFormItem is DataFormPickerItem pickerItem)
+        {   
+            pickerItem.DisplayMemberPath = "ID";
+            pickerItem.SelectedValuePath = "Name";
+        }
+    } 
+ 
+    public class DataFormItemsSourceProvider  : IDataFormSourceProvider
+    {
+        public object GetSource(string sourceName)
+        {
+            if (sourceName == "EmployeeDetails")
+            {
+                List<EmployeeInfo> details = new List<EmployeeInfo>();
+                details.Add(new EmployeeInfo() { ID = 1, Name =  "Eric"  });
+                details.Add(new EmployeeInfo() { ID = 2, Name = "James"  });
+                details.Add(new EmployeeInfo() { ID = 3, Name = "Jacob"  });
+                details.Add(new EmployeeInfo() { ID = 4, Name = "Lucas"  });
+                details.Add(new EmployeeInfo() { ID = 5, Name = "Mark"  });
+                details.Add(new EmployeeInfo() { ID = 6, Name = "Aldan"  });
+                details.Add(new EmployeeInfo() { ID = 7, Name = "Aldrin"  });
+                details.Add(new EmployeeInfo() { ID = 8, Name = "Alan"  });
+                details.Add(new EmployeeInfo() { ID = 9, Name = "Aaron"  });
+
+                return details;
+            }
+        return new List<string>();
+        }
+    }
+
+    public class ContactInfo
+    {
+        [Display(Name ="First Name")]
+        public String FirstName { get; set; } 
+        public string EmployeeDetails { get; set; }
+    }
+
+    public class EmployeeInfo
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+`Image`
+
+
+
+## RadioGroup editor
+
+In the [RadioGroup](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/radiobutton?view=net-maui-7.0) editor, the [RadioButton](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/radiobutton?view=net-maui-7.0) control is loaded.
+
+The [items]`Link` for [RadioButton](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/radiobutton?view=net-maui-7.0) is generated for `enum` and `List` data type properties. In order to add [RadioButton](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/radiobutton?view=net-maui-7.0) editor in the DataForm, you need to register editor as DataFormEditorType.RadioGroup for the required property by using the [RegisterEditor]`Link` method.
+
+**Support for enum data type**
+
+For `enum` data type property, [RadioButon](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/radiobutton?view=net-maui-7.0) [items]`Link` will be added based on specified property enum values.
+
+{% tabs %}
+{% highlight MainPage.xaml.cs %}
+
+    dataForm.RegisterEditor("Phone", DataFormEditorType.RadioGroup);
+
+    public Numbers Phone  { get; set; }
+
+    public enum Numbers
+    {
+	    Home,
+	    Work,
+	    Other
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+**Support for List data type**
+
+For `List` data type property, you have to set the `ItemsSource` by using the [IDataFormSourceProvider`Link`, based on that [RadioButton](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/radiobutton?view=net-maui-7.0) [items]`Link` will be added.
+
+{% tabs %}
+{% highlight MainPage.xaml.cs %}
+
+    dataForm.RegisterEditor("Phone", DataFormEditorType.RadioGroup);
+    dataForm.ItemsSourceProvider = new DataFormItemsSourceProvider();
+
+    public string Phone  { get; set; }
+
+    public class DataFormItemsSourceProvider : IDataFormSourceProvider
+    {
+         public object GetSource(string sourceName)
+        {
+		    if(sourceName == "Phone")
+		    {
+                List<string> list = new List<string>() {"Home", "Work", "Other"};
+                return list;
+		    }
+		    return new List<string>();
+        }
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+`Image`
+
+
 	
 ## Custom editor
 
@@ -881,6 +1064,11 @@ Views such as labels, buttons, and sliders can be loaded to custom editor. Here,
 
     public class NumericTextEditor : IDataFormEditor 
     { 
+        private Syncfusion.Maui.DataForm.SfDataForm dataForm;
+
+        private DataFormCustomItem? dataFormCustomItem;
+
+
         public NumericEditor(Syncfusion.Maui.DataForm.SfDataForm dataForm)
         {
             this.dataForm = dataForm;
@@ -889,11 +1077,6 @@ Views such as labels, buttons, and sliders can be loaded to custom editor. Here,
         public View CreateEditorView(DataFormItem dataFormItem) 
         { 
             Entry inputView = new Entry();
-            if (dataFormItem.FieldName == "CVV")
-            {
-                inputView.IsPassword = true;
-                inputView.MaxLength = 3;
-            }
             inputView.Keyboard = Keyboard.Numeric;
             inputView.Placeholder = dataFormItem.PlaceholderText;
             DataFormTextStyle textStyle = dataForm.EditorTextStyle;
@@ -958,4 +1141,6 @@ Views such as labels, buttons, and sliders can be loaded to custom editor. Here,
 {% endhighlight %}
 {% endtabs %}
 
-You should manually commit and validate the editor value of custom DataFormItem. Refer to this [link]`Link` to know more about custom editor. 
+If ValidationMode.Manual is used then update EditorValue property once value commit. This value will be used for DataFormValidateFormEventArgs.NewValues on manual validation
+
+Note: If custom validation is required, you can set error and valid messages using SfDataForm.ValidateProperty event.
