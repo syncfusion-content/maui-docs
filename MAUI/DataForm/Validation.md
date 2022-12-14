@@ -33,6 +33,8 @@ The String type property can be validated using [Required](https://docs.microso
 {% endhighlight %}
 {% endtabs %}
 
+Refer to this [link] to know more about data annotations in SfDataForm.
+
 #### Date range attribute
 
 You can validate the date time value using date range attribute.
@@ -116,9 +118,9 @@ You can determine whether the data form or property is valid or not by using the
 
         bool isValid = this.dataForm.Validate();
 
-        List<string> strings = new List<string>();
-        strings.Add("FirstName");
-        bool isPropertyValid = this.dataForm.Validate(strings);
+        List<string> propertyNames = new List<string>();
+        propertyNames.Add("FirstName");
+        bool isPropertyValid = this.dataForm.Validate(propertyNames);
 
 {% endhighlight %}
 {% endtabs %}
@@ -127,7 +129,7 @@ If the data form or property is valid, `true` will be returned. Or else `false` 
 
 ## Valid message
 
-If the values are correct, you can show the [ValidMessage]. As like error message, the valid message will also be displayed at the bottom of the editor.
+If the values are correct, you can show the [ValidMessage] as like error message, the valid message will also be displayed at the bottom of the editor.
 
 {% tabs %}
 {% highlight C# %}
