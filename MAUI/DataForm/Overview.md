@@ -9,11 +9,11 @@ documentation: ug
  
 # Overview of .NET MAUI DataForm (SfDataForm)
 
-The Syncfusion .NET MAUI DataForm (SfDataForm) control is used to create or edit data form such as data form such as login, reservation, contact, employee form and so, based on the business purpose. 
+The Syncfusion .NET MAUI DataForm (SfDataForm) control is used to create or edit data form such as login, reservation, contact, employee form and so, based on the business purpose. 
 
 ## Key features 
 
-* **Editors** : Support built-in editors such as text, password, multi-line, combo box, automcomplete, date, time, checkbox,switch and radio group editors the primitive data types sych as string, enumeration, DateTime and TimeSpan.
+* **Editors** : Support built-in editors such as text, password, multi-line, combo box, automcomplete, date, time, checkbox,switch and radio group editors the primitive data types such as string, enumeration, DateTime and TimeSpan.
 
 * **Custom editor** : Support to add custom editors.
 

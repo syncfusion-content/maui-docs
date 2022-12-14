@@ -177,8 +177,7 @@ The type of input editor generated for the data field depends on the type and at
 </tr>
 <tr>
 <td>
-{{'[DataFormTextItem]
-`Link`
+[DataFormTextItem]
 </td>
 <td>
 Default DataFormItem generated for the String type and the properties with [DataType(DataType.Text)].
@@ -192,8 +191,7 @@ Text
 </tr>
 <tr>
 <td>
-{{'[DataFormMultilineTextItem]
-`Link`
+[DataFormMultilineTextItem]
 </td>
 <td>
 Generated for string type property with [DataType(DataType.MultilineText)] attributes.
@@ -207,8 +205,7 @@ Multiline Text
 </tr>
 <tr>
 <td>
-{{'[DataFormPasswordTextItem]
-`Link`
+[DataFormPasswordTextItem]
 </td>
 <td>
 Generated for string type property with [DataType(DataType.Password)] attributes.
@@ -222,7 +219,7 @@ Password
 </tr>
 <tr>
 <td>
-{{'[DataFormCheckBoxItem]`Link`
+[DataFormCheckBoxItem]
 </td>
 <td>
 Generated for the Bool type property.
@@ -237,7 +234,7 @@ CheckBox
 </tr>
 <tr>
 <td>
-{{'[DataFormSwitchItem] `Link`
+[DataFormSwitchItem] 
 </td>
 <td>
 Generated for the Bool type property.
@@ -252,7 +249,7 @@ Switch
 </tr>
 <tr>
 <td>
-{{'[DataFormDateItem] `Link`
+[DataFormDateItem] 
 </td>
 <td>
 Generated for the DateTime, DateOnly, DateTimeOffset type properties.
@@ -268,8 +265,8 @@ DatePiker
 </tr>
 <tr>
 <td>
-{{'[DataFormTimeItem]
-`Link`
+[DataFormTimeItem]
+
 </td>
 <td>
 Generated for the TimeSpan, TimeOnly, DateTime, DateTimeOffset type properties.
@@ -284,7 +281,7 @@ TimePicker
 </tr>
 <tr>
 <td>
-{{'[DataFormPickerItem] `Link`
+[DataFormPickerItem] 
 </td>
 <td>
 Generated for the Enum type property.
@@ -299,7 +296,7 @@ Picker
 </tr>
 <tr>
 <td>
-{{'[DataFormAutoCompleteItem]`Link`
+[DataFormAutoCompleteItem]
 </td>
 <td>
 Generated for the Enum type property.
@@ -314,7 +311,7 @@ AutoComplete
 </tr>
 <tr>
 <td>
-{{'[DataFormComboBoxItem]`Link`
+[DataFormComboBoxItem]
 </td>
 <td>
 Generated for the Enum type property.
@@ -329,7 +326,7 @@ ComboBox
 </tr>
 <tr>
 <td>
-{{'[DataFormRadioGroupItem]`Link`
+[DataFormRadioGroupItem]
 </td>
 <td>
 Generated for the Enum type property.
