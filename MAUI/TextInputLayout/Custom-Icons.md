@@ -9,7 +9,7 @@ documentation: ug
 
 # Custom Icons in .NET MAUI Text Input Layout (SfTextInputLayout)
 
-Any custom icons can be added to the leading edge or the trailing edge of input view in the text input layout control. The events and commands related to the custom icons should be handled at the application level.
+Any custom icons can be added to the leading edge or the trailing edge of the input view in the text input layout control. The events and commands related to the custom icons should be handled at the application level.
 
 Unicode or font icons for the labels can be displayed as icons.
 
@@ -19,7 +19,7 @@ N> Refer to the following links to learn more about font icons:
 
 ## Leading view
 
-A label can be added as a leading icon for the input view by setting the `LeadingView` property. It can be positioned either inside or outside the container by setting the `LeadingViewPosition` property. By default, it is positioned `Outside`.
+A label can be added as a leading icon for the input view by setting the `LeadingView` property. It can be positioned either inside or outside the container by setting the `LeadingViewPosition` property. By default, it is positioned `Outside.`
 
 {% tabs %} 
 
@@ -33,7 +33,7 @@ A label can be added as a leading icon for the input view by setting the `Leadin
            Text="&#x1F5D3;">     
        </Label>
     </inputLayout:SfTextInputLayout.LeadingView>
- </inputLayout:SfTextInputLayout> 
+</inputLayout:SfTextInputLayout> 
 
 {% endhighlight %}
 
@@ -53,7 +53,7 @@ inputLayout.Content = new Entry();
 
 ## Trailing  view
 
-A label can be added as a trailing icon for the input view by setting the `TrailingView` property. It can be positioned either inside or outside  the container of input view by setting the `TrailingViewPosition` property. By default, it is positioned `Inside`.
+A label can be added as a trailing icon for the input view by setting the `TrailingView` property. It can be positioned either inside or outside the container of the input view by setting the `TrailingViewPosition` property. By default, it is positioned as `Inside.`
 
 {% tabs %}
 
@@ -67,7 +67,7 @@ A label can be added as a trailing icon for the input view by setting the `Trail
          Text="&#x1F5D3;">     
       </Label>
     </inputLayout:SfTextInputLayout.TrailingView>
- </inputLayout:SfTextInputLayout> 
+</inputLayout:SfTextInputLayout> 
 
 {% endhighlight %}
 
@@ -88,28 +88,28 @@ inputLayout.Content = new Entry();
 
 ## Leading and trailing view visibility customization
 
-The `ShowLeadingView` and `ShowTrailingView` properties in `SfTextInputLayout` can be used to control the visibility of the leading and trailing views respectively.
+The `ShowLeadingView` and `ShowTrailingView` properties in the `SfTextInputLayout` can be used to control the visibility of the leading and trailing views, respectively.
 
 {% tabs %}
 
 {% highlight xaml %} 
 
-  <inputLayout:SfTextInputLayout Hint="Birth date"
-                                 ContainerType="Outlined"
-                                 ShowLeadingView="False"
-                                 ShowTrailingView="False" >
-    <Entry />
-    <inputLayout:SfTextInputLayout.LeadingView>
-       <Label
-           Text="&#x1F5D3;">     
-       </Label>
-    </inputLayout:SfTextInputLayout.LeadingView>
-    <inputLayout:SfTextInputLayout.TrailingView>
+<inputLayout:SfTextInputLayout Hint="Birth date"
+                               ContainerType="Outlined"
+                               ShowLeadingView="False"
+                               ShowTrailingView="False" >
+   <Entry />
+   <inputLayout:SfTextInputLayout.LeadingView>
       <Label
          Text="&#x1F5D3;">     
       </Label>
-    </inputLayout:SfTextInputLayout.TrailingView>
- </inputLayout:SfTextInputLayout> 
+   </inputLayout:SfTextInputLayout.LeadingView>
+   <inputLayout:SfTextInputLayout.TrailingView>
+   <Label
+      Text="&#x1F5D3;">     
+   </Label>
+   </inputLayout:SfTextInputLayout.TrailingView>
+</inputLayout:SfTextInputLayout> 
 
 {% endhighlight %}
 

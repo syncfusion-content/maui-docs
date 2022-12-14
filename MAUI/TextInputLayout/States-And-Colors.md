@@ -1,7 +1,7 @@
 ---
 layout: post
-title: States and Colors in .NET MAUI Text Input Layout control | Syncfusion
-description: Learn here all about States and Colors support in Syncfusion .NET MAUI Text Input Layout (SfTextInputLayout) control and more.
+title: States and Colors the .NET MAUI Text Input Layout control | Syncfusion
+description: Learn here all about States and Colors support in the Syncfusion .NET MAUI Text Input Layout (SfTextInputLayout) control and more.
 platform: maui
 control: SfTextInputLayout
 documentation: ug
@@ -9,14 +9,14 @@ documentation: ug
 
 # States and Colors in .NET MAUI Text Input Layout (SfTextInputLayout)
 
-Use the visual state manager to change the `Stroke` properties based on the visual states set from code. The applicable visual states are normal, focused, and error.
+Use the visual state manager to change the `Stroke` properties based on the visual states set from the code. The applicable visual states are normal, focused, and error.
 
-Based on the states, the colors will be applied to the floated hint label and borders. So, when the input view is in focused state, the focused state `Stroke` will be applied; it is similar to other states also. The current stroke can be obtained from the `CurrentActiveColor` property.
+Based on the states, the colors will be applied to the floated hint label and borders. So, when the input view is in a focused state, the focused state `Stroke` will be applied; it is similar to other states also. The current stroke can be obtained from the `CurrentActiveColor` property.
 
-N> The error color will not be set to `CurrentActiveColor` when `HasError` property is set to `true`.
+N> The error color will not be set to `CurrentActiveColor` when the `HasError` property is set to `true.`
 
 ## Stroke
-The `Stroke` property value will be applied to the hint label and border of SfTextInputLayout. 
+The `Stroke` property value will be applied to the hint label and border of the SfTextInputLayout.
 
 I> Cursor color of the input view will be same as the `Accent` color of the application in each platform.
 
@@ -102,7 +102,7 @@ inputLayout.Style = style;
 
 ## Disabled state
 
-The text input layout is disabled by setting the `IsEnabled` property to `false`. The color of the container and other UI elements will also be changed to the disabled state, but its color cannot be customized.
+The text input layout is disabled by setting the `IsEnabled` property to `false.` The color of the container and other UI elements will also be changed to the disabled state, but its color cannot be customized.
 
 {% tabs %} 
 
@@ -130,7 +130,7 @@ inputLayout.Content = new Entry();
 
 
 ## Container color
-The color of the container can be customized by setting the `ContainerBackgroundColor` property. It is applicable when the `ContainerType` property is set to `Filled` and `Outlined`.
+The color of the container can be customized by setting the `ContainerBackgroundColor` property. It is applicable when the `ContainerType` property is set to `Filled` and `Outlined.`
 
 ### Filled
 
@@ -199,7 +199,7 @@ inputLayout.Content = new Entry();
 
 ## Customizing the text color of label
 
-You can customize the text color of the `hint` label, counter label, `helper` label and `error` label using the `TextColor` property of the `LabelStyle`.
+You can customize the text color of the `hint` label, `helper` label, and `error` label using the `TextColor` property of the `LabelStyle`.
 
 {% tabs %} 
 
@@ -229,17 +229,17 @@ You can customize the text color of the `hint` label, counter label, `helper` la
 
 {% highlight C# %} 
 
-    SfTextInputLayout inputLayout = new SfTextInputLayout();
-    inputLayout.Hint = "Name";
-    inputLayout.ContainerType = ContainerType.Outlined;
-    inputLayout.HelperText = "Enter your name";
-    inputLayout.ErrorColor = Color.FromHex("#B00020");
-    inputLayout.ErrorText = "Invalid text";
-    inputLayout.Content = new Entry();
+SfTextInputLayout inputLayout = new SfTextInputLayout();
+inputLayout.Hint = "Name";
+inputLayout.ContainerType = ContainerType.Outlined;
+inputLayout.HelperText = "Enter your name";
+inputLayout.ErrorColor = Color.FromHex("#B00020");
+inputLayout.ErrorText = "Invalid text";
+inputLayout.Content = new Entry();
 
-    inputLayout.HintLabelStyle = new LabelStyle() { Color = Color.Green };
-    inputLayout.HelperLabelStyle = new LabelStyle() { Color = Color.Blue };
-    inputLayout.ErrorLabelStyle = new LabelStyle() { Color = Color.Maroon };
+inputLayout.HintLabelStyle = new LabelStyle() { Color = Color.Green };
+inputLayout.HelperLabelStyle = new LabelStyle() { Color = Color.Blue };
+inputLayout.ErrorLabelStyle = new LabelStyle() { Color = Color.Maroon };
 
 {% endhighlight %}
 

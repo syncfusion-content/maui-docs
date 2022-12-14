@@ -17,7 +17,7 @@ This section explains the steps required to work with the `SfTextInputLayout` co
 
 ## Adding .NET MAUI Text Input Layout reference
 
-The Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add `.NET MAUI Text Input Layout` to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and then install it.
+The Syncfusion .NET MAUI controls are available in the [Nuget.org](https://www.nuget.org/). To add `.NET MAUI Text Input Layout` to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and then install it.
 
 ## Handler registration 
 
@@ -58,7 +58,7 @@ namespace TextInputLayoutSample
 
 ## Adding a namespace
 
-Add the following namespace to add `.NET MAUI Text Input Layout.
+Add the following namespace to add `.NET MAUI Text Input Layout.`
 
 {% tabs %}
 
@@ -100,7 +100,7 @@ inputLayout.Content = new Entry();
 {% endtabs %}
 
 ### Adding hint
-Floating label for the text input layout can be added by setting the `Hint` property. Visibility of the hint can be collapsed by setting the `ShowHint` property to `false`. By default, this property is set to `true`.
+Floating label for the text input layout can be added by setting the `Hint` property. Visibility of the hint can be collapsed by setting the `ShowHint` property to `false.` By default, this property is set to `true.`
 
 {% tabs %} 
 
@@ -122,15 +122,15 @@ inputLayout.Content = new Entry();
 
 {% endtabs %}
 
-When focusing the input view, the hint label will be moved to the top position; it will be returned to the original position when proceeding further (on unfocused) without entering any value.
+When focusing on the input view, the hint label will be moved to the top position; it will be returned to the original position when proceeding further (on unfocused) without entering any value.
 
-Run the project, and check if you get following output to make sure that the project has been configured properly to add the text input layout control.
+Run the project, and check if you get the following output to ensure that the project has been appropriately configured to add the text input layout control.
 
 ![Adding hint](images/GettingStarted/GettingStarted.png)
 
 ## Enabling password visibility toggle
 
-The password visibility toggle is used to show or hide the visibility of characters in the input view added to the control. You can enable this toggle by setting the `EnablePasswordVisibilityToggle` property to `true`.
+The password visibility toggle is used to show or hide the visibility of characters in the input view added to the control. You can enable this toggle by setting the `EnablePasswordVisibilityToggle` property to `true.`
 
 {% tabs %} 
 

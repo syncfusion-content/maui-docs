@@ -9,7 +9,7 @@ documentation: ug
 
 # Fixed Hint Position in .NET MAUI Text Input Layout (SfTextInputLayout)
 
-Hint label for the text input layout is fixed always at the top position. This helps users make the hint label floating even when the input view is not focused. It can be enabled by setting the `IsHintAlwaysFloated` property.
+Hint label for the text input layout is always fixed at the top position. This helps users make the hint label float even when the input view is not focused. It can be enabled by setting the `IsHintAlwaysFloated` property.
 
 >**NOTE**
 The default value of the `IsHintAlwaysFloated` is `false`.

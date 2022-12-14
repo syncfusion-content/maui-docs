@@ -9,13 +9,13 @@ documentation: ug
 
 # Font Customization  in .NET MAUI Text Input Layout (SfTextInputLayout)
 
-You can customize the appearance (size, attributes, and family) of font by setting the FontFamily, FontSize, and FontAttributes properties of the LabelStyle property.
+You can customize the appearance (size, attributes, and family) of the font by setting the FontFamily, FontSize, and FontAttributes properties of the LabelStyle property.
 
-Refer to this [documentation](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/fonts) to configure the custom fonts in .NET MAUI.
+Refer to this [documentation](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/fonts) to configure the custom fonts in the .NET MAUI.
 
 ## Hint
 
-You can customize the font of `hint` label by setting the FontFamily, FontSize, and FontAttributes, properties of HintLabelStyle in SfTextInputLayout.
+You can customize the font of the `hint` label by setting the FontFamily, FontSize, and FontAttributes, properties of HintLabelStyle in the SfTextInputLayout.
 
 {% tabs %} 
 
@@ -49,7 +49,7 @@ inputLayout.Content = new Entry();
 
 ## Helper text
 
-You can customize the font of `helper text` label by setting the FontFamily, FontSize, and FontAttributes properties of HelperLabelStyle in SfTextInputLayout.
+You can customize the font of the `helper text` label by setting the FontFamily, FontSize, and FontAttributes properties of HelperLabelStyle in the SfTextInputLayout.
 
 {% tabs %} 
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Supported Input Views in .NET MAUI Text Input Layout | Syncfusion
-description: Learn here all about Supported Input Views support in Syncfusion .NET MAUI Text Input Layout (SfTextInputLayout) control and more.
+description: Learn here all about Supported Input Views support in the Syncfusion .NET MAUI Text Input Layout (SfTextInputLayout) control and more.
 platform: maui
 control: SfTextInputLayout
 documentation: ug
@@ -43,7 +43,7 @@ inputLayout.Content = new Entry();
 ## Editor
 
 
-To enter multi-line text input, add [`Editor`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/editor), and then set the `AutoSize` property to `TextChanges`.
+To enter multi-line text input, add [`Editor`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/editor), then set the `AutoSize` property to `TextChanges`.
 
 
 {% tabs %} 

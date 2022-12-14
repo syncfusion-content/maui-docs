@@ -13,7 +13,7 @@ Assistive labels provide additional information about text entered in the input 
 
 ## Helper text
 
-Helper text conveys additional guidance about the input field such as how it will be used. It can be set using the `HelperText` property.
+Helper text conveys additional guidance about the input field, such as how it will be used. It can be set using the `HelperText` property.
 
 {% tabs %} 
 
@@ -43,7 +43,7 @@ The visibility of the helper text can be disabled by setting the `ShowHelperText
 
 ## Error message
 
-When the text input is not accepted, an error message will display instructions to fix it. Error messages will be displayed below the input line till entering the correct text. It can be set using the `ErrorText` property, but it will be displayed only when the `HasError` property is set to `true`.
+When the text input is not accepted, an error message will display instructions to fix it. Error messages will be displayed below the input line till entering the correct text. It can be set using the `ErrorText` property, but it will be displayed only when the `HasError` property is set to `true.`
 
 {% tabs %} 
 

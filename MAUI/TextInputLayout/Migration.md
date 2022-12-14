@@ -7,9 +7,9 @@ control: SfTextInputLayout
 documentation: ug
 ---  
 
-# Migrating from Xamarin TextInputLayout to .NET MAUI TextInputLayout 
+# Migrating from Xamarin TextInputLayout to .NET MAUI TextInputLayout.
 
-To migrate easier from Xamarin SfTextInputLayout to [.NET MAUI SfTextInputLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfTextInputLayout.html), we kept most of the APIs from Xamarin SfTextInputLayout in MAUI SfTextInputLayout. However, to maintain the consistency of API naming in MAUI SfTextInputLayout, we renamed some of the APIs. The APIs changed in MAUI SfTextInputLayout from Xamarin SfTextInputLayout are detailed as follows:
+To migrate easier from Xamarin SfTextInputLayout to [.NET MAUI SfTextInputLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfTextInputLayout.html), we kept most of the APIs from Xamarin SfTextInputLayout in MAUI SfTextInputLayout. However, to maintain the consistency of API naming in MAUI SfTextInputLayout, we renamed some of the APIs. The APIs changed in MAUI SfTextInputLayout from Xamarin SfTextInputLayout as detailed in the following:
 
 ## Namespaces 
 
@@ -32,11 +32,11 @@ To migrate easier from Xamarin SfTextInputLayout to [.NET MAUI SfTextInputLayout
 <tr>
 <td> {{'[FocusedBorderWidth]'| markdownify }} </td>
 <td> {{'[FocusedStrokeThickness]'| markdownify }}</td>
-<td>Gets or sets as value to customize the stroke thickness in focused state, it is applicable for the bottom line and outline border when setting the container type as filled and outlined respectively.</td></tr>
+<td>Gets or sets a value to customize the stroke thickness in a focused state. It is applicable for the bottom line and outline border when setting the container type as filled and outlined, respectively.</td></tr>
 <tr>
 <td> {{'[UnfocusedBorderWidth]'| markdownify }}</td>
 <td> {{'[UnfocusedStrokeThickness]'| markdownify }}</td>
-<td>Gets or sets as value to customize the stroke thickness in unfocused state, it is applicable for the bottom line and outline border when setting the container type as filled and outlined respectively.</td></tr>
+<td>Gets or sets a value to customize the stroke thickness in an unfocused state. It is applicable for the bottom line and outline border when setting the container type as filled and outlined, respectively.</td></tr>
 <tr>
 <td>{{'[FocusedColor]'| markdownify }}<br/> {{'[UnfocusedColor]'| markdownify }}<br/>{{'[ErrorColor]'| markdownify }}</td>
 <td>{{'[Stroke]'| markdownify }}</td>
@@ -55,5 +55,5 @@ To migrate easier from Xamarin SfTextInputLayout to [.NET MAUI SfTextInputLayout
 <td>{{'[LabelStyle]'| markdownify }} </td>
 <td>{{'[Color]'| markdownify }} </td>
 <td> {{'[TextColor]'| markdownify }}</td>
-<td>Gets or sets the text color of SfTextInputLayout controls label.</td></tr>
+<td>Gets or sets the text color of the SfTextInputLayout controls label.</td></tr>
 </table>
