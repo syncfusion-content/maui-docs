@@ -7,7 +7,7 @@ control: SfDataForm
 documentation: ug
 ---
 
-# Grouping editors
+# Grouping editors in .NET MAUI DataForm
 
 The .NET MAUI DataForm support to group the editors which are relevant to each other. You can expand or collapse the group by tapping the group item.
 
