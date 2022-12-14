@@ -7,7 +7,7 @@ control: SfDataForm
 documentation: ug
 ---
 
-# Layout in Xamarin DataForm (SfDataForm)
+# Layout in .NET MAUI DataForm (SfDataForm)
 
 ## Overview
 
@@ -23,10 +23,10 @@ When the label position is Top, the linear layout is shown as follows:
 
 ## Grid layout support
 
-By default, the data form arranges one data field per row. It is possible to have more than one data fields per row by setting the [ColumnCount] property which provides grid like layout for the data form. The order of data form field can also be changed in a row using [ItemsOrderInRow]
+By default, the data form arranges one data field per row. It is possible to have more than one data fields per row by setting the [ColumnCount] property which provides grid like layout for the data form. The column order of data form field in a row can also be changed using [ItemsOrderInRow].
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 <ContentPage 
 ...
              xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
@@ -39,7 +39,7 @@ By default, the data form arranges one data field per row. It is possible to hav
 
 </ContentPage>
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 
 this.dataForm.ColumnCount = 2;
 
@@ -59,7 +59,7 @@ The label can be hided by defining the [DataFormDisplayOptions] attribute or by 
 #### Using attributes
 
 {% tabs %}
-{% highlight c# %}
+{% highlight C# %}
 private double? percentage;
 
     [DataFormDisplayOptions(ShowLabel = false)]
@@ -71,7 +71,7 @@ private double? percentage;
 #### Using event
 
 {% tabs %}
-{% highlight c# %}
+{% highlight C# %}
 
  this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
@@ -95,7 +95,7 @@ Label can be positioned either top or left side of the editor. By using the [Dat
 By default, the label will be positioned at left side of the editor.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 <ContentPage 
 ...
              xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
@@ -109,7 +109,7 @@ By default, the label will be positioned at left side of the editor.
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 
 this.dataForm.DefaultLayoutSettings.LabelPosition = DataFormLabelPosition.Top;
 
@@ -121,7 +121,7 @@ this.dataForm.DefaultLayoutSettings.LabelPosition = DataFormLabelPosition.Top;
 The label position of particular editor can be changed by using the [DataFormDefaultLayoutSettings.LabelPosition] property in `DataFormItem`, and it will be handled in the `GenerateDataFormItem` event.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 <ContentPage 
 ...
              xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
@@ -133,7 +133,7 @@ The label position of particular editor can be changed by using the [DataFormDef
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
@@ -159,7 +159,7 @@ Image can be loaded instead of label  by using [LeadingLabelIcon] property of `D
 ## Using event
 
 {% tabs %}
-{% highlight c# %}
+{% highlight C# %}
 
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
@@ -186,7 +186,7 @@ The order of the data form editors can be changed by using attributes or by hand
 The data form editors order can be changed by using the `RowOrder` property in [DataFormDisplayOptionsAttribute] attribute.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight C# %}
 
     [DataFormDisplayOptions(RowOrder = 1)]
     public string Adress { get; set; }
@@ -202,7 +202,7 @@ The data form editors order can be changed by using the `RowOrder` property in [
 The data form editors order can be changed by using the [RowOrder] property in the `DataFormItem`.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight C# %}
 
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
@@ -230,7 +230,7 @@ The order of the editors in grid row can be changed within a row by using attrib
 The order of the editors in grid rows can be changed by using the `ItemsOrderInRow` property in [DataFormDisplayOptionsAttribute] attribute. This is applicable only for Grid layout.
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 
 this.dataForm.ColumnCount = 2;
 
@@ -238,7 +238,7 @@ this.dataForm.ColumnCount = 2;
 {% endtabs %}
 
 {% tabs %}
-{% highlight c# %}
+{% highlight C# %}
 
     [DataFormDisplayOptions(RowOrder = 0, ItemsOrderInRow = 1)]
     public string LastName { get; set; }
@@ -254,7 +254,7 @@ this.dataForm.ColumnCount = 2;
 The order of the editors in grid rows can be changed by using the [ItemsOrderInRow] property in the `DataFormItem`.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight C# %}
 
 this.dataForm.ColumnCount = 2;
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
@@ -290,7 +290,7 @@ Additionally, you can specify a defined width for the editor and label, such as 
 
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 <ContentPage 
 ...
              xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
@@ -304,10 +304,16 @@ Additionally, you can specify a defined width for the editor and label, such as 
     </dataForm:SfDataForm>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 
-    this.dataForm.DefaultLayoutSettings.LabelWidth = 300;
-    this.dataForm.DefaultLayoutSettings.EditorWidth = 400;
+        this.dataForm.DefaultLayoutSettings.LabelWidth = new DataFormItemLength(300, DataFormItemLengthUnitType.Absolute);
+        this.dataForm.DefaultLayoutSettings.LabelWidth = new DataFormItemLength(400, DataFormItemLengthUnitType.Absolute);
+
+{% endhighlight %}
+{% highlight C# %}
+
+        this.dataForm.DefaultLayoutSettings.LabelWidth = new DataFormItemLength(0.3, DataFormItemLengthUnitType.Star);
+        this.dataForm.DefaultLayoutSettings.LabelWidth = new DataFormItemLength(0.7, DataFormItemLengthUnitType.Star);
 
 {% endhighlight %}
 {% endtabs %}
@@ -327,9 +333,7 @@ Row height and column width can be increased by defining the `DataFormDisplayOpt
 Row height can be increased by using the [RowSpan] property in the`DataFormDisplayOptions` attribute.
 
 {% tabs %}
-{% highlight c# %}
-private string firstName;
-[DisplayOptions(RowSpan = 2)]
+{% highlight C# %}
 
     [DataFormDisplayOptions(RowSpan = 2)]
     public string Name { get; set; }
@@ -342,7 +346,7 @@ private string firstName;
 The row height of each `DataFormItem` can also be increased by using the [RowSpan] property and it will be handled in the `GenerateDataFormItem` event.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight C# %}
 
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
@@ -369,12 +373,12 @@ Here, `Name` field’s row height is increased.
 When the grid layout is used, the column width can be increased by using the [ColumnSpan] property in the `DataFormDisplayOptions` attribute.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight C# %}
 
 this.dataForm.ColumnCount = 2;
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight C# %}
 
     [DataFormDisplayOptions(ColumnSpan = 2)]
     public string Name { get; set; }
@@ -387,7 +391,7 @@ this.dataForm.ColumnCount = 2;
 When the grid layout is used, you can increase the column width of each `DataFormItem` using the [ColumnSpan] property and it will be handled in the `GenerateDataFormItem` event.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight C# %}
 
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
@@ -410,7 +414,7 @@ this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 The data form editor visibility can be changed at run time by using the [IsVisible] of `DataFormItem`.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight C# %}
 
     DataFormItem dataFormItem = this.dataForm.GetDataFormItem("Name");
     if (dataFormItem != null)
