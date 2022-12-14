@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Data annotations in Maui DataForm control | Syncfusion
-description: Learn here all about Data annotations support in Syncfusion Maui DataForm (SfDataForm) control and more.
-platform: Maui
+title: Data annotations in .NET MAUI DataForm(SfDataForm) control | Syncfusion
+description: Learn here all about Data annotations support in Syncfusion Maui DataForm (SfDataForm) control to handle the data.
+platform: maui
 control: SfDataForm
 documentation: UG
 ---
 
-# Data annotations in Maui DataForm (SfDataForm)
+# Data annotations in .NET MAUI DataForm (SfDataForm)
 
-The data form supports the following attribute, and these attributes can be accessible using `System.ComponentModel.DataAnnotation` assembly.
+The data form supports the following attribute to handle the data, and these attributes can be accessible using `System.ComponentModel.DataAnnotation` assembly.
 
 ## Display attribute
 
@@ -76,7 +76,86 @@ Specifies the order of field in the data form. Refer to `Link` for more details.
 </tr>
 </table>
 
-## Validation attributes
+{% tabs %}
+{% highlight Name attribute}
+
+    [Display(Name= "First Name")]
+    public string FirstName { get; set; }
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight GroupName attribute}
+
+    [Display(GroupName= "Address")]
+    public string DoorNO { get; set; }
+
+    [Display(GroupName = "Address")]
+    public string Street { get; set; }
+
+    [Display(GroupName = "Address")]
+    public string City { get; set; }
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight ShortName attribute}
+
+    [Display(ShortName= "First Name")]
+    public string Name { get; set; }
+
+    [Display(AutoGenerateField =false)]
+    public string Password { get; set; }
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight AutoGenerateField attribute}
+
+    [Display(AutoGenerateField =false)]
+    public string Name { get; set; }
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight ResourceType attribute}
+
+   -----------------------
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight Prompt attribute}
+
+    [Display(Prompt = "Enter your name")]
+    public string Name { get; set; }
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight Order attribute}
+
+    [Display(Order =2)]
+    public string MiddleName { get; set; }
+
+    [Display(Order =1)]
+    public string LastName { get; set; }
+
+    [Display(Order =0)]
+    public string FirstName { get; set; }
+
+{% endhighlight %}
+{% endtabs %}
+
+
+
+## Validation attribute
 
 <table>
 <tr>
@@ -89,7 +168,7 @@ Details
 </tr>
 <tr>
 <td>
-MinLength
+{{'[MinLength](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.minlengthattribute?view=net-7.0)'| markdownify }}
 </td>
 <td>
 Specifies the required minimum length. Refer to `Link` for more details.
@@ -97,7 +176,7 @@ Specifies the required minimum length. Refer to `Link` for more details.
 </tr>
 <tr>
 <td>
-MaxLength
+{{'[MaxLength](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.maxlengthattribute?view=net-7.0)'| markdownify }}
 
 </td>
 <td>
@@ -106,8 +185,7 @@ Specifies the required maximum length. Refer to `Link` for more details.
 </tr>
 <tr>
 <td>
-Required
-
+{{'[Required](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.requiredattribute?view=net-7.0)'| markdownify }}
 </td>
 <td>
 Specifies the required data field value. Refer to `Link` for more details.
@@ -115,13 +193,49 @@ Specifies the required data field value. Refer to `Link` for more details.
 </tr>
 <tr>
 <td>
-StringLength
+{{'[StringLength](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.stringlengthattribute?view=net-7.0)'| markdownify }}
 </td>
 <td>
 Specifies the required string length. Refer to `Link` for more details.
 </td>
 </tr>
 </table>
+
+{% tabs %}
+{% highlight MinLength attribute}
+
+   [MinLength(5,ErrorMessage ="Password length must be greater than 5 characters")]
+    public string Password { get; set; }
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight MaxLength attribute}
+
+    [MaxLength(20,ErrorMessage ="Maximum password length should be less than 20")]
+    public string Password { get; set; }
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight Required attribute}
+
+    [Required(AllowEmptyStrings =false, ErrorMessage ="Name is required")]
+    public string Name { get; set; }
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight StringLength attribute}
+
+    [StringLength(20,ErrorMessage ="Name should not exceed 15 characters")]
+    public string Name { get; set; }
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Bindable attribute
 
@@ -147,6 +261,15 @@ Supported data types are Text, MultilineText, Date, DateTime and Time.
 
 Refer to `Link` for more details.
 
+{% tabs %}
+{% highlight DataType attribute}
+
+    [DataType(DataType.MultilineText)]
+    public string Address { get; set; }
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Custom attribute
 The data form supports the following custom attribute, and these attributes can be accessible using `Syncfusion.Maui.DataForm`.
 
@@ -163,7 +286,7 @@ Details
 </tr>
 <tr>
 <td>
-{{'[RowSpan] `Link`
+[RowSpan]
 </td>
 <td>
 Specifies the row span for the data form item. Refer to `Link` for more details.
@@ -171,7 +294,7 @@ Specifies the row span for the data form item. Refer to `Link` for more details.
 </tr>
 <tr>
 <td>
-{{'[ColumnSpan] `Link`
+[ColumnSpan]
 </td>
 <td>
 Specifies the column span for the data form item. Refer to `Link` for more details.
@@ -179,7 +302,7 @@ Specifies the column span for the data form item. Refer to `Link` for more detai
 </tr>
 <tr>
 <td>
-{{'[ValidMessage] `Link`
+[ValidMessage]
 </td>
 <td>
 Specifies positive message to be shown when validation is passed. Refer to `Link` for more details.
@@ -187,7 +310,7 @@ Specifies positive message to be shown when validation is passed. Refer to `Link
 </tr>
 <tr>
 <td>
-{{'[ShowLabel] `Link`
+[ShowLabel]
 </td>
 <td>
 Specifies whether the label should be visible or not. Refer to `Link` for more details.
@@ -195,13 +318,61 @@ Specifies whether the label should be visible or not. Refer to `Link` for more d
 </tr>
 <tr>
 <td>
-{{'[ItemsOrderInRow] `Link`
+[ItemsOrderInRow]
 </td>
 <td>
 Specifies the ItemsOrderInRow property to display multiple editors in a single row. Two items with the same RowOrder property value are placed in this row according to their ItemOrderInRow property values.
 </td>
 </tr>
 </table>
+
+{% tabs %}
+{% highlight RowSpan attribute}
+
+    [DataFormDisplayOptions(RowSpan =2)]
+    public string Address { get; set; }
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight ColumnSpan attribute}
+
+    [DataFormDisplayOptions(ColumnSpan =2)]
+    public string Name { get; set; }    
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight ValidMessage attribute}
+
+    [StringLength(20, ErrorMessage = "Value should not empty")]
+    [DataFormDisplayOptions(ValidMessage = "Text length is enough")]
+    public string Name { get; set; }
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight ShowLabel attribute}
+
+    [DataFormDisplayOptions(ShowLabel = false)]
+    public string City { get; set; }
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight ItemsOrderInRow attribute}
+
+    dataForm.columnCount = 3;
+    
+    [DataFormDisplayOptions(ItemsOrderInRow =2)]
+    public string Address { get; set; }
+
+{% endhighlight %}
+{% endtabs %}
 
 ### DataFormValueConverter attribute
 
@@ -216,13 +387,25 @@ Details
 </tr>
 <tr>
 <td>
-{{'[DataFormValueConverterType] `Link`
+[DataFormValueConverterType]
 </td>
 <td>
 Specifies the Converter type which converts the original value in different format or as different value. Refer to here for more details.
 </td>
 </tr>
 </table>
+
+{% tabs %}
+{% highlight  attribute}
+
+    [DataFormValueConverter(typeof(StringToStringConverter))]
+    public string Name { get; set; }
+
+    [DataFormDateRange(DisplayFormat="yyyy/mm/dd"  , MaximumDate ="2022/07/07")]
+    public DateTime Date { get; set; }
+
+{% endhighlight %}
+{% endtabs %}
 
 ### DateFormDateRange attribute
 
@@ -237,7 +420,7 @@ Details
 </tr>
 <tr>
 <td>
-{{'[MaximumDate] `Link`
+[MaximumDate] 
 </td>
 <td>
 Specifies the required maximum date.
@@ -245,7 +428,7 @@ Specifies the required maximum date.
 </tr>
 <tr>
 <td>
-{{'[MinimumDate] `Link`
+[MinimumDate] 
 </td>
 <td>
 Specifies the required minimum date.
@@ -253,12 +436,40 @@ Specifies the required minimum date.
 </tr>
 <tr>
 <td>
-{{'[DisplayFormat] ``Link
+[DisplayFormat]
 </td>
 <td>
 Specifies the required date display format.
 </td>
 </tr>
 </table>
+
+{% tabs %}
+{% highlight  attribute}
+
+    [DataFormDateRange(DisplayFormat="yyyy/mm/dd")]
+    public DateTime Date { get; set; }
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight MaximumDate attribute}
+
+    [DataFormDateRange(MaximumDate ="2022/07/07")]
+    public DateTime Date { get; set; }
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight MinimumDate attribute}
+
+    [DataFormDateRange( MinimumDate ="2022/01/01")]
+    public DateTime Date { get; set; }
+
+{% endhighlight %}
+{% endtabs %}
+
 
 Refer to `Here Link` for more details.
