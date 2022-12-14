@@ -163,7 +163,7 @@ this.dataForm.ValidateForm += this.OnDataFormValidateForm;
 
 ## Validate the specific editor
 
-Allows you to validate specific editor in the data form.
+[ValidateProperty] event allows you to validate specific editor in the data form. You can set `Isvalid`, `ErrorMessage` and `ValidMessage` of [DataFormValidatePropertyEventArgs].
 
 {% endhighlight %}
 {% highlight C# %}
