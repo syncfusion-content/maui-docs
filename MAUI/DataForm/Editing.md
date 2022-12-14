@@ -13,7 +13,7 @@ The data form commits the data and user input in order to update the value in th
 
 ## Commit mode
 
-The [CommitMode] determines when the value should be committed to the data object.
+The [CommitMode] determines when the value should be committed to the underlying data object to allow users commit only correct values.
 
 The supported commit modes are as follows:
 
@@ -23,7 +23,7 @@ The supported commit modes are as follows:
 
 #### LostFocus
 
-If the commit mode is LostFocus, the value is committed when the editor lost its focus. By default DataForm [CommitMode] is `LostFocus`.
+If the commit mode is `LostFocus`, the value is committed when the editor lost its focus. By default DataForm [CommitMode] is `LostFocus`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -43,7 +43,7 @@ this.dataForm.CommitMode = DataFormCommitMode.LostFocus;
 
 #### PropertyChanged
 
-If the commit mode is PropertyChanged, the value will be committed immediately when it is changed.
+If the commit mode is `PropertyChanged`, the value will be committed immediately when it is changed.
 
 {% tabs %}
 {% highlight XAML %}
@@ -63,7 +63,7 @@ this.dataForm.CommitMode = DataFormCommitMode.PropertyChanged;
 
 #### Manual
 
-If the commit mode is Manual, the value should be committed manually by calling the [SfDataForm.Commit] method.
+If the commit mode is `Manual`, the value should be committed manually by calling the [SfDataForm.Commit] method.
 
 {% tabs %}
 {% highlight XAML %}
@@ -132,7 +132,7 @@ Here, the editor will display the original value as `DateTime`. While committing
 
 ## Read only mode
 
-DataForm can be disabled by setting the [IsReadOnly] property of the data form.
+`DataForm` can be disabled by setting the [IsReadOnly] property of the data form.
 
 {% tabs %}
 {% highlight XAML %}
