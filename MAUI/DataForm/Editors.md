@@ -50,7 +50,7 @@ The String type property and property with
 [DataType(DataType.Password)] attribute.
 </td>
 <td>
-{{'[Entry]((https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry?view=net-maui-7.0)'| markdownify }}
+{{'[Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry?view=net-maui-7.0)'| markdownify }}
 </td>
 </tr>
 <tr>
