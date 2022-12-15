@@ -25,7 +25,7 @@ this.Calendar.DisplayDate = DateTime.Now.AddMonths(2).Date;
 {% endhighlight %}
 {% endtabs %}
 
-![Displaydate calendar](images/dateNavigation/display-date.png)
+![display-date-in-maui-calendar](images/date-navigation/display-date-in-maui-calendar.png)
 
 ## Programmatic view navigation
 Allows you to navigate through the views by programmatically in the calendar widget by using the [view](https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/CalendarController/view.html) property of [CalendarController](https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/CalendarController-class.html).
@@ -43,7 +43,7 @@ this.Calendar.View = CalendarView.Month;
 {% endhighlight %}
 {% endtabs %}
 
-![view navigation-maui-calendar](images/views/month-view.png)
+![monthview-in-maui-calendar](images/date-navigation/monthview-in-maui-calendar.png)
 
 ## Allow view navigation
 Allows you to navigate by using the [allowViewNavigation](https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/CalendarController/allowViewNavigation.html)  property through tap interaction on the cell or header. By using this property you can able to restrict the view navigation and allow you to select the cells in the Year, Decade and Century views.
@@ -122,7 +122,7 @@ this.Calendar.NavigationDirection = CalendarNavigationDirection.Horizontal;
 {% endhighlight %}
 {% endtabs %}
 
-![horizontal-navigation-direction-maui-calendar](images/views/horizontal-navigation-direction.png)
+![horizontal-navigation-direction-in-maui-calendar](images/date-navigation/horizontal-navigation-direction-in-maui-calendar.png)
 
 ## Show navigation arrow
 By using the [showNavigationArrow](https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/SfCalendar/shownavigationArrow.html) property of the `Calendar` you can navigate to the next or previous views of the calendar without swiping. By default, the value of showNavigationArrow is `true`.
@@ -140,4 +140,4 @@ this.Calendar.HeaderView.ShowNavigationArrows = false;
 {% endhighlight %}
 {% endtabs %}
 
-![show-navigation-arrow-maui-calendar](images/views/show-navigation-arrow.png)
+![show-navigation-arrows-in-maui-calendar](images/date-navigation/show-navigation-arrows-in-maui-calendar.png)
