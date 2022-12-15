@@ -19,10 +19,7 @@ To define the data label in the chart, set the [ShowDataLabels]() property to tr
 
 {% highlight xaml %}
 
-<chart:SfFunnelChart ShowDataLabels="True"
-                     ItemsSource="{Binding Data}"  
-                     XBindingPath="XValue" 
-                     YBindingPath="YValue"/>
+<chart:SfFunnelChart ShowDataLabels="True"/>
 . . .
 </chart:SfFunnelChart>
 

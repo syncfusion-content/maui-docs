@@ -19,10 +19,7 @@ To define the data label in the chart, set the [ShowDataLabels]() property to tr
 
 {% highlight xaml %}
 
-<chart:SfPyramidChart ShowDataLabels="True"
-                      ItemsSource="{Binding Data}"  
-                      XBindingPath="Name" 
-                      YBindingPath="Value"/>
+<chart:SfPyramidChart ShowDataLabels="True"/>
 . . .
 </chart:SfPyramidChart>
 
