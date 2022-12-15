@@ -22,6 +22,7 @@ The following code illustrates how to use the series in chart.
     <chart:WaterfallSeries ItemsSource="{Binding RevenueDetails}"  
                            XBindingPath="Category" 
                            YBindingPath="Value">
+                           
     </chart:WaterfallSeries>
 
 {% endhighlight %}
