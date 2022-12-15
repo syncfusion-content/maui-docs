@@ -20,12 +20,12 @@ The [MinimumDateTime](https://pub.dev/documentation/syncfusion_maui_calendar/lat
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.MinimumDateTime = DateTime.Now.AddDays(3);
+  this.Calendar.MinimumDateTime = DateTime.Now.AddDays(-5);
 
 {% endhighlight %}
 {% endtabs %}
 
-![minimum-dateTime-maui-calendar](images/minimum-dateTime.png)
+![minimum-date-month-view-in-maui-calendar](images/date-restriction/minimum-date-month-view-in-maui-calendar.png)
 
 ## Maximum DateTime
 The [MaximumDateTime](https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/SfCalendar/maximumDateTime.html) property will restrict the forward navigation of date selection and also you cannot able to swipe beyound the maximum date range. The dates after the maximum date time is considered as disabled date.
@@ -38,12 +38,12 @@ The [MaximumDateTime](https://pub.dev/documentation/syncfusion_maui_calendar/lat
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.MaximumDateTime = DateTime.Now.AddDays(8);
+this.Calendar.MaximumDateTime = DateTime.Now.AddDays(5);
 
 {% endhighlight %}
 {% endtabs %}
 
-![maximum-dateTime-maui-calendar](images/maximum-dateTime.png)
+![maximum-date-month-view-in-maui-calendar](images/date-restriction/maximum-date-month-view-in-maui-calendar.png)
 
 ## Enable past dates
 The `EnablePastDates` (https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/SfCalendar/enablePastDate.html) of the `SfCalendar` indicates whether the dates are enabled or disabled before the today date. If this property is disabled, you cannot able to select the dates before the today date and the dates before the today date are considered as disabled dates.
@@ -61,7 +61,7 @@ this.Calendar.EnablePastDates = false;
 {% endhighlight %}
 {% endtabs %}
 
-![enable-past-date-maui-calendar](images/enable-past-date.png)
+![enable-past-date-in-maui-calendar](images/date-restriction/enable-past-date-in-maui-calendar.png)
 
 ## SelectableDayPredicate
 The [SelectableDayPredicate] (https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/SfCalendar/enablePastDate.html) of the `SfCalendar` decides whether the cell is selectable or not in calendar and if you want to disable the particular selected date in a calendar. Easily prevent the selection of weekends by disabling them. If the callback returns true, the date will be selectable in the Calendar.
@@ -87,8 +87,4 @@ this.Calendar.SelectableDayPredicate = (date) =>
 {% endhighlight %}
 {% endtabs %}
 
-![selectable-dates-maui-calendar](images/selectable-day-predicate.png)
-
->**NOTE**
-* Applicable for year, decade and century views only when the `allowViewNavigation` set as false.
-* This callback is not applicable when the `navigationMode` set as `DateRangePickerNavigationMode.scroll`.
+![selectable-day-predicate-in-maui-calendar](images/date-restriction/selectable-day-predicate-in-maui-calendar.png)
