@@ -9,7 +9,59 @@ documentation: ug
 
 # Localization in .NET MAUI DataForm (SfDataForm)
 
-You can localize the DataFormItem [Display] attribute values and validation ([Required] ,[StringLength] ) attributes values by using `ResourceType` display attribute or using the `GenerateDataFormItem` event.
+Localization is the process of translating the application resources into different language for the specific cultures. The `SfDataForm` can be localized by adding `resource` file. 
+
+You can localize the DataFormItem [Display](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute?view=net-7.0) attribute values and validation ([Required] ,[StringLength] ) attributes values by using `ResourceType` display attribute or using the `GenerateDataFormItem` event.
+
+## Setting CurrentUICulture to the application
+
+Application culture can be changed by setting `CurrentUICulture` in `App.xaml.cs` file.
+
+{% tabs %}
+{% highlight C# tabtitle="App.xaml.cs" %}
+
+using System.Globalization;
+
+public partial class App : Application
+{
+	public App()
+	{
+		InitializeComponent();
+
+		MainPage = new AppShell();
+        var culture = new CultureInfo("fr");
+        CultureInfo.CurrentUICulture = culture;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+N>
+The required `resx` files with `Build Action` as `EmbeddedResource` (File name should contain culture code) into the `Resources` folder.
+
+## Localize application level
+
+To localize the `DataForm` based on `CurrentUICulture` using `resource` files, follow the below steps.
+
+1. Right-click on the `Resources` folder in the application.
+
+    ![addition-of-default-resource-file-of-maui-dataform-into-resources-folder](images/localization/addition-of-default-resource-file-of-maui-dataform-into-resources-folder.png)
+
+2. Select `Add` and then `NewItem`.
+3. In Add New Item wizard, select the Resource File option and name the filename as `DataFormLocalization.<culture name>.resx.` For example, give the name as `DataFormLocalization.fr.resx` for French culture.
+
+    ![shows-the-name-of-resource-file-to-be-added-for-maui-dataform](images/localization/shows-the-name-of-resource-file-to-be-added-for-maui-dataform.png)
+
+4. The culture name indicates the name of the language and country.
+
+5. Now, select `Add` option to add the resource file in **Resources** folder.
+
+    ![shows-the-added-resource-file-for-french-language-in-maui-dataform](images/localization/shows-the-added-resource-file-for-french-language-in-maui-dataform.png)
+
+6. Add the Name/Value pair in Resource Designer of `DataFormLocalization.fr.resx` file and change its corresponding value to corresponding culture.
+ 
+    ![shows-the-added-resource-file-name-value-pair-in-the-resource-designer-in-maui-dataform](images/localization/shows-the-added-resource-file-name-value-pair-in-the-resource-designer-in-maui-dataform.png)
 
 ## Localizing data form item display values
 
@@ -17,7 +69,7 @@ Here, the display attributes or data form item display values get localized base
 
 #### Using attribute
 
-`ResourceType` [Display] attribute specifies the Resources File (.Resx) which is used to localize the Display attribute of `Name`, `ShortName`, `GroupName` and `Prompt` values.
+`ResourceType` [Display](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute?view=net-7.0) attribute specifies the Resources File (.Resx) which is used to localize the Display attribute of `Name`, `ShortName`, `GroupName` and `Prompt` values.
 
 {% tabs %}
 {% highlight C# %}
@@ -102,7 +154,7 @@ this.dataForm.ValidateProperty += DataForm_ValidateProperty;
 
 ## Localizing DataForm List items
 
-You can also localize DataForm List items (Picker, AutoComplete, RadioGroup, ComoboBox) ItemsSource using `ResourceType` [Display] attribute and [SfDataForm.ItemsSourceProvider]
+You can also localize DataForm List items (Picker, AutoComplete, RadioGroup, ComoboBox) ItemsSource using `ResourceType` [Display](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute?view=net-7.0) attribute and [SfDataForm.ItemsSourceProvider]
 
 {% tabs %}
 {% highlight C# %}
