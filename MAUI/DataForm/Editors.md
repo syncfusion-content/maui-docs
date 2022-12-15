@@ -1075,8 +1075,6 @@ For `List` data type property, you have to set the `ItemsSource` by using the [I
 {% endtabs %}
 
 `Image`
-
-
 	
 ## Custom editor
 
