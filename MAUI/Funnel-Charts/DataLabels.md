@@ -39,18 +39,18 @@ chart.ShowDataLabels = true;
 
  Data labels can be customized by using the [DataLabelSettings]() property of the chart. For customizing, need to create an instance of [FunnelDataLabelSettings]() and set to the [DataLabelSettings]() property.The following properties, which are available in [FunnelDataLabelSettings](), are used to customise the data labels. 
 
- * LabelPlacement - The [LabelPlacement]() property is used to position the funnel chart data labels at [DataLabelPlacement.Auto](), [DataLabelPlacement.Inner](), [DataLabelPlacement.Center]() and [DataLabelPlacement.Outer]().The default value of LabelPlacement property is [DataLabelPlacement.Auto]().
- * UseSeriesPalette - [UseSeriesPalette]() property is used to set the interior of the chart to the data label background.
+ * LabelPlacement - The [LabelPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartDataLabelSettings.html#Syncfusion_Maui_Charts_ChartDataLabelSettings_LabelPlacement) property is used to position the funnel chart data labels at [DataLabelPlacement.Auto](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DataLabelPlacement.html#Syncfusion_Maui_Charts_DataLabelPlacement_Auto), [DataLabelPlacement.Inner](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DataLabelPlacement.html#Syncfusion_Maui_Charts_DataLabelPlacement_Inner), [DataLabelPlacement.Center](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DataLabelPlacement.html#Syncfusion_Maui_Charts_DataLabelPlacement_Center) and [DataLabelPlacement.Outer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DataLabelPlacement.html#Syncfusion_Maui_Charts_DataLabelPlacement_Outer).The default value of LabelPlacement property is [DataLabelPlacement.Auto](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DataLabelPlacement.html#Syncfusion_Maui_Charts_DataLabelPlacement_Auto).
+ * UseSeriesPalette - [UseSeriesPalette](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartDataLabelSettings.html#Syncfusion_Maui_Charts_ChartDataLabelSettings_UseSeriesPalette) property is used to set the interior of the chart to the data label background.
  * Context - To customize the content of data labels, need to define [DataLabelSettings]() of chart and set [Context]() property of [FunnelDataLabelSettings]() to change the data label content value.
- * LabelStyle - [LabelStyle]() property is used to customise the data label's appearance. The following properties, which are available in [LabelStyle](), are used to customise the data labels.
-    * [Margin]() of type `Thickness`, indicates the margin of the label.
-    * [Background](), of type `Brush`, indicates the label background color.
-    * [FontAttributes](), of type `FontAttributes`, indicates the font style for the data label.
-    * [FontSize](), of type `double`, indicates the font size of the label.
-    * [Stroke](), of type `Brush`, indicates the stroke color of the data label.
-    * [StrokeWidth](), of type `double`, indicates the stroke width of the data label .
-    * [CornerRadius](), of type `CornerRadius`, indicates the rounded corner for label.
-    * [TextColor](), of type `Color`, indicates the text color of the label.
+ * LabelStyle - [LabelStyle]() property is used to customise the data label's appearance. The following properties, which are available in [LabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartDataLabelSettings.html#Syncfusion_Maui_Charts_ChartDataLabelSettings_LabelStyle), are used to customise the data labels.
+    * [Margin](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html#Syncfusion_Maui_Charts_ChartLabelStyle_Margin) of type `Thickness`, indicates the margin of the label.
+    * [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html#Syncfusion_Maui_Charts_ChartLabelStyle_Background), of type `Brush`, indicates the label background color.
+    * [FontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html#Syncfusion_Maui_Charts_ChartLabelStyle_FontAttributes), of type `FontAttributes`, indicates the font style for the data label.
+    * [FontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html#Syncfusion_Maui_Charts_ChartLabelStyle_FontSize), of type `double`, indicates the font size of the label.
+    * [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html#Syncfusion_Maui_Charts_ChartLabelStyle_Stroke), of type `Brush`, indicates the stroke color of the data label.
+    * [StrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html#Syncfusion_Maui_Charts_ChartLabelStyle_StrokeWidth), of type `double`, indicates the stroke width of the data label .
+    * [CornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html#Syncfusion_Maui_Charts_ChartLabelStyle_CornerRadius), of type `CornerRadius`, indicates the rounded corner for label.
+    * [TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html#Syncfusion_Maui_Charts_ChartLabelStyle_TextColor), of type `Color`, indicates the text color of the label.
 
 
 {% tabs %}
