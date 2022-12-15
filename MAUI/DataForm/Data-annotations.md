@@ -31,7 +31,7 @@ Specifies the label text.
 {{'[GroupName](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute.groupname?view=net-7.0)' |  markdownify }}
 </td>
 <td>
-Specifies the group name which groups the fields in the data form. Refer to  `Link` for more details.
+Specifies the group name which groups the fields in the data form.
 </td>
 </tr>
 <tr>
@@ -63,7 +63,7 @@ Specifies the Resources File (.Resx) which is used to localize the Display attri
 {{'[Prompt](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute.prompt?view=net-7.0)' |  markdownify }}
 </td>
 <td>
-Specifies watermark text for the editor. Refer to `Link` for more details.
+Specifies watermark text for the editor.
 </td>
 </tr>
 <tr>
@@ -174,7 +174,7 @@ Specifies that a data field value is required.
 {{'[StringLength](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.stringlengthattribute?view=net-7.0)'| markdownify }}
 </td>
 <td>
-Specifies the required string length. Refer to `Link` for more details.
+Specifies the required string length. 
 </td>
 </tr>
 <tr>
@@ -412,7 +412,7 @@ Details
 [DataFormValueConverterType]
 </td>
 <td>
-Specifies the Converter type which converts the original value in different format or as different value. Refer to here for more details.
+Specifies the Converter type which converts the original value in different format or as different value.
 </td>
 </tr>
 </table>
@@ -491,4 +491,4 @@ Specifies the required date display format.
 {% endtabs %}
 
 
-Refer to `Here Link` for more details.
+
