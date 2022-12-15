@@ -14,7 +14,6 @@ The data form supports several built-in editors as follows:
 <table>
 <tr>
 <th>Editor name</th>
-<th>Editor class</th>
 <th>Supported Data Type/Attribute</th>
 <th>Input control loaded</th>
 </tr>
@@ -104,7 +103,6 @@ Picker
 </td>
 <td>
 Enum and List type property. 
-[EnumDataTypeAttribute]
 </td>
 <td>
 {{'[Picker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/picker?view=net-maui-7.0)'| markdownify }}
@@ -116,23 +114,9 @@ ComboBox
 </td>
 <td>
 Enum and List type property.
-[EnumDataTypeAttribute]
 </td>
 <td>
 {{'[SfComboBox](https://help.syncfusion.com/maui/combobox)'| markdownify }}
-</td>
-</tr>
-
-<tr>
-<td>
-RadioGroup
-</td>
-<td>
-Enum and List type property.
-[EnumDataTypeAttribute]
-</td>
-<td>
-{{'[RadioButton](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/radiobutton?view=net-maui-7.0)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -141,18 +125,29 @@ AutoComplete
 </td>
 <td>
 Enum and List type property.
-[EnumDataTypeAttribute]
 </td>
 <td>
 {{'[SfAutoComplete](https://help.syncfusion.com/maui/autocomplete)'| markdownify }}
 
 </td>
 </tr>
+<tr>
+<td>
+RadioGroup
+</td>
+<td>
+Enum and List type property.
+</td>
+<td>
+{{'[RadioButton](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/radiobutton?view=net-maui-7.0)'| markdownify }}
+</td>
+</tr>
+
 </table>
 
-## Changing editor for type
+## To change the editor for any data type
 
-By default, the editors will be loaded based on the previous table. To change the editor for any type, use the [RegisterEditor] method and specify the type and editor.
+By default, the editors will be loaded based on the datatype`Link`. To change the editor for any type, use the [RegisterEditor] method and specify the type and editor.
 
 {% tabs %}
 {% highlight c# %}
@@ -164,7 +159,7 @@ By default, the editors will be loaded based on the previous table. To change th
 
 Here, the `MultilineText` editor will be loaded for the string type instead of `Text` editor.
 
-## Changing editor for property
+## Changing the editor for property
 
 To change the editor for any property, use the [RegisterEditor] method and specify the property name and editor.
 
@@ -177,8 +172,6 @@ To change the editor for any property, use the [RegisterEditor] method and speci
 
 {% endtabs %}
 
-
-
 Here, the Switch editor will be loaded for the `On` property (bool type) instead of `CheckBox` editor.
 
 ## Text editor
@@ -186,6 +179,15 @@ Here, the Switch editor will be loaded for the `On` property (bool type) instead
 In the text editor, the [Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry?view=net-maui-7.0) is loaded.
 
 Text editor have Keyboard type change by using `Keyboard` property and you can set maximum allowed length of input by using `MaxLength` property.
+
+{% tabs %}
+{% highlight C# %}
+
+    [DataType(DataType.Text)]
+    public string Name { get; set; }
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Multiline Text editor
 
@@ -237,7 +239,7 @@ In [DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/con
 
 `Image`
 
-### Customizing format in date editor
+#### Change the format of the date editor
 
 In the [DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/datepicker?view=net-maui-7.0), short date will be shown by default. You can change the applied format by setting the [Format]`Link`property in [DataFormDateItem]`Link`.
 
@@ -259,7 +261,7 @@ In the [DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface
 
 `Image`
 
-### Setting MaximumDate and MinimumDate in date editor
+#### Change the minimum and maximum date in date editor
 
 You can customize the maximum and minimum allowable dates in the [DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/datepicker?view=net-maui-7.0) by setting [MaximumDate]`Link` and [MinimumDate]`Link` in the [DataFormDateItem]`Link` respectively.
 
@@ -301,7 +303,7 @@ In [TimePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/con
 
 `images`
 
-**Customizing format in time editor**
+#### Change the format of time editor**
 
 In the [TimePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/timepicker?view=net-maui-7.0&tabs=windows), short time will be shown by default. You can change the applied format by setting the [Format]`Link`property in [DataFormTimeItem]`Link`.
 
@@ -357,7 +359,7 @@ CheckBox support two visual states.
 {% endhighlight %}
 {% endtabs %}
 
-### Changing checkbox color
+#### Changing the checkbox color
 
 By default the checkbox color is blue, you can change the checkbox color by using `Color` property in `DataFormItem`.
 
@@ -402,9 +404,9 @@ To add [Switch](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/con
 
 `Image`
 
-#### Changing Switch Editor Thumb color
+#### Changing the Switch Editor thumb color
 
-### Using event
+#### Using event
 
 By default switch editor Thumb color is Blue, you can change the Thumb color by using `ThumbColor` property in the `DataFormItem`.
 
@@ -424,9 +426,9 @@ By default switch editor Thumb color is Blue, you can change the Thumb color by 
 {% endhighlight %}
 {% endtabs %}
 
-#### Changing Switch Editor Background color
+#### Changing the Switch editor background color
 
-### Using event
+#### Using event
 
 By default switch editor background colour is white, you can change the Background color by using `OnColor` property in the `DataFormItem`.
 
@@ -452,7 +454,7 @@ By default switch editor background colour is white, you can change the Backgrou
 
 In the Combo Box editor, the [SfComboBox](https://help.syncfusion.com/maui/combobox)  will be loaded.
 
-### Customizing ItemsSource of SfComboBox
+#### Changing the ItemsSource of combo box
 
 By default, the `ItemsSource` for SfComboBox is auto-generated for enum types and collection type properties. For other types, you can set the `ItemsSource` by using the [IDataFormSourceProvider]`Link`.
 
@@ -578,7 +580,7 @@ Displays all the matches that contain the typed characters in items source of co
 {% endhighlight %}
 {% endtabs %}
 
-#### Customizing the height of combobox list item 
+#### Changing the height of combobox item 
 
 By default the combo box drop down list item height is `400d` , You can change the size for the drop down list item size by using `MaxDropDownHeight` property in the `DataFormItem`.
 
@@ -598,7 +600,7 @@ By default the combo box drop down list item height is `400d` , You can change t
 {% endhighlight %}
 {% endtabs %}
 
-#### Loading complex type property values in combo box editor
+#### Loading the complex type property values in combo box editor
 
 You can display the complex type property values in combo box editor by using the DisplayMemberPath and SelectedValuePath properties of DataFormComboBoxItem. You need to use `GenerateDataFormItem `event to set [DisplayMemberPath]`Link` and [SelectedValuePath]`Link` property value of DataFormComboBoxItem for complex type property.
 
@@ -666,7 +668,7 @@ N> Class cannot be directly set as data type for combo box editor in this comple
 
 In the autocomplete editor, the [SfAutoComplete](https://help.syncfusion.com/maui/autocomplete) is loaded.
 
-### Customizing ItemsSource of autocomplete editor
+#### Changing the ItemsSource of autocomplete editor
 
 By default, the [ItemsSource]`Link` for `AutoComplete` editor is auto-generated for enum types. For other types, you can set [ItemsSource]`Link` using [IDataFormSourceProvider]`Link`.
 
@@ -745,7 +747,7 @@ You can also set `ItemsSource` for autocomplete editor by using [ItemsSource]`Li
 {% endhighlight %}
 {% endtabs %}
 
-#### Loading complex type property values in autocomplete editor
+#### Loading the complex type property values in autocomplete editor
 
 You can display the complex type property values in combo box editor by using the DisplyMemberPath and SelectedValuePath properties of DataFormComboBoxItem. You need to use `GenerateDataFormItem `event to set [DisplayMemberPath]`Link` and [SelectedValuePath]`Link` property value of DataFormComboBoxItem for complex type property.
 
@@ -891,11 +893,11 @@ In the picker editor, the [Picker](https://learn.microsoft.com/en-us/dotnet/maui
 
 `Image`
 
-### Customizing ItemsSource of Picker
+#### Changing the ItemsSource of Picker
 
 By default, the `ItemsSource` for picker is auto-generated for enum type and collection type properties. For other types, you can set the `ItemsSource` by using [IDataFormSourceProvider]`Link`.
 
-### Using IDataFormSourceProvider
+#### Using IDataFormSourceProvider
 
 {% tabs %}
 {% highlight C# %}
@@ -926,7 +928,7 @@ By default, the `ItemsSource` for picker is auto-generated for enum type and col
 {% endhighlight %}
 {% endtabs %}
 
-### Using event
+#### Using event
 
 You can also set `ItemsSource` for picker editor by using the [ItemsSource]`Link` property in the [DataFormPickerItem]`Link`.
 
@@ -953,7 +955,7 @@ You can also set `ItemsSource` for picker editor by using the [ItemsSource]`Link
 {% endhighlight %}
 {% endtabs %}
 
-### Loading complex type property values in picker
+#### Loading the complex type property values in picker
 
 You can display the complex type property values in picker editor by using the DisplayMemberPath and SelectedValuePath properties of DataFormPickerItem. You need to use `GenerateDataFormItem`event to set [DisplayMemberPath]`Link` and [SelectedValuePath]`Link` property value DataFormPickerItem for complex type property.
 
@@ -1082,11 +1084,11 @@ The custom editor can be added to DataForm by inheriting the `IDataFormEditor` c
 
 To add custom editor in DataForm, register the editor with custom registered type for the required property using `RegisterEditor` method. You can also customize editor settings by using available methods in `IDataFormEditor`. 
 
-### Creating custom editor using IDataFormEditor 
+#### Creating custom editor using IDataFormEditor 
 
 Views such as labels, buttons, and sliders can be loaded to custom editor. Here, entry is loaded as custom editor for `PhoneNumer` property. 
 
-### Below methioned example code for Numeric editor which accepts only numbers 
+#### Below methioned example code for Numeric editor which accepts only numbers 
 
 {% tabs %}
 {% highlight C# %}
