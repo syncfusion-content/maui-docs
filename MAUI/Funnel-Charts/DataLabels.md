@@ -62,13 +62,7 @@ chart.ShowDataLabels = true;
  <chart:SfFunnelChart.DataLabelSettings>
     <chart:FunnelDataLabelSettings LabelPlacement="Outer" Context="XValue" UseSeriesPalette="True">
         <chart:FunnelDataLabelSettings.LabelStyle>
-            <chart:ChartDataLabelStyle Margin="2" 
-                                       FontAttributes="Italic" 
-                                       FontSize="12" 
-                                       CornerRadius="2" 
-                                       Stroke="white"
-                                       StrokeWidth="1.5"
-                                       TextColor="White"/>
+            <chart:ChartDataLabelStyle/>
         </chart:FunnelDataLabelSettings.LabelStyle>
     </chart:FunnelDataLabelSettings>
  </chart:SfFunnelChart.DataLabelSettings>
@@ -87,16 +81,7 @@ chart.DataLabelSettings = new FunnelDataLabelSettings()
     LabelPlacement=DataLabelPlacement.Outer,
     UseSeriesPalette=true,
 };
-chart.DataLabelSettings.LabelStyle = new ChartDataLabelStyle()
-{
-    Margin = 2,
-    FontAttributes = FontAttributes.Italic,
-    FontSize = 12,
-    CornerRadius = 2,
-    Stroke = Colors.White,
-    StrokeWidth = 1.5,
-    TextColor = Colors.White,
-};
+chart.DataLabelSettings.LabelStyle = new ChartDataLabelStyle();
 
 {% endhighlight %}
 

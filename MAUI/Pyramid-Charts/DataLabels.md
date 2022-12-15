@@ -62,13 +62,7 @@ chart.ShowDataLabels = true;
  <chart:SfPyramidChart.DataLabelSettings>
     <chart:PyramidDataLabelSettings LabelPlacement="Outer" Context="XValue" UseSeriesPalette="True">
         <chart:PyramidDataLabelSettings.LabelStyle>
-            <chart:ChartDataLabelStyle Margin="2" 
-                                       FontAttributes="Italic" 
-                                       FontSize="12" 
-                                       CornerRadius="2" 
-                                       Stroke="white"
-                                       StrokeWidth="1.5"
-                                       TextColor="White"/>
+            <chart:ChartDataLabelStyle/>
         </chart:PyramidDataLabelSettings.LabelStyle>
     </chart:PyramidDataLabelSettings>
  </chart:SfPyramidChart.DataLabelSettings>
@@ -87,16 +81,7 @@ chart.DataLabelSettings = new PyramidDataLabelSettings()
     LabelPlacement=DataLabelPlacement.Outer,
     UseSeriesPalette=true,
 };
-chart.DataLabelSettings.LabelStyle = new ChartDataLabelStyle()
-{
-    Margin = 2,
-    FontAttributes = FontAttributes.Italic,
-    FontSize = 12,
-    CornerRadius = 2,
-    Stroke = Colors.White,
-    StrokeWidth = 1.5,
-    TextColor = Colors.White,
-};
+chart.DataLabelSettings.LabelStyle = new ChartDataLabelStyle();
 
 {% endhighlight %}
 
