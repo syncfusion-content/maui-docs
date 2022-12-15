@@ -77,7 +77,7 @@ Specifies the order of field in the data form.
 </table>
 
 {% tabs %}
-{% highlight Name attribute}
+{% highlight C# attribute}
 
     [Display(Name = "First Name", GroupName = "Name", Prompt="Enter your name")]
     public string FirstName { get; set; }
@@ -289,6 +289,14 @@ Specifies whether the label should be visible or not.
 </tr>
 <tr>
 <td>
+[RowOrder]
+</td>
+<td>
+Specifies the row order of field in the data form
+</td>
+</tr>
+<tr>
+<td>
 [ItemsOrderInRow]
 </td>
 <td>
@@ -337,7 +345,7 @@ Details
 [MaximumDate] 
 </td>
 <td>
-Specifies the required maximum date.
+Specifies the maximum date that can be selected in date editor.
 </td>
 </tr>
 <tr>
@@ -345,7 +353,7 @@ Specifies the required maximum date.
 [MinimumDate] 
 </td>
 <td>
-Specifies the required minimum date.
+Specifies the minimum date that can be selected in date editor.
 </td>
 </tr>
 <tr>
@@ -353,7 +361,7 @@ Specifies the required minimum date.
 [DisplayFormat]
 </td>
 <td>
-Specifies the required date display format.
+Specifies the format of [MaximumDate] and [MinumumDate] used in attribute.
 </td>
 </tr>
 </table>
