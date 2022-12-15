@@ -1,4 +1,4 @@
 ﻿<calendar:SfCalendar  x:Name="Calendar"
                       View="Month"
-                      SelectionShape="Circle">
+                      SelectionShape="Rectangle">
 </calendar:SfCalendar>
