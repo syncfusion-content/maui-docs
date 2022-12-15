@@ -13,7 +13,7 @@ documentation: ug
 
 The data form supports linear and grid layouts and manages layout of label, editor, and validation label.
 
-## Linear layout support
+## Linear data form layout
 
 By default, the data form arranges the fields one-by-one. It is applicable for both label positions: left and top.
 
@@ -21,7 +21,7 @@ When the label position is Left, the linear layout is shown as follows:
 
 When the label position is Top, the linear layout is shown as follows:
 
-## Grid layout support
+## Grid data form layout
 
 By default, the data form arranges one data field per row. It is possible to have more than one data fields per row by setting the [ColumnCount] property which provides grid like layout for the data form. The column order of data form field in a row can also be changed using [ItemsOrderInRow].
 
@@ -221,63 +221,7 @@ this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 {% endhighlight %}
 {% endtabs %}
 
-## Changing editor order in grid rows
-
-The order of the editors in grid row can be changed within a row by using attributes or by handling `GenerateDataFormItem` event.
-
-#### Using attributes
-
-The order of the editors in grid rows can be changed by using the `ItemsOrderInRow` property in [DataFormDisplayOptionsAttribute] attribute. This is applicable only for Grid layout.
-
-{% tabs %}
-{% highlight C# %}
-
-this.dataForm.ColumnCount = 2;
-
-{% endhighlight %}
-{% highlight C# %}
-
-    [DataFormDisplayOptions(RowOrder = 0, ItemsOrderInRow = 1)]
-    public string LastName { get; set; }
-
-    [DataFormDisplayOptions(RowOrder = 0, ItemsOrderInRow = 0)]
-    public string FirstName { get; set; }
-
-{% endhighlight %}
-{% endtabs %}
-
-#### Using event
-
-The order of the editors in grid rows can be changed by using the [ItemsOrderInRow] property in the `DataFormItem`.
-
-{% tabs %}
-{% highlight C# %}
-
-this.dataForm.ColumnCount = 2;
-this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
-
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
-    {
-
-        if (e.DataFormItem != null)
-        {
-            if (e.DataFormItem.FieldName == "FirstName")
-            {
-                e.DataFormItem.RowOrder = 0;
-                e.DataFormItem.ItemsOrderInRow = 1;
-            }
-            else if (e.DataFormItem.FieldName == "LastName")
-            {
-                e.DataFormItem.RowOrder = 0;
-                e.DataFormItem.ItemsOrderInRow = 0;
-            }
-        }
-    }
-
-{% endhighlight %}
-{% endtabs %}
-
-## Change label and editor width
+## Change the label and editor width
 
 The label and editor width can be set proportionally by using [LabelWidth] and [EditorWidth] properties of [DefaultLayoutSettings] class.
 The [Value] and [UnitType] properties of [DataFormItemLength] each return the value and unit type of the corresponding DataFormItemLength, respectively. 
@@ -408,7 +352,7 @@ this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
 ## Change the editor visibility
 
-The data form editor visibility can be changed at run time by using the [IsVisible] of `DataFormItem`.
+The data form editor visibility can be changed by using the [IsVisible] property of `DataFormItem`.
 
 {% tabs %}
 {% highlight C# %}

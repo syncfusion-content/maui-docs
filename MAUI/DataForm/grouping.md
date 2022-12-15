@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Grouping in .NET MAUI DataForm control | Syncfusion
+title: Grouping the editors in .NET MAUI DataForm control | Syncfusion
 description: Learn here all about the grouping support in Syncfusion .NET MAUI DataForm (SfDataForm) control and more.
 platform: maui
 control: SfDataForm
 documentation: ug
 ---
 
-# Grouping editors in .NET MAUI DataForm (SfDataForm)
+# Grouping the editors in .NET MAUI DataForm (SfDataForm)
 
 The .NET MAUI DataForm support to group the editors which are relevant to each other. You can expand or collapse the group by tapping the group item.
 
@@ -134,7 +134,7 @@ this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 {% endhighlight %}
 {% endtabs %}
 
-## Changing editors order of the group in grid rows
+## Changing the editors order of the group in grid rows
 
 The order of the editors of group in grid row can be changed within a row by using `RowOrder` and `ItemsOrderInRow` properties[DataFormDisplayOptions] attribute and by handling `GenerateDataFormItem` event.
 
@@ -167,8 +167,7 @@ The order of the editors of group in grid row can be changed within a row by usi
 {% endhighlight %}
 {% endtabs %}
 
-
-## Changing group name
+## Changing the group name for the editors
 
 The `GroupName` for the group can be changed in the `GenerateDataFormItem` event.
 
@@ -244,7 +243,7 @@ this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 {% endhighlight %}
 {% endtabs %}
 
-## Loading group in collapsed state
+## Loading the group in collapsed state
 
 By default, the group will be loaded in expanded state. You can collapse the group by setting the [IsExpanded] property of [DataFormGroupItem] class to `false`.
 
@@ -366,7 +365,7 @@ this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 {% endhighlight %}
 {% endtabs %}
 
-## Changing distance between group headers and editors
+## Changing the padding for group headers and editors
 
 The distance between editors and the data form’s borders or group headers can be changed by using [ItemsPadding] property of [DataFormGroupItem].
 
