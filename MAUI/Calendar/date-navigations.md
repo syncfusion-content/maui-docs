@@ -20,7 +20,7 @@ Allows you to navigate through the Dates by programmatically in the calendar wid
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.DisplayDate = DateTime.Now.AddDays(4);
+this.Calendar.DisplayDate = DateTime.Now.AddMonths(2).Date;
 
 {% endhighlight %}
 {% endtabs %}
@@ -63,8 +63,6 @@ this.Calendar.AllowViewNavigation = true;
 {% endhighlight %}
 {% endtabs %}
 
-![allow-view-navigation-maui-calendar](images/allow-view-navigation.png)
-
 ## Programmatically change to adjacent dates
 The next and previous view can be navigated by swiping the Calendar control from right to left and left to right. In the `SfCalendar`, view can be changed programmatically by using the [forward](https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/CalendarControl/forward.html) and [backward](https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/CalendarControl/backward.html)methods.
 
@@ -87,8 +85,6 @@ private void button_Clicked(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-![forward-navigation-maui-calendar](images/forward-navigation.png)
-
 ### Backward
 The `backward` navigation allows you to view the immediate previous date of the calendar based on the CalendarViews.
 
@@ -108,11 +104,8 @@ private void button_Clicked(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-![backward-navigation-maui-calendar](images/backward-navigation.png)
-
-
 ## Navigation direction
-Views can navigated by using the `Navigation direction` property either `Vertical` or `Horizontal` directions by setting the [navigationDirection](https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/SfCalendar/navigationDirection.html) property of `Calendar`. The default navigation direction is `Horizontal`.
+Views can be navigated by using the `Navigation direction` property either `Vertical` or `Horizontal` directions by setting the [navigationDirection](https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/SfCalendar/navigationDirection.html) property of `Calendar`. The default navigation direction is `Horizontal`.
 
 The following code shows the Navigation direction in `Horizontal`,
 
@@ -131,23 +124,6 @@ this.Calendar.NavigationDirection = CalendarNavigationDirection.Horizontal;
 
 ![horizontal-navigation-direction-maui-calendar](images/views/horizontal-navigation-direction.png)
 
-The following code shows the Navigation direction in `Vertical`,
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-
-{% include_relative code-snippet/vertical-navigation-direction.xaml %}
-
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
-
-this.Calendar.NavigationDirection = CalendarNavigationDirection.Vertical;
-
-{% endhighlight %}
-{% endtabs %}
-
-![vertical-navigation-direction-maui-calendar](images/views/vertical-navigation-direction.png)
-
 ## Show navigation arrow
 By using the [showNavigationArrow](https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/SfCalendar/shownavigationArrow.html) property of the `Calendar` you can navigate to the next or previous views of the calendar without swiping. By default, the value of showNavigationArrow is `true`.
 
@@ -159,7 +135,7 @@ By using the [showNavigationArrow](https://pub.dev/documentation/syncfusion_maui
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.HeaderView.ShowNavigationArrows = true;
+this.Calendar.HeaderView.ShowNavigationArrows = false;
 
 {% endhighlight %}
 {% endtabs %}
