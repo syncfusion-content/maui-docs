@@ -79,56 +79,8 @@ Specifies the order of field in the data form.
 {% tabs %}
 {% highlight Name attribute}
 
-    [Display(Name= "First Name")]
+    [Display(Name = "First Name", GroupName = "Name", Prompt="Enter your name")]
     public string FirstName { get; set; }
-
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
-{% highlight GroupName attribute}
-
-    [Display(GroupName = "Address")]
-    public string Street { get; set; }
-
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
-{% highlight ShortName attribute}
-
-    [Display(ShortName= "First Name")]
-    public string Name { get; set; }
-
-    [Display(AutoGenerateField =false)]
-    public string Password { get; set; }
-
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
-{% highlight AutoGenerateField attribute}
-
-    [Display(AutoGenerateField =false)]
-    public string Name { get; set; }
-
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
-{% highlight Prompt attribute}
-
-    [Display(Prompt = "Enter your name")]
-    public string Name { get; set; }
-
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
-{% highlight Order attribute}
-
-    [Display(Order =2)]
-    public string MiddleName { get; set; }
 
 {% endhighlight %}
 {% endtabs %}
@@ -223,9 +175,6 @@ Specifies enum type for the data field.
 {% endhighlight %}
 {% endtabs %}
 
-## EnumDataType attribute
-
-
 
 {% tabs %}
 {% highlight EnumDataType attribute}
@@ -275,7 +224,7 @@ It specifies whether the data field is read only or not.
 {% endhighlight %}
 {% endtabs %}
 
-
+Note: `ReadOnlyAttribute` takes higher priority than `EditableAttribute`
 
 ## DataType attribute
 
@@ -349,82 +298,28 @@ Specifies the ItemsOrderInRow property to display multiple editors in a single r
 </table>
 
 {% tabs %}
-{% highlight RowSpan attribute}
+{% highlight DataFormDisplayOptions attribute}
 
-    [DataFormDisplayOptions(RowSpan =2)]
-    public string Address { get; set; }
-
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
-{% highlight ColumnSpan attribute}
-
-    [DataFormDisplayOptions(ColumnSpan =2)]
-    public string Name { get; set; }    
-
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
-{% highlight ValidMessage attribute}
-
-    [StringLength(20, ErrorMessage = "Value should not empty")]
-    [DataFormDisplayOptions(ValidMessage = "Text length is enough")]
+    [DataFormDisplayOptions(Rowspan = 2, ColumnSpan = 2, RowOrder = 1, ItemsOrderInRow = 0)]
     public string Name { get; set; }
-
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
-{% highlight ShowLabel attribute}
-
-    [DataFormDisplayOptions(ShowLabel = false)]
-    public string City { get; set; }
-
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
-{% highlight ItemsOrderInRow attribute}
-
-    dataForm.columnCount = 3;
-    
-    [DataFormDisplayOptions(ItemsOrderInRow =2)]
-    public string Address { get; set; }
 
 {% endhighlight %}
 {% endtabs %}
 
 ### DataFormValueConverter attribute
 
-<table>
-<tr>
-<th>
-Property
-</th>
-<th>
-Details
-</th>
-</tr>
-<tr>
-<td>
-[DataFormValueConverterType]
-</td>
-<td>
 Specifies the Converter type which converts the original value in different format or as different value.
-</td>
-</tr>
-</table>
 
 {% tabs %}
 {% highlight  attribute}
 
-    [DataFormValueConverter(typeof(StringToStringConverter))]
+    [DataFormValueConverter(typeof(StringToDateConverter))]
     public string Name { get; set; }
 
 {% endhighlight %}
 {% endtabs %}
+
+Refer to this`[link]` to know about `DataFormValueConverterAttribute`
 
 ### DateFormDateRange attribute
 
@@ -464,31 +359,10 @@ Specifies the required date display format.
 </table>
 
 {% tabs %}
-{% highlight  attribute}
+{% highlight  DataFormDateRange attribute}
 
-    [DataFormDateRange(DisplayFormat="yyyy/mm/dd")]
-    public DateTime Date { get; set; }
-
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
-{% highlight MaximumDate attribute}
-
-    [DataFormDateRange(MaximumDate ="2022/07/07")]
-    public DateTime Date { get; set; }
+    [DataFormDateRange(DisplayFormat="yyyy/mm/dd", MaximumDate ="2022/07/01", MaximumDate ="2022/07/07")]
+    public DateTime EventDate { get; set; }
 
 {% endhighlight %}
 {% endtabs %}
-
-{% tabs %}
-{% highlight MinimumDate attribute}
-
-    [DataFormDateRange( MinimumDate ="2022/01/01")]
-    public DateTime Date { get; set; }
-
-{% endhighlight %}
-{% endtabs %}
-
-
-
