@@ -452,6 +452,8 @@ The `SwipeReset` event provides the following properties in their arguments:
  * [DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ResetSwipeEventArgs.html#Syncfusion_Maui_ListView_ResetSwipeEventArgs_DataItem): Defines the underlying data associated with the swiped item as its arguments. 
  * [OffSet](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ResetSwipeEventArgs.html#Syncfusion_Maui_ListView_ResetSwipeEventArgs_OffSet): Defines the current swipe offset of the item being swiped.
 
+ ### How to reset swipe view automatically?
+
 Swiped item can be reset by defining the [SfListView.SwipeOffSet](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SwipeOffset) argument of [SfListView.SwipeEnded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SwipeEnded) event to `0` when the swiping action is completed.
 
 {% tabs %}
