@@ -7,7 +7,7 @@ control: SfDataForm
 documentation: UG
 ---
 
-# Editors in Maui DataForm (SfDataForm)
+# Editors in .NET MAUI DataForm (SfDataForm)
 
 The data form supports several built-in editors as follows:
 
