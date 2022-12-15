@@ -113,7 +113,6 @@ chart.TooltipBehavior = new ChartTooltipBehavior()
     </chart:SfPyramidChart>
 </Grid>
 
-
 {% endhighlight %}
 
 {% highlight c# %}

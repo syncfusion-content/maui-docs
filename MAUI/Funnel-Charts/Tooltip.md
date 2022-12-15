@@ -113,7 +113,6 @@ chart.TooltipBehavior = new ChartTooltipBehavior()
     </chart:SfFunnelChart>
 </Grid>
 
-
 {% endhighlight %}
 
 {% highlight c# %}
