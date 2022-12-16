@@ -81,8 +81,6 @@ private async Task GenerateBing(MapTileLayer tileLayer)
 
 {% endhighlight %}
 
-{% endtabs %}
-
 ![Bing maps default view](images/tile-layer/bing_maps_default.png)
 
 ## Other map tile providers
@@ -102,8 +100,6 @@ map.Layer = tileLayer;
 this.Content = map;
 
 {% endhighlight %}
-
-{% endtabs %}
 
 ![TomTom maps default view](images/tile-layer/tom_tom_default.png)
 
