@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Manually create DataFormItems in Maui DataForm control
+title: Manually create DataFormItems in Maui DataForm control | Syncfusion
 description: Learn here all about working with manually created DataFormViewItems in Syncfusion . NET MAUI DataForm(SfDataForm) control.
 platform: Maui
 control: SfDataForm
 documentation: UG
 ---
 
-## Working DataForm Items Manually
+# Working DataForm Items Manually
 
 Support has been provided to generate DataFormItems manually for the defined business model using the [Items]`Link` property of the `SfDataForm` class. You need to set the [AutoGenerateItems]`Link` property to false to restrict the auto-generation of DataFormItems. 
 
