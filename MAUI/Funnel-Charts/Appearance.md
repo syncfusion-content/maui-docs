@@ -20,9 +20,9 @@ The [SfFunnelChart]() allows you to define your own brushes with preferred order
 {% highlight xaml %}
 
 <chart:SfFunnelChart ItemsSource="{Binding Data}" 
-                     XBindingPath="XValue" 
+                     XBindingPath="XValue"
 					 YBindingPath="YValue"
-                     PaletteBrushes="{Binding CustomBrushes}">
+					 PaletteBrushes="{Binding CustomBrushes}">
 . . .
 </chart:SfFunnelChart>
 
@@ -62,9 +62,9 @@ The gradient for the funnel chart can be set by using the [PaletteBrushes]() pro
 {% highlight xaml %}
 
 <chart:SfFunnelChart ItemsSource="{Binding Data}" 
-                     XBindingPath="XValue" 
+                     XBindingPath="XValue"
 					 YBindingPath="YValue"
-                     PaletteBrushes="{Binding CustomBrushes}">
+					 PaletteBrushes="{Binding CustomBrushes}">
 . . .
 </chart:SfFunnelChart>
 
