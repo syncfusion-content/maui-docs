@@ -21,12 +21,15 @@ You can customize the header height `Calendar` by using the `Height` property.
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.HeaderView.Height = 100;
+this.Calendar.HeaderView = new CalendarHeaderView()
+{
+    Height = 100,
+};
 
 {% endhighlight %}
 {% endtabs %}
 
-![header-height-maui-calendar](images/header-height.png)
+![change-header-height-in-maui-calendar](images/header/change-header-height-in-maui-calendar.png)
 
 ## Header appearance
 You can customize the header style of the `Calendar` by using the [Background]((https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/SfCalendar/background.html)), [TextStyle]((https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/SfCalendar/textStyle.html)), and [TextFormat]((https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/SfCalendar/textFormat.html)) properties of [ShowNavigationArrows]((https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/SfCalendar/showNavigationArrows.html)).
@@ -39,16 +42,24 @@ You can customize the header style of the `Calendar` by using the [Background]((
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.HeaderView.Background = Colors.Gray;
-this.Calendar.HeaderView.TextFormat = "MMM yy";
-this.Calendar.HeaderView.ShowNavigationArrows = true;
-this.Calendar.HeaderView.TextStyle.TextColor = Colors.Black;
-this.Calendar.HeaderView.TextStyle.FontSize = 14;
+CalendarTextStyle textStyle = new CalendarTextStyle()
+{
+    TextColor = Colors.Black,
+    FontSize = 14,
+};
+
+this.Calendar.HeaderView = new CalendarHeaderView()
+{
+    Background = Colors.Grey,
+    TextFormat = "MMM yy",
+    ShowNavigationArrows = true,
+    TextStyle = textStyle,
+};
 
 {% endhighlight %}
 {% endtabs %}
 
-![header-appearance-maui-calendar](images/header-appearance.png)
+![change-header-appearance-in-maui-calendar](images/header/change-header-appearance-in-maui-calendar.png)
 
 ## View header
 You can customize all the properties of the View Header using [HeaderView]((https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/SfCalendar/monthView/headerView.html)). By using this property you can customize the Background, Height, TextFormat and TextStyle in the Calendar.
@@ -64,12 +75,15 @@ You can customize the View Header height `Calendar` by using the `Height` proper
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.MonthView.HeaderView.Height = 100;
+this.Calendar.MonthView.HeaderView = new CalendarMonthHeaderView
+{
+    Height = 50,
+};
 
 {% endhighlight %}
 {% endtabs %}
 
-![view-header-height-maui-calendar](images/view-header-height.png)
+![change-view-header-height-in-maui-calendar](images/header/change-view-header-height-in-maui-calendar.png)
 
 ### View header appearance
 You can customize the view header style of the `Calendar` by using the [Background]((https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/SfCalendar/background.html)), [TextStyle]((https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/SfCalendar/textStyle.html)), and [TextFormat]((https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/SfCalendar/textFormat.html)) properties.
@@ -82,12 +96,20 @@ You can customize the view header style of the `Calendar` by using the [Backgrou
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.MonthView.HeaderView.Background = Colors.Gray;
-this.Calendar.MonthView.HeaderView.TextFormat = "ddd";
-this.Calendar.MonthView.HeaderView.TextStyle.TextColor = Colors.Black;
-this.Calendar.MonthView.HeaderView.TextStyle.FontSize = 14;
+CalendarTextStyle textStyle = new CalendarTextStyle()
+{
+    TextColor = Colors.Black,
+    FontSize = 14,
+};
+
+this.Calendar.MonthView.HeaderView = new CalendarMonthHeaderView
+{
+    Background = Colors.Grey,
+    TextFormat = "ddd",
+    TextStyle = textStyle,
+};
 
 {% endhighlight %}
 {% endtabs %}
 
-![view-header-appearance-maui-calendar](images/view-header-appearance.png)
+![change-view-header-appearance-in-maui-calendar](images/header/change-view-header-appearance-in-maui-calendar.png)
