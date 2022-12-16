@@ -604,6 +604,7 @@ chart.Series.Add(series);
 </chart:SfPyramidChart>
 
 {% endhighlight %} 
+{% highlight C# %}
 SfPyramidChart chart = new SfPyramidChart();
 . . .    
 DataPointSelectionBehavior selection = new DataPointSelectionBehavior();
