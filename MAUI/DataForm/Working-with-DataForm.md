@@ -11,9 +11,9 @@ documentation: UG
 
 ## Auto-generating DataFormItems for the data field
 
-By default, the [DataFormItems]`Link` will be generated based on the property type. For example, the [DataFormTextItem]`Link` will be created for the `string` type property. 
+By default, the [SfDataForm.Items] will be generated based on the property type. For example, the [DataFormTextItem] will be created for the `string` type property. 
 
-The [DataFormItem]`Link` generation depends on the type and attribute defined for the property.
+The [DataFormItem] generation depends on the type and attribute defined for the property.
 The following tables lists the several types of `DataFormItem` and its constraints for auto generation:
 
 <table>
@@ -86,7 +86,7 @@ Generated for TimeSpan, TimeOnly, DateTime and DateTimeOffset property with [Dat
 {{'[Picker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/picker?view=net-maui-7.0)'| markdownify }}
 </td>
 <td>
-Generated for Enum type property and the property with [EnumDataTypeAttribute] attribute. 
+Generated for Enum type property. 
 </td>
 </tr>
 <tr>
@@ -98,7 +98,6 @@ Generated for Enum type property and the property with [EnumDataTypeAttribute] a
 </td>
 <td>
 Generated for the Bool type property.
-[BoolDataTypeAttribute]
 </td>
 </tr>
 <tr>
@@ -110,7 +109,6 @@ Generated for the Bool type property.
 </td>
 <td>
 Generated for the Bool type property.
-[BoolDataTypeAttribute]
 </td>
 </tr>
 <tr>
@@ -121,7 +119,7 @@ Generated for the Bool type property.
 {{'[SfComboBox](https://help.syncfusion.com/maui/combobox)'| markdownify }}
 </td>
 <td>
-Generated for Enum type property and the property with [EnumDataTypeAttribute] attribute. 
+Generated for Enum type property. 
 </td>
 </tr><tr>
 <td>
@@ -131,7 +129,7 @@ Generated for Enum type property and the property with [EnumDataTypeAttribute] a
 {{'[SfAutoComplete](https://help.syncfusion.com/maui/autocomplete)'| markdownify }}
 </td>
 <td>
-Generated for Enum type property and the property with [EnumDataTypeAttribute] attribute. 
+Generated for Enum type property. 
 </td>
 </tr>
 <tr>
@@ -151,10 +149,10 @@ You can customize the property settings or cancel the generation of `DataFormIte
 
 ## Customize auto generated fields
 
-You can customize or cancel the generated `DataFormItem` by handling the [GenerateDataFormItem]`Link`event. This event occurs when the field is auto-generated for public and non-static property of the data object.
+You can customize or cancel the generated `DataFormItem` by handling the [GenerateDataFormItem] event. This event occurs when the field is auto-generated for public and non-static property of the data object.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
     <?xml version="1.0" encoding="utf-8" ?>
     <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -167,7 +165,7 @@ You can customize or cancel the generated `DataFormItem` by handling the [Gener
     </ContentPage>
 
 {% endhighlight %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
     dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
@@ -178,20 +176,19 @@ You can customize or cancel the generated `DataFormItem` by handling the [Gener
 {% endhighlight %}
 {% endtabs %}
 
-[GenerateDataFormItemEventArgs]`Link` provides the information about the auto-generated.  [GenerateDataFormItemEventArgs.DataFormItem] `Link`  property returns the newly created `DataFormItem`.
+[GenerateDataFormItemEventArgs]  provides the information about the auto-generated[DataFormViewItem].  [GenerateDataFormItemEventArgs.DataFormItem]   property returns the newly created `DataFormGroupItem`.
 
 ## Cancel DataFormItem generation of the data field
 
-You can cancel the specific [DataFormItem]`Link` adding to the data form by handling the `GenerateDataFormItem` event or by defining display attribute to avoid the particular data field being displayed.
+You can cancel the specific [DataFormItem] adding to the data form by handling the `GenerateDataFormItem` event or by defining display attribute to avoid the particular data field being displayed.
 
 #### Using attributes
 
-You can set [AutoGenerateField]`Link` to `false` for canceling the `DataFormItem` generation.
+You can set [AutoGenerateField] to `false` for canceling the `DataFormItem` generation.
 
 {% tabs %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
-    private int id;
     [Display(AutoGenerateField = false)]
     public int ID { get; set; } 
     
@@ -203,7 +200,7 @@ You can set [AutoGenerateField]`Link` to `false` for canceling the `DataFormItem
 In the following code, the `DataFormItem` generation for the `MiddleName` property is canceled by setting the `Cancel` property to true.
 
 {% tabs %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
     dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
@@ -217,12 +214,12 @@ In the following code, the `DataFormItem` generation for the `MiddleName` prope
 
 ## Changing property settings
 
-You can change the property of [DataFormItem]`Link` in the `GenerateDataFormItem` event.
+You can change the property of [DataFormItem] in the `GenerateDataFormItem` event.
 
 Here, `Salary` data field is restricted from being edited in the data form.
 
 {% tabs %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
     dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
@@ -241,12 +238,12 @@ Here, `Salary` data field is restricted from being edited in the data form.
 
 #### Changing DataFormItem visibility
 
-You can change the [DataFormItem]`Link`  visibility by using the [IsVisible]`Link` property in the `DataFormItem`.
+You can change the [DataFormItem]  visibility by using the [IsVisible] property in the `DataFormItem`.
 
 Here, `LastName` data field will be hidden.
 
 {% tabs %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
     dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
@@ -269,25 +266,23 @@ You can display the watermark in the editor by defining the display attribute or
 
 #### Using attribute
 
-You can show the watermark in the editor by setting the [Prompt]`Link` in display attribute.
+You can show the watermark in the editor by setting the [Prompt] in display attribute.
 
 {% tabs %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
-    
     [Display(Prompt = "Enter middle name")]
     public string MiddleName { get; set; }
     
-}
 {% endhighlight %}
 {% endtabs %}
 
 #### Using event
 
-You can show the watermark in the editor by using the [PlaceholderText] `Link` property in [DataFormItem] `Link`.
+You can show the watermark in the editor by using the [PlaceholderText] property in [DataFormItem].
 
 {% tabs %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
     dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
@@ -308,10 +303,10 @@ You can show the watermark in the editor by using the [PlaceholderText] `Link` p
 
 You can display the color for the watermark in the editor by using `GenerateDataFormItem` event.
 
-You can change the color for the watermark in the editor by using the [PlaceholderColor] `Link` property in [DataFormItem] `Link` .
+You can change the color for the watermark in the editor by using the [PlaceholderColor]  property in [DataFormItem] .
 
 {% tabs %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
     dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
@@ -320,8 +315,10 @@ You can change the color for the watermark in the editor by using the [Placehold
         if (e.DataFormItem != null)
         {
             if (e.DataFormItem.FieldName == "Description")
+            {
                 e.DataFormItem.PlaceholderText = "Enter description";
                 e.DataFormItem.PlaceholderColor = Colors.MistyRose;
+            }
         }
     }
 {% endhighlight %}
@@ -329,12 +326,12 @@ You can change the color for the watermark in the editor by using the [Placehold
 
 ## Setting Padding
 
-You can create a space around a label and editor by using [Padding]`Link` property in the `DataFormItem`.
+You can create a space around a label and editor by using [Padding] property in the `DataFormItem`.
 
 Here, `FirstName` data field will be changed from the default position.
 
 {% tabs %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
     dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
@@ -344,7 +341,7 @@ Here, `FirstName` data field will be changed from the default position.
         {
             if (e.DataFormItem.FieldName == "LastName")
             {
-                e.DataFormItem.Padding = new thickness(10,0,10,0);
+                e.DataFormItem.Padding = new Thickness(10,0,10,0);
             }
         }
     }
@@ -357,10 +354,10 @@ By default property name should be displayed as label. You can change the label 
 
 #### Using attribute
 
-You can change the label text by setting the [Name]`Link` in display attribute.
+You can change the label text by setting the [Name] in display attribute.
 
 {% tabs %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
     
     [Display(Name = "FirstName")]
@@ -372,10 +369,10 @@ You can change the label text by setting the [Name]`Link` in display attribute.
 
 #### Using event
 
-You can change the label text by using the [LabelText] `Link` property in [DataFormItem] `Link`.
+You can change the label text by using the [LabelText] property in [DataFormItem] .
 
 {% tabs %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
     dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
@@ -401,7 +398,7 @@ By default the label should be generated by property name. You can remove label 
 You can remove the label text for editor by setting [ShowLabel] as false in dataformdisplayOption attribute.
 
 {% tabs %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
     
     [DataFormDisplayOptions(ShowLabel = false)]
@@ -413,10 +410,10 @@ You can remove the label text for editor by setting [ShowLabel] as false in data
 
 #### Using events
 
-You can remove the label text for editor by using the [ShowLabel] `Link` property in [DataFormItem] `Link`.
+You can remove the label text for editor by using the [ShowLabel] property in [DataFormItem].
 
 {% tabs %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
     dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
@@ -440,7 +437,7 @@ You can change the label width, label position and editor width. This is possibl
 By default label position is left.
 
 {% tabs %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
     dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
@@ -464,10 +461,10 @@ By default label position is left.
 
 You can change the background colour for the label and editor by using `GenereateDataFormItem` event.
 
-You can change the background colour for the label and editor by using the [Background] `Link` property in [DataFormItem] `Link` .
+You can change the background colour for the label and editor by using the [Background] property in [DataFormItem].
 
 {% tabs %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
     dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
@@ -490,10 +487,10 @@ By default the editor can be placed in the order of how you declare a propety in
 
 You can change the order of item in a row only if the column count more than 1 [If the column count = n , you can place a item upto n-1 position].
 
-You can change the order of item's within a row using [ItemsOrderInRow] `Link` property.
+You can change the order of item's within a row using [ItemsOrderInRow] property.
 
 {% tabs %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
     dataForm.ColumnCount = 3;
 
@@ -517,10 +514,10 @@ You can change the order of item's within a row using [ItemsOrderInRow] `Link` p
 
 You can set label icon instead of using label text. Example:- You have a PhoneNumber editor, and the editor label is PhoneNumber. Here You can use a phone image for the label.
 
-Right-click on the phone image and change the build action to "Embedded resource" and configure an image in.csproj. Directly add the name of the image by using the [LeadingLabelIcon] `Link` property in [DataFormItem] `Link`.
+Right-click on the phone image and change the build action to "Embedded resource" and configure an image in.csproj. Directly add the name of the image by using the [LeadingLabelIcon] property in [DataFormItem].
 
 {% tabs %}
-{% highlight MainPage.xaml.cs %}
+{% highlight C# %}
 
     dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
