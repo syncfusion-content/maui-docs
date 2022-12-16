@@ -604,6 +604,7 @@ chart.Series.Add(series);
 </chart:SfFunnelChart>
 
 {% endhighlight %} 
+{% highlight C# %}
 SfFunnelChart chart = new SfFunnelChart();
 . . .    
 DataPointSelectionBehavior selection = new DataPointSelectionBehavior();
