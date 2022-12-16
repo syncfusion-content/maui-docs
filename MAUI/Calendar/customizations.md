@@ -39,45 +39,16 @@ You can customize the calendar month view cell by using the `MonthView` property
             FontSize = 12,
         };
 
-        CalendarTextStyle todayTextStyle = new CalendarTextStyle()
-        {
-            TextColor = Colors.Pink,
-            FontSize = 12,
-        };
-
-        CalendarTextStyle trailingAndLeadingDatesTextStyle = new CalendarTextStyle()
-        {
-            TextColor = Colors.Green,
-            FontSize = 12,
-        };
-
-        CalendarTextStyle disableTextStyle = new CalendarTextStyle()
-        {
-            TextColor = Colors.Grey,
-            FontSize = 12,
-        };
-
-        CalendarTextStyle specialDateTextStyle = new CalendarTextStyle()
-        {
-            TextColor = Colors.Purple,
-            FontSize = 12,
-        };
-
-        CalendarTextStyle weekendDatesTextStyle = new CalendarTextStyle()
-        {
-            TextColor = Colors.Red,
-            FontSize = 12,
-        };
-
-        this.Calendar.MinimumDate = DateTime.Now.AddDays(-5);
-        this.Calendar.MaximumDate = DateTime.Now.AddDays(5);
-        this.Calendar.EnablePastDates = false;
+        this.Calendar.MinimumDate = DateTime.Now.AddDays(-15);
+        this.Calendar.MaximumDate = DateTime.Now.AddDays(20);
+        this.Calendar.EnablePastDates = true;
         this.Calendar.SelectableDayPredicate = (date) =>
         {
-            if (date.DayOfWeek == DayOfWeek.Sunday || date.DayOfWeek == DayOfWeek.Saturday)
+            if (date.Date == DateTime.Now.AddDays(3).Date || date.Date == DateTime.Now.AddDays(6).Date || date.Date == DateTime.Now.AddDays(-3).Date || date.Date == DateTime.Now.AddDays(-6).Date)
             {
                 return false;
             }
+
             return true;
         };
 
@@ -96,21 +67,21 @@ You can customize the calendar month view cell by using the `MonthView` property
         this.Calendar.Background = Colors.PaleGreen;
         this.Calendar.MonthView.TextStyle = textStyle;
         this.Calendar.MonthView.TodayBackground = Colors.Pink;
-        this.Calendar.MonthView.TodayTextStyle = todayTextStyle;
+        this.Calendar.MonthView.TodayTextStyle = textStyle;
         this.Calendar.ShowTrailingAndLeadingDates = true;
         this.Calendar.MonthView.TrailingLeadingDatesBackground = Colors.Green;
-        this.Calendar.MonthView.TrailingLeadingDatesTextStyle = trailingAndLeadingDatesTextStyle;
+        this.Calendar.MonthView.TrailingLeadingDatesTextStyle = textStyle;
         this.Calendar.MonthView.DisabledDatesBackground = Colors.Grey;
-        this.Calendar.MonthView.DisabledDatesTextStyle = disableTextStyle;
+        this.Calendar.MonthView.DisabledDatesTextStyle = textStyle;
         this.Calendar.MonthView.SpecialDatesBackground = Colors.Purple;
-        this.Calendar.MonthView.SpecialDatesTextStyle = specialDateTextStyle;
+        this.Calendar.MonthView.SpecialDatesTextStyle = textStyle;
         this.Calendar.MonthView.WeekendDatesBackground = Colors.Red;
-        this.Calendar.MonthView.WeekendDatesTextStyle = weekendDatesTextStyle;
+        this.Calendar.MonthView.WeekendDatesTextStyle = textStyle;
 
 {% endhighlight %}
 {% endtabs %}
 
-![month-view-customization-in-maui-calendar](images/getting-started/month-view-customization-in-maui-calendar.png)
+![monthview-customization-in-maui-calendar](images/customization/monthview-customization-in-maui-calendar.png)
 
 >**NOTE**
 * The Background color and text style will be applied based on the following order: selectableDayPredicate dates, special dates, disable dates, today date, trailingLeading Dates and weekend dates.
@@ -126,12 +97,15 @@ You can customize the month format of the `Calendar` by using the [TextFormat](h
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.MonthView.HeaderView.TextFormat = "dddd";
+this.Calendar.MonthView.HeaderView = new CalendarMonthHeaderView()
+{
+    TextFormat = "ddd",
+};
 
 {% endhighlight %}
 {% endtabs %}
 
-![Month cell view header customization](images/customizations/monthcell_customization.png)
+![view-header-text-format-in-maui-calendar](images/customization/view-header-text-format-in-maui-calendar.png)
 
 ## Year cell customization
 You can customize the calendar `year`, `decade` and `century` view by using the `YearView` property of `SfCalendar`. 
@@ -147,41 +121,24 @@ You can customize the calendar `year`, `decade` and `century` view by using the 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-{% include_relative code-snippet/year-view.xaml %}
+{% include_relative code-snippet/decade-view.xaml %}
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-                CalendarTextStyle textStyle = new CalendarTextStyle()
+        CalendarTextStyle textStyle = new CalendarTextStyle()
         {
             TextColor = Colors.Black,
             FontSize = 12,
         };
 
-        CalendarTextStyle todayTextStyle = new CalendarTextStyle()
-        {
-            TextColor = Colors.Pink,
-            FontSize = 12,
-        };
-
-        CalendarTextStyle leadingDatesTextStyle = new CalendarTextStyle()
-        {
-            TextColor = Colors.Green,
-            FontSize = 12,
-        };
-
-        CalendarTextStyle disableTextStyle = new CalendarTextStyle()
-        {
-            TextColor = Colors.Grey,
-            FontSize = 12,
-        };
-
-        this.Calendar.MinimumDate = DateTime.Now.AddMonths(-2);
-        this.Calendar.MaximumDate = DateTime.Now.AddMonths(2);
+        this.Calendar.View = CalendarView.Decade;
+        this.Calendar.MinimumDate = DateTime.Now.AddYears(-1);
+        this.Calendar.MaximumDate = DateTime.Now.AddYears(8);
         this.Calendar.EnablePastDates = false;
         this.Calendar.SelectableDayPredicate = (date) =>
         {
-            if (date.Month == DateTime.Now.AddMonths(1).Month)
+            if (date.Year == DateTime.Now.AddYears(3).Year)
             {
                 return false;
             }
@@ -191,17 +148,17 @@ You can customize the calendar `year`, `decade` and `century` view by using the 
         this.Calendar.Background = Colors.PaleGreen;
         this.Calendar.YearView.TextStyle = textStyle;
         this.Calendar.YearView.TodayBackground = Colors.Pink;
-        this.Calendar.YearView.TodayTextStyle = todayTextStyle;
+        this.Calendar.YearView.TodayTextStyle = textStyle;
         this.Calendar.ShowTrailingAndLeadingDates = true;
         this.Calendar.YearView.LeadingDatesBackground = Colors.Green;
-        this.Calendar.YearView.LeadingDatesTextStyle = leadingDatesTextStyle;
+        this.Calendar.YearView.LeadingDatesTextStyle = textStyle;
         this.Calendar.YearView.DisabledDatesBackground = Colors.Grey;
-        this.Calendar.YearView.DisabledDatesTextStyle = disableTextStyle;
+        this.Calendar.YearView.DisabledDatesTextStyle = textStyle;
 
 {% endhighlight %}
 {% endtabs %}
 
-![year-view-customization-in-maui-calendar](images/getting-started/year-view-customization-in-maui-calendar.png)
+![decadeview-customization-in-maui-calendar](images/customization/decadeview-customization-in-maui-calendar.png)
 
 >**NOTE**
 * The Background color and text style will be applied based on the following order: selectableDayPredicate dates, disable dates, today date and leading Dates.
@@ -217,12 +174,15 @@ You can customize the month format of the `Calendar` by using the [MonthFormat](
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.YearView.MonthFormat = "MMM";
+this.Calendar.YearView = new CalendarYearView()
+{
+    MonthFormat = "MMMM",
+};
 
 {% endhighlight %}
 {% endtabs %}
 
-![Year view Month Format](images/customizations/year-view-month-format.png)
+![yearview-text-format-in-maui-calendar](images/customization/yearview-text-format-in-maui-calendar.png)
 
 ## Selection cell customization
 
@@ -246,15 +206,9 @@ You can customize the Selection cell background and textStyle in Month, Year, De
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-        CalendarTextStyle selectionTextStyle = new CalendarTextStyle()
+        CalendarTextStyle textStyle = new CalendarTextStyle()
         {
-            TextColor = Colors.Purple,
-            FontSize = 12,
-        };
-
-        CalendarTextStyle rangeTextStyle = new CalendarTextStyle()
-        {
-            TextColor = Colors.Pink,
+            TextColor = Colors.Black,
             FontSize = 12,
         };
 
@@ -264,10 +218,10 @@ You can customize the Selection cell background and textStyle in Month, Year, De
         this.Calendar.StartRangeSelectionBackground = Colors.Purple;
         this.Calendar.EndRangeSelectionBackground = Colors.Purple;
         this.Calendar.SelectionBackground = Colors.Pink;
-        this.Calendar.MonthView.SelectionTextStyle = selectionTextStyle;
-        this.Calendar.MonthView.RangeTextStyle = rangeTextStyle;
+        this.Calendar.MonthView.SelectionTextStyle = textStyle;
+        this.Calendar.MonthView.RangeTextStyle = textStyle;
 
 {% endhighlight %}
 {% endtabs %}
 
-![Month Selection cell customization Calendar(images/customizations/monthcell_selection_customization.png)
+![monthview-selection-customization-in-maui-calendar](images/customization/monthview-selection-customization-in-maui-calendar.png)

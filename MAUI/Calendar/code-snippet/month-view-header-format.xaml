@@ -1,4 +1,10 @@
 ﻿<calendar:SfCalendar  x:Name="Calendar" 
-                      View="Month"
-                      MonthView="{Calendar:CalendarMonthView HeaderView={Calendar:CalendarMonthHeaderView TextFormat=dddd}}">
+                      View="Month">
+            <Calendar:SfCalendar.MonthView>
+                <Calendar:CalendarMonthView>
+                    <Calendar:CalendarMonthView.HeaderView>
+                        <Calendar:CalendarMonthHeaderView TextFormat="ddd" />
+                    </Calendar:CalendarMonthView.HeaderView>
+                </Calendar:CalendarMonthView>
+            </Calendar:SfCalendar.MonthView>
 </calendar:SfCalendar>
