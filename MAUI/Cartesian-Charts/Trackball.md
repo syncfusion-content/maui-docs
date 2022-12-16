@@ -9,13 +9,14 @@ documentation: ug
 
 # Trackball in .NET MAUI Chart
 
-Trackball, allowing you to display the tooltip for the nearest data points closer to the point where you interact with the chart area. On mobile, long press on the chart to show the trackball, and drag the chart to change the position of the trackball continuously. Move the cursor over the chart area to display the trackball on the desktop.
+Trackball, which allows you to show the tooltip for the nearest data points when you interact with the chart area. On mobile, long press the chart to show the trackball, and drag the chart to change the trackball's location constantly. To display the trackball on the desktop, move the cursor over the chart area.
 
 ## Enable Trackball 
 
-To enable the trackball in the chart, create an instance of the [ChartTrackballBehavior]() and set it to the [TrackballBehavior]() property.The following properties are used to show or hide the line and labels.
-* [ShowMarkers](), of type `bool`, indicates the shows or hides trackball markers. The default value is true.
-* [ShowLine](), of type `bool`, indicates the shows or hides the trackball line. The default value is true.
+To enable the trackball in the chart, create an instance of the [ChartTrackballBehavior]() and set it to the [TrackballBehavior]() property. The following properties are used to show or hide the line and tooltip.
+
+* [ShowMarkers](), of type `bool`, indicates the shows or hides trackball markers. The default value is `True`.
+* [ShowLine](), of type `bool`, indicates the shows or hides the trackball line. The default value is `True`.
 
 
 {% tabs %}
@@ -25,8 +26,7 @@ To enable the trackball in the chart, create an instance of the [ChartTrackballB
 <chart:SfCartesianChart>
   ...
    <chart:SfCartesianChart.TrackballBehavior>
-      <chart:ChartTrackballBehavior ShowLine="True"  
-                                    ShowMarkers="True"/>
+      <chart:ChartTrackballBehavior/>
    </chart:SfCartesianChart.TrackballBehavior>
      ...
 </chart:SfCartesianChart>
@@ -38,8 +38,6 @@ To enable the trackball in the chart, create an instance of the [ChartTrackballB
  SfCartesianChart chart = new SfCartesianChart();
  ...
  ChartTrackballBehavior trackball = new ChartTrackballBehavior();
- trackball.ShowLine = true;
- trackball.ShowMarkers = true;
  chart.TrackballBehavior= trackball;
 
 this.Content = chart;
@@ -50,7 +48,7 @@ this.Content = chart;
 
 ## Enable Label Display Mode
 
-The Label [DisplayMode]() property is used to specify whether to display a label for all the data points along the trackball line or display only the nearest data point label. The following are the options you can set for this property.
+The [DisplayMode]() property specifies whether a label should be displayed for all data points along the trackball line or only the nearest data point label. The following choices are available for this property.
 
 * `FloatAllPoints` – Displays labels for all the data points along the vertical line.
 * `NearestPoint` – Displays label for a single data point nearer to the touch point on the chart area.
@@ -112,7 +110,7 @@ The [LabelStyle]() property provides to customize the trackball labels. These op
                               FontSize="15" 
                               CornerRadius="5"
                               StrokeWidth="2" 
-                              Stroke="Green" />
+                              Stroke="Gray" />
    </chart:ChartTrackballBehavior.LabelStyle>
   ...
 </chart:SfCartesianChart>
@@ -128,7 +126,7 @@ labelStyle.Background = Colors.LightBlue;
 labelStyle.FontSize = 15;
 labelStyle.CornerRadius = 5;
 labelStyle.StrokeWidth = 2;
-labelStyle.Stroke = Colors.Green;
+labelStyle.Stroke = Colors.Gray;
 
 this.Content = chart;
 
@@ -151,7 +149,7 @@ this.Content = chart;
 <chart:SfCartesianChart>
    ...
     <chart:ChartTrackballBehavior.LineStyle>
-        <chart:ChartLineStyle Stroke="yellow"   
+        <chart:ChartLineStyle Stroke="Gray"   
                               StrokeDashArray="4"/>     
     </chart:ChartTrackballBehavior.LineStyle>
 ...
@@ -164,7 +162,7 @@ this.Content = chart;
 SfCartesianChart chart = new SfCartesianChart();
 . . .
 ChartLineStyle lineStyle = new ChartLineStyle();
-lineStyle.Stroke = Colors.Yellow;
+lineStyle.Stroke = Colors.Gray;
 lineStyle.StrokeDashArray = 4;
 
 this.Content = chart;
@@ -175,7 +173,7 @@ this.Content = chart;
 
 ### Trackball Markers Customization
 
-The [MarkerSettings]() property provides to customize the trackball markers.The following properties are used to customize the trackball marker.
+The [MarkerSettings]() property provides to customize the trackball markers. The trackball marker can be customised using the following properties.
 
 * `Type`, of type `ShapeType`, used to set the marker shape type.
 * `Stroke`, of type `Brush`, used to change the marker border color.
@@ -191,7 +189,7 @@ The [MarkerSettings]() property provides to customize the trackball markers.The 
 <chart:SfCartesianChart>
    ...
     <chart:ChartMarkerSettings Type="InvertedTriangle"  
-                               Fill="Blue" 
+                               Fill="Brown" 
                                Stroke="Red" 
                                StrokeWidth="1.5"
                                Width="15" 
@@ -209,7 +207,7 @@ SfCartesianChart chart = new SfCartesianChart();
 ChartMarkerSettings markerStyle = new ChartMarkerSettings()
 {
    markerStyle.Type = ShapeType.InvertedTriangle,
-   markerStyle.Fill = Colors.Blue,
+   markerStyle.Fill = Colors.Brown,
    markerStyle.Stroke = Colors.Red,
    markerStyle.StrokeWidth = 1.5,
    markerStyle.Width = 15,
@@ -224,7 +222,7 @@ this.Content = chart;
 
 ## Show or Hide the Series Label
 
-This feature is used to show or hide the trackball label of the series by using the [CartesianSeries.ShowTrackballLabel]() property. The default value is True.
+The [CartesianSeries.ShowTrackballLabel]() property is used to show or hide the series trackball label. The default value is `True`.
 
 {% tabs %}
 
@@ -247,10 +245,10 @@ SfCartesianChart chart = new SfCartesianChart();
 . . .
 LineSeries lineSeries = new LineSeries()
 {
-  ShowTrackballLabel = False,
+  ShowTrackballLabel = false,
   XBindingPath = "Name",
   YBindingPath = "Run",
-  ItemSource = new ViewModel().Data
+  ItemsSource = new ViewModel().Data
 
 };
 
@@ -262,7 +260,7 @@ this.Content = chart;
 
 ## Show or Hide Trackball Label in Axis
 
-This feature highlights the respective axis label when the trackball moves across the axis. The [ChartAxis.ShowTrackballLabel]() property is used to show or hide the trackball label of the axis. The [ChartAxis.TrackballLabelStyle]() property is used to customize its appearance. The default value of the [ChartAxis.ShowTrackballLabel]() is False.
+When the trackball moves across the axis, this feature highlights the related axis label. The [ChartAxis.ShowTrackballLabel]() property is used to show or hide the axis's trackball label. The [ChartAxis.TrackballLabelStyle]() property is used to customize the appearance of the label. The default value of the [ChartAxis.ShowTrackballLabel]() is `False`.
 
 {% tabs %}
 
@@ -281,10 +279,10 @@ This feature highlights the respective axis label when the trackball moves acros
 
 SfCartesianChart chart = new SfCartesianChart();
 . . .
-CategoryAxis primaryAxis = new CategoryAxis()
+CategoryAxis chartAxis = new CategoryAxis()
 {
-  primaryAxis.IsInversed= False,
-  primaryAxis.ShowTrackballLabel = False
+  chartAxis.IsInversed= false,
+  chartAxis.ShowTrackballLabel = false
 }
 
 this.Content = chart;
