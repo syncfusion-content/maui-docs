@@ -321,3 +321,7 @@ private void LinearProgressBar_ProgressCompleted(object sender, ProgressValueEve
 </td>
 </tr>
 </table>
+
+## Unsupported feaures from Xamarin.Forms
+
+* In Xamarin, the [`Padding`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ProgressBar.SfLinearProgressBar.html#Syncfusion_XForms_ProgressBar_SfLinearProgressBar_Padding) can be adjusted at all the four (left, top, right and bottom) sides individually. But in .NET MAUI, the padding  is applicable only at the left and right ends of the indicator using `ProgressPadding`. Using [`ProgressHeight`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html#Syncfusion_Maui_ProgressBar_SfLinearProgressBar_ProgressHeight) and [`SecondaryProgressHeight`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html?tabs=tabid-1#Syncfusion_Maui_ProgressBar_SfLinearProgressBar_SecondaryProgressHeight) the top and bottom of the indicator can be adjusted.
