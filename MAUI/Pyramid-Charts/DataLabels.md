@@ -59,7 +59,9 @@ chart.ShowDataLabels = true;
 <chart:SfPyramidChart ShowDataLabels="True">
 . . .
  <chart:SfPyramidChart.DataLabelSettings>
-    <chart:PyramidDataLabelSettings LabelPlacement="Outer" Context="XValue" UseSeriesPalette="True">
+    <chart:PyramidDataLabelSettings LabelPlacement="Outer" 
+                                    Context="XValue" 
+                                    UseSeriesPalette="True">
         <chart:PyramidDataLabelSettings.LabelStyle>
             <chart:ChartDataLabelStyle Margin="2"/>
         </chart:PyramidDataLabelSettings.LabelStyle>

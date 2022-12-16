@@ -367,7 +367,9 @@ To customize the data label appearance, create an instance of the [ChartDataMark
 {% highlight xaml %}
 
 <chart:SfChart>  
-    <chart:FunnelSeries ItemsSource ="{Binding Data}" XBindingPath="XValue" YBindingPath="YValue">
+    <chart:FunnelSeries ItemsSource ="{Binding Data}" 
+                        XBindingPath="XValue" 
+                        YBindingPath="YValue">
 	    <chart:FunnelSeries.DataMarker>
 	    <chart:ChartDataMarker ShowLabel="True">
 		    <chart:ChartDataMarker.LabelStyle>
@@ -426,11 +428,11 @@ chart.Series.Add(series);
             <chart:FunnelDataLabelSettings.LabelStyle>
                 <chart:ChartDataLabelStyle TextColor="Blue" 
                                            Stroke="Red" 
-					                       StrokeWidth="2" 
-					                       Background="Aqua" 
-					                       Margin="10" 
-					                       FontSize="16"
-					                       FontAttributes="Bold"/>
+                                           StrokeWidth="2" 
+                                           Background="Aqua" 
+                                           Margin="10" 
+                                           FontSize="16"
+                                           FontAttributes="Bold"/>
             </chart:FunnelDataLabelSettings.LabelStyle>
         </chart:FunnelDataLabelSettings>
     </chart:SfFunnelChart.DataLabelSettings>
@@ -474,11 +476,10 @@ To customize the tooltip appearance, create an instance of the [ChartTooltipBeha
 <chart:SfChart>
 . . . 
     <chart:SfChart.ChartBehaviors>
-	    <chart:ChartTooltipBehavior 
-        BackgroundColor="Blue" 
-        TextColor="White" 
-        Margin="5"
-        FontSize="15"/>
+        <chart:ChartTooltipBehavior BackgroundColor="Blue" 
+                                    TextColor="White" 
+                                    Margin="5"
+                                    FontSize="15"/>
     </chart:SfChart.ChartBehaviors>
     
     <chart:FunnelSeries ItemsSource="{Binding Data}" 
@@ -652,10 +653,6 @@ chart.SelectionBehavior = selection;
 ## Unsupported features from Xamarin.Forms
 
 * In.NET MAUI, the [ChartDataPoint](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.ChartDataPoint.html#) model class was no longer available. Instead, create your own model.
-
-## Known issues
-
-* The legend item was not dynamically added.
 
 ## Support and feedback
 
