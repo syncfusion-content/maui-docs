@@ -28,7 +28,7 @@ You can customize the calendar month view cell by using the `MonthView` property
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-{% include_relative code-snippet/month-view.xaml %}
+{% include_relative code-snippet/month-view-customization.xaml %}
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -121,7 +121,7 @@ You can customize the calendar `year`, `decade` and `century` view by using the 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-{% include_relative code-snippet/decade-view.xaml %}
+{% include_relative code-snippet/decade-view-customization.xaml %}
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -201,7 +201,7 @@ You can customize the Selection cell background and textStyle in Month, Year, De
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-{% include_relative code-snippet/month-view.xaml %}
+{% include_relative code-snippet/month-view-selection-customization.xaml %}
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}

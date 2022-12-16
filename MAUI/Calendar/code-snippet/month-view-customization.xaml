@@ -1,0 +1,7 @@
+﻿<calendar:SfCalendar  x:Name="Calendar" 
+                        View="Month"
+                        Background="PaleGreen">
+            <Calendar:SfCalendar.MonthView>
+                <Calendar:CalendarMonthView TodayBackground="Pink" DisabledDatesBackground="Grey" SpecialDatesBackground="Purple" WeekendDatesBackground="Red"/>
+            </Calendar:SfCalendar.MonthView>
+</calendar:SfCalendar>
