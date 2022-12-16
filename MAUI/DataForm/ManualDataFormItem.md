@@ -9,7 +9,7 @@ documentation: UG
 
 # Working DataForm Items Manually
 
-Support has been provided to generate DataFormItems manually for the defined business model using the [Items]`Link` property of the `SfDataForm` class. You need to set the [AutoGenerateItems]`Link` property to false to restrict the auto-generation of DataFormItems. 
+You can manually create [DataFormViewItem] for the defined business model by using the [Items] property of the `SfDataForm` class. You should set the [AutoGenerateItems] property to false to restrict the auto-generation of [SfDataForm.Items]. 
 
 {% tabs %}
 {% highlight xaml %}
@@ -23,7 +23,7 @@ Support has been provided to generate DataFormItems manually for the defined bus
         </ContentPage.BindingContext>
 
         <ContentPage.Content>
-            <dataForm:SfDataForm x:Name="dataForm" DataObject="{Binding Details}"  AutoGenerateItems="false"> 
+            <dataForm:SfDataForm x:Name="dataForm" DataObject="{Binding ContactDetails}"  AutoGenerateItems="false"> 
                 <dataForm:SfDataForm.Items> 
                     <dataForm:DataFormTextItem FieldName="Name" /> 
                     <dataForm:DataFormTextItem FieldName="Password" /> 
@@ -73,20 +73,6 @@ Support has been provided to generate DataFormItems manually for the defined bus
 
     }
 
-    private IList GetItemSource(string sourceName) 
-    { 
-        var list = new List<string>(); 
-        if (sourceName == "Countries") 
-        { 
-            list.Add("India");
-            list.Add("Japan");
-            list.Add("China");
-            list.Add("USA");
-            list.Add("America");
-            list.Add("UK");
-        } 
-        return list; 
-    }
 {% endhighlight %}
 {% endtabs %}
 
@@ -109,19 +95,20 @@ Support has been provided to generate DataFormItems manually for the defined bus
 {% endhighlight %}
 
 ### Adding DataForm group manually
-Support has been provided to dynamically add the dataform items to collections using the [Items]`Link` property of `SfDataForm`.
+You can also generate [DataFormGroupItem] manually using the [Items] property of `SfDataForm`.
 
 {% tabs %}
 {% highlight XAML %}
-
-    <dataForm:DataFormGroupItem Name="Address">
+    <dataForm:SfDataForm.Items>
+            <dataForm:DataFormGroupItem Name="Address">
                     <dataForm:DataFormGroupItem.Items>
                         <dataForm:DataFormMultilineItem FieldName="Address"/>
                         <dataForm:DataFormTextItem FieldName="State"/>
                         <dataForm:DataFormTextItem FieldName="ZipCode"/>
                     </dataForm:DataFormGroupItem.Items>
-
-                </dataForm:DataFormGroupItem>
+        </dataForm:DataFormGroupItem>
+    </dataForm:SfDataForm.Items>
+    
 
 {% endhighlight %}
 {% endtabs %}
@@ -139,10 +126,33 @@ Support has been provided to dynamically add the dataform items to collections u
 {% endhighlight %}
 {% endtabs %}
 
+{% tabs %}
+{% highlight C# %}
+
+    public class DataFormModel
+    {
+        public string Name { get; set; }
+        public int Phone { get; set; }
+    }
+
+
+    public class DataFormViewModel
+    {
+        public DataFormViewModel
+        {
+            this.DataFormModel = new DataFormModel();
+        }
+
+        public DataFormModel DataFormModel { get; set; }
+        
+    }
+{% endhighlight %}
+{% endtabs %}
+
 `AddCustomItemsimages`
 
 ### Dynamically remove manually added dataform items
-Support has been provided to dynamically remove the dataform items from collections using the [Items]`Link` property of `SfDataForm`.
+You can dynamically remove the dataform items from collections using the [Items]`Link` property of `SfDataForm`.
 
 {% tabs %}
 {% highlight C# %}
@@ -155,7 +165,7 @@ Support has been provided to dynamically remove the dataform items from collecti
 `images/RemoveCustomItems`
 
 ### Dynamically clear manually added dataform items
-Support has been provided to dynamically clear the dataform items using the [Items] property of `SfDataForm`.
+You can dynamically clear the dataform items using the [Items] property of `SfDataForm`.
 
 {% tabs %}
 {% highlight C# %}
@@ -168,7 +178,7 @@ Support has been provided to dynamically clear the dataform items using the [Ite
 `images/ClearCustomItems`
 
 ### Dynamically reset manual dataform items
-Support has been provided to reset the dataform items using the [Items] property of `SfDataForm` and we can reset two or more dataform items at a time.
+You can reset the dataform items using the [Items] property of `SfDataForm` and we can reset two or more dataform items at a time.
 
 {% tabs %}
 {% highlight C# %}
@@ -186,7 +196,7 @@ Support has been provided to reset the dataform items using the [Items] property
 
 
 ### Dynamically add Dataform group items
-Support has been provided to dynamically add custom group items using [Items] property of `SfDataForm`.
+You can dynamically add custom group items using [Items] property of `SfDataForm`.
 {% tabs %}
 {% highlight C# %}
 
@@ -215,10 +225,10 @@ Support has been provided to dynamically add custom group items using [Items] pr
                 
                 <dataForm:SfDataForm.Items>
                     <dataForm:DataFormCustomItem FieldName="ProfileImage" ShowLabel="False">
-                        **<dataForm:DataFormCustomItem.EditorView>
+                        <dataForm:DataFormCustomItem.EditorView>
                             <Image Source="ContactImage.png"
                                    HeightRequest="80"/>
-                        </dataForm:DataFormCustomItem.EditorView>**
+                        </dataForm:DataFormCustomItem.EditorView>
                     </dataForm:DataFormCustomItem>
                     </dataForm:SfDataForm.Items>
                     </dataForm:SfDataForm>
