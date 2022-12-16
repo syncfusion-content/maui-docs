@@ -30,11 +30,11 @@ SfChart
 </tr>
 </table>
 
-To make the migration easier, the majority of the APIs from the Xamarin [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html) were kept in the .NET MAUI [SfFunnelChart](). Currently, most of the features have been added in the [SfFunnelChart](), but only a few are pending in the .NET MAUI along with some limitations. Please refer to the following details and the API migration information available below.
+To make the migration easier, the most of the APIs from the Xamarin [SfChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfChart.XForms.SfChart.html) were kept in the .NET MAUI [SfFunnelChart](). Currently, most of the features have been added to the [SfFunnelChart](), but only a few are pending in the .NET MAUI, along with some limitations. Please refer to the following details and the API migration information available below.
 
 ## API migration
 
-To initialize the control, import the Chart namespace and Initialize [SfFunnelChart]() as shown in the following code sample. 
+To initialize the control, import the Chart namespace and Initialize [SfFunnelChart](), as shown in the following code sample. 
 
 <table>
 <tr>
@@ -604,6 +604,7 @@ chart.Series.Add(series);
 </chart:SfFunnelChart>
 
 {% endhighlight %} 
+{% highlight C# %}
 SfFunnelChart chart = new SfFunnelChart();
 . . .    
 DataPointSelectionBehavior selection = new DataPointSelectionBehavior();
