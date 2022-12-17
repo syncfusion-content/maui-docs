@@ -135,4 +135,4 @@ N>`DocumentSource` property supports both `Stream` and `byte[]` objects.
 
 ![Getting started with .NET MAUI PDF Viewer](Images\Getting-Started\maui-pdf-viewer-getting-started.png)
 
-The **Getting Started** example project for the.NET MAUI PDF Viewer can be downloaded [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples). 
+The **Getting Started** example project for the.NET MAUI PDF Viewer can be downloaded **here**. 

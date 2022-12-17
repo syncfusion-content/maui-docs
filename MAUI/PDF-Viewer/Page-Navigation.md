@@ -86,4 +86,4 @@ pdfViewer.ScrollToOffset(100, 1000);
 {% endhighlight %}
 {% endtabs %}
 
-The example project with the page navigation functionalities can be downloaded [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples). 
+The example project with the page navigation functionalities can be downloaded here. 
