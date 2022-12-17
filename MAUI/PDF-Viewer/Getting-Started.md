@@ -55,7 +55,6 @@ N>You can also load files from local storage or URLs.
 {% tabs %}
 {% highlight c# tabtitle="PdfViewerViewModel.cs" %}
 
-using System.IO;
 using System.Reflection;
 using System.ComponentModel;
 
