@@ -372,17 +372,16 @@ To customize the data label appearance, create an instance of the [ChartDataMark
                          YBindingPath="Value">
 	    <chart:PyramidSeries.DataMarker>
 	    <chart:ChartDataMarker ShowLabel="True">
-		    <chart:ChartDataMarker.LabelStyle>
-		        <chart:DataMarkerLabelStyle 
-					TextColor="Blue" 
-					BorderColor="Red" 
-					BorderThickness="2"
-					BackgroundColor="Aqua"
-					Angle="315" 
-					Margin="5" 
-					FontSize="18" 
-					FontAttributes="Italic"/>
-			</chart:ChartDataMarker.LabelStyle>
+		  <chart:ChartDataMarker.LabelStyle>
+		    <chart:DataMarkerLabelStyle TextColor="Blue" 
+				                    	BorderColor="Red" 
+				                    	BorderThickness="2"
+					                    BackgroundColor="Aqua"
+					                    Angle="315" 
+					                    Margin="5" 
+					                    FontSize="18" 
+					                    FontAttributes="Italic"/>
+		  </chart:ChartDataMarker.LabelStyle>
 	    </chart:ChartDataMarker>
 	    </chart:PyramidSeries.DataMarker>
     </chart:PyramidSeries>
