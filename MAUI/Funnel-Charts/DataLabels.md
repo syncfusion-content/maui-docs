@@ -59,7 +59,9 @@ chart.ShowDataLabels = true;
 <chart:SfFunnelChart ShowDataLabels="True">
 . . .
  <chart:SfFunnelChart.DataLabelSettings>
-    <chart:FunnelDataLabelSettings LabelPlacement="Outer" Context="XValue" UseSeriesPalette="True">
+    <chart:FunnelDataLabelSettings LabelPlacement="Outer" 
+                                   Context="XValue" 
+                                   UseSeriesPalette="True">
         <chart:FunnelDataLabelSettings.LabelStyle>
             <chart:ChartDataLabelStyle Margin="2"/>
         </chart:FunnelDataLabelSettings.LabelStyle>

@@ -89,20 +89,20 @@ chart.TooltipBehavior = new ChartTooltipBehavior()
         <DataTemplate x:Key="tooltipTemplate">
             <StackLayout Orientation="Horizontal">
                 <Label Text="{Binding Item.XValue}"
-					   TextColor="White"
-					   FontAttributes="Bold"
-					   HorizontalOptions="Center"
-					   VerticalOptions="Center"/>
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"/>
                 <Label Text=" : " 
-					   TextColor="White"
-					   FontAttributes="Bold"
-					   HorizontalOptions="Center"
-					   VerticalOptions="Center"/>
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"/>
                 <Label Text="{Binding Item.YValue}"
-					   TextColor="White"
-					   FontAttributes="Bold"
-					   HorizontalOptions="Center"
-					   VerticalOptions="Center"/>
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"/>
             </StackLayout>
         </DataTemplate>
     </Grid.Resources>
