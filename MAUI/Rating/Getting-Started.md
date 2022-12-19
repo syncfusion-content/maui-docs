@@ -183,4 +183,4 @@ public MainPage()
 
 ![SfRating Getting Started ](images/getting-started.png)
 
-The complete Getting Started sample is available in this `link`.
+The complete Getting Started sample is available in this [link.](https://github.com/SyncfusionExamples/maui-rating-samples)
