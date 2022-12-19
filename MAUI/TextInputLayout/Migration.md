@@ -40,7 +40,7 @@ To migrate easier from Xamarin SfTextInputLayout to .NET MAUI SfTextInputLayout,
 <tr>
 <td>ContainerBackgroundColor</td>
 <td>ContainerBackground</td>
-<td>Gets or sets the background color of the container.</td></tr>
+<td>Gets or sets the background of the container.</td></tr>
 <tr>
 <td>FocusedColor<br/>UnfocusedColor<br/>ErrorColor</td>
 <td>Stroke</td>
