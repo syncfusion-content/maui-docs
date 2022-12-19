@@ -126,6 +126,40 @@ this.Content = linearProgressBar;
 
 ![.NET MAUI Linear ProgressBar with height customization](images/appearance/thickness.png)
 
+### Padding
+
+In the linear progress bar, the padding of the progress and the secondary progress indicator at the left and right ends can be adjusted by using the `ProgressPadding` property.
+
+{% tabs %} 
+
+{% highlight xaml %}
+
+<progressBar:SfLinearProgressBar Progress="30"
+                                 TrackHeight="15"
+                                 ProgressHeight="5"
+                                 SecondaryProgressHeight="5"
+                                 SecondaryProgress="70" 
+                                 ProgressPadding="5"/>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfLinearProgressBar linearProgressBar = new SfLinearProgressBar();
+linearProgressBar.Progress = 30;
+linearProgressBar.SecondaryProgress = 70;
+linearProgressBar.TrackHeight = 15;
+linearProgressBar.ProgressHeight = 5;
+linearProgressBar.SecondaryProgressHeight = 5;
+linearProgressBar.ProgressPadding = 5;
+this.Content = linearProgressBar;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![.NET MAUI Linear ProgressBar with padding adjustment](images/appearance/padding.png)
+
 ## Corner radius
 
 In the linear progress bar, the corner radius of the track, progress, and secondary progress can be customized using the [`TrackCornerRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html#Syncfusion_Maui_ProgressBar_SfLinearProgressBar_TrackCornerRadius), [`ProgressCornerRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html#Syncfusion_Maui_ProgressBar_SfLinearProgressBar_ProgressCornerRadius), and [`SecondaryProgressCornerRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html#Syncfusion_Maui_ProgressBar_SfLinearProgressBar_SecondaryProgressCornerRadius) properties, respectively.
