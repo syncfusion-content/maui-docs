@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Migrate from Xamarin to .Net MAUI DataForm (SfDataForm) | Syncfusion
-description: Learn here all about Migrating from Syncfusion Xamarin.Forms DataForm to Syncfusion .NET MAUI DataForm control.
+description: Learn about Migrating from Syncfusion Xamarin.Forms DataForm to Syncfusion .NET MAUI DataForm control.
 platform: MAUI
 control: SfDataForm
 documentation: ug
@@ -37,7 +37,7 @@ To initialize the control, import the DataForm namespace and initialize SfDataFo
 {% highlight XAML %}
 <ContentPage 
 ...
-             xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
+           xmlns:dataForm="clr-namespace:Syncfusion.XForms.DataForm;assembly=Syncfusion.SfDataForm.XForms">
         <dataForm:SfDataForm x:Name="dataForm"/>
 </ContentPage>
 {% endhighlight %}
@@ -60,8 +60,11 @@ this.Content = dataForm;
 {% highlight XAML %}
 
 <ContentPage
-xmlns:DataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
-    <dataForm:SfDataForm x:Name="dataForm"/>
+...
+    xmlns:DataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
+    <dataForm:SfDataForm x:Name="dataForm"
+                         DataObject="DataModel">
+    </dataForm:SfDataForm>
 </ContentPage>
 
 {% endhighlight %}
@@ -73,6 +76,7 @@ using Syncfusion.Maui.DataForm;
 
 SfDataForm dataForm = new SfDataForm();
 this.Content = dataForm;
+this.dataForm.DataObject = new DataModel();
 
 {% endhighlight %}
 {% endtabs %}
@@ -236,6 +240,45 @@ this.Content = dataForm;
 <th>.NET MAUI SfDataForm</th>
 <th>Description</th></tr>
 
+{% tabs %}
+{% highlight XAML %}
+<ContentPage 
+...
+            xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
+        <dataForm:SfDataForm x:Name="dataForm"/>
+</ContentPage>
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight C# %}
+
+using Syncfusion.Maui.DataForm;
+...
+
+SfDataForm dataForm = new SfDataForm();
+this.Content = dataForm;
+this.dataForm.DataObject = new DataModel();
+this.dataForm.ColumnCount = 2;
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+public class DataModel
+{
+	public string Name { get; set; }
+
+    public string Email { get; set; }
+
+    public int PhoneNumber { get; set; }
+
+    public string Address { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 <tr>
 <td>{{'[DataObject](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.SfDataForm.html#Syncfusion_XForms_DataForm_SfDataForm_DataObject)'| markdownify }}</td>
 <td>DataObject</td>
@@ -318,6 +361,61 @@ this.Content = dataForm;
 ### DataFormTextStyle
 
 The properties of `Xamarin SfDataForm` [LabelStyle](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.LabelStyle.html) are grouped to `DataFormTextStyle` in `.NET MAUI SfDataForm`
+
+{% tabs %}
+{% highlight XAML %}
+
+<ContentPage
+...
+    xmlns:DataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
+<dataForm:SfDataForm
+        x:Name="dataForm">
+        <dataForm:SfDataForm.LabelTextStyle>
+            <dataForm:DataFormTextStyle
+                TextColor="Red"
+                FontAttributes="Italic"
+                FontSize="12">                
+            </dataForm:DataFormTextStyle>
+        </dataForm:SfDataForm.LabelTextStyle>
+    </dataForm:SfDataForm>
+</ContentPage>
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight C# %}
+
+using Syncfusion.Maui.DataForm;
+…
+
+SfDataForm dataForm = new SfDataForm();
+this.Content = dataForm;
+this.dataForm.DataObject = new DataModel();
+this.dataForm.LabelTextStyle = new DataFormTextStyle()
+{
+    TextColor = Colors.Red,
+    FontAttributes = FontAttributes.Italic,
+    FontSize = 12,
+};
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+public class DataModel
+{
+	public string Name { get; set; }
+
+    public string Email { get; set; }
+
+    public int PhoneNumber { get; set; }
+
+    public string Address { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 <table>
 <tr>
@@ -965,7 +1063,7 @@ The common properties of `Xamarin SfDataForm` list items (` DataFormPickerItem`,
 * Keyboard interaction support for MacCatalyst, Android, and iOS.
 * Support for group header view customization.
 * Support for DataFormViewItem's auto height.
-* Support for programmatic scrolling to a specific editor,
+* Support for programmatic scrolling to a specific editor.
 * Support for dataform themeing.
 
 ## Known issues in .NET MAUI DataForm
