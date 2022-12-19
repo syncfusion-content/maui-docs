@@ -118,7 +118,7 @@ Specifies the required maximum input string length.
 {{'[Required](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.requiredattribute?view=net-7.0)'| markdownify }}
 </td>
 <td>
-Specifies that a data field value is required. 
+Specifies that the data field value is required. 
 </td>
 </tr>
 <tr>
@@ -142,7 +142,7 @@ Specifies enum type for the data field.
 {% tabs %}
 {% highlight MinLength attribute}
 
-    [MinLength(5,ErrorMessage ="Password length must be greater than 5 characters")]
+    [MinLength(5,ErrorMessage = "Password length must be greater than 5 characters")]
     public string Password { get; set; }
 
 {% endhighlight %}
@@ -151,7 +151,7 @@ Specifies enum type for the data field.
 {% tabs %}
 {% highlight MaxLength attribute}
 
-    [MaxLength(20,ErrorMessage ="Maximum password length should be less than 20")]
+    [MaxLength(20,ErrorMessage = "Maximum password length should be less than 20")]
     public string Password { get; set; }
 
 {% endhighlight %}
@@ -160,7 +160,7 @@ Specifies enum type for the data field.
 {% tabs %}
 {% highlight Required attribute}
 
-    [Required(AllowEmptyStrings =false, ErrorMessage ="Name is required")]
+    [Required(AllowEmptyStrings = false, ErrorMessage ="Name is required")]
     public string Name { get; set; }
 
 {% endhighlight %}
@@ -169,7 +169,7 @@ Specifies enum type for the data field.
 {% tabs %}
 {% highlight StringLength attribute}
 
-    [StringLength(20,ErrorMessage ="Name should not exceed 20 characters")]
+    [StringLength(20,ErrorMessage = "Name should not exceed 20 characters")]
     public string Name { get; set; }
 
 {% endhighlight %}
@@ -242,7 +242,7 @@ Supported data types are Text, MultilineText, Date, DateTime and Time.
 {% endtabs %}
 
 ## Custom attribute
-The data form supports the following custom attribute, and these attributes can be accessible using `Syncfusion.Maui.DataForm`.
+The data form supports the following custom attribute, and these attributes can be accessible using `Syncfusion.Maui.DataForm` assembly.
 
 ### DataFormDisplayOptions attribute
 
@@ -257,7 +257,7 @@ Details
 </tr>
 <tr>
 <td>
-[RowSpan]
+RowSpan
 </td>
 <td>
 Specifies the row span for the data form item.
@@ -265,7 +265,7 @@ Specifies the row span for the data form item.
 </tr>
 <tr>
 <td>
-[ColumnSpan]
+ColumnSpan
 </td>
 <td>
 Specifies the column span for the data form item.
@@ -273,7 +273,7 @@ Specifies the column span for the data form item.
 </tr>
 <tr>
 <td>
-[ValidMessage]
+ValidMessage
 </td>
 <td>
 Specifies positive message to be shown when validation is passed. 
@@ -281,7 +281,7 @@ Specifies positive message to be shown when validation is passed.
 </tr>
 <tr>
 <td>
-[ShowLabel]
+ShowLabel
 </td>
 <td>
 Specifies whether the label should be visible or not.
@@ -289,7 +289,7 @@ Specifies whether the label should be visible or not.
 </tr>
 <tr>
 <td>
-[RowOrder]
+RowOrder
 </td>
 <td>
 Specifies the row order of field in the data form
@@ -297,7 +297,7 @@ Specifies the row order of field in the data form
 </tr>
 <tr>
 <td>
-[ItemsOrderInRow]
+ItemsOrderInRow
 </td>
 <td>
 Specifies the ItemsOrderInRow property to display multiple editors in a single row. Two items with the same RowOrder property value are placed in this row according to their ItemOrderInRow property values.
@@ -340,7 +340,7 @@ Details
 </tr>
 <tr>
 <td>
-[MaximumDate] 
+MaximumDate
 </td>
 <td>
 Specifies the maximum date that can be selected in date editor.
@@ -348,7 +348,7 @@ Specifies the maximum date that can be selected in date editor.
 </tr>
 <tr>
 <td>
-[MinimumDate] 
+MinimumDate
 </td>
 <td>
 Specifies the minimum date that can be selected in date editor.
@@ -356,10 +356,10 @@ Specifies the minimum date that can be selected in date editor.
 </tr>
 <tr>
 <td>
-[DisplayFormat]
+DisplayFormat
 </td>
 <td>
-Specifies the format of [MaximumDate] and [MinumumDate] used in attribute.
+Specifies the format of `MaximumDate` and `MinumumDate` used in attribute.
 </td>
 </tr>
 </table>
