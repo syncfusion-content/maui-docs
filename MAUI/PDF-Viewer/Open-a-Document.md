@@ -23,7 +23,7 @@ The document source types accepted by the `SfPdfViewer` are `Stream` and `byte[]
 {% highlight c# %}
 // Load the document from Stream
 Stream pdfDocumentStream = typeof(App).GetTypeInfo().Assembly.GetManifestResourceStream("GettingStarted.Assets.PDF_Succinctly.pdf");
-pdfViewer.DocumentSource = pdfDocumentStream;
+PdfViewer.DocumentSource = pdfDocumentStream;
 {% endhighlight %}
 {% endtabs %}
 
@@ -34,7 +34,7 @@ pdfViewer.DocumentSource = pdfDocumentStream;
 // Load the document from Byte array
 HttpClient httpClient = new HttpClient();
 HttpResponseMessage response = await httpClient.GetAsync("https://www.syncfusion.com/downloads/support/directtrac/general/pd/PDF_Succinctly1928776572");
-pdfViewer.DocumentSource = await response.Content.ReadAsByteArrayAsync();
+PdfViewer.DocumentSource = await response.Content.ReadAsByteArrayAsync();
 {% endhighlight %}
 {% endtabs %}
 
@@ -47,7 +47,7 @@ N>While switching between or opening different documents, the previous loaded do
 {% tabs %}
 {% highlight c# %}
 //Unload the document from the PDF viewer.
-pdfViewer.UnloadDocument();
+PdfViewer.UnloadDocument();
 {% endhighlight %}
 {% endtabs %}
 
@@ -61,7 +61,7 @@ The `DocumentLoaded` event triggers after the document is loaded in the `SfPdfVi
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfPdfViewer x:Name="pdfViewer " DocumentSource="{Binding PdfDocumentStream}" DocumentLoaded="PdfViewer_DocumentLoaded">
+<syncfusion:SfPdfViewer x:Name="PdfViewer" DocumentSource="{Binding PdfDocumentStream}" DocumentLoaded="PdfViewer_DocumentLoaded">
 {% endhighlight %}
 
 {% highlight c# %}
@@ -94,7 +94,7 @@ The `DocumentLoadFailedEventArgs` will return the error `Message` and `Exception
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfPdfViewer x:Name="pdfViewer " DocumentSource="{Binding PdfDocumentStream}" DocumentLoadFailed="PdfViewer_DocumentLoadFailed">
+<syncfusion:SfPdfViewer x:Name="PdfViewer" DocumentSource="{Binding PdfDocumentStream}" DocumentLoadFailed="PdfViewer_DocumentLoadFailed">
 {% endhighlight %}
 
 {% highlight c# %}

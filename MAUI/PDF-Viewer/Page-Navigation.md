@@ -18,9 +18,9 @@ The `PageCount` property returns the total number of pages in a PDF document. An
 {% tabs %}
 {% highlight c# %}
 // Returns total number of pages
-int totalPageCount = pdfViewer.PageCount;
+int totalPageCount = PdfViewer.PageCount;
 // Returns current page number
-int currentPageNumber = pdfViewer.PageNumber;
+int currentPageNumber = PdfViewer.PageNumber;
 {% endhighlight %}
 {% endtabs %}
 
@@ -31,7 +31,7 @@ The `GoToPage()` method helps you navigate to the specified page number in a PDF
 {% tabs %}
 {% highlight c# %}
 // Navigate to the page number 4.
-pdfViewer.GoToPage(4);
+PdfViewer.GoToPage(4);
 {% endhighlight %}
 {% endtabs %}
 
@@ -44,13 +44,13 @@ The `GoToNextPage()` and `GoToPreviousPage()` methods help you navigate to the n
 private void NextPageButton_Clicked(object sender, EventArgs e)
 {
     // Navigate to the next page
-    pdfViewer.GoToNextPage();
+    PdfViewer.GoToNextPage();
 }
 
 private void PreviousPageButton_Clicked(object sender, EventArgs e)
 {
     // Navigate to the previous page
-    pdfViewer. GoToPreviousPage();
+    PdfViewer. GoToPreviousPage();
 }
 {% endhighlight %}
 {% endtabs %}
@@ -64,13 +64,13 @@ The `GoToFirstPage()` and `GoToLastPage()` methods help you navigate to the firs
 private void FirstPageButton_Clicked(object sender, EventArgs e)
 {
     // Navigate to the first page
-    pdfViewer.GoToFirstPage();
+    PdfViewer.GoToFirstPage();
 }
 
 private void LastPageButton_Clicked(object sender, EventArgs e)
 {
     // Navigate to the last page
-    pdfViewer.GoToLastPage();
+    PdfViewer.GoToLastPage();
 }
 {% endhighlight %}
 {% endtabs %}
@@ -82,8 +82,8 @@ The `ScrollToOffset()` method moves the scroll position of the SfPdfViewer to th
 {% tabs %}
 {% highlight c# %}
 // Navigate to the scroll offset position (100,1000)
-pdfViewer.ScrollToOffset(100, 1000);
+PdfViewer.ScrollToOffset(100, 1000);
 {% endhighlight %}
 {% endtabs %}
 
-The example project with the page navigation functionalities can be downloaded here. 
+The example project with the page navigation functionalities can be downloaded [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples). 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Open an Encryted Document in .NET MAUI PDF Viewer control | Syncfusion
+title: Open a Password-Protected PDF in .NET MAUI PDF Viewer | Syncfusion
 description: Learn here about opening a password-protected document in Syncfusion .NET MAUI PDF Viewer (SfPdfViewer) control and more.
 platform: MAUI
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Open an Encrypted Document in .NET MAUI PDF Viewer (SfPdfViewer)
+# Open a Password-Protected PDF in .NET MAUI PDF Viewer (SfPdfViewer)
 
 To open a password-protected or encrypted PDF document, you can use the `LoadDocument()` method by providing the password along with the document source. The following code example explains the same.
 
@@ -26,14 +26,14 @@ You can identify whether a PDF document to be opened is a password protected or 
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfPdfViewer x:Name="pdfViewer " DocumentSource="{Binding PdfDocumentStream}" PasswordRequested ="PdfViewer_PasswordRequested">
+<syncfusion:SfPdfViewer x:Name="PdfViewer" DocumentSource="{Binding PdfDocumentStream}" PasswordRequested ="PdfViewer_PasswordRequested">
 {% endhighlight %}
 
 {% highlight c# %}
 public MainPage()
 {
     InitializeComponent();
-    Stream pdfDocumentStream = this.GetType().Assembly.GetManifestResourceStream("PdfViewerExample.Assets.Encrypted.pdf");
+    Stream pdfDocumentStream = this.GetType().Assembly.GetManifestResourceStream("PdfViewerExample.Assets.Password_Protected.pdf");
     PdfViewer.DocumentSource = pdfDocumentStream;
 }
 
@@ -44,3 +44,39 @@ private void PdfViewer_PasswordRequested(object sender, PasswordRequestedEventAr
 }
 {% endhighlight %}
 {% endtabs %}
+
+## Handling invalid password
+
+The `DocumentLoadFailed` event triggers when any password-protected document is loaded with a wrong or invalid password. You can handle the functionality based on your needs within this event handler method.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfPdfViewer x:Name="PdfViewer " DocumentSource="{Binding PdfDocumentStream}" PasswordRequested ="PdfViewer_PasswordRequested" DocumentLoadFailed="PdfViewer_DocumentLoadFailed">
+{% endhighlight %}
+
+{% highlight c# %}
+public MainPage()
+{
+    InitializeComponent();
+    Stream pdfDocumentStream = this.GetType().Assembly.GetManifestResourceStream("PdfViewerExample.Assets.Password_Protected.pdf");
+    PdfViewer.DocumentSource = pdfDocumentStream;
+}
+
+private void PdfViewer_PasswordRequested(object sender, PasswordRequestedEventArgs e)
+{        
+    e.Password = "WRONG PASSWORD";
+    e.Handled = true;
+}
+
+private void PdfViewer_DocumentLoadFailed(object sender, Syncfusion.Maui.PdfViewer.DocumentLoadFailedEventArgs e)
+{        
+    if (e.Message == "Can't open an encrypted document. The password is invalid.")
+    {
+        DisplayAlert("Incorrect Password", "The password you entered is incorrect. Please try again.", "OK");
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+The example project to open a password-protected document with a customized password request view can be downloaded [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples). 
