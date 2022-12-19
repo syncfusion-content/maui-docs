@@ -373,14 +373,14 @@ To customize the data label appearance, create an instance of the [ChartDataMark
 	    <chart:PyramidSeries.DataMarker>
 	    <chart:ChartDataMarker ShowLabel="True">
 		  <chart:ChartDataMarker.LabelStyle>
-		    <chart:DataMarkerLabelStyle TextColor="Blue" 
-				                    	BorderColor="Red" 
-				                    	BorderThickness="2"
-					                    BackgroundColor="Aqua"
-					                    Angle="315" 
-					                    Margin="5" 
-					                    FontSize="18" 
-					                    FontAttributes="Italic"/>
+             <chart:DataMarkerLabelStyle TextColor="Blue"
+                                         BorderColor="Red"
+                                         BorderThickness="2"
+                                         BackgroundColor="Aqua"
+                                         Angle="315"
+                                         Margin="5" 
+                                         FontSize="18" 
+					 FontAttributes="Italic"/>
 		  </chart:ChartDataMarker.LabelStyle>
 	    </chart:ChartDataMarker>
 	    </chart:PyramidSeries.DataMarker>
@@ -426,12 +426,12 @@ chart.Series.Add(series);
         <chart:PyramidDataLabelSettings>
             <chart:PyramidDataLabelSettings.LabelStyle>
                 <chart:ChartDataLabelStyle TextColor="Blue" 
-                                           Stroke="Red" 
-                                           StrokeWidth="2" 
+                                           Stroke="Red"
+					   StrokeWidth="2" 
                                            Background="Aqua" 
                                            Margin="10" 
-                                           FontSize="16"
-                                           FontAttributes="Bold"/>
+					   FontSize="16"
+					   FontAttributes="Bold"/>
             </chart:PyramidDataLabelSettings.LabelStyle>
         </chart:PyramidDataLabelSettings>
     </chart:SfPyramidChart.DataLabelSettings>
@@ -599,7 +599,8 @@ chart.Series.Add(series);
                       XBindingPath="Name"      
                       YBindingPath="Value">
     <chart:SfPyramidChart.SelectionBehavior>
-        <chart:DataPointSelectionBehavior SelectedIndex="2" SelectionBrush="red"/>
+        <chart:DataPointSelectionBehavior SelectedIndex="2" 
+                                          SelectionBrush="red"/>
     </chart:SfPyramidChart.SelectionBehavior>
 </chart:SfPyramidChart>
 

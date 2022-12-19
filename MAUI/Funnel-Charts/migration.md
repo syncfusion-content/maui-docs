@@ -373,14 +373,14 @@ To customize the data label appearance, create an instance of the [ChartDataMark
 	    <chart:FunnelSeries.DataMarker>
 	    <chart:ChartDataMarker ShowLabel="True">
 		  <chart:ChartDataMarker.LabelStyle>
-            <chart:DataMarkerLabelStyle TextColor="Blue" 
-					                    BorderColor="Red" 
-				                    	BorderThickness="2"
-				                    	BackgroundColor="Aqua"
-				                    	Angle="315" 
-				                    	Margin="5" 
-					                    FontSize="18" 
-					                    FontAttributes="Italic"/>
+             <chart:DataMarkerLabelStyle TextColor="Blue" 
+					                     BorderColor="Red" 
+				                    	 BorderThickness="2"
+				                    	 BackgroundColor="Aqua"
+				                    	 Angle="315" 
+				                    	 Margin="5" 
+					                     FontSize="18" 
+					                     FontAttributes="Italic"/>
 		  </chart:ChartDataMarker.LabelStyle>
 	    </chart:ChartDataMarker>
 	    </chart:FunnelSeries.DataMarker>
@@ -599,7 +599,8 @@ chart.Series.Add(series);
                       XBindingPath="XValue"      
                       YBindingPath="YValue">
     <chart:SfFunnelChart.SelectionBehavior>
-        <chart:DataPointSelectionBehavior SelectedIndex="2" SelectionBrush="red"/>
+        <chart:DataPointSelectionBehavior SelectedIndex="2" 
+                                          SelectionBrush="red"/>
     </chart:SfFunnelChart.SelectionBehavior>
 </chart:SfFunnelChart>
 
