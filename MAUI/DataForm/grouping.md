@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Grouping the editors in .NET MAUI DataForm control | Syncfusion
-description: Learn here all about the grouping support in Syncfusion .NET MAUI DataForm (SfDataForm) control and more.
+description: Learn about the grouping support in the Syncfusion .NET MAUI DataForm (SfDataForm) control and more.
 platform: maui
 control: SfDataForm
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # Grouping the editors in .NET MAUI DataForm (SfDataForm)
 
-The .NET MAUI DataForm support to group the editors which are relevant to each other. You can expand or collapse the group by tapping the group item.
+The .NET MAUI DataForm supports the grouping of the editors, which are relevant to each other. Expand or collapse the group by tapping the group item.
 
-Grouping can be achieved by defining [Display](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute?view=net-7.0) attribute or by handling the `GenerateDataFormItem` event.
+Grouping is achieved by defining the [Display](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute?view=net-7.0) attribute or by handling the `GenerateDataFormItem` event.
 
 #### Using attributes
 
@@ -60,7 +60,7 @@ this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
 #### Display attribute
 
-The order of the editors in the group can be changed by using attributes. You can set the order of data form items in group by using the `Order` property along with `GroupName` property in `Display` attribute.
+The order of the editors in the group is changed by using attributes. Set the order of the data form items in the group by using the `Order` property along with the `GroupName` property in the `Display` attribute.
 
 {% tabs %}
 {% highlight C# %}
@@ -80,7 +80,7 @@ public class ContactInfo
 
 #### DataForm display options attribute
 
-The order of the editors in the group can also be changed by using `RowOrder` property of [DataFormDisplayOptions] attribute.
+The order of the editors in the group is also changed by using the `RowOrder` property of the `DataFormDisplayOptions` attribute.
 
 {% tabs %}
 {% highlight C# %}
@@ -136,7 +136,7 @@ this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
 ## Changing the editors order of the group in grid rows
 
-The order of the editors of group in grid row can be changed within a row by using `RowOrder` and `ItemsOrderInRow` properties[DataFormDisplayOptions] attribute and by handling `GenerateDataFormItem` event.
+The order of the editors of group in grid row can be changed within a row by using `RowOrder` and `ItemsOrderInRow` properties `DataFormDisplayOptions` attribute and by handling `GenerateDataFormItem` event.
 
 {% tabs %}
 {% highlight C# %}
@@ -196,7 +196,7 @@ this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 ## Changing the layout for the group
 
 The linear or grid layout for the particular group can be loaded by handling the `GenerateDataFormItem` event.
-By setting the `ColumnCount` property in the data form, non-grouped items only will be arranged in the grid layout. To load the grid layout, set the [ColumnCount] for the `DataFormGroupItem`
+By setting the `ColumnCount` property in the data form, non-grouped items only will be arranged in the grid layout. To load the grid layout, set the `ColumnCount` for the `DataFormGroupItem`
 
 {% tabs %}
 {% highlight C# %}
@@ -245,7 +245,7 @@ this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
 ## Loading the group in collapsed state
 
-By default, the group will be loaded in expanded state. You can collapse the group by setting the [IsExpanded] property of [DataFormGroupItem] class to `false`.
+By default, the group will be loaded in expanded state. You can collapse the group by setting the `IsExpanded` property of `DataFormGroupItem` class to `false`.
 
 {% tabs %}
 {% highlight C# %}
@@ -268,7 +268,7 @@ this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
 ## Restricting the group expanding and collapsing
 
-The group being expanded or collapsed can be restricted by setting the [AllowExpandCollapse] to `false` in the [DataFormGroupItem].
+The group being expanded or collapsed can be restricted by setting the `AllowExpandCollapse` to `false` in the `DataFormGroupItem`.
 
 {% tabs %}
 {% highlight C# %}
@@ -291,7 +291,7 @@ this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
 ## Changing the group editors visibility
 
-The data form group visibility can be changed by using the [IsVisible] property of [DataFormGroupItem].
+The data form group visibility can be changed by using the `IsVisible` property of `DataFormGroupItem`.
 
 {% tabs %}
 {% highlight C# %}
@@ -316,7 +316,7 @@ Here, the `Name` group will be hidden.
 
 ## Changing the group header background
 
-The data form group header background can be changed by using the [HeaderBackground] property of [DataFormGroupItem].
+The data form group header background can be changed by using the `HeaderBackground` property of `DataFormGroupItem`.
 
 {% tabs %}
 {% highlight C# %}
@@ -339,7 +339,7 @@ this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
 ## Changing the group header text style
 
-The data form group header text style can be changed by using the [HeaderTextStyle] property of [DataFormGroupItem].
+The data form group header text style can be changed by using the `HeaderTextStyle` property of `DataFormGroupItem`.
 
 {% tabs %}
 {% highlight C# %}
@@ -367,7 +367,7 @@ this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
 ## Changing the padding for group headers and editors
 
-The distance between editors and the data form’s borders or group headers can be changed by using [ItemsPadding] property of [DataFormGroupItem].
+The distance between editors and the data form’s borders or group headers can be changed by using `ItemsPadding` property of `DataFormGroupItem`.
 
 {% tabs %}
 {% highlight C# %}
