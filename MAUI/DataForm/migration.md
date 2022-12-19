@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Migrate from Syncfusion Xamarin SfDataForm to .NET MAUI SfDataForm
-description: Learn here all about Migrating from Syncfusion Xamarin DataForm to Syncfusion .NET MAUI DataForm control and more.
+title: Migrate from Syncfusion Xamarin SfDataForm to .NET MAUI DataForm (SfDataForm)
+description: Learn here all about Migrating from Syncfusion Xamarin.Forms DataForm to Syncfusion .NET MAUI DataForm control.
 platform: MAUI
 control: SfDataForm
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 To make the migration from the Xamarin [Xamarin SfDataForm] to [.NET MAUI SfDataForm] easier, most of the APIs from the Xamarin SfDataForm were kept in the.NET MAUI SfDataForm. However, to maintain the consistency of API naming in the.NET MAUI SfDataForm, some of the APIs have been renamed. Please find the difference in the following topics.
 
-## Namespaces 
+## Namespaces
 
 <table>
 <tr>
@@ -19,7 +19,7 @@ To make the migration from the Xamarin [Xamarin SfDataForm] to [.NET MAUI SfData
 <th>.NET MAUI SfDataForm</th></tr>
 <tr>
 <td>Syncfusion.SfDataForm.XForms</td>
-<td>Syncfusion.Maui.SfDataForm</td></tr>
+<td>Syncfusion.Maui.DataForm</td></tr>
 </table>
 
 ## Initialize control
@@ -34,13 +34,12 @@ To initialize the control, import the DataForm namespace and initialize SfDataFo
 <td>
 
 {% tabs %}
-{% highlight xaml %}
-
-<ContentPage
- xmlns:dataForm="clr-namespace:Syncfusion.XForms.DataForm;assembly=Syncfusion.SfDataForm.XForms">
+{% highlight XAML %}
+<ContentPage 
+...
+             xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
         <dataForm:SfDataForm x:Name="dataForm"/>
 </ContentPage>
-
 {% endhighlight %}
 
 {% highlight C# %}
@@ -58,7 +57,7 @@ this.Content = dataForm;
 <td>
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <ContentPage
 xmlns:DataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
@@ -193,6 +192,12 @@ this.Content = dataForm;
 <td>{{'[LabelPosition](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.LabelPosition.html)'| markdownify }}</td>
 <td>{{'[DataFormLabelPosition]'| markdownify }}</td>
 <td>Defines the constants for label position that specifies whether to layout the label at left or top of editor.</td>
+</tr>
+
+<tr>
+<td>{{'[SfDataForm](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.SfDataForm.html)'| markdownify }}</td>
+<td>{{'[SfDataForm]()'| markdownify }}</td>
+<td>The DataForm control is used to manage data and develop various forms such as login, reservation, data entry and so on.</td>
 </tr>
 
 <tr>
@@ -648,19 +653,19 @@ Following properties of `Xamarin SfDataForm` is moved to `DataFormDefaultLayoutS
 <th>Description</th></tr>
 
 <tr>
-<td>{{'[]'| markdownify }}</td>
+<td>{{'[Format](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormDateItem.html#Syncfusion_XForms_DataForm_DataFormDateItem_Format)'| markdownify }}</td>
 <td>{{'[Format]'| markdownify }}</td>
 <td>Gets or sets the time format for time picker.</td>
 </tr>
 
 <tr>
-<td>{{'[]'| markdownify }}</td>
+<td>{{'[MaximumDate](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormDateItem.html#Syncfusion_XForms_DataForm_DataFormDateItem_MaximumDate)'| markdownify }}</td>
 <td>{{'[MaximumDisplayDate]'| markdownify }}</td>
 <td>Gets or sets the maximun display date to restrict the visible dates of the date editor.</td>
 </tr>
 
 <tr>
-<td>{{'[]'| markdownify }}</td>
+<td>{{'[MinimumDate](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormDateItem.html#Syncfusion_XForms_DataForm_DataFormDateItem_MinimumDate)'| markdownify }}</td>
 <td>{{'[MinimumDisplayDate]'| markdownify }}</td>
 <td>Gets or sets the minimum display date to restrict the visible dates of the date editor.</td>
 </tr>
@@ -676,7 +681,7 @@ Following properties of `Xamarin SfDataForm` is moved to `DataFormDefaultLayoutS
 <th>Description</th></tr>
 
 <tr>
-<td>{{'[]'| markdownify }}</td>
+<td>{{'[Format](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormTimeItem.html#Syncfusion_XForms_DataForm_DataFormTimeItem_Format)'| markdownify }}</td>
 <td>{{'[Format]'| markdownify }}</td>
 <td>Gets or sets the time format for Time Picker.</td>
 </tr>
@@ -957,5 +962,27 @@ The common properties of `Xamarin SfDataForm` list items (` DataFormPickerItem`,
 
 ## Upcoming Features
 
+* Support for Floating label layout.
+* Keyboard interaction support for MacCatalyst, Android, and iOS.
+* Support for group header view customization.
+* Support for DataFormViewItem's auto height.
+* Support for programmatic scrolling to a specific editor,
+* Support for dataform themeing.
+
 ## Known issues in .NET MAUI DataForm
+
+* [MacCatalyst] - TimePicker popup is not working.
+* [MacCatalyst, iOS] - Multiline editor placeholder text font size not changing based on editor font size.
+* [MacCatalyst, iOS] – Date and Time picker text styles are not changing.
+* [MacCatalyst, iOS] – Date picker minimum and maximum display dates are not working.
+* [MacCatalyst, iOS] - Text style not applied to radio button.
+* [Android, iOS, MacCatalyst] - In RTL mode, the multiline text editor text is not showing from the right.
+* [Windows] - Picker editor text style is not changing.
+* [iOS] - Maximum input length is not working in Text and Password editors.
+* [Windows] - Time picker format not changing.
+* [MacCatalyst, iOS] - RTL FlowDirection is not working for Date and Time pickers.
+* [MacCatalyst, iOS] - In RTL FlowDirection, the ScrollView scroll bar shows at the right.
+* [Android] - in RTL mode Radio button's content does not arrange from the right.
+* `RTL` flow direction not working for ComboBox and AutoComplete editors.
+* `IsReadOnly` not working for AutoComplete editor.
 
