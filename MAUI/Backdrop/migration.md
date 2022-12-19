@@ -21,7 +21,7 @@ To initialize the control, import the Backdrop namespace and initialize the SfBa
 </tr>
 <tr>
 <td>
-{% tabs %} 
+{% tabs %}
 
 {% highlight xaml %}
 
@@ -73,6 +73,7 @@ namespace BackdropGettingStarted
                          >
     
 </backdrop:SfBackdropPage>
+
 {% endhighlight %}
 
 {% highlight C# %}
