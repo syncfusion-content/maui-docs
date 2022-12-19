@@ -23,4 +23,4 @@ The Syncfusion .NET MAUI DataForm (SfDataForm) control is used to create or edit
 
 * **Layout and grouping**: Supports grouping, linear and grid layout.
 
-* **Appearnace Customization**: Supports to customize the appearances of editors, labels and group headers. 
+* **Appearance Customization**: Supports customizing the appearances of editors, labels and group headers. 

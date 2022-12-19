@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with .NET MAUI DataForm control | Syncfusion
-description: Learn here about getting started with Syncfusion .NET MAUI DataForm (SfDataForm) control and its basic features.
+description: Learn about getting started with Syncfusion .NET MAUI DataForm (SfDataForm) control and its basic features.
 platform: maui
 control: SfDataForm
 documentation: ug
@@ -9,13 +9,13 @@ documentation: ug
 
 # Getting Started with .NET MAUI DataForm (SfDataForm)
 
-This section provides a quick overview of how to get started with the .NET MAUI DataForm(SfDataForm) for .NET MAUI and also provides a walk-through to configure the .NET MAUI DataForm control in a real-time scenario.
+This section provides a quick overview of how to get started with the .NET MAUI DataForm(SfDataForm) for .NET MAUI and a walk-through to configure the .NET MAUI DataForm control in a real-time scenario.
 
 ## Creating an application using the .NET MAUI DataForm
 
 1. Create a new .NET MAUI application in Visual Studio.
 
-2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfDataForm to your project, open the NuGet package manager in Visual Studio, search for `Syncfusion.Maui.DataForm` and then install it.
+2. Syncfusion .NET MAUI components are available in `nuget.org`. To add the SfDataForm to your project, open the NuGet package manager in Visual Studio, search for `Syncfusion.Maui.DataForm`, then install it.
 
 3. To initialize the control, import the control namespace `Syncfusion.Maui.DataForm` in XAML or C# code.
 
@@ -53,7 +53,7 @@ This section provides a quick overview of how to get started with the .NET MAUI 
 
 ## Register the handler
 
-The `Syncfusion.Maui.Core` nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
+The `Syncfusion.Maui.Core` NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
 
 {% tabs %}
 {% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
@@ -84,9 +84,9 @@ The `Syncfusion.Maui.Core` nuget is a dependent package for all Syncfusion contr
 
 ## Creating data object
 
-The `SfDataForm` is a data edit control so, create a data object with details to create a data form based on your business requirement.
+The `SfDataForm` is a data edit control, so create a data object with details to create a data form based on your business requirement.
 
-Here, the data object named **ContactsInfo** created with some properties.
+Here, the data object named **ContactsInfo** is created with some properties.
 
 {% tabs %}
 {% highlight C# %}
