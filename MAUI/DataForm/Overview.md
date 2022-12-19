@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview of .NET MAUI DataForm control | Syncfusion
-description: Learn here all about the introduction of Syncfusion .NET MAUI DataForms(SfDataForm) control and its key features.
+description: Learn about the introduction of Syncfusion .NET MAUI DataForms(SfDataForm) control and its key features.
 platform: maui
 control: SfDataForm
 documentation: ug
@@ -9,18 +9,18 @@ documentation: ug
  
 # Overview of .NET MAUI DataForm (SfDataForm)
 
-The Syncfusion .NET MAUI DataForm (SfDataForm) control is used to create or edit data form such as login, reservation, contact, employee form and so, based on the business purpose. 
+The Syncfusion .NET MAUI DataForm (SfDataForm) control is used to create or edit data form such as login, reservation, contact, employee form and more based on the business purpose. 
 
 ## Key features 
 
-* **Editors** : Support built-in editors such as text, password, multi-line, combo box, automcomplete, date, time, checkbox,switch and radio group editors the primitive data types such as string, enumeration, DateTime and TimeSpan.
+* **Editors**: Support built-in editors such as text, password, multi-line, combo box, autocomplete, date, time, checkbox,switch, and radio group editors the primitive data types such as string, enumeration, DateTime and TimeSpan.
 
-* **Custom editor** : Support to add custom editors.
+* **Custom editor**: Support to add custom editors.
 
-* **Validation** : Built-in support to validate the data or user input to alert the user to enter proper value.
+* **Validation**: Built-in support to validate the data or user input to alert the user to enter a proper value.
 
-* **Commit mode** : Support to determine when the value should be committed to the underlying data object.
+* **Commit mode**: Support to determine when the value should be committed to the underlying data object.
 
-* **Layout and grouping** : Supports grouping, linear and grid layout.
+* **Layout and grouping**: Supports grouping, linear and grid layout.
 
 * **Appearnace Customization**: Supports to customize the appearances of editors, labels and group headers. 

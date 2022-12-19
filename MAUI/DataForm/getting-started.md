@@ -115,7 +115,7 @@ Here, the data object named **ContactsInfo** created with some properties.
 {% endhighlight %}
 {% endtabs %}
 
-Initialize the data object in view model class in order to bind in 'DataObject' property of 'SfDataForm'.
+Initialize the data object in view model class to bind in the 'DataObject' property of 'SfDataForm'.
 
 {% tabs %}
 {% highlight C# %}
@@ -135,7 +135,7 @@ Initialize the data object in view model class in order to bind in 'DataObject' 
 
 ## Set data object to data form
 
-By default, data form auto generate the editors based on the primitive data type in the 'DataObject' property. Please refer the following code to set the 'DataObject' property.
+By default,the data form auto-generates the editors based on the primitive data type in the 'DataObject' property. Please refer the following code to set the 'DataObject' property.
 
 {% tabs %}
 {% highlight XAML %}
@@ -164,9 +164,9 @@ By default, data form auto generate the editors based on the primitive data type
 
 ## Defining editors
 
-The data form control automatically generates `SfDataForm.Items` (which has UI settings of data field) based on the data type in the `SfDataForm.DataObject` property. The `SfDataForm.Items` encapsulates the layout of label and editor setting for the data field appearing in the dataform. 
+The data form control automatically generates the `SfDataForm.Items` (which has UI settings of data field) based on the data type in the `SfDataForm.DataObject` property. The `SfDataForm.Items` summarizes the layout of the label and editor setting for the data field appearing in the dataform. 
 
-The type of input editor generated for the data field depends on the type and attribute settings of the property. The following table lists the `DataFormItem` and its constraints for generation:
+The type of input editor generated for the data field depends on the type and attribute settings of the property. The following table lists the `DataFormItem` and its constraints for generation.
 
 <table>
 <tr>
@@ -269,7 +269,7 @@ DatePiker
 
 </td>
 <td>
-Generated for the TimeSpan, TimeOnly, DateTime, DateTimeOffset type properties.
+Generated for the TimeSpan, TimeOnly, DateTime, and DateTimeOffset type properties.
 [DataType(DataType.Time)].
 </td>
 <td>
