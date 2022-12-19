@@ -112,7 +112,6 @@ The following table illustrates the API migration for the chart.
 <td>Legend</td>
 <td>Legend</td>
 </tr>
-
 <tr>
 <td>Series</td>
 <td>Series</td>
@@ -166,6 +165,7 @@ The following table illustrates the API migration for the chart.
 <td>ShowTrackballInfo</td>
 <td>ShowTrackballLabel</td>
 </tr>
+<tr>
 <td>LabelClicked</td>
 <td><em>Upcoming</em></td>
 </tr>
@@ -201,7 +201,6 @@ The following table illustrates the API migration for the chart.
 <td>LabelExtent</td>
 <td><em>Upcoming</em></td>
 </tr>
-<tr>
 <tr>
 <td>AutoScrollingDelta</td>
 <td><em>Upcoming</em></td>
@@ -285,7 +284,7 @@ this.Content = chart;
 </tr>
 </table>
 
-### Series
+ ### Series
 
 <table>
 <tr>
@@ -298,7 +297,7 @@ this.Content = chart;
 <td>Fill</td>
 </tr>
 <tr>
-<td>ColorModel, CustomBrushes </td>
+<td>ColorModel, CustomBrushes</td>
 <td>PaletteBrushes</td>
 </tr>
 <tr>
@@ -397,6 +396,7 @@ this.Content = chart;
 <td>IsVisible</td>
 <td>IsVisible</td>
 </tr>
+<tr>
 <td>ItemTemplate</td>
 <td>ItemTemplate</td>
 </tr>
@@ -436,7 +436,6 @@ this.Content = chart;
 <td>LabelStyle</td>
 <td><em>Upcoming</em></td>
 </tr>
-<tr>
 <tr>
 <td>OverflowMode</td>
 <td><em>Upcoming</em></td>
