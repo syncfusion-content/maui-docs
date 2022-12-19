@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data validation in .NET MAUI DataForm control | Syncfusion
-description: Learn here all about the validation feature in Syncfusion .NET MAUI DataForm (SfDataForm) control and more.
+description: Learn about the validation feature in Syncfusion .NET MAUI DataForm (SfDataForm) control in mobile and desktop applications from a single shared codebase.
 platform: maui
 control: SfDataForm
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Validation in .NET MAUI DataForm (SfDataForm)
 
-The data form validates the data and user input in order to update the correct value in the underlying data object. In case of invalid data, the error message is shown at the bottom of the editor.
+The data form validates the data and user input to update the correct value in the underlying data object. In invalid data, the error message is shown at the bottom of the editor.
 
 ## Built in validations
 
@@ -17,9 +17,9 @@ The supported built in validations are as follows:
 
 #### Data annotations
 
-You can validate the data using data annotation attributes.
+Validate the data using data annotation attributes.
 
-The String type property can be validated using [Required](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.requiredattribute?view=netframework-4.8) and [StringLength](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.stringlengthattribute?view=netframework-4.8) attributes.
+The String type property is validated using the [Required](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.requiredattribute?view=netframework-4.8) and [StringLength](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.stringlengthattribute?view=netframework-4.8) attributes.
 
 {% tabs %}
 {% highlight C# %}
@@ -31,11 +31,11 @@ The String type property can be validated using [Required](https://docs.microso
 {% endhighlight %}
 {% endtabs %}
 
-Refer to this [link] to know more about data annotations in SfDataForm.
+Refer to this `link` to learn more about data annotations in SfDataForm.
 
 #### Date range attribute
 
-You can validate the date time value using date range attribute.
+Validate the date time value using the date range attribute.
 
 {% tabs %}
 {% highlight C# %}
@@ -79,7 +79,7 @@ this.dataForm.ValidationMode = DataFormValidationMode.LostFocus;
 
 #### LostFocus
 
-If the validation mode is `LostFocus`, the value will be validated when the editor lost its focus. By default the [ValidationMode] is `LostFocus`
+If the validation mode is `LostFocus`, the value will be validated when the editor loses its focus. By default, the `ValidationMode` is `LostFocus`.
 
 #### PropertyChanged
 
@@ -87,7 +87,7 @@ If the validation mode is `PropertyChanged`, the value will be validated immedia
 
 #### Manual
 
-If the validation mode is `Manual`, the value should be validated manually by calling the [SfDataForm.Validate] or [SfDataForm.Validate(new List<string>())] method.
+If the validation mode is `Manual`, the value should be validated manually by calling the `SfDataForm.Validate` or `SfDataForm.Validate(new List())` method.
 
 The following code validates the value of all the properties in the data object:
 
@@ -109,7 +109,7 @@ this.dataForm.Validate(new List<string>() {"FirstName", "Age" });
 {% endhighlight %}
 {% endtabs %}
 
-You can determine whether the data form or property is valid or not by using the `Validate` method.
+Determine whether the data form or property is valid by using the `Validate` method.
 
 {% tabs %}
 {% highlight C# %}
@@ -127,7 +127,7 @@ If the data form or property is valid, `true` will be returned. Or else `false` 
 
 ## Valid message
 
-If the values are correct, you can show the [ValidMessage] as like error message, the valid message will also be displayed at the bottom of the editor.
+If the values are correct, show the `ValidMessage` like an error message, the valid message will also be displayed at the bottom of the editor.
 
 {% tabs %}
 {% highlight C# %}
@@ -142,9 +142,9 @@ If the values are correct, you can show the [ValidMessage] as like error message
 
 ## Validate the data form
 
-You can get the validation details of the all the editors of data form using the [ValidateForm] event of the data form.
+Get the validation details of all the editors of the data form using the `ValidateForm` event of the data form.
 
-Note: This event will be raised once after the manual validation call using [SfDataForm.Validate()] method.
+Note: This event will be raised once after the manual validation call using the `SfDataForm.Validate()` method.
 
 {% endhighlight %}
 {% highlight C# %}
@@ -163,7 +163,7 @@ this.dataForm.ValidateForm += this.OnDataFormValidateForm;
 
 ## Validate the specific editor
 
-[ValidateProperty] event allows you to validate specific editor in the data form. You can set `Isvalid`, `ErrorMessage` and `ValidMessage` of [DataFormValidatePropertyEventArgs].
+The `ValidateProperty` event allows you to validate specific editors in the data form. Set `Isvalid`, `ErrorMessage`, and `ValidMessage` of the `DataFormValidatePropertyEventArgs`.
 
 {% endhighlight %}
 {% highlight C# %}
@@ -185,11 +185,11 @@ this.dataForm.ValidateProperty += this.OnDataFormValidateProperty;
 
 ## Validation label appearance customization
 
-The data form supports to customize the style of both error and valid message label style easily.
+The data form supports customizing the style of both error and valid message label style easily.
 
 #### Customize error label text style
 
-The `error label style` can be customized by changing the [ErrorLabelTextStyle] property of [SfDataForm].
+The `error label style` can be customized by changing the `ErrorLabelTextStyle` property of the `SfDataForm`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -204,7 +204,7 @@ The `error label style` can be customized by changing the [ErrorLabelTextStyle] 
 {% endhighlight %}
 {% endtabs %}
 
-You can also customize `error label style` for each editor using [ErrorLabelTextStyle] property of [DataFormItem]
+Also, customize the `error label style` for each editor using the `ErrorLabelTextStyle` property of the `DataFormItem`.
 
 {% tabs %}
 {% highlight C# %}
@@ -233,7 +233,7 @@ this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
 #### Customize valid message label text style
 
-The `valid message label style` can be customized by changing the [ValidMessageLabelTextStyle] property of [SfDataForm].
+The `valid message label style` can be customized by changing the `ValidMessageLabelTextStyle` property of the `SfDataForm`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -248,7 +248,7 @@ The `valid message label style` can be customized by changing the [ValidMessageL
 {% endhighlight %}
 {% endtabs %}
 
-You can also customize `valid message label style` for each editor using [ValidMessageLabelTextStyle] property of [DataFormItem]
+Also, customize the `valid message label style` for each editor using the `ValidMessageLabelTextStyle` property of the `DataFormItem`.
 
 {% tabs %}
 {% highlight C# %}
