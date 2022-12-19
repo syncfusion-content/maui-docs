@@ -22,6 +22,7 @@ To initialize the control, import the Backdrop namespace and initialize the SfBa
 <tr>
 <td>
 {% tabs %} 
+
 {% highlight xaml %}
 
 <backdrop:SfBackdropPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -50,7 +51,9 @@ namespace BackdropGettingStarted
 }
 
 {% endhighlight %}
+
 {% endtabs %}
+
 </td>
 </tr>
 <tr>
@@ -70,7 +73,6 @@ namespace BackdropGettingStarted
                          >
     
 </backdrop:SfBackdropPage>
- 
 {% endhighlight %}
 
 {% highlight C# %}
