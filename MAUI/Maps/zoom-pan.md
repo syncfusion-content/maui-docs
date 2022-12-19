@@ -452,7 +452,7 @@ public LatLngBoundsPage()
     tileLayer.MarkerTemplate = CreateDataTemplate();
     MapLatLngBounds bounds = new MapLatLngBounds();
     bounds.Northeast = new MapLatLng(38.909804, -77.043442);
-    bounds.Southwest = new MapLatLng(13.048155, 80.083858);
+    bounds.Southwest = new MapLatLng(38.909148, -77.043610);
     tileLayer.MapLatLngBounds = bounds;
     map.Layer = tileLayer;
     this.Content = map;
