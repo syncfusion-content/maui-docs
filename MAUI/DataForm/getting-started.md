@@ -285,7 +285,6 @@ DataFormPickerItem
 </td>
 <td>
 Generated for the Enum type property.
-[EnumDataTypeAttribute]
 </td>
 <td>
 Picker
@@ -300,7 +299,6 @@ DataFormAutoCompleteItem
 </td>
 <td>
 Generated for the Enum type property.
-[EnumDataTypeAttribute]
 </td>
 <td>
 AutoComplete
@@ -315,7 +313,6 @@ DataFormComboBoxItem
 </td>
 <td>
 Generated for the Enum type property.
-[EnumDataTypeAttribute]
 </td>
 <td>
 ComboBox
@@ -330,7 +327,6 @@ DataFormRadioGroupItem
 </td>
 <td>
 Generated for the Enum type property.
-[EnumDataTypeAttribute]
 </td>
 <td>
 RadioGroup

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview of .NET MAUI DataForm control | Syncfusion
-description: Learn about the introduction of Syncfusion .NET MAUI DataForm(SfDataForm) control and its key features.
+description: Learn about the introduction of Syncfusion .NET MAUI DataForm(SfDataForm) control and its key features in mobile and desktop applications from a single shared codebase.
 platform: maui
 control: SfDataForm
 documentation: ug
