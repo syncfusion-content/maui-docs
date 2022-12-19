@@ -21,14 +21,13 @@ Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org
 
 In the MauiProgram.cs file, register the handler for Syncfusion core.
 
-{% highlight c# hl_lines="6 7 18 19" %}
+{% highlight c# hl_lines="6 17" %}
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
 using Microsoft.Maui.Controls.Compatibility;
 using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Controls.Xaml;
 using Syncfusion.Maui.Core.Hosting;
-using Syncfusion.Maui.ListView.Hosting;
 
 namespace RatingSample
 {
@@ -40,7 +39,6 @@ namespace RatingSample
             builder
             .UseMauiApp<App>()
             .ConfigureSyncfusionCore()
-            .ConfigureSyncfusionListView()
             .ConfigureFonts(fonts =>
             {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -185,4 +183,4 @@ public MainPage()
 
 ![SfRating Getting Started ](images/getting-started.png)
 
-The complete Getting Started sample is available in this `link`.
+The complete Getting Started sample is available in this [link.](https://github.com/SyncfusionExamples/maui-rating-samples)
