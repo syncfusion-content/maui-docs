@@ -15,7 +15,7 @@ This section provides a quick overview of how to get started with the .NET MAUI 
 
 1. Create a new .NET MAUI application in Visual Studio.
 
-2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfDataForm to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.DataForm] and then install it.
+2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfDataForm to your project, open the NuGet package manager in Visual Studio, search for `Syncfusion.Maui.DataForm` and then install it.
 
 3. To initialize the control, import the control namespace `Syncfusion.Maui.DataForm` in XAML or C# code.
 
@@ -177,7 +177,7 @@ The type of input editor generated for the data field depends on the type and at
 </tr>
 <tr>
 <td>
-[DataFormTextItem]
+`DataFormTextItem`
 </td>
 <td>
 Default DataFormItem generated for the String type and the properties with [DataType(DataType.Text)].
@@ -205,7 +205,7 @@ Multiline Text
 </tr>
 <tr>
 <td>
-[DataFormPasswordTextItem]
+DataFormPasswordTextItem
 </td>
 <td>
 Generated for string type property with [DataType(DataType.Password)] attributes.
@@ -219,7 +219,7 @@ Password
 </tr>
 <tr>
 <td>
-[DataFormCheckBoxItem]
+DataFormCheckBoxItem
 </td>
 <td>
 Generated for the Bool type property.
@@ -234,7 +234,7 @@ CheckBox
 </tr>
 <tr>
 <td>
-[DataFormSwitchItem] 
+DataFormSwitchItem 
 </td>
 <td>
 Generated for the Bool type property.
@@ -249,7 +249,7 @@ Switch
 </tr>
 <tr>
 <td>
-[DataFormDateItem] 
+DataFormDateItem 
 </td>
 <td>
 Generated for the DateTime, DateOnly, DateTimeOffset type properties.
@@ -265,7 +265,7 @@ DatePiker
 </tr>
 <tr>
 <td>
-[DataFormTimeItem]
+DataFormTimeItem
 
 </td>
 <td>
@@ -281,7 +281,7 @@ TimePicker
 </tr>
 <tr>
 <td>
-[DataFormPickerItem] 
+DataFormPickerItem
 </td>
 <td>
 Generated for the Enum type property.
@@ -296,7 +296,7 @@ Picker
 </tr>
 <tr>
 <td>
-[DataFormAutoCompleteItem]
+DataFormAutoCompleteItem
 </td>
 <td>
 Generated for the Enum type property.
@@ -311,7 +311,7 @@ AutoComplete
 </tr>
 <tr>
 <td>
-[DataFormComboBoxItem]
+DataFormComboBoxItem
 </td>
 <td>
 Generated for the Enum type property.
@@ -326,7 +326,7 @@ ComboBox
 </tr>
 <tr>
 <td>
-[DataFormRadioGroupItem]
+DataFormRadioGroupItem
 </td>
 <td>
 Generated for the Enum type property.
