@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Layout in .NET MAUI DataForm control | Syncfusion
-description: Learn here all about the Layout support in Syncfusion .NET MAUI DataForm (SfDataForm) control and more.
+description: Learn about the Layout support in Syncfusion .NET MAUI DataForm (SfDataForm) control in mobile and desktop applications from a single shared codebase.
 platform: maui
 control: SfDataForm
 documentation: ug

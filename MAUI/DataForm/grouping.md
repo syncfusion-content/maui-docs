@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Grouping the editors in .NET MAUI DataForm control | Syncfusion
-description: Learn about the grouping support in the Syncfusion .NET MAUI DataForm (SfDataForm) control and more.
+description: Learn about the grouping support in Syncfusion .NET MAUI DataForm (SfDataForm) control in mobile and desktop applications from a single shared codebase.
 platform: maui
 control: SfDataForm
 documentation: ug
@@ -158,7 +158,7 @@ The order of the editors of group in grid row can be changed within a row by usi
 
         if (e.DataFormGroupItem != null)
         {
-            if (e.DataFormGroupItem.GroupName == "Name")
+            if (e.DataFormGroupItem.Name == "Name")
             {
                 e.DataFormGroupItem.ColumnCount = 3;
             }
