@@ -23,9 +23,9 @@ SfChart
 <td>
 <div> SfCartesianChart </div>
 <div> SfCircularChart </div>
-<div> SfFunnelChart (<em>Upcoming</em>) </div>
+<div> SfFunnelChart</div>
+<div> SfPyramidChart </div>
 <div> SfPolarChart (<em>Upcoming</em>) </div>
-<div> SfPyramidChart (<em>Upcoming</em>) </div>
 </td>
 </tr>
 </table>
@@ -112,7 +112,6 @@ The following table illustrates the API migration for the chart.
 <td>Legend</td>
 <td>Legend</td>
 </tr>
-
 <tr>
 <td>Series</td>
 <td>Series</td>
@@ -166,6 +165,7 @@ The following table illustrates the API migration for the chart.
 <td>ShowTrackballInfo</td>
 <td>ShowTrackballLabel</td>
 </tr>
+<tr>
 <td>LabelClicked</td>
 <td><em>Upcoming</em></td>
 </tr>
@@ -201,7 +201,6 @@ The following table illustrates the API migration for the chart.
 <td>LabelExtent</td>
 <td><em>Upcoming</em></td>
 </tr>
-<tr>
 <tr>
 <td>AutoScrollingDelta</td>
 <td><em>Upcoming</em></td>
@@ -285,7 +284,7 @@ this.Content = chart;
 </tr>
 </table>
 
-### Series
+ ### Series
 
 <table>
 <tr>
@@ -298,7 +297,7 @@ this.Content = chart;
 <td>Fill</td>
 </tr>
 <tr>
-<td>ColorModel, CustomBrushes </td>
+<td>ColorModel, CustomBrushes</td>
 <td>PaletteBrushes</td>
 </tr>
 <tr>
@@ -397,6 +396,7 @@ this.Content = chart;
 <td>IsVisible</td>
 <td>IsVisible</td>
 </tr>
+<tr>
 <td>ItemTemplate</td>
 <td>ItemTemplate</td>
 </tr>
@@ -436,7 +436,6 @@ this.Content = chart;
 <td>LabelStyle</td>
 <td><em>Upcoming</em></td>
 </tr>
-<tr>
 <tr>
 <td>OverflowMode</td>
 <td><em>Upcoming</em></td>
@@ -785,23 +784,33 @@ chart.ChartBehaviors.Add(selectionBehavior);
 
 <chart:SfCartesianChart>
 . . .
-    <chart:SfCartesianChart.SelectionBehavior>
-        <chart:ChartSelectionBehavior />
-    </chart:SfCartesianChart.SelectionBehavior>
-
-    <chart:ColumnSeries SelectionBrush="Green" 
-                        SelectedIndex="2"
-                        ItemsSource="{Binding Data}" 
-                        XBindingPath="Demand" 
-                        YBindingPath="Year2010" />
+    <chart:SfCartesianChart.Series>
+        <chart:ColumnSeries ItemsSource="{Binding Data}" 
+                            XBindingPath="Name"
+                            YBindingPath="Height">
+                <chart:ColumnSeries.SelectionBehavior>
+                        <chart:DataPointSelectionBehavior SelectionBrush="#314A6E"/>
+                </chart:ColumnSeries.SelectionBehavior>
+        </chart:ColumnSeries>
+    </chart:SfCartesianChart.Series>
 </chart:SfCartesianChart>
 
 {% endhighlight %} 
 {% highlight C# %}
-ColumnSeries series = new ColumnSeries();
+
+SfCartesianChart chart = new SfCartesianChart();
 . . .
-series.SelectionBrush = Brush.Green;
-chart.SelectionBehavior = new ChartSelectionBehavior();
+DataPointSelectionBehavior selection = new DataPointSelectionBehavior();
+selection.SelectionBrush=Color.FromArgb("#314A6E");
+
+ColumnSeries series = new ColumnSeries()
+{
+    ItemsSource = new ViewModel().Data,
+    XBindingPath = "Name",
+    YBindingPath = "Height",
+    SelectionBehavior = selection
+};
+
 chart.Series.Add(series);
 {% endhighlight %}
 
@@ -809,6 +818,8 @@ chart.Series.Add(series);
 </td>
 </tr>
 </table>
+
+N> For more information about selection check [here](https://help.syncfusion.com/maui/cartesian-charts/selection).
 
 ### Zooming and Panning
 

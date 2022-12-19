@@ -297,6 +297,34 @@ The `DataGridCheckBoxColumn` inherits all the properties of the `DataGridColumn`
 
 ![DataGrid with CheckBox column](Images\column-types\maui-datagrid-column-checkbox.png)
 
+## CellValueChanged event
+
+The `SfDataGrid.CellValueChanged` event will be triggered whenever the current cell's value has been changed in the DataGridCheckBoxColumn. This event handler contains the parameter of type `DataGridCellValueChangedEventArgs` that contains the following properties.
+
+* `Column`        : Gets the current `DataGridColumn` that contains the grid cell for which value is edited or changed.
+* `NewValue`      : The newly edited value to be committed.
+* `RowColumnIndex`   : The current `RowColumnIndex` of the grid cell undergoing the value change.
+* `RowData`       : The `RowData` of the row that contains the grid cell undergoing the value change.
+* `CellValue`       : The initial value when current cell entered edit mode.
+
+{% tabs %}
+
+{% highlight c# %}
+
+        dataGrid.CellValueChanged += SfDataGrid_CellValueChanged;
+
+        private void SfDataGrid_CellValueChanged(object sender, ValueChangedEventArgs e)
+        {
+            var column = e.Column;
+            var newValue = e.NewValue;
+            var rowColIndex = e.RowColIndex;
+            var rowData = e.RowData;
+        }
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ## DataGridImageColumn
 
 The `DataGridImageColumn` is derived from the `DataGridColumn`. Hence, it inherits all the properties of the `DataGridColumn`. It displays an image as the cell content of a column. To create a `DataGridImageColumn`, the property corresponding to the column in the underlying collection must be `ImageSource` type.

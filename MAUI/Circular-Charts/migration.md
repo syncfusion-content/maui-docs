@@ -638,6 +638,8 @@ chart.Series.Add(series);
 </tr>
 </table>
 
+N> For more information about selection check [here](https://help.syncfusion.com/maui/circular-charts/selection).
+
 ## Upcoming features in .NET MAUI
 
 **Chart** 
