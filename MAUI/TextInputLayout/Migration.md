@@ -38,6 +38,10 @@ To migrate easier from Xamarin SfTextInputLayout to .NET MAUI SfTextInputLayout,
 <td>UnfocusedStrokeThickness</td>
 <td>Gets or sets a value to customize the stroke thickness in an unfocused state. It is applicable for the bottom line and outline border when setting the container type as filled and outlined, respectively.</td></tr>
 <tr>
+<td>ContainerBackgroundColor</td>
+<td>ContainerBackground</td>
+<td>Gets or sets the background color of the container.</td></tr>
+<tr>
 <td>FocusedColor<br/>UnfocusedColor<br/>ErrorColor</td>
 <td>Stroke</td>
 <td>Gets or sets the border color or base line color based on container and its states.</td></tr>
