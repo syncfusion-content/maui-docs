@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Manually create DataFormItems in Maui DataForm control | Syncfusion
-description: Learn here all about working with manually created DataFormViewItems in Syncfusion . NET MAUI DataForm(SfDataForm) control.
+description: Learn here all about working with manually created DataFormViewItems in Syncfusion . NET MAUI DataForm(SfDataForm) control in mobile and desktop applications from a single shared codebase.
 platform: Maui
 control: SfDataForm
 documentation: UG
@@ -9,7 +9,7 @@ documentation: UG
 
 # Working DataForm Items Manually
 
-You can manually create [DataFormViewItem] for the defined business model by using the [Items] property of the `SfDataForm` class. You should set the [AutoGenerateItems] property to false to restrict the auto-generation of [SfDataForm.Items]. 
+You can manually create `DataFormViewItem` for the defined business model by using the `Items` property of the `SfDataForm` class. You should set the `AutoGenerateItems` property to false to restrict the auto-generation of `SfDataForm.Items`. 
 
 {% tabs %}
 {% highlight xaml %}
@@ -95,7 +95,7 @@ You can manually create [DataFormViewItem] for the defined business model by usi
 {% endhighlight %}
 
 ### Adding DataForm group manually
-You can also generate [DataFormGroupItem] manually using the [Items] property of `SfDataForm`.
+You can also generate `DataFormGroupItem` manually using the `Items` property of `SfDataForm`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -152,7 +152,7 @@ You can also generate [DataFormGroupItem] manually using the [Items] property of
 `AddCustomItemsimages`
 
 ### Dynamically remove manually added dataform items
-You can dynamically remove the dataform items from collections using the [Items]`Link` property of `SfDataForm`.
+You can dynamically remove the dataform items from collections using the `Items` property of `SfDataForm`.
 
 {% tabs %}
 {% highlight C# %}
@@ -165,7 +165,7 @@ You can dynamically remove the dataform items from collections using the [Items]
 `images/RemoveCustomItems`
 
 ### Dynamically clear manually added dataform items
-You can dynamically clear the dataform items using the [Items] property of `SfDataForm`.
+You can dynamically clear the dataform items using the `Items` property of `SfDataForm`.
 
 {% tabs %}
 {% highlight C# %}
@@ -178,7 +178,7 @@ You can dynamically clear the dataform items using the [Items] property of `SfDa
 `images/ClearCustomItems`
 
 ### Dynamically reset manual dataform items
-You can reset the dataform items using the [Items] property of `SfDataForm` and we can reset two or more dataform items at a time.
+You can reset the dataform items using the `Items` property of `SfDataForm` and we can reset two or more dataform items at a time.
 
 {% tabs %}
 {% highlight C# %}
@@ -196,7 +196,7 @@ You can reset the dataform items using the [Items] property of `SfDataForm` and 
 
 
 ### Dynamically add Dataform group items
-You can dynamically add custom group items using [Items] property of `SfDataForm`.
+You can dynamically add custom group items using `Items` property of `SfDataForm`.
 {% tabs %}
 {% highlight C# %}
 
