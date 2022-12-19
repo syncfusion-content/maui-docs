@@ -22,9 +22,9 @@ The hint label position of the input view will be set always at the top for the 
 
 {% highlight xaml %} 
 
- <inputLayout:SfTextInputLayout Hint="Name"
-                                IsHintAlwaysFloated="true" 
-                                ContainerType="Filled">
+<inputLayout:SfTextInputLayout Hint="Name"
+                               IsHintAlwaysFloated="true" 
+                               ContainerType="Filled">
         <Entry />
 </inputLayout:SfTextInputLayout>
 
@@ -90,7 +90,6 @@ The hint label position of the input view will be set always at the top for the 
         <Entry />
 </inputLayout:SfTextInputLayout> 
  
-
 {% endhighlight %}
 
 {% highlight C# %} 
