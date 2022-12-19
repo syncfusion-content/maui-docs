@@ -26,8 +26,8 @@ To migrate easier from Xamarin SfRating to [.NET MAUI SfRating], most of the API
 
 <table> 
 <tr>
-<th>Xamarin SfAutoComplete</th>
-<th>.NET MAUI SfAutocomplete</th>
+<th>Xamarin SfRating</th>
+<th>.NET MAUI SfRating</th>
 <th>Description</th></tr>
 <tr>
 <td>RatedStrokeWidth</td>
