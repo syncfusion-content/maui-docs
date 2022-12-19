@@ -398,8 +398,8 @@ Calculate the zoom level automatically based on the `MapLatLngBounds(Northeast, 
                 <maps:MapMarkerCollection>
                     <maps:MapMarker Latitude="38.909804"
                                     Longitude="-77.043442" />
-                    <maps:MapMarker Latitude="13.048155"
-                                    Longitude="80.083858" />
+                    <maps:MapMarker Latitude="38.909148"
+                                    Longitude="-77.043610" />
                 </maps:MapMarkerCollection>
             </maps:MapTileLayer.Markers>
             <maps:MapTileLayer.MapLatLngBounds>
@@ -415,8 +415,8 @@ Calculate the zoom level automatically based on the `MapLatLngBounds(Northeast, 
                     <maps:MapLatLngBounds.Southwest>
                         <maps:MapLatLng>
                             <x:Arguments>
-                                <x:Double>13.048155</x:Double>
-                                <x:Double>80.083858</x:Double>
+                                <x:Double>38.909148</x:Double>
+                                <x:Double>-77.043610</x:Double>
                             </x:Arguments>
                         </maps:MapLatLng>
                     </maps:MapLatLngBounds.Southwest>
@@ -443,10 +443,11 @@ public LatLngBoundsPage()
     mapMarker.Latitude = 38.909804;
     mapMarker.Longitude = -77.043442;
     MapMarker mapMarker1 = new MapMarker();
-    mapMarker1.Latitude = 13.048155;
-    mapMarker1.Longitude =  80.083858;
+    mapMarker1.Latitude = 38.909148;
+    mapMarker1.Longitude = -77.043610;
     MapMarkerCollection mapMarkers = new MapMarkerCollection();
     mapMarkers.Add(mapMarker);
+    mapMarkers.Add(mapMarker1);
     tileLayer.Markers = mapMarkers;
     tileLayer.MarkerTemplate = CreateDataTemplate();
     MapLatLngBounds bounds = new MapLatLngBounds();
@@ -601,7 +602,7 @@ this.Content = map;
 
 ## Event
 
-The `ZoomLevelChanging` event triggers  when the zoom level gets changing. Following arguments can be get from the ZoomLevelChanging event.
+The `ZoomLevelChanging` event triggers when the zoom level gets changing. Following arguments can be get from the ZoomLevelChanging event.
 
 * `Cancel` : Used to cancel the zooming.
 * `PreviousLevel` : Returns the previous level after the zooming.
