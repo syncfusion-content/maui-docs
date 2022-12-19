@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data annotations in .NET MAUI DataForm control | Syncfusion
-description: Learn here all about Data annotations support in Syncfusion Maui DataForm (SfDataForm) control to handle the data.
+description: Learn about the Data annotations support in Syncfusion Maui DataForm (SfDataForm) control in mobile and desktop applications from a single shared codebase.
 platform: maui
 control: SfDataForm
 documentation: UG
@@ -77,7 +77,7 @@ Specifies the order of field in the data form.
 </table>
 
 {% tabs %}
-{% highlight C# attribute}
+{% highlight C# }
 
     [Display(Name = "First Name", GroupName = "Name", Prompt="Enter your name")]
     public string FirstName { get; set; }
@@ -326,8 +326,6 @@ Specifies the Converter type which converts the original value in different form
 
 {% endhighlight %}
 {% endtabs %}
-
-Refer to this`[link]` to know about `DataFormValueConverterAttribute`
 
 ### DateFormDateRange attribute
 
