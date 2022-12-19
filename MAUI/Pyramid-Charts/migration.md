@@ -375,8 +375,8 @@ To customize the data label appearance, create an instance of the [ChartDataMark
 		  <chart:ChartDataMarker.LabelStyle>
              <chart:DataMarkerLabelStyle TextColor="Blue"
                                          BorderColor="Red"
-                                    BorderThickness="2"
-                                    BackgroundColor="Aqua"
+                                         BorderThickness="2"
+                                         BackgroundColor="Aqua"
                                          Angle="315"
                                          Margin="5" 
                                          FontSize="18" 
