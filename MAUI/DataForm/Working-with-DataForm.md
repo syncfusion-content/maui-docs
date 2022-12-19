@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Working with DataForm in Maui DataForm control | Syncfusion
-description: Learn here all about Working with DataForm support in Syncfusion Maui DataForm (SfDataForm) control and more.
+description: Learn here all about Working with DataForm support in Syncfusion Maui DataForm (SfDataForm) control in mobile and desktop applications from a single shared codebase.
 platform: Maui
 control: SfDataForm
 documentation: UG
@@ -11,9 +11,9 @@ documentation: UG
 
 ## Auto-generating DataFormItems for the data field
 
-By default, the [SfDataForm.Items] will be generated based on the property type. For example, the [DataFormTextItem] will be created for the `string` type property. 
+By default, the `SfDataForm.Items` will be generated based on the property type. For example, the `DataFormTextItem` will be created for the `string` type property. 
 
-The [DataFormItem] generation depends on the type and attribute defined for the property.
+The `DataFormItem` generation depends on the type and attribute defined for the property.
 The following tables lists the several types of `DataFormItem` and its constraints for auto generation:
 
 <table>
@@ -24,7 +24,7 @@ The following tables lists the several types of `DataFormItem` and its constrain
 </tr>
 <tr>
 <td>
-[DataFormTextItem]
+DataFormTextItem
 </td>
 <td>
 {{'[Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry?view=net-maui-7.0)'| markdownify }}
@@ -35,7 +35,7 @@ Default DataFormItem generated for the String type and the properties with [Data
 </tr>
 <tr>
 <td>
-[DataFormMultilineTextItem]
+`DataFormMultilineTextItem`
 </td>
 <td>
 {{'[Editor](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/editor?view=net-maui-7.0)'| markdownify }}
@@ -46,7 +46,7 @@ Generated for the String type and the properties with  [DataType(DataType.Multil
 </tr>
 <tr>
 <td>
-[DataFormPasswordItem]
+DataFormPasswordItem
 </td>
 <td>
 {{'[Entry]((https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry?view=net-maui-7.0)'| markdownify }}
@@ -57,7 +57,7 @@ Generated for the String type and the properties with [DataType(DataType.Passwor
 </tr>
 <tr>
 <td>
-[DataFormDateItem]
+DataFormDateItem
 </td>
 <td>
 {{'[DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/datepicker?view=net-maui-7.0)'| markdownify }}
@@ -69,7 +69,7 @@ Generated for DateTime, DateTimeOffset, DateOnly type and properties with [DataT
 </tr>
 <tr>
 <td>
-[DataFormTimeItem]
+DataFormTimeItem
 </td>
 <td>
 {{'[TimePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/timepicker?view=net-maui-7.0&tabs=windows)'| markdownify }}
@@ -80,7 +80,7 @@ Generated for TimeSpan, TimeOnly, DateTime and DateTimeOffset property with [Dat
 </tr>
 <tr>
 <td>
-[DataFormPickerItem]
+DataFormPickerItem
 </td>
 <td>
 {{'[Picker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/picker?view=net-maui-7.0)'| markdownify }}
@@ -91,7 +91,7 @@ Generated for Enum type property.
 </tr>
 <tr>
 <td>
-[DataFormCheckBoxItem]
+DataFormCheckBoxItem
 </td>
 <td>
 {{'[CheckBox](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/checkbox?view=net-maui-7.0)'| markdownify }}
@@ -102,7 +102,7 @@ Generated for the Bool type property.
 </tr>
 <tr>
 <td>
-[DataFormSwitchItem]
+DataFormSwitchItem
 </td>
 <td>
 {{'[Switch](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/switch?view=net-maui-7.0)'| markdownify }}
@@ -113,7 +113,7 @@ Generated for the Bool type property.
 </tr>
 <tr>
 <td>
-[DataFormComboBoxItem]
+DataFormComboBoxItem
 </td>
 <td>
 {{'[SfComboBox](https://help.syncfusion.com/maui/combobox)'| markdownify }}
@@ -123,7 +123,7 @@ Generated for Enum type property.
 </td>
 </tr><tr>
 <td>
-[DataFormAutoCompleteItem]
+`DataFormAutoCompleteItem`
 </td>
 <td>
 {{'[SfAutoComplete](https://help.syncfusion.com/maui/autocomplete)'| markdownify }}
@@ -134,7 +134,7 @@ Generated for Enum type property.
 </tr>
 <tr>
 <td>
-[DataFormRadioGroupItem]
+DataFormRadioGroupItem
 </td>
 <td>
 {{'[RadioButton](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/radiobutton?view=net-maui-7.0)'| markdownify }}
@@ -145,11 +145,11 @@ Generated for the Enum type property.
 </tr>
 </table>
 
-You can customize the property settings or cancel the generation of `DataFormItem` by handling the [GenerateDataFormItem] event.
+You can customize the property settings or cancel the generation of `DataFormItem` by handling the `GenerateDataFormItem` event.
 
 ## Customize auto generated fields
 
-You can customize or cancel the generated `DataFormItem` by handling the [GenerateDataFormItem] event. This event occurs when the field is auto-generated for public and non-static property of the data object.
+You can customize or cancel the generated `DataFormItem` by handling the `GenerateDataFormItem` event. This event occurs when the field is auto-generated for public and non-static property of the data object.
 
 {% tabs %}
 {% highlight XAML %}
@@ -176,15 +176,15 @@ You can customize or cancel the generated `DataFormItem` by handling the [Gener
 {% endhighlight %}
 {% endtabs %}
 
-[GenerateDataFormItemEventArgs]  provides the information about the auto-generated[DataFormViewItem].  [GenerateDataFormItemEventArgs.DataFormItem]   property returns the newly created `DataFormGroupItem`.
+`GenerateDataFormItemEventArgs` provides the information about the auto-generated`DataFormViewItem`.  `GenerateDataFormItemEventArgs.DataFormItem`  property returns the newly created `DataFormGroupItem`.
 
 ## Cancel DataFormItem generation of the data field
 
-You can cancel the specific [DataFormItem] adding to the data form by handling the `GenerateDataFormItem` event or by defining display attribute to avoid the particular data field being displayed.
+You can cancel the specific `DataFormItem` adding to the data form by handling the `GenerateDataFormItem` event or by defining display attribute to avoid the particular data field being displayed.
 
 #### Using attributes
 
-You can set [AutoGenerateField] to `false` for canceling the `DataFormItem` generation.
+You can set `AutoGenerateField` to `false` for canceling the `DataFormItem` generation.
 
 {% tabs %}
 {% highlight C# %}
@@ -214,7 +214,7 @@ In the following code, the `DataFormItem` generation for the `MiddleName` prope
 
 ## Changing property settings
 
-You can change the property of [DataFormItem] in the `GenerateDataFormItem` event.
+You can change the property of `DataFormItem` in the `GenerateDataFormItem` event.
 
 Here, `Salary` data field is restricted from being edited in the data form.
 
@@ -238,7 +238,7 @@ Here, `Salary` data field is restricted from being edited in the data form.
 
 #### Changing DataFormItem visibility
 
-You can change the [DataFormItem]  visibility by using the [IsVisible] property in the `DataFormItem`.
+You can change the `DataFormItem` visibility by using the `IsVisible` property in the `DataFormItem`.
 
 Here, `LastName` data field will be hidden.
 
@@ -266,7 +266,7 @@ You can display the watermark in the editor by defining the display attribute or
 
 #### Using attribute
 
-You can show the watermark in the editor by setting the [Prompt] in display attribute.
+You can show the watermark in the editor by setting the `Prompt` in display attribute.
 
 {% tabs %}
 {% highlight C# %}
@@ -279,7 +279,7 @@ You can show the watermark in the editor by setting the [Prompt] in display attr
 
 #### Using event
 
-You can show the watermark in the editor by using the [PlaceholderText] property in [DataFormItem].
+You can show the watermark in the editor by using the `PlaceholderText` property in `DataFormItem`.
 
 {% tabs %}
 {% highlight C# %}
@@ -303,7 +303,7 @@ You can show the watermark in the editor by using the [PlaceholderText] property
 
 You can display the color for the watermark in the editor by using `GenerateDataFormItem` event.
 
-You can change the color for the watermark in the editor by using the [PlaceholderColor]  property in [DataFormItem] .
+You can change the color for the watermark in the editor by using the `PlaceholderColor` property in `DataFormItem`.
 
 {% tabs %}
 {% highlight C# %}
@@ -326,7 +326,7 @@ You can change the color for the watermark in the editor by using the [Placehold
 
 ## Setting Padding
 
-You can create a space around a label and editor by using [Padding] property in the `DataFormItem`.
+You can create a space around a label and editor by using `Padding` property in the `DataFormItem`.
 
 Here, `FirstName` data field will be changed from the default position.
 
@@ -354,7 +354,7 @@ By default property name should be displayed as label. You can change the label 
 
 #### Using attribute
 
-You can change the label text by setting the [Name] in display attribute.
+You can change the label text by setting the `Name` in display attribute.
 
 {% tabs %}
 {% highlight C# %}
@@ -369,7 +369,7 @@ You can change the label text by setting the [Name] in display attribute.
 
 #### Using event
 
-You can change the label text by using the [LabelText] property in [DataFormItem] .
+You can change the label text by using the `LabelText` property in `DataFormItem` .
 
 {% tabs %}
 {% highlight C# %}
@@ -395,7 +395,7 @@ By default the label should be generated by property name. You can remove label 
 
 #### Using attribute
 
-You can remove the label text for editor by setting [ShowLabel] as false in dataformdisplayOption attribute.
+You can remove the label text for editor by setting `ShowLabel` as false in dataformdisplayOption attribute.
 
 {% tabs %}
 {% highlight C# %}
@@ -410,7 +410,7 @@ You can remove the label text for editor by setting [ShowLabel] as false in data
 
 #### Using events
 
-You can remove the label text for editor by using the [ShowLabel] property in [DataFormItem].
+You can remove the label text for editor by using the `ShowLabel` property in `DataFormItem`.
 
 {% tabs %}
 {% highlight C# %}
@@ -432,7 +432,7 @@ You can remove the label text for editor by using the [ShowLabel] property in [D
 
 ## Changing layout settings
 
-You can change the label width, label position and editor width. This is possible by using the `GenerateDataFormItem` event. In the event, change the layout by using the [DefaultLayoutSettings] property in the `DataFormItem`.
+You can change the label width, label position and editor width. This is possible by using the `GenerateDataFormItem` event. In the event, change the layout by using the `DefaultLayoutSettings` property in the `DataFormItem`.
 
 By default label position is left.
 
@@ -461,7 +461,7 @@ By default label position is left.
 
 You can change the background colour for the label and editor by using `GenereateDataFormItem` event.
 
-You can change the background colour for the label and editor by using the [Background] property in [DataFormItem].
+You can change the background colour for the label and editor by using the `Background` property in `DataFormItem`.
 
 {% tabs %}
 {% highlight C# %}
@@ -487,7 +487,7 @@ By default the editor can be placed in the order of how you declare a propety in
 
 You can change the order of item in a row only if the column count more than 1 [If the column count = n , you can place a item upto n-1 position].
 
-You can change the order of item's within a row using [ItemsOrderInRow] property.
+You can change the order of item's within a row using `ItemsOrderInRow` property.
 
 {% tabs %}
 {% highlight C# %}
@@ -514,7 +514,7 @@ You can change the order of item's within a row using [ItemsOrderInRow] property
 
 You can set label icon instead of using label text. Example:- You have a PhoneNumber editor, and the editor label is PhoneNumber. Here You can use a phone image for the label.
 
-Right-click on the phone image and change the build action to "Embedded resource" and configure an image in.csproj. Directly add the name of the image by using the [LeadingLabelIcon] property in [DataFormItem].
+Right-click on the phone image and change the build action to "Embedded resource" and configure an image in.csproj. Directly add the name of the image by using the `LeadingLabelIcon` property in `DataFormItem`.
 
 {% tabs %}
 {% highlight C# %}
