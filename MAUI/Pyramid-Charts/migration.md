@@ -380,7 +380,7 @@ To customize the data label appearance, create an instance of the [ChartDataMark
                                          Angle="315"
                                          Margin="5" 
                                          FontSize="18" 
-					                     FontAttributes="Italic"/>
+					 FontAttributes="Italic"/>
 		  </chart:ChartDataMarker.LabelStyle>
 	    </chart:ChartDataMarker>
 	    </chart:PyramidSeries.DataMarker>
@@ -426,12 +426,12 @@ chart.Series.Add(series);
         <chart:PyramidDataLabelSettings>
             <chart:PyramidDataLabelSettings.LabelStyle>
                 <chart:ChartDataLabelStyle TextColor="Blue" 
-                                           Stroke="Red" 
-                                           StrokeWidth="2" 
+                                           Stroke="Red"
+					   StrokeWidth="2" 
                                            Background="Aqua" 
                                            Margin="10" 
-                                           FontSize="16"
-                                           FontAttributes="Bold"/>
+					   FontSize="16"
+					   FontAttributes="Bold"/>
             </chart:PyramidDataLabelSettings.LabelStyle>
         </chart:PyramidDataLabelSettings>
     </chart:SfPyramidChart.DataLabelSettings>
