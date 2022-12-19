@@ -75,4 +75,4 @@ namespace PdfViewerExample
 {% endhighlight %} 
 {% endtabs %}
 
-The example project to open a PDF document from a given URL can be downloaded here. 
+The example project to open a PDF document from a given URL can be downloaded [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples). 

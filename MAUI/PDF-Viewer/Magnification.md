@@ -17,11 +17,11 @@ You can change or control the zoom in the PDF Viewer using the `ZoomFactor` prop
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfPdfViewer x:Name="pdfViewer" DocumentSource="{Binding PdfDocumentStream}" ZoomFactor ="3" />
+<syncfusion:SfPdfViewer x:Name="PdfViewer" DocumentSource="{Binding PdfDocumentStream}" ZoomFactor ="3" />
 {% endhighlight %}
 
 {% highlight c# %}
-pdfViewer.ZoomFactor = 3;
+PdfViewer.ZoomFactor = 3;
 {% endhighlight %}
 {% endtabs %}
 
@@ -35,15 +35,15 @@ The following code example explains restricting the zoom factor between 0.5 and 
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfPdfViewer x:Name="pdfViewer" DocumentSource="{Binding PdfDocumentStream}"  MinZoomFactor = “0.5” MaxZoomFactor ="2" />
+<syncfusion:SfPdfViewer x:Name="PdfViewer" DocumentSource="{Binding PdfDocumentStream}"  MinZoomFactor = “0.5” MaxZoomFactor ="2" />
 {% endhighlight %}
 
 {% highlight c# %}
-pdfViewer.MinZoomFactor = 0.5;
-pdfViewer.MaxZoomFactor = 2;
+PdfViewer.MinZoomFactor = 0.5;
+PdfViewer.MaxZoomFactor = 2;
 {% endhighlight %}
 {% endtabs %}
 
 N>If the `ZoomFactor` value is set beyond the MinZoomFactor and MaxZoomFactor limits, then it will not be effective.
 
-The example project with the magnification functionalities can be downloaded here.
+The example project with the zoom or magnification functionalities can be downloaded [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples).

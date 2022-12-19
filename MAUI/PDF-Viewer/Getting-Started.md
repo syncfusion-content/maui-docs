@@ -122,8 +122,8 @@ N>`DocumentSource` property supports both `Stream` and `byte[]` objects.
     </ContentPage.BindingContext>
 
     <ContentPage.Content>
-        <syncfusion:SfPdfViewer x:Name="pdfViewer "
-                               ItemsSource="{Binding PdfDocumentStream}">
+        <syncfusion:SfPdfViewer x:Name="PdfViewer"
+                               DocumentSource="{Binding PdfDocumentStream}">
         </syncfusion:SfPdfViewer>
     </ContentPage.Content>
 </ContentPage>
@@ -135,4 +135,4 @@ N>`DocumentSource` property supports both `Stream` and `byte[]` objects.
 
 ![Getting started with .NET MAUI PDF Viewer](Images\Getting-Started\maui-pdf-viewer-getting-started.png)
 
-The **Getting Started** example project for the.NET MAUI PDF Viewer can be downloaded **here**. 
+The **Getting Started** example project for the.NET MAUI PDF Viewer can be downloaded [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples). 
