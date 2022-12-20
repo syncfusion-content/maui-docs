@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrate from Xamarin.Forms SfDataForm to .NET MAUI SfDataForm 
 
-To make the migration from the [Xamarin SfDataForm](https://www.syncfusion.com/xamarin-ui-controls/xamarin-dataform) to `.NET MAUI SfDataForm` easier, most of the APIs from the Xamarin SfDataForm were kept in the `.NET MAUI SfDataForm`. However, to maintain the consistency of API naming in the `.NET MAUI SfDataForm`, some of the APIs have been renamed. Please find the difference in the following topics.
+To make the migration from the [Xamarin SfDataForm](https://www.syncfusion.com/xamarin-ui-controls/xamarin-dataform) to the `.NET MAUI SfDataForm` easier, most of the APIs from the `Xamarin SfDataForm` were kept in the `.NET MAUI SfDataForm`. However, to maintain the consistency of API naming in the `.NET MAUI SfDataForm`, some of the APIs have been renamed. Please find the difference in the following topics.
 
 ## Namespaces
 
@@ -24,7 +24,7 @@ To make the migration from the [Xamarin SfDataForm](https://www.syncfusion.com/x
 
 ## Initialize control
 
-To initialize the control, import the DataForm namespace and initialize SfDataForm as shown in the following code sample.
+To initialize the control, import the DataForm namespace and initialize the SfDataForm as shown in the following code sample.
 
 <table>
 <tr>
@@ -118,13 +118,14 @@ this.dataForm.DataObject = new DataModel();
 <tr>
 <td>{{'[DataFormAutoCompleteItem](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormAutoCompleteItem.html)'| markdownify }}</td>
 <td>DataFormAutoCompleteItem</td>
-<td>Represents the class that encapsulates the layout and auto complete editor(SfAutoComplete) settings for data field.</td>
+<td>Represents the class that encapsulates the layout and auto complete editor(SfAutoComplete) settings for the data field.
+</td>
 </tr>
 
 <tr>
 <td>{{'[DataFormCheckBoxItem](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormCheckBoxItem.html)'| markdownify }}</td>
 <td>DataFormCheckBoxItem</td>
-<td>Represents the class that encapsulates the layout and CheckBox editor settings for data field.</td>
+<td>Represents the class that encapsulates the layout and CheckBox editor settings for the data field.</td>
 </tr>
 
 <tr>
@@ -136,13 +137,13 @@ this.dataForm.DataObject = new DataModel();
 <tr>
 <td>{{'[DataFormDropDownItem](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormDropDownItem.html)'| markdownify }}</td>
 <td>DataFormComboBoxItem</td>
-<td>Represents the class that encapsulates the layout and ComboBox editor settings for data field.</td>
+<td>Represents the class that encapsulates the layout and ComboBox editor settings for the data field.</td>
 </tr>
 
 <tr>
 <td>{{'[DataFormGroupItem](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormGroupItem.html)'| markdownify}}</td>
 <td>DataFormGroupItem</td>
-<td>Represents the class to encapsulates the group settings for group of data field's appearing in DataForm.</td>
+<td>Represents the class to encapsulate the group settings for a group of data fields appearing in DataForm.</td>
 </tr>
 
 <tr>
@@ -201,13 +202,13 @@ this.dataForm.DataObject = new DataModel();
 <tr>
 <td>{{'[SfDataForm](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.SfDataForm.html)'| markdownify }}</td>
 <td>SfDataForm</td>
-<td>The DataForm control is used to manage data and develop various forms such as login, reservation, data entry and so on.</td>
+<td>The DataForm control is used to manage data and develop various forms such as login, reservation, data entry, and so on.</td>
 </tr>
 
 <tr>
 <td>{{'[SourceProvider](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.SourceProvider.html)'| markdownify }}</td>
 <td>IDataFormSourceProvider</td>
-<td>Represents the interface to provide method to get the source for picker type properties.</td>
+<td>Represents the interface to provide a method to get the source for the picker type properties.</td>
 </tr>
 
 <tr>
@@ -225,7 +226,7 @@ this.dataForm.DataObject = new DataModel();
 <tr>
 <td>{{'[ValidationMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.ValidationMode.html)'| markdownify }}</td>
 <td>DataFormValidationMode</td>
-<td>Defines the constants for ValidationMode that specifies when the user input should be validated for data object.</td>
+<td>Defines the constants for the ValidationMode that specifies when the user input should be validated for the data object.</td>
 </tr>
 
 </table> 
@@ -318,49 +319,49 @@ public class DataModel
 <tr>
 <td>{{'[SourceProvider](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.SfDataForm.html#Syncfusion_XForms_DataForm_SfDataForm_SourceProvider)'| markdownify }}</td>
 <td>ItemsSourceProvider</td>
-<td>Gets or sets the value to get the source for picker type editors.</td>
+<td>Gets or sets the value to get the source for the picker type editors.</td>
 </tr>
 
 <tr>
 <td>{{'[AutoGenerateItems](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.SfDataForm.html#Syncfusion_XForms_DataForm_SfDataForm_AutoGenerateItems)'| markdownify }}</td>
 <td>AutoGenerateItems</td>
-<td>Gets or sets a value indicating whether auto generate the DataFormItems in the data form.</td>
+<td>Gets or sets a value indicating whether to auto-generate the DataFormItems in the data form.</td>
 </tr>
 
 <tr>
 <td>Nil</td>
 <td>EditorTextStyle</td>
-<td>Gets or sets the style of editor text, that used to customize the text color, font, font size, font family and font attributes.</td>
+<td>Gets or sets the style of the editor text used to customize the text color, font, font size, font family, and font attributes.</td>
 </tr>
 
 <tr>
 <td>Nil</td>
 <td>LabelTextStyle</td>
-<td>Gets or sets the style of label text, that used to customize the text color, font, font size, font family and font attributes.</td>
+<td>Gets or sets the label text style used to customize the text color, font, font size, font family, and font attributes.</td>
 </tr>
 
 <tr>
 <td>Nil</td>
 <td>ErrorLabelTextStyle</td>
-<td>Gets or sets the style of error label text, that used to customize the text color, font, font size, font family and font attributes.</td>
+<td>Gets or sets the style of error label text used to customize the text color, font, font size, font family, and font attributes.</td>
 </tr>
 
 <tr>
 <td>Nil</td>
 <td>ValidMessageLabelTextStyle</td>
-<td>Gets or sets the style of validation label text, that used to customize the text color, font, font size, font family and font attributes.</td>
+<td>Gets or sets the style of the validation label text used to customize the text color, font size, font family, and font attributes.</td>
 </tr>
 
 <tr>
 <td>Nil</td>
 <td>DefaultLayoutSettings</td>
-<td>Gets or sets the settings to customize default layout (Holds label and editor) settings.</td>
+<td>Gets or sets the settings to customize the default layout (Holds label and editor) settings.</td>
 </tr>
 </table>
 
 ### DataFormTextStyle
 
-The properties of `Xamarin SfDataForm` [LabelStyle](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.LabelStyle.html) are grouped to `DataFormTextStyle` in `.NET MAUI SfDataForm`
+The properties of the `Xamarin SfDataForm` [LabelStyle](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.LabelStyle.html) are grouped to the `DataFormTextStyle` in `.NET MAUI SfDataForm`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -432,13 +433,13 @@ public class DataModel
 <tr>
 <td>{{'[FontSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.LabelStyle.html#Syncfusion_XForms_DataForm_LabelStyle_FontSize)'| markdownify }}</td>
 <td>FontSize</td>
-<td>Gets or sets the double value that represents text font size in the data form.</td>
+<td>Gets or sets the double value that represents the text font size in the data form.</td>
 </tr>
 
 <tr>
 <td>{{'[FontFamily](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.LabelStyle.html#Syncfusion_XForms_DataForm_LabelStyle_FontFamily)'| markdownify }}</td>
 <td>FontFamily</td>
-<td>Gets or sets the string, that represents text font family in the data form.</td>
+<td>Gets or sets the string that represents the text font family in the data form.</td>
 </tr>
 
 <tr>
@@ -461,13 +462,13 @@ public class DataModel
 <tr>
 <td>{{'[RowSpan](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormItemBase.html#Syncfusion_XForms_DataForm_DataFormItemBase_RowSpan)'| markdownify }}</td>
 <td>RowSpan</td>
-<td>Gets or sets the number of rows that this item spans which is used to increase item's height.</td>
+<td>Gets or sets the number of rows this item spans, which increases the item's height.</td>
 </tr>
 
 <tr>
 <td>{{'[ColumnSpan](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormItemBase.html#Syncfusion_XForms_DataForm_DataFormItemBase_ColumnSpan)'| markdownify }}</td>
 <td>ColumnSpan</td>
-<td>Gets or sets the number of column that this item spans to increase item's width.</td>
+<td>Gets or sets the number of columns this item spans to increase the item's width.</td>
 </tr>
 
 <tr>
@@ -525,7 +526,7 @@ public class DataModel
 <tr>
 <td>Nil</td>
 <td>PlaceholderColor</td>
-<td>Gets or sets the color of prompt string displayed or the water mark to provide hint for users in the editors.</td>
+<td>Gets or sets the color of the prompt string displayed or the watermark to provide hints for users in the editors.</td>
 </tr>
 
 <tr>
@@ -537,43 +538,43 @@ public class DataModel
 <tr>
 <td>{{'[IsReadOnly](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormItem.html#Syncfusion_XForms_DataForm_DataFormItem_IsReadOnly)'| markdownify }}</td>
 <td>IsReadOnly</td>
-<td>Gets or sets a value indicating whether editor can be enabled or disabled.</td>
+<td>Gets or sets a value indicating whether the editor can be enabled or disabled.</td>
 </tr>
 
 <tr>
 <td>{{'[EditorFontSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormItem.html#Syncfusion_XForms_DataForm_DataFormItem_EditorFontSize)'| markdownify }}</td>
 <td>EditorTextStyle</td>
-<td>Gets or sets the style of editor text, that used to customize the text color, font, font size, font family and font attributes.</td>
+<td>Gets or sets the style of editor text used to customize the text color, font, font size, font family, and font attributes.</td>
 </tr>
 
 <tr>
 <td>{{'[ErrorMessageColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormItem.html#Syncfusion_XForms_DataForm_DataFormItem_ErrorMessageColor)'| markdownify }}</td>
 <td>ErrorLabelTextStyle</td>
-<td>Gets or sets the style of error message label , that used to customize the text color, font, font size, font family and font attributes.</td>
+<td>Gets or sets the style of the error message label used to customize the text color, font, font size, font family, and font attributes.</td>
 </tr>
 
 <tr>
 <td>{{'[ValidationLabelStyle](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormItem.html#Syncfusion_XForms_DataForm_DataFormItem_ValidationLabelStyle)'| markdownify }}</td>
 <td>ValidMessageLabelTextStyle</td>
-<td>Gets or sets the style of valid message label, that used to customize the text color, font, font size, font family and font attributes.</td>
+<td>Gets or sets the style of a valid message label used to customize the text color, font size, font family, and font attributes.</td>
 </tr>
 
 <tr>
 <td>Nil</td>
 <td>LabelTextStyle</td>
-<td>Gets or sets the style of editor label text, that used to customize the text color, font, font size, font family and font attributes.</td>
+<td>Gets or sets the style of editor label text used to customize the text color, font size, font family, and font attributes.</td>
 </tr>
 
 <tr>
 <td>Nil</td>
 <td>Background</td>
-<td>Gets or sets the background to the data form item layout which is used to render label and editor for the data field.</td>
+<td>Gets or sets the background to the data form item layout, which is used to render the label and editor for the data field.</td>
 </tr>
 
 <tr>
 <td>Nil</td>
 <td>DefaultLayoutSettings</td>
-<td>Gets or sets the value of layout (holds label and editor) settings which is used to customize the label position, label width and editor width.</td>
+<td>Gets or sets the value of the layout (holds label and editor) settings used to customize the label position, label width, and editor width.</td>
 </tr>
 
 <tr>
@@ -604,7 +605,7 @@ public class DataModel
 
 ### DataFormDefaultLayoutSettings
 
-Following properties of `Xamarin SfDataForm` is moved to `DataFormDefaultLayoutSettings` class of `.NET MAUI SfDataForm`.
+The following properties of the `Xamarin SfDataForm` is moved to the `DataFormDefaultLayoutSettings` class of `.NET MAUI SfDataForm`.
 
 <table>
 <tr>
@@ -616,7 +617,7 @@ Following properties of `Xamarin SfDataForm` is moved to `DataFormDefaultLayoutS
 <tr>
 <td>{{'[LabelPosition](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.SfDataForm.html#Syncfusion_XForms_DataForm_SfDataForm_LabelPosition)'| markdownify }}</td>
 <td>LabelPosition</td>
-<td>Gets or sets the label position for DataFormItem to define the position of the label which associated with the editor.</td>
+<td>Gets or sets the label position for DataFormItem to define the position of the label associated with the editor.</td>
 </tr>
 
 <tr>
@@ -737,7 +738,7 @@ Following properties of `Xamarin SfDataForm` is moved to `DataFormDefaultLayoutS
 <tr>
 <td>{{'[KeyBoard](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormTextItemBase.html#Syncfusion_XForms_DataForm_DataFormTextItemBase_KeyBoard)'| markdownify }}</td>
 <td>Keyboard</td>
-<td>Gets or sets the type of keyboard used to display in the text, multiline and password editor.</td>
+<td>Gets or sets the type of keyboard used to display the text, multiline, and password editor.</td>
 </tr>
 </table>
 
@@ -780,13 +781,13 @@ Following properties of `Xamarin SfDataForm` is moved to `DataFormDefaultLayoutS
 <tr>
 <td>{{'[Format](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormTimeItem.html#Syncfusion_XForms_DataForm_DataFormTimeItem_Format)'| markdownify }}</td>
 <td>Format</td>
-<td>Gets or sets the time format for Time Picker.</td>
+<td>Gets or sets the time format for the Time Picker.</td>
 </tr>
 </table>
 
 ### DataFormListItem
 
-The common properties of `Xamarin SfDataForm` list items (` DataFormPickerItem`, ` DataFormAutoCompleteItem`, ` DataFormDropDownItem` and ` DataFormRadioGroupItem` ) are added to [DataFormListItem] class in `.NET MAUI SfDataForm` 
+The common properties of `Xamarin SfDataForm` list items ( `DataFormPickerItem`,  `DataFormAutoCompleteItem`,  `DataFormDropDownItem` and  `DataFormRadioGroupItem`) are added to the `DataFormListItem` class in  the `.NET MAUI SfDataForm`.
 
 <table>
 <tr>
@@ -797,19 +798,19 @@ The common properties of `Xamarin SfDataForm` list items (` DataFormPickerItem`,
 <tr>
 <td>{{'[ItemsSource](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormPickerItem.html#Syncfusion_XForms_DataForm_DataFormPickerItem_ItemsSource)'| markdownify }}</td>
 <td>ItemsSource</td>
-<td>Gets or sets the collection which will get displayed in picker where the user can select from available items.</td>
+<td>Gets or sets the collection, which will be displayed in the picker where the user can select from available items.</td>
 </tr>
 
 <tr>
 <td>{{'[DisplayMemberPath](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormPickerItem.html#Syncfusion_XForms_DataForm_DataFormPickerItem_DisplayMemberPath)'| markdownify }}</td>
 <td>DisplayMemberPath</td>
-<td>Gets or sets a path to a value on the source object that will get displayed in picker.</td>
+<td>Gets or sets a path to a value on the source object that will get displayed in the picker.</td>
 </tr>
 
 <tr>
 <td>{{'[ValueMemberPath](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormPickerItem.html#Syncfusion_XForms_DataForm_DataFormPickerItem_ValueMemberPath)'| markdownify }}</td>
 <td>SelectedValuePath</td>
-<td>Gets or sets a path to a value on the source object which will get saved to data field.</td>
+<td>Gets or sets a path to a value on the source object which will get saved to the data field.</td>
 </tr>
 </table>
 
@@ -830,7 +831,7 @@ The common properties of `Xamarin SfDataForm` list items (` DataFormPickerItem`,
 <tr>
 <td>Nil</td>
 <td>TextSearchMode</td>
-<td>Gets or sets the text search mode for ComboBox editor.</td>
+<td>Gets or sets the text search mode for the ComboBox editor.</td>
 </tr>
 </table>
 
@@ -846,7 +847,7 @@ The common properties of `Xamarin SfDataForm` list items (` DataFormPickerItem`,
 <tr>
 <td>{{'[AutoCompleteMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormAutoCompleteItem.html#Syncfusion_XForms_DataForm_DataFormAutoCompleteItem_AutoCompleteMode)'| markdownify }}</td>
 <td>TextSearchMode</td>
-<td>Gets or sets the text search mode for auto complete editor.</td>
+<td>Gets or sets the text search mode for the auto complete editor.</td>
 </tr>
 </table>
 
@@ -862,13 +863,13 @@ The common properties of `Xamarin SfDataForm` list items (` DataFormPickerItem`,
 <tr>
 <td>{{'[ColumnSpan](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DisplayOptionsAttribute.html#Syncfusion_XForms_DataForm_DisplayOptionsAttribute_ColumnSpan)'| markdownify }}</td>
 <td>ColumnSpan</td>
-<td>Gets or sets the number of column that this item spans to increase item's width.</td>
+<td>Gets or sets the number of columns this item spans to increase the item's width.</td>
 </tr>
 
 <tr>
 <td>{{'[RowSpan](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DisplayOptionsAttribute.html#Syncfusion_XForms_DataForm_DisplayOptionsAttribute_RowSpan)'| markdownify }}</td>
 <td>RowSpan</td>
-<td>Gets or sets the number of rows that this item spans which is used to increase item's height.</td>
+<td>Gets or sets the number of rows this item spans, which is used to increase the item's height.</td>
 </tr>
 
 <tr>
@@ -892,7 +893,7 @@ The common properties of `Xamarin SfDataForm` list items (` DataFormPickerItem`,
 <tr>
 <td>{{'[ValidMessage](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DisplayOptionsAttribute.html#Syncfusion_XForms_DataForm_DisplayOptionsAttribute_ValidMessage)'| markdownify }}</td>
 <td>ValidMessage</td>
-<td>Gets or sets a string which will get displayed when user enters valid value for the data field as success message.</td>
+<td>Gets or sets a string displayed when the user enters a valid value for the data field as a success message.</td>
 </tr>
 </table>
 
@@ -944,7 +945,7 @@ The common properties of `Xamarin SfDataForm` list items (` DataFormPickerItem`,
 <tr>
 <td>Nil</td>
 <td>DisplayFormat</td>
-<td>Gets or sets the attribute date display format of date editor.</td>
+<td>Gets or sets the attribute date display format of the date editor.</td>
 </tr>
 </table>
 
@@ -975,13 +976,13 @@ The common properties of `Xamarin SfDataForm` list items (` DataFormPickerItem`,
 <tr>
 <td>{{'[CommitMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.CommitMode.html)'| markdownify }}</td>
 <td>DataFormCommitMode</td>
-<td>Defines the constants for CommitMode that specifies when the value entered by user should be saved to the data object.</td>
+<td>Defines the constants for the CommitMode that specify when the value entered by the user should be saved to the data object.</td>
 </tr>
 
 <tr>
 <td>{{'[LabelPosition](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.LabelPosition.html)'| markdownify }}</td>
 <td>DataFormLabelPosition</td>
-<td>Defines the constants for label position that specifies whether to layout the label at left or top of editor.</td>
+<td>Defines the constants for the label position that specifies whether to lay out the label at the left or top of the editor.</td>
 </tr>
 
 <tr>
@@ -993,7 +994,7 @@ The common properties of `Xamarin SfDataForm` list items (` DataFormPickerItem`,
 <tr>
 <td>{{'[ValidationMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.ValidationMode.html)'| markdownify }}</td>
 <td>DataFormValidationMode</td>
-<td>Defines the constants for ValidationMode that specifies when the user input should be validated for data object.</td>
+<td>Defines the constants for the ValidationMode that specifies when the user input should be validated for the data object.</td>
 </tr>
 </table>
 
@@ -1082,4 +1083,3 @@ The common properties of `Xamarin SfDataForm` list items (` DataFormPickerItem`,
 * [Android] - in RTL mode Radio button's content does not arrange from the right.
 * `RTL` flow direction not working for ComboBox and AutoComplete editors.
 * `IsReadOnly` not working for AutoComplete editor.
-
