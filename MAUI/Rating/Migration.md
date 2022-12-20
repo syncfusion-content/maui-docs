@@ -26,19 +26,19 @@ To migrate easier from Xamarin SfRating to [.NET MAUI SfRating], most of the API
 
 <table> 
 <tr>
-<th>Xamarin SfAutoComplete</th>
-<th>.NET MAUI SfAutocomplete</th>
+<th>Xamarin SfRating</th>
+<th>.NET MAUI SfRating</th>
 <th>Description</th></tr>
 <tr>
-<td> {{'[RatedStrokeWidth]'| markdownify }}</td>
-<td> {{'[RatedStrokeThickness]'| markdownify }}</td>
+<td>RatedStrokeWidth</td>
+<td>RatedStrokeThickness</td>
 <td>Gets or sets the rated stroke thickness.</td></tr>
 <tr>
-<td> {{'[UnratedStrokeWidth]'| markdownify }}</td>
-<td> {{'[UnratedStrokeThickness]'| markdownify }}</td>
+<td>UnratedStrokeWidth</td>
+<td>UnratedStrokeThickness</td>
 <td>Gets or sets the unrated stroke thickness.</td></tr>
 <tr>
-<td> {{'[ReadOnly]'| markdownify }}</td>
-<td> {{'[IsReadOnly]'| markdownify }}</td>
+<td>ReadOnly</td>
+<td>IsReadOnly</td>
 <td>Gets or sets the boolean value of Is Read Only.</td></tr>
 </table> 

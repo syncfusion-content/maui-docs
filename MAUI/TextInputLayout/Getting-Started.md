@@ -7,9 +7,9 @@ control: SfTextInputLayout
 documentation: ug
 ---
 
-# Getting Started with .NET MAUI Text Input Layout (SfTextInputLayout)
+# Getting Started with .NET MAUI TextInputLayout (SfTextInputLayout)
 
-This section explains the steps required to configure the `.NET MAUI Text Input Layout` (SfTextInputLayout) control with floating label.
+This section explains the steps required to configure the `.NET MAUI TextInputLayout` (SfTextInputLayout) control with floating label.
 
 ## Creating an application using the .NET MAUI Text Input Layout
 
@@ -48,17 +48,14 @@ namespace TextInputLayoutSample
 
 		return builder.Build();
 	 }
-   
   }
-
 }     
 
 {% endhighlight %}
 
-
 ## Adding a namespace
 
-Add the following namespace to add `.NET MAUI Text Input Layout.`
+Add the following namespace to add `.NET MAUI TextInputLayout.`
 
 {% tabs %}
 
@@ -136,9 +133,9 @@ The password visibility toggle is used to show or hide the visibility of charact
 
 {% highlight xaml %} 
 
-<inputLayout:SfTextInputLayout	Hint="Password"
-								EnablePasswordVisibilityToggle="true">
-    <Entry Text="1234" />
+<inputLayout:SfTextInputLayout  Hint="Name" 
+                                EnablePasswordVisibilityToggle="true">
+    <Entry Text="1234"/>
 </inputLayout:SfTextInputLayout>  
  
 {% endhighlight %}
@@ -158,6 +155,6 @@ inputLayout.InputView = new Entry() { Text = "1234" };
 
 N> Password visibility toggle can be enabled only for [Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry) control.
 
-You can find the complete getting started sample from this [link.]( https://github.com/SyncfusionExamples/Getting-started-SfTextInputLayout-.NET MAUI)
+You can find the complete getting started sample from this [link.](https://github.com/SyncfusionExamples/maui-textinputlayout-samples)
 
 
