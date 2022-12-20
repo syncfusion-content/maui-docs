@@ -2880,7 +2880,8 @@ The following code example explains how to intialize the polyline layer and it's
      <map:SfMaps.Layer>
          <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/india.json">
              <map:MapShapeLayer.Sublayers>
-                 <map:MapPolylineLayer>
+                 <map:MapPolylineLayer AnimationDuration="3000"
+                                       AnimationEasing="{x:Static Easing.Linear}">
                      <map:MapPolylineLayer.Polylines>
                          <map:MapPolyline StrokeThickness="3" Stroke="Blue">
                              <map:MapPolyline.Points>
@@ -2912,6 +2913,8 @@ The following code example explains how to intialize the polyline layer and it's
      MapShapeLayer layer = new MapShapeLayer();
      layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/india.json"));
      MapPolylineLayer mapPolylineLayer = new MapPolylineLayer();
+     mapPolylineLayer.AnimationDuration = 3000;
+     mapPolylineLayer.AnimationEasing = Easing.Linear;
      MapPolyline polyline = new MapPolyline();
      polyline.Points = new ObservableCollection<MapLatLng>()
       {
@@ -3033,7 +3036,8 @@ The following code example explains how to intialize the line layer and it's cus
     <map:SfMaps.Layer>
         <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json">
             <map:MapShapeLayer.Sublayers>
-                <map:MapLineLayer>
+                <map:MapLineLayer AnimationDuration="3000"
+                                  AnimationEasing="{x:Static Easing.Linear}">
                     <map:MapLineLayer.Lines>
                         <map:MapLine StrokeThickness="2"
                                      Stroke="#8a8a8a">
@@ -3064,6 +3068,8 @@ The following code example explains how to intialize the line layer and it's cus
     MapShapeLayer layer = new MapShapeLayer();
     layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
     MapLineLayer mapLineLayer = new MapLineLayer();
+    mapLineLayer.AnimationDuration = 3000;
+    mapLineLayer.AnimationEasing = Easing.Linear;
     MapLine line1 = new MapLine();
     line1.From = new MapLatLng(77.1025, 28.7041);
     line1.To = new MapLatLng(-106.3468, 56.1304);
@@ -3316,7 +3322,8 @@ The following code example explains how to intialize the circle layer and it's c
     <map:SfMaps.Layer>
         <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/india.json">
             <map:MapShapeLayer.Sublayers>
-                <map:MapCircleLayer>
+                <map:MapCircleLayer AnimationDuration="3000"
+                                    AnimationEasing="{x:Static Easing.Linear}">
                     <map:MapCircleLayer.Circles>
                         <map:MapCircle Radius="10" 
                                        Fill="LightGreen" 
@@ -3345,6 +3352,8 @@ public MainPage()
     MapShapeLayer layer = new MapShapeLayer();
     layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/india.json"));
     MapCircleLayer circleLayer = new MapCircleLayer();
+    circleLayer.AnimationDuration = 3000;
+    circleLayer.AnimationEasing = Easing.Linear;
     MapCircle circle1 = new MapCircle();
     circle1.Center = new MapLatLng(74.1240, 15.2993);
     circle1.Radius = 10;
