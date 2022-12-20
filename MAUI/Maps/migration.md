@@ -3040,6 +3040,512 @@ public MainPage()
 </td></tr>
 </table>
 
+## Vector layer
+
+### Polygon Layer
+
+<table>
+<tr>
+   <th>Xamarin SfMaps</th>
+   <th>.NET MAUI SfMaps</th>
+</tr>
+<tr>
+   <td>
+      {{'[ShapeType](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeFileLayer.html#Syncfusion_SfMaps_XForms_ShapeFileLayer_ShapeTypeProperty)'| markdownify }}
+   </td>
+   <td>
+      {{'[*MapPolygon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolygon.html)'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[Points](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeFileLayer.html#Syncfusion_SfMaps_XForms_ShapeFileLayer_PointsProperty)'| markdownify }}
+   </td>
+   <td>
+      {{'[Points](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolygon.html#Syncfusion_Maui_Maps_MapPolygon_Points)'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[ShapeFill](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html#Syncfusion_SfMaps_XForms_ShapeSetting_ShapeFill)'| markdownify }} in
+       {{'[ShapeSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html)'| markdownify }} class
+   </td>
+   <td>
+      {{'[*Fill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolygon.html#Syncfusion_Maui_Maps_MapPolygon_Fill)'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[ShapeStroke](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html#Syncfusion_SfMaps_XForms_ShapeSetting_ShapeStroke)'| markdownify }} in
+       {{'[ShapeSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html)'| markdownify }} class
+   </td>
+   <td>
+      {{'[*Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolygon.html#Syncfusion_Maui_Maps_MapPolygon_Stroke)'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[ShapeStrokeThickness](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html#Syncfusion_SfMaps_XForms_ShapeSetting_ShapeStrokeThickness)'| markdownify }} in
+       {{'[ShapeSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html)'| markdownify }} class
+   </td>
+   <td>
+      {{'[*StrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolygon.html#Syncfusion_Maui_Maps_MapPolygon_StrokeThickness)'| markdownify }}
+   </td>
+</tr>
+</table>
+
+N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
+
+The following code example explains how to intialize the polygon layer and it's customization in Xamarin SfMaps and .Net MAUI SfMaps.
+
+<table>
+<tr>
+<th>Xamarin SfMaps</th>
+<th>.NET MAUI SfMaps</th></tr>
+<tr>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<maps:SfMaps>
+    <maps:SfMaps.Layers>
+        <maps:ShapeFileLayer Uri="world1.shp">
+            <maps:ShapeFileLayer.Sublayers>
+                <maps:ShapeFileLayer ShapeType="Polygon">
+                    <maps:ShapeFileLayer.Points>
+                        <Point>
+                            <Point.X>39.6737</Point.X>
+                            <Point.Y>-100.5</Point.Y>
+                        </Point>
+                        <Point>
+                            <Point.X>61.35</Point.X>
+                            <Point.Y>18.131</Point.Y>
+                        </Point>
+                        <Point>
+                            <Point.X>-32.259</Point.X>
+                            <Point.Y>145.4214</Point.Y>
+                        </Point>
+                    </maps:ShapeFileLayer.Points>
+                    <maps:ShapeFileLayer.ShapeSettings>
+                        <maps:ShapeSetting  ShapeStrokeThickness="3" ShapeFill="Blue" />
+                    </maps:ShapeFileLayer.ShapeSettings>
+                </maps:ShapeFileLayer>
+            </maps:ShapeFileLayer.Sublayers>
+        </maps:ShapeFileLayer>
+    </maps:SfMaps.Layers>
+</maps:SfMaps>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+    SfMaps maps = new SfMaps();
+
+    ShapeFileLayer layer = new ShapeFileLayer();
+    layer.Uri = "world.shp"; 
+
+    ShapeFileLayer subLayer = new ShapeFileLayer();
+    subLayer.ShapeType = ShapeType.Polygon;
+    subLayer.Points.Add(new Point(39.6737,-100.5));
+    subLayer.Points.Add(new Point(61.35, 18.131));
+    subLayer.Points.Add(new Point(-32.259, 145.4214));
+    
+    ShapeSetting subLayerSetting = new ShapeSetting();
+    subLayerSetting.ShapeStrokeThickness = 4;
+    subLayerSetting.ShapeFill = Color.Blue;
+    subLayerSetting.ShapeStroke = Color.DarkBlue;
+
+    subLayer.ShapeSettings = subLayerSetting;
+    layer.Sublayers.Add(subLayer);
+    maps.Layers.Add(layer);
+
+{% endhighlight %}
+
+{% endtabs %}
+</td>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json">
+            <map:MapShapeLayer.Sublayers>
+                <map:MapPolygonLayer>
+                    <map:MapPolygonLayer.Polygons>
+                        <map:MapPolygon Stroke="DarkBule" Fill="blue" StrokeThickness="4">
+                            <map:MapPolygon.Points>
+                                <map:MapLatLng Latitude="37.6173"
+                                               Longitude="55.7558" />
+                                <map:MapLatLng Latitude="87.1216"
+                                               Longitude="53.7596" />
+                                <map:MapLatLng Latitude="105.3188"
+                                               Longitude="61.5240" />
+                            </map:MapPolygon.Points>
+                        </map:MapPolygon>
+                    </map:MapPolygonLayer.Polygons>
+                </map:MapPolygonLayer>
+            </map:MapShapeLayer.Sublayers>
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+public MainPage()
+{
+    InitializeComponent();
+    SfMaps maps = new SfMaps();
+    MapShapeLayer layer = new MapShapeLayer();
+    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
+    MapPolygonLayer mapPolygonLayer = new MapPolygonLayer();
+    MapPolygon polygon1 = new MapPolygon();
+    polygon1.Points = new ObservableCollection<MapLatLng>()
+    {
+    new MapLatLng(37.6173, 55.7558),
+    new MapLatLng(87.1216, 53.7596),
+    new MapLatLng(105.3188, 61.5240)
+    };
+    polygon1.Fill = Colors.Blue;
+    polygon1.Stroke = Colors.DarkBlue;
+    polygon1.StrokeThickness = 4;
+    mapPolygonLayer.Polygons.Add(polygon1);
+    layer.Sublayers.Add(mapPolygonLayer);
+    maps.Layer = layer;
+    this.Content = maps;
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+</td></tr>
+</table>
+
+## Maps providers
+
+<table>
+<tr>
+   <th>Xamarin SfMaps</th>
+   <th>.NET MAUI SfMaps</th>
+</tr>
+<tr>
+   <td>
+      {{'[ImageryLayer]()'| markdownify }}
+   </td>
+   <td>
+      {{'[UrlTemplate]()'| markdownify }} 
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[LayerType](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ImageryLayer.html#Syncfusion_SfMaps_XForms_ImageryLayer_LayerType)'| markdownify }}
+   </td>
+   <td>
+      {{'-'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[BingMapKey](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ImageryLayer.html#Syncfusion_SfMaps_XForms_ImageryLayer_BingMapKey)'| markdownify }}
+   </td>
+   <td>
+      {{'-'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[BingMapStyle](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ImageryLayer.html#Syncfusion_SfMaps_XForms_ImageryLayer_BingMapStyle)'| markdownify }}
+   </td>
+   <td>
+      {{'-'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[GeoCoordinates](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ImageryLayer.html#Syncfusion_SfMaps_XForms_ImageryLayer_GeoCoordinates)'| markdownify }}
+   </td>
+   <td>
+      {{'[*Center]()'| markdownify }} 
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[CanCacheTiles](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ImageryLayer.html#Syncfusion_SfMaps_XForms_ImageryLayer_CanCacheTiles)'| markdownify }}
+   </td>
+   <td>
+      {{'[CanCacheTiles]()'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[Radius](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ImageryLayer.html#Syncfusion_SfMaps_XForms_ImageryLayer_Radius)'| markdownify }} 
+   </td>
+   <td>
+      {{'[Radius]()'| markdownify }} 
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[DistanceType](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ImageryLayer.html#Syncfusion_SfMaps_XForms_ImageryLayer_DistanceType)'| markdownify }} 
+   </td>
+   <td>
+      {{'[DistanceType]()'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[LatLngBounds](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ImageryLayer.html#Syncfusion_SfMaps_XForms_ImageryLayer_LatLngBounds)'| markdownify }} 
+   </td>
+   <td>
+      {{'[MapLatLngBounds]()'| markdownify }} 
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[Markers](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.MapLayer.html#Syncfusion_SfMaps_XForms_MapLayer_Markers)'| markdownify }} 
+   </td>
+   <td>
+      {{'[Markers](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html?tabs=tabid-1#Syncfusion_Maui_Maps_MapLayer_Markers)'| markdownify }} 
+   </td>
+</tr>
+</table>
+
+N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
+
+The following code example explains how to intialize the zooming and it's customization in Xamarin SfMaps and .Net MAUI SfMaps.
+
+<table>
+<tr>
+<th>Xamarin SfMaps</th>
+<th>.NET MAUI SfMaps</th></tr>
+<tr>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<maps:SfMaps>
+   <maps:SfMaps.Layers >
+      <maps:ImageryLayer GeoCoordinates = "38.909804, -77.043442" 
+                         Radius="5" 
+                         DistanceType="KiloMeter">
+                  <maps:ImageryLayer.Markers>
+                    <maps:MapMarker Latitude= "38.909804" Longitude= "-77.043442"/>
+                 </maps:ImageryLayer.Markers>
+            </maps:ImageryLayer>
+        </maps:SfMaps.Layers>
+</maps:SfMaps>
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfMaps maps = new SfMaps();
+ImageryLayer layer = new ImageryLayer();
+            layer.GeoCoordinates = new Point(38.909804, -77.043442);
+            layer.Radius = 5;
+            layer.DistanceType = DistanceType.KiloMeter;
+            MapMarker marker = new MapMarker();
+            marker.Latitude = "38.909804";
+            marker.Longitude = "-77.043442";
+            layer.Markers.Add(marker);
+            maps.Layers.Add(layer);
+
+{% endhighlight %}
+
+{% endtabs %}
+</td>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<maps:SfMaps>
+    <maps:SfMaps.Layer>
+        <maps:MapTileLayer Radius="5"
+                           DistanceType="Kilometer"
+                           UrlTemplate="https://tile.openstreetmap.org/{z}/{x}/{y}.png">
+            <maps:MapTileLayer.Center>
+                <maps:MapLatLng Latitude="38.909804"
+                                Longitude="-77.043442">
+                </maps:MapLatLng>
+            </maps:MapTileLayer.Center>
+            <maps:MapTileLayer.Markers>
+                <maps:MapMarkerCollection>
+                    <maps:MapMarker Latitude="38.909804"
+                                    Longitude="-77.043442" />
+                </maps:MapMarkerCollection>
+            </maps:MapTileLayer.Markers>
+        </maps:MapTileLayer>
+    </maps:SfMaps.Layer>
+</maps:SfMaps>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+public MainPage()
+{
+   InitializeComponent();
+   SfMaps map = new SfMaps();
+    MapTileLayer tileLayer = new MapTileLayer();
+    tileLayer.UrlTemplate = "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
+    tileLayer.Radius = 5;
+    tileLayer.DistanceType = MapDistanceType.Kilometer;
+    tileLayer.Center = new MapLatLng(38.909804, -77.043442);
+    MapMarker mapMarker = new MapMarker();
+    mapMarker.Latitude = 38.909804;
+    mapMarker.Longitude = -77.043442;
+    MapMarkerCollection mapMarkers = new MapMarkerCollection();
+    mapMarkers.Add(mapMarker);
+    tileLayer.Markers = mapMarkers;
+    map.Layer = tileLayer;
+    this.Content = map;
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+</td></tr>
+</table>
+
+## Zooming and Panning
+
+<table>
+<tr>
+   <th>Xamarin SfMaps</th>
+   <th>.NET MAUI SfMaps</th>
+</tr>
+<tr>
+   <td>
+      {{'[ZoomLevel](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.SfMaps.html#Syncfusion_SfMaps_XForms_SfMaps_ZoomLevel)'| markdownify }}
+   </td>
+   <td>
+      {{'[ZoomLevel]()'| markdownify }} in {{'[MapZoomPanBehavior]()'| markdownify }} class
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[MinZoom](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.SfMaps.html#Syncfusion_SfMaps_XForms_SfMaps_MinZoom)'| markdownify }}
+   </td>
+   <td>
+      {{'[*MinZoomLevel]()'| markdownify }} in {{'[MapZoomPanBehavior]()'| markdownify }} class
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[MaxZoom](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.SfMaps.html#Syncfusion_SfMaps_XForms_SfMaps_MaxZoom)'| markdownify }} 
+   </td>
+   <td>
+      {{'[*MaxZoomLevel]()'| markdownify }} in {{'[MapZoomPanBehavior]()'| markdownify }} class
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[EnableZooming](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.SfMaps.html#Syncfusion_SfMaps_XForms_SfMaps_EnableZooming)'| markdownify }} 
+   </td>
+   <td>
+      {{'[EnableZooming]()'| markdownify }} in {{'[MapZoomPanBehavior]()'| markdownify }} class
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[EnablePanning](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html#Syncfusion_SfMaps_XForms_ShapeSetting_ShapeStrokeThickness)'| markdownify }} 
+   </td>
+   <td>
+      {{'[EnablePanning]()'| markdownify }} in {{'[MapZoomPanBehavior]()'| markdownify }} class
+   </td>
+</tr>
+</table>
+
+N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
+
+The following code example explains how to intialize the zooming and it's customization in Xamarin SfMaps and .Net MAUI SfMaps.
+
+<table>
+<tr>
+<th>Xamarin SfMaps</th>
+<th>.NET MAUI SfMaps</th></tr>
+<tr>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<maps:SfMaps EnablePanning="True" 
+             EnableZooming="True" 
+             MinZoom="1" 
+             MaxZoom="10" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfMaps maps = new SfMaps();
+maps.EnablePanning = true;
+maps.EnableZooming = true;
+maps.MinZoom = 1;
+maps.MaxZoom = 10;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<map:SfMaps>
+   <map:SfMaps.Layer>
+        <map:MapTileLayer UrlTemplate = "https://tile.openstreetmap.org/{z}/{x}/{y}.png" >
+              <map:MapTileLayer.Center>
+                  <map:MapLatLng Latitude = "27.1751"
+                                 Longitude="78.0421">
+                  </map:MapLatLng>
+              </map:MapTileLayer.Center>
+              <map:MapTileLayer.ZoomPanBehavior>
+                  <map:MapZoomPanBehavior ZoomLevel = "5" 
+                                          MinZoomLevel= "3"
+                                          MaxZoomLevel="10"
+                                          EnablePanning="True"
+                                          EnableZooming="True" />
+              </map:MapTileLayer.ZoomPanBehavior>
+        </map:MapTileLayer>
+   </map:SfMaps.Layer>
+</map:SfMaps>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+public MainPage()
+{
+   InitializeComponent();
+   SfMaps map = new SfMaps();
+   MapTileLayer tileLayer = new MapTileLayer();
+   tileLayer.UrlTemplate = "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
+   tileLayer.Center = new MapLatLng(27.1751, 78.0421);
+   MapZoomPanBehavior zoomPanBehavior = new MapZoomPanBehavior();
+   zoomPanBehavior.ZoomLevel = 5;
+   zoomPanBehavior.MinZoomLevel = 3;
+   zoomPanBehavior.MaxZoomLevel = 10;
+   zoomPanBehavior.EnablePanning = true;
+   zoomPanBehavior.EnableZooming = true;
+   tileLayer.ZoomPanBehavior = zoomPanBehavior;
+   map.Layer = tileLayer;
+   this.Content = map;
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+</td></tr>
+</table>
+
 ## Upcoming features in .NET MAUI
 
 * Support for imagery layer such as Bing Maps, OpenStreetMap, etc.
