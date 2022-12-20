@@ -162,7 +162,7 @@ this.Content = mainGrid;
 {% endhighlight %}
 {% endtabs %}
 
-![bordercolor](ContentType_Images/Initial_Double_AvatarView.png)
+![Double Character](ContentType_Images/Initial_Double_AvatarView.png)
 
 ## Custom image
 
