@@ -68,7 +68,7 @@ DateTime, DateOnly or DateTimeOffset type property and the property with [DataTy
 Time
 </td>
 <td>
-The DateTime, TimeSpan, TimeOnly or DateTimeOffset  property with [DataType(DataType.Time)] attribute.
+The DateTime, TimeSpan, TimeOnly or DateTimeOffset property with [DataType(DataType.Time)] attribute.
 </td>
 <td>
 {{'[TimePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/timepicker?view=net-maui-7.0&tabs=windows)'| markdownify }}
@@ -167,7 +167,6 @@ To change the editor for any property, use the `RegisterEditor` method and speci
     this.dataForm.RegisterEditor("On", DataFormEditorType.Switch);
 
 {% endhighlight %}
-
 {% endtabs %}
 
 Here, the Switch editor will be loaded for the `On` property (bool type) instead of `CheckBox` editor.
@@ -202,8 +201,6 @@ And `MultilineText` editor height will auto expand/reduce based on the line wrap
 {% endhighlight %}
 {% endtabs %}
 
-![MultiLineText](images\MultiLine\MultiLineText.png)
-
 ## Password editor
 
 In the password editor, the [Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry?view=net-maui-7.0) is loaded.
@@ -216,8 +213,6 @@ In the password editor, the [Entry](https://learn.microsoft.com/en-us/dotnet/mau
     public string Password { get; set; }
 {% endhighlight %}
 {% endtabs %}
-
-![PasswordEditor](images\Editors\PasswordEditor.png)
 
 ## Date editor
 
@@ -235,7 +230,6 @@ In [DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/con
 {% endhighlight %}
 {% endtabs %}
 
-![DatePicker](images\Editors\DatePicker.png)
 
 #### Change the format of the date editor
 
@@ -299,7 +293,6 @@ In [TimePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/con
 {% endhighlight %}
 {% endtabs %}
 
-![TimePicker](images\Editors\TimePicker.png)
 
 #### Change the format of time editor**
 
@@ -339,7 +332,6 @@ In [CheckBox](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/contr
 {% endhighlight %}
 {% endtabs %}
 
-![CheckBox](images\Editors\CheckBox.png)
 
 CheckBox support two visual states.
   - Checked
@@ -377,8 +369,6 @@ By default the checkbox color is blue, you can change the checkbox color by usin
 {% endhighlight %}
 {% endtabs %}
 
-![CheckBoxWithColor](images\Editors\CheckBoxWithColor.png)
-		
 ## Switch Editor
 
 In switch editor, [Switch](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/switch?view=net-maui-7.0) is loaded, and DataForm [Switch](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/switch?view=net-maui-7.0) editor supports bool data type property.
@@ -400,8 +390,6 @@ To add [Switch](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/con
 
 {% endhighlight %}
 {% endtabs %}
-
-`![SwitchEditor](images\Editors\SwitchEditor.png)
 
 #### Changing the Switch Editor thumb color
 
@@ -425,8 +413,6 @@ By default switch editor Thumb color is Blue, you can change the Thumb color by 
 {% endhighlight %}
 {% endtabs %}
 
-![SwitchWithThumbColor](images\Editors\SwitchWithThumbColor.png)
-
 #### Changing the Switch editor background color
 
 #### Using event
@@ -448,8 +434,6 @@ By default switch editor background colour is white, you can change the Backgrou
 
 {% endhighlight %}
 {% endtabs %}
-
-![SwitchWithOnColor](images\Editors\SwitchWithOnColor.png)
 
 ## Combo Box editor
 
@@ -489,8 +473,6 @@ By default, the `ItemsSource` for SfComboBox is auto-generated for enum types an
 
 {% endhighlight %}
 {% endtabs %}
-
-![ComboBoxEditor](images\Editors\ComboBoxEditor.png)
 
 #### Using GenerateDataFormItem event
 
