@@ -16,7 +16,7 @@ The [.NET MAUI Avatar View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 ## Key features
 
 * Supports for adding image and initials.
-* Customizes the height, width, BorderColor, BackgroundColor, and CornerRadius of the view.
+* Customizes the height, width, Stroke, BackgroundColor, and CornerRadius of the view.
 * `GroupView`: Supports to add maximum three custom images or initials in a single view.
 * Supports different types of visual styles. 
 * Supports [BadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html).
