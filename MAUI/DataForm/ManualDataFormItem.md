@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Manually create DataFormItems in Maui DataForm control | Syncfusion
-description: Learn about the working with manually created DataFormViewItems in Syncfusion . NET MAUI DataForm(SfDataForm) control in mobile and desktop applications from a single shared codebase.
+description: Learn about the working with manually created DataFormViewItems in Syncfusion .NET MAUI DataForm(SfDataForm) control in mobile and desktop applications.
 platform: Maui
 control: SfDataForm
 documentation: UG
