@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Working with DataForm in Maui DataForm control | Syncfusion
-description: Learn here all about working with DataForm in Syncfusion .NET MAUI DataForm(SfDataForm) control in mobile and desktop applications from a single shared codebase.
+description: Learn about the working with DataForm in Syncfusion .NET MAUI DataForm(SfDataForm) control in mobile and desktop applications from a single shared codebase.
 platform: Maui
 control: SfDataForm
 documentation: UG
@@ -64,7 +64,6 @@ DataFormDateItem
 </td>
 <td>
 Generated for DateTime, DateTimeOffset, DateOnly type and properties with [DataType(DataType.Date)] and [DataType(DataType.DateTime)] attributes. 
-
 </td>
 </tr>
 <tr>
