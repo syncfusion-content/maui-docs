@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Commit in .NET MAUI DataForm control | Syncfusion
-description: Learn here all about the commit feature in Syncfusion .NET MAUI DataForm (SfDataForm) control and more.
+title: Data handling in .NET MAUI DataForm control | Syncfusion
+description: Learn about the commit feature in Syncfusion .NET MAUI DataForm (SfDataForm) control in mobile and desktop applications from a single shared codebase.
 platform: maui
 control: SfDataForm
 documentation: ug
 ---
 
-# Commit in .NET MAUI DataForm (SfDataForm)
+# Editing in .NET MAUI DataForm (SfDataForm)
 
-The data form commits the data and user input in order to update the value in the underlying data object.
+The data form commits the data and user input to update the value in the underlying data object.
 
 ## Commit mode
 
-The [CommitMode] determines when the value should be committed to the underlying data object to allow users commit only correct values.
+The `CommitMode` determines when the value should be committed to the underlying data object to allow users to commit only correct values.
 
 The supported commit modes are as follows:
 
@@ -23,7 +23,7 @@ The supported commit modes are as follows:
 
 #### LostFocus
 
-If the commit mode is `LostFocus`, the value is committed when the editor lost its focus. By default DataForm [CommitMode] is `LostFocus`.
+If the commit mode is `LostFocus`, the value is committed when the editor loses its focus. By default, the DataForm `CommitMode` is `LostFocus`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -63,7 +63,7 @@ this.dataForm.CommitMode = DataFormCommitMode.PropertyChanged;
 
 #### Manual
 
-If the commit mode is `Manual`, the value should be committed manually by calling the [SfDataForm.Commit] method.
+If the commit mode is `Manual`, the value should be committed manually by calling the `SfDataForm.Commit` method.
 
 {% tabs %}
 {% highlight XAML %}
@@ -82,7 +82,7 @@ this.dataForm.CommitMode = DataFormCommitMode.Manual;
 {% endhighlight %}
 {% endtabs %}
 
-The following code commits the value of all the properties in the data object:
+The following code commits the value of all the properties in the data object.
 
 {% tabs %}
 {% highlight C# %}
@@ -94,7 +94,7 @@ N> On manual commit, manual validation will be called to validate the properties
 
 ## Value converter attribute
 
-To show the original value in different format or as different value, use the [DataFormValueConverter] attribute.
+To show the original value in a different format or as a different value, use the `DataFormValueConverter` attribute.
 
 #### Changing original value of the DataForm property value using converter
 
@@ -128,11 +128,11 @@ public class StringToDateTimeConverter : IValueConverter
 {% endhighlight %}
 {% endtabs %}
 
-Here, the editor will display the original value as `DateTime`. While committing, it is converted to `string` and stored in data object.
+Here, the editor will display the original value as `DateTime`. While committing, it is converted to a `string` and stored in the data object.
 
 ## Read only mode
 
-`DataForm` can be disabled by setting the [IsReadOnly] property of the data form.
+The `DataForm` can be disabled by setting the `IsReadOnly` property of the data form.
 
 {% tabs %}
 {% highlight XAML %}
@@ -151,10 +151,31 @@ this.dataForm.IsReadOnly = true;
 {% endhighlight %}
 {% endtabs %}
 
-The particular editor can disabled by setting the [IsReadOnly] property of the [DataFormItem].
+The particular editor can be disabled using attributes and `GenerateDataFormItem` event.
+
+#### Using attribute
+
+An editor can be disabled using the `EditableAttribute` and `ReadOnlyAttribute`.
 
 {% tabs %}
 {% highlight C# %}
+
+    [Editable(false)]
+    public string Name { get; set; }
+
+    [ReadOnly(true)]
+    public string Password { get; set; }
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Using event
+
+An editor can be disabled by setting the `IsReadOnly` property of the `DataFormItem`.
+
+{% tabs %}
+{% highlight C# %}
+
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
  private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
@@ -165,5 +186,6 @@ this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
             e.DataFormItem.IsReadOnly = true;
     }
 }
+
 {% endhighlight %}
 {% endtabs %}

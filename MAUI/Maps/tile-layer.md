@@ -7,7 +7,7 @@ control: SfMaps
 documentation: ug
 ---
 
-# Tile Layer in in .NET MAUI Maps (SfMaps)
+# Tile Layer in .NET MAUI Maps (SfMaps)
 
 The tile layer renders the tiles returned from web map tile services such as Bing Maps, OpenStreetMaps, Google Maps, TomTom, etc.
 
@@ -81,8 +81,6 @@ private async Task GenerateBing(MapTileLayer tileLayer)
 
 {% endhighlight %}
 
-{% endtabs %}
-
 ![Bing maps default view](images/tile-layer/bing_maps_default.png)
 
 ## Other map tile providers
@@ -103,15 +101,13 @@ this.Content = map;
 
 {% endhighlight %}
 
-{% endtabs %}
-
 ![TomTom maps default view](images/tile-layer/tom_tom_default.png)
 
 ## Changing the center latitude and longitude
 
 You can set the center position by setting the `MapTileLayer.Center` property. It represents the center position of the map layer.
 
-Based on the size of the [`SfMaps`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.html) control, `Center` and `ZoomLevel` number of initial tiles needed in the viewport alone will be rendered. Refer this section for enabling `zooming and panning`.
+Based on the size of the [`SfMaps`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.html) control, `Center` and `ZoomLevel`, the number of initial tiles needed in the viewport alone will be rendered. Refer this section for enabling `zooming and panning`.
 
 Defaults to `MapLatLng(0.0, 0.0)`.
 
@@ -152,7 +148,7 @@ this.Content = map;
 
 The `CanCacheTiles` property is used to decide whether the tile images should be cached in application memory or not. The default value of the `CanCacheTiles` is `false`.
 
-While enabling the `CanCacheTiles` as `true` then we need to set the tile server name to maintain the folder to store cache tiles in the `MapTileLayer.UrlTemplate` property. The default tile server name to store the tile cache is OSM. If you want to change the server name, you can use the following URL format.
+While enabling the `CanCacheTiles`, we need to set the tile server name to maintain the folder to store cache tiles in the `MapTileLayer.UrlTemplate` property. The default tile server name to store the tile cache is OSM. If you want to change the server name, you can use the following URL format.
 
 https://example_provider/{z}/{x}/{y}.png?name=serverName
 

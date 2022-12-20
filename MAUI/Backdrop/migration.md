@@ -18,7 +18,7 @@ To initialize the control, import the Backdrop namespace and initialize the SfBa
 <table>
 <tr>
 <th>Xamarin Backdrop page</th>
-<th>.NET MAUI Backdrop page</th></tr>
+</tr>
 <tr>
 <td>
 {% tabs %}
@@ -55,6 +55,11 @@ namespace BackdropGettingStarted
 {% endtabs %}
 
 </td>
+</tr>
+<tr>
+<th>.NET MAUI Backdrop page</th>
+</tr>
+<tr>
 <td>
 {% tabs %} 
 
@@ -88,7 +93,8 @@ public partial class BackdropSamplePage : SfBackdropPage
 {% endhighlight %}
 
 {% endtabs %}
-</td></tr>
+</td>
+</tr>
 </table>
 
 ## SfBackdropPage properties
@@ -151,7 +157,6 @@ public partial class BackdropSamplePage : SfBackdropPage
 <td>{{'[LeftCornerRadius](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Backdrop.BackdropFrontLayer.html#Syncfusion_XForms_Backdrop_BackdropFrontLayer_LeftCornerRadius)'| markdownify }}</td>
 <td>{{'LeftCornerRadius'| markdownify }}</td>
 <td>Gets or sets a value of top left corner radius for the front layer.</td></tr>
-</table> 
 <tr>
 <td>{{'[RightCornerRadius](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Backdrop.BackdropFrontLayer.html#Syncfusion_XForms_Backdrop_BackdropFrontLayer_RightCornerRadius)'| markdownify }}</td>
 <td>{{'RightCornerRadius'| markdownify }}</td>
@@ -160,6 +165,7 @@ public partial class BackdropSamplePage : SfBackdropPage
 <td>{{'[RevealedHeight](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Backdrop.BackdropFrontLayer.html#Syncfusion_XForms_Backdrop_BackdropFrontLayer_RevealedHeight)'| markdownify }}</td>
 <td>{{'RevealedHeight'| markdownify }}</td>
 <td>Gets or sets a height of the front layer when the back layer revealed.</td></tr>
+</table> 
 
 The following code example explains how to use the properties in the Xamarin backdrop page and the .NET MAUI backdrop page.
 
