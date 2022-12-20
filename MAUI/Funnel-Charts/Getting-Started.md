@@ -348,3 +348,5 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ![Funnel chart in .NET MAUI Chart](Getting-Started_Images/MAUI_funnel_chart.png)
+
+You can find the complete getting started sample from this [link](https://github.com/SyncfusionExamples/GettingStarted_FunnelChart_MAUI).
