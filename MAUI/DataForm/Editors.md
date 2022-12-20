@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Editors in .NET MAUI DataForm(SfDataForm) control | Syncfusion
-description: Learn about the Editors support in Syncfusion .NET MAUI DataForm (SfDataForm) control in mobile and desktop applications from a single shared codebase.
+description: Learn about the supported editors in Syncfusion .NET MAUI DataForm (SfDataForm) control in mobile and desktop applications from a single shared codebase.
 platform: maui
 control: SfDataForm
 documentation: UG
@@ -253,7 +253,7 @@ In the password editor, the [Entry](https://learn.microsoft.com/en-us/dotnet/mau
 
 In the date editor, the [DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/datepicker?view=net-maui-7.0) will be loaded.
 
-In the date editor, the default date value will be the current date. You can also adding nullable `DateTime` data type for the date picker property in data form, which allows you to set the current date and display the current date in the date editor.
+In the date editor, the default date value will be the current date. You can also add nullable `DateTime` data type for the date picker property in data form, which allows you to set the current date and display the current date in the date editor.
 
 {% tabs %}
 {% highlight C# %}
@@ -311,7 +311,7 @@ You can customize the maximum and minimum allowable dates in the [DatePicker](ht
 
 In the time editor, the [TimePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/timepicker?view=net-maui-7.0&tabs=windows) will be loaded.
 
-In the time editor, the default time value (12:00 AM) is displayed.
+In the time editor, by default (12:00 AM) will be displayed.
 
 {% tabs %}
 {% highlight C# %}
@@ -346,7 +346,7 @@ In the time editor, short time will be shown by default. You can change the appl
 
 ## CheckBox editor
 
-In [CheckBox](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/checkbox?view=net-maui-7.0) editor, the [CheckBox](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/checkbox?view=net-maui-7.0) control is loaded. By default, for `bool` data type property, the [CheckBox](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/checkbox?view=net-maui-7.0) editor will be loaded in data form.
+In the CheckBox editor, the `CheckBox` control is loaded. By default, for bool data type property, the CheckBox editor will be loaded in data form.
 
 {% tabs %}
 {% highlight C# %}
@@ -362,7 +362,7 @@ In [CheckBox](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/contr
 
 #### Changing the checkbox color
 
-By default the checkbox color is blue, you can change the checkbox color by using `Color` property in `DataFormItem`.
+By default the checkbox color is blue, you can change the checkbox color by using `Color` property in `DataFormCheckBoxItem`.
 
 {% tabs %}
 {% highlight C# %}
@@ -371,7 +371,7 @@ By default the checkbox color is blue, you can change the checkbox color by usin
     
     private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
-        if (e.DataFormItem.FieldName == "agree" && e.DataFormItem is DataFormCheckBoxItem dataFormCheckBox)
+        if (e.DataFormItem.FieldName == "IsBillable" && e.DataFormItem is DataFormCheckBoxItem dataFormCheckBox)
         {
             dataFormCheckBox.Color = Colors.Pink;
         }
@@ -382,9 +382,9 @@ By default the checkbox color is blue, you can change the checkbox color by usin
 
 ## Switch Editor
 
-In switch editor, [Switch](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/switch?view=net-maui-7.0) is loaded, and DataForm [Switch](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/switch?view=net-maui-7.0) editor supports bool data type property.
+In switch editor, [Switch](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/switch?view=net-maui-7.0) is loaded, and DataForm Switch editor supports bool data type property.
 
-To add Switch editor in DataForm, register the editor as DataFormEditorType.Switch  for the required property using the `RegisterEditor` method.
+To add switch editor in DataForm, register the editor as `DataFormEditorType.Switch` for the required property using the RegisterEditor method.
 
 {% tabs %}
 {% highlight C# %}
@@ -403,8 +403,7 @@ To add Switch editor in DataForm, register the editor as DataFormEditorType.Swit
 {% endtabs %}
 
 #### Changing the Switch Editor thumb color
-
-By default switch editor Thumb color is Blue, you can change the thumb color by using `ThumbColor` property in the `DataFormSwitchItem`.
+You can change the thumb color by using `ThumbColor` property in the `DataFormSwitchItem`.
 
 {% tabs %}
 {% highlight C# %}
@@ -415,16 +414,16 @@ By default switch editor Thumb color is Blue, you can change the thumb color by 
     {
         if (e.DataFormItem != null && e.DataFormItem.FieldName == "Agree" && e.DataFormItem is DataFormSwitchItem switchItem)
         {
-            switchItem. ThumbColor = Colors.Pink;
+            switchItem.ThumbColor = Colors.Pink;
         }
     }
 
 {% endhighlight %}
 {% endtabs %}
 
-#### Changing the Switch editor background color
+#### Changing the Switch editor on color
 
-You can change the switch on color by using the `OnColor` property in the DataFormSwitchItem.
+You can change the switch on color by using the `OnColor` property in the `DataFormSwitchItem`.
 
 {% tabs %}
 {% highlight C# %}
@@ -448,9 +447,9 @@ In the Combo Box editor, the [SfComboBox](https://help.syncfusion.com/maui/combo
 
 #### Changing the ItemsSource of combo box
 
-By default, the `ItemsSource` for SfComboBox is auto-generated for enum types and collection type properties. For other types, you can set the `ItemsSource` by using the `IDataFormSourceProvider`.
+By default, the `ItemsSource` for SfComboBox is auto-generated for enum types properties
 
-#### Using IDataFormSourceProvider
+**Using IDataFormSourceProvider**
 
 {% tabs %}
 {% highlight C# %}
@@ -461,7 +460,6 @@ By default, the `ItemsSource` for SfComboBox is auto-generated for enum types an
     {
         public object GetSource(string sourceName)
         {
-            
             if (sourceName == "Country")
             {
                 List<string> list = new List<string>()
@@ -481,9 +479,9 @@ By default, the `ItemsSource` for SfComboBox is auto-generated for enum types an
 {% endhighlight %}
 {% endtabs %}
 
-#### Using GenerateDataFormItem event
+**Using GenerateDataFormItem event**
 
-You can also set the ItemsSource for combo box editor by using the `GenerateDataFormItem` event.
+You can also set the `ItemsSource` for combo box editor by using the `GenerateDataFormItem` event.
 
 {% tabs %}
 {% highlight C# %}
@@ -539,7 +537,7 @@ The string comparison for filtering suggestions can be changed using the `TextSe
 
 * Contains
 
-#### Searching words that starts with the input text
+**Searching words that starts with the input text**
 
 Displays all the matches that contain first character of the typed characters in items source of combobox editor. This strategy is case in-sensitive.
 
@@ -559,7 +557,7 @@ Displays all the matches that contain first character of the typed characters in
 {% endhighlight %}
 {% endtabs %}
 
-#### Searching words that contains the input text
+**Searching words that contains the input text**
 
 Displays all the matches that contain the typed characters in items source of combobox editor. This strategy is case in-sensitive.
 
@@ -579,7 +577,7 @@ Displays all the matches that contain the typed characters in items source of co
 {% endhighlight %}
 {% endtabs %}
 
-#### Changing the height of combobox item 
+#### Changing the height of Combobox drop down
 
 By default the combo box drop down list item height is `400d` , You can change the size for the drop down list item size by using `MaxDropDownHeight` property in the `DataFormComboBoxItem`.
 
@@ -669,7 +667,7 @@ In the autocomplete editor, the [SfAutoComplete](https://help.syncfusion.com/mau
 
 By default, the `ItemsSource` for `AutoComplete` editor is auto-generated for enum types. For other types, you can set `ItemsSource` using `IDataFormSourceProvider`.
 
-#### Using IDataFormSourceProvider
+**Using IDataFormSourceProvider**
 
 {% tabs %}
 {% highlight C# %}
@@ -709,7 +707,7 @@ By default, the `ItemsSource` for `AutoComplete` editor is auto-generated for en
 {% endtabs %}
 
 
-#### Using GenerateDataFormItem event
+**Using GenerateDataFormItem event**
 
 You can also set `ItemsSource` for autocomplete editor by using `ItemsSource` property in the `DataFormAutoCompleteItem`.
 
@@ -854,7 +852,7 @@ Displays all the matches that contain the typed characters in items source of au
 {% endhighlight %}
 {% endtabs %}
 
-#### Setting the height for autocomplete list item 
+#### Changing the maximum height of autocomplete drop down 
 
 By default the autocomplete drop down list item height is `400d` , You can change the size for the drop down list item size by using `MaxDropDownHeight` property in the `DataFormAutoCompleteItem`.
 
@@ -884,7 +882,7 @@ In the picker editor, the [Picker](https://learn.microsoft.com/en-us/dotnet/maui
 
 By default, the `ItemsSource` for the picker is auto-generated for enum type property. For other types, you can set the `ItemsSource` by using `IDataFormSourceProvider`.
 
-#### Using IDataFormSourceProvider
+**Using IDataFormSourceProvider**
 
 {% tabs %}
 {% highlight C# %}
