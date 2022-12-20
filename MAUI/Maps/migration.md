@@ -360,34 +360,10 @@ The following code example explains how to intialize the layer and customize the
 </tr>
 <tr>
    <td>
-      {{'-'| markdownify }}
+      {{'[LayerType](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ImageryLayer.html#Syncfusion_SfMaps_XForms_ImageryLayer_LayerType)'| markdownify }}, {{'[BingMapKey](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ImageryLayer.html#Syncfusion_SfMaps_XForms_ImageryLayer_BingMapKey)'| markdownify }}, {{'[BingMapStyle](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ImageryLayer.html#Syncfusion_SfMaps_XForms_ImageryLayer_BingMapStyle)'| markdownify }}, and {{'[RequestTileUri](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ImageryLayer.html#Syncfusion_SfMaps_XForms_ImageryLayer_RequestTileUri)'| markdownify }}
    </td>
    <td>
-      {{'[UrlTemplate]()'| markdownify }} 
-   </td>
-</tr>
-<tr>
-   <td>
-      {{'[LayerType](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ImageryLayer.html#Syncfusion_SfMaps_XForms_ImageryLayer_LayerType)'| markdownify }}
-   </td>
-   <td>
-      {{'-'| markdownify }}
-   </td>
-</tr>
-<tr>
-   <td>
-      {{'[BingMapKey](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ImageryLayer.html#Syncfusion_SfMaps_XForms_ImageryLayer_BingMapKey)'| markdownify }}
-   </td>
-   <td>
-      {{'-'| markdownify }}
-   </td>
-</tr>
-<tr>
-   <td>
-      {{'[BingMapStyle](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ImageryLayer.html#Syncfusion_SfMaps_XForms_ImageryLayer_BingMapStyle)'| markdownify }}
-   </td>
-   <td>
-      {{'-'| markdownify }}
+      Can achieve all this using {{'[UrlTemplate]()'| markdownify }} and {{'[GetBingUrl()]()'| markdownify }}
    </td>
 </tr>
 <tr>
