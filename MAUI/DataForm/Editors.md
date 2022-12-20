@@ -22,7 +22,7 @@ The data form supports several built-in editors as follows:
 Text
 </td>
 <td>
-The String type property and any other type apart from the below specified cases.
+The string type property and any other type apart from the below specified cases.
 </td>
 <td>
 {{'[Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry?view=net-maui-7.0)'| markdownify }}
@@ -33,8 +33,8 @@ The String type property and any other type apart from the below specified cases
 MultilineText
 </td>
 <td>
-The String type property with multi line text.
-[DataType(DataType.MultilineText)]
+The string type property with multi line text.
+[DataType(DataType.MultilineText)] attribute.
 </td>
 <td>
 {{'[Editor](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/editor?view=net-maui-7.0)'| markdownify }}
@@ -45,7 +45,7 @@ The String type property with multi line text.
 Password
 </td>
 <td>
-The String type property and property with 
+The string type property with 
 [DataType(DataType.Password)] attribute.
 </td>
 <td>
@@ -57,7 +57,7 @@ The String type property and property with
 Date
 </td>
 <td>
-DateTime, DateOnly or DateTimeOffset type property and the property with [DataType(DataType.Date)] and [DataType(DataType.DateTime)] attributes.
+DateTime, DateOnly or DateTimeOffset type property or the property with [DataType(DataType.Date)] or [DataType(DataType.DateTime)] attributes..
 </td>
 <td>
 {{'[DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/datepicker?view=net-maui-7.0)'| markdownify }}
@@ -68,7 +68,7 @@ DateTime, DateOnly or DateTimeOffset type property and the property with [DataTy
 Time
 </td>
 <td>
-The DateTime, TimeSpan, TimeOnly or DateTimeOffset property with [DataType(DataType.Time)] attribute.
+The TimeSpan and TimeOnly type property or the property with [DataType(DataType.Time)] attribute.
 </td>
 <td>
 {{'[TimePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/timepicker?view=net-maui-7.0&tabs=windows)'| markdownify }}
@@ -185,11 +185,48 @@ Text editor have Keyboard type change by using `Keyboard` property and you can s
 {% endhighlight %}
 {% endtabs %}
 
+In `Text`, `MultilineText` and `Password` editors you can change the soft input keyboard type by using the `Keyboard` property of `DataFormTextEditorItem`.
+
+{% tabs %}
+{% highlight C# %}
+
+    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+
+    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+    {   
+        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name" && e.DataFormItem is DataFormTextEdiorItem textEditorItem)
+        {
+            textEditorItem.Keyboard= Keyboard.Text;
+        }
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+In `Text`, `MultilineText` and `Password` editors you can set the maximum allowed length of input by using the `MaxLength` property of `DataFormTextEditorItem`.
+
+{% tabs %}
+{% highlight C# %}
+
+    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+
+    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+    {   
+        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name" && e.DataFormItem is DataFormTextEdiorItem textEditorItem)
+        {
+            textEditorItem.MaxLength = 20;
+        }
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+
 ## Multiline Text editor
 
 In the `MultilineText` editor, the [Editor](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/editor?view=net-maui-7.0) is loaded.
 
-And `MultilineText` editor height will auto expand/reduce based on the line wraps in editor , which allowing text to be readable without scrolling the editor.
+`MultilineText` editor height will auto expand or reduce based on the line wraps, allowing text to be readable without scrolling the editor.
 
 {% tabs %}
 {% highlight C# %}
@@ -218,7 +255,7 @@ In the password editor, the [Entry](https://learn.microsoft.com/en-us/dotnet/mau
 
 In the date editor, the [DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/datepicker?view=net-maui-7.0) will be loaded.
 
-In [DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/datepicker?view=net-maui-7.0), the default date value is current date displayed. You can also adding nullable `DateTime` data type for the date picker property in data form, which allows you to set the current date and display current date in date editor. 
+In the date editor, the default date value will be the current date. You can also adding nullable `DateTime` data type for the date picker property in data form, which allows you to set the current date and display the current date in the date editor.
 
 {% tabs %}
 {% highlight C# %}
@@ -242,7 +279,6 @@ In the [DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface
 
     private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {   
-
         if (e.DataFormItem != null && e.DataFormItem.FieldName == "Date" && e.DataFormItem is DataFormDateItem dateItem)
         {
             dateItem.Format = "dd, MM, yyyy";
@@ -274,14 +310,13 @@ You can customize the maximum and minimum allowable dates in the [DatePicker](ht
 {% endhighlight %}
 {% endtabs %}
 
-`DateMAximumImages`
 
 ## Time editor
 
 In the time editor, the [TimePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/timepicker?view=net-maui-7.0&tabs=windows) will be loaded.
 
 
-In [TimePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/timepicker?view=net-maui-7.0&tabs=windows), the default time value (12:00 AM) is displayed. You can also adding nullable `TimeSpan` data type for the time picker property in data form, which allows you to set default time and display the (12:00 AM) in time editor. 
+In the time editor, the default time value (12:00 AM) is displayed. You can also adding nullable `TimeSpan` data type for the time picker property in data form, which allows you to set default time and display the (12:00 AM) in time editor. 
 
 {% tabs %}
 {% highlight C# %}
@@ -296,7 +331,7 @@ In [TimePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/con
 
 #### Change the format of time editor**
 
-In the [TimePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/timepicker?view=net-maui-7.0&tabs=windows), short time will be shown by default. You can change the applied format by setting the `Format`property in `DataFormTimeItem`.
+In the time editor, short time will be shown by default. You can change the applied format by setting the `Format`property in `DataFormTimeItem`.
 
 {% tabs %}
 {% highlight C# %}
@@ -305,7 +340,7 @@ In the [TimePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface
 
     private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "BirthTime" && e.DataFormItem is DataFormTimeItem timeItem)
+        if (e.DataFormItem != null && e.DataFormItem.FieldName == "EventTime" && e.DataFormItem is DataFormTimeItem timeItem)
         {
             timeItem.Format = "HH:mm";
         }
