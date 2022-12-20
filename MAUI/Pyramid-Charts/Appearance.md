@@ -62,9 +62,9 @@ The gradient for the pyramid chart can be set by using the [PaletteBrushes]() pr
 {% highlight xaml %}
 
 <chart:SfPyramidChart ItemsSource="{Binding Data}" 
-                     XBindingPath="Name"
- YBindingPath="Value"
- PaletteBrushes="{Binding CustomBrushes}">
+                      XBindingPath="Name"
+                      YBindingPath="Value"
+                      PaletteBrushes="{Binding CustomBrushes}">
 . . .
 </chart:SfPyramidChart>
 
