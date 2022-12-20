@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Working with DataForm in Maui DataForm control | Syncfusion
-description: Learn here all about Working with DataForm support in Syncfusion Maui DataForm (SfDataForm) control in mobile and desktop applications from a single shared codebase.
+description: Learn here all about working with DataForm in Syncfusion .NET MAUI DataForm(SfDataForm) control in mobile and desktop applications from a single shared codebase.
 platform: Maui
 control: SfDataForm
 documentation: UG
