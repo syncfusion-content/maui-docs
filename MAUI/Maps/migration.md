@@ -480,14 +480,6 @@ The following code example explains how to intialize the layer and customize the
       {{'[ZoomLevelChanging]()'| markdownify }} 
    </td>
 </tr>
-<tr>
-   <td>
-     {{'[RequestTileUri](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ImageryLayer.html#Syncfusion_SfMaps_XForms_ImageryLayer_RequestTileUri)'| markdownify }} 
-   </td>
-   <td>
-      {{'[ZoomLevelChanging]()'| markdownify }} 
-   </td>
-</tr>
 </table>
 
 N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
@@ -2817,6 +2809,22 @@ public MainPage()
       {{'[StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html#Syncfusion_Maui_Maps_MapPolyline_StrokeDashArray)'| markdownify }}
    </td>
 </tr>
+<tr>
+   <td>
+      {{'-'| markdownify }}
+   </td>
+   <td>
+      {{'[AnimationEasing]()'| markdownify }} in {{'[MapPolylineLayer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolylineLayer.html)'| markdownify }} class
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'-'| markdownify }}
+   </td>
+   <td>
+      {{'[AnimationDuration]()'| markdownify }} in {{'[MapPolylineLayer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolylineLayer.html)'| markdownify }} class
+   </td>
+</tr>
 </table>
 
 N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
@@ -3010,6 +3018,22 @@ The following code example explains how to intialize the polyline layer and it's
    </td>
    <td>
       {{'[StrokeLineCap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLine.html#Syncfusion_Maui_Maps_MapLine_StrokeLineCap)'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'-'| markdownify }}
+   </td>
+   <td>
+      {{'[AnimationEasing]()'| markdownify }} in {{'[MapLineLayer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLineLayer.html?tabs=tabid-1)'| markdownify }} class
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'-'| markdownify }}
+   </td>
+   <td>
+      {{'[AnimationDuration]()'| markdownify }} in {{'[MapLineLayer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLineLayer.html?tabs=tabid-1)'| markdownify }} class
    </td>
 </tr>
 </table>
@@ -3277,6 +3301,22 @@ The following code example explains how to intialize the arc layer and it's cust
    </td>
    <td>
       {{'[Fill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapCircle.html#Syncfusion_Maui_Maps_MapCircle_Fill)'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'-'| markdownify }}
+   </td>
+   <td>
+      {{'[AnimationEasing]()'| markdownify }} in {{'[MapCircleLayer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapCircleLayer.html?tabs=tabid-1)'| markdownify }} class
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'-'| markdownify }}
+   </td>
+   <td>
+      {{'[AnimationDuration]()'| markdownify }} in {{'[MapCircleLayer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapCircleLayer.html?tabs=tabid-1)'| markdownify }} class
    </td>
 </tr>
 </table>

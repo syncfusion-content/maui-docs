@@ -269,7 +269,7 @@ public MainPage()
 
 ## Custom shapes
 
-The MAUI Maps control allows you to render any custom shape to make a map look like building infrastructure, a sports stadium, plane or bus seat arrangements, and more.
+The MAUI Maps control allows you to render any custom shape to make a map look like building infrastructure, a sports stadium, plane or bus seat arrangements, and more using `Geometry` property.
 
 {% tabs %}
 
@@ -277,7 +277,7 @@ The MAUI Maps control allows you to render any custom shape to make a map look l
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json" 
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/seating.json" 
                            Geometry="Points" />
     </map:SfMaps.Layer>
 </map:SfMaps>
@@ -291,7 +291,7 @@ public MainPage()
     InitializeComponent();
     SfMaps map = new SfMaps();
     MapShapeLayer layer = new MapShapeLayer();
-    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
+    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/seating.json"));
     layer.Geometry = MapGeometryType.Points;
     map.Layer = layer;
     this.Content = map;
@@ -300,6 +300,8 @@ public MainPage()
 {% endhighlight %}
 
 {% endtabs %}
+
+![maps basic view](images/getting-started/maps_cartesian_view.png)
 
 ## Mapping the data source for shape layer
 
