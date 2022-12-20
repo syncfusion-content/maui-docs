@@ -51,3 +51,42 @@ SfDateTimeSlider slider = new SfDateTimeSlider()
 {% endtabs %}
 
 ![Slider date discrete mode](images/selection/step-duration.gif)
+
+## Deferred update
+
+You can control when the dependent components are updated while thumbs are being dragged continuously. It can be achieved by setting the `EnableDeferredUpdate` property and the delay in the update can be achieved by setting the `DeferredUpdateDelay` property. The default value of the `DeferredUpdateDelay` property is `500` milliseconds.
+
+It invokes the `ValueChanging` event when the thumb is dragged and held for the duration specified in the `DeferredUpdateDelay`. However, the values are immediately updated in touch-up action.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sliders:SfDateTimeSlider Minimum="2000-01-01"
+                          Maximum="2004-01-01"
+                          Value="2002-01-01"
+                          Interval="1"
+                          ShowTicks="True"
+                          ShowLabels="True"
+                          EnableDeferredUpdate="True"
+                          DeferredUpdateDelay="1000" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfDateTimeSlider slider = new SfDateTimeSlider()
+{
+    Minimum = new DateTime(2000, 01, 01),
+    Maximum = new DateTime(2004, 01, 01),
+    Value = new DateTime(2002, 01, 01),
+    Interval = 1,
+    ShowTicks = true,
+    ShowLabels = true,
+    EnableDeferredUpdate = true,
+    DeferredUpdateDelay = 1000,
+};
+
+{% endhighlight %}
+
+{% endtabs %}

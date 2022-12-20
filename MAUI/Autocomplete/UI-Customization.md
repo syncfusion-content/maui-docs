@@ -9,11 +9,11 @@ documentation: ug
 
 # UI Customization in .NET MAUI Autocomplete (SfAutocomplete)
 
-This section explains different UI customizations available in the `Autocomplete` control.
+This section explains different UI customizations available in the [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control.
 
 ## Placeholder
 
-You can prompt the user with any information by using the `Placeholder` property. This text will be displayed only if no items are selected or the edit text is empty. The default value of the Placeholder property is `string.Empty` (No string will be displayed).
+You can prompt the user with any information by using the [Placeholder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_Placeholder) property. This text will be displayed only if no items are selected or the edit text is empty. The default value of the Placeholder property is `string.Empty` (No string will be displayed).
 
 {% tabs %}
 {% highlight xaml %}
@@ -39,7 +39,7 @@ The following image illustrates the result of the above code:
 
 ## Placeholder Color
 
-The placeholder text color can be changed by using the `PlaceholderColor` property. The default value of the `PlaceholderColor` property is `Colors.Gray`.
+The placeholder text color can be changed by using the [PlaceholderColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_PlaceholderColor) property. The default value of the PlaceholderColor property is `Colors.Gray`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -66,7 +66,7 @@ The following gif image illustrates the result of the above code:
 
 ## Clear Button Icon Color
 
-The clear button icon color can be changed by using the `ClearButtonIconColor` property. The default value of the `ClearButtonIconColor` property is `Colors.Black`.
+The clear button icon color can be changed by using the [ClearButtonIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_ClearButtonIconColor) property. The default value of the ClearButtonIconColor property is `Colors.Black`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -92,9 +92,9 @@ The following gif image illustrates the result of the above code:
 
 ![.NET MAUI Autocomplete clear button color](Images/UICustomization/ClearButtonColor.png)
 
-## Border Color
+## Stroke
 
-The Autocomplete border color can be changed by using the `BorderColor` property.
+The Autocomplete border color can be changed by using the `Stroke` property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -106,23 +106,23 @@ The Autocomplete border color can be changed by using the `BorderColor` property
                         TextMemberPath="Name"
                         Placeholder="Select a social media"
                         PlaceholderColor="Red"
-                        BorderColor="Red" />
+                        Stroke="Red" />
 
 {% endhighlight %}
 {% highlight C# %}
 
-autocomplete.BorderColor = Colors.Red;
+autocomplete.Stroke = Colors.Red;
 
 {% endhighlight %}
 {% endtabs %}
 
-The following gif image illustrates the result of the above code:
+The following gif image illustrates the result of the above code.
 
 ![.NET MAUI Autocomplete border color](Images/UICustomization/BorderColor.png)
 
 ## Maximum DropDown Height
 
-The maximum height of the drop-down can be changed by using the `MaxDropDownHeight` property of the `Autocomplete` control. The default value of the `MaxDropDownHeight` property is `400d`. 
+The maximum height of the drop-down can be changed by using the [MaxDropDownHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_MaxDropDownHeight) property of the `Autocomplete` control. The default value of the MaxDropDownHeight property is `400d`. 
 
 N> If the `MaxDropDownHeight` is too small compared to the populated items, the scroll viewer will be automatically shown to navigate the hidden items.
 

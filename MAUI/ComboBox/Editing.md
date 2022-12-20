@@ -9,11 +9,11 @@ documentation: ug
 
 # Editing in .NET MAUI ComboBox (SfComboBox)
 
-The `ComboBox` control supports both editable and non-editable text boxes for selecting an item from a data source. To enable editing functionality, set `IsEditable` property as `true`. The default value is `false`.
+The [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control supports both editable and non-editable text boxes for selecting an item from a data source. To enable editing functionality, set [IsEditable](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_IsEditable) property as `true`. The default value is `false`.
 
 ## Editable ComboBox
 
-In the editable mode, the `ComboBox` allows users to edit in the text box and it automatically appends the remaining letters to the entered text when it is valid.
+In the editable mode, the [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) allows users to edit in the text box and it automatically appends the remaining letters to the entered text when it is valid.
 
 {% tabs %}
 {% highlight XAML %}
@@ -69,7 +69,7 @@ The following gif image illustrates the result of the above code:
 
 ## Hide clear button in the editor
 
-By default, the clear button `X` will be displayed in the editor of the ComboBox control, which can be used to clear the entered input. Hide the clear button in ComboBox control using the `IsClearButtonVisible` property. The default value of the IsClearButtonVisible property value is `true`.
+By default, the clear button `X` will be displayed in the editor of the ComboBox control, which can be used to clear the entered input. Hide the clear button in ComboBox control using the [IsClearButtonVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_IsClearButtonVisibleProperty) property. The default value of the IsClearButtonVisible property value is `true`.
 
 {% tabs %}
 {% highlight XAML %}

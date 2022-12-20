@@ -9,17 +9,17 @@ documentation: ug
 
 # Getting Started with .NET MAUI ComboBox (SfComboBox)
 
-This section explains the steps required to add the `ComboBox` control and binding data in the `ComboBox` control. This section covers only the basic features needed to get started with Syncfusion `ComboBox` control.
+This section explains the steps required to add the [.NET MAUI ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control and binding data in the ComboBox control. This section covers only the basic features needed to get started with Syncfusion ComboBox control.
 
 ## Adding a .NET MAUI ComboBox reference
 
-Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add .NET MAUI ComboBox to your project, open the NuGet package manager in Visual Studio, search for `Syncfusion.Maui.Inputs,` and then install it.
+Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add .NET MAUI ComboBox to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) and then install it.
 
 ## Handler registration 
 
  In the MauiProgram.cs file, register the handler for Syncfusion core.
 
-{% highlight c# hl_lines="6 7 18 19" %}
+{% highlight c# hl_lines="6 17" %}
 
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
@@ -27,7 +27,6 @@ using Microsoft.Maui.Controls.Compatibility;
 using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Controls.Xaml;
 using Syncfusion.Maui.Core.Hosting;
-using Syncfusion.Maui.ListView.Hosting;
 
 namespace ComboBoxSample
 {
@@ -39,7 +38,6 @@ namespace ComboBoxSample
             builder
             .UseMauiApp<App>()
             .ConfigureSyncfusionCore()
-            .ConfigureSyncfusionListView()
             .ConfigureFonts(fonts =>
             {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -104,7 +102,7 @@ Content = comboBox;
 
 ## Populating items using data binding
 
-The `ComboBox` can be bound to an external data source using the `ItemsSource` property. Now, let us create Model and ViewModel classes to populate `ComboBox` with SocialMedia details.
+The [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) can be bound to an external data source using the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ItemsSource) property. Now, let us create Model and ViewModel classes to populate ComboBox with SocialMedia details.
 
 **Step 1:** Define a simple model class SocialMedia with fields ID and name, and then populate social media data in the ViewModel.
 
@@ -147,7 +145,7 @@ public class SocialMediaViewModel
 
 **Step 2:** Populate data in `ComboBox`. 
 
-Now, populate this SocialMediaViewModel data in `ComboBox` control by binding it to the `ItemSource` property. 
+Now, populate this SocialMediaViewModel data in [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control by binding it to the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ItemsSource) property. 
 
 {% tabs %}
 {% highlight xaml %}
@@ -187,11 +185,11 @@ N> Set the SocialMediaViewModel instance as the BindingContext of your control; 
 
 **Step 3:** Setting TextMemberPath and DisplayMemberPath.
 
-The `ComboBox` control is populated with a list of social media. But the SocialMedia model contains two properties, ID and Name, so it is necessary to intimate by which property it should display the value in the selection box portion of the `ComboBox` control when an item is selected.
+The [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control is populated with a list of social media. But the SocialMedia model contains two properties, ID and Name, so it is necessary to intimate by which property it should display the value in the selection box portion of the `[ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control when an item is selected.
 
-`TextMemberPath` - This property path is used to get the value for displaying in the selection box portion of the `ComboBox` control when an item is selected. The default value is `String.Empty`.
+[TextMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_TextMemberPath)  - This property path is used to get the value for displaying in the selection box portion of the [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control when an item is selected. The default value is `String.Empty`.
 
-`DisplayMemberPath` - This property path is used to the name or path of the property displayed for each data item in the drop-down list. The default value is `String.Empty`.
+[DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DisplayMemberPath) - This property path is used to the name or path of the property displayed for each data item in the drop-down list. The default value is `String.Empty`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -217,7 +215,7 @@ The following gif image illustrates the result of the above code:
 
 ## Editing
 
-The `ComboBox` control supports editable and non-editable modes to choose items. To enable the editing functionality, set the `IsEditable` property as `true.` The default value is `false.`
+The [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control supports editable and non-editable modes to choose items. To enable the editing functionality, set the [IsEditable](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_IsEditable) property as `true.` The default value is `false.`
 
 {% tabs %}
 {% highlight XAML %}

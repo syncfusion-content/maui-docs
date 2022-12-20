@@ -39,8 +39,8 @@ To migrate easier from Xamarin SfBadgeView to .NET MAUI SfBadgeView, we kept mos
 <td>Gets or sets the background for the badge.</td></tr>
 <tr>
 <td>{{'[StrokeWidth](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.BadgeView.BadgeSetting.html#Syncfusion_XForms_BadgeView_BadgeSetting_StrokeWidth)' | markdownify }}</td>
-<td>{{'[BorderWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_BorderWidth)'| markdownify }}</td>
-<td>Gets or sets the border width for the badge.</td></tr>
+<td>{{'[StrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_BorderWidth)'| markdownify }}</td>
+<td>Gets or sets the stroke thickness for the badge.</td></tr>
 <tr>
 <td>{{'[BadgeIcon](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.BadgeView.BadgeSetting.html#Syncfusion_XForms_BadgeView_BadgeSetting_BadgeIcon)' | markdownify }}</td>
 <td>{{'[Icon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_Icon)'| markdownify }}</td>
