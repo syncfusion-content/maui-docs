@@ -490,3 +490,147 @@ this.Content = maps;
 {% endtabs %}
 
 ![Circle stroke color](images/circle-layer/circle-stroke-color.png)
+
+## Animation
+
+You can apply animation for the [`MapCircle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapCircle.html) using the `MapCircleLayer.AnimationDuration` and `MapCircleLayer.AnimationEasing` properties and able to customize the animation curve and duration.
+
+By default, there will not be any animation.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/india.json"
+                           ShapeStroke="DarkGrey">
+            <map:MapShapeLayer.Sublayers>
+                <map:MapCircleLayer AnimationDuration="3000"
+                                    AnimationEasing="{x:Static Easing.Linear}">
+                    <map:MapCircleLayer.Circles>
+                        <map:MapCircle Radius="10"
+                                       Stroke="#309989"
+                                       Fill="#309989">
+                            <map:MapCircle.Center>
+                                <map:MapLatLng Latitude="74.1240"
+                                               Longitude="15.2993" />
+                            </map:MapCircle.Center>
+                        </map:MapCircle>
+                        <map:MapCircle Radius="10"
+                                       Stroke="#309989"
+                                       Fill="#309989">
+                            <map:MapCircle.Center>
+                                <map:MapLatLng Latitude="80.0499"
+                                               Longitude="15.5057" />
+                            </map:MapCircle.Center>
+                        </map:MapCircle>
+                        <map:MapCircle Radius="10"
+                                       Stroke="#309989"
+                                       Fill="#309989">
+                            <map:MapCircle.Center>
+                                <map:MapLatLng Latitude="75.7139"
+                                               Longitude="19.7515" />
+                            </map:MapCircle.Center>
+                        </map:MapCircle>
+                        <map:MapCircle Radius="10"
+                                       Stroke="#309989"
+                                       Fill="#309989">
+                            <map:MapCircle.Center>
+                                <map:MapLatLng Latitude="72.5714"
+                                               Longitude="23.0225" />
+                            </map:MapCircle.Center>
+                        </map:MapCircle>
+                        <map:MapCircle Radius="10"
+                                       Stroke="#309989"
+                                       Fill="#309989">
+                            <map:MapCircle.Center>
+                                <map:MapLatLng Latitude="74.2179"
+                                               Longitude="27.0238" />
+                            </map:MapCircle.Center>
+                        </map:MapCircle>
+                        <map:MapCircle Radius="10"
+                                       Stroke="#309989"
+                                       Fill="#309989">
+                            <map:MapCircle.Center>
+                                <map:MapLatLng Latitude="80.9462"
+                                               Longitude="26.8467" />
+                            </map:MapCircle.Center>
+                        </map:MapCircle>
+                        <map:MapCircle Radius="10"
+                                       Stroke="#309989"
+                                       Fill="#309989">
+                            <map:MapCircle.Center>
+                                <map:MapLatLng Latitude="85.2799"
+                                               Longitude="21.2787" />
+                            </map:MapCircle.Center>
+                        </map:MapCircle>
+                    </map:MapCircleLayer.Circles>
+                </map:MapCircleLayer>
+            </map:MapShapeLayer.Sublayers>
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfMaps maps = new SfMaps();
+MapShapeLayer layer = new MapShapeLayer();
+layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/india.json"));
+layer.ShapeStroke = Brush.DarkGray;
+MapCircleLayer circleLayer = new MapCircleLayer();
+circleLayer.AnimationDuration = 4000;
+circleLayer.AnimationEasing = Easing.Linear;
+MapCircle circle1 = new MapCircle();
+circle1.Center = new MapLatLng(74.1240, 15.2993);
+circle1.Radius = 10;
+circle1.Stroke = Color.FromRgb(48, 153, 137);
+circle1.Fill = Color.FromRgb(48, 153, 137);
+MapCircle circle2 = new MapCircle();
+circle2.Center = new MapLatLng(80.0499, 15.5057);
+circle2.Radius = 10;
+circle2.Stroke = Color.FromRgb(48, 153, 137);
+circle2.Fill = Color.FromRgb(48, 153, 137);
+MapCircle circle3 = new MapCircle();
+circle3.Center = new MapLatLng(75.7139, 19.7515);
+circle3.Radius = 10;
+circle3.Stroke = Color.FromRgb(48, 153, 137);
+circle3.Fill = Color.FromRgb(48, 153, 137);
+MapCircle circle4 = new MapCircle();
+circle4.Center = new MapLatLng(72.5714, 23.0225);
+circle4.Radius = 10;
+circle4.Stroke = Color.FromRgb(48, 153, 137);
+circle4.Fill = Color.FromRgb(48, 153, 137);
+MapCircle circle5 = new MapCircle();
+circle5.Center = new MapLatLng(74.2179, 27.0238);
+circle5.Radius = 10;
+circle5.Stroke = Color.FromRgb(48, 153, 137);
+circle5.Fill = Color.FromRgb(48, 153, 137);
+MapCircle circle6 = new MapCircle();
+circle6.Center = new MapLatLng(80.9462, 26.8467);
+circle6.Radius = 10;
+circle6.Stroke = Color.FromRgb(48, 153, 137);
+circle6.Fill = Color.FromRgb(48, 153, 137);
+MapCircle circle7 = new MapCircle();
+circle7.Center = new MapLatLng(85.2799, 21.2787);
+circle7.Radius = 10;
+circle7.Stroke = Color.FromRgb(48, 153, 137);
+circle7.Fill = Color.FromRgb(48, 153, 137);
+circleLayer.Circles.Add(circle1);
+circleLayer.Circles.Add(circle2);
+circleLayer.Circles.Add(circle3);
+circleLayer.Circles.Add(circle4);
+circleLayer.Circles.Add(circle5);
+circleLayer.Circles.Add(circle6);
+circleLayer.Circles.Add(circle7);
+layer.Sublayers.Add(circleLayer);
+maps.Layer = layer;
+this.Content = maps;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Circle animation support](images/circle-layer/circle-animation.gif)
