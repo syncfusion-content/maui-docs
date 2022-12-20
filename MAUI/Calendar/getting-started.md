@@ -84,12 +84,12 @@ namespace GettingStarted
 
 ## Change different calendar views
 
-The [.NET MAUI Calendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html) control provides four different types of views to display dates and it can be assigned to the control by using the [View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_View) property. The control is assigned to the [Month](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarView.html#Syncfusion_Maui_Calendar_CalendarView_Month) view by default. Initially, all Calendar views will show the current date.
+The [.NET MAUI Calendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html) control provides four different types of views to display the dates and it can be assigned to the control by using the [View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_View) property. The control is assigned to the [Month](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarView.html#Syncfusion_Maui_Calendar_CalendarView_Month) view by default. Initially, all Calendar views will show the current date.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-{% include_relative code-snippet/getting_started_views.xaml %}
+{% include_relative code-snippet/month_view.xaml %}
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -110,12 +110,19 @@ The following code shows the Calendar with `Wednesday` as the first day of the w
 {% tabs %}  
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-{% include_relative code-snippet/getting_started_first_day_of_week.xaml %}
+<calendar:SfCalendar x:Name="Calendar" View="Month">
+    <Calendar:SfCalendar.MonthView>
+        <Calendar:CalendarMonthView FirstDayOfWeek="Wednesday" />
+    </Calendar:SfCalendar.MonthView>
+</calendar:SfCalendar>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.MonthView.FirstDayOfWeek = DayOfWeek.Wednesday;
+this.Calendar.MonthView = new CalendarMonthView()
+{
+    FirstDayOfWeek = DayOfWeek.Wednesday,
+};
 
 {% endhighlight %}  
 {% endtabs %}
@@ -124,7 +131,7 @@ this.Calendar.MonthView.FirstDayOfWeek = DayOfWeek.Wednesday;
 
 ## Change Selection mode
 
-Calendar allows the user to select the dates in all the four calendar views. Supports Single, Multiple and Range selection to select the dates. The default selection mode is `Defalut`. 
+Calendar allows the user to select the dates in all the four calendar views. Supports Single, Multiple and Range selection to select the dates. The default selection mode is `Default`. 
 
 The selection details can be obtained by using call back method which return `CalendarSelectionChangedEventArgs` holds the details of selected date or range.
 
@@ -133,7 +140,7 @@ The following code shows the Calendar with `Multiple` as the Selection mode.
 {% tabs %}  
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-{% include_relative code-snippet/getting_started_selection_mode.xaml %}
+{% include_relative code-snippet/multiple_selection_mode.xaml %}
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
