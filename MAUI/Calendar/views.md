@@ -8,10 +8,10 @@ documentation: ug
 ---
 
 # Multiple Calendar Views in MAUI (SfCalendar)
-The `SfCalendar` widget has four types of Calendar views to display. It can be assigned to the widget by using the [View](https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/SfCalendar/View.html) property. Month view is initially rendered by Default. The current date will be displayed initially for all the Calendar views.
+The `SfCalendar` widget has four Calendar views to display. It can be assigned to the widget by using the [View](https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/SfCalendar/View.html) property. Month view is initially rendered by Default. The current date will be displayed initially for all the Calendar views.
 
 ## Month view
-The Month view displays the current month's days, and usually a few days of previous and next month. By default, initially displays the current month dates and the current date is highlighted by a separate color different from the rest of the dates color in `Month` view.
+The Month view displays the current month days, and usually a few days of previous and next month. By default, initially displays the current month dates and the current date is highlighted by a separate color different from the rest of the dates color in `Month` view.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -34,7 +34,11 @@ It displays week number for the current view dates in the month view by setting 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-{% include_relative code-snippet/show_week_number.xaml %}
+<calendar:SfCalendar  x:Name="Calendar" View="Month"> 
+                      <Calendar:SfCalendar.MonthView>
+                        <Calendar:CalendarMonthView ShowWeekNumber="True" />
+                      </Calendar:SfCalendar.MonthView>>
+</calendar:SfCalendar>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -56,7 +60,19 @@ Week number Background and TextStyle can be customized in the month view. Backgr
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-{% include_relative code-snippet/week_number_style.xaml %}
+<calendar:SfCalendar  x:Name="Calendar"  View="Month">
+            <Calendar:SfCalendar.MonthView>
+                <Calendar:CalendarMonthView ShowWeekNumber="True">
+                    <Calendar:CalendarMonthView.WeekNumberStyle>
+                        <Calendar:CalendarWeekNumberStyle Background="DeepSkyBlue">
+                            <Calendar:CalendarWeekNumberStyle.TextStyle>
+                                <Calendar:CalendarTextStyle TextColor="White" FontSize="12" />
+                            </Calendar:CalendarWeekNumberStyle.TextStyle>
+                        </Calendar:CalendarWeekNumberStyle>
+                    </Calendar:CalendarMonthView.WeekNumberStyle>
+                </Calendar:CalendarMonthView>
+            </Calendar:SfCalendar.MonthView>
+</calendar:SfCalendar>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -66,14 +82,16 @@ this.Calendar.MonthView = new CalendarMonthView()
     ShowWeekNumber = true,
 };
 
+CalendarTextStyle textStyle = new CalendarTextStyle()
+{
+    TextColor = Colors.Black,
+    FontSize = 12,
+};
+
 this.Calendar.MonthView.WeekNumberStyle = new CalendarWeekNumberStyle()
 {
     Background = Colors.DeepSkyBlue,
-    TextStyle = new CalendarTextStyle()
-    {
-        TextColor = Colors.White,
-        FontSize = 12,
-    }
+    TextStyle = textStyle,
 };
 
 {% endhighlight %}
@@ -88,7 +106,9 @@ The Year view displays the current year's months. A calendar year is a one-year 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-{% include_relative code-snippet/year-view.xaml %}
+<calendar:SfCalendar  x:Name="Calendar" 
+                        View="Year">
+</calendar:SfCalendar>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -106,7 +126,9 @@ The Decade view displays the period of ten years and some years of next view. By
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-{% include_relative code-snippet/decade-view.xaml %}
+<calendar:SfCalendar  x:Name="Calendar" 
+                        View="Decade">
+</calendar:SfCalendar>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -124,7 +146,9 @@ The Century view displays the period of hundred years and some years of next vie
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-{% include_relative code-snippet/century-view.xaml %}
+<calendar:SfCalendar  x:Name="Calendar" 
+                        View="Century">
+</calendar:SfCalendar>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -144,7 +168,12 @@ The following code shows the Calendar month view with `NumberOfVisibleWeeks` as 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-{% include_relative code-snippet/number-of-visible-week-view.xaml %}
+<calendar:SfCalendar  x:Name="Calendar"
+                      View="Month">
+                      <Calendar:SfCalendar.MonthView>
+                        <Calendar:CalendarMonthView NumberOfVisibleWeeks = 4/>
+                      </Calendar:SfCalendar.MonthView>                    
+</calendar:SfCalendar>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
