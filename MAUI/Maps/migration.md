@@ -427,7 +427,7 @@ The following code example explains how to intialize the layer and customize the
       {{'[LatLngBounds](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ImageryLayer.html#Syncfusion_SfMaps_XForms_ImageryLayer_LatLngBounds)'| markdownify }} 
    </td>
    <td>
-      {{'[MapLatLngBounds]()'| markdownify }} 
+      {{'[*MapLatLngBounds]()'| markdownify }} 
    </td>
 </tr>
 <tr>
@@ -484,7 +484,7 @@ The following code example explains how to intialize the layer and customize the
 
 N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
 
-The following code example explains how to intialize the zooming and it's customization in Xamarin SfMaps and .NET MAUI SfMaps.
+The following code example explains how to intialize the tile layer and it's customization in Xamarin SfMaps and .NET MAUI SfMaps.
 
 <b>Adding OSM layer</b>
 
@@ -3385,193 +3385,6 @@ public MainPage()
 {% endtabs %}
 </td></tr>
 </table>
-
-## Vector layer
-
-### Polygon Layer
-
-<table>
-<tr>
-   <th>Xamarin SfMaps</th>
-   <th>.NET MAUI SfMaps</th>
-</tr>
-<tr>
-   <td>
-      {{'[ShapeType](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeFileLayer.html#Syncfusion_SfMaps_XForms_ShapeFileLayer_ShapeTypeProperty)'| markdownify }}
-   </td>
-   <td>
-      {{'[*MapPolygon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolygon.html)'| markdownify }}
-   </td>
-</tr>
-<tr>
-   <td>
-      {{'[Points](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeFileLayer.html#Syncfusion_SfMaps_XForms_ShapeFileLayer_PointsProperty)'| markdownify }}
-   </td>
-   <td>
-      {{'[Points](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolygon.html#Syncfusion_Maui_Maps_MapPolygon_Points)'| markdownify }}
-   </td>
-</tr>
-<tr>
-   <td>
-      {{'[ShapeFill](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html#Syncfusion_SfMaps_XForms_ShapeSetting_ShapeFill)'| markdownify }} in
-       {{'[ShapeSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html)'| markdownify }} class
-   </td>
-   <td>
-      {{'[*Fill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolygon.html#Syncfusion_Maui_Maps_MapPolygon_Fill)'| markdownify }}
-   </td>
-</tr>
-<tr>
-   <td>
-      {{'[ShapeStroke](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html#Syncfusion_SfMaps_XForms_ShapeSetting_ShapeStroke)'| markdownify }} in
-       {{'[ShapeSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html)'| markdownify }} class
-   </td>
-   <td>
-      {{'[*Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolygon.html#Syncfusion_Maui_Maps_MapPolygon_Stroke)'| markdownify }}
-   </td>
-</tr>
-<tr>
-   <td>
-      {{'[ShapeStrokeThickness](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html#Syncfusion_SfMaps_XForms_ShapeSetting_ShapeStrokeThickness)'| markdownify }} in
-       {{'[ShapeSetting](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html)'| markdownify }} class
-   </td>
-   <td>
-      {{'[*StrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolygon.html#Syncfusion_Maui_Maps_MapPolygon_StrokeThickness)'| markdownify }}
-   </td>
-</tr>
-</table>
-
-N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
-
-The following code example explains how to intialize the polygon layer and it's customization in Xamarin SfMaps and .NET MAUI SfMaps.
-
-<table>
-<tr>
-<th>Xamarin SfMaps</th>
-<th>.NET MAUI SfMaps</th></tr>
-<tr>
-<td>
-{% tabs %}
-
-{% highlight xaml %}
-
-<maps:SfMaps>
-    <maps:SfMaps.Layers>
-        <maps:ShapeFileLayer Uri="world1.shp">
-            <maps:ShapeFileLayer.Sublayers>
-                <maps:ShapeFileLayer ShapeType="Polygon">
-                    <maps:ShapeFileLayer.Points>
-                        <Point>
-                            <Point.X>39.6737</Point.X>
-                            <Point.Y>-100.5</Point.Y>
-                        </Point>
-                        <Point>
-                            <Point.X>61.35</Point.X>
-                            <Point.Y>18.131</Point.Y>
-                        </Point>
-                        <Point>
-                            <Point.X>-32.259</Point.X>
-                            <Point.Y>145.4214</Point.Y>
-                        </Point>
-                    </maps:ShapeFileLayer.Points>
-                    <maps:ShapeFileLayer.ShapeSettings>
-                        <maps:ShapeSetting  ShapeStrokeThickness="3" ShapeFill="Blue" />
-                    </maps:ShapeFileLayer.ShapeSettings>
-                </maps:ShapeFileLayer>
-            </maps:ShapeFileLayer.Sublayers>
-        </maps:ShapeFileLayer>
-    </maps:SfMaps.Layers>
-</maps:SfMaps>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-    SfMaps maps = new SfMaps();
-
-    ShapeFileLayer layer = new ShapeFileLayer();
-    layer.Uri = "world.shp"; 
-
-    ShapeFileLayer subLayer = new ShapeFileLayer();
-    subLayer.ShapeType = ShapeType.Polygon;
-    subLayer.Points.Add(new Point(39.6737,-100.5));
-    subLayer.Points.Add(new Point(61.35, 18.131));
-    subLayer.Points.Add(new Point(-32.259, 145.4214));
-    
-    ShapeSetting subLayerSetting = new ShapeSetting();
-    subLayerSetting.ShapeStrokeThickness = 4;
-    subLayerSetting.ShapeFill = Color.Blue;
-    subLayerSetting.ShapeStroke = Color.DarkBlue;
-
-    subLayer.ShapeSettings = subLayerSetting;
-    layer.Sublayers.Add(subLayer);
-    maps.Layers.Add(layer);
-
-{% endhighlight %}
-
-{% endtabs %}
-</td>
-<td>
-{% tabs %}
-
-{% highlight xaml %}
-
-<map:SfMaps>
-    <map:SfMaps.Layer>
-        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json">
-            <map:MapShapeLayer.Sublayers>
-                <map:MapPolygonLayer>
-                    <map:MapPolygonLayer.Polygons>
-                        <map:MapPolygon Stroke="DarkBule" Fill="blue" StrokeThickness="4">
-                            <map:MapPolygon.Points>
-                                <map:MapLatLng Latitude="37.6173"
-                                               Longitude="55.7558" />
-                                <map:MapLatLng Latitude="87.1216"
-                                               Longitude="53.7596" />
-                                <map:MapLatLng Latitude="105.3188"
-                                               Longitude="61.5240" />
-                            </map:MapPolygon.Points>
-                        </map:MapPolygon>
-                    </map:MapPolygonLayer.Polygons>
-                </map:MapPolygonLayer>
-            </map:MapShapeLayer.Sublayers>
-        </map:MapShapeLayer>
-    </map:SfMaps.Layer>
-</map:SfMaps>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-public MainPage()
-{
-    InitializeComponent();
-    SfMaps maps = new SfMaps();
-    MapShapeLayer layer = new MapShapeLayer();
-    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
-    MapPolygonLayer mapPolygonLayer = new MapPolygonLayer();
-    MapPolygon polygon1 = new MapPolygon();
-    polygon1.Points = new ObservableCollection<MapLatLng>()
-    {
-    new MapLatLng(37.6173, 55.7558),
-    new MapLatLng(87.1216, 53.7596),
-    new MapLatLng(105.3188, 61.5240)
-    };
-    polygon1.Fill = Colors.Blue;
-    polygon1.Stroke = Colors.DarkBlue;
-    polygon1.StrokeThickness = 4;
-    mapPolygonLayer.Polygons.Add(polygon1);
-    layer.Sublayers.Add(mapPolygonLayer);
-    maps.Layer = layer;
-    this.Content = maps;
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-</td></tr>
-</table>
-
-
 
 ## Zooming and Panning
 
