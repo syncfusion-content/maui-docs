@@ -11,11 +11,11 @@ documentation: ug
 
 ## Overview
 
-The data form supports linear and grid layouts and manages layout of label, editor, and validation label.
+The data form supports linear and grid layouts and manages the layout of the label, editor, and validation label.
 
 ## Linear data form layout
 
-By default, the data form arranges the fields one-by-one. It is applicable for both label positions: left and top.
+By default, the data form arranges the fields one by one. It is applicable for both label positions: left and top.
 
 When the label position is Left, the linear layout is shown as follows:
 
@@ -23,7 +23,7 @@ When the label position is Top, the linear layout is shown as follows:
 
 ## Grid data form layout
 
-By default, the data form arranges one data field per row. It is possible to have more than one data fields per row by setting the `ColumnCount` property which provides grid like layout for the data form. The column order of data form field in a row can also be changed using `ItemsOrderInRow`.
+By default, the data form arranges one data field per row. It is possible to have more than one data field per row by setting the `ColumnCount` property which provides a grid-like layout for the data form. The column order of the data form field in a row can be changed using the `ItemsOrderInRow`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -46,7 +46,7 @@ this.dataForm.ColumnCount = 2;
 {% endhighlight %}
 {% endtabs %}
 
-N> Setting the `ColumnCount` property to SfDataForm does not arrange the data field in a group according to the column count. To set the column count for data fields in the data form group, refer to `loading different layout for data form group`
+N> Setting the `ColumnCount` property to SfDataForm does not arrange the data fields in a group according to the column count. To set the column count for data fields in the data form group, refer to the `loading different layout for data form group`.
 
 When the label position is Left, the grid layout is shown as follows:
 
@@ -54,7 +54,7 @@ When the label position is Top, the grid layout is shown as follows:
 
 ## Label visibility
 
-The label can be hided by defining the `DataFormDisplayOptions` attribute or by handling `GenerateDataFormItem` event. In this case, only the editor will be loaded.
+The label can be hidden by defining the `DataFormDisplayOptions` attribute or by handling the `GenerateDataFormItem` event. In this case, only the editor will be loaded.
 
 #### Using attributes
 
@@ -90,7 +90,7 @@ private double? percentage;
 
 ## Label position
 
-Label can be positioned either top or left side of the editor. By using the `DataFormDefaultLayoutSettings.LabelPosition` property, you can layout the label associated with editor for data form.
+The label can be positioned either top or left side of the editor. By using the `DataFormDefaultLayoutSettings.LabelPosition` property, lay out the label associated with the editor for the data form.
 
 By default, the label will be positioned at left side of the editor.
 
@@ -118,7 +118,7 @@ this.dataForm.DefaultLayoutSettings.LabelPosition = DataFormLabelPosition.Top;
 
 #### Changing particular editors label position
 
-The label position of particular editor can be changed by using the `DataFormDefaultLayoutSettings.LabelPosition` property in `DataFormItem`, and it will be handled in the `GenerateDataFormItem` event.
+The label position of a particular editor can be changed by using the `DataFormDefaultLayoutSettings.LabelPosition` property in the `DataFormItem`, and it will be handled in the `GenerateDataFormItem` event.
 
 {% tabs %}
 {% highlight XAML %}
@@ -154,7 +154,7 @@ this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
 ## Loading images for label
 
-Image can be loaded instead of label  by using `LeadingLabelIcon` property of `DataFormItem`.
+The image can be loaded instead of the label by using the `LeadingLabelIcon` property of the `DataFormItem`.
 
 #### Using event
 
@@ -179,11 +179,11 @@ this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
 ## Changing order of the editors
 
-The order of the data form editors can be changed by using attributes or by handling `GenerateDataFormItem` event.
+The order of the data form editors can be changed by using attributes or by handling the `GenerateDataFormItem` event.
 
 #### Using attributes
 
-The data form editors order can be changed by using the `RowOrder` property in `DataFormDisplayOptionsAttribute` attribute.
+The data form editors' order can be changed by using the `RowOrder` property in the `DataFormDisplayOptionsAttribute` attribute.
 
 {% tabs %}
 {% highlight C# %}
@@ -199,7 +199,7 @@ The data form editors order can be changed by using the `RowOrder` property in `
 
 #### Using event
 
-The data form editors order can be changed by using the `RowOrder` property in the `DataFormItem`.
+The data form editors' order can be changed by using the `RowOrder` property in the `DataFormItem`.
 
 {% tabs %}
 {% highlight C# %}
@@ -223,11 +223,10 @@ this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
 ## Change the label and editor width
 
-The label and editor width can be set proportionally by using `LabelWidth` and `EditorWidth` properties of `DefaultLayoutSettings` class.
-The `Value` and `UnitType` properties of `DataFormItemLength` each return the value and unit type of the corresponding DataFormItemLength, respectively. 
-
-Label and Editor can be specified with proportionate values such as 0.4* and 0.6* when the `DataFormItemLength.UnitType` is "Star".
-Additionally, you can specify a defined width for the editor and label, such as "300, 400," and the `DataFormItemLength.UnitType` is "Absolute."
+The label and editor width are set proportionally by using the `LabelWidth` and `EditorWidth` properties of the `DefaultLayoutSettings` class.
+The `Value` and `UnitType` properties of the `DataFormItemLength` each return the value and unit type of the corresponding DataFormItemLength respectively.
+The label and Editor are specified with proportionate values such as 0.4* and 0.6* when the `DataFormItemLength.UnitType` is "Star".
+Additionally, Specify a defined width for the editor and label such as "300, 400," and the `DataFormItemLength.UnitType` is "Absolute."
 
 
 {% tabs %}
@@ -259,13 +258,13 @@ Additionally, you can specify a defined width for the editor and label, such as 
 {% endhighlight %}
 {% endtabs %}
 
-N> Label width customization is applicable only when `LabelPosition` is Left.
+N> The label width customization is applicable only when the `LabelPosition` is Left.
 
-By default, the available width is divided into 40% for label and 60% for editor.
+By default, the available width is divided into 40% for the label and 60% for the editor.
 
 ## Spanning editors rows and columns
 
-Row height and column width can be increased by defining the `DataFormDisplayOptions` attribute or by handling `GenerateDataFormItem` event.
+The row height and column width are increased by defining the `DataFormDisplayOptions` attribute or by handling the `GenerateDataFormItem` event.
 
 ### Row span
 

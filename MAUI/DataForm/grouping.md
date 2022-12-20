@@ -105,7 +105,7 @@ public class ContactInfo
 
 #### Using event
 
-The order of the editors in the group can also be changed by handling the `GenerateDataFormItem` event using `RowOrder` property of a `DataFormItem`.
+The order of the editors in the group can also be changed by handling the `GenerateDataFormItem` event using the `RowOrder` property of a `DataFormItem`.
 
 {% tabs %}
 {% highlight C# %}
@@ -136,7 +136,7 @@ this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
 ## Changing the editors order of the group in grid rows
 
-The order of the editors of group in grid row can be changed within a row by using `RowOrder` and `ItemsOrderInRow` properties `DataFormDisplayOptions` attribute and by handling `GenerateDataFormItem` event.
+The order of the group's editors in a grid row can be changed within a row by using the `RowOrder` and `ItemsOrderInRow` properties and `DataFormDisplayOptions` attribute and by handling the `GenerateDataFormItem` event.
 
 {% tabs %}
 {% highlight C# %}
@@ -196,7 +196,7 @@ this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 ## Changing the layout for the group
 
 The linear or grid layout for the particular group can be loaded by handling the `GenerateDataFormItem` event.
-By setting the `ColumnCount` property in the data form, non-grouped items only will be arranged in the grid layout. To load the grid layout, set the `ColumnCount` for the `DataFormGroupItem`
+By setting the `ColumnCount` property in the data form, non-grouped items only will be arranged in the grid layout. To load the grid layout, set the `ColumnCount` for the `DataFormGroupItem`.
 
 {% tabs %}
 {% highlight C# %}
@@ -245,7 +245,7 @@ this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
 ## Loading the group in collapsed state
 
-By default, the group will be loaded in expanded state. You can collapse the group by setting the `IsExpanded` property of `DataFormGroupItem` class to `false`.
+By default, the group will be loaded in the expanded state. Collapse the group by setting the `IsExpanded` property of the `DataFormGroupItem` class to `false`.
 
 {% tabs %}
 {% highlight C# %}
@@ -291,7 +291,7 @@ this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
 ## Changing the group editors visibility
 
-The data form group visibility can be changed by using the `IsVisible` property of `DataFormGroupItem`.
+The data form group visibility can be changed by using the `IsVisible` property of the `DataFormGroupItem`.
 
 {% tabs %}
 {% highlight C# %}
@@ -316,7 +316,7 @@ Here, the `Name` group will be hidden.
 
 ## Changing the group header background
 
-The data form group header background can be changed by using the `HeaderBackground` property of `DataFormGroupItem`.
+The data form group header background can be changed by using the `HeaderBackground` property of the `DataFormGroupItem`.
 
 {% tabs %}
 {% highlight C# %}
@@ -339,7 +339,7 @@ this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
 ## Changing the group header text style
 
-The data form group header text style can be changed by using the `HeaderTextStyle` property of `DataFormGroupItem`.
+The data form group header text style can be changed by using the `HeaderTextStyle` property of the `DataFormGroupItem`.
 
 {% tabs %}
 {% highlight C# %}
@@ -367,7 +367,7 @@ this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
 ## Changing the padding for group headers and editors
 
-The distance between editors and the data form’s borders or group headers can be changed by using `ItemsPadding` property of `DataFormGroupItem`.
+The distance between editors and the data form’s borders or group headers can be changed by using the `ItemsPadding` property of the `DataFormGroupItem`.
 
 {% tabs %}
 {% highlight C# %}
