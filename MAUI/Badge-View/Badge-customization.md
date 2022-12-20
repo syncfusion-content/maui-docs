@@ -2,7 +2,7 @@
 
 layout: post
 title: Customization of Syncfusion Badge View control for .NET MAUI
-description: This section explains how to customize the font, border, and text in the Syncfusion SfBadgeView control in MAUI platform
+description: This section explains how to customize the font, stroke, and text in the Syncfusion SfBadgeView control in MAUI platform
 platform: maui
 control: Badge View
 documentation: ug
@@ -13,7 +13,7 @@ documentation: ug
 
 The [BadgeSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html#Syncfusion_Maui_Core_SfBadgeView_BadgeSettings) property helps you to customize the basic look and feel of the badge view. 
 
-[BadgeSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html) contains the sub-elements such as badge types, positions and colors. You can customize the background color, text color, border color, width, offset, and font attributes.
+[BadgeSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html) contains the sub-elements such as badge types, positions and colors. You can customize the background color, text color, stroke, width, offset, and font attributes.
 
 ## Font customization
 
@@ -64,9 +64,9 @@ Content = sfBadgeView;
 
 ![.NET MAUI Badge View Font Customization](badge-customization_images/net_maui_badge_notifications_font_customization.png)
 
-## Border customization
+## Stroke customization
 
-The border color and border width of the badge view can be customized using the [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_StrokeProperty) and [BorderWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_BorderWidthProperty) properties, respectively.
+The stroke and stroke thickness of the badge view can be customized using the [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_StrokeProperty) and [StrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_BorderWidthProperty) properties, respectively.
 
 {% tabs %}
 
@@ -77,7 +77,7 @@ The border color and border width of the badge view can be customized using the 
         <Button Text ="Primary" BackgroundColor="#d6d8d7" TextColor="Black" WidthRequest="120" HeightRequest="60"/>
     </badge:SfBadgeView.Content>
     <badge:SfBadgeView.BadgeSettings>
-        <badge:BadgeSettings Stroke="Orange" BorderWidth="2" />
+        <badge:BadgeSettings Stroke="Orange" StrokeThickness="2" />
     </badge:SfBadgeView.BadgeSettings>
 </badge:SfBadgeView>
 
@@ -100,7 +100,7 @@ button.HeightRequest = 60;
 sfBadgeView.Content = button;
 BadgeSettings badgeSetting = new BadgeSettings();
 badgeSetting.Stroke = Colors.Orange;
-badgeSetting.BorderWidth = 2;
+badgeSetting.StrokeThickness = 2;
 sfBadgeView.BadgeSettings = badgeSetting;
 Content = sfBadgeView;
     

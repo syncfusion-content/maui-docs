@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Manually create DataFormItems in Maui DataForm control | Syncfusion
+title: Manually create view items in .NET MAUI DataForm control | Syncfusion
 description: Learn about the working with manually created DataFormViewItems in Syncfusion .NET MAUI DataForm(SfDataForm) control in mobile and desktop applications.
 platform: Maui
 control: SfDataForm
 documentation: UG
 ---
 
-# Working DataForm Items Manually
+# Working with manually created DataForm Items
 
 You can manually create `DataFormViewItem` for the defined business model by using the `Items` property of the `SfDataForm` class. You should set the `AutoGenerateItems` property to false to restrict the auto-generation of `SfDataForm.Items`. 
 
@@ -23,26 +23,38 @@ You can manually create `DataFormViewItem` for the defined business model by usi
         </ContentPage.BindingContext>
 
         <ContentPage.Content>
-            <dataForm:SfDataForm x:Name="dataForm" DataObject="{Binding ContactDetails}"  AutoGenerateItems="false"> 
-                <dataForm:SfDataForm.Items> 
-                    <dataForm:DataFormTextItem FieldName="Name" /> 
-                    <dataForm:DataFormTextItem FieldName="Password" /> 
-                    <dataForm:DataFormTextItem FieldName="Address" /> 
-                    <dataForm:DataFormAutoCompleteItem FieldName="Country"  ItemsSource = "{Binding CountryNames}"/> 
-                </dataForm:SfDataForm.Items> 
+            <dataForm:SfDataForm x:Name="dataForm" DataObject="{Binding ContactDetails}" AutoGenerateItems="false">
+            dataForm:SfDataForm.Items
+            <dataForm:DataFormTextItem FieldName="Name" />
+            <dataForm:DataFormTextItem FieldName="Password" />
+            <dataForm:DataFormGroupItem Name="Address">
+            dataForm:DataFormGroupItem.Items
+            <dataForm:DataFormMultilineItem FieldName="Street"/>
+            <dataForm:DataFormTextItem FieldName="State"/>
+            <dataForm:DataFormTextItem FieldName="ZipCode"/>
+            <dataForm:DataFormAutoCompleteItem FieldName="Country" ItemsSource = "{Binding CountryNames}"/>
+            </dataForm:DataFormGroupItem.Items>
+            </dataForm:SfDataForm.Items>
             </dataForm:SfDataForm>
         </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
 {% highlight C# %}
 
-    DataFormViewModel contactInfoViewModel = new DataFormViewModel(); 
+    DataFormViewModel contactInfoViewModel = new DataFormViewModel();
     dataForm.DataObject = contactInfoViewModel.ContactDetails; 
     ObservableCollection<DataFormViewItem> items = new ObservableCollection<DataFormViewItem>(); 
     items.Add(new DataFormTextItem() { FieldName = "Name" }); 
     items.Add(new DataFormPasswordItem() { FieldName = "Password" }); 
     items.Add(new DataFormMultilineItem() { FieldName = "Address" }); 
-    items.Add(new DataFormAutoCompleteItem() { FieldName = "Country", ItemsSource = contactInfoViewModel.CountryNames }); 
+    DataFormGroupItem groupItem = new DataFormGroupItem();
+    groupItem.Name = "Address";
+    groupItem.Items.Add(new DataFormMultilineItem { FieldName = "Street" });
+    groupItem.Items.Add(new DataFormTextItem { FieldName = "State" });
+    groupItem.Items.Add(new DataFormTextItem { FieldName = "ZipCode" });
+    groupItem.Items.Add(new DataFormAutoCompleteItem() { FieldName = "Country", ItemsSource = contactInfoViewModel.CountryNames }); 
+        items.Add(groupItem);
+
     dataForm.AutoGenerateItems = false; 
     dataForm.Items = items;
 
@@ -85,7 +97,11 @@ You can manually create `DataFormViewItem` for the defined business model by usi
 
         public string Password { get; set; }
 
-        public string Address { get; set; }
+        public string Street { get; set; }
+
+        public string City { get; set; }
+
+        public string ZipCode { get; set; }
 
         public string Country { get; set; }
 
@@ -94,65 +110,20 @@ You can manually create `DataFormViewItem` for the defined business model by usi
 
 {% endhighlight %}
 
-### Adding DataForm group manually
-You can also generate `DataFormGroupItem` manually using the `Items` property of `SfDataForm`.
-
-{% tabs %}
-{% highlight XAML %}
-    <dataForm:SfDataForm.Items>
-            <dataForm:DataFormGroupItem Name="Address">
-                    <dataForm:DataFormGroupItem.Items>
-                        <dataForm:DataFormMultilineItem FieldName="Address"/>
-                        <dataForm:DataFormTextItem FieldName="State"/>
-                        <dataForm:DataFormTextItem FieldName="ZipCode"/>
-                    </dataForm:DataFormGroupItem.Items>
-        </dataForm:DataFormGroupItem>
-    </dataForm:SfDataForm.Items>
-    
-
-{% endhighlight %}
-{% endtabs %}
-
+## Dynamically add DataForm items
+You can dynamically add the items using `Items` property of `SfDataForm`.
 {% tabs %}
 {% highlight C# %}
 
-    DataFormGroupItem groupItem = new DataFormGroupItem();
-        groupItem.Name = "Address";
-        groupItem.Items.Add(new DataFormMultilineItem { FieldName = "Address" });
-        groupItem.Items.Add(new DataFormMultilineItem { FieldName = "State" });
-        groupItem.Items.Add(new DataFormMultilineItem { FieldName = "ZipCode" });
-        this.dataForm.Items.Add(groupItem);
+    dataForm.Items.Add(new DataFormTextItem() { FieldName = "State" });
+    dataForm.Items.Add(new DataFormTextItem() {FieldName = "Country" });
 
 {% endhighlight %}
 {% endtabs %}
 
-{% tabs %}
-{% highlight C# %}
 
-    public class DataFormModel
-    {
-        public string Name { get; set; }
-        public int Phone { get; set; }
-    }
-
-
-    public class DataFormViewModel
-    {
-        public DataFormViewModel
-        {
-            this.DataFormModel = new DataFormModel();
-        }
-
-        public DataFormModel DataFormModel { get; set; }
-        
-    }
-{% endhighlight %}
-{% endtabs %}
-
-`AddCustomItemsimages`
-
-### Dynamically remove manually added dataform items
-You can dynamically remove the dataform items from collections using the `Items` property of `SfDataForm`.
+## Dynamically remove manually added dataform items
+You can dynamically remove the `DataFormViewItem` from the `Items` property of `SfDataForm`.
 
 {% tabs %}
 {% highlight C# %}
@@ -163,8 +134,8 @@ You can dynamically remove the dataform items from collections using the `Items`
 {% endtabs %}
 
 
-### Dynamically clear manually added dataform items
-You can dynamically clear the dataform items using the `Items` property of `SfDataForm`.
+## Dynamically clear manually added dataform items
+You can dynamically clear all the item views from `SfDataForm`.
 
 {% tabs %}
 {% highlight C# %}
@@ -174,10 +145,9 @@ You can dynamically clear the dataform items using the `Items` property of `SfDa
 {% endhighlight %}
 {% endtabs %}
 
-`images/ClearCustomItems`
 
-### Dynamically reset manual dataform items
-You can reset the dataform items using the `Items` property of `SfDataForm` and we can reset two or more dataform items at a time.
+## Dynamically reset manual dataform items
+You can reset the `SfDataForm.Items` and we can reset two or more items at a time.
 
 {% tabs %}
 {% highlight C# %}
@@ -194,28 +164,27 @@ You can reset the dataform items using the `Items` property of `SfDataForm` and 
 {% endtabs %}
 
 
-### Dynamically add Dataform group items
+## Dynamically add Dataform group items
 You can dynamically add custom group items using `Items` property of `SfDataForm`.
 {% tabs %}
 {% highlight C# %}
 
     DataFormGroupItem dataFormGroupItem = new DataFormGroupItem();
-    dataFormGroupItem.Name = "GroupItem";
-    dataFormGroupItem.IsExpanded = true;
+    dataFormGroupItem.Name = "Name";
     dataFormGroupItem.Items = new ObservableCollection<DataFormItem>();
 
-    dataFormGroupItem.Items.Add(new DataFormTextItem() { FieldName = "First Name", ItemsOrderInRow = 0 , GroupName = "GroupItem" });
-    dataFormGroupItem.Items.Add(new DataFormTextItem() { FieldName = "Middle Name", ItemsOrderInRow = 1 , GroupName = "GroupItem" });
-    dataFormGroupItem.Items.Add(new DataFormTextItem() { FieldName = "Last Name", ItemsOrderInRow = 2 , GroupName = "GroupItem" });
+    dataFormGroupItem.Items.Add(new DataFormTextItem() { FieldName = "First Name" });
+    dataFormGroupItem.Items.Add(new DataFormTextItem() { FieldName = "Middle Name" });
+    dataFormGroupItem.Items.Add(new DataFormTextItem() { FieldName = "Last Name" });
 
     dataForm.Items.Add(dataFormGroupItem);
 {% endhighlight %}
 {% endtabs %}
 
-`images/GroupItems`
 
 #### Adding custom editor view using Manual DataFormItem
 
+You can directly set a custom view as an `EditorView` of `dataForm:DataFormCustomItem`. In this case, the editor view will not be generated based on field type and `RegistorEditor`.
 {% tabs %}
 {% highlight XAML %}
 
