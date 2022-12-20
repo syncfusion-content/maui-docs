@@ -162,7 +162,6 @@ You can dynamically remove the dataform items from collections using the `Items`
 {% endhighlight %}
 {% endtabs %}
 
-`images/RemoveCustomItems`
 
 ### Dynamically clear manually added dataform items
 You can dynamically clear the dataform items using the `Items` property of `SfDataForm`.
