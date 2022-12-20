@@ -284,7 +284,7 @@ this.Content = chart;
 </tr>
 </table>
 
- ### Series
+### Series
 
 <table>
 <tr>
