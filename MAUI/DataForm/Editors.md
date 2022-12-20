@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Editors in .NET MAUI DataForm(SfDataForm) control | Syncfusion
-description: Learn here all about Editors support in Syncfusion .NET MAUI DataForm (SfDataForm) control in mobile and desktop applications from a single shared codebase.
-platform: Maui
+description: Learn about the Editors support in Syncfusion .NET MAUI DataForm (SfDataForm) control in mobile and desktop applications from a single shared codebase.
+platform: maui
 control: SfDataForm
 documentation: UG
 ---
@@ -140,7 +140,6 @@ Enum and List type property.
 {{'[RadioButton](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/radiobutton?view=net-maui-7.0)'| markdownify }}
 </td>
 </tr>
-
 </table>
 
 ## To change the editor for any data type
@@ -211,6 +210,7 @@ In the password editor, the [Entry](https://learn.microsoft.com/en-us/dotnet/mau
     [Display(ShortName = "Transaction password", Prompt = "Enter password")]
     [DataType(DataType.Password)]
     public string Password { get; set; }
+
 {% endhighlight %}
 {% endtabs %}
 

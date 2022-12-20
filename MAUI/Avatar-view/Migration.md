@@ -30,7 +30,11 @@ To migrate easier from Xamarin [SfAvatarView](https://help.syncfusion.com/cr/xam
 <th>.NET MAUI SfAvatarView</th>
 <th>Description</th></tr>
 <tr>
+<td>BorderColor</td>
+<td>Stroke</td>
+<td>Gets or sets the stroke of the Avatar View</td></tr>
+<tr>
 <td>BorderWidth</td>
-<td>BorderThickness</td>
-<td>Gets or sets the thickness of the Avatar View border</td></tr>
+<td>StrokeThickness</td>
+<td>Gets or sets the thickness of the Avatar View stroke</td></tr>
 </table> 
