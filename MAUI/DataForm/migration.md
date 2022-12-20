@@ -106,7 +106,7 @@ this.dataForm.DataObject = new DataModel();
 <tr>
 <td>{{'[CommitMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.CommitMode.html)'| markdownify }}</td>
 <td>DataFormCommitMode</td>
-<td>Defines the constants for CommitMode that specifies when the value entered by user should be saved to the data object.</td>
+<td>Defines the constants for CommitMode that specify when the value entered by the user should be saved to the data object.</td>
 </tr>
 
 <tr>
