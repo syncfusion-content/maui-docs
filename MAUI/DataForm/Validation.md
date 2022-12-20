@@ -19,7 +19,7 @@ The supported built in validations are as follows:
 
 Validate the data using data annotation attributes.
 
-The String type property is validated using the [Required](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.requiredattribute?view=netframework-4.8) and [StringLength](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.stringlengthattribute?view=netframework-4.8) attributes.
+The String type property is validated using the [Required](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.requiredattribute?view=netframework-4.8) and [StringLength](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.stringlengthattribute?view=netframework-4.8) attributes.
 
 {% tabs %}
 {% highlight C# %}
@@ -144,9 +144,9 @@ If the values are correct, show the `ValidMessage` like an error message, the va
 
 Get the validation details of all the editors of the data form using the `ValidateForm` event of the data form.
 
-Note: This event will be raised once after the manual validation call using the `SfDataForm.Validate()` method.
+N> This event will be raised once after the manual validation call using the `SfDataForm.Validate()` method.
 
-{% endhighlight %}
+{% tabs %}
 {% highlight C# %}
 
 this.dataForm.ValidateForm += this.OnDataFormValidateForm;
@@ -165,7 +165,7 @@ this.dataForm.ValidateForm += this.OnDataFormValidateForm;
 
 The `ValidateProperty` event allows you to validate specific editors in the data form. Set `Isvalid`, `ErrorMessage`, and `ValidMessage` of the `DataFormValidatePropertyEventArgs`.
 
-{% endhighlight %}
+{% tabs %}
 {% highlight C# %}
 
 this.dataForm.ValidateProperty += this.OnDataFormValidateProperty;
