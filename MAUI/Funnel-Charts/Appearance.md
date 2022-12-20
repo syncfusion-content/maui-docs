@@ -63,8 +63,8 @@ The gradient for the funnel chart can be set by using the [PaletteBrushes]() pro
 
 <chart:SfFunnelChart ItemsSource="{Binding Data}" 
                      XBindingPath="XValue"
-					 YBindingPath="YValue"
-				     PaletteBrushes="{Binding CustomBrushes}">
+]	YBindingPath="YValue"
+	PaletteBrushes="{Binding CustomBrushes}">
 . . .
 </chart:SfFunnelChart>
 
