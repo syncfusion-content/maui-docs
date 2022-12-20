@@ -2,7 +2,7 @@
 layout: post
 title: Views in MAUI Calendar widget | Syncfusion
 description: Learn here all about Views feature of Syncfusion MAUI Calendar (SfCalendar) widget and more.
-platform: MAUI
+platform: maui
 control: Calendar
 documentation: ug
 ---
@@ -27,6 +27,34 @@ this.Calendar.View = CalendarView.Month;
 {% endtabs %}
 
 ![change-month-views-in-maui-calendar](images/views/change-month-views-in-maui-calendar.png)
+
+### Number Of Visible Weeks view
+In the month view, number of visible weeks can be customized by using the [NumberOfVisibleWeeks] property in the Calendar. By default, Month view displays with the NumberOfVisibleWeeks as the value of six.
+
+The following code shows the Calendar month view with `NumberOfVisibleWeeks` as `4`.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+<calendar:SfCalendar  x:Name="Calendar"
+                      View="Month">
+                      <Calendar:SfCalendar.MonthView>
+                        <Calendar:CalendarMonthView NumberOfVisibleWeeks = 4/>
+                      </Calendar:SfCalendar.MonthView>                    
+</calendar:SfCalendar>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+this.Calendar.MonthView = new CalendarMonthView()
+{
+    NumberOfVisibleWeeks = 4,
+};
+
+{% endhighlight %}
+{% endtabs %}
+
+![custom-number-of-weeks-in-maui-calendar](images/views/custom-number-of-weeks-in-maui-calendar.png)
 
 ### Week number
 It displays week number for the current view dates in the month view by setting the [ShowWeekNumber](https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/MonthViewSettings/ShowWeekNumber.html) property. By default, the ShowWeekNumber is false. If you need to show the week number in the month view by setting the ShowWeekNumber as true. Week numbers will be displayed based on the ISO standard.
@@ -159,31 +187,3 @@ this.Calendar.View = CalendarView.Century;
 {% endtabs %}
 
 ![centuryview-in-maui-calendar](images/views/centuryview-in-maui-calendar.png)
-
-## Number Of Visible Weeks view
-In the month view, number of visible weeks can be customized by using the [NumberOfVisibleWeeks] property in the Calendar. By default, Month view displays with the NumberOfVisibleWeeks as the value of six.
-
-The following code shows the Calendar month view with `NumberOfVisibleWeeks` as `4`.
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-
-<calendar:SfCalendar  x:Name="Calendar"
-                      View="Month">
-                      <Calendar:SfCalendar.MonthView>
-                        <Calendar:CalendarMonthView NumberOfVisibleWeeks = 4/>
-                      </Calendar:SfCalendar.MonthView>                    
-</calendar:SfCalendar>
-
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
-
-this.Calendar.MonthView = new CalendarMonthView()
-{
-    NumberOfVisibleWeeks = 4,
-};
-
-{% endhighlight %}
-{% endtabs %}
-
-![custom-number-of-weeks-in-maui-calendar](images/views/custom-number-of-weeks-in-maui-calendar.png)
