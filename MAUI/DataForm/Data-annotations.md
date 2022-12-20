@@ -9,7 +9,7 @@ documentation: UG
 
 # Data annotations in .NET MAUI DataForm (SfDataForm)
 
-The data form supports the following attribute to handle the data, and these attributes can be accessible using `System.ComponentModel.DataAnnotation` assembly.
+The data form supports the following attribute to handle the data, and these attributes can be accessed using the `System.ComponentModel.DataAnnotation` assembly.
 
 ## Display attribute
 
@@ -31,7 +31,7 @@ Specifies the label text.
 {{'[GroupName](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute.groupname?view=net-7.0)' |  markdownify }}
 </td>
 <td>
-Specifies the group name which groups the fields in the data form.
+Specifies the group name that identifies the fields in the data form.
 </td>
 </tr>
 <tr>
@@ -47,7 +47,7 @@ Specifies the label text. It takes higher priority than Name.
 {{'[AutoGenerateField](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute.autogeneratefield?view=net-7.0)' |  markdownify }}
 </td>
 <td>
-Specifies whether the field should be auto generated or not. 
+Specifies whether the field should be auto-generated or not. 
 </td>
 </tr>
 <tr>
@@ -55,7 +55,7 @@ Specifies whether the field should be auto generated or not.
 {{'[ResourceType](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute.resourcetype?view=net-7.0)' |  markdownify }}
 </td>
 <td>
-Specifies the Resources File (.Resx) which is used to localize the Display attribute of `Name`, `ShortName`, `GroupName`, `Prompt` and `ItemsSource` values.
+Specifies the Resources File (.Resx), which is used to localize the Display attribute of `Name`, `ShortName`, `GroupName`, `Prompt` and `ItemsSource` values.
 </td>
 </tr>
 <tr>
@@ -118,7 +118,7 @@ Specifies the required maximum input string length.
 {{'[Required](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.requiredattribute?view=net-7.0)'| markdownify }}
 </td>
 <td>
-Specifies that the data field value is required. 
+Specifies the required data field value. 
 </td>
 </tr>
 <tr>
@@ -134,7 +134,7 @@ Specifies the required string length.
 {{'[EnumDataType](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.enumdatatypeattribute?view=net-7.0)'| markdownify }}
 </td>
 <td>
-Specifies enum type for the data field.
+Specifies the enum type for the data field.
 </td>
 </tr>
 </table>
@@ -187,7 +187,7 @@ Specifies enum type for the data field.
 
 ## Bindable attribute
 
-It specifies whether the field should be auto generated or not. If bindable set to false the field will not be auto generated. 
+It specifies whether the field should be auto-generated or not. If bindable is set to false, the field will not be auto-generated. 
 
 {% tabs %}
 {% highlight Bindable attribute}
@@ -224,13 +224,13 @@ It specifies whether the data field is read only or not.
 {% endhighlight %}
 {% endtabs %}
 
-Note: `ReadOnlyAttribute` takes higher priority than `EditableAttribute`
+Note: The `ReadOnlyAttribute` takes higher priority than `EditableAttribute`
 
 ## DataType attribute
 
-It specifies data type for the field.
+It specifies the data type for the field.
 
-Supported data types are Text, MultilineText, Date, DateTime and Time.
+The Supported data types are Text, MultilineText, Date, DateTime and Time.
 
 {% tabs %}
 {% highlight DataType attribute}
@@ -242,7 +242,7 @@ Supported data types are Text, MultilineText, Date, DateTime and Time.
 {% endtabs %}
 
 ## Custom attribute
-The data form supports the following custom attribute, and these attributes can be accessible using `Syncfusion.Maui.DataForm` assembly.
+The data form supports the following custom attribute, and these attributes can be accessed using the `Syncfusion.Maui.DataForm` assembly.
 
 ### DataFormDisplayOptions attribute
 
@@ -276,7 +276,7 @@ Specifies the column span for the data form item.
 ValidMessage
 </td>
 <td>
-Specifies positive message to be shown when validation is passed. 
+Specifies the positive message to be shown when validation is passed. 
 </td>
 </tr>
 <tr>
@@ -316,7 +316,7 @@ Specifies the ItemsOrderInRow property to display multiple editors in a single r
 
 ### DataFormValueConverter attribute
 
-Specifies the Converter type which converts the original value in different format or as different value.
+Specifies the Converter type, which converts the original value in a different format or as a different value.
 
 {% tabs %}
 {% highlight  attribute}
@@ -343,7 +343,7 @@ Details
 MaximumDate
 </td>
 <td>
-Specifies the maximum date that can be selected in date editor.
+Specifies the maximum date that can be selected in the date editor.
 </td>
 </tr>
 <tr>
@@ -351,7 +351,7 @@ Specifies the maximum date that can be selected in date editor.
 MinimumDate
 </td>
 <td>
-Specifies the minimum date that can be selected in date editor.
+Specifies the minimum date that can be selected in the date editor.
 </td>
 </tr>
 <tr>
@@ -359,7 +359,7 @@ Specifies the minimum date that can be selected in date editor.
 DisplayFormat
 </td>
 <td>
-Specifies the format of `MaximumDate` and `MinumumDate` used in attribute.
+Specifies the format of the `MaximumDate` and `MinumumDate` used in attribute.
 </td>
 </tr>
 </table>
