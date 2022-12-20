@@ -13,7 +13,7 @@ The Syncfusion .NET MAUI Calendar (SfCalendar) allows user to select a Single da
 
 ## Key features
 
-* **Multiple calendar view modes**: For selection and navigation, use the month, year, decade, and century calendar views.
+* **Multiple calendar view modes**: For selection and navigation, use Month, Year, Decade, and Century calendar views.
 
    {% multiple_column split:2 %}
    {% column %}
@@ -63,11 +63,11 @@ The Syncfusion .NET MAUI Calendar (SfCalendar) allows user to select a Single da
    {% endcolumn}
    {% endmultiple_column %}
 
-* **Limit date selection**: Restrict interaction and navigation beyond specified minimum and maximum dates.
+* **Limit date selection**: Restricts interaction and navigation beyond specified minimum and maximum dates.
 
    ![Limit date selection in .NET MAUI Calendar.](images/overview/maui-min-max-date.jpg)
 
-* **Change first day of week**: You can customize the starting day of the week as needed. The default first day of the week is Sunday.
+* **Change first day of week**: You can customize the starting day of the week. The default first day of the week is Sunday.
 
    ![First day of week in .NET MAUI Calendar.](images/overview/maui-first-day-of-week.jpg)
 
@@ -75,7 +75,7 @@ The Syncfusion .NET MAUI Calendar (SfCalendar) allows user to select a Single da
 
    ![Selectable day predicate in .NET MAUI Calendar.](images/overview/maui-selectable-day-predicate.jpg)
 
-* **Highlight weekends and special dates**: Can highlight special dates and weekend in a month using different background color and textstyles in MAUI Calendar.
+* **Highlight weekends and special dates**: Can highlight special dates and weekend dates in month view using different background color and textstyles in MAUI Calendar.
 
    {% multiple_column split:2 %}
    {% column %}
