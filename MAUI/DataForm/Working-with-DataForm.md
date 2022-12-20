@@ -49,7 +49,7 @@ Generated for the String type and the properties with  [DataType(DataType.Multil
 DataFormPasswordItem
 </td>
 <td>
-{{'[Entry]((https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry?view=net-maui-7.0)'| markdownify }}
+{{'[Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry?view=net-maui-7.0)'| markdownify }}
 </td>
 <td>
 Generated for the String type and the properties with [DataType(DataType.Password)] attributes. 
