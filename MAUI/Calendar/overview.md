@@ -11,23 +11,22 @@ documentation: ug
 
 The Syncfusion .NET MAUI Calendar (SfCalendar) control allows user to easily select a Single, Multiple and a Range of dates. It offers Month, Year, Decade, and Century view options to quickly navigate to the desired date. To restrict the date selection by using the minimum, maximum, enable past dates, and disabled dates.
 
-
 ## Key features
 
 * **Multiple calendar views**: The user can easily select and switch between the built-in month, year, decade, and century views by displaying them. Supports programmatic navigation.
 
    {% multiple_column %}
    {% column %}
-   ![monthview-in-maui-calendar](images/overview/MultipleViews/monthview-in-maui-calendar.png)
+   ![monthview-in-maui-calendar](images/overview/views-monthview-in-maui-calendar.png)
    {% endcolumn}
    {% column %}
-   ![yearview-in-maui-calendar](images/overview/MultipleViews/yearview-in-maui-calendar.png)
+   ![yearview-in-maui-calendar](images/overview/views-yearview-in-maui-calendar.png)
    {% endcolumn}
    {% column %}
-   ![decadeview-in-maui-calendar](images/overview/MultipleViews/decadeview-in-maui-calendar.png)
+   ![decadeview-in-maui-calendar](images/overview/views-decadeview-in-maui-calendar.png)
    {% endcolumn}
    {% column %}
-   ![centuryview-in-maui-calendar](images/overview/MultipleViews/centuryview-in-maui-calendar.png)
+   ![centuryview-in-maui-calendar](images/overview/views-centuryview-in-maui-calendar.png)
    {% endcolumn}
    {% endmultiple_column %}
 
@@ -37,16 +36,16 @@ The Syncfusion .NET MAUI Calendar (SfCalendar) control allows user to easily sel
 
    {% multiple_column %}
    {% column %}
-   ![monthview-range-selection-in-maui-calendar](images/overview/SelectionWhileAllowViewNavigation/monthview-range-selection-in-maui-calendar.png)
+   ![monthview-range-selection-in-maui-calendar](images/overview/range-selection-monthview-in-maui-calendar.png)
    {% endcolumn}
    {% column %}
-   ![yearview-range-selection-in-maui-calendar](images/overview/SelectionWhileAllowViewNavigation/yearview-range-selection-in-maui-calendar.png)
+   ![yearview-range-selection-in-maui-calendar](images/overview/range-selection-yearview-in-maui-calendar.png)
    {% endcolumn}
    {% column %}
-   ![decadeview-range-selection-in-maui-calendar](images/overview/SelectionWhileAllowViewNavigation/decadeview-range-selection-in-maui-calendar.png)
+   ![decadeview-range-selection-in-maui-calendar](images/overview/range-selection-decadeview-in-maui-calendar.png)
    {% endcolumn}
    {% column %}
-   ![centuryview-range-selection-in-maui-calendar](images/overview/SelectionWhileAllowViewNavigation/centuryview-range-selection-in-maui-calendar.png)
+   ![centuryview-range-selection-in-maui-calendar](images/overview/range-selection-centuryview-in-maui-calendar.png)
    {% endcolumn}
    {% endmultiple_column %}
 
@@ -58,13 +57,13 @@ The Syncfusion .NET MAUI Calendar (SfCalendar) control allows user to easily sel
 
    {% multiple_column %}
    {% column %}
-   ![monthview-single-selection-in-maui-calendar](images/overview/DateSelection/monthview-single-selection-in-maui-calendar.png)
+   ![monthview-single-selection-in-maui-calendar](images/overview/date-selection-monthview-single-selection-in-maui-calendar.png)
    {% endcolumn}
    {% column %}
-   ![monthview-multiple-selection-in-maui-calendar](images/overview/DateSelection/monthview-multiple-selection-in-maui-calendar.png)
+   ![monthview-multiple-selection-in-maui-calendar](images/overview/date-selection-monthview-multiple-selection-in-maui-calendar.png)
    {% endcolumn}
    {% column %}
-   !![monthview-range-selection-in-maui-calendar](images/overview/DateSelection/monthview-range-selection-in-maui-calendar.png)
+   !![monthview-range-selection-in-maui-calendar](images/overview/date-selection-monthview-range-selection-in-maui-calendar.png)
    {% endcolumn}
    {% endmultiple_column %}
 
