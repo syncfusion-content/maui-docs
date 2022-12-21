@@ -9,10 +9,9 @@ documentation: UG
 
 # Working with DataForm in Maui DataForm (SfDataForm)
 
-## Auto-generating DataFormItems for the data field
+## Auto generate data editor 
 
-By default, the `SfDataForm.Items` will be generated based on the property type. For example, the `DataFormTextItem` will be created for the `string` type property. 
-
+By default, the `SfDataForm.Items` will be generated based on the property type. For example, the `DataFormTextItem` will be generated based on the property type in `DataObject`. 
 The `DataFormItem` generation depends on the type and attribute defined for the property.
 The following tables lists the several types of `DataFormItem` and its constraints for auto generation:
 
