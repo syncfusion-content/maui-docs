@@ -275,12 +275,15 @@ The MAUI Maps control allows you to render any custom shape to make a map look l
 
 {% highlight XAML %}
 
-<map:SfMaps>
-    <map:SfMaps.Layer>
-        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/seating.json" 
-                           Geometry="Points" />
-    </map:SfMaps.Layer>
-</map:SfMaps>
+<maps:SfMaps>
+    <maps:SfMaps.Layer>
+        <maps:MapShapeLayer x:Name="layer"
+                            ShapeFill="Red"
+                            ShapeStroke="Yellow"
+                            Geometry="GeographicPoints">
+        </maps:MapShapeLayer>
+    </maps:SfMaps.Layer>
+</maps:SfMaps>
 
 {% endhighlight %}
 
@@ -291,8 +294,10 @@ public MainPage()
     InitializeComponent();
     SfMaps map = new SfMaps();
     MapShapeLayer layer = new MapShapeLayer();
-    layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/seating.json"));
-    layer.Geometry = MapGeometryType.Points;
+    layer.ShapesSource = MapSource.FromResource("MyProject.buildings.json");
+    layer.ShapeFill = Brush.Red;
+    layer.ShapeStroke = Brush.Yellow;
+    layer.Geometry = MapGeometryType.GeographicPoints;
     map.Layer = layer;
     this.Content = map;
 }
