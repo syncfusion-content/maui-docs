@@ -524,3 +524,5 @@ namespace ChartGettingStarted
 The following chart is created as a result of the previous codes.
 
 ![Getting started for .NET MAUI Chart](Getting-Started_Images/MAUI_chart.jpg)
+
+You can find the complete getting started sample from this [link](https://github.com/SyncfusionExamples/GettingStarted_CartesianChart_MAUI).

@@ -126,7 +126,7 @@ this.Content = linearProgressBar;
 
 ![.NET MAUI Linear ProgressBar with height customization](images/appearance/thickness.png)
 
-### Padding
+## Padding
 
 In the linear progress bar, the padding of the progress and the secondary progress indicator at the left and right ends can be adjusted by using the `ProgressPadding` property.
 
