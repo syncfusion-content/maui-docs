@@ -56,11 +56,10 @@ This section provides a quick overview of how to get started with the .NET MAUI 
 The `Syncfusion.Maui.Core` NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
 
 {% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
+{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 8" %}
 
     
     using Syncfusion.Maui.Core.Hosting;
-
     public static class MauiProgram
     {
 	    public static MauiApp CreateMauiApp()
@@ -177,7 +176,7 @@ The type of input editor generated for the data field depends on the type and at
 </tr>
 <tr>
 <td>
-[DataFormTextItem]
+DataFormTextItem
 </td>
 <td>
 Default DataFormItem generated for the String type and the properties with [DataType(DataType.Text)].
@@ -191,7 +190,7 @@ Text
 </tr>
 <tr>
 <td>
-[DataFormMultilineTextItem]
+DataFormMultilineTextItem
 </td>
 <td>
 Generated for string type property with [DataType(DataType.MultilineText)] attributes.

@@ -62,8 +62,7 @@ this.Content = dataForm;
 <ContentPage
 ...
     xmlns:DataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
-    <dataForm:SfDataForm x:Name="dataForm"
-                         DataObject="DataModel">
+    <dataForm:SfDataForm x:Name="dataForm">
     </dataForm:SfDataForm>
 </ContentPage>
 
@@ -76,7 +75,6 @@ using Syncfusion.Maui.DataForm;
 
 SfDataForm dataForm = new SfDataForm();
 this.Content = dataForm;
-this.dataForm.DataObject = new DataModel();
 
 {% endhighlight %}
 {% endtabs %}
@@ -89,12 +87,13 @@ this.dataForm.DataObject = new DataModel();
 <tr>
 <th>Xamarin SfDataForm</th>
 <th>.NET MAUI SfDataForm</th>
-<th>Description</th></tr>
+<th>Description</th>
+</tr>
 
 <tr>
 <td>{{'[AutoCompleteMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.AutoCompleteMode.html)'| markdownify }}</td>
 <td>DataFormTextSearchMode</td>
-<td>Specifies the type of the text search mode in ComboBox and AutoComplete"/>.</td>
+<td>Specifies the type of the text search mode in ComboBox and AutoComplete.</td>
 </tr>
 
 <tr>
@@ -156,6 +155,7 @@ this.dataForm.DataObject = new DataModel();
 <td>{{'[DataFormItemBase](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormItemBase.html)'| markdownify }}</td>
 <td>DataFormViewItem</td>
 <td>Represents the base class that encapsulates the layout, group and editor setting for a data fields appearing in DataForm.</td>
+</tr>
 
 <tr>
 <td>{{'[DataFormPickerItem](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormPickerItem.html)'| markdownify }}</td>
@@ -233,7 +233,7 @@ this.dataForm.DataObject = new DataModel();
 
 ## Properties
 
-### SfDataForm
+#### SfDataForm
 
 <table> 
 <tr>
@@ -244,9 +244,10 @@ this.dataForm.DataObject = new DataModel();
 {% tabs %}
 {% highlight XAML %}
 <ContentPage 
-...
-            xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
-        <dataForm:SfDataForm x:Name="dataForm"/>
+    ...
+    xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
+
+    <dataForm:SfDataForm x:Name="dataForm"/>
 </ContentPage>
 {% endhighlight %}
 {% endtabs %}
@@ -359,7 +360,7 @@ public class DataModel
 </tr>
 </table>
 
-### DataFormTextStyle
+#### DataFormTextStyle
 
 The properties of the `Xamarin SfDataForm` [LabelStyle](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.LabelStyle.html) are grouped to the `DataFormTextStyle` in `.NET MAUI SfDataForm`.
 
@@ -450,7 +451,7 @@ public class DataModel
 
 </table>
 
-### DataFormViewItem
+#### DataFormViewItem
 
 <table>
 
@@ -490,7 +491,7 @@ public class DataModel
 </tr>
 </table>
 
-### DataFormItem
+#### DataFormItem
 
 <table>
 
@@ -603,7 +604,7 @@ public class DataModel
 </tr>
 </table>
 
-### DataFormDefaultLayoutSettings
+#### DataFormDefaultLayoutSettings
 
 The following properties of the `Xamarin SfDataForm` is moved to the `DataFormDefaultLayoutSettings` class of `.NET MAUI SfDataForm`.
 
@@ -633,7 +634,7 @@ The following properties of the `Xamarin SfDataForm` is moved to the `DataFormDe
 </tr>
 </table>
 
-### DataFormGroupItem
+#### DataFormGroupItem
 
 <table>
 
@@ -691,7 +692,7 @@ The following properties of the `Xamarin SfDataForm` is moved to the `DataFormDe
 </tr>
 </table>
 
-### DataFormCheckBoxItem
+#### DataFormCheckBoxItem
 
 <table>
 <tr>
@@ -706,7 +707,7 @@ The following properties of the `Xamarin SfDataForm` is moved to the `DataFormDe
 </tr>
 </table>
 
-### DataFormSwitchItem
+#### DataFormSwitchItem
 
 <table>
 <tr>
@@ -727,7 +728,7 @@ The following properties of the `Xamarin SfDataForm` is moved to the `DataFormDe
 </tr>
 </table>
 
-### DataFormTextEditorItem
+#### DataFormTextEditorItem
 
 <table>
 <tr>
@@ -742,7 +743,7 @@ The following properties of the `Xamarin SfDataForm` is moved to the `DataFormDe
 </tr>
 </table>
 
-### DataFormDateItem
+#### DataFormDateItem
 
 <table>
 <tr>
@@ -769,7 +770,7 @@ The following properties of the `Xamarin SfDataForm` is moved to the `DataFormDe
 </tr>
 </table>
 
-### DataFormTimeItem
+#### DataFormTimeItem
 
 <table>
 
@@ -785,7 +786,7 @@ The following properties of the `Xamarin SfDataForm` is moved to the `DataFormDe
 </tr>
 </table>
 
-### DataFormListItem
+#### DataFormListItem
 
 The common properties of `Xamarin SfDataForm` list items ( `DataFormPickerItem`,  `DataFormAutoCompleteItem`,  `DataFormDropDownItem` and  `DataFormRadioGroupItem`) are added to the `DataFormListItem` class in  the `.NET MAUI SfDataForm`.
 
@@ -814,7 +815,7 @@ The common properties of `Xamarin SfDataForm` list items ( `DataFormPickerItem`,
 </tr>
 </table>
 
-### DataFormComboBoxItem
+#### DataFormComboBoxItem
 
 <table>
 <tr>
@@ -835,7 +836,7 @@ The common properties of `Xamarin SfDataForm` list items ( `DataFormPickerItem`,
 </tr>
 </table>
 
-### DataFormAutoCompleteItem
+#### DataFormAutoCompleteItem
 
 <table>
 
@@ -851,7 +852,7 @@ The common properties of `Xamarin SfDataForm` list items ( `DataFormPickerItem`,
 </tr>
 </table>
 
-### DataFormDisplayOptionsAttribute
+#### DataFormDisplayOptionsAttribute
 
 <table>
 
@@ -897,7 +898,7 @@ The common properties of `Xamarin SfDataForm` list items ( `DataFormPickerItem`,
 </tr>
 </table>
 
-### DataFormDateRangeAttribute
+#### DataFormDateRangeAttribute
 
 <table>
 
@@ -949,7 +950,7 @@ The common properties of `Xamarin SfDataForm` list items ( `DataFormPickerItem`,
 </tr>
 </table>
 
-### DataFormValueConverterAttribute 
+#### DataFormValueConverterAttribute 
 
 <table>
 

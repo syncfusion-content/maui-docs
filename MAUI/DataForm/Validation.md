@@ -31,7 +31,7 @@ The String type property is validated using the [Required](https://docs.microsof
 {% endhighlight %}
 {% endtabs %}
 
-N> Refer to this `link` to learn more about data annotations in SfDataForm.
+N> Refer to this [link](https://help.syncfusion.com/maui/dataform/data-annotations) to learn more about data annotations in SfDataForm.
 
 #### Date range attribute
 
