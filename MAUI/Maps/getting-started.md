@@ -280,7 +280,7 @@ The MAUI Maps control allows you to render any custom shape to make a map look l
         <maps:MapShapeLayer x:Name="layer"
                             ShapeFill="DarkGray"
                             ShapeStroke="DarkGray"
-                            Geometry="GeographicPoints">
+                            Geometry="Points">
         </maps:MapShapeLayer>
     </maps:SfMaps.Layer>
 </maps:SfMaps>
@@ -297,7 +297,7 @@ public MainPage()
     layer.ShapesSource = MapSource.FromResource("MyProject.buildings.json");
     layer.ShapeFill = Brush.DarkGray;
     layer.ShapeStroke = Brush.DarkGray;
-    layer.Geometry = MapGeometryType.GeographicPoints;
+    layer.Geometry = MapGeometryType.Points;
     map.Layer = layer;
     this.Content = map;
 }
