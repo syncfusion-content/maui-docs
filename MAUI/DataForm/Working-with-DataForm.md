@@ -207,8 +207,12 @@ In the following code, the `DataFormItem` generation for the `MiddleName` prope
     private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
         if (e.DataFormItem.FieldName == "MiddleName")
+        {
             e.Cancel = true;
+
+        }
     }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -257,6 +261,7 @@ Here, `LastName` data field will be hidden.
             }
         }
     }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -451,7 +456,6 @@ By default label position is left.
                 e.DataFormItem.DefaultLayoutSettings.LabelWidth = 100;
                 e.DataFormItem.DefaultLayoutSettings.EditorWidth = 200;
             }
-                
         }
     }
 {% endhighlight %}
