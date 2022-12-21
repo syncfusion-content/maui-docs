@@ -17,16 +17,16 @@ The Syncfusion .NET MAUI Calendar (SfCalendar) allows user to select a Single da
 
    {% multiple_column split:2 %}
    {% column %}
-   ![Month view in .NET MAUI Calendar.](images/overview/maui-month-view.jpg)
+   ![Month view in .NET MAUI Calendar.](images/overview/maui-month-view.png)
    {% endcolumn}
    {% column %}
-   ![Year view in .NET MAUI Calendar.](images/overview/maui-year-view.jpg)
+   ![Year view in .NET MAUI Calendar.](images/overview/maui-year-view.png)
    {% endcolumn}
    {% column %}
-   ![Decade view in .NET MAUI Calendar.](images/overview/maui-decade-view.jpg)
+   ![Decade view in .NET MAUI Calendar.](images/overview/maui-decade-view.png)
    {% endcolumn}
    {% column %}
-   ![Century view in .NET MAUI Calendar.](images/overview/maui-century-view.jpg)
+   ![Century view in .NET MAUI Calendar.](images/overview/maui-century-view.png)
    {% endcolumn}
    {% endmultiple_column %}
 
@@ -36,61 +36,61 @@ The Syncfusion .NET MAUI Calendar (SfCalendar) allows user to select a Single da
 
    % multiple_column split:2 %}
    {% column %}
-   ![Month view single selection in .NET MAUI Calendar.](images/overview/maui-month-view-single-selection.jpg)
+   ![Month view single selection in .NET MAUI Calendar.](images/overview/maui-month-view-single-selection.png)
    {% endcolumn}
    {% column %}
-   ![Year view single selection in .NET MAUI Calendar.](images/overview/maui-year-view-single-selection.jpg)
+   ![Year view single selection in .NET MAUI Calendar.](images/overview/maui-year-view-single-selection.png)
    {% endcolumn}
    {% column %}
-   ![Decade view single selection in .NET MAUI Calendar.](images/overview/maui-decade-view-single-selection.jpg)
+   ![Decade view single selection in .NET MAUI Calendar.](images/overview/maui-decade-view-single-selection.png)
    {% endcolumn}
    {% column %}
-   ![Century view single selection in .NET MAUI Calendar.](images/overview/maui-century-view-single-selection.jpg)
+   ![Century view single selection in .NET MAUI Calendar.](images/overview/maui-century-view-single-selection.png)
    {% endcolumn}
    {% endmultiple_column %}
 
-* **Date selection**: Date selection allows you to select Single date, Multiple dates or a Range of dates by interaction or programmatic selection.
+* **Date selection**: Date selection allows you to select the Single date, Multiple dates or a Range of dates by interaction or programmatic selection.
 
    % multiple_column split:2 %}
    {% column %}
-   ![Single selection in .NET MAUI Calendar.](images/overview/maui-month-view-single-selection.jpg)
+   ![Single selection in .NET MAUI Calendar.](images/overview/maui-month-view-single-selection.png)
    {% endcolumn}
    {% column %}
-   ![Multiple selection in .NET MAUI Calendar.](images/overview/maui-multiple-selection.jpg)
+   ![Multiple selection in .NET MAUI Calendar.](images/overview/maui-multiple-selection.png)
    {% endcolumn}
    {% column %}
-   ![Range selection in .NET MAUI Calendar.](images/overview/maui-range-selection.jpg)
+   ![Range selection in .NET MAUI Calendar.](images/overview/maui-range-selection.png)
    {% endcolumn}
    {% endmultiple_column %}
 
-* **Limit date selection**: Restricts interaction and navigation beyond specified minimum and maximum dates.
+* **Limit date selection**: Restricts interaction and navigation beyond the specified minimum and maximum dates.
 
-   ![Limit date selection in .NET MAUI Calendar.](images/overview/maui-min-max-date.jpg)
+   ![Limit date selection in .NET MAUI Calendar.](images/overview/maui-min-max-date.png)
 
 * **Change first day of week**: You can customize the starting day of the week. The default first day of the week is Sunday.
 
-   ![First day of week in .NET MAUI Calendar.](images/overview/maui-first-day-of-week.jpg)
+   ![First day of week in .NET MAUI Calendar.](images/overview/maui-first-day-of-week.png)
 
-* **Selectable Day Predicate**: Disable interaction for calendar view dates and easily prevent the selection of weekends by disabling them.
+* **Selectable Day Predicate**: Disable the interaction for calendar view dates and easily prevent the selection of weekends by disabling them.
 
-   ![Selectable day predicate in .NET MAUI Calendar.](images/overview/maui-selectable-day-predicate.jpg)
+   ![Selectable day predicate in .NET MAUI Calendar.](images/overview/maui-selectable-day-predicate.png)
 
 * **Highlight weekends and special dates**: Can highlight special dates and weekend dates in month view using different background color and textstyles in MAUI Calendar.
 
    {% multiple_column split:2 %}
    {% column %}
-   ![Weekend days highlighted in .NET MAUI Calendar.](images/overview/maui-weekends-dates.jpg)
+   ![Weekend days highlighted in .NET MAUI Calendar.](images/overview/maui-weekends-dates.png)
    {% endcolumn %}
 
    {% column %}
-   ![Special dates highlighted in .NET MAUI Calendar.](images/overview/maui-special-dates.jpg)
+   ![Special dates highlighted in .NET MAUI Calendar.](images/overview/maui-special-dates.png)
    {% endcolumn %}
    {% endmultiple_column %}
 
 * **Right to left (RTL)**: The Calendar's text direction can be changed by using the Right-to-left property. Enables user to work with RTL languages, such as Hebrew and Arabic.
 
-   ![Right-to-left rendering in .NET MAUI Calendar.](images/overview/maui-rtl.jpg)
+   ![Right-to-left rendering in .NET MAUI Calendar.](images/overview/maui-rtl.png)
 
 * **Globalization**: Displays the current date and time based on the globalized date and time formats.
 
-   ![Globalization for month view in .NET MAUI Calendar.](images/overview/maui-month-view-globalization.jpg)
+   ![Globalization for month view in .NET MAUI Calendar.](images/overview/maui-month-view-globalization.png)
