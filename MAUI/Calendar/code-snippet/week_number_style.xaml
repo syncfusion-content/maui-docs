@@ -1,3 +1,0 @@
-﻿<calendar:SfCalendar  x:Name="Calendar" 
-                        MonthView="{Calendar:CalendarMonthView ShowWeekNumber=True, WeekNumberStyle={Calendar:CalendarWeekNumberStyle Background=Pink, TextStyle={Calendar:CalendarTextStyle TextColor=Purple}}}"
-</calendar:SfCalendar>

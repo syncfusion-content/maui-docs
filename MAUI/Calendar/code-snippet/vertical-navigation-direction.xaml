@@ -1,4 +1,0 @@
-﻿<calendar:SfCalendar  x:Name="Calendar" 
-                        View="Month"
-                        NavigationDirection="Vertical">
-</calendar:SfCalendar>
