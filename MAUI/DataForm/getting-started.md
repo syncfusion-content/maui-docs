@@ -177,7 +177,7 @@ The type of input editor generated for the data field depends on the type and at
 </tr>
 <tr>
 <td>
-`DataFormTextItem`
+[DataFormTextItem]
 </td>
 <td>
 Default DataFormItem generated for the String type and the properties with [DataType(DataType.Text)].
