@@ -351,7 +351,7 @@ The following code example explains how to intialize the layer and customize the
 </td></tr>
 </table>
 
-## Tile layer
+### Tile layer
 
 <table>
 <tr>
