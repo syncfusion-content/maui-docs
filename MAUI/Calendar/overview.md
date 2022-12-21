@@ -1,7 +1,7 @@
 ---
 layout: post
 title: About .NET MAUI Calendar control | Syncfusion
-description: Learn here the overview of Syncfusion .NET MAUI Calendar(SfCalendar) control, its basic features and functionalities of calendar.
+description: Learn here about the overview of Syncfusion .NET MAUI Calendar (SfCalendar) control, its basic features, and calendar functionalities.
 platform: maui
 control: SfCalendar
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Overview of .NET MAUI Calendar (SfCalendar)
 
-The Syncfusion .NET MAUI Calendar (SfCalendar) allows user to select a Single date, Multiple dates or a Range of dates. It provides Month, Year, Decade, and Century view options for quickly navigate to the desired date. It supports minimum dates, maximum dates, enable past dates, and disabled dates to restrict the date selection.
+Syncfusion .NET MAUI Calendar (SfCalendar) is a calendar control that allows users to select a Single date, Multiple dates, or a Range of dates. It provides various view options such as a Month, Year, Decade, and Century, which allow users to quickly navigate to the desired date. It also supports minimum dates, maximum dates, enable past dates, and disabled dates to restrict the date selection.
 
 ## Key features
 
@@ -30,9 +30,9 @@ The Syncfusion .NET MAUI Calendar (SfCalendar) allows user to select a Single da
    {% endcolumn}
    {% endmultiple_column %}
 
-* **Quick navigation**: You can easily navigate to the desired date using different calendar views in the SfCalendar.
+* **Quick navigation**: You can easily navigate to the desired date using different calendar views in the `SfCalendar`.
 
-* **Enable and disable built-in view switching**: Restricts or enable navigation to different calendar views through interaction.
+* **Enable and disable built-in view switching**: Restricts or enables navigation to different calendar views using interaction.
 
    % multiple_column split:2 %}
    {% column %}
@@ -75,7 +75,7 @@ The Syncfusion .NET MAUI Calendar (SfCalendar) allows user to select a Single da
 
    ![Selectable day predicate in .NET MAUI Calendar.](images/overview/maui-selectable-day-predicate.png)
 
-* **Highlight weekends and special dates**: Can highlight special dates and weekend dates in month view using different background color and textstyles in MAUI Calendar.
+* **Highlight weekends and special dates**: In MAUI Calendar, you can highlight special dates and weekend dates in the month view using different background colors and text styles.
 
    {% multiple_column split:2 %}
    {% column %}
@@ -87,7 +87,7 @@ The Syncfusion .NET MAUI Calendar (SfCalendar) allows user to select a Single da
    {% endcolumn %}
    {% endmultiple_column %}
 
-* **Right to left (RTL)**: The Calendar's text direction can be changed by using the Right-to-left property. Enables user to work with RTL languages, such as Hebrew and Arabic.
+* **Right to left (RTL)**: The Calendars' text direction can be changed by using the `Right-to-left` property. Enables the user to work with RTL languages, such as Hebrew and Arabic.
 
    ![Right-to-left rendering in .NET MAUI Calendar.](images/overview/maui-rtl.png)
 
