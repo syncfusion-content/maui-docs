@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Multiple Calendar Views in MAUI (SfCalendar)
-The `SfCalendar` widget has four Calendar views to display. It can be assigned to the widget by using the [View](https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/SfCalendar/View.html) property. Month view is initially rendered by Default. The current date will be displayed initially for all the Calendar views.
+The `SfCalendar` widget has four Calendar views to display. It can be assigned to the widget by using the `View` property. Month view is initially rendered by Default. The current date will be displayed initially for all the Calendar views.
 
 ## Month view
 The Month view displays the current month days, and usually a few days of previous and next month. By default, initially displays the current month dates and the current date is highlighted by a separate color different from the rest of the dates color in `Month` view.
@@ -26,7 +26,7 @@ this.Calendar.View = CalendarView.Month;
 {% endhighlight %}
 {% endtabs %}
 
-![change-month-views-in-maui-calendar](images/views/change-month-views-in-maui-calendar.png)
+![Month view in .NET MAUI Calendar.](images/views/maui-month-view.png)
 
 ### Number Of Visible Weeks view
 In the month view, number of visible weeks can be customized by using the [NumberOfVisibleWeeks] property in the Calendar. By default, Month view displays with the NumberOfVisibleWeeks as the value of six.
@@ -57,14 +57,14 @@ this.Calendar.MonthView = new CalendarMonthView()
 ![custom-number-of-weeks-in-maui-calendar](images/views/custom-number-of-weeks-in-maui-calendar.png)
 
 ### Week number
-It displays week number for the current view dates in the month view by setting the [ShowWeekNumber](https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/MonthViewSettings/ShowWeekNumber.html) property. By default, the ShowWeekNumber is false. If you need to show the week number in the month view by setting the ShowWeekNumber as true. Week numbers will be displayed based on the ISO standard.
+It displays week number for the current view dates in the month view by setting the `ShowWeekNumber` property. By default, the ShowWeekNumber is false. If you need to show the week number in the month view by setting the ShowWeekNumber as true. Week numbers will be displayed based on the ISO standard.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
 <calendar:SfCalendar  x:Name="Calendar" View="Month"> 
                       <Calendar:SfCalendar.MonthView>
-                        <Calendar:CalendarMonthView ShowWeekNumber="True" />
+                        <Calendar:CalendarMonthView ShowWeekNumber="True"/>
                       </Calendar:SfCalendar.MonthView>>
 </calendar:SfCalendar>
 
@@ -79,7 +79,7 @@ this.Calendar.MonthView = new CalendarMonthView()
 {% endhighlight %}
 {% endtabs %}
 
-![show-week-number-in-maui-calendar](images/views/show-week-number-in-maui-calendar.png)
+![Week number in .NET MAUI Calendar.](images/views/maui-week-number.png)
 
 
 #### Week number appearance
@@ -146,7 +146,7 @@ this.Calendar.View = CalendarView.Year;
 {% endhighlight %}
 {% endtabs %}
 
-![yearview-in-maui-calendar](images/views/yearview-in-maui-calendar.png)
+![Year view in .NET MAUI Calendar.](images/views/maui-year-view.png)
 
 ## Decade view
 The Decade view displays the period of ten years and some years of next view. By default, initially displays the current year view and the current year is highlighted by a separate color different from the rest of the years color in `Decade` view. Can easily navigate to the desired year in the Year view from the decade view.
@@ -166,7 +166,7 @@ this.Calendar.View = CalendarView.Deacde;
 {% endhighlight %}
 {% endtabs %}
 
-![decadeview-in-maui-calendar](images/views/decadeview-in-maui-calendar.png)
+![Decade view in .NET MAUI Calendar.](images/views/maui-decade-view.png)
 
 ## Century view
 The Century view displays the period of hundred years and some years of next view. By default, initially displays the current range of years and the current year range is highlighted by a separate color different from the rest of the years color in `Century` view. Can easily navigate to the Decade view from the Century view.
@@ -186,4 +186,4 @@ this.Calendar.View = CalendarView.Century;
 {% endhighlight %}
 {% endtabs %}
 
-![centuryview-in-maui-calendar](images/views/centuryview-in-maui-calendar.png)
+![Century view in .NET MAUI Calendar.](images/views/maui-century-view.png)
