@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Editors in .NET MAUI DataForm(SfDataForm) control | Syncfusion
-description: Learn about the supported editors in Syncfusion .NET MAUI DataForm (SfDataForm) control in mobile and desktop applications from a single shared codebase.
+title: Data Editors in .NET MAUI DataForm(SfDataForm) control | Syncfusion
+description: Learn about the supported data editors in Syncfusion .NET MAUI DataForm (SfDataForm) control in mobile and desktop applications from a single shared codebase.
 platform: maui
 control: SfDataForm
 documentation: UG
@@ -9,7 +9,7 @@ documentation: UG
 
 # Editors in .NET MAUI DataForm (SfDataForm)
 
-The data form supports several built-in editors as follows:
+The data form supports following built-in editors to edit the data:
 
 <table>
 <tr>
@@ -33,8 +33,7 @@ The string type property and any other type apart from the below specified cases
 MultilineText
 </td>
 <td>
-The string type property with multi line text.
-[DataType(DataType.MultilineText)] attribute.
+The string type property with [DataType(DataType.MultilineText)] attribute.
 </td>
 <td>
 {{'[Editor](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/editor?view=net-maui-7.0)'| markdownify }}
@@ -57,7 +56,7 @@ The string type property with
 Date
 </td>
 <td>
-DateTime, DateOnly or DateTimeOffset type property or the property with [DataType(DataType.Date)] or [DataType(DataType.DateTime)] attributes..
+DateTime, DateOnly or DateTimeOffset type property or the property with [DataType(DataType.Date)] or [DataType(DataType.DateTime)] attributes.
 </td>
 <td>
 {{'[DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/datepicker?view=net-maui-7.0)'| markdownify }}
@@ -142,9 +141,9 @@ Enum and List type property.
 </tr>
 </table>
 
-## To change the editor for any data type
+## Change the editor for any data type
 
-By default, the editors will be loaded based on the datatype. To change the editor for any type, use the `RegisterEditor` method and specify the type and editor.
+By default, the editors will be loaded based on the based on the primitive data type such as string, enumeration, DateTime, and TimeSpan.
 
 {% tabs %}
 {% highlight C# %}
@@ -156,7 +155,7 @@ By default, the editors will be loaded based on the datatype. To change the edit
 
 Here, the `MultilineText` editor will be loaded for the string type instead of `Text` editor.
 
-## Changing the editor for property
+## Change the editor for property
 
 To change the editor for any property, use the `RegisterEditor` method and specify the property name and editor.
 
@@ -384,7 +383,7 @@ By default the checkbox color is blue, you can change the checkbox color by usin
 
 In switch editor, [Switch](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/switch?view=net-maui-7.0) is loaded, and DataForm Switch editor supports bool data type property.
 
-To add switch editor in DataForm, register the editor as `DataFormEditorType.Switch` for the required property using the RegisterEditor method.
+To add switch editor in DataForm, register the editor as `DataFormEditorType.Switch` for the required property using the `RegisterEditor` method.
 
 {% tabs %}
 {% highlight C# %}
@@ -812,7 +811,7 @@ The string comparison for filtering suggestions can be changed using the `TextSe
 
 * Contains
 
-#### Filtering words that starts with the input text
+**Filtering words that starts with the input text**
 
 Displays all the matches that contain first character of the typed characters in items source of autocomplete editor. This strategy is case in-sensitive.
 
@@ -832,7 +831,7 @@ Displays all the matches that contain first character of the typed characters in
 {% endhighlight %}
 {% endtabs %}
 
-#### Filtering words that contains the input text
+**Filtering words that contains the input text**
 
 Displays all the matches that contain the typed characters in items source of autocomplete editor. This strategy is case in-sensitive.
 
