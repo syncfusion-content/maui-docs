@@ -7,19 +7,23 @@ control: SfDataForm
 documentation: UG
 ---
 
-# Editors in .NET MAUI DataForm (SfDataForm)
+# Data Editors in .NET MAUI DataForm (SfDataForm)
 
 The data form supports the following built-in editors to edit the data:
 
 <table>
 <tr>
 <th>Editor name</th>
+<th>Generated DataFormItem Type</th>
 <th>Supported Data Type/Attribute</th>
 <th>Input control loaded</th>
 </tr>
 <tr>
 <td>
 Text
+</td>
+<td>
+DataFormTextItem
 </td>
 <td>
 The string type property and any other type apart from the below specified cases.
@@ -33,6 +37,9 @@ The string type property and any other type apart from the below specified cases
 MultilineText
 </td>
 <td>
+DataFormMultilineTextItem
+</td>
+<td>
 The string type property with [DataType(DataType.MultilineText)] attribute.
 </td>
 <td>
@@ -42,6 +49,9 @@ The string type property with [DataType(DataType.MultilineText)] attribute.
 <tr>
 <td>
 Password
+</td>
+<td>
+DataFormPasswordItem
 </td>
 <td>
 The string type property with 
@@ -56,6 +66,9 @@ The string type property with
 Date
 </td>
 <td>
+DataFormDateItem
+</td>
+<td>
 DateTime, DateOnly, or DateTimeOffset type property or the property with [DataType(DataType.Date)] or [DataType(DataType.DateTime)] attributes.
 </td>
 <td>
@@ -65,6 +78,9 @@ DateTime, DateOnly, or DateTimeOffset type property or the property with [DataTy
 <tr>
 <td>
 Time
+</td>
+<td>
+DataFormTimeItem
 </td>
 <td>
 The TimeSpan and TimeOnly type property or the property with [DataType(DataType.Time)] attribute.
@@ -78,6 +94,9 @@ The TimeSpan and TimeOnly type property or the property with [DataType(DataType.
 Checkbox
 </td>
 <td>
+DataFormCheckBoxItem
+</td>
+<td>
 Bool type property.
 </td>
 <td>
@@ -87,6 +106,9 @@ Bool type property.
 <tr>
 <td>
 Switch
+</td>
+<td>
+DataFormSwitchItem
 </td>
 <td>
 Bool type property.
@@ -100,6 +122,9 @@ Bool type property.
 Picker
 </td>
 <td>
+DataFormPickerItem
+</td>
+<td>
 Enum and List type property. 
 </td>
 <td>
@@ -109,6 +134,9 @@ Enum and List type property.
 <tr>
 <td>
 ComboBox
+</td>
+<td>
+DataFormComboBoxItem
 </td>
 <td>
 Enum and List type property.
@@ -122,6 +150,9 @@ Enum and List type property.
 AutoComplete
 </td>
 <td>
+DataFormAutoCompleteItem
+</td>
+<td>
 Enum and List type property.
 </td>
 <td>
@@ -131,6 +162,9 @@ Enum and List type property.
 <tr>
 <td>
 RadioGroup
+</td>
+<td>
+DataFormRadioGroupItem
 </td>
 <td>
 Enum and List type property.
