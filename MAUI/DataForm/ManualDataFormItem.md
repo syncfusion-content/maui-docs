@@ -22,21 +22,22 @@ You can manually create `DataFormViewItem` for the defined business model by usi
             <local:DataFormViewModel />
         </ContentPage.BindingContext>
 
-        <ContentPage.Content>
-            <dataForm:SfDataForm x:Name="dataForm" DataObject="{Binding ContactDetails}" AutoGenerateItems="false">
-            dataForm:SfDataForm.Items
-            <dataForm:DataFormTextItem FieldName="Name" />
-            <dataForm:DataFormTextItem FieldName="Password" />
-            <dataForm:DataFormGroupItem Name="Address">
-            dataForm:DataFormGroupItem.Items
-            <dataForm:DataFormMultilineItem FieldName="Street"/>
-            <dataForm:DataFormTextItem FieldName="State"/>
-            <dataForm:DataFormTextItem FieldName="ZipCode"/>
-            <dataForm:DataFormAutoCompleteItem FieldName="Country" ItemsSource = "{Binding CountryNames}"/>
-            </dataForm:DataFormGroupItem.Items>
+         <ContentPage.Content>
+        <dataForm:SfDataForm x:Name="dataForm" DataObject="{Binding ContactDetails}" AutoGenerateItems="false">
+            <dataForm:SfDataForm.Items>
+                <dataForm:DataFormTextItem FieldName="Name" />
+                <dataForm:DataFormTextItem FieldName="Password" />
+                <dataForm:DataFormGroupItem Name="Address">
+                    <dataForm:DataFormGroupItem.Items>
+                        <dataForm:DataFormMultilineItem FieldName="Street"/>
+                        <dataForm:DataFormTextItem FieldName="State"/>
+                        <dataForm:DataFormTextItem FieldName="ZipCode"/>
+                        <dataForm:DataFormAutoCompleteItem FieldName="Country" ItemsSource = "{Binding CountryNames}"/>
+                    </dataForm:DataFormGroupItem.Items>
+                </dataForm:DataFormGroupItem>
             </dataForm:SfDataForm.Items>
-            </dataForm:SfDataForm>
-        </ContentPage.Content>
+        </dataForm:SfDataForm>
+    </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
 {% highlight C# %}
@@ -52,7 +53,7 @@ You can manually create `DataFormViewItem` for the defined business model by usi
     groupItem.Items.Add(new DataFormMultilineItem { FieldName = "Street" });
     groupItem.Items.Add(new DataFormTextItem { FieldName = "State" });
     groupItem.Items.Add(new DataFormTextItem { FieldName = "ZipCode" });
-    groupItem.Items.Add(new DataFormAutoCompleteItem() { FieldName = "Country", ItemsSource = contactInfoViewModel.CountryNames }); 
+    groupItem.Items.Add(new DataFormAutoCompleteItem { FieldName = "Country", ItemsSource = contactInfoViewModel.CountryNames }); 
         items.Add(groupItem);
 
     dataForm.AutoGenerateItems = false; 
@@ -184,7 +185,7 @@ You can dynamically add custom group items using `Items` property of `SfDataForm
 
 #### Adding custom editor view using Manual DataFormItem
 
-You can directly set a custom view as an `EditorView` of `dataForm:DataFormCustomItem`. In this case, the editor view will not be generated based on field type and `RegistorEditor`.
+You can directly set a custom view as an `EditorView` of `DataFormCustomItem`. In this case, the editor view will not be generated based on field type and `RegistorEditor`.
 {% tabs %}
 {% highlight XAML %}
 
