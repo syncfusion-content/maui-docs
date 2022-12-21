@@ -1,4 +1,0 @@
-﻿<calendar:SfCalendar  x:Name="Calendar" 
-                        View="Month"
-                        SelectionMode="Single">
-</calendar:SfCalendar>
