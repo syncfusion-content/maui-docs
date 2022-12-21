@@ -491,68 +491,9 @@ By default, there will be no animation.
 public MainPage()
 {
     InitializeComponent();
-    polyline.Points = GetJsondata("MapDemo.ShapeFiles.london_to_british.json");
-}
-public static List<MapLatLng> GetJsondata(string resource)
-{
-    var shapeStream = Assembly.GetCallingAssembly().GetManifestResourceStream(resource);
-    string jsonText = "";
-    if (shapeStream != null)
-    {
-        using (var reader = new System.IO.StreamReader(shapeStream))
-        {
-            jsonText = reader.ReadToEnd();
-        }
-        return ReadJsonFromText(jsonText);
-    }
-    return new List<MapLatLng>();
-}
-
-public static List<MapLatLng> ReadJsonFromText(string jsonText)
-{
-    List<MapLatLng> polylinePointsList = new List<MapLatLng>();
-    var shapePathElement = JsonSerializer.Deserialize<JsonElement>(jsonText);
-    JsonElement features;
-    bool shapeDataPropertyCheck = false;
-    if (shapePathElement.TryGetProperty("features", out features))
-    {
-        features = shapePathElement.GetProperty("features");
-        shapeDataPropertyCheck = true;
-    }
-    int featureLength = features.GetArrayLength();
-    for (int j = 0; j < featureLength; j++)
-    {
-        JsonElement featureArray = features[j];
-        JsonElement geometryArray = shapeDataPropertyCheck ? featureArray.GetProperty("geometry") : featureArray; stringgeometryArrayType = geometryArray.GetProperty("type").ToString();
-        JsonElement coordinatesArray = geometryArray.GetProperty("coordinates");
-        if (geometryArrayType == "Polyline")
-        {
-            int outerLength = coordinatesArray.GetArrayLength();
-            for (int a = 0; a < outerLength; a++)
-            {
-                double lat = coordinatesArray[a][0].GetDouble();
-                double lon = coordinatesArray[a][1].GetDouble();
-                polylinePointsList.Add(new MapLatLng((float)lat, (float)lon));
-            }
-        }
-
-        if (geometryArrayType == "Polygon")
-        {
-            int outerLength = coordinatesArray.GetArrayLength();
-            for (int a = 0; a < outerLength; a++)
-            {
-                int innerLength = coordinatesArray[a].GetArrayLength();
-                for (int b = 0; b < innerLength; b++)
-                {
-                    double lat = coordinatesArray[a][b][0].GetDouble();
-                    double lon = coordinatesArray[a][b][1].GetDouble();
-                    polylinePointsList.Add(new MapLatLng((float)lat, (float)lon));
-                }
-            }
-        }
-    }
-
-    return polylinePointsList;
+    
+    // Added logic in sample level to get the polygon points.
+    polyline.Points = this.GetJsondata("MapDemo.ShapeFiles.london_to_british.json");
 }
 
 {% endhighlight %}
