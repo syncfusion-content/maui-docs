@@ -461,7 +461,7 @@ By default label position is left.
 {% endhighlight %}
 {% endtabs %}
 
-## Setting Background colour
+## Setting Background color
 
 You can change the background color for the label and editor by using `GenereateDataFormItem` event.
 
