@@ -264,7 +264,6 @@ In the date editor, the default date value will be the current date. You can als
 {% endhighlight %}
 {% endtabs %}
 
-
 #### Change the format of the date editor
 
 In the [DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/datepicker?view=net-maui-7.0), short date will be shown by default. You can change the applied format by setting the `Format`property in `DataFormDateItem`.
