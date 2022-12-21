@@ -248,7 +248,7 @@ Switch
 DataFormDateItem 
 </td>
 <td>
-Generated for the DateTime, DateOnly, DateTimeOffset type properties and properties with
+Generated for the DateTime, DateOnly, DateTimeOffset type properties and the properties with
 [DataType(DataType.Date)] or
 [DataType(DataType.DateTime)] attributes.
 </td>
