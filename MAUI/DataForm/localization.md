@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Localization in .NET MAUI DataForm control | Syncfusion
-description: Learn here all about Localization support in Syncfusion .NET MAUI DataForm(SfDataForm) control and more.
+description: Learn about the Localization support in Syncfusion .NET MAUI DataForm(SfDataForm) control in mobile and desktop applications from a single shared codebase.
 platform: maui
 control: SfDataForm
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 Localization is the process of translating the application resources into different language for the specific cultures. The `SfDataForm` can be localized by adding `resource` file. 
 
-You can localize the DataFormItem [Display](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute?view=net-7.0) attribute values and validation ([Required] ,[StringLength] ) attributes values by using `ResourceType` display attribute or using the `GenerateDataFormItem` event.
+You can localize the DataFormItem [Display](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute?view=net-7.0) attribute values and validation ([Required](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.requiredattribute?view=netframework-4.8), [StringLength](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.stringlengthattribute?view=netframework-4.8) ) attributes values by using `ResourceType` display attribute or using the `GenerateDataFormItem` event.
 
 ## Setting CurrentUICulture to the application
 
@@ -69,7 +69,7 @@ Here, the display attributes or data form item display values get localized base
 
 #### Using attribute
 
-`ResourceType` [Display](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute?view=net-7.0) attribute specifies the Resources File (.Resx) which is used to localize the Display attribute of `Name`, `ShortName`, `GroupName` and `Prompt` values.
+`ResourceType` [Display](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute?view=net-7.0) attribute specifies the Resources File (.Resx) which is used to localize the Display attribute of `Name`, `ShortName`, `GroupName`, `Prompt`, and `ItemsSource` values.
 
 {% tabs %}
 {% highlight C# %}
@@ -84,7 +84,7 @@ Here, the display attributes or data form item display values get localized base
 
 You can also localize the DataFormItem `LabelText`, `PlaceHolderText`, `GroupName` in the `GenerateDataFormItem` event of SfDataForm by using the Resources (.Resx) file.
 
-Here, string member of .resx file will be accessed through the class (in resxFilename.Designer.cs) which was auto-generated when .resx file created and static string members get localized using [ResourceManager] based on culture.
+Here, string member of .resx file will be accessed through the class (in resxFilename.Designer.cs) which was auto-generated when .resx file created and static string members get localized using [ResourceManager](https://learn.microsoft.com/en-us/dotnet/api/system.resources.resourcemanager.getstring?view=net-7.0) based on culture.
 
 {% tabs %}
 {% highlight C# %}
