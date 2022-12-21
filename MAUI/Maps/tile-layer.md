@@ -58,7 +58,7 @@ this.Content = map;
 
 ## Adding Bing maps
 
-An additional step is required for the Bing maps. The format of the required URL varies from the other tile services. Hence, we have added a top-level `GetTileUrl` method which returns the URL in the required format. The subscription key is needed for bing maps. You can create an API key by following the steps mentioned in this [`link`](https://docs.microsoft.com/en-us/bingmaps/getting-started/bing-maps-dev-center-help/getting-a-bing-maps-key) and append this key to the bing map URL before passing it to the `GetTileUrl` method. You can use the URL returned from this method to pass it to the `UrlTemplate` property.
+An additional step is required for the Bing maps. The format of the required URL varies from the other tile services. Hence, we have added a top-level `GetBingUrl` method which returns the URL in the required format. The subscription key is needed for bing maps. You can create an API key by following the steps mentioned in this [`link`](https://docs.microsoft.com/en-us/bingmaps/getting-started/bing-maps-dev-center-help/getting-a-bing-maps-key) and append this key to the bing map URL before passing it to the `GetBingUrl` method. You can use the URL returned from this method to pass it to the `UrlTemplate` property.
 
 Some of the providers provide different map types. For example, Bing Maps provide map types like Road, Aerial, AerialWithLabels etc. These types too can be passed in the `UrlTemplate` itself, as shown in the following example. You can check the official websites of the tile providers to know about the available types and the code for them.
 

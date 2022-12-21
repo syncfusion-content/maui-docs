@@ -427,3 +427,89 @@ this.Content = maps;
 {% endtabs %}
 
 ![Polyline dash array](images/polyline-layer/polyline-dash-array.png)
+
+## Animation
+
+You can apply animation for the [`MapPolyline`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html) using the `MapPolylineLayer.AnimationDuration` and `MapPolylineLayer.AnimationEasing` properties.
+
+By default, there will be no animation.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/india.json"
+                           ShapeStroke="DarkGray">
+            <map:MapShapeLayer.Sublayers>
+                <map:MapPolylineLayer AnimationDuration="3000"
+                                      AnimationEasing="{x:Static Easing.Linear}">
+                    <map:MapPolylineLayer.Polylines>
+                        <map:MapPolyline Stroke="#52a8ef">
+                            <map:MapPolyline.Points>
+                                <map:MapLatLng Latitude="80.2707"
+                                               Longitude="13.0827" />
+                                <map:MapLatLng Latitude="79.6117"
+                                               Longitude="13.1746" />
+                                <map:MapLatLng Latitude="79.5037"
+                                               Longitude="13.6373" />
+                                <map:MapLatLng Latitude="78.8242"
+                                               Longitude="14.4673" />
+                                <map:MapLatLng Latitude="78.0092"
+                                               Longitude="14.9091" />
+                                <map:MapLatLng Latitude="77.3566"
+                                               Longitude="16.2160" />
+                                <map:MapLatLng Latitude="76.8697"
+                                               Longitude="17.1557" />
+                                <map:MapLatLng Latitude="75.4249"
+                                               Longitude="18.0975" />
+                                <map:MapLatLng Latitude="73.8567"
+                                               Longitude="18.5204" />
+                                <map:MapLatLng Latitude="72.8777"
+                                               Longitude="19.0760" />
+                            </map:MapPolyline.Points>
+                        </map:MapPolyline>
+                    </map:MapPolylineLayer.Polylines>
+                </map:MapPolylineLayer>
+            </map:MapShapeLayer.Sublayers>
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfMaps maps = new SfMaps();
+MapShapeLayer layer = new MapShapeLayer();
+layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/india.json"));
+layer.ShapeStroke = Brush.DarkGray;
+MapPolylineLayer mapPolylineLayer = new MapPolylineLayer();
+mapPolylineLayer.AnimationDuration = 3000;
+mapPolylineLayer.AnimationEasing = Easing.Linear;
+MapPolyline polyline = new MapPolyline();
+polyline.Stroke = Color.FromRgb(82, 168, 239);
+polyline.Points = new ObservableCollection<MapLatLng>()
+{
+    new MapLatLng(80.2707, 13.0827),
+    new MapLatLng(79.6117, 13.1746),
+    new MapLatLng(79.5037, 13.6373),
+    new MapLatLng(78.8242, 14.4673),
+    new MapLatLng(78.0092, 14.9091),
+    new MapLatLng(77.3566, 16.2160),
+    new MapLatLng(76.8697, 17.1557),
+    new MapLatLng(75.4249, 18.0975),
+    new MapLatLng(73.8567, 18.5204),
+    new MapLatLng(72.8777, 19.0760),
+};
+mapPolylineLayer.Polylines.Add(polyline);
+layer.Sublayers.Add(mapPolylineLayer);
+maps.Layer = layer;
+this.Content = maps;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Polyline animation support](images/polyline-layer/polyline_animation.gif)
