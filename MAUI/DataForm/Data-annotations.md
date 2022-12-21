@@ -140,7 +140,7 @@ Specifies the enum type for the data field.
 </table>
 
 {% tabs %}
-{% highlight MinLength attribute %}
+{% highlight C# %}
 
     [MinLength(5,ErrorMessage = "Password length must be greater than 5 characters")]
     public string Password { get; set; }
@@ -149,7 +149,7 @@ Specifies the enum type for the data field.
 {% endtabs %}
 
 {% tabs %}
-{% highlight MaxLength attribute %}
+{% highlight C# %}
 
     [MaxLength(20,ErrorMessage = "Maximum password length should be less than 20")]
     public string Password { get; set; }
@@ -158,7 +158,7 @@ Specifies the enum type for the data field.
 {% endtabs %}
 
 {% tabs %}
-{% highlight Required attribute %}
+{% highlight C# %}
 
     [Required(AllowEmptyStrings = false, ErrorMessage ="Name is required")]
     public string Name { get; set; }
@@ -167,7 +167,7 @@ Specifies the enum type for the data field.
 {% endtabs %}
 
 {% tabs %}
-{% highlight StringLength attribute %}
+{% highlight C# %}
 
     [StringLength(20,ErrorMessage = "Name should not exceed 20 characters")]
     public string Name { get; set; }
@@ -177,7 +177,7 @@ Specifies the enum type for the data field.
 
 
 {% tabs %}
-{% highlight EnumDataType attribute %}
+{% highlight C# %}
 
     [EnumDataType(typeof(Gender), ErrorMessage = "Please select Gender")]
     public Gender Gender { get; set; }
@@ -190,7 +190,7 @@ Specifies the enum type for the data field.
 It specifies whether the field should be auto-generated or not. If bindable is set to false, the field will not be auto-generated. 
 
 {% tabs %}
-{% highlight Bindable attribute %}
+{% highlight C# %}
 
     [Bindable(false)]
     public string Name { get; set; }
@@ -203,7 +203,7 @@ It specifies whether the field should be auto-generated or not. If bindable is s
 It specifies whether the data field is editable or not.
 
 {% tabs %}
-{% highlight Editable attribute %}
+{% highlight C# %}
 
     [Editable(false)]
     public string Name { get; set; }
@@ -216,7 +216,7 @@ It specifies whether the data field is editable or not.
 It specifies whether the data field is read only or not.
 
 {% tabs %}
-{% highlight ReadOnly attribute %}
+{% highlight C# %}
 
     [ReadOnly(false)]
     public string Name { get; set; }
@@ -233,7 +233,7 @@ It specifies the data type for the field.
 The Supported data types are Text, MultilineText, Date, DateTime and Time.
 
 {% tabs %}
-{% highlight DataType attribute %}
+{% highlight C# %}
 
     [DataType(DataType.MultilineText)]
     public string Address { get; set; }
@@ -306,7 +306,7 @@ Specifies the ItemsOrderInRow property to display multiple editors in a single r
 </table>
 
 {% tabs %}
-{% highlight DataFormDisplayOptions attribute %}
+{% highlight C# %}
 
     [DataFormDisplayOptions(Rowspan = 2, ColumnSpan = 2, RowOrder = 1, ItemsOrderInRow = 0)]
     public string Name { get; set; }
@@ -319,7 +319,7 @@ Specifies the ItemsOrderInRow property to display multiple editors in a single r
 Specifies the Converter type, which converts the original value in a different format or as a different value.
 
 {% tabs %}
-{% highlight  attribute %}
+{% highlight C# %}
 
     [DataFormValueConverter(typeof(StringToDateConverter))]
     public string Name { get; set; }
@@ -365,7 +365,7 @@ Specifies the format of the `MaximumDate` and `MinumumDate` used in attribute.
 </table>
 
 {% tabs %}
-{% highlight  DataFormDateRange attribute %}
+{% highlight C# %}
 
     [DataFormDateRange(DisplayFormat="yyyy/mm/dd", MaximumDate ="2022/07/01", MaximumDate ="2022/07/07")]
     public DateTime EventDate { get; set; }
