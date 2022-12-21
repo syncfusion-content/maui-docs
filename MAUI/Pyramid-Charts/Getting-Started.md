@@ -347,3 +347,5 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ![Pyramid chart in .NET MAUI Chart](Getting-Started_Images/MAUI_pyramid_chart.png)
+
+You can find the complete getting started sample from this [link](https://github.com/SyncfusionExamples/GettingStarted_PyramidChart_MAUI).

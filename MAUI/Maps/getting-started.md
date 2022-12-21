@@ -267,6 +267,47 @@ public MainPage()
 
 ![maps basic view](images/getting-started/map_basic_view.png)
 
+## Custom shapes
+
+The MAUI Maps control allows you to render any custom shape to make a map look like building infrastructure, a sports stadium, plane or bus seat arrangements, and more using the `Geometry` property.
+
+{% tabs %}
+
+{% highlight XAML %}
+
+<maps:SfMaps>
+    <maps:SfMaps.Layer>
+        <maps:MapShapeLayer x:Name="layer"
+                            ShapeFill="DarkGray"
+                            ShapeStroke="DarkGray"
+                            Geometry="Points">
+        </maps:MapShapeLayer>
+    </maps:SfMaps.Layer>
+</maps:SfMaps>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+public MainPage()
+{
+    InitializeComponent();
+    SfMaps map = new SfMaps();
+    MapShapeLayer layer = new MapShapeLayer();
+    layer.ShapesSource = MapSource.FromResource("MyProject.buildings.json");
+    layer.ShapeFill = Brush.DarkGray;
+    layer.ShapeStroke = Brush.DarkGray;
+    layer.Geometry = MapGeometryType.Points;
+    map.Layer = layer;
+    this.Content = map;
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![maps basic view](images/getting-started/maps_cartesian_view.png)
+
 ## Mapping the data source for shape layer
 
 The [`DataSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_DataSource) property accepts the collection values as input. The [`PrimaryValuePath`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_PrimaryValuePath) property refers to the data ID in [`DataSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_DataSource).
