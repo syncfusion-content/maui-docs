@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Right To Left Flow Direction in .NET MAUI DataForm control | Syncfusion
+title: Right To Left FlowDirection in .NET MAUI DataForm control | Syncfusion
 description: Learn about Right To Left support in Syncfusion .NET MAUI DataForm (SfDataForm) control in mobile and desktop applications from a single shared codebase
 platform: maui
 control: SfDataForm
