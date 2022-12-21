@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrate from Xamarin.Forms SfBackdropPage to .NET MAUI SfBackdropPage
 
-To migrate from the [Xamarin SfBackdropPage](https://www.syncfusion.com/xamarin-ui-controls/xamarin-backdrop) to `.NET MAUI SfBackdropPage` easier, most of the APIs from the Xamarin SfBackdropPage were kept in the .NET MAUI SfBackdropPage.
+To migrate from the [Xamarin SfBackdropPage](https://www.syncfusion.com/xamarin-ui-controls/xamarin-backdrop) to [.NET MAUI SfBackdropPage](https://www.syncfusion.com/maui-controls/maui-backdrop) easier, most of the APIs from the Xamarin SfBackdropPage were kept in the .NET MAUI SfBackdropPage.
 
 ## Namespaces 
 
@@ -110,4 +110,4 @@ public partial class BackdropSamplePage : SfBackdropPage
 
 ## Unsupported features from Xamarin.Forms
 
-* The [`OpenIcon`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Backdrop.SfBackdropPage.html#Syncfusion_XForms_Backdrop_SfBackdropPage_OpenIcon) and [`CloseIcon`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Backdrop.SfBackdropPage.html#Syncfusion_XForms_Backdrop_SfBackdropPage_CloseIcon) support has not been provided in the SfBackdropPage. Instead, you can achieve it using the `OpenIconImageSource` and `CloseIconImageSource` properties. Since the [`OpenIcon`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Backdrop.SfBackdropPage.html#Syncfusion_XForms_Backdrop_SfBackdropPage_OpenIcon) and [`CloseIcon`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Backdrop.SfBackdropPage.html#Syncfusion_XForms_Backdrop_SfBackdropPage_CloseIcon) are marked obsolete.
+* The [`OpenIcon`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Backdrop.SfBackdropPage.html#Syncfusion_XForms_Backdrop_SfBackdropPage_OpenIcon) and [`CloseIcon`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Backdrop.SfBackdropPage.html#Syncfusion_XForms_Backdrop_SfBackdropPage_CloseIcon) support has not been provided in the SfBackdropPage. Instead, you can achieve it using the [`OpenIconImageSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html#Syncfusion_Maui_Backdrop_SfBackdropPage_OpenIconImageSource) and [`CloseIconImageSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html#Syncfusion_Maui_Backdrop_SfBackdropPage_CloseIconImageSource) properties. Since the [`OpenIcon`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Backdrop.SfBackdropPage.html#Syncfusion_XForms_Backdrop_SfBackdropPage_OpenIcon) and [`CloseIcon`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Backdrop.SfBackdropPage.html#Syncfusion_XForms_Backdrop_SfBackdropPage_CloseIcon) are marked obsolete.
