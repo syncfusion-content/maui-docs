@@ -583,3 +583,111 @@ this.Content = maps;
 {% endtabs %}
 
 ![Line shape dash array](images/line-layer/line_shape_dash_array.png)
+
+## Animation
+
+You can apply animation for the [`MapLine`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLine.html) using the `MapLineLayer.AnimationDuration` and `MapLineLayer.AnimationEasing` properties.
+
+By default, there will be no animation.
+
+N> Animation is only applicable for the load time.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                           ShapeStroke="DarkGrey">
+            <map:MapShapeLayer.Sublayers>
+                <map:MapLineLayer  AnimationDuration="3000"
+                                   AnimationEasing="{x:Static Easing.Linear}">
+                    <map:MapLineLayer.Lines>
+                        <map:MapLine>
+                            <map:MapLine.From>
+                                <map:MapLatLng Latitude="77.1025"
+                                               Longitude="28.7041" />
+                            </map:MapLine.From>
+                            <map:MapLine.To>
+                                <map:MapLatLng Latitude="-106.3468"
+                                               Longitude="56.1304" />
+                            </map:MapLine.To>
+                        </map:MapLine>
+                        <map:MapLine>
+                            <map:MapLine.From>
+                                <map:MapLatLng Latitude="77.1025"
+                                               Longitude="28.7041" />
+                            </map:MapLine.From>
+                            <map:MapLine.To>
+                                <map:MapLatLng Latitude="-75.0152"
+                                               Longitude="-9.1900" />
+                            </map:MapLine.To>
+                        </map:MapLine>
+                        <map:MapLine">
+                            <map:MapLine.From>
+                                <map:MapLatLng Latitude="77.1025"
+                                               Longitude="28.7041" />
+                            </map:MapLine.From>
+                            <map:MapLine.To>
+                                <map:MapLatLng Latitude="105.3188"
+                                               Longitude="61.5240" />
+                            </map:MapLine.To>
+                        </map:MapLine>
+                        <map:MapLine>
+                            <map:MapLine.From>
+                                <map:MapLatLng Latitude="77.1025"
+                                               Longitude="28.7041" />
+                            </map:MapLine.From>
+                            <map:MapLine.To>
+                                <map:MapLatLng Latitude="133.7751"
+                                               Longitude="-25.2744" />
+                            </map:MapLine.To>
+                        </map:MapLine>
+                    </map:MapLineLayer.Lines>
+                </map:MapLineLayer>
+            </map:MapShapeLayer.Sublayers>
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+ SfMaps maps = new SfMaps();
+ MapShapeLayer layer = new MapShapeLayer();
+ layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
+ layer.ShapeStroke = Brush.DarkGrey;
+ MapLineLayer mapLineLayer = new MapLineLayer();
+ mapLineLayer.AnimationDuration = 3000;
+ mapLineLayer.AnimationEasing = Easing.Linear;
+ MapLine line1 = new MapLine();
+ line1.From = new MapLatLng(77.1025, 28.7041);
+ line1.To = new MapLatLng(-106.3468, 56.1304);
+ line1.Stroke = Color.FromRgb(138, 138, 138);
+ MapLine line2 = new MapLine();
+ line2.From = new MapLatLng(77.1025, 28.7041);
+ line2.To = new MapLatLng(-75.0152, -9.1900);
+ line2.Stroke = Color.FromRgb(138, 138, 138);
+ MapLine line3 = new MapLine();
+ line3.From = new MapLatLng(77.1025, 28.7041);
+ line3.To = new MapLatLng(105.3188, 61.5240);
+ line3.Stroke = Color.FromRgb(138, 138, 138);
+ MapLine line4 = new MapLine();
+ line4.From = new MapLatLng(77.1025, 28.7041);
+ line4.To = new MapLatLng(133.7751, -25.2744);
+ line4.Stroke = Color.FromRgb(138, 138, 138);
+ mapLineLayer.Lines.Add(line1);
+ mapLineLayer.Lines.Add(line2);
+ mapLineLayer.Lines.Add(line3);
+ mapLineLayer.Lines.Add(line4);
+ layer.Sublayers.Add(mapLineLayer);
+ maps.Layer = layer;
+ this.Content = maps;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Line animation support](images/line-layer/line_animation.gif)

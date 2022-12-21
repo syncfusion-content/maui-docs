@@ -62,9 +62,9 @@ The gradient for the pyramid chart can be set by using the [PaletteBrushes]() pr
 {% highlight xaml %}
 
 <chart:SfPyramidChart ItemsSource="{Binding Data}" 
-                     XBindingPath="Name"
-					 YBindingPath="Value"
-					 PaletteBrushes="{Binding CustomBrushes}">
+                      XBindingPath="Name"
+                      YBindingPath="Value"
+                      PaletteBrushes="{Binding CustomBrushes}">
 . . .
 </chart:SfPyramidChart>
 
@@ -84,35 +84,35 @@ public class ViewModel
 	 gradientColor1.GradientStops = new GradientStopCollection()
 	 {
 	    new GradientStop() { Offset = 1, Color = Color.FromArgb("#a3bded") },
-        new GradientStop() { Offset = 0, Color = Color.FromArgb("#6991c7") }
+		new GradientStop() { Offset = 0, Color = Color.FromArgb("#6991c7") }
 	 };
 
 	 LinearGradientBrush gradientColor2 = new LinearGradientBrush();
 	 gradientColor2.GradientStops = new GradientStopCollection()
 	 {
 		new GradientStop() { Offset = 1, Color = Color.FromArgb("#A5678E") },
-        new GradientStop() { Offset = 0, Color = Color.FromArgb("#E8B7D4") }
+		new GradientStop() { Offset = 0, Color = Color.FromArgb("#E8B7D4") }
 	 };
 
 	 LinearGradientBrush gradientColor3 = new LinearGradientBrush();
 	 gradientColor3.GradientStops = new GradientStopCollection()
 	 {
 		new GradientStop() { Offset = 1, Color = Color.FromArgb("#FFCAD4") },
-        new GradientStop() { Offset = 0, Color = Color.FromArgb("#FB7B8E") }
+		new GradientStop() { Offset = 0, Color = Color.FromArgb("#FB7B8E") }
 	 };
 
 	 LinearGradientBrush gradientColor4 = new LinearGradientBrush();
 	 gradientColor4.GradientStops = new GradientStopCollection()
 	 {
 	    new GradientStop() { Offset = 1, Color = Color.FromArgb("#FDC094") },
-        new GradientStop() { Offset = 0, Color = Color.FromArgb("#FFE5D8") }
+		new GradientStop() { Offset = 0, Color = Color.FromArgb("#FFE5D8") }
 	 };
 
 	 LinearGradientBrush gradientColor5 = new LinearGradientBrush();
 	 gradientColor5.GradientStops = new GradientStopCollection()
 	 {
 		new GradientStop() { Offset = 1, Color = Color.FromArgb("#CFF4D2") },
-        new GradientStop() { Offset = 0, Color = Color.FromArgb("#56C596") }
+		new GradientStop() { Offset = 0, Color = Color.FromArgb("#56C596") }
 	 };
 
 	 CustomBrushes.Add(gradientColor1);
