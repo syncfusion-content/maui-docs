@@ -23,22 +23,23 @@ You can manually create `DataFormViewItem` for the defined business model by usi
         </ContentPage.BindingContext>
 
          <ContentPage.Content>
-        <dataForm:SfDataForm x:Name="dataForm" DataObject="{Binding ContactDetails}" AutoGenerateItems="false">
+            <dataForm:SfDataForm x:Name="dataForm" DataObject="{Binding ContactDetails}" AutoGenerateItems="false">
             <dataForm:SfDataForm.Items>
-                <dataForm:DataFormTextItem FieldName="Name" />
-                <dataForm:DataFormTextItem FieldName="Password" />
-                <dataForm:DataFormGroupItem Name="Address">
-                    <dataForm:DataFormGroupItem.Items>
-                        <dataForm:DataFormMultilineItem FieldName="Street"/>
-                        <dataForm:DataFormTextItem FieldName="State"/>
-                        <dataForm:DataFormTextItem FieldName="ZipCode"/>
-                        <dataForm:DataFormAutoCompleteItem FieldName="Country" ItemsSource = "{Binding CountryNames}"/>
-                    </dataForm:DataFormGroupItem.Items>
-                </dataForm:DataFormGroupItem>
-            </dataForm:SfDataForm.Items>
-        </dataForm:SfDataForm>
-    </ContentPage.Content>
-</ContentPage>
+                    <dataForm:DataFormTextItem FieldName="Name" />
+                    <dataForm:DataFormTextItem FieldName="Password" />
+                    <dataForm:DataFormGroupItem Name="Address">
+                        <dataForm:DataFormGroupItem.Items>
+                            <dataForm:DataFormMultilineItem FieldName="Street"/>
+                            <dataForm:DataFormTextItem FieldName="State"/>
+                            <dataForm:DataFormTextItem FieldName="ZipCode"/>
+                            <dataForm:DataFormAutoCompleteItem FieldName="Country" ItemsSource = "{Binding CountryNames}"/>
+                        </dataForm:DataFormGroupItem.Items>
+                    </dataForm:DataFormGroupItem>
+                </dataForm:SfDataForm.Items>
+            </dataForm:SfDataForm>
+        </ContentPage.Content>
+    </ContentPage>
+
 {% endhighlight %}
 {% highlight C# %}
 
@@ -179,6 +180,7 @@ You can dynamically add custom group items using `Items` property of `SfDataForm
     dataFormGroupItem.Items.Add(new DataFormTextItem() { FieldName = "Last Name" });
 
     dataForm.Items.Add(dataFormGroupItem);
+    
 {% endhighlight %}
 {% endtabs %}
 
