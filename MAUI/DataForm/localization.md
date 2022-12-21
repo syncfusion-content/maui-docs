@@ -11,7 +11,7 @@ documentation: ug
 
 Localization is the process of translating the application resources into different language for the specific cultures. The `SfDataForm` can be localized by adding `resource` file. 
 
-You can localize the `DataFormViewItem` [DisplayAttribute](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute?view=net-7.0) values and validation attributes ([Required](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.requiredattribute?view=netframework-4.8), [StringLength](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.stringlengthattribute?view=netframework-4.8)) values by using `ResourceType` property of the attribute or using the `GenerateDataFormItem` event.
+You can localize the `DataFormViewItem` [DisplayAttribute](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute?view=net-7.0) values and validation attributes ([Required](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.requiredattribute?view=netframework-4.8), [StringLength](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.stringlengthattribute?view=netframework-4.8)) values by using `ResourceType` property of the attribute or using the `GenerateDataFormItem` event when autogenerate true.
 
 ## Setting CurrentUICulture to the application
 
@@ -40,7 +40,7 @@ public partial class App : Application
 N>
 The required `resx` files with `Build Action` as `EmbeddedResource` (File name should contain culture code) into the `Resources` folder.
 
-## Localize application level
+## Add Localization resx file in sample level
 
 To localize the `DataForm` based on `CurrentUICulture` using `resource` files, follow the below steps.
 
@@ -63,7 +63,7 @@ To localize the `DataForm` based on `CurrentUICulture` using `resource` files, f
  
     ![shows-the-added-resource-file-name-value-pair-in-the-resource-designer-in-maui-dataform](images/localization/shows-the-added-resource-file-name-value-pair-in-the-resource-designer-in-maui-dataform.png)
 
-## Localizing data form item display values
+## Localizing data form display values
 
 Here, the display attributes or data form item display values get localized based on culture from Localization Resource File (.Resx).
 
@@ -152,7 +152,7 @@ this.dataForm.ValidateProperty += DataForm_ValidateProperty;
 {% endtabs %}
 
 
-## Localizing DataForm List items
+## Localizing data form picker editors
 
 You can localize DataForm list items (Picker, AutoComplete, RadioGroup, ComoboBox) `ItemsSource` using ResourceType property of [Display](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute?view=net-7.0) attribute.
 

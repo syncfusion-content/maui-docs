@@ -9,7 +9,7 @@ documentation: ug
 
 # Right To Left Flow Direction in .NET MAUI DataForm (SfDataForm)
 
-`SfDataForm` supports changing the flow of text to the right-to-left direction by setting the `FlowDirection` to `RightToLeft`
+`SfDataForm` supports changing the flow direction of text to the right-to-left direction by setting the `FlowDirection` to `RightToLeft`
 
 {% tabs %}
 {% highlight XAML %}
