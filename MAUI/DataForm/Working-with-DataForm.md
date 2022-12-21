@@ -573,9 +573,11 @@ DataFormTextStyle class properties:-
     3.FontAttributes
     4.TextColor
 
-# Working with manually created DataForm Items
+## Manually create DataForm Items
 
-You can manually create `DataFormViewItem` for the defined business model by using the `Items` property of the `SfDataForm` class. You should set the `AutoGenerateItems` property to false to restrict the auto-generation of `SfDataForm.Items`. 
+Data form autogenerate the editors based on the data type, you can explicitly add the data editors by adding `SfDataForm.Items` manually and you need to change AutoGenerateItems property to false.
+
+Note:-Use the FieldName property to bind the editor to the data object property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -678,8 +680,9 @@ You can manually create `DataFormViewItem` for the defined business model by usi
 
 {% endhighlight %}
 
-## Dynamically add DataForm items
-You can dynamically add the items using `Items` property of `SfDataForm`.
+## Dynamically add data editor
+
+You can dynamically add the data editor manually by using `Items` property of `SfDataForm`.
 {% tabs %}
 {% highlight C# %}
 
@@ -691,7 +694,7 @@ You can dynamically add the items using `Items` property of `SfDataForm`.
 
 
 ## Dynamically remove manually added dataform items
-You can dynamically remove the `DataFormViewItem` from the `Items` property of `SfDataForm`.
+You can dynamically remove the data editor explicitly by using the `Items` property of `SfDataForm`.
 
 {% tabs %}
 {% highlight C# %}
@@ -715,7 +718,7 @@ You can dynamically clear all the item views from `SfDataForm`.
 
 
 ## Dynamically reset manual dataform items
-You can reset the `SfDataForm.Items` and we can reset two or more items at a time.
+You can replace data editor with new editor by using the `Items` property of `SfDataForm` when AutoGenerateItems is false.
 
 {% tabs %}
 {% highlight C# %}
@@ -733,7 +736,8 @@ You can reset the `SfDataForm.Items` and we can reset two or more items at a tim
 
 
 ## Dynamically add Dataform group items
-You can dynamically add custom group items using `Items` property of `SfDataForm`.
+You can dynamically add custom group editor by using the `Items` property of `SfDataForm`.
+
 {% tabs %}
 {% highlight C# %}
 
@@ -753,7 +757,10 @@ You can dynamically add custom group items using `Items` property of `SfDataForm
 
 #### Adding custom editor view using Manual DataFormItem
 
-You can directly set a custom view as an `EditorView` of `DataFormCustomItem`. In this case, the editor view will not be generated based on field type and `RegistorEditor`.
+You can add custom editor manually by adding the custom view as an `EditorView` of `DataFormCustomItem`. In this case, the editor view will not be generated based on field type and `RegistorEditor`.
+
+(Reference for RegistorEditor custom editor)
+
 {% tabs %}
 {% highlight XAML %}
 
