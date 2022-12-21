@@ -269,7 +269,7 @@ public MainPage()
 
 ## Custom shapes
 
-The MAUI Maps control allows you to render any custom shape to make a map look like building infrastructure, a sports stadium, plane or bus seat arrangements, and more using `Geometry` property.
+The MAUI Maps control allows you to render any custom shape to make a map look like building infrastructure, a sports stadium, plane or bus seat arrangements, and more using the `Geometry` property.
 
 {% tabs %}
 
