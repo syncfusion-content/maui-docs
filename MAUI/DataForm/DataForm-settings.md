@@ -597,6 +597,103 @@ DataFormTextStyle class properties:-
     3.FontAttributes
     4.TextColor
 
+
+For Label Text Style,
+{% tabs %}
+{% highlight C# %}
+
+    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+
+    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+    {
+        if (e.DataFormItem.FieldName == "Name" && e.DataFormItem is DataFormTextItem textItem)
+        {
+            e.DataFormItem.LabelTextStyle = new DataFormTextStyle() 
+            {
+                FontSize = 19, 
+                TextColor = Colors.Pink, 
+                FontFamily = "icomoon", 
+                FontAttributes = FontAttributes.Italic
+            };
+        }
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+For Editor Text Style,
+
+{% tabs %}
+{% highlight C# %}
+
+    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+
+    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+    {
+        if (e.DataFormItem.FieldName == "Name" && e.DataFormItem is DataFormTextItem textItem)
+        {
+            e.DataFormItem.EditorTextStyle = new DataFormTextStyle() 
+            {
+                FontSize = 19, 
+                TextColor = Colors.Blue, 
+                FontFamily = "icomoon", 
+                FontAttributes = FontAttributes.Italic
+            };
+        }
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+For Valid Message Text style,
+
+{% tabs %}
+{% highlight C# %}
+
+    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+
+    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+    {
+        if (e.DataFormItem.FieldName == "Name")
+        {
+            e.DataFormItem.ValidMessageLabelTextStyle = new DataFormTextStyle() 
+            {
+                FontSize = 19, 
+                TextColor = Colors.Blue, 
+                FontFamily = "icomoon", 
+                FontAttributes = FontAttributes.Bold
+            };
+        }
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+For Error message text style,
+
+{% tabs %}
+{% highlight C# %}
+
+    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+
+    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+    {
+        if (e.DataFormItem.FieldName == "Name")
+        {
+            e.DataFormItem.ErrorLabelTextStyle = new DataFormTextStyle() 
+            {
+                FontSize = 19, 
+                TextColor = Colors.Blue, 
+                FontFamily = "icomoon", 
+                FontAttributes = FontAttributes.Bold
+            };
+        }
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+
 ## Manually create DataForm Items
 
 Data form autogenerate the editors based on the data type, you can explicitly add the data editors by adding `SfDataForm.Items` manually and you need to change AutoGenerateItems property to false.
