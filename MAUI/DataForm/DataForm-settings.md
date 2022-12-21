@@ -612,7 +612,6 @@ For Label Text Style,
             {
                 FontSize = 19, 
                 TextColor = Colors.Pink, 
-                FontFamily = "icomoon", 
                 FontAttributes = FontAttributes.Italic
             };
         }
@@ -636,7 +635,6 @@ For Editor Text Style,
             {
                 FontSize = 19, 
                 TextColor = Colors.Blue, 
-                FontFamily = "icomoon", 
                 FontAttributes = FontAttributes.Italic
             };
         }
@@ -660,7 +658,6 @@ For Valid Message Text style,
             {
                 FontSize = 19, 
                 TextColor = Colors.Blue, 
-                FontFamily = "icomoon", 
                 FontAttributes = FontAttributes.Bold
             };
         }
@@ -684,7 +681,6 @@ For Error message text style,
             {
                 FontSize = 19, 
                 TextColor = Colors.Blue, 
-                FontFamily = "icomoon", 
                 FontAttributes = FontAttributes.Bold
             };
         }
