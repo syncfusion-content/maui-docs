@@ -56,7 +56,7 @@ The string type property with
 Date
 </td>
 <td>
-DateTime, DateOnly or DateTimeOffset type property or the property with [DataType(DataType.Date)] or [DataType(DataType.DateTime)] attributes.
+DateTime, DateOnly, or DateTimeOffset type property or the property with [DataType(DataType.Date)] or [DataType(DataType.DateTime)] attributes.
 </td>
 <td>
 {{'[DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/datepicker?view=net-maui-7.0)'| markdownify }}
@@ -143,7 +143,7 @@ Enum and List type property.
 
 ## Change the editor for any data type
 
-By default, the editors will be loaded based on the based on the primitive data type such as string, enumeration, DateTime, and TimeSpan.
+By default, the editors will be loaded based on the primitive data type such as string, enumeration, DateTime, and TimeSpan.
 
 {% tabs %}
 {% highlight C# %}
@@ -153,7 +153,7 @@ By default, the editors will be loaded based on the based on the primitive data 
 {% endhighlight %}
 {% endtabs %}
 
-Here, the `MultilineText` editor will be loaded for the string type instead of `Text` editor.
+Here, the `MultilineText` editor will be loaded for the string type instead of the `Text` editor.
 
 ## Change the editor for property
 
@@ -167,7 +167,7 @@ To change the editor for any property, use the `RegisterEditor` method and speci
 {% endhighlight %}
 {% endtabs %}
 
-Here, the Switch editor will be loaded for the `On` property (bool type) instead of `CheckBox` editor.
+Here, the Switch editor will be loaded for the `On` property (bool type) instead of the `CheckBox` editor.
 
 ## Text editor
 
@@ -200,8 +200,7 @@ In `Text`, `MultilineText` and `Password` editors you can change the soft input 
 {% endhighlight %}
 {% endtabs %}
 
-In `Text`, `MultilineText` and `Password` editors you can set the maximum allowed length of input by using the `MaxLength` property of `DataFormTextEditorItem`.
-
+In `Text`, `MultilineText`, and `Password` editors you can set the maximum allowed length of input by using the MaxLength property of `DataFormTextEditorItem`.
 {% tabs %}
 {% highlight C# %}
 
@@ -266,7 +265,7 @@ In the date editor, the default date value will be the current date. You can als
 
 #### Change the format of the date editor
 
-In the [DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/datepicker?view=net-maui-7.0), short date will be shown by default. You can change the applied format by setting the `Format`property in `DataFormDateItem`.
+In the [DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/datepicker?view=net-maui-7.0),the short date will be shown by default. You can change the applied format by setting the `Format`property in `DataFormDateItem`.
 
 {% tabs %}
 {% highlight C# %}
@@ -285,7 +284,7 @@ In the [DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface
 
 #### Change the minimum and maximum date in date editor
 
-You can customize the maximum and minimum allowable dates in the [DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/datepicker?view=net-maui-7.0) by setting `MaximumDate` and `MinimumDate` in the `DataFormDateItem` respectively.
+You can customize the maximum and minimum allowable dates in the [DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/datepicker?view=net-maui-7.0) by setting the `MaximumDate` and `MinimumDate` in the `DataFormDateItem` respectively.
 
 {% tabs %}
 {% highlight C# %}
@@ -324,7 +323,7 @@ In the time editor, by default (12:00 AM) will be displayed.
 
 #### Change the format of time editor**
 
-In the time editor, short time will be shown by default. You can change the applied format by setting the `Format`property in `DataFormTimeItem`.
+In the time editor, a short time will be shown by default. You can change the applied format by setting the `Format`property in `DataFormTimeItem`.
 
 {% tabs %}
 {% highlight C# %}
@@ -360,7 +359,7 @@ In the CheckBox editor, the `CheckBox` control is loaded. By default, for bool d
 
 #### Changing the checkbox color
 
-By default the checkbox color is blue, you can change the checkbox color by using `Color` property in `DataFormCheckBoxItem`.
+By default, the checkbox color is blue. You can change the checkbox color by using `Color` property in `DataFormCheckBoxItem`.
 
 {% tabs %}
 {% highlight C# %}
@@ -382,7 +381,7 @@ By default the checkbox color is blue, you can change the checkbox color by usin
 
 In switch editor, [Switch](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/switch?view=net-maui-7.0) is loaded, and DataForm Switch editor supports bool data type property.
 
-To add switch editor in DataForm, register the editor as `DataFormEditorType.Switch` for the required property using the `RegisterEditor` method.
+To add a switch editor in DataForm, register the editor as `DataFormEditorType.Switch` for the required property using the `RegisterEditor` method.
 
 {% tabs %}
 {% highlight C# %}
@@ -401,7 +400,7 @@ To add switch editor in DataForm, register the editor as `DataFormEditorType.Swi
 {% endtabs %}
 
 #### Changing the Switch Editor thumb color
-You can change the thumb color by using `ThumbColor` property in the `DataFormSwitchItem`.
+You can change the thumb color by using the `ThumbColor` property in the `DataFormSwitchItem`.
 
 {% tabs %}
 {% highlight C# %}
@@ -445,7 +444,7 @@ In the Combo Box editor, the [SfComboBox](https://help.syncfusion.com/maui/combo
 
 #### Changing the ItemsSource of combo box
 
-By default, the `ItemsSource` for SfComboBox is auto-generated for enum types properties
+By default, the `ItemsSource` for SfComboBox is auto-generated for enum types properties.
 
 **Using IDataFormSourceProvider**
 
@@ -509,7 +508,7 @@ You can also set the `ItemsSource` for combo box editor by using the `GenerateDa
 
 By default, in the combobox editor, you can select a needed item by scrolling the whole list of items.
 
-You can filter a particular item in the list items by using the `IsEditable` property, this property enables you to type a list item in the combo box editor.
+You can filter a particular item in the list using the `IsEditable` property. This property enables you to type a list of items in the combo box editor.
 
 {% tabs %}
 {% highlight C# %}
@@ -529,7 +528,7 @@ You can filter a particular item in the list items by using the `IsEditable` pro
 
 #### ComboBox editor filtering options
 
-The string comparison for filtering suggestions can be changed using the `TextSearchMode`  property of `DataFormComboBoxItem`. The default text search strategy is “StartsWith”, and it is case insensitive. The available text search modes are,
+The string comparison for filtering suggestions can be changed using the `TextSearchMode` property of `DataFormComboBoxItem`. The default text search strategy is “StartsWith,” and it is case insensitive. The available text search modes are;
 
 * StartsWith
 
@@ -537,7 +536,7 @@ The string comparison for filtering suggestions can be changed using the `TextSe
 
 **Searching words that starts with the input text**
 
-Displays all the matches that contain first character of the typed characters in items source of combobox editor. This strategy is case in-sensitive.
+Displays all the matches that contain the first character of the typed characters in the item source of the combo box editor. This strategy is case-insensitive.
 
 {% tabs %}
 {% highlight C# %}
@@ -557,7 +556,7 @@ Displays all the matches that contain first character of the typed characters in
 
 **Searching words that contains the input text**
 
-Displays all the matches that contain the typed characters in items source of combobox editor. This strategy is case in-sensitive.
+Displays all the matches that contain the typed characters in items source of the combo box editor. This strategy is case-insensitive.
 
 {% tabs %}
 {% highlight C# %}
@@ -577,7 +576,7 @@ Displays all the matches that contain the typed characters in items source of co
 
 #### Changing the height of Combobox drop down
 
-By default the combo box drop down list item height is `400d` , You can change the size for the drop down list item size by using `MaxDropDownHeight` property in the `DataFormComboBoxItem`.
+By default, the combo box drop down list item height is `400d`. You can change the size for the drop down list item size by using the `MaxDropDownHeight` property in the `DataFormComboBoxItem`.
 
 {% tabs %}
 {% highlight C# %}
@@ -597,7 +596,7 @@ By default the combo box drop down list item height is `400d` , You can change t
 
 #### Loading the complex type property values in combo box editor
 
-You can display the complex type property values in combo box editor by using the `DisplayMemberPath` and `SelectedValuePath` properties of `DataFormComboBoxItem`. You need to use `GenerateDataFormItem `event to set `DisplayMemberPath` and `SelectedValuePath` property value of `DataFormComboBoxItem`.
+You can display the complex type property values in the combo box editor by using the `DisplayMemberPath` and `SelectedValuePath` properties of `DataFormComboBoxItem`. You need to use the `GenerateDataFormItem `event to set the `DisplayMemberPath` and `SelectedValuePath` property value of `DataFormComboBoxItem`.
 
 N> Class cannot be directly set as data type for combo box editor in this complex type scenario.
 
@@ -663,7 +662,7 @@ In the autocomplete editor, the [SfAutoComplete](https://help.syncfusion.com/mau
 
 #### Changing the ItemsSource of autocomplete editor
 
-By default, the `ItemsSource` for `AutoComplete` editor is auto-generated for enum types. For other types, you can set `ItemsSource` using `IDataFormSourceProvider`.
+By default, the `ItemsSource` for `AutoComplete` editor is auto-generated for enum types. For other types, you can set the `ItemsSource` using `IDataFormSourceProvider`.
 
 **Using IDataFormSourceProvider**
 
@@ -707,7 +706,7 @@ By default, the `ItemsSource` for `AutoComplete` editor is auto-generated for en
 
 **Using GenerateDataFormItem event**
 
-You can also set `ItemsSource` for autocomplete editor by using `ItemsSource` property in the `DataFormAutoCompleteItem`.
+You can also set `ItemsSource` for autocomplete editor by using the `ItemsSource` property in the `DataFormAutoCompleteItem`.
 
 {% tabs %}
 {% highlight C# %}
@@ -741,7 +740,7 @@ You can also set `ItemsSource` for autocomplete editor by using `ItemsSource` pr
 
 #### Loading the complex type property values in autocomplete editor
 
-You can display the complex type property values in autocomplete editor by using the `DisplyMemberPath` and `SelectedValuePath` properties of `DataFormAutoCompleteItem`. You need to use `GenerateDataFormItem` event to set `DisplayMemberPath` and `SelectedValuePath` property values of `DataFormAutoCompleteItem`.
+You can display the complex type property values in autocomplete editor by using the `DisplyMemberPath` and `SelectedValuePath` properties of `DataFormAutoCompleteItem`. You need to use the `GenerateDataFormItem` event to set the `DisplayMemberPath` and `SelectedValuePath` property values of `DataFormAutoCompleteItem`.
 
 N> Class cannot be directly set as data type for autocomplete editor in this complex type scenario.
 
@@ -804,7 +803,7 @@ N> Class cannot be directly set as data type for autocomplete editor in this com
 
 #### AutoComplete editor suggestion options
 
-The string comparison for filtering suggestions can be changed using the `TextSearchMode`  property of `DataFormAutoCompleteItem`. The default text search strategy is “StartsWith”, and it is case insensitive. The available text search modes are,
+The string comparison for filtering suggestions can be changed using the `TextSearchMode` property of `DataFormAutoCompleteItem`. The default text search strategy is “StartsWith,” and it is case insensitive. The available text search modes are;
 
 * StartsWith
 
@@ -852,7 +851,7 @@ Displays all the matches that contain the typed characters in items source of au
 
 #### Changing the maximum height of autocomplete drop down 
 
-By default the autocomplete drop down list item height is `400d` , You can change the size for the drop down list item size by using `MaxDropDownHeight` property in the `DataFormAutoCompleteItem`.
+By default the autocomplete drop down list item height is `400d`. You can change the size for the drop down list item size by using the `MaxDropDownHeight` property in the `DataFormAutoCompleteItem`.
 
 {% tabs %}
 {% highlight C# %}
@@ -878,7 +877,7 @@ In the picker editor, the [Picker](https://learn.microsoft.com/en-us/dotnet/maui
 
 #### Changing the ItemsSource of Picker
 
-By default, the `ItemsSource` for the picker is auto-generated for enum type property. For other types, you can set the `ItemsSource` by using `IDataFormSourceProvider`.
+By default, the `ItemsSource` for the picker is auto-generated for the enum type property. For other types, you can set the `ItemsSource` by using `IDataFormSourceProvider`.
 
 **Using IDataFormSourceProvider**
 
@@ -913,7 +912,7 @@ By default, the `ItemsSource` for the picker is auto-generated for enum type pro
 
 #### Using event
 
-You can also set `ItemsSource` for picker editor by using the `ItemsSource` property in the `DataFormPickerItem`.
+You can also set `ItemsSource` for the picker editor by using the `ItemsSource` property in the `DataFormPickerItem`.
 
 {% tabs %}
 {% highlight C# %}
@@ -940,7 +939,7 @@ You can also set `ItemsSource` for picker editor by using the `ItemsSource` prop
 
 #### Loading the complex type property values in picker
 
-You can display the complex type property values in the picker editor by using the `DisplayMemberPath` and `SelectedValuePath` properties of `DataFormPickerItem`. You need to use `GenerateDataFormItem` event to set `DisplayMemberPath` and `SelectedValuePath` property values for complex type properties.
+You can display the complex type property values in the picker editor by using the `DisplayMemberPath` and `SelectedValuePath` properties of `DataFormPickerItem`. You need to use the `GenerateDataFormItem` event to set `DisplayMemberPath` and `SelectedValuePath` property values for complex type properties.
 
 N> Class cannot be directly set as data type for picker editor in this complex type scenario.
 
@@ -1005,11 +1004,11 @@ N> Class cannot be directly set as data type for picker editor in this complex t
 
 In the [RadioGroup](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/radiobutton?view=net-maui-7.0) editor, the [RadioButton](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/radiobutton?view=net-maui-7.0) control is loaded.
 
-The `ItemsSource` for the radio group editor is generated for `enum` data type property. In order to add `RadioButton` editor in the DataForm, you need to register editor as `DataFormEditorType.RadioGroup` for the required property by using the `RegisterEditor` method.
+The `ItemsSource` for the radio group editor is generated for the `enum` data type property. In order to add the `RadioButton` editor in the DataForm, you need to register the editor as `DataFormEditorType.RadioGroup` for the required property by using the `RegisterEditor` method.
 
 **Support for enum data type**
 
-For `enum` data type property, [RadioButon](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/radiobutton?view=net-maui-7.0) `items` will be added based on specified property enum values.
+For the `enum` data type property, [RadioButon](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/radiobutton?view=net-maui-7.0) `items` will be added based on the specified property of enum values.
 
 {% tabs %}
 {% highlight C# %}
@@ -1030,7 +1029,7 @@ For `enum` data type property, [RadioButon](https://learn.microsoft.com/en-us/do
 
 **Support for list data type**
 
-For `List` data type property, you have to set the `ItemsSource` by using the `IDataFormSourceProvider`.
+For the `List` data type property, you have to set the `ItemsSource` by using the `IDataFormSourceProvider`.
 
 {% tabs %}
 {% highlight C# %}
@@ -1058,13 +1057,13 @@ For `List` data type property, you have to set the `ItemsSource` by using the `I
 
 ## Custom editor
 
-The custom editor can be added to DataForm by inheriting the `IDataFormEditor` class for business models. You can create custom editor using implement all method in `IDataFormEditor`. 
+The custom editor can be added to DataForm by inheriting the `IDataFormEditor` class for business models. You can create a custom editor using implement all method in `IDataFormEditor`. 
 
-To add custom editor in DataForm, register the editor with custom registered type for the required property using `RegisterEditor` method. You can also customize editor settings by using available methods in `IDataFormEditor`. 
+To add a custom editor in DataForm, register the editor with a custom registered type for the required property using the `RegisterEditor` method. You can also customize editor settings by using available methods in `IDataFormEditor`. 
 
 #### Creating custom editor using IDataFormEditor 
 
-Views such as labels, buttons, and sliders can be loaded to custom editor. Here, entry is loaded as custom editor for `PhoneNumer` property. 
+Views such as labels, buttons, and sliders can be loaded into the custom editor. Here, the entry is loaded as a custom editor for the `PhoneNumer` property.
 
 #### Below mentioned example code for the Numeric editor which accepts only numbers 
 
@@ -1141,6 +1140,6 @@ Views such as labels, buttons, and sliders can be loaded to custom editor. Here,
 {% endhighlight %}
 {% endtabs %}
 
-If `SfDataForm.ValidatetionMode` is set to `ValidationMode.Manual` then update `DataFormCustomItem.EditorValue` property once the value is committed to its respective model property. This value will be used for `DataFormValidateFormEventArgs.NewValues` on manual validation.
+If `SfDataForm.ValidatetionMode` is set to `ValidationMode.Manual`, then update `DataFormCustomItem.EditorValue` property once the value is committed to its respective model property. This value will be used for the `DataFormValidateFormEventArgs.NewValues` on manual validation.
 
-Note: If custom validation is required, you can set error and valid messages using `SfDataForm.ValidateProperty` event.
+Note: If custom validation is required, you can set error and valid messages using the `SfDataForm.ValidateProperty` event.
