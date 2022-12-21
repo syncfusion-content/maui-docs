@@ -1,14 +1,15 @@
 ---
 layout: post
 title: Views in MAUI Calendar widget | Syncfusion
-description: Learn here all about Views feature of Syncfusion MAUI Calendar (SfCalendar) widget and more.
+description: Learn here about the Views feature of Syncfusion MAUI Calendar (SfCalendar) widget and more.
 platform: maui
 control: Calendar
 documentation: ug
 ---
 
+
 # Multiple Calendar Views in MAUI (SfCalendar)
-The `SfCalendar` widget has four Calendar views to display. It can be assigned to the widget by using the `View` property. Month view is initially rendered by Default. The current date will be displayed initially for all the Calendar views.
+The `SfCalendar` widget has four Calendar views to display. It can be assigned to the widget by using the `View` property. `Month` view is initially rendered by Default. The current date will be displayed initially for all the Calendar views.
 
 ## Month view
 The Month view displays the current month days, and usually a few days of previous and next month. By default, initially displays the current month dates and the current date is highlighted by a separate color different from the rest of the dates color in `Month` view.
@@ -29,9 +30,9 @@ this.Calendar.View = CalendarView.Month;
 ![Month view in .NET MAUI Calendar.](images/views/maui-month-view.png)
 
 ### Number Of Visible Weeks view
-In the month view, number of visible weeks can be customized by using the [NumberOfVisibleWeeks] property in the Calendar. By default, Month view displays with the NumberOfVisibleWeeks as the value of six.
+In the month view, number of visible weeks can be customized by using the `NumberOfVisibleWeeks` property in the Calendar. By default, Month view displays with the NumberOfVisibleWeeks as `6`.
 
-The following code shows the Calendar month view with `NumberOfVisibleWeeks` as `4`.
+The following code shows the Calendar month view with `NumberOfVisibleWeeks` is `4`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -57,7 +58,7 @@ this.Calendar.MonthView = new CalendarMonthView()
 ![custom-number-of-weeks-in-maui-calendar](images/views/custom-number-of-weeks-in-maui-calendar.png)
 
 ### Week number
-It displays week number for the current view dates in the month view by setting the `ShowWeekNumber` property. By default, the ShowWeekNumber is false. If you need to show the week number in the month view by setting the ShowWeekNumber as true. Week numbers will be displayed based on the ISO standard.
+It displays week number for the current view dates in the month view by setting the `ShowWeekNumber` property. By default, the ShowWeekNumber is `false`. If you need to show the week number in the month view by setting the ShowWeekNumber as true. Week numbers will be displayed based on the ISO standard.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -129,7 +130,7 @@ this.Calendar.MonthView.WeekNumberStyle = new CalendarWeekNumberStyle()
 
 
 ## Year view
-The Year view displays the current year's months. A calendar year is a one-year period that begins on January 1 and ends on December 31. By default, initially displays the current years months and the current month is highlighted by a separate color different from the rest of the month color in `Year` view. Can easily navigate to the desired month dates from the year view.
+The Year view displays the current year's month. A calendar year is a one-year period that begins on January 1 and ends on December 31. By default, initially displays the current years month and the current month is highlighted by a separate color different from the rest of the month color in `Year` view. Can easily navigate to the desired month dates from the year view.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
