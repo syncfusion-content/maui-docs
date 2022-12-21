@@ -812,7 +812,7 @@ The string comparison for filtering suggestions can be changed using the `TextSe
 
 * Contains
 
-#### Filtering words that starts with the input text
+**Filtering words that starts with the input text**
 
 Displays all the matches that contain first character of the typed characters in items source of autocomplete editor. This strategy is case in-sensitive.
 
@@ -832,7 +832,7 @@ Displays all the matches that contain first character of the typed characters in
 {% endhighlight %}
 {% endtabs %}
 
-#### Filtering words that contains the input text
+**Filtering words that contains the input text**
 
 Displays all the matches that contain the typed characters in items source of autocomplete editor. This strategy is case in-sensitive.
 
