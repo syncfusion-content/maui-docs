@@ -9,7 +9,7 @@ documentation: UG
 
 # Editors in .NET MAUI DataForm (SfDataForm)
 
-The data form supports following built-in editors to edit the data:
+The data form supports the following built-in editors to edit the data:
 
 <table>
 <tr>
