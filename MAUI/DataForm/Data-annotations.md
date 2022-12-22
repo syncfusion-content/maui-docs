@@ -55,7 +55,7 @@ Specifies whether the field should be auto-generated or not.
 {{'[ResourceType](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute.resourcetype?view=net-7.0)' |  markdownify }}
 </td>
 <td>
-Specifies the Resources File (.Resx), which is used to localize the Display attribute of `Name`, `ShortName`, `GroupName`, `Prompt` and `ItemsSource` values.
+Specifies the Resources File (.Resx), which is used to localize the Display attribute of Name, ShortName, GroupName, Prompt and ItemsSource values.
 </td>
 </tr>
 <tr>
@@ -79,8 +79,8 @@ Specifies the order of field in the data form.
 {% tabs %}
 {% highlight C# %}
 
-    [Display(Name = "First Name", GroupName = "Name", Prompt="Enter your name")]
-    public string FirstName { get; set; }
+[Display(Name = "First Name", GroupName = "Name", Prompt="Enter your name")]
+public string FirstName { get; set; }
 
 {% endhighlight %}
 {% endtabs %}
@@ -142,16 +142,7 @@ Specifies the enum type for the data field.
 {% tabs %}
 {% highlight C# %}
 
-    [MinLength(5,ErrorMessage = "Password length must be greater than 5 characters")]
-    public string Password { get; set; }
-
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
-{% highlight C# %}
-
-[MaxLength(20,ErrorMessage = "Maximum password length should be less than 20")]
+[MinLength(5, ErrorMessage = "Password length must be greater than 5 characters")]
 public string Password { get; set; }
 
 {% endhighlight %}
@@ -160,7 +151,16 @@ public string Password { get; set; }
 {% tabs %}
 {% highlight C# %}
 
-[Required(AllowEmptyStrings = false, ErrorMessage ="Name is required")]
+[MaxLength(20, ErrorMessage = "Maximum password length should be less than 20")]
+public string Password { get; set; }
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight C# %}
+
+[Required(AllowEmptyStrings = false, ErrorMessage = "Name is required")]
 public string Name { get; set; }
 
 {% endhighlight %}
@@ -169,7 +169,7 @@ public string Name { get; set; }
 {% tabs %}
 {% highlight C# %}
 
-[StringLength(20,ErrorMessage = "Name should not exceed 20 characters")]
+[StringLength(20, ErrorMessage = "Name should not exceed 20 characters")]
 public string Name { get; set; }
 
 {% endhighlight %}
@@ -224,7 +224,7 @@ public string Name { get; set; }
 {% endhighlight %}
 {% endtabs %}
 
-Note: The `ReadOnlyAttribute` takes higher priority than `EditableAttribute`
+N> The `ReadOnlyAttribute` takes higher priority than `EditableAttribute`
 
 ## DataType attribute
 
@@ -244,7 +244,7 @@ public string Address { get; set; }
 ## Custom attribute
 The data form supports the following custom attribute, and these attributes can be accessed using the `Syncfusion.Maui.DataForm` assembly.
 
-### DataFormDisplayOptions attribute
+#### DataFormDisplayOptions attribute
 
 <table>
 <tr>
@@ -314,7 +314,7 @@ public string Name { get; set; }
 {% endhighlight %}
 {% endtabs %}
 
-### DataFormValueConverter attribute
+#### DataFormValueConverter attribute
 
 Specifies the Converter type, which converts the original value in a different format or as a different value.
 
@@ -327,7 +327,7 @@ public string Name { get; set; }
 {% endhighlight %}
 {% endtabs %}
 
-### DateFormDateRange attribute
+#### DateFormDateRange attribute
 
 <table>
 <tr>

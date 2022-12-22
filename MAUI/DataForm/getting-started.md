@@ -15,7 +15,7 @@ This section provides a quick overview of how to get started with the .NET MAUI 
 
 1. Create a new .NET MAUI application in Visual Studio.
 
-2. Syncfusion .NET MAUI components are available in `nuget.org`. To add the SfDataForm to your project, open the NuGet package manager in Visual Studio, search for `Syncfusion.Maui.DataForm`, then install it.
+2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add the SfDataForm to your project, open the NuGet package manager in Visual Studio, search for `Syncfusion.Maui.DataForm`, then install it.
 
 3. To initialize the control, import the control namespace `Syncfusion.Maui.DataForm` in XAML or C# code.
 
@@ -132,7 +132,7 @@ public class DataFormViewModel
 
 ## Set data object to data form
 
-By default,the data form auto-generates the editors based on the primitive data type in the `DataObject` property. Please refer the following code to set the `DataObject` property.
+By default, the data form auto-generates the editors based on the primitive data type in the `DataObject` property. Please refer the following code to set the `DataObject` property.
 
 {% tabs %}
 {% highlight XAML %}
@@ -153,7 +153,7 @@ By default,the data form auto-generates the editors based on the primitive data 
 {% endhighlight %}
 {% highlight C# %}
 
-dataForm.DataObject = new ContactsInfo();
+this.dataForm.DataObject = new ContactsInfo();
 
 {% endhighlight %}
 {% endtabs %}
