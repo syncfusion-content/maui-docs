@@ -74,8 +74,8 @@ Here, the display attributes or data form item display values get localized base
 {% tabs %}
 {% highlight C# %}
 
-    [Display(Name = "First Name", ShortName = "Name", GroupName = "Details", Prompt = "Type first name", ResourceType = typeof(DataFormLocalization))]
-    public string FirstName { get; set; }
+[Display(Name = "First Name", ShortName = "Name", GroupName = "Details", Prompt = "Type first name", ResourceType = typeof(DataFormLocalization))]
+public string FirstName { get; set; }
 
 {% endhighlight %}
 {% endtabs %}
@@ -94,18 +94,18 @@ public String FirstName { get; set; }
 
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{
+    if (e.DataFormItem?.GroupName == "Details")
     {
-        if (e.DataFormItem?.GroupName == "Details")
-        {
-            e.DataFormItem.GroupName = DataFormLocalization.GroupName;
-        }
-        if (e.DataFormItem.LabelText == "First Name")
-        {
-            e.DataFormItem.LabelText = DataFormLocalization.FirstName;
-            e.DataFormItem.PlaceholderText = DataFormLocalization.PlaceHolder;
-        }
+        e.DataFormItem.GroupName = DataFormLocalization.GroupName;
     }
+    if (e.DataFormItem.LabelText == "First Name")
+    {
+        e.DataFormItem.LabelText = DataFormLocalization.FirstName;
+        e.DataFormItem.PlaceholderText = DataFormLocalization.PlaceHolder;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -121,9 +121,9 @@ The `ValidationAttribute` error message can be localized using [ErrorMessageReso
 {% tabs %}
 {% highlight C# %}
 
-    [Required(ErrorMessage = "Value should not be empty", ErrorMessageResourceName = "ErrorMessage", ErrorMessageResourceType = typeof(DataFormLocalization))]
-    [StringLength(15, ErrorMessage = "Enter proper name", ErrorMessageResourceName ="ErrorMessageLength", ErrorMessageResourceType =typeof(DataFormLocalization))]
-    public string Name { get; set; }
+[Required(ErrorMessage = "Value should not be empty", ErrorMessageResourceName = "ErrorMessage", ErrorMessageResourceType = typeof(DataFormLocalization))]
+[StringLength(15, ErrorMessage = "Enter proper name", ErrorMessageResourceName ="ErrorMessageLength", ErrorMessageResourceType =typeof(DataFormLocalization))]
+public string Name { get; set; }
 
 {% endhighlight %}
 {% endtabs %}
@@ -135,18 +135,18 @@ You can also localize the data form error message and valid message in the  `Val
 {% tabs %}
 {% highlight C# %}
 
-    [DataFormDisplayOptions(ValidMessage = "Text length is enough")]
-    [Required(ErrorMessage = "Enter proper name")]
-    [StringLength(15, ErrorMessage = "Enter proper name")]
-    public string Name { get; set; }
+[DataFormDisplayOptions(ValidMessage = "Text length is enough")]
+[Required(ErrorMessage = "Enter proper name")]
+[StringLength(15, ErrorMessage = "Enter proper name")]
+public string Name { get; set; }
 
 this.dataForm.ValidateProperty += DataForm_ValidateProperty;
 
-    private void DataForm_ValidateProperty(object sender, DataFormValidatePropertyEventArgs e)
-    {
-        e.ErrorMessage = DataFormLocalization.ErrorMessage;
-        e.ValidMessage = DataFormLocalization.ValidMessage;
-    }
+private void DataForm_ValidateProperty(object sender, DataFormValidatePropertyEventArgs e)
+{
+    e.ErrorMessage = DataFormLocalization.ErrorMessage;
+    e.ValidMessage = DataFormLocalization.ValidMessage;
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -159,23 +159,23 @@ You can localize DataForm list items (Picker, AutoComplete, RadioGroup, ComoboBo
 {% tabs %}
 {% highlight C# %}
 
-    [Display(ResourceType = typeof(DataFormLocalization))]
-    public string Gender { get; set; }
+[Display(ResourceType = typeof(DataFormLocalization))]
+public string Gender { get; set; }
 
-    this.dataForm.RegisterEditor("Gender", DataFormEditorType.RadioGroup);
-    this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.dataForm.RegisterEditor("Gender", DataFormEditorType.RadioGroup);
+this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{
+    if (e.DataFormItem?.FieldName == "Gender")
     {
-        if (e.DataFormItem?.FieldName == "Gender")
-        {
-            var list = new List<string>();
-            list.Add("Male");
-            list.Add("Female");
-            list.Add("Other");
-            (e.DataFormItem as DataFormRadioGroupItem).ItemsSource = list;            
-        }
+        var list = new List<string>();
+        list.Add("Male");
+        list.Add("Female");
+        list.Add("Other");
+        (e.DataFormItem as DataFormRadioGroupItem).ItemsSource = list;            
     }
+}
 
 {% endhighlight %}
 {% endtabs %}

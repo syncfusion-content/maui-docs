@@ -15,7 +15,7 @@ documentation: ug
 {% highlight XAML %}
 <ContentPage 
 ...
-             xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
+xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
     <dataForm:SfDataForm
         x:Name="dataForm"
         FlowDirection="RightToLeft">
