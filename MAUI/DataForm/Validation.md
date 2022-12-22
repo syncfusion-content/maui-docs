@@ -24,14 +24,12 @@ The String type property is validated using the [Required](https://docs.microsof
 {% tabs %}
 {% highlight C# %}
 
-    [Required(AllowEmptyStrings = false, ErrorMessage = "Name should not be empty")]
-    [StringLength(15, ErrorMessage = "Name should not exceed 15 characters")]
-    public string Name { get; set; }
+[Required(AllowEmptyStrings = false, ErrorMessage = "Name should not be empty")]
+[StringLength(15, ErrorMessage = "Name should not exceed 15 characters")]
+public string Name { get; set; }
 
 {% endhighlight %}
 {% endtabs %}
-
-Refer to this `link` to learn more about data annotations in SfDataForm.
 
 #### Date range attribute
 
@@ -40,16 +38,16 @@ Validate the date time value using the date range attribute.
 {% tabs %}
 {% highlight C# %}
 
-    [DataType(DataType.Date)]
-    [DataFormDateRange(MinimumDate = "01/01/2022", MaximumDate = "31/12/2022", ErrorMessage = "Join date is invalid")]
-    public DateTime JoinDate { get; set; }
+[DataType(DataType.Date)]
+[DataFormDateRange(MinimumDate = "01/01/2022", MaximumDate = "31/12/2022", ErrorMessage = "Join date is invalid")]
+public DateTime JoinDate { get; set; }
 
 {% endhighlight %}
 {% endtabs %}
 
 ## Validation mode
 
-The [ValidationMode] determines when the value should be validated.
+The `ValidationMode` determines when the value should be validated.
 
 The supported validation modes are as follows:
 
@@ -61,12 +59,11 @@ The supported validation modes are as follows:
 {% highlight XAML %}
 <ContentPage 
 ...
-             xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
+xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
     <dataForm:SfDataForm
         x:Name="dataForm" 
         ValidationMode="LostFocus">
     </dataForm:SfDataForm>
-
 </ContentPage>
 
 {% endhighlight %}
@@ -114,11 +111,11 @@ Determine whether the data form or property is valid by using the `Validate` met
 {% tabs %}
 {% highlight C# %}
 
-        bool isValid = this.dataForm.Validate();
+bool isValid = this.dataForm.Validate();
 
-        List<string> propertyNames = new List<string>();
-        propertyNames.Add("FirstName");
-        bool isPropertyValid = this.dataForm.Validate(propertyNames);
+List<string> propertyNames = new List<string>();
+propertyNames.Add("FirstName");
+bool isPropertyValid = this.dataForm.Validate(propertyNames);
 
 {% endhighlight %}
 {% endtabs %}
@@ -132,10 +129,10 @@ If the values are correct, show the `ValidMessage` like an error message, the va
 {% tabs %}
 {% highlight C# %}
 
-    [DataFormDisplayOptions(ValidMessage = "Password strength is good")]
-    [Required(ErrorMessage = "Please enter the password")]
-    [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d]{8,}$", ErrorMessage = "A minimum 8-character password should contain a combination of uppercase and lowercase letters.")]
-    public string Password { get; set; }
+[DataFormDisplayOptions(ValidMessage = "Password strength is good")]
+[Required(ErrorMessage = "Please enter the password")]
+[RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d]{8,}$", ErrorMessage = "A minimum 8-character password should contain a combination of uppercase and lowercase letters.")]
+public string Password { get; set; }
 
 {% endhighlight %}
 {% endtabs %}
@@ -151,12 +148,12 @@ N> This event will be raised once after the manual validation call using the `Sf
 
 this.dataForm.ValidateForm += this.OnDataFormValidateForm;
 
-    private void OnDataFormValidateForm(object sender, DataFormValidateFormEventArgs e)
-    {
-        object dataObject = e.DataObject;
-        var values = e.NewValues;
-        var errorMessage = e.ErrorMessage;
-    }
+private void OnDataFormValidateForm(object sender, DataFormValidateFormEventArgs e)
+{
+    object dataObject = e.DataObject;
+    var values = e.NewValues;
+    var errorMessage = e.ErrorMessage;
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -170,15 +167,15 @@ The `ValidateProperty` event allows you to validate specific editors in the data
 
 this.dataForm.ValidateProperty += this.OnDataFormValidateProperty;
 
-    private void OnDataFormValidateProperty(object sender, DataFormValidatePropertyEventArgs e)
-    {
-        bool isValid = e.IsValid;
-        string propertyName = e.PropertyName;
-        object newValue = e.NewValue;
-        object currentValue = e.CurrentValue;
-        string errorMessage = e.ErrorMessage;
-        string validMessage = e.ValidMessage;
-    }
+private void OnDataFormValidateProperty(object sender, DataFormValidatePropertyEventArgs e)
+{
+    bool isValid = e.IsValid;
+    string propertyName = e.PropertyName;
+    object newValue = e.NewValue;
+    object currentValue = e.CurrentValue;
+    string errorMessage = e.ErrorMessage;
+    string validMessage = e.ValidMessage;
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -194,12 +191,12 @@ The `error label style` can be customized by changing the `ErrorLabelTextStyle` 
 {% tabs %}
 {% highlight XAML %}
 
-    <dataForm:SfDataForm
-        x:Name="dataForm">
-        <dataForm:SfDataForm.ErrorLabelTextStyle>
-            <dataForm:DataFormTextStyle FontSize="10" FontAttributes="Italic" TextColor="Violet" FontFamily="Roboto"/>
-        </dataForm:SfDataForm.ErrorLabelTextStyle>
-    </dataForm:SfDataForm>
+<dataForm:SfDataForm
+    x:Name="dataForm">
+    <dataForm:SfDataForm.ErrorLabelTextStyle>
+        <dataForm:DataFormTextStyle FontSize="10" FontAttributes="Italic" TextColor="Violet" FontFamily="Roboto"/>
+    </dataForm:SfDataForm.ErrorLabelTextStyle>
+</dataForm:SfDataForm>
 
 {% endhighlight %}
 {% endtabs %}
@@ -211,21 +208,21 @@ Also, customize the `error label style` for each editor using the `ErrorLabelTex
 
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
- private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
 {
-        if (e.DataFormItem != null)
+    if (e.DataFormItem != null)
+    {
+        if (e.DataFormItem.FieldName == "FirstName")
         {
-            if (e.DataFormItem.FieldName == "FirstName")
+            e.DataFormItem.ErrorLabelTextStyle = new DataFormTextStyle
             {
-                e.DataFormItem.ErrorLabelTextStyle = new DataFormTextStyle
-                {
-                    TextColor = Colors.DarkSeaGreen,
-                    FontSize = 8,
-                    FontAttributes = FontAttributes.Italic,
-                    FontFamily = "Roboto",
-                };
-            }
+                TextColor = Colors.DarkSeaGreen,
+                FontSize = 8,
+                FontAttributes = FontAttributes.Italic,
+                FontFamily = "Roboto",
+            };
         }
+    }
 }
 
 {% endhighlight %}
@@ -238,12 +235,12 @@ The `valid message label style` can be customized by changing the `ValidMessageL
 {% tabs %}
 {% highlight XAML %}
 
-        <dataForm:SfDataForm
-        x:Name="dataForm">
-        <dataForm:SfDataForm.ValidMessageLabelTextStyle>
-            <dataForm:DataFormTextStyle FontSize="10" FontAttributes="Italic" TextColor="Violet" FontFamily="Roboto"/>
-        </dataForm:SfDataForm.ValidMessageLabelTextStyle>
-    </dataForm:SfDataForm>
+<dataForm:SfDataForm
+    x:Name="dataForm">
+    <dataForm:SfDataForm.ValidMessageLabelTextStyle>
+        <dataForm:DataFormTextStyle FontSize="10" FontAttributes="Italic" TextColor="Violet" FontFamily="Roboto"/>
+    </dataForm:SfDataForm.ValidMessageLabelTextStyle>
+</dataForm:SfDataForm>
 
 {% endhighlight %}
 {% endtabs %}
@@ -255,21 +252,21 @@ Also, customize the `valid message label style` for each editor using the `Valid
 
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
- private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
 {
-        if (e.DataFormItem != null)
+    if (e.DataFormItem != null)
+    {
+        if (e.DataFormItem.FieldName == "FirstName")
         {
-            if (e.DataFormItem.FieldName == "FirstName")
+            e.DataFormItem.ValidMessageLabelTextStyle = new DataFormTextStyle
             {
-                e.DataFormItem.ValidMessageLabelTextStyle = new DataFormTextStyle
-                {
-                    TextColor = Colors.DarkSeaGreen,
-                    FontSize = 8,
-                    FontAttributes = FontAttributes.Italic,
-                    FontFamily = "Roboto",
-                };
-            }
+                TextColor = Colors.DarkSeaGreen,
+                FontSize = 8,
+                FontAttributes = FontAttributes.Italic,
+                FontFamily = "Roboto",
+            };
         }
+    }
 }
 
 {% endhighlight %}

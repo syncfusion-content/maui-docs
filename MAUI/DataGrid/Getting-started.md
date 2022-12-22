@@ -74,7 +74,6 @@ namespace GettingStarted
                 });
 
            builder.ConfigureSyncfusionCore();
-           builder.ConfigureSyncfusionDataGrid();
            return builder.Build();
         }
     }
