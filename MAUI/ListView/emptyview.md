@@ -11,8 +11,8 @@ documentation: ug
 
 The `SfListView` allows to display and customize empty view content when there is no data available to display using the following properties,
 
- * `EmptyView` object can be set to a string or view when `SfListView` has no items. The default value is null.
- * `EmptyViewTemplate` is used to customize the appearance of `EmptyView`. The default value is null.
+ * [SfListView.EmptyView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_EmptyView) object can be set to a string or view when `SfListView` has no items. The default value is null.
+ * [SfListView.EmptyViewTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_EmptyViewTemplate) is used to customize the appearance of [SfListView.EmptyView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_EmptyView). The default value is null.
 
 ## Display a string when ListView has no items
 
