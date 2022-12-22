@@ -47,7 +47,7 @@ When the backdrop page is placed in the [FlyoutPage](https://learn.microsoft.com
 
 ### Custom icons
 
-Customize the default icons in the navigation header by setting the `OpenIconImageSource` and `CloseIconImageSource` properties in the `SfBackdropPage.` It accepts following inputs:
+Customize the default icons in the navigation header by setting the [`OpenIconImageSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html#Syncfusion_Maui_Backdrop_SfBackdropPage_OpenIconImageSource) and [`CloseIconImageSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html#Syncfusion_Maui_Backdrop_SfBackdropPage_CloseIconImageSource) properties in the [`SfBackdropPage`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html). It accepts following inputs:
 * FileImageSource
 * UriImageSource
 * StreamImageSource
@@ -92,7 +92,7 @@ public partial class BackdropSamplePage : SfBackdropPage
  
 ## Icon text customization
 
-Customize the icon text in the navigation header by setting the `OpenText` and `CloseText` properties in the `SfBackdropPage.`
+Customize the icon text in the navigation header by setting the [`OpenText`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html#Syncfusion_Maui_Backdrop_SfBackdropPage_OpenText) and [`CloseText`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html#Syncfusion_Maui_Backdrop_SfBackdropPage_CloseText) properties in the [`SfBackdropPage`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html).
 
 {% tabs %} 
 

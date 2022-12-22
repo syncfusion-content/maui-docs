@@ -40,16 +40,16 @@ public class ContactsInfo
 
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{
+    if (e.DataFormItem != null)
     {
-        if (e.DataFormItem != null)
+        if (e.DataFormItem.FieldName == "FirstName" || e.DataFormItem.FieldName == "MiddleName" || e.DataFormItem.FieldName == "LastName")
         {
-            if (e.DataFormItem.FieldName == "FirstName" || e.DataFormItem.FieldName == "MiddleName" || e.DataFormItem.FieldName == "LastName")
-            {
-                e.DataFormItem.GroupName = "Name";
-            }
+            e.DataFormItem.GroupName = "Name";
         }
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -112,24 +112,24 @@ The order of the editors in the group can also be changed by handling the `Gener
 
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{
+    if (e.DataFormItem != null)
     {
-        if (e.DataFormItem != null)
+        if (e.DataFormItem.FieldName == "FirstName")
         {
-            if (e.DataFormItem.FieldName == "FirstName")
-            {
-                e.DataFormItem.RowOrder = 0;
-            }
-            else if (e.DataFormItem.FieldName == "LastName")
-            {
-                e.DataFormItem.RowOrder = 2;
-            }
-            else if (e.DataFormItem.FieldName == "MiddleName")
-            {
-                e.DataFormItem.RowOrder = 1;
-            }
+            e.DataFormItem.RowOrder = 0;
+        }
+        else if (e.DataFormItem.FieldName == "LastName")
+        {
+            e.DataFormItem.RowOrder = 2;
+        }
+        else if (e.DataFormItem.FieldName == "MiddleName")
+        {
+            e.DataFormItem.RowOrder = 1;
         }
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -141,28 +141,31 @@ The order of the group's editors in a grid row can be changed within a row by us
 {% tabs %}
 {% highlight C# %}
 
-    [Display(GroupName = "Name")]
-    [DataFormDisplayOptions(RowOrder = 0, ItemsOrderInRow = 0)]
-    public string FirstName { get; set; }
+[Display(GroupName = "Name")]
+[DataFormDisplayOptions(RowOrder = 0, ItemsOrderInRow = 0)]
+public string FirstName { get; set; }
 
-    [Display(GroupName = "Name")]
-    [DataFormDisplayOptions(RowOrder = 0, ItemsOrderInRow = 2)]
-    public string LastName { get; set; }
+[Display(GroupName = "Name")]
+[DataFormDisplayOptions(RowOrder = 0, ItemsOrderInRow = 2)]
+public string LastName { get; set; }
 
-    [Display(GroupName = "Name")]
-    [DataFormDisplayOptions(RowOrder = 0, ItemsOrderInRow = 1)]
-    public string MiddleName { get; set; }
+[Display(GroupName = "Name")]
+[DataFormDisplayOptions(RowOrder = 0, ItemsOrderInRow = 1)]
+public string MiddleName { get; set; }
 
 {% endhighlight %}
 {% highlight C# %}
 
-        if (e.DataFormGroupItem != null)
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{
+    if (e.DataFormGroupItem != null)
+    {
+        if (e.DataFormGroupItem.Name == "Name")
         {
-            if (e.DataFormGroupItem.Name == "Name")
-            {
-                e.DataFormGroupItem.ColumnCount = 3;
-            }
+            e.DataFormGroupItem.ColumnCount = 3;
         }
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -176,19 +179,16 @@ The `GroupName` for the group can be changed in the `GenerateDataFormItem` event
 
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-       private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{
+    if (e.DataFormItem != null)
     {
-        if (e.DataFormItem != null)
+        if (e.DataFormItem.GroupName == "Name")
         {
-            if (e.DataFormItem != null)
-            {
-                if (e.DataFormItem.GroupName == "Name")
-                {
-                    e.DataFormItem.GroupName = "Name Group";
-                }
-            }
+            e.DataFormItem.GroupName = "Name Group";
         }
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -225,20 +225,20 @@ public class ContactsInfo
 this.dataForm.DataObject = new ContactsInfo();
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{
+    if (e.DataFormGroupItem != null)
     {
-        if (e.DataFormGroupItem != null)
+        if (e.DataFormGroupItem.Name == "Name")
         {
-            if (e.DataFormGroupItem.GroupName == "Name")
-            {
-                e.DataFormGroupItem.ColumnCount = 3;
-            }
-            else if (e.DataFormGroupItem.GroupName == "Details")
-            {
-                e.DataFormGroupItem.ColumnCount = 2;
-            }
+            e.DataFormGroupItem.ColumnCount = 3;
+        }
+        else if (e.DataFormGroupItem.Name == "Details")
+        {
+            e.DataFormGroupItem.ColumnCount = 2;
         }
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -252,16 +252,16 @@ By default, the group will be loaded in the expanded state. Collapse the group b
 
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{
+    if (e.DataFormGroupItem != null)
     {
-        if (e.DataFormGroupItem != null)
+        if (e.DataFormGroupItem.Name == "Name")
         {
-            if (e.DataFormGroupItem.Name == "Name")
-            {
-                e.DataFormGroupItem.IsExpanded = false;
-            }
+            e.DataFormGroupItem.IsExpanded = false;
         }
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -275,16 +275,16 @@ The group being expanded or collapsed can be restricted by setting the `AllowExp
 
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{
+    if (e.DataFormGroupItem != null)
     {
-        if (e.DataFormGroupItem != null)
+        if (e.DataFormGroupItem.Name == "Name")
         {
-            if (e.DataFormGroupItem.Name == "Name")
-            {
-                e.DataFormGroupItem.AllowExpandCollapse = false;
-            }
+            e.DataFormGroupItem.AllowExpandCollapse = false;
         }
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -298,16 +298,16 @@ The data form group visibility can be changed by using the `IsVisible` property 
 
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{
+    if (e.DataFormGroupItem != null)
     {
-        if (e.DataFormGroupItem != null)
+        if (e.DataFormGroupItem.Name == "Name")
         {
-            if (e.DataFormGroupItem.Name == "Name")
-            {
-                e.DataFormGroupItem.IsVisible = false;
-            }
+            e.DataFormGroupItem.IsVisible = false;
         }
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -323,16 +323,16 @@ The data form group header background can be changed by using the `HeaderBackgro
 
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{
+    if (e.DataFormGroupItem != null)
     {
-        if (e.DataFormGroupItem != null)
+        if (e.DataFormGroupItem.Name == "Name")
         {
-            if (e.DataFormGroupItem.GroupName == "Name")
-            {
-                e.DataFormGroupItem.HeaderBackground = Brush.Yellow;
-            }
+            e.DataFormGroupItem.HeaderBackground = Brush.Yellow;
         }
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -346,21 +346,21 @@ The data form group header text style can be changed by using the `HeaderTextSty
 
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{
+    if (e.DataFormGroupItem != null)
     {
-        if (e.DataFormGroupItem != null)
+        if (e.DataFormGroupItem.Name == "Name")
         {
-            if (e.DataFormGroupItem.GroupName == "Name")
+            e.DataFormGroupItem.HeaderTextStyle = new DataFormTextStyle
             {
-                e.DataFormGroupItem.HeaderTextStyle = new DataFormTextStyle
-                {
-                    TextColor = Colors.Violet,
-                    FontSize = 12,
-                    FontAttributes = FontAttributes.Italic,
-                };
-            }
+                TextColor = Colors.Violet,
+                FontSize = 12,
+                FontAttributes = FontAttributes.Italic,
+            };
         }
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -374,13 +374,13 @@ The distance between editors and the data form’s borders or group headers can 
 
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{
+    if (e.DataFormGroupItem.Name == "Name")
     {
-        if (e.DataFormGroupItem.GroupName == "Name")
-        {
-            e.DataFormGroupItem.ItemsPadding = 20;
-        }
+        e.DataFormGroupItem.ItemsPadding = 20;
     }
+}
 
 {% endhighlight %}
 {% endtabs %}

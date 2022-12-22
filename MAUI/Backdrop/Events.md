@@ -11,9 +11,9 @@ documentation: ug
 
 ## BackLayerStateChanged event
 
-The `BackLayerStateChanged` event occurs when the backdrop page back layer is revealed and concealed. The event occurs in the cases mentioned in this `documentation.` This event contains the following argument.
+The [`BackLayerStateChanged`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html#Syncfusion_Maui_Backdrop_SfBackdropPage_BackLayerStateChanged) event occurs when the backdrop page back layer is revealed and concealed. The event occurs in the cases mentioned in this [`documentation`](https://help.syncfusion.com/maui/backdrop/getting-started#reveal-and-conceal-the-back-layer). This event contains the following argument.
 
-- `Percentage:` Represents the FrontLayer revealed height percentage.
+- [`Percentage:`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.BackLayerStateChangedEventArgs.html#Syncfusion_Maui_Backdrop_BackLayerStateChangedEventArgs_Percentage) Represents the FrontLayer revealed height percentage.
 
 {% tabs %} 
 
