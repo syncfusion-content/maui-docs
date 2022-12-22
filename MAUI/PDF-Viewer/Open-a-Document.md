@@ -107,5 +107,6 @@ private void PdfViewer_DocumentLoadFailed(object sender, DocumentLoadFailedEvent
 
 ## Check other options for opening a PDF document
 
+* Open a document from local storage
 * Open a document from URL
 * Open a password-protected document
