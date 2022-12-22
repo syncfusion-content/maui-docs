@@ -151,7 +151,6 @@ private void DataForm_ValidateProperty(object sender, DataFormValidatePropertyEv
 {% endhighlight %}
 {% endtabs %}
 
-
 ## Localizing data form picker editors
 
 You can localize DataForm list items (Picker, AutoComplete, RadioGroup, ComoboBox) `ItemsSource` using ResourceType property of [Display](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute?view=net-7.0) attribute.
