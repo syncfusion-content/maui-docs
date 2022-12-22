@@ -93,12 +93,7 @@ chart.TooltipBehavior = new ChartTooltipBehavior()
                        FontAttributes="Bold"
                        HorizontalOptions="Center"
                        VerticalOptions="Center"/>
-                <Label Text=" : " 
-                       TextColor="White"
-                       FontAttributes="Bold"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center"/>
-                <Label Text="{Binding Item.YValue}"
+                <Label Text=Text="{Binding Item.YValue,StringFormat=': {0}'}"
                        TextColor="White"
                        FontAttributes="Bold"
                        HorizontalOptions="Center"
