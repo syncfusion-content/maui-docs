@@ -15,7 +15,7 @@ The data form supports the following built-in editors to edit the data:
 <tr>
 <th>Editor name</th>
 <th>Generated DataFormItem Type</th>
-<th>Supported Data Type/Attribute</th>
+<th>Supported Data Type / Attribute</th>
 <th>Input control loaded</th>
 </tr>
 <tr>
@@ -69,7 +69,7 @@ Date
 DataFormDateItem
 </td>
 <td>
-DateTime, DateOnly, or DateTimeOffset type property or the property with [DataType(DataType.Date)] or [DataType(DataType.DateTime)] attributes.
+The DateTime, DateOnly, and DateTimeOffset type property or the properties with [DataType(DataType.Date)] or [DataType(DataType.DateTime)] attributes.
 </td>
 <td>
 {{'[DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/datepicker?view=net-maui-7.0)'| markdownify }}
@@ -83,7 +83,7 @@ Time
 DataFormTimeItem
 </td>
 <td>
-The TimeSpan and TimeOnly type property or the property with [DataType(DataType.Time)] attribute.
+The TimeSpan and TimeOnly type property or the properties with [DataType(DataType.Time)] attribute.
 </td>
 <td>
 {{'[TimePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/timepicker?view=net-maui-7.0&tabs=windows)'| markdownify }}
@@ -189,7 +189,7 @@ By default, the editors will be loaded based on the primitive data type such as 
 
 Here, the `MultilineText` editor will be loaded for the string type instead of the `Text` editor.
 
-## Change the editor for property
+## Change the editor for a property
 
 To change the editor for any property, use the `RegisterEditor` method and specify the property name and editor.
 
@@ -221,7 +221,7 @@ In `Text`, `MultilineText` and `Password` editors you can change the soft input 
 {% tabs %}
 {% highlight C# %}
 
-    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+    this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
     private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {   
@@ -234,11 +234,12 @@ In `Text`, `MultilineText` and `Password` editors you can change the soft input 
 {% endhighlight %}
 {% endtabs %}
 
-In `Text`, `MultilineText`, and `Password` editors you can set the maximum allowed length of input by using the MaxLength property of `DataFormTextEditorItem`.
+In `Text`, `MultilineText`, and `Password` editors you can set the maximum allowed length of input by using the `MaxLength` property of `DataFormTextEditorItem`.
+
 {% tabs %}
 {% highlight C# %}
 
-    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+    this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
     private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {   
@@ -299,12 +300,12 @@ In the date editor, the default date value will be the current date. You can als
 
 #### Change the format of the date editor
 
-In the [DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/datepicker?view=net-maui-7.0),the short date will be shown by default. You can change the applied format by setting the `Format`property in `DataFormDateItem`.
+In the [DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/datepicker?view=net-maui-7.0), the short date will be shown by default. You can change the applied format by setting the `Format` property in `DataFormDateItem`.
 
 {% tabs %}
 {% highlight C# %}
 
-    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+    this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
     private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {   
@@ -323,7 +324,7 @@ You can customize the maximum and minimum allowable dates in the [DatePicker](ht
 {% tabs %}
 {% highlight C# %}
 
-    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+    this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
     private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
@@ -355,14 +356,14 @@ In the time editor, by default (12:00 AM) will be displayed.
 {% endtabs %}
 
 
-#### Change the format of time editor**
+#### Change the format of time editor
 
-In the time editor, a short time will be shown by default. You can change the applied format by setting the `Format`property in `DataFormTimeItem`.
+In the time editor, a short time will be shown by default. You can change the applied format by setting the `Format` property in `DataFormTimeItem`.
 
 {% tabs %}
 {% highlight C# %}
 
-    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+    this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
     private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
@@ -398,7 +399,7 @@ By default, the checkbox color is blue. You can change the checkbox color by usi
 {% tabs %}
 {% highlight C# %}
 
-    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+    this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
     
     private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
@@ -420,8 +421,8 @@ To add a switch editor in DataForm, register the editor as `DataFormEditorType.S
 {% tabs %}
 {% highlight C# %}
 
-       dataForm.RegisterEditor("CellularData", DataFormEditorType.Switch);
-       dataForm.RegisterEditor("AirplaneMode", DataFormEditorType.Switch);
+       this.dataForm.RegisterEditor("CellularData", DataFormEditorType.Switch);
+       this.dataForm.RegisterEditor("AirplaneMode", DataFormEditorType.Switch);
 
         [Display(Name ="Cellular Data")]
         public bool CellularData { get; set; } = true;
@@ -439,7 +440,7 @@ You can change the thumb color by using the `ThumbColor` property in the `DataFo
 {% tabs %}
 {% highlight C# %}
 
-    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+    this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
     private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
@@ -459,7 +460,7 @@ You can change the switch on color by using the `OnColor` property in the `DataF
 {% tabs %}
 {% highlight C# %}
 
-    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+    this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
     private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
@@ -474,7 +475,7 @@ You can change the switch on color by using the `OnColor` property in the `DataF
 
 ## Combo Box editor
 
-In the Combo Box editor, the [SfComboBox](https://help.syncfusion.com/maui/combobox)  will be loaded.
+In the Combo Box editor, the [SfComboBox](https://help.syncfusion.com/maui/combobox) will be loaded.
 
 #### Changing the ItemsSource of combo box
 
@@ -499,13 +500,16 @@ By default, the `ItemsSource` for SfComboBox is auto-generated for enum types pr
                     "Japan",
                     "India"
                 };
+
                 return list;
             }
+
             return new List<string>();
         }
     }
-    dataForm.ItemsSourceProvider = new DataFormItemsSourceProvider();
-    dataForm.RegisterEditor("Country", DataFormEditorType.ComboBox);
+
+    this.dataForm.ItemsSourceProvider = new DataFormItemsSourceProvider();
+    this.dataForm.RegisterEditor("Country", DataFormEditorType.ComboBox);
 
 {% endhighlight %}
 {% endtabs %}
@@ -517,7 +521,7 @@ You can also set the `ItemsSource` for combo box editor by using the `GenerateDa
 {% tabs %}
 {% highlight C# %}
 
-    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+    this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
     private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
@@ -537,7 +541,6 @@ You can also set the `ItemsSource` for combo box editor by using the `GenerateDa
 {% endhighlight %}
 {% endtabs %}
 
-
 #### Enabling editing mode in combobox
 
 By default, in the combobox editor, you can select a needed item by scrolling the whole list of items.
@@ -547,7 +550,7 @@ You can filter a particular item in the list using the `IsEditable` property. Th
 {% tabs %}
 {% highlight C# %}
 
-    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+    this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
     private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
@@ -565,7 +568,6 @@ You can filter a particular item in the list using the `IsEditable` property. Th
 The string comparison for filtering suggestions can be changed using the `TextSearchMode` property of `DataFormComboBoxItem`. The default text search strategy is “StartsWith,” and it is case insensitive. The available text search modes are;
 
 * StartsWith
-
 * Contains
 
 **Searching words that starts with the input text**
@@ -575,7 +577,7 @@ Displays all the matches that contain the first character of the typed character
 {% tabs %}
 {% highlight C# %}
 
-    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+    this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
     private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
@@ -595,7 +597,7 @@ Displays all the matches that contain the typed characters in items source of th
 {% tabs %}
 {% highlight C# %}
 
-    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+    this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
     private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
@@ -615,7 +617,7 @@ By default, the combo box drop down list item height is `400d`. You can change t
 {% tabs %}
 {% highlight C# %}
 
-    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+    this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
     private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
@@ -637,10 +639,10 @@ N> Class cannot be directly set as data type for combo box editor in this comple
 {% tabs %}
 {% highlight C# %}
 
-    dataForm.ItemsSourceProvider = new DataFormItemsSourceProvider();
-    dataForm.DataObject = new ContactInfo();
-    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
-    dataForm.RegisterEditor("EmployeeDetails", DataFormEditorType.ComboBox);
+    this.dataForm.ItemsSourceProvider = new DataFormItemsSourceProvider();
+    this.dataForm.DataObject = new ContactInfo();
+    this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+    this.dataForm.RegisterEditor("EmployeeDetails", DataFormEditorType.ComboBox);
  
     private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
@@ -670,7 +672,8 @@ N> Class cannot be directly set as data type for combo box editor in this comple
 
                 return details;
             }
-        return new List<string>();
+
+            return new List<string>();
         }
     }
 
@@ -726,13 +729,16 @@ By default, the `ItemsSource` for `AutoComplete` editor is auto-generated for en
                     "United Kingdom"
                     "United States"
                 };
+
                 return list;
             }
+
             return new List<string>();
         }
     }
-    dataForm.ItemsSourceProvider = new DataFormItemsSourceProvider();
-    dataForm.RegisterEditor("Country", DataFormEditorType.AutoComplete);
+
+    this.dataForm.ItemsSourceProvider = new DataFormItemsSourceProvider();
+    this.dataForm.RegisterEditor("Country", DataFormEditorType.AutoComplete);
 
 {% endhighlight %}
 {% endtabs %}
@@ -745,8 +751,8 @@ You can also set `ItemsSource` for autocomplete editor by using the `ItemsSource
 {% tabs %}
 {% highlight C# %}
 
-    dataForm.RegisterEditor("Country", DataFormEditorType.AutoComplete);
-    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+    this.dataForm.RegisterEditor("Country", DataFormEditorType.AutoComplete);
+    this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
     private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
@@ -781,10 +787,10 @@ N> Class cannot be directly set as data type for autocomplete editor in this com
 {% tabs %}
 {% highlight C# %}
 
-    dataForm.ItemsSourceProvider = new DataFormItemsSourceProvider();
-    dataForm.DataObject = new ContactInfo();
-    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
-    dataForm.RegisterEditor("EmployeeDetails", DataFormEditorType.ComboBox);
+    this.dataForm.ItemsSourceProvider = new DataFormItemsSourceProvider();
+    this.dataForm.DataObject = new ContactInfo();
+    this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+    this.dataForm.RegisterEditor("EmployeeDetails", DataFormEditorType.ComboBox);
  
     private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
@@ -814,7 +820,8 @@ N> Class cannot be directly set as data type for autocomplete editor in this com
 
                 return details;
             }
-        return new List<string>();
+
+            return new List<string>();
         }
     }
 
@@ -834,13 +841,11 @@ N> Class cannot be directly set as data type for autocomplete editor in this com
 {% endhighlight %}
 {% endtabs %}
 
-
 #### AutoComplete editor suggestion options
 
 The string comparison for filtering suggestions can be changed using the `TextSearchMode` property of `DataFormAutoCompleteItem`. The default text search strategy is “StartsWith,” and it is case insensitive. The available text search modes are;
 
 * StartsWith
-
 * Contains
 
 **Filtering words that starts with the input text**
@@ -850,7 +855,7 @@ Displays all the matches that contain first character of the typed characters in
 {% tabs %}
 {% highlight C# %}
 
-    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+    this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
     private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
@@ -870,7 +875,7 @@ Displays all the matches that contain the typed characters in items source of au
 {% tabs %}
 {% highlight C# %}
 
-    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+    this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
     private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
@@ -890,7 +895,7 @@ By default the autocomplete drop down list item height is `400d`. You can change
 {% tabs %}
 {% highlight C# %}
 
-    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+    this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
     private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
@@ -903,11 +908,9 @@ By default the autocomplete drop down list item height is `400d`. You can change
 {% endhighlight %}
 {% endtabs %}
 
-
 ## Picker editor
 
 In the picker editor, the [Picker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/picker?view=net-maui-7.0) will be loaded.
-
 
 #### Changing the ItemsSource of Picker
 
@@ -938,8 +941,9 @@ By default, the `ItemsSource` for the picker is auto-generated for the enum type
             return new List<string>();
         }
     }
-    dataForm.ItemsSourceProvider = new DataFormItemsSourceProvider();
-    dataForm.RegisterEditor("Country", DataFormEditorType.Picker);
+
+    this.dataForm.ItemsSourceProvider = new DataFormItemsSourceProvider();
+    this.dataForm.RegisterEditor("Country", DataFormEditorType.Picker);
 
 {% endhighlight %}
 {% endtabs %}
@@ -951,7 +955,7 @@ You can also set `ItemsSource` for the picker editor by using the `ItemsSource` 
 {% tabs %}
 {% highlight C# %}
 
-    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+    this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
     private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
@@ -980,10 +984,10 @@ N> Class cannot be directly set as data type for picker editor in this complex t
 {% tabs %}
 {% highlight C# %}
 
-    dataForm.ItemsSourceProvider = new DataFormItemsSourceProvider();
-    dataForm.DataObject = new ContactInfo();
-    dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
-    dataForm.RegisterEditor("EmployeeDetails", DataFormEditorType.Picker);
+    this.dataForm.ItemsSourceProvider = new DataFormItemsSourceProvider();
+    this.dataForm.DataObject = new ContactInfo();
+    this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+    this.dataForm.RegisterEditor("EmployeeDetails", DataFormEditorType.Picker);
  
     private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
@@ -1013,7 +1017,8 @@ N> Class cannot be directly set as data type for picker editor in this complex t
 
                 return details;
             }
-        return new List<string>();
+
+            return new List<string>();
         }
     }
 
@@ -1033,7 +1038,6 @@ N> Class cannot be directly set as data type for picker editor in this complex t
 {% endhighlight %}
 {% endtabs %}
 
-
 ## RadioGroup editor
 
 In the [RadioGroup](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/radiobutton?view=net-maui-7.0) editor, the [RadioButton](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/radiobutton?view=net-maui-7.0) control is loaded.
@@ -1047,7 +1051,7 @@ For the `enum` data type property, [RadioButon](https://learn.microsoft.com/en-u
 {% tabs %}
 {% highlight C# %}
 
-    dataForm.RegisterEditor("Phone", DataFormEditorType.RadioGroup);
+    this.dataForm.RegisterEditor("Phone", DataFormEditorType.RadioGroup);
 
     public Numbers Phone  { get; set; }
 
@@ -1068,8 +1072,8 @@ For the `List` data type property, you have to set the `ItemsSource` by using th
 {% tabs %}
 {% highlight C# %}
 
-    dataForm.RegisterEditor("Phone", DataFormEditorType.RadioGroup);
-    dataForm.ItemsSourceProvider = new DataFormItemsSourceProvider();
+    this.dataForm.RegisterEditor("Phone", DataFormEditorType.RadioGroup);
+    this.dataForm.ItemsSourceProvider = new DataFormItemsSourceProvider();
 
     public string Phone  { get; set; }
 
@@ -1097,83 +1101,93 @@ To add a custom editor in DataForm, register the editor with a custom regist
 
 #### Creating custom editor using IDataFormEditor 
 
-Views such as labels, buttons, and sliders can be loaded into the custom editor. Here, the entry is loaded as a custom editor for the `PhoneNumer` property.
-
-#### Below mentioned example code for the Numeric editor which accepts only numbers 
+Views such as labels, buttons, and sliders can be loaded into the custom editor. The custom editor should be registered for a property using `RegisterEditor` method.
 
 {% tabs %}
 {% highlight C# %}
 
-    dataForm.RegisterEditor("PhoneNumber", new NumericEditor(dataForm));
+this.dataForm.RegisterEditor("FieldName", new CustomEditor());
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Below mentioned example code for the Numeric editor which accepts only numbers 
+
+Here, the entry is loaded as a custom editor for the `PhoneNumer` property.
+
+{% tabs %}
+{% highlight C# %}
+
+    this.dataForm.RegisterEditor("PhoneNumber", new NumericEditor(dataForm));
     
     public class NumericTextEditor : IDataFormEditor 
     { 
         private SfDataForm dataForm;
+        private DataFormCustomItem? dataFormCustomItem;
 
-            private DataFormCustomItem? dataFormCustomItem;
-
-    public NumericEditor(SfDataForm dataForm)
-    {
-        this.dataForm = dataForm;
-    }
-
-    public View CreateEditorView(DataFormItem dataFormItem) 
-    { 
-        Entry inputView = new Entry();
-        inputView.Keyboard = Keyboard.Numeric;
-        inputView.Placeholder = dataFormItem.PlaceholderText;
-        DataFormTextStyle textStyle = dataForm.EditorTextStyle;
-        inputView.TextColor = textStyle.TextColor;
-        inputView.FontSize = textStyle.FontSize;
-        inputView.FontFamily = textStyle.FontFamily;
-        inputView.FontAttributes = textStyle.FontAttributes;
-        inputView.TextChanged += this.OnViewTextChanged;
-        this.dataFormCustomItem = (DataFormCustomItem)dataFormItem;
-        this.dataFormCustomItem.EditorValue = string.Empty;
-        return inputView;
-
-            public void CommitValue(DataFormItem dataFormItem, View view)
-    {
-        if (view is InputView numericText)
+        public NumericEditor(SfDataForm dataForm)
         {
-            double numericValue;
-            double.TryParse(numericText.Text, out numericValue);
-             dataFormItem.SetValue(numericValue);
-        }
-    }
-
-    private void ValidateValue(DataFormItem dataFormItem)
-    {
-        dataForm.Validate(new List<string>() { dataFormItem.FieldName });
-    }
-
-    private void OnViewTextChanged(object? sender, TextChangedEventArgs e)
-    {
-        if (sender is not InputView numericEntry || dataFormCustomItem == null)
-        {
-            return;
+            this.dataForm = dataForm;
         }
 
-        string? numericText = Regex.Replace(numericEntry.Text, "[^0-9]+", string.Empty);
-        if (numericText != numericEntry.Text)
-        {
-            numericEntry.Text = numericText;
-            return;
+        public View CreateEditorView(DataFormItem dataFormItem) 
+        { 
+            Entry inputView = new Entry();
+            inputView.Keyboard = Keyboard.Numeric;
+            inputView.Placeholder = dataFormItem.PlaceholderText;
+            DataFormTextStyle textStyle = this.dataForm.EditorTextStyle;
+            inputView.TextColor = textStyle.TextColor;
+            inputView.FontSize = textStyle.FontSize;
+            inputView.FontFamily = textStyle.FontFamily;
+            inputView.FontAttributes = textStyle.FontAttributes;
+            inputView.TextChanged += this.OnViewTextChanged;
+            this.dataFormCustomItem = (DataFormCustomItem)dataFormItem;
+            this.dataFormCustomItem.EditorValue = string.Empty;
+            return inputView;
         }
 
-        dataFormCustomItem.EditorValue = numericText;
-        this.ValidateValue(dataFormCustomItem);
-        this.CommitValue(dataFormCustomItem, numericEntry);
-    }
+        public void CommitValue(DataFormItem dataFormItem, View view)
+        {
+            if (view is InputView numericText)
+            {
+                double numericValue;
+                double.TryParse(numericText.Text, out numericValue);
+                dataFormItem.SetValue(numericValue);
+            }
+        }
 
-    public void UpdateReadyOnly(DataFormItem dataFormItem)
-    {
-    }
+        public void UpdateReadyOnly(DataFormItem dataFormItem)
+        {
+        }
 
+        private void ValidateValue(DataFormItem dataFormItem)
+        {
+            this.dataForm.Validate(new List<string>() { dataFormItem.FieldName });
+        }
+
+        private void OnViewTextChanged(object? sender, TextChangedEventArgs e)
+        {
+            if (sender is not InputView numericEntry || dataFormCustomItem == null)
+            {
+                return;
+            }
+
+            string? numericText = Regex.Replace(numericEntry.Text, "[^0-9]+", string.Empty);
+            if (numericText != numericEntry.Text)
+            {
+                numericEntry.Text = numericText;
+                return;
+            }
+
+            dataFormCustomItem.EditorValue = numericText;
+            this.ValidateValue(dataFormCustomItem);
+            this.CommitValue(dataFormCustomItem, numericEntry);
+        }
+    }
      
 {% endhighlight %}
 {% endtabs %}
 
 If `SfDataForm.ValidatetionMode` is set to `ValidationMode.Manual`, then update `DataFormCustomItem.EditorValue` property once the value is committed to its respective model property. This value will be used for the `DataFormValidateFormEventArgs.NewValues` on manual validation.
 
-Note: If custom validation is required, you can set error and valid messages using the `SfDataForm.ValidateProperty` event.
+N> If custom validation is required, you can set error and valid messages using the `SfDataForm.ValidateProperty` event.
