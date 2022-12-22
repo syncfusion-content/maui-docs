@@ -11,8 +11,8 @@ documentation: ug
 
 The `SfListView` allows to display and customize empty view content when there is no data available to display using the following properties,
 
- * `EmptyView` object can be set to a string or view when `SfListView` has no items. The default value is null.
- * `EmptyViewTemplate` is used to customize the appearance of `EmptyView`. The default value is null.
+ * [EmptyView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_EmptyView) object can be set to a string or view when `SfListView` has no items. The default value is null.
+ * [EmptyViewTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_EmptyViewTemplate) is used to customize the appearance of `EmptyView`. The default value is null.
 
 ## Display a string when ListView has no items
 
@@ -84,6 +84,7 @@ N> View displayed by the `EmptyView` can be a single view or a view that contain
 Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/how-to-display-a-view-when-.net-maui-listview-has-no-items).
 
 ## Display a templated custom type when ListView has no items
+
 The `EmptyView` can be set to a custom type, which is used to display when the `ItemsSource` is null, or when the collection specified by the `ItemsSource` property is null or empty. The appearance of the `EmptyView` can be customized by using the `EmptyViewTemplate`.
 
 {% tabs %}
