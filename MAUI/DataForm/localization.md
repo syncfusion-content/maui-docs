@@ -11,7 +11,7 @@ documentation: ug
 
 Localization is translating the application resources into different languages for specific cultures. The `SfDataForm` can be localized by adding a `resource` file.
 
-Localize the `DataFormViewItem` [DisplayAttribute](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute?view=net-7.0) values and validation attributes ([Required](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.requiredattribute?view=netframework-4.8), [StringLength](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.stringlengthattribute?view=netframework-4.8)) values by using the `ResourceType` property of the attribute or using the `GenerateDataFormItem` event when auto-generate true.
+Localize the `DataFormViewItem` [DisplayAttribute](https://help.syncfusion.com/maui/dataform/data-annotations#display-attribute) values and [ValidationAttribute](https://help.syncfusion.com/maui/dataform/data-annotations#validation-attribute) values by using the `ResourceType` property of the attribute or using the `GenerateDataFormItem` event when auto-generate true.
 
 ## Setting CurrentUICulture to the application
 
@@ -81,7 +81,7 @@ public string FirstName { get; set; }
 
 #### Using event
 
-Also, localize the DataFormItem's `LabelText`, `PlaceHolderText`, and `GroupName` in the `GenerateDataFormItem` event of the `SfDataForm` by using the Resources (.Resx) file.
+Also, localize the DataFormItem's `LabelText`, `PlaceholderText`, and `GroupName` in the `GenerateDataFormItem` event of the `SfDataForm` by using the Resources (.Resx) file.
 
 Here, the string member of the .resx file will be accessed through the class (in resxFilename.Designer.cs), which will be auto-generated when the .resx file is created, and static string members get localized using the [ResourceManager](https://learn.microsoft.com/en-us/dotnet/api/system.resources.resourcemanager.getstring?view=net-7.0) based on culture.
 
@@ -99,6 +99,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
     {
         e.DataFormItem.GroupName = DataFormLocalization.GroupName;
     }
+
     if (e.DataFormItem.LabelText == "First Name")
     {
         e.DataFormItem.LabelText = DataFormLocalization.FirstName;
@@ -111,11 +112,11 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 ## Localizing validation error messages
 
-Here, the `ValidationAttributes` or data form error messages get localized based on culture from Localization Resource File (.Resx).
+Here, the [ValidationAttribute](https://help.syncfusion.com/maui/dataform/data-annotations#validation-attribute) values or data form error messages get localized based on culture from Localization Resource File (.Resx).
 
 #### Using attribute
 
-The `ValidationAttribute` error message can be localized using the [ErrorMessageResourceType](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute.errormessageresourcetype?redirectedfrom=MSDN&view=net-5.0#System_ComponentModel_DataAnnotations_ValidationAttribute_ErrorMessageResourceType ) and [ErrorMessageResourceName](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute.errormessageresourcetype?redirectedfrom=MSDN&view=net-5.0#System_ComponentModel_DataAnnotations_ValidationAttribute_ErrorMessageResourceType )  properties, which are used to get localized error messages from the Localization Resource File (.Resx) based on culture.
+The [ValidationAttribute](https://help.syncfusion.com/maui/dataform/data-annotations#validation-attribute) error message can be localized using the [ErrorMessageResourceType](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute.errormessageresourcetype?redirectedfrom=MSDN&view=net-5.0#System_ComponentModel_DataAnnotations_ValidationAttribute_ErrorMessageResourceType ) and [ErrorMessageResourceName](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validationattribute.errormessageresourcetype?redirectedfrom=MSDN&view=net-5.0#System_ComponentModel_DataAnnotations_ValidationAttribute_ErrorMessageResourceType )  properties, which are used to get localized error messages from the Localization Resource File (.Resx) based on culture.
 
 {% tabs %}
 {% highlight C# %}
