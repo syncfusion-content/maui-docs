@@ -364,7 +364,7 @@ private DataTemplate CreateDataTemplate()
 
 ### Geo-bounds
 
-Calculate the zoom level automatically based on the [`MapLatLngBounds(Northeast, Southwest)`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_MapLatLngBounds) of the [`MapTileLayer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html?tabs=tabid-1) class.
+Calculate the zoom level automatically based on the [`LatLngBounds(Northeast, Southwest)`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_MapLatLngBounds) of the [`MapTileLayer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html?tabs=tabid-1) class.
 
 {% tabs %}
 
@@ -402,7 +402,7 @@ Calculate the zoom level automatically based on the [`MapLatLngBounds(Northeast,
                                     Longitude="-77.043610" />
                 </maps:MapMarkerCollection>
             </maps:MapTileLayer.Markers>
-            <maps:MapTileLayer.MapLatLngBounds>
+            <maps:MapTileLayer.LatLngBounds>
                 <maps:MapLatLngBounds>
                     <maps:MapLatLngBounds.Northeast>
                         <maps:MapLatLng>
@@ -421,7 +421,7 @@ Calculate the zoom level automatically based on the [`MapLatLngBounds(Northeast,
                         </maps:MapLatLng>
                     </maps:MapLatLngBounds.Southwest>
                 </maps:MapLatLngBounds>
-            </maps:MapTileLayer.MapLatLngBounds>
+            </maps:MapTileLayer.LatLngBounds>
         </maps:MapTileLayer>
     </maps:SfMaps.Layer>
 </maps:SfMaps>
@@ -453,7 +453,7 @@ public LatLngBoundsPage()
     MapLatLngBounds bounds = new MapLatLngBounds();
     bounds.Northeast = new MapLatLng(38.909804, -77.043442);
     bounds.Southwest = new MapLatLng(38.909148, -77.043610);
-    tileLayer.MapLatLngBounds = bounds;
+    tileLayer.LatLngBounds = bounds;
     map.Layer = tileLayer;
     this.Content = map;
 }
@@ -484,7 +484,7 @@ private DataTemplate CreateDataTemplate()
 
 {% endtabs %}
 
-N> When setting [`MapLatLngBounds`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_MapLatLngBounds) and [`DistanceType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_DistanceType) at the same time, the priority is [`Radius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_Radius) and so calculate zoom level based on radius value.
+N> When setting [`LatLngBounds`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_MapLatLngBounds) and [`DistanceType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_DistanceType) at the same time, the priority is [`Radius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_Radius) and so calculate zoom level based on radius value.
 
 ![MAUI SfMaps zoom level changed image](images/zoom-pan/northSouth_Image.png)
 
