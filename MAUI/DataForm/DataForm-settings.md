@@ -648,7 +648,6 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-
 ## Manually create DataForm Items
 
 The data form autogenerates the editors based on the data type, you can explicitly add the data editors by adding `SfDataForm.Items` manually and you need to change the `AutoGenerateItems` property to false.
