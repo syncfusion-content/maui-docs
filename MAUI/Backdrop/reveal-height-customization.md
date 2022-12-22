@@ -49,6 +49,11 @@ The following options are provided to move the front layer:
         </backdrop:BackdropBackLayer>
     </backdrop:SfBackdropPage.BackLayer>
 
+    <backdrop:SfBackdropPage.FrontLayer>
+        <backdrop:BackdropFrontLayer BackgroundColor="WhiteSmoke">
+        </backdrop:BackdropFrontLayer>
+    </backdrop:SfBackdropPage.FrontLayer>
+
 </backdrop:SfBackdropPage>
 
 
@@ -73,6 +78,14 @@ this.BackLayer = new BackdropBackLayer
                 ItemsSource = new string[] { "Appetizers", "Soups", "Desserts" ,"Salads"}
             }
         }
+    }
+};
+
+this.FrontLayer = new BackdropFrontLayer()
+{
+    Content = new Grid
+    {
+        BackgroundColor = Colors.WhiteSmoke,
     }
 };
 
