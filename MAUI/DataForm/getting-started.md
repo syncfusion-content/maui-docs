@@ -25,27 +25,27 @@ This section provides a quick overview of how to get started with the .NET MAUI 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="3 5" %}
 
-    <ContentPage   
+<ContentPage   
             
-            xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
+        xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
 
-            <dataForm:SfDataForm />
-    </ContentPage>
+        <dataForm:SfDataForm />
+</ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="1 9 10" %}
+{% highlight c# tabtitle="C#" hl_lines="1 8" %}
 
-    using Syncfusion.Maui.DataForm;
-    . . .
+using Syncfusion.Maui.DataForm;
+. . .
 
-    public partial class MainPage : ContentPage
+public partial class MainPage : ContentPage
+{
+    public MainPage()
     {
-        public MainPage()
-        {
-            InitializeComponent();
-            SfDataForm dataForm = new SfDataForm();
-            this.Content = dataForm;
-        }
+        InitializeComponent();
+        SfDataForm dataForm = new SfDataForm();
+        this.Content = dataForm;
+    }
 }
 
 {% endhighlight %}
@@ -90,75 +90,74 @@ Here, the data object named **ContactsInfo** is created with some properties.
 {% tabs %}
 {% highlight C# %}
 
-    public class ContactsInfo
-    {
-        public string FirstName { get; set; }
+public class ContactsInfo
+{
+    public string FirstName { get; set; }
     
-        public string MiddleName { get; set; }
+    public string MiddleName { get; set; }
     
-        public string LastName { get; set; }
+    public string LastName { get; set; }
     
-        public string ContactNumber { get; set; }
+    public string ContactNumber { get; set; }
     
-        public string Email { get; set; }
+    public string Email { get; set; }
    
-        public string Address { get; set; }
+    public string Address { get; set; }
 
-        public DateTime? BirthDate { get; set; }
+    public DateTime? BirthDate { get; set; }
     
-        public string GroupName { get; set; }
-    }
+    public string GroupName { get; set; }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-Initialize the data object in view model class to bind in the 'DataObject' property of 'SfDataForm'.
+Initialize the data object in view model class to bind in the `DataObject` property of `SfDataForm`.
 
 {% tabs %}
 {% highlight C# %}
 
-    public class DataFormViewModel
-    {
-        public ContactsInfo ContactsInfo {get; set;}
+public class DataFormViewModel
+{
+    public ContactsInfo ContactsInfo {get; set;}
         
-        public DataFormViewModel()
-        {
-            this.ContactsInfo = new ContactsInfo();
-        }
+    public DataFormViewModel()
+    {
+        this.ContactsInfo = new ContactsInfo();
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
 ## Set data object to data form
 
-By default,the data form auto-generates the editors based on the primitive data type in the 'DataObject' property. Please refer the following code to set the 'DataObject' property.
+By default,the data form auto-generates the editors based on the primitive data type in the `DataObject` property. Please refer the following code to set the `DataObject` property.
 
 {% tabs %}
 {% highlight XAML %}
 
-    <ContentPage 
-        . . .
-                xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm"
+<ContentPage 
+    . . .
+            xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm"
                 x:Class="GettingStarted.MainPage">
 
-                <ContentPage.BindingContext>
-                    <local:DataFormViewModel/>
-                </ContentPage.BindingContext>
+            <ContentPage.BindingContext>
+                <local:DataFormViewModel/>
+            </ContentPage.BindingContext>
 
-                <dataForm:SfDataForm x:Name="dataForm" 
-                DataObject="{Binding ContactsInfo}"/>    
-    </ContentPage>
+            <dataForm:SfDataForm x:Name="dataForm" 
+            DataObject="{Binding ContactsInfo}"/>    
+</ContentPage>
 
 {% endhighlight %}
 {% highlight C# %}
 
-    dataForm.DataObject = new ContactsInfo();
+dataForm.DataObject = new ContactsInfo();
 
 {% endhighlight %}
 {% endtabs %}
 
-`Image`
 
 ## Defining editors
 
