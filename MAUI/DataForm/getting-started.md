@@ -252,7 +252,7 @@ Generated for the DateTime, DateOnly, DateTimeOffset type properties and the pro
 [DataType(DataType.DateTime)] attributes.
 </td>
 <td>
-DatePiker
+Date
 </td>
 <td>
 {{'[DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/datepicker?view=net-maui-7.0)'| markdownify }}
@@ -266,7 +266,7 @@ DataFormTimeItem
 Generated for the TimeSpan and TimeOnly type properties and the properties with [DataType(DataType.Time)] attribute.
 </td>
 <td>
-TimePicker
+Time
 </td>
 <td>
 {{'[TimePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/timepicker?view=net-maui-7.0&tabs=windows)'| markdownify }}
