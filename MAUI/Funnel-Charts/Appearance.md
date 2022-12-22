@@ -21,8 +21,8 @@ The [SfFunnelChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.S
 
 <chart:SfFunnelChart ItemsSource="{Binding Data}" 
                      XBindingPath="XValue" 
-			YBindingPath="YValue" 
-			PaletteBrushes="{Binding CustomBrushes}">
+		YBindingPath="YValue" 
+		PaletteBrushes="{Binding CustomBrushes}">
 . . .
 </chart:SfFunnelChart>
 
