@@ -9,13 +9,13 @@ documentation: ug
 
 # Reveal Height Customization in MAUI Backdrop Page (SfBackdropPage)
 
-When revealing the back layer, the front layer will be moved downwards. By setting the `BackLayerRevealOption` property of the backdrop, customize how far the front layer can be moved from the header when revealing the back layer.
+When revealing the back layer, the front layer will be moved downwards. By setting the [`BackLayerRevealOption`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html#Syncfusion_Maui_Backdrop_SfBackdropPage_BackLayerRevealOption) property of the backdrop, customize how far the front layer can be moved from the header when revealing the back layer.
 
 The following options are provided to move the front layer:
 
-`Fill` – Moves the front layer downwards to the entire height of the page, excluding the `RevealedHeight.`
+[`Fill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.RevealOption.html#Syncfusion_Maui_Backdrop_RevealOption_Fill) – Moves the front layer downwards to the entire height of the page, excluding the [`RevealedHeight`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.BackdropFrontLayer.html#Syncfusion_Maui_Backdrop_BackdropFrontLayer_RevealedHeight).
 
-`Auto` – Moves the front layer downwards to the height of the back layer content.
+[`Auto`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.RevealOption.html#Syncfusion_Maui_Backdrop_RevealOption_Auto) – Moves the front layer downwards to the height of the back layer content.
 
 {% tabs %} 
 
@@ -49,6 +49,12 @@ The following options are provided to move the front layer:
         </backdrop:BackdropBackLayer>
     </backdrop:SfBackdropPage.BackLayer>
 
+    <backdrop:SfBackdropPage.FrontLayer>
+        <backdrop:BackdropFrontLayer>
+            <Grid BackgroundColor="WhiteSmoke" />
+        </backdrop:BackdropFrontLayer>
+    </backdrop:SfBackdropPage.FrontLayer> 
+
 </backdrop:SfBackdropPage>
 
 
@@ -73,6 +79,14 @@ this.BackLayer = new BackdropBackLayer
                 ItemsSource = new string[] { "Appetizers", "Soups", "Desserts" ,"Salads"}
             }
         }
+    }
+};
+
+this.FrontLayer = new BackdropFrontLayer()
+{
+    Content = new Grid
+    {
+        BackgroundColor = Colors.WhiteSmoke,
     }
 };
 

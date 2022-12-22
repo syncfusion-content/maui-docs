@@ -31,8 +31,6 @@ The String type property is validated using the [Required](https://docs.microsof
 {% endhighlight %}
 {% endtabs %}
 
-Refer to this `link` to learn more about data annotations in SfDataForm.
-
 #### Date range attribute
 
 Validate the date time value using the date range attribute.

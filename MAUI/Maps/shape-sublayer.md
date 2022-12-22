@@ -560,7 +560,7 @@ public class Model
 
 ## Enable tooltip for shape sublayer
 
-You can enable tooltip for the shape sublayer using the `ShowShapeTooltip` property.
+You can enable tooltip for the shape sublayer using the [`ShowShapeTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeSublayer.html#Syncfusion_Maui_Maps_MapShapeSublayer_ShowShapeTooltip) property.
 
 N> It is applicable for shape layer.
 
@@ -756,9 +756,9 @@ public class Model
 
 ## Selection
 
-You can enable shape selection on a map using the `EnableSelection` property. The Selection allows you to select only one shape at a time. You can select a shape by tapping it. By default, the selection is disabled.
+You can enable shape selection on a map using the [`EnableSelection`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeSublayer.html#Syncfusion_Maui_Maps_MapShapeSublayer_EnableSelection) property. The Selection allows you to select only one shape at a time. You can select a shape by tapping it. By default, the selection is disabled.
 
-The `ShapeSelected`event is used to perform any action on shape selected when the user is selects it by tapping or clicking or by programmatically.
+The [`ShapeSelected`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeSublayer.html#Syncfusion_Maui_Maps_MapShapeSublayer_ShapeSelected) event is used to perform any action on shape selected when the user is selects it by tapping or clicking or by programmatically.
 
 N> It is applicable for shape layer.
 
