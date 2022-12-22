@@ -33,7 +33,7 @@ This section provides a quick overview of how to get started with the .NET MAUI 
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="1 8" %}
+{% highlight c# tabtitle="C#" hl_lines="1 9 10" %}
 
 using Syncfusion.Maui.DataForm;
 . . .
