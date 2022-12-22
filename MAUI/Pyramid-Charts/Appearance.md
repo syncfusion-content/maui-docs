@@ -20,9 +20,7 @@ The [SfPyramidChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 {% highlight xaml %}
 
 <chart:SfPyramidChart ItemsSource="{Binding Data}" 
-                      XBindingPath="Name"
-					  YBindingPath="Value"
-					  PaletteBrushes="{Binding CustomBrushes}">
+                      XBindingPath="Name" YBindingPath="Value" PaletteBrushes="{Binding CustomBrushes}">
 . . .
 </chart:SfPyramidChart>
 

@@ -20,9 +20,7 @@ The [SfFunnelChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.S
 {% highlight xaml %}
 
 <chart:SfFunnelChart ItemsSource="{Binding Data}" 
-                     XBindingPath="XValue"
-					 YBindingPath="YValue"
-					 PaletteBrushes="{Binding CustomBrushes}">
+                     XBindingPath="XValue" YBindingPath="YValue" PaletteBrushes="{Binding CustomBrushes}">
 . . .
 </chart:SfFunnelChart>
 
