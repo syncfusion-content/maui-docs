@@ -24,11 +24,10 @@ using System.Globalization;
 
 public partial class App : Application
 {
-	public App()
-	{
-		InitializeComponent();
-
-		MainPage = new AppShell();
+    public App()
+    {
+        InitializeComponent();
+        MainPage = new AppShell();
         var culture = new CultureInfo("fr");
         CultureInfo.CurrentUICulture = culture;
     }
