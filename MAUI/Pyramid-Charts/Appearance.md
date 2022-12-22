@@ -9,11 +9,11 @@ documentation: ug
 
 # Appearance in .NET MAUI Pyramid Chart
 
-The appearance of the [SfPyramidChart]() can be customized by using the predefined palettes, custom palettes, and gradient which allows enriching the application.
+The appearance of the [SfPyramidChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPyramidChart.html) can be customized by using the predefined palettes, custom palettes, and gradient which allows enriching the application.
 
 ## Custom PaletteBrushes
 
-The [SfPyramidChart]() allows you to define your own brushes with preferred order by using the [PaletteBrushes]() property, as shown in the code below.
+The [SfPyramidChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPyramidChart.html) allows you to define your own brushes with preferred order by using the [PaletteBrushes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPyramidChart.html#Syncfusion_Maui_Charts_SfPyramidChart_PaletteBrushes) property, as shown in the code below.
 
 {% tabs %}
 
@@ -55,7 +55,7 @@ public class ViewModel
 
 ## Applying Gradient
 
-The gradient for the pyramid chart can be set by using the [PaletteBrushes]() property of the chart with the help of the `LinearGradientBrush` or `RadialGradientBrush`.
+The gradient for the pyramid chart can be set by using the [PaletteBrushes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPyramidChart.html#Syncfusion_Maui_Charts_SfPyramidChart_PaletteBrushes) property of the chart with the help of the `LinearGradientBrush` or `RadialGradientBrush`.
 
 {% tabs %}
 

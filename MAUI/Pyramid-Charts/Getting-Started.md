@@ -16,7 +16,7 @@ This section explains how to populate the pyramid chart with data, a title, data
 1. Create a new .NET MAUI application in Visual Studio.
 2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfPyramidChart to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Charts and then install it.
 3. To initialize the control, import the Chart namespace.
-4. Initialize [SfPyramidChart]().
+4. Initialize [SfPyramidChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPyramidChart.html).
 
 {% tabs %} 
 
@@ -160,7 +160,7 @@ chart.BindingContext = viewModel;
 
 ## Populate chart with data
 
- Binding `Data` to the pyramid chart [ItemsSource]() property from its BindingContext to create our own pyramid chart.
+ Binding `Data` to the pyramid chart [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPyramidChart.html#Syncfusion_Maui_Charts_SfPyramidChart_ItemsSource) property from its BindingContext to create our own pyramid chart.
 
 {% tabs %}   
 
@@ -219,7 +219,7 @@ chart.Title = new Label
 
 ## Enable the data labels
 
-The [ShowDataLabels]() property of the chart can be used to enable data labels to improve the readability of the pyramid chart. The label visibility is set to `False` by default.
+The [ShowDataLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPyramidChart.html#Syncfusion_Maui_Charts_SfPyramidChart_ShowDataLabels) property of the chart can be used to enable data labels to improve the readability of the pyramid chart. The label visibility is set to `False` by default.
 
 {% tabs %} 
 
@@ -270,7 +270,7 @@ chart.Legend = new ChartLegend();
 
 ## Enable Tooltip
 
-Tooltips are used to show information about the segment, when mouse over on it. Enable tooltip by setting the chart [EnableTooltip]() property as true.
+Tooltips are used to show information about the segment, when mouse over on it. Enable tooltip by setting the chart [EnableTooltip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPyramidChart.html#Syncfusion_Maui_Charts_SfPyramidChart_EnableTooltip) property as true.
 
 {% tabs %} 
 
