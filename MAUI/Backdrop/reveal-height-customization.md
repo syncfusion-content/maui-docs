@@ -50,9 +50,10 @@ The following options are provided to move the front layer:
     </backdrop:SfBackdropPage.BackLayer>
 
     <backdrop:SfBackdropPage.FrontLayer>
-        <backdrop:BackdropFrontLayer BackgroundColor="WhiteSmoke">
+        <backdrop:BackdropFrontLayer>
+            <Grid BackgroundColor="WhiteSmoke" />
         </backdrop:BackdropFrontLayer>
-    </backdrop:SfBackdropPage.FrontLayer>
+    </backdrop:SfBackdropPage.FrontLayer> 
 
 </backdrop:SfBackdropPage>
 
