@@ -34,13 +34,13 @@ Generated for the string type and the properties with [DataType(DataType.Text)] 
 </tr>
 <tr>
 <td>
-`DataFormMultilineTextItem`
+DataFormMultilineTextItem
 </td>
 <td>
 {{'[Editor](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/editor?view=net-maui-7.0)'| markdownify }}
 </td>
 <td>
-Generated for the string type and the properties with  [DataType(DataType.MultilineText)] attributes. 
+Generated for the string type properties with  [DataType(DataType.MultilineText)] attributes. 
 </td>
 </tr>
 <tr>
@@ -51,7 +51,7 @@ DataFormPasswordItem
 {{'[Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry?view=net-maui-7.0)'| markdownify }}
 </td>
 <td>
-Generated for the string type and the properties with [DataType(DataType.Password)] attributes. 
+Generated for the string type properties with [DataType(DataType.Password)] attributes. 
 </td>
 </tr>
 <tr>
@@ -62,7 +62,7 @@ DataFormDateItem
 {{'[DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/datepicker?view=net-maui-7.0)'| markdownify }}
 </td>
 <td>
-Generated for DateTime, DateTimeOffset, DateOnly type and properties with [DataType(DataType.Date)] and [DataType(DataType.DateTime)] attributes. 
+Generated for the DateTime, DateTimeOffset, and DateOnly type properties and the properties with [DataType(DataType.Date)] or [DataType(DataType.DateTime)] attributes.
 </td>
 </tr>
 <tr>
@@ -73,18 +73,7 @@ DataFormTimeItem
 {{'[TimePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/timepicker?view=net-maui-7.0&tabs=windows)'| markdownify }}
 </td>
 <td>
-Generated for TimeSpan or TimeOnly property type and properties with [DataType(DataType.Time)] attribute. 
-</td>
-</tr>
-<tr>
-<td>
-DataFormPickerItem
-</td>
-<td>
-{{'[Picker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/picker?view=net-maui-7.0)'| markdownify }}
-</td>
-<td>
-Generated for Enum type property. 
+Generated for TimeSpan and TimeOnly type properties and the properties with [DataType(DataType.Time)] attribute. 
 </td>
 </tr>
 <tr>
@@ -117,17 +106,28 @@ DataFormComboBoxItem
 {{'[SfComboBox](https://help.syncfusion.com/maui/combobox)'| markdownify }}
 </td>
 <td>
-Generated for Enum type property. 
+Generated for enum type property. 
 </td>
 </tr><tr>
 <td>
-`DataFormAutoCompleteItem`
+DataFormAutoCompleteItem
 </td>
 <td>
 {{'[SfAutoComplete](https://help.syncfusion.com/maui/autocomplete)'| markdownify }}
 </td>
 <td>
-Generated for Enum type property. 
+Generated for enum type property. 
+</td>
+</tr>
+<tr>
+<td>
+DataFormPickerItem
+</td>
+<td>
+{{'[Picker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/picker?view=net-maui-7.0)'| markdownify }}
+</td>
+<td>
+Generated for enum type property. 
 </td>
 </tr>
 <tr>
@@ -463,7 +463,6 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 {% endhighlight %}
 {% endtabs %}
-
 
 ## Change the order for editor
 
