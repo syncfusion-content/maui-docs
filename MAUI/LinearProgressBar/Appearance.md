@@ -128,7 +128,7 @@ this.Content = linearProgressBar;
 
 ## Padding
 
-In the linear progress bar, the padding of the progress and the secondary progress indicator at the left and right ends can be adjusted by using the `ProgressPadding` property.
+In the linear progress bar, the padding of the progress and the secondary progress indicator at the left and right ends can be adjusted by using the [`ProgressPadding`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html#Syncfusion_Maui_ProgressBar_SfLinearProgressBar_ProgressPadding) property.
 
 {% tabs %} 
 
