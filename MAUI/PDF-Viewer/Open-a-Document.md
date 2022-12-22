@@ -105,7 +105,7 @@ private void PdfViewer_DocumentLoadFailed(object sender, DocumentLoadFailedEvent
 {% endhighlight %}
 {% endtabs %}
 
-## Check other options for opening a PDF document
+## Check other PDF opening options
 
 * Open a document from local storage
 * Open a document from URL
