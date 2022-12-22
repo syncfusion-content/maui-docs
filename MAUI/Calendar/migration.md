@@ -678,7 +678,7 @@ this.Content = calendar;
 
 <tr>
 <td>DateSelectionColor</td>
-<td>SelectionBackground</td>
+<td>SelectionBackground(From SfCalendar)</td>
 <td>Gets or sets the value that describes the highlight of selection based on selection mode of the calendar.</td>
 </tr>
 
@@ -696,19 +696,19 @@ this.Content = calendar;
 
 <tr>
 <td>DayCellFontFamily</td>
-<td>FontFamily(From TextStyle, TodayTextStyle, TrailingLeadingDatesTextStyle, DisabledDatesTextStyle, WeekendDatesTextStyle, SpecialDatesTextStyle of MonthView)</td>
+<td>FontFamily(From TextStyle, TodayTextStyle, TrailingLeadingDatesTextStyle, DisabledDatesTextStyle, WeekendDatesTextStyle, SpecialDatesTextStyle)</td>
 <td>Gets or sets the font family of the text style.</td>
 </tr>
 
 <tr>
 <td>DayFontSize</td>
-<td>FontSize(From TextStyle, TodayTextStyle, TrailingLeadingDatesTextStyle, DisabledDatesTextStyle, WeekendDatesTextStyle, SpecialDatesTextStyle of MonthView)</td>
+<td>FontSize(From TextStyle, TodayTextStyle, TrailingLeadingDatesTextStyle, DisabledDatesTextStyle, WeekendDatesTextStyle, SpecialDatesTextStyle)</td>
 <td>Gets or sets the font size of the text style.</td>
 </tr>
 
 <tr>
 <td>DayFontAttributes</td>
-<td>FontAttributes(From TextStyle, TodayTextStyle, TrailingLeadingDatesTextStyle, DisabledDatesTextStyle, WeekendDatesTextStyle, SpecialDatesTextStyle of MonthView)</td>
+<td>FontAttributes(From TextStyle, TodayTextStyle, TrailingLeadingDatesTextStyle, DisabledDatesTextStyle, WeekendDatesTextStyle, SpecialDatesTextStyle)</td>
 <td>Gets or sets the font attributes of the text style.</td>
 </tr>
 
@@ -774,7 +774,7 @@ this.Content = calendar;
 
 <tr>
 <td>DisabledTextColor</td>
-<td>TextColor(From DisabledDatesTextStyle of MonthView)</td>
+<td>TextColor(From DisabledDatesTextStyle)</td>
 <td>Gets or sets the text color of the text style.</td>
 </tr>
 
