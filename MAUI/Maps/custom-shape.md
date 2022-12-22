@@ -33,7 +33,7 @@ public MainPage()
     InitializeComponent();
     SfMaps map = new SfMaps();
     MapShapeLayer layer = new MapShapeLayer();
-    layer.ShapesSource = MapSource.FromResource("MyProject.buildings.json");
+    layer.ShapesSource = MapSource.FromResource("MyProject.floor_planning.json");
     layer.ShapeFill = Brush.DarkGray;
     layer.ShapeStroke = Brush.DarkGray;
     layer.Geometry = MapGeometryType.Points;
@@ -45,4 +45,4 @@ public MainPage()
 
 {% endtabs %}
 
-![maps basic view](images/custom-shape/maps_cartesian_view.png)
+![.NET MAUI Maps with custom shapes](images/custom-shape/maps_cartesian_view.png)
