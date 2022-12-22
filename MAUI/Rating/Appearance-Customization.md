@@ -11,22 +11,22 @@ documentation: ug
 
 # Appearance Customization in .NET MAUI Rating (SfRating)
 
-You can customize the rated and unrated fill color, stroke and stroke thickness using the following properties of [`RatingSettings`].
+You can customize the rated and unrated fill color, stroke and stroke thickness using the following properties of [`RatingSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingSettings.html).
 
-* `RatedFill`
-* `UnratedFill`
-* `RatedStroke`
-* `UnratedStroke`
-* `RatedStrokeThickness`
-* `UnratedStrokeThickness`
+* [`RatedFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingSettings.html#Syncfusion_Maui_Inputs_RatingSettings_RatedFill)
+* [`UnratedFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingSettings.html#Syncfusion_Maui_Inputs_RatingSettings_UnratedFill)
+* [`RatedStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingSettings.html#Syncfusion_Maui_Inputs_RatingSettings_RatedStroke)
+* [`UnratedStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingSettings.html#Syncfusion_Maui_Inputs_RatingSettings_UnratedStroke)
+* [`RatedStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingSettings.html#Syncfusion_Maui_Inputs_RatingSettings_RatedStrokeThickness)
+* [`UnratedStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingSettings.html#Syncfusion_Maui_Inputs_RatingSettings_UnratedStrokeThickness)
  
 ## Set Fill Color
 
-`SfRating` control has support to set the fill color for the rated and unrated items.
+[`SfRating`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control has support to set the fill color for the rated and unrated items.
 
 ### Rated items
 
-The `RatedFill` property fills the rated items with the specified solid color in the `SfRating`.
+The [`RatedFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingSettings.html#Syncfusion_Maui_Inputs_RatingSettings_RatedFill) property fills the rated items with the specified solid color in the [`SfRating`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html).
 
 {% tabs %}
 
@@ -56,7 +56,7 @@ rating.RatingSettings = ratingSettings;
 
 ### Unrated items
 
-The `UnratedFill` property fills the unrated items with the specified solid color in the `SfRating`.
+The [`UnratedFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingSettings.html#Syncfusion_Maui_Inputs_RatingSettings_UnratedFill) property fills the unrated items with the specified solid color in the [`SfRating`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html).
 
 {% tabs %}
 
@@ -86,11 +86,11 @@ rating.RatingSettings = ratingSettings;
 
 ## Set Stroke
 
-`SfRating` control has support to set the stroke color for the rated and unrated items.
+[`SfRating`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control has support to set the stroke color for the rated and unrated items.
 
 ### Rated items
 
-The `RatedStroke` property sets the stroke for the rated items with the specified solid color in the `SfRating` control.
+The [`RatedStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingSettings.html#Syncfusion_Maui_Inputs_RatingSettings_RatedStroke) property sets the stroke for the rated items with the specified solid color in the [`SfRating`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control.
 
 {% tabs %}
 
@@ -120,7 +120,7 @@ rating.RatingSettings = ratingSettings;
 
 ### Unrated items
 
-The `UnratedStroke` property sets the stroke for the unrated area with the specified solid color in the `SfRating` control.
+The [`UnratedStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingSettings.html#Syncfusion_Maui_Inputs_RatingSettings_UnratedStroke) property sets the stroke for the unrated area with the specified solid color in the [`SfRating`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control.
 
 {% tabs %}
 
@@ -150,11 +150,11 @@ rating.RatingSettings = ratingSettings;
  
 ## Set Stroke Thickness
 
-`SfRating` control has support to set the stroke thickness for the rated and unrated items.
+[`SfRating`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control has support to set the stroke thickness for the rated and unrated items.
 
 ### Rated items
 
-The `RatedStrokeThickness` property sets the stroke thickness for the rated items with the specified value in the `SfRating` control.
+The [`RatedStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingSettings.html#Syncfusion_Maui_Inputs_RatingSettings_RatedStrokeThickness) property sets the stroke thickness for the rated items with the specified value in the [`SfRating`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control.
 
 {% tabs %}
 
@@ -184,7 +184,7 @@ rating.RatingSettings = ratingSettings;
 
 ### Unrated items
 
-The `UnratedStrokeThickness` property sets the stroke thickness for the unrated items with the specified value in the `SfRating` control.
+The [`UnratedStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingSettings.html#Syncfusion_Maui_Inputs_RatingSettings_UnratedStrokeThickness) property sets the stroke thickness for the unrated items with the specified value in the [`SfRating`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control.
 
 {% tabs %}
 

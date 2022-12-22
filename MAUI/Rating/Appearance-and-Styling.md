@@ -11,11 +11,11 @@ documentation: ug
 
 # Appearance and Styling in .NET MAUI Rating (SfRating)
 
-When the default view is not needed, you can customize the view of .NET MAUI `SfRating` control. The `SfRating` control provides support to customize the item size, item count, and space between rating items.
+When the default view is not needed, you can customize the view of [.NET MAUI SfRating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control. The [`SfRating`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control provides support to customize the item size, item count, and space between rating items.
 
 ## Set Size
 
-The `ItemSize` property sets the size of the rating items. 
+The [`ItemSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_ItemSize) property sets the size of the rating items. 
 
 N> By default, property value is 50.
 
@@ -45,7 +45,7 @@ public MainPage()
 
 ## Set Number of Items
 
-The `ItemCount` property sets the number of rating items to be displayed. 
+The [`ItemCount`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_ItemCount) property sets the number of rating items to be displayed. 
 
 N> The default property value is 5.
 
@@ -75,7 +75,7 @@ public MainPage()
  
 ## Set Space between Items
 
-The `ItemSpacing` property sets the spacing between the rating items. 
+The [`ItemSpacing`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_ItemSpacing) property sets the spacing between the rating items. 
 
 N> By default, property value is 5.
 
@@ -105,7 +105,7 @@ public MainPage()
 
 ## Rating Settings
 
-This section explains about various rating settings available in the `SfRating` control.
+This section explains about various rating settings available in the [`SfRating`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control.
 
 {% tabs %}
 
