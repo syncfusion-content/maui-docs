@@ -18,8 +18,8 @@ To migrate easier from Xamarin SfRating to [.NET MAUI SfRating], most of the API
 <th>Xamarin SfRating</th>
 <th>.NET MAUI SfRating</th></tr>
 <tr>
-<td>{{'[Syncfusion.SfRating.XForms](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRating.XForms.html)'| markdownify }}</td>
-<td>{{'[Syncfusion.Maui.Inputs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.html)'| markdownify }}</td></tr>
+<td>Syncfusion.SfRating.XForms</td>
+<td>Syncfusion.Maui.Inputs</td></tr>
 </table>
 
 ## Properties
