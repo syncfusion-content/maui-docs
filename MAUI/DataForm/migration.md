@@ -37,8 +37,8 @@ To initialize the control, import the DataForm namespace and initialize the SfDa
 {% highlight XAML %}
 <ContentPage 
 ...
-           xmlns:dataForm="clr-namespace:Syncfusion.XForms.DataForm;assembly=Syncfusion.SfDataForm.XForms">
-        <dataForm:SfDataForm x:Name="dataForm"/>
+xmlns:dataForm="clr-namespace:Syncfusion.XForms.DataForm;assembly=Syncfusion.SfDataForm.XForms">
+    <dataForm:SfDataForm x:Name="dataForm"/>
 </ContentPage>
 {% endhighlight %}
 
@@ -61,9 +61,8 @@ this.Content = dataForm;
 
 <ContentPage
 ...
-    xmlns:DataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
-    <dataForm:SfDataForm x:Name="dataForm">
-    </dataForm:SfDataForm>
+xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
+    <dataForm:SfDataForm x:Name="dataForm"/>
 </ContentPage>
 
 {% endhighlight %}
@@ -244,15 +243,12 @@ this.Content = dataForm;
 {% tabs %}
 {% highlight XAML %}
 <ContentPage 
-    ...
-    xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
-
+...
+xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
     <dataForm:SfDataForm x:Name="dataForm"/>
 </ContentPage>
 {% endhighlight %}
-{% endtabs %}
 
-{% tabs %}
 {% highlight C# %}
 
 using Syncfusion.Maui.DataForm;
@@ -269,7 +265,7 @@ this.dataForm.ColumnCount = 2;
 
 public class DataModel
 {
-	public string Name { get; set; }
+    public string Name { get; set; }
 
     public string Email { get; set; }
 
@@ -369,7 +365,7 @@ The properties of the `Xamarin SfDataForm` [LabelStyle](https://help.syncfusion.
 
 <ContentPage
 ...
-    xmlns:DataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
+xmlns:DataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
 <dataForm:SfDataForm
         x:Name="dataForm">
         <dataForm:SfDataForm.LabelTextStyle>
@@ -383,9 +379,7 @@ The properties of the `Xamarin SfDataForm` [LabelStyle](https://help.syncfusion.
 </ContentPage>
 
 {% endhighlight %}
-{% endtabs %}
 
-{% tabs %}
 {% highlight C# %}
 
 using Syncfusion.Maui.DataForm;
@@ -407,7 +401,7 @@ this.dataForm.LabelTextStyle = new DataFormTextStyle()
 
 public class DataModel
 {
-	public string Name { get; set; }
+    public string Name { get; set; }
 
     public string Email { get; set; }
 
