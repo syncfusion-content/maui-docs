@@ -1,19 +1,19 @@
 ---
 layout: post
 title: Selections in MAUI Calendar widget | Syncfusion
-description: Learn here all about Selections feature in Syncfusion MAUI Calendar (SfCalendar) widget and more.
+description: Learn here all about Selections feature in Syncfusion .Net MAUI Calendar (SfCalendar) widget and more.
 platform: maui
 control: SfCalendar
 documentation: ug
 ---
 
 # Selections in MAUI Calendar (SfCalendar)
-The Selection mode is specified in the calendar property enumeration. Can select the dates by tap the cell in the calendar. `SfCalendar` provides three types mode such as `Single`, `Multiple` and `Range` Selection. The default `SelectionMode` is Single that allows the user to select one date at a time.
+The Selection mode is specified in the Calendar property enumeration. You can select the dates by tapping the cell in the calendar. `SfCalendar` provides three types of modes such as `Single`, `Multiple`, and `Range` Selection. The default `SelectionMode` is Single, which allows the user to select only one date at a time.
 
->**NOTE** Can able to select the cells in the Year, Decade and Century views in the calendar only when the `AllowViewNavigation` property is set to false.
+>**NOTE** You can select the cells in the Year, Decade, and Century views in the calendar only when the `AllowViewNavigation` property is set to false.
 
 ## Single selection
-The `Single` selection can be performed in the Calendar by setting the `CalendarSelectionMode` property to `Single`. In this Selection, you can able to select a single date from the cell.
+The `Single` selection can be performed in the Calendar by setting the `CalendarSelectionMode` property to `Single`. In this selection, you can select a single date from the cell.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -35,7 +35,7 @@ this.Calendar.SelectionMode = CalendarSelectionMode.Single;
 {% endcolumn %}
 
 >**NOTE**
-* In the Year, Decade and Century views can able to select the cells, only when the `AllowViewNavigation` property is set to false.
+* In the Year, Decade, and Century views, you can select the cells, only when the `AllowViewNavigation` property is set to false.
 * In this scenario, the `selection changed` callback will return the first date of the month, year, decade or century of the selected cell.
 Eg: 
 * In the year view, when the Dec month cell is selected then the selected date value will be 01-12-2022.
@@ -44,7 +44,7 @@ Eg:
 
 
 ## Multiple selection
-The `Multiple` selection can be performed in the Calendar by setting the `CalendarSelectionMode` property to `Multiple`. In this Selection, you can able to select a multiple dates from the cell. If you want to remove the selected cell by clicking the same cell again.
+The `Multiple` selection can be performed in the Calendar by setting the `CalendarSelectionMode` property to `Multiple`. In this selection, you can select multiple dates from the cell. If you want to remove the selected cell, click the same cell again.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -94,11 +94,11 @@ Eg:
 * In the decade view, when the range is selected as 2022 - 2025, then the range value will be 01-01-2022 to 31-12-2025.
 * In the century view, when the range is selected as 2020-2029 to 2030-2039, then the range value will be 01-01-2020 to 31-12-2039.
 
-### Range Selection Direction
-The Range Selection Direction is specified in the calendar property enumeration which is uesd to select the range based on the direction. The `RangeSelectionDirection` provides five types of direction such as `Default`, `Forward`, `Backward`, `Both` and `None`. The default `RangeSelectionDirection` is `Default` in the SfCalendar.
+### Range selection direction
+The Range Selection Direction is specified in the calendar property enumeration, which is used to select the range based on the direction. The `RangeSelectionDirection` provides five types of direction such as `Default`, `Forward`, `Backward`, `Both`, and `None`. The default `RangeSelectionDirection` is `Default` in the SfCalendar.
 
-#### Range Selection Direction - Forward
-If the `RangeSelectionDirection` property to `Forward` allows you to select only the dates after the selected range start date and the dates before the range start date is considered as disabled date. The start date will not be changed.
+#### Range selection direction - forward
+If you set the `RangeSelectionDirection` property to `Forward`, you can select only the dates after the selected range start date, while dates before the range start date are considered disabled. The start date will not be changed.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -120,8 +120,8 @@ this.Calendar.RangeSelectionDirection = CalendarRangeSelectionDirection.Forward;
 
 ![Forward range selection in .NET MAUI Calendar.](images/selection/maui-forward-range-selection.png)
 
-#### Range Selection Direction - Backward
-If the `RangeSelectionDirection` property to `Backward` allows you to select only the dates before the selected range end date and the dates after the range end date is considered as disabled date. The end date will not be changed.
+#### Range selection direction - backward
+If you set the `RangeSelectionDirection` property to `Backward`, you can select only the dates before the selected range end date, while dates after the range end date are considered disabled. The end date will not be changed.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -144,7 +144,7 @@ this.Calendar.RangeSelectionDirection = CalendarRangeSelectionDirection.Backward
 ![Backward range selection in .NET MAUI Calendar.](images/selection/maui-backward-range-selection.png)
 
 #### Range Selection Direction - Both
-If the `RangeSelectionDirection` property to `Both` allows you to extend the selection from the selected range. Then the tapped date is considered based on (if the date is nearby start date then start date is updated, else if the date is nearby end date then end date is updated, else if in-between the start and end date and both have same distance then the start date is updated.
+If you set the `RangeSelectionDirection` property to `Both`, you can extend the selection from the selected range. Then, the tapped date is considered based on the (if the date is nearby the start date, then the start date is updated, else if the date is nearby the end date, then the end date is updated, else if in-between the start and end date and both have the same distance, then the start date is updated).
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -166,8 +166,8 @@ this.Calendar.RangeSelectionDirection = CalendarRangeSelectionDirection.Both;
 
 ![Both Range selection in .NET MAUI Calendar.](images/selection/maui-range-selection.png)
 
-#### Range Selection Direction - None
-If the `RangeSelectionDirection` property to `None` allows you to select only the single range and the dates after the range end date and before start date is considered as disabled date. It will remain in the initial range.
+#### Range selection direction - none
+If you set the `RangeSelectionDirection` property to `None`, you can select only the single range, while dates after the range end date and before the start date are considered disabled. It will remain in the initial range.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
