@@ -363,7 +363,7 @@ The following code example explains how to intialize the layer and customize the
       {{'[LayerType](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ImageryLayer.html#Syncfusion_SfMaps_XForms_ImageryLayer_LayerType)'| markdownify }}, {{'[BingMapKey](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ImageryLayer.html#Syncfusion_SfMaps_XForms_ImageryLayer_BingMapKey)'| markdownify }}, {{'[BingMapStyle](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ImageryLayer.html#Syncfusion_SfMaps_XForms_ImageryLayer_BingMapStyle)'| markdownify }}, and {{'[RequestTileUri](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ImageryLayer.html#Syncfusion_SfMaps_XForms_ImageryLayer_RequestTileUri)'| markdownify }}
    </td>
    <td>
-      Can achieve all this using {{'[UrlTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_UrlTemplate)'| markdownify }} and {{'[GetBingUrl()]()'| markdownify }}
+      Can achieve all this using {{'[UrlTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_UrlTemplate)'| markdownify }} and {{'[GetBingUrl()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_GetBingUrl_System_String_)'| markdownify }}
    </td>
 </tr>
 <tr>
@@ -403,7 +403,7 @@ The following code example explains how to intialize the layer and customize the
       {{'[LatLngBounds](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ImageryLayer.html#Syncfusion_SfMaps_XForms_ImageryLayer_LatLngBounds)'| markdownify }} 
    </td>
    <td>
-      {{'[*MapLatLngBounds](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_MapLatLngBounds)'| markdownify }} 
+      {{'[LatLngBounds](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_MapLatLngBounds)'| markdownify }} 
    </td>
 </tr>
 <tr>

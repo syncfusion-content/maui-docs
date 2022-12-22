@@ -85,7 +85,7 @@ this.Content = map;
 
 You can set the zoom level of the map layer by using the [`MapZoomPanBehavior.ZoomLevel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html#Syncfusion_Maui_Maps_MapZoomPanBehavior_ZoomLevel) property.
 
-The default [`MapZoomPanBehavior.ZoomLevel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html#Syncfusion_Maui_Maps_MapZoomPanBehavior_ZoomLevel) value is 1, which will show the whole map in the viewport for `MapTileLayer`.
+The default [`MapZoomPanBehavior.ZoomLevel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html#Syncfusion_Maui_Maps_MapZoomPanBehavior_ZoomLevel) value is 1, which will show the whole map in the viewport for [`MapTileLayer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html?tabs=tabid-1).
 
 {% tabs %}
 
