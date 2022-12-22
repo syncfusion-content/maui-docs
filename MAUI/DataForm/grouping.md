@@ -229,11 +229,11 @@ this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
     {
         if (e.DataFormGroupItem != null)
         {
-            if (e.DataFormGroupItem.GroupName == "Name")
+            if (e.DataFormGroupItem.Name == "Name")
             {
                 e.DataFormGroupItem.ColumnCount = 3;
             }
-            else if (e.DataFormGroupItem.GroupName == "Details")
+            else if (e.DataFormGroupItem.Name == "Details")
             {
                 e.DataFormGroupItem.ColumnCount = 2;
             }
@@ -327,7 +327,7 @@ this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
     {
         if (e.DataFormGroupItem != null)
         {
-            if (e.DataFormGroupItem.GroupName == "Name")
+            if (e.DataFormGroupItem.Name == "Name")
             {
                 e.DataFormGroupItem.HeaderBackground = Brush.Yellow;
             }
@@ -350,7 +350,7 @@ this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
     {
         if (e.DataFormGroupItem != null)
         {
-            if (e.DataFormGroupItem.GroupName == "Name")
+            if (e.DataFormGroupItem.Name == "Name")
             {
                 e.DataFormGroupItem.HeaderTextStyle = new DataFormTextStyle
                 {
@@ -376,7 +376,7 @@ this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
     private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
     {
-        if (e.DataFormGroupItem.GroupName == "Name")
+        if (e.DataFormGroupItem.Name == "Name")
         {
             e.DataFormGroupItem.ItemsPadding = 20;
         }
