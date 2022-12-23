@@ -45,22 +45,22 @@ Follow these steps to localize the `DataForm` based on the `CurrentUICulture` us
 
 1. Right-click on the `Resources` folder in the application.
 
-    ![addition-of-default-resource-file-of-maui-dataform-into-resources-folder](images/localization/addition-of-default-resource-file-of-maui-dataform-into-resources-folder.png)
+    ![resources-folder](images/localization/resources-folder.png)
 
 2. Click `Add` and then `NewItem`.
 3. In the `Add New Item` wizard, select the `Resource File` option and name the filename as `DataFormLocalization.<culture name>.resx.` For example, give the name `DataFormLocalization.fr.resx` for French culture.
 
-    ![shows-the-name-of-resource-file-to-be-added-for-maui-dataform](images/localization/shows-the-name-of-resource-file-to-be-added-for-maui-dataform.png)
+    ![adding-resource-file](images/localization/adding-resource-file.png)
 
 4. The culture name indicates the name of the language and country.
 
 5. Now, click `Add` to add the resource file in the **Resources** folder.
 
-    ![shows-the-added-resource-file-for-french-language-in-maui-dataform](images/localization/shows-the-added-resource-file-for-french-language-in-maui-dataform.png)
+    ![added-resource-file](images/localization/added-resource-file.png)
 
 6. Add the Name or Value pair in the Resource Designer of the `DataFormLocalization.fr.resx` file and change its corresponding value to the corresponding culture.
  
-    ![shows-the-added-resource-file-name-value-pair-in-the-resource-designer-in-maui-dataform](images/localization/shows-the-added-resource-file-name-value-pair-in-the-resource-designer-in-maui-dataform.png)
+    ![name-value-pair](images/localization/name-value-pair.png)
 
 ## Localizing data form display values
 
