@@ -11,9 +11,10 @@ documentation: UG
 
 ## Auto generate data editor 
 
-By default, the `SfDataForm.Items` will be generated based on the property type. For example, the `DataFormTextItem` will be generated based on the property type in `DataObject`. 
+By default, the `SfDataForm.Items` will be generated based on the property type. For example, the `DataFormTextItem` will be generated based on the property type in `DataObject`. 
 The `DataFormItem` generation depends on the type and attribute defined for the property.
-You can customize the auto generated editor, label and group settings by using the `GenerateDataFormItem` event.
+
+You can customize the auto-generated editor, label, and group settings by using the `GenerateDataFormItem` event.
 
 <table>
 <tr>
@@ -184,7 +185,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 The `GenerateDataFormItem` event will be raised only when `AutoGenerateItems` is set to true.
 
-For `AutoGenerateItems` false you can use settings properties directly by using the `DataFormItem`. Please refer here to know more about creating data editors explicitly.
+For `AutoGenerateItems` false, you can use settings properties directly by using the `DataFormItem`. Please refer here to learn more about creating data editors explicitly.
 
 ## Change the auto-generated editor settings
 
@@ -214,7 +215,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 You can change the specific editor visibility by using the `IsVisible` property in the `DataFormItem`.
 
-Here, `LastName` data field will be hidden.
+Here, the `LastName` data field will be hidden.
 
 {% tabs %}
 {% highlight C# %}
@@ -234,7 +235,6 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 {% endhighlight %}
 {% endtabs %}
-
 
 ## Setting watermark for auto-generated editor
 
@@ -275,12 +275,11 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-
 #### Changing watermark color for auto-generated editor
 
 You can display the color for the watermark in the editor by using `GenerateDataFormItem` event when `AutoGenerateItems` is true.
 
-You can change the color for the watermark in the editor by using the `PlaceholderColor` property in `DataFormItem`.
+You can change the color for the watermark in the editor by using the `PlaceholderColor` property in the `DataFormItem`.
 
 {% tabs %}
 {% highlight C# %}
@@ -301,12 +300,11 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-
 ## Change padding for auto-generated editor
 
-You can create a space around a label and editor by using `Padding` property in the DataFormItem by using `GenerateDataFormItem` event when `AutoGenerateItems` is true.
+You can create a space around a label and editor by using the `Padding` property in the DataFormItem by using the `GenerateDataFormItem` event when `AutoGenerateItems` is true.
 
-Here, `FirstName` data field will be changed from the default position.
+Here, the `FirstName` data field will be changed from the default position.
 
 {% tabs %}
 {% highlight C# %}
@@ -326,10 +324,9 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-
 ## Change the label name for auto-generated editor
 
-By default property name will be displayed as label text. You can change the label text by using display attribute or using the `GenerateDataFormItem` event when `AutoGenerateItems` is true.
+By default, the property name will be displayed as label text. You can change the label text by using the display attribute or using the `GenerateDataFormItem` event when `AutoGenerateItems` is true.
 
 #### Using attribute
 
@@ -338,11 +335,9 @@ You can change the label text by setting the `Name` or `ShortName` in display at
 {% tabs %}
 {% highlight C# %}
 
-    
 [Display(Name = "FirstName")]
 public string Name { get; set; }
     
-
 {% endhighlight %}
 {% endtabs %}
 
@@ -368,11 +363,9 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-
 ## Hide Label for an editor
 
-By default, the label will be generated from the property name. You can hide the label text by using the `DataFormDisplayAttribute` or using the `GenerateDataFormItem` event when `AutoGenerateItems` is true.
-
+By default, the label will be generated from the property name. You can hide the label text by using the DataFormDisplayAttribute or using the `GenerateDataFormItem` event when `AutoGenerateItems` is true.
 
 #### Using attribute
 
@@ -381,10 +374,8 @@ You can hide the label text for editor by setting `ShowLabel` as false in `Dataf
 {% tabs %}
 {% highlight C# %}
 
-    
 [DataFormDisplayOptions(ShowLabel = false)]
 public string MiddleName { get; set; }
-    
 
 {% endhighlight %}
 {% endtabs %}
@@ -411,12 +402,11 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-
 ## Change editor layout settings
 
 You can change the label width, label position, and editor width. This is possible by using the `GenerateDataFormItem` event when `AutoGenerateItems` is true. In the event, change the layout settings by using the `DefaultLayoutSettings` property in the `DataFormItem`.
 
-For `AutoGenerate` false you can use property directly by using the DataFormItem - add refrence link for explict create data editor.
+For `AutoGenerate` false, you can use property directly by using the `DataFormItem` - add refrence link for explict create data editor.
 
 By default label position is left.
 
@@ -439,7 +429,6 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 }
 {% endhighlight %}
 {% endtabs %}
-
 
 ## Change the Background for editor layout
 
@@ -597,55 +586,6 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
         };
     }
 }
-
-{% endhighlight %}
-{% endtabs %}
-
-Change valid Message Text style,
-
-{% tabs %}
-{% highlight C# %}
-
-this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
-
-private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
-{
-    if (e.DataFormItem.FieldName == "Name")
-    {
-        e.DataFormItem.ValidMessageLabelTextStyle = new DataFormTextStyle() 
-        {
-            FontSize = 19, 
-            TextColor = Colors.Blue, 
-            FontAttributes = FontAttributes.Bold
-        };
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-Change error message text style,
-
-{% tabs %}
-{% highlight C# %}
-
-this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
-
-private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
-{
-    if (e.DataFormItem.FieldName == "Name")
-    {
-        e.DataFormItem.ErrorLabelTextStyle = new DataFormTextStyle() 
-        {
-            FontSize = 19, 
-            TextColor = Colors.Blue, 
-            FontAttributes = FontAttributes.Bold
-        };
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
 
 ## Manually create DataForm Items
 
