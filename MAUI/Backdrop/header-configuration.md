@@ -9,7 +9,7 @@ documentation: ug
 
 # Header Configuration in .NET MAUI Backdrop Page (SfBackdropPage)
 
-Add a backdrop page as a child of the [`NavigationPage`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/pages/navigationpage?view=net-maui-6.0) in the App.xaml.cs class. Also, the `BarBackgroundColor,` `BarTextColor,` and other properties of the [`NavigationPage`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/pages/navigationpage?view=net-maui-6.0) can be set to customize the default appearance of the header.
+Add a backdrop page as a child of the [`NavigationPage`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/pages/navigationpage?view=net-maui-6.0) in the App.xaml.cs class. Also, the [`BarBackgroundColor,`](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.navigationpage.barbackgroundcolor?view=net-maui-6.0) [`BarTextColor,`](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.navigationpage.bartextcolor?view=net-maui-6.0) and other properties of the [`NavigationPage`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/pages/navigationpage?view=net-maui-6.0) can be set to customize the default appearance of the header.
  
 {% highlight C# %} 
 
