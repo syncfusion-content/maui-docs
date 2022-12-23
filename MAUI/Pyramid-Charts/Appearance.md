@@ -90,15 +90,15 @@ public class ViewModel
 	 LinearGradientBrush gradientColor2 = new LinearGradientBrush();
 	 gradientColor2.GradientStops = new GradientStopCollection()
 	 {
-		new GradientStop() { Offset = 1, Color = Color.FromArgb("#A5678E") },
-		new GradientStop() { Offset = 0, Color = Color.FromArgb("#E8B7D4") }
+	    new GradientStop() { Offset = 1, Color = Color.FromArgb("#A5678E") },
+	    new GradientStop() { Offset = 0, Color = Color.FromArgb("#E8B7D4") }
 	 };
 
 	 LinearGradientBrush gradientColor3 = new LinearGradientBrush();
 	 gradientColor3.GradientStops = new GradientStopCollection()
 	 {
-		new GradientStop() { Offset = 1, Color = Color.FromArgb("#FFCAD4") },
-		new GradientStop() { Offset = 0, Color = Color.FromArgb("#FB7B8E") }
+	    new GradientStop() { Offset = 1, Color = Color.FromArgb("#FFCAD4") },
+	    new GradientStop() { Offset = 0, Color = Color.FromArgb("#FB7B8E") }
 	 };
 
 	 LinearGradientBrush gradientColor4 = new LinearGradientBrush();
