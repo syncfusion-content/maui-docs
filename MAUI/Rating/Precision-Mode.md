@@ -11,11 +11,11 @@ documentation: ug
 
 # Precision Mode in .NET MAUI Rating (SfRating)
 
-The `Precision` mode defines the accuracy level of the `SfRating` control. It has `Standard`, `Half`, and `Exact` options. The default precision mode of the `SfRating` control is `Standard`.
+The [`Precision`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Precision.html) mode defines the accuracy level of the [`SfRating`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control. It has [`Standard`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Precision.html#Syncfusion_Maui_Inputs_Precision_Standard), [`Half`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Precision.html#Syncfusion_Maui_Inputs_Precision_Half), and [`Exact`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Precision.html#Syncfusion_Maui_Inputs_Precision_Exact) options. The default precision mode of the [`SfRating`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control is [`Standard`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Precision.html#Syncfusion_Maui_Inputs_Precision_Standard).
 
 ## Standard
 
-When the precision mode of `SfRating` is set as `Standard`, the rating item will be filled completely based on the rating value.
+When the precision mode of [`SfRating`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) is set as [`Standard`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Precision.html#Syncfusion_Maui_Inputs_Precision_Standard), the rating item will be filled completely based on the rating value.
 
 {% tabs %}
 
@@ -43,7 +43,7 @@ public MainPage()
 
 ## Half
 
-When the precision mode of `SfRating` is set as `Half`, the rating item will be filled partially based on the rating value.
+When the precision mode of [`SfRating`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) is set as [`Half`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Precision.html#Syncfusion_Maui_Inputs_Precision_Half), the rating item will be filled partially based on the rating value.
 
 {% tabs %}
 
@@ -71,7 +71,7 @@ public MainPage()
 
 ## Exact
 
-When the precision mode of `SfRating` is set as `Exact`, the rating item will be filled exactly based on the rating value.
+When the precision mode of [`SfRating`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) is set as [`Exact`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Precision.html#Syncfusion_Maui_Inputs_Precision_Exact), the rating item will be filled exactly based on the rating value.
 
 {% tabs %}
 
