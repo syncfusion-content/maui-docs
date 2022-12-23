@@ -493,7 +493,7 @@ this.Content = maps;
 
 ## Animation
 
-You can apply animation for the [`MapCircle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapCircle.html) using the `MapCircleLayer.AnimationDuration` and `MapCircleLayer.AnimationEasing` properties.
+You can apply animation for the [`MapCircle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapCircle.html) using the [`MapCircleLayer.AnimationDuration`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapCircleLayer.html#Syncfusion_Maui_Maps_MapCircleLayer_AnimationDuration) and [`MapCircleLayer.AnimationEasing`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapCircleLayer.html#Syncfusion_Maui_Maps_MapCircleLayer_AnimationEasing) properties.
 
 By default, there will be no animation.
 
