@@ -430,7 +430,7 @@ this.Content = maps;
 
 ## Animation
 
-You can apply animation for the [`MapPolyline`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html) using the `MapPolylineLayer.AnimationDuration` and `MapPolylineLayer.AnimationEasing` properties.
+You can apply animation for the [`MapPolyline`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html) using the [`MapPolylineLayer.AnimationDuration`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolylineLayer.html#Syncfusion_Maui_Maps_MapPolylineLayer_AnimationDuration) and [`MapPolylineLayer.AnimationEasing`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolylineLayer.html#Syncfusion_Maui_Maps_MapPolylineLayer_AnimationEasing) properties.
 
 By default, there will be no animation.
 
@@ -438,75 +438,63 @@ By default, there will be no animation.
 
 {% highlight xaml %}
 
-<map:SfMaps>
-    <map:SfMaps.Layer>
-        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/india.json"
-                           ShapeStroke="DarkGray">
-            <map:MapShapeLayer.Sublayers>
-                <map:MapPolylineLayer AnimationDuration="3000"
-                                      AnimationEasing="{x:Static Easing.Linear}">
-                    <map:MapPolylineLayer.Polylines>
-                        <map:MapPolyline Stroke="#52a8ef">
-                            <map:MapPolyline.Points>
-                                <map:MapLatLng Latitude="80.2707"
-                                               Longitude="13.0827" />
-                                <map:MapLatLng Latitude="79.6117"
-                                               Longitude="13.1746" />
-                                <map:MapLatLng Latitude="79.5037"
-                                               Longitude="13.6373" />
-                                <map:MapLatLng Latitude="78.8242"
-                                               Longitude="14.4673" />
-                                <map:MapLatLng Latitude="78.0092"
-                                               Longitude="14.9091" />
-                                <map:MapLatLng Latitude="77.3566"
-                                               Longitude="16.2160" />
-                                <map:MapLatLng Latitude="76.8697"
-                                               Longitude="17.1557" />
-                                <map:MapLatLng Latitude="75.4249"
-                                               Longitude="18.0975" />
-                                <map:MapLatLng Latitude="73.8567"
-                                               Longitude="18.5204" />
-                                <map:MapLatLng Latitude="72.8777"
-                                               Longitude="19.0760" />
-                            </map:MapPolyline.Points>
-                        </map:MapPolyline>
-                    </map:MapPolylineLayer.Polylines>
-                </map:MapPolylineLayer>
-            </map:MapShapeLayer.Sublayers>
-        </map:MapShapeLayer>
-    </map:SfMaps.Layer>
-</map:SfMaps>
+<maps:SfMaps>
+    <maps:SfMaps.Layer>
+        <maps:MapTileLayer UrlTemplate="https://tile.openstreetmap.org/{z}/{x}/{y}.png">
+            <maps:MapTileLayer.Center>
+                <maps:MapLatLng>
+                    <x:Arguments>
+                        <x:Double>51.4700</x:Double>
+                        <x:Double>-0.2843</x:Double>
+                    </x:Arguments>
+                </maps:MapLatLng>
+            </maps:MapTileLayer.Center>
+            <maps:MapTileLayer.ZoomPanBehavior>
+                <maps:MapZoomPanBehavior ZoomLevel="10"
+                                         MinZoomLevel="9"
+                                         MaxZoomLevel="12" />
+            </maps:MapTileLayer.ZoomPanBehavior>
+            <maps:MapTileLayer.Sublayers>
+                <maps:MapPolylineLayer AnimationDuration="3000"
+                                       AnimationEasing="{x:Static Easing.SinInOut}">
+                    <maps:MapPolylineLayer.Polylines>
+                        <maps:MapPolyline x:Name="polyline"
+                                          Stroke="#0066FF"
+                                          StrokeThickness="6" />
+                    </maps:MapPolylineLayer.Polylines>
+                </maps:MapPolylineLayer>
+            </maps:MapTileLayer.Sublayers>
+            <maps:MapTileLayer.Markers>
+                <maps:MapMarkerCollection>
+                    <maps:MapMarker Latitude="51.470012664794922"
+                                    Longitude="-0.45418000221252441"
+                                    IconWidth="14"
+                                    IconHeight="14"
+                                    IconFill="white"
+                                    IconStroke="black" />
+                    <maps:MapMarker Latitude="51.520004272460938"
+                                    Longitude="-0.12567600607872009"
+                                    IconWidth="14"
+                                    IconHeight="14"
+                                    IconFill="White"
+                                    IconStroke="black" />
+                </maps:MapMarkerCollection>
+            </maps:MapTileLayer.Markers>
+        </maps:MapTileLayer>
+    </maps:SfMaps.Layer>
+</maps:SfMaps>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-SfMaps maps = new SfMaps();
-MapShapeLayer layer = new MapShapeLayer();
-layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/india.json"));
-layer.ShapeStroke = Brush.DarkGray;
-MapPolylineLayer mapPolylineLayer = new MapPolylineLayer();
-mapPolylineLayer.AnimationDuration = 3000;
-mapPolylineLayer.AnimationEasing = Easing.Linear;
-MapPolyline polyline = new MapPolyline();
-polyline.Stroke = Color.FromRgb(82, 168, 239);
-polyline.Points = new ObservableCollection<MapLatLng>()
+public MainPage()
 {
-    new MapLatLng(80.2707, 13.0827),
-    new MapLatLng(79.6117, 13.1746),
-    new MapLatLng(79.5037, 13.6373),
-    new MapLatLng(78.8242, 14.4673),
-    new MapLatLng(78.0092, 14.9091),
-    new MapLatLng(77.3566, 16.2160),
-    new MapLatLng(76.8697, 17.1557),
-    new MapLatLng(75.4249, 18.0975),
-    new MapLatLng(73.8567, 18.5204),
-    new MapLatLng(72.8777, 19.0760),
-};
-mapPolylineLayer.Polylines.Add(polyline);
-layer.Sublayers.Add(mapPolylineLayer);
-maps.Layer = layer;
-this.Content = maps;
+    InitializeComponent();
+    
+    // Added logic in sample level to get the polygon points.
+    polyline.Points = this.GetJsondata("MapDemo.ShapeFiles.london_to_british.json");
+}
 
 {% endhighlight %}
 

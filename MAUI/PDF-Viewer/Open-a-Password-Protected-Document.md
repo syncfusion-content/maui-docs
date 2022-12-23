@@ -79,4 +79,275 @@ private void PdfViewer_DocumentLoadFailed(object sender, Syncfusion.Maui.PdfView
 {% endhighlight %}
 {% endtabs %}
 
+## Creating a password request view
+
+You can create a custom password request dialog based on your needs and use the input password provided to open and view the password-protected PDF documents. The following code snippets illustrate the creation of a custom password request dialog and viewing the documents, with a few code additions to the **Getting Started** example.
+
+**Step 1:** Create a custom password dialog view named `PasswordDialogBox` and add the functionalities to accept and validate the password, as shown below.
+
+{% tabs %}
+{% highlight xaml tabtitle="PasswordDialogBox.xaml" %}
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OpenPasswordProtectedFile.PasswordDialogBox"
+             HeightRequest="280" WidthRequest="360">
+    <Grid Padding="16" BackgroundColor="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" VerticalOptions="Start">
+            <Label 
+                Text="Enter a Password" 
+                Grid.Column="0" 
+                HorizontalOptions="Start"
+                FontAttributes="Bold" 
+                FontSize="20"/>
+        </Grid>
+        <Label 
+            Grid.Row="1" 
+            Text="The file is protected. Please enter a password to open the PDF file." 
+            VerticalOptions="Center" 
+            VerticalTextAlignment="End" 
+            LineBreakMode="WordWrap"/>
+        <VerticalStackLayout Grid.Row="2" Spacing="2">
+            <Border Stroke="{OnPlatform Android=Gray}" Padding="{OnPlatform Android=4}">
+                <Entry
+                    HorizontalOptions="Fill"
+                    Placeholder="Password: syncfusion"
+                    x:Name="passwordBlock"
+                    IsPassword="True"
+                    TextChanged="passwordBlock_TextChanged"/>
+            </Border>
+            <Label 
+                Text=""
+                x:Name="helperText"
+                VerticalOptions="Center" 
+                VerticalTextAlignment="Center" 
+                LineBreakMode="WordWrap"
+                FontSize="12" 
+                Padding="0,2,0,2"/>
+        </VerticalStackLayout>
+        <HorizontalStackLayout 
+                x:Name="showPassword" 
+                Spacing="8" 
+                Grid.Row="3" 
+                VerticalOptions="Start" >
+            <CheckBox CheckedChanged="CheckBox_CheckedChanged"/>
+            <Label 
+                HorizontalTextAlignment="Center"
+                Text="Show Password" 
+                VerticalTextAlignment="Center"/>
+        </HorizontalStackLayout>
+
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <Button 
+                Grid.Column="1" 
+                x:Name="cancelButton" 
+                Text="CANCEL" 
+                Clicked="CancelButton_Clicked"
+                VerticalOptions="End"/>
+            <Button 
+                Grid.Column="3"
+                x:Name="okButton" 
+                Text="OK" 
+                Clicked="OkButton_Clicked"
+                VerticalOptions="End"/>
+        </Grid>
+    </Grid>
+</ContentView>
+
+{% endhighlight %} 
+
+{% highlight c# tabtitle="PasswordDialogBox.xaml.cs" %}
+
+public partial class PasswordDialogBox : ContentView
+{
+    /// <summary>
+    /// Gets or sets the password.
+    /// </summary>
+    public string Password { get; set; }
+
+    /// <summary>
+    /// Occurs when the password is entered.
+    /// </summary>
+    public event EventHandler<EventArgs> PasswordEntered;
+
+    /// <summary>
+    /// Constructor for the password dialog box.
+    /// </summary>
+    public PasswordDialogBox()
+    {
+        InitializeComponent();
+    }
+    
+    /// <summary>
+    /// Handles when the cancel button is clicked.
+    /// </summary>
+    private void CancelButton_Clicked(object sender, EventArgs e)
+    {
+        //Reset the values and close the dialog.
+        Password = null;
+        passwordBlock.Text = "";
+        this.IsVisible = false;
+    }
+
+    private void OkButton_Clicked(object sender, EventArgs e)
+    {
+        if (string.IsNullOrEmpty(passwordBlock.Text) == false)
+        {
+            //Store the password.
+            Password = passwordBlock.Text;
+
+            //Reset the UI and close the dialog.
+            passwordBlock.Text = "";
+            this.IsVisible = false;
+
+            //Fire the password entered dialog.
+            PasswordEntered?.Invoke(this, EventArgs.Empty);
+        }
+        else
+        {
+            //Show warning when password is empty.
+            helperText.TextColor = Color.FromRgb(255,0,0);
+            helperText.Text = "* Password cannot be empty";
+        }
+    }
+    
+    /// <summary>
+    /// Handles when show password check box is checked or unchecked.
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    private void CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
+    {
+        if (sender is CheckBox checkBox)
+        {
+            // Show password when checked and hide when unchecked.
+            if (checkBox.IsChecked)
+                passwordBlock.IsPassword = false;
+            else
+                passwordBlock.IsPassword = true;
+        }
+    }
+    
+    /// <summary>
+    /// Handles when password text is changed.
+    /// </summary>
+    private void passwordBlock_TextChanged(object sender, TextChangedEventArgs e)
+    {
+        if (string.IsNullOrEmpty(e.NewTextValue) == false)
+        {
+            //Reset the helper text if the current password is not null or empty.
+            helperText.Text = "";
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+**Step 2:** Add the `SfPdfViewer` and `PasswordDialogBox` elements to the `MainPage` and handle the functionalities to open a custom password request dialog and display the PDF document after providing a correct password, as shown below.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OpenPasswordProtectedFile.MainPage"
+             xmlns:local="clr-namespace:OpenPasswordProtectedFile"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.PdfViewer;assembly=Syncfusion.Maui.PdfViewer">
+    <ContentPage.BindingContext>
+        <local:PdfViewerViewModel/>
+    </ContentPage.BindingContext>
+    <Grid>
+        <syncfusion:SfPdfViewer 
+            x:Name="PdfViewer"
+            DocumentSource="{Binding PdfDocumentStream}"
+            PasswordRequested="SfPdfViewer_PasswordRequested"
+            DocumentLoadFailed="PdfViewer_DocumentLoadFailed"/>
+        <local:PasswordDialogBox
+            x:Name="PasswordDialog"
+            IsVisible="false" 
+            PasswordEntered="PasswordDialogBox_PasswordEntered"/>
+    </Grid>
+</ContentPage>
+
+{% endhighlight %} 
+
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+public partial class MainPage : ContentPage
+{
+    //It is used to delay the current thread's execution, until the user enters the password.
+    ManualResetEvent manualResetEvent = new ManualResetEvent(false);
+
+    /// <summary>
+    /// Constructor of the main page.
+    /// </summary>
+    public MainPage()
+    {
+        InitializeComponent();
+    }
+
+    /// <summary>
+    /// Handles password requested event.
+    /// </summary>
+    private void SfPdfViewer_PasswordRequested(object sender, Syncfusion.Maui.PdfViewer.PasswordRequestedEventArgs e)
+    {
+        //Show the password dialog.
+        PasswordDialog.Dispatcher.Dispatch(() => PasswordDialog.IsVisible = true);
+        
+        //Block the current thread until user enters the password.
+        manualResetEvent.WaitOne();
+        manualResetEvent.Reset();
+
+        //Pass the user password to PDF Viewer to validate and load the PDF.
+        e.Password = PasswordDialog.Password;
+        e.Handled = true;
+    }
+
+    /// <summary>
+    /// Handles when document is failed to load.
+    /// </summary>
+    private void PdfViewer_DocumentLoadFailed(object sender, Syncfusion.Maui.PdfViewer.DocumentLoadFailedEventArgs e)
+    {
+        //Show the incorrect password message to the user, when document failed to load if the password is invalid.
+        if (e.Message == "Can't open an encrypted document. The password is invalid.")
+        {
+            MainThread.BeginInvokeOnMainThread(() =>
+            {
+                DisplayAlert("Incorrect Password", "The password you entered is incorrect. Please try again.", "OK");
+            });
+        }
+    }
+
+    /// <summary>
+    /// Handles when the password is entered.
+    /// </summary>
+    private void PasswordDialogBox_PasswordEntered(object sender, EventArgs e)
+    {
+        //Hide the password dialog.
+        PasswordDialog.IsVisible = false;
+
+        //Release the current waiting thread to execute.
+        manualResetEvent.Set();
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 The example project to open a password-protected document with a customized password request view can be downloaded [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples). 

@@ -314,6 +314,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
         dateItem.Format = "dd, MM, yyyy";
     }
 }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -371,7 +372,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
     {
         timeItem.Format = "HH:mm";
     }
-} 
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -429,7 +430,7 @@ public bool CellularData { get; set; } = true;
 
 [Display(Name = "Airplane Mode")]
 public bool AirplaneMode { get; set; }
- 
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -499,6 +500,7 @@ public class DataFormItemsSourceProvider : IDataFormSourceProvider
                 "Japan",
                 "India"
             };
+			
             return list;
         }
 
@@ -707,7 +709,7 @@ By default, the `ItemsSource` for `AutoComplete` editor is auto-generated for en
 public string Country { get ; set ; }
 public class DataFormItemsSourceProvider : IDataFormSourceProvider
 {
-        public object GetSource(string sourceName)
+	public object GetSource(string sourceName)
     {
         if (sourceName == "Country")
         {
@@ -820,7 +822,7 @@ public class DataFormItemsSourceProvider  : IDataFormSourceProvider
             return details;
         }
 
-    return new List<string>();
+		return new List<string>();
     }
 }
 
@@ -935,6 +937,7 @@ public class DataFormItemsSourceProvider : IDataFormSourceProvider
                 "Italy",
                 "India"
             };
+			
             return list;
         }
         return new List<string>();
@@ -1183,7 +1186,7 @@ public class NumericTextEditor : IDataFormEditor
         this.CommitValue(dataFormCustomItem, numericEntry);
     }
 }
-     
+
 {% endhighlight %}
 {% endtabs %}
 

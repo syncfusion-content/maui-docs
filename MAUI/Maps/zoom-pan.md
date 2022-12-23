@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Zooming and Panning  in Maps control | Syncfusion
-description: Learn here all about the Shape Sublayer feature of the Syncfusion .NET MAUI Maps (SfMaps) control to customize their appearances and more.
+description: Learn here all about the Zooming and Panning feature of the Syncfusion .NET MAUI Maps (SfMaps) control to customize their appearances and more.
 platform: MAUI
 control: SfMaps
 documentation: ug
@@ -83,9 +83,9 @@ this.Content = map;
 
 ## Customizing the zoom level
 
-You can set the zoom level of the map layer by using the `MapZoomPanBehavior.ZoomLevel` property.
+You can set the zoom level of the map layer by using the [`MapZoomPanBehavior.ZoomLevel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html#Syncfusion_Maui_Maps_MapZoomPanBehavior_ZoomLevel) property.
 
-The default `MapZoomPanBehavior.ZoomLevel` value is 1, which will show the whole map in the viewport for `MapTileLayer`.
+The default [`MapZoomPanBehavior.ZoomLevel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html#Syncfusion_Maui_Maps_MapZoomPanBehavior_ZoomLevel) value is 1, which will show the whole map in the viewport for [`MapTileLayer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html?tabs=tabid-1).
 
 {% tabs %}
 
@@ -128,7 +128,7 @@ this.Content = map;
 
 ## Enable zooming 
 
-The zooming feature enables you to zoom in and zoom out the maps to show in-depth information. To enable zooming, set the `EnableZooming` property to `true`. The default value of the `EnableZooming` is `true`.
+The zooming feature enables you to zoom in and zoom out the maps to show in-depth information. To enable zooming, set the [`EnableZooming`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html#Syncfusion_Maui_Maps_MapZoomPanBehavior_EnableZooming) property to `true`. The default value of the [`EnableZooming`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html#Syncfusion_Maui_Maps_MapZoomPanBehavior_EnableZooming) is `true`.
 
 {% tabs %}
 
@@ -164,7 +164,7 @@ this.Content = map;
 
 ## Enable Panning 
 
-The panning feature allows you to move the visible area of the maps when it is zoomed in. To enable panning, set the `EnablePanning` property to `true`. The default value of the `EnablePanning` is `true`.
+The panning feature allows you to move the visible area of the maps when it is zoomed in. To enable panning, set the [`EnablePanning`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html#Syncfusion_Maui_Maps_MapZoomPanBehavior_EnablePanning) property to `true`. The default value of the [`EnablePanning`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html#Syncfusion_Maui_Maps_MapZoomPanBehavior_EnablePanning) is `true`.
 
 N> It is applicable for both tile layer and shape layer.
 
@@ -202,9 +202,9 @@ this.Content = map;
 
 ## Customizing min and max zoom level
 
-You can set the min and max zoom level of the map layer by setting the value to `MapZoomPanBehavior.MinZoomLevel` and `MapZoomPanBehavior.MaxZoomLevel` properties. The minimum and maximum zooming levels can be restricted using these properties, respectively. The default values of `MapZoomPanBehavior.MinZoomLevel` and `MapZoomPanBehavior.MaxZoomLevel` are 1 and 15, respectively.
+You can set the min and max zoom level of the map layer by setting the value to [`MapZoomPanBehavior.MinZoomLevel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html#Syncfusion_Maui_Maps_MapZoomPanBehavior_MinZoomLevel) and [`MapZoomPanBehavior.MaxZoomLevel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html#Syncfusion_Maui_Maps_MapZoomPanBehavior_MaxZoomLevel) properties. The minimum and maximum zooming levels can be restricted using these properties, respectively. The default values of [`MapZoomPanBehavior.MinZoomLevel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html#Syncfusion_Maui_Maps_MapZoomPanBehavior_MinZoomLevel) and [`MapZoomPanBehavior.MaxZoomLevel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html#Syncfusion_Maui_Maps_MapZoomPanBehavior_MaxZoomLevel) are 1 and 15, respectively.
 
-However, for `MapTileLayer`, the `MapZoomPanBehavior.maxZoomLevel` may vary slightly depending on the providers. Kindly check the respective official website of the map tile providers to know about the maximum zoom level it supports.
+However, for [`MapTileLayer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html?tabs=tabid-1), the [`MapZoomPanBehavior.maxZoomLevel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html#Syncfusion_Maui_Maps_MapZoomPanBehavior_MaxZoomLevel) may vary slightly depending on the providers. Kindly check the respective official website of the map tile providers to know about the maximum zoom level it supports.
 
 {% tabs %}
 
@@ -256,9 +256,9 @@ This feature is used to calculate the zoom level automatically in two ways:
 
 ### Distance in radius 
 
-Calculate the zoom level automatically based on the `Radius` and `DistanceType` properties of imagery layer class.
+Calculate the zoom level automatically based on the [`Radius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_Radius) and [`DistanceType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_DistanceType) properties of imagery layer class.
 
-N> `DistanceType` property default value is Kilometer.
+N> [`DistanceType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_DistanceType) property default value is Kilometer.
 
 {% tabs %}
 
@@ -364,7 +364,7 @@ private DataTemplate CreateDataTemplate()
 
 ### Geo-bounds
 
-Calculate the zoom level automatically based on the `MapLatLngBounds(Northeast, Southwest)` of the `MapTileLayer` class.
+Calculate the zoom level automatically based on the [`LatLngBounds(Northeast, Southwest)`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_MapLatLngBounds) of the [`MapTileLayer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html?tabs=tabid-1) class.
 
 {% tabs %}
 
@@ -402,7 +402,7 @@ Calculate the zoom level automatically based on the `MapLatLngBounds(Northeast, 
                                     Longitude="-77.043610" />
                 </maps:MapMarkerCollection>
             </maps:MapTileLayer.Markers>
-            <maps:MapTileLayer.MapLatLngBounds>
+            <maps:MapTileLayer.LatLngBounds>
                 <maps:MapLatLngBounds>
                     <maps:MapLatLngBounds.Northeast>
                         <maps:MapLatLng>
@@ -421,7 +421,7 @@ Calculate the zoom level automatically based on the `MapLatLngBounds(Northeast, 
                         </maps:MapLatLng>
                     </maps:MapLatLngBounds.Southwest>
                 </maps:MapLatLngBounds>
-            </maps:MapTileLayer.MapLatLngBounds>
+            </maps:MapTileLayer.LatLngBounds>
         </maps:MapTileLayer>
     </maps:SfMaps.Layer>
 </maps:SfMaps>
@@ -453,7 +453,7 @@ public LatLngBoundsPage()
     MapLatLngBounds bounds = new MapLatLngBounds();
     bounds.Northeast = new MapLatLng(38.909804, -77.043442);
     bounds.Southwest = new MapLatLng(38.909148, -77.043610);
-    tileLayer.MapLatLngBounds = bounds;
+    tileLayer.LatLngBounds = bounds;
     map.Layer = tileLayer;
     this.Content = map;
 }
@@ -484,13 +484,13 @@ private DataTemplate CreateDataTemplate()
 
 {% endtabs %}
 
-N> When setting `MapLatLngBounds` and `DistanceType` at the same time, the priority is `Radius` and so calculate zoom level based on radius value.
+N> When setting [`LatLngBounds`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_MapLatLngBounds) and [`DistanceType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_DistanceType) at the same time, the priority is [`Radius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_Radius) and so calculate zoom level based on radius value.
 
 ![MAUI SfMaps zoom level changed image](images/zoom-pan/northSouth_Image.png)
 
 ## Double tap zooming
 
-Double tap zooming can be enabled using `EnableDoubleTapZooming` property. The default value of the `EnableDoubleTapZooming` is `false`.
+Double tap zooming can be enabled using [`EnableDoubleTapZooming`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html#Syncfusion_Maui_Maps_MapZoomPanBehavior_EnableDoubleTapZooming) property. The default value of the [`EnableDoubleTapZooming`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html#Syncfusion_Maui_Maps_MapZoomPanBehavior_EnableDoubleTapZooming) is `false`.
 
 N> It is applicable for both tile layer and shape layer.
 
@@ -532,7 +532,7 @@ this.Content = map;
 
 ### Zoom level Animation
 
-To perform the animation on zoom level changing using the `MapTileLayer.EnableZoomingAnimation` property. The default value of the `EnableZoomingAnimation` is `true`.
+To perform the animation on zoom level changing using the [`MapTileLayer.EnableZoomingAnimation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_EnableZoomingAnimation) property. The default value of the [`EnableZoomingAnimation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_EnableZoomingAnimation) is `true`.
 
 N> It is applicable for both tile layer and shape layer.
 
@@ -567,7 +567,7 @@ this.Content = map;
 
 ### Center Animation
 
-To perform the animation on center value changing using the `MapTileLayer.EnableCenterAnimation` property. The default value of the `EnableCenterAnimation` is `true`.
+To perform the animation on center value changing using the [`MapTileLayer.EnableCenterAnimation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_EnableCenterAnimation) property. The default value of the [`EnableCenterAnimation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_EnableCenterAnimation) is `true`.
 
 N> It is applicable only for tile layer.
 
@@ -602,11 +602,11 @@ this.Content = map;
 
 ## Event
 
-The `ZoomLevelChanging` event triggers when the zoom level gets changing. Following arguments can be get from the ZoomLevelChanging event.
+The [`ZoomLevelChanging`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_ZoomLevelChanging) event triggers when the zoom level gets changing. Following arguments can be get from the ZoomLevelChanging event.
 
 * `Cancel` : Used to cancel the zooming.
-* `PreviousLevel` : Returns the previous level after the zooming.
-* `CurrentLevel` : Returns the current level to be zoomed.
+* [`OldZoomLevel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.ZoomLevelChangingEventArgs.html#Syncfusion_Maui_Maps_ZoomLevelChangingEventArgs_OldZoomLevel) : Returns the previous level after the zooming.
+* [`NewZoomLevel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.ZoomLevelChangingEventArgs.html#Syncfusion_Maui_Maps_ZoomLevelChangingEventArgs_NewZoomLevel) : Returns the current level to be zoomed.
 
 {% tabs %}
 
@@ -636,4 +636,4 @@ private void MapTileLayer_ZoomLevelChanging(object sender, ZoomLevelChangingEven
 
 {% endtabs %}
 
-N> You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our `.NET MAUI Maps Zoom & Pan example` that shows how to configure Maps in .NET MAUI.
+N> You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our [`.NET MAUI Maps Zoom & Pan example`](https://github.com/syncfusion/maui-demos/) that shows how to configure Maps in .NET MAUI.
