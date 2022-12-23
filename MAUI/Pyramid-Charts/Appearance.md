@@ -84,7 +84,7 @@ public class ViewModel
 	 gradientColor1.GradientStops = new GradientStopCollection()
 	 {
 	    new GradientStop() { Offset = 1, Color = Color.FromArgb("#a3bded") },
-		new GradientStop() { Offset = 0, Color = Color.FromArgb("#6991c7") }
+		new GradientStop() { Offset = 0, Color = Color.FromArgb("#6991c7") },
 	 };
 
 	 LinearGradientBrush gradientColor2 = new LinearGradientBrush();
