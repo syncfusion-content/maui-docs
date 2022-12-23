@@ -89,7 +89,7 @@ public partial class BackdropSamplePage : SfBackdropPage
 
 {% endtabs %}
 
-N> The `Title` and `ToolBarItems` properties of the `Page` can be used to customize the appearance of the header.
+N> The [`Title`](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.page.title?view=net-maui-6.0) and [`ToolBarItems`](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.page.toolbaritems?view=net-maui-6.0) properties of the [`Page`](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.page?view=net-maui-6.0) can be used to customize the appearance of the header.
 
 ### Configure header
 
