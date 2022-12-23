@@ -1,6 +1,0 @@
-﻿<calendar:SfCalendar  x:Name="Calendar"
-                      View="Month">
-            <Calendar:SfCalendar.HeaderView>
-                <Calendar:CalendarHeaderView Height="100" />
-            </Calendar:SfCalendar.HeaderView>
-</calendar:SfCalendar>
