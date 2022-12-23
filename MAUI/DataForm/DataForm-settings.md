@@ -11,7 +11,7 @@ documentation: UG
 
 ## Auto generate data editor 
 
-By default, the `SfDataForm.Items` will be generated based on the property type. For example, the `DataFormTextItem` will be generated based on the property type in `DataObject`. 
+By default, the `SfDataForm.Items` will be generated based on the property type. For example, the `DataFormTextItem` will be generated based on the property type in `DataObject`.
 The `DataFormItem` generation depends on the type and attribute defined for the property.
 
 You can customize the auto-generated editor, label, and group settings by using the `GenerateDataFormItem` event.
@@ -30,7 +30,7 @@ DataFormTextItem
 {{'[Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry?view=net-maui-7.0)'| markdownify }}
 </td>
 <td>
-Generated for the string type and the properties with [DataType(DataType.Text)] attributes.
+Generated for the string type and the properties with [DataType(DataType.Text)] attribute.
 </td>
 </tr>
 <tr>
@@ -41,7 +41,7 @@ DataFormMultilineTextItem
 {{'[Editor](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/editor?view=net-maui-7.0)'| markdownify }}
 </td>
 <td>
-Generated for the string type properties with  [DataType(DataType.MultilineText)] attributes. 
+Generated for the string type properties with [DataType(DataType.MultilineText)] attribute. 
 </td>
 </tr>
 <tr>
@@ -52,7 +52,7 @@ DataFormPasswordItem
 {{'[Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry?view=net-maui-7.0)'| markdownify }}
 </td>
 <td>
-Generated for the string type properties with [DataType(DataType.Password)] attributes. 
+Generated for the string type properties with [DataType(DataType.Password)] attribute. 
 </td>
 </tr>
 <tr>
@@ -107,7 +107,7 @@ DataFormComboBoxItem
 {{'[SfComboBox](https://help.syncfusion.com/maui/combobox)'| markdownify }}
 </td>
 <td>
-Generated for enum type property. 
+Generated for the enum type property. 
 </td>
 </tr><tr>
 <td>
@@ -117,7 +117,7 @@ DataFormAutoCompleteItem
 {{'[SfAutoComplete](https://help.syncfusion.com/maui/autocomplete)'| markdownify }}
 </td>
 <td>
-Generated for enum type property. 
+Generated for the enum type property. 
 </td>
 </tr>
 <tr>
@@ -128,7 +128,7 @@ DataFormPickerItem
 {{'[Picker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/picker?view=net-maui-7.0)'| markdownify }}
 </td>
 <td>
-Generated for enum type property. 
+Generated for the enum type property. 
 </td>
 </tr>
 <tr>
@@ -275,7 +275,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-#### Changing watermark color for auto-generated editor
+## Changing watermark color for auto-generated editor
 
 You can display the color for the watermark in the editor by using `GenerateDataFormItem` event when `AutoGenerateItems` is true.
 
@@ -505,9 +505,9 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
         }
     }
 }
+
 {% endhighlight %}
 {% endtabs %}
-
 
 ## Change the Text style 
 
@@ -544,7 +544,7 @@ DataFormTextStyle class properties:-
     3.FontAttributes
     4.TextColor
 
-**Change Label Text Style**
+#### Change Label Text Style
 
 {% tabs %}
 {% highlight C# %}
@@ -567,7 +567,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-**Change Editor Text Style**
+#### Change Editor Text Style
 
 {% tabs %}
 {% highlight C# %}
@@ -706,7 +706,6 @@ this.dataForm.Items.Add(new DataFormTextItem() {FieldName = "Country" });
 {% endhighlight %}
 {% endtabs %}
 
-
 ## Dynamically remove manually added dataform items
 You can dynamically remove the data editor explicitly by using the `Items` property of `SfDataForm`.
 
@@ -717,7 +716,6 @@ this.dataForm.Items.RemoveAt(2);
 
 {% endhighlight %}
 {% endtabs %}
-
 
 ## Dynamically clear manually added dataform items
 You can dynamically clear all the item views from `SfDataForm`.
@@ -739,7 +737,6 @@ You can replace data editor with new editor by using the `Items` property of `Sf
 
 DataFormTextItem textItem = new DataFormTextItem() { FieldName = "Age" };
 this.dataForm.Items[2] = textItem;
-    
     
 DataFormDateItem dateItem = new DataFormDateItem() { FieldName ="Date Of Birth", RowOrder = 2, ItemsOrderInRow = 1, ColumnSpan = 3 });
 
@@ -767,7 +764,6 @@ this.dataForm.Items.Add(dataFormGroupItem);
 {% endhighlight %}
 {% endtabs %}
 
-
 #### Adding custom editor view using Manual DataFormItem
 
 You can add custom editor manually by adding the custom view as an `EditorView` of `DataFormCustomItem`. In this case, the editor view will not be generated based on field type and `RegistorEditor`.
@@ -790,4 +786,3 @@ You can add custom editor manually by adding the custom view as an `EditorView` 
 
 {% endhighlight %}
 {% endtabs %}
-
