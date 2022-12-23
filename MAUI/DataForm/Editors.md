@@ -182,7 +182,7 @@ By default, the editors will be loaded based on the primitive data type such as 
 {% tabs %}
 {% highlight C# %}
 
-    this.dataForm.RegisterEditor(typeof(string), DataFormEditorType.MultilineText);
+this.dataForm.RegisterEditor(typeof(string), DataFormEditorType.MultilineText);
 
 {% endhighlight %}
 {% endtabs %}
@@ -196,7 +196,7 @@ To change the editor for any property, use the `RegisterEditor` method and speci
 {% tabs %}
 {% highlight c# %}
 
-    this.dataForm.RegisterEditor("On", DataFormEditorType.Switch);
+this.dataForm.RegisterEditor("On", DataFormEditorType.Switch);
 
 {% endhighlight %}
 {% endtabs %}
@@ -210,8 +210,8 @@ In the text editor, the [Entry](https://learn.microsoft.com/en-us/dotnet/maui/us
 {% tabs %}
 {% highlight C# %}
 
-    [DataType(DataType.Text)]
-    public string Name { get; set; }
+[DataType(DataType.Text)]
+public string Name { get; set; }
 
 {% endhighlight %}
 {% endtabs %}
@@ -221,15 +221,15 @@ In `Text`, `MultilineText` and `Password` editors you can change the soft input 
 {% tabs %}
 {% highlight C# %}
 
-    this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
-    {   
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name" && e.DataFormItem is DataFormTextEdiorItem textEditorItem)
-        {
-            textEditorItem.Keyboard= Keyboard.Text;
-        }
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{   
+    if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name" && e.DataFormItem is DataFormTextEdiorItem textEditorItem)
+    {
+         textEditorItem.Keyboard= Keyboard.Text;
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -239,15 +239,15 @@ In `Text`, `MultilineText`, and `Password` editors you can set the maximum allow
 {% tabs %}
 {% highlight C# %}
 
-    this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
-    {   
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name" && e.DataFormItem is DataFormTextEdiorItem textEditorItem)
-        {
-            textEditorItem.MaxLength = 20;
-        }
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{   
+    if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name" && e.DataFormItem is DataFormTextEdiorItem textEditorItem)
+    {
+        textEditorItem.MaxLength = 20;
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -262,8 +262,8 @@ In the `MultilineText` editor, the [Editor](https://learn.microsoft.com/en-us/do
 {% tabs %}
 {% highlight C# %}
 
-    [DataType(DataType.MultilineText)]
-    public string Address { get; set; }
+[DataType(DataType.MultilineText)]
+public string Address { get; set; }
 
 {% endhighlight %}
 {% endtabs %}
@@ -275,9 +275,9 @@ In the password editor, the [Entry](https://learn.microsoft.com/en-us/dotnet/mau
 {% tabs %}
 {% highlight C# %}
 
-    [Display(ShortName = "Transaction password", Prompt = "Enter password")]
-    [DataType(DataType.Password)]
-    public string Password { get; set; }
+[Display(ShortName = "Transaction password", Prompt = "Enter password")]
+[DataType(DataType.Password)]
+public string Password { get; set; }
 
 {% endhighlight %}
 {% endtabs %}
@@ -291,9 +291,9 @@ In the date editor, the default date value will be the current date. You can als
 {% tabs %}
 {% highlight C# %}
 
-    [DataType(DataType.Date)]
-    [Display(Name ="Event Date")]
-    public DateTime? EventDate { get; set; }
+[DataType(DataType.Date)]
+[Display(Name ="Event Date")]
+public DateTime? EventDate { get; set; }
 
 {% endhighlight %}
 {% endtabs %}
@@ -305,15 +305,16 @@ In the [DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface
 {% tabs %}
 {% highlight C# %}
 
-    this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
-    {   
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Date" && e.DataFormItem is DataFormDateItem dateItem)
-        {
-            dateItem.Format = "dd, MM, yyyy";
-        }
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{   
+    if (e.DataFormItem != null && e.DataFormItem.FieldName == "Date" && e.DataFormItem is DataFormDateItem dateItem)
+    {
+        dateItem.Format = "dd, MM, yyyy";
     }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -324,16 +325,16 @@ You can customize the maximum and minimum allowable dates in the [DatePicker](ht
 {% tabs %}
 {% highlight C# %}
 
-    this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{
+    if (e.DataFormItem != null && e.DataFormItem.FieldName == "Date" && e.DataFormItem is DataFormDateItem dateItem)
     {
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Date" && e.DataFormItem is DataFormDateItem dateItem)
-        {
-            dateItem.MinimumDate = new DateTime(2022, 5, 5);
-            dateItem.MaximumDate = new DateTime(2022, 9, 2);
-        }
+        dateItem.MinimumDate = new DateTime(2022, 5, 5);
+        dateItem.MaximumDate = new DateTime(2022, 9, 2);
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -348,9 +349,9 @@ In the time editor, by default (12:00 AM) will be displayed.
 {% tabs %}
 {% highlight C# %}
 
-    [DataType(DataType.Time)]
-    [Display(Name = "Event Time")]
-    public TimeSpan? EventTime { get; set; }
+[DataType(DataType.Time)]
+[Display(Name = "Event Time")]
+public TimeSpan? EventTime { get; set; }
 
 {% endhighlight %}
 {% endtabs %}
@@ -363,15 +364,15 @@ In the time editor, a short time will be shown by default. You can change the ap
 {% tabs %}
 {% highlight C# %}
 
-    this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{
+    if (e.DataFormItem != null && e.DataFormItem.FieldName == "EventTime" && e.DataFormItem is DataFormTimeItem timeItem)
     {
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "EventTime" && e.DataFormItem is DataFormTimeItem timeItem)
-        {
-            timeItem.Format = "HH:mm";
-        }
-    } 
+        timeItem.Format = "HH:mm";
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -383,11 +384,11 @@ In the CheckBox editor, the `CheckBox` control is loaded. By default, for bool d
 {% tabs %}
 {% highlight C# %}
 
-    [Display(Name = "Is Billable")]
-    public bool IsBillable { get; set; } = true;
+[Display(Name = "Is Billable")]
+public bool IsBillable { get; set; } = true;
 
-    [Display(Name = "Registered Member")]
-    public bool RegisteredMember { get; set; }
+[Display(Name = "Registered Member")]
+public bool RegisteredMember { get; set; }
 
 {% endhighlight %}
 {% endtabs %}
@@ -399,15 +400,15 @@ By default, the checkbox color is blue. You can change the checkbox color by usi
 {% tabs %}
 {% highlight C# %}
 
-    this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
     
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{
+    if (e.DataFormItem.FieldName == "IsBillable" && e.DataFormItem is DataFormCheckBoxItem dataFormCheckBox)
     {
-        if (e.DataFormItem.FieldName == "IsBillable" && e.DataFormItem is DataFormCheckBoxItem dataFormCheckBox)
-        {
-            dataFormCheckBox.Color = Colors.Pink;
-        }
+         dataFormCheckBox.Color = Colors.Pink;
     }
+}
     
 {% endhighlight %}
 {% endtabs %}
@@ -421,15 +422,14 @@ To add a switch editor in DataForm, register the editor as `DataFormEditorType.S
 {% tabs %}
 {% highlight C# %}
 
-       this.dataForm.RegisterEditor("CellularData", DataFormEditorType.Switch);
-       this.dataForm.RegisterEditor("AirplaneMode", DataFormEditorType.Switch);
+this.dataForm.RegisterEditor("CellularData", DataFormEditorType.Switch);
+this.dataForm.RegisterEditor("AirplaneMode", DataFormEditorType.Switch);
 
-        [Display(Name ="Cellular Data")]
-        public bool CellularData { get; set; } = true;
+[Display(Name ="Cellular Data")]
+public bool CellularData { get; set; } = true;
 
-        [Display(Name = "Airplane Mode")]
-        public bool AirplaneMode { get; set; }
- 
+[Display(Name = "Airplane Mode")]
+public bool AirplaneMode { get; set; }
 
 {% endhighlight %}
 {% endtabs %}
@@ -440,15 +440,15 @@ You can change the thumb color by using the `ThumbColor` property in the `DataFo
 {% tabs %}
 {% highlight C# %}
 
-    this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{
+    if (e.DataFormItem != null && e.DataFormItem.FieldName == "Agree" && e.DataFormItem is DataFormSwitchItem switchItem)
     {
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Agree" && e.DataFormItem is DataFormSwitchItem switchItem)
-        {
-            switchItem.ThumbColor = Colors.Pink;
-        }
+        switchItem.ThumbColor = Colors.Pink;
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -460,15 +460,15 @@ You can change the switch on color by using the `OnColor` property in the `DataF
 {% tabs %}
 {% highlight C# %}
 
-    this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{
+    if (e.DataFormItem != null && e.DataFormItem.FieldName == "Agree" && e.DataFormItem is DataFormSwitchItem switchItem)
     {
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Agree" && e.DataFormItem is DataFormSwitchItem switchItem)
-        {
-            switchItem.OnColor = Colors.Black;
-        }
+        switchItem.OnColor = Colors.Black;
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -486,30 +486,30 @@ By default, the `ItemsSource` for SfComboBox is auto-generated for enum types pr
 {% tabs %}
 {% highlight C# %}
 
-    public string Country { get; set; }
+public string Country { get; set; }
     
-    public class DataFormItemsSourceProvider : IDataFormSourceProvider
+public class DataFormItemsSourceProvider : IDataFormSourceProvider
+{
+    public object GetSource(string sourceName)
     {
-        public object GetSource(string sourceName)
+        if (sourceName == "Country")
         {
-            if (sourceName == "Country")
+            List<string> list = new List<string>()
             {
-                List<string> list = new List<string>()
-                {
-                    "USA",
-                    "Japan",
-                    "India"
-                };
-
-                return list;
-            }
-
-            return new List<string>();
+                "USA",
+                "Japan",
+                "India"
+            };
+			
+            return list;
         }
-    }
 
-    this.dataForm.ItemsSourceProvider = new DataFormItemsSourceProvider();
-    this.dataForm.RegisterEditor("Country", DataFormEditorType.ComboBox);
+        return new List<string>();
+    }
+}
+
+this.dataForm.ItemsSourceProvider = new DataFormItemsSourceProvider();
+this.dataForm.RegisterEditor("Country", DataFormEditorType.ComboBox);
 
 {% endhighlight %}
 {% endtabs %}
@@ -521,22 +521,22 @@ You can also set the `ItemsSource` for combo box editor by using the `GenerateDa
 {% tabs %}
 {% highlight C# %}
 
-    this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{
+    if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name" && e.DataFormItem is DataFormComboBoxItem comboBoxItem)
     {
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name" && e.DataFormItem is DataFormComboBoxItem comboBoxItem)
+        List<string> list = new List<string>()
         {
-             List<string> list = new List<string>()
-            {
-                "Home",
-                "Food",
-                "Utilities",
-                "Education"
-            };
-            comboBoxItem.ItemsSource = list;
-        }
+            "Home",
+            "Food",
+            "Utilities",
+            "Education"
+        };
+        comboBoxItem.ItemsSource = list;
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -550,15 +550,15 @@ You can filter a particular item in the list using the `IsEditable` property. Th
 {% tabs %}
 {% highlight C# %}
 
-    this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{
+    if (e.DataFormItem != null && e.DataFormItem.FieldName == "City" && e.DataFormItem is DataFormComboBoxItem comboBoxItem)
     {
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "City" && e.DataFormItem is DataFormComboBoxItem comboBoxItem)
-        {
-           comboBoxItem.IsEditable = true;
-        }
+        comboBoxItem.IsEditable = true;
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -577,15 +577,15 @@ Displays all the matches that contain the first character of the typed character
 {% tabs %}
 {% highlight C# %}
 
-    this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{
+    if (e.DataFormItem != null && e.DataFormItem.FieldName == "City" && e.DataFormItem is DataFormComboBoxItem comboBoxItem)
     {
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "City" && e.DataFormItem is DataFormComboBoxItem comboBoxItem)
-        {
-            comboBoxItem.TextSearchMode = DataFormTextSearchMode.StartsWith;
-        }
+        comboBoxItem.TextSearchMode = DataFormTextSearchMode.StartsWith;
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -597,15 +597,15 @@ Displays all the matches that contain the typed characters in items source of th
 {% tabs %}
 {% highlight C# %}
 
-    this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{
+    if (e.DataFormItem != null && e.DataFormItem.FieldName == "City" && e.DataFormItem is DataFormComboBoxItem comboBoxItem)
     {
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "City" && e.DataFormItem is DataFormComboBoxItem comboBoxItem)
-        {
-            comboBoxItem.TextSearchMode = DataFormTextSearchMode.Contains;
-        }
+        comboBoxItem.TextSearchMode = DataFormTextSearchMode.Contains;
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -617,15 +617,15 @@ By default, the combo box drop down list item height is `400d`. You can change t
 {% tabs %}
 {% highlight C# %}
 
-    this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{
+    if (e.DataFormItem != null && e.DataFormItem.FieldName == "Country" && e.DataFormItem is DataFormComboBoxItem comboBoxItem)
     {
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Country" && e.DataFormItem is DataFormComboBoxItem comboBoxItem)
-        {
-            comboBoxItem.MaxDropDownHeight = 200;
-        }
+        comboBoxItem.MaxDropDownHeight = 200;
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -639,56 +639,56 @@ N> Class cannot be directly set as data type for combo box editor in this comple
 {% tabs %}
 {% highlight C# %}
 
-    this.dataForm.ItemsSourceProvider = new DataFormItemsSourceProvider();
-    this.dataForm.DataObject = new ContactInfo();
-    this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
-    this.dataForm.RegisterEditor("EmployeeDetails", DataFormEditorType.ComboBox);
+this.dataForm.ItemsSourceProvider = new DataFormItemsSourceProvider();
+this.dataForm.DataObject = new ContactInfo();
+this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.dataForm.RegisterEditor("EmployeeDetails", DataFormEditorType.ComboBox);
+
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{
+    if (e.DataFormItem != null && e.DataFormItem.FieldName == "EmployeeDetails" && e.DataFormItem is DataFormComboBoxItem comboBoxItem)
+    {   
+        comboBoxItem.DisplayMemberPath = "ID";
+        comboBoxItem.SelectedValuePath = "Name";
+    }
+} 
  
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+public class DataFormItemsSourceProvider  : IDataFormSourceProvider
+{
+    public object GetSource(string sourceName)
     {
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "EmployeeDetails" && e.DataFormItem is DataFormComboBoxItem comboBoxItem)
-        {   
-            comboBoxItem.DisplayMemberPath = "ID";
-            comboBoxItem.SelectedValuePath = "Name";
-        }
-    } 
- 
-    public class DataFormItemsSourceProvider  : IDataFormSourceProvider
-    {
-        public object GetSource(string sourceName)
+        if (sourceName == "EmployeeDetails")
         {
-            if (sourceName == "EmployeeDetails")
-            {
-                List<EmployeeInfo> details = new List<EmployeeInfo>();
-                details.Add(new EmployeeInfo() { ID = 1, Name =  "Eric"  });
-                details.Add(new EmployeeInfo() { ID = 2, Name = "James"  });
-                details.Add(new EmployeeInfo() { ID = 3, Name = "Jacob"  });
-                details.Add(new EmployeeInfo() { ID = 4, Name = "Lucas"  });
-                details.Add(new EmployeeInfo() { ID = 5, Name = "Mark"  });
-                details.Add(new EmployeeInfo() { ID = 6, Name = "Aldan"  });
-                details.Add(new EmployeeInfo() { ID = 7, Name = "Aldrin"  });
-                details.Add(new EmployeeInfo() { ID = 8, Name = "Alan"  });
-                details.Add(new EmployeeInfo() { ID = 9, Name = "Aaron"  });
+            List<EmployeeInfo> details = new List<EmployeeInfo>();
+            details.Add(new EmployeeInfo() { ID = 1, Name =  "Eric"  });
+            details.Add(new EmployeeInfo() { ID = 2, Name = "James"  });
+            details.Add(new EmployeeInfo() { ID = 3, Name = "Jacob"  });
+            details.Add(new EmployeeInfo() { ID = 4, Name = "Lucas"  });
+            details.Add(new EmployeeInfo() { ID = 5, Name = "Mark"  });
+            details.Add(new EmployeeInfo() { ID = 6, Name = "Aldan"  });
+            details.Add(new EmployeeInfo() { ID = 7, Name = "Aldrin"  });
+            details.Add(new EmployeeInfo() { ID = 8, Name = "Alan"  });
+            details.Add(new EmployeeInfo() { ID = 9, Name = "Aaron"  });
 
-                return details;
-            }
-
-            return new List<string>();
+            return details;
         }
-    }
 
-    public class ContactInfo
-    {
-        [Display(Name ="First Name")]
-        public String FirstName { get; set; } 
-        public string EmployeeDetails { get; set; }
+        return new List<string>();
     }
+}
 
-    public class EmployeeInfo
-    {
-        public int ID { get; set; }
-        public string Name { get; set; }
-    }
+public class ContactInfo
+{
+    [Display(Name ="First Name")]
+    public String FirstName { get; set; } 
+    public string EmployeeDetails { get; set; }
+}
+
+public class EmployeeInfo
+{
+    public int ID { get; set; }
+    public string Name { get; set; }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -706,39 +706,39 @@ By default, the `ItemsSource` for `AutoComplete` editor is auto-generated for en
 {% tabs %}
 {% highlight C# %}
 
-    public string Country { get ; set ; }
-    public class DataFormItemsSourceProvider : IDataFormSourceProvider
+public string Country { get ; set ; }
+public class DataFormItemsSourceProvider : IDataFormSourceProvider
+{
+	public object GetSource(string sourceName)
     {
-         public object GetSource(string sourceName)
+        if (sourceName == "Country")
         {
-            if (sourceName == "Country")
+            List<string> list = new List<string>()
             {
-                List<string> list = new List<string>()
-                {
-                    "Indonesia",
-                    "Italy",
-                    "India",
-                    "Iran",
-                    "Iraq",
-                    "Uganda"
-                    "Ukraine"
-                    "Canada"
-                    "Australia"
-                    "Uzbekistan"
-                    "France"
-                    "United Kingdom"
-                    "United States"
-                };
+                "Indonesia",
+                "Italy",
+                "India",
+                "Iran",
+                "Iraq",
+                "Uganda"
+                "Ukraine"
+                "Canada"
+                "Australia"
+                "Uzbekistan"
+                "France"
+                "United Kingdom"
+                "United States"
+            };
 
-                return list;
-            }
-
-            return new List<string>();
+            return list;
         }
-    }
 
-    this.dataForm.ItemsSourceProvider = new DataFormItemsSourceProvider();
-    this.dataForm.RegisterEditor("Country", DataFormEditorType.AutoComplete);
+        return new List<string>();
+    }
+}
+
+this.dataForm.ItemsSourceProvider = new DataFormItemsSourceProvider();
+this.dataForm.RegisterEditor("Country", DataFormEditorType.AutoComplete);
 
 {% endhighlight %}
 {% endtabs %}
@@ -751,30 +751,31 @@ You can also set `ItemsSource` for autocomplete editor by using the `ItemsSource
 {% tabs %}
 {% highlight C# %}
 
-    this.dataForm.RegisterEditor("Country", DataFormEditorType.AutoComplete);
-    this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.dataForm.RegisterEditor("Country", DataFormEditorType.AutoComplete);
+this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{
+    if (e.DataFormItem != null && e.DataFormItem.FieldName == "Country" && e.DataFormItem is DataFormAutoCompleteItem autoCompleteItem)
     {
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Country" && e.DataFormItem is DataFormAutoCompleteItem autoCompleteItem)
-        {
-            List<string> list = new List<string>();
-            list.Add("Indonesia");
-            list.Add("Italy");
-            list.Add("India");
-            list.Add("Iran");
-            list.Add("Iraq");
-            list.Add("Uganda");
-            list.Add("Ukraine");
-            list.Add("Canada");
-            list.Add("Australia");
-            list.Add("Uzbekistan");
-            list.Add("France");
-            list.Add("United Kingdom");
-            list.Add("United States");
-            autoCompleteItem.ItemsSource = list;
-        }
+        List<string> list = new List<string>();
+        list.Add("Indonesia");
+        list.Add("Italy");
+        list.Add("India");
+        list.Add("Iran");
+        list.Add("Iraq");
+        list.Add("Uganda");
+        list.Add("Ukraine");
+        list.Add("Canada");
+        list.Add("Australia");
+        list.Add("Uzbekistan");
+        list.Add("France");
+        list.Add("United Kingdom");
+        list.Add("United States");
+        autoCompleteItem.ItemsSource = list;
     }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -787,56 +788,56 @@ N> Class cannot be directly set as data type for autocomplete editor in this com
 {% tabs %}
 {% highlight C# %}
 
-    this.dataForm.ItemsSourceProvider = new DataFormItemsSourceProvider();
-    this.dataForm.DataObject = new ContactInfo();
-    this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
-    this.dataForm.RegisterEditor("EmployeeDetails", DataFormEditorType.ComboBox);
+this.dataForm.ItemsSourceProvider = new DataFormItemsSourceProvider();
+this.dataForm.DataObject = new ContactInfo();
+this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.dataForm.RegisterEditor("EmployeeDetails", DataFormEditorType.ComboBox);
+
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{
+    if (e.DataFormItem != null && e.DataFormItem.FieldName == "EmployeeDetails" && e.DataFormItem is DataFormAutoCompleteItem autoCompleteItem)
+    {   
+        autoCompleteItem.DisplayMemberPath = "ID";
+        autoCompleteItem.SelectedValuePath = "Name";
+    }
+} 
  
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+public class DataFormItemsSourceProvider  : IDataFormSourceProvider
+{
+    public object GetSource(string sourceName)
     {
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "EmployeeDetails" && e.DataFormItem is DataFormAutoCompleteItem autoCompleteItem)
-        {   
-            autoCompleteItem.DisplayMemberPath = "ID";
-            autoCompleteItem.SelectedValuePath = "Name";
-        }
-    } 
- 
-    public class DataFormItemsSourceProvider  : IDataFormSourceProvider
-    {
-        public object GetSource(string sourceName)
+        if (sourceName == "EmployeeDetails")
         {
-            if (sourceName == "EmployeeDetails")
-            {
-                List<EmployeeInfo> details = new List<EmployeeInfo>();
-                details.Add(new EmployeeInfo() { ID = 1, Name =  "Eric"  });
-                details.Add(new EmployeeInfo() { ID = 2, Name = "James"  });
-                details.Add(new EmployeeInfo() { ID = 3, Name = "Jacob"  });
-                details.Add(new EmployeeInfo() { ID = 4, Name = "Lucas"  });
-                details.Add(new EmployeeInfo() { ID = 5, Name = "Mark"  });
-                details.Add(new EmployeeInfo() { ID = 6, Name = "Aldan"  });
-                details.Add(new EmployeeInfo() { ID = 7, Name = "Aldrin"  });
-                details.Add(new EmployeeInfo() { ID = 8, Name = "Alan"  });
-                details.Add(new EmployeeInfo() { ID = 9, Name = "Aaron"  });
+            List<EmployeeInfo> details = new List<EmployeeInfo>();
+            details.Add(new EmployeeInfo() { ID = 1, Name =  "Eric"  });
+            details.Add(new EmployeeInfo() { ID = 2, Name = "James"  });
+            details.Add(new EmployeeInfo() { ID = 3, Name = "Jacob"  });
+            details.Add(new EmployeeInfo() { ID = 4, Name = "Lucas"  });
+            details.Add(new EmployeeInfo() { ID = 5, Name = "Mark"  });
+            details.Add(new EmployeeInfo() { ID = 6, Name = "Aldan"  });
+            details.Add(new EmployeeInfo() { ID = 7, Name = "Aldrin"  });
+            details.Add(new EmployeeInfo() { ID = 8, Name = "Alan"  });
+            details.Add(new EmployeeInfo() { ID = 9, Name = "Aaron"  });
 
-                return details;
-            }
-
-            return new List<string>();
+            return details;
         }
-    }
 
-    public class ContactInfo
-    {
-        [Display(Name ="First Name")]
-        public String FirstName { get; set; } 
-        public string EmployeeDetails { get; set; }
+		return new List<string>();
     }
+}
 
-    public class EmployeeInfo
-    {
-        public int ID { get; set; }
-        public string Name { get; set; }
-    }
+public class ContactInfo
+{
+    [Display(Name ="First Name")]
+    public String FirstName { get; set; } 
+    public string EmployeeDetails { get; set; }
+}
+
+public class EmployeeInfo
+{
+    public int ID { get; set; }
+    public string Name { get; set; }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -855,15 +856,15 @@ Displays all the matches that contain first character of the typed characters in
 {% tabs %}
 {% highlight C# %}
 
-    this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{
+    if (e.DataFormItem != null && e.DataFormItem.FieldName == "Country" && e.DataFormItem is DataFormAutoCompleteItem autoCompleteItem)
     {
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Country" && e.DataFormItem is DataFormAutoCompleteItem autoCompleteItem)
-        {
-            autoComplete.TextSearchMode = DataFormTextSearchMode.StartsWith;
-        }
+        autoComplete.TextSearchMode = DataFormTextSearchMode.StartsWith;
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -875,15 +876,15 @@ Displays all the matches that contain the typed characters in items source of au
 {% tabs %}
 {% highlight C# %}
 
-    this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{
+    if (e.DataFormItem != null && e.DataFormItem.FieldName == "Country" && e.DataFormItem is DataFormAutoCompleteItem autoCompleteItem)
     {
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Country" && e.DataFormItem is DataFormAutoCompleteItem autoCompleteItem)
-        {
-            autoComplete.TextSearchMode = DataFormTextSearchMode.Contains;
-        }
+        autoComplete.TextSearchMode = DataFormTextSearchMode.Contains;
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -895,15 +896,15 @@ By default the autocomplete drop down list item height is `400d`. You can change
 {% tabs %}
 {% highlight C# %}
 
-    this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{
+    if (e.DataFormItem != null && e.DataFormItem.FieldName == "Country" && e.DataFormItem is DataFormAutoCompleteItem autoCompleteItem)
     {
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Country" && e.DataFormItem is DataFormAutoCompleteItem autoCompleteItem)
-        {
-            autoComplete.MaxDropDownHeight = 300;
-        }
+        autoComplete.MaxDropDownHeight = 300;
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -921,29 +922,30 @@ By default, the `ItemsSource` for the picker is auto-generated for the enum type
 {% tabs %}
 {% highlight C# %}
 
-    public string Country { get; set; }
-    
-    public class DataFormItemsSourceProvider : IDataFormSourceProvider
-    {
-         public object GetSource(string sourceName)
-        {
-            if (sourceName == "Country")
-            {
-                List<string> list = new List<string>()
-                {
-                    "USA",
-                    "China",
-                    "Italy",
-                    "India"
-                };
-                return list;
-            }
-            return new List<string>();
-        }
-    }
+public string Country { get; set; }
 
-    this.dataForm.ItemsSourceProvider = new DataFormItemsSourceProvider();
-    this.dataForm.RegisterEditor("Country", DataFormEditorType.Picker);
+public class DataFormItemsSourceProvider : IDataFormSourceProvider
+{
+        public object GetSource(string sourceName)
+    {
+        if (sourceName == "Country")
+        {
+            List<string> list = new List<string>()
+            {
+                "USA",
+                "China",
+                "Italy",
+                "India"
+            };
+			
+            return list;
+        }
+        return new List<string>();
+    }
+}
+
+this.dataForm.ItemsSourceProvider = new DataFormItemsSourceProvider();
+this.dataForm.RegisterEditor("Country", DataFormEditorType.Picker);
 
 {% endhighlight %}
 {% endtabs %}
@@ -955,22 +957,22 @@ You can also set `ItemsSource` for the picker editor by using the `ItemsSource` 
 {% tabs %}
 {% highlight C# %}
 
-    this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{
+    if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name" && e.DataFormItem is DataFormPickerItem pickerItem)
     {
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name" && e.DataFormItem is DataFormPickerItem pickerItem)
+        List<string> list = new Lisvt<string>()
         {
-            List<string> list = new Lisvt<string>()
-            {
-                "Home",
-                "Food",
-                "Utilities",
-                "Education"
-            };
-            pickerItem.ItemsSource = list;
-        }
+            "Home",
+            "Food",
+            "Utilities",
+            "Education"
+        };
+        pickerItem.ItemsSource = list;
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -984,56 +986,56 @@ N> Class cannot be directly set as data type for picker editor in this complex t
 {% tabs %}
 {% highlight C# %}
 
-    this.dataForm.ItemsSourceProvider = new DataFormItemsSourceProvider();
-    this.dataForm.DataObject = new ContactInfo();
-    this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
-    this.dataForm.RegisterEditor("EmployeeDetails", DataFormEditorType.Picker);
- 
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+this.dataForm.ItemsSourceProvider = new DataFormItemsSourceProvider();
+this.dataForm.DataObject = new ContactInfo();
+this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.dataForm.RegisterEditor("EmployeeDetails", DataFormEditorType.Picker);
+
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{
+    if (e.DataFormItem != null && e.DataFormItem.FieldName == "EmployeeDetails" && e.DataFormItem is DataFormPickerItem pickerItem)
+    {   
+        pickerItem.DisplayMemberPath = "ID";
+        pickerItem.SelectedValuePath = "Name";
+    }
+} 
+
+public class DataFormItemsSourceProvider  : IDataFormSourceProvider
+{
+    public object GetSource(string sourceName)
     {
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "EmployeeDetails" && e.DataFormItem is DataFormPickerItem pickerItem)
-        {   
-            pickerItem.DisplayMemberPath = "ID";
-            pickerItem.SelectedValuePath = "Name";
-        }
-    } 
- 
-    public class DataFormItemsSourceProvider  : IDataFormSourceProvider
-    {
-        public object GetSource(string sourceName)
+        if (sourceName == "EmployeeDetails")
         {
-            if (sourceName == "EmployeeDetails")
-            {
-                List<EmployeeInfo> details = new List<EmployeeInfo>();
-                details.Add(new EmployeeInfo() { ID = 1, Name =  "Eric"  });
-                details.Add(new EmployeeInfo() { ID = 2, Name = "James"  });
-                details.Add(new EmployeeInfo() { ID = 3, Name = "Jacob"  });
-                details.Add(new EmployeeInfo() { ID = 4, Name = "Lucas"  });
-                details.Add(new EmployeeInfo() { ID = 5, Name = "Mark"  });
-                details.Add(new EmployeeInfo() { ID = 6, Name = "Aldan"  });
-                details.Add(new EmployeeInfo() { ID = 7, Name = "Aldrin"  });
-                details.Add(new EmployeeInfo() { ID = 8, Name = "Alan"  });
-                details.Add(new EmployeeInfo() { ID = 9, Name = "Aaron"  });
+            List<EmployeeInfo> details = new List<EmployeeInfo>();
+            details.Add(new EmployeeInfo() { ID = 1, Name =  "Eric"  });
+            details.Add(new EmployeeInfo() { ID = 2, Name = "James"  });
+            details.Add(new EmployeeInfo() { ID = 3, Name = "Jacob"  });
+            details.Add(new EmployeeInfo() { ID = 4, Name = "Lucas"  });
+            details.Add(new EmployeeInfo() { ID = 5, Name = "Mark"  });
+            details.Add(new EmployeeInfo() { ID = 6, Name = "Aldan"  });
+            details.Add(new EmployeeInfo() { ID = 7, Name = "Aldrin"  });
+            details.Add(new EmployeeInfo() { ID = 8, Name = "Alan"  });
+            details.Add(new EmployeeInfo() { ID = 9, Name = "Aaron"  });
 
-                return details;
-            }
-
-            return new List<string>();
+            return details;
         }
-    }
 
-    public class ContactInfo
-    {
-        [Display(Name ="First Name")]
-        public String FirstName { get; set; } 
-        public string EmployeeDetails { get; set; }
+        return new List<string>();
     }
+}
 
-    public class EmployeeInfo
-    {
-        public int ID { get; set; }
-        public string Name { get; set; }
-    }
+public class ContactInfo
+{
+    [Display(Name ="First Name")]
+    public String FirstName { get; set; } 
+    public string EmployeeDetails { get; set; }
+}
+
+public class EmployeeInfo
+{
+    public int ID { get; set; }
+    public string Name { get; set; }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -1051,16 +1053,16 @@ For the `enum` data type property, [RadioButon](https://learn.microsoft.com/en-u
 {% tabs %}
 {% highlight C# %}
 
-    this.dataForm.RegisterEditor("Phone", DataFormEditorType.RadioGroup);
+this.dataForm.RegisterEditor("Phone", DataFormEditorType.RadioGroup);
 
-    public Numbers Phone  { get; set; }
+public Numbers Phone  { get; set; }
 
-    public enum Numbers
-    {
-	    Home,
-	    Work,
-	    Other
-    }
+public enum Numbers
+{
+    Home,
+    Work,
+    Other
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -1072,23 +1074,23 @@ For the `List` data type property, you have to set the `ItemsSource` by using th
 {% tabs %}
 {% highlight C# %}
 
-    this.dataForm.RegisterEditor("Phone", DataFormEditorType.RadioGroup);
-    this.dataForm.ItemsSourceProvider = new DataFormItemsSourceProvider();
+this.dataForm.RegisterEditor("Phone", DataFormEditorType.RadioGroup);
+this.dataForm.ItemsSourceProvider = new DataFormItemsSourceProvider();
 
-    public string Phone  { get; set; }
+public string Phone  { get; set; }
 
-    public class DataFormItemsSourceProvider : IDataFormSourceProvider
+public class DataFormItemsSourceProvider : IDataFormSourceProvider
+{
+        public object GetSource(string sourceName)
     {
-         public object GetSource(string sourceName)
+        if(sourceName == "Phone")
         {
-		    if(sourceName == "Phone")
-		    {
-                List<string> list = new List<string>() {"Home", "Work", "Other"};
-                return list;
-		    }
-		    return new List<string>();
+            List<string> list = new List<string>() {"Home", "Work", "Other"};
+            return list;
         }
+        return new List<string>();
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -1118,73 +1120,73 @@ Here, the entry is loaded as a custom editor for the `PhoneNumer` property.
 {% tabs %}
 {% highlight C# %}
 
-    this.dataForm.RegisterEditor("PhoneNumber", new NumericEditor(dataForm));
-    
-    public class NumericTextEditor : IDataFormEditor 
+this.dataForm.RegisterEditor("PhoneNumber", new NumericEditor(dataForm));
+
+public class NumericTextEditor : IDataFormEditor 
+{ 
+    private SfDataForm dataForm;
+    private DataFormCustomItem? dataFormCustomItem;
+
+    public NumericEditor(SfDataForm dataForm)
+    {
+        this.dataForm = dataForm;
+    }
+
+    public View CreateEditorView(DataFormItem dataFormItem) 
     { 
-        private SfDataForm dataForm;
-        private DataFormCustomItem? dataFormCustomItem;
+        Entry inputView = new Entry();
+        inputView.Keyboard = Keyboard.Numeric;
+        inputView.Placeholder = dataFormItem.PlaceholderText;
+        DataFormTextStyle textStyle = this.dataForm.EditorTextStyle;
+        inputView.TextColor = textStyle.TextColor;
+        inputView.FontSize = textStyle.FontSize;
+        inputView.FontFamily = textStyle.FontFamily;
+        inputView.FontAttributes = textStyle.FontAttributes;
+        inputView.TextChanged += this.OnViewTextChanged;
+        this.dataFormCustomItem = (DataFormCustomItem)dataFormItem;
+        this.dataFormCustomItem.EditorValue = string.Empty;
+        return inputView;
+    }
 
-        public NumericEditor(SfDataForm dataForm)
+    public void CommitValue(DataFormItem dataFormItem, View view)
+    {
+        if (view is InputView numericText)
         {
-            this.dataForm = dataForm;
-        }
-
-        public View CreateEditorView(DataFormItem dataFormItem) 
-        { 
-            Entry inputView = new Entry();
-            inputView.Keyboard = Keyboard.Numeric;
-            inputView.Placeholder = dataFormItem.PlaceholderText;
-            DataFormTextStyle textStyle = this.dataForm.EditorTextStyle;
-            inputView.TextColor = textStyle.TextColor;
-            inputView.FontSize = textStyle.FontSize;
-            inputView.FontFamily = textStyle.FontFamily;
-            inputView.FontAttributes = textStyle.FontAttributes;
-            inputView.TextChanged += this.OnViewTextChanged;
-            this.dataFormCustomItem = (DataFormCustomItem)dataFormItem;
-            this.dataFormCustomItem.EditorValue = string.Empty;
-            return inputView;
-        }
-
-        public void CommitValue(DataFormItem dataFormItem, View view)
-        {
-            if (view is InputView numericText)
-            {
-                double numericValue;
-                double.TryParse(numericText.Text, out numericValue);
-                dataFormItem.SetValue(numericValue);
-            }
-        }
-
-        public void UpdateReadyOnly(DataFormItem dataFormItem)
-        {
-        }
-
-        private void ValidateValue(DataFormItem dataFormItem)
-        {
-            this.dataForm.Validate(new List<string>() { dataFormItem.FieldName });
-        }
-
-        private void OnViewTextChanged(object? sender, TextChangedEventArgs e)
-        {
-            if (sender is not InputView numericEntry || dataFormCustomItem == null)
-            {
-                return;
-            }
-
-            string? numericText = Regex.Replace(numericEntry.Text, "[^0-9]+", string.Empty);
-            if (numericText != numericEntry.Text)
-            {
-                numericEntry.Text = numericText;
-                return;
-            }
-
-            dataFormCustomItem.EditorValue = numericText;
-            this.ValidateValue(dataFormCustomItem);
-            this.CommitValue(dataFormCustomItem, numericEntry);
+            double numericValue;
+            double.TryParse(numericText.Text, out numericValue);
+            dataFormItem.SetValue(numericValue);
         }
     }
-     
+
+    public void UpdateReadyOnly(DataFormItem dataFormItem)
+    {
+    }
+
+    private void ValidateValue(DataFormItem dataFormItem)
+    {
+        this.dataForm.Validate(new List<string>() { dataFormItem.FieldName });
+    }
+
+    private void OnViewTextChanged(object? sender, TextChangedEventArgs e)
+    {
+        if (sender is not InputView numericEntry || dataFormCustomItem == null)
+        {
+            return;
+        }
+
+        string? numericText = Regex.Replace(numericEntry.Text, "[^0-9]+", string.Empty);
+        if (numericText != numericEntry.Text)
+        {
+            numericEntry.Text = numericText;
+            return;
+        }
+
+        dataFormCustomItem.EditorValue = numericText;
+        this.ValidateValue(dataFormCustomItem);
+        this.CommitValue(dataFormCustomItem, numericEntry);
+    }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
