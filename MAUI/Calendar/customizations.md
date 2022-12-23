@@ -13,17 +13,17 @@ Each cell of the Month, Year, Decade and Century can be customized in MAUI Calen
 ## Month cell customization
 You can customize the calendar month view cell by using the `MonthView` property of `SfCalendar`.
 
-*    **Month dates** – You can customize the month date's text style and background of the `Calendar` by using the `TextStyle` and `Background` properties of `MonthView`.
+*    **Month dates** – You can customize the month dates text style and background of the `Calendar` by using the `TextStyle` and `Background` properties of `MonthView`.
 
 *    **Today date** – You can customize the today date text style and background of the `Calendar` by using the `TodayTextStyle` and `TodayBackground` properties of `MonthView`.
 
-*    **Trailing and Leading dates** – You can hide the trailing and leading date by using the `ShowTrailingAndLeadingDates` property in the `CalendarMonthView` class. You can also customize the Trailing and Leading dates text style and background of the `Calendar` by using the `TrailingLeadingDatesTextStyle` and `TrailingLeadingDatesBackground` properties of `MonthView`.
+*    **Trailing and Leading dates** – You can hide the trailing and leading dates by using the `ShowTrailingAndLeadingDates` property in the `CalendarMonthView` class. You can also customize the trailing and leading dates text style and background of the `Calendar` by using the `TrailingLeadingDatesTextStyle` and `TrailingLeadingDatesBackground` properties of `MonthView`.
 
 *    **Disabled dates** – You can disable the date by using the MinimumDate, MaximumDate, EnablePastDates and SelectableDayPredicate callback. The date before `MinimumDate` is said to disabled date, the date after the `MaximumDate` is said to disabled date, if you want disable the date before today date by using the `EnablePastDates` and if you want to disable any particular date by using `SelectableDayPredicate` property. You can also customize the disabled dates text style and background of the `Calendar` by using the `DisabledDatesTextStyle` and `DisabledDatesBackground` properties of `MonthView`.
 
-*    **Special Dates** – You can add special dates to the `DateRangePicker` by using `SpecialDates` property and you can customize the special dates textstyle and background of the `Calendar` by using the `SpecialDatesTextStyle` and `SpecialDatesBackground` properties of `MonthView`.
+*    **Special Dates** – You can add special dates to the `DateRangePicker` by using the `SpecialDates` property and you can also customize the special dates text style and background of the `Calendar` by using the `SpecialDatesTextStyle` and `SpecialDatesBackground` properties of `MonthView`.
 
-*    **Weekend Dates** – You can customize the weekend dates textstyle and background of the `Calendar` by using the `WeekendDatesTextStyle` and `WeekendDatesBackground` properties of `MonthView`.
+*    **Weekend Dates** – You can customize the weekend dates text style and background of the `Calendar` by using the `WeekendDatesTextStyle` and `WeekendDatesBackground` properties of `MonthView`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -90,7 +90,7 @@ You can customize the calendar month view cell by using the `MonthView` property
 ![monthview-customization-in-maui-calendar](images/customization/monthview-customization-in-maui-calendar.png)
 
 >**NOTE**
-* The Background color and text style will be applied based on the following order: selectableDayPredicate dates, special dates, disable dates, today date, trailingLeading Dates and weekend dates.
+* The Background color and text style will be applied based on the following order: selectableDayPredicate dates, special dates, disable dates, today date, trailingLeading dates, and weekend dates.
 
 ## Month View Header format
 You can customize the month format of the `Calendar` by using the `TextFormat` property.
@@ -123,7 +123,7 @@ this.Calendar.MonthView.HeaderView = new CalendarMonthHeaderView()
 ![view-header-text-format-in-maui-calendar](images/customization/view-header-text-format-in-maui-calendar.png)
 
 ## Year cell customization
-You can customize the calendar `year`, `decade` and `century` view by using the `YearView` property of `SfCalendar`. 
+You can customize the calendar `year`, `decade`, and `century` view by using the `YearView` property of `SfCalendar`.
 
 *   **Year cell dates** – You can customize the year view date's text style and background of the `Calendar` by using the `TextStyle` and `Background` properties of `YearView`.
 
