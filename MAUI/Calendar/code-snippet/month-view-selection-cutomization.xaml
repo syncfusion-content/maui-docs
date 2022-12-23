@@ -1,5 +1,0 @@
-﻿<calendar:SfCalendar  x:Name="Calendar" 
-                      View="Month"
-                      Background="PaleGreen"
-                      StartRangeSelectionBackground="Purple" EndRangeSelectionBackground="Purple" SelectionBackground="Pink">
-</calendar:SfCalendar>

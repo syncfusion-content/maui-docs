@@ -1,7 +1,0 @@
-﻿<calendar:SfCalendar  x:Name="Calendar" 
-                        View="Decade"
-                        Background="PaleGreen">
-            <Calendar:SfCalendar.YearView>
-                <Calendar:CalendarYearView TodayBackground="Pink" DisabledDatesBackground="Grey" LeadingDatesBackground="Green"/>
-            </Calendar:SfCalendar.YearView>
-</calendar:SfCalendar>
