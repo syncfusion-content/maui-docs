@@ -29,7 +29,7 @@ If the commit mode is `LostFocus`, the value is committed when the editor loses 
 {% highlight XAML %}
 <ContentPage 
 ...
-             xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
+ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
     <dataForm:SfDataForm
         x:Name="dataForm"
         CommitMode="LostFocus">
@@ -49,7 +49,7 @@ If the commit mode is `PropertyChanged`, the value will be committed immediately
 {% highlight XAML %}
 <ContentPage 
 ...
-             xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
+ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
     <dataForm:SfDataForm
         x:Name="dataForm"
         CommitMode="PropertyChanged">
@@ -69,12 +69,11 @@ If the commit mode is `Manual`, the value should be committed manually by callin
 {% highlight XAML %}
 <ContentPage 
 ...
-        xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
+ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
     <dataForm:SfDataForm
         x:Name="dataForm"
         CommitMode="Manual">
     </dataForm:SfDataForm>
-
 </ContentPage>
 {% endhighlight %}
 {% highlight C# %}
@@ -101,8 +100,8 @@ To show the original value in a different format or as a different value, use th
 {% tabs %}
 {% highlight C# %}
 
-    [DataFormValueConverter(typeof(StringToDateTimeConverter))]
-    public string DateTime { get; set; }
+[DataFormValueConverter(typeof(StringToDateTimeConverter))]
+public string DateTime { get; set; }
 
 public class StringToDateTimeConverter : IValueConverter
 {
@@ -138,12 +137,11 @@ The `DataForm` can be disabled by setting the `IsReadOnly` property of the data 
 {% highlight XAML %}
 <ContentPage 
 ...
-             xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
+xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
     <dataForm:SfDataForm
         x:Name="dataForm" 
         IsReadOnly="True">
     </dataForm:SfDataForm>
-
 </ContentPage>
 {% endhighlight %}
 {% highlight C# %}
@@ -178,12 +176,14 @@ An editor can be disabled by setting the `IsReadOnly` property of the `DataFormI
 
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
- private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
 {
     if (e.DataFormItem != null)
     {
         if (e.DataFormItem.FieldName == "Salary")
+        {
             e.DataFormItem.IsReadOnly = true;
+        }
     }
 }
 

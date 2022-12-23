@@ -9,7 +9,7 @@ documentation: ug
 
 # Header Configuration in .NET MAUI Backdrop Page (SfBackdropPage)
 
-Add a backdrop page as a child of the [`NavigationPage`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/pages/navigationpage?view=net-maui-6.0) in the App.xaml.cs class. Also, the `BarBackgroundColor,` `BarTextColor,` and other properties of the [`NavigationPage`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/pages/navigationpage?view=net-maui-6.0) can be set to customize the default appearance of the header.
+Add a backdrop page as a child of the [`NavigationPage`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/pages/navigationpage?view=net-maui-6.0) in the App.xaml.cs class. Also, the [`BarBackgroundColor,`](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.navigationpage.barbackgroundcolor?view=net-maui-6.0) [`BarTextColor,`](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.navigationpage.bartextcolor?view=net-maui-6.0) and other properties of the [`NavigationPage`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/pages/navigationpage?view=net-maui-6.0) can be set to customize the default appearance of the header.
  
 {% highlight C# %} 
 
@@ -47,7 +47,7 @@ When the backdrop page is placed in the [FlyoutPage](https://learn.microsoft.com
 
 ### Custom icons
 
-Customize the default icons in the navigation header by setting the `OpenIconImageSource` and `CloseIconImageSource` properties in the `SfBackdropPage.` It accepts following inputs:
+Customize the default icons in the navigation header by setting the [`OpenIconImageSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html#Syncfusion_Maui_Backdrop_SfBackdropPage_OpenIconImageSource) and [`CloseIconImageSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html#Syncfusion_Maui_Backdrop_SfBackdropPage_CloseIconImageSource) properties in the [`SfBackdropPage`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html). It accepts following inputs:
 * FileImageSource
 * UriImageSource
 * StreamImageSource
@@ -92,7 +92,7 @@ public partial class BackdropSamplePage : SfBackdropPage
  
 ## Icon text customization
 
-Customize the icon text in the navigation header by setting the `OpenText` and `CloseText` properties in the `SfBackdropPage.`
+Customize the icon text in the navigation header by setting the [`OpenText`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html#Syncfusion_Maui_Backdrop_SfBackdropPage_OpenText) and [`CloseText`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html#Syncfusion_Maui_Backdrop_SfBackdropPage_CloseText) properties in the [`SfBackdropPage`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html).
 
 {% tabs %} 
 

@@ -19,7 +19,11 @@ By default, the data form arranges the fields one by one. It is applicable for b
 
 When the label position is Left, the linear layout is shown as follows:
 
+![data-form-linear-layout-label-position-left](images/layout/data-form-linear-layout-label-position-left.png)
+
 When the label position is Top, the linear layout is shown as follows:
+
+![data-form-linear-layout-label-position-top](images/layout/data-form-linear-layout-label-position-top.png)
 
 ## Grid data form layout
 
@@ -29,14 +33,11 @@ By default, the data form arranges one data field per row. It is possible to hav
 {% highlight XAML %}
 <ContentPage 
 ...
-             xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
-
+xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
     <dataForm:SfDataForm
         x:Name="dataForm"
-        ColumnCount="2"
-        >
+        ColumnCount="2">
     </dataForm:SfDataForm>
-
 </ContentPage>
 {% endhighlight %}
 {% highlight C# %}
@@ -48,9 +49,9 @@ this.dataForm.ColumnCount = 2;
 
 N> Setting the `ColumnCount` property to SfDataForm does not arrange the data fields in a group according to the column count. To set the column count for data fields in the data form group, refer to the `loading different layout for data form group`.
 
-When the label position is Left, the grid layout is shown as follows:
-
 When the label position is Top, the grid layout is shown as follows:
+
+![data-form-grid-layout](images/layout/data-form-grid-layout.png)
 
 ## Label visibility
 
@@ -60,10 +61,9 @@ The label can be hidden by defining the `DataFormDisplayOptions` attribute or by
 
 {% tabs %}
 {% highlight C# %}
-private double? percentage;
 
-    [DataFormDisplayOptions(ShowLabel = false)]
-    public string Name { get; set; }
+[DataFormDisplayOptions(ShowLabel = false)]
+public string Name { get; set; }
 
 {% endhighlight %}
 {% endtabs %}
@@ -73,17 +73,18 @@ private double? percentage;
 {% tabs %}
 {% highlight C# %}
 
- this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{
+    if (e.DataFormItem != null)
     {
-
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name")
+        if (e.DataFormItem.FieldName == "Name")
         {
-            e.DataFormItem.PlaceholderText = "Enter your name";
             e.DataFormItem.ShowLabel = false;
         }
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -98,12 +99,12 @@ By default, the label will be positioned at left side of the editor.
 {% highlight XAML %}
 <ContentPage 
 ...
-             xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
+xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
     <dataForm:SfDataForm
         x:Name="dataForm">
         <dataForm:SfDataForm.DefaultLayoutSettings>
             <dataForm:DataFormDefaultLayoutSettings
-                LabelPosition="Left"/>
+                LabelPosition="Top"/>
         </dataForm:SfDataForm.DefaultLayoutSettings>
     </dataForm:SfDataForm>
 </ContentPage>
@@ -124,7 +125,7 @@ The label position of a particular editor can be changed by using the `DataFormD
 {% highlight XAML %}
 <ContentPage 
 ...
-             xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
+xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
     <dataForm:SfDataForm
         x:Name="dataForm"
         DataObject="{Binding DataObjects}"
@@ -137,17 +138,19 @@ The label position of a particular editor can be changed by using the `DataFormD
 
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{
+    if (e.DataFormItem != null)
     {
-
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name")
+        if (e.DataFormItem.FieldName == "Name")
         {
             e.DataFormItem.DefaultLayoutSettings = new DataFormDefaultLayoutSettings
             {
-                LabelPosition = DataFormLabelPosition.Left,
+                LabelPosition = DataFormLabelPosition.Top,
             };
         }
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -163,16 +166,16 @@ The image can be loaded instead of the label by using the `LeadingLabelIcon` pro
 
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{
+    if (e.DataFormItem != null)
     {
-        if (e.DataFormItem != null)
+        if (e.DataFormItem.FieldName == "Name")
         {
-            if (e.DataFormItem.FieldName == "Name")
-            {
-                e.DataFormItem.LeadingLabelIcon = ImageSource.FromFile("ContactInfo.png");
-            }
+            e.DataFormItem.LeadingLabelIcon = ImageSource.FromFile("ContactInfo.png");
         }
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -188,11 +191,11 @@ The data form editors' order can be changed by using the `RowOrder` property in 
 {% tabs %}
 {% highlight C# %}
 
-    [DataFormDisplayOptions(RowOrder = 1)]
-    public string Adress { get; set; }
+[DataFormDisplayOptions(RowOrder = 1)]
+public string Adress { get; set; }
 
-    [DataFormDisplayOptions(RowOrder = 0)]
-    public string Name { get; set; }
+[DataFormDisplayOptions(RowOrder = 0)]
+public string Name { get; set; }
 
 {% endhighlight %}
 {% endtabs %}
@@ -206,17 +209,16 @@ The data form editors' order can be changed by using the `RowOrder` property in 
 
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{
+    if (e.DataFormItem != null)
     {
-
-        if (e.DataFormItem != null)
+        if (e.DataFormItem.FieldName == "Name")
         {
-            if (e.DataFormItem.FieldName == "Name")
-            {
-                e.DataFormItem.RowOrder = 0;
-            }
+            e.DataFormItem.RowOrder = 0;
         }
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -228,12 +230,11 @@ The `Value` and `UnitType` properties of the `DataFormItemLength` each return th
 The label and Editor are specified with proportionate values such as 0.4* and 0.6* when the `DataFormItemLength.UnitType` is "Star".
 Additionally, Specify a defined width for the editor and label such as "300, 400," and the `DataFormItemLength.UnitType` is "Absolute."
 
-
 {% tabs %}
 {% highlight XAML %}
 <ContentPage 
 ...
-             xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
+xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
     <dataForm:SfDataForm
         x:Name="dataForm">
         <dataForm:SfDataForm.DefaultLayoutSettings>
@@ -246,14 +247,14 @@ Additionally, Specify a defined width for the editor and label such as "300, 400
 {% endhighlight %}
 {% highlight C# %}
 
-        this.dataForm.DefaultLayoutSettings.LabelWidth = new DataFormItemLength(300, DataFormItemLengthUnitType.Absolute);
-        this.dataForm.DefaultLayoutSettings.LabelWidth = new DataFormItemLength(400, DataFormItemLengthUnitType.Absolute);
+this.dataForm.DefaultLayoutSettings.LabelWidth = new DataFormItemLength(300, DataFormItemLengthUnitType.Absolute);
+this.dataForm.DefaultLayoutSettings.EditorWidth = new DataFormItemLength(400, DataFormItemLengthUnitType.Absolute);
 
 {% endhighlight %}
 {% highlight C# %}
 
-        this.dataForm.DefaultLayoutSettings.LabelWidth = new DataFormItemLength(0.3, DataFormItemLengthUnitType.Star);
-        this.dataForm.DefaultLayoutSettings.LabelWidth = new DataFormItemLength(0.7, DataFormItemLengthUnitType.Star);
+this.dataForm.DefaultLayoutSettings.LabelWidth = new DataFormItemLength(0.3, DataFormItemLengthUnitType.Star);
+this.dataForm.DefaultLayoutSettings.EditorWidth = new DataFormItemLength(0.7, DataFormItemLengthUnitType.Star);
 
 {% endhighlight %}
 {% endtabs %}
@@ -275,8 +276,8 @@ The row height is increased by using the `RowSpan` property in the `DataFormDisp
 {% tabs %}
 {% highlight C# %}
 
-    [DataFormDisplayOptions(RowSpan = 2)]
-    public string Name { get; set; }
+[DataFormDisplayOptions(RowSpan = 2)]
+public string Name { get; set; }
 
 {% endhighlight %}
 {% endtabs %}
@@ -290,16 +291,16 @@ The row height of each `DataFormItem` can also be increased by using the `RowSpa
 
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{
+    if (e.DataFormItem != null)
     {
-        if (e.DataFormItem != null)
+        if (e.DataFormItem.FieldName == "Name")
         {
-            if (e.DataFormItem.FieldName == "Name")
-            {
-                e.DataFormItem.RowSpan = 2;
-            }
+            e.DataFormItem.RowSpan = 2;
         }
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -320,8 +321,8 @@ this.dataForm.ColumnCount = 2;
 {% endhighlight %}
 {% highlight C# %}
 
-    [DataFormDisplayOptions(ColumnSpan = 2)]
-    public string Name { get; set; }
+[DataFormDisplayOptions(ColumnSpan = 2)]
+public string Name { get; set; }
 
 {% endhighlight %}
 {% endtabs %}
@@ -335,16 +336,16 @@ When the grid layout is used, increase the column width of each `DataFormItem` u
 
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{
+    if (e.DataFormItem != null)
     {
-        if (e.DataFormItem != null)
+        if (e.DataFormItem.FieldName == "Name")
         {
-            if (e.DataFormItem.FieldName == "Name")
-            {
-                e.DataFormItem.ColumnSpan = 2;
-            }
+            e.DataFormItem.ColumnSpan = 2;
         }
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -356,16 +357,20 @@ The data form editor visibility is changed by using the `IsVisible` property of 
 {% tabs %}
 {% highlight C# %}
 
-    DataFormItem dataFormItem = this.dataForm.GetDataFormItem("Name");
-    if (dataFormItem != null)
+this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{
+    if (e.DataFormItem != null)
     {
-        if (dataFormItem.FieldName == "Name")
+        if (e.DataFormItem.FieldName == "Name")
         {
-            dataFormItem.IsVisible = false;
+            e.DataFormItem.IsVisible = false;
         }
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-N> Here, the `Name` field will be hidden.
+Here, the `Name` field will be hidden.
