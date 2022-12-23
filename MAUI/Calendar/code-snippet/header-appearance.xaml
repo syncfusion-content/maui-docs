@@ -1,4 +1,0 @@
-﻿<calendar:SfCalendar  x:Name="Calendar"
-                      View="Month"
-                      HeaderView="{Calendar:CalendarHeaderView Background=Grey, TextFormat=MMM yy, ShowNavigationArrows=True, TextStyle={Calendar:CalendarTextStyle TextColor=Blue, FontSize=14}}">
-</calendar:SfCalendar>

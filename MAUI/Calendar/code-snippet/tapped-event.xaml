@@ -1,3 +1,0 @@
-﻿<calendar:SfCalendar  x:Name="Calendar" 
-                      Tapped="OnCalendarTapped">
-</calendar:SfCalendar>

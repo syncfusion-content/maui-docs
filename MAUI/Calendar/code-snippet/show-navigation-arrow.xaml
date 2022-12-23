@@ -1,4 +1,0 @@
-﻿<calendar:SfCalendar  x:Name="Calendar" 
-                        View="Month"
-                        HeaderView="{Calendar:CalendarHeaderView ShowNavigationArrows=True}">
-</calendar:SfCalendar>

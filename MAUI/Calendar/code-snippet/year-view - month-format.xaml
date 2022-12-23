@@ -1,4 +1,0 @@
-﻿<calendar:SfCalendar  x:Name="Calendar" 
-                      View="Year"
-                      YearView="{Calendar:CalendarYearView MonthFormat=MMM}>
-</calendar:SfCalendar>
