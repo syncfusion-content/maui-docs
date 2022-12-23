@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Headers in MAUI Calendar (SfCalendar)
-You can customize all the properties of the Header view using `HeaderView`. By using this property you can customize the Background, Height, TextFormat, TextStyle and ShowNavigationArrows in the Calendar.
+You can customize all the properties of the Header view using `HeaderView`. By using this property, you can customize the Background, Height, TextFormat, TextStyle, and ShowNavigationArrows of the Calendar.
 
 ## Customize the header height
 You can customize the header height `Calendar` by using the `Height` property.
@@ -76,10 +76,10 @@ this.Calendar.HeaderView = new CalendarHeaderView()
 ![change-header-appearance-in-maui-calendar](images/header/change-header-appearance-in-maui-calendar.png)
 
 ## View header
-You can customize all the properties of the View Header using [HeaderView]. By using this property you can customize the Background, Height, TextFormat and TextStyle in the Calendar.
+You can customize all the properties of the View Header using `HeaderView`. By using this property, you can customize the Background, Height, TextFormat, and TextStyle of the Calendar.
 
 ### Customize view header height
-You can customize the View Header height `Calendar` by using the `Height` property.
+You can customize the view Header height `Calendar` by using the `Height` property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
