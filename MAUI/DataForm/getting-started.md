@@ -15,11 +15,11 @@ This section provides a quick overview of how to get started with the .NET MAUI 
 
 1. Create a new .NET MAUI application in Visual Studio.
 
-2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add the SfDataForm to your project, open the NuGet package manager in Visual Studio, search for `Syncfusion.Maui.DataForm`, then install it.
+2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add the SfDataForm to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.DataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.html), then install it.
 
-3. To initialize the control, import the control namespace `Syncfusion.Maui.DataForm` in XAML or C# code.
+3. To initialize the control, import the control namespace [Syncfusion.Maui.DataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.html) in XAML or C# code.
 
-4. Initialize `SfDataForm.`
+4. Initialize [SfDataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html).
 
 
 {% tabs %}
@@ -53,7 +53,7 @@ public partial class MainPage : ContentPage
 
 ## Register the handler
 
-The `Syncfusion.Maui.Core` NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
+The [Syncfusion.Maui.Core](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.html) NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
 
 {% tabs %}
 {% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 8" %}
@@ -83,7 +83,7 @@ The `Syncfusion.Maui.Core` NuGet is a dependent package for all Syncfusion contr
 
 ## Creating data object
 
-The `SfDataForm` is a data edit control, so create a data object with details to create a data form based on your business requirement.
+The [SfDataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html) is a data edit control, so create a data object with details to create a data form based on your business requirement.
 
 Here, the data object named **ContactsInfo** is created with some properties.
 
@@ -112,7 +112,7 @@ public class ContactsInfo
 {% endhighlight %}
 {% endtabs %}
 
-Initialize the data object in view model class to bind in the `DataObject` property of `SfDataForm`.
+Initialize the data object in view model class to bind in the `DataObject` property of [SfDataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html).
 
 {% tabs %}
 {% highlight C# %}
@@ -161,9 +161,9 @@ this.dataForm.DataObject = new ContactsInfo();
 
 ## Defining editors
 
-The data form control automatically generates the `SfDataForm.Items` (which has UI settings of data field) based on the data type in the `SfDataForm.DataObject` property. The `SfDataForm.Items` summarizes the layout of the label and editor setting for the data field appearing in the dataform. 
+The data form control automatically generates the [SfDataForm.Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ItemsProperty) (which has UI settings of data field) based on the data type in the [SfDataForm.DataObject](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_DataObjectProperty) property. The [SfDataForm.Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ItemsProperty) summarizes the layout of the label and editor setting for the data field appearing in the dataform. 
 
-The type of input editor generated for the data field depends on the type and attribute settings of the property. The following table lists the `DataFormItem` and its constraints for generation.
+The type of input editor generated for the data field depends on the type and attribute settings of the property. The following table lists the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html) and its constraints for generation.
 
 <table>
 <tr>

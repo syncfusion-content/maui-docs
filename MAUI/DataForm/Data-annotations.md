@@ -9,7 +9,7 @@ documentation: UG
 
 # Data annotations in .NET MAUI DataForm (SfDataForm)
 
-The data form supports the following attribute to handle the data, and these attributes can be accessed using the `System.ComponentModel.DataAnnotation` assembly.
+The data form supports the following attribute to handle the data, and these attributes can be accessed using the [System.ComponentModel.DataAnnotation](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations?view=net-7.0) assembly.
 
 ## Display attribute
 
@@ -242,7 +242,7 @@ public string Address { get; set; }
 {% endtabs %}
 
 ## Custom attribute
-The data form supports the following custom attribute, and these attributes can be accessed using the `Syncfusion.Maui.DataForm` assembly.
+The data form supports the following custom attribute, and these attributes can be accessed using the [Syncfusion.Maui.DataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.html) assembly.
 
 #### DataFormDisplayOptions attribute
 
@@ -359,7 +359,7 @@ Specifies the minimum date that can be selected in the date editor.
 DisplayFormat
 </td>
 <td>
-Specifies the format of the `MaximumDate` and `MinumumDate` used in attribute.
+Specifies the format of the [MaximumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDateRangeAttribute.html#Syncfusion_Maui_DataForm_DataFormDateRangeAttribute_MaximumDate) and [MinumumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDateRangeAttribute.html#Syncfusion_Maui_DataForm_DataFormDateRangeAttribute_MinimumDate) used in attribute.
 </td>
 </tr>
 </table>
