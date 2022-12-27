@@ -623,6 +623,9 @@ N> Use the FieldName property to bind the editor to the data object property.
 </ContentPage>
 
 {% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
 {% highlight C# %}
 
 DataFormViewModel contactInfoViewModel = new DataFormViewModel();
@@ -645,7 +648,7 @@ this.dataForm.Items = items;
 {% endhighlight %}   
 {% endtabs %} 
 
-{% endhighlight %}
+{% tabs %}
 {% highlight C# %}
 
 public class DataFormViewModel
@@ -672,7 +675,7 @@ public class DataFormViewModel
 {% endhighlight %}
 {% endtabs %}
 
-{% endhighlight %}
+{% tabs %}
 {% highlight C# %}
 
 public class ContactInfo
@@ -693,6 +696,7 @@ public class ContactInfo
 }
 
 {% endhighlight %}
+{% tabs %}
 
 ## Dynamically add data editor
 
