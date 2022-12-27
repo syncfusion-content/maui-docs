@@ -587,6 +587,9 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
     }
 }
 
+{% endhighlight %}
+{% endtabs %}
+
 ## Manually create DataForm Items
 
 The data form autogenerates the editors based on the data type, you can explicitly add the data editors by adding `SfDataForm.Items` manually and you need to change the `AutoGenerateItems` property to false.
@@ -594,10 +597,10 @@ The data form autogenerates the editors based on the data type, you can explicit
 N> Use the FieldName property to bind the editor to the data object property.
 `GenerateDataFormItem` event will not be trigger when `AutoGenerateItems` is false.
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
    
 <ContentPage 
-. . . 
+            . . . 
             xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
             x:Class="GettingStarted.MainPage">
     <ContentPage.BindingContext>
@@ -642,9 +645,6 @@ items.Add(groupItem);
 this.dataForm.AutoGenerateItems = false; 
 this.dataForm.Items = items;
 
-{% endhighlight %}   
-{% endtabs %} 
-
 {% endhighlight %}
 {% highlight C# %}
 
@@ -666,11 +666,7 @@ public class DataFormViewModel
     public ContactInfo ContactDetails { get; set; }
 
     public IList<string> CountryNames { get; set; }
-
 }
-
-{% endhighlight %}
-{% endtabs %}
 
 {% endhighlight %}
 {% highlight C# %}
@@ -693,6 +689,7 @@ public class ContactInfo
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Dynamically add data editor
 
@@ -727,7 +724,6 @@ this.dataForm.Items.Clear();
 
 {% endhighlight %}
 {% endtabs %}
-
 
 ## Dynamically reset manual dataform items
 You can replace data editor with new editor by using the `Items` property of `SfDataForm` when AutoGenerateItems is false.
