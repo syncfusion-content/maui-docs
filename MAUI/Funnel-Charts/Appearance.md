@@ -9,11 +9,11 @@ documentation: ug
 
 # Appearance in .NET MAUI Funnel Chart
 
-The appearance of the [SfFunnelChart]() can be customized by using the predefined palettes, custom palettes, and gradient which allows enriching the application.
+The appearance of the [SfFunnelChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html) can be customized by using the predefined palettes, custom palettes, and gradient which allows enriching the application.
 
 ## Custom PaletteBrushes
 
-The [SfFunnelChart]() allows you to define your own brushes with preferred order by using the [PaletteBrushes]() property, as shown in the code below.
+The [SfFunnelChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html) allows you to define your own brushes with preferred order by using the [PaletteBrushes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html#Syncfusion_Maui_Charts_SfFunnelChart_PaletteBrushes) property, as shown in the code below.
 
 {% tabs %}
 
@@ -21,8 +21,8 @@ The [SfFunnelChart]() allows you to define your own brushes with preferred order
 
 <chart:SfFunnelChart ItemsSource="{Binding Data}" 
                      XBindingPath="XValue"
-					 YBindingPath="YValue"
-					 PaletteBrushes="{Binding CustomBrushes}">
+                     YBindingPath="YValue"
+                     PaletteBrushes="{Binding CustomBrushes}">
 . . .
 </chart:SfFunnelChart>
 
@@ -55,7 +55,7 @@ public class ViewModel
 
 ## Applying Gradient
 
-The gradient for the funnel chart can be set by using the [PaletteBrushes]() property of the chart with the help of the `LinearGradientBrush` or `RadialGradientBrush`.
+The gradient for the funnel chart can be set by using the [PaletteBrushes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html#Syncfusion_Maui_Charts_SfFunnelChart_PaletteBrushes) property of the chart with the help of the `LinearGradientBrush` or `RadialGradientBrush`.
 
 {% tabs %}
 
