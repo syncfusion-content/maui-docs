@@ -9,11 +9,11 @@ documentation: ug
 
 # Events in .NET MAUI Calendar (SfCalendar)
 
-The Calendar has the events `ViewChanged`, `SelectionChanged`, `Tapped`, `DoubleTapped` and `LongPressed` for notifying after user interactions in [.NET MAUI Calendar]. 
+The Calendar has the events `ViewChanged`, `SelectionChanged`, `Tapped`, `DoubleTapped`, and `LongPressed` for notifying after user interactions in [.NET MAUI Calendar].
 
 ## ViewChanged
 
-The [ViewChanged] event is used to notify when the current view of calendar is changed while the view is swiped to previous or next view, and when the calendar view is switched to another calendar view.
+The [ViewChanged] event is used to notify when the current view of the calendar is changed while the view is swiped to the previous or next view, as well as when the calendar view is switched to another calendar view.
 
 * `Sender`: This contains the `SfCalendar` object.
 
@@ -86,12 +86,11 @@ The `Tapped` event is triggered first, followed by 'selection-changed' event wil
 
 ## Tapped
 
-A [Tapped] event is triggered, each time a calendar view is tapped.
-Below is a list of the arguments:
+A [Tapped] event is triggered, each time a calendar view is tapped. The following are the list of arguments:
 
 * `Sender`: This contains the `SfCalendar` object.
 
-* `Tapped`: The tapped action performed on an Calendar element can be found in the [CalendarTappedEventArgs], you can see details about the tapped dates and elements.
+* `Tapped`: The tapped action performed on a Calendar element can be found in the [CalendarTappedEventArgs], where you can see details about the tapped dates and elements.
 
     * [Date] : Returns the selected date.
     * [Element] : Returns the `Calendar` element tapped.
@@ -118,11 +117,11 @@ private void OnCalendarTapped(object sender, CalendarTappedEventArgs e)
 
 ## DoubleTapped
 
-Whenever the [SfCalendar] elements are double-tapped onto the view, the [DoubleTapped] event occurs. Below is a list of the arguments:
+Whenever the [SfCalendar] elements are double-tapped onto the view, the [DoubleTapped] event occurs. The following are the list of arguments:
 
 * `Sender`: This contains the `SfCalendar` object.
 
-* `DoubleTapped`: This double tapped action performed on a Calendar element can be found in the [CalendarDoubleTappedEventArgs], and you can see the details about the double-tapped dates and elements.
+* `DoubleTapped`: This double-tapped action performed on a Calendar element can be found in the [CalendarDoubleTappedEventArgs], where you can see the details about the double-tapped dates and elements.
 
     * [Date] : Returns the double-tapped date.
     * [Element] : Returns the double-tapped `Calendar` element.
@@ -150,11 +149,11 @@ private void OnCalendarDoubleTapped(object sender, CalendarDoubleTappedEventArgs
 
 ## LongPressed
 
-Whenever the [SfCalendar] elements are long-pressed onto the view, the [LongPressed] event is triggered. Below is a list of the arguments:
+Whenever the [SfCalendar] elements are long-pressed onto the view, the [LongPressed] event is triggered. The following are the list of arguments:
 
 * `Sender`: This contains the `SfCalendar` object.
 
-* `LongPressed`: This long-pressed action performed on a Calendar element can be found in the [CalendarLongPressedEventArgs], and you can see details about the long-pressed dates and elements.
+* `LongPressed`: This long-pressed action performed on a Calendar element can be found in the [CalendarLongPressedEventArgs], where you can see details about the long-pressed dates and elements.
 
     * [Date] : Returns the long-pressed date.
     * [Element] : Returns the long-pressed `Calendar` element.
