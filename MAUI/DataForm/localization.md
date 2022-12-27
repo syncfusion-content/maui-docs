@@ -11,11 +11,11 @@ documentation: ug
 
 Localization is translating the application resources into different languages for specific cultures. The `SfDataForm` can be localized by adding a `resource` file.
 
-Localize the `DataFormViewItem` [DisplayAttribute](https://help.syncfusion.com/maui/dataform/data-annotations#display-attribute) values and [ValidationAttribute](https://help.syncfusion.com/maui/dataform/data-annotations#validation-attribute) values by using the `ResourceType` property of the attribute or using the `GenerateDataFormItem` event when auto-generate true.
+Localize the [DataFormViewItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormViewItem.html) [DisplayAttribute](https://help.syncfusion.com/maui/dataform/data-annotations#display-attribute) values and [ValidationAttribute](https://help.syncfusion.com/maui/dataform/data-annotations#validation-attribute) values by using the [ResourceType](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute.resourcetype?view=net-7.0#system-componentmodel-dataannotations-displayattribute-resourcetype) property of the attribute or using the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event when auto-generate true.
 
 ## Setting CurrentUICulture to the application
 
-Application culture can be changed by setting the `CurrentUICulture` in the `App.xaml.cs` file.
+Application culture can be changed by setting the [CurrentUICulture](https://learn.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo.currentuiculture?view=net-7.0) in the `App.xaml.cs` file.
 
 {% tabs %}
 {% highlight C# tabtitle="App.xaml.cs" %}
@@ -41,7 +41,7 @@ The required `resx` files with `Build Action` as `EmbeddedResource` (File name s
 
 ## Add Localization resx file in sample level
 
-Follow these steps to localize the `DataForm` based on the `CurrentUICulture` using the `resource` files.
+Follow these steps to localize the `DataForm` based on the [CurrentUICulture](https://learn.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo.currentuiculture?view=net-7.0) using the `resource` files.
 
 1. Right-click on the `Resources` folder in the application.
 
@@ -68,7 +68,7 @@ Here, the display attributes or data form item display values to get localized b
 
 #### Using attribute
 
-The `ResourceType` property of the [Display](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute?view=net-7.0) attribute specifies the Resources File (.Resx), which is used to localize the values of the `Name`, `ShortName`, `GroupName`, `Prompt`, and `ItemsSource`.
+The [ResourceType](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute.resourcetype?view=net-7.0#system-componentmodel-dataannotations-displayattribute-resourcetype) property of the [Display](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute?view=net-7.0) attribute specifies the Resources File (.Resx), which is used to localize the values of the [Name](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute.name?view=net-7.0#system-componentmodel-dataannotations-displayattribute-name), [ShortName](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute.shortname?view=net-7.0#system-componentmodel-dataannotations-displayattribute-shortname), [GroupName](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute.groupname?view=net-7.0), [Prompt](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute.prompt?view=net-7.0) and `ItemsSource`.
 
 {% tabs %}
 {% highlight C# %}
@@ -81,7 +81,7 @@ public string FirstName { get; set; }
 
 #### Using event
 
-Also, localize the DataFormItem's `LabelText`, `PlaceholderText`, and `GroupName` in the `GenerateDataFormItem` event of the `SfDataForm` by using the Resources (.Resx) file.
+Also, localize the DataFormItem's [LabelText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_LabelText), [PlaceholderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_PlaceholderText), and [GroupName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_GroupName) in the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event of the [SfDataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html) by using the Resources (.Resx) file.
 
 Here, the string member of the .resx file will be accessed through the class (in resxFilename.Designer.cs), which will be auto-generated when the .resx file is created, and static string members get localized using the [ResourceManager](https://learn.microsoft.com/en-us/dotnet/api/system.resources.resourcemanager.getstring?view=net-7.0) based on culture.
 
@@ -112,7 +112,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 ## Localizing validation error messages
 
-Here, the [ValidationAttribute](https://help.syncfusion.com/maui/dataform/data-annotations#validation-attribute) values or data form error messages get localized based on culture from Localization Resource File (.Resx).
+Here, the [ValidationAttribute](https://help.syncfusion.com/maui/dataform/data-annotations#validation-attribute) values or data form `error messages` get localized based on culture from Localization Resource File (.Resx).
 
 #### Using attribute
 
@@ -130,7 +130,7 @@ public string Name { get; set; }
 
 #### Using event
 
-Also, localize the data form error message and valid message in the `ValidateProperty` event of the `SfDataForm` by using the Resources (.Resx) file.
+Also, localize the data form `error message` and `valid message` in the [ValidateProperty](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ValidateProperty) event of the [SfDataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html) by using the Resources (.Resx) file.
 
 {% tabs %}
 {% highlight C# %}
