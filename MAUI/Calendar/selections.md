@@ -211,7 +211,7 @@ this.Calendar.SelectionShape = CalendarSelectionShape.Rectangle;
 ![rectangle-selection-shape-for-monthview-in-maui-calendar](images/selection/rectangle-selection-shape-for-monthview-in-maui-calendar.png)
 
 ## Enable swipe selection
-You can select the dates by swiping using the `EnableSwipeSelection` property. By default, [EnableSwipeSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_EnableSwipeSelection) property is true.
+You can select the dates by swiping using the `EnableSwipeSelection` property. By default, [EnableSwipeSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_EnableSwipeSelection) property is false.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
