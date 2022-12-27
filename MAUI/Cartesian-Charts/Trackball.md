@@ -46,6 +46,8 @@ this.Content = chart;
 
 {% endtabs %}
 
+![Trackball support in MAUI](Track_ball_Images/maui_Trackball.png)
+
 ## Enable Label Display Mode
 
 The [DisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTrackballBehavior.html#Syncfusion_Maui_Charts_ChartTrackballBehavior_DisplayMode) property specifies whether a label should be displayed for all data points along the trackball line or only the nearest data point label. The following choices are available for this property.
@@ -80,6 +82,8 @@ The [DisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Cha
 {% endhighlight %}
 
 {% endtabs %}
+
+![Trackball support in MAUI](Track_ball_Images/maui_label_display_mode.png)
 
 ## Apperance customization
 

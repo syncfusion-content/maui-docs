@@ -150,6 +150,8 @@ this.Content= chart;
 
 {% endtabs %}
 
+![Marker support in area chart](Chart-types_images/maui_area_marker_support.png)
+
 ### Marker customization
 
 In order to change the series markers appearance, create an instance of the [MarkerSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.AreaSeries.html#Syncfusion_Maui_Charts_AreaSeries_MarkerSettings) property. The following properties are used to customize marker appearance.
