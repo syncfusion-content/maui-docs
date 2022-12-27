@@ -10,7 +10,7 @@ documentation: ug
 # Date Navigations in MAUI Calendar (SfCalendar)
 
 ## Programmatic date navigation
-Allows you to navigate through the Dates by programmatically in the calendar widget by using the [DisplayDate](https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/SfCalendar/DisplayDate.html)  property of [SfCalendar](https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/SfCalendar-class.html).
+Allows you to navigate through the Dates by programmatically in the calendar widget by using the [DisplayDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_DisplayDate) property of [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html).
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -28,7 +28,7 @@ this.Calendar.DisplayDate = DateTime.Now.AddMonths(2).Date;
 ![display-date-in-maui-calendar](images/date-navigation/display-date-in-maui-calendar.png)
 
 ## Programmatic view navigation
-Allows you to navigate through the views by programmatically in the calendar widget by using the [View](https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/SfCalendar/View.html) property of [SfCalendar](https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/SfCalendar-class.html).
+Allows you to navigate through the views by programmatically in the calendar widget by using the [View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_View) property of [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html).
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -46,7 +46,7 @@ this.Calendar.View = CalendarView.Month;
 ![monthview-in-maui-calendar](images/date-navigation/monthview-in-maui-calendar.png)
 
 ## Allow view navigation
-Allows you to navigate by using the [AllowViewNavigation](https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/SfCalendar/AllowViewNavigation.html)  property through tap interaction on the cell or header. By using this property you can able to restrict the view navigation and allow you to select the cells in the Year, Decade and Century views.
+Allows you to navigate by using the [AllowViewNavigation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_AllowViewNavigation)  property through tap interaction on the cell or header. By using this property you can able to restrict the view navigation and allow you to select the cells in the Year, Decade and Century views.
 
 The following code shows whem the AllowViewNavigation property is `true`.
 
@@ -67,7 +67,7 @@ this.Calendar.AllowViewNavigation = true;
 {% endtabs %}
 
 ## Programmatically change to adjacent dates
-The next and previous view can be navigated by swiping the Calendar control from right to left and left to right. In the `SfCalendar`, view can be changed programmatically by using the [forward](https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/SfCalendar/Forward.html) and [backward](https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/SfCalendar/Backward.html)methods.
+The next and previous view can be navigated by swiping the Calendar control from right to left and left to right. In the `SfCalendar`, view can be changed programmatically by using the [Forward](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_Forward) and [Backward](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_Backward) methods.
 
 ### Forward
 The `Forward` navigation allows you to view the next immediate date of the calendar based on the CalendarViews.
@@ -126,7 +126,7 @@ private void button_Clicked(object sender, EventArgs e)
 {% endtabs %}
 
 ## Navigation direction
-Views can be navigated by using the `Navigation direction` property either `Vertical` or `Horizontal` directions by setting the [NavigationDirection](https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/SfCalendar/NavigationDirection.html) property of `Calendar`. The default navigation direction is `Vertical`.
+Views can be navigated by using the `Navigation direction` property either `Vertical` or `Horizontal` directions by setting the `NavigationDirection` property of `Calendar`. The default [NavigationDirection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_NavigationDirection) is `Vertical`.
 
 The following code shows the Navigation direction in `Horizontal`,
 
@@ -149,7 +149,7 @@ this.Calendar.NavigationDirection = CalendarNavigationDirection.Horizontal;
 ![horizontal-navigation-direction-in-maui-calendar](images/date-navigation/horizontal-navigation-direction-in-maui-calendar.png)
 
 ## Show navigation arrow
-By using the [ShowNavigationArrow](https://pub.dev/documentation/syncfusion_maui_calendar/latest/calendar/SfCalendar/ShowNavigationArrow.html) property of the `Calendar` you can navigate to the next or previous views of the calendar without swiping. By default, the value of ShowNavigationArrow is `true`.
+By using the `ShowNavigationArrows` property of the `Calendar` you can navigate to the next or previous views of the calendar without swiping. By default, the value of [ShowNavigationArrows](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarHeaderView.html#Syncfusion_Maui_Calendar_CalendarHeaderView_ShowNavigationArrows) is `true`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
