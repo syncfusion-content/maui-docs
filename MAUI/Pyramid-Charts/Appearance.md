@@ -9,11 +9,11 @@ documentation: ug
 
 # Appearance in .NET MAUI Pyramid Chart
 
-The appearance of the [SfPyramidChart]() can be customized by using the predefined palettes, custom palettes, and gradient which allows enriching the application.
+The appearance of the [SfPyramidChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPyramidChart.html) can be customized by using the predefined palettes, custom palettes, and gradient which allows enriching the application.
 
 ## Custom PaletteBrushes
 
-The [SfPyramidChart]() allows you to define your own brushes with preferred order by using the [PaletteBrushes]() property, as shown in the code below.
+The [SfPyramidChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPyramidChart.html) allows you to define your own brushes with preferred order by using the [PaletteBrushes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPyramidChart.html#Syncfusion_Maui_Charts_SfPyramidChart_PaletteBrushes) property, as shown in the code below.
 
 {% tabs %}
 
@@ -21,8 +21,8 @@ The [SfPyramidChart]() allows you to define your own brushes with preferred orde
 
 <chart:SfPyramidChart ItemsSource="{Binding Data}" 
                       XBindingPath="Name"
-					  YBindingPath="Value"
-					  PaletteBrushes="{Binding CustomBrushes}">
+                      YBindingPath="Value"
+                      PaletteBrushes="{Binding CustomBrushes}">
 . . .
 </chart:SfPyramidChart>
 
@@ -55,7 +55,7 @@ public class ViewModel
 
 ## Applying Gradient
 
-The gradient for the pyramid chart can be set by using the [PaletteBrushes]() property of the chart with the help of the `LinearGradientBrush` or `RadialGradientBrush`.
+The gradient for the pyramid chart can be set by using the [PaletteBrushes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPyramidChart.html#Syncfusion_Maui_Charts_SfPyramidChart_PaletteBrushes) property of the chart with the help of the `LinearGradientBrush` or `RadialGradientBrush`.
 
 {% tabs %}
 
@@ -84,21 +84,21 @@ public class ViewModel
 	 gradientColor1.GradientStops = new GradientStopCollection()
 	 {
 	    new GradientStop() { Offset = 1, Color = Color.FromArgb("#a3bded") },
-		new GradientStop() { Offset = 0, Color = Color.FromArgb("#6991c7") }
+	    new GradientStop() { Offset = 0, Color = Color.FromArgb("#6991c7") },
 	 };
 
 	 LinearGradientBrush gradientColor2 = new LinearGradientBrush();
 	 gradientColor2.GradientStops = new GradientStopCollection()
 	 {
-		new GradientStop() { Offset = 1, Color = Color.FromArgb("#A5678E") },
-		new GradientStop() { Offset = 0, Color = Color.FromArgb("#E8B7D4") }
+	    new GradientStop() { Offset = 1, Color = Color.FromArgb("#A5678E") },
+	    new GradientStop() { Offset = 0, Color = Color.FromArgb("#E8B7D4") }
 	 };
 
 	 LinearGradientBrush gradientColor3 = new LinearGradientBrush();
 	 gradientColor3.GradientStops = new GradientStopCollection()
 	 {
-		new GradientStop() { Offset = 1, Color = Color.FromArgb("#FFCAD4") },
-		new GradientStop() { Offset = 0, Color = Color.FromArgb("#FB7B8E") }
+	    new GradientStop() { Offset = 1, Color = Color.FromArgb("#FFCAD4") },
+	    new GradientStop() { Offset = 0, Color = Color.FromArgb("#FB7B8E") }
 	 };
 
 	 LinearGradientBrush gradientColor4 = new LinearGradientBrush();

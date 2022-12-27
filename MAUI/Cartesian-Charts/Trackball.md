@@ -13,10 +13,10 @@ Trackball, which allows you to show the tooltip for the nearest data points when
 
 ## Enable Trackball 
 
-To enable the trackball in the chart, create an instance of the [ChartTrackballBehavior]() and set it to the [TrackballBehavior]() property. The following properties are used to show or hide the line and tooltip.
+To enable the trackball in the chart, create an instance of the [ChartTrackballBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTrackballBehavior.html) and set it to the [TrackballBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_TrackballBehavior) property. The following properties are used to show or hide the line and tooltip.
 
-* [ShowMarkers](), of type `bool`, indicates the shows or hides trackball markers. The default value is `True`.
-* [ShowLine](), of type `bool`, indicates the shows or hides the trackball line. The default value is `True`.
+* [ShowMarkers](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTrackballBehavior.html#Syncfusion_Maui_Charts_ChartTrackballBehavior_ShowMarkers), of type `bool`, indicates the shows or hides trackball markers. The default value is `True`.
+* [ShowLine](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTrackballBehavior.html#Syncfusion_Maui_Charts_ChartTrackballBehavior_ShowLine), of type `bool`, indicates the shows or hides the trackball line. The default value is `True`.
 
 
 {% tabs %}
@@ -48,7 +48,7 @@ this.Content = chart;
 
 ## Enable Label Display Mode
 
-The [DisplayMode]() property specifies whether a label should be displayed for all data points along the trackball line or only the nearest data point label. The following choices are available for this property.
+The [DisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTrackballBehavior.html#Syncfusion_Maui_Charts_ChartTrackballBehavior_DisplayMode) property specifies whether a label should be displayed for all data points along the trackball line or only the nearest data point label. The following choices are available for this property.
 
 * `FloatAllPoints` – Displays labels for all the data points along the vertical line.
 * `NearestPoint` – Displays label for a single data point nearer to the touch point on the chart area.
@@ -85,7 +85,7 @@ The [DisplayMode]() property specifies whether a label should be displayed for a
 
 ### Trackball Labels customization
 
-The [LabelStyle]() property provides to customize the trackball labels. These options are:
+The [LabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTrackballBehavior.html#Syncfusion_Maui_Charts_ChartTrackballBehavior_LabelStyle) property provides to customize the trackball labels. These options are:
 
 * `Background`, of type `Brush`, used to change the label background color.
 * `Margin`, of type `Thickness`, used to change the margin of the label.
@@ -136,7 +136,7 @@ this.Content = chart;
 
 ### Trackball Line Customization
 
- The [LineStyle]() property provides to customize the trackball line. These options are:
+ The [LineStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTrackballBehavior.html#Syncfusion_Maui_Charts_ChartTrackballBehavior_LineStyle) property provides to customize the trackball line. These options are:
 
 * `StrokeWidth`, of type `double`, used to change the stroke width of the line.
 * `Stroke`, of type `Brush`, used to change the stroke color of the line.
@@ -173,7 +173,7 @@ this.Content = chart;
 
 ### Trackball Markers Customization
 
-The [MarkerSettings]() property provides to customize the trackball markers. The trackball marker can be customised using the following properties.
+The [MarkerSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTrackballBehavior.html#Syncfusion_Maui_Charts_ChartTrackballBehavior_MarkerSettings) property provides to customize the trackball markers. The trackball marker can be customised using the following properties.
 
 * `Type`, of type `ShapeType`, used to set the marker shape type.
 * `Stroke`, of type `Brush`, used to change the marker border color.
@@ -222,7 +222,7 @@ this.Content = chart;
 
 ## Show or Hide the Series Label
 
-The [CartesianSeries.ShowTrackballLabel]() property is used to show or hide the series trackball label. The default value is `True`.
+The [CartesianSeries.ShowTrackballLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CartesianSeries.html#Syncfusion_Maui_Charts_CartesianSeries_ShowTrackballLabel) property is used to show or hide the series trackball label. The default value is `True`.
 
 {% tabs %}
 
@@ -260,7 +260,7 @@ this.Content = chart;
 
 ## Show or Hide Trackball Label in Axis
 
-When the trackball moves across the axis, this feature highlights the related axis label. The [ChartAxis.ShowTrackballLabel]() property is used to show or hide the axis's trackball label. The [ChartAxis.TrackballLabelStyle]() property is used to customize the appearance of the label. The default value of the [ChartAxis.ShowTrackballLabel]() is `False`.
+When the trackball moves across the axis, this feature highlights the related axis label. The [ChartAxis.ShowTrackballLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_ShowTrackballLabel) property is used to show or hide the axis's trackball label. The [ChartAxis.TrackballLabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_TrackballLabelStyle) property is used to customize the appearance of the label. The default value of the [ChartAxis.ShowTrackballLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_ShowTrackballLabel) is `False`.
 
 {% tabs %}
 
@@ -293,5 +293,5 @@ this.Content = chart;
 
 ## Methods
 
-* `Show(x, y)` - The [Show]() method is used to activate the trackball at the specified location.
-* `Hide()` - The [Hide]() method hides the trackball that is visible in the chart.
+* `Show(x, y)` - The [Show](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTrackballBehavior.html#Syncfusion_Maui_Charts_ChartTrackballBehavior_Show_System_Single_System_Single_) method is used to activate the trackball at the specified location.
+* `Hide()` - The [Hide](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTrackballBehavior.html#Syncfusion_Maui_Charts_ChartTrackballBehavior_Hide) method hides the trackball that is visible in the chart.
