@@ -46,9 +46,9 @@ this.Calendar.View = CalendarView.Month;
 ![monthview-in-maui-calendar](images/date-navigation/monthview-in-maui-calendar.png)
 
 ## Allow view navigation
-Allows you to navigate by using the [AllowViewNavigation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_AllowViewNavigation)  property through tap interaction on the cell or header. By using this property you can able to restrict the view navigation and allow you to select the cells in the Year, Decade and Century views.
+Allows you to navigate by using the `AllowViewNavigation` property through tap interaction on the cell or header. By using this property you can able to restrict the view navigation and allow you to select the cells in the Year, Decade and Century views.
 
-The following code shows whem the AllowViewNavigation property is `true`.
+The following code shows whem the [AllowViewNavigation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_AllowViewNavigation) property is `true`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
