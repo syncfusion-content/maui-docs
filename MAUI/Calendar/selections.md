@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Selections in MAUI Calendar (SfCalendar)
-The Selection mode is specified in the Calendar property enumeration. You can select the dates by tapping the cell in the calendar. `SfCalendar` provides three types of modes such as `Single`, `Multiple`, and `Range` Selection. The default `SelectionMode` is Single, which allows the user to select only one date at a time.
+The Selection mode is specified in the Calendar property enumeration. You can select the dates by tapping the cell in the calendar. `SfCalendar` provides three types of modes such as `Single`, `Multiple`, and `Range` Selection. The default [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectionMode) is Single, which allows the user to select only one date at a time.
 
 >**NOTE** You can select the cells in the Year, Decade, and Century views in the calendar only when the `AllowViewNavigation` property is set to false.
 
@@ -95,7 +95,7 @@ Eg:
 * In the century view, when the range is selected as 2020-2029 to 2030-2039, then the range value will be 01-01-2020 to 31-12-2039.
 
 ### Range selection direction
-The Range Selection Direction is specified in the calendar property enumeration, which is used to select the range based on the direction. The `RangeSelectionDirection` provides five types of direction such as `Default`, `Forward`, `Backward`, `Both`, and `None`. The default `RangeSelectionDirection` is `Default` in the SfCalendar.
+The Range Selection Direction is specified in the calendar property enumeration, which is used to select the range based on the direction. The `RangeSelectionDirection` provides five types of direction such as `Default`, `Forward`, `Backward`, `Both`, and `None`. The default [RangeSelectionDirection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_RangeSelectionDirection) is `Default` in the SfCalendar.
 
 #### Range selection direction - forward
 If you set the `RangeSelectionDirection` property to `Forward`, you can select only the dates after the selected range start date, while dates before the range start date are considered disabled. The start date will not be changed.
@@ -190,7 +190,7 @@ this.Calendar.RangeSelectionDirection = CalendarRangeSelectionDirection.None;
 ![None range selection in .NET MAUI Calendar.](images/selection/maui-none-range-selection.png)
 
 ## Selection shape
-The Selected date will render based on the `SelectionShape` property. The default selection shape is `Circle`. You can customize the selection shape either `Rectangle` or `Circle`.
+The Selected date will render based on the `SelectionShape` property. The default [SelectionShape](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectionShape) is `Circle`. You can customize the selection shape either `Rectangle` or `Circle`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -211,7 +211,7 @@ this.Calendar.SelectionShape = CalendarSelectionShape.Rectangle;
 ![rectangle-selection-shape-for-monthview-in-maui-calendar](images/selection/rectangle-selection-shape-for-monthview-in-maui-calendar.png)
 
 ## Enable swipe selection
-You can select the dates by swiping using the `EnableSwipeSelection` property. By default, `EnableSwipeSelection` property is true.
+You can select the dates by swiping using the `EnableSwipeSelection` property. By default, [EnableSwipeSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_EnableSwipeSelection) property is true.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -230,7 +230,7 @@ this.Calendar.EnableSwipeSelection = true;
 {% endtabs %}
 
 ## Toggle day selection
-You can deselect the date by using the `CanToggleDaySelection` property. By default, `CanToggleDaySelection` property is false.
+You can deselect the date by using the `CanToggleDaySelection` property. By default, [CanToggleDaySelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_CanToggleDaySelection) property is false.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
