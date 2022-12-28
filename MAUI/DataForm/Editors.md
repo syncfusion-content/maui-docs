@@ -252,6 +252,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
+![Text Editor](images/editors/dataform-text-editor.png)
 
 ## Multiline Text editor
 
@@ -268,6 +269,8 @@ public string Address { get; set; }
 {% endhighlight %}
 {% endtabs %}
 
+![MultilineText Editor](images/editors/dataform-multiline-text-editor.png)
+
 ## Password editor
 
 In the password editor, the [Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry?view=net-maui-7.0) is loaded.
@@ -281,6 +284,8 @@ public string Password { get; set; }
 
 {% endhighlight %}
 {% endtabs %}
+
+![Password Editor](images/editors/dataform-password-editor.png)
 
 ## Date editor
 
@@ -339,6 +344,8 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
+![Date Picker Editor](images/editors/dataform-date-picker-editor.png)
+
 
 ## Time editor
 
@@ -377,6 +384,8 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
+![Time Picker Editor](images/editors/dataform-time-picker-editor.png)
+
 ## CheckBox editor
 
 In the CheckBox editor, the `CheckBox` control is loaded. By default, for bool data type property, the CheckBox editor will be loaded in data form.
@@ -392,6 +401,8 @@ public bool RegisteredMember { get; set; }
 
 {% endhighlight %}
 {% endtabs %}
+
+![Checkbox Editor](images/editors/dataform-checkbox-editor.png)
 
 #### Changing the checkbox color
 
@@ -433,6 +444,8 @@ public bool AirplaneMode { get; set; }
 
 {% endhighlight %}
 {% endtabs %}
+
+![Switch editor](images/editors/dataform-switch-editor.png)
 
 #### Changing the Switch Editor thumb color
 You can change the thumb color by using the [ThumbColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormSwitchItem.html#Syncfusion_Maui_DataForm_DataFormSwitchItem_ThumbColor) property in the [DataFormSwitchItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormSwitchItem.html?tabs=tabid-1%2Ctabid-3).
@@ -476,6 +489,8 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 ## Combo Box editor
 
 In the Combo Box editor, the [SfComboBox](https://help.syncfusion.com/maui/combobox) will be loaded.
+
+![ComboBox editor](images/editors/dataform-combobox-editor.png)
 
 #### Changing the ItemsSource of combo box
 
@@ -696,6 +711,8 @@ public class EmployeeInfo
 ## AutoComplete editor
 
 In the autocomplete editor, the [SfAutoComplete](https://help.syncfusion.com/maui/autocomplete) is loaded.
+
+![AutoComplete editor](images/editors/dataform-autocomplete-editor.png)
 
 #### Changing the ItemsSource of autocomplete editor
 

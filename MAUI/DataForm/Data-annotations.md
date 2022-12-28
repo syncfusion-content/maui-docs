@@ -257,7 +257,7 @@ Details
 </tr>
 <tr>
 <td>
-RowSpan
+{{'[RowSpan](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDisplayOptionsAttribute.html#Syncfusion_Maui_DataForm_DataFormDisplayOptionsAttribute_RowSpan)'| markdownify }}
 </td>
 <td>
 Specifies the row span for the data form item.
@@ -265,7 +265,7 @@ Specifies the row span for the data form item.
 </tr>
 <tr>
 <td>
-ColumnSpan
+{{'[ColumnSpan](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDisplayOptionsAttribute.html#Syncfusion_Maui_DataForm_DataFormDisplayOptionsAttribute_ColumnSpan)'| markdownify }}
 </td>
 <td>
 Specifies the column span for the data form item.
@@ -273,7 +273,7 @@ Specifies the column span for the data form item.
 </tr>
 <tr>
 <td>
-ValidMessage
+{{'[ValidMessage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDisplayOptionsAttribute.html#Syncfusion_Maui_DataForm_DataFormDisplayOptionsAttribute_ValidMessage)'| markdownify }}
 </td>
 <td>
 Specifies the positive message to be shown when validation is passed. 
@@ -281,7 +281,7 @@ Specifies the positive message to be shown when validation is passed.
 </tr>
 <tr>
 <td>
-ShowLabel
+{{'[ShowLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDisplayOptionsAttribute.html#Syncfusion_Maui_DataForm_DataFormDisplayOptionsAttribute_ShowLabel)'| markdownify }}
 </td>
 <td>
 Specifies whether the label should be visible or not.
@@ -289,7 +289,7 @@ Specifies whether the label should be visible or not.
 </tr>
 <tr>
 <td>
-RowOrder
+{{'[RowOrder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDisplayOptionsAttribute.html#Syncfusion_Maui_DataForm_DataFormDisplayOptionsAttribute_RowOrder)'| markdownify }}
 </td>
 <td>
 Specifies the row order of field in the data form
@@ -297,7 +297,7 @@ Specifies the row order of field in the data form
 </tr>
 <tr>
 <td>
-ItemsOrderInRow
+{{'[ItemsOrderInRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDisplayOptionsAttribute.html#Syncfusion_Maui_DataForm_DataFormDisplayOptionsAttribute_ItemsOrderInRow)'| markdownify }}
 </td>
 <td>
 Specifies the ItemsOrderInRow property to display multiple editors in a single row. Two items with the same RowOrder property value are placed in this row according to their ItemOrderInRow property values.
@@ -359,7 +359,7 @@ Specifies the minimum date that can be selected in the date editor.
 DisplayFormat
 </td>
 <td>
-Specifies the format of the [MaximumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDateRangeAttribute.html#Syncfusion_Maui_DataForm_DataFormDateRangeAttribute_MaximumDate) and [MinumumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDateRangeAttribute.html#Syncfusion_Maui_DataForm_DataFormDateRangeAttribute_MinimumDate) used in attribute.
+Specifies the format of the {{'[MaximumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDateRangeAttribute.html#Syncfusion_Maui_DataForm_DataFormDateRangeAttribute_MaximumDate)'| markdownify }} and {{'[MinumumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDateRangeAttribute.html#Syncfusion_Maui_DataForm_DataFormDateRangeAttribute_MinimumDate)'| markdownify }} used in attribute.
 </td>
 </tr>
 </table>

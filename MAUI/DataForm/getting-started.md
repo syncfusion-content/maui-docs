@@ -112,7 +112,7 @@ public class ContactsInfo
 {% endhighlight %}
 {% endtabs %}
 
-Initialize the data object in view model class to bind in the `DataObject` property of [SfDataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html).
+Initialize the data object in view model class to bind in the [DataObject](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_DataObject) property of [SfDataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html).
 
 {% tabs %}
 {% highlight C# %}
@@ -132,7 +132,7 @@ public class DataFormViewModel
 
 ## Set data object to data form
 
-By default, the data form auto-generates the editors based on the primitive data type in the `DataObject` property. Please refer the following code to set the `DataObject` property.
+By default, the data form auto-generates the editors based on the primitive data type in the [DataObject](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_DataObject) property. Please refer the following code to set the [DataObject](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_DataObject) property.
 
 {% tabs %}
 {% highlight XAML %}
