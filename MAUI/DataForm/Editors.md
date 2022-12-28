@@ -377,7 +377,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 ## CheckBox editor
 
-In the CheckBox editor, the `CheckBox` control is loaded. By default, for bool data type property, the CheckBox editor will be loaded in data form.
+In the CheckBox editor, the [CheckBox](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/checkbox?view=net-maui-7.0) control is loaded. By default, for bool data type property, the CheckBox editor will be loaded in data form.
 
 {% tabs %}
 {% highlight C# %}
@@ -415,7 +415,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 In switch editor, [Switch](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/switch?view=net-maui-7.0) is loaded, and DataForm Switch editor supports bool data type property.
 
-To add a switch editor in DataForm, register the editor as `DataFormEditorType.Switch` for the required property using the [RegisterEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_RegisterEditor_System_String_Syncfusion_Maui_DataForm_DataFormEditorType_) method.
+To add a switch editor in DataForm, register the editor as [DataFormEditorType.Switch](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormEditorType.html#Syncfusion_Maui_DataForm_DataFormEditorType_Switch) for the required property using the [RegisterEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_RegisterEditor_System_String_Syncfusion_Maui_DataForm_DataFormEditorType_) method.
 
 {% tabs %}
 {% highlight C# %}
@@ -477,7 +477,7 @@ In the Combo Box editor, the [SfComboBox](https://help.syncfusion.com/maui/combo
 
 #### Changing the ItemsSource of combo box
 
-By default, the `ItemsSource` for SfComboBox is auto-generated for enum types properties.
+By default, the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html#Syncfusion_Maui_DataForm_DataFormListItem_ItemsSource) for ComboBox is auto-generated for enum types properties.
 
 **Using IDataFormSourceProvider**
 
@@ -514,7 +514,7 @@ this.dataForm.RegisterEditor("Country", DataFormEditorType.ComboBox);
 
 **Using GenerateDataFormItem event**
 
-You can also set the `ItemsSource` for combo box editor by using the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event.
+You can also set the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html#Syncfusion_Maui_DataForm_DataFormListItem_ItemsSource) for combo box editor by using the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event.
 
 {% tabs %}
 {% highlight C# %}
@@ -630,7 +630,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 #### Loading the complex type property values in combo box editor
 
-You can display the complex type property values in the combo box editor by using the `DisplayMemberPath` and `SelectedValuePath` properties of [DataFormComboBoxItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormComboBoxItem.html). You need to use the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event to set the `DisplayMemberPath` and `SelectedValuePath` property value of [DataFormComboBoxItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormComboBoxItem.html?tabs=tabid-1%2Ctabid-3).
+You can display the complex type property values in the combo box editor by using the [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html#Syncfusion_Maui_DataForm_DataFormListItem_DisplayMemberPath) and [SelectedValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html?tabs=tabid-1#Syncfusion_Maui_DataForm_DataFormListItem_SelectedValuePath) properties of [DataFormComboBoxItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormComboBoxItem.html). You need to use the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event to set the [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html#Syncfusion_Maui_DataForm_DataFormListItem_DisplayMemberPath) and [SelectedValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html?tabs=tabid-1#Syncfusion_Maui_DataForm_DataFormListItem_SelectedValuePath) property value of [DataFormComboBoxItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormComboBoxItem.html?tabs=tabid-1%2Ctabid-3).
 
 N> Class cannot be directly set as data type for combo box editor in this complex type scenario.
 
@@ -697,7 +697,7 @@ In the autocomplete editor, the [SfAutoComplete](https://help.syncfusion.com/mau
 
 #### Changing the ItemsSource of autocomplete editor
 
-By default, the `ItemsSource` for `AutoComplete` editor is auto-generated for enum types. For other types, you can set the `ItemsSource` using [IDataFormSourceProvider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.IDataFormSourceProvider.html).
+By default, the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html#Syncfusion_Maui_DataForm_DataFormListItem_ItemsSource) for `AutoComplete` editor is auto-generated for enum types. For other types, you can set the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html#Syncfusion_Maui_DataForm_DataFormListItem_ItemsSource) using [IDataFormSourceProvider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.IDataFormSourceProvider.html).
 
 **Using IDataFormSourceProvider**
 
@@ -744,7 +744,7 @@ this.dataForm.RegisterEditor("Country", DataFormEditorType.AutoComplete);
 
 **Using GenerateDataFormItem event**
 
-You can also set `ItemsSource` for autocomplete editor by using the `ItemsSource` property in the [DataFormAutoCompleteItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormAutoCompleteItem.html?tabs=tabid-1).
+You can also set [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html#Syncfusion_Maui_DataForm_DataFormListItem_ItemsSource) for autocomplete editor by using the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html#Syncfusion_Maui_DataForm_DataFormListItem_ItemsSource) property in the [DataFormAutoCompleteItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormAutoCompleteItem.html?tabs=tabid-1).
 
 {% tabs %}
 {% highlight C# %}
@@ -779,7 +779,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 #### Loading the complex type property values in autocomplete editor
 
-You can display the complex type property values in autocomplete editor by using the `DisplyMemberPath` and `SelectedValuePath` properties of [DataFormAutoCompleteItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormAutoCompleteItem.html). You need to use the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event to set the `DisplayMemberPath` and `SelectedValuePath` property values of [DataFormAutoCompleteItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormAutoCompleteItem.html?tabs=tabid-1).
+You can display the complex type property values in autocomplete editor by using the `DisplyMemberPath` and [SelectedValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html?tabs=tabid-1#Syncfusion_Maui_DataForm_DataFormListItem_SelectedValuePath) properties of [DataFormAutoCompleteItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormAutoCompleteItem.html). You need to use the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event to set the [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html#Syncfusion_Maui_DataForm_DataFormListItem_DisplayMemberPath) and [SelectedValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html?tabs=tabid-1#Syncfusion_Maui_DataForm_DataFormListItem_SelectedValuePath) property values of [DataFormAutoCompleteItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormAutoCompleteItem.html?tabs=tabid-1).
 
 N> Class cannot be directly set as data type for autocomplete editor in this complex type scenario.
 
@@ -913,7 +913,7 @@ In the picker editor, the [Picker](https://learn.microsoft.com/en-us/dotnet/maui
 
 #### Changing the ItemsSource of Picker
 
-By default, the `ItemsSource` for the picker is auto-generated for the enum type property. For other types, you can set the `ItemsSource` by using [IDataFormSourceProvider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.IDataFormSourceProvider.html).
+By default, the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html#Syncfusion_Maui_DataForm_DataFormListItem_ItemsSource) for the picker is auto-generated for the enum type property. For other types, you can set the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html#Syncfusion_Maui_DataForm_DataFormListItem_ItemsSource) by using [IDataFormSourceProvider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.IDataFormSourceProvider.html).
 
 **Using IDataFormSourceProvider**
 
@@ -950,7 +950,7 @@ this.dataForm.RegisterEditor("Country", DataFormEditorType.Picker);
 
 #### Using event
 
-You can also set `ItemsSource` for the picker editor by using the `ItemsSource` property in the [DataFormPickerItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormPickerItem.html).
+You can also set [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html#Syncfusion_Maui_DataForm_DataFormListItem_ItemsSource) for the picker editor by using the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html#Syncfusion_Maui_DataForm_DataFormListItem_ItemsSource) property in the [DataFormPickerItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormPickerItem.html).
 
 {% tabs %}
 {% highlight C# %}
@@ -977,7 +977,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 #### Loading the complex type property values in picker
 
-You can display the complex type property values in the picker editor by using the `DisplayMemberPath` and `SelectedValuePath` properties of [DataFormPickerItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormPickerItem.html). You need to use the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event to set `DisplayMemberPath` and `SelectedValuePath` property values for complex type properties.
+You can display the complex type property values in the picker editor by using the [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html#Syncfusion_Maui_DataForm_DataFormListItem_DisplayMemberPath) and [SelectedValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html?tabs=tabid-1#Syncfusion_Maui_DataForm_DataFormListItem_SelectedValuePath) properties of [DataFormPickerItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormPickerItem.html). You need to use the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event to set [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html#Syncfusion_Maui_DataForm_DataFormListItem_DisplayMemberPath) and [SelectedValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html?tabs=tabid-1#Syncfusion_Maui_DataForm_DataFormListItem_SelectedValuePath) property values for complex type properties.
 
 N> Class cannot be directly set as data type for picker editor in this complex type scenario.
 
@@ -1042,7 +1042,7 @@ public class EmployeeInfo
 
 In the [RadioGroup](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/radiobutton?view=net-maui-7.0) editor, the [RadioButton](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/radiobutton?view=net-maui-7.0) control is loaded.
 
-The `ItemsSource` for the radio group editor is generated for the `enum` data type property. In order to add the `RadioButton` editor in the DataForm, you need to register the editor as `DataFormEditorType.RadioGroup` for the required property by using the [RegisterEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_RegisterEditor_System_String_Syncfusion_Maui_DataForm_DataFormEditorType_) method.
+The [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html#Syncfusion_Maui_DataForm_DataFormListItem_ItemsSource) for the radio group editor is generated for the `enum` data type property. In order to add the `RadioButton` editor in the DataForm, you need to register the editor as [DataFormEditorType.RadioGroup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormEditorType.html#Syncfusion_Maui_DataForm_DataFormEditorType_RadioGroup) for the required property by using the [RegisterEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_RegisterEditor_System_String_Syncfusion_Maui_DataForm_DataFormEditorType_) method.
 
 **Support for enum data type**
 
@@ -1067,7 +1067,7 @@ public enum Numbers
 
 **Support for list data type**
 
-For the `List` data type property, you have to set the `ItemsSource` by using the [IDataFormSourceProvider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.IDataFormSourceProvider.html).
+For the `List` data type property, you have to set the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html#Syncfusion_Maui_DataForm_DataFormListItem_ItemsSource) by using the [IDataFormSourceProvider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.IDataFormSourceProvider.html).
 
 {% tabs %}
 {% highlight C# %}

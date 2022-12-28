@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI DataForm (SfDataForm)
 
-This section provides a quick overview of how to get started with the .NET MAUI DataForm(SfDataForm) for .NET MAUI and a walk-through to configure the .NET MAUI DataForm control in a real-time scenario.
+This section provides a quick overview of how to get started with the [.NET MAUI DataForm(SfDataForm)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.html) for .NET MAUI and a walk-through to configure the .NET MAUI DataForm control in a real-time scenario.
 
 ## Creating an application using the .NET MAUI DataForm
 
@@ -174,7 +174,7 @@ The type of input editor generated for the data field depends on the type and at
 </tr>
 <tr>
 <td>
-DataFormTextItem
+{{'[DataFormTextItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormTextItem.html)'| markdownify }}
 </td>
 <td>
 Default DataFormItem generated for the String type and the properties with [DataType(DataType.Text)] attributes.
@@ -188,7 +188,7 @@ Text
 </tr>
 <tr>
 <td>
-DataFormMultilineTextItem
+{{'[DataFormMultilineTextItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormMultilineItem.html)'| markdownify }}
 </td>
 <td>
 Generated for string type property with [DataType(DataType.MultilineText)] attribute.
@@ -202,7 +202,7 @@ Multiline Text
 </tr>
 <tr>
 <td>
-DataFormPasswordTextItem
+{{'[DataFormPasswordTextItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormPasswordItem.html)'| markdownify }}
 </td>
 <td>
 Generated for string type property with [DataType(DataType.Password)] attribute.
@@ -216,7 +216,7 @@ Password
 </tr>
 <tr>
 <td>
-DataFormCheckBoxItem
+{{'[DataFormCheckBoxItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormCheckBoxItem.html)'| markdownify }}
 </td>
 <td>
 Generated for the Bool type property.
@@ -230,7 +230,7 @@ CheckBox
 </tr>
 <tr>
 <td>
-DataFormSwitchItem 
+{{'[DataFormSwitchItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormSwitchItem.html)'| markdownify }} 
 </td>
 <td>
 Generated for the Bool type property.
@@ -244,7 +244,7 @@ Switch
 </tr>
 <tr>
 <td>
-DataFormDateItem 
+{{'[DataFormDateItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDateItem.html)'| markdownify }} 
 </td>
 <td>
 Generated for the DateTime, DateOnly, DateTimeOffset type properties and the properties with
@@ -260,7 +260,7 @@ Date
 </tr>
 <tr>
 <td>
-DataFormTimeItem
+{{'[DataFormTimeItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormTimeItem.html)'| markdownify }}
 </td>
 <td>
 Generated for the TimeSpan and TimeOnly type properties and the properties with [DataType(DataType.Time)] attribute.
@@ -274,7 +274,7 @@ Time
 </tr>
 <tr>
 <td>
-DataFormPickerItem
+{{'[DataFormPickerItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormPickerItem.html)'| markdownify }}
 </td>
 <td>
 Generated for the Enum type property.
@@ -288,7 +288,7 @@ Picker
 </tr>
 <tr>
 <td>
-DataFormAutoCompleteItem
+{{'[DataFormAutoCompleteItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormAutoCompleteItem.html)'| markdownify }}
 </td>
 <td>
 Generated for the Enum type property.
@@ -302,7 +302,7 @@ AutoComplete
 </tr>
 <tr>
 <td>
-DataFormComboBoxItem
+{{'[DataFormComboBoxItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormComboBoxItem.html)'| markdownify }}
 </td>
 <td>
 Generated for the Enum type property.
@@ -316,7 +316,7 @@ ComboBox
 </tr>
 <tr>
 <td>
-DataFormRadioGroupItem
+{{'[DataFormRadioGroupItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormRadioGroupItem.html)'| markdownify }}
 </td>
 <td>
 Generated for the Enum type property.
