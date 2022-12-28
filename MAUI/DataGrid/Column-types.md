@@ -297,7 +297,7 @@ The `DataGridCheckBoxColumn` inherits all the properties of the `DataGridColumn`
 
 ![DataGrid with CheckBox column](Images\column-types\maui-datagrid-column-checkbox.png)
 
-## CellValueChanged event
+### CellValueChanged event
 
 The `SfDataGrid.CellValueChanged` event will be triggered whenever the current cell's value has been changed in the DataGridCheckBoxColumn. This event handler contains the parameter of type `DataGridCellValueChangedEventArgs` that contains the following properties.
 
