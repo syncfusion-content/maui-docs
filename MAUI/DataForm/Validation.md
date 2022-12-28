@@ -47,7 +47,7 @@ public DateTime JoinDate { get; set; }
 {% endhighlight %}
 {% endtabs %}
 
-Refer [here](https://help.syncfusion.com/maui/dataform/data-annotations#dateformdaterange-attribute) to know more about date range attribute in DataForm
+Refer [here](https://help.syncfusion.com/maui/dataform/data-annotations#dateformdaterange-attribute) to know more about date range attribute in DataForm.
 
 ## Validation mode
 
