@@ -299,13 +299,13 @@ The `DataGridCheckBoxColumn` inherits all the properties of the `DataGridColumn`
 
 ### CellValueChanged event
 
-The `SfDataGrid.CellValueChanged` event will be triggered whenever the current cell's value has been changed in the DataGridCheckBoxColumn. This event handler contains the parameter of type `DataGridCellValueChangedEventArgs` that contains the following properties.
+The [SfDataGrid.CellValueChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) event will be triggered whenever the current cell's value has been changed in the DataGridCheckBoxColumn. This event handler contains the parameter of type [DataGridCellValueChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellValueChangedEventArgs.html) that contains the following properties.
 
-* `Column`        : Gets the current `DataGridColumn` that contains the grid cell for which value is edited or changed.
-* `NewValue`      : The newly edited value to be committed.
-* `RowColumnIndex`   : The current `RowColumnIndex` of the grid cell undergoing the value change.
-* `RowData`       : The `RowData` of the row that contains the grid cell undergoing the value change.
-* `CellValue`       : The initial value when current cell entered edit mode.
+* [Column](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellValueChangedEventArgs.html#Syncfusion_Maui_DataGrid_DataGridCellValueChangedEventArgs_Column)        : Gets the current `DataGridColumn` that contains the grid cell for which value is edited or changed.
+* [NewValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellValueChangedEventArgs.html#Syncfusion_Maui_DataGrid_DataGridCellValueChangedEventArgs_NewValue)      : The newly edited value to be committed.
+* [RowColumnIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellValueChangedEventArgs.html#Syncfusion_Maui_DataGrid_DataGridCellValueChangedEventArgs_RowColumnIndex)   : The current `RowColumnIndex` of the grid cell undergoing the value change.
+* [RowData](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellValueChangedEventArgs.html#Syncfusion_Maui_DataGrid_DataGridCellValueChangedEventArgs_RowData)       : The `RowData` of the row that contains the grid cell undergoing the value change.
+* [CellValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellValueChangedEventArgs.html#Syncfusion_Maui_DataGrid_DataGridCellValueChangedEventArgs_CellValue)       : The initial value when current cell entered edit mode.
 
 {% tabs %}
 
