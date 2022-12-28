@@ -8,22 +8,22 @@ documentation: ug
 ---
 
 # Customizations in MAUI Calendar (SfCalendar)
-Each cell of the Month, Year, Decade and Century can be customized in MAUI Calendar (SfCalendar).
-
+Each cell of the Month, Year, Decade and Century can be customized in MAUI [Calendar](https://www.syncfusion.com/maui-controls/maui-calendar) (SfCalendar).
+    
 ## Month cell customization
 You can customize the calendar month view cell by using the `MonthView` property of `SfCalendar`.
 
-*    **Month dates** – You can customize the month dates text style and background of the `Calendar` by using the `TextStyle` and `Background` properties of `MonthView`.
+*    **Month dates** – You can customize the month dates text style and background of the `Calendar` by using the [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_TextStyle) and [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_Background) properties of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html).
 
-*    **Today date** – You can customize the today date text style and background of the `Calendar` by using the `TodayTextStyle` and `TodayBackground` properties of `MonthView`.
+*    **Today date** – You can customize the today date text style and background of the `Calendar` by using the [TodayTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_TodayTextStyle) and [TodayBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_TodayBackground) properties of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html).
 
-*    **Trailing and Leading dates** – You can hide the trailing and leading dates by using the `ShowTrailingAndLeadingDates` property in the `CalendarMonthView` class. You can also customize the trailing and leading dates text style and background of the `Calendar` by using the `TrailingLeadingDatesTextStyle` and `TrailingLeadingDatesBackground` properties of `MonthView`.
+*    **Trailing and Leading dates** – You can hide the trailing and leading dates by using the [ShowTrailingAndLeadingDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_ShowTrailingAndLeadingDates) property in the [CalendarMonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html) class. You can also customize the trailing and leading dates text style and background of the `Calendar` by using the [TrailingLeadingDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_TrailingLeadingDatesTextStyle) and [TrailingLeadingDatesBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_TrailingLeadingDatesBackground) properties of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html).
 
-*    **Disabled dates** – You can disable the date by using the MinimumDate, MaximumDate, EnablePastDates and SelectableDayPredicate callback. The date before `MinimumDate` is said to disabled date, the date after the `MaximumDate` is said to disabled date, if you want disable the date before today date by using the `EnablePastDates` and if you want to disable any particular date by using `SelectableDayPredicate` property. You can also customize the disabled dates text style and background of the `Calendar` by using the `DisabledDatesTextStyle` and `DisabledDatesBackground` properties of `MonthView`.
+*    **Disabled dates** – You can disable the date by using the MinimumDate, MaximumDate, EnablePastDates and SelectableDayPredicate callback. The date before [MinimumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_MinimumDate) is said to disabled date, the date after the [MaximumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_MaximumDate) is said to disabled date, if you want disable the date before today date by using the [EnablePastDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_EnablePastDates) and if you want to disable any particular date by using [SelectableDayPredicate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectableDayPredicate) property. You can also customize the disabled dates text style and background of the `Calendar` by using the [DisabledDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_DisabledDatesTextStyle) and [DisabledDatesBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_DisabledDatesBackground) properties of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html).
 
-*    **Special Dates** – You can add special dates to the `DateRangePicker` by using the `SpecialDates` property and you can also customize the special dates text style and background of the `Calendar` by using the `SpecialDatesTextStyle` and `SpecialDatesBackground` properties of `MonthView`.
+*    **Special Dates** – You can add special dates to the `DateRangePicker` by using the [SpecialDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_SpecialDates) property and you can also customize the special dates text style and background of the `Calendar` by using the [SpecialDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_SpecialDatesTextStyle) and [SpecialDatesBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_SpecialDatesBackground) properties of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html).
 
-*    **Weekend Dates** – You can customize the weekend dates text style and background of the `Calendar` by using the `WeekendDatesTextStyle` and `WeekendDatesBackground` properties of `MonthView`.
+*    **Weekend Dates** – You can customize the weekend dates text style and background of the `Calendar` by using the [WeekendDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_WeekendDatesTextStyle) and [WeekendDatesBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_WeekendDatesBackground) properties of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html).
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -93,7 +93,7 @@ You can customize the calendar month view cell by using the `MonthView` property
 * The Background color and text style will be applied based on the following order: selectableDayPredicate dates, special dates, disable dates, today date, trailingLeading dates, and weekend dates.
 
 ## Month View Header format
-You can customize the month format of the `Calendar` by using the `TextFormat` property.
+You can customize the month format of the `Calendar` by using the [TextFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthHeaderView.html#Syncfusion_Maui_Calendar_CalendarMonthHeaderView_TextFormat) property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -125,13 +125,13 @@ this.Calendar.MonthView.HeaderView = new CalendarMonthHeaderView()
 ## Year cell customization
 You can customize the calendar `year`, `decade`, and `century` view by using the `YearView` property of `SfCalendar`.
 
-*   **Year cell dates** – You can customize the year view date's text style and background of the `Calendar` by using the `TextStyle` and `Background` properties of `YearView`.
+*   **Year cell dates** – You can customize the year view date's text style and background of the `Calendar` by using the [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarYearView.html#Syncfusion_Maui_Calendar_CalendarYearView_TextStyle) and [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarYearView.html#Syncfusion_Maui_Calendar_CalendarYearView_Background) properties of [YearView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarYearView.html).
 
-*    **Disabled dates** – You can disable the date by using the MinimumDate, MaximumDate, EnablePastDates and SelectableDayPredicate callback. The date before `MinimumDate` is said to disabled date, the date after the `MaximumDate` is said to disabled date, if you want disable the date before today date by using the `EnablePastDates` and if you want to disable any particular date by using `SelectableDayPredicate` property. You can also customize the disabled dates text style and background of the `Calendar` by using the `DisabledDatesTextStyle` and `DisabledDatesBackground` properties of `YearView`.
+*    **Disabled dates** – You can disable the date by using the MinimumDate, MaximumDate, EnablePastDates and SelectableDayPredicate callback. The date before [MinimumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_MinimumDate) is said to disabled date, the date after the [MaximumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_MaximumDate) is said to disabled date, if you want disable the date before today date by using the [EnablePastDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_EnablePastDates) and if you want to disable any particular date by using [SelectableDayPredicate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectableDayPredicate) property. You can also customize the disabled dates text style and background of the `Calendar` by using the [DisabledDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarYearView.html#Syncfusion_Maui_Calendar_CalendarYearView_DisabledDatesTextStyle) and [DisabledDatesBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarYearView.html#Syncfusion_Maui_Calendar_CalendarYearView_DisabledDatesBackground) properties of [YearView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarYearView.html).
 
-*    **Leading dates** – You can hide the Leading date by using the `ShowTrailingAndLeadingDates` property in the `SfCalendar` class. You can also customize the Leading dates text style and background of the `Calendar` by using the `LeadingDatesTextStyle` and `LeadingDatesBackground` properties of `YearView`. It is not applicable for Year view.
+*    **Leading dates** – You can hide the leading dates by using the [ShowTrailingAndLeadingDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_ShowTrailingAndLeadingDates) property in the `SfCalendar` class. You can also customize the leading dates text style and background of the `Calendar` by using the [LeadingDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarYearView.html#Syncfusion_Maui_Calendar_CalendarYearView_LeadingDatesTextStyle) and [LeadingDatesBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarYearView.html#Syncfusion_Maui_Calendar_CalendarYearView_LeadingDatesBackground) properties of [YearView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarYearView.html).
 
-*    **Today date** – You can customize the today date text style and background of the `Calendar` by using the `TodayTextStyle` and `TodayBackground` properties of `YearView`.
+*    **Today date** – You can customize the today date text style and background of the `Calendar` by using the [TodayTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarYearView.html#Syncfusion_Maui_Calendar_CalendarYearView_TodayTextStyle) and [TodayBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarYearView.html#Syncfusion_Maui_Calendar_CalendarYearView_TodayBackground) properties of [YearView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarYearView.html).
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -184,8 +184,8 @@ You can customize the calendar `year`, `decade`, and `century` view by using the
 >**NOTE**
 * The Background color and text style will be applied based on the following order: selectableDayPredicate dates, disable dates, today date and leading Dates.
 
-## Year View Text format
-You can customize the month format of the `Calendar` by using the `MonthFormat` property in `YearView` class.
+## Year view text format
+You can customize the month format of the `Calendar` by using the [MonthFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarYearView.html#Syncfusion_Maui_Calendar_CalendarYearView_MonthFormat) property in [YearView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarYearView.html).
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -212,17 +212,17 @@ this.Calendar.YearView = new CalendarYearView()
 
 ## Selection cell customization
 
-You can customize the Selection cell background and textStyle in Month, Year, Decade and Century view by using the `SfCalendar`.
+You can customize the selection cell background and text style in Month, Year, Decade, and Century view by using the `SfCalendar`.
 
-*    **Selection Background** - The Selected date background can be customized by using the `SelectionBackground` property in `SfCalendar`. This property is used in `Single`, `Multiple` and in between selected date of `Range` selection.
+*    **Selection Background** - The Selected date background can be customized by using the [SelectionBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectionBackground) property in `SfCalendar`. This property is used in `Single`, `Multiple` and in between selected date of `Range` selection.
 
-*    **Selection TextStyle** - The Selected date textstyle can be customized by using the `SelectionTextStyle` property in `MonthView`. This property is used in `Single`, `Multiple` and start and end date of the selected date range of `Range` selection.
+*    **Selection TextStyle** - The Selected date textstyle can be customized by using the [SelectionTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarYearView.html#Syncfusion_Maui_Calendar_CalendarMonthView_SelectionTextStyle) property in `MonthView`. This property is used in `Single`, `Multiple` and start and end date of the selected date range of `Range` selection.
 
-*    **Start Range Selection Background** - The Start range date background can be customized by using the `StartRangeSelectionBackground` property in `SfCalendar`. This property is used in Start range selected date of `Range` selection.
+*    **Start Range Selection Background** - The Start range date background can be customized by using the [StartRangeSelectionBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_StartRangeSelectionBackground) property in `SfCalendar`. This property is used in Start range selected date of `Range` selection.
 
-*    **End Range Selection Background** -  The End range date background can be customized by using the `EndRangeSelectionBackground` property in `SfCalendar`. This property is used in End range selected date of `Range` selection.
+*    **End Range Selection Background** -  The End range date background can be customized by using the [EndRangeSelectionBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_EndRangeSelectionBackground) property in `SfCalendar`. This property is used in End range selected date of `Range` selection.
 
-*    **Range TextStyle** – The in between selected date range textstyle can be customized by using the `RangeTextStyle` property in `MonthView`. This property is used in between selected date range of `Range` selection.
+*    **Range TextStyle** – The in between selected date range textstyle can be customized by using the [RangeTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarYearView.html#Syncfusion_Maui_Calendar_CalendarMonthView_RangeTextStyle) property in `MonthView`. This property is used in between selected date range of `Range` selection.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
