@@ -31,6 +31,8 @@ public string Name { get; set; }
 {% endhighlight %}
 {% endtabs %}
 
+Refer [here](https://help.syncfusion.com/maui/dataform/data-annotations) to know more about data annotations in DataForm.
+
 #### Date range attribute
 
 Validate the date time value using the date range attribute.
@@ -44,6 +46,8 @@ public DateTime JoinDate { get; set; }
 
 {% endhighlight %}
 {% endtabs %}
+
+Refer [here](https://help.syncfusion.com/maui/dataform/data-annotations#dateformdaterange-attribute) to know more about date range attribute in DataForm
 
 ## Validation mode
 
@@ -188,7 +192,7 @@ The data form supports customizing the style of both error and valid message lab
 
 #### Customize error label text style
 
-The `error label style` can be customized by changing the [ErrorLabelTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ErrorLabelTextStyle) property of the [SfDataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html).
+The error label style can be customized by changing the [ErrorLabelTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ErrorLabelTextStyle) property of the [SfDataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html).
 
 {% tabs %}
 {% highlight XAML %}
@@ -203,7 +207,7 @@ The `error label style` can be customized by changing the [ErrorLabelTextStyle](
 {% endhighlight %}
 {% endtabs %}
 
-Also, customize the `error label style` for each editor using the [ErrorLabelTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_ErrorLabelTextStyle) property of the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html).
+Also, customize the error label style for each editor using the [ErrorLabelTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_ErrorLabelTextStyle) property of the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html).
 
 {% tabs %}
 {% highlight C# %}
@@ -232,7 +236,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 #### Customize valid message label text style
 
-The `valid message label style` can be customized by changing the [ValidMessageLabelTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ValidMessageLabelTextStyle) property of the [SfDataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html).
+The valid message label style can be customized by changing the [ValidMessageLabelTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ValidMessageLabelTextStyle) property of the [SfDataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html).
 
 {% tabs %}
 {% highlight XAML %}
@@ -247,7 +251,7 @@ The `valid message label style` can be customized by changing the [ValidMessageL
 {% endhighlight %}
 {% endtabs %}
 
-Also, customize the `valid message label style` for each editor using the [ValidMessageLabelTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_ValidMessageLabelTextStyle) property of the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html).
+Also, customize the valid message label style for each editor using the [ValidMessageLabelTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_ValidMessageLabelTextStyle) property of the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html).
 
 {% tabs %}
 {% highlight C# %}

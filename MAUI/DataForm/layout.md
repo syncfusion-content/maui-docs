@@ -47,7 +47,7 @@ this.dataForm.ColumnCount = 2;
 {% endhighlight %}
 {% endtabs %}
 
-N> Setting the [ColumnCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ColumnCount) property to SfDataForm does not arrange the data fields in a group according to the column count. To set the column count for data fields in the data form group, refer to the `loading different layout for data form group`.
+N> Setting the [ColumnCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ColumnCount) property to SfDataForm does not arrange the data fields in a group according to the column count. To set the column count for data fields in the data form group, refer to the [loading different layout for data form group](https://help.syncfusion.com/maui/dataform/grouping#changing-the-layout-for-the-group).
 
 When the label position is Top, the grid layout is shown as follows:
 
