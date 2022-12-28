@@ -10,7 +10,7 @@ documentation: ug
 # Date Restrictions in MAUI Calendar (SfCalendar)
 
 ## Minimum DateTime
-The [MinimumDateTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_MinimumDate) property will restrict the backward navigation of date selection and also you cannot able to swipe beyound the minimum date range. The dates before the minimum date time is considered as disabled date.
+The [MinimumDateTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_MinimumDate) property will restrict the backward navigation of date selection and also you cannot swipe beyond the minimum date range.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -28,7 +28,7 @@ The [MinimumDateTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calend
 ![minimum-date-month-view-in-maui-calendar](images/date-restriction/minimum-date-month-view-in-maui-calendar.png)
 
 ## Maximum DateTime
-The [MaximumDateTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_MaximumDate) property will restrict the forward navigation of date selection and also you cannot able to swipe beyound the maximum date range. The dates after the maximum date time is considered as disabled date.
+The [MaximumDateTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_MaximumDate) property will restrict the forward navigation of date selection and also you cannot swipe beyond the maximum date range.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -46,7 +46,8 @@ this.Calendar.MaximumDateTime = DateTime.Now.AddDays(5);
 ![maximum-date-month-view-in-maui-calendar](images/date-restriction/maximum-date-month-view-in-maui-calendar.png)
 
 ## Enable past dates
-To enable or disable the dates before the today date by using the [EnablePastDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_EnablePastDates) property of the `SfCalendar` and  you cannot able to select the dates before the today date while it is disabled.
+To enable or disable the dates before today's date using the [EnablePastDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_EnablePastDates)
+property of the `SfCalendar` and you cannot select the dates before the today date while it is disabled.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
