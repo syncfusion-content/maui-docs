@@ -340,7 +340,7 @@ Details
 </tr>
 <tr>
 <td>
-MaximumDate
+{{'[MaximumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDateRangeAttribute.html#Syncfusion_Maui_DataForm_DataFormDateRangeAttribute_MaximumDate)'| markdownify }}
 </td>
 <td>
 Specifies the maximum date that can be selected in the date editor.
@@ -348,7 +348,7 @@ Specifies the maximum date that can be selected in the date editor.
 </tr>
 <tr>
 <td>
-MinimumDate
+{{'[MinimumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDateRangeAttribute.html#Syncfusion_Maui_DataForm_DataFormDateRangeAttribute_MinimumDate)'| markdownify }}
 </td>
 <td>
 Specifies the minimum date that can be selected in the date editor.
@@ -356,7 +356,7 @@ Specifies the minimum date that can be selected in the date editor.
 </tr>
 <tr>
 <td>
-DisplayFormat
+{{'[DisplayFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDateRangeAttribute.html#Syncfusion_Maui_DataForm_DataFormDateRangeAttribute_DisplayFormat)'| markdownify }}
 </td>
 <td>
 Specifies the format of the {{'[MaximumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDateRangeAttribute.html#Syncfusion_Maui_DataForm_DataFormDateRangeAttribute_MaximumDate)'| markdownify }} and {{'[MinumumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDateRangeAttribute.html#Syncfusion_Maui_DataForm_DataFormDateRangeAttribute_MinimumDate)'| markdownify }} used in attribute.
