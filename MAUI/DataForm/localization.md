@@ -163,7 +163,7 @@ private void OnDataFormValidateProperty(object sender, DataFormValidatePropertyE
 
 ## Localizing data form picker editors
 
-Localize DataForm list items (Picker, AutoComplete, RadioGroup, ComoboBox) [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html?tabs=tabid-1#Syncfusion_Maui_DataForm_DataFormListItem_ItemsSource) using the ResourceType property of [Display](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute?view=net-7.0) attribute.
+Localize DataForm list items (Picker, AutoComplete, RadioGroup, ComboBox) [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html?tabs=tabid-1#Syncfusion_Maui_DataForm_DataFormListItem_ItemsSource) using the ResourceType property of [Display](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute?view=net-7.0) attribute.
 
 {% tabs %}
 {% highlight C# %}
