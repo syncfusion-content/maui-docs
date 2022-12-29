@@ -216,6 +216,8 @@ public string Name { get; set; }
 {% endhighlight %}
 {% endtabs %}
 
+![DataForm-Text-Editor](images/editors/dataform-text-editor.png)
+
 In `Text`, `MultilineText` and `Password` editors you can change the soft input keyboard type by using the [Keyboard](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormTextEditorItem.html#Syncfusion_Maui_DataForm_DataFormTextEditorItem_Keyboard) property of [DataFormTextEditorItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormTextEditorItem.html).
 
 {% tabs %}
@@ -267,6 +269,8 @@ public string Address { get; set; }
 {% endhighlight %}
 {% endtabs %}
 
+![MultilineTextEditor](images/editors/dataform-multiline-text-editor.png)
+
 ## Password editor
 
 In the password editor, the [Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry?view=net-maui-7.0) is loaded.
@@ -280,6 +284,8 @@ public string Password { get; set; }
 
 {% endhighlight %}
 {% endtabs %}
+
+![PasswordEditor](images/editors/dataform-password-editor.png)
 
 ## Date editor
 
@@ -296,6 +302,8 @@ public DateTime? EventDate { get; set; }
 
 {% endhighlight %}
 {% endtabs %}
+
+![DateEditor](images/editors/dataform-date-picker-editor.png)
 
 #### Change the format of the date editor
 
@@ -354,6 +362,7 @@ public TimeSpan? EventTime { get; set; }
 {% endhighlight %}
 {% endtabs %}
 
+![TimeEditor](images/editors/dataform-time-picker-editor.png)
 
 #### Change the format of time editor
 
@@ -390,6 +399,8 @@ public bool RegisteredMember { get; set; }
 
 {% endhighlight %}
 {% endtabs %}
+
+![CheckBoxEditor](images/editors/dataform-checkbox-editor.png)
 
 #### Changing the checkbox color
 
@@ -431,6 +442,8 @@ public bool AirplaneMode { get; set; }
 
 {% endhighlight %}
 {% endtabs %}
+
+![SwitchEditor](images/editors/dataform-switch-editor.png)
 
 #### Changing the Switch Editor thumb color
 You can change the thumb color by using the [ThumbColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormSwitchItem.html#Syncfusion_Maui_DataForm_DataFormSwitchItem_ThumbColor) property in the [DataFormSwitchItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormSwitchItem.html?tabs=tabid-1%2Ctabid-3).
@@ -538,6 +551,8 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 {% endhighlight %}
 {% endtabs %}
+
+![ComboBoxEditor](images/editors/dataform-combobox-editor.png)
 
 #### Enabling editing mode in combobox
 
@@ -776,6 +791,8 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 {% endhighlight %}
 {% endtabs %}
+
+![AutoCompleteEditor](images/editors/dataform-autocomplete-editor.png)
 
 #### Loading the complex type property values in autocomplete editor
 
