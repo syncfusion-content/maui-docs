@@ -62,7 +62,7 @@ You can find the platforms supported by each .NET MAUI control as below.
 	</td>
 	</tr>
 	<tr>
-		<td rowspan="7" valign="top">
+		<td rowspan="8" valign="top">
 			DATA VISUALIZATION<br/>
 		</td>
 		<td>
@@ -117,6 +117,23 @@ You can find the platforms supported by each .NET MAUI control as below.
 	</tr>
 	<tr>
 		<td>
+			<a href="/maui/linear-gauge/overview">Funnel Chart</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
 			<a href="/maui/linear-gauge/overview">Linear Gauge</a><br/>
 		</td>
 		<td>
@@ -134,7 +151,7 @@ You can find the platforms supported by each .NET MAUI control as below.
 	</tr>
 	<tr>
 		<td>
-			<a href="/maui/radial-gauge/overview">Radial Gauge</a><br/>
+			<a href="/maui/maps/overview">Maps</a><br/>
 		</td>
 		<td>
 		Yes<br/>
@@ -151,7 +168,24 @@ You can find the platforms supported by each .NET MAUI control as below.
 	</tr>
 	<tr>
 		<td>
-			<a href="/maui/maps/overview">Maps</a><br/>
+			<a href="/maui/pyramidchart/overview">Pyramid Chart</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="/maui/radial-gauge/overview">Radial Gauge</a><br/>
 		</td>
 		<td>
 		Yes<br/>
@@ -187,9 +221,25 @@ You can find the platforms supported by each .NET MAUI control as below.
 		</td>
 	</tr>
     <tr>
-	    <td rowspan="1" valign="top">
+	    <td rowspan="3" valign="top">
 			LAYOUT<br/>
-		</td>	
+		</td>
+	    	<td>
+			<a href="/maui/backdrop/overview ">Backdrop Page</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+	</tr>
+	<tr>
 		<td>
 			<a href="/maui/listview/overview">ListView</a><br/>
 		</td>
@@ -207,9 +257,76 @@ You can find the platforms supported by each .NET MAUI control as below.
 		</td>
 	</tr>
 	<tr>
+		<td>
+			<a href="/maui/textinputlayout/overview">Text Input Layout</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
+	<tr>
 	    <td rowspan="6" valign="top">
 			SLIDERS<br/>
-		</td>	
+		</td>		
+		<td>
+			<a href="/maui/DateTime-Range-Selector/overview">DateTime Range Selector</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="/maui/DateTime-Range-Slider/overview">DateTime Range Slider</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="/maui/DateTime-Slider/overview">DateTime Slider</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
 		<td>
 			<a href="/maui/range-selector/overview">Range Selector</a><br/>
 		</td>
@@ -261,58 +378,7 @@ You can find the platforms supported by each .NET MAUI control as below.
 		</td>
 	</tr>
 	<tr>
-		<td>
-			<a href="/maui/DateTime-Range-Selector/overview">DateTime Range Selector</a><br/>
-		</td>
-		<td>
-		Yes<br/>
-		</td>
-		<td>
-		Yes<br/>
-		</td>
-		<td>
-		Yes<br/>
-		</td>
-		<td>
-		Yes<br/>
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<a href="/maui/DateTime-Range-Slider/overview">DateTime Range Slider</a><br/>
-		</td>
-		<td>
-		Yes<br/>
-		</td>
-		<td>
-		Yes<br/>
-		</td>
-		<td>
-		Yes<br/>
-		</td>
-		<td>
-		Yes<br/>
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<a href="/maui/DateTime-Slider/overview">DateTime Slider</a><br/>
-		</td>
-		<td>
-		Yes<br/>
-		</td>
-		<td>
-		Yes<br/>
-		</td>
-		<td>
-		Yes<br/>
-		</td>
-		<td>
-		Yes<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="3" valign="top">
+	    <td rowspan="5" valign="top">
 		EDITORS<br/>
 		</td>
 		<td>
@@ -350,6 +416,40 @@ You can find the platforms supported by each .NET MAUI control as below.
 	</tr>
 	<tr>
 		<td>
+			<a href="/maui/dataform/overview">DataForm</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="/maui/Rating/overview">Rating</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
 			<a href="/maui/SignaturePad/overview">Signature Pad</a><br/>
 		</td>
 		<td>
@@ -366,9 +466,27 @@ You can find the platforms supported by each .NET MAUI control as below.
 		</td>
 	</tr>
     <tr>
-	    <td rowspan="1" valign="top">
+	    <td rowspan="2" valign="top">
 		CALENDAR<br/>
+		    </td>
+		<td>
+			<a href="/maui/calendar/overview">Calendar</a><br/>
 		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		</td>
+		</tr>
+	<tr>
 		<td>
 			<a href="/maui/scheduler/overview">Scheduler</a><br/>
 		</td>
@@ -479,6 +597,26 @@ You can find the platforms supported by each .NET MAUI control as below.
 	<tr>
 		<td>
 			<a href="/maui/effects-view/overview">Effects View</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
+	<tr>  
+	    <td rowspan="1" valign="top">
+	    VIEWER<br/>
+		</td>
+		<td>
+			<a href="/maui/pdfviewer/overview">PDF Viewer</a><br/>
 		</td>
 		<td>
 		Yes<br/>
