@@ -19,7 +19,7 @@ N> Refer to the following links to learn more about font icons:
 
 ## Leading view
 
-A label can be added as a leading icon for the input view by setting the `LeadingView` property. It can be positioned either inside or outside the container by setting the `LeadingViewPosition` property. By default, it is positioned `Outside.`
+A label can be added as a leading icon for the input view by setting the [LeadingView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_LeadingView) property. It can be positioned either inside or outside the container by setting the [LeadingViewPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_LeadingViewPosition) property. By default, it is positioned [Outside](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ViewPosition.html#Syncfusion_Maui_Core_ViewPosition_Outside).
 
 {% tabs %} 
 
@@ -53,7 +53,7 @@ inputLayout.Content = new Entry();
 
 ## Trailing  view
 
-A label can be added as a trailing icon for the input view by setting the `TrailingView` property. It can be positioned either inside or outside the container of the input view by setting the `TrailingViewPosition` property. By default, it is positioned as `Inside.`
+A label can be added as a trailing icon for the input view by setting the [TrailingView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_TrailingView) property. It can be positioned either inside or outside the container of the input view by setting the [TrailingViewPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_TrailingViewPosition) property. By default, it is positioned as [Inside](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ViewPosition.html#Syncfusion_Maui_Core_ViewPosition_Inside).
 
 {% tabs %}
 
@@ -88,7 +88,7 @@ inputLayout.Content = new Entry();
 
 ## Leading and trailing view visibility customization
 
-The `ShowLeadingView` and `ShowTrailingView` properties in the `SfTextInputLayout` can be used to control the visibility of the leading and trailing views, respectively.
+The [ShowLeadingView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ShowLeadingView) and [ShowTrailingView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ShowTrailingView) properties in the SfTextInputLayout can be used to control the visibility of the leading and trailing views, respectively.
 
 {% tabs %}
 

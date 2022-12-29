@@ -13,7 +13,7 @@ Assistive labels provide additional information about text entered in the input 
 
 ## Helper text
 
-Helper text conveys additional guidance about the input field, such as how it will be used. It can be set using the `HelperText` property.
+Helper text conveys additional guidance about the input field, such as how it will be used. It can be set using the [HelperText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_HelperText) property.
 
 {% tabs %} 
 
@@ -37,13 +37,13 @@ inputLayout.Content = new Entry();
 
 {% endtabs %}
 
-The visibility of the helper text can be disabled by setting the `ShowHelperText` property to false. By default, it is set to true.
+The visibility of the helper text can be disabled by setting the [ShowHelperText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ShowHelperText) property to false. By default, it is set to true.
 
 ![helper label](images/AssistiveLabels/HelperText.jpg)
 
 ## Error message
 
-When the text input is not accepted, an error message will display instructions to fix it. Error messages will be displayed below the input line till entering the correct text. It can be set using the `ErrorText` property, but it will be displayed only when the `HasError` property is set to `true.`
+When the text input is not accepted, an error message will display instructions to fix it. Error messages will be displayed below the input line till entering the correct text. It can be set using the [ErrorText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ErrorText) property, but it will be displayed only when the [HasError](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_HasError) property is set to `true.`
 
 {% tabs %} 
 
@@ -78,7 +78,7 @@ N> Error validations should be done in the application level.
 
 ## Character counter
 
-Character counter is used when you need to limit the characters. Character limit can be set using the `CharMaxLength` property.
+Character counter is used when you need to limit the characters. Character limit can be set using the [CharMaxLength](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_CharMaxLength) property.
 
 {% tabs %} 
 
@@ -111,7 +111,7 @@ N> When character count reaches the maximum character length, the error color wi
 
 ## Reserve spaces for assistive labels
 
-The reserved spaces for assistive labels can be removed by setting the `ReserveSpaceForAssistiveLabels` property to false.
+The reserved spaces for assistive labels can be removed by setting the [ReserveSpaceForAssistiveLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ReserveSpaceForAssistiveLabels) property to false.
 
 {% tabs %}
 

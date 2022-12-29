@@ -9,14 +9,14 @@ documentation: ug
 
 # Fixed Hint Position in .NET MAUI Text Input Layout (SfTextInputLayout)
 
-Hint label for the text input layout is always fixed at the top position. This helps users make the hint label float even when the input view is not focused. It can be enabled by setting the `IsHintAlwaysFloated` property.
+Hint label for the text input layout is always fixed at the top position. This helps users make the hint label float even when the input view is not focused. It can be enabled by setting the [IsHintAlwaysFloated](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_IsHintAlwaysFloated) property.
 
 >**NOTE**
 The default value of the `IsHintAlwaysFloated` is `false`.
 
 ## Filled
 
-The hint label position of the input view will be set always at the top for the `Filled` container type. 
+The hint label position of the input view will be set always at the top for the [Filled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ContainerType.html#Syncfusion_Maui_Core_ContainerType_Filled) container type. 
 
 {% tabs %} 
 
@@ -46,7 +46,7 @@ inputLayout.Content = new Entry();
 
 ## Outlined
 
-The hint label position of the input view will be set always at the top for the `Outlined` container type.
+The hint label position of the input view will be set always at the top for the [Outlined](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ContainerType.html#Syncfusion_Maui_Core_ContainerType_Outlined) container type.
 
 {% tabs %} 
 
@@ -77,7 +77,7 @@ inputLayout.Content = new Entry();
 
 ## None
 
-The hint label position of the input view will be set always at the top for the `None` container type.
+The hint label position of the input view will be set always at the top for the [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ContainerType.html#Syncfusion_Maui_Core_ContainerType_None) container type.
 
 {% tabs %} 
 

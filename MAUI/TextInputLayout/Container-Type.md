@@ -13,7 +13,7 @@ Containers improve the discoverability of input view by creating a contrast betw
 
 ## Filled
 
-The background of the input view will be filled with container color, and its stroke (at the bottom edge) color and thickness will be changed based on its states. It can be enabled by setting the `ContainerType` property to `Filled.`
+The background of the input view will be filled with container color, and its stroke (at the bottom edge) color and thickness will be changed based on its states. It can be enabled by setting the [ContainerType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ContainerType) property to [Filled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ContainerType.html#Syncfusion_Maui_Core_ContainerType_Filled).
 
 {% tabs %} 
 
@@ -41,7 +41,7 @@ inputLayout.Content = new Entry() { Text = "John" };
 
 ## Outlined
 
-When setting the `ContainerType` property to `Outlined,` the container will be covered with a rounded-corner border.
+When setting the [ContainerType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ContainerType) property to [Outlined](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ContainerType.html#Syncfusion_Maui_Core_ContainerType_Outlined), the container will be covered with a rounded-corner border.
 
 {% tabs %} 
 
@@ -70,7 +70,7 @@ inputLayout.Content = new Entry() { Text = "John" };
 
 ### Customize the corner radius of the outline border 
 
-When setting the `OutlineCornerRadius` property to double value, the corner radius of the container will be changed.
+When setting the [OutlineCornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_OutlineCornerRadius) property to double value, the corner radius of the container will be changed.
 
 {% tabs %}
 
@@ -135,7 +135,7 @@ inputLayout.Content = new Entry();
 
 ## None
 
-When setting the `ContainerType` property to `None,` the container will have an empty background and enough spacing.
+When setting the [ContainerType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ContainerType) property to [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ContainerType.html#Syncfusion_Maui_Core_ContainerType_None), the container will have an empty background and enough spacing.
 
 {% tabs %} 
 
