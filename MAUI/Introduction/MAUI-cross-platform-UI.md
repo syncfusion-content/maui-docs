@@ -62,7 +62,7 @@ You can find the platforms supported by each .NET MAUI control as below.
 	</td>
 	</tr>
 	<tr>
-		<td rowspan="6" valign="top">
+		<td rowspan="7" valign="top">
 			DATA VISUALIZATION<br/>
 		</td>
 		<td>
