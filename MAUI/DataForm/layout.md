@@ -182,6 +182,8 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 ![loading-images-for-label](images/layout/loading-images-for-label.png)
 
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/LabelIconSample)
+
 ## Changing order of the editors
 
 The order of the data form editors can be changed by using attributes or by handling the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event.
