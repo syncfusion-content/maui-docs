@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Views in MAUI Calendar widget | Syncfusion
-description: Learn here all about the Views feature of Syncfusion .NET MAUI Calendar (SfCalendar) widget and more.
+title: Views in MAUI Calendar control | Syncfusion
+description: Learn here all about the Views feature of Syncfusion .NET MAUI Calendar (SfCalendar) control and more.
 platform: maui
 control: Calendar
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 
 # Multiple Calendar Views in MAUI (SfCalendar)
-The `SfCalendar` widget has four Calendar views to display. It can be assigned to the widget by using the [View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_View) property. By default, the `Month` view is initially rendered. The current date will be displayed initially for all the Calendar views.
+The `SfCalendar` control has four Calendar views to display. It can be assigned to the control by using the [View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_View) property. By default, the `Month` view is initially rendered. The current date will be displayed initially for all the Calendar views.
 
 ## Month view
 The Month view displays the current month days, and usually a few days of previous and next month. By default, initially displays the current month dates and the current date is highlighted by a separate color different from the rest of the dates color in `Month` view.
