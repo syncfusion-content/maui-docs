@@ -7,7 +7,7 @@ control: SfDataForm
 documentation: ug
 ---
 
-# Validation in .NET MAUI DataForm (SfDataForm)
+# Data Validation in .NET MAUI DataForm (SfDataForm)
 
 The data form validates the data and user input to update the correct value in the underlying data object. In invalid data, the error message is shown at the bottom of the editor.
 
