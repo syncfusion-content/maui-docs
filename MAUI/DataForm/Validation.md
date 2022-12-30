@@ -126,6 +126,8 @@ bool isPropertyValid = this.dataForm.Validate(propertyNames);
 
 If the data form or property is valid, `true` will be returned. Or else `false` will be returned.
 
+![error-message](images/validation/error-message.png)
+
 ## Valid message
 
 If the values are correct, show the [ValidMessage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDisplayOptionsAttribute.html#Syncfusion_Maui_DataForm_DataFormDisplayOptionsAttribute_ValidMessage) like an error message, the valid message will also be displayed at the bottom of the editor.
@@ -234,6 +236,8 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
+![customize-error-message-label-text-style](images/validation/customize-error-message-label-text-style.png)
+
 #### Customize valid message label text style
 
 The valid message label style can be customized by changing the [ValidMessageLabelTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ValidMessageLabelTextStyle) property of the [SfDataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html).
@@ -278,4 +282,4 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![dataform-validation](images/validation/dataform-validation.png)
+![customize-valid-message-label-text-style](images/validation/customize-valid-message-label-text-style.png)
