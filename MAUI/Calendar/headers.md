@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Headers in MAUI Calendar widget | Syncfusion | Calendar
-description: Learn here all about Headers feature of Syncfusion .NET MAUI Calendar (SfCalendar) widget and more.
+title: Headers in MAUI Calendar control | Syncfusion | Calendar
+description: Learn here all about Headers feature of Syncfusion .NET MAUI Calendar (SfCalendar) control and more.
 platform: maui
 control: SfCalendar
 documentation: ug
