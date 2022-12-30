@@ -136,6 +136,8 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
+![changing-editors-order-in-the-group](images/grouping/changing-editors-order-in-the-group.png)
+
 ## Changing the editors order of the group in grid rows
 
 The order of the group's editors in a grid row can be changed within a row by using the [RowOrder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDisplayOptionsAttribute.html#Syncfusion_Maui_DataForm_DataFormDisplayOptionsAttribute_RowOrder) and [ItemsOrderInRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDisplayOptionsAttribute.html#Syncfusion_Maui_DataForm_DataFormDisplayOptionsAttribute_ItemsOrderInRow) properties and [DataFormDisplayOptions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDisplayOptionsAttribute.html)  attribute and by handling the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event.
@@ -177,6 +179,8 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 {% endhighlight %}
 {% endtabs %}
+
+![changing-the-editors-order-of-the-group-in-grid-rows](images/grouping/changing-the-editors-order-of-the-group-in-grid-rows.png)
 
 ## Changing the group name for the editors
 
@@ -251,6 +255,8 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
+![changing-the-layout-for-the-group](images/grouping/changing-the-layout-for-the-group.png)
+
 ## Loading the group in collapsed state
 
 By default, the group will be loaded in the expanded state. Collapse the group by setting the [IsExpanded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormGroupItem.html#Syncfusion_Maui_DataForm_DataFormGroupItem_IsExpanded) property of the [DataFormGroupItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormGroupItem.html) class to `false`.
@@ -274,6 +280,8 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
+![loading-the-group-in-collapsed-state](images/grouping/loading-the-group-in-collapsed-state.png)
+
 ## Restricting the group expanding and collapsing
 
 The group being expanded or collapsed can be restricted by setting the [AllowExpandCollapse](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormGroupItem.html#Syncfusion_Maui_DataForm_DataFormGroupItem_AllowExpandCollapse) to `false` in the [DataFormGroupItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormGroupItem.html).
@@ -296,6 +304,8 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 {% endhighlight %}
 {% endtabs %}
+
+![restricting-the-group-expanding-and-collapsing](images/grouping/restricting-the-group-expanding-and-collapsing.png)
 
 ## Changing the group editors visibility
 
@@ -321,6 +331,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endtabs %}
 
 Here, the `Name` group will be hidden.
+![changing-the-group-editors-visibility](images/grouping/changing-the-group-editors-visibility.png)
 
 ## Changing the group header background
 
@@ -337,7 +348,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
     {
         if (e.DataFormGroupItem.Name == "Name")
         {
-            e.DataFormGroupItem.HeaderBackground = Brush.Yellow;
+            e.DataFormGroupItem.HeaderBackground = Brush.Violet;
         }
     }
 }
@@ -375,6 +386,8 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
+![changing-the-group-header-text-style](images/grouping/changing-the-group-header-text-style.png)
+
 ## Changing the padding for group headers and editors
 
 The distance between editors and the data form’s borders or group headers can be changed by using the [ItemsPadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormGroupItem.html#Syncfusion_Maui_DataForm_DataFormGroupItem_ItemsPadding) property of the [DataFormGroupItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormGroupItem.html).
@@ -397,3 +410,5 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 {% endhighlight %}
 {% endtabs %}
+
+![changing-the-padding-for-group-headers-and-editors](images/grouping/changing-the-padding-for-group-headers-and-editors.png)
