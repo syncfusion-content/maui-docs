@@ -412,3 +412,5 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endtabs %}
 
 ![changing-the-padding-for-group-headers-and-editors](images/grouping/changing-the-padding-for-group-headers-and-editors.png)
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/DataFormGrouping)

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migrate from Xamarin to .Net MAUI DataForm (SfDataForm) | Syncfusion
+title: Migrate from Xamarin to .NET MAUI DataForm (SfDataForm) | Syncfusion
 description: Learn about Migrating from Syncfusion Xamarin.Forms DataForm to Syncfusion .NET MAUI DataForm control.
 platform: MAUI
 control: SfDataForm
@@ -754,7 +754,7 @@ The following properties of the `Xamarin SfDataForm` is moved to the [DataFormDe
 <tr>
 <td>{{'[MaximumDate](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormDateItem.html#Syncfusion_XForms_DataForm_DataFormDateItem_MaximumDate)'| markdownify }}</td>
 <td>{{'[MaximumDisplayDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDateItem.html#Syncfusion_Maui_DataForm_DataFormDateItem_MaximumDisplayDate)'| markdownify }}</td>
-<td>Gets or sets the maximun display date to restrict the visible dates of the date editor.</td>
+<td>Gets or sets the maximum display date to restrict the visible dates of the date editor.</td>
 </tr>
 
 <tr>
@@ -1031,7 +1031,7 @@ The common properties of `Xamarin SfDataForm` list items ( [ DataFormPickerEdito
 <tr>
 <td>{{'[RegisterEditor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.SfDataForm.html#Syncfusion_XForms_DataForm_SfDataForm_RegisterEditor_System_String_Syncfusion_XForms_DataForm_Editors_DataFormEditorBase_)'| markdownify }}</td>
 <td>{{'[RegisterEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_RegisterEditor_System_String_Syncfusion_Maui_DataForm_DataFormEditorType_)'| markdownify }}</td>
-<td>Mthod to register DataFormEditor.</td>
+<td>Method to register DataFormEditor.</td>
 </tr>
 
 <tr>
@@ -1060,7 +1060,7 @@ The common properties of `Xamarin SfDataForm` list items ( [ DataFormPickerEdito
 * Support for group header view customization.
 * Support for DataFormViewItem's auto height.
 * Support for programmatic scrolling to a specific editor.
-* Support for dataform themeing.
+* Support for dataform theming.
 
 ## Known issues in .NET MAUI DataForm
 
