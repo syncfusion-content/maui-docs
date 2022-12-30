@@ -43,7 +43,7 @@ inputLayout.Content = new Entry();
 ## Editor
 
 
-To enter multi-line text input, add [`Editor`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/editor), then set the `AutoSize` property to `TextChanges`.
+To enter multi-line text input, add [`Editor`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/editor), then set the [AutoSize](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.editor.autosize?view=net-maui-7.0#microsoft-maui-controls-editor-autosize) property to `TextChanges`.
 
 
 {% tabs %} 
@@ -72,7 +72,7 @@ inputLayout.Content = new Editor();
 
 ## Autocomplete
 
-To initialize the [`Autocomplete`](https://help.syncfusion.com/maui/autocomplete/overview) control and launch it in each platform, refer to the [getting started with autocomplete](https://help.syncfusion.com/maui/autocomplete/getting-started) documentation.
+To initialize the [Autocomplete](https://help.syncfusion.com/maui/autocomplete/overview) control and launch it in each platform, refer to the [getting started with autocomplete](https://help.syncfusion.com/maui/autocomplete/getting-started) documentation.
 
 {% tabs %} 
 
@@ -115,7 +115,7 @@ inputLayout.Content = autocomplete;
 
 ## Combo box
 
-To initialize the [`ComboBox`](https://help.syncfusion.com/maui/combobox/overview) control and launch it in each platform, refer to the [getting started with combo box](https://help.syncfusion.com/maui/combobox/getting-started) documentation.
+To initialize the [ComboBox](https://help.syncfusion.com/maui/combobox/overview) control and launch it in each platform, refer to the [getting started with combo box](https://help.syncfusion.com/maui/combobox/getting-started) documentation.
 
 {% tabs %} 
 

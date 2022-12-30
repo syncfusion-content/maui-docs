@@ -522,7 +522,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
                 Glyph = "K", 
                 Color = Colors.Black, 
                 FontFamily = "DataFormIcons", 
-                Size=18 
+                Size = 18 
             };
         }
     }
@@ -530,6 +530,8 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 {% endhighlight %}
 {% endtabs %}
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/LabelIconSample)
 
 ## Change the Text style 
 
