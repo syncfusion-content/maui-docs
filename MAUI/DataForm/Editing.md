@@ -103,6 +103,7 @@ To show the original value in a different format or as a different value, use th
 {% highlight C# %}
 
 [DataFormValueConverter(typeof(StringToDateTimeConverter))]
+[DataType(DataType.Date)]
 public string DateTime { get; set; }
 
 public class StringToDateTimeConverter : IValueConverter
