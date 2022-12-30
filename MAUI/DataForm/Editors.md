@@ -728,6 +728,8 @@ public class EmployeeInfo
 {% endhighlight %}
 {% endtabs %}
 
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/ComplexItemsSource)
+
 ## AutoComplete editor
 
 In the autocomplete editor, the [SfAutoComplete](https://help.syncfusion.com/maui/autocomplete) is loaded.
@@ -881,6 +883,8 @@ public class EmployeeInfo
 
 {% endhighlight %}
 {% endtabs %}
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/ComplexItemsSource)
 
 #### AutoComplete editor suggestion options
 
@@ -1084,6 +1088,8 @@ public class EmployeeInfo
 {% endhighlight %}
 {% endtabs %}
 
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/ComplexItemsSource)
+
 ## RadioGroup editor
 
 In the [RadioGroup](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/radiobutton?view=net-maui-7.0) editor, the [RadioButton](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/radiobutton?view=net-maui-7.0) control is loaded.
@@ -1140,6 +1146,8 @@ public class DataFormItemsSourceProvider : IDataFormSourceProvider
 {% endtabs %}
 
 ![RadioGroupEditor](images/editors/dataform-radio-group-editor.png)
+
+N> [View editors sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/DataFormEditors)
 
 ## Custom editor
 
@@ -1235,6 +1243,8 @@ public class NumericTextEditor : IDataFormEditor
 
 {% endhighlight %}
 {% endtabs %}
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/CustomEditorSample)
 
 If [SfDataForm.ValidationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ValidationMode) is set to [ValidationMode.Manual](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormValidationMode.html#Syncfusion_Maui_DataForm_DataFormValidationMode_Manual), then update [DataFormCustomItem.EditorValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormCustomItem.html#Syncfusion_Maui_DataForm_DataFormCustomItem_EditorValue) property once the value is committed to its respective model property. This value will be used for the [DataFormValidateFormEventArgs.NewValues](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormValidatePropertyEventArgs.html#Syncfusion_Maui_DataForm_DataFormValidatePropertyEventArgs_NewValue) on manual validation.
 

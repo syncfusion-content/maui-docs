@@ -218,7 +218,7 @@ It specifies whether the data field is read only or not.
 {% tabs %}
 {% highlight C# %}
 
-[ReadOnly(false)]
+[ReadOnly(true)]
 public string Name { get; set; }
 
 {% endhighlight %}

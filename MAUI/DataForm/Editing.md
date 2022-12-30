@@ -91,6 +91,8 @@ this.dataForm.Commit();
 
 N> On manual commit, manual validation will be called to validate the properties before the commit.
 
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/ManualCommit)
+
 ## Value converter attribute
 
 To show the original value in a different format or as a different value, use the [DataFormValueConverter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormValueConverterAttribute.html) attribute.
@@ -101,6 +103,7 @@ To show the original value in a different format or as a different value, use th
 {% highlight C# %}
 
 [DataFormValueConverter(typeof(StringToDateTimeConverter))]
+[DataType(DataType.Date)]
 public string DateTime { get; set; }
 
 public class StringToDateTimeConverter : IValueConverter

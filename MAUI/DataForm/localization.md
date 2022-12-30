@@ -36,8 +36,7 @@ public partial class App : Application
 {% endhighlight %}
 {% endtabs %}
 
-N>
-The required `resx` files with `Build Action` as `EmbeddedResource` (File name should contain culture code) into the `Resources` folder.
+N> The required `resx` files with `Build Action` as `EmbeddedResource` (File name should contain culture code) into the `Resources` folder.
 
 ## Add Localization resx file in sample level
 
@@ -73,8 +72,8 @@ The [ResourceType](https://learn.microsoft.com/en-us/dotnet/api/system.component
 {% tabs %}
 {% highlight C# %}
 
-[Display(Name = "First Name", ShortName = "Name", GroupName = "Details", Prompt = "Type first name", ResourceType = typeof(DataFormLocalization))]
-public string FirstName { get; set; }
+[Display(Name = "FirstName", GroupName = "Name", Prompt = "PromptText", ResourceType = typeof(DataFormLocalization))]
+public string FirstName {​ get; set; }​
 
 {% endhighlight %}
 {% endtabs %}
@@ -100,10 +99,10 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
         e.DataFormItem.GroupName = DataFormLocalization.GroupName;
     }
 
-    if (e.DataFormItem.LabelText == "First Name")
+    if (e.DataFormItem.LabelText == "FirstName")
     {
         e.DataFormItem.LabelText = DataFormLocalization.FirstName;
-        e.DataFormItem.PlaceholderText = DataFormLocalization.PlaceHolder;
+        e.DataFormItem.PlaceholderText = DataFormLocalization.PromptText;
     }
 }
 
@@ -121,9 +120,10 @@ The [ValidationAttribute](https://help.syncfusion.com/maui/dataform/data-annotat
 {% tabs %}
 {% highlight C# %}
 
+[Display(Name = "FirstName", GroupName = "Name", Prompt = "PromptText", ResourceType = typeof(DataFormLocalization))]
+[DataFormDisplayOptions(ValidMessage = "ValidMessage")]
 [Required(ErrorMessage = "Value should not be empty", ErrorMessageResourceName = "ErrorMessage", ErrorMessageResourceType = typeof(DataFormLocalization))]
-[StringLength(15, ErrorMessage = "Enter proper name", ErrorMessageResourceName ="ErrorMessageLength", ErrorMessageResourceType =typeof(DataFormLocalization))]
-public string Name { get; set; }
+public string FirstName { get; set; }
 
 {% endhighlight %}
 {% endtabs %}
@@ -138,14 +138,23 @@ Also, localize the data form `error message` and `valid message` in the [Validat
 [DataFormDisplayOptions(ValidMessage = "Text length is enough")]
 [Required(ErrorMessage = "Enter proper name")]
 [StringLength(15, ErrorMessage = "Enter proper name")]
-public string Name { get; set; }
+public string LastName { get; set; }
 
-this.dataForm.ValidateProperty += DataForm_ValidateProperty;
+this.dataForm.ValidateProperty += this.OnDataFormValidateProperty;
 
-private void DataForm_ValidateProperty(object sender, DataFormValidatePropertyEventArgs e)
+private void OnDataFormValidateProperty(object sender, DataFormValidatePropertyEventArgs e)
 {
-    e.ErrorMessage = DataFormLocalization.ErrorMessage;
-    e.ValidMessage = DataFormLocalization.ValidMessage;
+    if (e.PropertyName == nameof(LocalizationModel.LastName))
+    {
+        if (e.IsValid)
+        {
+            e.ValidMessage = DataFormLocalization.ValidMessage;
+        }
+        else
+        {
+            e.ErrorMessage = DataFormLocalization.ErrorMessage;
+        }
+    }
 }
 
 {% endhighlight %}
@@ -153,30 +162,26 @@ private void DataForm_ValidateProperty(object sender, DataFormValidatePropertyEv
 
 ## Localizing data form picker editors
 
-Localize DataForm list items (Picker, AutoComplete, RadioGroup, ComoboBox) [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html?tabs=tabid-1#Syncfusion_Maui_DataForm_DataFormListItem_ItemsSource) using the ResourceType property of [Display](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute?view=net-7.0) attribute.
+Localize DataForm list items (Picker, AutoComplete, RadioGroup, ComboBox) [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html?tabs=tabid-1#Syncfusion_Maui_DataForm_DataFormListItem_ItemsSource) using the ResourceType property of [Display](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.displayattribute?view=net-7.0) attribute.
 
 {% tabs %}
 {% highlight C# %}
 
 [Display(ResourceType = typeof(DataFormLocalization))]
-public string Gender { get; set; }
+public Gender Gender { get; set; }
 
 this.dataForm.RegisterEditor("Gender", DataFormEditorType.RadioGroup);
-this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
-private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+public enum Gender
 {
-    if (e.DataFormItem?.FieldName == "Gender")
-    {
-        var list = new List<string>();
-        list.Add("Male");
-        list.Add("Female");
-        list.Add("Other");
-        (e.DataFormItem as DataFormRadioGroupItem).ItemsSource = list;            
-    }
+    Male,
+    Female,
+    Other
 }
 
 {% endhighlight %}
 {% endtabs %}
 
 Here, the radio group items source gets localized based on culture from Localization Resource File (.Resx).
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/Localization)
