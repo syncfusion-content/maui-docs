@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Date Navigations in  MAUI Calendar widget | Syncfusion
-description: Learn here all about Date navigations feature of Syncfusion .NET MAUI Calendar (SfCalendar) widget and more.
+title: Date Navigations in  MAUI Calendar control | Syncfusion
+description: Learn here all about Date navigations feature of Syncfusion .NET MAUI Calendar (SfCalendar) control and more.
 platform: maui
 control: SfCalendar
 documentation: ug
@@ -10,7 +10,7 @@ documentation: ug
 # Date Navigations in MAUI Calendar (SfCalendar)
 
 ## Programmatic date navigation
-It allows you to navigate using the Dates programmatically in the calendar widget using the [DisplayDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_DisplayDate) property of [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html).
+It allows you to navigate using the Dates programmatically in the calendar control using the [DisplayDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_DisplayDate) property of [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html).
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -28,7 +28,7 @@ this.Calendar.DisplayDate = DateTime.Now.AddMonths(2).Date;
 ![display-date-in-maui-calendar](images/date-navigation/display-date-in-maui-calendar.png)
 
 ## Programmatic view navigation
-It allows you to navigate using the views programmatically in the calendar widget using the [View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_View) property of [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html).
+It allows you to navigate using the views programmatically in the calendar control using the [View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_View) property of [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html).
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
