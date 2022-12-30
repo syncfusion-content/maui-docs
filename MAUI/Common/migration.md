@@ -222,7 +222,7 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 			<a href="https://help.syncfusion.com/xamarin/pdf-viewer/getting-started">SfPdfViewer</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-		    <a href="">SfPdfViewer</a><br/>
+		    SfPdfViewer<br/>
 		</td>
 	</tr>
 	<tr>
