@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customizations in MAUI Calendar widget | Syncfusion
-description: Learn here all about Customizations features of Syncfusion .NET MAUI Calendar (SfCalendar) widget and more. 
+title: Customizations in MAUI Calendar control | Syncfusion
+description: Learn here all about Customizations features of Syncfusion .NET MAUI Calendar (SfCalendar) control and more. 
 platform: maui
 control: SfCalendar
 documentation: ug
