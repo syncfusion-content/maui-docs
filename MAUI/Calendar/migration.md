@@ -121,8 +121,8 @@ this.Content = calendar;
 <td>Represents a class which is used to hold the long press interaction event details and it occurs when the user long press inside the calendar elements.</td>
 </tr> 
 <tr>
-<td>{{'[MonthChangedEventArgs]()' | markdownify }}</td>
-<td>{{'[CalendarViewChangedEventArgs]()' | markdownify }}</td>
+<td>{{'[MonthChangedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthChangedEventArgs.html)' | markdownify }}</td>
+<td>{{'[CalendarViewChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarViewChangedEventArgs.html)' | markdownify }}</td>
 <td>Represents a class which is used to hold the view changed event details.</td>
 </tr> 
 <tr>
@@ -437,7 +437,6 @@ this.Content = calendar;
 <td>Not Supported.</td>
 </tr>
 <tr>
-
 <td>{{'[ShowLeadingAndTrailingDays](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_ShowLeadingAndTrailingDays)'| markdownify }}</td>
 <td>{{'[ShowTrailingAndLeadingDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_ShowTrailingAndLeadingDates)'| markdownify }}</td>
 <td>Gets or sets a value indicating whether to displays the leading and trailing dates in the month, decade, century views of the SfCalendar.</td>
@@ -619,17 +618,17 @@ this.Content = calendar;
 </tr>
 <tr>
 <td>{{'[DayCellFontFamily](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_DayCellFontFamily)'| markdownify }}</td>
-<td>{{'[FontFamily(From TextStyle, TodayTextStyle, TrailingLeadingDatesTextStyle, DisabledDatesTextStyle, WeekendDatesTextStyle, SpecialDatesTextStyle of MonthView)]()'| markdownify }}</td>
+<td>{{'[[FontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarTextStyle.html#Syncfusion_Maui_Calendar_CalendarTextStyle_FontFamily)(From [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_TextStyle), [TodayTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_TodayTextStyle), [TrailingLeadingDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_TrailingLeadingDatesTextStyle), [DisabledDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_DisabledDatesTextStyle), [WeekendDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_WeekendDatesTextStyle), [SpecialDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_SpecialDatesTextStyle) of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html))]'| markdownify }}</td>
 <td>Gets or sets the font family of the text style.</td>
 </tr>
 <tr>
 <td>{{'[DayFontSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_DayFontSize)'| markdownify }}</td>
-<td>{{'[FontSize(From TextStyle, TodayTextStyle, TrailingLeadingDatesTextStyle, DisabledDatesTextStyle, WeekendDatesTextStyle, SpecialDatesTextStyle of MonthView)]()'| markdownify }}</td>
+<td>{{'[[FontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarTextStyle.html#Syncfusion_Maui_Calendar_CalendarTextStyle_FontSize)(From [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_TextStyle), [TodayTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_TodayTextStyle), [TrailingLeadingDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_TrailingLeadingDatesTextStyle), [DisabledDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_DisabledDatesTextStyle), [WeekendDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_WeekendDatesTextStyle), [SpecialDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_SpecialDatesTextStyle) of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html))]'| markdownify }}</td>
 <td>Gets or sets the font size of the text style.</td>
 </tr>
 <tr>
 <td>{{'[DayFontAttributes](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_DayFontAttributes)'| markdownify }}</td>
-<td>{{'[FontAttributes(From TextStyle, TodayTextStyle, TrailingLeadingDatesTextStyle, DisabledDatesTextStyle, WeekendDatesTextStyle, SpecialDatesTextStyle of MonthView)]()'| markdownify }}</td>
+<td>{{'[[FontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarTextStyle.html#Syncfusion_Maui_Calendar_CalendarTextStyle_FontAttributes)(From [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_TextStyle), [TodayTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_TodayTextStyle), [TrailingLeadingDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_TrailingLeadingDatesTextStyle), [DisabledDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_DisabledDatesTextStyle), [WeekendDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_WeekendDatesTextStyle), [SpecialDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_SpecialDatesTextStyle) of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html))]'| markdownify }}</td>
 <td>Gets or sets the font attributes of the text style.</td>
 </tr>
 <tr>
@@ -699,19 +698,17 @@ this.Content = calendar;
 </tr>
 <tr>
 <td>{{'[HeaderFontAttributes](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_HeaderFontAttributes)'| markdownify }}</td>
-<td>{{'[FontAttributes(From TextStyle of HeaderView in SfCalendar)]()'| markdownify }}</td>
+<td>{{'[FontAttributes(From [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarHeaderView.html#Syncfusion_Maui_Calendar_CalendarHeaderView_TextStyle) of [HeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarHeaderView.html) in SfCalendar)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarTextStyle.html#Syncfusion_Maui_Calendar_CalendarTextStyle_FontAttributes)'| markdownify }}</td>
 <td>Gets or sets the font attributes of the text style.</td>
 </tr>
 <tr>
 <td>{{'[HeaderFontFamily](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_HeaderFontFamily)'| markdownify }}</td>
-<td>{{'[FontFamily(From TextStyle of HeaderView in SfCalendar)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarHeaderView.html#Syncfusion_Maui_Calendar_CalendarHeaderView_TextStyle)'| markdownify }}</td>
-<td>HeaderFontFamily</td>
-<td></td>
+<td>{{'[FontFamily(From [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarHeaderView.html#Syncfusion_Maui_Calendar_CalendarHeaderView_TextStyle) of [HeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarHeaderView.html) in SfCalendar)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarTextStyle.html#Syncfusion_Maui_Calendar_CalendarTextStyle_FontFamily)'| markdownify }}</td>
 <td>Gets or sets the font family of the text style.</td>
 </tr>
 <tr>
 <td>{{'[HeaderFontSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_HeaderFontSize)'| markdownify }}</td>
-<td>{{'[FontSize(From TextStyle of HeaderView in SfCalendar)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarHeaderView.html#Syncfusion_Maui_Calendar_CalendarHeaderView_TextStyle)'| markdownify }}</td>
+<td>{{'[FontSize(From [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarHeaderView.html#Syncfusion_Maui_Calendar_CalendarHeaderView_TextStyle) of [HeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarHeaderView.html) in SfCalendar)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarTextStyle.html#Syncfusion_Maui_Calendar_CalendarTextStyle_Font Size
 <td>Gets or sets the font size of the text style.</td>
 </tr>
 <tr>
@@ -751,7 +748,7 @@ this.Content = calendar;
 </tr>
 <tr>
 <td>{{'[SelectedDayTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_SelectedDayTextColor)'| markdownify }}</td>
-<td>{{'[TextColor(From SelectionTextStyle and RangeTextStyle)]()'| markdownify }}</td>
+<td>{{'[TextColor(From [SelectionTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_SelectionTextStyle) and [RangeTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_RangeTextStyle))](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarTextStyle.html#Syncfusion_Maui_Calendar_CalendarTextStyle_TextColor)'| markdownify }}</td>
 <td>Gets or sets the text color of the text style.</td>
 </tr>
 <tr>
@@ -776,22 +773,22 @@ this.Content = calendar;
 </tr>
 <tr>
 <td>{{'[TodaySelectionTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_TodaySelectionTextColor)'| markdownify }}</td>
-<td>{{'[TextColor(From SelectionTextStyle and RangeTextStyle)]()'| markdownify }}</td>
+<td>{{'[TextColor(From [SelectionTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_SelectionTextStyle) and [RangeTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_RangeTextStyle))](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarTextStyle.html#Syncfusion_Maui_Calendar_CalendarTextStyle_TextColor)'| markdownify }}</td>
 <td>Gets or sets the text color of the text style.</td>
 </tr>
 <tr>
 <td>{{'[TodayTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_TodayTextColor)'| markdownify }}</td>
-<td>{{'[TextColor(From TodayTextStyle)]()'| markdownify }}</td>
+<td>{{'[TextColor(From [TodayTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_TodayTextStyle))](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarTextStyle.html#Syncfusion_Maui_Calendar_CalendarTextStyle_TextColor)'| markdownify }}</td>
 <td>Gets or sets the text color of the text style.</td>
 </tr>
 <tr>
 <td>{{'[WeekDayBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_WeekDayBackgroundColor)'| markdownify }}</td>
-<td>{{'[Background, TodayBackground, TrailingLeadingDatesBackground, DisabledDatesBackground, SpecialDatesBackground]()'| markdownify }}</td>
+<td>{{'[Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_Background), [TodayBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_TodayBackground), [TrailingLeadingDatesBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_TrailingLeadingDatesBackground), [DisabledDatesBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_DisabledDatesBackground), [SpecialDatesBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_SpecialDatesBackground)'| markdownify }}</td>
 <td>Gets or sets the background for the week day month cells of the calendar month view.</td>
 </tr>
 <tr>
 <td>{{'[WeekDayTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_WeekDayTextColor)'| markdownify }}</td>
-<td>{{'[TextColor(From TextStyle, TodayTextStyle, TrailingLeadingDatesTextStyle, DisabledDatesTextStyle, SpecialDatesTextStyle)]()'| markdownify }}</td>
+<td>{{'[TextColor(From [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_TextStyle), [TodayTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_TodayTextStyle), [TrailingLeadingDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_TrailingLeadingDatesTextStyle), [DisabledDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_DisabledDatesTextStyle), [SpecialDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_SpecialDatesTextStyle))](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarTextStyle.html#Syncfusion_Maui_Calendar_CalendarTextStyle_TextColor)'| markdownify }}</td>
 <td>Gets or sets the text color of the text style.</td>
 </tr>
 <tr>
@@ -801,7 +798,7 @@ this.Content = calendar;
 </tr>
 <tr>
 <td>{{'[WeekEndTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_WeekEndTextColor)'| markdownify }}</td>
-<td>{{'[TextColor(From WeekendDatesTextStyle)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_WeekendDatesTextStyle)'| markdownify }}</td>
+<td>{{'[TextColor(From [WeekendDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_WeekendDatesTextStyle))](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarTextStyle.html#Syncfusion_Maui_Calendar_CalendarTextStyle_TextColor)'| markdownify }}</td>
 <td>Gets or sets the text color of the text style.</td>
 </tr>
 </table>
@@ -907,7 +904,7 @@ this.Content = calendar;
 </tr>
 <tr>
 <td>{{'[DateTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.YearViewSettings.html#Syncfusion_SfCalendar_XForms_YearViewSettings_DateTextColor)'| markdownify }}</td>
-<td>{{'[TextColor(From TextStyle, TodayTextStyle, LeadingDatesTextStyle, DisabledDatesTextStyle)]()'| markdownify }}</td>
+<td>{{'[TextColor(From [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarYearView.html#Syncfusion_Maui_Calendar_CalendarYearView_TextStyle), [TodayTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarYearView.html#Syncfusion_Maui_Calendar_CalendarYearView_TodayTextStyle), [LeadingDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarYearView.html#Syncfusion_Maui_Calendar_CalendarYearView_LeadingDatesTextStyle), [DisabledDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarYearView.html#Syncfusion_Maui_Calendar_CalendarYearView_DisabledDatesTextStyle))](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarTextStyle.html#Syncfusion_Maui_Calendar_CalendarTextStyle_TextColor)'| markdownify }}</td>
 <td>Gets or sets the text color of the text style.</td>
 </tr>
 <tr>
