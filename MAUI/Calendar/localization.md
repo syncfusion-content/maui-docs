@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Localization in MAUI Calendar | Syncfusion
-description: Learn here all about Localization feature of Syncfusion MAUI Calendar(SfCalendar) widget and more. 
+description: Learn here all about Localization feature of Syncfusion .NET MAUI Calendar(SfCalendar) widget and more. 
 platform: maui
 control: SfCalendar
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 By default, the calendar widget supports US English localizations. You can change to other languages by adding the `Globalization` namespace to your application.
 
-{Application culture can be changed by setting `CurrentUICulture.` in `App.xaml.cs` file.
+The application culture can be changed by setting `CurrentUICulture`. in the `App.xaml.cs` file.
 
 {% tabs %}
 {% highlight c# tabtitle="App.xaml.cs" hl_lines="2 9" %}
