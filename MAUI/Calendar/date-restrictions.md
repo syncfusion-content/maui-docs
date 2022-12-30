@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Date Restrictions in MAUI Calendar widget | Syncfusion
-description: Learn here all about Date restrictions feature of Syncfusion .NET MAUI Calendar (SfCalendar) widget and more.
+title: Date Restrictions in MAUI Calendar control | Syncfusion
+description: Learn here all about Date restrictions feature of Syncfusion .NET MAUI Calendar (SfCalendar) control and more.
 platform: maui
 control: SfCalendar
 documentation: ug
