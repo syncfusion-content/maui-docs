@@ -9,7 +9,7 @@ documentation: ug
 
 # Open a Password-Protected PDF in .NET MAUI PDF Viewer (SfPdfViewer)
 
-To open a password-protected or encrypted PDF document, you can use the `LoadDocument()` method by providing the password along with the document source. The following code example explains the same.
+To open a password-protected or encrypted PDF document, you can use the [LoadDocument](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_LoadDocument_System_IO_Stream_System_String_) method by providing the password along with the document source. The following code example explains the same.
 
 {% tabs %}
 {% highlight c# %}
@@ -22,7 +22,7 @@ In the above code snippet, `pdfDocumentStream` is the `Stream` instance read fro
 
 ## Detecting a password-protected document
 
-You can identify whether a PDF document to be opened is a password protected or not by using the `PasswordRequested` event. This event triggers when the document to be loaded in the `SfPdfViewer` requires a password. In this event handler method, you can set the `password` property from the `PasswordRequestedEventArgs` with the correct password to load the document. Refer to the following code example.
+You can identify whether a PDF document to be opened is a password protected or not by using the [PasswordRequested](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_PasswordRequested) event. This event triggers when the document to be loaded in the `SfPdfViewer` requires a password. In this event handler method, you can set the `password` property from the [PasswordRequestedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.PasswordRequestedEventArgs.html) with the correct password to load the document. Refer to the following code example.
 
 {% tabs %}
 {% highlight xaml %}
@@ -47,7 +47,7 @@ private void PdfViewer_PasswordRequested(object sender, PasswordRequestedEventAr
 
 ## Handling invalid password
 
-The `DocumentLoadFailed` event triggers when any password-protected document is loaded with a wrong or invalid password. You can handle the functionality based on your needs within this event handler method.
+The [DocumentLoadFailed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoadFailed) event triggers when any password-protected document is loaded with a wrong or invalid password. You can handle the functionality based on your needs within this event handler method.
 
 {% tabs %}
 {% highlight xaml %}
