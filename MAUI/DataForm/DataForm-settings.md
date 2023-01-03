@@ -283,6 +283,8 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
+![PlaceHolderText](images/dataformSettings/PlaceHolderText.png)
+
 #### Changing watermark color for data editor
 
 You can change the color for the watermark in the editor by using the [PlaceholderColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_PlaceholderColor) property of the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html) in the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event when [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is true.
@@ -307,6 +309,8 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 }
 {% endhighlight %}
 {% endtabs %}
+
+![PlaceHolderTextColor](images/dataformSettings/PlaceHolderTextColor.png)
 
 #### Change padding for the data editor
 
@@ -333,6 +337,8 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 }
 {% endhighlight %}
 {% endtabs %}
+
+![Padding](images/dataformSettings/Padding.png)
 
 #### Change editor layout settings
 
@@ -471,6 +477,8 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
+![HideLabelName](images/dataformSettings/HideLabelName.png)
+
 ## Change the order for editor
 
 You can change the row order of an editor by setting the [RowOrder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormViewItem.html#Syncfusion_Maui_DataForm_DataFormViewItem_RowOrder) property of [DataFormViewItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormViewItem.html) by using [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event when [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is true.
@@ -595,6 +603,8 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
+![LabelTextStyle](images/dataformSettings/LabelTextStyle.png)
+
 #### Change Editor Text Style
 
 {% tabs %}
@@ -617,6 +627,8 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 {% endhighlight %}
 {% endtabs %}
+
+![EditotTextStyle](images/dataformSettings/EditorTextStyle.png)
 
 Please refer [here](https://help.syncfusion.com/maui/dataform/validation#validation-label-appearance-customization) to learn more about changing the [ErrorLabelTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_ErrorLabelTextStyle) and [ValidMessageLabelTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_ValidMessageLabelTextStyle)
 
