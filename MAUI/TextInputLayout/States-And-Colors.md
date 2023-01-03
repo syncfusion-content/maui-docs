@@ -130,7 +130,7 @@ inputLayout.Content = new Entry();
 
 
 ## Container color
-The color of the container can be customized by setting the [ContainerBackgroundColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ContainerBackground) property. It is applicable when the [ContainerType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ContainerType) property is set to [Filled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ContainerType.html#Syncfusion_Maui_Core_ContainerType_Filled) and [Outlined](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ContainerType.html#Syncfusion_Maui_Core_ContainerType_Outlined).
+The color of the container can be customized by setting the [ContainerBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ContainerBackground) property. It is applicable when the [ContainerType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ContainerType) property is set to [Filled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ContainerType.html#Syncfusion_Maui_Core_ContainerType_Filled) and [Outlined](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ContainerType.html#Syncfusion_Maui_Core_ContainerType_Outlined).
 
 ### Filled
 
@@ -143,7 +143,7 @@ The color of the container is customized when the [ContainerType](https://help.s
 <inputLayout:SfTextInputLayout Hint="Name" 
                                Stroke="#0450C2"
                                ContainerType="Filled"
-                               ContainerBackgroundColor="#E6EEF9">
+                               ContainerBackground="#E6EEF9">
     <Entry />
 </inputLayout:SfTextInputLayout>  
  
@@ -154,7 +154,7 @@ The color of the container is customized when the [ContainerType](https://help.s
 var inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Name";
 inputLayout.Stroke = Color.FromHex("#0450C2");
-inputLayout.ContainerBackgroundColor = Color.FromHex("#E6EEF9");
+inputLayout.ContainerBackground = Color.FromHex("#E6EEF9");
 inputLayout.ContainerType = ContainerType.Filled;
 inputLayout.Content = new Entry() { Text = "John" }; 
 
@@ -175,7 +175,7 @@ The color of the container is customized when the [ContainerType](https://help.s
 <inputLayout:SfTextInputLayout Hint="Name" 
                                Stroke="#0450C2"
                                ContainerType="Outlined"
-                               ContainerBackgroundColor="#E6EEF9">`
+                               ContainerBackground="#E6EEF9">`
     <Entry  />
 </inputLayout:SfTextInputLayout>  
  
@@ -208,17 +208,16 @@ You can customize the text color of the `hint` label, `helper` label, and `error
 <inputLayout:SfTextInputLayout Hint="Name" 
                                ContainerType="Outlined"
                                HelperText="Enter your name"
-                               ErrorText="Invalid text" 
-                               ErrorColor="#B00020">
+                               ErrorText="Invalid text">
         
     <inputLayout:SfTextInputLayout.HintLabelStyle>
-        <inputLayout:LabelStyle Color="Green"/>
+        <inputLayout:LabelStyle TextColor="Green"/>
     </inputLayout:SfTextInputLayout.HintLabelStyle>
     <inputLayout:SfTextInputLayout.HelperLabelStyle>
-        <inputLayout:LabelStyle Color="Blue"/>
+        <inputLayout:LabelStyle TextColor="Blue"/>
     </inputLayout:SfTextInputLayout.HelperLabelStyle>
     <inputLayout:SfTextInputLayout.ErrorLabelStyle>
-        <inputLayout:LabelStyle Color="Maroon"/>
+        <inputLayout:LabelStyle TextColor="Maroon"/>
     </inputLayout:SfTextInputLayout.ErrorLabelStyle>
         
     <Entry Text="John" />
@@ -233,13 +232,12 @@ SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Name";
 inputLayout.ContainerType = ContainerType.Outlined;
 inputLayout.HelperText = "Enter your name";
-inputLayout.ErrorColor = Color.FromHex("#B00020");
 inputLayout.ErrorText = "Invalid text";
 inputLayout.Content = new Entry();
 
-inputLayout.HintLabelStyle = new LabelStyle() { Color = Color.Green };
-inputLayout.HelperLabelStyle = new LabelStyle() { Color = Color.Blue };
-inputLayout.ErrorLabelStyle = new LabelStyle() { Color = Color.Maroon };
+inputLayout.HintLabelStyle = new LabelStyle() { TextColor = Color.Green };
+inputLayout.HelperLabelStyle = new LabelStyle() { TextColor = Color.Blue };
+inputLayout.ErrorLabelStyle = new LabelStyle() { TextColor = Color.Maroon };
 
 {% endhighlight %}
 
