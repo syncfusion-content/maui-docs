@@ -480,7 +480,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![ChangingSwitchThumbColor](images/editors/SwitchWithThumbColor.png) 
+![ChangingSwitchThumbColor](images/editors/Switch-Thumb-Color.png)
 
 #### Changing the Switch editor on color
 
@@ -504,7 +504,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![ChangingSwitchEditorOnColor](images/editors/SwitchWithOnColor.png)
+![ChangingSwitchEditorOnColor](images/editors/Switch-OnColor.png)
 
 ## Combo Box editor
 
