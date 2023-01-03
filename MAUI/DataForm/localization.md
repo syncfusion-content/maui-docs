@@ -184,4 +184,6 @@ public enum Gender
 
 Here, the radio group items source gets localized based on culture from Localization Resource File (.Resx).
 
+![data-form-localization](images/localization/localization.jpg)
+
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/Localization)
