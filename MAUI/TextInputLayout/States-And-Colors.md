@@ -70,16 +70,16 @@ VisualState normalState = new VisualState() { Name = "Normal" };
 Setter normalStrokeSetter = new Setter() { Property = StrokeProperty, Value = Color.FromArgb("#79747E") };
 normalState.Setters.Add(normalStrokeSetter);
 
-VisualState foucsedState = new VisualState() { Name = "Focused" };
+VisualState focusedState = new VisualState() { Name = "Focused" };
 Setter focusedStrokeSetter = new Setter() { Property = StrokeProperty, Value = Color.FromArgb("#6750A4") };
-foucsedState.Setters.Add(focusedStrokeSetter);
+focusedState.Setters.Add(focusedStrokeSetter);
 
 VisualState errorState = new VisualState() { Name = "Error" };
 Setter errorStrokeSetter = new Setter() { Property = StrokeProperty, Value = Color.FromArgb("#B3261E") };
 errorState.Setters.Add(errorStrokeSetter);
 
 visualStateGroup.States.Add(normalState);
-visualStateGroup.States.Add(foucsedState);
+visualStateGroup.States.Add(focusedState);
 visualStateGroup.States.Add(errorState);
 
 visualStateGroupList.Add(visualStateGroup);
