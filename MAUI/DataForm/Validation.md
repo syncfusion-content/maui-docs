@@ -145,7 +145,7 @@ public string Password { get; set; }
 {% endhighlight %}
 {% endtabs %}
 
-![data-form-valid-message](images/validation/data-form-valid-message.png)
+![valid-message](images/validation/valid-message.png)
 
 ## Validate the data form
 
@@ -238,7 +238,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![customize-error-message-label-text-style](images/validation/customize-error-message-label-text-style.png)
+![error-message-style](images/validation/error-message-style.png)
 
 #### Customize valid message label text style
 
@@ -284,4 +284,4 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![customize-valid-message-label-text-style](images/validation/customize-valid-message-label-text-style.png)
+![valid-message-style](images/validation/valid-message-style.png)

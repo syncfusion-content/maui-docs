@@ -136,7 +136,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![changing-editors-order-in-the-group](images/grouping/changing-editors-order-in-the-group.png)
+![change-order](images/grouping/change-order.png)
 
 ## Changing the editors order of the group in grid rows
 
@@ -180,7 +180,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![changing-the-editors-order-of-the-group-in-grid-rows](images/grouping/changing-the-editors-order-of-the-group-in-grid-rows.png)
+![order-in-grid-rows](images/grouping/order-in-grid-rows.png)
 
 ## Changing the group name for the editors
 
@@ -255,7 +255,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![changing-the-layout-for-the-group](images/grouping/changing-the-layout-for-the-group.png)
+![changing-the-layout](images/grouping/changing-the-layout.png)
 
 ## Loading the group in collapsed state
 
@@ -280,7 +280,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![loading-the-group-in-collapsed-state](images/grouping/loading-the-group-in-collapsed-state.png)
+![collapsed-state](images/grouping/collapsed-state.png)
 
 ## Restricting the group expanding and collapsing
 
@@ -305,7 +305,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![restricting-the-group-expanding-and-collapsing](images/grouping/restricting-the-group-expanding-and-collapsing.png)
+![group-expanding-collapsing](images/grouping/group-expanding-collapsing.png)
 
 ## Changing the group editors visibility
 
@@ -331,7 +331,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endtabs %}
 
 Here, the `Name` group will be hidden.
-![changing-the-group-editors-visibility](images/grouping/changing-the-group-editors-visibility.png)
+![group-editors-visibility](images/grouping/group-editors-visibility.png)
 
 ## Changing the group header background
 
@@ -356,7 +356,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![changing-the-group-header-background](images/grouping/changing-the-group-header-background.png)
+![header-background](images/grouping/header-background.png)
 
 ## Changing the group header text style
 
@@ -386,7 +386,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![changing-the-group-header-text-style](images/grouping/changing-the-group-header-text-style.png)
+![header-text-style](images/grouping/header-text-style.png)
 
 ## Changing the padding for group headers and editors
 
@@ -411,6 +411,6 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![changing-the-padding-for-group-headers-and-editors](images/grouping/changing-the-padding-for-group-headers-and-editors.png)
+![padding](images/grouping/padding.png)
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/DataFormGrouping)

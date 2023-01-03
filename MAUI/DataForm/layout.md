@@ -19,11 +19,11 @@ By default, the data form arranges the fields one by one. It is applicable for b
 
 When the label position is Left, the linear layout is shown as follows:
 
-![data-form-linear-layout-label-position-left](images/layout/data-form-linear-layout-label-position-left.png)
+![linear-layout-left](images/layout/linear-layout-left.png)
 
 When the label position is Top, the linear layout is shown as follows:
 
-![data-form-linear-layout-label-position-top](images/layout/data-form-linear-layout-label-position-top.png)
+![linear-layout-top](images/layout/linear-layout-top.png)
 
 ## Grid data form layout
 
@@ -51,7 +51,7 @@ N> Setting the [ColumnCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 
 When the label position is Top, the grid layout is shown as follows:
 
-![data-form-grid-layout](images/layout/data-form-grid-layout.png)
+![grid-layout](images/layout/grid-layout.png)
 
 ## Label visibility
 
@@ -182,7 +182,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![loading-images-for-label](images/layout/loading-images-for-label.png)
+![leading-label-icon](images/layout/leading-label-icon.png)
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/LabelIconSample)
 
@@ -229,7 +229,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![changing-order-of-the-editors](images/layout/changing-order-of-the-editors.png)
+![changing-editors-order](images/layout/changing-editors-order.png)
 
 ## Change the label and editor width
 
@@ -271,7 +271,7 @@ N> The label width customization is applicable only when the [LabelPosition](htt
 
 By default, the available width is divided into 40% for the label and 60% for the editor.
 
-![change-the-label-and-editor-width](images/layout/change-the-label-and-editor-width.png)
+![label-editor-width](images/layout/label-editor-width.png)
 
 ## Spanning editors rows and columns
 
