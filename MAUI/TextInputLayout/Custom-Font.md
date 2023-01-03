@@ -58,7 +58,6 @@ You can customize the font of the `helper text` label by setting the FontFamily,
 <inputLayout:SfTextInputLayout Hint="Name"
                                ContainerType="Outlined"
                                CharMaxLength="3"
-                               ShowCharCount="True"
                                HelperText="Enter your name">
     <Entry />
     <inputLayout:SfTextInputLayout.HelperLabelStyle>
