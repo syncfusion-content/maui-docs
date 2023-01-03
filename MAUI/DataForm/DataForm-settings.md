@@ -146,7 +146,7 @@ Generated for the enum type property.
 
 You can customize the property settings or cancel the generation of [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html) by handling the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event.
 
-## Cancel the auto-generation data editor
+## Cancel the auto generate data editors
 
 You can cancel the specific data editor by handling the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event when [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is set to true or by defining display attribute to avoid the particular data field being displayed.
 
@@ -820,3 +820,5 @@ You can add custom editor manually by adding the custom view as an [EditorView](
 
 {% endhighlight %}
 {% endtabs %}
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/ExplicitDataFormItems)
