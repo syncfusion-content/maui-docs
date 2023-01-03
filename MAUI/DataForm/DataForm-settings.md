@@ -338,7 +338,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![Padding](images/dataformSettings/padding.png)
+![Padding](images/dataformSettings/change-padding.png)
 
 #### Change editor layout settings
 
