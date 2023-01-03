@@ -283,7 +283,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![PlaceHolderText](images/dataformSettings/PlaceHolderText.png)
+![PlaceHolderText](images/dataformSettings/place-holder-text.png)
 
 #### Changing watermark color for data editor
 
@@ -310,7 +310,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![PlaceHolderTextColor](images/dataformSettings/PlaceHolderTextColor.png)
+![PlaceHolderTextColor](images/dataformSettings/place-holder-text-color.png)
 
 #### Change padding for the data editor
 
@@ -338,7 +338,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![Padding](images/dataformSettings/Padding.png)
+![Padding](images/dataformSettings/padding.png)
 
 #### Change editor layout settings
 
@@ -477,7 +477,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![HideLabelName](images/dataformSettings/HideLabelName.png)
+![HideLabelName](images/dataformSettings/hide-label-name.png)
 
 ## Change the order for editor
 
@@ -541,6 +541,8 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
+![LeadingLabelIcon](images/dataformSettings/leading-label-icon.png)
+
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/LabelIconSample)
 
 ## Change the Text style 
@@ -603,7 +605,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![LabelTextStyle](images/dataformSettings/LabelTextStyle.png)
+![LabelTextStyle](images/dataformSettings/label-text-style.png)
 
 #### Change Editor Text Style
 
@@ -628,7 +630,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![EditotTextStyle](images/dataformSettings/EditorTextStyle.png)
+![EditotTextStyle](images/dataformSettings/editor-text-style.png)
 
 Please refer [here](https://help.syncfusion.com/maui/dataform/validation#validation-label-appearance-customization) to learn more about changing the [ErrorLabelTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_ErrorLabelTextStyle) and [ValidMessageLabelTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_ValidMessageLabelTextStyle)
 

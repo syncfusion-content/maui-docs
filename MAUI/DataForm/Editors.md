@@ -434,7 +434,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![ChangingCheckboxColor](images/editors/Changing-checkBoxColor.png)
+![ChangingCheckboxColor](images/editors/changing-checkBox-color.png)
 
 ## Switch Editor
 
