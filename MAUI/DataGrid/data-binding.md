@@ -122,7 +122,7 @@ The [SourceCollectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 
 ## Retain scroll position
 
-To retain the scroll position when [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ItemsSource) changes, set the `SfDataGrid.CanMaintainScrollPosition` to true. If you set `SfDataGrid.CanMaintainScrollPosition` to true then on changing `ItemsSource`, the newly added `ItemsSource` will be loaded with the previous ItemsSource's `ScrollOffset`.
+To retain the scroll position when [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ItemsSource) changes, set the [SfDataGrid.CanMaintainScrollPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CanMaintainScrollPosition) to true. If you set `SfDataGrid.CanMaintainScrollPosition` to true then on changing `ItemsSource`, the newly added `ItemsSource` will be loaded with the previous ItemsSource's `ScrollOffset`.
 
 {% highlight C# %}
 dataGrid.CanMaintainScrollPosition = true;

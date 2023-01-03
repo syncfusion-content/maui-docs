@@ -7,7 +7,7 @@ control: SfDataForm
 documentation: ug
 ---
 
-# Validation in .NET MAUI DataForm (SfDataForm)
+# Data Validation in .NET MAUI DataForm (SfDataForm)
 
 The data form validates the data and user input to update the correct value in the underlying data object. In invalid data, the error message is shown at the bottom of the editor.
 
@@ -31,6 +31,8 @@ public string Name { get; set; }
 {% endhighlight %}
 {% endtabs %}
 
+Refer [here](https://help.syncfusion.com/maui/dataform/data-annotations) to know more about data annotations in DataForm.
+
 #### Date range attribute
 
 Validate the date time value using the date range attribute.
@@ -45,9 +47,11 @@ public DateTime JoinDate { get; set; }
 {% endhighlight %}
 {% endtabs %}
 
+Refer [here](https://help.syncfusion.com/maui/dataform/data-annotations#dateformdaterange-attribute) to know more about date range attribute in DataForm.
+
 ## Validation mode
 
-The `ValidationMode` determines when the value should be validated.
+The [ValidationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ValidationMode) determines when the value should be validated.
 
 The supported validation modes are as follows:
 
@@ -76,15 +80,15 @@ this.dataForm.ValidationMode = DataFormValidationMode.LostFocus;
 
 #### LostFocus
 
-If the validation mode is `LostFocus`, the value will be validated when the editor loses its focus. By default, the `ValidationMode` is `LostFocus`.
+If the validation mode is [LostFocus](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormValidationMode.html#Syncfusion_Maui_DataForm_DataFormValidationMode_LostFocus), the value will be validated when the editor loses its focus. By default, the [ValidationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ValidationMode) is `LostFocus`.
 
 #### PropertyChanged
 
-If the validation mode is `PropertyChanged`, the value will be validated immediately when it is changed.
+If the validation mode is [PropertyChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormValidationMode.html#Syncfusion_Maui_DataForm_DataFormValidationMode_PropertyChanged), the value will be validated immediately when it is changed.
 
 #### Manual
 
-If the validation mode is `Manual`, the value should be validated manually by calling the `SfDataForm.Validate` or `SfDataForm.Validate(new List())` method.
+If the validation mode is [Manual](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormValidationMode.html#Syncfusion_Maui_DataForm_DataFormValidationMode_Manual), the value should be validated manually by calling the [SfDataForm.Validate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_Validate) or [SfDataForm.Validate(new List())](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_Validate_System_Collections_Generic_List_System_String__) method.
 
 The following code validates the value of all the properties in the data object:
 
@@ -106,7 +110,7 @@ this.dataForm.Validate(new List<string>() {"FirstName", "Age" });
 {% endhighlight %}
 {% endtabs %}
 
-Determine whether the data form or property is valid by using the `Validate` method.
+Determine whether the data form or property is valid by using the [Validate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_Validate) method.
 
 {% tabs %}
 {% highlight C# %}
@@ -122,9 +126,11 @@ bool isPropertyValid = this.dataForm.Validate(propertyNames);
 
 If the data form or property is valid, `true` will be returned. Or else `false` will be returned.
 
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/ManualValidation)
+
 ## Valid message
 
-If the values are correct, show the `ValidMessage` like an error message, the valid message will also be displayed at the bottom of the editor.
+If the values are correct, show the [ValidMessage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDisplayOptionsAttribute.html#Syncfusion_Maui_DataForm_DataFormDisplayOptionsAttribute_ValidMessage) like an error message, the valid message will also be displayed at the bottom of the editor.
 
 {% tabs %}
 {% highlight C# %}
@@ -137,11 +143,13 @@ public string Password { get; set; }
 {% endhighlight %}
 {% endtabs %}
 
+![data-form-valid-message](images/validation/data-form-valid-message.png)
+
 ## Validate the data form
 
-Get the validation details of all the editors of the data form using the `ValidateForm` event of the data form.
+Get the validation details of all the editors of the data form using the [ValidateForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ValidateForm) event of the data form.
 
-N> This event will be raised once after the manual validation call using the `SfDataForm.Validate()` method.
+N> This event will be raised once after the manual validation call using the [SfDataForm.Validate()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_Validate) method.
 
 {% tabs %}
 {% highlight C# %}
@@ -160,7 +168,7 @@ private void OnDataFormValidateForm(object sender, DataFormValidateFormEventArgs
 
 ## Validate the specific editor
 
-The `ValidateProperty` event allows you to validate specific editors in the data form. Set `Isvalid`, `ErrorMessage`, and `ValidMessage` of the `DataFormValidatePropertyEventArgs`.
+The [ValidateProperty](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ValidateProperty) event allows you to validate specific editors in the data form. Set [IsValid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormValidatePropertyEventArgs.html#Syncfusion_Maui_DataForm_DataFormValidatePropertyEventArgs_IsValid), [ErrorMessage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormValidatePropertyEventArgs.html#Syncfusion_Maui_DataForm_DataFormValidatePropertyEventArgs_ErrorMessage), and [ValidMessage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormValidatePropertyEventArgs.html#Syncfusion_Maui_DataForm_DataFormValidatePropertyEventArgs_ValidMessage) of the [DataFormValidatePropertyEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormValidatePropertyEventArgs.html).
 
 {% tabs %}
 {% highlight C# %}
@@ -186,7 +194,7 @@ The data form supports customizing the style of both error and valid message lab
 
 #### Customize error label text style
 
-The `error label style` can be customized by changing the `ErrorLabelTextStyle` property of the `SfDataForm`.
+The error label style can be customized by changing the [ErrorLabelTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ErrorLabelTextStyle) property of the [SfDataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html).
 
 {% tabs %}
 {% highlight XAML %}
@@ -201,7 +209,7 @@ The `error label style` can be customized by changing the `ErrorLabelTextStyle` 
 {% endhighlight %}
 {% endtabs %}
 
-Also, customize the `error label style` for each editor using the `ErrorLabelTextStyle` property of the `DataFormItem`.
+Also, customize the error label style for each editor using the [ErrorLabelTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_ErrorLabelTextStyle) property of the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html).
 
 {% tabs %}
 {% highlight C# %}
@@ -230,7 +238,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 #### Customize valid message label text style
 
-The `valid message label style` can be customized by changing the `ValidMessageLabelTextStyle` property of the `SfDataForm`.
+The valid message label style can be customized by changing the [ValidMessageLabelTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ValidMessageLabelTextStyle) property of the [SfDataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html).
 
 {% tabs %}
 {% highlight XAML %}
@@ -245,7 +253,7 @@ The `valid message label style` can be customized by changing the `ValidMessageL
 {% endhighlight %}
 {% endtabs %}
 
-Also, customize the `valid message label style` for each editor using the `ValidMessageLabelTextStyle` property of the `DataFormItem`.
+Also, customize the valid message label style for each editor using the [ValidMessageLabelTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_ValidMessageLabelTextStyle) property of the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html).
 
 {% tabs %}
 {% highlight C# %}
@@ -271,3 +279,5 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 {% endhighlight %}
 {% endtabs %}
+
+![dataform-validation](images/validation/dataform-validation.png)
