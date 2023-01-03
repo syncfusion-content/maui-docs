@@ -283,7 +283,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![PlaceHolderText](images/editor-settings/place-holder-text.png)
+![PlaceHolderText](images/editor-settings/placeholder-text.png)
 
 #### Changing watermark color for data editor
 
@@ -310,7 +310,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![PlaceHolderTextColor](images/editor-settings/place-holder-text-color.png)
+![PlaceHolderTextColor](images/editor-settings/placeholder-text-color.png)
 
 #### Change padding for the data editor
 
@@ -338,7 +338,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![Padding](images/editor-settings/change-padding.png)
+![Padding](images/editor-settings/changing-padding.png)
 
 #### Change editor layout settings
 
