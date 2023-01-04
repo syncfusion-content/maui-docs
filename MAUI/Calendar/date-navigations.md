@@ -25,7 +25,7 @@ this.Calendar.DisplayDate = DateTime.Now.AddMonths(2).Date;
 {% endhighlight %}
 {% endtabs %}
 
-![display-date-in-maui-calendar](images/date-navigation/display-date-in-maui-calendar.png)
+![Month view Display date in .NET MAUI Calendar.](images/date-navigation/maui-month-view-display-date.png)
 
 ## Programmatic view navigation
 It allows you to navigate using the views programmatically in the calendar control using the [View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_View) property of [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html).
@@ -43,7 +43,7 @@ this.Calendar.View = CalendarView.Month;
 {% endhighlight %}
 {% endtabs %}
 
-![monthview-in-maui-calendar](images/date-navigation/monthview-in-maui-calendar.png)
+![Month view in .NET MAUI Calendar.](images/date-navigation/maui-month-view.png)
 
 ## Allow view navigation
 It allows you to navigate using the `AllowViewNavigation` property by tapping interaction on the cell or header. By using this property, you can restrict the view navigation and allow you to select the cells in the Year, Decade, and Century views.
@@ -146,7 +146,7 @@ this.Calendar.NavigationDirection = CalendarNavigationDirection.Horizontal;
 {% endhighlight %}
 {% endtabs %}
 
-![horizontal-navigation-direction-in-maui-calendar](images/date-navigation/horizontal-navigation-direction-in-maui-calendar.png)
+![Month view Horizontal navigation direction in .NET MAUI Calendar.](images/date-navigation/maui-month-view-horizontal-direction.png)
 
 ## Show navigation arrow
 By using the `ShowNavigationArrows` property of the `Calendar`, you can navigate to the next or previous view of the calendar without swiping.  By default, the value of [ShowNavigationArrows](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarHeaderView.html#Syncfusion_Maui_Calendar_CalendarHeaderView_ShowNavigationArrows) is `true`.
@@ -169,4 +169,4 @@ this.Calendar.HeaderView.ShowNavigationArrows = false;
 {% endhighlight %}
 {% endtabs %}
 
-![show-navigation-arrows-in-maui-calendar](images/date-navigation/show-navigation-arrows-in-maui-calendar.png)
+![Month view without ShowNavigationArrows in .NET MAUI Calendar.](images/date-navigation/maui-month-view-show-navigation-arrows.png)
