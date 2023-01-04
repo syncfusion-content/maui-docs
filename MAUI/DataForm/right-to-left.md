@@ -30,4 +30,4 @@ this.dataForm.FlowDirection = FlowDirection.RightToLeft;
 {% endhighlight %}
 {% endtabs %}
 
-![right-to-left](images/right-to-left/right-to-left.png)
+![Right to left in .NET MAUI DataForm.](images/right-to-left/right-to-left.png)

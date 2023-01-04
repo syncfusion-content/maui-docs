@@ -126,7 +126,7 @@ bool isPropertyValid = this.dataForm.Validate(propertyNames);
 
 If the data form or property is valid, `true` will be returned. Or else `false` will be returned.
 
-![error-message](images/validation/error-message.png)
+![Error message in .NET MAUI DataForm.](images/validation/error-message.png)
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/ManualValidation)
 
@@ -145,7 +145,7 @@ public string Password { get; set; }
 {% endhighlight %}
 {% endtabs %}
 
-![valid-message](images/validation/valid-message.png)
+![Valid message in .NET MAUI DataForm.](images/validation/valid-message.png)
 
 ## Validate the data form
 
@@ -238,7 +238,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![error-message-style](images/validation/error-message-style.png)
+![Error message style in .NET MAUI DataForm.](images/validation/error-message-style.png)
 
 #### Customize valid message label text style
 
@@ -284,4 +284,4 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![valid-message-style](images/validation/valid-message-style.png)
+![Valid message style in .NET MAUI DataForm.](images/validation/valid-message-style.png)
