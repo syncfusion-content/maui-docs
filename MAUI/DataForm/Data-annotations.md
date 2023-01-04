@@ -372,3 +372,5 @@ public DateTime EventDate { get; set; }
 
 {% endhighlight %}
 {% endtabs %}
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/DataFormAnnotations)
