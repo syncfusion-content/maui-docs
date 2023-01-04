@@ -126,6 +126,8 @@ bool isPropertyValid = this.dataForm.Validate(propertyNames);
 
 If the data form or property is valid, `true` will be returned. Or else `false` will be returned.
 
+![error-message](images/validation/error-message.png)
+
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/ManualValidation)
 
 ## Valid message
@@ -143,7 +145,7 @@ public string Password { get; set; }
 {% endhighlight %}
 {% endtabs %}
 
-![data-form-valid-message](images/validation/data-form-valid-message.png)
+![valid-message](images/validation/valid-message.png)
 
 ## Validate the data form
 
@@ -236,6 +238,8 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
+![error-message-style](images/validation/error-message-style.png)
+
 #### Customize valid message label text style
 
 The valid message label style can be customized by changing the [ValidMessageLabelTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ValidMessageLabelTextStyle) property of the [SfDataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html).
@@ -280,4 +284,4 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![dataform-validation](images/validation/dataform-validation.png)
+![valid-message-style](images/validation/valid-message-style.png)

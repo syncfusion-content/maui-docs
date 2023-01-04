@@ -19,11 +19,11 @@ By default, the data form arranges the fields one by one. It is applicable for b
 
 When the label position is Left, the linear layout is shown as follows:
 
-![data-form-linear-layout-label-position-left](images/layout/data-form-linear-layout-label-position-left.png)
+![linear-layout-left](images/layout/linear-layout-left.png)
 
 When the label position is Top, the linear layout is shown as follows:
 
-![data-form-linear-layout-label-position-top](images/layout/data-form-linear-layout-label-position-top.png)
+![linear-layout-top](images/layout/linear-layout-top.png)
 
 ## Grid data form layout
 
@@ -51,7 +51,7 @@ N> Setting the [ColumnCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 
 When the label position is Top, the grid layout is shown as follows:
 
-![data-form-grid-layout](images/layout/data-form-grid-layout.png)
+![grid-layout](images/layout/grid-layout.png)
 
 ## Label visibility
 
@@ -88,6 +88,8 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 {% endhighlight %}
 {% endtabs %}
+
+![label-visibility](images/layout/label-visibility.png)
 
 ## Label position
 
@@ -180,7 +182,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![loading-images-for-label](images/layout/loading-images-for-label.png)
+![leading-label-icon](images/layout/leading-label-icon.png)
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/LabelIconSample)
 
@@ -227,6 +229,8 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
+![changing-editors-order](images/layout/changing-editors-order.png)
+
 ## Change the label and editor width
 
 The label and editor width are set proportionally by using the [LabelWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDefaultLayoutSettings.html#Syncfusion_Maui_DataForm_DataFormDefaultLayoutSettings_LabelWidth) and [EditorWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDefaultLayoutSettings.html#Syncfusion_Maui_DataForm_DataFormDefaultLayoutSettings_EditorWidth) properties of the [DefaultLayoutSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDefaultLayoutSettings.html) class.
@@ -267,6 +271,8 @@ N> The label width customization is applicable only when the [LabelPosition](htt
 
 By default, the available width is divided into 40% for the label and 60% for the editor.
 
+![label-editor-width](images/layout/label-editor-width.png)
+
 ## Spanning editors rows and columns
 
 The row height and column width are increased by defining the [DataFormDisplayOptions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDisplayOptionsAttribute.html) attribute or by handling the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event.
@@ -281,7 +287,7 @@ The row height is increased by using the [RowSpan](https://help.syncfusion.com/c
 {% highlight C# %}
 
 [DataFormDisplayOptions(RowSpan = 2)]
-public string Name { get; set; }
+public string FirstName { get; set; }
 
 {% endhighlight %}
 {% endtabs %}
@@ -299,7 +305,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {
     if (e.DataFormItem != null)
     {
-        if (e.DataFormItem.FieldName == "Name")
+        if (e.DataFormItem.FieldName == "FirstName")
         {
             e.DataFormItem.RowSpan = 2;
         }
@@ -309,7 +315,9 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-Here, `Name` field’s row height is increased.
+Here, `FirstName` field’s row height is increased.
+
+![row-span](images/layout/row-span.png)
 
 ### Column span
 
@@ -326,7 +334,7 @@ this.dataForm.ColumnCount = 2;
 {% highlight C# %}
 
 [DataFormDisplayOptions(ColumnSpan = 2)]
-public string Name { get; set; }
+public string FirstName { get; set; }
 
 {% endhighlight %}
 {% endtabs %}
@@ -344,7 +352,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {
     if (e.DataFormItem != null)
     {
-        if (e.DataFormItem.FieldName == "Name")
+        if (e.DataFormItem.FieldName == "FirstName")
         {
             e.DataFormItem.ColumnSpan = 2;
         }
@@ -353,6 +361,8 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 {% endhighlight %}
 {% endtabs %}
+
+![column-span](images/layout/column-span.png)
 
 ## Change the editor visibility
 
