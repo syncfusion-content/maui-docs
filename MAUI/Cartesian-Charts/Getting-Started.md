@@ -239,12 +239,18 @@ SfCartesianChart chart = new SfCartesianChart();
 
 // Initializing primary axis
 CategoryAxis primaryAxis = new CategoryAxis();
-primaryAxis.Title.Text = "Name";
+primaryAxis.Title = new ChartAxisTitle
+{
+    Text = "Name",
+};
 chart.XAxes.Add(primaryAxis);
 
 //Initializing secondary Axis
 NumericalAxis secondaryAxis = new NumericalAxis();
-secondaryAxis.Title.Text = "Height(in cm)";
+secondaryAxis.Title = new ChartAxisTitle
+{
+    Text= "Height(in cm)",
+};
 chart.YAxes.Add(secondaryAxis);
 
 //Initialize the two series for SfChart
@@ -488,12 +494,18 @@ namespace ChartGettingStarted
 
             // Initializing primary axis
             CategoryAxis primaryAxis = new CategoryAxis();
-            primaryAxis.Title.Text = "Name";
+            primaryAxis.Title = new ChartAxisTitle
+            {
+                Text = "Name",
+            };
             chart.XAxes.Add(primaryAxis);
 
             //Initializing secondary Axis
             NumericalAxis secondaryAxis = new NumericalAxis();
-            secondaryAxis.Title.Text = "Height(in cm)";
+            secondaryAxis.Title = new ChartAxisTitle
+            {
+                Text= "Height(in cm)",
+            };
             chart.YAxes.Add(secondaryAxis);
 
             //Initialize the two series for SfChart
