@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customizations in MAUI Calendar control | Syncfusion
+title: Customizations in .NET MAUI Calendar control | Syncfusion
 description: Learn here all about Customizations features of Syncfusion .NET MAUI Calendar (SfCalendar) control and more. 
 platform: maui
 control: SfCalendar
 documentation: ug
 ---
 
-# Customizations in MAUI Calendar (SfCalendar)
-Each cell of the Month, Year, Decade and Century can be customized in MAUI [Calendar](https://www.syncfusion.com/maui-controls/maui-calendar) (SfCalendar).
+# Customizations in .NET MAUI Calendar (SfCalendar)
+Each cell of the Month, Year, Decade and Century can be customized in .NET MAUI [Calendar](https://www.syncfusion.com/maui-controls/maui-calendar) (SfCalendar).
     
 ## Month cell customization
 You can customize the calendar month view cell by using the `MonthView` property of `SfCalendar`.
@@ -32,7 +32,8 @@ You can customize the calendar month view cell by using the `MonthView` property
                         View="Month"
                         Background="PaleGreen">
             <Calendar:SfCalendar.MonthView>
-                <Calendar:CalendarMonthView TodayBackground="Pink" DisabledDatesBackground="Grey" SpecialDatesBackground="Purple" WeekendDatesBackground="Red"/>
+                <Calendar:CalendarMonthView
+                TodayBackground="Pink" DisabledDatesBackground="Grey" SpecialDatesBackground="#FFEFD2" WeekendDatesBackground="#E2F9F3"/>
             </Calendar:SfCalendar.MonthView>
 </calendar:SfCalendar>
 
@@ -70,24 +71,24 @@ You can customize the calendar month view cell by using the `MonthView` property
             DayOfWeek.Saturday,
         };
 
-        this.Calendar.Background = Colors.PaleGreen;
+        this.calendar.Background = Colors.PaleGreen.WithAlpha(0.3f);
         this.Calendar.MonthView.TextStyle = textStyle;
-        this.Calendar.MonthView.TodayBackground = Colors.Pink;
+        this.calendar.MonthView.TodayBackground = Colors.Pink;
         this.Calendar.MonthView.TodayTextStyle = textStyle;
         this.Calendar.ShowTrailingAndLeadingDates = true;
-        this.Calendar.MonthView.TrailingLeadingDatesBackground = Colors.Green;
+        this.Calendar.MonthView.TrailingLeadingDatesBackground = Colors.Red.WithAlpha(0.3f);
         this.Calendar.MonthView.TrailingLeadingDatesTextStyle = textStyle;
-        this.Calendar.MonthView.DisabledDatesBackground = Colors.Grey;
+        this.calendar.MonthView.DisabledDatesBackground = Colors.Grey.WithAlpha(0.3f);
         this.Calendar.MonthView.DisabledDatesTextStyle = textStyle;
-        this.Calendar.MonthView.SpecialDatesBackground = Colors.Purple;
-        this.Calendar.MonthView.SpecialDatesTextStyle = textStyle;
-        this.Calendar.MonthView.WeekendDatesBackground = Colors.Red;
-        this.Calendar.MonthView.WeekendDatesTextStyle = textStyle;
+        this.calendar.MonthView.SpecialDatesBackground = Color.FromArgb("#FFEFD2");
+        this.calendar.MonthView.SpecialDatesTextStyle = textStyle;
+        this.calendar.MonthView.WeekendDatesBackground = Color.FromArgb("#E2F9F3");
+        this.calendar.MonthView.WeekendDatesTextStyle = textStyle;
 
 {% endhighlight %}
 {% endtabs %}
 
-![monthview-customization-in-maui-calendar](images/customization/monthview-customization-in-maui-calendar.png)
+![Month view Customization in .NET MAUI Calendar.](images/customization/maui-month-view-customization.png)
 
 >**NOTE**
 * The Background color and text style will be applied based on the following order: selectableDayPredicate dates, special dates, disable dates, today date, trailingLeading dates, and weekend dates.
@@ -120,7 +121,7 @@ this.Calendar.MonthView.HeaderView = new CalendarMonthHeaderView()
 {% endhighlight %}
 {% endtabs %}
 
-![view-header-text-format-in-maui-calendar](images/customization/view-header-text-format-in-maui-calendar.png)
+![Month view View Header Text format in .NET MAUI Calendar.](images/customization/maui-month-view-view-header-text-format.png)
 
 ## Year cell customization
 You can customize the calendar `year`, `decade`, and `century` view by using the `YearView` property of `SfCalendar`.
@@ -137,10 +138,10 @@ You can customize the calendar `year`, `decade`, and `century` view by using the
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
 <calendar:SfCalendar  x:Name="Calendar" 
-                        View="Month"
+                        View="Decade"
                         Background="PaleGreen">
             <Calendar:SfCalendar.YearView>
-                <Calendar:CalendarYearView TodayBackground="Pink" DisabledDatesBackground="Grey" LeadingDatesBackground="Green" />
+                <Calendar:CalendarYearView TodayBackground="Pink" DisabledDatesBackground="Grey" LeadingDatesBackground="Red" />
             </Calendar:SfCalendar.YearView>
 </calendar:SfCalendar>
 
@@ -157,29 +158,20 @@ You can customize the calendar `year`, `decade`, and `century` view by using the
         this.Calendar.MinimumDate = DateTime.Now.AddYears(-1);
         this.Calendar.MaximumDate = DateTime.Now.AddYears(8);
         this.Calendar.EnablePastDates = false;
-        this.Calendar.SelectableDayPredicate = (date) =>
-        {
-            if (date.Year == DateTime.Now.AddYears(3).Year)
-            {
-                return false;
-            }
-            return true;
-        };
-
-        this.Calendar.Background = Colors.PaleGreen;
-        this.Calendar.YearView.TextStyle = textStyle;
-        this.Calendar.YearView.TodayBackground = Colors.Pink;
-        this.Calendar.YearView.TodayTextStyle = textStyle;
-        this.Calendar.ShowTrailingAndLeadingDates = true;
-        this.Calendar.YearView.LeadingDatesBackground = Colors.Green;
-        this.Calendar.YearView.LeadingDatesTextStyle = textStyle;
-        this.Calendar.YearView.DisabledDatesBackground = Colors.Grey;
-        this.Calendar.YearView.DisabledDatesTextStyle = textStyle;
+        this.calendar.Background = Colors.PaleGreen.WithAlpha(0.3f);
+        this.calendar.YearView.TextStyle = textStyle;
+        this.calendar.YearView.TodayBackground = Colors.Pink;
+        this.calendar.YearView.TodayTextStyle = textStyle;
+        this.calendar.YearView.DisabledDatesBackground = Colors.Grey.WithAlpha(0.3f);
+        this.calendar.YearView.DisabledDatesTextStyle = textStyle;
+        this.calendar.ShowTrailingAndLeadingDates = true;
+        this.calendar.YearView.LeadingDatesBackground = Colors.Red.WithAlpha(0.3f);
+        this.calendar.YearView.LeadingDatesTextStyle = textStyle;
 
 {% endhighlight %}
 {% endtabs %}
 
-![decadeview-customization-in-maui-calendar](images/customization/decadeview-customization-in-maui-calendar.png)
+![Decade view Customization in .NET MAUI Calendar.](images/customization/maui-decade-view-customization.png)
 
 >**NOTE**
 * The Background color and text style will be applied based on the following order: selectableDayPredicate dates, disable dates, today date and leading Dates.
@@ -208,7 +200,7 @@ this.Calendar.YearView = new CalendarYearView()
 {% endhighlight %}
 {% endtabs %}
 
-![yearview-text-format-in-maui-calendar](images/customization/yearview-text-format-in-maui-calendar.png)
+![Year view month format in .NET MAUI Calendar.](images/customization/maui-year-view-month-format.png)
 
 ## Selection cell customization
 
@@ -242,7 +234,7 @@ You can customize the selection cell background and text style in Month, Year, D
             FontSize = 12,
         };
 
-        this.Calendar.SelectedDateRange = new CalendarDateRange(DateTime.Now.AddDays(5).Date, DateTime.Now.AddDays(20).Date);
+        this.Calendar.SelectedDateRange = new CalendarDateRange(DateTime.Now.AddDays(6).Date, DateTime.Now.AddDays(17).Date);
         this.Calendar.View = CalendarView.Month;
         this.Calendar.SelectionMode = CalendarSelectionMode.Range;
         this.Calendar.StartRangeSelectionBackground = Colors.Purple;
@@ -254,4 +246,4 @@ You can customize the selection cell background and text style in Month, Year, D
 {% endhighlight %}
 {% endtabs %}
 
-![monthview-selection-customization-in-maui-calendar](images/customization/monthview-selection-customization-in-maui-calendar.png)
+![Month view Range Selection in .NET MAUI Calendar.](images/customization/maui-month-view-range-selection.png)
