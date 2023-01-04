@@ -238,7 +238,7 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 			<a href="https://help.syncfusion.com/xamarin/calendar/getting-started">SfCalendar</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/maui/calendar/migration">SfCalendar<br/>
+			<a href="https://help.syncfusion.com/maui/calendar/migration">SfCalendar</a><br/>
 		</td>
 	</tr>
 	<tr>
@@ -246,7 +246,7 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 			<a href="https://help.syncfusion.com/xamarin/dataform/getting-started">SfDataForm</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/maui/dataform/migration">SfDataForm<br/>
+			<a href="https://help.syncfusion.com/maui/dataform/migration">SfDataForm</a><br/>
 		</td>
 	</tr>
 	<tr>
