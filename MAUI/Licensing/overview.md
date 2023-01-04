@@ -33,6 +33,14 @@ This application was built using a trial version of Syncfusion Essential Studio.
 
 </div>
 
+## Registering Syncfusion license keys in Build server
+
+| Source of Syncfusion assemblies | Details | License Key needs to be registered? | Where to get license key from |
+| ------------- | ------------- | ------------- | ------------- |
+| **NuGet package** | If the Syncfusion assemblies used in Build Server were from the Syncfusion NuGet packages, then no need to install any Syncfusion installer. We can directly use the required Syncfusion NuGet packages at [nuget.org](http://nuget.org/). <br><br>But, if using NuGet packages from the [nuget.org](https://www.nuget.org/packages?q=syncfusion), then we should register the Syncfusion license key in the application.| Yes | Use any developer license to [generate](https://help.syncfusion.com/common/essential-studio/licensing/how-to-generate) keys for Build Environments as well. |
+| **Trial installer** | If the Syncfusion assemblies used in Build Server were from Trial Installer, we should register the license key in the application for the corresponding version and platforms, to avoid trial license warning. | Yes | Use any developer trial license to [generate](https://help.syncfusion.com/maui/licensing/how-to-generate) keys for Build Environments as well. |
+| **Licensed installer** |If the Syncfusion assemblies used in Build Server were from Licensed Installer, then there is no need to register the license keys.<r><br>You can [download](https://help.syncfusion.com/maui/installation/web-installer/how-to-download#download-the-license-version) and [install](https://help.syncfusion.com/maui/installation/web-installer/how-to-install) the licensed version of our installer. | No | Not applicable |
+
 ## See Also
 
 * [How to Generate Syncfusion .NET MAUI License Key?](https://help.syncfusion.com/maui/licensing/how-to-generate)
