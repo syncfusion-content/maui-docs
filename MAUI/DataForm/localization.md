@@ -44,22 +44,22 @@ Follow these steps to localize the `DataForm` based on the [CurrentUICulture](ht
 
 1. Right-click on the `Resources` folder in the application.
 
-    ![resources-folder](images/localization/resources-folder.png)
+    ![Resources folder in .NET MAUI DataForm.](images/localization/resources-folder.png)
 
 2. Click `Add` and then `NewItem`.
 3. In the `Add New Item` wizard, select the `Resource File` option and name the filename as `DataFormLocalization.<culture name>.resx.` For example, give the name `DataFormLocalization.fr.resx` for French culture.
 
-    ![adding-resource-file](images/localization/adding-resource-file.png)
+    ![Adding resource file in .NET MAUI DataForm.](images/localization/adding-resource-file.png)
 
 4. The culture name indicates the name of the language and country.
 
 5. Now, click `Add` to add the resource file in the **Resources** folder.
 
-    ![added-resource-file](images/localization/added-resource-file.png)
+    ![Added resource file in .NET MAUI DataForm.](images/localization/added-resource-file.png)
 
 6. Add the Name or Value pair in the Resource Designer of the `DataFormLocalization.fr.resx` file and change its corresponding value to the corresponding culture.
  
-    ![name-value-pair](images/localization/name-value-pair.png)
+    ![Name value pair in .NET MAUI DataForm.](images/localization/name-value-pair.png)
 
 ## Localizing data form display values
 
@@ -184,6 +184,6 @@ public enum Gender
 
 Here, the radio group items source gets localized based on culture from Localization Resource File (.Resx).
 
-![data-form-localization](images/localization/localization.jpg)
+![Localization in .NET MAUI DataForm.](images/localization/localization.jpg)
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/Localization)
