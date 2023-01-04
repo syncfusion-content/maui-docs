@@ -19,11 +19,11 @@ By default, the data form arranges the fields one by one. It is applicable for b
 
 When the label position is Left, the linear layout is shown as follows:
 
-![Linear layout left in .NET MAUI DataForm.](images/layout/linear-layout-left.png)
+![Linear layout left label position in .NET MAUI DataForm.](images/layout/linear-layout-left.png)
 
 When the label position is Top, the linear layout is shown as follows:
 
-![Linear layout top in .NET MAUI DataForm.](images/layout/linear-layout-top.png)
+![Linear layout top label position in .NET MAUI DataForm.](images/layout/linear-layout-top.png)
 
 ## Grid data form layout
 

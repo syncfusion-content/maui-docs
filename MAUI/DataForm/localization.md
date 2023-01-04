@@ -59,7 +59,7 @@ Follow these steps to localize the `DataForm` based on the [CurrentUICulture](ht
 
 6. Add the Name or Value pair in the Resource Designer of the `DataFormLocalization.fr.resx` file and change its corresponding value to the corresponding culture.
  
-    ![Name value pair in .NET MAUI DataForm.](images/localization/name-value-pair.png)
+    ![Localization name value pair in .NET MAUI DataForm.](images/localization/name-value-pair.png)
 
 ## Localizing data form display values
 
