@@ -15,7 +15,9 @@ It allows you to navigate using the Dates programmatically in the calendar contr
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-{% include_relative code-snippet/month-view.xaml %}
+<calendar:SfCalendar  x:Name="Calendar" 
+                        View="Month">
+</calendar:SfCalendar>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -33,7 +35,9 @@ It allows you to navigate using the views programmatically in the calendar contr
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-{% include_relative code-snippet/month-view.xaml %}
+<calendar:SfCalendar  x:Name="Calendar" 
+                        View="Month">
+</calendar:SfCalendar>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
