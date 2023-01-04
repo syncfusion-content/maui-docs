@@ -283,7 +283,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![place-holder-text-in .NET MAUI data form](images/editor-settings/placeholder-text.png)
+![Placeholder text for .NET MAUI data form](images/editor-settings/placeholder-text.png)
 
 #### Changing watermark color for data editor
 
@@ -310,7 +310,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![place-holder-text-color-in .NET MAUI data form](images/editor-settings/placeholder-text-color.png)
+![Placeholder text color for .NET MAUI data form](images/editor-settings/placeholder-text-color.png)
 
 #### Change padding for the data editor
 
@@ -338,7 +338,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![padding-in .NET MAUI data form](images/editor-settings/changing-padding.png)
+![Padding for .NET MAUI data form](images/editor-settings/changing-padding.png)
 
 #### Change editor layout settings
 
@@ -477,7 +477,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![hide-label-name-in .NET MAUI data form](images/editor-settings/hide-label-name.png)
+![Hide label name for .NET MAUI data form](images/editor-settings/hide-label-name.png)
 
 ## Change the order for editor
 
@@ -541,7 +541,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![leading-label-icon-in .NET MAUI data form](images/editor-settings/leading-label-icon.png)
+![Leading label icon for .NET MAUI data form](images/layout/leading-label-icon.png)
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/LabelIconSample)
 
@@ -605,7 +605,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![label-text-style-in .NET MAUI data form](images/editor-settings/label-text-style.png)
+![Label text style for .NET MAUI data form](images/editor-settings/label-text-style.png)
 
 #### Change Editor Text Style
 
@@ -630,7 +630,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![editor-text-style-in .NET MAUI data form ](images/editor-settings/editor-text-style.png)
+![Editor text style for .NET MAUI data form ](images/editor-settings/editor-text-style.png)
 
 Please refer [here](https://help.syncfusion.com/maui/dataform/validation#validation-label-appearance-customization) to learn more about changing the [ErrorLabelTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_ErrorLabelTextStyle) and [ValidMessageLabelTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_ValidMessageLabelTextStyle)
 

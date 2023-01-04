@@ -216,7 +216,7 @@ public string Name { get; set; }
 {% endhighlight %}
 {% endtabs %}
 
-![dataForm-text-editor-in .NET MAUI data form](images/editors/dataform-text-editor.png)
+![Text editor for .NET MAUI DataForm](images/editors/dataform-text-editor.png)
 
 In `Text`, `MultilineText` and `Password` editors you can change the soft input keyboard type by using the [Keyboard](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormTextEditorItem.html#Syncfusion_Maui_DataForm_DataFormTextEditorItem_Keyboard) property of [DataFormTextEditorItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormTextEditorItem.html) in the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event when [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is true.
 
@@ -273,7 +273,7 @@ public string Address { get; set; }
 {% endhighlight %}
 {% endtabs %}
 
-![multiline-text-editor-in .NET MAUI data form](images/editors/dataform-multiline-text-editor.png)
+![Multiline Text editor for .NET MAUI DataForm](images/editors/dataform-multiline-text-editor.png)
 
 ## Password editor
 
@@ -289,7 +289,7 @@ public string Password { get; set; }
 {% endhighlight %}
 {% endtabs %}
 
-![password-editor-in .NET MAUI data form](images/editors/dataform-password-editor.png)
+![Password editor for .NET MAUI DataForm](images/editors/dataform-password-editor.png)
 
 ## Date editor
 
@@ -307,7 +307,7 @@ public DateTime? EventDate { get; set; }
 {% endhighlight %}
 {% endtabs %}
 
-![date-editor-in .NET MAUI data form](images/editors/dataform-date-picker-editor.png)
+![DateEditor for .NET MAUI DataForm](images/editors/dataform-date-picker-editor.png)
 
 #### Change the format of the date editor
 
@@ -370,7 +370,7 @@ public TimeSpan? EventTime { get; set; }
 {% endhighlight %}
 {% endtabs %}
 
-![time-editor-in .NET MAUI data form](images/editors/dataform-time-picker-editor.png)
+![Time editor for .NET MAUI DataForm](images/editors/dataform-time-picker-editor.png)
 
 #### Change the format of time editor
 
@@ -410,7 +410,7 @@ public bool RegisteredMember { get; set; }
 {% endhighlight %}
 {% endtabs %}
 
-![check-box-editor-in .NET MAUI data form](images/editors/dataform-checkbox-editor.png)
+![Checkbox editor for .NET MAUI DataForm](images/editors/dataform-checkbox-editor.png)
 
 #### Changing the checkbox color
 
@@ -434,7 +434,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![changing-checkbox-color-in .NET MAUI data form](images/editors/changing-checkbox-color.png)
+![Changing checkbox color for .NET MAUI data form](images/editors/changing-checkbox-color.png)
 
 ## Switch Editor
 
@@ -457,7 +457,7 @@ public bool AirplaneMode { get; set; }
 {% endhighlight %}
 {% endtabs %}
 
-![switch-editor-in .NET MAUI data form](images/editors/dataform-switch-editor.png)
+![Switch editor for .NET MAUI data form](images/editors/dataform-switch-editor.png)
 
 #### Changing the Switch Editor thumb color
 You can change the thumb color by using the [ThumbColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormSwitchItem.html#Syncfusion_Maui_DataForm_DataFormSwitchItem_ThumbColor) property of the [DataFormSwitchItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormSwitchItem.html?tabs=tabid-1%2Ctabid-3) in the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event when [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is true.
@@ -572,7 +572,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![comboBox-editor-in .NET MAUI data form](images/editors/dataform-combobox-editor.png)
+![Combobox editor for .NET MAUI data form](images/editors/dataform-combobox-editor.png)
 
 #### Enabling editing mode in combobox
 
@@ -819,7 +819,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![auto-complete-editor-in .NET MAUI data form](images/editors/dataform-autocomplete-editor.png)
+![Autocomplete editor for .NET MAUI DataForm](images/editors/dataform-autocomplete-editor.png)
 
 #### Loading the complex type property values in autocomplete editor
 
@@ -1147,7 +1147,7 @@ public class DataFormItemsSourceProvider : IDataFormSourceProvider
 {% endhighlight %}
 {% endtabs %}
 
-![radio-group-editor-in .NET MAUI data form](images/editors/dataform-radio-group-editor.png)
+![Radiogroup editor for .NET MAUI DataForm](images/editors/dataform-radio-group-editor.png)
 
 N> [View editors sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/DataFormEditors)
 
