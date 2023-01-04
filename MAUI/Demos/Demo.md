@@ -10,7 +10,7 @@ documentation: ug
 
 # How to get and install the .NET MAUI Sample Browser App
 
-You can install .NET MAUI Sample Browser app in Andorid, iOS, MacOS and Windows Devices
+You can install .NET MAUI Sample Browser app in Android, iOS, MacOS and Windows Devices
 
 ### .NET MAUI Demos for Android
 You can install .NET MAUI Demos for Android in Google play. Or you can scan below QR
