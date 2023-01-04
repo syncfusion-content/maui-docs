@@ -434,7 +434,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![Changing checkbox color for .NET MAUI data form](images/editors/changing-checkbox-color.png)
+![Changing checkbox color for .NET MAUI DataForm](images/editors/changing-checkbox-color.png)
 
 ## Switch Editor
 
@@ -457,7 +457,7 @@ public bool AirplaneMode { get; set; }
 {% endhighlight %}
 {% endtabs %}
 
-![Switch editor for .NET MAUI data form](images/editors/dataform-switch-editor.png)
+![Switch editor for .NET MAUI DataForm](images/editors/dataform-switch-editor.png)
 
 #### Changing the Switch Editor thumb color
 You can change the thumb color by using the [ThumbColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormSwitchItem.html#Syncfusion_Maui_DataForm_DataFormSwitchItem_ThumbColor) property of the [DataFormSwitchItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormSwitchItem.html?tabs=tabid-1%2Ctabid-3) in the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event when [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is true.
@@ -572,7 +572,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![Combobox editor for .NET MAUI data form](images/editors/dataform-combobox-editor.png)
+![Combobox editor for .NET MAUI DataForm](images/editors/dataform-combobox-editor.png)
 
 #### Enabling editing mode in combobox
 
