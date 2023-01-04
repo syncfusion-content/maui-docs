@@ -128,4 +128,4 @@ public class ViewModel
 
 {% endtabs %}
 
-![Gradient support in MAUI Chart](Appearance_images/MAUI_funnel_chart_gradient.png)
+![Gradient support in MAUI Chart](Appearance_images/MAUI_funnel_chart.png)
