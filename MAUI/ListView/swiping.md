@@ -452,7 +452,7 @@ The `SwipeReset` event provides the following properties in their arguments:
  * [DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ResetSwipeEventArgs.html#Syncfusion_Maui_ListView_ResetSwipeEventArgs_DataItem): Defines the underlying data associated with the swiped item as its arguments. 
  * [OffSet](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ResetSwipeEventArgs.html#Syncfusion_Maui_ListView_ResetSwipeEventArgs_OffSet): Defines the current swipe offset of the item being swiped.
 
-## How to 
+## How to
 
 ### Reset swipe view automatically
 

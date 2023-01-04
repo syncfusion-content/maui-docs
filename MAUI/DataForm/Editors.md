@@ -23,7 +23,7 @@ The data form supports the following built-in editors to edit the data:
 Text
 </td>
 <td>
-DataFormTextItem
+{{'[DataFormTextItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormTextItem.html)'| markdownify }}
 </td>
 <td>
 The string type property and any other type apart from the below specified cases.
@@ -37,7 +37,7 @@ The string type property and any other type apart from the below specified cases
 MultilineText
 </td>
 <td>
-DataFormMultilineTextItem
+{{'[DataFormMultilineTextItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormMultilineItem.html)'| markdownify }}
 </td>
 <td>
 The string type property with [DataType(DataType.MultilineText)] attribute.
@@ -51,7 +51,7 @@ The string type property with [DataType(DataType.MultilineText)] attribute.
 Password
 </td>
 <td>
-DataFormPasswordItem
+{{'[DataFormPasswordItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormPasswordItem.html)'| markdownify }}
 </td>
 <td>
 The string type property with 
@@ -66,7 +66,7 @@ The string type property with
 Date
 </td>
 <td>
-DataFormDateItem
+{{'[DataFormDateItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDateItem.html)'| markdownify }}
 </td>
 <td>
 The DateTime, DateOnly, and DateTimeOffset type property or the properties with [DataType(DataType.Date)] or [DataType(DataType.DateTime)] attributes.
@@ -80,7 +80,7 @@ The DateTime, DateOnly, and DateTimeOffset type property or the properties with 
 Time
 </td>
 <td>
-DataFormTimeItem
+{{'[DataFormTimeItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormTimeItem.html?tabs=tabid-1)'| markdownify }}
 </td>
 <td>
 The TimeSpan and TimeOnly type property or the properties with [DataType(DataType.Time)] attribute.
@@ -94,7 +94,7 @@ The TimeSpan and TimeOnly type property or the properties with [DataType(DataTyp
 Checkbox
 </td>
 <td>
-DataFormCheckBoxItem
+{{'[DataFormCheckBoxItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormCheckBoxItem.html?tabs=tabid-1)'| markdownify }}
 </td>
 <td>
 Bool type property.
@@ -108,7 +108,7 @@ Bool type property.
 Switch
 </td>
 <td>
-DataFormSwitchItem
+{{'[DataFormSwitchItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormSwitchItem.html?tabs=tabid-1%2Ctabid-3)'| markdownify }}
 </td>
 <td>
 Bool type property.
@@ -122,7 +122,7 @@ Bool type property.
 Picker
 </td>
 <td>
-DataFormPickerItem
+{{'[DataFormPickerItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormPickerItem.html)'| markdownify }}
 </td>
 <td>
 Enum and List type property. 
@@ -136,7 +136,7 @@ Enum and List type property.
 ComboBox
 </td>
 <td>
-DataFormComboBoxItem
+{{'[DataFormComboBoxItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormComboBoxItem.html?tabs=tabid-1%2Ctabid-3)'| markdownify }}
 </td>
 <td>
 Enum and List type property.
@@ -150,7 +150,7 @@ Enum and List type property.
 AutoComplete
 </td>
 <td>
-DataFormAutoCompleteItem
+{{'[DataFormAutoCompleteItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormAutoCompleteItem.html?tabs=tabid-1)'| markdownify }}
 </td>
 <td>
 Enum and List type property.
@@ -164,7 +164,7 @@ Enum and List type property.
 RadioGroup
 </td>
 <td>
-DataFormRadioGroupItem
+{{'[DataFormRadioGroupItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormRadioGroupItem.html)'| markdownify }}
 </td>
 <td>
 Enum and List type property.
@@ -191,7 +191,7 @@ Here, the `MultilineText` editor will be loaded for the string type instead of t
 
 ## Change the editor for a property
 
-To change the editor for any property, use the `RegisterEditor` method and specify the property name and editor.
+To change the editor for any property, use the [RegisterEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_RegisterEditor_System_String_Syncfusion_Maui_DataForm_DataFormEditorType_) method and specify the property name and editor.
 
 {% tabs %}
 {% highlight c# %}
@@ -216,7 +216,11 @@ public string Name { get; set; }
 {% endhighlight %}
 {% endtabs %}
 
-In `Text`, `MultilineText` and `Password` editors you can change the soft input keyboard type by using the `Keyboard` property of `DataFormTextEditorItem`.
+![DataForm-Text-Editor](images/editors/dataform-text-editor.png)
+
+In `Text`, `MultilineText` and `Password` editors you can change the soft input keyboard type by using the [Keyboard](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormTextEditorItem.html#Syncfusion_Maui_DataForm_DataFormTextEditorItem_Keyboard) property of [DataFormTextEditorItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormTextEditorItem.html) in the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event when [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is true.
+
+N> If [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is false, you can set the property directly by using the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html). Please refer [here](https://help.syncfusion.com/maui/dataform/dataform-settings#explicitly-create-data-editors) to learn more about creating data editors explicitly.
 
 {% tabs %}
 {% highlight C# %}
@@ -234,7 +238,9 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-In `Text`, `MultilineText`, and `Password` editors you can set the maximum allowed length of input by using the `MaxLength` property of `DataFormTextEditorItem`.
+In `Text`, `MultilineText`, and `Password` editors you can set the maximum allowed length of input by using the [MaxLength](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormTextEditorItem.html#Syncfusion_Maui_DataForm_DataFormTextEditorItem_MaxLength) property of [DataFormTextEditorItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormTextEditorItem.html?tabs=tabid-1) in the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event when [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is true.
+
+N> If [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is false, you can set the property directly by using the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html). Please refer [here](https://help.syncfusion.com/maui/dataform/dataform-settings#explicitly-create-data-editors) to learn more about creating data editors explicitly.
 
 {% tabs %}
 {% highlight C# %}
@@ -252,7 +258,6 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-
 ## Multiline Text editor
 
 In the `MultilineText` editor, the [Editor](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/editor?view=net-maui-7.0) is loaded.
@@ -268,6 +273,8 @@ public string Address { get; set; }
 {% endhighlight %}
 {% endtabs %}
 
+![MultilineTextEditor](images/editors/dataform-multiline-text-editor.png)
+
 ## Password editor
 
 In the password editor, the [Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry?view=net-maui-7.0) is loaded.
@@ -281,6 +288,8 @@ public string Password { get; set; }
 
 {% endhighlight %}
 {% endtabs %}
+
+![PasswordEditor](images/editors/dataform-password-editor.png)
 
 ## Date editor
 
@@ -298,9 +307,13 @@ public DateTime? EventDate { get; set; }
 {% endhighlight %}
 {% endtabs %}
 
+![DateEditor](images/editors/dataform-date-picker-editor.png)
+
 #### Change the format of the date editor
 
-In the [DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/datepicker?view=net-maui-7.0), the short date will be shown by default. You can change the applied format by setting the `Format` property in `DataFormDateItem`.
+In the [DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/datepicker?view=net-maui-7.0), the short date will be shown by default. You can change the applied format by setting the [Format](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDateItem.html#Syncfusion_Maui_DataForm_DataFormDateItem_Format) property of [DataFormDateItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDateItem.html?tabs=tabid-1%2Ctabid-6%2Ctabid-11) in the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event when [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is true.
+
+N> If [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is false, you can set the property directly by using the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html). Please refer [here](https://help.syncfusion.com/maui/dataform/dataform-settings#explicitly-create-data-editors) to learn more about creating data editors explicitly.
 
 {% tabs %}
 {% highlight C# %}
@@ -320,7 +333,9 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 #### Change the minimum and maximum date in date editor
 
-You can customize the maximum and minimum allowable dates in the [DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/datepicker?view=net-maui-7.0) by setting the `MaximumDate` and `MinimumDate` in the `DataFormDateItem` respectively.
+You can customize the maximum and minimum allowable dates in the [DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/datepicker?view=net-maui-7.0) by setting the [MaximumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDateItem.html#Syncfusion_Maui_DataForm_DataFormDateItem_MaximumDisplayDate) and [MinimumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDateItem.html#Syncfusion_Maui_DataForm_DataFormDateItem_MinimumDisplayDate) of the [DataFormDateItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDateItem.html) respectively in the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event when [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is true.
+
+N> If [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is false, you can set the property directly by using the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html). Please refer [here](https://help.syncfusion.com/maui/dataform/dataform-settings#explicitly-create-data-editors) to learn more about creating data editors explicitly.
 
 {% tabs %}
 {% highlight C# %}
@@ -339,7 +354,6 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-
 ## Time editor
 
 In the time editor, the [TimePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/timepicker?view=net-maui-7.0&tabs=windows) will be loaded.
@@ -356,10 +370,13 @@ public TimeSpan? EventTime { get; set; }
 {% endhighlight %}
 {% endtabs %}
 
+![TimeEditor](images/editors/dataform-time-picker-editor.png)
 
 #### Change the format of time editor
 
-In the time editor, a short time will be shown by default. You can change the applied format by setting the `Format` property in `DataFormTimeItem`.
+In the time editor, a short time will be shown by default. You can change the applied format by setting the [Format](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormTimeItem.html#Syncfusion_Maui_DataForm_DataFormTimeItem_Format) property of [DataFormTimeItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormTimeItem.html) in the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event when [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is true.
+
+N> If [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is false, you can set the property directly by using the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html). Please refer [here](https://help.syncfusion.com/maui/dataform/dataform-settings#explicitly-create-data-editors) to learn more about creating data editors explicitly.
 
 {% tabs %}
 {% highlight C# %}
@@ -379,7 +396,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 ## CheckBox editor
 
-In the CheckBox editor, the `CheckBox` control is loaded. By default, for bool data type property, the CheckBox editor will be loaded in data form.
+In the CheckBox editor, the [CheckBox](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/checkbox?view=net-maui-7.0) control is loaded. By default, for bool data type property, the CheckBox editor will be loaded in data form.
 
 {% tabs %}
 {% highlight C# %}
@@ -393,9 +410,13 @@ public bool RegisteredMember { get; set; }
 {% endhighlight %}
 {% endtabs %}
 
+![CheckBoxEditor](images/editors/dataform-checkbox-editor.png)
+
 #### Changing the checkbox color
 
-By default, the checkbox color is blue. You can change the checkbox color by using `Color` property in `DataFormCheckBoxItem`.
+By default, the checkbox color is blue. You can change the checkbox color by using [Color](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormCheckBoxItem.html#Syncfusion_Maui_DataForm_DataFormCheckBoxItem_Color) property of [DataFormCheckBoxItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormCheckBoxItem.html?tabs=tabid-1) in the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event when [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is true.
+
+N> If [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is false, you can set the property directly by using the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html). Please refer [here](https://help.syncfusion.com/maui/dataform/dataform-settings#explicitly-create-data-editors) to learn more about creating data editors explicitly.
 
 {% tabs %}
 {% highlight C# %}
@@ -413,11 +434,13 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
+![ChangingCheckboxColor](images/editors/changing-checkbox-color.png)
+
 ## Switch Editor
 
 In switch editor, [Switch](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/switch?view=net-maui-7.0) is loaded, and DataForm Switch editor supports bool data type property.
 
-To add a switch editor in DataForm, register the editor as `DataFormEditorType.Switch` for the required property using the `RegisterEditor` method.
+To add a switch editor in DataForm, register the editor as [DataFormEditorType.Switch](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormEditorType.html#Syncfusion_Maui_DataForm_DataFormEditorType_Switch) for the required property using the [RegisterEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_RegisterEditor_System_String_Syncfusion_Maui_DataForm_DataFormEditorType_) method.
 
 {% tabs %}
 {% highlight C# %}
@@ -434,8 +457,12 @@ public bool AirplaneMode { get; set; }
 {% endhighlight %}
 {% endtabs %}
 
+![SwitchEditor](images/editors/dataform-switch-editor.png)
+
 #### Changing the Switch Editor thumb color
-You can change the thumb color by using the `ThumbColor` property in the `DataFormSwitchItem`.
+You can change the thumb color by using the [ThumbColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormSwitchItem.html#Syncfusion_Maui_DataForm_DataFormSwitchItem_ThumbColor) property of the [DataFormSwitchItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormSwitchItem.html?tabs=tabid-1%2Ctabid-3) in the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event when [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is true.
+
+N> If [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is false, you can set the property directly by using the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html). Please refer [here](https://help.syncfusion.com/maui/dataform/dataform-settings#explicitly-create-data-editors) to learn more about creating data editors explicitly.
 
 {% tabs %}
 {% highlight C# %}
@@ -455,7 +482,9 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 #### Changing the Switch editor on color
 
-You can change the switch on color by using the `OnColor` property in the `DataFormSwitchItem`.
+You can change the switch on color by using the [OnColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormSwitchItem.html#Syncfusion_Maui_DataForm_DataFormSwitchItem_OnColor) property of the [DataFormSwitchItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormSwitchItem.html?tabs=tabid-1%2Ctabid-3) in the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event when [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is true.
+
+N> If [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is false, you can set the property directly by using the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html). Please refer [here](https://help.syncfusion.com/maui/dataform/dataform-settings#explicitly-create-data-editors) to learn more about creating data editors explicitly.
 
 {% tabs %}
 {% highlight C# %}
@@ -479,7 +508,7 @@ In the Combo Box editor, the [SfComboBox](https://help.syncfusion.com/maui/combo
 
 #### Changing the ItemsSource of combo box
 
-By default, the `ItemsSource` for SfComboBox is auto-generated for enum types properties.
+By default, the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html#Syncfusion_Maui_DataForm_DataFormListItem_ItemsSource) for ComboBox is auto-generated for enum types properties.
 
 **Using IDataFormSourceProvider**
 
@@ -516,7 +545,9 @@ this.dataForm.RegisterEditor("Country", DataFormEditorType.ComboBox);
 
 **Using GenerateDataFormItem event**
 
-You can also set the `ItemsSource` for combo box editor by using the `GenerateDataFormItem` event.
+You can also set the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html#Syncfusion_Maui_DataForm_DataFormListItem_ItemsSource) for combo box editor by using the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event when [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is true.
+
+N> If [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is false, you can set the property directly by using the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html). Please refer [here](https://help.syncfusion.com/maui/dataform/dataform-settings#explicitly-create-data-editors) to learn more about creating data editors explicitly.
 
 {% tabs %}
 {% highlight C# %}
@@ -541,11 +572,13 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
+![ComboBoxEditor](images/editors/dataform-combobox-editor.png)
+
 #### Enabling editing mode in combobox
 
 By default, in the combobox editor, you can select a needed item by scrolling the whole list of items.
 
-You can filter a particular item in the list using the `IsEditable` property. This property enables you to type a list of items in the combo box editor.
+You can filter a particular item in the list using the [IsEditable](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormComboBoxItem.html#Syncfusion_Maui_DataForm_DataFormComboBoxItem_IsEditable) property. This property enables you to type a list of items in the combo box editor.
 
 {% tabs %}
 {% highlight C# %}
@@ -565,7 +598,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 #### ComboBox editor filtering options
 
-The string comparison for filtering suggestions can be changed using the `TextSearchMode` property of `DataFormComboBoxItem`. The default text search strategy is “StartsWith,” and it is case insensitive. The available text search modes are;
+The string comparison for filtering suggestions can be changed using the [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormComboBoxItem.html#Syncfusion_Maui_DataForm_DataFormComboBoxItem_TextSearchMode) property of [DataFormComboBoxItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormComboBoxItem.html?tabs=tabid-1%2Ctabid-3). The default text search strategy is “StartsWith,” and it is case insensitive. The available text search modes are;
 
 * StartsWith
 * Contains
@@ -612,7 +645,9 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 #### Changing the height of Combobox drop down
 
-By default, the combo box drop down list item height is `400d`. You can change the size for the drop down list item size by using the `MaxDropDownHeight` property in the `DataFormComboBoxItem`.
+By default, the combo box drop down list item height is `400d`. You can change the size for the drop down list item size by using the [MaxDropDownHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormComboBoxItem.html#Syncfusion_Maui_DataForm_DataFormComboBoxItem_MaxDropDownHeight) property of the [DataFormComboBoxItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormComboBoxItem.html?tabs=tabid-1%2Ctabid-3) in the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event when [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is true.
+
+N> If [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is false, you can set the property directly by using the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html). Please refer [here](https://help.syncfusion.com/maui/dataform/dataform-settings#explicitly-create-data-editors) to learn more about creating data editors explicitly.
 
 {% tabs %}
 {% highlight C# %}
@@ -632,7 +667,9 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 #### Loading the complex type property values in combo box editor
 
-You can display the complex type property values in the combo box editor by using the `DisplayMemberPath` and `SelectedValuePath` properties of `DataFormComboBoxItem`. You need to use the `GenerateDataFormItem `event to set the `DisplayMemberPath` and `SelectedValuePath` property value of `DataFormComboBoxItem`.
+You can display the complex type property values in the combo box editor by using the [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html#Syncfusion_Maui_DataForm_DataFormListItem_DisplayMemberPath) and [SelectedValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html?tabs=tabid-1#Syncfusion_Maui_DataForm_DataFormListItem_SelectedValuePath) properties of [DataFormComboBoxItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormComboBoxItem.html). You need to use the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event to set the [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html#Syncfusion_Maui_DataForm_DataFormListItem_DisplayMemberPath) and [SelectedValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html?tabs=tabid-1#Syncfusion_Maui_DataForm_DataFormListItem_SelectedValuePath) property value of [DataFormComboBoxItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormComboBoxItem.html?tabs=tabid-1%2Ctabid-3) event when [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is true.
+
+N> If [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is false, you can set the property directly by using the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html). Please refer [here](https://help.syncfusion.com/maui/dataform/dataform-settings#explicitly-create-data-editors) to learn more about creating data editors explicitly.
 
 N> Class cannot be directly set as data type for combo box editor in this complex type scenario.
 
@@ -693,13 +730,15 @@ public class EmployeeInfo
 {% endhighlight %}
 {% endtabs %}
 
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/ComplexItemsSource)
+
 ## AutoComplete editor
 
 In the autocomplete editor, the [SfAutoComplete](https://help.syncfusion.com/maui/autocomplete) is loaded.
 
 #### Changing the ItemsSource of autocomplete editor
 
-By default, the `ItemsSource` for `AutoComplete` editor is auto-generated for enum types. For other types, you can set the `ItemsSource` using `IDataFormSourceProvider`.
+By default, the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html#Syncfusion_Maui_DataForm_DataFormListItem_ItemsSource) for `AutoComplete` editor is auto-generated for enum types. For other types, you can set the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html#Syncfusion_Maui_DataForm_DataFormListItem_ItemsSource) using [IDataFormSourceProvider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.IDataFormSourceProvider.html).
 
 **Using IDataFormSourceProvider**
 
@@ -743,10 +782,11 @@ this.dataForm.RegisterEditor("Country", DataFormEditorType.AutoComplete);
 {% endhighlight %}
 {% endtabs %}
 
-
 **Using GenerateDataFormItem event**
 
-You can also set `ItemsSource` for autocomplete editor by using the `ItemsSource` property in the `DataFormAutoCompleteItem`.
+You can also set [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html#Syncfusion_Maui_DataForm_DataFormListItem_ItemsSource) for autocomplete editor by using the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html#Syncfusion_Maui_DataForm_DataFormListItem_ItemsSource) property of the [DataFormAutoCompleteItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormAutoCompleteItem.html?tabs=tabid-1) in the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event when [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is true.
+
+N> If [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is false, you can set the property directly by using the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html). Please refer [here](https://help.syncfusion.com/maui/dataform/dataform-settings#explicitly-create-data-editors) to learn more about creating data editors explicitly.
 
 {% tabs %}
 {% highlight C# %}
@@ -779,9 +819,13 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
+![AutoCompleteEditor](images/editors/dataform-autocomplete-editor.png)
+
 #### Loading the complex type property values in autocomplete editor
 
-You can display the complex type property values in autocomplete editor by using the `DisplyMemberPath` and `SelectedValuePath` properties of `DataFormAutoCompleteItem`. You need to use the `GenerateDataFormItem` event to set the `DisplayMemberPath` and `SelectedValuePath` property values of `DataFormAutoCompleteItem`.
+You can display the complex type property values in autocomplete editor by using the [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html#Syncfusion_Maui_DataForm_DataFormListItem_DisplayMemberPath) and [SelectedValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html?tabs=tabid-1#Syncfusion_Maui_DataForm_DataFormListItem_SelectedValuePath) properties of [DataFormAutoCompleteItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormAutoCompleteItem.html). You need to use the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event to set the [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html#Syncfusion_Maui_DataForm_DataFormListItem_DisplayMemberPath) and [SelectedValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html?tabs=tabid-1#Syncfusion_Maui_DataForm_DataFormListItem_SelectedValuePath) property values of [DataFormAutoCompleteItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormAutoCompleteItem.html?tabs=tabid-1) when [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is true.
+
+N> If [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is false, you can set the property directly by using the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html). Please refer [here](https://help.syncfusion.com/maui/dataform/dataform-settings#explicitly-create-data-editors) to learn more about creating data editors explicitly.
 
 N> Class cannot be directly set as data type for autocomplete editor in this complex type scenario.
 
@@ -842,9 +886,11 @@ public class EmployeeInfo
 {% endhighlight %}
 {% endtabs %}
 
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/ComplexItemsSource)
+
 #### AutoComplete editor suggestion options
 
-The string comparison for filtering suggestions can be changed using the `TextSearchMode` property of `DataFormAutoCompleteItem`. The default text search strategy is “StartsWith,” and it is case insensitive. The available text search modes are;
+The string comparison for filtering suggestions can be changed using the [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormAutoCompleteItem.html#Syncfusion_Maui_DataForm_DataFormAutoCompleteItem_TextSearchMode) property of [DataFormAutoCompleteItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormAutoCompleteItem.html?tabs=tabid-1). The default text search strategy is “StartsWith,” and it is case insensitive. The available text search modes are;
 
 * StartsWith
 * Contains
@@ -891,7 +937,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 #### Changing the maximum height of autocomplete drop down 
 
-By default the autocomplete drop down list item height is `400d`. You can change the size for the drop down list item size by using the `MaxDropDownHeight` property in the `DataFormAutoCompleteItem`.
+By default the autocomplete drop down list item height is `400d`. You can change the size for the drop down list item size by using the [MaxDropDownHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormAutoCompleteItem.html#Syncfusion_Maui_DataForm_DataFormAutoCompleteItem_MaxDropDownHeight) property in the [DataFormAutoCompleteItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormAutoCompleteItem.html?tabs=tabid-1).
 
 {% tabs %}
 {% highlight C# %}
@@ -915,7 +961,7 @@ In the picker editor, the [Picker](https://learn.microsoft.com/en-us/dotnet/maui
 
 #### Changing the ItemsSource of Picker
 
-By default, the `ItemsSource` for the picker is auto-generated for the enum type property. For other types, you can set the `ItemsSource` by using `IDataFormSourceProvider`.
+By default, the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html#Syncfusion_Maui_DataForm_DataFormListItem_ItemsSource) for the picker is auto-generated for the enum type property. For other types, you can set the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html#Syncfusion_Maui_DataForm_DataFormListItem_ItemsSource) by using [IDataFormSourceProvider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.IDataFormSourceProvider.html).
 
 **Using IDataFormSourceProvider**
 
@@ -952,7 +998,9 @@ this.dataForm.RegisterEditor("Country", DataFormEditorType.Picker);
 
 #### Using event
 
-You can also set `ItemsSource` for the picker editor by using the `ItemsSource` property in the `DataFormPickerItem`.
+You can also set [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html#Syncfusion_Maui_DataForm_DataFormListItem_ItemsSource) for the picker editor by using the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html#Syncfusion_Maui_DataForm_DataFormListItem_ItemsSource) property of the [DataFormPickerItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormPickerItem.html) in the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event when [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is true.
+
+N> If [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is false, you can set the property directly by using the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html). Please refer [here](https://help.syncfusion.com/maui/dataform/dataform-settings#explicitly-create-data-editors) to learn more about creating data editors explicitly.
 
 {% tabs %}
 {% highlight C# %}
@@ -979,7 +1027,9 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 #### Loading the complex type property values in picker
 
-You can display the complex type property values in the picker editor by using the `DisplayMemberPath` and `SelectedValuePath` properties of `DataFormPickerItem`. You need to use the `GenerateDataFormItem` event to set `DisplayMemberPath` and `SelectedValuePath` property values for complex type properties.
+You can display the complex type property values in the picker editor by using the [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html#Syncfusion_Maui_DataForm_DataFormListItem_DisplayMemberPath) and [SelectedValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html?tabs=tabid-1#Syncfusion_Maui_DataForm_DataFormListItem_SelectedValuePath) properties of [DataFormPickerItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormPickerItem.html). You need to use the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event to set [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html#Syncfusion_Maui_DataForm_DataFormListItem_DisplayMemberPath) and [SelectedValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html?tabs=tabid-1#Syncfusion_Maui_DataForm_DataFormListItem_SelectedValuePath) property values when [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is true.
+
+N> If [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is false, you can set the property directly by using the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html). Please refer [here](https://help.syncfusion.com/maui/dataform/dataform-settings#explicitly-create-data-editors) to learn more about creating data editors explicitly.
 
 N> Class cannot be directly set as data type for picker editor in this complex type scenario.
 
@@ -1040,15 +1090,17 @@ public class EmployeeInfo
 {% endhighlight %}
 {% endtabs %}
 
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/ComplexItemsSource)
+
 ## RadioGroup editor
 
 In the [RadioGroup](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/radiobutton?view=net-maui-7.0) editor, the [RadioButton](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/radiobutton?view=net-maui-7.0) control is loaded.
 
-The `ItemsSource` for the radio group editor is generated for the `enum` data type property. In order to add the `RadioButton` editor in the DataForm, you need to register the editor as `DataFormEditorType.RadioGroup` for the required property by using the `RegisterEditor` method.
+The [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html#Syncfusion_Maui_DataForm_DataFormListItem_ItemsSource) for the radio group editor is generated for the `enum` data type property. In order to add the `RadioButton` editor in the DataForm, you need to register the editor as [DataFormEditorType.RadioGroup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormEditorType.html#Syncfusion_Maui_DataForm_DataFormEditorType_RadioGroup) for the required property by using the [RegisterEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_RegisterEditor_System_String_Syncfusion_Maui_DataForm_DataFormEditorType_) method.
 
 **Support for enum data type**
 
-For the `enum` data type property, [RadioButon](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/radiobutton?view=net-maui-7.0) `items` will be added based on the specified property of enum values.
+For the `enum` data type property, [RadioButton](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/radiobutton?view=net-maui-7.0) `items` will be added based on the specified property of enum values.
 
 {% tabs %}
 {% highlight C# %}
@@ -1069,7 +1121,7 @@ public enum Numbers
 
 **Support for list data type**
 
-For the `List` data type property, you have to set the `ItemsSource` by using the `IDataFormSourceProvider`.
+For the `List` data type property, you have to set the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html#Syncfusion_Maui_DataForm_DataFormListItem_ItemsSource) by using the [IDataFormSourceProvider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.IDataFormSourceProvider.html).
 
 {% tabs %}
 {% highlight C# %}
@@ -1095,15 +1147,19 @@ public class DataFormItemsSourceProvider : IDataFormSourceProvider
 {% endhighlight %}
 {% endtabs %}
 
+![RadioGroupEditor](images/editors/dataform-radio-group-editor.png)
+
+N> [View editors sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/DataFormEditors)
+
 ## Custom editor
 
-The custom editor can be added to DataForm by inheriting the `IDataFormEditor` class for business models. You can create a custom editor using implement all method in `IDataFormEditor`. 
+The custom editor can be added to DataForm by inheriting the [IDataFormEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.IDataFormEditor.html) class for business models. You can create a custom editor using implement all method in [IDataFormEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.IDataFormEditor.html). 
 
-To add a custom editor in DataForm, register the editor with a custom registered type for the required property using the `RegisterEditor` method. You can also customize editor settings by using available methods in `IDataFormEditor`. 
+To add a custom editor in DataForm, register the editor with a custom registered type for the required property using the [RegisterEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_RegisterEditor_System_String_Syncfusion_Maui_DataForm_DataFormEditorType_) method. You can also customize editor settings by using available methods in [IDataFormEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.IDataFormEditor.html). 
 
 #### Creating custom editor using IDataFormEditor 
 
-Views such as labels, buttons, and sliders can be loaded into the custom editor. The custom editor should be registered for a property using `RegisterEditor` method.
+Views such as labels, buttons, and sliders can be loaded into the custom editor. The custom editor should be registered for a property using [RegisterEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_RegisterEditor_System_String_Syncfusion_Maui_DataForm_DataFormEditorType_) method.
 
 {% tabs %}
 {% highlight C# %}
@@ -1115,7 +1171,7 @@ this.dataForm.RegisterEditor("FieldName", new CustomEditor());
 
 #### Below mentioned example code for the Numeric editor which accepts only numbers 
 
-Here, the entry is loaded as a custom editor for the `PhoneNumer` property.
+Here, the entry is loaded as a custom editor for the `PhoneNumber` property.
 
 {% tabs %}
 {% highlight C# %}
@@ -1190,6 +1246,8 @@ public class NumericTextEditor : IDataFormEditor
 {% endhighlight %}
 {% endtabs %}
 
-If `SfDataForm.ValidatetionMode` is set to `ValidationMode.Manual`, then update `DataFormCustomItem.EditorValue` property once the value is committed to its respective model property. This value will be used for the `DataFormValidateFormEventArgs.NewValues` on manual validation.
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/CustomEditorSample)
 
-N> If custom validation is required, you can set error and valid messages using the `SfDataForm.ValidateProperty` event.
+If [SfDataForm.ValidationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ValidationMode) is set to [ValidationMode.Manual](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormValidationMode.html#Syncfusion_Maui_DataForm_DataFormValidationMode_Manual), then update [DataFormCustomItem.EditorValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormCustomItem.html#Syncfusion_Maui_DataForm_DataFormCustomItem_EditorValue) property once the value is committed to its respective model property. This value will be used for the [DataFormValidateFormEventArgs.NewValues](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormValidatePropertyEventArgs.html#Syncfusion_Maui_DataForm_DataFormValidatePropertyEventArgs_NewValue) on manual validation.
+
+N> If custom validation is required, you can set error and valid messages using the [SfDataForm.ValidateProperty](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ValidateProperty) event.

@@ -9,11 +9,11 @@ documentation: ug
 
 # Page Navigation in .NET MAUI PDF Viewer (SfPdfViewer)
 
-After loading a document, you can navigate or scroll to different pages using the page navigation options, either programmatically or by dragging the scroll head in the UI. This section walks through the page navigation functionalities supported in the `SfPdfViewer`.
+After loading a document, you can navigate or scroll to different pages using the page navigation options, either programmatically or by dragging the scroll head in the UI. This section walks through the page navigation functionalities supported in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html).
 
 ## Obtain total page count and current page number
 
-The `PageCount` property returns the total number of pages in a PDF document. And the `PageNumber` property returns the current page number displayed in the PDF Viewer.
+The [PageCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_PageCount) property returns the total number of pages in a PDF document. And the [PageNumber](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_PageNumber) property returns the current page number displayed in the PDF Viewer.
 
 {% tabs %}
 {% highlight c# %}
@@ -26,7 +26,7 @@ int currentPageNumber = PdfViewer.PageNumber;
 
 ## Navigate to the desired page programmatically
 
-The `GoToPage()` method helps you navigate to the specified page number in a PDF document. If the destination page doesn’t exist, then the navigation will not happen, and the older page will be retained. Refer to the following code example:
+The [GoToPage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_GoToPage_System_Int32_) method helps you navigate to the specified page number in a PDF document. If the destination page doesn’t exist, then the navigation will not happen, and the older page will be retained. Refer to the following code example:
 
 {% tabs %}
 {% highlight c# %}
@@ -37,7 +37,7 @@ PdfViewer.GoToPage(4);
 
 ## Navigate to the next and previous page programmatically
 
-The `GoToNextPage()` and `GoToPreviousPage()` methods help you navigate to the next and previous pages of a PDF document. Refer to the following code example:
+The [GoToNextPage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_GoToNextPage) and [GoToPreviousPage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_GoToPreviousPage) methods help you navigate to the next and previous pages of a PDF document. Refer to the following code example:
 
 {% tabs %}
 {% highlight c# %}
@@ -57,7 +57,7 @@ private void PreviousPageButton_Clicked(object sender, EventArgs e)
 
 ## Navigate to the first and last page programmatically
 
-The `GoToFirstPage()` and `GoToLastPage()` methods help you navigate to the first and last pages of a PDF document. Refer to the following code example:
+The [GoToFirstPage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_GoToFirstPage) and [GoToLastPage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_GoToLastPage) methods help you navigate to the first and last pages of a PDF document. Refer to the following code example:
 
 {% tabs %}
 {% highlight c# %}
@@ -77,7 +77,7 @@ private void LastPageButton_Clicked(object sender, EventArgs e)
 
 ## Navigate to the desired offset programmatically
 
-The `ScrollToOffset()` method moves the scroll position of the SfPdfViewer to the specified horizontal and vertical offsets. If the specified offset value is wrong, then the scroll will not happen, and the older position will be retained.
+The [ScrollToOffset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ScrollToOffset_System_Double_System_Double_) method moves the scroll position of the SfPdfViewer to the specified horizontal and vertical offsets. If the specified offset value is wrong, then the scroll will not happen, and the older position will be retained.
 
 {% tabs %}
 {% highlight c# %}
