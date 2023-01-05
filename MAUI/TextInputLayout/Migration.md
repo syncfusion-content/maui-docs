@@ -30,20 +30,20 @@ To migrate easier from Xamarin SfTextInputLayout to .NET MAUI SfTextInputLayout,
 <th>.NET MAUI SfTextInputLayout</th>
 <th>Description</th></tr>
 <tr>
-<td>FocusedBorderWidth</td>
-<td>FocusedStrokeThickness</td>
+<td>{{'[FocusedStrokeWidth](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.TextInputLayout.SfTextInputLayout.html#Syncfusion_XForms_TextInputLayout_SfTextInputLayout_FocusedStrokeWidth)'| markdownify }}</td>
+<td>{{'[FocusedStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_FocusedStrokeThickness)'| markdownify }}</td>
 <td>Gets or sets a value to customize the stroke thickness in a focused state. It is applicable for the bottom line and outline border when setting the container type as filled and outlined, respectively.</td></tr>
 <tr>
-<td>UnfocusedBorderWidth</td>
-<td>UnfocusedStrokeThickness</td>
+<td>{{'[UnfocusedStrokeWidth](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.TextInputLayout.SfTextInputLayout.html#Syncfusion_XForms_TextInputLayout_SfTextInputLayout_UnfocusedStrokeWidth)'| markdownify }}</td>
+<td>{{'[UnfocusedStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_UnfocusedStrokeThickness)'| markdownify }}</td>
 <td>Gets or sets a value to customize the stroke thickness in an unfocused state. It is applicable for the bottom line and outline border when setting the container type as filled and outlined, respectively.</td></tr>
 <tr>
-<td>ContainerBackgroundColor</td>
-<td>ContainerBackground</td>
+<td>{{'[ContainerBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.TextInputLayout.SfTextInputLayout.html#Syncfusion_XForms_TextInputLayout_SfTextInputLayout_ContainerBackgroundColor)'| markdownify }}</td>
+<td>{{'[ContainerBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ContainerBackground)'| markdownify }}</td>
 <td>Gets or sets the background of the container.</td></tr>
 <tr>
-<td>FocusedColor<br/>UnfocusedColor<br/>ErrorColor</td>
-<td>Stroke</td>
+<td>{{'[FocusedColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.TextInputLayout.SfTextInputLayout.html#Syncfusion_XForms_TextInputLayout_SfTextInputLayout_FocusedColor)'| markdownify }}<br/>{{'[UnfocusedColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.TextInputLayout.SfTextInputLayout.html#Syncfusion_XForms_TextInputLayout_SfTextInputLayout_UnfocusedColor)'| markdownify }}<br/>{{'[ErrorColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.TextInputLayout.SfTextInputLayout.html#Syncfusion_XForms_TextInputLayout_SfTextInputLayout_ErrorColor)'| markdownify }}</td>
+<td>{{'[Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_Stroke)'| markdownify }}</td>
 <td>Gets or sets the border color or base line color based on container and its states.</td></tr>
 </table> 
 
@@ -53,8 +53,8 @@ To migrate easier from Xamarin SfTextInputLayout to .NET MAUI SfTextInputLayout,
 <th>.NET MAUI LabelStyle</th>
 <th>Description</th></tr>
 <tr>
-<td>Color</td>
-<td>TextColor</td>
+<td>{{'[Color](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.TextInputLayout.LabelStyle.html#Syncfusion_XForms_TextInputLayout_LabelStyle_Color)'| markdownify }}</td>
+<td>{{'[TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LabelStyle.html#Syncfusion_Maui_Core_LabelStyle_TextColor)'| markdownify }}</td>
 <td>Gets or sets the text color of the SfTextInputLayout controls label.</td></tr>
 </table>
 
