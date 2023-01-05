@@ -18,16 +18,16 @@ Syncfusion .NET MAUI Calendar (SfCalendar) is a calendar control that allows use
    {% multiple_column split:2 %}
    {% column %}
    ![Month view in .NET MAUI Calendar.](images/overview/maui-month-view.png)
-   {% endcolumn}
+   {% endcolumn %}
    {% column %}
    ![Year view in .NET MAUI Calendar.](images/overview/maui-year-view.png)
-   {% endcolumn}
+   {% endcolumn %}
    {% column %}
    ![Decade view in .NET MAUI Calendar.](images/overview/maui-decade-view.png)
-   {% endcolumn}
+   {% endcolumn %}
    {% column %}
    ![Century view in .NET MAUI Calendar.](images/overview/maui-century-view.png)
-   {% endcolumn}
+   {% endcolumn %}
    {% endmultiple_column %}
 
 * **Quick navigation**: You can easily navigate to the desired date using different calendar views in the `SfCalendar`.
@@ -37,16 +37,16 @@ Syncfusion .NET MAUI Calendar (SfCalendar) is a calendar control that allows use
    {% multiple_column split:2 %}
    {% column %}
    ![Month view single selection in .NET MAUI Calendar.](images/overview/maui-month-view-single-selection.png)
-   {% endcolumn}
+   {% endcolumn %}
    {% column %}
    ![Year view single selection in .NET MAUI Calendar.](images/overview/maui-year-view-single-selection.png)
-   {% endcolumn}
+   {% endcolumn %}
    {% column %}
    ![Decade view single selection in .NET MAUI Calendar.](images/overview/maui-decade-view-single-selection.png)
-   {% endcolumn}
+   {% endcolumn %}
    {% column %}
    ![Century view single selection in .NET MAUI Calendar.](images/overview/maui-century-view-single-selection.png)
-   {% endcolumn}
+   {% endcolumn %}
    {% endmultiple_column %}
 
 * **Date selection**: Date selection allows you to select the Single date, Multiple dates or a Range of dates by interaction or programmatic selection.
@@ -54,13 +54,13 @@ Syncfusion .NET MAUI Calendar (SfCalendar) is a calendar control that allows use
    {% multiple_column split:2 %}
    {% column %}
    ![Single selection in .NET MAUI Calendar.](images/overview/maui-month-view-single-selection.png)
-   {% endcolumn}
+   {% endcolumn %}
    {% column %}
    ![Multiple selection in .NET MAUI Calendar.](images/overview/maui-multiple-selection.png)
-   {% endcolumn}
+   {% endcolumn %}
    {% column %}
    ![Range selection in .NET MAUI Calendar.](images/overview/maui-range-selection.png)
-   {% endcolumn}
+   {% endcolumn %}
    {% endmultiple_column %}
 
 * **Limit date selection**: Restricts interaction and navigation beyond the specified minimum and maximum dates.
