@@ -34,7 +34,7 @@ Syncfusion .NET MAUI Calendar (SfCalendar) is a calendar control that allows use
 
 * **Enable and disable built-in view switching**: Restricts or enables navigation to different calendar views using interaction.
 
-   % multiple_column split:2 %}
+   {% multiple_column split:2 %}
    {% column %}
    ![Month view single selection in .NET MAUI Calendar.](images/overview/maui-month-view-single-selection.png)
    {% endcolumn}
@@ -51,7 +51,7 @@ Syncfusion .NET MAUI Calendar (SfCalendar) is a calendar control that allows use
 
 * **Date selection**: Date selection allows you to select the Single date, Multiple dates or a Range of dates by interaction or programmatic selection.
 
-   % multiple_column split:2 %}
+   {% multiple_column split:2 %}
    {% column %}
    ![Single selection in .NET MAUI Calendar.](images/overview/maui-month-view-single-selection.png)
    {% endcolumn}
