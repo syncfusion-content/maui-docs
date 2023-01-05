@@ -224,7 +224,7 @@ You can find the platforms supported by each .NET MAUI control as below.
 	    <td rowspan="3" valign="top">
 			LAYOUT<br/>
 		</td>
-	    	<td>
+	    <td>
 			<a href="/maui/backdrop/overview ">Backdrop Page</a><br/>
 		</td>
 		<td>
@@ -238,6 +238,7 @@ You can find the platforms supported by each .NET MAUI control as below.
 		</td>
 		<td>
 		Yes<br/>
+		</td>
 	</tr>
 	<tr>
 		<td>
@@ -484,8 +485,7 @@ You can find the platforms supported by each .NET MAUI control as below.
 		<td>
 		Yes<br/>
 		</td>
-		</td>
-		</tr>
+	</tr>
 	<tr>
 		<td>
 			<a href="/maui/scheduler/overview">Scheduler</a><br/>
