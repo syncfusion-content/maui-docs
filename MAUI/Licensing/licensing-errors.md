@@ -15,9 +15,9 @@ Licensing error popup is displayed with various messages under different circums
 
 ### License key not registered\Trial Expired 
 
-The following error message will be shown if a Syncfusion license key has not been registered in your application. 
+The following error message will be shown if a Syncfusion license key has not been registered in your application or if the trial key has expired after 30 days. 
 
-**Error message:** This application was built using a trial version of Syncfusion Essential Studio. You should include the valid license key to remove the license validation message permanently.
+**Error message :** This application was built using a trial version of Syncfusion Essential Studio. You should include the valid license key to remove the license validation message permanently.
 
 **Solution:**
 
