@@ -11,6 +11,10 @@ documentation: ug
 
 This section provides a quick overview for working with the SfDataGrid for .NET MAUI. Walk through the entire process of creating a real world of this control.
 
+To get start quickly with .NET MAUI DataGrid, you can check on this video:
+
+<style>#.NETMAUIDataGridVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIDataGridVideoTutorial' src='https://www.youtube.com/watch?v=xW0a7JlHbz4'></iframe>
+
 ## Creating an application using the .NET MAUI DataGrid
  1. Create a new .NET MAUI application in Visual Studio.
  2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfDataGrid to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.DataGrid and then install it.
