@@ -17,7 +17,7 @@ The [ViewChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.S
 
 * `Sender`: This contains the `SfCalendar` object.
 
-* `ViewChanged`: The Calendar current view visible dates are available in the [CalendarViewChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarViewChangedEventArgs.html) when the calendar visible dates or view is changed.
+* `EventArgs`: The type of ViewChanged event is [CalendarViewChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarViewChangedEventArgs.html). This holds the data of ViewChanged event.
 
     * [NewVisibleDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarViewChangedEventArgs.html#Syncfusion_Maui_Calendar_CalendarViewChangedEventArgs_NewVisibleDates) : Returns the new visible date range of the view.
     * [OldVisibleDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarViewChangedEventArgs.html#Syncfusion_Maui_Calendar_CalendarViewChangedEventArgs_OldVisibleDates) : Returns the old visible date range of the view.
@@ -55,7 +55,7 @@ The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calen
 
 * `Sender`: This contains the `SfCalendar` object.
 
-* `SelectionChanged`: The selection is changed when the selection-changed action is performed on the element available in the [CalendarSelectionChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarSelectionChangedEventArgs.html).
+* `EventArgs`: The type of SelectionChanged event is [CalendarSelectionChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarSelectionChangedEventArgs.html). This holds the date of NewValue and OldValue.
 
     * [NewValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarSelectionChangedEventArgs.html#Syncfusion_Maui_Calendar_CalendarSelectionChangedEventArgs_NewValue) : Returns the new selected date.
     * [OldValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarSelectionChangedEventArgs.html#Syncfusion_Maui_Calendar_CalendarSelectionChangedEventArgs_OldValue) : Returns the old selected date.
@@ -90,7 +90,7 @@ A [Tapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalend
 
 * `Sender`: This contains the `SfCalendar` object.
 
-* `Tapped`: The tapped action performed on a Calendar element can be found in the [CalendarTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarTappedEventArgs.html), where you can see details about the tapped dates and elements.
+* `EventArgs`: The type of Tapped event is [CalendarTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarTappedEventArgs.html). This holds the data of date and element.
 
     * [Date](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarTappedEventArgs.html#Syncfusion_Maui_Calendar_CalendarTappedEventArgs_Date) : Returns the selected date.
     * [Element](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarTappedEventArgs.html#Syncfusion_Maui_Calendar_CalendarTappedEventArgs_Element) : Returns the `Calendar` element tapped.
@@ -121,7 +121,7 @@ Whenever the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sc
 
 * `Sender`: This contains the `SfCalendar` object.
 
-* `DoubleTapped`: This double-tapped action performed on a Calendar element can be found in the [CalendarDoubleTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarDoubleTappedEventArgs.html), where you can see the details about the double-tapped dates and elements.
+* `EventArgs`: The type of DoubleTapped event is [CalendarDoubleTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarDoubleTappedEventArgs.html). This holds the data of date and element.
 
     * [Date](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarDoubleTappedEventArgs.html#Syncfusion_Maui_Calendar_CalendarDoubleTappedEventArgs_Date) : Returns the double-tapped date.
     * [Element](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarDoubleTappedEventArgs.html#Syncfusion_Maui_Calendar_CalendarDoubleTappedEventArgs_Element) : Returns the double-tapped `Calendar` element.
@@ -153,7 +153,7 @@ Whenever the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sc
 
 * `Sender`: This contains the `SfCalendar` object.
 
-* `LongPressed`: This long-pressed action performed on a Calendar element can be found in the [CalendarLongPressedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarLongPressedEventArgs.html), where you can see details about the long-pressed dates and elements.
+* `EventArgs`: The type of LongPressed event is [CalendarLongPressedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarLongPressedEventArgs.html). This holds the data of date and element.
 
     * [Date](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarLongPressedEventArgs.html#Syncfusion_Maui_Calendar_CalendarLongPressedEventArgs_Date) : Returns the long-pressed date.
     * [Element](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarLongPressedEventArgs.html#Syncfusion_Maui_Calendar_CalendarLongPressedEventArgs_Element) : Returns the long-pressed `Calendar` element.
