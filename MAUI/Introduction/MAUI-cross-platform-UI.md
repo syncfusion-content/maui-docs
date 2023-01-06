@@ -328,6 +328,7 @@ You can find the platforms supported by each .NET MAUI control as below.
 		Yes<br/>
 		</td>
 	</tr>
+	<tr>
 		<td>
 			<a href="/maui/range-selector/overview">Range Selector</a><br/>
 		</td>
