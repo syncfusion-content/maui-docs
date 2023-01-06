@@ -1,20 +1,20 @@
 ---
 layout: post
 title: Getting started with MAUI Calendar control | Syncfusion
-description: Learn here all about getting started with Syncfusion .NET MAUI Calendar(SfCalendar) control and its basic features.
+description: Learn here all about getting started with Syncfusion .NET MAUI Calendar (SfCalendar) control and its basic features.
 platform: maui
 control: SfCalendar
 documentation: ug
 ---
 
 # Getting started with .NET MAUI Calendar (SfCalendar)
-This section explains the steps required to add the Calendar control. This section covers only basic features needed to get started with Syncfusion Calendar.
+This section explains how to add the Calendar control. This section covers only the basic features needed to get started with Syncfusion Calendar.
 
 ## Creating an application using the .NET MAUI Calendar
 
 1. Create a new .NET MAUI application in Visual Studio.
 
-2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfCalendar to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Calendar and then install it.
+2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add `SfCalendar` to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Calendar, and then install it.
 
 3. To initialize the control, import the control namespace `Syncfusion.Maui.Calendar` in XAML or C# code.
 
@@ -51,7 +51,7 @@ public partial class MainPage : ContentPage
 
 ## Register the handler
 
-The `Syncfusion.Maui.Core` nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
+The `Syncfusion.Maui.Core` NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
 
 {% tabs %}
 {% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
@@ -84,7 +84,7 @@ namespace GettingStarted
 
 ## Change different calendar views
 
-The .NET MAUI Calendar control provides four different types of views to display dates and it can be assigned to the control by using the `View` property. The control is assigned to the Month view by default. Initially, all Calendar views will show the current date.
+The .NET MAUI Calendar control provides four different types of views to display dates, and it can be assigned to the control using the `View` property. By default, the control is assigned to the Month view. Initially, all Calendar views will show the current date.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -105,9 +105,9 @@ this.Calendar.View = CalendarView.Month;
 
 ## Change first day of week
 
-The Calendar control rendered with `Sunday` as first day of week and it  provides customization to change the first day of the week with the FirstDayOfWeek property in month view.
+The Calendar control is rendered with `Sunday` as the first day of the week and it allows customization to change the first day of the week using the `FirstDayOfWeek` property in month view.
 
-The following code shows the Calendar with `Monday` as the first day of the week.
+The following code explains how to show the Calendar with `Monday` as the first day of the week.
 
 {% tabs %}  
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -130,11 +130,11 @@ this.Calendar.MonthView.FirstDayOfWeek = DayOfWeek.Monday;
 
 ## Date selection
 
-Calendar allows the user to Select a single date, multiple dates, or a range of dates through interaction and programmatically. The default selection mode is `Default`. 
+The Calendar allows the user to select a single date, multiple dates, or a range of dates by interaction or programmatic selection. The default selection mode is `Single`.
 
-The selection details can be obtained by using SelectionChanged event of calendar. It returns `CalendarSelectionChangedEventArgs` which holds the details about selected date or range.
+The selection details can be obtained by using the SelectionChanged event of the calendar. It returns `CalendarSelectionChangedEventArgs`, which holds the details about the selected date or range.
 
-The following code shows the Calendar with `Multiple` as the Selection mode.
+The following code explains how to show the Calendar with `Multiple` as the Selection mode.
 
 {% tabs %}  
 {% highlight xaml tabtitle="MainPage.xaml" %}
