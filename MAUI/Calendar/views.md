@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Views in MAUI Calendar control | Syncfusion
+title: Views in .NET MAUI Calendar control | Syncfusion
 description: Learn here all about the Views feature of Syncfusion .NET MAUI Calendar (SfCalendar) control and more.
 platform: maui
 control: Calendar
@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Multiple Calendar Views in MAUI (SfCalendar)
+# Multiple Calendar Views in .NET MAUI (SfCalendar)
 The `SfCalendar` control has four Calendar views to display. It can be assigned to the control by using the [View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_View) property. By default, the `Month` view is initially rendered. The current date will be displayed initially for all the Calendar views.
 
 ## Month view
@@ -55,7 +55,7 @@ this.Calendar.MonthView = new CalendarMonthView()
 {% endhighlight %}
 {% endtabs %}
 
-![custom-number-of-weeks-in-maui-calendar](images/views/custom-number-of-weeks-in-maui-calendar.png)
+![Number of visible weeks in .NET MAUI Calendar.](images/views/maui-month-view-number-of-weeks.png)
 
 ### Week number
 By setting the `ShowWeekNumber` property, it displays the week number for the current view dates in the month view. By default, the [ShowWeekNumber](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_ShowWeekNumber) is set to `false`. If you need to show the week number in the month view, set the `ShowWeekNumber` as true. The week numbers will be displayed based on the ISO standard.
@@ -80,7 +80,7 @@ this.Calendar.MonthView = new CalendarMonthView()
 {% endhighlight %}
 {% endtabs %}
 
-![Week number in .NET MAUI Calendar.](images/views/maui-week-number.png)
+![Show Week number in .NET MAUI Calendar.](images/views/maui-month-view-show-week-numbers.png)
 
 
 #### Week number appearance
@@ -126,7 +126,7 @@ this.Calendar.MonthView.WeekNumberStyle = new CalendarWeekNumberStyle()
 {% endhighlight %}
 {% endtabs %}
 
-![week-number-style-in-maui-calendar](images/views/week-number-style-in-maui-calendar.png)
+![Customize Week number Appearance in .NET MAUI Calendar.](images/views/maui-month-view-show-week-numbers-customize.png)
 
 
 ## Year view
