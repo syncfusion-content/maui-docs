@@ -152,7 +152,7 @@ this.Calendar.NavigationDirection = CalendarNavigationDirection.Horizontal;
 
 ![Month view Horizontal navigation direction in .NET MAUI Calendar.](images/date-navigation/maui-month-view-horizontal-direction.png)
 
-## Show navigation arrow
+## Show navigation arrows
 By using the `ShowNavigationArrows` property of the `Calendar`, you can navigate to the next or previous view of the calendar without swiping.  By default, the value of [ShowNavigationArrows](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarHeaderView.html#Syncfusion_Maui_Calendar_CalendarHeaderView_ShowNavigationArrows) is `true`.
 
 {% tabs %}
