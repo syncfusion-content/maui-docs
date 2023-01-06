@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI PDF Viewer (SfPdfViewer)
 
-This section walks you through the process of viewing or displaying a PDF document in a.NET MAUI application using the `SfPdfViewer` control.
+This section walks you through the process of viewing or displaying a PDF document in a.NET MAUI application using the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) control.
 
 ## Creating an application using the .NET MAUI PDF Viewer
 
