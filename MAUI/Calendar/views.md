@@ -17,7 +17,9 @@ The Month view displays the current month days, and usually a few days of previo
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-{% include_relative code-snippet/month-view.xaml %}
+<calendar:SfCalendar  x:Name="Calendar" 
+                        View="Month">
+</calendar:SfCalendar>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -58,7 +60,7 @@ this.Calendar.MonthView = new CalendarMonthView()
 ![Number of visible weeks in .NET MAUI Calendar.](images/views/maui-month-view-number-of-weeks.png)
 
 ### Week number
-By setting the `ShowWeekNumber` property, it displays the week number for the current view dates in the month view. By default, the [ShowWeekNumber](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_ShowWeekNumber) is set to `false`. If you need to show the week number in the month view, set the `ShowWeekNumber` as true. The week numbers will be displayed based on the ISO standard.
+By setting the `ShowWeekNumber` property, it displays the week number for the current view dates in the month view. By default, the [ShowWeekNumber](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_ShowWeekNumber) is set to `false`. The week numbers will be displayed based on the ISO standard.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
