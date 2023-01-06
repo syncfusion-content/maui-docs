@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Selections in MAUI Calendar control | Syncfusion
-description: Learn here all about Selections feature in Syncfusion ..NET MAUI Calendar (SfCalendar) control and more.
+title: Selections in .NET MAUI Calendar control | Syncfusion
+description: Learn here all about Selections feature in Syncfusion .NET MAUI Calendar (SfCalendar) control and more.
 platform: maui
 control: SfCalendar
 documentation: ug
 ---
 
-# Selections in MAUI Calendar (SfCalendar)
+# Selections in .NET MAUI Calendar (SfCalendar)
 The Selection mode is specified in the Calendar property enumeration. You can select the dates by tapping the cell in the calendar. `SfCalendar` provides three types of modes such as `Single`, `Multiple`, and `Range` Selection. The default [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectionMode) is Single, which allows the user to select only one date at a time.
 
 >**NOTE** You can select the cells in the Year, Decade, and Century views in the calendar only when the `AllowViewNavigation` property is set to false.
@@ -208,7 +208,7 @@ this.Calendar.SelectionShape = CalendarSelectionShape.Rectangle;
 {% endhighlight %}
 {% endtabs %}
 
-![rectangle-selection-shape-for-monthview-in-maui-calendar](images/selection/rectangle-selection-shape-for-monthview-in-maui-calendar.png)
+![Rectangle selection shape in .NET MAUI Calendar.](images/selection/maui-rectangle-selection-shape.png)
 
 ## Enable swipe selection
 You can select the dates by swiping using the `EnableSwipeSelection` property. By default, [EnableSwipeSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_EnableSwipeSelection) property is false.
