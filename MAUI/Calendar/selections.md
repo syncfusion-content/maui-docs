@@ -36,7 +36,7 @@ this.Calendar.SelectionMode = CalendarSelectionMode.Single;
 
 >**NOTE**
 * In the Year, Decade, and Century views, you can select the cells, only when the `AllowViewNavigation` property is set to false.
-* In this scenario, the `selection changed` callback will return the first date of the month, year, decade or century of the selected cell.
+* In this scenario, the `selection changed` event will return the first date of the month, year, decade or century of the selected cell.
 Eg: 
 * In the year view, when the Dec month cell is selected then the selected date value will be 01-12-2022.
 * In the decade view, when the (2022) year cell is selected then the selected date value will be 01-01-2022.
@@ -88,7 +88,7 @@ this.Calendar.SelectionMode = CalendarSelectionMode.Range;
 
 >**NOTE**
 * In the Year, Decade and Century views can able to select the cells, only when the `allowViewNavigation` property is set to false.
-* In this scenario, the `selection changed` callback will return the first  and last date of the month, year, decade or century of the selected cell when the seletionmodeis set to `range `.
+* In this scenario, the `selection changed` event will return the first  and last date of the month, year, decade or century of the selected cell when the seletionmodeis set to `range `.
 Eg: 
 * In the year view, when the range is selected as Sep - Dec, then the range value will be 01-09-2022 to 31-12-2022.
 * In the decade view, when the range is selected as 2022 - 2025, then the range value will be 01-01-2022 to 31-12-2025.
@@ -144,7 +144,7 @@ this.Calendar.RangeSelectionDirection = CalendarRangeSelectionDirection.Backward
 ![Backward range selection in .NET MAUI Calendar.](images/selection/maui-backward-range-selection.png)
 
 #### Range Selection Direction - Both
-If you set the `RangeSelectionDirection` property to `Both`, you can extend the selection from the selected range. Then, the tapped date is considered based on the (if the date is nearby the start date, then the start date is updated, else if the date is nearby the end date, then the end date is updated, else if in-between the start and end date and both have the same distance, then the start date is updated).
+If you set the `RangeSelectionDirection` property to `Both`, you can extend the selection from the selected range. Then, the tapped date is considered based on, if the date is nearby the start date, then the start date is updated, else if the date is nearby the end date, then the end date is updated, else if in-between the start and end date and both have the same distance, then the start date is updated.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
