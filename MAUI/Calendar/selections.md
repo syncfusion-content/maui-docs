@@ -88,7 +88,7 @@ this.Calendar.SelectionMode = CalendarSelectionMode.Range;
 
 >**NOTE**
 * In the Year, Decade and Century views can able to select the cells, only when the `allowViewNavigation` property is set to false.
-* In this scenario, the `selection changed` event will return the first and last date of the month, year, decade or century of the selected cell when the seletionmodeis set to `range `.
+* In this scenario, the `selection changed` event will return the first and last date of the month, year, decade or century of the selected cell when the selection mode is set to `range `.
 Eg: 
 * In the year view, when the range is selected as Sep - Dec, then the range value will be 01-09-2022 to 31-12-2022.
 * In the decade view, when the range is selected as 2022 - 2025, then the range value will be 01-01-2022 to 31-12-2025.
