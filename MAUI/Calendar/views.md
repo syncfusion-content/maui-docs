@@ -32,7 +32,7 @@ this.Calendar.View = CalendarView.Month;
 ![Month view in .NET MAUI Calendar.](images/views/maui-month-view.png)
 
 ### Number Of Visible Weeks view
-The number of visible weeks in the month view can be customized by using the `NumberOfVisibleWeeks` property in the Calendar. By default, the Month view displays with the NumberOfVisibleWeeks as `6`.
+The number of visible weeks in the month view can be customized by using the [NumberOfVisibleWeeks](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_NumberOfVisibleWeeks) property in the Calendar. By default, the Month view displays with the NumberOfVisibleWeeks as `6`.
 
 The following code explains how to show the Calendar month view with `NumberOfVisibleWeeks` as `4`.
 
