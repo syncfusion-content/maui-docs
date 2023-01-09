@@ -91,37 +91,7 @@ You can customize the calendar month view cell by using the `MonthView` property
 ![Month view Customization in .NET MAUI Calendar.](images/customization/maui-month-view-customization.png)
 
 >**NOTE**
-* The Background color and text style will be applied based on the following order: selectableDayPredicate dates, special dates, disable dates, today date, trailingLeading dates, and weekend dates.
-
-## Month View Header format
-You can customize the month format of the `Calendar` by using the [TextFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthHeaderView.html#Syncfusion_Maui_Calendar_CalendarMonthHeaderView_TextFormat) property.
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-
-<calendar:SfCalendar  x:Name="Calendar" 
-                      View="Month">
-            <Calendar:SfCalendar.MonthView>
-                <Calendar:CalendarMonthView>
-                    <Calendar:CalendarMonthView.HeaderView>
-                        <Calendar:CalendarMonthHeaderView TextFormat="ddd" />
-                    </Calendar:CalendarMonthView.HeaderView>
-                </Calendar:CalendarMonthView>
-            </Calendar:SfCalendar.MonthView>
-</calendar:SfCalendar>
-
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
-
-this.Calendar.MonthView.HeaderView = new CalendarMonthHeaderView()
-{
-    TextFormat = "ddd",
-};
-
-{% endhighlight %}
-{% endtabs %}
-
-![Month view View Header Text format in .NET MAUI Calendar.](images/customization/maui-month-view-view-header-text-format.png)
+* The Background color and text style will be applied based on the following order: selectableDayPredicate dates, special dates, disable dates, today date, weekend dates, trailingLeading dates, and normal dates.
 
 ## Year cell customization
 You can customize the calendar `year`, `decade`, and `century` view by using the `YearView` property of `SfCalendar`.
