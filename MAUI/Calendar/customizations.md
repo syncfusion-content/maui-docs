@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Customizations in .NET MAUI Calendar (SfCalendar)
-Each cell of the Month, Year, Decade and Century can be customized in .NET MAUI [Calendar](https://www.syncfusion.com/maui-controls/maui-calendar) (SfCalendar).
+Each cell of the Month, Year, Decade and Century can be customized in [.NET MAUI Calendar](https://www.syncfusion.com/maui-controls/maui-calendar) (SfCalendar).
     
 ## Month cell customization
 You can customize the calendar month view cell by using the `MonthView` property of `SfCalendar`.
@@ -72,18 +72,21 @@ You can customize the calendar month view cell by using the `MonthView` property
         };
 
         this.calendar.Background = Colors.PaleGreen.WithAlpha(0.3f);
-        this.Calendar.MonthView.TextStyle = textStyle;
-        this.calendar.MonthView.TodayBackground = Colors.Pink;
-        this.Calendar.MonthView.TodayTextStyle = textStyle;
         this.Calendar.ShowTrailingAndLeadingDates = true;
-        this.Calendar.MonthView.TrailingLeadingDatesBackground = Colors.Red.WithAlpha(0.3f);
-        this.Calendar.MonthView.TrailingLeadingDatesTextStyle = textStyle;
-        this.calendar.MonthView.DisabledDatesBackground = Colors.Grey.WithAlpha(0.3f);
-        this.Calendar.MonthView.DisabledDatesTextStyle = textStyle;
-        this.calendar.MonthView.SpecialDatesBackground = Color.FromArgb("#FFEFD2");
-        this.calendar.MonthView.SpecialDatesTextStyle = textStyle;
-        this.calendar.MonthView.WeekendDatesBackground = Color.FromArgb("#E2F9F3");
-        this.calendar.MonthView.WeekendDatesTextStyle = textStyle;
+        this.calendar.MonthView = new CalendarMonthView()
+        {
+            TextStyle = textStyle,
+            TodayBackground = Colors.Pink,
+            TodayTextStyle = textStyle,
+            DisabledDatesBackground = Colors.Grey.WithAlpha(0.3f),
+            DisabledDatesTextStyle = textStyle,
+            TrailingLeadingDatesBackground = Colors.Red.WithAlpha(0.3f),
+            TrailingLeadingDatesTextStyle = textStyle,
+            SpecialDatesBackground = Color.FromArgb("#FFEFD2"),
+            SpecialDatesTextStyle = textStyle,
+            WeekendDatesBackground = Color.FromArgb("#E2F9F3"),
+            WeekendDatesTextStyle = textStyle,
+        };
 
 {% endhighlight %}
 {% endtabs %}
@@ -94,7 +97,7 @@ You can customize the calendar month view cell by using the `MonthView` property
 * The Background color and text style will be applied based on the following order: selectableDayPredicate dates, special dates, disable dates, today date, weekend dates, trailingLeading dates, and normal dates.
 
 ## Year cell customization
-You can customize the calendar `year`, `decade`, and `century` view by using the `YearView` property of `SfCalendar`.
+You can customize the calendar `year`, `decade`, and `century` views by using the `YearView` property of `SfCalendar`.
 
 *   **Year cell dates** – You can customize the year view date's text style and background of the `Calendar` by using the [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarYearView.html#Syncfusion_Maui_Calendar_CalendarYearView_TextStyle) and [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarYearView.html#Syncfusion_Maui_Calendar_CalendarYearView_Background) properties of [YearView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarYearView.html).
 
@@ -129,14 +132,17 @@ You can customize the calendar `year`, `decade`, and `century` view by using the
         this.Calendar.MaximumDate = DateTime.Now.AddYears(8);
         this.Calendar.EnablePastDates = false;
         this.calendar.Background = Colors.PaleGreen.WithAlpha(0.3f);
-        this.calendar.YearView.TextStyle = textStyle;
-        this.calendar.YearView.TodayBackground = Colors.Pink;
-        this.calendar.YearView.TodayTextStyle = textStyle;
-        this.calendar.YearView.DisabledDatesBackground = Colors.Grey.WithAlpha(0.3f);
-        this.calendar.YearView.DisabledDatesTextStyle = textStyle;
         this.calendar.ShowTrailingAndLeadingDates = true;
-        this.calendar.YearView.LeadingDatesBackground = Colors.Red.WithAlpha(0.3f);
-        this.calendar.YearView.LeadingDatesTextStyle = textStyle;
+        this.calendar.YearView = new CalendarYearView()
+        {
+            TextStyle = textStyle,
+            TodayBackground = Colors.Pink,
+            TodayTextStyle = textStyle,
+            DisabledDatesBackground = Colors.Grey.WithAlpha(0.3f),
+            DisabledDatesTextStyle = textStyle,
+            LeadingDatesBackground = Colors.Red.WithAlpha(0.3f),
+            LeadingDatesTextStyle = textStyle,
+        };
 
 {% endhighlight %}
 {% endtabs %}
