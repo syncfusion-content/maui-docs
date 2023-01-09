@@ -13,7 +13,7 @@ The Selection mode is specified in the Calendar property enumeration. You can se
 >**NOTE** You can select the cells in the Year, Decade, and Century views in the calendar only when the `AllowViewNavigation` property is set to false.
 
 ## Single selection
-The `Single` selection can be performed in the Calendar by setting the `CalendarSelectionMode` property to `Single`. In this selection, you can select a single date from the cell.
+The `Single` selection can be performed in the Calendar by setting the `CalendarSelectionMode` property to `Single`. In this selection, you can select a single date at a time from the calendar.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -66,7 +66,7 @@ this.Calendar.SelectionMode = CalendarSelectionMode.Multiple;
 
 
 ## Range selection
-The `Range` selection can be performed in the Calendar by setting the `CalendarSelectionMode` property to `Range`. In this Selection, you can able to select a range of dates from the cell by interacting the cell either tap or swipe action. Swipe action can only performed by setting the [enableSwipeSelection] property to `true` in the calendar.
+The `Range` selection can be performed in the Calendar by setting the `CalendarSelectionMode` property to `Range`. In this Selection, you can able to select a range of dates from the cell by interacting the cell either tap or swipe action. Swipe action can only performed by setting the [EnableSwipeSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_EnableSwipeSelection) property to `true` in the calendar.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -88,7 +88,7 @@ this.Calendar.SelectionMode = CalendarSelectionMode.Range;
 
 >**NOTE**
 * In the Year, Decade and Century views can able to select the cells, only when the `allowViewNavigation` property is set to false.
-* In this scenario, the `selection changed` event will return the first  and last date of the month, year, decade or century of the selected cell when the seletionmodeis set to `range `.
+* In this scenario, the `selection changed` event will return the first and last date of the month, year, decade or century of the selected cell when the seletionmodeis set to `range `.
 Eg: 
 * In the year view, when the range is selected as Sep - Dec, then the range value will be 01-09-2022 to 31-12-2022.
 * In the decade view, when the range is selected as 2022 - 2025, then the range value will be 01-01-2022 to 31-12-2025.
@@ -143,7 +143,7 @@ this.Calendar.RangeSelectionDirection = CalendarRangeSelectionDirection.Backward
 
 ![Backward range selection in .NET MAUI Calendar.](images/selection/maui-backward-range-selection.png)
 
-#### Range Selection Direction - Both
+#### Range Selection Direction - both
 If you set the `RangeSelectionDirection` property to `Both`, you can extend the selection from the selected range. Then, the tapped date is considered based on, if the date is nearby the start date, then the start date is updated, else if the date is nearby the end date, then the end date is updated, else if in-between the start and end date and both have the same distance, then the start date is updated.
 
 {% tabs %}
