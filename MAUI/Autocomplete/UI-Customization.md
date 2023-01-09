@@ -94,7 +94,7 @@ The following gif image illustrates the result of the above code:
 
 ## Stroke
 
-The Autocomplete border color can be changed by using the `Stroke` property.
+The Autocomplete border color can be changed by using the [`Stroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_Stroke) property.
 
 {% tabs %}
 {% highlight xaml %}

@@ -201,7 +201,7 @@ Run the project and check if you get following output to make sure you have conf
 
 As we are going to visualize the comparison of heights in the data model, add [ColumnSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ColumnSeries.html?tabs=tabid-1) to [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) property of chart, and then bind the `Data` property of the above `ViewModel` to the `ColumnSeries.ItemsSource` as follows.
 
-N> The cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) as its default content.
+N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) as its default content.
 
 N> You need to set [XBindingPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_XBindingPath) and [YBindingPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.XYDataSeries.html#Syncfusion_Maui_Charts_XYDataSeries_YBindingPath)
  properties so that chart will fetch values from the respective properties in the data model to plot the series. 
@@ -239,12 +239,18 @@ SfCartesianChart chart = new SfCartesianChart();
 
 // Initializing primary axis
 CategoryAxis primaryAxis = new CategoryAxis();
-primaryAxis.Title.Text = "Name";
+primaryAxis.Title = new ChartAxisTitle
+{
+    Text = "Name",
+};
 chart.XAxes.Add(primaryAxis);
 
 //Initializing secondary Axis
 NumericalAxis secondaryAxis = new NumericalAxis();
-secondaryAxis.Title.Text = "Height(in cm)";
+secondaryAxis.Title = new ChartAxisTitle
+{
+    Text= "Height(in cm)",
+};
 chart.YAxes.Add(secondaryAxis);
 
 //Initialize the two series for SfChart
@@ -488,12 +494,18 @@ namespace ChartGettingStarted
 
             // Initializing primary axis
             CategoryAxis primaryAxis = new CategoryAxis();
-            primaryAxis.Title.Text = "Name";
+            primaryAxis.Title = new ChartAxisTitle
+            {
+                Text = "Name",
+            };
             chart.XAxes.Add(primaryAxis);
 
             //Initializing secondary Axis
             NumericalAxis secondaryAxis = new NumericalAxis();
-            secondaryAxis.Title.Text = "Height(in cm)";
+            secondaryAxis.Title = new ChartAxisTitle
+            {
+                Text= "Height(in cm)",
+            };
             chart.YAxes.Add(secondaryAxis);
 
             //Initialize the two series for SfChart

@@ -9,7 +9,7 @@ documentation: ug
 
 # Open a Document in .NET MAUI PDF Viewer (SfPdfViewer)
 
-The `SfPdfViewer` allows you to open PDF documents from various sources, like local storage or URLs. It also lets you view password-protected documents.
+The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to open PDF documents from various sources, like local storage or URLs. It also lets you view password-protected documents.
 
 This section walks you through the loading and unloading of documents in `SfPdfViewer` and handling the load-specific events.
 
@@ -40,9 +40,10 @@ PdfViewer.DocumentSource = await response.Content.ReadAsByteArrayAsync();
 
 ## Unload a document
 
-The `SfPdfViewer` allows you to unload and clear the resources occupied by the PDF document loaded using the `UnloadDocument()` method, as shown below.
+The `SfPdfViewer` allows you to unload and clear the resources occupied by the PDF document loaded using the [UnloadDocument](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_UnloadDocument) method, as shown below.
 
-N>While switching between or opening different documents, the previous loaded document will be unloaded automatically by the `SfPdfViewer`.
+N> 1. While changing or opening different documents on the same page, the previously loaded document will be unloaded automatically by the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). 
+N> 2. And, if you are using multiple pages in your application, then make sure to unload the document from the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) while leaving the page that has it to release the memory and resources consumed by the PDF document that is loaded.  The unloading of documents can be done by calling the [UnloadDocument](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_UnloadDocument) method. 
 
 {% tabs %}
 {% highlight c# %}
@@ -53,11 +54,11 @@ PdfViewer.UnloadDocument();
 
 ## Events
 
-The `SfPdfViewer` supports the `DocumentLoaded` and `DocumentLoadFailed` events to notify whether the document has been opened and displayed in the view or not.
+The `SfPdfViewer` supports the [DocumentLoaded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoaded) and [DocumentLoadFailed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoadFailed) events to notify whether the document has been opened and displayed in the view or not.
 
 ### Document loaded event
 
-The `DocumentLoaded` event triggers after the document is loaded in the `SfPdfViewer`. Refer to the following code example:
+The [DocumentLoaded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoaded) event triggers after the document is loaded in the `SfPdfViewer`. Refer to the following code example:
 
 {% tabs %}
 {% highlight xaml %}
@@ -85,12 +86,12 @@ private void PdfViewer_DocumentLoaded(object sender, EventArgs e)
 
 ### Document load failed event
 
-The `DocumentLoadFailed` event triggers when the document loading fails in the `SfPdfViewer`. That is,
+The [DocumentLoadFailed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoadFailed) event triggers when the document loading fails in the `SfPdfViewer`. That is,
 * When any corrupted document is loaded
 * When any password-protected document is loaded with an invalid or empty password
 * When any non-PDF document is loaded
 
-The `DocumentLoadFailedEventArgs` will return the error `Message` and `Exception` details for the failure. The following code example explains the same.
+The [DocumentLoadFailedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.DocumentLoadFailedEventArgs.html) will return the error `Message` and `Exception` details for the failure. The following code example explains the same.
 
 {% tabs %}
 {% highlight xaml %}
@@ -107,6 +108,6 @@ private void PdfViewer_DocumentLoadFailed(object sender, DocumentLoadFailedEvent
 
 ## Check other PDF opening options
 
-* Open a document from local storage
-* Open a document from URL
-* Open a password-protected document
+* [Open a document from local storage](https://help.syncfusion.com/maui/pdf-viewer/open-a-document-from-local-storage)
+* [Open a document from URL](https://help.syncfusion.com/maui/pdf-viewer/open-a-document-from-url)
+* [Open a password-protected document](https://help.syncfusion.com/maui/pdf-viewer/open-a-password-protected-document)

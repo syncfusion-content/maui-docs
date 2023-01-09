@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI PDF Viewer (SfPdfViewer)
 
-This section walks you through the process of viewing or displaying a PDF document in a.NET MAUI application using the `SfPdfViewer` control.
+This section walks you through the process of viewing or displaying a PDF document in a.NET MAUI application using the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) control.
 
 ## Creating an application using the .NET MAUI PDF Viewer
 
@@ -103,7 +103,7 @@ namespace PdfViewerExample
 {% endhighlight %} 
 {% endtabs %}
 
-**Step 6:** In the `MainPage.xaml`, import the control namespace `Syncfusion.Maui.PdfViewer`, and then initialize the `SfPdfViewer` control and bind the `PdfDocumentStream` created to the `SfPdfViewer.DocumentSource` property. The following code snippet explains the same.
+**Step 6:** In the `MainPage.xaml`, import the control namespace `Syncfusion.Maui.PdfViewer`, and then initialize the `SfPdfViewer` control and bind the `PdfDocumentStream` created to the [DocumentSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentSource)` property. The following code snippet explains the same.
 
 N>`DocumentSource` property supports both `Stream` and `byte[]` objects.
 
@@ -130,6 +130,9 @@ N>`DocumentSource` property supports both `Stream` and `byte[]` objects.
 
 {% endhighlight %} 
 {% endtabs %}
+
+N> 1. While changing or opening different documents on the same page, the previously loaded document will be unloaded automatically by the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). 
+N> 2. And, if you are using multiple pages in your application, then make sure to unload the document from the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) while leaving the page that has it to release the memory and resources consumed by the PDF document that is loaded.  The unloading of documents can be done by calling the [UnloadDocument](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_UnloadDocument) method. 
 
 **Step 7:** Finally, run the application to obtain the following output.
 

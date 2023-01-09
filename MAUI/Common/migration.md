@@ -22,7 +22,7 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 		</th>
 	</tr>
 	<tr>
-	    <td rowspan="2" valign="center">
+	    <td rowspan="4" valign="center">
 			<a href="https://help.syncfusion.com/xamarin/charts/getting-started">SfChart</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
@@ -32,6 +32,16 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 	<tr>
 		<td rowspan="1" valign="top">
 			<a href="https://help.syncfusion.com/maui/circular-charts/migration">SfCircularChart</a><br/>
+		</td>
+	</tr>
+	<tr>
+		<td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/maui/funnel-charts/migration">SfFunnelChart</a><br/>
+		</td>
+	</tr>
+	<tr>
+		<td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/maui/pyramid-charts/migration">SfPyramidChart</a><br/>
 		</td>
 	</tr>
 	<tr>
@@ -196,23 +206,7 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 			<a href="https://help.syncfusion.com/xamarin/rating/getting-started">SfRating</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Underway<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/switch/gettingstarted">SfSwitch</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			Underway<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/image-editor/getting-started">SfImageEditor</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			Underway<br/>
+			<a href="https://help.syncfusion.com/maui/rating/migration">SfRating</a><br/>
 		</td>
 	</tr>
 	<tr>
@@ -220,23 +214,7 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 			<a href="https://help.syncfusion.com/xamarin/text-input-layout/getting-started">SfTextInputLayout</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Underway<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/treeview/getting-started">SfTreeView</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			Underway<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/pull-to-refresh/getting-started">SfPullToRefresh</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			Underway<br/>
+			<a href="https://help.syncfusion.com/maui/textinputlayout/migration">SfTextInputLayout</a><br/>
 		</td>
 	</tr>
 	<tr>
@@ -244,7 +222,7 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 			<a href="https://help.syncfusion.com/xamarin/pdf-viewer/getting-started">SfPdfViewer</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Underway<br/>
+		    SfPdfViewer<br/>
 		</td>
 	</tr>
 	<tr>
@@ -252,7 +230,7 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 			<a href="https://help.syncfusion.com/xamarin/backdrop-page/getting-started">SfBackdropPage</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Underway<br/>
+			<a href="https://help.syncfusion.com/maui/backdrop/migration">SfBackdropPage</a><br/>
 		</td>
 	</tr>
 	<tr>
@@ -260,79 +238,7 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 			<a href="https://help.syncfusion.com/xamarin/calendar/getting-started">SfCalendar</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Underway<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/radio-button/getting-started">SfRadioButton</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			Underway<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/checkbox/getting-started">SfCheckBox</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			Underway<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/button/gettingstarted">SfButton</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			Underway<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/chips/getting-started">SfChips</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			Underway<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/expander/getting-started">SfExpander</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			Underway<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/accordion/getting-started">SfAccordion</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			Underway<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/chat/getting-started">SfChat</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			Underway<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/timepicker/gettingstarted">SfTimePicker</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			Underway<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/popup/getting-started">SfPopUpLayout</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			Underway<br/>
+			<a href="https://help.syncfusion.com/maui/calendar/migration">SfCalendar</a><br/>
 		</td>
 	</tr>
 	<tr>
@@ -340,143 +246,7 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 			<a href="https://help.syncfusion.com/xamarin/dataform/getting-started">SfDataForm</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Underway<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/treemap/getting-started">SfTreemap</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			Underway<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/carousel-view/getting-started">SfCarousel</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			Underway<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/rotator/getting-started">SfRotator</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			Underway<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/segmented-control/getting-started">SfSegmentedControl</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			Underway<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/shimmer/getting-started">SfShimmer</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			Underway<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/parallax-view/gettingstarted">SfParallaxView</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			Underway<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/digital-gauge/getting-started">SfDigitalGauge</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			Underway<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/radial-menu/getting-started">SfRadialMenu</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			Underway<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/navigation-drawer/getting-started">SfNavigationDrawer</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			Underway<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/sunburst-chart/getting-started">SfSunburstChart</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			Underway<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/stepprogressbar/gettingstarted">SfStepProgressBar</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			Underway<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/numericupdown/getting-started">SfNumericUpDown</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			Underway<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/masked-entry/getting-started">SfMasedEdit</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			Underway<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/cards/getting-started">SfCardView</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			Underway<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/picker/gettingstarted">SfPicker</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			Underway<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/kanban-board/getting-started">SfKanban</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			Underway<br/>
-		</td>
-	</tr>
-	<tr>
-	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/datepicker/gettingstarted">SfDatePicker</a><br/>
-		</td>
-		<td rowspan="1" valign="top">
-			Underway<br/>
+			<a href="https://help.syncfusion.com/maui/dataform/migration">SfDataForm</a><br/>
 		</td>
 	</tr>
 	<tr>
@@ -492,12 +262,228 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 			<a href="https://help.syncfusion.com/xamarin/gradient-view/getting-started">SfGradientView</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Obsolete. Use <a href="https://docs.microsoft.com/en-us/dotnet/maui/user-interface/brushes/gradient"> Gradients</a><br/>
+			Obsolete. Use <a href="https://docs.microsoft.com/en-us/dotnet/maui/user-interface/brushes/gradient">Gradients</a><br/>
+		</td>
+	</tr>
+	<tr>
+		<td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/masked-entry/overview">SfMaskedEdit</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			Volume 1 2023<br/>
 		</td>
 	</tr>
 	<tr>
 	    <td rowspan="1" valign="top">
 			<a href="https://help.syncfusion.com/xamarin/numeric-entry/getting-started">SfNumericTextBox</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			Volume 1 2023<br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/popup/getting-started">SfPopUpLayout</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			Volume 1 2023<br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/shimmer/getting-started">SfShimmer</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			Volume 1 2023<br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/chips/getting-started">SfChips</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			Volume 2 2023<br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/image-editor/getting-started">SfImageEditor</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			Volume 2 2023<br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/switch/gettingstarted">SfSwitch</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			Volume 2 2023<br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/treeview/getting-started">SfTreeView</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			Volume 2 2023<br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/button/gettingstarted">SfButton</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			Volume 3 2023<br/>
+		</td>
+	</tr>
+		<tr>
+	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/checkbox/getting-started">SfCheckBox</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			Volume 3 2023<br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/datepicker/gettingstarted">SfDatePicker</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			Volume 3 2023<br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/picker/gettingstarted">SfPicker</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			Volume 3 2023<br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/pull-to-refresh/getting-started">SfPullToRefresh</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			Volume 3 2023<br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/radio-button/getting-started">SfRadioButton</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			Volume 3 2023<br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/timepicker/gettingstarted">SfTimePicker</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			Volume 3 2023<br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/chat/getting-started">SfChat</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			Volume 4 2023<br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/segmented-control/getting-started">SfSegmentedControl</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			Volume 4 2023<br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/accordion/getting-started">SfAccordion</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			Underway<br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/carousel-view/getting-started">SfCarousel</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			Underway<br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/cards/getting-started">SfCardView</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			Underway<br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/diagram/getting-started">SfDiagram</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			Underway<br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/digital-gauge/getting-started">SfDigitalGauge</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			Underway<br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/expander/getting-started">SfExpander</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			Underway<br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/kanban-board/getting-started">SfKanban</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			Underway<br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/navigation-drawer/getting-started">SfNavigationDrawer</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			Underway<br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/numericupdown/getting-started">SfNumericUpDown</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			Underway<br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/parallax-view/gettingstarted">SfParallaxView</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			Underway<br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/radial-menu/getting-started">SfRadialMenu</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
 			Underway<br/>
@@ -513,7 +499,31 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 	</tr>
 	<tr>
 	    <td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/diagram/getting-started">SfDiagram</a><br/>
+			<a href="https://help.syncfusion.com/xamarin/rotator/getting-started">SfRotator</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			Underway<br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/stepprogressbar/gettingstarted">SfStepProgressBar</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			Underway<br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/sunburst-chart/getting-started">SfSunburstChart</a><br/>
+		</td>
+		<td rowspan="1" valign="top">
+			Underway<br/>
+		</td>
+	</tr>
+	<tr>
+	    <td rowspan="1" valign="top">
+			<a href="https://help.syncfusion.com/xamarin/treemap/getting-started">SfTreemap</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
 			Underway<br/>

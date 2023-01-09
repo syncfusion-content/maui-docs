@@ -19,7 +19,7 @@ Color in the [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 
 ### Stroke
 
-The [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_BorderColor) property is used for setting color to the stroke of [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1).
+The [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_Stroke) property is used for setting color to the stroke of [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1).
 
 {% tabs %}
 
@@ -275,7 +275,7 @@ You can customize the height of the avatar view using the  [HeightRequest](https
 
 ### Stroke Thickness
 
-You can customize the thickness of the avatar view using the [StrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_BorderThickness) property.
+You can customize the thickness of the avatar view using the [StrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_StrokeThickness) property.
 
 {% tabs %}
 
