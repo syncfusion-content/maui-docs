@@ -277,10 +277,15 @@ A marker, also known as a symbol, is used to determine or highlight the position
 
 <chart:SfCartesianChart>
 ...
- <chart:LineSeries XBindingPath="Year"
-                   YBindingPath="Percentage"
+ <chart:LineSeries XBindingPath="Demand"
+                   YBindingPath="Year2010"
                    ItemsSource="{Binding Data}"
                    ShowMarkers="True"/>
+
+ <chart:LineSeries XBindingPath="Demand"
+                   YBindingPath="Year2011"
+                   ItemsSource="{Binding Data}"
+                   ShowMarkers="True"/>                  
 
 </chart:SfCartesianChart>
 
@@ -293,8 +298,16 @@ SfCartesianChart chart = new SfCartesianChart();
 ...
 LineSeries series = new LineSeries()
 {
-    XBindingPath = "Year",
-    YBindingPath = "Percentage",
+    XBindingPath = "Demand",
+    YBindingPath = "Year2010",
+    ItemsSource = new ViewModel().Data,
+    ShowMarkers= true,
+ };
+
+LineSeries series = new LineSeries()
+{
+    XBindingPath = "Demand",
+    YBindingPath = "Year2011",
     ItemsSource = new ViewModel().Data,
     ShowMarkers= true,
  };
