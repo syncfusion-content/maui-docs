@@ -117,7 +117,7 @@ You can find the platforms supported by each .NET MAUI control as below.
 	</tr>
 	<tr>
 		<td>
-			<a href="/maui/linear-gauge/overview">Funnel Chart</a><br/>
+			<a href="/maui/funnel-charts/overview">Funnel Charts</a><br/>
 		</td>
 		<td>
 		Yes<br/>
@@ -168,7 +168,7 @@ You can find the platforms supported by each .NET MAUI control as below.
 	</tr>
 	<tr>
 		<td>
-			<a href="/maui/pyramid-charts/overview">Pyramid Chart</a><br/>
+			<a href="/maui/pyramid-charts/overview">Pyramid Charts</a><br/>
 		</td>
 		<td>
 		Yes<br/>
