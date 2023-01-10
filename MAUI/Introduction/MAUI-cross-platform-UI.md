@@ -168,7 +168,7 @@ You can find the platforms supported by each .NET MAUI control as below.
 	</tr>
 	<tr>
 		<td>
-			<a href="/maui/pyramidchart/overview">Pyramid Chart</a><br/>
+			<a href="/maui/pyramid-charts/overview">Pyramid Chart</a><br/>
 		</td>
 		<td>
 		Yes<br/>
@@ -225,7 +225,7 @@ You can find the platforms supported by each .NET MAUI control as below.
 			LAYOUT<br/>
 		</td>
 	    <td>
-			<a href="/maui/backdrop/overview ">Backdrop Page</a><br/>
+			<a href="/maui/backdrop/overview">Backdrop Page</a><br/>
 		</td>
 		<td>
 		Yes<br/>
@@ -617,7 +617,7 @@ You can find the platforms supported by each .NET MAUI control as below.
 	    VIEWER<br/>
 		</td>
 		<td>
-			<a href="/maui/pdfviewer/overview">PDF Viewer</a><br/>
+			<a href="/maui/pdf-viewer/overview">PDF Viewer</a><br/>
 		</td>
 		<td>
 		Yes<br/>
