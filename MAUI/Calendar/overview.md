@@ -15,55 +15,33 @@ Syncfusion .NET MAUI Calendar (SfCalendar) is a calendar control that allows use
 
 * **Multiple calendar view modes**: For selection and navigation, use Month, Year, Decade, and Century calendar views.
 
-   {% column %}
    ![Month view in .NET MAUI Calendar.](images/overview/maui-month-view.png)
-   {% endcolumn %}
 
-   {% column %}
    ![Year view in .NET MAUI Calendar.](images/overview/maui-year-view.png)
-   {% endcolumn %}
 
-   {% column %}
    ![Decade view in .NET MAUI Calendar.](images/overview/maui-decade-view.png)
-   {% endcolumn %}
 
-   {% column %}
    ![Century view in .NET MAUI Calendar.](images/overview/maui-century-view.png)
-   {% endcolumn %}
 
 * **Quick navigation**: You can easily navigate to the desired date using different calendar views in the `SfCalendar`.
 
 * **Enable and disable built-in view switching**: Restricts or enables navigation to different calendar views using interaction.
 
-   {% column %}
    ![Month view single selection in .NET MAUI Calendar.](images/overview/maui-month-view-single-selection.png)
-   {% endcolumn %}
 
-   {% column %}
    ![Year view single selection in .NET MAUI Calendar.](images/overview/maui-year-view-single-selection.png)
-   {% endcolumn %}
 
-   {% column %}
    ![Decade view single selection in .NET MAUI Calendar.](images/overview/maui-decade-view-single-selection.png)
-   {% endcolumn %}
 
-   {% column %}
    ![Century view single selection in .NET MAUI Calendar.](images/overview/maui-century-view-single-selection.png)
-   {% endcolumn %}
 
 * **Date selection**: Date selection allows you to select the Single date, Multiple dates or a Range of dates by interaction or programmatic selection.
 
-   {% column %}
    ![Single selection in .NET MAUI Calendar.](images/overview/maui-month-view-single-selection.png)
-   {% endcolumn %}
 
-   {% column %}
    ![Multiple selection in .NET MAUI Calendar.](images/overview/maui-multiple-selection.png)
-   {% endcolumn %}
 
-   {% column %}
    ![Range selection in .NET MAUI Calendar.](images/overview/maui-range-selection.png)
-   {% endcolumn %}
 
 * **Limit date selection**: Restricts interaction and navigation beyond the specified minimum and maximum dates.
 
@@ -79,13 +57,9 @@ Syncfusion .NET MAUI Calendar (SfCalendar) is a calendar control that allows use
 
 * **Highlight weekends and special dates**: In MAUI Calendar, you can highlight special dates and weekend dates in the month view using different background colors and text styles.
 
-   {% column %}
    ![Weekend days highlighted in .NET MAUI Calendar.](images/overview/maui-weekends-dates.png)
-   {% endcolumn %}
 
-   {% column %}
    ![Special dates highlighted in .NET MAUI Calendar.](images/overview/maui-special-dates.png)
-   {% endcolumn %}
 
 * **Right to left (RTL)**: The Calendars' text direction can be changed by using the `Right-to-left` property. Enables the user to work with RTL languages, such as Hebrew and Arabic.
 
