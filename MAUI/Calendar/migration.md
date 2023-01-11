@@ -708,7 +708,7 @@ this.Content = calendar;
 </tr>
 <tr>
 <td>{{'[HeaderFontSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_HeaderFontSize)'| markdownify }}</td>
-<td>{{'[FontSize(From [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarHeaderView.html#Syncfusion_Maui_Calendar_CalendarHeaderView_TextStyle) of [HeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarHeaderView.html) in SfCalendar)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarTextStyle.html#Syncfusion_Maui_Calendar_CalendarTextStyle_Font Size
+<td>{{'[FontSize(From [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarHeaderView.html#Syncfusion_Maui_Calendar_CalendarHeaderView_TextStyle) of [HeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarHeaderView.html) in SfCalendar)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarTextStyle.html#Syncfusion_Maui_Calendar_CalendarTextStyle_FontSize)'| markdownify }}</td>
 <td>Gets or sets the font size of the text style.</td>
 </tr>
 <tr>
