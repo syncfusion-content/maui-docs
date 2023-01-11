@@ -1,20 +1,20 @@
 ---
 layout: post
 title: Getting started with MAUI Calendar control | Syncfusion
-description: Learn here all about getting started with Syncfusion .NET MAUI Calendar(SfCalendar) control and its basic features.
+description: Learn here all about getting started with Syncfusion .NET MAUI Calendar (SfCalendar) control and its basic features.
 platform: maui
 control: SfCalendar
 documentation: ug
 ---
 
 # Getting started with .NET MAUI Calendar (SfCalendar)
-This section explains the steps required to add the Calendar control. This section covers only basic features needed to get started with Syncfusion Calendar.
+This section explains how to add the Calendar control. This section covers only the basic features needed to get started with Syncfusion Calendar.
 
 ## Creating an application using the .NET MAUI Calendar
 
 1. Create a new .NET MAUI application in Visual Studio.
 
-2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfCalendar to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Calendar](https://www.nuget.org/packages/Syncfusion.Maui.Calendar), and then install it.
+2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add `SfCalendar` to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Calendar](https://www.nuget.org/packages/Syncfusion.Maui.Calendar), and then install it.
 
 3. To initialize the control, import the control namespace `Syncfusion.Maui.Calendar` in XAML or C# code.
 
@@ -51,7 +51,7 @@ public partial class MainPage : ContentPage
 
 ## Register the handler
 
-The `Syncfusion.Maui.Core` nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
+The `Syncfusion.Maui.Core` NuGet  is a dependent package for all Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
 
 {% tabs %}
 {% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
@@ -134,7 +134,7 @@ The [Calendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCa
 
 The selection details can be obtained by using the [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectionChanged) event of the calendar. It returns `CalendarSelectionChangedEventArgs`, which holds the details about the selected date or range.
 
-The following code shows the Calendar with `Multiple` as the Selection mode.
+The following code explains how to show the Calendar with `Multiple` as the Selection mode.
 
 {% tabs %}  
 {% highlight xaml tabtitle="MainPage.xaml" %}
