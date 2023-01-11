@@ -107,7 +107,7 @@ this.Calendar.View = CalendarView.Month;
 
 The Calendar control is rendered with `Sunday` as the first day of the week and it allows customization to change the first day of the week using the [FirstDayOfWeek](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_FirstDayOfWeek) property in month view.
 
-The following code shows the Calendar with `Monday` as the first day of the week.
+The following code explains how to show the Calendar with `Monday` as the first day of the week.
 
 {% tabs %}  
 {% highlight xaml tabtitle="MainPage.xaml" %}
