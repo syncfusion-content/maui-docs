@@ -459,7 +459,7 @@ this.Content = calendar;
 <tr>
 <td>{{'[ToggleDaySelection](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_ToggleDaySelection)'| markdownify }}</td>
 <td>{{'[CanToggleDaySelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_CanToggleDaySelection)'| markdownify }}</td>
-<td>Gets or sets a value indicating whether the selected date is deselectable through interaction on single selection mode of SfCalendar.</td>
+<td>Gets or sets a value indicating whether the selected date is deselect through interaction on single selection mode of SfCalendar.</td>
 </tr>
 <tr>
 <td>{{'[TransitionMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_TransitionMode)'| markdownify }}</td>
