@@ -9,8 +9,8 @@ documentation: ug
 
 # Date Restrictions in .NET MAUI Calendar (SfCalendar)
 
-## Minimum dateTime
-The [MinimumDateTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_MinimumDate) property will restrict the backward navigation of date selection and also you cannot swipe beyond the minimum date range.
+## Minimum date
+The [MinimumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_MinimumDate) property will restrict the backward navigation of date selection and also you cannot swipe beyond the minimum date range.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -29,8 +29,8 @@ The [MinimumDateTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calend
 
 ![Month view Minimum DateTime in .NET MAUI Calendar.](images/date-restriction/maui-month-view-minimum-date.png)
 
-## Maximum dateTime
-The [MaximumDateTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_MaximumDate) property will restrict the forward navigation of date selection and also you cannot swipe beyond the maximum date range.
+## Maximum date
+The [MaximumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_MaximumDate) property will restrict the forward navigation of date selection and also you cannot swipe beyond the maximum date range.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
