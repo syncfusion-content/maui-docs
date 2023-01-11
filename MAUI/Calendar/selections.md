@@ -44,7 +44,7 @@ Eg:
 
 
 ## Multiple selection
-The `Multiple` selection can be performed in the Calendar by setting the `CalendarSelectionMode` property to `Multiple`. In this selection, you can select multiple dates from the cell. If you want to remove the selected cell, click the same cell again.
+The `Multiple` selection can be performed in the Calendar by setting the `CalendarSelectionMode` property to `Multiple`. In this selection, you can select multiple dates from the calendar. If you want to remove the selected cell, click the same cell again.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -66,7 +66,7 @@ this.Calendar.SelectionMode = CalendarSelectionMode.Multiple;
 
 
 ## Range selection
-The `Range` selection can be performed in the Calendar by setting the `CalendarSelectionMode` property to `Range`. In this Selection, you can able to select a range of dates from the cell by interacting the cell either tap or swipe action. Swipe action can only performed by setting the [EnableSwipeSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_EnableSwipeSelection) property to `true` in the calendar.
+The `Range` selection can be performed in the Calendar by setting the `CalendarSelectionMode` property to `Range`. In this Selection, you can able to select a range of dates from the calendar by interacting the cell either tap or swipe action. Swipe action can only performed by setting the [EnableSwipeSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_EnableSwipeSelection) property to `true` in the calendar.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
