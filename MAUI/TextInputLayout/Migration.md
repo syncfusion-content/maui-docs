@@ -42,6 +42,10 @@ To migrate easier from Xamarin SfTextInputLayout to .NET MAUI SfTextInputLayout,
 <td>{{'[ContainerBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ContainerBackground)'| markdownify }}</td>
 <td>Gets or sets the background of the container.</td></tr>
 <tr>
+<td>{{'[InputView](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.TextInputLayout.SfTextInputLayout.html#Syncfusion_XForms_TextInputLayout_SfTextInputLayout_InputView)'| markdownify }}</td>
+<td>{{'[Content](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfContentView.html#Syncfusion_Maui_Core_SfContentView_Content)'| markdownify }}</td>
+<td>Gets or sets the value for input view to place behind the hint label.</td></tr>
+<tr>
 <td>{{'[FocusedColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.TextInputLayout.SfTextInputLayout.html#Syncfusion_XForms_TextInputLayout_SfTextInputLayout_FocusedColor)'| markdownify }}<br/>{{'[UnfocusedColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.TextInputLayout.SfTextInputLayout.html#Syncfusion_XForms_TextInputLayout_SfTextInputLayout_UnfocusedColor)'| markdownify }}<br/>{{'[ErrorColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.TextInputLayout.SfTextInputLayout.html#Syncfusion_XForms_TextInputLayout_SfTextInputLayout_ErrorColor)'| markdownify }}</td>
 <td>{{'[Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_Stroke)'| markdownify }}</td>
 <td>Gets or sets the border color or base line color based on container and its states.</td></tr>
