@@ -939,6 +939,10 @@ chart.ZoomPanBehavior = zooming;
 * Support setting the maximum zoom level.
 * Event for zooming and panning.
 
+## Known issue 
+
+* [iOS] [#9135](https://github.com/dotnet/maui/issues/9135) - The chart legend was taking up a huge amount of vertical space or becoming hidden.
+
 ## Unsupported features from Xamarin.Forms
 
 * Only continuous series will support data marker symbols.
