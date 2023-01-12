@@ -145,7 +145,7 @@ The password visibility toggle is used to show or hide the visibility of charact
 var inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Password";
 inputLayout.EnablePasswordVisibilityToggle = true;
-inputLayout.InputView = new Entry() { Text = "1234" }; 
+inputLayout.Content = new Entry() { Text = "1234" }; 
 
 {% endhighlight %}
 
