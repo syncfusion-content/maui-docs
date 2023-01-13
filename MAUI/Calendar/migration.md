@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrate from Xamarin.Forms SfCalendar to .NET MAUI SfCalendar 
 
-To make the migration from the `Xamarin SfCalendar` to `.NET MAUI SfCalendar` easier, most of the APIs from the Xamarin SfCalendar were kept in the.NET MAUI SfCalendar. However, to maintain the consistency of API naming in the .NET MAUI SfCalendar, some of the APIs have been renamed. Please find the difference in the following topics.
+To make the migration from the [Xamarin SfCalendar](https://www.syncfusion.com/xamarin-ui-controls/xamarin-calendar) to [.NET MAUI SfCalendar](https://www.syncfusion.com/maui-controls/maui-calendar) easier, most of the APIs from the Xamarin SfCalendar were kept in the.NET MAUI SfCalendar. However, to maintain the consistency of API naming in the .NET MAUI SfCalendar, some of the APIs have been renamed. Please find the difference in the following topics.
 
 ## Namespaces 
 
@@ -94,123 +94,102 @@ this.Content = calendar;
 <tr>
 <th>Xamarin SfCalendar</th>
 <th>.NET MAUI SfCalendar</th>
-<th>Description</th>
-</tr>
-
+<th>Description</th></tr>
 <tr>
-<td>SelectionRange</td>
-<td>CalendarDateRange</td>
+<td>{{'[SelectionRange](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SelectionRange.html)'| markdownify }}</td>
+<td>{{'[CalendarDateRange](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarDateRange.html)'| markdownify }}</td>
 <td>Represents a class which holds the start and end date of the range in SfCalendar.</td>
-</tr>
-
+<tr> 
 <tr>
-<td>MonthViewSettings</td>
-<td>CalendarMonthView</td>
+<td>{{'[MonthViewSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html)' | markdownify }}</td>
+<td>{{'[CalendarMonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html)' | markdownify }}</td>
 <td>Represents a class which is used to configure all the properties and styles of calendar month view.</td>
-</tr>
-
+</tr> 
 <tr>
-<td>YearViewSettings</td>
-<td>CalendarYearView</td>
+<td>{{'[YearViewSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.YearViewSettings.html)' | markdownify }}</td>
+<td>{{'[CalendarYearView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarYearView.html)' | markdownify }}</td>
 <td>Represents a class which is used to used to configure all the properties and styles of calendar year, decade and century view.</td>
 </tr>
-
 <tr>
-<td>CalendarTappedEventArgs</td>
-<td>CalendarTappedEventArgs</td>
+<td>{{'[CalendarTappedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.CalendarTappedEventArgs.html)' | markdownify }}</td>
+<td>{{'[CalendarTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarTappedEventArgs.html)' | markdownify }}</td>
 <td>Represents a class which is used to hold the tap interaction event details and it occurs when the user clicks or touch on the calendar elements.</td>
-</tr>
-
+</tr> 
 <tr>
-<td>DayCellHoldingEventArgs</td>
-<td>CalendarLongPressedEventArgs</td>
+<td>{{'[DayCellHoldingEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.DayCellHoldingEventArgs.html)' | markdownify }}</td>
+<td>{{'[CalendarLongPressedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarLongPressedEventArgs.html)' | markdownify }}</td>
 <td>Represents a class which is used to hold the long press interaction event details and it occurs when the user long press inside the calendar elements.</td>
-</tr>
-
+</tr> 
 <tr>
-<td>MonthChangedEventArgs</td>
-<td>CalendarViewChangedEventArgs</td>
+<td>{{'[MonthChangedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthChangedEventArgs.html)' | markdownify }}</td>
+<td>{{'[CalendarViewChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarViewChangedEventArgs.html)' | markdownify }}</td>
 <td>Represents a class which is used to hold the view changed event details.</td>
-</tr>
-
+</tr> 
 <tr>
-<td>SelectionChangedEventArgs</td>
-<td>CalendarSelectionChangedEventArgs</td>
+<td>{{'[SelectionChangedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SelectionChangedEventArgs.html)' | markdownify }}</td>
+<td>{{'[CalendarSelectionChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarSelectionChangedEventArgs.html)' | markdownify }}</td>
 <td>Represents a class which is used to hold the selection changed event details.</td>
-</tr>
-
+</tr> 
 <tr>
-<td>ViewModeChangedEventArgs</td>
-<td>CalendarViewChangedEventArgs</td>
+<td>{{'[ViewModeChangedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.ViewModeChangedEventArgs.html)' | markdownify }}</td>
+<td>{{'[CalendarViewChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarViewChangedEventArgs.html)' | markdownify }}</td>
 <td>Represents a class which is used to hold the view changed event details.</td>
-</tr>
-
+</tr> 
 <tr>
-<td>MonthLabelSettings</td>
+<td>{{'[MonthLabelSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthLabelSettings.html)' | markdownify }}</td>
+<td>Nil</td>
+<td>Not Supported.</td>
+</tr> 
+<tr>
+<td>{{'[CalendarInlineEvent](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.CalendarInlineEvent.html)' | markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>CalendarInlineEvent</td>
+<td>{{'[MonthEventParameters](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthEventParameters.html)' | markdownify }}</td>
+<td>Nil</td>
+<td>Not Supported.</td>
+</tr> 
+<tr>
+<td>{{'[InlineEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.InlineEventArgs.html)' | markdownify }}</td>
+<td>Nil</td>
+<td>Not Supported.</td>
+</tr> 
+<tr>
+<td>{{'[InlineItemTappedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.InlineItemTappedEventArgs.html)' | markdownify }}</td>
+<td>Nil</td>
+<td>Not Supported.</td>
+</tr> 
+<tr>
+<td>{{'[InlineToggledEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.InlineToggledEventArgs.html)' | markdownify }}</td>
+<td>Nil</td>
+<td>Not Supported.</td>
+</tr> 
+<tr>
+<td>{{'[MonthCell](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthCell.html)' | markdownify }}</td>
+<td>Nil</td>
+<td>Not Supported.</td>
+</tr> 
+<tr>
+<td>{{'[MonthCellLoadedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthCellLoadedEventArgs.html)' | markdownify }}</td>
+<td>Nil</td>
+<td>Not Supported.</td>
+</tr> 
+<tr>
+<td>{{'[MonthChangingEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthChangingEventArgs.html)' | markdownify }}</td>
+<td>Nil</td>
+<td>Not Supported.</td>
+</tr> 
+<tr>
+<td>{{'[YearCell](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.YearCell.html)' | markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>MonthEventParameters</td>
+<td>{{'[YearCellLoadedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.YearCellLoadedEventArgs.html)' | markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
-<tr>
-<td>InlineEventArgs</td>
-<td>Nil</td>
-<td>Not Supported.</td>
-</tr>
-
-<tr>
-<td>InlineItemTappedEventArgs</td>
-<td>Nil</td>
-<td>Not Supported.</td>
-</tr>
-
-<tr>
-<td>InlineToggledEventArgs</td>
-<td>Nil</td>
-<td>Not Supported.</td>
-</tr>
-
-<tr>
-<td>MonthCell</td>
-<td>Nil</td>
-<td>Not Supported.</td>
-</tr>
-
-<tr>
-<td>MonthCellLoadedEventArgs</td>
-<td>Nil</td>
-<td>Not Supported.</td>
-</tr>
-
-<tr>
-<td>MonthChangingEventArgs</td>
-<td>Nil</td>
-<td>Not Supported.</td>
-</tr>
-
-<tr>
-<td>YearCell</td>
-<td>Nil</td>
-<td>Not Supported.</td>
-</tr>
-
-<tr>
-<td>YearCellLoadedEventArgs</td>
-<td>Nil</td>
-<td>Not Supported.</td>
-</tr>
-
 </table>
 
 ## Properties 
@@ -222,8 +201,7 @@ The following code example, explains how to initialize the properties of the `Xa
 <table>
 <tr>
 <th>Xamarin SfCalendar</th>
-<th>.NET MAUI SfCalendar</th>
-</tr>
+<th>.NET MAUI SfCalendar</th></tr>
 <tr>
 <td>
 {% tabs %}
@@ -288,271 +266,226 @@ this.Content = calendar;
 <th>.NET MAUI SfCalendar</th>
 <th>Description</th>
 </tr>
-
 <tr>
-<td>AgendaViewHeight</td>
+<td>{{'[AgendaViewHeight](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_AgendaViewHeight)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>BlackoutDates </td>
-<td>SelectableDayPredicate</td>
+<td>{{'[BlackoutDates](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_BlackoutDates)'| markdownify }}</td>
+<td>{{'[SelectableDayPredicate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectableDayPredicate)'| markdownify }}</td>
 <td>Gets or sets the function to decide whether the cell is selectable or not in the calendar.</td>
 </tr>
-
 <tr>
-<td>BlackoutDatesViewMode</td>
+<td>{{'[BlackoutDatesViewMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_BlackoutDatesViewMode)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>CustomDayLabels</td>
+<td>{{'[CustomDayLabels](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_CustomDayLabels)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>DataSource</td>
+<td>{{'[DataSource](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_DataSource)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>DisplayDate</td>
-<td>DisplayDate</td>
+<td>{{'[DisplayDate](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_DisplayDate)'| markdownify }}</td>
+<td>{{'[DisplayDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_DisplayDate)'| markdownify }}</td>
 <td>Gets or sets the display date to programmatically navigate the dates in the SfCalendar.</td>
 </tr>
-
 <tr>
-<td>EnableDatesInPast</td>
-<td>EnablePastDates</td>
+<td>{{'[EnableDatesInPast](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_EnableDatesInPast)'| markdownify }}</td>
+<td>{{'[EnablePastDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_EnablePastDates)'| markdownify }}</td>
 <td>Gets or sets a value indicating whether the dates enabled or disabled before today date.</td>
 </tr>
-
 <tr>
-<td>EnableSwiping</td>
-<td>EnableSwipeSelection</td>
+<td>{{'[EnableSwiping](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_EnableSwiping)'| markdownify }}</td>
+<td>{{'[EnableSwipeSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_EnableSwipeSelection)'| markdownify }}</td>
 <td>Gets or sets a value indicating whether the swiping selection enabled for select the date range.</td>
 </tr>
-
 <tr>
-<td>FirstDayofWeek</td>
-<td>FirstDayOfWeek(From MonthView)</td>
+<td>{{'[FirstDayofWeek](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_FirstDayofWeek)'| markdownify }}</td>
+<td>{{'[FirstDayOfWeek(From MonthView)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_FirstDayOfWeek)'| markdownify }}</td>
 <td>Gets or sets the day of week that used to change the default first day of week in SfCalendar.</td>
 </tr>
-
 <tr>
-<td>HeaderHeight</td>
-<td>Height(From HeaderView)</td>
+<td>{{'[HeaderHeight](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_HeaderHeight)'| markdownify }}</td>
+<td>{{'[Height(From HeaderView)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarHeaderView.html#Syncfusion_Maui_Calendar_CalendarHeaderView_Height)'| markdownify }}</td>
 <td>Gets or sets the value to specify the height of header view on SfCalendar.</td>
 </tr>
-
 <tr>
-<td>HeaderView</td>
+<td>{{'[HeaderView](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_HeaderView)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>HoldCommand</td>
+<td>{{'[HoldCommand](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_HoldCommand)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>InlineViewMode</td>
+<td>{{'[InlineViewMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_InlineViewMode)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>Locale</td>
+<td>{{'[Locale](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_Locale)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>MaxDate</td>
-<td>MaximumDate</td>
+<td>{{'[MaxDate](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_MaxDate)'| markdownify }}</td>
+<td>{{'[MaximumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_MaximumDate)'| markdownify }}</td>
 <td>Gets or sets the maximum display date to restrict the visible dates in the SfCalendar.</td>
 </tr>
-
 <tr>
-<td>MaximumEventIndicatorCount</td>
+<td>{{'[MaximumEventIndicatorCount](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_MaximumEventIndicatorCount)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>MinDate</td>
-<td>MinimumDate</td>
+<td>{{'[MinDate](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_MinDate)'| markdownify }}</td>
+<td>{{'[MinimumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_MinimumDate)'| markdownify }}</td>
 <td>Gets or sets the minimum display date to restrict the visible dates in the SfCalendar.</td>
 </tr>
-
 <tr>
-<td>MonthChangedCommand</td>
+<td>{{'[MonthChangedCommand](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_MonthChangedCommand)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>MonthViewSettings</td>
-<td>MonthView</td>
+<td>{{'[MonthViewSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_MonthViewSettings)'| markdownify }}</td>
+<td>{{'[MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_MonthView)'| markdownify }}</td>
 <td>Gets or sets the properties which allows to customize the calendar month view.</td>
 </tr>
-
 <tr>
-<td>MoveToDate</td>
-<td>DisplayDate</td>
+<td>{{'[MoveToDate](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_MoveToDate)'| markdownify }}</td>
+<td>{{'[DisplayDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_DisplayDate)'| markdownify }}</td>
 <td>Gets or sets the display date to programmatically navigate the dates in the SfCalendar.</td>
 </tr>
-
 <tr>
-<td>NavigateToMonthOnInActiveDatesSelection</td>
+<td>{{'[NavigateToMonthOnInActiveDatesSelection](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_NavigateToMonthOnInActiveDatesSelection)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>NavigationArrowThickness</td>
+<td>{{'[NavigationArrowThickness](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_NavigationArrowThickness)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>NavigationButtonHeight</td>
+<td>{{'[NavigationButtonHeight](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_NavigationButtonHeight)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>NavigationButtonWidth</td>
+<td>{{'[NavigationButtonWidth](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_NavigationButtonWidth)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>NavigationDirection</td>
-<td>NavigationDirection</td>
+<td>{{'[NavigationDirection](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_NavigationDirection)'| markdownify }}</td>
+<td>{{'[NavigationDirection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_NavigationDirection)'| markdownify }}</td>
 <td>Gets or sets a value which determines the direction of the calendar scrolls.</td>
 </tr>
-
 <tr>
-<td>NullableSelectedDate</td>
-<td>SelectedDate</td>
+<td>{{'[NullableSelectedDate](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_NullableSelectedDate)'| markdownify }}</td>
+<td>{{'[SelectedDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectedDate)'| markdownify }}</td>
 <td>Gets or sets the selected date to select the particular date of the calendar.</td>
 </tr>
-
 <tr>
-<td>NumberOfWeeksInView</td>
-<td>NumberOfVisibleWeeks(From MonthView)</td>
+<td>{{'[NumberOfWeeksInView](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_NumberOfWeeksInView)'| markdownify }}</td>
+<td>{{'[NumberOfVisibleWeeks(From MonthView)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_NumberOfVisibleWeeks)'| markdownify }}</td>
 <td>Gets or sets a value to display the number of weeks in calendar month view.</td>
 </tr>
-
 <tr>
-<td>SelectedDate</td>
-<td>SelectedDate</td>
+<td>{{'[SelectedDate](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_SelectedDate)'| markdownify }}</td>
+<td>{{'[SelectedDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectedDate)'| markdownify }}</td>
 <td>Gets or sets the selected date to select the particular date of the calendar.</td>
 </tr>
-
 <tr>
-<td>SelectedDates</td>
-<td>SelectedDates</td>
+<td>{{'[SelectedDates](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_SelectedDates)'| markdownify }}</td>
+<td>{{'[SelectedDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectedDates)'| markdownify }}</td>
 <td>Gets or sets the selected dates to select the multiple dates of the calendar.</td>
 </tr>
-
 <tr>
-<td>SelectedRange</td>
-<td>SelectedDateRange</td>
+<td>{{'[SelectedRange](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_SelectedRange)'| markdownify }}</td>
+<td>{{'[SelectedDateRange](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectedDateRange)'| markdownify }}</td>
 <td>Gets or sets the selected date range to select the range of dates of the calendar.</td>
 </tr>
-
 <tr>
-<td>SelectionChangedCommand</td>
+<td>{{'[SelectionChangedCommand](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_SelectionChangedCommand)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>SelectionMode</td>
-<td>SelectionMode</td>
+<td>{{'[SelectionMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_SelectionMode)'| markdownify }}</td>
+<td>{{'[SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectionMode)'| markdownify }}</td>
 <td>Gets or sets the selection mode of the calendar.</td>
 </tr>
-
 <tr>
-<td>ShowHeader</td>
+<td>{{'[ShowHeader](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_ShowHeader)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>ShowInlineEvents</td>
+<td>{{'[ShowInlineEvents](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_ShowInlineEvents)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>ShowLeadingAndTrailingDays</td>
-<td>ShowTrailingAndLeadingDates</td>
+<td>{{'[ShowLeadingAndTrailingDays](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_ShowLeadingAndTrailingDays)'| markdownify }}</td>
+<td>{{'[ShowTrailingAndLeadingDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_ShowTrailingAndLeadingDates)'| markdownify }}</td>
 <td>Gets or sets a value indicating whether to displays the leading and trailing dates in the month, decade, century views of the SfCalendar.</td>
 </tr>
-
 <tr>
-<td>ShowNavigationButtons</td>
-<td>ShowNavigationArrows(From HeaderView)</td>
+<td>{{'[ShowNavigationButtons](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_ShowNavigationButtons)'| markdownify }}</td>
+<td>{{'[ShowNavigationArrows(From HeaderView)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarHeaderView.html#Syncfusion_Maui_Calendar_CalendarHeaderView_ShowNavigationArrows)'| markdownify }}</td>
 <td>Gets or sets a value indicating whether to displays the navigation arrows on the header view of the SfCalendar.</td>
 </tr>
-
 <tr>
-<td>ShowYearView</td>
-<td>AllowViewNavigation</td>
+<td>{{'[ShowYearView](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_ShowYearView)'| markdownify }}</td>
+<td>{{'[AllowViewNavigation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_AllowViewNavigation)'| markdownify }}</td>
 <td>Gets or sets a value indicating whether the navigation enabled on year, decade and century cell interaction.</td>
 </tr>
-
 <tr>
-<td>TapCommand</td>
+<td>{{'[TapCommand](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_TapCommand)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>ToggleDaySelection</td>
-<td>CanToggleDaySelection</td>
-<td>Gets or sets a value indicating whether the selected date is deselectable through interaction on single selection mode of SfCalendar.</td>
+<td>{{'[ToggleDaySelection](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_ToggleDaySelection)'| markdownify }}</td>
+<td>{{'[CanToggleDaySelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_CanToggleDaySelection)'| markdownify }}</td>
+<td>Gets or sets a value indicating whether the selected date is deselect through interaction on single selection mode of SfCalendar.</td>
 </tr>
-
 <tr>
-<td>TransitionMode </td>
+<td>{{'[TransitionMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_TransitionMode)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>ViewMode</td>
-<td>View</td>
+<td>{{'[ViewMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_ViewMode)'| markdownify }}</td>
+<td>{{'[View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_View)'| markdownify }}</td>
 <td>Gets or sets the built-in views such as month, year, decade and century of the SfCalendar.</td>
 </tr>
-
 <tr>
-<td>VisibleDates</td>
+<td>{{'[VisibleDates](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_VisibleDates)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>YearViewMode</td>
+<td>{{'[YearViewMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_YearViewMode)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>YearViewSettings</td>
-<td>YearView</td>
+<td>{{'[YearViewSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_YearViewSettings)'| markdownify }}</td>
+<td>{{'[YearView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_YearView)'| markdownify }}</td>
 <td>Gets or sets the properties which allows to customize the calendar year, decade and century views.</td>
 </tr>
-
 </table>
 
 ### MonthViewSettings
@@ -633,289 +566,241 @@ this.Content = calendar;
 <th>.NET MAUI SfCalendar</th>
 <th>Description</th>
 </tr>
-
 <tr>
-<td>AgendaSelectedDateColor</td>
+<td>{{'[AgendaSelectedDateColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_AgendaSelectedDateColor)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>BlackoutColor</td>
-<td>DisabledDatesTextStyle</td>
+<td>{{'[BlackoutColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_BlackoutColor)'| markdownify }}</td>
+<td>{{'[DisabledDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_DisabledDatesTextStyle)'| markdownify }}</td>
 <td>Gets or sets the text style of the disabled month cells text, that used to customize the text color, font, font size, font family and font attributes.</td>
 </tr>
-
 <tr>
-<td>BorderColor</td>
+<td>{{'[BorderColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_BorderColor)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>CellGridOptions</td>
+<td>{{'[CellGridOptions](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_CellGridOptions)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>CellTemplate</td>
+<td>{{'[CellTemplate](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_CellTemplate)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>CurrentMonthBackgroundColor</td>
-<td>Background</td>
+<td>{{'[CurrentMonthBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_CurrentMonthBackgroundColor)'| markdownify }}</td>
+<td>{{'[Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_Background)'| markdownify }}</td>
 <td>Gets or sets the background for the month cells of the calendar month view.</td>
 </tr>
-
 <tr>
-<td>CurrentMonthTextColor</td>
-<td>TextColor(From TextStyle of MonthView)</td>
+<td>{{'[CurrentMonthTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_CurrentMonthTextColor)'| markdownify }}</td>
+<td>{{'[TextColor(From TextStyle of MonthView)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_TextStyle)'| markdownify }}</td>
 <td>Gets or sets the text color of the text style.</td>
 </tr>
-
 <tr>
-<td>DateSelectionColor</td>
-<td>SelectionBackground(From SfCalendar)</td>
+<td>{{'[DateSelectionColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_DateSelectionColor)'| markdownify }}</td>
+<td>{{'[SelectionBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectionBackground)'| markdownify }}</td>
 <td>Gets or sets the value that describes the highlight of selection based on selection mode of the calendar.</td>
 </tr>
-
 <tr>
-<td>DateTextAlignment</td>
+<td>{{'[DateTextAlignment](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_DateTextAlignment)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>DayCellFont</td>
+<td>{{'[DayCellFont](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_DayCellFont)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>DayCellFontFamily</td>
-<td>FontFamily(From TextStyle, TodayTextStyle, TrailingLeadingDatesTextStyle, DisabledDatesTextStyle, WeekendDatesTextStyle, SpecialDatesTextStyle)</td>
+<td>{{'[DayCellFontFamily](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_DayCellFontFamily)'| markdownify }}</td>
+<td>{{'[[FontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarTextStyle.html#Syncfusion_Maui_Calendar_CalendarTextStyle_FontFamily)(From [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_TextStyle), [TodayTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_TodayTextStyle), [TrailingLeadingDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_TrailingLeadingDatesTextStyle), [DisabledDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_DisabledDatesTextStyle), [WeekendDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_WeekendDatesTextStyle), [SpecialDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_SpecialDatesTextStyle) of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html))]'| markdownify }}</td>
 <td>Gets or sets the font family of the text style.</td>
 </tr>
-
 <tr>
-<td>DayFontSize</td>
-<td>FontSize(From TextStyle, TodayTextStyle, TrailingLeadingDatesTextStyle, DisabledDatesTextStyle, WeekendDatesTextStyle, SpecialDatesTextStyle)</td>
+<td>{{'[DayFontSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_DayFontSize)'| markdownify }}</td>
+<td>{{'[[FontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarTextStyle.html#Syncfusion_Maui_Calendar_CalendarTextStyle_FontSize)(From [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_TextStyle), [TodayTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_TodayTextStyle), [TrailingLeadingDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_TrailingLeadingDatesTextStyle), [DisabledDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_DisabledDatesTextStyle), [WeekendDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_WeekendDatesTextStyle), [SpecialDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_SpecialDatesTextStyle) of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html))]'| markdownify }}</td>
 <td>Gets or sets the font size of the text style.</td>
 </tr>
-
 <tr>
-<td>DayFontAttributes</td>
-<td>FontAttributes(From TextStyle, TodayTextStyle, TrailingLeadingDatesTextStyle, DisabledDatesTextStyle, WeekendDatesTextStyle, SpecialDatesTextStyle)</td>
+<td>{{'[DayFontAttributes](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_DayFontAttributes)'| markdownify }}</td>
+<td>{{'[[FontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarTextStyle.html#Syncfusion_Maui_Calendar_CalendarTextStyle_FontAttributes)(From [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_TextStyle), [TodayTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_TodayTextStyle), [TrailingLeadingDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_TrailingLeadingDatesTextStyle), [DisabledDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_DisabledDatesTextStyle), [WeekendDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_WeekendDatesTextStyle), [SpecialDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_SpecialDatesTextStyle) of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html))]'| markdownify }}</td>
 <td>Gets or sets the font attributes of the text style.</td>
 </tr>
-
 <tr>
-<td>DayHeaderBackgroundColor</td>
-<td>Background(From HeaderView of MonthView)</td>
+<td>{{'[DayHeaderBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_DayHeaderBackgroundColor)'| markdownify }}</td>
+<td>{{'[Background(From HeaderView of MonthView)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthHeaderView.html#Syncfusion_Maui_Calendar_CalendarMonthHeaderView_Background)'| markdownify }}</td>
 <td>Gets or sets the background of the view header view in SfCalendar.</td>
 </tr>
-
 <tr>
-<td>DayHeaderFont</td>
+<td>{{'[DayHeaderFont](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_DayHeaderFont)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>DayHeaderFontAttributes</td>
-<td>FontAttributes(From TextStyle of HeaderView in MonthView)</td>
+<td>{{'[DayHeaderFontAttributes](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_DayHeaderFont)'| markdownify }}</td>
+<td>{{'[FontAttributes(From TextStyle of HeaderView in MonthView)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthHeaderView.html#Syncfusion_Maui_Calendar_CalendarMonthHeaderView_TextStyle)'| markdownify }}</td>
 <td>Gets or sets the font attributes of the text style.</td>
 </tr>
-
 <tr>
-<td>DayHeaderFontFamily</td>
-<td>FontFamily(From TextStyle of HeaderView in MonthView)</td>
+<td>{{'[DayHeaderFontFamily](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_DayHeaderFontFamily)'| markdownify }}</td>
+<td>{{'[FontFamily(From TextStyle of HeaderView in MonthView)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthHeaderView.html#Syncfusion_Maui_Calendar_CalendarMonthHeaderView_TextStyle)'| markdownify }}</td>
 <td>Gets or sets the font family of the text style.</td>
 </tr>
-
 <tr>
-<td>DayHeaderFontSize</td>
-<td>FontSize(From TextStyle of HeaderView in MonthView)</td>
+<td>{{'[DayHeaderFontSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_DayHeaderFontSize)'| markdownify }}</td>
+<td>{{'[FontSize(From TextStyle of HeaderView in MonthView)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthHeaderView.html#Syncfusion_Maui_Calendar_CalendarMonthHeaderView_TextStyle)'| markdownify }}</td>
 <td>Gets or sets the font size of the text style.</td>
 </tr>
-
 <tr>
-<td>DayHeaderTextColor</td>
-<td>TextColor(From TextStyle of HeaderView in MonthView)</td>
+<td>{{'[DayHeaderTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_DayHeaderTextColor)'| markdownify }}</td>
+<td>{{'[TextColor(From TextStyle of HeaderView in MonthView)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthHeaderView.html#Syncfusion_Maui_Calendar_CalendarMonthHeaderView_TextStyle)'| markdownify }}</td>
 <td>Gets or sets the text color of the text style.</td>
 </tr>
-
 <tr>
-<td>DayHeaderFormat</td>
-<td>TextFormat(From HeaderView of MonthView)</td>
+<td>{{'[DayHeaderFormat](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_DayHeaderFormat)'| markdownify }}</td>
+<td>{{'[TextFormat(From HeaderView of MonthView)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthHeaderView.html#Syncfusion_Maui_Calendar_CalendarMonthHeaderView_TextStyle)'| markdownify }}</td>
 <td>Gets or sets the font attributes of the text style.</td>
 </tr>
-
 <tr>
-<td>DayHeight</td>
-<td>Height(From HeaderView of MonthView)</td>
+<td>{{'[DayHeight](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_DayHeight)'| markdownify }}</td>
+<td>{{'[Height(From HeaderView of MonthView)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthHeaderView.html#Syncfusion_Maui_Calendar_CalendarMonthHeaderView_Height)'| markdownify }}</td>
 <td>Gets or sets the value to specify the height of view header view on SfCalendar.</td>
 </tr>
-
 <tr>
-<td>DayLabelTextAlignment </td>
+<td>{{'[DayLabelTextAlignment](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_DayLabelTextAlignment)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>DisabledBackgroundColor</td>
-<td>DisabledDatesBackground</td>
+<td>{{'[DisabledBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_DisabledBackgroundColor)'| markdownify }}</td>
+<td>{{'[DisabledDatesBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_DisabledDatesBackground)'| markdownify }}</td>
 <td>Gets or sets the background for the disabled month cells of the calendar month view.</td>
 </tr>
-
 <tr>
-<td>DisabledTextColor</td>
-<td>TextColor(From DisabledDatesTextStyle)</td>
+<td>{{'[DisabledTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_DisabledTextColor)'| markdownify }}</td>
+<td>{{'[TextColor(From DisabledDatesTextStyle of MonthView)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_DisabledDatesTextStyle)'| markdownify }}</td>
 <td>Gets or sets the text color of the text style.</td>
 </tr>
-
 <tr>
-<td>HeaderBackgroundColor</td>
-<td>Background(From HeaderView of SfCalendar)</td>
+<td>{{'[HeaderBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_HeaderBackgroundColor)'| markdownify }}</td>
+<td>{{'[Background(From HeaderView of SfCalendar)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarHeaderView.html#Syncfusion_Maui_Calendar_CalendarHeaderView_Background)'| markdownify }}</td>
 <td>Gets or sets the background of the header view in SfCalendar.</td>
 </tr>
-
 <tr>
-<td>HeaderFont</td>
+<td>{{'[HeaderFont](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_HeaderFont)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>HeaderFontAttributes</td>
-<td>FontAttributes(From TextStyle of HeaderView in SfCalendar)</td>
+<td>{{'[HeaderFontAttributes](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_HeaderFontAttributes)'| markdownify }}</td>
+<td>{{'[FontAttributes(From [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarHeaderView.html#Syncfusion_Maui_Calendar_CalendarHeaderView_TextStyle) of [HeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarHeaderView.html) in SfCalendar)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarTextStyle.html#Syncfusion_Maui_Calendar_CalendarTextStyle_FontAttributes)'| markdownify }}</td>
 <td>Gets or sets the font attributes of the text style.</td>
 </tr>
-
 <tr>
-<td>HeaderFontFamily</td>
-<td>FontFamily(From TextStyle of HeaderView in SfCalendar)</td>
+<td>{{'[HeaderFontFamily](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_HeaderFontFamily)'| markdownify }}</td>
+<td>{{'[FontFamily(From [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarHeaderView.html#Syncfusion_Maui_Calendar_CalendarHeaderView_TextStyle) of [HeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarHeaderView.html) in SfCalendar)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarTextStyle.html#Syncfusion_Maui_Calendar_CalendarTextStyle_FontFamily)'| markdownify }}</td>
 <td>Gets or sets the font family of the text style.</td>
 </tr>
-
 <tr>
-<td>HeaderFontSize</td>
-<td>FontSize(From TextStyle of HeaderView in SfCalendar)</td>
+<td>{{'[HeaderFontSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_HeaderFontSize)'| markdownify }}</td>
+<td>{{'[FontSize(From [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarHeaderView.html#Syncfusion_Maui_Calendar_CalendarHeaderView_TextStyle) of [HeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarHeaderView.html) in SfCalendar)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarTextStyle.html#Syncfusion_Maui_Calendar_CalendarTextStyle_FontSize)'| markdownify }}</td>
 <td>Gets or sets the font size of the text style.</td>
 </tr>
-
 <tr>
-<td>HeaderTextColor</td>
-<td>TextColor(From TextStyle of HeaderView in SfCalendar)</td>
+<td>{{'[HeaderTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_HeaderTextColor)'| markdownify }}</td>
+<td>{{'[TextColor(From TextStyle of HeaderView in SfCalendar)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarHeaderView.html#Syncfusion_Maui_Calendar_CalendarHeaderView_TextStyle)'| markdownify }}</td>
 <td>Gets or sets the text color of the text style.</td>
 </tr>
-
 <tr>
-<td>InlineBackgroundColor</td>
+<td>{{'[InlineBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_InlineBackgroundColor)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>InlineItemTemplate</td>
+<td>{{'[InlineItemTemplate](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_InlineItemTemplate)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>InlineTextColor</td>
+<td>{{'[InlineTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_InlineTextColor)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>MonthLabelSettings</td>
+<td>{{'[MonthLabelSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_MonthLabelSettings)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>PreviousMonthBackgroundColor</td>
-<td>TrailingLeadingDatesBackground</td>
+<td>{{'[PreviousMonthBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_PreviousMonthBackgroundColor)'| markdownify }}</td>
+<td>{{'[YearTrailingLeadingDatesBackgroundView]()'| markdownify }}</td>
 <td>Gets or sets the background for the trailing and leading month cells of the calendar month view.</td>
 </tr>
-
 <tr>
-<td>PreviousMonthTextColor</td>
-<td>TextColor(From TrailingLeadingDatesTextStyle)</td>
+<td>{{'[PreviousMonthTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_PreviousMonthTextColor)'| markdownify }}</td>
+<td>{{'[TextColor(From TrailingLeadingDatesTextStyle)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_TrailingLeadingDatesTextStyle)'| markdownify }}</td>
 <td>Gets or sets the text color of the text style.</td>
 </tr>
-
 <tr>
-<td>SelectedDayTextColor</td>
-<td>TextColor(From SelectionTextStyle and RangeTextStyle)</td>
+<td>{{'[SelectedDayTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_SelectedDayTextColor)'| markdownify }}</td>
+<td>{{'[TextColor(From [SelectionTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_SelectionTextStyle) and [RangeTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_RangeTextStyle))](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarTextStyle.html#Syncfusion_Maui_Calendar_CalendarTextStyle_TextColor)'| markdownify }}</td>
 <td>Gets or sets the text color of the text style.</td>
 </tr>
-
 <tr>
-<td>SelectionRadius</td>
+<td>{{'[SelectionRadius](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_SelectionRadius)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>SelectionShape</td>
-<td>SelectionShape(From SfCalendar)</td>
+<td>{{'[SelectionShape](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_SelectionShape)'| markdownify }}</td>
+<td>{{'[SelectionShape(From SfCalendar)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectionShape)'| markdownify }}</td>
 <td>Gets or sets the selection shape of the SfCalendar.</td>
 </tr>
-
 <tr>
-<td>TodayBorderColor</td>
-<td>TodayHighlightBrush(From SfCalendar)</td>
+<td>{{'[TodayBorderColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_TodayBorderColor)'| markdownify }}</td>
+<td>{{'[TodayHighlightBrush(From SfCalendar)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_TodayHighlightBrush)'| markdownify }}</td>
 <td>Gets or sets the value that describes the today highlight color value.</td>
 </tr>
-
 <tr>
-<td>TodaySelectionBackgroundColor</td>
-<td>SelectionBackground(From SfCalendar)</td>
+<td>{{'[TodaySelectionBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_TodaySelectionBackgroundColor)'| markdownify }}</td>
+<td>{{'[SelectionBackground(From SfCalendar)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectionBackground)'| markdownify }}</td>
 <td>Gets or sets the value that describes the highlight of selection based on selection mode of the calendar.</td>
 </tr>
-
 <tr>
-<td>TodaySelectionTextColor</td>
-<td>TextColor(From SelectionTextStyle and RangeTextStyle)</td>
+<td>{{'[TodaySelectionTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_TodaySelectionTextColor)'| markdownify }}</td>
+<td>{{'[TextColor(From [SelectionTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_SelectionTextStyle) and [RangeTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_RangeTextStyle))](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarTextStyle.html#Syncfusion_Maui_Calendar_CalendarTextStyle_TextColor)'| markdownify }}</td>
 <td>Gets or sets the text color of the text style.</td>
 </tr>
-
 <tr>
-<td>TodayTextColor</td>
-<td>TextColor(From TodayTextStyle)</td>
+<td>{{'[TodayTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_TodayTextColor)'| markdownify }}</td>
+<td>{{'[TextColor(From [TodayTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_TodayTextStyle))](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarTextStyle.html#Syncfusion_Maui_Calendar_CalendarTextStyle_TextColor)'| markdownify }}</td>
 <td>Gets or sets the text color of the text style.</td>
 </tr>
-
 <tr>
-<td>WeekDayBackgroundColor</td>
-<td>Background, TodayBackground, TrailingLeadingDatesBackground, DisabledDatesBackground, SpecialDatesBackground</td>
+<td>{{'[WeekDayBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_WeekDayBackgroundColor)'| markdownify }}</td>
+<td>{{'[Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_Background), [TodayBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_TodayBackground), [TrailingLeadingDatesBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_TrailingLeadingDatesBackground), [DisabledDatesBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_DisabledDatesBackground), [SpecialDatesBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_SpecialDatesBackground)'| markdownify }}</td>
 <td>Gets or sets the background for the week day month cells of the calendar month view.</td>
 </tr>
-
 <tr>
-<td>WeekDayTextColor</td>
-<td>TextColor(From TextStyle, TodayTextStyle, TrailingLeadingDatesTextStyle, DisabledDatesTextStyle, SpecialDatesTextStyle)</td>
+<td>{{'[WeekDayTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_WeekDayTextColor)'| markdownify }}</td>
+<td>{{'[TextColor(From [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_TextStyle), [TodayTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_TodayTextStyle), [TrailingLeadingDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_TrailingLeadingDatesTextStyle), [DisabledDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_DisabledDatesTextStyle), [SpecialDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_SpecialDatesTextStyle))](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarTextStyle.html#Syncfusion_Maui_Calendar_CalendarTextStyle_TextColor)'| markdownify }}</td>
 <td>Gets or sets the text color of the text style.</td>
 </tr>
-
 <tr>
-<td>WeekEndBackgroundColor</td>
-<td>WeekendDatesBackground</td>
+<td>{{'[WeekEndBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_WeekEndBackgroundColor)'| markdownify }}</td>
+<td>{{'[WeekendDatesBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_WeekendDatesBackground)'| markdownify }}</td>
 <td>Gets or sets the background for the weekend month cells of the calendar month view.</td>
 </tr>
-
 <tr>
-<td>WeekEndTextColor</td>
-<td>TextColor(From WeekendDatesTextStyle)</td>
+<td>{{'[WeekEndTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html#Syncfusion_SfCalendar_XForms_MonthViewSettings_WeekEndTextColor)'| markdownify }}</td>
+<td>{{'[TextColor(From [WeekendDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_WeekendDatesTextStyle))](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarTextStyle.html#Syncfusion_Maui_Calendar_CalendarTextStyle_TextColor)'| markdownify }}</td>
 <td>Gets or sets the text color of the text style.</td>
 </tr>
-
 </table>
 
 ### YearViewSettings
@@ -997,55 +882,46 @@ this.Content = calendar;
 <th>.NET MAUI SfCalendar</th>
 <th>Description</th>
 </tr>
-
 <tr>
-<td>LayoutBackground</td>
+<td>{{'[LayoutBackground](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.YearViewSettings.html#Syncfusion_SfCalendar_XForms_YearViewSettings_LayoutBackground)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>LabelAlignment</td>
+<td>{{'[LabelAlignment](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.YearViewSettings.html#Syncfusion_SfCalendar_XForms_YearViewSettings_LabelAlignment)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>MonthHeaderBackground</td>
+<td>{{'[MonthHeaderBackground](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.YearViewSettings.html#Syncfusion_SfCalendar_XForms_YearViewSettings_MonthHeaderBackground)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>MonthHeaderTextColor</td>
+<td>{{'[MonthHeaderTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.YearViewSettings.html#Syncfusion_SfCalendar_XForms_YearViewSettings_MonthHeaderTextColor)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>DateTextColor</td>
-<td>TextColor(From TextStyle, TodayTextStyle, LeadingDatesTextStyle, DisabledDatesTextStyle)</td>
+<td>{{'[DateTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.YearViewSettings.html#Syncfusion_SfCalendar_XForms_YearViewSettings_DateTextColor)'| markdownify }}</td>
+<td>{{'[TextColor(From [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarYearView.html#Syncfusion_Maui_Calendar_CalendarYearView_TextStyle), [TodayTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarYearView.html#Syncfusion_Maui_Calendar_CalendarYearView_TodayTextStyle), [LeadingDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarYearView.html#Syncfusion_Maui_Calendar_CalendarYearView_LeadingDatesTextStyle), [DisabledDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarYearView.html#Syncfusion_Maui_Calendar_CalendarYearView_DisabledDatesTextStyle))](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarTextStyle.html#Syncfusion_Maui_Calendar_CalendarTextStyle_TextColor)'| markdownify }}</td>
 <td>Gets or sets the text color of the text style.</td>
 </tr>
-
 <tr>
-<td>HeaderBackground</td>
-<td>Background(From HeaderView of SfCalendar)</td>
+<td>{{'[HeaderBackground](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.YearViewSettings.html#Syncfusion_SfCalendar_XForms_YearViewSettings_HeaderBackground)'| markdownify }}</td>
+<td>{{'[Background(From HeaderView of SfCalendar)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarHeaderView.html#Syncfusion_Maui_Calendar_CalendarHeaderView_Background)'| markdownify }}</td>
 <td>Gets or sets the background of the header view in SfCalendar.</td>
 </tr>
-
 <tr>
-<td>MonthLayoutBackground</td>
-<td>Background</td>
+<td>{{'[MonthLayoutBackground](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.YearViewSettings.html#Syncfusion_SfCalendar_XForms_YearViewSettings_MonthLayoutBackground)'| markdownify }}</td>
+<td>{{'[Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarYearView.html#Syncfusion_Maui_Calendar_CalendarYearView_Background)'| markdownify }}</td>
 <td>Gets or sets the background for the year, decade and century cells of the calendar year, decade and century view.</td>
 </tr>
-
 <tr>
-<td>YearHeaderTextColor</td>
-<td>TextStyle(From HeaderView of SfCalendar)</td>
+<td>{{'[YearHeaderTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.YearViewSettings.html#Syncfusion_SfCalendar_XForms_YearViewSettings_YearHeaderTextColor)'| markdownify }}</td>
+<td>{{'[TextStyle(From HeaderView of SfCalendar)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarHeaderView.html#Syncfusion_Maui_Calendar_CalendarHeaderView_TextStyle)'| markdownify }}</td>
 <td>Gets or sets the text style of the header text in SfCalendar.</td>
 </tr>
-
 </table>
 
 ## Enums
@@ -1056,79 +932,66 @@ this.Content = calendar;
 <th>.NET MAUI SfCalendar</th>
 <th>Description</th>
 </tr>
-
 <tr>
-<td>BlackoutDatesViewMode</td>
+<td>{{'[BlackoutDatesViewMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.BlackoutDatesViewMode.html)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>CellGridOptions</td>
+<td>{{'[CellGridOptions](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.CellGridOptions.html)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>DateTextAlignment</td>
+<td>{{'[DateTextAlignment](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.DateTextAlignment.html)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>DayLabelTextAlignment</td>
+<td>{{'[DayLabelTextAlignment](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.DayLabelTextAlignment.html)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>InlineViewMode</td>
+<td>{{'[InlineViewMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.InlineViewMode.html)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>LabelAlignment</td>
+<td>{{'[LabelAlignment](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.LabelAlignment.html)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>NavigationDirection</td>
-<td>CalendarNavigationDirection</td>
+<td>{{'[NavigationDirection](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.NavigationDirection.html)'| markdownify }}</td>
+<td>{{'[CalendarNavigationDirection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarNavigationDirection.html)'| markdownify }}</td>
 <td>Defines the navigation direction for the SfCalendar.</td>
 </tr>
-
 <tr>
-<td>SelectionMode</td>
-<td>CalendarSelectionMode</td>
+<td>{{'[SelectionMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SelectionMode.html)'| markdownify }}</td>
+<td>{{'[CalendarSelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarSelectionMode.html)'| markdownify }}</td>
 <td>Defines the selection mode for the SfCalendar.</td>
 </tr>
-
 <tr>
-<td>SelectionShape</td>
-<td>CalendarSelectionShape</td>
+<td>{{'[SelectionShape](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SelectionShape.html)'| markdownify }}</td>
+<td>{{'[CalendarSelectionShape](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarSelectionShape.html)'| markdownify }}</td>
 <td>Defines the selection shape for the SfCalendar.</td>
 </tr>
-
 <tr>
-<td>TransitionMode</td>
+<td>{{'[TransitionMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.TransitionMode.html)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>ViewMode</td>
-<td>CalendarView</td>
+<td>{{'[ViewMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.ViewMode.html)'| markdownify }}</td>
+<td>{{'[CalendarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarView.html)'| markdownify }}</td>
 <td>Defines the view for the SfCalendar.</td>
 </tr>
-
 <tr>
-<td>YearViewMode</td>
+<td>{{'[YearViewMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.YearViewMode.html)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 </table>
 
 ## Events
@@ -1139,79 +1002,66 @@ this.Content = calendar;
 <th>.NET MAUI SfCalendar</th>
 <th>Description</th>
 </tr>
-
 <tr>
-<td>InlineItemTapped</td>
+<td>{{'[InlineItemTapped](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_InlineItemTapped)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>InlineToggled</td>
+<td>{{'[InlineToggled](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_InlineToggled)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>MonthChanged</td>
-<td>ViewChanged</td>
+<td>{{'[MonthChanged](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_MonthChanged)'| markdownify }}</td>
+<td>{{'[ViewChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_ViewChanged)'| markdownify }}</td>
 <td>Occurs whenever the calendar view and visible dates changed on SfCalendar. </td>
 </tr>
-
 <tr>
-<td>MonthChanging</td>
+<td>{{'[MonthChanging](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_MonthChanging)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>OnCalendarTapped</td>
-<td>Tapped</td>
+<td>{{'[OnCalendarTapped](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_OnCalendarTapped)'| markdownify }}</td>
+<td>{{'[Tapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_Tapped)'| markdownify }}</td>
 <td>Occurs after the tap interaction on SfCalendar.</td>
 </tr>
-
 <tr>
-<td>OnDateCellHolding</td>
-<td>LongPressed</td>
+<td>{{'[OnDateCellHolding](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_OnDateCellHolding)'| markdownify }}</td>
+<td>{{'[LongPressed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_LongPressed)'| markdownify }}</td>
 <td>Occurs after the long press interaction on SfCalendar.</td>
 </tr>
-
 <tr>
-<td>OnHeaderLoaded</td>
+<td>{{'[OnHeaderLoaded](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_OnHeaderLoaded)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>OnInlineLoaded</td>
+<td>{{'[OnInlineLoaded](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_OnInlineLoaded)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>OnMonthCellLoaded</td>
+<td>{{'[OnMonthCellLoaded](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_OnMonthCellLoaded)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>OnViewModeChanged</td>
-<td>ViewChanged</td>
+<td>{{'[OnViewModeChanged](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_OnViewModeChanged)'| markdownify }}</td>
+<td>{{'[ViewChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_ViewChanged)'| markdownify }}</td>
 <td>Occurs whenever the calendar view and visible dates changed on SfCalendar. </td>
 </tr>
-
 <tr>
-<td>OnYearCellLoaded</td>
+<td>{{'[OnYearCellLoaded](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_OnYearCellLoaded)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>SelectionChanged</td>
-<td>SelectionChanged</td>
+<td>{{'[SelectionChanged](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_SelectionChanged)'| markdownify }}</td>
+<td>{{'[SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectionChanged)'| markdownify }}</td>
 <td>Occurs after the selection changed on SfCalendar.</td>
 </tr>
-
 </table>
 
 ## Methods
@@ -1222,67 +1072,56 @@ this.Content = calendar;
 <th>.NET MAUI SfCalendar</th>
 <th>Description</th>
 </tr>
-
 <tr>
-<td>AddDatesInPast</td>
+<td>{{'[AddDatesInPast](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_AddDatesInPast)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>Backward</td>
-<td>Backward</td>
+<td>{{'[Backward](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_AddDatesInPast)'| markdownify }}</td>
+<td>{{'[Backward](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_Backward)'| markdownify }}</td>
 <td>Move to previous view which displays previous view dates.</td>
 </tr>
-
 <tr>
-<td>ClearSelection</td>
+<td>{{'[ClearSelection](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_ClearSelection)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>CollapseInlineView</td>
+<td>{{'[CollapseInlineView](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_CollapseInlineView_System_DateTime_)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>ExpandInlineView</td>
+<td>{{'[ExpandInlineView]()https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_CollapseInlineView_System_DateTime_'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>Forward</td>
-<td>Forward</td>
+<td>{{'[Forward](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_Forward)'| markdownify }}</td>
+<td>{{'[Forward](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_Forward)'| markdownify }}</td>
 <td>Move to next view which displays next view dates.</td>
 </tr>
-
 <tr>
-<td>NavigateTo</td>
+<td>{{'[NavigateTo](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_NavigateTo_System_DateTime_)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>Refresh</td>
+<td>{{'[Refresh](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_Refresh)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>ResumeAppointmentUpdate</td>
+<td>{{'[ResumeAppointmentUpdate](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_ResumeAppointmentUpdate)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 <tr>
-<td>SuspendAppointmentUpdate</td>
+<td>{{'[SuspendAppointmentUpdate](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_SuspendAppointmentUpdate)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
-
 </table>
 
 ## Upcoming Features
