@@ -26,10 +26,7 @@ You can customize the header height `Calendar` by using the `Height` property.
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.HeaderView = new CalendarHeaderView()
-{
-    Height = 70,
-};
+this.Calendar.HeaderView.Height = 70;
 
 {% endhighlight %}
 {% endtabs %}
@@ -98,10 +95,7 @@ You can customize the view Header height `Calendar` by using the `Height` proper
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.MonthView.HeaderView = new CalendarMonthHeaderView
-{
-    Height = 50,
-};
+this.Calendar.MonthView.HeaderView.Height = 50;
 
 {% endhighlight %}
 {% endtabs %}

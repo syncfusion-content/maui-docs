@@ -51,7 +51,7 @@ Syncfusion .NET MAUI Calendar (SfCalendar) is a calendar control that allows use
 
    ![First day of week in .NET MAUI Calendar.](images/overview/maui-first-day-of-week.png)
 
-* **Selectable Day Predicate**: Disable the interaction for calendar view dates and easily prevent the selection of weekends by disabling them.
+* **Selectable day predicate**: Disable the interaction for calendar view dates and easily prevent the selection of weekends by disabling them.
 
    ![Selectable day predicate in .NET MAUI Calendar.](images/overview/maui-selectable-day-predicate.png)
 
