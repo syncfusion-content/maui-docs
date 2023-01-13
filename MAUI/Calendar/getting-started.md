@@ -14,7 +14,7 @@ This section explains how to add the Calendar control. This section covers only 
 
 1. Create a new .NET MAUI application in Visual Studio.
 
-2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add `SfCalendar` to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Calendar, and then install it.
+2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add `SfCalendar` to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Calendar](https://www.nuget.org/packages/Syncfusion.Maui.Calendar), and then install it.
 
 3. To initialize the control, import the control namespace `Syncfusion.Maui.Calendar` in XAML or C# code.
 
@@ -84,7 +84,7 @@ namespace GettingStarted
 
 ## Change different calendar views
 
-The .NET MAUI Calendar control provides four different types of views to display dates, and it can be assigned to the control using the `View` property. By default, the control is assigned to the Month view. Initially, all Calendar views will show the current date.
+The [.NET MAUI Calendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html) control provides four different types of views to display dates, and it can be assigned to the control using the [View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_View) property. By default, the control is assigned to the [Month](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarView.html#Syncfusion_Maui_Calendar_CalendarView_Month) view. Initially, all Calendar views will show the current date.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -105,7 +105,7 @@ this.Calendar.View = CalendarView.Month;
 
 ## Change first day of week
 
-The Calendar control is rendered with `Sunday` as the first day of the week and it allows customization to change the first day of the week using the `FirstDayOfWeek` property in month view.
+The Calendar control is rendered with `Sunday` as the first day of the week and it allows customization to change the first day of the week using the [FirstDayOfWeek](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_FirstDayOfWeek) property in month view.
 
 The following code explains how to show the Calendar with `Monday` as the first day of the week.
 
@@ -130,9 +130,9 @@ this.Calendar.MonthView.FirstDayOfWeek = DayOfWeek.Monday;
 
 ## Date selection
 
-The Calendar allows the user to select a single date, multiple dates, or a range of dates by interaction or programmatic selection. The default selection mode is `Single`.
+The [Calendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html) allows the user to select a single date, multiple dates, or a range of dates by interaction or programmatic selection. The default selection mode is `Single`.
 
-The selection details can be obtained by using the SelectionChanged event of the calendar. It returns `CalendarSelectionChangedEventArgs`, which holds the details about the selected date or range.
+The selection details can be obtained by using the [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectionChanged) event of the calendar. It returns `CalendarSelectionChangedEventArgs`, which holds the details about the selected date or range.
 
 The following code explains how to show the Calendar with `Multiple` as the Selection mode.
 
