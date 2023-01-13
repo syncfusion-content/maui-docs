@@ -97,7 +97,7 @@ Eg:
 ### Range selection direction
 The Range Selection Direction is specified in the calendar property enumeration, which is used to select the range based on the direction. The `RangeSelectionDirection` provides five types of direction such as `Default`, `Forward`, `Backward`, `Both`, and `None`. The default [RangeSelectionDirection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_RangeSelectionDirection) is `Default` in the SfCalendar.
 
-#### Range selection direction - forward
+#### Forward
 If you set the `RangeSelectionDirection` property to `Forward`, you can select only the dates after the selected range start date, while dates before the range start date are considered disabled. The start date will not be changed.
 
 {% tabs %}
@@ -120,7 +120,7 @@ this.Calendar.RangeSelectionDirection = CalendarRangeSelectionDirection.Forward;
 
 ![Forward range selection in .NET MAUI Calendar.](images/selection/maui-forward-range-selection.png)
 
-#### Range selection direction - backward
+#### Backward
 If you set the `RangeSelectionDirection` property to `Backward`, you can select only the dates before the selected range end date, while dates after the range end date are considered disabled. The end date will not be changed.
 
 {% tabs %}
@@ -143,7 +143,7 @@ this.Calendar.RangeSelectionDirection = CalendarRangeSelectionDirection.Backward
 
 ![Backward range selection in .NET MAUI Calendar.](images/selection/maui-backward-range-selection.png)
 
-#### Range Selection Direction - both
+#### Both
 If you set the `RangeSelectionDirection` property to `Both`, you can extend the selection from the selected range. Then, the tapped date is considered based on, if the date is nearby the start date, then the start date is updated, else if the date is nearby the end date, then the end date is updated, else if in-between the start and end date and both have the same distance, then the start date is updated.
 
 {% tabs %}
@@ -166,7 +166,7 @@ this.Calendar.RangeSelectionDirection = CalendarRangeSelectionDirection.Both;
 
 ![Both Range selection in .NET MAUI Calendar.](images/selection/maui-range-selection.png)
 
-#### Range selection direction - none
+#### None
 If you set the `RangeSelectionDirection` property to `None`, you can select only the single range, while dates after the range end date and before the start date are considered disabled. It will remain in the initial range.
 
 {% tabs %}
