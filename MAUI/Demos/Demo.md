@@ -18,5 +18,8 @@ You can install .NET MAUI Demos for Android in [Google play](https://play.google
 ### .NET MAUI Demos for Windows
 You can install .NET MAUI Demos for Windows in [Microsoft Stores](https://apps.microsoft.com/store/detail/syncfusion-maui-controls-gallery/9P2P4D2BK270).
 
+### .NET MAUI Demos for iOS
+You can install .NET MAUI Demos for iOS [here](https://testflight.apple.com/join/EEOtwVNN). You can install this demo using [TestFlight](https://apps.apple.com/in/app/testflight/id899247664) app in your device.
+
 ### .NET MAUI Demos for macOS
 You can install .NET MAUI Demos for macOS [here](https://install.appcenter.ms/users/xamarincore/apps/syncfusion-maui-ui-controls/distribution_groups/public).
