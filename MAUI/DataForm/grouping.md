@@ -54,7 +54,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![grouping-editors](images/grouping/grouping-editors.png)
+![Grouping editors in .NET MAUI DataForm.](images/grouping/grouping-editors.png)
 
 ## Changing editors order in the group
 
@@ -136,7 +136,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![change-order](images/grouping/change-order.png)
+![Changing editors order in .NET MAUI DataForm.](images/grouping/change-order.png)
 
 ## Changing the editors order of the group in grid rows
 
@@ -180,7 +180,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![order-in-grid-rows](images/grouping/order-in-grid-rows.png)
+![Changing order in grid rows in .NET MAUI DataForm.](images/grouping/order-in-grid-rows.png)
 
 ## Changing the group name for the editors
 
@@ -255,7 +255,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![changing-the-layout](images/grouping/changing-the-layout.png)
+![changing group editors layout in .NET MAUI DataForm.](images/grouping/changing-the-layout.png)
 
 ## Loading the group in collapsed state
 
@@ -280,7 +280,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![collapsed-state](images/grouping/collapsed-state.png)
+![Loading group in collapsed state in .NET MAUI DataForm.](images/grouping/collapsed-state.png)
 
 ## Restricting the group expanding and collapsing
 
@@ -305,7 +305,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![group-expanding-collapsing](images/grouping/group-expanding-collapsing.png)
+![Group expanding collapsing in .NET MAUI DataForm.](images/grouping/group-expanding-collapsing.png)
 
 ## Changing the group editors visibility
 
@@ -331,7 +331,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endtabs %}
 
 Here, the `Name` group will be hidden.
-![group-editors-visibility](images/grouping/group-editors-visibility.png)
+![Group editors visibility in .NET MAUI DataForm.](images/grouping/group-editors-visibility.png)
 
 ## Changing the group header background
 
@@ -356,7 +356,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![header-background](images/grouping/header-background.png)
+![Header background in .NET MAUI DataForm.](images/grouping/header-background.png)
 
 ## Changing the group header text style
 
@@ -386,7 +386,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![header-text-style](images/grouping/header-text-style.png)
+![Header text style in .NET MAUI DataForm.](images/grouping/header-text-style.png)
 
 ## Changing the padding for group headers and editors
 
@@ -411,6 +411,6 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![padding](images/grouping/padding.png)
+![Group header padding in .NET MAUI DataForm.](images/grouping/padding.png)
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/DataFormGrouping)

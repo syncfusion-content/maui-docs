@@ -19,11 +19,11 @@ By default, the data form arranges the fields one by one. It is applicable for b
 
 When the label position is Left, the linear layout is shown as follows:
 
-![linear-layout-left](images/layout/linear-layout-left.png)
+![Linear layout left label position in .NET MAUI DataForm.](images/layout/linear-layout-left.png)
 
 When the label position is Top, the linear layout is shown as follows:
 
-![linear-layout-top](images/layout/linear-layout-top.png)
+![Linear layout top label position in .NET MAUI DataForm.](images/layout/linear-layout-top.png)
 
 ## Grid data form layout
 
@@ -51,7 +51,7 @@ N> Setting the [ColumnCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 
 When the label position is Top, the grid layout is shown as follows:
 
-![grid-layout](images/layout/grid-layout.png)
+![Grid layout in .NET MAUI DataForm.](images/layout/grid-layout.png)
 
 ## Label visibility
 
@@ -89,7 +89,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![label-visibility](images/layout/label-visibility.png)
+![Label visibility in .NET MAUI DataForm.](images/layout/label-visibility.png)
 
 ## Label position
 
@@ -182,7 +182,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![leading-label-icon](images/layout/leading-label-icon.png)
+![Leading label icon in .NET MAUI DataForm.](images/layout/leading-label-icon.png)
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/LabelIconSample)
 
@@ -229,7 +229,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![changing-editors-order](images/layout/changing-editors-order.png)
+![Changing editors order in .NET MAUI DataForm.](images/layout/changing-editors-order.png)
 
 ## Change the label and editor width
 
@@ -271,7 +271,7 @@ N> The label width customization is applicable only when the [LabelPosition](htt
 
 By default, the available width is divided into 40% for the label and 60% for the editor.
 
-![label-editor-width](images/layout/label-editor-width.png)
+![Label editor width in .NET MAUI DataForm.](images/layout/label-editor-width.png)
 
 ## Spanning editors rows and columns
 
@@ -317,7 +317,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 Here, `FirstName` field’s row height is increased.
 
-![row-span](images/layout/row-span.png)
+![Row span in .NET MAUI DataForm.](images/layout/row-span.png)
 
 ### Column span
 
@@ -362,7 +362,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-![column-span](images/layout/column-span.png)
+![Column span in .NET MAUI DataForm.](images/layout/column-span.png)
 
 ## Change the editor visibility
 
