@@ -99,7 +99,7 @@ this.Content = calendar;
 <td>{{'[SelectionRange](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SelectionRange.html)'| markdownify }}</td>
 <td>{{'[CalendarDateRange](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarDateRange.html)'| markdownify }}</td>
 <td>Represents a class which holds the start and end date of the range in SfCalendar.</td>
-<tr> 
+</tr> 
 <tr>
 <td>{{'[MonthViewSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.MonthViewSettings.html)' | markdownify }}</td>
 <td>{{'[CalendarMonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html)' | markdownify }}</td>
