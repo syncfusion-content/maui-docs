@@ -32,7 +32,6 @@ this.Calendar.SelectionMode = CalendarSelectionMode.Single;
 {% endtabs %}
 
 ![Month view single selection in .NET MAUI Calendar.](images/selection/maui-month-view-single-selection.png)
-{% endcolumn %}
 
 >**NOTE**
 * In the Year, Decade, and Century views, you can select the cells, only when the `AllowViewNavigation` property is set to false.
