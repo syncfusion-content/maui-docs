@@ -11,6 +11,11 @@ documentation: ug
 
 This section explains how to populate the appointments to the Scheduler as well as the essential aspects for getting started with the Scheduler and also provides a walk-through to configure the [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) control in a real-time scenario.
 
+
+To get start quickly with our .NET MAUI Scheduler, you can check the below video.
+
+<style>#.NETMAUISchedulerVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='.NETMAUISchedulerVideoTutorial' src='https://youtu.be/Io2ElO8ORSQ'></iframe>
+
 ## Creating an application using the .NET MAUI Scheduler
 
 1. Create a new .NET MAUI application in Visual Studio.
