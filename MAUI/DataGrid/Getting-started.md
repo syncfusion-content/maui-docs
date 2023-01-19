@@ -13,7 +13,7 @@ This section provides a quick overview for working with the SfDataGrid for .NET 
 
 To get start quickly with .NET MAUI DataGrid, you can check on this video:
 
-<style>#.NETMAUIDataGridVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIDataGridVideoTutorial' src='https://www.youtube.com/embed/xW0a7JlHbz4'></iframe>
+<style>#MAUIDataGridVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIDataGridVideoTutorial' src='https://www.youtube.com/embed/xW0a7JlHbz4'></iframe>
 
 ## Creating an application using the .NET MAUI DataGrid
  1. Create a new .NET MAUI application in Visual Studio.
