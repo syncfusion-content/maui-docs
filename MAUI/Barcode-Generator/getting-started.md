@@ -11,6 +11,10 @@ documentation: ug
 
 This section explains the steps required to add the [`.NET MAUI Barcode Generator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.html) control. This section explains the steps required to add the barcode and set its symbology. This section covers only basic features needed to get started with Syncfusion barcode generator control.
 
+To get start quickly with our .NET MAUI Barcode Generator, you can check the below video.
+
+<style>#.NETMAUIBarcodeGeneratorVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='.NETMAUIBarcodeGeneratorVideoTutorial' src='https://www.youtube.com/watch?v=WwdtIotODpE'></iframe>
+
 ## Adding a SfBarcodeGenerator reference
 
 The Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfBarcodeGenerator to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Barcode] and then install it.
