@@ -15,11 +15,6 @@ The Syncfusion .NET MAUI Barcode Generator is a data visualization control used 
 
 ![.NET MAUI Barcode Genrator Control](images/overview/maui-two-dimensional-barcode.png)
 
-To get start quickly with our .NET MAUI Calendar control, you can check the below video.
-
-<style>#.NETMAUICalendarVideoTutorial{width : 90% !important; height: 300px !important }</style>
-<iframe id='.NETMAUICalendarVideoTutorial' src='https://www.youtube.com/watch?v=WwdtIotODpE'></iframe>
-
 ## Key features
 
 * **One-dimensional barcodes** - Barcode Generator supports different one-dimensional barcode symbologies such as [`Code128`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.Code128.html), [`EAN8`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.EAN8.html),[`EAN13`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.EAN13.html), [`UPC-A`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.UPCA.html), [`UPC-E`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.UPCE.html), [`Code39`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.Code39.html), [`Code39 Extended`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.Code39Extended.html), [`Code93`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.Code93.html), and [`Codabar`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.Codabar.html).
