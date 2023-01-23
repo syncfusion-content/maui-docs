@@ -13,7 +13,8 @@ This section explains the steps required to add the [`.NET MAUI Barcode Generato
 
 To get start quickly with our .NET MAUI Barcode Generator, you can check the below video.
 
-<style>#.NETMAUIBarcodeGeneratorVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='.NETMAUIBarcodeGeneratorVideoTutorial' src='https://www.youtube.com/watch?v=WwdtIotODpE'></iframe>
+{% youtube
+"youtube:https://www.youtube.com/watch?v=WwdtIotODpE"%}
 
 ## Adding a SfBarcodeGenerator reference
 
