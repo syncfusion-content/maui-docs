@@ -15,6 +15,180 @@ The data form validates the data and user input to update the correct value in t
 
 The supported built in validations are as follows:
 
+#### IDataErrorInfo
+You can validate the data by implementing the `IDataErrorInfo` interface in the data object class.
+
+{% tabs %}
+{% highlight C# %}
+
+public class EmployeeInfo : IDataErrorInfo, INotifyPropertyChanged
+{
+    private int _EmployeeID;
+    private string _Name;
+    private string _Title;       
+
+    public event PropertyChangedEventHandler PropertyChanged;
+
+    public EmployeeInfo()
+    {
+
+    }
+
+    public int EmployeeID
+    {
+        get { return this._EmployeeID; }
+        set
+        {
+            this._EmployeeID = value;
+            this.RaisePropertyChanged("EmployeeID");        
+        }
+    }
+    public string Name
+    {
+        get { return this._Name; }
+        set
+        {
+            this._Name = value;
+            this.RaisePropertyChanged("Name");
+        }
+    }
+
+
+    public string Title
+    {
+        get { return this._Title; }
+        set
+        {
+            this._Title = value;
+            this.RaisePropertyChanged("Title");
+        }
+    }
+
+    [Display(AutoGenerateField = false)]
+    public string Error
+    {
+        get
+        {
+            return string.Empty;
+        }
+    }
+
+    public string this[string columnName]
+    {
+        get
+        {
+            if (!columnName.Equals("Title"))
+                return string.Empty;
+
+            if (this.Title.Contains("Marketing"))
+                return "Marketing is not allowed";
+
+            return string.Empty;
+        }
+    }
+
+    private void RaisePropertyChanged(string propertyName)
+    {
+        if (PropertyChanged != null)
+            PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+
+#### INotifyDataErrorInfo
+
+You can validate the data by implementing the `INotifyDataErrorInfo` interface in the data object class. This interface has three members,
+
+* HasErrors property
+* GetErrors method
+* ErrorsChanged event
+
+{% tabs %}
+{% highlight C# %}
+
+public class EmployeeInfo : INotifyDataErrorInfo, INotifyPropertyChanged
+{
+    private int _EmployeeID;
+    private string _Name;
+    private string _Title;
+
+    public event PropertyChangedEventHandler PropertyChanged;
+    public event EventHandler<DataErrorsChangedEventArgs> ErrorsChanged;
+
+    public EmployeeInfo()
+    {
+
+    }
+
+    public int EmployeeID
+    {
+        get { return this._EmployeeID; }
+        set
+        {
+            this._EmployeeID = value;
+            this.RaisePropertyChanged("EmployeeID");
+        }
+    }
+
+    public string Name
+    {
+        get { return this._Name; }
+        set
+        {
+            this._Name = value;
+            this.RaisePropertyChanged("Name");
+        }
+    }
+
+
+    public string Title
+    {
+        get { return this._Title; }
+        set
+        {
+            this._Title = value;
+            this.RaisePropertyChanged("Title");
+        }
+    }
+
+
+    [Display(AutoGenerateField = false)]
+    public bool HasErrors
+    {
+        get
+        {
+            return false;
+        }
+    }
+
+
+    private void RaisePropertyChanged(string propertyName)
+    {
+        if (PropertyChanged != null)
+            PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+    }
+
+    public IEnumerable GetErrors(string propertyName)
+    {
+        var list = new List<string>();
+        if (!propertyName.Equals("Title"))
+            return list;
+
+        if (this.Title.Contains("Marketing"))
+            list.Add("Marketing is not allowed");
+        return list;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+
+
+
 #### Data annotations
 
 Validate the data using data annotation attributes.

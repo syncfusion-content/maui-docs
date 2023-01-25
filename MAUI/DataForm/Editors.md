@@ -1183,7 +1183,7 @@ public class NumericTextEditor : IDataFormEditor
     private SfDataForm dataForm;
     private DataFormCustomItem? dataFormCustomItem;
 
-    public NumericEditor(SfDataForm dataForm)
+    public NumericTextEditor(SfDataForm dataForm)
     {
         this.dataForm = dataForm;
     }
