@@ -23,9 +23,9 @@ You can validate the data by implementing the `IDataErrorInfo` interface in the 
 
 public class EmployeeInfo : IDataErrorInfo, INotifyPropertyChanged
 {
-    private int _EmployeeID;
-    private string _Name;
-    private string _Title;       
+    private int employeeID;
+    private string name;
+    private string title;       
 
     public event PropertyChangedEventHandler PropertyChanged;
 
@@ -36,31 +36,31 @@ public class EmployeeInfo : IDataErrorInfo, INotifyPropertyChanged
 
     public int EmployeeID
     {
-        get { return this._EmployeeID; }
+        get { return this.employeeID; }
         set
         {
-            this._EmployeeID = value;
-            this.RaisePropertyChanged("EmployeeID");        
+            this.employeeID = value;
+            this.OnPropertyChanged("EmployeeID");        
         }
     }
     public string Name
     {
-        get { return this._Name; }
+        get { return this.name; }
         set
         {
-            this._Name = value;
-            this.RaisePropertyChanged("Name");
+            this.name = value;
+            this.OnPropertyChanged("Name");
         }
     }
 
 
     public string Title
     {
-        get { return this._Title; }
+        get { return this.title; }
         set
         {
-            this._Title = value;
-            this.RaisePropertyChanged("Title");
+            this.title = value;
+            this.OnPropertyChanged("Title");
         }
     }
 
@@ -87,7 +87,7 @@ public class EmployeeInfo : IDataErrorInfo, INotifyPropertyChanged
         }
     }
 
-    private void RaisePropertyChanged(string propertyName)
+    private void OnPropertyChanged(string propertyName)
     {
         if (PropertyChanged != null)
             PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
@@ -111,9 +111,9 @@ You can validate the data by implementing the `INotifyDataErrorInfo` interface i
 
 public class EmployeeInfo : INotifyDataErrorInfo, INotifyPropertyChanged
 {
-    private int _EmployeeID;
-    private string _Name;
-    private string _Title;
+    private int employeeID;
+    private string name;
+    private string title;
 
     public event PropertyChangedEventHandler PropertyChanged;
     public event EventHandler<DataErrorsChangedEventArgs> ErrorsChanged;
@@ -125,32 +125,32 @@ public class EmployeeInfo : INotifyDataErrorInfo, INotifyPropertyChanged
 
     public int EmployeeID
     {
-        get { return this._EmployeeID; }
+        get { return this.employeeID; }
         set
         {
-            this._EmployeeID = value;
-            this.RaisePropertyChanged("EmployeeID");
+            this.employeeID = value;
+            this.OnPropertyChanged("EmployeeID");
         }
     }
 
     public string Name
     {
-        get { return this._Name; }
+        get { return this.name; }
         set
         {
-            this._Name = value;
-            this.RaisePropertyChanged("Name");
+            this.name = value;
+            this.OnPropertyChanged("Name");
         }
     }
 
 
     public string Title
     {
-        get { return this._Title; }
+        get { return this.title; }
         set
         {
-            this._Title = value;
-            this.RaisePropertyChanged("Title");
+            this.title = value;
+            this.OnPropertyChanged("Title");
         }
     }
 
@@ -165,7 +165,7 @@ public class EmployeeInfo : INotifyDataErrorInfo, INotifyPropertyChanged
     }
 
 
-    private void RaisePropertyChanged(string propertyName)
+    private void OnPropertyChanged(string propertyName)
     {
         if (PropertyChanged != null)
             PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
