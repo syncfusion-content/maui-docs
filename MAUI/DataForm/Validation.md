@@ -50,11 +50,10 @@ public class EmployeeInfo : IDataErrorInfo
     {
         get
         {
-            if (!columnName.Equals("Title"))
-                return string.Empty;
-
-            if (this.Title.Contains("Marketing"))
+            if (columnName == nameof(Title) && this.Title.Contains("Marketing"))
+            {
                 return "Marketing is not allowed";
+            }
 
             return string.Empty;
         }
@@ -106,11 +105,11 @@ public class EmployeeInfo : INotifyDataErrorInfo
     public IEnumerable GetErrors(string propertyName)
     {
         var list = new List<string>();
-        if (!propertyName.Equals("Title"))
-            return list;
-
-        if (this.Title.Contains("Marketing"))
+        if (propertyName == nameof(Title) && this.Title.Contains("Marketing"))
+        {
             list.Add("Marketing is not allowed");
+        }
+
         return list;
     }
 }
