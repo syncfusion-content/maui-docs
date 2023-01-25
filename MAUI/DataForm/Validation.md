@@ -23,10 +23,6 @@ You can validate the data by implementing the [IDataErrorInfo](https://learn.mic
 
 public class EmployeeInfo : IDataErrorInfo
 {
-    private int employeeID;
-    private string name;
-    private string title;       
-
     public event PropertyChangedEventHandler PropertyChanged;
 
     public EmployeeInfo()
@@ -49,6 +45,7 @@ public class EmployeeInfo : IDataErrorInfo
         }
     }
 
+    [Display(AutoGenerateField = false)]
     public string this[string columnName]
     {
         get
@@ -81,11 +78,8 @@ You can validate the data by implementing the [INotifyDataErrorInfo](https://lea
 
 public class EmployeeInfo : INotifyDataErrorInfo
 {
-    private int employeeID;
-    private string name;
-    private string title;
-
     public event PropertyChangedEventHandler PropertyChanged;
+    
     public event EventHandler<DataErrorsChangedEventArgs> ErrorsChanged;
 
     public EmployeeInfo()
