@@ -186,9 +186,6 @@ public class EmployeeInfo : INotifyDataErrorInfo, INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-
-
-
 #### Data annotations
 
 Validate the data using data annotation attributes.
