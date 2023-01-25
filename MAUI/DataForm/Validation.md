@@ -16,12 +16,12 @@ The data form validates the data and user input to update the correct value in t
 The supported built in validations are as follows:
 
 #### IDataErrorInfo
-You can validate the data by implementing the `IDataErrorInfo` interface in the data object class.
+You can validate the data by implementing the [IDataErrorInfo](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.idataerrorinfo?view=net-6.0) interface in the data object class.
 
 {% tabs %}
 {% highlight C# %}
 
-public class EmployeeInfo : IDataErrorInfo, INotifyPropertyChanged
+public class EmployeeInfo : IDataErrorInfo
 {
     private int employeeID;
     private string name;
@@ -34,35 +34,11 @@ public class EmployeeInfo : IDataErrorInfo, INotifyPropertyChanged
 
     }
 
-    public int EmployeeID
-    {
-        get { return this.employeeID; }
-        set
-        {
-            this.employeeID = value;
-            this.OnPropertyChanged("EmployeeID");        
-        }
-    }
-    public string Name
-    {
-        get { return this.name; }
-        set
-        {
-            this.name = value;
-            this.OnPropertyChanged("Name");
-        }
-    }
+    public int EmployeeID { get; set; }
 
+    public string Name { get; set; }
 
-    public string Title
-    {
-        get { return this.title; }
-        set
-        {
-            this.title = value;
-            this.OnPropertyChanged("Title");
-        }
-    }
+    public string Title { get; set; }
 
     [Display(AutoGenerateField = false)]
     public string Error
@@ -86,12 +62,6 @@ public class EmployeeInfo : IDataErrorInfo, INotifyPropertyChanged
             return string.Empty;
         }
     }
-
-    private void OnPropertyChanged(string propertyName)
-    {
-        if (PropertyChanged != null)
-            PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-    }
 }
 
 {% endhighlight %}
@@ -100,7 +70,7 @@ public class EmployeeInfo : IDataErrorInfo, INotifyPropertyChanged
 
 #### INotifyDataErrorInfo
 
-You can validate the data by implementing the `INotifyDataErrorInfo` interface in the data object class. This interface has three members,
+You can validate the data by implementing the [INotifyDataErrorInfo](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifydataerrorinfo?view=net-6.0) interface in the data object class. This interface has three members,
 
 * HasErrors property
 * GetErrors method
@@ -109,7 +79,7 @@ You can validate the data by implementing the `INotifyDataErrorInfo` interface i
 {% tabs %}
 {% highlight C# %}
 
-public class EmployeeInfo : INotifyDataErrorInfo, INotifyPropertyChanged
+public class EmployeeInfo : INotifyDataErrorInfo
 {
     private int employeeID;
     private string name;
@@ -123,36 +93,11 @@ public class EmployeeInfo : INotifyDataErrorInfo, INotifyPropertyChanged
 
     }
 
-    public int EmployeeID
-    {
-        get { return this.employeeID; }
-        set
-        {
-            this.employeeID = value;
-            this.OnPropertyChanged("EmployeeID");
-        }
-    }
+    public int EmployeeID { get; set; }
 
-    public string Name
-    {
-        get { return this.name; }
-        set
-        {
-            this.name = value;
-            this.OnPropertyChanged("Name");
-        }
-    }
+    public string Name { get; set; }
 
-
-    public string Title
-    {
-        get { return this.title; }
-        set
-        {
-            this.title = value;
-            this.OnPropertyChanged("Title");
-        }
-    }
+    public string Title { get; set; }
 
 
     [Display(AutoGenerateField = false)]
@@ -162,13 +107,6 @@ public class EmployeeInfo : INotifyDataErrorInfo, INotifyPropertyChanged
         {
             return false;
         }
-    }
-
-
-    private void OnPropertyChanged(string propertyName)
-    {
-        if (PropertyChanged != null)
-            PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
     }
 
     public IEnumerable GetErrors(string propertyName)
