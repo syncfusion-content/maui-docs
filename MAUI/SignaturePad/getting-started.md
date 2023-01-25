@@ -11,6 +11,10 @@ documentation: ug
 
 This section explains the steps required to add the SignaturePad control and its elements such as minimum and maximum stroke thickness, and stroke color. This section also covers how to save the signature as an image, clear the existing signature in SignaturePad and handle the [`DrawStarted`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_DrawStarted) and [`DrawCompleted`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_DrawCompleted) callbacks in the SignaturePad control.
 
+To get start quickly with our .NET MAUI SignaturePad, you can check the below video.
+
+`youtube:gV2stNPCgYo`
+
 ## Creating an application with .NET MAUI
 
 Create a new .NET MAUI application in Visual Studio.
