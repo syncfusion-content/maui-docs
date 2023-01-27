@@ -228,7 +228,7 @@ The columns can be manually defined by setting the `SfDataGrid.AutoGenerateColum
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-            ColumnWidthMode="Fill"
+            ColumnSizer="Star"
             AutoGenerateColumnsMode="None"
             ItemsSource="{Binding OrderInfoCollection}">
 
