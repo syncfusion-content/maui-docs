@@ -14,7 +14,7 @@ This section explains the steps required to add the slider control and its eleme
 To get start quickly with MAUI SfSlider, you can check on this video:
 
 <style>#MAUISliderVideoTutorial{width : 90% !important; height: 350px !important }</style>
-<iframe id='MAUISliderVideoTutorial' src='https://www.youtube.com/watch?v=eBSzMk9bi08'></iframe>
+<iframe id='MAUISliderVideoTutorial' src='https://www.youtube.com/embed/eBSzMk9bi08'></iframe>
 
 ## Creating an application with .NET MAUI
 
