@@ -11,6 +11,11 @@ documentation: ug
 
 This section explains the steps required to add the slider control and its elements such as track, ticks, labels and tooltip. This section covers only basic features needed to know to get started with Syncfusion Slider.
 
+To get start quickly with MAUI SfSlider, you can check on this video:
+
+<style>#MAUISliderVideoTutorial{width : 90% !important; height: 350px !important }</style>
+<iframe id='MAUISliderVideoTutorial' src='https://www.youtube.com/embed/eBSzMk9bi08'></iframe>
+
 ## Creating an application with .NET MAUI
 
 Create a new .NET MAUI application in Visual Studio.
