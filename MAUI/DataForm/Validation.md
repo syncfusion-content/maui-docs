@@ -23,14 +23,7 @@ You can validate the data by implementing the [IDataErrorInfo](https://learn.mic
 
 public class EmployeeInfo : IDataErrorInfo
 {
-    public event PropertyChangedEventHandler PropertyChanged;
-
-    public EmployeeInfo()
-    {
-
-    }
-
-    public int EmployeeID { get; set; }
+    public string EmployeeID { get; set; }
 
     public string Name { get; set; }
 
@@ -68,25 +61,18 @@ public class EmployeeInfo : IDataErrorInfo
 
 You can validate the data by implementing the [INotifyDataErrorInfo](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifydataerrorinfo?view=net-6.0) interface in the data object class. This interface has three members,
 
-* HasErrors property
-* GetErrors method
-* ErrorsChanged event
+* [HasErrors property](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifydataerrorinfo.haserrors?view=net-6.0#system-componentmodel-inotifydataerrorinfo-haserrors)
+* [GetErrors method](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifydataerrorinfo.geterrors?view=net-6.0#system-componentmodel-inotifydataerrorinfo-geterrors(system-string))
+* [ErrorsChanged event](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifydataerrorinfo.errorschanged?view=net-6.0)
 
 {% tabs %}
 {% highlight C# %}
 
 public class EmployeeInfo : INotifyDataErrorInfo
 {
-    public event PropertyChangedEventHandler PropertyChanged;
-    
     public event EventHandler<DataErrorsChangedEventArgs> ErrorsChanged;
 
-    public EmployeeInfo()
-    {
-
-    }
-
-    public int EmployeeID { get; set; }
+    public string EmployeeID { get; set; }
 
     public string Name { get; set; }
 
