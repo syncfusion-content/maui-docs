@@ -15,7 +15,42 @@ The data form validates the data and user input to update the correct value in t
 
 The supported built in validations are as follows:
 
+#### Data annotations
+
+Validate the data using data annotation attributes.
+
+The String type property is validated using the [Required](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.requiredattribute?view=netframework-4.8) and [StringLength](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.stringlengthattribute?view=netframework-4.8) attributes.
+
+{% tabs %}
+{% highlight C# %}
+
+[Required(AllowEmptyStrings = false, ErrorMessage = "Name should not be empty")]
+[StringLength(15, ErrorMessage = "Name should not exceed 15 characters")]
+public string Name { get; set; }
+
+{% endhighlight %}
+{% endtabs %}
+
+Refer [here](https://help.syncfusion.com/maui/dataform/data-annotations) to know more about data annotations in DataForm.
+
+#### Date range attribute
+
+Validate the date time value using the date range attribute.
+
+{% tabs %}
+{% highlight C# %}
+
+[DataType(DataType.Date)]
+[DataFormDateRange(MinimumDate = "01/01/2022", MaximumDate = "31/12/2022", ErrorMessage = "Join date is invalid")]
+public DateTime JoinDate { get; set; }
+
+{% endhighlight %}
+{% endtabs %}
+
+Refer [here](https://help.syncfusion.com/maui/dataform/data-annotations#dateformdaterange-attribute) to know more about date range attribute in DataForm.
+
 #### IDataErrorInfo
+
 You can validate the data by implementing the [IDataErrorInfo](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.idataerrorinfo?view=net-6.0) interface in the data object class.
 
 {% tabs %}
@@ -56,7 +91,6 @@ public class EmployeeInfo : IDataErrorInfo
 {% endhighlight %}
 {% endtabs %}
 
-
 #### INotifyDataErrorInfo
 
 You can validate the data by implementing the [INotifyDataErrorInfo](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifydataerrorinfo?view=net-6.0) interface in the data object class. This interface has three members,
@@ -77,7 +111,6 @@ public class EmployeeInfo : INotifyDataErrorInfo
     public string Name { get; set; }
 
     public string Title { get; set; }
-
 
     [Display(AutoGenerateField = false)]
     public bool HasErrors
@@ -102,40 +135,6 @@ public class EmployeeInfo : INotifyDataErrorInfo
 
 {% endhighlight %}
 {% endtabs %}
-
-#### Data annotations
-
-Validate the data using data annotation attributes.
-
-The String type property is validated using the [Required](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.requiredattribute?view=netframework-4.8) and [StringLength](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.stringlengthattribute?view=netframework-4.8) attributes.
-
-{% tabs %}
-{% highlight C# %}
-
-[Required(AllowEmptyStrings = false, ErrorMessage = "Name should not be empty")]
-[StringLength(15, ErrorMessage = "Name should not exceed 15 characters")]
-public string Name { get; set; }
-
-{% endhighlight %}
-{% endtabs %}
-
-Refer [here](https://help.syncfusion.com/maui/dataform/data-annotations) to know more about data annotations in DataForm.
-
-#### Date range attribute
-
-Validate the date time value using the date range attribute.
-
-{% tabs %}
-{% highlight C# %}
-
-[DataType(DataType.Date)]
-[DataFormDateRange(MinimumDate = "01/01/2022", MaximumDate = "31/12/2022", ErrorMessage = "Join date is invalid")]
-public DateTime JoinDate { get; set; }
-
-{% endhighlight %}
-{% endtabs %}
-
-Refer [here](https://help.syncfusion.com/maui/dataform/data-annotations#dateformdaterange-attribute) to know more about date range attribute in DataForm.
 
 ## Validation mode
 
