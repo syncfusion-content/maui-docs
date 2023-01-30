@@ -13,7 +13,9 @@ The data form validates the data and user input to update the correct value in t
 
 ## Built in validations
 
-The supported built in validations are as follows:
+The supported built in validations such as [Annotations](https://help.syncfusion.com/maui/dataform/data-annotations), [IDataErrorInfo](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.idataerrorinfo?view=net-6.0), [INotifyDataErrorInfo](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifydataerrorinfo?view=net-6.0)
+
+### Validate using the validation attribute
 
 #### Data annotations
 
@@ -49,7 +51,7 @@ public DateTime JoinDate { get; set; }
 
 Refer [here](https://help.syncfusion.com/maui/dataform/data-annotations#dateformdaterange-attribute) to know more about date range attribute in DataForm.
 
-#### IDataErrorInfo
+### Validate using the IDataErrorInfo interface
 
 You can validate the data by implementing the [IDataErrorInfo](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.idataerrorinfo?view=net-6.0) interface in the data object class.
 
@@ -93,7 +95,7 @@ public class EmployeeInfo : IDataErrorInfo
 
 You can download the entire source code [here](https://github.com/SyncfusionExamples/maui-dataform/tree/master/DataErrorInfoSample)
 
-#### INotifyDataErrorInfo
+### Validate using the INotifyDataErrorInfo interface
 
 You can validate the data by implementing the [INotifyDataErrorInfo](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifydataerrorinfo?view=net-6.0) interface in the data object class. This interface has three members,
 
