@@ -93,7 +93,7 @@ public class EmployeeInfo : IDataErrorInfo
 {% endhighlight %}
 {% endtabs %}
 
-You can download the entire source code [here](https://github.com/SyncfusionExamples/maui-dataform/tree/master/DataErrorInfoSample)
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/DataErrorInfoSample)
 
 ### Validate using the INotifyDataErrorInfo interface
 
@@ -140,7 +140,7 @@ public class EmployeeInfo : INotifyDataErrorInfo
 {% endhighlight %}
 {% endtabs %}
 
-You can download the entire source code [here](https://github.com/SyncfusionExamples/maui-dataform/tree/master/NotifyDataErrorInfoSample)
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/NotifyDataErrorInfoSample)
 
 ## Validation mode
 
