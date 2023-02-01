@@ -13,7 +13,7 @@ This section explains how to add the Autocomplete control and bind data to it. T
 
 To get start quickly with our .NET MAUI Autocomplete, you can check the below video.
 
-<style>#.NETMAUIAutocompleteVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='.NETMAUIAutocompleteVideoTutorial' src='https://youtu.be/ontSh2NZvE4'></iframe>
+{% youtube "https://www.youtube.com/watch?v=ontSh2NZvE4" %}
 
 ## Adding a .NET MAUI Autocomplete reference
 

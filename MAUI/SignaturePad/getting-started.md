@@ -13,7 +13,7 @@ This section explains the steps required to add the SignaturePad control and its
 
 To get start quickly with our .NET MAUI SignaturePad, you can check the below video.
 
-<style>#.NETMAUISignaturePadVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='.NETMAUISignaturePadVideoTutorial' src='https://youtu.be/gV2stNPCgYo'></iframe>
+{% youtube "https://www.youtube.com/watch?v=gV2stNPCgYo" %}
 
 ## Creating an application with .NET MAUI
 
