@@ -28,52 +28,52 @@ The [`Arcs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapArcLaye
                     <map:MapArcLayer.Arcs>
                         <map:MapArc>
                             <map:MapArc.From>
-                                <map:MapLatLng Latitude="77.2090"
-                                               Longitude="28.6139" />
+                                <map:MapLatLng Latitude="28.6139"
+                                               Longitude="77.2090" />
                             </map:MapArc.From>
                             <map:MapArc.To>
-                                <map:MapLatLng Latitude="116.4074"
-                                               Longitude="39.9042" />
+                                <map:MapLatLng Latitude="39.9042"
+                                               Longitude="116.4074" />
                             </map:MapArc.To>
                         </map:MapArc>
                         <map:MapArc>
                             <map:MapArc.From>
-                                <map:MapLatLng Latitude="77.1025"
-                                               Longitude="28.7041" />
+                                <map:MapLatLng Latitude="28.7041"
+                                               Longitude="77.1025" />
                             </map:MapArc.From>
                             <map:MapArc.To>
-                                <map:MapLatLng Latitude="121.4737"
-                                               Longitude="31.2304" />
+                                <map:MapLatLng Latitude="31.2304"
+                                               Longitude="121.4737" />
                             </map:MapArc.To>
                         </map:MapArc>
                         <map:MapArc>
                             <map:MapArc.From>
-                                <map:MapLatLng Latitude="77.1025"
-                                               Longitude="28.7041" />
+                                <map:MapLatLng Latitude="28.7041"
+                                               Longitude="77.1025" />
                             </map:MapArc.From>
                             <map:MapArc.To>
-                                <map:MapLatLng Latitude="114.1694"
-                                               Longitude="22.3193" />
+                                <map:MapLatLng Latitude="22.3193"
+                                               Longitude="114.1694" />
                             </map:MapArc.To>
                         </map:MapArc>
                         <map:MapArc>
                             <map:MapArc.From>
-                                <map:MapLatLng Latitude="72.8777"
-                                               Longitude="19.0760" />
+                                <map:MapLatLng Latitude="19.0760"
+                                               Longitude="72.8777" />
                             </map:MapArc.From>
                             <map:MapArc.To>
-                                <map:MapLatLng Latitude="114.1694"
-                                               Longitude="22.3193" />
+                                <map:MapLatLng Latitude="22.3193"
+                                               Longitude="114.1694" />
                             </map:MapArc.To>
                         </map:MapArc>
                         <map:MapArc>
                             <map:MapArc.From>
-                                <map:MapLatLng Latitude="114.1694"
-                                               Longitude="22.3193" />
+                                <map:MapLatLng Latitude="22.3193"
+                                               Longitude="114.1694" />
                             </map:MapArc.From>
                             <map:MapArc.To>
-                                <map:MapLatLng Latitude="80.2707"
-                                               Longitude="13.0827" />
+                                <map:MapLatLng Latitude="13.0827"
+                                               Longitude="80.2707" />
                             </map:MapArc.To>
                         </map:MapArc>
                     </map:MapArcLayer.Arcs>
@@ -93,20 +93,20 @@ layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/
 layer.ShapeStroke = Brush.DarkGray;
 MapArcLayer arcLayer = new MapArcLayer();
 MapArc arc1 = new MapArc();
-arc1.From = new MapLatLng(77.2090, 28.6139);
-arc1.To = new MapLatLng(116.4074, 39.9042);
+arc1.From = new MapLatLng(28.6139, 77.2090);
+arc1.To = new MapLatLng(39.9042, 116.4074);
 MapArc arc2 = new MapArc();
-arc2.From = new MapLatLng(77.1025, 28.7041);
-arc2.To = new MapLatLng(121.4737, 31.2304);
+arc2.From = new MapLatLng(28.7041, 77.1025);
+arc2.To = new MapLatLng(31.2304, 121.4737);
 MapArc arc3 = new MapArc();
-arc3.From = new MapLatLng(77.1025, 28.7041);
-arc3.To = new MapLatLng(114.1694, 22.3193);
+arc3.From = new MapLatLng(28.7041, 77.1025);
+arc3.To = new MapLatLng(22.3193, 114.1694);
 MapArc arc4 = new MapArc();
-arc4.From = new MapLatLng(72.8777, 19.0760);
-arc4.To = new MapLatLng(114.1694, 22.3193);
+arc4.From = new MapLatLng(19.0760, 72.8777);
+arc4.To = new MapLatLng(22.3193, 114.1694);
 MapArc arc5 = new MapArc();
-arc5.From = new MapLatLng(114.1694, 22.3193);
-arc5.To = new MapLatLng(80.2707, 13.0827);
+arc5.From = new MapLatLng(22.3193, 114.1694);
+arc5.To = new MapLatLng(13.0827, 80.2707);
 arcLayer.Arcs.Add(arc1);
 arcLayer.Arcs.Add(arc2);
 arcLayer.Arcs.Add(arc3);
@@ -139,54 +139,59 @@ By default, the arc will always render above the [`MapArc.From`](https://help.sy
             <map:MapShapeLayer.Sublayers>
                 <map:MapArcLayer>
                     <map:MapArcLayer.Arcs>
-                        <map:MapArc HeightFactor="-0.2">
+                        <map:MapArc Stroke="#959595"
+                                    HeightFactor="-0.2">
                             <map:MapArc.From>
-                                <map:MapLatLng Latitude="77.2090"
-                                               Longitude="28.6139" />
+                                <map:MapLatLng Latitude="28.6139"
+                                               Longitude="77.2090" />
                             </map:MapArc.From>
                             <map:MapArc.To>
-                                <map:MapLatLng Latitude="116.4074"
-                                               Longitude="39.9042" />
+                                <map:MapLatLng Latitude="39.9042"
+                                               Longitude="116.4074" />
                             </map:MapArc.To>
                         </map:MapArc>
-                        <map:MapArc HeightFactor="-0.2">
+                        <map:MapArc Stroke="#959595"
+                                    HeightFactor="-0.2">
                             <map:MapArc.From>
-                                <map:MapLatLng Latitude="77.1025"
-                                               Longitude="28.7041" />
+                                <map:MapLatLng Latitude="28.7041"
+                                               Longitude="77.1025" />
                             </map:MapArc.From>
                             <map:MapArc.To>
-                                <map:MapLatLng Latitude="121.4737"
-                                               Longitude="31.2304" />
+                                <map:MapLatLng Latitude="31.2304"
+                                               Longitude="121.4737" />
                             </map:MapArc.To>
                         </map:MapArc>
-                        <map:MapArc HeightFactor="-0.2">
+                        <map:MapArc Stroke="#959595"
+                                    HeightFactor="-0.2">
                             <map:MapArc.From>
-                                <map:MapLatLng Latitude="77.1025"
-                                               Longitude="28.7041" />
+                                <map:MapLatLng Latitude="28.7041"
+                                               Longitude="77.1025" />
                             </map:MapArc.From>
                             <map:MapArc.To>
-                                <map:MapLatLng Latitude="114.1694"
-                                               Longitude="22.3193" />
+                                <map:MapLatLng Latitude="22.3193"
+                                               Longitude="114.1694" />
                             </map:MapArc.To>
                         </map:MapArc>
-                        <map:MapArc HeightFactor="-0.2">
+                        <map:MapArc Stroke="#959595"
+                                    HeightFactor="-0.2">
                             <map:MapArc.From>
-                                <map:MapLatLng Latitude="72.8777"
-                                               Longitude="19.0760" />
+                                <map:MapLatLng Latitude="19.0760"
+                                               Longitude="72.8777" />
                             </map:MapArc.From>
                             <map:MapArc.To>
-                                <map:MapLatLng Latitude="114.1694"
-                                               Longitude="22.3193" />
+                                <map:MapLatLng Latitude="22.3193"
+                                               Longitude="114.1694" />
                             </map:MapArc.To>
                         </map:MapArc>
-                        <map:MapArc HeightFactor="-0.2">
+                        <map:MapArc Stroke="#959595"
+                                    HeightFactor="-0.2">
                             <map:MapArc.From>
-                                <map:MapLatLng Latitude="114.1694"
-                                               Longitude="22.3193" />
+                                <map:MapLatLng Latitude="22.3193"
+                                               Longitude="114.1694" />
                             </map:MapArc.From>
                             <map:MapArc.To>
-                                <map:MapLatLng Latitude="80.2707"
-                                               Longitude="13.0827" />
+                                <map:MapLatLng Latitude="13.0827"
+                                               Longitude="80.2707" />
                             </map:MapArc.To>
                         </map:MapArc>
                     </map:MapArcLayer.Arcs>
@@ -206,24 +211,29 @@ layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/
 layer.ShapeStroke = Brush.DarkGray;
 MapArcLayer arcLayer = new MapArcLayer();
 MapArc arc1 = new MapArc();
-arc1.From = new MapLatLng(77.2090, 28.6139);
-arc1.To = new MapLatLng(116.4074, 39.9042);
+arc1.From = new MapLatLng(28.6139, 77.2090);
+arc1.To = new MapLatLng(39.9042, 116.4074);
+arc1.Stroke = Color.FromRgb(149, 149, 149);
 arc1.HeightFactor = -0.2;
 MapArc arc2 = new MapArc();
-arc2.From = new MapLatLng(77.1025, 28.7041);
-arc2.To = new MapLatLng(121.4737, 31.2304);
+arc2.From = new MapLatLng(28.7041, 77.1025);
+arc2.To = new MapLatLng(31.2304, 121.4737);
+arc2.Stroke = Color.FromRgb(149, 149, 149);
 arc2.HeightFactor = -0.2;
 MapArc arc3 = new MapArc();
-arc3.From = new MapLatLng(77.1025, 28.7041);
-arc3.To = new MapLatLng(114.1694, 22.3193);
+arc3.From = new MapLatLng(28.7041, 77.1025);
+arc3.To = new MapLatLng(22.3193, 114.1694);
+arc3.Stroke = Color.FromRgb(149, 149, 149);
 arc3.HeightFactor = -0.2;
 MapArc arc4 = new MapArc();
-arc4.From = new MapLatLng(72.8777, 19.0760);
-arc4.To = new MapLatLng(114.1694, 22.3193);
+arc4.From = new MapLatLng(19.0760, 72.8777);
+arc4.To = new MapLatLng(22.3193, 114.1694);
+arc4.Stroke = Color.FromRgb(149, 149, 149);
 arc4.HeightFactor = -0.2;
 MapArc arc5 = new MapArc();
-arc5.From = new MapLatLng(114.1694, 22.3193);
-arc5.To = new MapLatLng(80.2707, 13.0827);
+arc5.From = new MapLatLng(22.3193, 114.1694);
+arc5.To = new MapLatLng(13.0827, 80.2707);
+arc5.Stroke = Color.FromRgb(149, 149, 149);
 arc5.HeightFactor = -0.2;
 arcLayer.Arcs.Add(arc1);
 arcLayer.Arcs.Add(arc2);
@@ -252,60 +262,64 @@ By default, the arc will bend at the center between the [`MapArc.From`](https://
 
 <map:SfMaps>
     <map:SfMaps.Layer>
-        <map:MapShapeLayer x:Name="layer"
-                           ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
                            ShapeStroke="DarkGrey">
             <map:MapShapeLayer.Sublayers>
                 <map:MapArcLayer>
                     <map:MapArcLayer.Arcs>
-                        <map:MapArc ControlPointFactor="0.2">
+                        <map:MapArc Stroke="#959595"
+                                    ControlPointFactor="0.2">
                             <map:MapArc.From>
-                                <map:MapLatLng Latitude="77.2090"
-                                               Longitude="28.6139" />
+                                <map:MapLatLng Latitude="28.6139"
+                                               Longitude="77.2090" />
                             </map:MapArc.From>
                             <map:MapArc.To>
-                                <map:MapLatLng Latitude="116.4074"
-                                               Longitude="39.9042" />
+                                <map:MapLatLng Latitude="39.9042"
+                                               Longitude="116.4074" />
                             </map:MapArc.To>
                         </map:MapArc>
-                        <map:MapArc ControlPointFactor="0.2">
+                        <map:MapArc Stroke="#959595"
+                                    ControlPointFactor="0.2">
                             <map:MapArc.From>
-                                <map:MapLatLng Latitude="77.1025"
-                                               Longitude="28.7041" />
+                                <map:MapLatLng Latitude="28.7041"
+                                               Longitude="77.1025" />
                             </map:MapArc.From>
                             <map:MapArc.To>
-                                <map:MapLatLng Latitude="121.4737"
-                                               Longitude="31.2304" />
+                                <map:MapLatLng Latitude="31.2304"
+                                               Longitude="121.4737" />
                             </map:MapArc.To>
                         </map:MapArc>
-                        <map:MapArc ControlPointFactor="0.2">
+                        <map:MapArc Stroke="#959595"
+                                    ControlPointFactor="0.2">
                             <map:MapArc.From>
-                                <map:MapLatLng Latitude="77.1025"
-                                               Longitude="28.7041" />
+                                <map:MapLatLng Latitude="28.7041"
+                                               Longitude="77.1025" />
                             </map:MapArc.From>
                             <map:MapArc.To>
-                                <map:MapLatLng Latitude="114.1694"
-                                               Longitude="22.3193" />
+                                <map:MapLatLng Latitude="22.3193"
+                                               Longitude="114.1694" />
                             </map:MapArc.To>
                         </map:MapArc>
-                        <map:MapArc ControlPointFactor="0.2">
+                        <map:MapArc Stroke="#959595"
+                                    ControlPointFactor="0.2">
                             <map:MapArc.From>
-                                <map:MapLatLng Latitude="72.8777"
-                                               Longitude="19.0760" />
+                                <map:MapLatLng Latitude="19.0760"
+                                               Longitude="72.8777" />
                             </map:MapArc.From>
                             <map:MapArc.To>
-                                <map:MapLatLng Latitude="114.1694"
-                                               Longitude="22.3193" />
+                                <map:MapLatLng Latitude="22.3193"
+                                               Longitude="114.1694" />
                             </map:MapArc.To>
                         </map:MapArc>
-                        <map:MapArc ControlPointFactor="0.2">
+                        <map:MapArc Stroke="#959595"
+                                    ControlPointFactor="0.2">
                             <map:MapArc.From>
-                                <map:MapLatLng Latitude="114.1694"
-                                               Longitude="22.3193" />
+                                <map:MapLatLng Latitude="22.3193"
+                                               Longitude="114.1694" />
                             </map:MapArc.From>
                             <map:MapArc.To>
-                                <map:MapLatLng Latitude="80.2707"
-                                               Longitude="13.0827" />
+                                <map:MapLatLng Latitude="13.0827"
+                                               Longitude="80.2707" />
                             </map:MapArc.To>
                         </map:MapArc>
                     </map:MapArcLayer.Arcs>
@@ -325,24 +339,29 @@ layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/
 layer.ShapeStroke = Brush.DarkGray;
 MapArcLayer arcLayer = new MapArcLayer();
 MapArc arc1 = new MapArc();
-arc1.From = new MapLatLng(77.2090, 28.6139);
-arc1.To = new MapLatLng(116.4074, 39.9042);
+arc1.From = new MapLatLng(28.6139, 77.2090);
+arc1.To = new MapLatLng(39.9042, 116.4074);
+arc1.Stroke = Color.FromRgb(149, 149, 149);
 arc1.ControlPointFactor = 0.2;
 MapArc arc2 = new MapArc();
-arc2.From = new MapLatLng(77.1025, 28.7041);
-arc2.To = new MapLatLng(121.4737, 31.2304);
+arc2.From = new MapLatLng(28.7041, 77.1025);
+arc2.To = new MapLatLng(31.2304, 121.4737);
+arc2.Stroke = Color.FromRgb(149, 149, 149);
 arc2.ControlPointFactor = 0.2;
 MapArc arc3 = new MapArc();
-arc3.From = new MapLatLng(77.1025, 28.7041);
-arc3.To = new MapLatLng(114.1694, 22.3193);
+arc3.From = new MapLatLng(28.7041, 77.1025);
+arc3.To = new MapLatLng(22.3193, 114.1694);
+arc3.Stroke = Color.FromRgb(149, 149, 149);
 arc3.ControlPointFactor = 0.2;
 MapArc arc4 = new MapArc();
-arc4.From = new MapLatLng(72.8777, 19.0760);
-arc4.To = new MapLatLng(114.1694, 22.3193);
+arc4.From = new MapLatLng(19.0760, 72.8777);
+arc4.To = new MapLatLng(22.3193, 114.1694);
+arc4.Stroke = Color.FromRgb(149, 149, 149);
 arc4.ControlPointFactor = 0.2;
 MapArc arc5 = new MapArc();
-arc5.From = new MapLatLng(114.1694, 22.3193);
-arc5.To = new MapLatLng(80.2707, 13.0827);
+arc5.From = new MapLatLng(22.3193, 114.1694);
+arc5.To = new MapLatLng(13.0827, 80.2707);
+arc5.Stroke = Color.FromRgb(149, 149, 149);
 arc5.ControlPointFactor = 0.2;
 arcLayer.Arcs.Add(arc1);
 arcLayer.Arcs.Add(arc2);
@@ -376,52 +395,52 @@ You can apply colors to each [`MapArc`](https://help.syncfusion.com/cr/maui/Sync
                     <map:MapArcLayer.Arcs>
                         <map:MapArc Stroke="#ed4545">
                             <map:MapArc.From>
-                                <map:MapLatLng Latitude="77.2090"
-                                               Longitude="28.6139" />
+                                <map:MapLatLng Latitude="28.6139"
+                                               Longitude="77.2090" />
                             </map:MapArc.From>
                             <map:MapArc.To>
-                                <map:MapLatLng Latitude="116.4074"
-                                               Longitude="39.9042" />
+                                <map:MapLatLng Latitude="39.9042"
+                                               Longitude="116.4074" />
                             </map:MapArc.To>
                         </map:MapArc>
                         <map:MapArc Stroke="#e35bf8">
                             <map:MapArc.From>
-                                <map:MapLatLng Latitude="77.1025"
-                                               Longitude="28.7041" />
+                                <map:MapLatLng Latitude="28.7041"
+                                               Longitude="77.1025" />
                             </map:MapArc.From>
                             <map:MapArc.To>
-                                <map:MapLatLng Latitude="121.4737"
-                                               Longitude="31.2304" />
+                                <map:MapLatLng Latitude="31.2304"
+                                               Longitude="121.4737" />
                             </map:MapArc.To>
                         </map:MapArc>
                         <map:MapArc Stroke="#704cb9">
                             <map:MapArc.From>
-                                <map:MapLatLng Latitude="77.1025"
-                                               Longitude="28.7041" />
+                                <map:MapLatLng Latitude="28.7041"
+                                               Longitude="77.1025" />
                             </map:MapArc.From>
                             <map:MapArc.To>
-                                <map:MapLatLng Latitude="114.1694"
-                                               Longitude="22.3193" />
+                                <map:MapLatLng Latitude="22.3193"
+                                               Longitude="114.1694" />
                             </map:MapArc.To>
                         </map:MapArc>
                         <map:MapArc Stroke="#6da0f2">
                             <map:MapArc.From>
-                                <map:MapLatLng Latitude="72.8777"
-                                               Longitude="19.0760" />
+                                <map:MapLatLng Latitude="19.0760"
+                                               Longitude="72.8777" />
                             </map:MapArc.From>
                             <map:MapArc.To>
-                                <map:MapLatLng Latitude="114.1694"
-                                               Longitude="22.3193" />
+                                <map:MapLatLng Latitude="22.3193"
+                                               Longitude="114.1694" />
                             </map:MapArc.To>
                         </map:MapArc>
                         <map:MapArc Stroke="#499787">
                             <map:MapArc.From>
-                                <map:MapLatLng Latitude="114.1694"
-                                               Longitude="22.3193" />
+                                <map:MapLatLng Latitude="22.3193"
+                                               Longitude="114.1694" />
                             </map:MapArc.From>
                             <map:MapArc.To>
-                                <map:MapLatLng Latitude="80.2707"
-                                               Longitude="13.0827" />
+                                <map:MapLatLng Latitude="13.0827"
+                                               Longitude="80.2707" />
                             </map:MapArc.To>
                         </map:MapArc>
                     </map:MapArcLayer.Arcs>
@@ -441,24 +460,24 @@ layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/
 layer.ShapeStroke = Brush.DarkGray;
 MapArcLayer arcLayer = new MapArcLayer();
 MapArc arc1 = new MapArc();
-arc1.From = new MapLatLng(77.2090, 28.6139);
-arc1.To = new MapLatLng(116.4074, 39.9042);
+arc1.From = new MapLatLng(28.6139, 77.2090);
+arc1.To = new MapLatLng(39.9042, 116.4074);
 arc1.Stroke = Color.FromRgb(237, 69, 69);
 MapArc arc2 = new MapArc();
-arc2.From = new MapLatLng(77.1025, 28.7041);
-arc2.To = new MapLatLng(121.4737, 31.2304);
+arc2.From = new MapLatLng(28.7041, 77.1025);
+arc2.To = new MapLatLng(31.2304, 121.4737);
 arc2.Stroke = Color.FromRgb(227, 91, 248);
 MapArc arc3 = new MapArc();
-arc3.From = new MapLatLng(77.1025, 28.7041);
-arc3.To = new MapLatLng(114.1694, 22.3193);
+arc3.From = new MapLatLng(28.7041, 77.1025);
+arc3.To = new MapLatLng(22.3193, 114.1694);
 arc3.Stroke = Color.FromRgb(112, 76, 185);
 MapArc arc4 = new MapArc();
-arc4.From = new MapLatLng(72.8777, 19.0760);
-arc4.To = new MapLatLng(114.1694, 22.3193);
-arc4.Stroke = Color.FromRgb(109, 160, 242);
+arc4.From = new MapLatLng(19.0760, 72.8777);
+arc4.To = new MapLatLng(22.3193, 114.1694);
+arc4.Stroke = Color.FromRgb(109, 160, 242); 
 MapArc arc5 = new MapArc();
-arc5.From = new MapLatLng(114.1694, 22.3193);
-arc5.To = new MapLatLng(80.2707, 13.0827);
+arc5.From = new MapLatLng(22.3193, 114.1694);
+arc5.To = new MapLatLng(13.0827, 80.2707);
 arc5.Stroke = Color.FromRgb(73, 151, 135);
 arcLayer.Arcs.Add(arc1);
 arcLayer.Arcs.Add(arc2);
@@ -490,54 +509,59 @@ You can apply stroke thickness to each [`MapArc`](https://help.syncfusion.com/cr
             <map:MapShapeLayer.Sublayers>
                 <map:MapArcLayer>
                     <map:MapArcLayer.Arcs>
-                        <map:MapArc StrokeThickness="2">
+                        <map:MapArc Stroke="#959595"
+                                    StrokeThickness="2">
                             <map:MapArc.From>
-                                <map:MapLatLng Latitude="77.2090"
-                                               Longitude="28.6139" />
+                                <map:MapLatLng Latitude="28.6139"
+                                               Longitude="77.2090" />
                             </map:MapArc.From>
                             <map:MapArc.To>
-                                <map:MapLatLng Latitude="116.4074"
-                                               Longitude="39.9042" />
+                                <map:MapLatLng Latitude="39.9042"
+                                               Longitude="116.4074" />
                             </map:MapArc.To>
                         </map:MapArc>
-                        <map:MapArc StrokeThickness="3">
+                        <map:MapArc Stroke="#959595"
+                                    StrokeThickness="3">
                             <map:MapArc.From>
-                                <map:MapLatLng Latitude="77.1025"
-                                               Longitude="28.7041" />
+                                <map:MapLatLng Latitude="28.7041"
+                                               Longitude="77.1025" />
                             </map:MapArc.From>
                             <map:MapArc.To>
-                                <map:MapLatLng Latitude="121.4737"
-                                               Longitude="31.2304" />
+                                <map:MapLatLng Latitude="31.2304"
+                                               Longitude="121.4737" />
                             </map:MapArc.To>
                         </map:MapArc>
-                        <map:MapArc StrokeThickness="4">
+                        <map:MapArc Stroke="#959595"
+                                    StrokeThickness="4">
                             <map:MapArc.From>
-                                <map:MapLatLng Latitude="77.1025"
-                                               Longitude="28.7041" />
+                                <map:MapLatLng Latitude="28.7041"
+                                               Longitude="77.1025" />
                             </map:MapArc.From>
                             <map:MapArc.To>
-                                <map:MapLatLng Latitude="114.1694"
-                                               Longitude="22.3193" />
+                                <map:MapLatLng Latitude="22.3193"
+                                               Longitude="114.1694" />
                             </map:MapArc.To>
                         </map:MapArc>
-                        <map:MapArc StrokeThickness="5">
+                        <map:MapArc Stroke="#959595"
+                                    StrokeThickness="5">
                             <map:MapArc.From>
-                                <map:MapLatLng Latitude="72.8777"
-                                               Longitude="19.0760" />
+                                <map:MapLatLng Latitude="19.0760"
+                                               Longitude="72.8777" />
                             </map:MapArc.From>
                             <map:MapArc.To>
-                                <map:MapLatLng Latitude="114.1694"
-                                               Longitude="22.3193" />
+                                <map:MapLatLng Latitude="22.3193"
+                                               Longitude="114.1694" />
                             </map:MapArc.To>
                         </map:MapArc>
-                        <map:MapArc StrokeThickness="6">
+                        <map:MapArc Stroke="#959595"
+                                    StrokeThickness="6">
                             <map:MapArc.From>
-                                <map:MapLatLng Latitude="114.1694"
-                                               Longitude="22.3193" />
+                                <map:MapLatLng Latitude="22.3193"
+                                               Longitude="114.1694" />
                             </map:MapArc.From>
                             <map:MapArc.To>
-                                <map:MapLatLng Latitude="80.2707"
-                                               Longitude="13.0827" />
+                                <map:MapLatLng Latitude="13.0827"
+                                               Longitude="80.2707" />
                             </map:MapArc.To>
                         </map:MapArc>
                     </map:MapArcLayer.Arcs>
@@ -557,24 +581,29 @@ layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/
 layer.ShapeStroke = Brush.DarkGray;
 MapArcLayer arcLayer = new MapArcLayer();
 MapArc arc1 = new MapArc();
-arc1.From = new MapLatLng(77.2090, 28.6139);
-arc1.To = new MapLatLng(116.4074, 39.9042);
+arc1.From = new MapLatLng(28.6139, 77.2090);
+arc1.To = new MapLatLng(39.9042, 116.4074);
+arc1.Stroke = Color.FromRgb(149, 149, 149);
 arc1.StrokeThickness = 2;
 MapArc arc2 = new MapArc();
-arc2.From = new MapLatLng(77.1025, 28.7041);
-arc2.To = new MapLatLng(121.4737, 31.2304);
+arc2.From = new MapLatLng(28.7041, 77.1025);
+arc2.To = new MapLatLng(31.2304, 121.4737);
+arc2.Stroke = Color.FromRgb(149, 149, 149);
 arc2.StrokeThickness = 3;
 MapArc arc3 = new MapArc();
-arc3.From = new MapLatLng(77.1025, 28.7041);
-arc3.To = new MapLatLng(114.1694, 22.3193);
+arc3.From = new MapLatLng(28.7041, 77.1025);
+arc3.To = new MapLatLng(22.3193, 114.1694);
+arc3.Stroke = Color.FromRgb(149, 149, 149);
 arc3.StrokeThickness = 4;
 MapArc arc4 = new MapArc();
-arc4.From = new MapLatLng(72.8777, 19.0760);
-arc4.To = new MapLatLng(114.1694, 22.3193);
+arc4.From = new MapLatLng(19.0760, 72.8777);
+arc4.To = new MapLatLng(22.3193, 114.1694);
+arc4.Stroke = Color.FromRgb(149, 149, 149);
 arc4.StrokeThickness = 5;
 MapArc arc5 = new MapArc();
-arc5.From = new MapLatLng(114.1694, 22.3193);
-arc5.To = new MapLatLng(80.2707, 13.0827);
+arc5.From = new MapLatLng(22.3193, 114.1694);
+arc5.To = new MapLatLng(13.0827, 80.2707);
+arc5.Stroke = Color.FromRgb(149, 149, 149);
 arc5.StrokeThickness = 6;
 arcLayer.Arcs.Add(arc1);
 arcLayer.Arcs.Add(arc2);
@@ -610,12 +639,12 @@ A sequence of dash and gap will be rendered based on the values in this list. On
                     <map:MapArcLayer.Arcs>
                         <map:MapArc Stroke="#3d9bf2">
                             <map:MapArc.From>
-                                <map:MapLatLng Latitude="77.2090"
-                                               Longitude="28.6139" />
+                                <map:MapLatLng Latitude="28.7041"
+                                               Longitude="77.1025" />
                             </map:MapArc.From>
                             <map:MapArc.To>
-                                <map:MapLatLng Latitude="116.4074"
-                                               Longitude="39.9042" />
+                                <map:MapLatLng Latitude="31.2304"
+                                               Longitude="121.4737" />
                             </map:MapArc.To>
                             <map:MapArc.StrokeDashArray>
                                 <DoubleCollection>
@@ -628,12 +657,12 @@ A sequence of dash and gap will be rendered based on the values in this list. On
                         </map:MapArc>
                         <map:MapArc Stroke="#3d9bf2">
                             <map:MapArc.From>
-                                <map:MapLatLng Latitude="77.1025"
-                                               Longitude="28.7041" />
+                                <map:MapLatLng Latitude="28.7041"
+                                               Longitude="77.1025" />
                             </map:MapArc.From>
                             <map:MapArc.To>
-                                <map:MapLatLng Latitude="121.4737"
-                                               Longitude="31.2304" />
+                                <map:MapLatLng Latitude="23.1291"
+                                               Longitude="113.2644" />
                             </map:MapArc.To>
                             <map:MapArc.StrokeDashArray>
                                 <DoubleCollection>
@@ -646,12 +675,12 @@ A sequence of dash and gap will be rendered based on the values in this list. On
                         </map:MapArc>
                         <map:MapArc Stroke="#3d9bf2">
                             <map:MapArc.From>
-                                <map:MapLatLng Latitude="77.1025"
-                                               Longitude="28.7041" />
+                                <map:MapLatLng Latitude="28.7041"
+                                               Longitude="77.1025" />
                             </map:MapArc.From>
                             <map:MapArc.To>
-                                <map:MapLatLng Latitude="114.1694"
-                                               Longitude="22.3193" />
+                                <map:MapLatLng Latitude="22.3193"
+                                               Longitude="114.1694" />
                             </map:MapArc.To>
                             <map:MapArc.StrokeDashArray>
                                 <DoubleCollection>
@@ -664,12 +693,12 @@ A sequence of dash and gap will be rendered based on the values in this list. On
                         </map:MapArc>
                         <map:MapArc Stroke="#3d9bf2">
                             <map:MapArc.From>
-                                <map:MapLatLng Latitude="72.8777"
-                                               Longitude="19.0760" />
+                                <map:MapLatLng Latitude="19.0760"
+                                               Longitude="72.8777" />
                             </map:MapArc.From>
                             <map:MapArc.To>
-                                <map:MapLatLng Latitude="114.1694"
-                                               Longitude="22.3193" />
+                                <map:MapLatLng Latitude="22.3193"
+                                               Longitude="114.1694" />
                             </map:MapArc.To>
                             <map:MapArc.StrokeDashArray>
                                 <DoubleCollection>
@@ -682,12 +711,12 @@ A sequence of dash and gap will be rendered based on the values in this list. On
                         </map:MapArc>
                         <map:MapArc Stroke="#3d9bf2">
                             <map:MapArc.From>
-                                <map:MapLatLng Latitude="114.1694"
-                                               Longitude="22.3193" />
+                                <map:MapLatLng Latitude="22.3193"
+                                               Longitude="114.1694" />
                             </map:MapArc.From>
                             <map:MapArc.To>
-                                <map:MapLatLng Latitude="80.2707"
-                                               Longitude="13.0827" />
+                                <map:MapLatLng Latitude="13.0827"
+                                               Longitude="80.2707" />
                             </map:MapArc.To>
                             <map:MapArc.StrokeDashArray>
                                 <DoubleCollection>
@@ -715,28 +744,28 @@ layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/
 layer.ShapeStroke = Brush.DarkGray;
 MapArcLayer arcLayer = new MapArcLayer();
 MapArc arc1 = new MapArc();
-arc1.From = new MapLatLng(77.2090, 28.6139);
-arc1.To = new MapLatLng(116.4074, 39.9042);
+arc1.From = new MapLatLng(28.6139, 77.2090);
+arc1.To = new MapLatLng(39.9042, 116.4074);
 arc1.Stroke = Color.FromRgb(61, 155, 242);
 arc1.StrokeDashArray = new double[] { 4, 2, 1, 2 };
 MapArc arc2 = new MapArc();
-arc2.From = new MapLatLng(77.1025, 28.7041);
-arc2.To = new MapLatLng(121.4737, 31.2304);
+arc2.From = new MapLatLng(28.7041, 77.1025);
+arc2.To = new MapLatLng(31.2304, 121.4737);
 arc2.Stroke = Color.FromRgb(61, 155, 242);
 arc2.StrokeDashArray = new double[] { 4, 2, 1, 2 };
 MapArc arc3 = new MapArc();
-arc3.From = new MapLatLng(77.1025, 28.7041);
-arc3.To = new MapLatLng(114.1694, 22.3193);
+arc3.From = new MapLatLng(28.7041, 77.1025);
+arc3.To = new MapLatLng(22.3193, 114.1694);
 arc3.Stroke = Color.FromRgb(61, 155, 242);
 arc3.StrokeDashArray = new double[] { 4, 2, 1, 2 };
 MapArc arc4 = new MapArc();
-arc4.From = new MapLatLng(72.8777, 19.0760);
-arc4.To = new MapLatLng(114.1694, 22.3193);
+arc4.From = new MapLatLng(19.0760, 72.8777);
+arc4.To = new MapLatLng(22.3193, 114.1694);
 arc4.Stroke = Color.FromRgb(61, 155, 242);
 arc4.StrokeDashArray = new double[] { 4, 2, 1, 2 };
 MapArc arc5 = new MapArc();
-arc5.From = new MapLatLng(114.1694, 22.3193);
-arc5.To = new MapLatLng(80.2707, 13.0827);
+arc5.From = new MapLatLng(22.3193, 114.1694);
+arc5.To = new MapLatLng(13.0827, 80.2707);
 arc5.Stroke = Color.FromRgb(61, 155, 242);
 arc5.StrokeDashArray = new double[] { 4, 2, 1, 2 };
 arcLayer.Arcs.Add(arc1);

@@ -28,44 +28,44 @@ The [`Circles`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapCirc
                     <map:MapCircleLayer.Circles>
                         <map:MapCircle>
                             <map:MapCircle.Center>
-                                <map:MapLatLng Latitude="74.1240"
-                                               Longitude="15.2993" />
+                                <map:MapLatLng Latitude="15.2993"
+                                               Longitude="74.1240" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                         <map:MapCircle>
                             <map:MapCircle.Center>
-                                <map:MapLatLng Latitude="80.0499"
-                                               Longitude="15.5057" />
+                                <map:MapLatLng Latitude="15.5057"
+                                               Longitude="80.0499" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                         <map:MapCircle>
                             <map:MapCircle.Center>
-                                <map:MapLatLng Latitude="75.7139"
-                                               Longitude="19.7515" />
+                                <map:MapLatLng Latitude="19.7515"
+                                               Longitude="75.7139" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                         <map:MapCircle>
                             <map:MapCircle.Center>
-                                <map:MapLatLng Latitude="72.5714"
-                                               Longitude="23.0225" />
+                                <map:MapLatLng Latitude="23.0225"
+                                               Longitude="72.5714" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                         <map:MapCircle>
                             <map:MapCircle.Center>
-                                <map:MapLatLng Latitude="74.2179"
-                                               Longitude="27.0238" />
+                                <map:MapLatLng Latitude="27.0238"
+                                               Longitude="74.2179" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                         <map:MapCircle>
                             <map:MapCircle.Center>
-                                <map:MapLatLng Latitude="80.9462"
-                                               Longitude="26.8467" />
+                                <map:MapLatLng Latitude="26.8467"
+                                               Longitude="80.9462" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                         <map:MapCircle>
                             <map:MapCircle.Center>
-                                <map:MapLatLng Latitude="85.2799"
-                                               Longitude="21.2787" />
+                                <map:MapLatLng Latitude="21.2787"
+                                               Longitude="85.2799" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                     </map:MapCircleLayer.Circles>
@@ -85,19 +85,19 @@ layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/
 layer.ShapeStroke = Brush.DarkGray;
 MapCircleLayer circleLayer = new MapCircleLayer();
 MapCircle circle1 = new MapCircle();
-circle1.Center = new MapLatLng(74.1240, 15.2993);
+circle1.Center = new MapLatLng(15.2993, 74.1240);
 MapCircle circle2 = new MapCircle();
-circle2.Center = new MapLatLng(80.0499, 15.5057);
+circle2.Center = new MapLatLng(15.5057, 80.0499);
 MapCircle circle3 = new MapCircle();
-circle3.Center = new MapLatLng(75.7139, 19.7515);
+circle3.Center = new MapLatLng(19.7515, 75.7139);
 MapCircle circle4 = new MapCircle();
-circle4.Center = new MapLatLng(72.5714, 23.0225);
+circle4.Center = new MapLatLng(23.0225, 72.5714);
 MapCircle circle5 = new MapCircle();
-circle5.Center = new MapLatLng(74.2179, 27.0238);
+circle5.Center = new MapLatLng(27.0238, 74.2179);
 MapCircle circle6 = new MapCircle();
-circle6.Center = new MapLatLng(80.9462, 26.8467);
+circle6.Center = new MapLatLng(26.8467, 80.9462);
 MapCircle circle7 = new MapCircle();
-circle7.Center = new MapLatLng(85.2799, 21.2787);
+circle7.Center = new MapLatLng(21.2787, 85.2799);
 circleLayer.Circles.Add(circle1);
 circleLayer.Circles.Add(circle2);
 circleLayer.Circles.Add(circle3);
@@ -130,46 +130,60 @@ You can change the size of the circles using the [`MapCircle.Radius`](https://he
             <map:MapShapeLayer.Sublayers>
                 <map:MapCircleLayer>
                     <map:MapCircleLayer.Circles>
-                        <map:MapCircle Radius="10">
+                        <map:MapCircle Radius="10"
+                                       Stroke="#309989"
+                                       Fill="#309989">
                             <map:MapCircle.Center>
-                                <map:MapLatLng Latitude="74.1240"
-                                               Longitude="15.2993" />
+                                <map:MapLatLng Latitude="15.2993"
+                                               Longitude="74.1240" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
-                        <map:MapCircle Radius="10">
+                        <map:MapCircle Radius="10"
+                                       Stroke="#309989"
+                                       Fill="#309989">
                             <map:MapCircle.Center>
-                                <map:MapLatLng Latitude="80.0499"
-                                               Longitude="15.5057" />
+                                <map:MapLatLng Latitude="15.5057"
+                                               Longitude="80.0499" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
-                        <map:MapCircle Radius="10">
+                        <map:MapCircle Radius="10"
+                                       Stroke="#309989"
+                                       Fill="#309989">
                             <map:MapCircle.Center>
-                                <map:MapLatLng Latitude="75.7139"
-                                               Longitude="19.7515" />
+                                <map:MapLatLng Latitude="19.7515"
+                                               Longitude="75.7139" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
-                        <map:MapCircle Radius="10">
+                        <map:MapCircle Radius="10"
+                                       Stroke="#309989"
+                                       Fill="#309989">
                             <map:MapCircle.Center>
-                                <map:MapLatLng Latitude="72.5714"
-                                               Longitude="23.0225" />
+                                <map:MapLatLng Latitude="23.0225"
+                                               Longitude="72.5714" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
-                        <map:MapCircle Radius="10">
+                        <map:MapCircle Radius="10"
+                                       Stroke="#309989"
+                                       Fill="#309989">
                             <map:MapCircle.Center>
-                                <map:MapLatLng Latitude="74.2179"
-                                               Longitude="27.0238" />
+                                <map:MapLatLng Latitude="27.0238"
+                                               Longitude="74.2179" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
-                        <map:MapCircle Radius="10">
+                        <map:MapCircle Radius="10"
+                                       Stroke="#309989"
+                                       Fill="#309989">
                             <map:MapCircle.Center>
-                                <map:MapLatLng Latitude="80.9462"
-                                               Longitude="26.8467" />
+                                <map:MapLatLng Latitude="26.8467"
+                                               Longitude="80.9462" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
-                        <map:MapCircle Radius="10">
+                        <map:MapCircle Radius="10"
+                                       Stroke="#309989"
+                                       Fill="#309989">
                             <map:MapCircle.Center>
-                                <map:MapLatLng Latitude="85.2799"
-                                               Longitude="21.2787" />
+                                <map:MapLatLng Latitude="21.2787"
+                                               Longitude="85.2799" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                     </map:MapCircleLayer.Circles>
@@ -189,26 +203,40 @@ layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/
 layer.ShapeStroke = Brush.DarkGray;
 MapCircleLayer circleLayer = new MapCircleLayer();
 MapCircle circle1 = new MapCircle();
-circle1.Center = new MapLatLng(74.1240, 15.2993);
+circle1.Center = new MapLatLng(15.2993, 74.1240);
 circle1.Radius = 10;
+circle1.Stroke = Color.FromRgb(48, 153, 137);
+circle1.Fill = Color.FromRgb(48, 153, 137);
 MapCircle circle2 = new MapCircle();
-circle2.Center = new MapLatLng(80.0499, 15.5057);
+circle2.Center = new MapLatLng(15.5057, 80.0499);
 circle2.Radius = 10;
+circle2.Stroke = Color.FromRgb(48, 153, 137);
+circle2.Fill = Color.FromRgb(48, 153, 137);
 MapCircle circle3 = new MapCircle();
-circle3.Center = new MapLatLng(75.7139, 19.7515);
+circle3.Center = new MapLatLng(19.7515, 75.7139);
 circle3.Radius = 10;
+circle3.Stroke = Color.FromRgb(48, 153, 137);
+circle3.Fill = Color.FromRgb(48, 153, 137);
 MapCircle circle4 = new MapCircle();
-circle4.Center = new MapLatLng(72.5714, 23.0225);
+circle4.Center = new MapLatLng(23.0225, 72.5714);
 circle4.Radius = 10;
+circle4.Stroke = Color.FromRgb(48, 153, 137);
+circle4.Fill = Color.FromRgb(48, 153, 137);
 MapCircle circle5 = new MapCircle();
-circle5.Center = new MapLatLng(74.2179, 27.0238);
+circle5.Center = new MapLatLng(27.0238, 74.2179);
 circle5.Radius = 10;
+circle5.Stroke = Color.FromRgb(48, 153, 137);
+circle5.Fill = Color.FromRgb(48, 153, 137);
 MapCircle circle6 = new MapCircle();
-circle6.Center = new MapLatLng(80.9462, 26.8467);
+circle6.Center = new MapLatLng(26.8467, 80.9462);
 circle6.Radius = 10;
+circle6.Stroke = Color.FromRgb(48, 153, 137);
+circle6.Fill = Color.FromRgb(48, 153, 137);
 MapCircle circle7 = new MapCircle();
-circle7.Center = new MapLatLng(85.2799, 21.2787);
+circle7.Center = new MapLatLng(21.2787, 85.2799);
 circle7.Radius = 10;
+circle7.Stroke = Color.FromRgb(48, 153, 137);
+circle7.Fill = Color.FromRgb(48, 153, 137);
 circleLayer.Circles.Add(circle1);
 circleLayer.Circles.Add(circle2);
 circleLayer.Circles.Add(circle3);
@@ -244,50 +272,50 @@ You can apply colors to each [`MapCircle`](https://help.syncfusion.com/cr/maui/S
                         <map:MapCircle Radius="10"
                                        Fill="#ea3c62">
                             <map:MapCircle.Center>
-                                <map:MapLatLng Latitude="74.1240"
-                                               Longitude="15.2993" />
+                                <map:MapLatLng Latitude="15.2993"
+                                               Longitude="74.1240" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                         <map:MapCircle Radius="10"
                                        Fill="Teal">
                             <map:MapCircle.Center>
-                                <map:MapLatLng Latitude="80.0499"
-                                               Longitude="15.5057" />
+                                <map:MapLatLng Latitude="15.5057"
+                                               Longitude="80.0499" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                         <map:MapCircle Radius="10"
                                        Fill="#9c3bb0">
                             <map:MapCircle.Center>
-                                <map:MapLatLng Latitude="75.7139"
-                                               Longitude="19.7515" />
+                                <map:MapLatLng Latitude="19.7515"
+                                               Longitude="75.7139" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                         <map:MapCircle Radius="10"
                                        Fill="#50af50">
                             <map:MapCircle.Center>
-                                <map:MapLatLng Latitude="72.5714"
-                                               Longitude="23.0225" />
+                                <map:MapLatLng Latitude="23.0225"
+                                               Longitude="72.5714" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                         <map:MapCircle Radius="10"
                                        Fill="#3195ec">
                             <map:MapCircle.Center>
-                                <map:MapLatLng Latitude="74.2179"
-                                               Longitude="27.0238" />
+                                <map:MapLatLng Latitude="27.0238"
+                                               Longitude="74.2179" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                         <map:MapCircle Radius="10"
                                        Fill="#e157f9">
                             <map:MapCircle.Center>
-                                <map:MapLatLng Latitude="80.9462"
-                                               Longitude="26.8467" />
+                                <map:MapLatLng Latitude="26.8467"
+                                               Longitude="80.9462" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                         <map:MapCircle Radius="10"
                                        Fill="#ee4e4e">
                             <map:MapCircle.Center>
-                                <map:MapLatLng Latitude="85.2799"
-                                               Longitude="21.2787" />
+                                <map:MapLatLng Latitude="21.2787"
+                                               Longitude="85.2799" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                     </map:MapCircleLayer.Circles>
@@ -307,31 +335,31 @@ layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/
 layer.ShapeStroke = Brush.DarkGray;
 MapCircleLayer circleLayer = new MapCircleLayer();
 MapCircle circle1 = new MapCircle();
-circle1.Center = new MapLatLng(74.1240, 15.2993);
+circle1.Center = new MapLatLng(15.2993, 74.1240);
 circle1.Radius = 10;
 circle1.Fill = Color.FromRgb(234, 60, 98);
 MapCircle circle2 = new MapCircle();
-circle2.Center = new MapLatLng(80.0499, 15.5057);
+circle2.Center = new MapLatLng(15.5057, 80.0499);
 circle2.Radius = 10;
 circle2.Fill = Colors.Teal;
 MapCircle circle3 = new MapCircle();
-circle3.Center = new MapLatLng(75.7139, 19.7515);
+circle3.Center = new MapLatLng(19.7515, 75.7139);
 circle3.Radius = 10;
 circle3.Fill = Color.FromRgb(156, 59, 176);
 MapCircle circle4 = new MapCircle();
-circle4.Center = new MapLatLng(72.5714, 23.0225);
+circle4.Center = new MapLatLng(23.0225, 72.5714);
 circle4.Radius = 10;
 circle4.Fill = Color.FromRgb(80, 175, 80);
 MapCircle circle5 = new MapCircle();
-circle5.Center = new MapLatLng(74.2179, 27.0238);
+circle5.Center = new MapLatLng(27.0238, 74.2179);
 circle5.Radius = 10;
 circle5.Fill = Color.FromRgb(49, 149, 236);
 MapCircle circle6 = new MapCircle();
-circle6.Center = new MapLatLng(80.9462, 26.8467);
+circle6.Center = new MapLatLng(26.8467, 80.9462);
 circle6.Radius = 10;
 circle6.Fill = Color.FromRgb(225, 87, 249);
 MapCircle circle7 = new MapCircle();
-circle7.Center = new MapLatLng(85.2799, 21.2787);
+circle7.Center = new MapLatLng(21.2787, 85.2799);
 circle7.Radius = 10;
 circle7.Fill = Color.FromRgb(238, 78, 78);
 circleLayer.Circles.Add(circle1);
@@ -369,59 +397,66 @@ You can apply stroke color to each [`MapCircle`](https://help.syncfusion.com/cr/
                 <map:MapCircleLayer>
                     <map:MapCircleLayer.Circles>
                         <map:MapCircle Radius="10"
+                                       Fill="Teal"
                                        Stroke="#ea3c62"
                                        StrokeThickness="3">
                             <map:MapCircle.Center>
-                                <map:MapLatLng Latitude="74.1240"
-                                               Longitude="15.2993" />
+                                <map:MapLatLng Latitude="15.2993"
+                                               Longitude="74.1240" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                         <map:MapCircle Radius="20"
+                                       Fill="Teal"
                                        Stroke="Teal"
                                        StrokeThickness="3">
                             <map:MapCircle.Center>
-                                <map:MapLatLng Latitude="80.0499"
-                                               Longitude="15.5057" />
+                                <map:MapLatLng Latitude="15.5057"
+                                               Longitude="80.0499" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                         <map:MapCircle Radius="10"
+                                       Fill="Teal"
                                        Stroke="#9c3bb0"
                                        StrokeThickness="3">
                             <map:MapCircle.Center>
-                                <map:MapLatLng Latitude="75.7139"
-                                               Longitude="19.7515" />
+                                <map:MapLatLng Latitude="19.7515"
+                                               Longitude="75.7139" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                         <map:MapCircle Radius="20"
+                                       Fill="Teal"
                                        Stroke="#50af50"
                                        StrokeThickness="3">
                             <map:MapCircle.Center>
-                                <map:MapLatLng Latitude="72.5714"
-                                               Longitude="23.0225" />
+                                <map:MapLatLng Latitude="23.0225"
+                                               Longitude="72.5714" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                         <map:MapCircle Radius="20"
+                                       Fill="Teal"
                                        Stroke="#3195ec"
                                        StrokeThickness="3">
                             <map:MapCircle.Center>
-                                <map:MapLatLng Latitude="74.2179"
-                                               Longitude="27.0238" />
+                                <map:MapLatLng Latitude="27.0238"
+                                               Longitude="74.2179" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                         <map:MapCircle Radius="10"
+                                       Fill="Teal"
                                        Stroke="#e157f9"
                                        StrokeThickness="3">
                             <map:MapCircle.Center>
-                                <map:MapLatLng Latitude="80.9462"
-                                               Longitude="26.8467" />
+                                <map:MapLatLng Latitude="26.8467"
+                                               Longitude="80.9462" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                         <map:MapCircle Radius="20"
+                                       Fill="Teal"
                                        Stroke="#ee4e4e"
                                        StrokeThickness="3">
                             <map:MapCircle.Center>
-                                <map:MapLatLng Latitude="85.2799"
-                                               Longitude="21.2787" />
+                                <map:MapLatLng Latitude="21.2787"
+                                               Longitude="85.2799" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                     </map:MapCircleLayer.Circles>
@@ -434,46 +469,54 @@ You can apply stroke color to each [`MapCircle`](https://help.syncfusion.com/cr/
 {% endhighlight %}
 
 {% highlight c# %}
+
 SfMaps maps = new SfMaps();
 MapShapeLayer layer = new MapShapeLayer();
 layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/india.json"));
 layer.ShapeStroke = Brush.DarkGray;
 MapCircleLayer circleLayer = new MapCircleLayer();
 MapCircle circle1 = new MapCircle();
-circle1.Center = new MapLatLng(74.1240, 15.2993);
+circle1.Center = new MapLatLng(15.2993, 74.1240);
 circle1.Radius = 10;
 circle1.Stroke = Color.FromRgb(234, 60, 98);
 circle1.StrokeThickness = 3;
+circle1.Fill = Colors.Teal;
 MapCircle circle2 = new MapCircle();
-circle2.Center = new MapLatLng(80.0499, 15.5057);
+circle2.Center = new MapLatLng(15.5057, 80.0499);
 circle2.Radius = 20;
 circle2.Stroke = Colors.Teal;
 circle2.StrokeThickness = 3;
+circle2.Fill = Colors.Teal;
 MapCircle circle3 = new MapCircle();
-circle3.Center = new MapLatLng(75.7139, 19.7515);
+circle3.Center = new MapLatLng(19.7515, 75.7139);
 circle3.Radius = 10;
 circle3.Stroke = Color.FromRgb(156, 59, 176);
 circle3.StrokeThickness = 3;
+circle3.Fill = Colors.Teal;
 MapCircle circle4 = new MapCircle();
-circle4.Center = new MapLatLng(72.5714, 23.0225);
+circle4.Center = new MapLatLng(23.0225, 72.5714);
 circle4.Radius = 20;
 circle4.Stroke = Color.FromRgb(80, 175, 80);
 circle4.StrokeThickness = 3;
+circle4.Fill = Colors.Teal;
 MapCircle circle5 = new MapCircle();
-circle5.Center = new MapLatLng(74.2179, 27.0238);
+circle5.Center = new MapLatLng(27.0238, 74.2179);
 circle5.Radius = 20;
 circle5.Stroke = Color.FromRgb(49, 149, 236);
 circle5.StrokeThickness = 3;
+circle5.Fill = Colors.Teal;
 MapCircle circle6 = new MapCircle();
-circle6.Center = new MapLatLng(80.9462, 26.8467);
+circle6.Center = new MapLatLng(26.8467, 80.9462);
 circle6.Radius = 10;
 circle6.Stroke = Color.FromRgb(225, 87, 249);
 circle6.StrokeThickness = 3;
+circle6.Fill = Colors.Teal;
 MapCircle circle7 = new MapCircle();
-circle7.Center = new MapLatLng(85.2799, 21.2787);
+circle7.Center = new MapLatLng(21.2787, 85.2799);
 circle7.Radius = 20;
 circle7.Stroke = Color.FromRgb(238, 78, 78);
 circle7.StrokeThickness = 3;
+circle7.Fill = Colors.Teal;
 circleLayer.Circles.Add(circle1);
 circleLayer.Circles.Add(circle2);
 circleLayer.Circles.Add(circle3);
@@ -515,56 +558,56 @@ N> Animation is only applicable for the load time.
                                        Stroke="#309989"
                                        Fill="#309989">
                             <map:MapCircle.Center>
-                                <map:MapLatLng Latitude="74.1240"
-                                               Longitude="15.2993" />
+                                <map:MapLatLng Latitude="15.2993"
+                                               Longitude="74.1240" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                         <map:MapCircle Radius="10"
                                        Stroke="#309989"
                                        Fill="#309989">
                             <map:MapCircle.Center>
-                                <map:MapLatLng Latitude="80.0499"
-                                               Longitude="15.5057" />
+                                <map:MapLatLng Latitude="15.5057"
+                                               Longitude="80.0499" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                         <map:MapCircle Radius="10"
                                        Stroke="#309989"
                                        Fill="#309989">
                             <map:MapCircle.Center>
-                                <map:MapLatLng Latitude="75.7139"
-                                               Longitude="19.7515" />
+                                <map:MapLatLng Latitude="19.7515"
+                                               Longitude="75.7139" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                         <map:MapCircle Radius="10"
                                        Stroke="#309989"
                                        Fill="#309989">
                             <map:MapCircle.Center>
-                                <map:MapLatLng Latitude="72.5714"
-                                               Longitude="23.0225" />
+                                <map:MapLatLng Latitude="23.0225"
+                                               Longitude="72.5714" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                         <map:MapCircle Radius="10"
                                        Stroke="#309989"
                                        Fill="#309989">
                             <map:MapCircle.Center>
-                                <map:MapLatLng Latitude="74.2179"
-                                               Longitude="27.0238" />
+                                <map:MapLatLng Latitude="27.0238"
+                                               Longitude="74.2179" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                         <map:MapCircle Radius="10"
                                        Stroke="#309989"
                                        Fill="#309989">
                             <map:MapCircle.Center>
-                                <map:MapLatLng Latitude="80.9462"
-                                               Longitude="26.8467" />
+                                <map:MapLatLng Latitude="26.8467"
+                                               Longitude="80.9462" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                         <map:MapCircle Radius="10"
                                        Stroke="#309989"
                                        Fill="#309989">
                             <map:MapCircle.Center>
-                                <map:MapLatLng Latitude="85.2799"
-                                               Longitude="21.2787" />
+                                <map:MapLatLng Latitude="21.2787"
+                                               Longitude="85.2799" />
                             </map:MapCircle.Center>
                         </map:MapCircle>
                     </map:MapCircleLayer.Circles>
@@ -586,37 +629,37 @@ MapCircleLayer circleLayer = new MapCircleLayer();
 circleLayer.AnimationDuration = 3000;
 circleLayer.AnimationEasing = Easing.Linear;
 MapCircle circle1 = new MapCircle();
-circle1.Center = new MapLatLng(74.1240, 15.2993);
+circle1.Center = new MapLatLng(15.2993, 74.1240);
 circle1.Radius = 10;
 circle1.Stroke = Color.FromRgb(48, 153, 137);
 circle1.Fill = Color.FromRgb(48, 153, 137);
 MapCircle circle2 = new MapCircle();
-circle2.Center = new MapLatLng(80.0499, 15.5057);
+circle2.Center = new MapLatLng(15.5057, 80.0499);
 circle2.Radius = 10;
 circle2.Stroke = Color.FromRgb(48, 153, 137);
 circle2.Fill = Color.FromRgb(48, 153, 137);
 MapCircle circle3 = new MapCircle();
-circle3.Center = new MapLatLng(75.7139, 19.7515);
+circle3.Center = new MapLatLng(19.7515, 75.7139);
 circle3.Radius = 10;
 circle3.Stroke = Color.FromRgb(48, 153, 137);
 circle3.Fill = Color.FromRgb(48, 153, 137);
 MapCircle circle4 = new MapCircle();
-circle4.Center = new MapLatLng(72.5714, 23.0225);
+circle4.Center = new MapLatLng(23.0225, 72.5714);
 circle4.Radius = 10;
 circle4.Stroke = Color.FromRgb(48, 153, 137);
 circle4.Fill = Color.FromRgb(48, 153, 137);
 MapCircle circle5 = new MapCircle();
-circle5.Center = new MapLatLng(74.2179, 27.0238);
+circle5.Center = new MapLatLng(27.0238, 74.2179);
 circle5.Radius = 10;
 circle5.Stroke = Color.FromRgb(48, 153, 137);
 circle5.Fill = Color.FromRgb(48, 153, 137);
 MapCircle circle6 = new MapCircle();
-circle6.Center = new MapLatLng(80.9462, 26.8467);
+circle6.Center = new MapLatLng(26.8467, 80.9462);
 circle6.Radius = 10;
 circle6.Stroke = Color.FromRgb(48, 153, 137);
 circle6.Fill = Color.FromRgb(48, 153, 137);
 MapCircle circle7 = new MapCircle();
-circle7.Center = new MapLatLng(85.2799, 21.2787);
+circle7.Center = new MapLatLng(21.2787, 85.2799);
 circle7.Radius = 10;
 circle7.Stroke = Color.FromRgb(48, 153, 137);
 circle7.Fill = Color.FromRgb(48, 153, 137);
