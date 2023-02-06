@@ -643,8 +643,8 @@ A sequence of dash and gap will be rendered based on the values in this list. On
                                                Longitude="77.1025" />
                             </map:MapArc.From>
                             <map:MapArc.To>
-                                <map:MapLatLng Latitude="31.2304"
-                                               Longitude="121.4737" />
+                                <map:MapLatLng Latitude="39.9042"
+                                               Longitude="116.4074" />
                             </map:MapArc.To>
                             <map:MapArc.StrokeDashArray>
                                 <DoubleCollection>

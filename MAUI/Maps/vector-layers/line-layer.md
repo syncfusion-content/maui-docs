@@ -177,7 +177,7 @@ You can apply stroke colors to each [`MapLine`](https://help.syncfusion.com/cr/m
 SfMaps maps = new SfMaps();
 MapShapeLayer layer = new MapShapeLayer();
 layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
-layer.ShapeStroke = Brush.DarkGray;
+layer.ShapeStroke = Brush.DarkGrey;
 MapLineLayer mapLineLayer = new MapLineLayer();
 MapLine line1 = new MapLine();
 line1.From = new MapLatLng(28.7041, 77.1025);
@@ -282,7 +282,7 @@ You can apply thickness to each [`MapLine`](https://help.syncfusion.com/cr/maui/
 SfMaps maps = new SfMaps();
 MapShapeLayer layer = new MapShapeLayer();
 layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
-layer.ShapeStroke = Brush.DarkGray;
+layer.ShapeStroke = Brush.DarkGrey;
 MapLineLayer mapLineLayer = new MapLineLayer();
 MapLine line1 = new MapLine();
 line1.From = new MapLatLng(28.7041, 77.1025);
@@ -326,7 +326,7 @@ You can apply stroke cap to each [`MapLine`](https://help.syncfusion.com/cr/maui
 
 {% highlight xaml %}
 
- <map:SfMaps>
+<map:SfMaps>
      <map:SfMaps.Layer>
          <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
                             ShapeStroke="DarkGrey">
@@ -395,7 +395,7 @@ You can apply stroke cap to each [`MapLine`](https://help.syncfusion.com/cr/maui
 SfMaps maps = new SfMaps();
 MapShapeLayer layer = new MapShapeLayer();
 layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
-layer.ShapeStroke = Brush.DarkGray;
+layer.ShapeStroke = Brush.DarkGrey;
 MapLineLayer mapLineLayer = new MapLineLayer();
 MapLine line1 = new MapLine();
 line1.From = new MapLatLng(28.7041, 77.1025);
@@ -448,7 +448,7 @@ A sequence of dash and gap will be rendered based on the values in this list. On
 <map:SfMaps>
     <map:SfMaps.Layer>
         <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
-                           ShapeStroke="DarkGrey">
+                           ShapeStroke="DarkGrey" >
             <map:MapShapeLayer.Sublayers>
                 <map:MapLineLayer>
                     <map:MapLineLayer.Lines>
@@ -538,7 +538,7 @@ A sequence of dash and gap will be rendered based on the values in this list. On
 SfMaps maps = new SfMaps();
 MapShapeLayer layer = new MapShapeLayer();
 layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
-layer.ShapeStroke = Brush.DarkGray;
+layer.ShapeStroke = Brush.DarkGrey;
 MapLineLayer mapLineLayer = new MapLineLayer();
 MapLine line1 = new MapLine();
 line1.From = new MapLatLng(28.7041, 77.1025);
