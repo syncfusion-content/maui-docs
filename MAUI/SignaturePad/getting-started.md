@@ -13,7 +13,7 @@ This section explains the steps required to add the SignaturePad control and its
 
 To get start quickly with our .NET MAUI SignaturePad, you can check the below video.
 
-`youtube:gV2stNPCgYo`
+{% youtube "https://www.youtube.com/watch?v=gV2stNPCgYo" %}
 
 ## Creating an application with .NET MAUI
 
