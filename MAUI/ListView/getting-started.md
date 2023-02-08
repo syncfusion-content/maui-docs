@@ -53,7 +53,7 @@ public partial class MainPage : ContentPage
 
 ## Register the handler
 
-The `Syncfusion.Maui.Core` Nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
+The `Syncfusion.Maui.Core` NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
 
 {% tabs %}
 {% highlight c# tabtitle="MauiProgram.cs" hl_lines="4 20" %}
