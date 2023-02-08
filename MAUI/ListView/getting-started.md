@@ -11,6 +11,10 @@ documentation: ug
 
 This section provides a quick overview of how to get started with the .NET Maui ListView (SfListView) for Maui. Walk-through the entire process of creating the real world SfListView.
 
+To get start quickly with .NET MAUI ListView, you can check on this video:
+
+<style>#MAUIListViewTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIListViewVideoTutorial' src='https://www.youtube.com/watch?v=EFo2zIFw60Q'></iframe>
+
 ## Creating an application using the .NET MAUI ListView
 
  1. Create a new .NET MAUI application in Visual Studio.
