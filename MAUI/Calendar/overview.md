@@ -15,33 +15,17 @@ Syncfusion .NET MAUI Calendar (SfCalendar) is a calendar control that allows use
 
 * **Multiple calendar view modes**: For selection and navigation, use Month, Year, Decade, and Century calendar views.
 
-   ![Month view in .NET MAUI Calendar.](images/overview/maui-month-view.png)
-
-   ![Year view in .NET MAUI Calendar.](images/overview/maui-year-view.png)
-
-   ![Decade view in .NET MAUI Calendar.](images/overview/maui-decade-view.png)
-
-   ![Century view in .NET MAUI Calendar.](images/overview/maui-century-view.png)
+   ![Multiple views in .NET MAUI Calendar.](images/overview/maui-multiple-views.png)
 
 * **Quick navigation**: You can easily navigate to the desired date using different calendar views in the `SfCalendar`.
 
 * **Enable and disable built-in view switching**: Restricts or enables navigation to different calendar views using interaction.
 
-   ![Month view single selection in .NET MAUI Calendar.](images/overview/maui-month-view-single-selection.png)
-
-   ![Year view single selection in .NET MAUI Calendar.](images/overview/maui-year-view-single-selection.png)
-
-   ![Decade view single selection in .NET MAUI Calendar.](images/overview/maui-decade-view-single-selection.png)
-
-   ![Century view single selection in .NET MAUI Calendar.](images/overview/maui-century-view-single-selection.png)
+   ![Single selection in .NET MAUI Calendar.](images/overview/maui-single-selection.png)
 
 * **Date selection**: Date selection allows you to select the Single date, Multiple dates or a Range of dates by interaction or programmatic selection.
 
-   ![Single selection in .NET MAUI Calendar.](images/overview/maui-month-view-single-selection.png)
-
-   ![Multiple selection in .NET MAUI Calendar.](images/overview/maui-multiple-selection.png)
-
-   ![Range selection in .NET MAUI Calendar.](images/overview/maui-range-selection.png)
+   ![Selection Modes in .NET MAUI Calendar.](images/overview/maui-selection-modes.png)
 
 * **Limit date selection**: Restricts interaction and navigation beyond the specified minimum and maximum dates.
 
