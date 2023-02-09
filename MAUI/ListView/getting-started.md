@@ -13,7 +13,7 @@ This section provides a quick overview of how to get started with the .NET Maui 
 
 To get start quickly with .NET MAUI ListView, you can check on this video:
 
-<style>#MAUIListViewVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIListViewVideoTutorial' src='https://www.youtube.com/watch?v=EFo2zIFw60Q'></iframe>
+<style>#MAUIListViewVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIListViewVideoTutorial' src='https://www.youtube.com/embed/EFo2zIFw60Q'></iframe>
 
 ## Creating an application using the .NET MAUI ListView
 
