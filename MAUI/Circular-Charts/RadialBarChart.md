@@ -263,3 +263,52 @@ The [MaximumValue]() property of the radial bar series is used to define the spa
 
 The view placed in the center of the radial bar chart is useful for sharing additional information about the radial bar chart. Any view can be added to the center of the doughnut chart using the [CenterView]() property of [RadialBarSeries](). The binding context of the [CenterView]() will be the respective radial bar series.
 
+{% tabs %}
+
+{% highlight xaml %}
+
+    <chart:SfCircularChart>
+    <chart:RadialBarSeries ItemsSource="{Binding Data}" 
+                        XBindingPath="Product" 
+                        YBindingPath="SalesRate" 
+                        StartAngle = "-90"
+                        EndAngle = "270" 
+                        MaximumValue = 100;
+                        CapStyle = "BothCurve">
+                    <chart:RadialBarSeries.CenterView>
+                        <Image Source="person.png"      
+                            HeightRequest="200" 
+                            WidthRequest="150"
+                            HorizontalOptions="Center" 
+                            VerticalOptions="Center"/>
+                </chart:RadialBarSeries.CenterView>
+    </chart:SfCircularChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+    SfCircularChart chart = new SfCircularChart();
+
+        RadialBarSeries series = new RadialBarSeries();
+        series.XBindingPath = "Product";
+        series.YBindingPath = "SalesRate";
+        series.StartAngle = -90;
+        series.EndAngle = 270;
+        series.CapStyle = CapStyle.BothCurve;
+
+        Image image = new Image();
+        image.Source = "person.png";
+        image.HeightRequest = 200;
+        image.WeightRequest = 150;
+        image.HorizontalOptions = LayoutOptions.Center;
+        image.VerticalOptions = LayoutOptions.Center;        
+
+        series.CenterView = image;
+        chart.Series.Add(series);
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Radial bar chart both curve cap style in MAUI Chart](Chart-Types_images/maui_radialbarchart_centerview.png)
