@@ -34,8 +34,8 @@ N> The circular chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusio
         RadialBarSeries series = new RadialBarSeries();
         series.XBindingPath = "Product";
         series.YBindingPath = "SalesRate";
-        series.StartAngle = "-90";
-        series.EndAngle = "270"
+        series.StartAngle = -90;
+        series.EndAngle = 270;
 
         chart.Series.Add(series);
 
@@ -43,125 +43,223 @@ N> The circular chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusio
 
 {% endtabs %}
 
-![Radial bar chart type in MAUI Chart](Chart-Types_images/maui_doughnut_chart.png)
+![Radial bar chart type in MAUI Chart](Chart-Types_images/maui_radialbar_chart.png)
 
-## Inner Radius
+## Track Stroke
 
-The [InnerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DoughnutSeries.html#Syncfusion_Maui_Charts_DoughnutSeries_InnerRadius) property of doughnut series is used to define the inner circle.
+You can use the following properties to customize the appearance of the circular bar track.
 
-{% tabs %}
+ * [TrackStroke]() - To customize the circular bar border color.
 
-{% highlight xaml %}
+  * [TrackStrokeWidth]() - To customize the border width of the circular bar.
 
-<chart:SfCircularChart>
-    <chart:DoughnutSeries ItemsSource="{Binding Data}"
-						InnerRadius="0.7"		  
-						XBindingPath="Product"
-						YBindingPath="SalesRate" />
-</chart:SfCircularChart>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-SfCircularChart chart = new SfCircularChart();
-DoughnutSeries series = new DoughnutSeries();
-series.XBindingPath = "Product";
-series.YBindingPath = "SalesRate";
-series.InnerRadius = 0.7;
-
-chart.Series.Add(series);
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Doughnut chart with coefficient in MAUI Chart](Chart-Types_images/maui_doughnut_chart_doughnutcoefficient.png)
-
-## Semi Doughnut
-
-By using the [StartAngle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CircularSeries.html#Syncfusion_Maui_Charts_CircularSeries_StartAngle) and [EndAngle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CircularSeries.html#Syncfusion_Maui_Charts_CircularSeries_EndAngle) properties, you can draw doughnut series in different shapes such as semi-doughnut or quarter doughnut series.
+  * [TrackFill]() - To customize the ciruclar bar area which behind the radial bar segments.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<chart:SfCircularChart>
-    <chart:DoughnutSeries StartAngle="180" EndAngle="360"
-                    ItemsSource="{Binding Data}"
-                    XBindingPath="Product" 
-                    YBindingPath="SalesRate" />
-</chart:SfCircularChart>
-    
+    <chart:SfCircularChart>
+    <chart:RadialBarSeries ItemsSource="{Binding Data}" 
+                        XBindingPath="Product" 
+                        YBindingPath="SalesRate" 
+                        StartAngle = "-90"
+                        EndAngle = "270" 
+                        TrackStrokeWidth = "1"/>
+    </chart:SfCircularChart>
+
 {% endhighlight %}
 
 {% highlight c# %}
 
-SfCircularChart chart = new SfCircularChart();
-DoughnutSeries series = new DoughnutSeries();
-series.XBindingPath = "Product";
-series.YBindingPath = "SalesRate";
-series.StartAngle = 180;
-series.EndAngle = 360;
+    SfCircularChart chart = new SfCircularChart();
 
-chart.Series.Add(series);
+        RadialBarSeries series = new RadialBarSeries();
+        series.XBindingPath = "Product";
+        series.YBindingPath = "SalesRate";
+        series.StartAngle = -90;
+        series.EndAngle = 270;
+        series.TrackStrokeWidth = 1;
+
+        chart.Series.Add(series);
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Semi doughnut chart in MAUI Chart](Chart-Types_images/maui_semi_doughnut_chart.png)
+![Radial bar chart track stroke in MAUI Chart](Chart-Types_images/maui_trackstrokewidth.png)
 
-## Center View
+## CapStyle
 
-The view placed in the center of the doughnut chart is useful for sharing additional information about the doughnut chart. Any view can be added to the center of the doughnut chart using the [CenterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DoughnutSeries.html#Syncfusion_Maui_Charts_DoughnutSeries_CenterView) property of [DoughnutSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DoughnutSeries.html). The binding context of the [CenterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DoughnutSeries.html#Syncfusion_Maui_Charts_DoughnutSeries_CenterView) will be the respective doughnut series.
+The [CapStyle]() property of the radial bar series is used to specify the shape of the start and end points of the circular segment. The default value of this property is [Both.Flat]().
 
-### Center Hole Size
+The following types are available for [CapStyle]() property.
 
-The [CenterHoleSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DoughnutSeries.html#Syncfusion_Maui_Charts_DoughnutSeries_CenterHoleSize) property of [DoughnutSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DoughnutSeries.html) is used to get the diameter value of the center hole. Using the [CenterHoleSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DoughnutSeries.html#Syncfusion_Maui_Charts_DoughnutSeries_CenterHoleSize), we can protect the view in the doughnut center from overlapping with the series.
+ * [BothFlat]() - Indicates that a flat shape should appear at the start and end positions of the segment.
+
+ * [BothCurve]() - Indicates that a curve shape should appear at the start and end positions of the segment. 
+
+ * [StartCurve]() - Indicates that a curve shape should appear at the start position of the segment.
+
+ * [EndCurve]() - Indicates that a curve shape should appear at the end position of the segment.
+
+ ### BothCuve
+
+ {% tabs %}
+
+{% highlight xaml %}
+
+    <chart:SfCircularChart>
+    <chart:RadialBarSeries ItemsSource="{Binding Data}" 
+                        XBindingPath="Product" 
+                        YBindingPath="SalesRate" 
+                        StartAngle = "-90"
+                        EndAngle = "270" 
+                        CapStyle = "BothCurve"/>
+    </chart:SfCircularChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+    SfCircularChart chart = new SfCircularChart();
+
+        RadialBarSeries series = new RadialBarSeries();
+        series.XBindingPath = "Product";
+        series.YBindingPath = "SalesRate";
+        series.StartAngle = -90;
+        series.EndAngle = 270;
+        series.CapStyle = CapStyle.BothCurve;
+
+        chart.Series.Add(series);
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Radial bar chart both curve cap style in MAUI Chart](Chart-Types_images/maui_bothcurve.png)
+
+### StartCurve
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<chart:SfCircularChart>    
-    <chart:DoughnutSeries ItemsSource="{Binding Data}" XBindingPath="Name" YBindingPath="Value"/>
-        <chart:DoughnutSeries.CenterView>
-                <Border HeightRequest="{Binding CenterHoleSize}" WidthRequest="{Binding CenterHoleSize}">
-                    <Border.StrokeShape>
-                        <RoundRectangle CornerRadius="200"/>
-                    </Border.StrokeShape>
-                    <StackLayout>
-                        <Label Text="Total :" />
-                        <Label Text="357,580 km²"/>
-                    </StackLayout>
-                </Border>
-        </chart:DoughnutSeries.CenterView>
-    </chart:DoughnutSeries>
-</chart:SfCircularChart>
+    <chart:SfCircularChart>
+    <chart:RadialBarSeries ItemsSource="{Binding Data}" 
+                        XBindingPath="Product" 
+                        YBindingPath="SalesRate" 
+                        StartAngle = "-90"
+                        EndAngle = "270" 
+                        CapStyle = "StartCurve"/>
+    </chart:SfCircularChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-SfCircularChart chart = new SfCircularChart();       
-DoughnutSeries series = new DoughnutSeries()
-series.XBindingPath = "Name";
-series.YBindingPath = "Value";
+    SfCircularChart chart = new SfCircularChart();
 
-Border border = new Border();  
-Label name = new Label();
-name.Text = "Total :";
-Label value = new Label()
-value.Text = "357,580 km²";
-StackLayout layout = new StackLayout();
+        RadialBarSeries series = new RadialBarSeries();
+        series.XBindingPath = "Product";
+        series.YBindingPath = "SalesRate";
+        series.StartAngle = -90;
+        series.EndAngle = 270;
+        series.CapStyle = CapStyle.StartCurve;
 
-border.Content = layout;
-series.CenterView = border;
-chart.Series.Add(series);
+        chart.Series.Add(series);
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Center View in MAUI doughnut Chart](Chart-Types_images/maui_center_View.png)
+![Radial bar chart start curve cap style in MAUI Chart](Chart-Types_images/maui_startcurve.png)
+
+### EndCurve
+
+{% tabs %}
+
+{% highlight xaml %}
+
+    <chart:SfCircularChart>
+    <chart:RadialBarSeries ItemsSource="{Binding Data}" 
+                        XBindingPath="Product" 
+                        YBindingPath="SalesRate" 
+                        StartAngle = "-90"
+                        EndAngle = "270" 
+                        CapStyle = "EndCurve"/>
+    </chart:SfCircularChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+    SfCircularChart chart = new SfCircularChart();
+
+        RadialBarSeries series = new RadialBarSeries();
+        series.XBindingPath = "Product";
+        series.YBindingPath = "SalesRate";
+        series.StartAngle = -90;
+        series.EndAngle = 270;
+        series.CapStyle = CapStyle.EndCurve;
+
+        chart.Series.Add(series);
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Radial bar chart both curve cap style in MAUI Chart](Chart-Types_images/maui_endcurve.png)
+
+## Inner Radius and Gap Ratio
+
+The following properties are customize the size of the radial bar chart.
+
+ * The [InnerRadius]() property of radial bar series is used to define the inner circle. The default value of this property is `0.4`.
+
+  * The [GapRatio]() property of the radial bar series is used to define the spacing between each segments. The default value of this property is `0.2`.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+    <chart:SfCircularChart>
+    <chart:RadialBarSeries ItemsSource="{Binding Data}" 
+                        XBindingPath="Product" 
+                        YBindingPath="SalesRate" 
+                        StartAngle = "-90"
+                        EndAngle = "270" 
+                        InnerRadius = "0.2"
+                        GapRatio = "0.4"/>
+    </chart:SfCircularChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+    SfCircularChart chart = new SfCircularChart();
+
+        RadialBarSeries series = new RadialBarSeries();
+        series.XBindingPath = "Product";
+        series.YBindingPath = "SalesRate";
+        series.StartAngle = -90;
+        series.EndAngle = 270;
+        series.InnerRadius = 0.2;
+        series.GapRatio = 0.4;
+
+        chart.Series.Add(series);
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Radial bar chart both curve cap style in MAUI Chart](Chart-Types_images/maui_innerradius_gapratio.png)
+
+## Maximum Value
+
+The [MaximumValue]() property of the radial bar series is used to define the span of the segment-filled area in the radial bar track. The default value of this property is `double.NaN`.
+
+## CenterView
+
+The view placed in the center of the radial bar chart is useful for sharing additional information about the radial bar chart. Any view can be added to the center of the doughnut chart using the [CenterView]() property of [RadialBarSeries](). The binding context of the [CenterView]() will be the respective radial bar series.
+
