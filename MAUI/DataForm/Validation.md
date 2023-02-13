@@ -13,7 +13,9 @@ The data form validates the data and user input to update the correct value in t
 
 ## Built in validations
 
-The supported built in validations are as follows:
+The supported built in validations such as [Data Annotations](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations?view=net-7.0), [IDataErrorInfo](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.idataerrorinfo?view=net-6.0), [INotifyDataErrorInfo](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifydataerrorinfo?view=net-6.0)
+
+### Validate using the validation attribute
 
 #### Data annotations
 
@@ -48,6 +50,97 @@ public DateTime JoinDate { get; set; }
 {% endtabs %}
 
 Refer [here](https://help.syncfusion.com/maui/dataform/data-annotations#dateformdaterange-attribute) to know more about date range attribute in DataForm.
+
+### Validate using the IDataErrorInfo interface
+
+You can validate the data by implementing the [IDataErrorInfo](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.idataerrorinfo?view=net-6.0) interface in the data object class.
+
+{% tabs %}
+{% highlight C# %}
+
+public class EmployeeInfo : IDataErrorInfo
+{
+    public string EmployeeID { get; set; }
+
+    public string Name { get; set; }
+
+    public string Title { get; set; }
+
+    [Display(AutoGenerateField = false)]
+    public string Error
+    {
+        get
+        {
+            return string.Empty;
+        }
+    }
+
+    [Display(AutoGenerateField = false)]
+    public string this[string columnName]
+    {
+        get
+        {
+            if (columnName == nameof(Title) && this.Title.Contains("Marketing"))
+            {
+                return "Marketing is not allowed";
+            }
+
+            return string.Empty;
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/DataErrorInfoSample)
+
+### Validate using the INotifyDataErrorInfo interface
+
+You can validate the data by implementing the [INotifyDataErrorInfo](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifydataerrorinfo?view=net-6.0) interface in the data object class. This interface has three members,
+
+* [HasErrors property](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifydataerrorinfo.haserrors?view=net-6.0#system-componentmodel-inotifydataerrorinfo-haserrors)
+* [GetErrors method](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifydataerrorinfo.geterrors?view=net-6.0#system-componentmodel-inotifydataerrorinfo-geterrors(system-string))
+* [ErrorsChanged event](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifydataerrorinfo.errorschanged?view=net-6.0)
+
+{% tabs %}
+{% highlight C# %}
+
+public class EmployeeInfo : INotifyDataErrorInfo
+{
+    public event EventHandler<DataErrorsChangedEventArgs> ErrorsChanged;
+
+    public string EmployeeID { get; set; }
+
+    public string Name { get; set; }
+
+    public string Title { get; set; }
+
+    [Display(AutoGenerateField = false)]
+    public bool HasErrors
+    {
+        get
+        {
+            return false;
+        }
+    }
+
+    public IEnumerable GetErrors(string propertyName)
+    {
+        var list = new List<string>();
+        if (propertyName == nameof(Title) && this.Title.Contains("Marketing"))
+        {
+            list.Add("Marketing is not allowed");
+        }
+
+        return list;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/NotifyDataErrorInfoSample)
 
 ## Validation mode
 
