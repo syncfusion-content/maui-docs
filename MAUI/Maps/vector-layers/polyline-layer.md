@@ -28,26 +28,26 @@ The [`Polylines`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPo
                     <map:MapPolylineLayer.Polylines>
                         <map:MapPolyline>
                             <map:MapPolyline.Points>
-                                <map:MapLatLng Latitude="80.2707"
-                                               Longitude="13.0827" />
-                                <map:MapLatLng Latitude="79.6117"
-                                               Longitude="13.1746" />
-                                <map:MapLatLng Latitude="79.5037"
-                                               Longitude="13.6373" />
-                                <map:MapLatLng Latitude="78.8242"
-                                               Longitude="14.4673" />
-                                <map:MapLatLng Latitude="78.0092"
-                                               Longitude="14.9091" />
-                                <map:MapLatLng Latitude="77.3566"
-                                               Longitude="16.2160" />
-                                <map:MapLatLng Latitude="76.8697"
-                                               Longitude="17.1557" />
-                                <map:MapLatLng Latitude="75.4249"
-                                               Longitude="18.0975" />
-                                <map:MapLatLng Latitude="73.8567"
-                                               Longitude="18.5204" />
-                                <map:MapLatLng Latitude="72.8777"
-                                               Longitude="19.0760" />
+                                <map:MapLatLng Latitude="13.0827"
+                                               Longitude="80.2707" />
+                                <map:MapLatLng Latitude="13.1746"
+                                               Longitude="79.6117" />
+                                <map:MapLatLng Latitude="13.6373"
+                                               Longitude="79.5037" />
+                                <map:MapLatLng Latitude="14.4673"
+                                               Longitude="78.8242" />
+                                <map:MapLatLng Latitude="14.9091"
+                                               Longitude="78.0092" />
+                                <map:MapLatLng Latitude="16.2160"
+                                               Longitude="77.3566" />
+                                <map:MapLatLng Latitude="17.1557"
+                                               Longitude="76.8697" />
+                                <map:MapLatLng Latitude="18.0975"
+                                               Longitude="75.4249" />
+                                <map:MapLatLng Latitude="18.5204"
+                                               Longitude="73.8567" />
+                                <map:MapLatLng Latitude="19.0760"
+                                               Longitude="72.8777" />
                             </map:MapPolyline.Points>
                         </map:MapPolyline>
                     </map:MapPolylineLayer.Polylines>
@@ -63,23 +63,23 @@ The [`Polylines`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPo
 
 SfMaps maps = new SfMaps();
 MapShapeLayer layer = new MapShapeLayer();
-layer.ShapesSource = MapSource.FromResource("MyProject.india.json");
+layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/india.json"));
 layer.ShapeStroke = Brush.DarkGray;
 MapPolylineLayer mapPolylineLayer = new MapPolylineLayer();
 MapPolyline polyline = new MapPolyline();
 polyline.Points = new ObservableCollection<MapLatLng>()
- {
-     new MapLatLng(80.2707, 13.0827),
-     new MapLatLng(79.6117, 13.1746),
-     new MapLatLng(79.5037, 13.6373),
-     new MapLatLng(78.8242, 14.4673),
-     new MapLatLng(78.0092, 14.9091),
-     new MapLatLng(77.3566, 16.2160),
-     new MapLatLng(76.8697, 17.1557),
-     new MapLatLng(75.4249, 18.0975),
-     new MapLatLng(73.8567, 18.5204),
-     new MapLatLng(72.8777, 19.0760),
- };
+{
+    new MapLatLng(13.0827, 80.2707),
+    new MapLatLng(13.1746, 79.6117),
+    new MapLatLng(13.6373, 79.5037),
+    new MapLatLng(14.4673, 78.8242),
+    new MapLatLng(14.9091, 78.0092),
+    new MapLatLng(16.2160, 77.3566),
+    new MapLatLng(17.1557, 76.8697),
+    new MapLatLng(18.0975, 75.4249),
+    new MapLatLng(18.5204, 73.8567),
+    new MapLatLng(19.0760, 72.8777),
+};
 mapPolylineLayer.Polylines.Add(polyline);
 layer.Sublayers.Add(mapPolylineLayer);
 maps.Layer = layer;
@@ -108,26 +108,26 @@ You can apply colors to each [`MapPolyline`](https://help.syncfusion.com/cr/maui
                     <map:MapPolylineLayer.Polylines>
                         <map:MapPolyline Stroke="#993fad">
                             <map:MapPolyline.Points>
-                                <map:MapLatLng Latitude="80.2707"
-                                               Longitude="13.0827" />
-                                <map:MapLatLng Latitude="79.6117"
-                                               Longitude="13.1746" />
-                                <map:MapLatLng Latitude="79.5037"
-                                               Longitude="13.6373" />
-                                <map:MapLatLng Latitude="78.8242"
-                                               Longitude="14.4673" />
-                                <map:MapLatLng Latitude="78.0092"
-                                               Longitude="14.9091" />
-                                <map:MapLatLng Latitude="77.3566"
-                                               Longitude="16.2160" />
-                                <map:MapLatLng Latitude="76.8697"
-                                               Longitude="17.1557" />
-                                <map:MapLatLng Latitude="75.4249"
-                                               Longitude="18.0975" />
-                                <map:MapLatLng Latitude="73.8567"
-                                               Longitude="18.5204" />
-                                <map:MapLatLng Latitude="72.8777"
-                                               Longitude="19.0760" />
+                                <map:MapLatLng Latitude="13.0827"
+                                               Longitude="80.2707" />
+                                <map:MapLatLng Latitude="13.1746"
+                                               Longitude="79.6117" />
+                                <map:MapLatLng Latitude="13.6373"
+                                               Longitude="79.5037" />
+                                <map:MapLatLng Latitude="14.4673"
+                                               Longitude="78.8242" />
+                                <map:MapLatLng Latitude="14.9091"
+                                               Longitude="78.0092" />
+                                <map:MapLatLng Latitude="16.2160"
+                                               Longitude="77.3566" />
+                                <map:MapLatLng Latitude="17.1557"
+                                               Longitude="76.8697" />
+                                <map:MapLatLng Latitude="18.0975"
+                                               Longitude="75.4249" />
+                                <map:MapLatLng Latitude="18.5204"
+                                               Longitude="73.8567" />
+                                <map:MapLatLng Latitude="19.0760"
+                                               Longitude="72.8777" />
                             </map:MapPolyline.Points>
                         </map:MapPolyline>
                     </map:MapPolylineLayer.Polylines>
@@ -148,18 +148,18 @@ layer.ShapeStroke = Brush.DarkGray;
 MapPolylineLayer mapPolylineLayer = new MapPolylineLayer();
 MapPolyline polyline = new MapPolyline();
 polyline.Points = new ObservableCollection<MapLatLng>()
- {
-     new MapLatLng(80.2707, 13.0827),
-     new MapLatLng(79.6117, 13.1746),
-     new MapLatLng(79.5037, 13.6373),
-     new MapLatLng(78.8242, 14.4673),
-     new MapLatLng(78.0092, 14.9091),
-     new MapLatLng(77.3566, 16.2160),
-     new MapLatLng(76.8697, 17.1557),
-     new MapLatLng(75.4249, 18.0975),
-     new MapLatLng(73.8567, 18.5204),
-     new MapLatLng(72.8777, 19.0760),
- };
+{
+    new MapLatLng(13.0827, 80.2707),
+    new MapLatLng(13.1746, 79.6117),
+    new MapLatLng(13.6373, 79.5037),
+    new MapLatLng(14.4673, 78.8242),
+    new MapLatLng(14.9091, 78.0092),
+    new MapLatLng(16.2160, 77.3566),
+    new MapLatLng(17.1557, 76.8697),
+    new MapLatLng(18.0975, 75.4249),
+    new MapLatLng(18.5204, 73.8567),
+    new MapLatLng(19.0760, 72.8777),
+};
 polyline.Stroke = Color.FromRgb(153, 63, 173);
 mapPolylineLayer.Polylines.Add(polyline);
 layer.Sublayers.Add(mapPolylineLayer);
@@ -187,28 +187,29 @@ You can apply different stroke thickness to each [`MapPolyline`](https://help.sy
             <map:MapShapeLayer.Sublayers>
                 <map:MapPolylineLayer>
                     <map:MapPolylineLayer.Polylines>
-                        <map:MapPolyline StrokeThickness="3">
+                        <map:MapPolyline Stroke="DarkGray"
+                                         StrokeThickness="3" >
                             <map:MapPolyline.Points>
-                                <map:MapLatLng Latitude="80.2707"
-                                               Longitude="13.0827" />
-                                <map:MapLatLng Latitude="79.6117"
-                                               Longitude="13.1746" />
-                                <map:MapLatLng Latitude="79.5037"
-                                               Longitude="13.6373" />
-                                <map:MapLatLng Latitude="78.8242"
-                                               Longitude="14.4673" />
-                                <map:MapLatLng Latitude="78.0092"
-                                               Longitude="14.9091" />
-                                <map:MapLatLng Latitude="77.3566"
-                                               Longitude="16.2160" />
-                                <map:MapLatLng Latitude="76.8697"
-                                               Longitude="17.1557" />
-                                <map:MapLatLng Latitude="75.4249"
-                                               Longitude="18.0975" />
-                                <map:MapLatLng Latitude="73.8567"
-                                               Longitude="18.5204" />
-                                <map:MapLatLng Latitude="72.8777"
-                                               Longitude="19.0760" />
+                                <map:MapLatLng Latitude="13.0827"
+                                               Longitude="80.2707" />
+                                <map:MapLatLng Latitude="13.1746"
+                                               Longitude="79.6117" />
+                                <map:MapLatLng Latitude="13.6373"
+                                               Longitude="79.5037" />
+                                <map:MapLatLng Latitude="14.4673"
+                                               Longitude="78.8242" />
+                                <map:MapLatLng Latitude="14.9091"
+                                               Longitude="78.0092" />
+                                <map:MapLatLng Latitude="16.2160"
+                                               Longitude="77.3566" />
+                                <map:MapLatLng Latitude="17.1557"
+                                               Longitude="76.8697" />
+                                <map:MapLatLng Latitude="18.0975"
+                                               Longitude="75.4249" />
+                                <map:MapLatLng Latitude="18.5204"
+                                               Longitude="73.8567" />
+                                <map:MapLatLng Latitude="19.0760"
+                                               Longitude="72.8777" />
                             </map:MapPolyline.Points>
                         </map:MapPolyline>
                     </map:MapPolylineLayer.Polylines>
@@ -229,18 +230,19 @@ layer.ShapeStroke = Brush.DarkGray;
 MapPolylineLayer mapPolylineLayer = new MapPolylineLayer();
 MapPolyline polyline = new MapPolyline();
 polyline.Points = new ObservableCollection<MapLatLng>()
- {
-     new MapLatLng(80.2707, 13.0827),
-     new MapLatLng(79.6117, 13.1746),
-     new MapLatLng(79.5037, 13.6373),
-     new MapLatLng(78.8242, 14.4673),
-     new MapLatLng(78.0092, 14.9091),
-     new MapLatLng(77.3566, 16.2160),
-     new MapLatLng(76.8697, 17.1557),
-     new MapLatLng(75.4249, 18.0975),
-     new MapLatLng(73.8567, 18.5204),
-     new MapLatLng(72.8777, 19.0760),
- };
+{
+    new MapLatLng(13.0827, 80.2707),
+    new MapLatLng(13.1746, 79.6117),
+    new MapLatLng(13.6373, 79.5037),
+    new MapLatLng(14.4673, 78.8242),
+    new MapLatLng(14.9091, 78.0092),
+    new MapLatLng(16.2160, 77.3566),
+    new MapLatLng(17.1557, 76.8697),
+    new MapLatLng(18.0975, 75.4249),
+    new MapLatLng(18.5204, 73.8567),
+    new MapLatLng(19.0760, 72.8777),
+};
+polyline.Stroke = Brush.DarkGray;
 polyline.StrokeThickness = 3;
 mapPolylineLayer.Polylines.Add(polyline);
 layer.Sublayers.Add(mapPolylineLayer);
@@ -268,29 +270,30 @@ You can apply different stroke cap to each [`MapPolyline`](https://help.syncfusi
             <map:MapShapeLayer.Sublayers>
                 <map:MapPolylineLayer>
                     <map:MapPolylineLayer.Polylines>
-                        <map:MapPolyline StrokeThickness="5"
+                        <map:MapPolyline Stroke="DarkGray"
+                                         StrokeThickness="5"
                                          StrokeLineCap="Round">
                             <map:MapPolyline.Points>
-                                <map:MapLatLng Latitude="80.2707"
-                                               Longitude="13.0827" />
-                                <map:MapLatLng Latitude="79.6117"
-                                               Longitude="13.1746" />
-                                <map:MapLatLng Latitude="79.5037"
-                                               Longitude="13.6373" />
-                                <map:MapLatLng Latitude="78.8242"
-                                               Longitude="14.4673" />
-                                <map:MapLatLng Latitude="78.0092"
-                                               Longitude="14.9091" />
-                                <map:MapLatLng Latitude="77.3566"
-                                               Longitude="16.2160" />
-                                <map:MapLatLng Latitude="76.8697"
-                                               Longitude="17.1557" />
-                                <map:MapLatLng Latitude="75.4249"
-                                               Longitude="18.0975" />
-                                <map:MapLatLng Latitude="73.8567"
-                                               Longitude="18.5204" />
-                                <map:MapLatLng Latitude="72.8777"
-                                               Longitude="19.0760" />
+                                <map:MapLatLng Latitude="13.0827"
+                                               Longitude="80.2707" />
+                                <map:MapLatLng Latitude="13.1746"
+                                               Longitude="79.6117" />
+                                <map:MapLatLng Latitude="13.6373"
+                                               Longitude="79.5037" />
+                                <map:MapLatLng Latitude="14.4673"
+                                               Longitude="78.8242" />
+                                <map:MapLatLng Latitude="14.9091"
+                                               Longitude="78.0092" />
+                                <map:MapLatLng Latitude="16.2160"
+                                               Longitude="77.3566" />
+                                <map:MapLatLng Latitude="17.1557"
+                                               Longitude="76.8697" />
+                                <map:MapLatLng Latitude="18.0975"
+                                               Longitude="75.4249" />
+                                <map:MapLatLng Latitude="18.5204"
+                                               Longitude="73.8567" />
+                                <map:MapLatLng Latitude="19.0760"
+                                               Longitude="72.8777" />
                             </map:MapPolyline.Points>
                         </map:MapPolyline>
                     </map:MapPolylineLayer.Polylines>
@@ -311,18 +314,19 @@ layer.ShapeStroke = Brush.DarkGray;
 MapPolylineLayer mapPolylineLayer = new MapPolylineLayer();
 MapPolyline polyline = new MapPolyline();
 polyline.Points = new ObservableCollection<MapLatLng>()
- {
-     new MapLatLng(80.2707, 13.0827),
-     new MapLatLng(79.6117, 13.1746),
-     new MapLatLng(79.5037, 13.6373),
-     new MapLatLng(78.8242, 14.4673),
-     new MapLatLng(78.0092, 14.9091),
-     new MapLatLng(77.3566, 16.2160),
-     new MapLatLng(76.8697, 17.1557),
-     new MapLatLng(75.4249, 18.0975),
-     new MapLatLng(73.8567, 18.5204),
-     new MapLatLng(72.8777, 19.0760),
- };
+{
+    new MapLatLng(13.0827, 80.2707),
+    new MapLatLng(13.1746, 79.6117),
+    new MapLatLng(13.6373, 79.5037),
+    new MapLatLng(14.4673, 78.8242),
+    new MapLatLng(14.9091, 78.0092),
+    new MapLatLng(16.2160, 77.3566),
+    new MapLatLng(17.1557, 76.8697),
+    new MapLatLng(18.0975, 75.4249),
+    new MapLatLng(18.5204, 73.8567),
+    new MapLatLng(19.0760, 72.8777),
+};
+polyline.Stroke = Brush.DarkGray;
 polyline.StrokeThickness = 5;
 polyline.StrokeLineCap = LineCap.Round;
 mapPolylineLayer.Polylines.Add(polyline);
@@ -355,26 +359,26 @@ A sequence of dash and gap will be rendered based on the values in this list. On
                     <map:MapPolylineLayer.Polylines>
                         <map:MapPolyline Stroke="#52a8ef">
                             <map:MapPolyline.Points>
-                                <map:MapLatLng Latitude="80.2707"
-                                               Longitude="13.0827" />
-                                <map:MapLatLng Latitude="79.6117"
-                                               Longitude="13.1746" />
-                                <map:MapLatLng Latitude="79.5037"
-                                               Longitude="13.6373" />
-                                <map:MapLatLng Latitude="78.8242"
-                                               Longitude="14.4673" />
-                                <map:MapLatLng Latitude="78.0092"
-                                               Longitude="14.9091" />
-                                <map:MapLatLng Latitude="77.3566"
-                                               Longitude="16.2160" />
-                                <map:MapLatLng Latitude="76.8697"
-                                               Longitude="17.1557" />
-                                <map:MapLatLng Latitude="75.4249"
-                                               Longitude="18.0975" />
-                                <map:MapLatLng Latitude="73.8567"
-                                               Longitude="18.5204" />
-                                <map:MapLatLng Latitude="72.8777"
-                                               Longitude="19.0760" />
+                                <map:MapLatLng Latitude="13.0827"
+                                               Longitude="80.2707" />
+                                <map:MapLatLng Latitude="13.1746"
+                                               Longitude="79.6117" />
+                                <map:MapLatLng Latitude="13.6373"
+                                               Longitude="79.5037" />
+                                <map:MapLatLng Latitude="14.4673"
+                                               Longitude="78.8242" />
+                                <map:MapLatLng Latitude="14.9091"
+                                               Longitude="78.0092" />
+                                <map:MapLatLng Latitude="16.2160"
+                                               Longitude="77.3566" />
+                                <map:MapLatLng Latitude="17.1557"
+                                               Longitude="76.8697" />
+                                <map:MapLatLng Latitude="18.0975"
+                                               Longitude="75.4249" />
+                                <map:MapLatLng Latitude="18.5204"
+                                               Longitude="73.8567" />
+                                <map:MapLatLng Latitude="19.0760"
+                                               Longitude="72.8777" />
                             </map:MapPolyline.Points>
                             <map:MapPolyline.StrokeDashArray>
                                 <DoubleCollection>
@@ -404,16 +408,16 @@ MapPolylineLayer mapPolylineLayer = new MapPolylineLayer();
 MapPolyline polyline = new MapPolyline();
 polyline.Points = new ObservableCollection<MapLatLng>()
 {
-    new MapLatLng(80.2707, 13.0827),
-    new MapLatLng(79.6117, 13.1746),
-    new MapLatLng(79.5037, 13.6373),
-    new MapLatLng(78.8242, 14.4673),
-    new MapLatLng(78.0092, 14.9091),
-    new MapLatLng(77.3566, 16.2160),
-    new MapLatLng(76.8697, 17.1557),
-    new MapLatLng(75.4249, 18.0975),
-    new MapLatLng(73.8567, 18.5204),
-    new MapLatLng(72.8777, 19.0760),
+    new MapLatLng(13.0827, 80.2707),
+    new MapLatLng(13.1746, 79.6117),
+    new MapLatLng(13.6373, 79.5037),
+    new MapLatLng(14.4673, 78.8242),
+    new MapLatLng(14.9091, 78.0092),
+    new MapLatLng(16.2160, 77.3566),
+    new MapLatLng(17.1557, 76.8697),
+    new MapLatLng(18.0975, 75.4249),
+    new MapLatLng(18.5204, 73.8567),
+    new MapLatLng(19.0760, 72.8777),
 };
 polyline.Stroke = Color.FromRgb(82, 168, 239);
 polyline.StrokeDashArray = new double[] { 4, 2, 1, 2 };
