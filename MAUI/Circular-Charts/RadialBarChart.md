@@ -53,7 +53,7 @@ You can use the following properties to customize the appearance of the circular
 
   * [TrackStrokeWidth]() - To customize the border width of the circular bar.
 
-  * [TrackFill]() - To customize the circuclar bar area which behind the radial bar segments.
+  * [TrackFill]() - To customize the circular bar area which behind the radial bar segments.
 
 {% tabs %}
 
