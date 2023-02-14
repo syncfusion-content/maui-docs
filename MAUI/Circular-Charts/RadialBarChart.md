@@ -53,7 +53,7 @@ You can use the following properties to customize the appearance of the circular
 
   * [TrackStrokeWidth]() - To customize the border width of the circular bar.
 
-  * [TrackFill]() - To customize the ciruclar bar area which behind the radial bar segments.
+  * [TrackFill]() - To customize the circuclar bar area which behind the radial bar segments.
 
 {% tabs %}
 
@@ -103,7 +103,7 @@ The following types are available for [CapStyle]() property.
 
  * [EndCurve]() - Indicates that a curve shape should appear at the end position of the segment.
 
- ### BothCuve
+ ### BothCurve
 
  {% tabs %}
 
