@@ -28,22 +28,22 @@ The [`Polygons`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPol
                     <map:MapPolygonLayer.Polygons>
                         <map:MapPolygon>
                             <map:MapPolygon.Points>
-                                <map:MapLatLng Latitude="37.6173"
-                                               Longitude="55.7558" />
-                                <map:MapLatLng Latitude="87.1216"
-                                               Longitude="53.7596" />
-                                <map:MapLatLng Latitude="105.3188"
-                                               Longitude="61.5240" />
+                                <map:MapLatLng Latitude="55.7558"
+                                               Longitude="37.6173" />
+                                <map:MapLatLng Latitude="53.7596"
+                                               Longitude="87.1216" />
+                                <map:MapLatLng Latitude="61.5240"
+                                               Longitude="105.3188" />
                             </map:MapPolygon.Points>
                         </map:MapPolygon>
                         <map:MapPolygon>
                             <map:MapPolygon.Points>
-                                <map:MapLatLng Latitude="-135.0000"
-                                               Longitude="64.2823" />
-                                <map:MapLatLng Latitude="-85.3232"
-                                               Longitude="51.2538" />
-                                <map:MapLatLng Latitude="-123.3656"
-                                               Longitude="48.4284" />
+                                <map:MapLatLng Latitude="64.2823"
+                                               Longitude="-135.0000" />
+                                <map:MapLatLng Latitude="51.2538"
+                                               Longitude="-85.3232" />
+                                <map:MapLatLng Latitude="48.4284"
+                                               Longitude="-123.3656" />
                             </map:MapPolygon.Points>
                         </map:MapPolygon>
                     </map:MapPolygonLayer.Polygons>
@@ -65,16 +65,16 @@ MapPolygonLayer mapPolygonLayer = new MapPolygonLayer();
 MapPolygon polygon1 = new MapPolygon();
 polygon1.Points = new ObservableCollection<MapLatLng>()
 {
-new MapLatLng(37.6173, 55.7558),
-new MapLatLng(87.1216, 53.7596),
-new MapLatLng(105.3188, 61.5240)
+   new MapLatLng(55.7558 , 37.6173),
+   new MapLatLng(53.7596, 87.1216),
+   new MapLatLng(61.5240, 105.3188)
 };
 MapPolygon polygon2 = new MapPolygon();
 polygon2.Points = new ObservableCollection<MapLatLng>()
 {
-new MapLatLng(-135.0000, 64.2823),
-new MapLatLng(-85.3232, 51.2538),
-new MapLatLng(-123.3656, 48.4284)
+   new MapLatLng(64.2823, -135.0000),
+   new MapLatLng(51.2538, -85.3232),
+   new MapLatLng(48.4284, -123.3656)
 };
 mapPolygonLayer.Polygons.Add(polygon1);
 mapPolygonLayer.Polygons.Add(polygon2);
@@ -105,22 +105,22 @@ You can apply colors to each [`MapPolygon`](https://help.syncfusion.com/cr/maui/
                     <map:MapPolygonLayer.Polygons>
                         <map:MapPolygon Fill="#6defae">
                             <map:MapPolygon.Points>
-                                <map:MapLatLng Latitude="37.6173"
-                                               Longitude="55.7558" />
-                                <map:MapLatLng Latitude="87.1216"
-                                               Longitude="53.7596" />
-                                <map:MapLatLng Latitude="105.3188"
-                                               Longitude="61.5240" />
+                                <map:MapLatLng Latitude="55.7558"
+                                               Longitude="37.6173" />
+                                <map:MapLatLng Latitude="53.7596"
+                                               Longitude="87.1216" />
+                                <map:MapLatLng Latitude="61.5240"
+                                               Longitude="105.3188" />
                             </map:MapPolygon.Points>
                         </map:MapPolygon>
                         <map:MapPolygon Fill="#ec407f">
                             <map:MapPolygon.Points>
-                                <map:MapLatLng Latitude="-135.0000"
-                                               Longitude="64.2823" />
-                                <map:MapLatLng Latitude="-85.3232"
-                                               Longitude="51.2538" />
-                                <map:MapLatLng Latitude="-123.3656"
-                                               Longitude="48.4284" />
+                                <map:MapLatLng Latitude="64.2823"
+                                               Longitude="-135.0000" />
+                                <map:MapLatLng Latitude="51.2538"
+                                               Longitude="-85.3232" />
+                                <map:MapLatLng Latitude="48.4284"
+                                               Longitude="-123.3656" />
                             </map:MapPolygon.Points>
                         </map:MapPolygon>
                     </map:MapPolygonLayer.Polygons>
@@ -142,17 +142,17 @@ MapPolygonLayer mapPolygonLayer = new MapPolygonLayer();
 MapPolygon polygon1 = new MapPolygon();
 polygon1.Points = new ObservableCollection<MapLatLng>()
 {
-new MapLatLng(37.6173, 55.7558),
-new MapLatLng(87.1216, 53.7596),
-new MapLatLng(105.3188, 61.5240)
+   new MapLatLng(55.7558 , 37.6173),
+   new MapLatLng(53.7596, 87.1216),
+   new MapLatLng(61.5240, 105.3188)
 };
 polygon1.Fill = Color.FromRgb(109, 239, 174);
 MapPolygon polygon2 = new MapPolygon();
 polygon2.Points = new ObservableCollection<MapLatLng>()
 {
-new MapLatLng(-135.0000, 64.2823),
-new MapLatLng(-85.3232, 51.2538),
-new MapLatLng(-123.3656, 48.4284)
+   new MapLatLng(64.2823, -135.0000),
+   new MapLatLng(51.2538, -85.3232),
+   new MapLatLng(48.4284, -123.3656)
 };
 polygon2.Fill = Color.FromRgb(236, 64, 127);
 mapPolygonLayer.Polygons.Add(polygon1);
@@ -187,23 +187,23 @@ You can apply stroke color to each [`MapPolygon`](https://help.syncfusion.com/cr
                         <map:MapPolygon Stroke="#ea3b5e"
                                         StrokeThickness="3">
                             <map:MapPolygon.Points>
-                                <map:MapLatLng Latitude="37.6173"
-                                               Longitude="55.7558" />
-                                <map:MapLatLng Latitude="87.1216"
-                                               Longitude="53.7596" />
-                                <map:MapLatLng Latitude="105.3188"
-                                               Longitude="61.5240" />
+                                <map:MapLatLng Latitude="55.7558"
+                                               Longitude="37.6173" />
+                                <map:MapLatLng Latitude="53.7596"
+                                               Longitude="87.1216" />
+                                <map:MapLatLng Latitude="61.5240"
+                                               Longitude="105.3188" />
                             </map:MapPolygon.Points>
                         </map:MapPolygon>
                         <map:MapPolygon Stroke="#ea3b5e"
                                         StrokeThickness="4">
                             <map:MapPolygon.Points>
-                                <map:MapLatLng Latitude="-135.0000"
-                                               Longitude="64.2823" />
-                                <map:MapLatLng Latitude="-85.3232"
-                                               Longitude="51.2538" />
-                                <map:MapLatLng Latitude="-123.3656"
-                                               Longitude="48.4284" />
+                                <map:MapLatLng Latitude="64.2823"
+                                               Longitude="-135.0000" />
+                                <map:MapLatLng Latitude="51.2538"
+                                               Longitude="-85.3232" />
+                                <map:MapLatLng Latitude="48.4284"
+                                               Longitude="-123.3656" />
                             </map:MapPolygon.Points>
                         </map:MapPolygon>
                     </map:MapPolygonLayer.Polygons>
@@ -225,18 +225,18 @@ MapPolygonLayer mapPolygonLayer = new MapPolygonLayer();
 MapPolygon polygon1 = new MapPolygon();
 polygon1.Points = new ObservableCollection<MapLatLng>()
 {
-new MapLatLng(37.6173, 55.7558),
-new MapLatLng(87.1216, 53.7596),
-new MapLatLng(105.3188, 61.5240)
+   new MapLatLng(55.7558 , 37.6173),
+   new MapLatLng(53.7596, 87.1216),
+   new MapLatLng(61.5240, 105.3188)
 };
 polygon1.Fill = Color.FromRgb(234, 59, 94);
 polygon1.StrokeThickness = 3;
 MapPolygon polygon2 = new MapPolygon();
 polygon2.Points = new ObservableCollection<MapLatLng>()
 {
-new MapLatLng(-135.0000, 64.2823),
-new MapLatLng(-85.3232, 51.2538),
-new MapLatLng(-123.3656, 48.4284)
+   new MapLatLng(64.2823, -135.0000),
+   new MapLatLng(51.2538, -85.3232),
+   new MapLatLng(48.4284, -123.3656)
 };
 polygon2.Fill = Color.FromRgb(234, 59, 94);
 polygon2.StrokeThickness = 4;
