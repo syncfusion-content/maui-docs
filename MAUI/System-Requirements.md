@@ -39,6 +39,6 @@ Our controls will be compatible with any one of the below configurations.
 .NET Multi-platform App UI (.NET MAUI) apps can be written for the following platforms:
 
 * Android 5.0 (API 21) or higher.
-* iOS 10 or higher.
-* macOS 10.13 or higher, using Mac Catalyst.
-* Windows 11 and Windows 10 version 1809 or higher, using [Windows UI Library (WinUI) 3](https://docs.microsoft.com/en-us/windows/apps/winui/winui3/).
+* iOS 11 or higher, using the latest release of Xcode.
+* macOS 10.15 or higher, using Mac Catalyst.
+* Windows 11 and Windows 10 version 1809 or higher, using [Windows UI Library (WinUI) 3](https://learn.microsoft.com/en-us/windows/apps/winui/winui3/).

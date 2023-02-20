@@ -11,6 +11,11 @@ documentation: ug
 
 This section explains the steps required to add the DateTime Slider control and its elements track, ticks, labels, and tooltip. This section covers only basic features needed to know to get started with Syncfusion DateTime Slider.
 
+To get start quickly with MAUI SfDateTimeSlider, you can check on this video:
+
+<style>#MAUIDateTimeSliderVideoTutorial{width : 90% !important; height: 350px !important }</style>
+<iframe id='MAUIDateTimeSliderVideoTutorial' src='https://www.youtube.com/embed/MIdD3Np485M'></iframe>
+
 ## Creating an application with .NET MAUI
 
 Create a new .NET MAUI application in Visual Studio.
