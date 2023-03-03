@@ -72,4 +72,4 @@ The DataGrid allows you to customize the color of the freeze pane line using the
 {% endhighlight %}
 {% endtabs %}
 
-![Customize freeze pane appearance in .NET MAUI DataGrid](Images\freeze-panes\maui-datagrid-freeze-panes-appearance.png)
+<img src="Images\freeze-panes\maui-datagrid-freeze-panes-appearance.png" alt="Customize freeze panes appearance in .NET MAUI DataGrid" width="408" />
