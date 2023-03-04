@@ -13,6 +13,10 @@ documentation: ug
 
 This section explains how to configure a [`SfRating`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control in a real-time scenario and also provides a walk-through on some of the customization features available in [`SfRating`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control.
 
+To get start quickly with our .NET MAUI Rating, you can check the below video.
+
+{% youtube "https://www.youtube.com/watch?v=yEJzdjPNjBs" %}
+
 ## Adding a .NET MAUI Rating reference
 
 Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add [.NET MAUI Rating] to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) and then install it.
