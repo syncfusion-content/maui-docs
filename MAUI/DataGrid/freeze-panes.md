@@ -25,7 +25,7 @@ The following code snippet shows how to freeze columns in the DataGrid:
 {% tabs %}
 {% highlight xaml %}
 <ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
-    <syncfusion:SfDataGrid ItemsSource="{Binding Employees}" FrozenColumnCount="1" />
+    <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}" FrozenColumnCount="1" />
 </ContentPage>
 {% endhighlight %}
 {% endtabs %}
@@ -45,7 +45,7 @@ The following code snippet shows how to freeze rows in the DataGrid:
 {% tabs %}
 {% highlight xaml %}
 <ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
-    <syncfusion:SfDataGrid ItemsSource="{Binding Employees}" FrozenRowCount="2" />
+    <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}" FrozenRowCount="2" />
 </ContentPage>
 {% endhighlight %}
 {% endtabs %}
@@ -63,7 +63,7 @@ The DataGrid allows you to customize the color of the freeze pane line using the
 {% tabs %}
 {% highlight xaml %}
 <ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
-    <syncfusion:SfDataGrid ItemsSource="{Binding Employees}" FrozenColumnCount="1" FrozenRowCount="1">
+    <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}" FrozenColumnCount="1" FrozenRowCount="1">
         <syncfusion:SfDataGrid.DefaultStyle>
             <syncfusion:DataGridStyle FreezePaneLineColor="Orange" />
         </syncfusion:SfDataGrid.DefaultStyle>
@@ -72,4 +72,4 @@ The DataGrid allows you to customize the color of the freeze pane line using the
 {% endhighlight %}
 {% endtabs %}
 
-<img src="Images\freeze-panes\maui-datagrid-freeze-panes-appearance.png" alt="Customize freeze panes appearance in .NET MAUI DataGrid" width="408" />
+![Customize freeze panes appearance in .NET MAUI DataGrid](Images\freeze-panes\maui-datagrid-freeze-panes-appearance.png)
