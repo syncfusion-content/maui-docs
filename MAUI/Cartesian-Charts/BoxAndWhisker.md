@@ -60,7 +60,7 @@ By default,the BoxPlotMode property value is Exclusive.
 
 {% endtabs %}
 
-![BoxAndWhisker chart type in MAUI Chart](Chart-types_images/maui_boxAndWhisker_chart.png)
+![BoxAndWhisker chart type in MAUI Chart](Chart-types_images/BoxPlotBasicRendering.png)
 
 ## Customize the series BoxPlot mode
 
@@ -123,7 +123,7 @@ The following code illustrate how to define property [BoxPlotMode] value as Norm
 
 {% endtabs %}
 
-![BoxPlotMode Normal in MAUI Chart](Chart-types_images/maui_boxPlotMode_normal.png)
+![BoxPlotMode Normal in MAUI Chart](Chart-types_images/BoxPlotModeNormal.png)
 
 ## Inclusive
 
@@ -176,7 +176,7 @@ The following code illustrate how to define property [BoxPlotMode] value as Incl
 
 {% endtabs %}
 
-![BoxPlotMode Inclusive in MAUI Chart](Chart-types_images/maui_boxPlotMode_inclusive.png)
+![BoxPlotMode Inclusive in MAUI Chart](Chart-types_images/BoxPlotModeInclusive.png)
 
 ## ShowMedian
 
@@ -230,7 +230,7 @@ N> By default, the ShowMedian property value is False.
 
 {% endtabs %}
 
-![ShowMedian in MAUI chart](Chart-types_images/maui_medianTrue.png)
+![ShowMedian in MAUI chart](Chart-types_images/ShowMedianTrue.png)
 
 N>
 
@@ -294,7 +294,7 @@ N> By default, [ShowOutlier] value is true.
 
 {% endtabs %}
 
-![Outlier Segment in MAUI chart](Chart-types_images/maui_outlier_false.png)
+![Outlier Segment in MAUI chart](Chart-types_images/ShowOutlierFalse.png)
 
 ## OutlierShapeType
 
@@ -348,4 +348,4 @@ The following code shows how to set the [SymbolType]() value as [Cross]().Outlie
 
 {% endtabs %}
 
-![OutlierShapeType in MAUI chart](Chart-types_images/maui_outlierShapeType_cross.png)
+![OutlierShapeType in MAUI chart](Chart-types_images/OutlierShapeType.png)
