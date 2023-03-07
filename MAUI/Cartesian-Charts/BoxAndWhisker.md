@@ -13,7 +13,8 @@ BoxAndWhisker chart is used to show the distribution of data within a population
 
 N> The cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) as its default content.
 
-N> By default,the BoxPlotMode property value is Exclusive.
+N>  In Exclusive mode, the whiskers extend to the most extreme data point within 1.5 times the interquartile range (IQR). Any points beyond this range are considered outliers.
+By default,the BoxPlotMode property value is Exclusive.
 
 {% tabs %}
 
@@ -59,7 +60,7 @@ N> By default,the BoxPlotMode property value is Exclusive.
 
 {% endtabs %}
 
-![BoxAndWhisker chart type in MAUI Chart](Chart-Types_images/BasicRendering.png)
+![BoxAndWhisker chart type in MAUI Chart](Chart-types_images/maui_boxAndWhisker_chart.png)
 
 ## Customize the series BoxPlot mode
 
@@ -73,6 +74,7 @@ The series box plotting mode can be changed by using [BoxPlotMode]() property of
 
 ## Normal
 
+In Normal mode, the whiskers extend to the minimum and maximum data points within 2 times the standard deviation of the data. This method assumes that the data is normally distributed.
 The following code illustrate how to define property [BoxPlotMode] value as Normal.
 
 {% tabs %}
@@ -121,10 +123,11 @@ The following code illustrate how to define property [BoxPlotMode] value as Norm
 
 {% endtabs %}
 
-![BoxPlotMode Normal in MAUI Chart](Chart-Types_images/BoxPlotModeNormal.png)
+![BoxPlotMode Normal in MAUI Chart](Chart-types_images/maui_boxPlotMode_normal.png)
 
 ## Inclusive
 
+In Inclusive mode, the whiskers extend to the minimum and maximum data points within 1.5 times the IQR. Any points beyond this range are considered outliers.
 The following code illustrate how to define property [BoxPlotMode] value as Inclusive.
 
 {% tabs %}
@@ -173,7 +176,7 @@ The following code illustrate how to define property [BoxPlotMode] value as Incl
 
 {% endtabs %}
 
-![BoxPlotMode Inclusive in MAUI Chart](Chart-types_images/BoxPlotModeInclusive.png)
+![BoxPlotMode Inclusive in MAUI Chart](Chart-types_images/maui_boxPlotMode_inclusive.png)
 
 ## ShowMedian
 
@@ -227,7 +230,7 @@ N> By default, the ShowMedian property value is False.
 
 {% endtabs %}
 
-![ShowMedian in MAUI chart](Chart-types_images/ShowMedianOutput.png)
+![ShowMedian in MAUI chart](Chart-types_images/maui_medianTrue.png)
 
 N>
 
@@ -291,5 +294,58 @@ N> By default, [ShowOutlier] value is true.
 
 {% endtabs %}
 
-![Outlier Segment in MAUI chart](Chart-types_images/ShowOutlierFalse.png)
+![Outlier Segment in MAUI chart](Chart-types_images/maui_outlier_false.png)
 
+## OutlierShapeType
+
+The [OutlierShapeType]() is used to display the outlier point with different types of symbols. The available symbols are Cross, Diamond, Ellipse, Hexagon, InvertedTriangle, Pentagon, Plus, Rectangle and Triangle. By default, [OutlierShapeType]() value is [Ellipse]().
+
+The following code shows how to set the [SymbolType]() value as [Cross]().OutlierShapeType
+
+{% tabs %}
+
+{% highlight xaml %}
+
+    <chart:SfCartesianChart>
+
+    <chart:SfCartesianChart.XAxes>
+        <chart:CategoryAxis />
+    </chart:SfCartesianChart.XAxes>
+
+    <chart:SfCartesianChart.YAxes>
+        <chart:NumericalAxis />
+    </chart:SfCartesianChart.YAxes>  
+
+    <chart:BoxAndWhiskerSeries ItemsSource="{Binding BoxWhiskerData}"
+                                XBindingPath="Department"
+                                YBindingPath="Age"
+                                OutlierShapeType="Cross"/>
+
+    </chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+    SfCartesianChart chart = new SfCartesianChart();
+    CategoryAxis primaryAxis = new CategoryAxis();
+    chart.XAxes.Add(primaryAxis);
+    NumericalAxis secondaryAxis = new NumericalAxis();
+    chart.YAxes.Add(secondaryAxis);
+
+    BoxAndWhiskerSeries series = new BoxAndWhiskerSeries()
+    {
+        ItemsSource = new ViewModel().BoxWhiskerData,
+        XBindingPath = "Department",
+        YBindingPath = "Age",
+        OutlierShapeType = ShapeType.Cross/>
+    };
+
+    chart.Series.Add(series);
+    this.Content = chart;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![OutlierShapeType in MAUI chart](Chart-types_images/maui_outlierShapeType_cross.png)
