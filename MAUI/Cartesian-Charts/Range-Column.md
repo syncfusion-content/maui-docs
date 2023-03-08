@@ -65,7 +65,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Range column chart type in MAUI Chart](Chart-Types_images/.png)
+![Range column chart type in MAUI Chart](Chart-Types_images/maui_range_column.png)
 
 ## Spacing and Width
 
@@ -91,8 +91,8 @@ The [Width]() property is used to change the width of the segment. The default v
 			     XBindingPath="XValue"
                              High="HighValue"
 			     Low="LowValue"
-                             Spacing="0.5"
-		             Width="0.6"/>
+                             Spacing="0.3"
+		             Width="0.7"/>
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -111,8 +111,8 @@ RangeColumnSeries series = new RangeColumnSeries()
     XBindingPath = "XValue",
     High="HighValue",
     Low="LowValue",
-    Spacing = 0.5,
-    Width = 0.6
+    Spacing = 0.3,
+    Width = 0.7,
 };
 
 chart.Series.Add(series);
@@ -122,4 +122,4 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Range column segment spacing in MAUI Chart](Chart-Types_images/.png)
+![Range column segment spacing in MAUI Chart](Chart-Types_images/maui_rangeColumn_space_width.png)
