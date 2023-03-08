@@ -11,6 +11,10 @@ documentation: ug
 
 This section explains the steps required to configure the [.NET MAUI TextInputLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html) (SfTextInputLayout) control with floating label.
 
+To get start quickly with our .NET MAUI TextInputLayout, you can check the below video.
+
+{% youtube "https://www.youtube.com/watch?v=VKo3vNBzNbw" %}
+
 ## Creating an application using the .NET MAUI Text Input Layout
 
 This section explains the steps required to work with the [SfTextInputLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html) control for .NET MAUI.

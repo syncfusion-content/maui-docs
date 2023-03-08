@@ -22,7 +22,7 @@ The most recent version of Syncfusion .NET MAUI can be downloaded and installed 
 
 ![Control Panel](Upgrade-images/upgrade-control-panel.png)
 
-You can also upgrade to the latest version just by downloading and installing the platforms you require from [this](https://www.syncfusion.com/downloads/latest-version) link. The existing installed versions are not required to be uninstalled. 
+You can also upgrade to the latest version just by downloading and installing the platforms you require from [this](https://www.syncfusion.com/account/downloads) link. The existing installed versions are not required to be uninstalled. 
 
 
 It is not required to install the Volume release before installing the Service Pack release. As releases for Volume and Service Packs work independently, you can install the latest version with major bug fixes directly.
