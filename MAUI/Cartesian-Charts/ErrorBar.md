@@ -77,7 +77,7 @@ The following code examples illustrates how to create error bar series:
 
 {% endtabs %}
 
-![Error Bar Series in MAUI Chart](ErrorBarOutput_Images/BasicRendering.png)
+![Error Bar Series in MAUI Chart](Chart-types_images/BasicRenderingErrorBar.png)
 
 ## Mode 
 This [Mode]() property is used to define whether to identify horizontal error or vertical error. By default, the Mode value is [Both](), which will display both horizontal and vertical error values.
@@ -119,7 +119,7 @@ To view horizontal error value, you can set the Mode as Horizontal as shown in t
 
 {% endtabs %}
 
-![Horizontal Mode Support in Error Bar Series](ErrorBarOutput_Images/ModeHorizontal.png)
+![Horizontal Mode Support in Error Bar Series](Chart-types_images/ModeHorizontal.png)
 
 
 ### Vertical
@@ -160,7 +160,7 @@ To view vertical error value, you can set the Mode as Vertical as shown in the b
 
 {% endtabs %}
 
-![Vertical Mode Support in Error Bar Series](ErrorBarOutput_Images/ModeVertical.png)
+![Vertical Mode Support in Error Bar Series](Chart-types_images/ModeVertical.png)
 
 
 ## Direction 
@@ -214,7 +214,7 @@ The following code illustrates how to set the [HorizontalDirection]() value as b
 
 {% endtabs %}
 
-![Horizontal Direction as Both in Error Bar Series](ErrorBarOutput_Images/BasicRendering.png)
+![Horizontal Direction as Both in Error Bar Series](Chart-types_images/BasicRenderingErrorBar.png)
 
 #### Plus
 
@@ -253,7 +253,7 @@ The following code illustrates how to set the [HorizontalDirection]() value as P
 
 {% endtabs %}
 
-![Horizontal Direction as Plus in Error Bar Series](ErrorBarOutput_Images/HorDirectionPlus.png)
+![Horizontal Direction as Plus in Error Bar Series](Chart-types_images/HorDirectionPlus.png)
 
 #### Minus
 
@@ -292,7 +292,7 @@ The following code illustrates how to set the [HorizontalDirection]() value as M
 
 {% endtabs %}
 
-![Horizontal Direction as Minus in Error Bar Series](ErrorBarOutput_Images/HorDirectionMinus.png)
+![Horizontal Direction as Minus in Error Bar Series](Chart-types_images/HorDirectionMinus.png)
 
 ### Vertical Direction
 
@@ -342,7 +342,7 @@ The following code illustrates how to set the [VerticalDirection]() value as bot
 
 {% endtabs %}
 
-![Vertical Direction as Both in Error Bar Series](ErrorBarOutput_Images/BasicRendering.png)
+![Vertical Direction as Both in Error Bar Series](Chart-types_images/BasicRenderingErrorBar.png)
 
 #### Plus
 
@@ -382,7 +382,7 @@ The following code illustrates how to set the [VerticalDirection]() value as Plu
 
 {% endtabs %}
 
-![Vertical Direction as Plus in Error Bar Series](ErrorBarOutput_Images/VerDirectionPlus.png)
+![Vertical Direction as Plus in Error Bar Series](Chart-types_images/VerDirectionPlus.png)
 
 #### Minus
 
@@ -422,7 +422,7 @@ The following code illustrates how to set the [VerticalDirection]() value as Min
 
 {% endtabs %}
 
-![Vertical Direction as Minus in Error Bar Series](ErrorBarOutput_Images/VerDirectionMinus.png)
+![Vertical Direction as Minus in Error Bar Series](Chart-types_images/VerDirectionMinus.png)
 
 
 ## Type
@@ -475,7 +475,7 @@ chart.Series.Add(errorBar);
 
 {% endtabs %}
 
-![Fixed Type in Error Bar Series](ErrorBarOutput_Images/BasicRendering.png)
+![Fixed Type in Error Bar Series](Chart-types_images/BasicRenderingErrorBar.png)
 
 ### Percentage
 
@@ -512,7 +512,7 @@ chart.Series.Add(errorBar);
 
 {% endtabs %}
 
-![Percentage Type in Error Bar Series](ErrorBarOutput_Images/TypePercentage.png)
+![Percentage Type in Error Bar Series](Chart-types_images/TypePercentage.png)
 
 
 ### Standard Error
@@ -550,7 +550,7 @@ chart.Series.Add(errorBar);
 
 {% endtabs %}
 
-![Standard Error Type in Error Bar Series](ErrorBarOutput_Images/TypeStandardError.png)
+![Standard Error Type in Error Bar Series](Chart-types_images/TypeStandardError.png)
 
 ### Standard Deviation
 
@@ -587,7 +587,7 @@ chart.Series.Add(errorBar);
 
 {% endtabs %}
 
-![Standard Deviation Type in Error Bar Series](ErrorBarOutput_Images/TypeStandardDeviation.png)
+![Standard Deviation Type in Error Bar Series](Chart-types_images/TypeStandardDeviation.png)
 
 ## Custom
 
@@ -630,7 +630,7 @@ If the Type is Custom, you have to bind [HorizontalErrorPathValue]() and [Vertic
 
 {% endtabs %}
 
-![Custom Type in Error Bar Series](ErrorBarOutput_Images/TypeCustom.png)
+![Custom Type in Error Bar Series](Chart-types_images/TypeCustom.png)
 
 ## Customization
 
@@ -645,15 +645,15 @@ You can define the LineStyle for the error bar lines using [HorizontalLineStyle]
 {% highlight xaml %}
 
     <chart:ErrorBarSeries.HorizontalLineStyle>
-        <chart:LineStyle Stroke="Black"  StrokeThickness="2"  >
-        </chart:LineStyle>
+        <chart:ErrorBarLineStyle Stroke="Black"  StrokeThickness="2"  >
+        </chart:ErrorBarLineStyle>
     </chart:ErrorBarSeries.HorizontalLineStyle>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    errorBarSeries.HorizontalLineStyle = new LineStyle()
+    errorBarSeries.HorizontalLineStyle = new ErrorBarLineStyle()
     {
         Stroke = new SolidColorBrush(Colors.Red),
         StrokeThickness = 2
@@ -664,7 +664,7 @@ You can define the LineStyle for the error bar lines using [HorizontalLineStyle]
 
 {% endtabs %}
 
-![Horizontal Line Style in Error Bar Series](ErrorBarOutput_Images/HorLine.png)
+![Horizontal Line Style in Error Bar Series](Chart-types_images/HorLine.png)
 
 #### Vertical Line Style
 
@@ -673,15 +673,15 @@ You can define the LineStyle for the error bar lines using [HorizontalLineStyle]
 {% highlight xaml %}
 
     <chart:ErrorBarSeries.VerticalLineStyle>
-        <chart:LineStyle Stroke="Black"  StrokeThickness="2"  >
-        </chart:LineStyle>
+        <chart:ErrorBarLineStyle Stroke="Black"  StrokeThickness="2"  >
+        </chart:ErrorBarLineStyle>
     </chart:ErrorBarSeries.VerticalLineStyle>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    errorBarSeries.VerticalLineStyle = new LineStyle()
+    errorBarSeries.VerticalLineStyle = new ErrorBarLineStyle()
     {
         Stroke = new SolidColorBrush(Colors.Red),
         StrokeThickness = 2
@@ -692,7 +692,7 @@ You can define the LineStyle for the error bar lines using [HorizontalLineStyle]
 
 {% endtabs %}
 
-![Vertical Line Style in Error Bar Series](ErrorBarOutput_Images/VerLine.png)
+![Vertical Line Style in Error Bar Series](Chart-types_images/VerLine.png)
 
 ### Cap Line Style
 
@@ -705,19 +705,22 @@ You can define the CapLineStyle for the error bar lines using [HorizontalCapLine
 {% highlight xaml %}
 
     <chart:ErrorBarSeries.HorizontalCapLineStyle>
-        <chart:LineStyle Stroke="Black"  StrokeThickness="2" LineWidth="10"  >
-        </chart:LineStyle>
+        <chart:ErrorBarCapLineStyle Stroke="Black"  
+                                    StrokeThickness="2"
+                                    CapLineSize="1" >
+         
+        </chart:ErrorBarCapLineStyle>
     </chart:ErrorBarSeries.HorizontalCapLineStyle>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    errorBarSeries.HorizontalCapLineStyle = new LineStyle()
+    errorBarSeries.HorizontalCapLineStyle = new ErrorBarCapLineStyle()
     {
         Stroke = new SolidColorBrush(Colors.Red),
         StrokeThickness = 2,
-        LineWidth=10
+        CapLineSize= 1
     };
 
 
@@ -725,7 +728,7 @@ You can define the CapLineStyle for the error bar lines using [HorizontalCapLine
 
 {% endtabs %}
 
-![Horizontal Cap Line Style in Error Bar Series](ErrorBarOutput_Images/HorCap.png)
+![Horizontal Cap Line Style in Error Bar Series](Chart-types_images/HorCap.png)
 
 #### Vertical Cap Line Style
 
@@ -734,19 +737,21 @@ You can define the CapLineStyle for the error bar lines using [HorizontalCapLine
 {% highlight xaml %}
 
     <chart:ErrorBarSeries.VerticalCapLineStyle>
-    <chart:LineStyle Stroke="Black"  StrokeThickness="2" LineWidth="10" >
-    </chart:LineStyle>
+    <chart:ErrorBarCapLineStyle Stroke="Black"  
+                                StrokeThickness="2" 
+                                CapLineSize="1" >
+    </chart:ErrorBarCapLineStyle>
     </chart:ErrorBarSeries.VerticalCapLineStyle>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    errorBarSeries.VerticalCapLineStyle = new LineStyle()
+    errorBarSeries.VerticalCapLineStyle = new ErrorBarCapLineStyle()
     {
         Stroke = new SolidColorBrush(Colors.Red),
         StrokeThickness = 2,
-        LineWidth="10"
+        CapLineSize= 1
     };
 
 
@@ -754,4 +759,4 @@ You can define the CapLineStyle for the error bar lines using [HorizontalCapLine
 
 {% endtabs %}
 
-![Vertical Cap Line Style in Error Bar Series](ErrorBarOutput_Images/VerCap.png)
+![Vertical Cap Line Style in Error Bar Series](Chart-types_images/VerCap.png)

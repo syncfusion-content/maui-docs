@@ -11,7 +11,7 @@ documentation: ug
 
 ## Waterfall Series Chart
 
-[WaterfallSeries]() clarifies the cumulative effect of set of provided positive and negative values. The series is represented by a rectangle and a connector between the rectangles. To render a cowaterfall chart, create an instance of [WaterfallSeries](), and add it to the [Series]() collection property of [SfCartesianChart]().
+[WaterfallSeries]() clarifies the cumulative effect of set of provided positive and negative values. The series is represented by a rectangle and a connector between the rectangles. To render a cowaterfall chart, create an instance of [WaterfallSeries](), and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).
 
 The following code illustrates how to use the series in chart.
 
@@ -57,7 +57,7 @@ The following code illustrates how to use the series in chart.
 
 {% endtabs %}
 
-![Waterfall Chart in MAUI Chart]()
+![Waterfall Chart in MAUI Chart](Chart-types_images/BasicRendering.png)
 
 ### SummarySegmentPath and SummaryPointsBrush
 
@@ -92,7 +92,7 @@ The summary segment can be differentiated by applying the [SummaryPointsBrush]()
 
 {% endtabs %}
 
-![Summary Segment Path and SummaryPointsBrush in Waterfall Chart]()
+![Summary Segment Path and SummaryPointsBrush in Waterfall Chart](Chart-types_images/SummaryBindingPath.png)
 
 ### NegativePointsBrush
 
@@ -119,7 +119,7 @@ The following code illustrates how to change the appearance of the negative segm
 {% endtabs %}
 
 
-![Negative Points Brush in Waterfall Chart]()
+![Negative Points Brush in Waterfall Chart](Chart-types_images/NegativePointsBrush.png)
 
 
 ### AllowAutoSum
@@ -152,7 +152,7 @@ The following code example illustrates how the AllowAutoSum property value can b
 {% endtabs %}
 
 
-![Allow Auto Sum in Waterfall Chart]()
+![Allow Auto Sum in Waterfall Chart](Chart-types_images/AllowAutoSum.png)
 
 ### ConnectorLine
 
@@ -177,7 +177,7 @@ The following code example illustrates how the ShowConnectorLine value can be se
 
 {% endtabs %}
 
-![Connector Line in Waterfall Chart]()
+![Connector Line in Waterfall Chart](Chart-types_images/ShoeConnectorLine.png)
 
 ### Connector line customization
 
@@ -207,4 +207,4 @@ The connector line can be customized by applying [ConnectorLineStyle]() property
 {% endtabs %}
 
 
-![Connector line customization in Waterfall Chart]()
+![Connector line customization in Waterfall Chart](Chart-types_images/ConnectorLineStyle.png)
