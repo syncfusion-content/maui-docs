@@ -69,9 +69,9 @@ this.Content = chart;
 
 ## Spacing and Width
 
-The [Spacing]() property is used to change the spacing between two segments. The default value of spacing is 0, and the value ranges from 0 to 1. Here, 1 and 0 correspond to 100% and 0% of the available space, respectively. 
+* The [Spacing]() property is used to change the spacing between two segments. The default value of spacing is 0, and the value ranges from 0 to 1. Here, 1 and 0 correspond to 100% and 0% of the available space, respectively. 
 
-The [Width]() property is used to change the width of the segment. The default value of the width is 0.8, and the value ranges from 0 to 1.
+* The [Width]() property is used to change the width of the segment. The default value of the width is 0.8, and the value ranges from 0 to 1.
 
 {% tabs %}
 
