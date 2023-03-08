@@ -11,7 +11,7 @@ documentation: ug
 
 ## Waterfall Series Chart
 
-[WaterfallSeries]() clarifies the cumulative effect of set of provided positive and negative values. The series is represented by a rectangle and a connector between the rectangles. To render a cowaterfall chart, create an instance of [WaterfallSeries](), and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).
+[WaterfallSeries]() clarifies the cumulative effect of set of provided positive and negative values. The series is represented by a rectangle and a connector between the rectangles. To render a cowaterfall chart, create an instance of [WaterfallSeries](), and add it to the [Series]() collection property of [SfCartesianChart]().
 
 The following code illustrates how to use the series in chart.
 
@@ -48,7 +48,7 @@ The following code illustrates how to use the series in chart.
     ViewModel viewModel = new ViewModel();
 
     WaterfallSeries series = new WaterfallSeries();
-    series.ItemsSource = viewModel.Sales;
+    series.ItemsSource =new viewModel().Sales;
     series.XBindingPath = "Department";
     series.YBindingPath = "Value";
     chart.Series.Add(series);
@@ -59,11 +59,11 @@ The following code illustrates how to use the series in chart.
 
 ![Waterfall Chart in MAUI Chart]()
 
-### SummarySegmentPath and SummarySegmentBrush
+### SummarySegmentPath and SummaryPointsBrush
 
 [SummaryBindingPath]() gets or sets the string value that indicates the sum of previous segments in series.
 
-The summary segment can be differentiated by applying the [SummarySegmentBrush]() in series.
+The summary segment can be differentiated by applying the [SummaryPointsBrush]() in series.
 
 {% tabs %}
 
@@ -74,29 +74,29 @@ The summary segment can be differentiated by applying the [SummarySegmentBrush](
                            YBindingPath="Value"
                            Interior="Blue"
                            SummaryBindingPath="IsSummary"
-                           SummarySegmentBrush="RoyalBlue">
+                           SummaryPointsBrush="RoyalBlue">
     </chart:WaterfallSeries>
 {% endhighlight %}
 
 {% highlight c# %}
 
     WaterfallSeries waterfallSeries = new WaterfallSeries();
-    waterfallSeries.ItemsSource = ViewModel.RevenueDetails;
+    waterfallSeries.ItemsSource =new ViewModel().RevenueDetails;
 
     waterfallSeries.XBindingPath = "Department";
     waterfallSeries.YBindingPath = "Value";
     waterfallSeries.SummaryBindingPath = "IsSummary";
-    waterfallSeries.SummarySegmentBrush = new SolidColorBrush(Colors.Blue);
+    waterfallSeries.SummaryPointsBrush = new SolidColorBrush(Colors.Blue);
     chart.Series.Add(waterfallSeries);
 {% endhighlight %}
 
 {% endtabs %}
 
-![Summary Segment Path in Waterfall Chart]()
+![Summary Segment Path and SummaryPointsBrush in Waterfall Chart]()
 
-### NegativeSegmentBrush
+### NegativePointsBrush
 
-The appearance of the negative segment can be changed by using the [NegativeSegmentBrush]() property of series.
+The appearance of the negative segment can be changed by using the [NegativePointsBrush]() property of series.
 
 The following code illustrates how to change the appearance of the negative segment.
 
@@ -104,7 +104,7 @@ The following code illustrates how to change the appearance of the negative segm
 
 {% highlight xaml %}
 
-    <chart:WaterfallSeries NegativeSegmentBrush="Red">
+    <chart:WaterfallSeries NegativePointsBrush="Red">
     </chart:WaterfallSeries>
 
 {% endhighlight %}
@@ -112,14 +112,14 @@ The following code illustrates how to change the appearance of the negative segm
 {% highlight c# %}
 
     WaterfallSeries series = new WaterfallSeries();
-    series.NegativeSegmentBrush = new SolidColorBrush(Colors.Red);
+    series.NegativePointsBrush = new SolidColorBrush(Colors.Red);
 
 {% endhighlight %}
 
 {% endtabs %}
 
 
-![Negative Segment Brush in Waterfall Chart]()
+![Negative Points Brush in Waterfall Chart]()
 
 
 ### AllowAutoSum
@@ -156,14 +156,14 @@ The following code example illustrates how the AllowAutoSum property value can b
 
 ### ConnectorLine
 
-The connector line of series can be enabled or disabled by using its [ShowConnector]() line property. By default, the property value is true.
-The following code example illustrates how the AllowAutoSum property value can be set.
+The connector line of series can be enabled or disabled by using its [ShowConnectorLine]() line property. By default, the property value is true.
+The following code example illustrates how the ShowConnectorLine value can be set.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-    <chart:WaterfallSeries ShowConnector="False">
+    <chart:WaterfallSeries ShowConnectorLine="False">
     </chart:WaterfallSeries>
 
 {% endhighlight %}
@@ -171,7 +171,7 @@ The following code example illustrates how the AllowAutoSum property value can b
 {% highlight c# %}
 
     WaterfallSeries series = new WaterfallSeries();
-    series.ShowConnector = false;
+    series.ShowConnectorLine = false;
 
 {% endhighlight %}
 

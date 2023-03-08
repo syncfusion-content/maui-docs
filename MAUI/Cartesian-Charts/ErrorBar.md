@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Error Bar Series Chart in .NET MAUI Chart control | Syncfusion
+title: Error Bar Series Chart in .NET MAUI Chart Control | Syncfusion
 description: Learn here all about Error Bar chart support in Syncfusion .NET MAUI Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
 documentation: ug
 ---
 
-# Error Bar Series  in .NET MAUI Chart
+# Error Bar Series in .NET MAUI Chart
 
 [ErrorBarSeries]() is used to indicate the errors or uncertainty in reported values. This will find the possible variations in measurements, and in Chart control these values are displayed as data points.
 The [HorizontalErrorValue]() and [VerticalErrorValue]() is used to set the error value(variation) to the series.
@@ -34,8 +34,8 @@ The following code examples illustrates how to create error bar series:
             <chart:ScatterSeries ItemsSource="{Binding EnergyProductions}" 
                                  XBindingPath="ID" 
                                  YBindingPath="Coal"
-                                 PointHeight="7"
-                                 PointWidth="7">
+                                 PointHeight="20"
+                                 PointWidth="20">
             </chart:ScatterSeries>
             <chart:ErrorBarSeries ItemsSource="{Binding EnergyProductions}"
                                   XBindingPath="ID"
@@ -56,19 +56,19 @@ The following code examples illustrates how to create error bar series:
         ItemsSource = new ViewModel().EnergyProductions,
         XBindingPath = "ID",
         YBindingPath = "Coal",
-        PointWidth = 7,
-        PointHeight = 7
+        PointWidth = 20,
+        PointHeight = 20
     };
 
     ErrorBarSeries errorBar = new ErrorBarSeries()
     {
-
         ItemsSource = new ViewModel().EnergyProductions,
         XBindingPath = "ID",
         YBindingPath = "Coal",
         HorizontalErrorValue = 0.5,
         VerticalErrorValue = 50
     };
+
     chart.Series.Add(series);
     chart.Series.Add(errorBar);
 
