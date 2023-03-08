@@ -75,7 +75,7 @@ The series box plotting mode can be changed by using [BoxPlotMode]() property of
 ## Normal
 
 In Normal mode, the whiskers extend to the minimum and maximum data points within 2 times the standard deviation of the data. This method assumes that the data is normally distributed.
-The following code illustrate how to define property [BoxPlotMode] value as Normal.
+The following code illustrate how to define property [BoxPlotMode]() value as Normal.
 
 {% tabs %}
 
@@ -128,7 +128,7 @@ The following code illustrate how to define property [BoxPlotMode] value as Norm
 ## Inclusive
 
 In Inclusive mode, the whiskers extend to the minimum and maximum data points within 1.5 times the IQR. Any points beyond this range are considered outliers.
-The following code illustrate how to define property [BoxPlotMode] value as Inclusive.
+The following code illustrate how to define property [BoxPlotMode]() value as Inclusive.
 
 {% tabs %}
 
@@ -244,7 +244,7 @@ The outlier is used to display the outlier point that lies either below the lowe
 
 ## ShowOutlier
 
-The outlier value in the box plot can be viewed by enabling the [ShowOutlier]() property of [BoxAndWhiskerSeries].The following code demonstrates how to disable the [ShowOutlier]() property.
+The outlier value in the box plot can be viewed by enabling the [ShowOutlier]() property of [BoxAndWhiskerSeries]().The following code demonstrates how to disable the [ShowOutlier]() property.
 
 N> By default, [ShowOutlier] value is true.
 
@@ -300,7 +300,7 @@ N> By default, [ShowOutlier] value is true.
 
 The [OutlierShapeType]() is used to display the outlier point with different types of symbols. The available symbols are Cross, Diamond, Ellipse, Hexagon, InvertedTriangle, Pentagon, Plus, Rectangle and Triangle. By default, [OutlierShapeType]() value is [Ellipse]().
 
-The following code shows how to set the [SymbolType]() value as [Cross]().OutlierShapeType
+The following code shows how to set the [OutlierShapeType]() value as [Cross]().OutlierShapeType
 
 {% tabs %}
 
