@@ -501,7 +501,7 @@ public partial class MainPage : ContentPage
 
 ## Visual State Manager
 
-Use the visual state manager to change the .NET MAUI SfListView mouse hover on the listView item based on the visual states set from code. The applicable visual states are Normal and PointerOver.
+Use the visual state manager to change the .NET MAUI SfListView mouse hover background on the listView item based on the visual states set from code. The applicable visual states are Normal and PointerOver.
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml" %}
@@ -606,8 +606,6 @@ Use the visual state manager to change the .NET MAUI SfListView mouse hover on t
 </ContentPage>
 {% endhighlight %}
 {% endtabs %}
-
-Download the entire code from GitHub here.
 
 N> Only the Background Property of the visual state can be customized.
 
