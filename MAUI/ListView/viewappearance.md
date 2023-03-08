@@ -499,6 +499,118 @@ public partial class MainPage : ContentPage
 
 ![MAUI ListView Drop shadow effect on items](Images/appearance/maui-listview-drop-shadow-effects-on-items.jpg)
 
+## Visual State Manager
+
+Use the visual state manager to change the .NET MAUI SfListView mouse hover on the listView item based on the visual states set from code. The applicable visual states are Normal and PointerOver.
+
+{% tabs %}
+{% highlight c# tabtitle="MainPage.xaml" %}
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ListViewMaui.MainPage"
+             xmlns:local="clr-namespace:ListViewMaui"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
+    <ContentPage.Resources>
+        <Style TargetType="syncfusion:ListViewItem">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup>
+                        <VisualState x:Name="Normal">
+                            <VisualState.Setters>
+                                <Setter Property="Background"
+                                        Value="Transparent" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="PointerOver">
+                            <VisualState.Setters>
+                                <Setter Property="Background"
+                                        Value= "lightskyblue" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <syncfusion:SfListView x:Name="listView"
+                               ItemSize="70"
+                               Margin="0,10,0,0"
+                               ItemsSource="{Binding ContactsInfo}">
+            <syncfusion:SfListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid x:Name="grid"
+                          RowSpacing="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="1" />
+                        </Grid.RowDefinitions>
+                        <Grid RowSpacing="0"
+                              Grid.Row="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="70" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="80" />
+                            </Grid.ColumnDefinitions>
+
+                            <Image Source="{Binding ContactImage}"
+                                   Grid.Column="0"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Center"
+                                   HeightRequest="50"
+                                   WidthRequest="50" />
+                            <Grid Grid.Row="0"
+                                  Grid.Column="1"
+                                  RowSpacing="2"
+                                  Padding="10,0,0,0"
+                                  VerticalOptions="Center">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+
+                                <Label LineBreakMode="NoWrap"
+                                       Padding="0,10,0,0"
+                                       TextColor="#474747"
+                                       Text="{Binding ContactName}"
+                                       FontSize="15" />
+                                <Label Grid.Row="1"
+                                       Padding="0,0,0,3"
+                                       Grid.Column="0"
+                                       TextColor="#474747"
+                                       LineBreakMode="NoWrap"
+                                       Text="{Binding ContactNumber}"
+                                       FontSize="15" />
+                            </Grid>
+                            <Grid Grid.Row="0"
+                                  Grid.Column="2"
+                                  RowSpacing="0"
+                                  HorizontalOptions="End"
+                                  VerticalOptions="Start"
+                                  Padding="0,10,10,0">
+                                <Label LineBreakMode="NoWrap"
+                                       Grid.Column="2"
+                                       TextColor="#474747"
+                                       Text="{Binding ContactType}"
+                                       FontSize="15" />
+                            </Grid>
+                        </Grid>
+                        <StackLayout Grid.Row="1"
+                                     BackgroundColor="#E4E4E4"
+                                     HeightRequest="1" />
+                    </Grid>
+                </DataTemplate>
+            </syncfusion:SfListView.ItemTemplate>
+        </syncfusion:SfListView>
+    </ContentPage.Content>
+</ContentPage>
+{% endhighlight %}
+{% endtabs %}
+
+Download the entire code from GitHub here.
+
+N> Only the Background Property of the visual state can be customized.
+
 ## ListViewItem customization
 
 The `SfListView` allows customizing the [ListViewItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewItem.html) based on the [ItemType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemType.html). Follow the code example to customize the Header, Footer, GroupHeader, LoadMore, and ListViewItem.
