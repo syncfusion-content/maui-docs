@@ -238,4 +238,8 @@ The following gif image illustrates the result of the above code:
 
 You can find the complete getting started sample of .NET MAUI Autocomplete from this [link.](https://github.com/SyncfusionExamples/maui-autocomplete-samples)
 
+## Text
 
+The [Text]() property used to gets the user-submitted text in the [SfAutoComplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html). The default value of the `Text` property is `string.Empty`.
+
+N> [Text]() property is Read only.
