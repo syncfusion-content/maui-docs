@@ -11,7 +11,7 @@ documentation: ug
 
 ## Export as an image
 
-You can export the chart view as an image in the desired file format using the [SaveAsImage]() method of [SfCarteianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1%2Ctabid-3%2Ctabid-6%2Ctabid-8%2Ctabid-10%2Ctabid-12%2Ctabid-23%2Ctabid-14%2Ctabid-37%2Ctabid-17%2Ctabid-19%2Ctabid-21). The supported image formats are **JPEG and PNG**. By default, i.e., if you didn’t mention any image format with the filename, the chart view will be exported as an image in the PNG format.
+You can export the chart view as an image in the desired file format using the [SaveAsImage]() method of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1%2Ctabid-3%2Ctabid-6%2Ctabid-8%2Ctabid-10%2Ctabid-12%2Ctabid-23%2Ctabid-14%2Ctabid-37%2Ctabid-17%2Ctabid-19%2Ctabid-21). The supported image formats are **JPEG and PNG**. By default, i.e., if you didn’t mention any image format with the filename, the chart view will be exported as an image in the PNG format.
 
 N> The chart view can be exported as an image only when the chart view is added to the visual tree.
 
@@ -41,9 +41,9 @@ The exported image will be saved in the different location across the platforms.
 
 To save the image on Android and Windows Phone devices, you must enable file writing permissions on the device storage.
 
-To save the image in the photo album on iOS devices, you must enable permission to access the device storage in the 'info.plist' file. 
+To save the image in the photo album on iOS devices, you must enable permission to access the device storage in the 'Info.plist' file. 
 
-Add the following code snippet to the 'info.plist' file:
+Add the following code snippet to the 'Info.plist' file:
 
 {% tabs %}
 
@@ -64,7 +64,7 @@ Add the following code snippet to the 'info.plist' file:
 
 ## Get the stream of Chart
 
-The [GetStreamAsync]() method of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1%2Ctabid-3%2Ctabid-6%2Ctabid-8%2Ctabid-10%2Ctabid-12%2Ctabid-23%2Ctabid-14%2Ctabid-37%2Ctabid-17%2Ctabid-19%2Ctabid-21)is used to asynchronously get the chart view as a stream in the desired ImageFileFormat. The output stream can be passed as an input to other components that accept streams, such as PDF, Excel, and Word. The supported image file formats are **JPEG and PNG**.
+The [GetStreamAsync]() method of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1%2Ctabid-3%2Ctabid-6%2Ctabid-8%2Ctabid-10%2Ctabid-12%2Ctabid-23%2Ctabid-14%2Ctabid-37%2Ctabid-17%2Ctabid-19%2Ctabid-21) is used to asynchronously get the chart view as a stream in the desired ImageFileFormat. The output stream can be passed as an input to other components that accept streams, such as PDF, Excel, and Word. The supported image file formats are **JPEG and PNG**.
 
 N> The charts stream can only be rendered when the chart view is added to the visual tree.
 
