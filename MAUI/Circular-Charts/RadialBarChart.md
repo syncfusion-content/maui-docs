@@ -13,7 +13,7 @@ documentation: ug
 
 N> The circular chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html#Syncfusion_Maui_Charts_SfCircularChart_Series) as its default content.
 
-The following properites can be used to customize the appearance of the radial bar segment:
+The following properties can be used to customize the appearance of the radial bar segment:
 
  * [Opacity](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_OpacityProperty) - To control the transparency of the chart segments.
 
@@ -355,8 +355,7 @@ You can use the following properties to customize the appearance of the circular
                         XBindingPath="Product" 
                         YBindingPath="SalesRate" 
                         TrackFill="#FFF7ED" 
-                        TrackStrokeWidth="1" 
-                        TrackStroke="#FED7AA" />
+                        TrackStrokeWidth="1"             TrackStroke="#FED7AA"  />
     </chart:SfCircularChart>
 
 {% endhighlight %}
