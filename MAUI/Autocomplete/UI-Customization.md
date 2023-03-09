@@ -311,7 +311,7 @@ The [ItemTemplate]() property helps you to decorate drop-down items using the cu
 {% endhighlight %}
 {% endtabs %}
 
-The following gif image illustrates the result of the above code:
+The following image illustrates the result of the above code:
 
 ![.NET MAUI Autocomplete ItemTemplate](Images/UICustomization/ItemTemplate.png)
 
@@ -383,6 +383,7 @@ The [ItemTemplate]() property helps you to decorate drop-down items conditionall
         }
     }
 
+    //Template selector
     public class EmployeeTemplateSelector : DataTemplateSelector
     {
         public DataTemplate EmployeeTemplate1 { get; set; }
@@ -629,7 +630,7 @@ The [ItemTemplate]() property helps you to decorate drop-down items conditionall
 {% endhighlight %}
 {% endtabs %}
 
-The following gif image illustrates the result of the above code:
+The following image illustrates the result of the above code:
 
 ![.NET MAUI Autocomplete ItemTemplateSelector](Images/UICustomization/TemplateSelector.png)
 

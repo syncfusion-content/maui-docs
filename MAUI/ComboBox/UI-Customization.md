@@ -175,7 +175,7 @@ The following image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox maximum drop-down height](Images/UICustomization/MaxDropDownHeight.png)
 
-## Customize the ComboBoxItem
+## Customize the DropDown (suggestion) item 
 
 The [ItemTemplate]() property helps you to decorate drop-down items using the custom templates. The default value of `ItemTemplate` is `null`. The following example shows how to customize drop-down items using templates.
 
@@ -338,11 +338,11 @@ The [ItemTemplate]() property helps you to decorate drop-down items using the cu
 {% endhighlight %}
 {% endtabs %}
 
-The following gif image illustrates the result of the above code:
+The following image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox ItemTemplate](Images/UICustomization/ItemTemplate.png)
 
-## Customize ComboBoxItem based on condition
+## Customize the DropDown (suggestion) item based on condition
 
 The [ItemTemplate]() property helps you to decorate drop-down items conditionally based on their content using the custom templates. The default value of `ItemTemplate` is `null`.
 
@@ -410,6 +410,7 @@ The [ItemTemplate]() property helps you to decorate drop-down items conditionall
         }
     }
 
+    //Template selector
     public class EmployeeTemplateSelector : DataTemplateSelector
     {
         public DataTemplate EmployeeTemplate1 { get; set; }
@@ -656,7 +657,7 @@ The [ItemTemplate]() property helps you to decorate drop-down items conditionall
 {% endhighlight %}
 {% endtabs %}
 
-The following gif image illustrates the result of the above code:
+The following image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox ItemTemplateSelector](Images/UICustomization/TemplateSelector.png)
 
@@ -671,7 +672,7 @@ The [Completed]() event is raised when the user finalizes the text in the [SfCom
                         IsEditable="True" 
                         WidthRequest="280" 
                         HeightRequest="34" 
-                        Completed="combobox"/>
+                        Completed="combobox_Completed"/>
 
 {% endhighlight %}
 {% highlight C# %}
