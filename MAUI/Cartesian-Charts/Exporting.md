@@ -41,9 +41,9 @@ The exported image will be saved in the different location across the platforms.
 
 To save the image on Android and Windows Phone devices, you must enable file writing permissions on the device storage.
 
-To save the image in the photo album on iOS devices, you must enable permission to access the device storage in the **Info.plist** file. 
+To save the image in the photo album on iOS devices, you must enable permission to access the device storage in the "Info.plist" file. 
 
-Add the following code snippet to the **Info.plist** file:
+Add the following code snippet to the "Info.plist" file:
 
 {% tabs %}
 
