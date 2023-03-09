@@ -591,7 +591,7 @@ chart.Series.Add(errorBar);
 
 ## Custom
 
-If the Type is Custom, you have to bind [HorizontalErrorPathValue]() and [VerticalErrorPathValue]() as shown in the below code snippet.
+If the Type is Custom, you have to bind [HorizontalErrorPath]() and [VerticalErrorPath]() as shown in the below code snippet.
 
 {% tabs %}
 
@@ -603,8 +603,8 @@ If the Type is Custom, you have to bind [HorizontalErrorPathValue]() and [Vertic
                           VerticalErrorValue="50"
                           HorizontalErrorValue="0.5"
                           Type="Custom"
-                          HorizontalErrorPathValue="HorizontalErrorValue"
-                          VerticalErrorPathValue="VerticalErrorValue">
+                          HorizontalErrorPath="HorizontalErrorValue"
+                          VerticalErrorPath="VerticalErrorValue">
     </chart:ErrorBarSeries>
 
 {% endhighlight %}
@@ -619,9 +619,10 @@ If the Type is Custom, you have to bind [HorizontalErrorPathValue]() and [Vertic
         HorizontalErrorValue = 0.5,
         VerticalErrorValue = 50,
         Type="Custom",
-        HorizontalErrorPathValue="HorizontalErrorValue",
-        VerticalErrorPathValue="VerticalErrorValue"
+        HorizontalErrorPath="HorizontalErrorValue",
+        VerticalErrorPath="VerticalErrorValue"
     };
+    
     chart.Series.Add(series);
     chart.Series.Add(errorBar);
 
