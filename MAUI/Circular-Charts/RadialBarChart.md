@@ -129,13 +129,13 @@ The [CapStyle]() property of the radial bar series is used to specify the shape 
 
 The following types are available for [CapStyle]() property.
 
- * [BothFlat]() - Indicates that a flat shape should appear at the start and end positions of the segment.
+ * [BothFlat]() - Start and end positions of the segment should be updated with a flat shape.
 
- * [BothCurve]() - Indicates that a curve shape should appear at the start and end positions of the segment. 
+ * [BothCurve]() - Start and end positions of the segment should be updated with a curve shape.
 
- * [StartCurve]() - Indicates that a curve shape should appear at the start position of the segment.
+ * [StartCurve]() - Start position of the segment should be updated with a curve shape.
 
- * [EndCurve]() - Indicates that a curve shape should appear at the end position of the segment.
+ * [EndCurve]() - End position of the segment should be updated with a curve shape.
 
 **BothCurve**
 
