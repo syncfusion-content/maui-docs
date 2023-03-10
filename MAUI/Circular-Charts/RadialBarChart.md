@@ -27,7 +27,6 @@ The following properties can be used to customize the appearance of the radial b
 
  * [PaletteBrushes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_PaletteBrushes) - To customize the appearance of the series.
 
-
 {% tabs %}
 
 {% highlight xaml %}
@@ -54,11 +53,11 @@ The following properties can be used to customize the appearance of the radial b
 
 {% endtabs %}
 
-![Radial bar chart type in MAUI Chart](Chart-Types_images/maui_radialbar_chart.png)
+![.NET MAUI Radial bar chart](Chart-Types_images/maui_radialbar_chart.png)
 
 ## Changing the radial bar size
 
-You can use the [Radius]() property to change the radial bar chart size. The default value of the radius is [0.8]().
+You can use the [Radius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CircularSeries.html?tabs=tabid-5%2Ctabid-1%2Ctabid-3#Syncfusion_Maui_Charts_CircularSeries_Radius) property to change the radial bar chart size. The default value of the radius is `0.8`.
 
 {% tabs %}
 
@@ -88,7 +87,7 @@ You can use the [Radius]() property to change the radial bar chart size. The def
 
 {% endtabs %}
 
-![Radial bar chart radius size in MAUI Chart](Chart-Types_images/maui_radius.png)
+![.NET MAUI Radial bar chart radius size](Chart-Types_images/maui_radius.png)
 
 ## Changing the radial bar inner radius
 
@@ -102,7 +101,7 @@ The [InnerRadius]() property of radial bar series is used to define the inner ci
     <chart:RadialBarSeries ItemsSource="{Binding Data}" 
                         XBindingPath="Product" 
                         YBindingPath="SalesRate" 
-                        InnerRadius = "0.2"/>
+                        InnerRadius = "0.1"/>
     </chart:SfCircularChart>
 
 {% endhighlight %}
@@ -114,7 +113,7 @@ The [InnerRadius]() property of radial bar series is used to define the inner ci
         RadialBarSeries series = new RadialBarSeries();
         series.XBindingPath = "Product";
         series.YBindingPath = "SalesRate";
-        series.InnerRadius = 0.2;
+        series.InnerRadius = 0.1;
 
         chart.Series.Add(series);
 
@@ -122,7 +121,7 @@ The [InnerRadius]() property of radial bar series is used to define the inner ci
 
 {% endtabs %}
 
-![Radial bar chart inner radius customization in MAUI Chart](Chart-Types_images/maui_inner_radius.png)
+![.NET MAUI Radial bar chart inner radius customization](Chart-Types_images/maui_inner_radius.png)
 
 ## CapStyle customization
 
@@ -138,39 +137,9 @@ The following types are available for [CapStyle]() property.
 
  * [EndCurve]() - Indicates that a curve shape should appear at the end position of the segment.
 
-### BothFlat
+**BothCurve**
 
-{% tabs %}
-
-{% highlight xaml %}
-
-    <chart:SfCircularChart>
-    <chart:RadialBarSeries ItemsSource="{Binding Data}" 
-                        XBindingPath="Product" 
-                        YBindingPath="SalesRate"
-                        CapStyle = "BothFlat"/>
-    </chart:SfCircularChart>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-    SfCircularChart chart = new SfCircularChart();
-
-        RadialBarSeries series = new RadialBarSeries();
-        series.XBindingPath = "Product";
-        series.YBindingPath = "SalesRate";
-        series.CapStyle = CapStyle.BothFlat;
-
-        chart.Series.Add(series);
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Radial bar chart both flat cap style in MAUI Chart](Chart-Types_images/maui_radialbar_chart.png)
-
- ### BothCurve
+You can customize the CapStyle property of the radial bar based on its types.
 
 {% tabs %}
 
@@ -200,71 +169,7 @@ The following types are available for [CapStyle]() property.
 
 {% endtabs %}
 
-![Radial bar chart both curve cap style in MAUI Chart](Chart-Types_images/maui_bothcurve.png)
-
-### StartCurve
-
-{% tabs %}
-
-{% highlight xaml %}
-
-    <chart:SfCircularChart>
-    <chart:RadialBarSeries ItemsSource="{Binding Data}" 
-                        XBindingPath="Product" 
-                        YBindingPath="SalesRate" 
-                        CapStyle = "StartCurve"/>
-    </chart:SfCircularChart>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-    SfCircularChart chart = new SfCircularChart();
-
-        RadialBarSeries series = new RadialBarSeries();
-        series.XBindingPath = "Product";
-        series.YBindingPath = "SalesRate";
-        series.CapStyle = CapStyle.StartCurve;
-
-        chart.Series.Add(series);
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Radial bar chart start curve cap style in MAUI Chart](Chart-Types_images/maui_startcurve.png)
-
-### EndCurve
-
-{% tabs %}
-
-{% highlight xaml %}
-
-    <chart:SfCircularChart>
-    <chart:RadialBarSeries ItemsSource="{Binding Data}" 
-                        XBindingPath="Product" 
-                        YBindingPath="SalesRate" 
-                        CapStyle = "EndCurve"/>
-    </chart:SfCircularChart>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-    SfCircularChart chart = new SfCircularChart();
-
-        RadialBarSeries series = new RadialBarSeries();
-        series.XBindingPath = "Product";
-        series.YBindingPath = "SalesRate";
-        series.CapStyle = CapStyle.EndCurve;
-
-        chart.Series.Add(series);
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Radial bar chart end curve cap style in MAUI Chart](Chart-Types_images/maui_endcurve.png)
+![.NET MAUI Radial bar chart cap style customization](Chart-Types_images/maui_bothcurve.png)
 
 ## Segment spacing
 
@@ -300,51 +205,19 @@ The [GapRatio]() property of the radial bar series is used to define the spacing
 
 {% endtabs %}
 
-![Radial bar chart segment spacing in MAUI Chart](Chart-Types_images/maui_gapratio.png)
+![.NET MAUI Radial bar chart segment spacing between each segment](Chart-Types_images/maui_gapratio.png)
 
 ## Track customization
 
 You can use the following properties to customize the appearance of the circular bar track.
 
- * [TrackStroke]() - To customize the circular bar border color.
+  * [TrackStroke]() - To customize the circular bar border color.
 
   * [TrackStrokeWidth]() - To customize the border width of the circular bar.
 
   * [TrackFill]() - To customize the circular bar area which behind the radial bar segments.
 
-### TrackStrokeWidth
-
-{% tabs %}
-
-{% highlight xaml %}
-
-    <chart:SfCircularChart>
-    <chart:RadialBarSeries ItemsSource="{Binding Data}" 
-                        XBindingPath="Product" 
-                        YBindingPath="SalesRate" 
-                        TrackStrokeWidth = "1"/>
-    </chart:SfCircularChart>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-    SfCircularChart chart = new SfCircularChart();
-
-        RadialBarSeries series = new RadialBarSeries();
-        series.XBindingPath = "Product";
-        series.YBindingPath = "SalesRate";
-        series.TrackStrokeWidth = 1;
-
-        chart.Series.Add(series);
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Radial bar chart track stroke in MAUI Chart](Chart-Types_images/maui_trackstrokewidth.png)
-
-### TrackFill
+**TrackFill**
 
 {% tabs %}
 
@@ -355,7 +228,8 @@ You can use the following properties to customize the appearance of the circular
                         XBindingPath="Product" 
                         YBindingPath="SalesRate" 
                         TrackFill="#FFF7ED" 
-                        TrackStrokeWidth="1"             TrackStroke="#FED7AA"  />
+                        TrackStrokeWidth="1"
+                        TrackStroke="#FED7AA"  />
     </chart:SfCircularChart>
 
 {% endhighlight %}
@@ -377,12 +251,11 @@ You can use the following properties to customize the appearance of the circular
 
 {% endtabs %}
 
-
-![Radial bar chart track fill in MAUI Chart](Chart-Types_images/maui_trackfill.png)
+![.NET MAUI Radial bar chart track customization](Chart-Types_images/maui_trackfill.png)
 
 ## CenterView
 
-The view placed in the center of the radial bar chart is useful for sharing additional information about the radial bar chart. Any view can be added to the center of the radial bar chart using the [CenterView]() property of [RadialBarSeries](). The binding context of the [CenterView]() will be the respective radial bar series.
+ Any view can be added to the center of the radial bar chart using the [CenterView]() property of [RadialBarSeries](). The view placed in the center of the radial bar chart is useful for sharing additional information about the radial bar chart.The binding context of the [CenterView]() will be the respective radial bar series.
 
 ### CenterHoleSize
 
@@ -430,4 +303,4 @@ The [CenterHoleSize]() property of RadialBarSeries is used to get the diameter v
 
 {% endtabs %}
 
-![Radial bar chart center view in MAUI Chart](Chart-Types_images/maui_radialbarchart_centerview.png)
+![.NET MAUI Radial bar chart center view customization](Chart-Types_images/maui_radialbarchart_centerview.png)
