@@ -87,7 +87,7 @@ You can use the [Radius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cha
 
 {% endtabs %}
 
-![.NET MAUI Radial bar chart radius size](Chart-Types_images/maui_radius.png)
+![.NET MAUI Radial bar chart radius customization](Chart-Types_images/maui_radius.png)
 
 ## Changing the radial bar inner radius
 
@@ -205,7 +205,7 @@ The [GapRatio]() property of the radial bar series is used to define the spacing
 
 {% endtabs %}
 
-![.NET MAUI Radial bar chart segment spacing between each segment](Chart-Types_images/maui_gapratio.png)
+![.NET MAUI Radial bar chart segment spacing customization](Chart-Types_images/maui_gapratio.png)
 
 ## Track customization
 
