@@ -1,3 +1,12 @@
+---
+layout: post
+title: Stacked Headers in .NET MAUI DataGrid control | Syncfusion
+description: Learn here all about how to Stacked Headers in Syncfusion .NET MAUI DataGrid (SfDataGrid) control and more.
+platform: MAUI
+control: SfDataGrid
+documentation: UG
+---
+
 # Stacked Headers in MAUI DataGrid (SfDataGrid)
 
 The [.NET MAUI DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) supports displaying additional unbound, multiple/multilevel header rows known as `StackedHeaderRows` that spans across the DataGrid columns. You can group one or more columns under each stacked header.
