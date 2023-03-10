@@ -289,6 +289,10 @@ N> If [ArrangeByIndex]() is set to false, then the items in the category axis wi
     chart.Series.Add(series1);
     chart.Series.Add(series2);  
 
+{% endhighlight %}
+
+{% endtabs %}    
+
 ![CategoryAxis ArrangeByIndex support in MAUI Chart](Axis_Images/ArrangeByIndexFalse.png)
 
 ## DateTime Axis
