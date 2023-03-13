@@ -533,14 +533,22 @@ The `SfListView` allows customizing the mouse hover background of the `ListViewI
         </Style>
     </ContentPage.Resources>
     <ContentPage.Content>
-        <syncfusion:SfListView ItemsSource="{Binding ContactsInfo}">
+        <syncfusion:SfListView  ItemSize="70"
+                                ItemsSource="{Binding ContactsInfo}">
+                <syncfusion:SfListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Label Text="{Binding ContactName}" />
+                        </StackLayout>
+                    </DataTemplate>
+                </syncfusion:SfListView.ItemTemplate>
         </syncfusion:SfListView>
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
 {% endtabs %}
 
-N> Only the `Background` property of the visual state can be customized.
+N> Only the `Background` property of ListViewItem can be customized using visual state.
 
 ## ListViewItem customization
 
