@@ -150,7 +150,7 @@ The following gif image illustrates the result of the above code:
 
 ## Customize the DropDown (suggestion) item
 
-The [ItemTemplate]() property helps you to decorate drop-down items using the custom templates. The default value of `ItemTemplate` is `null`. The following example shows how to customize drop-down items using templates.
+The [ItemTemplate]() property helps you to decorate drop-down items using the custom templates. The default value of the `ItemTemplate` is `null`. The following example shows how to customize drop-down items using templates.
 
 {% tab %}
 {% highlight C# %}
@@ -317,7 +317,7 @@ The following image illustrates the result of the above code:
 
 ## Customize DropDown (suggestion) items based on condition
 
-The [ItemTemplate]() property helps you to decorate drop-down items conditionally based on their content using the custom templates. The default value of `ItemTemplate` is `null`.
+The [ItemTemplate]() property helps you to decorate drop-down items conditionally based on their content using the custom templates. The default value of the `ItemTemplate` is `null`.
 
 {% tab %}
 {% highlight C# %}
