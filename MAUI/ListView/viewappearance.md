@@ -499,7 +499,7 @@ public partial class MainPage : ContentPage
 
 ![MAUI ListView Drop shadow effect on items](Images/appearance/maui-listview-drop-shadow-effects-on-items.jpg)
 
-## Visual State Manager
+## Change mouse hover item background
 
 Use the visual state manager to change the `SfListView` mouse hover background on the listView item based on the visual states set from the code. The applicable visual states are `Normal` and `PointerOver`.
 
@@ -533,81 +533,14 @@ Use the visual state manager to change the `SfListView` mouse hover background o
         </Style>
     </ContentPage.Resources>
     <ContentPage.Content>
-        <syncfusion:SfListView x:Name="listView"
-                               ItemSize="70"
-                               Margin="0,10,0,0"
-                               ItemsSource="{Binding ContactsInfo}">
-            <syncfusion:SfListView.ItemTemplate>
-                <DataTemplate>
-                    <Grid x:Name="grid"
-                          RowSpacing="0">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="*" />
-                            <RowDefinition Height="1" />
-                        </Grid.RowDefinitions>
-                        <Grid RowSpacing="0"
-                              Grid.Row="0">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="70" />
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="80" />
-                            </Grid.ColumnDefinitions>
-
-                            <Image Source="{Binding ContactImage}"
-                                   Grid.Column="0"
-                                   VerticalOptions="Center"
-                                   HorizontalOptions="Center"
-                                   HeightRequest="50"
-                                   WidthRequest="50" />
-                            <Grid Grid.Row="0"
-                                  Grid.Column="1"
-                                  RowSpacing="2"
-                                  Padding="10,0,0,0"
-                                  VerticalOptions="Center">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="*" />
-                                    <RowDefinition Height="*" />
-                                </Grid.RowDefinitions>
-
-                                <Label LineBreakMode="NoWrap"
-                                       Padding="0,10,0,0"
-                                       TextColor="#474747"
-                                       Text="{Binding ContactName}"
-                                       FontSize="15" />
-                                <Label Grid.Row="1"
-                                       Padding="0,0,0,3"
-                                       Grid.Column="0"
-                                       TextColor="#474747"
-                                       LineBreakMode="NoWrap"
-                                       Text="{Binding ContactNumber}"
-                                       FontSize="15" />
-                            </Grid>
-                            <Grid Grid.Row="0"
-                                  Grid.Column="2"
-                                  RowSpacing="0"
-                                  HorizontalOptions="End"
-                                  VerticalOptions="Start"
-                                  Padding="0,10,10,0">
-                                <Label LineBreakMode="NoWrap"
-                                       Grid.Column="2"
-                                       TextColor="#474747"
-                                       Text="{Binding ContactType}"
-                                       FontSize="15" />
-                            </Grid>
-                        </Grid>
-                        <StackLayout Grid.Row="1"
-                                     BackgroundColor="#E4E4E4"
-                                     HeightRequest="1" />
-                    </Grid>
-                </DataTemplate>
-            </syncfusion:SfListView.ItemTemplate>
+        <syncfusion:SfListView ItemsSource="{Binding ContactsInfo}">
         </syncfusion:SfListView>
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
 {% endtabs %}
 
-N> Only the Background Property of the visual state can be customized.
+N> Only the `Background Property` of the visual state can be customized.
 
 ## ListViewItem customization
 
