@@ -501,7 +501,7 @@ public partial class MainPage : ContentPage
 
 ## Change mouse hover item background
 
-Use the visual state manager to change the `SfListView` mouse hover background on the `ListViewItem` based on the visual states set from the code. The applicable visual states are `Normal` and `PointerOver`.
+The `SfListView` allows customizing the mouse hover background of the `ListViewItem` using the visual state manager based on the visual states set from the code. The applicable visual states are `Normal` and `PointerOver`.
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml" %}
