@@ -760,9 +760,9 @@ chart.YAxes.Add(secondaryAxis);
 
 ## AutoScrollingDelta 
 
-[AutoScrollingDelta]() is used to ensure that the specified range of data is always visible in the chart. It always shows the recently added data points at the end and scrolling will be reset to the end of the range whenever a new point is added.
+[AutoScrollingDelta]() ensures that the specified range of data is always visible in the chart. It always shows the recently added data points at the end, and scrolling will be reset to the end of the range whenever a new point is added.
 
-By adding [ChartZoomPanBehavior]() to the chart, you can scroll to see the previous datapoints.
+By adding [ChartZoomPanBehavior]() to the chart, you can scroll to see the previous data points.
 
 ### AutoScrollingMode
 
@@ -799,7 +799,7 @@ By adding [ChartZoomPanBehavior]() to the chart, you can scroll to see the previ
 
 ### AutoScrollingDeltaType
 
-In [DateTimeAxis](), you can apply auto scrolling delta value in [Years](), [Months](), [Days](), [Hours](), [Minutes](), [Seconds]() and [Milliseconds]() by setting [AutoScrollingDeltaType]() property. Default value of this property is [Auto]() and the delta will be calculated automatically based on range.
+In [DateTimeAxis](), you can apply auto scrolling delta value in [Years](), [Months](), [Days](), [Hours](), [Minutes](), [Seconds]() and [Milliseconds]() by setting [AutoScrollingDeltaType]() property. The default value of this property is [Auto](), and the delta will be calculated automatically based on range.
 
 {% tabs %}
 
