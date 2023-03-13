@@ -11,6 +11,10 @@ documentation: ug
 
 This section explains the steps required to configure the .NET MAUI Effects View control and customize its elements.
 
+To get start quickly with our .NET MAUI Effects View, you can check the below video.
+
+{% youtube "https://www.youtube.com/watch?v=IOieyRMCuAo" %}
+
 ## Adding a SfEffectsView reference
 
 Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html?tabs=tabid-1) to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and then install it.
