@@ -1,7 +1,7 @@
 ---
 layout: post
 title: About .NET MAUI Shimmer control | Syncfusion
-description: Learn here about the Customization of Syncfusion .NET MAUI Shimmer (SfShimmer) control.
+description: Learn here about the Customization of Syncfusion .NET MAUI Shimmer (SfShimmer) control, its basic features, elements and more.
 platform: maui
 control: SfShimmer
 documentation: ug
@@ -55,8 +55,6 @@ this.Content = Shimmer;
 {% endhighlight %}
 {% endtabs %}
 
-![Customize the Shimmer background color in .NET MAUI.](images/customization/maui-fill-customization.png)
-
 ## WaveColor
 
 The color of wave in `SfShimmer` view can be customized by using the `WaveColor` property. The default value of `WaveColor` is `#F3EDF7` Color.
@@ -91,8 +89,6 @@ this.Content = Shimmer;
 
 {% endhighlight %}
 {% endtabs %}
-
-![Customize the Shimmer Wave color in .NET MAUI.](images/customization/maui-wavecolor-customization.png)
 
 ## WaveWidth
 
@@ -130,8 +126,6 @@ this.Content = Shimmer;
 
 {% endhighlight %}
 {% endtabs %}
-
-![Customize the Shimmer Wave width in .NET MAUI.](images/customization/maui-wavewidth-customization.png)
 
 ## WaveDirection
 
@@ -174,8 +168,6 @@ this.Content = Shimmer;
 {% endhighlight %}
 {% endtabs %}
 
-![Customize the Shimmer wave direction in .NET MAUI.](images/customization/maui-wave-direction-customization.gif)
-
 ## RepeatCount
 
 The `RepeatCount` of the shimmer refers to the number of times that a shimmer cycle repeats within a given time period of wave in `SfShimmer` view. The default value of `RepeatCount` is `1`.
@@ -211,8 +203,6 @@ this.Content = Shimmer;
 {% endhighlight %}
 {% endtabs %}
 
-![Customize the Shimmer repeat count in .NET MAUI.](images/customization/maui-repeatcount-customization.png)
-
 ## AnimationDuration
 
 The duration of the animation in `SfShimmer` view can be customized by using the `AnimationDuration` property. The default value of `AnimationDuration` is 1000 ms.
@@ -247,5 +237,3 @@ this.Content = Shimmer;
 
 {% endhighlight %}
 {% endtabs %}
-
-![Customize the Shimmer Animation duration in .NET MAUI.](images/customization/maui-animationduration-customization.gif)
