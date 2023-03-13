@@ -524,7 +524,7 @@ Use the visual state manager to change the `SfListView` mouse hover background o
                         <VisualState x:Name="PointerOver">
                             <VisualState.Setters>
                                 <Setter Property="Background"
-                                        Value= "lightskyblue" />
+                                        Value= "LightSkyBlue" />
                             </VisualState.Setters>
                         </VisualState>
                     </VisualStateGroup>
