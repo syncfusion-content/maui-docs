@@ -230,13 +230,15 @@ By default, the [CategoryAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 
 ![CategoryAxis interval support in MAUI Chart](Axis_Images/maui_chart_category_axis_interval.jpg)
 
-## Indexed category axis
+### Indexed category axis
 
-In Maui Charts, the [ArrangeByIndex]() property is used to determine how the items in a category axis are arranged. This property can take on one of two values: true or false.
+In Cartesian Charts, the [ArrangeByIndex]() property is used to determine how the items in a category axis are arranged. 
 
-N> If [ArrangeByIndex]() is set to true, then the items in the category axis will be arranged according to their index values.
+If [ArrangeByIndex]() is set to true, then the items in the category axis will be arranged according to their index values.
 
-N> If [ArrangeByIndex]() is set to false, then the items in the category axis will be arranged according to their values.
+If [ArrangeByIndex]() is set to false, then the items in the category axis will be arranged according to their values.By default, [ArrangeByIndex]() is true.
+
+The following code illustrates how to define the property [ArrangeByIndex]() in chart.
 
 {% tabs %}
 
