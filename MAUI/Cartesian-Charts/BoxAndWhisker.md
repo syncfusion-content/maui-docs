@@ -62,7 +62,6 @@ N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
 ![BoxAndWhisker chart type in MAUI Chart](Chart-types_images/BoxPlotBasicRendering.png)
 
 ## Customize the series Box mode
-
 The series box plotting mode can be changed by using [BoxPlotMode]() property of [BoxAndWhiskerSeries](). The plotting mode of series can be calculated as follows:
 
 * [`Exclusive`]()-The quartile values are calculated by using the formula (N+1) * P (N count, P percentile) and its index value starts from 1 in the list.
@@ -74,9 +73,7 @@ The series box plotting mode can be changed by using [BoxPlotMode]() property of
 By default,[BoxPlotMode]() value is [Exclusive]().
 
 ## Normal
-
-In Normal mode, the whiskers extend to the minimum and maximum data points within 2 times the standard deviation of the data. This method assumes that the data is normally distributed.
-The following code illustrate how to define property [BoxPlotMode]() value as [Normal]().
+In Normal mode, the whiskers extend to the minimum and maximum data points within two times the standard deviation of the data. This method assumes that the data is normally distributed.The following code illustrate how to define property [BoxPlotMode]() value as [Normal]().
 
 {% tabs %}
 
@@ -127,9 +124,7 @@ The following code illustrate how to define property [BoxPlotMode]() value as [N
 ![BoxPlotMode Normal in MAUI Chart](Chart-types_images/BoxPlotModeNormal.png)
 
 ## Inclusive
-
-In Inclusive mode, the whiskers extend to the minimum and maximum data points within 1.5 times the IQR. Any points beyond this range are considered outliers.
-The following code illustrate how to define property [BoxPlotMode]() value as [Inclusive]().
+In Inclusive mode, the whiskers extend to the minimum and maximum data points within 1.5 times the IQR. Any points beyond this range are considered outliers.The following code illustrate how to define property [BoxPlotMode]() value as [Inclusive]().
 
 {% tabs %}
 
@@ -180,7 +175,6 @@ The following code illustrate how to define property [BoxPlotMode]() value as [I
 ![BoxPlotMode Inclusive in MAUI Chart](Chart-types_images/BoxPlotModeInclusive.png)
 
 ## ShowMedian
-
 The Median values of given dataset is viewed by enabling the [ShowMedian]() property of [BoxAndWhiskerSeries]().By default, the ShowMedian property value is False.The following code illustrates how to enable the [ShowMedian]() property.
 
 {% tabs %}
@@ -233,19 +227,15 @@ The Median values of given dataset is viewed by enabling the [ShowMedian]() prop
 
 N>
 
-* The middle number of data points is the median for the odd number of data points.
-* The average of the middle two numbers is a median for the even number of data points.
+ * The middle number of data points is the median for the odd number of data points.
+ * The average of the middle two numbers is a median for the even number of data points.
 
 
 ## Outlier
-
-The outlier is used to display the outlier point that lies either below the lower whisker or above the upper whisker line and it is an observation that is numerically distant from the rest of the data.
+The outlier displays the outlier point that lies either under the lower whisker or above the upper whisker line. It is an observation numerically distant from the rest of the data.
 
 ## ShowOutlier
-
-The outlier value in the box plot can be viewed by enabling the [ShowOutlier]() property of [BoxAndWhiskerSeries]().The following code demonstrates how to disable the [ShowOutlier]() property.
-
-N> By default, [ShowOutlier] value is true.
+The outlier value in the box plot can be viewed by enabling the [ShowOutlier]() property of [BoxAndWhiskerSeries]().By default, [ShowOutlier] value is true.The following code demonstrates how to disable the [ShowOutlier]() property.
 
 {% tabs %}
 
@@ -297,9 +287,9 @@ N> By default, [ShowOutlier] value is true.
 
 ## OutlierShapeType
 
-The [OutlierShapeType]() is used to display the outlier point with different types of symbols. The available symbols are Cross, Diamond, Ellipse, Hexagon, InvertedTriangle, Pentagon, Plus, Rectangle and Triangle. By default, [OutlierShapeType]() value is [Ellipse]().
+The [OutlierShapeType]() displays the outlier point with different symbols. The available symbols are Cross, Diamond, Ellipse, Hexagon, InvertedTriangle, Pentagon, Plus, Rectangle and Triangle. By default, [OutlierShapeType]() value is [Ellipse]().
 
-The following code shows how to set the [OutlierShapeType]() value as [Cross]().OutlierShapeType
+The following code shows how to set the [OutlierShapeType]() value as [Cross]().OutlierShapeType.
 
 {% tabs %}
 
