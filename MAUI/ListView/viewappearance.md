@@ -540,7 +540,7 @@ Use the visual state manager to change the `SfListView` mouse hover background o
 {% endhighlight %}
 {% endtabs %}
 
-N> Only the `Background Property` of the visual state can be customized.
+N> Only the `Background` Property of the visual state can be customized.
 
 ## ListViewItem customization
 
