@@ -548,7 +548,7 @@ The `SfListView` allows customizing the mouse hover background of the `ListViewI
 {% endhighlight %}
 {% endtabs %}
 
-N> Only the `Background` property of ListViewItem can be customized using visual state.
+N> Only the `Background` property of `ListViewItem` can be customized using visual state.
 
 ## ListViewItem customization
 
