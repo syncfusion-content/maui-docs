@@ -597,8 +597,7 @@ By default, The 0th index value of XAxes and YAxes is used to plot all of the se
 	</chart:SfCartesianChart.YAxes>
         <chart:ColumnSeries ItemsSource="{Binding Data1}" 
                             XBindingPath="Date"
-                            YBindingPath="Value"
-			                YAxisName="series_YAxis"/>
+                            YBindingPath="Value" YAxisName="series_YAxis"/>
         <chart:SplineSeries ItemsSource="{Binding Data}" 
                             XBindingPath="Date"
                             YBindingPath="Value"/>
