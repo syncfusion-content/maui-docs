@@ -183,6 +183,7 @@ The appearance of stacked header row can be customized by setting desired values
 <syncfusion:SfDataGrid.DefaultStyle>
     <syncfusion:DataGridStyle
             StackedHeaderRowBackground = "#0074E3"
+            StackedHeaderRowTextColor="White"
             />
 </syncfusion:SfDataGrid.DefaultStyle>
 {% endhighlight %}
@@ -221,29 +222,29 @@ The SfDataGrid also allows to customize the appearance of stacked header Cells c
 {% highlight c# %}
 //Custom style class
  public class CellStyleConverter : IValueConverter
-        {
-            public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
-            {
-                var text = (value as DataGridStackedHeaderCell).CellValue;
+{
+    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+    {
+        var text = (value as DataGridStackedHeaderCell).CellValue;
 
-                if (text != null)
-                {
-                    if (text.ToString() == "Order Details")
-                    return Colors.Red;
-                else if (text.ToString() == "Order Shipment Details")
-                    return Colors.Brown;
-                else if (text.ToString() == "Customer Details")
-                    return Colors.Green;  
-                }
-                return Colors.White;
-            }
+    if (text != null)
+    {
+        if (text.ToString() == "Order Shipment Details")
+            return Colors.CadetBlue;
+        else if (text.ToString() == "Order Details")
+            return Colors.LightBlue;
+        else if (text.ToString() == "Customer Details")
+            return Colors.CornflowerBlue;               
+    }
+    return Colors.White;
+    }
 
-            public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-            {
-                throw new NotImplementedException();
-            }
+    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    {
+        throw new NotImplementedException();
+    }
 
-        }
+}
 {% endhighlight %}
 
 ![Customizing the background of stacked header row based on index](Images/stacked-headers/StackedHeaderConditionalStyle.png)
@@ -296,52 +297,53 @@ The SfDataGrid allows you to load any desired view inside a `DataGridStackedColu
 {% endhighlight %}
 {% highlight c# %}
 var stackedHeaderRow = new DataGridStackedHeaderRow();
-stackedHeaderRow.Columns.Add(new DataGridStackedColumn()
-    {
-        ColumnMappingNames = "OrderID" + "," + "OrderDate" + "," + "CustomerID" + "," + "ContactName",
-        Text = "Order Shipment Details",
-        MappingName = "SalesDetails",
-    });
-    dataGrid.StackedHeaderRows.Add(stackedHeaderRow);
-
-    var stackedHeaderRow1 = new DataGridStackedHeaderRow();
-    stackedHeaderRow1.Columns.Add(new DataGridStackedColumn()
-    {
-        ColumnMappingNames = "OrderID" + "," + "OrderDate",
-        Text = "Order Details",
-        MappingName = "OrderDetails",
-        Template = new DataTemplate(() =>
+        stackedHeaderRow.Columns.Add(new DataGridStackedColumn()
         {
-            var gridView = new Grid()
+            ColumnMappingNames = "OrderID" + "," + "OrderDate" + "," + "CustomerID" + "," + "ContactName",
+            Text = "Order Shipment Details",
+            MappingName = "SalesDetails",
+        });
+        dataGrid.StackedHeaderRows.Add(stackedHeaderRow);
+
+        var stackedHeaderRow1 = new DataGridStackedHeaderRow();
+        stackedHeaderRow1.Columns.Add(new DataGridStackedColumn()
+        {
+            ColumnMappingNames = "OrderID" + "," + "OrderDate",
+            Text = "Order Details",
+            MappingName = "OrderDetails",
+            
+        });
+        stackedHeaderRow1.Columns.Add(new DataGridStackedColumn()
+        {
+            ColumnMappingNames = "CustomerID" + "," + "ContactName",
+            Text = "Customer Details",
+            MappingName = "CustomerDetails",
+            Template = new DataTemplate(() =>
             {
-                BackgroundColor = Colors.MediumPurple,
-            };
-            var imageView = new Image()
-            {
-                Source = ImageSource.FromFile("customer_details.png"),
-                Aspect = Aspect.AspectFit,
-                VerticalOptions = LayoutOptions.Center,
-                HorizontalOptions = LayoutOptions.Start
-            };
-            var label = new Label()
-            {
-                Text = "Customer Details",
-                TextColor = Colors.White,
-                VerticalTextAlignment = TextAlignment.Center,
-                HorizontalTextAlignment = TextAlignment.Center
-            };
-            gridView.Add(label, 0, 0);
-            gridView.Add(imageView, 1, 0);
-            return gridView;
-        })
-    });
-    stackedHeaderRow1.Columns.Add(new DataGridStackedColumn()
-    {
-        ColumnMappingNames = "CustomerID" + "," + "ContactName",
-        Text = "Customer Details",
-        MappingName = "CustomerDetails",
-    });
-    this.dataGrid.StackedHeaderRows.Add(stackedHeaderRow1);
+                var gridView = new Grid()
+                {
+                    BackgroundColor = Colors.CornflowerBlue,
+                };
+                var imageView = new Image()
+                {
+                    Source = ImageSource.FromFile("customer_details.png"),
+                    Aspect = Aspect.AspectFit,
+                    VerticalOptions = LayoutOptions.Center,
+                    HorizontalOptions = LayoutOptions.Start
+                };
+                var label = new Label()
+                {
+                    Text = "Customer Details",
+                    TextColor = Colors.White,
+                    VerticalTextAlignment = TextAlignment.Center,
+                    HorizontalTextAlignment = TextAlignment.Center
+                };
+                gridView.Add(label, 0, 0);
+                gridView.Add(imageView, 1, 0);
+                return gridView;
+            })
+        });
+        this.dataGrid.StackedHeaderRows.Add(stackedHeaderRow1);
 {% endhighlight %}
 {% endtabs %}
 
