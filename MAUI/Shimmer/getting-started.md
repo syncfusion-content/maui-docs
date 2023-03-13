@@ -1,7 +1,7 @@
 ---
 layout: post
 title: About .NET MAUI Shimmer control | Syncfusion
-description: Learn here about the Getting started of Syncfusion .NET MAUI Shimmer (SfShimmer) control, its elements and more.
+description: Learn here about the Getting started of Syncfusion .NET MAUI Shimmer (SfShimmer) control, its basic features, elements and more.
 platform: maui
 control: SfShimmer
 documentation: ug
@@ -119,5 +119,3 @@ SfShimmer shimmer = new SfShimmer()
 
 {% endhighlight %}
 {% endtabs %}
-
-![The CirclePersona shimmer view of .NET MAUI.](images/built-in-views/maui-circlePersona-shimmer-view.gif)
