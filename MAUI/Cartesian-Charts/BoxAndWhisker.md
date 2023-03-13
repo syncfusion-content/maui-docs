@@ -1,20 +1,19 @@
 ---
 layout: post
-title: BoxAndWhisker Chart in .NET MAUI Chart control | Syncfusion
+title: Box and whisker Chart in .NET MAUI Chart control | Syncfusion
 description: Learn here all about BoxAndWhisker chart support in Syncfusion .NET MAUI Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
 documentation: ug
 ---
 
-# Box And Whisker Chart in .NET MAUI Chart
+# Box and Whisker Chart in .NET MAUI Chart
 
-BoxAndWhisker chart is used to show the distribution of data within a population. To render a BoxAndWhisker chart, create an instance of [BoxAndWhiskerSeries](), and add it to the [Series]() collection property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).The following code illustrates how to define the series in chart.
+Box plot chart is used to show the distribution of data within a population. To render a BoxAndWhisker chart, create an instance of [BoxAndWhiskerSeries](), and add it to the [Series]() collection property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).
+
+Box plots are great for comparing the distribution of multiple datasets side by side. By comparing the median, quartiles, and range of the boxes, you can quickly identify differences in the center, spread, and skewness of the distributions.The following code illustrates how to define the series in chart.
 
 N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) as its default content.
-
-N>  In Exclusive mode, the whiskers extend to the most extreme data point within 1.5 times the interquartile range (IQR). Any points beyond this range are considered outliers.
-By default,the BoxPlotMode property value is Exclusive.
 
 {% tabs %}
 
@@ -62,20 +61,22 @@ By default,the BoxPlotMode property value is Exclusive.
 
 ![BoxAndWhisker chart type in MAUI Chart](Chart-types_images/BoxPlotBasicRendering.png)
 
-## Customize the series BoxPlot mode
+## Customize the series Box mode
 
 The series box plotting mode can be changed by using [BoxPlotMode]() property of [BoxAndWhiskerSeries](). The plotting mode of series can be calculated as follows:
 
-*`Exclusive`-The quartile values are calculated by using the formula (N+1) * P (N count, P percentile) and its index value starts from 1 in the list.
+* [`Exclusive`]()-The quartile values are calculated by using the formula (N+1) * P (N count, P percentile) and its index value starts from 1 in the list.
 
-*`Inclusive`- The quartile values are calculated by using the formula (N−1) * P (N count, P percentile) and its index value starts from 0 in the list.
+* [`Inclusive`]()- The quartile values are calculated by using the formula (N−1) * P (N count, P percentile) and its index value starts from 0 in the list.
 
-*`Normal`-The quartile values are calculated by splitting the list and getting the median values.
+* [`Normal`]()-The quartile values are calculated by splitting the list and getting the median values.
+
+By default,[BoxPlotMode]() value is [Exclusive]().
 
 ## Normal
 
 In Normal mode, the whiskers extend to the minimum and maximum data points within 2 times the standard deviation of the data. This method assumes that the data is normally distributed.
-The following code illustrate how to define property [BoxPlotMode]() value as Normal.
+The following code illustrate how to define property [BoxPlotMode]() value as [Normal]().
 
 {% tabs %}
 
@@ -113,7 +114,7 @@ The following code illustrate how to define property [BoxPlotMode]() value as No
         ItemsSource = new ViewModel().BoxWhiskerData,
         XBindingPath = "Department",
         YBindingPath = "Age",
-        BoxPlotMode="Normal"/>
+        BoxPlotMode = "Normal"/>
     };
 
     chart.Series.Add(series);
@@ -128,7 +129,7 @@ The following code illustrate how to define property [BoxPlotMode]() value as No
 ## Inclusive
 
 In Inclusive mode, the whiskers extend to the minimum and maximum data points within 1.5 times the IQR. Any points beyond this range are considered outliers.
-The following code illustrate how to define property [BoxPlotMode]() value as Inclusive.
+The following code illustrate how to define property [BoxPlotMode]() value as [Inclusive]().
 
 {% tabs %}
 
@@ -166,7 +167,7 @@ The following code illustrate how to define property [BoxPlotMode]() value as In
         ItemsSource = new ViewModel().BoxWhiskerData,
         XBindingPath = "Department",
         YBindingPath = "Age",
-        BoxPlotMode="Inclusive"/>
+        BoxPlotMode = "Inclusive"/>
     };
 
     chart.Series.Add(series);
@@ -180,9 +181,7 @@ The following code illustrate how to define property [BoxPlotMode]() value as In
 
 ## ShowMedian
 
-The Median values of given dataset is viewed by enabling the [ShowMedian]() property of [BoxAndWhiskerSeries](). The following code illustrates how to enable the [ShowMedian]() property.
-
-N> By default, the ShowMedian property value is False.
+The Median values of given dataset is viewed by enabling the [ShowMedian]() property of [BoxAndWhiskerSeries]().By default, the ShowMedian property value is False.The following code illustrates how to enable the [ShowMedian]() property.
 
 {% tabs %}
 
@@ -220,7 +219,7 @@ N> By default, the ShowMedian property value is False.
         ItemsSource = new ViewModel().BoxWhiskerData,
         XBindingPath = "Department",
         YBindingPath = "Age",
-        ShowMedian="True"/>
+        ShowMedian = "True"/>
     };
 
     chart.Series.Add(series);
@@ -284,7 +283,7 @@ N> By default, [ShowOutlier] value is true.
         ItemsSource = new ViewModel().BoxWhiskerData,
         XBindingPath = "Department",
         YBindingPath = "Age",
-        ShowOutlier="False"/>
+        ShowOutlier = "False"/>
     };
 
     chart.Series.Add(series);
