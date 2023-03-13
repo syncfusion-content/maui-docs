@@ -1,7 +1,7 @@
 ---
 layout: post
 title: About .NET MAUI Shimmer control | Syncfusion
-description: Learn here about the Built-in Views of Syncfusion .NET MAUI Shimmer (SfShimmer) control.
+description: Learn here about the Built-in types of Syncfusion .NET MAUI Shimmer (SfShimmer) control, its basic features, elements and more.
 platform: maui
 control: SfShimmer
 documentation: ug
@@ -55,5 +55,3 @@ SfShimmer shimmer = new SfShimmer()
 
 {% endhighlight %}
 {% endtabs %}
-
-![The Built-in shimmer types of .NET MAUI.](images/built-in-views/maui-built-in-view-types.gif)
