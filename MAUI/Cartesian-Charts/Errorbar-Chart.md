@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Error Bar Series Chart in .NET MAUI Chart Control | Syncfusion
-description: Learn here all about Error Bar chart support in Syncfusion .NET MAUI Chart (SfCartesianChart) control.
+description: Learn about Error Bar chart support in Syncfusion .NET MAUI Chart (SfCartesianChart) control here.
 platform: maui
 control: SfCartesianChart
 documentation: ug
@@ -9,11 +9,10 @@ documentation: ug
 
 # Error Bar Series in .NET MAUI Chart
 
-[ErrorBarSeries]() is used to indicate the errors or uncertainty in reported values. This will find the possible variations in measurements, and in Chart control these values are displayed as data points.
-The [HorizontalErrorValue]() and [VerticalErrorValue]() is used to set the error value(variation) to the series.
+[ErrorBarSeries]() indicates the errors or uncertainty in reported values. This will find the possible variations in measurements, and in Chart control these values are displayed as data points.
+The [HorizontalErrorValue]() and the [VerticalErrorValue]() is used to set the error value(variation) to the series.
 
-N> The Error Bar Series Chart is not an individual Chart, it associate with a main Chart
-N> Here, We use Scatter Series Chart as Main Chart with the Error Bar Series Chart Support
+N> The Error Bar Series Chart is not an individual Chart, it associate with a main Chart. Here, we use Scatter Series Chart as Main Chart with the Error Bar Series Chart Support
 
 The following code examples illustrates how to create error bar series:
 {% tabs %}
@@ -80,11 +79,11 @@ The following code examples illustrates how to create error bar series:
 ![Error Bar Series in MAUI Chart](Chart-types_images/BasicRenderingErrorBar.png)
 
 ## Mode 
-This [Mode]() property is used to define whether to identify horizontal error or vertical error. By default, the Mode value is [Both](), which will display both horizontal and vertical error values.
+This [Mode]() property defines whether to identify a horizontal error or vertical error. By default, the Mode value is [Both](), which will display both horizontal and vertical error values.
 
 ### Horizontal
 
-To view horizontal error value, you can set the Mode as Horizontal as shown in the below code example.
+To view horizontal error value, you can set the Mode as Horizontal as shown in the following code example.
 
 {% tabs %}
 
@@ -124,7 +123,7 @@ To view horizontal error value, you can set the Mode as Horizontal as shown in t
 
 ### Vertical
 
-To view vertical error value, you can set the Mode as Vertical as shown in the below code example.
+To view vertical error value, you can set the Mode as Vertical, as shown in the below code example.
 
 {% tabs %}
 
@@ -169,7 +168,7 @@ To view vertical error value, you can set the Mode as Vertical as shown in the b
 
 ### Horizontal Direction
 
-[HorizontalDirection]() property of [ErrorBarSeries]() allows you to view the horizontal error value in the following type of directions:
+[HorizontalDirection]() property of the [ErrorBarSeries]() allows you to view the horizontal error value in the following type of directions:
 
 *`Both` -  It indicates the actual data point value along with specific amount of positive and negative error values.
 
@@ -296,13 +295,13 @@ The following code illustrates how to set the [HorizontalDirection]() value as M
 
 ### Vertical Direction
 
-[VerticalDirection]() property of [ErrorBarSeries]() allows you to view the Vertical error value in the following type of directions:
+[VerticalDirection]() property of the [ErrorBarSeries]() allows you to view the Vertical error value in the following type of directions:
 
-*`Both` -  It indicates the actual data point value along with specific amount of positive and negative error values.
+*`Both` -  It indicates the actual data point value along with a specific amount of positive and negative error values.
 
-*`Plus` -  It indicates the actual data point value along with specific amount of positive error value.
+*`Plus` -  It indicates the actual data point value along with a specific amount of positive error value.
 
-*`Minus`-  It indicates the actual data point value along with specific amount of negative error value.
+*`Minus`-  It indicates the actual data point value along with a specific amount of negative error value.
 
 #### Both
 
@@ -437,7 +436,7 @@ SfCartesianChart supports the following type of error bar series.
 
 *`Standard Percentage`
 
-N> The default error bar series is Fixed.
+N> The default error bar series Type is Fixed.
 
 ### Fixed
 
@@ -591,7 +590,7 @@ chart.Series.Add(errorBar);
 
 ## Custom
 
-If the Type is Custom, you have to bind [HorizontalErrorPath]() and [VerticalErrorPath]() as shown in the below code snippet.
+If the Type is Custom, you have to bind the [HorizontalErrorPath]() and the [VerticalErrorPath]() as shown in the following code sample.
 
 {% tabs %}
 
@@ -637,7 +636,7 @@ If the Type is Custom, you have to bind [HorizontalErrorPath]() and [VerticalErr
 
 ### Line Style
 
-You can define the LineStyle for the error bar lines using [HorizontalLineStyle]() and [VerticalLineStyle]() properties as in the below code examples.
+You can define the LineStyle for the error bar lines using the [HorizontalLineStyle]() and the [VerticalLineStyle]() properties as in the following code examples.
 
 #### Horizontal Line Style
 
@@ -697,7 +696,7 @@ You can define the LineStyle for the error bar lines using [HorizontalLineStyle]
 
 ### Cap Line Style
 
-You can define the CapLineStyle for the error bar lines using [HorizontalCapLineStyle]() and [VerticalCapLineStyle]() properties as in the below code examples.
+You can define the CapLineStyle for the error bar lines using the [HorizontalCapLineStyle]() and the[VerticalCapLineStyle]() properties as in the following code examples.
 
 #### Horizontal Cap Line Style
 

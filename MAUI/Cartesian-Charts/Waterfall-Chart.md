@@ -11,7 +11,7 @@ documentation: ug
 
 ## Waterfall Series
 
-[WaterfallSeries]() clarifies the cumulative effect of set of provided positive and negative values. The series is represented by a rectangle and a connector between the rectangles. To render a waterfall chart, create an instance of [WaterfallSeries](), and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1)
+[WaterfallSeries]() clarifies the cumulative effect of a set of provided positive and negative values. The series is represented by a rectangle and a connector between the rectangles. To render a waterfall chart, create an instance of [WaterfallSeries](), and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of the [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1)
 
 The following code illustrates how to use the series in chart.
 
@@ -61,7 +61,7 @@ The following code illustrates how to use the series in chart.
 
 ### SummarySegmentPath and SummaryPointsBrush
 
-[SummaryBindingPath]() gets or sets the string value that indicates the sum of previous segments in series.
+[SummaryBindingPath]() gets or sets the string value that indicates the sum of previous segments in the series.
 
 The summary segment can be differentiated by applying the [SummaryPointsBrush]() in series.
 
@@ -181,7 +181,7 @@ The following code example illustrates how the ShowConnectorLine value can be se
 
 ### Connector line customization
 
-The connector line can be customized by applying [ConnectorLineStyle]() property of the series. The following code example illustrates how to apply style for connector line.
+The connector line can be customized by applying the[ConnectorLineStyle]() property of the series. The following code example illustrates how to apply style for connector line.
 
 {% tabs %}
 
