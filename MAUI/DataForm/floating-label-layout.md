@@ -13,8 +13,8 @@ documentation: ug
 
 The floating label layout is a powerful feature that enhances the user experience and makes it easier for users to interact with forms.The dataform supports floating label layout which includes assistive labels, leading and trailing icons, and a password toggle icon to show or hide a password. It offers three different kinds of containers, including filled, outlined, and none. Setting "LayoutType" to "TextInputLayout" enables floating label layout.
 
-## Layout type
-By default, the dataform arranges the editors and their labels corresponding to the fields in layout. However, to enable the floating label layout set `LayoutType` property of `SfDataForm` or `DataFormItem` to `TextInputLayout`.
+## Changing the layout type for the data form
+By default, the dataform arranges the editors and their labels corresponding to the fields in layout. However, to enable the floating label layout for data form set `LayoutType` property of `SfDataForm` or `DataFormItem` to `TextInputLayout`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -34,8 +34,8 @@ this.dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
 {% endhighlight %}
 {% endtabs %}
 
-### Changing layout type of the DataFormItem
-You can change layout type by using the `LayoutType` property of [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html) and it will be handled in the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event.
+#### Changing the layout type for the editor
+You can change layout type for the editor by using the `LayoutType` property of [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html) and it will be handled in the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event.
 
 {% tabs %}
 {% highlight XAML %}
@@ -92,6 +92,19 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
     </dataForm:SfDataForm.TextInputLayoutSettings>
 </dataForm:SfDataForm>
 </ContentPage>
+{% endhighlight %}
+{% highlight C# %}
+
+public class ContactInfo
+{
+    public string Name { get; set; }
+
+    public string Email { get; set; }
+
+    [DataType(DataType.Password)]
+    public string Password { get; set; }
+}
+
 {% endhighlight %}
 {% highlight C# %}
 
@@ -426,159 +439,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 #### Validation label
 The validation label used to display the dataform validation messages such as valid or invalid data. Refer [validation](https://help.syncfusion.com/maui/dataform/validation) to learn more about dataform validation.
 
-## Appearance customization
-
-#### Changing outline corner radius
-The corner radius of the container will be changed by setting `OutlineCornerRadius` property of `TextInputLayoutSettings` to double value.
-
-{% tabs %}
-{% highlight XAML %}
-<ContentPage 
-...
-xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
-<dataForm:SfDataForm x:Name="dataForm" 
-                        LayoutType="TextInputLayout"
-                        DataObject="{Binding ContactInfo}"
-                        GenerateDataFormItem="OnGenerateDataFormItem">
-    <dataForm:SfDataForm.TextInputLayoutSettings>
-        <dataForm:TextInputLayoutSettings OutlineCornerRadius="10"/>
-    </dataForm:SfDataForm.TextInputLayoutSettings>
-</dataForm:SfDataForm>
-</ContentPage>
-{% endhighlight %}
-{% highlight C# %}
-
-this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
-
-private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
-{
-    if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name")
-    {
-        e.DataFormItem.LayoutType = DataFormLayoutType.TextInputLayout;
-        e.DataFormItem.TextInputLayoutSettings = new TextInputLayoutSettings
-        {
-            OutlineCornerRadius = 10,
-        };
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-#### Stroke color
-The `Stroke` property of `TextInputLayoutSettings` is used to change the label text and border color of the editors.
-
-{% tabs %}
-{% highlight XAML %}
-<ContentPage 
-...
-xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
-<dataForm:SfDataForm x:Name="dataForm" 
-                        LayoutType="TextInputLayout"
-                        DataObject="{Binding ContactInfo}"
-                        GenerateDataFormItem="OnGenerateDataFormItem">
-    <dataForm:SfDataForm.TextInputLayoutSettings>
-        <dataForm:TextInputLayoutSettings Stroke="Blue"/>
-    </dataForm:SfDataForm.TextInputLayoutSettings>
-</dataForm:SfDataForm>
-</ContentPage>
-{% endhighlight %}
-{% highlight C# %}
-
-this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
-
-private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
-{
-    if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name")
-    {
-        e.DataFormItem.LayoutType = DataFormLayoutType.TextInputLayout;
-        e.DataFormItem.TextInputLayoutSettings = new TextInputLayoutSettings
-        {
-            Stroke = Colors.Blue,
-        };
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-#### Focused stroke color
-When the given editor view is focused, the `FocusedStroke` property value will be applied to the label text and border.
-
-{% tabs %}
-{% highlight XAML %}
-<ContentPage 
-...
-xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
-<dataForm:SfDataForm x:Name="dataForm" 
-                        LayoutType="TextInputLayout"
-                        DataObject="{Binding ContactInfo}"
-                        GenerateDataFormItem="OnGenerateDataFormItem">
-    <dataForm:SfDataForm.TextInputLayoutSettings>
-        <dataForm:TextInputLayoutSettings FocusedStroke="Green"/>
-    </dataForm:SfDataForm.TextInputLayoutSettings>
-</dataForm:SfDataForm>
-</ContentPage>
-{% endhighlight %}
-{% highlight C# %}
-
-this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
-
-private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
-{
-    if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name")
-    {
-        e.DataFormItem.LayoutType = DataFormLayoutType.TextInputLayout;
-        e.DataFormItem.TextInputLayoutSettings = new TextInputLayoutSettings
-        {
-            FocusedStroke = Colors.Green,
-        };
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-#### Focused and unfocused stroke thickness
-When the editor's view is focused and unfocused, the border's thickness can be changed using the `FocusedStrokeThickness` and `UnfocusedStrokeThickness` properties of `TextInputLayoutSettings`.
-
-{% tabs %}
-{% highlight XAML %}
-<ContentPage 
-...
-xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
-<dataForm:SfDataForm x:Name="dataForm" 
-                        LayoutType="TextInputLayout"
-                        DataObject="{Binding ContactInfo}"
-                        GenerateDataFormItem="OnGenerateDataFormItem">
-    <dataForm:SfDataForm.TextInputLayoutSettings>
-        <dataForm:TextInputLayoutSettings FocusedStrokeThickness="3.0"
-                                    UnfocusedStrokeThickness="2.0"/>
-    </dataForm:SfDataForm.TextInputLayoutSettings>
-</dataForm:SfDataForm>
-</ContentPage>
-{% endhighlight %}
-{% highlight C# %}
-
-this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
-
-private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
-{
-    if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name")
-    {
-        e.DataFormItem.LayoutType = DataFormLayoutType.TextInputLayout;
-        e.DataFormItem.TextInputLayoutSettings = new TextInputLayoutSettings
-        {
-            FocusedStrokeThickness = 3.0,
-            UnfocusedStrokeThickness = 2.0,
-        };
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Font customization
+## Customize Assistive label using text style
 You can customize the font of assistive labels by setting the `TextColor`, `FontFamily`, `FontSize`, and `FontAttributes` properties of the `DataFormTextStyle` property.
 
 #### Hint label style
@@ -738,10 +599,161 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
+## Appearance customization
+
+#### Changing outline corner radius
+The corner radius of the container will be changed by setting `OutlineCornerRadius` property of `TextInputLayoutSettings` to double value.
+
+{% tabs %}
+{% highlight XAML %}
+<ContentPage 
+...
+xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
+<dataForm:SfDataForm x:Name="dataForm" 
+                        LayoutType="TextInputLayout"
+                        DataObject="{Binding ContactInfo}"
+                        GenerateDataFormItem="OnGenerateDataFormItem">
+    <dataForm:SfDataForm.TextInputLayoutSettings>
+        <dataForm:TextInputLayoutSettings OutlineCornerRadius="10"/>
+    </dataForm:SfDataForm.TextInputLayoutSettings>
+</dataForm:SfDataForm>
+</ContentPage>
+{% endhighlight %}
+{% highlight C# %}
+
+this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{
+    if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name")
+    {
+        e.DataFormItem.LayoutType = DataFormLayoutType.TextInputLayout;
+        e.DataFormItem.TextInputLayoutSettings = new TextInputLayoutSettings
+        {
+            OutlineCornerRadius = 10,
+        };
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Stroke color
+The `Stroke` property of `TextInputLayoutSettings` is used to change the label text and border color of the editors.
+
+{% tabs %}
+{% highlight XAML %}
+<ContentPage 
+...
+xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
+<dataForm:SfDataForm x:Name="dataForm" 
+                        LayoutType="TextInputLayout"
+                        DataObject="{Binding ContactInfo}"
+                        GenerateDataFormItem="OnGenerateDataFormItem">
+    <dataForm:SfDataForm.TextInputLayoutSettings>
+        <dataForm:TextInputLayoutSettings Stroke="Blue"/>
+    </dataForm:SfDataForm.TextInputLayoutSettings>
+</dataForm:SfDataForm>
+</ContentPage>
+{% endhighlight %}
+{% highlight C# %}
+
+this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{
+    if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name")
+    {
+        e.DataFormItem.LayoutType = DataFormLayoutType.TextInputLayout;
+        e.DataFormItem.TextInputLayoutSettings = new TextInputLayoutSettings
+        {
+            Stroke = Colors.Blue,
+        };
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Focused stroke color
+When the given editor view is focused, the `FocusedStroke` property value will be applied to the label text and border.
+
+{% tabs %}
+{% highlight XAML %}
+<ContentPage 
+...
+xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
+<dataForm:SfDataForm x:Name="dataForm" 
+                        LayoutType="TextInputLayout"
+                        DataObject="{Binding ContactInfo}"
+                        GenerateDataFormItem="OnGenerateDataFormItem">
+    <dataForm:SfDataForm.TextInputLayoutSettings>
+        <dataForm:TextInputLayoutSettings FocusedStroke="Green"/>
+    </dataForm:SfDataForm.TextInputLayoutSettings>
+</dataForm:SfDataForm>
+</ContentPage>
+{% endhighlight %}
+{% highlight C# %}
+
+this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{
+    if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name")
+    {
+        e.DataFormItem.LayoutType = DataFormLayoutType.TextInputLayout;
+        e.DataFormItem.TextInputLayoutSettings = new TextInputLayoutSettings
+        {
+            FocusedStroke = Colors.Green,
+        };
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Focused and unfocused stroke thickness
+When the editor's view is focused and unfocused, the border's thickness can be changed using the `FocusedStrokeThickness` and `UnfocusedStrokeThickness` properties of `TextInputLayoutSettings`.
+
+{% tabs %}
+{% highlight XAML %}
+<ContentPage 
+...
+xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
+<dataForm:SfDataForm x:Name="dataForm" 
+                        LayoutType="TextInputLayout"
+                        DataObject="{Binding ContactInfo}"
+                        GenerateDataFormItem="OnGenerateDataFormItem">
+    <dataForm:SfDataForm.TextInputLayoutSettings>
+        <dataForm:TextInputLayoutSettings FocusedStrokeThickness="3.0"
+                                    UnfocusedStrokeThickness="2.0"/>
+    </dataForm:SfDataForm.TextInputLayoutSettings>
+</dataForm:SfDataForm>
+</ContentPage>
+{% endhighlight %}
+{% highlight C# %}
+
+this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{
+    if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name")
+    {
+        e.DataFormItem.LayoutType = DataFormLayoutType.TextInputLayout;
+        e.DataFormItem.TextInputLayoutSettings = new TextInputLayoutSettings
+        {
+            FocusedStrokeThickness = 3.0,
+            UnfocusedStrokeThickness = 2.0,
+        };
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Unsupported editors
 
 The Floating label layout do not support non-editable editors such as `RadioGroup editor`, `CheckBox editor` and `Switch editor`. Picker editors such as `Picker editor`, `Date picker` and `Time picker` will be updated to support floating label layout.
-
 
 N> By default the layout type of unsupported editors is `Default`. You can also set layout type for unsupported editor using this `Changing layout type of the DataFormItem`
 
