@@ -525,15 +525,9 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {
     if (e.DataFormItem != null)
     {
-        if (e.DataFormItem.FieldName == "PhoneNumer")
+        if (e.DataFormItem.FieldName == "PhoneNumber")
         {
-            e.DataFormItem.LeadingLabelIcon = new FontImageSource() 
-            { 
-                Glyph = "K", 
-                Color = Colors.Black, 
-                FontFamily = "DataFormIcons", 
-                Size = 18 
-            };
+            e.DataFormItem.LeadingView = new Label { Text = "E", FontSize = 18, TextColor = Colors.Gray, FontFamily = "InputLayoutIcons", HeightRequest = 24, VerticalTextAlignment = TextAlignment.End };
         }
     }
 }

@@ -74,7 +74,7 @@ Dataform supports the floating label layout for the following editors.
 * Custom editor
 
 ## Container types
-Containers enhance the perspective of dataform editor views. By default, the container type is `Outlined`. By using the `ContainerType` property in `DataForm` or in `DataFormItem`, you can modify the container type to `Filled` or `None`.
+Containers enhance the perspective of dataform editor views. By default, the container type is `Outlined`. By using the `ContainerType` property of `TextInputLayoutSettings` in `DataForm` or in `DataFormItem`, you can modify the container type to `Filled` or `None`.
 
 #### Outlined
 The `Outlined` container type draws a thin border around the text input field and adds a hint text that floats above the input field when the user starts typing. To enable the outlined container type, you can set `ContainerType` property of `TextInputLayoutSettings` to `Outlined` in `DataForm` or in `DataFormItem` which covers the editor view with rounded-corner.
@@ -97,12 +97,30 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 
 public class ContactInfo
 {
-    public string Name { get; set; }
+    [Display(Name = "First Name", Prompt = "Enter your first name")]
+    [DataFormDisplayOptions(ValidMessage = "Valid name")]
+    [Required(ErrorMessage = "Please enter your first name")]
+    [StringLength(10, ErrorMessage = "First name should not exceed 10 characters")]
+    public string FirstName { get; set; }
 
+    [Display(Name = "Middle Name")]
+    [Required(ErrorMessage = "Please enter your middle name")]
+    [StringLength(10, ErrorMessage = "First name should not exceed 10 characters")]
+    public string MiddleName { get; set; }
+
+    [Display(Name = "Last Name")]
+    [Required(ErrorMessage = "Please enter your last name")]
+    [StringLength(10, ErrorMessage = "First name should not exceed 10 characters")]
+    public string LastName { get; set; }
+
+    [Display(Name = "Contact Number")]
+    public string ContactNumber { get; set; }
+
+    [Display(Name = "Email", Prompt = "Enter your email")]
+    [EmailAddress(ErrorMessage = "Invalid email address")]
     public string Email { get; set; }
 
-    [DataType(DataType.Password)]
-    public string Password { get; set; }
+    public string Address { get; set; }
 }
 
 {% endhighlight %}
