@@ -7,9 +7,9 @@ control: SfCartesianChart
 documentation: ug
 ---
 
-# Waterfall Series in .NET MAUI Chart
+# Waterfall Chart in .NET MAUI Chart
 
-## Waterfall Series
+## Waterfall Chart
 
 [WaterfallSeries]() clarifies the cumulative effect of a set of provided positive and negative values. The series is represented by a rectangle and a connector between the rectangles. To render a waterfall chart, create an instance of [WaterfallSeries](), and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of the [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1)
 
