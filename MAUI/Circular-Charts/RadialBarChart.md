@@ -43,11 +43,11 @@ The following properties can be used to customize the appearance of the radial b
 
     SfCircularChart chart = new SfCircularChart();
 
-        RadialBarSeries series = new RadialBarSeries();
-        series.XBindingPath = "Product";
-        series.YBindingPath = "SalesRate";
+    RadialBarSeries series = new RadialBarSeries();
+    series.XBindingPath = "Product";
+    series.YBindingPath = "SalesRate";
 
-        chart.Series.Add(series);
+    chart.Series.Add(series);
 
 {% endhighlight %}
 
@@ -76,12 +76,12 @@ You can use the [Radius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cha
 
     SfCircularChart chart = new SfCircularChart();
 
-        RadialBarSeries series = new RadialBarSeries();
-        series.XBindingPath = "Product";
-        series.YBindingPath = "SalesRate";
-        series.Radius = 0.5;
+    RadialBarSeries series = new RadialBarSeries();
+    series.XBindingPath = "Product";
+    series.YBindingPath = "SalesRate";
+    series.Radius = 0.5;
 
-        chart.Series.Add(series);
+    chart.Series.Add(series);
 
 {% endhighlight %}
 
@@ -110,12 +110,12 @@ The [InnerRadius]() property of radial bar series is used to define the inner ci
 
     SfCircularChart chart = new SfCircularChart();
 
-        RadialBarSeries series = new RadialBarSeries();
-        series.XBindingPath = "Product";
-        series.YBindingPath = "SalesRate";
-        series.InnerRadius = 0.1;
+    RadialBarSeries series = new RadialBarSeries();
+    series.XBindingPath = "Product";
+    series.YBindingPath = "SalesRate";
+    series.InnerRadius = 0.1;
 
-        chart.Series.Add(series);
+    chart.Series.Add(series);
 
 {% endhighlight %}
 
@@ -158,12 +158,12 @@ You can customize the CapStyle property of the radial bar based on its types.
 
     SfCircularChart chart = new SfCircularChart();
 
-        RadialBarSeries series = new RadialBarSeries();
-        series.XBindingPath = "Product";
-        series.YBindingPath = "SalesRate";
-        series.CapStyle = CapStyle.BothCurve;
+    RadialBarSeries series = new RadialBarSeries();
+    series.XBindingPath = "Product";
+    series.YBindingPath = "SalesRate";
+    series.CapStyle = CapStyle.BothCurve;
 
-        chart.Series.Add(series);
+    chart.Series.Add(series);
 
 {% endhighlight %}
 
@@ -193,13 +193,13 @@ The [GapRatio]() property of the radial bar series is used to define the spacing
 
     SfCircularChart chart = new SfCircularChart();
 
-        RadialBarSeries series = new RadialBarSeries();
-        series.XBindingPath = "Product";
-        series.YBindingPath = "SalesRate";
-        series.InnerRadius = 0.2;
-        series.GapRatio = 0.4;
+    RadialBarSeries series = new RadialBarSeries();
+    series.XBindingPath = "Product";
+    series.YBindingPath = "SalesRate";
+    series.InnerRadius = 0.2;
+    series.GapRatio = 0.4;
 
-        chart.Series.Add(series);
+    chart.Series.Add(series);
 
 {% endhighlight %}
 
@@ -238,14 +238,14 @@ You can use the following properties to customize the appearance of the circular
 
     SfCircularChart chart = new SfCircularChart();
 
-        RadialBarSeries series = new RadialBarSeries();
-        series.XBindingPath = "Product";
-        series.YBindingPath = "SalesRate";
-        series.TrackFill = new SolidColorBrush(Color.FromArgb("#FFF7ED"));
-        series.TrackStrokeWidth = 1;
-        series.TrackStroke = new SolidColorBrush(Color.FromArgb("#FED7AA"));
+    RadialBarSeries series = new RadialBarSeries();
+    series.XBindingPath = "Product";
+    series.YBindingPath = "SalesRate";
+    series.TrackFill = new SolidColorBrush(Color.FromArgb("#FFF7ED"));
+    series.TrackStrokeWidth = 1;
+    series.TrackStroke = new SolidColorBrush(Color.FromArgb("#FED7AA"));
 
-        chart.Series.Add(series);
+    chart.Series.Add(series);
 
 {% endhighlight %}
 
@@ -285,19 +285,19 @@ The [CenterHoleSize]() property of RadialBarSeries is used to get the diameter v
 
     SfCircularChart chart = new SfCircularChart();
 
-        RadialBarSeries series = new RadialBarSeries();
-        series.XBindingPath = "Product";
-        series.YBindingPath = "SalesRate";
-        series.CapStyle = CapStyle.BothCurve;
+    RadialBarSeries series = new RadialBarSeries();
+    series.XBindingPath = "Product";
+    series.YBindingPath = "SalesRate";
+    series.CapStyle = CapStyle.BothCurve;
 
-        StackLayout layout = new StackLayout();
-        Image image = new Image { Source = "person.png" };
-        layout.SetBinding(HeightRequestProperty, nameof(RadialBarSeries.CenterHoleSize));
-        layout.SetBinding(WidthRequestProperty, nameof(RadialBarSeries.CenterHoleSize));
-        layout.Children.Add(image);       
+    StackLayout layout = new StackLayout();
+    Image image = new Image { Source = "person.png" };
+    layout.SetBinding(HeightRequestProperty, nameof(RadialBarSeries.CenterHoleSize));
+    layout.SetBinding(WidthRequestProperty, nameof(RadialBarSeries.CenterHoleSize));
+    layout.Children.Add(image);       
 
-        series.CenterView = image;
-        chart.Series.Add(series);
+    series.CenterView = image;
+    chart.Series.Add(series);
 
 {% endhighlight %}
 
