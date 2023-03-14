@@ -645,7 +645,6 @@ N> For more information about selection check [here](https://help.syncfusion.com
 
 **Chart** 
 
-* Exporting support for a chart as an image or a stream. 
 * Support for chart localization. 
 
 **Series**
