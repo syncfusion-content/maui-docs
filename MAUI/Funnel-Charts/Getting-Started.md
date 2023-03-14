@@ -11,6 +11,10 @@ documentation: ug
 
 This section explains how to populate the funnel chart with data, a title, data labels, a legend, and tooltips, as well as the essential aspects for getting started with the funnel chart.
 
+To get start quickly with our .NET MAUI Funnel Chart, you can check the below video.
+
+{% youtube "https://www.youtube.com/watch?v=wJhqKHduXTI&t=2s" %}
+
 ## Creating an application using the .NET MAUI chart
 
 1. Create a new .NET MAUI application in Visual Studio.
