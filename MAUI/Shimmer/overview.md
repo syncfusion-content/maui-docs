@@ -13,8 +13,8 @@ Syncfusion .NET MAUI Shimmer (SfShimmer) control can be used to increase an appl
 
 ## Key features
 
-* **Multiple Shimmer View types**: There are seven different Shimmer view types are available in the .NET MAUI `SfShimmer`. By default, `CirclePersona` is initially rendered.
+* **Multiple Shimmer View types**: There are seven different Shimmer view types are available in the .NET MAUI `SfShimmer`. `CirclePersona` view is initially rendered by default.
 
 * **Multiple Shimmer Wave Directions**: It defines the Animation wave direction for the Shimmer. There are five wave directions are available in `SfShimmer`. By default, wave direction is rendered by `Default` wave, it allows the animation from left top to right bottom.
 
-* **Shimmer Custom view**: `SfShimmerView` supports `ShimmerView`, can be used in Custom view to change the Shimmer shape types. 
+* **Shimmer Custom view**: `SfShimmerView` supports `ShimmerView`, can be used in Custom view to change the Shimmer shape types.
