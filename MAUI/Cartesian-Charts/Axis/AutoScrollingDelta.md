@@ -50,6 +50,7 @@ By adding [ChartZoomPanBehavior]() to the chart, you can scroll to see the previ
 {% endhighlight %}
 
 {% endtabs %}
+
 ## AutoScrollingMode
 
 [AutoScrollingMode]() property can be used to determine whether the axis should be scrolled from start position or end position. The default value of [AutoScrollingMode]() is End.
