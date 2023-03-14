@@ -160,4 +160,3 @@ this.Content = chart;
 * [CornerRadius]() of the type `CornerRadius`, indicates the rounded corner for the stacked column.
 * [Stroke]() of the type `Brush` indicates the brush used to paint the border of the stacked column.
 * [StrokeWidth]() of the type `Double` indicates the width of the stacked segment.
-
