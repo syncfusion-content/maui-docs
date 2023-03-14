@@ -499,6 +499,54 @@ public partial class MainPage : ContentPage
 
 ![MAUI ListView Drop shadow effect on items](Images/appearance/maui-listview-drop-shadow-effects-on-items.jpg)
 
+## Change mouse hover item background
+
+The `SfListView` allows customizing the mouse hover background of the `ListViewItem` using the visual state manager based on the visual states set from the code. The applicable visual states are `Normal` and `PointerOver`.
+
+{% tabs %}
+{% highlight c# tabtitle="MainPage.xaml" %}
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ListViewMaui.MainPage"
+             xmlns:local="clr-namespace:ListViewMaui"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
+    <ContentPage.Resources>
+        <Style TargetType="syncfusion:ListViewItem">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup>
+                        <VisualState x:Name="Normal">
+                            <VisualState.Setters>
+                                <Setter Property="Background"
+                                        Value="Transparent" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="PointerOver">
+                            <VisualState.Setters>
+                                <Setter Property="Background"
+                                        Value= "LightSkyBlue" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <syncfusion:SfListView ItemsSource="{Binding ContactsInfo}">
+                <syncfusion:SfListView.ItemTemplate>
+                    <DataTemplate>
+                        <Label Text="{Binding ContactName}" />
+                    </DataTemplate>
+                </syncfusion:SfListView.ItemTemplate>
+        </syncfusion:SfListView>
+    </ContentPage.Content>
+</ContentPage>
+{% endhighlight %}
+{% endtabs %}
+
+N> Only the `Background` property of `ListViewItem` can be customized using visual state.
+
 ## ListViewItem customization
 
 The `SfListView` allows customizing the [ListViewItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ListViewItem.html) based on the [ItemType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.ItemType.html). Follow the code example to customize the Header, Footer, GroupHeader, LoadMore, and ListViewItem.
