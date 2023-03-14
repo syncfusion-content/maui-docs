@@ -40,7 +40,7 @@ documentation: ug
             <chart:WaterfallSeries ItemsSource="{Binding Sales}"
                                    XBindingPath="Department"
                                    YBindingPath="Value"
-                                   AllowAutoSum="False"
+                                   AllowAutoSum="True"
                                    NegativePointsBrush="Red"
                                    SummaryBindingPath="IsSummary"
                                    SummaryPointsBrush="RoyalBlue"
@@ -68,7 +68,7 @@ documentation: ug
         SummaryBindingPath = "IsSummary";
         SummaryPointsBrush = new SolidColorBrush(Colors.Blue);
         NegativePointsBrush = new SolidColorBrush(Colors.Red);
-        AllowAutoSum = False;
+        AllowAutoSum = True;
         ShowConnectorLine = True;
     }
     
@@ -94,7 +94,7 @@ The following code example illustrates how to apply style for connector line.
                                    XBindingPath="Department"
                                    YBindingPath="Value">
                 <chart:WaterfallSeries.ConnectorLineStyle>
-                    <chart:ChartLineStyle Stroke="Violet" StrokeWidth=2>
+                    <chart:ChartLineStyle Stroke="DarkViolet" StrokeWidth=2>
                     </chart:WaterfallSeries.ConnectorLineStyle>
             </chart:WaterfallSeries>
         </chart:SfCartesianChart.Series>   
@@ -112,7 +112,7 @@ The following code example illustrates how to apply style for connector line.
 
     WaterfallSeries.ConnectorLineStyle = new ChartLineStyle
     {
-        Stroke = new SolidColorBrush(Colors.Violet),
+        Stroke = new SolidColorBrush(Colors.DarkViolet),
         StrokeThickness = 2
     };
 

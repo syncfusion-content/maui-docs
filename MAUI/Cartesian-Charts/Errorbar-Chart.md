@@ -471,12 +471,12 @@ You can define the LineStyle for the error bar lines using the [HorizontalLineSt
                           HorizontalErrorValue="0.5">
 
         <chart:ErrorBarSeries.HorizontalLineStyle>
-            <chart:ErrorBarLineStyle Stroke="Black"  StrokeThickness="2">
+            <chart:ErrorBarLineStyle Stroke="Black"  StrokeWidth="2">
             </chart:ErrorBarLineStyle>
         </chart:ErrorBarSeries.HorizontalLineStyle>  
 
         <chart:ErrorBarSeries.VerticalLineStyle>
-            <chart:ErrorBarLineStyle Stroke="Black"  StrokeThickness="2"  >
+            <chart:ErrorBarLineStyle Stroke="Black"  StrokeWidth="2"  >
             </chart:ErrorBarLineStyle>
         </chart:ErrorBarSeries.VerticalLineStyle>        
     </chart:ErrorBarSeries>
@@ -497,13 +497,13 @@ You can define the LineStyle for the error bar lines using the [HorizontalLineSt
     errorBar.HorizontalLineStyle = new ErrorBarLineStyle()
     {
         Stroke = new SolidColorBrush(Colors.Red),
-        StrokeThickness = 2
+        StrokeWidth = 2
     };
 
     errorBar.VerticalLineStyle = new ErrorBarLineStyle()
     {
         Stroke = new SolidColorBrush(Colors.Red),
-        StrokeThickness = 2
+        StrokeWidth = 2
     };
 
     chart.Series.Add(errorBar);
@@ -531,14 +531,12 @@ You can define the CapLineStyle for the error bar lines using the [HorizontalCap
                           HorizontalErrorValue="0.5">
         <chart:ErrorBarSeries.HorizontalCapLineStyle>
             <chart:ErrorBarCapLineStyle Stroke="Black"  
-                                        StrokeThickness="2"
-                                        CapLineSize="1" >
+                                        StrokeWidth="2" >
             </chart:ErrorBarCapLineStyle>
         </chart:ErrorBarSeries.HorizontalCapLineStyle>  
         <chart:ErrorBarSeries.VerticalCapLineStyle>
             <chart:ErrorBarCapLineStyle Stroke="Black"  
-                                        StrokeThickness="2" 
-                                        CapLineSize="1" >
+                                        StrokeWidth="2" >
             </chart:ErrorBarCapLineStyle>
         </chart:ErrorBarSeries.VerticalCapLineStyle>  
     </chart:ErrorBarSeries>
@@ -559,15 +557,13 @@ You can define the CapLineStyle for the error bar lines using the [HorizontalCap
     errorBar.HorizontalCapLineStyle = new ErrorBarCapLineStyle()
     {
         Stroke = new SolidColorBrush(Colors.Red),
-        StrokeThickness = 2,
-        CapLineSize= 1
+        StrokeWidth = 2
     };
 
     errorBarSeries.VerticalCapLineStyle = new ErrorBarCapLineStyle()
     {
         Stroke = new SolidColorBrush(Colors.Red),
-        StrokeThickness = 2,
-        CapLineSize= 1
+        StrokeWidth = 2
     };
 
     chart.Series.Add(errorBar);
