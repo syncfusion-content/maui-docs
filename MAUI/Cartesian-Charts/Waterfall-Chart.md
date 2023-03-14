@@ -13,7 +13,15 @@ documentation: ug
 
 [WaterfallSeries]() clarifies the cumulative effect of a set of provided positive and negative values. The series is represented by a rectangle and a connector between the rectangles. To render a waterfall chart, create an instance of [WaterfallSeries](), and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of the [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1)
 
-The following code illustrates how to use the series in chart.
+*`SummaryBindingPath`- gets or sets the string value that indicates the sum of previous segments in the series.
+
+*`SummaryPointsBrush`- Appearance of the summary segment can be differentiated by applying the [SummaryPointsBrush]() in series.
+
+*`NegativePointsBrush`- Appearance of the negative segment can be changed by using the [NegativePointsBrush]() property of series.
+
+*`AllowAutoSum`- The summary segment calculation can be changed by using the [AllowAutoSum]() property. By default, the property is true. When disabling this property, it renders the segment by using the y value of provided ItemsSource collection.
+
+*`ShowConnectorLine`- The connector line of series can be enabled or disabled by using its [ShowConnectorLine]() line property. By default, the property value is true.
 
 {% tabs %}
 
@@ -31,7 +39,12 @@ The following code illustrates how to use the series in chart.
         <chart:SfCartesianChart.Series>
             <chart:WaterfallSeries ItemsSource="{Binding Sales}"
                                    XBindingPath="Department"
-                                   YBindingPath="Value"/>
+                                   YBindingPath="Value"
+                                   AllowAutoSum="False"
+                                   NegativePointsBrush="Red"
+                                   SummaryBindingPath="IsSummary"
+                                   SummaryPointsBrush="RoyalBlue"
+                                   ShowConnectorLine="True"/>
              </chart:SfCartesianChart.Series>   
     </chart:SfCartesianChart>
 
@@ -40,17 +53,25 @@ The following code illustrates how to use the series in chart.
 {% highlight c# %}
 
     SfCartesianChart chart = new SfCartesianChart();
-    NumericalAxis xAxis = new CategoryAxis();
+    CategoryAxis xAxis = new CategoryAxis();
     NumericalAxis yAxis = new NumericalAxis();
     chart.XAxes.Add(xAxis);
     chart.YAxes.Add(yAxis);
    
     ViewModel viewModel = new ViewModel();
 
-    WaterfallSeries series = new WaterfallSeries();
-    series.ItemsSource =new viewModel().Sales;
-    series.XBindingPath = "Department";
-    series.YBindingPath = "Value";
+    WaterfallSeries series = new WaterfallSeries()
+    {
+        ItemsSource =new viewModel().Sales;
+        XBindingPath = "Department";
+        YBindingPath = "Value";
+        SummaryBindingPath = "IsSummary";
+        SummaryPointsBrush = new SolidColorBrush(Colors.Blue);
+        NegativePointsBrush = new SolidColorBrush(Colors.Red);
+        AllowAutoSum = False;
+        ShowConnectorLine = True;
+    }
+    
     chart.Series.Add(series);
 
 {% endhighlight %}
@@ -59,152 +80,46 @@ The following code illustrates how to use the series in chart.
 
 ![Waterfall Chart in MAUI Chart](Chart-types_images/BasicRendering.png)
 
-### SummarySegmentPath and SummaryPointsBrush
-
-[SummaryBindingPath]() gets or sets the string value that indicates the sum of previous segments in the series.
-
-The summary segment can be differentiated by applying the [SummaryPointsBrush]() in series.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-    <chart:WaterfallSeries ItemsSource="{Binding Sales}"  
-                           XBindingPath="Department" 
-                           YBindingPath="Value"
-                           Interior="Blue"
-                           SummaryBindingPath="IsSummary"
-                           SummaryPointsBrush="RoyalBlue">
-    </chart:WaterfallSeries>
-{% endhighlight %}
-
-{% highlight c# %}
-
-    WaterfallSeries waterfallSeries = new WaterfallSeries();
-    waterfallSeries.ItemsSource =new ViewModel().RevenueDetails;
-
-    waterfallSeries.XBindingPath = "Department";
-    waterfallSeries.YBindingPath = "Value";
-    waterfallSeries.SummaryBindingPath = "IsSummary";
-    waterfallSeries.SummaryPointsBrush = new SolidColorBrush(Colors.Blue);
-    chart.Series.Add(waterfallSeries);
-{% endhighlight %}
-
-{% endtabs %}
-
-![Summary Segment Path and SummaryPointsBrush in Waterfall Chart](Chart-types_images/SummaryBindingPath.png)
-
-### NegativePointsBrush
-
-The appearance of the negative segment can be changed by using the [NegativePointsBrush]() property of series.
-
-The following code illustrates how to change the appearance of the negative segment.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-    <chart:WaterfallSeries NegativePointsBrush="Red">
-    </chart:WaterfallSeries>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-    WaterfallSeries series = new WaterfallSeries();
-    series.NegativePointsBrush = new SolidColorBrush(Colors.Red);
-
-{% endhighlight %}
-
-{% endtabs %}
-
-
-![Negative Points Brush in Waterfall Chart](Chart-types_images/NegativePointsBrush.png)
-
-
-### AllowAutoSum
-
-The summary segment calculation can be changed by using the [AllowAutoSum]() property. By default, the property is true. When disabling this property, it renders the segment by using the y value of provided ItemsSource collection.
-
-The following code example illustrates how the AllowAutoSum property value can be set.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-    <chart:WaterfallSeries  AllowAutoSum="False"
-                            SummaryBindingPath="IsSummary"
-                            SummarySegmentBrush="Blue">
-    </chart:WaterfallSeries>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-    WaterfallSeries series = new WaterfallSeries();
-    series.AllowAutoSum = true;
-    series.SummaryBindingPath = "IsSummary";
-    series.SummarySegmentBrush = new SolidColorBrush(Colors.Blue);
-    chart.Series.Add(waterfallSeries);
-
-{% endhighlight %}
-
-{% endtabs %}
-
-
-![Allow Auto Sum in Waterfall Chart](Chart-types_images/AllowAutoSum.png)
-
-### ConnectorLine
-
-The connector line of series can be enabled or disabled by using its [ShowConnectorLine]() line property. By default, the property value is true.
-The following code example illustrates how the ShowConnectorLine value can be set.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-    <chart:WaterfallSeries ShowConnectorLine="False">
-    </chart:WaterfallSeries>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-    WaterfallSeries series = new WaterfallSeries();
-    series.ShowConnectorLine = false;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Connector Line in Waterfall Chart](Chart-types_images/ShoeConnectorLine.png)
-
 ### Connector line customization
 
-The connector line can be customized by applying the[ConnectorLineStyle]() property of the series. The following code example illustrates how to apply style for connector line.
+The connector line can be customized by applying the[ConnectorLineStyle]() property of the series.
+The following code example illustrates how to apply style for connector line.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-    <chart:WaterfallSeries.ConnectorLineStyle>
-    <chart:ChartLineStyle Stroke="Green"
-                          StrokeWidth=2>
-    </chart:WaterfallSeries.ConnectorLineStyle>
-
+        <chart:SfCartesianChart.Series>
+            <chart:WaterfallSeries ItemsSource="{Binding Sales}"
+                                   XBindingPath="Department"
+                                   YBindingPath="Value">
+                <chart:WaterfallSeries.ConnectorLineStyle>
+                    <chart:ChartLineStyle Stroke="Violet" StrokeWidth=2>
+                    </chart:WaterfallSeries.ConnectorLineStyle>
+            </chart:WaterfallSeries>
+        </chart:SfCartesianChart.Series>   
+    
 {% endhighlight %}
 
 {% highlight c# %}
+
+    WaterfallSeries series = new WaterfallSeries()
+    {
+        ItemsSource =new viewModel().Sales;
+        XBindingPath = "Department";
+        YBindingPath = "Value"
+    };
 
     WaterfallSeries.ConnectorLineStyle = new ChartLineStyle
     {
-        Stroke = Brushes.Green,
+        Stroke = new SolidColorBrush(Colors.Violet),
         StrokeThickness = 2
     };
+
+    chart.Series.Add(series);
     
 {% endhighlight %}
 
 {% endtabs %}
-
 
 ![Connector line customization in Waterfall Chart](Chart-types_images/ConnectorLineStyle.png)

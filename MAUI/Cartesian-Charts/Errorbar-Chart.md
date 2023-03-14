@@ -1,20 +1,21 @@
 ---
 layout: post
-title: Error Bar Series Chart in .NET MAUI Chart Control | Syncfusion
+title: Error Bar Chart in .NET MAUI Chart Control | Syncfusion
 description: Learn here all about error bar chart support in Syncfusion .NET MAUI Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
 documentation: ug
 ---
 
-# Error Bar Series in .NET MAUI Chart
+# Error Bar in .NET MAUI Chart
 
 [ErrorBarSeries]() indicates the errors or uncertainty in reported values. This will find the possible variations in measurements, and in Chart control these values are displayed as data points.
 The [HorizontalErrorValue]() and the [VerticalErrorValue]() is used to set the error value(variation) to the series.
 
-N> The Error Bar Series Chart is not an individual Chart, it associate with a main Chart. Here, we use Scatter Series Chart as Main Chart with the Error Bar Series Chart Support
+N> The Error Bar is not an individual Chart, it associate with a main Chart. Here, we use Scatter Series Chart as Main Chart with the Error Bar Series Chart Support
 
 The following code examples illustrates how to create error bar series:
+
 {% tabs %}
 
 {% highlight xaml %}
@@ -22,7 +23,7 @@ The following code examples illustrates how to create error bar series:
     <chart:SfCartesianChart>
 
     <chart:SfCartesianChart.XAxes>
-        <chart:CategoryAxis />
+        <chart:NumericalAxis />
     </chart:SfCartesianChart.XAxes>
 
     <chart:SfCartesianChart.YAxes>
@@ -49,6 +50,11 @@ The following code examples illustrates how to create error bar series:
 
 {% highlight c# %}
 
+    SfCartesianChart chart = new SfCartesianChart();
+    NumericalAxis primaryAxis = new NumericalAxis();
+    chart.XAxes.Add(primaryAxis);
+    NumericalAxis secondaryAxis = new NumericalAxis();
+    chart.YAxes.Add(secondaryAxis);
 
     ScatterSeries series = new ScatterSeries()
     {
@@ -71,7 +77,6 @@ The following code examples illustrates how to create error bar series:
     chart.Series.Add(series);
     chart.Series.Add(errorBar);
 
-
 {% endhighlight %}
 
 {% endtabs %}
@@ -79,7 +84,45 @@ The following code examples illustrates how to create error bar series:
 ![Error Bar Series in MAUI Chart](Chart-types_images/BasicRenderingErrorBar.png)
 
 ## Mode 
-This [Mode]() property defines whether to identify a horizontal error or vertical error. By default, the Mode value is [Both](), which will display both horizontal and vertical error values.
+The error bar mode specifies whether the error bar should be drawn horizontally, vertically or both. The [Mode]() property used to switch the error bar mode. By default, the Mode value is [Both](), which will display both horizontal and vertical error values.
+
+### Both
+To view both the horizontal and vertical error value, you can set the Mode as Both as shown in the following code example.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+    <chart:ErrorBarSeries ItemsSource="{Binding EnergyProductions}"
+                          XBindingPath="ID"
+                          YBindingPath="Coal"
+                          VerticalErrorValue="50"
+                          HorizontalErrorValue="0.5"
+                          Mode="Both">
+    </chart:ErrorBarSeries>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+    ErrorBarSeries errorBar = new ErrorBarSeries()
+    {
+        ItemsSource = new ViewModel().EnergyProductions,
+        XBindingPath = "ID",
+        YBindingPath = "Coal",
+        HorizontalErrorValue = 0.5,
+        VerticalErrorValue = 50,
+        Mode= Both
+    };
+
+    chart.Series.Add(errorBar);
+
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Horizontal Mode Support in Error Bar Series](Chart-types_images/BasicRenderingErrorBar.png)
 
 ### Horizontal
 
@@ -110,16 +153,14 @@ To view horizontal error value, you can set the Mode as Horizontal as shown in t
         VerticalErrorValue = 50,
         Mode= Horizontal
     };
-    chart.Series.Add(series);
-    chart.Series.Add(errorBar);
 
+    chart.Series.Add(errorBar);
 
 {% endhighlight %}
 
 {% endtabs %}
 
 ![Horizontal Mode Support in Error Bar Series](Chart-types_images/ModeHorizontal.png)
-
 
 ### Vertical
 
@@ -150,10 +191,8 @@ To view vertical error value, you can set the Mode as Vertical, as shown in the 
         VerticalErrorValue = 50,
         Mode= Vertical
     };
-    chart.Series.Add(series);
+
     chart.Series.Add(errorBar);
-
-
 
 {% endhighlight %}
 
@@ -164,11 +203,9 @@ To view vertical error value, you can set the Mode as Vertical, as shown in the 
 
 ## Direction 
 
-[ErrorBar]() series allows you to view the horizontal and vertical error values in both positive and negative directions.
+The [HorizontalDirection]() and [VerticalDirection]() specifies whether to show positive, negative, or both directions of error values.
 
-### Horizontal Direction
-
-[HorizontalDirection]() property of the [ErrorBarSeries]() allows you to view the horizontal error value in the following type of directions:
+[ErrorBarDirection]() contains below values:
 
 *`Both` -  It indicates the actual data point value along with specific amount of positive and negative error values.
 
@@ -176,9 +213,7 @@ To view vertical error value, you can set the Mode as Vertical, as shown in the 
 
 *`Minus`-  It indicates the actual data point value along with specific amount of negative error value.
 
-#### Both
-
-The following code illustrates how to set the [HorizontalDirection]() value as both.
+The following code illustrates how to set the [HorizontalDirection]() and the [VerticalDirection]() values to error bar chart.
 
 {% tabs %}
 
@@ -189,7 +224,8 @@ The following code illustrates how to set the [HorizontalDirection]() value as b
                           YBindingPath="Coal"
                           VerticalErrorValue="50"
                           HorizontalErrorValue="0.5"
-                          HorizontalDirection="Both">
+                          HorizontalDirection="Plus"
+                          VerticalDirectyion="Minus">
     </chart:ErrorBarSeries>
 
 {% endhighlight %}
@@ -203,226 +239,17 @@ The following code illustrates how to set the [HorizontalDirection]() value as b
         YBindingPath = "Coal",
         HorizontalErrorValue = 0.5,
         VerticalErrorValue = 50,
-        HorizontalDirection="Both"
+        HorizontalDirection="Plus",
+        VerticalDirectyion="Minus"
     };
-    chart.Series.Add(series);
-    chart.Series.Add(errorBar);
 
+    chart.Series.Add(errorBar);
 
 {% endhighlight %}
 
 {% endtabs %}
 
 ![Horizontal Direction as Both in Error Bar Series](Chart-types_images/BasicRenderingErrorBar.png)
-
-#### Plus
-
-The following code illustrates how to set the [HorizontalDirection]() value as Plus.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-    <chart:ErrorBarSeries ItemsSource="{Binding EnergyProductions}"
-                          XBindingPath="ID"
-                          YBindingPath="Coal"
-                          VerticalErrorValue="50"
-                          HorizontalErrorValue="0.5"
-                          HorizontalDirection="Plus">
-    </chart:ErrorBarSeries>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-    ErrorBarSeries errorBar = new ErrorBarSeries()
-    {
-        ItemsSource = new ViewModel().EnergyProductions,
-        XBindingPath = "ID",
-        YBindingPath = "Coal",
-        HorizontalErrorValue = 0.5,
-        VerticalErrorValue = 50,
-        HorizontalDirection="Plus"
-    };
-    chart.Series.Add(series);
-    chart.Series.Add(errorBar);
-
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Horizontal Direction as Plus in Error Bar Series](Chart-types_images/HorDirectionPlus.png)
-
-#### Minus
-
-The following code illustrates how to set the [HorizontalDirection]() value as Minus.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-    <chart:ErrorBarSeries ItemsSource="{Binding EnergyProductions}"
-                          XBindingPath="ID"
-                          YBindingPath="Coal"
-                          VerticalErrorValue="50"
-                          HorizontalErrorValue="0.5"
-                          HorizontalDirection="Minus">
-    </chart:ErrorBarSeries>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-    ErrorBarSeries errorBar = new ErrorBarSeries()
-    {
-        ItemsSource = new ViewModel().EnergyProductions,
-        XBindingPath = "ID",
-        YBindingPath = "Coal",
-        HorizontalErrorValue = 0.5,
-        VerticalErrorValue = 50,
-        HorizontalDirection="Minus"
-    };
-    chart.Series.Add(series);
-    chart.Series.Add(errorBar);
-
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Horizontal Direction as Minus in Error Bar Series](Chart-types_images/HorDirectionMinus.png)
-
-### Vertical Direction
-
-[VerticalDirection]() property of the [ErrorBarSeries]() allows you to view the Vertical error value in the following type of directions:
-
-*`Both` -  It indicates the actual data point value along with a specific amount of positive and negative error values.
-
-*`Plus` -  It indicates the actual data point value along with a specific amount of positive error value.
-
-*`Minus`-  It indicates the actual data point value along with a specific amount of negative error value.
-
-#### Both
-
-The following code illustrates how to set the [VerticalDirection]() value as both.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-    <chart:ErrorBarSeries ItemsSource="{Binding EnergyProductions}"
-                          XBindingPath="ID"
-                          YBindingPath="Coal"
-                          VerticalErrorValue="50"
-                          HorizontalErrorValue="0.5"
-                          VerticalDirection="Both">  
-    </chart:ErrorBarSeries>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-    ErrorBarSeries errorBar = new ErrorBarSeries()
-    {
-        ItemsSource = new ViewModel().EnergyProductions,
-        XBindingPath = "ID",
-        YBindingPath = "Coal",
-        HorizontalErrorValue = 0.5,
-        VerticalErrorValue = 50,
-        VerticalDirection="Both"
-    };
-    chart.Series.Add(series);
-    chart.Series.Add(errorBar);
-
-
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Vertical Direction as Both in Error Bar Series](Chart-types_images/BasicRenderingErrorBar.png)
-
-#### Plus
-
-The following code illustrates how to set the [VerticalDirection]() value as Plus.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-    <chart:ErrorBarSeries ItemsSource="{Binding EnergyProductions}"
-                          XBindingPath="ID"
-                          YBindingPath="Coal"
-                          VerticalErrorValue="50"
-                          HorizontalErrorValue="0.5"
-                          VerticalDirection="Plus">    
-    </chart:ErrorBarSeries>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-    ErrorBarSeries errorBar = new ErrorBarSeries()
-    {
-        ItemsSource = new ViewModel().EnergyProductions,
-        XBindingPath = "ID",
-        YBindingPath = "Coal",
-        HorizontalErrorValue = 0.5,
-        VerticalErrorValue = 50,
-        VerticalDirection="Plus"
-    };
-    chart.Series.Add(series);
-    chart.Series.Add(errorBar);
-
-
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Vertical Direction as Plus in Error Bar Series](Chart-types_images/VerDirectionPlus.png)
-
-#### Minus
-
-The following code illustrates how to set the [VerticalDirection]() value as Minus.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-    <chart:ErrorBarSeries ItemsSource="{Binding EnergyProductions}"
-                          XBindingPath="ID"
-                          YBindingPath="Coal"
-                          VerticalErrorValue="50"
-                          HorizontalErrorValue="0.5"
-                          VerticalDirection="Minus">
-    </chart:ErrorBarSeries>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-    ErrorBarSeries errorBar = new ErrorBarSeries()
-    {
-        ItemsSource = new ViewModel().EnergyProductions,
-        XBindingPath = "ID",
-        YBindingPath = "Coal",
-        HorizontalErrorValue = 0.5,
-        VerticalErrorValue = 50,
-        VerticalDirection="Minus"
-    };
-    chart.Series.Add(series);
-    chart.Series.Add(errorBar);
-
-
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Vertical Direction as Minus in Error Bar Series](Chart-types_images/VerDirectionMinus.png)
-
 
 ## Type
 
@@ -436,7 +263,9 @@ SfCartesianChart supports the following type of error bar series.
 
 *`Standard Percentage`
 
-N> The default error bar series Type is Fixed.
+*`Custom`
+
+N> The default error bar series Type is [Fixed]().For all types, You have to set the values for [HorizontalErrorValue]() and [VerticalErrorValue]() except [Custom]().
 
 ### Fixed
 
@@ -457,18 +286,17 @@ N> The default error bar series Type is Fixed.
 
 {% highlight c# %}
 
-ErrorBarSeries errorBar = new ErrorBarSeries()
-{
-    ItemsSource = new ViewModel().EnergyProductions,
-    XBindingPath = "ID",
-    YBindingPath = "Coal",
-    HorizontalErrorValue = 0.5,
-    VerticalErrorValue = 50,
-    Type="Fixed"
-};
-chart.Series.Add(series);
-chart.Series.Add(errorBar);
+    ErrorBarSeries errorBar = new ErrorBarSeries()
+    {
+        ItemsSource = new ViewModel().EnergyProductions,
+        XBindingPath = "ID",
+        YBindingPath = "Coal",
+        HorizontalErrorValue = 0.5,
+        VerticalErrorValue = 50,
+        Type="Fixed"
+    };
 
+    chart.Series.Add(errorBar);
 
 {% endhighlight %}
 
@@ -503,16 +331,14 @@ chart.Series.Add(errorBar);
         VerticalErrorValue = 50,
         Type="Percentage"
     };
-    chart.Series.Add(series);
-    chart.Series.Add(errorBar);
 
+    chart.Series.Add(errorBar);
 
 {% endhighlight %}
 
 {% endtabs %}
 
 ![Percentage Type in Error Bar Series](Chart-types_images/TypePercentage.png)
-
 
 ### Standard Error
 
@@ -541,9 +367,8 @@ chart.Series.Add(errorBar);
         VerticalErrorValue = 50,
         Type="StandardError"
     };
-    chart.Series.Add(series);
-    chart.Series.Add(errorBar);
 
+    chart.Series.Add(errorBar);
 
 {% endhighlight %}
 
@@ -578,9 +403,8 @@ chart.Series.Add(errorBar);
         VerticalErrorValue = 50,
         Type="StandardDeviation"
     };
-    chart.Series.Add(series);
-    chart.Series.Add(errorBar);
 
+    chart.Series.Add(errorBar);
 
 {% endhighlight %}
 
@@ -588,7 +412,7 @@ chart.Series.Add(errorBar);
 
 ![Standard Deviation Type in Error Bar Series](Chart-types_images/TypeStandardDeviation.png)
 
-## Custom
+### Custom
 
 If the Type is Custom, you have to bind the [HorizontalErrorPath]() and the [VerticalErrorPath]() as shown in the following code sample.
 
@@ -622,9 +446,7 @@ If the Type is Custom, you have to bind the [HorizontalErrorPath]() and the [Ver
         VerticalErrorPath="VerticalErrorValue"
     };
     
-    chart.Series.Add(series);
     chart.Series.Add(errorBar);
-
 
 {% endhighlight %}
 
@@ -638,61 +460,59 @@ If the Type is Custom, you have to bind the [HorizontalErrorPath]() and the [Ver
 
 You can define the LineStyle for the error bar lines using the [HorizontalLineStyle]() and the [VerticalLineStyle]() properties as in the following code examples.
 
-#### Horizontal Line Style
-
 {% tabs %}
 
 {% highlight xaml %}
 
-    <chart:ErrorBarSeries.HorizontalLineStyle>
-        <chart:ErrorBarLineStyle Stroke="Black"  StrokeThickness="2"  >
-        </chart:ErrorBarLineStyle>
-    </chart:ErrorBarSeries.HorizontalLineStyle>
+    <chart:ErrorBarSeries ItemsSource="{Binding EnergyProductions}"
+                          XBindingPath="ID"
+                          YBindingPath="Coal"
+                          VerticalErrorValue="50"
+                          HorizontalErrorValue="0.5">
+
+        <chart:ErrorBarSeries.HorizontalLineStyle>
+            <chart:ErrorBarLineStyle Stroke="Black"  StrokeThickness="2">
+            </chart:ErrorBarLineStyle>
+        </chart:ErrorBarSeries.HorizontalLineStyle>  
+
+        <chart:ErrorBarSeries.VerticalLineStyle>
+            <chart:ErrorBarLineStyle Stroke="Black"  StrokeThickness="2"  >
+            </chart:ErrorBarLineStyle>
+        </chart:ErrorBarSeries.VerticalLineStyle>        
+    </chart:ErrorBarSeries>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    errorBarSeries.HorizontalLineStyle = new ErrorBarLineStyle()
+    ErrorBarSeries errorBar = new ErrorBarSeries()
+    {
+        ItemsSource = new ViewModel().EnergyProductions,
+        XBindingPath = "ID",
+        YBindingPath = "Coal",
+        HorizontalErrorValue = 0.5,
+        VerticalErrorValue = 50,
+    };
+
+    errorBar.HorizontalLineStyle = new ErrorBarLineStyle()
     {
         Stroke = new SolidColorBrush(Colors.Red),
         StrokeThickness = 2
     };
 
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Horizontal Line Style in Error Bar Series](Chart-types_images/HorLine.png)
-
-#### Vertical Line Style
-
-{% tabs %}
-
-{% highlight xaml %}
-
-    <chart:ErrorBarSeries.VerticalLineStyle>
-        <chart:ErrorBarLineStyle Stroke="Black"  StrokeThickness="2"  >
-        </chart:ErrorBarLineStyle>
-    </chart:ErrorBarSeries.VerticalLineStyle>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-    errorBarSeries.VerticalLineStyle = new ErrorBarLineStyle()
+    errorBar.VerticalLineStyle = new ErrorBarLineStyle()
     {
         Stroke = new SolidColorBrush(Colors.Red),
         StrokeThickness = 2
     };
 
+    chart.Series.Add(errorBar);
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Vertical Line Style in Error Bar Series](Chart-types_images/VerLine.png)
+![Horizontal Line Style in Error Bar Series](Chart-types_images/BasicRenderingErrorBar.png)
 
 ### Cap Line Style
 
@@ -704,48 +524,44 @@ You can define the CapLineStyle for the error bar lines using the [HorizontalCap
 
 {% highlight xaml %}
 
-    <chart:ErrorBarSeries.HorizontalCapLineStyle>
-        <chart:ErrorBarCapLineStyle Stroke="Black"  
-                                    StrokeThickness="2"
-                                    CapLineSize="1" >
-         
-        </chart:ErrorBarCapLineStyle>
-    </chart:ErrorBarSeries.HorizontalCapLineStyle>
+    <chart:ErrorBarSeries ItemsSource="{Binding EnergyProductions}"
+                          XBindingPath="ID"
+                          YBindingPath="Coal"
+                          VerticalErrorValue="50"
+                          HorizontalErrorValue="0.5">
+        <chart:ErrorBarSeries.HorizontalCapLineStyle>
+            <chart:ErrorBarCapLineStyle Stroke="Black"  
+                                        StrokeThickness="2"
+                                        CapLineSize="1" >
+            </chart:ErrorBarCapLineStyle>
+        </chart:ErrorBarSeries.HorizontalCapLineStyle>  
+        <chart:ErrorBarSeries.VerticalCapLineStyle>
+            <chart:ErrorBarCapLineStyle Stroke="Black"  
+                                        StrokeThickness="2" 
+                                        CapLineSize="1" >
+            </chart:ErrorBarCapLineStyle>
+        </chart:ErrorBarSeries.VerticalCapLineStyle>  
+    </chart:ErrorBarSeries>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    errorBarSeries.HorizontalCapLineStyle = new ErrorBarCapLineStyle()
+    ErrorBarSeries errorBar = new ErrorBarSeries()
+    {
+        ItemsSource = new ViewModel().EnergyProductions,
+        XBindingPath = "ID",
+        YBindingPath = "Coal",
+        HorizontalErrorValue = 0.5,
+        VerticalErrorValue = 50,
+    };
+
+    errorBar.HorizontalCapLineStyle = new ErrorBarCapLineStyle()
     {
         Stroke = new SolidColorBrush(Colors.Red),
         StrokeThickness = 2,
         CapLineSize= 1
     };
-
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Horizontal Cap Line Style in Error Bar Series](Chart-types_images/HorCap.png)
-
-#### Vertical Cap Line Style
-
-{% tabs %}
-
-{% highlight xaml %}
-
-    <chart:ErrorBarSeries.VerticalCapLineStyle>
-    <chart:ErrorBarCapLineStyle Stroke="Black"  
-                                StrokeThickness="2" 
-                                CapLineSize="1" >
-    </chart:ErrorBarCapLineStyle>
-    </chart:ErrorBarSeries.VerticalCapLineStyle>
-
-{% endhighlight %}
-
-{% highlight c# %}
 
     errorBarSeries.VerticalCapLineStyle = new ErrorBarCapLineStyle()
     {
@@ -754,9 +570,10 @@ You can define the CapLineStyle for the error bar lines using the [HorizontalCap
         CapLineSize= 1
     };
 
+    chart.Series.Add(errorBar);
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Vertical Cap Line Style in Error Bar Series](Chart-types_images/VerCap.png)
+![Horizontal Cap Line Style in Error Bar Series](Chart-types_images/BasicRenderingErrorBar.png)
