@@ -1,7 +1,7 @@
 ---
 layout: post
-title: AutoScrollingDelta in .NET MAUI Chart control | Syncfusion
-description: Learn here all about Auto scrolling delta and its features in Syncfusion .NET MAUI Chart (SfCartesianChart) control and more.
+title: Auto scrolling delta in .NET MAUI Chart control | Syncfusion
+description: Learn here all about auto scrolling delta and its features in Syncfusion .NET MAUI Chart (SfCartesianChart) control and more.
 platform: maui
 control: SfCartesianChart
 documentation: ug
