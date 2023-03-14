@@ -59,7 +59,7 @@ N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
 
 {% endtabs %}
 
-![BoxAndWhisker chart type in MAUI Chart](Chart-types_images/BoxPlotBasicRendering.png)
+![BoxAndWhisker chart type in MAUI Chart](Chart-types_images/BoxBasicRendering.png)
 
 ## Customize the series Box mode
 The series box plotting mode can be changed by using [BoxPlotMode]() property of [BoxAndWhiskerSeries](). The plotting mode of series can be calculated as follows:
@@ -121,7 +121,7 @@ In Normal mode, the whiskers extend to the minimum and maximum data points withi
 
 {% endtabs %}
 
-![BoxPlotMode Normal in MAUI Chart](Chart-types_images/BoxPlotModeNormal.png)
+![BoxPlotMode Normal in MAUI Chart](Chart-types_images/BoxModeNormal.png)
 
 ## Inclusive
 In Inclusive mode, the whiskers extend to the minimum and maximum data points within 1.5 times the IQR. Any points beyond this range are considered outliers. The following code illustrate how to define property [BoxPlotMode]() value as [Inclusive]().
@@ -172,7 +172,7 @@ In Inclusive mode, the whiskers extend to the minimum and maximum data points wi
 
 {% endtabs %}
 
-![BoxPlotMode Inclusive in MAUI Chart](Chart-types_images/BoxPlotModeInclusive.png)
+![BoxPlotMode Inclusive in MAUI Chart](Chart-types_images/BoxModeInclusive.png)
 
 ## ShowMedian
 The Median values of given dataset is viewed by enabling the [ShowMedian]() property of [BoxAndWhiskerSeries](). By default, the ShowMedian property value is False. The following code illustrates how to enable the [ShowMedian]() property.
@@ -223,7 +223,7 @@ The Median values of given dataset is viewed by enabling the [ShowMedian]() prop
 
 {% endtabs %}
 
-![ShowMedian in MAUI chart](Chart-types_images/ShowMedianTrue.png)
+![ShowMedian in MAUI chart](Chart-types_images/ShowMedian.png)
 
 N>
 
@@ -283,7 +283,7 @@ The outlier value in the box plot can be viewed by enabling the [ShowOutlier]() 
 
 {% endtabs %}
 
-![Outlier Segment in MAUI chart](Chart-types_images/ShowOutlierFalse.png)
+![Outlier Segment in MAUI chart](Chart-types_images/ShowOutlier.png)
 
 ## OutlierShapeType
 
@@ -337,4 +337,4 @@ The following code shows how to set the [OutlierShapeType]() value as [Cross]().
 
 {% endtabs %}
 
-![OutlierShapeType in MAUI chart](Chart-types_images/OutlierShapeType.png)
+![OutlierShapeType in MAUI chart](Chart-types_images/OutlierShape.png)
