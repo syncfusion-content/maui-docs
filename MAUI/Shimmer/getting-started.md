@@ -1,7 +1,7 @@
 ---
 layout: post
 title: About .NET MAUI Shimmer control | Syncfusion
-description: Learn here about the Getting started of Syncfusion .NET MAUI Shimmer (SfShimmer) control, its basic features, elements and more.
+description: Learn here about the getting started with Syncfusion .NET MAUI Shimmer (SfShimmer) control, its elements and more.
 platform: maui
 control: SfShimmer
 documentation: ug
@@ -85,7 +85,7 @@ namespace GettingStarted
 
 ## Change different Shimmer views
 
-The `.NET MAUI Shimmer` control provides seven different Shimmer types of views, it can be assigned to the control using the [Type] property. By default, the control is assigned to the [CirclePersona] view.
+The `.NET MAUI Shimmer` control provides seven different Shimmer types of views, it can be assigned to the control using the `Type` property. By default, the control is assigned to the `CirclePersona` view.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
