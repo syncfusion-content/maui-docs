@@ -234,7 +234,7 @@ In Cartesian Charts, the [ArrangeByIndex]() property is used to determine how th
 
 If [ArrangeByIndex]() is set to true, then the items in the category axis will be arranged according to their index values.
 
-If [ArrangeByIndex]() is set to false, then the items in the category axis will be arranged according to their values.By default, [ArrangeByIndex]() is true.
+If [ArrangeByIndex]() is set to false, then the items in the category axis will be arranged according to their values. By default, [ArrangeByIndex]() is true.
 
 The following code illustrates how to define the property [ArrangeByIndex]() in chart.
 
@@ -293,7 +293,7 @@ The following code illustrates how to define the property [ArrangeByIndex]() in 
 
 {% endtabs %}    
 
-![CategoryAxis ArrangeByIndex support in MAUI Chart](Axis_Images/ArrangeByIndexFalse.png)
+![CategoryAxis ArrangeByIndex support in MAUI Chart](Axis_Images/ArrangeByIndex.png)
 
 ## DateTime Axis
 
