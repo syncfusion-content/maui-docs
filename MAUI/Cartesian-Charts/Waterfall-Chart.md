@@ -78,7 +78,7 @@ documentation: ug
 
 {% endtabs %}
 
-![Waterfall Chart in MAUI Chart](Chart-types_images/BasicRendering.png)
+![Waterfall Chart in MAUI Chart](Chart-types_images/maui_waterfall_Basic.png)
 
 ### Connector line customization
 
@@ -122,4 +122,4 @@ The following code example illustrates how to apply style for connector line.
 
 {% endtabs %}
 
-![Connector line customization in Waterfall Chart](Chart-types_images/ConnectorLineStyle.png)
+![Connector line customization in Waterfall Chart](Chart-types_images/maui_waterfall_LineStyle.png)

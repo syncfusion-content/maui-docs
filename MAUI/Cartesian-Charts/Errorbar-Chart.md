@@ -81,7 +81,7 @@ The following code examples illustrates how to create error bar series:
 
 {% endtabs %}
 
-![Error Bar Series in MAUI Chart](Chart-types_images/BasicRenderingErrorBar.png)
+![Error Bar Series in MAUI Chart](Chart-types_images/maui_errorbar_BasicRendering.png)
 
 ## Mode 
 The error bar mode specifies whether the error bar should be drawn horizontally, vertically or both. The [Mode]() property used to switch the error bar mode. By default, the Mode value is [Both](), which will display both horizontal and vertical error values.
@@ -122,7 +122,7 @@ To view both the horizontal and vertical error value, you can set the Mode as Bo
 
 {% endtabs %}
 
-![Horizontal Mode Support in Error Bar Series](Chart-types_images/BasicRenderingErrorBar.png)
+![Horizontal Mode Support in Error Bar Series](Chart-types_images/maui_errorbar_BasicRendering.png)
 
 ### Horizontal
 
@@ -160,7 +160,7 @@ To view horizontal error value, you can set the Mode as Horizontal as shown in t
 
 {% endtabs %}
 
-![Horizontal Mode Support in Error Bar Series](Chart-types_images/ModeHorizontal.png)
+![Horizontal Mode Support in Error Bar Series](Chart-types_images/maui_errorbar_ModeHorizontal.png)
 
 ### Vertical
 
@@ -198,7 +198,7 @@ To view vertical error value, you can set the Mode as Vertical, as shown in the 
 
 {% endtabs %}
 
-![Vertical Mode Support in Error Bar Series](Chart-types_images/ModeVertical.png)
+![Vertical Mode Support in Error Bar Series](Chart-types_images/maui_errorbar_ModeVertical.png)
 
 
 ## Direction 
@@ -249,30 +249,17 @@ The following code illustrates how to set the [HorizontalDirection]() and the [V
 
 {% endtabs %}
 
-![Horizontal Direction as Both in Error Bar Series](Chart-types_images/BasicRenderingErrorBar.png)
+![Horizontal Direction as Both in Error Bar Series](Chart-types_images/maui_errorbar_Direction.png)
 
 ## Type
 
-SfCartesianChart supports the following type of error bar series.
-
-*`Fixed`
-
-*`Percentage`
-
-*`Standard Error`
-
-*`Standard Percentage`
-
-*`Custom`
-
-N> The default error bar series Type is [Fixed]().For all types, You have to set the values for [HorizontalErrorValue]() and [VerticalErrorValue]() except [Custom]().
+The [Type]() property is used to define the error bar type value in [Fixed](), [Custom](), [Percentage](), [StandardDeviation](), and [StandardErrors](). The default value of this property is [Fixed](). For all types, You have to set the values for [HorizontalErrorValue]() and [VerticalErrorValue]() except [Custom]().
 
 ### Fixed
 
 {% tabs %}
 
 {% highlight xaml %}
-
 
     <chart:ErrorBarSeries ItemsSource="{Binding EnergyProductions}"
                           XBindingPath="ID"
@@ -302,7 +289,7 @@ N> The default error bar series Type is [Fixed]().For all types, You have to set
 
 {% endtabs %}
 
-![Fixed Type in Error Bar Series](Chart-types_images/BasicRenderingErrorBar.png)
+![Fixed Type in Error Bar Series](Chart-types_images/maui_errorbar_BasicRendering.png)
 
 ### Percentage
 
@@ -338,7 +325,7 @@ N> The default error bar series Type is [Fixed]().For all types, You have to set
 
 {% endtabs %}
 
-![Percentage Type in Error Bar Series](Chart-types_images/TypePercentage.png)
+![Percentage Type in Error Bar Series](Chart-types_images/maui_errorbar_TypePercentage.png)
 
 ### Standard Error
 
@@ -374,7 +361,7 @@ N> The default error bar series Type is [Fixed]().For all types, You have to set
 
 {% endtabs %}
 
-![Standard Error Type in Error Bar Series](Chart-types_images/TypeStandardError.png)
+![Standard Error Type in Error Bar Series](Chart-types_images/maui_errorbar_TypeStandardError.png)
 
 ### Standard Deviation
 
@@ -410,7 +397,7 @@ N> The default error bar series Type is [Fixed]().For all types, You have to set
 
 {% endtabs %}
 
-![Standard Deviation Type in Error Bar Series](Chart-types_images/TypeStandardDeviation.png)
+![Standard Deviation Type in Error Bar Series](Chart-types_images/maui_errorbar_TypeStandardDeviation.png)
 
 ### Custom
 
@@ -452,7 +439,7 @@ If the Type is Custom, you have to bind the [HorizontalErrorPath]() and the [Ver
 
 {% endtabs %}
 
-![Custom Type in Error Bar Series](Chart-types_images/TypeCustom.png)
+![Custom Type in Error Bar Series](Chart-types_images/maui_errorbar_TypeCustom.png)
 
 ## Customization
 
@@ -512,7 +499,7 @@ You can define the LineStyle for the error bar lines using the [HorizontalLineSt
 
 {% endtabs %}
 
-![Horizontal Line Style in Error Bar Series](Chart-types_images/BasicRenderingErrorBar.png)
+![Horizontal Line Style in Error Bar Series](Chart-types_images/maui_errorbar_LineStyle.png)
 
 ### Cap Line Style
 
@@ -572,4 +559,4 @@ You can define the CapLineStyle for the error bar lines using the [HorizontalCap
 
 {% endtabs %}
 
-![Horizontal Cap Line Style in Error Bar Series](Chart-types_images/BasicRenderingErrorBar.png)
+![Horizontal Cap Line Style in Error Bar Series](Chart-types_images/maui_errorbar_CapLineStyle.png)
