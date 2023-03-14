@@ -9,9 +9,9 @@ documentation: ug
 
 # Stacked Column Chart in .NET MAUI Chart
 
-The StackedColumn Chart represents data values in a stacked column format, where the columns are stacked on each other to indicate the cumulative value of the data points. It is useful when comparing the total values across categories and showing each part's relative contribution to the total value.
+The stacked column chart represents data values in a stacked format, where the columns are stacked on each other to indicate the cumulative value of the data points.
 
-To render a stacked column chart, create an instance of the [StackedColumnSeries]() and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1%2Ctabid-3%2Ctabid-6%2Ctabid-8%2Ctabid-10%2Ctabid-12%2Ctabid-23%2Ctabid-14%2Ctabid-37%2Ctabid-17%2Ctabid-19%2Ctabid-21#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of the [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1%2Ctabid-3%2Ctabid-6%2Ctabid-8%2Ctabid-10%2Ctabid-12%2Ctabid-23%2Ctabid-14%2Ctabid-37%2Ctabid-17%2Ctabid-19%2Ctabid-21).
+To render a stacked column chart, create an instance of the [StackedColumnSeries]() and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of the [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).
 
 N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) as its default content.
 
@@ -77,7 +77,8 @@ this.Content = chart;
 
 ## Grouping Series
 
-The grouping of stacked column series can be achieved using the [GroupingLabel]() property, which allows users to assign a label to each stacked column series. This label is used to identify the specific group to which the stacked column series belongs and can be used to group together similar series.
+Each series in a stacked chart with several series may be difficult to compare. To solve that problem, grouping is used.
+The [GroupingLabel]() property used to group the series, which allows users to assign a label to each stacked column series. This label identifies the specific group to which the stacked column series belongs and can be used to group similar series.
 
 N> If the [GroupingLabel]() is not provided, the stacked column will consider all series as a single group.
 
