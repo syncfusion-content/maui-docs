@@ -105,6 +105,8 @@ N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consi
 
 ## Adding layer
 
+### Shape layer
+
 <table>
 <tr>
    <th>Xamarin SfMaps</th>
@@ -266,7 +268,7 @@ N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consi
 
 N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
 
-The following code example explains how to intialize the layer and customize the layer in Xamarin SfMaps and .Net MAUI SfMaps.
+The following code example explains how to intialize the layer and customize the layer in Xamarin SfMaps and .NET MAUI SfMaps.
 
 <table>
 <tr>
@@ -349,6 +351,278 @@ The following code example explains how to intialize the layer and customize the
 </td></tr>
 </table>
 
+### Tile layer
+
+<table>
+<tr>
+   <th>Xamarin SfMaps</th>
+   <th>.NET MAUI SfMaps</th>
+</tr>
+<tr>
+   <td>
+      {{'[LayerType](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ImageryLayer.html#Syncfusion_SfMaps_XForms_ImageryLayer_LayerType)'| markdownify }}, {{'[BingMapKey](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ImageryLayer.html#Syncfusion_SfMaps_XForms_ImageryLayer_BingMapKey)'| markdownify }}, {{'[BingMapStyle](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ImageryLayer.html#Syncfusion_SfMaps_XForms_ImageryLayer_BingMapStyle)'| markdownify }}, and {{'[RequestTileUri](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ImageryLayer.html#Syncfusion_SfMaps_XForms_ImageryLayer_RequestTileUri)'| markdownify }}
+   </td>
+   <td>
+      Can achieve all this using {{'[UrlTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_UrlTemplate)'| markdownify }} and {{'[GetBingUrl()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_GetBingUrl_System_String_)'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[GeoCoordinates](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ImageryLayer.html#Syncfusion_SfMaps_XForms_ImageryLayer_GeoCoordinates)'| markdownify }}
+   </td>
+   <td>
+      {{'[*Center](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_Center)'| markdownify }} 
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[CanCacheTiles](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ImageryLayer.html#Syncfusion_SfMaps_XForms_ImageryLayer_CanCacheTiles)'| markdownify }}
+   </td>
+   <td>
+      {{'[CanCacheTiles](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_CanCacheTiles)'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[Radius](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ImageryLayer.html#Syncfusion_SfMaps_XForms_ImageryLayer_Radius)'| markdownify }} 
+   </td>
+   <td>
+      {{'[Radius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_Radius)'| markdownify }} 
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[DistanceType](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ImageryLayer.html#Syncfusion_SfMaps_XForms_ImageryLayer_DistanceType)'| markdownify }} 
+   </td>
+   <td>
+      {{'[DistanceType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_DistanceType)'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[LatLngBounds](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ImageryLayer.html#Syncfusion_SfMaps_XForms_ImageryLayer_LatLngBounds)'| markdownify }} 
+   </td>
+   <td>
+      {{'[LatLngBounds](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_MapLatLngBounds)'| markdownify }} 
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[Markers](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.MapLayer.html#Syncfusion_SfMaps_XForms_MapLayer_Markers)'| markdownify }}
+   </td>
+   <td>
+      {{'[Markers](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_Markers)'| markdownify }}
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[MarkerTemplate](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.MapLayer.html#Syncfusion_SfMaps_XForms_MapLayer_MarkerTemplate)'| markdownify }}
+   </td>
+   <td>
+      {{'[MarkerTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_MarkerTemplate)'| markdownify }}
+   </td>
+</tr>
+</table>
+
+<b>Methods</b>
+
+<table>
+<tr>
+   <th>Xamarin SfMaps</th>
+   <th>.NET MAUI SfMaps</th>
+</tr>
+<tr>
+   <td>
+     {{'[DeleteTilesFromCache()](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ImageryLayer.html#Syncfusion_SfMaps_XForms_ImageryLayer_DeleteTilesFromCache)'| markdownify }} 
+   </td>
+   <td>
+      {{'[DeleteTilesFromCache()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_DeleteTilesFromCache)'| markdownify }} 
+   </td>
+</tr>
+</table>
+
+<b>Events</b>
+
+<table>
+<tr>
+   <th>Xamarin SfMaps</th>
+   <th>.NET MAUI SfMaps</th>
+</tr>
+<tr>
+   <td>
+     {{'[ZoomLevelChanging](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ImageryLayer.html#Syncfusion_SfMaps_XForms_ImageryLayer_ZoomLevelChanging)'| markdownify }} 
+   </td>
+   <td>
+      {{'[ZoomLevelChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_ZoomLevelChanging)'| markdownify }} 
+   </td>
+</tr>
+</table>
+
+N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
+
+The following code example explains how to intialize the tile layer and it's customization in Xamarin SfMaps and .NET MAUI SfMaps.
+
+<b>Adding OSM layer</b>
+
+<table>
+<tr>
+<th>Xamarin SfMaps</th>
+<th>.NET MAUI SfMaps</th></tr>
+<tr>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<maps:SfMaps>
+    <maps:SfMaps.Layers>
+        <maps:ImageryLayer GeoCoordinates="38.909804, -77.043442"
+                           Radius="5"
+                           DistanceType="KiloMeter">
+            <maps:ImageryLayer.Markers>
+                <maps:MapMarker Latitude="38.909804"
+                                Longitude="-77.043442" />
+            </maps:ImageryLayer.Markers>
+        </maps:ImageryLayer>
+    </maps:SfMaps.Layers>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfMaps maps = new SfMaps();
+ImageryLayer layer = new ImageryLayer();
+layer.GeoCoordinates = new Point(38.909804, -77.043442);
+layer.Radius = 5;
+layer.DistanceType = DistanceType.KiloMeter;
+MapMarker marker = new MapMarker();
+marker.Latitude = "38.909804";
+marker.Longitude = "-77.043442";
+layer.Markers.Add(marker);
+maps.Layers.Add(layer);
+this.Content = maps;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<maps:SfMaps>
+    <maps:SfMaps.Layer>
+        <maps:MapTileLayer Radius="5"
+                           DistanceType="Kilometer"
+                           UrlTemplate="https://tile.openstreetmap.org/{z}/{x}/{y}.png">
+            <maps:MapTileLayer.Center>
+                <maps:MapLatLng Latitude="38.909804"
+                                Longitude="-77.043442">
+                </maps:MapLatLng>
+            </maps:MapTileLayer.Center>
+            <maps:MapTileLayer.ZoomPanBehavior>
+                <maps:MapZoomPanBehavior />
+            </maps:MapTileLayer.ZoomPanBehavior>
+            <maps:MapTileLayer.Markers>
+                <maps:MapMarkerCollection>
+                    <maps:MapMarker Latitude="38.909804"
+                                    Longitude="-77.043442" />
+                </maps:MapMarkerCollection>
+            </maps:MapTileLayer.Markers>
+        </maps:MapTileLayer>
+    </maps:SfMaps.Layer>
+</maps:SfMaps>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+public MainPage()
+{
+   InitializeComponent();
+   SfMaps map = new SfMaps();
+   MapTileLayer tileLayer = new MapTileLayer();
+   tileLayer.UrlTemplate = "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
+   tileLayer.Radius = 5;
+   tileLayer.DistanceType = MapDistanceType.Kilometer;
+   tileLayer.Center = new MapLatLng(38.909804, -77.043442);
+   MapZoomPanBehavior zoomPanBehavior = new MapZoomPanBehavior();
+   tileLayer.ZoomPanBehavior = zoomPanBehavior;
+   MapMarker mapMarker = new MapMarker();
+   mapMarker.Latitude = 38.909804;
+   mapMarker.Longitude = -77.043442;
+   MapMarkerCollection mapMarkers = new MapMarkerCollection();
+   mapMarkers.Add(mapMarker);
+   tileLayer.Markers = mapMarkers;
+   map.Layer = tileLayer;
+   this.Content = map;
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+</td></tr>
+</table>
+
+<b>Adding bing maps</b>
+
+<table>
+<tr>
+<th>Xamarin SfMaps</th>
+<th>.NET MAUI SfMaps</th></tr>
+<tr>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<maps:SfMaps>
+    <maps:SfMaps.Layers>
+        <maps:ImageryLayer LayerType="Bing"
+                           BingMapKey="Your bing map key" />
+    </maps:SfMaps.Layers>
+</maps:SfMaps>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfMaps maps = new SfMaps();
+ImageryLayer layer = new ImageryLayer();
+layer.LayerType = LayerType.Bing;
+layer.BingMapKey = "Your bing map key";
+maps.Layers.Add(layer);
+this.Content = maps;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td>
+<td>
+
+{% highlight C# %}
+
+public MainPage()
+{
+	InitializeComponent();
+   SfMaps map = new SfMaps();
+   MapTileLayer tileLayer = new MapTileLayer();
+   this.GenerateBing(tileLayer);
+   map.Layer = tileLayer;
+   this.Content = map;
+}
+
+private async Task GenerateBing(MapTileLayer tileLayer)
+{
+    tileLayer.UrlTemplate = await MapTileLayer.GetBingUrl("https://dev.virtualearth.net/REST/V1/Imagery/Metadata/RoadOnDemand?output=json&uriScheme=https&include=ImageryProviders&key=subscription_key") + "?name=bingName";
+}
+
+{% endhighlight %}
+
+</td></tr>
+</table>
+
 ## Bubble settings
 
 <table>
@@ -425,7 +699,7 @@ The following code example explains how to intialize the layer and customize the
 
 N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
 
-The following code example explains how to customize the bubble in the Xamarin SfMaps and .Net MAUI SfMaps.
+The following code example explains how to customize the bubble in the Xamarin SfMaps and .NET MAUI SfMaps.
 
 <table>
 <tr>
@@ -570,7 +844,7 @@ public MainPage()
 
 N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
 
-The following code example explains how to customize the data label in the Xamarin SfMaps and .Net MAUI SfMaps.
+The following code example explains how to customize the data label in the Xamarin SfMaps and .NET MAUI SfMaps.
 
 <table>
 <tr>
@@ -772,7 +1046,7 @@ public MainPage()
 
 N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
 
-The following code example explains how to customize the shape color in the Xamarin SfMaps and .Net MAUI SfMaps.
+The following code example explains how to customize the shape color in the Xamarin SfMaps and .NET MAUI SfMaps.
 
 <table>
 <tr>
@@ -976,7 +1250,7 @@ public MainPage()
 
 N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
 
-The following code example explains how to customize marker in the Xamarin SfMaps and .Net MAUI SfMaps.
+The following code example explains how to customize marker in the Xamarin SfMaps and .NET MAUI SfMaps.
 
 <table>
 <tr>
@@ -1122,7 +1396,7 @@ public MainPage()
 
 N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
 
-The following code example explains how to customize legend in the Xamarin SfMaps and .Net MAUI SfMaps.
+The following code example explains how to customize legend in the Xamarin SfMaps and .NET MAUI SfMaps.
 
 <table>
 <tr>
@@ -1362,7 +1636,7 @@ public MainPage()
 
 N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
 
-The following code example explains how to customize tooltip in the Xamarin SfMaps and .Net MAUI SfMaps.
+The following code example explains how to customize tooltip in the Xamarin SfMaps and .NET MAUI SfMaps.
 
 <table>
 <tr>
@@ -1587,7 +1861,7 @@ The following code example explains how to customize tooltip in the Xamarin SfMa
 
 N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
 
-The following code example explains how to initialize the shape sublayer and it's customization in the Xamarin SfMaps and .Net MAUI SfMaps.
+The following code example explains how to initialize the shape sublayer and it's customization in the Xamarin SfMaps and .NET MAUI SfMaps.
 
 <table>
 <tr>
@@ -1758,7 +2032,7 @@ public MainPage()
 
 N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
 
-The following code example explains how to customize the bubble in the Xamarin SfMaps and .Net MAUI SfMaps.
+The following code example explains how to customize the bubble in the Xamarin SfMaps and .NET MAUI SfMaps.
 
 <table>
 <tr>
@@ -1914,7 +2188,7 @@ public MainPage()
 
 N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
 
-The following code example explains how to customize the data label in the Xamarin SfMaps and .Net MAUI SfMaps.
+The following code example explains how to customize the data label in the Xamarin SfMaps and .NET MAUI SfMaps.
 
 <table>
 <tr>
@@ -2120,7 +2394,7 @@ public MainPage()
 </tr>
 </table>
 
-The following code example explains how to customize the shape color in the Xamarin SfMaps and .Net MAUI SfMaps.
+The following code example explains how to customize the shape color in the Xamarin SfMaps and .NET MAUI SfMaps.
 
 <table>
 <tr>
@@ -2333,7 +2607,7 @@ public MainPage()
 
 N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
 
-The following code example explains how to intialize the polygon layer and it's customization in Xamarin SfMaps and .Net MAUI SfMaps.
+The following code example explains how to intialize the polygon layer and it's customization in Xamarin SfMaps and .NET MAUI SfMaps.
 
 <table>
 <tr>
@@ -2511,11 +2785,27 @@ public MainPage()
       {{'[StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolyline.html#Syncfusion_Maui_Maps_MapPolyline_StrokeDashArray)'| markdownify }}
    </td>
 </tr>
+<tr>
+   <td>
+      {{'-'| markdownify }}
+   </td>
+   <td>
+      {{'[AnimationEasing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolylineLayer.html#Syncfusion_Maui_Maps_MapPolylineLayer_AnimationEasing)'| markdownify }} in {{'[MapPolylineLayer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolylineLayer.html)'| markdownify }} class
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'-'| markdownify }}
+   </td>
+   <td>
+      {{'[AnimationDuration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolylineLayer.html#Syncfusion_Maui_Maps_MapPolylineLayer_AnimationDuration)'| markdownify }} in {{'[MapPolylineLayer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapPolylineLayer.html)'| markdownify }} class
+   </td>
+</tr>
 </table>
 
 N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
 
-The following code example explains how to intialize the polyline layer and it's customization in Xamarin SfMaps and .Net MAUI SfMaps.
+The following code example explains how to intialize the polyline layer and it's customization in Xamarin SfMaps and .NET MAUI SfMaps.
 
 <table>
 <tr>
@@ -2590,7 +2880,8 @@ The following code example explains how to intialize the polyline layer and it's
      <map:SfMaps.Layer>
          <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/india.json">
              <map:MapShapeLayer.Sublayers>
-                 <map:MapPolylineLayer>
+                 <map:MapPolylineLayer AnimationDuration="3000"
+                                       AnimationEasing="{x:Static Easing.Linear}">
                      <map:MapPolylineLayer.Polylines>
                          <map:MapPolyline StrokeThickness="3" Stroke="Blue">
                              <map:MapPolyline.Points>
@@ -2622,6 +2913,8 @@ The following code example explains how to intialize the polyline layer and it's
      MapShapeLayer layer = new MapShapeLayer();
      layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/india.json"));
      MapPolylineLayer mapPolylineLayer = new MapPolylineLayer();
+     mapPolylineLayer.AnimationDuration = 3000;
+     mapPolylineLayer.AnimationEasing = Easing.Linear;
      MapPolyline polyline = new MapPolyline();
      polyline.Points = new ObservableCollection<MapLatLng>()
       {
@@ -2706,9 +2999,25 @@ The following code example explains how to intialize the polyline layer and it's
       {{'[StrokeLineCap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLine.html#Syncfusion_Maui_Maps_MapLine_StrokeLineCap)'| markdownify }}
    </td>
 </tr>
+<tr>
+   <td>
+      {{'-'| markdownify }}
+   </td>
+   <td>
+      {{'[AnimationEasing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLineLayer.html#Syncfusion_Maui_Maps_MapLineLayer_AnimationEasing)'| markdownify }} in {{'[MapLineLayer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLineLayer.html?tabs=tabid-1)'| markdownify }} class
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'-'| markdownify }}
+   </td>
+   <td>
+      {{'[AnimationDuration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLineLayer.html#Syncfusion_Maui_Maps_MapLineLayer_AnimationDuration)'| markdownify }} in {{'[MapLineLayer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLineLayer.html?tabs=tabid-1)'| markdownify }} class
+   </td>
+</tr>
 </table>
 
-The following code example explains how to intialize the line layer and it's customization in Xamarin SfMaps and .Net MAUI SfMaps.
+The following code example explains how to intialize the line layer and it's customization in Xamarin SfMaps and .NET MAUI SfMaps.
 
 <table>
 <tr>
@@ -2727,7 +3036,8 @@ The following code example explains how to intialize the line layer and it's cus
     <map:SfMaps.Layer>
         <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json">
             <map:MapShapeLayer.Sublayers>
-                <map:MapLineLayer>
+                <map:MapLineLayer AnimationDuration="3000"
+                                  AnimationEasing="{x:Static Easing.Linear}">
                     <map:MapLineLayer.Lines>
                         <map:MapLine StrokeThickness="2"
                                      Stroke="#8a8a8a">
@@ -2758,6 +3068,8 @@ The following code example explains how to intialize the line layer and it's cus
     MapShapeLayer layer = new MapShapeLayer();
     layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
     MapLineLayer mapLineLayer = new MapLineLayer();
+    mapLineLayer.AnimationDuration = 3000;
+    mapLineLayer.AnimationEasing = Easing.Linear;
     MapLine line1 = new MapLine();
     line1.From = new MapLatLng(77.1025, 28.7041);
     line1.To = new MapLatLng(-106.3468, 56.1304);
@@ -2848,7 +3160,7 @@ The following code example explains how to intialize the line layer and it's cus
 </tr>
 </table>
 
-The following code example explains how to intialize the arc layer and it's customization in Xamarin SfMaps and .Net MAUI SfMaps.
+The following code example explains how to intialize the arc layer and it's customization in Xamarin SfMaps and .NET MAUI SfMaps.
 
 <table>
 <tr>
@@ -2973,9 +3285,25 @@ The following code example explains how to intialize the arc layer and it's cust
       {{'[Fill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapCircle.html#Syncfusion_Maui_Maps_MapCircle_Fill)'| markdownify }}
    </td>
 </tr>
+<tr>
+   <td>
+      {{'-'| markdownify }}
+   </td>
+   <td>
+      {{'[AnimationEasing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapCircleLayer.html#Syncfusion_Maui_Maps_MapCircleLayer_AnimationEasing)'| markdownify }} in {{'[MapCircleLayer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapCircleLayer.html?tabs=tabid-1)'| markdownify }} class
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'-'| markdownify }}
+   </td>
+   <td>
+      {{'[AnimationDuration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapCircleLayer.html#Syncfusion_Maui_Maps_MapCircleLayer_AnimationDuration)'| markdownify }} in {{'[MapCircleLayer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapCircleLayer.html?tabs=tabid-1)'| markdownify }} class
+   </td>
+</tr>
 </table>
 
-The following code example explains how to intialize the circle layer and it's customization in Xamarin SfMaps and .Net MAUI SfMaps.
+The following code example explains how to intialize the circle layer and it's customization in Xamarin SfMaps and .NET MAUI SfMaps.
 
 <table>
 <tr>
@@ -2994,7 +3322,8 @@ The following code example explains how to intialize the circle layer and it's c
     <map:SfMaps.Layer>
         <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/india.json">
             <map:MapShapeLayer.Sublayers>
-                <map:MapCircleLayer>
+                <map:MapCircleLayer AnimationDuration="3000"
+                                    AnimationEasing="{x:Static Easing.Linear}">
                     <map:MapCircleLayer.Circles>
                         <map:MapCircle Radius="10" 
                                        Fill="LightGreen" 
@@ -3023,6 +3352,8 @@ public MainPage()
     MapShapeLayer layer = new MapShapeLayer();
     layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/india.json"));
     MapCircleLayer circleLayer = new MapCircleLayer();
+    circleLayer.AnimationDuration = 3000;
+    circleLayer.AnimationEasing = Easing.Linear;
     MapCircle circle1 = new MapCircle();
     circle1.Center = new MapLatLng(74.1240, 15.2993);
     circle1.Radius = 10;
@@ -3040,17 +3371,178 @@ public MainPage()
 </td></tr>
 </table>
 
+## Zooming and Panning
+
+<table>
+<tr>
+   <th>Xamarin SfMaps</th>
+   <th>.NET MAUI SfMaps</th>
+</tr>
+<tr>
+   <td>
+      {{'[ZoomLevel](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.SfMaps.html#Syncfusion_SfMaps_XForms_SfMaps_ZoomLevel)'| markdownify }}
+   </td>
+   <td>
+      {{'[ZoomLevel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html#Syncfusion_Maui_Maps_MapZoomPanBehavior_ZoomLevel)'| markdownify }} in {{'[MapZoomPanBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html?tabs=tabid-1)'| markdownify }} class
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[MinZoom](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.SfMaps.html#Syncfusion_SfMaps_XForms_SfMaps_MinZoom)'| markdownify }}
+   </td>
+   <td>
+      {{'[*MinZoomLevel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html#Syncfusion_Maui_Maps_MapZoomPanBehavior_MinZoomLevel)'| markdownify }} in {{'[MapZoomPanBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html?tabs=tabid-1)'| markdownify }} class
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[MaxZoom](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.SfMaps.html#Syncfusion_SfMaps_XForms_SfMaps_MaxZoom)'| markdownify }} 
+   </td>
+   <td>
+      {{'[*MaxZoomLevel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html#Syncfusion_Maui_Maps_MapZoomPanBehavior_MaxZoomLevel)'| markdownify }} in {{'[MapZoomPanBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html?tabs=tabid-1)'| markdownify }} class
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[EnableZooming](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.SfMaps.html#Syncfusion_SfMaps_XForms_SfMaps_EnableZooming)'| markdownify }} 
+   </td>
+   <td>
+      {{'[EnableZooming](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html#Syncfusion_Maui_Maps_MapZoomPanBehavior_EnableZooming)'| markdownify }} in {{'[MapZoomPanBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html?tabs=tabid-1)'| markdownify }} class
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'[EnablePanning](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ShapeSetting.html#Syncfusion_SfMaps_XForms_ShapeSetting_ShapeStrokeThickness)'| markdownify }} 
+   </td>
+   <td>
+      {{'[EnablePanning](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html#Syncfusion_Maui_Maps_MapZoomPanBehavior_EnablePanning)'| markdownify }} in {{'[MapZoomPanBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html?tabs=tabid-1)'| markdownify }} class
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'-'| markdownify }}  
+   </td>
+   <td>
+      {{'[EnableDoubleTapZooming](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html#Syncfusion_Maui_Maps_MapZoomPanBehavior_EnableDoubleTapZooming)'| markdownify }} in {{'[MapZoomPanBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapZoomPanBehavior.html?tabs=tabid-1)'| markdownify }} class
+   </td>
+</tr>
+<tr>
+   <td>
+      {{'-'| markdownify }} 
+   </td>
+   <td>
+      {{'[EnableCenterAnimation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_EnableCenterAnimation)'| markdownify }} in {{'[MapTileLayer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html?tabs=tabid-1)'| markdownify }} class
+   </td>
+</tr>
+<tr>
+   <td>
+     {{'-'| markdownify }} 
+   </td>
+   <td>
+      {{'[EnableZoomingAnimation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_EnableZoomingAnimation)'| markdownify }} in {{'[MapLayer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html?tabs=tabid-1)'| markdownify }} class
+   </td>
+</tr>
+</table>
+
+N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
+
+The following code example explains how to intialize the zooming and it's customization in Xamarin SfMaps and .NET MAUI SfMaps.
+
+<table>
+<tr>
+<th>Xamarin SfMaps</th>
+<th>.NET MAUI SfMaps</th></tr>
+<tr>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<maps:SfMaps EnablePanning="True"
+             EnableZooming="True"
+             ZoomLevel="5"
+             MinZoom="3"
+             MaxZoom="10">
+    <maps:SfMaps.Layers>
+        <maps:ImageryLayer />
+    </maps:SfMaps.Layers>
+</maps:SfMaps>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfMaps maps = new SfMaps();
+ImageryLayer layer = new ImageryLayer();
+maps.Layers.Add(layer);
+maps.EnablePanning = true;
+maps.EnableZooming = true;
+maps.MinZoom = 3;
+maps.MaxZoom = 10;
+maps.ZoomLevel = 5;
+
+{% endhighlight %}
+
+{% endtabs %}
+</td>
+<td>
+{% tabs %}
+
+{% highlight xaml %}
+
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapTileLayer UrlTemplate="https://tile.openstreetmap.org/{z}/{x}/{y}.png">
+            <map:MapTileLayer.ZoomPanBehavior>
+                <map:MapZoomPanBehavior ZoomLevel="5"
+                                        MinZoomLevel="3"
+                                        MaxZoomLevel="10"
+                                        EnablePanning="True"
+                                        EnableZooming="True" />
+            </map:MapTileLayer.ZoomPanBehavior>
+        </map:MapTileLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
+
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+public MainPage()
+{
+   InitializeComponent();
+   SfMaps map = new SfMaps();
+   MapTileLayer tileLayer = new MapTileLayer();
+   tileLayer.UrlTemplate = "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
+   MapZoomPanBehavior zoomPanBehavior = new MapZoomPanBehavior();
+   zoomPanBehavior.ZoomLevel = 5;
+   zoomPanBehavior.MinZoomLevel = 3;
+   zoomPanBehavior.MaxZoomLevel = 10;
+   zoomPanBehavior.EnablePanning = true;
+   zoomPanBehavior.EnableZooming = true;
+   tileLayer.ZoomPanBehavior = zoomPanBehavior;
+   map.Layer = tileLayer;
+   this.Content = map;
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+</td></tr>
+</table>
+
 ## Upcoming features in .NET MAUI
 
-* Support for imagery layer such as Bing Maps, OpenStreetMap, etc.
-* Zooming and panning
+* Support for Center changed event.
 
 ## Unsupported features from Xamarin.Forms
 
 * Label support has not been provided in the marker. Instead, you can achieve it using the [MarkerTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLayer.html#Syncfusion_Maui_Maps_MapLayer_MarkerTemplate).
-* In .Net MAUI, IntersectionAction support is not provided for data labels.
-* The [ShowLegend](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.MapLegendSetting.html#Syncfusion_SfMaps_XForms_MapLegendSetting_ShowLegend) support is not provided in the .Net MAUI. Instead, set the value for the [Legend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_Legend) to display map legend in the .Net MAUI platform.
+* In .NET MAUI, IntersectionAction support is not provided for data labels.
+* The [ShowLegend](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.MapLegendSetting.html#Syncfusion_SfMaps_XForms_MapLegendSetting_ShowLegend) support is not provided in the .NET MAUI. Instead, set the value for the [Legend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapShapeLayer.html#Syncfusion_Maui_Maps_MapShapeLayer_Legend) to display map legend in the .NET MAUI platform.
 * In Xamarin, [Layers](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.SfMaps.html#Syncfusion_SfMaps_XForms_SfMaps_Layers) are maintained as observable collection. But .NET MAUI supports a single [Layer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.SfMaps.html#Syncfusion_Maui_Maps_SfMaps_Layer).
+* The [ResetOnDoubleTap](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfMaps.XForms.ImageryLayer.html#Syncfusion_SfMaps_XForms_ImageryLayer_ResetOnDoubleTap) support is not provided in the .NET MAUI.
 
 ## Support and feedback
 

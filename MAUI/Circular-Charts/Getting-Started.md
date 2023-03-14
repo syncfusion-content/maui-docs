@@ -11,6 +11,10 @@ documentation: ug
 
 This section explains how to populate the circular chart with data, a title, data labels, a legend, and tooltips, as well as the essential aspects for getting started with the circular chart.
 
+To get start quickly with our .NET MAUI Circular Chart, you can check the below video.
+
+{% youtube "https://www.youtube.com/watch?v=2WDZfXpMZsE&t=3s" %}
+
 ## Creating an application using the .NET MAUI chart
 
 1. Create a new .NET MAUI application in Visual Studio.
@@ -365,3 +369,4 @@ public partial class MainPage : ContentPage
 
 ![Pie chart in .NET MAUI Chart](Getting-Started_Images/MAUI_pie_chart.png)
 
+You can find the complete getting started sample from this [link](https://github.com/SyncfusionExamples/GettingStarted_CircularChart_MAUI).

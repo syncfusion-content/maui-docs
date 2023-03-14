@@ -92,9 +92,9 @@ The following gif image illustrates the result of the above code:
 
 ![.NET MAUI Autocomplete clear button color](Images/UICustomization/ClearButtonColor.png)
 
-## Border Color
+## Stroke
 
-The Autocomplete border color can be changed by using the [BorderColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_BorderColor) property.
+The Autocomplete border color can be changed by using the [`Stroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_Stroke) property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -106,17 +106,17 @@ The Autocomplete border color can be changed by using the [BorderColor](https://
                         TextMemberPath="Name"
                         Placeholder="Select a social media"
                         PlaceholderColor="Red"
-                        BorderColor="Red" />
+                        Stroke="Red" />
 
 {% endhighlight %}
 {% highlight C# %}
 
-autocomplete.BorderColor = Colors.Red;
+autocomplete.Stroke = Colors.Red;
 
 {% endhighlight %}
 {% endtabs %}
 
-The following gif image illustrates the result of the above code:
+The following gif image illustrates the result of the above code.
 
 ![.NET MAUI Autocomplete border color](Images/UICustomization/BorderColor.png)
 

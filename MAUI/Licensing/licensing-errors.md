@@ -11,7 +11,39 @@ documentation: ug
 
 Licensing error popup is displayed with various messages under different circumstances. Here are some ways to resolve different issues.
 
-## License key not registered 
+## Licensing errors
+
+### License key not registered\Trial Expired 
+
+The following error message will be shown if a Syncfusion license key has not been registered in your application or if the trial key has expired after 30 days. 
+
+**Error message :** This application was built using a trial version of Syncfusion Essential Studio. You should include the valid license key to remove the license validation message permanently.
+
+**Solution:**
+
+* Generate a valid license key from here [Licensed users](https://www.syncfusion.com/account/downloads) or [Trial users](https://www.syncfusion.com/account/manage-trials/downloads) for a specific version and platform or License keys can also be generated from the Claim License Key page by clicking the **"Claim License"** button click from Syncfusion licensing warning message. Refer to this [help topic](https://help.syncfusion.com/maui/licensing/how-to-generate#Claim-License-Key) for more details.
+
+* In your application, register the generated license key. Please refer to this [help topic](https://help.syncfusion.com/maui/licensing/how-to-register-in-an-application) for information on registering the license key.
+
+![License key not registered](licensing-images/new-licensing-alert.png)
+
+### Invalid key
+
+If the application is registered with an invalid key, another version of license key, or another platform's license key, the following error message will pop up when launching the application. 
+
+**Error Message:** The included Syncfusion license key is invalid.
+
+**Solution:**
+
+* Generate a valid license key from here [Licensed users](https://www.syncfusion.com/account/downloads) or [Trial users](https://www.syncfusion.com/account/manage-trials/downloads) for a specific version and platform or License keys can also be generated from the Claim License Key page by clicking the **"Claim License"** button click from Syncfusion licensing warning message. Refer to this [help topic](https://help.syncfusion.com/maui/licensing/how-to-generate#Claim-License-Key) for more details.
+
+* In your application, register the generated license key. Please refer to this [help topic](https://help.syncfusion.com/maui/licensing/how-to-register-in-an-application) for information on registering the license key.
+
+![License key not registered](licensing-images/new-invalid-key.png)
+
+## Licensing errors from version 16.2.0* to 20.3.0*
+
+### License key not registered 
 
 The following error message will be shown if a Syncfusion license key has not been registered in your application. 
 
@@ -25,7 +57,7 @@ The following error message will be shown if a Syncfusion license key has not be
 
 ![License key not registered](licensing-images/licensing-alert.png)
 
-## Invalid key
+### Invalid key
 
 If the application is registered with an invalid key, another version of license key, or another platform's license key, the following error message will pop up when launching the application. 
 
@@ -39,7 +71,7 @@ If the application is registered with an invalid key, another version of license
 
 ![License key not registered](licensing-images/invalid-key.png)
 
-## Trial Expired
+### Trial Expired
 
 The following error message will be shown if the trial key has expired after 30 days.
 
@@ -49,7 +81,7 @@ The following error message will be shown if the trial key has expired after 30 
 
 ![License key not registered](licensing-images/trial-expired.png)
 
-## Platform Mismatch
+### Platform Mismatch
 
 If the application is registered with another platform's license key, the following error message will pop up when launching the application.
 
@@ -63,7 +95,7 @@ If the application is registered with another platform's license key, the follow
 
 ![License key not registered](licensing-images/platform-mismatch.png)
 
-## Version Mismatch
+### Version Mismatch
 
 If the application is registered with another version's license key, the following error message will pop up when launching the application.
 
@@ -77,7 +109,7 @@ If the application is registered with another version's license key, the followi
 
 ![License key not registered](licensing-images/version-mismatch.png)
 
-## Could not load Syncfusion.Licensing.dll assembly version...?
+### Could not load Syncfusion.Licensing.dll assembly version...?
 Make sure that all the referenced Syncfusion assembles are of the same version. Try cleaning and rebuilding the application to resolve assembly conflict issues.
 
 

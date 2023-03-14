@@ -11,6 +11,10 @@ documentation: ug
 
 This section explains how to add the Autocomplete control and bind data to it. This section covers only the basic features needed to get started with the Syncfusion [Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control.
 
+To get start quickly with our .NET MAUI Autocomplete, you can check the below video.
+
+{% youtube "https://www.youtube.com/watch?v=ontSh2NZvE4" %}
+
 ## Adding a .NET MAUI Autocomplete reference
 
 Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) and then install it.
@@ -19,14 +23,13 @@ Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org
 
  In the MauiProgram.cs file, register the handler for Syncfusion core.
 
-{% highlight c# hl_lines="6 7 18 19" %}
+{% highlight c# hl_lines="6 17" %}
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
 using Microsoft.Maui.Controls.Compatibility;
 using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Controls.Xaml;
 using Syncfusion.Maui.Core.Hosting;
-using Syncfusion.Maui.ListView.Hosting;
 
 namespace AutocompleteSample
 {
@@ -38,7 +41,6 @@ namespace AutocompleteSample
             builder
             .UseMauiApp<App>()
             .ConfigureSyncfusionCore()
-            .ConfigureSyncfusionListView()
             .ConfigureFonts(fonts =>
             {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");

@@ -540,6 +540,38 @@ public class ViewModel
 
 ![Maps getting started](images/getting-started/maps_getting_started.png)
 
+## Add tile layer
+
+The [`MapTileLayer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html?tabs=tabid-1) needs to be assign to the [`Layer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.SfMaps.html#Syncfusion_Maui_Maps_SfMaps_Layer) property in [`SfMaps`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.SfMaps.html?tabs=tabid-1). The URL of the providers must be set in the [`MapTileLayer.UrlTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_UrlTemplate) property.
+
+Kindly refer the [tile layer](https://help.syncfusion.com/maui/maps/tile-layer) section for more information.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+ <maps:SfMaps>
+    <maps:SfMaps.Layer>
+        <maps:MapTileLayer UrlTemplate="https://tile.openstreetmap.org/{z}/{x}/{y}.png" />
+    </maps:SfMaps.Layer>
+</maps:SfMaps>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfMaps map = new SfMaps();
+MapTileLayer tileLayer = new MapTileLayer();
+tileLayer.UrlTemplate = "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
+map.Layer = tileLayer;
+this.Content = map;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![.NET MAUI Maps with tile layer](images/getting-started/getting_started_tile_layer.png)
+
 N> 
 * Get the complete getting started sample from [GitHub](https://github.com/SyncfusionExamples/.NET-MAUI-Maps-Getting-Started) link.
 * You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations.

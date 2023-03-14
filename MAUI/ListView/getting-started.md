@@ -11,6 +11,10 @@ documentation: ug
 
 This section provides a quick overview of how to get started with the .NET Maui ListView (SfListView) for Maui. Walk-through the entire process of creating the real world SfListView.
 
+To get start quickly with .NET MAUI ListView, you can check on this video:
+
+<style>#MAUIListViewVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIListViewVideoTutorial' src='https://www.youtube.com/embed/EFo2zIFw60Q'></iframe>
+
 ## Creating an application using the .NET MAUI ListView
 
  1. Create a new .NET MAUI application in Visual Studio.
@@ -49,14 +53,14 @@ public partial class MainPage : ContentPage
 
 ## Register the handler
 
-To use this control inside an application, you must initialize the `SfListView` handler.
+The `Syncfusion.Maui.Core` NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
 
 {% tabs %}
 {% highlight c# tabtitle="MauiProgram.cs" hl_lines="4 20" %}
 using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Controls.Xaml;
 using Microsoft.Maui.Hosting;
-using Syncfusion.Maui.ListView.Hosting;
+using Syncfusion.Maui.Core.Hosting;
 
 namespace GettingStarted
 {
@@ -72,7 +76,7 @@ namespace GettingStarted
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                 });
 
-            builder.ConfigureSyncfusionListView();
+            builder.ConfigureSyncfusionCore();
             return builder.Build();
         }
     }

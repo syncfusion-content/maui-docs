@@ -15,11 +15,11 @@ The [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAv
 
 ## Colors
 
-Color in the [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1) can be customized by the border color, the default background color, and automatic background color.
+Color in the [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1) can be customized by the stroke, the default background color, and automatic background color.
 
-### Border color
+### Stroke
 
-The border color is used for setting color to the border of [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1) using the [BorderColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_BorderColor) property.
+The [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_Stroke) property is used for setting color to the stroke of [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1).
 
 {% tabs %}
 
@@ -32,7 +32,7 @@ The border color is used for setting color to the border of [SfAvatarView](https
                            HorizontalOptions="Center"
                            VerticalOptions="Center"
                            ImageSource="ellanaa.png"
-                           BorderColor="Red">
+                           Stroke="Red">
    </sfavatar:SfAvatarView>
 </Grid>
 
@@ -48,7 +48,7 @@ avatarview.AvatarSize = AvatarSize.Large;
 avatarview.VerticalOptions = LayoutOptions.Center;
 avatarview.HorizontalOptions = LayoutOptions.Center;
 avatarview.ImageSource = "ellanaa.png";
-avatarview.BorderColor = Colors.Red;
+avatarview.Stroke = Colors.Red;
 mainGrid.Children.Add(avatarview);
 this.Content = mainGrid;
 
@@ -56,7 +56,7 @@ this.Content = mainGrid;
 
 {% endtabs %}
 
-![AvatarControl Border Color](Customization_Images/BorderColor_AvatarView.png)
+![AvatarControl Stroke](Customization_Images/Stroke_AvatarView.png)
 
 ### Default background color
 
@@ -75,7 +75,7 @@ The background color for the SfAvatarView control can be set using the [AvatarCo
                            AvatarName="Alex"          
                            BackgroundColor="Bisque"
                            AvatarColorMode="Default"
-                           BorderColor="Black">
+                           Stroke="Black">
    </sfavatar:SfAvatarView>
 </Grid>
       
@@ -92,7 +92,7 @@ avatarview.AvatarSize = AvatarSize.Large;
 avatarview.VerticalOptions = LayoutOptions.Center;
 avatarview.HorizontalOptions = LayoutOptions.Center;
 avatarview.AvatarName = "Alex";
-avatarview.BorderColor = Colors.Black;
+avatarview.Stroke = Colors.Black;
 avatarview.AvatarColorMode = AvatarColorMode.Default;
 avatarview.BackgroundColor = Colors.Bisque;
 mainGrid.Children.Add(avatarview);
@@ -128,7 +128,7 @@ The dark background color can be set using `DarkBackground` in the [AvatarColorM
                            VerticalOptions="Center"
                            AvatarName="Alex"
                            AvatarColorMode="DarkBackground"
-                           BorderColor="Black">
+                           Stroke="Black">
    </sfavatar:SfAvatarView>
 </Grid>
 
@@ -146,7 +146,7 @@ avatarview.AvatarSize = AvatarSize.Large;
 avatarview.ContentType = ContentType.Initials;
 avatarview.InitialsType = InitialsType.DoubleCharacter;
 avatarview.AvatarName = "Alex";
-avatarview.BorderColor = Colors.Black;
+avatarview.Stroke = Colors.Black;
 avatarview.AvatarColorMode = AvatarColorMode.DarkBackground;
 mainGrid.Children.Add(avatarview);
 this.Content = mainGrid;
@@ -174,7 +174,7 @@ The light background color can be set using `LightBackground` in the [AvatarColo
                            AvatarShape="Circle"
                            AvatarSize="Large"
                            AvatarColorMode="LightBackground"
-                           BorderColor="Black"
+                           Stroke="Black"
                            HorizontalOptions="Center" >
    </sfavatar:SfAvatarView>
 </Grid>
@@ -192,7 +192,7 @@ avatarview.AvatarSize = AvatarSize.Large;
 avatarview.ContentType = ContentType.Initials;
 avatarview.InitialsType = InitialsType.DoubleCharacter;
 avatarview.AvatarName = "Alex";
-avatarview.BorderColor = Colors.Black;
+avatarview.Stroke = Colors.Black;
 avatarview.AvatarColorMode = AvatarColorMode.LightBackground;
 mainGrid.Children.Add(avatarview);
 this.Content = mainGrid;
@@ -241,7 +241,7 @@ avatarview.AvatarSize = AvatarSize.Large;
 avatarview.ContentType = ContentType.Initials;
 avatarview.InitialsType = InitialsType.DoubleCharacter;
 avatarview.AvatarName = "Alex";
-avatarview.BorderColor = Colors.Black;
+avatarview.Stroke = Colors.Black;
 avatarview.Background = new LinearGradientBrush() 
 { 
    StartPoint = new Point(0,0), 
@@ -263,7 +263,7 @@ this.Content = mainGrid;
 
 ## Sizing
 
-In the [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html) control, size of the view can be controlled using width, height, border thickness, and corner radius.
+In the [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html) control, size of the view can be controlled using width, height, stroke thickness, and corner radius.
 
 ### Width
 
@@ -273,9 +273,9 @@ You can customize the width of the avatar view using the [WidthRequest](https://
 
 You can customize the height of the avatar view using the  [HeightRequest](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_HeightRequest) property.
 
-### Border Thickness
+### Stroke Thickness
 
-You can customize the thickness of the avatar view using the [BorderThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_BorderThickness) property.
+You can customize the thickness of the avatar view using the [StrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_StrokeThickness) property.
 
 {% tabs %}
 
@@ -286,9 +286,9 @@ You can customize the thickness of the avatar view using the [BorderThickness](h
                            AvatarShape="Circle"
                            AvatarSize="Large"
                            ImageSource="ellanaa.png"
-                           BorderColor="Red" 
+                           Stroke="Red" 
                            VerticalOptions="Center"
-                           BorderThickness="4"
+                           StrokeThickness="4"
                            HorizontalOptions="Center" >
    </sfavatar:SfAvatarView>
 </Grid>
@@ -303,8 +303,8 @@ avatarview.HorizontalOptions = LayoutOptions.Center;
 avatarview.VerticalOptions = LayoutOptions.Center;
 avatarview.AvatarShape = AvatarShape.Circle;
 avatarview.AvatarSize = AvatarSize.Large;
-avatarview.BorderThickness = 4;
-avatarview.BorderColor = Colors.Red,
+avatarview.StrokeThickness = 4;
+avatarview.Stroke = Colors.Red,
 avatarview.ContentType = ContentType.Default;
 avatarview.ImageSource = "ellanaa.png";
 mainGrid.Children.Add(avatarview);
@@ -314,7 +314,7 @@ this.Content = mainGrid;
 
 {% endtabs %}
 
-![AvatarView Border width](Customization_Images/BordeWidth_AvatarView.png)
+![AvatarView Stroke Thickness](Customization_Images/StrokeThickness_AvatarView.png)
 
 ### Corner radius
 

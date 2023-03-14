@@ -11,6 +11,10 @@ documentation: ug
 
 This section explains the steps required to add the SignaturePad control and its elements such as minimum and maximum stroke thickness, and stroke color. This section also covers how to save the signature as an image, clear the existing signature in SignaturePad and handle the [`DrawStarted`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_DrawStarted) and [`DrawCompleted`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_DrawCompleted) callbacks in the SignaturePad control.
 
+To get start quickly with our .NET MAUI SignaturePad, you can check the below video.
+
+{% youtube "https://www.youtube.com/watch?v=gV2stNPCgYo" %}
+
 ## Creating an application with .NET MAUI
 
 Create a new .NET MAUI application in Visual Studio.
@@ -25,12 +29,11 @@ Create a new .NET MAUI application in Visual Studio.
 
 ## Handler registration
 
-In the MauiProgram.cs file, register the handler for Syncfusion SignaturePad
+In the MauiProgram.cs file, register the handler for Syncfusion Core.
 
 {% highlight C# %}
 
 using Syncfusion.Maui.Core.Hosting;
-using Syncfusion.Maui.SignaturePad.Hosting;
 
 namespace SignaturePadGettingStarted
 {
@@ -41,7 +44,7 @@ namespace SignaturePadGettingStarted
             var builder = MauiApp.CreateBuilder();
             builder
             .UseMauiApp<App>()
-            .ConfigureSyncfusionSignaturePad()
+            .ConfigureSyncfusionCore()
             .ConfigureFonts(fonts =>
             {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");

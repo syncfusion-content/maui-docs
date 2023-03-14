@@ -118,9 +118,9 @@ The following gif image illustrates the result of the above code:
 ![.NET MAUI ComboBox  drop-down icon color](Images/UICustomization/DropDownIconColor.png)
 
 
-## Border Color
+## Stroke
 
-The ComboBox border color can be changed by using the [BorderColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_BorderColor) property.
+The ComboBox border color can be changed by using the [`Stroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_Stroke) property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -131,12 +131,12 @@ The ComboBox border color can be changed by using the [BorderColor](https://help
                     DisplayMemberPath="Name"
                     TextMemberPath="Name"
                     DropDownIconColor="Red"
-                    BorderColor="Red" />
+                    Stroke="Red" />
 
 {% endhighlight %}
 {% highlight C# %}
 
-combobox.BorderColor = Colors.Red;
+combobox.Stroke = Colors.Red;
 
 {% endhighlight %}
 {% endtabs %}

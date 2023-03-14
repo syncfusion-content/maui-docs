@@ -28,42 +28,42 @@ The [`Lines`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLineLa
                     <map:MapLineLayer.Lines>
                         <map:MapLine>
                             <map:MapLine.From>
-                                <map:MapLatLng Latitude="77.1025"
-                                               Longitude="28.7041" />
+                                <map:MapLatLng Latitude="28.7041"
+                                               Longitude="77.1025" />
                             </map:MapLine.From>
                             <map:MapLine.To>
-                                <map:MapLatLng Latitude="-106.3468"
-                                               Longitude="56.1304" />
+                                <map:MapLatLng Latitude="56.1304"
+                                               Longitude="-106.3468" />
                             </map:MapLine.To>
                         </map:MapLine>
                         <map:MapLine>
                             <map:MapLine.From>
-                                <map:MapLatLng Latitude="77.1025"
-                                               Longitude="28.7041" />
+                                <map:MapLatLng Latitude="28.7041"
+                                               Longitude="77.1025" />
                             </map:MapLine.From>
                             <map:MapLine.To>
-                                <map:MapLatLng Latitude="-75.0152"
-                                               Longitude="-9.1900" />
-                            </map:MapLine.To>
-                        </map:MapLine>
-                        <map:MapLine">
-                            <map:MapLine.From>
-                                <map:MapLatLng Latitude="77.1025"
-                                               Longitude="28.7041" />
-                            </map:MapLine.From>
-                            <map:MapLine.To>
-                                <map:MapLatLng Latitude="105.3188"
-                                               Longitude="61.5240" />
+                                <map:MapLatLng Latitude="-9.1900"
+                                               Longitude="-75.0152" />
                             </map:MapLine.To>
                         </map:MapLine>
                         <map:MapLine>
                             <map:MapLine.From>
-                                <map:MapLatLng Latitude="77.1025"
-                                               Longitude="28.7041" />
+                                <map:MapLatLng Latitude="28.7041"
+                                               Longitude="77.1025" />
                             </map:MapLine.From>
                             <map:MapLine.To>
-                                <map:MapLatLng Latitude="133.7751"
-                                               Longitude="-25.2744" />
+                                <map:MapLatLng Latitude="61.5240"
+                                               Longitude="105.3188" />
+                            </map:MapLine.To>
+                        </map:MapLine>
+                        <map:MapLine>
+                            <map:MapLine.From>
+                                <map:MapLatLng Latitude="28.7041"
+                                               Longitude="77.1025" />
+                            </map:MapLine.From>
+                            <map:MapLine.To>
+                                <map:MapLatLng Latitude="-25.2744"
+                                               Longitude="133.7751" />
                             </map:MapLine.To>
                         </map:MapLine>
                     </map:MapLineLayer.Lines>
@@ -77,34 +77,30 @@ The [`Lines`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLineLa
 
 {% highlight c# %}
 
- SfMaps maps = new SfMaps();
- MapShapeLayer layer = new MapShapeLayer();
- layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
- layer.ShapeStroke = Brush.DarkGrey;
- MapLineLayer mapLineLayer = new MapLineLayer();
- MapLine line1 = new MapLine();
- line1.From = new MapLatLng(77.1025, 28.7041);
- line1.To = new MapLatLng(-106.3468, 56.1304);
- line1.Stroke = Color.FromRgb(138, 138, 138);
- MapLine line2 = new MapLine();
- line2.From = new MapLatLng(77.1025, 28.7041);
- line2.To = new MapLatLng(-75.0152, -9.1900);
- line2.Stroke = Color.FromRgb(138, 138, 138);
- MapLine line3 = new MapLine();
- line3.From = new MapLatLng(77.1025, 28.7041);
- line3.To = new MapLatLng(105.3188, 61.5240);
- line3.Stroke = Color.FromRgb(138, 138, 138);
- MapLine line4 = new MapLine();
- line4.From = new MapLatLng(77.1025, 28.7041);
- line4.To = new MapLatLng(133.7751, -25.2744);
- line4.Stroke = Color.FromRgb(138, 138, 138);
- mapLineLayer.Lines.Add(line1);
- mapLineLayer.Lines.Add(line2);
- mapLineLayer.Lines.Add(line3);
- mapLineLayer.Lines.Add(line4);
- layer.Sublayers.Add(mapLineLayer);
- maps.Layer = layer;
- this.Content = maps;
+SfMaps maps = new SfMaps();
+MapShapeLayer layer = new MapShapeLayer();
+layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/
+layer.ShapeStroke = Brush.DarkGray;
+MapLineLayer mapLineLayer = new MapLineLayer();
+MapLine line1 = new MapLine();
+line1.From = new MapLatLng(28.7041, 77.1025);
+line1.To = new MapLatLng(56.1304, -106.3468);
+MapLine line2 = new MapLine();
+line2.From = new MapLatLng(28.7041, 77.1025);
+line2.To = new MapLatLng(-9.1900, -75.0152);
+MapLine line3 = new MapLine();
+line3.From = new MapLatLng(28.7041, 77.1025);
+line3.To = new MapLatLng(61.5240, 105.3188);
+MapLine line4 = new MapLine();
+line4.From = new MapLatLng(28.7041, 77.1025);
+line4.To = new MapLatLng(-25.2744, 133.7751);
+mapLineLayer.Lines.Add(line1);
+mapLineLayer.Lines.Add(line2);
+mapLineLayer.Lines.Add(line3);
+mapLineLayer.Lines.Add(line4);
+layer.Sublayers.Add(mapLineLayer);
+maps.Layer = layer;
+this.Content = maps;
 
 {% endhighlight %}
 
@@ -127,48 +123,44 @@ You can apply stroke colors to each [`MapLine`](https://help.syncfusion.com/cr/m
             <map:MapShapeLayer.Sublayers>
                 <map:MapLineLayer>
                     <map:MapLineLayer.Lines>
-                        <map:MapLine StrokeThickness="2"
-                                     Stroke="#ed4a47">
+                        <map:MapLine Stroke="#ed4a47">
                             <map:MapLine.From>
-                                <map:MapLatLng Latitude="77.1025"
-                                               Longitude="28.7041" />
+                                <map:MapLatLng Latitude="28.7041"
+                                               Longitude="77.1025" />
                             </map:MapLine.From>
                             <map:MapLine.To>
-                                <map:MapLatLng Latitude="-106.3468"
-                                               Longitude="56.1304" />
+                                <map:MapLatLng Latitude="56.1304"
+                                               Longitude="-106.3468" />
                             </map:MapLine.To>
                         </map:MapLine>
-                        <map:MapLine StrokeThickness="2"
-                                     Stroke="#724df6">
+                        <map:MapLine Stroke="#724df6">
                             <map:MapLine.From>
-                                <map:MapLatLng Latitude="77.1025"
-                                               Longitude="28.7041" />
+                                <map:MapLatLng Latitude="28.7041"
+                                               Longitude="77.1025" />
                             </map:MapLine.From>
                             <map:MapLine.To>
-                                <map:MapLatLng Latitude="-75.0152"
-                                               Longitude="-9.1900" />
+                                <map:MapLatLng Latitude="-9.1900"
+                                               Longitude="-75.0152" />
                             </map:MapLine.To>
                         </map:MapLine>
-                        <map:MapLine StrokeThickness="2"
-                                     Stroke="#3e8af5">
+                        <map:MapLine Stroke="#3e8af5">
                             <map:MapLine.From>
-                                <map:MapLatLng Latitude="77.1025"
-                                               Longitude="28.7041" />
+                                <map:MapLatLng Latitude="28.7041"
+                                               Longitude="77.1025" />
                             </map:MapLine.From>
                             <map:MapLine.To>
-                                <map:MapLatLng Latitude="105.3188"
-                                               Longitude="61.5240" />
+                                <map:MapLatLng Latitude="61.5240"
+                                               Longitude="105.3188" />
                             </map:MapLine.To>
                         </map:MapLine>
-                        <map:MapLine StrokeThickness="2"
-                                     Stroke="#439386">
+                        <map:MapLine Stroke="#439386">
                             <map:MapLine.From>
-                                <map:MapLatLng Latitude="77.1025"
-                                               Longitude="28.7041" />
+                                <map:MapLatLng Latitude="28.7041"
+                                               Longitude="77.1025" />
                             </map:MapLine.From>
                             <map:MapLine.To>
-                                <map:MapLatLng Latitude="133.7751"
-                                               Longitude="-25.2744" />
+                                <map:MapLatLng Latitude="-25.2744"
+                                               Longitude="133.7751" />
                             </map:MapLine.To>
                         </map:MapLine>
                     </map:MapLineLayer.Lines>
@@ -188,20 +180,20 @@ layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/
 layer.ShapeStroke = Brush.DarkGrey;
 MapLineLayer mapLineLayer = new MapLineLayer();
 MapLine line1 = new MapLine();
-line1.From = new MapLatLng(77.1025, 28.7041);
-line1.To = new MapLatLng(-106.3468, 56.1304);
+line1.From = new MapLatLng(28.7041, 77.1025);
+line1.To = new MapLatLng(56.1304, -106.3468);
 line1.Stroke = Color.FromRgb(237, 74, 71);
 MapLine line2 = new MapLine();
-line2.From = new MapLatLng(77.1025, 28.7041);
-line2.To = new MapLatLng(-75.0152, -9.1900);
+line2.From = new MapLatLng(28.7041, 77.1025);
+line2.To = new MapLatLng(-9.1900, -75.0152);
 line2.Stroke = Color.FromRgb(114, 77, 246);
 MapLine line3 = new MapLine();
-line3.From = new MapLatLng(77.1025, 28.7041);
-line3.To = new MapLatLng(105.3188, 61.5240);
+line3.From = new MapLatLng(28.7041, 77.1025);
+line3.To = new MapLatLng(61.5240, 105.3188);
 line3.Stroke = Color.FromRgb(62, 138, 245);
 MapLine line4 = new MapLine();
-line4.From = new MapLatLng(77.1025, 28.7041);
-line4.To = new MapLatLng(133.7751, -25.2744);
+line4.From = new MapLatLng(28.7041, 77.1025);
+line4.To = new MapLatLng(-25.2744, 133.7751);
 line4.Stroke = Color.FromRgb(67, 147, 134);
 mapLineLayer.Lines.Add(line1);
 mapLineLayer.Lines.Add(line2);
@@ -235,45 +227,45 @@ You can apply thickness to each [`MapLine`](https://help.syncfusion.com/cr/maui/
                         <map:MapLine StrokeThickness="2"
                                      Stroke="#8a8a8a">
                             <map:MapLine.From>
-                                <map:MapLatLng Latitude="77.1025"
-                                               Longitude="28.7041" />
+                                <map:MapLatLng Latitude="28.7041"
+                                               Longitude="77.1025" />
                             </map:MapLine.From>
                             <map:MapLine.To>
-                                <map:MapLatLng Latitude="-106.3468"
-                                               Longitude="56.1304" />
+                                <map:MapLatLng Latitude="56.1304"
+                                               Longitude="-106.3468" />
                             </map:MapLine.To>
                         </map:MapLine>
                         <map:MapLine StrokeThickness="4"
                                      Stroke="#8a8a8a">
                             <map:MapLine.From>
-                                <map:MapLatLng Latitude="77.1025"
-                                               Longitude="28.7041" />
+                                <map:MapLatLng Latitude="28.7041"
+                                               Longitude="77.1025" />
                             </map:MapLine.From>
                             <map:MapLine.To>
-                                <map:MapLatLng Latitude="-75.0152"
-                                               Longitude="-9.1900" />
+                                <map:MapLatLng Latitude="-9.1900"
+                                               Longitude="-75.0152" />
                             </map:MapLine.To>
                         </map:MapLine>
                         <map:MapLine StrokeThickness="5"
                                      Stroke="#8a8a8a">
                             <map:MapLine.From>
-                                <map:MapLatLng Latitude="77.1025"
-                                               Longitude="28.7041" />
+                                <map:MapLatLng Latitude="28.7041"
+                                               Longitude="77.1025" />
                             </map:MapLine.From>
                             <map:MapLine.To>
-                                <map:MapLatLng Latitude="105.3188"
-                                               Longitude="61.5240" />
+                                <map:MapLatLng Latitude="61.5240"
+                                               Longitude="105.3188" />
                             </map:MapLine.To>
                         </map:MapLine>
                         <map:MapLine StrokeThickness="6"
                                      Stroke="#8a8a8a">
                             <map:MapLine.From>
-                                <map:MapLatLng Latitude="77.1025"
-                                               Longitude="28.7041" />
+                                <map:MapLatLng Latitude="28.7041"
+                                               Longitude="77.1025" />
                             </map:MapLine.From>
                             <map:MapLine.To>
-                                <map:MapLatLng Latitude="133.7751"
-                                               Longitude="-25.2744" />
+                                <map:MapLatLng Latitude="-25.2744"
+                                               Longitude="133.7751" />
                             </map:MapLine.To>
                         </map:MapLine>
                     </map:MapLineLayer.Lines>
@@ -293,23 +285,23 @@ layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/
 layer.ShapeStroke = Brush.DarkGrey;
 MapLineLayer mapLineLayer = new MapLineLayer();
 MapLine line1 = new MapLine();
-line1.From = new MapLatLng(77.1025, 28.7041);
-line1.To = new MapLatLng(-106.3468, 56.1304);
+line1.From = new MapLatLng(28.7041, 77.1025);
+line1.To = new MapLatLng(56.1304, -106.3468);
 line1.Stroke = Color.FromRgb(138, 138, 138);
 line1.StrokeThickness = 2;
 MapLine line2 = new MapLine();
-line2.From = new MapLatLng(77.1025, 28.7041);
-line2.To = new MapLatLng(-75.0152, -9.1900);
+line2.From = new MapLatLng(28.7041, 77.1025);
+line2.To = new MapLatLng(-9.1900, -75.0152);
 line2.Stroke = Color.FromRgb(138, 138, 138);
 line2.StrokeThickness = 4;
 MapLine line3 = new MapLine();
-line3.From = new MapLatLng(77.1025, 28.7041);
-line3.To = new MapLatLng(105.3188, 61.5240);
+line3.From = new MapLatLng(28.7041, 77.1025);
+line3.To = new MapLatLng(61.5240, 105.3188);
 line3.Stroke = Color.FromRgb(138, 138, 138);
 line3.StrokeThickness = 5;
 MapLine line4 = new MapLine();
-line4.From = new MapLatLng(77.1025, 28.7041);
-line4.To = new MapLatLng(133.7751, -25.2744);
+line4.From = new MapLatLng(28.7041, 77.1025);
+line4.To = new MapLatLng(-25.2744, 133.7751);
 line4.Stroke = Color.FromRgb(138, 138, 138);
 line4.StrokeThickness = 6;
 mapLineLayer.Lines.Add(line1);
@@ -333,60 +325,60 @@ You can apply stroke cap to each [`MapLine`](https://help.syncfusion.com/cr/maui
 {% tabs %}
 
 {% highlight xaml %}
-
+ 
 <map:SfMaps>
-    <map:SfMaps.Layer>
+   <map:SfMaps.Layer>
         <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
                            ShapeStroke="DarkGrey">
             <map:MapShapeLayer.Sublayers>
                 <map:MapLineLayer>
                     <map:MapLineLayer.Lines>
                         <map:MapLine StrokeThickness="2"
-                                     Stroke="#8a8a8a" 
+                                     Stroke="#8a8a8a"
                                      StrokeLineCap="Round">
                             <map:MapLine.From>
-                                <map:MapLatLng Latitude="77.1025"
-                                               Longitude="28.7041" />
+                                <map:MapLatLng Latitude="28.7041"
+                                               Longitude="77.1025" />
                             </map:MapLine.From>
                             <map:MapLine.To>
-                                <map:MapLatLng Latitude="-106.3468"
-                                               Longitude="56.1304" />
+                                <map:MapLatLng Latitude="56.1304"
+                                               Longitude="-106.3468" />
                             </map:MapLine.To>
                         </map:MapLine>
                         <map:MapLine StrokeThickness="4"
                                      Stroke="#8a8a8a"
                                      StrokeLineCap="Round">
                             <map:MapLine.From>
-                                <map:MapLatLng Latitude="77.1025"
-                                               Longitude="28.7041" />
+                                <map:MapLatLng Latitude="28.7041"
+                                               Longitude="77.1025" />
                             </map:MapLine.From>
                             <map:MapLine.To>
-                                <map:MapLatLng Latitude="-75.0152"
-                                               Longitude="-9.1900" />
+                                <map:MapLatLng Latitude="-9.1900"
+                                               Longitude="-75.0152" />
                             </map:MapLine.To>
                         </map:MapLine>
                         <map:MapLine StrokeThickness="5"
                                      Stroke="#8a8a8a"
                                      StrokeLineCap="Round">
                             <map:MapLine.From>
-                                <map:MapLatLng Latitude="77.1025"
-                                               Longitude="28.7041" />
+                                <map:MapLatLng Latitude="28.7041"
+                                               Longitude="77.1025" />
                             </map:MapLine.From>
                             <map:MapLine.To>
-                                <map:MapLatLng Latitude="105.3188"
-                                               Longitude="61.5240" />
+                                <map:MapLatLng Latitude="61.5240"
+                                               Longitude="105.3188" />
                             </map:MapLine.To>
                         </map:MapLine>
                         <map:MapLine StrokeThickness="6"
                                      Stroke="#8a8a8a"
                                      StrokeLineCap="Round">
                             <map:MapLine.From>
-                                <map:MapLatLng Latitude="77.1025"
-                                               Longitude="28.7041" />
+                                <map:MapLatLng Latitude="28.7041"
+                                               Longitude="77.1025" />
                             </map:MapLine.From>
                             <map:MapLine.To>
-                                <map:MapLatLng Latitude="133.7751"
-                                               Longitude="-25.2744" />
+                                <map:MapLatLng Latitude="-25.2744"
+                                               Longitude="133.7751" />
                             </map:MapLine.To>
                         </map:MapLine>
                     </map:MapLineLayer.Lines>
@@ -406,29 +398,29 @@ layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/
 layer.ShapeStroke = Brush.DarkGrey;
 MapLineLayer mapLineLayer = new MapLineLayer();
 MapLine line1 = new MapLine();
-line1.From = new MapLatLng(77.1025, 28.7041);
-line1.To = new MapLatLng(-106.3468, 56.1304);
+line1.From = new MapLatLng(28.7041, 77.1025);
+line1.To = new MapLatLng(56.1304, -106.3468);
 line1.Stroke = Color.FromRgb(138, 138, 138);
 line1.StrokeThickness = 2;
 line1.StrokeLineCap = LineCap.Round;
 MapLine line2 = new MapLine();
-line2.From = new MapLatLng(77.1025, 28.7041);
-line2.To = new MapLatLng(-75.0152, -9.1900);
+line2.From = new MapLatLng(28.7041, 77.1025);
+line2.To = new MapLatLng(-9.1900, -75.0152);
 line2.Stroke = Color.FromRgb(138, 138, 138);
 line2.StrokeThickness = 4;
-line1.StrokeLineCap = LineCap.Round;
+line2.StrokeLineCap = LineCap.Round;
 MapLine line3 = new MapLine();
-line3.From = new MapLatLng(77.1025, 28.7041);
-line3.To = new MapLatLng(105.3188, 61.5240);
+line3.From = new MapLatLng(28.7041, 77.1025);
+line3.To = new MapLatLng(61.5240, 105.3188);
 line3.Stroke = Color.FromRgb(138, 138, 138);
 line3.StrokeThickness = 5;
-line1.StrokeLineCap = LineCap.Round;
+line3.StrokeLineCap = LineCap.Round;
 MapLine line4 = new MapLine();
-line4.From = new MapLatLng(77.1025, 28.7041);
-line4.To = new MapLatLng(133.7751, -25.2744);
+line4.From = new MapLatLng(28.7041, 77.1025);
+line4.To = new MapLatLng(-25.2744, 133.7751);
 line4.Stroke = Color.FromRgb(138, 138, 138);
 line4.StrokeThickness = 6;
-line1.StrokeLineCap = LineCap.Round;
+line4.StrokeLineCap = LineCap.Round;
 mapLineLayer.Lines.Add(line1);
 mapLineLayer.Lines.Add(line2);
 mapLineLayer.Lines.Add(line3);
@@ -456,18 +448,18 @@ A sequence of dash and gap will be rendered based on the values in this list. On
 <map:SfMaps>
     <map:SfMaps.Layer>
         <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
-                           ShapeStroke="DarkGrey">
+                           ShapeStroke="DarkGrey" >
             <map:MapShapeLayer.Sublayers>
                 <map:MapLineLayer>
                     <map:MapLineLayer.Lines>
-                        <map:MapLine Stroke="#3d9bf2" >
+                        <map:MapLine Stroke="#3d9bf2">
                             <map:MapLine.From>
-                                <map:MapLatLng Latitude="77.1025"
-                                               Longitude="28.7041" />
+                                <map:MapLatLng Latitude="28.7041"
+                                               Longitude="77.1025" />
                             </map:MapLine.From>
                             <map:MapLine.To>
-                                <map:MapLatLng Latitude="-106.3468"
-                                               Longitude="56.1304" />
+                                <map:MapLatLng Latitude="56.1304"
+                                               Longitude="-106.3468" />
                             </map:MapLine.To>
                             <map:MapLine.StrokeDashArray>
                                 <DoubleCollection>
@@ -480,12 +472,12 @@ A sequence of dash and gap will be rendered based on the values in this list. On
                         </map:MapLine>
                         <map:MapLine Stroke="#3d9bf2">
                             <map:MapLine.From>
-                                <map:MapLatLng Latitude="77.1025"
-                                               Longitude="28.7041" />
+                                <map:MapLatLng Latitude="28.7041"
+                                               Longitude="77.1025" />
                             </map:MapLine.From>
                             <map:MapLine.To>
-                                <map:MapLatLng Latitude="-75.0152"
-                                               Longitude="-9.1900" />
+                                <map:MapLatLng Latitude="-9.1900"
+                                               Longitude="-75.0152" />
                             </map:MapLine.To>
                             <map:MapLine.StrokeDashArray>
                                 <DoubleCollection>
@@ -498,12 +490,12 @@ A sequence of dash and gap will be rendered based on the values in this list. On
                         </map:MapLine>
                         <map:MapLine Stroke="#3d9bf2">
                             <map:MapLine.From>
-                                <map:MapLatLng Latitude="77.1025"
-                                               Longitude="28.7041" />
+                                <map:MapLatLng Latitude="28.7041"
+                                               Longitude="77.1025" />
                             </map:MapLine.From>
                             <map:MapLine.To>
-                                <map:MapLatLng Latitude="105.3188"
-                                               Longitude="61.5240" />
+                                <map:MapLatLng Latitude="61.5240"
+                                               Longitude="105.3188" />
                             </map:MapLine.To>
                             <map:MapLine.StrokeDashArray>
                                 <DoubleCollection>
@@ -516,12 +508,12 @@ A sequence of dash and gap will be rendered based on the values in this list. On
                         </map:MapLine>
                         <map:MapLine Stroke="#3d9bf2">
                             <map:MapLine.From>
-                                <map:MapLatLng Latitude="77.1025"
-                                               Longitude="28.7041" />
+                                <map:MapLatLng Latitude="28.7041"
+                                               Longitude="77.1025" />
                             </map:MapLine.From>
                             <map:MapLine.To>
-                                <map:MapLatLng Latitude="133.7751"
-                                               Longitude="-25.2744" />
+                                <map:MapLatLng Latitude="-25.2744"
+                                               Longitude="133.7751" />
                             </map:MapLine.To>
                             <map:MapLine.StrokeDashArray>
                                 <DoubleCollection>
@@ -549,25 +541,23 @@ layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/
 layer.ShapeStroke = Brush.DarkGrey;
 MapLineLayer mapLineLayer = new MapLineLayer();
 MapLine line1 = new MapLine();
-line1.From = new MapLatLng(77.1025, 28.7041);
-line1.To = new MapLatLng(-106.3468, 56.1304);
+line1.From = new MapLatLng(28.7041, 77.1025);
+line1.To = new MapLatLng(56.1304, -106.3468);
 line1.Stroke = Color.FromRgb(61, 155, 242);
-line1.StrokeThickness = 2;
 line1.StrokeDashArray = new double[] { 8, 4, 2, 4 };
-line1.StrokeLineCap = LineCap.Round;
 MapLine line2 = new MapLine();
-line2.From = new MapLatLng(77.1025, 28.7041);
-line2.To = new MapLatLng(-75.0152, -9.1900);
+line2.From = new MapLatLng(28.7041, 77.1025);
+line2.To = new MapLatLng(-9.1900, -75.0152);
 line2.Stroke = Color.FromRgb(61, 155, 242);
 line2.StrokeDashArray = new double[] { 8, 4, 2, 4 };
 MapLine line3 = new MapLine();
-line3.From = new MapLatLng(77.1025, 28.7041);
-line3.To = new MapLatLng(105.3188, 61.5240);
+line3.From = new MapLatLng(28.7041, 77.1025);
+line3.To = new MapLatLng(61.5240, 105.3188);
 line3.Stroke = Color.FromRgb(61, 155, 242);
 line3.StrokeDashArray = new double[] { 8, 4, 2, 4 };
 MapLine line4 = new MapLine();
-line4.From = new MapLatLng(77.1025, 28.7041);
-line4.To = new MapLatLng(133.7751, -25.2744);
+line4.From = new MapLatLng(28.7041, 77.1025);
+line4.To = new MapLatLng(-25.2744, 133.7751);
 line4.Stroke = Color.FromRgb(61, 155, 242);
 line4.StrokeDashArray = new double[] { 8, 4, 2, 4 };
 mapLineLayer.Lines.Add(line1);
@@ -583,3 +573,107 @@ this.Content = maps;
 {% endtabs %}
 
 ![Line shape dash array](images/line-layer/line_shape_dash_array.png)
+
+## Animation
+
+You can apply animation for the [`MapLine`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLine.html) using the [`MapLineLayer.AnimationDuration`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLineLayer.html#Syncfusion_Maui_Maps_MapLineLayer_AnimationDuration) and [`MapLineLayer.AnimationEasing`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLineLayer.html#Syncfusion_Maui_Maps_MapLineLayer_AnimationEasing) properties.
+
+By default, there will be no animation.
+
+N> Animation is only applicable for the load time.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<map:SfMaps>
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                           ShapeStroke="DarkGrey">
+            <map:MapShapeLayer.Sublayers>
+                <map:MapLineLayer AnimationDuration="3000"
+                                  AnimationEasing="{x:Static Easing.Linear}">
+                    <map:MapLineLayer.Lines>
+                        <map:MapLine>
+                            <map:MapLine.From>
+                                <map:MapLatLng Latitude="28.7041"
+                                               Longitude="77.1025" />
+                            </map:MapLine.From>
+                            <map:MapLine.To>
+                                <map:MapLatLng Latitude="56.1304"
+                                               Longitude="-106.3468" />
+                            </map:MapLine.To>
+                        </map:MapLine>
+                        <map:MapLine>
+                            <map:MapLine.From>
+                                <map:MapLatLng Latitude="28.7041"
+                                               Longitude="77.1025" />
+                            </map:MapLine.From>
+                            <map:MapLine.To>
+                                <map:MapLatLng Latitude="-9.1900"
+                                               Longitude="-75.0152" />
+                            </map:MapLine.To>
+                        </map:MapLine>
+                        <map:MapLine>
+                            <map:MapLine.From>
+                                <map:MapLatLng Latitude="28.7041"
+                                               Longitude="77.1025" />
+                            </map:MapLine.From>
+                            <map:MapLine.To>
+                                <map:MapLatLng Latitude="61.5240"
+                                               Longitude="105.3188" />
+                            </map:MapLine.To>
+                        </map:MapLine>
+                        <map:MapLine>
+                            <map:MapLine.From>
+                                <map:MapLatLng Latitude="28.7041"
+                                               Longitude="77.1025" />
+                            </map:MapLine.From>
+                            <map:MapLine.To>
+                                <map:MapLatLng Latitude="-25.2744"
+                                               Longitude="133.7751" />
+                            </map:MapLine.To>
+                        </map:MapLine>
+                    </map:MapLineLayer.Lines>
+                </map:MapLineLayer>
+            </map:MapShapeLayer.Sublayers>
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfMaps maps = new SfMaps();
+MapShapeLayer layer = new MapShapeLayer();
+layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/
+layer.ShapeStroke = Brush.DarkGray;
+MapLineLayer mapLineLayer = new MapLineLayer();
+mapLineLayer.AnimationDuration = 3000;
+mapLineLayer.AnimationEasing = Easing.Linear;
+MapLine line1 = new MapLine();
+line1.From = new MapLatLng(28.7041, 77.1025);
+line1.To = new MapLatLng(56.1304, -106.3468);
+MapLine line2 = new MapLine();
+line2.From = new MapLatLng(28.7041, 77.1025);
+line2.To = new MapLatLng(-9.1900, -75.0152);
+MapLine line3 = new MapLine();
+line3.From = new MapLatLng(28.7041, 77.1025);
+line3.To = new MapLatLng(61.5240, 105.3188);
+MapLine line4 = new MapLine();
+line4.From = new MapLatLng(28.7041, 77.1025);
+line4.To = new MapLatLng(-25.2744, 133.7751);
+mapLineLayer.Lines.Add(line1);
+mapLineLayer.Lines.Add(line2);
+mapLineLayer.Lines.Add(line3);
+mapLineLayer.Lines.Add(line4);
+layer.Sublayers.Add(mapLineLayer);
+maps.Layer = layer;
+this.Content = maps;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Line animation support](images/line-layer/line_animation.gif)
