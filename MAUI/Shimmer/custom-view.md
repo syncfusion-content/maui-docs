@@ -9,7 +9,7 @@ documentation: ug
 
 # Custom view of .NET MAUI Shimmer (SfShimmer)
 
-The `CustomView` property of `SfShimmer` can be used to create your own shimmer view. The below code demonstrate how to customize the shimmer view using .NET MAUI framework elements by `CustomView`.
+The `CustomView` property of the `SfShimmer` can be used to create your shimmer view. The below code demonstrates how to customize the shimmer view using the .NET MAUI framework elements by `CustomView`.
 
 {% tabs %}
 
@@ -381,7 +381,7 @@ The `CustomView` property of `SfShimmer` can be used to create your own shimmer 
 
 ## Shimmer view
 
-You can customize the `ShimmerView` using the `CustomView` property of `SfShimmer` and also you can change shape of the shimmer wave by using the property `ShapeType`.
+You can customize the `ShimmerView` using the `CustomView` property of `SfShimmer`, and also you can change the shape of the shimmer wave using the property `ShapeType`.
 
 {% tabs %} 
 
