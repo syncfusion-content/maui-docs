@@ -17,7 +17,7 @@ To render a bubble chart, create an instance of [BubbleSeries](), and add it to 
 
 The size of the [BubbleSeries]() is relatively proportional to the value bound with the series using the [SizeValuePath]() property. You can set the constraints on this size using the [MinimumRadius]() and [MaximumRadius](). The following code illustrates how to set the value to the property. 
 
-N> The cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) as its default content.
+N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) as its default content.
 
 {% tabs %}
 
@@ -62,8 +62,6 @@ N> The cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
 {% endhighlight %}
 
 {% endtabs %}
-
-![Bubble chart type in MAUI Chart]()
 
 ## Show zero size bubbles
 The zero size bubble segments can be enabled or disabled using the [ShowZeroSizeBubbles]() property. By default, the property value is True. The following code illustrates how to set the value to the property.
