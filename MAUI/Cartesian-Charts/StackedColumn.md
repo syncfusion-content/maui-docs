@@ -73,6 +73,7 @@ this.Content = chart;
 
 {% endtabs %}
 
+![ Stacked column chart type in MAUI Chart]()
 
 ## Grouping Series
 
@@ -150,6 +151,7 @@ this.Content = chart;
 
 {% endtabs %}
 
+![Grouping label in MAUI Chart]()
 
 ## Appearance customization
 
