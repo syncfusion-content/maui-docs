@@ -78,7 +78,7 @@ documentation: ug
 
 ### Connector line customization
 
-The connector line can be customized by applying the[ConnectorLineStyle]() property of the series.
+The connector line can be customized by applying the [ConnectorLineStyle]() property of the series.
 The following code example illustrates how to apply style for connector line.
 
 {% tabs %}
