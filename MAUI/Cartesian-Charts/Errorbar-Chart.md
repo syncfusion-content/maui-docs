@@ -414,7 +414,7 @@ If the Type is Custom, you have to bind the [HorizontalErrorPath]() and the [Ver
                           HorizontalErrorValue="0.5"
                           Type="Custom"
                           HorizontalErrorPath="HorizontalErrorValue"
-                          VerticalErrorPath="VerticalErrorValue">
+                          VerticalErrorPath="VerticalErrorValue" >
     </chart:ErrorBarSeries>
 
 {% endhighlight %}
