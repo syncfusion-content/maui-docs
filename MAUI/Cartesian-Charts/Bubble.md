@@ -64,6 +64,8 @@ N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
 
 {% endtabs %}
 
+![Bubble chart type in MAUI Chart](Chart-Types_images/BubbleBasisImage.png)
+
 ## Show zero size bubbles
 The zero size bubble segments can be enabled or disabled using the [ShowZeroSizeBubbles]() property. By default, the property value is True. The following code illustrates how to set the value to the property.
 
@@ -101,3 +103,5 @@ The zero size bubble segments can be enabled or disabled using the [ShowZeroSize
 {% endhighlight %}
 
 {% endtabs %}
+
+![ShowZeroSize bubble  type in MAUI Chart](Chart-Types_images/ShowZeroSizeBubble.png)
