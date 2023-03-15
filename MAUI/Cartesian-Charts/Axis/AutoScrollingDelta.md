@@ -51,6 +51,8 @@ By adding [ChartZoomPanBehavior]() to the chart, you can scroll to see the previ
 
 {% endtabs %}
 
+![Auto scrolling delta support in MAUI Chart](Axis_Images/AutoScrolldelta.png)
+
 ## AutoScrollingMode
 
 [AutoScrollingMode]() property can be used to determine whether the axis should be scrolled from start position or end position. The default value of [AutoScrollingMode]() is End.
@@ -84,6 +86,8 @@ By adding [ChartZoomPanBehavior]() to the chart, you can scroll to see the previ
 
 {% endtabs %}
 
+![Scrolling mode support in MAUI Chart](Axis_Images/ScrollingModeStart.png)
+
 ## AutoScrollingDeltaType
 
 In [DateTimeAxis](), you can apply auto scrolling delta value in [Years](), [Months](), [Days](), [Hours](), [Minutes](), [Seconds]() and [Milliseconds]() by setting [AutoScrollingDeltaType]() property. The default value of this property is [Auto](), and the delta will be calculated automatically based on range.
@@ -116,3 +120,5 @@ In [DateTimeAxis](), you can apply auto scrolling delta value in [Years](), [Mon
 {% endhighlight %}
 
 {% endtabs %}
+
+![Scrolling delta type support in MAUI Chart](Axis_Images/AutoscrollingType.png)
