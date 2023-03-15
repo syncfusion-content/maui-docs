@@ -32,10 +32,11 @@ N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
         <chart:NumericalAxis />
     </chart:SfCartesianChart.YAxes>  
                 
-    <chart:BubbleSeries  ItemsSource="{Binding Data}"
-						 XBindingPath="XValue"
-						 YBindingPath="YValue"
-                         SizeValuePath="Size"/>
+        <chart:BubbleSeries ItemsSource="{Binding Data}"
+                            XBindingPath="XValue"
+                            YBindingPath="YValue"
+                            SizeValuePath="Size"/>
+
     </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -72,11 +73,11 @@ The zero size bubble segments can be enabled or disabled using the [ShowZeroSize
 
     <chart:SfCartesianChart>
         . . .
-        <chart:BubbleSeries ItemsSource="{Binding Data}"
-						    XBindingPath="XValue"
-						    YBindingPath="YValue"
-                            SizeValuePath="Size"
-                            ShowZeroSizeBubbles="False"/>
+            <chart:BubbleSeries ItemsSource="{Binding Data}"
+                                XBindingPath="XValue"
+                                YBindingPath="YValue"
+                                SizeValuePath="Size"
+                                ShowZeroSizeBubbles="False"/>
 
     </chart:SfCartesianChart>
 
