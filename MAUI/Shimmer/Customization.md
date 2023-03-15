@@ -22,7 +22,7 @@ This section explains how to customize the Shimmer control.
 
 ## Fill
 
-The background color of the `SfShimmer` view can be customized by using the `Fill` property. The default value of `Fill` property is "#F3EDF7" Color.
+The background color of the `SfShimmer` view can be customized by using the `Fill` property. The default value of the `Fill` property is `#F3EDF7`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -57,7 +57,7 @@ this.Content = Shimmer;
 
 ## WaveColor
 
-The color of wave in `SfShimmer` view can be customized by using the `WaveColor` property. The default value of `WaveColor` is `#F3EDF7` Color.
+The wave color in the `SfShimmer` view can be customized using the `WaveColor` property. The default value of `WaveColor` is the `#F3EDF7` Color.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -92,7 +92,7 @@ this.Content = Shimmer;
 
 ## WaveWidth
 
-The width of wave in `SfShimmer` view can be customized by using the `WaveWidth` property. The default value of `WaveWidth` is `200`.
+The width of the wave in the `SfShimmer` view can be customized using the `WaveWidth` property. The default value of `WaveWidth` is `200`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -129,7 +129,7 @@ this.Content = Shimmer;
 
 ## WaveDirection
 
-The direction of wave in `SfShimmer` view can be customized by using the `WaveDirection` property. By default, wave direction is rendered by `Default` wave. The following wave directions are available in SfShimmer:
+The direction of the wave in the `SfShimmer` view can be customized by using the `WaveDirection` property. By default, wave direction is rendered by the `Default` wave. The following wave directions are available in SfShimmer:
 
 * `Default` - Default enum of the animation direction allows the animation from left top to right bottom.
 * `LeftToRight` - LeftToRight enum of the animation direction allows the animation from left to right.
@@ -170,7 +170,7 @@ this.Content = Shimmer;
 
 ## RepeatCount
 
-The `RepeatCount` of the shimmer refers to the number of times that a shimmer cycle repeats within a given time period of wave in `SfShimmer` view. The default value of `RepeatCount` is `1`.
+The `RepeatCount` of the shimmer refers to the number of times a shimmer cycle repeats within a given wave period in the `SfShimmer` view. The default value of `RepeatCount` is `1`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -205,7 +205,7 @@ this.Content = Shimmer;
 
 ## AnimationDuration
 
-The duration of the animation in `SfShimmer` view can be customized by using the `AnimationDuration` property. The default value of `AnimationDuration` is 1000 ms.
+The duration of the animation in the `SfShimmer` view can be customized using the `AnimationDuration` property. The default value of `AnimationDuration` is `1000 ms`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
