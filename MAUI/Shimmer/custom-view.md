@@ -1,7 +1,7 @@
 ---
 layout: post
 title: About .NET MAUI Shimmer control | Syncfusion
-description: Learn here about the Custom view of Syncfusion .NET MAUI Shimmer (SfShimmer) control, its basic features, elements and more.
+description: Learn here all about the Custom view support in Syncfusion .NET MAUI Shimmer (SfShimmer) control and more.
 platform: maui
 control: SfShimmer
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # Custom view of .NET MAUI Shimmer (SfShimmer)
 
-The `CustomView` property of `SfShimmer` can be used to create your own shimmer view. The below code demonstrate how to customize the shimmer view using .NET MAUI framework elements by [`CustomView`].
+The `CustomView` property of `SfShimmer` can be used to create your own shimmer view. The below code demonstrate how to customize the shimmer view using .NET MAUI framework elements by `CustomView`.
 
-{% tabs %} 
+{% tabs %}
 
 {% highlight xaml %} 
 
@@ -381,142 +381,154 @@ The `CustomView` property of `SfShimmer` can be used to create your own shimmer 
 
 ## Shimmer view
 
-You can customize the `ShimmerView` using the `CustomView` property of `SfShimmer`.
+You can customize the `ShimmerView` using the `CustomView` property of `SfShimmer` and also you can change shape of the shimmer wave by using the property `ShapeType`.
 
 {% tabs %} 
 
 {% highlight xaml %} 
 
         <shimmer:SfShimmer>
-            <shimmer:SfShimmer.CustomView>
-                <Grid Padding="10"
+        <shimmer:SfShimmer.CustomView>
+            <Grid Padding="10"
                       ColumnSpacing="15"
                       RowSpacing="10">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="10" />
-                        <RowDefinition Height="10" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                    </Grid.RowDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
 
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                    </Grid.ColumnDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
 
-                    <shimmer:ShimmerView Grid.Row="0"
+                <shimmer:ShimmerView Grid.Row="0"
                                          Grid.ColumnSpan="2"
                                          HorizontalOptions="Start"
                                          WidthRequest="300" />
 
-                    <shimmer:ShimmerView Grid.Row="1"
+                <shimmer:ShimmerView Grid.Row="1"
                                          Grid.ColumnSpan="2"
                                          HorizontalOptions="Start"
                                          WidthRequest="250" />
 
-                    <shimmer:ShimmerView Grid.Row="2"
+                <shimmer:ShimmerView Grid.Row="2"
                                          Grid.ColumnSpan="2"
                                          HeightRequest="10"
                                          HorizontalOptions="Start"
                                          VerticalOptions="Start"
                                          WidthRequest="280" />
 
-                    <shimmer:ShimmerView Grid.Row="3"
+                <shimmer:ShimmerView Grid.Row="3"
                                          Grid.ColumnSpan="2"
                                          HeightRequest="10"
                                          HorizontalOptions="Start"
                                          VerticalOptions="Start"
                                          WidthRequest="260" />
 
-                    <shimmer:ShimmerView Grid.Row="5"
-                                         Grid.RowSpan="8" />
+                <shimmer:ShimmerView Grid.Row="5"
+                                     Grid.RowSpan="8"
+                                     ShapeType="Circle"/>
 
-                    <shimmer:ShimmerView Grid.Row="5"
+                <shimmer:ShimmerView Grid.Row="5"
+                                     Grid.Column="1"
+                                     HeightRequest="10"
+                                     ShapeType="Rectangle"
+                                     HorizontalOptions="Start"
+                                     VerticalOptions="Start"
+                                     WidthRequest="180" />
+
+                <shimmer:ShimmerView Grid.Row="6"
                                          Grid.Column="1"
                                          HeightRequest="10"
-                                         HorizontalOptions="Start"
-                                         VerticalOptions="Start"
-                                         WidthRequest="180" />
-
-                    <shimmer:ShimmerView Grid.Row="6"
-                                         Grid.Column="1"
-                                         HeightRequest="10"
+                                     ShapeType="Rectangle"
                                          HorizontalOptions="Start"
                                          VerticalOptions="Start"
                                          WidthRequest="190" />
 
-                    <shimmer:ShimmerView Grid.Row="7"
+                <shimmer:ShimmerView Grid.Row="7"
                                          Grid.Column="1"
+                                     ShapeType="Rectangle"
                                          HeightRequest="10"
                                          HorizontalOptions="Start"
                                          VerticalOptions="Start"
                                          WidthRequest="170" />
 
-                    <shimmer:ShimmerView Grid.Row="8"
+                <shimmer:ShimmerView Grid.Row="8"
                                          Grid.Column="1"
+                                     ShapeType="Rectangle"
                                          HeightRequest="10"
                                          HorizontalOptions="Start"
                                          VerticalOptions="Start"
                                          WidthRequest="180" />
 
-                    <shimmer:ShimmerView Grid.Row="9"
-                                         Grid.Column="1"
-                                         HeightRequest="10"
-                                         HorizontalOptions="Start"
-                                         VerticalOptions="Start"
-                                         WidthRequest="150" />
+                <shimmer:ShimmerView Grid.Row="9"
+                                     Grid.Column="1"
+                                     ShapeType="Rectangle"
+                                     HeightRequest="10"
+                                     HorizontalOptions="Start"
+                                     VerticalOptions="Start"
+                                     WidthRequest="150" />
 
-                    <shimmer:ShimmerView Grid.Row="10"
-                                         Grid.Column="1"
-                                         HeightRequest="10"
-                                         HorizontalOptions="Start"
-                                         VerticalOptions="Start"
-                                         WidthRequest="160" />
+                <shimmer:ShimmerView Grid.Row="10"
+                                     Grid.Column="1"
+                                     HeightRequest="10"
+                                     ShapeType="Rectangle"
+                                     HorizontalOptions="Start"
+                                     VerticalOptions="Start"
+                                     WidthRequest="160" />
 
-                    <shimmer:ShimmerView Grid.Row="11"
+                <shimmer:ShimmerView Grid.Row="11"
                                          Grid.Column="1"
                                          HeightRequest="10"
+                                     ShapeType="Rectangle"
                                          HorizontalOptions="Start"
                                          VerticalOptions="Start"
                                          WidthRequest="175" />
 
-                    <shimmer:ShimmerView Grid.Row="13"
-                                         Grid.RowSpan="3"
-                                         Grid.Column="1"
-                                         Margin="0,5,0,0" />
+                <shimmer:ShimmerView Grid.Row="13"
+                                     Grid.RowSpan="3"
+                                     Grid.Column="1"
+                                     ShapeType="RoundedRectangle"
+                                     Margin="0,5,0,0" />
 
-                    <shimmer:ShimmerView Grid.Row="13"
-                                         HeightRequest="10"
-                                         HorizontalOptions="Start"
-                                         VerticalOptions="Start"
-                                         WidthRequest="150" />
+                <shimmer:ShimmerView Grid.Row="13"
+                                     ShapeType="Rectangle"
+                                     HeightRequest="10"
+                                     HorizontalOptions="Start"
+                                     VerticalOptions="Start"
+                                     WidthRequest="150" />
 
-                    <shimmer:ShimmerView Grid.Row="14"
-                                         HeightRequest="10"
-                                         HorizontalOptions="Start"
-                                         VerticalOptions="Start"
-                                         WidthRequest="160" />
+                <shimmer:ShimmerView Grid.Row="14"
+                                     HeightRequest="10"
+                                     ShapeType="Rectangle"
+                                     HorizontalOptions="Start"
+                                     VerticalOptions="Start"
+                                     WidthRequest="160" />
 
-                    <shimmer:ShimmerView Grid.Row="15"
+                <shimmer:ShimmerView Grid.Row="15"
+                                     ShapeType="Rectangle"
                                          HeightRequest="10"
                                          HorizontalOptions="Start"
                                          VerticalOptions="Start"
                                          WidthRequest="175" />
-                </Grid>
-            </shimmer:SfShimmer.CustomView>
-        </shimmer:SfShimmer>
+            </Grid>
+        </shimmer:SfShimmer.CustomView>
+    </shimmer:SfShimmer>
 
 {% endhighlight %}
 
@@ -580,14 +592,18 @@ You can customize the `ShimmerView` using the `CustomView` property of `SfShimme
                 HeightRequest = 10,
             };
 
-            var shimmerView5 = new ShimmerView();
+            var shimmerView5 = new ShimmerView()
+            {
+                ShapeType = ShimmerShapeType.Circle,
+            }
 
             var shimmerView6 = new ShimmerView
             {
                 HorizontalOptions = LayoutOptions.Start,
                 HeightRequest = 10,
                 VerticalOptions = LayoutOptions.Start,
-                WidthRequest = 180
+                WidthRequest = 180,
+                ShapeType = ShimmerShapeType.Rectangle,
             };
 
             var shimmerView7 = new ShimmerView
@@ -603,7 +619,8 @@ You can customize the `ShimmerView` using the `CustomView` property of `SfShimme
                 HorizontalOptions = LayoutOptions.Start,
                 VerticalOptions = LayoutOptions.Start,
                 HeightRequest = 10,
-                WidthRequest = 170
+                WidthRequest = 170,
+                ShapeType = ShimmerShapeType.Rectangle,
             };
             
             var shimmerView9 = new ShimmerView
@@ -611,7 +628,8 @@ You can customize the `ShimmerView` using the `CustomView` property of `SfShimme
                 HorizontalOptions = LayoutOptions.Start,
                 VerticalOptions = LayoutOptions.Start,
                 HeightRequest = 10,
-                WidthRequest = 180
+                WidthRequest = 180.
+                ShapeType = ShimmerShapeType.Rectangle,
             };
             
             var shimmerView10 = new ShimmerView
@@ -619,7 +637,8 @@ You can customize the `ShimmerView` using the `CustomView` property of `SfShimme
                 HorizontalOptions = LayoutOptions.Start,
                 VerticalOptions = LayoutOptions.Start,
                 HeightRequest = 10,
-                WidthRequest = 150
+                WidthRequest = 150,
+                ShapeType = ShimmerShapeType.Rectangle,
             };
 
             var shimmerView11 = new ShimmerView
@@ -627,7 +646,8 @@ You can customize the `ShimmerView` using the `CustomView` property of `SfShimme
                 HorizontalOptions = LayoutOptions.Start,
                 VerticalOptions = LayoutOptions.Start,
                 HeightRequest = 10,
-                WidthRequest = 160
+                WidthRequest = 160,
+                ShapeType = ShimmerShapeType.Rectangle,
             };
             
             var shimmerView12 = new ShimmerView
@@ -640,7 +660,8 @@ You can customize the `ShimmerView` using the `CustomView` property of `SfShimme
             
             var shimmerView13 = new ShimmerView
             {
-                Margin = new Thickness(0, 5, 0, 0)
+                Margin = new Thickness(0, 5, 0, 0),
+                ShapeType = ShimmerShapeType.RoundedRectangle,
             };
             
             var shimmerView14 = new ShimmerView
