@@ -503,9 +503,7 @@ You can define the LineStyle for the error bar lines using the [HorizontalLineSt
 
 ### Cap Line Style
 
-You can define the CapLineStyle for the error bar lines using the [HorizontalCapLineStyle]() and the[VerticalCapLineStyle]() properties as in the following code examples.
-
-#### Horizontal Cap Line Style
+You can define the CapLineStyle for the error bar lines using the [HorizontalCapLineStyle]() and the [VerticalCapLineStyle]() properties as in the following code examples.
 
 {% tabs %}
 
