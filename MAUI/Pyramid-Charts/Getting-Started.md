@@ -11,6 +11,10 @@ documentation: ug
 
 This section explains how to populate the pyramid chart with data, a title, data labels, a legend, and tooltips, as well as the essential aspects for getting started with the pyramid chart.
 
+To get start quickly with our .NET MAUI Pyramid Chart, you can check the below video.
+
+{% youtube "https://www.youtube.com/watch?v=wJhqKHduXTI&t=2s" %}
+
 ## Creating an application using the .NET MAUI chart(SfPyramidChart)
 
 1. Create a new .NET MAUI application in Visual Studio.
@@ -50,7 +54,7 @@ public partial class MainWindow : ContentPage
 
 ## Register the handler
 
-Syncfusion.Maui.Core Nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
+Syncfusion.Maui.Core NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
 
 {% highlight C# %}
 
