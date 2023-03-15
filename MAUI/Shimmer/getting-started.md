@@ -15,8 +15,7 @@ This section explains how to add the Shimmer control.
 
 1. Create a new .NET MAUI application in Visual Studio.
 
-2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add `SfShimmer` to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core), and then install it.
-
+2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfShimmer to your project, open the NuGet package manager in Visual Studio, and search for the [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core), and then install it.
 3. To initialize the control, import the control namespace `Syncfusion.Maui.Shimmer` in XAML or C# code.
 
 4. Initialize `SfShimmer.`
@@ -85,7 +84,7 @@ namespace GettingStarted
 
 ## Change different Shimmer views
 
-The `.NET MAUI Shimmer` control provides seven different Shimmer types of views, it can be assigned to the control using the `Type` property. By default, the control is assigned to the `CirclePersona` view.
+The `.NET MAUI Shimmer` control provides seven different Shimmer types of views. It can be assigned to the control using the `Type` property. By default, the control is assigned to the `CirclePersona` view.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
