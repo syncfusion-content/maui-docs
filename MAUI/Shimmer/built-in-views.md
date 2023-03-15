@@ -11,7 +11,7 @@ documentation: ug
 
 ## Built-in types
 
-Syncfusion .NET MAUI Shimmer (SfShimmer) control provides seven different built-in shimmer view types.
+Syncfusion .NET MAUI Shimmer (SfShimmer) control provides seven built-in shimmer view types.
 
 * `CirclePersona`
 * `SquarePersona`
@@ -21,7 +21,7 @@ Syncfusion .NET MAUI Shimmer (SfShimmer) control provides seven different built-
 * `Feed`
 * `Shopping`
 
-The built-in shimmer types can be used by setting the `Type` of `SfShimmer`. By default, `CirclePersona` is initially rendered.
+The built-in shimmer types can be used by setting the `Type` of `SfShimmer`. By default, the `CirclePersona` is initially rendered.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
