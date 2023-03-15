@@ -623,7 +623,6 @@ chart.SelectionBehavior = selection;
 
 **Chart** 
 
-* Exporting support for a chart as an image or a stream.
 * Support for chart localization.
 * Listen to property change support for chart.
 * Notify event or method when chart is rendering.
