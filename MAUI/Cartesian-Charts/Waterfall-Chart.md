@@ -13,15 +13,11 @@ documentation: ug
 
 [WaterfallSeries]() clarifies the cumulative effect of a set of provided positive and negative values. The series is represented by a rectangle and a connector between the rectangles. To render a waterfall chart, create an instance of [WaterfallSeries](), and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of the [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1)
 
-*`SummaryBindingPath`- gets or sets the string value that indicates the sum of previous segments in the series.
-
-*`SummaryPointsBrush`- Appearance of the summary segment can be differentiated by applying the [SummaryPointsBrush]() in series.
-
-*`NegativePointsBrush`- Appearance of the negative segment can be changed by using the [NegativePointsBrush]() property of series.
-
-*`AllowAutoSum`- The summary segment calculation can be changed by using the [AllowAutoSum]() property. By default, the property is true. When disabling this property, it renders the segment by using the y value of provided ItemsSource collection.
-
-*`ShowConnectorLine`- The connector line of series can be enabled or disabled by using its [ShowConnectorLine]() line property. By default, the property value is true.
+* [SummaryBindingPath]() of the string type is used to get or set the path value on the source subject to serve summary values to the series.
+* [SummaryPointsBrush]() of brush type is used to change the fill of the summary segment of the series. .
+* [NegativePointsBrush]() of brush type is used to change the fill of the negative segment of the series.
+* [AllowAutoSum]() of bool type is used to change the summary segment calculation. By default, the property is true. When disabling this property, it renders the segment by using the y value of provided ItemsSource collection.
+* [ShowConnectorLine]() of bool type is used to enable or disable the connector line. By default, the property value is true.
 
 {% tabs %}
 
