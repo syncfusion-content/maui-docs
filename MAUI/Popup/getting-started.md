@@ -88,7 +88,7 @@ Refer to the following code example for displaying popup.
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -105,7 +105,7 @@ Refer to the following code example for displaying popup.
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 using Syncfusion.Maui.Popup;
 
@@ -162,7 +162,7 @@ Any view can be added as popup content by using the `SfPopup.ContentTemplate` pr
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -191,7 +191,7 @@ Any view can be added as popup content by using the `SfPopup.ContentTemplate` pr
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 using Syncfusion.Maui.Popup;
 
