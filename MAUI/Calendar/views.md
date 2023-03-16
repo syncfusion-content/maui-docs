@@ -140,28 +140,49 @@ this.Calendar.MonthView.SpecialDayPredicate = (date) =>
     if (date.Date == DateTime.Now.AddDays(2).Date)
     {
         CalendarIconDetails iconDetails = new CalendarIconDetails();
-        iconDetails.Icon = CalendarIcon.Dot;
-        iconDetails.Fill = Colors.Black;
+        iconDetails.Icon = CalendarIcon.Circle;
+        iconDetails.Fill = Colors.Red;
         return iconDetails;
     }
-    else if (date.Date == DateTime.Now.AddDays(6).Date || date.Date == DateTime.Now.AddDays(-15).Date)
+    else if (date.Date == DateTime.Now.AddDays(3).Date)
+    {
+        CalendarIconDetails iconDetails = new CalendarIconDetails();
+        iconDetails.Icon = CalendarIcon.Triangle;
+        iconDetails.Fill = Colors.Blue;
+        return iconDetails;
+    }
+    else if (date.Date == DateTime.Now.AddDays(4).Date)
+    {
+        CalendarIconDetails iconDetails = new CalendarIconDetails();
+        iconDetails.Icon = CalendarIcon.Square;
+        iconDetails.Fill = Colors.Green;
+        return iconDetails;
+    }
+    else if (date.Date == DateTime.Now.AddDays(5).Date)
     {
         CalendarIconDetails iconDetails = new CalendarIconDetails();
         iconDetails.Icon = CalendarIcon.Heart;
         iconDetails.Fill = Colors.Red;
         return iconDetails;
     }
-    else if (date.Date == DateTime.Now.AddDays(-10).Date)
+    else if (date.Date == DateTime.Now.AddDays(6).Date)
     {
         CalendarIconDetails iconDetails = new CalendarIconDetails();
         iconDetails.Icon = CalendarIcon.Diamond;
         iconDetails.Fill = Colors.Blue;
         return iconDetails;
     }
-    else if (date.Date == DateTime.Now.AddDays(15).Date)
+    else if (date.Date == DateTime.Now.AddDays(7).Date)
     {
         CalendarIconDetails iconDetails = new CalendarIconDetails();
-        iconDetails.Icon = CalendarIcon.Triangle;
+        iconDetails.Icon = CalendarIcon.Bell;
+        iconDetails.Fill = Colors.Black;
+        return iconDetails;
+    }
+    else if (date.Date == DateTime.Now.AddDays(8).Date)
+    {
+        CalendarIconDetails iconDetails = new CalendarIconDetails();
+        iconDetails.Icon = CalendarIcon.Star;
         iconDetails.Fill = Colors.Green;
         return iconDetails;
     }
@@ -171,6 +192,8 @@ this.Calendar.MonthView.SpecialDayPredicate = (date) =>
 
 {% endhighlight %}
 {% endtabs %}
+
+![Special day icon in .NET MAUI Calendar.](images/views/maui-special_day_predicate.png)
 
 ## Year view
 The Year view displays the current year's month. A calendar year is a one-year period that begins on January 1 and ends on December 31. By default, displays the current year's month and the current month is highlighted by a separate color that is different from the rest of the month color in the `Year view`. You can easily navigate to the desired month dates from the year view.
