@@ -9,7 +9,7 @@ documentation: ug
 
 # Formatting value in MAUI MaskedEntry
 
-The `MaskedEntry` control allows you to format input values with prompt and literal characters which are defined in the mask expression by setting the [ValueMaskFormat] property. By default, the [Value] property of the control includes the characters typed by the user, as well as any prompt or literal characters in the input. The control provides several formatting options, which are listed below.
+The `MaskedEntry` control allows you to format input values with prompt and literal characters which are defined in the mask expression by setting the `ValueMaskFormat` property. By default, the `Value` property of the control includes the characters typed by the user, as well as any prompt or literal characters in the input. The control provides several formatting options, which are listed below.
 
 1. ExcludePromptAndLiterals
 2. IncludePrompt
@@ -23,7 +23,7 @@ Set up the MaskedTextBox to exclude prompt and literal characters, preserving on
 {% tabs %}
 {% highlight XAML %}
 
-<syncfusion:SfMaskedEntry   Width="200"
+<syncfusion:SfMaskedEntry   WidthRequest="200"
                             MaskType="Simple"
                             Mask=">AAAAA-AAAAA-AAAAA-AAAAA"
                             Value="DF321SD1A"
@@ -32,16 +32,11 @@ Set up the MaskedTextBox to exclude prompt and literal characters, preserving on
 {% endhighlight %}
 {% highlight C# %}
 
-SfMaskedEntry maskedEntry;
-public MainPage()
-{
-    InitializeComponent();
     maskedEntry.Width = "200";
     maskedEntry.MaskType = MaskedTextBoxMaskType.Simple;
     maskedEntry.Mask = ">AAAAA-AAAAA-AAAAA-AAAAA";
     maskedEntry.Value = "DF321SD1A";
     maskedEntry.ValueMaskFormat = MaskedEntryMaskFormat.ExcludePromptAndLiterals;
-} 
 
 {% endhighlight %}
 {% endtabs %}
@@ -55,7 +50,7 @@ Set up the MaskedEntry to preserve typed and prompt characters, excluding litera
 {% tabs %}
 {% highlight XAML %}
 
-<syncfusion:SfMaskedEntry Width="200"
+<syncfusion:SfMaskedEntry WidthRequest="200"
                           MaskType="Simple"
                           Mask=">AAAAA-AAAAA-AAAAA-AAAAA"
                           Value="DF321SD1A"
@@ -64,16 +59,11 @@ Set up the MaskedEntry to preserve typed and prompt characters, excluding litera
 {% endhighlight %}
 {% highlight C# %}
 
-SfMaskedEntry maskedEntry;
-public MainPage()
-{
-    InitializeComponent();
     maskedEntry.Width = "200";
     maskedEntry.MaskType = MaskedTextBoxMaskType.Simple;
     maskedEntry.Mask = ">AAAAA-AAAAA-AAAAA-AAAAA";
     maskedEntry.Value = "DF321SD1A";
     maskedEntry.ValueMaskFormat = MaskedEntryMaskFormat.IncludePrompt;
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -87,7 +77,7 @@ Keep typed and literal characters in the input but exclude prompt characters.
 {% tabs %}
 {% highlight XAML %}
 
-<syncfusion:SfMaskedEntry Width="200"
+<syncfusion:SfMaskedEntry WidthRequest="200"
                           MaskType="Simple"
                           Mask=">AAAAA-AAAAA-AAAAA-AAAAA"
                           Value="DF321SD1A"
@@ -96,16 +86,11 @@ Keep typed and literal characters in the input but exclude prompt characters.
 {% endhighlight %}
 {% highlight C# %}
 
-SfMaskedEntry maskedEntry;
-public MainPage()
-{
-    InitializeComponent();
     maskedEntry.Width = "200";
     maskedEntry.MaskType = MaskedTextBoxMaskType.Simple;
     maskedEntry.Mask = ">AAAAA-AAAAA-AAAAA-AAAAA";
     maskedEntry.Value = "DF321SD1A";
     maskedEntry.ValueMaskFormat = MaskedEntryMaskFormat.IncludeLiterals;
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -119,7 +104,7 @@ Maintain typed, prompt, and literal characters in the input.
 {% tabs %}
 {% highlight XAML %}
 
-<syncfusion:SfMaskedEntry Width="200"
+<syncfusion:SfMaskedEntry WidthRequest="200"
                           MaskType="Simple"
                           Mask=">AAAAA-AAAAA-AAAAA-AAAAA"
                           Value="DF321SD1A"
@@ -128,16 +113,11 @@ Maintain typed, prompt, and literal characters in the input.
 {% endhighlight %}
 {% highlight C# %}
 
-SfMaskedEntry maskedEntry;
-public MainPage()
-{
-    InitializeComponent();
     maskedEntry.Width = "200";
     maskedEntry.MaskType = MaskedEntryMaskType.Simple;
     maskedEntry.Mask = ">AAAAA-AAAAA-AAAAA-AAAAA";
     maskedEntry.Value = "DF321SD1A";
     maskedEntry.ValueMaskFormat = MaskedEntryMaskFormat.IncludePromptAndLiterals;
-}
 
 {% endhighlight %}
 {% endtabs %}

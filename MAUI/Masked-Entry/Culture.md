@@ -9,7 +9,7 @@ documentation: ug
 
 # Culture in MAUI MaskedEntry
 
-The MaskedEntry allows you to set any [Culture]support for currency symbols, date separators, time separators, group separators, and decimal separators by using the below special symbols.
+The MaskedEntry allows you to set any `Culture` support for currency symbols, date separators, time separators, group separators, and decimal separators by using the below special symbols.
 
 <table>
 <tr>
@@ -64,17 +64,11 @@ The following example shows how to set the the France culture for currency symbo
 {% tabs %}
 {% highlight C# %}
 
-SfMaskedEntry maskedEntry;
-public MainPage()
-{
-    InitializeComponent();
     maskedEntry = new SfMaskedEntry();
     maskedEntry.Width = "200";
     maskedEntry.MaskType = MaskedEntryMaskType.Simple;
     maskedEntry.Mask = "$ 0,000.00";
-    maskedEntry.Culture = new CultureInfo("fr-FR");
-    this.Content = maskedEntry;
-} 
+    maskedEntry.Culture = new CultureInfo("fr-FR"); 
 
 {% endhighlight %}
 {% endtabs %}

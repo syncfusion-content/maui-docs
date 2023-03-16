@@ -9,7 +9,7 @@ documentation: ug
 
 # Mask types in MAUI MaskedEntry
 
-Each [MaskType] has different set of mask elements that are combined to form a mask expression. Based on the complexity and usage, mask types are classified as,
+Each `MaskType` has different set of mask elements that are combined to form a mask expression. Based on the complexity and usage, mask types are classified as,
 
 1. Simple
 2. RegEx
@@ -65,22 +65,17 @@ Shift up. Converts all the characters that follow to uppercase.</td></tr>
 {% tabs %}
 {% highlight XAML %}
 
-<syncfusion:SfMaskedEntry Width="200"
+<syncfusion:SfMaskedEntry WidthRequest="200"
                           MaskType="Simple"
                           Mask="(000) 000-0000" />
 
 {% endhighlight %}
 {% highlight C# %}
 
-SfMaskedEntry maskedEntry;
-public MainPage()
-{
-    InitializeComponent();
     maskedEntry = new SfMaskedEntry();
     maskedEntry.Width = "200";
     maskedEntry.MaskType = MaskedEntryMaskType.Simple;
     maskedEntry.Mask = "(000) 000-0000";   
-} 
 
 {% endhighlight %}
 {% endtabs %}
@@ -184,20 +179,15 @@ Accepts any character. It can be changed based on culture</td></tr>
 {% highlight XAML %}
 
 <syncfusion:SfMaskedEntry MaskType="RegEx"
-                          Width="200"
+                          WidthRequest="200"
                           Mask="[A-Za-z0-9._%-]+@[A-Za-z0-9]+\.[A-Za-z]{2,3}" />
 
 {% endhighlight %}
 {% highlight C# %}
 
-SfMaskedEntry maskedEntry;
-public MainPage()
-{
-   InitializeComponent();
    maskedEntry.Width = "200";
    maskedEntry.MaskType = MaskedTextBoxMaskType.RegEx;
    maskedEntry.Mask = "[A-Za-z0-9._%-]+@[A-Za-z0-9]+\.[A-Za-z]{2,3}";  
-} 
 
 {% endhighlight %}
 {% endtabs %}

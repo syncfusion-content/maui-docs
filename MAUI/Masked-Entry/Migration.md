@@ -18,7 +18,7 @@ To migrate easier from Xamarin SfMaskedEdit to [.NET MAUI SfMaskedEntry], most o
 <th>Xamarin SfMaskedEdit</th>
 <th>.NET MAUI SfMaskedEntry</th></tr>
 <tr>
-<td>Syncfusion.SfMaskedEdit.XForms</td>
+<td>Syncfusion.XForms.SfMaskedEdit</td>
 <td>Syncfusion.Maui.Inputs</td></tr>
 </table>
 
@@ -26,13 +26,15 @@ To migrate easier from Xamarin SfMaskedEdit to [.NET MAUI SfMaskedEntry], most o
 
 <table> 
 <tr>
+<th>Enum</th>
 <th>Xamarin SfMaskedEdit</th>
 <th>.NET MAUI SfMaskedEntry</th>
 <th>Description</th></tr>
 <tr>
-<td>{{'[MaskType]'| markdownify }}</td>
-<td>{{'[MaskedEntryMaskType]'| markdownify }}</td>
-<td>Gets or sets the type of mask elements</td></tr>
+<td>Xamarin - {{'[MaskType]'| markdownify }} <br/> .NET MAUI - {{'[MaskedEntryMaskType]'| markdownify }}</td>
+<td> {{'[Text]'| markdownify }},<br/> {{'[RegEx]'| markdownify }}.</td>
+<td> {{'[Simple]'| markdownify }},<br/> {{'[RegEx]'| markdownify }}.</td>
+<td>Gets or sets the type of mask elements.</td></tr>
 
 </table> 
 

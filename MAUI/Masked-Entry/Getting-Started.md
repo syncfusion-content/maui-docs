@@ -10,11 +10,11 @@ keywords: mask, SfMaskedEntry, maskedentry
 
 # Getting Started with MAUI Masked Entry (SfMaskedEntry)
 
-This section explains you the steps required to configure a [`SfMaskedEntry`] control in a real-time scenario and provides a walk-through on some of the customization features available in [`SfMaskedEntry`] control.
+This section explains you the steps required to configure a `SfMaskedEntry` control in a real-time scenario and provides a walk-through on some of the customization features available in `SfMaskedEntry` control.
 
 ## Creating an application using the .NET MAUI Masked Entry
 
-This section explains the steps required to work with the [SfMaskedEntry] control for .NET MAUI.
+This section explains the steps required to work with the `SfMaskedEntry` control for .NET MAUI.
 
 ## Adding a .NET MAUI Masked Entry reference
 
@@ -78,7 +78,7 @@ Step 2: Add the namespace, as shown in the following code sample:
 
 ## Initialize Masked Entry
 
-Now, add the [`SfMaskedEntry`] control with a required optimal name using the included namespace.
+Now, add the `SfMaskedEntry` control with a required optimal name using the included namespace.
 
 {% tabs %}
 
@@ -90,13 +90,7 @@ Now, add the [`SfMaskedEntry`] control with a required optimal name using the in
 
 {% highlight C# %}
 
-    SfMaskedEntry maskedEntry;
-    public MainPage()
-    {
-        InitializeComponent();
         maskedEntry = new SfMaskedEntry();
-        this.Content = maskedEntry;
-    } 
 
 {% endhighlight %}
 
@@ -106,22 +100,17 @@ Now, add the [`SfMaskedEntry`] control with a required optimal name using the in
 {% tabs %}
 {% highlight xaml %}
 
-        <syncfusion:SfMaskedEntry Width="200"
+        <syncfusion:SfMaskedEntry WidthRequest="200"
                                   MaskType="Simple"
                                   Mask="00/00/0000" />
 
 {% endhighlight %}
 {% highlight C# %}
 
- SfMaskedEntry maskedEntry;
-    public MainPage()
-    {
-        InitializeComponent();
         maskedEntry = new SfMaskedEntry();
         maskedEntry.Width = "200";
         maskedEntry.MaskType = MaskedTextBoxMaskType.Simple;
         maskedEntry.Mask = "00/00/0000";
-    } 
 
 {% endhighlight %}
 {% endtabs %}
@@ -133,22 +122,17 @@ Now, add the [`SfMaskedEntry`] control with a required optimal name using the in
 {% tabs %}
 {% highlight xaml %}
 
-        <syncfusion:SfMaskedEntry Width="200"
+        <syncfusion:SfMaskedEntry WidthRequest="200"
                                   MaskType="RegEx"
                                   Mask="[A-Za-z0-9._%-]+@[A-Za-z0-9]+\.[A-Za-z]{2,3}" />
 
 {% endhighlight %}
 {% highlight C# %}
 
-SfMaskedEntry maskedEntry;
-    public MainPage()
-    {
-        InitializeComponent();
         maskedEntry = new SfMaskedEntry();
         maskedEntry.Width = "200";
         maskedEntry.MaskType = MaskedEntryMaskType.RegEx;
         maskedEntry.Mask = "[A-Za-z0-9._%-]+@[A-Za-z0-9]+\\.[A-Za-z]{2,3}";
-    } 
 
 
 {% endhighlight %}
@@ -158,21 +142,16 @@ SfMaskedEntry maskedEntry;
 
 ## Setting the prompt character
 
-Every single mask displays a prompt character ('_') in the absence of your input. You can customize this prompt character by using the [PromptChar] property.
+Every single mask displays a prompt character ('_') in the absence of your input. You can customize this prompt character by using the `PromptChar` property.
 
 {% tabs %}
 {% highlight C# %}
 
-SfMaskedEntry maskedEntry;
-    public MainPage()
-    {
-        InitializeComponent();
         maskedEntry = new SfMaskedEntry();
         maskedEntry.Width = "200";
         maskedEntry.MaskType = MaskedEntryMaskType.Simple;
         maskedEntry.Mask = "00/00/0000";
         maskedEntry.PromptChar = '#';
-    } 
 
 
 {% endhighlight %}
@@ -182,29 +161,24 @@ SfMaskedEntry maskedEntry;
 
 ## Setting the value
 
-The [Value] property is used to set the input value for MaskedEntry control.
+The `Value` property is used to set the input value for MaskedEntry control.
 
 {% tabs %}
 {% highlight XAML %}
 
-<syncfusion:SfMaskedEntry Width="200"
-                            MaskType="Simple"
-                            Mask="00/00/0000"
-                            Value="12/02/2022" />
+<syncfusion:SfMaskedEntry WidthRequest="200"
+                          MaskType="Simple"
+                          Mask="00/00/0000"
+                          Value="12/02/2022" />
 
 {% endhighlight %}
 {% highlight C# %}
 
-SfMaskedEntry maskedEntry;
-    public MainPage()
-    {
-        InitializeComponent();
         maskedEntry = new SfMaskedEntry();
         maskedEntry.Width = "200";
         maskedEntry.MaskType = MaskedEntryMaskType.Simple;
         maskedEntry.Mask = "00/00/0000";
         maskedEntry.Value = "12/02/2022";
-    }
 
 
 {% endhighlight %}

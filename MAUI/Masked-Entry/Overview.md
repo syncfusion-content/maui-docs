@@ -9,7 +9,7 @@ documentation: ug
 
 # MAUI MaskedEntry Overview
 
-The [.NET MAUI MaskedEntry] is an advanced version of the input control that restricts input of certain characters, text, and numbers by using a mask pattern. This control is used to create a template for providing information such as telephone numbers, email IDs, IP addresses, product keys, and so on.
+The `.NET MAUI MaskedEntry` is an advanced version of the input control that restricts input of certain characters, text, and numbers by using a mask pattern. This control is used to create a template for providing information such as telephone numbers, email IDs, IP addresses, product keys, and so on.
 
 ![MaskedEntry control overview in MAUI](MaskedEntry_Images/maui_maskedentry_overview.png)
 
