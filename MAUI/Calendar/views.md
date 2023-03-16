@@ -123,6 +123,54 @@ this.Calendar.MonthView = new CalendarMonthView()
 
 ![Customize Week number Appearance in .NET MAUI Calendar.](images/views/maui-month-view-show-week-numbers-customize.png)
 
+#### Special day Predicate
+Special day Predicate decides whether the month cell date is a special date or not in the calendar, supports icon shapes in month view to display such as dots, hearts, diamonds, stars, and bells if special dates are specified. The icon colors are also customizable. We can improve the special dates support with this special day predicate by displaying icons.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+<calendar:SfCalendar  x:Name="Calendar"  View="Month">
+</calendar:SfCalendar>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+this.Calendar.MonthView.SpecialDayPredicate = (date) =>
+{
+    if (date.Date == DateTime.Now.AddDays(2).Date)
+    {
+        CalendarIconDetails iconDetails = new CalendarIconDetails();
+        iconDetails.Icon = CalendarIcon.Dot;
+        iconDetails.Fill = Colors.Black;
+        return iconDetails;
+    }
+    else if (date.Date == DateTime.Now.AddDays(6).Date || date.Date == DateTime.Now.AddDays(-15).Date)
+    {
+        CalendarIconDetails iconDetails = new CalendarIconDetails();
+        iconDetails.Icon = CalendarIcon.Heart;
+        iconDetails.Fill = Colors.Red;
+        return iconDetails;
+    }
+    else if (date.Date == DateTime.Now.AddDays(-10).Date)
+    {
+        CalendarIconDetails iconDetails = new CalendarIconDetails();
+        iconDetails.Icon = CalendarIcon.Diamond;
+        iconDetails.Fill = Colors.Blue;
+        return iconDetails;
+    }
+    else if (date.Date == DateTime.Now.AddDays(15).Date)
+    {
+        CalendarIconDetails iconDetails = new CalendarIconDetails();
+        iconDetails.Icon = CalendarIcon.Triangle;
+        iconDetails.Fill = Colors.Green;
+        return iconDetails;
+    }
+
+    return null;
+};
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Year view
 The Year view displays the current year's month. A calendar year is a one-year period that begins on January 1 and ends on December 31. By default, displays the current year's month and the current month is highlighted by a separate color that is different from the rest of the month color in the `Year view`. You can easily navigate to the desired month dates from the year view.

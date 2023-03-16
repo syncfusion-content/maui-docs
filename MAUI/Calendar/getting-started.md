@@ -157,3 +157,43 @@ this.Calendar.SelectionMode = CalendarSelectionMode.Multiple;
 {% endtabs %}
 
 ![change-selection-mode](images/getting-started/maui-calendar-multiple-selection.png)
+
+## Action buttons
+
+You can display action buttons at the bottom of the calendar by using the `ShowActionButtons` property of SfCalendar. It allows you to confirm or cancel the selected date, dates, or date ranges of the `SfCalendar`.
+
+{% tabs %}  
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+<calendar:SfCalendar x:Name="calendar" 
+                     View="Month" 
+                     ShowActionButtons="True">
+ </calendar:SfCalendar>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+this.Calendar.ShowActionButtons = true;
+
+{% endhighlight %}  
+{% endtabs %}
+
+## Today button
+
+The today button can be displayed at the bottom of the calendar by using the `ShowTodayButton` property of the `SfCalendar`, allowing you to switch from the current view to today's view effortlessly.
+
+{% tabs %}  
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+<calendar:SfCalendar x:Name="calendar" 
+                     View="Month" 
+                     ShowTodayButton="True">
+ </calendar:SfCalendar>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+this.Calendar.ShowTodayButton = true;
+
+{% endhighlight %}  
+{% endtabs %}
