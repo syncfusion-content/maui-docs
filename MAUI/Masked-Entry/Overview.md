@@ -1,13 +1,13 @@
 ---
 layout: post
-title: About MAUI MaskedEntry control | Syncfusion
+title: About .NET MAUI MaskedEntry control | Syncfusion
 description: Learn all about the introduction of Syncfusion MAUI MaskedEntry (SfMaskedEntry) control with essential features and more here.
 platform: maui
 control: SfMaskedEntry
 documentation: ug
 ---
 
-# MAUI MaskedEntry Overview
+# .NET MAUI MaskedEntry Overview
 
 The `.NET MAUI MaskedEntry` is an advanced version of the input control that restricts input of certain characters, text, and numbers by using a mask pattern. This control is used to create a template for providing information such as telephone numbers, email IDs, IP addresses, product keys, and so on.
 

@@ -8,7 +8,7 @@ documentation: ug
 keywords: mask, SfMaskedEntry, maskedentry
 ---
 
-# Getting Started with MAUI Masked Entry (SfMaskedEntry)
+# Getting Started with .NET MAUI Masked Entry (SfMaskedEntry)
 
 This section explains you the steps required to configure a `SfMaskedEntry` control in a real-time scenario and provides a walk-through on some of the customization features available in `SfMaskedEntry` control.
 
@@ -95,22 +95,23 @@ Now, add the `SfMaskedEntry` control with a required optimal name using the incl
 {% endhighlight %}
 
 {% endtabs %}
- ## Initialize MaskedEntry control using simple mask
+
+## Initialize MaskedEntry control using simple mask
 
 {% tabs %}
 {% highlight xaml %}
 
-        <syncfusion:SfMaskedEntry WidthRequest="200"
-                                  MaskType="Simple"
-                                  Mask="00/00/0000" />
+<syncfusion:SfMaskedEntry WidthRequest="200"
+                          MaskType="Simple"
+                          Mask="00/00/0000" />
 
 {% endhighlight %}
 {% highlight C# %}
 
-        maskedEntry = new SfMaskedEntry();
-        maskedEntry.Width = "200";
-        maskedEntry.MaskType = MaskedTextBoxMaskType.Simple;
-        maskedEntry.Mask = "00/00/0000";
+maskedEntry = new SfMaskedEntry();
+maskedEntry.WidthRequest = "200";
+maskedEntry.MaskType = MaskedEntryMaskType.Simple;
+maskedEntry.Mask = "00/00/0000";
 
 {% endhighlight %}
 {% endtabs %}
@@ -122,17 +123,17 @@ Now, add the `SfMaskedEntry` control with a required optimal name using the incl
 {% tabs %}
 {% highlight xaml %}
 
-        <syncfusion:SfMaskedEntry WidthRequest="200"
-                                  MaskType="RegEx"
-                                  Mask="[A-Za-z0-9._%-]+@[A-Za-z0-9]+\.[A-Za-z]{2,3}" />
+<syncfusion:SfMaskedEntry WidthRequest="200"
+                          MaskType="RegEx"
+                          Mask="[A-Za-z0-9._%-]+@[A-Za-z0-9]+\.[A-Za-z]{2,3}" />
 
 {% endhighlight %}
 {% highlight C# %}
 
-        maskedEntry = new SfMaskedEntry();
-        maskedEntry.Width = "200";
-        maskedEntry.MaskType = MaskedEntryMaskType.RegEx;
-        maskedEntry.Mask = "[A-Za-z0-9._%-]+@[A-Za-z0-9]+\\.[A-Za-z]{2,3}";
+maskedEntry = new SfMaskedEntry();
+maskedEntry.WidthRequest = "200";
+maskedEntry.MaskType = MaskedEntryMaskType.RegEx;
+maskedEntry.Mask = "[A-Za-z0-9._%-]+@[A-Za-z0-9]+\\.[A-Za-z]{2,3}";
 
 
 {% endhighlight %}
@@ -145,19 +146,27 @@ Now, add the `SfMaskedEntry` control with a required optimal name using the incl
 Every single mask displays a prompt character ('_') in the absence of your input. You can customize this prompt character by using the `PromptChar` property.
 
 {% tabs %}
+{% highlight XAML %}
+
+<syncfusion:SfMaskedEntry WidthRequest="200"
+                          MaskType="Simple"
+                          Mask="00/00/0000"
+                          PromptChar="#" />
+                          
+{% endhighlight %}
 {% highlight C# %}
 
-        maskedEntry = new SfMaskedEntry();
-        maskedEntry.Width = "200";
-        maskedEntry.MaskType = MaskedEntryMaskType.Simple;
-        maskedEntry.Mask = "00/00/0000";
-        maskedEntry.PromptChar = '#';
+maskedEntry = new SfMaskedEntry();
+maskedEntry.WidthRequest = "200";
+maskedEntry.MaskType = MaskedEntryMaskType.Simple;
+maskedEntry.Mask = "00/00/0000";
+maskedEntry.PromptChar = '#';
 
 
 {% endhighlight %}
 {% endtabs %}
 
-![WinUI MaskedEntry prompt character](MaskedEntry_Images/maui_masked_entry_prompt_char.png)
+![MAUI MaskedEntry prompt character](MaskedEntry_Images/maui_masked_entry_prompt_char.png)
 
 ## Setting the value
 
@@ -174,17 +183,20 @@ The `Value` property is used to set the input value for MaskedEntry control.
 {% endhighlight %}
 {% highlight C# %}
 
-        maskedEntry = new SfMaskedEntry();
-        maskedEntry.Width = "200";
-        maskedEntry.MaskType = MaskedEntryMaskType.Simple;
-        maskedEntry.Mask = "00/00/0000";
-        maskedEntry.Value = "12/02/2022";
+maskedEntry = new SfMaskedEntry();
+maskedEntry.WidthRequest = "200";
+maskedEntry.MaskType = MaskedEntryMaskType.Simple;
+maskedEntry.Mask = "00/00/0000";
+maskedEntry.Value = "12/02/2022";
 
 
 {% endhighlight %}
 {% endtabs %}
 
-![WinUI MaskedEntry value](MaskedEntry_Images/maui_masked_entry_value.png)
+![MAUI MaskedEntry value](MaskedEntry_Images/maui_masked_entry_value.png)
+
+N> 
+Get the complete getting started sample from [GitHub](https://github.com/SyncfusionExamples/maui-maskedentry-samples) link.
 
 
 

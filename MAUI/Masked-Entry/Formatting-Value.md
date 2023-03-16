@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Mask formats in MAUI MaskedEntry control | Syncfusion
+title: Mask formats in .NET MAUI MaskedEntry control | Syncfusion
 description: Learn all about how to set the mask format for the value in the MaskedEntry (SfMaskedEntry) control with prompts and literals.
 platform: maui
 control: SfMaskedEntry
 documentation: ug
 ---
 
-# Formatting value in MAUI MaskedEntry
+# Formatting value in .NET MAUI MaskedEntry
 
 The `MaskedEntry` control allows you to format input values with prompt and literal characters which are defined in the mask expression by setting the `ValueMaskFormat` property. By default, the `Value` property of the control includes the characters typed by the user, as well as any prompt or literal characters in the input. The control provides several formatting options, which are listed below.
 
@@ -18,7 +18,7 @@ The `MaskedEntry` control allows you to format input values with prompt and lite
 
 ## Exclude prompts and literals
 
-Set up the MaskedTextBox to exclude prompt and literal characters, preserving only the typed characters.
+Set up the MaskedEntry to exclude prompt and literal characters, preserving only the typed characters.
 
 {% tabs %}
 {% highlight XAML %}
@@ -32,11 +32,11 @@ Set up the MaskedTextBox to exclude prompt and literal characters, preserving on
 {% endhighlight %}
 {% highlight C# %}
 
-    maskedEntry.Width = "200";
-    maskedEntry.MaskType = MaskedTextBoxMaskType.Simple;
-    maskedEntry.Mask = ">AAAAA-AAAAA-AAAAA-AAAAA";
-    maskedEntry.Value = "DF321SD1A";
-    maskedEntry.ValueMaskFormat = MaskedEntryMaskFormat.ExcludePromptAndLiterals;
+maskedEntry.WidthRequest = "200";
+maskedEntry.MaskType = MaskedTextBoxMaskType.Simple;
+maskedEntry.Mask = ">AAAAA-AAAAA-AAAAA-AAAAA";
+maskedEntry.Value = "DF321SD1A";
+maskedEntry.ValueMaskFormat = MaskedEntryMaskFormat.ExcludePromptAndLiterals;
 
 {% endhighlight %}
 {% endtabs %}
@@ -59,11 +59,11 @@ Set up the MaskedEntry to preserve typed and prompt characters, excluding litera
 {% endhighlight %}
 {% highlight C# %}
 
-    maskedEntry.Width = "200";
-    maskedEntry.MaskType = MaskedTextBoxMaskType.Simple;
-    maskedEntry.Mask = ">AAAAA-AAAAA-AAAAA-AAAAA";
-    maskedEntry.Value = "DF321SD1A";
-    maskedEntry.ValueMaskFormat = MaskedEntryMaskFormat.IncludePrompt;
+maskedEntry.WidthRequest = "200";
+maskedEntry.MaskType = MaskedTextBoxMaskType.Simple;
+maskedEntry.Mask = ">AAAAA-AAAAA-AAAAA-AAAAA";
+maskedEntry.Value = "DF321SD1A";
+maskedEntry.ValueMaskFormat = MaskedEntryMaskFormat.IncludePrompt;
 
 {% endhighlight %}
 {% endtabs %}
@@ -86,11 +86,11 @@ Keep typed and literal characters in the input but exclude prompt characters.
 {% endhighlight %}
 {% highlight C# %}
 
-    maskedEntry.Width = "200";
-    maskedEntry.MaskType = MaskedTextBoxMaskType.Simple;
-    maskedEntry.Mask = ">AAAAA-AAAAA-AAAAA-AAAAA";
-    maskedEntry.Value = "DF321SD1A";
-    maskedEntry.ValueMaskFormat = MaskedEntryMaskFormat.IncludeLiterals;
+maskedEntry.WidthRequest = "200";
+maskedEntry.MaskType = MaskedTextBoxMaskType.Simple;
+maskedEntry.Mask = ">AAAAA-AAAAA-AAAAA-AAAAA";
+maskedEntry.Value = "DF321SD1A";
+maskedEntry.ValueMaskFormat = MaskedEntryMaskFormat.IncludeLiterals;
 
 {% endhighlight %}
 {% endtabs %}
@@ -113,11 +113,11 @@ Maintain typed, prompt, and literal characters in the input.
 {% endhighlight %}
 {% highlight C# %}
 
-    maskedEntry.Width = "200";
-    maskedEntry.MaskType = MaskedEntryMaskType.Simple;
-    maskedEntry.Mask = ">AAAAA-AAAAA-AAAAA-AAAAA";
-    maskedEntry.Value = "DF321SD1A";
-    maskedEntry.ValueMaskFormat = MaskedEntryMaskFormat.IncludePromptAndLiterals;
+maskedEntry.WidthRequest = "200";
+maskedEntry.MaskType = MaskedEntryMaskType.Simple;
+maskedEntry.Mask = ">AAAAA-AAAAA-AAAAA-AAAAA";
+maskedEntry.Value = "DF321SD1A";
+maskedEntry.ValueMaskFormat = MaskedEntryMaskFormat.IncludePromptAndLiterals;
 
 {% endhighlight %}
 {% endtabs %}

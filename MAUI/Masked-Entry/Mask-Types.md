@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Mask types in MAUI MaskedEntry control | Syncfusion
+title: Mask types in .NET MAUI MaskedEntry control | Syncfusion
 description: Learn more about the various mask types available in the MaskedEntry (SfMaskedEntry) control, including Simple and RegEx, and how to use them effectively.
 platform: maui
 control: SfMaskedEntry
 documentation: ug
 ---
 
-# Mask types in MAUI MaskedEntry
+# Mask types in .NET MAUI MaskedEntry
 
 Each `MaskType` has different set of mask elements that are combined to form a mask expression. Based on the complexity and usage, mask types are classified as,
 
@@ -72,10 +72,10 @@ Shift up. Converts all the characters that follow to uppercase.</td></tr>
 {% endhighlight %}
 {% highlight C# %}
 
-    maskedEntry = new SfMaskedEntry();
-    maskedEntry.Width = "200";
-    maskedEntry.MaskType = MaskedEntryMaskType.Simple;
-    maskedEntry.Mask = "(000) 000-0000";   
+maskedEntry = new SfMaskedEntry();
+maskedEntry.WidthRequest = "200";
+maskedEntry.MaskType = MaskedEntryMaskType.Simple;
+maskedEntry.Mask = "(000) 000-0000";   
 
 {% endhighlight %}
 {% endtabs %}
@@ -185,9 +185,9 @@ Accepts any character. It can be changed based on culture</td></tr>
 {% endhighlight %}
 {% highlight C# %}
 
-   maskedEntry.Width = "200";
-   maskedEntry.MaskType = MaskedTextBoxMaskType.RegEx;
-   maskedEntry.Mask = "[A-Za-z0-9._%-]+@[A-Za-z0-9]+\.[A-Za-z]{2,3}";  
+maskedEntry.WidthRequest = "200";
+maskedEntry.MaskType = MaskedTextBoxMaskType.RegEx;
+maskedEntry.Mask = "[A-Za-z0-9._%-]+@[A-Za-z0-9]+\.[A-Za-z]{2,3}";  
 
 {% endhighlight %}
 {% endtabs %}
