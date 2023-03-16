@@ -82,7 +82,7 @@ namespace GettingStarted
 
 ## Displaying popup
 
-You can continue to keep your view as the content view of the main page and still display popup over your view by simply calling the `SfPopup.Show` method.
+You can display popup over your view by calling the `SfPopup.Show` method.
 
 Refer to the following code example for displaying popup.
 
