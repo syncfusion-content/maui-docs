@@ -165,7 +165,7 @@ To initialize the `MaskedEntry` control and launch it in each platform, refer to
 
 <inputLayout:SfTextInputLayout Hint="Card number" 
                                HelperText="Required *" >
-   <maskededit:SfMaskedEdit  MaskType="Simple"
+   <maskedEntry:SfMaskedEntry  MaskType="Simple"
                              Mask="0000 0000 0000 0000" />
 </inputLayout:SfTextInputLayout> 
 
