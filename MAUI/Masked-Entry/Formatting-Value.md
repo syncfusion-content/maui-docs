@@ -23,17 +23,17 @@ Set up the MaskedEntry to exclude prompt and literal characters, preserving only
 {% tabs %}
 {% highlight XAML %}
 
-<syncfusion:SfMaskedEntry   WidthRequest="200"
-                            MaskType="Simple"
-                            Mask=">AAAAA-AAAAA-AAAAA-AAAAA"
-                            Value="DF321SD1A"
-                            ValueMaskFormat="ExcludePromptAndLiterals"/>
+<syncfusion:SfMaskedEntry WidthRequest="200"
+                          MaskType="Simple"
+                          Mask=">AAAAA-AAAAA-AAAAA-AAAAA"
+                          Value="DF321SD1A"
+                          ValueMaskFormat="ExcludePromptAndLiterals"/>
 
 {% endhighlight %}
 {% highlight C# %}
 
 maskedEntry.WidthRequest = "200";
-maskedEntry.MaskType = MaskedTextBoxMaskType.Simple;
+maskedEntry.MaskType = MaskedEntryMaskType.Simple;
 maskedEntry.Mask = ">AAAAA-AAAAA-AAAAA-AAAAA";
 maskedEntry.Value = "DF321SD1A";
 maskedEntry.ValueMaskFormat = MaskedEntryMaskFormat.ExcludePromptAndLiterals;
@@ -60,7 +60,7 @@ Set up the MaskedEntry to preserve typed and prompt characters, excluding litera
 {% highlight C# %}
 
 maskedEntry.WidthRequest = "200";
-maskedEntry.MaskType = MaskedTextBoxMaskType.Simple;
+maskedEntry.MaskType = MaskedEntryMaskType.Simple;
 maskedEntry.Mask = ">AAAAA-AAAAA-AAAAA-AAAAA";
 maskedEntry.Value = "DF321SD1A";
 maskedEntry.ValueMaskFormat = MaskedEntryMaskFormat.IncludePrompt;
@@ -87,7 +87,7 @@ Keep typed and literal characters in the input but exclude prompt characters.
 {% highlight C# %}
 
 maskedEntry.WidthRequest = "200";
-maskedEntry.MaskType = MaskedTextBoxMaskType.Simple;
+maskedEntry.MaskType = MaskedEntryMaskType.Simple;
 maskedEntry.Mask = ">AAAAA-AAAAA-AAAAA-AAAAA";
 maskedEntry.Value = "DF321SD1A";
 maskedEntry.ValueMaskFormat = MaskedEntryMaskFormat.IncludeLiterals;

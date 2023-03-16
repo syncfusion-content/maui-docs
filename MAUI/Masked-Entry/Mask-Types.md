@@ -186,7 +186,7 @@ Accepts any character. It can be changed based on culture</td></tr>
 {% highlight C# %}
 
 maskedEntry.WidthRequest = "200";
-maskedEntry.MaskType = MaskedTextBoxMaskType.RegEx;
+maskedEntry.MaskType = MaskedEntryMaskType.RegEx;
 maskedEntry.Mask = "[A-Za-z0-9._%-]+@[A-Za-z0-9]+\.[A-Za-z]{2,3}";  
 
 {% endhighlight %}

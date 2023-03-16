@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrating from Xamarin SfMaskedEdit to .NET MAUI SfMaskedEntry
 
-To migrate easier from Xamarin SfMaskedEdit to [.NET MAUI SfMaskedEntry], most of the APIs were kept from Xamarin SfMaskedEdit in MAUI SfMaskedEntry. However, to maintain the consistency of API naming in MAUI SfMaskedEntry, we renamed some of the APIs. The APIs changed in MAUI SfMaskedEntry from Xamarin SfMaskedEdit are detailed as follows:
+To migrate easier from `Xamarin SfMaskedEdit` to `.NET MAUI SfMaskedEntry,` most of the APIs were kept from Xamarin SfMaskedEdit in MAUI SfMaskedEntry. However, to maintain the consistency of API naming in MAUI SfMaskedEntry, we renamed some of the APIs. The APIs changed in MAUI SfMaskedEntry from Xamarin SfMaskedEdit are detailed as follows:
 
 ## Namespaces 
 
@@ -18,7 +18,7 @@ To migrate easier from Xamarin SfMaskedEdit to [.NET MAUI SfMaskedEntry], most o
 <th>Xamarin SfMaskedEdit</th>
 <th>.NET MAUI SfMaskedEntry</th></tr>
 <tr>
-<td>Syncfusion.XForms.SfMaskedEdit</td>
+<td>Syncfusion.XForms.MaskedEdit</td>
 <td>Syncfusion.Maui.Inputs</td></tr>
 </table>
 
@@ -38,3 +38,13 @@ To migrate easier from Xamarin SfMaskedEdit to [.NET MAUI SfMaskedEntry], most o
 
 </table> 
 
+## Upcoming features
+
+  * Placeholder and its customization
+  * Border customization
+  * Set prompt on focus
+  * HasError and Validation mode
+  * MaskFormat for clipboard operations
+  * Password character and password delay duration.
+
+  
