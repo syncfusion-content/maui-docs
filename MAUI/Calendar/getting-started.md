@@ -171,7 +171,7 @@ The following code explains how to enable the Action button and Today button,
 {% tabs %}  
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar x:Name="calendar" 
+<calendar:SfCalendar x:Name="Calendar" 
                      View="Month" 
                      ShowActionButtons="True"
                      ShowTodayButton="True">

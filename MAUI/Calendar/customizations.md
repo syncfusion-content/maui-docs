@@ -21,8 +21,6 @@ You can customize the calendar month view cell by using the `MonthView` property
 
 *    **Disabled dates** – You can disable the date by using the MinimumDate, MaximumDate, EnablePastDates and SelectableDayPredicate. The date before [MinimumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_MinimumDate) is said to disabled date, the date after the [MaximumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_MaximumDate) is said to disabled date, if you want to disable the date before today date by using the [EnablePastDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_EnablePastDates) and if you want to disable any particular date by using [SelectableDayPredicate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectableDayPredicate) property. You can also customize the disabled dates text style and background of the `Calendar` by using the [DisabledDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_DisabledDatesTextStyle) and [DisabledDatesBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_DisabledDatesBackground) properties of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html).
 
-*    **Special Dates** – You can add special dates to the `Calendar` by using the [SpecialDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_SpecialDates) property and you can also customize the special dates text style and background of the `Calendar` by using the [SpecialDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_SpecialDatesTextStyle) and [SpecialDatesBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_SpecialDatesBackground) properties of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html).
-
 *    **Weekend Dates** – You can customize the weekend dates text style and background of the `Calendar` by using the [WeekendDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_WeekendDatesTextStyle) and [WeekendDatesBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_WeekendDatesBackground) properties of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html).
 
 {% tabs %}
@@ -92,6 +90,79 @@ You can customize the calendar month view cell by using the `MonthView` property
 {% endtabs %}
 
 ![Month view Customization in .NET MAUI Calendar.](images/customization/maui-month-view-customization.png)
+
+*    **Special day predicate** - You can add special dates to the `Calendar` by using the [SpecialDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_SpecialDates) property and you can also customize the special dates text style and background of the `Calendar` by using the [SpecialDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_SpecialDatesTextStyle) and [SpecialDatesBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_SpecialDatesBackground) properties of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html).
+
+Special day Predicate decides whether the month cell date is a special date or not in the calendar. It supports icon shapes in month view to display such as dots, hearts, diamonds, stars, and bells if special dates are specified. The icon colors are also customizable. We can improve the special dates support with this special day predicate by displaying icons.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+<calendar:SfCalendar  x:Name="Calendar"  View="Month">
+</calendar:SfCalendar>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+this.Calendar.MonthView.SpecialDayPredicate = (date) =>
+{
+    if (date.Date == DateTime.Now.AddDays(2).Date)
+    {
+        CalendarIconDetails iconDetails = new CalendarIconDetails();
+        iconDetails.Icon = CalendarIcon.Circle;
+        iconDetails.Fill = Colors.Red;
+        return iconDetails;
+    }
+    else if (date.Date == DateTime.Now.AddDays(3).Date)
+    {
+        CalendarIconDetails iconDetails = new CalendarIconDetails();
+        iconDetails.Icon = CalendarIcon.Triangle;
+        iconDetails.Fill = Colors.Blue;
+        return iconDetails;
+    }
+    else if (date.Date == DateTime.Now.AddDays(4).Date)
+    {
+        CalendarIconDetails iconDetails = new CalendarIconDetails();
+        iconDetails.Icon = CalendarIcon.Square;
+        iconDetails.Fill = Colors.Green;
+        return iconDetails;
+    }
+    else if (date.Date == DateTime.Now.AddDays(5).Date)
+    {
+        CalendarIconDetails iconDetails = new CalendarIconDetails();
+        iconDetails.Icon = CalendarIcon.Heart;
+        iconDetails.Fill = Colors.Red;
+        return iconDetails;
+    }
+    else if (date.Date == DateTime.Now.AddDays(6).Date)
+    {
+        CalendarIconDetails iconDetails = new CalendarIconDetails();
+        iconDetails.Icon = CalendarIcon.Diamond;
+        iconDetails.Fill = Colors.Blue;
+        return iconDetails;
+    }
+    else if (date.Date == DateTime.Now.AddDays(7).Date)
+    {
+        CalendarIconDetails iconDetails = new CalendarIconDetails();
+        iconDetails.Icon = CalendarIcon.Bell;
+        iconDetails.Fill = Colors.Black;
+        return iconDetails;
+    }
+    else if (date.Date == DateTime.Now.AddDays(8).Date)
+    {
+        CalendarIconDetails iconDetails = new CalendarIconDetails();
+        iconDetails.Icon = CalendarIcon.Star;
+        iconDetails.Fill = Colors.Green;
+        return iconDetails;
+    }
+
+    return null;
+};
+
+{% endhighlight %}
+{% endtabs %}
+
+![Special day icon in .NET MAUI Calendar.](images/views/maui-special_day_predicate.png)
 
 >**NOTE**
 * The Background color and text style will be applied based on the following order: selectableDayPredicate dates, special dates, disable dates, today date, weekend dates, trailingLeading dates, and normal dates.
