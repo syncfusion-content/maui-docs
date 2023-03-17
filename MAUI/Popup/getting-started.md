@@ -9,13 +9,13 @@ documentation: ug
 
 # Getting Started with .NET Maui Popup (SfPopup)
 
-This section provides a quick overview of how to get started with the .NET Maui Popup (SfPopup) for Maui. Walk-through the entire process of creating the real world SfPopup.
+This section provides a quick overview of how to get start with the .NET Maui Popup (SfPopup) for Maui. Walk through the entire process of creating the real-world SfPopup.
 
 
 ## Creating an application using the .NET MAUI Popup
 
  1. Create a new .NET MAUI application in Visual Studio.
- 2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfPopup to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Popup and then install it.
+ 2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfPopup to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Popup and install it.
  3. Import the control namespace `Syncfusion.Maui.Popup` in XAML or C# code.
  4. Initialize the `SfPopup` control.
  
@@ -82,7 +82,7 @@ namespace GettingStarted
 
 ## Displaying popup
 
-You can display popup over your view by calling the `SfPopup.Show` method.
+Display a popup over your view by calling the `SfPopup.Show` method.
 
 Refer to the following code example for displaying popup.
 
@@ -134,7 +134,7 @@ namespace GettingStarted
 
 ![Popup with default appearance](Images/getting-started//maui-popup-with-default-appearance.png)
 
-You can download the source code of this sample [here](https://github.com/SyncfusionExamples/getting-started-.net-maui-popup).
+Download the source code of this sample [here](https://github.com/SyncfusionExamples/getting-started-.net-maui-popup).
 
 N> Two Popups cannot be displayed at the same time in a page.
 
@@ -142,7 +142,7 @@ N> Two Popups cannot be displayed at the same time in a page.
 
 The .NET MAUI Popup (SfPopup) allows showing the popup content at various positions.
 
-The following list of options are available to position the SfPopup in the desired position:
+The following list of options is available to position the SfPopup in the desired position:
 
 * `Center Positioning`: Use the `SfPopup.IsOpen` property or `SfPopup.Show` method to display the SfPopup at the center.
 * `Absolute Positioning`: Use the `SfPopup.Show(x-position, y-position)` to display the SfPopup at the specified X and y position.
@@ -151,12 +151,12 @@ The following list of options are available to position the SfPopup in the desir
 
 ## Customizing layouts
 
-By default, you can choose a layout from the following available layouts in the SfPopup by using the property `SfPopup.AppearanceMode`.
+By default, choose a layout from the following available layouts in the SfPopup by using the `SfPopup.AppearanceMode` property.
 
 * `OneButton`: Shows the SfPopup with one button in the footer view. This is the default value.
 * `TwoButton`: Shows the SfPopup with two buttons in the footer view.
 
-You can also customize the entire view of the popup by loading the templates or custom views for the header, body, and footer.
+Also, customize the entire popupview by loading the templates or custom views for the header, body, and footer.
 
 Refer to the following code example for displaying popup with appearance mode.
 
@@ -213,7 +213,7 @@ namespace GettingStarted
 
 ###  Load your template view in the popup body
 
-Any view can be added as popup content by using the `SfPopup.ContentTemplate` property to refresh it. Refer to the following code example in which a label is added as a popup content. 
+Any view can be added as popup content by using the `SfPopup.ContentTemplate` property to refresh it. Refer to the following code example in which a label is added as popup content. 
 
 {% tabs %}
 
