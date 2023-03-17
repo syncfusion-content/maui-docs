@@ -19,10 +19,10 @@ Following are the list of options available to show SfPopup at various positions
 <th>Description</th></tr>
 <tr>
 <td>SfPopup.IsOpen</td>
-<td>Shows the 'SfPopup` at center.</td></tr>
+<td>Shows the `SfPopup` at center.</td></tr>
 <tr>
 <td>SfPopup.Show</td>
-<td>Similar as SfPopup.IsOpen property.</td></tr>
+<td>Similar as `SfPopup.IsOpen` property.</td></tr>
 <tr>
 <td>SfPopup.Show(x-position, y-position)</td>
 <td>Shows the `SfPopup` at the specified X and y positions.</td></tr>
@@ -37,7 +37,7 @@ Following are the list of options available to show SfPopup at various positions
 <td>Shows the `SfPopup` in full width and height of the screen.</td></tr>
 <tr>
 <td>SfPopu.Show(bool)</td>
-<td>Similar as SfPopup.IsFullScreen property.</td></tr>
+<td>Similar as `SfPopup.IsFullScreen` property.</td></tr>
 </table>
 
 ## Center positioning
