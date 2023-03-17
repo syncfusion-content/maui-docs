@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with .NET MAUI Masked Entry control | Syncfusion
-description: Learn here about getting started with Syncfusion .NET MAUI Masked Entry (SfMaskedEntry) control, its elements, and more.
+description: Learn about getting started with Syncfusion .NET MAUI Masked Entry (SfMaskedEntry) control, its elements, and more.
 platform: maui
 control: MaskedEntry
 documentation: ug 
@@ -10,7 +10,7 @@ keywords: mask, SfMaskedEntry, maskedentry
 
 # Getting Started with .NET MAUI Masked Entry (SfMaskedEntry)
 
-This section explains you the steps required to configure a `SfMaskedEntry` control in a real-time scenario and provides a walk-through on some of the customization features available in `SfMaskedEntry` control.
+This section explains the steps required to configure a `SfMaskedEntry` control in a real-time scenario and provides a walk-through on some of the customization features available in the `SfMaskedEntry` control.
 
 ## Creating an application using the .NET MAUI Masked Entry
 
@@ -18,7 +18,7 @@ This section explains the steps required to work with the `SfMaskedEntry` contro
 
 ## Adding a .NET MAUI Masked Entry reference
 
-Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add [.NET MAUI Masked Entry] to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) and then install it.
+Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add `.NET MAUI Masked Entry` to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs), and install it.
 
 ## Handler registration 
 
@@ -58,7 +58,7 @@ namespace MaskedEntrySample
 
 Step 1: Add the NuGet to the project as discussed in the above reference section. 
 
-Step 2: Add the namespace, as shown in the following code sample:
+Step 2: Add the namespace as shown in the following code sample.
 
 {% tabs %}
 
@@ -125,7 +125,7 @@ maskedEntry.Mask = "00/00/0000";
 
 <syncfusion:SfMaskedEntry WidthRequest="200"
                           MaskType="RegEx"
-                          Mask="[A-Za-z0-9._%-]+@[A-Za-z0-9]+\.[A-Za-z]{2,3}" />
+                          Mask="[A-Za-z0-9._%-]+@[A-Za-z0-9]+.[A-Za-z]{2,3}" />
 
 {% endhighlight %}
 {% highlight C# %}
@@ -133,7 +133,7 @@ maskedEntry.Mask = "00/00/0000";
 maskedEntry = new SfMaskedEntry();
 maskedEntry.WidthRequest = "200";
 maskedEntry.MaskType = MaskedEntryMaskType.RegEx;
-maskedEntry.Mask = "[A-Za-z0-9._%-]+@[A-Za-z0-9]+\\.[A-Za-z]{2,3}";
+maskedEntry.Mask = "[A-Za-z0-9._%-]+@[A-Za-z0-9]+.[A-Za-z]{2,3}";
 
 
 {% endhighlight %}
@@ -143,7 +143,7 @@ maskedEntry.Mask = "[A-Za-z0-9._%-]+@[A-Za-z0-9]+\\.[A-Za-z]{2,3}";
 
 ## Setting the prompt character
 
-Every single mask displays a prompt character ('_') in the absence of your input. You can customize this prompt character by using the `PromptChar` property.
+Every single mask displays a prompt character ('_') in the absence of your input. Customize this prompt character by using the `PromptChar` property.
 
 {% tabs %}
 {% highlight XAML %}
@@ -170,7 +170,7 @@ maskedEntry.PromptChar = '#';
 
 ## Setting the value
 
-The `Value` property is used to set the input value for MaskedEntry control.
+The `Value` property sets the input value for the MaskedEntry control.
 
 {% tabs %}
 {% highlight XAML %}
@@ -196,7 +196,7 @@ maskedEntry.Value = "12/02/2022";
 ![MAUI MaskedEntry value](MaskedEntry_Images/maui_masked_entry_value.png)
 
 N> 
-Get the complete getting started sample from [GitHub](https://github.com/SyncfusionExamples/maui-maskedentry-samples) link.
+Get the complete getting started sample from the [GitHub](https://github.com/SyncfusionExamples/maui-maskedentry-samples) link.
 
 
 

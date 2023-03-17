@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mask types in .NET MAUI MaskedEntry control | Syncfusion
-description: Learn more about the various mask types available in the MaskedEntry (SfMaskedEntry) control, including Simple and RegEx, and how to use them effectively.
+description:  Learn more about various mask types available in the MaskedEntry (SfMaskedEntry) control, including Simple and RegEx, and how to use them effectively.
 platform: maui
 control: SfMaskedEntry
 documentation: ug
@@ -9,14 +9,14 @@ documentation: ug
 
 # Mask types in .NET MAUI MaskedEntry
 
-Each `MaskType` has different set of mask elements that are combined to form a mask expression. Based on the complexity and usage, mask types are classified as,
+Each `MaskType` has a different set of mask elements combined to form a mask expression. Based on the complexity and usage, mask types are classified as:
 
 1. Simple
 2. RegEx
 
 ## Simple
 
-The expressions that are generated with letters, digits, and special characters come under this group. This is mainly used for fixed length inputs. For example: Phone number.
+The expressions that are generated with letters, digits, and special characters come under this group. This is mainly used for fixed-length inputs. For example, Phone number.
 
 ### Simple mask elements
 
@@ -84,7 +84,7 @@ maskedEntry.Mask = "(000) 000-0000";
 
 ## RegEx
 
-The expressions that are generated with regular expressions come under this group. For example: alpha numeric values [0-9A-Z].
+The expressions that are generated with regular expressions come under this group. For example, alpha numeric values [0-9A-Z].
 
 ### RegEx mask elements
 

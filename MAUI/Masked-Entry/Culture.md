@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Culture in .NET MAUI MaskedEntry control | Syncfusion
-description: Learn all about how to set the different culture support for currency symbols, date, time, decimal, and group separators in the MaskedEntry control.
+description: Learn how to set the different culture support for currency symbols, date, time, decimal, and group separators in the MaskedEntry control.
 platform: maui
 control: SfMaskedEntry
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Culture in .NET MAUI MaskedEntry
 
-The MaskedEntry allows you to set any `Culture` support for currency symbols, date separators, time separators, group separators, and decimal separators by using the below special symbols.
+The MaskedEntry allows you to set any `Culture` support for currency symbols, date separators, time separators, group separators, and decimal separators by using the following special symbols.
 
 <table>
 <tr>
@@ -59,7 +59,7 @@ Currency symbol determined by current culture.
 </tr>
 </table>
 
-The following example shows how to set the the France culture for currency symbol, group separator and decimal separator.
+The following example shows how to set the France culture for the currency symbol, group separator, and decimal separator.
 
 {% tabs %}
 {% highlight C# %}

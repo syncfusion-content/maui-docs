@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mask formats in .NET MAUI MaskedEntry control | Syncfusion
-description: Learn all about how to set the mask format for the value in the MaskedEntry (SfMaskedEntry) control with prompts and literals.
+description: Learn how to set the mask format for the value in the MaskedEntry (SfMaskedEntry) control with prompts and literals.
 platform: maui
 control: SfMaskedEntry
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Formatting value in .NET MAUI MaskedEntry
 
-The `MaskedEntry` control allows you to format input values with prompt and literal characters which are defined in the mask expression by setting the `ValueMaskFormat` property. By default, the `Value` property of the control includes the characters typed by the user, as well as any prompt or literal characters in the input. The control provides several formatting options, which are listed below.
+The `MaskedEntry` control allows you to format input values with prompt and literal characters defined in the mask expression by setting the `ValueMaskFormat` property. By default, the `Value` property of the control includes the characters typed by the user and any prompt or literal characters in the input. The control provides several formatting options, which are listed as follows.
 
 1. ExcludePromptAndLiterals
 2. IncludePrompt
