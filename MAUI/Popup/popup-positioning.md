@@ -149,12 +149,12 @@ To open the `SfPopup` relative to a view, use the `SfPopup.ShowRelativeToView(Vi
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage.Content>       
   <StackLayout VerticalOptions="Start" HorizontalOptions="Center" Padding="20">
-            <Button x:Name="clickToShowPopup" Text="ClickToShowPopup"
-                    VerticalOptions="Start" HorizontalOptions="Start"
-                    Clicked="ClickToShowPopup_Clicked" />   
-            <sfPopup:SfPopup x:Name="sfPopup">
-            </sfPopup:SfPopup>
-        </StackLayout>
+    <Button x:Name="clickToShowPopup" Text="ClickToShowPopup"
+            VerticalOptions="Start" HorizontalOptions="Start"
+            Clicked="ClickToShowPopup_Clicked" />   
+    <sfPopup:SfPopup x:Name="sfPopup">
+    </sfPopup:SfPopup>
+  </StackLayout>
 </ContentPage.Content>
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
