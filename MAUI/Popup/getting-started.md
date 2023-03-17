@@ -7,9 +7,9 @@ control: SfPopup
 documentation: ug
 ---
 
-# Getting Started with .NET Maui Popup (SfPopup)
+# Getting Started with .NET MAUI Popup (SfPopup)
 
-This section provides a quick overview of how to get start with the .NET Maui Popup (SfPopup) for Maui. Walk through the entire process of creating the real-world SfPopup.
+This section provides a quick overview of how to get start with the .NET MAUI Popup (SfPopup) for MAUI. Walk through the entire process of creating the real-world SfPopup.
 
 
 ## Creating an application using the .NET MAUI Popup
@@ -220,7 +220,7 @@ Any view can be added as popup content by using the `SfPopup.ContentTemplate` pr
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="16" %}
 
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:GettingStarted"
              x:Class="GettingStarted.MainPage" 
