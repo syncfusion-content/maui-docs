@@ -231,7 +231,7 @@ this.Content = dataForm;
 <tr>
 <td>{{'[TextInputLayoutSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.TextInputLayoutSettings.html)'| markdownify }}</td>
 <td>TextInputLayoutSettings</td>
-<td>Represents the class to settings for layout type is TextInputLayout.</td>
+<td>Represents the class to settings for layout type to TextInputLayout.</td>
 </tr>
 </table> 
 
@@ -698,7 +698,7 @@ The following properties of the `Xamarin SfDataForm` is moved to the [DataFormDe
 <tr>
 <td>{{'[ContainerType](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.TextInputLayoutSettings.html#Syncfusion_XForms_DataForm_TextInputLayoutSettings_ContainerType)'| markdownify }}</td>
 <td>ContainerType</td>
-<td>Gets or sets a value that determines the container types for floating label layout.</td>
+<td>Gets or sets a value determining the container types for floating label layout.</td>
 </tr>
 
 <tr>
@@ -740,25 +740,25 @@ The following properties of the `Xamarin SfDataForm` is moved to the [DataFormDe
 <tr>
 <td>Nil</td>
 <td>FocussedStrokeThickness</td>
-<td>Gets or sets as value to customize the stroke width in focused state in the floating label layout, it is applicable for the bottom line and outline border. when setting the container type as filled and outlined respectively.</td>
+<td>Gets or sets as a value to customize the stroke width in a focused state in the floating label layout. It applies to the bottom line and outline border when setting the container type as filled and outlined.</td>
 </tr>
 
 <tr>
 <td>Nil</td>
 <td>UnfocussedStrokeThickness</td>
-<td>Gets or sets as value to customize the stroke width in unfocused state in the floating label layout, it is applicable for the bottom line and outline border when setting the container type as filled and outlined respectively.</td>
+<td>Gets or sets as a value to customize the stroke width in an unfocused state in the floating label layout. It applies to the bottom line and outline border when setting the container type as filled and outlined.</td>
 </tr>
 
 <tr>
 <td>{{'[ShowHelperText](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.TextInputLayoutSettings.html#Syncfusion_XForms_DataForm_TextInputLayoutSettings_ShowHelperText)'| markdownify }}</td>
 <td>ShowHelperText</td>
-<td>Gets or sets a value indicating whether to display the helper text and error text. It determines the visibility of the helper text and error text.</td>
+<td>Gets or sets a value indicating whether to display the helper and error text. It determines the visibility of the helper text and error text.</td>
 </tr>
 
 <tr>
 <td>Nil</td>
 <td>FocusedStroke</td>
-<td>Gets or sets the focused border color or focused base line color based on container type of data form floating label layout type. </td>
+<td>Gets or sets the focused border color or focused baseline color based on the container type of the data form floating label layout type.</td>
 </tr>
 </table>
 

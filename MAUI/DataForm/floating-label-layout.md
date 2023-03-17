@@ -1,20 +1,20 @@
 ---
-layout: post
-title: Floating label layout in .NET MAUI DataForm control | Syncfusion
-description: Learn about the Floating label layout support in Syncfusion .NET MAUI DataForm (SfDataForm) control.
-platform: maui
-control: SfDataForm
-documentation: ug
+Layout: Post
+Title: Floating label layout in .NET MAUI DataForm control | Syncfusion
+Description: Learn about the Floating label layout support in Syncfusion .NET MAUI DataForm (SfDataForm) control.
+Platform: Maui
+Control: SfDataForm
+Documentation: UG
 ---
 
 # Floating label Layout in .NET MAUI DataForm (SfDataForm)
 
 ## Overview
 
-The floating label layout is a powerful feature that enhances the user experience and makes it easier for users to interact with forms.The dataform supports floating label layout which includes assistive labels, leading and trailing icons, and a password toggle icon to show or hide a password. It offers three different kinds of containers, including filled, outlined, and none. Setting "LayoutType" to "TextInputLayout" enables floating label layout.
+The floating label layout is a powerful feature that enhances the user experience and makes it easier for users to interact with forms. The data form supports a floating label layout which includes assistive labels, leading and trailing icons, and a password toggle icon to show or hide a password. It offers three different containers, including filled, outlined, and none. Setting `LayoutType` to `TextInputLayout` enables a floating label layout.
 
 ## Changing the layout type for the data form
-By default, the dataform arranges the editors and their labels corresponding to the fields in layout. However, to enable the floating label layout for data form set `LayoutType` property of `SfDataForm` or `DataFormItem` to `TextInputLayout`.
+By default, the dataform arranges the editors and their labels corresponding to the fields in the layout. However, to enable the floating label layout for data form, set the LayoutType property of the `SfDataForm` or `DataFormItem` to `TextInputLayout`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -35,7 +35,7 @@ this.dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
 {% endtabs %}
 
 #### Changing the layout type for the editor
-You can change layout type for the editor by using the `LayoutType` property of [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html) and it will be handled in the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event.
+Change the layout type for the editor by using the `LayoutType` property of the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html), and it will be handled in the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event.
 
 {% tabs %}
 {% highlight XAML %}
@@ -74,10 +74,10 @@ Dataform supports the floating label layout for the following editors.
 * Custom editor
 
 ## Container types
-Containers enhance the perspective of dataform editor views. By default, the container type is `Outlined`. By using the `ContainerType` property of `TextInputLayoutSettings` in `DataForm` or in `DataFormItem`, you can modify the container type to `Filled` or `None`.
+Containers enhance the perspective of the dataform editor views. By default, the container type is `Outlined`. By using the `ContainerType` property of the `TextInputLayoutSettings` in DataF`orm or `DataFormItem`, modify the container type to `Filled` or `None`.
 
 #### Outlined
-The `Outlined` container type draws a thin border around the text input field and adds a hint text that floats above the input field when the user starts typing. To enable the outlined container type, you can set `ContainerType` property of `TextInputLayoutSettings` to `Outlined` in `DataForm` or in `DataFormItem` which covers the editor view with rounded-corner.
+The `Outlined` container type draws a thin border around the text input field and adds a hint text that floats above the input field when the user starts typing. To enable the outlined container type, set the `ContainerType` property of the `TextInputLayoutSettings` to `Outlined` in `DataForm` or `DataFormItem`, which covers the editor view with rounded-corner.
 
 {% tabs %}
 {% highlight XAML %}
@@ -144,7 +144,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endtabs %}
 
 #### Filled
-The `Filled` container type fills the background of the text input field with a solid color and adds a hint text that floats above the input field when the user starts typing. It can be enabled by setting the `ContainerType` property to `Filled` in `DataForm` or in `DataFormItem`.
+The `Filled` container type fills the background of the text input field with a solid color and adds a hint of text that floats above the input field when the user starts typing. It can be enabled by setting the `ContainerType` property to `Filled` in the `DataForm` or `DataFormItem`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -180,8 +180,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endtabs %}
 
 #### None
-
-The `None` container type does not add any border or background to the text input field and it can be enabled by setting the `ContainerType`property to `None` in `DataForm` or in `DataFormItem` container, it will have empty background and enough spacing.
+The `None` container type adds no border or background to the text input field. It can be enabled by setting the `ContainerType` property to `None` in the `DataForm` or `DataFormItem` container. It will have an empty background and enough spacing.
 
 {% tabs %}
 {% highlight XAML %}
@@ -219,7 +218,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 ## Leading and Trailing view
 
 #### Leading view
-The leading view is a view that appears to the left of the text input field. It can be used to add additional functionality or visual elements to the text input, such as a label or an icon. It can be added to the floating label layout by setting the `LeadingView` property of [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html). You can able to show leading view only when `ShowLeadingView` property is `true.`
+The leading view is a view that appears to the left of the text input field. It can add functionality or visual elements to the text input such as a label or an icon. It can be added to the floating label layout by setting the `LeadingView` property of the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html). Show the leading view only when the `ShowLeadingView` property is `true`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -259,7 +258,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 N> The `LeadingView` is applicable for both `Default` and `TextInputLayout` layout types
 
 #### Trailing view
-The trailing view is a view that appears to the right of the text input field. It can be used to add additional functionality or visual elements to the text input, such as a clear button or an icon. It can be added to the floating label layout by setting the `TrailingView` property of [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html). You can able show trailing view only when `ShowTrailingView` property is `true.`
+The trailing view is a view that appears to the right of the text input field. It can be used to add additional functionality or visual elements to the text input such as a clear button or an icon. It can be added to the floating label layout by setting the `TrailingView` property of the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html). Show a trailing view only when the `ShowTrailingView` property is `true`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -297,10 +296,10 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-N> The `TrailingView` is applicable only when `LayoutType` is `TextInputLayout`.
+N> The `TrailingView` is applicable only when the `LayoutType` is `TextInputLayout`.
 
 #### Leading and Trailing View Position
-The `LeadingViewPosition` and `TrailingViewPosition` properties of `DataFormItem` allow you to adjust the leading and trailing view's positions. The view is positioned `outside` of the container if the leading and trailing view positions are both set to `TextInputLayoutViewPosition.Outside`. The view is positioned `inside` the container if the leading and trailing view positions are both set to `TextInputLayoutViewPosition.Inside`.
+The `LeadingViewPosition` and `TrailingViewPosition` properties of the `DataFormItem` allow you to adjust the leading and trailing view's positions. The view is positioned `outside` the container if the leading and trailing view positions are set to `TextInputLayoutViewPosition.Outside`. The view is positioned `inside` the container if the leading and trailing view positions are set to `TextInputLayoutViewPosition.Inside`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -376,8 +375,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endtabs %}
 
 ## Enable password visibility toggle for password editor
-Password toggle visibility in floating label layout is used to show or hide the visibility of characters in the dataform password editor. You can enable this toggle by setting the `EnablePasswordVisibilityToggle` property to true in `DataFormItem`. The default value of `EnablePasswordVisibilityToggle` is `true`.
-
+Password toggle visibility in a floating label layout is used to show or hide the visibility of characters in the dataform password editor. Enable this toggle by setting the `EnablePasswordVisibilityToggle` property to true in the `DataFormItem`. The default value of the `EnablePasswordVisibilityToggle` is `true`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -414,12 +412,12 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 ## Assistive label
 
 #### Hint label
-The data field name will be displayed as floating or hint label for the editor, and it will be enabled by using the `Name` or `LabelText` property.
+The data field name will be displayed as a floating or hint label for the editor and enabled by using the `Name` or `LabelText` property.
 
 #### Helper label
-The helper label is used to display the water mark for the editor to provide hint for users and it can be set using `Prompt` or `PlaceHolderText`. 
+The helper label displays the watermark for the editor to provide hints for users, and it can be set using `Prompt` or `PlaceHolderText`.
 
-The visibility of helper text in DataForm floating label layout for `DataForm` and `DataFormItem` can be collapsed by setting `ShowHelperText` property of `TextInputLayoutSettings` to `false`
+The visibility of the helper text in the DataForm floating label layout for the `DataForm` and `DataFormItem` can be collapsed by setting the `ShowHelperText` property of the `TextInputLayoutSettings` to `false`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -455,13 +453,13 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endtabs %}
 
 #### Validation label
-The validation label used to display the dataform validation messages such as valid or invalid data. Refer [validation](https://help.syncfusion.com/maui/dataform/validation) to learn more about dataform validation.
+The validation label displays the dataform validation messages such as valid or invalid data. Refer to the [validation](https://help.syncfusion.com/maui/dataform/validation) to learn more about the dataform validation.
 
 ## Customize Assistive label using text style
-You can customize the font of assistive labels by setting the `TextColor`, `FontFamily`, `FontSize`, and `FontAttributes` properties of the `DataFormTextStyle` property.
+Customize the font of assistive labels by setting the `TextColor`, `FontFamily`, `FontSize`, and `FontAttributes` properties of the `DataFormTextStyle` property.
 
 #### Hint label style
-You can customize the text of hint label by setting the TextColor, FontFamily, FontSize, and FontAttributes properties of `LabelTextStyle` in DataFormItem.
+Customize the text of the hint label by setting the `TextColor`, `FontFamily`, `FontSize`, and `FontAttributes` properties of the `LabelTextStyle` in the DataFormItem.
 
 {% tabs %}
 {% highlight XAML %}
@@ -499,7 +497,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endtabs %}
 
 #### Helper label style
-You can customize the text of helper label by setting the TextColor, FontFamily, FontSize, and FontAttributes properties of `HelperTextStyle` in DataFormItem.
+Customize the text of the helper label by setting the `TextColor`, `FontFamily`, `FontSize`, and `FontAttributes` properties of the `HelperTextStyle` in the DataFormItem.
 
 {% tabs %}
 {% highlight XAML %}
@@ -540,7 +538,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endtabs %}
 
 #### Error message label style
-You can customize the text of error message label by setting the TextColor, FontFamily, FontSize, and FontAttributes properties of `ErrorLabelTextStyle` in DataFormItem.
+Customize the text of the error message label by setting the `TextColor`, `FontFamily`, `FontSize`, and `FontAttributes` properties of the `ErrorLabelTextStyle` in the DataFormItem.
 
 {% tabs %}
 {% highlight XAML %}
@@ -579,7 +577,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endtabs %}
 
 #### Valid message label style
-You can customize the text of valid message label by setting the TextColor, FontFamily, FontSize, and FontAttributes properties of `ValidMessageLabelTextStyle` in DataFormItem.
+Customize the text of a valid message label by setting the `TextColor`, `FontFamily`, `FontSize`, and `FontAttributes` properties of the `ValidMessageLabelTextStyle` in the DataFormItem.
 
 {% tabs %}
 {% highlight XAML %}
@@ -620,7 +618,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 ## Appearance customization
 
 #### Changing outline corner radius
-The corner radius of the container will be changed by setting `OutlineCornerRadius` property of `TextInputLayoutSettings` to double value.
+The corner radius of the container will be changed by setting the `OutlineCornerRadius` property of the `TextInputLayoutSettings` to double value.
 
 {% tabs %}
 {% highlight XAML %}
@@ -657,7 +655,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endtabs %}
 
 #### Stroke color
-The `Stroke` property of `TextInputLayoutSettings` is used to change the label text and border color of the editors.
+The `Stroke` property of the `TextInputLayoutSettings` changes the label text and border color of the editors.
 
 {% tabs %}
 {% highlight XAML %}
@@ -731,7 +729,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endtabs %}
 
 #### Focused and unfocused stroke thickness
-When the editor's view is focused and unfocused, the border's thickness can be changed using the `FocusedStrokeThickness` and `UnfocusedStrokeThickness` properties of `TextInputLayoutSettings`.
+When the editor's view is focused and unfocused, the border's thickness can be changed using the `FocusedStrokeThickness` and `UnfocusedStrokeThickness` properties of the `TextInputLayoutSettings`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -770,8 +768,6 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endtabs %}
 
 ## Unsupported editors
+The Floating label layout does not support non-editable editors such as `RadioGroup editor`, `CheckBox editor`, and `Switch editor`. Picker editors such as `Picker editor`, `Date picker`, and `Time picker` will be updated to support a floating label layout.
 
-The Floating label layout do not support non-editable editors such as `RadioGroup editor`, `CheckBox editor` and `Switch editor`. Picker editors such as `Picker editor`, `Date picker` and `Time picker` will be updated to support floating label layout.
-
-N> By default the layout type of unsupported editors is `Default`. You can also set layout type for unsupported editor using this `Changing layout type of the DataFormItem`
-
+N> By default, the layout type of unsupported editors is `Default`. You can also set the layout type for the unsupported editor using this `Changing layout type of the DataFormItem`.
