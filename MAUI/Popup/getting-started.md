@@ -105,7 +105,7 @@ Refer to the following code example for displaying popup.
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="18" %}
 
 using Syncfusion.Maui.Popup;
 
@@ -158,13 +158,66 @@ By default, you can choose a layout from the following available layouts in the 
 
 You can also customize the entire view of the popup by loading the templates or custom views for the header, body, and footer.
 
+Refer to the following code example for displaying popup with appearance mode.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="12" %}
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:GettingStarted"
+             x:Class="GettingStarted.MainPage" 
+             Padding="0,40,0,0">
+     <StackLayout x:Name="mainLayout">
+       <Button x:Name="clickToShowPopup" Text="ClickToShowPopup" 
+               VerticalOptions="Start" HorizontalOptions="FillAndExpand"
+               Clicked="ClickToShowPopup_Clicked" />
+        <popup:SfPopup x:Name="popup"  ShowFooter="True" AppearanceMode="TwoButton"/>
+     </StackLayout>
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="14 15" %}
+
+using Syncfusion.Maui.Popup;
+
+namespace GettingStarted
+{
+    public partial class MainPage : ContentPage
+    {
+        SfPopup popup;
+
+        public MainPage()
+        {
+            InitializeComponent();
+            popup = new SfPopup();
+            popup.ShowFooter = true;
+            popup.AppearanceMode = Syncfusion.Maui.Popup.PopupButtonAppearanceMode.TwoButton;
+        }
+
+        private void ClickToShowPopup_Clicked(object sender, EventArgs e)
+        {
+            popup.Show();
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Popup with Appearance Mode](Images/getting-started//maui-popup-with-appearance-mode.png)
+
 ###  Load your template view in the popup body
 
 Any view can be added as popup content by using the `SfPopup.ContentTemplate` property to refresh it. Refer to the following code example in which a label is added as a popup content. 
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="16" %}
 
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -193,7 +246,7 @@ Any view can be added as popup content by using the `SfPopup.ContentTemplate` pr
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="24"%}
 
 using Syncfusion.Maui.Popup;
 
