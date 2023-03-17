@@ -123,6 +123,7 @@ this.Calendar.MonthView = new CalendarMonthView()
 
 ![Customize Week number Appearance in .NET MAUI Calendar.](images/views/maui-month-view-show-week-numbers-customize.png)
 
+
 ## Year view
 The Year view displays the current year's month. A calendar year is a one-year period that begins on January 1 and ends on December 31. By default, displays the current year's month and the current month is highlighted by a separate color that is different from the rest of the month color in the `Year view`. You can easily navigate to the desired month dates from the year view.
 

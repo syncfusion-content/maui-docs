@@ -11,15 +11,15 @@ documentation: ug
 
 To make the migration from the [Xamarin SfCalendar](https://www.syncfusion.com/xamarin-ui-controls/xamarin-calendar) to [.NET MAUI SfCalendar](https://www.syncfusion.com/maui-controls/maui-calendar) easier, most of the APIs from the Xamarin SfCalendar were kept in the.NET MAUI SfCalendar. However, to maintain the consistency of API naming in the .NET MAUI SfCalendar, some of the APIs have been renamed. Please find the difference in the following topics.
 
-## Namespaces
+## Namespaces 
 
 <table>
 <tr>
 <th>Xamarin SfCalendar</th>
 <th>.NET MAUI SfCalendar</th></tr>
 <tr>
-<td>Syncfusion.SfCalendar.XForms</td>
-<td>Syncfusion.Maui.SfCalendar</td></tr>
+<td>Syncfusion.Calendar.XForms</td>
+<td>Syncfusion.Maui.Calendar</td></tr>
 </table>
 
 N> The selection-based `.NET MAUI SfCalendar` does not manage appointments like the `Xamarin SfCalendar` does. If you require appointment/events management use `.NET MAUI SfScheduler`.
@@ -49,7 +49,7 @@ xmlns:calendar="clr-namespace:Syncfusion.SfCalendar.XForms;assembly=Syncfusion.S
 
 {% highlight C# %}
 
-using Syncfusion.SfCalendar.XForms;
+using Syncfusion.Calendar.XForms;
 ...
 
 SfCalendar calendar = new SfCalendar ();
