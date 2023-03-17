@@ -98,27 +98,23 @@ Refer to the following code example for displaying popup.
              Padding="0,40,0,0">
      <StackLayout x:Name="mainLayout">
        <Button x:Name="clickToShowPopup" Text="ClickToShowPopup" 
-               VerticalOptions="Start" HorizontalOptions="FillAndExpand"
+               VerticalOptions="Start" HorizontalOptions="Center"
                Clicked="ClickToShowPopup_Clicked" />
+               <popup:SfPopup x:Name="popup" />
      </StackLayout>
 </ContentPage>
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="18" %}
-
-using Syncfusion.Maui.Popup;
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="13" %}
 
 namespace GettingStarted
 {
     public partial class MainPage : ContentPage
     {
-        SfPopup popup;
-
         public MainPage()
         {
             InitializeComponent();
-            popup = new SfPopup();
         }
 
         private void ClickToShowPopup_Clicked(object sender, EventArgs e)
@@ -237,6 +233,7 @@ Any view can be added as popup content by using the `SfPopup.ContentTemplate` pr
                 <DataTemplate>
                     <Label Text="This is the Customized view for SfPopup"
                            BackgroundColor="SkyBlue"
+                           VerticalTextAlignment="Center"
                            HorizontalTextAlignment="Center" />
                 </DataTemplate>
             </sfPopup:SfPopup.ContentTemplate>

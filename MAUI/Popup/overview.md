@@ -13,8 +13,10 @@ Popup layout allows you to display an alert message with customizable buttons or
 
 ## Key features
 
-* Load complex views and layouts as content.
-* Display popups with minimalistic code by calling only a single method.
-* Choose from default layouts, such as one-button and two-button layouts, to display simple and minimalistic information.
-* Display popups in positions relative to a view on screen.
-* Display popups at specific x and y coordinates with desired height and width or with default dimensions in the center.
+* `Position` : Display a popup at any desired location on screen.
+* `Relative to view` : Display a popup in positions relative to any control on the screen.
+* `Full-screen mode` : Display a popup with full-screen width and height to show large content.
+* `Auto size` : Automatically adjust the popup’s width and height based on the content loaded in it.
+* `Different layouts` : Choose from default layouts, such as one-button layout and two-button layout, to display simple, minimal information.
+* `Template support` : Load any view as the header, footer, and content through a template.
+* `Modal mode` : Make the popup a modal dialog to prevent interactions with the underlying screen until certain actions are performed
