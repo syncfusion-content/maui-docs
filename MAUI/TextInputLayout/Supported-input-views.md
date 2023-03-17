@@ -176,7 +176,7 @@ To initialize the `MaskedEntry` control and launch it in each platform, refer to
 
 var inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Card number"; 
-inputLayout.HelperText = "Required *"
+inputLayout.HelperText = "Required *";
 inputLayout.ContainerType = ContainerType.OutLined;
 inputLayout.ContainerBackground = Colors.Transparent;
 inputLayout.Content = new SfMaskedEntry() { MaskType = MaskedEntryMaskType.Simple, Mask = "0000 0000 0000 0000" }; 
