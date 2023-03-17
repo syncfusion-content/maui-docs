@@ -7,7 +7,7 @@ control: SfPopup
 documentation: ug
 ---
 
-# Popup Positioning in Xamarin Popup (SfPopup)
+# Popup Positioning in MAUI Popup (SfPopup)
 
 The `SfPopup` allows showing the popup content at various available positions.
 
