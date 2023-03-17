@@ -132,6 +132,8 @@ namespace GettingStarted
 
 {% endtabs %}
 
+![Popup with default appearance](Images/getting-started//maui-popup-with-default-appearance.png)
+
 You can download the source code of this sample [here](https://github.com/SyncfusionExamples/getting-started-.net-maui-popup).
 
 N> Two Popups cannot be displayed at the same time in a page.
@@ -229,3 +231,4 @@ namespace GettingStarted
 
 {% endtabs %}
 
+![Popup with custom content](Images/getting-started//maui-popup-with-custom-content.png)
