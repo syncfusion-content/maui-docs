@@ -228,6 +228,11 @@ this.Content = dataForm;
 <td>Defines the constants for the ValidationMode that specifies when the user input should be validated for the data object.</td>
 </tr>
 
+<tr>
+<td>{{'[TextInputLayoutSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.TextInputLayoutSettings.html)'| markdownify }}</td>
+<td>TextInputLayoutSettings</td>
+<td>Represents the class to settings for layout type is TextInputLayout.</td>
+</tr>
 </table> 
 
 ## Properties
@@ -353,6 +358,18 @@ public class DataModel
 <td>Nil</td>
 <td>{{'[DefaultLayoutSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_DefaultLayoutSettings)'| markdownify }}</td>
 <td>Gets or sets the settings to customize the default layout (Holds label and editor) settings.</td>
+</tr>
+
+<tr>
+<td>{{'[LayoutOptions](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.SfDataForm.html#Syncfusion_XForms_DataForm_SfDataForm_LayoutOptions)'| markdownify }}</td>
+<td>LayoutType</td>
+<td>Gets or sets the layout options for DataForm to define the layout type for the Dataform.</td>
+</tr>
+
+<tr>
+<td>Nil</td>
+<td>TextInputLayoutSettings</td>
+<td>Gets or sets the floating label layout settings for Dataform.</td>
 </tr>
 </table>
 
@@ -580,7 +597,7 @@ public class DataModel
 
 <tr>
 <td>{{'[ImageSource](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormItem.html#Syncfusion_XForms_DataForm_DataFormItem_ImageSource)'| markdownify }}</td>
-<td>{{'[LeadingLabelIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_LeadingLabelIcon)'| markdownify }}</td>
+<td>LeadingView</td>
 <td>Gets or sets an image used as the editor’s label.</td>
 </tr>
 
@@ -595,6 +612,48 @@ public class DataModel
 <td>{{'[PropertyInfo](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormItem.html#Syncfusion_XForms_DataForm_DataFormItem_PropertyInfo)'| markdownify }}</td>
 <td>{{'[PropertyInfo](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_PropertyInfo)'| markdownify }}</td>
 <td>Gets the property info of the data field.</td>
+</tr>
+
+<tr>
+<td>{{'[LayoutOptions](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormItem.html#Syncfusion_XForms_DataForm_DataFormItem_LayoutOptions)'| markdownify }}</td>
+<td>LayoutType</td>
+<td>Gets or sets the layout options for DataFormItem to define the layout type for the DataFormItem in dataform.</td>
+</tr>
+
+<tr>
+<td>{{'[TextInputLayoutSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormItem.html#Syncfusion_XForms_DataForm_DataFormItem_TextInputLayoutSettings)'| markdownify }}</td>
+<td>TextInputLayoutSettings</td>
+<td>Gets or sets the Text input Layout Settings for dataformitem to customize and configure the text input layout item in dataform.</td>
+</tr>
+
+<tr>
+<td>Nil</td>
+<td>ShowLeadingView</td>
+<td></td>
+</tr>
+
+<tr>
+<td>Nil</td>
+<td>LeadingViewPosition</td>
+<td>Gets or sets the value that determines whether to place the leading view within the floating label layout.</td>
+</tr>
+
+<tr>
+<td>Nil</td>
+<td>TrailingView</td>
+<td>Gets or sets a value for a view to place after input view.</td>
+</tr>
+
+<tr>
+<td>Nil</td>
+<td>TrailingViewPosition</td>
+<td>Gets or sets a value that determines whether to place the trailing view within the layout.</td>
+</tr>
+
+<tr>
+<td>Nil</td>
+<td>ShowTrailingView</td>
+<td>Gets or sets a value that indicates whether to display the trailing view.</td>
 </tr>
 </table>
 
@@ -625,6 +684,81 @@ The following properties of the `Xamarin SfDataForm` is moved to the [DataFormDe
 <td>{{'[EditorWidth](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.SfDataForm.html#Syncfusion_XForms_DataForm_SfDataForm_EditorWidth)'| markdownify }}</td>
 <td>{{'[EditorWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDefaultLayoutSettings.html#Syncfusion_Maui_DataForm_DataFormDefaultLayoutSettings_EditorWidth)'| markdownify }}</td>
 <td>Gets or sets the width of the editor.</td>
+</tr>
+</table>
+
+#### TextInputLayoutSettings
+
+<table>
+<tr>
+<th>Xamarin SfDataForm</th>
+<th>.NET MAUI SfDataForm</th>
+<th>Description</th></tr>
+
+<tr>
+<td>{{'[ContainerType](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.TextInputLayoutSettings.html#Syncfusion_XForms_DataForm_TextInputLayoutSettings_ContainerType)'| markdownify }}</td>
+<td>ContainerType</td>
+<td>Gets or sets a value that determines the container types for floating label layout.</td>
+</tr>
+
+<tr>
+<td>{{'[OutlineCornerRadius](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.TextInputLayoutSettings.html#Syncfusion_XForms_DataForm_TextInputLayoutSettings_OutlineCornerRadius)'| markdownify }}</td>
+<td>OutlineCornerRadius</td>
+<td>Gets or sets a value to customize the customize the corner radius of outline border in the floating label layout.</td>
+</tr>
+
+<tr>
+<td>Nil</td>
+<td>EnableFloating</td>
+<td>Gets or sets a value that indicates whether to float the label when it is focused or unfocused.</td>
+</tr>
+
+<tr>
+<td>Nil</td>
+<td>IsHintAlwaysFloated</td>
+<td>Gets or sets a value that indicates whether to fix the hint label always at the top even when the text is empty in the floating label layout.</td>
+</tr>
+
+<tr>
+<td>Nil</td>
+<td>EnableHintAnimation</td>
+<td>Gets or sets a value that indicates whether to enable animation for the hint text when the input view is focused or unfocused in the floating label layout.</td>
+</tr>
+
+<tr>
+<td>Nil</td>
+<td>HelperTextStyle</td>
+<td>Gets or sets the style for helper label in the floating label layout.</td>
+</tr>
+
+<tr>
+<td>Nil</td>
+<td>Stroke</td>
+<td>Gets or sets the border  color based on the container in the floating label layout. </td>
+</tr>
+
+<tr>
+<td>Nil</td>
+<td>FocussedStrokeThickness</td>
+<td>Gets or sets as value to customize the stroke width in focused state in the floating label layout, it is applicable for the bottom line and outline border. when setting the container type as filled and outlined respectively.</td>
+</tr>
+
+<tr>
+<td>Nil</td>
+<td>UnfocussedStrokeThickness</td>
+<td>Gets or sets as value to customize the stroke width in unfocused state in the floating label layout, it is applicable for the bottom line and outline border when setting the container type as filled and outlined respectively.</td>
+</tr>
+
+<tr>
+<td>{{'[ShowHelperText](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.TextInputLayoutSettings.html#Syncfusion_XForms_DataForm_TextInputLayoutSettings_ShowHelperText)'| markdownify }}</td>
+<td>ShowHelperText</td>
+<td>Gets or sets a value indicating whether to display the helper text and error text. It determines the visibility of the helper text and error text.</td>
+</tr>
+
+<tr>
+<td>Nil</td>
+<td>FocusedStroke</td>
+<td>Gets or sets the focused border color or focused base line color based on container type of data form floating label layout type. </td>
 </tr>
 </table>
 
@@ -683,6 +817,21 @@ The following properties of the `Xamarin SfDataForm` is moved to the [DataFormDe
 <td>{{'[GroupName](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormGroupItem.html#Syncfusion_XForms_DataForm_DataFormGroupItem_GroupName)'| markdownify }}</td>
 <td>{{'[Name](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormGroupItem.html#Syncfusion_Maui_DataForm_DataFormGroupItem_Name)'| markdownify }}</td>
 <td>Gets or sets the name of the editor group.</td>
+</tr>
+</table>
+
+#### DataFormPasswordItem
+
+<table>
+<tr>
+<th>Xamarin SfDataForm</th>
+<th>.NET MAUI SfDataForm</th>
+<th>Description</th></tr>
+
+<tr>
+<td>{{'[EnablePasswordVisibilityToggle](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.DataFormTextItem.html#Syncfusion_XForms_DataForm_DataFormTextItem_EnablePasswordVisibilityToggle)'| markdownify }}</td>
+<td>EnablePasswordVisibilityToggle</td>
+<td>Gets or sets a value that indicates whether to show the password visibility toggle.</td>
 </tr>
 </table>
 
@@ -991,6 +1140,24 @@ The common properties of `Xamarin SfDataForm` list items ( [ DataFormPickerEdito
 <td>{{'[DataFormValidationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormValidationMode.html)'| markdownify }}</td>
 <td>Defines the constants for the ValidationMode that specifies when the user input should be validated for the data object.</td>
 </tr>
+
+<tr>
+<td>{{'[LayoutType](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.LayoutType.html)'| markdownify }}</td>
+<td>DataFormLayoutType</td>
+<td>Defines the constants for the ValidationMode that specifies when the user input should be validated for the data object.</td>
+</tr>
+
+<tr>
+<td>{{'[ContainerType](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.ContainerType.html)'| markdownify }}</td>
+<td>TextInputLayoutContainerType</td>
+<td>Defines the constants for the ValidationMode that specifies when the user input should be validated for the data object.</td>
+</tr>
+
+<tr>
+<td>{{'[ViewPosition](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.ViewPosition.html)'| markdownify }}</td>
+<td>TextInputLayoutViewPosition</td>
+<td>Defines the constants for the ValidationMode that specifies when the user input should be validated for the data object.</td>
+</tr>
 </table>
 
 ## Events
@@ -1055,8 +1222,6 @@ The common properties of `Xamarin SfDataForm` list items ( [ DataFormPickerEdito
 
 ## Upcoming Features
 
-* Support for Floating label layout.
-* Keyboard interaction support for MacCatalyst, Android, and iOS.
 * Support for group header view customization.
 * Support for DataFormViewItem's auto height.
 * Support for programmatic scrolling to a specific editor.
