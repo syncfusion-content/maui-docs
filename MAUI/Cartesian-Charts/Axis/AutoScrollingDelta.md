@@ -51,7 +51,7 @@ By adding [ChartZoomPanBehavior]() to the chart, you can scroll to see the previ
 
 {% endtabs %}
 
-![Auto scrolling delta support in MAUI Chart](Axis_Images/AutoScrolldelta.png)
+![Auto scrolling delta support in MAUI Chart](Axis_Images/ScrollingDelta.png)
 
 ## AutoScrollingMode
 
@@ -86,7 +86,7 @@ By adding [ChartZoomPanBehavior]() to the chart, you can scroll to see the previ
 
 {% endtabs %}
 
-![Scrolling mode support in MAUI Chart](Axis_Images/ScrollingModeStart.png)
+![Scrolling mode support in MAUI Chart](Axis_Images/ModeStart.png)
 
 ## AutoScrollingDeltaType
 
@@ -121,4 +121,4 @@ In [DateTimeAxis](), you can apply auto scrolling delta value in [Years](), [Mon
 
 {% endtabs %}
 
-![Scrolling delta type support in MAUI Chart](Axis_Images/AutoscrollingType.png)
+![Scrolling delta type support in MAUI Chart](Axis_Images/DeltaType.png)
