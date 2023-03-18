@@ -151,5 +151,3 @@ The default name and value information used in the `SfPdfViewer` in the language
 <td>This PDF file is protected. Please enter the password to open it.</td>
 </tr>
 </table>
-
-

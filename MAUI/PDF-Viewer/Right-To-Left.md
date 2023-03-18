@@ -14,6 +14,7 @@ Setting the `FlowDirection` property to `RightToLeft` on SfPdfViewer sets the al
 
 {% tabs %}
 {% highlight XAML %}
+
         <syncfusion:SfPdfViewer
             x:Name="PdfViewer"
             FlowDirection="RightToLeft"/>
