@@ -19,7 +19,7 @@ When a document fails to load in the [SfPdfViewer](https://help.syncfusion.com/c
             DocumentLoadFailed="PdfDocumentLoadFailed"/>
 			
 {% endhighlight %}
-{% highlight C#   hl_lines="4" %}
+{% highlight C# hl_lines="4" %}
 
 	public MainPage()
 	{
@@ -35,6 +35,35 @@ When a document fails to load in the [SfPdfViewer](https://help.syncfusion.com/c
         {
             string stackTrace = exception.StackTrace;
         }
+    }
+	
+{% endhighlight %}
+{% endtabs %}
+
+## Handling error
+
+The `DocumentLoadFailed` event allows you to handle the load failures at the application level in your own way. Set the `Handled` property of the `DocumentFailedEventArgs` to `true` to disable the control’s default error messages and handle your logic with the error information.
+
+{% tabs %}
+{% highlight XAML %}
+
+        <syncfusion:SfPdfViewer 
+            x:Name="PdfViewer"
+            DocumentLoadFailed="PdfDocumentLoadFailed"/>
+			
+{% endhighlight %}
+{% highlight C# hl_lines="4" %}
+
+	public MainPage()
+	{
+		InitializeComponent();
+        PdfViewer.DocumentLoadFailed += PdfDocumentLoadFailed;
+    }
+
+    private void PdfDocumentLoadFailed(object sender, DocumentLoadFailedEventArgs e)
+    {
+        e.Handled = true;
+        // Handle your logic here.
     }
 	
 {% endhighlight %}
