@@ -52,60 +52,6 @@ PdfViewer.UnloadDocument();
 {% endhighlight %}
 {% endtabs %}
 
-## Events
-
-The `SfPdfViewer` supports the [DocumentLoaded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoaded) and [DocumentLoadFailed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoadFailed) events to notify whether the document has been opened and displayed in the view or not.
-
-### Document loaded event
-
-The [DocumentLoaded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoaded) event triggers after the document is loaded in the `SfPdfViewer`. Refer to the following code example:
-
-{% tabs %}
-{% highlight xaml %}
-<syncfusion:SfPdfViewer x:Name="PdfViewer" DocumentSource="{Binding PdfDocumentStream}" DocumentLoaded="PdfViewer_DocumentLoaded">
-{% endhighlight %}
-
-{% highlight c# %}
-private void PdfViewer_DocumentLoaded(object sender, EventArgs e)
-{
-   DisplayAlert("Info", "Document loaded successfully", "OK");
-}
-{% endhighlight %}
-{% endtabs %}
-
-If you want to initially open a document with a specific page number or zoom factor, then call the respective APIs in this event handler. The following code example explains opening a document with a specified page number of 4.
-
-{% tabs %}
-{% highlight c# %}
-private void PdfViewer_DocumentLoaded(object sender, EventArgs e)
-{
-    pdfViewer.GoToPage(4);
-}
-{% endhighlight %}
-{% endtabs %}
-
-### Document load failed event
-
-The [DocumentLoadFailed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoadFailed) event triggers when the document loading fails in the `SfPdfViewer`. That is,
-* When any corrupted document is loaded
-* When any password-protected document is loaded with an invalid or empty password
-* When any non-PDF document is loaded
-
-The [DocumentLoadFailedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.DocumentLoadFailedEventArgs.html) will return the error `Message` and `Exception` details for the failure. The following code example explains the same.
-
-{% tabs %}
-{% highlight xaml %}
-<syncfusion:SfPdfViewer x:Name="PdfViewer" DocumentSource="{Binding PdfDocumentStream}" DocumentLoadFailed="PdfViewer_DocumentLoadFailed">
-{% endhighlight %}
-
-{% highlight c# %}
-private void PdfViewer_DocumentLoadFailed(object sender, DocumentLoadFailedEventArgs e)
-{
-   DisplayAlert( e.Message, e.Exception.StackTrace, "OK");
-}
-{% endhighlight %}
-{% endtabs %}
-
 ## Check other PDF opening options
 
 * [Open a document from local storage](https://help.syncfusion.com/maui/pdf-viewer/open-a-document-from-local-storage)
