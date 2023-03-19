@@ -18,17 +18,17 @@ The [DocumentLoaded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfView
 {% tabs %}
 {% highlight XAML hl_lines="3" %}
 
-<syncfusion:SfPdfViewer 
-	x:Name="PdfViewer" 
-	DocumentLoaded="PdfViewer_DocumentLoaded"/>
+	<syncfusion:SfPdfViewer 
+		x:Name="PdfViewer" 
+		DocumentLoaded="PdfViewer_DocumentLoaded"/>
 
 {% endhighlight %}
 {% highlight C# %}
 
-private void PdfViewer_DocumentLoaded(object sender, EventArgs e)
-{
-   DisplayAlert("Info", "Document loaded successfully", "OK");
-}
+	private void PdfViewer_DocumentLoaded(object sender, EventArgs e)
+	{
+	   DisplayAlert("Info", "Document loaded successfully", "OK");
+	}
 
 {% endhighlight %}
 {% endtabs %}
@@ -62,17 +62,17 @@ The [DocumentLoadFailedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion
 {% tabs %}
 {% highlight XAML hl_lines="3" %}
 
-<syncfusion:SfPdfViewer 
-	x:Name="PdfViewer" 
-	DocumentLoadFailed="PdfViewer_DocumentLoadFailed"/>
+	<syncfusion:SfPdfViewer 
+		x:Name="PdfViewer" 
+		DocumentLoadFailed="PdfViewer_DocumentLoadFailed"/>
 	
 {% endhighlight %}
 {% highlight C# %}
 
-private void PdfViewer_DocumentLoadFailed(object sender, DocumentLoadFailedEventArgs e)
-{
-   DisplayAlert( e.Message, e.Exception.StackTrace, "OK");
-}
+	private void PdfViewer_DocumentLoadFailed(object sender, DocumentLoadFailedEventArgs e)
+	{
+		DisplayAlert( e.Message, e.Exception.StackTrace, "OK");
+	}
 
 {% endhighlight %}
 {% endtabs %}
