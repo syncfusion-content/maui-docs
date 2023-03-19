@@ -56,7 +56,7 @@ You can enable or disable the recognition of hyperlinks in PDF documents using t
 {% endhighlight %}
 {% highlight C# %}
 
-PdfViewer.EnableHyperlinkNavigation = false;
+	PdfViewer.EnableHyperlinkNavigation = false;
 	
 {% endhighlight %}
 {% endtabs %}
