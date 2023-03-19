@@ -20,7 +20,7 @@ The [DocumentLoaded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfView
 
 <syncfusion:SfPdfViewer 
 	x:Name="PdfViewer" 
-	DocumentLoaded="PdfViewer_DocumentLoaded">
+	DocumentLoaded="PdfViewer_DocumentLoaded"/>
 
 {% endhighlight %}
 {% highlight C# %}
@@ -64,7 +64,7 @@ The [DocumentLoadFailedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion
 
 <syncfusion:SfPdfViewer 
 	x:Name="PdfViewer" 
-	DocumentLoadFailed="PdfViewer_DocumentLoadFailed">
+	DocumentLoadFailed="PdfViewer_DocumentLoadFailed"/>
 	
 {% endhighlight %}
 {% highlight C# %}
