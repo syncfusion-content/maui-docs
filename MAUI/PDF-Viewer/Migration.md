@@ -87,14 +87,8 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 ## Upcoming Features   
 
 * Built-in toolbar
-* Text search
 * Text selection and copy
-* Bookmark navigation
-* Document link or Table of Contents navigation
-* Hyperlink navigation
-* Right-to-Left (RTL)
 * Themes
-* Localization
 * Accessibility
 * Text markup annotations
 * Shape annotations
