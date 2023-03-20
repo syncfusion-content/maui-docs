@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Text Search in .NET MAUI PDF Viewer control | Syncfusion
-description: Learn here all about the layouting Syncfusion .NET MAUI PDF Viewer (SfPdfViewer) control in right-to-left.
+description: Learn here all about searching a text in the PDF documents using Syncfusion .NET MAUI PDF Viewer (SfPdfViewer).
 platform: MAUI
 control: SfPdfViewer
 documentation: ug
