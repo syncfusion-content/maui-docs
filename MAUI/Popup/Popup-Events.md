@@ -161,40 +161,40 @@ To handle the Accept button,
 class PopupViewModel : INotifyPropertyChanged
 {
     bool isOpen;
-	public event PropertyChangedEventHandler PropertyChanged;
-	void OnPropertyChanged(string propertyName)
-	{
-		PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-	}
-	public ICommand PopupAcceptCommand { get; set; }
-	public ICommand PopupCommand { get; set; }
-	public bool PopupOpen
-	{
-		get
-		{
-			return isOpen;
-		}
-		set
-		{
-			isOpen = value;
-			OnPropertyChanged(nameof(PopupOpen));
-		}
-	}
-	public PopupViewModel()
-	{
-		PopupAcceptCommand = new Command(PopupAccept); //CanExecute() will be call the PopupAccept method
-		PopupCommand = new Command(Popup);
-	}
+    public event PropertyChangedEventHandler PropertyChanged;
+    void OnPropertyChanged(string propertyName)
+    {
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+    }
+    public ICommand PopupAcceptCommand { get; set; }
+    public ICommand PopupCommand { get; set; }
+    public bool PopupOpen
+    {
+        get
+        {
+            return isOpen;
+        }
+        set
+        {
+            isOpen = value;
+            OnPropertyChanged(nameof(PopupOpen));
+        }
+    }
+    public PopupViewModel()
+    {
+        PopupAcceptCommand = new Command(PopupAccept); //CanExecute() will be call the PopupAccept method
+        PopupCommand = new Command(Popup);
+    }
 
-	private void Popup()
-	{
-		PopupOpen = true;
-	}
+    private void Popup()
+    {
+        PopupOpen = true;
+    }
 
-	private void PopupAccept()
-	{
-		// You can write your set of codes that needs to be executed.
-	}
+    private void PopupAccept()
+    {
+        // You can write your set of codes that needs to be executed.
+    }
 }
 {% endhighlight %}
 
