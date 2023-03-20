@@ -127,7 +127,7 @@ You can display the Popup without header by using the property `SfPopup.ShowHead
             <Button x:Name="clickToShowPopup" Text="ClickToShowPopup" 
                     VerticalOptions="Start" HorizontalOptions="Center" 
                     Clicked="ClickToShowPopup_Clicked" />
-            <sfPopup:SfPopup x:Name="sfPopup" ShowHeader="False">
+            <sfPopup:SfPopup x:Name="sfPopup" ShowHeader="False" ShowFooter="True">
             </sfPopup:SfPopup>
         </StackLayout>
     </ContentPage.Content>
@@ -142,6 +142,7 @@ public partial class MainPage : ContentPage
     {
         InitializeComponent();
         sfPopup.ShowHeader = false;
+        sfPopup.ShowFooter = true;
     }
 
     private void ClickToShowPopup_Clicked(object sender, EventArgs e)
@@ -291,8 +292,8 @@ public partial class MainPage : ContentPage
         });
         
         // Adding HeaderTemplate of the SfPopup
-        sfPopup.HeaderTemplate = headerTemplateView;       
-	}
+        sfPopup.HeaderTemplate = headerTemplateView;
+    }
 
     private void ClickToShowPopup_Clicked(object sender, EventArgs e)
     {
@@ -360,8 +361,8 @@ public partial class MainPage : ContentPage
         });
 
         // Adding FooterTemplate of the SfPopup
-        sfPopup.FooterTemplate = footerTemplateView;       
-	}
+        sfPopup.FooterTemplate = footerTemplateView;
+    }
 
     private void ClickToShowPopup_Clicked(object sender, EventArgs e)
     {
@@ -424,8 +425,8 @@ public partial class MainPage : ContentPage
         });
 
        // Adding ContentTemplate of the SfPopup
-        sfPopup.ContentTemplate = contentTemplateView;       
-	}
+        sfPopup.ContentTemplate = contentTemplateView;
+    }
 
     private void ClickToShowPopup_Clicked(object sender, EventArgs e)
     {
