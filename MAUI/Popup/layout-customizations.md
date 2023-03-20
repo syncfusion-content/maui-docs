@@ -108,7 +108,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Popup with one button](Images/layout-customizations/maui-popup-appearance-mode-two-button.png)
+![.NET MAUI Popup with two buttons](Images/layout-customizations/maui-popup-appearance-mode-two-button.png)
 
 ## Popup region customization
 
