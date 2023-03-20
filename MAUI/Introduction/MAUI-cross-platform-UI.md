@@ -221,8 +221,8 @@ You can find the platforms supported by each .NET MAUI control as below.
 		</td>
 	</tr>
     <tr>
-	    <td rowspan="3" valign="top">
-			Popup<br/>
+	    <td rowspan="4" valign="top">
+			LAYOUT<br/>
 		</td>
 	    <td>
 			<a href="/maui/backdrop/overview">Backdrop Page</a><br/>
@@ -243,6 +243,23 @@ You can find the platforms supported by each .NET MAUI control as below.
 	<tr>
 		<td>
 			<a href="/maui/listview/overview">ListView</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
+		<tr>
+		<td>
+			<a href="/maui/listview/overview">Popup</a><br/>
 		</td>
 		<td>
 		Yes<br/>
@@ -380,8 +397,8 @@ You can find the platforms supported by each .NET MAUI control as below.
 		</td>
 	</tr>
 	<tr>
-	    <td rowspan="5" valign="top">
-		Masked Entry<br/>
+	    <td rowspan="6" valign="top">
+		EDITORS<br/>
 		</td>
 		<td>
 			<a href="/maui/autocomplete/overview">Autocomplete</a><br/>
@@ -419,6 +436,23 @@ You can find the platforms supported by each .NET MAUI control as below.
 	<tr>
 		<td>
 			<a href="/maui/dataform/overview">DataForm</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="/maui/maskedEntry/overview">Masked Entry</a><br/>
 		</td>
 		<td>
 		Yes<br/>
@@ -576,8 +610,8 @@ You can find the platforms supported by each .NET MAUI control as below.
 		</td>
 	</tr>
     <tr>  
-	    <td rowspan="2" valign="top">
-	    Shimmer<br/>
+	    <td rowspan="3" valign="top">
+	    MISCELLANEOUS<br/>
 		</td>
 		<td>
 			<a href="/maui/avatar-view/overview">Avatar View</a><br/>
@@ -598,6 +632,23 @@ You can find the platforms supported by each .NET MAUI control as below.
 	<tr>
 		<td>
 			<a href="/maui/effects-view/overview">Effects View</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="/maui/effects-view/overview">Shimmer</a><br/>
 		</td>
 		<td>
 		Yes<br/>
