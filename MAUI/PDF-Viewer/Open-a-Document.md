@@ -67,8 +67,8 @@ The .NET MAUI PDF Viewer does not currently support annotations comparable to Xa
 {% endhighlight %}
 {% endtabs %}
 
-N> 1. All `LoadDocument` methods accept this flatten options as an optional parameter.
-N> 2. Refer this [section](https://help.syncfusion.com/maui/pdf-viewer/migration#upcoming-features) for the upcoming annotation features in `SfPdfViewer`.
+N> * All `LoadDocument` methods accept this flatten options as an optional parameter.
+N> * Refer this [section](https://help.syncfusion.com/maui/pdf-viewer/migration#upcoming-features) for the upcoming annotation features in `SfPdfViewer`.
 
 ## Check other PDF opening options
 
