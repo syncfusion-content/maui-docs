@@ -27,14 +27,12 @@ The background color of the `SfShimmer` view can be customized by using the `Fil
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<shimmer:SfShimmer x:Name="Shimmer" VerticalOptions="Fill" Type="Article" Fill="Pink">
-   <shimmer:SfShimmer.Content>
-      <StackLayout>
-         <Label 
-            Text="Content is loaded!!">
-         </Label>
-      </StackLayout>
-   </shimmer:SfShimmer.Content>
+<shimmer:SfShimmer x:Name="Shimmer" VerticalOptions="FillAndExpand" Type="Article" Fill="Pink">
+   <StackLayout>
+      <Label 
+         Text="Content is loaded!!">
+      </Label>
+   </StackLayout>
 </shimmer:SfShimmer>
 
 {% endhighlight %}
@@ -62,14 +60,12 @@ The wave color in the `SfShimmer` view can be customized using the `WaveColor` p
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<shimmer:SfShimmer x:Name="Shimmer" VerticalOptions="Fill" Type="Article" WaveColor="#9A4EAE">
-   <shimmer:SfShimmer.Content>
-      <StackLayout>
-         <Label 
-            Text="Content is loaded!!">
-         </Label>
-      </StackLayout>
-   </shimmer:SfShimmer.Content>
+<shimmer:SfShimmer x:Name="Shimmer" VerticalOptions="FillAndExpand" Type="Article" WaveColor="#9A4EAE">
+   <StackLayout>
+      <Label 
+         Text="Content is loaded!!">
+      </Label>
+   </StackLayout>
 </shimmer:SfShimmer>
 
 {% endhighlight %}
@@ -97,14 +93,12 @@ The width of the wave in the `SfShimmer` view can be customized using the `WaveW
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<shimmer:SfShimmer x:Name="Shimmer" VerticalOptions="Fill" Type="Article" Fill="Pink" WaveColor="#9A4EAE"  WaveWidth="100">
-   <shimmer:SfShimmer.Content>
-      <StackLayout>
-         <Label 
-            Text="Content is loaded!!">
-         </Label>
-      </StackLayout>
-   </shimmer:SfShimmer.Content>
+<shimmer:SfShimmer x:Name="Shimmer" VerticalOptions="FillAndExpand" Type="Article" Fill="Pink" WaveColor="#9A4EAE"  WaveWidth="100">
+   <StackLayout>
+      <Label 
+         Text="Content is loaded!!">
+      </Label>
+   </StackLayout>
 </shimmer:SfShimmer>
 
 {% endhighlight %}
@@ -140,14 +134,12 @@ The direction of the wave in the `SfShimmer` view can be customized by using the
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<shimmer:SfShimmer x:Name="Shimmer" VerticalOptions="Fill" Type="Article" WaveDirection="TopToBottom">
-   <shimmer:SfShimmer.Content>
-      <StackLayout>
-         <Label 
-            Text="Content is loaded!!">
-         </Label>
-      </StackLayout>
-   </shimmer:SfShimmer.Content>
+<shimmer:SfShimmer x:Name="Shimmer" VerticalOptions="FillAndExpand" Type="Article" WaveDirection="TopToBottom">
+   <StackLayout>
+      <Label 
+         Text="Content is loaded!!">
+      </Label>
+   </StackLayout>
 </shimmer:SfShimmer>
 
 {% endhighlight %}
@@ -175,14 +167,12 @@ The `RepeatCount` of the shimmer refers to the number of times a shimmer cycle r
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<shimmer:SfShimmer x:Name="Shimmer" VerticalOptions="Fill" Type="Article" RepeatCount="4">
-   <shimmer:SfShimmer.Content>
-      <StackLayout>
-         <Label 
-            Text="Content is loaded!!">
-         </Label>
-      </StackLayout>
-   </shimmer:SfShimmer.Content>
+<shimmer:SfShimmer x:Name="Shimmer" VerticalOptions="FillAndExpand" Type="Article" RepeatCount="4">
+   <StackLayout>
+      <Label 
+         Text="Content is loaded!!">
+      </Label>
+   </StackLayout>
 </shimmer:SfShimmer>
 
 {% endhighlight %}
@@ -210,14 +200,12 @@ The duration of the animation in the `SfShimmer` view can be customized using th
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<shimmer:SfShimmer x:Name="Shimmer" VerticalOptions="Fill" Type="Article" AnimationDuration="4000">
-   <shimmer:SfShimmer.Content>
-      <StackLayout>
-         <Label 
-            Text="Content is loaded!!">
-         </Label>
-      </StackLayout>
-   </shimmer:SfShimmer.Content>
+<shimmer:SfShimmer x:Name="Shimmer" VerticalOptions="FillAndExpand" Type="Article" AnimationDuration="4000">
+   <StackLayout>
+      <Label 
+         Text="Content is loaded!!">
+      </Label>
+   </StackLayout>
 </shimmer:SfShimmer>
 
 {% endhighlight %}
