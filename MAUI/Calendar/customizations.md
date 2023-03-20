@@ -93,7 +93,7 @@ You can customize the calendar month view cell by using the `MonthView` property
 
 *    **Special day predicate** - You can add special dates to the `Calendar` by using the [SpecialDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_SpecialDates) property, and you can also customize the special dates text style and background of the `Calendar` by using the [SpecialDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_SpecialDatesTextStyle) and [SpecialDatesBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_SpecialDatesBackground) properties of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html).
 
-The special day Predicate decides whether the month cell date is a special date or not in the calendar. If special dates are specified, it supports the icon shapes in the month views display, such as dots, hearts, diamonds, stars, and bells. The icon colors are also customizable. By displaying icons, we can improve the special dates support with this special day predicate.
+The special day Predicate decides whether the month cell date is a special date or not in the calendar. If special dates are specified, it supports the icon shapes in the month views to display, such as dots, hearts, diamonds, stars, and bells. The icon colors are also customizable. By displaying icons, we can improve the special dates support with this special day predicate.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -302,50 +302,98 @@ The month cell appearance can be customized using the `CellTemplate` property of
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar x:Name="Calendar" View="Month">
-    <calendar:SfCalendar.MonthView>
-        <calendar:CalendarMonthView>
-            <calendar:CalendarMonthView.CellTemplate>
-                <DataTemplate>
-                    <Grid Background="Pink">
-                        <Label
-                        HorizontalTextAlignment="Center" 
-                        VerticalTextAlignment="Center" 
-                        TextColor="Purple" 
-                        Text="{Binding Date.Day}"/>
-                    </Grid>
-                </DataTemplate>
-            </calendar:CalendarMonthView.CellTemplate>
-        </calendar:CalendarMonthView>
-    </calendar:SfCalendar.MonthView>
-</calendar:SfCalendar>
+<Grid>
+    <Frame IsVisible="True" x:Name="frame" Background="White" HasShadow="False" CornerRadius="10"  HorizontalOptions="Center" VerticalOptions="Center" Margin="0" Padding="5">
+        <calendar:SfCalendar x:Name="Calendar"
+                                ShowTrailingAndLeadingDates="False"
+                                NavigationDirection="Horizontal"
+                                TodayHighlightBrush="#0A3A74"
+                                AllowViewNavigation="False">
+            <calendar:SfCalendar.MonthView>
+                <calendar:CalendarMonthView CellTemplate="{Binding Template}">
+                    <calendar:CalendarMonthView.HeaderView>
+                        <calendar:CalendarMonthHeaderView Background="#F1F7FF"/>
+                    </calendar:CalendarMonthView.HeaderView>
+                </calendar:CalendarMonthView>
+            </calendar:SfCalendar.MonthView>
+            <calendar:SfCalendar.BindingContext>
+                <local:MonthTemplate/>
+            </calendar:SfCalendar.BindingContext>
+        </calendar:SfCalendar>
+    </Frame>
+</Grid>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.MonthView = new CalendarMonthView()
+public class MonthTemplate
 {
-    CellTemplate = dataTemplate,
-};
+    private DataTemplate circleTemplate;
 
-DataTemplate dataTemplate = new DataTemplate(() =>
+    private DataTemplate template;
+
+    public DataTemplate Template
+    {
+        get
+        {
+            return this.template;
+        }
+        set
+        {
+            this.template = value;
+        }
+    }
+
+    public MonthTemplate()
+    {
+        this.circleTemplate = new DataTemplate(() =>
+        {
+            Grid grid = new Grid();
+
+            Border border = new Border();
+            border.BackgroundColor = Color.FromRgba("#F5F5F5");
+            border.StrokeShape = new RoundRectangle()
+            {
+                CornerRadius = new CornerRadius(25)
+            };
+
+            border.SetBinding(Border.StrokeThicknessProperty, "Date", converter: new DateToStrokeConverter());
+            border.Stroke = Color.FromArgb("#0A3A74");
+
+            Label label = new Label();
+            label.SetBinding(Label.TextProperty, "Date.Day");
+            label.HorizontalOptions = LayoutOptions.Center;
+            label.VerticalOptions = LayoutOptions.Center;
+            label.Padding = new Thickness(2);
+            border.Content = label;
+
+            grid.Add(border);
+            grid.Padding = new Thickness(1);
+
+            return grid;
+        });
+
+        this.template = this.circleTemplate;
+    }
+}
+internal class DateToStrokeConverter : IValueConverter
 {
-    Grid grid = new Grid
+    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
     {
-        Background = Colors.Pink
-    };
+        var date = value as DateTime?;
+        if (date.HasValue && date.Value.Date == DateTime.Now.Date)
+        {
+            return 2;
+        }
 
-    Label label = new Label
+        return 0;
+    }
+
+    public object? ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
     {
-        HorizontalTextAlignment = TextAlignment.Center,
-        VerticalTextAlignment = TextAlignment.Center,
-        TextColor = Colors.Purple
-    };
-
-    label.SetBinding(Label.TextProperty, new Binding("Date.Day"));
-    grid.Children.Add(label);
-    return grid;
-});
+        return null;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -425,50 +473,96 @@ The year cell appearance can be customized using the `CellTemplate` property of 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar x:Name="Calendar" View="Decade">
-    <calendar:SfCalendar.YearView>
-        <calendar:CalendarYearView>
-            <calendar:CalendarYearView.CellTemplate>
-                <DataTemplate>
-                    <Grid Background="Pink">
-                        <Label
-                        HorizontalTextAlignment="Center" 
-                        VerticalTextAlignment="Center" 
-                        TextColor="Purple" 
-                        Text="{Binding Date.Year}"/>
-                    </Grid>
-                </DataTemplate>
-            </calendar:CalendarYearView.CellTemplate>
-        </calendar:CalendarYearView>
-    </calendar:SfCalendar.YearView>
-</calendar:SfCalendar>
+<Grid>
+    <Frame IsVisible="True" x:Name="frame" Background="White" HasShadow="False" CornerRadius="10"  HorizontalOptions="Center" VerticalOptions="Center" Margin="0" Padding="5">
+        <calendar:SfCalendar x:Name="Calendar"
+                                View="Decade"
+                                ShowTrailingAndLeadingDates="False"
+                                NavigationDirection="Horizontal"
+                                TodayHighlightBrush="#0A3A74"
+                                AllowViewNavigation="False">
+            <calendar:SfCalendar.YearView>
+                <calendar:CalendarYearView CellTemplate="{Binding Template}">
+                </calendar:CalendarYearView>
+            </calendar:SfCalendar.YearView>
+            <calendar:SfCalendar.BindingContext>
+                <local:DecadeTemplate/>
+            </calendar:SfCalendar.BindingContext>
+        </calendar:SfCalendar>
+    </Frame>
+</Grid>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.YearView = new CalendarYearView()
+public class DecadeTemplate
 {
-    CellTemplate = dataTemplate,
-};
+    private DataTemplate circleTemplate;
 
-DataTemplate dataTemplate = new DataTemplate(() =>
+    private DataTemplate template;
+
+    public DataTemplate Template
+    {
+        get
+        {
+            return this.template;
+        }
+        set
+        {
+            this.template = value;
+        }
+    }
+
+    public DecadeTemplate()
+    {
+        this.circleTemplate = new DataTemplate(() =>
+        {
+            Grid grid = new Grid();
+
+            Border border = new Border();
+            border.BackgroundColor = Color.FromRgba("#F5F5F5");
+            border.StrokeShape = new RoundRectangle()
+            {
+                CornerRadius = new CornerRadius(25)
+            };
+
+            border.SetBinding(Border.StrokeThicknessProperty, "Date", converter: new DateToStrokeConverter());
+            border.Stroke = Color.FromArgb("#0A3A74");
+
+            Label label = new Label();
+            label.SetBinding(Label.TextProperty, "Date.Year");
+            label.HorizontalOptions = LayoutOptions.Center;
+            label.VerticalOptions = LayoutOptions.Center;
+            label.Padding = new Thickness(2);
+            border.Content = label;
+
+            grid.Add(border);
+            grid.Padding = new Thickness(1);
+
+            return grid;
+        });
+
+        this.template = this.circleTemplate;
+    }
+}
+internal class DateToStrokeConverter : IValueConverter
 {
-    Grid grid = new Grid
+    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
     {
-        Background = Colors.Pink
-    };
+        var date = value as DateTime?;
+        if (date.HasValue && date.Value.Year == DateTime.Now.Year)
+        {
+            return 2;
+        }
 
-    Label label = new Label
+        return 0;
+    }
+
+    public object? ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
     {
-        HorizontalTextAlignment = TextAlignment.Center,
-        VerticalTextAlignment = TextAlignment.Center,
-        TextColor = Colors.Purple
-    };
-
-    label.SetBinding(Label.TextProperty, new Binding("Date.Year"));
-    grid.Children.Add(label);
-    return grid;
-});
+        return null;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
