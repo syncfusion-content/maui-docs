@@ -61,16 +61,16 @@ public MainPage()
 
 private void Popup_Opened(object sender, EventArgs e)
 {
-   // Codes that needs to be executed once popup is visible in the screen.
+   // Codes that need to be executed once the popup is visible on the screen.
 }
 {% endhighlight %}
 {% endtabs %}
 
 ## Closing event
 
-The `SfPopup.Closing` event will be fired whenever closing the Popup in the application. It can cancel popup closing with `CancelEventArgs` that contains the following property:
+The `SfPopup.Closing` event will be fired whenever closing the Popup in the application. It can cancel the popup closing with `CancelEventArgs` that contains the following property:
 
-* `Cancel`: Popup opening is based on this value.
+* `Cancel`: Popup closing is based on this value.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -122,10 +122,10 @@ The `SfPopup.AcceptCommand` will be fired when clicking the Accept button in the
 
 To handle the Accept button,
 
-* Derive a class from `ICommand`, and implement the `ICommand` interface.
-* To prevent popup from closing, return false in the `CanExecute()` override method and the `Execute()` override method will not be fired.
+* Derive a class from the `ICommand`, and implement its interface.
+* To prevent the popup from closing, return false in the `CanExecute()` override method and the `Execute()` override method will not be fired.
 * Else return true in the `CanExecute()` override method and do the required operations in the `Execute()` method.
-* Now create a property of your custom command type in the view model class and initialize it.
+* Now, create a property of your custom command type in the view model class and initialize it.
 * Bind the property in the view model to the `SfPopup.AcceptCommand` in XAML.
 
 {% tabs %}
@@ -206,9 +206,9 @@ The `SfPopup.DeclineCommand` will be fired when clicking the Decline button in t
 To handle the Decline button,
 
 * Derive a class from `ICommand`, and implement the `ICommand` interface.
-* To prevent popup from closing, return false in the `CanExecute()` override method and the `Execute()` override method will not be fired.
+* To prevent the popup from closing, return false in the `CanExecute()` override method and the `Execute()` override method will not be fired.
 * Else return true in the `CanExecute()` override method and do the required operations in the `Execute()` method.
-* Now create a property of your custom command type in the view model class and initialize it.
+* Now, create a property of your custom command type in the view model class and initialize it.
 * Bind the property in the view model to the `SfPopup.DeclineCommand` in XAML.
 
 {% tabs %}
