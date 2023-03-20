@@ -452,7 +452,7 @@ You can find the platforms supported by each .NET MAUI control as below.
 	</tr>
 	<tr>
 		<td>
-			<a href="/maui/maskedEntry/overview">Masked Entry</a><br/>
+			<a href="/maui/masked-entry/overview">Masked Entry</a><br/>
 		</td>
 		<td>
 		Yes<br/>
