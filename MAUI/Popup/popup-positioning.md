@@ -66,7 +66,7 @@ To open the `SfPopup`, use the `SfPopup.IsOpen` property as in the following cod
   </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4" %}
 private void ClickToShowPopup_Clicked(object sender, EventArgs e)
 {
   // Shows SfPopup at the center of the view.
@@ -75,7 +75,7 @@ private void ClickToShowPopup_Clicked(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-To open the SfPopup, use the SfPopup.Show method as in the following code sample.
+To open the SfPopup, use the `SfPopup.Show` method as in the following code sample.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -94,7 +94,7 @@ To open the SfPopup, use the SfPopup.Show method as in the following code sample
   </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4" %}
 private void ClickToShowPopup_Clicked(object sender, EventArgs e)
 {
   // Shows SfPopup at the center of the view.
@@ -103,7 +103,7 @@ private void ClickToShowPopup_Clicked(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-![Popup with center positioning](Images/popup-positioning/maui-popup-with-center-positioning.png)
+![Displaying a .NET MAUI Popup at the center of the screen.](Images/popup-positioning/maui-popup-with-center-positioning.png)
 
 ## Absolute positioning
 
@@ -126,7 +126,7 @@ To open the `SfPopup` in specific X,Y coordinates, use the `SfPopup.Show(x-posit
   </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4" %}
 private void ClickToShowPopup_Clicked(object sender, EventArgs e)
 {
   // Shows SfPopup at x-position 50 and y position 200.
@@ -135,7 +135,7 @@ private void ClickToShowPopup_Clicked(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-![Absolute positioning of Popup](Images/popup-positioning/maui-popup-absolute-positioning.png)
+![Displaying a .NET MAUI Popup at Absolute position.](Images/popup-positioning/maui-popup-absolute-positioning.png)
 
 ## Relative positioning
 
@@ -157,7 +157,7 @@ To open the `SfPopup` relative to a view, use the `SfPopup.ShowRelativeToView(Vi
   </StackLayout>
 </ContentPage.Content>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4" %}
 private void ClickToShowPopup_Clicked(object sender, EventArgs e)
 {
   // Shows SfPopup at the bottom of the button.
@@ -166,7 +166,7 @@ private void ClickToShowPopup_Clicked(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-![Relative positioning of Popup](Images/popup-positioning/maui-popup-relative-positioning.png)
+![Displaying a .NET MAUI Popup at Relative position.](Images/popup-positioning/maui-popup-relative-positioning.png)
 
 ### Display popup relatively to a view with absolute coordinates
 
@@ -186,7 +186,7 @@ To open the `SfPopup` in the specific x, y coordinate relative to a view, use th
   </StackLayout>
 </ContentPage.Content>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4" %}
 private void ClickToShowPopup_Clicked(object sender, EventArgs e)
 {
   // Shows SfPopup at the bottom of the button and with absolute relative position.
@@ -195,16 +195,16 @@ private void ClickToShowPopup_Clicked(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-![Absolute positioning of Popup](Images/popup-positioning/maui-popup-absolute-relative-positioning.png)
+![Displaying a .NET MAUI Popup at Absolute Relative position.](Images/popup-positioning/maui-popup-absolute-relative-positioning.png)
 
-You can pass both negative and positive values as parameters to the SfPopup.ShowRelativeToView(View, RelativePosition, x-position, y-position). The popup will be positioned by considering the relative position as (0, 0) the center point. For example, if you have set the RelativePosition as RelativePosition.BottomRight and RelativeView as a button, bottom right corner of the button will be considered as the 0, 0 point and a negative x-position value will place the popup to the left of that point and a positive x-position value will place the popup to the right of that point. The same applies for y-position also.
+You can pass both negative and positive values as parameters to the `SfPopup.ShowRelativeToView(View, RelativePosition, x-position, y-position)`. The popup will be positioned by considering the relative position as (0, 0) the center point. For example, if you have set the `RelativePosition` as `PopupRelativePosition.AlignBottomRight` and `RelativeView` as a button, bottom right corner of the button will be considered as the 0, 0 point and a negative x-position value will place the popup to the left of that point and a positive x-position value will place the popup to the right of that point. The same applies for y-position also.
 
 ### Show relative to view in MVVM
 
 To open the SfPopup relative to a view in MVVM assign values to the `SfPopup.RelativeView` and `SfPopup.RelativePosition` properties and use the `SfPopup.IsOpen` property to open or close the popup using binding.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="19" %}
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sfPopup="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"
@@ -222,7 +222,8 @@ To open the SfPopup relative to a view in MVVM assign values to the `SfPopup.Rel
              VerticalOptions="StartAndExpand" HorizontalOptions="Center" 
              HorizontalTextAlignment="Center" FontFamily="Roboto" Padding="20"
              LineBreakMode="WordWrap" FontSize="14" BackgroundColor="#6750A4" TextColor="White"/>
-      <sfPopup:SfPopup x:Name="sfPopup" IsOpen="{Binding DisplayPopup}"
+      <sfPopup:SfPopup x:Name="sfPopup" 
+                       IsOpen="{Binding DisplayPopup}"
                        RelativeView="{x:Reference relativeView}" RelativePosition="AlignBottom"
                        AbsoluteX="0" AbsoluteY="5">
       </sfPopup:SfPopup>
@@ -230,7 +231,7 @@ To open the SfPopup relative to a view in MVVM assign values to the `SfPopup.Rel
   </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %} 
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4" %} 
 private void ClickToShowPopup_Clicked(object sender, EventArgs e)
 {
   // Shows SfPopup at the bottom of the label and with absolute relative position.
@@ -263,4 +264,4 @@ public class ViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![Relative positioning of Popup in MVVM](Images/popup-positioning/maui-popup-relative-positioning-in-mvvm.png)
+![Displaying a .NET MAUI Popup at Relative position using MVVM.](Images/popup-positioning/maui-popup-relative-positioning-in-mvvm.png)
