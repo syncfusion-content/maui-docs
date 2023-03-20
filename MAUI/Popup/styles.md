@@ -141,7 +141,7 @@ public MainPage()
 
     // Setting the AppearanceMode as TwoButton
     popup.ShowFooter = true;
-	popup.AppearanceMode = Syncfusion.Maui.Popup.PopupButtonAppearanceMode.TwoButton;
+    popup.AppearanceMode = Syncfusion.Maui.Popup.PopupButtonAppearanceMode.TwoButton;
 
     // Footer customization
     popup.PopupStyle.FooterBackground = Color.LightGray;
@@ -225,12 +225,12 @@ Refer to the following code example for customizing the overlay background color
             <sfPopup:SfPopup.PopupStyle>
                     <sfPopup:PopupStyle OverlayColor="LightPink" />
             </sfPopup:Sfpopup.PopupStyle>
-		</sfPopup:SfPopup>
+        </sfPopup:SfPopup>
 {% endhighlight %}
 
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-	    popup.PopupStyle.OverlayColor = Colors.LightPink;
+    popup.PopupStyle.OverlayColor = Colors.LightPink;
 
 {% endhighlight %}
 
