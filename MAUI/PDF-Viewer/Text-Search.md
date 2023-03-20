@@ -54,7 +54,7 @@ The `TextSearchResult` will be obtained at the end of search text operation and 
 {% endtabs %}
 
 N> * The current match index value may change on every search call for a given text, depending on the page from which you started the search.
-* If the total matches count is 0, then there were no matches found for the given text.
+N> * If the total matches count is 0, then there were no matches found for the given text.
 
 ### Navigate to the next and previous match
 
