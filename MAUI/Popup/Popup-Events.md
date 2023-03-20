@@ -27,7 +27,7 @@ The `SfPopup.Opening` event will be fired whenever opening the Popup in the appl
 <sfPopup:SfPopup x:Name="popup" Opening="popup_Opening"/>
 {%endhighlight%}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines"4" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4 9" %}
 public MainPage()
 {
     InitializeComponent();
@@ -49,8 +49,7 @@ You can execute your own set of codes once the popup is opened, and visible in t
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-<sfPopup:SfPopup x:Name="popup" 
-Opened="popup_Opened"/>
+<sfPopup:SfPopup x:Name="popup" Opened="popup_Opened"/>
 {%endhighlight%}
 
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4" %}
@@ -78,7 +77,7 @@ The `SfPopup.Closing` event will be fired whenever closing the Popup in the appl
 <sfPopup:SfPopup x:Name="popup"  Closing="Popup_Closing"/>
 {%endhighlight%}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4 9" %}
 public MainPage()
 {
     InitializeComponent();
