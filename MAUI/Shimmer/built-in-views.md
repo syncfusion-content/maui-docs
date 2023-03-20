@@ -26,8 +26,7 @@ The built-in shimmer types can be used by setting the `Type` of `SfShimmer`. By 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<shimmer:SfShimmer x:Name="Shimmer" VerticalOptions="Fill" Type="CirclePersona">
-   <shimmer:SfShimmer.Content>
+<shimmer:SfShimmer x:Name="Shimmer" VerticalOptions="FillAndExpand" Type="CirclePersona">
       <StackLayout>
          <Label 
             Text="Content is loaded!!"
@@ -35,7 +34,6 @@ The built-in shimmer types can be used by setting the `Type` of `SfShimmer`. By 
             VerticalOptions="CenterAndExpand">
          </Label>
       </StackLayout>
-   </shimmer:SfShimmer.Content>
 </shimmer:SfShimmer>
 
 {% endhighlight %}
