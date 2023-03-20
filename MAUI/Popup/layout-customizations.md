@@ -20,10 +20,10 @@ The two different appearance modes in the SfPopup are as follows:
 <th>Description</th></tr>
 <tr>
 <td>`OneButton`</td>
-<td>Shows the SfPopup with one button in the footer view. This is the default value.</td></tr>
+<td>Shows the `SfPopup` with one button in the footer view. This is the default value.</td></tr>
 <tr>
 <td>`TwoButton`</td>
-<td>Shows the SfPopup with two buttons in the footer view.</td></tr>
+<td>Shows the `SfPopup` with two buttons in the footer view.</td></tr>
 </table>
 
 In the following code example, set the `SfPopup.AppearanceMode` property as `OneButton` which displays only the Accept button in the footer view.
@@ -376,7 +376,7 @@ public partial class MainPage : ContentPage
 
 ## Customizing popup content
 
-Any view can be added as popup content by using the SfPopup.ContentTemplate property. Refer to the following code example in which a label is added as a popup content.
+Any view can be added as popup content by using the `SfPopup.ContentTemplate` property. Refer to the following code example in which a label is added as a popup content.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -392,7 +392,8 @@ Any view can be added as popup content by using the SfPopup.ContentTemplate prop
             <sfPopup:SfPopup x:Name="sfPopup" ShowFooter="True">
                 <sfPopup:SfPopup.ContentTemplate>
                     <DataTemplate>
-                        <Label Text="This is the customized view for SfPopup" VerticalTextAlignment="Center" BackgroundColor="SkyBlue"
+                        <Label Text="This is the customized view for SfPopup" 
+                               VerticalTextAlignment="Center" BackgroundColor="SkyBlue"
                                HorizontalTextAlignment="Center" Padding="10"/>
                     </DataTemplate>
                 </sfPopup:SfPopup.ContentTemplate>
