@@ -259,7 +259,7 @@ You can find the platforms supported by each .NET MAUI control as below.
 	</tr>
 		<tr>
 		<td>
-			<a href="/maui/listview/overview">Popup</a><br/>
+			<a href="/maui/popup/overview">Popup</a><br/>
 		</td>
 		<td>
 		Yes<br/>
@@ -648,7 +648,7 @@ You can find the platforms supported by each .NET MAUI control as below.
 	</tr>
 	<tr>
 		<td>
-			<a href="/maui/effects-view/overview">Shimmer</a><br/>
+			<a href="/maui/shimmer/overview">Shimmer</a><br/>
 		</td>
 		<td>
 		Yes<br/>
