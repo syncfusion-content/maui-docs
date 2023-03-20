@@ -22,8 +22,6 @@ To make the migration from the [Xamarin SfShimmer](https://www.syncfusion.com/xa
 <td>Syncfusion.Maui.Shimmer</td></tr>
 </table>
 
-N> The selection-based `.NET MAUI SfShimmer` does not manage appointments like the `Xamarin SfShimmer` does. If you require appointment/events management use `.NET MAUI SfShimmer`.
-
 ## Initialize control
 
 To initialize the control, import the shimmer namespace and initialize `SfShimmer` as shown in the following code sample.
@@ -104,11 +102,6 @@ this.Content = shimmer;
 <td>{{'[ShimmerView ]' | markdownify }}</td>
 <td>{{'[ShimmerView ]' | markdownify }}</td>
 <td>Represents a view used to achieve shimmer custom view.</td>
-</tr> 
-<tr>
-<td>Nil</td>
-<td>{{'[ShimmerShapeType]' | markdownify }}</td>
-<td>Represents a class which defines the shape for the Shimmer view.</td>
 </tr>
 </table>
 
@@ -133,11 +126,9 @@ xmlns:shimmer="clr-namespace:Syncfusion.XForms.Shimmer;assembly=Syncfusion.Core.
     
 <shimmer:SfShimmer x:Name="shimmer" VerticalOptions="Fill"
                            IsActive="{Binding IsActive}">
-                        <shimmer:SfShimmer.Content>
                             <StackLayout>
                                 <Label Text="Content is loaded!" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
                             </StackLayout>
-                        </shimmer:SfShimmer.Content>
 </shimmer:SfShimmer>
 
 </ContentPage>
@@ -177,14 +168,14 @@ shimmer.Content = stackLayout;
 <ContentPage
 xmlns:shimmer="clr-namespace:Syncfusion.Maui.Shimmer;assembly=Syncfusion.Maui.Core">
 
-<shimmer:SfShimmer />
-<shimmer:SfShimmer x:Name="shimmer" VerticalOptions="Fill"
-                           IsActive="{Binding IsActive}">
-                        <shimmer:SfShimmer.Content>
-                            <StackLayout>
-                                <Label Text="Content is loaded!" HorizontalOptions="Fill" VerticalOptions="Fill"/>
-                            </StackLayout>
-                        </shimmer:SfShimmer.Content>
+<shimmer:SfShimmer x:Name="Shimmer" VerticalOptions="FillAndExpand">
+   <StackLayout>
+      <Label 
+         Text="Content is loaded!!"
+         HorizontalOptions="CenterAndExpand"
+         VerticalOptions="CenterAndExpand">
+      </Label>
+   </StackLayout>
 </shimmer:SfShimmer>
 </ContentPage>
 
@@ -197,19 +188,14 @@ using Syncfusion.Maui.Shimmer;
 
 SfShimmer shimmer = new SfShimmer();
 this.Content = shimmer;
-shimmer.VerticalOptions = LayoutOptions.Fill;
-shimmer.SetBinding(SfShimmer.IsActiveProperty, "IsActive");
-
+shimmer.VerticalOptions = LayoutOptions.FillAndExpand;
 var stackLayout = new StackLayout();
-
 var label = new Label();
 label.Text = "Content is loaded!";
 label.HorizontalOptions = LayoutOptions.Fill;
 label.VerticalOptions = LayoutOptions.Fill;
 
 stackLayout.Children.Add(label);
-
-shimmer.Content = stackLayout;
 
 {% endhighlight %}
 
@@ -225,8 +211,8 @@ shimmer.Content = stackLayout;
 </tr>
 <tr>
 <td>{{'[Content]'| markdownify }}</td>
-<td>{{'[Content]'| markdownify }}</td>
-<td>Gets or sets the content of the Shimmer.</td>
+<td>Nil</td>
+<td>Not Supported.</td>
 </tr>
 <tr>
 <td>{{'[CustomView]'| markdownify }}</td>
