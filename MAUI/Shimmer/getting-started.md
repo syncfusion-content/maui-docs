@@ -90,15 +90,13 @@ The `.NET MAUI Shimmer` control provides seven different Shimmer types of views.
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
 <shimmer:SfShimmer x:Name="Shimmer" VerticalOptions="Fill" Type="CirclePersona">
-   <shimmer:SfShimmer.Content>
-      <StackLayout>
-         <Label 
-            Text="Content is loaded!!"
+    <StackLayout>
+        <Label
+            Text="Content is loaded!"
             HorizontalOptions="CenterAndExpand"
             VerticalOptions="CenterAndExpand">
-         </Label>
-      </StackLayout>
-   </shimmer:SfShimmer.Content>
+        </Label>
+    </StackLayout>
 </shimmer:SfShimmer>
 
 {% endhighlight %}
