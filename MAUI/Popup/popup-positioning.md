@@ -30,13 +30,13 @@ Following are the list of options available to show SfPopup at various positions
 <td>SfPopup.ShowRelativeToView(View, RelativePosition)</td>
 <td>Shows the `SfPopup` at the position relative to the specified view.</td></tr>
 <tr>
-<td>SfPopup.ShowRelativeToView(View, RelativePosition,x-position,y-position)</td>
+<td>SfPopup.ShowRelativeToView(View, RelativePosition, x-position, y-position)</td>
 <td>Shows the `SfPopup` at an absolute x, y coordinate from the relative position of the specified view.</td></tr>
 <tr>
 <td>SfPopup.IsFullScreen</td>
 <td>Shows the `SfPopup` in full width and height of the screen.</td></tr>
 <tr>
-<td>SfPopu.Show(bool)</td>
+<td>SfPopup.Show(bool)</td>
 <td>Similar as `SfPopup.IsFullScreen` property.</td></tr>
 </table>
 
@@ -45,7 +45,7 @@ Following are the list of options available to show SfPopup at various positions
 `SfPopup` can be shown at the center by using the following options.
 
  * IsOpen property
- * SfPopupLayout.Show
+ * SfPopup.Show
 
 To open the `SfPopup`, use the `SfPopup.IsOpen` property as in the following code sample.
 
@@ -70,7 +70,7 @@ To open the `SfPopup`, use the `SfPopup.IsOpen` property as in the following cod
 private void ClickToShowPopup_Clicked(object sender, EventArgs e)
 {
   // Shows SfPopup at the center of the view.
-	sfPopup.IsOpen = true;
+  sfPopup.IsOpen = true;
 }
 {% endhighlight %}
 {% endtabs %}
@@ -98,7 +98,7 @@ To open the SfPopup, use the SfPopup.Show method as in the following code sample
 private void ClickToShowPopup_Clicked(object sender, EventArgs e)
 {
   // Shows SfPopup at the center of the view.
-	sfPopup.Show();
+  sfPopup.Show();
 }
 {% endhighlight %}
 {% endtabs %}
@@ -129,8 +129,8 @@ To open the `SfPopup` in specific X,Y coordinates, use the `SfPopup.Show(x-posit
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 private void ClickToShowPopup_Clicked(object sender, EventArgs e)
 {
-  // Shows SfPopup at x-position 100 and y position 100.
-	 sfPopup.Show(50, 200);
+  // Shows SfPopup at x-position 50 and y position 200.
+  sfPopup.Show(50, 200);
 }
 {% endhighlight %}
 {% endtabs %}
@@ -143,7 +143,7 @@ private void ClickToShowPopup_Clicked(object sender, EventArgs e)
 
 ### Display popup relative to a view
 
-To open the `SfPopup` relative to a view, use the `SfPopup.ShowRelativeToView(View, RelativePosition,x-position,y-position)` method.
+To open the `SfPopup` relative to a view, use the `SfPopup.ShowRelativeToView(View, RelativePosition)` method.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -161,7 +161,7 @@ To open the `SfPopup` relative to a view, use the `SfPopup.ShowRelativeToView(Vi
 private void ClickToShowPopup_Clicked(object sender, EventArgs e)
 {
   // Shows SfPopup at the bottom of the button.
-	sfPopup.ShowRelativeToView(clickToShowPopup, PopupRelativePosition.AlignBottom, 0, 0);
+  sfPopup.ShowRelativeToView(clickToShowPopup, PopupRelativePosition.AlignBottom);
 }
 {% endhighlight %}
 {% endtabs %}
@@ -172,7 +172,7 @@ private void ClickToShowPopup_Clicked(object sender, EventArgs e)
 
 The `SfPopup` can be displayed at an absolute x, y coordinate from the relative position of the specified view by using the following method.
 
-To open the `SfPopup` in the specific x, y coordinate relative to a view, use the `SfPopup.ShowRelativeToView(View, RelativePosition,x-position,y-position)` method.
+To open the `SfPopup` in the specific x, y coordinate relative to a view, use the `SfPopup.ShowRelativeToView(View, RelativePosition, x-position, y-position)` method.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -190,7 +190,7 @@ To open the `SfPopup` in the specific x, y coordinate relative to a view, use th
 private void ClickToShowPopup_Clicked(object sender, EventArgs e)
 {
   // Shows SfPopup at the bottom of the button and with absolute relative position.
-	sfPopup.ShowRelativeToView(clickToShowPopup, PopupRelativePosition.AlignBottom, 50, 50);
+  sfPopup.ShowRelativeToView(clickToShowPopup, PopupRelativePosition.AlignBottom, 50, 50);
 }
 {% endhighlight %}
 {% endtabs %}
