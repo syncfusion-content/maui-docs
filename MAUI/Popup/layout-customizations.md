@@ -26,7 +26,7 @@ The two different appearance modes in the SfPopup are as follows:
 <td>Shows the SfPopup with two buttons in the footer view.</td></tr>
 </table>
 
-In the following code example, set the SfPopup.AppearanceMode property as OneButton which displays only the Accept button in the footer view.
+In the following code example, set the `SfPopup.AppearanceMode` property as `OneButton` which displays only the Accept button in the footer view.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -50,13 +50,13 @@ using Syncfusion.Maui.Popup;
 
 public partial class MainPage : ContentPage
 {
-	public MainPage()
-	{
-		InitializeComponent();
+    public MainPage()
+    {
+        InitializeComponent();
         sfPopup.ShowFooter = true;
         // Setting the AppearanceMode as OneButton
-		sfPopup.AppearanceMode = PopupButtonAppearanceMode.OneButton;
-	}
+        sfPopup.AppearanceMode = PopupButtonAppearanceMode.OneButton;
+    }
 
     private void ClickToShowPopup_Clicked(object sender, EventArgs e)
     {
@@ -68,7 +68,7 @@ public partial class MainPage : ContentPage
 
 ![.NET MAUI Popup with one button](Images/layout-customizations/maui-popup-appearance-mode-one-button.png)
 
-In the following code example, set the `SfPopup.AppearanceMode` property as TwoButton which displays both Accept button and Decline button in the footer view.
+In the following code example, set the `SfPopup.AppearanceMode` property as `TwoButton` which displays both Accept button and Decline button in the footer view.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -92,13 +92,13 @@ using Syncfusion.Maui.Popup;
 
 public partial class MainPage : ContentPage
 {
-	public MainPage()
-	{
-		InitializeComponent();
+    public MainPage()
+    {
+        InitializeComponent();
         sfPopup.ShowFooter = true;
         // Setting the AppearanceMode as TwoButton
-		sfPopup.AppearanceMode = PopupButtonAppearanceMode.TwoButton;
-	}
+        sfPopup.AppearanceMode = PopupButtonAppearanceMode.TwoButton;
+    }
 
     private void ClickToShowPopup_Clicked(object sender, EventArgs e)
     {
@@ -138,11 +138,11 @@ using Syncfusion.Maui.Popup;
 
 public partial class MainPage : ContentPage
 {
-	public MainPage()
-	{
-		InitializeComponent();
+    public MainPage()
+    {
+        InitializeComponent();
         sfPopup.ShowHeader = false;
-	}
+    }
 
     private void ClickToShowPopup_Clicked(object sender, EventArgs e)
     {
@@ -180,11 +180,11 @@ using Syncfusion.Maui.Popup;
 
 public partial class MainPage : ContentPage
 {
-	public MainPage()
-	{
-		InitializeComponent();
+    public MainPage()
+    {
+        InitializeComponent();
         sfPopup.ShowFooter = true;
-	}
+    }
 
     private void ClickToShowPopup_Clicked(object sender, EventArgs e)
     {
@@ -220,11 +220,11 @@ using Syncfusion.Maui.Popup;
 
 public partial class MainPage : ContentPage
 {
-	public MainPage()
-	{
-		InitializeComponent();
+    public MainPage()
+    {
+        InitializeComponent();
         sfPopup.ShowCloseButton = true;
-	}
+    }
 
     private void ClickToShowPopup_Clicked(object sender, EventArgs e)
     {
@@ -274,9 +274,9 @@ public partial class MainPage : ContentPage
 {
     DataTemplate headerTemplateView;
     Label headerContent;
-	public MainPage()
-	{
-		InitializeComponent(); 
+    public MainPage()
+    {
+        InitializeComponent(); 
         clickToShowPopup.Clicked += ClickToShowPopup_Clicked;
         headerTemplateView = new DataTemplate(() =>
         {
@@ -342,9 +342,9 @@ public partial class MainPage : ContentPage
 {
     DataTemplate footerTemplateView;
     Label footerContent;
-	public MainPage()
-	{
-		InitializeComponent(); 
+    public MainPage()
+    {
+        InitializeComponent(); 
         clickToShowPopup.Clicked += ClickToShowPopup_Clicked;
         sfPopup.ShowFooter = true;
         footerTemplateView = new DataTemplate(() =>
@@ -407,9 +407,9 @@ public partial class MainPage : ContentPage
 {
     DataTemplate contentTemplateView;
     Label popupContent;
-	public MainPage()
-	{
-		InitializeComponent(); 
+    public MainPage()
+    {
+        InitializeComponent(); 
         clickToShowPopup.Clicked += ClickToShowPopup_Clicked;
         sfPopup.ShowFooter = true;
         contentTemplateView = new DataTemplate(() =>
@@ -423,7 +423,7 @@ public partial class MainPage : ContentPage
             return popupContent;
         });
 
-       // Adding ContentTemplateTemplate of the SfPopup
+       // Adding ContentTemplate of the SfPopup
         sfPopup.ContentTemplate = contentTemplateView;       
 	}
 
