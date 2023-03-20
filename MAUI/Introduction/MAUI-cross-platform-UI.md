@@ -222,7 +222,7 @@ You can find the platforms supported by each .NET MAUI control as below.
 	</tr>
     <tr>
 	    <td rowspan="3" valign="top">
-			LAYOUT<br/>
+			Popup<br/>
 		</td>
 	    <td>
 			<a href="/maui/backdrop/overview">Backdrop Page</a><br/>
@@ -381,7 +381,7 @@ You can find the platforms supported by each .NET MAUI control as below.
 	</tr>
 	<tr>
 	    <td rowspan="5" valign="top">
-		EDITORS<br/>
+		Masked Entry<br/>
 		</td>
 		<td>
 			<a href="/maui/autocomplete/overview">Autocomplete</a><br/>
@@ -577,7 +577,7 @@ You can find the platforms supported by each .NET MAUI control as below.
 	</tr>
     <tr>  
 	    <td rowspan="2" valign="top">
-	    MISCELLANEOUS<br/>
+	    Shimmer<br/>
 		</td>
 		<td>
 			<a href="/maui/avatar-view/overview">Avatar View</a><br/>
