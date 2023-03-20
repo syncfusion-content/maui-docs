@@ -205,7 +205,7 @@ The `SfPopup.DeclineCommand` will be fired when clicking the Decline button in t
 
 To handle the Decline button,
 
-* Derive a class from `ICommand`, and implement the `ICommand` interface.
+* Derive a class from the ICommand, and implement its interface.
 * To prevent the popup from closing, return false in the `CanExecute()` override method and the `Execute()` override method will not be fired.
 * Else return true in the `CanExecute()` override method and do the required operations in the `Execute()` method.
 * Now, create a property of your custom command type in the view model class and initialize it.
