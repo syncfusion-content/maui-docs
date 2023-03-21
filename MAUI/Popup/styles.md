@@ -50,8 +50,7 @@ Refer to the following code example for customizing the header elements.
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4 5 6 7 8 9" %}
-
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines=" 3 4 5 6 7 8" %}
 <sfPopup:SfPopup x:Name="popup" >
     <sfPopup:SfPopup.PopupStyle>
         <sfPopup:PopupStyle HeaderBackground="DimGray"
@@ -65,8 +64,7 @@ Refer to the following code example for customizing the header elements.
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="5 6 7 8 9 10"%}
-
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines=" 4 5 6 7 8 9" %}
 public MainPage()
 {
     InitializeComponent();
@@ -119,8 +117,7 @@ Refer to the following code example for customizing the footer elements.
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4 5 6 7 8"%}
-
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines=" 3 4 5 6 7" %}
 <sfPopup:SfPopup x:Name="popup" AppearanceMode="TwoButton" ShowFooter="True" >
     <sfPopup:SfPopup.PopupStyle>
         <sfPopup:PopupStyle FooterBackground="LightGray"
@@ -133,8 +130,7 @@ Refer to the following code example for customizing the footer elements.
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="11 12 13 14 15" %}
-
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10 11 12 13 14" %}
 public MainPage()
 {
     InitializeComponent();
@@ -184,8 +180,7 @@ Refer to the following code example for customizing the stroke elements.
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4 5 6"%}
-
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 4 5" %}
 <sfPopup:SfPopup x:Name="popup">
     <sfPopup:SfPopup.PopupStyle>
         <sfPopup:PopupStyle Stroke="LightBlue"
@@ -196,8 +191,7 @@ Refer to the following code example for customizing the stroke elements.
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="5 6 7" %}
-
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4 5 6" %}
 public MainPage()
 {
     InitializeComponent();
@@ -244,8 +238,7 @@ The SfPopup allows to blur the background using `SfPopup.OverlayMode` and `SfPop
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="14 17" %}
-
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="13 16" %}
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -269,8 +262,7 @@ The SfPopup allows to blur the background using `SfPopup.OverlayMode` and `SfPop
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="13 14" %}
-
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="12 13" %}
 using Syncfusion.Maui.Popup;
 namespace GettingStarted
 {
