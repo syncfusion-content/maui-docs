@@ -1,0 +1,120 @@
+---
+layout: post
+title: About .NET MAUI Shimmer control | Syncfusion
+description: Learn here about the getting started with Syncfusion .NET MAUI Shimmer (SfShimmer) control, its elements and more.
+platform: maui
+control: SfShimmer
+documentation: ug
+---
+
+# Getting started of .NET MAUI Shimmer (SfShimmer)
+
+This section explains how to add the Shimmer control.
+
+## Creating an application using the .NET MAUI Shimmer
+
+1. Create a new .NET MAUI application in Visual Studio.
+
+2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfShimmer to your project, open the NuGet package manager in Visual Studio, and search for the [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core), and then install it.
+3. To initialize the control, import the control namespace `Syncfusion.Maui.Shimmer` in XAML or C# code.
+
+4. Initialize `SfShimmer.`
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 5" %}
+
+<ContentPage   
+    . . .
+    xmlns:shimmer="clr-namespace:Syncfusion.Maui.Shimmer;assembly=Syncfusion.Maui.Core">
+
+    <shimmer:SfShimmer />
+</ContentPage>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 10" %}
+
+using Syncfusion.Maui.Shimmer;
+. . .
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfShimmer shimmer = new SfShimmer();
+        this.Content = shimmer;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Register the handler
+
+The `Syncfusion.Maui.Core` NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
+
+{% tabs %}
+{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
+
+using Syncfusion.Maui.Core.Hosting;
+namespace GettingStarted
+{
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+
+            builder.ConfigureSyncfusionCore();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                fonts.AddFont("Segoe-mdl2.ttf", "SegoeMDL2");
+            });
+
+            return builder.Build();
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Change different shimmer views
+
+The `.NET MAUI Shimmer` control provides seven different Shimmer types of views. It can be assigned to the control using the `Type` property. By default, the control is assigned to the `CirclePersona` view.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+<shimmer:SfShimmer x:Name="Shimmer" VerticalOptions="Fill" Type="CirclePersona">
+    <StackLayout>
+        <Label
+            Text="Content is loaded!"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="CenterAndExpand">
+        </Label>
+    </StackLayout>
+</shimmer:SfShimmer>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+SfShimmer shimmer = new SfShimmer()
+   {
+      Type = ShimmerType.CirclePersona,
+      VerticalOptions = LayoutOptions.Fill,
+      Content = new Label
+      {
+         Text = "Content is loaded!!"
+      }
+   };
+
+   this.Content = shimmer;
+
+{% endhighlight %}
+{% endtabs %}
+
+![Circle persona shimmer View in .NET MAUI.](images/overview/maui-circle-persona.gif)
