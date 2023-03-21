@@ -114,7 +114,7 @@ public partial class MainPage : ContentPage
 
 ## Properties
 
-N> All the properties from Xamarin.Forms PopupView class are moved to MAUI SfPopup class itself.
+N> All the properties from the Xamarin.Forms PopupView class is moved to the MAUI SfPopup class itself.
 
 <table>
 <tr>

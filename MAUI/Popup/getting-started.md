@@ -14,8 +14,8 @@ This section provides a quick overview of how to get start with the .NET MAUI Po
 
 ## Creating an application using the .NET MAUI Popup
 
- 1. Create a new .NET MAUI application in Visual Studio.
- 2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfPopup to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Popup and install it.
+ 1. Create a new .NET MAUI application in Visual Studio.
+ 2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfPopup to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Popup and install it.
  3. Import the control namespace `Syncfusion.Maui.Popup` in XAML or C# code.
  4. Initialize the `SfPopup` control.
  
@@ -106,8 +106,7 @@ Refer to the following code example for displaying popup.
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="13" %}
-
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="12" %}
 namespace GettingStarted
 {
     public partial class MainPage : ContentPage
@@ -158,8 +157,7 @@ Refer to the following code example for displaying popup with appearance mode.
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="12" %}
-
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -176,8 +174,7 @@ Refer to the following code example for displaying popup with appearance mode.
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="14 15" %}
-
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="13 14" %}
 using Syncfusion.Maui.Popup;
 
 namespace GettingStarted
@@ -213,8 +210,7 @@ Any view can be added as popup content by using the `SfPopup.ContentTemplate` pr
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="16" %}
-
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="15" %}
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -243,8 +239,7 @@ Any view can be added as popup content by using the `SfPopup.ContentTemplate` pr
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="24"%}
-
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="23"%}
 using Syncfusion.Maui.Popup;
 
 namespace GettingStarted
