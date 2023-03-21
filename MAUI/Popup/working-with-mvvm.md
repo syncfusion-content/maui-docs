@@ -129,7 +129,7 @@ public partial class PopupPage : SfPopup
     public PopupPage()
     {
         InitializeComponent();
-	}
+    }
 }
 {% endhighlight %}
 {% endtabs %}
@@ -176,9 +176,9 @@ The below code snippet shows how to consume the previously created SfPopup page 
 public partial class MainPage : ContentPage
 {
     public MainPage()
-	{
-		InitializeComponent();
-	}
+    {
+        InitializeComponent();
+    }
 }
 {% endhighlight %}
 {% endtabs %}
@@ -335,9 +335,9 @@ Refer to the following code example to retrieve text value from entry control in
 public partial class MainPage : ContentPage
 {
     public MainPage()
-	{
-		InitializeComponent();
-	}
+    {
+        InitializeComponent();
+    }
 }
 {% endhighlight %}
 {% endtabs %}
