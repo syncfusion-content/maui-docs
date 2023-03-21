@@ -33,7 +33,7 @@ In the following code example, set the `SfPopup.AppearanceMode` property as `One
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sfPopup="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"
-             x:Class="PopupMauiPositioning.MainPage">
+             x:Class="PopupMauiLayout.MainPage">
      <ContentPage.Content>
         <StackLayout Padding="20">
             <Button x:Name="clickToShowPopup" Text="ClickToShowPopup" 
@@ -75,7 +75,7 @@ In the following code example, set the `SfPopup.AppearanceMode` property as `Two
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sfPopup="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"
-             x:Class="PopupMauiPositioning.MainPage">
+             x:Class="PopupMauiLayout.MainPage">
      <ContentPage.Content>
         <StackLayout Padding="20">
             <Button x:Name="clickToShowPopup" Text="ClickToShowPopup" 
@@ -121,7 +121,7 @@ You can display the Popup without header by using the property `SfPopup.ShowHead
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sfPopup="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"
-             x:Class="PopupMauiPositioning.MainPage">
+             x:Class="PopupMauiLayout.MainPage">
      <ContentPage.Content>
         <StackLayout Padding="20">
             <Button x:Name="clickToShowPopup" Text="ClickToShowPopup" 
@@ -164,7 +164,7 @@ You can display the Popup with footer by using the property, `SfPopup.ShowFooter
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sfPopup="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"
-             x:Class="PopupMauiPositioning.MainPage">
+             x:Class="PopupMauiLayout.MainPage">
      <ContentPage.Content>
         <StackLayout Padding="20">
             <Button x:Name="clickToShowPopup" Text="ClickToShowPopup" 
@@ -204,7 +204,7 @@ You can show the Popup with close icon by using the property, `SfPopup.ShowClose
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sfPopup="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"
-             x:Class="PopupMauiPositioning.MainPage">
+             x:Class="PopupMauiLayout.MainPage">
      <ContentPage.Content>
         <StackLayout Padding="20">
             <Button x:Name="clickToShowPopup" Text="ClickToShowPopup" 
@@ -246,7 +246,7 @@ Any view can be added as the header content using the `SfPopup.HeaderTemplate` p
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sfPopup="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"
-             x:Class="PopupMauiPositioning.MainPage">
+             x:Class="PopupMauiLayout.MainPage">
     <ContentPage.Content>
         <StackLayout Padding="20">
             <Button x:Name="clickToShowPopup" Text="ClickToShowPopup" 
@@ -314,7 +314,7 @@ Any view can be added as the footer content using the `SfPopup.FooterTemplate` p
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sfPopup="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"
-             x:Class="PopupMauiPositioning.MainPage">
+             x:Class="PopupMauiLayout.MainPage">
     <ContentPage.Content>
         <StackLayout Padding="20">
             <Button x:Name="clickToShowPopup" Text="ClickToShowPopup" 
@@ -383,7 +383,7 @@ Any view can be added as popup content by using the `SfPopup.ContentTemplate` pr
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sfPopup="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"
-             x:Class="PopupMauiPositioning.MainPage">
+             x:Class="PopupMauiLayout.MainPage">
     <ContentPage.Content>
         <StackLayout Padding="20">
             <Button x:Name="clickToShowPopup" Text="ClickToShowPopup" 
