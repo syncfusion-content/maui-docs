@@ -7,7 +7,7 @@ control: SfShimmer
 documentation: ug
 ---
 
-# Getting Started of .NET MAUI Shimmer (SfShimmer)
+# Getting started of .NET MAUI Shimmer (SfShimmer)
 
 This section explains how to add the Shimmer control.
 
@@ -82,7 +82,7 @@ namespace GettingStarted
 {% endhighlight %}
 {% endtabs %}
 
-## Change different Shimmer views
+## Change different shimmer views
 
 The `.NET MAUI Shimmer` control provides seven different Shimmer types of views. It can be assigned to the control using the `Type` property. By default, the control is assigned to the `CirclePersona` view.
 
