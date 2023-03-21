@@ -157,9 +157,9 @@ public MainPage()
 
 ![Displaying a .NET MAUI Popup with footer customization](/Images/styles/naui-popup-with-footer-customization.png)
 
-## Border customization
+## Stroke customization
 
-The SfPopup allows customizing the border appearance with various border customizations as follows:
+The SfPopup allows customizing the stroke appearance with various stroke customizations as follows:
 
 <table>
 <tr>
@@ -180,7 +180,7 @@ The SfPopup allows customizing the border appearance with various border customi
 </tr>
 </table>
 
-Refer to the following code example for customizing the border elements.
+Refer to the following code example for customizing the stroke elements.
 
 {% tabs %}
 
@@ -210,7 +210,7 @@ public MainPage()
 
 {% endtabs %}
 
-![Displaying a .NET MAUI Popup with border customization](/Images/styles/maui-popup-with-border-customization.png)
+![Displaying a .NET MAUI Popup with stroke customization](/Images/styles/maui-popup-with-stroke-customization.png)
 
 ## Styling overlay background
 
@@ -244,7 +244,7 @@ The SfPopup allows to blur the background using `SfPopup.OverlayMode` and `SfPop
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="14 18" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="14 17" %}
 
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -261,8 +261,7 @@ The SfPopup allows to blur the background using `SfPopup.OverlayMode` and `SfPop
                         OverlayMode="Blur" 
                         ShowCloseButton="True">
             <sfPopup:SfPopup.PopupStyle>
-                <sfPopup:PopupStyle HeaderBackground="DimGray"
-                                    BlurIntensity="ExtraDark" />
+                <sfPopup:PopupStyle BlurIntensity="ExtraDark" />
             </sfPopup:SfPopup.PopupStyle>
         </sfPopup:SfPopup>
    </StackLayout>
@@ -285,7 +284,6 @@ namespace GettingStarted
             popup.ShowCloseButton = true;
             popup.OverlayMode = OverlayMode.Blur;
             popup.PopupStyle.BlurIntensity = BlurIntensity.ExtraDark;
-            popup.PopupStyle.HeaderBackground = Colors.DimGray;
             var layout = new StackLayout();
             var image = new Image() { Source = "Blurred_Background.png", Aspect = Aspect.Fill };
             TapGestureRecognizer tapGestureRecognizer = new TapGestureRecognizer();
