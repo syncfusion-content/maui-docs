@@ -16,7 +16,7 @@ Localization is the process of translating the application resources into differ
 Application culture can be changed by setting `CurrentUICulture.` in `App.xaml.cs` file.
 
 {% tabs %}
-{% highlight c# tabtitle="App.xaml.cs" hl_lines="1 2 9 13" %}
+{% highlight c# tabtitle="App.xaml.cs" hl_lines="1 2 9 14" %}
 
 using Syncfusion.Maui.Charts;
 using System.Resources;
@@ -27,7 +27,8 @@ public partial class App : Application
 	{
 		InitializeComponent();
 		CultureInfo.CurrentUICulture = new CultureInfo("fr-FR");
-      //// ResXPath => Full path of the resx file; For example : //SfCartesianChartResources.ResourceManager = new ResourceManager
+      // ResXPath => Full path of the resx file; For example : 
+      //SfCartesianChartResources.ResourceManager = new ResourceManager
       // ("CartesianChartSample.Resources.SfCartesianChart", Application.Current.GetType().Assembly);
 
 		SfCartesianChartResources.ResourceManager = new ResourceManager(ResXPath, Application.Current.GetType().Assembly);
@@ -47,7 +48,7 @@ To localize the `Chart` based on `CurrentUICulture` using `resource` files, foll
 
    1. Right-click on the `Resources` folder, select `Add` and then `NewItem.`
 
-   2. In Add New Item wizard, select the Resource File option and name the filename as `SfCartesianChart.<culture name>.resx.` For example, give the name as `SfCartesianChart.fr-FR.resx` for French culture.
+   2. In Add New Item, select the Resource File option and name the filename as `SfCartesianChart.<culture name>.resx.` For example, give the name as `SfCartesianChart.fr-FR.resx` for French culture.
 
    3. The culture name indicates the name of the language and country.
 
