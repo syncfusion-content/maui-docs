@@ -94,11 +94,6 @@ this.Content = shimmer;
 <th>.NET MAUI SfShimmer</th>
 <th>Description</th></tr>
 <tr>
-<td>{{'[SfTemplateStyle ]'| markdownify }}</td>
-<td>Nil</td>
-<td>Not supported.</td>
-</tr> 
-<tr>
 <td>{{'[ShimmerView ]' | markdownify }}</td>
 <td>{{'[ShimmerView ]' | markdownify }}</td>
 <td>Represents a view used to achieve shimmer custom view.</td>
