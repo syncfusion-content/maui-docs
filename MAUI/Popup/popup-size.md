@@ -190,7 +190,7 @@ In the following code snippet the Popup is auto-sized in height based on the con
               xmlns:popup="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup">
     <ContentPage.Content>
         <StackLayout Padding="20">
-            <Button x:Name="show" Text="Show" WidthRequest="300" Clicked="show_Clicked"/>
+            <Button x:Name="show" Text="Show" WidthRequest="300" ShowFooter="True" Clicked="show_Clicked"/>
             <popup:SfPopup x:Name="popup" 
             AutoSizeMode="Height"
             >
