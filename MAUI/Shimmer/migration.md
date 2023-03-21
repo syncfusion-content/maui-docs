@@ -255,36 +255,6 @@ stackLayout.Children.Add(label);
 <td>Gets or sets a value indicating whether to load actual content of shimmer.</td>
 </tr>
 <tr>
-<td>{{'[PersonaStyle]'| markdownify }}</td>
-<td>Nil</td>
-<td>Not Supported.</td>
-</tr>
-<tr>
-<td>{{'[ProfileStyle]'| markdownify }}</td>
-<td>Nil</td>
-<td>Not Supported.</td>
-</tr>
-<tr>
-<td>{{'[ArticleStyle]'| markdownify }}</td>
-<td>Nil</td>
-<td>Not Supported.</td>
-</tr>
-<tr>
-<td>{{'[VideoStyle]'| markdownify }}</td>
-<td>Nil</td>
-<td>Not Supported.</td>
-</tr>
-<tr>
-<td>{{'[FeedStyle]'| markdownify }}</td>
-<td>Nil</td>
-<td>Not Supported.</td>
-</tr>
-<tr>
-<td>{{'[ShoppingStyle]'| markdownify }}</td>
-<td>{{'[MaximumDate]'| markdownify }}</td>
-<td>Gets or sets the maximum display date to restrict the visible dates in the SfShimmer.</td>
-</tr>
-<tr>
 <td>Nil</td>
 <td>{{'[RepeatCount]'| markdownify }}</td>
 <td>Gets or sets the number of times the built-in view should be repeated.</td>
