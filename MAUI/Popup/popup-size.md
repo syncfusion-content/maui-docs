@@ -7,7 +7,7 @@ control: SfPopup
 documentation: ug
 ---
 
-# Popup Size in .NET Maui Popup (SfPopup)
+# Popup size in .NET Maui Popup (SfPopup)
 
 The SfPopup allows the display of the Popup at any desired width and height by setting the `SfPopup.WidthRequest` and `SfPopup.HeightRequest`. The Popup size can also be changed by setting the width request and height request to the views loaded inside the templates of the Popup.
 
@@ -103,7 +103,7 @@ namespace PopupMaui
 
 ![.NET MAUI Popup with HeightRequest and WidthRequest](Images/popup-size//maui-popup-with-heightrequest-and-widthrequest.png)
 
-## Full Screen
+## Full screen
 
 The SfPopup can be shown in full width and height of the screen using,
 
@@ -173,7 +173,7 @@ Executing the above codes renders the following output in windows.
 ![.NET MAUI Popup with Full Screen](Images/popup-size//maui-popup-with-fullscreen.png)
 
 
-## Auto-size Popup
+## Auto-size popup
 
 The `SfPopup` can auto-size the popup view based on the contents loaded inside its `SfPopup.ContentTemplate` property using the `SfPopup.AutoSizeMode` property. The default value is `AutoSizeMode.None`. You can choose to auto-size the Popup in the height, width or in both .height and width of its contents. By default, the `HeightRequest` and `WidthRequest` set to the `SfPopup` or the views loaded inside the template are given higher priority than the `AutoSizeMode`.
 
