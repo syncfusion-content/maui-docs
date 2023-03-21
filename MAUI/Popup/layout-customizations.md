@@ -20,16 +20,16 @@ The two different appearance modes in the SfPopup are as follows:
 <th>Description</th></tr>
 <tr>
 <td>`OneButton`</td>
-<td>Shows the `SfPopup` with one button in the footer view. This is the default value.</td></tr>
+<td>Shows the `SfPopup` with one button (accept button) in the footer view. This is the default value.</td></tr>
 <tr>
 <td>`TwoButton`</td>
-<td>Shows the `SfPopup` with two buttons in the footer view.</td></tr>
+<td>Shows the `SfPopup` with two buttons (accept & decline buttons) in the footer view.</td></tr>
 </table>
 
 In the following code example, set the `SfPopup.AppearanceMode` property as `OneButton` which displays only the Accept button in the footer view.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sfPopup="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"
@@ -39,13 +39,15 @@ In the following code example, set the `SfPopup.AppearanceMode` property as `One
             <Button x:Name="clickToShowPopup" Text="ClickToShowPopup" 
                     VerticalOptions="Start" HorizontalOptions="Center" 
                     Clicked="ClickToShowPopup_Clicked" />
-            <sfPopup:SfPopup x:Name="sfPopup" AppearanceMode="OneButton" ShowFooter="True">
+            <sfPopup:SfPopup x:Name="sfPopup" 
+                             AppearanceMode="OneButton" 
+                             ShowFooter="True">
             </sfPopup:SfPopup>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10" %}
 using Syncfusion.Maui.Popup;
 
 public partial class MainPage : ContentPage
@@ -66,12 +68,12 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Popup with one button](Images/layout-customizations/maui-popup-appearance-mode-one-button.png)
+![.NET MAUI Popup with accept button](Images/layout-customizations/maui-popup-appearance-mode-one-button.png)
 
 In the following code example, set the `SfPopup.AppearanceMode` property as `TwoButton` which displays both Accept button and Decline button in the footer view.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sfPopup="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"
@@ -81,13 +83,15 @@ In the following code example, set the `SfPopup.AppearanceMode` property as `Two
             <Button x:Name="clickToShowPopup" Text="ClickToShowPopup" 
                     VerticalOptions="Start" HorizontalOptions="Center" 
                     Clicked="ClickToShowPopup_Clicked" />
-            <sfPopup:SfPopup x:Name="sfPopup" AppearanceMode="TwoButton" ShowFooter="True">
+            <sfPopup:SfPopup x:Name="sfPopup" 
+                             AppearanceMode="TwoButton" 
+                             ShowFooter="True">
             </sfPopup:SfPopup>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10" %}
 using Syncfusion.Maui.Popup;
 
 public partial class MainPage : ContentPage
@@ -108,7 +112,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Popup with two buttons](Images/layout-customizations/maui-popup-appearance-mode-two-button.png)
+![.NET MAUI Popup with accept and decline buttons](Images/layout-customizations/maui-popup-appearance-mode-two-button.png)
 
 ## Popup region customization
 
@@ -117,7 +121,7 @@ public partial class MainPage : ContentPage
 You can display the Popup without header by using the property `SfPopup.ShowHeader`. Default value is true. Find the code example of the same below.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sfPopup="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"
@@ -127,13 +131,15 @@ You can display the Popup without header by using the property `SfPopup.ShowHead
             <Button x:Name="clickToShowPopup" Text="ClickToShowPopup" 
                     VerticalOptions="Start" HorizontalOptions="Center" 
                     Clicked="ClickToShowPopup_Clicked" />
-            <sfPopup:SfPopup x:Name="sfPopup" ShowHeader="False" ShowFooter="True">
+            <sfPopup:SfPopup x:Name="sfPopup" 
+                             ShowHeader="False"
+                             ShowFooter="True">
             </sfPopup:SfPopup>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="8" %}
 using Syncfusion.Maui.Popup;
 
 public partial class MainPage : ContentPage
@@ -160,7 +166,7 @@ public partial class MainPage : ContentPage
 You can display the Popup with footer by using the property, `SfPopup.ShowFooter`. Default value is false. Find the code example of the same below.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sfPopup="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"
@@ -170,13 +176,14 @@ You can display the Popup with footer by using the property, `SfPopup.ShowFooter
             <Button x:Name="clickToShowPopup" Text="ClickToShowPopup" 
                     VerticalOptions="Start" HorizontalOptions="Center" 
                     Clicked="ClickToShowPopup_Clicked" />
-            <sfPopup:SfPopup x:Name="sfPopup" ShowFooter="True">
+            <sfPopup:SfPopup x:Name="sfPopup" 
+                             ShowFooter="True">
             </sfPopup:SfPopup>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="8" %}
 using Syncfusion.Maui.Popup;
 
 public partial class MainPage : ContentPage
@@ -201,6 +208,8 @@ public partial class MainPage : ContentPage
 
 You can show the Popup with close icon by using the property, `SfPopup.ShowCloseButton`. Default value is false. Find the code example of the same below. 
 
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sfPopup="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"
@@ -210,13 +219,14 @@ You can show the Popup with close icon by using the property, `SfPopup.ShowClose
             <Button x:Name="clickToShowPopup" Text="ClickToShowPopup" 
                     VerticalOptions="Start" HorizontalOptions="Center" 
                     Clicked="ClickToShowPopup_Clicked" />
-            <sfPopup:SfPopup x:Name="sfPopup" ShowCloseButton="True">
+            <sfPopup:SfPopup x:Name="sfPopup" 
+                             ShowCloseButton="True">
             </sfPopup:SfPopup>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="8" %}
 using Syncfusion.Maui.Popup;
 
 public partial class MainPage : ContentPage
@@ -268,7 +278,7 @@ Any view can be added as the header content using the `SfPopup.HeaderTemplate` p
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="24" %}
 using Syncfusion.Maui.Popup;
 
 public partial class MainPage : ContentPage
@@ -336,7 +346,7 @@ Any view can be added as the footer content using the `SfPopup.FooterTemplate` p
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="25" %}
 using Syncfusion.Maui.Popup;
 
 public partial class MainPage : ContentPage
@@ -402,7 +412,7 @@ Any view can be added as popup content by using the `SfPopup.ContentTemplate` pr
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="24" %}
 using Syncfusion.Maui.Popup;
 
 public partial class MainPage : ContentPage
