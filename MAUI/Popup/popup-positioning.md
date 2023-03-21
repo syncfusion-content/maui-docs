@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Popup Positioning in .NET MAUI Popup control | Syncfusion
-description: Learn here all about Popup Positioning support in Syncfusion .NET MAUI Popup (SfPopup) control, its elements and more.
+description: Learn all about Popup Positioning support in the Syncfusion .NET MAUI Popup (SfPopup) control, its elements, and more.
 platform: MAUI
 control: SfPopup
 documentation: ug
@@ -19,22 +19,22 @@ Following are the list of options available to show SfPopup at various positions
 <th>Description</th></tr>
 <tr>
 <td>SfPopup.IsOpen</td>
-<td>Shows the `SfPopup` at center.</td></tr>
+<td>Show the `SfPopup` at the center.</td></tr>
 <tr>
 <td>SfPopup.Show</td>
 <td>Similar as `SfPopup.IsOpen` property.</td></tr>
 <tr>
 <td>SfPopup.Show(x-position, y-position)</td>
-<td>Shows the `SfPopup` at the specified X and y positions.</td></tr>
+<td>Show the `SfPopup` at the specified X and y positions.</td></tr>
 <tr>
 <td>SfPopup.ShowRelativeToView(View, RelativePosition)</td>
-<td>Shows the `SfPopup` at the position relative to the specified view.</td></tr>
+<td>Show the `SfPopup` at the position relative to the specified view.</td></tr>
 <tr>
 <td>SfPopup.ShowRelativeToView(View, RelativePosition, x-position, y-position)</td>
-<td>Shows the `SfPopup` at an absolute x, y coordinate from the relative position of the specified view.</td></tr>
+<td>Show the `SfPopup` at an absolute x, y coordinate from the relative position of the specified view.</td></tr>
 <tr>
 <td>SfPopup.IsFullScreen</td>
-<td>Shows the `SfPopup` in full width and height of the screen.</td></tr>
+<td>Show the `SfPopup` in full width and height of the screen.</td></tr>
 <tr>
 <td>SfPopup.Show(bool)</td>
 <td>Similar as `SfPopup.IsFullScreen` property.</td></tr>
@@ -42,7 +42,7 @@ Following are the list of options available to show SfPopup at various positions
 
 ## Center positioning
 
-`SfPopup` can be shown at the center by using the following options.
+The `SfPopup` can be shown at the center by using the following options.
 
  * IsOpen property
  * SfPopup.Show
@@ -107,7 +107,7 @@ private void ClickToShowPopup_Clicked(object sender, EventArgs e)
 
 ## Absolute positioning
 
-To open the `SfPopup` in specific X,Y coordinates, use the `SfPopup.Show(x-position, y-position)` method as in the following code sample.
+To open the `SfPopup` in specific X and Y coordinates, use the `SfPopup.Show(x-position, y-position)` method as in the following code sample.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -172,7 +172,7 @@ private void ClickToShowPopup_Clicked(object sender, EventArgs e)
 
 The `SfPopup` can be displayed at an absolute x, y coordinate from the relative position of the specified view by using the following method.
 
-To open the `SfPopup` in the specific x, y coordinate relative to a view, use the `SfPopup.ShowRelativeToView(View, RelativePosition, x-position, y-position)` method.
+To open the `SfPopup` in the specific x and y coordinate relative to a view, use the `SfPopup.ShowRelativeToView(View, RelativePosition, x-position, y-position)` method.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -189,7 +189,7 @@ To open the `SfPopup` in the specific x, y coordinate relative to a view, use th
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4" %}
 private void ClickToShowPopup_Clicked(object sender, EventArgs e)
 {
-  // Shows SfPopup at the bottom of the button and with absolute relative position.
+  // Show the SfPopup at the bottom of the button and with an absolute relative position.
   sfPopup.ShowRelativeToView(clickToShowPopup, PopupRelativePosition.AlignBottom, 50, 50);
 }
 {% endhighlight %}
@@ -234,7 +234,7 @@ To open the SfPopup relative to a view in MVVM assign values to the `SfPopup.Rel
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4" %} 
 private void ClickToShowPopup_Clicked(object sender, EventArgs e)
 {
-  // Shows SfPopup at the bottom of the label and with absolute relative position.
+  // Show the SfPopup at the bottom of the label and with absolute relative position.
   (this.BindingContext as ViewModel).DisplayPopup = true;	
 }
 {% endhighlight %}
