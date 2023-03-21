@@ -13,7 +13,7 @@ A PDF document may optionally have a document outline (also called as bookmarks)
 
 ## Showing/hiding the outline view
 
-The PDF viewer’s built-in outline view that displays the document outline in a tree like structure can be shown or hidden using the `IsOutlineViewVisible` property. The default value of this property is `false`. 
+The PDF viewer's built-in outline view that displays the document outline in a tree like structure can be shown or hidden using the `IsOutlineViewVisible` property. The default value of this property is `false`. 
 
 {% tabs %}
 {% highlight XAML %}
