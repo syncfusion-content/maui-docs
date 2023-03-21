@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Popup Size in MAUI Popup control | Syncfusion
-description: Learn here all about Popup Size support in Syncfusion MAUI Popup (SfPopup) control and more.
+title: Popup Size in .NET MAUI Popup control | Syncfusion
+description: Learn all about Popup Size support in the Syncfusion .NET MAUI Popup (SfPopup) control and more.
 platform: MAUI
 control: SfPopup
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Popup Size in .NET Maui Popup (SfPopup)
 
-SfPopup allows displaying the Popup at any desired width and height by setting the `SfPopup.WidthRequest` and `SfPopup.HeightRequest`. The Popup size can also be changed by setting width request and height request to the views loaded inside the templates of the Popup.
+The SfPopup allows the display of the Popup at any desired width and height by setting the `SfPopup.WidthRequest` and `SfPopup.HeightRequest`. The Popup size can also be changed by setting the width request and height request to the views loaded inside the templates of the Popup.
 
 In the following code snippet the Popup is loaded in 320x320 pixels, where width request is set for the ListView that is loaded as template content and height request is set for the `PopupView`.
 
@@ -105,12 +105,12 @@ namespace PopupMaui
 
 ## Full Screen
 
-SfPopup can be shown in full width and height of the screen using,
+The SfPopup can be shown in full width and height of the screen using,
 
   * `IsFullScreen`
   * `Show(bool isFullScreen)`
 
-Refer the below code example to open the popup in full screen.
+Refer to the following code example to open the popup in full screen.
 
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <?xml version="1.0" encoding="utf-8" ?>
@@ -157,11 +157,11 @@ namespace PopupMaui
 
         private void show_Clicked(object sender, EventArgs e)
         {
-            // Shows SfPopup in full width and height of the screen using the SfPopup.IsFullScreen property.
+            // Show the SfPopup in full width and height of the screen using the SfPopup.IsFullScreen property.
             popup.IsFullScreen = true;
             popup.IsOpen = true;
             
-            // Shows SfPopup in full width and height of the screen using the SfPopup.Show(bool) method.
+            // Show the SfPopup in full width and height of the screen using the SfPopup.IsFullScreen property.
             // popup.Show(true);
         }
     }
@@ -175,9 +175,9 @@ Executing the above codes renders the following output in windows.
 
 ## Auto-size Popup
 
-The `SfPopup` can auto-size the popup view based on the contents loaded inside its `SfPopup.ContentTemplate` property using the `SfPopup.AutoSizeMode` property. The default value is `AutoSizeMode.None`. You can choose to auto-size the Popup in height, width or in both height and width of its contents. By default, the `HeightRequest` and `WidthRequest` set to the `SfPopup` or the views loaded inside the template is given higher priority than the `AutoSizeMode`.
+The `SfPopup` can auto-size the popup view based on the contents loaded inside its `SfPopup.ContentTemplate` property using the `SfPopup.AutoSizeMode` property. The default value is `AutoSizeMode.None`. You can choose to auto-size the Popup in the height, width or in both .height and width of its contents. By default, the `HeightRequest` and `WidthRequest` set to the `SfPopup` or the views loaded inside the template are given higher priority than the `AutoSizeMode`.
 
-In the following code snippet the Popup is auto-sized in height based on the content loaded inside the `SfPopup.ContentTemplate` property.
+In the following code sample, the Popup is auto-sized in the height based on the content loaded inside the `SfPopup.ContentTemplate` property.
 
 {% tabs %}
 
