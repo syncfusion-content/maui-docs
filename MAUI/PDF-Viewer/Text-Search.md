@@ -113,3 +113,121 @@ The `Clear` functionality of the `TextSearchResult` removes all the traces of th
 
 {% endhighlight %}
 {% endtabs %}
+
+## Text Search progress
+
+By using the `SearchTextAsync` the search result will be obtained only after all the pages has been searched. If the search completion takes a long time for a PDF document with more pages, you may get the current search result while the search is still in progress by using the `TextSearchProgress` event. The event is triggered on each page after the search is completed on the page and `SearchResult` property of the `TextSearchProgressEventArgs` contains the current search result. See the following code example.
+
+{% tabs %}
+{% highlight XAML hl_lines="3" %}
+
+        <syncfusion:SfPdfViewer 
+            x:Name="PdfViewer"
+            TextSearchProgress="PdfTextSearchProgress"/>
+			
+{% endhighlight %}
+{% highlight C# hl_lines="3 9" %}
+
+    async void SearchText(string text)
+    {
+        PdfViewer.TextSearchProgress += PdfTextSearchProgress;
+        await PdfViewer.SearchTextAsync(text);
+    }
+
+    private void PdfTextSearchProgress(object sender, TextSearchProgressEventArgs e)
+    {
+        TextSearchResult searchResult = e.SearchResult;
+        int totalMatchesFound = searchResult.TotalMatchesCount;
+    }
+	
+{% endhighlight %}
+{% endtabs %}
+
+### Search completion percentage
+
+The `TotalPagesSearched` property of the `TextSearchProgressEventArgs` provides the total number of pages that have been searched to find the specified text across the PDF document. You may use this information to find the search completion percentage. See the code example below.
+
+{% tabs %}
+{% highlight C# %}
+
+    private void PdfTextSearchProgress(object sender, TextSearchProgressEventArgs e)
+    {
+        float searchCompletionPercentage = (float)e.TotalPagesSearched / (float)PdfViewer.PageCount;
+    }
+	
+{% endhighlight %}
+{% endtabs %}
+
+### Cancelling search progress
+
+The `Clear` method of the `TextSearchResult` can be used to cancel the text search progress that does not need to be continued. For example, under the following scenarios, cancellation may be necessary.
+
+1.	If search is running for a long time. 
+2.	When a wrong key word is entered and initiated the search.
+
+See the following code example to cancel a currently running search.
+
+{% tabs %}
+{% highlight C# hl_lines="10" %}
+
+    async void SearchText(string text)
+    {
+        PdfViewer.TextSearchProgress += PdfTextSearchProgress;
+        await PdfViewer.SearchTextAsync(text);
+    }
+
+    private void PdfTextSearchProgress(object sender, TextSearchProgressEventArgs e)
+    {
+        // Cancel the search operation when it is running but does not need to be continued.
+        e.SearchResult?.Clear();
+    }
+	
+{% endhighlight %}
+{% endtabs %}
+
+## Text search options
+
+By default, the case and other characteristics of the text will not be considered while using the `SearchTextAsync` functionality. You may define how the text needs to be searched in the document by using the `TextSearchOptions` with the following options.
+
+1.	`None` – To search text without any restrictions.
+2.	`CaseSensitive` - To search text with case sensitive.
+3.	`WholeWords` – To search only the whole words.
+
+You need to pass the `TextSearchOptions` as a parameter to the `SearchTextAsync` method as shown in the following code example.
+
+{% tabs %}
+{% highlight C# hl_lines="5" %}
+
+    async void SearchText(string text)
+    {
+        PdfViewer.TextSearchProgress += PdfTextSearchProgress;
+        TextSearchOptions searchOptions = TextSearchOptions.CaseSensitive;
+        await PdfViewer.SearchTextAsync(text, searchOptions);
+    }
+	
+{% endhighlight %}
+{% endtabs %}
+
+## Customize the text match highlight colors
+
+The highlight colors of the current match and other matches of a text can be customized with the help of the `TextSearchSettings` property of the `SfPdfViewer`.
+
+{% tabs %}
+{% highlight XAML hl_lines="4 5" %}
+
+        <syncfusion:SfPdfViewer x:Name="PdfViewer">
+            <syncfusion:SfPdfViewer.TextSearchSettings>
+                <syncfusion:TextSearchSettings 
+                    CurrentMatchHighlightColor="#438F00FF"  
+                    OtherMatchesHighlightColor="#4300FF00"/>
+            </syncfusion:SfPdfViewer.TextSearchSettings>
+        </syncfusion:SfPdfViewer>
+			
+{% endhighlight %}
+{% highlight C# hl_lines="3 9" %}
+
+	PdfViewer.TextSearchSettings.CurrentMatchHighlightColor = Color.FromRgba("#8F00FF43");
+	PdfViewer.TextSearchSettings.OtherMatchesHighlightColor= Color.FromRgba("#00FF0043");
+
+{% endhighlight %}
+{% endtabs %}

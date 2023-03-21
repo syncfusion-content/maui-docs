@@ -34,6 +34,8 @@ this.dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
 {% endhighlight %}
 {% endtabs %}
 
+![Changing the layout type in .NET MAUI DataForm.](images/floating-label-layout/outlined-container-type.png)
+
 #### Changing the layout type for the editor
 Change the layout type for the editor by using the `LayoutType` property of the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html), and it will be handled in the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event.
 
@@ -74,7 +76,7 @@ Dataform supports the floating label layout for the following editors.
 * Custom editor
 
 ## Container types
-Containers enhance the perspective of the dataform editor views. By default, the container type is `Outlined`. By using the `ContainerType` property of the `TextInputLayoutSettings` in DataF`orm or `DataFormItem`, modify the container type to `Filled` or `None`.
+Containers enhance the perspective of the dataform editor views. By default, the container type is `Outlined`. By using the `ContainerType` property of the `TextInputLayoutSettings` in `DataForm` or `DataFormItem`, modify the container type to `Filled` or `None`.
 
 #### Outlined
 The `Outlined` container type draws a thin border around the text input field and adds a hint text that floats above the input field when the user starts typing. To enable the outlined container type, set the `ContainerType` property of the `TextInputLayoutSettings` to `Outlined` in `DataForm` or `DataFormItem`, which covers the editor view with rounded-corner.
@@ -143,6 +145,8 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
+![Outlined container type in .NET MAUI DataForm.](images/floating-label-layout/outlined-container-type.png)
+
 #### Filled
 The `Filled` container type fills the background of the text input field with a solid color and adds a hint of text that floats above the input field when the user starts typing. It can be enabled by setting the `ContainerType` property to `Filled` in the `DataForm` or `DataFormItem`.
 
@@ -179,6 +183,8 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
+![Filled container type in .NET MAUI DataForm.](images/floating-label-layout/filled-container-type.png)
+
 #### None
 The `None` container type adds no border or background to the text input field. It can be enabled by setting the `ContainerType` property to `None` in the `DataForm` or `DataFormItem` container. It will have an empty background and enough spacing.
 
@@ -214,6 +220,8 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 {% endhighlight %}
 {% endtabs %}
+
+![None container type in .NET MAUI DataForm.](images/floating-label-layout/none-container-type.png)
 
 ## Leading and Trailing view
 
@@ -257,6 +265,8 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 N> The `LeadingView` is applicable for both `Default` and `TextInputLayout` layout types
 
+![Leading view in .NET MAUI DataForm.](images/floating-label-layout/leading-view.png)
+
 #### Trailing view
 The trailing view is a view that appears to the right of the text input field. It can be used to add additional functionality or visual elements to the text input such as a clear button or an icon. It can be added to the floating label layout by setting the `TrailingView` property of the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html). Show a trailing view only when the `ShowTrailingView` property is `true`.
 
@@ -297,6 +307,8 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endtabs %}
 
 N> The `TrailingView` is applicable only when the `LayoutType` is `TextInputLayout`.
+
+![Trailing view in .NET MAUI DataForm.](images/floating-label-layout/trailing-view.png)
 
 #### Leading and Trailing View Position
 The `LeadingViewPosition` and `TrailingViewPosition` properties of the `DataFormItem` allow you to adjust the leading and trailing view's positions. The view is positioned `outside` the container if the leading and trailing view positions are set to `TextInputLayoutViewPosition.Outside`. The view is positioned `inside` the container if the leading and trailing view positions are set to `TextInputLayoutViewPosition.Inside`.
@@ -374,6 +386,8 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
+![Leading and Trailing view position in .NET MAUI DataForm.](images/floating-label-layout/view-position.png)
+
 ## Enable password visibility toggle for password editor
 Password toggle visibility in a floating label layout is used to show or hide the visibility of characters in the dataform password editor. Enable this toggle by setting the `EnablePasswordVisibilityToggle` property to true in the `DataFormItem`. The default value of the `EnablePasswordVisibilityToggle` is `true`.
 
@@ -408,6 +422,8 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 {% endhighlight %}
 {% endtabs %}
+
+![Enable password visibility in .NET MAUI DataForm.](images/floating-label-layout/password-toggle.png)
 
 ## Assistive label
 
@@ -451,6 +467,8 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 {% endhighlight %}
 {% endtabs %}
+
+![Show helper text in .NET MAUI DataForm.](images/floating-label-layout/show-helper-false.png)
 
 #### Validation label
 The validation label displays the dataform validation messages such as valid or invalid data. Refer to the [validation](https://help.syncfusion.com/maui/dataform/validation) to learn more about the dataform validation.
@@ -496,6 +514,8 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
+![Hint label style in .NET MAUI DataForm.](images/floating-label-layout/hint-label-style.png)
+
 #### Helper label style
 Customize the text of the helper label by setting the `TextColor`, `FontFamily`, `FontSize`, and `FontAttributes` properties of the `HelperTextStyle` in the DataFormItem.
 
@@ -537,6 +557,8 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
+![Helper label style in .NET MAUI DataForm.](images/floating-label-layout/helper-text-style.png)
+
 #### Error message label style
 Customize the text of the error message label by setting the `TextColor`, `FontFamily`, `FontSize`, and `FontAttributes` properties of the `ErrorLabelTextStyle` in the DataFormItem.
 
@@ -575,6 +597,8 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 {% endhighlight %}
 {% endtabs %}
+
+![Error message label style in .NET MAUI DataForm.](images/floating-label-layout/error-message-style.png)
 
 #### Valid message label style
 Customize the text of a valid message label by setting the `TextColor`, `FontFamily`, `FontSize`, and `FontAttributes` properties of the `ValidMessageLabelTextStyle` in the DataFormItem.
@@ -615,6 +639,8 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
+![Valid message label style in .NET MAUI DataForm.](images/floating-label-layout/valid-message-style.png)
+
 ## Appearance customization
 
 #### Changing outline corner radius
@@ -654,6 +680,8 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
+![Outline corner radius in .NET MAUI DataForm.](images/floating-label-layout/outline-corner-radius.png)
+
 #### Stroke color
 The `Stroke` property of the `TextInputLayoutSettings` changes the label text and border color of the editors.
 
@@ -691,6 +719,8 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
+![Stroke color in .NET MAUI DataForm.](images/floating-label-layout/stroke.png)
+
 #### Focused stroke color
 When the given editor view is focused, the `FocusedStroke` property value will be applied to the label text and border.
 
@@ -727,6 +757,8 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 {% endhighlight %}
 {% endtabs %}
+
+![Focused stroke color in .NET MAUI DataForm.](images/floating-label-layout/focused-stroke.png)
 
 #### Focused and unfocused stroke thickness
 When the editor's view is focused and unfocused, the border's thickness can be changed using the `FocusedStrokeThickness` and `UnfocusedStrokeThickness` properties of the `TextInputLayoutSettings`.
@@ -766,6 +798,8 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 
 {% endhighlight %}
 {% endtabs %}
+
+![Focused and unfocused stroke thickness in .NET MAUI DataForm.](images/floating-label-layout/stroke-thickness.png)
 
 ## Unsupported editors
 The Floating label layout does not support non-editable editors such as `RadioGroup editor`, `CheckBox editor`, and `Switch editor`. Picker editors such as `Picker editor`, `Date picker`, and `Time picker` will be updated to support a floating label layout.
