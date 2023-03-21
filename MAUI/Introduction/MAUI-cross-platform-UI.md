@@ -221,7 +221,7 @@ You can find the platforms supported by each .NET MAUI control as below.
 		</td>
 	</tr>
     <tr>
-	    <td rowspan="3" valign="top">
+	    <td rowspan="4" valign="top">
 			LAYOUT<br/>
 		</td>
 	    <td>
@@ -243,6 +243,23 @@ You can find the platforms supported by each .NET MAUI control as below.
 	<tr>
 		<td>
 			<a href="/maui/listview/overview">ListView</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
+		<tr>
+		<td>
+			<a href="/maui/popup/overview">Popup</a><br/>
 		</td>
 		<td>
 		Yes<br/>
@@ -380,7 +397,7 @@ You can find the platforms supported by each .NET MAUI control as below.
 		</td>
 	</tr>
 	<tr>
-	    <td rowspan="5" valign="top">
+	    <td rowspan="6" valign="top">
 		EDITORS<br/>
 		</td>
 		<td>
@@ -419,6 +436,23 @@ You can find the platforms supported by each .NET MAUI control as below.
 	<tr>
 		<td>
 			<a href="/maui/dataform/overview">DataForm</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="/maui/masked-entry/overview">Masked Entry</a><br/>
 		</td>
 		<td>
 		Yes<br/>
@@ -576,7 +610,7 @@ You can find the platforms supported by each .NET MAUI control as below.
 		</td>
 	</tr>
     <tr>  
-	    <td rowspan="2" valign="top">
+	    <td rowspan="3" valign="top">
 	    MISCELLANEOUS<br/>
 		</td>
 		<td>
@@ -598,6 +632,23 @@ You can find the platforms supported by each .NET MAUI control as below.
 	<tr>
 		<td>
 			<a href="/maui/effects-view/overview">Effects View</a><br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+		<td>
+		Yes<br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="/maui/shimmer/overview">Shimmer</a><br/>
 		</td>
 		<td>
 		Yes<br/>

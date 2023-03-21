@@ -52,59 +52,23 @@ PdfViewer.UnloadDocument();
 {% endhighlight %}
 {% endtabs %}
 
-## Events
+## Opening a PDF document with annotations
 
-The `SfPdfViewer` supports the [DocumentLoaded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoaded) and [DocumentLoadFailed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoadFailed) events to notify whether the document has been opened and displayed in the view or not.
-
-### Document loaded event
-
-The [DocumentLoaded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoaded) event triggers after the document is loaded in the `SfPdfViewer`. Refer to the following code example:
+The .NET MAUI PDF Viewer does not currently support all the annotations comparable to Xamarin.Forms. However, it is possible to view the unsupported annotations in a non-interactive manner. To achieve this, provide the `flattenOptions` (an optional parameter) as `Unsupported` in the `LoadDocument` methods. See the following code example.
 
 {% tabs %}
-{% highlight xaml %}
-<syncfusion:SfPdfViewer x:Name="PdfViewer" DocumentSource="{Binding PdfDocumentStream}" DocumentLoaded="PdfViewer_DocumentLoaded">
-{% endhighlight %}
+{% highlight c# hl_lines="2" %}
 
-{% highlight c# %}
-private void PdfViewer_DocumentLoaded(object sender, EventArgs e)
-{
-   DisplayAlert("Info", "Document loaded successfully", "OK");
-}
+        Stream pdfDocumentStream = typeof(App).GetTypeInfo().Assembly.GetManifestResourceStream("GettingStarted.Assets.PDF_Succinctly.pdf");
+        FlattenOptions flattenOption = FlattenOptions.Unsupported;
+        // Loads the PDF document from the stream with flatten option to render unsupported annotations.
+        PdfViewer.LoadDocument(pdfDocumentStream, flattenOptions: flattenOption);
+
 {% endhighlight %}
 {% endtabs %}
 
-If you want to initially open a document with a specific page number or zoom factor, then call the respective APIs in this event handler. The following code example explains opening a document with a specified page number of 4.
-
-{% tabs %}
-{% highlight c# %}
-private void PdfViewer_DocumentLoaded(object sender, EventArgs e)
-{
-    pdfViewer.GoToPage(4);
-}
-{% endhighlight %}
-{% endtabs %}
-
-### Document load failed event
-
-The [DocumentLoadFailed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoadFailed) event triggers when the document loading fails in the `SfPdfViewer`. That is,
-* When any corrupted document is loaded
-* When any password-protected document is loaded with an invalid or empty password
-* When any non-PDF document is loaded
-
-The [DocumentLoadFailedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.DocumentLoadFailedEventArgs.html) will return the error `Message` and `Exception` details for the failure. The following code example explains the same.
-
-{% tabs %}
-{% highlight xaml %}
-<syncfusion:SfPdfViewer x:Name="PdfViewer" DocumentSource="{Binding PdfDocumentStream}" DocumentLoadFailed="PdfViewer_DocumentLoadFailed">
-{% endhighlight %}
-
-{% highlight c# %}
-private void PdfViewer_DocumentLoadFailed(object sender, DocumentLoadFailedEventArgs e)
-{
-   DisplayAlert( e.Message, e.Exception.StackTrace, "OK");
-}
-{% endhighlight %}
-{% endtabs %}
+N> * All `LoadDocument` methods accept this flatten options as an optional parameter.
+N> * Refer this [section](https://help.syncfusion.com/maui/pdf-viewer/migration#upcoming-features) for the upcoming annotation features in `SfPdfViewer`.
 
 ## Check other PDF opening options
 

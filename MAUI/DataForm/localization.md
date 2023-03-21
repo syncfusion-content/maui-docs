@@ -18,7 +18,7 @@ Localize the [DataFormViewItem](https://help.syncfusion.com/cr/maui/Syncfusion.M
 Application culture can be changed by setting the [CurrentUICulture](https://learn.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo.currentuiculture?view=net-7.0) in the `App.xaml.cs` file.
 
 {% tabs %}
-{% highlight C# tabtitle="App.xaml.cs" %}
+{% highlight C# tabtitle="App.xaml.cs" hl_lines="9" %}
 
 using System.Globalization;
 
