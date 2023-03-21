@@ -130,8 +130,7 @@ To handle the Accept button,
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="19" %}
-
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="18" %}
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -155,8 +154,7 @@ To handle the Accept button,
 </ContentPage>
 {% endhighlight %}
 
-{% highlight c# tabtitle="PopupViewModel.cs" hl_lines="26" %}
-
+{% highlight c# tabtitle="PopupViewModel.cs" hl_lines="25" %}
 class PopupViewModel : INotifyPropertyChanged
 {
     bool isOpen;
@@ -213,8 +211,7 @@ To handle the Decline button,
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="19" %}
-
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="18" %}
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -240,8 +237,7 @@ To handle the Decline button,
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="PopupViewModel.cs" hl_lines="26" %}
- 
+{% highlight c# tabtitle="PopupViewModel.cs" hl_lines="25" %}
 class PopupViewModel : INotifyPropertyChanged
 {
     bool isOpen;
