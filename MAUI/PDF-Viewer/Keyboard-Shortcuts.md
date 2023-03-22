@@ -29,19 +29,19 @@ The PDF viewer allows the users to perform certain operations such as page navig
 <td>Omni directional dragging (pan)</td>
 </tr>
 <tr>
-<td>`Shift` + Mouse wheel scroll up</td>
+<td><code>Shift</code> + Mouse wheel scroll up</td>
 <td>Horizontally scrolls towards left</td>
 </tr>
 <tr>
-<td>`Shift` + Mouse wheel scroll down</td>
+<td><code>Shift</code> + Mouse wheel scroll down</td>
 <td>Horizontally scrolls towards right</td>
 </tr>
 <tr>
-<td>`Ctrl` + Mouse wheel scroll up</td>
+<td><code>Ctrl</code> + Mouse wheel scroll up</td>
 <td>Zoom in</td>
 </tr>
 <tr>
-<td>`Ctrl` + Mouse wheel scroll down</td>
+<td><code>Ctrl</code> + Mouse wheel scroll down</td>
 <td>Zoom out</td>
 </tr>
 <tr>
@@ -61,60 +61,60 @@ The PDF viewer allows the users to perform certain operations such as page navig
 <td>Step scrolling from right to left</td>
 </tr>
 <tr>
-<td>`Page up`</td>
+<td><code>Page up</code></td>
 <td>Scrolls up the current View</td>
 </tr>
 <tr>
-<td>`Page down`</td>
+<td><code>Page down</code></td>
 <td>Scrolls down the current view</td>
 </tr>
 <tr>
-<td>`Enter`</td>
+<td><code>Enter</code></td>
 <td>Submits the password entered in the built-in password dialog. Ignored if the password dialog is not showing</td>
 </tr>
 <tr>
-<td>`Esc`</td>
+<td><code>Esc</code></td>
 <td>Closes the currently showing built-in dialog if any</td>
 </tr>
 <tr>
-<td>`Home`</td>
+<td><code>Home</code></td>
 <td>Scrolls to the top.</td>
 </tr>
 <tr>
-<td>`End`</td>
+<td><code>End</code></td>
 <td>Scrolls to the bottom.</td>
 </tr>
 <tr>
-<td>`Shift` + `Home`</td>
+<td><code>Shift</code> + <code>Home</code></td>
 <td>Scrolls to the left end</td>
 </tr>
 <tr>
-<td>`Shift` + `End`</td>
+<td><code>Shift</code> + <code>End</code></td>
 <td>Scrolls to the right end</td>
 </tr>
 <tr>
-<td>`Ctrl` + `+`</td>
+<td><code>Ctrl</code> + <code>+</code></td>
 <td>Zooms in</td>
 </tr>
 <tr>
-<td>`Ctrl` + `-`</td>
+<td><code>Ctrl</code> + <code>-</code></td>
 <td>Zooms out</td>
 </tr>
 <tr>
-<td>`Ctrl` + `Page down`</td>
+<td><code>Ctrl</code> + <code>Page down</code></td>
 <td>Goes to next page</td>
 </tr>
 <tr>
-<td>`Ctrl` + `Page up`</td>
+<td><code>Ctrl</code> + <code>Page up</code></td>
 <td>Goes to previous page</td>
 </tr>
 <tr>
-<td>`Ctrl` + `Home`</td>
-<td>Goes to First page</td>
+<td><code>Ctrl</code> + <code>Home</code></td>
+<td>Goes to first page</td>
 </tr>
 <tr>
-<td>`Ctrl` + `End`</td>
-<td>Goes to Last page</td>
+<td><code>Ctrl</code> + <code>End</code></td>
+<td>Goes to last page</td>
 </tr>
 </table>
 

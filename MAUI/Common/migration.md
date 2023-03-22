@@ -267,10 +267,10 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 	</tr>
 	<tr>
 		<td rowspan="1" valign="top">
-			<a href="https://help.syncfusion.com/xamarin/masked-entry/overview">SfMaskedEdit</a><br/>
+			<a href="https://help.syncfusion.com/xamarin/masked-entry/getting-started">SfMaskedEdit</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Volume 1 2023<br/>
+			<a href="https://help.syncfusion.com/maui/masked-entry/getting-started">SfMaskedEntry</a><br/>
 		</td>
 	</tr>
 	<tr>
@@ -278,7 +278,7 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 			<a href="https://help.syncfusion.com/xamarin/popup/getting-started">SfPopUpLayout</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Volume 1 2023<br/>
+			<a href="https://help.syncfusion.com/maui/popup/getting-started">SfPopup</a><br/>
 		</td>
 	</tr>
 	<tr>
@@ -286,7 +286,7 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 			<a href="https://help.syncfusion.com/xamarin/shimmer/getting-started">SfShimmer</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Volume 1 2023<br/>
+			<a href="https://help.syncfusion.com/maui/shimmer/getting-started">SfShimmer</a><br/>
 		</td>
 	</tr>
 	<tr>
