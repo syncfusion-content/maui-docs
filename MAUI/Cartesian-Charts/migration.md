@@ -146,6 +146,18 @@ The following table illustrates the API migration for the chart.
 <th>.NET MAUI</th>
 </tr>
 <tr>
+<td>AutoScrollingDelta</td>
+<td>AutoScrollingDelta</td>
+</tr>
+<tr>
+<td>AutoScrollingMode</td>
+<td>AutoScrollingMode</td>
+</tr>
+<tr>
+<td>AutoScrollingDeltaType</td>
+<td>AutoScrollingDeltaType</td>
+</tr>
+<tr>
 <td>LabelRotationAngle</td>
 <td>LabelRotation</td>
 </tr>
@@ -194,15 +206,7 @@ The following table illustrates the API migration for the chart.
 <td><em>Upcoming</em></td>
 </tr>
 <tr>
-<td>AutoScrollingMode</td>
-<td><em>Upcoming</em></td>
-</tr>
-<tr>
 <td>LabelExtent</td>
-<td><em>Upcoming</em></td>
-</tr>
-<tr>
-<td>AutoScrollingDelta</td>
 <td><em>Upcoming</em></td>
 </tr>
 <tr>
@@ -883,7 +887,6 @@ chart.ZoomPanBehavior = zooming;
 **Chart** 
  
 * Support for crosshair interactions. 
-* Exporting support for a chart as an image or a stream. 
 * Support for chart localization. 
 * Support for annotations. 
 * Suspend and resume notification support. 
@@ -907,7 +910,6 @@ chart.ZoomPanBehavior = zooming;
 * Axis label wrapping support.
 * Support for axis draw labels as multiple lines using /n.
 * Striplines for range base axis.
-* Arrange category axis labels based on series values.
 * Support setting the maximum labels count for the chart axis.
 * Support to extent size between Axis title and axis label.
 
@@ -942,6 +944,7 @@ chart.ZoomPanBehavior = zooming;
 ## Known issue 
 
 * [iOS] [#9135](https://github.com/dotnet/maui/issues/9135) - The chart legend was taking up a huge amount of vertical space or becoming hidden. 
+* The trackball behavior is currently not supported with range and stacked column charts.
 
 ## Unsupported features from Xamarin.Forms
 
