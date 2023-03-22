@@ -31,9 +31,9 @@ To migrate easier from the `Xamarin SfMaskedEdit` to `.NET MAUI SfMaskedEntry`, 
 <th>.NET MAUI SfMaskedEntry</th>
 <th>Description</th></tr>
 <tr>
-<td>Xamarin - {{'[MaskType]'| markdownify }} <br/> .NET MAUI - {{'[MaskedEntryMaskType]'| markdownify }}</td>
-<td> {{'[Text]'| markdownify }},<br/> {{'[RegEx]'| markdownify }}.</td>
-<td> {{'[Simple]'| markdownify }},<br/> {{'[RegEx]'| markdownify }}.</td>
+<td>Xamarin - MaskType <br/> .NET MAUI - MaskedEntryMaskType</td>
+<td> Text,<br/> RegEx.</td>
+<td> Simple,<br/> RegEx.</td>
 <td>Gets or sets the type of mask elements.</td></tr>
 
 </table> 
