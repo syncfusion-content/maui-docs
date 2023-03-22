@@ -153,6 +153,78 @@ public MainPage()
 
 ![Displaying a .NET MAUI Popup with footer customization](/Images/styles/maui-popup-with-footer-customization.png)
 
+## Styling popup message
+
+The SfPopup allows customizing the message appearance using the following properties.
+
+
+<table>
+<tr>
+<th> Property </th>
+<th> Description </th>
+</tr>
+<tr>
+<td> MessageBackground </td>
+<td> Gets or sets the background color of content.</td>
+</tr>
+<tr>
+<td> MessageFontAttribute </td>
+<td> Gets or sets the font attribute to be applied for the content.</td>
+</tr>
+<tr>
+<td> MessageFontFamily </td>
+<td> Gets or sets the font style to be applied for the content.</td>
+</tr>
+<tr>
+<td> MessageFontSize </td>
+<td> Gets or sets the font size of the content.</td>
+</tr>
+<tr>
+<td> MessageTextAlignment </td>
+<td> Gets or sets the text alignment of the content.</td>
+</tr>
+<tr>
+<td> MessageTextColor </td>
+<td> Gets or sets the foreground color of content.</td>
+</tr>
+</table>
+
+Refer to the following code example for customizing the message elements.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 4 5 6 7" %}
+<sfPopup:SfPopup x:Name="popup">
+    <sfPopup:SfPopup.PopupStyle>
+        <sfPopup:PopupStyle MessageBackground="#4F6750A4"
+                            MessageFontAttribute="Bold"
+                            MessageFontFamily="Roboto-Medium"
+                            MessageFontSize="18"
+                            MessageTextAlignment="Center"
+                            MessageTextColor="Gray"/>
+    </sfPopup:SfPopup.PopupStyle>
+</sfPopup:SfPopup>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4 5 6 7 8 9" %}
+public MainPage()
+{
+    InitializeComponent();
+    popup.PopupStyle.MessageBackground = Color.FromArgb("#4F6750A4");
+    popup.PopupStyle.MessageFontAttribute = FontAttributes.Bold;
+    popup.PopupStyle.MessageFontFamily = "Roboto-Medium";
+    popup.PopupStyle.MessageFontSize = 18;
+    popup.PopupStyle.MessageTextAlignment = TextAlignment.Center;
+    popup.PopupStyle.MessageTextColor = Colors.Gray;
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Displaying a .NET MAUI Popup with message customization](/Images/styles/maui-popup-with-message-customization.png))
+
 ## Stroke customization
 
 The SfPopup allows customizing the stroke appearance using the following properties.
@@ -233,6 +305,31 @@ public MainPage()
 
 ![Displaying a .NET MAUI Popup with overlay customization](/Images/styles/maui-popup-with-overlay-customization.png)
 
+### Set overlay opacity
+
+The SfPopup allows you adjust the opacity of the overlay color by setting the color value to "#30FF0000". The first two digits represent opacity in hexadecimal format, while the remaining six digits represent the RGB color.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
+        <sfPopup:SfPopup x:Name="popup">
+            <sfPopup:SfPopup.PopupStyle>
+                    <sfPopup:PopupStyle OverlayColor="#30FF0000" />
+            </sfPopup:Sfpopup.PopupStyle>
+        </sfPopup:SfPopup>
+{% endhighlight %}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3" %}
+public MainPage()
+{
+    InitializeComponent();
+    popup.PopupStyle.OverlayColor = Color.FromArgb("#30FF0000");
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ### Blurred background
 
 The SfPopup allows blurring of the background using the `SfPopup.OverlayMode` and `SfPopup.PopupStyle.BlurIntensity` properties respectively.
@@ -275,8 +372,8 @@ namespace GettingStarted
             InitializeComponent();
             popup = new SfPopup();
             popup.ShowCloseButton = true;
-            popup.OverlayMode = OverlayMode.Blur;
-            popup.PopupStyle.BlurIntensity = BlurIntensity.ExtraDark;
+            popup.OverlayMode = Syncfusion.Maui.Popup.PopupOverlayMode.Blur;
+            popup.PopupStyle.BlurIntensity = Syncfusion.Maui.Popup.PopupBlurIntensity.ExtraDark;
             var layout = new StackLayout();
             var image = new Image() { Source = "Blurred_Background.png", Aspect = Aspect.Fill };
             TapGestureRecognizer tapGestureRecognizer = new TapGestureRecognizer();
@@ -297,4 +394,115 @@ namespace GettingStarted
 
 {% endtabs %}
 
-![Displaying a .NET MAUI Popup with Blurred background](/Images/styles/maui-popup-with-blurred-background.png)
+![Displaying a .NET MAUI Popup with blur](/Images/styles/maui-popup-with-blurred-background.png)
+
+### Set custom blur intensity
+
+The SfPopup allows to customize the blur effect by setting the `SfPopup.PopupStyle.BlurIntensity` property to `PopupBlurIntensity.Custom` and the `SfPopup.PopupStyle.BlurRadius`, which sets the blur effect based on the specified value.
+
+
+{% tabs %}
+
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="13 16" %}
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GettingStarted.MainPage"
+             xmlns:sfPopup="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup">
+    <StackLayout x:Name="layout">
+        <Image Source="Blurred_Background.png" Aspect="Fill" >
+             <Image.GestureRecognizers>
+                 <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+             </Image.GestureRecognizers>
+        </Image>
+        <sfPopup:SfPopup x:Name="popup" 
+                        OverlayMode="Blur" 
+                        ShowCloseButton="True">
+            <sfPopup:SfPopup.PopupStyle>
+                <sfPopup:PopupStyle BlurIntensity="Custom"
+                                    BlurRadius="10" />
+            </sfPopup:SfPopup.PopupStyle>
+        </sfPopup:SfPopup>
+   </StackLayout>
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="12 13" %}
+using Syncfusion.Maui.Popup;
+namespace GettingStarted
+{
+    public partial class MainPage : ContentPage
+    {
+        SfPopup popup;
+        public MainPage()
+        {
+            InitializeComponent();
+            popup = new SfPopup();
+            popup.OverlayMode = OverlayMode.Blur;
+            popup.PopupStyle.BlurIntensity = Syncfusion.Maui.Popup.PopupBlurIntensity.Custom;
+            popup.PopupStyle.BlurRadius = 10;
+            var layout = new StackLayout();
+            var image = new Image() { Source = "Blurred_Background.png", Aspect = Aspect.Fill };
+            TapGestureRecognizer tapGestureRecognizer = new TapGestureRecognizer();
+            tapGestureRecognizer.Tapped += TapGestureRecognizer_Tapped;
+            image.GestureRecognizers.Add(tapGestureRecognizer);
+            layout.Children.Add(image);
+            Content = layout;
+        }
+
+        private void TapGestureRecognizer_Tapped(object sender, System.EventArgs e)
+        {
+            popup.Show();
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Displaying a .NET MAUI Popup with blur radius](/Images/styles/maui-popup-with-blur-radius.png)
+
+### Change the close button icon
+
+You can change the close button icon of the `SfPopup`, please find the code example of the same below.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="16" %}
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:PopupDemo"
+             xmlns:sfPopup="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"
+             x:Class="PopupDemo.MainPage">
+    <StackLayout>
+        <Button x:Name="clickToShowPopup"
+                Text="ClickToShowPopup"
+                VerticalOptions="Start"
+                HorizontalOptions="Center"
+                Clicked="ClickToShowPopup_Clicked" />
+        <sfPopup:SfPopup x:Name="popup"
+                         ShowCloseButton="True">
+            <sfPopup:SfPopup.PopupStyle>
+                <sfPopup:PopupStyle CloseButtonIcon="" />
+            </sfPopup:SfPopup.PopupStyle>
+        </sfPopup:SfPopup>
+    </StackLayout>
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+public MainPage()
+{
+    InitializeComponent();
+    popup.PopupStyle.ShowCloseButtonIcon = "closeicon.png";
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Displaying a .NET MAUI Popup with close button icon](/Images/styles/maui-popup-with-close-button-icon.png)
