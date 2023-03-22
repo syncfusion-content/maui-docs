@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Styles in .NET MAUI Popup control | Syncfusion
-description: Learn here all about Styles support in Syncfusion .NET MAUI Popup (SfPopup) control, its elements and more.
+description: Learn about Styles support in Syncfusion .NET MAUI Popup (SfPopup) control, its elements, and more.
 platform: MAUI
 control: SfPopup
 documentation: ug
@@ -13,7 +13,7 @@ The SfPopup applies style to all of its elements by using the `SfPopup.PopupStyl
 
 ## Styling popup header
 
-The SfPopup allows customizing the header appearance using the below properties.
+The SfPopup allows customizing the header appearance using the following properties.
 
 <table>
 <tr>
@@ -84,7 +84,7 @@ public MainPage()
 
 ## Styling popup footer
 
-The SfPopup allows customizing the footer appearance using the below properties.
+The SfPopup allows customizing the footer appearance using the following properties.
 
 <table>
 <tr>
@@ -235,7 +235,7 @@ public MainPage()
 
 ### Blurred background
 
-The SfPopup allows to blur the background using `SfPopup.OverlayMode` and `SfPopup.PopupStyle.BlurIntensity` properties, respectively.
+The SfPopup allows blurring of the background using the `SfPopup.OverlayMode` and `SfPopup.PopupStyle.BlurIntensity` properties respectively.
 
 {% tabs %}
 
