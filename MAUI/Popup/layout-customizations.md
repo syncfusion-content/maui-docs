@@ -11,7 +11,7 @@ documentation: ug
 
 ## Popup appearance mode for footer
 
-The `SfPopup` supports two types of `SfPopup.AppearanceMode`. By default, the `PopupButtonAppearanceMode.OneButton` is set. You can change the appearance by using the `SfPopup.AppearanceMode` property.
+The `SfPopup` supports two types of `SfPopup.AppearanceMode`. By default, the `PopupButtonAppearanceMode.OneButton` is set. Change the appearance by using the `SfPopup.AppearanceMode` property.
 
 The two different appearance modes in the SfPopup are as follows:
 <table>
@@ -26,7 +26,7 @@ The two different appearance modes in the SfPopup are as follows:
 <td>Shows the `SfPopup` with two buttons (accept & decline buttons) in the footer view.</td></tr>
 </table>
 
-In the following code example, set the `SfPopup.AppearanceMode` property as `OneButton` which displays only the Accept button in the footer view.
+In the following code example, set the `SfPopup.AppearanceMode` property as `OneButton`, which displays only the Accept button in the footer view.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}
@@ -70,7 +70,7 @@ public partial class MainPage : ContentPage
 
 ![.NET MAUI Popup with accept button](Images/layout-customizations/maui-popup-appearance-mode-one-button.png)
 
-In the following code example, set the `SfPopup.AppearanceMode` property as `TwoButton` which displays both Accept button and Decline button in the footer view.
+In the following code example, set the `SfPopup.AppearanceMode` property as `TwoButton`, which displays both Accept and Decline buttons in the footer view.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}
@@ -118,7 +118,7 @@ public partial class MainPage : ContentPage
 
 ### Disable header
 
-You can display the Popup without header by using the property `SfPopup.ShowHeader`. Default value is true. Find the code example of the same below.
+Display the Popup without a header by using the property `SfPopup.ShowHeader`. The default value is true. Find the code example of the same as follows.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}
@@ -163,7 +163,7 @@ public partial class MainPage : ContentPage
 
 ### Enable footer
 
-You can display the Popup with footer by using the property, `SfPopup.ShowFooter`. Default value is false. Find the code example of the same below.
+Display the Popup with the footer by using the `SfPopup.ShowFooter` property. The default value is false. Find the code example of the same as follows.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}
@@ -206,7 +206,7 @@ public partial class MainPage : ContentPage
 
 ## Enable close icon
 
-You can show the Popup with close icon by using the property, `SfPopup.ShowCloseButton`. Default value is false. Find the code example of the same below. 
+Show the Popup with a close icon by using the `SfPopup.ShowCloseButton` property. The default value is false. Find the code example of the same as follows. 
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}
