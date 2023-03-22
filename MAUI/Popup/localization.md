@@ -9,11 +9,11 @@ documentation: ug
 
 # Localization in .NET MAUI Popup (SfPopup)
 
-Localization is the process of translating the application resources into different language for the specific cultures. The `SfPopup` can be localized by adding `resource` file. 
+Localization is the process of translating the application resources into different languages for specific cultures. The `SfPopup` can be localized by adding a `resource` file.
 
 ## Setting CurrentUICulture to the application
 
-Application culture can be changed by setting `CurrentUICulture.` in `App.xaml.cs` file.
+Application culture can be changed by setting the `CurrentUICulture` in the `App.xaml.cs` file.
 
 {% tabs %}
 {% highlight c# tabtitle="App.xaml.cs" hl_lines="1 2 9 13" %}
@@ -43,7 +43,7 @@ The required `resx` files with `Build Action` as `EmbeddedResource` (File name s
 
 ## Localize application level
 
-To localize the `Popup` based on `CurrentUICulture` using `resource` files, follow the below steps.
+To localize the `Popup` based on the `CurrentUICulture` using the `resource` files, follow these steps.
 
    1. Create a new folder named `Resources` in the application.
 
