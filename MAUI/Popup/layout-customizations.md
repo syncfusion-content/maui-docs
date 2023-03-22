@@ -356,6 +356,47 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
+### Popup header title
+
+Change the popup header title using `SfPopup.HeaderTitle` property. Find the code example of the same as follows.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sfPopup="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"
+             x:Class="PopupMauiLayout.MainPage">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Button x:Name="clickToShowPopup" Text="ClickToShowPopup" 
+                    VerticalOptions="Start" HorizontalOptions="Center" 
+                    Clicked="ClickToShowPopup_Clicked" />
+            <sfPopup:SfPopup x:Name="sfPopup" 
+                             HeaderTitle="Header Title">                               
+            </sfPopup:SfPopup>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="8" %}
+using Syncfusion.Maui.Popup;
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        sfPopup.HeaderTitle = "Header Title";
+    }
+
+    private void ClickToShowPopup_Clicked(object sender, EventArgs e)
+    {
+        sfPopup.Show();
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
 ## Customizing popup footer
 
 Any view can be added as the footer content using the `SfPopup.FooterTemplate` property. Refer to the following code example in which a label is added as a footer content.
@@ -465,6 +506,50 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
+### Popup accept and decline buttons text
+
+Change the popup accept and decline buttons text using `SfPopup.AcceptButtonText` and `SfPopup.DeclineButtonText` properties. Find the code example of the same as follows.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sfPopup="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"
+             x:Class="PopupMauiLayout.MainPage">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Button x:Name="clickToShowPopup" Text="ClickToShowPopup" 
+                    VerticalOptions="Start" HorizontalOptions="Center" 
+                    Clicked="ClickToShowPopup_Clicked" />
+            <sfPopup:SfPopup x:Name="sfPopup" ShowFooter="True" AppearanceMode="TwoButton"
+                             AcceptButtonText="Accept Button Text" DeclineButtonText="Decline Button Text">                               
+            </sfPopup:SfPopup>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10 11" %}
+using Syncfusion.Maui.Popup;
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        sfPopup.ShowFooter = true;
+        sfPopup.AppearanceMode = PopupButtonAppearanceMode.TwoButton;
+        sfPopup.AcceptButtonText = "Accept Button Text";
+        sfPopup.DeclineButtonText = "Decline Button Text";
+    }
+
+    private void ClickToShowPopup_Clicked(object sender, EventArgs e)
+    {
+        sfPopup.Show();
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
 ![.NET MAUI Popup with footer template](Images/layout-customizations/maui-popup-footer-template.png)
 
 ## Customizing popup content
@@ -531,4 +616,45 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ![.NET MAUI Popup with content template](Images/layout-customizations/maui-popup-content-template.png)
+
+### Popup message
+
+Change the popup content message using `SfPopup.Message` property. Find the code example of the same as follows.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sfPopup="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"
+             x:Class="PopupMauiLayout.MainPage">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Button x:Name="clickToShowPopup" Text="ClickToShowPopup" 
+                    VerticalOptions="Start" HorizontalOptions="Center" 
+                    Clicked="ClickToShowPopup_Clicked" />
+            <sfPopup:SfPopup x:Name="sfPopup" 
+                             Message="Popup Message">                               
+            </sfPopup:SfPopup>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="8" %}
+using Syncfusion.Maui.Popup;
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();        
+        sfPopup.Message = "Popup Message";
+    }
+
+    private void ClickToShowPopup_Clicked(object sender, EventArgs e)
+    {
+        sfPopup.Show();
+    }
+}
+{% endhighlight %}
+{% endtabs %}
 
