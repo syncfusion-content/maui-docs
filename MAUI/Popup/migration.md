@@ -155,6 +155,8 @@ N> All the properties from Xamarin.Forms PopupView class are moved to MAUI SfPop
 <syncfusion:SfPopup.PopupStyle>
     <syncfusion:PopupStyle OverlayColor="#80000000"/>
 </syncfusion:SfPopup.PopupStyle>
+
+{% endhighlight %}
 {% endtabs %}
 
 </td></tr>
