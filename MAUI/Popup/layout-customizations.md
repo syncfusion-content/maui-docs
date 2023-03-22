@@ -464,6 +464,8 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
+![.NET MAUI Popup with footer template](Images/layout-customizations/maui-popup-footer-template.png)
+
 ### Popup footer height
 
 Customize the popup footer height using `SfPopup.FooterHeight` property. Find the code example of the same as follows.
@@ -549,8 +551,6 @@ public partial class MainPage : ContentPage
 }
 {% endhighlight %}
 {% endtabs %}
-
-![.NET MAUI Popup with footer template](Images/layout-customizations/maui-popup-footer-template.png)
 
 ## Customizing popup content
 
