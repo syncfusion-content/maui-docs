@@ -81,8 +81,8 @@ public partial class MainPage : ContentPage
     {
         // Below code ensures that the popup doesn't collapse when user interacts outside the popup.
         sfPopup.StaysOpen = true;
-		sfPopup.ShowCloseButton = true;
-		sfPopup.IsOpen = true;
+        sfPopup.ShowCloseButton = true;
+        sfPopup.IsOpen = true;
     }
 }
 {% endhighlight %}
