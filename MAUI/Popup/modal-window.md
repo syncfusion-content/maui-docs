@@ -18,7 +18,7 @@ Modal does not require any action to open. It opens in the same window and gives
 Refer to the following code example in which the popup will close only if you click on Close icon.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}
+{% highlight xaml tabtitle="XAML" hl_lines="11 13" %}
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sfPopup="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"
@@ -29,17 +29,18 @@ Refer to the following code example in which the popup will close only if you cl
                 VerticalOptions="Start" HorizontalOptions="Center" 
                 Clicked="ClickToShowPopup_Clicked" />
         <sfPopup:SfPopup x:Name="sfPopup"     
-                        StaysOpen="True"
-                        HeaderTitle="Modal Window"
-                        ShowCloseButton="True"
-                        WidthRequest="312"
-                        HeightRequest="180"
-                        HeaderHeight="72">
+                         StaysOpen="True"
+                         HeaderTitle="Modal Window"
+                         ShowCloseButton="True"
+                         WidthRequest="312"
+                         HeightRequest="180"
+                         HeaderHeight="72">
             <sfPopup:SfPopup.ContentTemplate>
                 <DataTemplate>
                     <Label Text="A modal window disables the parent window while the user interacts with the child (modal) window before they return to the parent application."
                             LineBreakMode="WordWrap" LineHeight="1.2"
-                            TextColor="#49454E" FontSize="14" FontFamily="Roboto"/>
+                            TextColor="#49454E" FontSize="14" 
+                            FontFamily="Roboto"/>
                 </DataTemplate>
             </sfPopup:SfPopup.ContentTemplate>
         </sfPopup:SfPopup>
@@ -47,17 +48,21 @@ Refer to the following code example in which the popup will close only if you cl
   </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="34" %}
+{% highlight c# tabtitle="C#" hl_lines="13 14" %}
 using Syncfusion.Maui.Popup;
 
 public partial class MainPage : ContentPage
 {
+    SfPopup sfPopup;
     DataTemplate contentTemplateView;
     Label popupContent;
     public MainPage()
     {
         InitializeComponent(); 
         clickToShowPopup.Clicked += ClickToShowPopup_Clicked;
+        sfPopup = new SfPopup();
+        sfPopup.StaysOpen = true;
+        sfPopup.ShowCloseButton = true;
         sfPopup.HeaderTitle = "Modal Window";
         sfPopup.WidthRequest = 312;
         sfPopup.HeightRequest = 180;
@@ -75,15 +80,16 @@ public partial class MainPage : ContentPage
         });
 
         sfPopup.ContentTemplate = contentTemplateView;
-    }
+    }    
+}
+{% endhighlight %}
+{% endtabs %}
 
-    private void ClickToShowPopup_Clicked(object sender, EventArgs e)
-    {
-        // Below code ensures that the popup doesn't collapse when user interacts outside the popup.
-        sfPopup.StaysOpen = true;
-        sfPopup.ShowCloseButton = true;
-        sfPopup.IsOpen = true;
-    }
+{% tabs %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+private void ClickToShowPopup_Clicked(object sender, EventArgs e)
+{
+    sfPopup.IsOpen = true;
 }
 {% endhighlight %}
 {% endtabs %}
