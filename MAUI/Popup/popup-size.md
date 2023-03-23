@@ -38,8 +38,7 @@ In the following code snippet the Popup is loaded in 320x320 pixels, where width
                         ScrollBarVisibility="Never" 
                         ItemSpacing="5"
                         WidthRequest="320" 
-                        ItemsSource="{Binding contactsinfo}" 
-                          >
+                        ItemsSource="{Binding contactsinfo}">
                           .......
                         </listView:SfListView>
                     </DataTemplate>
@@ -51,11 +50,9 @@ In the following code snippet the Popup is loaded in 320x320 pixels, where width
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="17 27" %}
-
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="14 24" %}
 using Syncfusion.Maui.ListView;
 using Syncfusion.Maui.Popup;
-
 namespace PopupMaui
 {
     public partial class MainPage : ContentPage
@@ -63,7 +60,6 @@ namespace PopupMaui
          SfListView listView;
         ContactsViewModel viewModel;
         SfPopup popup;
-
         public MainPage()
         {
             InitializeComponent();
@@ -119,8 +115,7 @@ Refer to the following code example to open the popup in full screen.
              x:Class="PopupMaui.FullScreenPage"
              xmlns:local="clr-namespace:PopupMaui"
              xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-             xmlns:popup="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"
-             >
+             xmlns:popup="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup">
     <ContentPage.Content>
         <StackLayout Padding="20">
             <Button x:Name="show" Text="Show Popup" Clicked="show_Clicked"/>
@@ -143,9 +138,8 @@ Refer to the following code example to open the popup in full screen.
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs"  hl_lines="15 16 19" %}
+{% highlight c# tabtitle="MainPage.xaml.cs"  hl_lines="14 15 18" %}
 using Syncfusion.Maui.Popup;
-
 namespace PopupMaui
 {
     public partial class MainPage : ContentPage
@@ -181,9 +175,8 @@ In the following code sample, the Popup is auto-sized in the height based on the
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml"  hl_lines="11"%}
-
-    <?xml version="1.0" encoding="utf-8" ?>
+{% highlight xaml tabtitle="MainPage.xaml"  hl_lines="10"%}
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PopupMaui.AutoSizePage"
@@ -192,15 +185,13 @@ In the following code sample, the Popup is auto-sized in the height based on the
         <StackLayout Padding="20">
             <Button x:Name="show" Text="Show" WidthRequest="300" ShowFooter="True" Clicked="show_Clicked"/>
             <popup:SfPopup x:Name="popup" 
-            AutoSizeMode="Height"
-            >
+            AutoSizeMode="Height">
                 <popup:SfPopup.ContentTemplate>
                     <DataTemplate>
                         <StackLayout Padding="5,5,5,0">
                             <Label Text="Window loads under the parent window surrounded by an overlay which prevents clicking anywhere else on the screen apart from the control of the modal. Modal opens in the same window. It also does not require any user action to open, and give callbacks when closing or opening the modal."
                                    FontSize="14"
-                            LineBreakMode="WordWrap"
-                           />
+                            LineBreakMode="WordWrap"/>
                         </StackLayout>
                     </DataTemplate>
                 </popup:SfPopup.ContentTemplate>
@@ -210,10 +201,8 @@ In the following code sample, the Popup is auto-sized in the height based on the
 </ContentPage>
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs"  hl_lines="2" %}
-
+{% highlight c# tabtitle="MainPage.xaml.cs"  hl_lines="1" %}
 popup.AutoSizeMode = PopupAutoSizeMode.Height;
-
 {% endhighlight %}
 
 {% endtabs %}
