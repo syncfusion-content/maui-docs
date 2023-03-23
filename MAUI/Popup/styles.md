@@ -507,7 +507,7 @@ public MainPage()
 
 ### Set Shadow to Popup
 
-You can customize the shadow of the popup view using SfPopup. Refer to the code example below for reference.
+The SfPopup allows you to add a shadow effect to the popup view. Refer to the code example below for reference.
 
 {% tabs %}
 
