@@ -397,8 +397,7 @@ namespace GettingStarted
 
 ### Set custom blur intensity
 
-The SfPopup allows to customize the blur effect by setting the `SfPopup.PopupStyle.BlurIntensity` property to `PopupBlurIntensity.Custom` and the `SfPopup.PopupStyle.BlurRadius`, which sets the blur effect based on the specified value.
-
+The SfPopup allows customization of the blur effect by setting the `SfPopup.PopupStyle.BlurIntensity` property to `PopupBlurIntensity.Custom` and the `SfPopup.PopupStyle.BlurRadius`, which adjusts the blur effect according to the specified value.
 
 {% tabs %}
 
@@ -508,7 +507,7 @@ public MainPage()
 
 ### Set Shadow to Popup
 
-The SfPopup allows you to set the shadow to the popupview, please find the code example of the same below.
+You can customize the shadow of the popup view using SfPopup. Refer to the code example below for reference.
 
 {% tabs %}
 
