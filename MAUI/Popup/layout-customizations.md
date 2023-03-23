@@ -658,3 +658,200 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
+## Disable Popup overlay
+
+Disable the popup overlay using `SfPopup.ShowOverlayAlways` property. The default value is true. Find the code example of the same as follows.
+
+{% tabs %}
+{% highlight xaml tabtitle="XAML" hl_lines="11" %}
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"           
+             xmlns:sfPopup="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"             
+             x:Class="PopupMauiPositioning.MainPage">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Button x:Name="clickToShowPopup" Text="ClickToShowPopup"                     
+                    HorizontalOptions="Center" 
+                    Clicked="ClickToShowPopup_Clicked" />
+            <sfPopup:SfPopup x:Name="sfPopup" 
+                             ShowOverlayAlways="False">
+            </sfPopup:SfPopup>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+{% endhighlight %}
+{% highlight c# tabtitle="C#" hl_lines="9" %}
+using Syncfusion.Maui.Popup;
+public partial class ShowOverlayAlways : ContentPage
+{
+	SfPopup sfPopup;
+	public ShowOverlayAlways()
+	{	
+		InitializeComponent();
+        sfPopup = new SfPopup();
+        sfPopup.ShowOverlayAlways = false;
+	}
+}
+{% endhighlight %}
+{% endtabs %}
+
+## How to
+
+### Show ListView as a popup
+
+The `SfPopup` allows loading the `SfListView` as a content of the popup.
+
+{% tabs %}
+{% highlight xaml tabtitle="XAML" %}
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sfListView="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
+             xmlns:sfPopup="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"
+             xmlns:local="clr-namespace:PopupMauiPositioning"
+             x:Class="PopupMauiPositioning.MainPage">
+    <ContentPage.BindingContext>
+        <local:ContactsViewModel x:Name="viewModel"/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Button Text="Click to show popup" 
+                    Clicked="OpenButton_Clicked"
+                    HorizontalOptions="Center" VerticalOptions="Start"/>
+            <sfPopup:SfPopup x:Name="sfPopup" 
+                             HeaderTitle="ListView"
+                             ShowFooter="True"
+                             HeightRequest="300" WidthRequest="300">
+                <sfPopup:SfPopup.ContentTemplate>
+                    <DataTemplate>
+                        <sfListView:SfListView x:Name="listView" ItemSize="46"
+                                               ItemsSource="{Binding Items}">
+                            <sfListView:SfListView.ItemTemplate>
+                                <DataTemplate>                                
+                                    <Grid x:Name="grid">                                           
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="46" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Image Source="{Binding ContactImage}"
+                                               VerticalOptions="Center"
+                                               HorizontalOptions="Center"
+                                               HeightRequest="30"
+                                               WidthRequest="30"/>
+                                        <Label Grid.Column="1"
+                                               VerticalTextAlignment="Center"
+                                               LineBreakMode="NoWrap"
+                                               Text="{Binding ContactName}" 
+                                               FontSize="14" FontFamily="Roboto"/>
+                                        <Image Grid.Column="2" 
+                                               Source="{Binding ContactType}"
+                                               VerticalOptions="Center"
+                                               HorizontalOptions="End"
+                                               HeightRequest="15"
+                                               WidthRequest="15" Margin="0,0,8,0"/>
+                                    </Grid>                                   
+                                </DataTemplate>
+                            </sfListView:SfListView.ItemTemplate>
+                        </sfListView:SfListView>
+                    </DataTemplate>
+                </sfPopup:SfPopup.ContentTemplate>
+            </sfPopup:SfPopup>
+        </StackLayout>
+    </ContentPage.Content> 
+</ContentPage>
+{% endhighlight %}
+{% highlight c# tabtitle="C#" %} 
+namespace PopupMauiPositioning;
+using Syncfusion.Maui.ListView;
+using Syncfusion.Maui.Popup;
+
+public partial class MainPage : ContentPage
+{
+    SfListView listView;
+    ContactsViewModel viewModel;
+    SfPopup sfPopup;
+
+    public MainPage()
+    {
+        InitializeComponent();
+        listView = new SfListView();        
+        listView.ItemTemplate = new DataTemplate(() =>
+        {            
+            var grid = new Grid();
+            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = 46 });
+            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = GridLength.Star });
+            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = GridLength.Star });
+            var contactImage = new Image()
+            {
+                VerticalOptions = LayoutOptions.Center,
+                HorizontalOptions = LayoutOptions.Center,
+                HeightRequest = 30,
+                WidthRequest = 30
+            };
+            contactImage.SetBinding(Image.SourceProperty, new Binding("ContactImage"));
+            var contactName = new Label()
+            {
+                VerticalTextAlignment = TextAlignment.Center,
+                LineBreakMode = LineBreakMode.NoWrap,
+                FontSize = 14
+            };
+            contactName.SetBinding(Label.TextProperty, new Binding("ContactName"));
+            var contactType = new Image()
+            {
+                VerticalOptions = LayoutOptions.Center,
+                HorizontalOptions = LayoutOptions.End,
+                HeightRequest = 15,
+                WidthRequest = 15,
+                Margin = new Thickness(0, 0, 8, 0)
+            };
+            contactType.SetBinding(Image.SourceProperty, new Binding("ContactType"));
+            grid.Children.Add(contactImage);
+            Grid.SetColumn(contactImage, 0);
+            Grid.SetRow(contactImage, 0);
+            grid.Children.Add(contactName);
+            Grid.SetColumn(contactName, 1);
+            Grid.SetRow(contactName, 0);
+            grid.Children.Add(contactType);
+            Grid.SetColumn(contactType, 2);
+            Grid.SetRow(contactType, 0);           
+            return grid;
+        });
+        viewModel = new ContactsViewModel();
+        listView.ItemsSource = viewModel.Items;
+        listView.ItemSize = 46;
+        sfPopup = new SfPopup();
+        sfPopup.HeaderTitle = "ListView";
+        sfPopup.ShowFooter = true;
+        sfPopup.HeightRequest = 300;
+        sfPopup.WidthRequest = 300;
+        sfPopup.ContentTemplate = new DataTemplate(() =>
+        {
+            return listView;
+        });
+        StackLayout stackLayout = new StackLayout() { Padding = 20};
+        Button OpenButton = new Button();
+        OpenButton.HorizontalOptions = LayoutOptions.Center;
+        OpenButton.Clicked += OpenButton_Clicked;
+        OpenButton.Text = "Click to show popup";
+        stackLayout.Children.Add(OpenButton); 
+        this.Content = stackLayout;
+    }  
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+private void OpenButton_Clicked(object sender, EventArgs e)
+{
+    sfPopup.Show();
+}
+{% endhighlight %}
+{% endtabs %}
+
+![ListView in a .NET MAUI Popup](Images/layout-customizations/maui-popup-with-listview-in-content-template.png)
+
+Download the entire source code from GitHub [here]().
+
+
+

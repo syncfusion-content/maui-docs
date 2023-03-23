@@ -265,3 +265,299 @@ public class ViewModel : INotifyPropertyChanged
 {% endtabs %}
 
 ![Displaying a .NET MAUI Popup at Relative position using MVVM.](Images/popup-positioning/maui-popup-relative-positioning-in-mvvm.png)
+
+## How to
+
+### Load the SfPopup in CellTappedEvent of the SfDataGrid
+
+The `SfPopup` allows opening it in the `CellTapped` event of the `SfDataGrid`.
+
+{% tabs %}
+{% highlight xaml tabtitle="XAML" hl_lines="14" %}
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sfDatagrid="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
+             xmlns:sfPopup="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"
+             xmlns:local="clr-namespace:PopupMauiPositioning"
+             x:Class="PopupMauiPositioning.MainPage">
+  <ContentPage.BindingContext>
+    <local:ViewModel x:Name="viewModel" />
+  </ContentPage.BindingContext>  
+  <ContentPage.Content>
+    <Grid>
+      <sfDatagrid:SfDataGrid x:Name="dataGrid"
+                             ItemsSource="{Binding OrdersInfo}"
+                             CellTapped="DataGrid_CellTapped"    
+                             ColumnWidthMode="Fill">
+      </sfDatagrid:SfDataGrid>
+      <sfPopup:SfPopup x:Name="sfPopup" 
+                       HeaderTitle="Popup" 
+                       AutoSizeMode="Height"
+                       ShowCloseButton="True">
+        <sfPopup:SfPopup.ContentTemplate>
+          <DataTemplate>
+            <Label Text="A pop-up is a graphical user interface display area that suddenly appears in the foreground of the visual interface. Pop-up can be initiated by single or double tap or can simply be timed to occur. A pop-up window should be smaller than the background window or interface; otherwise, its a replacement interface."                               
+                   TextColor="Black" 
+                   FontSize="14" 
+                   FontFamily="Roboto" 
+                   Padding="0,0,0,24" />
+          </DataTemplate>
+        </sfPopup:SfPopup.ContentTemplate>
+      </sfPopup:SfPopup>
+    </Grid>
+  </ContentPage.Content> 
+</ContentPage>
+{% endhighlight %}
+{% highlight c# tabtitle="C#" hl_lines="17" %} 
+namespace PopupMauiPositioning;
+using Syncfusion.Maui.DataGrid;
+using Syncfusion.Maui.Popup;
+
+public partial class MainPage : ContentPage
+{
+  SfDataGrid dataGrid;
+  ViewModel viewModel;
+  SfPopup sfPopup;
+
+  public MainPage()
+  {
+    InitializeComponent();
+    dataGrid = new SfDataGrid();
+    viewModel = new ViewModel();
+    dataGrid.ItemsSource = viewModel.OrdersInfo;
+    dataGrid.CellTapped += DataGrid_CellTapped;
+    dataGrid.ColumnWidthMode = ColumnWidthMode.Fill;
+
+    sfPopup = new SfPopup();
+    sfPopup.HeaderTitle = "Popup";
+    sfPopup.ShowCloseButton = true;
+    sfPopup.AutoSizeMode = PopupAutoSizeMode.Height;
+    sfPopup.ContentTemplate = new DataTemplate(() =>
+    {
+        var label = new Label();
+        label.Text = "A pop-up is a graphical user interface display area that suddenly appears in the foreground of the visual interface. Pop-up can be initiated by single or double tap or can simply be timed to occur. A pop-up window should be smaller than the background window or interface; otherwise, its a replacement interface.";
+        label.TextColor = Colors.Black;
+        label.FontSize = 14;
+        label.FontFamily = "Roboto";
+        label.Padding = new Thickness(0, 0, 0, 24);
+        return label;
+    });
+    this.Content = dataGrid;
+  }  
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+private void DataGrid_CellTapped(object sender, Syncfusion.Maui.DataGrid.DataGridCellTappedEventArgs e)
+{
+  sfPopup.Show();
+}
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI Popup with DataGrid ](Images/popup-positioning/show-maui-popup-when-grid-cell-tap.png)
+
+Download the entire source code from GitHub [here]().
+
+### Open SfPopup in ItemTapped event of SfListView
+
+The `SfPopup` allows opening it in the `ItemTapped` event of the `SfListView`.
+
+{% tabs %}
+{% highlight xaml tabtitle="XAML" hl_lines="15" %}
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sfListView="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
+             xmlns:sfPopup="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"
+             xmlns:local="clr-namespace:PopupMauiPositioning"
+             x:Class="PopupMauiPositioning.MainPage">
+  <ContentPage.BindingContext>
+    <local:ViewModel x:Name="viewModel" />
+  </ContentPage.BindingContext>  
+  <ContentPage.Content>
+    <Grid>
+      <sfListView:SfListView x:Name="listView" ItemSize="56"
+                             ItemsSource="{Binding Items}" 
+                             SelectionMode="None"
+                             ItemTapped="ListView_ItemTapped">
+        <sfListView:SfListView.ItemTemplate>
+          <DataTemplate>
+            <Grid x:Name="grid">
+              <Grid.RowDefinitions>
+                  <RowDefinition Height="*" />
+                  <RowDefinition Height="1"/>
+              </Grid.RowDefinitions>
+              <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="56" />
+                  <ColumnDefinition Width="*" />
+                  <ColumnDefinition Width="*" />
+              </Grid.ColumnDefinitions>
+              <Image Source="{Binding ContactImage}"
+                     VerticalOptions="Center"
+                     HorizontalOptions="Center"
+                     HeightRequest="40"
+                     WidthRequest="40"/>
+              <Label Grid.Column="1"
+                     VerticalTextAlignment="Center"
+                     LineBreakMode="NoWrap"
+                     Text="{Binding ContactName}" 
+                     FontSize="14" />
+              <Image Grid.Column="2"
+                     Source="{Binding ContactType}"
+                     VerticalOptions="Center"
+                     HorizontalOptions="End"
+                     HeightRequest="20"
+                     WidthRequest="20" Margin="0,0,8,0"/>
+              <StackLayout BackgroundColor="LightGray" 
+                           HeightRequest="1" 
+                           Grid.Row="1" Grid.ColumnSpan="3"/>
+            </Grid>
+          </DataTemplate>
+        </sfListView:SfListView.ItemTemplate>
+      </sfListView:SfListView>
+      <sfPopup:SfPopup x:Name="sfPopup" 
+                       WidthRequest="220" HeightRequest="120"
+                       ShowCloseButton="True">
+        <sfPopup:SfPopup.ContentTemplate>
+          <DataTemplate>
+            <Label Text="ListView item is tapped"                           
+                   TextColor="Black"
+                   FontSize="14"
+                   FontFamily="Roboto"/>
+          </DataTemplate>
+        </sfPopup:SfPopup.ContentTemplate>
+      </sfPopup:SfPopup>
+    </Grid>
+  </ContentPage.Content> 
+</ContentPage>
+{% endhighlight %}
+{% highlight c# tabtitle="C#" hl_lines="17" %} 
+namespace PopupMauiPositioning;
+using Syncfusion.Maui.ListView;
+using Syncfusion.Maui.Popup;
+
+public partial class MainPage : ContentPage
+{
+  SfListView listView;
+  ContactsViewModel viewModel;
+  SfPopup sfPopup;
+
+  public MainPage()
+  {
+    InitializeComponent();  
+    listView = new SfListView();
+    listView.ItemTemplate = new DataTemplate(() =>
+    {            
+      var grid = new Grid();
+      grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = 56 });
+      grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = GridLength.Star });
+      grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = GridLength.Star });
+      grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Star });
+      grid.RowDefinitions.Add(new RowDefinition() { Height = 1 });
+      
+      var contactImage = new Image()
+      {
+          VerticalOptions = LayoutOptions.Center,
+          HorizontalOptions = LayoutOptions.Center,
+          HeightRequest = 40,
+          WidthRequest = 40
+      };
+      contactImage.SetBinding(Image.SourceProperty, new Binding("ContactImage"));
+      var contactName = new Label()
+      {
+          VerticalTextAlignment = TextAlignment.Center,
+          LineBreakMode = LineBreakMode.NoWrap,
+          FontSize = 14
+      };
+      contactName.SetBinding(Label.TextProperty, new Binding("ContactName"));
+      var contactType = new Image()
+      {
+          VerticalOptions = LayoutOptions.Center,
+          HorizontalOptions = LayoutOptions.End,
+          HeightRequest = 20,
+          WidthRequest = 20,
+          Margin = new Thickness(0, 0, 8, 0)
+      };
+      contactType.SetBinding(Image.SourceProperty, new Binding("ContactType"));
+      var stackLayout = new StackLayout()
+      {
+          BackgroundColor = Colors.LightGray,
+          HeightRequest = 1,                
+      };      
+      grid.Children.Add(contactImage);
+      Grid.SetColumn(contactImage, 0);
+      Grid.SetRow(contactImage, 0);
+      grid.Children.Add(contactName);
+      Grid.SetColumn(contactName, 1);
+      Grid.SetRow(contactName, 0);
+      grid.Children.Add(contactType);
+      Grid.SetColumn(contactType, 2);
+      Grid.SetRow(contactType, 0);
+      grid.Children.Add(stackLayout);
+      Grid.SetColumn(stackLayout, 0);
+      Grid.SetRow(stackLayout, 1);
+      Grid.SetColumnSpan(stackLayout, 3);
+      return grid;
+    });
+    viewModel = new ContactsViewModel();
+    listView.ItemsSource = viewModel.Items;
+    listView.ItemSize = 56;
+    listView.SelectionMode = Syncfusion.Maui.ListView.SelectionMode.None;
+    listView.ItemTapped += ListView_ItemTapped;
+    sfPopup = new SfPopup();
+    sfPopup.WidthRequest = 220;
+    sfPopup.HeightRequest = 120; ;
+    sfPopup.ShowCloseButton = true;
+    sfPopup.ContentTemplate = new DataTemplate(() =>
+    {
+      return new Label()
+      {
+        Text = "ListView item is tapped",
+        FontSize = 14,
+        TextColor = Colors.Black,
+        FontFamily = "Roboto"
+      };
+    });        
+    this.Content = listView;  
+  }  
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+private void ListView_ItemTapped(object sender, Syncfusion.Maui.ListView.ItemTappedEventArgs e)
+{
+  sfPopup.Show();
+}
+{% endhighlight %}
+{% endtabs %}
+
+![ListView with .NET MAUI Popup](Images/popup-positioning/show-maui-popup-when-listview-item-tap.png)
+
+Download the entire source code from GitHub [here]().
+
+### Display popup when interacting with a switch
+
+`SfPopup.IsOpen` is a bindable property and hence can be binded to any property and based on its value the popup will open or close. In the below code example, we have binded the `IsOpen` property with the `IsToggled` property of the the switch and the popup will be opened or closed as the switch toggles.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="15" %}
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"             
+             xmlns:sfPopup="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"            
+             x:Class="PopupMauiPositioning.MainPage">
+  <ContentPage.Content>
+    <StackLayout Padding="20">
+      <Switch x:Name="popupSwitch" 
+              IsToggled="False" 
+              VerticalOptions="Start" HorizontalOptions="Center"/>
+      <sfPopup:SfPopup x:Name="sfPopup"
+                       IsOpen="{Binding Source={x:Reference popupSwitch},Path=IsToggled}"/>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>
+{% endhighlight %}
+{% endtabs %}
