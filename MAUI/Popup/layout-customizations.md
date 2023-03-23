@@ -19,11 +19,11 @@ The two different appearance modes in the SfPopup are as follows:
 <th>Modes</th>
 <th>Description</th></tr>
 <tr>
-<td>`OneButton`</td>
-<td>Shows the `SfPopup` with one button (accept button) in the footer view. This is the default value.</td></tr>
+<td>OneButton</td>
+<td>Shows the <code>SfPopup</code> with one button (accept button) in the footer view. This is the default value.</td></tr>
 <tr>
-<td>`TwoButton`</td>
-<td>Shows the `SfPopup` with two buttons (accept & decline buttons) in the footer view.</td></tr>
+<td>TwoButton</td>
+<td>Shows the <code>SfPopup</code> with two buttons (accept & decline buttons) in the footer view.</td></tr>
 </table>
 
 In the following code example, set the `SfPopup.AppearanceMode` property as `OneButton`, which displays only the Accept button in the footer view.
