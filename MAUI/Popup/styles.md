@@ -270,7 +270,7 @@ Refer to the following code example for customizing the stroke elements.
 <sfPopup:SfPopup x:Name="popup">
     <sfPopup:SfPopup.PopupStyle>
         <sfPopup:PopupStyle Stroke="LightBlue"
-                            StrokeThickness="3"
+                            StrokeThickness="10"
                             CornerRadius="5" />
     </sfPopup:SfPopup.PopupStyle>
 <sfPopup:SfPopup>
@@ -286,7 +286,7 @@ public partial class MainPage : ContentPage
         InitializeComponent();
         popup = new SfPopup();
         popup.PopupStyle.Stroke = Colors.LightBlue;
-        popup.PopupStyle.StrokeThickness = 3;
+        popup.PopupStyle.StrokeThickness = 10;
         popup.PopupStyle.CornerRadius = 5;
     }
 }
