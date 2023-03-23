@@ -50,7 +50,7 @@ Refer to the following code example for customizing the header elements.
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines=" 3 4 5 6 7 8" %}
+{% highlight xaml hl_lines="3 4 5 6 7 8" %}
 <sfPopup:SfPopup x:Name="popup" >
     <sfPopup:SfPopup.PopupStyle>
         <sfPopup:PopupStyle HeaderBackground="DimGray"
@@ -64,16 +64,21 @@ Refer to the following code example for customizing the header elements.
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines=" 4 5 6 7 8 9" %}
-public MainPage()
+{% highlight C# hl_lines="8 9 10 11 12 13" %}
+public partial class MainPage : ContentPage
 {
-    InitializeComponent();
-    popup.PopupStyle.HeaderBackground = Color.FromRgb(105,105,105);
-    popup.PopupStyle.HeaderFontAttribute = FontAttributes.Bold;
-    popup.PopupStyle.HeaderFontFamily = "Roboto-Medium";
-    popup.PopupStyle.HeaderFontSize = 25;
-    popup.PopupStyle.HeaderTextAlignment = TextAlignment.Center;
-    popup.PopupStyle.HeaderTextColor = Color.White;
+    SfPopup popup;
+    public MainPage()
+    {
+        InitializeComponent();
+        popup = new SfPopup();
+        popup.PopupStyle.HeaderBackground = Color.FromRgb(105,105,105);
+        popup.PopupStyle.HeaderFontAttribute = FontAttributes.Bold;
+        popup.PopupStyle.HeaderFontFamily = "Roboto-Medium";
+        popup.PopupStyle.HeaderFontSize = 25;
+        popup.PopupStyle.HeaderTextAlignment = TextAlignment.Center;
+        popup.PopupStyle.HeaderTextColor = Color.White;
+    }
 }
 
 {% endhighlight %}
@@ -117,7 +122,7 @@ Refer to the following code example for customizing the footer elements.
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines=" 3 4 5 6 7" %}
+{% highlight xaml hl_lines=" 3 4 5 6 7" %}
 <sfPopup:SfPopup x:Name="popup" AppearanceMode="TwoButton" ShowFooter="True" >
     <sfPopup:SfPopup.PopupStyle>
         <sfPopup:PopupStyle FooterBackground="LightGray"
@@ -130,21 +135,26 @@ Refer to the following code example for customizing the footer elements.
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10 11 12 13 14" %}
-public MainPage()
+{% highlight C# hl_lines="14 15 16 17 18" %}
+public partial class MainPage : ContentPage
 {
-    InitializeComponent();
+    SfPopup popup;
+    public MainPage()
+    {
+        InitializeComponent();
+        popup = new SfPopup();
 
-    // Setting the AppearanceMode as TwoButton
-    popup.ShowFooter = true;
-    popup.AppearanceMode = Syncfusion.Maui.Popup.PopupButtonAppearanceMode.TwoButton;
+        // Setting the AppearanceMode as TwoButton
+        popup.ShowFooter = true;
+        popup.AppearanceMode = Syncfusion.Maui.Popup.PopupButtonAppearanceMode.TwoButton;
 
-    // Footer customization
-    popup.PopupStyle.FooterBackground = Color.LightGray;
-    popup.PopupStyle.AcceptButtonBackground = Color.FromRgb(105, 105, 105);
-    popup.PopupStyle.AcceptButtonTextColor = Color.White;
-    popup.PopupStyle.DeclineButtonBackground = Color.FromRgb(105, 105, 105);
-    popup.PopupStyle.DeclineButtonTextColor = Color.White;
+        // Footer customization
+        popup.PopupStyle.FooterBackground = Color.LightGray;
+        popup.PopupStyle.AcceptButtonBackground = Color.FromRgb(105, 105, 105);
+        popup.PopupStyle.AcceptButtonTextColor = Color.White;
+        popup.PopupStyle.DeclineButtonBackground = Color.FromRgb(105, 105, 105);
+        popup.PopupStyle.DeclineButtonTextColor = Color.White;
+    }
 }
 
 {% endhighlight %}
@@ -192,7 +202,7 @@ Refer to the following code example for customizing the message elements.
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 4 5 6 7" %}
+{% highlight xaml hl_lines="3 4 5 6 7" %}
 <sfPopup:SfPopup x:Name="popup">
     <sfPopup:SfPopup.PopupStyle>
         <sfPopup:PopupStyle MessageBackground="#4F6750A4"
@@ -206,16 +216,21 @@ Refer to the following code example for customizing the message elements.
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4 5 6 7 8 9" %}
-public MainPage()
+{% highlight C# hl_lines="8 9 10 11 12 13" %}
+public partial class MainPage : ContentPage
 {
-    InitializeComponent();
-    popup.PopupStyle.MessageBackground = Color.FromArgb("#4F6750A4");
-    popup.PopupStyle.MessageFontAttribute = FontAttributes.Bold;
-    popup.PopupStyle.MessageFontFamily = "Roboto-Medium";
-    popup.PopupStyle.MessageFontSize = 18;
-    popup.PopupStyle.MessageTextAlignment = TextAlignment.Center;
-    popup.PopupStyle.MessageTextColor = Colors.Gray;
+    SfPopup popup;
+    public MainPage()
+    {
+        InitializeComponent();
+        popup = new SfPopup();
+        popup.PopupStyle.MessageBackground = Color.FromArgb("#4F6750A4");
+        popup.PopupStyle.MessageFontAttribute = FontAttributes.Bold;
+        popup.PopupStyle.MessageFontFamily = "Roboto-Medium";
+        popup.PopupStyle.MessageFontSize = 18;
+        popup.PopupStyle.MessageTextAlignment = TextAlignment.Center;
+        popup.PopupStyle.MessageTextColor = Colors.Gray;
+    }
 }
 
 {% endhighlight %}
@@ -251,7 +266,7 @@ Refer to the following code example for customizing the stroke elements.
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 4 5" %}
+{% highlight xaml hl_lines="3 4 5" %}
 <sfPopup:SfPopup x:Name="popup">
     <sfPopup:SfPopup.PopupStyle>
         <sfPopup:PopupStyle Stroke="LightBlue"
@@ -262,13 +277,18 @@ Refer to the following code example for customizing the stroke elements.
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4 5 6" %}
-public MainPage()
+{% highlight C# hl_lines="8 9 10" %}
+public partial class MainPage : ContentPage
 {
-    InitializeComponent();
-    popup.PopupStyle.Stroke = Colors.LightBlue;
-    popup.PopupStyle.StrokeThickness = 3;
-    popup.PopupStyle.CornerRadius = 5;
+    SfPopup popup;
+    public MainPage()
+    {
+        InitializeComponent();
+        popup = new SfPopup();
+        popup.PopupStyle.Stroke = Colors.LightBlue;
+        popup.PopupStyle.StrokeThickness = 3;
+        popup.PopupStyle.CornerRadius = 5;
+    }
 }
 
 {% endhighlight %}
@@ -283,7 +303,7 @@ The SfPopup allows to customize the background color of overlay using the `SfPop
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
+{% highlight xaml hl_lines="3" %}
         <sfPopup:SfPopup x:Name="popup">
             <sfPopup:SfPopup.PopupStyle>
                     <sfPopup:PopupStyle OverlayColor="LightPink" />
@@ -291,11 +311,16 @@ The SfPopup allows to customize the background color of overlay using the `SfPop
         </sfPopup:SfPopup>
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3" %}
-public MainPage()
+{% highlight C#  hl_lines="8" %}
+public partial class MainPage : ContentPage
 {
-    InitializeComponent();
-    popup.PopupStyle.OverlayColor = Colors.LightPink;
+    SfPopup popup;
+    public MainPage()
+    {
+        InitializeComponent();
+        popup = new SfPopup();
+        popup.PopupStyle.OverlayColor = Colors.LightPink;
+    }
 }
 
 {% endhighlight %}
@@ -310,7 +335,7 @@ The SfPopup allows you adjust the opacity of the overlay color by setting the co
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
+{% highlight xaml hl_lines="3" %}
         <sfPopup:SfPopup x:Name="popup">
             <sfPopup:SfPopup.PopupStyle>
                     <sfPopup:PopupStyle OverlayColor="#30FF0000" />
@@ -318,11 +343,16 @@ The SfPopup allows you adjust the opacity of the overlay color by setting the co
         </sfPopup:SfPopup>
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3" %}
-public MainPage()
+{% highlight C# hl_lines="8" %}
+public partial class MainPage : ContentPage
 {
-    InitializeComponent();
-    popup.PopupStyle.OverlayColor = Color.FromArgb("#30FF0000");
+    SfPopup popup;
+    public MainPage()
+    {
+        InitializeComponent();
+        popup = new SfPopup();
+        popup.PopupStyle.OverlayColor = Color.FromArgb("#30FF0000");
+    }
 }
 
 {% endhighlight %}
@@ -335,7 +365,7 @@ The SfPopup allows blurring of the background using the `SfPopup.OverlayMode` an
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="13 16" %}
+{% highlight xaml hl_lines="13 16" %}
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -359,7 +389,7 @@ The SfPopup allows blurring of the background using the `SfPopup.OverlayMode` an
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="12 13" %}
+{% highlight C# hl_lines="12 13" %}
 using Syncfusion.Maui.Popup;
 namespace GettingStarted
 {
@@ -401,7 +431,7 @@ The SfPopup allows customization of the blur effect by setting the `SfPopup.Popu
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="13 16" %}
+{% highlight xaml hl_lines="13 16" %}
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -426,7 +456,7 @@ The SfPopup allows customization of the blur effect by setting the `SfPopup.Popu
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="12 13" %}
+{% highlight C# hl_lines="12 13" %}
 using Syncfusion.Maui.Popup;
 namespace GettingStarted
 {
@@ -468,7 +498,7 @@ You can change the close button icon of the `SfPopup`, please find the code exam
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="16" %}
+{% highlight xaml hl_lines="16" %}
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -492,11 +522,16 @@ You can change the close button icon of the `SfPopup`, please find the code exam
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
-public MainPage()
+{% highlight C# hl_lines="8" %}
+public partial class MainPage : ContentPage
 {
-    InitializeComponent();
-    popup.PopupStyle.ShowCloseButtonIcon = "closeicon.png";
+    SfPopup popup;
+    public MainPage()
+    {
+        InitializeComponent();
+        popup = new SfPopup();
+        popup.PopupStyle.ShowCloseButtonIcon = "closeicon.png";
+    }
 }
 
 {% endhighlight %}
@@ -511,7 +546,7 @@ The SfPopup allows you to add a shadow effect to the popup view. Refer to the co
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="15" %}
+{% highlight xaml hl_lines="15" %}
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -534,11 +569,16 @@ The SfPopup allows you to add a shadow effect to the popup view. Refer to the co
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
-public MainPage()
+{% highlight C# hl_lines="8" %}
+public partial class MainPage : ContentPage
 {
-    InitializeComponent();
-    popup.PopupStyle.HasShadow = true;
+    SfPopup popup;
+    public MainPage()
+    {
+        InitializeComponent();
+        popup = new SfPopup();
+        popup.PopupStyle.HasShadow = true;
+    }
 }
 
 {% endhighlight %}
