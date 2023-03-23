@@ -32,7 +32,7 @@ The `SfPdfViewer` displays an [ActivityIndicator](https://learn.microsoft.com/en
 You can customize the loading indicator’s properties by applying style with the `TargetType` property to `ActivityIndicator`. You may need to set the [ApplyToDerivedTypes](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/styles/xaml?view=net-maui-7.0#apply-a-style-to-derived-types) property to `True` to get the style applied to the derived classes also. See the following code example to customize the color of the loading indicator.
 
 {% tabs %}
-{% highlight xaml % }
+{% highlight xaml %}
 
 	<syncfusion:SfPdfViewer>
 		<syncfusion:SfPdfViewer.Resources>
