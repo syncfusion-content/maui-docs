@@ -157,7 +157,6 @@ public MainPage()
 
 The SfPopup allows customizing the message appearance using the following properties.
 
-
 <table>
 <tr>
 <th> Property </th>
@@ -420,7 +419,7 @@ The SfPopup allows to customize the blur effect by setting the `SfPopup.PopupSty
                         ShowCloseButton="True">
             <sfPopup:SfPopup.PopupStyle>
                 <sfPopup:PopupStyle BlurIntensity="Custom"
-                                    BlurRadius="10" />
+                                    BlurRadius="3" />
             </sfPopup:SfPopup.PopupStyle>
         </sfPopup:SfPopup>
    </StackLayout>
@@ -441,7 +440,7 @@ namespace GettingStarted
             popup = new SfPopup();
             popup.OverlayMode = OverlayMode.Blur;
             popup.PopupStyle.BlurIntensity = Syncfusion.Maui.Popup.PopupBlurIntensity.Custom;
-            popup.PopupStyle.BlurRadius = 10;
+            popup.PopupStyle.BlurRadius = 3;
             var layout = new StackLayout();
             var image = new Image() { Source = "Blurred_Background.png", Aspect = Aspect.Fill };
             TapGestureRecognizer tapGestureRecognizer = new TapGestureRecognizer();
@@ -486,7 +485,7 @@ You can change the close button icon of the `SfPopup`, please find the code exam
         <sfPopup:SfPopup x:Name="popup"
                          ShowCloseButton="True">
             <sfPopup:SfPopup.PopupStyle>
-                <sfPopup:PopupStyle CloseButtonIcon="" />
+                <sfPopup:PopupStyle CloseButtonIcon="closeicon.png" />
             </sfPopup:SfPopup.PopupStyle>
         </sfPopup:SfPopup>
     </StackLayout>
@@ -506,3 +505,45 @@ public MainPage()
 {% endtabs %}
 
 ![Displaying a .NET MAUI Popup with close button icon](/Images/styles/maui-popup-with-close-button-icon.png)
+
+### Set Shadow to Popup
+
+The SfPopup allows you to set the shadow to the popupview, please find the code example of the same below.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="15" %}
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:PopupDemo"
+             xmlns:sfPopup="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"
+             x:Class="PopupDemo.MainPage">
+    <StackLayout>
+        <Button x:Name="clickToShowPopup"
+                Text="ClickToShowPopup"
+                VerticalOptions="Start"
+                HorizontalOptions="Center"
+                Clicked="ClickToShowPopup_Clicked" />
+        <sfPopup:SfPopup x:Name="popup">
+            <sfPopup:SfPopup.PopupStyle>
+                <sfPopup:PopupStyle HasShadow="True" />
+            </sfPopup:SfPopup.PopupStyle>
+        </sfPopup:SfPopup>
+    </StackLayout>
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+public MainPage()
+{
+    InitializeComponent();
+    popup.PopupStyle.HasShadow = true;
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Displaying a .NET MAUI Popup with shadow](/Images/styles/maui-popup-with-shadow.png)
