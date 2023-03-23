@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrate from Xamarin.Forms SfShimmer to .NET MAUI SfShimmer 
 
-To make the migration from the [Xamarin SfShimmer](https://www.syncfusion.com/xamarin-ui-controls/xamarin-shimmer) to [.NET MAUI SfShimmer] easier, most of the APIs from the Xamarin SfShimmer were kept in the.NET MAUI SfShimmer. However, to maintain the consistency of API naming in the .NET MAUI SfShimmer, some of the APIs have been renamed. Please find the difference in the following topics.
+To make the migration from the [Xamarin SfShimmer](https://www.syncfusion.com/xamarin-ui-controls/xamarin-shimmer) to .NET MAUI SfShimmer easier, most of the APIs from the Xamarin SfShimmer were kept in the.NET MAUI SfShimmer. However, to maintain the consistency of API naming in the .NET MAUI SfShimmer, some of the APIs have been renamed. Please find the difference in the following topics.
 
 ## Namespaces 
 
@@ -94,13 +94,13 @@ this.Content = shimmer;
 <th>.NET MAUI SfShimmer</th>
 <th>Description</th></tr>
 <tr>
-<td>{{'[ShimmerView ]' | markdownify }}</td>
-<td>{{'[ShimmerView ]' | markdownify }}</td>
+<td>ShimmerView</td>
+<td>ShimmerView</td>
 <td>Represents a view used to achieve shimmer custom view.</td>
 </tr>
 </table>
 
-## Properties 
+## Properties
 
 ### SfShimmer
 
@@ -205,53 +205,53 @@ stackLayout.Children.Add(label);
 <th>Description</th>
 </tr>
 <tr>
-<td>{{'[Content]'| markdownify }}</td>
+<td>Content</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
 <tr>
-<td>{{'[CustomView]'| markdownify }}</td>
-<td>{{'[CustomView]'| markdownify }}</td>
+<td>CustomView</td>
+<td>CustomView</td>
 <td>Gets or sets the custom view that is used for loading view in the Shimmer.</td>
 </tr>
 <tr>
-<td>{{'[WaveDirection]'| markdownify }}</td>
-<td>{{'[WaveDirection]'| markdownify }}</td>
+<td>WaveDirection</td>
+<td>WaveDirection</td>
 <td>Gets or sets the animation direction for Shimmer.</td>
 </tr>
 <tr>
-<td>{{'[Type]'| markdownify }}</td>
-<td>{{'[Type]'| markdownify }}</td>
+<td>Type</td>
+<td>Type</td>
 <td>Gets or sets the built-in shimmer view type.</td>
 </tr>
 <tr>
-<td>{{'[Color]'| markdownify }}</td>
-<td>{{'[Fill]'| markdownify }}</td>
+<td>Color</td>
+<td>Fill</td>
 <td>Gets or sets the background color of shimmer view.</td>
 </tr>
 <tr>
-<td>{{'[WaveColor]'| markdownify }}</td>
-<td>{{'[WaveColor]'| markdownify }}</td>
+<td>WaveColor</td>
+<td>WaveColor</td>
 <td>Gets or sets the shimmer wave color.</td>
 </tr>
 <tr>
-<td>{{'[WaveWidth]'| markdownify }}</td>
-<td>{{'[WaveWidth]'| markdownify }}</td>
+<td>WaveWidth</td>
+<td>WaveWidth</td>
 <td>Gets or sets the width of the shimmer wave.</td>
 </tr>
 <tr>
-<td>{{'[AnimationDuration]'| markdownify }}</td>
-<td>{{'[AnimationDuration]'| markdownify }}</td>
+<td>AnimationDuration</td>
+<td>AnimationDuration</td>
 <td>Gets or sets the duration of the wave animation in milliseconds.</td>
 </tr>
 <tr>
-<td>{{'[IsActive]'| markdownify }}</td>
-<td>{{'[[IsActive]'| markdownify }}</td>
+<td>IsActive</td>
+<td>IsActive</td>
 <td>Gets or sets a value indicating whether to load actual content of shimmer.</td>
 </tr>
 <tr>
 <td>Nil</td>
-<td>{{'[RepeatCount]'| markdownify }}</td>
+<td>RepeatCount</td>
 <td>Gets or sets the number of times the built-in view should be repeated.</td>
 </tr>
 </table>
@@ -265,18 +265,18 @@ stackLayout.Children.Add(label);
 <th>Description</th>
 </tr>
 <tr>
-<td>{{'[BackgroundColor]'| markdownify }}</td>
+<td>BackgroundColor</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
 <tr>
-<td>{{'[CornerRadius]'| markdownify }}</td>
+<td>CornerRadius</td>
 <td>Nil</td>
 <td>Not Supported.</td>
 </tr>
 <tr>
 <td>Nil</td>
-<td>{{'[ShapeType]'| markdownify }}</td>
+<td>ShapeType</td>
 <td>Gets or sets the shape for the shimmer view.</td>
 </tr>
 </table>
@@ -290,18 +290,18 @@ stackLayout.Children.Add(label);
 <th>Description</th>
 </tr>
 <tr>
-<td>{{'[WaveDirection ]'| markdownify }}</td>
-<td>{{'[ShimmerWaveDirection ]'| markdownify }}</td>
+<td>WaveDirection</td>
+<td>ShimmerWaveDirection</td>
 <td>Defines the wave direction for the Shimmer.</td>
 </tr>
 <tr>
-<td>{{'[ShimmerTypes]'| markdownify }}</td>
-<td>{{'[ShimmerType]'| markdownify }}</td>
+<td>ShimmerTypes</td>
+<td>ShimmerType</td>
 <td>Defines the type of the Shimmer.</td>
 </tr>
 <tr>
 <td>Nil</td>
-<td>{{'[ShimmerShapeType ]'| markdownify }}</td>
+<td>ShimmerShapeType</td>
 <td>Defines the shape for the Shimmer view.</td>
 </tr>
 </table>
