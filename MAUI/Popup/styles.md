@@ -505,7 +505,7 @@ public MainPage()
 
 ![Displaying a .NET MAUI Popup with close button icon](/Images/styles/maui-popup-with-close-button-icon.png)
 
-### Set Shadow to Popup
+### Set Shadow
 
 The SfPopup allows you to add a shadow effect to the popup view. Refer to the code example below for reference.
 
