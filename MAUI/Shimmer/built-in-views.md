@@ -24,7 +24,7 @@ Syncfusion .NET MAUI Shimmer (SfShimmer) control provides seven built-in shimmer
 The built-in shimmer types can be used by setting the `Type` of `SfShimmer`. By default, the `CirclePersona` is initially rendered.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
 <shimmer:SfShimmer x:Name="Shimmer" VerticalOptions="FillAndExpand" 
                    Type="CirclePersona">
@@ -38,7 +38,7 @@ The built-in shimmer types can be used by setting the `Type` of `SfShimmer`. By 
 </shimmer:SfShimmer>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3" %}
+{% highlight c# tabtitle="C#" hl_lines="3" %}
 
 SfShimmer shimmer = new SfShimmer()
    {
@@ -55,4 +55,4 @@ SfShimmer shimmer = new SfShimmer()
 {% endhighlight %}
 {% endtabs %}
 
-   ![Circle persona shimmer View in .NET MAUI.](images/overview/maui-circle-persona.gif)
+   ![Circle persona shimmer view in .NET MAUI.](images/overview/maui-circle-persona.gif)
