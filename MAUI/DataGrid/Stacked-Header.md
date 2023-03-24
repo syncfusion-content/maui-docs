@@ -9,18 +9,18 @@ documentation: UG
 
 # Stacked Headers in MAUI DataGrid (SfDataGrid)
 
-The [.NET MAUI DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) supports displaying additional unbound, multiple/multilevel header rows known as `StackedHeaderRows` that spans across the DataGrid columns. You can group one or more columns under each stacked header.
+The [.NET MAUI DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) supports displaying additional unbound, multiple/multilevel header rows known as [StackedHeaderRows](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_StackedHeaderRows) that spans across the DataGrid columns. You can group one or more columns under each stacked header.
 
-Each `StackedHeaderRow` contains `Columns`, which contains a number of child columns. The `DataGridStackedColumn.ColumnMappingNames` property contains the columns grouped under the stacked header row. The `DataGridStackedColumn.MappingName` is a unique name used for mapping a specific child column grouped under the same stacked header row, whereas the `DataGridStackedColumn.Text` contains the text displayed in the stacked header row.
+Each [StackedHeaderRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStackedHeaderRow.html) contains [Columns](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStackedHeaderRow.html#Syncfusion_Maui_DataGrid_DataGridStackedHeaderRow_Columns), which contains a number of child columns. The [DataGridStackedColumn.ColumnMappingNames](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStackedColumn.html#Syncfusion_Maui_DataGrid_DataGridStackedColumn_ColumnMappingNames) property contains the columns grouped under the stacked header row. The [DataGridStackedColumn.MappingName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStackedColumn.html#Syncfusion_Maui_DataGrid_DataGridStackedColumn_MappingName) is a unique name used for mapping a specific child column grouped under the same stacked header row, whereas the [DataGridStackedColumn.Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStackedColumn.html#Syncfusion_Maui_DataGrid_DataGridStackedColumn_Text) contains the text displayed in the stacked header row.
 
-### Adding stacked header
+## Adding stacked header
 
 The stacked headers can be added using the following steps:
 
 1. Create an object of `DataGridStackedHeaderRow` for adding stacked columns.
-2. Add the columns using the `ColumnMappingNames` property of `DataGridStackedColumn`.
+2. Add the columns using the `ColumnMappingNames` property of [DataGridStackedColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStackedColumn.html).
 3. Add the `DataGridStackedColumn` to `Columns` collection.
-4. Finally, add the `DataGridStackedHeaderRow` to `StackedHeaderRows` collection of the SfDataGrid. 
+4. Finally, add the [DataGridStackedHeaderRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStackedHeaderRow.html) to `StackedHeaderRows` collection of the SfDataGrid. 
 
 {% tabs %}
 {% highlight xaml %}
@@ -119,7 +119,7 @@ dataGrid.StackedHeaderRows[0].Columns[0].ColumnMappingNames = ColumnMappingNames
 
 ## Changing stacked header row height
 
-You can change the height of StackedHeaderRows using the `SfDataGrid.HeaderRowHeight` property.
+You can change the height of StackedHeaderRows using the [SfDataGrid.HeaderRowHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_HeaderRowHeight) property.
 
 {% tabs %}
 {% highlight c# %}
@@ -127,7 +127,7 @@ dataGrid.HeaderRowHeight = 50;
 {% endhighlight %}
 {% endtabs %}
 
-You can also change the height of stacked header rows using the `SfDataGrid.QueryRowHeight` event.
+You can also change the height of stacked header rows using the [SfDataGrid.QueryRowHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_QueryRowHeight) event.
 
 {% tabs %}
 {% highlight c# %}
@@ -145,10 +145,9 @@ void dataGrid_QueryRowHeight(object sender, QueryRowHeightEventArgs  e)
 {% endtabs %}
 
 ## Appearance
-
 ### Font customization
 
-Customize the font's size, family and attribute of the text displayed in stacked header column using the `DataGridStyle.StackedHeaderRowFontSize`, `DataGridStyle.StackedHeaderRowFontFamily`, and `DataGridStyle.StackedHeaderRowFontAttributes` properties, respectively. The default font size and font attribute are 14 and normal, respectively.
+Customize the font's size, family and attribute of the text displayed in stacked header column using the [DataGridStyle.StackedHeaderRowFontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_StackedHeaderRowFontSize), [DataGridStyle.StackedHeaderRowFontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_StackedHeaderRowFontFamily), and [DataGridStyle.StackedHeaderRowFontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_StackedHeaderRowFontAttributes) properties, respectively. The default font size and font attribute are 14 and normal, respectively.
 
 {% tabs %}
 {% highlight xaml %}
@@ -176,7 +175,7 @@ public partial class MainPage : ContentPage
 
 ### Background customization
 
-The appearance of stacked header row can be customized by setting desired values to the `DefaultStyle.StackedHeaderRowBackground` property in `SfDataGrid.DefaultStyle`.
+The appearance of stacked header row can be customized by setting desired values to the [DefaultStyle.StackedHeaderRowBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_StackedHeaderRowBackground) property in [SfDataGrid.DefaultStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DefaultStyle).
 
 {% tabs %}
 {% highlight xaml %}
@@ -251,7 +250,7 @@ The SfDataGrid also allows to customize the appearance of stacked header Cells c
 
 ## Loading template in stacked column
 
-The SfDataGrid allows you to load any desired view inside a `DataGridStackedColumn` using the `DataGridStackedColumn.Template` property.
+The SfDataGrid allows you to load any desired view inside a `DataGridStackedColumn` using the [DataGridStackedColumn.Template](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStackedColumn.html#Syncfusion_Maui_DataGrid_DataGridStackedColumn_Template) property.
 
 {% tabs %}
 {% highlight xaml %}
