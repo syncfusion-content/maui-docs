@@ -160,7 +160,7 @@ this.Calendar.SelectionMode = CalendarSelectionMode.Multiple;
 
 ## Action buttons
 
-You can display action buttons at the bottom of the calendar by using the `ShowActionButtons` property of the SfCalendar. It allows you to confirm or cancel the selected date, dates, and range of dates in calendar views of the `SfCalendar`.
+You can display action buttons at the bottom of the calendar by using the [ShowActionButtons](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_ShowActionButtons) property of the SfCalendar. It allows you to confirm or cancel the selected date, dates, and range of dates in calendar views of the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html).
 
 {% tabs %}  
 {% highlight xaml tabtitle="XAML" %}
@@ -182,7 +182,7 @@ this.Calendar.ShowActionButtons = true;
 
 ## Today button
 
-The today button can be displayed at the bottom of the calendar using the `ShowTodayButton` property of the `SfCalendar`, allowing you to quickly navigate from current view to the today view.
+The today button can be displayed at the bottom of the calendar using the [ShowTodayButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_ShowTodayButton) property of the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html), allowing you to quickly navigate from current view to the today view.
 
 {% tabs %}  
 {% highlight xaml tabtitle="XAML" %}
