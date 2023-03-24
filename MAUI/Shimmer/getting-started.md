@@ -21,7 +21,7 @@ This section explains how to add the Shimmer control.
 4. Initialize `SfShimmer.`
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 5" %}
+{% highlight xaml tabtitle="XAML" hl_lines="3 5" %}
 
 <ContentPage   
     . . .
@@ -31,7 +31,7 @@ This section explains how to add the Shimmer control.
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 10" %}
+{% highlight c# tabtitle="C#" hl_lines="1 9 10" %}
 
 using Syncfusion.Maui.Shimmer;
 . . .
@@ -84,12 +84,13 @@ namespace GettingStarted
 
 ## Change different shimmer views
 
-The `.NET MAUI Shimmer` control provides seven different Shimmer types of views. It can be assigned to the control using the `Type` property. By default, the control is assigned to the `CirclePersona` view.
+The `.NET MAUI Shimmer` control provides seven different shimmer types of views. It can be assigned to the control using the `Type` property. By default, the control is assigned to the `CirclePersona` view.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<shimmer:SfShimmer x:Name="Shimmer" VerticalOptions="Fill" Type="CirclePersona">
+<shimmer:SfShimmer x:Name="Shimmer" VerticalOptions="Fill"
+                   Type="CirclePersona">
     <StackLayout>
         <Label
             Text="Content is loaded!"
@@ -100,7 +101,7 @@ The `.NET MAUI Shimmer` control provides seven different Shimmer types of views.
 </shimmer:SfShimmer>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" hl_lines="3" %}
 
 SfShimmer shimmer = new SfShimmer()
    {
@@ -117,4 +118,4 @@ SfShimmer shimmer = new SfShimmer()
 {% endhighlight %}
 {% endtabs %}
 
-![Circle persona shimmer View in .NET MAUI.](images/overview/maui-circle-persona.gif)
+![Circle persona shimmer view in .NET MAUI.](images/overview/maui-circle-persona.gif)

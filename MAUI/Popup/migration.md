@@ -32,8 +32,9 @@ To initialize the control, import the popup namespace and initialize SfPopup as 
 <th>.NET MAUI SfPopup</th></tr>
 <tr>
 <td>
+
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml %}
 
 <ContentPage xmlns:sfPopup="clr-namespace:Syncfusion.XForms.PopupLayout;assembly=Syncfusion.SfPopupLayout.XForms">
 <sfPopup:SfPopupLayout x:Name="popupLayout">
@@ -46,7 +47,7 @@ To initialize the control, import the popup namespace and initialize SfPopup as 
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# %}
 
 public partial class MainPage : ContentPage
 {
@@ -103,6 +104,7 @@ public partial class MainPage : ContentPage
 <th>Xamarin SfPopupLayout</th>
 <th>.NET MAUI SfPopup</th>
 <th>Description</th></tr>
+<tr>
 <td>SfPopupLayout</td>
 <td>Sfpopup</td>
 <td>Displays an alert message with customizable buttons or loads a desired view within a pop-up window.</td></tr>
@@ -125,27 +127,35 @@ N> All the properties from the Xamarin.Forms PopupView class is moved to the MAU
 <td>SfPopupLayout.Content</td>
 <td>Nil</td>
 <td>Not supported</td></tr>
+<tr>
 <td>SfPopupLayout.PopupView</td>
 <td>PopupStyle.HeaderBackground</td>
 <td>Gets or sets the background color to be applied for the header.</td></tr>
+<tr>
 <td>PopupStyle.FooterBackgroundColor</td>
 <td>PopupStyle.FooterBackground</td>
 <td>Gets or sets the background color of the footer.</td></tr>
+<tr>
 <td>PopupStyle.AcceptButtonBackgroundColor</td>
 <td>PopupStyle.AcceptButtonBackground</td>
 <td>Gets or sets the background color of accept button in the footer.</td></tr>
+<tr>
 <td>PopupStyle.DeclineButtonBackgroundColor</td>
 <td>PopupStyle.DeclineButtonBackground</td>
 <td>Gets or sets the background color of decline button in the footer.</td></tr>
+<tr>
 <td>PopupStyle.ContentBackgroundColor</td>
 <td>PopupStyle.MessageBackground</td>
 <td>Gets or sets the background color of content.</td></tr>
+<tr>
 <td>PopupStyle.BorderColor</td>
 <td>PopupStyle.Stroke</td>
 <td>Gets or sets the border color for the PopupView</td></tr>
+<tr>
 <td>PopupStyle.BorderThickness</td>
 <td>PopupStyle.StrokeThickness</td>
 <td>Gets or sets the border thickness for the PopupView</td></tr>
+<tr>
 <td>PopupStyle.OverlayOpacity</td>
 <td>PopupStyle.OverlayColor</td>
 <td>You can achieve by setting value using rgba value like below,
@@ -160,15 +170,19 @@ N> All the properties from the Xamarin.Forms PopupView class is moved to the MAU
 {% endtabs %}
 
 </td></tr>
+<tr>
 <td>SfPopuplayoutResources.Title</td>
 <td>SfPopupResource.Title</td>
 <td>Gets the TitleLabelText.</td></tr>
+<tr>
 <td>SfPopuplayoutResources.Popup_message</td>
 <td>SfPopupResource.Message</td>
 <td>Gets the MessageView text.</td></tr>
+<tr>
 <td>SfPopuplayoutResources.ACCEPT</td>
 <td>SfPopupResource.AcceptButtonText</td>
 <td>Gets the Accept button text.</td></tr>
+<tr>
 <td>SfPopuplayoutResources.DECLINE</td>
 <td>SfPopupResource.DeclineButtonText</td>
 <td>Gets the Decline button text.</td></tr>
@@ -181,18 +195,23 @@ N> All the properties from the Xamarin.Forms PopupView class is moved to the MAU
 <th>Xamarin SfPopupLayout</th>
 <th>.NET MAUI SfPopup</th>
 <th>Description</th></tr>
+<tr>
 <td>AutoSizeMode</td>
 <td>PopupAutoSizeMode</td>
 <td>Defines constant that specify how the PopupView is Sized.</td></tr>
+<tr>
 <td>AppearanceMode</td>
 <td>PopupButtonAppearanceMode</td>
 <td>Built-in layout styles of the PopupView.</td></tr>
+<tr>
 <td>BlurIntensity</td>
 <td>PopupBlurIntensity</td>
 <td>Defines constants that specifies the intensity of the blur effect applied to the overlay.</td></tr>
+<tr>
 <td>OverlayMode</td>
 <td>PopupOverlayMode</td>
 <td>Defines constants that specifies whether the overlay should be transparent or blurred.</td></tr>
+<tr>
 <td>RelativePosition</td>
 <td>PopupRelativePosition</td>
 <td>Positions the popup view relative to the given view.</td></tr>
@@ -205,6 +224,7 @@ N> All the properties from the Xamarin.Forms PopupView class is moved to the MAU
 <th>Xamarin SfPopupLayout</th>
 <th>.NET MAUI SfPopup</th>
 <th>Description</th></tr>
+<tr>
 <td>PopupView.Refresh()</td>
 <td>Nil</td>
 <td>Not supported</td></tr>

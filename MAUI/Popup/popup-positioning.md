@@ -19,25 +19,25 @@ Following are the list of options available to show SfPopup at various positions
 <th>Description</th></tr>
 <tr>
 <td>SfPopup.IsOpen</td>
-<td>Show the `SfPopup` at the center.</td></tr>
+<td>Show the <code>SfPopup</code> at the center.</td></tr>
 <tr>
 <td>SfPopup.Show</td>
-<td>Similar as `SfPopup.IsOpen` property.</td></tr>
+<td>Similar as <code>SfPopup.IsOpen</code> property.</td></tr>
 <tr>
 <td>SfPopup.Show(x-position, y-position)</td>
-<td>Show the `SfPopup` at the specified X and y positions.</td></tr>
+<td>Show the <code>SfPopup</code> at the specified X and y positions.</td></tr>
 <tr>
 <td>SfPopup.ShowRelativeToView(View, RelativePosition)</td>
-<td>Show the `SfPopup` at the position relative to the specified view.</td></tr>
+<td>Show the <code>SfPopup</code> at the position relative to the specified view.</td></tr>
 <tr>
 <td>SfPopup.ShowRelativeToView(View, RelativePosition, x-position, y-position)</td>
-<td>Show the `SfPopup` at an absolute x, y coordinate from the relative position of the specified view.</td></tr>
+<td>Show the <code>SfPopup</code> at an absolute x, y coordinate from the relative position of the specified view.</td></tr>
 <tr>
 <td>SfPopup.IsFullScreen</td>
-<td>Show the `SfPopup` in full width and height of the screen.</td></tr>
+<td>Show the <code>SfPopup</code> in full width and height of the screen.</td></tr>
 <tr>
 <td>SfPopup.Show(bool)</td>
-<td>Similar as `SfPopup.IsFullScreen` property.</td></tr>
+<td>Similar as <code>SfPopup.IsFullScreen</code> property.</td></tr>
 </table>
 
 ## Center positioning
