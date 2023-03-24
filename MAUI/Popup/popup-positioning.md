@@ -359,7 +359,7 @@ private void DataGrid_CellTapped(object sender, Syncfusion.Maui.DataGrid.DataGri
 
 ![.NET MAUI Popup with DataGrid ](Images/popup-positioning/show-maui-popup-when-grid-cell-tap.png)
 
-Download the entire source code from GitHub [here]().
+Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/how-to-show-a-.net-maui-popup-when-tap-.net-maui-datagrid-cell).
 
 ### Open SfPopup in ItemTapped event of SfListView
 
@@ -537,7 +537,7 @@ private void ListView_ItemTapped(object sender, Syncfusion.Maui.ListView.ItemTap
 
 ![ListView with .NET MAUI Popup](Images/popup-positioning/show-maui-popup-when-listview-item-tap.png)
 
-Download the entire source code from GitHub [here]().
+Download the entire source code from GitHub [here](https://github.com/SyncfusionExamples/how-to-show-a-.net-maui-popup-when-tap-.net-maui-listview-item).
 
 ### Display popup when interacting with a switch
 
