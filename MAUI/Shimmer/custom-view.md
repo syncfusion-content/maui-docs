@@ -1,7 +1,7 @@
 ---
 layout: post
 title: About .NET MAUI Shimmer control | Syncfusion
-description: Learn here all about the Custom view support in Syncfusion .NET MAUI Shimmer (SfShimmer) control and more.
+description: Learn here all about the custom view support in Syncfusion .NET MAUI Shimmer (SfShimmer) control and more.
 platform: maui
 control: SfShimmer
 documentation: ug
@@ -381,7 +381,7 @@ The `CustomView` property of the `SfShimmer` can be used to create your shimmer 
 
 ## Shimmer view
 
-You can customize the `ShimmerView` using the `CustomView` property of `SfShimmer`, and also you can change the shape of the shimmer wave using the property `ShapeType`.
+`ShimmerView` can be used to customize the custom view with different shape by using `ShapeType`. The `ShimmerView` is available in three different shape types such as Circle, Rectangle, and RoundedRectangle. By default, the shape type is `Rectangle`.
 
 {% tabs %} 
 
