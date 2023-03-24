@@ -374,7 +374,7 @@ The `SfPopup` allows opening it in the `ItemTapped` event of the `SfListView`.
              xmlns:local="clr-namespace:PopupMauiPositioning"
              x:Class="PopupMauiPositioning.MainPage">
   <ContentPage.BindingContext>
-    <local:ViewModel x:Name="viewModel" />
+    <local:ContactsViewModel x:Name="viewModel" />
   </ContentPage.BindingContext>  
   <ContentPage.Content>
     <Grid>
@@ -433,7 +433,7 @@ The `SfPopup` allows opening it in the `ItemTapped` event of the `SfListView`.
   </ContentPage.Content> 
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="17" %} 
+{% highlight c# tabtitle="C#" hl_lines="72" %} 
 namespace PopupMauiPositioning;
 using Syncfusion.Maui.ListView;
 using Syncfusion.Maui.Popup;
@@ -449,7 +449,7 @@ public partial class MainPage : ContentPage
     InitializeComponent();  
     listView = new SfListView();
     listView.ItemTemplate = new DataTemplate(() =>
-    {            
+    {
       var grid = new Grid();
       grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = 56 });
       grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = GridLength.Star });
@@ -544,7 +544,7 @@ Download the entire source code from GitHub [here]().
 `SfPopup.IsOpen` is a bindable property and hence can be binded to any property and based on its value the popup will open or close. In the below code example, we have binded the `IsOpen` property with the `IsToggled` property of the the switch and the popup will be opened or closed as the switch toggles.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="15" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"             
              xmlns:sfPopup="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"            

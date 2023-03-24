@@ -667,7 +667,7 @@ Disable the popup overlay using `SfPopup.ShowOverlayAlways` property. The defaul
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"           
              xmlns:sfPopup="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"             
-             x:Class="PopupMauiPositioning.MainPage">
+             x:Class="PopupMauiLayout.MainPage">
     <ContentPage.Content>
         <StackLayout Padding="20">
             <Button x:Name="clickToShowPopup" Text="ClickToShowPopup"                     
@@ -684,20 +684,20 @@ Disable the popup overlay using `SfPopup.ShowOverlayAlways` property. The defaul
 using Syncfusion.Maui.Popup;
 public partial class ShowOverlayAlways : ContentPage
 {
-	SfPopup sfPopup;
-	public ShowOverlayAlways()
-	{	
-		InitializeComponent();
+    SfPopup sfPopup;
+    public ShowOverlayAlways()
+    {
+        InitializeComponent();
         sfPopup = new SfPopup();
         sfPopup.ShowOverlayAlways = false;
-	}
+    }
 }
 {% endhighlight %}
 {% endtabs %}
 
 ## How to
 
-### Show ListView as a popup
+### Show listView as a popup
 
 The `SfPopup` allows loading the `SfListView` as a content of the popup.
 
@@ -707,8 +707,8 @@ The `SfPopup` allows loading the `SfListView` as a content of the popup.
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sfListView="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
              xmlns:sfPopup="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"
-             xmlns:local="clr-namespace:PopupMauiPositioning"
-             x:Class="PopupMauiPositioning.MainPage">
+             xmlns:local="clr-namespace:PopupMauiLayout"
+             x:Class="PopupMauiLayout.MainPage">
     <ContentPage.BindingContext>
         <local:ContactsViewModel x:Name="viewModel"/>
     </ContentPage.BindingContext>
@@ -716,7 +716,7 @@ The `SfPopup` allows loading the `SfListView` as a content of the popup.
         <StackLayout Padding="20">
             <Button Text="Click to show popup" 
                     Clicked="OpenButton_Clicked"
-                    HorizontalOptions="Center" VerticalOptions="Start"/>
+                    HorizontalOptions="Center"/>
             <sfPopup:SfPopup x:Name="sfPopup" 
                              HeaderTitle="ListView"
                              ShowFooter="True"
@@ -852,6 +852,3 @@ private void OpenButton_Clicked(object sender, EventArgs e)
 ![ListView in a .NET MAUI Popup](Images/layout-customizations/maui-popup-with-listview-in-content-template.png)
 
 Download the entire source code from GitHub [here]().
-
-
-
