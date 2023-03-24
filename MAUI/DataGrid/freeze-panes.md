@@ -45,7 +45,7 @@ The following code snippet shows how to freeze rows in the DataGrid:
 {% tabs %}
 {% highlight xaml %}
 <ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
-    <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}" FrozenRowCount="2" />
+    <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}" FrozenRowCount="1" />
 </ContentPage>
 {% endhighlight %}
 {% endtabs %}
