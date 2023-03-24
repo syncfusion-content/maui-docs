@@ -18,7 +18,7 @@ To make the migration from the [Xamarin SfCalendar](https://www.syncfusion.com/x
 <th>Xamarin SfCalendar</th>
 <th>.NET MAUI SfCalendar</th></tr>
 <tr>
-<td>Syncfusion.Calendar.XForms</td>
+<td>Syncfusion.SfCalendar.XForms</td>
 <td>Syncfusion.Maui.Calendar</td></tr>
 </table>
 
@@ -49,7 +49,7 @@ xmlns:calendar="clr-namespace:Syncfusion.SfCalendar.XForms;assembly=Syncfusion.S
 
 {% highlight C# %}
 
-using Syncfusion.Calendar.XForms;
+using Syncfusion.SfCalendar.XForms;
 ...
 
 SfCalendar calendar = new SfCalendar ();

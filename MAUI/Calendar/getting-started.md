@@ -160,30 +160,40 @@ this.Calendar.SelectionMode = CalendarSelectionMode.Multiple;
 
 ## Action buttons
 
-You can display action buttons at the bottom of the calendar by using the `ShowActionButtons` property of the SfCalendar. It allows you to confirm or cancel the selected date, dates, or date ranges of the `SfCalendar`.
-
-## Today button
-
-The today button can be displayed at the bottom of the calendar using the `ShowTodayButton` property of the `SfCalendar`, allowing you to switch from the current view to today's view effortlessly.
-
-The following code explains how to enable the Action button and Today button.
+You can display action buttons at the bottom of the calendar by using the `ShowActionButtons` property of the SfCalendar. It allows you to confirm or cancel the selected date, dates, and range of dates in calendar views of the `SfCalendar`.
 
 {% tabs %}  
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <calendar:SfCalendar x:Name="Calendar" 
                      View="Month" 
-                     ShowActionButtons="True"
-                     ShowTodayButton="True">
+                     ShowActionButtons="True">
  </calendar:SfCalendar>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="C#" %}
 
 this.Calendar.ShowActionButtons = true;
-this.Calendar.ShowTodayButton = true;
 
 {% endhighlight %}  
 {% endtabs %}
 
-![Action button and today button in .NET MAUI Calendar.](images/getting-started/maui-action-button_and_today_button.png)
+## Today button
+
+The today button can be displayed at the bottom of the calendar using the `ShowTodayButton` property of the `SfCalendar`, allowing you to quickly navigate from current view to the today view.
+
+{% tabs %}  
+{% highlight xaml tabtitle="XAML" %}
+
+<calendar:SfCalendar x:Name="Calendar" 
+                     View="Month"
+                     ShowTodayButton="True">
+ </calendar:SfCalendar>
+
+{% endhighlight %}
+{% highlight c# tabtitle="C#" %}
+
+this.Calendar.ShowTodayButton = true;
+
+{% endhighlight %}
+{% endtabs %}
