@@ -1,7 +1,7 @@
 ---
 layout: post
 title: About .NET MAUI Shimmer control | Syncfusion
-description: Learn here about the Customization of Syncfusion .NET MAUI Shimmer (SfShimmer) control, its basic features, elements and more.
+description: Learn here about the customization of Syncfusion .NET MAUI Shimmer (SfShimmer) control, its basic features, elements and more.
 platform: maui
 control: SfShimmer
 documentation: ug
@@ -25,9 +25,10 @@ This section explains how to customize the Shimmer control.
 The background color of the `SfShimmer` view can be customized by using the `Fill` property. The default value of the `Fill` property is `#F3EDF7`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<shimmer:SfShimmer x:Name="Shimmer" VerticalOptions="FillAndExpand" Type="Article" Fill="Pink">
+<shimmer:SfShimmer x:Name="Shimmer" VerticalOptions="FillAndExpand" Type="CirclePersona"
+                   Fill="#89CFF0">
    <StackLayout>
       <Label 
          Text="Content is loaded!!">
@@ -36,12 +37,12 @@ The background color of the `SfShimmer` view can be customized by using the `Fil
 </shimmer:SfShimmer>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4"%}
 
 SfShimmer Shimmer = new SfShimmer()
 {
-      Type = ShimmerType.Article,
-      Fill = Colors.Pink,
+      Type = ShimmerType.CirclePersona,
+      Fill = Color.FromRgba("#89CFF0"),
       Content = new Label
       {
          Text = "Content is loaded!"              
@@ -52,15 +53,18 @@ this.Content = Shimmer;
 
 {% endhighlight %}
 {% endtabs %}
+
+   ![Fill customization in .NET MAUI Shimmer.](images/customization/maui-fill-customization.gif)
 
 ## WaveColor
 
-The wave color in the `SfShimmer` view can be customized using the `WaveColor` property. The default value of `WaveColor` is the `#F3EDF7` Color.
+The wave color in the `SfShimmer` view can be customized using the `WaveColor` property. The default value of `WaveColor` is the `#FFFBFE` Color.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<shimmer:SfShimmer x:Name="Shimmer" VerticalOptions="FillAndExpand" Type="Article" WaveColor="#9A4EAE">
+<shimmer:SfShimmer x:Name="Shimmer" VerticalOptions="FillAndExpand" Type="CirclePersona"
+                   WaveColor="#89CFF0">
    <StackLayout>
       <Label 
          Text="Content is loaded!!">
@@ -69,12 +73,12 @@ The wave color in the `SfShimmer` view can be customized using the `WaveColor` p
 </shimmer:SfShimmer>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4" %}
 
 SfShimmer Shimmer = new SfShimmer()
 {
-      Type = ShimmerType.Article,
-      WaveColor = Color.FromRgba("#9A4EAE"),
+      Type = ShimmerType.CirclePersona,
+      WaveColor = Color.FromRgba("#89CFF0"),
       Content = new Label
       {
          Text = "Content is loaded!"              
@@ -85,15 +89,19 @@ this.Content = Shimmer;
 
 {% endhighlight %}
 {% endtabs %}
+
+   ![Wave color customization in .NET MAUI.](images/customization/maui-wave-color-customization.gif)
 
 ## WaveWidth
 
 The width of the wave in the `SfShimmer` view can be customized using the `WaveWidth` property. The default value of `WaveWidth` is `200`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
 
-<shimmer:SfShimmer x:Name="Shimmer" VerticalOptions="FillAndExpand" Type="Article" Fill="Pink" WaveColor="#9A4EAE"  WaveWidth="100">
+<shimmer:SfShimmer x:Name="Shimmer" VerticalOptions="FillAndExpand" Type="CirclePersona"
+                   WaveColor="#89CFF0"  
+                   WaveWidth="50">
    <StackLayout>
       <Label 
          Text="Content is loaded!!">
@@ -102,14 +110,13 @@ The width of the wave in the `SfShimmer` view can be customized using the `WaveW
 </shimmer:SfShimmer>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="5" %}
 
 SfShimmer Shimmer = new SfShimmer()
 {
-      Type = ShimmerType.Article,
-      Fill = Colors.Pink,
-      WaveColor = Color.FromRgba("#9A4EAE"),
-      WaveWidth = 100,
+      Type = ShimmerType.CirclePersona,
+      WaveColor = Color.FromRgba("#89CFF0"),
+      WaveWidth = 50,
       Content = new Label
       {
          Text = "Content is loaded!"              
@@ -120,6 +127,8 @@ this.Content = Shimmer;
 
 {% endhighlight %}
 {% endtabs %}
+
+   ![Wave width customization in .NET MAUI.](images/customization/maui-wave-width-customization.gif)
 
 ## WaveDirection
 
@@ -132,9 +141,10 @@ The direction of the wave in the `SfShimmer` view can be customized by using the
 * `BottomToTop` - BottomToTop enum of the animation direction allows the animation from bottom to top.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<shimmer:SfShimmer x:Name="Shimmer" VerticalOptions="FillAndExpand" Type="Article" WaveDirection="TopToBottom">
+<shimmer:SfShimmer x:Name="Shimmer" VerticalOptions="FillAndExpand" Type="CirclePersona" 
+                   WaveDirection="RightToLeft">
    <StackLayout>
       <Label 
          Text="Content is loaded!!">
@@ -143,12 +153,12 @@ The direction of the wave in the `SfShimmer` view can be customized by using the
 </shimmer:SfShimmer>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4" %}
 
 SfShimmer Shimmer = new SfShimmer()
 {
-      Type = ShimmerType.Article,
-      WaveDirection = ShimmerWaveDirection.TopToBottom,
+      Type = ShimmerType.CirclePersona,
+      WaveDirection = ShimmerWaveDirection.RightToLeft,
       Content = new Label
       {
          Text = "Content is loaded!"              
@@ -159,15 +169,18 @@ this.Content = Shimmer;
 
 {% endhighlight %}
 {% endtabs %}
+
+   ![Wave direction customization in .NET MAUI.](images/customization/maui-wave-direction-customization.gif)
 
 ## RepeatCount
 
-The `RepeatCount` of the shimmer refers to the number of times a shimmer cycle repeats within a given wave period in the `SfShimmer` view. The default value of `RepeatCount` is `1`.
+The `RepeatCount` of the shimmer defines the number of the times the shimmer shape needed to render in the `SfShimmer` view. The default value of `RepeatCount` is `1`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<shimmer:SfShimmer x:Name="Shimmer" VerticalOptions="FillAndExpand" Type="Article" RepeatCount="4">
+<shimmer:SfShimmer x:Name="Shimmer" VerticalOptions="FillAndExpand" Type="CirclePersona" 
+                   RepeatCount="3">
    <StackLayout>
       <Label 
          Text="Content is loaded!!">
@@ -176,12 +189,12 @@ The `RepeatCount` of the shimmer refers to the number of times a shimmer cycle r
 </shimmer:SfShimmer>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4" %}
 
 SfShimmer Shimmer = new SfShimmer()
 {
-      Type = ShimmerType.Article,
-      RepeatCount = 4,
+      Type = ShimmerType.CirclePersona,
+      RepeatCount = 3,
       Content = new Label
       {
          Text = "Content is loaded!"              
@@ -192,15 +205,18 @@ this.Content = Shimmer;
 
 {% endhighlight %}
 {% endtabs %}
+
+   ![Repeat count customization in .NET MAUI.](images/customization/maui-repeat-count-customization.gif)
 
 ## AnimationDuration
 
 The duration of the animation in the `SfShimmer` view can be customized using the `AnimationDuration` property. The default value of `AnimationDuration` is `1000 ms`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<shimmer:SfShimmer x:Name="Shimmer" VerticalOptions="FillAndExpand" Type="Article" AnimationDuration="4000">
+<shimmer:SfShimmer x:Name="Shimmer" VerticalOptions="FillAndExpand" Type="CirclePersona" 
+                   AnimationDuration="3000">
    <StackLayout>
       <Label 
          Text="Content is loaded!!">
@@ -209,12 +225,12 @@ The duration of the animation in the `SfShimmer` view can be customized using th
 </shimmer:SfShimmer>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4" %}
 
 SfShimmer Shimmer = new SfShimmer()
 {
-      Type = ShimmerType.Article,
-      AnimationDuration = 4000,
+      Type = ShimmerType.CirclePersona,
+      AnimationDuration = 3000,
       Content = new Label
       {
          Text = "Content is loaded!"              
@@ -225,3 +241,5 @@ this.Content = Shimmer;
 
 {% endhighlight %}
 {% endtabs %}
+
+   ![Animation duration customization in .NET MAUI.](images/customization/maui-animation-duration.gif)
