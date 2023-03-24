@@ -331,7 +331,7 @@ public partial class MainPage : ContentPage
 
 ### Set overlay opacity
 
-The SfPopup allows you adjust the opacity of the overlay color by setting the color value to "#30FF0000". The first two digits represent opacity in hexadecimal format, while the remaining six digits represent the RGB color.
+The SfPopup allows you adjust the opacity of the overlay color by setting the color value as rgba in hexadecimal value.
 
 {% tabs %}
 
@@ -423,7 +423,7 @@ namespace GettingStarted
 
 {% endtabs %}
 
-![Displaying a .NET MAUI Popup with blur](/Images/styles/maui-popup-with-blurred-background.png)
+![Displaying a .NET MAUI Popup with blur overlay](/Images/styles/maui-popup-with-blurred-background.png)
 
 ### Set custom blur intensity
 
