@@ -658,7 +658,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-## How to show overlay background always in .NET MAUI Popup?
+## How to disable the overlay background in .NET MAUI Popup?
 
 If the `WidthRequest`, `HeightRequest`, `StartX`, and `StartY` properties are all set for the SfPopup, the overlay background around the Popup will not be shown by default. To prevent the overlay background from showing even if these properties are not set, you can set the `SfPopup.ShowOverlayAlways` property to `False`. The default value of `SfPopup.ShowOverlayAlways` is `True`.
 
