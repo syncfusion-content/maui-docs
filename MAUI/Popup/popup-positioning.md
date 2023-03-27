@@ -296,7 +296,7 @@ The `SfPopup` allows opening it in the [CellTapped](https://help.syncfusion.com/
                        ShowCloseButton="True">
         <sfPopup:SfPopup.ContentTemplate>
           <DataTemplate>
-            <Label Text="A pop-up is a graphical user interface display area that suddenly appears in the foreground of the visual interface. Pop-up can be initiated by single or double tap or can simply be timed to occur. A pop-up window should be smaller than the background window or interface; otherwise, its a replacement interface."                               
+            <Label Text="A pop-up is a graphical user interface display area that suddenly appears in the foreground of the visual interface. Pop-up can be initiated by single or double tap or can be timed to occur. A pop-up window should be smaller than the background window or interface; otherwise, it's a replacement interface."                               
                    TextColor="Black" 
                    FontSize="14" 
                    FontFamily="Roboto" 
@@ -335,7 +335,7 @@ public partial class MainPage : ContentPage
     sfPopup.ContentTemplate = new DataTemplate(() =>
     {
         var label = new Label();
-        label.Text = "A pop-up is a graphical user interface display area that suddenly appears in the foreground of the visual interface. Pop-up can be initiated by single or double tap or can simply be timed to occur. A pop-up window should be smaller than the background window or interface; otherwise, its a replacement interface.";
+        label.Text = "A pop-up is a graphical user interface display area that suddenly appears in the foreground of the visual interface. The pop-up can be initiated by a single or double tap or can be timed to occur. A pop-up window should be smaller than the background window or interface; otherwise, it's a replacement interface.";
         label.TextColor = Colors.Black;
         label.FontSize = 14;
         label.FontFamily = "Roboto";
@@ -541,7 +541,7 @@ Download the entire source code from GitHub [here](https://github.com/Syncfusion
 
 ### Display popup when interacting with a switch
 
-[SfPopup.IsOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_IsOpen) is a bindable property and hence can be binded to any property and based on its value the popup will open or close. In the below code example, we have binded the `IsOpen` property with the `IsToggled` property of the the switch and the popup will be opened or closed as the switch toggles.
+[SfPopup.IsOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_IsOpen) is a bindable property and hence can be bind to any property and based on its value the popup will open or close. In the following code example, we have bound the `IsOpen` property with the `IsToggled` property of the switch, and the popup will be opened or closed as the switch toggles.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}
