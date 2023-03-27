@@ -287,7 +287,7 @@ The `SfPopup` allows opening it in the `CellTapped` event of the `SfDataGrid`.
     <Grid>
       <sfDatagrid:SfDataGrid x:Name="dataGrid"
                              ItemsSource="{Binding OrdersInfo}"
-                             CellTapped="DataGrid_CellTapped"    
+                             CellTapped="OnDataGridCellTapped"    
                              ColumnWidthMode="Fill">
       </sfDatagrid:SfDataGrid>
       <sfPopup:SfPopup x:Name="sfPopup" 
@@ -325,7 +325,7 @@ public partial class MainPage : ContentPage
     dataGrid = new SfDataGrid();
     viewModel = new ViewModel();
     dataGrid.ItemsSource = viewModel.OrdersInfo;
-    dataGrid.CellTapped += DataGrid_CellTapped;
+    dataGrid.CellTapped += OnDataGridCellTapped;
     dataGrid.ColumnWidthMode = ColumnWidthMode.Fill;
 
     sfPopup = new SfPopup();
@@ -350,7 +350,7 @@ public partial class MainPage : ContentPage
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-private void DataGrid_CellTapped(object sender, Syncfusion.Maui.DataGrid.DataGridCellTappedEventArgs e)
+private void OnDataGridCellTapped(object sender, Syncfusion.Maui.DataGrid.DataGridCellTappedEventArgs e)
 {
   sfPopup.Show();
 }
@@ -381,7 +381,7 @@ The `SfPopup` allows opening it in the `ItemTapped` event of the `SfListView`.
       <sfListView:SfListView x:Name="listView" ItemSize="56"
                              ItemsSource="{Binding Items}" 
                              SelectionMode="None"
-                             ItemTapped="ListView_ItemTapped">
+                             ItemTapped="OnListViewItemTapped">
         <sfListView:SfListView.ItemTemplate>
           <DataTemplate>
             <Grid x:Name="grid">
@@ -505,7 +505,7 @@ public partial class MainPage : ContentPage
     listView.ItemsSource = viewModel.Items;
     listView.ItemSize = 56;
     listView.SelectionMode = Syncfusion.Maui.ListView.SelectionMode.None;
-    listView.ItemTapped += ListView_ItemTapped;
+    listView.ItemTapped += OnListViewItemTapped;
     sfPopup = new SfPopup();
     sfPopup.WidthRequest = 220;
     sfPopup.HeightRequest = 120; ;
@@ -528,7 +528,7 @@ public partial class MainPage : ContentPage
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-private void ListView_ItemTapped(object sender, Syncfusion.Maui.ListView.ItemTappedEventArgs e)
+private void OnListViewItemTapped(object sender, Syncfusion.Maui.ListView.ItemTappedEventArgs e)
 {
   sfPopup.Show();
 }
