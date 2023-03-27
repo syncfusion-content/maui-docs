@@ -427,7 +427,7 @@ namespace GettingStarted
 
 ### Set custom blur intensity
 
-The SfPopup allows customization of the blur effect by setting the `BlurIntensity` property to `PopupBlurIntensity.Custom` and the [BlurRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_BlurRadius), which adjusts the blur effect according to the specified value.
+The SfPopup allows customization of the blur effect by setting the `BlurIntensity` property to [Custom](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupBlurIntensity.html#Syncfusion_Maui_Popup_PopupBlurIntensity_Custom) and the [BlurRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_BlurRadius), which adjusts the blur effect according to the specified value.
 
 {% tabs %}
 
