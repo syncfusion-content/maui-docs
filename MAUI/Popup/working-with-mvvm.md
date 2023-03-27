@@ -9,9 +9,9 @@ documentation: ug
 
 # Working with MVVM in MAUI Popup (SfPopup)
 
-`SfPopup` can be used in MVVM architecture applications easily. In the below example `SfPopup.IsOpen` property is bound to a property in the ViewModel based on which the popup is opened or closed. Refer the below code example to display popup in MVVM.
+`SfPopup` can be used in MVVM architecture applications easily. In the below example `SfPopup.IsOpen` property is bound to a property in the `ViewModel` based on which the popup is opened or closed. Refer the below code example to display popup in MVVM.
 
-In the below code snippet, note that the Binding context is set for the page and the property (DisplayPopup) of the ViewModel is bound to the `SfPopup.IsOpen`.
+In the below code snippet, note that the BindingContext is set for the page and the property (DisplayPopup) of the ViewModel is bound to the `SfPopup.IsOpen`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="13 15" %}
@@ -29,7 +29,7 @@ In the below code snippet, note that the Binding context is set for the page and
                     VerticalOptions="Start" HorizontalOptions="Center" 
                     Command="{Binding OpenPopupCommand}" />
             <sfPopup:SfPopup x:Name="sfPopup"
-                             IsOpen="{Binding DisplayPopup}">
+                             IsOpen="{Binding IsOpen}">
             </sfPopup:SfPopup>
         </StackLayout>
     </ContentPage.Content>
@@ -41,30 +41,30 @@ In the below code snippet, note that the Binding context is set for the page and
 {% highlight c# tabtitle="ViewModel.cs" %}
 public class ViewModel : INotifyPropertyChanged
 {
-    private bool displayPopup;
+    private bool isOpen;
     public ICommand OpenPopupCommand { get; set; }
 
-    public bool DisplayPopup
+    public bool IsOpen
     {
         get
         {
-            return displayPopup;
+            return isOpen;
         }
         set
         {
-            displayPopup = value;
-            RaisePropertyChanged("DisplayPopup");
+            isOpen = value;
+            RaisePropertyChanged("IsOpen");
         }
     }
 
     public ViewModel()
     {
-        OpenPopupCommand = new Command(OpenPopup);
+        OpenPopupCommand = new Command(OnOpenPopup);
     }
 
-    private void OpenPopup()
+    private void OnOpenPopup()
     {
-        DisplayPopup = true;
+        IsOpen = true;
     }
 
     #region INotifyPropertyChanged
@@ -166,7 +166,7 @@ The below code snippet shows how to consume the previously created SfPopup page 
                         Command="{Binding LoginCommand}" HorizontalOptions="Center" />
             </Grid>      
             <local:PopupPage x:Name="popup" 
-                             IsOpen="{Binding OpenPopup}">                         
+                             IsOpen="{Binding IsOpen}">                         
             </local:PopupPage>
         </StackLayout>
     </ContentPage.Content>
@@ -225,13 +225,13 @@ public class ViewModel : INotifyPropertyChanged
             OnPropertyChanged(nameof(Password));
         }
     }
-    public bool OpenPopup
+    public bool IsOpen
     {
         get { return isOpen; }
         set
         {
             isOpen = value;
-            OnPropertyChanged(nameof(OpenPopup));
+            OnPropertyChanged(nameof(IsOpen));
         }
     }
 
@@ -239,17 +239,17 @@ public class ViewModel : INotifyPropertyChanged
 
     public ViewModel()
     {
-        LoginCommand = new Command(Login);
+        LoginCommand = new Command(OnLogin);
     }
 
     // Executed when the login button is clicked.
-    private void Login()
+    private void OnLogin()
     {
         // You can write your set of codes that needs to be executed.
         if ((UserName != "Syncfusion") || (Password != "12345"))
         {
             // If credentials are incorrect show the error message as popup.
-            OpenPopup = true;
+            IsOpen = true;
         }
     }
 
