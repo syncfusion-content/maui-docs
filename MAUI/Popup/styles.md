@@ -9,7 +9,7 @@ documentation: ug
 
 # Styles in .NET MAUI Popup (SfPopup)
 
-The SfPopup applies style to all of its elements by using the [SfPopup.PopupStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html) property.
+The SfPopup applies style to all of its elements by using the [PopupStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html) property.
 
 ## Styling popup header
 
@@ -361,7 +361,7 @@ public partial class MainPage : ContentPage
 
 ### Blurred background
 
-The SfPopup allows blurring of the background using the [SfPopup.OverlayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_OverlayMode) and [SfPopup.PopupStyle.BlurIntensity](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_BlurIntensity) properties respectively.
+The SfPopup allows blurring of the background using the [OverlayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_OverlayMode) and [BlurIntensity](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_BlurIntensity) properties respectively.
 
 {% tabs %}
 
@@ -427,7 +427,7 @@ namespace GettingStarted
 
 ### Set custom blur intensity
 
-The SfPopup allows customization of the blur effect by setting the `SfPopup.PopupStyle.BlurIntensity` property to `PopupBlurIntensity.Custom` and the [SfPopup.PopupStyle.BlurRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_BlurRadius), which adjusts the blur effect according to the specified value.
+The SfPopup allows customization of the blur effect by setting the `BlurIntensity` property to `PopupBlurIntensity.Custom` and the [BlurRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_BlurRadius), which adjusts the blur effect according to the specified value.
 
 {% tabs %}
 
