@@ -16,7 +16,7 @@ Localization is the process of translating the application resources into differ
 Application culture can be changed by setting `CurrentUICulture.` in `App.xaml.cs` file.
 
 {% tabs %}
-{% highlight c# tabtitle="App.xaml.cs" hl_lines="1 2 9 14" %}
+{% highlight c# tabtitle="App.xaml.cs" hl_lines="1 2 9 15" %}
 
 using Syncfusion.Maui.Charts;
 using System.Resources;
@@ -26,21 +26,21 @@ public partial class App : Application
 	public App()
 	{
 		InitializeComponent();
-		CultureInfo.CurrentUICulture = new CultureInfo("fr-FR");
-      // ResXPath => Full path of the resx file; For example : 
-      //SfCartesianChartResources.ResourceManager = new ResourceManager
-      // ("CartesianChartSample.Resources.SfCartesianChart", Application.Current.GetType().Assembly);
-
-		SfCartesianChartResources.ResourceManager = new ResourceManager(ResXPath, Application.Current.GetType().Assembly);
-	   MainPage = new MainPage();
+CultureInfo.CurrentUICulture = new CultureInfo("fr-FR");
+// ResXPath => Full path of the resx file; For example : 
+//SfCartesianChartResources.ResourceManager = new ResourceManager
+// ("CartesianChartSample.Resources.SfCartesianChart", Application.Current.GetType().Assembly);
+        
+var ResXPath= "CartesianChartSample.Resources.SfCartesianChart";
+SfCartesianChartResources.ResourceManager = new ResourceManager(ResXPath, Application.Current.GetType().Assembly);
+MainPage = new MainPage();
 	}
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-N>
-The required `resx` files with `Build Action` as `EmbeddedResource` (File name should contain culture code) into the `Resources` folder.
+N> The required `resx` files with `Build Action` as `EmbeddedResource` (File name should contain culture code) into the `Resources` folder.
 
 ## Localize application level
 
@@ -61,3 +61,6 @@ To localize the `Chart` based on `CurrentUICulture` using `resource` files, foll
    5. Add the Name/Value pair in Resource Designer of `SfCartesianChart.fr-FR.resx` file and change its corresponding value to corresponding culture.
 
    ![shows-the-added-resource-file-name-value-pair-in-the-resource-designer-in-maui-chart](Localization_images/shows-the-added-resource-file-name-value-pair-in-the-resource-designer-in-maui-chart.png)
+
+Here, you can see how localization was performed for the tooltip.
+   ![example-for-localization](Localization_images/example_for_localization.png)
