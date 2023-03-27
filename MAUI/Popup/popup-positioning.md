@@ -264,7 +264,7 @@ public class ViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![Displaying a .NET MAUI Popup at Relative position using MVVM.](Images/popup-positioning/maui-popup-relative-positioning-in-mvvm.png)
+![Relative positioning of .NET MAUI Popup in MVVM](Images/popup-positioning/maui-popup-relative-positioning-in-mvvm.png)
 
 ## How to
 
