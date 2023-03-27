@@ -662,7 +662,7 @@ public partial class MainPage : ContentPage
 
 ### Show listView as a popup
 
-The `SfPopup` allows loading the `SfListView` as a content of the popup.
+The `SfPopup` allows loading the `SfListView` as the content of the popup.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
