@@ -91,7 +91,7 @@ You can customize the calendar month view cell by using the `MonthView` property
 
 ![Month view Customization in .NET MAUI Calendar.](images/customization/maui-month-view-customization.png)
 
-*    **Special day predicate** - The special day Predicate decides whether the month cell date is a special date or not in the calendar.You can add special date to the `Calendar` by using the `SpecialDayPredicate` property, and you can also customize the special day text style and background of the `Calendar` by using the [SpecialDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_SpecialDatesTextStyle) and [SpecialDatesBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_SpecialDatesBackground) properties of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html). You can customize the special day with different icons such as dots, hearts, diamonds, stars, and bells in the `MonthView` and also customize the icon color. If you do not wish to add any icon details, you can set them to be transparent.
+*    **Special day predicate** - The special day predicate decides whether the month cell date is a special date or not in the calendar.You can add special date to the `Calendar` by using the `SpecialDayPredicate` property, and you can also customize the special day text style and background of the `Calendar` by using the [SpecialDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_SpecialDatesTextStyle) and [SpecialDatesBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_SpecialDatesBackground) properties of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html). You can customize the special day with different icons such as dots, hearts, diamonds, stars, and bells in the `MonthView` and also customize the icon color. If you do not wish to add any icon details, you can set them to be transparent.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -374,6 +374,10 @@ public class MonthTemplate
         this.template = this.circleTemplate;
     }
 }
+
+{% endhighlight %}
+{% highlight c# tabtitle="Value converter.cs" %}
+
 internal class DateToStrokeConverter : IValueConverter
 {
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
@@ -434,7 +438,7 @@ You can customize the month cell appearance using the `CellTemplate` property of
     </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MonthCellTemplateSelector.cs" %}
+{% highlight c# tabtitle="TemplateSelector.cs" %}
 
 public class MonthCellTemplateSelector : DataTemplateSelector
 {
@@ -543,6 +547,10 @@ public class DecadeTemplate
         this.template = this.circleTemplate;
     }
 }
+
+{% endhighlight %}
+{% highlight c# tabtitle="Value converter.cs" %}
+
 internal class DateToStrokeConverter : IValueConverter
 {
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
@@ -603,7 +611,7 @@ You can customize the month cell appearance by using the `CellTemplate` property
     </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="YearCellTemplateSelector.cs" %}
+{% highlight c# tabtitle="TemplateSelector.cs" %}
 
 public class YearCellTemplateSelector : DataTemplateSelector
 {
