@@ -1,7 +1,7 @@
 ---
 layout: post
 title: MVVM in .NET MAUI Popup control | Syncfusion
-description: Learn here all about MVVM support in Syncfusion .NET MAUI Popup (SfPopup) control, its elements and more.
+description: Learn here all about MVVM support in the Syncfusion .NET MAUI Popup (SfPopup) control, its elements, and more.
 platform: MAUI
 control: SfPopup
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # Working with MVVM in MAUI Popup (SfPopup)
 
-`SfPopup` can be used in MVVM architecture applications easily. In the below example [SfPopup.IsOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_IsOpen) property is bound to a property in the `ViewModel` based on which the popup is opened or closed. Refer the below code example to display popup in MVVM.
+`SfPopup` can be used in the MVVM architecture applications easily. In the below example, the [SfPopup.IsOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_IsOpen) property is bound to a property in the `ViewModel` based on which the popup is opened or closed. Refer to the following code example to display the popup in MVVM.
 
-In the below code snippet, note that the BindingContext is set for the page and the property (IsOpen) of the ViewModel is bound to the [SfPopup.IsOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_IsOpen).
+In the following code sample, note that the BindingContext is set for the page, and the property (IsOpen) of the ViewModel is bound to the [SfPopup.IsOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_IsOpen).
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="13 15" %}
@@ -94,9 +94,9 @@ public class ViewModel : INotifyPropertyChanged
 
 ## How to use MAUI popup as a page?
 
-To use `SfPopup` as a page, create a new XAML file with `SfPopup` in it. You can use this XAML file instance (SfPopup view), across any file in your project wherever you may want to display a popup, thus allowing you to reuse the same instance of the popup where you can modify or change the required properties alone based on the current context to be displayed.
+To use the `SfPopup` as a page, create a new XAML file with `SfPopup`. You can use this XAML file instance (SfPopup view) across any file in your project wherever you may want to display a popup, thus allowing you to re-use the same instance of the popup where you can modify or change the required properties alone based on the current context to be displayed.
 
-The below code snippet shows how to create a popup in XAML file. We have created a simple popup to show error message popup to user on a unsuccessful login.
+The following code sample shows how to create a popup in a XAML file. We have created a simple popup to display an error message popup to users on an unsuccessful login.
 
 {% tabs %}
 {% highlight xaml tabtitle="PopupPage.xaml" %}
@@ -134,7 +134,7 @@ public partial class PopupPage : SfPopup
 {% endhighlight %}
 {% endtabs %}
 
-The below code snippet shows how to consume the previously created SfPopup page from inside a different content page.
+The following code sample shows how to consume the previously created SfPopup page from inside a different content page.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="29" %}
@@ -271,7 +271,7 @@ public class ViewModel : INotifyPropertyChanged
 
 This can be done by binding the text property of the entry to a property in the view model class.
 
-Refer to the following code example to retrieve text value from entry control in MAUI popup content template.
+Refer to the following code example to retrieve text value from entry control in the MAUI popup content template.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
