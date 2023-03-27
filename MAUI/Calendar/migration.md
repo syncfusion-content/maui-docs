@@ -19,7 +19,7 @@ To make the migration from the [Xamarin SfCalendar](https://www.syncfusion.com/x
 <th>.NET MAUI SfCalendar</th></tr>
 <tr>
 <td>Syncfusion.SfCalendar.XForms</td>
-<td>Syncfusion.Maui.SfCalendar</td></tr>
+<td>Syncfusion.Maui.Calendar</td></tr>
 </table>
 
 N> The selection-based `.NET MAUI SfCalendar` does not manage appointments like the `Xamarin SfCalendar` does. If you require appointment/events management use `.NET MAUI SfScheduler`.
