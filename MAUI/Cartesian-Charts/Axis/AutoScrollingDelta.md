@@ -9,9 +9,9 @@ documentation: ug
 
 # Auto scrolling in .NET MAUI Chart
 
-The auto-scrolling of [SfCartesianChart]() ensures that the specified range of data is always visible in the chart. It always shows the recently added data points at the end, and scrolling will be reset to the end of the range whenever a new point is added. The [AutoScrollingDelta]() property of the chart axis can be used to set the number of data points to be always visible in the chart.
+The auto-scrolling of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html) ensures that the specified range of data is always visible in the chart. It always shows the recently added data points at the end, and scrolling will be reset to the end of the range whenever a new point is added. The [AutoScrollingDelta](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_AutoScrollingDelta) property of the chart axis can be used to set the number of data points to be always visible in the chart.
 
-By adding [ChartZoomPanBehavior]() to the chart, you can scroll to see the previous data points.
+By adding [ChartZoomPanBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartZoomPanBehavior.html) to the chart, you can scroll to see the previous data points.
 
 {% tabs %}
 
@@ -53,7 +53,7 @@ By adding [ChartZoomPanBehavior]() to the chart, you can scroll to see the previ
 
 ## AutoScrollingMode
 
-[AutoScrollingMode]() property can be used to determine whether the axis should be scrolled from start position or end position. The default value of [AutoScrollingMode]() is End.
+[AutoScrollingMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_AutoScrollingMode) property can be used to determine whether the axis should be scrolled from start position or end position. The default value of [AutoScrollingMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_AutoScrollingMode) is End.
 
 {% tabs %}
 
@@ -86,7 +86,7 @@ By adding [ChartZoomPanBehavior]() to the chart, you can scroll to see the previ
 
 ## AutoScrollingDeltaType
 
-In [DateTimeAxis](), you can apply auto scrolling delta value in [Years](), [Months](), [Days](), [Hours](), [Minutes](), [Seconds]() and [Milliseconds]() by setting [AutoScrollingDeltaType]() property. The default value of this property is [Auto](), and the delta will be calculated automatically based on range.
+In [DateTimeAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html), you can apply auto scrolling delta value in [Years](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeIntervalType.html#Syncfusion_Maui_Charts_DateTimeIntervalType_Years), [Months](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeIntervalType.html#Syncfusion_Maui_Charts_DateTimeIntervalType_Months), [Days](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeIntervalType.html#Syncfusion_Maui_Charts_DateTimeIntervalType_Days), [Hours](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeIntervalType.html#Syncfusion_Maui_Charts_DateTimeIntervalType_Hours), [Minutes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeIntervalType.html#Syncfusion_Maui_Charts_DateTimeIntervalType_Minutes), [Seconds](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeIntervalType.html#Syncfusion_Maui_Charts_DateTimeIntervalType_Seconds) and [Milliseconds](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeIntervalType.html#Syncfusion_Maui_Charts_DateTimeIntervalType_Milliseconds) by setting [AutoScrollingDeltaType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html#Syncfusion_Maui_Charts_DateTimeAxis_AutoScrollingDeltaType) property. The default value of this property is [Auto](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeIntervalType.html#Syncfusion_Maui_Charts_DateTimeIntervalType_Auto), and the delta will be calculated automatically based on range.
 
 {% tabs %}
 
