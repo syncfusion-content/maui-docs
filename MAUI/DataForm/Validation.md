@@ -60,7 +60,8 @@ The supported validation modes are as follows:
 * Manual
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 6" %}
+
 <ContentPage 
 ...
 xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
@@ -71,9 +72,21 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 </ContentPage>
 
 {% endhighlight %}
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 11" %}
 
-this.dataForm.ValidationMode = DataFormValidationMode.LostFocus;
+using Syncfusion.Maui.DataForm;
+. . .
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfDataForm dataForm = new SfDataForm();
+        this.Content = dataForm;
+        this.dataForm.ValidationMode = DataFormValidationMode.LostFocus;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -199,14 +212,17 @@ The data form supports customizing the style of both error and valid message lab
 The error label style can be customized by changing the [ErrorLabelTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ErrorLabelTextStyle) property of the [SfDataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html).
 
 {% tabs %}
-{% highlight XAML %}
-
-<dataForm:SfDataForm
-    x:Name="dataForm">
-    <dataForm:SfDataForm.ErrorLabelTextStyle>
-        <dataForm:DataFormTextStyle FontSize="10" FontAttributes="Italic" TextColor="Violet" FontFamily="Roboto"/>
-    </dataForm:SfDataForm.ErrorLabelTextStyle>
-</dataForm:SfDataForm>
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 6 7" %}
+<ContentPage 
+...
+xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
+    <dataForm:SfDataForm
+        x:Name="dataForm">
+        <dataForm:SfDataForm.ErrorLabelTextStyle>
+            <dataForm:DataFormTextStyle FontSize="10" FontAttributes="Italic" TextColor="Violet" FontFamily="Roboto"/>
+        </dataForm:SfDataForm.ErrorLabelTextStyle>
+    </dataForm:SfDataForm>
+</ContentPage>
 
 {% endhighlight %}
 {% endtabs %}
@@ -214,26 +230,39 @@ The error label style can be customized by changing the [ErrorLabelTextStyle](ht
 Also, customize the error label style for each editor using the [ErrorLabelTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_ErrorLabelTextStyle) property of the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html).
 
 {% tabs %}
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 11" %}
 
-this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+using Syncfusion.Maui.DataForm;
+. . .
 
-private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+public partial class MainPage : ContentPage
 {
-    if (e.DataFormItem != null)
+    public MainPage()
     {
-        if (e.DataFormItem.FieldName == "FirstName")
+        InitializeComponent();
+        SfDataForm dataForm = new SfDataForm();
+        this.Content = dataForm;
+        this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+    }
+
+    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+    {
+        if (e.DataFormItem != null)
         {
-            e.DataFormItem.ErrorLabelTextStyle = new DataFormTextStyle
+            if (e.DataFormItem.FieldName == "FirstName")
             {
-                TextColor = Colors.DarkSeaGreen,
-                FontSize = 8,
-                FontAttributes = FontAttributes.Italic,
-                FontFamily = "Roboto",
-            };
+                e.DataFormItem.ErrorLabelTextStyle = new DataFormTextStyle
+                {
+                    TextColor = Colors.DarkSeaGreen,
+                    FontSize = 8,
+                    FontAttributes = FontAttributes.Italic,
+                    FontFamily = "Roboto",
+                };
+            }
         }
     }
 }
+
 
 {% endhighlight %}
 {% endtabs %}
@@ -245,14 +274,18 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 The valid message label style can be customized by changing the [ValidMessageLabelTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ValidMessageLabelTextStyle) property of the [SfDataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html).
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 6 7" %}
 
-<dataForm:SfDataForm
-    x:Name="dataForm">
-    <dataForm:SfDataForm.ValidMessageLabelTextStyle>
-        <dataForm:DataFormTextStyle FontSize="10" FontAttributes="Italic" TextColor="Violet" FontFamily="Roboto"/>
-    </dataForm:SfDataForm.ValidMessageLabelTextStyle>
-</dataForm:SfDataForm>
+<ContentPage 
+...
+xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
+    <dataForm:SfDataForm
+        x:Name="dataForm">
+        <dataForm:SfDataForm.ValidMessageLabelTextStyle>
+            <dataForm:DataFormTextStyle FontSize="10" FontAttributes="Italic" TextColor="Violet" FontFamily="Roboto"/>
+        </dataForm:SfDataForm.ValidMessageLabelTextStyle>
+    </dataForm:SfDataForm>
+</ContentPage>
 
 {% endhighlight %}
 {% endtabs %}
@@ -260,23 +293,35 @@ The valid message label style can be customized by changing the [ValidMessageLab
 Also, customize the valid message label style for each editor using the [ValidMessageLabelTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_ValidMessageLabelTextStyle) property of the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html).
 
 {% tabs %}
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 11" %}
 
-this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+using Syncfusion.Maui.DataForm;
+. . .
 
-private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+public partial class MainPage : ContentPage
 {
-    if (e.DataFormItem != null)
+    public MainPage()
     {
-        if (e.DataFormItem.FieldName == "FirstName")
+        InitializeComponent();
+        SfDataForm dataForm = new SfDataForm();
+        this.Content = dataForm;
+        this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+    }
+
+    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+    {
+        if (e.DataFormItem != null)
         {
-            e.DataFormItem.ValidMessageLabelTextStyle = new DataFormTextStyle
+            if (e.DataFormItem.FieldName == "FirstName")
             {
-                TextColor = Colors.DarkSeaGreen,
-                FontSize = 8,
-                FontAttributes = FontAttributes.Italic,
-                FontFamily = "Roboto",
-            };
+                e.DataFormItem.ValidMessageLabelTextStyle = new DataFormTextStyle
+                {
+                    TextColor = Colors.DarkSeaGreen,
+                    FontSize = 8,
+                    FontAttributes = FontAttributes.Italic,
+                    FontFamily = "Roboto",
+                };
+            }
         }
     }
 }

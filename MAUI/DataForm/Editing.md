@@ -26,7 +26,7 @@ The supported commit modes are as follows:
 If the commit mode is [LostFocus](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormCommitMode.html#Syncfusion_Maui_DataForm_DataFormCommitMode_LostFocus), the value is committed when the editor loses its focus. By default, the DataForm [CommitMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_CommitMode) is `LostFocus`.
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 6" %}
 <ContentPage 
 ...
  xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
@@ -36,8 +36,22 @@ If the commit mode is [LostFocus](https://help.syncfusion.com/cr/maui/Syncfusion
     </dataForm:SfDataForm>
 </ContentPage>
 {% endhighlight %}
-{% highlight C# %}
-this.dataForm.CommitMode = DataFormCommitMode.LostFocus;
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 11" %}
+
+using Syncfusion.Maui.DataForm;
+. . .
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfDataForm dataForm = new SfDataForm();
+        this.Content = dataForm;
+        this.dataForm.CommitMode = DataFormCommitMode.LostFocus;
+    }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -46,7 +60,7 @@ this.dataForm.CommitMode = DataFormCommitMode.LostFocus;
 If the commit mode is [PropertyChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormCommitMode.html#Syncfusion_Maui_DataForm_DataFormCommitMode_PropertyChanged), the value will be committed immediately when it is changed.
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 6" %}
 <ContentPage 
 ...
  xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
@@ -56,8 +70,22 @@ If the commit mode is [PropertyChanged](https://help.syncfusion.com/cr/maui/Sync
     </dataForm:SfDataForm>
 </ContentPage>
 {% endhighlight %}
-{% highlight C# %}
-this.dataForm.CommitMode = DataFormCommitMode.PropertyChanged;
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 11" %}
+
+using Syncfusion.Maui.DataForm;
+. . .
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfDataForm dataForm = new SfDataForm();
+        this.Content = dataForm;
+        this.dataForm.CommitMode = DataFormCommitMode.PropertyChanged;
+    }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -66,7 +94,7 @@ this.dataForm.CommitMode = DataFormCommitMode.PropertyChanged;
 If the commit mode is [Manual](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormCommitMode.html#Syncfusion_Maui_DataForm_DataFormCommitMode_Manual), the value should be committed manually by calling the [SfDataForm.Commit](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_Commit) method.
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 6" %}
 <ContentPage 
 ...
  xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
@@ -76,8 +104,22 @@ If the commit mode is [Manual](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
     </dataForm:SfDataForm>
 </ContentPage>
 {% endhighlight %}
-{% highlight C# %}
-this.dataForm.CommitMode = DataFormCommitMode.Manual;
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 11" %}
+
+using Syncfusion.Maui.DataForm;
+. . .
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfDataForm dataForm = new SfDataForm();
+        this.Content = dataForm;
+        this.dataForm.CommitMode = DataFormCommitMode.Manual;
+    }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -139,7 +181,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/t
 The `DataForm` can be disabled by setting the [IsReadOnly](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_IsReadOnly) property of the data form.
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 6" %}
 <ContentPage 
 ...
 xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
@@ -149,8 +191,22 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
     </dataForm:SfDataForm>
 </ContentPage>
 {% endhighlight %}
-{% highlight C# %}
-this.dataForm.IsReadOnly = true;
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 11" %}
+
+using Syncfusion.Maui.DataForm;
+. . .
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfDataForm dataForm = new SfDataForm();
+        this.Content = dataForm;
+        this.dataForm.IsReadOnly = true;
+    }
+}
+
 {% endhighlight %}
 {% endtabs %}
 

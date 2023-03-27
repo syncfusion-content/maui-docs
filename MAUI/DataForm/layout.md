@@ -30,7 +30,7 @@ When the label position is Top, the linear layout is shown as follows:
 By default, the data form arranges one data field per row. It is possible to have more than one data field per row by setting the [ColumnCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ColumnCount) property which provides a grid-like layout for the data form. The column order of the data form field in a row can be changed using the [ItemsOrderInRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_ItemsOrderInRow).
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 6" %}
 <ContentPage 
 ...
 xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
@@ -40,9 +40,21 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
     </dataForm:SfDataForm>
 </ContentPage>
 {% endhighlight %}
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 10" %}
 
-this.dataForm.ColumnCount = 2;
+using Syncfusion.Maui.DataForm;
+. . .
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfDataForm dataForm = new SfDataForm();
+        this.Content = dataForm;
+        this.dataForm.ColumnCount = 2;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -98,7 +110,7 @@ The label can be positioned either top or left side of the editor. By using the 
 By default, the label will be positioned at left side of the editor.
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 6 8" %}
 <ContentPage 
 ...
 xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
@@ -112,9 +124,21 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 </ContentPage>
 
 {% endhighlight %}
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 11" %}
 
-this.dataForm.DefaultLayoutSettings.LabelPosition = DataFormLabelPosition.Top;
+using Syncfusion.Maui.DataForm;
+. . .
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfDataForm dataForm = new SfDataForm();
+        this.Content = dataForm;
+        this.dataForm.DefaultLayoutSettings.LabelPosition = DataFormLabelPosition.Top;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -136,20 +160,32 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 </ContentPage>
 
 {% endhighlight %}
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 11" %}
 
-this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+using Syncfusion.Maui.DataForm;
+. . .
 
-private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+public partial class MainPage : ContentPage
 {
-    if (e.DataFormItem != null)
+    public MainPage()
     {
-        if (e.DataFormItem.FieldName == "Name")
+        InitializeComponent();
+        SfDataForm dataForm = new SfDataForm();
+        this.Content = dataForm;
+        this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+    }
+
+    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+    {
+        if (e.DataFormItem != null)
         {
-            e.DataFormItem.DefaultLayoutSettings = new DataFormDefaultLayoutSettings
+            if (e.DataFormItem.FieldName == "Name")
             {
-                LabelPosition = DataFormLabelPosition.Top,
-            };
+                e.DataFormItem.DefaultLayoutSettings = new DataFormDefaultLayoutSettings
+                {
+                    LabelPosition = DataFormLabelPosition.Top,
+                };
+            }
         }
     }
 }
@@ -239,7 +275,7 @@ The label and Editor are specified with proportionate values such as `0.4*` and 
 Additionally, Specify a defined width for the editor and label such as `300, 400,` and the [DataFormItemLength.UnitType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItemLength.html#Syncfusion_Maui_DataForm_DataFormItemLength_UnitType) is `Absolute`.
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 6 8 9" %}
 <ContentPage 
 ...
 xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
@@ -253,16 +289,41 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
     </dataForm:SfDataForm>
 </ContentPage>
 {% endhighlight %}
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 11 12" %}
 
-this.dataForm.DefaultLayoutSettings.LabelWidth = new DataFormItemLength(300, DataFormItemLengthUnitType.Absolute);
-this.dataForm.DefaultLayoutSettings.EditorWidth = new DataFormItemLength(400, DataFormItemLengthUnitType.Absolute);
+using Syncfusion.Maui.DataForm;
+. . .
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfDataForm dataForm = new SfDataForm();
+        this.Content = dataForm;
+        this.dataForm.DefaultLayoutSettings.LabelWidth = new DataFormItemLength(300, DataFormItemLengthUnitType.Absolute);
+        this.dataForm.DefaultLayoutSettings.EditorWidth = new DataFormItemLength(400, DataFormItemLengthUnitType.Absolute);
+    }
+}
 
 {% endhighlight %}
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 11 12" %}
 
-this.dataForm.DefaultLayoutSettings.LabelWidth = new DataFormItemLength(0.3, DataFormItemLengthUnitType.Star);
-this.dataForm.DefaultLayoutSettings.EditorWidth = new DataFormItemLength(0.7, DataFormItemLengthUnitType.Star);
+using Syncfusion.Maui.DataForm;
+. . .
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfDataForm dataForm = new SfDataForm();
+        this.Content = dataForm;
+        this.dataForm.DefaultLayoutSettings.LabelWidth = new DataFormItemLength(0.3, DataFormItemLengthUnitType.Star);
+        this.dataForm.DefaultLayoutSettings.EditorWidth = new DataFormItemLength(0.7, DataFormItemLengthUnitType.Star);
+    }
+}
+
 
 {% endhighlight %}
 {% endtabs %}

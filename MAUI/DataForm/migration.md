@@ -34,7 +34,7 @@ To initialize the control, import the DataForm namespace and initialize the `SfD
 <td>
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage 
 ...
 xmlns:dataForm="clr-namespace:Syncfusion.XForms.DataForm;assembly=Syncfusion.SfDataForm.XForms">
@@ -42,7 +42,7 @@ xmlns:dataForm="clr-namespace:Syncfusion.XForms.DataForm;assembly=Syncfusion.SfD
 </ContentPage>
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 using Syncfusion.XForms.DataForm;
 ...
@@ -57,7 +57,7 @@ this.Content = dataForm;
 <td>
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
 <ContentPage
 ...
@@ -67,7 +67,7 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 using Syncfusion.Maui.DataForm;
 …
@@ -246,7 +246,7 @@ this.Content = dataForm;
 <th>Description</th></tr>
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage 
 ...
 xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
@@ -254,7 +254,7 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 </ContentPage>
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 using Syncfusion.Maui.DataForm;
 ...
@@ -266,7 +266,7 @@ this.dataForm.ColumnCount = 2;
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# tabtitle="DataModel.cs" %}
 
 public class DataModel
 {
@@ -378,7 +378,7 @@ public class DataModel
 The properties of the `Xamarin SfDataForm` [LabelStyle](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.DataForm.LabelStyle.html) are grouped to the [DataFormTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormTextStyle.html) in `.NET MAUI SfDataForm`.
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
 <ContentPage
 ...
@@ -397,7 +397,7 @@ xmlns:DataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 using Syncfusion.Maui.DataForm;
 …
@@ -414,7 +414,7 @@ this.dataForm.LabelTextStyle = new DataFormTextStyle()
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# tabtitle="DataModel.cs" %}
 
 public class DataModel
 {

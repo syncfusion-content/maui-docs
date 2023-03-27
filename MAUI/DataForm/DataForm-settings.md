@@ -635,7 +635,7 @@ The data form auto generates the editors based on the data type, you can explici
 N> Use the [FieldName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_FieldName) property to bind the editor to the data object property.
 [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event will not be trigger when [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is false.
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
    
 <ContentPage 
             . . . 
@@ -667,7 +667,7 @@ N> Use the [FieldName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataF
 {% endtabs %}
 
 {% tabs %}
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 DataFormViewModel contactInfoViewModel = new DataFormViewModel();
 this.dataForm.DataObject = contactInfoViewModel.ContactDetails; 
@@ -690,7 +690,7 @@ this.dataForm.Items = items;
 {% endtabs %} 
 
 {% tabs %}
-{% highlight C# %}
+{% highlight c# tabtitle="DataFormViewModel.cs" %}
 
 public class DataFormViewModel
 {
@@ -716,7 +716,7 @@ public class DataFormViewModel
 {% endtabs %}
 
 {% tabs %}
-{% highlight C# %}
+{% highlight c# tabtitle="ContactInfo.cs" %}
 
 public class ContactInfo
 {
@@ -813,7 +813,7 @@ this.dataForm.Items.Add(dataFormGroupItem);
 You can add custom editor manually by adding the custom view as an [EditorView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormCustomItem.html#Syncfusion_Maui_DataForm_DataFormCustomItem_EditorView) of [DataFormCustomItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormCustomItem.html). In this case, the editor view will not be generated based on field type and [RegisterEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_RegisterEditor_System_String_Syncfusion_Maui_DataForm_DataFormEditorType_).
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
 <dataForm:SfDataForm x:Name="contactForm"
                     DataObject="{Binding ContactFormModel}" AutoGenerateItems = "False">
