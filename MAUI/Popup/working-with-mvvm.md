@@ -9,9 +9,9 @@ documentation: ug
 
 # Working with MVVM in MAUI Popup (SfPopup)
 
-`SfPopup` can be used in MVVM architecture applications easily. In the below example `SfPopup.IsOpen` property is bound to a property in the `ViewModel` based on which the popup is opened or closed. Refer the below code example to display popup in MVVM.
+`SfPopup` can be used in MVVM architecture applications easily. In the below example [SfPopup.IsOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_IsOpen) property is bound to a property in the `ViewModel` based on which the popup is opened or closed. Refer the below code example to display popup in MVVM.
 
-In the below code snippet, note that the BindingContext is set for the page and the property (DisplayPopup) of the ViewModel is bound to the `SfPopup.IsOpen`.
+In the below code snippet, note that the BindingContext is set for the page and the property (IsOpen) of the ViewModel is bound to the [SfPopup.IsOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_IsOpen).
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="13 15" %}
@@ -88,9 +88,9 @@ public class ViewModel : INotifyPropertyChanged
 
 `SfPopup` provides command support for the popup buttons,
 
- * `SfPopup.AcceptCommand`
+ * [SfPopup.AcceptCommand](https://help.syncfusion.com/maui/popup/popup-events#accept-command)
 
- * `SfPopup.DeclineCommand`
+ * [SfPopup.DeclineCommand](https://help.syncfusion.com/maui/popup/popup-events#decline-command)
 
 ## How to use MAUI popup as a page?
 
