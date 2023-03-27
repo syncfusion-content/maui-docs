@@ -22,7 +22,7 @@ This section explains how to customize the Shimmer control.
 
 ## Fill
 
-The background color of the `SfShimmer` view can be customized by using the `Fill` property. The default value of the `Fill` property is `#F3EDF7`.
+The background of the `SfShimmer` view can be customized by using the `Fill` property. The default value of the `Fill` property is `#F3EDF7`.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
