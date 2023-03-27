@@ -32,8 +32,8 @@ To migrate easier from the Xamarin SfMaskedEdit to [.NET MAUI SfMaskedEntry](htt
 <th>Description</th></tr>
 <tr>
 <td>Xamarin - MaskType <br/> .NET MAUI - MaskedEntryMaskType</td>
-<td> [Text](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.MaskedEdit.MaskType.html#Syncfusion_XForms_MaskedEdit_MaskType_Text),<br/> [RegEx](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.MaskedEdit.MaskType.html#Syncfusion_XForms_MaskedEdit_MaskType_RegEx).</td>
-<td> [Simple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.MaskedEntryMaskType.html#Syncfusion_Maui_Inputs_MaskedEntryMaskType_Simple),<br/> [RegEx](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.MaskedEntryMaskType.html#Syncfusion_Maui_Inputs_MaskedEntryMaskType_RegEx).</td>
+<td> {{'[Text](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.MaskedEdit.MaskType.html#Syncfusion_XForms_MaskedEdit_MaskType_Text)'| markdownify }},<br/> {{'[RegEx](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.MaskedEdit.MaskType.html#Syncfusion_XForms_MaskedEdit_MaskType_RegEx)'| markdownify}}.</td>
+<td> {{'[Simple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.MaskedEntryMaskType.html#Syncfusion_Maui_Inputs_MaskedEntryMaskType_Simple)'| markdownify}},<br/> {{'[RegEx](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.MaskedEntryMaskType.html#Syncfusion_Maui_Inputs_MaskedEntryMaskType_RegEx)'| markdownify}}.</td>
 <td>Gets or sets the type of mask elements.</td></tr>
 
 </table> 
