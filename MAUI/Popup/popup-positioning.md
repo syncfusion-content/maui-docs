@@ -270,7 +270,7 @@ public class ViewModel : INotifyPropertyChanged
 
 ### Load the SfPopup in CellTappedEvent of the SfDataGrid
 
-The `SfPopup` allows opening it in the `CellTapped` event of the `SfDataGrid`.
+The `SfPopup` allows opening it in the [CellTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellTapped) event of the `SfDataGrid`.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="14" %}
@@ -363,7 +363,7 @@ Download the entire source code from GitHub [here](https://github.com/Syncfusion
 
 ### Open SfPopup in ItemTapped event of SfListView
 
-The `SfPopup` allows opening it in the `ItemTapped` event of the `SfListView`.
+The `SfPopup` allows opening it in the [ItemTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTapped) event of the `SfListView`.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="15" %}
@@ -541,7 +541,7 @@ Download the entire source code from GitHub [here](https://github.com/Syncfusion
 
 ### Display popup when interacting with a switch
 
-`SfPopup.IsOpen` is a bindable property and hence can be binded to any property and based on its value the popup will open or close. In the below code example, we have binded the `IsOpen` property with the `IsToggled` property of the the switch and the popup will be opened or closed as the switch toggles.
+[SfPopup.IsOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_IsOpen) is a bindable property and hence can be binded to any property and based on its value the popup will open or close. In the below code example, we have binded the `IsOpen` property with the `IsToggled` property of the the switch and the popup will be opened or closed as the switch toggles.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}
