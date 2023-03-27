@@ -178,6 +178,8 @@ this.Calendar.ShowActionButtons = true;
 {% endhighlight %}  
 {% endtabs %}
 
+![Action buttons in .NET MAUI Calendar.](images/getting-started/maui-action-button.png)
+
 ## Today button
 
 The today button can be displayed at the bottom of the calendar using the `ShowTodayButton` property of the `SfCalendar`, allowing you to quickly navigate from current view to the today view.
@@ -197,3 +199,5 @@ this.Calendar.ShowTodayButton = true;
 
 {% endhighlight %}
 {% endtabs %}
+
+![Today button in .NET MAUI Calendar.](images/getting-started/maui-today-button.png)
