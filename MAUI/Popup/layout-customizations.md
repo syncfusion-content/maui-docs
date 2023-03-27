@@ -11,7 +11,7 @@ documentation: ug
 
 ## Popup appearance mode for footer
 
-The `SfPopup` supports two types of `SfPopup.AppearanceMode`. By default, the `PopupButtonAppearanceMode.OneButton` is set. Change the appearance by using the `SfPopup.AppearanceMode` property.
+The `SfPopup` supports two types of [AppearanceMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_AppearanceMode). By default, the [OneButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupButtonAppearanceMode.html#Syncfusion_Maui_Popup_PopupButtonAppearanceMode_OneButton) is set. Change the appearance by using the `AppearanceMode` property.
 
 The two different appearance modes in the SfPopup are as follows:
 <table>
@@ -26,7 +26,7 @@ The two different appearance modes in the SfPopup are as follows:
 <td>Shows the <code>SfPopup</code> with two buttons (accept & decline buttons) in the footer view.</td></tr>
 </table>
 
-In the following code example, set the `SfPopup.AppearanceMode` property as `OneButton`, which displays only the Accept button in the footer view.
+In the following code example, set the `AppearanceMode` property as `OneButton`, which displays only the Accept button in the footer view.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}
@@ -70,7 +70,7 @@ public partial class MainPage : ContentPage
 
 ![.NET MAUI Popup with accept button](Images/layout-customizations/maui-popup-appearance-mode-one-button.png)
 
-In the following code example, set the `SfPopup.AppearanceMode` property as `TwoButton`, which displays both Accept and Decline buttons in the footer view.
+In the following code example, set the `AppearanceMode` property as [TwoButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupButtonAppearanceMode.html#Syncfusion_Maui_Popup_PopupButtonAppearanceMode_TwoButton), which displays both Accept and Decline buttons in the footer view.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}
@@ -118,7 +118,7 @@ public partial class MainPage : ContentPage
 
 ### Disable header
 
-Display the Popup without a header by using the property `SfPopup.ShowHeader`. The default value is true. Find the code example of the same as follows.
+Display the Popup without a header by using the property [ShowHeader](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_ShowHeader). The default value is true. Find the code example of the same as follows.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}
@@ -163,7 +163,7 @@ public partial class MainPage : ContentPage
 
 ### Enable footer
 
-Display the Popup with the footer by using the `SfPopup.ShowFooter` property. The default value is false. Find the code example of the same as follows.
+Display the Popup with the footer by using the [ShowFooter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_ShowFooter) property. The default value is false. Find the code example of the same as follows.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}
@@ -206,7 +206,7 @@ public partial class MainPage : ContentPage
 
 ## Enable close icon
 
-Show the Popup with a close icon by using the `SfPopup.ShowCloseButton` property. The default value is false. Find the code example of the same as follows. 
+Show the Popup with a close icon by using the [ShowCloseButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_ShowCloseButton) property. The default value is false. Find the code example of the same as follows. 
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}
@@ -249,7 +249,7 @@ public partial class MainPage : ContentPage
 
 ## Customizing popup header
 
-Any view can be added as the header content using the `SfPopup.HeaderTemplate` property. Refer to the following code example in which a label is added as a header content.
+Any view can be added as the header content using the [HeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_HeaderTemplate) property. Refer to the following code example in which a label is added as a header content.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -317,7 +317,7 @@ public partial class MainPage : ContentPage
 
 ### Popup header height
 
-Customize the popup header height using `SfPopup.HeaderHeight` property. Find the code example of the same as follows.
+Customize the popup header height using [HeaderHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_HeaderHeight) property. Find the code example of the same as follows.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}
@@ -358,7 +358,7 @@ public partial class MainPage : ContentPage
 
 ### Popup header title
 
-Change the popup header title using `SfPopup.HeaderTitle` property. Find the code example of the same as follows.
+Change the popup header title using [HeaderTitle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_HeaderTitle) property. Find the code example of the same as follows.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}
@@ -399,7 +399,7 @@ public partial class MainPage : ContentPage
 
 ## Customizing popup footer
 
-Any view can be added as the footer content using the `SfPopup.FooterTemplate` property. Refer to the following code example in which a label is added as a footer content.
+Any view can be added as the footer content using the [FooterTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_FooterTemplate) property. Refer to the following code example in which a label is added as a footer content.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -468,7 +468,7 @@ public partial class MainPage : ContentPage
 
 ### Popup footer height
 
-Customize the popup footer height using `SfPopup.FooterHeight` property. Find the code example of the same as follows.
+Customize the popup footer height using [FooterHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_FooterHeight) property. Find the code example of the same as follows.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}
@@ -510,7 +510,7 @@ public partial class MainPage : ContentPage
 
 ### Popup accept and decline buttons text
 
-Change the popup accept and decline buttons text using `SfPopup.AcceptButtonText` and `SfPopup.DeclineButtonText` properties. Find the code example of the same as follows.
+Change the popup accept and decline buttons text using [AcceptButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_AcceptButtonText) and [DeclineButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_DeclineButtonText) properties. Find the code example of the same as follows.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}
@@ -554,7 +554,7 @@ public partial class MainPage : ContentPage
 
 ## Customizing popup content
 
-Any view can be added as popup content by using the `SfPopup.ContentTemplate` property. Refer to the following code example in which a label is added as a popup content.
+Any view can be added as popup content by using the [ContentTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_ContentTemplate) property. Refer to the following code example in which a label is added as a popup content.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -619,7 +619,7 @@ public partial class MainPage : ContentPage
 
 ### Popup message
 
-Change the popup content message using `SfPopup.Message` property. Find the code example of the same as follows.
+Change the popup content message using [Message](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_Message) property. Find the code example of the same as follows.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}
