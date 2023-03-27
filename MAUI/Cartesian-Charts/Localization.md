@@ -26,16 +26,17 @@ public partial class App : Application
 	public App()
 	{
 		InitializeComponent();
-CultureInfo.CurrentUICulture = new CultureInfo("fr-FR");
-// ResXPath => Full path of the resx file; For example : 
-//SfCartesianChartResources.ResourceManager = new ResourceManager
-// ("CartesianChartSample.Resources.SfCartesianChart", Application.Current.GetType().Assembly);
+		CultureInfo.CurrentUICulture = new CultureInfo("fr-FR");
+		// ResXPath => Full path of the resx file; For example : 
+		//SfCartesianChartResources.ResourceManager = new ResourceManager
+		// ("CartesianChartSample.Resources.SfCartesianChart", Application.Current.GetType().Assembly);
         
-var ResXPath= "CartesianChartSample.Resources.SfCartesianChart";
-SfCartesianChartResources.ResourceManager = new ResourceManager(ResXPath, Application.Current.GetType().Assembly);
-MainPage = new MainPage();
+		var ResXPath= "CartesianChartSample.Resources.SfCartesianChart";
+		SfCartesianChartResources.ResourceManager = new ResourceManager(ResXPath, Application.Current.GetType().Assembly);
+		MainPage = new MainPage();
 	}
 }
+
 
 {% endhighlight %}
 {% endtabs %}
