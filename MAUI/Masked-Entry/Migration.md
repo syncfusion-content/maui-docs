@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrating from Xamarin SfMaskedEdit to .NET MAUI SfMaskedEntry
 
-To migrate easier from the `Xamarin SfMaskedEdit` to `.NET MAUI SfMaskedEntry`, most of the APIs are kept from the Xamarin SfMaskedEdit in MAUI SfMaskedEntry. However, to maintain the consistency of API naming in MAUI SfMaskedEntry, rename some of the APIs. The APIs changed in MAUI SfMaskedEntry from Xamarin SfMaskedEdit are detailed as follows.
+To migrate easier from the Xamarin SfMaskedEdit to [.NET MAUI SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html), most of the APIs are kept from the Xamarin SfMaskedEdit in MAUI SfMaskedEntry. However, to maintain the consistency of API naming in MAUI SfMaskedEntry, rename some of the APIs. The APIs changed in MAUI SfMaskedEntry from Xamarin SfMaskedEdit are detailed as follows.
 
 ## Namespaces 
 
@@ -32,8 +32,8 @@ To migrate easier from the `Xamarin SfMaskedEdit` to `.NET MAUI SfMaskedEntry`, 
 <th>Description</th></tr>
 <tr>
 <td>Xamarin - MaskType <br/> .NET MAUI - MaskedEntryMaskType</td>
-<td> Text,<br/> RegEx.</td>
-<td> Simple,<br/> RegEx.</td>
+<td> [Text](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.MaskedEdit.MaskType.html#Syncfusion_XForms_MaskedEdit_MaskType_Text),<br/> [RegEx](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.MaskedEdit.MaskType.html#Syncfusion_XForms_MaskedEdit_MaskType_RegEx).</td>
+<td> [Simple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.MaskedEntryMaskType.html#Syncfusion_Maui_Inputs_MaskedEntryMaskType_Simple),<br/> [RegEx](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.MaskedEntryMaskType.html#Syncfusion_Maui_Inputs_MaskedEntryMaskType_RegEx).</td>
 <td>Gets or sets the type of mask elements.</td></tr>
 
 </table> 
