@@ -103,8 +103,8 @@ namespace PopupMaui
 
 The SfPopup can be shown in full width and height of the screen using,
 
-  * `IsFullScreen`
-  * `Show(bool isFullScreen)`
+  * [IsFullScreen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_IsFullScreen)
+  * [Show(bool isFullScreen)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_Show_System_Boolean_)
 
 Refer to the following code example to open the popup in full screen.
 
@@ -169,9 +169,9 @@ Executing the above codes renders the following output in windows.
 
 ## Auto-size popup
 
-The `SfPopup` can auto-size the popup view based on the contents loaded inside its `SfPopup.ContentTemplate` property using the `SfPopup.AutoSizeMode` property. The default value is `AutoSizeMode.None`. You can choose to auto-size the Popup in the height, width or in both .height and width of its contents. By default, the `HeightRequest` and `WidthRequest` set to the `SfPopup` or the views loaded inside the template are given higher priority than the `AutoSizeMode`.
+The `SfPopup` can auto-size the popup view based on the contents loaded inside its [ContentTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_ContentTemplate) property using the [AutoSizeMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupAutoSizeMode.html) property. The default value is [AutoSizeMode.None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupAutoSizeMode.html#Syncfusion_Maui_Popup_PopupAutoSizeMode_None). You can choose to auto-size the Popup in the height, width or in both .height and width of its contents. By default, the `HeightRequest` and `WidthRequest` set to the `SfPopup` or the views loaded inside the template are given higher priority than the `AutoSizeMode`.
 
-In the following code sample, the Popup is auto-sized in the height based on the content loaded inside the `SfPopup.ContentTemplate` property.
+In the following code sample, the Popup is auto-sized in the height based on the content loaded inside the `ContentTemplate` property.
 
 {% tabs %}
 
