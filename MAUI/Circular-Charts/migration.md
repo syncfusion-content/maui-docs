@@ -229,7 +229,7 @@ this.Content = chart;
 </tr>
 <tr>
 <td>ToggleSeriesVisibility</td>
-<td>Upcoming</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>Series</td>
@@ -662,6 +662,7 @@ N> For more information about selection check [here](https://help.syncfusion.com
 * Maximum width support for Legend.
 * Individual legend items based on the data point count.
 * Event or method to notify the legend click and the creation of a legend item.
+* The ability to show/hide corresponding data points by legend item toggle.
 
 **Data label**
 

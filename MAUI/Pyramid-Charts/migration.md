@@ -226,7 +226,7 @@ this.Content = chart;
 </tr>
 <tr>
 <td>ToggleSeriesVisibility</td>
-<td>Upcoming</td>
+<td><em>Upcoming</em></td>
 </tr>
 <tr>
 <td>Series</td>
