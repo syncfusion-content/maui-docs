@@ -299,7 +299,7 @@ public partial class MainPage : ContentPage
 
 ## Styling overlay background
 
-The SfPopup allows to customize the background color of overlay using the `SfPopup.PopupStyle.OverlayColor` property.
+The SfPopup allows to customize the background color of overlay using the [OverlayColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_OverlayColor) property.
 
 {% tabs %}
 
