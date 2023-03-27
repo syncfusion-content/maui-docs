@@ -658,43 +658,6 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-## Disable Popup overlay
-
-Disable the popup overlay using `SfPopup.ShowOverlayAlways` property. The default value is true. Find the code example of the same as follows.
-
-{% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="11" %}
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"           
-             xmlns:sfPopup="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"             
-             x:Class="PopupMauiLayout.MainPage">
-    <ContentPage.Content>
-        <StackLayout Padding="20">
-            <Button x:Name="clickToShowPopup" Text="ClickToShowPopup"                     
-                    HorizontalOptions="Center" 
-                    Clicked="ClickToShowPopup_Clicked" />
-            <sfPopup:SfPopup x:Name="sfPopup" 
-                             ShowOverlayAlways="False">
-            </sfPopup:SfPopup>
-        </StackLayout>
-    </ContentPage.Content>
-</ContentPage>
-{% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="9" %}
-using Syncfusion.Maui.Popup;
-public partial class ShowOverlayAlways : ContentPage
-{
-    SfPopup sfPopup;
-    public ShowOverlayAlways()
-    {
-        InitializeComponent();
-        sfPopup = new SfPopup();
-        sfPopup.ShowOverlayAlways = false;
-    }
-}
-{% endhighlight %}
-{% endtabs %}
-
 ## How to
 
 ### Show listView as a popup
