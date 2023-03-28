@@ -11,7 +11,7 @@ documentation: ug
 
 The stacked column chart represents data values in a stacked format, where the columns are stacked on each other to indicate the cumulative value of the data points.
 
-To render a stacked column chart, create an instance of the [StackedColumnSeries]() and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of the [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).
+To render a stacked column chart, create an instance of the [StackingColumnSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.StackingColumnSeries.html) and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of the [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).
 
 N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) as its default content.
 
@@ -77,9 +77,9 @@ this.Content = chart;
 ## Grouping Series
 
 Each series in a stacked chart with several series may be difficult to compare. To solve that problem, grouping is used.
-The [GroupingLabel]() property used to group the series, which allows users to assign a label to each stacked column series. This label identifies the specific group to which the stacked column series belongs and can be used to group similar series.
+The [GroupingLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.StackingSeriesBase.html#Syncfusion_Maui_Charts_StackingSeriesBase_GroupingLabel) property used to group the series, which allows users to assign a label to each stacked column series. This label identifies the specific group to which the stacked column series belongs and can be used to group similar series.
 
-N> If the [GroupingLabel]() is not provided, the stacked column will consider all series as a single group.
+N> If the [GroupingLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.StackingSeriesBase.html#Syncfusion_Maui_Charts_StackingSeriesBase_GroupingLabel) is not provided, the stacked column will consider all series as a single group.
 
 {% tabs %}
 
@@ -153,8 +153,8 @@ this.Content = chart;
 
 ## Appearance customization
 
-* [Spacing]() of the `Double` type is used to change the spacing between two segments. The default spacing value is 0, ranging from 0 to 1.
-* [Width]() of the `Double` type is used to change the width of the rectangle. The default value of the width is 0.8, and the value ranges from 0 to 1.
-* [CornerRadius]() of the type `CornerRadius`, indicates the rounded corner for the stacked column.
-* [Stroke]() of the type `Brush` indicates the brush used to paint the border of the stacked column.
-* [StrokeWidth]() of the type `Double` indicates the width of the stacked segment.
+* [Spacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.StackingColumnSeries.html#Syncfusion_Maui_Charts_StackingColumnSeries_Spacing) of the `Double` type is used to change the spacing between two segments. The default spacing value is 0, ranging from 0 to 1.
+* [Width](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.StackingColumnSeries.html#Syncfusion_Maui_Charts_StackingColumnSeries_Width) of the `Double` type is used to change the width of the rectangle. The default value of the width is 0.8, and the value ranges from 0 to 1.
+* [CornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.StackingColumnSeries.html#Syncfusion_Maui_Charts_StackingColumnSeries_CornerRadius) of the type `CornerRadius`, indicates the rounded corner for the stacked column.
+* [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.StackingColumnSeries.html#Syncfusion_Maui_Charts_StackingColumnSeries_Stroke) of the type `Brush` indicates the brush used to paint the border of the stacked column.
+* [StrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.XYDataSeries.html#Syncfusion_Maui_Charts_XYDataSeries_StrokeWidth) of the type `Double` indicates the width of the stacked segment.
