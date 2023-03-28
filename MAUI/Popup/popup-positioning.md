@@ -18,25 +18,25 @@ Following are the list of options available to show SfPopup at various positions
 <th>Methods / Properties</th>
 <th>Description</th></tr>
 <tr>
-<td>SfPopup.IsOpen</td>
+<td>[IsOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_IsOpen)</td>
 <td>Show the <code>SfPopup</code> at the center.</td></tr>
 <tr>
-<td>SfPopup.Show</td>
+<td>[Show](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_Show_System_Boolean_)</td>
 <td>Similar as <code>SfPopup.IsOpen</code> property.</td></tr>
 <tr>
-<td>SfPopup.Show(x-position, y-position)</td>
+<td>[Show(x-position, y-position)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_Show_System_Double_System_Double_)</td>
 <td>Show the <code>SfPopup</code> at the specified X and y positions.</td></tr>
 <tr>
-<td>SfPopup.ShowRelativeToView(View, RelativePosition)</td>
+<td>[ShowRelativeToView(View, RelativePosition)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_ShowRelativeToView_Microsoft_Maui_Controls_View_Syncfusion_Maui_Popup_PopupRelativePosition_System_Double_System_Double_)</td>
 <td>Show the <code>SfPopup</code> at the position relative to the specified view.</td></tr>
 <tr>
-<td>SfPopup.ShowRelativeToView(View, RelativePosition, x-position, y-position)</td>
+<td>[ShowRelativeToView(View, RelativePosition, x-position, y-position)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_ShowRelativeToView_Microsoft_Maui_Controls_View_Syncfusion_Maui_Popup_PopupRelativePosition_System_Double_System_Double_)</td>
 <td>Show the <code>SfPopup</code> at an absolute x, y coordinate from the relative position of the specified view.</td></tr>
 <tr>
-<td>SfPopup.IsFullScreen</td>
+<td>[IsFullScreen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_IsFullScreen)</td>
 <td>Show the <code>SfPopup</code> in full width and height of the screen.</td></tr>
 <tr>
-<td>SfPopup.Show(bool)</td>
+<td>[Show(bool)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_Show_System_Boolean_)</td>
 <td>Similar as <code>SfPopup.IsFullScreen</code> property.</td></tr>
 </table>
 
@@ -47,7 +47,7 @@ The `SfPopup` can be shown at the center by using the following options.
  * IsOpen property
  * SfPopup.Show
 
-To open the `SfPopup`, use the `SfPopup.IsOpen` property as in the following code sample.
+To open the `SfPopup`, use the `IsOpen` property as in the following code sample.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}

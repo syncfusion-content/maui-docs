@@ -212,10 +212,6 @@ this.Content = chart;
 <th>.NET MAUI</th>
 </tr>
 <tr>
-<td>ToggleSeriesVisibility</td>
-<td>ToggleSeriesVisibility</td>
-</tr>
-<tr>
 <td>DockPosition</td>
 <td>Placement</td>
 </tr>
@@ -229,6 +225,10 @@ this.Content = chart;
 </tr>
 <tr>
 <td>Title</td>
+<td><em>Upcoming</em></td>
+</tr>
+<tr>
+<td>ToggleSeriesVisibility</td>
 <td><em>Upcoming</em></td>
 </tr>
 <tr>
@@ -662,6 +662,7 @@ N> For more information about selection check [here](https://help.syncfusion.com
 * Maximum width support for Legend.
 * Individual legend items based on the data point count.
 * Event or method to notify the legend click and the creation of a legend item.
+* The ability to show/hide corresponding data points by legend item toggle.
 
 **Data label**
 

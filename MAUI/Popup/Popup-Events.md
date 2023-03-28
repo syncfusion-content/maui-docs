@@ -18,7 +18,7 @@ There are four built-in events in the SfPopup control namely:
 
 ## Opening event
 
-The `SfPopup.Opening` event will be fired whenever opening the Popup in the application. It can cancel popup opening with `CancelEventArgs` that contains the following property:
+The [Opening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_Opening) event will be fired whenever opening the Popup in the application. It can cancel popup opening with `CancelEventArgs` that contains the following property:
 
 * `Cancel`: Popup opening is based on this value.
 
@@ -43,7 +43,7 @@ private void Popup_Opening(object sender, System.ComponentModel.CancelEventArgs 
 
 ## Opened event
 
-The `SfPopup.Opened` event will be fired whenever displaying the Popup in the application.
+The [Opened](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_Opened) event will be fired whenever displaying the Popup in the application.
 
 You can execute your own set of codes once the popup is opened, and visible in the application in its respective event handler.
 
@@ -68,7 +68,7 @@ private void Popup_Opened(object sender, EventArgs e)
 
 ## Closing event
 
-The `SfPopup.Closing` event will be fired whenever closing the Popup in the application. It can cancel the popup closing with `CancelEventArgs` that contains the following property:
+The [Closing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_Closing) event will be fired whenever closing the Popup in the application. It can cancel the popup closing with `CancelEventArgs` that contains the following property:
 
 * `Cancel`: Popup closing is based on this value.
 
@@ -93,7 +93,7 @@ private void Popup_Closing(object sender, System.ComponentModel.CancelEventArgs 
 
 ## Closed event
 
-The `SfPopup.Closed` event will be fired whenever dismissing the Popup from the view.
+The [Closed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_Closed) event will be fired whenever dismissing the Popup from the view.
 
 You can execute your own set of codes once the popup is completely closed in its respective event handler.
 
@@ -118,7 +118,7 @@ private void Popup_Closed(object sender, EventArgs e)
 
 ## Accept command
 
-The `SfPopup.AcceptCommand` will be fired when clicking the Accept button in the popup footer.
+The [AcceptCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_AcceptCommand) will be fired when clicking the Accept button in the popup footer.
 
 To handle the Accept button,
 
@@ -126,7 +126,7 @@ To handle the Accept button,
 * To prevent the popup from closing, return false in the `CanExecute()` override method and the `Execute()` override method will not be fired.
 * Else return true in the `CanExecute()` override method and do the required operations in the `Execute()` method.
 * Now, create a property of your custom command type in the view model class and initialize it.
-* Bind the property in the view model to the `SfPopup.AcceptCommand` in XAML.
+* Bind the property in the view model to the `AcceptCommand` in XAML.
 
 {% tabs %}
 
@@ -199,7 +199,7 @@ class PopupViewModel : INotifyPropertyChanged
 
 ## Decline command
 
-The `SfPopup.DeclineCommand` will be fired when clicking the Decline button in the popup footer. 
+The [DeclineCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_DeclineCommand) will be fired when clicking the Decline button in the popup footer. 
 
 To handle the Decline button,
 
@@ -207,7 +207,7 @@ To handle the Decline button,
 * To prevent the popup from closing, return false in the `CanExecute()` override method and the `Execute()` override method will not be fired.
 * Else return true in the `CanExecute()` override method and do the required operations in the `Execute()` method.
 * Now, create a property of your custom command type in the view model class and initialize it.
-* Bind the property in the view model to the `SfPopup.DeclineCommand` in XAML.
+* Bind the property in the view model to the `DeclineCommand` in XAML.
 
 {% tabs %}
 
