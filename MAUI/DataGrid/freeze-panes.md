@@ -9,12 +9,12 @@ documentation: UG
 
 # Freeze panes in MAUI DataGrid (SfDataGrid)
 
-In the Syncfusion .NET MAUI DataGrid (SfDataGrid) control, you can freeze rows and columns in view, similar to Excel. You can freeze rows and columns by setting the following properties:
+In the [Syncfusion .NET MAUI DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) (SfDataGrid) control, you can freeze rows and columns in view, similar to Excel. You can freeze rows and columns by setting the following properties:
 
 | Property name | Description |
 |---------------|-------------|
-| `FrozenRowCount` | Sets the number of rows to freeze at the top of the DataGrid |
-| `FrozenColumnCount` | Sets the number of columns to freeze at the left side of the DataGrid |
+| [FrozenRowCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_FrozenRowCount) | Sets the number of rows to freeze at the top of the DataGrid |
+| [FrozenColumnCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_FrozenColumnCount) | Sets the number of columns to freeze at the left side of the DataGrid |
 
 ## Freeze columns
 
@@ -45,7 +45,7 @@ The following code snippet shows how to freeze rows in the DataGrid:
 {% tabs %}
 {% highlight xaml %}
 <ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
-    <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}" FrozenRowCount="2" />
+    <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}" FrozenRowCount="1" />
 </ContentPage>
 {% endhighlight %}
 {% endtabs %}
@@ -58,7 +58,7 @@ The following code snippet shows how to freeze rows in the DataGrid:
 
 ## Appearance
 
-The DataGrid allows you to customize the color of the freeze pane line using the `DataGridStyle.FreezePaneLineColor` property.
+The DataGrid allows you to customize the color of the freeze pane line using the [DataGridStyle.FreezePaneLineColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FreezePaneLineColor) property.
 
 {% tabs %}
 {% highlight xaml %}
