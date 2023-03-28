@@ -665,7 +665,8 @@ The default value of [SfPopup.ShowOverlayAlways](https://help.syncfusion.com/cr/
 {% tabs %}
 {% highlight xaml hl_lines="2" %}
         <sfPopup:SfPopup x:Name="popup" 
-            ShowOverlayAlways="False">
+            ShowOverlayAlways="False"
+            IsOpen="True">
         </sfPopup:SfPopup>
 {% endhighlight %}
 {% highlight c# hl_lines="9" %}
