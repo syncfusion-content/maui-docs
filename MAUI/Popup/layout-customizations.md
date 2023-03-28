@@ -664,12 +664,23 @@ The default value of [SfPopup.ShowOverlayAlways](https://help.syncfusion.com/cr/
 
 {% tabs %}
 {% highlight xaml hl_lines="2" %}
-        <sfPopup:SfPopup x:Name="popUp" 
+        <sfPopup:SfPopup x:Name="popup" 
             ShowOverlayAlways="False">
         </sfPopup:SfPopup>
 {% endhighlight %}
-{% highlight c# hl_lines="1" %}
-  popup.ShowOverlayAlways = False;
+{% highlight c# hl_lines="9" %}
+using Syncfusion.Maui.Popup;
+public partial class MainPage : ContentPage
+{
+    SfPopup popup;
+    public MainPage()
+    {
+        InitializeComponent();
+        popup = new SfPopup();
+        popup.ShowOverlayAlways = false;
+        popup.Show();
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
