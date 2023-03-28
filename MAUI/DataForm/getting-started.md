@@ -23,7 +23,7 @@ This section provides a quick overview of how to get started with the [.NET MAUI
 
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 5" %}
+{% highlight XAML %}
 
 <ContentPage   
             
@@ -33,7 +33,7 @@ This section provides a quick overview of how to get started with the [.NET MAUI
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 10" %}
+{% highlight C# %}
 
 using Syncfusion.Maui.DataForm;
 . . .
@@ -135,7 +135,7 @@ public class DataFormViewModel
 By default, the data form auto-generates the editors based on the primitive data type in the [DataObject](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_DataObject) property. Please refer the following code to set the [DataObject](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_DataObject) property.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 7 11" %}
+{% highlight XAML %}
 
 <ContentPage 
     . . .
@@ -151,24 +151,14 @@ By default, the data form auto-generates the editors based on the primitive data
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 12 14" %}
+{% highlight C# %}
 
-using Syncfusion.Maui.DataForm;
-. . .
-
-public partial class MainPage : ContentPage
+this.BindingContext = new DataFormViewModel();
+SfDataForm dataForm = new SfDataForm()
 {
-    public MainPage()
-    {
-        InitializeComponent();
-        this.BindingContext = new DataFormViewModel();
-        SfDataForm dataForm = new SfDataForm()
-		{
-			DataObject = new ContactsInfo()
-		};
-        this.Content = dataForm;
-    }
-}
+    DataObject = new ContactsInfo()
+};
+this.Content = dataForm;
 
 {% endhighlight %}
 {% endtabs %}

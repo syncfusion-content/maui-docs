@@ -17,7 +17,7 @@ The floating label layout is a powerful feature that enhances the user experienc
 By default, the dataform arranges the editors and their labels corresponding to the fields in the layout. However, to enable the floating label layout for data form, set the [LayoutType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_LayoutType) property of the [SfDataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html) or [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html) to `TextInputLayout`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 6" %}
+{% highlight XAML %}
 <ContentPage 
 ...
 xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
@@ -29,21 +29,11 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 {% endhighlight %}
 {% highlight C# %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 11" %}
+{% highlight C# %}
 
-using Syncfusion.Maui.DataForm;
-. . .
-
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        SfDataForm dataForm = new SfDataForm();
-        this.Content = dataForm;
-        this.dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
-    }
-}
+SfDataForm dataForm = new SfDataForm();
+dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
+this.Content = dataForm;
 
 {% endhighlight %}
 {% endtabs %}
@@ -65,28 +55,18 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 </dataForm:SfDataForm>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 11 12" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-using Syncfusion.Maui.DataForm;
-. . .
+SfDataForm dataForm = new SfDataForm();
+dataForm.LayoutType = DataFormLayoutType.Default;
+dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.Content = dataForm;
 
-public partial class MainPage : ContentPage
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
 {
-    public MainPage()
+    if (e.DataFormItem != null && e.DataFormItem.FieldName == "FirstName")
     {
-        InitializeComponent();
-        SfDataForm dataForm = new SfDataForm();
-        this.Content = dataForm;
-        this.dataForm.LayoutType = DataFormLayoutType.Default;
-        this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
-    }
-
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
-    {
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "FirstName")
-        {
-            e.DataFormItem.LayoutType = DataFormLayoutType.TextInputLayout;
-        }
+        e.DataFormItem.LayoutType = DataFormLayoutType.TextInputLayout;
     }
 }
 
@@ -122,32 +102,22 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 </dataForm:SfDataForm>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 11 12" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-using Syncfusion.Maui.DataForm;
-. . .
+SfDataForm dataForm = new SfDataForm();
+dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
+dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.Content = dataForm;
 
-public partial class MainPage : ContentPage
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
 {
-    public MainPage()
+    if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name")
     {
-        InitializeComponent();
-        SfDataForm dataForm = new SfDataForm();
-        this.Content = dataForm;
-        this.dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
-        this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
-    }
-
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
-    {
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name")
+        e.DataFormItem.LayoutType = DataFormLayoutType.TextInputLayout;
+        e.DataFormItem.TextInputLayoutSettings = new TextInputLayoutSettings
         {
-            e.DataFormItem.LayoutType = DataFormLayoutType.TextInputLayout;
-            e.DataFormItem.TextInputLayoutSettings = new TextInputLayoutSettings
-            {
-                ContainerType = TextInputLayoutContainerType.Outlined
-            };
-        }
+            ContainerType = TextInputLayoutContainerType.Outlined
+        };
     }
 }
 
@@ -204,32 +174,22 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 </dataForm:SfDataForm>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 11 12" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-using Syncfusion.Maui.DataForm;
-. . .
+SfDataForm dataForm = new SfDataForm();
+dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
+dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.Content = dataForm;
 
-public partial class MainPage : ContentPage
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
 {
-    public MainPage()
+    if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name")
     {
-        InitializeComponent();
-        SfDataForm dataForm = new SfDataForm();
-        this.Content = dataForm;
-        this.dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
-        this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
-    }
-
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
-    {
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name")
+        e.DataFormItem.LayoutType = DataFormLayoutType.TextInputLayout;
+        e.DataFormItem.TextInputLayoutSettings = new TextInputLayoutSettings
         {
-            e.DataFormItem.LayoutType = DataFormLayoutType.TextInputLayout;
-            e.DataFormItem.TextInputLayoutSettings = new TextInputLayoutSettings
-            {
-                ContainerType = TextInputLayoutContainerType.Filled
-            };
-        }
+            ContainerType = TextInputLayoutContainerType.Filled
+        };
     }
 }
 
@@ -255,32 +215,22 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 </dataForm:SfDataForm>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 11 12" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-using Syncfusion.Maui.DataForm;
-. . .
+SfDataForm dataForm = new SfDataForm();
+dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
+dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.Content = dataForm;
 
-public partial class MainPage : ContentPage
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
 {
-    public MainPage()
+    if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name")
     {
-        InitializeComponent();
-        SfDataForm dataForm = new SfDataForm();
-        this.Content = dataForm;
-        this.dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
-        this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
-    }
-
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
-    {
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name")
+        e.DataFormItem.LayoutType = DataFormLayoutType.TextInputLayout;
+        e.DataFormItem.TextInputLayoutSettings = new TextInputLayoutSettings
         {
-            e.DataFormItem.LayoutType = DataFormLayoutType.TextInputLayout;
-            e.DataFormItem.TextInputLayoutSettings = new TextInputLayoutSettings
-            {
-                ContainerType = TextInputLayoutContainerType.None
-            };
-        }
+            ContainerType = TextInputLayoutContainerType.None
+        };
     }
 }
 
@@ -313,30 +263,20 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 </dataForm:SfDataForm>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 11 12" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-using Syncfusion.Maui.DataForm;
-. . .
+SfDataForm dataForm = new SfDataForm();
+dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
+dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.Content = dataForm;
 
-public partial class MainPage : ContentPage
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
 {
-    public MainPage()
+    if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name")
     {
-        InitializeComponent();
-        SfDataForm dataForm = new SfDataForm();
-        this.Content = dataForm;
-        this.dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
-        this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
-    }
-
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
-    {
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name")
-        {
-            e.DataFormItem.LayoutType = DataFormLayoutType.TextInputLayout;
-            e.DataFormItem.ShowLeadingView = true;
-            e.DataFormItem.LeadingView = new Label { Text = "F", FontSize = 18, TextColor = Colors.Gray, FontFamily = "InputLayoutIcons", HeightRequest = 24, VerticalTextAlignment = TextAlignment.End };
-        }
+        e.DataFormItem.LayoutType = DataFormLayoutType.TextInputLayout;
+        e.DataFormItem.ShowLeadingView = true;
+        e.DataFormItem.LeadingView = new Label { Text = "F", FontSize = 18, TextColor = Colors.Gray, FontFamily = "InputLayoutIcons", HeightRequest = 24, VerticalTextAlignment = TextAlignment.End };
     }
 }
 
@@ -369,30 +309,20 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 </dataForm:SfDataForm>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 11 12" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-using Syncfusion.Maui.DataForm;
-. . .
+SfDataForm dataForm = new SfDataForm();
+dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
+dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.Content = dataForm;
 
-public partial class MainPage : ContentPage
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
 {
-    public MainPage()
+    if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name")
     {
-        InitializeComponent();
-        SfDataForm dataForm = new SfDataForm();
-        this.Content = dataForm;
-        this.dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
-        this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
-    }
-
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
-    {
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name")
-        {
-            e.DataFormItem.LayoutType = DataFormLayoutType.TextInputLayout;
-            e.DataFormItem.ShowTrailingView = true;
-            e.DataFormItem.TrailingView = new Label { Text = "F", FontSize = 18, TextColor = Colors.Gray, FontFamily = "InputLayoutIcons", HeightRequest = 24, VerticalTextAlignment = TextAlignment.End };
-        }
+        e.DataFormItem.LayoutType = DataFormLayoutType.TextInputLayout;
+        e.DataFormItem.ShowTrailingView = true;
+        e.DataFormItem.TrailingView = new Label { Text = "F", FontSize = 18, TextColor = Colors.Gray, FontFamily = "InputLayoutIcons", HeightRequest = 24, VerticalTextAlignment = TextAlignment.End };
     }
 }
 
@@ -426,31 +356,21 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 </dataForm:SfDataForm>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 11 12" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-using Syncfusion.Maui.DataForm;
-. . .
+SfDataForm dataForm = new SfDataForm();
+dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
+dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.Content = dataForm;
 
-public partial class MainPage : ContentPage
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
 {
-    public MainPage()
+    if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name")
     {
-        InitializeComponent();
-        SfDataForm dataForm = new SfDataForm();
-        this.Content = dataForm;
-        this.dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
-        this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
-    }
-
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
-    {
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name")
-        {
-            e.DataFormItem.LayoutType = DataFormLayoutType.TextInputLayout;
-            e.DataFormItem.ShowLeadingView = true;
-            e.DataFormItem.LeadingViewPosition = TextInputLayoutViewPosition.Outside;
-            e.DataFormItem.LeadingView = new Label { Text = "F", FontSize = 18, TextColor = Colors.Gray, FontFamily = "InputLayoutIcons", HeightRequest = 24, VerticalTextAlignment = TextAlignment.End };
-        }
+        e.DataFormItem.LayoutType = DataFormLayoutType.TextInputLayout;
+        e.DataFormItem.ShowLeadingView = true;
+        e.DataFormItem.LeadingViewPosition = TextInputLayoutViewPosition.Outside;
+        e.DataFormItem.LeadingView = new Label { Text = "F", FontSize = 18, TextColor = Colors.Gray, FontFamily = "InputLayoutIcons", HeightRequest = 24, VerticalTextAlignment = TextAlignment.End };
     }
 }
 
@@ -474,33 +394,24 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 </dataForm:SfDataForm>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 11 12" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-using Syncfusion.Maui.DataForm;
-. . .
+SfDataForm dataForm = new SfDataForm();
+dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
+dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.Content = dataForm;
 
-public partial class MainPage : ContentPage
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
 {
-    public MainPage()
+    if (e.DataFormItem != null && e.DataFormItem.FieldName == "Contact Number")
     {
-        InitializeComponent();
-        SfDataForm dataForm = new SfDataForm();
-        this.Content = dataForm;
-        this.dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
-        this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
-    }
-
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
-    {
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Contact Number")
-        {
-            e.DataFormItem.LayoutType = DataFormLayoutType.TextInputLayout;
-            e.DataFormItem.ShowTrailingView = true;
-            e.DataFormItem.TrailingViewPosition = TextInputLayoutViewPosition.Inside;
-            e.DataFormItem.TrailingView = new Label { Text = "F", FontSize = 18, TextColor = Colors.Gray, FontFamily = "InputLayoutIcons", HeightRequest = 24, VerticalTextAlignment = TextAlignment.End };
-        }
+        e.DataFormItem.LayoutType = DataFormLayoutType.TextInputLayout;
+        e.DataFormItem.ShowTrailingView = true;
+        e.DataFormItem.TrailingViewPosition = TextInputLayoutViewPosition.Inside;
+        e.DataFormItem.TrailingView = new Label { Text = "F", FontSize = 18, TextColor = Colors.Gray, FontFamily = "InputLayoutIcons", HeightRequest = 24, VerticalTextAlignment = TextAlignment.End };
     }
 }
+
 
 {% endhighlight %}
 {% endtabs %}
@@ -526,29 +437,19 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 </dataForm:SfDataForm>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 11 12" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-using Syncfusion.Maui.DataForm;
-. . .
+SfDataForm dataForm = new SfDataForm();
+dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
+dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.Content = dataForm;
 
-public partial class MainPage : ContentPage
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
 {
-    public MainPage()
+    if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name" && e.DataFormItem is DataFormPasswordItem passwordItem)
     {
-        InitializeComponent();
-        SfDataForm dataForm = new SfDataForm();
-        this.Content = dataForm;
-        this.dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
-        this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
-    }
-
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
-    {
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name" && e.DataFormItem is DataFormPasswordItem passwordItem)
-        {
-            passwordItem.LayoutType = DataFormLayoutType.TextInputLayout;
-            passwordItem.EnablePasswordVisibilityToggle = true;
-        }
+        passwordItem.LayoutType = DataFormLayoutType.TextInputLayout;
+        passwordItem.EnablePasswordVisibilityToggle = true;
     }
 }
 
@@ -581,32 +482,22 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 </dataForm:SfDataForm>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 11 12" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-using Syncfusion.Maui.DataForm;
-. . .
+SfDataForm dataForm = new SfDataForm();
+dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
+dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.Content = dataForm;
 
-public partial class MainPage : ContentPage
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
 {
-    public MainPage()
+    if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name")
     {
-        InitializeComponent();
-        SfDataForm dataForm = new SfDataForm();
-        this.Content = dataForm;
-        this.dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
-        this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
-    }
-
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
-    {
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name")
+        e.DataFormItem.LayoutType = DataFormLayoutType.TextInputLayout;
+        e.DataFormItem.TextInputLayoutSettings = new TextInputLayoutSettings
         {
-            e.DataFormItem.LayoutType = DataFormLayoutType.TextInputLayout;
-            e.DataFormItem.TextInputLayoutSettings = new TextInputLayoutSettings
-            {
-                ShowHelperText = false,
-            };
-        }
+            ShowHelperText = false,
+        };
     }
 }
 
@@ -644,29 +535,19 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 </dataForm:SfDataForm>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 11 12" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-using Syncfusion.Maui.DataForm;
-. . .
+SfDataForm dataForm = new SfDataForm();
+dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
+dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.Content = dataForm;
 
-public partial class MainPage : ContentPage
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
 {
-    public MainPage()
+    if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name")
     {
-        InitializeComponent();
-        SfDataForm dataForm = new SfDataForm();
-        this.Content = dataForm;
-        this.dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
-        this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
-    }
-
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
-    {
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name")
-        {
-            e.DataFormItem.LayoutType = DataFormLayoutType.TextInputLayout;
-            e.DataFormItem.LabelTextStyle = new DataFormTextStyle { FontAttributes = FontAttributes.Bold, TextColor = Colors.BlueViolet };
-        }
+        e.DataFormItem.LayoutType = DataFormLayoutType.TextInputLayout;
+        e.DataFormItem.LabelTextStyle = new DataFormTextStyle { FontAttributes = FontAttributes.Bold, TextColor = Colors.BlueViolet };
     }
 }
 
@@ -697,32 +578,22 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 </dataForm:SfDataForm>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 11 12" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-using Syncfusion.Maui.DataForm;
-. . .
+SfDataForm dataForm = new SfDataForm();
+dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
+dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.Content = dataForm;
 
-public partial class MainPage : ContentPage
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
 {
-    public MainPage()
+    if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name")
     {
-        InitializeComponent();
-        SfDataForm dataForm = new SfDataForm();
-        this.Content = dataForm;
-        this.dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
-        this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
-    }
-
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
-    {
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name")
+        e.DataFormItem.LayoutType = DataFormLayoutType.TextInputLayout;
+        e.DataFormItem.TextInputLayoutSettings = new TextInputLayoutSettings
         {
-            e.DataFormItem.LayoutType = DataFormLayoutType.TextInputLayout;
-            e.DataFormItem.TextInputLayoutSettings = new TextInputLayoutSettings
-            {
-                HelperTextStyle = new DataFormTextStyle { TextColor = Colors.Blue, FontAttributes = FontAttributes.Bold },
-            };
-        }
+            HelperTextStyle = new DataFormTextStyle { TextColor = Colors.Blue, FontAttributes = FontAttributes.Bold },
+        };
     }
 }
 
@@ -754,29 +625,19 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 </dataForm:SfDataForm>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 11 12" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-using Syncfusion.Maui.DataForm;
-. . .
+SfDataForm dataForm = new SfDataForm();
+dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
+dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.Content = dataForm;
 
-public partial class MainPage : ContentPage
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
 {
-    public MainPage()
+    if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name")
     {
-        InitializeComponent();
-        SfDataForm dataForm = new SfDataForm();
-        this.Content = dataForm;
-        this.dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
-        this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
-    }
-
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
-    {
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name")
-        {
-            e.DataFormItem.LayoutType = DataFormLayoutType.TextInputLayout;
-            e.DataFormItem.ErrorLabelTextStyle = new DataFormTextStyle { FontAttributes = FontAttributes.Bold, TextColor = Colors.IndianRed };
-        }
+        e.DataFormItem.LayoutType = DataFormLayoutType.TextInputLayout;
+        e.DataFormItem.ErrorLabelTextStyle = new DataFormTextStyle { FontAttributes = FontAttributes.Bold, TextColor = Colors.IndianRed };
     }
 }
 
@@ -808,29 +669,19 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 </dataForm:SfDataForm>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 11 12" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-using Syncfusion.Maui.DataForm;
-. . .
+SfDataForm dataForm = new SfDataForm();
+dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
+dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.Content = dataForm;
 
-public partial class MainPage : ContentPage
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
 {
-    public MainPage()
+    if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name")
     {
-        InitializeComponent();
-        SfDataForm dataForm = new SfDataForm();
-        this.Content = dataForm;
-        this.dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
-        this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
-    }
-
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
-    {
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name")
-        {
-            e.DataFormItem.LayoutType = DataFormLayoutType.TextInputLayout;
-            e.DataFormItem.ValidMessageLabelTextStyle = new DataFormTextStyle { FontAttributes = FontAttributes.Bold, TextColor = Colors.GreenYellow };
-        }
+        e.DataFormItem.LayoutType = DataFormLayoutType.TextInputLayout;
+        e.DataFormItem.ValidMessageLabelTextStyle = new DataFormTextStyle { FontAttributes = FontAttributes.Bold, TextColor = Colors.GreenYellow };
     }
 }
 
@@ -859,32 +710,22 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 </dataForm:SfDataForm>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 11 12" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-using Syncfusion.Maui.DataForm;
-. . .
+SfDataForm dataForm = new SfDataForm();
+this.dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
+this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.Content = dataForm;
 
-public partial class MainPage : ContentPage
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
 {
-    public MainPage()
+    if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name")
     {
-        InitializeComponent();
-        SfDataForm dataForm = new SfDataForm();
-        this.Content = dataForm;
-        this.dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
-        this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
-    }
-
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
-    {
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name")
+        e.DataFormItem.LayoutType = DataFormLayoutType.TextInputLayout;
+        e.DataFormItem.TextInputLayoutSettings = new TextInputLayoutSettings
         {
-            e.DataFormItem.LayoutType = DataFormLayoutType.TextInputLayout;
-            e.DataFormItem.TextInputLayoutSettings = new TextInputLayoutSettings
-            {
-                OutlineCornerRadius = 10,
-            };
-        }
+            OutlineCornerRadius = 10,
+        };
     }
 }
 
@@ -911,32 +752,22 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 </dataForm:SfDataForm>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 11 12" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-using Syncfusion.Maui.DataForm;
-. . .
+SfDataForm dataForm = new SfDataForm();
+dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
+dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.Content = dataForm;
 
-public partial class MainPage : ContentPage
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
 {
-    public MainPage()
+    if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name")
     {
-        InitializeComponent();
-        SfDataForm dataForm = new SfDataForm();
-        this.Content = dataForm;
-        this.dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
-        this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
-    }
-
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
-    {
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name")
+        e.DataFormItem.LayoutType = DataFormLayoutType.TextInputLayout;
+        e.DataFormItem.TextInputLayoutSettings = new TextInputLayoutSettings
         {
-            e.DataFormItem.LayoutType = DataFormLayoutType.TextInputLayout;
-            e.DataFormItem.TextInputLayoutSettings = new TextInputLayoutSettings
-            {
-                Stroke = Colors.Blue,
-            };
-        }
+            Stroke = Colors.Blue,
+        };
     }
 }
 
@@ -963,32 +794,22 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 </dataForm:SfDataForm>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 11 12" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-using Syncfusion.Maui.DataForm;
-. . .
+SfDataForm dataForm = new SfDataForm();
+dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
+dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.Content = dataForm;
 
-public partial class MainPage : ContentPage
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
 {
-    public MainPage()
+    if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name")
     {
-        InitializeComponent();
-        SfDataForm dataForm = new SfDataForm();
-        this.Content = dataForm;
-        this.dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
-        this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
-    }
-
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
-    {
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name")
+        e.DataFormItem.LayoutType = DataFormLayoutType.TextInputLayout;
+        e.DataFormItem.TextInputLayoutSettings = new TextInputLayoutSettings
         {
-            e.DataFormItem.LayoutType = DataFormLayoutType.TextInputLayout;
-            e.DataFormItem.TextInputLayoutSettings = new TextInputLayoutSettings
-            {
-                FocusedStroke = Colors.Green,
-            };
-        }
+            FocusedStroke = Colors.Green,
+        };
     }
 }
 
@@ -1016,33 +837,23 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 </dataForm:SfDataForm>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 11 12" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-using Syncfusion.Maui.DataForm;
-. . .
+SfDataForm dataForm = new SfDataForm();
+dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
+dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.Content = dataForm;
 
-public partial class MainPage : ContentPage
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
 {
-    public MainPage()
+    if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name")
     {
-        InitializeComponent();
-        SfDataForm dataForm = new SfDataForm();
-        this.Content = dataForm;
-        this.dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
-        this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
-    }
-
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
-    {
-        if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name")
+        e.DataFormItem.LayoutType = DataFormLayoutType.TextInputLayout;
+        e.DataFormItem.TextInputLayoutSettings = new TextInputLayoutSettings
         {
-            e.DataFormItem.LayoutType = DataFormLayoutType.TextInputLayout;
-            e.DataFormItem.TextInputLayoutSettings = new TextInputLayoutSettings
-            {
-                FocusedStrokeThickness = 3.0,
-                UnfocusedStrokeThickness = 2.0,
-            };
-        }
+            FocusedStrokeThickness = 3.0,
+            UnfocusedStrokeThickness = 2.0,
+        };
     }
 }
 

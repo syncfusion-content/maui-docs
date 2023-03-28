@@ -60,7 +60,7 @@ The supported validation modes are as follows:
 * Manual
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 6" %}
+{% highlight XAML %}
 
 <ContentPage 
 ...
@@ -72,21 +72,11 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 11" %}
+{% highlight C# %}
 
-using Syncfusion.Maui.DataForm;
-. . .
-
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        SfDataForm dataForm = new SfDataForm();
-        this.Content = dataForm;
-        this.dataForm.ValidationMode = DataFormValidationMode.LostFocus;
-    }
-}
+SfDataForm dataForm = new SfDataForm();
+this.dataForm.ValidationMode = DataFormValidationMode.LostFocus;
+this.Content = dataForm;
 
 {% endhighlight %}
 {% endtabs %}
@@ -167,7 +157,7 @@ Get the validation details of all the editors of the data form using the [Valida
 N> This event will be raised once after the manual validation call using the [SfDataForm.Validate()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_Validate) method.
 
 {% tabs %}
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 this.dataForm.ValidateForm += this.OnDataFormValidateForm;
 
@@ -186,7 +176,7 @@ private void OnDataFormValidateForm(object sender, DataFormValidateFormEventArgs
 The [ValidateProperty](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ValidateProperty) event allows you to validate specific editors in the data form. Set [IsValid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormValidatePropertyEventArgs.html#Syncfusion_Maui_DataForm_DataFormValidatePropertyEventArgs_IsValid), [ErrorMessage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormValidatePropertyEventArgs.html#Syncfusion_Maui_DataForm_DataFormValidatePropertyEventArgs_ErrorMessage), and [ValidMessage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormValidatePropertyEventArgs.html#Syncfusion_Maui_DataForm_DataFormValidatePropertyEventArgs_ValidMessage) of the [DataFormValidatePropertyEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormValidatePropertyEventArgs.html).
 
 {% tabs %}
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 this.dataForm.ValidateProperty += this.OnDataFormValidateProperty;
 
@@ -230,39 +220,28 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 Also, customize the error label style for each editor using the [ErrorLabelTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_ErrorLabelTextStyle) property of the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html).
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 11" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-using Syncfusion.Maui.DataForm;
-. . .
+SfDataForm dataForm = new SfDataForm();
+dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.Content = dataForm;
 
-public partial class MainPage : ContentPage
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
 {
-    public MainPage()
+    if (e.DataFormItem != null)
     {
-        InitializeComponent();
-        SfDataForm dataForm = new SfDataForm();
-        this.Content = dataForm;
-        this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
-    }
-
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
-    {
-        if (e.DataFormItem != null)
+        if (e.DataFormItem.FieldName == "FirstName")
         {
-            if (e.DataFormItem.FieldName == "FirstName")
+            e.DataFormItem.ErrorLabelTextStyle = new DataFormTextStyle
             {
-                e.DataFormItem.ErrorLabelTextStyle = new DataFormTextStyle
-                {
-                    TextColor = Colors.DarkSeaGreen,
-                    FontSize = 8,
-                    FontAttributes = FontAttributes.Italic,
-                    FontFamily = "Roboto",
-                };
-            }
+                TextColor = Colors.DarkSeaGreen,
+                FontSize = 8,
+                FontAttributes = FontAttributes.Italic,
+                FontFamily = "Roboto",
+            };
         }
     }
 }
-
 
 {% endhighlight %}
 {% endtabs %}
@@ -293,35 +272,25 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 Also, customize the valid message label style for each editor using the [ValidMessageLabelTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_ValidMessageLabelTextStyle) property of the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html).
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 11" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-using Syncfusion.Maui.DataForm;
-. . .
+SfDataForm dataForm = new SfDataForm();
+this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.Content = dataForm;
 
-public partial class MainPage : ContentPage
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
 {
-    public MainPage()
+    if (e.DataFormItem != null)
     {
-        InitializeComponent();
-        SfDataForm dataForm = new SfDataForm();
-        this.Content = dataForm;
-        this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
-    }
-
-    private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
-    {
-        if (e.DataFormItem != null)
+        if (e.DataFormItem.FieldName == "FirstName")
         {
-            if (e.DataFormItem.FieldName == "FirstName")
+            e.DataFormItem.ValidMessageLabelTextStyle = new DataFormTextStyle
             {
-                e.DataFormItem.ValidMessageLabelTextStyle = new DataFormTextStyle
-                {
-                    TextColor = Colors.DarkSeaGreen,
-                    FontSize = 8,
-                    FontAttributes = FontAttributes.Italic,
-                    FontFamily = "Roboto",
-                };
-            }
+                TextColor = Colors.DarkSeaGreen,
+                FontSize = 8,
+                FontAttributes = FontAttributes.Italic,
+                FontFamily = "Roboto",
+            };
         }
     }
 }

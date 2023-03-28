@@ -36,7 +36,7 @@ public class ContactInfo
 #### Using event
 
 {% tabs %}
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
@@ -110,7 +110,7 @@ public class ContactInfo
 The order of the editors in the group can also be changed by handling the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event using the [RowOrder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormViewItem.html#Syncfusion_Maui_DataForm_DataFormViewItem_RowOrder) property of a [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html).
 
 {% tabs %}
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
@@ -161,7 +161,7 @@ public class ContactInfo
 }
 
 {% endhighlight %}
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 this.dataForm.DataObject = new ContactInfo();
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
@@ -187,7 +187,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 The `GroupName` for the group can be changed in the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event.
 
 {% tabs %}
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
@@ -232,7 +232,7 @@ public class ContactInfo
 }
 
 {% endhighlight %}
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 this.dataForm.DataObject = new ContactInfo();
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
@@ -262,7 +262,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 By default, the group will be loaded in the expanded state. Collapse the group by setting the [IsExpanded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormGroupItem.html#Syncfusion_Maui_DataForm_DataFormGroupItem_IsExpanded) property of the [DataFormGroupItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormGroupItem.html) class to `false`.
 
 {% tabs %}
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
@@ -287,7 +287,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 The group being expanded or collapsed can be restricted by setting the [AllowExpandCollapse](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormGroupItem.html#Syncfusion_Maui_DataForm_DataFormGroupItem_AllowExpandCollapse) to `false` in the [DataFormGroupItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormGroupItem.html).
 
 {% tabs %}
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
@@ -312,7 +312,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 The data form group visibility can be changed by using the `IsVisible` property of the [DataFormGroupItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormGroupItem.html).
 
 {% tabs %}
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
@@ -338,7 +338,7 @@ Here, the `Name` group will be hidden.
 The data form group header background can be changed by using the [HeaderBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormGroupItem.html#Syncfusion_Maui_DataForm_DataFormGroupItem_HeaderBackground) property of the [DataFormGroupItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormGroupItem.html).
 
 {% tabs %}
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
@@ -363,7 +363,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 The data form group header text style can be changed by using the [HeaderTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormGroupItem.html#Syncfusion_Maui_DataForm_DataFormGroupItem_HeaderTextStyle) property of the [DataFormGroupItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormGroupItem.html).
 
 {% tabs %}
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
@@ -393,7 +393,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 The distance between editors and the data form’s borders or group headers can be changed by using the [ItemsPadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormGroupItem.html#Syncfusion_Maui_DataForm_DataFormGroupItem_ItemsPadding) property of the [DataFormGroupItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormGroupItem.html).
 
 {% tabs %}
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 

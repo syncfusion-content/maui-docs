@@ -23,21 +23,11 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 11" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-using Syncfusion.Maui.DataForm;
-. . .
-
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        SfDataForm dataForm = new SfDataForm();
-        this.Content = dataForm;
-        this.dataForm.FlowDirection = FlowDirection.RightToLeft;
-    }
-}
+SfDataForm dataForm = new SfDataForm();
+dataForm.FlowDirection = FlowDirection.RightToLeft;
+this.Content = dataForm;
 
 {% endhighlight %}
 {% endtabs %}
