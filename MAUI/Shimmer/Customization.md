@@ -9,7 +9,7 @@ documentation: ug
 
 # Customization of .NET MAUI Shimmer (SfShimmer)
 
-The [SfShimmer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.html) control provides the following properties to customize the Shimmer,
+The [SfShimmer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.html) control provides the following properties to customize the shimmer,
 
 * `Fill` - To customize the background color of Shimmer view. 
 * `WaveColor` - To customize the Shimmer wave color.
@@ -25,7 +25,7 @@ This section explains how to customize the Shimmer control.
 The background of the [SfShimmer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html) view can be customized by using the [Fill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html#Syncfusion_Maui_Shimmer_SfShimmer_Fill) property. The default value of the `Fill` property is `#F3EDF7`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
 <shimmer:SfShimmer x:Name="Shimmer" VerticalOptions="FillAndExpand" Type="CirclePersona"
                    Fill="#89CFF0">
@@ -37,7 +37,7 @@ The background of the [SfShimmer](https://help.syncfusion.com/cr/maui/Syncfusion
 </shimmer:SfShimmer>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4"%}
+{% highlight c# tabtitle="C#" hl_lines="4"%}
 
 SfShimmer Shimmer = new SfShimmer()
 {
@@ -61,7 +61,7 @@ this.Content = Shimmer;
 The wave color in the [SfShimmer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html) view can be customized using the [WaveColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html#Syncfusion_Maui_Shimmer_SfShimmer_WaveColor) property. The default value of `WaveColor` is the `#FFFBFE` Color.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
 <shimmer:SfShimmer x:Name="Shimmer" VerticalOptions="FillAndExpand" Type="CirclePersona"
                    WaveColor="#89CFF0">
@@ -73,7 +73,7 @@ The wave color in the [SfShimmer](https://help.syncfusion.com/cr/maui/Syncfusion
 </shimmer:SfShimmer>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4" %}
+{% highlight c# tabtitle="C#" hl_lines="4" %}
 
 SfShimmer Shimmer = new SfShimmer()
 {
@@ -97,7 +97,7 @@ this.Content = Shimmer;
 The width of the wave in the [SfShimmer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html) view can be customized using the [WaveWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html#Syncfusion_Maui_Shimmer_SfShimmer_WaveWidth) property. The default value of `WaveWidth` is `200`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
+{% highlight xaml tabtitle="XAML" hl_lines="3" %}
 
 <shimmer:SfShimmer x:Name="Shimmer" VerticalOptions="FillAndExpand" Type="CirclePersona"
                    WaveColor="#89CFF0"  
@@ -110,7 +110,7 @@ The width of the wave in the [SfShimmer](https://help.syncfusion.com/cr/maui/Syn
 </shimmer:SfShimmer>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="5" %}
+{% highlight c# tabtitle="C#" hl_lines="5" %}
 
 SfShimmer Shimmer = new SfShimmer()
 {
@@ -141,7 +141,7 @@ The direction of the wave in the [SfShimmer](https://help.syncfusion.com/cr/maui
 * `BottomToTop` - BottomToTop enum of the animation direction allows the animation from bottom to top.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
 <shimmer:SfShimmer x:Name="Shimmer" VerticalOptions="FillAndExpand" Type="CirclePersona" 
                    WaveDirection="RightToLeft">
@@ -153,7 +153,7 @@ The direction of the wave in the [SfShimmer](https://help.syncfusion.com/cr/maui
 </shimmer:SfShimmer>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4" %}
+{% highlight c# tabtitle="C#" hl_lines="4" %}
 
 SfShimmer Shimmer = new SfShimmer()
 {
@@ -177,7 +177,7 @@ this.Content = Shimmer;
 The `RepeatCount` of the shimmer defines the number of the times the shimmer shape needed to render in the [SfShimmer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html) view. The default value of [RepeatCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html#Syncfusion_Maui_Shimmer_SfShimmer_RepeatCount) is `1`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
 <shimmer:SfShimmer x:Name="Shimmer" VerticalOptions="FillAndExpand" Type="CirclePersona" 
                    RepeatCount="3">
@@ -189,7 +189,7 @@ The `RepeatCount` of the shimmer defines the number of the times the shimmer sha
 </shimmer:SfShimmer>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4" %}
+{% highlight c# tabtitle="C#" hl_lines="4" %}
 
 SfShimmer Shimmer = new SfShimmer()
 {
@@ -213,7 +213,7 @@ this.Content = Shimmer;
 The duration of the animation in the [SfShimmer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html) view can be customized using the [AnimationDuration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html#Syncfusion_Maui_Shimmer_SfShimmer_AnimationDuration) property. The default value of `AnimationDuration` is `1000 ms`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
 <shimmer:SfShimmer x:Name="Shimmer" VerticalOptions="FillAndExpand" Type="CirclePersona" 
                    AnimationDuration="3000">
@@ -225,7 +225,7 @@ The duration of the animation in the [SfShimmer](https://help.syncfusion.com/cr/
 </shimmer:SfShimmer>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4" %}
+{% highlight c# tabtitle="C#" hl_lines="4" %}
 
 SfShimmer Shimmer = new SfShimmer()
 {

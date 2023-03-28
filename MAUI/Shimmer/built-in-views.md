@@ -7,7 +7,7 @@ control: SfShimmer
 documentation: ug
 ---
 
-# Built-in Views of .NET MAUI Shimmer (SfShimmer)
+# Built-in views of .NET MAUI Shimmer (SfShimmer)
 
 ## Built-in types
 
