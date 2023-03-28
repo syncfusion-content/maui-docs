@@ -9,7 +9,7 @@ documentation: ug
 
 # Customization of .NET MAUI Shimmer (SfShimmer)
 
-The `SfShimmer` control provides the following properties to customize the Shimmer,
+The [SfShimmer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.html) control provides the following properties to customize the shimmer,
 
 * `Fill` - To customize the background color of Shimmer view. 
 * `WaveColor` - To customize the Shimmer wave color.
@@ -22,7 +22,7 @@ This section explains how to customize the Shimmer control.
 
 ## Fill
 
-The background of the `SfShimmer` view can be customized by using the `Fill` property. The default value of the `Fill` property is `#F3EDF7`.
+The background of the [SfShimmer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html) view can be customized by using the [Fill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html#Syncfusion_Maui_Shimmer_SfShimmer_Fill) property. The default value of the `Fill` property is `#F3EDF7`.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
@@ -58,7 +58,7 @@ this.Content = Shimmer;
 
 ## WaveColor
 
-The wave color in the `SfShimmer` view can be customized using the `WaveColor` property. The default value of `WaveColor` is the `#FFFBFE` Color.
+The wave color in the [SfShimmer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html) view can be customized using the [WaveColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html#Syncfusion_Maui_Shimmer_SfShimmer_WaveColor) property. The default value of `WaveColor` is the `#FFFBFE` Color.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
@@ -94,7 +94,7 @@ this.Content = Shimmer;
 
 ## WaveWidth
 
-The width of the wave in the `SfShimmer` view can be customized using the `WaveWidth` property. The default value of `WaveWidth` is `200`.
+The width of the wave in the [SfShimmer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html) view can be customized using the [WaveWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html#Syncfusion_Maui_Shimmer_SfShimmer_WaveWidth) property. The default value of `WaveWidth` is `200`.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="3" %}
@@ -132,7 +132,7 @@ this.Content = Shimmer;
 
 ## WaveDirection
 
-The direction of the wave in the `SfShimmer` view can be customized by using the `WaveDirection` property. By default, wave direction is rendered by the `Default` wave. The following wave directions are available in SfShimmer:
+The direction of the wave in the [SfShimmer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html) view can be customized by using the [WaveDirection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html#Syncfusion_Maui_Shimmer_SfShimmer_WaveDirection) property. By default, wave direction is rendered by the [Default](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.ShimmerWaveDirection.html#Syncfusion_Maui_Shimmer_ShimmerWaveDirection_Default) wave. The following wave directions are available in SfShimmer:
 
 * `Default` - Default enum of the animation direction allows the animation from left top to right bottom.
 * `LeftToRight` - LeftToRight enum of the animation direction allows the animation from left to right.
@@ -174,7 +174,7 @@ this.Content = Shimmer;
 
 ## RepeatCount
 
-The `RepeatCount` of the shimmer defines the number of the times the shimmer shape needed to render in the `SfShimmer` view. The default value of `RepeatCount` is `1`.
+The `RepeatCount` of the shimmer defines the number of the times the shimmer shape needed to render in the [SfShimmer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html) view. The default value of [RepeatCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html#Syncfusion_Maui_Shimmer_SfShimmer_RepeatCount) is `1`.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
@@ -210,7 +210,7 @@ this.Content = Shimmer;
 
 ## AnimationDuration
 
-The duration of the animation in the `SfShimmer` view can be customized using the `AnimationDuration` property. The default value of `AnimationDuration` is `1000 ms`.
+The duration of the animation in the [SfShimmer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html) view can be customized using the [AnimationDuration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html#Syncfusion_Maui_Shimmer_SfShimmer_AnimationDuration) property. The default value of `AnimationDuration` is `1000 ms`.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}

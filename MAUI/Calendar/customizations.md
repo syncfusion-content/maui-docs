@@ -91,7 +91,7 @@ You can customize the calendar month view cell by using the `MonthView` property
 
 ![Month view Customization in .NET MAUI Calendar.](images/customization/maui-month-view-customization.png)
 
-*    **Special day predicate** - The special day predicate decides whether the month cell date is a special date or not in the calendar. You can add a special date to the `Calendar` using the `SpecialDayPredicate` property, and you can also customize the special day text style and background of the `Calendar` using the [SpecialDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_SpecialDatesTextStyle) and [SpecialDatesBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_SpecialDatesBackground) properties of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html). You can customize the special day with icons such as dots, hearts, diamonds, stars, and bells in the `MonthView` and also customize the icon color. If you do not wish to add any icon details, you can set them to be transparent.
+*    **Special day predicate** - The special day predicate decides whether the month cell date is a special date or not in the calendar. You can add a special date to the `Calendar` using the [SpecialDayPredicate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_SpecialDayPredicate) property, and you can also customize the special day text style and background of the `Calendar` using the [SpecialDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_SpecialDatesTextStyle) and [SpecialDatesBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_SpecialDatesBackground) properties of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html). You can customize the special day with icons such as dots, hearts, diamonds, stars, and bells in the `MonthView` and also customize the icon color. If you do not wish to add any icon details, you can set them to be transparent.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -295,7 +295,7 @@ You can customize the selection cell background and text style in Month, Year, D
 
 ## Month cell appearance using DataTemplate
 
-The month cell appearance can be customized using the `CellTemplate` property of `MonthView` in the `SfCalendar`.
+The month cell appearance can be customized using the [CellTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_CellTemplate) property of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html) in the `SfCalendar`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -402,7 +402,7 @@ internal class DateToStrokeConverter : IValueConverter
 
 ## Month cell appearance using DataTemplateSelector
 
-You can customize the month cell appearance using the `CellTemplate` property of `MonthView` in the `SfCalendar`. The `DataTemplateSelector` for a calendar can be used to choose a different data template for each cell in the calendar based on the cell's data. It allows customizing the appearance of a particular cell based on certain conditions.
+You can customize the month cell appearance using the [CellTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_CellTemplate) property of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html) in the `SfCalendar`. The `DataTemplateSelector` for a calendar can be used to choose a different data template for each cell in the calendar based on the cell's data. It allows customizing the appearance of a particular cell based on certain conditions.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -470,7 +470,7 @@ this.Calendar.View = CalendarView.Month;
 
 ## Year cell appearance using DataTemplate
 
-The year cell appearance can be customized using the `CellTemplate` property of `YearView` in the `SfCalendar`.
+The year cell appearance can be customized using the [CellTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarYearView.html#Syncfusion_Maui_Calendar_CalendarYearView_CellTemplate) property of [YearView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarYearView.html) in the `SfCalendar`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -575,7 +575,7 @@ internal class DateToStrokeConverter : IValueConverter
 
 ## Year cell appearance using DataTemplateSelector
 
-You can customize the year cell appearance by using the `CellTemplate` property of `YearView` in the `SfCalendar`. The `DataTemplateSelector` for a calendar can be used to choose a different data template for each cell in the calendar based on the cell's data. It allows customizing the appearance of a particular cell based on certain conditions.
+You can customize the year cell appearance by using the [CellTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarYearView.html#Syncfusion_Maui_Calendar_CalendarYearView_CellTemplate) property of [YearView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarYearView.html) in the `SfCalendar`. The `DataTemplateSelector` for a calendar can be used to choose a different data template for each cell in the calendar based on the cell's data. It allows customizing the appearance of a particular cell based on certain conditions.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
