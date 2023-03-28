@@ -174,3 +174,527 @@ comboBox.MaxDropDownHeight = 150;
 The following image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox maximum drop-down height](Images/UICustomization/MaxDropDownHeight.png)
+
+## Customize the DropDown (suggestion) item 
+
+The [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ItemTemplate) property helps you to decorate drop-down items using the custom templates. The default value of the `ItemTemplate` is `null`. The following example shows how to customize drop-down items using templates.
+
+{% tab %}
+{% highlight C# %}
+
+    //Model.cs
+    public class Employee
+    {
+        public string Name { get; set; }
+        public string ProfilePicture { get; set; }
+        public string Designation { get; set; }
+        public string ID { get; set; }
+    }
+
+    //ViewModel.cs
+    public class EmployeeViewModel
+    {
+        public ObservableCollection<Employee> Employees { get; set; }
+        public EmployeeViewModel()
+        {
+            this.Employees = new ObservableCollection<Employee>();
+            Employees.Add(new Employee
+            {
+                Name = "Anne Dodsworth",
+                ProfilePicture = "people_circle1.png",
+                Designation = "Developer",
+                ID = "E001",
+            });
+            Employees.Add(new Employee
+            {
+                Name = "Andrew Fuller",
+                ProfilePicture = "people_circle8.png", 
+                Designation = "Team Lead",
+                ID = "E002",
+            });
+            ...
+        }
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight xaml %}
+
+    <editors:SfComboBox Placeholder="Select an employee"
+                        TextMemberPath="Name"
+                        DisplayMemberPath="Name"
+                        ItemsSource="{Binding Employees}"
+                        WidthRequest="280"
+                        HeightRequest="34"
+                        x:Name="comboBox">
+        <editors:SfComboBox.BindingContext>
+            <local:EmployeeViewModel/>
+        </editors:SfComboBox.BindingContext>
+        <editors:SfComboBox.ItemTemplate>
+            <DataTemplate >
+                <ViewCell>
+                    <Grid Margin="0,5"
+                          VerticalOptions="Center"
+                          HorizontalOptions="Center"
+                          ColumnDefinitions="48,220"
+                          RowDefinitions="50">
+                        <Image Grid.Column="0"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                               Source="{Binding ProfilePicture}"
+                               Aspect="AspectFit"/>
+                        <StackLayout HorizontalOptions="Start"
+                                     VerticalOptions="Center"
+                                     Grid.Column="1"
+                                     Margin="15,0,0,0">
+                            <Label HorizontalTextAlignment="Start"
+                                   VerticalTextAlignment="Center"
+                                   Opacity=".87"
+                                   FontSize="14"
+                                   Text="{Binding Name}"/>
+                            <Label HorizontalOptions="Start"
+                                   VerticalTextAlignment="Center"
+                                   Opacity=".54"
+                                   FontSize="12"
+                                   Text="{Binding Designation}"/>
+                        </StackLayout>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </editors:SfComboBox.ItemTemplate>
+    </editors:SfComboBox>
+
+{% endhighlight %}
+{% highlight C# %}
+
+    EmployeeViewModel employee = new EmployeeViewModel();
+
+    SfComboBox comboBox = new SfComboBox()
+        {
+            HeightRequest = 34,
+            WidthRequest = 280,
+            BindingContext = employee,
+            ItemsSource = employee.Employees,
+            DisplayMemberPath = "Name",
+            Placeholder = "Enter an employee",
+            TextMemberPath = "Name",
+        };
+
+    DataTemplate itemTemplate = new DataTemplate(() =>
+    {
+        Grid grid = new();
+        grid.Margin = new Thickness(0, 5);
+        grid.HorizontalOptions = LayoutOptions.Center;
+        grid.VerticalOptions = LayoutOptions.Center;
+        ColumnDefinition colDef1 = new ColumnDefinition() { Width = 48 };
+        ColumnDefinition colDef2 = new ColumnDefinition() { Width = 220 };
+        RowDefinition rowDef = new RowDefinition() { Height = 50 };
+        grid.ColumnDefinitions.Add(colDef1);
+        grid.ColumnDefinitions.Add(colDef2);
+        grid.RowDefinitions.Add(rowDef);
+
+        Image image = new();
+        image.HorizontalOptions = LayoutOptions.Center;
+        image.VerticalOptions = LayoutOptions.Center;
+        image.Aspect = Aspect.AspectFit;
+        image.SetBinding(Image.SourceProperty, ("ProfilePicture"));
+        Grid.SetColumn(image, 0);
+
+        StackLayout stack = new();
+        stack.Orientation = StackOrientation.Vertical;
+        stack.Margin = new Thickness(15, 0,0,0);
+        stack.HorizontalOptions = LayoutOptions.Start;
+        stack.VerticalOptions = LayoutOptions.Center;
+        Grid.SetColumn(stack, 1);
+
+        Label label = new();
+        label.SetBinding(Label.TextProperty, "Name");
+        label.FontSize = 14;
+        label.VerticalOptions = LayoutOptions.Center;
+        label.HorizontalTextAlignment = TextAlignment.Start;
+        label.Opacity = .87;
+
+        Label label1 = new();
+        label1.SetBinding(Label.TextProperty, "Designation");
+        label1.FontSize = 12;
+        label1.VerticalOptions = LayoutOptions.Center;
+        label1.HorizontalTextAlignment = TextAlignment.Start;
+        label1.Opacity = .54;
+
+        stack.Children.Add(label);
+        stack.Children.Add(label1);
+
+        grid.Children.Add(image);
+        grid.Children.Add(stack);
+
+        return new ViewCell { View = grid };
+    });
+    comboBox.ItemTemplate = itemTemplate;
+
+    this.Content = comboBox;
+
+{% endhighlight %}
+{% endtabs %}
+
+The following image illustrates the result of the above code:
+
+![.NET MAUI ComboBox ItemTemplate](Images/UICustomization/ItemTemplate.png)
+
+## Customize the DropDown (suggestion) item based on condition
+
+The [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ItemTemplate) property helps you to decorate drop-down items conditionally based on their content using the custom templates. The default value of the `ItemTemplate` is `null`.
+
+{% tab %}
+{% highlight C# %}
+
+    //Model.cs
+    public class Employee
+    {
+        public string Name { get; set; }
+        public string ProfilePicture { get; set; }
+        public string Designation { get; set; }
+        public string ID { get; set; }
+    }
+
+    //ViewModel.cs
+    public class EmployeeViewModel
+    {
+        public ObservableCollection<Employee> Employees { get; set; }
+        public EmployeeViewModel()
+        {
+            this.Employees = new ObservableCollection<Employee>();
+            Employees.Add(new Employee
+            {
+                Name = "Anne Dodsworth",
+                ProfilePicture = "people_circle1.png",
+                Designation = "Developer",
+                ID = "E001",
+            });
+            Employees.Add(new Employee
+            {
+                Name = "Andrew Fuller",
+                ProfilePicture = "people_circle8.png", 
+                Designation = "Team Lead",
+                ID = "E002",
+            });
+            Employees.Add(new Employee
+            {
+                Name = "Andrew Fuller",
+                ProfilePicture ="people_circle8.png",
+                Designation = "Team Lead",
+                ID = "E002",
+            });
+            Employees.Add(new Employee
+            {
+                Name = "Emilio Alvaro",
+                ProfilePicture = "people_circle7.png",
+                Designation = "Product Manager",
+                ID = "E003"
+            });
+            Employees.Add(new Employee
+            {
+                Name = "Janet Leverling",
+                ProfilePicture = "people_circle2.png",
+                Designation = "HR",
+                ID = "E004",
+            });
+            Employees.Add(new Employee
+            {
+                Name = "Laura Callahan",
+                ProfilePicture = "people_circle10.png",
+                Designation = "Product Manager",
+                ID = "E005",
+            });
+        }
+    }
+
+    //Template selector
+    public class EmployeeTemplateSelector : DataTemplateSelector
+    {
+        public DataTemplate EmployeeTemplate1 { get; set; }
+        public DataTemplate EmployeeTemplate2 { get; set; }
+
+        protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+        {
+            var employeeName = ((Employee)item).Name;
+            {
+                if (employeeName.ToString() == "Anne Dodsworth" || employeeName.ToString() == "Emilio Alvaro" ||
+                    employeeName.ToString() == "Laura Callahan")
+                {
+                    return EmployeeTemplate1;
+                }
+                else
+                {
+                    return EmployeeTemplate2;
+                }
+            }
+        }
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tab %}
+{% highlight xaml %}
+
+    <Grid >
+        <Grid.Resources>
+            <DataTemplate x:Key="employeeTemplate1">
+                <ViewCell>
+                    <Grid Margin="0,5"
+                          VerticalOptions="Center"
+                          HorizontalOptions="Center"
+                          ColumnDefinitions="48,220"
+                          RowDefinitions="50">
+                        <Image Grid.Column="0"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                               Source="{Binding ProfilePicture}"
+                               Aspect="AspectFit"/>
+                        <StackLayout HorizontalOptions="Start"
+                                     VerticalOptions="Center"
+                                     Grid.Column="1"
+                                     Margin="15,0,0,0">
+                            <Label HorizontalTextAlignment="Start"
+                                   VerticalTextAlignment="Center"
+                                   Opacity=".87"
+                                   FontSize="14"
+                                   TextColor="Blue"
+                                   Text="{Binding Name}"/>
+                            <Label HorizontalOptions="Start"
+                                   VerticalTextAlignment="Center"
+                                   Opacity=".54"
+                                   FontSize="12"
+                                   TextColor="Coral"
+                                   Text="{Binding Designation}"/>
+                        </StackLayout>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        
+            <DataTemplate x:Key="employeeTemplate2">
+                <ViewCell>
+                    <Grid Margin="0,5"
+                          VerticalOptions="Center"
+                          HorizontalOptions="Center"
+                          ColumnDefinitions="48,220"
+                          RowDefinitions="50">
+                        <Image Grid.Column="0"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                               Source="{Binding ProfilePicture}"
+                               Aspect="AspectFit"/>
+                        <StackLayout HorizontalOptions="Start"
+                                     VerticalOptions="Center"
+                                     Grid.Column="1"
+                                     Margin="15,0,0,0">
+                            <Label HorizontalTextAlignment="Start"
+                                   VerticalTextAlignment="Center"
+                                   Opacity=".87"
+                                   FontSize="14"
+                                   TextColor="Red"
+                                   Text="{Binding Name}"/>
+                            <Label HorizontalOptions="Start"
+                                   VerticalTextAlignment="Center"
+                                   Opacity=".54"
+                                   FontSize="12"
+                                   TextColor="Green"
+                                   Text="{Binding Designation}"/>
+                        </StackLayout>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+
+            <local:EmployeeTemplateSelector x:Key="employeeTemplateSelector"
+                                            EmployeeTemplate1="{StaticResource employeeTemplate1}"
+                                            EmployeeTemplate2="{StaticResource employeeTemplate2}"/>
+
+    </Grid.Resources>
+    <editors:SfComboBox Placeholder="Select an employee"
+                        TextMemberPath="Name"
+                        DisplayMemberPath="Name"
+                        ItemsSource="{Binding Employees}"
+                        SelectedItem="{Binding SelectedEmployee,Mode=TwoWay}"
+                        WidthRequest="280"
+                        HeightRequest="34"
+                        x:Name="comboBox"
+                        ItemTemplate="{StaticResource employeeTemplateSelector}">
+        <editors:SfComboBox.BindingContext>
+            <local:EmployeeViewModel/>
+        </editors:SfComboBox.BindingContext>
+    </editors:SfComboBox>
+</Grid>
+
+{% endhighlight %}
+{% highlight C# %}
+
+    EmployeeViewModel employee = new EmployeeViewModel();
+
+    DataTemplate employeeTemplate1 = new DataTemplate(() =>
+    {
+        Grid grid = new();
+        grid.Margin = new Thickness(0, 5);
+        grid.HorizontalOptions = LayoutOptions.Center;
+        grid.VerticalOptions = LayoutOptions.Center;
+        ColumnDefinition colDef1 = new ColumnDefinition() { Width = 48 };
+        ColumnDefinition colDef2 = new ColumnDefinition() { Width = 220 };
+        RowDefinition rowDef = new RowDefinition() { Height = 50 };
+        grid.ColumnDefinitions.Add(colDef1);
+        grid.ColumnDefinitions.Add(colDef2);
+        grid.RowDefinitions.Add(rowDef);
+
+        Image image = new();
+        image.HorizontalOptions = LayoutOptions.Center;
+        image.VerticalOptions = LayoutOptions.Center;
+        image.Aspect = Aspect.AspectFit;
+        image.SetBinding(Image.SourceProperty, ("ProfilePicture"));
+        Grid.SetColumn(image, 0);
+
+        StackLayout stack = new();
+        stack.Orientation = StackOrientation.Vertical;
+        stack.Margin = new Thickness(15, 0,0,0);
+        stack.HorizontalOptions = LayoutOptions.Start;
+        stack.VerticalOptions = LayoutOptions.Center;
+        Grid.SetColumn(stack, 1);
+
+        Label label = new();
+        label.SetBinding(Label.TextProperty, "Name");
+        label.FontSize = 14;
+        label.TextColor = Colors.Blue;
+        label.VerticalOptions = LayoutOptions.Center;
+        label.HorizontalTextAlignment = TextAlignment.Start;
+        label.Opacity = .87;
+
+        Label label1 = new();
+        label1.SetBinding(Label.TextProperty, "Designation");
+        label1.FontSize = 12;
+        label1.TextColor = Colors.Coral;
+        label1.VerticalOptions = LayoutOptions.Center;
+        label1.HorizontalTextAlignment = TextAlignment.Start;
+        label1.Opacity = .54;
+
+        stack.Children.Add(label);
+        stack.Children.Add(label1);
+
+        grid.Children.Add(image);
+        grid.Children.Add(stack);
+
+        return new ViewCell { View = grid };
+    });
+
+    DataTemplate employeeTemplate2 = new DataTemplate(() =>
+    {
+        Grid grid = new();
+        grid.Margin = new Thickness(0, 5);
+        grid.HorizontalOptions = LayoutOptions.Center;
+        grid.VerticalOptions = LayoutOptions.Center;
+        ColumnDefinition colDef1 = new ColumnDefinition() { Width = 48 };
+        ColumnDefinition colDef2 = new ColumnDefinition() { Width = 220 };
+        RowDefinition rowDef = new RowDefinition() { Height = 50 };
+        grid.ColumnDefinitions.Add(colDef1);
+        grid.ColumnDefinitions.Add(colDef2);
+        grid.RowDefinitions.Add(rowDef);
+
+        Image image = new();
+        image.HorizontalOptions = LayoutOptions.Center;
+        image.VerticalOptions = LayoutOptions.Center;
+        image.Aspect = Aspect.AspectFit;
+        image.SetBinding(Image.SourceProperty, ("ProfilePicture"));
+        Grid.SetColumn(image, 0);
+
+        StackLayout stack = new();
+        stack.Orientation = StackOrientation.Vertical;
+        stack.Margin = new Thickness(15, 0, 0, 0);
+        stack.HorizontalOptions = LayoutOptions.Start;
+        stack.VerticalOptions = LayoutOptions.Center;
+        Grid.SetColumn(stack, 1);
+
+        Label label = new();
+        label.SetBinding(Label.TextProperty, "Name");
+        label.FontSize = 14;
+        label.TextColor = Colors.Red;
+        label.VerticalOptions = LayoutOptions.Center;
+        label.HorizontalTextAlignment = TextAlignment.Start;
+        label.Opacity = .87;
+
+        Label label1 = new();
+        label1.SetBinding(Label.TextProperty, "Designation");
+        label1.FontSize = 12;
+        label1.TextColor = Colors.Green;
+        label1.VerticalOptions = LayoutOptions.Center;
+        label1.HorizontalTextAlignment = TextAlignment.Start;
+        label1.Opacity = .54;
+
+        stack.Children.Add(label);
+        stack.Children.Add(label1);
+
+        grid.Children.Add(image);
+        grid.Children.Add(stack);
+
+        return new ViewCell { View = grid };
+    });
+
+    EmployeeTemplateSelector employeeTemplateSelector = new EmployeeTemplateSelector();
+    employeeTemplateSelector.EmployeeTemplate1 = employeeTemplate1;
+    employeeTemplateSelector.EmployeeTemplate2 = employeeTemplate2;
+
+    SfComboBox comboBox = new SfComboBox()
+    {
+        HeightRequest = 34,
+        WidthRequest = 280,
+        BindingContext = employee,
+        ItemsSource = employee.Employees,
+        DisplayMemberPath = "Name",
+        Placeholder = "Enter an employee",
+        TextMemberPath = "Name",
+        ItemTemplate = employeeTemplateSelector,
+    };
+
+    this.Content = comboBox;
+
+{% endhighlight %}
+{% endtabs %}
+
+The following image illustrates the result of the above code:
+
+![.NET MAUI ComboBox ItemTemplateSelector](Images/UICustomization/TemplateSelector.png)
+
+## Completed Event
+
+The [Completed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_Completed) event is raised when the user finalizes the text in the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) editable mode by pressing return key on the keyboard.The handler for the event is a generic event handler, taking the `sender` and `EventArgs`(the `EventArgs` value is `string.Empty`):
+
+{% tabs %}
+{% highlight xaml %}
+
+    <editors:SfComboBox x:Name="combobox"
+                        IsEditable="True" 
+                        WidthRequest="280" 
+                        HeightRequest="34" 
+                        Completed="combobox_Completed"/>
+
+{% endhighlight %}
+{% highlight C# %}
+
+    private async void combobox_Completed(object sender, EventArgs e)
+    {
+        await DisplayAlert("Message", "Text entering Completed", "close");
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+Completed event can be subscribed in C# also:
+
+{% tab %}
+{% highlight C# %}
+
+    combobox.Completed+=combobox_Completed;
+
+{% endhighlight %}
+{% endtabs %}
+
+The following image illustrates the result of the above code:
+
+![.NET MAUI ComboBox completed event](Images/UICustomization/CompletedEvent.png)

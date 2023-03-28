@@ -7,14 +7,14 @@ Control: SfDataForm
 Documentation: UG
 ---
 
-# Floating label Layout in .NET MAUI DataForm (SfDataForm)
+# Floating label layout in .NET MAUI DataForm (SfDataForm)
 
 ## Overview
 
-The floating label layout is a powerful feature that enhances the user experience and makes it easier for users to interact with forms. The data form supports a floating label layout which includes assistive labels, leading and trailing icons, and a password toggle icon to show or hide a password. It offers three different containers, including filled, outlined, and none. Setting `LayoutType` to `TextInputLayout` enables a floating label layout.
+The floating label layout is a powerful feature that enhances the user experience and makes it easier for users to interact with forms. The data form supports a floating label layout which includes assistive labels, leading and trailing icons, and a password toggle icon to show or hide a password. It offers three different containers, including filled, outlined, and none. Setting [LayoutType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormLayoutType.html) to [TextInputLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormLayoutType.html#Syncfusion_Maui_DataForm_DataFormLayoutType_TextInputLayout) enables a floating label layout.
 
 ## Changing the layout type for the data form
-By default, the dataform arranges the editors and their labels corresponding to the fields in the layout. However, to enable the floating label layout for data form, set the LayoutType property of the `SfDataForm` or `DataFormItem` to `TextInputLayout`.
+By default, the dataform arranges the editors and their labels corresponding to the fields in the layout. However, to enable the floating label layout for data form, set the [LayoutType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_LayoutType) property of the [SfDataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html) or [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html) to `TextInputLayout`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -37,7 +37,7 @@ this.dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
 ![Changing the layout type in .NET MAUI DataForm.](images/floating-label-layout/outlined-container-type.png)
 
 #### Changing the layout type for the editor
-Change the layout type for the editor by using the `LayoutType` property of the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html), and it will be handled in the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event.
+Change the layout type for the editor by using the [LayoutType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_LayoutType) property of the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html), and it will be handled in the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event.
 
 {% tabs %}
 {% highlight XAML %}
@@ -76,10 +76,10 @@ Dataform supports the floating label layout for the following editors.
 * Custom editor
 
 ## Container types
-Containers enhance the perspective of the dataform editor views. By default, the container type is `Outlined`. By using the `ContainerType` property of the `TextInputLayoutSettings` in `DataForm` or `DataFormItem`, modify the container type to `Filled` or `None`.
+Containers enhance the perspective of the dataform editor views. By default, the container type is [Outlined](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.TextInputLayoutContainerType.html#Syncfusion_Maui_DataForm_TextInputLayoutContainerType_Outlined). By using the [ContainerType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.TextInputLayoutSettings.html#Syncfusion_Maui_DataForm_TextInputLayoutSettings_ContainerType) property of the [TextInputLayoutSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.TextInputLayoutSettings.html) in [DataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html) or [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html), modify the container type to [Filled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.TextInputLayoutContainerType.html#Syncfusion_Maui_DataForm_TextInputLayoutContainerType_Filled) or [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.TextInputLayoutContainerType.html#Syncfusion_Maui_DataForm_TextInputLayoutContainerType_None).
 
 #### Outlined
-The `Outlined` container type draws a thin border around the text input field and adds a hint text that floats above the input field when the user starts typing. To enable the outlined container type, set the `ContainerType` property of the `TextInputLayoutSettings` to `Outlined` in `DataForm` or `DataFormItem`, which covers the editor view with rounded-corner.
+The `Outlined` container type draws a thin border around the text input field and adds a hint text that floats above the input field when the user starts typing. To enable the outlined container type, set the [ContainerType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.TextInputLayoutSettings.html#Syncfusion_Maui_DataForm_TextInputLayoutSettings_ContainerType) property of the [TextInputLayoutSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.TextInputLayoutSettings.html) to [Outlined](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.TextInputLayoutContainerType.html#Syncfusion_Maui_DataForm_TextInputLayoutContainerType_Outlined) in [SfDataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html) or [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html), which covers the editor view with rounded-corner.
 
 {% tabs %}
 {% highlight XAML %}
@@ -148,7 +148,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 ![Outlined container type in .NET MAUI DataForm.](images/floating-label-layout/outlined-container-type.png)
 
 #### Filled
-The `Filled` container type fills the background of the text input field with a solid color and adds a hint of text that floats above the input field when the user starts typing. It can be enabled by setting the `ContainerType` property to `Filled` in the `DataForm` or `DataFormItem`.
+The `Filled` container type fills the background of the text input field with a solid color and adds a hint of text that floats above the input field when the user starts typing. It can be enabled by setting the [ContainerType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.TextInputLayoutSettings.html#Syncfusion_Maui_DataForm_TextInputLayoutSettings_ContainerType) property to [Filled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.TextInputLayoutContainerType.html#Syncfusion_Maui_DataForm_TextInputLayoutContainerType_Filled) in the [SfDataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html) or [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html).
 
 {% tabs %}
 {% highlight XAML %}
@@ -186,7 +186,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 ![Filled container type in .NET MAUI DataForm.](images/floating-label-layout/filled-container-type.png)
 
 #### None
-The `None` container type adds no border or background to the text input field. It can be enabled by setting the `ContainerType` property to `None` in the `DataForm` or `DataFormItem` container. It will have an empty background and enough spacing.
+The `None` container type adds no border or background to the text input field. It can be enabled by setting the [ContainerType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.TextInputLayoutSettings.html#Syncfusion_Maui_DataForm_TextInputLayoutSettings_ContainerType) property to [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.TextInputLayoutContainerType.html#Syncfusion_Maui_DataForm_TextInputLayoutContainerType_None) in the [SfDataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html) or [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html). It will have an empty background and enough spacing.
 
 {% tabs %}
 {% highlight XAML %}
@@ -226,7 +226,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 ## Leading and Trailing view
 
 #### Leading view
-The leading view is a view that appears to the left of the text input field. It can add functionality or visual elements to the text input such as a label or an icon. It can be added to the floating label layout by setting the `LeadingView` property of the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html). Show the leading view only when the `ShowLeadingView` property is `true`.
+The leading view is a view that appears to the left of the text input field. It can add functionality or visual elements to the text input such as a label or an icon. It can be added to the floating label layout by setting the [LeadingView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_LeadingView) property of the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html). Show the leading view only when the [ShowLeadingView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_ShowLeadingView) property is `true`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -263,12 +263,12 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-N> The `LeadingView` is applicable for both `Default` and `TextInputLayout` layout types
+N> The [LeadingView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_LeadingView) is applicable for both [Default](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormLayoutType.html#Syncfusion_Maui_DataForm_DataFormLayoutType_Default) and [TextInputLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormLayoutType.html#Syncfusion_Maui_DataForm_DataFormLayoutType_TextInputLayout) layout types
 
 ![Leading view in .NET MAUI DataForm.](images/floating-label-layout/leading-view.png)
 
 #### Trailing view
-The trailing view is a view that appears to the right of the text input field. It can be used to add additional functionality or visual elements to the text input such as a clear button or an icon. It can be added to the floating label layout by setting the `TrailingView` property of the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html). Show a trailing view only when the `ShowTrailingView` property is `true`.
+The trailing view is a view that appears to the right of the text input field. It can be used to add additional functionality or visual elements to the text input such as a clear button or an icon. It can be added to the floating label layout by setting the [TrailingView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_TrailingView) property of the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html). Show a trailing view only when the [ShowTrailingView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_ShowTrailingView) property is `true`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -306,12 +306,12 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-N> The `TrailingView` is applicable only when the `LayoutType` is `TextInputLayout`.
+N> The [TrailingView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_TrailingView) is applicable only when the [LayoutType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_LayoutType) is [TextInputLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormLayoutType.html#Syncfusion_Maui_DataForm_DataFormLayoutType_TextInputLayout).
 
 ![Trailing view in .NET MAUI DataForm.](images/floating-label-layout/trailing-view.png)
 
 #### Leading and Trailing View Position
-The `LeadingViewPosition` and `TrailingViewPosition` properties of the `DataFormItem` allow you to adjust the leading and trailing view's positions. The view is positioned `outside` the container if the leading and trailing view positions are set to `TextInputLayoutViewPosition.Outside`. The view is positioned `inside` the container if the leading and trailing view positions are set to `TextInputLayoutViewPosition.Inside`.
+The [LeadingViewPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_LeadingViewPosition) and [TrailingViewPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_TrailingViewPosition) properties of the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html) allow you to adjust the leading and trailing view's positions. The view is positioned `outside` the container if the leading and trailing view positions are set to [TextInputLayoutViewPosition.Outside](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.TextInputLayoutViewPosition.html#Syncfusion_Maui_DataForm_TextInputLayoutViewPosition_Outside). The view is positioned `inside` the container if the leading and trailing view positions are set to [TextInputLayoutViewPosition.Inside](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.TextInputLayoutViewPosition.html#Syncfusion_Maui_DataForm_TextInputLayoutViewPosition_Inside).
 
 {% tabs %}
 {% highlight XAML %}
@@ -389,7 +389,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 ![Leading and Trailing view position in .NET MAUI DataForm.](images/floating-label-layout/view-position.png)
 
 ## Enable password visibility toggle for password editor
-Password toggle visibility in a floating label layout is used to show or hide the visibility of characters in the dataform password editor. Enable this toggle by setting the `EnablePasswordVisibilityToggle` property to true in the `DataFormItem`. The default value of the `EnablePasswordVisibilityToggle` is `true`.
+Password toggle visibility in a floating label layout is used to show or hide the visibility of characters in the dataform password editor. Enable this toggle by setting the [EnablePasswordVisibilityToggle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormPasswordItem.html#Syncfusion_Maui_DataForm_DataFormPasswordItem_EnablePasswordVisibilityToggle) property to `true` in the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html). The default value of the `EnablePasswordVisibilityToggle` is `true`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -433,7 +433,7 @@ The data field name will be displayed as a floating or hint label for the editor
 #### Helper label
 The helper label displays the watermark for the editor to provide hints for users, and it can be set using `Prompt` or `PlaceHolderText`.
 
-The visibility of the helper text in the DataForm floating label layout for the `DataForm` and `DataFormItem` can be collapsed by setting the `ShowHelperText` property of the `TextInputLayoutSettings` to `false`.
+The visibility of the helper text in the DataForm floating label layout for the [DataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html) and [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html) can be collapsed by setting the [ShowHelperText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.TextInputLayoutSettings.html#Syncfusion_Maui_DataForm_TextInputLayoutSettings_ShowHelperText) property of the [TextInputLayoutSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.TextInputLayoutSettings.html) to `false`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -474,10 +474,10 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 The validation label displays the dataform validation messages such as valid or invalid data. Refer to the [validation](https://help.syncfusion.com/maui/dataform/validation) to learn more about the dataform validation.
 
 ## Customize Assistive label using text style
-Customize the font of assistive labels by setting the `TextColor`, `FontFamily`, `FontSize`, and `FontAttributes` properties of the `DataFormTextStyle` property.
+Customize the font of assistive labels by setting the `TextColor`, `FontFamily`, `FontSize`, and `FontAttributes` properties of the [DataFormTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormTextStyle.html) property.
 
 #### Hint label style
-Customize the text of the hint label by setting the `TextColor`, `FontFamily`, `FontSize`, and `FontAttributes` properties of the `LabelTextStyle` in the DataFormItem.
+Customize the text of the hint label by setting the `TextColor`, `FontFamily`, `FontSize`, and `FontAttributes` properties of the [LabelTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_LabelTextStyle) in the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html).
 
 {% tabs %}
 {% highlight XAML %}
@@ -517,7 +517,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 ![Hint label style in .NET MAUI DataForm.](images/floating-label-layout/hint-label-style.png)
 
 #### Helper label style
-Customize the text of the helper label by setting the `TextColor`, `FontFamily`, `FontSize`, and `FontAttributes` properties of the `HelperTextStyle` in the DataFormItem.
+Customize the text of the helper label by setting the `TextColor`, `FontFamily`, `FontSize`, and `FontAttributes` properties of the [TextInputLayoutSettings.HelperTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.TextInputLayoutSettings.html#Syncfusion_Maui_DataForm_TextInputLayoutSettings_HelperTextStyle) in the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html).
 
 {% tabs %}
 {% highlight XAML %}
@@ -560,7 +560,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 ![Helper label style in .NET MAUI DataForm.](images/floating-label-layout/helper-text-style.png)
 
 #### Error message label style
-Customize the text of the error message label by setting the `TextColor`, `FontFamily`, `FontSize`, and `FontAttributes` properties of the `ErrorLabelTextStyle` in the DataFormItem.
+Customize the text of the error message label by setting the `TextColor`, `FontFamily`, `FontSize`, and `FontAttributes` properties of the [ErrorLabelTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_ErrorLabelTextStyle) in the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html).
 
 {% tabs %}
 {% highlight XAML %}
@@ -601,7 +601,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 ![Error message label style in .NET MAUI DataForm.](images/floating-label-layout/error-message-style.png)
 
 #### Valid message label style
-Customize the text of a valid message label by setting the `TextColor`, `FontFamily`, `FontSize`, and `FontAttributes` properties of the `ValidMessageLabelTextStyle` in the DataFormItem.
+Customize the text of a valid message label by setting the `TextColor`, `FontFamily`, `FontSize`, and `FontAttributes` properties of the [ValidMessageLabelTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_ValidMessageLabelTextStyle) in the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html).
 
 {% tabs %}
 {% highlight XAML %}
@@ -644,7 +644,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 ## Appearance customization
 
 #### Changing outline corner radius
-The corner radius of the container will be changed by setting the `OutlineCornerRadius` property of the `TextInputLayoutSettings` to double value.
+The corner radius of the container will be changed by setting the [OutlineCornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.TextInputLayoutSettings.html#Syncfusion_Maui_DataForm_TextInputLayoutSettings_OutlineCornerRadius) property of the [TextInputLayoutSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.TextInputLayoutSettings.html) to double value.
 
 {% tabs %}
 {% highlight XAML %}
@@ -683,7 +683,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 ![Outline corner radius in .NET MAUI DataForm.](images/floating-label-layout/outline-corner-radius.png)
 
 #### Stroke color
-The `Stroke` property of the `TextInputLayoutSettings` changes the label text and border color of the editors.
+The [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.TextInputLayoutSettings.html#Syncfusion_Maui_DataForm_TextInputLayoutSettings_Stroke) property of the [TextInputLayoutSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.TextInputLayoutSettings.html) changes the label text and border color of the editors.
 
 {% tabs %}
 {% highlight XAML %}
@@ -722,7 +722,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 ![Stroke color in .NET MAUI DataForm.](images/floating-label-layout/stroke.png)
 
 #### Focused stroke color
-When the given editor view is focused, the `FocusedStroke` property value will be applied to the label text and border.
+When the given editor view is focused, the [FocusedStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.TextInputLayoutSettings.html#Syncfusion_Maui_DataForm_TextInputLayoutSettings_FocusedStroke) property value will be applied to the label text and border.
 
 {% tabs %}
 {% highlight XAML %}
@@ -761,7 +761,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 ![Focused stroke color in .NET MAUI DataForm.](images/floating-label-layout/focused-stroke.png)
 
 #### Focused and unfocused stroke thickness
-When the editor's view is focused and unfocused, the border's thickness can be changed using the `FocusedStrokeThickness` and `UnfocusedStrokeThickness` properties of the `TextInputLayoutSettings`.
+When the editor's view is focused and unfocused, the border's thickness can be changed using the [FocusedStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.TextInputLayoutSettings.html#Syncfusion_Maui_DataForm_TextInputLayoutSettings_FocusedStrokeThickness) and [UnfocusedStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.TextInputLayoutSettings.html#Syncfusion_Maui_DataForm_TextInputLayoutSettings_UnfocusedStrokeThickness) properties of the [TextInputLayoutSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.TextInputLayoutSettings.html).
 
 {% tabs %}
 {% highlight XAML %}
@@ -802,6 +802,6 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 ![Focused and unfocused stroke thickness in .NET MAUI DataForm.](images/floating-label-layout/stroke-thickness.png)
 
 ## Unsupported editors
-The Floating label layout does not support non-editable editors such as `RadioGroup editor`, `CheckBox editor`, and `Switch editor`. Picker editors such as `Picker editor`, `Date picker`, and `Time picker` will be updated to support a floating label layout.
+The Floating label layout does not support non-editable editors such as [RadioGroup editor](https://help.syncfusion.com/maui/dataform/editors#radiogroup-editor), [CheckBox editor](https://help.syncfusion.com/maui/dataform/editors#checkbox-editor), and [Switch editor](https://help.syncfusion.com/maui/dataform/editors#switch-editor). Picker editors such as [Picker editor](https://help.syncfusion.com/maui/dataform/editors#picker-editor), [Date picker](https://help.syncfusion.com/maui/dataform/editors#date-editor), and [Time picker](https://help.syncfusion.com/maui/dataform/editors#time-editor) will be updated to support a floating label layout.
 
-N> By default, the layout type of unsupported editors is `Default`. You can also set the layout type for the unsupported editor using this `Changing layout type of the DataFormItem`.
+N> By default, the layout type of unsupported editors is `Default`. You can also set the layout type for the unsupported editor using this [Changing layout type of the DataFormItem](https://help.syncfusion.com/maui/dataform/floating-label-layout#changing-the-layout-type-for-the-editor).

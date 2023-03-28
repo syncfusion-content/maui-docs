@@ -17,7 +17,7 @@ This section provides a quick overview of how to get start with the .NET MAUI Po
  1. Create a new .NET MAUI application in Visual Studio.
  2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfPopup to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Popup and install it.
  3. Import the control namespace `Syncfusion.Maui.Popup` in XAML or C# code.
- 4. Initialize the `SfPopup` control.
+ 4. Initialize the [SfPopup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html) control.
  
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -82,7 +82,7 @@ namespace GettingStarted
 
 ## Displaying popup
 
-Display a popup over your view by calling the `SfPopup.Show` method.
+Display a popup over your view by calling the [Show](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_Show_System_Boolean_) method.
 
 Refer to the following code example for displaying popup.
 
@@ -139,17 +139,17 @@ The .NET MAUI Popup (SfPopup) allows showing the popup content at various positi
 
 The following list of options is available to position the SfPopup in the desired position:
 
-* `Center Positioning`: Use the `SfPopup.IsOpen` property or `SfPopup.Show` method to display the SfPopup at the center.
-* `Absolute Positioning`: Use the `SfPopup.Show(x-position, y-position)` to display the SfPopup at the specified X and y position.
-* `Relative Positioning`: Use the `SfPopup.ShowRelativeToView(View, RelativePosition)` to display the SfPopup at any of the 8 positions relative to the specified view.
-* `Absolute relative positioning`: Use the `SfPopup.ShowRelativeToView(View, RelativePosition,x position,y position)` to display the SfPopup at an absolute x,y coordinate from the relative position of the specified view.
+* `Center Positioning`: Use the [IsOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_IsOpen) property or [Show](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_Show_System_Boolean_) method to display the SfPopup at the center.
+* `Absolute Positioning`: Use the [Show(x-position, y-position)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_Show_System_Double_System_Double_) to display the SfPopup at the specified X and y position.
+* `Relative Positioning`: Use the [ShowRelativeToView(View, RelativePosition)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_ShowRelativeToView_Microsoft_Maui_Controls_View_Syncfusion_Maui_Popup_PopupRelativePosition_System_Double_System_Double_) to display the SfPopup at any of the 8 positions relative to the specified view.
+* `Absolute relative positioning`: Use the [ShowRelativeToView(View, RelativePosition,x position,y position)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_ShowRelativeToView_Microsoft_Maui_Controls_View_Syncfusion_Maui_Popup_PopupRelativePosition_System_Double_System_Double_) to display the SfPopup at an absolute x,y coordinate from the relative position of the specified view.
 
 ## Customizing layouts
 
-By default, choose a layout from the following available layouts in the SfPopup by using the `SfPopup.AppearanceMode` property.
+By default, choose a layout from the following available layouts in the SfPopup by using the [AppearanceMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_AppearanceMode) property.
 
-* `OneButton`: Shows the SfPopup with one button in the footer view. This is the default value.
-* `TwoButton`: Shows the SfPopup with two buttons in the footer view.
+* [OneButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupButtonAppearanceMode.html#Syncfusion_Maui_Popup_PopupButtonAppearanceMode_OneButton): Shows the SfPopup with one button in the footer view. This is the default value.
+* [TwoButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupButtonAppearanceMode.html#Syncfusion_Maui_Popup_PopupButtonAppearanceMode_TwoButton): Shows the SfPopup with two buttons in the footer view.
 
 Also, customize the entire popupview by loading the templates or custom views for the header, body, and footer.
 
@@ -206,7 +206,7 @@ namespace GettingStarted
 
 ###  Load your template view in the popup body
 
-Any view can be added as popup content by using the `SfPopup.ContentTemplate` property to refresh it. Refer to the following code example in which a label is added as popup content. 
+Any view can be added as popup content by using the [ContentTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_ContentTemplate) property to refresh it. Refer to the following code example in which a label is added as popup content. 
 
 {% tabs %}
 
