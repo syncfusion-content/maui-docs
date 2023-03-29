@@ -9,7 +9,7 @@ documentation: ug
 
 # Syncfusion .NET MAUI Template Studio
 
-The.NET MAUI Template Studio is provided by Syncfusion and is used to build the Syncfusion .NET MAUI applications using Syncfusion components. The required Syncfusion components, NuGet references, namespace, and component render code are all used to develop the Syncfusion.NET MAUI applications. The Syncfusion .NET MAUI Template Studio providing a project wizard to simplify the process for you to create an application using Syncfusion components.
+The .NET MAUI Template Studio is provided by Syncfusion and is used to build the Syncfusion .NET MAUI applications using Syncfusion components. The required Syncfusion components, NuGet references, namespace, and component render code are all used to develop the Syncfusion .NET MAUI applications. The Syncfusion .NET MAUI Template Studio providing a project wizard to simplify the process for you to create an application using Syncfusion components.
 
 The following steps below will assist you to create your **Syncfusion .NET MAUI Application** through **Visual Studio 2022**:
 
@@ -17,7 +17,7 @@ N> Before use the Syncfusion .NET MAUI Project Template, check whether the Syncf
 
 1. Open the Visual Studio 2022.
 
-2. To develop the Syncfusion.NET MAUI application, select one of the following options:
+2. To develop the Syncfusion .NET MAUI application, select one of the following options:
 
      **Option 1**
 
