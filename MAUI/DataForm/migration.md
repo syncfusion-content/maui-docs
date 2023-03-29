@@ -250,7 +250,9 @@ this.Content = dataForm;
 <ContentPage 
 ...
 xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
-    <dataForm:SfDataForm x:Name="dataForm"/>
+    <dataForm:SfDataForm x:Name="dataForm"
+                        DataObject="{Binding DataModel}"
+                        ColumnCount="2"/>
 </ContentPage>
 {% endhighlight %}
 
@@ -260,13 +262,13 @@ using Syncfusion.Maui.DataForm;
 ...
 
 SfDataForm dataForm = new SfDataForm();
+dataForm.DataObject = new DataModel();
+dataForm.ColumnCount = 2;
 this.Content = dataForm;
-this.dataForm.DataObject = new DataModel();
-this.dataForm.ColumnCount = 2;
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# tabtitle="DataModel.cs" %}
 
 public class DataModel
 {
@@ -403,7 +405,6 @@ using Syncfusion.Maui.DataForm;
 …
 
 SfDataForm dataForm = new SfDataForm();
-this.Content = dataForm;
 this.dataForm.DataObject = new DataModel();
 this.dataForm.LabelTextStyle = new DataFormTextStyle()
 {
@@ -411,10 +412,11 @@ this.dataForm.LabelTextStyle = new DataFormTextStyle()
     FontAttributes = FontAttributes.Italic,
     FontSize = 12,
 };
+this.Content = dataForm;
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# tabtitle="DataModel.cs" %}
 
 public class DataModel
 {
