@@ -685,7 +685,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Popup with ShowOverlayAlways](Images/layout-customizations/maui-popup-with-show-overlay-always.png)
+![.NET MAUI Popup with ShowOverlayAlways](Images/layout-customizations/maui-popup-disable-overlay.png)
 
 ## How to
 
