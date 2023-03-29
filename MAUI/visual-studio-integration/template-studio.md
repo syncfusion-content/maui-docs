@@ -35,7 +35,7 @@ N> Before use the Syncfusion .NET MAUI Project Template, check whether the Syncf
 
      ![CreateNewWizard](images/SyncfusionTemplate.png)
 
-4. After launching the Syncfusion.NET MAUI Template Studio, the wizard for configuring the Syncfusion.NET MAUI application will appear. You can add the following Syncfusion .NET MAUI components to the application. Choose the required Syncfusion .NET MAUI components 
+4. After launching the Syncfusion .NET MAUI Template Studio, the wizard for configuring the Syncfusion .NET MAUI application will appear. You can add the following Syncfusion .NET MAUI components to the application. Choose the required Syncfusion .NET MAUI components 
 
     ![Controls Section](images/ControlsTab.png)
 
