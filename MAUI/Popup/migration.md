@@ -66,7 +66,7 @@ public partial class MainPage : ContentPage
 </td>
 <td>
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml %}
 
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup">            
     <StackLayout>
@@ -78,7 +78,7 @@ public partial class MainPage : ContentPage
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# %}
 public partial class MainPage : ContentPage
 {
     public MainPage()
