@@ -296,7 +296,7 @@ The [CenterHoleSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
     layout.SetBinding(WidthRequestProperty, nameof(RadialBarSeries.CenterHoleSize));
     layout.Children.Add(image);       
 
-    series.CenterView = image;
+    series.CenterView = layout;
     chart.Series.Add(series);
 
 {% endhighlight %}
