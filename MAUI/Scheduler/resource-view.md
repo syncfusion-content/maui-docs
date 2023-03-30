@@ -147,7 +147,7 @@ public class Employee
 Map the properties of the `Employee` class by using the [SchedulerResourceMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceMapping.html) property of the `SchedulerResourceView`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5 6 7 8" %}
+{% highlight XAML hl_lines="5 6 7 8" %}
 <scheduler:SfScheduler Name="Schedule" ViewType="TimelineWeek">
 <schedule:SfScheduler.ResourceView>
     <schedule:SchedulerResourceView>
@@ -161,14 +161,20 @@ Map the properties of the `Employee` class by using the [SchedulerResourceMappin
 </schedule:SfScheduler.ResourceView>
 </scheduler:SfScheduler>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2 7" %}
+{% highlight C# hl_lines="5 10" %}
+
+SfScheduler scheduler = new SfScheduler();
+scheduler.View = SchedulerView.TimelineWeek;
+
  // Schedule data mapping for custom resource.
 SchedulerResourceMapping resourceMapping = new SchedulerResourceMapping();
 resourceMapping.Name = "Name";
 resourceMapping.Id = "Id";
 resourceMapping.Background = "BackgroundColor";
 resourceMapping.Foreground = "ForegroundColor";
-this.Scheduler.ResourceView.Mapping = resourceMapping;
+scheduler.ResourceView.Mapping = resourceMapping;
+this.Content = scheduler;
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -277,8 +283,14 @@ You can customize resource minimum row height of visible resources in timeline d
 </schedule:SfScheduler.ResourceView>
 </schedule:SfScheduler>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
-this.Scheduler.ResourceView.MinimumRowHeight = 100;
+{% highlight C# hl_lines="3" %}
+
+SfScheduler scheduler = new SfScheduler();
+scheduler.View = SchedulerView.TimelineWeek;
+scheduler.AllowedViews = SchedulerViews.TimelineDay | SchedulerViews.TimelineMonth | SchedulerViews.TimelineWeek | SchedulerViews.TimelineWorkWeek;
+scheduler.ResourceView.MinimumRowHeight = 100;
+this.Content = scheduler;
+
 {% endhighlight %}
 {% endtabs %} 
 
@@ -293,10 +305,6 @@ N>
 You can highlight a resources availability by creating special time regions in the timeline day, timeline week, and timeline workweek views.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-
-
-{% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="7" %}
 this.Scheduler.TimelineView.TimeRegions = this.GetTimeRegion();
 
