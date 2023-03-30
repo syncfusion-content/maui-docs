@@ -29,7 +29,11 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 {% endhighlight %}
 {% highlight C# %}
 
-this.dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
+{% highlight C# %}
+
+SfDataForm dataForm = new SfDataForm();
+dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
+this.Content = dataForm;
 
 {% endhighlight %}
 {% endtabs %}
@@ -40,20 +44,23 @@ this.dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
 Change the layout type for the editor by using the [LayoutType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_LayoutType) property of the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html), and it will be handled in the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event.
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 5" %}
 <ContentPage 
 ...
 xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
 <dataForm:SfDataForm x:Name="dataForm" 
-                        LayoutType="TextInputLayout"
+                        LayoutType="Default"
                         DataObject="{Binding ContactInfo}"
                         GenerateDataFormItem="OnGenerateDataFormItem">
 </dataForm:SfDataForm>
 </ContentPage>
 {% endhighlight %}
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+SfDataForm dataForm = new SfDataForm();
+dataForm.LayoutType = DataFormLayoutType.Default;
+dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.Content = dataForm;
 
 private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
 {
@@ -82,7 +89,7 @@ Containers enhance the perspective of the dataform editor views. By default, the
 The `Outlined` container type draws a thin border around the text input field and adds a hint text that floats above the input field when the user starts typing. To enable the outlined container type, set the [ContainerType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.TextInputLayoutSettings.html#Syncfusion_Maui_DataForm_TextInputLayoutSettings_ContainerType) property of the [TextInputLayoutSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.TextInputLayoutSettings.html) to [Outlined](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.TextInputLayoutContainerType.html#Syncfusion_Maui_DataForm_TextInputLayoutContainerType_Outlined) in [SfDataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html) or [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html), which covers the editor view with rounded-corner.
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 5 7 8" %}
 <ContentPage 
 ...
 xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
@@ -95,7 +102,27 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 </dataForm:SfDataForm>
 </ContentPage>
 {% endhighlight %}
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+SfDataForm dataForm = new SfDataForm();
+dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
+dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.Content = dataForm;
+
+private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+{
+    if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name")
+    {
+        e.DataFormItem.LayoutType = DataFormLayoutType.TextInputLayout;
+        e.DataFormItem.TextInputLayoutSettings = new TextInputLayoutSettings
+        {
+            ContainerType = TextInputLayoutContainerType.Outlined
+        };
+    }
+}
+
+{% endhighlight %}
+{% highlight c# tabtitle="ContactInfo.cs" %}
 
 public class ContactInfo
 {
@@ -126,23 +153,6 @@ public class ContactInfo
 }
 
 {% endhighlight %}
-{% highlight C# %}
-
-this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
-
-private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
-{
-    if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name")
-    {
-        e.DataFormItem.LayoutType = DataFormLayoutType.TextInputLayout;
-        e.DataFormItem.TextInputLayoutSettings = new TextInputLayoutSettings
-        {
-            ContainerType = TextInputLayoutContainerType.Outlined
-        };
-    }
-}
-
-{% endhighlight %}
 {% endtabs %}
 
 ![Outlined container type in .NET MAUI DataForm.](images/floating-label-layout/outlined-container-type.png)
@@ -151,7 +161,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 The `Filled` container type fills the background of the text input field with a solid color and adds a hint of text that floats above the input field when the user starts typing. It can be enabled by setting the [ContainerType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.TextInputLayoutSettings.html#Syncfusion_Maui_DataForm_TextInputLayoutSettings_ContainerType) property to [Filled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.TextInputLayoutContainerType.html#Syncfusion_Maui_DataForm_TextInputLayoutContainerType_Filled) in the [SfDataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html) or [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html).
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 5 7 8" %}
 <ContentPage 
 ...
 xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
@@ -164,9 +174,12 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 </dataForm:SfDataForm>
 </ContentPage>
 {% endhighlight %}
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+SfDataForm dataForm = new SfDataForm();
+dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
+dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.Content = dataForm;
 
 private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
 {
@@ -189,7 +202,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 The `None` container type adds no border or background to the text input field. It can be enabled by setting the [ContainerType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.TextInputLayoutSettings.html#Syncfusion_Maui_DataForm_TextInputLayoutSettings_ContainerType) property to [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.TextInputLayoutContainerType.html#Syncfusion_Maui_DataForm_TextInputLayoutContainerType_None) in the [SfDataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html) or [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html). It will have an empty background and enough spacing.
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 5 7 8" %}
 <ContentPage 
 ...
 xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
@@ -202,9 +215,12 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 </dataForm:SfDataForm>
 </ContentPage>
 {% endhighlight %}
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+SfDataForm dataForm = new SfDataForm();
+dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
+dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.Content = dataForm;
 
 private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
 {
@@ -229,7 +245,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 The leading view is a view that appears to the left of the text input field. It can add functionality or visual elements to the text input such as a label or an icon. It can be added to the floating label layout by setting the [LeadingView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_LeadingView) property of the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html). Show the leading view only when the [ShowLeadingView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_ShowLeadingView) property is `true`.
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 5 9 10 11" %}
 <ContentPage 
 ...
 xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
@@ -237,7 +253,8 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
                         LayoutType="TextInputLayout"
                         DataObject="{Binding ContactInfo}">
 <dataForm:SfDataForm.Items>
-    <dataForm:DataFormTextItem FieldName="Name" ShowLeadingView="True">
+    <dataForm:DataFormTextItem FieldName="Name" 
+                                ShowLeadingView="True">
         <dataForm:DataFormTextItem.LeadingView>
             <Label Text="F" FontSize="18" TextColor="Gray" FontFamily="InputLayoutIcons" HeightRequest="24" VerticalTextAlignment="End" />
         </dataForm:DataFormTextItem.LeadingView>
@@ -246,9 +263,12 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 </dataForm:SfDataForm>
 </ContentPage>
 {% endhighlight %}
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+SfDataForm dataForm = new SfDataForm();
+dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
+dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.Content = dataForm;
 
 private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
 {
@@ -271,7 +291,7 @@ N> The [LeadingView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataFor
 The trailing view is a view that appears to the right of the text input field. It can be used to add additional functionality or visual elements to the text input such as a clear button or an icon. It can be added to the floating label layout by setting the [TrailingView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_TrailingView) property of the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html). Show a trailing view only when the [ShowTrailingView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_ShowTrailingView) property is `true`.
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 5 9 10 11" %}
 <ContentPage 
 ...
 xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
@@ -289,9 +309,12 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 </dataForm:SfDataForm>
 </ContentPage>
 {% endhighlight %}
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+SfDataForm dataForm = new SfDataForm();
+dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
+dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.Content = dataForm;
 
 private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
 {
@@ -314,7 +337,7 @@ N> The [TrailingView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataFo
 The [LeadingViewPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_LeadingViewPosition) and [TrailingViewPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_TrailingViewPosition) properties of the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html) allow you to adjust the leading and trailing view's positions. The view is positioned `outside` the container if the leading and trailing view positions are set to [TextInputLayoutViewPosition.Outside](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.TextInputLayoutViewPosition.html#Syncfusion_Maui_DataForm_TextInputLayoutViewPosition_Outside). The view is positioned `inside` the container if the leading and trailing view positions are set to [TextInputLayoutViewPosition.Inside](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.TextInputLayoutViewPosition.html#Syncfusion_Maui_DataForm_TextInputLayoutViewPosition_Inside).
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 5 9 10 11 12" %}
 <ContentPage 
 ...
 xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
@@ -333,28 +356,12 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 </dataForm:SfDataForm>
 </ContentPage>
 {% endhighlight %}
-{% highlight XAML %}
-<ContentPage 
-...
-xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
-<dataForm:SfDataForm x:Name="dataForm" 
-                        LayoutType="TextInputLayout"
-                        DataObject="{Binding ContactInfo}">
-<dataForm:SfDataForm.Items>
-    <dataForm:DataFormTextItem FieldName="Name" 
-                                ShowTrailingView="True" 
-                                TrailingViewPosition="Inside">
-        <dataForm:DataFormTextItem.TrailingView>
-            <Label Text="F" FontSize="18" TextColor="Gray" FontFamily="InputLayoutIcons" HeightRequest="24" VerticalTextAlignment="End" />
-        </dataForm:DataFormTextItem.TrailingView>
-    </dataForm:DataFormTextItem>
-</dataForm:SfDataForm.Items>
-</dataForm:SfDataForm>
-</ContentPage>
-{% endhighlight %}
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+SfDataForm dataForm = new SfDataForm();
+dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
+dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.Content = dataForm;
 
 private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
 {
@@ -368,13 +375,35 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 }
 
 {% endhighlight %}
-{% highlight C# %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 5 9 10 11 12" %}
+<ContentPage 
+...
+xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
+<dataForm:SfDataForm x:Name="dataForm" 
+                        LayoutType="TextInputLayout"
+                        DataObject="{Binding ContactInfo}">
+<dataForm:SfDataForm.Items>
+    <dataForm:DataFormTextItem FieldName="Contact Number" 
+                                ShowTrailingView="True" 
+                                TrailingViewPosition="Inside">
+        <dataForm:DataFormTextItem.TrailingView>
+            <Label Text="F" FontSize="18" TextColor="Gray" FontFamily="InputLayoutIcons" HeightRequest="24" VerticalTextAlignment="End" />
+        </dataForm:DataFormTextItem.TrailingView>
+    </dataForm:DataFormTextItem>
+</dataForm:SfDataForm.Items>
+</dataForm:SfDataForm>
+</ContentPage>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+SfDataForm dataForm = new SfDataForm();
+dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
+dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.Content = dataForm;
 
 private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
 {
-    if (e.DataFormItem != null && e.DataFormItem.FieldName == "Name")
+    if (e.DataFormItem != null && e.DataFormItem.FieldName == "Contact Number")
     {
         e.DataFormItem.LayoutType = DataFormLayoutType.TextInputLayout;
         e.DataFormItem.ShowTrailingView = true;
@@ -382,6 +411,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
         e.DataFormItem.TrailingView = new Label { Text = "F", FontSize = 18, TextColor = Colors.Gray, FontFamily = "InputLayoutIcons", HeightRequest = 24, VerticalTextAlignment = TextAlignment.End };
     }
 }
+
 
 {% endhighlight %}
 {% endtabs %}
@@ -392,7 +422,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 Password toggle visibility in a floating label layout is used to show or hide the visibility of characters in the dataform password editor. Enable this toggle by setting the [EnablePasswordVisibilityToggle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormPasswordItem.html#Syncfusion_Maui_DataForm_DataFormPasswordItem_EnablePasswordVisibilityToggle) property to `true` in the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html). The default value of the `EnablePasswordVisibilityToggle` is `true`.
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 5 9" %}
 <ContentPage 
 ...
 xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
@@ -407,9 +437,12 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 </dataForm:SfDataForm>
 </ContentPage>
 {% endhighlight %}
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+SfDataForm dataForm = new SfDataForm();
+dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
+dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.Content = dataForm;
 
 private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
 {
@@ -436,7 +469,7 @@ The helper label displays the watermark for the editor to provide hints for user
 The visibility of the helper text in the DataForm floating label layout for the [DataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html) and [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html) can be collapsed by setting the [ShowHelperText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.TextInputLayoutSettings.html#Syncfusion_Maui_DataForm_TextInputLayoutSettings_ShowHelperText) property of the [TextInputLayoutSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.TextInputLayoutSettings.html) to `false`.
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 5 8" %}
 <ContentPage 
 ...
 xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
@@ -449,9 +482,12 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 </dataForm:SfDataForm>
 </ContentPage>
 {% endhighlight %}
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+SfDataForm dataForm = new SfDataForm();
+dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
+dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.Content = dataForm;
 
 private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
 {
@@ -480,27 +516,31 @@ Customize the font of assistive labels by setting the `TextColor`, `FontFamily`,
 Customize the text of the hint label by setting the `TextColor`, `FontFamily`, `FontSize`, and `FontAttributes` properties of the [LabelTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_LabelTextStyle) in the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html).
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 5 7 11 12" %}
 <ContentPage 
 ...
 xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
 <dataForm:SfDataForm x:Name="dataForm" 
                         LayoutType="TextInputLayout"
                         DataObject="{Binding ContactInfo}"
+                        AutoGenerateItems="False"
                         GenerateDataFormItem="OnGenerateDataFormItem">
-    <dataForm:SfDataForm.TextInputLayoutSettings>
-        <dataForm:TextInputLayoutSettings ShowHelperText="True">
+    <dataForm:SfDataForm.Items>
+        <dataForm:DataFormTextItem FieldName="Name">
             <dataForm:DataFormTextItem.LabelTextStyle>
                 <dataForm:DataFormTextStyle TextColor="CadetBlue" FontAttributes="None"/>
             </dataForm:DataFormTextItem.LabelTextStyle>
-        </dataForm:TextInputLayoutSettings>
-    </dataForm:SfDataForm.TextInputLayoutSettings>
+        </dataForm:DataFormTextItem>
+    </dataForm:SfDataForm.Items>
 </dataForm:SfDataForm>
 </ContentPage>
 {% endhighlight %}
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+SfDataForm dataForm = new SfDataForm();
+dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
+dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.Content = dataForm;
 
 private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
 {
@@ -520,7 +560,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 Customize the text of the helper label by setting the `TextColor`, `FontFamily`, `FontSize`, and `FontAttributes` properties of the [TextInputLayoutSettings.HelperTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.TextInputLayoutSettings.html#Syncfusion_Maui_DataForm_TextInputLayoutSettings_HelperTextStyle) in the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html).
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 5 9 10 11" %}
 <ContentPage 
 ...
 xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
@@ -538,9 +578,12 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 </dataForm:SfDataForm>
 </ContentPage>
 {% endhighlight %}
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+SfDataForm dataForm = new SfDataForm();
+dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
+dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.Content = dataForm;
 
 private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
 {
@@ -563,7 +606,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 Customize the text of the error message label by setting the `TextColor`, `FontFamily`, `FontSize`, and `FontAttributes` properties of the [ErrorLabelTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_ErrorLabelTextStyle) in the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html).
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 5 7 11 12" %}
 <ContentPage 
 ...
 xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
@@ -582,9 +625,12 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 </dataForm:SfDataForm>
 </ContentPage>
 {% endhighlight %}
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+SfDataForm dataForm = new SfDataForm();
+dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
+dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.Content = dataForm;
 
 private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
 {
@@ -604,7 +650,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 Customize the text of a valid message label by setting the `TextColor`, `FontFamily`, `FontSize`, and `FontAttributes` properties of the [ValidMessageLabelTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_ValidMessageLabelTextStyle) in the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html).
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 5 7 11 12" %}
 <ContentPage 
 ...
 xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
@@ -623,9 +669,12 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 </dataForm:SfDataForm>
 </ContentPage>
 {% endhighlight %}
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+SfDataForm dataForm = new SfDataForm();
+dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
+dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.Content = dataForm;
 
 private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
 {
@@ -647,7 +696,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 The corner radius of the container will be changed by setting the [OutlineCornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.TextInputLayoutSettings.html#Syncfusion_Maui_DataForm_TextInputLayoutSettings_OutlineCornerRadius) property of the [TextInputLayoutSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.TextInputLayoutSettings.html) to double value.
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 5 9" %}
 <ContentPage 
 ...
 xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
@@ -661,9 +710,12 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 </dataForm:SfDataForm>
 </ContentPage>
 {% endhighlight %}
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
+SfDataForm dataForm = new SfDataForm();
+this.dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.Content = dataForm;
 
 private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
 {
@@ -686,7 +738,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 The [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.TextInputLayoutSettings.html#Syncfusion_Maui_DataForm_TextInputLayoutSettings_Stroke) property of the [TextInputLayoutSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.TextInputLayoutSettings.html) changes the label text and border color of the editors.
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 5 9" %}
 <ContentPage 
 ...
 xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
@@ -700,9 +752,12 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 </dataForm:SfDataForm>
 </ContentPage>
 {% endhighlight %}
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+SfDataForm dataForm = new SfDataForm();
+dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
+dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.Content = dataForm;
 
 private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
 {
@@ -725,7 +780,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 When the given editor view is focused, the [FocusedStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.TextInputLayoutSettings.html#Syncfusion_Maui_DataForm_TextInputLayoutSettings_FocusedStroke) property value will be applied to the label text and border.
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 5 9" %}
 <ContentPage 
 ...
 xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
@@ -739,9 +794,12 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 </dataForm:SfDataForm>
 </ContentPage>
 {% endhighlight %}
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+SfDataForm dataForm = new SfDataForm();
+dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
+dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.Content = dataForm;
 
 private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
 {
@@ -764,7 +822,7 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 When the editor's view is focused and unfocused, the border's thickness can be changed using the [FocusedStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.TextInputLayoutSettings.html#Syncfusion_Maui_DataForm_TextInputLayoutSettings_FocusedStrokeThickness) and [UnfocusedStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.TextInputLayoutSettings.html#Syncfusion_Maui_DataForm_TextInputLayoutSettings_UnfocusedStrokeThickness) properties of the [TextInputLayoutSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.TextInputLayoutSettings.html).
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 5 9 10" %}
 <ContentPage 
 ...
 xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
@@ -779,9 +837,12 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 </dataForm:SfDataForm>
 </ContentPage>
 {% endhighlight %}
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+SfDataForm dataForm = new SfDataForm();
+dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
+dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.Content = dataForm;
 
 private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
 {
@@ -800,6 +861,8 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 {% endtabs %}
 
 ![Focused and unfocused stroke thickness in .NET MAUI DataForm.](images/floating-label-layout/stroke-thickness.png)
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/FloatingLabelLayoutSample)
 
 ## Unsupported editors
 The Floating label layout does not support non-editable editors such as [RadioGroup editor](https://help.syncfusion.com/maui/dataform/editors#radiogroup-editor), [CheckBox editor](https://help.syncfusion.com/maui/dataform/editors#checkbox-editor), and [Switch editor](https://help.syncfusion.com/maui/dataform/editors#switch-editor). Picker editors such as [Picker editor](https://help.syncfusion.com/maui/dataform/editors#picker-editor), [Date picker](https://help.syncfusion.com/maui/dataform/editors#date-editor), and [Time picker](https://help.syncfusion.com/maui/dataform/editors#time-editor) will be updated to support a floating label layout.

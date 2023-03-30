@@ -37,7 +37,11 @@ If the commit mode is [LostFocus](https://help.syncfusion.com/cr/maui/Syncfusion
 </ContentPage>
 {% endhighlight %}
 {% highlight C# %}
+
+SfDataForm dataForm = new SfDataForm();
 this.dataForm.CommitMode = DataFormCommitMode.LostFocus;
+this.Content = dataForm;
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -57,7 +61,11 @@ If the commit mode is [PropertyChanged](https://help.syncfusion.com/cr/maui/Sync
 </ContentPage>
 {% endhighlight %}
 {% highlight C# %}
+
+SfDataForm dataForm = new SfDataForm();
 this.dataForm.CommitMode = DataFormCommitMode.PropertyChanged;
+this.Content = dataForm;
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -66,7 +74,7 @@ this.dataForm.CommitMode = DataFormCommitMode.PropertyChanged;
 If the commit mode is [Manual](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormCommitMode.html#Syncfusion_Maui_DataForm_DataFormCommitMode_Manual), the value should be committed manually by calling the [SfDataForm.Commit](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_Commit) method.
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight XAML  %}
 <ContentPage 
 ...
  xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
@@ -77,7 +85,11 @@ If the commit mode is [Manual](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 </ContentPage>
 {% endhighlight %}
 {% highlight C# %}
+
+SfDataForm dataForm = new SfDataForm();
 this.dataForm.CommitMode = DataFormCommitMode.Manual;
+this.Content = dataForm;
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -150,7 +162,11 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 </ContentPage>
 {% endhighlight %}
 {% highlight C# %}
+
+SfDataForm dataForm = new SfDataForm();
 this.dataForm.IsReadOnly = true;
+this.Content = dataForm;
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -177,7 +193,7 @@ public string Password { get; set; }
 An editor can be disabled by setting the [IsReadOnly](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_IsReadOnly) property of the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html).
 
 {% tabs %}
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
 
