@@ -186,7 +186,6 @@ The appearance of stacked header row can be customized by setting desired values
             />
 </syncfusion:SfDataGrid.DefaultStyle>
 {% endhighlight %}
-{% endtabs %}
 
 {% highlight c# %}
 public partial class MainPage : ContentPage
@@ -198,6 +197,7 @@ public partial class MainPage : ContentPage
     }
 }
 {% endhighlight %}
+{% endtabs %}
 
 ![Customizing the appearance of stacked header row](Images/stacked-headers/StackedHeaderWithStyle.png)
 
@@ -218,6 +218,7 @@ The SfDataGrid also allows to customize the appearance of stacked header Cells c
 {% endhighlight %}
 {% endtabs %}
 
+{% tabs %}
 {% highlight c# %}
 //Custom style class
  public class CellStyleConverter : IValueConverter
@@ -245,6 +246,7 @@ The SfDataGrid also allows to customize the appearance of stacked header Cells c
 
 }
 {% endhighlight %}
+{% endtabs %}
 
 ![Customizing the background of stacked header row based on index](Images/stacked-headers/StackedHeaderConditionalStyle.png)
 
