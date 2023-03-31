@@ -11,6 +11,11 @@ documentation: ug
 
 This section explains the steps required to add the DateTime Range Selector control and its elements such as track, ticks, labels and tooltip. This section covers only the basic features needed to know to get started with the Syncfusion DateTime Range Selector.
 
+To get start quickly with MAUI SfDateTimeRangeSelector, you can check on this video:
+
+<style>#MAUIDateTimeRangeSelectorVideoTutorial{width : 90% !important; height: 350px !important }</style>
+<iframe id='MAUIDateTimeRangeSelectorVideoTutorial' src='https://www.youtube.com/embed/QpaNVNcn7xc'></iframe>
+
 ## Creating an application with .NET MAUI
 
 Create a new .NET MAUI application in the Visual Studio.

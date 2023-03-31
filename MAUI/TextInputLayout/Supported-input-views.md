@@ -158,7 +158,7 @@ inputLayout.Content = combobox;
 
 ## Masked Entry
 
-To initialize the `MaskedEntry` control and launch it in each platform, refer to the getting started with masked entry documentation.
+To initialize the [MaskedEntry](https://help.syncfusion.com/maui/masked-entry/overview) control and launch it in each platform, refer to the [getting started with masked entry](https://help.syncfusion.com/maui/masked-entry/getting-started) documentation.
 
 {% tabs %}
 {% highlight XAML %}
@@ -167,8 +167,8 @@ To initialize the `MaskedEntry` control and launch it in each platform, refer to
                                HelperText="Required *"
                                ContainerType="Outlined"
                                ContainerBackground="Transparent" >
-   <maskedEntry:SfMaskedEntry  MaskType="Simple"
-                             Mask="0000 0000 0000 0000" />
+   <maskedEntry:SfMaskedEntry MaskType="Simple"
+                              Mask="0000 0000 0000 0000" />
 </inputLayout:SfTextInputLayout> 
 
 {% endhighlight %}

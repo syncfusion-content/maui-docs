@@ -22,7 +22,7 @@ The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sc
 The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) number of visible days in the day, week, and workweek can be adjusted by changing the [NumberOfVisibleDays](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_NumberOfVisibleDaysProperty) property of the [DaysView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDaysView.html).
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
+{% highlight XAML hl_lines="5" %}
 
  <scheduler:SfScheduler x:Name="Scheduler" 
                         View="Week">
@@ -33,10 +33,12 @@ The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sc
  </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
+{% highlight C# hl_lines="3" %}
 
-this.Scheduler.View = SchedulerView.Week;
-this.Scheduler.DaysView.NumberOfVisibleDays = 3;
+SfScheduler scheduler = new SfScheduler();
+scheduler.View = SchedulerView.Week;
+scheduler.DaysView.NumberOfVisibleDays = 3;
+this.Content = scheduler;
 
 {% endhighlight %}
 {% endtabs %}
@@ -48,7 +50,7 @@ this.Scheduler.DaysView.NumberOfVisibleDays = 3;
 The time interval between the time slots in the day, week, and workweek views can be customized by using the [TimeInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_TimeInterval) property of the [DaysView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDaysView.html).
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
+{% highlight XAML hl_lines="5" %}
 
  <scheduler:SfScheduler x:Name="Scheduler" 
                         View="Week">
@@ -59,10 +61,12 @@ The time interval between the time slots in the day, week, and workweek views ca
  </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
+{% highlight C# hl_lines="3" %}
 
-this.Scheduler.View = SchedulerView.Week;
-this.Scheduler.DaysView.TimeInterval = new TimeSpan(2, 0, 0);
+SfScheduler scheduler = new SfScheduler();
+scheduler.View = SchedulerView.Week;
+scheduler.DaysView.TimeInterval = new TimeSpan(2, 0, 0);
+this.Content = scheduler;
 
 {% endhighlight %}
 {% endtabs %}
@@ -76,7 +80,7 @@ N> To modify the `TimeInterval` value (in minutes), change the time labels forma
 The time interval height can be customized for each time slot cell of the day, week, and workweek view by using the [TimeIntervalHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDaysView.html#Syncfusion_Maui_Scheduler_SchedulerDaysView_TimeIntervalHeight) property of [DaysView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDaysView.html).
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
+{% highlight XAML hl_lines="5" %}
 
 <scheduler:SfScheduler x:Name="Scheduler" 
                        View="Week">
@@ -87,10 +91,13 @@ The time interval height can be customized for each time slot cell of the day, w
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
+{% highlight C# hl_lines="3" %}
 
-this.Scheduler.View = SchedulerView.Week;
-this.Scheduler.DaysView.TimeIntervalHeight = 120;
+SfScheduler scheduler = new SfScheduler();
+scheduler.View = SchedulerView.Week;
+scheduler.DaysView.TimeIntervalHeight = 120;
+this.Content = scheduler;
+
 
 {% endhighlight %}
 {% endtabs %}
@@ -104,7 +111,7 @@ By default, the [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfu
 The [NonWorkingDays](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_NonWorkingDays) property of [DaysView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDaysView.html) can also be used to show only the nonworking days of the week.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
+{% highlight XAML hl_lines="5" %}
 
  <scheduler:SfScheduler x:Name="Scheduler" 
                         View="WorkWeek">
@@ -115,10 +122,12 @@ The [NonWorkingDays](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Schedul
  </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
+{% highlight C# hl_lines="3" %}
 
-this.Scheduler.View = SchedulerView.WorkWeek;
-this.Scheduler.DaysView.NonWorkingDays = SchedulerWeekDays.Monday | SchedulerWeekDays.Wednesday;
+SfScheduler scheduler = new SfScheduler();
+scheduler.View = SchedulerView.WorkWeek;
+scheduler.DaysView.NonWorkingDays = SchedulerWeekDays.Monday | SchedulerWeekDays.Wednesday;
+this.Content = scheduler;
 
 {% endhighlight %}
 {% endtabs %}
@@ -132,7 +141,7 @@ N> The `workweek` view displays exactly the defined working days on Scheduler co
 The default values for [StartHour](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_StartHour) and [EndHour](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_EndHour) are `0` and `24` respectively, to show all the time slots for a day, week, or workweek view. These properties may be set to show only the required time periods in [DaysView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDaysView.html). The `StartHour` and `EndHour` in time duration can be set to show the required time duration in minutes.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5 6" %}
+{% highlight XAML hl_lines="5 6" %}
 
 <scheduler:SfScheduler x:Name="Scheduler" 
                        View="Week">
@@ -144,11 +153,13 @@ The default values for [StartHour](https://help.syncfusion.com/cr/maui/Syncfusio
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2 3" %}
+{% highlight C# hl_lines="2 3" %}
 
-this.Scheduler.View = SchedulerView.Week;
-this.Scheduler.DaysView.StartHour = 9;
-this.Scheduler.DaysView.EndHour = 16;
+SfScheduler scheduler = new SfScheduler();
+scheduler.View = SchedulerView.Week;
+scheduler.DaysView.StartHour = 9;
+scheduler.DaysView.EndHour = 16;
+this.Content = scheduler;
 
 {% endhighlight %}
 {% endtabs %}
@@ -478,7 +489,7 @@ N>
 The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) time interval height can be adjusted based on screen height by changing the [TimeIntervalHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDaysView.html#Syncfusion_Maui_Scheduler_SchedulerDaysView_TimeIntervalHeight) property of [DaysView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDaysView.html) to `-1.` It will auto-fit the day, week and work week views to the screen height.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
+{% highlight XAML hl_lines="5" %}
 
  <scheduler:SfScheduler x:Name="Scheduler" 
                         View="Week">
@@ -489,10 +500,12 @@ The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sc
  </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
+{% highlight C# hl_lines="4" %}
 
-this.Scheduler.View = SchedulerView.Week;
-this.Scheduler.DaysView.TimeIntervalHeight = -1;
+SfScheduler scheduler = new SfScheduler();
+scheduler.View = SchedulerView.Week;
+scheduler.DaysView.TimeIntervalHeight = -1;
+this.Content = scheduler;
 
 {% endhighlight %}
 {% endtabs %}
@@ -504,7 +517,7 @@ this.Scheduler.DaysView.TimeIntervalHeight = -1;
 You can show or hide the current time indicator in day, week, and workweek views of [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) by using the [ShowCurrentTimeIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_ShowCurrentTimeIndicator) property of [DaysView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDaysView.html), and by default, its `true.`
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
+{% highlight XAML hl_lines="5" %}
 
 <scheduler:SfScheduler x:Name="Scheduler" 
                        View="Week">
@@ -515,10 +528,12 @@ You can show or hide the current time indicator in day, week, and workweek views
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
+{% highlight C# hl_lines="4" %}
 
-this.Scheduler.View = SchedulerView.Week;
-this.Scheduler.DaysView.ShowCurrentTimeIndicator = false;
+SfScheduler scheduler = new SfScheduler();
+scheduler.View = SchedulerView.Week;
+scheduler.DaysView.ShowCurrentTimeIndicator = false;
+this.Content = scheduler;
 
 {% endhighlight %}
 {% endtabs %}
@@ -528,7 +543,7 @@ this.Scheduler.DaysView.ShowCurrentTimeIndicator = false;
 The current time indicator can be customized by using the [CurrentTimeIndicatorBrush](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_CurrentTimeIndicatorBrush) property of [DaysView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDaysView.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
+{% highlight XAML hl_lines="5" %}
 
 <scheduler:SfScheduler x:Name="Scheduler" 
                        View="Week">
@@ -539,10 +554,12 @@ The current time indicator can be customized by using the [CurrentTimeIndicatorB
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
+{% highlight C# hl_lines="3" %}
 
-this.Scheduler.View = SchedulerView.Week;
-this.Scheduler.DaysView.CurrentTimeIndicatorBrush = Brush.Blue;
+SfScheduler scheduler = new SfScheduler();
+scheduler.View = SchedulerView.Week;
+scheduler.DaysView.CurrentTimeIndicatorBrush = Brush.Blue;
+this.Content = scheduler;
 
 {% endhighlight %}
 {% endtabs %}
@@ -557,7 +574,7 @@ The current time indicator color is applied only when the`ShowCurrentTimeIndicat
 The [TimeRulerWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDaysView.html#Syncfusion_Maui_Scheduler_SchedulerDaysView_TimeRulerWidth) property of [DaysView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDaysView.html) can be used to customize the size of the time ruler view where the labels with the time are placed.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
+{% highlight XAML hl_lines="5" %}
 
 <scheduler:SfScheduler x:Name="Scheduler" 
                        View="Week">
@@ -568,10 +585,12 @@ The [TimeRulerWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Schedul
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
+{% highlight C# hl_lines="3" %}
 
-this.Scheduler.View = SchedulerView.Week;
-this.Scheduler.DaysView.TimeRulerWidth = 120;
+SfScheduler scheduler = new SfScheduler();
+scheduler.View = SchedulerView.Week;
+scheduler.DaysView.TimeRulerWidth = 120;
+this.Content = scheduler;
 
 {% endhighlight %}
 {% endtabs %}
@@ -583,7 +602,7 @@ this.Scheduler.DaysView.TimeRulerWidth = 120;
 The [MinimumAppointmentDuration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_MinimumAppointmentDuration) property allows to set an arbitrary height to appointments which have a minimum duration in the day, week, and workweek views so that the subject can be readable.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
+{% highlight XAML hl_lines="5" %}
 
  <scheduler:SfScheduler x:Name="Scheduler" 
                         View="Week">
@@ -594,10 +613,12 @@ The [MinimumAppointmentDuration](https://help.syncfusion.com/cr/maui/Syncfusion.
  </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
+{% highlight C# hl_lines="3" %}
 
-this.Scheduler.View = SchedulerView.Week;
-this.Scheduler.DaysView.MinimumAppointmentDuration = new TimeSpan(0, 30, 0);
+SfScheduler scheduler = new SfScheduler();
+scheduler.View = SchedulerView.Week;
+scheduler.DaysView.MinimumAppointmentDuration = new TimeSpan(0, 30, 0);
+this.Content = scheduler;
 
 {% endhighlight %}
 {% endtabs %}
@@ -718,7 +739,7 @@ You can customize the default appearance of view header in a day, week, and work
 The date and day format of SfScheduler ViewHeader can be customized by using the [DateFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViewHeaderSettings.html#Syncfusion_Maui_Scheduler_SchedulerViewHeaderSettings_DateFormat) and [DayFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViewHeaderSettings.html#Syncfusion_Maui_Scheduler_SchedulerViewHeaderSettings_DayFormat) properties of [DaysView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDaysView.html).
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6 7" %}
+{% highlight XAML hl_lines="6 7" %}
 
  <scheduler:SfScheduler x:Name="Scheduler" 
                         View="Week">
@@ -733,11 +754,13 @@ The date and day format of SfScheduler ViewHeader can be customized by using the
  </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2 3" %}
+{% highlight C# hl_lines="3 4" %}
 
-this.Scheduler.View = SchedulerView.Week;
-this.Scheduler.DaysView.ViewHeaderSettings.DayFormat = "dddd";
-this.Scheduler.DaysView.ViewHeaderSettings.DateFormat = "dd";
+SfScheduler scheduler = new SfScheduler();
+scheduler.View = SchedulerView.Week;
+scheduler.DaysView.ViewHeaderSettings.DayFormat = "dddd";
+scheduler.DaysView.ViewHeaderSettings.DateFormat = "dd";
+this.Content = scheduler;
 
 {% endhighlight %}
 {% endtabs %}
@@ -749,7 +772,7 @@ this.Scheduler.DaysView.ViewHeaderSettings.DateFormat = "dd";
 The height of the ViewHeader in a day, week, and work week views can be customized by setting the [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerHeaderSettingsBase.html#Syncfusion_Maui_Scheduler_SchedulerHeaderSettingsBase_Height) property of [ViewHeaderSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViewHeaderSettings.html) in [DaysView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDaysView.html).
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
+{% highlight XAML hl_lines="6" %}
 
  <scheduler:SfScheduler x:Name="Scheduler" 
                         View="Week">
@@ -762,10 +785,12 @@ The height of the ViewHeader in a day, week, and work week views can be customiz
 </scheduler:SfScheduler.DaysView>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
+{% highlight C# hl_lines="3" %}
 
-this.Scheduler.View = SchedulerView.Week;
-this.Scheduler.DaysView.ViewHeaderSettings.Height = 100;
+SfScheduler scheduler = new SfScheduler();
+scheduler.View = SchedulerView.Week;
+scheduler.DaysView.ViewHeaderSettings.Height = 100;
+this.Content = scheduler;
 
 {% endhighlight %}
 {% endtabs %}
@@ -936,7 +961,7 @@ N>
 The format for the labels mentioning the time can be customized by setting the [TimeFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_TimeFormat) property of [DaysView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDaysView.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
+{% highlight XAML hl_lines="5" %}
 
 <scheduler:SfScheduler x:Name="Scheduler" 
                        View="Week">
@@ -947,10 +972,13 @@ The format for the labels mentioning the time can be customized by setting the [
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
+{% highlight C# hl_lines="3" %}
 
-this.Scheduler.View = SchedulerView.Week;
-this.Scheduler.DaysView.TimeFormat = "hh:mm";
+SfScheduler scheduler = new SfScheduler();
+scheduler.View = SchedulerView.Week;
+scheduler.DaysView.TimeFormat = "hh:mm";
+this.Content = scheduler;
+
 
 {% endhighlight %}
 {% endtabs %}
