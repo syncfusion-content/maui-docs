@@ -222,7 +222,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Displaying a .NET MAUI Popup with message customization](Images/styles/maui-popup-with-message-customization.png))
+![Displaying a .NET MAUI Popup with message customization](Images/styles/maui-popup-with-message-customization.png)
 
 ## Stroke customization
 
