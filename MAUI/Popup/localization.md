@@ -53,12 +53,12 @@ To localize the `Popup` based on the `CurrentUICulture` using the `resource` fil
 
    4. The culture name indicates the name of the language and country.
 
-   ![shows-the-name-of-resource-file-to-be-added-for-maui-popup](/Images/localization/shows-the-name-of-resource-file-to-be-added-for-maui-popup.png)
+   ![shows-the-name-of-resource-file-to-be-added-for-maui-popup](Images/localization/shows-the-name-of-resource-file-to-be-added-for-maui-popup.png)
 
    5. Now, select `Add` option to add the resource file in the **Resources** folder.
 
-   ![shows-the-added-resource-file-for-french-language-in-maui-popup](/Images/localization/shows-the-added-resource-file-for-french-language-in-maui-popup.png)
+   ![shows-the-added-resource-file-for-french-language-in-maui-popup](Images/localization/shows-the-added-resource-file-for-french-language-in-maui-popup.png)
 
    6. Add the Name or Value pair in the Resource Designer of `SfPopup.fr-FR.resx` file and change its corresponding value to corresponding culture.
 
-   ![shows-the-added-resource-file-name-value-pair-in-the-resource-designer-in-maui-popup](/Images/localization/shows-the-added-resource-file-name-value-pair-in-the-resource-designer-in-maui-popup.png)
+   ![shows-the-added-resource-file-name-value-pair-in-the-resource-designer-in-maui-popup](Images/localization/shows-the-added-resource-file-name-value-pair-in-the-resource-designer-in-maui-popup.png)
