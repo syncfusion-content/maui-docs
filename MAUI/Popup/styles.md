@@ -247,7 +247,7 @@ The SfPopup allows customizing the stroke appearance using the following propert
 </tr>
 </table>
 
-N>On Android 33 and above, it is possible to set different corner radii for each corner using the [CornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_CornerRadius) class. However, on versions below Android 33, if the same value is provided for all corners, a corner radius will be applied. If different values are provided for each corner, the corner radius may not be applied.
+N>On Android 33 and above, it is possible to set different corner radii for each corner using the [CornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_CornerRadius) class. However, on versions below Android 33, a corner radius will be applied if the same value is provided for all corners. The corner radius may not be applied if different values are provided for each corner.
 
 Refer to the following code example for customizing the stroke elements.
 
