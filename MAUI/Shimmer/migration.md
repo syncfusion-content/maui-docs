@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrate from Xamarin.Forms SfShimmer to .NET MAUI SfShimmer 
 
-To make the migration from the [Xamarin SfShimmer](https://www.syncfusion.com/xamarin-ui-controls/xamarin-shimmer) to [.NET MAUI SfShimmer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.html) easier, most of the APIs from the Xamarin SfShimmer were kept in the .NET MAUI SfShimmer. However, to maintain the consistency of API naming in the .NET MAUI SfShimmer, some of the APIs have been renamed. Please find the difference in the following topics.
+To make the migration from the [Xamarin SfShimmer](https://www.syncfusion.com/xamarin-ui-controls/xamarin-shimmer) to [.NET MAUI SfShimmer](https://www.syncfusion.com/maui-controls/maui-shimmer) easier, most of the APIs from the Xamarin SfShimmer were kept in the .NET MAUI SfShimmer. However, to maintain the consistency of API naming in the .NET MAUI SfShimmer, some of the APIs have been renamed. Please find the difference in the following topics.
 
 ## Namespaces 
 
