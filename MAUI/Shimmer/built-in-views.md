@@ -47,4 +47,4 @@ SfShimmer shimmer = new SfShimmer()
 {% endhighlight %}
 {% endtabs %}
 
-   ![Circle persona shimmer view in .NET MAUI.](images/overview/maui-circle-persona.gif)
+   ![Multiple Shimmer View in .NET MAUI.](images/overview/maui-multiple-shimmer-views.gif)
