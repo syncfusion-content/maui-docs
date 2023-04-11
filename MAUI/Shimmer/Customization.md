@@ -9,7 +9,7 @@ documentation: ug
 
 # Customization of .NET MAUI Shimmer (SfShimmer)
 
-The [SfShimmer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.html) control provides the following properties to customize the shimmer,
+The [SfShimmer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html) control provides the following properties to customize the shimmer,
 
 * `Fill` - To customize the background color of Shimmer view. 
 * `WaveColor` - To customize the Shimmer wave color.

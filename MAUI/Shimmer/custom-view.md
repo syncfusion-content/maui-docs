@@ -9,7 +9,7 @@ documentation: ug
 
 # Custom view of .NET MAUI Shimmer (SfShimmer)
 
-The `CustomView` property of the [SfShimmer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.html) can be used to create your shimmer view. The below code demonstrates how to customize the shimmer view using the .NET MAUI framework elements by `CustomView`.
+The `CustomView` property of the [SfShimmer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html) can be used to create your shimmer view. The below code demonstrates how to customize the shimmer view using the .NET MAUI framework elements by `CustomView`.
 
 {% tabs %}
 
@@ -378,6 +378,8 @@ The `CustomView` property of the [SfShimmer](https://help.syncfusion.com/cr/maui
 {% endhighlight %}
 
 {% endtabs %}
+
+![Shimmer Custom view in .NET MAUI.](images/customview/maui-custom-view.gif)
 
 ## Shimmer view
 
