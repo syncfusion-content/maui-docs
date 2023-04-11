@@ -179,7 +179,7 @@ The following image illustrates the result of the above code:
 
 The [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ItemTemplate) property helps you to decorate drop-down items using the custom templates. The default value of the `ItemTemplate` is `null`. The following example shows how to customize drop-down items using templates.
 
-{% tab %}
+{% tabs %}
 {% highlight C# %}
 
     //Model.cs
@@ -346,7 +346,7 @@ The following image illustrates the result of the above code:
 
 The [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ItemTemplate) property helps you to decorate drop-down items conditionally based on their content using the custom templates. The default value of the `ItemTemplate` is `null`.
 
-{% tab %}
+{% tabs %}
 {% highlight C# %}
 
     //Model.cs
@@ -436,7 +436,7 @@ The [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Dr
 {% endhighlight %}
 {% endtabs %}
 
-{% tab %}
+{% tabs %}
 {% highlight xaml %}
 
     <Grid >
@@ -511,21 +511,21 @@ The [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Dr
                                             EmployeeTemplate1="{StaticResource employeeTemplate1}"
                                             EmployeeTemplate2="{StaticResource employeeTemplate2}"/>
 
-    </Grid.Resources>
-    <editors:SfComboBox Placeholder="Select an employee"
-                        TextMemberPath="Name"
-                        DisplayMemberPath="Name"
-                        ItemsSource="{Binding Employees}"
-                        SelectedItem="{Binding SelectedEmployee,Mode=TwoWay}"
-                        WidthRequest="280"
-                        HeightRequest="34"
-                        x:Name="comboBox"
-                        ItemTemplate="{StaticResource employeeTemplateSelector}">
-        <editors:SfComboBox.BindingContext>
-            <local:EmployeeViewModel/>
-        </editors:SfComboBox.BindingContext>
-    </editors:SfComboBox>
-</Grid>
+        </Grid.Resources>
+        <editors:SfComboBox Placeholder="Select an employee"
+                            TextMemberPath="Name"
+                            DisplayMemberPath="Name"
+                            ItemsSource="{Binding Employees}"
+                            SelectedItem="{Binding SelectedEmployee,Mode=TwoWay}"
+                            WidthRequest="280"
+                            HeightRequest="34"
+                            x:Name="comboBox"
+                            ItemTemplate="{StaticResource employeeTemplateSelector}">
+            <editors:SfComboBox.BindingContext>
+                <local:EmployeeViewModel/>
+            </editors:SfComboBox.BindingContext>
+        </editors:SfComboBox>
+    </Grid>
 
 {% endhighlight %}
 {% highlight C# %}
@@ -687,7 +687,7 @@ The [Completed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropD
 
 Completed event can be subscribed in C# also:
 
-{% tab %}
+{% tabs %}
 {% highlight C# %}
 
     combobox.Completed+=combobox_Completed;
