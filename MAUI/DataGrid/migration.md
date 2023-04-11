@@ -277,13 +277,11 @@ We have passed the optional parameters such as {{'[canIncludeHiddenColumns](http
 ## Upcoming Features   
 
 *   Paging
-*	Freeze panes
 *	Right to left
 *	Accessibility
-*	Stacked headers
 *	Custom selection
 *	Grouping
-*	Summaries
+*	Summaries (Group and Caption)
 *	Editing
 *	ComboBox column
 *	Load more
