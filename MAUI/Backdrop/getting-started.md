@@ -11,6 +11,11 @@ documentation: ug
 
 This section explains the steps required to add the Backdrop page and its elements such as BackLayer and FrontLayer in the project. This section covers only the basic features needed to know and gets started with the Syncfusion backdrop page.
 
+To get start quickly with our .NET MAUI Backdrop, you can check the below video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=99VGii8CFmw"%}
+
 ## Creating an application using the .NET MAUI Backdrop Page
 
 * Create a new .NET MAUI application in the Visual Studio.
