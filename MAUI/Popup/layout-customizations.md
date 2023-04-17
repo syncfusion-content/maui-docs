@@ -19,10 +19,10 @@ The two different appearance modes in the SfPopup are as follows:
 <th>Modes</th>
 <th>Description</th></tr>
 <tr>
-<td>OneButton</td>
+<td>{{'[OneButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupButtonAppearanceMode.html#Syncfusion_Maui_Popup_PopupButtonAppearanceMode_OneButton)'| markdownify }}</td>
 <td>Shows the <code>SfPopup</code> with one button (accept button) in the footer view. This is the default value.</td></tr>
 <tr>
-<td>TwoButton</td>
+<td>{{'[TwoButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupButtonAppearanceMode.html#Syncfusion_Maui_Popup_PopupButtonAppearanceMode_TwoButton)'| markdownify }}</td>
 <td>Shows the <code>SfPopup</code> with two buttons (accept & decline buttons) in the footer view.</td></tr>
 </table>
 
@@ -659,6 +659,35 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ## How to
+
+### Disable the overlay background in .NET MAUI Popup?
+
+Disable the overlay background by using the [SfPopup.ShowOverlayAlways](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_ShowOverlayAlways) property as `False`. The default value of the [SfPopup.ShowOverlayAlways](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_ShowOverlayAlways) is `True`.
+
+{% tabs %}
+{% highlight xaml hl_lines="2" %}
+        <sfPopup:SfPopup x:Name="popup" 
+            ShowOverlayAlways="False"
+            IsOpen="True">
+        </sfPopup:SfPopup>
+{% endhighlight %}
+{% highlight c# hl_lines="9" %}
+using Syncfusion.Maui.Popup;
+public partial class MainPage : ContentPage
+{
+    SfPopup popup;
+    public MainPage()
+    {
+        InitializeComponent();
+        popup = new SfPopup();
+        popup.ShowOverlayAlways = false;
+        popup.Show();
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI Popup with ShowOverlayAlways](Images/layout-customizations/maui-popup-disable-overlay.png)
 
 ### Show listView as a popup
 

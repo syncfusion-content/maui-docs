@@ -66,7 +66,7 @@ public partial class MainPage : ContentPage
 </td>
 <td>
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml %}
 
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup">            
     <StackLayout>
@@ -78,7 +78,7 @@ public partial class MainPage : ContentPage
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# %}
 public partial class MainPage : ContentPage
 {
     public MainPage()
@@ -106,7 +106,7 @@ public partial class MainPage : ContentPage
 <th>Description</th></tr>
 <tr>
 <td>SfPopupLayout</td>
-<td>Sfpopup</td>
+<td>SfPopup</td>
 <td>Displays an alert message with customizable buttons or loads a desired view within a pop-up window.</td></tr>
 <tr>
 <td>PopupView</td>
@@ -132,32 +132,32 @@ N> All the properties from the Xamarin.Forms PopupView class is moved to the MAU
 <td>Nil</td>
 <td>Not supported</td></tr>
 <tr>
-<td>[PopupStyle.HeaderBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.PopupLayout.PopupStyle.html#Syncfusion_XForms_PopupLayout_PopupStyle_HeaderBackgroundColor)</td>
-<td>[PopupStyle.HeaderBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_HeaderBackground)</td>
+<td>{{'[PopupStyle.HeaderBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.PopupLayout.PopupStyle.html#Syncfusion_XForms_PopupLayout_PopupStyle_HeaderBackgroundColor)'| markdownify }}</td>
+<td>{{'[PopupStyle.HeaderBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_HeaderBackground)'| markdownify }}</td>
 <td>Gets or sets the background color to be applied for the header.</td></tr>
 <tr>
-<td>[PopupStyle.FooterBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.PopupLayout.PopupStyle.html#Syncfusion_XForms_PopupLayout_PopupStyle_FooterBackgroundColor)</td>
-<td>[PopupStyle.FooterBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_FooterBackground)</td>
+<td>{{'[PopupStyle.FooterBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.PopupLayout.PopupStyle.html#Syncfusion_XForms_PopupLayout_PopupStyle_FooterBackgroundColor)'| markdownify }}</td>
+<td>{{'[PopupStyle.FooterBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_FooterBackground)'| markdownify }}</td>
 <td>Gets or sets the background color of the footer.</td></tr>
 <tr>
-<td>[PopupStyle.AcceptButtonBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.PopupLayout.PopupStyle.html#Syncfusion_XForms_PopupLayout_PopupStyle_AcceptButtonBackgroundColor)</td>
-<td>[PopupStyle.AcceptButtonBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_AcceptButtonBackground)</td>
+<td>{{'[PopupStyle.AcceptButtonBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.PopupLayout.PopupStyle.html#Syncfusion_XForms_PopupLayout_PopupStyle_AcceptButtonBackgroundColor)'| markdownify }}</td>
+<td>{{'[PopupStyle.AcceptButtonBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_AcceptButtonBackground)'| markdownify }}</td>
 <td>Gets or sets the background color of accept button in the footer.</td></tr>
 <tr>
-<td>[PopupStyle.DeclineButtonBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.PopupLayout.PopupStyle.html#Syncfusion_XForms_PopupLayout_PopupStyle_DeclineButtonBackgroundColor)</td>
-<td>[PopupStyle.DeclineButtonBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_DeclineButtonBackground)</td>
+<td>{{'[PopupStyle.DeclineButtonBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.PopupLayout.PopupStyle.html#Syncfusion_XForms_PopupLayout_PopupStyle_DeclineButtonBackgroundColor)'| markdownify }}</td>
+<td>{{'[PopupStyle.DeclineButtonBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_DeclineButtonBackground)'| markdownify }}</td>
 <td>Gets or sets the background color of decline button in the footer.</td></tr>
 <tr>
-<td>[PopupStyle.BorderColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.PopupLayout.PopupStyle.html#Syncfusion_XForms_PopupLayout_PopupStyle_BorderColor)</td>
-<td>[PopupStyle.Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_Stroke)</td>
+<td>{{'[PopupStyle.BorderColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.PopupLayout.PopupStyle.html#Syncfusion_XForms_PopupLayout_PopupStyle_BorderColor)'| markdownify }}</td>
+<td>{{'[PopupStyle.Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_Stroke)'| markdownify }}</td>
 <td>Gets or sets the border color for the PopupView</td></tr>
 <tr>
-<td>[PopupStyle.BorderThickness](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.PopupLayout.PopupStyle.html#Syncfusion_XForms_PopupLayout_PopupStyle_BorderThickness)</td>
-<td>[PopupStyle.StrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_StrokeThickness)</td>
+<td>{{'[PopupStyle.BorderThickness](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.PopupLayout.PopupStyle.html#Syncfusion_XForms_PopupLayout_PopupStyle_BorderThickness)'| markdownify }}</td>
+<td>{{'[PopupStyle.StrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_StrokeThickness)'| markdownify }}</td>
 <td>Gets or sets the border thickness for the PopupView</td></tr>
 <tr>
-<td>[PopupStyle.OverlayOpacity](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.PopupLayout.PopupStyle.html#Syncfusion_XForms_PopupLayout_PopupStyle_OverlayOpacity)</td>
-<td>[PopupStyle.OverlayColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_OverlayColor)</td>
+<td>{{'[PopupStyle.OverlayOpacity](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.PopupLayout.PopupStyle.html#Syncfusion_XForms_PopupLayout_PopupStyle_OverlayOpacity)'| markdownify }}</td>
+<td>{{'[PopupStyle.OverlayColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_OverlayColor)'| markdownify }}</td>
 <td>You can achieve by setting value using rgba value like below,
 
 {% tabs %}
@@ -196,24 +196,24 @@ N> All the properties from the Xamarin.Forms PopupView class is moved to the MAU
 <th>.NET MAUI SfPopup</th>
 <th>Description</th></tr>
 <tr>
-<td>[AutoSizeMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.PopupLayout.AutoSizeMode.html)</td>
-<td>[PopupAutoSizeMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupAutoSizeMode.html)</td>
+<td>{{'[AutoSizeMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.PopupLayout.AutoSizeMode.html)'| markdownify }}</td>
+<td>{{'[PopupAutoSizeMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupAutoSizeMode.html)'| markdownify }}</td>
 <td>Defines constant that specify how the PopupView is Sized.</td></tr>
 <tr>
-<td>[AppearanceMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.PopupLayout.AppearanceMode.html)</td>
-<td>[PopupButtonAppearanceMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupButtonAppearanceMode.html)</td>
+<td>{{'[AppearanceMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.PopupLayout.AppearanceMode.html)'| markdownify }}</td>
+<td>{{'[PopupButtonAppearanceMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupButtonAppearanceMode.html)'| markdownify }}</td>
 <td>Built-in layout styles of the PopupView.</td></tr>
 <tr>
-<td>[BlurIntensity](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.PopupLayout.BlurIntensity.html)</td>
-<td>{PopupBlurIntensity](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupBlurIntensity.html)</td>
+<td>{{'[BlurIntensity](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.PopupLayout.BlurIntensity.html)'| markdownify }}</td>
+<td>{{'[PopupBlurIntensity](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupBlurIntensity.html)'| markdownify }}</td>
 <td>Defines constants that specifies the intensity of the blur effect applied to the overlay.</td></tr>
 <tr>
-<td>[OverlayMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.PopupLayout.OverlayMode.html)</td>
-<td>[PopupOverlayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupOverlayMode.html)</td>
+<td>{{'[OverlayMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.PopupLayout.OverlayMode.html)'| markdownify }}</td>
+<td>{{'[PopupOverlayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupOverlayMode.html)'| markdownify }}</td>
 <td>Defines constants that specifies whether the overlay should be transparent or blurred.</td></tr>
 <tr>
-<td>[RelativePosition](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.PopupLayout.RelativePosition.html)</td>
-<td>[PopupRelativePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupRelativePosition.html)</td>
+<td>{{'[RelativePosition](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.PopupLayout.RelativePosition.html)'| markdownify }}</td>
+<td>{{'[PopupRelativePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupRelativePosition.html)'| markdownify }}</td>
 <td>Positions the popup view relative to the given view.</td></tr>
 </table>
 
@@ -225,7 +225,7 @@ N> All the properties from the Xamarin.Forms PopupView class is moved to the MAU
 <th>.NET MAUI SfPopup</th>
 <th>Description</th></tr>
 <tr>
-<td>[PopupView.Refresh()](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.PopupLayout.PopupView.html#Syncfusion_XForms_PopupLayout_PopupView_Refresh)</td>
+<td>{{'[PopupView.Refresh()](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.PopupLayout.PopupView.html#Syncfusion_XForms_PopupLayout_PopupView_Refresh)'| markdownify }}</td>
 <td>Nil</td>
 <td>Not supported</td></tr>
 </table>

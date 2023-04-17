@@ -266,7 +266,7 @@ N> The `QueryAppointmentsCommand` will be raised if any one of the following act
 The `Scheduler` supports to show the busy indicator view by using the [ShowBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_ShowBusyIndicator) property of the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html). The default value is set to `false.` If the value is set to `true` and visible dates are changed, then the busy indicator will be loaded on view.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
+{% highlight XAML hl_lines="3" %}
 
  <scheduler:SfScheduler x:Name="Scheduler" 
                         View="Week"
@@ -274,10 +274,12 @@ The `Scheduler` supports to show the busy indicator view by using the [ShowBusyI
  </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
+{% highlight C# hl_lines="3" %}
 
-this.Scheduler.View = SchedulerView.Week;
-this.Scheduler.ShowBusyIndicator = true;
+SfScheduler scheduler = new SfScheduler();
+scheduler.View = SchedulerView.Week;
+scheduler.ShowBusyIndicator = true;
+this.Content = scheduler;
 
 {% endhighlight %}
 {% endtabs %}

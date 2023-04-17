@@ -50,12 +50,17 @@ N>
 * All calendar types are supported except the Lunar type calendars.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="1" %}
+{% highlight XAML hl_lines="1" %}
 <schedule:SfScheduler x:Name="Scheduler"  View="TimelineMonth" CalendarType="Hijri">
 </scheduler:SfScheduler>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
-this.Scheduler.CalendarType = CalendarType.Hijri;
+{% highlight C# hl_lines="3" %}
+
+SfScheduler scheduler = new SfScheduler();
+scheduler.View = SchedulerView.TimelineMonth;
+scheduler.CalendarType = CalendarType.Hijri;
+this.Content = scheduler;
+
 {% endhighlight %}
 {% endtabs %}
 

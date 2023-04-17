@@ -10,11 +10,11 @@ keywords: mask, SfMaskedEntry, maskedentry
 
 # Getting Started with .NET MAUI Masked Entry (SfMaskedEntry)
 
-This section explains the steps required to configure a `SfMaskedEntry` control in a real-time scenario and provides a walk-through on some of the customization features available in the `SfMaskedEntry` control.
+This section explains the steps required to configure a [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html)  control in a real-time scenario and provides a walk-through on some of the customization features available in the [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) control.
 
 ## Creating an application using the .NET MAUI Masked Entry
 
-This section explains the steps required to work with the `SfMaskedEntry` control for .NET MAUI.
+This section explains the steps required to work with the [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) control for .NET MAUI.
 
 ## Adding a .NET MAUI Masked Entry reference
 
@@ -78,7 +78,7 @@ Step 2: Add the namespace as shown in the following code sample.
 
 ## Initialize Masked Entry
 
-Now, add the `SfMaskedEntry` control with a required optimal name using the included namespace.
+Now, add the [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) control with a required optimal name using the included namespace.
 
 {% tabs %}
 
@@ -143,7 +143,7 @@ maskedEntry.Mask = "[A-Za-z0-9._%-]+@[A-Za-z0-9]+.[A-Za-z]{2,3}";
 
 ## Setting the prompt character
 
-Every single mask displays a prompt character ('_') in the absence of your input. Customize this prompt character by using the `PromptChar` property.
+Every single mask displays a prompt character ('_') in the absence of your input. Customize this prompt character by using the [PromptChar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_PromptChar) property.
 
 {% tabs %}
 {% highlight XAML %}
@@ -170,7 +170,7 @@ maskedEntry.PromptChar = '#';
 
 ## Setting the value
 
-The `Value` property sets the input value for the MaskedEntry control.
+The [Value](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_Value) property sets the input value for the MaskedEntry control.
 
 {% tabs %}
 {% highlight XAML %}

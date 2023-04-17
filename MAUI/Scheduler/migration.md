@@ -513,7 +513,7 @@ The following code example explains how to add the scheduler resource in the Xam
 <td>
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
 <syncfusion:SfSchedule
           x:Name="schedule"
@@ -529,7 +529,7 @@ The following code example explains how to add the scheduler resource in the Xam
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 	
 // Creating an instance for the schedule resource collection.
 ObservableCollection<object> resources = new ObservableCollection<object>();
@@ -567,7 +567,7 @@ schedule.DataSource = scheduleAppointmentCollection;
 <td>
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
 <scheduler:SfScheduler View="TimelineWeek" AppointmentsSource="{Binding Appointments}">
     <scheduler:SfScheduler.ResourceView>
@@ -577,7 +577,7 @@ schedule.DataSource = scheduleAppointmentCollection;
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 public ObservableCollection<SchedulerAppointment> Appointments { get; set; }
 
@@ -625,22 +625,21 @@ this.Scheduler.ResourceView.Resources = Resources;
 <td>
 {% tabs %}
 
-{% highlight xaml %}
-
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
 <schedule:SfSchedule ScheduleView="WeekView" ShowResourceView="True">
      <schedule:SfSchedule.ResourceMapping>
-          <schedule:ResourceMapping 
-		                            Name="Name"
-                                    Id="Id"
-                                    Color="Color"
-                                    Image="DisplayPicture"/>
+        <schedule:ResourceMapping 
+            Name="Name"
+            Id="Id"
+            Color="Color"
+            Image="DisplayPicture"/>
      </schedule:SfSchedule.ResourceMapping>
 </schedule:SfSchedule>
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 /// <summary>
 /// Represents custom data properties.
@@ -710,7 +709,7 @@ schedule.ScheduleResources = Employees;
 <td>
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 <schedule:SfScheduler x:Name="Scheduler"  View="TimelineWeek" 
                             AppointmentsSource="{Binding Meetings}"
                             AllowedViews="TimelineDay,TimelineMonth,TimelineWeek,TimelineWorkWeek" >
@@ -727,7 +726,7 @@ schedule.ScheduleResources = Employees;
 </schedule:SfScheduler>
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 /// <summary>
 /// Represents custom data properties.
@@ -793,13 +792,13 @@ The following code example explains how to create the scheduler appointments in 
 <td>
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
 <schedule:SfSchedule ScheduleView="MonthView" DataSource="{Binding Appointments}"/>
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 public ScheduleAppointmentCollection Appointments { get; set; }
 
@@ -826,13 +825,13 @@ this.Content = schedule;
 <td>
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
 <scheduler:SfScheduler View="MonthView" AppointmentsSource="{Binding Appointments}"/>
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 public ObservableCollection<SchedulerAppointment> Appointments { get; set; }
 
@@ -974,7 +973,7 @@ The following code example explains how to map the custom appointments data in X
 <td>
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
 <schedule:SfSchedule DataSource="{Binding Meetings}">
     <schedule:SfSchedule.AppointmentMapping>
@@ -989,7 +988,7 @@ The following code example explains how to map the custom appointments data in X
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 /// <summary>   
 /// Represents custom data properties.   
@@ -1032,7 +1031,7 @@ this.Content = schedule;
 <td>
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
 <scheduler:SfScheduler AppointmentsSource="{Binding Meetings}">
     <scheduler:SfScheduler.AppointmentMapping>
@@ -1047,7 +1046,7 @@ this.Content = schedule;
 
 {% endhighlight %}
 
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 /// <summary>    
 /// Represents the custom data properties.    
@@ -2222,10 +2221,10 @@ The following code example explains how to customize the appearance of the month
                   ScheduleView="MonthView">
 <schedule:SfSchedule.MonthCellStyle>
     <schedule:MonthViewCellStyle
-                BackgroundColor="#8282ff"
-                NextMonthBackgroundColor="Gray"
-                PreviousMonthBackgroundColor="White"
-                TodayBackgroundColor="#f97272">
+        BackgroundColor="#8282ff"
+        NextMonthBackgroundColor="Gray"
+        PreviousMonthBackgroundColor="White"
+        TodayBackgroundColor="#f97272">
     </schedule:MonthViewCellStyle>
 </schedule:SfSchedule.MonthCellStyle>
 <schedule:SfSchedule/>
@@ -2255,12 +2254,13 @@ this.Content = schedule;
 <schedule:SfScheduler View="Month">
     <schedule:SfScheduler.MonthView>
         <schedule:SchedulerMonthView>
-                <schedule:SchedulerMonthView.CellStyle>
-                    <schedule:SchedulerMonthCellStyle TodayBackground="LightBlue"
-                                                      Background="Orange"
-                                                      LeadingMonthBackground="Brown"
-                                                      TrailingMonthBackground="Yellow"/>
-                </schedule:SchedulerMonthView.CellStyle>
+            <schedule:SchedulerMonthView.CellStyle>
+                <schedule:SchedulerMonthCellStyle 
+                    TodayBackground="LightBlue"
+                    Background="Orange"
+                    LeadingMonthBackground="Brown"
+                    TrailingMonthBackground="Yellow"/>
+            </schedule:SchedulerMonthView.CellStyle>
         </schedule:SchedulerMonthView>
     </schedule:SfScheduler.MonthView>
 </schedule:SfScheduler>
@@ -2269,16 +2269,16 @@ this.Content = schedule;
 
 {% highlight C# %}
 
-    SfScheduler scheduler = new SfScheduler();
-    var monthCellStyle = new SchedulerMonthCellStyle()
-    {
-        Background = Brush.LightSkyBlue,
-        TodayBackground = Brush.LightBlue,
-        LeadingMonthBackground = Brush.LightGreen,
-        TrailingMonthBackground = Brush.LightYellow,
-    };
-    scheduler.MonthView.CellStyle = monthCellStyle;
-    this.Content = scheduler;
+SfScheduler scheduler = new SfScheduler();
+var monthCellStyle = new SchedulerMonthCellStyle()
+{
+    Background = Brush.LightSkyBlue,
+    TodayBackground = Brush.LightBlue,
+    LeadingMonthBackground = Brush.LightGreen,
+    TrailingMonthBackground = Brush.LightYellow,
+};
+scheduler.MonthView.CellStyle = monthCellStyle;
+this.Content = scheduler;
 
 {% endhighlight %}
 
@@ -2398,12 +2398,12 @@ this.Content = schedule;
 {% highlight xaml %}
 
 <schedule:SfScheduler
-    ShowWeekNumber="True"
-    View="Month">
-        <schedule:SfScheduler.WeekNumberStyle>
-            <schedule:SchedulerWeekNumberStyle 
-                                    Background="Red"/>
-        </schedule:SfScheduler.WeekNumberStyle>
+        ShowWeekNumber="True"
+        View="Month">
+    <schedule:SfScheduler.WeekNumberStyle>
+        <schedule:SchedulerWeekNumberStyle 
+                                Background="Red"/>
+    </schedule:SfScheduler.WeekNumberStyle>
 </schedule:SfScheduler>
 
 {% endhighlight %}
@@ -2412,13 +2412,6 @@ this.Content = schedule;
 
 SfScheduler scheduler = new SfScheduler();
 scheduler.ShowWeekNumber = true;
-var schedulerTextStyle = new SchedulerTextStyle()
-{
-    TextColor = Colors.Red,
-    FontSize = 14,
-    FontFamily = "Arial",
-    FontAttributes = FontAttributes.Bold
-};
 var schedulerWeekNumberStyle = new SchedulerWeekNumberStyle()
 {
     Background = Brush.LightGreen,

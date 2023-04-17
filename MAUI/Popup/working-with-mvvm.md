@@ -442,3 +442,5 @@ public class ViewModel : INotifyPropertyChanged
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
 }
+{% endhighlight %}
+{% endtabs %}

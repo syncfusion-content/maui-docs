@@ -282,6 +282,7 @@ The template for a table summary row can be set by using [SfDataGrid.TableSummar
 
 Refer the below code example in which a label is loaded in the table summary template of table summary row.
 
+{% tabs %}
 {% highlight xaml %}
 
  <ContentPage.Resources>
@@ -339,31 +340,34 @@ Refer the below code example in which a label is loaded in the table summary tem
     </StackLayout>
 
 {% endhighlight %}
+{% endtabs %}
 
+{% tabs %}
 {% highlight c# %}
 
  public class TableSummaryConverter : IValueConverter
+{
+    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
     {
-        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        var data = value != null ? value as SummaryRecordEntry : null;
+        if (data != null)
         {
-            var data = value != null ? value as SummaryRecordEntry : null;
-            if (data != null)
-            {
-                SfDataGrid dataGrid = (SfDataGrid)parameter;
-                var summaryText = SummaryCreator.GetSummaryDisplayText(data, "Salary", dataGrid.View);
-                return "Total Value:" + " " + summaryText.ToString();
-            }
-
-            return null;
+            SfDataGrid dataGrid = (SfDataGrid)parameter;
+            var summaryText = SummaryCreator.GetSummaryDisplayText(data, "Salary", dataGrid.View);
+            return "Total Value:" + " " + summaryText.ToString();
         }
 
-        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-        {
-            return null;
-        }
+        return null;
     }
 
-    {% endhighlight %}
+    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    {
+        return null;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 ![Table summary template in a row](Images\Table-Summary\TemplateRow.png)
 
@@ -373,6 +377,7 @@ The template for a table summary column can be set by using `DataGridSummaryColu
 
 Refer the below code example in which a label is loaded in the template of table summary column.
 
+{% tabs %}
 {% highlight xaml%}
 
 <ContentPage.Resources>
@@ -431,7 +436,9 @@ Refer the below code example in which a label is loaded in the template of table
     </StackLayout>
 
 {% endhighlight%}
+{% endtabs %}
 
+{% tabs %}
 {% highlight c# %}
 
 // To write a converter, follow the code example:
@@ -458,6 +465,7 @@ Refer the below code example in which a label is loaded in the template of table
         }    
     }
 {% endhighlight %}
+{% endtabs %}
 
 ![Table summary template in a column](Images\Table-Summary\TemplateColumn.png)
 
@@ -604,6 +612,7 @@ Summary values can be calculated based on custom logic using the [DataGridSummar
 
 In the following code snippet, `Standard Deviation` is calculated for quantity of products:
 
+{% tabs %}
 {% highlight c#%}
 public class CustomAggregate : ISummaryAggregate
 {
@@ -647,6 +656,7 @@ public static class LinqExtensions
     }
 }
 {% endhighlight %}
+{% endtabs %}
 
 Assign the custom aggregate to `DataGridSummaryColumn.CustomAggregate` property and set the `SummaryType` as `Custom`. `DataGridSummaryColumn.Format` property is defined based on property name in custom aggregate `StdDev`.
 
@@ -715,6 +725,7 @@ The data grid allows customizing the table summary by extending the [DataGridTab
 
 To customize the table summary, follow the code example:
 
+{% tabs %}
 {% highlight c#%}
 
 // To remove default summary and Add custom summary.
@@ -746,6 +757,7 @@ public class DataDataGridTableSummaryCellRendererExt : DataDataGridTableSummaryC
     }
 }
 {% endhighlight %}
+{% endtabs %}
 
 The following screenshot shows the final outcome upon execution of the above code.
 

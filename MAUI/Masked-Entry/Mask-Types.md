@@ -9,7 +9,7 @@ documentation: ug
 
 # Mask types in .NET MAUI MaskedEntry
 
-Each `MaskType` has a different set of mask elements combined to form a mask expression. Based on the complexity and usage, mask types are classified as:
+Each [MaskType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_MaskType) has a different set of mask elements combined to form a mask expression. Based on the complexity and usage, mask types are classified as:
 
 1. Simple
 2. RegEx

@@ -9,7 +9,7 @@ documentation: ug
 
 # Culture in .NET MAUI MaskedEntry
 
-The MaskedEntry allows you to set any `Culture` support for currency symbols, date separators, time separators, group separators, and decimal separators by using the following special symbols.
+The MaskedEntry allows you to set any [Culture](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_Culture) support for currency symbols, date separators, time separators, group separators, and decimal separators by using the following special symbols.
 
 <table>
 <tr>

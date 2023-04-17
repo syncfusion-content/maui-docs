@@ -14,6 +14,10 @@ The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Sf
 * Automatically generating columns
 * Manually defining columns
 
+To get start quickly with column manipulation in .NET MAUI DataGrid, you can check on this video:
+
+<style>#MAUIDataGridVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIDataGridVideoTutorial' src='https://www.youtube.com/watch?v=QrMUWMnnLDU'></iframe>
+
 ## Automatic columns generation
 
 The SfDataGrid creates columns automatically based on the bindable property [SfDataGrid.AutoGenerateColumnsMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AutoGenerateColumnsMode). The columns are generated based on the type of individual properties in the underlying collection that is set as ItemsSource.
