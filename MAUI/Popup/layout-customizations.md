@@ -658,7 +658,9 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-## How to disable the overlay background in .NET MAUI Popup?
+## How to
+
+### Disable the overlay background in .NET MAUI Popup?
 
 Disable the overlay background by using the [SfPopup.ShowOverlayAlways](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_ShowOverlayAlways) property as `False`. The default value of the [SfPopup.ShowOverlayAlways](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_ShowOverlayAlways) is `True`.
 
@@ -686,8 +688,6 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ![.NET MAUI Popup with ShowOverlayAlways](Images/layout-customizations/maui-popup-disable-overlay.png)
-
-## How to
 
 ### Show listView as a popup
 

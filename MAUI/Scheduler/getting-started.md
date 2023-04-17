@@ -14,7 +14,8 @@ This section explains how to populate the appointments to the Scheduler as well 
 
 To get start quickly with our .NET MAUI Scheduler, you can check the below video.
 
-<style>#.NETMAUISchedulerVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='.NETMAUISchedulerVideoTutorial' src='https://youtu.be/Io2ElO8ORSQ'></iframe>
+{% youtube
+"youtube:https://www.youtube.com/watch?v=Io2ElO8ORSQ"%}
 
 ## Creating an application using the .NET MAUI Scheduler
 
