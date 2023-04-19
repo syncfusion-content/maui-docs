@@ -268,6 +268,55 @@ We have passed the optional parameters such as {{'[canIncludeHiddenColumns](http
 <td>{{'[DataGridColumnSizer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumnSizer.html)'| markdownify }}</td>
 <td>Represents a class that handles the sizing for all the {{'[columns](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_Columns)'| markdownify }} in the Columns collection in a {{'[SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html)'| markdownify }} control.</td>
 </tr>
+
+<tr>
+<td>{{'[GridSummaryRow](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.GridSummaryRow.html)'| markdownify }}</td>
+<td>{{'[DataGridSummaryRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryRow.html)'| markdownify }}</td>
+<td> Represents a class that defines the summary information of summary row.</td>
+</tr>
+
+<tr>
+<td>{{'[GridTableSummaryRow](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.GridTableSummaryRow.html)'| markdownify }}</td>
+<td>{{'[DataGridTableSummaryRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridTableSummaryRow.html)'| markdownify }}</td>
+<td> Represents a class that defines summary information of table summary row in {{'[SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html)'| markdownify }}.</td>
+</tr>
+
+<tr>
+<td>{{'[Position](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.Position.html)'| markdownify }}</td>
+<td>{{'[SummaryRowPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SummaryRowPosition.html)'| markdownify }}</td>
+<td> Defines the constants that specify whether the table summary row is positioned at the top or bottom of the {{'[SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html)'| markdownify }} control.</td>
+</tr>
+
+<tr>
+<td>{{'[TableSummaryRowControl](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.TableSummaryRowControl.html)'| markdownify }}</td>
+<td>{{'[DataGridTableSummaryRowView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridTableSummaryRowView.html)'| markdownify }}</td>
+<td> Represents a table summary row in a {{'[SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html)'| markdownify }} control.</td>
+</tr>
+
+<tr>
+<td>{{'[StackedColumn](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.StackedColumn.html)'| markdownify }}</td>
+<td>{{'[DataGridStackedColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStackedColumn.html)'| markdownify }}</td>
+<td>Represents a column that is stacked across the specified child columns in it.</td>
+</tr>
+
+<tr>
+<td>{{'[StackedHeaderCellControl](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.StackedHeaderCellControl.html)'| markdownify }}</td>
+<td>{{'[DataGridStackedHeaderCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStackedHeaderCell.html)'| markdownify }}</td>
+<td>Represents a {{'[DataGridStackedCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStackedHeaderCell.html)'| markdownify }} in a {{'[SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html)'| markdownify }} control.</td>
+</tr>
+
+<tr>
+<td>{{'[GridStackedHeaderCellRenderer](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.GridStackedHeaderCellRenderer.html)'| markdownify }}</td>
+<td>{{'[DataGridStackedHeaderCellRenderer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStackedHeaderCellRenderer.html)'| markdownify }}</td>
+<td>A class for cell renderer that displays{{'[DataGridStackedHeaderRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStackedHeaderRow.html)'| markdownify }} in a {{'[DataGridStackedCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStackedHeaderCell.html)'| markdownify }}.</td>
+</tr>
+
+<tr>
+<td>{{'[StackedHeaderRow](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.StackedHeaderRow.html)'| markdownify }}</td>
+<td>{{'[DataGridStackedHeaderRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStackedHeaderRow.html)'| markdownify }}</td>
+<td>The {{'[DataGridStackedHeaderRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStackedHeaderRow.html)'| markdownify }} contains the collection of {{'[DataGridStackedColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStackedColumn.html)'| markdownify }} to be grouped under a particular category.}}.</td>
+</tr>
+
 </table>
 
 ## Known issues 
