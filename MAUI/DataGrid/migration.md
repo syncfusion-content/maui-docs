@@ -317,6 +317,12 @@ We have passed the optional parameters such as {{'[canIncludeHiddenColumns](http
 <td>The {{'[DataGridStackedHeaderRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStackedHeaderRow.html)'| markdownify }} contains the collection of {{'[DataGridStackedColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStackedColumn.html)'| markdownify }} to be grouped under a particular category.}}.</td>
 </tr>
 
+<tr>
+<td>{{'[GridStackedHeaderCellControl](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.GridStackedHeaderCellControl.html)'| markdownify }}</td>
+<td>{{'[DataGridStackedHeaderRowView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStackedHeaderRowView.html)'| markdownify }}</td>
+<td>Represents a {{'[DataGridStackedHeaderRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStackedHeaderRow.html)'| markdownify }} as a control in a {{'[SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html)'| markdownify }} control.</td>
+</tr>
+
 </table>
 
 ## Known issues 
