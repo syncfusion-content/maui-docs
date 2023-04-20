@@ -461,6 +461,7 @@ public class MonthCellTemplateSelector : DataTemplateSelector
     }
 }
 
+{% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 this.Calendar.View = CalendarView.Month;
@@ -634,6 +635,7 @@ public class YearCellTemplateSelector : DataTemplateSelector
     }
 }
 
+{% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 this.Calendar.View = CalendarView.Decade;
