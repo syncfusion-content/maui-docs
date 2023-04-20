@@ -131,8 +131,6 @@ namespace GettingStarted
 
 Download the source code of this sample [here](https://github.com/SyncfusionExamples/getting-started-.net-maui-popup).
 
-N> Two Popups cannot be displayed at the same time in a page.
-
 ## Customize positioning
 
 The .NET MAUI Popup (SfPopup) allows showing the popup content at various positions.
