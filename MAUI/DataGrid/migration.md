@@ -154,6 +154,16 @@ To make migration from [Xamarin SfDataGrid](https://www.syncfusion.com/xamarin-u
 <td>{{'[DataGridCell.FontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html#Syncfusion_Maui_DataGrid_DataGridCell_FontFamily)'| markdownify }}</td>
 <td>Gets or sets the font family.</td>
 </tr>
+<tr>
+<td>{{'[FrozenRowCount](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_FrozenRowsCount)'| markdownify }}</td>
+<td>{{'[FrozenRowCount(https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_FrozenRowCount)'| markdownify }}</td>
+<td>The number of non-scrolling rows at the top of SfDataGrid.</td>
+</tr>
+<tr>
+<td>{{'[FrozenColumnCount](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_FrozenColumnsCount)'| markdownify }}</td>
+<td>{{'[FrozenColumnCount(https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_FrozenColumnCount)'| markdownify }}</td>
+<td>The number of non-scrolling columns at the left side of SfDataGrid.</td>
+</tr>
 </table>
 
 ## Events
