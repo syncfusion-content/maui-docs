@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Document outline
+# Document outline in .NET MAUI PDF Viewer
 
 A PDF document may optionally have a document outline (also called as bookmarks) which allows the user to navigate from one part of the document to another. The PDF viewer control displays the document outline in a tree-structured hierarchy of outline elements.
 
