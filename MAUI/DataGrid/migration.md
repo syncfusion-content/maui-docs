@@ -155,12 +155,12 @@ To make migration from [Xamarin SfDataGrid](https://www.syncfusion.com/xamarin-u
 <td>Gets or sets the font family.</td>
 </tr>
 <tr>
-<td>{{'[FrozenRowCount](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_FrozenRowsCount)'| markdownify }}</td>
+<td>{{'[FrozenRowsCount](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_FrozenRowsCount)'| markdownify }}</td>
 <td>{{'[FrozenRowCount(https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_FrozenRowCount)'| markdownify }}</td>
 <td>The number of non-scrolling rows at the top of SfDataGrid.</td>
 </tr>
 <tr>
-<td>{{'[FrozenColumnCount](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_FrozenColumnsCount)'| markdownify }}</td>
+<td>{{'[FrozenColumnsCount](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_FrozenColumnsCount)'| markdownify }}</td>
 <td>{{'[FrozenColumnCount(https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_FrozenColumnCount)'| markdownify }}</td>
 <td>The number of non-scrolling columns at the left side of SfDataGrid.</td>
 </tr>
@@ -215,24 +215,6 @@ By writing the converter, you can achieve the requirement conditionally. Refer {
 <td>{{'[GetIntrinsicRowHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridQueryRowHeightEventArgs.html#Syncfusion_Maui_DataGrid_DataGridQueryRowHeightEventArgs_GetIntrinsicRowHeight_System_Int32_System_Boolean_System_Collections_Generic_List_System_String__)'| markdownify }}</td>
 <td>Gets the row height to fit that row based on the content.<br>
 We have passed the optional parameters such as {{'[canIncludeHiddenColumns](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.GridRowSizingOptions.html#Syncfusion_SfDataGrid_XForms_GridRowSizingOptions_CanIncludeHiddenColumns)'| markdownify }} and {{'[excludedColumns](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.GridRowSizingOptions.html#Syncfusion_SfDataGrid_XForms_GridRowSizingOptions_ExcludeColumns)'| markdownify }} where as we have not provided the {{'[GridRowSizingOptions](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.GridRowSizingOptions.html)'| markdownify }} class as parameters.
-</td>
-</tr>
-<tr>
-<td>{{'[ScrollToColumnIndex](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_ScrollToColumnIndex_System_Int32_System_Boolean_Xamarin_Forms_ScrollToPosition_)'| markdownify }}</td>
-<td>{{'[ScrollToColumnIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ScrollToColumnIndex_System_Int32_Microsoft_Maui_Controls_ScrollToPosition_System_Boolean_)'| markdownify }}</td>
-<td>Scroll the {{'[SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html)'| markdownify }} to the specified column index.
-</td>
-</tr>
-<tr>
-<td>{{'[ScrollToRowColumnIndex](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_ScrollToRowColumnIndex_System_Int32_System_Int32_System_Boolean_Xamarin_Forms_ScrollToPosition_Xamarin_Forms_ScrollToPosition_)'| markdownify }}</td>
-<td>{{'[ScrollToColumScrollToRowColumnIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ScrollToRowColumnIndex_System_Int32_System_Int32_Microsoft_Maui_Controls_ScrollToPosition_Microsoft_Maui_Controls_ScrollToPosition_System_Boolean_)'| markdownify }}</td>
-<td>Scroll the {{'[SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html)'| markdownify }} to the specified row and column index.
-</td>
-</tr>
-<tr>
-<td>{{'[ScrollToRowIndex](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_ScrollToRowIndex_System_Int32_System_Boolean_Xamarin_Forms_ScrollToPosition_)'| markdownify }}</td>
-<td>{{'[ScrollToRowIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ScrollToRowIndex_System_Int32_Microsoft_Maui_Controls_ScrollToPosition_System_Boolean_)'| markdownify }}</td>
-<td>Scroll the {{'[SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html)'| markdownify }} to the specified row index.
 </td>
 </tr>
 </table>
