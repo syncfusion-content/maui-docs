@@ -42,8 +42,6 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        SfDataGrid dataGrid = new SfDataGrid();
-        this.Content = dataGrid;
     }
 }
 
@@ -91,6 +89,7 @@ The SfDataGrid is a data-bound control. Hence, a data model should be created to
 
 Create a simple data source as shown in the following code example in a new class file, and save it as OrderInfo.cs file:
 
+ {% tabs %}
 {% highlight c# %}
 public class OrderInfo
 {
@@ -140,11 +139,13 @@ public class OrderInfo
     }
 } 
 {% endhighlight %}
+{% endtabs %}
 
 N> If you want your data model to respond to property changes, implement the `INotifyPropertyChanged` interface in your model class.
 
 Create a model repository class with OrderInfo collection property initialized with the required number of data objects in a new class file as shown in the following code example and save it as OrderInfoRepository.cs file:
 
+{% tabs %}
 {% highlight c# %}
 public class OrderInfoRepository
 {
@@ -180,6 +181,7 @@ public class OrderInfoRepository
     }
 }
 {% endhighlight %}
+{% endtabs %}
 
 ## Binding data to the SfDataGrid
 

@@ -114,7 +114,7 @@ N> Inherit this class from the `INotifyPropertyChanged` for dynamic changes in c
 The [AppointmentMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html) property of the `Meeting` class maps those properties to the `.NET MAUI Scheduler` control.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 4 5 6 7 8 9 10 11 12" %}
+{% highlight XAML hl_lines="3 4 5 6 7 8 9 10 11 12" %}
 
 <scheduler:SfScheduler x:Name="Scheduler" 
                        View="Week" >
@@ -131,10 +131,10 @@ The [AppointmentMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sch
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 3 11" %} 
+{% highlight C# hl_lines="3 11" %}
 
-using Syncfusion.Maui.Scheduler;
-
+SfScheduler scheduler = new SfScheduler();
+scheduler.View = SchedulerView.Week;
 SchedulerAppointmentMapping appointmentMapping = new SchedulerAppointmentMapping();
 appointmentMapping.Subject = "EventName";
 appointmentMapping.StartTime = "From";
@@ -143,7 +143,8 @@ appointmentMapping.Background = "Background";
 appointmentMapping.IsAllDay = "IsAllDay";
 appointmentMapping.StartTimeZone = "StartTimeZone";
 appointmentMapping.EndTimeZone = "EndTimeZone";
-this.Scheduler.AppointmentMapping = appointmentMapping;
+scheduler.AppointmentMapping = appointmentMapping;
+this.Content = scheduler;
 
 {% endhighlight %}
 {% endtabs %}
@@ -394,7 +395,7 @@ Inherit this class from the `INotifyPropertyChanged` for dynamic changes in cust
 The [AppointmentMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html) property of the `Meeting` class maps those properties to the  scheduler appointment of the `.NET MAUI Scheduler` control.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 4 5 6 7 8 9 10 11 12 13 14 15" %}
+{% highlight XAML hl_lines="3 4 5 6 7 8 9 10 11 12 13 14 15" %}
 
 <scheduler:SfScheduler x:Name="Scheduler"
                        View="Week" >
@@ -414,9 +415,10 @@ The [AppointmentMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sch
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 4 15" %}
+{% highlight C# hl_lines="3 11" %}
 
-using Syncfusion.Maui.Scheduler;
+SfScheduler scheduler = new SfScheduler();
+scheduler.View = SchedulerView.Week;
 
 //Schedule data mapping for business objects.
 SchedulerAppointmentMapping appointmentMapping = new SchedulerAppointmentMapping();
@@ -427,10 +429,8 @@ appointmentMapping.Background = "Background";
 appointmentMapping.IsAllDay = "IsAllDay";
 appointmentMapping.StartTimeZone = "StartTimeZone";
 appointmentMapping.EndTimeZone = "EndTimeZone";
-appointmentMapping.Id = "Id";
-appointmentMapping.RecurrenceRule = "RecurrenceRule";
-appointmentMapping.RecurrenceId = "RecurrenceId";
-this.Scheduler.AppointmentMapping = appointmentMapping;
+scheduler.AppointmentMapping = appointmentMapping;
+this.Content = scheduler;
 
 {% endhighlight %}
 {% endtabs %}

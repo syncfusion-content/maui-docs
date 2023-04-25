@@ -104,9 +104,7 @@ N> If  minimum or maximum value is set, the other value is calculated by default
 {% highlight xaml %}
 
 <chart:SfCartesianChart.YAxes>
-    <chart:NumericalAxis Maximum="2750"
-						 Minimum="250"
-						 Interval="250"/>
+    <chart:NumericalAxis Maximum="2750" Minimum="250" Interval="250"/>
 </chart:SfCartesianChart.YAxes>
 
 {% endhighlight %}
@@ -230,6 +228,73 @@ chart.YAxes.Add(secondaryAxis);
 
 ![CategoryAxis interval support in MAUI Chart](Axis_Images/maui_chart_category_axis_interval.jpg)
 
+### Indexed category axis
+
+In Cartesian Charts, the [ArrangeByIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CategoryAxis.html#Syncfusion_Maui_Charts_CategoryAxis_ArrangeByIndex) property is used to determine how the items in a category axis are arranged. 
+
+If [ArrangeByIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CategoryAxis.html#Syncfusion_Maui_Charts_CategoryAxis_ArrangeByIndex) is set to true, then the items in the category axis will be arranged according to their index values.
+
+If [ArrangeByIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CategoryAxis.html#Syncfusion_Maui_Charts_CategoryAxis_ArrangeByIndex) is set to false, then the items in the category axis will be arranged according to their values. By default, [ArrangeByIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CategoryAxis.html#Syncfusion_Maui_Charts_CategoryAxis_ArrangeByIndex) is true.
+
+The following code illustrates how to define the property [ArrangeByIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CategoryAxis.html#Syncfusion_Maui_Charts_CategoryAxis_ArrangeByIndex) in chart.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+    <chart:SfCartesianChart>
+        . . .
+        <chart:SfCartesianChart.XAxes>
+            <chart:CategoryAxis ArrangeByIndex="False" />
+        </chart:SfCartesianChart.XAxes>
+        <chart:SfCartesianChart.YAxes>
+            <chart:NumericalAxis/>
+        </chart:SfCartesianChart.YAxes>
+
+        <chart:ColumnSeries ItemsSource="{Binding Items}"
+                            XBindingPath="Year"
+                            YBindingPath="Value"/>
+
+        <chart:ColumnSeries ItemsSource="{Binding Items}"
+                            XBindingPath="Year1"
+                            BindingPath="Value"/>
+
+        </chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+    SfCartesianChart chart = new SfCartesianChart();
+    . . .
+    CategoryAxis primaryAxis = new CategoryAxis()
+    {
+        ArrangeByIndex = false, 
+    };
+    chart.XAxes.Add(primaryAxis);
+
+    NumericalAxis secondaryAxis = new NumericalAxis();
+    chart.YAxes.Add(secondaryAxis);  
+
+    ColumnSeries series1 = new ColumnSeries();
+    series1.ItemsSource = Items; 
+    series1.XBindingPath = "Year";
+    series1.YBindingPath = "Value";
+
+    ColumnSeries series2 = new ColumnSeries();
+    series2.ItemsSource = Items;  
+    series2.XBindingPath = "Year1";
+    series2.YBindingPath = "Value";
+
+    chart.Series.Add(series1);
+    chart.Series.Add(series2);  
+
+{% endhighlight %}
+
+{% endtabs %}    
+
+![CategoryAxis ArrangeByIndex support in MAUI Chart](Axis_Images/ArrangeByIndex.png)
+
 ## DateTime Axis
 
 [DateTimeAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html) is used to plot `DateTime` values. The [DateTimeAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html) is widely used to make financial charts in places like the Stock Market, where index plotting is done every day.
@@ -272,8 +337,7 @@ In [DateTimeAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Dat
 <chart:SfCartesianChart>
     ...
     <chart:SfCartesianChart.XAxes>
-        <chart:DateTimeAxis Interval="6"
-							IntervalType="Months"/>
+        <chart:DateTimeAxis Interval="6" IntervalType="Months"/>
     </chart:SfCartesianChart.XAxes>
     <chart:SfCartesianChart.YAxes>
         <chart:NumericalAxis/>
@@ -314,8 +378,7 @@ chart.YAxes.Add(secondaryAxis);
 <chart:SfCartesianChart>
     . . .
     <chart:SfCartesianChart.XAxes>
-        <chart:DateTimeAxis Minimum="2021/05/10"
-							Maximum="2021/11/01"/>
+        <chart:DateTimeAxis Minimum="2021/05/10" Maximum="2021/11/01"/>
     </chart:SfCartesianChart.XAxes>
 
 </chart:SfCartesianChart>
@@ -341,7 +404,7 @@ chart.XAxes.Add(primaryAxis);
 
 ## Logarithmic Axis
 
-The [LogarithmicAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html) uses a logarithmic scale, and it is very useful in visualising data when the given data range has a big difference. It can be used either on the x-axis or the chart's y-axis.
+The [LogarithmicAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html) uses a logarithmic scale, and it is very useful in visualizing data when the given data range has a big difference. It can be used either on the x-axis or the chart's y-axis.
 
 {% tabs %}
 
@@ -407,8 +470,7 @@ To customize the range of the log axis, you can use the [Minimum](https://help.s
 
 <chart:SfCartesianChart.YAxes>
 
-    <chart:LogarithmicAxis Minimum="100"
-						   Maximum="10000"/>
+    <chart:LogarithmicAxis Minimum="100" Maximum="10000"/>
 
 </chart:SfCartesianChart.YAxes>
 
@@ -531,17 +593,14 @@ By default, The 0th index value of XAxes and YAxes is used to plot all of the se
 	</chart:SfCartesianChart.XAxes>
 	<chart:SfCartesianChart.YAxes>
 		<chart:NumericalAxis ShowMajorGridLines="False" />
-		<chart:NumericalAxis Name="series_YAxis"
-							 CrossesAt="{Static x:Double.MaxValue}"
-							 ShowMajorGridLines="False" />
+		<chart:NumericalAxis Name="series_YAxis" CrossesAt="{Static x:Double.MaxValue}" ShowMajorGridLines="False" />
 	</chart:SfCartesianChart.YAxes>
         <chart:ColumnSeries ItemsSource="{Binding Data1}" 
-            XBindingPath="Date"
-            YBindingPath="Value"
-			YAxisName="series_YAxis"/>
+                            XBindingPath="Date"
+                            YBindingPath="Value" YAxisName="series_YAxis"/>
         <chart:SplineSeries ItemsSource="{Binding Data}" 
-                XBindingPath="Date"
-                YBindingPath="Value"/>
+                            XBindingPath="Date"
+                            YBindingPath="Value"/>
 </chart:SfCartesianChart>
 
 </ContentPage>
@@ -655,8 +714,7 @@ The [RenderNextToCrossingValue](https://help.syncfusion.com/cr/maui/Syncfusion.M
 <chart:SfCartesianChart>
     
     <chart:SfCartesianChart.XAxes>
-            <chart:NumericalAxis CrossesAt="0"
-								 RenderNextToCrossingValue="False" />
+            <chart:NumericalAxis CrossesAt="0" RenderNextToCrossingValue="False" />
     </chart:SfCartesianChart.XAxes>
 
     <chart:SfCartesianChart.YAxes>

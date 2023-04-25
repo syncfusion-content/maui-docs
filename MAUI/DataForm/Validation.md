@@ -61,6 +61,7 @@ The supported validation modes are as follows:
 
 {% tabs %}
 {% highlight XAML %}
+
 <ContentPage 
 ...
 xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
@@ -73,7 +74,9 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 {% endhighlight %}
 {% highlight C# %}
 
+SfDataForm dataForm = new SfDataForm();
 this.dataForm.ValidationMode = DataFormValidationMode.LostFocus;
+this.Content = dataForm;
 
 {% endhighlight %}
 {% endtabs %}
@@ -154,7 +157,7 @@ Get the validation details of all the editors of the data form using the [Valida
 N> This event will be raised once after the manual validation call using the [SfDataForm.Validate()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_Validate) method.
 
 {% tabs %}
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 this.dataForm.ValidateForm += this.OnDataFormValidateForm;
 
@@ -173,7 +176,7 @@ private void OnDataFormValidateForm(object sender, DataFormValidateFormEventArgs
 The [ValidateProperty](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ValidateProperty) event allows you to validate specific editors in the data form. Set [IsValid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormValidatePropertyEventArgs.html#Syncfusion_Maui_DataForm_DataFormValidatePropertyEventArgs_IsValid), [ErrorMessage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormValidatePropertyEventArgs.html#Syncfusion_Maui_DataForm_DataFormValidatePropertyEventArgs_ErrorMessage), and [ValidMessage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormValidatePropertyEventArgs.html#Syncfusion_Maui_DataForm_DataFormValidatePropertyEventArgs_ValidMessage) of the [DataFormValidatePropertyEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormValidatePropertyEventArgs.html).
 
 {% tabs %}
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 this.dataForm.ValidateProperty += this.OnDataFormValidateProperty;
 
@@ -199,14 +202,17 @@ The data form supports customizing the style of both error and valid message lab
 The error label style can be customized by changing the [ErrorLabelTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ErrorLabelTextStyle) property of the [SfDataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html).
 
 {% tabs %}
-{% highlight XAML %}
-
-<dataForm:SfDataForm
-    x:Name="dataForm">
-    <dataForm:SfDataForm.ErrorLabelTextStyle>
-        <dataForm:DataFormTextStyle FontSize="10" FontAttributes="Italic" TextColor="Violet" FontFamily="Roboto"/>
-    </dataForm:SfDataForm.ErrorLabelTextStyle>
-</dataForm:SfDataForm>
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 6 7" %}
+<ContentPage 
+...
+xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
+    <dataForm:SfDataForm
+        x:Name="dataForm">
+        <dataForm:SfDataForm.ErrorLabelTextStyle>
+            <dataForm:DataFormTextStyle FontSize="10" FontAttributes="Italic" TextColor="Violet" FontFamily="Roboto"/>
+        </dataForm:SfDataForm.ErrorLabelTextStyle>
+    </dataForm:SfDataForm>
+</ContentPage>
 
 {% endhighlight %}
 {% endtabs %}
@@ -214,9 +220,11 @@ The error label style can be customized by changing the [ErrorLabelTextStyle](ht
 Also, customize the error label style for each editor using the [ErrorLabelTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_ErrorLabelTextStyle) property of the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html).
 
 {% tabs %}
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+SfDataForm dataForm = new SfDataForm();
+dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.Content = dataForm;
 
 private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
 {
@@ -245,14 +253,18 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 The valid message label style can be customized by changing the [ValidMessageLabelTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ValidMessageLabelTextStyle) property of the [SfDataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html).
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 6 7" %}
 
-<dataForm:SfDataForm
-    x:Name="dataForm">
-    <dataForm:SfDataForm.ValidMessageLabelTextStyle>
-        <dataForm:DataFormTextStyle FontSize="10" FontAttributes="Italic" TextColor="Violet" FontFamily="Roboto"/>
-    </dataForm:SfDataForm.ValidMessageLabelTextStyle>
-</dataForm:SfDataForm>
+<ContentPage 
+...
+xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
+    <dataForm:SfDataForm
+        x:Name="dataForm">
+        <dataForm:SfDataForm.ValidMessageLabelTextStyle>
+            <dataForm:DataFormTextStyle FontSize="10" FontAttributes="Italic" TextColor="Violet" FontFamily="Roboto"/>
+        </dataForm:SfDataForm.ValidMessageLabelTextStyle>
+    </dataForm:SfDataForm>
+</ContentPage>
 
 {% endhighlight %}
 {% endtabs %}
@@ -260,9 +272,11 @@ The valid message label style can be customized by changing the [ValidMessageLab
 Also, customize the valid message label style for each editor using the [ValidMessageLabelTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_ValidMessageLabelTextStyle) property of the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html).
 
 {% tabs %}
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
+SfDataForm dataForm = new SfDataForm();
 this.dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
+this.Content = dataForm;
 
 private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
 {

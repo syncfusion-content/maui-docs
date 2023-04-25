@@ -17,13 +17,11 @@ You can customize the calendar month view cell by using the `MonthView` property
 
 *    **Today date** – You can customize the today date text style and background of the `Calendar` by using the [TodayTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_TodayTextStyle) and [TodayBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_TodayBackground) properties of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html).
 
-*    **Trailing and Leading dates** – You can hide the trailing and leading dates by using the [ShowTrailingAndLeadingDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_ShowTrailingAndLeadingDates) property in the [CalendarMonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html) class. You can also customize the trailing and leading dates text style and background of the `Calendar` by using the [TrailingLeadingDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_TrailingLeadingDatesTextStyle) and [TrailingLeadingDatesBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_TrailingLeadingDatesBackground) properties of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html).
+*    **Trailing and leading dates** – You can hide the trailing and leading dates using the [ShowTrailingAndLeadingDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_ShowTrailingAndLeadingDates) property in the [CalendarMonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html) class. You can also customize the trailing and leading dates text style and background of the `Calendar` using the [TrailingLeadingDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_TrailingLeadingDatesTextStyle) and [TrailingLeadingDatesBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_TrailingLeadingDatesBackground) properties of the [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html).
 
 *    **Disabled dates** – You can disable the date by using the MinimumDate, MaximumDate, EnablePastDates and SelectableDayPredicate. The date before [MinimumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_MinimumDate) is said to disabled date, the date after the [MaximumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_MaximumDate) is said to disabled date, if you want to disable the date before today date by using the [EnablePastDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_EnablePastDates) and if you want to disable any particular date by using [SelectableDayPredicate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectableDayPredicate) property. You can also customize the disabled dates text style and background of the `Calendar` by using the [DisabledDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_DisabledDatesTextStyle) and [DisabledDatesBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_DisabledDatesBackground) properties of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html).
 
-*    **Special Dates** – You can add special dates to the `Calendar` by using the [SpecialDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_SpecialDates) property and you can also customize the special dates text style and background of the `Calendar` by using the [SpecialDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_SpecialDatesTextStyle) and [SpecialDatesBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_SpecialDatesBackground) properties of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html).
-
-*    **Weekend Dates** – You can customize the weekend dates text style and background of the `Calendar` by using the [WeekendDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_WeekendDatesTextStyle) and [WeekendDatesBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_WeekendDatesBackground) properties of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html).
+*    **Weekend dates** – You can customize the weekend dates text style and background of the `Calendar` using the [WeekendDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_WeekendDatesTextStyle) and [WeekendDatesBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_WeekendDatesBackground) properties of the [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html).
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -92,6 +90,77 @@ You can customize the calendar month view cell by using the `MonthView` property
 {% endtabs %}
 
 ![Month view Customization in .NET MAUI Calendar.](images/customization/maui-month-view-customization.png)
+
+*    **Special day predicate** - The special day predicate decides whether the month cell date is a special date or not in the calendar. You can add a special date to the `Calendar` using the [SpecialDayPredicate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_SpecialDayPredicate) property, and you can also customize the special day text style and background of the `Calendar` using the [SpecialDatesTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_SpecialDatesTextStyle) and [SpecialDatesBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_SpecialDatesBackground) properties of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html). You can customize the special day with icons such as dots, hearts, diamonds, stars, and bells in the `MonthView` and also customize the icon color. If you do not wish to add any icon details, you can set them to be transparent.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+<calendar:SfCalendar  x:Name="Calendar"  View="Month">
+</calendar:SfCalendar>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+this.Calendar.MonthView.SpecialDayPredicate = (date) =>
+{
+    if (date.Date == DateTime.Now.AddDays(2).Date)
+    {
+        CalendarIconDetails iconDetails = new CalendarIconDetails();
+        iconDetails.Icon = CalendarIcon.Circle;
+        iconDetails.Fill = Colors.Red;
+        return iconDetails;
+    }
+    else if (date.Date == DateTime.Now.AddDays(3).Date)
+    {
+        CalendarIconDetails iconDetails = new CalendarIconDetails();
+        iconDetails.Icon = CalendarIcon.Triangle;
+        iconDetails.Fill = Colors.Blue;
+        return iconDetails;
+    }
+    else if (date.Date == DateTime.Now.AddDays(4).Date)
+    {
+        CalendarIconDetails iconDetails = new CalendarIconDetails();
+        iconDetails.Icon = CalendarIcon.Square;
+        iconDetails.Fill = Colors.Green;
+        return iconDetails;
+    }
+    else if (date.Date == DateTime.Now.AddDays(5).Date)
+    {
+        CalendarIconDetails iconDetails = new CalendarIconDetails();
+        iconDetails.Icon = CalendarIcon.Heart;
+        iconDetails.Fill = Colors.Red;
+        return iconDetails;
+    }
+    else if (date.Date == DateTime.Now.AddDays(6).Date)
+    {
+        CalendarIconDetails iconDetails = new CalendarIconDetails();
+        iconDetails.Icon = CalendarIcon.Diamond;
+        iconDetails.Fill = Colors.Blue;
+        return iconDetails;
+    }
+    else if (date.Date == DateTime.Now.AddDays(7).Date)
+    {
+        CalendarIconDetails iconDetails = new CalendarIconDetails();
+        iconDetails.Icon = CalendarIcon.Bell;
+        iconDetails.Fill = Colors.Black;
+        return iconDetails;
+    }
+    else if (date.Date == DateTime.Now.AddDays(8).Date)
+    {
+        CalendarIconDetails iconDetails = new CalendarIconDetails();
+        iconDetails.Icon = CalendarIcon.Star;
+        iconDetails.Fill = Colors.Green;
+        return iconDetails;
+    }
+
+    return null;
+};
+
+{% endhighlight %}
+{% endtabs %}
+
+![Special day icon in .NET MAUI Calendar.](images/views/maui-special_day_predicate.png)
 
 >**NOTE**
 * The Background color and text style will be applied based on the following order: selectableDayPredicate dates, special dates, disable dates, today date, weekend dates, trailingLeading dates, and normal dates.
@@ -223,3 +292,353 @@ You can customize the selection cell background and text style in Month, Year, D
 {% endtabs %}
 
 ![Month view Range Selection in .NET MAUI Calendar.](images/customization/maui-month-view-range-selection.png)
+
+## Month cell appearance using DataTemplate
+
+The month cell appearance can be customized using the [CellTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_CellTemplate) property of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html) in the `SfCalendar`.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+<Grid>
+    <Frame IsVisible="True" x:Name="frame" Background="White" HasShadow="False" CornerRadius="10"  HorizontalOptions="Center" VerticalOptions="Center" Margin="0" Padding="5">
+        <calendar:SfCalendar x:Name="Calendar"
+                                ShowTrailingAndLeadingDates="False"
+                                NavigationDirection="Horizontal"
+                                TodayHighlightBrush="#0A3A74"
+                                AllowViewNavigation="False">
+            <calendar:SfCalendar.MonthView>
+                <calendar:CalendarMonthView CellTemplate="{Binding Template}">
+                    <calendar:CalendarMonthView.HeaderView>
+                        <calendar:CalendarMonthHeaderView Background="#F1F7FF"/>
+                    </calendar:CalendarMonthView.HeaderView>
+                </calendar:CalendarMonthView>
+            </calendar:SfCalendar.MonthView>
+            <calendar:SfCalendar.BindingContext>
+                <local:MonthTemplate/>
+            </calendar:SfCalendar.BindingContext>
+        </calendar:SfCalendar>
+    </Frame>
+</Grid>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+public class MonthTemplate
+{
+    private DataTemplate circleTemplate;
+
+    private DataTemplate template;
+
+    public DataTemplate Template
+    {
+        get
+        {
+            return this.template;
+        }
+        set
+        {
+            this.template = value;
+        }
+    }
+
+    public MonthTemplate()
+    {
+        this.circleTemplate = new DataTemplate(() =>
+        {
+            Grid grid = new Grid();
+
+            Border border = new Border();
+            border.BackgroundColor = Color.FromRgba("#F5F5F5");
+            border.StrokeShape = new RoundRectangle()
+            {
+                CornerRadius = new CornerRadius(25)
+            };
+
+            border.SetBinding(Border.StrokeThicknessProperty, "Date", converter: new DateToStrokeConverter());
+            border.Stroke = Color.FromArgb("#0A3A74");
+
+            Label label = new Label();
+            label.SetBinding(Label.TextProperty, "Date.Day");
+            label.HorizontalOptions = LayoutOptions.Center;
+            label.VerticalOptions = LayoutOptions.Center;
+            label.Padding = new Thickness(2);
+            border.Content = label;
+
+            grid.Add(border);
+            grid.Padding = new Thickness(1);
+
+            return grid;
+        });
+
+        this.template = this.circleTemplate;
+    }
+}
+
+{% endhighlight %}
+{% highlight c# tabtitle="Value converter.cs" %}
+
+internal class DateToStrokeConverter : IValueConverter
+{
+    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+    {
+        var date = value as DateTime?;
+        if (date.HasValue && date.Value.Date == DateTime.Now.Date)
+        {
+            return 2;
+        }
+
+        return 0;
+    }
+
+    public object? ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    {
+        return null;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Month cell appearance using DataTemplateSelector
+
+You can customize the month cell appearance using the [CellTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_CellTemplate) property of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html) in the `SfCalendar`. The `DataTemplateSelector` for a calendar can be used to choose a different data template for each cell in the calendar based on the cell's data. It allows customizing the appearance of a particular cell based on certain conditions.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+<Grid>
+    <Grid.Resources>
+        <DataTemplate x:Key="normalDateTemplate">
+            <Grid Background = "Pink" >
+                <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" Text="{Binding Date.Day}"/>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="todayDateTemplate">
+            <Grid Background = "PaleGreen">
+                <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" Text="{Binding Date.Day}"/>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="leadingTraililngDateTemplate">
+            <Grid Background = "Purple">
+                <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" Text="{Binding Date.Day}"/>
+            </Grid>
+        </DataTemplate>
+        <local:MonthCellTemplateSelector x:Key="monthCellTemplateSelector" 
+                                         TodayDateTemplate="{StaticResource todayDateTemplate}" 
+                                         NormalDateTemplate="{StaticResource normalDateTemplate}" 
+                                         LeadingTrailingDateTemplate="{StaticResource leadingTraililngDateTemplate}"/>
+    </Grid.Resources>
+    <calendar:SfCalendar x:Name="Calendar" 
+                        View="Month" >
+        <calendar:SfCalendar.MonthView>
+            <calendar:CalendarMonthView CellTemplate="{StaticResource monthCellTemplateSelector}" />
+        </calendar:SfCalendar.MonthView>
+    </calendar:SfCalendar>
+    </Grid>
+
+{% endhighlight %}
+{% highlight c# tabtitle="TemplateSelector.cs" %}
+
+public class MonthCellTemplateSelector : DataTemplateSelector
+{
+    public MonthCellTemplateSelector()
+    {
+    }
+    public DataTemplate NormalDateTemplate { get; set; }
+    public DataTemplate TodayDateTemplate { get; set; }
+    public DataTemplate LeadingTrailingDateTemplate { get; set; }
+
+    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+    {
+        var monthCellDetails = item as CalendarCellDetails;
+        if (monthCellDetails.Date == DateTime.Today.Date)
+            return TodayDateTemplate;
+        else if (monthCellDetails.IsTrailingOrLeadingDate)
+            return LeadingTrailingDateTemplate;
+        else
+            return NormalDateTemplate;
+    }
+}
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+this.Calendar.View = CalendarView.Month;
+
+{% endhighlight %}
+{% endtabs %}
+
+## Year cell appearance using DataTemplate
+
+The year cell appearance can be customized using the [CellTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarYearView.html#Syncfusion_Maui_Calendar_CalendarYearView_CellTemplate) property of [YearView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarYearView.html) in the `SfCalendar`.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+<Grid>
+    <Frame IsVisible="True" x:Name="frame" Background="White" HasShadow="False" CornerRadius="10"  HorizontalOptions="Center" VerticalOptions="Center" Margin="0" Padding="5">
+        <calendar:SfCalendar x:Name="Calendar"
+                                View="Decade"
+                                ShowTrailingAndLeadingDates="False"
+                                NavigationDirection="Horizontal"
+                                TodayHighlightBrush="#0A3A74"
+                                AllowViewNavigation="False">
+            <calendar:SfCalendar.YearView>
+                <calendar:CalendarYearView CellTemplate="{Binding Template}">
+                </calendar:CalendarYearView>
+            </calendar:SfCalendar.YearView>
+            <calendar:SfCalendar.BindingContext>
+                <local:DecadeTemplate/>
+            </calendar:SfCalendar.BindingContext>
+        </calendar:SfCalendar>
+    </Frame>
+</Grid>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+public class DecadeTemplate
+{
+    private DataTemplate circleTemplate;
+
+    private DataTemplate template;
+
+    public DataTemplate Template
+    {
+        get
+        {
+            return this.template;
+        }
+        set
+        {
+            this.template = value;
+        }
+    }
+
+    public DecadeTemplate()
+    {
+        this.circleTemplate = new DataTemplate(() =>
+        {
+            Grid grid = new Grid();
+
+            Border border = new Border();
+            border.BackgroundColor = Color.FromRgba("#F5F5F5");
+            border.StrokeShape = new RoundRectangle()
+            {
+                CornerRadius = new CornerRadius(25)
+            };
+
+            border.SetBinding(Border.StrokeThicknessProperty, "Date", converter: new DateToStrokeConverter());
+            border.Stroke = Color.FromArgb("#0A3A74");
+
+            Label label = new Label();
+            label.SetBinding(Label.TextProperty, "Date.Year");
+            label.HorizontalOptions = LayoutOptions.Center;
+            label.VerticalOptions = LayoutOptions.Center;
+            label.Padding = new Thickness(2);
+            border.Content = label;
+
+            grid.Add(border);
+            grid.Padding = new Thickness(1);
+
+            return grid;
+        });
+
+        this.template = this.circleTemplate;
+    }
+}
+
+{% endhighlight %}
+{% highlight c# tabtitle="Value converter.cs" %}
+
+internal class DateToStrokeConverter : IValueConverter
+{
+    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+    {
+        var date = value as DateTime?;
+        if (date.HasValue && date.Value.Year == DateTime.Now.Year)
+        {
+            return 2;
+        }
+
+        return 0;
+    }
+
+    public object? ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    {
+        return null;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Year cell appearance using DataTemplateSelector
+
+You can customize the year cell appearance by using the [CellTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarYearView.html#Syncfusion_Maui_Calendar_CalendarYearView_CellTemplate) property of [YearView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarYearView.html) in the `SfCalendar`. The `DataTemplateSelector` for a calendar can be used to choose a different data template for each cell in the calendar based on the cell's data. It allows customizing the appearance of a particular cell based on certain conditions.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+<Grid>
+    <Grid.Resources>
+        <DataTemplate x:Key="normalDateTemplate">
+            <Grid Background = "Pink" >
+                <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" Text="{Binding Date.Year}"/>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="todayDateTemplate">
+            <Grid Background = "PaleGreen">
+                <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" Text="{Binding Date.Year}"/>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="leadingDateTemplate">
+            <Grid Background = "Purple">
+                <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" Text="{Binding Date.Year}"/>
+            </Grid>
+        </DataTemplate>
+        <local:MonthCellTemplateSelector x:Key="monthCellTemplateSelector" 
+                                         TodayDateTemplate="{StaticResource todayDateTemplate}" 
+                                         NormalDateTemplate="{StaticResource normalDateTemplate}" 
+                                         LeadingDateTemplate="{StaticResource leadingDateTemplate}"/>
+    </Grid.Resources>
+    <calendar:SfCalendar x:Name="Calendar" 
+                        View="Decade" >
+        <calendar:SfCalendar.YearView>
+            <calendar:CalendarYearView CellTemplate="{StaticResource yearCellTemplateSelector}" />
+        </calendar:SfCalendar.YearView>
+    </calendar:SfCalendar>
+    </Grid>
+
+{% endhighlight %}
+{% highlight c# tabtitle="TemplateSelector.cs" %}
+
+public class YearCellTemplateSelector : DataTemplateSelector
+{
+    public YearCellTemplateSelector()
+    {
+    }
+    public DataTemplate NormalDateTemplate { get; set; }
+    public DataTemplate TodayDateTemplate { get; set; }
+    public DataTemplate LeadingDateTemplate { get; set; }
+
+    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+    {
+        var yearCellDetails = item as CalendarCellDetails;
+        if (yearCellDetails.Year == DateTime.Today.Year)
+            return TodayDateTemplate;
+        else if (yearCellDetails.IsTrailingOrLeadingDate)
+            return LeadingDateTemplate;
+        else
+            return NormalDateTemplate;
+    }
+}
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+this.Calendar.View = CalendarView.Decade;
+
+{% endhighlight %}
+{% endtabs %}

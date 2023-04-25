@@ -12,7 +12,7 @@ documentation: ug
 The `SfDataForm` supports changing the flow direction of the text to the right-to-left direction by setting the `FlowDirection` to `RightToLeft`.
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage 
 ...
 xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
@@ -23,9 +23,11 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 </ContentPage>
 
 {% endhighlight %}
-{% highlight C# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.dataForm.FlowDirection = FlowDirection.RightToLeft;
+SfDataForm dataForm = new SfDataForm();
+dataForm.FlowDirection = FlowDirection.RightToLeft;
+this.Content = dataForm;
 
 {% endhighlight %}
 {% endtabs %}

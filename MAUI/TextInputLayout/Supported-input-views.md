@@ -155,3 +155,33 @@ inputLayout.Content = combobox;
 {% endtabs %}
 
 ![Combobox](images/SupportedInputViews/ComboBox.jpg)
+
+## Masked Entry
+
+To initialize the [MaskedEntry](https://help.syncfusion.com/maui/masked-entry/overview) control and launch it in each platform, refer to the [getting started with masked entry](https://help.syncfusion.com/maui/masked-entry/getting-started) documentation.
+
+{% tabs %}
+{% highlight XAML %}
+
+<inputLayout:SfTextInputLayout Hint="Card number" 
+                               HelperText="Required *"
+                               ContainerType="Outlined"
+                               ContainerBackground="Transparent" >
+   <maskedEntry:SfMaskedEntry MaskType="Simple"
+                              Mask="0000 0000 0000 0000" />
+</inputLayout:SfTextInputLayout> 
+
+{% endhighlight %}
+{% highlight C# %}
+
+var inputLayout = new SfTextInputLayout();
+inputLayout.Hint = "Card number"; 
+inputLayout.HelperText = "Required *";
+inputLayout.ContainerType = ContainerType.OutLined;
+inputLayout.ContainerBackground = Colors.Transparent;
+inputLayout.Content = new SfMaskedEntry() { MaskType = MaskedEntryMaskType.Simple, Mask = "0000 0000 0000 0000" }; 
+
+{% endhighlight %}
+{% endtabs %}
+
+![MaskedEntry](images/SupportedInputViews/MaskedEntry.png)

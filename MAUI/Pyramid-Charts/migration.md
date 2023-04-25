@@ -213,10 +213,6 @@ this.Content = chart;
 <th>.NET MAUI</th>
 </tr>
 <tr>
-<td>ToggleSeriesVisibility</td>
-<td>ToggleSeriesVisibility</td>
-</tr>
-<tr>
 <td>DockPosition</td>
 <td>Placement</td>
 </tr>
@@ -226,6 +222,10 @@ this.Content = chart;
 </tr>
 <tr>
 <td>Title</td>
+<td><em>Upcoming</em></td>
+</tr>
+<tr>
+<td>ToggleSeriesVisibility</td>
 <td><em>Upcoming</em></td>
 </tr>
 <tr>
@@ -623,7 +623,6 @@ chart.SelectionBehavior = selection;
 
 **Chart** 
 
-* Exporting support for a chart as an image or a stream.
 * Support for chart localization.
 * Listen to property change support for chart.
 * Notify event or method when chart is rendering.
@@ -639,6 +638,7 @@ chart.SelectionBehavior = selection;
 * Maximum width support for Legend.
 * Individual legend items based on the data point count.
 * Event or method to notify the legend click and the creation of a legend item.
+* The ability to show/hide corresponding data points by legend item toggle.
 
 **Data label**
 

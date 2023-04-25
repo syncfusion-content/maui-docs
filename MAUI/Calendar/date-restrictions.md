@@ -85,7 +85,7 @@ The [SelectableDayPredicate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 
 this.Calendar.SelectableDayPredicate = (date) =>
 {
-  if (date.Date == DateTime.Now.AddDays(-2) || date.Date == DateTime.Now.AddDays(-7) || date.Date == DateTime.Now.AddDays(-12) || date.Date == DateTime.Now.AddDays(1) || date.Date == DateTime.Now.AddDays(15))
+  if (date.Date == DateTime.Now.AddDays(-2).Date || date.Date == DateTime.Now.AddDays(-7).Date || date.Date == DateTime.Now.AddDays(-12).Date || date.Date == DateTime.Now.AddDays(1).Date || date.Date == DateTime.Now.AddDays(15).Date)
   {
     return false;
   }
