@@ -29,8 +29,6 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 {% endhighlight %}
 {% highlight C# %}
 
-{% highlight C# %}
-
 SfDataForm dataForm = new SfDataForm();
 dataForm.LayoutType = DataFormLayoutType.TextInputLayout;
 this.Content = dataForm;
