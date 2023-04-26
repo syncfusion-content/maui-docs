@@ -56,28 +56,21 @@ You can customize the calendar month view cell by using the `MonthView` property
 
             return true;
         };
-        
-        this.Calendar.Background = Colors.PaleGreen.WithAlpha(0.3f);
+
+        this.calendar.Background = Colors.PaleGreen.WithAlpha(0.3f);
         this.Calendar.ShowTrailingAndLeadingDates = true;
-        this.Calendar.MonthView = new CalendarMonthView()
+        this.calendar.MonthView = new CalendarMonthView()
         {
+            SpecialDates = new List<DateTime>
+            {
+                DateTime.Now.AddDays(2),
+                DateTime.Now.AddDays(-2),
+            },
+
             WeekendDays = new List<DayOfWeek>
             {
                 DayOfWeek.Sunday,
                 DayOfWeek.Saturday,
-            },
-
-            SpecialDayPredicate = (date) =>
-            {
-                if (date.Date == DateTime.Now.AddDays(2).Date || date.Date == DateTime.Now.AddDays(-2).Date)
-                {
-                    CalendarIconDetails iconDetails = new CalendarIconDetails();
-                    iconDetails.Icon = CalendarIcon.Dot;
-                    iconDetails.Fill = Colors.Red;
-                    return iconDetails;
-                }
-
-                return null;
             },
 
             TextStyle = textStyle,
