@@ -61,12 +61,6 @@ You can customize the calendar month view cell by using the `MonthView` property
         this.Calendar.ShowTrailingAndLeadingDates = true;
         this.calendar.MonthView = new CalendarMonthView()
         {
-            SpecialDates = new List<DateTime>
-            {
-                DateTime.Now.AddDays(2),
-                DateTime.Now.AddDays(-2),
-            },
-
             WeekendDays = new List<DayOfWeek>
             {
                 DayOfWeek.Sunday,
