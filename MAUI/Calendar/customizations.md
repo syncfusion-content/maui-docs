@@ -47,6 +47,16 @@ You can customize the calendar month view cell by using the `MonthView` property
         this.Calendar.MinimumDate = DateTime.Now.AddDays(-15);
         this.Calendar.MaximumDate = DateTime.Now.AddDays(20);
         this.Calendar.EnablePastDates = true;
+        this.Calendar.SelectableDayPredicate = (date) =>
+        {
+            if (date.Date == DateTime.Now.AddDays(3).Date || date.Date == DateTime.Now.AddDays(6).Date || date.Date == DateTime.Now.AddDays(-3).Date || date.Date == DateTime.Now.AddDays(-6).Date)
+            {
+                return false;
+            }
+
+            return true;
+        };
+        
         this.Calendar.Background = Colors.PaleGreen.WithAlpha(0.3f);
         this.Calendar.ShowTrailingAndLeadingDates = true;
         this.Calendar.MonthView = new CalendarMonthView()
