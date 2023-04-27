@@ -13,7 +13,7 @@ The `SfPopup` applies style to all of its elements by using the [PopupStyle](htt
 
 ## Styling popup header
 
-The SfPopup allows customizing the header appearance using the following properties.
+The `SfPopup` allows customizing the header appearance using the following properties.
 
 <table>
 <tr>
@@ -21,27 +21,27 @@ The SfPopup allows customizing the header appearance using the following propert
 <th> Description </th>
 </tr>
 <tr>
-<td> [HeaderBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_HeaderBackground) </td>
+<td> {{'[HeaderBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_HeaderBackground)'| markdownify }} </td>
 <td> Gets or sets the background color for the header.</td>
 </tr>
 <tr>
-<td> [HeaderFontAttribute](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_HeaderFontAttribute) </td>
+<td> {{'[HeaderFontAttribute](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_HeaderFontAttribute)'| markdownify }} </td>
 <td> Gets or sets the font attribute for the header title.</td>
 </tr>
 <tr>
-<td> [HeaderFontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_HeaderFontFamily) </td>
+<td> {{'[HeaderFontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_HeaderFontFamily)'| markdownify }} </td>
 <td> Gets or sets the font style for the header title.</td>
 </tr>
 <tr>
-<td> [HeaderFontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_HeaderFontSize) </td>
+<td> {{'[HeaderFontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_HeaderFontSize)'| markdownify }} </td>
 <td> Gets or sets the font size for the header title.</td>
 </tr>
 <tr>
-<td> [HeaderTextAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_HeaderTextAlignment) </td>
+<td> {{'[HeaderTextAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_HeaderTextAlignment)'| markdownify }} </td>
 <td> Gets or sets the text alignment for the header.</td>
 </tr>
 <tr>
-<td> [HeaderTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_HeaderTextColor) </td>
+<td> {{'[HeaderTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_HeaderTextColor)'| markdownify }} </td>
 <td> Gets or sets the text color to be applied for the header title.</td>
 </tr>
 </table>
@@ -61,7 +61,7 @@ Refer to the following code example for customizing the header elements.
     </sfPopup:SfPopup.PopupStyle>
 </sfPopup:SfPopup>
 {% endhighlight %}
-{% highlight C# hl_lines="8 9 10 11 12 13" %}
+{% highlight c# hl_lines="8 9 10 11 12 13" %}
 public partial class MainPage : ContentPage
 {
     SfPopup popup;
@@ -92,23 +92,23 @@ The SfPopup allows customizing the footer appearance using the following propert
 <th> Description </th>
 </tr>
 <tr>
-<td> [FooterBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_FooterBackground) </td>
+<td> {{'[FooterBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_FooterBackground)'| markdownify }} </td>
 <td> Gets or sets the background color for the footer.</td>
 </tr>
 <tr>
-<td> [AcceptButtonBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_AcceptButtonBackground) </td>
+<td> {{'[AcceptButtonBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_AcceptButtonBackground)'| markdownify }} </td>
 <td> Gets or sets the background color for the Accept button in the footer.</td>
 </tr>
 <tr>
-<td> [AcceptButtonTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_AcceptButtonTextColor) </td>
+<td> {{'[AcceptButtonTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_AcceptButtonTextColor)'| markdownify }} </td>
 <td> Gets or sets the foreground color for the Accept button in the footer.</td>
 </tr>
 <tr>
-<td> [DeclineButtonBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_DeclineButtonBackground) </td>
+<td> {{'[DeclineButtonBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_DeclineButtonBackground)'| markdownify }} </td>
 <td> Gets or sets the background color for the Decline button in the footer.</td>
 </tr>
 <tr>
-<td> [DeclineButtonTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_DeclineButtonTextColor) </td>
+<td> {{'[DeclineButtonTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_DeclineButtonTextColor)'| markdownify }} </td>
 <td> Gets or sets the foreground color for the Decline button in the footer.</td>
 </tr>
 </table>
@@ -127,7 +127,7 @@ Refer to the following code example for customizing the footer elements.
     </sfPopup:SfPopup.PopupStyle>
 </sfPopup:SfPopup>
 {% endhighlight %}
-{% highlight C# hl_lines="14 15 16 17 18" %}
+{% highlight c# hl_lines="14 15 16 17 18" %}
 public partial class MainPage : ContentPage
 {
     SfPopup popup;
@@ -163,27 +163,27 @@ The SfPopup allows customizing the message appearance using the following proper
 <th> Description </th>
 </tr>
 <tr>
-<td> [MessageBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_MessageBackground) </td>
+<td> {{'[MessageBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_MessageBackground)'| markdownify }} </td>
 <td> Gets or sets the background color of content.</td>
 </tr>
 <tr>
-<td> [MessageFontAttribute](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_MessageFontAttribute) </td>
+<td> {{'[MessageFontAttribute](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_MessageFontAttribute)'| markdownify }} </td>
 <td> Gets or sets the font attribute to be applied for the content.</td>
 </tr>
 <tr>
-<td> [MessageFontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_MessageFontFamily) </td>
+<td> {{'[MessageFontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_MessageFontFamily)'| markdownify }} </td>
 <td> Gets or sets the font style to be applied for the content.</td>
 </tr>
 <tr>
-<td> [MessageFontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_MessageFontSize) </td>
+<td> {{'[MessageFontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_MessageFontSize)'| markdownify }} </td>
 <td> Gets or sets the font size of the content.</td>
 </tr>
 <tr>
-<td> [MessageTextAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_MessageTextAlignment) </td>
+<td> {{'[MessageTextAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_MessageTextAlignment)'| markdownify }} </td>
 <td> Gets or sets the text alignment of the content.</td>
 </tr>
 <tr>
-<td> [MessageTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_MessageTextColor) </td>
+<td> {{'[MessageTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_MessageTextColor)'| markdownify }} </td>
 <td> Gets or sets the foreground color of content.</td>
 </tr>
 </table>
@@ -203,7 +203,7 @@ Refer to the following code example for customizing the message elements.
     </sfPopup:SfPopup.PopupStyle>
 </sfPopup:SfPopup>
 {% endhighlight %}
-{% highlight C# hl_lines="8 9 10 11 12 13" %}
+{% highlight c# hl_lines="8 9 10 11 12 13" %}
 public partial class MainPage : ContentPage
 {
     SfPopup popup;
@@ -234,15 +234,15 @@ The SfPopup allows customizing the stroke appearance using the following propert
 <th> Description </th>
 </tr>
 <tr>
-<td> [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_Stroke) </td>
+<td> {{'[Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_Stroke)'| markdownify }} </td>
 <td> Gets or sets the stroke color for the PopupView.</td>
 </tr>
 <tr>
-<td> [StrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_StrokeThickness) </td>
+<td> {{'[StrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_StrokeThickness)'| markdownify }} </td>
 <td> Gets or sets the stroke thickness for the PopupView.</td>
 </tr>
 <tr>
-<td> [CornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_CornerRadius) </td>
+<td> {{'[CornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_CornerRadius)'| markdownify }} </td>
 <td> Gets or sets the corner radius for the PopupView.</td>
 </tr>
 </table>
@@ -261,7 +261,7 @@ Refer to the following code example for customizing the stroke elements.
     </sfPopup:SfPopup.PopupStyle>
 <sfPopup:SfPopup>
 {% endhighlight %}
-{% highlight C# hl_lines="8 9 10" %}
+{% highlight c# hl_lines="8 9 10" %}
 public partial class MainPage : ContentPage
 {
     SfPopup popup;
@@ -291,7 +291,7 @@ The SfPopup allows to customize the background color of overlay using the [Overl
             </sfPopup:Sfpopup.PopupStyle>
         </sfPopup:SfPopup>
 {% endhighlight %}
-{% highlight C#  hl_lines="8" %}
+{% highlight c#  hl_lines="8" %}
 public partial class MainPage : ContentPage
 {
     SfPopup popup;
@@ -319,7 +319,7 @@ The SfPopup allows you adjust the opacity of the overlay color by setting the co
             </sfPopup:Sfpopup.PopupStyle>
         </sfPopup:SfPopup>
 {% endhighlight %}
-{% highlight C# hl_lines="8" %}
+{% highlight c# hl_lines="8" %}
 public partial class MainPage : ContentPage
 {
     SfPopup popup;
@@ -360,7 +360,7 @@ The SfPopup allows blurring of the background using the [OverlayMode](https://he
    </StackLayout>
 </ContentPage>
 {% endhighlight %}
-{% highlight C# hl_lines="12 13" %}
+{% highlight c# hl_lines="12 13" %}
 using Syncfusion.Maui.Popup;
 namespace GettingStarted
 {
@@ -422,7 +422,7 @@ The SfPopup allows customization of the blur effect by setting the `BlurIntensit
    </StackLayout>
 </ContentPage>
 {% endhighlight %}
-{% highlight C# hl_lines="12 13" %}
+{% highlight c# hl_lines="12 13" %}
 using Syncfusion.Maui.Popup;
 namespace GettingStarted
 {
@@ -483,7 +483,7 @@ You can change the close button icon of the [SfPopup](https://help.syncfusion.co
     </StackLayout>
 </ContentPage>
 {% endhighlight %}
-{% highlight C# hl_lines="8" %}
+{% highlight c# hl_lines="8" %}
 public partial class MainPage : ContentPage
 {
     SfPopup popup;
@@ -525,7 +525,7 @@ The `SfPopup` allows you to add a shadow effect to the popup view. Refer to the 
     </StackLayout>
 </ContentPage>
 {% endhighlight %}
-{% highlight C# hl_lines="8" %}
+{% highlight c# hl_lines="8" %}
 public partial class MainPage : ContentPage
 {
     SfPopup popup;
