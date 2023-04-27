@@ -735,3 +735,5 @@ The `CustomView` property of the [SfShimmer](https://help.syncfusion.com/cr/maui
 {% endhighlight %}
 
 {% endtabs %}
+
+![Shimmer Custom view in .NET MAUI.](images/customview/maui-shimmer-view.gif)

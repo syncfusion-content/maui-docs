@@ -57,22 +57,16 @@ You can customize the calendar month view cell by using the `MonthView` property
             return true;
         };
 
-        this.Calendar.MonthView.SpecialDates = new List<DateTime>
-        {
-            DateTime.Now.AddDays(2),
-            DateTime.Now.AddDays(-2),
-        };
-
-        this.Calendar.MonthView.WeekendDays = new List<DayOfWeek>
-        {
-            DayOfWeek.Sunday,
-            DayOfWeek.Saturday,
-        };
-
         this.calendar.Background = Colors.PaleGreen.WithAlpha(0.3f);
         this.Calendar.ShowTrailingAndLeadingDates = true;
         this.calendar.MonthView = new CalendarMonthView()
         {
+            WeekendDays = new List<DayOfWeek>
+            {
+                DayOfWeek.Sunday,
+                DayOfWeek.Saturday,
+            },
+
             TextStyle = textStyle,
             TodayBackground = Colors.Pink,
             TodayTextStyle = textStyle,
@@ -160,7 +154,7 @@ this.Calendar.MonthView.SpecialDayPredicate = (date) =>
 {% endhighlight %}
 {% endtabs %}
 
-![Special day icon in .NET MAUI Calendar.](images/views/maui-special_day_predicate.png)
+![Special day icon in .NET MAUI Calendar.](images/customization/maui-special_day_predicate.png)
 
 >**NOTE**
 * The Background color and text style will be applied based on the following order: selectableDayPredicate dates, special dates, disable dates, today date, weekend dates, trailingLeading dates, and normal dates.
@@ -400,6 +394,8 @@ internal class DateToStrokeConverter : IValueConverter
 {% endhighlight %}
 {% endtabs %}
 
+![Month view data template in .NET MAUI Calendar.](images/customization/maui-monthview-cell-template.png)
+
 ## Month cell appearance using DataTemplateSelector
 
 You can customize the month cell appearance using the [CellTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_CellTemplate) property of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html) in the `SfCalendar`. The `DataTemplateSelector` for a calendar can be used to choose a different data template for each cell in the calendar based on the cell's data. It allows customizing the appearance of a particular cell based on certain conditions.
@@ -468,6 +464,8 @@ this.Calendar.View = CalendarView.Month;
 
 {% endhighlight %}
 {% endtabs %}
+
+![Month view template selector in .NET MAUI Calendar.](images/customization/maui-monthview-cell-template-selector.png)
 
 ## Year cell appearance using DataTemplate
 
@@ -574,6 +572,8 @@ internal class DateToStrokeConverter : IValueConverter
 {% endhighlight %}
 {% endtabs %}
 
+![Decade view cell template in .NET MAUI Calendar.](images/customization/maui-decade-view-cell-template.png)
+
 ## Year cell appearance using DataTemplateSelector
 
 You can customize the year cell appearance by using the [CellTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarYearView.html#Syncfusion_Maui_Calendar_CalendarYearView_CellTemplate) property of [YearView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarYearView.html) in the `SfCalendar`. The `DataTemplateSelector` for a calendar can be used to choose a different data template for each cell in the calendar based on the cell's data. It allows customizing the appearance of a particular cell based on certain conditions.
@@ -642,3 +642,5 @@ this.Calendar.View = CalendarView.Decade;
 
 {% endhighlight %}
 {% endtabs %}
+
+![Decade view template selector in .NET MAUI Calendar.](images/customization/maui-decade-view-cell-template-selector.png)
