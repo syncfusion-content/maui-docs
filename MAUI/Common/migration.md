@@ -318,7 +318,7 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 			<a href="https://help.syncfusion.com/xamarin/switch/gettingstarted">SfSwitch</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Volume 2 2023<br/>
+			Volume 3 2023<br/>
 		</td>
 	</tr>
 	<tr>
