@@ -155,7 +155,7 @@ public partial class MainPage : ContentPage
 
 ## Styling popup message
 
-The SfPopup allows customizing the message appearance using the following properties.
+The `SfPopup` allows customizing the message appearance using the following properties.
 
 <table>
 <tr>
@@ -226,7 +226,7 @@ public partial class MainPage : ContentPage
 
 ## Stroke customization
 
-The SfPopup allows customizing the stroke appearance using the following properties.
+The `SfPopup` allows customizing the stroke appearance using the following properties.
 
 <table>
 <tr>
@@ -247,7 +247,7 @@ The SfPopup allows customizing the stroke appearance using the following propert
 </tr>
 </table>
 
-N>On Android 33 and above, it is possible to set different corner radii for each corner using the [CornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_CornerRadius) class. However, on versions below Android 33, a corner radius will be applied if the same value is provided for all corners. The corner radius may not be applied if different values are provided for each corner.
+N> On Android 33 and above, it is possible to set different corner radii for each corner using the [CornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_CornerRadius) class. However, on versions below Android 33, a corner radius will be applied if the same value is provided for all corners. The corner radius may not be applied if different values are provided for each corner.
 
 Refer to the following code example for customizing the stroke elements.
 
@@ -309,7 +309,7 @@ public partial class MainPage : ContentPage
 
 ### Set overlay opacity
 
-The SfPopup allows you adjust the opacity of the overlay color by setting the color value as rgba in hexadecimal value.
+The `SfPopup` allows you adjust the opacity of the overlay color by setting the color value as rgba in hexadecimal value.
 
 {% tabs %}
 {% highlight xaml hl_lines="3" %}
@@ -335,7 +335,7 @@ public partial class MainPage : ContentPage
 
 ### Blurred background
 
-The SfPopup allows blurring of the background using the [OverlayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_OverlayMode) and [BlurIntensity](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_BlurIntensity) properties respectively.
+The `SfPopup` allows blurring of the background using the [OverlayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_OverlayMode) and [BlurIntensity](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_BlurIntensity) properties respectively.
 
 {% tabs %}
 {% highlight xaml hl_lines="13 16" %}
@@ -396,7 +396,7 @@ namespace GettingStarted
 
 ### Set custom blur intensity
 
-The SfPopup allows customization of the blur effect by setting the `BlurIntensity` property to [Custom](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupBlurIntensity.html#Syncfusion_Maui_Popup_PopupBlurIntensity_Custom) and the [BlurRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_BlurRadius), which adjusts the blur effect according to the specified value.
+The `SfPopup` allows customization of the blur effect by setting the `BlurIntensity` property to [Custom](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupBlurIntensity.html#Syncfusion_Maui_Popup_PopupBlurIntensity_Custom) and the [BlurRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_BlurRadius), which adjusts the blur effect according to the specified value.
 
 {% tabs %}
 {% highlight xaml hl_lines="13 16" %}
