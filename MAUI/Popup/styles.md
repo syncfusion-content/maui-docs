@@ -291,7 +291,7 @@ The SfPopup allows to customize the background color of overlay using the [Overl
             </sfPopup:Sfpopup.PopupStyle>
         </sfPopup:SfPopup>
 {% endhighlight %}
-{% highlight c#  hl_lines="8" %}
+{% highlight c# hl_lines="8" %}
 public partial class MainPage : ContentPage
 {
     SfPopup popup;
