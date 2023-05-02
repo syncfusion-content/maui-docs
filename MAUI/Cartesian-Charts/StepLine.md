@@ -31,10 +31,12 @@ N> The cartesian chart has [Series]() as its default content.
         <chart:NumericalAxis />
     </chart:SfCartesianChart.YAxes>   
 
-    <chart:StepLineSeries ItemsSource="{Binding Data}"
-						XBindingPath="Date"
-						YBindingPath="Value"
-                        />
+    <chart:StepLineSeries XBindingPath="Date"
+					  ItemsSource="{Binding Data}"
+					  YBindingPath="Value"/>
+    <chart:StepLineSeries XBindingPath="Date"
+					  ItemsSource="{Binding Data1}"
+					  YBindingPath="Value"/>
 
 </chart:SfCartesianChart>
 
@@ -55,14 +57,24 @@ N> The cartesian chart has [Series]() as its default content.
         YBindingPath = "Value",
     };
 
+    StepLineSeries series1 = new StepLineSeries()
+    {
+        ItemsSource = new ViewModel().Data1,
+        XBindingPath = "Date",
+        YBindingPath = "Value",
+    };
+
     chart.Series.Add(series);
+    chart.Series.Add(series1);
     this.Content = chart;
 
 {% endhighlight C# %}
 
 {% endtabs %}
 
-### Dashed StepLine Chart
+![StepLine Chart in MAUI](Chart-types_images/SteplineChart.png)
+
+## Dashed StepLine Chart
 
 The [StrokeDashArray]() property of [StepLineSeries]() is used to render the StepLine series with dashes. Odd value considered as rendering size and Even value considered as gap.
 
@@ -118,14 +130,14 @@ The [StrokeDashArray]() property of [StepLineSeries]() is used to render the Ste
         StrokeDashArray = doubleCollection;
     }
 
-    chart.Series.Add(series);
+    chart.Series.Add(steplineSeries);
     this.Content = chart;
 
 {% endhighlight C# %}
 
 {% endtabs %}
 
-### Vertical StepLine Chart 
+## Vertical StepLine Chart 
 
 The [isTransposed]() property of [SfCartesianChart]() is used to render the StepLine series in vertically.To enable the StepLine series in vertically , set the [isTransposed]() property to true.  
 
@@ -143,10 +155,12 @@ The [isTransposed]() property of [SfCartesianChart]() is used to render the Step
         <chart:NumericalAxis />
     </chart:SfCartesianChart.YAxes>   
 
-    <chart:StepLineSeries ItemsSource="{Binding Data}"
-						XBindingPath="Date"
-						YBindingPath="Value"
-                        />
+    <chart:StepLineSeries XBindingPath="Date"
+					  ItemsSource="{Binding Data}"
+					  YBindingPath="Value"/>
+    <chart:StepLineSeries XBindingPath="Date"
+					  ItemsSource="{Binding Data1}"
+					  YBindingPath="Value"/>
 
     <Chart:SfCartesianChart>
 
@@ -168,11 +182,21 @@ The [isTransposed]() property of [SfCartesianChart]() is used to render the Step
         itemSource = new ViewModel().Data;
         XBindingPath = "Date";
         YBindingPath = "Value";
-    }
+    };
 
-    chart.Series.Add(series);
+    StepLineSeries steplineSeries1 = new StepLineSeries()
+    {
+        itemSource = new ViewModel().Data;
+        XBindingPath = "Date";
+        YBindingPath = "Value";
+    };
+
+    chart.Series.Add(steplineSeries);
+    chart.Series.Add(steplineSeries1);
     this.Content = chart;
 
 {% endhighlight C# %}
 
 {% endtabs %}
+
+![StepLine Chart in MAUI](Chart-types_images/VerticalStepline.png)
