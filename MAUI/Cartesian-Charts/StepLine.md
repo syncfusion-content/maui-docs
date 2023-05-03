@@ -31,12 +31,15 @@ N> The cartesian chart has [Series]() as its default content.
         <chart:NumericalAxis />
     </chart:SfCartesianChart.YAxes>   
 
-    <chart:StepLineSeries XBindingPath="Date"
-					  ItemsSource="{Binding Data}"
-					  YBindingPath="Value"/>
-    <chart:StepLineSeries XBindingPath="Date"
-					  ItemsSource="{Binding Data1}"
-					  YBindingPath="Value"/>
+    <chart:StepLineSeries ItemSource="{Binding Data}"
+                          XBindingPath="Date"
+                          YBindingPath="Value"
+                          />
+
+    <chart:StepLineSeries ItemSource="{Binding Data1}"
+                          XBindingPath="Date"
+                          YBindingPath="Value"
+                          />
 
 </chart:SfCartesianChart>
 
@@ -100,9 +103,10 @@ The [StrokeDashArray]() property of [StepLineSeries]() is used to render the Ste
     </chart:SfCartesianChart.YAxes>   
 
     <chart:StepLineSeries ItemsSource="{Binding Data}"
-						XBindingPath="Date"
-						YBindingPath="Value"
-                        StrokeDashArray="DashArray"
+                          StrokeDashArray="DashArray"
+                          XBindingPath="Date"
+                          YBindingPath="Value"
+                        
                         />
 
     <Chart:SfCartesianChart>
@@ -155,12 +159,14 @@ The [isTransposed]() property of [SfCartesianChart]() is used to render the Step
         <chart:NumericalAxis />
     </chart:SfCartesianChart.YAxes>   
 
-    <chart:StepLineSeries XBindingPath="Date"
-					  ItemsSource="{Binding Data}"
-					  YBindingPath="Value"/>
-    <chart:StepLineSeries XBindingPath="Date"
-					  ItemsSource="{Binding Data1}"
-					  YBindingPath="Value"/>
+    <chart:StepLineSeries ItemSource=""{Binding Data}
+                          XBindingPath="Date"
+                          YBindingPath="Value"
+                          />
+    <chart:StepLineSeries ItemSource="{Binding Data1}"
+                          XBindingPath="Date"
+                          YBindingPath="Value"
+                          />
 
     <Chart:SfCartesianChart>
 
