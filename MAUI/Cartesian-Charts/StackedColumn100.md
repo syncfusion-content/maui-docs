@@ -31,17 +31,20 @@ N> The cartesian chart has [Series]() as its default content.
         <chart:NumericalAxis />
     </chart:SfCartesianChart.YAxes>   
 
-    <chart:StackingColumn100Series ItemsSource="{Binding Data}"
-						           XBindingPath="Name"
-						           YBindingPath="Value"/>
+    <chart:StackingColumn100Series ItemSource="{Binding Data}"
+                                   XBindingPath="Name"
+                                   YBindingPath="Value"
+                                   />
 
-    <chart:StackingColumn100Series ItemsSource="{Binding Data1}"
-						           XBindingPath="Name"
-						           YBindingPath="Value"/>
+    <chart:StackingColumn100Series ItemSource="{Binding Data1}"
+                                   XBindingPath="Name"
+                                   YBindingPath="Value"
+                                   />
 
-    <chart:StackingColumn100Series ItemsSource="{Binding Data2}"
-						           XBindingPath="Name"
-						           YBindingPath="Value"/>
+    <chart:StackingColumn100Series ItemSource="{Binding Data2}"
+                                   XBindingPath="Name"
+                                   YBindingPath="Value"
+                                   />
 
 </chart:SfCartesianChart>
 
@@ -104,24 +107,24 @@ We can group and stack the similar stacked column 100 series type using the [Gro
         <chart:NumericalAxis />
     </chart:SfCartesianChart.YAxes>   
 
-    <chart:StackingColumn100Series ItemsSource="{Binding Data}"
-						           XBindingPath="Name"
-						           YBindingPath="Value"
+    <chart:StackingColumn100Series ItemSource="{Binding Data}"
+                                   XBindingPath="XValue"
+                                   YBindingPath="YValue"
                                    GroupingLabel="GroupOne"/>
 
-    <chart:StackingColumn100Series ItemsSource="{Binding Data1}"
-						           XBindingPath="Name"
-						           YBindingPath="Value"
+    <chart:StackingColumn100Series ItemSource="{Binding Data1}"
+                                   XBindingPath="XValue"
+                                   YBindingPath="YValue"
                                    GroupingLabel="GroupOne"/>
 
-    <chart:StackingColumn100Series ItemsSource="{Binding Data2}"
-						           XBindingPath="Name"
-						           YBindingPath="Value"
+    <chart:StackingColumn100Series ItemSource="{Binding Data2}"
+                                   XBindingPath="XValue"
+                                   YBindingPath="YValue"
                                    GroupingLabel="GroupTwo"/>
 
-    <chart:StackingColumn100Series ItemsSource="{Binding Data3}"
-						           XBindingPath="Name"
-						           YBindingPath="Value"
+    <chart:StackingColumn100Series ItemSource="{Binding Data3}"
+                                   XBindingPath="XValue"
+                                   YBindingPath="YValue"
                                    GroupingLabel="GroupTwo"/>
 
 </chart:SfCartesianChart>
@@ -139,29 +142,29 @@ We can group and stack the similar stacked column 100 series type using the [Gro
     StackingColumn100Series series = new StackingColumn100Series()
     {
         ItemsSource = new ViewModel().Data,
-        XBindingPath = "Name",
-        YBindingPath = "Value",
+        XBindingPath = "XValue",
+        YBindingPath = "YValue",
         GroupingLabel="GroupOne"
     };
     StackingColumn100Series series1 = new StackingColumn100Series()
     {
         ItemsSource = new ViewModel().Data1,
-        XBindingPath = "Name",
-        YBindingPath = "Value",
+        XBindingPath = "XValue",
+        YBindingPath = "YValue",
         GroupingLabel="GroupOne"
     };
     StackingColumn100Series series2 = new StackingColumn100Series()
     {
         ItemsSource = new ViewModel().Data2,
-        XBindingPath = "Name",
-        YBindingPath = "Value",
+        XBindingPath = "XValue",
+        YBindingPath = "YValue",
         GroupingLabel="GroupTwo"
     };
     StackingColumn100Series series3 = new StackingColumn100Series()
     {
         ItemsSource = new ViewModel().Data3,
-        XBindingPath = "Name",
-        YBindingPath = "Value",
+        XBindingPath = "XValue",
+        YBindingPath = "YValue",
         GroupingLabel="GroupTwo"
     };
 
