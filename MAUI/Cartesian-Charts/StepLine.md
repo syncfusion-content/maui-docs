@@ -75,7 +75,7 @@ N> The cartesian chart has [Series]() as its default content.
 
 {% endtabs %}
 
-![StepLine Chart in MAUI](Chart-types_images/SteplineChart.png)
+![StepLine Chart in MAUI](Chart-types_images/StepLineChart.png)
 
 ## Dashed StepLine Chart
 
@@ -160,11 +160,11 @@ The [isTransposed]() property of [SfCartesianChart]() is used to render the Step
     </chart:SfCartesianChart.YAxes>   
 
     <chart:StepLineSeries ItemSource=""{Binding Data}
-                          XBindingPath="Date"
+                          XBindingPath="Year"
                           YBindingPath="Value"
                           />
     <chart:StepLineSeries ItemSource="{Binding Data1}"
-                          XBindingPath="Date"
+                          XBindingPath="Year"
                           YBindingPath="Value"
                           />
 
@@ -186,14 +186,14 @@ The [isTransposed]() property of [SfCartesianChart]() is used to render the Step
     StepLineSeries steplineSeries = new StepLineSeries()
     {
         itemSource = new ViewModel().Data;
-        XBindingPath = "Date";
+        XBindingPath = "Year";
         YBindingPath = "Value";
     };
 
     StepLineSeries steplineSeries1 = new StepLineSeries()
     {
         itemSource = new ViewModel().Data;
-        XBindingPath = "Date";
+        XBindingPath = "Year";
         YBindingPath = "Value";
     };
 
@@ -205,4 +205,4 @@ The [isTransposed]() property of [SfCartesianChart]() is used to render the Step
 
 {% endtabs %}
 
-![StepLine Chart in MAUI](Chart-types_images/VerticalStepline.png)
+![StepLine Chart in MAUI](Chart-types_images/VerticalStepLine.png)
