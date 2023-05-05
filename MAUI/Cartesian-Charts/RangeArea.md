@@ -11,7 +11,9 @@ documentation: ug
 
 ## Range Area Chart
 
-Range Area Chart is a type of data visualization useful for displaying the relationship between two variables over time. In this Series, the area between two lines is filled to indicate a range of values, such as high and low price range or an upper and lower limit. By displaying ranges of data, range area series can make it easier to compare multiple datasets at once.
+Range Area Chart is a type of data visualization useful for displaying the relationship between two variables over time. In this Series, the area between two lines is filled to indicate a range of values, such as high and low price range or an upper and lower limit.
+
+By displaying ranges of data, range area series can make it easier to compare multiple datasets at once.
 
 To render a range area chart, create an instance of [RangeAreaSeries](), and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).
 
