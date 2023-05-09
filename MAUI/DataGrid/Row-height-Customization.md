@@ -11,6 +11,10 @@ documentation: ug
 
 The DataGrid provides an option to customize the header row height and the row height of all the grids or a particular row. To achieve this customization, see the following sections:
 
+To get start quickly with customize rows and columns in .NET MAUI DataGrid, you can check on this video:
+
+<style>#MAUIDataGridVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIDataGridVideoTutorial' src="https://www.youtube.com/embed/vtMmQIWyipU"></iframe>
+
 ## Customize the header row height 
 
 The DataGrid allows you to customize the height of the header row by setting the [SfDataGrid.HeaderRowHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_HeaderRowHeight) pproperty. The default value of this property is 55. This property responds to runtime changes so that it can be customized. Setting `SfDatagrid.HeaderRowHeight` to zero will collapse the header row in the view.
