@@ -13,7 +13,7 @@ The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Sf
 
 To get start quickly with sorting in .NET MAUI DataGrid, you can check on this video:
 
-<style>#MAUIDataGridVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIDataGridVideoTutorial' src='https://www.youtube.com/watch?v=5PhyEYLbGT4'></iframe>
+<style>#MAUIDataGridVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIDataGridVideoTutorial' src='https://www.youtube.com/embed/5PhyEYLbGT4'></iframe>
 
 ## Programmatic sorting
 
