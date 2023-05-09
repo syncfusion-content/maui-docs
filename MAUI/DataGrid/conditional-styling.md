@@ -10,9 +10,9 @@ documentation: ug
 # Conditional Styling in .NET MAUI DataGrid (SfDataGrid)
 The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.html) allows you to customize the style of the individual cells and rows based on the requirements. 
 
-To get start quickly with customize the appearance of .NET MAUI DataGrid, you can check on this video:
+To get start quickly with apply conditional styling in .NET MAUI DataGrid, you can check on this video:
 
-<style>#MAUIDataGridVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIDataGridVideoTutorial' src="https://www.youtube.com/embed/1HHHz5isIM4"></iframe>
+<style>#MAUIDataGridVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIDataGridVideoTutorial' src="https://www.youtube.com/embed/1HHHz5isIM4?start=504"></iframe>
 
 ## Conditional row style
 The data rows can be customized conditionally by writing the style with a converter for the [DataGridRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridRow.html) control. Its BindingContext is the underlying datasource object.

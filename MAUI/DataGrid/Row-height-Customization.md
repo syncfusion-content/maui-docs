@@ -11,9 +11,9 @@ documentation: ug
 
 The DataGrid provides an option to customize the header row height and the row height of all the grids or a particular row. To achieve this customization, see the following sections:
 
-To get start quickly with customize rows and columns in .NET MAUI DataGrid, you can check on this video:
+To get start quickly with row height customization in .NET MAUI DataGrid, you can check on this video:
 
-<style>#MAUIDataGridVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIDataGridVideoTutorial' src="https://www.youtube.com/embed/vtMmQIWyipU"></iframe>
+<style>#MAUIDataGridVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIDataGridVideoTutorial' src="https://www.youtube.com/embed/vtMmQIWyipU?start=76"></iframe>
 
 ## Customize the header row height 
 
