@@ -11,6 +11,10 @@ documentation: ug
 
 The [DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.html) applies style for all of its elements by setting desired values to the style properties in [SfDataGrid.DefaultStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DefaultStyleProperty). This property has all the required styling properties for each and every elements in the DataGrid.
 
+To get start quickly with apply styling .NET MAUI DataGrid, you can check on this video:
+
+<style>#MAUIDataGridVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIDataGridVideoTutorial' src="https://www.youtube.com/embed/1HHHz5isIM4?start=66"></iframe>
+
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
 <ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
