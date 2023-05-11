@@ -174,7 +174,7 @@ In Candle Series, [EnableSolidCandle]() property is used to specify whether the 
 
 {% highlight c# %}
 
-SfCartesianChart chart = new SfCartesianChart();
+    SfCartesianChart chart = new SfCartesianChart();
     CategoryAxis primaryAxis = new CategoryAxis();
     chart.XAxes.Add(primaryAxis);
     NumericalAxis secondaryAxis = new NumericalAxis();
