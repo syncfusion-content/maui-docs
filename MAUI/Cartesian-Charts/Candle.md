@@ -46,9 +46,9 @@ To plot a point on a candlestick chart, a collection of five values is required,
         <chart:NumericalAxis />
     </chart:SfCartesianChart.YAxes>   
 
-    <chart:ColumnSeries ItemsSource="{Binding StockData}"
-						XBindingPath="Year"
-						Open="Open"
+    <chart:CandleSeries ItemsSource="{Binding StockData}"
+                        XBindingPath="Year"
+                        Open="Open"
                         High="High"
                         Low="Low"
                         Close="Close"/>
@@ -103,8 +103,8 @@ In Candle chart, [BullFillColor]() property is used to specify a fill color for 
     </chart:SfCartesianChart.YAxes>   
 
     <chart:ColumnSeries ItemsSource="{Binding StockData}"
-						XBindingPath="Year"
-						Open="Open"
+                        XBindingPath="Year"
+                        Open="Open"
                         High="High"
                         Low="Low"
                         Close="Close"
@@ -163,8 +163,8 @@ In Candle Series, [EnableSolidCandle]() property is used to specify whether the 
     </chart:SfCartesianChart.YAxes>   
 
     <chart:ColumnSeries ItemsSource="{Binding StockData}"
-						XBindingPath="Year"
-						Open="Open"
+                        XBindingPath="Year"
+                        Open="Open"
                         High="High"
                         Low="Low"
                         Close="Close"
