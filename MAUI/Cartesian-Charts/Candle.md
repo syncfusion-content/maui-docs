@@ -102,7 +102,7 @@ In Candle chart, [BullFillColor]() property is used to specify a fill color for 
         <chart:NumericalAxis />
     </chart:SfCartesianChart.YAxes>   
 
-    <chart:ColumnSeries ItemsSource="{Binding StockData}"
+    <chart:CandleSeries ItemsSource="{Binding StockData}"
                         XBindingPath="Year"
                         Open="Open"
                         High="High"
@@ -162,7 +162,7 @@ In Candle Series, [EnableSolidCandle]() property is used to specify whether the 
         <chart:NumericalAxis />
     </chart:SfCartesianChart.YAxes>   
 
-    <chart:ColumnSeries ItemsSource="{Binding StockData}"
+    <chart:CandleSeries ItemsSource="{Binding StockData}"
                         XBindingPath="Year"
                         Open="Open"
                         High="High"
