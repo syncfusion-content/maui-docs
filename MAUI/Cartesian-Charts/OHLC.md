@@ -47,11 +47,11 @@ To plot a point on a ohlc chart, a collection of five values is required, includ
     </chart:SfCartesianChart.YAxes>   
 
     <chart:HiLoOpenCloseSeries ItemsSource="{Binding StockData}"
-                        XBindingPath="Year"
-                        Open="Open"
-                        High="High"
-                        Low="Low"
-                        Close="Close"/>
+                               XBindingPath="Year"
+                               Open="Open"
+                               High="High"
+                               Low="Low"
+                               Close="Close"/>
 
 </chart:SfCartesianChart>
 
@@ -103,13 +103,13 @@ In Ohlc chart, [BullFillColor]() property is used to specify a fill color for th
     </chart:SfCartesianChart.YAxes>   
 
     <chart:HiLoOpenCloseSeries ItemsSource="{Binding StockData}"
-                        XBindingPath="Year"
-                        Open="Open"
-                        High="High"
-                        Low="Low"
-                        Close="Close"
-                        BullFillColor="Blue"
-                        BearFillColor="Orange"/>
+                               XBindingPath="Year"
+                               Open="Open"
+                               High="High"
+                               Low="Low"
+                               Close="Close"
+                               BullFillColor="Blue"
+                               BearFillColor="Orange"/>
 
 </chart:SfCartesianChart>
 
