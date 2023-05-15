@@ -13,9 +13,9 @@ The Stacked column 100 % series chart is type of Stacked chart that is used to d
 
 ## StackedColumn100 Chart
 
-To render the StackedColumn100 chart,create an instance of [StackingColumn100Series](),and add it to the [Series]() collection property of [SfCartesianChart]().
+To render the StackedColumn100 chart,create an instance of [StackingColumn100Series](),and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).
 
-N> The cartesian chart has [Series]() as its default content.
+N> The cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) as its default content.
 
 {% tabs %}
 
@@ -90,7 +90,7 @@ N> The cartesian chart has [Series]() as its default content.
 
 ## Grouping Series 
 
-We can group and stack the similar stacked column 100 series type using the [GroupingLabel]() property. 
+We can group and stack the similar stacked column 100 series type using the [GroupingLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.StackingSeriesBase.html#Syncfusion_Maui_Charts_StackingSeriesBase_GroupingLabel) property. 
 
 
 {% tabs %}
