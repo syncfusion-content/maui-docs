@@ -11,7 +11,9 @@ documentation: ug
 
 ## Step Area Chart
 
-[StepAreaSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.AreaSeries.html?tabs=tabid-1)  x-axis typically represents time or categories while the y-axis represents the values being measured. The chart displays a stepwise line that connects each data point, where the horizontal segment of the line represents the time or category, and the vertical segment represents the change in value.
+Step area chart is used to display data that changes over time or across different categories. 
+
+In a step area chart, the data points are connected by horizontal and vertical lines to create a series of steps. Each step represents a specific time interval or category. The area between the steps is then filled with color or shading. To render a area chart, create an instance of [StepAreaSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.AreaSeries.html?tabs=tabid-1), and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of [SfCartesianChart] 
 
 N> The cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) as its default content.
 
@@ -148,7 +150,7 @@ ChartMarkerSettings chartMarker= new ChartMarkerSettings();
         chartMarker.Height = 8;
         chartMarker.Width = 8;
 
-StepAreaSeries series = new StepAreaSeries()
+StepAreaSeries = new StepAreaSeries()
 {
    XBindingPath = "XValues",
    YBindingPath = "YValues",
