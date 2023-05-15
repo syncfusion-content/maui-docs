@@ -32,8 +32,8 @@ N> The cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
     </chart:SfCartesianChart.YAxes>   
 
     <chart:StepAreaSeries ItemsSource="{Binding Data}"
-					  XBindingPath="XValues"
-					  YBindingPath="YValues"/>  
+					  XBindingPath="Month"
+					  YBindingPath="Value"/>  
 
 </chart:SfCartesianChart>
 
@@ -50,8 +50,8 @@ chart.YAxes.Add(secondaryAxis);
 StepAreaSeries series = new StepAreaSeries()
 {
     ItemsSource = new ViewModel().Data,
-    XBindingPath = "XValues",
-    YBindingPath = "YValues",
+    XBindingPath = "Month",
+    YBindingPath = "Value",
 };
 
 chart.Series.Add(series);
@@ -73,8 +73,8 @@ A marker, also known as a symbol, is used to determine or highlight the position
 
 <chart:SfCartesianChart>
 ...
- <chart:StepAreaSeries XBindingPath="XValues"
-                   YBindingPath="YValues"
+ <chart:StepAreaSeries XBindingPath="Month"
+                   YBindingPath="Value"
                    ItemsSource="{Binding Data}"
                    ShowMarkers="True"/>
 
@@ -89,8 +89,8 @@ SfCartesianChart chart = new SfCartesianChart();
 ...
 StepAreaSeries series = new StepAreaSeries()
 {
-    XBindingPath = "XValues",
-    YBindingPath = "YValues",
+    XBindingPath = "Month",
+    YBindingPath = "Value",
     ItemsSource = new ViewModel().Data,
     ShowMarkers= true,
  };
@@ -119,8 +119,8 @@ In order to change the series markers appearance, create an instance of the [Mar
 
 <chart:SfCartesianChart>
 ...
- <chart:StepAreaSeries XBindingPath="XValues"
-                   YBindingPath="YValues"
+ <chart:StepAreaSeries XBindingPath="Month"
+                   YBindingPath="Value"
                    ItemsSource="{Binding Data}"
                    ShowMarkers="True">
     <chart:StepAreaSeries.MarkerSettings>
@@ -152,8 +152,8 @@ ChartMarkerSettings chartMarker= new ChartMarkerSettings();
 
 StepAreaSeries = new StepAreaSeries()
 {
-   XBindingPath = "XValues",
-   YBindingPath = "YValues",
+   XBindingPath = "Month",
+   YBindingPath = "Value",
    ItemsSource = new ViewModel().Data,
    ShowMarkers = true,
  };
