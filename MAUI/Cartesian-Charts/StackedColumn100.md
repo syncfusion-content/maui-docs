@@ -9,7 +9,7 @@ documentation: ug
 
 # StackedColumn100 Chart in .NET MAUI Chart
 
-The Stacked column 100 % series chart is type of Stacked chart that is used to display the proportion of different categories within a single column. The columns are stacked top of each other , and the total height of each column is always same, representing 100% of the categories.
+The Stacked column 100 % series chart is type of Stacked chart that is used to display the proportion of different categories within a single column. The columns are stacked top of each other , and cumulative portion of each stacked element always comes to a total of 100%.
 
 ## StackedColumn100 Chart
 
