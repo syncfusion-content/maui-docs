@@ -133,3 +133,66 @@ series.TooltipTemplate = chart.Resources["tooltipTemplate"] as DataTemplate;
 {% endtabs %}
 
 ![Tooltip template in MAUI Chart](Tooltip_images/maui_chart_tooltip_customization.png)
+
+## Methods
+
+The [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html) provides support for programmatically showing or hiding the chart tooltip using the corresponding methods.
+
+### Show Method
+
+The [Show]() method is used to trigger the display of the tooltip at the specified location.
+
+{% tabs %}
+
+{% highlight xaml %}
+    
+    <StackLayout>
+    <chart:SfCircularChart>
+    . . .
+        <chart:PieSeries EnableTooltip="True">
+    	</chart:PieSeries>
+
+        <chart:SfCircularChart.TooltipBehavior>
+            <chart:ChartTooltipBehavior X:Name="tooltip"/>
+        </chart:SfCircularChart.TooltipBehavior>
+
+    </chart:SfCircularChart>
+
+    <Button Text="Show Tooltip" Clicked="ShowTooltip_Clicked" />
+    </StackLayout>
+
+{% endhighlight %}
+
+{% endtabs %}
+
+{% tabs %}
+
+{% highlight C# %}
+
+    private void ShowTooltip_Clicked(object sender, EventArgs e)
+    {
+        //pointX - determines the x position of tooltip, pointY - determines the y position of tooltip and bool value determines whether the tooltip should be animated while displaying.
+        tooltip.Show(pointX, pointY, true);
+    }
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Hide Method
+
+The [Hide]() Method is used to hide the tooltip programmatically.
+
+{% endtabs %}
+
+{% tabs %}
+
+{% highlight C# %}
+
+    //The argument determines whether the tooltip should be animated while hiding.
+
+    tooltip.Hide(true);
+
+{% endhighlight %}
+
+{% endtabs %}

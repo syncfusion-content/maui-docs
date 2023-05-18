@@ -221,3 +221,68 @@ this.Content = chart;
 {% endtabs %}
 
 ![Tooltip template in MAUI Chart](Tooltip_images/maui_chart_tooltip_customization.png)
+
+## Methods
+
+The [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1) provides support for programmatically showing or hiding the chart tooltip using the corresponding methods.
+
+### Show Method
+
+The [Show]() method is used to trigger the display of the tooltip at the specified location.
+
+{% tabs %}
+
+{% highlight xaml %}
+    
+    <StackLayout>
+    <chart:SfCartesianChart >
+    . . .
+        <chart:ColumnSeries ItemsSource="{Binding Data}" 
+                        XBindingPath="Demand"
+                        YBindingPath="Year2010" 
+                        EnableTooltip="True"/>
+
+        <chart:SfCartesianChart.TooltipBehavior>
+            <chart:ChartTooltipBehavior X:Name="tooltip"/>
+        </chart:SfCartesianChart.TooltipBehavior>
+
+    </chart:SfCartesianChart>
+
+    <Button Text="Show Tooltip" Clicked="ShowTooltip_Clicked" />
+    </StackLayout>
+
+{% endhighlight %}
+
+{% endtabs %}
+
+{% tabs %}
+
+{% highlight C# %}
+
+    private void ShowTooltip_Clicked(object sender, EventArgs e)
+    {
+        //pointX - determines the x position of tooltip, pointY - determines the y position of tooltip and bool value determines whether the tooltip should be animated while displaying.
+        tooltip.Show(pointX, pointY, true);
+    }
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Hide Method
+
+The [Hide]() Method is used to hide the tooltip programmatically.
+
+{% endtabs %}
+
+{% tabs %}
+
+{% highlight C# %}
+
+    //The argument determines whether the tooltip should be animated while hiding.
+
+    tooltip.Hide(true);
+
+{% endhighlight %}
+
+{% endtabs %}

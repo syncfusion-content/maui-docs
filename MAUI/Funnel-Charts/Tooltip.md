@@ -123,3 +123,64 @@ chart.TooltipTemplate= grid.Resources["tooltipTemplate"] as DataTemplate;
 {% endtabs %}
 
 ![Tooltip template in MAUI Chart](Tooltip_images/MAUI_chart_tooltip_customization.png)
+
+## Methods
+
+The [SfFunnelChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html) provides support for programmatically showing or hiding the chart tooltip using the corresponding methods.
+
+### Show Method
+
+The [Show]() method is used to trigger the display of the tooltip at the specified location.
+
+{% tabs %}
+
+{% highlight xaml %}
+    
+    <StackLayout>
+    . . .
+       <chart:SfFunnelChart EnableTooltip="True">
+
+            <chart:SfFunnelChart.TooltipBehavior>
+                <chart:ChartTooltipBehavior X:Name="tooltip"/>
+            </chart:SfFunnelChart.TooltipBehavior>
+
+        </chart:SfFunnelChart>
+
+    <Button Text="Show Tooltip" Clicked="ShowTooltip_Clicked" />
+    </StackLayout>
+
+{% endhighlight %}
+
+{% endtabs %}
+
+{% tabs %}
+
+{% highlight C# %}
+
+    private void ShowTooltip_Clicked(object sender, EventArgs e)
+    {
+        //pointX - determines the x position of tooltip, pointY - determines the y position of tooltip and bool value determines whether the tooltip should be animated while displaying.
+        tooltip.Show(pointX, pointY, true);
+    }
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Hide Method
+
+The [Hide]() Method is used to hide the tooltip programmatically.
+
+{% endtabs %}
+
+{% tabs %}
+
+{% highlight C# %}
+
+    //The argument determines whether the tooltip should be animated while hiding.
+
+    tooltip.Hide(true);
+
+{% endhighlight %}
+
+{% endtabs %}
