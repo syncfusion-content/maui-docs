@@ -7,7 +7,7 @@ control: SfPyramidChart
 documentation: ug
 ---
 
-# Legend in .NET MAUI Chart
+# Legend in .NET MAUI Pyramid Chart
 
 A legend is a graphical representation that explains the meaning of the  data segments in a chart. It typically consists of a key or symbol associated with each data segment and a label that describes what that segment represents. The legend helps users understand the data being presented in the chart by providing a visual reference for the different categories or data points.
 

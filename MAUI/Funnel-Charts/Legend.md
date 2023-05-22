@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Legend in .NET MAUI Chart control | Syncfusion
-description: This section explains about how to enable Legend and its customization in Syncfusion .NET MAUI Chart (SfCircularChart) control.
+description: This section explains about how to enable Legend and its customization in Syncfusion .NET MAUI Chart (SfFunnelChart) control.
 platform: maui
-control: SfCircularChart
+control: SfFunnelChart
 documentation: ug
 ---
 
-# Legend in .NET MAUI Circular Chart
+# Legend in .NET MAUI Funnel Chart
 
 A legend is a graphical representation that explains the meaning of the  data segments in a chart. It typically consists of a key or symbol associated with each data segment and a label that describes what that segment represents. The legend helps users understand the data being presented in the chart by providing a visual reference for the different categories or data points.
 
@@ -15,24 +15,20 @@ A legend is a graphical representation that explains the meaning of the  data se
 
 {% highlight xaml %}
 
-    <chart:SfCircularChart >
-            <chart:DoughnutSeries ItemsSource="{Binding Product}"
-                                  XBindingPath="Country"
-                                  YBindingPath="Value">
-            </chart:DoughnutSeries>
-            
-    </chart:SfCircularChart>
+    <chart:SfFunnelChart ItemsSource="{Binding Product}"
+                          XBindingPath="Country"
+                          YBindingPath="Value">
+    <chart:SfFunnelChart.Legend>
+        <chart:ChartLegend ></chart:ChartLegend>
+    </chart:SfFunnelChart.Legend>
+    </chart:SfFunnelChart>
     
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-        SfCircularChart chart = new SfCircularChart();
-        chart.WidthRequest = 400;
-        chart.HeightRequest = 500;
-        
-        DoughnutSeries coffeeSeries = new DoughnutSeries()
+        SfFunnelChart chart = new SfFunnelChart()
         {
             ItemsSource = this.Product,
             XBindingPath = "Country",
@@ -43,8 +39,6 @@ A legend is a graphical representation that explains the meaning of the  data se
         chart.Series.Add(coffeeSeries);
 
         ChartLegend legend = new ChartLegend();
-        legend.IsVisible = true;
-        legend.ToggleSeriesVisibility = true;
         chart.Legend = legend;
         Content = chart;
 
@@ -54,7 +48,7 @@ A legend is a graphical representation that explains the meaning of the  data se
 {% endtabs %}
 
 
-![Chart Legend in MAUI Chart](Legend_images/EnableLegend.png)
+![Chart Legend in MAUI Chart](Legend_images/maui_funnelChart_enable_legend.png)
 
 
 ## Legend Visibility
@@ -66,9 +60,9 @@ To control the visibility of the legend in a chart control, the [IsVisible]() pr
 
 {% highlight xaml %}
 
-    <chart:SfCircularChart.Legend>
+    <chart:SfFunnelChart.Legend>
          <chart:ChartLegend IsVisible="True"></chart:ChartLegend>
-    </chart:SfCircularChart.Legend>
+    </chart:SfFunnelChart.Legend>
    
 
 {% endhighlight %}
@@ -99,9 +93,9 @@ N> By default, the [LegendPlacement]() is [LegendPlacement.Top]()
 
 {% highlight xaml %}
 
-    <chart:SfCircularChart.Legend>
+    <chart:SfFunnelChart.Legend>
         <chart:ChartLegend Placement="Bottom"></chart:ChartLegend>
-    </chart:SfCircularChart.Legend>
+    </chart:SfFunnelChart.Legend>
    
 
 {% endhighlight %}
@@ -116,7 +110,7 @@ N> By default, the [LegendPlacement]() is [LegendPlacement.Top]()
 
 {% endtabs %}
 
-![Legend Placement in MAUI Chart](Legend_images/Palcement_Bottom.png)
+![Legend Placement in MAUI Chart](Legend_images/maui_funnelChart_placemant.png)
 
 ## Legend Toggle Series Visibility
 
@@ -126,9 +120,9 @@ We can control the visibility of the segments by enabling the [ToggleSeriesVisib
 
 {% highlight xaml %}
 
-    <chart:SfCircularChart.Legend>
+    <chart:SfFunnelChart.Legend>
         <chart:ChartLegend ToggleSeriesVisibility="True"></chart:ChartLegend>
-    </chart:SfCircularChart.Legend>
+    </chart:SfFunnelChart.Legend>
 
 {% endhighlight %}
 
@@ -163,22 +157,22 @@ N> The default value for the LegendIcon in the Series is circular in shape.
 
 {% highlight xaml %}
 
-    <chart:DoughnutSeries ItemsSource="{Binding Product}"
-                          XBindingPath="Country"
-                          YBindingPath="Value"
-                          LegendIcon="Pentagon">
-    </chart:DoughnutSeries>
+    <chart:SfFunnelChart ItemsSource="{Binding Product}"
+                         XBindingPath="Country"
+                         YBindingPath="Value"
+                         LegendIcon="Triangle">                      
+    </chart:SfFunnelChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
  
-    DoughnutSeries coffeeSeries = new DoughnutSeries()
+    SfFunnelChart coffeeSeries = new SfFunnelChart()
     {
       ItemsSource = this.Product,
       XBindingPath = "Country",
       YBindingPath = "Value",
-      LegendIcon = ChartLegendIconType.Pentagon 
+      LegendIcon = ChartLegendIconType.Triangle
     };
 
     chart.Series.Add(coffeeSeries);
@@ -189,7 +183,7 @@ N> The default value for the LegendIcon in the Series is circular in shape.
 
 {% endtabs %}
 
-![Legend Icon Customization in MAUI Chart](Legend_images/Icon_Pentagon.png)
+![Legend Icon Customization in MAUI Chart](Legend_images/maui_funnelChart_Icon_invertedTriangle.png)
 
 ### Series Type Legend Icon
 
@@ -201,23 +195,23 @@ Each series  has its own legend icon. This can be achieve through the [LegendIco
 
 {% highlight xaml %}
 
-    <chart:DoughnutSeries ItemsSource="{Binding Product}"
-                          XBindingPath="Country"
-                          YBindingPath="Value"
-                          LegendIcon="SeriesType">
-    </chart:DoughnutSeries>
+    <chart:SfFunnelChart ItemsSource="{Binding Product}"
+                         XBindingPath="Country"
+                         YBindingPath="Value"
+                         LegendIcon="SeriesType">                      
+    </chart:SfFunnelChart>
 
    
 {% endhighlight %}
 
 {% highlight c# %}
  
-    DoughnutSeries coffeeSeries = new DoughnutSeries()
+    SfFunnelChart coffeeSeries = new SfFunnelChart()
     {
       ItemsSource = this.Product,
       XBindingPath = "Country",
       YBindingPath = "Value",
-      LegendIcon = ChartLegendIconType.SeriesType 
+      LegendIcon = ChartLegendIconType.SeriesType
     };
 
     chart.Series.Add(coffeeSeries);
@@ -226,4 +220,4 @@ Each series  has its own legend icon. This can be achieve through the [LegendIco
 
 {% endtabs %}
 
-![Series Type Legend Icon Customization in MAUI Chart](Legend_images/Icon_SeriesType.png)
+![Series Type Legend Icon Customization in MAUI Chart](Legend_images/maui_funnelChart_Icon_SeriesType.png)
