@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Legend in .NET MAUI Chart control | Syncfusion
-description: This section explains about how to enable Legend and its customization in Syncfusion .NET MAUI Chart (SfCartesianChart) control.
+description: This section explains about how to enable Legend and its customization in Syncfusion .NET MAUI Chart (SfCircularChart) control.
 platform: maui
 control: SfCartesianChart
 documentation: ug
@@ -9,82 +9,43 @@ documentation: ug
 
 # Legend in .NET MAUI Chart
 
-A legend is a graphical representation that explains the meaning of the  data series in a chart. It typically consists of a key or symbol associated with each data series and a label that describes what that series represents. The legend helps users understand the data being presented in the chart by providing a visual reference for the different categories or data points.
+A legend is a graphical representation that explains the meaning of the  data segments in a chart. It typically consists of a key or symbol associated with each data segment and a label that describes what that segment represents. The legend helps users understand the data being presented in the chart by providing a visual reference for the different categories or data points.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-
-    <chart:SfCartesianChart>
-            <chart:SfCartesianChart.XAxes>
-                <chart:CategoryAxis/>
-            </chart:SfCartesianChart.XAxes>
-            <chart:SfCartesianChart.YAxes>
-                <chart:NumericalAxis/>
-            </chart:SfCartesianChart.YAxes>
-
-            <chart:ColumnSeries ItemsSource="{Binding Product}"
-                                XBindingPath="Country"
-                                YBindingPath="Value"
-                                Label="Cofee" ></chart:ColumnSeries>
-
-            <chart:ColumnSeries ItemsSource="{Binding Import}"
-                                XBindingPath="Country"
-                                YBindingPath="Value"
-                                Label="Tea" ></chart:ColumnSeries>
-
-            <chart:ColumnSeries ItemsSource="{Binding Export}"
-                                XBindingPath="Country"
-                                YBindingPath="Value"
-                                Label="Soft Drinks" ></chart:ColumnSeries>
-
-            <chart:SfCartesianChart.Legend>
-                <chart:ChartLegend  ></chart:ChartLegend>
-            </chart:SfCartesianChart.Legend>
-    </chart:SfCartesianChart>
+    <chart:SfCircularChart >
+            <chart:DoughnutSeries ItemsSource="{Binding Product}"
+                                  XBindingPath="Country"
+                                  YBindingPath="Value">
+            </chart:DoughnutSeries>
+            
+    </chart:SfCircularChart>
+    
 
 {% endhighlight %}
 
 {% highlight c# %}
- SfCartesianChart chart = new SfCartesianChart();
 
-        CategoryAxis xAxes = new CategoryAxis();
-        chart.XAxes.Add(xAxes);
-
-        NumericalAxis yAxes = new NumericalAxis();
-        chart.YAxes.Add(yAxes);
-
-        ColumnSeries coffeeSeries = new ColumnSeries()
+        SfCircularChart chart = new SfCircularChart();
+        chart.WidthRequest = 400;
+        chart.HeightRequest = 500;
+        
+        DoughnutSeries coffeeSeries = new DoughnutSeries()
         {
             ItemsSource = this.Product,
             XBindingPath = "Country",
             YBindingPath = "Value",
-            Label = "Coffee"
+            
         };
+
         chart.Series.Add(coffeeSeries);
 
-        ColumnSeries teaSeries = new ColumnSeries()
-        {
-            ItemsSource = this.Import,
-            XBindingPath = "Country",
-            YBindingPath = "Value",
-            Label = "Tea"
-        };
-        chart.Series.Add(teaSeries);
-
-        ColumnSeries softDrinksSeries = new ColumnSeries()
-        {
-            ItemsSource = this.Export,
-            XBindingPath = "Country",
-            YBindingPath = "Value",
-            Label = "Soft Drinks"
-        };
-        chart.Series.Add(softDrinksSeries);
-
         ChartLegend legend = new ChartLegend();
+        legend.IsVisible = true;
+        legend.ToggleSeriesVisibility = true;
         chart.Legend = legend;
-
         Content = chart;
 
 
@@ -93,7 +54,7 @@ A legend is a graphical representation that explains the meaning of the  data se
 {% endtabs %}
 
 
-![Chart Legend in MAUI Chart](Legend_images/maui_chart_legend_Enable.png)
+![Chart Legend in MAUI Chart](Legend_images/EnableLegend.png)
 
 
 ## Legend Visibility
@@ -105,26 +66,18 @@ To control the visibility of the legend in a chart control, the [IsVisible]() pr
 
 {% highlight xaml %}
 
-
-    <chart:SfCartesianChart>
-        ...
-            <chart:SfCartesianChart.Legend>
-                <chart:ChartLegend IsVisible="True" ></chart:ChartLegend>
-            </chart:SfCartesianChart.Legend>
-
-    </chart:SfCartesianChart>
+    <chart:SfCircularChart.Legend>
+         <chart:ChartLegend IsVisible="True"></chart:ChartLegend>
+    </chart:SfCircularChart.Legend>
+   
 
 {% endhighlight %}
 
 {% highlight c# %}
- SfCartesianChart chart = new SfCartesianChart();
-        ...
-
-        ChartLegend legend = new ChartLegend();
-        legend.IsVisible = true;
-        chart.Legend = legend;
-
-        Content = chart;
+ 
+    ChartLegend legend = new ChartLegend();
+    legend.IsVisible = true;
+    chart.Legend = legend;
 
 {% endhighlight %}
 
@@ -146,61 +99,44 @@ N> By default, the [LegendPlacement]() is [LegendPlacement.Top]()
 
 {% highlight xaml %}
 
-
-    <chart:SfCartesianChart>
-        ...
-            <chart:SfCartesianChart.Legend>
-                <chart:ChartLegend Placement="Bottom" ></chart:ChartLegend>
-            </chart:SfCartesianChart.Legend>
-
-    </chart:SfCartesianChart>
+    <chart:SfCircularChart.Legend>
+        <chart:ChartLegend Placement="Bottom"></chart:ChartLegend>
+    </chart:SfCircularChart.Legend>
+   
 
 {% endhighlight %}
 
 {% highlight c# %}
- SfCartesianChart chart = new SfCartesianChart();
-        ...
-
-        ChartLegend legend = new ChartLegend();
-        legend.Placement= LegendPlacement.Bottom;
-        chart.Legend = legend;
-
-        Content = chart;
+    
+    ChartLegend legend = new ChartLegend();
+    legend.Placement=LegendPlacement.Bottom;
+    chart.Legend = legend;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Legend Placement in MAUI Chart](Legend_images/maui_chart_legend_Placement.png)
+![Legend Placement in MAUI Chart](Legend_images/Palcement_Bottom.png)
 
 ## Legend Toggle Series Visibility
 
-We can control the visibility of the series by enabling the [ToggleSeriesVisibility]() property of the ChartLegend. This allows us to toggle the visibility of the series when the legend items are tapped.
+We can control the visibility of the segments by enabling the [ToggleSeriesVisibility]() property of the ChartLegend. This allows us to toggle the visibility of the segment when the legend items are tapped.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-
-    <chart:SfCartesianChart>
-        ...
-            <chart:SfCartesianChart.Legend>
-                <chart:ChartLegend ToggleSeriesVisibility="True" ></chart:ChartLegend>
-            </chart:SfCartesianChart.Legend>
-
-    </chart:SfCartesianChart>
+    <chart:SfCircularChart.Legend>
+        <chart:ChartLegend ToggleSeriesVisibility="True"></chart:ChartLegend>
+    </chart:SfCircularChart.Legend>
 
 {% endhighlight %}
 
 {% highlight c# %}
- SfCartesianChart chart = new SfCartesianChart();
-        ...
-
-        ChartLegend legend = new ChartLegend();
-        legend.ToggleSeriesVisibility = true;
-        chart.Legend = legend;
-
-        Content = chart;
+ 
+    ChartLegend legend = new ChartLegend();
+    legend.ToggleSeriesVisibility = true;
+    chart.Legend = legend;
 
 {% endhighlight %}
 
@@ -227,71 +163,33 @@ N> The default value for the LegendIcon in the Series is circular in shape.
 
 {% highlight xaml %}
 
-
-    <chart:SfCartesianChart>
-        ...
-             <chart:ColumnSeries ItemsSource="{Binding Product}"
-                                XBindingPath="Country"
-                                YBindingPath="Value"
-                                Label="Cofee"
-                                LegendIcon="Hexagon" ></chart:ColumnSeries>
-
-            <chart:ColumnSeries ItemsSource="{Binding Import}"
-                                XBindingPath="Country"
-                                YBindingPath="Value"
-                                Label="Tea"
-                                LegendIcon="Triangle" ></chart:ColumnSeries>
-
-            <chart:ColumnSeries ItemsSource="{Binding Export}"
-                                XBindingPath="Country"
-                                YBindingPath="Value"
-                                Label="Soft Drinks"
-                                LegendIcon="Pentagon" ></chart:ColumnSeries>
-
-    </chart:SfCartesianChart>
+    <chart:DoughnutSeries ItemsSource="{Binding Product}"
+                          XBindingPath="Country"
+                          YBindingPath="Value"
+                          LegendIcon="Pentagon">
+    </chart:DoughnutSeries>
 
 {% endhighlight %}
 
 {% highlight c# %}
- SfCartesianChart chart = new SfCartesianChart();
-        ...
+ 
+    DoughnutSeries coffeeSeries = new DoughnutSeries()
+    {
+      ItemsSource = this.Product,
+      XBindingPath = "Country",
+      YBindingPath = "Value",
+      LegendIcon = ChartLegendIconType.Pentagon 
+    };
 
-        ColumnSeries coffeeSeries = new ColumnSeries()
-        {
-            ItemsSource = this.Product,
-            XBindingPath = "Country",
-            YBindingPath = "Value",
-            LegendIcon = ChartLegendIconType.Hexagon,
-            Label = "Coffee"
-        };
-        chart.Series.Add(coffeeSeries);
+    chart.Series.Add(coffeeSeries);
 
-        ColumnSeries teaSeries = new ColumnSeries()
-        {
-            ItemsSource = this.Import,
-            XBindingPath = "Country",
-            YBindingPath = "Value",
-            LegendIcon = ChartLegendIconType.Triangle,
-            Label = "Tea"
-        };
-        chart.Series.Add(teaSeries);
-
-        ColumnSeries softDrinksSeries = new ColumnSeries()
-        {
-            ItemsSource = this.Export,
-            XBindingPath = "Country",
-            YBindingPath = "Value",
-            LegendIcon = ChartLegendIconType.Pentagon,
-            Label = "Soft Drinks"
-            
-        };
-        chart.Series.Add(softDrinksSeries);
+{% endhighlight %}
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Legend Icon Customization in MAUI Chart](Legend_images/maui_chart_legend_customization.png)
+![Legend Icon Customization in MAUI Chart](Legend_images/Icon_Pentagon.png)
 
 ### Series Type Legend Icon
 
@@ -303,68 +201,29 @@ Each series  has its own legend icon. This can be achieve through the [LegendIco
 
 {% highlight xaml %}
 
+    <chart:DoughnutSeries ItemsSource="{Binding Product}"
+                          XBindingPath="Country"
+                          YBindingPath="Value"
+                          LegendIcon="SeriesType">
+    </chart:DoughnutSeries>
 
-    <chart:SfCartesianChart>
-        ...
-             <chart:ColumnSeries ItemsSource="{Binding Product}"
-                                XBindingPath="Country"
-                                YBindingPath="Value"
-                                Label="Cofee"
-                                LegendIcon="SeriesType" ></chart:ColumnSeries>
-
-            <chart:ColumnSeries ItemsSource="{Binding Import}"
-                                XBindingPath="Country"
-                                YBindingPath="Value"
-                                Label="Tea"
-                                LegendIcon="SeriesType" ></chart:ColumnSeries>
-
-            <chart:ColumnSeries ItemsSource="{Binding Export}"
-                                XBindingPath="Country"
-                                YBindingPath="Value"
-                                Label="Soft Drinks"
-                                LegendIcon="SeriesType" ></chart:ColumnSeries>
-
-    </chart:SfCartesianChart>
-
+   
 {% endhighlight %}
 
 {% highlight c# %}
- SfCartesianChart chart = new SfCartesianChart();
-        ...
+ 
+    DoughnutSeries coffeeSeries = new DoughnutSeries()
+    {
+      ItemsSource = this.Product,
+      XBindingPath = "Country",
+      YBindingPath = "Value",
+      LegendIcon = ChartLegendIconType.SeriesType 
+    };
 
-        ColumnSeries coffeeSeries = new ColumnSeries()
-        {
-            ItemsSource = this.Product,
-            XBindingPath = "Country",
-            YBindingPath = "Value",
-            LegendIcon = ChartLegendIconType.SeriesType,
-            Label = "Coffee"
-        };
-        chart.Series.Add(coffeeSeries);
-
-        ColumnSeries teaSeries = new ColumnSeries()
-        {
-            ItemsSource = this.Import,
-            XBindingPath = "Country",
-            YBindingPath = "Value",
-            LegendIcon = ChartLegendIconType.SeriesType,
-            Label = "Tea"
-        };
-        chart.Series.Add(teaSeries);
-
-        ColumnSeries softDrinksSeries = new ColumnSeries()
-        {
-            ItemsSource = this.Export,
-            XBindingPath = "Country",
-            YBindingPath = "Value",
-            LegendIcon = ChartLegendIconType.SeriesType,
-            Label = "Soft Drinks"
-            
-        };
-        chart.Series.Add(softDrinksSeries);
+    chart.Series.Add(coffeeSeries);
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Series Type Legend Icon Customization in MAUI Chart](Legend_images/maui_chart_legend_SeriesType.png)
+![Series Type Legend Icon Customization in MAUI Chart](Legend_images/Icon_SeriesType.png)
