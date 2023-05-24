@@ -11,16 +11,646 @@ documentation: UG
 
 The data grid supports to display the concise information about the bound data objects using summaries. The control provides the following summary types:
 
+* **Caption Summary** - Used to display the summary information in the caption of the group.
+* **Group Summary** - Used to display summary information of data objects in each group.
 * **Table Summary** - Used to display the summary information at top and/or bottom in SfDataGrid.
 
 
-![DataGrid with summary rows](Images\Table-Summary\ShowSummaryInRow.png) 
+![DataGrid with summary rows](Images\Caption-Summary\Summaries.png) 
 
 Summary rows are represented by using the [DataGridSummaryRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryRow.html) that hold summary information of columns in the [SummaryColumns](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryRow.html#Syncfusion_Maui_DataGrid_DataGridSummaryRow_SummaryColumns) property . The `SummaryColumns` contains the collection of [DataGridSummaryColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryColumn.html) which carries name, format, and summary aggregate type of the column.
 
 Derive additional information from the data like sum, average, maximum, minimum, and count using summaries in the data grid. These summary values can be computed for groups or for the entire control using `DataGridSummaryRow` and `DataGridSummaryColumn` that implements [ISummaryRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ISummaryRow.html) and [ISummaryColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ISummaryColumn.html) interfaces.
 
 N> The Summary does not refresh with data. To update the summary for the newly added row, or for the modified summary column, set the [SfDataGrid.View.LiveDataUpdateMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.LiveDataUpdateMode.html) to `LiveDataUpdateMode.AllowDataShaping` or `LiveDataUpdateMode.AllowSummaryUpdate`.
+
+## Caption summaries
+
+The data grid provides built-in support for caption summaries. The caption summary value calculated based on the records in a group. The summary information will be displayed in the caption of group.
+
+### Formatting built-in caption summary
+
+By default, caption summary rows are displayed with the [SfDataGrid.GroupCaptionTextFormat]() property.
+
+Default group caption format is `{ColumnName}: {Key} - {ItemsCount} Items`.
+
+* **ColumnName**: Displays the name of the currently grouped column.
+* **Key**: Displays the key value of the group.
+* **ItemsCount**: Displays the number of items in a group.
+
+![DataGrid with formatting in caption summary row](Images\Caption-Summary\ShowSummaryInRow.png)
+
+The group caption text format can be customized by setting the `SfDataGrid.GroupCaptionTextFormat` property. The following code example illustrates how to customize group caption text in the data grid:
+
+{% tabs %}
+{% highlight xaml%}
+<sfGrid:SfDataGrid x:Name="dataGrid"
+                   AutoGenerateColumns="True"
+                   ColumnSizer="Star"
+                   GroupCaptionTextFormat="{}{ColumnName}: {Key}">
+{% endhighlight %}
+
+{% highlight c#%}
+//Customized group caption text
+dataGrid.GroupCaptionTextFormat = "{ColumnName} : {Key}";
+{% endhighlight %}
+{% endtabs %}
+
+The following screenshot shows the outcome of the previous code:
+
+![DataGrid with formatting in caption summary row](Images\Caption-Summary\ShowSummaryInRow2.png)
+
+
+### Displaying summary for a row
+
+Display summary information in a row by setting the [DataGridSummaryRow.ShowSummaryInRow]() property to `true` and define summary columns. You have to define the [DataGridSummaryRow.Title]() based on the [DataGridSummaryColumn.Name]() property to format summary columns value in a row.
+
+{% tabs %}
+{% highlight xaml%}
+<sfGrid:SfDataGrid.CaptionSummaryRow>
+    <sfGrid:DataGridSummaryRow Title="Total Salary :{TotalSalary} for {ProductCount} members"
+                           ShowSummaryInRow="True">
+        <sfGrid:DataGridSummaryRow.SummaryColumns>
+            <sfGrid:DataGridSummaryColumn Name="TotalSalary"
+                                      Format="{}{Sum:c}"
+                                      MappingName="Salary"
+                                      SummaryType="Int32Aggregate" />
+            <sfGrid:DataGridSummaryColumn Name="ProductCount"
+                                      Format="{}{Count}"
+                                      MappingName="Salary"
+                                      SummaryType="CountAggregate" />
+            </sfGrid:DataGridSummaryRow.SummaryColumns>
+        </sfGrid:DataGridSummaryRow>
+</sfGrid:SfDataGrid.CaptionSummaryRow>
+{% endhighlight %}
+
+{% highlight c#%}
+DataGridSummaryRow summaryRow = new DataGridSummaryRow();
+summaryRow.Title = "Total Salary:{TotalSalary} for {ProductCount} members";
+summaryRow.ShowSummaryInRow = true;
+summaryRow.SummaryColumns.Add(new DataGridSummaryColumn()
+{
+    Name = "TotalSalary",
+    MappingName = "Salary",
+    Format = "{Sum:c}",
+    SummaryType = SummaryType.DoubleAggregate
+});
+summaryRow.SummaryColumns.Add(new DataGridSummaryColumn()
+{
+    Name = "ProductCount",
+    MappingName = "Salary",
+    Format = "{Count}",
+    SummaryType = SummaryType.CountAggregate
+});
+sfGrid.CaptionSummaryRow= summaryRow;
+{% endhighlight %}
+{% endtabs %}
+
+The following screenshot shows the outcome for both values of `ShowSummaryInRow` to `true`:
+
+![DataGrid with customized caption summary row](Images\Caption-Summary\ShowSummaryInRow1.png)
+
+
+### Displaying summary for column
+
+Display summary information in the column by setting the `DataGridSummaryRow.ShowSummaryInRow` to `false` and define summary columns. `SfDataGrid.DataGridSummaryColumn` is the object of [DataGridSummaryRow.SummaryColumns]() collection that contains the following important properties:
+
+* [Name](): Defines name of the `DataGridSummaryColumn` to denote the `DataGridSummaryColumn` in `DataGridSummaryRow` with title.
+* [MappingName](): Defines the corresponding column name used for the summary calculation.
+* [SummaryType](): Defines the `SummaryType` (enum) property to define the aggregate type for the summary calculation. 
+
+The `DataGrid` control provides the following predefined aggregates:
+
+  * CountAggregate
+  * Int32Aggregate
+  * DoubleAggregate
+
+[CustomAggregate]() defines the `CustomAggregate` class object when the summary type is set as `Custom` that calculates the custom summaries.
+
+The [Format]() defines the `string` property that formats the summary value and displays it. The `Format` property may contains two parts separated by a colon (:). First part denotes the aggregate function name, and second part denotes display format of the summary value.
+
+Refer to the [Formatting Summary](#_Formatting_Summary) section to know more about how to format summary, and [Aggregate Types](#_Aggregate_Types) section to know about different summary types.
+
+In the following code snippet, summary is defined for `Salary` column:
+
+{% tabs %}
+{% highlight xaml%}
+<sfGrid:SfDataGrid.CaptionSummaryRow>
+    <sfGrid:DataGridSummaryRow Name="CaptionSummary" ShowSummaryInRow="False">
+        <sfGrid:DataGridSummaryRow.SummaryColumns>
+            <sfGrid:DataGridSummaryColumn Name="CaptionSummary"
+                                      Format="{}{Sum}"
+                                      MappingName="Salary"
+                                      SummaryType="DoubleAggregate" />
+        </sfGrid:DataGridSummaryRow.SummaryColumns>
+    </sfGrid:DataGridSummaryRow>
+</sfGrid:SfDataGrid.CaptionSummaryRow>
+{% endhighlight %}
+
+{% highlight c#%}
+DataGridSummaryRow summaryRow = new DataGridSummaryRow();
+summaryRow.ShowSummaryInRow = false;
+summaryRow.SummaryColumns.Add(new DataGridSummaryColumn()
+{
+    Name = "CaptionSummary",
+    MappingName = "Salary",
+    Format = "{Sum:c}",
+    SummaryType = SummaryType.DoubleAggregate
+});
+sfGrid.CaptionSummaryRow= summaryRow;
+{% endhighlight c#%}
+{% endtabs %}
+
+![DataGrid with caption summary cells customized](Images\Caption-Summary\ShowSummaryInColumn.png)
+
+N> The `CaptionSummaryColumn` text will be aligned based on the `DataGridColumn.TextAlignment`.
+
+### Caption summary template
+
+The data grid hosts any view(s) inside a caption summary for the entire row or for individual columns by loading a template.  
+
+### Displaying template for a row
+
+The template for a caption summary row can be set by using [SfDataGrid.CaptionSummaryTemplate]() to customize it based on requirement. 
+
+Refer the below code example in which a label is loaded in the caption summary template of caption summary row.
+
+{% tabs %}
+{% highlight xaml%}
+
+ <ContentPage.Resources>
+    <ResourceDictionary>
+      <local:GroupCaptionConverter x:Key="SummaryConverter" />
+    </ResourceDictionary>
+  </ContentPage.Resources>
+
+  <sfgrid:SfDataGrid x:Name="dataGrid"
+                   ItemsSource="{Binding OrdersInfo}">
+
+<sfgrid:SfDataGrid.CaptionSummaryTemplate>
+   <DataTemplate>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="{Binding Converter={StaticResource SummaryConverter}, ConverterParameter = {x:Reference dataGrid} }"
+        FontSize="Default"
+        VerticalTextAlignment="Center"
+        HorizontalTextAlignment="Start"
+        LineBreakMode="NoWrap"
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="FillAndExpand">
+                    <Label.Style>
+                        <Style TargetType="Label">
+                            <Setter Property="FontAttributes" Value="Bold, Italic" />
+                        </Style>
+                    </Label.Style>
+                </Label>
+            </StackLayout>
+        </DataTemplate>
+</sfgrid:SfDataGrid.CaptionSummaryTemplate>
+<sfgrid:SfDataGrid.CaptionSummaryRow>
+    <sfgrid:DataGridSummaryRow Name="CaptionSummary" ShowSummaryInRow="True" Title="Salary: {CaptionSummary}">
+        <sfgrid:DataGridSummaryRow.SummaryColumns>
+            <sfgrid:DataGridSummaryColumn Name="CaptionSummary"
+                                      Format="{}{Sum}"
+                                      MappingName="Salary"
+                                      SummaryType="DoubleAggregate" />
+        </sfgrid:DataGridSummaryRow.SummaryColumns>
+    </sfgrid:DataGridSummaryRow>
+</sfgrid:SfDataGrid.CaptionSummaryRow>
+</sfgrid:SfDataGrid>
+{% endhighlight%}
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# %}
+
+// To write a converter, follow the code example:
+
+public class GroupCaptionConverter : IValueConverter
+{
+    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+    {
+        var data = value != null ? value as Group : null;
+        if (data != null)
+        {
+            SfDataGrid dataGrid = (SfDataGrid)parameter;
+            var summaryText = SummaryCreator.GetSummaryDisplayTextForRow((value as Group).SummaryDetails, dataGrid.View);
+
+            return summaryText;
+        }
+        return null;
+    }
+
+    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    {
+        return null;
+    }
+}
+
+
+{% endhighlight %}
+{% endtabs %}
+
+![DataGrid with template loaded for entire caption summary row](Images\Caption-Summary\TemplateRow.png)
+
+N> The `DataTemplateSelector` can also be directly assigned to the `CaptionSummaryTemplate`.
+
+
+### Displaying template for a column
+
+The template for a Caption summary column can be set by using `DataGridSummaryColumn.Template` to customize it based on requirement. 
+
+Refer the below code example in which a label is loaded in the template of caption summary column.
+
+{% tabs %}
+{% highlight xaml%}
+
+ <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:GroupCaptionConverter x:Key="SummaryConverter" />
+        </ResourceDictionary>
+</ContentPage.Resources>
+
+
+<sfgrid:SfDataGrid x:Name="dataGrid" AllowResizingColumn="True" AutoGenerateColumns="False" ColumnSizer="Star">
+    <sfgrid:SfDataGrid.Columns>
+        <sfgrid:DataGridTextColumn MappingName="OrderID" />
+        <sfgrid:DataGridTextColumn MappingName="Salary" />
+        <sfgrid:DataGridTextColumn MappingName="CustomerID" />
+    </sfgrid:SfDataGrid.Columns>
+    <sfgrid:SfDataGrid.CaptionSummaryRow>
+        <sfgrid:DataGridSummaryRow Name="CaptionSummary" ShowSummaryInRow="False" Title="Salary: {CaptionSummary}">
+            <sfgrid:DataGridSummaryRow.SummaryColumns>
+                <sfgrid:DataGridSummaryColumn Name="CaptionSummary" Format="{}{Sum}" MappingName="Salary"  
+                                          SummaryType="DoubleAggregate" >
+                    <sfgrid:DataGridSummaryColumn.Template>
+                        <DataTemplate>
+                                    <StackLayout Orientation="Horizontal" BackgroundColor="Gray">
+                                        <Label Text="{Binding Converter={StaticResource SummaryConverter}, ConverterParameter = {x:Reference dataGrid} }" VerticalOptions="CenterAndExpand"
+                                    TextColor="White"
+                                   FontSize="Default"
+                                   VerticalTextAlignment="Center"
+                                   HorizontalTextAlignment="Start"
+                                   LineBreakMode="NoWrap"
+                                   HorizontalOptions="FillAndExpand">
+                                            <Label.Style>
+                                                <Style TargetType="Label">
+                                                    <Setter Property="FontAttributes" Value="Italic" />
+                                                </Style>
+                                            </Label.Style>
+                                        </Label>
+                                    </StackLayout>
+                                </DataTemplate>
+                        </sfgrid:DataGridSummaryColumn.Template>
+                    </sfgrid:DataGridSummaryColumn>
+                </sfgrid:DataGridSummaryRow.SummaryColumns>
+            </sfgrid:DataGridSummaryRow>
+        </sfgrid:SfDataGrid.CaptionSummaryRow> 
+    </sfgrid:SfDataGrid>
+
+{% endhighlight%}
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# %}
+
+// To write a converter, follow the code example:
+
+
+public class GroupCaptionConverter : IValueConverter
+{
+    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+    {
+        var data = value != null ? value as Group : null;
+        if (data != null)
+        {
+            SfDataGrid dataGrid = (SfDataGrid)parameter;
+            var summaryText = SummaryCreator.GetSummaryDisplayTextForRow((value as Group).SummaryDetails, dataGrid.View);
+
+            return summaryText;
+        }
+        return null;
+    }
+    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    {
+        return null;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![DataGrid with template loaded for individual caption summary column](Images\Caption-Summary\TemplateColumn.png)
+
+## Group summary
+
+Group summary values are calculated based on records in the group. The summary information will be displayed at the bottom of each group. You can view the group summary row by expanding the corresponding group header. The data grid adds any number of group summary row.
+
+Add group summary rows in the data grid by adding the [DataGridSummaryRow]() to [SfDataGrid.GroupSummaryRows]() collection.
+
+### Displaying summary in the row
+
+The summary information can be displayed in the row by setting the [DataGridSummaryRow.ShowSummaryInRow]() to `true` and by defining summary columns. You have to define the [DataGridSummaryRow.Title]() based on the [DataGridSummaryRow.Name]() property to format summary columns value in a row.
+ 
+Refer to [Formatting Summary](#formatting-summary) section to know more about how to format summary. 
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<sfgrid:SfDataGrid x:Name="dataGrid" AllowResizingColumn="True" AllowGroupExpandCollapse="True"
+                    AutoGenerateColumns="True" 
+                    ColumnSizer="Star">
+
+<sfgrid:SfDataGrid.GroupColumnDescriptions>
+        <sfgrid:GroupColumnDescription ColumnName="Salary"  />
+    </sfgrid:SfDataGrid.GroupColumnDescriptions>
+    <sfgrid:SfDataGrid.GroupSummaryRows>
+        <sfgrid:DataGridSummaryRow ShowSummaryInRow="True" Title="Total Salary: {Salary} for {customerID} members">
+            <sfgrid:DataGridSummaryRow.SummaryColumns>
+                <sfgrid:DataGridSummaryColumn Name="Salary" 
+                                                MappingName="Salary" 
+                                                Format="{}{Sum}"
+                                                SummaryType="DoubleAggregate">
+                </sfgrid:DataGridSummaryColumn>
+                <sfgrid:DataGridSummaryColumn Name="customerID" 
+                                                MappingName="CustomerID" 
+                                                Format="{}{Count}"
+                                                SummaryType="CountAggregate">
+                </sfgrid:DataGridSummaryColumn>
+            </sfgrid:DataGridSummaryRow.SummaryColumns>
+        </sfgrid:DataGridSummaryRow>
+    </sfgrid:SfDataGrid.GroupSummaryRows>
+</sfgrid:SfDataGrid>
+
+{% endhighlight %}
+{% highlight c# %}
+
+    this.dataGrid.GroupSummaryRows.Add(new DataGridSummaryRow()
+    {
+        ShowSummaryInRow = true,
+        Title = "Total Salary: {Salary} for {customerID} members",
+        SummaryColumns = new ObservableCollection<ISummaryColumn>()
+        {
+            new DataGridSummaryColumn()
+            {
+                Name="Salary",
+                MappingName="Salary",
+                SummaryType=SummaryType.DoubleAggregate,
+                Format="{Sum}"
+            },
+            new DataGridSummaryColumn()
+            {
+                Name="customerID",
+                MappingName="customerID",
+                Format="{Count}",
+                SummaryType=SummaryType.CountAggregate
+            }
+        }
+    });
+
+{% endhighlight %}
+{% endtabs %}
+
+
+![DataGrid with group summary](Images\Group-Summary\ShowSummaryInRow.png)
+
+### Displaying summary in the column
+
+The summary information can be displayed in the column by setting the [DataGridSummaryRow.ShowSummaryInRow]() to `false` and by defining summary columns. To calculate summary based on the column, specify the following properties:
+
+1. [DataGridSummaryColumn.MappingName](): Provides MappingName of the column (Property name of data object) that you want to calculate summary.
+2. [DataGridSummaryColumn.SummaryType](): Provides different built-in summary calculation functions for various types.
+3. [DataGridSummaryColumn.Format](): Provides format string for the summary based on support function name in the specified SummaryType.
+
+Refer to [Formatting Summary](#formatting-summary) section to know more about how to format summary and [Aggregate Types](#aggregate-types) section to know about different Summary Types.
+
+In the following code snippet, summary is defined for `Salary` and `CustomerID` columns:
+
+{% tabs %}
+{% highlight xaml %}
+    <sfgrid:SfDataGrid x:Name="dataGrid" AllowResizingColumn="True"
+                       AutoGenerateColumns="True" 
+                       ColumnSizer="Star">
+       <sfgrid:SfDataGrid.GroupSummaryRows>
+            <sfgrid:DataGridSummaryRow ShowSummaryInRow="False" >
+                <sfgrid:DataGridSummaryRow.SummaryColumns>
+                    <sfgrid:DataGridSummaryColumn Name="Salary" 
+                                                  MappingName="Salary" 
+                                                  Format="{}{Sum}"
+                                                  SummaryType="DoubleAggregate">
+                    </sfgrid:DataGridSummaryColumn>
+                </sfgrid:DataGridSummaryRow.SummaryColumns>
+            </sfgrid:DataGridSummaryRow>
+        </sfgrid:SfDataGrid.GroupSummaryRows>
+    </sfgrid:SfDataGrid>
+
+{% endhighlight %}
+
+{% highlight c# %}
+            this.dataGrid.GroupSummaryRows.Add(new DataGridSummaryRow()
+            {
+                ShowSummaryInRow = false,
+                SummaryColumns = new ObservableCollection<ISummaryColumn>()
+                {
+                    new DataGridSummaryColumn()
+                    {
+                        Name="Salary",
+                        MappingName="Salary",
+                        SummaryType=SummaryType.DoubleAggregate,
+                        Format="{Sum}"
+                    },
+                }
+            });
+{% endhighlight %}
+{% endtabs %}
+
+
+![DataGrid with customized summary for group summary cells](Images\Group-Summary\ShowSummaryInColumn.png)
+
+### Group summary template
+
+The data grid hosts any view(s) inside a group summary for the entire row or for individual columns by loading a template.  
+
+### Displaying template for a row
+
+The template for a group summary row can be set by using `SfDataGrid.GroupSummaryTemplate` to customize it based on requirement. 
+
+Refer the below code example in which a label is loaded in the group summary template of group summary row.
+
+{% tabs %}
+{% highlight xaml%}
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:GroupSummaryConverter x:Key="SummaryConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+  <sfgrid:SfDataGrid x:Name="dataGrid"
+                   ItemsSource="{Binding OrdersInfo}">
+       <sfgrid:SfDataGrid.GroupSummaryTemplate>
+            <DataTemplate>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="{Binding Converter={StaticResource SummaryConverter}, ConverterParameter = {x:Reference dataGrid} }"
+                                           TextColor="Red"
+                                           FontSize="Default"
+                                           VerticalTextAlignment="Center"
+                                           HorizontalTextAlignment="Start"
+                                           LineBreakMode="NoWrap"
+                                           HorizontalOptions="FillAndExpand"
+                                           VerticalOptions="FillAndExpand">
+                            <Label.Style>
+                                <Style TargetType="Label">
+                                    <Setter Property="FontAttributes" Value="Bold, Italic" />
+                                </Style>
+                            </Label.Style>
+                        </Label>
+                    </StackLayout>
+                </DataTemplate>
+       </sfgrid:SfDataGrid.GroupSummaryTemplate>
+
+   <sfgrid:SfDataGrid.GroupSummaryRows>
+            <sfgrid:DataGridSummaryRow ShowSummaryInRow="True">
+                <sfgrid:DataGridSummaryRow.SummaryColumns>
+                    <sfgrid:DataGridSummaryColumn Name="Salary" 
+                                                  MappingName="Salary" 
+                                                  Format="{}{Sum}"
+                                                  SummaryType="DoubleAggregate">
+                    </sfgrid:DataGridSummaryColumn>
+                    <sfgrid:DataGridSummaryColumn Name="customerID" 
+                                                  MappingName="CustomerID" 
+                                                  Format="{}{Count}"
+                                                  SummaryType="CountAggregate">
+                    </sfgrid:DataGridSummaryColumn>
+                </sfgrid:DataGridSummaryRow.SummaryColumns>
+            </sfgrid:DataGridSummaryRow>
+        </sfgrid:SfDataGrid.GroupSummaryRows>
+</sfgrid:SfDataGrid>
+
+{% endhighlight%}
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# %}
+
+// To write a converter, follow the code example:
+
+public class GroupSummaryConverter : IValueConverter
+{
+    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+    {
+        var data = value != null ? value as SummaryRecordEntry : null;
+        if (data != null)
+        {
+            SfDataGrid dataGrid = (SfDataGrid)parameter;
+            var summaryText = SummaryCreator.GetSummaryDisplayText(data,"Salary",dataGrid.View);
+            return "Total Salary:" + " " + summaryText.ToString();
+        }
+        return null;
+    }
+    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    {
+        return null;
+    }
+}
+
+
+{% endhighlight %}
+{% endtabs %}
+
+![DataGrid with template loaded for entire group summary row](Images\Group-Summary\RowTemplate.png)
+
+N> The `DataTemplateSelector` can also be directly assigned to the `SfDataGrid.GroupSummaryTemplate`.
+
+### Displaying template for a column
+
+The template for a group summary column can be set by using `GridSummaryColumn.Template` to customize it based on requirement. 
+
+Refer the below code example in which a label is loaded in the template of group summary column.
+
+{% tabs %}
+{% highlight xaml%}
+
+ <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:GroupSummaryConverter x:Key="SummaryConverter" />
+        </ResourceDictionary>
+</ContentPage.Resources>
+
+
+<sfgrid:SfDataGrid x:Name="dataGrid" AllowResizingColumn="True" AutoGenerateColumns="False" ColumnSizer="Star">
+    <sfgrid:SfDataGrid.Columns>
+        <sfgrid:DataGridTextColumn MappingName="OrderID" />
+        <sfgrid:DataGridTextColumn MappingName="Salary" />
+        <sfgrid:DataGridTextColumn MappingName="CustomerID" />
+        <sfgrid:DataGridTextColumn MappingName="Country" />
+    </sfgrid:SfDataGrid.Columns>
+     <sfgrid:SfDataGrid.GroupSummaryRows>
+            <sfgrid:DataGridSummaryRow ShowSummaryInRow="False" >
+                <sfgrid:DataGridSummaryRow.SummaryColumns>
+                    <sfgrid:DataGridSummaryColumn Name="Salary"
+                                                  MappingName="Salary" 
+                                                  Format="{}{Sum}"
+                                                  SummaryType="DoubleAggregate">
+                        <sfgrid:DataGridSummaryColumn.Template>
+                            <DataTemplate>
+                                    <StackLayout Orientation="Horizontal" BackgroundColor="Gray">
+                                        <Label Text="{Binding Converter={StaticResource SummaryConverter}, ConverterParameter = {x:Reference dataGrid} }" VerticalOptions="CenterAndExpand"
+                                    TextColor="White"
+                                   FontSize="Default"
+                                   VerticalTextAlignment="Center"
+                                   HorizontalTextAlignment="Start"
+                                   LineBreakMode="NoWrap"
+                                   HorizontalOptions="FillAndExpand">
+                                            <Label.Style>
+                                                <Style TargetType="Label">
+                                                    <Setter Property="FontAttributes" Value="Italic" />
+                                                </Style>
+                                            </Label.Style>
+                                        </Label>
+                                    </StackLayout>
+                                </DataTemplate>
+                        </sfgrid:DataGridSummaryColumn.Template>
+                    </sfgrid:DataGridSummaryColumn>
+                    </sfgrid:DataGridSummaryRow.SummaryColumns>
+            </sfgrid:DataGridSummaryRow>
+        </sfgrid:SfDataGrid.GroupSummaryRows>
+
+    </sfgrid:SfDataGrid>
+
+{% endhighlight%}
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# %}
+
+// To write a converter, follow the code example:
+
+public class GroupSummaryConverter : IValueConverter
+{
+    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+    {
+        var data = value != null ? value as SummaryRecordEntry : null;
+        if (data != null)
+        {
+            SfDataGrid dataGrid = (SfDataGrid)parameter;
+            var summaryText = SummaryCreator.GetSummaryDisplayText(data,"Salary",dataGrid.View);
+            return summaryText.ToString();
+        }
+        return null;
+    }
+    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    {
+        return null;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![DataGrid with template loaded for individual group summary cell](Images\Group-Summary\ColumnTemplate.png)
+
+
 
 ## Table summaries
 
