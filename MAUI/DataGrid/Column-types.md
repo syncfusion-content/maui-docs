@@ -11,7 +11,7 @@ documentation: UG
 
 The SfDataGrid contains different types of columns. The functionalities of the columns can be implied by their names. Any of the columns can be used depending on the requirements.
 
-To get start quickly with Column types in .NET MAUI DataGrid, you can check on this video:
+To get start quickly with column types in .NET MAUI DataGrid, you can check on this video:
 
 <style>#MAUIDataGridVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIDataGridVideoTutorial' src="https://www.youtube.com/embed/tLNua3iGnGE"></iframe>
 
