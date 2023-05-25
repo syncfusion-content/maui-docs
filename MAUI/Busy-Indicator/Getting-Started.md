@@ -13,6 +13,10 @@ documentation: ug
 
 This section explains the steps to configure the [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) control in a real-time scenario and provides a walk-through on some of the customization features available in the control.
 
+To get start quickly with our .NET MAUI Busy Indicator, you can check the below video.
+
+{% youtube "https://www.youtube.com/watch?v=EY1y5PUBkCw" %}
+
 ## Adding a .NET MAUI Busy Indicator reference
 
 Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and then install it.
