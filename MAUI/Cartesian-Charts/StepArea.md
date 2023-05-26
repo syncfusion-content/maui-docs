@@ -13,7 +13,7 @@ documentation: ug
 
 Step area chart is used to display data that changes over time or across different categories. 
 
-In a step area chart, the data points are connected by horizontal and vertical lines to create a series of steps. Each step represents a specific time interval or category. The area between the steps is then filled with color or shading. To render a area chart, create an instance of [StepAreaSeries] , and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1) 
+In a step area chart, the data points are connected by horizontal and vertical lines to create a series of steps. Each step represents a specific time interval or category. The area between the steps is then filled with color or shading. To render a area chart, create an instance of [StepAreaSeries], and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1) 
 
 N> The cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) as its default content.
 
@@ -32,8 +32,8 @@ N> The cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
     </chart:SfCartesianChart.YAxes>   
 
     <chart:StepAreaSeries ItemsSource="{Binding Data}"
-					  XBindingPath="Month"
-					  YBindingPath="Value"/>  
+					      XBindingPath="Month"
+					      YBindingPath="Value"/>  
 
 </chart:SfCartesianChart>
 
@@ -74,9 +74,9 @@ A marker, also known as a symbol, is used to determine or highlight the position
 <chart:SfCartesianChart>
 ...
  <chart:StepAreaSeries XBindingPath="Month"
-                   YBindingPath="Value"
-                   ItemsSource="{Binding Data}"
-                   ShowMarkers="True"/>
+                       YBindingPath="Value"
+                       ItemsSource="{Binding Data}"
+                       ShowMarkers="True"/>
 
 </chart:SfCartesianChart>
 
@@ -120,9 +120,9 @@ In order to change the series markers appearance, create an instance of the [Mar
 <chart:SfCartesianChart>
 ...
  <chart:StepAreaSeries XBindingPath="Month"
-                   YBindingPath="Value"
-                   ItemsSource="{Binding Data}"
-                   ShowMarkers="True">
+                       YBindingPath="Value"
+                       ItemsSource="{Binding Data}"
+                       ShowMarkers="True">
     <chart:StepAreaSeries.MarkerSettings>
         <chart:ChartMarkerSettings Type="Diamond"
                                    Fill="Brown"
@@ -164,3 +164,8 @@ this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %}
+
+
+
+
+
