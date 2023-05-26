@@ -9,7 +9,7 @@ documentation: ug
 
 # Legend in .NET MAUI Cartesian Chart
 
-A legend is a graphical representation that explains the meaning of the  data series in a chart. It typically consists of a key or symbol associated with each data series and a label that describes what that series represents. The legend helps users understand the data being presented in the chart by providing a visual reference for the different categories or data points.
+A legend is a graphical representation that explains the meaning of the data series in a chart. It typically consists of a key or symbol associated with each data series and a label that describes what that series represents. The legend helps users understand the data being presented in the chart by providing a visual reference for the different categories or data points.
 
 {% tabs %}
 
@@ -209,7 +209,7 @@ We can control the visibility of the series by enabling the [ToggleSeriesVisibil
 
 ## Legend Icon Customization
 
-We can able to customize the appearence of the Legend Icon using the [LegendIcon]() in the series.
+We can able to customize the appearance of the Legend Icon using the [LegendIcon]() in the series.
 In [LegendIcon]() property we can use below listed Shapes to Customize the Legend Icon:
 
 | Icon Shapes | Icon Shapes       | Icon Shapes   |
@@ -230,7 +230,7 @@ N> The default value for the LegendIcon in the Series is circular in shape.
 
     <chart:SfCartesianChart>
         ...
-             <chart:ColumnSeries ItemsSource="{Binding Product}"
+            <chart:ColumnSeries ItemsSource="{Binding Product}"
                                 XBindingPath="Country"
                                 YBindingPath="Value"
                                 Label="Cofee"
@@ -296,7 +296,7 @@ N> The default value for the LegendIcon in the Series is circular in shape.
 ### Series Type Legend Icon
 
 We can Customize the Legend Icon based on the Series type in the Chart.
-Each series  has its own legend icon. This can be achieve through the [LegendIcon]() of the series is set to be [SeriesType]().
+Each series has its own legend icon. This can be achieve through the [LegendIcon]() of the series is set to be [SeriesType]().
 
 
 {% tabs %}
@@ -306,7 +306,7 @@ Each series  has its own legend icon. This can be achieve through the [LegendIco
 
     <chart:SfCartesianChart>
         ...
-             <chart:ColumnSeries ItemsSource="{Binding Product}"
+            <chart:ColumnSeries ItemsSource="{Binding Product}"
                                 XBindingPath="Country"
                                 YBindingPath="Value"
                                 Label="Cofee"
