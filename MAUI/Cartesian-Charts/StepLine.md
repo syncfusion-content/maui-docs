@@ -7,13 +7,13 @@ control: SfCartesianChart
 documentation: ug
 ---
 
-# StepLine Chart in .NET MAUI Chart
+# Step Line Chart in .NET MAUI Chart
 
-StepLine chart is used to display the data showing changes in values over time by connecting points on plots with a combination of horizontal and vertical lines. And it's used to when it necessary to highight the irreqularity changes. It appears to be steps.
+Step line chart is used to display the data showing changes in values over time by connecting points on plots with a combination of horizontal and vertical lines. And it's used to when it necessary to highlight the irregularity changes. It appears to be steps.
 
-## StepLine Chart
+## Step Line Chart
 
-To render the StepLine chart,create an instance of [StepLineSeries](),and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).
+To render the Step line chart, create an instance of [StepLineSeries](),and add it to the  [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).
 
 N> The cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) as its default content.
 
@@ -77,9 +77,9 @@ N> The cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
 
 ![StepLine Chart in MAUI](Chart-types_images/StepLineChart.png)
 
-## Dashed StepLine Chart
+## Dashed Step Line Chart
 
-The [StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LineSeries.html#Syncfusion_Maui_Charts_LineSeries_StrokeDashArray) property of [StepLineSeries]() is used to render the StepLine series with dashes. Odd value considered as rendering size and Even value considered as gap.
+The [StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LineSeries.html#Syncfusion_Maui_Charts_LineSeries_StrokeDashArray) property of [StepLineSeries]() is used to render the Step line series with dashes. Odd value considered as rendering size and Even value considered as gap.
 
 {% tabs %}
 
@@ -143,10 +143,10 @@ The [StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts
 
 ![StepLine Chart in MAUI](Chart-types_images/DashedStepLine.png)
 
-## Vertical StepLine Chart 
+## Vertical Step Line Chart 
 
-The [IsTransposed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_IsTransposedProperty) property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1) is used to render the StepLine series in vertically.To enable the StepLine series in vertically , set the IsTransposed property to true.  
-
+The [IsTransposed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_IsTransposedProperty) property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1) is used to render the Step line series in vertically. To enable the Step line series in vertically, set the IsTransposed property to true.
+ 
 {% tabs %}
 
 {% highlight xaml %}
