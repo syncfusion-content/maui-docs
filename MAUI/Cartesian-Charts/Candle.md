@@ -9,11 +9,11 @@ documentation: ug
 
 # Candle Chart in .NET MAUI Chart
 
-Candlestick charts are a type of financial chart used to represent the price movement of an asset over time. The chart is made up of a series of rectangular bars, called candlesticks, that represent a specific time period, typically one day. To render a candle chart, create an instance of [CandleSeries](), and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).
+Candlestick charts are a type of financial chart used to represent the price movement of an asset over time. The chart is made up of a series of rectangular bars, called candlesticks, that represent a specific time, typically one day. To render a candle chart, create an instance of [CandleSeries](), and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).
 
 N> The cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) as its default content.
 
-To plot a point on a candlestick chart, a collection of five values is required, including the X-value, open value, high value, low value, and close value . You can use this below collection.
+To plot a point on a candlestick chart, a collection of five values is required, including the X-value, open value, high value, low value, and close value. You can use the below collection.
 
 {% tabs %}
 
@@ -86,7 +86,7 @@ To plot a point on a candlestick chart, a collection of five values is required,
 
 ## Bull and Bear Color
 
-In Candle chart, [BullFillColor]() property is used to specify a fill color for the segments that indicates an increase in stock price in the measured time interval and [BearFillColor]() property is used to specify a fill color for the segments that indicates a decrease in stock price in the measured time interval.
+In the Candle chart, the [BullFillColor]() property is used to specify a fill color for the segments that indicates an increase in the stock price in the measured time interval, and the [BearFillColor]() property is used to specify a fill color for the segments that indicates a decrease in the stock price in the measured time interval.
 
 {% tabs %}
 
@@ -146,7 +146,7 @@ In Candle chart, [BullFillColor]() property is used to specify a fill color for 
 
 ## EnableSolidCandle
 
-In Candle Series, [EnableSolidCandle]() property is used to specify whether the candle segment should be filled or hollow. The default value of this property is false.
+In Candle Series, the [EnableSolidCandle]() property is used to specify whether the candle segment should be filled or hollow. The default value of this property is false.
 
 {% tabs %}
 
