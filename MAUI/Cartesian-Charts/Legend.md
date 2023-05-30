@@ -95,11 +95,9 @@ A legend is a graphical representation that explains the meaning of the data ser
 
 ![Chart Legend in MAUI Chart](Legend_images/maui_chart_legend_Enable.png)
 
-
 ## Legend Visibility
 
-To control the visibility of the legend in a chart control, the [IsVisible]() property can be used. Here's an example of how to define the legend visibility in a chart control:
-
+To control the visibility of the legend in a chart control, the [IsVisible]() property can be used. Here is an example of how to define the legend visibility in a chart control:
 
 {% tabs %}
 
@@ -137,8 +135,8 @@ We can adjust the placement by assigning one of the following values to [legendP
 
 * [LegendPlacement.Top]()- Places the legend at the top of the chart.
 * [LegendPlacement.Bottom]()- Places the legend at the Bottom of the chart.
-* [LegendPlacement.Right]()- Places the legend at the right side of the chart.
-* [LegendPlacement.Left]()- Places the legend at the left side of the chart.
+* [LegendPlacement.Right]()- Places the legend on the right side of the chart.
+* [LegendPlacement.Left]()- Places the legend on the left side of the chart.
 
 N> By default, the [LegendPlacement]() is [LegendPlacement.Top]()
 
@@ -206,11 +204,10 @@ We can control the visibility of the series by enabling the [ToggleSeriesVisibil
 
 {% endtabs %}
 
-
 ## Legend Icon Customization
 
-We can able to customize the appearance of the Legend Icon using the [LegendIcon]() in the series.
-In [LegendIcon]() property we can use below listed Shapes to Customize the Legend Icon:
+We can be able to customize the appearance of the Legend Icon using the [LegendIcon]() in the series.
+In the [LegendIcon]() property, we can use the following listed Shapes to Customize the Legend Icon:
 
 | Icon Shapes | Icon Shapes       | Icon Shapes   |
 | --------    | --------          | --------      |
@@ -219,9 +216,7 @@ In [LegendIcon]() property we can use below listed Shapes to Customize the Legen
 | Diamond     | Pentagon          | Vertical Line |
 | Hexagon     | Plus              |        |
 
-
 N> The default value for the LegendIcon in the Series is circular in shape.
-
 
 {% tabs %}
 
@@ -296,8 +291,7 @@ N> The default value for the LegendIcon in the Series is circular in shape.
 ### Series Type Legend Icon
 
 We can Customize the Legend Icon based on the Series type in the Chart.
-Each series has its own legend icon. This can be achieve through the [LegendIcon]() of the series is set to be [SeriesType]().
-
+Each series has its own legend icon. This can be achieved through the [LegendIcon]() of the series is set to be [SeriesType]().
 
 {% tabs %}
 
