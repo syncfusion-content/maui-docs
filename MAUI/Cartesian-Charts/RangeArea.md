@@ -34,12 +34,12 @@ N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
     <chart:SfCartesianChart.YAxes>
         <chart:NumericalAxis />
     </chart:SfCartesianChart.YAxes>   
-
+     
     <chart:RangeAreaSeries ItemsSource="{Binding Data}"
-			               XBindingPath="XValue"
+                           XBindingPath="XValue"
                            High="HighValue"
                            Low="LowValue"/>
-
+    
     </chart:SfCartesianChart>
 
 {% endhighlight %}
