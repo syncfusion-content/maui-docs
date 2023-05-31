@@ -29,10 +29,9 @@ N> The cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
     <chart:SfCartesianChart.YAxes>
         <chart:NumericalAxis />
     </chart:SfCartesianChart.YAxes>   
-
     <chart:StepAreaSeries ItemsSource="{Binding Data}"
-					      XBindingPath="Month"
-					      YBindingPath="Value"/>  
+                          XBindingPath="Month"
+                          YBindingPath="Value"/>
 
 </chart:SfCartesianChart>
 
