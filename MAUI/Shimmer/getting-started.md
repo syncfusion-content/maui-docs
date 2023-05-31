@@ -16,6 +16,7 @@ To get start quickly with our .NET MAUI Shimmer, you can check the below video.
 {% youtube
 "youtube:https://www.youtube.com/watch?v=NGGQhUA9Bu0"%}
 
+
 ## Creating an application using the .NET MAUI Shimmer
 
 1. Create a new .NET MAUI application in Visual Studio.
