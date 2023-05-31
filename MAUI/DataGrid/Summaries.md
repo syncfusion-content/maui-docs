@@ -30,7 +30,7 @@ The data grid provides built-in support for caption summaries. The caption summa
 
 ### Formatting built-in caption summary
 
-By default, caption summary rows are displayed with the [SfDataGrid.GroupCaptionTextFormat]() property.
+By default, the caption summary rows in the data grid are displayed using the [SfDataGrid.GroupCaptionTextFormat]() property.
 
 Default group caption format is `{ColumnName}: {Key} - {ItemsCount} Items`.
 
@@ -40,7 +40,7 @@ Default group caption format is `{ColumnName}: {Key} - {ItemsCount} Items`.
 
 ![DataGrid with formatting in caption summary row](Images\Caption-Summary\ShowSummaryInRow.png)
 
-The group caption text format can be customized by setting the `SfDataGrid.GroupCaptionTextFormat` property. The following code example illustrates how to customize group caption text in the data grid:
+You can customize the group caption text format by setting the `SfDataGrid.GroupCaptionTextFormat` property. The code example below illustrates how to customize the group caption text in the data grid:
 
 {% tabs %}
 {% highlight xaml%}
@@ -51,7 +51,7 @@ The group caption text format can be customized by setting the `SfDataGrid.Group
 {% endhighlight %}
 
 {% highlight c#%}
-//Customized group caption text
+// Customized group caption text
 dataGrid.GroupCaptionTextFormat = "{ColumnName} : {Key}";
 {% endhighlight %}
 {% endtabs %}
@@ -63,7 +63,7 @@ The following screenshot shows the outcome of the previous code:
 
 ### Displaying summary for a row
 
-Display summary information in a row by setting the [DataGridSummaryRow.ShowSummaryInRow]() property to `true` and define summary columns. You have to define the [DataGridSummaryRow.Title]() based on the [DataGridSummaryColumn.Name]() property to format summary columns value in a row.
+Display summary information in a row by setting the [DataGridSummaryRow.ShowSummaryInRow]() property to `true` and define summary columns. You have to define the [DataGridSummaryRow.Title]() based on the [DataGridSummaryColumn.Name]() property in order to format the values of the summary columns in the row.
 
 {% tabs %}
 {% highlight xaml%}
@@ -113,25 +113,19 @@ The following screenshot shows the outcome for both values of `ShowSummaryInRow`
 
 ### Displaying summary for column
 
-Display summary information in the column by setting the `DataGridSummaryRow.ShowSummaryInRow` to `false` and define summary columns. `SfDataGrid.DataGridSummaryColumn` is the object of [DataGridSummaryRow.SummaryColumns]() collection that contains the following important properties:
+To display summary information in a column, you need to set the `DataGridSummaryRow.ShowSummaryInRow` to `false` and define summary columns using the `SfDataGrid.DataGridSummaryColumn` object. The `DataGridSummaryColumn` object has several important properties:
 
-* [Name](): Defines name of the `DataGridSummaryColumn` to denote the `DataGridSummaryColumn` in `DataGridSummaryRow` with title.
-* [MappingName](): Defines the corresponding column name used for the summary calculation.
-* [SummaryType](): Defines the `SummaryType` (enum) property to define the aggregate type for the summary calculation. 
+* [Name](): This property defines the name of the `DataGridSummaryColumn`, which is used to identify the column in the `DataGridSummaryRow` and provide a title for it.
+* [MappingName](): This property defines the corresponding column name used for the summary calculation.
+* [SummaryType]():  This property defines the `SummaryType` enum property, which determines the type of aggregate function used for the summary calculation. 
 
-The `DataGrid` control provides the following predefined aggregates:
+The DataGrid control provides several predefined aggregates, such as CountAggregate, Int32Aggregate, and DoubleAggregate. When the summary type is set as Custom, you can define a CustomAggregate class object to calculate custom summaries.
 
-  * CountAggregate
-  * Int32Aggregate
-  * DoubleAggregate
+The [Format]() property defines a string property that formats the summary value and displays it. The Format property can have two parts separated by a colon (:). The first part denotes the aggregate function name, and the second part denotes the display format of the summary value.
 
-[CustomAggregate]() defines the `CustomAggregate` class object when the summary type is set as `Custom` that calculates the custom summaries.
+Please refer to the "Formatting Summary" section for more information on how to format the summary, and the "Aggregate Types" section to learn about the different summary types.
 
-The [Format]() defines the `string` property that formats the summary value and displays it. The `Format` property may contains two parts separated by a colon (:). First part denotes the aggregate function name, and second part denotes display format of the summary value.
-
-Refer to the [Formatting Summary](#_Formatting_Summary) section to know more about how to format summary, and [Aggregate Types](#_Aggregate_Types) section to know about different summary types.
-
-In the following code snippet, summary is defined for `Salary` column:
+In the following code snippet, a summary is defined for the `Salary` column:
 
 {% tabs %}
 {% highlight xaml%}
@@ -167,13 +161,13 @@ N> The `CaptionSummaryColumn` text will be aligned based on the `DataGridColumn.
 
 ### Caption summary template
 
-The data grid hosts any view(s) inside a caption summary for the entire row or for individual columns by loading a template.  
+The data grid allows you to host any view(s) inside a caption summary for the entire row or for individual columns by loading a template. 
 
 ### Displaying template for a row
 
-The template for a caption summary row can be set by using [SfDataGrid.CaptionSummaryTemplate]() to customize it based on requirement. 
+The template for a caption summary row can be customized by using the [SfDataGrid.CaptionSummaryTemplate]() property. This allows you to define a custom template according to your requirements.
 
-Refer the below code example in which a label is loaded in the caption summary template of caption summary row.
+Please refer to the code example below, where a label is loaded in the caption summary template of the caption summary row:
 
 {% tabs %}
 {% highlight xaml%}
@@ -207,7 +201,7 @@ Refer the below code example in which a label is loaded in the caption summary t
         </DataTemplate>
 </sfgrid:SfDataGrid.CaptionSummaryTemplate>
 <sfgrid:SfDataGrid.CaptionSummaryRow>
-    <sfgrid:DataGridSummaryRow Name="CaptionSummary" ShowSummaryInRow="True" Title="Salary: {CaptionSummary}">
+    <sfgrid:DataGridSummaryRow Name="CaptionSummary" ShowSummaryInRow="True" Title="Total Salary: {CaptionSummary}">
         <sfgrid:DataGridSummaryRow.SummaryColumns>
             <sfgrid:DataGridSummaryColumn Name="CaptionSummary"
                                       Format="{}{Sum}"
@@ -257,9 +251,9 @@ N> The `DataTemplateSelector` can also be directly assigned to the `CaptionSumma
 
 ### Displaying template for a column
 
-The template for a Caption summary column can be set by using `DataGridSummaryColumn.Template` to customize it based on requirement. 
+The template for a caption summary column can be customized by using the `DataGridSummaryColumn.Template` property. This allows you to define a custom template according to your requirements.
 
-Refer the below code example in which a label is loaded in the template of caption summary column.
+Here's an example code snippet that demonstrates how to load a label in the template of a caption summary column:
 
 {% tabs %}
 {% highlight xaml%}
@@ -343,15 +337,15 @@ public class GroupCaptionConverter : IValueConverter
 
 ## Group summary
 
-Group summary values are calculated based on records in the group. The summary information will be displayed at the bottom of each group. You can view the group summary row by expanding the corresponding group header. The data grid adds any number of group summary row.
+Group summary values are calculated based on the records within each group. The summary information will be displayed at the bottom of each group. You can view the group summary row by expanding the corresponding group header. The data grid allows for the addition of any number of group summary rows.
 
-Add group summary rows in the data grid by adding the [DataGridSummaryRow]() to [SfDataGrid.GroupSummaryRows]() collection.
+To add group summary rows in the data grid, you can add the [DataGridSummaryRow]() objects to the [SfDataGrid.GroupSummaryRows]() collection.
 
 ### Displaying summary in the row
 
-The summary information can be displayed in the row by setting the [DataGridSummaryRow.ShowSummaryInRow]() to `true` and by defining summary columns. You have to define the [DataGridSummaryRow.Title]() based on the [DataGridSummaryRow.Name]() property to format summary columns value in a row.
- 
-Refer to [Formatting Summary](#formatting-summary) section to know more about how to format summary. 
+Summary information can be displayed in the entire row by setting the [DataGridSummaryRow.ShowSummaryInRow]() property to `true` and defining summary columns. The [DataGridSummaryRow.Title]() property needs to be defined based on the [DataGridSummaryRow.Name]() property in order to format the values of the summary columns in a row.
+
+Please refer to the [Formatting Summary](#formatting-summary)  section to learn more about how to format the summary.
 
 {% tabs %}
 
@@ -416,15 +410,15 @@ Refer to [Formatting Summary](#formatting-summary) section to know more about ho
 
 ### Displaying summary in the column
 
-The summary information can be displayed in the column by setting the [DataGridSummaryRow.ShowSummaryInRow]() to `false` and by defining summary columns. To calculate summary based on the column, specify the following properties:
+The summary information can be displayed in a column by setting the [DataGridSummaryRow.ShowSummaryInRow]() property to `false` and defining summary columns. To calculate the summary based on a column, you need to specify the following properties:
 
-1. [DataGridSummaryColumn.MappingName](): Provides MappingName of the column (Property name of data object) that you want to calculate summary.
-2. [DataGridSummaryColumn.SummaryType](): Provides different built-in summary calculation functions for various types.
-3. [DataGridSummaryColumn.Format](): Provides format string for the summary based on support function name in the specified SummaryType.
+[DataGridSummaryColumn.MappingName](): This property provides the MappingName of the column (the property name of the data object) for which you want to calculate the summary.
+[DataGridSummaryColumn.SummaryType](): This property provides different built-in summary calculation functions for various types.
+[DataGridSummaryColumn.Format](): This property allows you to specify a format string for the summary based on the supported function name in the specified SummaryType.
 
-Refer to [Formatting Summary](#formatting-summary) section to know more about how to format summary and [Aggregate Types](#aggregate-types) section to know about different Summary Types.
+Please refer to the [Formatting Summary](#formatting-summary) section to learn more about how to format the summary, and the [Aggregate Types](#aggregate-types) section to understand the different Summary Types.
 
-In the following code snippet, summary is defined for `Salary` and `CustomerID` columns:
+In the following code snippet, a summary is defined for the `Salary` and `CustomerID` columns:
 
 {% tabs %}
 {% highlight xaml %}
@@ -469,13 +463,13 @@ In the following code snippet, summary is defined for `Salary` and `CustomerID` 
 
 ### Group summary template
 
-The data grid hosts any view(s) inside a group summary for the entire row or for individual columns by loading a template.  
+The data grid allows you to host any view(s) inside a group summary for the entire row or individual columns by loading a template. 
 
 ### Displaying template for a row
 
-The template for a group summary row can be set by using `SfDataGrid.GroupSummaryTemplate` to customize it based on requirement. 
+The template for a group summary row can be customized by using the `SfDataGrid.GroupSummaryTemplate` property.
 
-Refer the below code example in which a label is loaded in the group summary template of group summary row.
+Refer to the code example below, which demonstrates how to load a label in the group summary template of a group summary row:
 
 {% tabs %}
 {% highlight xaml%}
@@ -564,9 +558,9 @@ N> The `DataTemplateSelector` can also be directly assigned to the `SfDataGrid.G
 
 ### Displaying template for a column
 
-The template for a group summary column can be set by using `GridSummaryColumn.Template` to customize it based on requirement. 
+The template for a group summary column can be customized by using the `GridSummaryColumn.Template`  property. This allows you to define a custom template according to your requirements.
 
-Refer the below code example in which a label is loaded in the template of group summary column.
+Please refer to the code example below, which demonstrates how to load a label in the template of a group summary column:
 
 {% tabs %}
 {% highlight xaml%}
