@@ -14,7 +14,7 @@ The Syncfusion .NET MAUI DateTime Range Selector ([SfDateTimeRangeSelector](http
 ## Key features
 
 * **DateTime support** - Provided the functionality for selecting DateTime values.
-* **Content** - Add control of any type inside the DateTime Range Selector. It is also possible to add [Charts](https://www.syncfusion.com/maui-controls/maui-charts) controls.
+* **Content** - Add control of any type inside the DateTime Range Selector. It is also possible to add [Charts](https://www.syncfusion.com/maui-controls/maui-cartesian-charts) controls.
 * **Labels** - Render labels for the DateTime values with the option to customize their formats based on your requirements.
 * **Ticks and dividers** - Provide options to show ticks and dividers based on the slider interval. Also, minor ticks can be enabled to indicate the values between each interval.
 * **Discrete mode** - Able to move the thumb in a discrete manner based on the provided step value.
