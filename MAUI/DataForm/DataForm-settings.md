@@ -104,7 +104,7 @@ Generated for the Bool type property.
 {{'[DataFormComboBoxItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormComboBoxItem.html)'| markdownify }}
 </td>
 <td>
-{{'[SfComboBox](https://help.syncfusion.com/maui/combobox)'| markdownify }}
+{{'[SfComboBox](https://help.syncfusion.com/maui/combobox/overview)'| markdownify }}
 </td>
 <td>
 Generated for the enum type property. 
@@ -114,7 +114,7 @@ Generated for the enum type property.
 {{'[DataFormAutoCompleteItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormAutoCompleteItem.html)'| markdownify }}
 </td>
 <td>
-{{'[SfAutoComplete](https://help.syncfusion.com/maui/autocomplete)'| markdownify }}
+{{'[SfAutoComplete](https://help.syncfusion.com/maui/autocomplete/overview)'| markdownify }}
 </td>
 <td>
 Generated for the enum type property. 
