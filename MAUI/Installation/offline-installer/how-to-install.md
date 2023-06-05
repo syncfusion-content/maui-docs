@@ -43,7 +43,7 @@ The steps below show how to install the Essential Studio .NET MAUI installer.
    
     The trial unlock key is only valid for 30 days, and the installer will not accept an expired trial key. 
    
-    To learn how to generate an unlock key for both trial and licensed products, see [this](https://www.syncfusion.com/kb/2326) Knowledge Base article.
+    To learn how to generate an unlock key for both trial and licensed products, see [this](https://support.syncfusion.com/kb/article/2757/how-to-generate-syncfusion-setup-unlock-key-from-syncfusion-support-account) Knowledge Base article.
 
     ![Product key](images/Step-by-Step-Installation_img3.png)   
 
