@@ -153,7 +153,7 @@ SfSignaturePad signaturePad = new SfSignaturePad()
 
 ## Saving the signature as an image
 
-Save the signature drawn in the SignaturePad as an [`ImageSource`](https://docs.microsoft.com/en-us/dotnet/api/xamarin.forms.imagesource?view=xamarin-forms) using the [`ToImageSource()`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_ToImageSource) method which can further be synchronized with your devices and documents that need your signature.
+Save the signature drawn in the SignaturePad as an [`ImageSource`](https://learn.microsoft.com/en-us/dotnet/api/xamarin.forms.imagesource?view=xamarin-forms) using the [`ToImageSource()`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_ToImageSource) method which can further be synchronized with your devices and documents that need your signature.
 
 {% tabs %}
 
@@ -213,7 +213,7 @@ private void OnClearButtonClicked(object? sender, EventArgs e)
 
 ### DrawStarted
 
-This event will be triggered when we start drawing in the SignaturePad. With this, [`CancelEventArgs`](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.canceleventargs.-ctor?view=net-6.0#system-componentmodel-canceleventargs-ctor(system-boolean)) will be passed. Also, restrict the draw start action by setting [`e.cancel`](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.canceleventargs.cancel?view=net-6.0#system-componentmodel-canceleventargs-cancel) as `true`.
+This event will be triggered when we start drawing in the SignaturePad. With this, [`CancelEventArgs`](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.canceleventargs.-ctor?view=net-6.0#system-componentmodel-canceleventargs-ctor(system-boolean)) will be passed. Also, restrict the draw start action by setting [`e.cancel`](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.canceleventargs.cancel?view=net-6.0#system-componentmodel-canceleventargs-cancel) as `true`.
 
 {% tabs %}
 
