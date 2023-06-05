@@ -75,7 +75,7 @@ If the application is registered with an invalid key, another version of license
 
 The following error message will be shown if the trial key has expired after 30 days.
 
-**Error Message:** Your Syncfusion trial license has expired. Please refer to this [help topic](https://help.syncfusion.com/maui/Licensing/licensing-errors#trial-expired) for more information.
+**Error Message:** Your Syncfusion trial license has expired. Please refer to this [help topic](https://help.syncfusion.com/maui/licensing/licensing-errors#trial-expired) for more information.
 
 **Solution:** Purchase from [here](https://www.syncfusion.com/sales/products) to get a valid Syncfusion license.
 
