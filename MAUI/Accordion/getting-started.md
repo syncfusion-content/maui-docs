@@ -19,7 +19,7 @@ The Accordion control allows content to be organized in a vertically stacked lis
  4. Initialize the `SfAccordion` control.
  
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
 
 <ContentPage   
     . . .
@@ -29,7 +29,7 @@ The Accordion control allows content to be organized in a vertically stacked lis
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10" %}
 
 using Syncfusion.Maui.Accordion;
 . . .
@@ -100,7 +100,7 @@ To add the accordion to your application, follow these steps:
 3. Create an instance of accordion control and add as content. 
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="9" %}
 
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -113,7 +113,7 @@ To add the accordion to your application, follow these steps:
              </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="12" %}
 
 using Syncfusion.Maui.Accordion;
 
@@ -142,7 +142,7 @@ Here, Grid is loaded in Header and Content of accordion items.
 N> When loading Label as direct children of `Header` or `Content` of `AccordionItem`, then it will lead to an exception. So, load `Label` inside `Grid` to overcome the crash.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="10" %}
 
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -367,7 +367,7 @@ N> When loading Label as direct children of `Header` or `Content` of `AccordionI
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="97" %}
 using Syncfusion.Maui.Accordion;
 
 namespace GettingStarted;
@@ -724,10 +724,11 @@ N> When adding the template control inside the `StackLayout` or `Grid` with a he
 The `SfAccordion`allows you to customize the expanding and collapsing of accordion items by using the `AnimationDuration` property. By default, the animation duration is set to `250 milliseconds`. 
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-    <syncfusion:SfAccordion x:Name="accordion" AnimationDuration="150" /> 
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+    <syncfusion:SfAccordion x:Name="accordion" 
+                            AnimationDuration="150" /> 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
     accordion.AnimationDuration = 150;
 {% endhighlight %}
 {% endtabs %}
@@ -737,10 +738,11 @@ The `SfAccordion`allows you to customize the expanding and collapsing of accordi
 The `SfAccordion` allows you to customize the rate of change of a parameter over time or the animation style of an accordion item by using the `AnimationEasing` property. By default, the animation easing is set to `Linear`.  
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-         <syncfusion:SfAccordion x:Name="accordion" AnimationEasing="SinOut" />        
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+         <syncfusion:SfAccordion x:Name="accordion"
+                                AnimationEasing="SinOut" />
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
     accordion.AnimationEasing = Syncfusion.Maui.Expander.AnimationEasing.SinOut;
 {% endhighlight %}
 {% endtabs %}
@@ -750,10 +752,11 @@ The `SfAccordion` allows you to customize the rate of change of a parameter over
 The `SfAccordion` allows you to customize the scroll position of the expanded accordion item using the `AutoScrollPosition` property.  By default, the auto scroll position is set to `MakeVisible`.  
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-    <syncfusion:SfAccordion x:Name="accordion" AutoScrollPosition="Top"/>    
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+    <syncfusion:SfAccordion x:Name="accordion"
+                             AutoScrollPosition="Top"/>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
     accordion.AutoScrollPosition = Syncfusion.Maui.Accordion.AutoScrollPosition.Top;
 {% endhighlight %}
 {% endtabs %}
@@ -763,10 +766,11 @@ The `SfAccordion` allows you to customize the scroll position of the expanded ac
 The `SfAccordion` allows you to expand single or multiple items by using the `ExpandMode` property. By default, the expand mode is set to `Single`.  
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-    <syncfusion:SfAccordion x:Name="accordion" ExpandMode="Multiple" />         
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+    <syncfusion:SfAccordion x:Name="accordion" 
+                            ExpandMode="Multiple" />
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
     accordion.ExpandMode = Syncfusion.Maui.Accordion.ExpandMode.Multiple;
 {% endhighlight %}
 {% endtabs %}
@@ -776,10 +780,11 @@ The `SfAccordion` allows you to expand single or multiple items by using the `Ex
 The `SfAccordion` allows you to customize the vertical spacing between the accordion items by using the `ItemSpacing` property. The default value is `6.0d`. 
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-    <syncfusion:SfAccordion x:Name="accordion" ItemSpacing="8.0d" />        
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+    <syncfusion:SfAccordion x:Name="accordion" 
+                            ItemSpacing="8.0d" />
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
     accordion.ItemSpacing = 8.0d;
 {% endhighlight %}
 {% endtabs %}
