@@ -38,7 +38,7 @@ listView.ScrollTo(ViewModel.BookInfo[index], Microsoft.Maui.Controls.ScrollToPos
 {% endhighlight %}
 {% endtabs %}
 
-N> If grouping is enabled, get the desired row index by passing the underlying data in the [DisplayItems.IndexOf](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.DisplayItems.html#Syncfusion_DataSource_DisplayItems_IndexOf_System_Object_) method.
+N> If grouping is enabled, get the desired row index by passing the underlying data in the [DisplayItems.IndexOf](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.DisplayItems.html#Syncfusion_DataSource_DisplayItems_IndexOf_System_Object_) method.
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
