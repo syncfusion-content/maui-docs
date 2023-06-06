@@ -94,38 +94,227 @@ N> When loading `Label` as direct children of `Header` or `Content` of Expander,
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:GettingStarted"
-             x:Class="GettingStarted.MainPage"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Expander;assembly=Syncfusion.Maui.Expander">
-             <ContentPage.Content> 
-                <ScrollView BackgroundColor="#EDF2F5" Grid.Row="1"> 
-                    <StackLayout> 
-                        <syncfusion:SfExpander> 
-                            <syncfusion:SfExpander.Header> 
-                                <Grid>
-                                    <Label TextColor="#495F6E" Text="Veg Pizza" VerticalTextAlignment="Center" /> 
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Expander;assembly=Syncfusion.Maui.Expander"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="GettingStarted.MainPage">
+    <ContentPage.BindingContext>
+        <local:InvoiceViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <ScrollView >
+            <StackLayout  HorizontalOptions="{OnPlatform MacCatalyst=Center,WinUI=Center}"  >
+                <Label Text="Invoice: #FRU037020142097"  Opacity="1.0" VerticalTextAlignment="Center" Margin="0,0,0,5" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
+                <Border StrokeShape="RoundRectangle 8,8,8,8" Margin="{OnPlatform Default='8,0,8,8',WinUI='8,0,6,8',MacCatalyst='8,0,6,8'}" Stroke="#CAC4D0"  StrokeThickness="{OnPlatform MacCatalyst=2,Default=1}" WidthRequest="{OnPlatform MacCatalyst=460,WinUI=340}">
+                    <syncfusion:SfExpander AnimationDuration="200" IsExpanded="True" >
+                        <syncfusion:SfExpander.Header>
+                            <Grid >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="48"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="35"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Text="&#xe703;" FontSize="16" Margin="14,2,2,2"
+                                                   FontFamily='{OnPlatform Android=AccordionFontIcons.ttf#,WinUI=AccordionFontIcons.ttf#AccordionFontIcons,MacCatalyst=AccordionFontIcons,iOS=AccordionFontIcons}'
+                                                   VerticalOptions="Center" VerticalTextAlignment="Center"/>
+                                <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular"  Text="Invoice Date" FontSize="14" Grid.Column="1" VerticalOptions="CenterAndExpand"/>
+                            </Grid>
+                        </syncfusion:SfExpander.Header>
+                        <syncfusion:SfExpander.Content>
+                            <Grid Padding="18,8,0,18" >
+                                <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular"  Text="11:03 AM, 15 January 2019" FontSize="14" VerticalOptions="CenterAndExpand"/>
+                            </Grid>
+                        </syncfusion:SfExpander.Content>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroupList>
+                                <VisualStateGroup>
+                                    <VisualState Name="Expanded">
+                                        <VisualState.Setters>
+                                            <Setter Property="HeaderBackground" Value="Red"/>
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                    <VisualState Name="Collapsed">
+                                        <VisualState.Setters>
+                                            <Setter Property="HeaderBackground" Value="Yellow"/>
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateGroupList>
+                        </VisualStateManager.VisualStateGroups>
+                    </syncfusion:SfExpander>
+                </Border>
+                <Border StrokeShape="RoundRectangle 8,8,8,8" Margin="{OnPlatform Default='8,0,8,8',WinUI='8,0,6,8',MacCatalyst='8,0,6,8'}" Stroke="#CAC4D0"  StrokeThickness="{OnPlatform MacCatalyst=2,Default=1}" WidthRequest="{OnPlatform MacCatalyst=460,WinUI=340}">
+                    <syncfusion:SfExpander  AnimationDuration="200" IsExpanded="False">
+                        <syncfusion:SfExpander.Header>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="48"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="35"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Text="&#xe701;" FontSize="16" Margin="14,2,2,2"
+                                                   FontFamily='{OnPlatform Android=AccordionFontIcons.ttf#,WinUI=AccordionFontIcons.ttf#AccordionFontIcons,MacCatalyst=AccordionFontIcons,iOS=AccordionFontIcons}'
+                                                   VerticalOptions="Center" VerticalTextAlignment="Center"/>
+                                <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular"  Text="Item(s)" FontSize="14" Grid.Column="1" VerticalOptions="CenterAndExpand"/>
+                            </Grid>
+                        </syncfusion:SfExpander.Header>
+                        <syncfusion:SfExpander.Content>
+                            <Grid Padding="18,8,18,18">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <StackLayout Grid.Row="0" BindableLayout.ItemsSource="{Binding ItemInfo}" >
+                                    <BindableLayout.ItemTemplate>
+                                        <DataTemplate>
+                                            <Grid >
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="25"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid>
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="Auto"/>
+                                                    </Grid.RowDefinitions>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*"/>
+                                                        <ColumnDefinition Width="*"/>
+                                                    </Grid.ColumnDefinitions>
+                                                    <Label Text="{Binding ItemName}" VerticalTextAlignment="End" CharacterSpacing="0.25"  FontSize="14" FontFamily="Roboto-Regular"/>
+                                                    <Label Text="{Binding ItemPrice}" VerticalTextAlignment="End" HorizontalTextAlignment="End"  FontSize="14" Grid.Column="1" CharacterSpacing="0.25" FontFamily="Roboto-Regular"/>
+                                                </Grid>
+                                            </Grid>
+                                        </DataTemplate>
+                                    </BindableLayout.ItemTemplate>
+                                </StackLayout>
+                                <Grid Grid.Row="1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="20"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="Total Amount" CharacterSpacing="0.25"  VerticalTextAlignment="Center" TextColor="{StaticResource Primary}" FontSize="14"/>
+                                    <Label Text="$36,220.00" CharacterSpacing="0.25"  HorizontalTextAlignment="End" TextColor="{StaticResource Primary}" VerticalTextAlignment="Center" FontSize="14" Grid.Column="1"/>
                                 </Grid>
-                            </syncfusion:SfExpander.Header> 
-                            <syncfusion:SfExpander.Content> 
-                                <Grid Padding="10,10,10,10" BackgroundColor="#FFFFFF"> 
-                                    <Label TextColor="#303030" Text="Veg pizza is prepared with the items that meet vegetarian standards by not including any meat or animal tissue products." HeightRequest="50" VerticalTextAlignment="Center"/> 
-                                </Grid> 
-                            </syncfusion:SfExpander.Content> 
-                        </syncfusion:SfExpander> 
-                        <syncfusion:SfExpander> 
-                            <syncfusion:SfExpander.Header> 
-                                <Grid>
-                                    <Label TextColor="#495F6E" Text="Non-veg Pizza" VerticalTextAlignment="Center" /> 
-                                </Grid>
-                            </syncfusion:SfExpander.Header> 
-                            <syncfusion:SfExpander.Content> 
-                                <Grid Padding="10,10,10,10" BackgroundColor="#FFFFFF"> 
-                                    <Label TextColor="#303030" Text="Non-veg pizza is prepared by including the meat and animal tissue products." HeightRequest="50" VerticalTextAlignment="Center"/> 
-                                </Grid> 
-                            </syncfusion:SfExpander.Content> 
-                        </syncfusion:SfExpander> 
-                    </StackLayout> 
-                </ScrollView> 
-            </ContentPage.Content>    
+                            </Grid>
+                        </syncfusion:SfExpander.Content>
+                    </syncfusion:SfExpander>
+                </Border>
+                <Border StrokeShape="RoundRectangle 8,8,8,8" Margin="{OnPlatform Default='8,0,8,8',WinUI='8,0,6,8',MacCatalyst='8,0,6,8'}" Stroke="#CAC4D0" StrokeThickness="{OnPlatform MacCatalyst=2,Default=1}" WidthRequest="{OnPlatform MacCatalyst=460,WinUI=340}">
+                    <syncfusion:SfExpander AnimationDuration="200"  IsExpanded="False">
+                        <syncfusion:SfExpander.Header>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="48"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="35"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Text="&#xe702;" FontSize="16" Margin="14,2,2,2"
+                                                   FontFamily='{OnPlatform Android=AccordionFontIcons.ttf#,WinUI=AccordionFontIcons.ttf#AccordionFontIcons,MacCatalyst=AccordionFontIcons,iOS=AccordionFontIcons}'
+                                                   VerticalOptions="Center" VerticalTextAlignment="Center"/>
+                                <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular"  Text="Payment Details" FontSize="14" Grid.Column="1" VerticalOptions="CenterAndExpand"/>
+                            </Grid>
+                        </syncfusion:SfExpander.Header>
+                        <syncfusion:SfExpander.Content>
+                            <Grid Padding="18,8,18,18"  RowSpacing="6" >
+                                <Grid.Resources>
+                                    <Style TargetType="Label">
+                                        <Setter Property="FontFamily" Value="Roboto-Regular"/>
+                                    </Style>
+                                </Grid.Resources>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="20"/>
+                                    <RowDefinition Height="20"/>
+                                    <RowDefinition Height="20"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label FontSize="14" CharacterSpacing="0.25"  Text="Card Payment"/>
+                                <Label FontSize="14" CharacterSpacing="0.25"  Text="Third-Party coupons" Grid.Row="1"/>
+                                <Label FontSize="14" CharacterSpacing="0.25"  Text="Total Amount Paid" TextColor="{StaticResource Primary}" Grid.Row="2"/>
+                                <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$31,200.00" Grid.Column="1"/>
+                                <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$5,000.00" Grid.Row="1" Grid.Column="1"/>
+                                <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$36,200.00" TextColor="{StaticResource Primary}" Grid.Row="2" Grid.Column="1"/>
+                            </Grid>
+                        </syncfusion:SfExpander.Content>
+                    </syncfusion:SfExpander>
+                </Border>
+                <Border StrokeShape="RoundRectangle 8,8,8,8" Margin="{OnPlatform Default='8,0,8,8',WinUI='8,0,6,8',MacCatalyst='8,0,6,8'}" Stroke="#CAC4D0" StrokeThickness="{OnPlatform MacCatalyst=2,Default=1}" WidthRequest="{OnPlatform MacCatalyst=460,WinUI=340}">
+                    <syncfusion:SfExpander AnimationDuration="200" IsExpanded="True">
+                        <syncfusion:SfExpander.Header>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="48"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="35"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Text="&#xe704;" FontSize="16" Margin="14,2,2,2"
+                                                   FontFamily='{OnPlatform Android=AccordionFontIcons.ttf#,WinUI=AccordionFontIcons.ttf#AccordionFontIcons,MacCatalyst=AccordionFontIcons,iOS=AccordionFontIcons}'
+                                                   VerticalOptions="Center" VerticalTextAlignment="Center"/>
+                                <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular" FontSize="14" Text="Address" Grid.Column="1" VerticalOptions="CenterAndExpand"/>
+                            </Grid>
+                        </syncfusion:SfExpander.Header>
+                        <syncfusion:SfExpander.Content>
+                            <Grid Padding="18,8,18,18" Grid.Row="1" RowSpacing="1">
+                                <Grid.Resources>
+                                    <Style TargetType="Label">
+                                        <Setter Property="FontFamily" Value="Roboto-Regular"/>
+                                    </Style>
+                                </Grid.Resources>
+                                <Grid.RowDefinitions >
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Label CharacterSpacing="0.25"  FontSize="14" Text="Alex" FontAttributes="Bold"/>
+                                <Label CharacterSpacing="0.25"  FontSize="14" Text="No.8 Blossom St, Washington, DC 20019" Grid.Row="1"/>
+                                <Label CharacterSpacing="0.25"  FontSize="14" Text="(202) 547-3555" Grid.Row="2"/>
+                            </Grid>
+                        </syncfusion:SfExpander.Content>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroupList>
+                                <VisualStateGroup>
+                                    <VisualState Name="Expanded">
+                                        <VisualState.Setters>
+                                            <Setter Property="Header">
+                                                <Setter.Value>
+                                                    <Grid RowDefinitions="48">
+                                                        <Label Text="Expanded Header" FontFamily="Roboto-Regular" FontSize="14" Margin="14,2,2,2" VerticalOptions="CenterAndExpand"/>
+                                                    </Grid>
+                                                </Setter.Value>
+                                            </Setter>
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                    <VisualState Name="Collapsed"> 
+                                        <VisualState.Setters>
+                                            <Setter Property="Header">
+                                                <Setter.Value>
+                                                    <Grid  RowDefinitions="48">
+                                                        <Label Text="Collpased Header" FontFamily="Roboto-Regular" FontSize="14" Margin="14,2,2,2" VerticalOptions="CenterAndExpand"/>
+                                                    </Grid>
+                                                </Setter.Value>
+                                            </Setter>
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateGroupList>
+                        </VisualStateManager.VisualStateGroups>
+                    </syncfusion:SfExpander>
+                </Border>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
 </ContentPage>
 
 {% endhighlight %}
