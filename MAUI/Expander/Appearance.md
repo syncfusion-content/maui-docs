@@ -125,5 +125,5 @@ this.Content = expander;
 {% endhighlight %}
 {% endtabs %}
 
-![.Net MAUI Expander with VSM](Images/maui-expander-collapsed.png)
-![.Net MAUI Expander with VSM](Images/maui-expander-expanded.png)
+![.Net MAUI Expander with VSM](Images/maui-expander-with-VSM.png)
+

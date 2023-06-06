@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI Expander (SfExpander)
 
-The `.NET MAUI Expander` control provides a way to expand and collapse when tapping a header. This section provides a quick overview for working with the `SfExpander` for .NET MAUI. This section covers the minimal features that you need to know to get started with the Expander. 
+The `.NET MAUI Expander` control provides a way to expand and collapse when tapping a header. This section provides a quick overview of working with the `SfExpander` for .NET MAUI. It covers the minimal features that you need to know to get started with the Expander.
 
 ## Creating an application using the .NET MAUI Expander
 
@@ -48,7 +48,7 @@ public partial class MainPage : ContentPage
 
 ## Register the handler
 
-The `Syncfusion.Maui.Core` NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
+The `Syncfusion.Maui.Core` NuGet package is a dependency for all Syncfusion controls in .NET MAUI. In `the MauiProgram.cs` file, register the handler for Syncfusion Core.
 
 {% tabs %}
 {% highlight c# tabtitle="MauiProgram.cs" hl_lines="4 20" %}
@@ -131,7 +131,7 @@ N> When loading `Label` as direct children of `Header` or `Content` of Expander,
 {% endhighlight %}
 {% endtabs %}
 
-Now, run the application to render the following output.
+Now, run the application to render the desired output.
 
 ![.Net MAUI Expander](Images/maui-expander-with-gettingstarted.png)
 
@@ -177,7 +177,7 @@ The `SfExpander` allows you to programmatically expand and collapse by using the
 
 ### Customize the expander when collapsing or expanding the SfExpander
 
-You can customize the expander by using the `Collapsed` event. It will occur after a `SfExpander` is collapsed when tapping on the header. It will provide information related to the `collapsed` event by using the `ExpandedAndCollapsedEventArgs`.
+You can customize the expander by using the `Collapsed` event.This event occurs after a `SfExpander` is collapsed when tapping on the header. It provides information related to the `collapsed` event through the `ExpandedAndCollapsedEventArgs`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -237,8 +237,7 @@ private void Expander_Expanded(object sender, ExpandedAndCollapsedEventArgs e)
 
 ### Restricting the Expander while expanding and collapsing 
 
-You can restrict the Expander being collapsed by the `Collapsing` event. This event occurs when an user tries to collapse the `SfExpander` while tapping on the header. You can cancel the user action using the `Cancel` property of `ExpandingAndCollapsingEventArgs`. 
-
+You can prevent the Expander from being collapsed by handling the `Collapsing` event. This event occurs when a user attempts to collapse the `SfExpander` by tapping on the header. You can cancel the user action by setting the `Cancel` property of `ExpandingAndCollapsingEventArgs`.
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfExpander x:Name ="expander" Collapsing="Expander_Collapsing" >
