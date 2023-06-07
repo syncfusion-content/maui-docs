@@ -97,9 +97,6 @@ N> When loading `Label` as direct children of `Header` or `Content` of Expander,
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Expander;assembly=Syncfusion.Maui.Expander"
              NavigationPage.HasNavigationBar="False"
              x:Class="GettingStarted.MainPage">
-    <ContentPage.BindingContext>
-        <local:InvoiceViewModel/>
-    </ContentPage.BindingContext>
 
     <ContentPage.Content>
         <ScrollView >
@@ -127,22 +124,6 @@ N> When loading `Label` as direct children of `Header` or `Content` of Expander,
                                 <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular"  Text="11:03 AM, 15 January 2019" FontSize="14" VerticalOptions="CenterAndExpand"/>
                             </Grid>
                         </syncfusion:SfExpander.Content>
-                        <VisualStateManager.VisualStateGroups>
-                            <VisualStateGroupList>
-                                <VisualStateGroup>
-                                    <VisualState Name="Expanded">
-                                        <VisualState.Setters>
-                                            <Setter Property="HeaderBackground" Value="Red"/>
-                                        </VisualState.Setters>
-                                    </VisualState>
-                                    <VisualState Name="Collapsed">
-                                        <VisualState.Setters>
-                                            <Setter Property="HeaderBackground" Value="Yellow"/>
-                                        </VisualState.Setters>
-                                    </VisualState>
-                                </VisualStateGroup>
-                            </VisualStateGroupList>
-                        </VisualStateManager.VisualStateGroups>
                     </syncfusion:SfExpander>
                 </Border>
                 <Border StrokeShape="RoundRectangle 8,8,8,8" Margin="{OnPlatform Default='8,0,8,8',WinUI='8,0,6,8',MacCatalyst='8,0,6,8'}" Stroke="#CAC4D0"  StrokeThickness="{OnPlatform MacCatalyst=2,Default=1}" WidthRequest="{OnPlatform MacCatalyst=460,WinUI=340}">
@@ -165,42 +146,33 @@ N> When loading `Label` as direct children of `Header` or `Content` of Expander,
                         <syncfusion:SfExpander.Content>
                             <Grid Padding="18,8,18,18">
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="20"/>
+                                    <RowDefinition Height="20"/>
+                                    <RowDefinition Height="20"/>
+                                    <RowDefinition Height="20"/>
+                                    <RowDefinition Height="20"/>
+                                    <RowDefinition Height="20"/>
+                                    <RowDefinition Height="20"/>
                                 </Grid.RowDefinitions>
-                                <StackLayout Grid.Row="0" BindableLayout.ItemsSource="{Binding ItemInfo}" >
-                                    <BindableLayout.ItemTemplate>
-                                        <DataTemplate>
-                                            <Grid >
-                                                <Grid.RowDefinitions>
-                                                    <RowDefinition Height="25"/>
-                                                </Grid.RowDefinitions>
-                                                <Grid>
-                                                    <Grid.RowDefinitions>
-                                                        <RowDefinition Height="Auto"/>
-                                                    </Grid.RowDefinitions>
-                                                    <Grid.ColumnDefinitions>
-                                                        <ColumnDefinition Width="*"/>
-                                                        <ColumnDefinition Width="*"/>
-                                                    </Grid.ColumnDefinitions>
-                                                    <Label Text="{Binding ItemName}" VerticalTextAlignment="End" CharacterSpacing="0.25"  FontSize="14" FontFamily="Roboto-Regular"/>
-                                                    <Label Text="{Binding ItemPrice}" VerticalTextAlignment="End" HorizontalTextAlignment="End"  FontSize="14" Grid.Column="1" CharacterSpacing="0.25" FontFamily="Roboto-Regular"/>
-                                                </Grid>
-                                            </Grid>
-                                        </DataTemplate>
-                                    </BindableLayout.ItemTemplate>
-                                </StackLayout>
-                                <Grid Grid.Row="1">
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="20"/>
-                                    </Grid.RowDefinitions>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
-                                    <Label Text="Total Amount" CharacterSpacing="0.25"  VerticalTextAlignment="Center" TextColor="{StaticResource Primary}" FontSize="14"/>
-                                    <Label Text="$36,220.00" CharacterSpacing="0.25"  HorizontalTextAlignment="End" TextColor="{StaticResource Primary}" VerticalTextAlignment="Center" FontSize="14" Grid.Column="1"/>
-                                </Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label FontSize="14" CharacterSpacing="0.25"  Text="2018 Subaru Outback"/>
+                                <Label FontSize="14" CharacterSpacing="0.25"  Text="All-Weather Mats" Grid.Row="1"/>
+                                <Label FontSize="14" CharacterSpacing="0.25"  Text="Door Edge Guard Kit" Grid.Row="2"/>
+                                <Label FontSize="14" CharacterSpacing="0.25"  Text="Rear Bumper Cover" Grid.Row="3"/>
+                                <Label FontSize="14" CharacterSpacing="0.25"  Text="Wheel Locks" Grid.Row="4"/>
+                                <Label FontSize="14" CharacterSpacing="0.25"  Text="Gas Full Tank" Grid.Row="5"/>
+                                <Label FontSize="14" CharacterSpacing="0.25"  Text="Total Amount" TextColor="{StaticResource Primary}" Grid.Row="6"/>
+
+                                <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$35,705.00" Grid.Row="0" Grid.Column="1"/>
+                                <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$101.00" Grid.Row="1" Grid.Column="1"/>
+                                <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$162.00" Grid.Row="2" Grid.Column="1"/>
+                                <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$107.00" Grid.Row="3" Grid.Column="1"/>
+                                <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$81.00" Grid.Row="4" Grid.Column="1"/>
+                                <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$64.00" Grid.Row="5" Grid.Column="1"/>
+                                <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$36,220.00" TextColor="{StaticResource Primary}" Grid.Row="6" Grid.Column="1"/>
                             </Grid>
                         </syncfusion:SfExpander.Content>
                     </syncfusion:SfExpander>
@@ -282,107 +254,12 @@ N> When loading `Label` as direct children of `Header` or `Content` of Expander,
                                 <Label CharacterSpacing="0.25"  FontSize="14" Text="(202) 547-3555" Grid.Row="2"/>
                             </Grid>
                         </syncfusion:SfExpander.Content>
-                        <VisualStateManager.VisualStateGroups>
-                            <VisualStateGroupList>
-                                <VisualStateGroup>
-                                    <VisualState Name="Expanded">
-                                        <VisualState.Setters>
-                                            <Setter Property="Header">
-                                                <Setter.Value>
-                                                    <Grid RowDefinitions="48">
-                                                        <Label Text="Expanded Header" FontFamily="Roboto-Regular" FontSize="14" Margin="14,2,2,2" VerticalOptions="CenterAndExpand"/>
-                                                    </Grid>
-                                                </Setter.Value>
-                                            </Setter>
-                                        </VisualState.Setters>
-                                    </VisualState>
-                                    <VisualState Name="Collapsed"> 
-                                        <VisualState.Setters>
-                                            <Setter Property="Header">
-                                                <Setter.Value>
-                                                    <Grid  RowDefinitions="48">
-                                                        <Label Text="Collpased Header" FontFamily="Roboto-Regular" FontSize="14" Margin="14,2,2,2" VerticalOptions="CenterAndExpand"/>
-                                                    </Grid>
-                                                </Setter.Value>
-                                            </Setter>
-                                        </VisualState.Setters>
-                                    </VisualState>
-                                </VisualStateGroup>
-                            </VisualStateGroupList>
-                        </VisualStateManager.VisualStateGroups>
                     </syncfusion:SfExpander>
                 </Border>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>
-
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
-{% highlight c# %}
-public class InvoiceItem
-{
-    public string ItemName { get; set; }
-
-    public string ItemPrice { get; set; }
-}
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
-{% highlight c# %}
-public class InvoiceViewModel
-{
-    #region Properties
-
-    public ObservableCollection<InvoiceItem> ItemInfo { get; set; }
-
-    #endregion
-
-    #region Constructor
-
-    public InvoiceViewModel()
-    {
-        ItemInfo = new ObservableCollection<InvoiceItem>();
-        for (int i = 0; i < items.Count(); i++)
-        {
-            var invoiceItem = new InvoiceItem();
-            invoiceItem.ItemName = items[i];
-            invoiceItem.ItemPrice = prices[i];
-            ItemInfo.Add(invoiceItem);
-        }
-    }
-
-    #endregion
-
-    #region Fields
-
-    string[] items = new string[]
-    {
-    "2018 Subaru Outback",
-    "All-Weather Mats",
-    "Door Edge Guard Kit",
-    "Rear Bumper Cover",
-    "Wheel Locks",
-    "Gas Full Tank"
-    };
-
-    string[] prices = new string[]
-    {
-        "$35,705.00",
-        "$101.00",
-        "$162.00",
-        "$107.00",
-        "$81.00",
-        "$64.00"
-    };
-
-    #endregion
-}
-{% endhighlight %}
-{% endtabs %}
 
 Now, run the application to render the desired output.
 
