@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started | SfAccordion | MAUI | Syncfusion
-description: This section described about getting started with MAUI Accordion (SfAccordion) control and more details.
+description: This section describes getting started with MAUI Accordion (SfAccordion) control and more details.
 platform: MAUI
 control: SfAccordion
 documentation: ug
@@ -97,7 +97,7 @@ To add the accordion to your application, follow these steps:
 
 1. Add required assemblies. 
 2. Import the control namespace as `xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Accordion;assembly=Syncfusion.Maui.Expander` in XAML Page. 
-3. Create an instance of accordion control and add as content. 
+3. Create an instance of accordion control and add it as content. 
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="9" %}
@@ -135,9 +135,9 @@ namespace GettingStarted
 
 ### Defining accordion items 
 
-`SfAccordion` is a layout control with vertically stacked list of accordion `Items` that comprise of `Header` and `Content`. You can load any View in `Header` and `Content`. Users can expand or collapse the Content view by tapping `Header`. 
+The `SfAccordion` is a layout control with a vertically stacked list of accordion `Items` that comprise of the `Header` and `Content`.  Load any View in the `Header` and `Content`. Users can expand or collapse the Content view by tapping `Header`. 
 
-Here, Grid is loaded in Header and Content of accordion items.
+Here, the Grid is loaded in the Header and Content of accordion items.
 
 N> When loading Label as direct children of `Header` or `Content` of `AccordionItem`, then it will lead to an exception. So, load `Label` inside `Grid` to overcome the crash.
 
@@ -721,7 +721,7 @@ N> When adding the template control inside the `StackLayout` or `Grid` with a he
 
 ## Animation duration
 
-The `SfAccordion`allows you to customize the expanding and collapsing of accordion items by using the `AnimationDuration` property. By default, the animation duration is set to `250 milliseconds`. 
+The `SfAccordion` allows you to customize the expanding and collapsing of accordion items by using the `AnimationDuration` property. By default, the animation duration is set to `250 milliseconds`. 
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -749,7 +749,7 @@ The `SfAccordion` allows you to customize the rate of change of a parameter over
 
 ## Auto scroll position
 
-The `SfAccordion` allows you to customize the scroll position of the expanded accordion item using the `AutoScrollPosition` property.  By default, the auto scroll position is set to `MakeVisible`.  
+The `SfAccordion` allows you to customize the scroll position of the expanded accordion item using the `AutoScrollPosition` property. By default, the auto-scroll position is set to `MakeVisible`.  
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -763,7 +763,7 @@ The `SfAccordion` allows you to customize the scroll position of the expanded ac
 
 ## Expand mode
 
-The `SfAccordion` allows you to expand single or multiple items by using the `ExpandMode` property. By default, the expand mode is set to `Single`.  
+The `SfAccordion` allows you to expand single or multiple items using the `ExpandMode` property. By default, the expanded mode is set to `Single`.  
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
