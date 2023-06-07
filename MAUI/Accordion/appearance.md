@@ -107,8 +107,8 @@ The appearance of the `SfAccordion` can be customized using the following two `V
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="59 127" %}
     <ContentPage.Resources>
-        <Color x:Key="ExpandedColor">Red</Color>
-        <Color x:Key="CollapsedColor">Yellow</Color>
+        <Color x:Key="ExpandedColor">#6750A4</Color>
+        <Color x:Key="CollapsedColor">Gray</Color>
     </ContentPage.Resources>
     <ContentPage.Content>
         <syncfusion:SfAccordion ExpandMode="MultipleOrNone" BackgroundColor="#FAFAFA">
