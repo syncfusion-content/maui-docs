@@ -63,13 +63,13 @@ public AccordionItem GenerateAccordionItem()
 
 ## Icon color customization
 
-The `SfAccordion` allows you to customize the color of the expander icon by using the `IconColor` property. By default, the `IconColor` is `Black`.
+The `SfAccordion` allows you to customize the color of the expander icon by using the `HeaderIconColor` property. By default, the `HeaderIconColor` is `Black`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
 <syncfusion:SfAccordion x:Name="accordion">
     <syncfusion:SfAccordion.Items>
-        <syncfusion:AccordionItem IconColor="Accent"/>
+        <syncfusion:AccordionItem HeaderIconColor="Accent"/>
     </syncfusion:SfAccordion.Items>
 </syncfusion:SfAccordion>
 {% endhighlight %}
@@ -91,7 +91,7 @@ private void InitializeAccordionItems()
 public AccordionItem GenerateAccordionItem()
 {
     var item = new AccordionItem();
-    item.IconColor = Color.Accent;
+    item.HeaderIconColor = Color.Accent;
     return item;
 }
 {% endhighlight %}
