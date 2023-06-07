@@ -9,12 +9,12 @@ documentation: ug
 
 # Getting Started with .NET MAUI Expander (SfExpander)
 
-The `.NET MAUI Expander` control provides a way to expand and collapse when tapping a header. This section provides a quick overview of working with the `SfExpander` for .NET MAUI. It covers the minimal features that you need to know to get started with the Expander.
+The `.NET MAUI Expander` control provides a way to expand and collapse when tapping a header. This section briefly overviews working with the `SfExpander` for .NET MAUI. It covers the minimal features that you need to know to get started with the Expander.
 
 ## Creating an application using the .NET MAUI Expander
 
  1. Create a new .NET MAUI application in Visual Studio.
- 2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfExpander to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Expander and install it.
+ 2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfExpander to your project, open the NuGet package manager in Visual Studio and search for Syncfusion.Maui.Expander and install it.
  3. Import the control namespace `Syncfusion.Maui.Expander` in XAML or C# code.
  4. Initialize the `SfExpander` control.
  
@@ -81,11 +81,11 @@ namespace GettingStarted
 
 ### Defining expander 
 
-The `SfExpander` is a layout control comprise of Header and Content. You can load any View in `Header` and `Content`. Content visibility of expander can be set by using the `IsExpanded` property of `Expander`. Users can expand or collapse the Content view by tapping Header.
+The `SfExpander` is a layout control comprised of the Header and Content. You can load any View in `Header` and `Content`. Content visibility of expander can be set by using the `IsExpanded` property of `Expander`. Users can expand or collapse the Content view by tapping the Header.
 
-Here, Grid with Labels are loaded in Header and Content of expander. 
+Here, the Grid with Labels is loaded in the Header and Content of the expander. 
 
-N> When loading `Label` as direct children of `Header` or `Content` of Expander, then it will lead to exception. So, load `Label` inside `Grid` to overcome the crash.
+N> Loading the `Label` as direct children of the `Header` or `Content` of the Expander will lead to exception. So, load the `Label` inside the `Grid` to overcome the crash.
 
 {% tabs %}
 {% highlight xaml %}
@@ -279,7 +279,7 @@ The `SfExpander` allows you to customize the expanding and collapsing duration b
 
 ## Animation easing
 
-The `SfExpander` allows you to customize the rate of change of parameter over time or animation style by using the `AnimationEasing` property. By default, the animation easing is `Linear`. 
+The `SfExpander` allows you to customize the rate of change of parameters over time or animation style by using the `AnimationEasing` property. By default, the animation easing is `Linear`. 
 
 {% tabs %}
 {% highlight xaml %}
@@ -292,7 +292,7 @@ The `SfExpander` allows you to customize the rate of change of parameter over ti
 
 ## Expand and Collapse 
 
-The `SfExpander` allows you to programmatically expand and collapse by using the `IsExpanded` property of SfExpander. The user can control the expand and collapse interactions by handling the `Expanding` and `Collapsing` events.
+The `SfExpander` allows you to programmatically expand and collapse by using the `IsExpanded` property of the  SfExpander. The user can control the expand and collapse interactions by handling the `Expanding` and `Collapsing` events.
 
 {% tabs %}
 {% highlight xaml %}
