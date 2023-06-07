@@ -320,6 +320,70 @@ N> When loading `Label` as direct children of `Header` or `Content` of Expander,
 {% endhighlight %}
 {% endtabs %}
 
+{% tabs %}
+{% highlight c# %}
+public class InvoiceItem
+{
+    public string ItemName { get; set; }
+
+    public string ItemPrice { get; set; }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# %}
+public class InvoiceViewModel
+{
+    #region Properties
+
+    public ObservableCollection<InvoiceItem> ItemInfo { get; set; }
+
+    #endregion
+
+    #region Constructor
+
+    public InvoiceViewModel()
+    {
+        ItemInfo = new ObservableCollection<InvoiceItem>();
+        for (int i = 0; i < items.Count(); i++)
+        {
+            var invoiceItem = new InvoiceItem();
+            invoiceItem.ItemName = items[i];
+            invoiceItem.ItemPrice = prices[i];
+            ItemInfo.Add(invoiceItem);
+        }
+    }
+
+    #endregion
+
+    #region Fields
+
+    string[] items = new string[]
+    {
+    "2018 Subaru Outback",
+    "All-Weather Mats",
+    "Door Edge Guard Kit",
+    "Rear Bumper Cover",
+    "Wheel Locks",
+    "Gas Full Tank"
+    };
+
+    string[] prices = new string[]
+    {
+        "$35,705.00",
+        "$101.00",
+        "$162.00",
+        "$107.00",
+        "$81.00",
+        "$64.00"
+    };
+
+    #endregion
+}
+{% endhighlight %}
+{% endtabs %}
+
 Now, run the application to render the desired output.
 
 ![.Net MAUI Expander](Images/maui-expander-with-gettingstarted.png)
