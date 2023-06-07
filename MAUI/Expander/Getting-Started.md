@@ -93,9 +93,7 @@ N> When loading `Label` as direct children of `Header` or `Content` of Expander,
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:GettingStarted"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Expander;assembly=Syncfusion.Maui.Expander"
-             NavigationPage.HasNavigationBar="False"
              x:Class="GettingStarted.MainPage">
 
     <ContentPage.Content>
