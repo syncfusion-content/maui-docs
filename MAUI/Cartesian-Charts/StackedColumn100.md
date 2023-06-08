@@ -9,11 +9,11 @@ documentation: ug
 
 # StackedColumn100 Chart in .NET MAUI Chart
 
-The Stacked column 100 % series chart is type of Stacked chart that is used to display the proportion of different categories within a single column. The columns are stacked top of each other , and cumulative portion of each stacked element always comes to a total of 100%.
+The Stacked column 100 % series chart is a type of Stacked chart that is used to display the proportion of different categories within a single column. The columns are stacked on top of each other, and a cumulative portion of each stacked element always comes to a total of 100%.
 
 ## StackedColumn100 Chart
 
-To render the StackedColumn100 chart,create an instance of [StackingColumn100Series](),and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).
+To render the StackedColumn100 chart, create an instance of the [StackingColumn100Series](), and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of the [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).
 
 N> The cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) as its default content.
 
@@ -31,17 +31,17 @@ N> The cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
         <chart:NumericalAxis />
     </chart:SfCartesianChart.YAxes>   
 
-    <chart:StackingColumn100Series ItemSource="{Binding Data}"
+    <chart:StackingColumn100Series ItemsSource="{Binding Data}"
                                    XBindingPath="Name"
                                    YBindingPath="Value"
                                    />
 
-    <chart:StackingColumn100Series ItemSource="{Binding Data1}"
+    <chart:StackingColumn100Series ItemsSource="{Binding Data1}"
                                    XBindingPath="Name"
                                    YBindingPath="Value"
                                    />
 
-    <chart:StackingColumn100Series ItemSource="{Binding Data2}"
+    <chart:StackingColumn100Series ItemsSource="{Binding Data2}"
                                    XBindingPath="Name"
                                    YBindingPath="Value"
                                    />
@@ -92,7 +92,6 @@ N> The cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
 
 We can group and stack the similar stacked column 100 series type using the [GroupingLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.StackingSeriesBase.html#Syncfusion_Maui_Charts_StackingSeriesBase_GroupingLabel) property. 
 
-
 {% tabs %}
 
 {% highlight xaml %}
@@ -107,22 +106,22 @@ We can group and stack the similar stacked column 100 series type using the [Gro
         <chart:NumericalAxis />
     </chart:SfCartesianChart.YAxes>   
 
-    <chart:StackingColumn100Series ItemSource="{Binding Data}"
+    <chart:StackingColumn100Series ItemsSource="{Binding Data}"
                                    XBindingPath="XValue"
                                    YBindingPath="YValue"
                                    GroupingLabel="GroupOne"/>
 
-    <chart:StackingColumn100Series ItemSource="{Binding Data1}"
+    <chart:StackingColumn100Series ItemsSource="{Binding Data1}"
                                    XBindingPath="XValue"
                                    YBindingPath="YValue"
                                    GroupingLabel="GroupOne"/>
 
-    <chart:StackingColumn100Series ItemSource="{Binding Data2}"
+    <chart:StackingColumn100Series ItemsSource="{Binding Data2}"
                                    XBindingPath="XValue"
                                    YBindingPath="YValue"
                                    GroupingLabel="GroupTwo"/>
 
-    <chart:StackingColumn100Series ItemSource="{Binding Data3}"
+    <chart:StackingColumn100Series ItemsSource="{Binding Data3}"
                                    XBindingPath="XValue"
                                    YBindingPath="YValue"
                                    GroupingLabel="GroupTwo"/>
