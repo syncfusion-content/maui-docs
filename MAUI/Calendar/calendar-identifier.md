@@ -63,10 +63,10 @@ this.Content = calendar;
 {% endhighlight %}
 {% endtabs %}
 
-### DateTime values in Calendar Types
+### DateTime values in Calendar identifiers
 The DateTime values of DisplayDate, MinimumDate, MaximumDate, SelectedDate, SelectedDates, SelectedDateRange, SelectableDayPredicate, and SpecialDayPredicate can be given in two ways when the calendar identifier is specified other than the GregorianCalendar.
 
-* Create an display date value by declaring the calendar identifier and respective calendar identifier date.
+* Create an display date value by declaring the DateTime instance with specifying calendar identifier and respective calendar identifier date, then the calendar handles it directly.
 
 {% tabs %}
 {% highlight MainPage.xaml %}
