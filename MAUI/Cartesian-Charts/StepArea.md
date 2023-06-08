@@ -15,7 +15,6 @@ In a step area chart, the data points are connected by horizontal and vertical l
 
 N> The cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) as its default content.
 
-
 {% tabs %}
 
 {% highlight xaml %}
