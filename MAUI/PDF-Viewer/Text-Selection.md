@@ -67,7 +67,7 @@ The event arguments properties that are listed below are available in the text s
 
 3.	<b>Handled</b> -  A boolean value indicating whether the event has been handled or processed by an event handler. By setting the `Handled` property to true, you indicate that the event is handled at the application-level event handler and no further action is necessary. So that the default copy context menu will not appear.
 
-Refer to the following code snippet that explains how to wire the event and handle the selected text at the application level by preventing the default copy context menu.
+Refer to the following code snippet that explains how to wire the event to handle the selected text at the application level and to prevent the default copy context menu from appearing.
 
 {% tabs %}
 {% highlight C# hl_lines="4 11" %}
@@ -78,10 +78,11 @@ Refer to the following code snippet that explains how to wire the event and hand
         PdfViewer.TextSelectionChanged += PdfViewer_TextSelectionChanged;
     }
 
-    private void PdfViewer_TextSelectionChanged(object sender, Syncfusion.Maui.PdfViewer.TextSelectionChangedEventArgs e)
+    private void PdfViewer_TextSelectionChanged(object sender, TextSelectionChangedEventArgs e)
     {
         string selectedText = e.SelectedText;
-        // Write your logic to handle the selected text.
+        int pageNumber = e.PageNumber;
+        // Write your logic to handle the selected text and set the ‘Handled’ to true to prevent the default copy context menu from appearing.
         e.Handled = true;
     }
 
