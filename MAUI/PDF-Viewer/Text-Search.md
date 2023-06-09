@@ -13,7 +13,7 @@ The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.
 
 ## Initiate a text search
 
-The `SearchTextAsync` method asynchronously searches the specified text throughout the PDF document and highlights each occurrence (match). To start the search, you need to call the method in a button click by passing the text to be searched as a parameter as shown in the following example.
+The `SearchTextAsync` method asynchronously searches the specified text throughout the PDF document and highlights each occurrence (match). To start the search, you need to call the method in a button click by passing the text to be searched as a parameter as shown in the following example:
 
 {% tabs %}
 {% highlight C# hl_lines="8" %}
@@ -33,7 +33,7 @@ The `SearchTextAsync` method asynchronously searches the specified text througho
 
 ### Search result
 
-The `TextSearchResult` will be obtained at the end of the search text operation and it will hold the search result. It allows you to navigate to the next or previous matches of the text as well as provides the following details.
+The `TextSearchResult` will be obtained at the end of the search text operation and it will hold the search result. It allows you to navigate to the next or previous matches of the text as well as provides the following details:
 
 1. <b>Total matches count</b> – It provides the total number of matches that have been found in the PDF document.
 
@@ -58,7 +58,7 @@ N> * If the total matches count is 0, then there were no matches found for the g
 
 ### Navigate to the next and previous match
 
-The `GoToNextMatch` and `GoToPreviousMatch` functionalities of the `TextSearchResult` help you to navigate to the next and previous matches of the text respectively. You can follow the given steps to achieve the same.
+The `GoToNextMatch` and `GoToPreviousMatch` functionalities of the `TextSearchResult` help you to navigate to the next and previous matches of the text respectively. You can follow the given steps to achieve the same:
 
 1.	Search a text and store the search result in a global variable.
 
@@ -116,7 +116,7 @@ The `Clear` functionality of the `TextSearchResult` removes all the traces of th
 
 ## Text Search progress
 
-By using the `SearchTextAsync` the search result will be obtained only after all the pages has been searched. If the search completion takes a long time for a PDF document with more pages, you may get the current search result while the search is still in progress by using the `TextSearchProgress` event. The event is triggered on each page after the search is completed on the page and the `SearchResult` property of the `TextSearchProgressEventArgs` contains the current search result shown on the following code example:
+By using the `SearchTextAsync` the search result will be obtained only after all the pages has been searched. If the search completion takes a long time for a PDF document with more pages, you may get the current search result while the search is still in progress by using the `TextSearchProgress` event. The event is triggered on each page after the search is completed on the page and `SearchResult` property of the `TextSearchProgressEventArgs` contains the current search result as shown on the following code example:
 
 {% tabs %}
 {% highlight XAML hl_lines="3" %}
@@ -145,7 +145,7 @@ By using the `SearchTextAsync` the search result will be obtained only after all
 
 ### Search completion percentage
 
-The `TotalPagesSearched` property of the `TextSearchProgressEventArgs` provides the total number of pages that have been searched to find the specified text across the PDF document. You may use this information to find the search completion percentage as shown in the following code example: 
+The `TotalPagesSearched` property of the `TextSearchProgressEventArgs` provides the total number of pages that have been searched to find the specified text across the PDF document. You may use this information to find the search completion percentage as shown in the following code example:
 
 {% tabs %}
 {% highlight C# %}
