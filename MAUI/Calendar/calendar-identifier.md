@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Calendar identifier in .NET MAUI Calendar (SfCalendar)
-The .NET MAUI Calendar supports Calendar Identifier to display the different types of calendars based on various cultures and regions. The supported identifies are Gregorian, Hijri, Korean, Persian, Taiwan, ThaiBuddhist, and UmAlQura. Change the calendar identifier using the [Identifier] property in the SfCalendar.
+The .NET MAUI Calendar supports Calendar Identifier to display the different types of calendars based on various cultures and regions. The supported identifiers are Gregorian, Hijri, Korean, Persian, Taiwan, ThaiBuddhist, and UmAlQura. Change the calendar identifier using the [Identifier] property in the SfCalendar.
 
 <table>
 <tr>
