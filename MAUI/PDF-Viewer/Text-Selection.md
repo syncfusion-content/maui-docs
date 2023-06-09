@@ -1,0 +1,93 @@
+---
+layout: post
+title: Select text from a PDF document using .NET MAUI PDF Viewer control | Syncfusion
+description: Learn here all about selecting text from PDF documents and copying it to the clipboard using Syncfusion .NET MAUI PDF Viewer (SfPdfViewer).
+platform: MAUI
+control: SfPdfViewer
+documentation: ug
+---
+
+# Selecting text from a PDF document in .NET MAUI PDF Viewer (SfPdfViewer)
+
+Using [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html), you can select text from a PDF document and copy it to clip board. This process allows you to extract easily extract a text from PDF and paste it to other applications.
+
+## Selection using mouse
+
+In desktop platforms like macOS and Windows, you can select text using the mouse pointer by click and drag over the text you want to select. You will notice that the selected text is highlighted when you move the pointer. 
+Once you have selected the desired text, click the `Copy` option that appears to copy it to the clipboard. As an alternative, you can use the keyboard shortcut <code>Ctrl</code> + <code>C</code> (<code>Command</code> + <code>C</code> on MAC) to copy the text. The selected text is now copied to the clipboard and ready for pasting into other applications.
+
+## Selection using touch
+
+In mobile platforms such as Android and iOS, long press text selection feature allows you to select text by pressing and holding the finger on the screen. Refer to the following steps for long press text selection on a mobile device.
+
+1.	Locate the text you want to select.
+
+2.	Place your finger on the screen and hold it against the text you wish to select.
+
+3.	You will see that the word is highlighted and there are selection handles appear at the start and end of the selection.
+
+4.	You can move the selection handles to modify or extend the text selection.
+
+5.	Once you have selected the desired text, click the “Copy” option that appears to copy it to the clipboard.
+
+## Customize the text selection highlight color
+
+The ‘TextSelectionSettings’ provides the customizable options for text selection. The ‘HighlightColor’ property of the  ‘TextSelectionSettings’ allows you to customize the color of the text highlight when you selected it. Refer to the following code snippet to change the highlight color.
+
+{% tabs %}
+{% highlight XAML hl_lines="4" %}
+
+    <syncfusion:SfPdfViewer x:Name="PdfViewer">
+        <syncfusion:SfPdfViewer.TextSelectionSettings>
+            <syncfusion:TextSelectionSettings 
+                    HighlightColor="#43FFFF00"/>
+        </syncfusion:SfPdfViewer.TextSelectionSettings>
+    </syncfusion:SfPdfViewer>
+
+{% endhighlight %}
+{% highlight C# hl_lines="2" %}
+
+	SfPdfViewer PdfViewer = new SfPdfViewer();
+	PdfViewer.TextSelectionSettings.HighlightColor = Color.FromRgba(255, 255, 0, 127);
+
+{% endhighlight %}
+{% endtabs %}
+
+N> The color of the selection handles also will be modified to match the text highlight color, but with full opacity.
+
+## Handling selected text from application
+
+The `TextSelectionChanged` event occurs when the text selection is completed, or when the selected text is modified in any way. This event provides the selected text and the way to prevent the display of the default context menu by handling the selected text from application level.
+
+The event arguments properties that are listed below are available in the text selection changed event.
+
+1.	<b>SelectedText</b> - Provides the selected text.
+
+2.	<b>PageNumber</b> - Provides the page number at which the text is selected.
+
+3.	<b>Handled</b> -  A boolean value indicating whether the event has been handled or processed by an event handler. By setting the `Handled` property to true, you indicate that the event is handled at the application-level event handler and no further action is necessary. So that the default copy context menu will not appear.
+
+Refer to the following code snippet that explains how to wire the event and handle the selected text at the application level by preventing the default copy context menu.
+
+{% tabs %}
+{% highlight C# hl_lines="4 11" %}
+
+	public MainPage()
+	{
+		InitializeComponent();
+        PdfViewer.TextSelectionChanged += PdfViewer_TextSelectionChanged;
+    }
+
+    private void PdfViewer_TextSelectionChanged(object sender, Syncfusion.Maui.PdfViewer.TextSelectionChangedEventArgs e)
+    {
+        string selectedText = e.SelectedText;
+        // Write your logic to handle the selected text.
+        e.Handled = true;
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+## Limitations
+
+The text from the images cannot be selected and, the multiple-page text selection is not supported for now.
