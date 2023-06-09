@@ -47,6 +47,7 @@ N>
 * The Flow Direction will be updated based on the calendar identifier. All the DateTime values, such as DisplayDate, MinimumDate, MaximumDate, SelectedDate, SelectedDates, SelectedDateRange, SelectableDayPredicate, and SpecialDayPredicate, can be given in two ways.
 * The DateTime instance without specifying calendar identifier. The calendar will handle the DateTime value for the specified calendar identifier.
 * When a DateTime instance has a calendar identifier, the calendar handles it directly.
+* View haeder will show full week day name for all the calendar identifiers except gregorian calendar while the text format is "ddddd".
 
 {% tabs %}
 {% highlight XAML hl_lines="2" %}
@@ -77,7 +78,7 @@ All the DateTime properties of the calendar can be given in two ways when the ca
 {% highlight MainPage.xaml.cs hl_lines="2" %}
 
 this.Calendar.Identifier = CalendarIdentifier.Hijri;
-this.Calendar.DisplayDate = new DateTime(1444, 11, 12, 0, 0, 0, new HijriCalendar());
+this.Calendar.DisplayDate = new DateTime(1444, 11, 21, 0, 0, 0, new HijriCalendar());
 
 {% endhighlight %}
 {% endtabs %}
@@ -93,7 +94,7 @@ this.Calendar.DisplayDate = new DateTime(1444, 11, 12, 0, 0, 0, new HijriCalenda
 {% highlight MainPage.xaml.cs hl_lines="2" %}
 
 this.Calendar.Identifier = CalendarIdentifier.Hijri;
-this.Calendar.DisplayDate = new DateTime(2023, 6, 1);
+this.Calendar.DisplayDate = new DateTime(2023, 6, 9);
 
 {% endhighlight %}
 {% endtabs %}
