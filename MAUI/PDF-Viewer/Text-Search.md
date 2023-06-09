@@ -116,7 +116,7 @@ The `Clear` functionality of the `TextSearchResult` removes all the traces of th
 
 ## Text Search progress
 
-By using the `SearchTextAsync` the search result will be obtained only after all the pages has been searched. If the search completion takes a long time for a PDF document with more pages, you may get the current search result while the search is still in progress by using the `TextSearchProgress` event. The event is triggered on each page after the search is completed on the page and the `SearchResult` property of the `TextSearchProgressEventArgs` contains the current search result as shown on the following code example:
+By using the `SearchTextAsync` the search result will be obtained only after all the pages has been searched. If the search completion takes a long time for a PDF document with more pages, you may get the current search result while the search is still in progress by using the `TextSearchProgress` event. The event is triggered on each page after the search is completed on the page and the `SearchResult` property of the `TextSearchProgressEventArgs` contains the current search result shown on the following code example:
 
 {% tabs %}
 {% highlight XAML hl_lines="3" %}
