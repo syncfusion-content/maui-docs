@@ -263,7 +263,7 @@ N> Loading the `Label` as direct children of the `Header` or `Content` of the Ex
 
 Now, run the application to render the desired output.
 
-![.Net MAUI Expander](Images/maui-expander-with-gettingstarted.png)
+![.NET MAUI Expander](Images/maui-expander-with-gettingstarted.png)
 
 
 ## Animation duration
@@ -288,7 +288,7 @@ The `SfExpander` allows you to customize the rate of change of parameters over t
     <syncfusion:SfExpander x:Name="expander" AnimationEasing="SinOut"/>       
 {% endhighlight %}
 {% highlight c# %}
-    expander.AnimationEasing = Syncfusion.Maui.Expander.AnimationEasing.SinOut;
+    expander.AnimationEasing = ExpanderAnimationEasing.SinOut;
 {% endhighlight %}
 {% endtabs %}
 
