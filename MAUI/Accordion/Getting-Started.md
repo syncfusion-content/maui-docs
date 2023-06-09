@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with MAUI Accordion (SfAccordion)
 
-The Accordion control allows content to be organized in a vertically stacked list of items that is collapsible, and each item can be expanded to reveal its associated content. This section provides a quick overview for working with the `SfAccordion` for Maui.
+This section provides a quick overview of how to get started with the .NET Maui Accordion (SfAccordion) for Maui. Walk-through the entire process of creating the real world SfAccordion.
 
 ## Creating an application using the .NET MAUI Accordion
 
@@ -135,7 +135,7 @@ namespace GettingStarted
 
 ### Defining accordion items 
 
-The `SfAccordion` is a layout control with a vertically stacked list of accordion `Items` that comprise of the `Header` and `Content`.  Load any View in the `Header` and `Content`. Users can expand or collapse the Content view by tapping `Header`. 
+The `SfAccordion` is a layout control with a vertically stacked list of accordion `Items` that comprise of the `Header` and `Content`.Load any View in the `Header` and `Content`. Users can expand or collapse the Content view by tapping `Header`. 
 
 Here, the Grid is loaded in the Header and Content of accordion items.
 
