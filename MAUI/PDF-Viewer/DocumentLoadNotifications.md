@@ -48,7 +48,7 @@ private void PdfViewer_DocumentLoaded(object sender, EventArgs e)
 
 ## Document load failures
 
-When a document fails to load in the `SfPdfViewer`, the users will be notified with a default message prompt and by `DocumentLoadFailedEvent`.
+When a document fails to load in the `SfPdfViewer`, the users will be notified with a default message prompt by the `DocumentLoadFailedEvent`.
 
 ### Document load failed event
 
