@@ -11,11 +11,9 @@ documentation: ug
 
 The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to open URLs or website links in the default browser. When a user taps or clicks a hyperlink on a PDF page, the SfPdfViewer recognizes the link and prompts a hyperlink dialog asking the user if they want to open the link.
 
-Follow the instructions below to apply localization to the `SfPdfViewer`.
-
 ## Handling hyperlink navigation
 
-The `HyperlinkClicked` event occurs when a hyperlink is tapped or clicked and allows you to handle the hyperlink navigation at the application level in your own way. Set the `Handled` property of the `HyperlinkClickedEventArgs` to `true` to suppress the default hyperlink dialog and handle your logic with the hyperlink information. The following example explains how to open a link directly in the system default browser without any confirmation prompts.
+The `HyperlinkClicked` event occurs when a hyperlink is tapped or clicked and allows you to handle the hyperlink navigation at the application level in your way. Set the `Handled` property of the `HyperlinkClickedEventArgs` to `true` to suppress the default hyperlink dialog and handle your logic with the hyperlink information. The following example explains how to open a link directly in the system default browser without confirmation prompts.
 
 {% tabs %}
 {% highlight XAML hl_lines="3" %}
@@ -44,7 +42,7 @@ The `HyperlinkClicked` event occurs when a hyperlink is tapped or clicked and al
 
 ## Enable or disable the hyperlink navigation
 
-You can enable or disable the recognition of hyperlinks in PDF documents using the `EnableHyperlinkNavigation` property. The following code explains the same.
+Enable or disable the recognition of hyperlinks in PDF documents using the `EnableHyperlinkNavigation` property. The following code explains the same.
 
 {% tabs %}
 {% highlight XAML %}
