@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI Expander (SfExpander)
 
-This section provides a quick overview of how to get started with the .NET Maui Expander (SfExpander) for Maui. Walk-through the entire process of creating the real world SfExpander.
+This section provides a quick overview of how to get started with the SfExpander for .NET MAUI. Walk-through the entire process of creating the real world of this control.
 
 ## Creating an application using the .NET MAUI Expander
 
@@ -19,7 +19,7 @@ This section provides a quick overview of how to get started with the .NET Maui 
  4. Initialize the `SfExpander` control.
  
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml %}
 
 <ContentPage   
     . . .
@@ -29,7 +29,7 @@ This section provides a quick overview of how to get started with the .NET Maui 
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# %}
 
 using Syncfusion.Maui.Expander;
 . . .
@@ -51,7 +51,7 @@ public partial class MainPage : ContentPage
 The `Syncfusion.Maui.Core` NuGet package is a dependency for all Syncfusion controls in .NET MAUI. In `the MauiProgram.cs` file, register the handler for Syncfusion Core.
 
 {% tabs %}
-{% highlight c# tabtitle="MauiProgram.cs" hl_lines="4 20" %}
+{% highlight c# hl_lines="4 20" %}
 using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Controls.Xaml;
 using Microsoft.Maui.Hosting;
@@ -258,6 +258,8 @@ N> Loading the `Label` as direct children of the `Header` or `Content` of the Ex
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>
+{% endhighlight %}
+{% endtabs %}
 
 Now, run the application to render the desired output.
 
@@ -283,14 +285,14 @@ The `SfExpander` allows you to customize the rate of change of parameters over t
 
 {% tabs %}
 {% highlight xaml %}
-         <syncfusion:SfExpander x:Name="expander" AnimationEasing="SinOut"/>       
+    <syncfusion:SfExpander x:Name="expander" AnimationEasing="SinOut"/>       
 {% endhighlight %}
 {% highlight c# %}
     expander.AnimationEasing = Syncfusion.Maui.Expander.AnimationEasing.SinOut;
 {% endhighlight %}
 {% endtabs %}
 
-## Expand and Collapse 
+## Expand and collapse 
 
 The `SfExpander` allows you to programmatically expand and collapse by using the `IsExpanded` property of the SfExpander. The user can control the expand and collapse interactions by handling the `Expanding` and `Collapsing` events.
 
@@ -303,15 +305,15 @@ The `SfExpander` allows you to programmatically expand and collapse by using the
 {% endhighlight %}
 {% endtabs %}
 
-### Customize the expander when collapsing or expanding the SfExpander
+### Customize the expander when collapsing or expanding
 
-Customize the expander by using the `Collapsed` event. This event occurs after a `SfExpander` is collapsed when tapping on the header. It provides information related to the `collapsed` event through the `ExpandedAndCollapsedEventArgs`.
+Customize the expander by using the `Collapsed` event. This event occurs after a `SfExpander` is collapsed when tapping on the header.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 <syncfusion:SfExpander x:Name ="expander" Collapsed="Expander_Collapsed">
     <syncfusion:SfExpander.Header>
-        <Grid >
+        <Grid>
             <Label x:Name="label"  Text="Veggie burger" FontSize="Large"/>
         </Grid>
     </syncfusion:SfExpander.Header>
@@ -323,21 +325,19 @@ Customize the expander by using the `Collapsed` event. This event occurs after a
     </syncfusion:SfExpander.Content>
 </syncfusion:SfExpander> 
 {% endhighlight %}
-{% highlight c# %}
-expander.Collapsed += Expander_Collapsed;
-            
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 private void Expander_Collapsed(object sender, ExpandedAndCollapsedEventArgs e)
 {
     label.Text = "Burger and Pizza";
-    expander.Header.BackgroundColor = Color.Aqua;
+    expander.HeaderBackground = Colors.Aqua;
 }
 {% endhighlight %}
 {% endtabs %}
 
-Customize the expander by using the `Expanded` event. It will occur after a `SfExpander` is expanded when tapping the header. It will provide the information related to the `Expanded` event by using the `ExpandedAndCollapsedEventArgs`.
+Customize the expander by using the `Expanded` event. It will occur after a `SfExpander` is expanded when tapping the header.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 <syncfusion:SfExpander x:Name ="expander" Expanded="Expander_Expanded">
     <syncfusion:SfExpander.Header>
         <Grid >
@@ -352,28 +352,24 @@ Customize the expander by using the `Expanded` event. It will occur after a `SfE
     </syncfusion:SfExpander.Content>
 </syncfusion:SfExpander>
 {% endhighlight %}
-{% highlight c# %}
-expander.Expanded += Expander_Expanded;
-            
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 private void Expander_Expanded(object sender, ExpandedAndCollapsedEventArgs e)
 {
     label.Text = "Burger";
-    expander.Header.BackgroundColor = Color.YellowGreen;
+    expander.HeaderBackground = Colors.YellowGreen;
 }
 {% endhighlight %}
 {% endtabs %}
 
-### Restricting the Expander while expanding and collapsing 
+### Restricting the expander while expanding and collapsing 
 
 Prevent the Expander from being collapsed by handling the `Collapsing` event. This event occurs when a user attempts to collapse the `SfExpander` by tapping the header. Cancel the user action by setting the `Cancel` property of the `ExpandingAndCollapsingEventArgs`.
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 <syncfusion:SfExpander x:Name ="expander" Collapsing="Expander_Collapsing" >
 </syncfusion:SfExpander>
 {% endhighlight %}
-{% highlight c# %}
-expander.Collapsing += Expander_Collapsing;
-
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 private void Expander_Collapsing(object sender, ExpandingAndCollapsingEventArgs e)
 {
    e.Cancel = true;
@@ -384,13 +380,11 @@ private void Expander_Collapsing(object sender, ExpandingAndCollapsingEventArgs 
 Restrict the Expander being expanded by the `Expanding` event. This event occurs when a user tries to expand the `SfExpander` while tapping the header. Cancel the user action using the `Cancel` property of the `ExpandingAndCollapsingEventArgs`.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 <syncfusion:SfExpander x:Name ="expander" Expanding="Expander_Expanding" >
 </syncfusion:SfExpander>
 {% endhighlight %}
-{% highlight c# %}
-expander.Expanding += Expander_Expanding;
-            
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 private void Expander_Expanding(object sender, ExpandingAndCollapsingEventArgs e)
 {
    e.Cancel = true;
