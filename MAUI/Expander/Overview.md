@@ -1,6 +1,6 @@
 ---
 layout: post
-title: What's New in Essential Studio for .NET MAUI | Syncfusion
+title: About .NET MAUI Expander control | Syncfusion
 platform: maui-controls
 description: The Expander is a layout control capable of loading any UI view in both header and content sections. By simply tapping the header, users can effortlessly expand or collapse the control.
 control: SfExpander
