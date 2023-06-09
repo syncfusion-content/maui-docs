@@ -27,4 +27,4 @@ Setting the `FlowDirection` property to `RightToLeft` on the SfPdfViewer sets th
 {% endhighlight %}
 {% endtabs %}
 
-N> Right-to-Left language users can also refer to this section {section} for information on how to localize the static text used in the PDF reader to other language.
+N> Right-to-Left language users can also refer to this [section](https://help.syncfusion.com/maui/pdf-viewer/migration#upcoming-features) for information on how to localize the static text used in the PDF reader to other language.
