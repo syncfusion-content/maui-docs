@@ -104,6 +104,7 @@ The appearance of the `SfExpander` can be customized using the following two `Vi
     </VisualStateManager.VisualStateGroups>
     {% endhighlight %}
 </syncfusion:SfExpander>
+{% endtabs %}
 
 ![Expanded and collapsed visual states in .NET MAUI Expander](Images/appearance/maui-expander-with-vsm.png)
 
