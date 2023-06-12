@@ -16,7 +16,7 @@ The data grid supports to display the concise information about the bound data o
 * **Table Summary** - Used to display the summary information at top and/or bottom in SfDataGrid.
 
 
-![DataGrid with summary rows](Images\Caption-Summary\Summaries.png) 
+![DataGrid with summary rows](Images\caption-summary\maui-datagrid-summaries.png) 
 
 Summary rows are represented by using the [DataGridSummaryRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryRow.html) that hold summary information of columns in the [SummaryColumns](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryRow.html#Syncfusion_Maui_DataGrid_DataGridSummaryRow_SummaryColumns) property . The `SummaryColumns` contains the collection of [DataGridSummaryColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryColumn.html) which carries name, format, and summary aggregate type of the column.
 
@@ -38,7 +38,7 @@ Default group caption format is `{ColumnName}: {Key} - {ItemsCount} Items`.
 * **Key**: Displays the key value of the group.
 * **ItemsCount**: Displays the number of items in a group.
 
-![DataGrid with formatting in caption summary row](Images\Caption-Summary\ShowSummaryInRow.png)
+![DataGrid with formatting in caption summary row](Images\caption-summary\maui-datagrid-default.png)
 
 You can customize the group caption text format by setting the `SfDataGrid.GroupCaptionTextFormat` property. The code example below illustrates how to customize the group caption text in the data grid:
 
@@ -58,7 +58,7 @@ dataGrid.GroupCaptionTextFormat = "{ColumnName} : {Key}";
 
 The following screenshot shows the outcome of the previous code:
 
-![DataGrid with formatting in caption summary row](Images\Caption-Summary\ShowSummaryInRow2.png)
+![DataGrid with formatting in caption summary row](Images\caption-summary\maui-datagrid-formatting-show-summary-in-row.png)
 
 
 ### Displaying summary for a row
@@ -108,7 +108,7 @@ sfGrid.CaptionSummaryRow= summaryRow;
 
 The following screenshot shows the outcome for both values of `ShowSummaryInRow` to `true`:
 
-![DataGrid with customized caption summary row](Images\Caption-Summary\ShowSummaryInRow1.png)
+![DataGrid with customized caption summary row](Images\caption-summary\maui-datagrid-show-summary-in-row.png)
 
 
 ### Displaying summary for column
@@ -155,7 +155,7 @@ sfGrid.CaptionSummaryRow= summaryRow;
 {% endhighlight c#%}
 {% endtabs %}
 
-![DataGrid with caption summary cells customized](Images\Caption-Summary\ShowSummaryInColumn.png)
+![DataGrid with caption summary cells customized](Images\caption-summary\maui-datagrid-show-summary-in-column.png)
 
 N> The `CaptionSummaryColumn` text will be aligned based on the `DataGridColumn.TextAlignment`.
 
@@ -244,7 +244,7 @@ public class GroupCaptionConverter : IValueConverter
 {% endhighlight %}
 {% endtabs %}
 
-![DataGrid with template loaded for entire caption summary row](Images\Caption-Summary\TemplateRow.png)
+![DataGrid with template loaded for entire caption summary row](Images\caption-summary\maui-datagrid-template-row.png)
 
 N> The `DataTemplateSelector` can also be directly assigned to the `CaptionSummaryTemplate`.
 
@@ -333,7 +333,7 @@ public class GroupCaptionConverter : IValueConverter
 {% endhighlight %}
 {% endtabs %}
 
-![DataGrid with template loaded for individual caption summary column](Images\Caption-Summary\TemplateColumn.png)
+![DataGrid with template loaded for individual caption summary column](Images\caption-summary\maui-datagrid-template-column.png)
 
 ## Group summary
 
@@ -345,7 +345,7 @@ To add group summary rows in the data grid, you can add the [DataGridSummaryRow]
 
 Summary information can be displayed in the entire row by setting the [DataGridSummaryRow.ShowSummaryInRow]() property to `true` and defining summary columns. The [DataGridSummaryRow.Title]() property needs to be defined based on the [DataGridSummaryRow.Name]() property in order to format the values of the summary columns in a row.
 
-Please refer to the [Formatting Summary](#formatting-summary)  section to learn more about how to format the summary.
+Please refer to the [Formatting Summary]()  section to learn more about how to format the summary.
 
 {% tabs %}
 
@@ -406,7 +406,7 @@ Please refer to the [Formatting Summary](#formatting-summary)  section to learn 
 {% endtabs %}
 
 
-![DataGrid with group summary](Images\Group-Summary\ShowSummaryInRow.png)
+![DataGrid with group summary](Images\group-summary\maui-datagrid-show-summary-in-row.png)
 
 ### Displaying summary in the column
 
@@ -459,7 +459,7 @@ In the following code snippet, a summary is defined for the `Salary` and `Custom
 {% endtabs %}
 
 
-![DataGrid with customized summary for group summary cells](Images\Group-Summary\ShowSummaryInColumn.png)
+![DataGrid with customized summary for group summary cells](Images\group-summary\maui-datagrid-show-summary-in-column.png)
 
 ### Group summary template
 
@@ -544,7 +544,7 @@ public class GroupSummaryConverter : IValueConverter
 {% endhighlight %}
 {% endtabs %}
 
-![DataGrid with template loaded for entire group summary row](Images\Group-Summary\RowTemplate.png)
+![DataGrid with template loaded for entire group summary row](Images\group-summary\maui-datagrid-row-template.png)
 
 N> The `DataTemplateSelector` can also be directly assigned to the `SfDataGrid.GroupSummaryTemplate`.
 
@@ -634,7 +634,7 @@ public class GroupSummaryConverter : IValueConverter
 {% endhighlight %}
 {% endtabs %}
 
-![DataGrid with template loaded for individual group summary cell](Images\Group-Summary\ColumnTemplate.png)
+![DataGrid with template loaded for individual group summary cell](Images\group-summary\maui-datagrid-column-template.png)
 
 
 
@@ -646,7 +646,7 @@ You can add table summary row in the data grid by adding the [DataGridTableSumma
 
 The following screenshot illustrates table summary rows in the data grid:
 
-![DataGrid with table summary](Images\Table-Summary\Summary.png)
+![DataGrid with table summary](Images\table-summary\Summary.png)
 
 {% tabs %}
 {% highlight xaml%}
@@ -711,7 +711,7 @@ sfGrid.TableSummaryRows.Add(summaryRow2);
 {% endhighlight %}
 {% endtabs %}
 
-![DataGrid with table summary](Images\Table-Summary\TableSummary.png)
+![DataGrid with table summary](Images\table-summary\maui-datagrid-table-summary.png)
 
 ### Displaying summary in a row
 
@@ -760,7 +760,7 @@ sfGrid.TableSummaryRows.Add(summaryRow);
 
 The following screenshot shows the table summary row if `ShowSummaryInRow` is `true`:
 
-![DataGrid with customized table summary for entire row](Images\Table-Summary\ShowSummaryInRow.png)
+![DataGrid with customized table summary for entire row](Images\table-summary\maui-datagrid-show-summary-in-row.png)
 
 ### Displaying summary in a column
 
@@ -814,7 +814,7 @@ sfGrid.TableSummaryRows.Add(summaryRow);
 
 The following screenshot shows the table summary row if `ShowSummaryInRow` is `false`.
 
-![DataGrid with customized table summary for individual cells](Images\Table-Summary\ShowSummaryInColumn.png)
+![DataGrid with customized table summary for individual cells](Images\table-summary\maui-datagrid-show-summary-in-column.png)
 
 ### Positioning TableSummaryRows
 
@@ -886,7 +886,7 @@ sfGrid.TableSummaryRows.Add(bottomSummaryRow);
 
 The below screenshot illustrates the positioning of table summary rows in SfDataGrid.
 
-![Customizing table summary row position in a DataGrid](Images\Table-Summary\Summary.png)
+![Customizing table summary row position in a DataGrid](Images\table-summary\maui-datagrid-table-summary-position.png)
 
 ## Table summary template
 
@@ -985,7 +985,7 @@ Refer the below code example in which a label is loaded in the table summary tem
 {% endhighlight %}
 {% endtabs %}
 
-![Table summary template in a row](Images\Table-Summary\TemplateRow.png)
+![Table summary template in a row](Images\table-summary\maui-datagrid-template-row.png)
 
 ### Displaying template for a column
 
@@ -1083,7 +1083,7 @@ Refer the below code example in which a label is loaded in the template of table
 {% endhighlight %}
 {% endtabs %}
 
-![Table summary template in a column](Images\Table-Summary\TemplateColumn.png)
+![Table summary template in a column](Images\table-summary\maui-datagrid-template-column.png)
 
 N> The `DataTemplateSelector` can also be directly assigned to the `SfDataGrid.TableSummaryTemplate`.
 
@@ -1125,7 +1125,7 @@ sfGrid.TableSummaryRows= summaryRow;
 {% endhighlight %}
 {% endtabs %}
 
-![Formatting summary value in a DataGrid](Images\Table-Summary\ShowSummaryInColumn.png)
+![Formatting summary value in a DataGrid](Images\table-summary\maui-datagrid-show-summary-in-column.png)
 
 
 ### Displaying additional content in summary
@@ -1162,7 +1162,7 @@ sfGrid.TableSummaryRows= summaryRow;
 {% endhighlight %}
 {% endtabs %}
 
-![Displaying additional content in summary in a DataGrid](Images\Table-Summary\AdditionalContent.png)
+![Displaying additional content in summary in a DataGrid](Images\table-summary\maui-datagrid-additional-content.png)
 
 ## Aggregate types
 
@@ -1307,7 +1307,7 @@ dataGrid.TableSummaryRows = summaryRow;
 {% endhighlight %}
 {% endtabs %}
 
-![DataGrid with custom aggregate](Images\Table-Summary\CustomAggregate.png)
+![DataGrid with custom aggregate](Images\table-summary\maui-datagrid-custom-aggregate.png)
 
 N> The above custom summaries section is explained using `TableSummary`.
 
@@ -1377,4 +1377,4 @@ public class DataGridTableSummaryCellRendererExt : DataGridTableSummaryCellRende
 
 The following screenshot shows the final outcome upon execution of the above code.
 
-![Customize table summary using custom cell renderer](Images\Table-Summary\CustomizingTableSummary.png)
+![Customize table summary using custom cell renderer](Images\table-summary\maui-datagrid-customizing-table-summary.png)
