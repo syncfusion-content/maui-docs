@@ -98,3 +98,5 @@ this.Calendar.DisplayDate = new DateTime(2023, 6, 9);
 
 {% endhighlight %}
 {% endtabs %}
+
+![Multiple views of Calendar identifier in .NET MAUI Calendar.](images/calendar-identifier/maui-multiple-calendar-identifier-views.png)
