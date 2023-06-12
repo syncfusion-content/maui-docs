@@ -82,7 +82,6 @@ A marker, also known as a symbol, determines or highlights the data point’s po
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-
 ...
 StepAreaSeries series = new StepAreaSeries()
 {
