@@ -16,11 +16,11 @@ The Accordion allows customization of the appearance of the Icon and provides va
 The `SfAccordion` allows you to customize the position of the header icon in each accordion item using the `HeaderIconPosition` property. By default, the header icon position is set to `End`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml %}
 <syncfusion:SfAccordion x:Name="accordion" 
                         HeaderIconPosition="Start" />
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+{% highlight c# %}
 accordion.HeaderIconPosition = Syncfusion.Maui.Expander.IconPosition.Start;
 {% endhighlight %}
 {% endtabs %}
@@ -30,14 +30,14 @@ accordion.HeaderIconPosition = Syncfusion.Maui.Expander.IconPosition.Start;
 The `SfAccordion` allows you to customize the background color of the expander header by using the `HeaderBackground` property.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
+{% highlight xaml %}
 <syncfusion:SfAccordion x:Name="accordion">
     <syncfusion:SfAccordion.Items>
         <syncfusion:AccordionItem HeaderBackground="Pink"/>
     </syncfusion:SfAccordion.Items>
 </syncfusion:SfAccordion>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="18" %}
+{% highlight c# %}
 SfAccordion accordion;
 public MainPage()
 {
@@ -55,7 +55,7 @@ private void InitializeAccordionItems()
 public AccordionItem GenerateAccordionItem()
 {
     var item = new AccordionItem();
-    item.HeaderBackground = Color.Pink;
+    item.HeaderBackground = Colors.Pink;
     return item;
 }
 {% endhighlight %}
@@ -66,14 +66,14 @@ public AccordionItem GenerateAccordionItem()
 The `SfAccordion` allows you to customize the color of the expander icon by using the `HeaderIconColor` property. By default, the `HeaderIconColor` is `Black`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
+{% highlight xaml %}
 <syncfusion:SfAccordion x:Name="accordion">
     <syncfusion:SfAccordion.Items>
-        <syncfusion:AccordionItem HeaderIconColor="Accent"/>
+        <syncfusion:AccordionItem HeaderIconColor="Brown"/>
     </syncfusion:SfAccordion.Items>
 </syncfusion:SfAccordion>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="18" %}
+{% highlight c# %}
 SfAccordion accordion;
 public MainPage()
 {
@@ -91,7 +91,7 @@ private void InitializeAccordionItems()
 public AccordionItem GenerateAccordionItem()
 {
     var item = new AccordionItem();
-    item.HeaderIconColor = Color.Accent;
+    item.HeaderIconColor = Colors.Brown;
     return item;
 }
 {% endhighlight %}
@@ -105,7 +105,7 @@ The appearance of the `SfAccordion` can be customized using the following two `V
 * Collapsed
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6 12" %}
+{% highlight xaml %}
      <ContentPage.Resources>
         <Style TargetType="syncfusion:AccordionItem">
             <Setter Property="VisualStateManager.VisualStateGroups">
@@ -190,7 +190,7 @@ The appearance of the `SfAccordion` can be customized using the following two `V
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="112 113 115 116" %}
+{% highlight c# %}
 public partial class MainPage : ContentPage
 {
     SfAccordion accordion;
@@ -308,8 +308,6 @@ public partial class MainPage : ContentPage
         visualStateGroupList.Add(commonStateGroup);
         VisualStateManager.SetVisualStateGroups(item, visualStateGroupList);
         accordion.Items.Add(item);
-
-        ....................
     }
 }
 {% endhighlight %}
