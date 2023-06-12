@@ -313,4 +313,4 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Maui Accordion with VisualStateManager](Images/appearance/maui-accordion-with-visual-state-manager.png)
+![.NET Maui Accordion with VisualStateManager](Images/appearance/maui-accordion-with-visual-state-manager.png)
