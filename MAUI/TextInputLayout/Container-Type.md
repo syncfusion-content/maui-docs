@@ -103,7 +103,7 @@ It is applicable for the outline border when setting the container type to outli
 
 ### Custom Padding
 
-Spaces around the input view can be customized by setting the InputViewPadding property to [thickness](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.thickness) value.
+Spaces around the input view can be customized by setting the InputViewPadding property to [thickness](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.thickness?view=net-maui-7.0) value.
 
 {% tabs %} 
 
