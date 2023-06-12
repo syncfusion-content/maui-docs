@@ -72,7 +72,7 @@ Display summary information in a row by setting the [DataGridSummaryRow.ShowSumm
                            ShowSummaryInRow="True">
         <sfGrid:DataGridSummaryRow.SummaryColumns>
             <sfGrid:DataGridSummaryColumn Name="TotalSalary"
-                                      Format="{}{Sum:c}"
+                                      Format="{}{Sum:C0}"
                                       MappingName="Salary"
                                       SummaryType="Int32Aggregate" />
             <sfGrid:DataGridSummaryColumn Name="ProductCount"
@@ -133,7 +133,7 @@ In the following code snippet, a summary is defined for the `Salary` column:
     <sfGrid:DataGridSummaryRow Name="CaptionSummary" ShowSummaryInRow="False">
         <sfGrid:DataGridSummaryRow.SummaryColumns>
             <sfGrid:DataGridSummaryColumn Name="CaptionSummary"
-                                      Format="{}{Sum}"
+                                      Format="{}{Sum:C0}"
                                       MappingName="Salary"
                                       SummaryType="DoubleAggregate" />
         </sfGrid:DataGridSummaryRow.SummaryColumns>
@@ -204,7 +204,7 @@ Please refer to the code example below, where a label is loaded in the caption s
     <sfgrid:DataGridSummaryRow Name="CaptionSummary" ShowSummaryInRow="True" Title="Total Salary: {CaptionSummary}">
         <sfgrid:DataGridSummaryRow.SummaryColumns>
             <sfgrid:DataGridSummaryColumn Name="CaptionSummary"
-                                      Format="{}{Sum}"
+                                      Format="{}{Sum:C0}"
                                       MappingName="Salary"
                                       SummaryType="DoubleAggregate" />
         </sfgrid:DataGridSummaryRow.SummaryColumns>
@@ -274,7 +274,7 @@ Here's an example code snippet that demonstrates how to load a label in the temp
     <sfgrid:SfDataGrid.CaptionSummaryRow>
         <sfgrid:DataGridSummaryRow Name="CaptionSummary" ShowSummaryInRow="False" Title="Salary: {CaptionSummary}">
             <sfgrid:DataGridSummaryRow.SummaryColumns>
-                <sfgrid:DataGridSummaryColumn Name="CaptionSummary" Format="{}{Sum}" MappingName="Salary"  
+                <sfgrid:DataGridSummaryColumn Name="CaptionSummary" Format="{}{Sum:C0}" MappingName="Salary"  
                                           SummaryType="DoubleAggregate" >
                     <sfgrid:DataGridSummaryColumn.Template>
                         <DataTemplate>
@@ -363,7 +363,7 @@ Please refer to the [Formatting Summary](#formatting-summary)  section to learn 
             <sfgrid:DataGridSummaryRow.SummaryColumns>
                 <sfgrid:DataGridSummaryColumn Name="Salary" 
                                                 MappingName="Salary" 
-                                                Format="{}{Sum}"
+                                                Format="{}{Sum:C0}"
                                                 SummaryType="DoubleAggregate">
                 </sfgrid:DataGridSummaryColumn>
                 <sfgrid:DataGridSummaryColumn Name="customerID" 
@@ -430,7 +430,7 @@ In the following code snippet, a summary is defined for the `Salary` and `Custom
                 <sfgrid:DataGridSummaryRow.SummaryColumns>
                     <sfgrid:DataGridSummaryColumn Name="Salary" 
                                                   MappingName="Salary" 
-                                                  Format="{}{Sum}"
+                                                  Format="{}{Sum:C0}"
                                                   SummaryType="DoubleAggregate">
                     </sfgrid:DataGridSummaryColumn>
                 </sfgrid:DataGridSummaryRow.SummaryColumns>
@@ -483,10 +483,9 @@ Refer to the code example below, which demonstrates how to load a label in the g
   <sfgrid:SfDataGrid x:Name="dataGrid"
                    ItemsSource="{Binding OrdersInfo}">
        <sfgrid:SfDataGrid.GroupSummaryTemplate>
-            <DataTemplate>
+                <DataTemplate>
                     <StackLayout Orientation="Horizontal">
                         <Label Text="{Binding Converter={StaticResource SummaryConverter}, ConverterParameter = {x:Reference dataGrid} }"
-                                           TextColor="Red"
                                            FontSize="Default"
                                            VerticalTextAlignment="Center"
                                            HorizontalTextAlignment="Start"
@@ -501,25 +500,18 @@ Refer to the code example below, which demonstrates how to load a label in the g
                         </Label>
                     </StackLayout>
                 </DataTemplate>
-       </sfgrid:SfDataGrid.GroupSummaryTemplate>
-
-   <sfgrid:SfDataGrid.GroupSummaryRows>
-            <sfgrid:DataGridSummaryRow ShowSummaryInRow="True">
-                <sfgrid:DataGridSummaryRow.SummaryColumns>
-                    <sfgrid:DataGridSummaryColumn Name="Salary" 
+            </sfgrid:SfDataGrid.GroupSummaryTemplate>
+            <sfgrid:SfDataGrid.GroupSummaryRows>
+                <sfgrid:DataGridSummaryRow Title="salary {Salary}" ShowSummaryInRow="True">
+                    <sfgrid:DataGridSummaryRow.SummaryColumns>
+                        <sfgrid:DataGridSummaryColumn Name="Salary" 
                                                   MappingName="Salary" 
-                                                  Format="{}{Sum}"
+                                                  Format="{}{Sum:C0}"
                                                   SummaryType="DoubleAggregate">
-                    </sfgrid:DataGridSummaryColumn>
-                    <sfgrid:DataGridSummaryColumn Name="customerID" 
-                                                  MappingName="CustomerID" 
-                                                  Format="{}{Count}"
-                                                  SummaryType="CountAggregate">
-                    </sfgrid:DataGridSummaryColumn>
-                </sfgrid:DataGridSummaryRow.SummaryColumns>
-            </sfgrid:DataGridSummaryRow>
-        </sfgrid:SfDataGrid.GroupSummaryRows>
-</sfgrid:SfDataGrid>
+                        </sfgrid:DataGridSummaryColumn>
+                    </sfgrid:DataGridSummaryRow.SummaryColumns>
+                </sfgrid:DataGridSummaryRow>
+            </sfgrid:SfDataGrid.GroupSummaryRows>
 
 {% endhighlight%}
 {% endtabs %}
@@ -584,14 +576,14 @@ Please refer to the code example below, which demonstrates how to load a label i
                 <sfgrid:DataGridSummaryRow.SummaryColumns>
                     <sfgrid:DataGridSummaryColumn Name="Salary"
                                                   MappingName="Salary" 
-                                                  Format="{}{Sum}"
+                                                  Format="{}{Sum:C0}"
                                                   SummaryType="DoubleAggregate">
                         <sfgrid:DataGridSummaryColumn.Template>
                             <DataTemplate>
                                     <StackLayout Orientation="Horizontal" BackgroundColor="Gray">
                                         <Label Text="{Binding Converter={StaticResource SummaryConverter}, ConverterParameter = {x:Reference dataGrid} }" VerticalOptions="CenterAndExpand"
                                     TextColor="White"
-                                   FontSize="Default"
+                                   FontSize="Medium"
                                    VerticalTextAlignment="Center"
                                    HorizontalTextAlignment="Start"
                                    LineBreakMode="NoWrap"
@@ -933,7 +925,7 @@ Refer the below code example in which a label is loaded in the table summary tem
                         <StackLayout Orientation="Horizontal" BackgroundColor="Gray">
                             <Label Text="{Binding Converter={StaticResource SummaryConverter}, ConverterParameter = {x:Reference dataGrid} }"
                                    TextColor="White"
-                                   FontSize="Large"
+                                   FontSize="Medium"
                                    VerticalTextAlignment="Center"
                                    HorizontalTextAlignment="Start"
                                    LineBreakMode="NoWrap"
@@ -1335,7 +1327,7 @@ Each summary has a specific key using which the custom summary renderer can be r
 
 <tr>
 <td>Table summary</td>
-<td><a href="">DataDataGridTableSummaryCellRenderer</a> </td>
+<td><a href="">DataGridTableSummaryCellRenderer</a> </td>
 <td>TableSummary</td>
 </tr>
 
@@ -1360,13 +1352,13 @@ public class Summary : ContentPage
     {
         InitializeComponent();
         dataGrid.CellRenderers.Remove("TableSummary");
-        dataGrid.CellRenderers.Add("TableSummary", new DataDataGridTableSummaryCellRendererExt());
+        dataGrid.CellRenderers.Add("TableSummary", new DataGridTableSummaryCellRendererExt());
     }
 }
 
-public class DataDataGridTableSummaryCellRendererExt : DataDataGridTableSummaryCellRenderer
+public class DataGridTableSummaryCellRendererExt : DataGridTableSummaryCellRenderer
 {
-    public DataDataGridTableSummaryCellRendererExt()
+    public DataGridTableSummaryCellRendererExt()
     {
     }
 
@@ -1374,9 +1366,9 @@ public class DataDataGridTableSummaryCellRendererExt : DataDataGridTableSummaryC
     {
         base.OnInitializeDisplayView(dataColumn, view);
         view.HorizontalTextAlignment = TextAlignment.Start;
-        view.BackgroundColor = Color.DarkCyan;
+        view.BackgroundColor = Colors.DarkCyan;
         view.FontSize = 16;
-        view.TextColor = Color.White;
+        view.TextColor = Colors.White;
 
     }
 }
