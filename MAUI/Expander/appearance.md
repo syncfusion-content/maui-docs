@@ -59,7 +59,7 @@ The appearance of the `SfExpander` can be customized using the following two `Vi
 * Expanded
 * Collapsed
 
-{% tabs %}
+{% tabs xaml %}
 
 <syncfusion:SfExpander x:Name="expander1" IsExpanded="True" >
     <syncfusion:SfExpander.Header>
@@ -83,7 +83,7 @@ The appearance of the `SfExpander` can be customized using the following two `Vi
             <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular"  Text="11:03 AM, 15 January 2019" FontSize="14" VerticalOptions="CenterAndExpand"/>
         </Grid>
     </syncfusion:SfExpander.Content>
-    {% highlight xaml %}
+    {% highlight %}
     <VisualStateManager.VisualStateGroups>
         <VisualStateGroupList>
             <VisualStateGroup>
