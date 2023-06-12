@@ -31,11 +31,11 @@ N> The cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
         <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>   
 
-    <chart:StepLineSeries ItemSource="{Binding Data}"
+    <chart:StepLineSeries ItemsSource="{Binding Data}"
                           XBindingPath="Date"
                           YBindingPath="Value"/>
 
-    <chart:StepLineSeries ItemSource="{Binding Data1}"
+    <chart:StepLineSeries ItemsSource="{Binding Data1}"
                           XBindingPath="Date"
                           YBindingPath="Value"/>
 
@@ -157,11 +157,11 @@ The [IsTransposed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Sf
         <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>   
 
-    <chart:StepLineSeries ItemSource=""{Binding Data}
+    <chart:StepLineSeries ItemsSource=""{Binding Data}
                           XBindingPath="Year"
                           YBindingPath="Value"/>
-                          
-    <chart:StepLineSeries ItemSource="{Binding Data1}"
+
+    <chart:StepLineSeries ItemsSource="{Binding Data1}"
                           XBindingPath="Year"
                           YBindingPath="Value"/>
 
