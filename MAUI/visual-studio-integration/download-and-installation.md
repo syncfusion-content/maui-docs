@@ -18,9 +18,9 @@ Syncfusion publishes the Visual Studio extension in the below Visual Studio mark
 
 The following software prerequisites must be installed to install the Syncfusion .NET MAUI extension, as well as for creating, adding snippet in Syncfusion .NET MAUI applications.
 
-* [Visual Studio 2022 17.3 or later](https://visualstudio.microsoft.com/downloads).
+* [Visual Studio 2022 17.3 or later](https://visualstudio.microsoft.com/downloads/).
 
-* [.NET Core 6.0 or later](https://dotnet.microsoft.com/download/dotnet-core).
+* [.NET Core 6.0 or later](https://dotnet.microsoft.com/en-us/download/dotnet).
 
 
 ## Install through the Visual Studio Manage Extensions

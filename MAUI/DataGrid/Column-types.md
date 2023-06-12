@@ -294,7 +294,7 @@ dataGrid.Columns.Add( new DataGridTextColumn()
 
 ## DataGridCheckBoxColumn
 
-The `DataGridCheckBoxColumn` inherits all the properties of the `DataGridColumn`. It loads a [CheckBox](https://docs.microsoft.com/en-us/dotnet/maui/user-interface/controls/checkbox) as the content of record cells in the column and responds to value changes in it. The underlying data source can be changed so that it toggles the values shown in the CheckBox. The `SfDataGrid` automatically generates `DataGridCheckBoxColumn` the property in the underlying collection of the type is set to bool.
+The `DataGridCheckBoxColumn` inherits all the properties of the `DataGridColumn`. It loads a [CheckBox](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/checkbox) as the content of record cells in the column and responds to value changes in it. The underlying data source can be changed so that it toggles the values shown in the CheckBox. The `SfDataGrid` automatically generates `DataGridCheckBoxColumn` the property in the underlying collection of the type is set to bool.
  
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml"%}
