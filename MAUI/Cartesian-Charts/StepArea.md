@@ -22,11 +22,11 @@ N> The cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
 <chart:SfCartesianChart>
     
     <chart:SfCartesianChart.XAxes>
-        <chart:DateTimeAxis />
+        <chart:DateTimeAxis/>
     </chart:SfCartesianChart.XAxes>
 
     <chart:SfCartesianChart.YAxes>
-        <chart:NumericalAxis />
+        <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>   
     <chart:StepAreaSeries ItemsSource="{Binding Data}"
                           XBindingPath="Month"
@@ -137,7 +137,6 @@ To change the series markers appearance, create an instance of the [MarkerSettin
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-
 ...
 ChartMarkerSettings chartMarker= new ChartMarkerSettings();
         chartMarker.Type = ShapeType.Diamond;
