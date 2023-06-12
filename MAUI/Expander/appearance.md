@@ -24,7 +24,7 @@ The `SfExpander` allows you to customize the position of the header icon by usin
 {% endhighlight %}
 {% endtabs %}
 
-![.Net MAUI Expander with HeaderIconPosition Start](Images/appearance/maui-expander-with-headericonposition.png)
+![.NET MAUI Expander with HeaderIconPosition Start](Images/appearance/maui-expander-with-headericonposition.png)
 
 ## Header background color customization
 
@@ -158,5 +158,5 @@ this.Content = expander;
 {% endhighlight %}
 {% endtabs %}
 
-![.Net MAUI Expander with VSM](Images/appearance/maui-expander-with-vsm.png)
+![.NET MAUI Expander with VSM](Images/appearance/maui-expander-with-vsm.png)
 
