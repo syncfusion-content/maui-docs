@@ -9,7 +9,7 @@ documentation: ug
 
 # Appearance in Maui Accordion (SfAccordion)
 
-The Accordion allows customization of the appearance of the Icon and provides various functionalities to the users.
+The .NET MAUI SfAccordion comes with built-in support for customizing the appearance of the header.
 
 ## Header icon position 
  
@@ -104,9 +104,9 @@ The appearance of the `SfAccordion` can be customized using the following two `V
 * Expanded
 * Collapsed
 
-{% tabs %}
-{% highlight xaml %}
+{% tabs xaml %}
      <ContentPage.Resources>
+     {% highlight %}
         <Style TargetType="syncfusion:AccordionItem">
             <Setter Property="VisualStateManager.VisualStateGroups">
                 <VisualStateGroupList>
@@ -127,6 +127,7 @@ The appearance of the `SfAccordion` can be customized using the following two `V
                 </VisualStateGroupList>
             </Setter>
         </Style>
+    {% endhighlight %}
     </ContentPage.Resources>
     <ContentPage.Content>
         <syncfusion:SfAccordion ExpandMode="MultipleOrNone" BackgroundColor="#FAFAFA">
@@ -184,133 +185,10 @@ The appearance of the `SfAccordion` can be customized using the following two `V
                         </Grid>
                     </syncfusion:AccordionItem.Content>
                 </syncfusion:AccordionItem>
-                ......................
             </syncfusion:SfAccordion.Items>
         </syncfusion:SfAccordion>
     </ContentPage.Content>
 </ContentPage>
-{% endhighlight %}
-{% highlight c# %}
-public partial class MainPage : ContentPage
-{
-    SfAccordion accordion;
-	public MainPage()
-	{
-		InitializeComponent();
-        accordion = new SfAccordion();
-        accordion.ExpandMode = ExpandMode.MultipleOrNone;
-        GenerateAccordionItem();
-        this.Content = accordion;
-    }
-
-    public void GenerateAccordionItem()
-    {
-        var item = new AccordionItem();
-        var headerGrid = new Grid()
-        {
-            new Label(){ Text = "Robin Rane", Margin = new Thickness(16,14,0,14), CharacterSpacing = 0.25, FontFamily = "Roboto-Regular", FontSize = 14 }
-        };
-        headerGrid.HeightRequest = 48;
-        item.Header = headerGrid;
-
-        var content = new Grid();
-        content.ColumnSpacing = 10;
-        content.RowSpacing = 2;
-        content.BackgroundColor = Color.FromArgb("#f4f4f4");
-        var contentGrid = new Grid();
-        contentGrid.Margin = new Thickness(16, 6, 0, 0);
-        contentGrid.RowDefinitions.Add(new RowDefinition() { Height = 25 });
-        contentGrid.RowDefinitions.Add(new RowDefinition() { Height = 25 });
-        contentGrid.RowDefinitions.Add(new RowDefinition() { Height = 25 });
-        contentGrid.RowDefinitions.Add(new RowDefinition() { Height = 25 });
-        contentGrid.RowDefinitions.Add(new RowDefinition() { Height = DeviceInfo.Platform == DevicePlatform.WinUI || DeviceInfo.Platform == DevicePlatform.MacCatalyst ? 70 : DeviceInfo.Platform == DevicePlatform.Android ? 90 : DeviceInfo.Platform == DevicePlatform.iOS ? 100 : 90 });
-        contentGrid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Auto });
-        contentGrid.ColumnDefinitions.Add(new ColumnDefinition() { Width = 100 });
-        contentGrid.ColumnDefinitions.Add(new ColumnDefinition() { Width = 100 });
-        contentGrid.ColumnDefinitions.Add(new ColumnDefinition() { Width = GridLength.Star });
-        var image = new Image() { Source = "emp_01.png" };
-        var frame = new Frame() { BorderColor = Colors.Transparent, Padding = 0, Margin = new Thickness(0, 0, 0, 7) };
-        frame.Content = image;
-        contentGrid.SetRowSpan(frame, 4);
-        contentGrid.SetRow(frame, 0);
-        contentGrid.SetColumn(frame, 0);
-        contentGrid.Children.Add(frame);
-        var position = new Label() { Text = "Position", Margin = new Thickness(6, 0, 0, 0) };
-        contentGrid.SetColumn(position, 1);
-        contentGrid.SetRow(position, 0);
-        contentGrid.Children.Add(position);
-        var positionVal = new Label() { Text = "Chairman" };
-        contentGrid.SetColumn(positionVal, 2);
-        contentGrid.SetRow(positionVal, 0);
-        contentGrid.Children.Add(positionVal);
-        var organization = new Label() { Text = "Organization", Margin = new Thickness(6, 0, 0, 0) };
-        contentGrid.SetColumn(organization, 1);
-        contentGrid.SetRow(organization, 1);
-        contentGrid.Children.Add(organization);
-        var organizationVal = new Label() { Text = "ABC Inc." };
-        contentGrid.SetColumn(organizationVal, 2);
-        contentGrid.SetRow(organizationVal, 1);
-        contentGrid.Children.Add(organizationVal);
-        var dob = new Label() { Text = "Date Of Birth", Margin = new Thickness(6, 0, 0, 0) };
-        contentGrid.SetColumn(dob, 1);
-        contentGrid.SetRow(dob, 2);
-        contentGrid.Children.Add(dob);
-        var dobVal = new Label() { Text = "09/17/1973" };
-        contentGrid.SetColumn(dobVal, 2);
-        contentGrid.SetRow(dobVal, 2);
-        contentGrid.Children.Add(dobVal);
-        var location = new Label() { Text = "Location", Margin = new Thickness(6, 0, 0, 0) };
-        contentGrid.SetColumn(location, 1);
-        contentGrid.SetRow(location, 3);
-        contentGrid.Children.Add(location);
-        var locationVal = new Label() { Text = "Boston" };
-        contentGrid.SetColumn(locationVal, 2);
-        contentGrid.SetRow(locationVal, 3);
-        contentGrid.Children.Add(locationVal);
-        var description = new Label() { Text = "Robin Rane, Chairman of ABC Inc., leads with dedication and vision.Under his guidance, the company thrives and continues to make a significant impact in the industry.", Padding = new Thickness(0, 10, 0, 10), LineBreakMode = LineBreakMode.WordWrap, FontSize = 14, CharacterSpacing = 0.25, VerticalTextAlignment = TextAlignment.Center };
-        contentGrid.SetRow(description, 4);
-        contentGrid.SetColumnSpan(description, 3);
-        contentGrid.Children.Add(description);
-        var stack = new StackLayout()
-        {
-
-            new Label() { Text="\ue700", FontSize=16, Margin = new Thickness(0,2,2,2), VerticalOptions = LayoutOptions.Center, VerticalTextAlignment = TextAlignment.Center,
-                                                   FontFamily = DeviceInfo.Platform == DevicePlatform.WinUI ? "AccordionFontIcons.ttf#AccordionFontIcons" : DeviceInfo.Platform == DevicePlatform.Android ? "AccordionFontIcons.ttf#" : DeviceInfo.Platform == DevicePlatform.iOS ? "AccordionFontIcons" : "AccordionFontIcons"},
-            new Label(){ Text = "(617) 555-1234", CharacterSpacing = 0.25, FontSize = 14, VerticalOptions = LayoutOptions.Center}
-        };
-        stack.Orientation = StackOrientation.Horizontal;
-        stack.Margin = new Thickness(0, 0, 0, 12);
-        contentGrid.SetRow(stack, 5);
-        contentGrid.Children.Add(stack);
-        content.Children.Add(contentGrid);
-        item.Content = contentGrid;
-
-        VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
-        VisualStateGroup commonStateGroup = new VisualStateGroup();
-
-        VisualState expanded = new VisualState
-        {
-            Name = "Expanded"
-        };
-        expanded.Setters.Add(new Setter { Property = AccordionItem.HeaderBackgroundProperty, Value = Colors.Red });
-        expanded.Setters.Add(new Setter { Property = AccordionItem.HeaderBackgroundProperty, Value = Colors.Red });
-
-        VisualState collapsed = new VisualState
-        {
-            Name = "Collapsed"
-        };
-        collapsed.Setters.Add(new Setter { Property = AccordionItem.HeaderBackgroundProperty, Value = Colors.Yellow });
-        collapsed.Setters.Add(new Setter { Property = AccordionItem.HeaderBackgroundProperty, Value = Colors.Yellow });
-
-        commonStateGroup.States.Add(expanded);
-        commonStateGroup.States.Add(collapsed);
-
-        visualStateGroupList.Add(commonStateGroup);
-        VisualStateManager.SetVisualStateGroups(item, visualStateGroupList);
-        accordion.Items.Add(item);
-    }
-}
-{% endhighlight %}
 {% endtabs %}
 
-![.NET Maui Accordion with VisualStateManager](Images/appearance/maui-accordion-with-visual-state-manager.png)
+![Expanded and collapsed visual states in .NET MAUI Accordion](Images/appearance/maui-accordion-with-visual-state-manager.png)
