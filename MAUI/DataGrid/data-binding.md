@@ -36,17 +36,17 @@ this.sfDataGrid.ItemsSource = orderInfoViewModel.OrderInfoCollection;
 {% endhighlight %}
 {% endtabs %}
 
-If the data source implements the [ICollectionChanged](https://docs.microsoft.com/en-us/dotnet/api/system.collections.icollection?view=net-6.0) interface, then the `SfDataGrid` will automatically refresh the view when an item is added, removed, or cleared. When you add or remove an item in [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-6.0), it automatically refreshes the view as the ObservableCollection. That implements the [INotifyCollectionChanged](https://docs.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1.system-componentmodel-inotifypropertychanged-propertychanged?view=net-6.0). But when you do the same in `List`, it will not refresh the view automatically.
+If the data source implements the [ICollectionChanged](https://learn.microsoft.com/en-us/dotnet/api/system.collections.icollection?view=net-6.0) interface, then the `SfDataGrid` will automatically refresh the view when an item is added, removed, or cleared. When you add or remove an item in [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-6.0), it automatically refreshes the view as the ObservableCollection. That implements the [INotifyCollectionChanged](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1.system-componentmodel-inotifypropertychanged-propertychanged?view=net-6.0). But when you do the same in `List`, it will not refresh the view automatically.
 
 If the data model implements the `INotifyPropertyChanged` interface, then the SfDataGrid responds to the property change at runtime to update the view.
 
 ## Binding with IEnumerable
 
-The `SfDataGrid` control supports binding any collection that implements from [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerable?view=net-6.0) interface. All the data operations such as sorting and filtering are supported when the binding collection is derived from `IEnumerable`.
+The `SfDataGrid` control supports binding any collection that implements from [IEnumerable](https://learn.microsoft.com/en-us/dotnet/api/system.collections.ienumerable?view=net-6.0) interface. All the data operations such as sorting and filtering are supported when the binding collection is derived from `IEnumerable`.
 
 ## Binding with DataTable
 
-The `SfDataGrid` control supports binding the [DataTable](https://docs.microsoft.com/en-us/dotnet/api/system.data.datatable?view=net-6.0). `SfDataGrid` control automatically refresh the UI when binding `DataTable` as `ItemsSource` when rows are added, removed or cleared.
+The `SfDataGrid` control supports binding the [DataTable](https://learn.microsoft.com/en-us/dotnet/api/system.data.datatable?view=net-6.0). `SfDataGrid` control automatically refresh the UI when binding `DataTable` as `ItemsSource` when rows are added, removed or cleared.
 
 {% tabs %}
 {% highlight c# %}
@@ -106,13 +106,13 @@ private void SfDataGrid_Loaded(object sender, EventArgs e)
 
 ### RecordPropertyChanged
 
-The [RecordPropertyChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ICollectionViewAdv.html#Syncfusion_Maui_Data_ICollectionViewAdv_RecordPropertyChanged) event is invoked when the value of the `DataModel` property is changed, if `DataModel` implements the `INotifyPropertyChanged` interface. The event receives with two arguments namely `sender` that handles the `DataModel` and the [PropertyChangedEventArgs](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.propertychangedeventargs?view=net-6.0) as argument. `PropertyChangedEventArgs` object contains the following property,
+The [RecordPropertyChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ICollectionViewAdv.html#Syncfusion_Maui_Data_ICollectionViewAdv_RecordPropertyChanged) event is invoked when the value of the `DataModel` property is changed, if `DataModel` implements the `INotifyPropertyChanged` interface. The event receives with two arguments namely `sender` that handles the `DataModel` and the [PropertyChangedEventArgs](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.propertychangedeventargs?view=net-6.0) as argument. `PropertyChangedEventArgs` object contains the following property,
 
 * **PropertyName**: Defines the `PropertyName` of the changed value in the `DataModel`.
 
 ### SourceCollectionChanged
 
-The [SourceCollectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ICollectionViewAdv.html#Syncfusion_Maui_Data_ICollectionViewAdv_SourceCollectionChanged) event is invoked when the `SourceCollection` is changed, for example, adding or removing the collection. The event receives two arguments namely `sender` that handles [GridQueryableCollectionViewWrapper](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.GridQueryableCollectionViewWrapper.html) object and the [NotifyCollectionChangedEventArgs](https://docs.microsoft.com/en-us/dotnet/api/system.collections.specialized.notifycollectionchangedeventargs?view=net-6.0) as argument. `NotifyCollectionChangedEventArgs` object contains the following properties,
+The [SourceCollectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ICollectionViewAdv.html#Syncfusion_Maui_Data_ICollectionViewAdv_SourceCollectionChanged) event is invoked when the `SourceCollection` is changed, for example, adding or removing the collection. The event receives two arguments namely `sender` that handles [GridQueryableCollectionViewWrapper](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.GridQueryableCollectionViewWrapper.html) object and the [NotifyCollectionChangedEventArgs](https://learn.microsoft.com/en-us/dotnet/api/system.collections.specialized.notifycollectionchangedeventargs?view=net-6.0) as argument. `NotifyCollectionChangedEventArgs` object contains the following properties,
 
 * **Action**: Defines the current action. (i.e.) Add, Remove, Move, Replace, Reset.
 * **NewItems**: It contains the list of new items involved in the change.

@@ -11,6 +11,10 @@ documentation: ug
 
 The MAUI DataGrid [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.html) allows you to select one or more rows based on the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionMode.html).
 
+To get start quickly with perform selection in .NET MAUI DataGrid, you can check on this video:
+
+<style>#MAUIDataGridVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIDataGridVideoTutorial' src="https://www.youtube.com/embed/mN95SPfVcHo"></iframe>
+
 ## Current Cell Navigation
 The Keyboard navigation through the cells and rows is determined based on the [NavigationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_NavigationMode) property. The [NavigationMode.Cell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridNavigationMode.html#Syncfusion_Maui_DataGrid_DataGridNavigationMode_Cell) allows you to navigate between the cells in a row as well as between rows. The [NavigationMode.Row](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridNavigationMode.html#Syncfusion_Maui_DataGrid_DataGridNavigationMode_Row) allows you to navigate only between rows. 
 
@@ -298,7 +302,7 @@ public partial class MainPage : ContentPage
 ## Events in selection
 The DataGrid provides the following events for selection:
 
-[SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectionChanging): This event is raised while selecting a row at the execution time before the row is selected. So it allows canceling the selection action by setting the [Cancel](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.canceleventargs.cancel?view=net-6.0#system-componentmodel-canceleventargs-cancel) property of [DataGridSelectionChangingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionChangingEventArgs.html).
+[SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectionChanging): This event is raised while selecting a row at the execution time before the row is selected. So it allows canceling the selection action by setting the [Cancel](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.canceleventargs.cancel?view=net-6.0#system-componentmodel-canceleventargs-cancel) property of [DataGridSelectionChangingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionChangingEventArgs.html).
 
 [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SortColumnsChanged): This event is raised after a row is selected.
 These two events are triggered with the `DataGridSelectionChangingEventArgs` and [DataGridSelectionChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionChangedEventArgs.html) that contain the following properties:
