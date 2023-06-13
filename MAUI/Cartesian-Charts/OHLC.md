@@ -39,11 +39,11 @@ A collection of five values is required to plot a point on an OHLC chart, includ
 <chart:SfCartesianChart>
 
     <chart:SfCartesianChart.XAxes>
-        <chart:CategoryAxis />
+        <chart:CategoryAxis/>
     </chart:SfCartesianChart.XAxes>
 
     <chart:SfCartesianChart.YAxes>
-        <chart:NumericalAxis />
+        <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>   
 
     <chart:HiLoOpenCloseSeries ItemsSource="{Binding StockData}"
@@ -95,11 +95,11 @@ In the OHLC chart, the [BullFillColor]() property is used to specify a fill colo
 <chart:SfCartesianChart>
 
     <chart:SfCartesianChart.XAxes>
-        <chart:CategoryAxis />
+        <chart:CategoryAxis/>
     </chart:SfCartesianChart.XAxes>
 
     <chart:SfCartesianChart.YAxes>
-        <chart:NumericalAxis />
+        <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>   
 
     <chart:HiLoOpenCloseSeries ItemsSource="{Binding StockData}"
