@@ -60,7 +60,7 @@ The appearance of the `SfExpander` can be customized using the following two `Vi
 * Collapsed
 
 {% tabs xaml %}
-
+{% highlight xaml hl_lines="26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43" %}
 <syncfusion:SfExpander x:Name="expander1" IsExpanded="True" >
     <syncfusion:SfExpander.Header>
         <Grid >
@@ -83,7 +83,6 @@ The appearance of the `SfExpander` can be customized using the following two `Vi
             <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular"  Text="11:03 AM, 15 January 2019" FontSize="14" VerticalOptions="CenterAndExpand"/>
         </Grid>
     </syncfusion:SfExpander.Content>
-    {% highlight %}
     <VisualStateManager.VisualStateGroups>
         <VisualStateGroupList>
             <VisualStateGroup>
@@ -102,8 +101,8 @@ The appearance of the `SfExpander` can be customized using the following two `Vi
             </VisualStateGroup>
         </VisualStateGroupList>
     </VisualStateManager.VisualStateGroups>
-    {% endhighlight %}
 </syncfusion:SfExpander>
+{% endhighlight %}
 {% endtabs %}
 
 ![Expanded and collapsed visual states in .NET MAUI Expander](Images/appearance/maui-expander-with-vsm.png)
