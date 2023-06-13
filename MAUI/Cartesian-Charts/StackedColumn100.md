@@ -24,27 +24,24 @@ N> The cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
 <chart:SfCartesianChart>
 
     <chart:SfCartesianChart.XAxes>
-        <chart:CategoryAxis />
+        <chart:CategoryAxis/>
     </chart:SfCartesianChart.XAxes>
 
     <chart:SfCartesianChart.YAxes>
-        <chart:NumericalAxis />
+        <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>   
 
     <chart:StackingColumn100Series ItemsSource="{Binding Data}"
                                    XBindingPath="Name"
-                                   YBindingPath="Value"
-                                   />
+                                   YBindingPath="Value"/>
 
     <chart:StackingColumn100Series ItemsSource="{Binding Data1}"
                                    XBindingPath="Name"
-                                   YBindingPath="Value"
-                                   />
+                                   YBindingPath="Value"/>
 
     <chart:StackingColumn100Series ItemsSource="{Binding Data2}"
                                    XBindingPath="Name"
-                                   YBindingPath="Value"
-                                   />
+                                   YBindingPath="Value"/>
 
 </chart:SfCartesianChart>
 
@@ -99,11 +96,11 @@ We can group and stack the similar stacked column 100 series type using the [Gro
 <chart:SfCartesianChart>
 
     <chart:SfCartesianChart.XAxes>
-        <chart:CategoryAxis />
+        <chart:CategoryAxis/>
     </chart:SfCartesianChart.XAxes>
 
     <chart:SfCartesianChart.YAxes>
-        <chart:NumericalAxis />
+        <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>   
 
     <chart:StackingColumn100Series ItemsSource="{Binding Data}"
@@ -176,5 +173,3 @@ We can group and stack the similar stacked column 100 series type using the [Gro
 {% endhighlight C# %}
 
 {% endtabs %}
-
-
