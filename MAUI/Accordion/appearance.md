@@ -21,7 +21,7 @@ The `SfAccordion` allows you to customize the position of the header icon in eac
                         HeaderIconPosition="Start" />
 {% endhighlight %}
 {% highlight c# %}
-accordion.HeaderIconPosition = Syncfusion.Maui.Expander.IconPosition.Start;
+accordion.HeaderIconPosition = Syncfusion.Maui.Expander.ExpanderIconPosition.Start;
 {% endhighlight %}
 {% endtabs %}
 
@@ -63,7 +63,7 @@ public AccordionItem GenerateAccordionItem()
 
 ## Icon color customization
 
-The `SfAccordion` allows you to customize the color of the expander icon by using the `HeaderIconColor` property. By default, the `HeaderIconColor` is `Black`.
+The `SfAccordion` allows you to customize the color of the expander icon by using the `HeaderIconColor` property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -105,8 +105,8 @@ The appearance of the `SfAccordion` can be customized using the following two `V
 * Collapsed
 
 {% tabs xaml %}
+{% highlight xaml hl_lines="2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21" %}
      <ContentPage.Resources>
-     {% highlight %}
         <Style TargetType="syncfusion:AccordionItem">
             <Setter Property="VisualStateManager.VisualStateGroups">
                 <VisualStateGroupList>
@@ -127,7 +127,6 @@ The appearance of the `SfAccordion` can be customized using the following two `V
                 </VisualStateGroupList>
             </Setter>
         </Style>
-    {% endhighlight %}
     </ContentPage.Resources>
     <ContentPage.Content>
         <syncfusion:SfAccordion ExpandMode="MultipleOrNone" BackgroundColor="#FAFAFA">
@@ -189,6 +188,7 @@ The appearance of the `SfAccordion` can be customized using the following two `V
         </syncfusion:SfAccordion>
     </ContentPage.Content>
 </ContentPage>
+{% endhighlight %}
 {% endtabs %}
 
 ![Expanded and collapsed visual states in .NET MAUI Accordion](Images/appearance/maui-accordion-with-visual-state-manager.png)
