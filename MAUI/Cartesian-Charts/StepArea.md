@@ -62,7 +62,7 @@ this.Content = chart;
 
 ## Enable Marker
 
-A marker, also known as a symbol, determines or highlights the data point’s position. To enable markers in the series, set the [ShowMarkers](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.AreaSeries.html#Syncfusion_Maui_Charts_AreaSeries_ShowMarkers) property to true.
+A marker, also known as a symbol, determines or highlights the data point’s position. To enable markers in the series, set the [ShowMarkers] property to true.
 
 {% tabs %}
 
@@ -159,8 +159,3 @@ this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %}
-
-
-
-
-
