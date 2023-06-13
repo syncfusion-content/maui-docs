@@ -14,7 +14,6 @@ Using [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewe
 ## Selection using mouse
 
 In desktop platforms like macOS and Windows, you can select text using the mouse pointer by clicking and dragging over the text you want to select. You will notice that the selected text is highlighted when you move the pointer. 
-After you have selected the desired text, click the <b>Copy</b> option that appears to copy it to the clipboard. As an alternative, you can use the keyboard shortcut <code>Ctrl</code> + <code>C</code> (<code>Command</code> + <code>C</code> on MAC) to copy the text. The selected text is now copied to the clipboard and ready for pasting into other applications.
 
 ## Selection using touch
 
@@ -28,7 +27,11 @@ In mobile platforms such as Android and iOS, the long press text selection featu
 
 4.	You can move the selection handles to modify or extend the text selection.
 
-5.	After you have selected the desired text, click the <b>Copy</b> option that appears to copy it to the clipboard.
+## Copy the selected text
+
+After you have selected the desired text, click the <b>Copy</b> option that appears to copy it to the clipboard.  The selected text is now copied to the clipboard and ready for pasting into other applications.
+
+N> In desktop platforms, you can also use the keyboard shortcut <code>Ctrl</code> + <code>C</code> (<code>Command</code> + <code>C</code> on MAC) to copy the text.
 
 ## Customize the text selection highlight color
 
