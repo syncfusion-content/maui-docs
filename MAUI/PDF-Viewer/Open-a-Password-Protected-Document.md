@@ -49,7 +49,7 @@ private void PdfViewer_PasswordRequested(object sender, PasswordRequestedEventAr
 
 ## Handling password request
 
-When attempting to open a password protected document, the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) will display a default password prompt to obtain the user password to load the document. However, if you want to suppress the default password prompt and to implement your own UI to obtain the user password by using the `PasswordRequested` event. Set the `Handled` property of the ` PasswordRequestedEventArgs` to `true` to disable the control’s default password prompt and handle your own logic to supply the password to open the document.
+When attempting to open a password protected document, the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) will display a default password prompt to obtain the user password to load the document. However, if you want to suppress the default password prompt and to implement your own UI to obtain the user password by using the `PasswordRequested` event. Set the [Handled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.DocumentLoadFailedEventArgs.html#Syncfusion_Maui_PdfViewer_DocumentLoadFailedEventArgs_Handled) property of the `PasswordRequestedEventArgs` to `true` to disable the control’s default password prompt and handle your own logic to supply the password to open the document.
 
 {% tabs %}
 {% highlight xaml %}

@@ -13,7 +13,7 @@ The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.
 
 ## Handling hyperlink navigation
 
-The `HyperlinkClicked` event occurs when a hyperlink is tapped or clicked and allows you to handle the hyperlink navigation at the application level in your way. Set the `Handled` property of the `HyperlinkClickedEventArgs` to `true` to suppress the default hyperlink dialog and handle your logic with the hyperlink information. The following example explains how to open a link directly in the system default browser without confirmation prompts.
+The [HyperlinkClicked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_HyperlinkClicked) event occurs when a hyperlink is tapped or clicked and allows you to handle the hyperlink navigation at the application level in your way. Set the [Handled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.HyperlinkClickedEventArgs.html#Syncfusion_Maui_PdfViewer_HyperlinkClickedEventArgs_Handled) property of the [HyperlinkClickedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.HyperlinkClickedEventArgs.html) to `true` to suppress the default hyperlink dialog and handle your logic with the hyperlink information. The following example explains how to open a link directly in the system default browser without confirmation prompts.
 
 {% tabs %}
 {% highlight XAML hl_lines="3" %}
@@ -42,7 +42,7 @@ The `HyperlinkClicked` event occurs when a hyperlink is tapped or clicked and al
 
 ## Enable or disable the hyperlink navigation
 
-Enable or disable the recognition of hyperlinks in PDF documents using the `EnableHyperlinkNavigation` property. The following code explains the same.
+Enable or disable the recognition of hyperlinks in PDF documents using the [EnableHyperlinkNavigation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_EnableHyperlinkNavigation) property. The following code explains the same.
 
 {% tabs %}
 {% highlight XAML %}
