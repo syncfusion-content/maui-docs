@@ -39,11 +39,11 @@ To plot a point on a candlestick chart, a collection of five values is required,
 <chart:SfCartesianChart>
 
     <chart:SfCartesianChart.XAxes>
-        <chart:CategoryAxis />
+        <chart:CategoryAxis/>
     </chart:SfCartesianChart.XAxes>
 
     <chart:SfCartesianChart.YAxes>
-        <chart:NumericalAxis />
+        <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>   
 
     <chart:CandleSeries ItemsSource="{Binding StockData}"
@@ -95,11 +95,11 @@ In the Candle chart, the [BullFillColor]() property is used to specify a fill co
 <chart:SfCartesianChart>
 
     <chart:SfCartesianChart.XAxes>
-        <chart:CategoryAxis />
+        <chart:CategoryAxis/>
     </chart:SfCartesianChart.XAxes>
 
     <chart:SfCartesianChart.YAxes>
-        <chart:NumericalAxis />
+        <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>   
 
     <chart:CandleSeries ItemsSource="{Binding StockData}"
@@ -155,11 +155,11 @@ In Candle Series, the [EnableSolidCandle]() property is used to specify whether 
 <chart:SfCartesianChart>
 
     <chart:SfCartesianChart.XAxes>
-        <chart:CategoryAxis />
+        <chart:CategoryAxis/>
     </chart:SfCartesianChart.XAxes>
 
     <chart:SfCartesianChart.YAxes>
-        <chart:NumericalAxis />
+        <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>   
 
     <chart:CandleSeries ItemsSource="{Binding StockData}"
@@ -199,5 +199,3 @@ In Candle Series, the [EnableSolidCandle]() property is used to specify whether 
 {% endtabs %}
 
 ![Solid candle in MAUI Chart](Chart-types_images/SolidCandles.png)
-
-
