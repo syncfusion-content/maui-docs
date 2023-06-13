@@ -453,7 +453,7 @@ public partial class MainPage : ContentPage
 
 ### Gets the index of selected item
 
-When performing selection, you can get the index of the selected item by using the [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionChanged) event from the [DataSource.DisplayItems](https://help.syncfusion.com/cr/maui/Syncfusion.DataSource.DisplayItems.html). 
+When performing selection, you can get the index of the selected item by using the [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionChanged) event from the [DataSource.DisplayItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.DisplayItems.html). 
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9 10 11 12 13 14" %}
@@ -526,4 +526,4 @@ public partial class MainPage : ContentPage
 
 ## See also 
 
-[How to change selected image in .NET MAUI ListView (SfListView)](https://www.syncfusion.com/kb/13080/)
+[How to change selected image in .NET MAUI ListView (SfListView)](https://support.syncfusion.com/kb/article/11586/how-to-change-selected-image-in-net-maui-listview-sflistview)
