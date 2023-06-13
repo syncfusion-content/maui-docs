@@ -54,7 +54,7 @@ PdfViewer.UnloadDocument();
 
 ## Opening a PDF document with annotations
 
-The .NET MAUI PDF Viewer does not currently support annotations comparable to Xamarin.Forms. However, it is possible to view the unsupported annotations in a non-interactive manner. To achieve this, provide the `flattenOptions` (an optional parameter) as `Unsupported` in the `LoadDocument` methods. See the following code example:
+The .NET MAUI PDF Viewer does not currently support annotations comparable to Xamarin.Forms. However, it is possible to view the unsupported annotations in a non-interactive manner. To achieve this, provide the [flattenOptions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.FlattenOptions.html) (an optional parameter) as [Unsupported](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.FlattenOptions.html#Syncfusion_Maui_PdfViewer_FlattenOptions_Unsupported) in the `LoadDocument` methods. See the following code example:
 
 {% tabs %}
 {% highlight c# hl_lines="2" %}
