@@ -44,10 +44,10 @@ You can customize the group caption text format by setting the `SfDataGrid.Group
 
 {% tabs %}
 {% highlight xaml%}
-<sfGrid:SfDataGrid x:Name="dataGrid"
-                   AutoGenerateColumns="True"
-                   ColumnSizer="Star"
-                   GroupCaptionTextFormat="{}{ColumnName}: {Key}">
+    <sfGrid:SfDataGrid x:Name="dataGrid"
+                       AutoGenerateColumns="True"
+                       ColumnSizer="Star"
+                       GroupCaptionTextFormat="{}{ColumnName}: {Key}">
 {% endhighlight %}
 
 {% highlight c#%}
@@ -67,21 +67,21 @@ Display summary information in a row by setting the [DataGridSummaryRow.ShowSumm
 
 {% tabs %}
 {% highlight xaml%}
-<sfGrid:SfDataGrid.CaptionSummaryRow>
-    <sfGrid:DataGridSummaryRow Title="Total Salary :{TotalSalary} for {ProductCount} members"
-                           ShowSummaryInRow="True">
-        <sfGrid:DataGridSummaryRow.SummaryColumns>
-            <sfGrid:DataGridSummaryColumn Name="TotalSalary"
-                                      Format="{}{Sum:C0}"
-                                      MappingName="Salary"
-                                      SummaryType="Int32Aggregate" />
-            <sfGrid:DataGridSummaryColumn Name="ProductCount"
-                                      Format="{}{Count}"
-                                      MappingName="Salary"
-                                      SummaryType="CountAggregate" />
+    <sfGrid:SfDataGrid.CaptionSummaryRow>
+        <sfGrid:DataGridSummaryRow Title="Total Salary :{TotalSalary} for {ProductCount} members"
+                                   ShowSummaryInRow="True">
+            <sfGrid:DataGridSummaryRow.SummaryColumns>
+                <sfGrid:DataGridSummaryColumn Name="TotalSalary"
+                                              Format="{}{Sum:C0}"
+                                              MappingName="Salary"
+                                              SummaryType="Int32Aggregate" />
+                <sfGrid:DataGridSummaryColumn Name="ProductCount"
+                                              Format="{}{Count}"
+                                              MappingName="Salary"
+                                              SummaryType="CountAggregate" />
             </sfGrid:DataGridSummaryRow.SummaryColumns>
         </sfGrid:DataGridSummaryRow>
-</sfGrid:SfDataGrid.CaptionSummaryRow>
+    </sfGrid:SfDataGrid.CaptionSummaryRow>
 {% endhighlight %}
 
 {% highlight c#%}
@@ -129,16 +129,17 @@ In the following code snippet, a summary is defined for the `Salary` column:
 
 {% tabs %}
 {% highlight xaml%}
-<sfGrid:SfDataGrid.CaptionSummaryRow>
-    <sfGrid:DataGridSummaryRow Name="CaptionSummary" ShowSummaryInRow="False">
-        <sfGrid:DataGridSummaryRow.SummaryColumns>
-            <sfGrid:DataGridSummaryColumn Name="CaptionSummary"
-                                      Format="{}{Sum:C0}"
-                                      MappingName="Salary"
-                                      SummaryType="DoubleAggregate" />
-        </sfGrid:DataGridSummaryRow.SummaryColumns>
-    </sfGrid:DataGridSummaryRow>
-</sfGrid:SfDataGrid.CaptionSummaryRow>
+    <sfGrid:SfDataGrid.CaptionSummaryRow>
+        <sfGrid:DataGridSummaryRow Name="CaptionSummary"
+                                   ShowSummaryInRow="False">
+            <sfGrid:DataGridSummaryRow.SummaryColumns>
+                <sfGrid:DataGridSummaryColumn Name="CaptionSummary"
+                                              Format="{}{Sum:C0}"
+                                              MappingName="Salary"
+                                              SummaryType="DoubleAggregate" />
+            </sfGrid:DataGridSummaryRow.SummaryColumns>
+        </sfGrid:DataGridSummaryRow>
+    </sfGrid:SfDataGrid.CaptionSummaryRow>
 {% endhighlight %}
 
 {% highlight c#%}
@@ -171,54 +172,52 @@ Please refer to the code example below, where a label is loaded in the caption s
 
 {% tabs %}
 {% highlight xaml%}
-
- <ContentPage.Resources>
-    <ResourceDictionary>
-      <local:GroupCaptionConverter x:Key="SummaryConverter" />
-    </ResourceDictionary>
-  </ContentPage.Resources>
-
-  <sfgrid:SfDataGrid x:Name="dataGrid"
-                   ItemsSource="{Binding OrdersInfo}">
-
-<sfgrid:SfDataGrid.CaptionSummaryTemplate>
-   <DataTemplate>
-            <StackLayout Orientation="Horizontal">
-                <Label Text="{Binding Converter={StaticResource SummaryConverter}, ConverterParameter = {x:Reference dataGrid} }"
-        FontSize="Default"
-        VerticalTextAlignment="Center"
-        HorizontalTextAlignment="Start"
-        LineBreakMode="NoWrap"
-        HorizontalOptions="FillAndExpand"
-        VerticalOptions="FillAndExpand">
-                    <Label.Style>
-                        <Style TargetType="Label">
-                            <Setter Property="FontAttributes" Value="Bold, Italic" />
-                        </Style>
-                    </Label.Style>
-                </Label>
-            </StackLayout>
-        </DataTemplate>
-</sfgrid:SfDataGrid.CaptionSummaryTemplate>
-<sfgrid:SfDataGrid.CaptionSummaryRow>
-    <sfgrid:DataGridSummaryRow Name="CaptionSummary" ShowSummaryInRow="True" Title="Total Salary: {CaptionSummary}">
-        <sfgrid:DataGridSummaryRow.SummaryColumns>
-            <sfgrid:DataGridSummaryColumn Name="CaptionSummary"
-                                      Format="{}{Sum:C0}"
-                                      MappingName="Salary"
-                                      SummaryType="DoubleAggregate" />
-        </sfgrid:DataGridSummaryRow.SummaryColumns>
-    </sfgrid:DataGridSummaryRow>
-</sfgrid:SfDataGrid.CaptionSummaryRow>
-</sfgrid:SfDataGrid>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:GroupCaptionConverter x:Key="SummaryConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <sfgrid:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrdersInfo}">
+        <sfgrid:SfDataGrid.CaptionSummaryTemplate>
+            <DataTemplate>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="{Binding Converter={StaticResource SummaryConverter}, ConverterParameter = {x:ReferencedataGrid} }"
+                           FontSize="Default"
+                           VerticalTextAlignment="Center"
+                           HorizontalTextAlignment="Start"
+                           LineBreakMode="NoWrap"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="FillAndExpand">
+                        <Label.Style>
+                            <Style TargetType="Label">
+                                <Setter Property="FontAttributes"
+                                        Value="Bold, Italic" />
+                            </Style>
+                        </Label.Style>
+                    </Label>
+                </StackLayout>
+            </DataTemplate>
+        </sfgrid:SfDataGrid.CaptionSummaryTemplate>
+        <sfgrid:SfDataGrid.CaptionSummaryRow>
+            <sfgrid:DataGridSummaryRow Name="CaptionSummary"
+                                       ShowSummaryInRow="True"
+                                       Title="Total Salary: {CaptionSummary}">
+                <sfgrid:DataGridSummaryRow.SummaryColumns>
+                    <sfgrid:DataGridSummaryColumn Name="CaptionSummary"
+                                                  Format="{}{Sum:C0}"
+                                                  MappingName="Salary"
+                                                  SummaryType="DoubleAggregate" />
+                </sfgrid:DataGridSummaryRow.SummaryColumns>
+            </sfgrid:DataGridSummaryRow>
+        </sfgrid:SfDataGrid.CaptionSummaryRow>
+    </sfgrid:SfDataGrid>
 {% endhighlight%}
 {% endtabs %}
 
 {% tabs %}
 {% highlight c# %}
-
 // To write a converter, follow the code example:
-
 public class GroupCaptionConverter : IValueConverter
 {
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
@@ -233,14 +232,11 @@ public class GroupCaptionConverter : IValueConverter
         }
         return null;
     }
-
     public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
     {
         return null;
     }
 }
-
-
 {% endhighlight %}
 {% endtabs %}
 
@@ -257,59 +253,63 @@ Here's an example code snippet that demonstrates how to load a label in the temp
 
 {% tabs %}
 {% highlight xaml%}
-
- <ContentPage.Resources>
-        <ResourceDictionary>
-            <local:GroupCaptionConverter x:Key="SummaryConverter" />
-        </ResourceDictionary>
-</ContentPage.Resources>
-
-
-<sfgrid:SfDataGrid x:Name="dataGrid" AllowResizingColumn="True" AutoGenerateColumns="False" ColumnSizer="Star">
-    <sfgrid:SfDataGrid.Columns>
-        <sfgrid:DataGridTextColumn MappingName="OrderID" />
-        <sfgrid:DataGridTextColumn MappingName="Salary" />
-        <sfgrid:DataGridTextColumn MappingName="CustomerID" />
-    </sfgrid:SfDataGrid.Columns>
-    <sfgrid:SfDataGrid.CaptionSummaryRow>
-        <sfgrid:DataGridSummaryRow Name="CaptionSummary" ShowSummaryInRow="False" Title="Salary: {CaptionSummary}">
-            <sfgrid:DataGridSummaryRow.SummaryColumns>
-                <sfgrid:DataGridSummaryColumn Name="CaptionSummary" Format="{}{Sum:C0}" MappingName="Salary"  
-                                          SummaryType="DoubleAggregate" >
-                    <sfgrid:DataGridSummaryColumn.Template>
-                        <DataTemplate>
-                                    <StackLayout Orientation="Horizontal" BackgroundColor="Gray">
-                                        <Label Text="{Binding Converter={StaticResource SummaryConverter}, ConverterParameter = {x:Reference dataGrid} }" VerticalOptions="CenterAndExpand"
-                                    TextColor="White"
-                                   FontSize="Default"
-                                   VerticalTextAlignment="Center"
-                                   HorizontalTextAlignment="Start"
-                                   LineBreakMode="NoWrap"
-                                   HorizontalOptions="FillAndExpand">
-                                            <Label.Style>
-                                                <Style TargetType="Label">
-                                                    <Setter Property="FontAttributes" Value="Italic" />
-                                                </Style>
-                                            </Label.Style>
-                                        </Label>
-                                    </StackLayout>
-                                </DataTemplate>
+     <ContentPage.Resources>
+         <ResourceDictionary>
+             <local:GroupCaptionConverter x:Key="SummaryConverter" />
+         </ResourceDictionary>
+     </ContentPage.Resources>
+     <sfgrid:SfDataGrid x:Name="dataGrid"
+                       AllowResizingColumn="True"
+                       AutoGenerateColumns="False"
+                       ColumnSizer="Star">
+        <sfgrid:SfDataGrid.Columns>
+            <sfgrid:DataGridTextColumn MappingName="OrderID" />
+            <sfgrid:DataGridTextColumn MappingName="Salary" />
+            <sfgrid:DataGridTextColumn MappingName="CustomerID" />
+        </sfgrid:SfDataGrid.Columns>
+        <sfgrid:SfDataGrid.CaptionSummaryRow>
+            <sfgrid:DataGridSummaryRow Name="CaptionSummary"
+                                       ShowSummaryInRow="False"
+                                       Title="Salary: {CaptionSummary}">
+                <sfgrid:DataGridSummaryRow.SummaryColumns>
+                    <sfgrid:DataGridSummaryColumn Name="CaptionSummary"
+                                                  Format="{}{Sum:C0}"
+                                                  MappingName="Salary"
+                                                  SummaryType="DoubleAggregate">
+                        <sfgrid:DataGridSummaryColumn.Template>
+                            <DataTemplate>
+                                <StackLayout Orientation="Horizontal"
+                                             BackgroundColor="Gray">
+                                    <Label Text="{Binding Converter={StaticResource SummaryConverter}, ConverterParameter {x:ReferencedataGrid} }"
+                                           VerticalOptions="CenterAndExpand"
+                                           TextColor="White"
+                                           FontSize="Default"
+                                           VerticalTextAlignment="Center"
+                                           HorizontalTextAlignment="Start"
+                                           LineBreakMode="NoWrap"
+                                           HorizontalOptions="FillAndExpand">
+                                        <Label.Style>
+                                            <Style TargetType="Label">
+                                                <Setter Property="FontAttributes"
+                                                        Value="Italic" />
+                                            </Style>
+                                        </Label.Style>
+                                    </Label>
+                                </StackLayout>
+                            </DataTemplate>
                         </sfgrid:DataGridSummaryColumn.Template>
                     </sfgrid:DataGridSummaryColumn>
                 </sfgrid:DataGridSummaryRow.SummaryColumns>
             </sfgrid:DataGridSummaryRow>
-        </sfgrid:SfDataGrid.CaptionSummaryRow> 
-    </sfgrid:SfDataGrid>
+        </sfgrid:SfDataGrid.CaptionSummaryRow>
+     </sfgrid:SfDataGrid>
 
 {% endhighlight%}
 {% endtabs %}
 
 {% tabs %}
 {% highlight c# %}
-
 // To write a converter, follow the code example:
-
-
 public class GroupCaptionConverter : IValueConverter
 {
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
@@ -319,7 +319,6 @@ public class GroupCaptionConverter : IValueConverter
         {
             SfDataGrid dataGrid = (SfDataGrid)parameter;
             var summaryText = SummaryCreator.GetSummaryDisplayTextForRow((value as Group).SummaryDetails, dataGrid.View);
-
             return summaryText;
         }
         return null;
@@ -329,7 +328,6 @@ public class GroupCaptionConverter : IValueConverter
         return null;
     }
 }
-
 {% endhighlight %}
 {% endtabs %}
 
@@ -350,58 +348,56 @@ Please refer to the [Formatting Summary]()  section to learn more about how to f
 {% tabs %}
 
 {% highlight xaml %}
-
-<sfgrid:SfDataGrid x:Name="dataGrid" AllowResizingColumn="True" AllowGroupExpandCollapse="True"
-                    AutoGenerateColumns="True" 
-                    ColumnSizer="Star">
-
-<sfgrid:SfDataGrid.GroupColumnDescriptions>
-        <sfgrid:GroupColumnDescription ColumnName="Salary"  />
-    </sfgrid:SfDataGrid.GroupColumnDescriptions>
-    <sfgrid:SfDataGrid.GroupSummaryRows>
-        <sfgrid:DataGridSummaryRow ShowSummaryInRow="True" Title="Total Salary: {Salary} for {customerID} members">
-            <sfgrid:DataGridSummaryRow.SummaryColumns>
-                <sfgrid:DataGridSummaryColumn Name="Salary" 
-                                                MappingName="Salary" 
-                                                Format="{}{Sum:C0}"
-                                                SummaryType="DoubleAggregate">
-                </sfgrid:DataGridSummaryColumn>
-                <sfgrid:DataGridSummaryColumn Name="customerID" 
-                                                MappingName="CustomerID" 
-                                                Format="{}{Count}"
-                                                SummaryType="CountAggregate">
-                </sfgrid:DataGridSummaryColumn>
-            </sfgrid:DataGridSummaryRow.SummaryColumns>
-        </sfgrid:DataGridSummaryRow>
-    </sfgrid:SfDataGrid.GroupSummaryRows>
-</sfgrid:SfDataGrid>
-
+    <sfgrid:SfDataGrid x:Name="dataGrid"
+                       AllowResizingColumn="True"
+                       AllowGroupExpandCollapse="True"
+                       AutoGenerateColumns="True"
+                       ColumnSizer="Star">
+        <sfgrid:SfDataGrid.GroupColumnDescriptions>
+            <sfgrid:GroupColumnDescription ColumnName="Salary" />
+        </sfgrid:SfDataGrid.GroupColumnDescriptions>
+        <sfgrid:SfDataGrid.GroupSummaryRows>
+            <sfgrid:DataGridSummaryRow ShowSummaryInRow="True"
+                                       Title="Total Salary: {Salary} for {customerID} members">
+                <sfgrid:DataGridSummaryRow.SummaryColumns>
+                    <sfgrid:DataGridSummaryColumn Name="Salary"
+                                                  MappingName="Salary"
+                                                  Format="{}{Sum:C0}"
+                                                  SummaryType="DoubleAggregate">
+                    </sfgrid:DataGridSummaryColumn>
+                    <sfgrid:DataGridSummaryColumn Name="customerID"
+                                                  MappingName="CustomerID"
+                                                  Format="{}{Count}"
+                                                  SummaryType="CountAggregate">
+                    </sfgrid:DataGridSummaryColumn>
+                </sfgrid:DataGridSummaryRow.SummaryColumns>
+            </sfgrid:DataGridSummaryRow>
+        </sfgrid:SfDataGrid.GroupSummaryRows>
+    </sfgrid:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
-
-    this.dataGrid.GroupSummaryRows.Add(new DataGridSummaryRow()
+this.dataGrid.GroupSummaryRows.Add(new DataGridSummaryRow()
+{
+    ShowSummaryInRow = true,
+    Title = "Total Salary: {Salary} for {customerID} members",
+    SummaryColumns = new ObservableCollection<ISummaryColumn>()
     {
-        ShowSummaryInRow = true,
-        Title = "Total Salary: {Salary} for {customerID} members",
-        SummaryColumns = new ObservableCollection<ISummaryColumn>()
+        new DataGridSummaryColumn()
         {
-            new DataGridSummaryColumn()
-            {
-                Name="Salary",
-                MappingName="Salary",
-                SummaryType=SummaryType.DoubleAggregate,
-                Format="{Sum}"
-            },
-            new DataGridSummaryColumn()
-            {
-                Name="customerID",
-                MappingName="customerID",
-                Format="{Count}",
-                SummaryType=SummaryType.CountAggregate
-            }
+            Name="Salary",
+            MappingName="Salary",
+            SummaryType=SummaryType.DoubleAggregate,
+            Format="{Sum}"
+        },
+        new DataGridSummaryColumn()
+        {
+            Name="customerID",
+            MappingName="customerID",
+            Format="{Count}",
+            SummaryType=SummaryType.CountAggregate
         }
-    });
-
+    }
+});
 {% endhighlight %}
 {% endtabs %}
 
@@ -422,14 +418,15 @@ In the following code snippet, a summary is defined for the `Salary` and `Custom
 
 {% tabs %}
 {% highlight xaml %}
-    <sfgrid:SfDataGrid x:Name="dataGrid" AllowResizingColumn="True"
-                       AutoGenerateColumns="True" 
+    <sfgrid:SfDataGrid x:Name="dataGrid"
+                       AllowResizingColumn="True"
+                       AutoGenerateColumns="True"
                        ColumnSizer="Star">
-       <sfgrid:SfDataGrid.GroupSummaryRows>
-            <sfgrid:DataGridSummaryRow ShowSummaryInRow="False" >
+        <sfgrid:SfDataGrid.GroupSummaryRows>
+            <sfgrid:DataGridSummaryRow ShowSummaryInRow="False">
                 <sfgrid:DataGridSummaryRow.SummaryColumns>
-                    <sfgrid:DataGridSummaryColumn Name="Salary" 
-                                                  MappingName="Salary" 
+                    <sfgrid:DataGridSummaryColumn Name="Salary"
+                                                  MappingName="Salary"
                                                   Format="{}{Sum:C0}"
                                                   SummaryType="DoubleAggregate">
                     </sfgrid:DataGridSummaryColumn>
@@ -437,24 +434,23 @@ In the following code snippet, a summary is defined for the `Salary` and `Custom
             </sfgrid:DataGridSummaryRow>
         </sfgrid:SfDataGrid.GroupSummaryRows>
     </sfgrid:SfDataGrid>
-
 {% endhighlight %}
 
 {% highlight c# %}
-            this.dataGrid.GroupSummaryRows.Add(new DataGridSummaryRow()
-            {
-                ShowSummaryInRow = false,
-                SummaryColumns = new ObservableCollection<ISummaryColumn>()
-                {
-                    new DataGridSummaryColumn()
-                    {
-                        Name="Salary",
-                        MappingName="Salary",
-                        SummaryType=SummaryType.DoubleAggregate,
-                        Format="{Sum}"
-                    },
-                }
-            });
+this.dataGrid.GroupSummaryRows.Add(new DataGridSummaryRow()
+{
+    ShowSummaryInRow = false,
+    SummaryColumns = new ObservableCollection<ISummaryColumn>()
+    {
+        new DataGridSummaryColumn()
+        {
+            Name="Salary",
+            MappingName="Salary",
+            SummaryType=SummaryType.DoubleAggregate,
+            Format="{Sum}"
+        },
+    }
+});
 {% endhighlight %}
 {% endtabs %}
 
@@ -473,54 +469,52 @@ Refer to the code example below, which demonstrates how to load a label in the g
 
 {% tabs %}
 {% highlight xaml%}
-
     <ContentPage.Resources>
         <ResourceDictionary>
             <local:GroupSummaryConverter x:Key="SummaryConverter" />
         </ResourceDictionary>
     </ContentPage.Resources>
-
-  <sfgrid:SfDataGrid x:Name="dataGrid"
-                   ItemsSource="{Binding OrdersInfo}">
-       <sfgrid:SfDataGrid.GroupSummaryTemplate>
-                <DataTemplate>
-                    <StackLayout Orientation="Horizontal">
-                        <Label Text="{Binding Converter={StaticResource SummaryConverter}, ConverterParameter = {x:Reference dataGrid} }"
-                                           FontSize="Default"
-                                           VerticalTextAlignment="Center"
-                                           HorizontalTextAlignment="Start"
-                                           LineBreakMode="NoWrap"
-                                           HorizontalOptions="FillAndExpand"
-                                           VerticalOptions="FillAndExpand">
-                            <Label.Style>
-                                <Style TargetType="Label">
-                                    <Setter Property="FontAttributes" Value="Bold, Italic" />
-                                </Style>
-                            </Label.Style>
-                        </Label>
-                    </StackLayout>
-                </DataTemplate>
-            </sfgrid:SfDataGrid.GroupSummaryTemplate>
-            <sfgrid:SfDataGrid.GroupSummaryRows>
-                <sfgrid:DataGridSummaryRow Title="salary {Salary}" ShowSummaryInRow="True">
-                    <sfgrid:DataGridSummaryRow.SummaryColumns>
-                        <sfgrid:DataGridSummaryColumn Name="Salary" 
-                                                  MappingName="Salary" 
+    <sfgrid:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrdersInfo}">
+        <sfgrid:SfDataGrid.GroupSummaryTemplate>
+            <DataTemplate>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="{Binding Converter={StaticResource SummaryConverter}, ConverterParameter = {x:ReferencedataGrid} }"
+                           FontSize="Default"
+                           VerticalTextAlignment="Center"
+                           HorizontalTextAlignment="Start"
+                           LineBreakMode="NoWrap"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="FillAndExpand">
+                        <Label.Style>
+                            <Style TargetType="Label">
+                                <Setter Property="FontAttributes"
+                                        Value="Bold, Italic" />
+                            </Style>
+                        </Label.Style>
+                    </Label>
+                </StackLayout>
+            </DataTemplate>
+        </sfgrid:SfDataGrid.GroupSummaryTemplate>
+        <sfgrid:SfDataGrid.GroupSummaryRows>
+            <sfgrid:DataGridSummaryRow Title="salary {Salary}"
+                                       ShowSummaryInRow="True">
+                <sfgrid:DataGridSummaryRow.SummaryColumns>
+                    <sfgrid:DataGridSummaryColumn Name="Salary"
+                                                  MappingName="Salary"
                                                   Format="{}{Sum:C0}"
                                                   SummaryType="DoubleAggregate">
-                        </sfgrid:DataGridSummaryColumn>
-                    </sfgrid:DataGridSummaryRow.SummaryColumns>
-                </sfgrid:DataGridSummaryRow>
-            </sfgrid:SfDataGrid.GroupSummaryRows>
-
+                    </sfgrid:DataGridSummaryColumn>
+                </sfgrid:DataGridSummaryRow.SummaryColumns>
+            </sfgrid:DataGridSummaryRow>
+        </sfgrid:SfDataGrid.GroupSummaryRows>
+    </sfgrid:SfDataGrid>
 {% endhighlight%}
 {% endtabs %}
 
 {% tabs %}
 {% highlight c# %}
-
 // To write a converter, follow the code example:
-
 public class GroupSummaryConverter : IValueConverter
 {
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
@@ -539,8 +533,6 @@ public class GroupSummaryConverter : IValueConverter
         return null;
     }
 }
-
-
 {% endhighlight %}
 {% endtabs %}
 
@@ -556,62 +548,61 @@ Please refer to the code example below, which demonstrates how to load a label i
 
 {% tabs %}
 {% highlight xaml%}
-
- <ContentPage.Resources>
+    <ContentPage.Resources>
         <ResourceDictionary>
             <local:GroupSummaryConverter x:Key="SummaryConverter" />
         </ResourceDictionary>
-</ContentPage.Resources>
-
-
-<sfgrid:SfDataGrid x:Name="dataGrid" AllowResizingColumn="True" AutoGenerateColumns="False" ColumnSizer="Star">
-    <sfgrid:SfDataGrid.Columns>
-        <sfgrid:DataGridTextColumn MappingName="OrderID" />
-        <sfgrid:DataGridTextColumn MappingName="Salary" />
-        <sfgrid:DataGridTextColumn MappingName="CustomerID" />
-        <sfgrid:DataGridTextColumn MappingName="Country" />
-    </sfgrid:SfDataGrid.Columns>
-     <sfgrid:SfDataGrid.GroupSummaryRows>
-            <sfgrid:DataGridSummaryRow ShowSummaryInRow="False" >
+    </ContentPage.Resources>
+    <sfgrid:SfDataGrid x:Name="dataGrid"
+                       AllowResizingColumn="True"
+                       AutoGenerateColumns="False"
+                       ColumnSizer="Star">
+        <sfgrid:SfDataGrid.Columns>
+            <sfgrid:DataGridTextColumn MappingName="OrderID" />
+            <sfgrid:DataGridTextColumn MappingName="Salary" />
+            <sfgrid:DataGridTextColumn MappingName="CustomerID" />
+            <sfgrid:DataGridTextColumn MappingName="Country" />
+        </sfgrid:SfDataGrid.Columns>
+        <sfgrid:SfDataGrid.GroupSummaryRows>
+            <sfgrid:DataGridSummaryRow ShowSummaryInRow="False">
                 <sfgrid:DataGridSummaryRow.SummaryColumns>
                     <sfgrid:DataGridSummaryColumn Name="Salary"
-                                                  MappingName="Salary" 
+                                                  MappingName="Salary"
                                                   Format="{}{Sum:C0}"
                                                   SummaryType="DoubleAggregate">
                         <sfgrid:DataGridSummaryColumn.Template>
                             <DataTemplate>
-                                    <StackLayout Orientation="Horizontal" BackgroundColor="Gray">
-                                        <Label Text="{Binding Converter={StaticResource SummaryConverter}, ConverterParameter = {x:Reference dataGrid} }" VerticalOptions="CenterAndExpand"
-                                    TextColor="White"
-                                   FontSize="Medium"
-                                   VerticalTextAlignment="Center"
-                                   HorizontalTextAlignment="Start"
-                                   LineBreakMode="NoWrap"
-                                   HorizontalOptions="FillAndExpand">
-                                            <Label.Style>
-                                                <Style TargetType="Label">
-                                                    <Setter Property="FontAttributes" Value="Italic" />
-                                                </Style>
-                                            </Label.Style>
-                                        </Label>
-                                    </StackLayout>
-                                </DataTemplate>
+                                <StackLayout Orientation="Horizontal"
+                                             BackgroundColor="Gray">
+                                    <Label Text="{Binding Converter={StaticResource SummaryConverter}, ConverterParameter {x:ReferencedataGrid} }"
+                                           VerticalOptions="CenterAndExpand"
+                                           TextColor="White"
+                                           FontSize="Medium"
+                                           VerticalTextAlignment="Center"
+                                           HorizontalTextAlignment="Start"
+                                           LineBreakMode="NoWrap"
+                                           HorizontalOptions="FillAndExpand">
+                                        <Label.Style>
+                                            <Style TargetType="Label">
+                                                <Setter Property="FontAttributes"
+                                                        Value="Italic" />
+                                            </Style>
+                                        </Label.Style>
+                                    </Label>
+                                </StackLayout>
+                            </DataTemplate>
                         </sfgrid:DataGridSummaryColumn.Template>
                     </sfgrid:DataGridSummaryColumn>
-                    </sfgrid:DataGridSummaryRow.SummaryColumns>
+                </sfgrid:DataGridSummaryRow.SummaryColumns>
             </sfgrid:DataGridSummaryRow>
         </sfgrid:SfDataGrid.GroupSummaryRows>
-
     </sfgrid:SfDataGrid>
-
 {% endhighlight%}
 {% endtabs %}
 
 {% tabs %}
 {% highlight c# %}
-
 // To write a converter, follow the code example:
-
 public class GroupSummaryConverter : IValueConverter
 {
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
@@ -630,7 +621,6 @@ public class GroupSummaryConverter : IValueConverter
         return null;
     }
 }
-
 {% endhighlight %}
 {% endtabs %}
 
@@ -650,30 +640,31 @@ The following screenshot illustrates table summary rows in the data grid:
 
 {% tabs %}
 {% highlight xaml%}
-<sfGrid:SfDataGrid.TableSummaryRows>
-    <sfGrid:DataGridTableSummaryRow Title="Total Salary :{TotalSalary} for {ProductCount} members"
-                                Position="Top"
-                                ShowSummaryInRow="True">
-        <sfGrid:DataGridTableSummaryRow.SummaryColumns>
-            <sfGrid:DataGridSummaryColumn Name="TotalSalary"
-                                      Format="{}{Sum:C0}"
-                                      MappingName="Salary"
-                                      SummaryType="DoubleAggregate" />
-            <sfGrid:DataGridSummaryColumn Name="ProductCount"
-                                      Format="{}{Count}"
-                                      MappingName="Salary"
-                                      SummaryType="CountAggregate" />
+    <sfGrid:SfDataGrid.TableSummaryRows>
+        <sfGrid:DataGridTableSummaryRow Title="Total Salary :{TotalSalary} for {ProductCount} members"
+                                        Position="Top"
+                                        ShowSummaryInRow="True">
+            <sfGrid:DataGridTableSummaryRow.SummaryColumns>
+                <sfGrid:DataGridSummaryColumn Name="TotalSalary"
+                                              Format="{}{Sum:C0}"
+                                              MappingName="Salary"
+                                              SummaryType="DoubleAggregate" />
+                <sfGrid:DataGridSummaryColumn Name="ProductCount"
+                                              Format="{}{Count}"
+                                              MappingName="Salary"
+                                              SummaryType="CountAggregate" />
             </sfGrid:DataGridTableSummaryRow.SummaryColumns>
         </sfGrid:DataGridTableSummaryRow>
-    <sfGrid:DataGridTableSummaryRow Position="Top" ShowSummaryInRow="False">
-        <sfGrid:DataGridTableSummaryRow.SummaryColumns>
-            <sfGrid:DataGridSummaryColumn Name="TotalSalary"
-                                      Format="{}{Sum:C0}"
-                                      MappingName="Salary"
-                                      SummaryType="DoubleAggregate" />
+        <sfGrid:DataGridTableSummaryRow Position="Top"
+                                        ShowSummaryInRow="False">
+            <sfGrid:DataGridTableSummaryRow.SummaryColumns>
+                <sfGrid:DataGridSummaryColumn Name="TotalSalary"
+                                              Format="{}{Sum:C0}"
+                                              MappingName="Salary"
+                                              SummaryType="DoubleAggregate" />
             </sfGrid:DataGridTableSummaryRow.SummaryColumns>
         </sfGrid:DataGridTableSummaryRow>
-</sfGrid:SfDataGrid.TableSummaryRows>
+    </sfGrid:SfDataGrid.TableSummaryRows>
 {% endhighlight %}
 
 {% highlight c#%}
@@ -719,21 +710,21 @@ Display summary information in a row by setting the [DataGridTableSummaryRow.Sho
 
 {% tabs %}
 {% highlight xaml%}
-<sfGrid:SfDataGrid.TableSummaryRows>
-    <sfGrid:DataGridTableSummaryRow Title="Total Salary :{TotalSalary} for {ProductCount} members"
-                                ShowSummaryInRow="True">
-        <sfGrid:DataGridTableSummaryRow.SummaryColumns>
-            <sfGrid:DataGridSummaryColumn Name="TotalSalary"
-                                      Format="{}{Sum:C0}"
-                                      MappingName="Salary"
-                                      SummaryType="DoubleAggregate" />
-            <sfGrid:DataGridSummaryColumn Name="ProductCount"
-                                      Format="{}{Count}"
-                                      MappingName="Salary"
-                                      SummaryType="CountAggregate" />
+    <sfGrid:SfDataGrid.TableSummaryRows>
+        <sfGrid:DataGridTableSummaryRow Title="Total Salary :{TotalSalary} for {ProductCount} members"
+                                        ShowSummaryInRow="True">
+            <sfGrid:DataGridTableSummaryRow.SummaryColumns>
+                <sfGrid:DataGridSummaryColumn Name="TotalSalary"
+                                              Format="{}{Sum:C0}"
+                                              MappingName="Salary"
+                                              SummaryType="DoubleAggregate" />
+                <sfGrid:DataGridSummaryColumn Name="ProductCount"
+                                              Format="{}{Count}"
+                                              MappingName="Salary"
+                                              SummaryType="CountAggregate" />
             </sfGrid:DataGridTableSummaryRow.SummaryColumns>
         </sfGrid:DataGridTableSummaryRow>
-</sfGrid:SfDataGrid.TableSummaryRows>
+    </sfGrid:SfDataGrid.TableSummaryRows>
 {% endhighlight %}
 
 {% highlight c#%}
@@ -786,16 +777,17 @@ In the following code snippet, summary is defined for `Salary` column:
 
 {% tabs %}
 {% highlight xaml%}
-<sfGrid:SfDataGrid.TableSummaryRows>
-    <sfGrid:DataGridTableSummaryRow Name="TableSummary" ShowSummaryInRow="False">
-        <sfGrid:DataGridTableSummaryRow.SummaryColumns>
-            <sfGrid:DataGridSummaryColumn Name="TableSummary"
-                                      Format="{}{Sum:C0}"
-                                      MappingName="Salary"
-                                      SummaryType="DoubleAggregate" />
-        </sfGrid:DataGridTableSummaryRow.SummaryColumns>
-    </sfGrid:DataGridTableSummaryRow>
-</sfGrid:SfDataGrid.TableSummaryRows>
+    <sfGrid:SfDataGrid.TableSummaryRows>
+        <sfGrid:DataGridTableSummaryRow Name="TableSummary"
+                                        ShowSummaryInRow="False">
+            <sfGrid:DataGridTableSummaryRow.SummaryColumns>
+                <sfGrid:DataGridSummaryColumn Name="TableSummary"
+                                              Format="{}{Sum:C0}"
+                                              MappingName="Salary"
+                                              SummaryType="DoubleAggregate" />
+            </sfGrid:DataGridTableSummaryRow.SummaryColumns>
+        </sfGrid:DataGridTableSummaryRow>
+    </sfGrid:SfDataGrid.TableSummaryRows>
 {% endhighlight %}
 
 {% highlight c#%}
@@ -822,31 +814,31 @@ The data grid add table summary rows either at top or bottom positions using the
 
 {% tabs %}
 {% highlight xaml%}
-<sfGrid:SfDataGrid.TableSummaryRows>
-    <sfGrid:DataGridTableSummaryRow Position="Top"
-                                ShowSummaryInRow="False">
-        <sfGrid:DataGridTableSummaryRow.SummaryColumns>
-            <sfGrid:DataGridSummaryColumn Name="TotalSalary"
-                                      Format="{}{Sum:C0}"
-                                      MappingName="Salary"
-                                      SummaryType="DoubleAggregate" />
+    <sfGrid:SfDataGrid.TableSummaryRows>
+        <sfGrid:DataGridTableSummaryRow Position="Top"
+                                        ShowSummaryInRow="False">
+            <sfGrid:DataGridTableSummaryRow.SummaryColumns>
+                <sfGrid:DataGridSummaryColumn Name="TotalSalary"
+                                              Format="{}{Sum:C0}"
+                                              MappingName="Salary"
+                                              SummaryType="DoubleAggregate" />
             </sfGrid:DataGridTableSummaryRow.SummaryColumns>
         </sfGrid:DataGridTableSummaryRow>
-    <sfGrid:DataGridTableSummaryRow Position="Bottom"
-                                ShowSummaryInRow="True"
-                                Title="Total Salary :{TotalSalary} for {ProductCount} members">
-        <sfGrid:DataGridTableSummaryRow.SummaryColumns>
-            <sfGrid:DataGridSummaryColumn Name="TotalSalary"
-                                      Format="{}{Sum:C0}"
-                                      MappingName="Salary"
-                                      SummaryType="DoubleAggregate" />
-            <sfGrid:DataGridSummaryColumn Name="ProductCount"
-                                      Format="{}{Count}"
-                                      MappingName="Salary"
-                                      SummaryType="CountAggregate" />
-        </sfGrid:DataGridTableSummaryRow.SummaryColumns>
-    </sfGrid:DataGridTableSummaryRow>
-</sfGrid:SfDataGrid.TableSummaryRows>
+        <sfGrid:DataGridTableSummaryRow Position="Bottom"
+                                        ShowSummaryInRow="True"
+                                        Title="Total Salary :{TotalSalary} for {ProductCount} members">
+            <sfGrid:DataGridTableSummaryRow.SummaryColumns>
+                <sfGrid:DataGridSummaryColumn Name="TotalSalary"
+                                              Format="{}{Sum:C0}"
+                                              MappingName="Salary"
+                                              SummaryType="DoubleAggregate" />
+                <sfGrid:DataGridSummaryColumn Name="ProductCount"
+                                              Format="{}{Count}"
+                                              MappingName="Salary"
+                                              SummaryType="CountAggregate" />
+            </sfGrid:DataGridTableSummaryRow.SummaryColumns>
+        </sfGrid:DataGridTableSummaryRow>
+    </sfGrid:SfDataGrid.TableSummaryRows>
 {% endhighlight %}
 
 {% highlight c#%}
@@ -900,8 +892,7 @@ Refer the below code example in which a label is loaded in the table summary tem
 
 {% tabs %}
 {% highlight xaml %}
-
- <ContentPage.Resources>
+    <ContentPage.Resources>
         <ResourceDictionary>
             <local:TableSummaryConverter x:Key="SummaryConverter" />
         </ResourceDictionary>
@@ -917,50 +908,50 @@ Refer the below code example in which a label is loaded in the table summary tem
             <sfgrid:SfDataGrid.Columns>
                 <sfgrid:GridNumericColumn MappingName="OrderID" />
                 <sfgrid:GridTextColumn MappingName="EmployeeID" />
-                <sfgrid:GridTextColumn MappingName="FirstName"  />
-                <sfgrid:GridTextColumn MappingName="LastName"  />
+                <sfgrid:GridTextColumn MappingName="FirstName" />
+                <sfgrid:GridTextColumn MappingName="LastName" />
             </sfgrid:SfDataGrid.Columns>
             <sfgrid:SfDataGrid.TableSummaryTemplate>
                 <DataTemplate>
-                        <StackLayout Orientation="Horizontal" BackgroundColor="Gray">
-                            <Label Text="{Binding Converter={StaticResource SummaryConverter}, ConverterParameter = {x:Reference dataGrid} }"
-                                   TextColor="White"
-                                   FontSize="Medium"
-                                   VerticalTextAlignment="Center"
-                                   HorizontalTextAlignment="Start"
-                                   LineBreakMode="NoWrap"
-                                   HorizontalOptions="FillAndExpand"
-                                   VerticalOptions="FillAndExpand">
-                                <Label.Style>
-                                    <Style TargetType="Label">
-                                        <Setter Property="FontAttributes" Value="Italic" />
-                                    </Style>
-                                </Label.Style>
-                            </Label>
-                        </StackLayout>
+                    <StackLayout Orientation="Horizontal"
+                                 BackgroundColor="Gray">
+                        <Label Text="{Binding Converter={StaticResource SummaryConverter}, ConverterParameter = {x:ReferencdataGrid} }"
+                               TextColor="White"
+                               FontSize="Medium"
+                               VerticalTextAlignment="Center"
+                               HorizontalTextAlignment="Start"
+                               LineBreakMode="NoWrap"
+                               HorizontalOptions="FillAndExpand"
+                               VerticalOptions="FillAndExpand">
+                            <Label.Style>
+                                <Style TargetType="Label">
+                                    <Setter Property="FontAttributes"
+                                            Value="Italic" />
+                                </Style>
+                            </Label.Style>
+                        </Label>
+                    </StackLayout>
                 </DataTemplate>
             </sfgrid:SfDataGrid.TableSummaryTemplate>
             <sfgrid:SfDataGrid.TableSummaryRows>
                 <sfgrid:DataGridTableSummaryRow Title="Total Salary :{TotalSalary} for {ProductCount} members"
-                                            Position="Bottom"
-                                            ShowSummaryInRow="True">
+                                                Position="Bottom"
+                                                ShowSummaryInRow="True">
                     <sfgrid:DataGridTableSummaryRow.SummaryColumns>
                         <sfgrid:DataGridSummaryColumn Name="TotalSalary"
-                                                  Format="{}{Sum:C0}"
-                                                  MappingName="Salary"
-                                                  SummaryType="DoubleAggregate" />
+                                                      Format="{}{Sum:C0}"
+                                                      MappingName="Salary"
+                                                      SummaryType="DoubleAggregate" />
                     </sfgrid:DataGridTableSummaryRow.SummaryColumns>
                 </sfgrid:DataGridTableSummaryRow>
             </sfgrid:SfDataGrid.TableSummaryRows>
         </sfgrid:SfDataGrid>
     </StackLayout>
-
 {% endhighlight %}
 {% endtabs %}
 
 {% tabs %}
 {% highlight c# %}
-
  public class TableSummaryConverter : IValueConverter
 {
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
@@ -975,13 +966,11 @@ Refer the below code example in which a label is loaded in the table summary tem
 
         return null;
     }
-
     public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
     {
         return null;
     }
 }
-
 {% endhighlight %}
 {% endtabs %}
 
@@ -995,8 +984,7 @@ Refer the below code example in which a label is loaded in the template of table
 
 {% tabs %}
 {% highlight xaml%}
-
-<ContentPage.Resources>
+    <ContentPage.Resources>
         <ResourceDictionary>
             <local:TableSummaryConverter x:Key="SummaryConverter" />
         </ResourceDictionary>
@@ -1017,17 +1005,18 @@ Refer the below code example in which a label is loaded in the template of table
             </sfgrid:SfDataGrid.Columns>
             <sfgrid:SfDataGrid.TableSummaryRows>
                 <sfgrid:DataGridTableSummaryRow Title="Total Salary :{TotalSalary} for {ProductCount} members"
-                                            Position="Bottom"
-                                            ShowSummaryInRow="False">
-                        <sfgrid:DataGridTableSummaryRow.SummaryColumns>
-                            <sfgrid:DataGridSummaryColumn Name="TotalSalary"
+                                                Position="Bottom"
+                                                ShowSummaryInRow="False">
+                    <sfgrid:DataGridTableSummaryRow.SummaryColumns>
+                        <sfgrid:DataGridSummaryColumn Name="TotalSalary"
                                                       Format="{}{Sum:C0}"
                                                       MappingName="Salary"
-                                                      SummaryType="DoubleAggregate" >
-                                <sfgrid:DataGridSummaryColumn.Template>
-                                 <DataTemplate>
-                                    <StackLayout Orientation="Horizontal" BackgroundColor="Gray">
-                                        <Label Text="{Binding Converter={StaticResource SummaryConverter}, ConverterParameter = {x:Reference dataGrid} }"
+                                                      SummaryType="DoubleAggregate">
+                            <sfgrid:DataGridSummaryColumn.Template>
+                                <DataTemplate>
+                                    <StackLayout Orientation="Horizontal"
+                                                 BackgroundColor="Gray">
+                                        <Label Text="{Binding Converter={StaticResource SummaryConverter}, ConverterParameter {x:Reference dataGrid} }"
                                                TextColor="White"
                                                FontSize="Medium"
                                                VerticalTextAlignment="Center"
@@ -1037,28 +1026,26 @@ Refer the below code example in which a label is loaded in the template of table
                                                VerticalOptions="FillAndExpand">
                                             <Label.Style>
                                                 <Style TargetType="Label">
-                                                    <Setter Property="FontAttributes" Value="Italic" />
+                                                    <Setter Property="FontAttributes"
+                                                            Value="Italic" />
                                                 </Style>
                                             </Label.Style>
                                         </Label>
                                     </StackLayout>
-                                 </DataTemplate>
-                                </sfgrid:DataGridSummaryColumn.Template>
-                            </sfgrid:DataGridSummaryColumn>
-                        </sfgrid:DataGridTableSummaryRow.SummaryColumns>
-                    </sfgrid:DataGridTableSummaryRow>
-            </sfgrid:SfDataGrid.TableSummaryRows>            
+                                </DataTemplate>
+                            </sfgrid:DataGridSummaryColumn.Template>
+                        </sfgrid:DataGridSummaryColumn>
+                    </sfgrid:DataGridTableSummaryRow.SummaryColumns>
+                </sfgrid:DataGridTableSummaryRow>
+            </sfgrid:SfDataGrid.TableSummaryRows>
         </sfgrid:SfDataGrid>
     </StackLayout>
-
 {% endhighlight%}
 {% endtabs %}
 
 {% tabs %}
 {% highlight c# %}
-
 // To write a converter, follow the code example:
-
   public class TableSummaryConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
@@ -1099,16 +1086,16 @@ In the following code snippet `Salary` column summary is formatted using `C0` fo
 
 {% tabs %}
 {% highlight xaml%}
-<sfGrid:SfDataGrid.TableSummaryRows>
-    <sfGrid:DataGridTableSummaryRow ShowSummaryInRow="False">
-        <sfGrid:DataGridTableSummaryRow.SummaryColumns>
-            <sfGrid:DataGridSummaryColumn Name="TableSummary"
-                                      Format="{}{Sum:C0}"
-                                      MappingName="Salary"
-                                      SummaryType="DoubleAggregate" />
-        </sfGrid:DataGridTableSummaryRow.SummaryColumns>
-    </sfGrid:DataGridTableSummaryRow>
-</sfGrid:SfDataGrid.TableSummaryRows>
+    <sfGrid:SfDataGrid.TableSummaryRows>
+        <sfGrid:DataGridTableSummaryRow ShowSummaryInRow="False">
+            <sfGrid:DataGridTableSummaryRow.SummaryColumns>
+                <sfGrid:DataGridSummaryColumn Name="TableSummary"
+                                              Format="{}{Sum:C0}"
+                                              MappingName="Salary"
+                                              SummaryType="DoubleAggregate" />
+            </sfGrid:DataGridTableSummaryRow.SummaryColumns>
+        </sfGrid:DataGridTableSummaryRow>
+    </sfGrid:SfDataGrid.TableSummaryRows>
 {% endhighlight %}
 
 {% highlight c#%}
@@ -1136,16 +1123,16 @@ In the following code snippet `Total:` text is appended before summary value:
 
 {% tabs %}
 {% highlight xaml%}
-<sfGrid:SfDataGrid.TableSummaryRows>
-    <sfGrid:DataGridTableSummaryRow ShowSummaryInRow="False">
-        <sfGrid:DataGridTableSummaryRow.SummaryColumns>
-            <sfGrid:DataGridSummaryColumn Name="TableSummary"
-                                      Format="Total: {Sum:C0}"
-                                      MappingName="Salary"
-                                      SummaryType="DoubleAggregate" />
-        </sfGrid:DataGridTableSummaryRow.SummaryColumns>
-    </sfGrid:DataGridTableSummaryRow>
-</sfGrid:SfDataGrid.TableSummaryRows>
+    <sfGrid:SfDataGrid.TableSummaryRows>
+        <sfGrid:DataGridTableSummaryRow ShowSummaryInRow="False">
+            <sfGrid:DataGridTableSummaryRow.SummaryColumns>
+                <sfGrid:DataGridSummaryColumn Name="TableSummary"
+                                              Format="Total: {Sum:C0}"
+                                              MappingName="Salary"
+                                              SummaryType="DoubleAggregate" />
+            </sfGrid:DataGridTableSummaryRow.SummaryColumns>
+        </sfGrid:DataGridTableSummaryRow>
+    </sfGrid:SfDataGrid.TableSummaryRows>
 {% endhighlight %}
 
 {% highlight c#%}
@@ -1278,17 +1265,18 @@ Assign the custom aggregate to `DataGridSummaryColumn.CustomAggregate` property 
 
 {% tabs %}
 {% highlight xaml%}
-<sfGrid:SfDataGrid.TableSummaryRows>
-    <sfGrid:DataGridTableSummaryRow Title="Standard Deviation:{TableSummary}" ShowSummaryInRow = "True">                                                     
-        <sfGrid:DataGridTableSummaryRow.SummaryColumns>
-            <sfGrid:DataGridSummaryColumn Name="TableSummary"
-                                      CustomAggregate="{StaticResource customAggregate}"
-                                      Format="{}{StdDev}"
-                                      MappingName="OrderID"
-                                      SummaryType="Custom" />
-        </sfGrid:DataGridTableSummaryRow.SummaryColumns>
-    </sfGrid:DataGridTableSummaryRow>
-</sfGrid:SfDataGrid.TableSummaryRows>
+    <sfGrid:SfDataGrid.TableSummaryRows>
+        <sfGrid:DataGridTableSummaryRow Title="Standard Deviation:{TableSummary}"
+                                        ShowSummaryInRow="True">
+            <sfGrid:DataGridTableSummaryRow.SummaryColumns>
+                <sfGrid:DataGridSummaryColumn Name="TableSummary"
+                                              CustomAggregate="{StaticResource customAggregate}"
+                                              Format="{}{StdDev}"
+                                              MappingName="OrderID"
+                                              SummaryType="Custom" />
+            </sfGrid:DataGridTableSummaryRow.SummaryColumns>
+        </sfGrid:DataGridTableSummaryRow>
+    </sfGrid:SfDataGrid.TableSummaryRows>
 {% endhighlight %}
 
 {% highlight c#%}
@@ -1343,9 +1331,7 @@ To customize the table summary, follow the code example:
 
 {% tabs %}
 {% highlight c#%}
-
 // To remove default summary and Add custom summary.
-
 public class Summary : ContentPage
 {
     public Summary()
@@ -1369,7 +1355,6 @@ public class DataGridTableSummaryCellRendererExt : DataGridTableSummaryCellRende
         view.BackgroundColor = Colors.DarkCyan;
         view.FontSize = 16;
         view.TextColor = Colors.White;
-
     }
 }
 {% endhighlight %}
