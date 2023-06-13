@@ -303,7 +303,7 @@ Generated for the Enum type property.
 AutoComplete
 </td>
 <td>
-{{'[SfAutoComplete](https://help.syncfusion.com/maui/autocomplete)'| markdownify }}
+{{'[SfAutoComplete](https://help.syncfusion.com/maui/autocomplete/overview)'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -317,7 +317,7 @@ Generated for the Enum type property.
 ComboBox
 </td>
 <td>
-{{'[SfComboBox](https://help.syncfusion.com/maui/combobox)'| markdownify }}
+{{'[SfComboBox](https://help.syncfusion.com/maui/combobox/overview)'| markdownify }}
 </td>
 </tr>
 <tr>
