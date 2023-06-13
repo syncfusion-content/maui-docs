@@ -14,7 +14,7 @@ The Syncfusion .NET MAUI Range Selector ([SfRangeSelector](https://www.syncfusio
 ## Key features
 
 * **Numeric support** - Provided functionality for selecting numeric values.
-* **Content** - Add a control of any type inside the range selector. It is also possible to add [Charts](https://www.syncfusion.com/maui-controls/maui-charts) controls.
+* **Content** - Add a control of any type inside the range selector. It is also possible to add [Charts](https://www.syncfusion.com/maui-controls/maui-cartesian-charts) controls.
 * **Labels** - Render labels with option to customize their formats based on your requirements.
 * **Ticks and dividers** - Provided an option to show ticks and dividers based on the slider interval. Also, minor ticks can be enabled to indicate the values between each interval. These options present the selected value in a more intuitive way for end users.
 * **Discrete mode** - Able to move the thumb in a discrete manner based on the provided step value.

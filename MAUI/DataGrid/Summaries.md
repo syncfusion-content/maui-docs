@@ -479,7 +479,7 @@ In the following sections, the formatting is explained using the `TableSummary`.
 
 Format the summary value by setting the appropriate format after the aggregate function followed by a colon(:) in the `DataGridSummaryColumn.Format` property.
 
-In the following code snippet `Salary` column summary is formatted using `C0` format specifier. Refer to [here](https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings?redirectedfrom=MSDN) to know about how to set different formats.
+In the following code snippet `Salary` column summary is formatted using `C0` format specifier. Refer to [here](https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings?redirectedfrom=MSDN) to know about how to set different formats.
 
 {% tabs %}
 {% highlight xaml%}
