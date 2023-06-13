@@ -58,9 +58,9 @@ The SfDataGrid also allows to group the data against one or more columns using t
 
 this.dataGrid.GroupingMode = GroupingMode.Multiple;
     dataGrid.GroupColumnDescriptions.Add (new GroupColumnDescription () {
-    ColumnName = "Name",
+    ColumnName = "Name" });
     dataGrid.GroupColumnDescriptions.Add (new GroupColumnDescription () {
-    ColumnName = "ShipCity",
+    ColumnName = "ShipCity" });
 {% endhighlight %}
 {% endtabs %}
 
@@ -74,7 +74,6 @@ Indent columns are the columns present to the left of the `CaptionSummaryRows` w
 The width of indent column can be customized by the [IndentColumnWidth]() property. The default width of the indent column is 35. 
 
 {% tabs %}
-
 {% highlight xaml %}
     <syncfusion:SfDataGrid  x:Name="dataGrid"
                             AutoGenerateColumns="True"
@@ -239,7 +238,6 @@ In custom grouping, you can sort all the inner records of each group by setting 
     </ContentPage>
 
 {% endhighlight %}
-
 {% highlight c# %}
 
 datagrid.GroupColumnDescriptions.Add(new GroupColumnDescription()
@@ -247,13 +245,13 @@ datagrid.GroupColumnDescriptions.Add(new GroupColumnDescription()
     ColumnName = "OrderID",
     Converter = new GroupOrderNoConverter(),
     SortGroupRecords = false
-}) ;
+});
 datagrid.GroupColumnDescriptions.Add(new GroupColumnDescription()
 {
     ColumnName = "Price",
     Converter = new PriceConverter(),
     SortGroupRecords = true
-}) ;  
+});  
 			
 public class GroupOrderNoConvertor : IValueConverter
 {
@@ -297,7 +295,6 @@ public class PriceConverter : IValueConverter
 }
 
 {% endhighlight %}
-
 {% endtabs %}
 
 As you can see in the below screenshot, the records are sorted based on the `OrderNo` column, since `SortGroupRecords` is set as `true` and it is not sorted further based on `Price` column since `SortGroupRecords` is set as `false`.
